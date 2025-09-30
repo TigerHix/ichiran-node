@@ -1,0 +1,41 @@
+{
+  "name": "ichiran-node",
+  "version": "0.1.0",
+  "description": "Node.js/TypeScript port of Ichiran Japanese text segmentation library",
+  "type": "module",
+  "bin": {
+    "ichiran-cli": "./dist/cli.js"
+  },
+  "scripts": {
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/server.js",
+    "dev": "tsx --env-file=.env src/server.ts",
+    "preprocess-cli-tests": "tsx scripts/preprocess-cli-tests.ts",
+    "preprocess-hard-cli-tests": "tsx scripts/preprocess-hard-cli-tests.ts"
+  },
+  "keywords": [
+    "japanese",
+    "nlp",
+    "segmentation",
+    "jmdict"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^20.19.19",
+    "dotenv": "^17.2.3",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "lru-cache": "^11.2.2",
+    "postgres": "^3.4.7"
+  },
+  "module": "index.ts",
+  "private": true
+}

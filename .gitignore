@@ -1,0 +1,17 @@
+node_modules/
+dist/
+*.log
+.env
+.DS_Store
+perf/
+temp/
+.analysis
+.wrangler/
+*.pgdump
+*.sql.gz
+tsconfig.tsbuildinfo
+
+# Deployment and config files
+CLAUDE.md
+DEPLOYMENT.md
+fly.toml
