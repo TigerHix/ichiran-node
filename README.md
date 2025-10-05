@@ -1,11 +1,10 @@
-# Ichiran Node.js Port
+# ichiran-node
 
 Node.js/TypeScript port of [Ichiran](https://github.com/tshatrov/ichiran) - Japanese text segmentation and analysis library.
 
 ## Installation
 
 ```bash
-cd /home/tiger/ichiran/ichiran-node
 bun install
 bun run build
 ```
@@ -16,7 +15,7 @@ Create a `.env` file in the project root:
 
 ```env
 ICHIRAN_DB_URL=postgresql://postgres:password@localhost:6777/jmdict
-ICHIRAN_LISP_CONTAINER=komu-ichiran-main-1
+ICHIRAN_LISP_CONTAINER=ichiran-main-1
 ```
 
 Alternatively, set environment variables directly:
@@ -114,7 +113,6 @@ node dist/cli.js -f -l 5 "時々" | jq
   - Format: `postgresql://user:password@host:port/database`
   - Default database: `jmdict`
 - `ICHIRAN_LISP_CONTAINER`: Docker container name for Lisp CLI comparison tests (optional)
-  - Default: `komu-ichiran-main-1`
 
 ## Development
 
@@ -146,20 +144,6 @@ bun run typecheck
 bun run build
 ```
 
-## Project Status
-
-**Core Features:** Complete
-- Japanese text segmentation
-- Dictionary lookup (JMDict)
-- Conjugation analysis
-- Romanization (multiple systems)
-- Counter word recognition
-- Number parsing
-
-**Test Suite:** All 750+ tests from original Lisp implementation ported
-
-See [CLAUDE.md](./CLAUDE.md) for detailed development documentation.
-
 ## License
 
-MIT (matching original Ichiran license)
+[MIT](./LICENSE)
