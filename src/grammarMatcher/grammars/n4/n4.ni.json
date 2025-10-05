@@ -1,0 +1,135 @@
+{
+  "id": "n4.ni",
+  "level": "N4",
+  "description": "Indicates direction, destination, purpose, or time.",
+  "formation": "Noun + に",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 助詞「に」（方向・目的・時点）\n\n### Meaning and function\n- Marks the goal/endpoint of movement (to; into; onto) and direction (toward).\n- Marks the purpose of movement with verbs like go/come/return (in order to).\n- Marks a specific point in time when something happens (at/on/in).\n\n### Form and templates\n- Destination/goal\n  - Place N + に + [motion/arrival verb: 行く・来る・帰る・着く・入る など]\n  - Direction word (右・左・前・後ろ・北・南 など) + に + [movement/turn verb]\n  - Alternative for pure direction only: Place N + へ + [motion verb] (に emphasizes arrival/goal; へ emphasizes direction)\n- Purpose of movement\n  - N(suru) + (し) に + [行く・来る・帰る・出かける・戻る など]\n  - Alternative (very common): V(stem) + に + [movement verb]\n  - Restriction: only with verbs of movement/direction\n- Time point\n  - N(time: specific clock time, day, date, month, year, holiday, weekend) + に + [predicate]\n  - Optionality: with days of the week/dates/months, に may be omitted in casual speech; with exact clock times it’s normally used\n  - Do not use に with relative-time words (今日・明日・昨日・今・来週・毎日 など), except for special contrastive/emphatic patterns\n- Ordering and co-occurrence\n  - Time N + に and Place N + に can co-occur in one clause; time generally precedes place (Time に → Place に → verb)\n- Conjugation\n  - Verbs conjugate as usual (plain/polite, tense, polarity). The particle に itself does not change.\n\n### Usage notes and constraints\n- Register/naturalness: Neutral and ubiquitous in all registers; extremely frequent.\n- に vs へ (direction): に highlights the arrival/goal or endpoint; へ highlights general direction/path. へ cannot mark time or purpose.\n- に vs で (place): に marks destination/arrival or time; で marks the location where an action occurs. Do not use で for destinations or time points.\n- Purpose use:\n  - Best with V(stem) + に or with suru-nouns plus しに. Not every bare noun works naturally as a “purpose.”\n  - For general purpose not tied to movement, use ために or ように instead of に.\n- Time use:\n  - Use に with specific, countable points on the calendar/clock (3時、月曜日、4月、3日 など).\n  - Often omit に after broader periods (朝・昼・夜・週末) in everyday speech unless you want to stress the timing; adding に sounds more formal or deliberate.\n  - に marks a point-in-time, not a duration. For “for X time,” use ～間.\n  - Ambiguous forms like 三日 can mean “the 3rd (day of month)” or “three days (duration)”; adding に disambiguates it as a date/point-in-time.\n- Multiple に in one sentence is fine as each に attaches to its own noun (e.g., time に + place に).\n\n### Common mistakes (optional, only if relevant)\n- Using で instead of に for destinations or time points.\n- Adding に to relative-time words (今日・明日・毎日 など) where it is normally not used.\n- Using へ for purpose or time (へ cannot express these).\n- Using Nに + movement verb for purpose with a noun that is not an action; prefer V(stem) に or suru-noun + しに.\n- Using に to mark durations (三時間に勉強する × for “study for three hours”); use ～間 instead.\n\n### Related grammar (optional, only if relevant)\n- へ: Direction/path only; weaker sense of “to/toward” than に; cannot mark time or purpose.\n- で: Location of action; contrasts with に which marks destination/arrival or time.\n- ために: General “in order to/for the sake of”; usable without movement; broader than purpose に.\n- ように: Purpose/aim for achieving a state or ability; often with potential/imperative nuances; not restricted to movement.\n- まで／までに／から: Time and place boundaries (“until/as far as,” “by,” “from”); combine with に for “by [time]” (までに).",
+  "examples": [
+    {
+      "jp": "三時に起きる。",
+      "en": "I get up at three."
+    },
+    {
+      "jp": "月曜日に図書館に行かない。",
+      "en": "I don’t go to the library on Monday."
+    },
+    {
+      "jp": "2024年に大学を卒業した。",
+      "en": "I graduated from university in 2024."
+    },
+    {
+      "jp": "九時に会社に着きましたか。",
+      "en": "Did you arrive at the office at nine?"
+    },
+    {
+      "jp": "犬が庭に来た。",
+      "en": "A dog came into the yard."
+    },
+    {
+      "jp": "角で右に曲がってください。",
+      "en": "Please turn right at the corner."
+    },
+    {
+      "jp": "北に向かいましたか。",
+      "en": "Did you head north?"
+    },
+    {
+      "jp": "机の下に入らなかった。",
+      "en": "I didn’t go under the desk."
+    },
+    {
+      "jp": "私は学校に行きません。",
+      "en": "I will not go to school."
+    },
+    {
+      "jp": "パンを買いにコンビニに行く。",
+      "en": "I’m going to the convenience store to buy bread."
+    },
+    {
+      "jp": "運動しに公園へ行きませんか。",
+      "en": "Shall we go to the park to exercise?"
+    },
+    {
+      "jp": "資料を取りにオフィスに戻った。",
+      "en": "I went back to the office to pick up the documents."
+    },
+    {
+      "jp": "写真を撮りに海に来なかった。",
+      "en": "I didn’t come to the beach to take photos."
+    },
+    {
+      "jp": "朝七時に駅に友だちを迎えに行きます。",
+      "en": "I’ll go to the station at 7 a.m. to pick up a friend."
+    },
+    {
+      "jp": "祝日に祖父母の家に行った。",
+      "en": "I went to my grandparents’ house on the holiday."
+    },
+    {
+      "jp": "三日に市役所に申請しに行きました。",
+      "en": "I went to city hall on the 3rd to submit an application."
+    },
+    {
+      "jp": "危ないので、前に出ないでください。",
+      "en": "It’s dangerous, so please don’t step forward."
+    },
+    {
+      "jp": "電車は次の駅に止まりません。",
+      "en": "The train does not stop at the next station."
+    },
+    {
+      "jp": "今朝八時に市役所に着いたのは私だ。",
+      "en": "The one who arrived at city hall at eight this morning was me."
+    },
+    {
+      "jp": "あなたは左に曲がりますか。",
+      "en": "Do you turn left?"
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "京都へ行きます。",
+      "en": "I’m going to Kyoto."
+    },
+    {
+      "jp": "駅で待ちます。",
+      "en": "I’ll wait at the station."
+    },
+    {
+      "jp": "勉強のために図書館へ行った。",
+      "en": "I went to the library to study."
+    },
+    {
+      "jp": "先生に質問しました。",
+      "en": "I asked the teacher a question."
+    },
+    {
+      "jp": "静かに歩いてください。",
+      "en": "Please walk quietly."
+    },
+    {
+      "jp": "春になると、山は桜でいっぱいだ。",
+      "en": "When spring comes, the mountains are full of cherry blossoms."
+    },
+    {
+      "jp": "東京にて会議を行います。",
+      "en": "We will hold a meeting in Tokyo."
+    },
+    {
+      "jp": "日本に関する本を探しています。",
+      "en": "I’m looking for books about Japan."
+    },
+    {
+      "jp": "子ども向けに作られた動画です。",
+      "en": "It’s a video made for children."
+    },
+    {
+      "jp": "家族に会えてうれしかった。",
+      "en": "I was happy to see my family."
+    }
+  ]
+}

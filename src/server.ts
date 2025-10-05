@@ -7,37 +7,21 @@
 
 import { createServer, IncomingMessage, ServerResponse } from 'http';
 import { romanize, romanizeStar } from './romanize.js';
-import { setConnection, getConnectionFromEnv } from './conn.js';
-import { wordInfoGlossJson, printPerfCounters } from './dict.js';
-import type { WordInfo } from './dict.js';
+import { setConnection, getConnectionFromEnv, getConnection } from './conn.js';
+import { printPerfCounters } from './dict/profiling.js';
+import { transformRomanizeStarResult } from './presentation/transformers.js';
 
 const PORT = parseInt(process.env.PORT || '3000', 10);
+const MAX_JSON_BODY_SIZE = 1 * 1024 * 1024; // 1 MiB
 
-/**
- * Transform romanizeStar result to user-friendly JSON format
- */
-async function transformRomanizeStarResult(
-  result: Array<string | Array<[Array<[string, WordInfo, any]>, number]>>
-): Promise<any> {
-  return Promise.all(
-    result.map(async (segment) => {
-      if (typeof segment === 'string') {
-        return segment;
-      } else {
-        return Promise.all(
-          segment.map(async ([wordList, score]) => {
-            const transformedWords = await Promise.all(
-              wordList.map(async ([romanized, wordInfo, prop]) => {
-                const glossJson = await wordInfoGlossJson(wordInfo);
-                return [romanized, glossJson, prop];
-              })
-            );
-            return [transformedWords, score];
-          })
-        );
-      }
-    })
-  );
+class JsonBodyError extends Error {
+  status: number;
+
+  constructor(message: string, status = 400) {
+    super(message);
+    this.name = 'JsonBodyError';
+    this.status = status;
+  }
 }
 
 /**
@@ -46,17 +30,46 @@ async function transformRomanizeStarResult(
 async function parseJsonBody(req: IncomingMessage): Promise<any> {
   return new Promise((resolve, reject) => {
     let body = '';
+    let received = 0;
+
+    const contentLengthHeader = req.headers['content-length'];
+    if (contentLengthHeader) {
+      const contentLength = Number(contentLengthHeader);
+      if (Number.isFinite(contentLength) && contentLength > MAX_JSON_BODY_SIZE) {
+        reject(new JsonBodyError('Payload too large', 413));
+        return;
+      }
+    }
+
+    const abort = (error: JsonBodyError) => {
+      req.destroy();
+      reject(error);
+    };
+
     req.on('data', (chunk) => {
+      received += chunk.length;
+      if (received > MAX_JSON_BODY_SIZE) {
+        abort(new JsonBodyError('Payload too large', 413));
+        return;
+      }
       body += chunk.toString();
     });
+
     req.on('end', () => {
+      if (!body) {
+        reject(new JsonBodyError('Empty body'));
+        return;
+      }
       try {
         resolve(JSON.parse(body));
       } catch (error) {
-        reject(new Error('Invalid JSON'));
+        reject(new JsonBodyError('Invalid JSON'));
       }
     });
-    req.on('error', reject);
+
+    req.on('error', (err) => {
+      reject(err instanceof JsonBodyError ? err : new JsonBodyError(String(err), 400));
+    });
   });
 }
 
@@ -114,7 +127,6 @@ async function handleRequest(req: IncomingMessage, res: ServerResponse): Promise
     if (url.pathname === '/health/db' && req.method === 'GET') {
       console.log(`[${requestId}] Testing database connection...`);
       try {
-        const { getConnection } = await import('./conn.js');
         const conn = getConnection();
         console.log(`[${requestId}] Got connection, executing test query...`);
         const result = await conn`SELECT 1 as test, current_database() as db, version() as pg_version`;
@@ -242,8 +254,12 @@ async function handleRequest(req: IncomingMessage, res: ServerResponse): Promise
     console.log(`[${requestId}] END ${url.pathname} - ${Date.now() - startTime}ms`);
   } catch (error) {
     console.error(`[${requestId}] Request error:`, error);
-    const message = error instanceof Error ? error.message : 'Internal server error';
-    sendError(res, message, 500);
+    if (error instanceof JsonBodyError) {
+      sendError(res, error.message, error.status);
+    } else {
+      const message = error instanceof Error ? error.message : 'Internal server error';
+      sendError(res, message, 500);
+    }
     console.log(`[${requestId}] END ${url.pathname} ERROR - ${Date.now() - startTime}ms`);
   }
 }

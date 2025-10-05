@@ -1,0 +1,135 @@
+{
+  "id": "n5.noun-ni-ikimasu",
+  "level": "N5",
+  "description": "Used to express going to a location",
+  "formation": "Noun + に + 行きます",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 場所に行く\n\n### Meaning and function\n- States that the subject goes to a destination. The particle に (or へ) marks the place or direction of movement with the verb 行く.\n\n### Form and templates\n- N(place) に 行く／行きます\n- N(place) へ 行く／行きます（へ is pronounced “e”）\n- Optional elements before 行く:\n  - Time: 時間表現 + … + 行く（time に may co-occur with destination に）\n  - Means: 乗り物・手段 + で + … + 行く（で = “by/with” as means）\n  - Companion: 人 + と + … + 行く（と = “with”）\n  - Starting point: 出発点 + から + … + 行く\n- Particle choice and ordering:\n  - Destination comes immediately before に or へ: N(place) + に/へ + 行く\n  - Do not combine に and へ together.\n  - で marks means, not destination; it appears before the destination phrase if used.\n- Conjugation/inflection notes (行く):\n  - Polite: 行きます／行きません／行きました／行きませんでした\n  - Plain: 行く／行かない／行った／行かなかった\n  - Te/past stem: 行って（spelling note: 行く → 行って, 行った）\n\n### Usage notes and constraints\n- Register and frequency:\n  - Extremely common at all levels. Use 行きます in polite speech; 行く in casual contexts.\n  - へ is acceptable but a bit more formal/written or directional; に is more common in everyday speech and implies arrival at the destination.\n- Semantic constraints:\n  - The noun before に/へ should denote a place or direction (e.g., locations, countries/cities, buildings, ここ/そこ/あそこ/どこ, direction words like 右/左/北).\n  - For a person’s place, use that person’s うち/家/ところ + に rather than just a person noun + に.\n  - Use に/へ only with motion verbs (行く/来る/帰る). For “being at” a place, use に + いる/ある; for “doing something at” a place, use で + verb (not 行く).\n- Orthographic/pronunciation notes:\n  - へ is always pronounced “e” (not “he”) when used as the particle.\n  - に and へ are written in hiragana in this pattern.\n- Word order tendencies:\n  - Typical order: [Time] + ([Means で]) + [Companion と] + [Destination に/へ] + 行く. Multiple に can appear if one marks time and another marks destination.\n\n### Common mistakes (optional, only if relevant)\n- Using で instead of に/へ for the destination (“place で 行く” is incorrect for “go to place”).\n- Pronouncing the particle へ as “he” instead of “e.”\n- Using a person noun alone as the destination (use うち/ところ after the person if you mean their place).\n- Doubling the destination particle (“へに”) or omitting it entirely after the place noun.\n- Confusing 行く and 来る: 来る is used when movement is toward the speaker/listener’s location; 行く is used when it is away.\n\n### Related grammar (optional, only if relevant)\n- N(place) に／へ 来る: “come to” (movement toward the speaker/listener).\n- N(place) に／へ 帰る: “return to” a home/base location.\n- V(stem) に 行く: “go in order to do (something)” (に marks purpose, not destination).\n- N で: marks location of an action (“at” a place), not the goal of movement.\n- N まで 行く: “go as far as N” (endpoint emphasis).",
+  "examples": [
+    {
+      "jp": "毎朝、バスで学校に行く。",
+      "en": "Every morning, I go to school by bus."
+    },
+    {
+      "jp": "午後三時に図書館へ行きます。",
+      "en": "I will go to the library at 3 p.m."
+    },
+    {
+      "jp": "今日はスーパーに行かない。",
+      "en": "I’m not going to the supermarket today."
+    },
+    {
+      "jp": "すみません、今は市役所へ行きません。",
+      "en": "Sorry, I’m not going to city hall right now."
+    },
+    {
+      "jp": "昨日、友だちの家に行った。",
+      "en": "I went to my friend’s house yesterday."
+    },
+    {
+      "jp": "先週の土曜日に動物園に行きました。",
+      "en": "I went to the zoo last Saturday."
+    },
+    {
+      "jp": "先月はどこへも行きませんでした。",
+      "en": "I didn’t go anywhere last month."
+    },
+    {
+      "jp": "雨だったから、海へ行かなかった。",
+      "en": "Because it rained, I didn’t go to the beach."
+    },
+    {
+      "jp": "明日、駅に行きますか。",
+      "en": "Are you going to the station tomorrow?"
+    },
+    {
+      "jp": "今からどこに行く？",
+      "en": "Where are you going now?"
+    },
+    {
+      "jp": "家族と公園に行く。",
+      "en": "I’m going to the park with my family."
+    },
+    {
+      "jp": "家から電車で会社へ行きます。",
+      "en": "I go to the office by train from home."
+    },
+    {
+      "jp": "七時に学校に行きます。",
+      "en": "I go to school at seven o’clock."
+    },
+    {
+      "jp": "あそこに行くのは危ないよ。",
+      "en": "It’s dangerous to go over there."
+    },
+    {
+      "jp": "この角を右へ行くと、銀行があります。",
+      "en": "If you go right at this corner, there’s a bank."
+    },
+    {
+      "jp": "この窓口へ行って、手続きしてください。",
+      "en": "Go to this counter and complete the procedure."
+    },
+    {
+      "jp": "週末は自転車で友だちとどこへ行きますか。",
+      "en": "Where will you go on the weekend by bicycle with your friend?"
+    },
+    {
+      "jp": "夏には北へ行く人が多い。",
+      "en": "In summer, many people go north."
+    },
+    {
+      "jp": "午後、先生のところに行きましたか。",
+      "en": "Did you go to the teacher’s place this afternoon?"
+    },
+    {
+      "jp": "うちからそこへは行きません。",
+      "en": "I don’t go there from my home."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "パンを買いに行く。",
+      "en": "I’m going to buy bread."
+    },
+    {
+      "jp": "京都行きの電車に乗ります。",
+      "en": "I will take the train bound for Kyoto."
+    },
+    {
+      "jp": "右に曲がってください。",
+      "en": "Please turn right."
+    },
+    {
+      "jp": "会社に来ませんでした。",
+      "en": "I didn’t come to the office."
+    },
+    {
+      "jp": "公園で友だちと遊びます。",
+      "en": "I will play with my friend at the park."
+    },
+    {
+      "jp": "駅まで行きますか。",
+      "en": "Will you go as far as the station?"
+    },
+    {
+      "jp": "日本にいる間、働きました。",
+      "en": "I worked while I was in Japan."
+    },
+    {
+      "jp": "北へ向かっています。",
+      "en": "I’m heading north."
+    },
+    {
+      "jp": "今日はどこで食べますか。",
+      "en": "Where will we eat today?"
+    },
+    {
+      "jp": "映画館への道が分からない。",
+      "en": "I don’t know the way to the movie theater."
+    }
+  ]
+}

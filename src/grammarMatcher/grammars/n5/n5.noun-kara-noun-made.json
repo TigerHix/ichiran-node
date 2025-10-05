@@ -1,0 +1,135 @@
+{
+  "id": "n5.noun-kara-noun-made",
+  "level": "N5",
+  "description": "Expresses a range; 'from",
+  "formation": "Noun1 + から + Noun2 + まで",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜から〜まで（範囲）\n\n### Meaning and function\n- Marks an inclusive range “from A to/until B”\n- Used for spans of time, routes between places, and ranges of amounts/quantities\n- Can also signal coverage/breadth (“everything from A to B”)\n\n### Form and templates\n- N(time/place/quantity) から N(time/place/quantity) まで + Predicate\n- N から N まで の N（range phrase modifying a noun）\n- Particle rules and ordering:\n  - Put から after the starting point; put まで after the end point\n  - Keep both ends in the same category: time–time, place–place, amount–amount\n  - Do not add に to times before から (× 時にから)\n  - Do not add に after まで when you mean “up to/to” (× 場所までに for destination range)\n  - With movement, まで emphasizes the limit/endpoint reached; へ/に emphasize destination (use one, not both)\n- Optional/alternative parts:\n  - から alone (“from …”) is possible when the endpoint is understood from context\n  - まで alone (“until/up to …”) is possible when the starting point is understood\n  - から/まで + は can appear for contrast/emphasis (more advanced nuance)\n- Conjugation/inflection:\n  - から/まで are particles; no conjugation\n  - The range phrase can stand before any polite/plain predicate, or be concluded with です in copular statements\n\n### Usage notes and constraints\n- Register: neutral and common in both speech and writing\n- Naturalness: extremely frequent for schedules, opening hours, routes, prices, pages, floors, ages, distances, scores, etc.\n- Semantics:\n  - まで generally includes the endpoint (inclusive limit)\n  - まで marks “as far as/up to,” not a deadline; までに is the deadline form (see Related)\n  - から/まで attach to nouns (time words, place nouns, counters, amounts). They do not attach directly to verbs; use verbal patterns for that (see Related)\n- Orthography:\n  - Usually written in hiragana. まで may appear as 迄 in signs or older texts; stick to hiragana in learning contexts\n\n### Common mistakes\n- Adding に to the time before から (× 時にから). Use 時から.\n- Using までに when you mean a range endpoint to a place/time; までに means “by (deadline),” not “until/up to.”\n- Reversing roles (putting まで on the start and から on the end).\n- Mixing categories in one range (e.g., place to time).\n- Stacking destination particles with まで (× 場所までへ/に). Choose one.\n- Trying to attach から/まで directly to verbs or adjectives; they need nouns.\n\n### Related grammar\n- まで vs までに: まで = until/up to (inclusive span or limit); までに = by (deadline), no duration implied.\n- N から / N まで (alone): Use a single boundary when the other side is understood.\n- 〜てから: “after doing …” (sequence), not a range marker.\n- N から N へ/に: “from N to N” focusing on destination; doesn’t express a span in time/amounts.\n- から (理由): から meaning “because/since” is a different use from range-marking から.",
+  "examples": [
+    {
+      "jp": "会議は九時から十時までです。",
+      "en": "The meeting is from 9 to 10."
+    },
+    {
+      "jp": "駅から会社まで歩きました。",
+      "en": "I walked from the station to the office."
+    },
+    {
+      "jp": "サンドイッチは五百円から千円までで買えます。",
+      "en": "You can buy sandwiches for between 500 and 1,000 yen."
+    },
+    {
+      "jp": "料理から掃除まで全部一人でやった。",
+      "en": "I did everything from cooking to cleaning by myself."
+    },
+    {
+      "jp": "今日は朝から夜まで雨が降らなかった。",
+      "en": "It didn’t rain from morning until night today."
+    },
+    {
+      "jp": "営業時間は何時から何時までですか。",
+      "en": "What are the business hours (from when to when)?"
+    },
+    {
+      "jp": "それまで待ってくれますか。",
+      "en": "Can you wait until then?"
+    },
+    {
+      "jp": "ここからは入れません。",
+      "en": "You can’t enter from here."
+    },
+    {
+      "jp": "十ページまでは簡単でした。",
+      "en": "Up to page 10 was easy."
+    },
+    {
+      "jp": "一ページから三ページまでの問題を提出してください。",
+      "en": "Please submit the problems from page 1 to page 3."
+    },
+    {
+      "jp": "空港からホテルまでどのくらいかかりますか。",
+      "en": "How long does it take from the airport to the hotel?"
+    },
+    {
+      "jp": "来週の火曜日から金曜日まで休みます。",
+      "en": "I’ll be off from next Tuesday to Friday."
+    },
+    {
+      "jp": "上から下までほこりだらけだ。",
+      "en": "It’s dusty from top to bottom."
+    },
+    {
+      "jp": "東京から名古屋まで新幹線で二時間くらいかかったよ。",
+      "en": "It took about two hours by Shinkansen from Tokyo to Nagoya."
+    },
+    {
+      "jp": "朝から昼まで風が強く吹いた。",
+      "en": "The wind blew strongly from morning until noon."
+    },
+    {
+      "jp": "店内は十時から十二時まで特ににぎやかになります。",
+      "en": "The store gets especially lively from 10 to 12."
+    },
+    {
+      "jp": "この川は、上流から下流まできれいだ。",
+      "en": "This river is clean from upstream to downstream."
+    },
+    {
+      "jp": "受付は三時までです。",
+      "en": "Reception is until 3 o’clock."
+    },
+    {
+      "jp": "朝からは勉強しませんでした。",
+      "en": "I didn’t study from the morning."
+    },
+    {
+      "jp": "ここまでは届いたが、その先は届かなかった。",
+      "en": "It reached up to here, but it didn’t reach beyond that."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "寒いから帰ります。",
+      "en": "Since it’s cold, I’ll go home."
+    },
+    {
+      "jp": "食べてから勉強する。",
+      "en": "I’ll study after eating."
+    },
+    {
+      "jp": "今月末までに報告します。",
+      "en": "I’ll report by the end of this month."
+    },
+    {
+      "jp": "東京から大阪へ行きます。",
+      "en": "I’m going to Osaka from Tokyo."
+    },
+    {
+      "jp": "駅にまで知らせが届いた。",
+      "en": "The notice even reached the station."
+    },
+    {
+      "jp": "約束したからには、守らないといけない。",
+      "en": "Now that I’ve promised, I must keep it."
+    },
+    {
+      "jp": "雨が止むまで待ちましょう。",
+      "en": "Let’s wait until the rain stops."
+    },
+    {
+      "jp": "九時から十時の間に来てください。",
+      "en": "Please come sometime between 9 and 10."
+    },
+    {
+      "jp": "山から海へ風が吹いた。",
+      "en": "The wind blew from the mountains to the sea."
+    },
+    {
+      "jp": "夜までには帰るつもりです。",
+      "en": "I intend to be back by night."
+    }
+  ]
+}

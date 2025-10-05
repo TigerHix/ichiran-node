@@ -1,0 +1,135 @@
+{
+  "id": "n4.darou",
+  "level": "N4",
+  "description": "Express probability, likelihood or certainty; 'probably', 'maybe', 'I think'.",
+  "formation": "Verb-casual + だろう, い-Adjective (drop い) + だろう, な-Adjective + だろう, Noun + だろう",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 推量のだろう／でしょう\n\n### Meaning and function\n- Speaker’s conjecture or probability: “probably,” “likely,” “I suppose/I think so”\n- Seeking agreement/confirmation with rising intonation: “right?”\n- Wondering/polite inquiry when used with か: “I wonder…,” “Could it be…?”\n\n### Form and templates\n- Core\n  - V(plain) + だろう／でしょう\n  - い-adj + だろう／でしょう  (keep the い)\n  - な-adj + だろう／でしょう\n  - N + だろう／でしょう\n- Negative\n  - V(ない) + だろう／でしょう\n  - い-adj(〜くない) + だろう／でしょう\n  - な-adj／N + ではないだろう／ではないでしょう\n    - Colloquial: じゃないだろう／じゃないでしょう\n- Past\n  - V(た) + だろう／でしょう\n  - い-adj(〜かった) + だろう／でしょう\n  - な-adj／N + だっただろう／だったでしょう\n- Question/softening\n  - 〜だろうか (I wonder…)／〜でしょうか (polite inquiry/confirmation)\n  - Tag-confirmation: 〜だろう？／〜でしょう？ (rising intonation)\n- Modifiers/adverbs commonly used before the clause\n  - たぶん／おそらく／きっと + …だろう／…でしょう\n- Particle/ordering\n  - Sentence-final auxiliary; follows the plain form of the predicate. Adverbs go before the predicate.\n- Conjugation/compatibility notes\n  - Do not stack with です／ます (× 行きますだろう). Use でしょう as the polite form.\n  - だろう can contract in casual speech (だろ／でしょ). Avoid in formal writing.\n  - Not used attributively to directly modify nouns (avoid …だろう人, etc.).\n\n### Usage notes and constraints\n- Register and tone\n  - だろう: plain; can sound assertive/rough, often masculine in feel; natural for self-talk and writing.\n  - でしょう: polite/neutral; widely used in conversation, announcements, forecasts.\n  - Rising intonation seeks confirmation; falling intonation states a conjecture.\n- Certainty scale and semantics\n  - Indicates a reasoned guess with medium confidence. Weaker than に違いない, stronger than some uses of かもしれない.\n  - With nonpast forms, often implies future prediction; with past forms, a guess about past events.\n- Addressing others\n  - Directly telling the listener what they “probably” think/feel with だろう can sound presumptuous. Prefer でしょうね／ではないでしょうか／〜と思います for politeness/softening.\n- With か\n  - 〜だろうか expresses self-directed wondering; 〜でしょうか is the polite counterpart for inquiries/requests/confirmations.\n- Collocations\n  - Natural: たぶん／おそらく／きっと + 〜だろう／でしょう.\n  - “もしかしたら/もしかすると” pairs better with かもしれない than with だろう.\n- Orthography and variants\n  - ではない vs じゃない (writing vs conversation).\n  - でしょう (standard) vs でしょ (colloquial transcript). Use でしょう in formal writing.\n\n### Common mistakes (optional, only if relevant)\n- Dropping the い of い-adjectives before だろう (× 高くだろう). Keep い: い-adj + だろう.\n- Stacking politeness (× Vます + だろう, × でしょうです). Use でしょう for the polite form.\n- Using だろう to modify nouns directly (× だろう人). だろう is sentence-final.\n- Overusing だろう to the listener; can sound bossy. Use でしょう／でしょうか for politeness.\n- Combining もしかしたら with だろう unnaturally; prefer かもしれない with もしかしたら.\n\n### Related grammar (optional, only if relevant)\n- かもしれない: “might/may.” Weaker likelihood than だろう; often used with もしかしたら.\n- はずだ: “should be/expected to be” based on reasoning/evidence; stronger logical expectation than だろう.\n- に違いない: “must be.” Very strong certainty; not used to seek confirmation.\n- と思う: “I think.” States an opinion; can be combined with だろう (〜だろうと思う) to further soften a conjecture.",
+  "examples": [
+    {
+      "jp": "きっと彼は来るだろう。",
+      "en": "He will probably come."
+    },
+    {
+      "jp": "おそらく間に合うでしょう。",
+      "en": "We will probably make it on time."
+    },
+    {
+      "jp": "バスは来ないだろう。",
+      "en": "The bus probably won’t come."
+    },
+    {
+      "jp": "このカレーは辛いだろう。",
+      "en": "This curry is probably spicy."
+    },
+    {
+      "jp": "今日はあまり寒くないでしょう。",
+      "en": "It’s probably not very cold today."
+    },
+    {
+      "jp": "あの図書館は静かだろう。",
+      "en": "That library is probably quiet."
+    },
+    {
+      "jp": "彼は元気ではないでしょう。",
+      "en": "He’s probably not well."
+    },
+    {
+      "jp": "彼女はたぶん医者だろう。",
+      "en": "She is probably a doctor."
+    },
+    {
+      "jp": "それは冗談じゃないだろう。",
+      "en": "That’s probably not a joke."
+    },
+    {
+      "jp": "彼はもう帰っただろう。",
+      "en": "He has probably already gone home."
+    },
+    {
+      "jp": "昨日の試験は難しかったでしょう。",
+      "en": "Yesterday’s exam was probably difficult."
+    },
+    {
+      "jp": "昨日は祝日だったでしょう。",
+      "en": "Yesterday was probably a public holiday."
+    },
+    {
+      "jp": "昨夜の会場は静かだっただろう。",
+      "en": "The venue last night was probably quiet."
+    },
+    {
+      "jp": "こちらの席、空いているでしょうか。",
+      "en": "I wonder if this seat is available."
+    },
+    {
+      "jp": "この道で合っているだろうか。",
+      "en": "I wonder if this is the right road."
+    },
+    {
+      "jp": "明日は寒いでしょう？",
+      "en": "It’ll be cold tomorrow, won’t it?"
+    },
+    {
+      "jp": "それ、君のだろ？",
+      "en": "That’s yours, right?"
+    },
+    {
+      "jp": "昨夜はそんなに寒くなかったでしょう。",
+      "en": "It probably wasn’t that cold last night."
+    },
+    {
+      "jp": "おそらく彼は来ないだろうと思う。",
+      "en": "I think he probably won’t come."
+    },
+    {
+      "jp": "このケーキ、甘いでしょ？",
+      "en": "This cake is sweet, right?"
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "たぶん彼は来ると思う。",
+      "en": "I think he’ll probably come."
+    },
+    {
+      "jp": "おそらく間に合いますよね。",
+      "en": "We’ll probably make it in time, right?"
+    },
+    {
+      "jp": "明日は雨かもしれない。",
+      "en": "It might rain tomorrow."
+    },
+    {
+      "jp": "きっと成功するに違いない。",
+      "en": "He is bound to succeed."
+    },
+    {
+      "jp": "この道で合っていますか。",
+      "en": "Is this the right way?"
+    },
+    {
+      "jp": "昨日の試験は難しかったよね。",
+      "en": "Yesterday’s exam was hard, wasn’t it?"
+    },
+    {
+      "jp": "雨であろうと雪であろうと、練習は休まない。",
+      "en": "Whether it rains or snows, we won’t cancel practice."
+    },
+    {
+      "jp": "子どもだろうに、そんなに無理をさせるな。",
+      "en": "Even though he’s just a child, don’t push him so hard."
+    },
+    {
+      "jp": "彼が学生だろうが社会人だろうが、対応は同じだ。",
+      "en": "Whether he’s a student or a working adult, our response is the same."
+    },
+    {
+      "jp": "だろう運転は危険だ。",
+      "en": "Assumption-based driving is dangerous."
+    }
+  ]
+}

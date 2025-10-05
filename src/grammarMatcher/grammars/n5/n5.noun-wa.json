@@ -1,0 +1,135 @@
+{
+  "id": "n5.noun-wa",
+  "level": "N5",
+  "description": "Used to mark the topic of a sentence; 'as for', 'speaking of'",
+  "formation": "Noun + は",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 話題の「は」\n\n### Meaning and function\n- Marks the topic (what the sentence is about). Often translates as “as for ~,” “speaking of ~,” or sets shared/background information. Can also signal contrast (“at least/whereas/as for X”).\n\n### Form and templates\n- Core:\n  - N/NP + は + [predicate]\n- Topicalizing case-marked phrases:\n  - If NP is marked by が or を, replace it with は:\n    - NP が/を → NP は\n  - If NP is marked by other case/functional particles, keep the particle and add は:\n    - NP に/で/へ/と/から/まで/より/として/について + は → には／では／へは／とは／からは／までは／よりは／としては／については\n- Placement/order:\n  - The topic typically appears near the beginning of the clause, directly followed by は.\n  - Multiple topics are possible (e.g., broader topic + narrower/contrastive topic), but overuse sounds heavy.\n- Politeness/conjugation:\n  - は itself does not conjugate. Politeness is controlled by the predicate (〜です/〜ます vs. plain 〜だ/〜る).\n- Pronunciation/orthography:\n  - The particle は is pronounced “wa,” though written は.\n  - After で, では can contract to じゃ in casual speech especially before negatives (register note below).\n\n### Usage notes and constraints\n- Register/naturalness:\n  - Neutral and extremely common in all registers. In conversation, once a topic is established, it is often omitted in later sentences (zero topic).\n- Information structure:\n  - Use は for known/shared topics or to set a frame. Use が (not は) when introducing brand-new, focused, or unknown subjects.\n  - は often carries a contrastive nuance, especially in negative sentences or when opposing items.\n- Scope:\n  - The topic marked by は sets the scope for what follows (the comment/predicate applies “with respect to” that topic).\n- Interrogatives:\n  - Do not attach は to interrogative pronouns (だれ/何/どこ etc.) when they are the focus of the question. Use the appropriate case particle (often が) instead. It is fine for a non-interrogative topic to take は while the predicate contains the question.\n- Subordinate/relative clauses:\n  - Avoid は inside most subordinate clauses and relative clauses; use が or the appropriate case particle there. は is typically for the main clause/topic frame.\n- With existence/possession and “presentational” sentences:\n  - When presenting new existence or occurrences, が is preferred. Using は in such contexts implies contrast or assumes the referent is already known.\n- After other particles:\n  - Remember the rule of replacement vs. addition: replace が/を with は; add は after other particles (には, では, とは, etc.).\n- Orthographic/phonetic variants:\n  - は → pronounced “wa.” The では → じゃ contraction is casual; keep では in formal writing and in polite styles unless a set phrase dictates otherwise.\n\n### Common mistakes (optional, only if relevant)\n- Using は on interrogative pronouns functioning as the unknown/focus (unnatural).\n- Forgetting to replace が/を with は when topicalizing the subject/object.\n- Incorrectly dropping essential case particles when adding は (e.g., writing NP は instead of NP には/では where に/で is required).\n- Overusing multiple は in a single sentence, making it heavy or awkward.\n- Using は to introduce entirely new information; が is more natural for first mention.\n\n### Related grammar (optional, only if relevant)\n- が: Marks the grammatical subject and new/focused information; contrasts with は (topic/given/contrast).\n- も: “Also/as well.” Like は, it replaces が/を and follows other particles (にも/でも, etc.); adds inclusion rather than topical contrast.\n- って (topic/quotation marker, casual): Often used in conversation to topicalize; more colloquial than は.\n- では/には: Case-marked phrases topicalized with は; では can contract to じゃ in casual speech, especially before ない.",
+  "examples": [
+    {
+      "jp": "今日は暑いですね。",
+      "en": "As for today, it’s hot, isn’t it?"
+    },
+    {
+      "jp": "この店は安くておいしい。",
+      "en": "This shop is cheap and tasty."
+    },
+    {
+      "jp": "私は明日は行きません。",
+      "en": "As for me, I won’t go tomorrow."
+    },
+    {
+      "jp": "音楽については、あまり詳しくないです。",
+      "en": "As for music, I’m not very knowledgeable."
+    },
+    {
+      "jp": "ここでは静かにしていただけますか。",
+      "en": "Could you please be quiet here?"
+    },
+    {
+      "jp": "ここじゃ騒げないよ。",
+      "en": "You can’t make noise here."
+    },
+    {
+      "jp": "私としては、賛成です。",
+      "en": "As for me, I’m in favor."
+    },
+    {
+      "jp": "あの人よりは、彼のほうが速く走れる。",
+      "en": "Compared to that person, he can run faster."
+    },
+    {
+      "jp": "仕事は昨日終わった。",
+      "en": "As for the work, I finished it yesterday."
+    },
+    {
+      "jp": "ここまでは簡単だったが、この先が難しい。",
+      "en": "Up to this point was easy, but what lies ahead is hard."
+    },
+    {
+      "jp": "うちには犬はいない。",
+      "en": "At our place, we don’t have a dog."
+    },
+    {
+      "jp": "受付へは、こちらのエレベーターをご利用ください。",
+      "en": "To the reception, please use this elevator."
+    },
+    {
+      "jp": "そこからは海が見えますか。",
+      "en": "From there, can you see the ocean?"
+    },
+    {
+      "jp": "この映画とは関係ない話だ。",
+      "en": "It’s a story unrelated to this movie."
+    },
+    {
+      "jp": "新人としては、よくやったほうだ。",
+      "en": "For a newcomer, you did pretty well."
+    },
+    {
+      "jp": "子どもには難しすぎたかもしれない。",
+      "en": "For children, it might have been too difficult."
+    },
+    {
+      "jp": "私の町では、桜がもう咲きました。",
+      "en": "In my town, the cherry blossoms have already bloomed."
+    },
+    {
+      "jp": "この件は、誰が担当しますか。",
+      "en": "As for this matter, who will be in charge?"
+    },
+    {
+      "jp": "パスタは食べるけど、肉は食べない。",
+      "en": "I eat pasta, but I don’t eat meat."
+    },
+    {
+      "jp": "昨日買った本は、まだ読んでいません。",
+      "en": "The book I bought yesterday, I haven’t read yet."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "だれが来ますか。",
+      "en": "Who is coming?"
+    },
+    {
+      "jp": "ここで写真を撮ってもいいですか。",
+      "en": "Is it okay to take photos here?"
+    },
+    {
+      "jp": "学生ではありません。",
+      "en": "I am not a student."
+    },
+    {
+      "jp": "彼って優しいよね。",
+      "en": "He’s kind, isn’t he?"
+    },
+    {
+      "jp": "二羽の鳥が庭にいる。",
+      "en": "Two birds are in the yard."
+    },
+    {
+      "jp": "歯を磨きましたか。",
+      "en": "Did you brush your teeth?"
+    },
+    {
+      "jp": "葉が色づき始めた。",
+      "en": "The leaves have started to change color."
+    },
+    {
+      "jp": "それでは、始めましょう。",
+      "en": "Well then, let’s begin."
+    },
+    {
+      "jp": "この問題について話しましょう。",
+      "en": "Let’s talk about this problem."
+    },
+    {
+      "jp": "東京より大阪のほうが暑い。",
+      "en": "Osaka is hotter than Tokyo."
+    }
+  ]
+}

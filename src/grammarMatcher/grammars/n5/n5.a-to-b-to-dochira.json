@@ -1,0 +1,135 @@
+{
+  "id": "n5.a-to-b-to-dochira",
+  "level": "N5",
+  "description": "Used to ask which of two alternatives is preferred or to compare two things",
+  "formation": "Aと Bと どちら + Verb/Adjective/Noun",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- AとBとどちら（のほう）が〜\n\n### Meaning and function\n- Asks which of two alternatives is preferred, better, or has a higher degree of some property\n\n### Form and templates\n- N1 と N2 と どちらが Adj ですか\n- N1 と N2 と（では）どちらのほうが Adj ですか\n- N1 と N2 と どちら + case-particle + V/Adj/N ですか\n  - Use the case particle required by the predicate: が (for qualities like いい/好き/欲しい/上手), を (for choose/use/buy), に/へ (for go/choose a destination), で (for means/place), etc.\n- Optional/alternative parts:\n  - のほう: adds “more”/“the one that is more …”; often used with gradable adjectives and preferences\n  - では after N2: highlights the comparison set (more careful/formal)\n  - どちら → どっち (casual)\n- Conjugation/inflection:\n  - Predicate can be in any tense/polarity/politeness as needed (〜ですか／〜ましたか／〜じゃないですか, etc.)\n\n### Usage notes and constraints\n- Register:\n  - どちら is neutral/polite; どっち is casual. Use ですか in polite speech.\n  - N1 と N2 とでは … is slightly more formal/explicit than N1 と N2 と ….\n- Scope/semantics:\n  - Compares exactly two options. For three or more, use どれ (or ask a superlative with いちばん).\n  - Keep the two items comparable (same category) for naturalness.\n  - When asking about preference or “better,” のほう is very natural but not mandatory.\n  - Do not mix this question pattern with より inside the same question; より is typically used in answers/statements.\n- Particle/ordering:\n  - List the two options with と; you may optionally add では after the second item.\n  - After どちら, use the particle that the predicate requires (commonly が).\n- Orthographic variants:\n  - どちら vs どっち (casual)\n  - のほう can be written as の方 (方 is more formal/written)\n  - 何方 for どちら exists but is uncommon in modern writing\n\n### Common mistakes\n- Using どれ for two choices; use どちら for a two-item comparison.\n- Using は after どちら where が or another case particle is required.\n- Forgetting の in どちらのほう (× どちらほう).\n- Mixing patterns: putting より inside the question with どちら (keep より for answers/statements).\n- Using casual どっち in formal situations.\n\n### Related grammar\n- N1 より N2 のほうが 〜: Statement form expressing which is “more”; often used to answer どちら-questions.\n- どれがいちばん〜ですか: Chooses the best among three or more (superlative).\n- どちらでもいい／どちらも〜: “Either is fine” / “both …”; responses to どちら-questions.\n- A か B（、どちらが〜ですか）: Alternative listing with か; used for selecting between two, sometimes without explicit “more/less” comparison.",
+  "examples": [
+    {
+      "jp": "紅茶とコーヒーと何方が好きですか。",
+      "en": "Between tea and coffee, which do you like?"
+    },
+    {
+      "jp": "夏と冬とではどちらのほうが過ごしやすいですか。",
+      "en": "Between summer and winter, which is easier to live through?"
+    },
+    {
+      "jp": "犬と猫と、どっちがかわいいと思う？",
+      "en": "Between dogs and cats, which do you think is cuter?"
+    },
+    {
+      "jp": "東京と京都とどちらに先に行きますか。",
+      "en": "Between Tokyo and Kyoto, which will you go to first?"
+    },
+    {
+      "jp": "バスと地下鉄とどちらで行ったほうが早いですか。",
+      "en": "Is it faster to go by bus or by subway?"
+    },
+    {
+      "jp": "青いシャツと白いシャツとどちらを買いますか。",
+      "en": "Between the blue shirt and the white shirt, which will you buy?"
+    },
+    {
+      "jp": "昨日の試合、テレビとラジオとではどちらのほうが分かりやすかったですか。",
+      "en": "For yesterday’s game, which was easier to follow, TV or radio?"
+    },
+    {
+      "jp": "紙の本と電子書籍と、どちらがよくないと思いますか。",
+      "en": "Between paper books and e-books, which do you think is not as good?"
+    },
+    {
+      "jp": "AコースとBコースと、どちらの方がお得なんじゃないですか。",
+      "en": "Isn’t one a better deal, Course A or Course B?"
+    },
+    {
+      "jp": "この赤い傘と黒い傘と、どちらが欲しいですか。",
+      "en": "Between this red umbrella and the black one, which do you want?"
+    },
+    {
+      "jp": "スキーとスノーボードと、どちらが上手でしたか。",
+      "en": "Which were you better at, skiing or snowboarding?"
+    },
+    {
+      "jp": "海と山と、どちらへ旅行に行きたいですか。",
+      "en": "Would you like to travel to the sea or the mountains?"
+    },
+    {
+      "jp": "図書館と自宅とどちらで勉強しますか。",
+      "en": "Will you study at the library or at home?"
+    },
+    {
+      "jp": "朝型と夜型とでは、どちらのほうが効率がいいですか。",
+      "en": "Are morning types or night types more efficient?"
+    },
+    {
+      "jp": "高速道路と下道と、どっちにする？",
+      "en": "Highway or local roads—which shall we choose?"
+    },
+    {
+      "jp": "紙袋とエコバッグとでは、どちらで持ち運びやすいですか。",
+      "en": "Is it easier to carry things with a paper bag or with a reusable bag?"
+    },
+    {
+      "jp": "英語と中国語と、どちらが苦手ですか。",
+      "en": "Which are you less good at, English or Chinese?"
+    },
+    {
+      "jp": "鉛筆とシャープペンシルと、どちらを使うことが多かったですか。",
+      "en": "Which did you use more often, pencils or mechanical pencils?"
+    },
+    {
+      "jp": "グリーンカレーとレッドカレーと、どちらのほうが辛いですか。",
+      "en": "Which is spicier, green curry or red curry?"
+    },
+    {
+      "jp": "新幹線と飛行機と、どちらが高かったですか。",
+      "en": "Which was more expensive, the bullet train or the plane?"
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "紅茶かコーヒー、どちらがいいですか。",
+      "en": "Tea or coffee, which is better?"
+    },
+    {
+      "jp": "東京より大阪のほうが大きいですか。",
+      "en": "Is Osaka larger than Tokyo?"
+    },
+    {
+      "jp": "紅茶とコーヒーはどちらも好きですか。",
+      "en": "Do you like both tea and coffee?"
+    },
+    {
+      "jp": "どちらでも大丈夫です。",
+      "en": "Either is fine."
+    },
+    {
+      "jp": "どっちでもいいよ。",
+      "en": "Either is fine."
+    },
+    {
+      "jp": "ご担当はどちらさまですか。",
+      "en": "Who is the person in charge?"
+    },
+    {
+      "jp": "上海と北京とでは、北京のほうが寒いですか。",
+      "en": "Between Shanghai and Beijing, is Beijing colder?"
+    },
+    {
+      "jp": "この靴とあの靴、どっちか買います。",
+      "en": "I’ll buy one of these shoes."
+    },
+    {
+      "jp": "どちらかというと、辛い料理のほうが好きです。",
+      "en": "If anything, I prefer spicy food."
+    },
+    {
+      "jp": "紅茶とコーヒーとどちらを選ぶかは、あなた次第です。",
+      "en": "Whether you choose tea or coffee is up to you."
+    }
+  ]
+}

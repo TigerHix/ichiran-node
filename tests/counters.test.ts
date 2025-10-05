@@ -1,6 +1,6 @@
 // Counter tests - ported from tests.lisp
 import { describe, test, expect } from 'bun:test';
-import { simpleSegment } from '../src/dict.js';
+import { simpleSegment } from '../src/dict/presentation.js';
 import { setupTests, extractTexts } from './test-setup.js';
 
 setupTests();

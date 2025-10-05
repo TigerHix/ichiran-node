@@ -51,22 +51,102 @@ export interface CompoundText {
   primary: KanjiText | KanaText | ProxyText;
   words: (KanjiText | KanaText | ProxyText)[];
   seq: number[]; // Array of seq values from all component words (Lisp: defmethod seq ((obj compound-text)))
-  scoreBase?: any;
+  scoreBase?: SimpleWord | ProxyText;
   scoreMod: number | number[] | ((score: number) => number);
+}
+
+// CounterText constructor options (for unresolved args - before function resolution)
+export interface CounterOptionsUnresolved {
+  text: string;
+  kana: string;
+  numberText: string;
+  source?: ((txt: string, readings: Reading[]) => Reading | null) | Reading | null;
+  ordinalp?: boolean;
+  suffix?: string | null;
+  accepts?: string[] | null;
+  suffixDescriptions?: string[];
+  digitOpts?: Array<[number | string, ...string[]]> | null;
+  digitSet?: number[];  // For CounterHifumi and other special counters
+  common?: number | null;
+  allowed?: number[] | null;
+  foreign?: boolean;
+}
+
+// CounterText constructor options (after source function resolution)
+export interface CounterOptions extends Omit<CounterOptionsUnresolved, 'source'> {
+  source?: Reading | null;
+}
+
+// CounterText interface - class implementation in dict/counters.ts
+export interface CounterText {
+  text: string;
+  kana: string;
+  numberText: string;
+  numberValue: number;
+  source: (KanjiText | KanaText) | null;
+  ordinalp: boolean;
+  suffix: string | null;
+  acceptsSuffixes: string[] | null;
+  suffixDescriptions: string[];
+  digitOpts: Array<[number | string, ...string[]]> | null;
+  common: number | null;
+  allowed: number[] | null;
+  foreign: boolean;
+
+  // Methods
+  verify(unique: boolean): boolean;
+  getText(): string;
+  getKanji(): string;
+  getKanaBase(): string;
+  getKana(): string;
+  wordType(): 'kanji' | 'kana';
+  getCommon(): number | null;
+  getSeq(): number | null;
+  getOrd(): number;
+  wordConjugations(): null;
+  wordConjData(): null;
+  nokanji(): boolean;
+  rootP(): boolean;
+  valueString(): string;
+  counterJoin(n: number, numberKana: string, counterKana: string): string;
 }
 
 // ============================================================================
 // WORD UNION TYPES
 // ============================================================================
 
-// Union type for simple word objects (has guaranteed 'seq' property)
-export type Word = KanjiText | KanaText | ProxyText;
-
-// Union type for all word objects including compounds
-export type AnyWord = Word | CompoundText;
-
-// Type for reading objects used in splits and conjugations
+// Type for reading objects used in splits and conjugations (DB types only)
 export type Reading = KanjiText | KanaText;
+
+// Simple word types - have seq: number directly
+export type SimpleWord = KanjiText | KanaText;
+
+// Words that have seq property directly (either number or number[])
+export type WordWithDirectSeq = SimpleWord | CompoundText;
+
+// Words that have text property
+export type WordWithText = SimpleWord | ProxyText | CompoundText | CounterText;
+
+// Words that have kana property
+export type WordWithKana = ProxyText | CompoundText | CounterText;
+
+// All word types - comprehensive union
+export type AnyWord = SimpleWord | ProxyText | CompoundText | CounterText;
+
+// Split parts - used in split functions that decompose words
+export type SplitPart = KanjiText | KanaText | ProxyText | CompoundText;
+
+// Reading match items - used in kanji reading matching
+// Either a character string or a reading tuple with variable length:
+// - Irregular: [char, reading, "irr"]
+// - Regular: [char, reading, type, null]
+// - With rendaku/gemination: [char, reading, type, rendakuFlag|null, geminated|null]
+export type ReadingMatchItem = 
+  | string 
+  | [string, string, "irr"]
+  | [string, string, string, null]
+  | [string, string, string, string, null]
+  | [string, string, string, null, string];
 
 // ============================================================================
 // DATABASE SCHEMA TYPES
@@ -150,6 +230,16 @@ export interface ConjData {
   srcMap: [string, string][];
 }
 
+// Database query result types (for joined queries)
+export interface ConjugationWithProp extends Conjugation {
+  // ConjProp fields (from LEFT JOIN)
+  conjId?: number;
+  conjType?: number;
+  pos?: string;
+  neg?: boolean | null;
+  fml?: boolean | null;
+}
+
 // ============================================================================
 // SEGMENTATION TYPES
 // ============================================================================
@@ -158,10 +248,11 @@ export interface ConjData {
 export interface Segment {
   start: number;
   end: number;
-  word: AnyWord | any; // 'any' for counter-text and special cases
+  word: AnyWord;
   score?: number;
-  info?: any;
-  top?: any;
+  info?: CalcScoreInfo;
+  // eslint-disable-next-line @typescript-eslint/no-use-before-define
+  top?: TopArray | null;
   text?: string;
 }
 
@@ -177,7 +268,7 @@ export interface SegmentList {
 // Line 1136-1144: defclass top-array
 export interface TopArrayItem {
   score: number;
-  payload: any;
+  payload: Segment[];
 }
 
 export class TopArray {
@@ -188,7 +279,7 @@ export class TopArray {
     this.array = new Array(limit).fill(null);
   }
 
-  registerItem(score: number, payload: any): void {
+  registerItem(score: number, payload: Segment[]): void {
     const item: TopArrayItem = { score, payload };
     const len = this.array.length;
 
@@ -224,6 +315,53 @@ export class TopArray {
 }
 
 // ============================================================================
+// SCORING TYPES
+// ============================================================================
+
+/**
+ * Information returned by calcScore about a word's score calculation
+ * This was previously typed as 'any' but has a well-defined structure
+ */
+export interface CalcScoreInfo {
+  /** Part-of-speech tags for this word */
+  posi: string[];
+  /** Sequence IDs: [main seq, ...conjugation seqs] */
+  seqSet: number[];
+  /** Conjugation data */
+  conj: ConjData[];
+  /** Commonality score (0-99 for common words, null otherwise) */
+  common: number | null;
+  /**
+   * Detailed scoring breakdown:
+   * [propScore, kanjiBreak, useLengthBonus, splitInfo]
+   */
+  scoreInfo: [
+    propScore: number,
+    kanjiBreak: number[] | null,
+    useLengthBonus: number,
+    splitInfo: number | [number, ...number[]] | null  // null, single number, or [scoreModSplitNum, ...partScores]
+  ];
+  /**
+   * Boolean flags: [kanjiOrKatakana, primary, common, long]
+   * k = kanji or katakana, p = primary, c = common, l = long
+   */
+  kpcl: [boolean, boolean, boolean, boolean];
+}
+
+/**
+ * Substring hash entry for caching word lookups
+ */
+export interface SubstringHashEntry {
+  table: string;
+  row: KanjiText | KanaText;
+}
+
+/**
+ * Type for substring hash maps
+ */
+export type SubstringHash = Map<string, SubstringHashEntry[]>;
+
+// ============================================================================
 // TYPE GUARDS
 // ============================================================================
 
@@ -243,6 +381,68 @@ export function isCompoundText(word: any): word is CompoundText {
   return word && 'words' in word && 'primary' in word && Array.isArray(word.words);
 }
 
-export function isSimpleText(word: any): word is KanjiText | KanaText {
+export function isSegment(obj: any): obj is Segment {
+  return obj && typeof obj === 'object' && 'word' in obj && 'start' in obj && 'end' in obj;
+}
+
+export function isSegmentList(obj: any): obj is SegmentList {
+  return obj && typeof obj === 'object' && 'segments' in obj && Array.isArray(obj.segments);
+}
+
+export function isCounterText(obj: any): boolean {
+  return obj && typeof obj === 'object' && 'valueString' in obj;
+}
+
+// ============================================================================
+// ENHANCED TYPE GUARDS FOR SEQ PROPERTY
+// ============================================================================
+
+/**
+ * Type guard for words that have seq as a direct property (number)
+ * This includes KanjiText and KanaText
+ */
+export function isSimpleWord(word: any): word is SimpleWord {
   return isKanjiText(word) || isKanaText(word);
+}
+
+/**
+ * Type guard for words that have seq directly (either number or number[])
+ * This includes SimpleWord and CompoundText
+ */
+export function hasDirectSeq(word: any): word is WordWithDirectSeq {
+  return isSimpleWord(word) || isCompoundText(word);
+}
+
+/**
+ * Type guard for words that have a source property with seq
+ * This includes ProxyText and CounterText (via duck typing)
+ */
+export function hasSourceWithSeq(word: any): word is ProxyText {
+  return isProxyText(word) || isCounterText(word);
+}
+
+// ============================================================================
+// PROPERTY-SPECIFIC TYPE GUARDS
+// ============================================================================
+
+/**
+ * Type guard for words with text property
+ */
+export function isWordWithText(obj: any): obj is WordWithText {
+  return obj && typeof obj === 'object' && 'text' in obj && typeof obj.text === 'string';
+}
+
+/**
+ * Type guard for all SimpleText-based types (all types that extend SimpleText interface)
+ * Includes: KanjiText, KanaText, ProxyText (all have conjugations property)
+ */
+export function isSimpleText(obj: any): obj is KanjiText | KanaText | ProxyText {
+  return isKanjiText(obj) || isKanaText(obj) || isProxyText(obj);
+}
+
+/**
+ * Type guard for words with kana property
+ */
+export function isWordWithKana(obj: any): obj is WordWithKana {
+  return obj && typeof obj === 'object' && 'kana' in obj;
 }

@@ -1,0 +1,135 @@
+{
+  "id": "n4.verb-te-aru",
+  "level": "N4",
+  "description": "Indicates that an action has been done and its result is still in effect.",
+  "formation": "Verb-て form + ある",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜てある（意図された結果の状態）\n\n### Meaning and function\n- States that someone has intentionally performed an action on something and the resulting state still remains. Often used for preparations, arrangements, or things placed/written/attached/turned on/off.\n\n### Form and templates\n- N(が/は) V(transitive)-て ある\n  - Describes the current state of N as the result of a deliberate action.\n- Place に N(が) V-て ある\n  - Place of existence/result uses に.\n- N を V(transitive)-て ある\n  - Emphasizes a preparation/arrangement done (often speaker-involved); location often omitted.\n- Polite: V-て あります\n- Past state: V-て あった\n- Clause-linking: V-て あって, … / V-て あり, …\n- Negative: true negation is uncommon. For “not in that resultant state,” speakers typically use:\n  - Intransitive result: 自動詞の〜ている(〜ていない)\n  - Passive result: V-られている(〜られていない)\n  - Contrastive negation of 〜てある can appear as V-てはない.\n\nParticle requirements and ordering\n- Place に + N(が) + V-て ある is the default for describing where something is in a resultant state.\n- が marks the affected thing as subject; は topicalizes it.\n- を is acceptable in the “preparation/arrangement” use when simply stating what has been done (often without a place phrase).\n\nConjugation/inflection notes\n- ある conjugates normally: あります／あった／ありません.\n- 〜てございます is an extra-polite variant sometimes seen in announcements/signage.\n\n### Usage notes and constraints\n- Register/naturalness: Neutral and common in speech and writing; polite 〜てあります is frequent. 〜てございます is very polite/formulaic (service, signage).\n- Verb choice: Use with 他動詞 that create a lasting, observable/functional state (placing, attaching, turning on/off, preparing, writing, reserving, fixing, washing). Avoid verbs whose effects don’t persist in a concrete way.\n- Intentionality: Implies a deliberate human action; the agent is usually omitted.\n- Subject type: The subject is typically inanimate (the affected thing). Do not use with animate subjects to describe their posture/condition; use 〜ている instead.\n- 自動詞 vs 他動詞: For simple resultant states with 自動詞, use 〜ている (e.g., “is open” via 開いている). Use 〜てある with the 他動詞 counterpart to highlight that someone made it so (開けてある).\n- Place marking: With ある, the place takes に, not で.\n- Object omission: The object is often omitted when contextually clear (especially in the “preparation” reading).\n- Common adverbs: もう／すでに／ちゃんと／きちんと／しっかり naturally pair with the “preparation/arrangement” nuance.\n- Orthography: ある is usually written in kana; ございます also in kana.\n\n### Common mistakes\n- Using 自動詞 with 〜てある. Use the 他動詞 result with 〜てある, or use 自動詞＋〜ている for neutral states.\n- Marking the place with で instead of に when used with ある.\n- For location descriptions, using N を V-てある instead of N が V-てある; を is better for the “I/we have prepared …” reading without a place phrase.\n- For animate subjects, using 〜てある to describe their state; use 〜ている.\n- For negation, forcing V-てない as the negative of 〜てある; prefer 自動詞の〜ていない or 受け身の〜られていない to say “it hasn’t been done.”\n\n### Related grammar\n- 〜ている: Describes ongoing action or simple resultant state (often with 自動詞). No necessary implication of deliberate cause.\n- 〜ておく: Emphasizes doing something in advance. 〜てある emphasizes the resulting prepared state.\n- 受け身 〜られている: “Is done/has been done” in a neutral/formal way; useful for negation of an intended arrangement.\n- 自動詞／他動詞ペア（〜ている vs 〜てある）: 自動詞＋〜ている for neutral state; 他動詞＋〜てある for intentional result.",
+  "examples": [
+    {
+      "jp": "壁に地図が貼ってある。",
+      "en": "A map has been posted on the wall."
+    },
+    {
+      "jp": "窓はもう開けてある。",
+      "en": "The window has already been opened."
+    },
+    {
+      "jp": "会議室には椅子がきちんと並べてあります。",
+      "en": "The chairs have been neatly arranged in the meeting room."
+    },
+    {
+      "jp": "昨夜は玄関のドアに鍵が掛けてあった。",
+      "en": "Last night, the front door was locked."
+    },
+    {
+      "jp": "人数分の皿をちゃんと並べてあります。",
+      "en": "The plates for everyone have been properly set out."
+    },
+    {
+      "jp": "資料はすでに印刷してあります。",
+      "en": "The materials have already been printed."
+    },
+    {
+      "jp": "プロジェクターはもうつけてありますか。",
+      "en": "Has the projector already been turned on?"
+    },
+    {
+      "jp": "冷蔵庫に明日の弁当が詰めてある。",
+      "en": "Tomorrow’s bento has been packed and placed in the fridge."
+    },
+    {
+      "jp": "入口には案内板が立ててあって、迷わない。",
+      "en": "A signboard has been set up at the entrance, so you won’t get lost."
+    },
+    {
+      "jp": "説明はドアの横に丁寧に貼ってあり、誰でも確認できる。",
+      "en": "The instructions have been carefully posted next to the door, so anyone can check them."
+    },
+    {
+      "jp": "会場には名前の札が置いてあります。",
+      "en": "Name tags have been placed at the venue."
+    },
+    {
+      "jp": "魚に塩をしっかり振ってある。",
+      "en": "The fish has been thoroughly salted."
+    },
+    {
+      "jp": "書類は机の上にまとめて置いてある。",
+      "en": "The documents have been gathered and placed on the desk."
+    },
+    {
+      "jp": "ポスターは貼ってはないが、案内は入口に置いてある。",
+      "en": "The poster isn’t posted, but a notice has been placed at the entrance."
+    },
+    {
+      "jp": "朝までにお茶が入れてありました。",
+      "en": "Tea had been prepared by morning."
+    },
+    {
+      "jp": "非常口の案内が掲示してございます。",
+      "en": "An emergency exit notice has been posted."
+    },
+    {
+      "jp": "このカレー、辛さは調整してありますか。",
+      "en": "Has the spiciness of this curry been adjusted?"
+    },
+    {
+      "jp": "予備の電池をカバンに入れてあります。",
+      "en": "Spare batteries have been put in the bag."
+    },
+    {
+      "jp": "音量は少し低くしてある。",
+      "en": "The volume has been set a bit low."
+    },
+    {
+      "jp": "玄関の明かりは消してあるか。",
+      "en": "Has the light at the entrance been turned off?"
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "窓が開いている。",
+      "en": "The window is open."
+    },
+    {
+      "jp": "会議室に椅子がたくさんある。",
+      "en": "There are many chairs in the meeting room."
+    },
+    {
+      "jp": "玄関のドアには鍵がかかっている。",
+      "en": "The front door is locked."
+    },
+    {
+      "jp": "プロジェクターはもうつけておきました。",
+      "en": "I’ve already turned on the projector in advance."
+    },
+    {
+      "jp": "冷蔵庫には弁当が入っていない。",
+      "en": "There’s no bento in the fridge."
+    },
+    {
+      "jp": "ポスターが貼られている。",
+      "en": "A poster is posted."
+    },
+    {
+      "jp": "予備の電池をカバンに入れておく。",
+      "en": "I’ll put spare batteries in my bag."
+    },
+    {
+      "jp": "このカレー、辛さは調整していません。",
+      "en": "For this curry, we haven’t adjusted the spiciness."
+    },
+    {
+      "jp": "音量は少し低くしておいた。",
+      "en": "I set the volume a bit low (in advance)."
+    },
+    {
+      "jp": "こちらにご案内がございます。",
+      "en": "We have information available here."
+    }
+  ]
+}

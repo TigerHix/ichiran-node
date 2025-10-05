@@ -1,0 +1,135 @@
+{
+  "id": "n5.noun-de",
+  "level": "N5",
+  "description": "Indicate a place or means for an action or situation; 'at, in, on', 'using', or 'by means of'",
+  "formation": "Noun + で",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 名詞＋で（場所・手段）\n\n### Meaning and function\n- Marks where an action/event takes place: “at/in/on”\n- Marks means, method, instrument, vehicle, or language: “by/with/using/in”\n- Also used for group size/composition (“as a group of …”) and often for material (“made of …”)\n\n### Form and templates\n- N(place)＋で＋V(action)\n- N(tool/vehicle/language/material)＋で＋V\n- N(number/group)＋で＋V\n- N(price/amount/time needed)＋で＋V [often learned later]\n- Particle behavior:\n  - で attaches directly to the noun (or full noun phrase) it marks.\n  - Multiple adverbial phrases can stack; a common order is Time ＞ Place(〜で) ＞ Means(〜で) ＞ Object ＞ Verb, but word order is flexible.\n- Alternations/choices:\n  - Place: use で for actions/events; use に for existence/state (いる・ある) or destinations with motion verbs (に／へ).\n  - Material: で emphasizes the material used; から is preferred when emphasizing transformation from a source.\n  - Means: で is the default; を使って is a more explicit “by using,” and によって is formal/advanced.\n- Conjugation/inflection:\n  - で here is a case particle; it does not conjugate and is independent of politeness.\n  - Do not confuse with で as the て-form of だ (for nouns/な-adjectives in linking).\n\n### Usage notes and constraints\n- Register and frequency: Neutral and extremely common in speech and writing at all politeness levels.\n- Semantic scope:\n  - Place で requires an action/event sense; it does not mark static location or residence.\n  - Means で covers tools, vehicles, media, languages, and body parts used to perform an action.\n  - Group で indicates doing something “as/with” a number or group.\n  - Cause/reason で (with event-type nouns) exists but is typically introduced later.\n- Not for time points: Do not use で for specific times/days; use に. で with durations can mean “in/within [time] (to complete),” which is commonly learned later.\n- Orthography: で is always written in hiragana.\n\n### Common mistakes (optional, only if relevant)\n- Using で instead of に with verbs of existence/state (いる・ある・住むなど).\n- Using で to mark destinations; use に／へ with motion verbs.\n- Using で to mark the agent “by” in passive sentences; use に.\n- Confusing the particle で with the て-form of だ (e.g., after nouns/な-adjectives).\n- Misreading 何で as “why” (colloquial なんで) when it can also mean “by what means”; be aware of the ambiguity from context.\n\n### Related grammar (optional, only if relevant)\n- 名詞＋に: location of existence/state; destination; point in time.\n- 名詞＋へ: direction/toward (destination).\n- 名詞＋を使って: explicit “by using …” (means/instrument).\n- 名詞＋から vs 名詞＋で (材料): から emphasizes origin/source or transformation; で emphasizes material used.\n- （名詞/な形容詞）＋で (て-form of だ): linker for clauses; different from the particle で.",
+  "examples": [
+    {
+      "jp": "毎朝早く学校で勉強します。",
+      "en": "I study at school early every morning."
+    },
+    {
+      "jp": "今日は家で料理しない。",
+      "en": "I’m not cooking at home today."
+    },
+    {
+      "jp": "昨日、駅前のカフェで友だちと話しました。",
+      "en": "Yesterday I talked with a friend at the cafe in front of the station."
+    },
+    {
+      "jp": "図書館で静かに勉強してもいいですか。",
+      "en": "May I study quietly in the library?"
+    },
+    {
+      "jp": "英語では説明できません。",
+      "en": "I can’t explain it in English."
+    },
+    {
+      "jp": "バスで会社に行きました。",
+      "en": "I went to the office by bus."
+    },
+    {
+      "jp": "日本語で質問してもいいですか。",
+      "en": "May I ask my question in Japanese?"
+    },
+    {
+      "jp": "左手で字を書いた。",
+      "en": "I wrote with my left hand."
+    },
+    {
+      "jp": "スマホで写真を撮ってもらえますか。",
+      "en": "Could you take a photo with a smartphone?"
+    },
+    {
+      "jp": "木で小さな棚を作りました。",
+      "en": "I made a small shelf out of wood."
+    },
+    {
+      "jp": "このコップはガラスでできています。",
+      "en": "This cup is made of glass."
+    },
+    {
+      "jp": "三人で映画に行きましょう。",
+      "en": "Let’s go to a movie as a group of three."
+    },
+    {
+      "jp": "家族四人で北海道を旅行した。",
+      "en": "The four of us in the family traveled around Hokkaido."
+    },
+    {
+      "jp": "その本は千円で買えますか。",
+      "en": "Can I buy that book for 1,000 yen?"
+    },
+    {
+      "jp": "宿題は一時間で終わりました。",
+      "en": "I finished the homework in an hour."
+    },
+    {
+      "jp": "休みの日に、公園で犬とゆっくり散歩します。",
+      "en": "On my days off, I take a relaxed walk with my dog in the park."
+    },
+    {
+      "jp": "朝、台所で包丁で野菜を切ります。",
+      "en": "In the morning, I cut vegetables in the kitchen with a knife."
+    },
+    {
+      "jp": "メールで連絡してください。",
+      "en": "Please contact me by email."
+    },
+    {
+      "jp": "今日の午後、会議室で打ち合わせがあります。",
+      "en": "This afternoon, there’s a meeting in the conference room."
+    },
+    {
+      "jp": "昨日は店で何も買いませんでした。",
+      "en": "I didn’t buy anything at the store yesterday."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "学生で、時間もお金もない。",
+      "en": "I’m a student, and I have neither time nor money."
+    },
+    {
+      "jp": "兄は名古屋に住んでいます。",
+      "en": "My older brother lives in Nagoya."
+    },
+    {
+      "jp": "雨で試合が中止になった。",
+      "en": "The game was canceled due to rain."
+    },
+    {
+      "jp": "世界で一番美しい町だと思う。",
+      "en": "I think it’s the most beautiful town in the world."
+    },
+    {
+      "jp": "これは紙から作られています。",
+      "en": "This is made from paper."
+    },
+    {
+      "jp": "電話を使って注文できます。",
+      "en": "You can place an order by using the phone."
+    },
+    {
+      "jp": "会議は三時に始まります。",
+      "en": "The meeting starts at three o’clock."
+    },
+    {
+      "jp": "日本語ではありません。",
+      "en": "It is not Japanese."
+    },
+    {
+      "jp": "彼は医者である。",
+      "en": "He is a doctor."
+    },
+    {
+      "jp": "駅での乗り換えが便利だ。",
+      "en": "Transfers at the station are convenient."
+    }
+  ]
+}

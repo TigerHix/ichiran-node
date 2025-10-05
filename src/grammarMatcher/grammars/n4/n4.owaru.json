@@ -1,0 +1,135 @@
+{
+  "id": "n4.owaru",
+  "level": "N4",
+  "description": "Verbal action is completed; 'to finish', 'to end'.",
+  "formation": "終わる (owaru) is a godan (u-verb)",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜終わる（動作・出来事の終了）\n\n### Meaning and function\n- States that an action or event comes to an end.\n- With V(stem)+終わる: “finish doing …”\n- With Nが終わる: “N ends/comes to an end”\n- With Nで終わる: “end at/with N” (endpoint such as time, place, amount, stage)\n\n### Form and templates\n- V(stem) + 終わる\n  - Finish doing the action expressed by the verb.\n  - The base verb keeps its normal case marking (を/に/で etc.).\n  - Tense/politeness are carried by 終わる: 終わります, 終わった, 終わらない, 終わりません, 終わって, etc. (godan conjugation).\n  - Resultative state: 〜終わっている = “is finished.”\n- N が 終わる\n  - The event/activity N (class, meeting, task, season, etc.) ends.\n  - が marks the thing that ends; は can topicalize it (Nは終わる) when the topic is established or contrasted.\n- N で 終わる\n  - Ends at/with N (time/date, place, stage, amount, method). で marks the endpoint or the manner of finishing.\n- Time/deadline combinations\n  - までに + 終わる: finish by (deadline).\n  - までで + 終わる: finish at that point and not go beyond it (explicit cutoff).\n- Alternative with て-form (different meaning)\n  - Vて + 終わる = “end by/with doing V” (final act or manner), not “finish doing V.”\n- Orthography\n  - Standard: 終わる. Kana-only: おわる. The older spelling 終る is not standard in modern writing.\n\n### Usage notes and constraints\n- Register and frequency: Neutral and very common in speech and writing. Polite forms are used in formal contexts; plain forms in casual or narrative contexts.\n- Semantics\n  - V(stem)+終わる is for actions that can be completed. It is unnatural with stative verbs (e.g., existence/possession/knowledge verbs) or inherently instantaneous happenings.\n  - Nが終わる: the subject is the event/time-bounded activity itself (not the agent). To express “someone finishes N,” use Nを終える (transitive) or rephrase with V(stem)+終わる.\n  - Nで終わる highlights the finishing point (today, this chapter, at the station, at 1000円, etc.). Nに終わる means “to end in/with (often an undesired result)” and is more written/formal.\n- Common co-occurring adverbs: もう, まだ, ようやく/やっと, ついに, ほとんど, すでに (to signal completion or lack thereof).\n- Aspect\n  - 〜終わっている describes the resultant state “is finished,” not an ongoing process of ending.\n- Particle behavior in compounds\n  - In V(stem)+終わる, the base verb’s objects/adjuncts appear before the compound and keep their normal particles.\n  \n### Common mistakes (optional, only if relevant)\n- Using を directly with 終わる to mean “finish N” (use Nが終わる or Nを終える, or V(stem)+終わる).\n- Confusing Vて終わる (“end by/with doing …”) with V(stem)+終わる (“finish doing …”).\n- Attaching 〜終わる to stative verbs that do not represent a completable action.\n- Mixing up までに終わる (by a deadline) and までで終わる (stop at that point, no further).\n\n### Related grammar (optional, only if relevant)\n- 〜終える: Transitive counterpart (“finish X”); takes Nを or V(stem)+終える. Slightly more formal or controlled completion than 終わる.\n- 〜てしまう: Completion plus nuance of regret, inadvertence, or exhaustiveness; 終わる is neutral completion.\n- 〜きる: V(stem)+きる = “do completely/fully, to the end,” emphasizing thoroughness or exhaustion; overlaps with 〜終わる but often stronger or subjective.\n- 終了する: Formal “to end/close/terminate” for scheduled events, services, applications; used in notices and official contexts.",
+  "examples": [
+    {
+      "jp": "宿題をやり終わって、すぐ寝た。",
+      "en": "After finishing my homework, I went straight to bed."
+    },
+    {
+      "jp": "もうレポートを書き終わりました。",
+      "en": "I’ve already finished writing the report."
+    },
+    {
+      "jp": "この本は最後まで読み終わらなかった。",
+      "en": "I didn’t finish reading this book to the end."
+    },
+    {
+      "jp": "この動画、もう見終わりましたか。",
+      "en": "Have you finished watching this video yet?"
+    },
+    {
+      "jp": "荷造りはまだし終わっていません。",
+      "en": "I haven’t finished packing yet."
+    },
+    {
+      "jp": "彼は仕事をやり終わると、すぐ帰る。",
+      "en": "He goes home as soon as he finishes his work."
+    },
+    {
+      "jp": "必要な手続きはすでに提出し終わっている。",
+      "en": "The required paperwork has already been submitted."
+    },
+    {
+      "jp": "会議は何時に終わりますか。",
+      "en": "What time does the meeting end?"
+    },
+    {
+      "jp": "試合はまだ終わらない。",
+      "en": "The game still isn’t over."
+    },
+    {
+      "jp": "夏がついに終わった。",
+      "en": "Summer has finally ended."
+    },
+    {
+      "jp": "工事はようやく終わりました。",
+      "en": "The construction has finally finished."
+    },
+    {
+      "jp": "授業が終わってから、図書館に行きます。",
+      "en": "After class ends, I’ll go to the library."
+    },
+    {
+      "jp": "このバスは駅で終わります。",
+      "en": "This bus terminates at the station."
+    },
+    {
+      "jp": "受け付けは三時までで終わります。",
+      "en": "Reception ends at three o’clock and won’t go beyond that."
+    },
+    {
+      "jp": "セールは今月で終わる。",
+      "en": "The sale ends this month."
+    },
+    {
+      "jp": "配布は先着百名で終わりますか。",
+      "en": "Does the distribution end at the first 100 people?"
+    },
+    {
+      "jp": "この番組は八時でおわります。",
+      "en": "This program ends at eight o’clock."
+    },
+    {
+      "jp": "式は校長が挨拶して終わった。",
+      "en": "The ceremony ended with the principal giving a greeting."
+    },
+    {
+      "jp": "ミーティングは一言お礼を言って終わりましょう。",
+      "en": "Let’s end the meeting by saying a quick thank-you."
+    },
+    {
+      "jp": "このタスクは明日までに終わります。",
+      "en": "This task will be finished by tomorrow."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "宿題を終えたので、散歩に出た。",
+      "en": "Since I finished my homework, I went out for a walk."
+    },
+    {
+      "jp": "受付は三時で終了します。",
+      "en": "Reception will close at three o’clock."
+    },
+    {
+      "jp": "この動画はここで終わりです。",
+      "en": "This video ends here."
+    },
+    {
+      "jp": "会議をここで終わりにしましょう。",
+      "en": "Let’s bring the meeting to an end here."
+    },
+    {
+      "jp": "申し込みは明日までに完了します。",
+      "en": "Applications will be completed by tomorrow."
+    },
+    {
+      "jp": "彼の挑戦は失敗に終わった。",
+      "en": "His attempt ended in failure."
+    },
+    {
+      "jp": "交渉は物別れに終わった。",
+      "en": "The negotiations ended in a breakup with no agreement."
+    },
+    {
+      "jp": "本を読み切ったら寝る。",
+      "en": "I’ll go to bed after I read the book to the end."
+    },
+    {
+      "jp": "作業を早く終わらせてください。",
+      "en": "Please finish the work quickly."
+    },
+    {
+      "jp": "これで終わりにしておくか。",
+      "en": "Shall we call it a day here?"
+    }
+  ]
+}

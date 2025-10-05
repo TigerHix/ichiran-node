@@ -1,0 +1,135 @@
+{
+  "id": "n4.made",
+  "level": "N4",
+  "description": "Indicates extent, 'until', 'up to', 'as far as', 'even'.",
+  "formation": "Verb + まで, い-Adjective + まで, な-Adjective + まで, Noun + まで",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- まで（範囲・終点・意外な包含）\n\n### Meaning and function\n- Marks an upper limit or end point: up to, as far as, until\n- Emphasizes unexpected inclusion: even\n\n### Form and templates\n- N + まで\n  - End point in time, place, quantity, price, etc. (inclusive of the limit)\n  - Can pair with から for ranges: N1 から N2 まで\n  - Interrogatives commonly used: いつ／どこ／いくら／何時／何円 + まで\n- Clause + まで\n  - V(plain non-past) + まで: until the action/event happens (the main clause holds up to that point)\n  - Typical endpoint verbs or change-of-state verbs fit naturally\n- Adjective-based change + まで\n  - い-adj(く)なる／な-adj(に)なる + まで: until it becomes Adj\n- “Even” (unexpected inclusion)\n  - N + まで: even N\n  - N + case particle + まで: keeps the original case while adding “even” (common with に, から, で). Use when you need both the grammatical role and the “even” nuance\n  - With simple destinations, まで typically replaces に／へ (にまで is for “even to …”, not a neutral destination)\n- Variants with focus particles\n  - X + までは: up to X (contrastive limit); often used with a negative to mean “not until X”\n  - X + までも: even X (stronger/emphatic; more written/formal)\n- Attributive\n  - X + までの + N: “the N up to X,” “N until X”\n- Particle behavior and ordering\n  - まで normally follows the element it limits and can replace some case particles (e.g., destination に／へ)\n  - When preserving the original case is needed for meaning (recipient, source, location, etc.), stack: N + case particle + まで\n- Conjugation notes\n  - In Clause + まで, the clause before まで is in plain non-past; the main clause can be plain or polite, and in any tense as needed\n\n### Usage notes and constraints\n- Register and frequency\n  - Neutral and common in speech and writing across politeness levels\n- Semantics and scope\n  - まで includes the end point\n  - With time, まで implies the action/state continues right up to that time\n  - Clause + まで selects an event/change that can serve as a clear endpoint; for ongoing states “during/while,” use 間/間に instead\n  - から and まで can appear alone if the other boundary is obvious from context, but the pair から〜まで explicitly marks both ends\n- “Even” nuance\n  - N + まで conveys speaker’s surprise or the extremity of inclusion; avoid overuse in neutral listing\n  - Case stacking (Nにまで, Nからまで, Nでまで) strengthens “even” while preserving grammatical role; を + まで is generally avoided\n- Destination vs “even to”\n  - Use 場所 + まで for a normal destination limit; にまで suggests “even to [that place/person]” (unexpected reach)\n- Contrast with までに (deadline)\n  - まで: continuity until the endpoint\n  - までに: “by (the deadline)” — occurrence at or before the time, no implication of continuous action up to it\n- Orthography\n  - Write まで in hiragana in general use; the kanji 迄 exists but is less common and feels formal/signage-like\n\n### Common mistakes (optional, only if relevant)\n- Confusing まで with までに; using まで when you mean a deadline (use までに for “by”)\n- Using V-て + まで to mean “until …” (for “until,” use V(plain non-past) + まで; V-てまで is a different pattern meaning “to the extent of even doing …” with a negative nuance)\n- Attaching まで directly to adjectives without なる; use い-adj(く)なる／な-adj(に)なる + まで for “until it becomes …”\n- Using にまで for a simple destination; use まで alone unless you mean “even to …”\n- Trying to use を + まで; object を generally does not combine with まで\n\n### Related grammar (optional, only if relevant)\n- までに: by (deadline); no continuous action implied\n- から〜まで: from … to …; explicitly marks both ends of a range\n- までは: up to … (contrastive); often with negatives for “not until …”\n- V-てから: after doing …; contrasts with V(plain) + まで “until …”\n- 間／間に: during/while; focuses on the span rather than the endpoint\n- くらい／ぐらい・ほど: degree/extent; similar “extent” meaning, but not an endpoint marker like まで",
+  "examples": [
+    {
+      "jp": "明日は九時まで働きます。",
+      "en": "I will work until nine tomorrow."
+    },
+    {
+      "jp": "今日、駅から会社まで歩いた。",
+      "en": "I walked from the station to the office today."
+    },
+    {
+      "jp": "雨がやむまでここで待ちましょう。",
+      "en": "Let's wait here until the rain stops."
+    },
+    {
+      "jp": "家に帰るまで連絡しません。",
+      "en": "I won't contact you until I get home."
+    },
+    {
+      "jp": "暖かくなるまでコートを着ていた。",
+      "en": "I kept my coat on until it got warm."
+    },
+    {
+      "jp": "周りが静かになるまで発表を始めません。",
+      "en": "I won't start the presentation until it gets quiet around us."
+    },
+    {
+      "jp": "部長まで反対した。",
+      "en": "Even the department manager opposed it."
+    },
+    {
+      "jp": "噂は近所の人にまで広がった。",
+      "en": "The rumor spread even to the neighbors."
+    },
+    {
+      "jp": "海外からまで注文が来た。",
+      "en": "Orders came even from overseas."
+    },
+    {
+      "jp": "そんな話を会議でまで持ち出すな。",
+      "en": "Don't bring up that kind of topic even at the meeting."
+    },
+    {
+      "jp": "十時までは入場できません。",
+      "en": "You cannot enter until ten o'clock."
+    },
+    {
+      "jp": "親友までもが私を疑った。",
+      "en": "Even my best friend doubted me."
+    },
+    {
+      "jp": "十時までの受付は終了しました。",
+      "en": "Reception up to ten o'clock has ended."
+    },
+    {
+      "jp": "ここから駅までの道は分かりにくい。",
+      "en": "The way from here to the station is hard to figure out."
+    },
+    {
+      "jp": "この店は何時まで営業していますか。",
+      "en": "Until what time is this store open?"
+    },
+    {
+      "jp": "どこまで行きますか。",
+      "en": "How far are you going?"
+    },
+    {
+      "jp": "予算はいくらまで出せますか。",
+      "en": "What's the maximum you can spend?"
+    },
+    {
+      "jp": "この商品は何円まで値引きできますか。",
+      "en": "Up to how many yen can you discount this item?"
+    },
+    {
+      "jp": "受付はいつまでですか。",
+      "en": "Until when is the reception open?"
+    },
+    {
+      "jp": "本日は20時迄営業いたします。",
+      "en": "Today we are open until 8 p.m."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "レポートは金曜までに提出してください。",
+      "en": "Please submit the report by Friday."
+    },
+    {
+      "jp": "彼は借金してまで車を買った。",
+      "en": "He went so far as to borrow money to buy a car."
+    },
+    {
+      "jp": "説明するまでもない。",
+      "en": "It goes without saying; there's no need to explain."
+    },
+    {
+      "jp": "雨が降っている間は外に出ない。",
+      "en": "I won't go outside while it's raining."
+    },
+    {
+      "jp": "会議は三時までに終わりますか。",
+      "en": "Will the meeting finish by three?"
+    },
+    {
+      "jp": "明日中に返事をください。",
+      "en": "Please reply by the end of tomorrow."
+    },
+    {
+      "jp": "午後から夜にかけて風が強くなるでしょう。",
+      "en": "The wind will likely get stronger from the afternoon into the night."
+    },
+    {
+      "jp": "電車が来ない限り、ここを動きません。",
+      "en": "I won't move from here unless the train comes."
+    },
+    {
+      "jp": "どのくらい待ちますか。",
+      "en": "How long will you wait?"
+    },
+    {
+      "jp": "彼は最後にやっと決断した。",
+      "en": "He finally made a decision in the end."
+    }
+  ]
+}

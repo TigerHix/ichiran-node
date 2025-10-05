@@ -1,0 +1,135 @@
+{
+  "id": "n5.kara",
+  "level": "N5",
+  "description": "Expresses reason or cause; 'because', 'since', 'so'",
+  "formation": "Verb-casual + から / い-Adjective + から / な-Adjective + だから / Noun + だから",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜から（理由）\n\n### Meaning and function\n- States a reason or cause: because, since; links a reason to a result, statement, request, suggestion, intention, etc.\n- Can also appear sentence-final to justify the preceding statement (that’s because …).\n\n### Form and templates\n- Reason first → Result\n  - V(plain) + から、Result\n  - い-adj + から、Result\n  - な-adj + だから、Result（polite: な-adj + ですから、Result）\n  - N + だから、Result（polite: N + ですから、Result）\n- Result first → Reason (justification after the fact)\n  - Result。Reason + から。\n  - Result。Reason + からです。 (polite standalone justification/answer to “why”)\n- Negative/past inside the reason\n  - V(ない/た) + から …; い-adj(くない/かった) + から …\n  - な-adj/N + じゃない/だった/じゃなかった + から …\n- Polite linking inside the reason is possible in polite style\n  - Vます + から、… / い-adj + ですから、… / N・な-adj + ですから、…\n- Conjunctive use as “therefore/so”\n  - だから／ですから + Result (starts a sentence, refers back to prior statement)\n- Particle/ordering notes\n  - から attaches directly to the clause; no extra particle before it.\n  - With N・な-adj in plain style, だ is required before から → だから.\n  - Comma after the reason clause is common when reason precedes the result.\n\n### Usage notes and constraints\n- Register\n  - Neutral in casual speech: plain + から.\n  - Polite speech: です/ます before から, or ですから / からです.\n- Naturalness\n  - Very common in everyday explanations, excuses, and giving reasons for requests, suggestions, intentions, or commands.\n- Nuance vs ので\n  - から is more direct/subjective (“my reason, so …”).\n  - ので is softer/more objective and often preferred in formal writing or to soften requests.\n- Scope/semantics\n  - Works well when the main clause expresses speaker-involved actions (volition, requests, commands, suggestions, permission, judgments).\n- Do not confuse\n  - から (reason) vs から (particle “from/since”) vs 〜てから (“after doing …”).\n- Orthography\n  - Written in kana as から; no kanji form in this use.\n\n### Common mistakes\n- Omitting だ before から after N・な-adj in plain style (use だから).\n- Ending a reason-only sentence with ですから; use からです for a standalone justification.\n- Mixing styles (e.g., plain reason with overly polite result) in the same sentence; keep register consistent.\n- Using から for very formal written explanation where ので／ため may fit better.\n\n### Related grammar\n- ので: Softer/more objective “because”; preferred in polite explanations and formal writing.\n- だから／ですから (conjunctive): Sentence-initial “so/therefore,” referring to the previous statement.\n- ため（に）: Formal “due to/because of” (reason); also marks purpose; more written/formal.\n- 〜し: Lists multiple reasons; additive/looser connection rather than a single explicit cause.\n- 〜てから: “After doing …” (time sequence), not a reason marker.",
+  "examples": [
+    {
+      "jp": "雨ですから、今日は家にいます。",
+      "en": "Because it’s raining, I’ll stay home today."
+    },
+    {
+      "jp": "暑いから、窓を少し開けよう。",
+      "en": "Since it’s hot, let’s open the window a little."
+    },
+    {
+      "jp": "もう遅いですから、帰りませんか。",
+      "en": "Since it’s already late, shall we head home?"
+    },
+    {
+      "jp": "会員ですから、入場料は無料です。",
+      "en": "Since I’m a member, the admission fee is free."
+    },
+    {
+      "jp": "静かだから、よく眠れた。",
+      "en": "Because it was quiet, I slept well."
+    },
+    {
+      "jp": "高くなかったから、二つ買った。",
+      "en": "Because it wasn’t expensive, I bought two."
+    },
+    {
+      "jp": "店が休みでしたから、何も買えませんでした。",
+      "en": "Because the store was closed, I couldn’t buy anything."
+    },
+    {
+      "jp": "あまり忙しくないから、今手伝えるよ。",
+      "en": "Since I’m not that busy, I can help now."
+    },
+    {
+      "jp": "体調が悪かったから、昨日は早退した。",
+      "en": "Because I felt unwell, I left early yesterday."
+    },
+    {
+      "jp": "時間がありません。ですから、説明は短くします。",
+      "en": "We don’t have time. Therefore, I’ll keep the explanation short."
+    },
+    {
+      "jp": "危ないですから、ここには入らないでください。",
+      "en": "It’s dangerous, so please do not enter here."
+    },
+    {
+      "jp": "席が空いていませんから、立って待ちます。",
+      "en": "Since there are no seats available, I’ll stand and wait."
+    },
+    {
+      "jp": "行きません。明日が締め切りだから。",
+      "en": "I’m not going. Because the deadline is tomorrow."
+    },
+    {
+      "jp": "どうして怒っているんですか。約束を破られたからです。",
+      "en": "Why are you angry? Because my promise was broken."
+    },
+    {
+      "jp": "寒いから、温かいスープを作らない？",
+      "en": "Since it’s cold, shall we make some hot soup?"
+    },
+    {
+      "jp": "それは規則だから、例外はできない。",
+      "en": "It’s a rule, so we can’t make exceptions."
+    },
+    {
+      "jp": "子どもじゃないですから、自分でやります。",
+      "en": "Because I’m not a child, I’ll do it myself."
+    },
+    {
+      "jp": "大雪だったから、電車が全部止まった。",
+      "en": "Because there was a heavy snowfall, all trains stopped."
+    },
+    {
+      "jp": "雨じゃなかったから、洗濯できた。",
+      "en": "Because it wasn’t raining, I was able to do the laundry."
+    },
+    {
+      "jp": "雨です。だから、傘を持って行ってください。",
+      "en": "It’s raining. So please take an umbrella with you."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "駅から歩いて十五分です。",
+      "en": "It’s a 15-minute walk from the station."
+    },
+    {
+      "jp": "ご飯を食べてから、出かけます。",
+      "en": "After eating, I’ll go out."
+    },
+    {
+      "jp": "これは北海道からの贈り物です。",
+      "en": "This is a gift from Hokkaido."
+    },
+    {
+      "jp": "これから会議が始まります。",
+      "en": "The meeting starts now."
+    },
+    {
+      "jp": "朝からずっと雨が降っている。",
+      "en": "It’s been raining since morning."
+    },
+    {
+      "jp": "AからBまで電車で行けます。",
+      "en": "You can go from A to B by train."
+    },
+    {
+      "jp": "彼の話からすると、計画は無理そうだ。",
+      "en": "Judging from his story, the plan seems impossible."
+    },
+    {
+      "jp": "だからといって、諦めるわけではない。",
+      "en": "That doesn’t mean we will give up."
+    },
+    {
+      "jp": "約束したからには、守るべきだ。",
+      "en": "Now that we’ve promised, we should keep it."
+    },
+    {
+      "jp": "これは米から作られています。",
+      "en": "This is made from rice."
+    }
+  ]
+}

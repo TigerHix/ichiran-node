@@ -1,0 +1,135 @@
+{
+  "id": "n5.ga-watashi-ni-kuremasu",
+  "level": "N5",
+  "description": "Used to express that someone gives a gift or favor to 'me'; 'someone gives me'",
+  "formation": "Person + が + (Thing or Action) + 私に + くれます",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- Nが私にNをくれる\n\n### Meaning and function\n- Expresses that someone gives something to me (or to my in-group), emphasizing a benefit to the speaker\n\n### Form and templates\n- Core template\n  - Giver N(が/は) + Receiver 私(に) + Thing N(を) + くれる/くれます\n- Particle requirements and ordering\n  - Recipient: に\n  - Thing given: を\n  - Giver: typically が (は is possible to topicalize or contrast the giver)\n  - Word order is flexible, but the above order is the default\n- Optional/alternative parts\n  - 私(に) can be omitted if clear from context\n  - 私 can be replaced by the speaker’s in-group (e.g., 家族/会社/うち/息子 など) when the receiver is part of the speaker’s side\n- Conjugation/inflection\n  - Plain: くれる / Past: くれた / Negative: くれない\n  - Polite: くれます / Past: くれました / Negative: くれません\n  - Honorific when the giver is someone you respect: くださる → くださいます／くださいました\n- Constraints\n  - The recipient must be the speaker or the speaker’s in-group\n  - The subject (giver) is someone other than the speaker\n\n### Usage notes and constraints\n- Register\n  - くれます is neutral–polite; くれる is plain; くださいます is respectful toward the giver\n- Naturalness/frequency\n  - Very common in daily speech for giving to the speaker/in-group\n- Semantic scope\n  - Focuses on the giver’s act benefiting the speaker; not used for giving between two third parties outside the speaker’s side\n- Particle choice\n  - Use に for the recipient with くれる (not へ, not から)\n  - With くれる, the giver is marked by が/は (use から with もらう instead)\n- Orthography\n  - くれる is usually written in kana (rare: 呉れる)\n  - くださる is often written in kana (dictionary form may appear as 下さる)\n  - 私/わたし: both common; 私 is standard in writing\n\n### Common mistakes (optional, only if relevant)\n- Using あげる when the receiver is “me/in-group” (should use くれる or もらう)\n- Marking the recipient with を or へ instead of に\n- Saying 私があなたにくれます (the speaker cannot be the giver with くれる; use あげます)\n- Using くれる when neither giver nor receiver is the speaker/in-group (use あげる for third-party → third-party)\n- Adding から with くれる (use が/は for the giver; から is used with もらう)\n\n### Related grammar (optional, only if relevant)\n- NはNにNをあげる: “give to someone else”; viewpoint of the giver; not used when the receiver is the speaker/in-group\n- NはNに/からNをもらう: “receive from someone”; viewpoint of the receiver; the subject is the receiver (often the speaker)\n- 〜てくれる: “someone does V for me” (favor/action toward the speaker)\n- Nが私にNをくださる: honorific of くれる when the giver deserves respect; polite counterpart of the same pattern",
+  "examples": [
+    {
+      "jp": "友だちが本をくれた。",
+      "en": "A friend gave me a book."
+    },
+    {
+      "jp": "先輩は私にアドバイスをくれます。",
+      "en": "My senior gives me advice."
+    },
+    {
+      "jp": "先生が私に推薦状をくださいました。",
+      "en": "The teacher gave me a letter of recommendation."
+    },
+    {
+      "jp": "母は私に新しい財布をくれない。",
+      "en": "My mother won’t give me a new wallet."
+    },
+    {
+      "jp": "父がわたしに時間をくれるか？",
+      "en": "Will my father give me some time?"
+    },
+    {
+      "jp": "部長は私に機会をくださいますか。",
+      "en": "Would the department manager give me an opportunity?"
+    },
+    {
+      "jp": "祖母が私にお年玉をくれました。",
+      "en": "My grandmother gave me New Year’s money."
+    },
+    {
+      "jp": "隣の人は私に野菜をくれません。",
+      "en": "The neighbor doesn’t give me vegetables."
+    },
+    {
+      "jp": "彼女は私に住所をくれませんでした。",
+      "en": "She didn’t give me her address."
+    },
+    {
+      "jp": "私に新しいパソコンを父がくれた。",
+      "en": "It was my father who gave me a new computer."
+    },
+    {
+      "jp": "上司は資料を私にくれました。",
+      "en": "My boss gave me the materials."
+    },
+    {
+      "jp": "遠くに住んでいるいとこは私に手紙をくれなかった。",
+      "en": "My cousin who lives far away didn’t send me a letter."
+    },
+    {
+      "jp": "友人はうちに古いソファをくれた。",
+      "en": "A friend gave my household an old sofa."
+    },
+    {
+      "jp": "取引先がうちの会社に契約書をくれました。",
+      "en": "Our business partner gave our company the contract."
+    },
+    {
+      "jp": "先生は息子に本をくださいました。",
+      "en": "The teacher gave my son a book."
+    },
+    {
+      "jp": "兄が私にたくさんの漫画をくれた。",
+      "en": "My older brother gave me a lot of comics."
+    },
+    {
+      "jp": "誰が私にこれをくれましたか。",
+      "en": "Who gave this to me?"
+    },
+    {
+      "jp": "おばが私に手作りのジャムをくれた。",
+      "en": "My aunt gave me homemade jam."
+    },
+    {
+      "jp": "先生が資料をくれました。",
+      "en": "The teacher gave me the materials."
+    },
+    {
+      "jp": "彼は私に笑顔をくれた。",
+      "en": "He gave me a smile."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "私は母から本をもらった。",
+      "en": "I received a book from my mother."
+    },
+    {
+      "jp": "友だちは私に本をあげた。",
+      "en": "My friend gave me a book."
+    },
+    {
+      "jp": "母が宿題を手伝ってくれた。",
+      "en": "My mother helped me with my homework."
+    },
+    {
+      "jp": "私は母から本を受け取った。",
+      "en": "I received a book from my mother."
+    },
+    {
+      "jp": "私はあなたにチケットをあげます。",
+      "en": "I will give you a ticket."
+    },
+    {
+      "jp": "日が暮れるのは早い。",
+      "en": "It gets dark early."
+    },
+    {
+      "jp": "私は先生に推薦状を書いていただきました。",
+      "en": "I had the teacher write me a letter of recommendation."
+    },
+    {
+      "jp": "先生は私に会ってくださいました。",
+      "en": "The teacher kindly met with me."
+    },
+    {
+      "jp": "鍵をくれ！",
+      "en": "Give me the key!"
+    },
+    {
+      "jp": "父は私に本をくれと言った。",
+      "en": "My father told me, “Give me a book.”"
+    }
+  ]
+}

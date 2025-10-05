@@ -1,0 +1,135 @@
+{
+  "id": "n4.made-ni",
+  "level": "N4",
+  "description": "Express 'by' or 'before' a certain time or action.",
+  "formation": "Verb-casual + までに, Noun + までに, Time expression + までに",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- までに（期限）\n\n### Meaning and function\n- Expresses “by,” “no later than,” or “before (by the time …).” It marks a deadline or latest acceptable time by which an action is/will be completed.\n- With a verb clause before までに, it means “by the time [that event happens].”\n\n### Form and templates\n- N(time)/Time word + までに + Predicate\n  - N(time) = specific point/time-like noun (date, day, clock time, deadline/event noun, age, etc.)\n- V(plain, non-past) + までに + Predicate\n  - The clause before までに is typically plain non-past even when the main clause is past. It denotes a time point or boundary event (e.g., begin/end/change/occur).\n- Optional: … までには + Predicate\n  - Adding は gives contrast/emphasis (“at least by,” “no later than (as for …)”).\n\nParticle and order\n- までに attaches directly to the time expression or clause; に is required. Omitting に (i.e., using まで alone) changes the meaning to “until (up to).”\n- The までに phrase is an adverbial time phrase and can appear before the main predicate; position is flexible.\n\nConjugation/inflection notes\n- Use plain non-past in the clause before までに to mark the time-boundary event. Negative or past forms there are generally unnatural.\n- The main clause can be plain or polite, any tense.\n\n### Usage notes and constraints\n- Register/naturalness: Neutral and common in both speech and writing; frequent in instructions, schedules, and deadlines.\n- Semantic scope:\n  - Indicates the latest time at or before which the main action is completed (inclusive of that point).\n  - Not for expressing continuation up to a time; use まで for “until” (ongoing state).\n  - The noun before までに should be a point in time or an event that functions as a time point (e.g., “deadline,” “age,” “start/end”).\n  - With a verb clause, the event should be punctual/boundary-like (start/end/change/arrival/occurrence). Stative or negative clauses are odd; for “before it stops/doesn’t …,” use 前に or うちに.\n- Durations vs points:\n  - Do not use までに with pure durations if you mean “within X time”; use 以内に.\n  - Numbers like “three days” are ambiguous; if you mean “within three days,” prefer 3日以内に; if you mean a calendar date (the 3rd), 3日までに is fine.\n- いつまでに asks “by when.” Contrast: いつまで asks “until when (continuation).”\n- Orthography: Write までに in hiragana. The kanji 迄に is old-fashioned or formal.\n\n### Common mistakes (optional, only if relevant)\n- Using まで instead of までに to mean “by” with punctual verbs (results in “until,” not a deadline).\n- Using までに after durations/quantities when you mean “within” (should be 以内に).\n- Making the clause before までに past or negative; use plain non-past to denote the time-boundary event.\n- Using までに with non-time nouns or places; までに is for time/deadlines, not location goals.\n\n### Related grammar (optional, only if relevant)\n- まで: “until/up to.” Marks continuation of a state/activity to a limit; not a deadline marker for punctual actions.\n- 前に: “before.” General earlier-than relation; lacks the strong “deadline/latest time” nuance of までに.\n- 以内に: “within (a duration/limit).” Used with amounts of time or quantities measured from a reference point.\n- うちに: “while/before it changes.” Focuses on doing something before a natural change occurs, not on a fixed deadline.\n- までには: Variant of までに with は for contrast/emphasis (“at least by …”).",
+  "examples": [
+    {
+      "jp": "明日までにメールを送ります。",
+      "en": "I will send the email by tomorrow."
+    },
+    {
+      "jp": "締め切りまでに出さなかったので、無効になった。",
+      "en": "I didn’t submit it by the deadline, so it became invalid."
+    },
+    {
+      "jp": "試合が始まるまでに、会場に着いてください。",
+      "en": "Please arrive at the venue by the time the game starts."
+    },
+    {
+      "jp": "十時までには戻れますか。",
+      "en": "Can you be back by ten?"
+    },
+    {
+      "jp": "学期が始まるまでに教科書を買っておいた。",
+      "en": "I bought the textbook in advance by the time the semester started."
+    },
+    {
+      "jp": "二十歳までに一人暮らしを始めたい。",
+      "en": "I want to start living on my own by the age of twenty."
+    },
+    {
+      "jp": "今週金曜日の正午までに、書類を提出していただけますか。",
+      "en": "Could you submit the documents by noon this Friday?"
+    },
+    {
+      "jp": "日没までに山を下りないと危ない。",
+      "en": "It’s dangerous if we don’t get down the mountain by sunset."
+    },
+    {
+      "jp": "雨がやむまでに帰ってしまおう。",
+      "en": "Let’s get back home by the time the rain stops."
+    },
+    {
+      "jp": "オンライン申込は今月末までに完了してください。",
+      "en": "Please complete the online application by the end of this month."
+    },
+    {
+      "jp": "子どもが起きるまでに、朝ごはんを作り終えるつもりです。",
+      "en": "I plan to finish making breakfast by the time the kids wake up."
+    },
+    {
+      "jp": "このプロジェクトは、今週の金曜までには必ず仕上げます。",
+      "en": "As for this project, I will definitely finish it by Friday this week."
+    },
+    {
+      "jp": "新学期までに部屋をきれいにしておきなさい。",
+      "en": "Make sure your room is clean by the new semester."
+    },
+    {
+      "jp": "電車が出るまでに切符を買わなかった人は、次の便を待ってください。",
+      "en": "If you didn’t buy a ticket by the time the train departs, please wait for the next one."
+    },
+    {
+      "jp": "いつまでにお返事いただけますか。",
+      "en": "By when can I get your reply?"
+    },
+    {
+      "jp": "片付けは、退社時間の六時までに終わらせます。",
+      "en": "I will finish the clean-up by the 6 p.m. quitting time."
+    },
+    {
+      "jp": "店が閉まるまでに行けなかった。",
+      "en": "I couldn’t make it there by the time the store closed."
+    },
+    {
+      "jp": "夏が来るまでに体を強くしておきたい。",
+      "en": "I want to build up my strength by the time summer comes."
+    },
+    {
+      "jp": "開演までには席に着いてください。",
+      "en": "Please be seated by the time the performance starts."
+    },
+    {
+      "jp": "明日までに終わらないの？",
+      "en": "Won’t it be finished by tomorrow?"
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "いつまで待てばいいですか。",
+      "en": "Until when should I wait?"
+    },
+    {
+      "jp": "月末まで休まず営業します。",
+      "en": "We will be open without a break until the end of the month."
+    },
+    {
+      "jp": "これまでの成果を発表します。",
+      "en": "We will present the achievements so far."
+    },
+    {
+      "jp": "雨がやむ前に帰ろう。",
+      "en": "Let’s go home before the rain stops."
+    },
+    {
+      "jp": "三日以内に返金します。",
+      "en": "We will issue a refund within three days."
+    },
+    {
+      "jp": "店が閉まるまで本を読んでいた。",
+      "en": "I was reading until the store closed."
+    },
+    {
+      "jp": "彼は倒れるまで走り続けた。",
+      "en": "He kept running until he collapsed."
+    },
+    {
+      "jp": "締め切りまでの作業が多すぎる。",
+      "en": "There is too much work to do until the deadline."
+    },
+    {
+      "jp": "今日まで雨が続いた。",
+      "en": "It kept raining up to today."
+    },
+    {
+      "jp": "帰れるうちに家に帰ってください。",
+      "en": "Please go home while you still can."
+    }
+  ]
+}

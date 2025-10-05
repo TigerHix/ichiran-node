@@ -1,0 +1,135 @@
+{
+  "id": "n4.ka-dou-ka",
+  "level": "N4",
+  "description": "Used to express 'whether' or 'if' in indirect questions or statements.",
+  "formation": "Verb-casual + かどうか, い-Adjective + かどうか, な-Adjective + (だ)かどうか, Noun + (だ)かどうか",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜かどうか（イエス・ノーの間接疑問）\n\n### Meaning and function\n- Expresses “whether/if (or not)” by turning a yes/no question into a noun-like clause and embedding it inside a larger sentence (knowing, checking, asking, deciding, depending on whether, etc.)\n\n### Form and templates\n- Core\n  - V(plain) + かどうか + main clause\n  - い-adj(plain) + かどうか + main clause\n  - な-adj + かどうか + main clause\n    - Present affirmative: no だ before かどうか (静かかどうか)\n    - Past/negative: だったかどうか／ではないかどうか／じゃないかどうか\n    - Formal: であるかどうか\n  - N + かどうか + main clause\n    - Present affirmative: no だ (学生かどうか)\n    - Past/negative: だったかどうか／ではないかどうか／じゃないかどうか\n    - Formal: であるかどうか\n- As a noun phrase (case/topic marking)\n  - 〜かどうかを + V (object)\n  - 〜かどうかが/は + V/A (subject/topic)\n  - 〜かどうかに/で + V (e.g., “depending on whether” with で)\n- Optional/alternative parts\n  - Shorter alternative: 〜か + main clause (when “or not” is obvious; common with 知る・わかる・たずねる・調べる・決める・確認する, etc.)\n  - Explanatory nuance: 〜のかどうか (N/な-adj → なのかどうか)\n  - Formal written alternative: 〜か否(いな)か\n  - Explicit “whether or not” (verbs): V(plain) + か + V(ない) + か\n- Conjugation/inflection notes\n  - The embedded clause keeps plain forms even if the main clause is polite.\n  - Tense and polarity are expressed inside the embedded clause (e.g., V(た)かどうか, V(ない)かどうか).\n\n### Usage notes and constraints\n- Register and naturalness\n  - Neutral and common in both speech and writing.\n  - であるかどうか and 〜か否か are formal/written.\n- Semantic scope\n  - Only for yes/no propositions. Do not use with interrogative words (だれ・なに・どこ・いつ・なぜ・どう). For those, use 〜か (without どうか).\n  - Not a conditional “if … then …” marker. Use 〜たら／〜ば／〜なら for real conditions.\n  - Very frequent with verbs of knowing, thinking, asking, deciding, checking, and with “depending on whether” via 〜かどうかで.\n- Structural notes\n  - かどうか forms a nominalized clause; it can take case particles (を/が/は/に/で) as needed by the main predicate.\n  - Present affirmative N/な-adj do not take だ before かどうか; use bare stem, or である in formal writing.\n  - Ending a sentence with かどうか alone is generally incomplete; it normally requires a main predicate or a following particle construction (e.g., 〜かどうかを…／〜かどうかは…).\n- Orthography\n  - かどうか is written in kana.\n  - 〜か否か uses the kanji 否 in formal texts.\n\n### Common mistakes (optional, only if relevant)\n- Using だ before かどうか with present affirmative N/な-adj (use bare stem, or formal である).\n- Putting です／ます inside the embedded clause before かどうか (keep the embedded clause in plain form; use である for formal writing).\n- Combining かどうか with interrogatives like だれ／どこ／なに (use 〜か instead).\n- Using かどうか as a conditional “if”; it does not express “if … then …”.\n- Redundancy like “〜かどうか or not” (かどうか already means “or not”).\n\n### Related grammar (optional, only if relevant)\n- 〜か: General embedded question (handles both yes/no and wh-questions). 〜かどうか is limited to yes/no.\n- 〜か〜ないか: Verb-only pattern explicitly contrasting do vs. don’t; more emphatic/colloquial.\n- 〜か否(いな)か: Formal written equivalent of 〜かどうか.\n- 〜たら／〜ば／〜なら: Real conditionals for “if … then …”, not “whether”.\n- 〜かどうかで: “Depending on whether …” (uses で to mark the basis for a result/decision).",
+  "examples": [
+    {
+      "jp": "彼が来るかどうかを知っている人に聞いた。",
+      "en": "I asked someone who knows whether he will come."
+    },
+    {
+      "jp": "明日雨が降るのかどうか、知っていますか。",
+      "en": "Do you know whether it will rain tomorrow?"
+    },
+    {
+      "jp": "荷物が届いたかどうかは、まだわからない。",
+      "en": "I still don’t know whether the package has arrived."
+    },
+    {
+      "jp": "商品に欠陥があるかどうかを検査する。",
+      "en": "We inspect whether the product has any defects."
+    },
+    {
+      "jp": "このスープが熱いかどうかを確かめてください。",
+      "en": "Please check whether this soup is hot."
+    },
+    {
+      "jp": "昨日のテストが難しかったかどうかは、人によって違う。",
+      "en": "People differ on whether yesterday’s test was difficult."
+    },
+    {
+      "jp": "値段が高くないかどうかが気になります。",
+      "en": "I’m concerned about whether the price isn’t too high."
+    },
+    {
+      "jp": "図書室が静かかどうかに勉強の効率が左右される。",
+      "en": "Study efficiency depends on whether the library is quiet."
+    },
+    {
+      "jp": "その対応が丁寧だったかどうかを上司が確認した。",
+      "en": "The supervisor checked whether the response was polite."
+    },
+    {
+      "jp": "説明が明確ではないかどうかをチェックした。",
+      "en": "I checked whether the explanation was unclear."
+    },
+    {
+      "jp": "あの説明は必要じゃないかどうかが議論の焦点だ。",
+      "en": "Whether that explanation is unnecessary is the focus of the discussion."
+    },
+    {
+      "jp": "応募者が学生かどうかは、ここでは重要ではない。",
+      "en": "Whether the applicant is a student is not important here."
+    },
+    {
+      "jp": "彼が会員だったかどうかを調べています。",
+      "en": "I’m looking into whether he was a member."
+    },
+    {
+      "jp": "これは本物ではないかどうかを鑑定してもらった。",
+      "en": "I had it appraised to see whether it isn’t genuine."
+    },
+    {
+      "jp": "契約が有効であるかどうか、確認できますか。",
+      "en": "Can you check whether the contract is valid?"
+    },
+    {
+      "jp": "参加が任意か否かは、案内に明記されている。",
+      "en": "Whether participation is optional or not is clearly stated in the notice."
+    },
+    {
+      "jp": "原因が同じなのかどうか、専門家に聞いてみます。",
+      "en": "I’ll ask a specialist whether the causes are the same."
+    },
+    {
+      "jp": "このアプリを使うか決めましたか。",
+      "en": "Have you decided whether to use this app?"
+    },
+    {
+      "jp": "雨がやむかどうかで、出発時刻を変えます。",
+      "en": "We’ll change the departure time depending on whether the rain stops."
+    },
+    {
+      "jp": "行くか行かないかを今夜中に決めてください。",
+      "en": "Please decide by tonight whether you’re going or not."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "彼がどこにいるか知っていますか。",
+      "en": "Do you know where he is?"
+    },
+    {
+      "jp": "昼か夜かで料金が変わります。",
+      "en": "The price changes depending on whether it’s day or night."
+    },
+    {
+      "jp": "明日は雨ですか。",
+      "en": "Will it rain tomorrow?"
+    },
+    {
+      "jp": "一緒に行かないか？",
+      "en": "Wanna go together?"
+    },
+    {
+      "jp": "どうかごゆっくり。",
+      "en": "Please, take your time."
+    },
+    {
+      "jp": "彼はもう帰ったかと思った。",
+      "en": "I thought he had already gone home."
+    },
+    {
+      "jp": "まるで夢を見ているかのようだ。",
+      "en": "It’s as if I’m dreaming."
+    },
+    {
+      "jp": "参加か不参加かを選んでください。",
+      "en": "Please choose participation or non-participation."
+    },
+    {
+      "jp": "『行くかどうか』という表現について議論した。",
+      "en": "We discussed the expression “iku ka dōka.”"
+    },
+    {
+      "jp": "どうかな、間に合うかな。",
+      "en": "I wonder if we’ll make it in time."
+    }
+  ]
+}

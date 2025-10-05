@@ -1,0 +1,135 @@
+{
+  "id": "n5.adjective-verb",
+  "level": "N5",
+  "description": "Turn a な-adjective into an adverb by adding に",
+  "formation": "い-Adjective (remove い) + く + Verb",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- な形容詞の副詞形（〜に）\n\n### Meaning and function\n- Turns a な-adjective into an adverb meaning “-ly” or “in a ... way,” modifying how an action happens. Also used before なる and する to express “become ...” and “make/keep (something) ...”.\n\n### Form and templates\n- A(な-adj) + に + V\n- N + を + A(な-adj) + に + する\n- N + が/は + A(な-adj) + に + なる\n- Attach に directly to the adjective stem (drop な/だ). No other particle goes between A + に and the following verb.\n- Placement: the adverb typically appears immediately before the verb or before なる／する it modifies.\n- Conjugation: The adverbial 〜に form itself does not change for tense/politeness/negation; those are carried by the final verb (e.g., polite ます-form, past, negative).\n\n### Usage notes and constraints\n- Register: Neutral and natural in both speech and writing; very common.\n- Scope: Modifies the manner of the verb or marks the resultant state with なる／する.\n- Not all な-adjectives are natural as manner adverbs. Stative/relational adjectives like 好き・嫌い・必要 are rarely used as general “-ly” adverbs except in fixed expressions.\n- Do not confuse this adverbial に with the に that marks time/place/goal; here に directly follows a な-adjective stem, not a noun.\n- Orthography: Many な-adjectives have both kanji and kana spellings; either is acceptable. に is written in hiragana.\n\n### Common mistakes\n- Using 〜く (い-adjective adverb) instead of 〜に with な-adjectives.\n- Keeping な or だ before に (×Aなに／×Aだに). Use the stem + に.\n- Trying to add です/だ after に. Politeness goes on the verb, not the adverb.\n- Inserting extra particles between A + に and the verb.\n\n### Related grammar\n- い形容詞の副詞形（〜く）: Same function for い-adjectives; choose 〜く, not 〜に.\n- A(な-adj) + に + なる: “Become ...” (change of state). い-adjectives use 〜くなる.\n- A(な-adj) + に + する: “Make/keep (something) ...”. い-adjectives use 〜くする.",
+  "examples": [
+    {
+      "jp": "丁寧に説明します。",
+      "en": "I will explain politely."
+    },
+    {
+      "jp": "静かにしてくれませんか。",
+      "en": "Could you be quiet, please?"
+    },
+    {
+      "jp": "彼女は綺麗に片付けた。",
+      "en": "She tidied up neatly."
+    },
+    {
+      "jp": "部屋が静かになりました。",
+      "en": "The room became quiet."
+    },
+    {
+      "jp": "この通りは、夜になると賑やかになる。",
+      "en": "This street gets lively at night."
+    },
+    {
+      "jp": "説明を簡単にしてください。",
+      "en": "Please make the explanation simple."
+    },
+    {
+      "jp": "店員は言い方をていねいにした。",
+      "en": "The clerk made their wording polite."
+    },
+    {
+      "jp": "子どもたちを安全に避難させました。",
+      "en": "We evacuated the children safely."
+    },
+    {
+      "jp": "もっと自由に選べますか。",
+      "en": "Can we choose more freely?"
+    },
+    {
+      "jp": "彼は真剣に考えていなかった。",
+      "en": "He wasn’t thinking seriously."
+    },
+    {
+      "jp": "この部屋をきれいにしてもらえますか。",
+      "en": "Could you make this room tidy?"
+    },
+    {
+      "jp": "関係が複雑にならない。",
+      "en": "The relationship doesn’t become complicated."
+    },
+    {
+      "jp": "メールは簡潔に書いてください。",
+      "en": "Please write the email concisely."
+    },
+    {
+      "jp": "上手に話せるようになりましたか。",
+      "en": "Have you become able to speak well?"
+    },
+    {
+      "jp": "彼は大事に使っている。",
+      "en": "He is using it carefully."
+    },
+    {
+      "jp": "丁寧に対応してくれる店が多い。",
+      "en": "There are many shops that provide polite service."
+    },
+    {
+      "jp": "先生は教室を静かにした。",
+      "en": "The teacher made the classroom quiet."
+    },
+    {
+      "jp": "方針が明確になった。",
+      "en": "The policy became clear."
+    },
+    {
+      "jp": "楽に座っていいですよ。",
+      "en": "You can sit comfortably."
+    },
+    {
+      "jp": "その問題は簡単にならなかった。",
+      "en": "That problem didn’t become simple."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "早く走った。",
+      "en": "He/She ran fast."
+    },
+    {
+      "jp": "会議は月曜にします。",
+      "en": "Let’s set the meeting for Monday."
+    },
+    {
+      "jp": "静かなのに眠れない。",
+      "en": "It’s quiet, but I can’t sleep."
+    },
+    {
+      "jp": "子どもは大人になった。",
+      "en": "The child became an adult."
+    },
+    {
+      "jp": "便利にはならないだろう。",
+      "en": "It probably won’t become convenient."
+    },
+    {
+      "jp": "安全に関する説明を聞いた。",
+      "en": "I heard an explanation about safety."
+    },
+    {
+      "jp": "彼は上手に違いない。",
+      "en": "He must be skilled."
+    },
+    {
+      "jp": "早めに来てください。",
+      "en": "Please come a bit early."
+    },
+    {
+      "jp": "彼を部長にした。",
+      "en": "I made him the manager."
+    },
+    {
+      "jp": "部屋が明るくなった。",
+      "en": "The room got brighter."
+    }
+  ]
+}

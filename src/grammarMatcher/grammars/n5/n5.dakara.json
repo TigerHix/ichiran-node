@@ -1,0 +1,135 @@
+{
+  "id": "n5.dakara",
+  "level": "N5",
+  "description": "Expresses a reason or cause; 'because', 'so', 'therefore'",
+  "formation": "Noun + だから / な-Adjective + だから",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- だから（理由・結果）\n\n### Meaning and function\n- Expresses cause and result: “so; therefore; that’s why”\n- Also functions as “because it is N/な-adj” when giving a reason with a noun or な-adjective\n\n### Form and templates\n- A. だから、B. (Use だから at the start of the result B, referring to the reason stated in A or the context)\n- N + だから、B. (Because it is N, B)\n- な-adj + だから、B. (Because it is な-adj, B)\n- Negative reason (plain): N/な-adj + じゃない・ではない + から、B\n- Past reason (plain): N/な-adj + だった + から、B\n- Polite:\n  - As a sentence connector: ですから、B\n  - With N/な-adj as the reason: N/な-adj + ですから、B; past でしたから\n- Important contrast with から:\n  - Verbs and い-adjectives take から without だ (V(plain) + から / い-adj(〜い) + から). だから is only for N/な-adj or as a stand-alone connector.\n- Ordering: Reason → Result. The reason may be a previous sentence (then start the next sentence with だから/ですから), or it can be the clause immediately before から.\n- No special particles attach to だから; it directly links clauses.\n\n### Usage notes and constraints\n- Register:\n  - だから = plain/neutral; can sound assertive in conversation.\n  - ですから = polite; common in customer-service, meetings, etc.\n  - For very formal writing, alternatives like したがって or ため may be preferred instead of だから.\n- Naturalness and frequency: Very common in speech. In polite contexts, ですから is safer; in softer or backgrounded reasons, ので/ですので is often preferred.\n- Semantic scope:\n  - States a clear cause → result, often reflecting the speaker’s judgment, decision, or a direct consequence.\n  - B can be a request/command, but ので/ですので sounds softer for requests/apologies.\n- Constraints:\n  - Do not use だから after verbs or い-adjectives (use plain から).\n  - After nouns/な-adjectives in plain style, include だ before から (だから). In polite style, use ですから.\n- Orthographic variants:\n  - だから (plain), ですから (polite). Formal written であるから exists but is uncommon at this level.\n- Position:\n  - Often sentence-initial as a discourse connector: “Therefore/So, …”\n  - Within a single sentence, attach から to the reason clause.\n\n### Common mistakes (optional, only if relevant)\n- Using だから after verbs or い-adjectives instead of plain から.\n- Omitting だ before から after nouns/な-adjectives in plain style.\n- Mixing registers awkwardly (plain だから with です/ます predicates); use ですから for a consistent polite tone.\n- Overusing だから in formal writing where ので/ため or したがって would be more natural.\n- Using だから to mean mere sequence (“and then”) rather than a causal link; consider それで for neutral sequence/result linking.\n\n### Related grammar (optional, only if relevant)\n- 〜から: General “because.” Use after verbs/い-adjectives; after N/な-adj it becomes だから/ですから.\n- 〜ので／〜ですので: “Because/since” with a softer, more objective tone; preferred for polite requests/explanations; N/な-adj → なので/ですので.\n- それで: Conjunctive “so/and then” that presents a result based on the previous sentence; less assertive than だから and cannot directly introduce a reason clause.\n- したがって: Formal “therefore,” mainly written; stronger formality than ですから.",
+  "examples": [
+    {
+      "jp": "雨が降っている。だから、今日は自転車で行かない。",
+      "en": "It’s raining. So I won’t go by bike today."
+    },
+    {
+      "jp": "私は学生だから、割引が使える。",
+      "en": "I’m a student, so I can use a discount."
+    },
+    {
+      "jp": "この図書館は静かだから、集中できる。",
+      "en": "This library is quiet, so I can concentrate."
+    },
+    {
+      "jp": "会員ですから、入場料は無料です。",
+      "en": "Because I’m a member, the admission fee is free."
+    },
+    {
+      "jp": "安全ですから、ご安心ください。",
+      "en": "It’s safe, so please rest assured."
+    },
+    {
+      "jp": "未成年じゃないから、お酒が買える。",
+      "en": "I’m not a minor, so I can buy alcohol."
+    },
+    {
+      "jp": "社員ではないから、社内ネットに入れない。",
+      "en": "I’m not an employee, so I can’t access the internal network."
+    },
+    {
+      "jp": "定休日だったから、店は閉まっていた。",
+      "en": "It was a regular day off, so the store was closed."
+    },
+    {
+      "jp": "暇だったから、掃除をした。",
+      "en": "I had free time, so I did some cleaning."
+    },
+    {
+      "jp": "雨でしたから、試合は中止になりました。",
+      "en": "Because it was rainy, the game was canceled."
+    },
+    {
+      "jp": "静かでしたから、よく眠れました。",
+      "en": "Because it was quiet, I slept well."
+    },
+    {
+      "jp": "ですから、今日は早めに切り上げましょう。",
+      "en": "Therefore, let’s wrap up early today."
+    },
+    {
+      "jp": "この道は危険だから、夜は通らないで。",
+      "en": "This road is dangerous, so don’t go through here at night."
+    },
+    {
+      "jp": "会議は重要だから、参加できるか？",
+      "en": "The meeting is important, so can you attend?"
+    },
+    {
+      "jp": "約束を破った。だから、彼に謝った。",
+      "en": "I broke a promise. So I apologized to him."
+    },
+    {
+      "jp": "明日は祝日ですから、銀行は休みですか。",
+      "en": "Since tomorrow is a holiday, will the bank be closed?"
+    },
+    {
+      "jp": "便利じゃないから、このアプリは使わない。",
+      "en": "It’s not convenient, so I won’t use this app."
+    },
+    {
+      "jp": "簡単ではないから、時間がかかる。",
+      "en": "It’s not easy, so it takes time."
+    },
+    {
+      "jp": "静かだったから、赤ちゃんがすぐ寝た。",
+      "en": "Because it was quiet, the baby fell asleep quickly."
+    },
+    {
+      "jp": "子どもだから、仕方ないよ。",
+      "en": "They’re a child, so it can’t be helped."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "寒いから、窓を閉めます。",
+      "en": "Because it’s cold, I’ll close the window."
+    },
+    {
+      "jp": "雨が降ったから、試合は中止になった。",
+      "en": "Because it rained, the game was canceled."
+    },
+    {
+      "jp": "学生なので、時間があります。",
+      "en": "Since I’m a student, I have time."
+    },
+    {
+      "jp": "渋滞ですので、到着が遅れます。",
+      "en": "Because there’s heavy traffic, my arrival will be delayed."
+    },
+    {
+      "jp": "忘れてしまいました。それで、遅れました。",
+      "en": "I forgot. So I was late."
+    },
+    {
+      "jp": "台風が接近中だ。したがって、警戒が必要だ。",
+      "en": "A typhoon is approaching. Therefore, caution is necessary."
+    },
+    {
+      "jp": "学生だからこそ、もっと学ぶべきだ。",
+      "en": "It is precisely because you’re a student that you should study more."
+    },
+    {
+      "jp": "学生だからって、何をしてもいいわけではない。",
+      "en": "Just because you’re a student doesn’t mean you can do anything."
+    },
+    {
+      "jp": "友だちからプレゼントをもらった。",
+      "en": "I got a present from a friend."
+    },
+    {
+      "jp": "雨のため、運動会は延期になりました。",
+      "en": "Due to rain, the sports day was postponed."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "n4.noun-chuu",
+  "level": "N4",
+  "description": "Express 'in the middle of', 'during', or 'in the process of'.",
+  "formation": "Noun + 中 (ちゅう)",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜中（ちゅう）\n\n### Meaning and function\n- States that an activity or period is ongoing: during, in the middle of, in progress, occupied/in use\n\n### Form and templates\n- N(activity/event/period) + 中\n- N + 中に … (something happens at some point during/within that period; often carries a “by the end of” nuance with time periods)\n- N + 中は … (topic/contrast: throughout that period, …)\n- N + 中の + N2 (N2 that occurs/takes place during N)\n- Predicate use: N + 中だ／です；past: 中だった／でした\n- No particle between N and 中. Adding の before 中 changes the meaning to “inside/among” (Nの中).\n- Reading:\n  - ちゅう when it means “during/in progress” (this grammar).\n  - じゅう is a different pattern meaning “throughout/all” (e.g., time/space coverage), not the same usage.\n- N must denote an activity (often a する-noun: meetings, calls, study, work), an event, or a bounded time period (morning, the period, the break, this week/month, etc.). Not used with place nouns to mean “inside” (use Nの中).\n\n### Usage notes and constraints\n- Register: neutral and common in speech; very frequent on signs/announcements (concise labels like “in use/occupied”).\n- Semantics:\n  - Focuses on an ongoing action/state or a bounded period currently in effect.\n  - With time expressions + 中に, often means “within/by the end of that period.”\n  - For a stronger “right in the middle (just then)” emphasis, see 最中.\n- Scope/position:\n  - Bare N中 can stand alone as a label or function adverbially.\n  - N中に highlights when another event occurs; N中は sets the temporal topic.\n- Orthography/reading:\n  - Use kanji 中; read ちゅう in this meaning.\n  - Do not read as なか (that’s “inside/among” with の: Nの中).\n  - Distinguish from 中（じゅう） “throughout/all” with certain time/space nouns (a separate pattern).\n\n### Common mistakes (optional, only if relevant)\n- Inserting の between N and 中 (→ changes meaning to “inside N”).\n- Attaching 中 to a verb directly; use a noun (often a する-noun). For verb actions with “right in the middle,” use 最中.\n- Misreading as なか or confusing with 中（じゅう） “throughout.”\n- Using 中 with nouns that don’t denote an activity or bounded period.\n\n### Related grammar (optional, only if relevant)\n- 〜最中（さいちゅう）: “right in the middle (of doing),” stronger immediacy; V-ている／Nの + 最中.\n- 〜間／〜間に: “while/during” (continuous scope) vs “at some point during.”\n- 〜中（じゅう）: “throughout/all” a time span or space (e.g., all day/all over); different reading/nuance.\n- 〜うちに: “within/before (a change happens),” goal-oriented timing.\n- 〜ところだ: “be about to/just/now doing,” point-in-time aspect.",
+  "examples": [
+    {
+      "jp": "今、会議中です。",
+      "en": "I’m in a meeting now."
+    },
+    {
+      "jp": "彼は運転中だから、折り返してくれるって。",
+      "en": "He’s driving, so he said he’ll call back."
+    },
+    {
+      "jp": "午前中に資料を送っていただけますか。",
+      "en": "Could you send the documents by the end of the morning?"
+    },
+    {
+      "jp": "夏休み中は実家でのんびり過ごしました。",
+      "en": "I relaxed at my parents’ place during summer vacation."
+    },
+    {
+      "jp": "通話中に別の電話がかかってきた。",
+      "en": "Another call came in while I was on the phone."
+    },
+    {
+      "jp": "本日中にお支払いください。",
+      "en": "Please make the payment by the end of today."
+    },
+    {
+      "jp": "出張中の社長には伝えておきます。",
+      "en": "I’ll let the president, who is on a business trip, know."
+    },
+    {
+      "jp": "昨日の午後は移動中だったので、返信できませんでした。",
+      "en": "I was in transit yesterday afternoon, so I couldn’t reply."
+    },
+    {
+      "jp": "休憩中、席を離れてもいいですか。",
+      "en": "Is it okay to leave my seat during the break?"
+    },
+    {
+      "jp": "講義中は私語を慎んでください。",
+      "en": "Please refrain from chatting during the lecture."
+    },
+    {
+      "jp": "ただいま準備中ですので、少々お待ちください。",
+      "en": "We are currently preparing, so please wait a moment."
+    },
+    {
+      "jp": "この申請、今週中に必要じゃないですか。",
+      "en": "Don’t we need this application within this week?"
+    },
+    {
+      "jp": "今、勉強中じゃないから、話せるよ。",
+      "en": "I’m not studying right now, so I can talk."
+    },
+    {
+      "jp": "配達中でしたか。玄関で待っていました。",
+      "en": "Were you out on delivery? I was waiting at the entrance."
+    },
+    {
+      "jp": "映画上映中の入場はご遠慮ください。",
+      "en": "Please refrain from entering during the screening."
+    },
+    {
+      "jp": "工事中は道が狭くて危険だ。",
+      "en": "The road is narrow and dangerous while construction is underway."
+    },
+    {
+      "jp": "テスト中にトイレに行ってはいけません。",
+      "en": "You must not go to the bathroom during the test."
+    },
+    {
+      "jp": "今月中に引っ越す予定です。",
+      "en": "I plan to move by the end of this month."
+    },
+    {
+      "jp": "会議中だったのに、彼は大きな声で笑った。",
+      "en": "Even though we were in a meeting, he laughed loudly."
+    },
+    {
+      "jp": "接続中ですか、それとももう完了しましたか。",
+      "en": "Are you still connecting, or has it already finished?"
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "一日中忙しかった。",
+      "en": "I was busy all day."
+    },
+    {
+      "jp": "この箱の中に何が入っていますか。",
+      "en": "What’s inside this box?"
+    },
+    {
+      "jp": "授業の中で一番役に立ったのはこの練習だ。",
+      "en": "Among the class activities, this exercise was the most useful."
+    },
+    {
+      "jp": "会議の最中に停電が起きた。",
+      "en": "The power went out right in the middle of the meeting."
+    },
+    {
+      "jp": "旅行の間に財布をなくした。",
+      "en": "I lost my wallet during the trip."
+    },
+    {
+      "jp": "今、勉強しているところです。",
+      "en": "I’m studying right now."
+    },
+    {
+      "jp": "彼は世界中を旅している。",
+      "en": "He is traveling around the world."
+    },
+    {
+      "jp": "発売中止のお知らせを見た。",
+      "en": "I saw the notice that the release was canceled."
+    },
+    {
+      "jp": "中国の文化に興味があります。",
+      "en": "I’m interested in Chinese culture."
+    },
+    {
+      "jp": "途中で財布を落としてしまった。",
+      "en": "I dropped my wallet along the way."
+    }
+  ]
+}

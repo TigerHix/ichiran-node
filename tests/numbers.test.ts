@@ -1,6 +1,6 @@
 // Parse Number tests - ported from tests.lisp
 import { describe, test, expect } from 'bun:test';
-import { parseNumber, numberToKanji } from '../src/numbers.js';
+import { parseNumber, numberToKanji } from '../src/dict/numbers.js';
 
 describe('Parse Number Tests', () => {
   test('100万 → 1000000', () => {

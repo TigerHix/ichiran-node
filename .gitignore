@@ -3,10 +3,7 @@ dist/
 *.log
 .env
 .DS_Store
-perf/
-temp/
-.analysis
-.wrangler/
+tmp/
 *.pgdump
 *.sql.gz
 tsconfig.tsbuildinfo

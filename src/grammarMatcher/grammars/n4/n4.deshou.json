@@ -1,0 +1,135 @@
+{
+  "id": "n4.deshou",
+  "level": "N4",
+  "description": "A conjecture or probability; 'probably', 'I think', 'it seems'.",
+  "formation": "Verb-ますstem + でしょう, い-Adjective + でしょう, な-Adjective + でしょう, Noun + でしょう",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜でしょう（推量）\n\n### Meaning and function\n- Polite conjecture/prediction: probably, I suppose, it seems\n- Softens assertions and can invite the listener’s agreement\n- With か, becomes a polite, tentative question/confirmation\n\n### Form and templates\n- Core\n  - V(plain) + でしょう\n    - present/future: V(dictionary) + でしょう\n    - past: V(た) + でしょう\n    - negative: V(ない) + でしょう\n    - past negative: V(なかった) + でしょう\n  - い-adj + でしょう\n    - negative: い-adj(くない) + でしょう\n    - past: い-adj(かった) + でしょう\n  - な-adj + でしょう\n    - negative: な-adj + では/じゃないでしょう\n    - past: な-adj + だったでしょう\n  - N + でしょう\n    - negative: N + では/じゃないでしょう\n    - past: N + だったでしょう\n- Optional endings and nuance\n  - 〜でしょうか: polite, tentative question/confirmation\n  - 〜でしょうね: soft, empathetic conjecture\n  - 〜でしょう？: seeking agreement (tag-question-like; casual)\n- Particle requirements and ordering\n  - でしょう is sentence-final; may be followed by ね, か, よ (rare), or connectives like から, けど in polite discourse (e.g., 〜でしょうから …).\n- Conjugation/inflection notes\n  - Use plain forms before でしょう. Do not use the ます-stem.\n  - With N/な-adj in polite style, do not insert だ before でしょう (学生でしょう, 静かでしょう). The plain counterpart is だろう (学生だろう).\n  - Negative for N/な-adj takes では/じゃないでしょう (では is more formal).\n  - Past for N/な-adj takes だったでしょう.\n\n### Usage notes and constraints\n- Register and naturalness\n  - でしょう is polite; plain counterpart is だろう (more direct/masculine-sounding). Casual contraction でしょ is common in speech.\n  - Frequent in forecasts, news, and polite everyday talk; also used in writing to hedge claims (〜ではないでしょうか).\n- Semantics\n  - Medium-to-high likelihood based on some basis; softer than certainty but firmer than mere possibility.\n  - Common with adverbs: おそらく/たぶん/きっと + 〜でしょう. もしかしたら pairs more naturally with 〜かもしれない than with 〜でしょう.\n  - Used for future predictions and for present/past states the speaker is not certain about.\n  - For one’s own intentions/plans, でしょう can sound detached; prefer つもり/予定/と思います when appropriate.\n- Interactional nuance\n  - Rising intonation or 〜でしょう？ seeks agreement and can sound pushy/condescending to seniors; prefer ですよね in such contexts.\n  - 〜でしょうか politely inquires/asks for confirmation; softer than ですか.\n- Orthography/variants\n  - でしょう (standard polite), でしょ (casual), だろう (plain). In writing, ではないでしょうか is formal; じゃないでしょうか is conversational.\n\n### Common mistakes\n- Using V(ます-stem) + でしょう (incorrect). Use V(plain) + でしょう.\n- Inserting だ before でしょう in polite style (学生だでしょう ×). Omit だ.\n- Adding です after でしょう (でしょうです ×). でしょう itself is the polite ending.\n- Overstacking hedges (〜でしょうと思います). Prefer either 〜でしょうね or 〜と思います.\n- Pairing もしかしたら with 〜でしょう unnaturally; use 〜かもしれません instead.\n\n### Related grammar\n- 〜だろう: Plain equivalent; more direct/strong; often masculine tone.\n- 〜かもしれない／〜かもしれません: Possibility (lower confidence) without inviting agreement.\n- 〜はずだ: Strong logical expectation (near certainty) based on known conditions.\n- 〜に違いない: Very strong conviction; stronger than はずだ.\n- 〜ようだ／〜みたいだ／〜らしい: Resemblance/evidence/hearsay; describe apparent state rather than probability strength.",
+  "examples": [
+    {
+      "jp": "たぶん明日は雨が降るでしょう。",
+      "en": "It will probably rain tomorrow."
+    },
+    {
+      "jp": "おそらく彼はもう出発したでしょう。",
+      "en": "He has probably already departed."
+    },
+    {
+      "jp": "この辺は夜でも静かでしょうね。",
+      "en": "It’s probably quiet around here even at night, isn’t it."
+    },
+    {
+      "jp": "あの映画、面白くないでしょ？",
+      "en": "That movie isn’t very interesting, right?"
+    },
+    {
+      "jp": "その話は本当ではないでしょう。",
+      "en": "That story is probably not true."
+    },
+    {
+      "jp": "あの人は新人でしょう。",
+      "en": "That person is probably a newcomer."
+    },
+    {
+      "jp": "去年の冬はかなり寒かったでしょう。",
+      "en": "Last winter was probably quite cold."
+    },
+    {
+      "jp": "ここは人が少ないでしょうから、ゆっくり話せます。",
+      "en": "There are probably few people here, so we can talk at leisure."
+    },
+    {
+      "jp": "彼らはもう戻ってこなかったでしょう。",
+      "en": "They probably didn’t come back."
+    },
+    {
+      "jp": "このにおいからすると、何かが焦げているでしょうよ。",
+      "en": "From this smell, something is surely burning, you know."
+    },
+    {
+      "jp": "あの人は医者じゃないでしょう。",
+      "en": "That person is probably not a doctor."
+    },
+    {
+      "jp": "明日はきっと道が混むでしょうけど、早めに出ます。",
+      "en": "The roads will surely be crowded tomorrow, but I’ll leave early."
+    },
+    {
+      "jp": "彼は昔、先生だったでしょうか。",
+      "en": "Was he a teacher in the past, I wonder?"
+    },
+    {
+      "jp": "その資料は必要だったでしょうね。",
+      "en": "Those materials were probably necessary, weren’t they."
+    },
+    {
+      "jp": "この計算、どこかで間違っているでしょう？",
+      "en": "This calculation is probably wrong somewhere, right?"
+    },
+    {
+      "jp": "彼の説明は丁寧ではないでしょう。",
+      "en": "His explanation is probably not polite."
+    },
+    {
+      "jp": "彼は来ないでしょうね。",
+      "en": "He probably won’t come."
+    },
+    {
+      "jp": "見た目ほど重くないでしょう。",
+      "en": "It’s probably not as heavy as it looks."
+    },
+    {
+      "jp": "先月の会議で話題になった提案は、実現するでしょうか。",
+      "en": "Will the proposal that was discussed at last month’s meeting likely be realized?"
+    },
+    {
+      "jp": "先週のテストは思ったより難しくなかったでしょう。",
+      "en": "Last week’s test was probably not as difficult as we thought."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "たぶん明日は雨が降ると思います。",
+      "en": "I think it will probably rain tomorrow."
+    },
+    {
+      "jp": "おそらく彼はもう出発したかもしれません。",
+      "en": "He may have already departed."
+    },
+    {
+      "jp": "この辺は夜でも静かですよね。",
+      "en": "It’s quiet around here even at night, isn’t it."
+    },
+    {
+      "jp": "あの映画、面白くないですか？",
+      "en": "Isn’t that movie interesting?"
+    },
+    {
+      "jp": "その話は本当ではないです。",
+      "en": "That story isn’t true."
+    },
+    {
+      "jp": "会議は午後三時からですよ。",
+      "en": "The meeting is from three p.m., you know."
+    },
+    {
+      "jp": "そんなこと、誰でも知っているはずです。",
+      "en": "Anyone should know that."
+    },
+    {
+      "jp": "昨日は人が少なかったようです。",
+      "en": "It seems there were few people yesterday."
+    },
+    {
+      "jp": "彼は昔、先生だったらしい。",
+      "en": "He apparently used to be a teacher."
+    },
+    {
+      "jp": "この計算、どこかで間違っているんじゃないですか。",
+      "en": "Isn’t there a mistake somewhere in this calculation?"
+    }
+  ]
+}

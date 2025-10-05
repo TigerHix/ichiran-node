@@ -1,0 +1,135 @@
+{
+  "id": "n4.dou-iu-noun",
+  "level": "N4",
+  "description": "Asking for clarification or more information about a noun; 'what kind of', 'what sort of'.",
+  "formation": "どういう + Noun",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- どういう＋名詞（どんな〜？）\n\n### Meaning and function\n- Asks “what kind/sort of …?” to request clarification about the nature, category, content, or definition of a noun\n- Often seeks a more specific explanation than どんな (“what kind”), including meaning, reason, or intention\n- With strong tone, can carry a confrontational “what on earth …?” nuance\n\n### Form and templates\n- Core: どういう + N\n- Full NP: [どういう N] + particle (が／を／は／に／で／と など)\n- Predicate: [どういう N] + です／だ／ですか／なの？（copula follows the noun, not どういう）\n- N omission: どういう + の (use の as a placeholder when the noun is understood from context)\n- Polite/formal variants:\n  - どういった + N (softer/more polite)\n  - どのような + N (formal/written)\n- Collocations: Frequently used with abstract nouns (意味, こと, 理由, 事情, つもり, 立場, 方針, 種類 など) to ask for explanation or definition\n- Conjugation: どういう itself does not conjugate; any tense/politeness is expressed by the copula or the sentence ending\n\n### Usage notes and constraints\n- Register: Neutral and common in everyday speech; どういった and どのような are safer in polite/formal contexts\n- Nuance: Compared with どんな, どういう tends to ask for specifics/explanations (identity, content, rationale), not just general qualities\n- Scope: Works with both concrete and abstract nouns; especially natural with abstract/intangible nouns when asking “what does that mean/entail?”\n- Interpersonal tone: Used abruptly or with a sharp tone, it can sound accusatory; adjust politeness or choose どのような/どういった in sensitive situations\n- Orthography: Usually written in kana (どういう). Kanji spellings like 如何いう／どう云う are rare and not recommended in modern usage\n\n### Common mistakes\n- Using どう N (×). 必ず どういう + N\n- Saying どういうですか without a noun (×). It must modify a noun (or use の as a stand-in)\n- Treating どんな and どういう as identical. どんな asks about general qualities; どういう seeks explanation/definition or specific type\n- Confusing なんの with どういう. なんの + N asks “what (category/purpose) …?” and is not a general substitute for “what kind of …?”\n- Directly applying どういう to ask who someone is; for identity prefer どなた/だれ, and for general description of a person どんな人 is often softer\n\n### Related grammar\n- どんな＋N: “What kind of …?” focusing on general qualities/appearance; less about definition/explanation\n- どのような＋N: More formal/polite counterpart to どんな／どういう\n- なんの＋N: “What (type/purpose) …?” Often about category, purpose, or ownership\n- どの＋N: “Which …?” selecting from a known set\n- 何という＋N: Asks the name/title of something, not its kind or nature",
+  "examples": [
+    {
+      "jp": "『サステナブル』とはどういう意味ですか。",
+      "en": "What does “sustainable” mean?"
+    },
+    {
+      "jp": "これはどういうつもりだ？",
+      "en": "What are you trying to do?"
+    },
+    {
+      "jp": "この件でどういう事情があったのですか。",
+      "en": "What circumstances were there in this matter?"
+    },
+    {
+      "jp": "ご希望は、どういった内容ですか。",
+      "en": "What kind of content are you hoping for?"
+    },
+    {
+      "jp": "どのような支援が必要だとお考えですか。",
+      "en": "What kind of support do you think is necessary?"
+    },
+    {
+      "jp": "どれにする？— うーん、どういうのがいいかな。",
+      "en": "Which one should we pick? — Hmm, what kind would be good?"
+    },
+    {
+      "jp": "彼の発言がどういう意図なのかは明確だ。",
+      "en": "It’s clear what the intention behind his remark is."
+    },
+    {
+      "jp": "昨日の会議で、上司はどういう方針を示しましたか。",
+      "en": "At yesterday’s meeting, what policy did the boss present?"
+    },
+    {
+      "jp": "その説明、どういうことなのか全然分からなかった。",
+      "en": "I couldn’t understand what it was supposed to mean."
+    },
+    {
+      "jp": "ここでは、どういう手続きで登録しますか。",
+      "en": "By what procedure do we register here?"
+    },
+    {
+      "jp": "それは会社の規則とはどういう関係ですか。",
+      "en": "What is its relationship to the company’s rules?"
+    },
+    {
+      "jp": "子どもにどういう影響がある？",
+      "en": "What kind of impact does it have on children?"
+    },
+    {
+      "jp": "このアプリで、どういう操作をした？",
+      "en": "What operations did you perform in this app?"
+    },
+    {
+      "jp": "いったいどういう神経なんだ。",
+      "en": "What the heck is wrong with you?"
+    },
+    {
+      "jp": "今回の不具合は、どのような原因だった？",
+      "en": "What was the cause of this malfunction?"
+    },
+    {
+      "jp": "どういったのをお探しですか。",
+      "en": "What kind are you looking for?"
+    },
+    {
+      "jp": "アレルギーにはどういう種類がありますか。",
+      "en": "What kinds of allergies are there?"
+    },
+    {
+      "jp": "「権利行使」というのはどういう意味でしょうか。",
+      "en": "What does “exercise of rights” mean?"
+    },
+    {
+      "jp": "別にどういう理由でもないよ。",
+      "en": "No particular reason."
+    },
+    {
+      "jp": "あなたはこの件でどういう立場なの？",
+      "en": "What is your position on this matter?"
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "どんな本が好きですか。",
+      "en": "What kind of books do you like?"
+    },
+    {
+      "jp": "その花は何という名前ですか。",
+      "en": "What is that flower called?"
+    },
+    {
+      "jp": "これはなんの本ですか。",
+      "en": "What kind of book is this?"
+    },
+    {
+      "jp": "どの店が一番安いですか。",
+      "en": "Which store is the cheapest?"
+    },
+    {
+      "jp": "どうしますか。",
+      "en": "What will you do?"
+    },
+    {
+      "jp": "彼にどう言うか考えている。",
+      "en": "I’m thinking about how to tell him."
+    },
+    {
+      "jp": "この機械はどのように使いますか。",
+      "en": "How do you use this machine?"
+    },
+    {
+      "jp": "結果はどのようであれ、やり切ろう。",
+      "en": "Whatever the result may be, let’s see it through."
+    },
+    {
+      "jp": "別にどうということはないよ。",
+      "en": "It’s nothing special."
+    },
+    {
+      "jp": "さっき、彼にどう言ったの？",
+      "en": "How did you say it to him a moment ago?"
+    }
+  ]
+}

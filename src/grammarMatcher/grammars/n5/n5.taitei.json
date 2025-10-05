@@ -1,0 +1,135 @@
+{
+  "id": "n5.taitei",
+  "level": "N5",
+  "description": "Used for expressing 'usually', 'mostly', or 'generally'",
+  "formation": "たいてい + Verb/い-Adjective/な-Adjective/Noun",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 頻度副詞「たいてい」\n\n### Meaning and function\n- Expresses “usually,” “mostly,” or “generally” — the normal or typical case, a high-frequency habit, or what generally holds true\n\n### Form and templates\n- たいてい + S (clause-level adverb; position is usually sentence-initial or just before the predicate)\n- たいていは + S (adds topic/contrast emphasis: “as for most cases, …”)\n- たいていの + N (“most N; almost all N”)\n\nNotes\n- No conjugation. It modifies the whole clause, or, with の, modifies a noun.\n- Works with plain or polite predicates. Negation applies to the predicate: たいてい〜ない = “usually don’t …”\n- Particle behavior:\n  - は may follow たいてい to topicalize/contrast (たいていは).\n  - の is required when directly modifying a noun (たいていのN).\n- Placement: commonly at the start of the sentence or before the main predicate; with の it precedes the noun.\n\n### Usage notes and constraints\n- Register: Neutral and common in everyday speech and writing. Natural in both plain and polite styles.\n- Semantics/scope: Describes the usual pattern or default tendency. It scopes over the entire proposition, not just a single word.\n- Not for approximation of amounts or time. Use だいたい/約 for “about/approximately.”\n- たいていの + N means “most N,” but it highlights typicality rather than precise quantity.\n- Orthography:\n  - Kana: たいてい (very common and recommended for learners)\n  - Kanji: 大抵 (more formal/printed style; be careful not to confuse with 大体 = だいたい)\n\n### Common mistakes (optional, only if relevant)\n- Confusing 大抵(たいてい “usually”) with 大体(だいたい “approximately/roughly”).\n- Saying たいていです as a standalone predicate in the “usually” sense. Use it to modify a clause, or use たいていの + N.\n- Using たいてい to approximate numbers or amounts (use だいたい/約 instead).\n- Redundantly stacking frequency adverbs (e.g., combining with いつも in the same slot), which sounds heavy or unnatural.\n- Using たいていに + V to mean “usually” (に-form belongs to a different idiom meaning “enough/already,” not N5 usage).\n\n### Related grammar (optional, only if relevant)\n- いつも: “always” (near 100%); stronger than たいてい.\n- よく: “often/frequently” (lower frequency than たいてい; event happens many times, not necessarily the default case).\n- ふだん(は): “usually/ordinarily” with a focus on the usual state/time frame rather than frequency counts.\n- だいたい: “about/approximately; generally.” Overlaps in “generally,” but is the normal choice for approximations and rough amounts.\n- ほとんど: “almost all/most; nearly.” With negatives, “hardly (ever/any).” Stronger in coverage than たいてい and common with 〜ない.",
+  "examples": [
+    {
+      "jp": "たいてい、朝はパンを食べます。",
+      "en": "I usually eat bread for breakfast."
+    },
+    {
+      "jp": "私はたいてい電車で通う。",
+      "en": "I usually commute by train."
+    },
+    {
+      "jp": "たいてい、コーヒーは飲みません。",
+      "en": "I usually don't drink coffee."
+    },
+    {
+      "jp": "たいていは家で仕事をします。",
+      "en": "I usually work at home."
+    },
+    {
+      "jp": "彼はたいてい元気だ。",
+      "en": "He's usually well."
+    },
+    {
+      "jp": "学生のころは、たいてい遅くまで起きていた。",
+      "en": "Back when I was a student, I usually stayed up late."
+    },
+    {
+      "jp": "日曜日はたいてい何をしますか。",
+      "en": "What do you usually do on Sundays?"
+    },
+    {
+      "jp": "たいていは車で来ますか。",
+      "en": "Do you usually come by car?"
+    },
+    {
+      "jp": "会議はたいてい朝にあります。",
+      "en": "Meetings are usually in the morning."
+    },
+    {
+      "jp": "たいていの人は朝コーヒーを飲む。",
+      "en": "Most people drink coffee in the morning."
+    },
+    {
+      "jp": "たいていの子どもは野菜があまり好きではない。",
+      "en": "Most children don't like vegetables very much."
+    },
+    {
+      "jp": "昨日はたいていの店が閉まっていた。",
+      "en": "Most stores were closed yesterday."
+    },
+    {
+      "jp": "大抵、雨の日は外出しない。",
+      "en": "I usually don't go out on rainy days."
+    },
+    {
+      "jp": "冬は大抵寒いです。",
+      "en": "It's usually cold in winter."
+    },
+    {
+      "jp": "大抵は早めに寝ます。",
+      "en": "I usually go to bed early."
+    },
+    {
+      "jp": "大抵の問題は話し合えば解決できる。",
+      "en": "Most problems can be solved if we talk them through."
+    },
+    {
+      "jp": "バーゲンでは、たいてい値段が安くなる。",
+      "en": "During sales, prices usually go down."
+    },
+    {
+      "jp": "教室は大抵静かになります。",
+      "en": "Classrooms usually become quiet."
+    },
+    {
+      "jp": "たいていは遅れないんですか。",
+      "en": "Do you usually not run late?"
+    },
+    {
+      "jp": "お昼はたいてい弁当を持っていきます。",
+      "en": "I usually bring a bento for lunch."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "「たいてい」という語の意味を辞書で引いた。",
+      "en": "I looked up the meaning of the word “taitei” in a dictionary."
+    },
+    {
+      "jp": "彼の忍耐力は大抵ではない。",
+      "en": "His perseverance is extraordinary."
+    },
+    {
+      "jp": "大体三時ごろに着きます。",
+      "en": "I'll arrive around three."
+    },
+    {
+      "jp": "大体、話はわかった。",
+      "en": "I more or less got the gist."
+    },
+    {
+      "jp": "ほとんどの学生が参加した。",
+      "en": "Almost all the students took part."
+    },
+    {
+      "jp": "いつも朝はパンを食べます。",
+      "en": "I always eat bread for breakfast."
+    },
+    {
+      "jp": "ふだんは自転車で通勤しています。",
+      "en": "I usually commute by bicycle."
+    },
+    {
+      "jp": "だいたいの予定は決まりました。",
+      "en": "The rough schedule has been set."
+    },
+    {
+      "jp": "雑誌で「大抵」と「大体」の違いを読んだ。",
+      "en": "I read in a magazine about the difference between “大抵” and “大体.”"
+    },
+    {
+      "jp": "この本の見出しは「たいていの誤用」です。",
+      "en": "The heading in this book is “Common Misuses.”"
+    }
+  ]
+}

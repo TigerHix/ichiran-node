@@ -1,0 +1,135 @@
+{
+  "id": "n5.noun-no-atode",
+  "level": "N5",
+  "description": "Expresses the order of events; 'after', 'later than'",
+  "formation": "Noun + の + あとで",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 名詞＋のあとで／のあとに\n\n### Meaning and function\n- States that one event/action happens after a noun-referent event or time; “after N,” “later than N (in sequence).”\n\n### Form and templates\n- N の あとで + clause\n- N の あとに + clause\n- N の あと + clause (particle omitted in casual speech; treats あと as a time noun)\n- あとで + clause (no N; “later,” used when the reference is clear)\n\nNotes on particles and ordering:\n- で is the most common in conversation; に marks the point in time more neutrally/formally. Meaning difference is small at this level.\n- The whole time phrase can take topic/contrast particles: N の あと(で/に) は／も + clause.\n- As a noun phrase, あと can combine with other particles: N の あとから／まで, etc.\n\nWhat counts as N:\n- Event/activity nouns (e.g., lessons, meals, work, parties) and time nouns (today, this week, vacation).\n- Not used with concrete objects or places to mean “behind” (that’s うしろ), and not directly with verbs; with verbs use V-たあとで (see Related).\n\n### Usage notes and constraints\n- Register: Natural in both plain and polite speech. に is a little more formal/written; で is very common in everyday conversation.\n- Semantic scope: Indicates temporal sequence (Event/Time N finishes or passes → next action happens). It does not express physical position.\n- With specific clock times/dates or durations:\n  - Durations are often expressed with X後 (e.g., “X hours later”) rather than N の あとで.\n  - For specific times/dates, N の あと(で/に) is acceptable; formal/written alternatives include 以後／以降.\n- Pronouns/demonstratives can substitute for N (e.g., “after that/this”), commonly forming そのあと／このあと.\n- Orthography:\n  - あと vs 後: both common. Kana is frequent in textbooks; 後 is standard in general writing.\n  - のちに (後に) is a more formal/literary alternative to あとに; avoid at N5 unless reading.\n\n### Common mistakes (optional, only if relevant)\n- Omitting の after a noun (N あとで … is incorrect; use N の あとで …).\n- Using non-event nouns (objects/people) as N when the meaning is temporal.\n- Confusing “after” (あと) with “behind” (うしろ).\n- For verbs, using dictionary form before あとで (should be V-たあとで, not V-るあとで).\n\n### Related grammar (optional, only if relevant)\n- V-たあとで／V-たあとに: “after doing V.” Verb-based counterpart; required when N is an action expressed by a verb.\n- N の まえに: “before N.” Antonym expressing prior sequence.\n- V-てから: “after doing V, then …”; emphasizes the next action starting only after the first completes; very common in spoken sequence.\n- X後／X以後／X以降: “X later/since X (time).” More concise/formal with times/durations; 以降/以後 are formal and often written.",
+  "examples": [
+    {
+      "jp": "授業の後で図書館に行きます。",
+      "en": "After class, I will go to the library."
+    },
+    {
+      "jp": "昼ごはんの後に散歩した。",
+      "en": "I took a walk after lunch."
+    },
+    {
+      "jp": "仕事のあとは運動しない。",
+      "en": "I don’t exercise after work."
+    },
+    {
+      "jp": "会議のあとに、報告はいりませんか。",
+      "en": "After the meeting, is a report unnecessary?"
+    },
+    {
+      "jp": "あとで電話するね。",
+      "en": "I’ll call you later."
+    },
+    {
+      "jp": "このあと、買い物に行く予定です。",
+      "en": "After this, I plan to go shopping."
+    },
+    {
+      "jp": "そのあとは、みんなで写真を撮った。",
+      "en": "After that, we all took photos together."
+    },
+    {
+      "jp": "あのあと、特に変わりはありませんでした。",
+      "en": "After that, there wasn’t any particular change."
+    },
+    {
+      "jp": "昼ごはんのあとにも、まだお腹が空いていた。",
+      "en": "Even after lunch, I was still hungry."
+    },
+    {
+      "jp": "授業のあとに、教室は静かになりました。",
+      "en": "After class, the classroom became quiet."
+    },
+    {
+      "jp": "大会のあとからは、練習がもっと厳しくなった。",
+      "en": "From after the tournament, practice got even tougher."
+    },
+    {
+      "jp": "休みのあとまでは、提出しなくていいです。",
+      "en": "You don’t have to submit it until after the break."
+    },
+    {
+      "jp": "試合のあとで、インタビューはありますか。",
+      "en": "Will there be interviews after the match?"
+    },
+    {
+      "jp": "授業のあと帰った。",
+      "en": "I went home after class."
+    },
+    {
+      "jp": "仕事のあとには、甘い物は食べません。",
+      "en": "I don’t eat sweets after work."
+    },
+    {
+      "jp": "正月のあとは、人が少なくなるね。",
+      "en": "After New Year’s, there are fewer people, huh."
+    },
+    {
+      "jp": "三時のあとに出発します。",
+      "en": "We’ll depart after three o’clock."
+    },
+    {
+      "jp": "テストのあとで疲れました。",
+      "en": "I got tired after the test."
+    },
+    {
+      "jp": "朝ごはんのあとに、薬を飲まなければならない。",
+      "en": "I have to take my medicine after breakfast."
+    },
+    {
+      "jp": "休憩のあとでも、作業は終わらなかった。",
+      "en": "Even after the break, the work didn’t get finished."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "三時間後に出発します。",
+      "en": "We will depart in three hours."
+    },
+    {
+      "jp": "昼ご飯を食べてから出かけます。",
+      "en": "I’ll go out after eating lunch."
+    },
+    {
+      "jp": "会議の前に準備します。",
+      "en": "I’ll prepare before the meeting."
+    },
+    {
+      "jp": "後ほどお返事します。",
+      "en": "I will reply later."
+    },
+    {
+      "jp": "ケーキはあと二つだけだ。",
+      "en": "There are only two pieces of cake left."
+    },
+    {
+      "jp": "宿題はあとだ。",
+      "en": "Homework is for later."
+    },
+    {
+      "jp": "彼は『あとでね』と言った。",
+      "en": "He said, “Later, okay?”"
+    },
+    {
+      "jp": "午後に会いましょう。",
+      "en": "Let’s meet in the afternoon."
+    },
+    {
+      "jp": "家の後ろに小さな公園がある。",
+      "en": "There is a small park behind the house."
+    },
+    {
+      "jp": "会議のあとの飲み会は中止になった。",
+      "en": "The after-meeting get-together was canceled."
+    }
+  ]
+}

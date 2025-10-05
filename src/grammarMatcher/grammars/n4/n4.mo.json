@@ -1,0 +1,135 @@
+{
+  "id": "n4.mo",
+  "level": "N4",
+  "description": "Indicates 'also', 'too', or 'as well'.",
+  "formation": "Verb-casual + も, い-Adjective + も, な-Adjective + も, Noun + も",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- も（追加）\n\n### Meaning and function\n- Adds an item to an already mentioned or implied set: “also,” “too,” “as well.”\n- Can carry emphasis like “even,” especially with quantities/counters or when used with negation (“not even …”).\n\n### Form and templates\n- N + も\n  - Core additive pattern.\n  - With case markers:\n    - が／を／は are replaced by も: N + も\n    - に／へ／で／から／まで／と／より take も after them: Nにも／Nへも／Nでも／Nからも／Nまでも／Nとも／Nよりも\n- AもBも + same predicate\n  - Lists multiple items that share the same action/state (“both A and B …”).\n  - With a negative predicate: “neither A nor B …”\n- Number/counter + も + predicate\n  - Positive: emphasis (“as many/much as …”).\n  - Negative: “not even …” (e.g., not even one/once).\n- Verb/adjective content as the “thing” being added\n  - V(dict/ない/た) + の／こと + も … (nominalize the clause, then add も)\n  - い-adj + の + も … (refers to “the one(s) that are …” as a noun, then add も)\n  - い-adj(〜く) + も + ない / な-adj + でも + ない\n    - Fixed negative patterns meaning “not even …” or, in paired form 〜くも〜くもない, “neither … nor …”\n- Positioning\n  - Attach も directly to the focused element (the item that is “also/too”).\n  - Sentence-initial topical use is possible: [focused phrase] + も、… (do not combine with は there).\n- Politeness/conjugation\n  - も does not conjugate; it works with both plain and です／ます predicates.\n\n### Usage notes and constraints\n- Register/frequency: Neutral, very common in speech and writing; natural at all politeness levels.\n- Scope/focus: Moving も changes what is being added; place it immediately after the element you want to mark.\n- Particle behavior:\n  - Replace は／が／を with も.\n  - Stack も after other case/relational particles (に／へ／で／から／まで／と／より).\n- Multiple も: Using も on more than one element in the same clause is common to express “both/all.”\n- Interrogatives + も:\n  - With a negative predicate: “none/no …” (e.g., 誰も…ない, 何も…ない).\n  - With an affirmative predicate: “every/any …” (e.g., いつも, どこも) — common fixed expressions at this level.\n- Orthography: Always written も (hiragana).\n\n### Common mistakes\n- Stacking は／が／を before も (e.g., Xはも/がも/をも). Use Xも (も replaces them).\n- Placing も in the wrong spot, accidentally changing the focus of “also.”\n- Trying to put も after です／ます. Attach も to the noun/phrase before the copula (or use で + も when appropriate).\n- Using も to connect full sentences; use sentence connectors like また／それに for sentence-level “also.”\n\n### Related grammar\n- は: Topic/contrast marker. も is additive; it includes another item in the same set rather than contrasting.\n- さえ／まで: “Even” with stronger sense of extremity/limit; さえ is more focused than も.\n- また／それに: Sentence-level “also/in addition” (adverbs/conjunctives), not a particle on a noun.\n- AもBも vs AとB: AもBも emphasizes that both share the same predicate; と simply joins items as a combined NP.\n- でも: Can be で + も after nouns/な-adjectives, but also forms other meanings (“even if,” “or something”); don’t confuse with plain additive も.",
+  "examples": [
+    {
+      "jp": "私も行きます。",
+      "en": "I’ll go too."
+    },
+    {
+      "jp": "その映画も見た。",
+      "en": "I also saw that movie."
+    },
+    {
+      "jp": "この店もあの店よりも安いですか。",
+      "en": "Is this shop also cheaper than that one?"
+    },
+    {
+      "jp": "駅にも近いので、歩いて行けます。",
+      "en": "It’s close to the station too, so we can walk."
+    },
+    {
+      "jp": "家でも、仕事をします。",
+      "en": "I work at home as well."
+    },
+    {
+      "jp": "先生からもメールが届きました。",
+      "en": "I got an email from the teacher too."
+    },
+    {
+      "jp": "夜中までも起きていた。",
+      "en": "I stayed up even until midnight."
+    },
+    {
+      "jp": "友達ともいつも旅行に行きます。",
+      "en": "I always travel with friends as well."
+    },
+    {
+      "jp": "誰も答えられませんでした。",
+      "en": "No one could answer."
+    },
+    {
+      "jp": "猫も犬も好きです。",
+      "en": "I like both cats and dogs."
+    },
+    {
+      "jp": "彼も彼女も来なかった。",
+      "en": "Neither he nor she came."
+    },
+    {
+      "jp": "三時間も待ちました。",
+      "en": "I waited for as long as three hours."
+    },
+    {
+      "jp": "一つも残っていない。",
+      "en": "Not even one is left."
+    },
+    {
+      "jp": "走るのも楽しい。",
+      "en": "Running is fun too."
+    },
+    {
+      "jp": "朝ごはんを食べないのも体によくない。",
+      "en": "Not eating breakfast is also bad for your health."
+    },
+    {
+      "jp": "この本を選んだのもあなたですか。",
+      "en": "Were you also the one who chose this book?"
+    },
+    {
+      "jp": "新しいのも古いのもあります。",
+      "en": "We have both new ones and old ones."
+    },
+    {
+      "jp": "安くも高くもない。",
+      "en": "It’s neither cheap nor expensive."
+    },
+    {
+      "jp": "便利でも不便でもない場所です。",
+      "en": "It’s a place that’s neither convenient nor inconvenient."
+    },
+    {
+      "jp": "どこも混んでいて、座れませんでした。",
+      "en": "Everywhere was crowded, so I couldn’t get a seat."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "雨でも行きます。",
+      "en": "I’ll go even if it rains."
+    },
+    {
+      "jp": "何でもいいです。",
+      "en": "Anything is fine."
+    },
+    {
+      "jp": "たとえ高くても買います。",
+      "en": "I’ll buy it even if it’s expensive."
+    },
+    {
+      "jp": "もっとゆっくり話してください。",
+      "en": "Please speak more slowly."
+    },
+    {
+      "jp": "もはや手遅れだ。",
+      "en": "It’s already too late."
+    },
+    {
+      "jp": "もし時間があれば、手伝ってください。",
+      "en": "If you have time, please help."
+    },
+    {
+      "jp": "コーヒーでもいかがですか。",
+      "en": "Would you like some coffee or something?"
+    },
+    {
+      "jp": "彼はいつでも笑顔だ。",
+      "en": "He’s always smiling."
+    },
+    {
+      "jp": "高くても安くても関係ない。",
+      "en": "Whether it’s expensive or cheap, it doesn’t matter."
+    },
+    {
+      "jp": "それでも私は諦めない。",
+      "en": "Even so, I won’t give up."
+    }
+  ]
+}

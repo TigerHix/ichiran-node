@@ -1,0 +1,135 @@
+{
+  "id": "n4.a-wa-b-hodo-nai",
+  "level": "N4",
+  "description": "Expressing that A is not as ~ as B; 'not as...as'",
+  "formation": "A は B ほど + い-Adjective stem (without い) + くない, な-Adjective + じゃない, Verb-negative potential form",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- AはBほど〜ない（劣等比較）\n\n### Meaning and function\n- Says that A does not reach B’s level in degree, amount, frequency, or ability; “A is not as … as B.”\n\n### Form and templates\n- A は B ほど い-adj(〜く) ない\n- A は B ほど な-adj(〜では) ない\n  - Casual: な-adj(〜じゃない)\n- A は B ほど V(ない)\n  - Polite negatives: い-adj(〜くありません), な-adj(〜ではありません), V(ません)\n- Optional focus/contrast:\n  - B ほどは … ない (adds a contrastive, “not as … at least” nuance)\n- Conjugation notes\n  - Past negative is possible when talking about the past: い-adj(〜くなかった), な-adj(〜ではなかった), V(なかった)\n  - Verbs are in the plain negative (〜ない). Use a potential verb only if you specifically mean ability (the pattern itself is not “negative potential”).\n- Particle and ordering\n  - A is marked with は (topic).\n  - B is immediately followed by ほど (the standard of comparison).\n  - Predicate comes in a negative form.\n\n### Usage notes and constraints\n- Register/naturalness\n  - Very common in both spoken and written Japanese.\n  - じゃない／くないです are polite-casual; ではありません／くありません are more formal.\n- Semantic scope\n  - Used with gradable qualities (size, speed, difficulty, frequency, skill, amount, etc.) and with verbs to compare frequency/habit/amount.\n  - B is the benchmark; the sentence asserts A falls short of that benchmark.\n- Variants and nuance\n  - Inserting は after ほど softens/limits the comparison.\n  - ほどではない／ほどでもない downplay the degree more gently (“not to that extent”).\n- Orthography\n  - ほど may appear as 程 in writing; kana (ほど) is common at this level.\n  - ではない vs じゃない: ではない is neutral/formal; じゃない is casual.\n\n### Common mistakes (optional, only if relevant)\n- Using より with a negative to mean “not as … as” (AはBより〜ない). Use AはBほど〜ない instead.\n- Forming な-adjectives like 〜くない (incorrect). な-adj takes 〜ではない/じゃない; い-adj takes 〜くない.\n- Treating the verb part as a “negative potential” by default. The pattern requires plain negative; use potential only when contrasting ability.\n- Putting ほど on the wrong item. ほど marks the higher benchmark (B), not the lower one (A).\n\n### Related grammar (optional, only if relevant)\n- A より B のほうが〜: States superiority directly (“B is more … than A”); ほど〜ない states inferiority (“A is not as … as B”).\n- ほどではない／ほどでもない: “Not to that extent”; weaker than a direct negative comparison.\n- くらい／ぐらい: Degree marker similar to ほど; in negative comparisons, ほど is more common/natural.\n- それほど〜ない／たいして〜ない／あまり〜ない: General downplaying without naming a specific comparator (different focus, but often used in similar contexts).",
+  "examples": [
+    {
+      "jp": "このホテルは駅前のホテルほど高くない。",
+      "en": "This hotel is not as expensive as the one by the station."
+    },
+    {
+      "jp": "この道は隣の道路ほど広くありません。",
+      "en": "This road is not as wide as the road next to it."
+    },
+    {
+      "jp": "朝は夜ほど静かではない。",
+      "en": "Mornings are not as quiet as nights."
+    },
+    {
+      "jp": "この町は都会ほど便利じゃない。",
+      "en": "This town isn’t as convenient as the city."
+    },
+    {
+      "jp": "私は兄ほど食べない。",
+      "en": "I don’t eat as much as my older brother."
+    },
+    {
+      "jp": "私は上司ほど残業しません。",
+      "en": "I don’t work overtime as much as my boss."
+    },
+    {
+      "jp": "うちの庭は公園ほどは広くない。",
+      "en": "Our yard isn’t as spacious as a park, at least."
+    },
+    {
+      "jp": "今年の夏は去年の夏ほど暑くなかった。",
+      "en": "This summer was not as hot as last summer."
+    },
+    {
+      "jp": "この手続きは前の手続きほど複雑ではなかった。",
+      "en": "This procedure wasn’t as complicated as the previous one."
+    },
+    {
+      "jp": "昨日は一昨日ほど歩かなかった。",
+      "en": "I didn’t walk as much yesterday as the day before."
+    },
+    {
+      "jp": "私は彼ほど速く泳げない。",
+      "en": "I can’t swim as fast as he can."
+    },
+    {
+      "jp": "私は先輩ほど英語を話せません。",
+      "en": "I can’t speak English as well as my senior."
+    },
+    {
+      "jp": "今年の渋滞は去年ほどではない。",
+      "en": "Traffic this year isn’t as bad as last year’s."
+    },
+    {
+      "jp": "痛みは昨日ほどでもない。",
+      "en": "The pain isn’t as bad as yesterday."
+    },
+    {
+      "jp": "この川はあの川程深くない。",
+      "en": "This river is not as deep as that river."
+    },
+    {
+      "jp": "最近は学生のころほどは本を読まない。",
+      "en": "These days I don’t read as many books as when I was a student."
+    },
+    {
+      "jp": "この問題は前の問題ほど難しくありませんか。",
+      "en": "Isn’t this problem less difficult than the previous one?"
+    },
+    {
+      "jp": "この町は都心ほど便利ではありませんか。",
+      "en": "Isn’t this town less convenient than the city center?"
+    },
+    {
+      "jp": "君は彼ほど練習しないのか。",
+      "en": "Do you not practice as much as he does?"
+    },
+    {
+      "jp": "昨日買った靴は、前に買った安い靴ほど丈夫じゃない。",
+      "en": "The shoes I bought yesterday aren’t as durable as the cheap pair I bought before."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "今日はそれほど寒くない。",
+      "en": "It isn’t that cold today."
+    },
+    {
+      "jp": "東京ほど人が多い都市はない。",
+      "en": "There is no city as populous as Tokyo."
+    },
+    {
+      "jp": "この本はあの本より面白くない。",
+      "en": "This book isn’t as interesting as that one."
+    },
+    {
+      "jp": "会場には百人ほど集まった。",
+      "en": "About a hundred people gathered at the venue."
+    },
+    {
+      "jp": "歩けないほど疲れた。",
+      "en": "I was so tired that I couldn’t walk."
+    },
+    {
+      "jp": "彼は私より背が高くない。",
+      "en": "He isn’t as tall as I am."
+    },
+    {
+      "jp": "あの山はこの山より高くありません。",
+      "en": "That mountain isn’t taller than this one."
+    },
+    {
+      "jp": "想像したほどではなかった。",
+      "en": "It wasn’t to the extent I had imagined."
+    },
+    {
+      "jp": "泣くほどではない。",
+      "en": "It’s not to the point of crying."
+    },
+    {
+      "jp": "この箱はこれほど重い。",
+      "en": "This box is this heavy."
+    }
+  ]
+}

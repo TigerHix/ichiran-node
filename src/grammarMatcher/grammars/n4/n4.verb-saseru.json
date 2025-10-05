@@ -1,0 +1,135 @@
+{
+  "id": "n4.verb-saseru",
+  "level": "N4",
+  "description": "Expresses 'to make someone do something', 'to let someone do something', or 'to cause someone to do something'.",
+  "formation": "Group 1 Verbs: Change the last hiragana to ～せる, Group 2 Verbs: Remove ～る and add ～させる, Group 3 Verbs: する → させる, くる → こさせる",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 使役（〜(さ)せる）\n\n### Meaning and function\n- Expresses causing, compelling, or permitting someone to perform an action: make, have, or let someone do something\n- Also used to indicate that a causer brings about a result by getting another agent to act\n\n### Form and templates\n- Morphology (dictionary form → causative):\n  - 五段動詞: 終止形の語尾「う段」→「あ段」＋せる（…かせる／…かせる／…たせる など）\n  - 一段動詞: 語幹＋させる\n  - 不規則: する→させる、来る→来させる（読み: こさせる）\n- Core templates\n  - Base verb is transitive:\n    - Causer は/が + Causee に + Object を + V(causative)\n    - The original object keeps を; the causee must be に to avoid double を\n  - Base verb is intransitive:\n    - Causer は/が + Causee を + V(causative)\n- Permission/requests and benefactives\n  - “Please let me …”: V(causative)＋てください／くださいませんか\n  - “Be allowed to …”: V(causative)＋て（は）もらう／いただく\n  - “Let someone … (as a favor)”: Causee に + V(causative)＋てあげる／やる／くれる\n- Conjugation notes\n  - Polite: 〜(さ)せます／〜(さ)せました／〜(さ)せません\n  - Plain: 〜(さ)せる／〜(さ)せた／〜(さ)せない\n  - て-form: 〜(さ)せて\n  - Related (distinct meaning): 〜(さ)せられる = causative-passive “be made to do”\n- Particle and ordering rules\n  - Causer typically takes は (topic) or が (focus)\n  - Causee is に with transitive bases; を with intransitive bases\n  - Other complements keep their original particles (に、と、へ、で、から etc.)\n\n### Usage notes and constraints\n- Register and naturalness\n  - Neutral in both plain and polite styles\n  - 〜させてください is a common polite request\n  - 〜させていただきます is formal/humble and frequent in announcements or business settings\n- Interpreting “make” vs “let”\n  - Bare 〜(さ)せる often implies causing/controlling (can sound coercive)\n  - “Allow/let” is clearer with adverbs like 自由に or with benefactive verbs (〜てあげる／くれる) or requests (〜させてください)\n- Semantic scope\n  - The causee is typically animate and agentive\n  - With intransitive motion/posture/psych verbs, the causee is marked with を\n  - With transitive bases, do not mark the causee with を (use に) because the original object already takes を\n- Orthographic/phonetic notes\n  - 来させる is read こさせる\n  - Colloquial/regional contraction 〜さす (e.g., 〜かす) exists but is informal/nonstandard in Tokyo Japanese; prefer 〜(さ)せる in standard writing and speech\n\n### Common mistakes (optional, only if relevant)\n- Marking the causee with を when the base verb is transitive, causing double を\n- Overusing bare 〜(さ)せる to mean “allow,” which can sound forceful; use benefactive/request forms for permission\n- Godan formation errors (not changing the final う段 to あ段 before せる)\n- Misreading 来させる as きさせる (correct reading: こさせる)\n- Confusing 〜(さ)せる (cause) with 〜(さ)せられる (be made to)\n\n### Related grammar (optional, only if relevant)\n- 〜てもいい／〜てはいけない: Permission/prohibition without causation; use for simple “may/can I…?”\n- 〜させてもらう／〜させていただく: “Be allowed to …” (neutral vs humble); focuses on receiving permission\n- 〜させてあげる／やる／くれる: “Let/allow someone to …” with benefactive nuance\n- 〜(さ)せられる: Causative-passive “be made/forced to …,” emphasizes the experiencer’s lack of control\n- 〜ようにする: “Make sure/try to …” about one’s own efforts, not causing another person to act",
+  "examples": [
+    {
+      "jp": "母は子どもに野菜を食べさせる。",
+      "en": "The mother makes her child eat vegetables."
+    },
+    {
+      "jp": "すみません、先に帰らせてください。",
+      "en": "Excuse me, please let me leave first."
+    },
+    {
+      "jp": "先生は学生を走らせた。",
+      "en": "The teacher made the students run."
+    },
+    {
+      "jp": "上司が私に報告書を書かせました。",
+      "en": "My boss made me write the report."
+    },
+    {
+      "jp": "子どもを早く寝させません。",
+      "en": "I don’t let the child go to bed early."
+    },
+    {
+      "jp": "彼は友だちを新しいゲームで遊ばせてあげた。",
+      "en": "He let his friend play with the new game."
+    },
+    {
+      "jp": "私は部下に一時間も待たせてしまいました。",
+      "en": "I ended up making my subordinate wait for a whole hour."
+    },
+    {
+      "jp": "父は犬を外に出させなかった。",
+      "en": "My father didn’t let the dog go outside."
+    },
+    {
+      "jp": "今日は私にも発言させてくださいませんか。",
+      "en": "May I also speak today, please?"
+    },
+    {
+      "jp": "店長は新人に丁寧に接客させます。",
+      "en": "The manager has the new employee serve customers politely."
+    },
+    {
+      "jp": "監督が選手を自由に走らせてやった。",
+      "en": "The coach let the players run freely (for their benefit)."
+    },
+    {
+      "jp": "担当者をこちらに来させてください。",
+      "en": "Please have the person in charge come here."
+    },
+    {
+      "jp": "先生に質問させていただけますか。",
+      "en": "May I ask you a question?"
+    },
+    {
+      "jp": "兄は妹にピアノを毎日練習させていた。",
+      "en": "My older brother was making his younger sister practice the piano every day."
+    },
+    {
+      "jp": "昨日は先に帰らせてもらいました。",
+      "en": "I was allowed to leave early yesterday."
+    },
+    {
+      "jp": "会社は彼を営業部へ行かせなかった。",
+      "en": "The company didn’t let him go to the sales department."
+    },
+    {
+      "jp": "私がその会議に部長を出席させるべきですか。",
+      "en": "Should I make the department head attend that meeting?"
+    },
+    {
+      "jp": "お時間を少々いただければ、こちらで皆さまにご説明させていただきます。",
+      "en": "If I may have a moment, I will humbly give everyone an explanation here."
+    },
+    {
+      "jp": "彼女は子どもに自分の部屋を片づけさせましたか。",
+      "en": "Did she make her child tidy up their room?"
+    },
+    {
+      "jp": "うるさいので、店内では電話をさせないでください。",
+      "en": "Because it’s noisy, please do not allow phone calls inside the store."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "早く帰ってもいいですか。",
+      "en": "May I go home early?"
+    },
+    {
+      "jp": "この件は担当者に任せます。",
+      "en": "I’ll leave this matter to the person in charge."
+    },
+    {
+      "jp": "写真を見せてくれてありがとう。",
+      "en": "Thank you for showing me the photos."
+    },
+    {
+      "jp": "母は赤ちゃんに服を着せた。",
+      "en": "The mother dressed the baby."
+    },
+    {
+      "jp": "子どもを車に乗せた。",
+      "en": "I put the child in the car."
+    },
+    {
+      "jp": "上司に謝らせられた。",
+      "en": "I was made to apologize by my boss."
+    },
+    {
+      "jp": "今日は発表してもいいと言われた。",
+      "en": "I was told it’s okay to present today."
+    },
+    {
+      "jp": "先生に質問してもよろしいでしょうか。",
+      "en": "May I ask a question, teacher?"
+    },
+    {
+      "jp": "ここで乗客を降ろせるか確認します。",
+      "en": "I’ll check whether we can drop off passengers here."
+    },
+    {
+      "jp": "店内での通話はご遠慮ください。",
+      "en": "Please refrain from making phone calls in the store."
+    }
+  ]
+}

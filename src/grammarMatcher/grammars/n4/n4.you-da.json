@@ -1,0 +1,135 @@
+{
+  "id": "n4.you-da",
+  "level": "N4",
+  "description": "Expresses appearance, similarity or inference; 'it seems', 'it looks like', 'it appears'.",
+  "formation": "Verb-て form + ようだ, い-Adjective (drop い) + ようだ, な-Adjective + のようだ, Noun + のようだ",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜ようだ（様子・比喩・推定）\n\n### Meaning and function\n- Expresses the speaker’s inference or impression: it seems/appears/looks like X (based on some evidence).\n- Expresses similarity or likeness: X is like/as if Y (a comparison, not necessarily fact).\n\n### Form and templates\n- V(plain) + ようだ\n  - Present: V-るようだ\n  - Progressive/state: V-ているようだ\n  - Past: V-たようだ\n  - Negative: V-ないようだ\n- い-adj + ようだ\n  - Negative: い-adj(くない)ようだ\n- な-adj + なようだ\n  - Negative: な-adj + （では／じゃ）ないようだ\n- N + のようだ\n  - Negative: N + （では／じゃ）ないようだ\n- Polite/past of ようだ: ようです／ようでした\n- Attributive/adverbial variants (very common):\n  - 〜ような + N（a N like …）\n  - 〜ように + V/adj（do … as if/so that …）\n- Particle and ordering notes:\n  - After nouns use の; after な-adjectives use な before ようだ.\n  - Topic/subject particles (は／が) come before the 〜ようだ clause.\n- Optional elements:\n  - Inference markers: どうやら, どうも + 〜ようだ\n  - Simile intensifier: まるで + 〜のようだ\n- Orthography:\n  - Usually written in kana: ようだ. The kanji 様だ appears in formal writing.\n\n### Usage notes and constraints\n- Register: Neutral to slightly formal. ようです is polite. In casual speech, みたい（だ） is more common.\n- Basis of judgment: Use when you have perceptual/clue-based evidence. For pure hearsay, prefer らしい or そうだ（伝聞）.\n- Nuance vs そうだ（様態）: 〜そうだ focuses on immediate appearance and attaches to V-ます-stem/い-adj（drop い）; ようだ attaches to full plain forms and nouns via の and is broader inference.\n- Similarity use: N のようだ / 〜ような / 〜ように indicate resemblance, not identity; it can suggest “it looks like, but I’m not asserting it as fact.”\n- Scope of tense/negation: Conjugate the word before ようだ (V-た／V-ない／い-adjくない／な-adjではない). Negating after ようだ changes the meaning.\n- Naturalness: Use V-ているようだ for ongoing situations; bare V-て + ようだ is not standard.\n\n### Common mistakes\n- Using Verb-て + ようだ without いる; use V-ているようだ or a plain-form clause.\n- Dropping the い of い-adjectives before ようだ; keep the い (い-adj + ようだ).\n- Using の with な-adjectives (× な-adj のようだ); the standard link is な (な-adj + なようだ).\n- Omitting の after nouns (it must be N のようだ).\n- Confusing ようだ (speaker’s inference/simile) with そうだ（伝聞, hearsay report）.\n\n### Related grammar\n- みたいだ: Casual counterpart of ようだ; very common in conversation; similar attachment patterns.\n- らしい: Hearsay or typicality; weaker personal judgment than ようだ; not for simple visual similes.\n- 〜そうだ（様態）: “Looks/likely”; attaches to V-ます-stem/い-adj（drop い）; not used with nouns; emphasizes immediate appearance.\n- 〜ような／〜ように: Attributive/adverbial uses derived from ようだ to modify nouns or verbs/adj.\n- 〜に見える／〜気がする: “looks/seems” and “feels like”; emphasize perception/subjective feeling rather than reasoned inference.",
+  "examples": [
+    {
+      "jp": "今日は思ったより寒いようだ。",
+      "en": "It seems colder than I thought today."
+    },
+    {
+      "jp": "どうやら彼は約束を忘れたようだ。",
+      "en": "It seems he apparently forgot the appointment."
+    },
+    {
+      "jp": "キッチンからいい匂いがする。夕飯はできているようです。",
+      "en": "It smells good from the kitchen. It seems dinner is ready."
+    },
+    {
+      "jp": "窓の外はかなり静かなようだね。",
+      "en": "It seems pretty quiet outside the window, huh."
+    },
+    {
+      "jp": "兄は元気じゃないようだ。",
+      "en": "It seems my older brother isn’t well."
+    },
+    {
+      "jp": "あの人は先生のようだが、まだ若い。",
+      "en": "That person seems to be a teacher, but is still young."
+    },
+    {
+      "jp": "今日は道がいつもより空いているようでした。",
+      "en": "It seemed the roads were less crowded than usual today."
+    },
+    {
+      "jp": "どうもこの時計は正確ではないようだ。",
+      "en": "It seems this watch isn’t accurate."
+    },
+    {
+      "jp": "彼は事情を知らないようですか。",
+      "en": "Does it seem he doesn’t know the situation?"
+    },
+    {
+      "jp": "まるで夢のようだ。",
+      "en": "It’s just like a dream."
+    },
+    {
+      "jp": "その猫は氷のように冷たい目をしている。",
+      "en": "That cat has eyes as cold as ice."
+    },
+    {
+      "jp": "子どものような声が廊下から聞こえた。",
+      "en": "A childlike voice was heard from the hallway."
+    },
+    {
+      "jp": "これは本ではないようだ。",
+      "en": "It seems this isn’t a book."
+    },
+    {
+      "jp": "玄関が開いている。誰かが入ったようだ。",
+      "en": "The front door is open. It seems someone came in."
+    },
+    {
+      "jp": "その川の水は思ったよりきれいな様だ。",
+      "en": "The river water seems cleaner than I thought."
+    },
+    {
+      "jp": "このカレー、少し辛くないようだ。",
+      "en": "This curry doesn’t seem very spicy."
+    },
+    {
+      "jp": "空が晴れてきたから、明日は晴れるようです。",
+      "en": "Since the sky is clearing up, it seems it will be sunny tomorrow."
+    },
+    {
+      "jp": "彼の声は怒っているように震えていた。",
+      "en": "His voice was trembling as if he were angry."
+    },
+    {
+      "jp": "会議室にはもう誰もいないようだね？",
+      "en": "It seems no one is in the meeting room anymore, right?"
+    },
+    {
+      "jp": "この辺りは夜になると、街が湖のように静かになるようだ。",
+      "en": "In this area, it seems the town becomes as quiet as a lake at night."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "どうやら駅で人身事故があったらしい。",
+      "en": "Apparently there was a personal injury accident at the station."
+    },
+    {
+      "jp": "雲が厚いから、雨が降りそうです。",
+      "en": "The clouds are thick, so it looks like it will rain."
+    },
+    {
+      "jp": "まるで時間が止まったみたいだ。",
+      "en": "It’s as if time has stopped."
+    },
+    {
+      "jp": "そろそろ帰ろうか。",
+      "en": "Shall we head home soon?"
+    },
+    {
+      "jp": "彼は疲れている気がする。",
+      "en": "I feel like he’s tired."
+    },
+    {
+      "jp": "それは仕様です。",
+      "en": "That’s by design/specification."
+    },
+    {
+      "jp": "「ようだ」という言い方は教科書に載っている。",
+      "en": "The expression “you da” is in the textbook."
+    },
+    {
+      "jp": "この店は雨の日でも混むそうだ。",
+      "en": "I hear this shop gets crowded even on rainy days."
+    },
+    {
+      "jp": "あの学生は先生に似ている。",
+      "en": "That student resembles the teacher."
+    },
+    {
+      "jp": "見たところ、彼女は元気そうでした。",
+      "en": "At a glance, she looked well."
+    }
+  ]
+}

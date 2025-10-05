@@ -1,0 +1,135 @@
+{
+  "id": "n4.rareru",
+  "level": "N4",
+  "description": "Expresses passive voice or potential form for verbs.",
+  "formation": "う-verb (passive): Replace the final う with われる / る-verb (passive & potential): Replace る with られる / Irregular: する → される, くる → こられる",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜(ら)れる（受身・可能）\n\n### Meaning and function\n- Passive (受身): Focuses on the affected person/thing; often omits the doer; can carry an “adversative” nuance (being negatively affected).\n- Potential (可能): Expresses ability or possibility “can V.” For 一段 verbs, the shape 〜られる overlaps with the passive.\n\n### Form and templates\n- Passive formation\n  - 五段: final -u → -a + れる（…う→わ／く→か／ぐ→が／す→さ／つ→た／ぬ→な／む→ま／ぶ→ば／る→ら）+ れる\n  - 一段: る → られる\n  - Irregular: する → される、来る → こられる\n  - Conjugates as a regular る-verb: 〜られない／〜られた／〜られます／〜られて\n- Potential formation\n  - 五段: final -u → -e + る（…う→え／く→け／ぐ→げ／す→せ／つ→て／ぬ→ね／む→め／ぶ→べ／る→れ）\n  - 一段: る → られる（colloquial contraction 〜れる = ら抜き is common in speech)\n  - Irregular: する → できる、来る → こられる\n  - Conjugates as a regular る-verb: 〜られない／〜られた／〜られます（できない／こられない など）\n- Core templates\n  - Passive（直接受身）: 患者（受け手）N は/が + 施事 N に + V(〜(ら)れる)\n  - Passive（間接受身・被害受身）: 影響を受ける人 N は/が + 加害・原因 N に + [要素 N を/が/で…] + V(〜(ら)れる)\n  - Potential: 話題 N は + 対象 N が + V(可能形)\n- Particle behavior\n  - Passive: 施事（“by”）は基本的に に。口語では から もあり。手段・場所は で。\n  - Potential: 目的語は が が基本（能力対象を主格で立てる）。一部の動作語では を も口語で用いられる。\n- Optional/alternative parts\n  - Passive の施事（Nに/から）はよく省略される。\n  - Potentialは 〜ことができる に言い換え可能（やや形式的・説明的）。\n  - 一段動詞の可能形 〜られる は口語で 〜れる（ら抜き）になることがある（食べられる→食べれる、来られる→来れる など）。\n- Ambiguity note\n  - 一段動詞の 〜られる は「受身」と「可能」の形が同じ。文中の助詞で判断（施事に＝受身、対象が＝可能）し、文脈で解消する。\n\n### Usage notes and constraints\n- Register\n  - 〜(ら)れる 自体は中立。丁寧体は 〜られます／〜できます。\n  - 一段可能の ら抜き（〜れる）は日常会話で非常に一般的だが、作文・丁寧な場では避ける。\n  - 〜ことができる は公的・説明的文で好まれやすい。\n- Semantic constraints\n  - Passiveは施事を言いたくない／不明／無関係なときに自然。被害受身は不快・不利益の含みが出やすい。\n  - 多くの自動詞は受身が不自然になりやすい（尊敬の 〜れる/〜られる としては成立することがある）。\n  - ある に通常の可能形はない（“あり得る”は別語）。する の可能は できる を用いる。\n- Orthographic variants\n  - 来るの可能・受身は 来られる（かな書き こられる も一般的）。口語の 来れる は非標準（ら抜き）。\n  - できる は現代文ではかな書きが一般的（出来る は語義が限られる用法もある）。\n\n### Common mistakes (optional, only if relevant)\n- 五段受身を一律「…う→わ+れる」と誤解する（他の語尾も a段に変える）。\n- 一段の 〜られる を常に受身と解釈してしまう（可能の読みもある）。\n- 可能で目的語に を を固定的に使う（基本は が。を は口語限定で許容される動詞に限る）。\n- する の可能を “しられる” などと作る（正しくは できる）。\n- 公的・丁寧文で ら抜き（〜れる）を使ってしまう。\n- 施事標識に を／で を使う（基本は に、口語的に から もあり）。\n\n### Related grammar (optional, only if relevant)\n- 〜ことができる: 形式的・説明的。「できる対象」を名詞化して述べる。可能形より硬いが曖昧さが少ない。\n- 〜てもいい／〜てよい: 許可（allowed）であり能力（can do）ではない点に注意。\n- 〜れる／〜られる（尊敬語）: 受身形と同形だが、尊敬（先生が来られる など）の用法。文脈・敬語体系で判断。\n- 〜させられる（使役受身）: 「させる」+「られる」で「やらされる」意味。形が長く誤用が多いので注意。",
+  "examples": [
+    {
+      "jp": "カバンが泥棒に盗まれた。",
+      "en": "My bag was stolen by a thief."
+    },
+    {
+      "jp": "駅で財布を盗まれました。",
+      "en": "I had my wallet stolen at the station."
+    },
+    {
+      "jp": "友だちから急に写真を撮られて、びっくりした。",
+      "en": "A friend suddenly took my picture, and I was startled."
+    },
+    {
+      "jp": "この駅名はよく外国人に誤って発音される。",
+      "en": "This station name is often mispronounced by foreigners."
+    },
+    {
+      "jp": "この書類はすでに提出されましたか。",
+      "en": "Has this document already been submitted?"
+    },
+    {
+      "jp": "上司に突然来られて困った。",
+      "en": "My boss suddenly came by and it put me in a bind."
+    },
+    {
+      "jp": "その噂は今も信じられている。",
+      "en": "That rumor is still believed even now."
+    },
+    {
+      "jp": "子どもは先生に褒められて、照れていた。",
+      "en": "The child was praised by the teacher and looked bashful."
+    },
+    {
+      "jp": "そのメモは鉛筆で書かれた。",
+      "en": "The note was written in pencil."
+    },
+    {
+      "jp": "会議は来週の金曜日に行われます。",
+      "en": "The meeting will be held next Friday."
+    },
+    {
+      "jp": "私は辛い料理なら食べられる。",
+      "en": "I can eat spicy dishes if it's not too much."
+    },
+    {
+      "jp": "彼女は英語を話せますか。",
+      "en": "Can she speak English?"
+    },
+    {
+      "jp": "ここから海、見れる？",
+      "en": "Can you see the ocean from here?"
+    },
+    {
+      "jp": "今日は時間がなくて、映画は見られない。",
+      "en": "I don't have time today, so I can't watch a movie."
+    },
+    {
+      "jp": "昨日は疲れすぎて、勉強ができなかった。",
+      "en": "I was too tired yesterday and couldn't study."
+    },
+    {
+      "jp": "明日、駅まで来られますか。",
+      "en": "Will you be able to come to the station tomorrow?"
+    },
+    {
+      "jp": "週末ならこられます。",
+      "en": "I can come if it's on the weekend."
+    },
+    {
+      "jp": "こんな重い箱は一人では運べない。",
+      "en": "You can't carry such a heavy box alone."
+    },
+    {
+      "jp": "よく練習すれば、誰でも泳げる。",
+      "en": "If you practice well, anyone can swim."
+    },
+    {
+      "jp": "このパソコンはまだ使えますか。",
+      "en": "Can this computer still be used?"
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "窓ガラスが割れた。",
+      "en": "The windowpane cracked."
+    },
+    {
+      "jp": "古い橋が壊れている。",
+      "en": "The old bridge is broken."
+    },
+    {
+      "jp": "秘密が漏れた。",
+      "en": "The secret leaked out."
+    },
+    {
+      "jp": "彼はすぐに疲れる。",
+      "en": "He gets tired easily."
+    },
+    {
+      "jp": "この地域は冬は海が荒れる。",
+      "en": "In this area, the sea gets rough in winter."
+    },
+    {
+      "jp": "私は上司に残業させられた。",
+      "en": "I was made to work overtime by my boss."
+    },
+    {
+      "jp": "ここでは喫煙することができる。",
+      "en": "You are able to smoke here."
+    },
+    {
+      "jp": "ここで写真を撮ってもいいですか。",
+      "en": "May I take photos here?"
+    },
+    {
+      "jp": "社長は明日この資料を読まれます。",
+      "en": "The president will read this document tomorrow. (honorific)"
+    },
+    {
+      "jp": "彼は寒さで震える。",
+      "en": "He trembles from the cold."
+    }
+  ]
+}

@@ -10,51 +10,8 @@
 import { Command } from 'commander';
 import { romanize, romanizeStar } from './romanize.js';
 import { setConnection, getConnectionFromEnv, getConnection, type ConnectionSpec } from './conn.js';
-import type { WordInfo } from './dict.js';
-import { wordInfoGlossJson, printPerfCounters } from './dict.js';
-
-// Line 44-46: Print romanization info helper
-/**
- * Lisp source:
- * (defun print-romanize-info (info)
- *   (loop for (word . gloss) in info
- *         do (format t "~%~%* ~a  ~a" word gloss)))
- */
-function printRomanizeInfo(info: Array<[string, string]>): void {
-  for (const [word, gloss] of info) {
-    console.log(`\n\n* ${word}  ${gloss}`);
-  }
-}
-
-/**
- * Transform romanizeStar result to user-friendly JSON format
- * Converts WordInfo objects to WordInfoGlossJson with gloss and conj fields
- */
-async function transformRomanizeStarResult(
-  result: Array<string | Array<[Array<[string, WordInfo, any]>, number]>>
-): Promise<any> {
-  return Promise.all(
-    result.map(async (segment) => {
-      if (typeof segment === 'string') {
-        // Non-word segment - keep as-is
-        return segment;
-      } else {
-        // Word segment - transform each alternative
-        return Promise.all(
-          segment.map(async ([wordList, score]) => {
-            const transformedWords = await Promise.all(
-              wordList.map(async ([romanized, wordInfo, prop]) => {
-                const glossJson = await wordInfoGlossJson(wordInfo);
-                return [romanized, glossJson, prop];
-              })
-            );
-            return [transformedWords, score];
-          })
-        );
-      }
-    })
-  );
-}
+import { printPerfCounters } from './dict/profiling.js';
+import { transformRomanizeStarResult } from './presentation/transformers.js';
 
 /**
  * Programmatic interface for CLI operations

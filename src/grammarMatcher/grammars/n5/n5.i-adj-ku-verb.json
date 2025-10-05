@@ -1,0 +1,204 @@
+{
+  "id": "n5.i-adj-ku-verb",
+  "level": "N5",
+  "description": "い-adjective adverbial modification",
+  "formation": "い-Adjective (remove い) + く + Verb",
+  "priority": 8,
+  "pattern": {
+    "alt": [
+      {
+        "sequence": [
+          {
+            "capture": "adjective",
+            "pattern": {
+              "macro": "IAdjKu"
+            }
+          },
+          {
+            "capture": "verb",
+            "pattern": {
+              "token": [
+                "isVerb"
+              ]
+            }
+          },
+          {
+            "optional": {
+              "repeat": {
+                "pattern": {
+                  "token": [
+                    "isAuxiliary"
+                  ]
+                },
+                "min": 0,
+                "max": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "sequence": [
+          {
+            "capture": "compound",
+            "pattern": {
+              "token": [
+                "isIAdjKuVerbCompound"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "sequence": [
+          {
+            "capture": "adjective",
+            "pattern": {
+              "macro": "IAdjKu"
+            }
+          },
+          {
+            "capture": "verb-phrase",
+            "pattern": {
+              "repeat": {
+                "pattern": {
+                  "token": [
+                    "isVerbStemOrAuxiliary"
+                  ]
+                },
+                "min": 1,
+                "max": 3,
+                "greedy": true
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "explanation": "### Name\n- い形容詞の連用形（〜く）\n\n### Meaning and function\n- Turns an い-adjective into an adverb to describe how or to what degree an action happens (manner/degree).\n- With verbs of change like なる/する, it expresses “become ~” / “make ~”.\n\n### Form and templates\n- い-adj(〜く) + V\n  - Replace final 〜い with 〜く.\n  - Special: いい → よく + V.\n- Politeness/tense/aspect attach to the verb, not to 〜く:\n  - い-adj(〜く) + V + [aux] (0–2), e.g., 〜ます, 〜ている, 〜たい, 〜すぎる, 〜やすい/にくい, etc.\n- No particle appears between 〜く and the verb.\n- Common collocations:\n  - い-adj(〜く) + なる “become ~”\n  - い-adj(〜く) + する “make ~”\n- Contrastive forms (different functions, not this pattern):\n  - い-adj(〜く) + て for clause linking/reason.\n  - い-adj(〜く) + ない／ありません for the negative of the adjective (predicate use).\n\n### Usage notes and constraints\n- Register: Neutral; used in all registers. Extremely common in speech and writing.\n- Scope: The 〜く adverb modifies the following verb phrase as a unit (the verb plus any auxiliaries after it).\n- Semantic range:\n  - Manner (how an action is performed).\n  - Degree/intensity (how much/to what extent); degree words like とても, もっと, ずっと, かなり, 一番/いちばん can precede the 〜く form.\n  - Change-of-state with なる/する (resulting state).\n- Orthography:\n  - いい/良い: the adverbial is よく (often written in hiragana). よい is more formal than いい, but the adverb remains よく.\n  - Many 〜く forms are written in kana; kanji is also acceptable where standard.\n- Do not use に with い-adjectives for adverbial modification; に is for な-adjectives.\n- This pattern modifies verbs only; it does not directly modify nouns.\n\n### Common mistakes (optional, only if relevant)\n- Using に after い-adjectives (e.g., い-adj + に + V) instead of 〜く.\n- Forgetting to drop 〜い before adding 〜く.\n- Inserting a particle (に/と) between 〜く and the verb.\n- Saying 〜くです for a predicate adjective; use the normal 〜いです or the proper negative 〜くない／〜くありません instead.\n- Confusing 〜く (adverb) with 〜くて (clause linker) or 〜くない (adjective negative).\n\n### Related grammar (optional, only if relevant)\n- な-adjective adverbial: な-adj(〜に) + V — same function for な-adjectives; do not use 〜く.\n- 〜くなる vs 〜になる — change-of-state: い-adj → 〜くなる; な-adj/N → 〜になる.\n- い-adjective 連用中止（〜くて） — links to another clause or gives a reason; not a direct adverbial modifier of a verb.\n- い-adjective negative（〜くない／〜くありません） — predicate negation of the adjective, not adverbial modification.",
+  "examples": [
+    {
+      "jp": "速く走る。",
+      "en": "Run fast."
+    },
+    {
+      "jp": "よく勉強しました。",
+      "en": "I studied hard."
+    },
+    {
+      "jp": "もっと早く来られますか？",
+      "en": "Can you come earlier?"
+    },
+    {
+      "jp": "今日はかなり涼しくなりました。",
+      "en": "It became quite cool today."
+    },
+    {
+      "jp": "部屋を明るくしてもいいですか？",
+      "en": "May I make the room brighter?"
+    },
+    {
+      "jp": "テレビの音を少し小さくしてください。",
+      "en": "Please turn the TV volume down a little."
+    },
+    {
+      "jp": "このチーズは薄く切りにくい。",
+      "en": "This cheese is hard to slice thinly."
+    },
+    {
+      "jp": "このハムは薄く切りやすい。",
+      "en": "This ham is easy to slice thinly."
+    },
+    {
+      "jp": "いちばん安く買いたい。",
+      "en": "I want to buy it for the cheapest price."
+    },
+    {
+      "jp": "そんなに遅く起きないで。",
+      "en": "Don't get up that late."
+    },
+    {
+      "jp": "風が強く吹いています。",
+      "en": "The wind is blowing strongly."
+    },
+    {
+      "jp": "先生が詳しく説明してくれた。",
+      "en": "The teacher explained in detail."
+    },
+    {
+      "jp": "スープを薄くしすぎました。",
+      "en": "I made the soup too thin."
+    },
+    {
+      "jp": "髪を短く切ってもらいました。",
+      "en": "I had my hair cut short."
+    },
+    {
+      "jp": "練習すれば、もっと強く打てますよ。",
+      "en": "If you practice, you can hit harder."
+    },
+    {
+      "jp": "今日は空気が冷たく感じます。",
+      "en": "The air feels cold today."
+    },
+    {
+      "jp": "外は思ったより暗く見える。",
+      "en": "Outside looks darker than I thought."
+    },
+    {
+      "jp": "この靴では速く歩けません。",
+      "en": "I can't walk fast in these shoes."
+    },
+    {
+      "jp": "エアコンを強くしてもらえますか？",
+      "en": "Could you turn up the AC?"
+    },
+    {
+      "jp": "最近、日がずっと長くなってきた。",
+      "en": "Recently, the days have been getting much longer."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "寒くて起きられなかった。",
+      "en": "It was cold, so I couldn't get up."
+    },
+    {
+      "jp": "その店は高くないです。",
+      "en": "That store isn't expensive."
+    },
+    {
+      "jp": "彼は速くは走らない。",
+      "en": "He doesn't run fast."
+    },
+    {
+      "jp": "昨日は遅くまで勉強した。",
+      "en": "I studied until late yesterday."
+    },
+    {
+      "jp": "図書館では静かに歩いてください。",
+      "en": "Please walk quietly in the library."
+    },
+    {
+      "jp": "部屋が静かになった。",
+      "en": "The room became quiet."
+    },
+    {
+      "jp": "彼は早口だ。",
+      "en": "He is a fast talker."
+    },
+    {
+      "jp": "旅行はよかったです。",
+      "en": "The trip was good."
+    },
+    {
+      "jp": "高くない時計を買った。",
+      "en": "I bought a not-expensive watch."
+    },
+    {
+      "jp": "そんなに高くては買えない。",
+      "en": "If it's that expensive, I can't buy it."
+    }
+  ]
+}

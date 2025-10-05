@@ -1,0 +1,135 @@
+{
+  "id": "n4.hou",
+  "level": "N4",
+  "description": "Indicates the way or method of doing something; often read as '～かた' ('how to', 'the way of').",
+  "formation": "Verb-stem + 方 (read as かた)",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- Vます形＋方（かた）\n\n### Meaning and function\n- Names the way, method, or manner of doing an action; “how to V,” “the way of V-ing,” or “V-ing style/manner”\n\n### Form and templates\n- V(stem/ます-stem) + 方\n- With a direct object: N の + V(stem) + 方\n  - The verb’s usual を-object becomes の because 方 is a noun being modified.\n- With destinations, means, time, etc.: X への／での／からの／との／までの + V(stem) + 方\n  - Keep the original particle and add の to modify the noun 方.\n- As a noun phrase, the whole 〜方 can take case particles: 〜方が／は／を／に／で, and it can be followed by だ／です.\n- する-verbs: Prefer N の 仕方 or N の やり方 (し方 is generally avoided).\n- 来る: 来方（きかた） is used (less common than 行き方-type formations but acceptable).\n- Possible with passive stems to mean “how something is V-ed” (e.g., 使われ方-type meanings).\n- Conjugation:\n  - Always attach 方 to the verb’s 連用形 (ます-stem). Do not use ます／ない／た before 方.\n  - 方 in this pattern is read かた (not ほう).\n\n### Usage notes and constraints\n- Register/naturalness: Neutral and very common in both speech and writing; frequent in manuals, headings, and instructions. やり方 is more casual; 方法 is more formal/technical; 仕方 is neutral/formal and also appears in fixed expressions.\n- Semantics:\n  - Names a method or manner; it does not itself express advice/comparison.\n  - For “how not to V,” use 〜ない方法／〜ないやり方 rather than 〜ない方(かた).\n  - With intransitives, it describes manner/style of the action.\n- Particle behavior:\n  - を→の before 方 for direct objects.\n  - Other adjuncts (へ／に／で／から／と／まで) typically become への／での／からの／との／までの before 方.\n- Orthography:\n  - As a suffix to verbs, 方 is read かた; kana writing 〜かた is acceptable. \n  - 仕方（しかた） is the standard kanji for the standalone noun; やり方 uses 方.\n  - Do not confuse with 方 read ほう (comparisons/direction).\n\n### Common mistakes\n- Keeping を before 方 instead of changing it to の with direct objects.\n- Using polite/negative/past forms before 方 instead of the ます-stem.\n- Writing し方 with する-verbs; use N の 仕方／やり方.\n- Omitting の after particle phrases (e.g., writing Xへ V(stem) 方 instead of Xへの V(stem) 方).\n- Misreading this 方 as ほう and mixing it up with comparison grammar.\n\n### Related grammar\n- N の 方法: More formal/technical “method”; often interchangeable but more abstract.\n- N の やり方: Casual “way of doing”; common with する-noun actions.\n- V(stem) + やすい／にくい: Ease/difficulty of doing, not the method.\n- V(dict) + こと／の: Nominalizes the action itself (“doing X”), not the way/method.\n- N の 方（ほう）: “Side/preference/comparison”; different reading and function.",
+  "examples": [
+    {
+      "jp": "このアプリの使い方は簡単です。",
+      "en": "The way to use this app is simple."
+    },
+    {
+      "jp": "駅までの行き方を教えてください。",
+      "en": "Please tell me how to get to the station."
+    },
+    {
+      "jp": "その箸の持ち方、ちょっと変じゃない？",
+      "en": "Isn't the way you're holding the chopsticks a bit odd?"
+    },
+    {
+      "jp": "上司との話し方について相談したいです。",
+      "en": "I'd like to discuss how to talk with my boss."
+    },
+    {
+      "jp": "海外からの申し込み方はサイトに書いてありました。",
+      "en": "How to apply from overseas was written on the website."
+    },
+    {
+      "jp": "会場への来方はこの地図をご覧ください。",
+      "en": "For how to come to the venue, please see this map."
+    },
+    {
+      "jp": "歯の磨き方を間違えていました。",
+      "en": "I had been brushing my teeth the wrong way."
+    },
+    {
+      "jp": "言葉の使われ方が時代によって変わる。",
+      "en": "The way words are used changes over time."
+    },
+    {
+      "jp": "予約の仕方は前よりずっと簡単になった。",
+      "en": "The way to make a reservation has become much easier than before."
+    },
+    {
+      "jp": "そのやり方では時間が足りません。",
+      "en": "With that way of doing it, we won't have enough time."
+    },
+    {
+      "jp": "この漢字の読み方は何ですか。",
+      "en": "How do you read this kanji?"
+    },
+    {
+      "jp": "スマホでの写真の撮り方を教わりませんでした。",
+      "en": "I wasn't taught how to take photos on a smartphone."
+    },
+    {
+      "jp": "子どもとの接し方にまだ自信がない。",
+      "en": "I'm still not confident about how to interact with children."
+    },
+    {
+      "jp": "一番安く買うやり方、知っていますか。",
+      "en": "Do you know how to buy for the lowest price?"
+    },
+    {
+      "jp": "丁寧に説明するやり方をまねしました。",
+      "en": "I copied the way of explaining politely."
+    },
+    {
+      "jp": "空港までの行き方はバスが楽でした。",
+      "en": "For getting to the airport, the bus was the easiest."
+    },
+    {
+      "jp": "書きかたを小学生に教える仕事をしています。",
+      "en": "I work teaching elementary schoolers how to write."
+    },
+    {
+      "jp": "長いパスワードの作り方を忘れてしまった。",
+      "en": "I've forgotten how to create a long password."
+    },
+    {
+      "jp": "こちらの案内に従った支払いのやり方で大丈夫でしょうか。",
+      "en": "Would it be okay to use the payment method described in this guide?"
+    },
+    {
+      "jp": "その説明の仕方は正しくありませんでした。",
+      "en": "That way of explaining was not correct."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "こちらのほうが簡単です。",
+      "en": "This one is easier."
+    },
+    {
+      "jp": "あの方は新しい先生です。",
+      "en": "That person is a new teacher."
+    },
+    {
+      "jp": "駅の方へ歩いて行きましょう。",
+      "en": "Let's walk toward the station."
+    },
+    {
+      "jp": "写真を撮る方法を説明します。",
+      "en": "I'll explain the method of taking photos."
+    },
+    {
+      "jp": "パスタを作らない方法を探している。",
+      "en": "I'm looking for a way not to make pasta."
+    },
+    {
+      "jp": "泳ぐことは健康にいい。",
+      "en": "Swimming is good for your health."
+    },
+    {
+      "jp": "やりようがない。",
+      "en": "There's no way to do it."
+    },
+    {
+      "jp": "両方買ったから、分けよう。",
+      "en": "I bought both, so let's split them."
+    },
+    {
+      "jp": "右の方に大きな公園が見える。",
+      "en": "I can see a big park to the right."
+    },
+    {
+      "jp": "明日は早く帰ったほうがいいよ。",
+      "en": "You should go home early tomorrow."
+    }
+  ]
+}

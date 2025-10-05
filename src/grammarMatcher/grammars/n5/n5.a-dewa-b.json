@@ -1,0 +1,135 @@
+{
+  "id": "n5.a-dewa-b",
+  "level": "N5",
+  "description": "Indicates a contrast or comparison between A and B; 'As for A, ~B'",
+  "formation": "Noun A + では、 + Subject + Predicate B",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 対比の「では」（Aでは、B）\n\n### Meaning and function\n- Marks A as a contrastive topic or frame: “as for A / in A’s case / with A / at A, B.”\n- Narrows the scope of the statement to A and implies possible differences for other options.\n- Also appears in negative identification (Nではない/ではありません): “it is not A,” contrasting A with other possibilities.\n\n### Form and templates\n- Core:\n  - N(場所/手段/時/条件など) + で + は, + [V/い-adj/な-adj/N(だ/です)]\n  - N + では + ない／ありません（negative identification）\n- Particle requirements and ordering:\n  - Do not drop で. Add は after the base case particle: で + は → では.\n  - The comment/predicate B follows; end with だ/です or a verb/adjective as needed.\n- Optional/alternative parts:\n  - では → じゃ (casual contraction). Negative forms: ではない／じゃない (plain), ではありません／じゃありません (polite).\n- Conjugation notes:\n  - Negative past: ではなかった／ではありませんでした; casual: じゃなかった.\n  - Predicate B conjugates normally (plain/polite, tense, polarity).\n\n### Usage notes and constraints\n- Register:\n  - では is neutral to formal; preferred in writing and formal speech.\n  - じゃ is casual; avoid in formal writing/tests. じゃありません is polite but more conversational.\n- Semantic scope:\n  - Use では when A would normally take で (place of action, means, time frame, role, condition) and you want to set up contrast or limitation.\n  - Without は (just で), the sense is neutral; with では, it highlights “in the case of A (as opposed to others).”\n  - For existence/location contexts that take に, use には (not では) to make a contrastive topic.\n- Orthographic/phonetic notes:\n  - では is sometimes pronounced “dewa” or contracted to “ja” (written じゃ) in speech.\n  - Do not write でわ.\n\n### Common mistakes (optional, only if relevant)\n- Replacing the required case particle with は (e.g., using Nは when the role is place/means/time); keep で and add は → では.\n- Overusing では when no contrast or limitation is intended; use plain で for neutral description.\n- Confusing では with でも (“even/…or”); they are unrelated.\n- Using じゃ in formal writing or exams.\n- Trying to attach では directly to verbs/adjectives; it follows nouns or noun-like phrases that take で.\n\n### Related grammar (optional, only if relevant)\n- は（話題）: Plain topic marking without the explicit contrast that では adds to a で-marked phrase.\n- には: Contrastive topic after に (existence, targets, times); use when に—not で—is the correct base particle.\n- Nではない／じゃない: Negative identification “not N”; built with the copular で + は + ない.\n- ではなく(て)〜／じゃなく(て)〜: “Not A but ~”; explicit contrast/choice (higher frequency from N4).",
+  "examples": [
+    {
+      "jp": "図書館では、声を小さくしてください。",
+      "en": "In the library, please keep your voice down."
+    },
+    {
+      "jp": "電話では、細かい図が伝わりません。",
+      "en": "Over the phone, detailed diagrams don’t come across."
+    },
+    {
+      "jp": "三日では、準備が終わらなかった。",
+      "en": "In three days, the preparations didn’t finish."
+    },
+    {
+      "jp": "私では、回答を決めかねます。",
+      "en": "As for me, I can’t decide on an answer."
+    },
+    {
+      "jp": "この速度では、間に合わないよ。",
+      "en": "At this speed, we won’t make it in time."
+    },
+    {
+      "jp": "現金では、お支払いできませんか。",
+      "en": "Can’t I pay in cash?"
+    },
+    {
+      "jp": "この部屋では、Wi-Fiがとても弱いです。",
+      "en": "In this room, the Wi‑Fi is very weak."
+    },
+    {
+      "jp": "雨では、子どもたちは外で遊べない。",
+      "en": "In the rain, the kids can’t play outside."
+    },
+    {
+      "jp": "バスでは、空港まで早く着きますか。",
+      "en": "By bus, can we get to the airport quickly?"
+    },
+    {
+      "jp": "その件は、私の担当じゃありません。",
+      "en": "That matter isn’t my responsibility."
+    },
+    {
+      "jp": "ここでは、写真撮影は禁止だ。",
+      "en": "Here, photography is prohibited."
+    },
+    {
+      "jp": "この方法では、最善じゃなかったね。",
+      "en": "With this method, it wasn’t the best choice."
+    },
+    {
+      "jp": "このパソコンでは、あのソフトが動きませんでした。",
+      "en": "On this computer, that software didn’t run."
+    },
+    {
+      "jp": "子どもじゃ、持ち上げられない重さだよ。",
+      "en": "For a child, it’s a weight that can’t be lifted."
+    },
+    {
+      "jp": "私ではありませんでした。",
+      "en": "It wasn’t me."
+    },
+    {
+      "jp": "このサイズでは、少しきついですね。",
+      "en": "In this size, it’s a bit tight, isn’t it?"
+    },
+    {
+      "jp": "紙では正確に伝わらないので、動画にします。",
+      "en": "On paper, it doesn’t come across accurately, so I’ll use a video."
+    },
+    {
+      "jp": "うちの会社では、在宅勤務が基本になりました。",
+      "en": "At our company, working from home has become the norm."
+    },
+    {
+      "jp": "ここじゃ、星があまり見えないね。",
+      "en": "Here, you can’t really see the stars."
+    },
+    {
+      "jp": "私は医者ではない。",
+      "en": "I am not a doctor."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "図書館で静かにしてください。",
+      "en": "Please be quiet in the library."
+    },
+    {
+      "jp": "三日で終わります。",
+      "en": "It will be finished in three days."
+    },
+    {
+      "jp": "雨なら中止です。",
+      "en": "If it rains, it’s canceled."
+    },
+    {
+      "jp": "ここには誰もいない。",
+      "en": "There is no one here."
+    },
+    {
+      "jp": "それでは、始めましょう。",
+      "en": "Well then, let’s begin."
+    },
+    {
+      "jp": "大学ではなく高校です。",
+      "en": "It’s not a university but a high school."
+    },
+    {
+      "jp": "彼は「では、失礼します」と言って出ていった。",
+      "en": "He said, “Well then, excuse me,” and left."
+    },
+    {
+      "jp": "それじゃ、また明日。",
+      "en": "See you tomorrow, then."
+    },
+    {
+      "jp": "学生ではあるが、経験は少ない。",
+      "en": "He is a student, but he has little experience."
+    },
+    {
+      "jp": "忙しいわけではないけれど、今日は行かない。",
+      "en": "It’s not that I’m busy, but I’m not going today."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "n5.ta-ato-de",
+  "level": "N5",
+  "description": "Indicates an action that takes place after another action",
+  "formation": "Verb-た form + あとで",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜たあとで\n\n### Meaning and function\n- Expresses that one action/event happens after another has been completed (“after doing X, (do) Y”). A time gap may exist between the two.\n\n### Form and templates\n- V(た) + あとで + clause\n- N + の + あとで + clause\n- Optional variants:\n  - V(た) + あとに + clause (slightly more formal or when focusing on the point in time; で is more common)\n  - V(た) + あと + clause / N + の + あと + clause (casual omission of で/に; acceptable in everyday use)\n- Particle requirements and ordering:\n  - After a verb: plain past (Vた) directly before あと.\n  - After a noun: insert の before あと.\n  - で marks the time frame (“at/after that time”); に marks the time point. Both are acceptable; で is the default in conversation.\n- Conjugation/inflection notes:\n  - The verb before あと is always in the plain past (Vた), not polite past.\n  - The main (following) clause can be plain or polite and any tense.\n  - Negative before あと (Vなかったあとで) is grammatically possible but less common and can sound awkward at beginner level; rephrase if possible.\n\n### Usage notes and constraints\n- Register and frequency: Neutral and very common in both spoken and written Japanese. Suitable for all levels of formality; make the main clause polite as needed.\n- Semantic scope:\n  - The first part describes a completed event; the second describes what happens afterward.\n  - Typically used with verbs or event-type nouns (e.g., meeting, class). Not used with adjectives to describe states.\n  - Does not inherently mean “immediately after.” For “right after,” other patterns are preferred (see Related grammar).\n- Particle nuance (で vs に):\n  - で is the safe, common choice for “after X, (do) Y.”\n  - に can sound a bit more formal or be used when highlighting a starting point or resulting state; beginners can treat them as largely interchangeable.\n- Orthographic notes:\n  - あと may be written 後. Reading stays あと in this pattern (後で/後に).\n  - After numbers/time expressions, use the suffix 後(ご) (e.g., X時間後に) rather than X時間のあとに.\n  - N + の + あとで is standard for event nouns (e.g., “after the meeting/class”), not for pure durations.\n\n### Common mistakes\n- Using polite past before あと (e.g., Vましたあとで). The part before あと must be plain past (Vた).\n- Omitting の after a noun (Nあとで). Use Nのあとで.\n- Confusing あとは with temporal “after.” あとは usually means “as for the rest/what remains,” not sequence in time.\n- For durations/numbers, saying “三年のあとに” instead of “三年後に.”\n- Forcing this pattern with adjectives or stative descriptions; use event nouns or verbs instead.\n\n### Related grammar\n- 〜てから: Also “after doing,” often implies the next step or necessary order and is more likely to suggest immediacy.\n- 〜前に: The opposite meaning (“before doing”).\n- 〜とき: “When/at the time.” Vたとき can overlap with “after” but focuses on the time something happened rather than sequence.\n- すぐ(に)／Vてすぐ: “Right after/immediately,” when you want to stress minimal time gap.",
+  "examples": [
+    {
+      "jp": "昼ごはんを食べたあとで、散歩する。",
+      "en": "After eating lunch, I take a walk."
+    },
+    {
+      "jp": "会議が終わったあとに、報告します。",
+      "en": "I will report after the meeting has finished."
+    },
+    {
+      "jp": "宿題を終えたあと、友だちと遊んだ。",
+      "en": "After finishing my homework, I hung out with friends."
+    },
+    {
+      "jp": "授業のあとで、先生に質問します。",
+      "en": "After class, I will ask the teacher some questions."
+    },
+    {
+      "jp": "試合のあとに、みんなで写真を撮った。",
+      "en": "After the game, we took a group photo."
+    },
+    {
+      "jp": "風呂に入ったあとで、すぐには寝ない。",
+      "en": "After taking a bath, I don’t go to sleep right away."
+    },
+    {
+      "jp": "連絡を受けたあとに、すぐ返事はしませんでした。",
+      "en": "After I received the message, I didn’t reply right away."
+    },
+    {
+      "jp": "この書類を確認したあとで、提出してもいいですか。",
+      "en": "May I submit it after I check this document?"
+    },
+    {
+      "jp": "片づけたあと、出かける？",
+      "en": "After tidying up, are we going out?"
+    },
+    {
+      "jp": "練習のあとで、甘いものは食べない。",
+      "en": "After practice, I don’t eat sweets."
+    },
+    {
+      "jp": "雨がやんだあとに、虹が出た。",
+      "en": "After the rain stopped, a rainbow appeared."
+    },
+    {
+      "jp": "話をよく聞いたあとで決めてください。",
+      "en": "Please decide after listening carefully."
+    },
+    {
+      "jp": "面接のあと、担当者から電話がありました。",
+      "en": "After the interview, I got a call from the person in charge."
+    },
+    {
+      "jp": "私が読み終えたあとで貸した本は、今も返ってこない。",
+      "en": "The book I lent after finishing it still hasn’t come back."
+    },
+    {
+      "jp": "手を洗った後で、料理を始めます。",
+      "en": "After washing my hands, I will start cooking."
+    },
+    {
+      "jp": "予約を確認した後に、メールを送った。",
+      "en": "After I confirmed the reservation, I sent an email."
+    },
+    {
+      "jp": "仕事が終わったあとで、飲みに行きませんか。",
+      "en": "After work is over, shall we go for a drink?"
+    },
+    {
+      "jp": "朝ごはんを食べなかったあとで走ったら、ふらふらになった。",
+      "en": "When I ran after not eating breakfast, I felt faint."
+    },
+    {
+      "jp": "ゆっくり休んだあとでなら、もう少し歩ける。",
+      "en": "If it’s after I rest well, I can walk a bit more."
+    },
+    {
+      "jp": "イベントのあとに、どこへ行きますか。",
+      "en": "Where will we go after the event?"
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "あとで電話します。",
+      "en": "I’ll call you later."
+    },
+    {
+      "jp": "あとは任せた。",
+      "en": "I leave the rest to you."
+    },
+    {
+      "jp": "宿題をしてから遊びなさい。",
+      "en": "Do your homework before you play."
+    },
+    {
+      "jp": "三時間後に会いましょう。",
+      "en": "Let’s meet in three hours."
+    },
+    {
+      "jp": "後ほど改めてご連絡いたします。",
+      "en": "I will contact you again later."
+    },
+    {
+      "jp": "雨がやんだとき、外に出た。",
+      "en": "When the rain stopped, I went outside."
+    },
+    {
+      "jp": "試合後、監督が会見した。",
+      "en": "After the game, the coach held a press conference."
+    },
+    {
+      "jp": "食べたあとの皿を洗った。",
+      "en": "I washed the dishes used after we ate."
+    },
+    {
+      "jp": "会議のあとの飲み会は楽しかった。",
+      "en": "The party after the meeting was fun."
+    },
+    {
+      "jp": "そのあと、みんなで散歩した。",
+      "en": "After that, we took a walk together."
+    }
+  ]
+}

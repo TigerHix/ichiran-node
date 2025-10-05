@@ -1,0 +1,135 @@
+{
+  "id": "n5.dake",
+  "level": "N5",
+  "description": "Indicates 'only', 'just', or 'merely'",
+  "formation": "Noun + だけ, Verb-casual + だけ, い-Adjective + だけ, な-Adjective-な + だけ",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- だけ（限定）\n\n### Meaning and function\n- Marks limitation: “only,” “just,” “merely,” “no more than” the stated item, amount, place, time, or person\n\n### Form and templates\n- N + だけ\n- Quantity/Counter + だけ\n- Demonstratives + だけ (これ/それ/あれ/どれ + だけ)\n- Case-marked phrases:\n  - N + だけ (+ が/を) + V\n    - が/を may follow だけ, and are often omitted with だけ.\n  - N + に/へ/で/と/から/まで + だけ + V\n    - Prefer placing だけ after these particles to limit that entire phrase (e.g., “only at/in/to/from/until N”).\n- Contrast/emphasis:\n  - N + だけ + は + …\n    - “at least,” contrastive focus on that N.\n  - N + だけ + も + …\n    - “even just,” minimal sufficiency nuance.\n- Modifier use:\n  - N + だけ + の + N\n    - “only/just N’s …,” exclusivity before a noun.\n- Scope rule:\n  - だけ limits the element immediately before it. Place だけ directly after the word/phrase you intend to restrict.\n- Conjugation:\n  - だけ itself does not conjugate. The sentence can be in plain/polite, affirmative/negative as needed.\n\n### Usage notes and constraints\n- Register: Neutral and very common in both speech and writing; fine in plain or polite styles.\n- Polarity: Unlike しか, だけ does not require a negative. With a negative, it simply negates the statement; it does not mean “none but.”\n- Particle ordering:\n  - が/を are optional after だけ (N だけ (が/を) …).\n  - For に/へ/で/と/から/まで, put だけ after the particle (N に だけ …, N で だけ …).\n- Scope and meaning:\n  - Be careful where you place だけ; it limits only the immediately preceding element (noun, counter phrase, or case-marked phrase).\n- Quantities:\n  - Common with counters and amounts (e.g., 人・枚・回・円 など). Also natural with これだけ/それだけ/あれだけ/どれだけ (extent/amount).\n  - いくらだけ is generally not used; use どれだけ for “how much/how many (extent).”\n- Orthography:\n  - Write the particle in hiragana: だけ. The kanji 丈 is not used for this particle in modern writing.\n\n### Common mistakes (optional, only if relevant)\n- Using だけ with a negative to mean “only … and nothing else.” For that emphatic exclusion, use しか〜ない or rephrase with affirmative だけ.\n- Misplacing だけ around case particles (e.g., before に/で/へ). To limit “at/in/to,” put だけ after the particle (N に だけ …).\n- Redundant だけしか〜ない. Use しか〜ない alone, or use だけ with an affirmative verb.\n- Putting は before だけ (e.g., N は だけ). The topic/contrast marker follows だけ: N だけ は …\n- Writing the particle as 丈.\n\n### Related grammar (optional, only if relevant)\n- しか〜ない: Stronger exclusivity; must take a negative; “none/no one except …”\n- ばかり: “Only/just,” often with a nuance of excess/overindulgence; more subjective than だけ.\n- だけで: “Just by/with,” marks sufficient means or condition (different function).\n- だけの: Adjectival “only/just” before nouns (exclusivity as a modifier).",
+  "examples": [
+    {
+      "jp": "今日は水だけ飲みます。",
+      "en": "Today I'll drink only water."
+    },
+    {
+      "jp": "学生だけが入れますか。",
+      "en": "Is it only students who can enter?"
+    },
+    {
+      "jp": "兄だけ来なかった。",
+      "en": "Only my older brother didn’t come."
+    },
+    {
+      "jp": "会員だけの特典があります。",
+      "en": "There are perks for members only."
+    },
+    {
+      "jp": "三枚だけください。",
+      "en": "Just three, please."
+    },
+    {
+      "jp": "日本でだけ見られる鳥です。",
+      "en": "It’s a bird that can be seen only in Japan."
+    },
+    {
+      "jp": "これだけは覚えておいてください。",
+      "en": "Please remember at least this."
+    },
+    {
+      "jp": "あれだけ練習したのに、負けた。",
+      "en": "Even though we practiced that much, we lost."
+    },
+    {
+      "jp": "それだけですか。",
+      "en": "Is that all?"
+    },
+    {
+      "jp": "どれだけ時間がかかりますか。",
+      "en": "How much time will it take?"
+    },
+    {
+      "jp": "上司とだけ話しました。",
+      "en": "I spoke only with my boss."
+    },
+    {
+      "jp": "この一問だけも正解できないのか。",
+      "en": "You can’t even get just this one question right?"
+    },
+    {
+      "jp": "今回は東京へだけ出張しました。",
+      "en": "This time I went on a business trip only to Tokyo."
+    },
+    {
+      "jp": "ここからだけ入れます。",
+      "en": "You can enter only from here."
+    },
+    {
+      "jp": "今日までだけ有効です。",
+      "en": "It’s valid only until today."
+    },
+    {
+      "jp": "彼だけを信じていた。",
+      "en": "I trusted only him."
+    },
+    {
+      "jp": "子どもだけは先にどうぞ。",
+      "en": "At least the children, please go ahead first."
+    },
+    {
+      "jp": "これだけも覚えられないの？",
+      "en": "You can’t even memorize just this much?"
+    },
+    {
+      "jp": "二時間だけなら手伝えます。",
+      "en": "If it’s only two hours, I can help."
+    },
+    {
+      "jp": "あなたにだけ話します。",
+      "en": "I’ll tell only you."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "水しか飲みません。",
+      "en": "I drink only water."
+    },
+    {
+      "jp": "見るだけで楽しい。",
+      "en": "It’s fun just to look."
+    },
+    {
+      "jp": "経験者だけあって、説明がうまい。",
+      "en": "As you’d expect from someone experienced, the explanation is good."
+    },
+    {
+      "jp": "プロだけに、要求も厳しい。",
+      "en": "Precisely because they’re pros, the demands are strict."
+    },
+    {
+      "jp": "雨だけど、試合は行われた。",
+      "en": "Although it rained, the match was held."
+    },
+    {
+      "jp": "それだけでなく、時間も足りない。",
+      "en": "Not only that, we also lack time."
+    },
+    {
+      "jp": "できるだけ早く来てください。",
+      "en": "Please come as soon as possible."
+    },
+    {
+      "jp": "会員のみ入場できます。",
+      "en": "Members only may enter."
+    },
+    {
+      "jp": "それだけでは済まない問題だ。",
+      "en": "It’s a problem that won’t be settled by just that."
+    },
+    {
+      "jp": "彼は英語ばかりか中国語も話せる。",
+      "en": "He speaks not only English but also Chinese."
+    }
+  ]
+}

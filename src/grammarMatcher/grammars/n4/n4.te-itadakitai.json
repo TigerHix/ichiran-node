@@ -1,0 +1,135 @@
+{
+  "id": "n4.te-itadakitai",
+  "level": "N4",
+  "description": "Express a polite request or desire that someone does something for you.",
+  "formation": "Verb-て form + いただきたい",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜ていただきたい\n\n### Meaning and function\n- Politely states the speaker’s desire for someone to do something for them/us; a deferential, often businesslike “I would like to have you do … / I’d appreciate it if you could …”\n\n### Form and templates\n- Core\n  - V-て + いただきたい (です)\n- With the doer specified\n  - N(人・組織) に／から + V-て + いただきたい (です)\n    - に is standard for the doer/“giver” of the action; から is also possible but a bit more colloquial/emphatic about the source.\n- Softened statement (very common when speaking directly)\n  - V-て + いただきたいんですが／のですが\n- Negative request (don’t do X)\n  - V-ないで + いただきたい (です)\n  - Avoid 〜ていただきたくない for this meaning.\n- Past desire\n  - V-て + いただきたかった (です)\n- Formal writing variants\n  - V-て + いただきたく、〜\n  - V-て + いただきたく存じます (very formal)\n- Conjugation/inflection notes\n  - たい behaves like an い-adjective: 〜たい／〜たかった. However, for “please don’t,” use V-ないで + いただきたい rather than negating たい.\n\n- Particle/location notes inside the V-て clause\n  - Objects, places, times, etc. take their normal particles (を, に, で, までに, など).\n  - The beneficiary is the speaker/in-group (usually omitted); the doer (the person you want to act) can be marked with に/から.\n\n### Usage notes and constraints\n- Register and naturalness\n  - Uses the humble verb いただく (humble of もらう), so it is deferential and common in formal speech/writing, business contexts, notices, and polite public requests.\n  - When addressing the person directly, a bare 〜ていただきたい can sound like a firm directive; soften with 〜んですが／のですが or switch to a question (e.g., 〜ていただけますか).\n  - 〜てください is simpler and often friendlier; 〜ていただきたい is more formal/businesslike.\n- Semantic scope\n  - Expresses the speaker’s (or in-group’s) desire to “receive” the favor of someone else doing X. Do not use when the beneficiary is an out-group third party.\n  - The doer is the other person (2nd/3rd person), not the speaker.\n- Common adverbs/softeners\n  - できれば／可能であれば／もし to soften; なるべく for “as much as possible”; ぜひ to add strong intention (can sound pushy if combined).\n- Orthographic notes\n  - いただく/いただきたい is often written in kana in general writing; 頂く/頂きたい appears in formal notices and business documents. Both are seen; kana is a safe default.\n- Alternatives in business style\n  - Nominalized honorific + いただく is also common: ご確認いただきたい, ご連絡いただきたい, etc. (parallel to 確認していただきたい, 連絡していただきたい).\n\n### Common mistakes (optional, only if relevant)\n- Using dictionary form + いただきたい instead of V-て + いただきたい.\n- Saying 〜ていただきたくない to mean “please don’t …”; use V-ないで + いただきたい.\n- Marking the doer with を; use に (or から).\n- Describing an out-group third person’s desire with いただく (a humble verb); use 〜てもらいたい or 〜てほしい for neutral style.\n- Using bare 〜ていただきたい to the person’s face without softeners, which can sound demanding.\n\n### Related grammar (optional, only if relevant)\n- 〜てください: Direct, polite request; less formal, no humble “receiving” nuance.\n- 〜ていただけますか／〜ていただけませんか: Polite question form; softer/more natural as a direct ask.\n- 〜てもらいたい: Neutral “want to receive” from someone; less formal than 〜ていただきたい.\n- 〜てほしい: “I want you to do …”; more direct about the speaker’s wish, often to equals/intimates.\n- V-ないで + いただきたい／V-ないでください: Negative request (“please don’t …”); いただきたい is more formal.",
+  "examples": [
+    {
+      "jp": "担当の方に書類を確認していただきたいです。",
+      "en": "I would like the person in charge to check the documents."
+    },
+    {
+      "jp": "できれば、今週中にご返信いただきたいのですが、可能でしょうか。",
+      "en": "If possible, I would like you to reply within this week; would that be possible?"
+    },
+    {
+      "jp": "お客様には、アンケートにご協力いただきたい。",
+      "en": "We would like our customers to cooperate with the survey."
+    },
+    {
+      "jp": "この件については、営業部にご説明いただきたいんですが。",
+      "en": "Regarding this matter, I’d like the sales department to provide an explanation."
+    },
+    {
+      "jp": "会議中は、私語はしないでいただきたいのですが、よろしいですか。",
+      "en": "During the meeting, I would like you not to chat; would that be alright?"
+    },
+    {
+      "jp": "先日は、もっと早くご連絡いただきたかったです。",
+      "en": "The other day, I would have liked you to contact me sooner."
+    },
+    {
+      "jp": "もし可能であれば、資料を共有していただきたい。",
+      "en": "If possible, I’d like you to share the materials."
+    },
+    {
+      "jp": "市役所から手続きを案内していただきたいのですが、いつ伺えばよろしいですか。",
+      "en": "I would like the city office to guide us through the procedure; when should we come?"
+    },
+    {
+      "jp": "なるべく早くパスワードを変更していただきたい。",
+      "en": "I would like you to change your password as soon as possible."
+    },
+    {
+      "jp": "こちらの見積書は、上司に確認していただきたいんですが、よろしいでしょうか。",
+      "en": "As for this estimate, I’d like my supervisor to check it; would that be okay?"
+    },
+    {
+      "jp": "ご来場の皆さまには、開演前に席にお戻りいただきたい。",
+      "en": "We would like all attendees to return to their seats before the show begins."
+    },
+    {
+      "jp": "明日の午前中までに、メールでご回答頂きたく存じます。",
+      "en": "We would appreciate it if you could respond by tomorrow morning via email."
+    },
+    {
+      "jp": "本件、先方には写真を転載しないでいただきたいと考えております。",
+      "en": "Regarding this matter, we would prefer that the other party not repost the photos."
+    },
+    {
+      "jp": "急ぎのため、大変恐縮ですが、担当者の方に直接お電話いただきたいです。",
+      "en": "As it is urgent, I’m sorry, but I’d like the person in charge to call us directly."
+    },
+    {
+      "jp": "ご提出頂きたく、以下のフォームをご案内いたします。",
+      "en": "We would like you to submit it, so we are providing the form below."
+    },
+    {
+      "jp": "弊社としましては、今回の試作品を海外の代理店に評価していただきたい。",
+      "en": "From our company’s standpoint, we would like the overseas agents to evaluate this prototype."
+    },
+    {
+      "jp": "先生に推薦状を書いていただきたい旨をメールでお伝えしました。",
+      "en": "I sent an email conveying that I would like the teacher to write a recommendation letter."
+    },
+    {
+      "jp": "可能であれば、明日の打ち合わせにはご同席頂きたい。",
+      "en": "If possible, we would like you to attend tomorrow’s meeting as well."
+    },
+    {
+      "jp": "本日の講習では、最初に安全上の注意をよくお読みいただきたいです。",
+      "en": "In today’s training, I’d like you to carefully read the safety notes first."
+    },
+    {
+      "jp": "開発チームには仕様変更の影響を検証していただきたかったのですが、時間が足りませんでした。",
+      "en": "We would have liked the development team to examine the impact of the spec change, but we ran out of time."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "明日までにご返信いただけますか。",
+      "en": "Could you reply by tomorrow?"
+    },
+    {
+      "jp": "この件には触れていただきたくないです。",
+      "en": "I don’t want you to touch on this matter."
+    },
+    {
+      "jp": "ご意見をいただきたいです。",
+      "en": "I would like to receive your opinions."
+    },
+    {
+      "jp": "先生に説明してもらいたいです。",
+      "en": "I want the teacher to explain."
+    },
+    {
+      "jp": "先生に説明してほしいです。",
+      "en": "I want the teacher to explain."
+    },
+    {
+      "jp": "こちらの件につきましては、ご対応をお願いいたします。",
+      "en": "We ask for your handling of this matter."
+    },
+    {
+      "jp": "お手元の書類をご確認ください。",
+      "en": "Please check the documents you have."
+    },
+    {
+      "jp": "この資料の訂正をしていただければ幸いです。",
+      "en": "We’d appreciate it if you could correct this document."
+    },
+    {
+      "jp": "部長に確認していただくことは可能ですか。",
+      "en": "Is it possible to have the manager check?"
+    },
+    {
+      "jp": "ゴミは捨てないでいただけますか。",
+      "en": "Could you please not throw away the trash?"
+    }
+  ]
+}

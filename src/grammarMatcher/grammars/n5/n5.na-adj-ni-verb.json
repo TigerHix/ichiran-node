@@ -1,0 +1,183 @@
+{
+  "id": "n5.na-adj-ni-verb",
+  "level": "N5",
+  "description": "な-adjective adverbial ～に + verb",
+  "formation": "な-Adjective (remove な) + に + Verb",
+  "priority": 4,
+  "pattern": {
+    "sequence": [
+      {
+        "alt": [
+          {
+            "sequence": [
+              {
+                "capture": "adjective",
+                "pattern": {
+                  "sequence": [
+                    {
+                      "token": [
+                        "isNaAdjective"
+                      ]
+                    },
+                    {
+                      "token": [
+                        "text:に",
+                        "isParticle"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "capture": "verb",
+                "pattern": {
+                  "token": [
+                    "isVerb"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "sequence": [
+              {
+                "capture": "suruVerb",
+                "pattern": {
+                  "token": [
+                    "isSuruVerb",
+                    "prefixHasPos:にする:adj-na"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "explanation": "### Name\n- な形容詞の副詞化（〜に）\n\n### Meaning and function\n- Turns a な-adjective into an adverb to describe manner or degree: “do X (adjective)-ly,” “in an (adjective) way,” “easily/well/clearly,” etc.\n- With なる/する, the same 〜に marks a resulting state: “become ~,” “make (something) ~.” (Related use; see notes.)\n\n### Form and templates\n- A(な-adj) + に + V\n- A(な-adj) + に + V(aux)\n  - V(aux) can be polite/tense/aspect/desire, e.g., 〜ます／ました／ません, 〜たい, 〜ている, 〜た, etc.\n- Formation:\n  - Take the dictionary/stem form of the な-adjective (the form that takes な before nouns), add に, then the verb.\n  - Do not add だ or な before に.\n- Placement:\n  - Aに sits directly before the verb phrase it modifies.\n- Conjugation:\n  - The adjective itself does not conjugate; tense, polarity, and aspect appear on the following verb.\n\n### Usage notes and constraints\n- Register and naturalness:\n  - Neutral and very common in both plain and polite speech. Formality comes from the verb (e.g., 〜ます), not from Aに.\n- Semantic scope:\n  - Modifies how an action is performed (manner/degree). It does not modify nouns (use A + な + N for that).\n  - With なる/する, に marks the result state rather than manner (become/make ~).\n- Contrast with other forms:\n  - い-adjectives use 〜く (not 〜に) for adverbial use.\n  - Do not use で to make adverbs; で has other functions (means/reason/state with ある, etc.).\n- Particle identity:\n  - This に is the adverbializer for な-adjectives; do not confuse it with the に that marks time/destination/indirect object.\n- Orthography:\n  - Many な-adjectives can appear in kanji or kana; either is acceptable at this level (e.g., kana-only forms are common in beginner materials).\n\n### Common mistakes (optional, only if relevant)\n- Using 〜く with a な-adjective instead of 〜に.\n- Inserting だ/な before に (Aだに／Aなに → incorrect).\n- Using 〜で to form an adverb (Aで + V) when manner is intended; use Aに + V.\n- Confusing な-adjectives that look like い-adjectives (e.g., words ending in い that are actually な-adjectives) and giving them 〜く.\n- Trying to make いい into いいに (it is an い-adjective; its adverb is よく).\n\n### Related grammar (optional, only if relevant)\n- い-adjective adverbial: A(い) → 〜く + V (adverbial for い-adjectives).\n- A(な) + に + なる／する: “become ~ / make ~” (resultative use of に, not manner).\n- A(い) + く + なる／する: Resultative counterpart for い-adjectives.\n- N + に + なる／する: Noun-based result state (“become/make N”); same に but with nouns.",
+  "examples": [
+    {
+      "jp": "きれいに掃除した。",
+      "en": "I cleaned up nicely."
+    },
+    {
+      "jp": "丁寧に説明します。",
+      "en": "I will explain politely."
+    },
+    {
+      "jp": "静かに話してくれますか。",
+      "en": "Could you speak quietly?"
+    },
+    {
+      "jp": "じょうずに歌えません。",
+      "en": "I can't sing well."
+    },
+    {
+      "jp": "簡単に直せた。",
+      "en": "I was able to fix it easily."
+    },
+    {
+      "jp": "自由に入ってもいいですか。",
+      "en": "May I enter freely?"
+    },
+    {
+      "jp": "子どもたちを静かにさせました。",
+      "en": "I made the kids be quiet."
+    },
+    {
+      "jp": "部屋をきれいにする。",
+      "en": "I'll make the room clean."
+    },
+    {
+      "jp": "この橋は安全に渡れません。",
+      "en": "You can't cross this bridge safely."
+    },
+    {
+      "jp": "真剣に考えているところです。",
+      "en": "I'm in the middle of thinking seriously."
+    },
+    {
+      "jp": "このアプリは便利に使えません。",
+      "en": "This app can't be used conveniently."
+    },
+    {
+      "jp": "きれいにしてもらえますか。",
+      "en": "Could you clean it up for me?"
+    },
+    {
+      "jp": "彼は肉が嫌いになった。",
+      "en": "He came to dislike meat."
+    },
+    {
+      "jp": "ていねいに書かなかった。",
+      "en": "I didn't write it neatly."
+    },
+    {
+      "jp": "意外に混んでいました。",
+      "en": "It was more crowded than I expected."
+    },
+    {
+      "jp": "大事にしない人もいる。",
+      "en": "Some people don't take good care of things."
+    },
+    {
+      "jp": "健康に生きたい。",
+      "en": "I want to live healthily."
+    },
+    {
+      "jp": "しずかに歩け。",
+      "en": "Walk quietly."
+    },
+    {
+      "jp": "もっと上手に話せるようになりたい。",
+      "en": "I want to become able to speak more skillfully."
+    },
+    {
+      "jp": "綺麗に見えない写真だった。",
+      "en": "It was a photo that didn't look pretty."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "早く帰ります。",
+      "en": "I will go home early."
+    },
+    {
+      "jp": "値段を安くした。",
+      "en": "I made the price cheaper."
+    },
+    {
+      "jp": "彼は医者になる。",
+      "en": "He will become a doctor."
+    },
+    {
+      "jp": "昼ごはんにしますか。",
+      "en": "Shall we make it lunch?"
+    },
+    {
+      "jp": "静かな部屋で寝たい。",
+      "en": "I want to sleep in a quiet room."
+    },
+    {
+      "jp": "ずっと元気でいるつもりです。",
+      "en": "I plan to stay well."
+    },
+    {
+      "jp": "丁寧だと思った。",
+      "en": "I thought it was polite."
+    },
+    {
+      "jp": "日本に行きたい。",
+      "en": "I want to go to Japan."
+    },
+    {
+      "jp": "部屋が静かで助かった。",
+      "en": "I'm glad the room was quiet."
+    },
+    {
+      "jp": "よく寝ました。",
+      "en": "I slept well."
+    }
+  ]
+}

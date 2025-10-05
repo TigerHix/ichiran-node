@@ -1,9 +1,9 @@
 // ichiran/kanji - Kanji reading matching utilities
 // Port of kanji.lisp (Lines 199-314: Core reading matching functions)
 
-import type { Reading } from './types.js';
 import { getConnection } from './conn.js';
-import { KANJI_REGEX, KANJI_CHAR_REGEX, rendaku, unrendaku, geminate } from './characters.js';
+import { KANJI_REGEX, rendaku, unrendaku, geminate } from './characters.js';
+import type { ReadingMatchItem } from './types.js';
 
 // =============================================================================
 // Line 199-211: Reading cache and getReadingsCache
@@ -100,21 +100,21 @@ function getReadingAlternatives(
   reading: string,
   type: string,
   rendakuOpt = false
-): Array<[string, string, string | undefined, string | undefined]> {
+): Array<[string, string, string | null, string | null]> {
   const end = reading.length - 1;
   // Line 220-224: Base alternatives (original + geminated if applicable)
-  const lst: Array<[string, string, string | undefined, string | undefined]> = [
-    [reading, type, undefined, undefined]
+  const lst: Array<[string, string, string | null, string | null]> = [
+    [reading, type, null, null]
   ];
 
   // Line 221-224: Add geminated form for certain final characters
   if (end > 0 && type === 'ja_on' && 'つくきち'.includes(reading[end])) {
-    lst.push([geminate(reading, true), type, undefined, reading[end]]);
+    lst.push([geminate(reading, true), type, null, reading[end]]);
   }
 
   // Line 225-228: Add rendaku alternatives if requested
   if (rendakuOpt) {
-    const rendakuForms: Array<[string, string, string | undefined, string | undefined]> = [];
+    const rendakuForms: Array<[string, string, string | null, string | null]> = [];
     for (const [rd, typ, _rend, gem] of lst) {
       // Line 226-227: Dakuten and handakuten rendaku variants
       rendakuForms.push([rendaku(rd, true, false), typ, 'rendaku', gem]);
@@ -149,11 +149,11 @@ function getReadingAlternatives(
 async function getNormalReadings(
   char: string,
   rendakuOpt = false
-): Promise<Array<[string, string, string | undefined, string | undefined]>> {
+): Promise<Array<[string, string, string | null, string | null]>> {
   const readings = await getReadings(char, false);  // Line 233: exclude ja_na
 
-  const mainReadings: Array<[string, string, string | undefined, string | undefined]> = [];
-  const altReadings: Array<[string, string, string | undefined, string | undefined]> = [];
+  const mainReadings: Array<[string, string, string | null, string | null]> = [];
+  const altReadings: Array<[string, string, string | null, string | null]> = [];
 
   // Line 234-237: Separate main and alternative readings
   for (const [reading, type] of readings) {
@@ -210,8 +210,8 @@ async function getNormalReadings(
  *   - A character (for kana)
  *   - An array of possible readings (for kanji)
  */
-async function makeRmap(str: string): Promise<Array<string | Array<[string, string, string | undefined, string | undefined]>>> {
-  const rmap: Array<string | Array<[string, string, string | undefined, string | undefined]>> = [];
+async function makeRmap(str: string): Promise<Array<string | Array<[string, string, string | null, string | null]>>> {
+  const rmap: Array<string | Array<[string, string, string | null, string | null]>> = [];
   let prevKanji: string | null = null;
 
   for (let start = 0; start < str.length; start++) {
@@ -227,14 +227,14 @@ async function makeRmap(str: string): Promise<Array<string | Array<[string, stri
       } else if (char === 'ヶ') {  // Line 282-284: Counter mark (ka/ga)
         prevKanji = null;
         rmap.push([
-          ['か', 'ja_on', undefined, undefined],
-          ['が', 'abbr', undefined, undefined]
+          ['か', 'ja_on', null, null] as [string, string, string | null, string | null],
+          ['が', 'abbr', null, null] as [string, string, string | null, string | null]
         ]);
       } else if (char === '〆') {  // Line 285-287:締 abbreviation (shime/jime)
         prevKanji = '締';
         rmap.push([
-          ['しめ', 'ja_kun', undefined, undefined],
-          ['じめ', 'ja_kun', ':rendaku', undefined]
+          ['しめ', 'ja_kun', null, null] as [string, string, string | null, string | null],
+          ['じめ', 'ja_kun', ':rendaku', null] as [string, string, string | null, string | null]
         ]);
       } else {  // Line 288-289: Regular kanji
         prevKanji = char;
@@ -293,10 +293,10 @@ async function makeRmap(str: string): Promise<Array<string | Array<[string, stri
  *   - score: Quality score of the match
  */
 async function matchReadingsStar(
-  rmap: Array<string | Array<[string, string, string | undefined, string | undefined]>>,
+  rmap: Array<string | Array<[string, string, string | null, string | null]>>,
   reading: string,
   start = 0
-): Promise<[any[], number] | ':none'> {
+): Promise<[ReadingMatchItem[], number] | ':none'> {
   // Line 242-245: Empty rmap - success if we consumed all reading
   if (rmap.length === 0) {
     return start >= reading.length ? [[], 0] : ':none';
@@ -312,7 +312,7 @@ async function matchReadingsStar(
 
   // Line 252-266: Item is reading list (kanji position)
   if (Array.isArray(item)) {
-    const matches: Array<[any[], number]> = [];
+    const matches: Array<[ReadingMatchItem[], number]> = [];
 
     // Line 253: Try all possible substring lengths
     for (let end = start + 1; end <= reading.length; end++) {
@@ -329,7 +329,7 @@ async function matchReadingsStar(
           // Line 257: Check if substring matches this reading
           if (reading.substring(start, end) === readingText) {
             // Use unshift to match Lisp's push behavior (adds to front)
-            matches.unshift([[r, ...match], score]);
+            matches.unshift([[r as any, ...match], score]);
             foundMatch = true;
             break;
           }
@@ -340,7 +340,7 @@ async function matchReadingsStar(
           const substring = reading.substring(start, end);
           const penalty = end - start;
           // Use unshift to match Lisp's push behavior (adds to front)
-          matches.unshift([[[substring, 'irr'], ...match], score - penalty]);
+          matches.unshift([[[substring, 'irr'] as any, ...match], score - penalty]);
         }
       }
     }
@@ -407,7 +407,7 @@ async function matchReadingsStar(
  * Example: matchReadings("漢字", "かんじ") might return:
  *   [["漢", "かん", "ja_on"], ["字", "じ", "ja_on"]]
  */
-export async function matchReadings(str: string, reading: string): Promise<any[] | null> {
+export async function matchReadings(str: string, reading: string): Promise<ReadingMatchItem[] | null> {
   // Line 293: Create reading map
   const rmap = await makeRmap(str);
 
@@ -422,7 +422,7 @@ export async function matchReadings(str: string, reading: string): Promise<any[]
 
   // Line 296-305: Process match to create result array
   // Combine consecutive characters into strings, keep reading tuples as arrays
-  const result: any[] = [];
+  const result: ReadingMatchItem[] = [];
   let charBag: string[] = [];
 
   for (let i = 0; i < match.length && i < str.length; i++) {
@@ -451,11 +451,11 @@ export async function matchReadings(str: string, reading: string): Promise<any[]
       } else {
         // Regular: always 4 elements minimum
         const output: any[] = [c, readingText, type, rendakuFlag ?? null];
-        // If rendaku is present OR geminated is present, add 5th element
-        if (rendakuFlag || geminated !== undefined) {
+        // If rendaku is present OR geminated is present (and not null), add 5th element
+        if (rendakuFlag || (geminated !== undefined && geminated !== null)) {
           output.push(geminated ?? null);
         }
-        result.push(output);
+        result.push(output as ReadingMatchItem);
       }
     } else {
       // Line 303: Accumulate literal character

@@ -14,13 +14,11 @@ export interface ConnectionSpec {
 }
 
 let connection: postgres.Sql | null = null;
-let connectionSpec: ConnectionSpec | null = null;
 
 // INSTRUMENTATION: Track query count and log queries
 let queryCount = 0;
 let queryLog: Array<{query: string; params: any[]; stack?: string; timestamp: number}> = [];
 let logQueries = false;
-let queryLogFile: string | null = null;
 let queryLogStream: fs.WriteStream | null = null;
 
 export function resetQueryCount() {
@@ -39,7 +37,6 @@ export function enableQueryLogging(logFilePath?: string) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
 
-    queryLogFile = logFilePath;
     queryLogStream = fs.createWriteStream(logFilePath, { flags: 'w' });
     queryLogStream.write('=== DATABASE QUERY LOG ===\n');
     queryLogStream.write(`Started: ${new Date().toISOString()}\n\n`);
@@ -51,7 +48,6 @@ export function disableQueryLogging() {
     queryLogStream.end();
     queryLogStream = null;
   }
-  queryLogFile = null;
 }
 export function getQueryLog() { return queryLog; }
 export function getQuerySummary() {
@@ -92,27 +88,69 @@ export function getConnectionFromEnv(): ConnectionSpec | null {
   const dbUrl = process.env.ICHIRAN_TEST_DB_URL || process.env.ICHIRAN_DB_URL;
   if (!dbUrl) return null;
 
-  // Parse PostgreSQL connection URL
-  const match = dbUrl.match(/postgresql:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/);
-  if (!match) {
-    throw new Error(`Invalid database URL: ${dbUrl}`);
-  }
+  try {
+    const normalized = dbUrl.replace(/^postgresql:\/\//, 'postgres://');
+    const url = new URL(normalized);
 
-  return {
-    user: match[1],
-    password: match[2],
-    host: match[3],
-    port: parseInt(match[4]),
-    database: match[5]
-  };
+    const database = decodeURIComponent(url.pathname.replace(/^\//, ''));
+    if (!database) {
+      throw new Error('Database name missing');
+    }
+
+    const hostParam = url.searchParams.get('host');
+    let host = url.hostname;
+    if (!host && hostParam) {
+      host = decodeURIComponent(hostParam);
+    }
+    if (!host) {
+      host = 'localhost';
+    }
+
+    const portParam = url.port || url.searchParams.get('port') || undefined;
+    const user = url.username ? decodeURIComponent(url.username) : '';
+    const password = url.password ? decodeURIComponent(url.password) : '';
+
+    const spec: ConnectionSpec = {
+      user,
+      password,
+      host,
+      database
+    };
+
+    if (portParam) {
+      const parsedPort = Number(portParam);
+      if (!Number.isFinite(parsedPort)) {
+        throw new Error(`Invalid port: ${portParam}`);
+      }
+      spec.port = parsedPort;
+    }
+
+    const sslParam = url.searchParams.get('ssl');
+    const sslMode = url.searchParams.get('sslmode');
+    if (sslParam) {
+      const normalizedSsl = sslParam.toLowerCase();
+      if (['true', '1', 'require'].includes(normalizedSsl)) {
+        spec.ssl = true;
+      } else if (['false', '0', 'disable'].includes(normalizedSsl)) {
+        spec.ssl = false;
+      }
+    } else if (sslMode) {
+      const normalizedSslmode = sslMode.toLowerCase();
+      if (['require', 'verify-ca', 'verify-full'].includes(normalizedSslmode)) {
+        spec.ssl = true;
+      } else if (normalizedSslmode === 'disable') {
+        spec.ssl = false;
+      }
+    }
+
+    return spec;
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`Invalid database URL (${dbUrl}): ${message}`);
+  }
 }
 
-export function setConnection(spec: ConnectionSpec) {
-  if (connection) {
-    connection.end();
-  }
-
-  connectionSpec = spec;
+function createSqlConnection(spec: ConnectionSpec): postgres.Sql {
   const rawConnection = postgres({
     host: spec.host,
     port: spec.port ?? 5432,
@@ -121,11 +159,15 @@ export function setConnection(spec: ConnectionSpec) {
     password: spec.password,
     ssl: spec.ssl ? 'require' : false,
     // Automatically convert snake_case ↔ camelCase for column names only
-    transform: postgres.camel
+    transform: postgres.camel,
+    // Enable prepared statements for better performance (matches Lisp make-dao behavior)
+    prepare: true,
+    // Auto-close idle connections to prevent hanging (especially for scripts)
+    idle_timeout: 1, // Close connections idle for 1+ seconds
+    max_lifetime: 60 * 5 // Max connection lifetime: 5 minutes
   });
 
-  // INSTRUMENTATION: Wrap connection to count queries
-  connection = new Proxy(rawConnection, {
+  return new Proxy(rawConnection, {
     apply(target, thisArg, argsList) {
       queryCount++;
 
@@ -171,13 +213,51 @@ export function setConnection(spec: ConnectionSpec) {
   }) as any;
 }
 
+export function setConnection(spec: ConnectionSpec) {
+  const existing = connection;
+
+  if (existing) {
+    connection = null;
+    existing.end().catch((error) => {
+      console.warn('Failed to close existing Postgres connection cleanly:', error);
+    });
+  }
+
+  connection = createSqlConnection(spec);
+}
+
+/**
+ * Safety check: Prevents accidental operations on production database.
+ * Throws an error if the database name is 'jmdict' (production).
+ * Only allows operations on 'jmdict_test' or other non-production databases.
+ */
+export function validateDatabaseSafety(operation: string = 'operation') {
+  const spec = getConnectionFromEnv();
+  if (!spec) {
+    throw new Error('No database connection configured. Set ICHIRAN_TEST_DB_URL or ICHIRAN_DB_URL environment variable.');
+  }
+
+  const dbName = spec.database.toLowerCase();
+
+  // Block operations on production database
+  if (dbName === 'jmdict') {
+    throw new Error(
+      `SAFETY CHECK FAILED: Cannot perform ${operation} on production database 'jmdict'.\n` +
+      `Use 'jmdict_test' or another test database instead.\n` +
+      `Current ICHIRAN_DB_URL: ${process.env.ICHIRAN_DB_URL || process.env.ICHIRAN_TEST_DB_URL}`
+    );
+  }
+
+  console.log(`✓ Database safety check passed: ${dbName}`);
+}
+
 export function getConnection(): postgres.Sql {
   if (!connection) {
     const spec = getConnectionFromEnv();
     if (!spec) {
       throw new Error('No database connection configured. Set ICHIRAN_TEST_DB_URL or ICHIRAN_DB_URL environment variable.');
     }
-    setConnection(spec);
+    connection = createSqlConnection(spec);
   }
   return connection!;
 }

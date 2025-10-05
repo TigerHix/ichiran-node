@@ -1,0 +1,715 @@
+{
+  "id": "n4.n-desu",
+  "level": "N4",
+  "description": "Provide an explanation or reason; 'it is that', 'the thing is', 'the reason is'.",
+  "formation": "Verb-casual + んです, い-Adjective + んです, な-Adjective + なんです, Noun + なんです",
+  "priority": 10,
+  "pattern": {
+    "sequence": [
+      {
+        "alt": [
+          {
+            "comment": "Expression/predicate token ending in ん/の + です (for compound forms like どうしたん, but NOT bare nouns)",
+            "sequence": [
+              {
+                "alt": [
+                  {
+                    "token": [
+                      "text:/[んの]$/",
+                      "pos:exp"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:/[んの]$/",
+                      "isVerb"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:/[んの]$/",
+                      "isAdjective"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:/[んの]$/",
+                      "isAuxiliary"
+                    ]
+                  }
+                ]
+              },
+              {
+                "token": [
+                  "text:です"
+                ]
+              },
+              {
+                "optional": {
+                  "token": [
+                    "text:か"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "comment": "Predicate + のです/んです as single token (must have predicate before it, not bare noun)",
+            "sequence": [
+              {
+                "alt": [
+                  {
+                    "token": [
+                      "isVerb"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isIAdjective"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isAuxiliary"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:だった"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:じゃない"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:じゃなかった"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:ではない"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:ではなかった"
+                    ]
+                  }
+                ]
+              },
+              {
+                "alt": [
+                  {
+                    "token": [
+                      "text:のです"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:んです"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:のだ"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:んだ"
+                    ]
+                  }
+                ]
+              },
+              {
+                "optional": {
+                  "token": [
+                    "text:か"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "comment": "Predicate/Copula + ん/の + です (three separate tokens, must NOT be ので)",
+            "sequence": [
+              {
+                "alt": [
+                  {
+                    "token": [
+                      "isVerb"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isIAdjective"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isAuxiliary"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:だった"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:じゃない"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:じゃなかった"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:ではない"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:ではなかった"
+                    ]
+                  }
+                ]
+              },
+              {
+                "alt": [
+                  {
+                    "token": [
+                      "text:ん"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:の"
+                    ],
+                    "not": {
+                      "token": [
+                        "text:ので"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "token": [
+                  "text:です"
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Predicate/Copula + ん/の + だ (three separate tokens, must NOT be ので)",
+            "sequence": [
+              {
+                "alt": [
+                  {
+                    "token": [
+                      "isVerb"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isIAdjective"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isAuxiliary"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:だった"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:じゃない"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:じゃなかった"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:ではない"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:ではなかった"
+                    ]
+                  }
+                ]
+              },
+              {
+                "alt": [
+                  {
+                    "token": [
+                      "text:ん"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:の"
+                    ],
+                    "not": {
+                      "token": [
+                        "text:ので"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "token": [
+                  "text:だ"
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "na-Adj/Noun + なんです (as single compound auxiliary token)",
+            "sequence": [
+              {
+                "alt": [
+                  {
+                    "token": [
+                      "isNaAdjective"
+                    ]
+                  },
+                  {
+                    "macro": "NP"
+                  }
+                ]
+              },
+              {
+                "token": [
+                  "text:なんです"
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "na-Adj/Noun + なんだ (as single compound token)",
+            "sequence": [
+              {
+                "alt": [
+                  {
+                    "token": [
+                      "isNaAdjective"
+                    ]
+                  },
+                  {
+                    "macro": "NP"
+                  }
+                ]
+              },
+              {
+                "token": [
+                  "text:なんだ"
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "na-Adj/Noun + な + ん + です (as separate tokens)",
+            "sequence": [
+              {
+                "alt": [
+                  {
+                    "token": [
+                      "isNaAdjective"
+                    ]
+                  },
+                  {
+                    "macro": "NP"
+                  }
+                ]
+              },
+              {
+                "token": [
+                  "text:な"
+                ]
+              },
+              {
+                "token": [
+                  "text:ん"
+                ]
+              },
+              {
+                "token": [
+                  "text:です"
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "na-Adj/Noun + な + ん + だ (as separate tokens)",
+            "sequence": [
+              {
+                "alt": [
+                  {
+                    "token": [
+                      "isNaAdjective"
+                    ]
+                  },
+                  {
+                    "macro": "NP"
+                  }
+                ]
+              },
+              {
+                "token": [
+                  "text:な"
+                ]
+              },
+              {
+                "token": [
+                  "text:ん"
+                ]
+              },
+              {
+                "token": [
+                  "text:だ"
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Predicate + ん + です + か (question)",
+            "sequence": [
+              {
+                "alt": [
+                  {
+                    "token": [
+                      "isVerb"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isIAdjective"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isAuxiliary"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:だった"
+                    ]
+                  }
+                ]
+              },
+              {
+                "token": [
+                  "text:ん"
+                ]
+              },
+              {
+                "token": [
+                  "text:です"
+                ]
+              },
+              {
+                "token": [
+                  "text:か"
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "na-Adj/Noun + なんですか (compound + か)",
+            "sequence": [
+              {
+                "alt": [
+                  {
+                    "token": [
+                      "isNaAdjective"
+                    ]
+                  },
+                  {
+                    "macro": "NP"
+                  }
+                ]
+              },
+              {
+                "token": [
+                  "text:なんです"
+                ]
+              },
+              {
+                "token": [
+                  "text:か"
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "na-Adj/Noun + な + のです + か (な separate, のです as single token)",
+            "sequence": [
+              {
+                "alt": [
+                  {
+                    "token": [
+                      "isNaAdjective"
+                    ]
+                  },
+                  {
+                    "macro": "NP"
+                  }
+                ]
+              },
+              {
+                "token": [
+                  "text:な"
+                ]
+              },
+              {
+                "token": [
+                  "text:のです"
+                ]
+              },
+              {
+                "token": [
+                  "text:か"
+                ]
+              }
+            ]
+          },
+          {
+            "comment": "Casual sentence-final の after predicate (not followed by で or か)",
+            "sequence": [
+              {
+                "alt": [
+                  {
+                    "token": [
+                      "isVerb"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isIAdjective"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isAuxiliary"
+                    ]
+                  }
+                ]
+              },
+              {
+                "token": [
+                  "text:の"
+                ]
+              },
+              {
+                "not": {
+                  "alt": [
+                    {
+                      "token": [
+                        "text:で"
+                      ]
+                    },
+                    {
+                      "token": [
+                        "text:か"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "comment": "んですけど/んですが (softening lead-in)",
+            "sequence": [
+              {
+                "alt": [
+                  {
+                    "token": [
+                      "isVerb"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isIAdjective"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isAuxiliary"
+                    ]
+                  }
+                ]
+              },
+              {
+                "token": [
+                  "text:ん"
+                ]
+              },
+              {
+                "token": [
+                  "text:です"
+                ]
+              },
+              {
+                "alt": [
+                  {
+                    "token": [
+                      "text:けど"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "text:が"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "explanation": "### Name\n- 〜んです／のです（説明・理由）\n\n### Meaning and function\n- Adds an explanatory or justificatory tone: the speaker is giving background, a reason, or clarifying the situation\n- In questions, gently asks for an explanation or confirmation rather than just a fact\n- Softens refusals, requests, and statements by presenting them as circumstance-based\n\n### Form and templates\n- Core\n  - V(dict/ない/た/なかった) + んです\n  - い-adj(〜い/〜くない/〜かった/〜くなかった) + んです\n  - な-adj + なんです／じゃないんです／だったんです／じゃなかったんです\n  - N + なんです／じゃないんです／だったんです／じゃなかったんです\n- Plain (non-polite) endings\n  - V/い-adj + んだ\n  - な-adj/N + なんだ\n- Questions\n  - … んですか ／ のですか（more formal/stiffer）\n  - Casual: … の?（soft/informal）\n- Softening lead-ins\n  - … んですが／んですけど + [request, offer, advice, follow-up]\n- Particle and ordering notes\n  - んです attaches to a plain-form clause; do not put です／ます before んです\n  - With N/な-adj, use な before の／ん (N/な-adj + な + の／ん)\n- Conjugation/inflection\n  - Negatives and past are formed in the clause before んです as shown above\n  - Common contractions: のです → んです (spoken); では → じゃ (casual)\n\n### Usage notes and constraints\n- Register/naturalness\n  - んです is very common and natural in conversation\n  - のです sounds more formal, explanatory, or literary; used in careful speech and writing\n  - んだ (plain) is stronger/blunter than んです; use with care depending on relationship and context\n- Semantics/scope\n  - Signals “there is a reason/background I’m sharing” or “please explain” (in questions)\n  - Often implies shared context, concern, or justification; not for neutral definitions or universal facts\n  - Frequently used to soften refusals, give context before a request, or clarify new/contrasting info\n- Questions with んですか\n  - Softer and more “why/how come?” in feel than a bare factual question\n  - Without context, can sound prying; add hedges or context in polite situations\n- Orthographic/variant notes\n  - んです is the colloquial contraction of のです\n  - じゃ (casual) ↔ では (formal) before ない／なかった with N/な-adj\n  - Casual sentence-final の? can sound soft/friendly; use only in informal contexts\n\n### Common mistakes (optional, only if relevant)\n- Using だんです with N/な-adj; correct is なんです／なんだ\n- Putting ます／です before んです (e.g., Vますんです); the clause before んです must be in plain form\n- Forgetting な before の／ん with N/な-adj (N/な-adj + なのです／なんです)\n- Adding な after い-adjectives (い-adj + な + んです is incorrect)\n- Overusing んです in formal writing or with objective statements where no explanation is intended\n\n### Related grammar (optional, only if relevant)\n- 〜から／〜ので: Explicit “because.” ので is softer/more formal; んです is explanatory tone rather than a direct cause connector\n- 〜わけです: “It means that…” logical conclusion/summary; more objective than the speaker-centered んです\n- 〜の (sentence-final): Casual explanatory/confirming tone; informal counterpart of んです\n- 〜んですが／〜んですけど …: Explanatory lead-in commonly used to soften or prepare a request or proposal",
+  "examples": [
+    {
+      "jp": "このカレー、けっこう辛いんです。",
+      "en": "This curry is pretty spicy, you know."
+    },
+    {
+      "jp": "締め切りは今日なんだ。",
+      "en": "The deadline is today, you know."
+    },
+    {
+      "jp": "今日は行けないんです。",
+      "en": "I can’t go today."
+    },
+    {
+      "jp": "さっき財布を落としたんです。",
+      "en": "I dropped my wallet a little while ago."
+    },
+    {
+      "jp": "メールを見ていなかったんです。",
+      "en": "I hadn’t checked my email."
+    },
+    {
+      "jp": "そんなに高くないのです。",
+      "en": "It’s not that expensive."
+    },
+    {
+      "jp": "昨日はとても眠かったんだ。",
+      "en": "I was really sleepy yesterday."
+    },
+    {
+      "jp": "試験は思ったほど難しくなかったのです。",
+      "en": "The exam wasn’t as hard as I thought."
+    },
+    {
+      "jp": "駅の近くは便利なんです。",
+      "en": "It’s convenient near the station."
+    },
+    {
+      "jp": "ここは静かじゃないんです。",
+      "en": "It isn’t quiet here."
+    },
+    {
+      "jp": "会場は本当にきれいだったんです。",
+      "en": "The venue was really beautiful."
+    },
+    {
+      "jp": "店員さんは親切じゃなかったんです。",
+      "en": "The clerk wasn’t kind."
+    },
+    {
+      "jp": "実は、私、留学生なんです。",
+      "en": "Actually, I’m an international student."
+    },
+    {
+      "jp": "それはゴミではないのです。",
+      "en": "That isn’t trash."
+    },
+    {
+      "jp": "遅れた理由は単純なミスだったんです。",
+      "en": "The reason for the delay was a simple mistake."
+    },
+    {
+      "jp": "担当は彼じゃなかったんです。",
+      "en": "He wasn’t the person in charge."
+    },
+    {
+      "jp": "どうして遅れたんですか。",
+      "en": "Why were you late?"
+    },
+    {
+      "jp": "会議は明日なのですか。",
+      "en": "Is the meeting tomorrow?"
+    },
+    {
+      "jp": "もう帰るの?",
+      "en": "Are you heading home already?"
+    },
+    {
+      "jp": "すみません、道を教えてほしいんですけど、この先は左ですか。",
+      "en": "Excuse me, I’d like to ask for directions—do I turn left up ahead?"
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "これは父のです。",
+      "en": "This is my father’s."
+    },
+    {
+      "jp": "これ、部長のです。",
+      "en": "This belongs to the manager."
+    },
+    {
+      "jp": "雨なので、今日は出かけません。",
+      "en": "Since it’s raining, I won’t go out today."
+    },
+    {
+      "jp": "暑いんで、窓を開けます。",
+      "en": "It’s hot, so I’ll open the window."
+    },
+    {
+      "jp": "彼は先生なんで、忙しいです。",
+      "en": "Since he’s a teacher, he’s busy."
+    },
+    {
+      "jp": "彼は元気ですか。",
+      "en": "Is he doing well?"
+    },
+    {
+      "jp": "もう帰るのか。",
+      "en": "So you’re going home already?"
+    },
+    {
+      "jp": "お茶を飲んでから、宿題をします。",
+      "en": "I’ll do my homework after having tea."
+    },
+    {
+      "jp": "すみませんが、道を教えてください。",
+      "en": "Excuse me, please tell me the way."
+    },
+    {
+      "jp": "来られないので、先に行ってください。",
+      "en": "Since I can’t come, please go ahead."
+    }
+  ]
+}

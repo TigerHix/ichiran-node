@@ -1,0 +1,135 @@
+{
+  "id": "n5.soshite",
+  "level": "N5",
+  "description": "Used to connect two sentences; 'and then', 'and'",
+  "formation": "Sentence 1 + そして + Sentence 2",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- そして（接続詞）\n\n### Meaning and function\n- Connects two sentences or clauses to add information or indicate simple succession: “and; and then.” Neutral, without implying cause/effect.\n\n### Form and templates\n- Core templates:\n  - S1。 そして、S2。\n  - S1。 そしてS2。\n- Particle requirements and ordering:\n  - None. そして is a standalone conjunction placed at the start of the following sentence/clause.\n- Optional/alternative parts:\n  - A comma after そして is common in writing but optional; in speech there is a brief pause.\n- Conjugation/inflection notes:\n  - No special conjugation. Each sentence/clause conjugates independently (plain or polite). Keep style consistent across S1 and S2.\n\n### Usage notes and constraints\n- Register, frequency, naturalness:\n  - Neutral and common, especially in writing and narration. In casual speech, frequent use can sound bookish; speakers often choose で, それから, or それで depending on nuance.\n- Semantic constraints and scope:\n  - Adds another point or marks the next step in a sequence. Does not express reason/result.\n  - Connects full sentences or propositions. Not used to list nouns or adjectives inside a single clause (use と/や or conjunctive forms for that).\n  - Subject/topic may stay the same or change; そして does not force continuity.\n- Orthographic variants:\n  - Almost always written in kana: そして.\n\n### Common mistakes\n- Using そして to mean “so/therefore” (use それで or だから for results).\n- Trying to connect nouns or adjectival phrases with そして (use と/や or conjunctive forms).\n- Over-chaining sentences with そして in casual talk, making speech sound childish or overly narrative.\n- Mixing polite and plain styles between S1 and S2 unintentionally.\n\n### Related grammar\n- それから: “After that/then,” emphasizes chronological order more strongly than そして.\n- それに: “In addition,” additive with little or no temporal sense.\n- それで／だから: “So/therefore,” expresses cause–effect, unlike neutral そして.\n- で／Vて: Conversational clause-linking “and/so,” more colloquial than そして.",
+  "examples": [
+    {
+      "jp": "私は毎朝コーヒーを飲む。 そして、新聞を読む。",
+      "en": "I drink coffee every morning. And I read the newspaper."
+    },
+    {
+      "jp": "会議は十時に始まります。 そして、正午に終わります。",
+      "en": "The meeting starts at ten. And it ends at noon."
+    },
+    {
+      "jp": "電車が止まった。 そして、人々は静かに待った。",
+      "en": "The train stopped. And people waited quietly."
+    },
+    {
+      "jp": "この道は広くない。 そして、夜は暗い。",
+      "en": "This road is not wide. And it’s dark at night."
+    },
+    {
+      "jp": "今日は行くか。 そして、明日は休むか。",
+      "en": "Will we go today? And will we rest tomorrow?"
+    },
+    {
+      "jp": "その店には行きません。 そして、ここでは買いません。",
+      "en": "I don’t go to that store. And I won’t buy anything here."
+    },
+    {
+      "jp": "雨は上がった。 そして空が明るくなった。",
+      "en": "The rain let up. And the sky became bright."
+    },
+    {
+      "jp": "昨日は寒くありませんでした。 そして、風も強くありませんでした。",
+      "en": "It wasn’t cold yesterday. And the wind wasn’t strong either."
+    },
+    {
+      "jp": "旅行の準備は終わった。 そして、早めに寝た。",
+      "en": "The trip preparations were finished. And I went to bed early."
+    },
+    {
+      "jp": "新しい上着は軽い。 そして驚くほど暖かい。",
+      "en": "The new jacket is light. And surprisingly warm."
+    },
+    {
+      "jp": "まず下書きをする。 そして清書に移る。",
+      "en": "First I make a draft. And then I move to the final copy."
+    },
+    {
+      "jp": "締め切りは来週だ。 そして、資料は明日提出だ。",
+      "en": "The deadline is next week. And the materials are due tomorrow."
+    },
+    {
+      "jp": "彼は走り続けた。 そして、最後まで諦めなかった。",
+      "en": "He kept running. And he didn’t give up until the end."
+    },
+    {
+      "jp": "このボタンを押しますか。 そして、次に何をしますか。",
+      "en": "Will you press this button? And what will you do next?"
+    },
+    {
+      "jp": "猫は窓辺で眠っている。 そして、犬は玄関で待っている。",
+      "en": "The cat is sleeping by the window. And the dog is waiting at the entrance."
+    },
+    {
+      "jp": "朝は静かになった。 そして、部屋の灯りが暗くなった。",
+      "en": "It became quiet in the morning. And the room’s lights dimmed."
+    },
+    {
+      "jp": "説明は十分ではない。 そして、その結論は説得力に欠ける。",
+      "en": "The explanation is not sufficient. And that conclusion lacks persuasiveness."
+    },
+    {
+      "jp": "彼女は一度も遅刻しない。 そして、提出物もいつも丁寧だ。",
+      "en": "She never arrives late. And her submissions are always neat."
+    },
+    {
+      "jp": "駅まで歩いた。 そしてそこからバスに乗った。",
+      "en": "I walked to the station. And from there I took a bus."
+    },
+    {
+      "jp": "昨日は楽しかったです。 そして、料理もおいしかったです。",
+      "en": "Yesterday was fun. And the food was delicious too."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "書いて、それから送ってください。",
+      "en": "Write it and then send it, please."
+    },
+    {
+      "jp": "雨が降った。 それで、試合は中止になった。",
+      "en": "It rained. So the game was canceled."
+    },
+    {
+      "jp": "メモを取りました。 それに、写真も撮りました。",
+      "en": "I took notes. In addition, I took photos too."
+    },
+    {
+      "jp": "鍵を落とした。 だから、入れなかった。",
+      "en": "I dropped the key. Therefore, I couldn’t get in."
+    },
+    {
+      "jp": "先生は「そして」という言葉の使い方を説明した。",
+      "en": "The teacher explained how to use the word “soshite.”"
+    },
+    {
+      "jp": "本『そして、旅が始まる』を読んだ。",
+      "en": "I read the book “And Then, the Journey Begins.”"
+    },
+    {
+      "jp": "外では風、そして雨が激しかった。",
+      "en": "Outside, the wind—and the rain—were fierce."
+    },
+    {
+      "jp": "まず掃除をして、で、買い物に行く。",
+      "en": "First I clean, and then I go shopping."
+    },
+    {
+      "jp": "今日は雨だが、明日は晴れるだろう。",
+      "en": "It’s rainy today, but it will probably be sunny tomorrow."
+    },
+    {
+      "jp": "「そして」は接続詞ですか。",
+      "en": "Is “soshite” a conjunction?"
+    }
+  ]
+}

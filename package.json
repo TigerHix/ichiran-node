@@ -13,6 +13,7 @@
     "typecheck": "tsc --noEmit",
     "start": "node dist/server.js",
     "dev": "tsx --env-file=.env src/server.ts",
+    "data": "tsx --env-file=.env src/data/cli.ts",
     "preprocess-cli-tests": "tsx scripts/preprocess-cli-tests.ts",
     "preprocess-hard-cli-tests": "tsx scripts/preprocess-hard-cli-tests.ts"
   },
@@ -33,6 +34,8 @@
   },
   "dependencies": {
     "commander": "^12.1.0",
+    "csv-parse": "^6.1.0",
+    "fast-xml-parser": "^5.3.0",
     "lru-cache": "^11.2.2",
     "postgres": "^3.4.7"
   },

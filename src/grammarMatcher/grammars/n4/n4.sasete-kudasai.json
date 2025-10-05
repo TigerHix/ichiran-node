@@ -1,0 +1,135 @@
+{
+  "id": "n4.sasete-kudasai",
+  "level": "N4",
+  "description": "Express a polite request to allow or permit someone to do something.",
+  "formation": "Verb-causative form + ください",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜させてください（許可の依頼）\n\n### Meaning and function\n- Politely asks the listener to allow the speaker (or the speaker’s in‑group) to do something. Nuance: “Please let me/us …,” often a little more assertive than neutral permission asking.\n\n### Form and templates\n- V(causative-て) + ください\n  - Make the causative, then put it in て-form, then add ください.\n- With する-verbs: N(する) → Nさせて + ください\n  - Very common with する-type actions (explanations, questions, greetings, etc.).\n- Optional agent specification (when the doer is not the speaker): N(に) V(causative-て) + ください\n  - Means “Please let N do …”\n- Causative formation\n  - Ichidan (〜る verbs): る → させる → させて\n  - Godan (〜う verbs): final −u → −a + せる → させて\n    - Note: verbs ending in う take わせる before て (…わせて)\n  - Irregular: する → させる → させて; 来る → こさせる → こさせて\n- Politeness variants and softeners\n  - V(causative-て) + くださいませんか (softer, formal)\n  - V(causative-て) + いただけますか (very polite, humble)\n  - V(causative-て) + くれませんか／くれますか (everyday polite)\n  - Sentence-initial softeners like すみませんが, 申し訳ありませんが, and adverbs like ちょっと／少し often precede the request.\n\n### Usage notes and constraints\n- Register and naturalness\n  - Polite, common in work/public settings and careful speech. Sounds more proactive/insistent than 〜てもいいですか.\n  - Frequently used as a set phrase to preface one’s own actions (e.g., offering to explain, ask, greet).\n- Who does the action\n  - Default agent is the speaker or the speaker’s in‑group (subordinate, family, team). Use Nに to mark a different agent explicitly.\n- Pragmatics\n  - Use when the listener has the authority to permit or refuse. Avoid it when no permission is really needed; it can feel pushy.\n  - For extra deference or when emphasizing receiving permission, prefer 〜させていただけますか／〜させていただきたいです.\n- Orthography\n  - Write ください in hiragana in this auxiliary request use. させて is also typically in kana. 下さい (kanji) is generally avoided in this pattern.\n\n### Common mistakes\n- Using 〜してください when you mean “let me do …” (That asks the listener to do it, not to allow you.)\n- Omitting て (× させください). The correct request is させてください.\n- Misconjugating Godan causatives, especially 〜う verbs (need …わせる → …わせて).\n- Treating ください as a ます-verb (× させてくださいです/ます). Use the variants with いただけますか for higher politeness.\n- Forgetting to mark a non-speaker agent with に when you want to “let someone (else) do …”.\n\n### Related grammar\n- 〜てもいいですか: Neutral “May I …?” Softer, less self-assertive than 〜させてください.\n- 〜てください: “Please do …” (requesting the listener’s action), not permission for your action.\n- 〜させてもらえますか／〜させてくれますか: “Can I get you to let me …?” Similar meaning; もらえる is slightly politer; 〜ませんか softens.\n- 〜させていただけますか／〜させていただきたいです: Very polite/humble; emphasizes receiving permission/benefit.\n- 〜てもよろしいでしょうか: Very formal way to ask permission; less assertive than 〜させてください.",
+  "examples": [
+    {
+      "jp": "まず自己紹介させてください。",
+      "en": "Please let me introduce myself first."
+    },
+    {
+      "jp": "すみませんが、短く説明させてください。",
+      "en": "Sorry, please let me give a brief explanation."
+    },
+    {
+      "jp": "今だけここで待たせてください。",
+      "en": "Please let me wait here just for now."
+    },
+    {
+      "jp": "申し訳ありませんが、写真を撮らせてくださいませんか。",
+      "en": "I’m sorry, but would you please allow me to take a photo?"
+    },
+    {
+      "jp": "遅れてしまいましたが、最初に簡単に挨拶させてください。",
+      "en": "I’m late, but please let me give a quick greeting first."
+    },
+    {
+      "jp": "この件、私の部下に報告させてください。",
+      "en": "For this matter, please let my subordinate report."
+    },
+    {
+      "jp": "新人に自己紹介させていただけますか。",
+      "en": "Could we have the newcomer introduce themselves?"
+    },
+    {
+      "jp": "ここに座らせてくれますか。",
+      "en": "Would you let me sit here?"
+    },
+    {
+      "jp": "部屋が暑いので、窓を少し開けさせてください。",
+      "en": "It’s hot in here, so please let me open the window a bit."
+    },
+    {
+      "jp": "一言だけ言わせてくれませんか。",
+      "en": "Would you let me say just one thing?"
+    },
+    {
+      "jp": "電話を使わせてください。",
+      "en": "Please let me use the phone."
+    },
+    {
+      "jp": "すみませんが、娘に先に食べさせてください。",
+      "en": "Sorry, but please let my daughter eat first."
+    },
+    {
+      "jp": "先ほどは失礼しました。改めて自己紹介させてくださいませんか。",
+      "en": "Sorry about earlier. May I introduce myself properly now?"
+    },
+    {
+      "jp": "ちょっと寒いので、上着を取りに戻らせてください。",
+      "en": "It’s a bit cold, so please let me go back to get my jacket."
+    },
+    {
+      "jp": "申し訳ありませんが、代表者に挨拶させてください。",
+      "en": "I’m sorry, but please allow me to greet the representative."
+    },
+    {
+      "jp": "この会議、私たちに発表させていただけますか。",
+      "en": "For this meeting, could you let us present?"
+    },
+    {
+      "jp": "すみません、先に帰らせてください。",
+      "en": "Sorry, please let me leave first."
+    },
+    {
+      "jp": "休憩時間を五分だけ延長させてください。",
+      "en": "Please let me extend the break by just five minutes."
+    },
+    {
+      "jp": "ちょっとだけ、この資料を確認させてください。",
+      "en": "Please let me just quickly check these materials."
+    },
+    {
+      "jp": "部下に先にこさせてください。",
+      "en": "Please let my subordinate come first."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "説明してください。",
+      "en": "Please explain."
+    },
+    {
+      "jp": "写真を撮ってくださいませんか。",
+      "en": "Would you please take a photo?"
+    },
+    {
+      "jp": "先に帰ってもいいですか。",
+      "en": "Is it okay if I leave first?"
+    },
+    {
+      "jp": "彼に説明させるつもりです。",
+      "en": "I plan to make him explain."
+    },
+    {
+      "jp": "ご確認ください。",
+      "en": "Please check."
+    },
+    {
+      "jp": "私は母に野菜を食べさせられた。",
+      "en": "I was made to eat vegetables by my mother."
+    },
+    {
+      "jp": "「一言言わせて」と彼は笑った。",
+      "en": "“Let me say one thing,” he laughed."
+    },
+    {
+      "jp": "その店の名前は「させてください」です。",
+      "en": "The name of that shop is “Sasete Kudasai.”"
+    },
+    {
+      "jp": "お待たせしてすみません。",
+      "en": "Sorry to have kept you waiting."
+    },
+    {
+      "jp": "少しだけ質問させていただきます。",
+      "en": "I will just ask a quick question."
+    }
+  ]
+}

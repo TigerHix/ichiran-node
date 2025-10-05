@@ -2,8 +2,12 @@
 // Port of romanize.lisp
 
 import { CHAR_CLASS_HASH, MODIFIER_CHARACTERS, voiceChar, basicSplit, normalize, simplifyNgrams } from './characters.js';
-import { processHints, stripHints } from './dict-split.js';
-import { dictSegment, simpleSegment, wordInfoStr, WordInfo, getKana, resetCalcScoreCache } from './dict.js';
+import { processHints, stripHints } from './dict/splitDefinitions.js';
+import { dictSegment, simpleSegment, wordInfoStr, WordInfo, simplifyReadingList } from './dict/presentation.js';
+import { initializeIchiran } from './init.js';
+
+// Phase 3: Removed top-level initialization call - using lazy initialization instead
+// initializeIchiran() is now called in functions that need it (romanize, romanizeStar)
 
 // Character class type - in TypeScript these are strings, not symbols
 type CharClass = string;
@@ -581,8 +585,6 @@ async function mapWordInfoKana(
 
   if (Array.isArray(wkana)) {
     // Line 1728: Join and simplify reading list
-    // Import simplifyReadingList from dict.ts
-    const { simplifyReadingList } = await import('./dict.js');
     return simplifyReadingList(wkana.map(fn)).join(separator);
   } else {
     // Line 1729: Single kana string
@@ -653,6 +655,9 @@ export async function romanize(
   input: string,
   options: { method?: RomanizationMethod; withInfo?: boolean } = {}
 ): Promise<{ romanized: string; info?: Array<[string, string]> }> {
+  // Lazy initialization - ensure Ichiran is initialized before using dict functions
+  initializeIchiran();
+
   const method = options.method ?? defaultRomanizationMethod;
   const withInfo = options.withInfo ?? false;
 
@@ -695,6 +700,10 @@ export async function romanize(
   }
 }
 
+export type RomanizeStarResultTokenTuple = [string, WordInfo, any]
+export type RomanizeStarResultSegment = Array<[RomanizeStarResultTokenTuple[], number]>
+export type RomanizeStarResult = (RomanizeStarResultSegment | string)[]
+
 // Line 273-290: defun romanize*
 /**
  * Romanizes text with very detailed metadata
@@ -726,7 +735,10 @@ export async function romanizeStar(
     limit?: number;
     wordpropFn?: (romanized: string, word: WordInfo) => any;
   } = {}
-): Promise<Array<string | Array<[Array<[string, WordInfo, any]>, number]>>> {
+): Promise<RomanizeStarResult> {
+  // Lazy initialization - ensure Ichiran is initialized before using dict functions
+  initializeIchiran();
+
   const method = options.method ?? defaultRomanizationMethod;
   const limit = options.limit ?? 5;
   // Note: Lisp default is (constantly nil), which jsown serializes as []
