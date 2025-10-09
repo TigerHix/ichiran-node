@@ -1,0 +1,328 @@
+{
+  "id": "n5.dare-demo",
+  "label": "だれでも",
+  "level": "N5",
+  "description": "Used to express 'anyone' or 'everyone'; 'no matter who'",
+  "formation": "だれでも + Verb/Adjective/Noun",
+  "priority": 10,
+  "pattern": {
+    "alt": [
+      {
+        "comment": "Single-token forms: 誰でも, 誰にでも, どなたでも (dictionary entries)",
+        "sequence": [
+          {
+            "token": [
+              "text:/^(誰|だれ|どなた)(に)?でも$/"
+            ]
+          },
+          {
+            "optional": {
+              "comment": "Optional case particles after でも (は for contrast, が for emphasis, etc.)",
+              "repeat": {
+                "pattern": {
+                  "token": [
+                    "isParticle"
+                  ]
+                },
+                "min": 0,
+                "max": 2
+              }
+            }
+          },
+          {
+            "comment": "Following phrase (predicate, noun, or expression)",
+            "repeat": {
+              "pattern": {
+                "alt": [
+                  {
+                    "token": [
+                      "isPredicate"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isNominalHead"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isAdverb"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "pos:exp"
+                    ]
+                  }
+                ]
+              },
+              "min": 1,
+              "max": 8
+            }
+          }
+        ]
+      },
+      {
+        "comment": "Workaround for dictionary bug: 誰から is mis-segmented as 誰か + ら",
+        "sequence": [
+          {
+            "token": [
+              "text:/^誰から$/"
+            ]
+          },
+          {
+            "token": [
+              "text:/^でも$/"
+            ]
+          },
+          {
+            "optional": {
+              "comment": "Optional case particles after でも",
+              "repeat": {
+                "pattern": {
+                  "token": [
+                    "isParticle"
+                  ]
+                },
+                "min": 0,
+                "max": 2
+              }
+            }
+          },
+          {
+            "comment": "Following phrase (predicate, noun, or expression)",
+            "repeat": {
+              "pattern": {
+                "alt": [
+                  {
+                    "token": [
+                      "isPredicate"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isNominalHead"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isAdverb"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "pos:exp"
+                    ]
+                  }
+                ]
+              },
+              "min": 1,
+              "max": 8
+            }
+          }
+        ]
+      },
+      {
+        "comment": "Three-token forms: 誰 + と/へ/まで + でも (separate tokens)",
+        "sequence": [
+          {
+            "token": [
+              "text:/^(誰|だれ|どなた)$/"
+            ]
+          },
+          {
+            "token": [
+              "text:/^(と|へ|まで|から)$/",
+              "isParticle"
+            ]
+          },
+          {
+            "token": [
+              "text:/^でも$/"
+            ]
+          },
+          {
+            "optional": {
+              "comment": "Optional case particles after でも",
+              "repeat": {
+                "pattern": {
+                  "token": [
+                    "isParticle"
+                  ]
+                },
+                "min": 0,
+                "max": 2
+              }
+            }
+          },
+          {
+            "comment": "Following phrase (predicate, noun, or expression)",
+            "repeat": {
+              "pattern": {
+                "alt": [
+                  {
+                    "token": [
+                      "isPredicate"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isNominalHead"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "isAdverb"
+                    ]
+                  },
+                  {
+                    "token": [
+                      "pos:exp"
+                    ]
+                  }
+                ]
+              },
+              "min": 1,
+              "max": 8
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "explanation": "### Name\n- 誰でも\n\n### Meaning and function\n- Expresses “anyone/everyone; no matter who.” States that the identity of the person does not matter, or makes a general statement about people in general.\n\n### Form and templates\n- Core\n  - 誰でも + V/い-adj/な-adj/N(だ/です)\n- With case roles\n  - 誰 + case particle + でも + predicate\n  - Common cases: 誰にでも (to anyone), 誰とでも (with anyone), 誰からでも (from anyone), 誰へでも (to anyone, directional), 誰まででも (up to anyone)\n- Selection/indifference\n  - 誰でも + いい/かまわない (anyone is fine/it doesn’t matter who)\n- Particle notes\n  - でも attaches directly to 誰. Do not add が/を after でも (e.g., 誰でもが is ungrammatical).\n  - When a case is needed, put the case particle before でも (e.g., 誰にでも …), not after.\n- Politeness/conjugation\n  - Use plain or です/ます on the predicate as needed; だ/です attach to nominal/adjectival predicates normally.\n- Negative counterpart (different pattern)\n  - To say “no one,” use 誰も + negative (not 誰でも + negative).\n\n### Usage notes and constraints\n- Register and frequency\n  - Neutral and very common; natural in both spoken and written Japanese. Works with plain or polite predicates.\n- Semantics and scope\n  - Typically used in affirmative, potential, habitual, permission, or policy-like statements.\n  - With negative, 誰でも tends to mean “not everyone/anyone” only when contrasted (誰でもは〜ない). For simple “no one,” use 誰も〜ない.\n  - Context can narrow the set (“anyone” within a given group), but the default reading is free choice: identity doesn’t matter.\n- Polite variant\n  - どなたでも is the polite/honorific equivalent, common in notices and customer-facing language.\n- Orthography\n  - だれでも (kana) and 誰でも (kanji) are both acceptable. Kanji is common in adult writing; kana is beginner-friendly.\n\n### Common mistakes (optional, only if relevant)\n- Using 誰でも with a negative to mean “no one.” Correct pattern: 誰も + negative.\n- Adding が/を after でも (e.g., 誰でもが). でも itself occupies the particle slot.\n- Misordering case particles (× 誰でもに). Use 誰にでも, 誰とでも, 誰からでも, etc.\n- Overusing 誰でも in very casual contexts where どなたでも is expected (polite settings).\n\n### Related grammar (optional, only if relevant)\n- 誰も〜ない: “no one/nobody.” Negative polarity form; required for negation.\n- どなたでも: Polite “anyone; no matter who.” Use in formal or customer-facing contexts.\n- 誰だって: Colloquial/emphatic “anyone/everyone,” similar meaning but more informal.\n- 何でも／どこでも／いつでも／どれでも／どのNでも: Parallel “free-choice” forms for things/places/times/choices.",
+  "examples": [
+    {
+      "jp": "誰でも知っている事実だ。",
+      "en": "It’s a fact that everyone knows."
+    },
+    {
+      "jp": "このイベントは誰でも参加できます。",
+      "en": "Anyone can participate in this event."
+    },
+    {
+      "jp": "だれでも間違えることはある。",
+      "en": "Anyone makes mistakes sometimes."
+    },
+    {
+      "jp": "担当はどなたでも大丈夫です。",
+      "en": "Anyone will do for the person in charge."
+    },
+    {
+      "jp": "誰にでも分かりやすい説明を心がけています。",
+      "en": "I try to give explanations that are easy for anyone to understand."
+    },
+    {
+      "jp": "相談は誰からでも受け付けます。",
+      "en": "We accept consultations from anyone."
+    },
+    {
+      "jp": "あなたは誰とでも仲良くなれますか。",
+      "en": "Can you get along with anyone?"
+    },
+    {
+      "jp": "アプリ内なら、招待は誰へでも送れます。",
+      "en": "Within the app, you can send invitations to anyone."
+    },
+    {
+      "jp": "代表は誰でもいいですか。",
+      "en": "Is anyone fine for the role of representative?"
+    },
+    {
+      "jp": "最初は誰でも初心者だ。",
+      "en": "At the start, everyone is a beginner."
+    },
+    {
+      "jp": "それは誰でもはできない。",
+      "en": "Not just anyone can do that."
+    },
+    {
+      "jp": "最新の用語に誰でも詳しいわけではない。",
+      "en": "Not everyone is well-versed in the latest terms."
+    },
+    {
+      "jp": "彼は誰とでもすぐ打ち解けた。",
+      "en": "He quickly became friendly with anyone."
+    },
+    {
+      "jp": "誰でも成功するとは限らない。",
+      "en": "It’s not guaranteed that everyone will succeed."
+    },
+    {
+      "jp": "この席は誰でも使ってかまいません。",
+      "en": "Anyone may use this seat."
+    },
+    {
+      "jp": "これは、誰にでも起こりうるミスです。",
+      "en": "This is a mistake that can happen to anyone."
+    },
+    {
+      "jp": "その噂は、誰からでも耳にする。",
+      "en": "You hear that rumor from anyone."
+    },
+    {
+      "jp": "ここは誰でも入れる図書館だった。",
+      "en": "This was a library that anyone could enter."
+    },
+    {
+      "jp": "ご意見はどなたからでも歓迎しております。",
+      "en": "We welcome feedback from anyone."
+    },
+    {
+      "jp": "だれでもうれしくなるような結果でした。",
+      "en": "It was the kind of result that would make anyone happy."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "誰も来なかった。",
+      "en": "No one came."
+    },
+    {
+      "jp": "誰にも言えない秘密がある。",
+      "en": "I have a secret I can’t tell anyone."
+    },
+    {
+      "jp": "誰とも話さなかった。",
+      "en": "I didn’t talk with anyone."
+    },
+    {
+      "jp": "誰もが知っている歌だ。",
+      "en": "It’s a song everyone knows."
+    },
+    {
+      "jp": "彼が誰かは知らない。",
+      "en": "I don’t know who he is."
+    },
+    {
+      "jp": "コーヒーでも飲みますか。",
+      "en": "Want to have some coffee or something?"
+    },
+    {
+      "jp": "彼は誰にとっても尊敬される人だ。",
+      "en": "He is a person respected by everyone."
+    },
+    {
+      "jp": "たとえ誰であっても、ルールは守るべきだ。",
+      "en": "No matter who you are, you should follow the rules."
+    },
+    {
+      "jp": "「誰でも」は自由選択を表す語だ。",
+      "en": "“Daredemo” is a word that expresses free choice."
+    },
+    {
+      "jp": "誰よりも早く到着した。",
+      "en": "I arrived earlier than anyone else."
+    }
+  ],
+  "startGate": {
+    "near": {
+      "predicates": [
+        "text:/^(誰|だれ|どなた)(に)?でも$/",
+        "text:/^誰から$/",
+        "text:/^でも$/"
+      ],
+      "window": { "left": 0, "right": 4 }
+    }
+  }
+}

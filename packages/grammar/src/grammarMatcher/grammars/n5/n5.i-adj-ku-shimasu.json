@@ -1,0 +1,182 @@
+{
+  "id": "n5.i-adj-ku-shimasu",
+  "label": "～くします",
+  "level": "N5",
+  "description": "い-adjective + する (causative)",
+  "formation": "い-Adjective (remove い) + くします",
+  "priority": 9,
+  "pattern": {
+    "alt": [
+      {
+        "capture": "causative",
+        "pattern": { "sequence": [
+          { "optional": { "repeat": { "pattern": { "macro": "IAdjKu" }, "min": 0, "max": 2 }}},
+          { "macro": "IAdjKuSuru" }
+        ]}
+      },
+      {
+        "capture": "compound",
+        "pattern": { "token": ["isIAdjKuSuruCompound"] }
+      }
+    ]
+  },
+  "explanation": "### Name\n- い形容詞＋くする\n\n### Meaning and function\n- Expresses a deliberate, caused change: “to make/keep [something] [adjective]” or “to adjust [something] to be more/less [adjective].”\n- Transitive counterpart of “become” (〜くなる); the subject intentionally causes the change.\n\n### Form and templates\n- N(thing changed) + を + い-adj(〜く) + する\n- い-adj(〜く) + する (object omitted when obvious from context)\n- Modifier(s) + い-adj(〜く) + する (degree adverbs like もっと, 少し, ずっと may precede the adjective)\n- Conjugation:\n  - する → します (polite), した (past), しない (negative), してください (request), etc.\n  - The adjective uses the 連用形 (adverbial) 〜く form: replace 〜い with 〜く.\n  - Irregular: いい → よく (よくする).\n  - Negative change is possible: い-adj(〜く) + しない (not make), or い-adj(〜く) + しなかった (didn’t make). For explicitly “make not X,” use the negative adverbial 〜くなくする (e.g., “make it not [adjective]”).\n- Particle and order:\n  - を marks the item whose property you change. It can be omitted if understood or when the verb is used more adverbially (“do it [Adj-ly]”).\n- DSL interpretation:\n  - The pattern alternates between analyzing the adjective as “stem + く(連用形)” or as a ready-made 〜く form; both yield い-adj(〜く) + する.\n  - An object phrase with を is optional before the adjective.\n  - Auxiliaries may follow する (most commonly ます for politeness).\n\n### Usage notes and constraints\n- Register: Neutral and very common in both casual (する) and polite (します) speech. Frequent in requests (〜くしてください).\n- Semantics:\n  - Requires an agentive, controllable change to the object’s degree/state (volume, size, length, cleanliness, speed, etc.).\n  - With no explicit object, it can function as “do [something] in an [Adj-ly] way,” depending on context.\n- Scope:\n  - Degree adverbs (もっと, 少し/ちょっと, かなり, ずっと, できるだけ, できる限り) typically modify the adjective before 〜くする.\n- Orthography:\n  - いい→よく is standard; よい/良い is a more formal/orthographic variant but still becomes よく.\n\n### Common mistakes (optional, only if relevant)\n- Using に with い-adjectives (× い-adj＋にする). For い-adjectives, use 〜くする.\n- Leaving the い on the adjective (× 高いくする). Drop い → く.\n- Using が instead of を to mark the item being changed. Use を for the direct object of change.\n- Writing いいくする instead of the irregular よくする.\n- Confusing 〜くする (caused change) with 〜くなる (natural/spontaneous change).\n\n### Related grammar (optional, only if relevant)\n- い-adj＋くなる: Intransitive “become [adjective]” (no explicit causer).\n- な-adj／N＋にする: Caused change with な-adjectives and nouns (静かにする, 部屋をきれいにする).\n- な-adj／N＋になる: Intransitive “become [na-adjective/noun].”\n- V辞書形＋ようにする: “Make an effort to [do]/try to keep it that way,” not a direct property change.",
+  "examples": [
+    {
+      "jp": "部屋を明るくしてください。",
+      "en": "Please make the room brighter."
+    },
+    {
+      "jp": "音量を少し小さくした。",
+      "en": "I turned the volume down a little."
+    },
+    {
+      "jp": "このスープ、もっと熱くしないでください。",
+      "en": "Please don’t make this soup hotter."
+    },
+    {
+      "jp": "髪を短くしてもらえますか。",
+      "en": "Could you cut my hair shorter?"
+    },
+    {
+      "jp": "彼は声を低くして話した。",
+      "en": "He lowered his voice and spoke."
+    },
+    {
+      "jp": "水を冷たくしてあります。",
+      "en": "The water has been made cold (and is ready)."
+    },
+    {
+      "jp": "机の高さを少し低くしよう。",
+      "en": "Let’s make the desk height a bit lower."
+    },
+    {
+      "jp": "カレーを辛くなくしてください。",
+      "en": "Please make the curry not spicy."
+    },
+    {
+      "jp": "返信を遅くしないでください。",
+      "en": "Please don’t delay your reply."
+    },
+    {
+      "jp": "火を強くしすぎないでください。",
+      "en": "Please don’t make the flame too strong."
+    },
+    {
+      "jp": "子どもには優しくしてください。",
+      "en": "Please be kind to the children."
+    },
+    {
+      "jp": "プレゼンをかなり短くしますね。",
+      "en": "I’ll make the presentation quite short."
+    },
+    {
+      "jp": "油を少なくして作ってみます。",
+      "en": "I’ll try making it with less oil."
+    },
+    {
+      "jp": "彼女は髪を明るくしなかった。",
+      "en": "She didn’t lighten her hair."
+    },
+    {
+      "jp": "歩く速度をずっと速くした。",
+      "en": "I made my walking speed much faster."
+    },
+    {
+      "jp": "コーヒーを薄くしておきます。",
+      "en": "I’ll make the coffee weak in advance."
+    },
+    {
+      "jp": "荷物をできるだけ軽くしてください。",
+      "en": "Please make the luggage as light as possible."
+    },
+    {
+      "jp": "このコート、もう少し短くしていいですか。",
+      "en": "May I make this coat a little shorter?"
+    },
+    {
+      "jp": "生活をよくしたい。",
+      "en": "I want to improve my life."
+    },
+    {
+      "jp": "料理はいつも甘くしない。",
+      "en": "I never make my cooking sweet."
+    },
+    {
+      "jp": "よくする。",
+      "en": "I do it often / I make it better."
+    },
+    {
+      "jp": "音を大きくします。",
+      "en": "I'll make the sound louder."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "部屋が明るくなった。",
+      "en": "The room became bright."
+    },
+    {
+      "jp": "部屋をきれいにした。",
+      "en": "I made the room clean."
+    },
+    {
+      "jp": "お茶にしますか。",
+      "en": "Will you have tea?"
+    },
+    {
+      "jp": "写真が大きく見える。",
+      "en": "The photo looks big."
+    },
+    {
+      "jp": "忘れないようにします。",
+      "en": "I try not to forget."
+    },
+    {
+      "jp": "この靴は大きくない。",
+      "en": "These shoes aren’t big."
+    },
+    {
+      "jp": "彼はしっかりしている。",
+      "en": "He is reliable."
+    },
+    {
+      "jp": "パンを薄くスライスしてください。",
+      "en": "Please slice the bread thinly."
+    },
+    {
+      "jp": "速く走ってください。",
+      "en": "Please run fast."
+    },
+    {
+      "jp": "窓を閉めて部屋が暖かくなるようにした。",
+      "en": "I closed the window so that the room would get warm."
+    },
+    {
+      "jp": "勉強します。",
+      "en": "I study."
+    },
+    {
+      "jp": "料理を作ります。",
+      "en": "I make food."
+    },
+    {
+      "jp": "スライスする。",
+      "en": "Slice it."
+    }
+  ]
+  ,
+  "startGate": {
+    "near": {
+      "predicates": [
+        "isIAdjKuForm",
+        "isIAdjKuSuruCompound"
+      ],
+      "window": { "left": 0, "right": 0 }
+    },
+    "anyToken": [
+      "lemma:する",
+      "isIAdjKuSuruCompound"
+    ]
+  }
+}

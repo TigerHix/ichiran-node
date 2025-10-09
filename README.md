@@ -11,43 +11,33 @@ bun run build
 
 ## Configuration
 
-Create a `.env` file in the project root:
-
-```env
-ICHIRAN_DB_URL=postgresql://postgres:password@localhost:6777/jmdict
-ICHIRAN_LISP_CONTAINER=ichiran-main-1
-```
-
-Alternatively, set environment variables directly:
+Set `ICHIRAN_DB_URL`:
 
 ```bash
-export ICHIRAN_DB_URL="postgresql://postgres:password@localhost:6777/jmdict"
+export ICHIRAN_DB_URL="postgresql://postgres:password@localhost:5432/jmdict"
 ```
+
+Or create `.env` file.
 
 ## Usage
 
-### Basic Romanization
+### CLI
 
 ```bash
-node dist/cli.js "こんにちは"
+ichiran-cli "こんにちは"
+# konnichiwa
+
+ichiran-cli -i "今日はいい天気です"
+# with definitions
+
+ichiran-cli -f "text"
+# full JSON
+
+ichiran-cli -l 5 -f "text"
+# 5 alternatives
 ```
 
-Output:
-```
-konnichiwa
-```
-
-### With Dictionary Info
-
-Use the `-i` or `--with-info` flag to display word definitions alongside romanization:
-
-```bash
-node dist/cli.js -i "今日はいい天気です"
-```
-
-Output shows each word with its reading and definition.
-
-### Full JSON Output
+### API
 
 Use the `-f` or `--full` flag to get complete segmentation data as JSON:
 
@@ -114,28 +104,38 @@ node dist/cli.js -f -l 5 "時々" | jq
   - Default database: `jmdict`
 - `ICHIRAN_LISP_CONTAINER`: Docker container name for Lisp CLI comparison tests (optional)
 
+## Packages
+
+Monorepo with 5 packages. See [PACKAGES.md](./PACKAGES.md):
+
+- `@ichiran/core` - segmentation, dict, romanize, connection
+- `@ichiran/grammar` - grammar runtime, predicates, defs
+- `@ichiran/api` - HTTP server
+- `@ichiran/cli` - CLI
+- `@ichiran/data` - DB init/ETL
+
+## Data Loading
+
+See [DATA.md](./DATA.md):
+
+```bash
+ichiran-data init-db
+ichiran-data download
+ichiran-data load-jmdict
+ichiran-data load-kanjidic
+ichiran-data load-conjugations
+ichiran-data load-secondary-conjugations
+ichiran-data load-custom --extra
+ichiran-data apply-errata
+ichiran-data stats
+```
+
 ## Development
 
 ### Run Tests
 
-Tests automatically load configuration from `.env` file:
-
 ```bash
 bun test
-```
-
-Run specific test suites:
-
-```bash
-bun test tests/counters.test.ts
-bun test tests/segmentation.test.ts
-bun test tests/cli-parity.test.ts  # Compares with Lisp CLI output
-```
-
-### Type Checking
-
-```bash
-bun run typecheck
 ```
 
 ### Build

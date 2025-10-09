@@ -1,0 +1,196 @@
+{
+  "id": "n5.i-adj-kute",
+  "label": "～くて",
+  "level": "N5",
+  "description": "い-adjective connective ～くて",
+  "formation": "い-Adjective (remove い) + くて + い-Adjective",
+  "priority": 6,
+  "pattern": {
+    "sequence": [
+      {
+        "capture": "firstAdj",
+        "pattern": {
+          "alt": [
+            {
+              "macro": "IAdjKute"
+            },
+            {
+              "macro": "IAdjKunakute"
+            }
+          ]
+        }
+      },
+      {
+        "optional": {
+          "macro": "PrePredicateAdjuncts"
+        }
+      },
+      {
+        "capture": "tail",
+        "pattern": {
+          "alt": [
+            {
+              "repeat": {
+                "pattern": {
+                  "token": [
+                    "isPredicate"
+                  ]
+                },
+                "min": 1,
+                "max": 8
+              }
+            },
+            {
+              "sequence": [
+                {
+                  "macro": "NP"
+                },
+                {
+                  "token": [
+                    "isPredicate"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "explanation": "### Name\n- い形容詞の〜くて（接続）\n\n### Meaning and function\n- Connects an い-adjective to a following predicate to mean “and” (listing/adding qualities or events)\n- Also marks a background reason or cause leading to the following result (“so/therefore” nuance)\n- Usable both in main clauses and inside noun phrases to chain modifiers\n\n### Form and templates\n- Formation\n  - い-adj → drop い + くて\n  - Negative: い-adj → drop い + くなくて\n  - Irregular: いい → よくて／良くて\n- Core templates (B = the following predicate)\n  - い-adj(〜くて) + い-adj\n  - い-adj(〜くて) + V\n  - い-adj(〜くて) + な-adj + だ／です（as predicate）\n  - い-adj(〜くて) + N + だ／です（as predicate）\n- Inside a noun phrase (modifier chain)\n  - い-adj(〜くて) + い-adj + N\n  - い-adj(〜くて) + な-adj(〜な) + N\n- Chaining\n  - Aい(〜くて) + Bい(〜くて) + C（final predicate）\n  - Only the final predicate carries tense/politeness (past/negative/です・ます)\n- Politeness/tense\n  - Make the sentence polite by using です／ます on the final predicate\n  - Past or negative meaning for the whole sentence is expressed on the final predicate (not on 〜くて)\n\n### Usage notes and constraints\n- Register and frequency\n  - Very frequent and natural in everyday speech and writing\n  - Neutral register; politeness controlled at the sentence end\n- Semantics\n  - “And” listing: adds another quality/event\n  - Cause/result: presents a natural/background reason leading to the next result or reaction\n  - Not for contrast (“but”); use けど／が for contrast\n- Scope/subject\n  - Most natural when the subject/topic continues across the linked parts; explicit subject changes are possible but can sound heavier\n- Compatibility\n  - Only い-adjectives take 〜くて; な-adjectives use 〜で\n  - Negative link for い-adjectives is 〜くなくて (not 〜くてない)\n- Orthography\n  - いい → よくて is standard in kana; 良くて is common in formal writing\n  - ない (in 〜くなくて) is typically written in kana\n\n### Common mistakes (optional, only if relevant)\n- Using 〜くて with な-adjectives (e.g., きれいくて); use な-adj + で\n- Writing 〜かったくて; the first part never takes 〜かった before くて (put tense on the final predicate)\n- Attaching です directly to 〜くて (〜くてです); です belongs to the final predicate\n- Using 〜くて to join nouns; nouns/な-adjectives connect with で (or と for simple coordination of nouns)\n- Confusing 〜くなくて (adj negative connective) with 〜ないで (verb “without doing”)\n\n### Related grammar (optional, only if relevant)\n- な-adj + で: connective for な-adjectives (parallel/cause linkage)\n- Vて（〜て）: verb て-form connector with similar “and/so” functions\n- い-adj(〜く): adverbial form modifying verbs (not a connector)\n- から／ので: explicit reason/cause; often clearer or more formal than 〜くて/〜で\n- 〜し: listing multiple reasons (often adds “and what’s more”)",
+  "examples": [
+    {
+      "jp": "天気がよくて、散歩に出かけました。",
+      "en": "The weather was good, so I went out for a walk."
+    },
+    {
+      "jp": "料理が辛くて、子どもは食べません。",
+      "en": "The food is spicy, so the child won’t eat it."
+    },
+    {
+      "jp": "この部屋は広くて、静かです。",
+      "en": "This room is spacious and quiet."
+    },
+    {
+      "jp": "寒くなくて、助かりました。",
+      "en": "It wasn’t cold, which was a relief."
+    },
+    {
+      "jp": "道が狭くて危ないですか？",
+      "en": "Is the road narrow and dangerous?"
+    },
+    {
+      "jp": "新しくて便利な駅ができて、通勤が楽になりました。",
+      "en": "A new and convenient station was built, and commuting became easier."
+    },
+    {
+      "jp": "朝が早くて、眠いですか？",
+      "en": "Is it early in the morning, and are you sleepy?"
+    },
+    {
+      "jp": "甘くて酸っぱいソースはお好きですか？",
+      "en": "Do you like sweet-and-sour sauce?"
+    },
+    {
+      "jp": "忙しくて、連絡が遅れました。",
+      "en": "I was busy, so my message was late."
+    },
+    {
+      "jp": "暑くて蒸し暑くて、寝つけませんでした。",
+      "en": "It was hot and muggy, so I couldn’t fall asleep."
+    },
+    {
+      "jp": "うれしくて、泣いちゃった。",
+      "en": "I was so happy I ended up crying."
+    },
+    {
+      "jp": "兄は若くて、医者だ。",
+      "en": "My older brother is young and is a doctor."
+    },
+    {
+      "jp": "遅くなくて、間に合った。",
+      "en": "It wasn’t late, so I made it in time."
+    },
+    {
+      "jp": "寒くて、風邪をひいた。",
+      "en": "It was cold, and I caught a cold."
+    },
+    {
+      "jp": "暗くて、鍵穴が見えない。",
+      "en": "It’s dark and I can’t see the keyhole."
+    },
+    {
+      "jp": "音が良くて、驚いた。",
+      "en": "The sound was so good that I was surprised."
+    },
+    {
+      "jp": "背が高くて、目立つ。",
+      "en": "He’s tall and stands out."
+    },
+    {
+      "jp": "部屋は明るくて広い。",
+      "en": "The room is bright and spacious."
+    },
+    {
+      "jp": "眠くなくて、夜更かしした。",
+      "en": "I wasn’t sleepy, so I stayed up late."
+    },
+    {
+      "jp": "暖かくて明るい部屋に住みたい。",
+      "en": "I want to live in a warm, bright room."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "きれいで、広いです。",
+      "en": "It’s clean and spacious."
+    },
+    {
+      "jp": "寒いので、帰ります。",
+      "en": "Because it’s cold, I’m going home."
+    },
+    {
+      "jp": "安いし、便利です。",
+      "en": "It’s cheap and convenient."
+    },
+    {
+      "jp": "早く起きて、散歩した。",
+      "en": "I got up early and took a walk."
+    },
+    {
+      "jp": "明るく、広い部屋が好きです。",
+      "en": "I like bright, spacious rooms."
+    },
+    {
+      "jp": "良くても買いません。",
+      "en": "Even if it’s good, I won’t buy it."
+    },
+    {
+      "jp": "暑くては走れない。",
+      "en": "If it’s hot, I can’t run."
+    },
+    {
+      "jp": "高くないから、買わない。",
+      "en": "It’s not expensive, so I won’t buy it."
+    },
+    {
+      "jp": "「寒いから帰る」と彼は言った。",
+      "en": "He said, “It’s cold, so I’m going home.”"
+    },
+    {
+      "jp": "背が高いのに、バスケットボールはしない。",
+      "en": "He’s tall, but he doesn’t play basketball."
+    }
+  ]
+  ,
+  "startGate": {
+    "near": {
+      "predicates": [
+        "isIAdjKuteForm",
+        "isIAdjKuForm",
+        "lemma:て"
+      ],
+      "window": { "left": 0, "right": 2 }
+    }
+  }
+}

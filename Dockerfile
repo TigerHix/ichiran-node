@@ -32,6 +32,12 @@ COPY jmdict.sql.gz /opt/jmdict.sql.gz
 # Copy application code
 WORKDIR /app
 COPY package.json bun.lock ./
+COPY packages/core/package.json packages/core/
+COPY packages/grammar/package.json packages/grammar/
+COPY packages/api/package.json packages/api/
+COPY packages/data/package.json packages/data/
+COPY packages/cli/package.json packages/cli/
+COPY tsconfig.base.json ./
 RUN bun install --frozen-lockfile
 
 COPY . .

@@ -1,0 +1,23 @@
+{
+  "name": "@ichiran/grammar",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && cp -r src/grammarMatcher/grammars dist/grammarMatcher/",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test tests/"
+  },
+  "dependencies": {
+    "@ichiran/core": "0.0.0"
+  },
+  "sideEffects": false
+}
+

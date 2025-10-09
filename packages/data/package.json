@@ -1,0 +1,30 @@
+{
+  "name": "@ichiran/data",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test tests/"
+  },
+  "bin": {
+    "ichiran-data": "./dist/index.js"
+  },
+  "dependencies": {
+    "@ichiran/core": "0.0.0",
+    "commander": "^12.1.0",
+    "csv-parse": "^6.1.0",
+    "dotenv": "^17.2.3",
+    "fast-xml-parser": "^5.3.0"
+  },
+  "sideEffects": false
+}
+

@@ -1,0 +1,247 @@
+{
+  "id": "n4.i-adj-ku-suru-naru",
+  "label": "～くする・くなる",
+  "level": "N4",
+  "description": "Express a change happening or making something change.",
+  "formation": "い-Adjective (remove い) + く + する/なる",
+  "priority": 10,
+  "pattern": {
+    "alt": [
+      {
+        "comment": "Split tokenization: い-adj + く + (なく) + する/なる",
+        "sequence": [
+          {
+            "optional": {
+              "macro": "PrePredicateAdjuncts"
+            }
+          },
+          {
+            "capture": "adjective",
+            "pattern": {
+              "macro": "IAdjKu"
+            }
+          },
+          {
+            "optional": {
+              "capture": "negative",
+              "pattern": {
+                "alt": [
+                  {
+                    "token": [
+                      "text:なく"
+                    ]
+                  },
+                  {
+                    "sequence": [
+                      {
+                        "token": [
+                          "text:な"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "text:く"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "capture": "verb",
+            "pattern": {
+              "alt": [
+                {
+                  "token": [
+                    "lemma:する"
+                  ]
+                },
+                {
+                  "token": [
+                    "lemma:なる"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "comment": "Fused tokenization: entire compound as one い-adjective token",
+        "sequence": [
+          {
+            "optional": {
+              "macro": "PrePredicateAdjuncts"
+            }
+          },
+          {
+            "capture": "compound",
+            "pattern": {
+              "token": [
+                "isIAdjective",
+                "text:/く(なく)?(な(?!い)|し)/"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "comment": "Ambiguous tokenization: なくする parsed as 無くす verb",
+        "sequence": [
+          {
+            "optional": {
+              "macro": "PrePredicateAdjuncts"
+            }
+          },
+          {
+            "capture": "adjective",
+            "pattern": {
+              "macro": "IAdjKu"
+            }
+          },
+          {
+            "capture": "verb",
+            "pattern": {
+              "token": [
+                "lemma:無くす",
+                "text:/^なく(し|さ|す)/"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "explanation": "### Name\n- い形容詞＋くなる・くする（変化）\n\n### Meaning and function\n- くなる: Something becomes/gets more/less X (intransitive change of state)\n- くする: Someone/something makes something X; adjusts to X (transitive, caused change)\n\n### Form and templates\n- Core\n  - N(が/は) + い-adj(〜く) + なる\n  - N1(は/が) + N2(を) + い-adj(〜く) + する\n- Negative change\n  - N(が/は) + い-adj(〜くなく) + なる\n  - N1(は/が) + N2(を) + い-adj(〜くなく) + する\n- Polite/past/negative of する・なる\n  - 〜くなります／〜くしました\n  - 〜くなった／〜くした\n  - 〜くならない／〜くしない（「〜くしない」は“Xにしない”という行為否定で、「〜くなくする」（Xでないようにする）と意味が異なる）\n- Degree/graduality adverbs (placed before 〜くなる／〜くする)\n  - だんだん（段々）, 少し（すこし）, もっと, さらに, ずっと, だいぶ（大分）, かなり, どんどん, ますます\n- Tools/means (with くする)\n  - 手段・道具＋で + N(を) + い-adj(〜く) + する\n- Conjugation note\n  - い-adj adverbial (連用形) is 〜く. いい→よく になる/する\n\n### Usage notes and constraints\n- なる vs する\n  - なる: no direct object; describes a state change (often natural or resulting).\n  - する: takes を-marked object; indicates intentional adjustment or caused change (settings, sizes, temperatures, volumes, etc.).\n- Register/naturalness\n  - Neutral and common in both spoken and written Japanese. Polite forms with 〜ます are frequent in instructions/explanations.\n- Semantic scope\n  - Works with gradable qualities (大きい/小さい, 早い/遅い, 高い/低い, 新しい/古い, 明るい/暗い, うるさい/静かい→静か is な形; use に).\n  - For “become/make not X,” use 〜くなくなる／〜くなくする.\n- Aspect options (common extensions)\n  - 〜くなってくる: change has progressed up to now.\n  - 〜くなっていく: change will progress from now on.\n- Orthographic variants\n  - だんだん／段々, 少し／すこし, だいぶ／大分, ますます／益々（kanji less common in modern writing）\n  - いい→よく (spelling change in the 〜く form)\n- Formation contrast\n  - い-adj use 〜く; な-adj・N use 〜に（〜になる／〜にする）. Do not use に with い-adj.\n\n### Common mistakes (optional, only if relevant)\n- Using に with い-adj (× 早いにする／なる): must be 〜くする／〜くなる.\n- Omitting を with くする when specifying the affected thing, or wrongly adding を with くなる.\n- Saying 〜くないする instead of 〜くなくする for “make not X.”\n- Confusing 〜くしない (“not do the act of making X”) with 〜くなくする (“actively make it not X”).\n- Inflecting いい as いくなる／いくする; it must be よくなる／よくする.\n\n### Related grammar (optional, only if relevant)\n- な-adj/N + になる・にする: Same meaning with な形容詞・名詞; use に (きれいにする／学生になる).\n- V(辞書形)ようになる／V(ない形)ようにする: Change in ability/habit vs making an effort to achieve/avoid an action.\n- 〜てくる／〜ていく with くなる: Emphasizes change toward the present/future over time.\n- 〜すぎる（い-adj: 〜く + すぎる）: Degree (too X), not a change-of-state verb, but uses the same 連用形 〜く.",
+  "examples": [
+    {
+      "jp": "だんだん寒くなってきた。",
+      "en": "It has gradually gotten cold."
+    },
+    {
+      "jp": "このパソコンはもっと速くなりましたか。",
+      "en": "Has this computer gotten faster?"
+    },
+    {
+      "jp": "スープを少し薄くしてください。",
+      "en": "Please make the soup a little milder."
+    },
+    {
+      "jp": "私は部屋を明るくした。",
+      "en": "I made the room brighter."
+    },
+    {
+      "jp": "エアコンで部屋を涼しくしてもいいですか。",
+      "en": "May I make the room cooler with the AC?"
+    },
+    {
+      "jp": "夜になるとこの道は暗くなる。",
+      "en": "This road gets dark at night."
+    },
+    {
+      "jp": "子どもが大きくなったので、靴を新しくした。",
+      "en": "Since the child grew, I got new shoes."
+    },
+    {
+      "jp": "そのシャツをもう少し短くしてもらえますか。",
+      "en": "Could you make that shirt a bit shorter?"
+    },
+    {
+      "jp": "音がうるさくならないように、音量を低くしたほうがいいですか。",
+      "en": "To keep it from getting loud, should I turn the volume down?"
+    },
+    {
+      "jp": "説明がだいぶ分かりやすくなってきました。",
+      "en": "The explanation has become much easier to understand."
+    },
+    {
+      "jp": "水をあまり冷たくしないでください。",
+      "en": "Please don't make the water too cold."
+    },
+    {
+      "jp": "この時計は段々遅くなっていく。",
+      "en": "This watch keeps getting slower."
+    },
+    {
+      "jp": "砂糖を入れたら、味が甘くなった。",
+      "en": "After adding sugar, the taste became sweeter."
+    },
+    {
+      "jp": "その問題は思ったほどやさしくならなかった。",
+      "en": "That problem didn't become as easy as I expected."
+    },
+    {
+      "jp": "朝は空気がすこし冷たくなります。",
+      "en": "In the morning, the air gets a little colder."
+    },
+    {
+      "jp": "熱を下げるために、氷で飲み物を少し冷たくした。",
+      "en": "To reduce my fever, I made the drink a little colder with ice."
+    },
+    {
+      "jp": "昔より耳がよくなった気がする。",
+      "en": "I feel my hearing has gotten better than before."
+    },
+    {
+      "jp": "牛乳でカレーを辛くなくしました。",
+      "en": "I made the curry not spicy by adding milk."
+    },
+    {
+      "jp": "今日は風がますます強くなっている。",
+      "en": "The wind is getting stronger and stronger today."
+    },
+    {
+      "jp": "価格は安くなくなりました。",
+      "en": "The price is no longer cheap."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "部屋をきれいにする。",
+      "en": "I will make the room clean."
+    },
+    {
+      "jp": "この服は安く見える。",
+      "en": "These clothes look cheap."
+    },
+    {
+      "jp": "その店は遅くまで開いていた。",
+      "en": "That shop was open until late."
+    },
+    {
+      "jp": "前髪を短く切った。",
+      "en": "I cut my bangs short."
+    },
+    {
+      "jp": "来年、弟は医者になる。",
+      "en": "Next year, my younger brother will become a doctor."
+    },
+    {
+      "jp": "ますます寒い。",
+      "en": "It’s even colder."
+    },
+    {
+      "jp": "その音は小さくはない。",
+      "en": "That sound is not exactly low in volume."
+    },
+    {
+      "jp": "朝から気分がよくない。",
+      "en": "I haven’t felt well since this morning."
+    },
+    {
+      "jp": "この道は暗いので危ない。",
+      "en": "This road is dark, so it’s dangerous."
+    }
+  ],
+  "startGate": {
+    "near": {
+      "predicates": [
+        "isIAdjKuForm",
+        "text:/く(なく)?(な(?!い)|なって|し)/"
+      ],
+      "window": { "left": 0, "right": 8 }
+    }
+  }
+}

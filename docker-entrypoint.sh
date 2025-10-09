@@ -107,7 +107,7 @@ fi
 # Start Node.js application
 echo "[$(date +%T)] Starting Ichiran API server..."
 cd /app
-node dist/server.js &
+node packages/api/dist/index.js &
 NODEJS_PID=$!
 echo "[$(date +%T)] Node.js started with PID: $NODEJS_PID"
 
