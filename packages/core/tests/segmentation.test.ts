@@ -1,7 +1,7 @@
 // Segmentation tests - ported from tests.lisp
 import { describe, test, expect } from 'bun:test';
 import { simpleSegment } from '@ichiran/core';
-import { setupTests, extractTexts } from './test-setup.js';
+import { setupTests, extractTexts } from '../../../test-utils/test-setup.js';
 import { readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';

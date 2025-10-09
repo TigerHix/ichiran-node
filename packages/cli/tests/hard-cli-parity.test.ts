@@ -1,6 +1,6 @@
 // Hard CLI Parity Tests - Complex auxiliary verb chains
 import { describe, test, expect } from 'bun:test';
-import { setupTests } from './test-setup.js';
+import { setupTests } from '../../../test-utils/test-setup.js';
 import {
   loadParityTestData,
   runTsCli,

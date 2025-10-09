@@ -1,7 +1,7 @@
 // Conjugation tests - ported from tests.lisp
 import { describe, test, expect } from 'bun:test';
 import { getConnection } from '@ichiran/core';
-import { setupTests } from './test-setup.js';
+import { setupTests } from '../../../test-utils/test-setup.js';
 import type { Conjugation } from '@ichiran/core';
 
 setupTests();

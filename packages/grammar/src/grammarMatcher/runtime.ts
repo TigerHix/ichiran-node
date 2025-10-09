@@ -222,47 +222,6 @@ async function passesStartGates(compiled: CompiledGrammar, tokens: Token[], star
 }
 
 /**
- * Check if a token is a stop mark (important punctuation to keep).
- * Stop marks include sentence boundaries and quotation marks.
- * Handles both Japanese and normalized (Western) punctuation.
- */
-function isStopMark(token: Token): boolean {
-  // Trim the token text to handle cases like ' " with spaces
-  const text = token.text.trim();
-  // Include both Japanese and Western variants since tokenizer normalizes punctuation
-  const stopMarks = [
-    '。', '.', // Period (Japanese and Western)
-    '！', '!', // Exclamation mark
-    '？', '?', // Question mark
-    '「', '」', '『', '』', // Japanese quotes
-    '（', '）', '(', ')', // Parentheses
-    '【', '】', '［', '］', '"', '\'', // Other brackets and quotes
-  ];
-  return stopMarks.includes(text);
-}
-
-/**
- * Check if a token is punctuation/whitespace (has no POS and no word info).
- */
-function isPunctuation(token: Token): boolean {
-  return !token.grammarInfo?.partOfSpeech && !token.wordInfo;
-}
-
-/**
- * Filter out non-stop-mark punctuation tokens from a token array.
- * Keeps: normal tokens, stop marks
- * Removes: commas, whitespace, and other non-stop-mark punctuation
- */
-function filterNonStopMarkPunctuation(tokens: Token[]): Token[] {
-  return tokens.filter(token => {
-    // Keep all non-punctuation tokens
-    if (!isPunctuation(token)) return true;
-    // For punctuation, only keep stop marks
-    return isStopMark(token);
-  });
-}
-
-/**
  * Match grammars against a single sentence's tokens.
  * Assumes tokens represent a single sentence (no sentence splitting done here).
  * 
@@ -291,9 +250,6 @@ export async function matchGrammars(tokens: Token[], grammars: CompiledGrammar[]
       if (compiled.minTokens && remaining < compiled.minTokens) continue;
       // Start gates optimization (async, full predicates)
       if (!(await passesStartGates(compiled, tokens, i))) continue;
-      // Do not start matches on punctuation/stop marks
-      const startToken = tokens[i];
-      if (isPunctuation(startToken)) continue;
 
       const matcherStart = GRAMMAR_PROFILE ? performance.now() : 0;
       const outcomes = await matcher(tokens, i);
@@ -380,11 +336,14 @@ function buildSegmentsFromTokens(
   let currentPos = 0;
   
   for (const capture of sortedCaptures) {
-    // Find this capture in unfiltered tokens
-    const captureStart = unfilteredTokens.indexOf(capture.tokens[0]);
-    if (captureStart < 0) continue;
+    // Use capture indices directly since captures reference the same token array
+    const captureStart = capture.start;
+    const captureEnd = capture.end;
     
-    const captureEnd = captureStart + capture.tokens.length;
+    // Validate that the capture is within bounds
+    if (captureStart < 0 || captureEnd > unfilteredTokens.length) {
+      continue;
+    }
     
     // Add raw text before capture
     if (currentPos < captureStart) {
@@ -559,15 +518,14 @@ export async function matchSentence(text: string, defs: GrammarDefinition[], opt
     
     // Try matching each segmentation alternative for this sentence
     for (const alternative of alternatives) {
-      // Filter out non-stop-mark punctuation (commas, etc.) to simplify pattern matching
-      const filteredTokens = filterNonStopMarkPunctuation(alternative.tokens);
+      const tokens = alternative.tokens;
       if (currentProfile) {
-        currentProfile.filteredTokenCounts.push(filteredTokens.length);
+        currentProfile.filteredTokenCounts.push(tokens.length);
         currentProfile.unfilteredTokenCounts.push(alternative.tokens.length);
       }
       
       // Pass unfiltered tokens for proper sentence context
-      const hits = await matchGrammars(filteredTokens, grammars, options, alternative.tokens);
+      const hits = await matchGrammars(tokens, grammars, options, alternative.tokens);
       const prioritySum = hits.reduce((sum, hit) => {
         const priority = grammars.find(g => g.def.id === hit.grammarId)?.def.priority ?? 0;
         return sum + priority;
@@ -763,78 +721,88 @@ export async function analyzeSentence(
     alternativeIndex: number;
   }
   
+  const sentenceProcessingResults = await Promise.all(
+    sentenceResults.map(async ({ alternatives, transformedResult }) => {
+      if (alternatives.length === 0) {
+        return { hits: [], tokens: [], segments: [], alternativesTried: 0, profileData: { filteredTokenCounts: [], unfilteredTokenCounts: [] } };
+      }
+      
+      const profileData = { filteredTokenCounts: [] as number[], unfilteredTokenCounts: [] as number[] };
+      
+      // Try matching each segmentation alternative for this sentence
+      const results: ScoredResult[] = await Promise.all(
+        alternatives.map(async (alternative, altIdx) => {
+          const tokens = alternative.tokens;
+          if (currentProfile) {
+            profileData.filteredTokenCounts.push(tokens.length);
+            profileData.unfilteredTokenCounts.push(alternative.tokens.length);
+          }
+          
+          const hits = await matchGrammars(tokens, grammars, options, alternative.tokens);
+          const prioritySum = hits.reduce((sum, hit) => {
+            const priority = grammars.find(g => g.def.id === hit.grammarId)?.def.priority ?? 0;
+            return sum + priority;
+          }, 0);
+          
+          return {
+            hits,
+            matchCount: hits.length,
+            prioritySum,
+            segmentationScore: alternative.score,
+            alternativeIndex: altIdx,
+          };
+        })
+      );
+      
+      // Find the best result for this sentence
+      let best = results[0];
+      for (const result of results) {
+        if (result.matchCount > best.matchCount) {
+          best = result;
+        } else if (result.matchCount === best.matchCount) {
+          if (result.prioritySum > best.prioritySum) {
+            best = result;
+          } else if (result.prioritySum === best.prioritySum && result.segmentationScore > best.segmentationScore) {
+            best = result;
+          }
+        }
+      }
+      
+      const bestAlternative = alternatives[best.alternativeIndex];
+      const bestSegmentation: TransformedRomanizeStarResult = transformedResult.map((segment) => {
+        if (typeof segment === 'string') {
+          return segment;
+        } else if (Array.isArray(segment) && segment.length > 0) {
+          return [segment[0]];
+        }
+        return segment;
+      });
+      
+      return {
+        hits: best?.hits || [],
+        tokens: bestAlternative?.tokens || [],
+        segments: bestSegmentation,
+        alternativesTried: alternatives.length,
+        profileData,
+      };
+    })
+  );
+  
+  // Aggregate results
   const allHits: MatchHit[] = [];
   const allSegments: TransformedRomanizeStarResult = [];
   const allTokens: Token[] = [];
   
-  for (const { alternatives, transformedResult } of sentenceResults) {
-    if (alternatives.length === 0) continue;
+  for (const result of sentenceProcessingResults) {
+    allHits.push(...result.hits);
+    allTokens.push(...result.tokens);
+    allSegments.push(...result.segments);
     
     if (currentProfile) {
-      currentProfile.alternativesTried += alternatives.length;
+      currentProfile.alternativesTried += result.alternativesTried;
+      currentProfile.filteredTokenCounts.push(...result.profileData.filteredTokenCounts);
+      currentProfile.unfilteredTokenCounts.push(...result.profileData.unfilteredTokenCounts);
     }
-    
-    const results: ScoredResult[] = [];
-    
-    // Try matching each segmentation alternative for this sentence
-    for (let altIdx = 0; altIdx < alternatives.length; altIdx++) {
-      const alternative = alternatives[altIdx];
-      const filteredTokens = filterNonStopMarkPunctuation(alternative.tokens);
-      if (currentProfile) {
-        currentProfile.filteredTokenCounts.push(filteredTokens.length);
-        currentProfile.unfilteredTokenCounts.push(alternative.tokens.length);
-      }
-      
-      const hits = await matchGrammars(filteredTokens, grammars, options, alternative.tokens);
-      const prioritySum = hits.reduce((sum, hit) => {
-        const priority = grammars.find(g => g.def.id === hit.grammarId)?.def.priority ?? 0;
-        return sum + priority;
-      }, 0);
-      
-      results.push({
-        hits,
-        matchCount: hits.length,
-        prioritySum,
-        segmentationScore: alternative.score,
-        alternativeIndex: altIdx,
-      });
-    }
-    
-    // Find the best result for this sentence
-    let best = results[0];
-    for (const result of results) {
-      if (result.matchCount > best.matchCount) {
-        best = result;
-      } else if (result.matchCount === best.matchCount) {
-        if (result.prioritySum > best.prioritySum) {
-          best = result;
-        } else if (result.prioritySum === best.prioritySum && result.segmentationScore > best.segmentationScore) {
-          best = result;
-        }
-      }
-    }
-    
-    // Add this sentence's best matches to overall results
-    if (best?.hits) {
-      allHits.push(...best.hits);
-    }
-    
-    // Add this sentence's best tokens
-    const bestAlternative = alternatives[best.alternativeIndex];
-    if (bestAlternative) {
-      allTokens.push(...bestAlternative.tokens);
-    }
-    
-    // Add this sentence's segmentation (using best alternative)
-    const bestSegmentation: TransformedRomanizeStarResult = transformedResult.map((segment) => {
-      if (typeof segment === 'string') {
-        return segment;
-      } else if (Array.isArray(segment) && segment.length > 0) {
-        return [segment[0]];
-      }
-      return segment;
-    });
-    allSegments.push(...bestSegmentation);
   }
   
   // Build grammar details map for all matched patterns

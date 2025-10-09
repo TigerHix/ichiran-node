@@ -3,20 +3,26 @@
  */
 
 import { describe, test, expect, beforeAll } from 'bun:test';
-import { setupTests } from './test-setup.js';
+import { setupTests } from '../../../test-utils/test-setup.js';
 import { getConnection } from '@ichiran/core';
 import {
   getAllReadings,
   conjugateEntryInner,
 } from '../src/data/conjugate.js';
 import { loadAllConjugationRules } from '../src/data/conj-rules.js';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const DATA_PATH = join(__dirname, '../../../data');
 
 setupTests();
 
 describe('Conjugation Generation', () => {
   beforeAll(() => {
     // Ensure conjugation rules are loaded
-    loadAllConjugationRules('../../data');
+    loadAllConjugationRules(DATA_PATH);
   });
 
   test('getAllReadings fetches readings for an entry', async () => {

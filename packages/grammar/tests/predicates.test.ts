@@ -1,5 +1,5 @@
 import { describe, test, expect, beforeAll } from 'bun:test';
-import { setupTests } from './test-setup.js';
+import { setupTests } from '../../../test-utils/test-setup.js';
 import { resolvePredicate } from '../src/grammarMatcher/predicates.js';
 import type { Token, PredicateContext } from '@ichiran/grammar';
 import type { IchiranPos } from '../src/grammarMatcher/pos.js';

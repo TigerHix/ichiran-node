@@ -2,7 +2,7 @@ import { ConjInfoJson, WordInfoGlossJson } from "@ichiran/core"
 import { WordInfo } from "@ichiran/core"
 import { TransformedRomanizeStarResult, TransformedRomanizeStarResultTokenTuple } from "@ichiran/core"
 import { RomanizeStarResult, RomanizeStarResultTokenTuple } from "@ichiran/core"
-import { IchiranPos } from "./pos"
+import { IchiranPos } from "./pos.js"
 
 export interface TransformedRomanizeStarToken {
     word: string

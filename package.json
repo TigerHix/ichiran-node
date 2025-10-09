@@ -10,8 +10,8 @@
   "scripts": {
     "build": "cd packages/core && bun run build && cd ../grammar && bun run build && cd ../api && bun run build && cd ../cli && bun run build && cd ../data && bun run build",
     "typecheck": "cd packages/core && bun run typecheck && cd ../grammar && bun run typecheck && cd ../api && bun run typecheck && cd ../cli && bun run typecheck && cd ../data && bun run typecheck",
-    "test": "cd packages/core && bun test tests/ && cd ../grammar && bun test tests/ && cd ../cli && bun test tests/ && cd ../data && bun test tests/",
-    "test:watch": "bun test --watch",
+    "test": "bun test packages/*/tests/",
+    "test:watch": "bun test --watch packages/*/tests/",
     "cli": "node packages/cli/dist/index.js",
     "dev": "tsx --watch --env-file=.env packages/api/src/index.ts",
     "data": "node packages/data/dist/index.js"

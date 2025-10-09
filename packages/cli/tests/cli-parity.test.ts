@@ -1,6 +1,6 @@
 // CLI Parity Tests - Compare TypeScript CLI output with Lisp CLI output
 import { describe, test, expect } from 'bun:test';
-import { setupTests } from './test-setup.js';
+import { setupTests } from '../../../test-utils/test-setup.js';
 import {
   loadParityTestData,
   runTsCli,

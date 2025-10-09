@@ -2,6 +2,10 @@
 
 Node.js/TypeScript port of [Ichiran](https://github.com/tshatrov/ichiran) - Japanese text segmentation and analysis library.
 
+## Warning!
+
+The data loader has not been ported correctly yet. You must already have a [ichiran](https://github.com/tshatrov/ichiran)-populated PostgreSQL database.
+
 ## Installation
 
 ```bash

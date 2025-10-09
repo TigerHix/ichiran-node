@@ -14,10 +14,16 @@ import {
   SYNTHETIC_POS_CODES
 } from '../src/data/conj-rules.js';
 import { getConjDescription } from '@ichiran/core';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const DATA_PATH = join(__dirname, '../../../data');
 
 describe('Conjugation Rules', () => {
   test('loads POS index correctly', () => {
-    loadAllConjugationRules('../../data');
+    loadAllConjugationRules(DATA_PATH);
 
     // Check some known POS codes
     expect(getPosIndex('adj-i')).toBe(1);
@@ -31,7 +37,7 @@ describe('Conjugation Rules', () => {
   });
 
   test('loads conjugation descriptions', () => {
-    loadAllConjugationRules('../../data');
+    loadAllConjugationRules(DATA_PATH);
 
     expect(getConjDescription(1)).toBe('Non-past');
     expect(getConjDescription(2)).toBe('Past (~ta)');
@@ -40,7 +46,7 @@ describe('Conjugation Rules', () => {
   });
 
   test('loads conjugation rules', () => {
-    loadAllConjugationRules('../../data');
+    loadAllConjugationRules(DATA_PATH);
 
     const adjIRules = getConjRules(1); // adj-i
     expect(adjIRules.length).toBeGreaterThan(0);
@@ -56,7 +62,7 @@ describe('Conjugation Rules', () => {
   });
 
   test('constructs adj-i conjugations correctly', () => {
-    loadAllConjugationRules('../../data');
+    loadAllConjugationRules(DATA_PATH);
 
     // Test 高い (takai, "tall/high")
     const word = '高い';
@@ -75,7 +81,7 @@ describe('Conjugation Rules', () => {
   });
 
   test('constructs v5r conjugations correctly', () => {
-    loadAllConjugationRules('../../data');
+    loadAllConjugationRules(DATA_PATH);
 
     // Test 走る (hashiru, "to run")
     const word = '走る';
@@ -91,7 +97,7 @@ describe('Conjugation Rules', () => {
   });
 
   test('constructs v1 conjugations correctly', () => {
-    loadAllConjugationRules('../../data');
+    loadAllConjugationRules(DATA_PATH);
 
     // Test 食べる (taberu, "to eat")
     const word = '食べる';
@@ -112,7 +118,7 @@ describe('Conjugation Rules', () => {
   });
 
   test('handles hiragana words correctly', () => {
-    loadAllConjugationRules('../../data');
+    loadAllConjugationRules(DATA_PATH);
 
     // Test たかい (takai in hiragana)
     const word = 'たかい';
@@ -127,7 +133,7 @@ describe('Conjugation Rules', () => {
   });
 
   test('POS_WITH_CONJ_RULES contains valid POS codes', () => {
-    loadAllConjugationRules('../../data');
+    loadAllConjugationRules(DATA_PATH);
 
     for (const pos of POS_WITH_CONJ_RULES) {
       // Skip validation for synthetic POS codes that don't exist in kwpos.csv

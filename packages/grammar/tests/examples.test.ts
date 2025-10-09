@@ -1,7 +1,7 @@
 import { describe, test, expect } from 'bun:test';
 import { matchSentence } from '@ichiran/grammar';
 import type { GrammarDefinition } from '@ichiran/grammar';
-import { setupTests } from './test-setup.js';
+import { setupTests } from '../../../test-utils/test-setup.js';
 import { readFileSync, readdirSync, statSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
