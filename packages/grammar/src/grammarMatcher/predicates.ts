@@ -460,6 +460,7 @@ const predicateFactories: Record<string, (arg?: string) => AsyncPredicateFn> = {
     const text = token.text;
     const kana = normalizeKana(token.wordInfo?.kana);
     const pos = toArray(token.grammarInfo?.partOfSpeech);
+    const conjugations = toArray(token.grammarInfo?.conjugations);
 
     // Must be a verb-like token
     const isVerbLike = pos.some(p =>
@@ -472,7 +473,24 @@ const predicateFactories: Record<string, (arg?: string) => AsyncPredicateFn> = {
     // Check for くし pattern (ku + shi from suru)
     // OR くなくし pattern (ku + naku + shi for double negative)
     const containsKuShi = text.includes('くし') || kana.some(k => k.includes('くし'));
-    return containsKuShi;
+    if (!containsKuShi) return false;
+
+    // Additional check: must have conjugation data that links to する
+    // This prevents false positives like 拍手 (はくしゅ) which contains くし but is not a くする form
+    if (conjugations.length === 0) {
+      // No conjugation data - reject unless this looks like a compound that ends with する conjugation
+      // Check if text ends with する-like patterns (した, して, します, etc.)
+      const endsWithSuruForm = /[くく](?:し|す|せ|さ)[あいうえおんたてますだでだったれろよかっきけくなどもば]/.test(text);
+      if (!endsWithSuruForm) return false;
+    }
+
+    // If we have conjugation data, verify at least one has lemma する
+    if (conjugations.length > 0) {
+      const hasSuruLemma = conjugations.some(c => c.word === 'する');
+      if (!hasSuruLemma) return false;
+    }
+
+    return true;
   },
   isVerbStemOrAuxiliary: () => async (token) => {
     // Matches verb stems (masu-stem), verb suffixes, noun+suru compounds, OR auxiliaries

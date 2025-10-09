@@ -12,6 +12,7 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json && cp -r src/grammarMatcher/grammars dist/grammarMatcher/",
+    "build:watch": "concurrently \"tsc -p tsconfig.json --watch\" \"chokidar 'src/grammarMatcher/grammars/**/*.json' -c 'cp -r src/grammarMatcher/grammars dist/grammarMatcher/' --initial\"",
     "typecheck": "tsc --noEmit",
     "test": "bun test tests/"
   },

@@ -11,53 +11,62 @@
         "comment": "Single-token forms: 誰でも, 誰にでも, どなたでも (dictionary entries)",
         "sequence": [
           {
-            "token": [
-              "text:/^(誰|だれ|どなた)(に)?でも$/"
-            ]
+            "capture": "daredemo",
+            "pattern": {
+              "token": [
+                "text:/^(誰|だれ|どなた)(に)?でも$/"
+              ]
+            }
           },
           {
             "optional": {
-              "comment": "Optional case particles after でも (は for contrast, が for emphasis, etc.)",
-              "repeat": {
-                "pattern": {
-                  "token": [
-                    "isParticle"
-                  ]
-                },
-                "min": 0,
-                "max": 2
+              "capture": "particles",
+              "pattern": {
+                "comment": "Optional case particles after でも (は for contrast, が for emphasis, etc.)",
+                "repeat": {
+                  "pattern": {
+                    "token": [
+                      "isParticle"
+                    ]
+                  },
+                  "min": 0,
+                  "max": 2
+                }
               }
             }
           },
           {
-            "comment": "Following phrase (predicate, noun, or expression)",
-            "repeat": {
-              "pattern": {
-                "alt": [
-                  {
-                    "token": [
-                      "isPredicate"
-                    ]
-                  },
-                  {
-                    "token": [
-                      "isNominalHead"
-                    ]
-                  },
-                  {
-                    "token": [
-                      "isAdverb"
-                    ]
-                  },
-                  {
-                    "token": [
-                      "pos:exp"
-                    ]
-                  }
-                ]
-              },
-              "min": 1,
-              "max": 8
+            "capture": "predicate",
+            "pattern": {
+              "comment": "Following phrase (predicate, noun, or expression)",
+              "repeat": {
+                "pattern": {
+                  "alt": [
+                    {
+                      "token": [
+                        "isPredicate"
+                      ]
+                    },
+                    {
+                      "token": [
+                        "isNominalHead"
+                      ]
+                    },
+                    {
+                      "token": [
+                        "isAdverb"
+                      ]
+                    },
+                    {
+                      "token": [
+                        "pos:exp"
+                      ]
+                    }
+                  ]
+                },
+                "min": 1,
+                "max": 8
+              }
             }
           }
         ]
@@ -66,58 +75,70 @@
         "comment": "Workaround for dictionary bug: 誰から is mis-segmented as 誰か + ら",
         "sequence": [
           {
-            "token": [
-              "text:/^誰から$/"
-            ]
+            "capture": "darekara",
+            "pattern": {
+              "token": [
+                "text:/^誰から$/"
+              ]
+            }
           },
           {
-            "token": [
-              "text:/^でも$/"
-            ]
+            "capture": "demo",
+            "pattern": {
+              "token": [
+                "text:/^でも$/"
+              ]
+            }
           },
           {
             "optional": {
-              "comment": "Optional case particles after でも",
-              "repeat": {
-                "pattern": {
-                  "token": [
-                    "isParticle"
-                  ]
-                },
-                "min": 0,
-                "max": 2
+              "capture": "particles",
+              "pattern": {
+                "comment": "Optional case particles after でも",
+                "repeat": {
+                  "pattern": {
+                    "token": [
+                      "isParticle"
+                    ]
+                  },
+                  "min": 0,
+                  "max": 2
+                }
               }
             }
           },
           {
-            "comment": "Following phrase (predicate, noun, or expression)",
-            "repeat": {
-              "pattern": {
-                "alt": [
-                  {
-                    "token": [
-                      "isPredicate"
-                    ]
-                  },
-                  {
-                    "token": [
-                      "isNominalHead"
-                    ]
-                  },
-                  {
-                    "token": [
-                      "isAdverb"
-                    ]
-                  },
-                  {
-                    "token": [
-                      "pos:exp"
-                    ]
-                  }
-                ]
-              },
-              "min": 1,
-              "max": 8
+            "capture": "predicate",
+            "pattern": {
+              "comment": "Following phrase (predicate, noun, or expression)",
+              "repeat": {
+                "pattern": {
+                  "alt": [
+                    {
+                      "token": [
+                        "isPredicate"
+                      ]
+                    },
+                    {
+                      "token": [
+                        "isNominalHead"
+                      ]
+                    },
+                    {
+                      "token": [
+                        "isAdverb"
+                      ]
+                    },
+                    {
+                      "token": [
+                        "pos:exp"
+                      ]
+                    }
+                  ]
+                },
+                "min": 1,
+                "max": 8
+              }
             }
           }
         ]
@@ -126,64 +147,79 @@
         "comment": "Three-token forms: 誰 + と/へ/まで + でも (separate tokens)",
         "sequence": [
           {
-            "token": [
-              "text:/^(誰|だれ|どなた)$/"
-            ]
+            "capture": "dare",
+            "pattern": {
+              "token": [
+                "text:/^(誰|だれ|どなた)$/"
+              ]
+            }
           },
           {
-            "token": [
-              "text:/^(と|へ|まで|から)$/",
-              "isParticle"
-            ]
+            "capture": "caseParticle",
+            "pattern": {
+              "token": [
+                "text:/^(と|へ|まで|から)$/",
+                "isParticle"
+              ]
+            }
           },
           {
-            "token": [
-              "text:/^でも$/"
-            ]
+            "capture": "demo",
+            "pattern": {
+              "token": [
+                "text:/^でも$/"
+              ]
+            }
           },
           {
             "optional": {
-              "comment": "Optional case particles after でも",
-              "repeat": {
-                "pattern": {
-                  "token": [
-                    "isParticle"
-                  ]
-                },
-                "min": 0,
-                "max": 2
+              "capture": "particles",
+              "pattern": {
+                "comment": "Optional case particles after でも",
+                "repeat": {
+                  "pattern": {
+                    "token": [
+                      "isParticle"
+                    ]
+                  },
+                  "min": 0,
+                  "max": 2
+                }
               }
             }
           },
           {
-            "comment": "Following phrase (predicate, noun, or expression)",
-            "repeat": {
-              "pattern": {
-                "alt": [
-                  {
-                    "token": [
-                      "isPredicate"
-                    ]
-                  },
-                  {
-                    "token": [
-                      "isNominalHead"
-                    ]
-                  },
-                  {
-                    "token": [
-                      "isAdverb"
-                    ]
-                  },
-                  {
-                    "token": [
-                      "pos:exp"
-                    ]
-                  }
-                ]
-              },
-              "min": 1,
-              "max": 8
+            "capture": "predicate",
+            "pattern": {
+              "comment": "Following phrase (predicate, noun, or expression)",
+              "repeat": {
+                "pattern": {
+                  "alt": [
+                    {
+                      "token": [
+                        "isPredicate"
+                      ]
+                    },
+                    {
+                      "token": [
+                        "isNominalHead"
+                      ]
+                    },
+                    {
+                      "token": [
+                        "isAdverb"
+                      ]
+                    },
+                    {
+                      "token": [
+                        "pos:exp"
+                      ]
+                    }
+                  ]
+                },
+                "min": 1,
+                "max": 8
+              }
             }
           }
         ]

@@ -264,18 +264,20 @@ export async function matchGrammars(tokens: Token[], grammars: CompiledGrammar[]
       }
       if (!outcome) continue;
       
-      // Build captures with text
-      const captures = outcome.captures.map((capture): Capture => {
-        const captureTokens = tokens.slice(capture.start, capture.end);
-        const text = captureTokens.map(t => t.text).join('');
-        return {
-          ...capture,
-          tokens: captureTokens,
-          text,
-          textStart: 0,
-          textEnd: 0,
-        };
-      });
+      // Build captures with text, filtering out empty ones
+      const captures = outcome.captures
+        .map((capture): Capture => {
+          const captureTokens = tokens.slice(capture.start, capture.end);
+          const text = captureTokens.map(t => t.text).join('');
+          return {
+            ...capture,
+            tokens: captureTokens,
+            text,
+            textStart: 0,
+            textEnd: 0,
+          };
+        })
+        .filter(capture => capture.tokens.length > 0);
       
       // Build segments for easy rendering from tokens
       const buildSegStart = GRAMMAR_PROFILE ? performance.now() : 0;

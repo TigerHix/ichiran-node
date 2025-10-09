@@ -13,7 +13,7 @@
     "test": "bun test packages/*/tests/",
     "test:watch": "bun test --watch packages/*/tests/",
     "cli": "node packages/cli/dist/index.js",
-    "dev": "tsx --watch --env-file=.env packages/api/src/index.ts",
+    "dev": "concurrently -n core,grammar,api -c blue,magenta,green \"cd packages/core && bun run build:watch\" \"cd packages/grammar && bun run build:watch\" \"tsx --watch --env-file=.env packages/api/src/index.ts\"",
     "data": "node packages/data/dist/index.js"
   },
   "keywords": [
@@ -27,6 +27,8 @@
   "devDependencies": {
     "@types/bun": "latest",
     "@types/node": "^20.19.19",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.2.1",
     "dotenv": "^17.2.3",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
