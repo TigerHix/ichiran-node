@@ -146,4 +146,4 @@ bun run build
 
 ## License
 
-[MIT](./LICENSE)
+[FSL-1.1-MIT](./LICENSE)
