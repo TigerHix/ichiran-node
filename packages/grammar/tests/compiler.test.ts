@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'bun:test';
-import { matchSentence, grammarCatalog } from '@ichiran/grammar';
-import { compilePattern } from '../src/grammarMatcher/compiler.js';
+import { matchText, grammarCatalog } from '@ichiran/grammar';
+import { compilePattern } from '../src/compiler.js';
 import type { MatchOutcome, Token } from '@ichiran/grammar';
 import { setupTests } from '../../../test-utils/test-setup.js';
 
@@ -280,7 +280,7 @@ describe('Macro integration tests', () => {
     ];
 
     for (const sentence of testSentences) {
-      const hits = await matchSentence(sentence, grammarCatalog.filter(g => g.id === 'n5.i-adj-kute'));
+      const hits = await matchText(sentence, grammarCatalog.filter(g => g.id === 'n5.i-adj-kute'));
       expect(hits.length).toBeGreaterThan(0);
       expect(hits.some(h => h.grammarId === 'n5.i-adj-kute')).toBe(true);
     }
@@ -294,7 +294,7 @@ describe('Macro integration tests', () => {
     ];
 
     for (const sentence of testSentences) {
-      const hits = await matchSentence(sentence, grammarCatalog.filter(g => g.id === 'n5.na-adj-ni-shimasu'));
+      const hits = await matchText(sentence, grammarCatalog.filter(g => g.id === 'n5.na-adj-ni-shimasu'));
       expect(hits.length).toBeGreaterThan(0);
       expect(hits.some(h => h.grammarId === 'n5.na-adj-ni-shimasu')).toBe(true);
     }
@@ -308,7 +308,7 @@ describe('Macro integration tests', () => {
     ];
 
     for (const sentence of testSentences) {
-      const hits = await matchSentence(sentence, grammarCatalog.filter(g => g.id === 'n5.na-adj-ni-narimasu'));
+      const hits = await matchText(sentence, grammarCatalog.filter(g => g.id === 'n5.na-adj-ni-narimasu'));
       expect(hits.length).toBeGreaterThan(0);
       expect(hits.some(h => h.grammarId === 'n5.na-adj-ni-narimasu')).toBe(true);
     }
@@ -322,7 +322,7 @@ describe('Macro integration tests', () => {
     ];
 
     for (const sentence of testSentences) {
-      const hits = await matchSentence(sentence, grammarCatalog.filter(g => g.id === 'n4.i-adj-ku-suru-naru'));
+      const hits = await matchText(sentence, grammarCatalog.filter(g => g.id === 'n4.i-adj-ku-suru-naru'));
       expect(hits.length).toBeGreaterThan(0);
       expect(hits.some(h => h.grammarId === 'n4.i-adj-ku-suru-naru')).toBe(true);
     }
@@ -336,7 +336,7 @@ describe('Macro integration tests', () => {
     ];
 
     for (const sentence of testSentences) {
-      const hits = await matchSentence(sentence, grammarCatalog.filter(g => g.id === 'n5.na-adj-de'));
+      const hits = await matchText(sentence, grammarCatalog.filter(g => g.id === 'n5.na-adj-de'));
       expect(hits.length).toBeGreaterThan(0);
       expect(hits.some(h => h.grammarId === 'n5.na-adj-de')).toBe(true);
     }
@@ -350,7 +350,7 @@ describe('Macro integration tests', () => {
     ];
 
     for (const sentence of testSentences) {
-      const hits = await matchSentence(sentence, grammarCatalog.filter(g => g.id === 'n5.na-adj-de'));
+      const hits = await matchText(sentence, grammarCatalog.filter(g => g.id === 'n5.na-adj-de'));
       expect(hits.length).toBeGreaterThan(0);
       expect(hits.some(h => h.grammarId === 'n5.na-adj-de')).toBe(true);
     }

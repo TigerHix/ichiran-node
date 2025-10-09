@@ -1,0 +1,135 @@
+{
+  "id": "n5.doko",
+  "level": "N5",
+  "description": "Express 'where', used with question words for asking about locations",
+  "formation": "どこ + question particle",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- どこ（場所をたずねる）\n\n### Meaning and function\n- Asks “where”: the location of a person/thing, where an action happens, a destination/origin, an endpoint, or a place of affiliation/origin (“which place’s …”).\n\n### Form and templates\n- N は どこ ですか\n- N は どこに ありますか／いますか\n- どこに N が ありますか／いますか\n- どこで V(ます／辞書形)　→ place where an action occurs\n- どこに・どこへ V(ます)　→ destination with motion verbs\n- どこから V(ます)／どこまで V(ます)　→ starting/ending point\n- どこの N　→ “which place’s/which company’s/which country’s N”\n- N の どこ（に／で／が）…　→ “which part/where in N …”\n\nParticle requirements and ordering\n- で: location where an action occurs.\n- に: location of existence (ある／いる), destination, residence.\n- へ: direction toward (more about direction than arrival; に is more common in conversation).\n- から／まで: starting point / endpoint or limit.\n- の: makes どこ an attributive (“どこの N”) or narrows the domain (“X の どこ”).\n- は／が: topicalize known items with は (N は どこ…); use が when どこ itself is the subject being evaluated (e.g., “which place … is good”).\n- Word order: both “N は どこに …” and “どこに N が …” are possible; choose based on what is topic/new information.\n\nOptional/alternative parts\n- Topic N は may be omitted if clear from context.\n- Polite questions take か (…ですか／…ますか); plain questions omit it.\n- へ can replace に with motion verbs, with a slight “toward” nuance.\n\nConjugation/inflection notes\n- あります (inanimate) vs います (animate). Use どこに with both.\n- Other verb forms (negative, past, polite) conjugate normally after the particle.\n\n### Usage notes and constraints\n- Register: どこ is neutral; どちら is a politer alternative (customer-service, formal contexts); どっち is very casual.\n- Very frequent and natural in everyday speech.\n- Semantic scope:\n  - Use どこで with action verbs (place of activity).\n  - Use どこに with existence/residence and destinations (ある／いる／住む etc.).\n  - Use どこへ with motion when emphasizing direction.\n  - どこの N asks about affiliation/origin/manufacturer/branch, not current location.\n  - N の どこ targets a sub-area/part within a larger place or thing.\n- “どこは …” is generally unnatural; don’t topicalize the unknown place with は.\n- Orthography: write in hiragana (どこ). The kanji 何処 is rare/literary. Polite variant どちら (何方) is usually kana too.\n\n### Common mistakes (optional, only if relevant)\n- Using に instead of で for actions (place of action must be で).\n- Omitting に with ある／いる (“where something/someone is” needs どこに).\n- Using へ with ある／いる (existence/location does not take へ).\n- Saying どこで 行く (motion verbs take に／へ, not で).\n- Confusing どこ and どこの: どこ is “where is it,” どこの N is “which place’s N.”\n\n### Related grammar (optional, only if relevant)\n- ここ／そこ／あそこ／どこ: demonstratives for here/there/over there/where.\n- どちら: politer “where” (also “which of two/which direction” by context); どっち is very casual.\n- どこか／どこも／どこでも: “somewhere” / “nowhere” (with negative) / “anywhere” (with affirmative).\n- どれ／どの: “which one” / “which N” (selection, not location).\n- どこへ vs どこに: both for destinations; へ = direction focus, に = arrival/destination focus and more common.",
+  "examples": [
+    {
+      "jp": "トイレはどこですか。",
+      "en": "Where is the restroom?"
+    },
+    {
+      "jp": "会議室はどこにありますか。",
+      "en": "Where is the meeting room?"
+    },
+    {
+      "jp": "店長はどこにいますか。",
+      "en": "Where is the store manager?"
+    },
+    {
+      "jp": "どこにコンセントがありますか。",
+      "en": "Where is an electrical outlet?"
+    },
+    {
+      "jp": "どこに受付の人がいますか。",
+      "en": "Where is the receptionist?"
+    },
+    {
+      "jp": "昨日はどこで昼ごはんを食べましたか。",
+      "en": "Where did you eat lunch yesterday?"
+    },
+    {
+      "jp": "今、どこにいる？",
+      "en": "Where are you now?"
+    },
+    {
+      "jp": "週末はどこへ行きますか。",
+      "en": "Where are you going this weekend?"
+    },
+    {
+      "jp": "休みにどこへ行くか、もう決めた？",
+      "en": "Have you already decided where to go on your days off?"
+    },
+    {
+      "jp": "バスはどこまで行きますか。",
+      "en": "How far does the bus go?"
+    },
+    {
+      "jp": "ここからは、どこまでが無料ですか。",
+      "en": "From here, up to where is it free?"
+    },
+    {
+      "jp": "あなたはどこから来ましたか。",
+      "en": "Where did you come from?"
+    },
+    {
+      "jp": "これはどこの会社の製品ですか。",
+      "en": "Which company's product is this?"
+    },
+    {
+      "jp": "日本のどこに住んでいましたか。",
+      "en": "Where in Japan did you live?"
+    },
+    {
+      "jp": "この公園のどこで集合しますか。",
+      "en": "Where in this park will we meet?"
+    },
+    {
+      "jp": "この文章のどこが間違っていますか。",
+      "en": "Which part of this passage is incorrect?"
+    },
+    {
+      "jp": "紅葉はどこでいちばんきれいに見えますか。",
+      "en": "Where do the autumn leaves look the most beautiful?"
+    },
+    {
+      "jp": "この町のどこが好きじゃないですか。",
+      "en": "Which parts of this town do you not like?"
+    },
+    {
+      "jp": "ランチなら、どこが安かったですか。",
+      "en": "If it's lunch, which place was cheap?"
+    },
+    {
+      "jp": "どこでいちばん安く買えますか。",
+      "en": "Where can I buy it the cheapest?"
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "どちらへ行かれますか。",
+      "en": "Where are you headed? (polite form using dochira)"
+    },
+    {
+      "jp": "どの店がいちばん安いですか。",
+      "en": "Which store is the cheapest? (using dono)"
+    },
+    {
+      "jp": "どこも開いていません。",
+      "en": "Nowhere is open."
+    },
+    {
+      "jp": "どこでもいいですよ。",
+      "en": "Anywhere is fine."
+    },
+    {
+      "jp": "どこかに財布を落としたかもしれません。",
+      "en": "I might have dropped my wallet somewhere."
+    },
+    {
+      "jp": "「どこにいるの？」と彼が聞いた。",
+      "en": "He asked, “Where are you?”"
+    },
+    {
+      "jp": "雨どころか、雪まで降ってきた。",
+      "en": "Far from rain, it even started snowing."
+    },
+    {
+      "jp": "どっちへ行く？",
+      "en": "Which way are you going?"
+    },
+    {
+      "jp": "こちらはどちらのご担当者様ですか。",
+      "en": "Which company/department are you with? (polite, using dochira)"
+    },
+    {
+      "jp": "ここからどれくらいかかりますか。",
+      "en": "About how long does it take from here?"
+    }
+  ]
+}

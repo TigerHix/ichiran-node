@@ -1,12 +1,14 @@
 // @ichiran/grammar - Grammar runtime, predicates, and definitions
 
-// Re-export from grammarMatcher
-export * from './grammarMatcher/types.js';
-export * from './grammarMatcher/catalog.js';
-export * from './grammarMatcher/runtime.js';
+// Re-export all types and functions
+export * from './types.js';
+export * from './catalog.js';
+export * from './runtime.js';
 
 // Main exports for external use
-export type { CompiledGrammar } from './grammarMatcher/runtime.js';
-export { matchSentence, analyzeSentence } from './grammarMatcher/runtime.js';
-export { grammarCatalog } from './grammarMatcher/catalog.js';
+export type { CompiledGrammar } from './runtime.js';
+export { matchText, analyzeText } from './runtime.js';
+export { clearCompiledGrammarCache, setCompiledGrammarCacheCapacity } from './cache.js';
+export { selectBestOutcome } from './matcher.js';
+export { grammarCatalog } from './catalog.js';
 

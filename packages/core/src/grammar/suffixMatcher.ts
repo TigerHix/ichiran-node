@@ -110,7 +110,7 @@ export async function findWordSuffix(
   word: string,
   options: { matches?: any[] } = {}
 ): Promise<Array<KanjiText | KanaText | ProxyText | CompoundText>> {
-  await initSuffixes();
+  await initSuffixes(); // Ensure suffix cache is populated
 
   const matches = options.matches || [];
   let suffixes: ParsedSuffix[];

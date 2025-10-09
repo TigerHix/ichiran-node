@@ -1,0 +1,135 @@
+{
+  "id": "n5.a-demo-b",
+  "level": "N5",
+  "description": "Used to express contrast between two statements; 'A, but B', 'A, however B'",
+  "formation": "Clause A + でも + Clause B",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- でも（逆接）\n\n### Meaning and function\n- Introduces a contrast or unexpected turn: “but; however.” The second sentence (S2) opposes, limits, or corrects what is implied by the first sentence (S1).\n\n### Form and templates\n- S1。でも、S2。\n- Positioning: でも sits at the very start of S2 as a conjunctive adverb; a comma after でも is common.\n- Politeness/tense: でも itself does not change. S1 and S2 can be plain or polite; keep register consistent unless purposefully shifting.\n- Connection style: Preferred as a sentence-initial connector (S1 ends with 。). It does not attach directly to clauses the way 〜が or 〜けど do.\n\n### Usage notes and constraints\n- Register: Very common and natural in conversation and everyday writing. Feels casual/neutral. For more formal writing or presentations, prefer しかし or ですが.\n- Semantic scope: Marks a clear contrast, correction, or “unexpected despite” relationship. Often used to pivot to disagreement, an exception, or a reservation.\n- Structural scope: Discourse-level connector between sentences, not an in-clause conjunction. Avoid stacking subordinate markers with でも inside the same sentence.\n- Orthography: Written in hiragana as でも. Do not confuse with other でも-patterns (Nでも = “even/…or something,” V-ても = “even if”).\n\n### Common mistakes (optional, only if relevant)\n- Using でも mid-sentence after a comma as if it were 〜が/〜けど. Safer pattern: end S1 with 。then start S2 with でも、.\n- Overusing でも in formal contexts where しかし／ですが is expected.\n- Confusing this でも (“but/however”) with Nでも (“even; …or something”) or V-ても (“even if; although”).\n- Ending a sentence with でも to hedge; でも does not function as a sentence-final softener (unlike 〜けど).\n\n### Related grammar (optional, only if relevant)\n- 〜が: In-clause “but”; slightly more formal/neutral than けど; milder contrast; keeps one sentence.\n- 〜けど／〜けれど(も): In-clause “but”; colloquial to neutral; can also end a sentence to soften; weaker break than でも.\n- しかし: Sentence-initial “however”; more formal/logical than でも; preferred in formal writing/speeches.\n- それでも: “Even so; nevertheless.” Stronger concessive: S2 holds despite S1 to an even greater degree.",
+  "examples": [
+    {
+      "jp": "今日は雨だ。でも、散歩に行く。",
+      "en": "It’s rainy today. But I’m going for a walk."
+    },
+    {
+      "jp": "この店は安いです。でも、味はまあまあです。",
+      "en": "This shop is cheap. However, the taste is so-so."
+    },
+    {
+      "jp": "時間がない。でも、やってみる。",
+      "en": "I don’t have time. But I’ll give it a try."
+    },
+    {
+      "jp": "明日は行けません。でも、資料は送ります。",
+      "en": "I can’t go tomorrow. But I’ll send the materials."
+    },
+    {
+      "jp": "電車が止まった。でも、徒歩で間に合った。",
+      "en": "The train stopped. But I still made it on foot."
+    },
+    {
+      "jp": "彼は来ませんでした。でも、連絡はくれました。",
+      "en": "He didn’t come. However, he did contact me."
+    },
+    {
+      "jp": "会議での彼の説明は丁寧だった。でも、結論が見えなかった。",
+      "en": "His explanation at the meeting was careful. But the conclusion wasn’t clear."
+    },
+    {
+      "jp": "早起きは苦手だ。でも、明日は起きられるかな？",
+      "en": "I’m not good at getting up early. But I wonder if I can get up tomorrow."
+    },
+    {
+      "jp": "予約はいっぱいでした。でも、キャンセル待ちにしますか？",
+      "en": "Reservations were full. But would you like to be on the waiting list?"
+    },
+    {
+      "jp": "この服は好きだ。でも、買わない。",
+      "en": "I like this outfit. But I won’t buy it."
+    },
+    {
+      "jp": "締切は明日だ。でも、できるだけ早く提出する。",
+      "en": "The deadline is tomorrow. But I’ll submit as early as possible."
+    },
+    {
+      "jp": "部屋は狭い。でも、意外に静かに暮らせる。",
+      "en": "The room is small. But I can live surprisingly quietly."
+    },
+    {
+      "jp": "天気は良さそうだ。でも、念のため傘を持っていく。",
+      "en": "The weather looks good. But I’ll take an umbrella just in case."
+    },
+    {
+      "jp": "頼まれた仕事は多い。でも、手伝ってくれる人がいる。",
+      "en": "I have a lot of tasks I was asked to do. But there are people who will help."
+    },
+    {
+      "jp": "急ぐ必要はない。でも、今出発したほうがいいです。",
+      "en": "There’s no need to rush. But we should leave now."
+    },
+    {
+      "jp": "駅は近い。でも、歩ける距離というわけではない。",
+      "en": "The station is close. But it’s not exactly within walking distance."
+    },
+    {
+      "jp": "彼は失敗した。でも、誰も責めなかった。",
+      "en": "He failed. But no one blamed him."
+    },
+    {
+      "jp": "提案は斬新だった。でも、正直、実現性が低い。",
+      "en": "The proposal was novel. But honestly, its feasibility is low."
+    },
+    {
+      "jp": "説明はわかりやすかったです。でも、ここだけもう一度確認してもいいですか？",
+      "en": "The explanation was easy to understand. However, may I just double-check this part?"
+    },
+    {
+      "jp": "店は閉まっていた。でも、近くの自動販売機で飲み物を買えた。",
+      "en": "The shop was closed. But I was able to buy a drink at a nearby vending machine."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "コーヒーでもどうですか。",
+      "en": "How about some coffee or something?"
+    },
+    {
+      "jp": "雨が降っても行きます。",
+      "en": "I’ll go even if it rains."
+    },
+    {
+      "jp": "雨が降っています、でも、試合は続行です。",
+      "en": "It’s raining, but the game will continue."
+    },
+    {
+      "jp": "誰でも参加できます。",
+      "en": "Anyone can participate."
+    },
+    {
+      "jp": "いつでも連絡してください。",
+      "en": "Please contact me anytime."
+    },
+    {
+      "jp": "学生でも入れますか。",
+      "en": "Can even students enter?"
+    },
+    {
+      "jp": "雨だった。そこでも、彼らは出発した。",
+      "en": "It was raining. Even so, they set out."
+    },
+    {
+      "jp": "彼は『でも』という言い方をよく使う。",
+      "en": "He often uses the word “demo.”"
+    },
+    {
+      "jp": "彼は教師でもあり、作家でもある。",
+      "en": "He is a teacher and also a writer."
+    },
+    {
+      "jp": "それは事実でもなく噂でもない。",
+      "en": "It’s neither a fact nor a rumor."
+    }
+  ]
+}

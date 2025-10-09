@@ -1,0 +1,135 @@
+{
+  "id": "n4.ru-koto-ni-suru",
+  "level": "N4",
+  "description": "Decide to do something, make a decision.",
+  "formation": "Verb-る + ことにする",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜ことにする\n\n### Meaning and function\n- To decide to do something; to make a personal choice or resolution to perform an action\n\n### Form and templates\n- V(辞書形) + ことにする\n- V(ない形) + ことにする (decide not to do)\n- Polite/tense:\n  - ことにします (polite present; decision made now or just decided)\n  - ことにしました (polite past; decision already made)\n  - ことにした (plain past)\n  - Very polite: ことにいたします／ことにいたしました\n- Suggesting a group decision: ことにしましょう\n- Alternatives:\n  - V(辞書形) + ことに決める (more explicit/firm or formal)\n  - V(辞書形) + こととする (formal/written, regulations/announcements)\n- Notes on particles/ordering:\n  - The verb must be in plain form before こと. こと nominalizes the verb; に marks the target of する.\n  - Subject/topic is typically the speaker (often omitted or marked with は/が).\n\n### Usage notes and constraints\n- Register/naturalness: Very common in speech and writing. Neutral register; choose polite or plain according to context.\n- Subject/agency: Used primarily for the speaker’s own, volitional decision. Third-person use is natural only in reported speech or narrative context indicating that person’s decision.\n- Verb type: Prefer controllable, volitional actions. Stative or uncontrollable verbs are generally unnatural with this pattern.\n- Time nuance:\n  - 〜ことにする: deciding now, or presenting a fresh decision.\n  - 〜ことにした/しました: a decision made earlier (reporting).\n  - 〜ことにしている: an ongoing rule/habit stemming from a prior decision (related form).\n- Collocations: Often appears with decision-related adverbs such as けっきょく, ついに, とうとう, きっぱり, しっかり, ちゃんと to highlight the decision.\n- Orthographic variants: こと may be written 事 in formal/legal texts; hiragana こと is standard in ordinary writing.\n\n### Common mistakes (optional, only if relevant)\n- Confusing 〜ことにする (self-decided) with 〜ことになる (decided by others/circumstances).\n- Using non-volitional/stative verbs (e.g., existence or spontaneous cognition) with 〜ことにする.\n- Using ます-stem before ことにする; the verb must be in plain dictionary or plain negative form.\n- Negation misplacement: 〜ないことにする = decide not to do; 〜ことにしない = not decide to do (different meaning).\n- Tense mismatch: using 〜ことにする to report a past decision that should be 〜ことにした/しました.\n\n### Related grammar (optional, only if relevant)\n- 〜つもりだ: intention/plan; weaker or less finalized than 〜ことにする.\n- 〜ことになる: it is/has been decided (external decision or natural outcome), not the speaker’s deliberate choice.\n- 〜ことにしている: have made it a rule/habit; ongoing practice based on a prior decision.\n- 〜ことに決める: decide; more deliberate/explicit or formal than 〜ことにする.\n- N/Adj + にする: choose/make N/Adj; selecting a state or option, not nominalized action.",
+  "examples": [
+    {
+      "jp": "今日は早く寝ることにする。",
+      "en": "I'm going to go to bed early today."
+    },
+    {
+      "jp": "来月からお弁当を作ることにします。",
+      "en": "Starting next month, I'll make my own lunch."
+    },
+    {
+      "jp": "けっきょく、車を売ることにしましたか。",
+      "en": "So in the end, did you decide to sell the car?"
+    },
+    {
+      "jp": "同僚は転職することにしたと話していた。",
+      "en": "A coworker said they had decided to change jobs."
+    },
+    {
+      "jp": "甘いものは当分食べないことにする。",
+      "en": "For the time being, I’ve decided not to eat sweets."
+    },
+    {
+      "jp": "今週は残業しないことにします。",
+      "en": "This week, I’ll decide not to work overtime."
+    },
+    {
+      "jp": "本日はアルコールを控えることにいたします。",
+      "en": "I will refrain from alcohol today."
+    },
+    {
+      "jp": "諸事情により、出張は見送ることにいたしました。",
+      "en": "Due to various circumstances, we have decided to postpone the business trip."
+    },
+    {
+      "jp": "この件は、いったん保留にすることにしましょう。",
+      "en": "Let’s put this matter on hold for now."
+    },
+    {
+      "jp": "何時に出発することにしますか。",
+      "en": "What time shall we decide to depart?"
+    },
+    {
+      "jp": "私は毎朝、六時に起きることにしている。",
+      "en": "I make it a rule to get up at six every morning."
+    },
+    {
+      "jp": "これからは、しっかり貯金することにする。",
+      "en": "From now on, I’ll make a point of saving diligently."
+    },
+    {
+      "jp": "締め切りはちゃんと守ることにしました。",
+      "en": "I’ve decided to meet deadlines properly."
+    },
+    {
+      "jp": "本当に、喫煙をやめることにしたの？",
+      "en": "Did you really decide to quit smoking?"
+    },
+    {
+      "jp": "夜は静かに過ごすことにします。",
+      "en": "I’ll spend the nights quietly."
+    },
+    {
+      "jp": "参加しないことに決めた。",
+      "en": "I decided not to participate."
+    },
+    {
+      "jp": "きっぱり断ることに決めました。",
+      "en": "I’ve firmly decided to decline."
+    },
+    {
+      "jp": "本件は、来週再検討することとする。",
+      "en": "With regard to this matter, it shall be reconsidered next week."
+    },
+    {
+      "jp": "会議はオンラインで行う事とする。",
+      "en": "The meeting shall be held online."
+    },
+    {
+      "jp": "結局、応募することにしなかった。",
+      "en": "In the end, I decided not to apply."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "来週は休むことになりました。",
+      "en": "It has been decided that I’ll take next week off."
+    },
+    {
+      "jp": "飲み物は水にします。",
+      "en": "I’ll have water."
+    },
+    {
+      "jp": "彼は早起きすると決めた。",
+      "en": "He decided to get up early."
+    },
+    {
+      "jp": "その話はなかったことにしてください。",
+      "en": "Please pretend that never happened."
+    },
+    {
+      "jp": "予約を変更することを決めました。",
+      "en": "I decided to change the reservation."
+    },
+    {
+      "jp": "事情により、会議は中止とします。",
+      "en": "Due to circumstances, the meeting will be canceled."
+    },
+    {
+      "jp": "彼は試合に出ないことになっている。",
+      "en": "He is supposed not to participate in the match."
+    },
+    {
+      "jp": "残念なことに、電車が遅れた。",
+      "en": "Unfortunately, the train was delayed."
+    },
+    {
+      "jp": "授業で「〜ことにする」という文型を学んだ。",
+      "en": "We learned the pattern “〜koto ni suru” in class."
+    },
+    {
+      "jp": "規定では、提出期限は金曜とする。",
+      "en": "Under the rules, the submission deadline shall be Friday."
+    }
+  ]
+}

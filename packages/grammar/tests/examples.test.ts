@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'bun:test';
-import { matchSentence } from '@ichiran/grammar';
+import { matchText } from '@ichiran/grammar';
 import type { GrammarDefinition } from '@ichiran/grammar';
 import { setupTests } from '../../../test-utils/test-setup.js';
 import { readFileSync, readdirSync, statSync } from 'fs';
@@ -58,7 +58,7 @@ function loadAllGrammars(baseDir: string): GrammarWithExamples[] {
   return grammars;
 }
 
-const grammarsPath = join(__dirname, '../src/grammarMatcher/grammars');
+const grammarsPath = join(__dirname, '../src/grammars');
 const allGrammars = loadAllGrammars(grammarsPath);
 
 describe('Grammar examples validation', () => {
@@ -87,7 +87,7 @@ describe('Grammar examples validation', () => {
         
         for (const example of grammar.examples!) {
           try {
-            const hits = await matchSentence(example.jp, [grammar]);
+            const hits = await matchText(example.jp, [grammar]);
             const matched = hits.some(hit => hit.grammarId === grammar.id);
             
             if (!matched) {
@@ -115,7 +115,7 @@ describe('Grammar examples validation', () => {
         
         for (const example of grammar.negativeExamples!) {
           try {
-            const hits = await matchSentence(example.jp, [grammar]);
+            const hits = await matchText(example.jp, [grammar]);
             const matched = hits.some(hit => hit.grammarId === grammar.id);
             
             if (matched) {

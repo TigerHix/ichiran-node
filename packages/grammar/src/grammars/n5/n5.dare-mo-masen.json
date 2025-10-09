@@ -1,0 +1,648 @@
+{
+  "id": "n5.dare-mo-masen",
+  "label": "だれも～ません",
+  "level": "N5",
+  "description": "Express 'nobody' or 'no one' in negative sentences",
+  "formation": "だれも + Verb-negative (ません)",
+  "priority": 10,
+  "pattern": {
+    "alt": [
+      {
+        "comment": "Single-token forms: 誰も, だれも, 誰にも, 誰とも, 誰からも (dictionary entries)",
+        "sequence": [
+          {
+            "capture": "daremo",
+            "pattern": {
+              "token": [
+                "text:/^(誰|だれ|どなた)(に|と|から|へ|まで)?も$/"
+              ]
+            }
+          },
+          {
+            "optional": {
+              "capture": "intervening",
+              "pattern": {
+                "comment": "Optional intervening elements before the negative",
+                "repeat": {
+                  "pattern": {
+                    "alt": [
+                      {
+                        "comment": "Particles (but NOT が which indicates 誰もが 'everyone' pattern)",
+                        "sequence": [
+                          {
+                            "token": [
+                              "isParticle"
+                            ]
+                          },
+                          {
+                            "not": {
+                              "token": [
+                                "text:が"
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "token": [
+                          "isPredicate"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "isNominalHead"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "isAdverb"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "pos:exp"
+                        ]
+                      }
+                    ]
+                  },
+                  "min": 0,
+                  "max": 7
+                }
+              }
+            }
+          },
+          {
+            "capture": "negative",
+            "pattern": {
+              "comment": "REQUIRED: Negative form at or near the end",
+              "alt": [
+                {
+                  "comment": "Negative verb forms: ない, ません, なかった, ませんでした, etc.",
+                  "token": [
+                    "text:/ない|ません|なかった|ませんでした/"
+                  ]
+                },
+                {
+                  "comment": "Negative copula: ではない, ではありません, じゃない, etc.",
+                  "token": [
+                    "text:/では(あり)?ません|じゃ(あり)?ません|では(なか|ありませんでし)った|じゃ(なか|ありませんでし)った/"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "comment": "Two-token forms with case particles: 誰 + case + も",
+        "sequence": [
+          {
+            "capture": "dare",
+            "pattern": {
+              "token": [
+                "text:/^(誰|だれ|どなた)$/"
+              ]
+            }
+          },
+          {
+            "capture": "caseParticle",
+            "pattern": {
+              "comment": "Case particle: に, と, から, へ, まで",
+              "token": [
+                "text:/^(に|と|から|へ|まで)$/",
+                "isParticle"
+              ]
+            }
+          },
+          {
+            "capture": "mo",
+            "pattern": {
+              "token": [
+                "text:/^も$/"
+              ]
+            }
+          },
+          {
+            "optional": {
+              "capture": "particles",
+              "pattern": {
+                "comment": "Optional particles after も (like は for contrast)",
+                "repeat": {
+                  "pattern": {
+                    "token": [
+                      "isParticle"
+                    ]
+                  },
+                  "min": 0,
+                  "max": 2
+                }
+              }
+            }
+          },
+          {
+            "optional": {
+              "capture": "intervening",
+              "pattern": {
+                "comment": "Optional intervening elements before the negative",
+                "repeat": {
+                  "pattern": {
+                    "alt": [
+                      {
+                        "token": [
+                          "isParticle"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "isPredicate"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "isNominalHead"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "isAdverb"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "pos:exp"
+                        ]
+                      }
+                    ]
+                  },
+                  "min": 0,
+                  "max": 7
+                }
+              }
+            }
+          },
+          {
+            "capture": "negative",
+            "pattern": {
+              "comment": "REQUIRED: Negative form at or near the end",
+              "alt": [
+                {
+                  "comment": "Negative verb forms: ない, ません, なかった, ませんでした, etc.",
+                  "token": [
+                    "text:/ない|ません|なかった|ませんでした/"
+                  ]
+                },
+                {
+                  "comment": "Negative copula: ではない, ではありません, じゃない, etc.",
+                  "token": [
+                    "text:/では(あり)?ません|じゃ(あり)?ません|では(なか|ありませんでし)った|じゃ(なか|ありませんでし)った/"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "comment": "Two-token base form: だれ/誰/どなた + も (no case particle)",
+        "sequence": [
+          {
+            "capture": "dare",
+            "pattern": {
+              "token": [
+                "text:/^(誰|だれ|どなた)$/"
+              ]
+            }
+          },
+          {
+            "capture": "mo",
+            "pattern": {
+              "token": [
+                "text:/^も$/"
+              ]
+            }
+          },
+          {
+            "optional": {
+              "capture": "particles",
+              "pattern": {
+                "comment": "Optional particles after も (like は for contrast)",
+                "repeat": {
+                  "pattern": {
+                    "token": [
+                      "isParticle"
+                    ]
+                  },
+                  "min": 0,
+                  "max": 2
+                }
+              }
+            }
+          },
+          {
+            "optional": {
+              "capture": "intervening",
+              "pattern": {
+                "comment": "Optional intervening elements before the negative",
+                "repeat": {
+                  "pattern": {
+                    "alt": [
+                      {
+                        "token": [
+                          "isParticle"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "isPredicate"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "isNominalHead"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "isAdverb"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "pos:exp"
+                        ]
+                      }
+                    ]
+                  },
+                  "min": 0,
+                  "max": 7
+                }
+              }
+            }
+          },
+          {
+            "capture": "negative",
+            "pattern": {
+              "comment": "REQUIRED: Negative form at or near the end",
+              "alt": [
+                {
+                  "comment": "Negative verb forms: ない, ません, なかった, ませんでした, etc.",
+                  "token": [
+                    "text:/ない|ません|なかった|ませんでした/"
+                  ]
+                },
+                {
+                  "comment": "Negative copula: ではない, ではありません, じゃない, etc.",
+                  "token": [
+                    "text:/では(あり)?ません|じゃ(あり)?ません|では(なか|ありませんでし)った|じゃ(なか|ありませんでし)った/"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "comment": "Two-token forms with combined case+も particle: 誰 + にも/とも/からも/へも/まで も",
+        "sequence": [
+          {
+            "capture": "dare",
+            "pattern": {
+              "token": [
+                "text:/^(誰|だれ|どなた)$/"
+              ]
+            }
+          },
+          {
+            "capture": "caseMo",
+            "pattern": {
+              "comment": "Combined case+も particle: にも, とも, からも, へも, までも",
+              "token": [
+                "text:/^(にも|とも|からも|へも|までも)$/",
+                "isParticle"
+              ]
+            }
+          },
+          {
+            "optional": {
+              "capture": "particles",
+              "pattern": {
+                "comment": "Optional particles after も",
+                "repeat": {
+                  "pattern": {
+                    "token": [
+                      "isParticle"
+                    ]
+                  },
+                  "min": 0,
+                  "max": 2
+                }
+              }
+            }
+          },
+          {
+            "optional": {
+              "capture": "intervening",
+              "pattern": {
+                "comment": "Optional intervening elements before the negative",
+                "repeat": {
+                  "pattern": {
+                    "alt": [
+                      {
+                        "token": [
+                          "isParticle"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "isPredicate"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "isNominalHead"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "isAdverb"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "pos:exp"
+                        ]
+                      }
+                    ]
+                  },
+                  "min": 0,
+                  "max": 7
+                }
+              }
+            }
+          },
+          {
+            "capture": "negative",
+            "pattern": {
+              "comment": "REQUIRED: Negative form at or near the end",
+              "alt": [
+                {
+                  "comment": "Negative verb forms: ない, ません, なかった, ませんでした, etc.",
+                  "token": [
+                    "text:/ない|ません|なかった|ませんでした/"
+                  ]
+                },
+                {
+                  "comment": "Negative copula: ではない, ではありません, じゃない, etc.",
+                  "token": [
+                    "text:/では(あり)?ません|じゃ(あり)?ません|では(なか|ありませんでし)った|じゃ(なか|ありませんでし)った/"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "comment": "Workaround for mis-segmentation: 誰から might be split as 誰か + ら",
+        "sequence": [
+          {
+            "capture": "darekara",
+            "pattern": {
+              "token": [
+                "text:/^誰から$/"
+              ]
+            }
+          },
+          {
+            "capture": "mo",
+            "pattern": {
+              "token": [
+                "text:/^も$/"
+              ]
+            }
+          },
+          {
+            "optional": {
+              "capture": "particles",
+              "pattern": {
+                "comment": "Optional particles after も",
+                "repeat": {
+                  "pattern": {
+                    "token": [
+                      "isParticle"
+                    ]
+                  },
+                  "min": 0,
+                  "max": 2
+                }
+              }
+            }
+          },
+          {
+            "optional": {
+              "capture": "intervening",
+              "pattern": {
+                "comment": "Optional intervening elements before the negative",
+                "repeat": {
+                  "pattern": {
+                    "alt": [
+                      {
+                        "token": [
+                          "isParticle"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "isPredicate"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "isNominalHead"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "isAdverb"
+                        ]
+                      },
+                      {
+                        "token": [
+                          "pos:exp"
+                        ]
+                      }
+                    ]
+                  },
+                  "min": 0,
+                  "max": 7
+                }
+              }
+            }
+          },
+          {
+            "capture": "negative",
+            "pattern": {
+              "comment": "REQUIRED: Negative form at or near the end",
+              "alt": [
+                {
+                  "comment": "Negative verb forms: ない, ません, なかった, ませんでした, etc.",
+                  "token": [
+                    "text:/ない|ません|なかった|ませんでした/"
+                  ]
+                },
+                {
+                  "comment": "Negative copula: ではない, ではありません, じゃない, etc.",
+                  "token": [
+                    "text:/では(あり)?ません|じゃ(あり)?ません|では(なか|ありませんでし)った|じゃ(なか|ありませんでし)った/"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "explanation": "### Name\n- だれも＋否定（誰も〜ません／ない）\n\n### Meaning and function\n- Says “nobody/no one.” The negative predicate states that zero people perform the action or are in the described state.\n\n### Form and templates\n- Verbs:\n  - 誰も Vない / Vません\n  - Past: 誰も Vなかった / Vませんでした\n- Existence:\n  - 誰も いない / いません（人については必ず「いる」を使う）\n- Adjectives:\n  - い-adj: 誰も い-adj(〜く)ない / 〜くありません / 〜くなかった / 〜くありませんでした\n  - な-adj: 誰も な-adj(〜では)ない / 〜ではありません / 〜ではなかった / 〜ではありませんでした\n- Noun predicate:\n  - 誰も N(では)ない / ではありません\n- Case particle + も:\n  - Verbが要求する格がある場合は「誰＋格助詞＋も」：誰にも（に）、誰とも（と）、誰からも（から）など\n  - 語順は「誰＋に／と／から＋も」（× 誰もに）\n- Direct object:\n  - 目的語でも「を」は基本的に付けず「誰も Vない」を用いる（× 誰もを）\n- Politeness:\n  - 丁寧：〜ません／〜ませんでした／〜ではありません（でした）\n  - 普通：〜ない／〜なかった／〜ではない\n  - 会話では 〜ないです もよく使われる\n- Orthography:\n  - だれも／誰も（どちらも可。入門レベルではかな書きが多い）\n\n### Usage notes and constraints\n- 必ず否定述語と一緒に使う（〜ない／〜ません）。これがないと意味が成立しない。\n- 「誰も」は人に限るため、存在表現は「ある／ありません」ではなく「いる／いません」を用いる。\n- 「誰も」に他の格が必要な動詞では、格助詞の後に「も」を付ける（誰にも、誰とも、誰からも）。\n- 「誰も」は主語・目的語など様々な位置で使えるが、「が／は」は基本的に付けないこの用法（「誰もが」は別パターンで“皆”の意味、否定と組み合わせない）。\n- レジスター：口語・文語ともに自然で非常に頻用。\n- 強調表現：\n  - 一人も〜ない（「一人もいない」などの定型、より強い否定）\n  - 誰一人〜ない（やや文語的・強調）\n  \n### Common mistakes (optional, only if relevant)\n- 否定を付けずに用いる（× 誰も Vます／いる） → 必ず否定形と組み合わせる。\n- 「誰でも」を誤用して“誰も”の意味にする（誰でも＝“誰でもよい／誰でも可能”の肯定的用法）。\n- 格助詞の位置を誤る（× 誰もに → ○ 誰にも）。\n- 目的語に「を」を付ける（× 誰もを Vない）。\n- 存在表現で「ある／ありません」を人に使う（× 誰もありません → ○ 誰もいません）。\n\n### Related grammar (optional, only if relevant)\n- 誰でも：肯定文で“誰でも／どんな人でも”。“皆”や“どの人でも可能”の意味。\n- 誰か：不特定の“誰か／ある人”。\n- 何も〜ない：対象が“何もない（nothing）”。\n- どこも〜ない：場所が“どこもない（nowhere）”。\n- 一人も〜ない／誰一人〜ない：強い否定（“一人たりとも〜ない”）。",
+  "examples": [
+    {
+      "jp": "誰も来ない。",
+      "en": "No one is coming."
+    },
+    {
+      "jp": "誰も来ませんでしたか。",
+      "en": "Did no one come?"
+    },
+    {
+      "jp": "会議室には誰もいません。",
+      "en": "There is nobody in the meeting room."
+    },
+    {
+      "jp": "昨夜、この通りには誰もいなかった。",
+      "en": "Last night, there was nobody on this street."
+    },
+    {
+      "jp": "今日のメンバーは誰も忙しくない。",
+      "en": "None of today's members are busy."
+    },
+    {
+      "jp": "参加者は誰も学生ではありません。",
+      "en": "None of the participants are students."
+    },
+    {
+      "jp": "その案に誰も賛成しなかった。",
+      "en": "No one supported that proposal."
+    },
+    {
+      "jp": "私は誰にも言いません。",
+      "en": "I won’t tell anyone."
+    },
+    {
+      "jp": "この件については誰にも話さないです。",
+      "en": "I’m not going to talk about this to anyone."
+    },
+    {
+      "jp": "約束なので、誰とも会いませんでした。",
+      "en": "Because I promised, I didn’t meet anyone."
+    },
+    {
+      "jp": "だれも元気ではない。",
+      "en": "No one is well."
+    },
+    {
+      "jp": "だれも若くありませんでした。",
+      "en": "No one was young."
+    },
+    {
+      "jp": "この問題は誰にも解けない。",
+      "en": "No one can solve this problem."
+    },
+    {
+      "jp": "だれからも返事が来なかった。",
+      "en": "I didn’t get a reply from anyone."
+    },
+    {
+      "jp": "店は開いているのに、誰も対応してくれない。",
+      "en": "Even though the shop is open, no one helps me."
+    },
+    {
+      "jp": "誰も間違っていませんか。",
+      "en": "Is no one wrong?"
+    },
+    {
+      "jp": "今夜の飲み会、誰も遅れていませんか。",
+      "en": "For tonight’s party, is no one running late?"
+    },
+    {
+      "jp": "誰も知らない歌が突然ヒットした。",
+      "en": "A song that no one knew suddenly became a hit."
+    },
+    {
+      "jp": "会う約束はあったが、誰とも連絡が取れなかった。",
+      "en": "We had plans to meet, but I couldn’t get in touch with anyone."
+    },
+    {
+      "jp": "集合場所に誰も現れなかったか。",
+      "en": "Did no one show up at the meeting spot?"
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "誰でも来られます。",
+      "en": "Anyone can come."
+    },
+    {
+      "jp": "会議室には誰かいます。",
+      "en": "There is someone in the meeting room."
+    },
+    {
+      "jp": "参加者は誰もが学生です。",
+      "en": "All of the participants are students."
+    },
+    {
+      "jp": "誰とでも話します。",
+      "en": "I talk with anyone."
+    },
+    {
+      "jp": "何も見えない。",
+      "en": "I can’t see anything."
+    },
+    {
+      "jp": "どこにも行きません。",
+      "en": "I’m not going anywhere."
+    },
+    {
+      "jp": "一人もいなかった。",
+      "en": "There wasn’t even one person."
+    },
+    {
+      "jp": "誰もかれもが走っている。",
+      "en": "Everyone is running."
+    },
+    {
+      "jp": "誰にでもできる仕事です。",
+      "en": "It’s a job anyone can do."
+    },
+    {
+      "jp": "誰か知っていますか。",
+      "en": "Does anyone know?"
+    }
+  ],
+  "startGate": {
+    "firstToken": [
+      "text:/^(誰|だれ|どなた)(に|と|から|へ|まで)?(も)?$/"
+    ],
+    "near": {
+      "predicates": [
+        "text:/^(誰|だれ|どなた)(に|と|から|へ|まで)?も$/",
+        "text:/^(にも|とも|からも|へも|までも)$/",
+        "text:/^も$/"
+      ],
+      "window": { "left": 0, "right": 4 }
+    },
+    "anyToken": [
+      "isNegative",
+      "text:/ない|ません|なかった|ませんでした/"
+    ]
+  }
+}

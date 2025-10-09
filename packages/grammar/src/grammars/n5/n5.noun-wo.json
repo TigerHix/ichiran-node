@@ -1,0 +1,135 @@
+{
+  "id": "n5.noun-wo",
+  "level": "N5",
+  "description": "Indicates the direct object of a verb",
+  "formation": "Noun + を + Verb",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 名詞＋を（目的語）\n\n### Meaning and function\n- Marks the direct object: the thing or person directly affected by a transitive verb’s action\n\n### Form and templates\n- N を V(他動詞)\n- サ変名詞 を する / サ変名詞 する（どちらも可）\n- [Topic] は N を V（目的語を話題化する場合）\n- 与える・受け取る型の並び（例示的な枠組み）：人 に 物 を V（語順は可変だが動詞直前に置きやすい）\n- フォーカス系の共起\n  - N だけ を V（だけは をを伴うのが丁寧寄り。会話では を省くことも多い）\n  - N も V（も が現れると通常 をは現れない）\n  - N しか V-ない（しか が をを置き換える）\n- 動詞の活用・丁寧形・否定形・過去形などは動詞側で行い、を は不変\n\n### Usage notes and constraints\n- レジスター: 中立的。会話では を が省略されることがあるが、学習・作文・試験では明示するのが基本\n- 自他の制約: を は他動詞に付く。自動詞や状態述語（分かる・できる・ある／いる・好きだ など）には通常 を を使わない\n- 英語とのずれ: 英語で目的語を取る動詞でも、日本語では を ではなく が／に を要求するものがある（例: 分かる・好きだ・できる・会う・乗る・要る など）\n- する動詞: サ変名詞＋（を）＋する は両方可能。一般には名詞＋する がやや普通寄り。丁寧に言いたい場面や名詞を強調したいときは 名詞＋を＋する もよく使われる\n- 語順: を句（目的語）は通常、文末の動詞直前に置く。日本語は語順が比較的自由だが、動詞は文末が基本\n- 話題化: 目的語を話題化すると は が立ち、直後の を は落ちる（対比の は を除く）\n- 発音・表記: 助詞「を」は発音「お」。ローマ字では o/wo とされることがある。片仮名文では「ヲ」を用いることがある\n\n### Common mistakes\n- 自動詞や状態述語に を を付ける（分かる・できる・ある／いる・好きだ など）\n- 英語に引きずられ、会う・乗る・要る などに を を付ける\n- フォーカス助詞 も・しか と を を重ねる（Nもを…, Nしかを… など）\n- 動詞を先に出し、目的語を後置する語順へ引きずられる\n- 正書法で 助詞「を」を「お」と書く\n\n### Related grammar\n- N が V: 主語標識。分かる・できる・好きだ などは が を取る\n- N に V: 受け手・対象・到達点などを示す（会う・乗る・あげる／くれる／もらう の相手など）\n- N で V: 動作の場所・手段を示す。を（目的語）とは役割が異なる\n- N は …: 話題化。目的語を話題化すると を は落ちる（対比の は は上級用法）",
+  "examples": [
+    {
+      "jp": "私は本を読む。",
+      "en": "I read books."
+    },
+    {
+      "jp": "毎朝コーヒーを飲みます。",
+      "en": "I drink coffee every morning."
+    },
+    {
+      "jp": "きのうメールを送りました。",
+      "en": "I sent an email yesterday."
+    },
+    {
+      "jp": "彼は宿題をしない。",
+      "en": "He doesn't do his homework."
+    },
+    {
+      "jp": "レポートを出しませんでした。",
+      "en": "I didn't submit the report."
+    },
+    {
+      "jp": "この書類をもう読みましたか。",
+      "en": "Have you already read this document?"
+    },
+    {
+      "jp": "何を探しているの。",
+      "en": "What are you looking for?"
+    },
+    {
+      "jp": "今日はサラダだけを食べます。",
+      "en": "Today I'll eat only salad."
+    },
+    {
+      "jp": "デザートも食べた。",
+      "en": "I ate dessert too."
+    },
+    {
+      "jp": "水しか飲まない。",
+      "en": "I drink nothing but water."
+    },
+    {
+      "jp": "先生に質問をしてもいいですか。",
+      "en": "May I ask the teacher a question?"
+    },
+    {
+      "jp": "プレゼントを友だちに送った。",
+      "en": "I sent a present to a friend."
+    },
+    {
+      "jp": "友だちに本を貸しました。",
+      "en": "I lent a book to a friend."
+    },
+    {
+      "jp": "母に写真を見せてください。",
+      "en": "Please show the photo to my mother."
+    },
+    {
+      "jp": "あまりニュースを見ません。",
+      "en": "I don't watch the news much."
+    },
+    {
+      "jp": "母が焼いたパンをゆっくり食べた。",
+      "en": "I slowly ate the bread my mother baked."
+    },
+    {
+      "jp": "ドアをしっかり閉めました。",
+      "en": "I closed the door firmly."
+    },
+    {
+      "jp": "漢字を勉強する。",
+      "en": "I study kanji."
+    },
+    {
+      "jp": "音量を少し下げてくれない？",
+      "en": "Could you turn the volume down a little?"
+    },
+    {
+      "jp": "ピアノを練習します。",
+      "en": "I practice the piano."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "友だちに会った。",
+      "en": "I met a friend."
+    },
+    {
+      "jp": "バスに乗ります。",
+      "en": "I ride the bus."
+    },
+    {
+      "jp": "日本語が分かりますか。",
+      "en": "Do you understand Japanese?"
+    },
+    {
+      "jp": "水しかない。",
+      "en": "There's nothing but water."
+    },
+    {
+      "jp": "道を歩いた。",
+      "en": "I walked along the road."
+    },
+    {
+      "jp": "橋を渡って川の向こうへ行った。",
+      "en": "I crossed the bridge and went to the other side of the river."
+    },
+    {
+      "jp": "庭に花がある。",
+      "en": "There are flowers in the garden."
+    },
+    {
+      "jp": "彼女は映画が好きです。",
+      "en": "She likes movies."
+    },
+    {
+      "jp": "先生に連絡します。",
+      "en": "I'll contact the teacher."
+    },
+    {
+      "jp": "空を飛ぶ鳥が見えた。",
+      "en": "I could see birds flying in the sky."
+    }
+  ]
+}

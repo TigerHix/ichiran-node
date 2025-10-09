@@ -1,0 +1,197 @@
+{
+  "id": "n5.na-adj-de",
+  "label": "～で",
+  "level": "N5",
+  "description": "な-adjective connective ～で",
+  "formation": "な-Adjective + で",
+  "priority": 4,
+  "startGate": {
+    "anyToken": [
+      "text:で",
+      "text:ではなくて",
+      "text:じゃなくて",
+      "text:でして",
+      "text:/^(で|じゃ|では)?なくて$/"
+    ]
+  },
+  "pattern": {
+    "sequence": [
+      {
+        "capture": "adjective",
+        "pattern": {
+          "alt": [
+            {
+              "macro": "NaAdjDe"
+            },
+            {
+              "macro": "NaAdjDeshite"
+            },
+            {
+              "macro": "NaAdjNegativeConnective"
+            }
+          ]
+        }
+      },
+      {
+        "optional": {
+          "macro": "PrePredicateAdjuncts"
+        }
+      },
+      {
+        "capture": "tail",
+        "pattern": {
+          "alt": [
+            {
+              "repeat": {
+                "pattern": {
+                  "token": [
+                    "isPredicate"
+                  ]
+                },
+                "min": 1,
+                "max": 8
+              }
+            },
+            {
+              "sequence": [
+                {
+                  "macro": "NP"
+                },
+                {
+                  "token": [
+                    "isPredicate"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "explanation": "### Name\n- な形容詞＋で（接続）\n\n### Meaning and function\n- Connects a な-adjective to a following predicate to:\n  - Add or list qualities/states (“and”)\n  - Provide background information or a soft reason (“so/because” nuance in context)\n\n### Form and templates\n- Core\n  - な-adj + で + V\n  - な-adj + で + い-adj\n  - な-adj + で + な-adj\n  - な-adj + で + N + だ／です\n- Notes\n  - で here is the て-form (conjunctive) of the copula だ used after な-adjectives (and nouns).\n  - Do not insert だ before で: use 静かで…, not 静かだで….\n  - Only the final predicate carries tense/politeness; で itself does not show tense.\n  - Negative connective: な-adj + ではなくて／じゃなくて + …\n    - ではなくて is more neutral/formal; じゃなくて is casual.\n  - Polite connection:\n    - Common: な-adj + で, …です／ます (finish politely at the end)\n    - Formal speech/writing may use でして, but it’s not necessary at N5.\n\n### Usage notes and constraints\n- Register and frequency\n  - Neutral and very common in both plain and polite speech; natural in everyday description.\n- Semantics and scope\n  - Simple coordination (“and”) or background reason depending on context. For a clear/strong cause, prefer から／ので.\n  - Typically links states about the same topic/timeframe. When expressing cause→result, ensure the relationship is clear from context.\n- Distinctions\n  - な before nouns vs. で before predicates:\n    - Before a noun: な-adj + な + N\n    - Before a predicate/clause: な-adj + で + …\n  - Do not use で with い-adjectives; use 〜くて instead.\n- Orthographic notes\n  - Some な-adjectives end in い (e.g., きれい) but are still な-adjectives; they take で, not くて.\n\n### Common mistakes\n- Using 〜くて with な-adjectives instead of 〜で.\n- Using 〜で with い-adjectives (should be 〜くて).\n- Inserting だ before で (Xだで…).\n- Negative connective as じゃないで… (should be じゃなくて／ではなくて).\n- Saying Xですで… (unnatural); use Xで、…です or (in formal contexts) Xでして、….\n\n### Related grammar\n- い-adj＋くて: The connective for い-adjectives (lists qualities/soft reason).\n- N＋で: Same connective with nouns (copula だ in て-form).\n- な-adj＋な＋N: Attributive use before nouns (not a clause connector).\n- 〜から／〜ので: More explicit causal connectors; with な-adj use だから／なので.",
+  "examples": [
+    {
+      "jp": "部屋は静かで、よく眠れました。",
+      "en": "The room was quiet, so I slept well."
+    },
+    {
+      "jp": "この町は安全で、夜でも歩けます。",
+      "en": "This town is safe, so you can walk even at night."
+    },
+    {
+      "jp": "この店はきれいで、安いです。",
+      "en": "This shop is clean and cheap."
+    },
+    {
+      "jp": "彼女は親切で、話しやすい。",
+      "en": "She is kind and easy to talk to."
+    },
+    {
+      "jp": "新しい図書館は静かで便利ですか。",
+      "en": "Is the new library quiet and convenient?"
+    },
+    {
+      "jp": "ここはにぎやかではなくて、落ち着いた雰囲気です。",
+      "en": "It isn’t lively; it has a calm atmosphere."
+    },
+    {
+      "jp": "天気が良くて、静かで、散歩に最高だった。",
+      "en": "The weather was nice and quiet, and it was perfect for a walk."
+    },
+    {
+      "jp": "先生はまじめで優しいです。",
+      "en": "The teacher is earnest and kind."
+    },
+    {
+      "jp": "その説明は簡単で、理解しやすかった。",
+      "en": "That explanation was simple and easy to understand."
+    },
+    {
+      "jp": "彼は有名で、歌手ですか。",
+      "en": "Is he famous and a singer?"
+    },
+    {
+      "jp": "そのアプリは便利じゃなくて、使いにくい。",
+      "en": "That app isn’t convenient and is hard to use."
+    },
+    {
+      "jp": "部屋が広くて明るくて静かで、気に入りました。",
+      "en": "The room was spacious, bright, and quiet, and I liked it."
+    },
+    {
+      "jp": "旅行中、ホテルは清潔で、スタッフも丁寧でした。",
+      "en": "During the trip, the hotel was clean, and the staff were polite."
+    },
+    {
+      "jp": "あの店はおしゃれで、デートにぴったりだ。",
+      "en": "That shop is stylish and perfect for a date."
+    },
+    {
+      "jp": "今日は元気で、早起きできそうです。",
+      "en": "I’m feeling good and it looks like I can get up early."
+    },
+    {
+      "jp": "この椅子は丈夫で、長く使えますか。",
+      "en": "Is this chair sturdy and can it be used for a long time?"
+    },
+    {
+      "jp": "高速道路は安全で、渋滞も少なかったです。",
+      "en": "The expressway was safe, and there wasn’t much traffic."
+    },
+    {
+      "jp": "ここは静かでして、勉強に集中できます。",
+      "en": "It is quiet here, so I can focus on studying."
+    },
+    {
+      "jp": "うちの冷蔵庫は静かではなくて、夜は少しうるさいです。",
+      "en": "Our fridge isn’t quiet; at night it’s a bit noisy."
+    },
+    {
+      "jp": "彼の部屋は狭いけれど、駅から近くて便利で、家賃も安い。",
+      "en": "His room is small, but it’s close to the station and convenient, and the rent is cheap too."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "静かな部屋です。",
+      "en": "It’s a quiet room."
+    },
+    {
+      "jp": "静かなので、勉強できます。",
+      "en": "Because it’s quiet, I can study."
+    },
+    {
+      "jp": "静かである。",
+      "en": "It is quiet."
+    },
+    {
+      "jp": "暑くて、眠れなかった。",
+      "en": "It was hot, and I couldn’t sleep."
+    },
+    {
+      "jp": "駅で、待っています。",
+      "en": "I’m waiting at the station."
+    },
+    {
+      "jp": "静かですが、遠いです。",
+      "en": "It’s quiet, but it’s far."
+    },
+    {
+      "jp": "有名な作家が来ました。",
+      "en": "A famous writer came."
+    },
+    {
+      "jp": "きれいだが、狭い。",
+      "en": "It’s pretty, but it’s narrow."
+    },
+    {
+      "jp": "必要ではないです。",
+      "en": "It is not necessary."
+    },
+    {
+      "jp": "静かではなく、にぎやかだ。",
+      "en": "It’s not quiet; it’s lively."
+    }
+  ]
+}

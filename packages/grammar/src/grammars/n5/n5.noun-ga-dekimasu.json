@@ -1,0 +1,135 @@
+{
+  "id": "n5.noun-ga-dekimasu",
+  "level": "N5",
+  "description": "Express the ability to do something",
+  "formation": "Noun + が + できます",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- Nができる\n\n### Meaning and function\n- Expresses ability or possibility with a noun: can do N, be able to do N, N is possible/available\n- With skills/languages/instruments/sports/school subjects: indicates someone knows how to do or use them\n- With services/arrangements: indicates that something is possible/available (e.g., a service can be done)\n\n### Form and templates\n- N が できます\n  - N = skill/activity (料理, 運転), language, instrument, sport, school subject, or a service/arrangement\n  - が marks the thing that is possible/that one can do\n- X は N が できます\n  - Topic (person/place/time) は + N が できます\n- Place で N が できます\n  - で marks where N is possible/available\n- Polarity/tense\n  - Polite: できます / できません / できました / できませんでした\n  - Plain: できる / できない / できた / できなかった\n- Questions: … できますか / できる？\n- Optional/alternative particles\n  - N は できます: topicalizes/contrasts N (“as for N, (it) is possible”); common when asking about availability/services\n  - N も できます: adds “also/too”\n  - Subject/topic before the clause typically takes は; the noun of ability stays with が\n\n### Usage notes and constraints\n- Register: できます is neutral-polite and very common; できる is casual. Use できます in public/customer contexts and when asking about services/availability.\n- Semantic scope:\n  - Natural with nouns that inherently denote activities/skills (cooking, driving), languages, instruments, sports, or school subjects\n  - For specific actions or verb-based content (“can V”), prefer V(辞書形)+ことができます (more formal) or the potential form V-られる (everyday)\n- Availability vs ability:\n  - With services/arrangements, it means “N is possible/available” rather than personal skill (e.g., “X is accepted/you can do N here”)\n  - With the past form, N ができました often means “N was completed/appeared/was made,” not “was able to do N”\n- Particle behavior:\n  - が is the default marker for the “doable” item; は makes it contrastive/topical\n  - を is not used with できる\n- Orthography:\n  - Ability/possibility is usually written in kana (できる／できます)\n  - 出来る in kanji tends to emphasize “to be made/finished/come into being,” not general ability\n\n### Common mistakes (optional, only if relevant)\n- Using を instead of が after the noun of ability\n- Forcing N ができます with concrete objects that are not skills/services; use a verb-based pattern instead\n- Overusing は where が is needed, losing the focus on the “doable” noun\n- Using N ができました to mean “I managed to do N,” which can be misread as “N was completed/appeared”\n\n### Related grammar (optional, only if relevant)\n- V(辞書形)+ことができる: Ability to perform a specific action; more formal/explicit than N ができる\n- 動詞の可能形 (V-られる): Everyday “can V” for specific actions; often more natural in conversation\n- N が上手だ／下手だ: Degree of skill/proficiency, not (just) possibility\n- N をする: Base action for する-nouns; ability version becomes N ができる",
+  "examples": [
+    {
+      "jp": "私は料理ができます。",
+      "en": "I can cook."
+    },
+    {
+      "jp": "彼は運転ができません。",
+      "en": "He can’t drive."
+    },
+    {
+      "jp": "英語はできますか。",
+      "en": "Can you speak English?"
+    },
+    {
+      "jp": "私の弟は中国語が少しできます。",
+      "en": "My younger brother can speak a little Chinese."
+    },
+    {
+      "jp": "サッカーができる？",
+      "en": "Can you play soccer?"
+    },
+    {
+      "jp": "昨日は頭が痛くて運動ができなかった。",
+      "en": "I had a headache yesterday, so I couldn’t exercise."
+    },
+    {
+      "jp": "子どものときは書道ができた。",
+      "en": "I could do calligraphy when I was a child."
+    },
+    {
+      "jp": "うちの母はスマホの操作ができない。",
+      "en": "My mom can’t operate a smartphone."
+    },
+    {
+      "jp": "高校で軽音部だった彼女はギターができる。",
+      "en": "She was in her high school band club, so she can play the guitar."
+    },
+    {
+      "jp": "この図書館では、だれでも印刷ができる。",
+      "en": "Anyone can print at this library."
+    },
+    {
+      "jp": "この店ではクレジットカードでの支払いができます。",
+      "en": "You can pay by credit card at this shop."
+    },
+    {
+      "jp": "ここでコピーはできない。",
+      "en": "You can’t make copies here."
+    },
+    {
+      "jp": "テイクアウトはできますか。",
+      "en": "Do you offer takeout?"
+    },
+    {
+      "jp": "火曜日でも受け取りができますか。",
+      "en": "Is pickup available even on Tuesdays?"
+    },
+    {
+      "jp": "今日なら予約変更ができる。",
+      "en": "You can change the reservation today."
+    },
+    {
+      "jp": "英語での案内はできません。",
+      "en": "We can’t provide guidance in English."
+    },
+    {
+      "jp": "あのコーチは水泳も陸上もできます。",
+      "en": "That coach can do both swimming and track and field."
+    },
+    {
+      "jp": "このアプリなら、簡単に翻訳ができる。",
+      "en": "With this app, you can easily translate."
+    },
+    {
+      "jp": "会場で当日受付ができました。",
+      "en": "Same-day registration was available at the venue."
+    },
+    {
+      "jp": "こちらの支店でも両替ができる。",
+      "en": "You can exchange currency at this branch as well."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "駅前に新しいカフェができた。",
+      "en": "A new cafe opened in front of the station."
+    },
+    {
+      "jp": "彼は英語を話すことができます。",
+      "en": "He can speak English."
+    },
+    {
+      "jp": "何でもできる人がうらやましい。",
+      "en": "I envy people who can do anything."
+    },
+    {
+      "jp": "やればできるという気持ちが大事だ。",
+      "en": "The mindset that you can do it if you try is important."
+    },
+    {
+      "jp": "もうすぐレポートが出来上がる。",
+      "en": "The report will be finished soon."
+    },
+    {
+      "jp": "できれば、明日がいいです。",
+      "en": "If possible, tomorrow would be better."
+    },
+    {
+      "jp": "このプリンターでは印刷することができません。",
+      "en": "This printer can’t print."
+    },
+    {
+      "jp": "準備はできましたか。",
+      "en": "Are you ready?"
+    },
+    {
+      "jp": "予約は受け付けていません。",
+      "en": "We do not accept reservations."
+    },
+    {
+      "jp": "この店なら予約が取れます。",
+      "en": "At this shop, you can get a reservation."
+    }
+  ]
+}

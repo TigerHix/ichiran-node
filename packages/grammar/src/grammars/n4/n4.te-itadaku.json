@@ -1,0 +1,135 @@
+{
+  "id": "n4.te-itadaku",
+  "level": "N4",
+  "description": "Used to express receiving someone's favor or help; 'to kindly do'.",
+  "formation": "Verb-て form + いただく",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜ていただく（謙譲・恩恵）\n\n### Meaning and function\n- The speaker/in-group humbly “receives the favor” of someone doing an action.\n- Used to make very polite, indirect requests to a listener or higher-status/outer-group person.\n\n### Form and templates\n- Core: V-て + いただく\n- Benefactive frame: N(beneficiary: 私・私たち・内) は N(agent) に V-て いただく\n- Polite and tense:\n  - Non-past/past: いただきます／いただきました\n  - Progressive/linking: いただいて（〜）\n- Potential/requests:\n  - V-て いただける／いただけます\n  - V-て いただけませんか／V-て いただけないでしょうか（softer, more formal）\n  - V-て いただけますでしょうか（very formal; sometimes considered redundant but widely used in business）\n  - V-て いただければ（〜）（conditional to soften requests）\n- Agent marking: に is standard/formal; から is possible but more casual.\n- Alternative honorific build:\n  - お/ご + Vます-stem + いただく\n  - For する-verbs: ご + Sino-Japanese noun + いただく（e.g., ごXいただく）\n  - For non-する verbs: お + Vます-stem + いただく（e.g., おVいただく）\n  - Not all verbs/nouns accept お/ご; follow the usual お（和語）/ご（漢語） guideline.\n\n### Usage notes and constraints\n- Register: Humble keigo; common and natural in business, customer service, formal emails. In casual speech, 〜てもらう is more common.\n- Beneficiary restriction: The receiver is the speaker or their in-group. Do not use it when the receiver is the listener/out-group (that would humble them); use 〜てくださる to honor the doer instead if you need that viewpoint.\n- Viewpoint: 〜ていただく focuses on the receiver of the favor. If you wish to highlight/honor the doer as the subject, use 〜てくださる.\n- Softness vs directness: Request forms with 〜ていただく are softer and more deferential than 〜てください, and more formal than 〜てくれますか／〜てもらえますか.\n- Orthography: When いただく functions as an auxiliary after V-て or after お/ご〜, many style guides prefer kana (いただく). Kanji 頂く is often reserved for the independent lexical verb “to receive (a thing)/to eat/drink.”\n\n### Common mistakes (optional, only if relevant)\n- Marking the agent with を or は; use に (formal) or から (casual).\n- Using 〜ていただく when the beneficiary is the listener/out-group; this inappropriately humbles them. Use 〜てくださる for that viewpoint.\n- Overusing 頂く in auxiliary position; write いただく.\n- Misapplying お/ご: use お with native verbs and ご with Sino-Japanese する-nouns; not all items take this pattern.\n- Confusing 〜ていただく (someone else does it for you) with 〜させていただく (you do it with permission).\n\n### Related grammar (optional, only if relevant)\n- 〜てもらう: Neutral benefactive; less formal; same receiver viewpoint without humble tone.\n- 〜てくださる: Honorific benefactive focusing on the giver; use when you want to honor the doer as subject.\n- お/ご + Vます-stem + ください: Polite direct request; more direct than 〜ていただけますか.\n- 〜させていただく: Humble “let me do (with your permission)”; subject is the speaker, not the other person.",
+  "examples": [
+    {
+      "jp": "私は先生にもう一度説明していただいた。",
+      "en": "I had the teacher explain it to me once more."
+    },
+    {
+      "jp": "私どもは担当者に資料を送っていただきました。",
+      "en": "We had the person in charge send us the materials."
+    },
+    {
+      "jp": "弊社は貴社に継続してご協力いただいております。",
+      "en": "Our company has been receiving your continued cooperation."
+    },
+    {
+      "jp": "すみませんが、この書類をご確認いただけますか。",
+      "en": "Excuse me, could you please check this document?"
+    },
+    {
+      "jp": "お手数ですが、明日までにご返信いただけませんか。",
+      "en": "Sorry for the trouble, but could you reply by tomorrow?"
+    },
+    {
+      "jp": "こちらの件、ご対応いただけないでしょうか。",
+      "en": "Would you be able to handle this matter for us?"
+    },
+    {
+      "jp": "会議の日程についてご連絡いただけますでしょうか。",
+      "en": "Could you let us know about the meeting schedule?"
+    },
+    {
+      "jp": "お時間のあるときにご連絡いただければ幸いです。",
+      "en": "We would appreciate it if you could contact us when you have time."
+    },
+    {
+      "jp": "私は友だちから引っ越しを手伝っていただいた。",
+      "en": "I had a friend help me with the move."
+    },
+    {
+      "jp": "その件は、返信していただかなくて大丈夫です。",
+      "en": "Regarding that matter, there's no need to reply."
+    },
+    {
+      "jp": "ご丁寧にご対応いただいて、誠にありがとうございます。",
+      "en": "Thank you very much for your courteous assistance."
+    },
+    {
+      "jp": "先日ご案内いただいた日程で伺ってもよろしいでしょうか。",
+      "en": "Would it be alright if we visited on the schedule you kindly informed us of the other day?"
+    },
+    {
+      "jp": "先輩にはいつも的確にアドバイスしていただいている。",
+      "en": "I always receive precise advice from my senior."
+    },
+    {
+      "jp": "ただいま準備中のため、お客様には入口でお待ちいただいております。",
+      "en": "As we are currently preparing, we are asking customers to wait at the entrance."
+    },
+    {
+      "jp": "大変恐縮ですが、資料の差し替え方法をご教示頂けますでしょうか。",
+      "en": "I’m terribly sorry, but could you please advise us on how to replace the materials?"
+    },
+    {
+      "jp": "先輩、これ見ていただける？",
+      "en": "Could you take a look at this for me?"
+    },
+    {
+      "jp": "宿泊先のご手配いただければ幸いです。",
+      "en": "We would appreciate it if you could arrange the accommodations."
+    },
+    {
+      "jp": "本日は足元の悪い中、お越しいただきありがとうございました。",
+      "en": "Thank you for coming today despite the poor weather."
+    },
+    {
+      "jp": "しばらくお待ちいただけませんでしょうか。",
+      "en": "Could I ask you to wait a moment?"
+    },
+    {
+      "jp": "母に駅まで迎えに来ていただいて、本当に助かった。",
+      "en": "I had my mother come pick me up at the station, which really helped."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "出されたお料理をありがたくいただきました。",
+      "en": "I gratefully ate the dishes that were served."
+    },
+    {
+      "jp": "社長にお時間をいただけますか。",
+      "en": "May I have some of your time, President?"
+    },
+    {
+      "jp": "先生が丁寧に説明してくださいました。",
+      "en": "The teacher kindly explained it."
+    },
+    {
+      "jp": "友だちに宿題を手伝ってもらった。",
+      "en": "I got a friend to help me with my homework."
+    },
+    {
+      "jp": "ご確認ください。",
+      "en": "Please check."
+    },
+    {
+      "jp": "本日は簡単に自己紹介させていただきます。",
+      "en": "Today, allow me to briefly introduce myself."
+    },
+    {
+      "jp": "会議の案内をメールでいただきました。",
+      "en": "I received the meeting notice by email."
+    },
+    {
+      "jp": "それでは、いただきます。",
+      "en": "Well then, let’s eat."
+    },
+    {
+      "jp": "先ほどいただいた資料を印刷しました。",
+      "en": "I printed the materials I received earlier."
+    },
+    {
+      "jp": "ご協力をお願いいたします。",
+      "en": "We would appreciate your cooperation."
+    }
+  ]
+}

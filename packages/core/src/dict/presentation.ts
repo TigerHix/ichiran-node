@@ -10,6 +10,7 @@ import { getConnection } from '../conn.js';
 import { getCharClass, asHiragana, testWord } from '../characters.js';
 import { getSuffixDescription } from '../grammar/suffixCache.js';
 import { getConjDescription } from './conj-description.js';
+import { initializeIchiran } from '../init.js';
 import type {
   KanjiText,
   KanaText,
@@ -218,6 +219,9 @@ export async function dictSegment(
   str: string,
   options: { limit?: number } = {}
 ): Promise<Array<[WordInfo[], number]>> {
+  // Ensure suffix definitions are registered
+  initializeIchiran();
+  
   const limit = options.limit ?? 5;
   const segmentLists = await joinSubstringWords2(str);
   const paths = await findBestPath(segmentLists, str.length, { limit });

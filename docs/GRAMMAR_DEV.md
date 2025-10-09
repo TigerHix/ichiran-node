@@ -36,7 +36,7 @@
 - Use clear labels (e.g., `"capture": "predicate"`, `"subject"`, `"adjective"`).
 
 ### 6) Author the JSON
-- Location: `src/grammarMatcher/grammars/<level>/`.
+- Location: `@ichiran/grammar/grammars/<level>/`.
 - Include: `id`, `level`, `priority`, `formation`, `pattern`, `explanation`, `examples`, `negativeExamples`.
 - Skeleton:
 ```json
@@ -128,5 +128,140 @@
 
 ### Quick summary
 - Start with macro‑based structure → constrain with predicates → model fused/split via ordered `alt` → add minimal captures → iterate with `DEBUG.md` tools and tests.
+
+---
+
+## Runtime Architecture
+
+### File Structure
+
+The grammar runtime is split into focused modules:
+
+- **`runtime.ts`** - Orchestration layer
+  - `matchText(text, defs, options)` - match grammars, select best segmentation per sentence
+  - `analyzeText(text, defs, options)` - match + full segmentation data
+  - `compileGrammars(defs)` - compile and sort grammars by priority
+
+- **`matcher.ts`** - Pattern matching and ranking
+  - `matchGrammars(tokens, grammars, options)` - match compiled grammars against tokens
+  - `selectBestOutcome(outcomes, startIndex)` - deterministic outcome ranking (span > preference > captures)
+  - Start gate precomputation for O(n) performance
+
+- **`cache.ts`** - Compiled pattern LRU cache
+  - `getCompiledMatcher(def)` - get or compile a matcher with caching
+  - `clearCompiledGrammarCache()` - reset cache (useful for tests)
+  - `setCompiledGrammarCacheCapacity(n)` - adjust cache size (default: 500)
+
+- **`segmentation.ts`** - Tokenization alternatives
+  - `segmentText(text, limit, normalizePunctuation)` - generate tokenization alternatives
+  - `splitTextBySentences(text)` - split by sentence boundaries
+
+- **`segments.ts`** - Capture segment builder
+  - `buildSegmentsFromTokens(tokens, captures)` - build alternating raw/capture segments for rendering
+
+- **`compiler.ts`** - Pattern compilation
+  - `compilePattern(node)` - compile pattern nodes into matchers
+  - Handles sequence, alt, token, repeat, optional, capture, peek, not, anchor, macro
+
+- **`predicates.ts`** - Token predicates
+  - `resolvePredicate(spec)` - resolve predicate string to function
+  - `evaluatePredicates(token, ctx, preds)` - evaluate predicates with AND semantics
+  - Built-in predicates: `text:`, `lemma:`, `pos:`, `kana:`, `isNaAdjective`, `hasVerbalConjugation`, etc.
+
+- **`profile.ts`** - Performance profiling helpers
+  - `time(label, fn)` - synchronous timing
+  - `timeAsync(label, fn)` - asynchronous timing
+  - Controlled by `GRAMMAR_PROFILE` env var
+
+- **`macros.ts`** - Macro min-token registry
+  - `MACRO_MIN_TOKENS` - conservative minimum token counts for built-in macros
+  - Used to skip futile match attempts when insufficient tokens remain
+
+### Public APIs
+
+#### Core Matching
+
+```typescript
+import { matchText, analyzeText } from '@ichiran/grammar';
+
+// Match patterns and get hits from best segmentation per sentence
+const hits = await matchText(text, grammarDefs, {
+  maxMatches: 100,
+  limit: 5,                    // segmentation alternatives per sentence
+  normalizePunctuation: false
+});
+
+// Match + full segmentation data
+const result = await analyzeText(text, grammarDefs, options);
+// result: { grammarMatches, segments, tokens, grammarDetails }
+```
+
+#### Cache Management
+
+```typescript
+import { clearCompiledGrammarCache, setCompiledGrammarCacheCapacity } from '@ichiran/grammar';
+
+// Clear cache (useful for tests or when grammar defs change at runtime)
+clearCompiledGrammarCache();
+
+// Adjust cache capacity (default: 500 entries)
+setCompiledGrammarCacheCapacity(1000);
+```
+
+### Performance Optimizations
+
+#### Profiling
+
+Set `GRAMMAR_PROFILE=1` to enable detailed timing logs:
+
+```bash
+GRAMMAR_PROFILE=1 bun run examples/analyze.ts
+```
+
+Output includes:
+- Total time, sentences, alternatives tried
+- Grammar count, matcher calls/ms
+- selectBestOutcome ms, buildSegments ms
+- Compile time, cache hits/misses
+- Token counts (filtered/unfiltered)
+
+#### Start Gates
+
+Start gates reduce unnecessary matcher invocations using a DSL:
+
+- **`firstToken`** - predicates that must hold at the match start position (AND semantics)
+- **`anyToken`** - predicates that must match *somewhere* in the token array (OR semantics, precomputed once)
+- **`near`** - predicates that must match within a window around start position (precomputed as boolean array)
+
+Precomputation avoids O(n²) predicate evaluations during matching.
+
+Example:
+```json
+{
+  "id": "n2.grammar-pattern",
+  "startGate": {
+    "firstToken": ["text:一番"],
+    "anyToken": ["pos:v", "pos:adj-i"],
+    "near": {
+      "predicates": ["text:より"],
+      "window": { "left": 3, "right": 3 }
+    }
+  }
+}
+```
+
+#### Min-Token Estimation
+
+Each pattern and macro has a conservative lower bound on required tokens. The matcher skips attempts when `tokens.length - startIndex < minTokens`.
+
+Macro estimates (from `macros.ts`):
+- `NP`: 1, `NPCase`: 2, `NPTopic`: 2
+- `IAdjKu`: 1, `IAdjKunakute`: 2, `IAdjKuSuru`: 2
+- `NaAdjDe`: 2, `NaAdjNiNaru`: 2
+- `PrePredicateAdjuncts`: 0 (optional)
+
+#### Compiled Pattern Cache
+
+Patterns are compiled once and cached (LRU, default 500 entries). Cache key: `${grammarId}|${JSON.stringify(pattern)}` to detect changes. On cache hit, compilation is skipped entirely.
 
 

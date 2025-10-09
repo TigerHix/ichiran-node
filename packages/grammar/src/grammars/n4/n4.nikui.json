@@ -1,0 +1,135 @@
+{
+  "id": "n4.nikui",
+  "level": "N4",
+  "description": "Express difficulty or complexity; 'hard to', 'difficult to', 'not easily'.",
+  "formation": "Verb-stem + にくい",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- Vます＋にくい\n\n### Meaning and function\n- Expresses that doing the action is difficult, hard, or not easily done. Implies difficulty, not impossibility, often due to inherent properties of the situation, object, or conditions.\n\n### Form and templates\n- Core template:\n  - V(stem/ます-stem) + にくい\n- Conjugation (にくい is an い-adjective):\n  - Polite: ～にくいです\n  - Negative: ～にくくない\n  - Past: ～にくかった\n  - Past negative: ～にくくなかった\n  - Adverbial: ～にくく …\n  - Noun modifier: ～にくい + N\n  - Change/result: ～にくくなる\n  - Causative (make … hard to …): ～にくくする\n  - Nominalized degree: ～にくさ (the difficulty)\n- Verb stem notes:\n  - Ichidan: remove る (e.g., 食べ→)\n  - Godan: use the ます-stem (e.g., 書き→)\n  - Irregular: する→し, くる→き\n- Particle requirements:\n  - None inside the pattern; attach directly to the verb stem. Use normal case particles (を/が/に/で etc.) for the verb’s arguments before the verb as usual.\n\n### Usage notes and constraints\n- Register/naturalness:\n  - Neutral and very common in speech and writing. Works in both plain and polite styles.\n- Semantics/scope:\n  - Describes general or situational difficulty, not a single failed attempt or permission/ability. For inability, use potential form or できない; for prohibition, use ～てはいけない.\n  - Often attributes difficulty to physical/technical factors or properties of things/conditions. Frequently used attributively before nouns to describe “hard-to-Verb” things.\n  - Degree adverbs (e.g., とても/かなり/少し/あまり～ない) modify it like any い-adjective.\n- Orthographic variants:\n  - Prefer kana: にくい. The kanji 難い (にくい) exists but is uncommon in modern writing and can be confused with 憎い (hateful), so kana is standard.\n- Contrastive nuance:\n  - ～づらい (from 辛い) is more about psychological burden/social awkwardness or discomfort; more colloquial.\n  - ～がたい (難い, read がたい) is formal/literary and means “hard to (almost impossible to)”—often for abstract/moral acts.\n  - ～にくい expresses difficulty, not near-impossibility.\n\n### Common mistakes (optional, only if relevant)\n- Using dictionary form + にくい instead of the ます-stem.\n- Conjugating にくい like a な-adjective (it is an い-adjective).\n- Using ～にくい where the intended meaning is “cannot” or “not allowed” (use potential/できない or prohibition forms).\n- Overusing ～にくい for socially awkward/embarrassing actions where ～づらい is more natural.\n- Writing 難い for にくい in general contexts, causing misreading or confusion with ～がたい/憎い.\n\n### Related grammar (optional, only if relevant)\n- V(stem)＋やすい: “easy to …”; the direct opposite.\n- V(stem)＋づらい: “hard to …” due to psychological/situational burden; more colloquial.\n- V(stem)＋がたい: “very hard/almost impossible to …”; formal/literary, often abstract/moral.\n- V(dict) のは 難しい／困難だ: states difficulty as a general fact using a separate predicate rather than the stem + にくい adjective.",
+  "examples": [
+    {
+      "jp": "このペンはインクが出にくい。",
+      "en": "The ink of this pen doesn’t come out easily."
+    },
+    {
+      "jp": "骨が多いので、この魚は食べにくいです。",
+      "en": "This fish is hard to eat because it has many bones."
+    },
+    {
+      "jp": "その説明は専門用語が多くて、少し分かりにくかった。",
+      "en": "That explanation had a lot of jargon and was a bit hard to understand."
+    },
+    {
+      "jp": "風が強い日は、火がつきにくかったです。",
+      "en": "On windy days, it was hard to get a fire going."
+    },
+    {
+      "jp": "このフォントは小さくすると、とても読みにくいです。",
+      "en": "This font gets very hard to read when made small."
+    },
+    {
+      "jp": "この時間帯は、人が来にくいです。",
+      "en": "It’s hard for people to come at this time of day."
+    },
+    {
+      "jp": "このスイッチは小さすぎて、押しにくくないですか。",
+      "en": "Isn’t this switch hard to press because it’s too small?"
+    },
+    {
+      "jp": "車輪が大きいから、そのベビーカーは段差でも押しにくくない。",
+      "en": "Because the wheels are big, that stroller isn’t hard to push even over bumps."
+    },
+    {
+      "jp": "手袋をすると、スマホの画面が反応しにくくなります。",
+      "en": "When you wear gloves, the smartphone screen becomes less responsive."
+    },
+    {
+      "jp": "この容器は、滑りにくく加工してあります。",
+      "en": "This container has been treated to be slip-resistant."
+    },
+    {
+      "jp": "雑音が多くて、相手の声が聞き取りにくかったです。",
+      "en": "There was a lot of noise, so it was hard to make out the other person’s voice."
+    },
+    {
+      "jp": "色が薄くて、ピントが合いにくい写真ですね。",
+      "en": "The colors are faint; it’s a photo that’s hard to bring into focus, isn’t it?"
+    },
+    {
+      "jp": "取っ手が太いので、このカップは持ちにくくないです。",
+      "en": "Because the handle is thick, this cup isn’t hard to hold."
+    },
+    {
+      "jp": "このアプリはメニューが分かりにくくて、使いにくさが残っています。",
+      "en": "The menus in this app are hard to understand, and it still has usability issues."
+    },
+    {
+      "jp": "新しいフィルターは、青い光を見えにくくします。",
+      "en": "The new filter makes blue light harder to see."
+    },
+    {
+      "jp": "年を取ると、小さい文字が見えにくくなった。",
+      "en": "As I’ve gotten older, small print has become harder to see."
+    },
+    {
+      "jp": "会議室の空調音が大きく、発言が聞こえにくいです。",
+      "en": "The HVAC noise in the conference room is loud, so it’s hard to hear what people say."
+    },
+    {
+      "jp": "このノブは濡れると回しにくかった。",
+      "en": "This knob was hard to turn when wet."
+    },
+    {
+      "jp": "商品の名前が覚えにくくなかったので、すぐに覚えられた。",
+      "en": "The product name wasn’t hard to remember, so I memorized it quickly."
+    },
+    {
+      "jp": "昨日の資料は、文字が小さすぎて読みにくくなかったですか。",
+      "en": "Weren’t yesterday’s materials hard to read because the text was too small?"
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "この魚は食べづらい。",
+      "en": "This fish is hard to eat."
+    },
+    {
+      "jp": "この文字は小さすぎて、読むのは難しいです。",
+      "en": "The text is too small; reading it is difficult."
+    },
+    {
+      "jp": "信じがたい話だが、本当らしい。",
+      "en": "It’s a story that’s hard to believe, but it seems true."
+    },
+    {
+      "jp": "彼への憎さは、もうない。",
+      "en": "I no longer feel hatred toward him."
+    },
+    {
+      "jp": "あの犯人が憎い。",
+      "en": "I hate that culprit."
+    },
+    {
+      "jp": "このマグは滑り止めがついていて、持ちやすいです。",
+      "en": "This mug has a non-slip grip and is easy to hold."
+    },
+    {
+      "jp": "その像は醜い。",
+      "en": "That statue is ugly."
+    },
+    {
+      "jp": "それはちょっと言いづらいです。",
+      "en": "That’s a bit hard to say."
+    },
+    {
+      "jp": "彼の字は読みやすくない。",
+      "en": "His handwriting isn’t easy to read."
+    },
+    {
+      "jp": "今日は疲れていて、走れない。",
+      "en": "I’m tired today and can’t run."
+    }
+  ]
+}

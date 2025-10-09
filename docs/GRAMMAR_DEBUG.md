@@ -29,7 +29,7 @@ setConnection(conn!);
 initializeIchiran();
 await initSuffixes({ blocking: true });
 
-const alternatives = await segmentSentenceWithAlternatives('好きになりました。');
+const alternatives = await segmentTextWithAlternatives('好きになりました。');
 const token = alternatives[0].tokens[0];
 
 console.log('Text:', token.text);
@@ -55,10 +55,10 @@ console.log('Entries:', results.map(r => ({ text: r.text, seq: r.seq })));
 ## Test Pattern Matching
 
 ```typescript
-import { matchSentence } from './src/grammarMatcher/runtime.js';
-import { grammarCatalog } from './src/grammarMatcher/catalog.js';
+import { matchText } from './packages/grammar/src/runtime.js';
+import { grammarCatalog } from './packages/grammar/src/catalog.js';
 
-const matches = await matchSentence('好きになりました。', grammarCatalog);
+const matches = await matchText('好きになりました。', grammarCatalog);
 console.log('Matches:', matches.map(m => m.grammarId));
 console.log('Captures:', matches[0]?.captures.map(c => c.tokens.map(t => t.text).join('')));
 ```

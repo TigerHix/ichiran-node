@@ -1,0 +1,19 @@
+{
+  "name": "@ichiran/testing",
+  "version": "0.1.0",
+  "description": "Shared testing utilities for Ichiran packages",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@ichiran/core": "workspace:*",
+    "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^20.19.19"
+  }
+}
+

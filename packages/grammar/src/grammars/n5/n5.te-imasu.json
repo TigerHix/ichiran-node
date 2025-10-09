@@ -1,0 +1,135 @@
+{
+  "id": "n5.te-imasu",
+  "level": "N5",
+  "description": "Expresses the present continuous or ongoing action; 'to be doing', 'currently doing'",
+  "formation": "Verb て-form + います",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜ている／〜ています（進行）\n\n### Meaning and function\n- Expresses an action in progress right now (“be doing,” “currently doing”)\n- Also used for actions or activities that are ongoing over a period (currently engaged in a job, school, project, etc.)\n\n### Form and templates\n- V-て + いる (plain)\n- V-て + います (polite)\n- Negative: V-て + いない / いません\n- Past progressive: V-て + いた / いました\n- Past negative progressive: V-て + いなかった / いませんでした\n- Contractions (casual/spoken): V-てる (plain), V-てます (polite spoken). Avoid in formal writing.\n- Inflection rule: tense/politeness/negation are marked on いる, not on the て-form verb.\n- て-form formation: attach て to the verb’s て-form (一段: stem + て; 五段: sound changes by consonant row; irregulars: する→して, 来る→きて).\n- Particle/use order (typical): [Topic/subject] は/が + [Time] + [Place] で + [Object] を + V-ている. Time adverbs like 今(いま), ちょうど, まだ, いつも commonly co-occur for clarity.\n\n### Usage notes and constraints\n- Register: Natural in both plain and polite speech. Extremely frequent in conversation. 〜てます is common in spoken polite but avoided in formal writing.\n- Aspect/semantics: Describes an action underway at the reference time (usually “now”). Without a clear time cue, it can also suggest a present, ongoing activity or engagement (e.g., currently working, currently studying).\n- Instantaneous/change-of-state verbs often yield a current state reading with 〜ている (e.g., “know,” “live,” “be married” type meanings), not a literal ongoing action.\n- Motion verbs (行く・来るなど): 〜ている can mean either “be on the way” (progressive) or “go/come regularly; attend” (habit-like ongoing). Context or time expressions are needed to disambiguate.\n- Location marking: Use で for the place where the action is happening. Some verbs inherently take に for residence/placement; follow each verb’s particle pattern.\n- Orthography: ている／ています are typically written in kana. Casual contractions てる／てます are common in dialogue. 今 and いま are both used; 今 is more common in writing.\n\n### Common mistakes\n- Using the non-progressive 〜ます/〜る to mean “be doing right now.”\n- Conjugating the main verb instead of いる for tense/politeness/negation; only いる changes.\n- Trying to attach 〜ている to adjectives or nouns; it attaches only to verbs.\n- Misreading 〜ている with motion verbs as only “right now,” when it often means a regular/ongoing activity.\n- Using the simple present of instantaneous verbs to mean a current state that actually requires 〜ている.\n\n### Related grammar\n- 〜ます／〜る (non-past): General habits/routines and timeless facts; not specifically “in progress.”\n- 〜ところだ: Focuses on “about to do / in the middle of doing / just finished doing,” giving a precise stage.\n- 〜中: “During/in the middle of” an activity or event; emphasizes duration.\n- 〜てある: Resultant state of an object due to someone’s intentional action (object-centered), distinct from mere ongoing action.",
+  "examples": [
+    {
+      "jp": "ちょうど今、昼ごはんを作っています。",
+      "en": "I'm just now making lunch."
+    },
+    {
+      "jp": "いま音楽を聴いている。",
+      "en": "I'm listening to music now."
+    },
+    {
+      "jp": "今は運転していません。",
+      "en": "I'm not driving right now."
+    },
+    {
+      "jp": "まだ宿題をしていない。",
+      "en": "I haven't done my homework yet."
+    },
+    {
+      "jp": "そのとき私は図書館で勉強していました。",
+      "en": "At that time, I was studying in the library."
+    },
+    {
+      "jp": "昨日の夜はずっとゲームをしていた。",
+      "en": "I was playing games all last night."
+    },
+    {
+      "jp": "会議中、彼は話を聞いていませんでした。",
+      "en": "During the meeting, he wasn't listening."
+    },
+    {
+      "jp": "昼休み、だれもテレビを見ていなかった。",
+      "en": "During lunch break, no one was watching TV."
+    },
+    {
+      "jp": "今、バスを待ってる。",
+      "en": "I'm waiting for the bus now."
+    },
+    {
+      "jp": "最近、日が長くなっている。",
+      "en": "Lately, the days are getting longer."
+    },
+    {
+      "jp": "今、そちらに向かってます。",
+      "en": "I'm on my way over there now."
+    },
+    {
+      "jp": "週に三回、ジムに行っています。",
+      "en": "I go to the gym three times a week."
+    },
+    {
+      "jp": "彼のことはよく知っています。",
+      "en": "I know him well."
+    },
+    {
+      "jp": "私の祖母は大阪に住んでいる。",
+      "en": "My grandmother lives in Osaka."
+    },
+    {
+      "jp": "彼らはもう結婚している。",
+      "en": "They are already married."
+    },
+    {
+      "jp": "私はいつもこのカフェで仕事をしています。",
+      "en": "I always work at this cafe."
+    },
+    {
+      "jp": "今、何をしていますか。",
+      "en": "What are you doing now?"
+    },
+    {
+      "jp": "いま誰と話してるの？",
+      "en": "Who are you talking with now?"
+    },
+    {
+      "jp": "まだ起きていないのか。",
+      "en": "Aren't you up yet?"
+    },
+    {
+      "jp": "今走っている人は部長です。",
+      "en": "The person running now is the department manager."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "今、昼ごはんを作ります。",
+      "en": "I'm going to make lunch now."
+    },
+    {
+      "jp": "ちょうど映画を見るところです。",
+      "en": "I'm just about to watch a movie."
+    },
+    {
+      "jp": "図書館で勉強中です。",
+      "en": "I'm in the middle of studying at the library."
+    },
+    {
+      "jp": "駅には人がいる。",
+      "en": "There are people at the station."
+    },
+    {
+      "jp": "週に三回ジムに行きます。",
+      "en": "I go to the gym three times a week."
+    },
+    {
+      "jp": "宿題はこれからです。",
+      "en": "I'll start my homework now."
+    },
+    {
+      "jp": "窓はもう閉めてあります。",
+      "en": "The windows have already been closed (and left that way)."
+    },
+    {
+      "jp": "来年は東京に住むつもりです。",
+      "en": "I plan to live in Tokyo next year."
+    },
+    {
+      "jp": "先生はすぐ来ます。",
+      "en": "The teacher will come soon."
+    },
+    {
+      "jp": "その店は今、営業中だ。",
+      "en": "The store is open for business now."
+    }
+  ]
+}

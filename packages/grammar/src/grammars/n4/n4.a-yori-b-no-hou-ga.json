@@ -1,0 +1,135 @@
+{
+  "id": "n4.a-yori-b-no-hou-ga",
+  "level": "N4",
+  "description": "Comparing two things; 'B is more ~ than A'.",
+  "formation": "A + より + B + のほうが + Adjective/Verb",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- AよりBのほうが\n\n### Meaning and function\n- States a two-item comparison: B is more/does more ~ than A; expresses relative degree or preference\n\n### Form and templates\n- Core\n  - A(N/NP) + より + B(N/NP) + のほうが + Predicate\n- Predicate types\n  - い-adj: …い\n  - な-adj: …だ/です\n  - Noun: …だ/です\n  - Verb: …（plain or polite; tense/negation as needed）\n- Particle requirements and ordering\n  - より comes right after A and marks the baseline of comparison\n  - のほうが comes right after B and marks the “more” side; が is the default subject/focus marker\n  - よりも is an emphatic/longer variant of より (either is fine)\n- Alternative orders\n  - B + のほうが + A + より + Predicate (very common)\n  - A + と + B + では/なら、B + のほうが + Predicate (to explicitly set the comparison set)\n- Optional/alternative parts\n  - Intensifiers before のほうが or before the predicate: ずっと／もっと／かなり／少し など\n  - Use は instead of が after のほう for contrastive emphasis: Bのほうは…\n- Comparing actions/qualities (not just nouns)\n  - V-るより + V-るほうが + Predicate\n  - With nouns as options: Nより + Nのほうが + Predicate\n  - With adjectives as options: い-adjなら直接、な-adjは名詞化や名詞を伴う形にするのが自然（例: Nを補って比べる） \n- Conjugation/inflection\n  - Politeness and tense/negation attach to the predicate: …です／でした／ではありません, …ない／なかった, …ます／ました など\n\n### Usage notes and constraints\n- Register/naturalness\n  - Neutral and frequent in both speech and writing; politeness is controlled by the predicate form\n- Scope/semantics\n  - Typically compares two items; for superlatives across three or more, use いちばん／最も\n  - のほう implies “the B side of the two (or of the mentioned set)”; it sounds more like a choice/selection than simply stating a difference\n  - A can be omitted when recoverable from context (Bのほうが… then implies “compared to the other one mentioned”)\n- Particle nuances\n  - が after のほう is default; は adds contrast or topic shading (Bのほうは…)\n- Orthographic variants\n  - のほうが／の方が: both are correct; ほう (kana) is common in beginner texts and casual writing, 方 is common in formal writing; reading is ほう, not かた\n- Intensifier placement\n  - Place ずっと／もっと etc. before のほうが or before the predicate, not directly after より\n- With いい/好き-type predicates\n  - Choice/preference is often said with B(のほう)がいい／好き; のほう makes the comparison explicit and is safer at this level\n\n### Common mistakes\n- Omitting の with nouns: Nほうが… is ungrammatical; use Nのほうが…\n- Misordering/stacking particles: avoid patterns like AはよりBのほうが…; either AよりBのほうが… or BのほうがAより…\n- Using に after A: it must be Aより (optionally Aよりも), not Aに\n- Overusing negation to mean “less than”: for “not as ~ as A,” ほど…ない is usually clearer than Bのほうが…ない\n- Placing intensifiers incorrectly: avoid よりもっと…; put もっと/ずっと with のほうが or the predicate\n\n### Related grammar\n- AはBより〜: Another comparative pattern; sets A as the topic and says “A is more ~ than B.” No のほう nuance of “choosing the B side.”\n- AよりBがいい／好き: Common with preference predicates; のほう is optional but adds explicit “this side” nuance\n- AほどBは〜ない: “B is not as ~ as A”; preferred for expressing “less than”\n- Nの中でBがいちばん〜／最も〜: Superlative within a set (three or more)\n- ずっと／もっと／さらに: Degree adverbs to strengthen the difference in comparisons",
+  "examples": [
+    {
+      "jp": "コーヒーより紅茶のほうが好きです。",
+      "en": "I like tea more than coffee."
+    },
+    {
+      "jp": "去年より今年のほうが忙しい。",
+      "en": "This year is busier than last year."
+    },
+    {
+      "jp": "前回より今回のほうがずっと楽しかったです。",
+      "en": "This time was much more fun than last time."
+    },
+    {
+      "jp": "この机より、ずっとあの机のほうが丈夫です。",
+      "en": "That desk is far sturdier than this desk."
+    },
+    {
+      "jp": "海外よりも国内の方が安全です。",
+      "en": "Domestic options are safer than overseas ones."
+    },
+    {
+      "jp": "山のほうが海より静かだ。",
+      "en": "The mountains are quieter than the sea."
+    },
+    {
+      "jp": "牛肉と鶏肉なら、鶏肉のほうは安いですか。",
+      "en": "Between beef and chicken, is chicken cheaper?"
+    },
+    {
+      "jp": "走るより歩くほうが体にいい。",
+      "en": "Walking is better for your health than running."
+    },
+    {
+      "jp": "雨より雪のほうがきれいだと思う。",
+      "en": "I think snow is prettier than rain."
+    },
+    {
+      "jp": "東京と大阪では、大阪のほうが物価が高いですか。",
+      "en": "Between Tokyo and Osaka, are prices higher in Osaka?"
+    },
+    {
+      "jp": "授業より自習のほうが早く進みます。",
+      "en": "Self-study progresses faster than classes."
+    },
+    {
+      "jp": "昨日は、予算より納期のほうが問題でした。",
+      "en": "Yesterday, the deadline was more of a problem than the budget."
+    },
+    {
+      "jp": "午前より午後のほうが混みますか。",
+      "en": "Are afternoons more crowded than mornings?"
+    },
+    {
+      "jp": "この道よりあっちの道のほうが安全に歩ける。",
+      "en": "You can walk more safely on that road than on this one."
+    },
+    {
+      "jp": "去年買ったモデルより新しいモデルのほうがかなり軽い。",
+      "en": "The newer model is considerably lighter than the one I bought last year."
+    },
+    {
+      "jp": "先に出発するより、ゆっくり準備するほうが気が楽です。",
+      "en": "Preparing at a leisurely pace is more relaxing than leaving early."
+    },
+    {
+      "jp": "これよりそっちのほうがもっと便利ですよ。",
+      "en": "That one is even more convenient than this."
+    },
+    {
+      "jp": "私にとっては、量より質のほうが大事です。",
+      "en": "For me, quality is more important than quantity."
+    },
+    {
+      "jp": "この色のほうが明るいですね。",
+      "en": "This color is brighter, isn't it?"
+    },
+    {
+      "jp": "タクシーよりバスのほうがお金がかかりません。",
+      "en": "Buses cost less than taxis."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "東京は大阪より寒いです。",
+      "en": "Tokyo is colder than Osaka."
+    },
+    {
+      "jp": "コーヒーより紅茶がいいです。",
+      "en": "I’d rather have tea than coffee."
+    },
+    {
+      "jp": "あの方が先生です。",
+      "en": "That person is the teacher."
+    },
+    {
+      "jp": "駅のほうへ歩きます。",
+      "en": "I will walk toward the station."
+    },
+    {
+      "jp": "本日より営業します。",
+      "en": "We will be open for business starting today."
+    },
+    {
+      "jp": "この中で彼がいちばん速い。",
+      "en": "He is the fastest among these."
+    },
+    {
+      "jp": "去年ほど今年は忙しくないです。",
+      "en": "This year isn’t as busy as last year."
+    },
+    {
+      "jp": "前よりも元気になりました。",
+      "en": "I’ve become healthier than before."
+    },
+    {
+      "jp": "右のほうにコンビニがあります。",
+      "en": "There’s a convenience store to the right."
+    },
+    {
+      "jp": "紅茶とコーヒーなら、紅茶が好きです。",
+      "en": "Between tea and coffee, I like tea."
+    }
+  ]
+}

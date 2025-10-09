@@ -1,0 +1,135 @@
+{
+  "id": "n5.nani",
+  "level": "N5",
+  "description": "Asking about 'what' or 'which' in Japanese",
+  "formation": "Verb + なに, い-Adjective + なに, な-Adjective + なに, Noun + なに",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 疑問詞「何（なに／なん）」\n\n### Meaning and function\n- Asks about “what” (identity, content, type, purpose)\n- With counters, asks “how many/how much/what number/time”\n- With の, asks “what/which kind of N” (category or purpose), not selection from a visible set\n\n### Form and templates\n- Core “what”\n  - 何が V?\n  - 何を V?\n  - 何に V?\n  - 何で V? → “by/with what (means/instrument)”\n  - N は 何ですか／何だ／何？\n- “What kind of …”\n  - 何の N …?\n- Quantity/time/price, etc.\n  - 何 + Counter …? (e.g., 何人, 何時, 何歳, 何円, 何回, 何個 など)\n- Particle requirements and ordering\n  - Use が for unknown subject, を for unknown object, に for target/recipient/time point, で for means/place of action\n  - Interrogatives normally do not take は; topicalize a different known element instead (X は … 何が/何を …)\n- Reading and alternations (なに ↔ なん)\n  - Usually read なに\n  - Becomes なん before です／だ, の, most counters, and certain set words:\n    - 何です, 何の, 何時（なんじ）, 何歳（なんさい）, 何円（なんえん）, 何人（people: なんにん）\n  - Stays なに before case particles が・を・に・と・から・まで (e.g., なにが／なにを)\n  - 何人 “what nationality” is なにじん (not なんじん)\n- Politeness variants (sentence endings)\n  - … 何ですか (polite/neutral)\n  - … 何でしょうか (softer/more polite)\n  - … 何？／何だ？ (casual; 何だ？ can sound blunt)\n\n### Usage notes and constraints\n- Register/naturalness\n  - Extremely common at all levels; choose sentence ending to match politeness\n  - 何でしょうか is a polite, customer-facing or soft inquiry; 何？ is casual\n- Semantic scope\n  - 何の N asks category/purpose/contents (“what kind of/what sort of N”)\n  - For selecting “which (one)” from known options, use どれ/どの instead of 何\n- 何で vs なんで (why)\n  - 何で (なにで) asks “by what means/with what”\n  - なんで meaning “why” is casual; prefer なぜ／どうして in neutral/formal contexts\n- Orthographic variants\n  - 何 can be written in kana (なに／なん) in everyday writing; both kanji and kana are acceptable\n  - The “why” なんで is often written in kana to distinguish it from instrumental 何で（なにで）\n\n### Common mistakes (optional, only if relevant)\n- Using なんを／なんが → use なにを／なにが\n- Marking 何 with は (e.g., 何は …) → unnatural in questions; use が/を/に/で as needed\n- Confusing 何で (instrument/means) with なんで (“why”)\n- Misreading 何人: counting people = なんにん; nationality = なにじん\n- Using 何の N to choose a specific item from visible choices → use どの N／どれ\n\n### Related grammar (optional, only if relevant)\n- どれ／どの: “which (one)/(N)” for selecting from a known set; どの must modify a noun\n- どちら／どっち: “which (of two)/which way/where”; どちら is more polite\n- どんな N: “what kind of N” (describes qualities/character); 何の N often asks category/purpose/contents\n- どう／どうやって: “how/in what way”; どうやって overlaps with 何で (means), but どう covers manner/steps more broadly\n- 何か／何も／何でも: “something/nothing/anything” formed by combining 何 with particles; not direct question forms",
+  "examples": [
+    {
+      "jp": "これは何ですか。",
+      "en": "What is this?"
+    },
+    {
+      "jp": "あの建物は何だ？",
+      "en": "What is that building?"
+    },
+    {
+      "jp": "夕飯は何でしょうか。",
+      "en": "What is for dinner?"
+    },
+    {
+      "jp": "何が必要か分かりません。",
+      "en": "I don’t know what is needed."
+    },
+    {
+      "jp": "何がいけなかったんですか。",
+      "en": "What was wrong?"
+    },
+    {
+      "jp": "きのう、何を買いましたか。",
+      "en": "What did you buy yesterday?"
+    },
+    {
+      "jp": "今夜はなにを食べる？",
+      "en": "What are we eating tonight?"
+    },
+    {
+      "jp": "何に興味がないんですか。",
+      "en": "What are you not interested in?"
+    },
+    {
+      "jp": "それ、何で切ったの？",
+      "en": "What did you cut that with?"
+    },
+    {
+      "jp": "きょうは何で来ましたか。",
+      "en": "How did you get here today?"
+    },
+    {
+      "jp": "何と書いてありますか。",
+      "en": "What does it say?"
+    },
+    {
+      "jp": "何から始めればいいですか。",
+      "en": "What should we start with?"
+    },
+    {
+      "jp": "会議は何時に始まる？",
+      "en": "What time does the meeting start?"
+    },
+    {
+      "jp": "店は何時まで開いていますか。",
+      "en": "Until what time is the store open?"
+    },
+    {
+      "jp": "今、教室には何人いますか。",
+      "en": "How many people are in the classroom now?"
+    },
+    {
+      "jp": "あなたは何人ですか。",
+      "en": "What is your nationality?"
+    },
+    {
+      "jp": "チケットは何枚必要ですか。",
+      "en": "How many tickets do you need?"
+    },
+    {
+      "jp": "このりんごは何円でしたか。",
+      "en": "How much was this apple?"
+    },
+    {
+      "jp": "これは何の音ですか。",
+      "en": "What is this sound?"
+    },
+    {
+      "jp": "何が分からなかった？",
+      "en": "What didn’t you understand?"
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "何も食べていません。",
+      "en": "I haven’t eaten anything."
+    },
+    {
+      "jp": "何とかなるよ。",
+      "en": "It’ll work out somehow."
+    },
+    {
+      "jp": "何より健康が大事だ。",
+      "en": "Health is more important than anything."
+    },
+    {
+      "jp": "そんなに寒くない。",
+      "en": "It’s not that cold."
+    },
+    {
+      "jp": "何回も練習した。",
+      "en": "I practiced many times."
+    },
+    {
+      "jp": "何日か休みます。",
+      "en": "I’ll take a few days off."
+    },
+    {
+      "jp": "『何』という字は覚えにくい。",
+      "en": "The character “何” is hard to memorize."
+    },
+    {
+      "jp": "何気ない一言で傷ついた。",
+      "en": "I was hurt by an offhand remark."
+    },
+    {
+      "jp": "何はともあれ、落ち着こう。",
+      "en": "Anyway, let’s calm down."
+    },
+    {
+      "jp": "彼は何年もここに住んでいる。",
+      "en": "He has lived here for many years."
+    }
+  ]
+}

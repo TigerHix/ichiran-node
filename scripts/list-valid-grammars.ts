@@ -2,7 +2,7 @@
 
 import { readFileSync, readdirSync, statSync } from 'fs';
 import { join } from 'path';
-import type { GrammarDefinition } from '../src/grammarMatcher/types.js';
+import type { GrammarDefinition } from '@ichiran/grammar';
 
 interface GrammarWithPath extends GrammarDefinition {
   filePath: string;
@@ -58,7 +58,7 @@ function isValidGrammar(grammar: GrammarDefinition): boolean {
 }
 
 function main() {
-  const grammarsPath = join(process.cwd(), 'src/grammarMatcher/grammars');
+  const grammarsPath = join(process.cwd(), 'packages/grammar/src/grammars');
   const allGrammars = loadAllGrammars(grammarsPath);
   
   const validGrammars = allGrammars.filter(isValidGrammar);

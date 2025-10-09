@@ -1,0 +1,136 @@
+{
+  "id": "n5.dare-mo-nai-desu",
+  "level": "N5",
+  "description": "Express 'nobody' or 'no one' in a negative sentence",
+  "formation": "だれも + Verb-negative form (ないです), だれも + い-Adjective-negative form (ないです), だれも + な-Adjective-negative form (じゃないです)",
+  "priority": 10,
+  "pattern": {
+    "comment": "PLACEHOLDER: This pattern is semantically identical to n5.dare-mo-masen. The fix for two-token sequences (だれ/誰/どなた + も) in n5.dare-mo-masen now covers all examples here. Both patterns match the same construction: だれも + negative predicate.",
+    "sequence": []
+  },
+  "explanation": "### Name\n- 誰も〜ない\n\n### Meaning and function\n- Says “nobody; no one” by combining 誰も with a negative predicate. Emphasizes “not even a single person.”\n\n### Form and templates\n- 誰も + V(ない) / Vます + ません\n- 誰も + い-adj(〜く)ない / 〜くありません\n- 誰も + N + ではない / じゃない / ではありません\n- 誰も + いない / いません (existence of people; use いる/いません, not ある/ありません)\n\nParticle requirements and ordering\n- も is required with 誰 to get the “no one” meaning; do not use は or が here.\n- Case-particle interaction:\n  - If 誰 would take が or を, replace it with も: 誰も + V(neg)\n  - If another case particle is required, attach も after it:\n    - 誰に + も + V(neg)\n    - 誰と + も + V(neg)\n    - 誰から + も + V(neg)\n    - 誰で + も + V(neg) (when で is needed), etc.\n\nConjugation/inflection notes\n- Plain: 〜ない／いない／ではない／じゃない\n- Polite: 〜ません／いません／ではありません／じゃないです\n- Past negative: 〜なかった／〜ませんでした／いませんでした\n- For い-adjectives, both 〜くないです and 〜くありません are acceptable (the latter is more formal).\n\n### Usage notes and constraints\n- Refers only to people. For things, use 何も〜ない; for places, use どこにも〜ない/いない.\n- At the N5 level, 誰も is used with a negative predicate. With an affirmative predicate it can mean “everyone” (different pattern/nuance; avoid at this level).\n- With existence, use いる/いません for people; do not use ある/ありません with 誰も.\n- Natural, very common in everyday Japanese; neutral register. Adds an “not even one person” emphasis due to も.\n- Orthography: だれも (kana) is common in beginner materials; 誰も (kanji) is also correct.\n- The negation (ない/ません) must be in the same clause as 誰も for the intended scope.\n\n### Common mistakes (optional, only if relevant)\n- Using は or が instead of も after 誰.\n- Keeping を before も (e.g., 誰もを…), or forgetting to attach も after case particles like に/と/から when required by the verb.\n- Pairing 誰も with an affirmative predicate to mean “everyone.”\n- Using あります with 誰も; use いません for people.\n- Using 誰も to mean “nothing” (should be 何も〜ない).\n\n### Related grammar (optional, only if relevant)\n- 何も〜ない: “nothing”\n- どこにも〜ない／どこにもいない: “nowhere” / “no one anywhere”\n- 誰か: “someone”\n- 誰でも: “anyone; everyone (in general statements)”—does not mean “no one” with a negative\n- Xも〜ない with counters (e.g., 一人も〜ない): “not even X,” stronger emphasis than 誰も alone",
+  "examples": [
+    {
+      "jp": "誰も来ない。",
+      "en": "No one is coming."
+    },
+    {
+      "jp": "今日は誰も来ませんか。",
+      "en": "Is no one coming today?"
+    },
+    {
+      "jp": "会議室には誰もいませんでした。",
+      "en": "There was no one in the meeting room."
+    },
+    {
+      "jp": "だれも寒くありませんでした。",
+      "en": "No one was cold."
+    },
+    {
+      "jp": "だれも嬉しくないです。",
+      "en": "No one is happy."
+    },
+    {
+      "jp": "誰も先生ではありません。",
+      "en": "No one is a teacher."
+    },
+    {
+      "jp": "昨日の集まりには、誰も学生ではありませんでした。",
+      "en": "At yesterday’s gathering, no one was a student."
+    },
+    {
+      "jp": "彼は、そのことを誰にも言わなかった。",
+      "en": "He didn’t tell anyone about it."
+    },
+    {
+      "jp": "その説明は難しくて、誰にもわかりません。",
+      "en": "The explanation is difficult, so no one understands it."
+    },
+    {
+      "jp": "私は誰とも話しません。",
+      "en": "I don’t talk with anyone."
+    },
+    {
+      "jp": "昨日は誰からも連絡がなかった。",
+      "en": "I didn’t get a message from anyone yesterday."
+    },
+    {
+      "jp": "この問題は難しすぎて、誰も解けなかった。",
+      "en": "This problem was too hard, so no one could solve it."
+    },
+    {
+      "jp": "もう誰も私を信じないのか。",
+      "en": "So no one trusts me anymore?"
+    },
+    {
+      "jp": "こんな遅い時間には、だれも起きていないのか。",
+      "en": "At this late hour, is no one awake?"
+    },
+    {
+      "jp": "最後まで見た人は誰もいない。",
+      "en": "There is no one who watched it to the end."
+    },
+    {
+      "jp": "集まった人は誰も子どもではなかった。",
+      "en": "None of the people who gathered were children."
+    },
+    {
+      "jp": "締め切りを守る人が誰もいなかった。",
+      "en": "There was no one who met the deadline."
+    },
+    {
+      "jp": "今のメンバーは誰も初心者じゃないです。",
+      "en": "None of the current members are beginners."
+    },
+    {
+      "jp": "私のクラスでは、誰も宿題を忘れません。",
+      "en": "In my class, no one forgets their homework."
+    },
+    {
+      "jp": "その計画は、誰からも賛成されていない。",
+      "en": "The plan isn’t supported by anyone."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "彼は誰が来ないか知っている。",
+      "en": "He knows who won’t come."
+    },
+    {
+      "jp": "それは誰も知っている。",
+      "en": "Everyone knows that."
+    },
+    {
+      "jp": "誰でも入れます。",
+      "en": "Anyone can enter."
+    },
+    {
+      "jp": "誰にもわかる説明だ。",
+      "en": "It’s an explanation anyone can understand."
+    },
+    {
+      "jp": "「誰も来る」と言った。",
+      "en": "He said, “Everyone will come.”"
+    },
+    {
+      "jp": "一人も来なかった。",
+      "en": "Not a single person came."
+    },
+    {
+      "jp": "誰のせいでもない。",
+      "en": "It’s no one’s fault."
+    },
+    {
+      "jp": "誰もが知っている事実だ。",
+      "en": "It’s a fact everyone knows."
+    },
+    {
+      "jp": "誰にも負けるな。",
+      "en": "Don’t lose to anyone."
+    },
+    {
+      "jp": "誰も来ると思わない。",
+      "en": "I don’t think everyone will come."
+    }
+  ]
+}

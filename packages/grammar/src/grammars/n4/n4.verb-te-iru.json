@@ -1,0 +1,135 @@
+{
+  "id": "n4.verb-te-iru",
+  "level": "N4",
+  "description": "Expresses an ongoing action or a state resulting from a past action.",
+  "formation": "Verb (て-form) + いる",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜ている（進行・結果状態）\n\n### Meaning and function\n- States that an action is in progress now or around the reference time\n- Describes a habitual/repeated action\n- Expresses a resultant state that holds after a completed action (state resulting from change)\n\n### Form and templates\n- Core: V(て) + いる\n- Polite: V(て) + います\n- Negative: V(て) + いない / いません\n- Past: V(て) + いた / いました\n- Past negative: V(て) + いなかった / いませんでした\n- Casual contractions (speech): V(て) + る / ない / た / なかった; 〜でいる → 〜でる; polite contractions 〜てます/〜てません/〜てました\n- Honorific/humble (when needed): 〜ていらっしゃる（honorific）, 〜ております（very formal/humble）\n- Particle behavior: Case particles of the base verb (を・が・に・で・と など) remain unchanged before V(て); 〜ている attaches directly to the verb\n- Aspectual readings:\n  - Progressive/ongoing: activity and process verbs\n  - Habitual: with time adverbs like いつも・よく・普段\n  - Resultant state (change-of-state verbs): shows the current state after an instantaneous change (e.g., “be married,” “be open,” “know,” “live,” “be wearing,” “own/hold”)\n\n### Usage notes and constraints\n- Register:\n  - 〜ています is standard polite\n  - 〜ている is plain\n  - 〜てる is casual; avoid in formal writing\n  - 〜ております is very formal/business; 〜ていらっしゃいます is honorific for others\n- Frequency/naturalness: Extremely common in all registers; contractions common in conversation\n- Semantic scope and verb types:\n  - Activity/process verbs: default progressive/habitual reading\n  - Change-of-state verbs (e.g., 知る・住む・結婚する・開く・閉まる・壊れる・付く/消える・入る/出る・太る など): typically resultative (“be in X state”), not “be doing X”\n  - Wearing/possession/residence/knowledge statuses: use 〜ている (着る/はく/かぶる/する/かける/つける/はめる, 持つ, 住む, 知る, 分かる など)\n- Movement verbs:\n  - 来ている usually means “has come and is here” (resultative)\n  - 行っている can be read as “has gone (and is there)” or “is on the way” depending on context; use contextual cues to clarify\n- Intransitive result states vs intentional results:\n  - Intransitive + 〜ている describes the current condition (e.g., “is open/closed/broken”)\n  - Transitive + 〜てある marks an intentionally produced, prepared state on an object\n- Negation/timing:\n  - 〜ていない = “not doing” / “not in that state” / “not yet” (commonly with まだ)\n  - もう pairs naturally with positive/resultative 〜ている\n  - 〜ていた moves the progressive/resultative reading to the past\n- Orthography:\n  - As an auxiliary, いる is written in hiragana (〜ている)\n  - Contractions (〜てる/〜てない/〜てた) are mainly spoken; avoid in formal texts\n\n### Common mistakes (optional, only if relevant)\n- Using the non-て form for state meanings (knowledge, residence, marriage, wearing, possession) where 〜ている is required\n- Assuming 〜ている is always progressive; many change-of-state verbs take a resultative reading\n- Adding 〜ている to existence verbs いる/ある for “there is/are” (use いる/ある; note that 合っている is from 合う, not ある)\n- Confusing 〜ている with 〜てある; the latter implies an intentional preparatory result\n- Using casual contractions (〜てる/〜てた/〜てない) in formal contexts\n\n### Related grammar (optional, only if relevant)\n- 〜てある: Resultant state intentionally created on an object; contrasts with neutral/result state 〜ている\n- 〜ところだ: Focuses on phase relative to an action (about to do / in the middle / just finished); clarifies “right now” more strongly than 〜ている\n- 〜最中だ: “Right in the middle of” an action; narrower and more emphatic than simple 〜ている\n- 〜ていく／〜てくる: Directional or temporal progression of actions/changes; not simple ongoing/state aspect",
+  "examples": [
+    {
+      "jp": "今、雨が降っている。",
+      "en": "It’s raining now."
+    },
+    {
+      "jp": "今、何をしているんですか。",
+      "en": "What are you doing now?"
+    },
+    {
+      "jp": "この通りは前より静かになっている。",
+      "en": "This street has become quieter than before."
+    },
+    {
+      "jp": "普段は自転車で通勤してます。",
+      "en": "I usually commute by bicycle."
+    },
+    {
+      "jp": "部屋がだいぶ暖かくなっている。",
+      "en": "The room has gotten quite warm."
+    },
+    {
+      "jp": "眼鏡をかけていますか。",
+      "en": "Are you wearing glasses?"
+    },
+    {
+      "jp": "どこに住んでいますか。",
+      "en": "Where do you live?"
+    },
+    {
+      "jp": "その件はよく知っています。",
+      "en": "I’m well aware of that matter."
+    },
+    {
+      "jp": "まだ宿題を終えていない。",
+      "en": "I haven’t finished my homework yet."
+    },
+    {
+      "jp": "今は運転してません。",
+      "en": "I’m not driving right now."
+    },
+    {
+      "jp": "さっきは会議で話してた。",
+      "en": "I was talking in the meeting a little while ago."
+    },
+    {
+      "jp": "昨日は一日中働いてました。",
+      "en": "I was working all day yesterday."
+    },
+    {
+      "jp": "その時は彼の連絡先を持ってなかった。",
+      "en": "At that time, I didn’t have his contact information."
+    },
+    {
+      "jp": "昨日の時点では結果は分かっていませんでした。",
+      "en": "As of yesterday, the result wasn’t known."
+    },
+    {
+      "jp": "駅前で人が並んでる。",
+      "en": "People are lining up in front of the station."
+    },
+    {
+      "jp": "電気がまだ消えていない。",
+      "en": "The light is still on."
+    },
+    {
+      "jp": "部長は今、お客様をご案内していらっしゃいます。",
+      "en": "The department manager is currently showing a customer around."
+    },
+    {
+      "jp": "書類はただ今確認しております。",
+      "en": "We are currently checking the documents."
+    },
+    {
+      "jp": "彼はもう会場に来ている。",
+      "en": "He has already come to the venue (and is there)."
+    },
+    {
+      "jp": "姉は今月ずっと出張で札幌に行っている。",
+      "en": "My older sister has gone to Sapporo on business and is there all this month."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "資料は机に置いてある。",
+      "en": "The materials have been placed on the desk."
+    },
+    {
+      "jp": "猫がいる。",
+      "en": "There is a cat."
+    },
+    {
+      "jp": "今、出かけるところだ。",
+      "en": "I’m about to head out now."
+    },
+    {
+      "jp": "会議の最中だ。",
+      "en": "We’re in the middle of a meeting."
+    },
+    {
+      "jp": "温度が少しずつ下がっていく。",
+      "en": "The temperature will gradually go down."
+    },
+    {
+      "jp": "雨が急に降ってきた。",
+      "en": "It suddenly started to rain."
+    },
+    {
+      "jp": "忘れないようにメモしておきます。",
+      "en": "I’ll make a note so I don’t forget."
+    },
+    {
+      "jp": "お菓子は全部食べてしまった。",
+      "en": "I ended up eating all the sweets."
+    },
+    {
+      "jp": "私は東京に住む予定です。",
+      "en": "I plan to live in Tokyo."
+    },
+    {
+      "jp": "社長はただ今外出中です。",
+      "en": "The president is currently out."
+    }
+  ]
+}

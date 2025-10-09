@@ -7,7 +7,7 @@
 
 import { createServer, IncomingMessage, ServerResponse } from 'http';
 import { romanize, romanizeStar, setConnection, getConnection, type ConnectionSpec, printPerfCountersAndReset, transformRomanizeStarResult } from '@ichiran/core';
-import { analyzeSentence, grammarCatalog } from '@ichiran/grammar';
+import { analyzeText, grammarCatalog } from '@ichiran/grammar';
 import { config } from 'dotenv';
 
 // Parse environment variables
@@ -301,12 +301,14 @@ async function handleRequest(req: IncomingMessage, res: ServerResponse): Promise
       const maxMatches = body.maxMatches;
       
       // Perform combined analysis (single DB call)
-      const analysis = await analyzeSentence(
+      const analysis = await analyzeText(
         body.text,
         grammarCatalog,
-        maxMatches !== undefined ? { maxMatches } : {},
-        limit,
-        false  // normalizePunctuation: false to preserve original punctuation
+        {
+          maxMatches,
+          limit,
+          normalizePunctuation: false  // Preserve original punctuation
+        }
       );
 
       // Group matches by grammarId

@@ -1,0 +1,135 @@
+{
+  "id": "n5.a-ja-b",
+  "level": "N5",
+  "description": "Indicates a decision or suggestion; 'well then', 'in that case', 'so'",
+  "formation": "A: Sentence, B: Sentence (A and B can be any sentence type)",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- じゃあ\n\n### Meaning and function\n- A conversational pivot meaning “well then,” “in that case,” or “so,” used to move the talk forward, make/accept a decision, propose a next step, or wrap up a topic.\n\n### Form and templates\n- じゃあ + Clause (decision/suggestion/next action)\n- Variants:\n  - それじゃ(あ) + Clause (explicitly “in that case,” casual)\n  - では + Clause (politer/formal)\n  - それでは + Clause (more formal/polite)\n  - じゃ + Clause (very casual/clipped)\n- Typical clauses that follow:\n  - Volitional: V(〜よう)/〜ましょう (suggestions, offers)\n  - Requests/invitations: V(て)/V(てください)/〜ませんか/〜ましょうか\n  - Simple decisions or conclusions: plain or 〜ます/です statements\n  - Closings or transitions (moving to the next step/topic)\n- Position: almost always sentence-initial (turn-initial). May be followed by sentence-final particles like ね/よ for nuance.\n- Conjugation: じゃあ itself does not conjugate; the following clause carries tense/politeness as needed.\n- With “それ〜”: adding それ makes the reference to previously mentioned information explicit (“that being the case”).\n\n### Usage notes and constraints\n- Register:\n  - じゃあ/それじゃ(あ): casual to neutral; very common in everyday speech.\n  - では/それでは: polite/formal; common in business, announcements, calls, and formal writing.\n  - じゃ: very casual/clipped; also common in fixed parting formulas.\n- Function:\n  - Signals a shift to action/decision based on prior context; it is a discourse marker, not a strict logical connector.\n  - Often used after receiving new information to adjust plans or propose what to do next, or to wrap up a conversation.\n- Scope/semantics:\n  - Implies “given that” from context, but does not itself state a reason. For explicit cause→result, prefer だから/それで.\n- Orthography:\n  - Standard: じゃあ. Casual lengthening like じゃー/じゃぁ appears in informal writing only.\n  - それじゃ(あ) is casual; では/それでは are the polite counterparts.\n  - では is spelled で＋は (not でわ).\n\n### Common mistakes (optional, only if relevant)\n- Using じゃあ in formal contexts where では/それでは is expected.\n- Overusing じゃあ as a logical “therefore”; use だから/それで for explicit cause→effect.\n- Confusing じゃあ with the dialectal/copular じゃ (as in Nじゃない). Here, じゃあ is a discourse marker meaning “then.”\n- Writing でわ instead of では.\n\n### Related grammar (optional, only if relevant)\n- では／それでは: Politer/formal “well then; in that case.” Choose in business/formal settings.\n- それじゃ(あ): Casual “in that case,” slightly more explicit than じゃあ by pointing to “that” prior info.\n- それなら／なら: Conditional “if that’s the case,” used inside sentence structure rather than as a turn-initial pivot.\n- だから／ですから: “So/because,” explicitly marks reason→result; stronger logical link than じゃあ.\n- それで: “And so; therefore,” connects cause to result or asks for continuation; more propositional than じゃあ.",
+  "examples": [
+    {
+      "jp": "じゃあ、帰ろう。",
+      "en": "Well then, let's head home."
+    },
+    {
+      "jp": "じゃあ、駅で待ち合わせにしようか。",
+      "en": "Well then, shall we meet at the station?"
+    },
+    {
+      "jp": "じゃあ、これ、手伝ってくれる？",
+      "en": "Well then, can you help with this?"
+    },
+    {
+      "jp": "じゃあ、短く説明するね。",
+      "en": "Well then, I'll keep it brief, okay."
+    },
+    {
+      "jp": "じゃあ、行かない。",
+      "en": "Well then, I'm not going."
+    },
+    {
+      "jp": "じゃあ、どうする？",
+      "en": "Well then, what should we do?"
+    },
+    {
+      "jp": "じゃあ、気をつけてね。",
+      "en": "Well then, take care, okay."
+    },
+    {
+      "jp": "じゃあ、また明日会おう。",
+      "en": "Well then, let's meet again tomorrow."
+    },
+    {
+      "jp": "それじゃ、先に行ってて。",
+      "en": "In that case, go on ahead."
+    },
+    {
+      "jp": "それじゃあ、鍵は私が預かりますね。",
+      "en": "In that case, I'll hold onto the key."
+    },
+    {
+      "jp": "それでは、部屋をきれいにしておいてください。",
+      "en": "In that case, please tidy the room in advance."
+    },
+    {
+      "jp": "では、発表を始めます。",
+      "en": "Well then, I will begin the presentation."
+    },
+    {
+      "jp": "では、質問はありますか。",
+      "en": "Well then, are there any questions?"
+    },
+    {
+      "jp": "では、その件は解決しました。",
+      "en": "Well then, that matter has been resolved."
+    },
+    {
+      "jp": "それでは、以上で会議を終わります。",
+      "en": "Well then, this concludes the meeting."
+    },
+    {
+      "jp": "それでは、またご連絡いたします。",
+      "en": "Well then, I will contact you again."
+    },
+    {
+      "jp": "じゃ、雨も強いし帰るわ。",
+      "en": "Then, since the rain is heavy, I'm heading home."
+    },
+    {
+      "jp": "じゃー、次の店に行ってみよう。",
+      "en": "Soo, let's try the next shop."
+    },
+    {
+      "jp": "それでは、今回は参加しません。",
+      "en": "In that case, I won't participate this time."
+    },
+    {
+      "jp": "じゃあ、予約は取れなかったね。",
+      "en": "Well then, I guess we couldn't get the reservation."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "それは問題ではない。",
+      "en": "That is not a problem."
+    },
+    {
+      "jp": "東京では雪が降ることもある。",
+      "en": "In Tokyo, it sometimes snows."
+    },
+    {
+      "jp": "私は学生じゃない。",
+      "en": "I'm not a student."
+    },
+    {
+      "jp": "それじゃなくて、こっちの色が好き。",
+      "en": "Not that one; I like this color."
+    },
+    {
+      "jp": "静かではない部屋ですね。",
+      "en": "It's a room that's not quiet, isn't it?"
+    },
+    {
+      "jp": "英語ではなく日本語でお願いします。",
+      "en": "Please use Japanese, not English."
+    },
+    {
+      "jp": "子どもじゃあるまいし、泣くな。",
+      "en": "You're not a child, so don't cry."
+    },
+    {
+      "jp": "彼の意見では、もっと時間が必要だ。",
+      "en": "In his view, more time is needed."
+    },
+    {
+      "jp": "彼女は来るのではないですか。",
+      "en": "Isn't she coming?"
+    },
+    {
+      "jp": "今日は無理じゃん。",
+      "en": "Today won't work."
+    }
+  ]
+}

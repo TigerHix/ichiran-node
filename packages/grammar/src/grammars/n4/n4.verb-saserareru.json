@@ -1,0 +1,135 @@
+{
+  "id": "n4.verb-saserareru",
+  "level": "N4",
+  "description": "Express the passive causative form; 'to be made to', 'to be forced to'.",
+  "formation": "Group 1 Verb: Replace ～う with ～わせられる, Group 2 Verb: Replace ～る with ～させられる, Group 3 Verb: する → させられる, くる → こさせられる",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 使役受け身（〜させられる）\n\n### Meaning and function\n- Expresses being made/forced/compelled to do an action by someone or something external. Often carries an unwilling, burdensome, or imposed nuance. The causer can be a person, group, rule, situation, etc.\n\n### Form and templates\n- Core template:\n  - N(forced person) は/が + N(causer) に + [optional object etc.] + V(使役受け身)\n- Ichidan (〜る verbs):\n  - V(ます-stem) + させられる\n- Godan (う-verbs):\n  - Long form (neutral/formal): V(未然形＝あ段) + せられる\n  - Colloquial contraction: V(未然形＝あ段) + される\n    - Note: The contraction after -す verbs (…さされる) is often avoided; use …させられる.\n- Irregular:\n  - する → させられる\n  - くる → こさせられる\n- Particle requirements and ordering:\n  - Forced person: が/は\n  - Causer: に (により／によって is possible but sounds stiff here)\n  - Direct object of the action: を (and other case markers as usual)\n- Conjugation:\n  - Treat 〜させられる as an Ichidan ending: 〜させられます, 〜させられない, 〜させられた, 〜させられて, etc.\n- Alternative morphology notes:\n  - Godan long forms can appear as …せられる or …させられる; …させられる is common in modern usage.\n  - The colloquial …される (contraction) is common for many godan verbs except -す verbs; avoid in formal writing.\n\n### Usage notes and constraints\n- Register and naturalness:\n  - Common in both speech and writing. The long form (…せられる／…させられる) is safe in all registers.\n  - The contraction …される is natural in casual speech (avoid especially after -す verbs and in formal texts).\n- Semantics:\n  - The subject is the person who ends up doing the action; the causer (に) imposes it.\n  - Often implies unwillingness or burden. If you want “allowed/let me do,” use 〜させてもらう／〜させてくれる instead.\n  - Distinct from simple passive 〜られる, which describes being acted upon rather than being compelled to act yourself.\n- Agent marking:\n  - に is standard for the causer; によって sounds formal/stiff and is less common with 使役受け身.\n  - The causer is frequently omitted when obvious or when focusing on the burdened experience.\n- Verb type constraints:\n  - Works with transitive and many intransitive verbs that denote controllable actions.\n  - Do not confuse with potential 〜られる; 〜させられる always encodes external compulsion, not ability.\n- Orthography:\n  - させられる／こさせられる are typically written in kana.\n  - The long godan variant …せられる may appear in more formal writing; …させられる is more common overall.\n\n### Common mistakes (optional, only if relevant)\n- Marking the causer with を or から; the causer should be に (により／によって only in formal contexts).\n- Using the colloquial contraction …される with Ichidan or する/くる verbs (×食べされる, ×しされる, ×こされる).\n- Using …さされる after -す verbs; prefer …させられる.\n- Using simple passive 〜られる when the meaning is “made to do,” which requires 〜させられる.\n- Assuming 〜させられる expresses permission; for “allowed to,” use 〜させてもらう／〜させてくれる.\n\n### Related grammar (optional, only if relevant)\n- 〜させる（使役）: “make/let someone do.” Focuses on the causer; not passive.\n- 〜られる（受け身）: Simple passive/adversative passive; being acted upon or adversely affected, not compelled to act.\n- 〜させてもらう／〜させてくれる: Permission/benefit (“be allowed to do”), contrasts with forced/compelled nuance.\n- 〜なければならない／〜なくてはいけない: Obligation by rules/necessity, not necessarily imposed by a specific causer.\n- 〜ことになる: Outcome decided by circumstances/others; softer and less “forced” than 〜させられる in many contexts.",
+  "examples": [
+    {
+      "jp": "私は上司に残業させられました。",
+      "en": "I was made to work overtime by my boss."
+    },
+    {
+      "jp": "子どもは母に宿題をさせられてばかりいる。",
+      "en": "The child keeps being made to do homework by his mother."
+    },
+    {
+      "jp": "きのう、私は雨に予定を変えさせられた。",
+      "en": "Yesterday, I was forced by the rain to change my plans."
+    },
+    {
+      "jp": "彼はコーチに朝五時に走らされた。",
+      "en": "He was made to run at five in the morning by his coach."
+    },
+    {
+      "jp": "こんな歌、誰に歌わされているの？",
+      "en": "Who is making you sing a song like this?"
+    },
+    {
+      "jp": "店員に長いアンケートを書かされました。",
+      "en": "I was made to fill out a long questionnaire by a store clerk."
+    },
+    {
+      "jp": "私は規則によって制服を着させられます。",
+      "en": "I am made to wear a uniform by the rules."
+    },
+    {
+      "jp": "新人が部長に会議にこさせられた。",
+      "en": "The new hire was made to come to the meeting by the department head."
+    },
+    {
+      "jp": "うちの猫は獣医さんに薬を飲まされて、すごく嫌がった。",
+      "en": "Our cat was made to take medicine by the vet and really hated it."
+    },
+    {
+      "jp": "私はこのドラマに何度も泣かされる。",
+      "en": "This drama keeps making me cry."
+    },
+    {
+      "jp": "彼女は先生に廊下に立たされましたか。",
+      "en": "Was she made to stand in the hallway by the teacher?"
+    },
+    {
+      "jp": "私は友だちに謝らせられた。",
+      "en": "I was made to apologize by a friend."
+    },
+    {
+      "jp": "子どもは病院でじっと静かにさせられていた。",
+      "en": "The child was made to stay quietly still at the hospital."
+    },
+    {
+      "jp": "もう彼は社長に黙らされない。",
+      "en": "He won’t be silenced by the company president anymore."
+    },
+    {
+      "jp": "先輩に何時間も待たされて、本当に参った。",
+      "en": "I was kept waiting for hours by my senior, and it really wore me out."
+    },
+    {
+      "jp": "私は校長に全校生徒の前で話させられた。",
+      "en": "I was made to speak in front of the whole school by the principal."
+    },
+    {
+      "jp": "規則により、社員は毎朝玄関で清掃をさせられている。",
+      "en": "By regulation, employees are made to do cleaning at the entrance every morning."
+    },
+    {
+      "jp": "本当に最後まで見させられるんですか。",
+      "en": "Are we really going to be made to watch it to the end?"
+    },
+    {
+      "jp": "親に早く寝させられたが、全然眠くなかった。",
+      "en": "I was made to go to bed early by my parents, but I wasn’t sleepy at all."
+    },
+    {
+      "jp": "私はもう先輩に飲み会へ行かされないと決めた。",
+      "en": "I’ve decided I won’t be made to go to drinking parties by my senior anymore."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "部長は私に残業させた。",
+      "en": "The manager made me work overtime."
+    },
+    {
+      "jp": "彼は先生に叱られた。",
+      "en": "He was scolded by his teacher."
+    },
+    {
+      "jp": "台風により試合は中止された。",
+      "en": "The game was canceled due to the typhoon."
+    },
+    {
+      "jp": "その問題について議論させてもらえますか。",
+      "en": "May I be allowed to discuss that issue?"
+    },
+    {
+      "jp": "予定は上司によって決められた。",
+      "en": "The schedule was decided by the boss."
+    },
+    {
+      "jp": "彼女は上司に評価されている。",
+      "en": "She is being evaluated by her boss."
+    },
+    {
+      "jp": "私は先輩の判断で飲み会に行くことになった。",
+      "en": "It was decided by my senior’s judgment that I would attend the drinking party."
+    },
+    {
+      "jp": "親が子どもに宿題をさせるのは当然だ。",
+      "en": "It’s natural for parents to make their children do homework."
+    },
+    {
+      "jp": "この町では日本語が広く話されている。",
+      "en": "Japanese is widely spoken in this town."
+    },
+    {
+      "jp": "先生が学生を立たせた。",
+      "en": "The teacher made the student stand."
+    }
+  ]
+}

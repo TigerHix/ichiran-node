@@ -1,0 +1,135 @@
+{
+  "id": "n5.verb-ru-no",
+  "level": "N5",
+  "description": "Used to express the purpose or reason in casual speech, or nominalize the verb with の",
+  "formation": "Verb (dictionary form) + の (casual)",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- Vるの（説明・名詞化）\n\n### Meaning and function\n- Turns a verb into a noun-like phrase so you can treat the action as a “thing” (liking, ability, facts about doing something, etc.).\n- Sentence-ending の adds an explanatory/soft tone in casual speech to give or ask for a reason, purpose, or background (“the reason is…,” “is it that you’re going to…?”).\n\n### Form and templates\n- Nominalization (make the verb a noun phrase)\n  - V(dict/ない/た/ている) + の + は/が/を/も/に/へ/で/と/から/まで/より …\n  - Typical frames:\n    - … のが + adjectival/comment (e.g., ability, preference, perception, difficulty)\n    - … のは + general comment/evaluation/topic\n  - Use plain forms before の (dictionary, negative, past, progressive). Do not use ます/です before の.\n\n- Sentence-final explanatory の (casual)\n  - V(dict/ない/た/ている) + の。\n  - V(dict/ない/た/ている) + の？ (rising intonation for questions)\n  - Polite alternative: V(dict/ない/た/ている) + んです／のです（question adds か）.\n\n- Adjective/Noun linkage for sentence-final explanation (reference)\n  - い-adj + の；な-adj + なの；N + なの（casual explanatory end). For verbs, just V + の.\n\n### Usage notes and constraints\n- Register and naturalness\n  - Nominalizer の is common and neutral in speech; in formal writing, こと is often preferred.\n  - Sentence-final の is casual. As a statement, it can sound feminine/childlike; many men prefer んだ/のだ. Questions with の？ are casual-neutral but still not formal; use んですか／のですか in polite settings.\n- Semantics and scope\n  - Nominalizer の tends to describe specific, concrete actions, feelings, perceptions, and immediate experiences.\n  - Sentence-final の presents or seeks an explanation/background; it does not by itself mean “in order to.” Use purpose forms (e.g., Vに行く, ために) for “in order to.”\n  - After nominalized の, any case particle can follow, just as with nouns. は marks topic; が marks subject/focus.\n- Orthographic/shape variants\n  - ん is a contraction of explanatory の before だ/です: のだ→んだ, のです→んです.\n  - ん is not used as the nominalizer by itself; the nominalizer is の.\n\n### Common mistakes\n- Using polite forms before the nominalizer: Vますの／でしたの → use plain forms before の.\n- Treating sentence-final の as formal; in polite speech use んです／のです.\n- Using sentence-final の to mean “in order to”; it only adds an explanatory tone.\n- Forgetting な before の with nouns/な-adjectives in sentence-final explanation (use なの).\n- Overusing の in abstract/general statements where こと is more natural, especially in writing.\n\n### Related grammar\n- こと（名詞化）: Also nominalizes verbs; more formal/abstract or rule-like statements. の is more immediate/personal/concrete.\n- んです／のです: Polite explanatory form. Plain sentence-final の is casual; んです/のです fits polite or neutral narration.\n- Vに行く: Movement + purpose (“go to do …”); expresses purpose directly, unlike explanatory の.\n- ために: Explicit “for/in order to/because of.” Clear purpose or reason; more formal and unambiguous than sentence-final の.",
+  "examples": [
+    {
+      "jp": "走るのが好きです。",
+      "en": "I like running."
+    },
+    {
+      "jp": "朝早く起きるのはつらい。",
+      "en": "Getting up early in the morning is tough."
+    },
+    {
+      "jp": "彼が帰ってくるのを駅で待っていました。",
+      "en": "I was waiting at the station for him to come back."
+    },
+    {
+      "jp": "このハサミは紙を切るのに便利です。",
+      "en": "These scissors are handy for cutting paper."
+    },
+    {
+      "jp": "走るのと歩くのでは、使う筋肉が違います。",
+      "en": "Running and walking use different muscles."
+    },
+    {
+      "jp": "急いで食べるのより、ゆっくり味わうほうがいい。",
+      "en": "It’s better to savor your food than to eat in a hurry."
+    },
+    {
+      "jp": "準備をするのから片づけるのまで、全部一人でやった。",
+      "en": "I did everything by myself, from the prep to the cleanup."
+    },
+    {
+      "jp": "一人で旅行するのも悪くないね。",
+      "en": "Traveling alone isn’t so bad, you know."
+    },
+    {
+      "jp": "約束を守らないのはよくないと思う。",
+      "en": "I think not keeping promises isn’t good."
+    },
+    {
+      "jp": "子どもが笑っているのを見て、安心した。",
+      "en": "I felt relieved when I saw the child smiling."
+    },
+    {
+      "jp": "昨日長い距離を走ったので、ぐっすり寝ました。",
+      "en": "I ran a long distance yesterday, so I slept like a log."
+    },
+    {
+      "jp": "今から出かけるのですか。",
+      "en": "Are you heading out now?"
+    },
+    {
+      "jp": "すぐには戻らないの。",
+      "en": "I’m not coming back right away, okay."
+    },
+    {
+      "jp": "先に帰ったの。",
+      "en": "I left early, just so you know."
+    },
+    {
+      "jp": "会議が延びたんです。",
+      "en": "The meeting ran long."
+    },
+    {
+      "jp": "どうして来なかったんですか。",
+      "en": "Why didn’t you come?"
+    },
+    {
+      "jp": "今日は運動しないんだ。",
+      "en": "I’m not working out today."
+    },
+    {
+      "jp": "明日説明するのはオンラインですか。",
+      "en": "Will tomorrow’s explanation be online?"
+    },
+    {
+      "jp": "彼が歌っているのが聞こえた。",
+      "en": "I could hear him singing."
+    },
+    {
+      "jp": "この街に引っ越してきたのが去年でした。",
+      "en": "It was last year that I moved to this city."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "走ることが好きです。",
+      "en": "I like running."
+    },
+    {
+      "jp": "静かなんです。",
+      "en": "It’s quiet, you see."
+    },
+    {
+      "jp": "この道の向こうに公園があります。",
+      "en": "There’s a park beyond this road."
+    },
+    {
+      "jp": "早く行ったのに、誰もいなかった。",
+      "en": "Although I went early, nobody was there."
+    },
+    {
+      "jp": "それは会議の資料です。",
+      "en": "That is the meeting material."
+    },
+    {
+      "jp": "雨なので、外出しません。",
+      "en": "Since it’s raining, I’m not going out."
+    },
+    {
+      "jp": "赤いのが欲しい。",
+      "en": "I want the red one."
+    },
+    {
+      "jp": "日本の文化を勉強しています。",
+      "en": "I’m studying Japanese culture."
+    },
+    {
+      "jp": "体調が悪いから休みます。",
+      "en": "I’ll take the day off because I don’t feel well."
+    },
+    {
+      "jp": "走りに行きます。",
+      "en": "I’m going for a run."
+    }
+  ]
+}

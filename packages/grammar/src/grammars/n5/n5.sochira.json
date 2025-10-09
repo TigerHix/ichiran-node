@@ -1,0 +1,135 @@
+{
+  "id": "n5.sochira",
+  "level": "N5",
+  "description": "Indicates a direction or person in moderate distance; 'that way', 'that person'",
+  "formation": "そちら [alone] / そちら + の + Noun",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 指示語「そちら」\n\n### Meaning and function\n- Polite demonstrative that points to the listener’s side:\n  - Direction/place near the listener: “that way,” “there (by you)”\n  - The listener/the listener’s side (person, group, company): “you/your side,” “that person (near you)” in a polite, indirect way\n\n### Form and templates\n- そちら (acts as a noun/pronoun)\n- そちら + particle\n  - Topic/subject/etc.: は, が, を, も\n  - Place/direction: に, へ\n  - Location of action: で\n  - From/to: から, まで\n  - Comparison/quoting: と, より\n- そちらの + N\n  - “your N / that N (on your side)”\n- Very polite/person-referring variants:\n  - そちら様 (very polite “you/that person”)\n  - そちらの方 (polite “that person on your side”)\n- No conjugation; behaves like a noun. Use の to modify another noun.\n\n### Usage notes and constraints\n- Register: Polite-neutral. Common in customer service, phone calls, and business. More polite than そっち and softer/more indirect than そこ/それ in many contexts.\n- Distance/deixis:\n  - そちら = near the listener\n  - こちら = near the speaker\n  - あちら = far from both\n- Person reference:\n  - Can politely refer to the listener (“your side”) or a person near the listener. Prefer names/titles when known; そちら can feel distant if used face-to-face.\n- Scope:\n  - Can refer to places, directions, people, or organizations related to the listener (e.g., “your company/home/area”).\n- Particle use:\n  - Use に/へ for destination or direction, で for place of action, から/まで for range. It is not an adverb; attach the appropriate particle.\n- Orthography:\n  - Standard: そちら (hiragana). Kanji 其方 is archaic/literary.\n  - Casual counterpart: そっち (informal speech).\n\n### Common mistakes (optional, only if relevant)\n- Confusing distance: using そちら when the referent is far from both sides (should be あちら), or near the speaker (should be こちら).\n- Using そっち in formal or polite situations.\n- Omitting particles when using it for place/direction (must use に/へ/で, etc.).\n- Using そちら to ask “who” (use どちら/どなた; そちら is not an interrogative).\n- Overusing そちらの方 for people; can sound roundabout or awkward—use names/titles when possible.\n\n### Related grammar (optional, only if relevant)\n- こちら: “this way/here; I/we (humble),” speaker’s side; polite.\n- あちら: “that way over there; he/she/they (polite),” far from both.\n- どちら: “which way/which one/where; who (polite).”\n- そこ／それ／その: less polite “there/that/that + N” near the listener; そちら is the more polite/directional/person-friendly counterpart.\n- そっち: casual version of そちら.",
+  "examples": [
+    {
+      "jp": "今、そちらは雨ですか。",
+      "en": "Is it raining there where you are now?"
+    },
+    {
+      "jp": "午後三時ごろ、そちらに伺います。",
+      "en": "I will visit you around 3 p.m."
+    },
+    {
+      "jp": "荷物はそちらへ今日発送した。",
+      "en": "We shipped the package to you today."
+    },
+    {
+      "jp": "そちらでお待ちください。",
+      "en": "Please wait there."
+    },
+    {
+      "jp": "そちらからの連絡はまだない。",
+      "en": "We haven’t heard from your side yet."
+    },
+    {
+      "jp": "こちらよりそちらのほうが静かだね。",
+      "en": "It’s quieter on your end than here."
+    },
+    {
+      "jp": "そちらとこちらで費用を折半しましょうか。",
+      "en": "Shall we split the cost between your side and ours?"
+    },
+    {
+      "jp": "そちらの会社は今年も採用する？",
+      "en": "Is your company hiring again this year?"
+    },
+    {
+      "jp": "そちら様のお名前を頂戴してもよろしいでしょうか。",
+      "en": "May I have your name, sir/ma’am?"
+    },
+    {
+      "jp": "そちらの方はご担当者ですか。",
+      "en": "Is that person on your side the person in charge?"
+    },
+    {
+      "jp": "会議はそちらで行われましたか。",
+      "en": "Was the meeting held there on your end?"
+    },
+    {
+      "jp": "今夜はそちらへは行かない。",
+      "en": "I’m not going over to your place tonight."
+    },
+    {
+      "jp": "もう少しそちらを向いて。",
+      "en": "Face that way a little more."
+    },
+    {
+      "jp": "観光なら、そちらまで足を延ばすといいよ。",
+      "en": "If you’re sightseeing, you should go as far as there."
+    },
+    {
+      "jp": "そちらも忙しいところ悪いね。",
+      "en": "Sorry to bother you when you’re busy too."
+    },
+    {
+      "jp": "順番は、そちらが先だった。",
+      "en": "As for the order, your side was first."
+    },
+    {
+      "jp": "明日の打ち合わせ、そちらの都合に合わせる。",
+      "en": "I’ll adjust tomorrow’s meeting to your schedule."
+    },
+    {
+      "jp": "そちらには駐車場がなかった。",
+      "en": "There wasn’t any parking on your side."
+    },
+    {
+      "jp": "最寄り駅はそちら？",
+      "en": "Is the nearest station that way (by you)?"
+    },
+    {
+      "jp": "では、こちらからではなく、そちらから始めましょう。",
+      "en": "Well then, let’s start from your side, not ours."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "ただいま、こちらは雨です。",
+      "en": "It’s raining here right now."
+    },
+    {
+      "jp": "あちらへは行きません。",
+      "en": "I won’t go over there (far away)."
+    },
+    {
+      "jp": "御社に伺います。",
+      "en": "I will visit your company."
+    },
+    {
+      "jp": "どちらの会社にお勤めですか。",
+      "en": "Which company do you work for?"
+    },
+    {
+      "jp": "そこでは喫煙できません。",
+      "en": "You can’t smoke there."
+    },
+    {
+      "jp": "それは私の仕事ではありません。",
+      "en": "That’s not my job."
+    },
+    {
+      "jp": "その方はご担当者ですか。",
+      "en": "Is that person the person in charge?"
+    },
+    {
+      "jp": "君はそっちを向いて。",
+      "en": "You, face that way."
+    },
+    {
+      "jp": "最寄り駅はどちらですか。",
+      "en": "Which is the nearest station?"
+    },
+    {
+      "jp": "「担当は田中さんです」と彼は言った。",
+      "en": "He said, “Mr. Tanaka is in charge.”"
+    }
+  ]
+}

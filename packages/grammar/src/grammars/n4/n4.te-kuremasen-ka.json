@@ -1,0 +1,135 @@
+{
+  "id": "n4.te-kuremasen-ka",
+  "level": "N4",
+  "description": "A polite way to request someone to do something for you; 'Could you please', 'Would you please', 'Won't you'.",
+  "formation": "Verb-て form + くれませんか",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜てくれませんか（依頼）\n\n### Meaning and function\n- A polite, soft request asking the listener to do something for the speaker or the speaker’s in-group: “Could you please …?” The negative question form softens the directness.\n\n### Form and templates\n- Core\n  - V(て) + くれませんか\n- Common alternatives (directness/politeness scale)\n  - Slightly more direct: V(て) + くれますか\n  - Casual: V(て) + くれる？／V(て) + くれない？\n  - Casual–polite mix: V(て) + くれないですか\n  - More indirect/polite: V(て) + もらえませんか\n  - Very polite: V(て) + いただけませんか\n- Particle requirements and ordering\n  - The doer (subject) is the listener and is usually omitted.\n  - Direct objects take を; targets/recipients take に as usual.\n  - When requesting something for a third person in your in-group, use V(て) + あげて + くれませんか to make the beneficiary clear.\n- Optional softeners often used before the request\n  - すみませんが／恐れ入りますが／申し訳ありませんが\n  - ちょっと, 〜んですが／〜のですが\n- Conjugation notes\n  - くれません is the polite negative of くれる used as a conventional softener; it does not expect a negative answer.\n  - Past forms (〜くれませんでしたか) are not used for making a request; they instead check or reproach a past action.\n  - In conversation, sentence-final か may be dropped with rising intonation; keep か in writing/formal speech.\n\n### Usage notes and constraints\n- Register and naturalness\n  - Standard polite and widely used in everyday interaction. Appropriate with acquaintances, colleagues, and service encounters.\n  - For higher formality or when addressing superiors/customers, prefer V(て) + いただけませんか (safer keigo).\n- Benefactive scope\n  - Implies the action benefits the speaker or their in-group. For someone outside your in-group, clarify with あげて or rephrase with もらう/いただく.\n- Semantic constraints\n  - The subject should be an animate person (the listener). Don’t use it to ask permission for your own action; use V(て) + もいいですか instead.\n  - Do not confuse with V(ます) + ませんか (“Shall we …?” invitation); 〜てくれませんか is a request for the other person to act for your benefit.\n- Nuance/softening\n  - 〜くれませんか is softer than 〜くれますか and less direct than 〜てください.\n  - Prefacing with apologies (すみませんが etc.) and adding ちょっと or 〜んですが further softens the request.\n- Orthography\n  - くれる/くれませんか is normally written in kana. The kanji 呉れる is uncommon.\n\n### Common mistakes (optional, only if relevant)\n- Using the dictionary form instead of the て-form before くれませんか.\n- Using 〜てくれませんか to ask permission for your own action; use 〜てもいいですか.\n- Using it with inanimate “subjects” (machines, systems); the implied doer must be a person.\n- Requesting a favor for a non–in-group third party without marking the beneficiary; use 〜てあげてくれませんか or rephrase.\n- Doubling with ください (e.g., …くれませんかください) is ungrammatical.\n\n### Related grammar (optional, only if relevant)\n- 〜てください: Clear, direct request; more commanding and less soft than 〜てくれませんか.\n- 〜てもらえますか: “Could I receive you doing …?” Slightly more indirect/polite than 〜てくれますか; close to 〜てくれませんか but shifts focus to the receiver (speaker).\n- 〜ていただけますか／〜ていただけませんか: Very polite/honorific request; preferred with superiors or in formal service contexts.\n- V(ます) + ませんか: Invitation/suggestion (“Shall we …?”), not a request for the other person to do something for you.\n- 〜てくれる？／〜てくれない？: Casual request; friendly but too informal for polite situations.",
+  "examples": [
+    {
+      "jp": "すみませんが、ここにお名前を書いてくれませんか。",
+      "en": "Excuse me, could you please write your name here?"
+    },
+    {
+      "jp": "ちょっと静かにしてくれますか。",
+      "en": "Could you be a little quiet?"
+    },
+    {
+      "jp": "この書類、明日までにメールで送ってくれませんか。",
+      "en": "Could you email this document by tomorrow?"
+    },
+    {
+      "jp": "駅に着いたら、私に電話してくれる？",
+      "en": "When you arrive at the station, could you call me?"
+    },
+    {
+      "jp": "今日の会議の場所をもう一度ゆっくり教えてくれない？",
+      "en": "Could you tell me the meeting location again, slowly?"
+    },
+    {
+      "jp": "恐れ入りますが、こちらのアンケートに記入していただけませんか。",
+      "en": "Pardon me, but would you please fill out this questionnaire?"
+    },
+    {
+      "jp": "申し訳ありませんが、席を少し詰めてくれませんか。",
+      "en": "I’m sorry, but could you scoot over a bit?"
+    },
+    {
+      "jp": "その本、読み終わったら貸してくれませんか。",
+      "en": "When you finish that book, could you lend it to me?"
+    },
+    {
+      "jp": "急で悪いんですが、プリンターの紙を補充してくれないですか。",
+      "en": "Sorry for the rush, but could you refill the printer paper?"
+    },
+    {
+      "jp": "さっきのメモを写真で送ってもらえませんか。",
+      "en": "Could I have you send me a photo of that note from earlier?"
+    },
+    {
+      "jp": "この式の意味を私に教えてくれますか。",
+      "en": "Could you explain the meaning of this formula to me?"
+    },
+    {
+      "jp": "子どもにやさしく説明してあげてくれませんか。",
+      "en": "Could you explain it gently to the child for me?"
+    },
+    {
+      "jp": "ちょっと寒いので、窓を閉めてくれませんか。",
+      "en": "It’s a bit cold, so could you close the window?"
+    },
+    {
+      "jp": "すみません、明日の予定を変更してくれませんか。",
+      "en": "Excuse me, could you change tomorrow’s schedule?"
+    },
+    {
+      "jp": "次の駅で起こしてくれる？",
+      "en": "Could you wake me up at the next station?"
+    },
+    {
+      "jp": "終わったら、データを共有フォルダに入れてくれませんか。",
+      "en": "When you’re finished, could you put the data in the shared folder?"
+    },
+    {
+      "jp": "住所が変わったので、登録情報を更新していただけませんか。",
+      "en": "My address has changed, so would you update my registration information?"
+    },
+    {
+      "jp": "その話、後で上司にも伝えてあげてくれませんか。",
+      "en": "Could you also let our boss know about that later for me?"
+    },
+    {
+      "jp": "先週お願いした写真、もう送ってくれませんでしたか。",
+      "en": "Didn’t you already send the photos I asked for last week?"
+    },
+    {
+      "jp": "道に迷っているんですが、駅まで案内してくれませんか。",
+      "en": "I’m lost—could you please guide me to the station?"
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "一緒に昼ご飯を食べませんか。",
+      "en": "Shall we have lunch together?"
+    },
+    {
+      "jp": "ここで写真を撮ってもいいですか。",
+      "en": "May I take a photo here?"
+    },
+    {
+      "jp": "ドアを閉めてください。",
+      "en": "Please close the door."
+    },
+    {
+      "jp": "父が新しいパソコンを買ってくれた。",
+      "en": "My father bought me a new computer."
+    },
+    {
+      "jp": "手伝ってくれない人は誰もいなかった。",
+      "en": "There was no one who wouldn’t help."
+    },
+    {
+      "jp": "『資料を送ってくれませんか』というメールが届いた。",
+      "en": "I got an email that said, “Could you send the materials?”"
+    },
+    {
+      "jp": "お名刺をいただけませんか。",
+      "en": "May I have your business card?"
+    },
+    {
+      "jp": "先週は受け取ってくれませんでした。",
+      "en": "He didn’t accept it last week."
+    },
+    {
+      "jp": "隣の席に座ってくれる人を探しています。",
+      "en": "I’m looking for someone who will sit in the seat next to me."
+    },
+    {
+      "jp": "このスマホは、暗い場所でも自動で明るさを調整してくれる。",
+      "en": "This smartphone automatically adjusts the brightness even in dark places."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "n4.zutsu",
+  "level": "N4",
+  "description": "Indicates equal distribution; 'each', 'per', 'apiece'.",
+  "formation": "Noun + ずつ",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 数量＋ずつ（配分）\n\n### Meaning and function\n- Indicates equal distribution: each, per, apiece\n- Expresses fixed increments in repeated actions: at a time\n- With small amounts, indicates gradual change: little by little\n\n### Form and templates\n- Core\n  - [数量]＋ずつ\n  - 数量 = 数＋カウンター／不定量語（少し・ちょっと・いくつ・いくら・どのくらい・何＋カウンター など）\n- Typical placements\n  - [N（配分先・単位）]＋に＋[数量]＋ずつ＋V（配る・渡す・与える・入る・出る など）\n  - [数量]＋ずつ＋V（取る・買う・進む・増える・練習する など）→「〜ずつ（〜ずつずつではない）」の形で動詞を修飾\n  - [数量]＋ずつ＋の＋N（例：グループ・チーム・寄付・割当 など）＝「〜ずつのN」（限定的に用いる）\n- Particle and ordering notes\n  - ずつは「数量」の直後に置く（数＋カウンター＋ずつ／不定量語＋ずつ）\n  - 約・だいたい・ほぼ・くらい／ぐらい などの概数語は通常「ずつ」の前（数＋カウンター＋くらい＋ずつ）\n  - 制限の語（だけ、しか〜ない）は数量＋ずつと組み合わせ可能（意味：各〜だけ／各〜しか〜ない）\n  - ずつ自体に格助詞は続けない（×ずつに）。文全体では配分先を「に」、対象を「を」などで示す\n- Conjugation\n  - ずつは不変。時制・丁寧さ・否定は述語側で示す\n- Counters\n  - 人数（ひとり・ふたり・〜人）、個数（〜つ／〜個）、枚・本・回・時間・円・メートル など各種カウンターに接続\n\n### Usage notes and constraints\n- Register/naturalness\n  - くだけすぎず、中立的で会話・文章ともに非常に頻繁\n  - 丁寧体・普通体どちらにも自然に使える\n- Scope/semantics\n  - 配分の基準（各人・各グループ・各回・各日など）は文脈か「Nに」で明示する\n  - 反復・段階的変化に相性がよい（少しずつ〜、一歩ずつ〜 など）\n  - 一般的・技術的な「比率（〜当たり）」や固定レートには向かない（その場合は「あたり／につき」を優先）\n- Orthography\n  - 正用は「ずつ」。誤用の「づつ」は避ける\n- Prenominal use\n  - 「数量＋ずつの＋N」は「〜ずつで構成されたN／〜ずつに分けられたN」を述べるときに使う（用法はやや限定的）\n\n### Common mistakes (optional, only if relevant)\n- 誤表記「づつ」\n- 名詞の直後に置く（×人ずつ）など、数量を伴わない使用。必ず数＋カウンターや不定量語に付ける\n- ずつの後に格助詞を付ける（×ずつに）。配分先は「Nに」で別に示す\n- 概数語（くらい／ぐらい・約）や制限語（だけ・しか〜ない）の位置を誤る。基本は数量→概数語→ずつの順\n- 技術的な「〜当たり」の意味で多用する（レートの表現は「あたり／につき」を用いる）\n\n### Related grammar (optional, only if relevant)\n- Nごとに: 各回・各単位「ごと」に行うことを示す。配分量ではなく間隔・機会の区切りを表す\n- Nあたり: 「〜当たり＝per」の比率・標準量を表す。数量基準の名詞に付く。説明的・やや硬い\n- Nにつき: 「〜につき＝per」の公的・事務的表現。掲示・案内・規約などで多用\n- それぞれ／各: 「各〜」は名詞を直接修飾して「それぞれの」を表す。ずつは配分「量」を言う。併用して対象と量を明確化できる",
+  "examples": [
+    {
+      "jp": "子どもたちに一個ずつ配った。",
+      "en": "I handed out one each to the children."
+    },
+    {
+      "jp": "参加者には名札を一枚ずつお渡しします。",
+      "en": "We will hand each participant one name tag."
+    },
+    {
+      "jp": "列に並んで、一人ずつ入ってください。",
+      "en": "Please enter one at a time in line."
+    },
+    {
+      "jp": "この問題は少しずつ解けばできるよ。",
+      "en": "You can do this if you solve it little by little."
+    },
+    {
+      "jp": "体重が毎月一キロずつ減っています。",
+      "en": "My weight is decreasing by one kilogram each month."
+    },
+    {
+      "jp": "コップに水を二百ミリリットルずつ入れた。",
+      "en": "I poured 200 milliliters of water into each cup."
+    },
+    {
+      "jp": "三人ずつのグループを四つ作った。",
+      "en": "We formed four groups of three each."
+    },
+    {
+      "jp": "本は各班に二冊ずつ渡した。",
+      "en": "We gave each team two books."
+    },
+    {
+      "jp": "課題を五ページくらいずつ読みましょう。",
+      "en": "Let's read about five pages at a time."
+    },
+    {
+      "jp": "腹筋を十回ずつ三セットやりました。",
+      "en": "I did three sets of ten sit-ups each."
+    },
+    {
+      "jp": "その箱にはリンゴを三個ずつ詰めますか。",
+      "en": "Shall we pack three apples in each box?"
+    },
+    {
+      "jp": "参加費はいくらずつ集めれば足りますか。",
+      "en": "How much should we collect from each person to make enough?"
+    },
+    {
+      "jp": "価格は月ごとに百円ずつ上がっていった。",
+      "en": "The price went up by one hundred yen each month."
+    },
+    {
+      "jp": "みんな、十分ずつ話してもらえますか。",
+      "en": "Everyone, could you speak for ten minutes each?"
+    },
+    {
+      "jp": "四人ずつのチームで試合した。",
+      "en": "We played matches with teams of four each."
+    },
+    {
+      "jp": "その薬は朝晩一錠ずつ飲んでください。",
+      "en": "Please take one pill each in the morning and evening."
+    },
+    {
+      "jp": "生徒にはプリントを一部ずつしか渡せませんでした。",
+      "en": "We could only hand out one copy per student."
+    },
+    {
+      "jp": "お菓子は一人ずつだけ取ってください。",
+      "en": "Please take only one per person."
+    },
+    {
+      "jp": "植木は夏のあいだに五センチずつ伸びました。",
+      "en": "The potted trees grew by five centimeters at a time during the summer."
+    },
+    {
+      "jp": "マグカップは何個ずつ持って行きますか。",
+      "en": "How many mugs will we bring per person?"
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "参加者は一時間ごとに交代します。",
+      "en": "Participants will rotate every hour."
+    },
+    {
+      "jp": "料金は一人あたり千円です。",
+      "en": "The fee is 1,000 yen per person."
+    },
+    {
+      "jp": "ゴミは一日につき一回、決められた場所に出してください。",
+      "en": "Please take out the trash once per day to the designated place."
+    },
+    {
+      "jp": "それぞれの班に資料を配布した。",
+      "en": "We distributed materials to each group."
+    },
+    {
+      "jp": "各グループで相談してから代表を決めてください。",
+      "en": "Discuss in each group and then decide a representative."
+    },
+    {
+      "jp": "徐々に寒くなってきた。",
+      "en": "It has gradually gotten colder."
+    },
+    {
+      "jp": "段階的に負担を軽減する。",
+      "en": "We will reduce the burden step by step."
+    },
+    {
+      "jp": "二人一組で練習しましょう。",
+      "en": "Let's practice in pairs."
+    },
+    {
+      "jp": "どのくらい集めれば足りますか。",
+      "en": "About how much should we collect to be enough?"
+    },
+    {
+      "jp": "一度に三冊読めますか。",
+      "en": "Can you read three books at once?"
+    }
+  ]
+}

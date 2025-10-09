@@ -1,0 +1,135 @@
+{
+  "id": "n4.noun-shika-nai",
+  "level": "N4",
+  "description": "Expresses 'only', 'nothing but', or 'no other'.",
+  "formation": "Noun + しか + Negative Verb",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- Nしか〜ない（限定）\n\n### Meaning and function\n- Expresses exclusivity: “only,” “nothing/nobody/nowhere else,” emphasizing that there are no alternatives. Often carries a nuance of insufficiency or limitation.\n\n### Form and templates\n- Core templates\n  - N(が/を) しか + V(negative)\n  - N に/へ/で/から/まで/と しか + V(negative)\n  - Quantity（number + counter） しか + V(negative)\n  - N しか + ない／いない／ありません／いません\n  - N しか + V(potential-negative) → “can only V” (e.g., talk, go) by using the negative potential form\n\n- Particle requirements and ordering\n  - しか directly follows the focused noun phrase.\n  - が and を are dropped before しか; other case particles commonly remain: に, へ, で, から, まで, と.\n  - Topic は cannot attach to the same noun as しか. If needed, topicalize a different element elsewhere in the sentence.\n\n- Optional/alternative parts\n  - Polite/tense of the negative predicate varies: 〜ない／〜なかった／〜ません／〜ませんでした.\n  - With existence predicates: use いない (for people/animals) or ない (for things); polite: いません／ありません.\n  - Frequently combines with small-quantity adverbs for emphasis (e.g., たった／わずか／ほんの + quantity + しか).\n\n- Conjugation/inflection notes\n  - The predicate must be in a negative form even though the overall meaning is “only.”\n  - Potential-negative forms are common to express “can only …” (e.g., 話せない, 行けない).\n\n### Usage notes and constraints\n- Register/frequency/naturalness\n  - Very common and natural in both speech and writing.\n  - Neutral to slightly emotive; often implies limitation, lack, or dissatisfaction more strongly than だけ.\n  - Polite forms (〜ません／ありません／いません) are used in formal contexts; 〜ない／いない is casual.\n\n- Semantic constraints and scope\n  - The scope of しか is the element immediately before it; that is the “only” allowed option (place, time, means, companion, object, quantity, etc.).\n  - Works well with quantities to stress smallness.\n  - Generally not used with person/place/time interrogatives like だれ／どこ／いつ. Use wh+も + negative for those. It does work with quantity interrogatives (何人／何回／いくら, etc.).\n\n- Orthographic variants\n  - しか is written in kana. ない is commonly kana; polite negatives use 〜ません／ありません／いません.\n\n### Common mistakes\n- Using a positive predicate after しか (e.g., しか + V(affirmative)). The predicate must be negative.\n- Keeping が／を before しか. They are replaced by しか.\n- Combining だけ and しか together (だけしか〜ない). Choose one; しか already encodes “only.”\n- Misusing しか with だれ／どこ／いつ. Use the wh+も + negative pattern instead; しか pairs naturally with quantities.\n- Attaching は to the same noun as しか (Nはしか…). Use は elsewhere in the sentence if needed.\n\n### Related grammar\n- だけ: Also “only,” but neutral and does not require a negative predicate. が／を are kept before だけ. Weaker exclusivity than しか.\n- のみ: Formal/written equivalent of だけ. No negative requirement; objective, non-emotive tone.\n- ばかり: “Nothing but/just,” can imply excess or monotony; no negative requirement; different nuance from strict exclusion.\n- 以外: “Except/other than.” Structures like N以外 + affirmative/negative exclude the named item rather than asserting “only” that item.\n- V-るしかない: Set phrase meaning “have no choice but to V,” distinct from noun + しか for simple “only.”",
+  "examples": [
+    {
+      "jp": "昼ごはんはパンしか食べない。",
+      "en": "For lunch I only eat bread."
+    },
+    {
+      "jp": "きのうはたった一人しか来なかった。",
+      "en": "Only one person came yesterday."
+    },
+    {
+      "jp": "この店は日曜にしか開いていません。",
+      "en": "This shop is open only on Sundays."
+    },
+    {
+      "jp": "冷蔵庫に牛乳しかありません。",
+      "en": "There’s only milk in the fridge."
+    },
+    {
+      "jp": "会場にはスタッフしかいなかった。",
+      "en": "There were only staff members at the venue."
+    },
+    {
+      "jp": "ここでしか買えない限定商品だ。",
+      "en": "It’s a limited item you can buy only here."
+    },
+    {
+      "jp": "わずか五分しか休めませんでした。",
+      "en": "I could rest for only five minutes."
+    },
+    {
+      "jp": "彼としか話さなかったのですか。",
+      "en": "Did you talk with only him?"
+    },
+    {
+      "jp": "日本語しか話せませんが、大丈夫でしょうか。",
+      "en": "I can only speak Japanese; will that be okay?"
+    },
+    {
+      "jp": "このバスは病院へしか行きません。",
+      "en": "This bus goes only to the hospital."
+    },
+    {
+      "jp": "裏口からしか入れないから、気をつけて。",
+      "en": "You can enter only through the back door, so be careful."
+    },
+    {
+      "jp": "先週は三回しか練習しなかった。",
+      "en": "I practiced only three times last week."
+    },
+    {
+      "jp": "私はここからしか富士山が見えない。",
+      "en": "I can see Mt. Fuji only from here."
+    },
+    {
+      "jp": "職場ではコーヒーでしか目が覚めない。",
+      "en": "At work I can wake up only with coffee."
+    },
+    {
+      "jp": "せいぜい三千円しか払えないんだ。",
+      "en": "At most, I can only pay 3,000 yen."
+    },
+    {
+      "jp": "会議の件は課長にしか連絡していない。",
+      "en": "Regarding the meeting, I’ve contacted only the section chief."
+    },
+    {
+      "jp": "この道は駅までしか続いていない。",
+      "en": "This road continues only as far as the station."
+    },
+    {
+      "jp": "いくらしか持っていないの？",
+      "en": "How much do you have, only?"
+    },
+    {
+      "jp": "ほんの少ししか残っていないから、分けられません。",
+      "en": "There’s only a little left, so I can’t share."
+    },
+    {
+      "jp": "子どもは公園でしか遊べないのかな。",
+      "en": "I wonder if kids can only play at the park."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "しかし、今日は雨ですね。",
+      "en": "However, it’s rainy today."
+    },
+    {
+      "jp": "もしかして、それ本当？",
+      "en": "By any chance, is that true?"
+    },
+    {
+      "jp": "鹿が川を渡っていた。",
+      "en": "A deer was crossing the river."
+    },
+    {
+      "jp": "このイベントは会員だけ入れます。",
+      "en": "Only members may enter this event."
+    },
+    {
+      "jp": "関係者のみ立入可能です。",
+      "en": "Authorized personnel only."
+    },
+    {
+      "jp": "私以外は誰も来なかった。",
+      "en": "No one other than me came."
+    },
+    {
+      "jp": "ほかに方法はないと思う。",
+      "en": "I think there’s no other way."
+    },
+    {
+      "jp": "もうやるしかないよ。",
+      "en": "We have no choice but to do it."
+    },
+    {
+      "jp": "しかも、時間までなくなった。",
+      "en": "Moreover, we even ran out of time."
+    },
+    {
+      "jp": "何人も来なかったから、中止した。",
+      "en": "Hardly anyone came, so we canceled."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "n5.dou-iimasu-ka",
+  "level": "N5",
+  "description": "Asking for the way to say something; 'how do you say'",
+  "formation": "Word/Phrase + は [language]でどう言いますか / Word/Phrase + をどう言いますか",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜はX語で何と言いますか\n\n### Meaning and function\n- Ask how to say something in a given language; ask what something is called in that language\n\n### Form and templates\n- N/NP は L で 何と言いますか\n  - Ask for the specific word used in language L for a thing N/NP\n  - と is the quoting particle before 言います\n- Phrase/idea は L で どう言いますか\n  - Ask how to phrase or express a whole sentence/idea in language L\n- (Context-known language) N/NP は 何と言いますか\n  - Omit L で when the language is clear\n- (Simpler, single-word focus) N/NP は L で 何ですか\n  - Often used for basic vocabulary substitution\n- Typical answer shapes:\n  - … と言います (polite)\n  - … です (for simple “It is …”)\n- Particle requirements and ordering:\n  - Topic は marks the item you’re asking about\n  - L で marks the language (“in X language”)\n  - 何/どう + 言いますか forms the question\n- Optional/alternative parts:\n  - 何と ↔ 何て (colloquial) before 言います/言う\n  - どう (manner “how”) instead of 何と when asking for phrasing, not a single word\n  - Language phrase L で can be omitted if obvious (e.g., in a Japanese class)\n- Conjugation/inflection:\n  - Use polite present 〜ます/〜です in N5 contexts\n  - Casual variants exist (…何て言う？) but are less appropriate in formal settings\n\n### Usage notes and constraints\n- Register and naturalness:\n  - 何と言いますか is standard and polite; very common in classrooms and daily interactions\n  - 何て言いますか / 何て言う？ is casual; prefer 何と… in writing and formal speech\n- Semantic scope:\n  - 何と言いますか targets a specific lexical item (“what word?”)\n  - どう言いますか targets the manner of expression (“how would you say/phrase it?”), often for longer phrases/sentences\n  - For kanji or spelling readings, use 何と読みますか／どう読みますか instead of 言いますか\n- Particles:\n  - Use L で for “in (a language)”; do not use に here\n  - は is the safest marker for the item being asked about at beginner level\n  - と (or casual って) is required to mark the quoted word before 言います\n- Orthographic notes:\n  - 言います can be written いいます (kana) or 言います (kanji+kana); both are common\n  - 何と can appear as なんと; colloquial contraction 何て／なんて is frequent in speech\n  - Language names: 日本語・英語・中国語 etc. (kanji) are standard; kana spellings also appear for beginners\n- Scope/ambiguities to avoid:\n  - 何と言っていますか means “What is (someone) saying now?” (ongoing speech), not “How do you say X?”\n  - 何と呼びますか focuses on official names/titles; for general “what do you call this,” use 何と言いますか\n  - どうやって asks about method/procedure, not wording; avoid どうやって言いますか for this meaning\n\n### Common mistakes (optional, only if relevant)\n- Using に instead of で after the language name\n- Forgetting the quote particle と before 言います\n- Using どうやって with 言います to ask for wording\n- Saying 何を言いますか to mean “what is X called” (this asks “what do you say,” not “what is it called”)\n\n### Related grammar (optional, only if relevant)\n- 何と読みますか／どう読みますか: Ask for the reading/pronunciation of written words/kanji\n- 〜という／〜っていう: “called/known as …”; used to define or name something\n- どう言えばいいですか: Ask for a recommended way to say something (more consultative)\n- 〜はX語で: Use で to mark the medium/language (“in X language”) in many expressions",
+  "examples": [
+    {
+      "jp": "「りんご」は英語で何と言いますか。",
+      "en": "How do you say “りんご” in English?"
+    },
+    {
+      "jp": "「りんご」は英語で apple と言います。",
+      "en": "In English, “りんご” is “apple.”"
+    },
+    {
+      "jp": "これは日本語で何といいますか。",
+      "en": "How do you say this in Japanese?"
+    },
+    {
+      "jp": "「駅」は英語で station です。",
+      "en": "“駅” is “station” in English."
+    },
+    {
+      "jp": "この文は英語でどう言いますか。",
+      "en": "How do you say this sentence in English?"
+    },
+    {
+      "jp": "「朝ごはん」は英語で breakfast です。",
+      "en": "“朝ごはん” is “breakfast” in English."
+    },
+    {
+      "jp": "その動物は何て言う？",
+      "en": "What do you call that animal?"
+    },
+    {
+      "jp": "鳥は英語で bird って言うよ。",
+      "en": "In English, “鳥” is called “bird.”"
+    },
+    {
+      "jp": "これ、ドイツ語で何て言うの？",
+      "en": "How do you say this in German?"
+    },
+    {
+      "jp": "「トイレ」は英語で bathroom と言います。",
+      "en": "In English, “トイレ” is “bathroom.”"
+    },
+    {
+      "jp": "「お箸」は英語で何と言いましたか。",
+      "en": "What did you say “お箸” is in English?"
+    },
+    {
+      "jp": "「バイク」は英語で bicycle ではありません。",
+      "en": "“バイク” is not “bicycle” in English."
+    },
+    {
+      "jp": "朝ごはんは英語で何ですか。",
+      "en": "What is “朝ごはん” in English?"
+    },
+    {
+      "jp": "「雨」は英語で rain です。",
+      "en": "“雨” is “rain” in English."
+    },
+    {
+      "jp": "日本語では、このマークはなんといいますか。",
+      "en": "In Japanese, what do you call this symbol?"
+    },
+    {
+      "jp": "「いただきます」は英語で I will eat とは言いません。",
+      "en": "We do not say “I will eat” for “いただきます” in English."
+    },
+    {
+      "jp": "この言い方は英語でどう言いますか。",
+      "en": "How do you say this phrasing in English?"
+    },
+    {
+      "jp": "「宿題」は英語で homework です。",
+      "en": "“宿題” is “homework” in English."
+    },
+    {
+      "jp": "昨日買ったこの魚は英語で何と言いますか。",
+      "en": "How do you say this fish I bought yesterday in English?"
+    },
+    {
+      "jp": "さっき、「お会計」は英語で check と言いました。",
+      "en": "A moment ago, we said “お会計” is “check” in English."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "先生は今、何と言っていますか。",
+      "en": "What is the teacher saying right now?"
+    },
+    {
+      "jp": "この漢字は何と読みますか。",
+      "en": "How do you read this kanji?"
+    },
+    {
+      "jp": "あなたは何と言いましたか。",
+      "en": "What did you say?"
+    },
+    {
+      "jp": "日本語で言うと、今日は休みです。",
+      "en": "Speaking in Japanese, today is a day off."
+    },
+    {
+      "jp": "この町は何という名前ですか。",
+      "en": "What is the name of this town?"
+    },
+    {
+      "jp": "明日は英語でスピーチをします。",
+      "en": "I will give a speech in English tomorrow."
+    },
+    {
+      "jp": "私は先生に「おはよう」と言います。",
+      "en": "I say “good morning” to my teacher."
+    },
+    {
+      "jp": "「早起き」って何ですか。",
+      "en": "What does “early rising” mean?"
+    },
+    {
+      "jp": "この言葉は英語でどう言えばいいですか。",
+      "en": "How should I say this word in English?"
+    },
+    {
+      "jp": "どういう意味ですか。",
+      "en": "What does it mean?"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "n5.douyatte",
+  "level": "N5",
+  "description": "Ask 'how' something is done or how to do something",
+  "formation": "どうやって + Verb-casual",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- どうやって（方法をたずねる）\n\n### Meaning and function\n- Asks about method, means, procedure, or route: “How do you do it?” / “By what means?” / “What are the steps?”\n\n### Form and templates\n- どうやって + V(?)\n- N は どうやって + V(?)\n- どうやって + Place に/へ + V(motion)(?)\n- どうやって + N を + V(?)\n- Notes on form:\n  - どうやって is a fixed adverbial made from どう + やって (て-form of やる). It does not conjugate.\n  - It directly modifies the following verb phrase; it does not take particles.\n  - The main verb conjugates normally for tense/politeness (〜ます/辞書形/〜た, etc.). Add か for polite questions.\n  - Normal case-marking inside the clause applies as usual (を for objects, に/へ for goals, で for location/instrument, etc.).\n  - Position: often sentence-initial or after a topic (N は), immediately before the verb phrase it scopes over.\n\n### Usage notes and constraints\n- Register/naturalness:\n  - Very common and neutral in speech; fine in polite or plain style.\n  - For more formal/written tone, どのように can replace どうやって.\n  - Casual alternative どうやる is common in speech but less polite.\n- Semantic scope:\n  - Used only for method/means/steps/route. Not for asking about state or evaluation (use どう), and not for reasons (use どうして/なぜ).\n  - Frequent with motion verbs (asking route/transport) and procedural verbs (asking instructions).\n- Orthography:\n  - Usually written in hiragana: どうやって. Avoid kanji for やって in this set phrase.\n\n### Common mistakes\n- Using どう (state/condition) when you need method/means; use どうやって for “how (to do).”\n- Using どうやって to ask “why”; use どうして or なぜ for reasons.\n- Treating どうやって like a noun and attaching particles to it (e.g., どうやってを…); it’s an adverb.\n- Omitting か in polite written questions; include か with 〜ます for polite style.\n- Relying on 何で to ask about means and being misunderstood as “why” in casual contexts; どうやって avoids that ambiguity.\n\n### Related grammar\n- どう: asks about state/condition or opinion, not procedure.\n- どのように: “in what way; how,” more formal/polite; preferred in writing or formal speech.\n- 何で: “with what/by what (means),” but also “why” in casual speech; potentially ambiguous.\n- どうやる: casual verb form meaning “how do you do (it)”; less polite than どうやって.\n- V-stem + 方: “the way to V / how to V” as a noun phrase (e.g., asking about or explaining methods in a nominalized form).",
+  "examples": [
+    {
+      "jp": "どうやって駅へ行きますか。",
+      "en": "How do I get to the station?"
+    },
+    {
+      "jp": "このスープはどうやって作りましたか。",
+      "en": "How did you make this soup?"
+    },
+    {
+      "jp": "どうやってこの問題を解決すればいいですか。",
+      "en": "How should I solve this problem?"
+    },
+    {
+      "jp": "そこへはどうやって行ったの？",
+      "en": "How did you get there?"
+    },
+    {
+      "jp": "どうやってパスワードを変更するの？",
+      "en": "How do you change the password?"
+    },
+    {
+      "jp": "会場にはどうやって入れますか。",
+      "en": "How can I get into the venue?"
+    },
+    {
+      "jp": "その書類はどうやって提出すればよろしいですか。",
+      "en": "How should I submit these documents?"
+    },
+    {
+      "jp": "どうやって漢字を覚えたんですか。",
+      "en": "How did you memorize kanji?"
+    },
+    {
+      "jp": "ここから空港まで、どうやって行くのが一番早い？",
+      "en": "What’s the fastest way to get to the airport from here?"
+    },
+    {
+      "jp": "うちのプリンターはどうやって接続すればいいですか。",
+      "en": "How should I connect our printer?"
+    },
+    {
+      "jp": "まず、どうやって予約を取りますか。",
+      "en": "First, how do we make a reservation?"
+    },
+    {
+      "jp": "子どもには、どうやって野菜を食べさせましたか。",
+      "en": "How did you get your child to eat vegetables?"
+    },
+    {
+      "jp": "あの店まで、どうやって行けば迷わない？",
+      "en": "How should I go to that shop so I don’t get lost?"
+    },
+    {
+      "jp": "きのうはどうやって帰ってきた？",
+      "en": "How did you get back yesterday?"
+    },
+    {
+      "jp": "どうやって安全にこのデータをバックアップしておきますか。",
+      "en": "How will we safely back up this data in advance?"
+    },
+    {
+      "jp": "友だちはどうやって私の住所を知ったんですか。",
+      "en": "How did my friend find out my address?"
+    },
+    {
+      "jp": "担当者に、どうやって連絡したらいいでしょうか。",
+      "en": "How should I contact the person in charge?"
+    },
+    {
+      "jp": "どうやってログインするか、教えてください。",
+      "en": "Please tell me how to log in."
+    },
+    {
+      "jp": "その家はどうやって建てられたんですか。",
+      "en": "How was that house built?"
+    },
+    {
+      "jp": "時間を無駄にしないように、どうやって計画を立てていますか。",
+      "en": "How do you plan so you don’t waste time?"
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "どのように提出しますか。",
+      "en": "In what way should I submit it?"
+    },
+    {
+      "jp": "どうして遅れたの？",
+      "en": "Why were you late?"
+    },
+    {
+      "jp": "なぜここに来たんですか。",
+      "en": "Why did you come here?"
+    },
+    {
+      "jp": "何で学校へ行きますか。",
+      "en": "By what means do you go to school?"
+    },
+    {
+      "jp": "これ、どうやるの？",
+      "en": "How do you do this?"
+    },
+    {
+      "jp": "宿題はもうやってある。",
+      "en": "The homework is already done."
+    },
+    {
+      "jp": "どうやら雨になりそうです。",
+      "en": "It seems like it’s going to rain."
+    },
+    {
+      "jp": "いかにして成功したのか、彼は語らなかった。",
+      "en": "He didn’t say how he succeeded."
+    },
+    {
+      "jp": "この機械の使い方を教えてください。",
+      "en": "Please teach me how to use this machine."
+    },
+    {
+      "jp": "友だちとゲームをやってから寝た。",
+      "en": "I played games with a friend and then went to bed."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "n4.tame-ni",
+  "level": "N4",
+  "description": "Used to describe the purpose or reason for an action; 'for the sake of', 'in order to', 'because of'.",
+  "formation": "1) Verb (dictionary form) + ために (purpose)\n2) い-Adjective + ために (reason)\n3) な-Adjective + な + ために (reason)\n4) Noun + の + ために (reason)",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜ために（目的・理由）\n\n### Meaning and function\n- Purpose: in order to do X; with an intentional goal\n- Benefit: for the sake/benefit of N\n- Reason/Cause: because of/due to X; resulting in Y (neutral/formal tone)\n\nThe reading (purpose vs reason) depends on what precedes ため: verbs in dictionary form typically signal purpose; nouns/adjectives (and verb past facts) typically signal reason/cause. Nのために can mean either “for N’s sake” (benefit/purpose) or “because of N” (cause); context decides.\n\n### Form and templates\n- Purpose (volitional/controllable aim)\n  - V(dict) + ために, [intentional main action]\n  - V(dict) + ための + N\n  - N + の + ために (for the sake/benefit of N)\n  - N + の + ための + N\n  - Topic/contrast: V(dict) + ためには, … (stating a requirement/method for achieving the aim)\n\n- Reason/Cause (a fact is the cause; formal/neutral)\n  - い-adj + ため(に), [result]\n  - な-adj + な + ため(に), [result]\n  - N + の + ため(に), [result]\n  - V(plain, often past 〜た) + ため(に), [result]\n  - Sentence-final explanation: Clause + ためだ／ためです\n  - Past with N/な-adj: N／な-adj + だった + ため(に)\n  - Past with い-adj: い-adj(〜かった) + ため(に)\n\n- Particle requirements and ordering\n  - After nouns: mandatory の before ため (Nのため…)\n  - に after ため: usually kept for purpose (ために); may be omitted in reason statements (〜ため／〜ために／〜ためだ)\n  - The ため-clause typically comes before the main clause; it can be topicalized with は (〜ためには)\n\n- Conjugation/inflection notes\n  - Verbs before ため take plain forms (dictionary, た, ない, etc.), not ます／です\n  - Main clause can be plain or polite\n  - Negative before ため expresses negative cause (〜ないため = because not …), not “in order not to …”\n\n### Usage notes and constraints\n- Register and naturalness\n  - Reason/cause 〜ため(に) is more formal/written than 〜から／〜ので; common in announcements, reports, news\n  - Purpose 〜ために is neutral and used widely\n  - Sentence-final 〜ためだ／〜ためです is a formal way to give a reason\n\n- Semantic constraints\n  - Purpose 〜ために pairs with intentional, controllable actions in the main clause\n  - For aims not directly controllable (potential/passive/spontaneous results), prefer 〜ように rather than 〜ために\n  - Subject alignment: for purpose, the doer of the main action is usually the one whose aim is stated. If different, mark the subject inside the ため-clause with が／は to avoid ambiguity\n  - Nのために:\n    - Person/group/organization → typically “for the sake/benefit of …”\n    - Events/conditions/phenomena → typically “because of …”\n  - With verbs as cause, the past (〜た) strongly highlights a factual cause\n\n- Motion-purpose contrast\n  - Immediate purpose of movement is often Vます-stem + に + 行く／来る; V(dict) + ために is broader/more formal and not restricted to motion verbs\n\n- Orthographic variants\n  - ため／ために is usually written in kana in modern writing\n  - 為／為に appears in formal/literary texts but is generally avoided\n  - Connector: そのため (“therefore/as a result”) is common, usually in kana\n\n### Common mistakes (optional, only if relevant)\n- Using 〜ないために to mean “so as not to …” (this means “because not …”); use 〜ないように for “so as not to …”\n- Using 〜ために with non-volitional results for purpose; use 〜ように\n- Omitting の after a noun (Nために); の is required (Nのために)\n- Putting polite ます／です inside the ため-clause; use plain forms before ため\n- Overusing 〜ため in casual speech for reasons where 〜から／〜ので sounds more natural\n\n### Related grammar (optional, only if relevant)\n- 〜ように: “so that” for aims/results not fully under one’s control; also used for “so as not to” with 〜ないように\n- 〜から／〜ので: everyday “because”; 〜から is more direct/casual; 〜ので is softer/polite\n- 〜おかげで／〜せいで: positive vs negative cause with speaker’s evaluation; 〜ため(に) is neutral/formal\n- Vます-stem + に (行く／来る／戻る…): purpose of motion; more natural than 〜ために with movement verbs\n- Nにとって: “for/from the viewpoint of N,” not purpose/benefit; contrasts with Nのために (for N’s sake) and Nのため (because of N)",
+  "examples": [
+    {
+      "jp": "健康を保つために、毎朝三十分歩いています。",
+      "en": "To stay healthy, I walk for thirty minutes every morning."
+    },
+    {
+      "jp": "留学するための資金を、少しずつ貯めている。",
+      "en": "I’m saving up little by little for study-abroad funds."
+    },
+    {
+      "jp": "地域の高齢者のために、無料送迎を始めました。",
+      "en": "We started a free shuttle service for local seniors."
+    },
+    {
+      "jp": "道が狭いため、車がすれ違いにくい。",
+      "en": "Because the road is narrow, cars have trouble passing each other."
+    },
+    {
+      "jp": "ここは静かなため、赤ちゃんはすぐ眠った。",
+      "en": "Since it’s quiet here, the baby fell asleep quickly."
+    },
+    {
+      "jp": "雨のため、試合は中止になりました。",
+      "en": "Due to the rain, the game was canceled."
+    },
+    {
+      "jp": "電車が遅れた為に、会議に間に合わなかった。",
+      "en": "Because the train was delayed, I didn’t make it to the meeting in time."
+    },
+    {
+      "jp": "出発が遅れたのは、手続きに時間がかかったためです。",
+      "en": "The departure was delayed because the procedures took time."
+    },
+    {
+      "jp": "祝日だったため、役所は閉まっていた。",
+      "en": "Since it was a national holiday, the city office was closed."
+    },
+    {
+      "jp": "寒かったため、外出する人は少なかった。",
+      "en": "Because it was cold, few people went out."
+    },
+    {
+      "jp": "合格するためには、何をすればいいですか。",
+      "en": "What should I do in order to pass?"
+    },
+    {
+      "jp": "子どもが集中するために、私はスマホの通知を切った。",
+      "en": "So that the child could concentrate, I turned off my phone notifications."
+    },
+    {
+      "jp": "資料を集めるために、図書館へ行く。",
+      "en": "I’ll go to the library to gather materials."
+    },
+    {
+      "jp": "予算が足りないため、計画を見直した。",
+      "en": "Because the budget is insufficient, we reviewed the plan."
+    },
+    {
+      "jp": "防災のための訓練を、来週実施します。",
+      "en": "We will conduct disaster-prevention training next week."
+    },
+    {
+      "jp": "この変更は、誰のためのものですか。",
+      "en": "Who is this change for?"
+    },
+    {
+      "jp": "何のためにこのソフトを導入したのですか。",
+      "en": "For what purpose did you introduce this software?"
+    },
+    {
+      "jp": "社員のために、在宅勤務制度を整備しています。",
+      "en": "We are setting up a telework system for our employees."
+    },
+    {
+      "jp": "大雨の為、今日は行けません。",
+      "en": "Due to heavy rain, I can’t go today."
+    },
+    {
+      "jp": "この街で暮らすためには、日本語が必要だ。",
+      "en": "To live in this town, you need Japanese."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "駅まで走るようにしています。",
+      "en": "I make a habit of running to the station."
+    },
+    {
+      "jp": "この本は子どもにとって読みやすい。",
+      "en": "This book is easy for children to read."
+    },
+    {
+      "jp": "『あなたのために』という曲が流れている。",
+      "en": "A song called “For You” is playing."
+    },
+    {
+      "jp": "水をためるタンクが満杯だ。",
+      "en": "The tank used to store water is full."
+    },
+    {
+      "jp": "ため息が出るほど疲れた。",
+      "en": "I’m so tired I could sigh."
+    },
+    {
+      "jp": "そのため池は観光名所だ。",
+      "en": "That irrigation pond is a tourist attraction."
+    },
+    {
+      "jp": "雨だったので、試合は中止になりました。",
+      "en": "Because it was raining, the game was canceled."
+    },
+    {
+      "jp": "明日会えるように、予定を調整した。",
+      "en": "I adjusted my schedule so that we can meet tomorrow."
+    },
+    {
+      "jp": "この町に来るには、車が便利だ。",
+      "en": "To come to this town, a car is convenient."
+    },
+    {
+      "jp": "彼女はため口で話すタイプだ。",
+      "en": "She tends to speak casually (use informal speech)."
+    }
+  ]
+}

@@ -11,13 +11,14 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.json && cp -r src/grammarMatcher/grammars dist/grammarMatcher/",
-    "build:watch": "concurrently \"tsc -p tsconfig.json --watch\" \"chokidar 'src/grammarMatcher/grammars/**/*.json' -c 'cp -r src/grammarMatcher/grammars dist/grammarMatcher/' --initial\"",
+    "build": "tsc -p tsconfig.json && cp -r src/grammars dist/",
+    "build:watch": "concurrently \"tsc -p tsconfig.json --watch\" \"chokidar 'src/grammars/**/*.json' -c 'cp -r src/grammars dist/' --initial\"",
     "typecheck": "tsc --noEmit",
     "test": "bun test tests/"
   },
   "dependencies": {
-    "@ichiran/core": "0.0.0"
+    "@ichiran/core": "0.0.0",
+    "lru-cache": "^10.2.2"
   },
   "sideEffects": false
 }

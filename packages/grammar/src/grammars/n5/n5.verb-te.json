@@ -1,0 +1,135 @@
+{
+  "id": "n5.verb-te",
+  "level": "N5",
+  "description": "A verb conjugation that connects actions or states",
+  "formation": "Verb (Group 1) - Replace last syllable with 〜て, Verb (Group 2) - Replace 'る' with 〜て, Verb (Group 3) - する becomes して, くる becomes きて",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 動詞のて形（接続）\n\n### Meaning and function\n- Connects actions or states within one sentence\n- Expresses sequence (and/and then), cause/result (so/as a result), and manner/means (by doing)\n- Serves as the link to attach helper expressions (e.g., ている, てください), though those are separate patterns\n\n### Form and templates\n- Core templates\n  - V(て), Clause\n  - V(て) V … V (chain of actions; only the last verb carries tense/politeness)\n\n- How to make the て-form\n  - Ichidan (る-verbs): drop る → て\n  - Godan (う-verbs)\n    - う・つ・る → って\n    - む・ぶ・ぬ → んで\n    - く → いて\n    - ぐ → いで\n    - す → して\n  - Irregular\n    - する → して\n    - くる → きて\n    - 行く → いって（special)\n  \n- Particle/ordering notes\n  - て attaches directly to the verb; no particle comes between the verb and て\n  - Clause-internal particles (を, に, で, へ, と, が, など) remain in their usual places\n  - Tense and politeness (ます/た/ない) appear only on the final predicate of the chain\n\n- Optional/alternative parts\n  - Polite connective 〜まして is possible in formal speech/writing; in everyday speech, use 〜て and make the final verb polite\n  - Adjectives/nouns connect differently: い-adj → 〜くて; な-adj・N → 〜で（not 〜て）\n\n- Conjugation/inflection notes\n  - Negative connection uses 〜なくて or 〜ないで（separate patterns)\n  - The final verb determines overall tense/politeness for the whole chain\n\n### Usage notes and constraints\n- Register/frequency: Universal and extremely common; acceptable in both casual and polite contexts. Keep politeness consistent within the sentence.\n- Sequence: In chains of actions, the order of 〜て clauses typically matches the real-time order.\n- Cause/result nuance: 〜て can show natural cause/result or background state. For explicit reasons (especially leading to requests, suggestions, commands), から/ので is preferred.\n- Subject handling: Listeners assume the same subject across 〜て clauses. If the subject changes, mark it clearly in the second clause to avoid ambiguity.\n- Scope: 〜て indicates a tight link between clauses. For looser links across sentences, use sentence connectors like そして／それから.\n- Orthography/pronunciation:\n  - 行く → 行って (いって), not いきて\n  - Sound changes produce って and んで; write them in hiragana\n\n### Common mistakes (optional, only if relevant)\n- Conjugating earlier verbs with ます or た before て; only the final verb carries tense/politeness.\n- Forming the て-shape incorrectly, especially for 行く (it is 行って, not いきて).\n- Using 〜て to justify a request/advice; use から/ので for explicit reasons.\n- Changing subjects across 〜て without marking the new subject, causing confusion.\n\n### Related grammar (optional, only if relevant)\n- 〜てから: Emphasizes “after doing A (completely), do B.”\n- 〜ている: Progressive or resultant state (ongoing action/condition).\n- 〜てください: Polite request.\n- 〜たり〜たりする: Non-exhaustive listing of actions; order is not fixed.\n- 〜くて／〜で: Connect い-adjectives / な-adjectives・nouns (not for verbs).",
+  "examples": [
+    {
+      "jp": "顔を洗って、朝ごはんを食べた。",
+      "en": "I washed my face and ate breakfast."
+    },
+    {
+      "jp": "駅まで歩いて、バスに乗ります。",
+      "en": "I’ll walk to the station and take a bus."
+    },
+    {
+      "jp": "雨が降って、試合は中止になった。",
+      "en": "It rained, so the game was canceled."
+    },
+    {
+      "jp": "自転車に乗って、学校へ行った。",
+      "en": "I rode a bicycle and went to school."
+    },
+    {
+      "jp": "ドアを開けて入って、電気をつけた。",
+      "en": "I opened the door, went in, and turned on the light."
+    },
+    {
+      "jp": "資料をまとめて、部長に送りますか。",
+      "en": "Will you compile the materials and send them to the manager?"
+    },
+    {
+      "jp": "雨が強く降って、今日は出かけない。",
+      "en": "It’s raining heavily, so I’m not going out today."
+    },
+    {
+      "jp": "父が帰って、私は夕飯を作った。",
+      "en": "My father came home, and I cooked dinner."
+    },
+    {
+      "jp": "窓を開けて、空気を入れますか。",
+      "en": "Will you open the window and let some air in?"
+    },
+    {
+      "jp": "宿題をして、寝た。",
+      "en": "I did my homework and went to bed."
+    },
+    {
+      "jp": "友だちが来て、手伝ってくれた。",
+      "en": "A friend came and helped me."
+    },
+    {
+      "jp": "コンビニに行って、牛乳を買った。",
+      "en": "I went to the convenience store and bought milk."
+    },
+    {
+      "jp": "手紙を書いて、ポストに入れた。",
+      "en": "I wrote a letter and put it in the mailbox."
+    },
+    {
+      "jp": "急いで、最終電車に間に合いました。",
+      "en": "I hurried and caught the last train."
+    },
+    {
+      "jp": "店員と話して、返品しませんでした。",
+      "en": "I spoke with a clerk and didn’t return it."
+    },
+    {
+      "jp": "公園で遊んで、日が暮れた。",
+      "en": "We played in the park, and the sun set."
+    },
+    {
+      "jp": "起きて、顔を洗って、コーヒーを入れて、仕事を始めた。",
+      "en": "I got up, washed my face, made coffee, and started work."
+    },
+    {
+      "jp": "内容を確認いたしまして、すぐにご連絡いたします。",
+      "en": "We will check the contents and contact you shortly."
+    },
+    {
+      "jp": "図書館で本を読んで、映画を見に行く？",
+      "en": "Want to read at the library and go watch a movie?"
+    },
+    {
+      "jp": "鍵を忘れて、家に入れなかった。",
+      "en": "I forgot my key and couldn’t get into the house."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "今、雨が降っています。",
+      "en": "It’s raining now."
+    },
+    {
+      "jp": "窓を開けてください。",
+      "en": "Please open the window."
+    },
+    {
+      "jp": "朝ごはんを食べてから、出かけます。",
+      "en": "After eating breakfast, I will go out."
+    },
+    {
+      "jp": "本を読んだり書いたりします。",
+      "en": "I do things like reading and writing."
+    },
+    {
+      "jp": "このカバンは安くて便利だ。",
+      "en": "This bag is cheap and convenient."
+    },
+    {
+      "jp": "ここは静かで広い部屋です。",
+      "en": "This is a quiet and spacious room."
+    },
+    {
+      "jp": "朝ごはんを食べないで出かけた。",
+      "en": "I went out without eating breakfast."
+    },
+    {
+      "jp": "元気がなくて、学校を休んだ。",
+      "en": "I wasn’t feeling well, so I stayed home from school."
+    },
+    {
+      "jp": "財布を落としてしまった。",
+      "en": "I ended up dropping my wallet."
+    },
+    {
+      "jp": "走っている人を見た。",
+      "en": "I saw a person who was running."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "n4.te-oku",
+  "level": "N4",
+  "description": "Perform an action in preparation for a future situation; 'to do something in advance'.",
+  "formation": "Verb-て form + おく",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 〜ておく（準備・そのままにしておく）\n\n### Meaning and function\n- Do something now in preparation for a future situation; “do in advance”\n- Do something and leave the resulting state as is for later convenience/benefit\n\n### Form and templates\n- V(て) + おく\n- Polite: V(て) + おきます\n- Past: V(て) + おいた\n- Negative: V(て) + おかない / おきません\n- Volitional: V(て) + おこう / おきましょう\n- Linking/request: V(て) + おいて（ください）\n- Intentional non-action: V(ないで) + おく (“leave it undone on purpose/for now”)\n- Casual contractions (spoken only):\n  - V(て) + とく（＝ておく）, V(で) + どく（＝でおく）\n  - Past: といた／どいた; て-form: といて／どいて; Negative: とかない／どかない\n- Particles/ordering: No special changes; use ordinary case-marking (e.g., object を, location に, etc.) before V(て) + おく\n\n### Usage notes and constraints\n- Register and naturalness:\n  - Very common in daily speech for planning, instructions, and arrangements\n  - Contractions とく／どく are casual; avoid in formal writing and with superiors\n  - Imperative 〜ておけ is blunt/rough; prefer 〜ておいてください in polite requests\n- Semantic scope:\n  - Implies the speaker’s foresight/benefit for themselves or others (often “just in case” or “for now”)\n  - “Leave as is” use requires a controllable, persistent result (e.g., a door left open, settings left changed)\n  - Describes a deliberate action now; not used for accidental/natural changes\n  - Prefer a transitive verb for “leave X (in state)”: intransitives generally do not fit this “leave” meaning\n- Combination with benefactives:\n  - V(て) + おいてあげる／くれる adds “do in advance for someone (else)/for me”\n- Orthography:\n  - As an auxiliary, おく is usually written in kana (〜ておく). Writing 置く is possible but less common in this use\n  - Contractions (とく／どく) are kana-only\n- Co-occurring adverbs:\n  - とりあえず, いちおう commonly appear to add “for now/just in case” nuance\n\n### Common mistakes (optional, only if relevant)\n- Using 〜ておく with adjectives or nouns (it attaches only to verb て-forms)\n- Trying to express a mere resultant state with 〜ておく; use 〜てある when describing the state itself\n- Using intransitive verbs to mean “leave X (in state)”; choose the transitive counterpart for intentional “leave”\n- Overusing casual contractions (とく／どく) in polite contexts or writing\n- Using 〜ておく when there is no future relevance; simple completion forms are more natural in that case\n\n### Related grammar (optional, only if relevant)\n- 〜てある: Describes a present state resulting from someone’s intentional action; focuses on the state, not the preparatory act; uses transitive verbs\n- 〜まま: “Leave/keep as is” (often with 〜た/〜ない) without necessarily implying prior intentional action or preparation\n- 〜つもりだ: Intention or plan only; 〜ておく indicates the action is actually carried out now for the future\n- 〜ていく／〜てくる: Continuation or movement in time/space; not “preparation,” though they can co-occur with different nuances",
+  "examples": [
+    {
+      "jp": "ドアは開けておくね。",
+      "en": "I’ll leave the door open, okay."
+    },
+    {
+      "jp": "会議の資料を印刷しておきます。",
+      "en": "I’ll print the meeting materials in advance."
+    },
+    {
+      "jp": "旅行の前に、ホテルを予約しておいた。",
+      "en": "I booked the hotel before the trip."
+    },
+    {
+      "jp": "この設定はそのままにしておいてください。",
+      "en": "Please leave this setting as it is."
+    },
+    {
+      "jp": "雨が降りそうだから、今日は窓を開けないでおく。",
+      "en": "Since it looks like rain, I’ll keep the windows closed for now."
+    },
+    {
+      "jp": "パスワードは書いとかないと忘れるよ。",
+      "en": "If we don’t write down the password ahead of time, we’ll forget it."
+    },
+    {
+      "jp": "忘れないように、今のうちにメモしておこう。",
+      "en": "So I don’t forget, I’ll jot it down now."
+    },
+    {
+      "jp": "荷物はここに置いておきましょうか。",
+      "en": "Shall we leave the luggage here?"
+    },
+    {
+      "jp": "その資料、すぐ読めるように机の上に出しといて。",
+      "en": "Please lay out the documents on the desk so they’re ready to read."
+    },
+    {
+      "jp": "あなたが来る前に、部屋を片づけておいてあげる。",
+      "en": "I’ll tidy up the room for you before you arrive."
+    },
+    {
+      "jp": "冷蔵庫の中をきれいにしておかないと、においが出るよ。",
+      "en": "If we don’t clean the inside of the fridge now, it’ll start to smell."
+    },
+    {
+      "jp": "朝ごはんは、昨夜買っておいたパンにした。",
+      "en": "For breakfast I had the bread I’d bought last night in advance."
+    },
+    {
+      "jp": "とりあえず水を多めに買っとくか。",
+      "en": "Maybe I’ll buy some extra water for now."
+    },
+    {
+      "jp": "その記事、後で読んどくね。",
+      "en": "I’ll read that article later, just in case."
+    },
+    {
+      "jp": "薬は寝る前に飲んどいたよ。",
+      "en": "I took the medicine before going to bed."
+    },
+    {
+      "jp": "明日の会議までに、この資料を読んどいてくれる？",
+      "en": "Could you read this document before tomorrow’s meeting?"
+    },
+    {
+      "jp": "先に席を取っておいて、私は飲み物を買ってくるね。",
+      "en": "Reserve the seats first, and I’ll go buy drinks."
+    },
+    {
+      "jp": "その書類、コピーは取っておきません。",
+      "en": "I won’t make copies of that document ahead of time."
+    },
+    {
+      "jp": "いちおう、予備の電池を買っておきますね。",
+      "en": "Just in case, I’ll buy some spare batteries."
+    },
+    {
+      "jp": "テスト前に基本の文法だけでも復習しておけ。",
+      "en": "Before the test, make sure to review at least the basic grammar."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "本を机に置く。",
+      "en": "I put a book on the desk."
+    },
+    {
+      "jp": "ここに荷物を置いてください。",
+      "en": "Please put your luggage here."
+    },
+    {
+      "jp": "ちょっとどいてください。",
+      "en": "Please move aside a bit."
+    },
+    {
+      "jp": "朝は六時に起きます。",
+      "en": "I get up at six in the morning."
+    },
+    {
+      "jp": "特に用事はありません。",
+      "en": "I have no particular plans."
+    },
+    {
+      "jp": "机の上にメモが置いてある。",
+      "en": "There’s a note left on the desk."
+    },
+    {
+      "jp": "傘を持たないで出かけた。",
+      "en": "I went out without taking an umbrella."
+    },
+    {
+      "jp": "先に連絡してくれる？",
+      "en": "Could you contact me first?"
+    },
+    {
+      "jp": "荷物を床に置いたままにしないでください。",
+      "en": "Please don’t leave the luggage on the floor."
+    },
+    {
+      "jp": "予約していきますね。",
+      "en": "I’ll make a reservation and then head over."
+    }
+  ]
+}

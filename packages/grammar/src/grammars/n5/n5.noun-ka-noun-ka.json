@@ -1,0 +1,185 @@
+{
+  "id": "n5.noun-ka-noun-ka",
+  "label": "NかNか",
+  "level": "N5",
+  "description": "Choice structure NounかNounか",
+  "formation": "Noun1 + か + Noun2 + か～",
+  "priority": 4,
+  "pattern": {
+    "sequence": [
+      {
+        "capture": "option1",
+        "pattern": {
+          "macro": "NP"
+        }
+      },
+      {
+        "token": [
+          "text:か",
+          "isParticle"
+        ]
+      },
+      {
+        "capture": "option2",
+        "pattern": {
+          "macro": "NP"
+        }
+      },
+      {
+        "token": [
+          "text:か",
+          "isParticle"
+        ]
+      },
+      {
+        "optional": {
+          "capture": "tail",
+          "pattern": {
+            "repeat": {
+              "pattern": {
+                "token": [
+                  "isPredicateHead"
+                ]
+              },
+              "min": 1,
+              "max": 4
+            }
+          }
+        }
+      }
+    ]
+  },
+  "explanation": "### Name\n- 名詞か名詞か（選択）\n\n### Meaning and function\n- Presents two alternatives and turns them into a single “whether A or B” unit. Common in statements about knowing, deciding, asking, or telling which option it is.\n\n### Form and templates\n- Core chunk: N1 か N2 か\n- Embedded choice: N1 か N2 か + V/Adj/だ\n  - Typical main predicates: verbs of knowing/uncertainty (分かる・知らない), deciding (決める・迷う), asking/telling (聞く・教える), etc.\n- Case/topic marking on the whole chunk (not on each noun):\n  - N1 か N2 か + を/が/は/も/で/に + V\n- More than two options:\n  - N1 か N2 か N3 か (+ …) + V\n- Particle placement and order:\n  - か follows directly after each noun phrase option.\n  - The case/topic particle for the clause attaches after the final か.\n- Notes on direct questions:\n  - For offering a choice as a question, speakers typically put です/ます at the end of the sentence and do not place か after the second noun; alternatively, use sentence connectors like それとも. The “N1 か N2 か” form is most natural as an embedded choice before a main predicate.\n\n### Usage notes and constraints\n- Register: Neutral. Politeness comes from the main predicate (〜です／〜ます vs plain).\n- Naturalness:\n  - Keep か after each option in embedded use (…か…か＋V). Omitting the second か here sounds incomplete or unnatural.\n  - “N1 か N2” (single か) is the normal coordination inside a clause meaning “A or B” as a simple object/subject; “N1 か N2 か” signals an embedded “which of the two” idea and usually needs a following predicate.\n- Semantic constraints:\n  - Options should be parallel in function and category (both nouns filling the same grammatical role).\n  - The chunk behaves like a nominalized content clause; it can take が/を/は, etc., just like a noun.\n- Orthography:\n  - か is written in hiragana. No kanji variant.\n\n### Common mistakes (optional, only if relevant)\n- Attaching case particles to each noun separately (e.g., Nを か Nを か …); mark the whole “N1 か N2 か” chunk once (…か…か＋を/が/は…).\n- Dropping the second か in embedded use (…か…分からない) instead of …か…か分からない.\n- Treating the second か as the sentence-final question particle; the sentence’s interrogative force comes from the final predicate, not the か inside the chunk.\n- Ending the sentence with “N1 か N2 か” without a following predicate, leaving the thought incomplete.\n\n### Related grammar (optional, only if relevant)\n- 名詞か名詞: Simple “A or B” coordination inside a clause; no second か; not an embedded “whether” clause.\n- 〜かどうか: “Whether or not” (yes/no type) when there aren’t two named alternatives.\n- それとも: Clause/linker meaning “or” in questions; often used instead of repeating か.\n- または／あるいは: “Or” in writing/more formal style; coordinates nouns/clauses (not an embedded question marker).",
+  "examples": [
+    {
+      "jp": "会場が体育館か講堂かがまだ分かりません。",
+      "en": "I still don’t know whether the venue is the gym or the auditorium."
+    },
+    {
+      "jp": "集合時間が午前か午後かは未定です。",
+      "en": "Whether the meeting time is in the morning or in the afternoon is undecided."
+    },
+    {
+      "jp": "昼ごはんはカレーかラーメンかを決めましょう。",
+      "en": "Shall we decide whether to have curry or ramen for lunch?"
+    },
+    {
+      "jp": "移動手段は電車かバスかで迷っています。",
+      "en": "I’m torn between taking the train or the bus."
+    },
+    {
+      "jp": "この色が青か緑かを確かめよう。",
+      "en": "Let’s check whether this color is blue or green."
+    },
+    {
+      "jp": "受付が一階か二階かをご存じですか。",
+      "en": "Do you know whether the reception is on the first or the second floor?"
+    },
+    {
+      "jp": "支払い方法は現金かカードかで構いません。",
+      "en": "Either cash or card is fine for payment."
+    },
+    {
+      "jp": "連絡先が会社の代表番号か担当者の携帯かを把握しています。",
+      "en": "I know whether the contact is the company’s main number or the person’s cell."
+    },
+    {
+      "jp": "宿泊先はホテルか旅館かにしますか。",
+      "en": "Shall we stay at a hotel or a ryokan?"
+    },
+    {
+      "jp": "担当が営業か総務かは来週決まります。",
+      "en": "Whether the person in charge is Sales or General Affairs will be decided next week."
+    },
+    {
+      "jp": "会場は第一会議室か第二会議室かオンラインかで調整中です。",
+      "en": "We are coordinating whether the venue will be Meeting Room 1, Meeting Room 2, or online."
+    },
+    {
+      "jp": "昼食は和定食かパスタかカレーかにするつもりだ。",
+      "en": "I plan to have either a Japanese set meal, pasta, or curry for lunch."
+    },
+    {
+      "jp": "その建物は学校か役所かだと聞きました。",
+      "en": "I heard the building is either a school or a government office."
+    },
+    {
+      "jp": "発表者が学生か教員かはまだ知らない。",
+      "en": "I still don’t know whether the presenter is a student or faculty."
+    },
+    {
+      "jp": "試合の相手が国内チームか海外チームかもまだ決まっていない。",
+      "en": "It hasn’t been decided yet whether our opponent is a domestic team or an overseas team."
+    },
+    {
+      "jp": "届け先が自宅か会社かを教えてください。",
+      "en": "Please tell me whether the delivery address is home or the office."
+    },
+    {
+      "jp": "今日の会合が対面かオンラインかに関わらず、開始時刻は同じです。",
+      "en": "Regardless of whether today’s meeting is in person or online, the start time is the same."
+    },
+    {
+      "jp": "提出物が論文かレポートかだったか覚えていない。",
+      "en": "I don’t remember whether the submission was a paper or a report."
+    },
+    {
+      "jp": "目的地が海か山かはどちらでも大丈夫です。",
+      "en": "As for whether the destination is the sea or the mountains, either is fine."
+    },
+    {
+      "jp": "この箱の送り主が個人か法人かを確認しました。",
+      "en": "I confirmed whether the sender of this package is an individual or a corporation."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "昼はうどんかそばを食べます。",
+      "en": "For lunch, I’ll eat udon or soba."
+    },
+    {
+      "jp": "コーヒーにしますか、それとも紅茶にしますか。",
+      "en": "Would you like coffee, or tea?"
+    },
+    {
+      "jp": "明日行けるかどうかはまだ分かりません。",
+      "en": "I still don’t know whether I can go tomorrow."
+    },
+    {
+      "jp": "来るか来ないかは本人次第だ。",
+      "en": "Whether he will come or not is up to him."
+    },
+    {
+      "jp": "『コーヒーか紅茶？』と店員に聞かれた。",
+      "en": "The clerk asked me, “Coffee or tea?”"
+    },
+    {
+      "jp": "支払いは現金またはカードでお願いします。",
+      "en": "Please pay in cash or by card."
+    },
+    {
+      "jp": "受付は一階か二階ですか。",
+      "en": "Is the reception on the first or the second floor?"
+    },
+    {
+      "jp": "移動は電車かバスが便利だ。",
+      "en": "For transportation, a train or a bus is convenient."
+    },
+    {
+      "jp": "どちらにするかを決めてください。",
+      "en": "Please decide which to choose."
+    },
+    {
+      "jp": "選択はAとBのどちらかです。",
+      "en": "The choice is either A or B."
+    }
+  ],
+  "startGate": {
+    "firstToken": [
+      "isNounPhrase"
+    ],
+    "anyToken": [
+      "text:/^か$/"
+    ]
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "id": "n5.nani-mo-masen",
+  "level": "N5",
+  "description": "Used to express 'not anything', 'nothing'",
+  "formation": "なにも + Verb-ます form + ません",
+  "priority": 10,
+  "pattern": {
+    "sequence": []
+  },
+  "explanation": "### Name\n- 何も〜ない／ません\n\n### Meaning and function\n- Expresses “nothing; not … anything.” Negates the existence of things or the performance/occurrence of any action.\n\n### Form and templates\n- 何も + V(neg)\n  - Plain: 何も + V(ない)\n  - Polite: 何も + V(ません)\n  - Past negative as usual: 何も + V(なかった／ませんでした)\n- Existential “there is nothing”:\n  - 何もない／何もありません\n- With adjectives (emphasizes “not … at all,” “nothing [about it is] …”):\n  - 何も + い-adj(〜く) + ない\n  - 何も + な-adj + ではない／じゃない\n- With nouns (set-like pattern meaning “no N at all”):\n  - 何も + N + は + ない／ありません\n- Particle behavior and ordering:\n  - Typically no case particle follows 何も. It directly precedes the negated predicate or the noun+は structure above.\n  - Do not attach を/が/に after 何も in this usage.\n- Conjugation notes:\n  - Choose plain (〜ない) or polite (〜ません／ありません) to match the sentence.\n  - 〜じゃない is casual; 〜ではない is more neutral; 〜ではありません is polite.\n\n### Usage notes and constraints\n- Polarity requirement: For the “nothing/not … anything” meaning, 何も must occur with a negative predicate in the same clause (〜ない／〜ません).\n- Scope/semantics:\n  - Refers to “things/actions” in general. For people, use だれも〜ない; for places, どこにも〜ない; for times, いつも…ない is different—use いつも with care.\n  - Common and natural with action verbs (do, have, need, know, see, eat, etc.), with ある/ない for existence, and to downplay adjectives (“not at all ~”).\n- Register/frequency:\n  - Very frequent in everyday speech and writing. 何もない／何もありません are set, common expressions.\n- Orthographic variants:\n  - 何も / なにも are both standard (kanji vs kana).\n  - なんにも〜ない is a casual/colloquial variant with the same meaning.\n  - なんも〜ない is dialectal/informal and best avoided in standard writing/speech.\n- Nuance with adjectives:\n  - 何も + adj(neg) can mean “not particularly,” but 別に〜ない is often more idiomatic for that nuance.\n\n### Common mistakes (optional, only if relevant)\n- Using 何も with an affirmative predicate (e.g., “何もあります”): requires a negative to mean “nothing.”\n- Inserting case particles after 何も (e.g., 何もを…): unnatural in this pattern.\n- Using 何も with いる to mean “no one”: use だれもいない/いません instead.\n- Replying “It’s nothing” with 何もです: the natural set phrase is 何でもない (polite: 何でもないです).\n\n### Related grammar (optional, only if relevant)\n- 何か: “something/anything?” (indefinite affirmative/interrogative). Contrast: 何も requires a negative; 何か does not.\n- 何でも: “anything/whatever” with affirmative predicates. Contrast: 何も + negative = “nothing.”\n- だれも〜ない: “no one.” Parallel structure for people.\n- 全然〜ない: “not at all” (adverb intensifying the negative predicate; does not replace the object like 何も).\n- 一つも／少しも〜ない: “not even one / not at all (even a little),” stronger quantifying negatives.",
+  "examples": [
+    {
+      "jp": "今日は何も食べない。",
+      "en": "I won't eat anything today."
+    },
+    {
+      "jp": "会議では、私は何も話しませんでした。",
+      "en": "I didn't say anything at the meeting."
+    },
+    {
+      "jp": "この部屋には何もありません。",
+      "en": "There is nothing in this room."
+    },
+    {
+      "jp": "何も問題はない。",
+      "en": "There is no problem at all."
+    },
+    {
+      "jp": "なにも予定はありません。",
+      "en": "I have no plans at all."
+    },
+    {
+      "jp": "彼は昨日、何も言わなかった。",
+      "en": "He didn't say anything yesterday."
+    },
+    {
+      "jp": "すみません、今は何もできません。",
+      "en": "Sorry, I can't do anything right now."
+    },
+    {
+      "jp": "何も見ていませんか。",
+      "en": "Haven't you been watching anything?"
+    },
+    {
+      "jp": "それは何も難しくない。",
+      "en": "That's not difficult at all."
+    },
+    {
+      "jp": "このプランは何も特別ではありません。",
+      "en": "There's nothing special about this plan."
+    },
+    {
+      "jp": "なんにもいらないよ。",
+      "en": "I don't need anything at all."
+    },
+    {
+      "jp": "机の上には何もない。",
+      "en": "There's nothing on the desk."
+    },
+    {
+      "jp": "私は何も欲しくありません。",
+      "en": "I don't want anything."
+    },
+    {
+      "jp": "彼女は何も悪くなかった。",
+      "en": "She did nothing wrong."
+    },
+    {
+      "jp": "どうして何も教えてくれないの？",
+      "en": "Why won't you tell me anything?"
+    },
+    {
+      "jp": "それについては何も分かりません。",
+      "en": "I don't know anything about that."
+    },
+    {
+      "jp": "ほとんど何も買わなかった。",
+      "en": "I hardly bought anything."
+    },
+    {
+      "jp": "事故は起きたけど、幸い何も失っていない。",
+      "en": "The accident happened, but fortunately I haven't lost anything."
+    },
+    {
+      "jp": "何も聞かなかったことにします。",
+      "en": "I'll pretend I didn't hear anything."
+    },
+    {
+      "jp": "何も変じゃないですよ。",
+      "en": "There's nothing strange about it."
+    }
+  ],
+  "negativeExamples": [
+    {
+      "jp": "何もかも忘れた。",
+      "en": "I forgot everything."
+    },
+    {
+      "jp": "何もかもが新しい。",
+      "en": "Everything is new."
+    },
+    {
+      "jp": "何の問題もありません。",
+      "en": "There is no problem at all."
+    },
+    {
+      "jp": "何も言うな。",
+      "en": "Don't say anything."
+    },
+    {
+      "jp": "何も言わずに帰った。",
+      "en": "I went home without saying anything."
+    },
+    {
+      "jp": "何でもないです。",
+      "en": "It's nothing."
+    },
+    {
+      "jp": "何かありませんか。",
+      "en": "Is there anything?"
+    },
+    {
+      "jp": "だれも来ませんでした。",
+      "en": "No one came."
+    },
+    {
+      "jp": "何か変じゃないですか。",
+      "en": "Doesn't something seem strange?"
+    },
+    {
+      "jp": "何もかも大好きだ。",
+      "en": "I love everything."
+    }
+  ]
+}
