@@ -5,7 +5,26 @@
   "formation": "Noun A + では、 + Subject + Predicate B",
   "priority": 10,
   "pattern": {
-    "sequence": []
+    "alt": [
+      { "macro": "DeWaFrame" },
+      {
+        "sequence": [
+          {
+            "not": {
+              "sequence": [
+                { "macro": "AttributiveClause" },
+                { "alt": [ { "token": ["text:わけ"] }, { "token": ["text:訳"] } ] },
+                { "macro": "CopulaNegative" }
+              ]
+            }
+          },
+          { "not": { "token": ["text:わけ"] } },
+          { "not": { "token": ["text:訳"] } },
+          { "macro": "NP" },
+          { "macro": "CopulaNegative" }
+        ]
+      }
+    ]
   },
   "explanation": "### Name\n- 対比の「では」（Aでは、B）\n\n### Meaning and function\n- Marks A as a contrastive topic or frame: “as for A / in A’s case / with A / at A, B.”\n- Narrows the scope of the statement to A and implies possible differences for other options.\n- Also appears in negative identification (Nではない/ではありません): “it is not A,” contrasting A with other possibilities.\n\n### Form and templates\n- Core:\n  - N(場所/手段/時/条件など) + で + は, + [V/い-adj/な-adj/N(だ/です)]\n  - N + では + ない／ありません（negative identification）\n- Particle requirements and ordering:\n  - Do not drop で. Add は after the base case particle: で + は → では.\n  - The comment/predicate B follows; end with だ/です or a verb/adjective as needed.\n- Optional/alternative parts:\n  - では → じゃ (casual contraction). Negative forms: ではない／じゃない (plain), ではありません／じゃありません (polite).\n- Conjugation notes:\n  - Negative past: ではなかった／ではありませんでした; casual: じゃなかった.\n  - Predicate B conjugates normally (plain/polite, tense, polarity).\n\n### Usage notes and constraints\n- Register:\n  - では is neutral to formal; preferred in writing and formal speech.\n  - じゃ is casual; avoid in formal writing/tests. じゃありません is polite but more conversational.\n- Semantic scope:\n  - Use では when A would normally take で (place of action, means, time frame, role, condition) and you want to set up contrast or limitation.\n  - Without は (just で), the sense is neutral; with では, it highlights “in the case of A (as opposed to others).”\n  - For existence/location contexts that take に, use には (not では) to make a contrastive topic.\n- Orthographic/phonetic notes:\n  - では is sometimes pronounced “dewa” or contracted to “ja” (written じゃ) in speech.\n  - Do not write でわ.\n\n### Common mistakes (optional, only if relevant)\n- Replacing the required case particle with は (e.g., using Nは when the role is place/means/time); keep で and add は → では.\n- Overusing では when no contrast or limitation is intended; use plain で for neutral description.\n- Confusing では with でも (“even/…or”); they are unrelated.\n- Using じゃ in formal writing or exams.\n- Trying to attach では directly to verbs/adjectives; it follows nouns or noun-like phrases that take で.\n\n### Related grammar (optional, only if relevant)\n- は（話題）: Plain topic marking without the explicit contrast that では adds to a で-marked phrase.\n- には: Contrastive topic after に (existence, targets, times); use when に—not で—is the correct base particle.\n- Nではない／じゃない: Negative identification “not N”; built with the copular で + は + ない.\n- ではなく(て)〜／じゃなく(て)〜: “Not A but ~”; explicit contrast/choice (higher frequency from N4).",
   "examples": [

@@ -1,4 +1,4 @@
-import type { GrammarDefinition, MatchHit, MatchOptions, Token, PatternNode } from './types.js';
+import type { GrammarDefinition, MatchHit, MatchOptions, Token, PatternNode, Capture } from './types.js';
 import type { TransformedRomanizeStarResult } from '@ichiran/core/src/presentation/transformers.js';
 import { resolvePredicate, type AsyncPredicateFn } from './predicates.js';
 import { performance } from 'node:perf_hooks';
@@ -7,6 +7,7 @@ import { GRAMMAR_PROFILE } from './profile.js';
 import { matchGrammars } from './matcher.js';
 import { getCompiledMatcher, resetCacheStats, getCacheStats } from './cache.js';
 import { MACRO_MIN_TOKENS } from './macros.js';
+import { buildSegmentsFromTokens } from './segments.js';
 
 export interface CompiledGrammar {
   def: GrammarDefinition;
@@ -165,6 +166,7 @@ export async function matchText(
   
   const grammars = compileGrammars(defs);
   const priorityById = new Map<string, number>(grammars.map(g => [g.def.id, g.def.priority ?? 0]));
+  const defsById = new Map<string, GrammarDefinition>(defs.map(d => [d.id, d]));
   
   // Step 3: Match each sentence independently and collect results
   interface ScoredResult {
@@ -172,14 +174,18 @@ export async function matchText(
     matchCount: number;
     prioritySum: number;
     segmentationScore: number;
+    tokens: Token[];
   }
   
   const allHits: MatchHit[] = [];
+  const bestTokensPerSentence: Token[][] = [];
   
-  for (const alternatives of sentenceAlternatives) {
+  for (let sIndex = 0; sIndex < sentenceAlternatives.length; sIndex++) {
+    const alternatives = sentenceAlternatives[sIndex];
     if (alternatives.length === 0) continue;
     
     const results: ScoredResult[] = [];
+    const prevSentenceText: string | undefined = sIndex > 0 ? sentences[sIndex - 1] : undefined;
     
     // Try matching each segmentation alternative for this sentence
     for (const alternative of alternatives) {
@@ -191,14 +197,32 @@ export async function matchText(
       }
       
       // Pass unfiltered tokens for proper sentence context
-      const hits = await matchGrammars(tokens, grammars, options, alternative.tokens, currentProfile || undefined);
-      const prioritySum = hits.reduce((sum, hit) => sum + (priorityById.get(hit.grammarId) ?? 0), 0);
+      const rawHits = await matchGrammars(tokens, grammars, options, alternative.tokens, currentProfile || undefined);
+      
+      // Gate by prev-sentence requirements and attach prev sentence text context
+      const gatedHits: MatchHit[] = rawHits
+        .filter((hit) => {
+          const def = defsById.get(hit.grammarId);
+          const ctx = def?.context?.prevSentence;
+          if (ctx?.required && (!prevSentenceText || prevSentenceText.trim().length === 0)) return false;
+          return true;
+        })
+        .map((hit) => {
+          const def = defsById.get(hit.grammarId);
+          if (def?.context?.prevSentence) {
+            hit.context = { ...(hit.context || {}), prevSentenceText };
+          }
+          return hit;
+        });
+      
+      const prioritySum = gatedHits.reduce((sum, hit) => sum + (priorityById.get(hit.grammarId) ?? 0), 0);
       
       results.push({
-        hits,
-        matchCount: hits.length,
+        hits: gatedHits,
+        matchCount: gatedHits.length,
         prioritySum,
         segmentationScore: alternative.score,
+        tokens: alternative.tokens,
       });
     }
     
@@ -216,6 +240,40 @@ export async function matchText(
         }
       }
     }
+    
+    // Attach synthetic capture/segments for previous sentence when requested
+    const prevTokens = sIndex > 0 ? bestTokensPerSentence[sIndex - 1] : undefined;
+    if (best?.hits) {
+      for (const hit of best.hits) {
+        const def = defsById.get(hit.grammarId);
+        const spec = def?.context?.prevSentence;
+        if (spec?.includeTokens && prevTokens) {
+          hit.context = { ...(hit.context || {}), prevSentenceTokens: prevTokens };
+        }
+        // If the grammar opted in, expose previous sentence as a capture labeled 'prev'
+        if (prevSentenceText && def?.context?.prevSentence) {
+          const prevText = prevSentenceText;
+          const prevLabel = def.context.prevSentence.captureAs || 'prev';
+          const prevCapture: Capture = {
+            label: prevLabel,
+            start: 0,
+            end: 0,
+            tokens: [],
+            text: prevText,
+          };
+          // Do not mutate original captures array positions; just append a virtual capture
+          const combinedCaptures = [...hit.captures, prevCapture];
+          // Rebuild segments with combined captures against current sentence tokens for display.
+          // Since prev is outside current token stream, we preprend a raw prevText segment.
+          const currentSegments = buildSegmentsFromTokens(best.tokens, hit.captures);
+          hit.captures = combinedCaptures;
+          hit.segments = [{ type: 'capture', text: prevText, label: prevLabel }, ...currentSegments];
+        }
+      }
+    }
+    
+    // Track best tokens for next sentence context attachment
+    bestTokensPerSentence[sIndex] = best.tokens;
     
     // Add this sentence's matches to the overall results
     if (best?.hits) {
@@ -327,82 +385,98 @@ export async function analyzeText(
     })
   );
   
-  // Step 3: Match grammars for each sentence using its alternatives
+  // Step 3: Match grammars for each sentence using its alternatives (sequential to enable prev-sentence context)
   const grammars = compileGrammars(defs);
   const priorityById = new Map<string, number>(grammars.map(g => [g.def.id, g.def.priority ?? 0]));
+  const defsById = new Map<string, GrammarDefinition>(defs.map(d => [d.id, d]));
   
   interface ScoredResult {
     hits: MatchHit[];
     matchCount: number;
     prioritySum: number;
     segmentationScore: number;
-    alternativeIndex: number;
+    tokens: Token[];
   }
   
-  const sentenceProcessingResults = await Promise.all(
-    sentenceResults.map(async ({ alternatives, transformedResult }: { alternatives: SegmentationAlternative[]; transformedResult: TransformedRomanizeStarResult }) => {
-      if (alternatives.length === 0) {
-        return { hits: [], tokens: [], segments: [], alternativesTried: 0, profileData: { filteredTokenCounts: [], unfilteredTokenCounts: [] } };
+  const sentenceProcessingResults: Array<{ hits: MatchHit[]; tokens: Token[]; segments: TransformedRomanizeStarResult; alternativesTried: number; profileData: { filteredTokenCounts: number[]; unfilteredTokenCounts: number[] } }> = [];
+  const bestTokensPerSentence: Token[][] = [];
+  
+  for (let sIndex = 0; sIndex < sentenceResults.length; sIndex++) {
+    const { alternatives } = sentenceResults[sIndex];
+    if (alternatives.length === 0) {
+      sentenceProcessingResults.push({ hits: [], tokens: [], segments: [], alternativesTried: 0, profileData: { filteredTokenCounts: [], unfilteredTokenCounts: [] } });
+      continue;
+    }
+    const profileData = { filteredTokenCounts: [] as number[], unfilteredTokenCounts: [] as number[] };
+    const prevSentenceText: string | undefined = sIndex > 0 ? sentences[sIndex - 1] : undefined;
+    
+    const results: ScoredResult[] = [];
+    for (const alternative of alternatives) {
+      const tokens = alternative.tokens;
+      if (currentProfile) {
+        const contentCount = tokens.filter((t: Token) => t.wordInfo !== undefined || t.grammarInfo !== undefined).length;
+        profileData.filteredTokenCounts.push(contentCount);
+        profileData.unfilteredTokenCounts.push(tokens.length);
       }
-      
-      const profileData = { filteredTokenCounts: [] as number[], unfilteredTokenCounts: [] as number[] };
-      
-      // Try matching each segmentation alternative for this sentence
-      const results: ScoredResult[] = await Promise.all(
-        alternatives.map(async (alternative: SegmentationAlternative, altIdx: number) => {
-          const tokens = alternative.tokens;
-          if (currentProfile) {
-            const contentCount = tokens.filter((t: Token) => t.wordInfo !== undefined || t.grammarInfo !== undefined).length;
-            profileData.filteredTokenCounts.push(contentCount);
-            profileData.unfilteredTokenCounts.push(tokens.length);
-          }
-          
-          const hits = await matchGrammars(tokens, grammars, options, alternative.tokens, currentProfile || undefined);
-          const prioritySum = hits.reduce((sum, hit) => sum + (priorityById.get(hit.grammarId) ?? 0), 0);
-          
-          return {
-            hits,
-            matchCount: hits.length,
-            prioritySum,
-            segmentationScore: alternative.score,
-            alternativeIndex: altIdx,
-          };
+      const rawHits = await matchGrammars(tokens, grammars, options, alternative.tokens, currentProfile || undefined);
+      const gatedHits: MatchHit[] = rawHits
+        .filter((hit) => {
+          const def = defsById.get(hit.grammarId);
+          const ctx = def?.context?.prevSentence;
+          if (ctx?.required && (!prevSentenceText || prevSentenceText.trim().length === 0)) return false;
+          return true;
         })
-      );
-      
-      // Find the best result for this sentence
-      let best = results[0];
-      for (const result of results) {
-        if (result.matchCount > best.matchCount) {
-          best = result;
-        } else if (result.matchCount === best.matchCount) {
-          if (result.prioritySum > best.prioritySum) {
-            best = result;
-          } else if (result.prioritySum === best.prioritySum && result.segmentationScore > best.segmentationScore) {
-            best = result;
+        .map((hit) => {
+          const def = defsById.get(hit.grammarId);
+          if (def?.context?.prevSentence) {
+            hit.context = { ...(hit.context || {}), prevSentenceText };
           }
+          return hit;
+        });
+      const prioritySum = gatedHits.reduce((sum, hit) => sum + (priorityById.get(hit.grammarId) ?? 0), 0);
+      results.push({ hits: gatedHits, matchCount: gatedHits.length, prioritySum, segmentationScore: alternative.score, tokens: alternative.tokens });
+    }
+    // Pick best
+    let best = results[0];
+    for (const result of results) {
+      if (result.matchCount > best.matchCount) best = result;
+      else if (result.matchCount === best.matchCount) {
+        if (result.prioritySum > best.prioritySum) best = result;
+        else if (result.prioritySum === best.prioritySum && result.segmentationScore > best.segmentationScore) best = result;
+      }
+    }
+    // Attach prev tokens and synthetic capture in analyzeText output as well
+    const prevTokens = sIndex > 0 ? bestTokensPerSentence[sIndex - 1] : undefined;
+    if (prevTokens && best?.hits) {
+      for (const hit of best.hits) {
+        const spec = defsById.get(hit.grammarId)?.context?.prevSentence;
+        if (spec?.includeTokens) {
+          hit.context = { ...(hit.context || {}), prevSentenceTokens: prevTokens };
+        }
+        const prevText = sIndex > 0 ? sentences[sIndex - 1] : undefined;
+        if (prevText && spec) {
+          const prevLabel = spec.captureAs || 'prev';
+          const prevCapture: Capture = {
+            label: prevLabel,
+            start: 0,
+            end: 0,
+            tokens: [],
+            text: prevText,
+          };
+          const currentSegments = buildSegmentsFromTokens(best.tokens, hit.captures);
+          hit.captures = [...hit.captures, prevCapture];
+          hit.segments = [{ type: 'capture', text: prevText, label: prevLabel }, ...currentSegments];
         }
       }
-      
-      const bestAlternative = alternatives[best.alternativeIndex];
-      const bestSegmentation: TransformedRomanizeStarResult = transformedResult.map((segment: string | any[]) => {
-        if (typeof segment === 'string') {
-          return segment;
-        } else if (Array.isArray(segment) && segment.length > 0) {
-          return [segment[0]];
-        }
-        return segment;
-      });
-      
-      return {
-        hits: best?.hits || [],
-        tokens: bestAlternative?.tokens || [],
-        segments: bestSegmentation,
-        alternativesTried: alternatives.length,
-        profileData,
-      };
-    })
-  );
+    }
+    bestTokensPerSentence[sIndex] = best.tokens;
+    const bestSegmentation: TransformedRomanizeStarResult = sentenceResults[sIndex].transformedResult.map((segment: string | any[]) => {
+      if (typeof segment === 'string') return segment;
+      if (Array.isArray(segment) && segment.length > 0) return [segment[0]];
+      return segment;
+    });
+    sentenceProcessingResults.push({ hits: best.hits || [], tokens: best.tokens || [], segments: bestSegmentation, alternativesTried: alternatives.length, profileData });
+  }
   
   // Aggregate results
   const allHits: MatchHit[] = [];

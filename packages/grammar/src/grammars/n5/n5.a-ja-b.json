@@ -5,7 +5,163 @@
   "formation": "A: Sentence, B: Sentence (A and B can be any sentence type)",
   "priority": 10,
   "pattern": {
-    "sequence": []
+    "sequence": [
+      { "anchor": "start" },
+      {
+        "capture": "connector",
+        "pattern": {
+          "alt": [
+            { "token": ["text:じゃあ"] },
+            { "token": ["text:じゃー"] },
+            {
+              "sequence": [
+                { "token": ["text:じゃ"] },
+                {
+                  "not": {
+                    "alt": [
+                      { "peek": { "token": ["text:なく"] } },
+                      { "peek": { "token": ["text:なくて"] } },
+                      { "peek": { "token": ["lemma:ない"] } },
+                      { "peek": { "token": ["text:ある"] } },
+                      { "peek": { "token": ["lemma:ある"] } }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "sequence": [
+                { "token": ["text:それじゃあ"] },
+                {
+                  "not": {
+                    "alt": [
+                      { "peek": { "token": ["text:なく"] } },
+                      { "peek": { "token": ["text:なくて"] } },
+                      { "peek": { "token": ["lemma:ない"] } },
+                      { "peek": { "token": ["text:ある"] } },
+                      { "peek": { "token": ["lemma:ある"] } }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "sequence": [
+                { "token": ["text:それじゃー"] },
+                {
+                  "not": {
+                    "alt": [
+                      { "peek": { "token": ["text:なく"] } },
+                      { "peek": { "token": ["text:なくて"] } },
+                      { "peek": { "token": ["lemma:ない"] } },
+                      { "peek": { "token": ["text:ある"] } },
+                      { "peek": { "token": ["lemma:ある"] } }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "sequence": [
+                { "token": ["text:それじゃ"] },
+                {
+                  "not": {
+                    "alt": [
+                      { "peek": { "token": ["text:なく"] } },
+                      { "peek": { "token": ["text:なくて"] } },
+                      { "peek": { "token": ["lemma:ない"] } },
+                      { "peek": { "token": ["text:ある"] } },
+                      { "peek": { "token": ["lemma:ある"] } }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "sequence": [
+                { "token": ["text:それ"] },
+                { "token": ["text:じゃ"] },
+                {
+                  "not": {
+                    "alt": [
+                      { "peek": { "token": ["text:なく"] } },
+                      { "peek": { "token": ["text:なくて"] } },
+                      { "peek": { "token": ["lemma:ない"] } },
+                      { "peek": { "token": ["text:ある"] } },
+                      { "peek": { "token": ["lemma:ある"] } }
+                    ]
+                  }
+                }
+              ]
+            },
+            { "token": ["text:それでは"] },
+            {
+              "sequence": [
+                { "token": ["text:それ"] },
+                { "token": ["text:では"] }
+              ]
+            },
+            {
+              "sequence": [
+                { "token": ["text:では"] },
+                {
+                  "not": {
+                    "alt": [
+                      { "peek": { "token": ["text:なく"] } },
+                      { "peek": { "token": ["text:なくて"] } },
+                      { "peek": { "token": ["lemma:ない"] } },
+                      { "peek": { "token": ["text:ある"] } },
+                      { "peek": { "token": ["lemma:ある"] } },
+                      { "peek": { "token": ["text:あるが"] } }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "sequence": [
+                { "token": ["text:で"] },
+                { "token": ["text:は"] },
+                {
+                  "not": {
+                    "alt": [
+                      { "peek": { "token": ["text:なく"] } },
+                      { "peek": { "token": ["text:なくて"] } },
+                      { "peek": { "token": ["lemma:ない"] } },
+                      { "peek": { "token": ["text:ある"] } },
+                      { "peek": { "token": ["lemma:ある"] } }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "sequence": [
+                { "token": ["text:それ"] },
+                { "token": ["text:で"] },
+                { "token": ["text:は"] },
+                {
+                  "not": {
+                    "alt": [
+                      { "peek": { "token": ["text:なく"] } },
+                      { "peek": { "token": ["text:なくて"] } },
+                      { "peek": { "token": ["lemma:ない"] } },
+                      { "peek": { "token": ["text:ある"] } },
+                      { "peek": { "token": ["lemma:ある"] } }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "startGate": {
+    "firstToken": [
+      "text:/^(?:じゃ(?:あ|ー)?|それじゃ(?:あ|ー)?|それでは|では|それ|で)$/"
+    ]
   },
   "explanation": "### Name\n- じゃあ\n\n### Meaning and function\n- A conversational pivot meaning “well then,” “in that case,” or “so,” used to move the talk forward, make/accept a decision, propose a next step, or wrap up a topic.\n\n### Form and templates\n- じゃあ + Clause (decision/suggestion/next action)\n- Variants:\n  - それじゃ(あ) + Clause (explicitly “in that case,” casual)\n  - では + Clause (politer/formal)\n  - それでは + Clause (more formal/polite)\n  - じゃ + Clause (very casual/clipped)\n- Typical clauses that follow:\n  - Volitional: V(〜よう)/〜ましょう (suggestions, offers)\n  - Requests/invitations: V(て)/V(てください)/〜ませんか/〜ましょうか\n  - Simple decisions or conclusions: plain or 〜ます/です statements\n  - Closings or transitions (moving to the next step/topic)\n- Position: almost always sentence-initial (turn-initial). May be followed by sentence-final particles like ね/よ for nuance.\n- Conjugation: じゃあ itself does not conjugate; the following clause carries tense/politeness as needed.\n- With “それ〜”: adding それ makes the reference to previously mentioned information explicit (“that being the case”).\n\n### Usage notes and constraints\n- Register:\n  - じゃあ/それじゃ(あ): casual to neutral; very common in everyday speech.\n  - では/それでは: polite/formal; common in business, announcements, calls, and formal writing.\n  - じゃ: very casual/clipped; also common in fixed parting formulas.\n- Function:\n  - Signals a shift to action/decision based on prior context; it is a discourse marker, not a strict logical connector.\n  - Often used after receiving new information to adjust plans or propose what to do next, or to wrap up a conversation.\n- Scope/semantics:\n  - Implies “given that” from context, but does not itself state a reason. For explicit cause→result, prefer だから/それで.\n- Orthography:\n  - Standard: じゃあ. Casual lengthening like じゃー/じゃぁ appears in informal writing only.\n  - それじゃ(あ) is casual; では/それでは are the polite counterparts.\n  - では is spelled で＋は (not でわ).\n\n### Common mistakes (optional, only if relevant)\n- Using じゃあ in formal contexts where では/それでは is expected.\n- Overusing じゃあ as a logical “therefore”; use だから/それで for explicit cause→effect.\n- Confusing じゃあ with the dialectal/copular じゃ (as in Nじゃない). Here, じゃあ is a discourse marker meaning “then.”\n- Writing でわ instead of では.\n\n### Related grammar (optional, only if relevant)\n- では／それでは: Politer/formal “well then; in that case.” Choose in business/formal settings.\n- それじゃ(あ): Casual “in that case,” slightly more explicit than じゃあ by pointing to “that” prior info.\n- それなら／なら: Conditional “if that’s the case,” used inside sentence structure rather than as a turn-initial pivot.\n- だから／ですから: “So/because,” explicitly marks reason→result; stronger logical link than じゃあ.\n- それで: “And so; therefore,” connects cause to result or asks for continuation; more propositional than じゃあ.",
   "examples": [

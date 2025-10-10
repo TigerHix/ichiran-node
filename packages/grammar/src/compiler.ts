@@ -13,6 +13,7 @@ import type {
   NotNode,
   AnchorNode,
   MacroNode,
+  MapCapturesNode,
 } from './types.js';
 import { evaluatePredicates, resolvePredicate } from './predicates.js';
 import { seq, alt, tok, rep, opt, mac } from './patternBuilders.js';
@@ -43,6 +44,7 @@ export function compilePattern(node: PatternNode): Matcher {
   if ('not' in node) return compileNot(node);
   if ('anchor' in node) return compileAnchor(node);
   if ('macro' in node) return compileMacro(node);
+  if ('mapCaptures' in node) return compileMapCaptures(node);
   throw new Error(`Unsupported pattern node: ${JSON.stringify(node)}`);
 }
 
@@ -210,6 +212,24 @@ function compileCapture(node: CaptureNode): Matcher {
         end: result.index,
         tokens: tokens.slice(index, result.index),
       }),
+    }));
+  };
+}
+
+function compileMapCaptures(node: MapCapturesNode): Matcher {
+  const matcher = compilePattern(node.mapCaptures.pattern);
+  const labelMap = node.mapCaptures.map || {};
+  return async (tokens, index) => {
+    const results = await matcher(tokens, index);
+    return results.map(result => ({
+      index: result.index,
+      preference: result.preference,
+      captures: result.captures.map(c => ({
+        label: labelMap[c.label] ?? c.label,
+        start: c.start,
+        end: c.end,
+        tokens: c.tokens,
+      })),
     }));
   };
 }
@@ -494,6 +514,75 @@ function compileMacro(node: MacroNode): Matcher {
             tok(['isSuruVerb']),
           ]),
           tok(['isSuruVerb', 'prefixHasPos:にする:adj-na']),
+        ])
+      );
+    }
+    case 'NPDeWaTopic': {
+      // NP + では/で + は/じゃ (contrastive/topic frame marker)
+      // Captures: np, contrastMarker
+      return compileSequence(
+        seq([
+          { capture: 'np', pattern: mac('NP') },
+          { capture: 'contrastMarker', pattern: alt([
+            seq([tok(['text:で']), tok(['text:は'])]),
+            tok(['text:では']),
+            tok(['text:じゃ']),
+          ]) },
+        ])
+      );
+    }
+    case 'CopulaNegative': {
+      // Normalized copula negatives: ではない／じゃない／ではありません／じゃありません
+      // Also supports split forms: (では|で は|じゃ) + (ない|ありません)
+      return compileAlt(
+        alt([
+          { capture: 'copulaNegative', pattern: tok(['text:ではない']) },
+          { capture: 'copulaNegative', pattern: tok(['text:じゃない']) },
+          { capture: 'copulaNegative', pattern: tok(['text:ではありません']) },
+          { capture: 'copulaNegative', pattern: tok(['text:じゃありません']) },
+          { capture: 'copulaNegative', pattern: seq([
+            alt([
+              seq([tok(['text:で']), tok(['text:は'])]),
+              tok(['text:では']),
+              tok(['text:じゃ']),
+            ]),
+            alt([
+              // Guard lemma:ない to avoid matching bare なく/なくて
+              seq([
+                { not: tok(['text:なく']) },
+                { not: tok(['text:なくて']) },
+                tok(['lemma:ない']),
+              ]),
+              tok(['lemmaNeg:ある']),
+            ]),
+          ]) },
+        ])
+      );
+    }
+    case 'DeWaFrame': {
+      // Aでは (contrastive frame) excluding discourse markers and false-friends
+      // Exclude: それでは／それじゃ (discourse), ではなく(て)/じゃなく(て), ではある, immediate なく/なくて/ない/ある tails
+      return compileSequence(
+        seq([
+          { not: alt([
+            seq([tok(['text:それ']), tok(['text:で']), tok(['text:は'])]),
+            seq([tok(['text:それ']), tok(['text:では'])]),
+            seq([tok(['text:それ']), tok(['text:じゃ'])]),
+            tok(['text:それでは']),
+            tok(['text:それじゃ']),
+          ]) },
+          mac('NPDeWaTopic'),
+          { not: alt([
+            tok(['text:ではなく']),
+            tok(['text:じゃなく']),
+            tok(['text:ではなくて']),
+            tok(['text:じゃなくて']),
+            tok(['text:なく']),
+            tok(['text:なくて']),
+            tok(['lemma:ない']),
+            tok(['lemma:ある']),
+            tok(['text:ではある']),
+          ]) },
         ])
       );
     }

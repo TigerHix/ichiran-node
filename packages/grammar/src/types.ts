@@ -40,12 +40,21 @@ export interface MatchSegment {
   label?: string;  // Only present when type is 'capture'
 }
 
+export interface HitContext {
+  /** Raw text of the immediately preceding sentence, if available */
+  prevSentenceText?: string;
+  /** Best-tokenization tokens of the immediately preceding sentence, if requested */
+  prevSentenceTokens?: Token[];
+}
+
 export interface MatchHit {
   grammarId: string;
   level: string;
   description?: string;
   captures: Capture[];
   segments: MatchSegment[];  // Alternating raw/capture segments for easy rendering
+  /** Optional cross-sentence/discourse context attached by the runtime */
+  context?: HitContext;
 }
 
 export interface MatchOutcome {
@@ -67,6 +76,8 @@ export interface GrammarDefinition {
   priority?: number;
   pattern: PatternNode;
   startGate?: StartGate;
+  /** Optional discourse context requirements for this grammar */
+  context?: GrammarContextSpec;
   explanation?: string;
   examples?: ExampleSentence[];
   negativeExamples?: ExampleSentence[];
@@ -84,6 +95,7 @@ export type PatternNode =
   | RepeatNode
   | OptionalNode
   | CaptureNode
+  | MapCapturesNode
   | PeekNode
   | NotNode
   | AnchorNode
@@ -120,6 +132,13 @@ export interface CaptureNode {
   pattern: PatternNode;
 }
 
+export interface MapCapturesNode {
+  mapCaptures: {
+    pattern: PatternNode;
+    map?: Record<string, string>;
+  };
+}
+
 export interface PeekNode {
   peek: PatternNode;
 }
@@ -152,4 +171,17 @@ export interface StartGate {
    * Require a token satisfying these predicates within [left,right] tokens of the start index
    */
   near?: { predicates: PredicateSpec[]; window: { left: number; right: number } };
+}
+
+export interface PrevSentenceContextSpec {
+  /** If true, drop the hit when there is no immediately preceding sentence */
+  required?: boolean;
+  /** If true, include prev sentence tokens in the hit context (costlier) */
+  includeTokens?: boolean;
+  /** Optional label for consumers; not used by runtime for matching */
+  captureAs?: string;
+}
+
+export interface GrammarContextSpec {
+  prevSentence?: PrevSentenceContextSpec;
 }

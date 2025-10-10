@@ -34,10 +34,37 @@
 ### 5) Add captures sparingly
 - Capture only spans used in UX/explanations.
 - Use clear labels (e.g., `"capture": "predicate"`, `"subject"`, `"adjective"`).
+- Avoid overlapping captures unless your UI intentionally supports nesting. Overlaps will render as repeated text in segments.
+
+#### Capture remapping (mapCaptures)
+- You can rename capture labels produced by any pattern (including macros) without changing the macro itself:
+
+```json
+{
+  "mapCaptures": {
+    "pattern": { "macro": "DeWaFrame" },
+    "map": { "np": "noun" }
+  }
+}
+```
+
+- Use cases:
+  - Normalize labels across `alt` branches.
+  - Reuse the same macro but expose different labels (`nounA`, `nounB`).
+  - Provide UI‑friendly names while keeping macros generic.
+
+Notes:
+- `mapCaptures` does not change matching behavior or min‑token counts (it’s an identity wrapper for matching).
+- Prefer disjoint captures to avoid duplicated segments.
 
 ### 6) Author the JSON
 - Location: `@ichiran/grammar/grammars/<level>/`.
 - Include: `id`, `level`, `priority`, `formation`, `pattern`, `explanation`, `examples`, `negativeExamples`.
+- **Don't forget captures**: Add capture groups for key grammatical elements (see section 5).
+- Formatting: Keep simple nodes compact on one line to reduce visual overhead. Multi-property objects can expand.
+  - Good: `{ "anchor": "start" }`, `{ "token": ["text:でも"] }`
+  - Also good: `{ "sequence": [...] }` (expands children)
+  - Avoid: Spreading single-property objects across 3+ lines unnecessarily
 - Skeleton:
 ```json
 {
@@ -48,17 +75,27 @@
   "pattern": {
     "sequence": [
       { "macro": "PrePredicateAdjuncts" },
-      { "alt": [
-        { "macro": "IAdjKu" },
-        { "sequence": [
-          { "macro": "NP" },
-          { "token": ["isCaseParticle"] }
-        ]}
-      ]},
-      { "token": ["hasVerbalConjugation"] }
+      {
+        "capture": "adjunct",
+        "pattern": {
+          "alt": [
+            { "macro": "IAdjKu" },
+            {
+              "sequence": [
+                { "macro": "NP" },
+                { "token": ["isCaseParticle"] }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "capture": "predicate",
+        "pattern": { "token": ["hasVerbalConjugation"] }
+      }
     ]
   },
-  "explanation": "What it means, how it’s used, key constraints.",
+  "explanation": "What it means, how it's used, key constraints.",
   "examples": [{ "jp": "よく勉強します。", "en": "I study well." }],
   "negativeExamples": [{ "jp": "よくて行きます。", "en": "This links clauses; not adverbial modification." }]
 }
@@ -249,6 +286,28 @@ Example:
   }
 }
 ```
+
+#### Start Gates – Best Practices
+
+- firstToken uses AND semantics. Listing multiple entries means all must match the same start token. If you need OR, use a single regex.
+- anyToken and near behave like OR (precomputed). Use them to cheaply prune before matching.
+- Gates are performance hints, not correctness rules. Keep real constraints in the pattern (e.g., `anchor: start`, `peek/not`).
+
+Example: sentence-initial discourse connectors (じゃあ／それじゃ／それでは／では) with tokenizer variance and elongation handled via one OR-regex:
+
+```json
+{
+  "startGate": {
+    "firstToken": [
+      "text:/^(?:じゃ(?:あ|ー)?|それじゃ(?:あ|ー)?|それでは|では|それ|で)$/"
+    ]
+  }
+}
+```
+
+Pitfalls:
+- Don’t list multiple `firstToken` strings expecting OR; they AND and will block matches.
+- Don’t rely on gates alone—always keep `{"anchor": "start"}` or structural checks in the main pattern when needed.
 
 #### Min-Token Estimation
 

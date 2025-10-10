@@ -22,5 +22,8 @@ export const MACRO_MIN_TOKENS: Record<string, number> = {
   NaAdjNi: 2,
   NaAdjNiNaru: 2,
   NaAdjNiSuru: 2,
+  NPDeWaTopic: 2,
+  CopulaNegative: 1,
+  DeWaFrame: 2,
 };
 

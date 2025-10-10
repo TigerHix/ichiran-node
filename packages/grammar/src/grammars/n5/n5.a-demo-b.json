@@ -5,7 +5,23 @@
   "formation": "Clause A + でも + Clause B",
   "priority": 10,
   "pattern": {
-    "sequence": []
+    "sequence": [
+      { "anchor": "start" },
+      {
+        "capture": "connector",
+        "pattern": { "token": ["text:でも"] }
+      }
+    ]
+  },
+  "startGate": {
+    "firstToken": ["text:でも"]
+  },
+  "context": {
+    "prevSentence": {
+      "required": true,
+      "includeTokens": false,
+      "captureAs": "A"
+    }
   },
   "explanation": "### Name\n- でも（逆接）\n\n### Meaning and function\n- Introduces a contrast or unexpected turn: “but; however.” The second sentence (S2) opposes, limits, or corrects what is implied by the first sentence (S1).\n\n### Form and templates\n- S1。でも、S2。\n- Positioning: でも sits at the very start of S2 as a conjunctive adverb; a comma after でも is common.\n- Politeness/tense: でも itself does not change. S1 and S2 can be plain or polite; keep register consistent unless purposefully shifting.\n- Connection style: Preferred as a sentence-initial connector (S1 ends with 。). It does not attach directly to clauses the way 〜が or 〜けど do.\n\n### Usage notes and constraints\n- Register: Very common and natural in conversation and everyday writing. Feels casual/neutral. For more formal writing or presentations, prefer しかし or ですが.\n- Semantic scope: Marks a clear contrast, correction, or “unexpected despite” relationship. Often used to pivot to disagreement, an exception, or a reservation.\n- Structural scope: Discourse-level connector between sentences, not an in-clause conjunction. Avoid stacking subordinate markers with でも inside the same sentence.\n- Orthography: Written in hiragana as でも. Do not confuse with other でも-patterns (Nでも = “even/…or something,” V-ても = “even if”).\n\n### Common mistakes (optional, only if relevant)\n- Using でも mid-sentence after a comma as if it were 〜が/〜けど. Safer pattern: end S1 with 。then start S2 with でも、.\n- Overusing でも in formal contexts where しかし／ですが is expected.\n- Confusing this でも (“but/however”) with Nでも (“even; …or something”) or V-ても (“even if; although”).\n- Ending a sentence with でも to hedge; でも does not function as a sentence-final softener (unlike 〜けど).\n\n### Related grammar (optional, only if relevant)\n- 〜が: In-clause “but”; slightly more formal/neutral than けど; milder contrast; keeps one sentence.\n- 〜けど／〜けれど(も): In-clause “but”; colloquial to neutral; can also end a sentence to soften; weaker break than でも.\n- しかし: Sentence-initial “however”; more formal/logical than でも; preferred in formal writing/speeches.\n- それでも: “Even so; nevertheless.” Stronger concessive: S2 holds despite S1 to an even greater degree.",
   "examples": [

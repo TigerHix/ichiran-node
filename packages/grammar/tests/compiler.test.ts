@@ -356,3 +356,75 @@ describe('Macro integration tests', () => {
     }
   });
 });
+
+describe('mapCaptures tests', () => {
+  test('mapCaptures remaps capture labels', async () => {
+    const matcher = compilePattern({
+      mapCaptures: {
+        pattern: {
+          sequence: [
+            { capture: 'oldLabel1', pattern: { token: ['text:A'] } },
+            { capture: 'oldLabel2', pattern: { token: ['text:B'] } },
+          ],
+        },
+        map: {
+          oldLabel1: 'newLabel1',
+          oldLabel2: 'newLabel2',
+        },
+      },
+    });
+
+    const tokens = [makeToken('A'), makeToken('B')];
+    const outcomes = await matcher(tokens, 0);
+    const match = outcomes.find(o => o.index === tokens.length);
+
+    expect(match).toBeDefined();
+    expect(match!.captures.length).toBe(2);
+    expect(match!.captures[0].label).toBe('newLabel1');
+    expect(match!.captures[1].label).toBe('newLabel2');
+  });
+
+  test('mapCaptures preserves unmapped labels', async () => {
+    const matcher = compilePattern({
+      mapCaptures: {
+        pattern: {
+          sequence: [
+            { capture: 'mapped', pattern: { token: ['text:A'] } },
+            { capture: 'unmapped', pattern: { token: ['text:B'] } },
+          ],
+        },
+        map: {
+          mapped: 'renamed',
+        },
+      },
+    });
+
+    const tokens = [makeToken('A'), makeToken('B')];
+    const outcomes = await matcher(tokens, 0);
+    const match = outcomes.find(o => o.index === tokens.length);
+
+    expect(match).toBeDefined();
+    expect(match!.captures.length).toBe(2);
+    expect(match!.captures[0].label).toBe('renamed');
+    expect(match!.captures[1].label).toBe('unmapped');
+  });
+
+  test('mapCaptures works without map object', async () => {
+    const matcher = compilePattern({
+      mapCaptures: {
+        pattern: {
+          capture: 'original',
+          pattern: { token: ['text:A'] },
+        },
+      },
+    });
+
+    const tokens = [makeToken('A')];
+    const outcomes = await matcher(tokens, 0);
+    const match = outcomes.find(o => o.index === tokens.length);
+
+    expect(match).toBeDefined();
+    expect(match!.captures.length).toBe(1);
+    expect(match!.captures[0].label).toBe('original');
+  });
+});

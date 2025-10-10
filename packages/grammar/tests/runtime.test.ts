@@ -246,6 +246,29 @@ describe('segmentation and matching integration', () => {
     expect(compiled[0].def.id).toBe('with-priority'); // priority 1 > 0
     expect(compiled[1].def.id).toBe('no-priority');
   });
+
+  test('prev-sentence required gating works for sentence-initial connector', async () => {
+    const defs: GrammarDefinition[] = [
+      {
+        id: 'demo-connector',
+        level: 'N5',
+        priority: 10,
+        pattern: { sequence: [ { anchor: 'start' }, { token: ['text:でも'] } ] },
+        startGate: { firstToken: ['text:でも'] },
+        context: { prevSentence: { required: true } },
+      },
+    ];
+
+    // Without a preceding sentence, should not match due to required prevSentence
+    const hits1 = await matchText('でも、行く。', defs);
+    expect(hits1.length).toBe(0);
+
+    // With a preceding sentence, should match
+    const hits2 = await matchText('雨だ。でも、行く。', defs);
+    expect(hits2.length).toBeGreaterThan(0);
+    // Should include prevSentenceText in context
+    expect(hits2[0].context?.prevSentenceText?.includes('雨だ')).toBe(true);
+  });
 });
 
 describe('start gate precomputation', () => {
