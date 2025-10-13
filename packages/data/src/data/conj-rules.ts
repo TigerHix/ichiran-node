@@ -79,7 +79,7 @@ function loadPosIndex(dataPath: string): void {
   posIndex.clear();
   posByIndex.clear();
 
-  for (const [id, pos, _description] of records) {
+  for (const [id, pos] of records) {
     const posId = parseInt(id);
     posIndex.set(pos, posId);
     posByIndex.set(posId, pos);
@@ -103,7 +103,7 @@ function loadConjRules(dataPath: string): void {
 
   conjRules.clear();
 
-  for (const [posId, conjId, neg, fml, onum, stem, okuri, euphr, euphk, _pos2] of records) {
+  for (const [posId, conjId, neg, fml, onum, stem, okuri, euphr, euphk] of records) {
     const pos = parseInt(posId);
 
     const rule: ConjugationRule = {

@@ -3,7 +3,7 @@
  */
 
 import { describe, test, expect, beforeAll } from 'bun:test';
-import { setupTests } from '../../../test-utils/test-setup.js';
+import { setupTests } from '@ichiran/testing';
 import { getConnection } from '@ichiran/core';
 import {
   getAllReadings,

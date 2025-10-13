@@ -17,6 +17,12 @@ import {
 } from './conj-rules.js';
 import { createEntrySeqGenerator, resetEntrySeqGenerator } from './schema.js';
 
+// Parallel batch size for conjugation processing
+const CONJUGATION_PARALLELISM = 10;
+
+// PostgreSQL has ~32K parameter limit; 1000 rows × ~10 columns = ~10K params (safe margin)
+const BATCH_INSERT_CHUNK_SIZE = 1000;
+
 /**
  * Normalize a string to NFKC for consistent comparison
  * Mirrors Lisp's Unicode normalization behavior
@@ -846,7 +852,6 @@ export async function loadConjugations(options: { limit?: number } = {}): Promis
   const startTime = Date.now();
 
   // Parallel processing is OK now - each entry's conjugations are processed atomically
-  const parallelism = 10;
   let batch: number[] = [];
   let count = 0;
   let errors = 0;
@@ -857,7 +862,7 @@ export async function loadConjugations(options: { limit?: number } = {}): Promis
     batch.push(seq);
 
     // Process batch when it reaches the parallelism limit
-    if (batch.length >= parallelism) {
+    if (batch.length >= CONJUGATION_PARALLELISM) {
       const results = await Promise.allSettled(
         batch.map(async (s) => {
           const result = await conjugateEntryOuterWithCache(s, cache);
@@ -1409,10 +1414,9 @@ export async function loadSecondaryConjugations(options: {
   console.log(`Inserting ${conjsWithSeq.length} secondary conjugations (${newEntries} new, ${cacheHits} reused)...`);
 
   // Third: batch insert in chunks to avoid MAX_PARAMETERS_EXCEEDED
-  const CHUNK_SIZE = 1000;
   let actualNewEntries = 0;
-  for (let i = 0; i < conjsWithSeq.length; i += CHUNK_SIZE) {
-    const chunk = conjsWithSeq.slice(i, i + CHUNK_SIZE);
+  for (let i = 0; i < conjsWithSeq.length; i += BATCH_INSERT_CHUNK_SIZE) {
+    const chunk = conjsWithSeq.slice(i, i + BATCH_INSERT_CHUNK_SIZE);
     const chunkNewEntries = await insertConjugationsBatch(chunk.map(conj => ({
       readings: conj.readings,
       options: {
@@ -1428,7 +1432,7 @@ export async function loadSecondaryConjugations(options: {
     })), cache);
     actualNewEntries += chunkNewEntries;
     
-    if ((i + CHUNK_SIZE) < conjsWithSeq.length) {
+    if ((i + BATCH_INSERT_CHUNK_SIZE) < conjsWithSeq.length) {
       console.log(`  ${i + chunk.length}/${conjsWithSeq.length} inserted...`);
     }
   }

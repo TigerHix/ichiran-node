@@ -11,7 +11,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { XMLParser } from 'fast-xml-parser';
+import { XMLValidator } from 'fast-xml-parser';
 import { loadEntry } from './load-entry.js';
 import { getConnection } from '@ichiran/core';
 import { romanizeWordGeo } from '@ichiran/core';
@@ -68,20 +68,13 @@ export class XmlLoader extends CustomSource {
   async slurp(): Promise<number> {
     const content = fs.readFileSync(this.sourceFile, 'utf-8');
 
-    // Parse XML to find all <entry> elements
-    const parser = new XMLParser({
-      ignoreAttributes: false,
-      attributeNamePrefix: '',
-      textNodeName: '#text',
-      preserveOrder: true,
-      trimValues: false
-    });
+    // Validate XML structure (more efficient than full parse)
+    const validationResult = XMLValidator.validate(content);
+    if (validationResult !== true) {
+      throw new Error(`Invalid XML in ${this.sourceFile}: ${validationResult.err.msg}`);
+    }
 
-    // Parse and validate XML structure
-  parser.parse(content);
-
-    // Extract <entry> elements
-    // The parser returns an array structure, we need to find entries
+    // Extract <entry> elements using regex (validated XML is safe to parse this way)
     this.entries = this.extractEntries(content);
 
     return this.entries.length;
@@ -343,37 +336,42 @@ async function getGlosses(seqs: number[]): Promise<Map<number, string[]>> {
 }
 
 /**
+ * Removes diacritics from romanized text for matching
+ * Used by municipality and ward loaders to normalize place names
+ */
+function removeDiacritics(text: string): string {
+  const map: Record<string, string> = {
+    'ā': 'a', 'á': 'a', 'ǎ': 'a', 'à': 'a',
+    'ī': 'i', 'í': 'i', 'ǐ': 'i', 'ì': 'i',
+    'ū': 'u', 'ú': 'u', 'ǔ': 'u', 'ù': 'u',
+    'ē': 'e', 'é': 'e', 'ě': 'e', 'è': 'e',
+    'ō': 'o', 'ó': 'o', 'ǒ': 'o', 'ò': 'o'
+  };
+  return text.toLowerCase().replace(/[āáǎàīíǐìūúǔùēéěèōóǒò]/g, ch => map[ch] || ch);
+}
+
+/**
  * Converts half-width katakana to full-width hiragana
+ * Ported from ichiran characters.lisp (as-hiragana + to-normal-char)
+ * 
+ * Uses parallel string mapping from characters.lisp:
+ * - *half-width-kana* and *full-width-kana* for character mapping
+ * - Combines dakuten/handakuten marks using simplify-ngrams logic
  */
 function convertKatakanaToHiragana(halfWidth: string): string {
-  // Half-width katakana to full-width katakana
-  const fullWidth = halfWidth.replace(/[\uff61-\uff9f]/g, (ch) => {
-    const code = ch.charCodeAt(0);
-    // Mapping from half-width to full-width katakana
-    // This is a simplified version - may need expansion for all characters
-    const mapping: Record<number, string> = {
-      0xff61: '。', 0xff62: '「', 0xff63: '」', 0xff64: '、',
-      0xff65: '・', 0xff66: 'ヲ', 0xff67: 'ァ', 0xff68: 'ィ',
-      0xff69: 'ゥ', 0xff6a: 'ェ', 0xff6b: 'ォ', 0xff6c: 'ャ',
-      0xff6d: 'ュ', 0xff6e: 'ョ', 0xff6f: 'ッ', 0xff70: 'ー',
-      0xff71: 'ア', 0xff72: 'イ', 0xff73: 'ウ', 0xff74: 'エ',
-      0xff75: 'オ', 0xff76: 'カ', 0xff77: 'キ', 0xff78: 'ク',
-      0xff79: 'ケ', 0xff7a: 'コ', 0xff7b: 'サ', 0xff7c: 'シ',
-      0xff7d: 'ス', 0xff7e: 'セ', 0xff7f: 'ソ', 0xff80: 'タ',
-      0xff81: 'チ', 0xff82: 'ツ', 0xff83: 'テ', 0xff84: 'ト',
-      0xff85: 'ナ', 0xff86: 'ニ', 0xff87: 'ヌ', 0xff88: 'ネ',
-      0xff89: 'ノ', 0xff8a: 'ハ', 0xff8b: 'ヒ', 0xff8c: 'フ',
-      0xff8d: 'ヘ', 0xff8e: 'ホ', 0xff8f: 'マ', 0xff90: 'ミ',
-      0xff91: 'ム', 0xff92: 'メ', 0xff93: 'モ', 0xff94: 'ヤ',
-      0xff95: 'ユ', 0xff96: 'ヨ', 0xff97: 'ラ', 0xff98: 'リ',
-      0xff99: 'ル', 0xff9a: 'レ', 0xff9b: 'ロ', 0xff9c: 'ワ',
-      0xff9d: 'ン', 0xff9e: '゛', 0xff9f: '゜'
-    };
-    return mapping[code] || ch;
-  });
+  // Parallel string mapping from Lisp characters.lisp
+  const HALFWIDTH_KANA = "･ｦｧｨｩｪｫｬｭｮｯｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝﾞﾟ";
+  const FULLWIDTH_KANA = "・ヲァィゥェォャュョッーアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワン゛゜";
 
-  // Handle dakuten (゛) and handakuten (゜) marks
-  let result = '';
+  // Step 1: Convert half-width to full-width katakana using parallel strings
+  let fullWidth = '';
+  for (const char of halfWidth) {
+    const pos = HALFWIDTH_KANA.indexOf(char);
+    fullWidth += pos >= 0 ? FULLWIDTH_KANA[pos] : char;
+  }
+  
+  // Step 2: Combine dakuten (゛) and handakuten (゜) marks
+  let combined = '';
   for (let i = 0; i < fullWidth.length; i++) {
     const ch = fullWidth[i];
     const next = fullWidth[i + 1];
@@ -386,25 +384,23 @@ function convertKatakanaToHiragana(halfWidth: string): string {
         'タ': 'ダ', 'チ': 'ヂ', 'ツ': 'ヅ', 'テ': 'デ', 'ト': 'ド',
         'ハ': 'バ', 'ヒ': 'ビ', 'フ': 'ブ', 'ヘ': 'ベ', 'ホ': 'ボ'
       };
-      result += dakutenMap[ch] || ch;
+      combined += dakutenMap[ch] || ch;
       i++; // Skip the dakuten mark
     } else if (next === '゜') {
       // Handakuten mark - convert to p-sound
       const handakutenMap: Record<string, string> = {
         'ハ': 'パ', 'ヒ': 'ピ', 'フ': 'プ', 'ヘ': 'ペ', 'ホ': 'ポ'
       };
-      result += handakutenMap[ch] || ch;
+      combined += handakutenMap[ch] || ch;
       i++; // Skip the handakuten mark
     } else {
-      result += ch;
+      combined += ch;
     }
   }
-
-  // Convert katakana to hiragana
-  return result.replace(/[\u30a1-\u30f6]/g, (ch) => {
-    const code = ch.charCodeAt(0);
-    // Katakana to hiragana: subtract 0x60
-    return String.fromCharCode(code - 0x60);
+  
+  // Step 3: Convert katakana to hiragana (subtract 0x60 from character code)
+  return combined.replace(/[\u30a1-\u30f6]/g, (ch) => {
+    return String.fromCharCode(ch.charCodeAt(0) - 0x60);
   });
 }
 
@@ -633,17 +629,7 @@ export class MunicipalityCsvLoader extends CustomSource {
 
     // Try to find existing entry
     const result = await matchGlosses(entry.text, entry.reading, words, {
-      normalize: (text) => text.toLowerCase().replace(/[āáǎàīíǐìūúǔùēéěèōóǒò]/g, (ch) => {
-        // Normalize diacritics for matching
-        const map: Record<string, string> = {
-          'ā': 'a', 'á': 'a', 'ǎ': 'a', 'à': 'a',
-          'ī': 'i', 'í': 'i', 'ǐ': 'i', 'ì': 'i',
-          'ū': 'u', 'ú': 'u', 'ǔ': 'u', 'ù': 'u',
-          'ē': 'e', 'é': 'e', 'ě': 'e', 'è': 'e',
-          'ō': 'o', 'ó': 'o', 'ǒ': 'o', 'ò': 'o'
-        };
-        return map[ch] || ch;
-      })
+      normalize: removeDiacritics
     });
 
     return result;
@@ -657,6 +643,7 @@ export class MunicipalityCsvLoader extends CustomSource {
     const xml = this.generateEntryXml(entry);
 
     await loadEntry(xml, {
+      seq: parseInt(entry.id),  // Use seq from CSV (first column)
       ifExists: 'skip',
       conjugateP: false  // Place names don't conjugate
     });
@@ -841,16 +828,7 @@ export class WardCsvLoader extends CustomSource {
     const words = entry.fullName.split(/[, ]+/);
 
     const result = await matchGlosses(entry.text, entry.reading, words, {
-      normalize: (text) => text.toLowerCase().replace(/[āáǎàīíǐìūúǔùēéěèōóǒò]/g, (ch) => {
-        const map: Record<string, string> = {
-          'ā': 'a', 'á': 'a', 'ǎ': 'a', 'à': 'a',
-          'ī': 'i', 'í': 'i', 'ǐ': 'i', 'ì': 'i',
-          'ū': 'u', 'ú': 'u', 'ǔ': 'u', 'ù': 'u',
-          'ē': 'e', 'é': 'e', 'ě': 'e', 'è': 'e',
-          'ō': 'o', 'ó': 'o', 'ǒ': 'o', 'ò': 'o'
-        };
-        return map[ch] || ch;
-      })
+      normalize: removeDiacritics
     });
 
     return result;
@@ -863,6 +841,7 @@ export class WardCsvLoader extends CustomSource {
     const xml = this.generateEntryXml(entry);
 
     await loadEntry(xml, {
+      seq: parseInt(entry.id),  // Use seq from CSV (first column)
       ifExists: 'skip',
       conjugateP: false  // Place names don't conjugate
     });

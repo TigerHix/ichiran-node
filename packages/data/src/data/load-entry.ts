@@ -19,7 +19,12 @@ const xmlParser = new XMLParser({
   parseTagValue: false,
   trimValues: true,
   ignoreDeclaration: true,
-  processEntities: true
+  processEntities: true,
+  isArray: (tagName) => {
+    // Tags that can appear multiple times within an entry
+    return ['k_ele', 'r_ele', 'sense', 'gloss', 'pos', 'misc', 'dial', 'field', 's_inf', 
+            'stagk', 'stagr', 'ke_pri', 're_pri', 're_inf', 're_restr'].includes(tagName);
+  }
 });
 
 /**
@@ -93,26 +98,30 @@ async function insertReadings(
     let nokanji = false;
     const priTags: string[] = [];
 
-    // Check for "ok" in re_inf (okurigana) - skip these
-    const reInf = asArray(node.re_inf);
-    for (const inf of reInf) {
-      if (nodeText(inf) === 'ok') {
-        skip = true;
+    // r_ele-specific fields (only process for kana readings)
+    // Ported from dict-load.lisp:42-49
+    if (priTag === 're_pri') {
+      // Check for "ok" in re_inf (okurigana) - skip these
+      const reInf = asArray(node.re_inf);
+      for (const inf of reInf) {
+        if (nodeText(inf) === 'ok') {
+          skip = true;
+        }
       }
-    }
 
-    if (skip) continue;
+      if (skip) continue;
 
-    // Check for re_nokanji flag
-    if (node.re_nokanji !== undefined) {
-      nokanji = true;
-    }
+      // Check for re_nokanji flag
+      if (node.re_nokanji !== undefined) {
+        nokanji = true;
+      }
 
-    // Collect reading restrictions (will be batched later)
-    const reRestr = asArray(node.re_restr);
-    for (const restr of reRestr) {
-      const restrText = nodeText(restr);
-      restrictions.push({ seq, reading: readingText, text: restrText });
+      // Collect reading restrictions (will be batched later)
+      const reRestr = asArray(node.re_restr);
+      for (const restr of reRestr) {
+        const restrText = nodeText(restr);
+        restrictions.push({ seq, reading: readingText, text: restrText });
+      }
     }
 
     // Process priority tags (ke_pri or re_pri)
@@ -157,22 +166,31 @@ async function insertReadings(
       ord,
       common: r.common,
       nokanji: r.nokanji,
-      commonTags: r.priTags
+      common_tags: r.priTags,  // Schema uses snake_case
+      conjugate_p: true        // Default value from schema
     }));
 
     await sql`
-      INSERT INTO ${sql(table)} ${sql(readingsWithSeq, 'seq', 'text', 'ord', 'common', 'nokanji', 'commonTags')}
+      INSERT INTO ${sql(table)} ${sql(readingsWithSeq, 'seq', 'text', 'ord', 'common', 'nokanji', 'common_tags', 'conjugate_p')}
     `;
   }
 
   // Update entry statistics
-  const countField = table === 'kanji_text' ? 'n_kanji' : 'n_kana';
-  await sql`
-    UPDATE entry
-    SET primary_nokanji = ${primaryNokanji},
-        ${sql(countField)} = ${toAdd.length}
-    WHERE seq = ${seq}
-  `;
+  // Note: primary_nokanji only set when processing kana_text (dict-load.lisp:60)
+  if (table === 'kana_text') {
+    await sql`
+      UPDATE entry
+      SET primary_nokanji = ${primaryNokanji},
+          n_kana = ${toAdd.length}
+      WHERE seq = ${seq}
+    `;
+  } else {
+    await sql`
+      UPDATE entry
+      SET n_kanji = ${toAdd.length}
+      WHERE seq = ${seq}
+    `;
+  }
 }
 
 /**
@@ -184,9 +202,9 @@ function collectSenseTraits(
   tag: string,
   senseId: number,
   seq: number
-): Array<{ senseId: number; tag: string; text: string; ord: number; seq: number }> {
+): Array<{ sense_id: number; tag: string; text: string; ord: number; seq: number }> {
   const nodes = asArray(senseNode[tag]);
-  const traits: Array<{ senseId: number; tag: string; text: string; ord: number; seq: number }> = [];
+  const traits: Array<{ sense_id: number; tag: string; text: string; ord: number; seq: number }> = [];
 
   for (let ord = 0; ord < nodes.length; ord++) {
     let text = nodeText(nodes[ord]);
@@ -194,7 +212,7 @@ function collectSenseTraits(
     if (text.startsWith('&') && text.endsWith(';')) {
       text = text.slice(1, -1);
     }
-    traits.push({ senseId, tag, text, ord, seq });
+    traits.push({ sense_id: senseId, tag, text, ord, seq });
   }
 
   return traits;
@@ -224,8 +242,8 @@ async function insertSenses(
   `;
 
   // Collect all glosses and sense props for batch insert
-  const allGlosses: Array<{ senseId: number; text: string; ord: number }> = [];
-  const allSenseProps: Array<{ senseId: number; tag: string; text: string; ord: number; seq: number }> = [];
+  const allGlosses: Array<{ sense_id: number; text: string; ord: number }> = [];
+  const allSenseProps: Array<{ sense_id: number; tag: string; text: string; ord: number; seq: number }> = [];
 
   for (let ord = 0; ord < senseNodes.length; ord++) {
     const senseNode = senseNodes[ord];
@@ -235,7 +253,7 @@ async function insertSenses(
     const glossNodes = asArray(senseNode.gloss);
     for (let gord = 0; gord < glossNodes.length; gord++) {
       const glossText = nodeText(glossNodes[gord]);
-      allGlosses.push({ senseId, text: glossText, ord: gord });
+      allGlosses.push({ sense_id: senseId, text: glossText, ord: gord });
     }
 
     // Collect sense properties
@@ -249,14 +267,14 @@ async function insertSenses(
   // Batch insert all glosses
   if (allGlosses.length > 0) {
     await sql`
-      INSERT INTO gloss ${sql(allGlosses, 'senseId', 'text', 'ord')}
+      INSERT INTO gloss ${sql(allGlosses, 'sense_id', 'text', 'ord')}
     `;
   }
 
   // Batch insert all sense properties
   if (allSenseProps.length > 0) {
     await sql`
-      INSERT INTO sense_prop ${sql(allSenseProps, 'senseId', 'tag', 'text', 'ord', 'seq')}
+      INSERT INTO sense_prop ${sql(allSenseProps, 'sense_id', 'tag', 'text', 'ord', 'seq')}
     `;
   }
 }
@@ -299,29 +317,34 @@ export async function loadEntry(
   const sql = getConnection();
 
   // Parse XML content
-  const parsed = xmlParser.parse(content);
-  const entry = parsed.entry;
-
-  if (!entry) {
-    throw new Error('No <entry> element found in XML content');
-  }
-
-  // Determine sequence number
+  let parsed: any;
   let seq: number;
+  
+  try {
+    parsed = xmlParser.parse(content);
+    const entry = parsed.entry;
 
-  if (options.seq !== undefined) {
-    if (typeof options.seq === 'string') {
-      // If reading exists, use its seq; otherwise choose next available seq
-      // TODO: Implement findWord lookup
-      seq = await nextSeq(sql);
-    } else {
-      seq = options.seq;
+    if (!entry) {
+      throw new Error('No <entry> element found in XML content');
     }
-  } else {
-    // Extract from ent_seq element
-    const entSeqNode = entry.ent_seq;
-    const parsedSeq = parseInt(nodeText(entSeqNode));
-    seq = Number.isFinite(parsedSeq) ? parsedSeq : await nextSeq(sql);
+
+    // Determine sequence number
+    if (options.seq !== undefined) {
+      if (typeof options.seq === 'string') {
+        // String seq lookup requires findWord implementation
+        throw new Error('String seq lookup not yet implemented. Use numeric seq or undefined.');
+      } else {
+        seq = options.seq;
+      }
+    } else {
+      // Extract from ent_seq element
+      const entSeqNode = entry.ent_seq;
+      const parsedSeq = parseInt(nodeText(entSeqNode));
+      seq = Number.isFinite(parsedSeq) ? parsedSeq : await nextSeq(sql);
+    }
+  } catch (error) {
+    const seqInfo = options.seq ? ` (seq=${options.seq})` : '';
+    throw new Error(`Failed to parse entry XML${seqInfo}: ${error instanceof Error ? error.message : error}`);
   }
 
   // Check upstream condition
@@ -338,52 +361,71 @@ export async function loadEntry(
     }
   }
 
-  // Handle ifExists option
-  if (options.ifExists === 'overwrite') {
-    await sql`DELETE FROM entry WHERE seq = ${seq}`;
+  const entry = parsed.entry;
+
+  // Wrap entry/readings/senses in transaction for atomicity (no partial entries)
+  // Note: Conjugation runs AFTER commit (matches Lisp - no transactions in original)
+  let result: number | undefined;
+  try {
+    result = await sql.begin(async (tx) => {
+      // Handle ifExists option
+      if (options.ifExists === 'overwrite') {
+        await tx`DELETE FROM entry WHERE seq = ${seq}`;
+      }
+      // Note: 'skip' is handled by ON CONFLICT below (more efficient than separate SELECT)
+
+      // Create main entry record (idempotent - uses ON CONFLICT for reloads)
+      const insertResult = await tx`
+        INSERT INTO entry (seq, content, root_p, n_kanji, n_kana, primary_nokanji)
+        VALUES (${seq}, ${content}, true, 0, 0, false)
+        ON CONFLICT (seq) DO NOTHING
+        RETURNING seq
+      `;
+      
+      // If nothing was inserted (conflict), entry already exists
+      if (insertResult.length === 0) {
+        return undefined; // Handles ifExists='skip' case
+      }
+
+      // Extract and insert readings
+      const kanjiNodes = asArray(entry.k_ele);
+      const kanaNodes = asArray(entry.r_ele);
+      const senseNodes = asArray(entry.sense);
+
+      await insertReadings(kanjiNodes, 'keb', 'kanji_text', seq, 'ke_pri', tx);
+      await insertReadings(kanaNodes, 'reb', 'kana_text', seq, 're_pri', tx);
+      await insertSenses(senseNodes, seq, tx);
+
+      // Note: Entry statistics (n_kanji, n_kana) are recalculated in bulk at the end
+      // of load-jmdict and apply-errata via recalcEntryStatsAll() - no need for per-entry recalc
+
+      return seq;
+    });
+  } catch (error) {
+    throw new Error(`Failed to load entry (seq=${seq}): ${error instanceof Error ? error.message : error}`);
   }
-  // Note: 'skip' is handled by ON CONFLICT below (more efficient than separate SELECT)
 
-  // Create main entry record (idempotent - uses ON CONFLICT for reloads)
-  const insertResult = await sql`
-    INSERT INTO entry (seq, content, root_p, n_kanji, n_kana, primary_nokanji)
-    VALUES (${seq}, ${content}, true, 0, 0, false)
-    ON CONFLICT (seq) DO NOTHING
-    RETURNING seq
-  `;
-  
-  // If nothing was inserted (conflict), entry already exists
-  if (insertResult.length === 0) {
-    return undefined; // Handles ifExists='skip' case
+  // Return early if entry was skipped
+  if (result === undefined) {
+    return undefined;
   }
-
-  // Extract and insert readings
-  const kanjiNodes = asArray(entry.k_ele);
-  const kanaNodes = asArray(entry.r_ele);
-  const senseNodes = asArray(entry.sense);
-
-  await insertReadings(kanjiNodes, 'keb', 'kanji_text', seq, 'ke_pri', sql);
-  await insertReadings(kanaNodes, 'reb', 'kana_text', seq, 're_pri', sql);
-  await insertSenses(senseNodes, seq, sql);
-
-  // Note: Entry statistics (n_kanji, n_kana) are recalculated in bulk at the end
-  // of load-jmdict and apply-errata via recalcEntryStatsAll() - no need for per-entry recalc
 
   // Conjugate entry if requested (dict-load.lisp:151-158)
+  // Runs AFTER transaction commits so conjugation functions can see committed data
   if (options.conjugateP) {
     const posi = await sql<{ text: string }[]>`
       SELECT DISTINCT text FROM sense_prop
-      WHERE seq = ${seq} AND tag = 'pos'
+      WHERE seq = ${result} AND tag = 'pos'
         AND text = ANY(${sql.array(POS_WITH_CONJ_RULES)})
     `;
 
     if (posi.length > 0) {
-      await conjugateEntryOuter(seq, { asPosi: posi.map(p => p.text) });
-      await loadSecondaryConjugations({ from: [seq] });
+      await conjugateEntryOuter(result, { asPosi: posi.map(p => p.text) });
+      await loadSecondaryConjugations({ from: [result] });
     }
   }
 
-  return seq;
+  return result;
 }
 
 /**

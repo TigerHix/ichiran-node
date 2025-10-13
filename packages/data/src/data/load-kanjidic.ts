@@ -11,8 +11,9 @@
  */
 
 import fs from 'fs';
+import { gunzipSync } from 'zlib';
 import { XMLParser } from 'fast-xml-parser';
-import { getConnection } from '@ichiran/core';
+import { getConnection, asHiragana } from '@ichiran/core';
 
 interface KanjidicCharacter {
   literal: string;
@@ -54,7 +55,7 @@ interface KanjiRecord {
 
 interface ReadingRecord {
   kanjiId: number;
-  type: 'on' | 'kun';
+  type: 'ja_on' | 'ja_kun' | 'ja_onkun';  // Full type names from XML, matching Lisp
   text: string;
   suffixp: boolean;
   prefixp: boolean;
@@ -76,7 +77,14 @@ interface MeaningRecord {
 export async function loadKanjidic(xmlPath: string): Promise<void> {
   console.log('Loading kanjidic2.xml...');
 
-  const content = fs.readFileSync(xmlPath, 'utf-8');
+  // Read file, auto-decompress if .gz
+  let content: string;
+  if (xmlPath.endsWith('.gz')) {
+    const compressed = fs.readFileSync(xmlPath);
+    content = gunzipSync(compressed).toString('utf-8');
+  } else {
+    content = fs.readFileSync(xmlPath, 'utf-8');
+  }
 
   // Parse XML
   const parser = new XMLParser({
@@ -211,14 +219,15 @@ async function loadKanjiBatch(characters: KanjidicCharacter[]): Promise<void> {
         const readingText = reading['#text'];
         if (!readingText) continue;
 
-        const type: 'on' | 'kun' = rtype === 'ja_on' ? 'on' : 'kun';
-
         // Parse reading text for okurigana and prefix/suffix markers
-        let text = readingText;
+        // Convert to hiragana first (matches Lisp kanji.lisp:167 - katakana ON readings → hiragana)
+        let text = asHiragana(readingText);
         let suffixp = false;
         let prefixp = false;
 
-        if (type === 'kun') {
+        // For kun readings, check for okurigana (marked with '.')
+        // Note: We use the full type name from XML ("ja_kun") not simplified ("kun")
+        if (rtype === 'ja_kun') {
           if (text.startsWith('-')) {
             prefixp = true;
             text = text.substring(1);
@@ -243,7 +252,8 @@ async function loadKanjiBatch(characters: KanjidicCharacter[]): Promise<void> {
           }
         }
 
-        allReadings.push({ kanjiId, type, text, suffixp, prefixp });
+        // Store full type name from XML ("ja_on"/"ja_kun"), matching Lisp
+        allReadings.push({ kanjiId, type: rtype, text, suffixp, prefixp });
       }
     }
 
@@ -437,17 +447,16 @@ export async function loadReadings(
       continue;
     }
 
-    // Determine reading type
-    const type: 'on' | 'kun' = rtype === 'ja_on' ? 'on' : 'kun';
-
     // Parse reading text for okurigana and prefix/suffix markers
-    let text = readingText;
+    // Convert to hiragana first (matches Lisp kanji.lisp:167 - katakana ON readings → hiragana)
+    let text = asHiragana(readingText);
     let okurigana: string[] = [];
     let suffixp = false;
     let prefixp = false;
 
     // For kun readings, check for okurigana (marked with '.')
-    if (type === 'kun') {
+    // Note: We use the full type name from XML ("ja_kun") not simplified ("kun")
+    if (rtype === 'ja_kun') {
       // Check for prefix marker (starts with '-')
       if (text.startsWith('-')) {
         prefixp = true;
@@ -479,9 +488,10 @@ export async function loadReadings(
     }
 
     // Insert reading
+    // Store full type name from XML ("ja_on"/"ja_kun"), matching Lisp kanji.lisp:143
     const [readingRecord] = await sql<[{ id: number }]>`
       INSERT INTO reading (kanji_id, type, text, suffixp, prefixp, stat_common)
-      VALUES (${kanjiId}, ${type}, ${text}, ${suffixp}, ${prefixp}, 0)
+      VALUES (${kanjiId}, ${rtype}, ${text}, ${suffixp}, ${prefixp}, 0)
       RETURNING id
     `;
 

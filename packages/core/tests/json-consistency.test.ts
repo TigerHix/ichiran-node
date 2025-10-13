@@ -1,7 +1,7 @@
 // JSON Consistency tests - ported from tests.lisp
 import { describe, test, expect } from 'bun:test';
 import { wordInfoGlossJson, wordInfoFromText } from '../src/dict/presentation.js';
-import { setupTests } from '../../../test-utils/test-setup.js';
+import { setupTests } from '@ichiran/testing';
 
 setupTests();
 

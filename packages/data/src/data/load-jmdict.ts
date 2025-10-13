@@ -13,6 +13,16 @@ import { loadConjugations, loadSecondaryConjugations } from './conjugate.js';
 import { loadCustomData } from './load-custom.js';
 import { addErrata } from './errata.js';
 
+// Maximum buffer size: largest JMDict entry is ~50KB, guard against malformed XML
+const MAX_BUFFER_SIZE = 10 * 1024 * 1024; // 10MB
+
+// Parallel batch size: tuned for balance between throughput and connection overhead
+// Too high: connection pool exhaustion; Too low: underutilized CPU
+const LOAD_PARALLELISM = 10;
+
+// Progress reporting interval
+const DEFAULT_PROGRESS_INTERVAL = 1000;
+
 /**
  * Streaming XML parser that yields <entry> elements
  */
@@ -26,12 +36,17 @@ async function* streamJMDictEntries(path: string): AsyncGenerator<string, void, 
 
   let buffer = '';
   let inEntry = false;
-  let _chunkCount = 0;
-  let _entryCount = 0;
 
   for await (const chunk of stream) {
-    _chunkCount++;
     buffer += chunk.toString('utf-8');
+    
+    // Guard against unbounded buffer growth (malformed XML with unclosed <entry>)
+    if (buffer.length > MAX_BUFFER_SIZE) {
+      throw new Error(
+        `XML buffer exceeded ${MAX_BUFFER_SIZE} bytes - likely malformed entry ` +
+        `(buffer starts with: ${buffer.substring(0, 200).replace(/\n/g, ' ')}...)`
+      );
+    }
 
     // Process complete entries
     while (true) {
@@ -56,7 +71,6 @@ async function* streamJMDictEntries(path: string): AsyncGenerator<string, void, 
       // Found the closing tag - yield the complete entry
       const endPos = nextClose + 8; // length of '</entry>'
       const entryXml = buffer.slice(0, endPos);
-      _entryCount++;
       yield entryXml;
 
       buffer = buffer.slice(endPos);
@@ -93,7 +107,7 @@ export async function loadJMDict(options: LoadJMDictOptions): Promise<void> {
   const {
     path,
     maxEntries = Infinity,
-    progressInterval = 1000
+    progressInterval = DEFAULT_PROGRESS_INTERVAL
   } = options;
 
   const sql = getConnection();
@@ -110,7 +124,6 @@ export async function loadJMDict(options: LoadJMDictOptions): Promise<void> {
   let errors = 0;
 
   // Parallel loading configuration
-  const parallelism = 10;  // Process 10 entries in parallel
   let batch: string[] = [];
 
   try {
@@ -120,7 +133,7 @@ export async function loadJMDict(options: LoadJMDictOptions): Promise<void> {
       batch.push(entryXml);
 
       // Process batch when it reaches the parallelism limit
-      if (batch.length >= parallelism) {
+      if (batch.length >= LOAD_PARALLELISM) {
         const results = await Promise.allSettled(
           batch.map(xml => loadEntry(xml))
         );

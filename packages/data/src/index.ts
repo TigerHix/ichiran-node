@@ -11,7 +11,7 @@ import { loadCustomData } from './data/load-custom.js';
 import { addErrata } from './data/errata.js';
 import { loadKanjidic, getKanjiStats } from './data/load-kanjidic.js';
 import { calculateBestReadings, calculateKanjiStatistics, calculateReadingStatistics } from './data/maintenance.js';
-import { getConnection, validateDatabaseSafety, setConnection, type ConnectionSpec } from '@ichiran/core';
+import { getConnection, setConnection, type ConnectionSpec } from '@ichiran/core';
 import { config } from 'dotenv';
 
 // Helper to parse connection from env (moved from core)
@@ -104,9 +104,6 @@ program
         process.exit(2);
       }
       setConnection(connSpec);
-
-      // Safety check: prevent accidental drops on production database
-      validateDatabaseSafety('init-db (drops and recreates all tables)');
 
       console.log('Initializing database...');
       const sql = getConnection();

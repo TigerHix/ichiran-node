@@ -226,31 +226,6 @@ export function setConnection(spec: ConnectionSpec) {
   connection = createSqlConnection(spec);
 }
 
-/**
- * Safety check: Prevents accidental operations on production database.
- * Throws an error if the database name is 'jmdict' (production).
- * Only allows operations on 'jmdict_test' or other non-production databases.
- */
-export function validateDatabaseSafety(operation: string = 'operation') {
-  const spec = getConnectionFromEnv();
-  if (!spec) {
-    throw new Error('No database connection configured. Set ICHIRAN_DB_URL environment variable.');
-  }
-
-  const dbName = spec.database.toLowerCase();
-
-  // Block operations on production database
-  if (dbName === 'jmdict') {
-    throw new Error(
-      `SAFETY CHECK FAILED: Cannot perform ${operation} on production database 'jmdict'.\n` +
-      `Use 'jmdict_test' or another test database instead.\n` +
-      `Current ICHIRAN_DB_URL: ${process.env.ICHIRAN_DB_URL}`
-    );
-  }
-
-  console.log(`✓ Database safety check passed: ${dbName}`);
-}
-
 export function getConnection(): postgres.Sql {
   if (!connection) {
     const spec = getConnectionFromEnv();

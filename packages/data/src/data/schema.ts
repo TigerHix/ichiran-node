@@ -261,6 +261,22 @@ export const createConjSourceReadingIndexes = async (sql: postgres.Sql) => {
 };
 
 /**
+ * Helper to handle FK creation errors - only ignore "already exists"
+ */
+const handleFkError = (constraintName: string) => (error: any) => {
+  const isAlreadyExists = error.message && (
+    error.message.includes('already exists') ||
+    error.code === '42710' // PostgreSQL: duplicate object
+  );
+  
+  if (!isAlreadyExists) {
+    console.error(`Failed to create constraint ${constraintName}:`, error.message);
+    throw error;
+  }
+  // Silently ignore "already exists" errors
+};
+
+/**
  * Creates foreign key constraints for all tables
  */
 export const createForeignKeys = (sql: postgres.Sql) => sql.begin(async (sql) => {
@@ -269,75 +285,75 @@ export const createForeignKeys = (sql: postgres.Sql) => sql.begin(async (sql) =>
     ALTER TABLE kanji_text
     ADD CONSTRAINT kanji_text_seq_fkey
     FOREIGN KEY (seq) REFERENCES entry(seq) ON DELETE CASCADE
-  `.catch(() => {}); // Ignore if already exists
+  `.catch(handleFkError('kanji_text_seq_fkey'));
 
   // kana_text foreign keys
   await sql`
     ALTER TABLE kana_text
     ADD CONSTRAINT kana_text_seq_fkey
     FOREIGN KEY (seq) REFERENCES entry(seq) ON DELETE CASCADE
-  `.catch(() => {}); // Ignore if already exists
+  `.catch(handleFkError('kana_text_seq_fkey'));
 
   // sense foreign keys
   await sql`
     ALTER TABLE sense
     ADD CONSTRAINT sense_seq_fkey
     FOREIGN KEY (seq) REFERENCES entry(seq) ON DELETE CASCADE
-  `.catch(() => {}); // Ignore if already exists
+  `.catch(handleFkError('sense_seq_fkey'));
 
   // gloss foreign keys
   await sql`
     ALTER TABLE gloss
     ADD CONSTRAINT gloss_sense_id_fkey
     FOREIGN KEY (sense_id) REFERENCES sense(id) ON DELETE CASCADE
-  `.catch(() => {}); // Ignore if already exists
+  `.catch(handleFkError('gloss_sense_id_fkey'));
 
   // sense_prop foreign keys
   await sql`
     ALTER TABLE sense_prop
     ADD CONSTRAINT sense_prop_seq_fkey
     FOREIGN KEY (seq) REFERENCES entry(seq) ON DELETE CASCADE
-  `.catch(() => {}); // Ignore if already exists
+  `.catch(handleFkError('sense_prop_seq_fkey'));
 
   await sql`
     ALTER TABLE sense_prop
     ADD CONSTRAINT sense_prop_sense_id_fkey
     FOREIGN KEY (sense_id) REFERENCES sense(id) ON DELETE CASCADE
-  `.catch(() => {}); // Ignore if already exists
+  `.catch(handleFkError('sense_prop_sense_id_fkey'));
 
   // restricted_readings foreign keys
   await sql`
     ALTER TABLE restricted_readings
     ADD CONSTRAINT restricted_readings_seq_fkey
     FOREIGN KEY (seq) REFERENCES entry(seq) ON DELETE CASCADE
-  `.catch(() => {}); // Ignore if already exists
+  `.catch(handleFkError('restricted_readings_seq_fkey'));
 
   // conjugation foreign keys
   await sql`
     ALTER TABLE conjugation
     ADD CONSTRAINT conjugation_seq_fkey
     FOREIGN KEY (seq) REFERENCES entry(seq) ON DELETE CASCADE
-  `.catch(() => {}); // Ignore if already exists
+  `.catch(handleFkError('conjugation_seq_fkey'));
 
   await sql`
     ALTER TABLE conjugation
     ADD CONSTRAINT conjugation_from_fkey
     FOREIGN KEY ("from") REFERENCES entry(seq) ON DELETE CASCADE
-  `.catch(() => {}); // Ignore if already exists
+  `.catch(handleFkError('conjugation_from_fkey'));
 
   // conj_prop foreign keys
   await sql`
     ALTER TABLE conj_prop
     ADD CONSTRAINT conj_prop_conj_id_fkey
     FOREIGN KEY (conj_id) REFERENCES conjugation(id) ON DELETE CASCADE
-  `.catch(() => {}); // Ignore if already exists
+  `.catch(handleFkError('conj_prop_conj_id_fkey'));
 
   // conj_source_reading foreign keys
   await sql`
     ALTER TABLE conj_source_reading
     ADD CONSTRAINT conj_source_reading_conj_id_fkey
     FOREIGN KEY (conj_id) REFERENCES conjugation(id) ON DELETE CASCADE
-  `.catch(() => {}); // Ignore if already exists
+  `.catch(handleFkError('conj_source_reading_conj_id_fkey'));
 });
 
 /**
@@ -482,11 +498,15 @@ export const dropAllTables = (sql: postgres.Sql) => sql.begin(async (sql) => {
   await sql`DROP SEQUENCE IF EXISTS entry_seq_generator CASCADE`;
 });
 
+// Start conjugated entry IDs at 10M to avoid conflicts with JMDict entries (max ~2.8M)
+const CONJUGATED_ENTRY_SEQ_START = 10_000_000;
+
 /**
  * Creates a sequence for generating conjugated entry seq numbers
- * Starts from 10000000 to avoid conflicts with JMDict entries
+ * Starts from 10,000,000 to avoid conflicts with JMDict entries (max ~2.8M)
  */
 export const createEntrySeqGenerator = async (sql: postgres.Sql) => {
+  // Note: DDL commands don't support parameterized queries, must use literal value
   await sql`CREATE SEQUENCE IF NOT EXISTS entry_seq_generator START WITH 10000000`;
 };
 
@@ -498,7 +518,7 @@ export const resetEntrySeqGenerator = async (sql: postgres.Sql) => {
   const result = await sql<Array<{ max: number | null }>>`
     SELECT MAX(seq) as max FROM entry
   `;
-  const maxSeq = result[0].max || 10000000;
+  const maxSeq = result[0].max || CONJUGATED_ENTRY_SEQ_START;
   await sql`SELECT setval('entry_seq_generator', ${maxSeq})`;
 };
 

@@ -1,7 +1,7 @@
 // Match Readings tests - ported from tests.lisp
 import { describe, test, expect } from 'bun:test';
 import { matchReadings } from '@ichiran/core';
-import { setupTests } from '../../../test-utils/test-setup.js';
+import { setupTests } from '@ichiran/testing';
 
 setupTests();
 

@@ -873,12 +873,21 @@ export async function addConj(
   }
 
   // Create entry with counts (dict-errata.lisp:21)
-  // Use ON CONFLICT for idempotency
-  await sql`
+  // Use ON CONFLICT for idempotency (reloading :extra won't fail)
+  const entryInsert = await sql`
     INSERT INTO entry (seq, content, root_p, n_kanji, n_kana, primary_nokanji)
     VALUES (${nextSeq}, '', false, ${ordK}, ${ordR}, false)
     ON CONFLICT (seq) DO NOTHING
+    RETURNING seq
   `;
+  
+  // If entry already exists, skip (conjugation already created)
+  if (entryInsert.length === 0) {
+    if (process.env.DEBUG_ERRATA) {
+      console.log(`  Skipped addConj seq=${nextSeq} (already exists)`);
+    }
+    return;
+  }
 
   // Insert text records
   ordR = 0;

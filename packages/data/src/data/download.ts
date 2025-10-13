@@ -7,6 +7,8 @@ import fs from 'fs';
 import path from 'path';
 import { createWriteStream } from 'fs';
 import { pipeline } from 'stream/promises';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
 const DATA_SOURCES = {
   jmdict: {
@@ -25,11 +27,19 @@ export type DataSource = keyof typeof DATA_SOURCES;
 
 /**
  * Get the default data directory path
+ * Uses import.meta.url to find package root, regardless of working directory
  */
-export function getDataDir(): string {
-  // Check if running from dist/ (compiled) or src/ (development)
-  const projectRoot = process.cwd();
-  return path.join(projectRoot, 'data');
+export function getDataDir(customPath?: string): string {
+  if (customPath) return customPath;
+  if (process.env.ICHIRAN_DATA_DIR) return process.env.ICHIRAN_DATA_DIR;
+  
+  // Get the directory of this source file
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = dirname(__filename);
+  
+  // Navigate from dist/data/ or src/data/ to package root, then to data/
+  // Assumes structure: packages/data/[src|dist]/data/download.js
+  return path.join(__dirname, '../../../data');
 }
 
 /**

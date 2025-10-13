@@ -4,7 +4,7 @@ import { clearCompiledGrammarCache, getCompiledMatcher, getCacheStats } from '..
 import { MACRO_MIN_TOKENS } from '../src/macros.js';
 import { matchText, compileGrammars } from '../src/runtime.js';
 import type { Token, MatchOutcome, GrammarDefinition } from '@ichiran/grammar';
-import { setupTests } from '../../../test-utils/test-setup.js';
+import { setupTests } from '@ichiran/testing';
 
 setupTests();
 

@@ -2,7 +2,7 @@ import { describe, test, expect } from 'bun:test';
 import { matchText, grammarCatalog } from '@ichiran/grammar';
 import { compilePattern } from '../src/compiler.js';
 import type { MatchOutcome, Token } from '@ichiran/grammar';
-import { setupTests } from '../../../test-utils/test-setup.js';
+import { setupTests } from '@ichiran/testing';
 
 setupTests();
 

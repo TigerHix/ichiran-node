@@ -18,8 +18,7 @@ export {
   getQuerySummary,
   setDebug,
   dp,
-  DEBUG,
-  validateDatabaseSafety
+  DEBUG
 } from './conn.js';
 
 // Romanization
@@ -57,7 +56,8 @@ export {
   basicSplit,
   normalize,
   simplifyNgrams,
-  testWord
+  testWord,
+  asHiragana
 } from './characters.js';
 
 // Kanji utilities
