@@ -254,9 +254,18 @@ function ensureRulesLoaded(): void {
 /**
  * Gets part-of-speech ID from pos code
  * Ported from dict-load.lisp:241-243 get-pos-index
+ * 
+ * Note: cop-da is a synthetic POS tag added by errata to fix だ conjugation
+ * It maps to cop (ID 15) for conjugation rules
  */
 export function getPosIndex(pos: string): number | undefined {
   ensureRulesLoaded();
+  
+  // Map cop-da to cop (see dict-errata.lisp:281 - cop-da added to trigger conjugation)
+  if (pos === 'cop-da') {
+    return posIndex.get('cop');
+  }
+  
   return posIndex.get(pos);
 }
 
@@ -371,30 +380,32 @@ function applyConjugationRuleFixes(): void {
     conjRules.set(vss, filtered);
   }
 
-  // Fix 5 & 6: Add negative-stem for verbs and certain adjectives, and remap causative-su
+  // Fix 5 & 6: Add negative-stem for godan verbs only, and remap causative-su
   for (const [posId, rules] of conjRules.entries()) {
     const pos = posByIndex.get(posId);
     if (!pos) continue;
 
-    // Add negative-stem for all POS that have negative forms (except adj-i and adj-ix)
-    // Find negative non-formal form
-    const negRule = rules.find(r =>
-      r.conj === 1 && r.neg === true && r.fml === false
-    );
+    // Add negative-stem ONLY for godan (v5*) verbs (dict-errata.lisp:1220-1234)
+    if (pos.startsWith('v5')) {
+      const negRule = rules.find(r =>
+        r.conj === 1 && r.neg === true && r.fml === false
+      );
 
-    if (negRule && negRule.okuri.length >= 2 && pos !== 'adj-i' && pos !== 'adj-ix') {
-      // Create negative stem by removing last 2 chars (ない)
-      rules.push({
-        pos: posId,
-        conj: CONJ_NEGATIVE_STEM,
-        neg: false,
-        fml: false,
-        onum: 1,
-        stem: negRule.stem,
-        okuri: negRule.okuri.slice(0, -2),
-        euphr: negRule.euphr,
-        euphk: negRule.euphk
-      });
+      if (negRule && negRule.okuri.length >= 2) {
+        // Create negative stem by removing last 2 chars (ない)
+        // Copy neg/fml from neg-rule (Lisp: copy-conjugation-rule)
+        rules.push({
+          pos: posId,
+          conj: CONJ_NEGATIVE_STEM,
+          neg: negRule.neg,  // Copy from neg-rule (true)
+          fml: negRule.fml,  // Copy from neg-rule (false)
+          onum: 1,
+          stem: negRule.stem,
+          okuri: negRule.okuri.slice(0, -2),
+          euphr: negRule.euphr,
+          euphk: negRule.euphk
+        });
+      }
     }
 
     // Remap causative onum=2 to type 53

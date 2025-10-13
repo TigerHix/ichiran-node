@@ -51,5 +51,5 @@ ichiran-data reading-stats
 
 Core exports `setConnection(spec)` + connection primitives. NO env parsing in core.
 
-API, CLI, data each parse `ICHIRAN_DB_URL` or `ICHIRAN_TEST_DB_URL` locally and call `setConnection`.
+API, CLI, data each parse `ICHIRAN_DB_URL` locally and call `setConnection`.
 

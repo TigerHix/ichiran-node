@@ -16,7 +16,7 @@ import { config } from 'dotenv';
 
 // Helper to parse connection from env (moved from core)
 function getConnectionFromEnv(): ConnectionSpec | null {
-  const dbUrl = process.env.ICHIRAN_TEST_DB_URL || process.env.ICHIRAN_DB_URL;
+  const dbUrl = process.env.ICHIRAN_DB_URL;
   if (!dbUrl) return null;
 
   try {
@@ -100,7 +100,7 @@ program
       // Setup connection from env
       const connSpec = getConnectionFromEnv();
       if (!connSpec) {
-        console.error('ERROR: ICHIRAN_DB_URL or ICHIRAN_TEST_DB_URL environment variable not set');
+        console.error('ERROR: ICHIRAN_DB_URL environment variable not set');
         process.exit(2);
       }
       setConnection(connSpec);
@@ -183,10 +183,11 @@ program
 program
   .command('load-conjugations')
   .description('Generate primary conjugations for all conjugatable entries')
-  .action(async () => {
+  .option('--limit <number>', 'Limit number of entries to process (for testing)', parseInt)
+  .action(async (options) => {
     try {
       const startTime = Date.now();
-      await loadConjugations();
+      await loadConjugations({ limit: options.limit });
       const elapsed = (Date.now() - startTime) / 1000;
       console.log(`✓ Conjugations loaded in ${elapsed.toFixed(1)}s`);
       process.exit(0);
@@ -318,11 +319,13 @@ program
 
 program
   .command('calculate-best-readings')
+  .alias('best-readings')
   .description('Calculate best_kana and best_kanji fields for dictionary entries')
-  .action(async () => {
+  .option('--reset', 'Reset existing best_kana/best_kanji values before calculating')
+  .action(async (options) => {
     try {
       const startTime = Date.now();
-      await calculateBestReadings();
+      await calculateBestReadings({ reset: options.reset });
       const elapsed = (Date.now() - startTime) / 1000;
       console.log(`✓ Best readings calculated in ${elapsed.toFixed(1)}s`);
       process.exit(0);

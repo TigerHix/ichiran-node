@@ -100,28 +100,12 @@ export async function replaceReading(
 /**
  * Resets reading field for entries
  * Ported from dict-errata.lisp:72-76 reset-readings
+ * Note: Lisp has a computed "reading" field; our schema doesn't have/need it
  */
-async function resetReadings(...seqs: number[]): Promise<void> {
-  const sql = getConnection();
-
-  if (seqs.length === 0) return;
-
-  // Get all readings for these entries
-  const readings = await sql<{ id: number; text: string; ord: number; seq: number }[]>`
-    SELECT id, text, ord, seq FROM kanji_text WHERE seq IN ${sql(seqs)}
-    UNION ALL
-    SELECT id, text, ord, seq FROM kana_text WHERE seq IN ${sql(seqs)}
-  `;
-
-  // Update reading field for each
-  for (const reading of readings) {
-    const readingValue = `${reading.text} ${reading.ord}`;
-    await sql`
-      UPDATE ${sql(testWord(reading.text, 'kana') ? 'kana_text' : 'kanji_text')}
-      SET reading = ${readingValue}
-      WHERE id = ${reading.id}
-    `;
-  }
+async function resetReadings(..._seqs: number[]): Promise<void> {
+  // No-op: Our schema doesn't have a "reading" column
+  // Lisp uses this to update a computed field for caching purposes
+  // Our queries compute readings on-the-fly, so this is not needed
 }
 
 /**
@@ -304,6 +288,49 @@ async function senseExistsP(
   }
 
   return false;
+}
+
+/**
+ * Adds a sense with POS and glosses, without checking for existence
+ * Ported from dict-errata.lisp:148-153 add-sense
+ *
+ * @param seq - Entry sequence number
+ * @param ord - Sense order number (explicit)
+ * @param glosses - English glosses
+ */
+export async function addSense(
+  seq: number,
+  ord: number,
+  ...glosses: string[]
+): Promise<void> {
+  const sql = getConnection();
+
+  // Check if sense with this ord already exists
+  const existing = await sql<{ id: number }[]>`
+    SELECT id FROM sense
+    WHERE seq = ${seq} AND ord = ${ord}
+  `;
+
+  if (existing.length > 0) {
+    return; // Already exists
+  }
+
+  // Create new sense
+  const newSense = await sql<{ id: number }[]>`
+    INSERT INTO sense (seq, ord)
+    VALUES (${seq}, ${ord})
+    RETURNING id
+  `;
+
+  const senseId = newSense[0].id;
+
+  // Add glosses
+  for (let gord = 0; gord < glosses.length; gord++) {
+    await sql`
+      INSERT INTO gloss (sense_id, text, ord)
+      VALUES (${senseId}, ${glosses[gord]}, ${gord})
+    `;
+  }
 }
 
 /**
@@ -755,6 +782,7 @@ export async function addConjReading(seq: number, reading: string): Promise<void
     await sql`
       INSERT INTO conj_source_reading (conj_id, text, source_text)
       VALUES (${conj.id}, ${newText}, ${newSourceText})
+      ON CONFLICT (conj_id, text, source_text) DO NOTHING
     `;
 
     // Update entry counts
@@ -763,6 +791,153 @@ export async function addConjReading(seq: number, reading: string): Promise<void
       UPDATE entry
       SET ${sql(nField)} = ${sql(nField)} + 1
       WHERE seq = ${conjSeq}
+    `;
+  }
+}
+
+/**
+ * Checks if a conjugation with given properties already exists
+ * Ported from dict-errata.lisp:3-15 find-conj
+ *
+ * @param seqFrom - Source entry seq
+ * @param options - [conjType, pos, neg, fml]
+ * @returns Conjugation ID if found, null otherwise
+ */
+async function findConj(
+  seqFrom: number,
+  options: [number, string, boolean | null, boolean | null]
+): Promise<number | null> {
+  const sql = getConnection();
+  const [conjType, pos, neg, fml] = options;
+
+  const result = await sql<{ id: number }[]>`
+    SELECT conj.id
+    FROM conjugation conj
+    INNER JOIN conj_prop prop ON prop.conj_id = conj.id
+    WHERE conj."from" = ${seqFrom}
+      AND prop.conj_type = ${conjType}
+      AND prop.pos = ${pos}
+      AND prop.neg IS NOT DISTINCT FROM ${neg}
+      AND prop.fml IS NOT DISTINCT FROM ${fml}
+  `;
+
+  return result.length > 0 ? result[0].id : null;
+}
+
+/**
+ * Manually creates a conjugation entry
+ * Ported from dict-errata.lisp:17-35 add-conj
+ *
+ * This function creates a new conjugated entry by:
+ * 1. Checking if the conjugation already exists
+ * 2. Allocating a new sequence number
+ * 3. Creating an entry with conjugated readings
+ * 4. Linking it to the source entry with conjugation metadata
+ *
+ * @param seqFrom - Source entry seq
+ * @param options - [conjType, pos, neg, fml]
+ * @param readingMap - Array of [sourceReading, conjugatedReading] pairs
+ */
+export async function addConj(
+  seqFrom: number,
+  options: [number, string, boolean | null, boolean | null],
+  readingMap: Array<[string, string]>
+): Promise<void> {
+  const sql = getConnection();
+
+  // Check if conjugation already exists (dict-errata.lisp:18)
+  const existingConjId = await findConj(seqFrom, options);
+  if (existingConjId) {
+    return; // Already exists
+  }
+
+  const [conjType, pos, neg, fml] = options;
+
+  // Allocate new seq (dict-errata.lisp:20)
+  const nextSeqResult = await sql<{ seq: number }[]>`
+    SELECT nextval('entry_seq_generator') as seq
+  `;
+  const nextSeq = nextSeqResult[0].seq;
+
+  // Create text records with separate ord counters for kanji vs kana (dict-errata.lisp:22-28)
+  let ordR = 0; // ord counter for kana readings
+  let ordK = 0; // ord counter for kanji readings
+
+  for (const [_srcReading, reading] of readingMap) {
+    const isKana = testWord(reading, 'kana');
+    if (isKana) {
+      ordR++;
+    } else {
+      ordK++;
+    }
+  }
+
+  // Create entry with counts (dict-errata.lisp:21)
+  // Use ON CONFLICT for idempotency
+  await sql`
+    INSERT INTO entry (seq, content, root_p, n_kanji, n_kana, primary_nokanji)
+    VALUES (${nextSeq}, '', false, ${ordK}, ${ordR}, false)
+    ON CONFLICT (seq) DO NOTHING
+  `;
+
+  // Insert text records
+  ordR = 0;
+  ordK = 0;
+
+  for (const [_srcReading, reading] of readingMap) {
+    const isKana = testWord(reading, 'kana');
+    const table = isKana ? 'kana_text' : 'kanji_text';
+    const ord = isKana ? ordR : ordK;
+
+    await sql`
+      INSERT INTO ${sql(table)} (seq, text, ord, common)
+      VALUES (${nextSeq}, ${reading}, ${ord}, NULL)
+      ON CONFLICT (seq, text) DO NOTHING
+    `;
+
+    if (isKana) {
+      ordR++;
+    } else {
+      ordK++;
+    }
+  }
+
+  // Create conjugation link (dict-errata.lisp:29)
+  // Use ON CONFLICT for idempotency
+  const conjResult = await sql<{ id: number }[]>`
+    INSERT INTO conjugation (seq, "from", via)
+    VALUES (${nextSeq}, ${seqFrom}, NULL)
+    ON CONFLICT ON CONSTRAINT conjugation_from_seq_via_n_unique DO UPDATE
+      SET via = EXCLUDED.via
+    RETURNING id
+  `;
+
+  const conjId = conjResult[0].id;
+
+  // Create conj_prop (dict-errata.lisp:30-31)
+  // Check if already exists
+  const existingProp = await sql<{ id: number }[]>`
+    SELECT id FROM conj_prop
+    WHERE conj_id = ${conjId}
+      AND conj_type = ${conjType}
+      AND pos = ${pos}
+      AND neg IS NOT DISTINCT FROM ${neg}
+      AND fml IS NOT DISTINCT FROM ${fml}
+  `;
+
+  if (existingProp.length === 0) {
+    await sql`
+      INSERT INTO conj_prop (conj_id, pos, conj_type, neg, fml)
+      VALUES (${conjId}, ${pos}, ${conjType}, ${neg}, ${fml})
+    `;
+  }
+
+  // Create conj_source_reading records (dict-errata.lisp:32-35)
+  for (const [srcReading, reading] of readingMap) {
+    await sql`
+      INSERT INTO conj_source_reading (conj_id, text, source_text)
+      VALUES (${conjId}, ${reading}, ${srcReading})
+      ON CONFLICT (conj_id, text, source_text) DO NOTHING
     `;
   }
 }
@@ -832,7 +1007,7 @@ export async function replaceReadingConj(
 async function conjugateDa(seq: number = 2089020): Promise<void> {
   const sql = getConnection();
 
-  // Check if cop-da already exists
+  // Add cop-da POS tag if it doesn't exist
   const existing = await sql`
     SELECT id FROM sense_prop
     WHERE seq = ${seq} AND tag = 'pos' AND text = 'cop-da'
@@ -840,48 +1015,76 @@ async function conjugateDa(seq: number = 2089020): Promise<void> {
 
   if (existing.length === 0) {
     await addSenseProp(seq, 0, 'pos', 'cop-da');
-    await conjugateEntryOuter(seq);
   }
+  
+  // Always conjugate (idempotent - will reuse existing conjugations)
+  await conjugateEntryOuter(seq);
 }
 
 /**
  * Adds じゃ readings as colloquial alternatives to では readings for all だ conjugations
- * Ported from dict-errata.lisp:237-256 add-deha-ja-readings
+ * Ported from dict-errata.lisp:173-196 add-deha-ja-readings
  *
  * For all conjugated entries from だ (seq 2089020), if they have a では reading,
  * add a corresponding じゃ reading as a colloquial alternative.
+ * This includes BOTH kana_text readings AND conj_source_reading entries.
  */
 async function addDehaJaReadings(): Promise<void> {
   const sql = getConnection();
   const daSeq = 2089020;
 
-  // Find all conjugated entries from だ
-  const conjugated = await sql<{ seq: number }[]>`
-    SELECT DISTINCT seq FROM conjugation
-    WHERE "from" = ${daSeq}
+  // Part 1: Add じゃ readings to kana_text (dict-errata.lisp:174-181)
+  const dehaList = await sql<{ seq: number; text: string }[]>`
+    SELECT DISTINCT conj.seq, kt.text
+    FROM conjugation conj
+    JOIN kana_text kt ON kt.seq = conj.seq
+    WHERE conj.from = ${daSeq}
+      AND kt.text LIKE 'では%'
   `;
 
-  for (const { seq } of conjugated) {
-    // Find kana readings with では
-    const dehaReadings = await sql<{ text: string }[]>`
-      SELECT text FROM kana_text
-      WHERE seq = ${seq} AND text LIKE '%では%'
+  for (const { seq, text } of dehaList) {
+    const ja = 'じゃ' + text.substring(2); // Replace では with じゃ
+
+    // Check if じゃ reading already exists
+    const existing = await sql`
+      SELECT id FROM kana_text
+      WHERE seq = ${seq} AND text = ${ja}
     `;
 
-    for (const { text } of dehaReadings) {
-      // Replace では with じゃ
-      const jaReading = text.replace(/では/g, 'じゃ');
+    if (existing.length === 0) {
+      await addReading(seq, ja, { conjugateP: false });
+    }
+  }
 
-      // Check if じゃ reading already exists
-      const existing = await sql`
-        SELECT id FROM kana_text
-        WHERE seq = ${seq} AND text = ${jaReading}
+  // Part 2: Add じゃ entries to conj_source_reading (dict-errata.lisp:183-196)
+  const dehaSrcReading = await sql<{ conjId: number; text: string; sourceText: string }[]>`
+    SELECT csr.conj_id, csr.text, csr.source_text
+    FROM conjugation conj
+    JOIN conj_source_reading csr ON csr.conj_id = conj.id
+    WHERE conj.from = ${daSeq}
+      AND csr.text LIKE 'では%'
+  `;
+
+  for (const { conjId, text, sourceText } of dehaSrcReading) {
+    const ja = 'じゃ' + text.substring(2);
+    
+    // Check if じゃ source reading already exists
+    const existing = await sql`
+      SELECT id FROM conj_source_reading
+      WHERE conj_id = ${conjId} AND text = ${ja} AND source_text = ${sourceText}
+    `;
+
+    if (existing.length === 0) {
+      // Calculate new source_text (replace では with じゃ if it starts with では)
+      const newSourceText = sourceText.startsWith('では')
+        ? 'じゃ' + sourceText.substring(2)
+        : sourceText;
+
+      await sql`
+        INSERT INTO conj_source_reading (conj_id, text, source_text)
+        VALUES (${conjId}, ${ja}, ${newSourceText})
+        ON CONFLICT (conj_id, text, source_text) DO NOTHING
       `;
-
-      if (existing.length === 0) {
-        // Add the じゃ reading
-        await addReading(seq, jaReading, { conjugateP: false });
-      }
     }
   }
 }
@@ -930,56 +1133,70 @@ async function removeHiraganaNokanji(): Promise<void> {
 }
 
 /**
+ * Applies patch to reading: replaces suffix with replacement
+ * Helper for add-gozaimasu-conjs
+ * Ported from dict-errata.lisp apply-patch (cons operation)
+ * Lisp: (concatenate 'string (subseq root 0 (- (length root) (length (cdr patch)))) (car patch))
+ */
+function applyPatch(reading: string, patch: [string, string]): string {
+  const [replacement, suffix] = patch;
+  // Remove length of suffix characters from end, then add replacement
+  return reading.substring(0, reading.length - suffix.length) + replacement;
+}
+
+/**
+ * Gets all readings for an entry (both kanji and kana)
+ * Ported from dict-errata.lisp:257-261 get-all-readings
+ */
+async function getAllReadings(seq: number): Promise<string[]> {
+  const sql = getConnection();
+  
+  const readings = await sql<{ text: string }[]>`
+    SELECT text FROM kanji_text WHERE seq = ${seq}
+    UNION
+    SELECT text FROM kana_text WHERE seq = ${seq}
+  `;
+  
+  return readings.map(r => r.text);
+}
+
+/**
  * Adds special conjugations for ございます (polite copula)
- * Ported from dict-errata.lisp:270-278 add-gozaimasu-conjs
+ * Ported from dict-errata.lisp:263-278 add-gozaimasu-conjs
  *
- * Creates conjugation links for ございます entries (1612690, 2253080)
- * linking them to appropriate copula conjugations.
+ * Manually generates conjugated forms for ございます entries (1612690, 2253080)
+ * by replacing "ます" suffix with conjugated endings.
  */
 async function addGozaimasuConjs(): Promise<void> {
-  const sql = getConnection();
   const gozaimasuSeqs = [1612690, 2253080];
 
+  // Conjugation specs: (conj_type, pos, neg, fml) and suffix to replace "ます"
+  // Corresponds to dict-errata.lisp:269-274
+  const conjSpecs: Array<{
+    conj: [number, string, boolean | null, boolean | null];
+    suf: string;
+  }> = [
+    { conj: [1, 'exp', true, null], suf: 'せん' },      // ございません
+    { conj: [2, 'exp', null, null], suf: 'した' },      // ございました
+    { conj: [3, 'exp', null, null], suf: 'して' },      // ございまして
+    { conj: [9, 'exp', null, null], suf: 'しょう' },    // ございましょう
+    { conj: [11, 'exp', null, null], suf: 'したら' },   // ございましたら
+    { conj: [12, 'exp', null, null], suf: 'したり' },   // ございましたり
+  ];
+
   for (const seq of gozaimasuSeqs) {
-    // Check if entry exists
-    const entry = await sql`
-      SELECT seq FROM entry WHERE seq = ${seq}
-    `;
+    const readings = await getAllReadings(seq);
 
-    if (entry.length === 0) {
-      continue;
-    }
+    for (const { conj, suf } of conjSpecs) {
+      // Build reading map: [sourceReading, conjugatedReading] pairs
+      // Applies patch to replace "ます" (す) with suffix
+      const readingMap: Array<[string, string]> = readings.map(reading => [
+        reading,
+        applyPatch(reading, [suf, 'す']), // Replace 'す' (last char of 'ます') with suffix
+      ]);
 
-    // Add conjugation link from でございます (1005800) if it exists
-    const deGozaimasuSeq = 1005800;
-    const deGozaimasu = await sql`
-      SELECT seq FROM entry WHERE seq = ${deGozaimasuSeq}
-    `;
-
-    if (deGozaimasu.length > 0) {
-      // Check if conjugation already exists
-      const existing = await sql`
-        SELECT id FROM conjugation
-        WHERE seq = ${seq} AND "from" = ${deGozaimasuSeq}
-      `;
-
-      if (existing.length === 0) {
-        // Add conjugation link
-        const conjResult = await sql<{ id: number }[]>`
-          INSERT INTO conjugation (seq, "from", via)
-          VALUES (${seq}, ${deGozaimasuSeq}, NULL)
-          RETURNING id
-        `;
-
-        // Add conj_prop for polite copula (type 11 is polite form)
-        if (conjResult.length > 0) {
-          const conjId = conjResult[0].id;
-          await sql`
-            INSERT INTO conj_prop (conj_id, conj_type, pos, neg, fml)
-            VALUES (${conjId}, 11, 'cop', false, true)
-          `;
-        }
-      }
+      // Call add-conj to create the conjugation (dict-errata.lisp:276-278)
+      await addConj(seq, conj, readingMap);
     }
   }
 }
@@ -997,18 +1214,20 @@ async function addGozaimasuConjs(): Promise<void> {
 export async function addErrata(): Promise<void> {
   console.log('Applying database errata...');
 
-  // Run helper functions first
+  // Add cop-da POS tag and conjugate だ FIRST (dict-errata.lisp:288)
+  console.log('  Conjugating だ...');
+  await conjugateDa();
+
+  // Then add じゃ readings to those conjugations (dict-errata.lisp:289)
   console.log('  Adding deha-ja readings...');
   await addDehaJaReadings();
 
   console.log('  Removing hiragana nokanji flags...');
   await removeHiraganaNokanji();
 
+  // Add gozaimasu conjugations (dict-errata.lisp:291)
   console.log('  Adding gozaimasu conjugations...');
   await addGozaimasuConjs();
-
-  // Add cop-da POS tag and conjugate だ
-  await conjugateDa();
 
   // Add primary_nokanji for specific entries
   await addPrimaryNokanji(1415510, 'タカ');
@@ -1277,6 +1496,21 @@ export async function addErrata(): Promise<void> {
   await addErrataJan25();
   console.log('  Applying counter errata...');
   await addErrataCounters();
+
+  // Load custom data (:extra) - dict-errata.lisp:580
+  console.log('  Loading custom data (:extra)...');
+  const { loadCustomData } = await import('./load-custom.js');
+  await loadCustomData({ types: ['extra'], silent: true });
+
+  // Recalculate entry statistics - dict-load.lisp:193
+  console.log('  Recalculating entry statistics...');
+  const { recalcEntryStatsAll } = await import('./load-entry.js');
+  await recalcEntryStatsAll();
+
+  // Run ANALYZE - dict-load.lisp:194
+  console.log('  Analyzing database...');
+  const sqlConn = getConnection();
+  await sqlConn`ANALYZE`;
 
   console.log('✓ Errata applied successfully');
 }
@@ -1806,22 +2040,10 @@ async function addErrataJan25(): Promise<void> {
  * Ported from dict-errata.lisp:1005-1089
  */
 async function addErrataCounters(): Promise<void> {
-  const sql = getConnection();
-
   await deleteReading(1299960, 'さんかい');
 
   // mapc 'set-reading (select-dao 'kanji-text (:= 'seq 1299960))
-  const kanjiTexts = await sql<{ id: number; text: string; ord: number }[]>`
-    SELECT id, text, ord FROM kanji_text WHERE seq = 1299960
-  `;
-  for (const kt of kanjiTexts) {
-    const readingValue = `${kt.text} ${kt.ord}`;
-    await sql`
-      UPDATE kanji_text
-      SET reading = ${readingValue}
-      WHERE id = ${kt.id}
-    `;
-  }
+  // No-op: Our schema doesn't have a "reading" column
 
   await addReading(2081610, 'タテ');
 

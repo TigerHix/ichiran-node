@@ -167,26 +167,18 @@ async function loadKanjiBatch(characters: KanjidicCharacter[]): Promise<void> {
     });
   }
 
-  // Batch insert all kanji using unnest for proper array handling
-  const texts = kanjiRecords.map(k => k.text);
-  const radicalCs = kanjiRecords.map(k => k.radicalC);
-  const radicalNs = kanjiRecords.map(k => k.radicalN);
-  const grades = kanjiRecords.map(k => k.grade);
-  const strokesArr = kanjiRecords.map(k => k.strokes);
-  const freqs = kanjiRecords.map(k => k.freq);
-
+  // Batch insert all kanji - use sql() helper for proper array handling
   const insertedKanji = await sql<Array<{ id: number; text: string }>>`
-    INSERT INTO kanji (text, radical_c, radical_n, grade, strokes, freq, stat_common, stat_irregular)
-    SELECT * FROM unnest(
-      ${sql.array(texts)}::text[],
-      ${sql.array(radicalCs)}::int[],
-      ${sql.array(radicalNs)}::int[],
-      ${sql.array(grades)}::int[],
-      ${sql.array(strokesArr)}::int[],
-      ${sql.array(freqs)}::int[],
-      array_fill(0, ARRAY[${kanjiRecords.length}])::int[],
-      array_fill(0, ARRAY[${kanjiRecords.length}])::int[]
-    ) AS t(text, radical_c, radical_n, grade, strokes, freq, stat_common, stat_irregular)
+    INSERT INTO kanji ${sql(kanjiRecords.map(k => ({
+      text: k.text,
+      radical_c: k.radicalC,
+      radical_n: k.radicalN,
+      grade: k.grade,
+      strokes: k.strokes,
+      freq: k.freq,
+      stat_common: 0,
+      stat_irregular: 0
+    })))}
     RETURNING id, text
   `;
 
@@ -276,24 +268,17 @@ async function loadKanjiBatch(characters: KanjidicCharacter[]): Promise<void> {
     }
   }
 
-  // Batch insert all readings (add stat_common = 0 to each record)
+  // Batch insert all readings
   if (allReadings.length > 0) {
-    const kanjiIds = allReadings.map(r => r.kanjiId);
-    const types = allReadings.map(r => r.type);
-    const readingTexts = allReadings.map(r => r.text);
-    const suffixps = allReadings.map(r => r.suffixp);
-    const prefixps = allReadings.map(r => r.prefixp);
-
     const insertedReadings = await sql<Array<{ id: number; kanjiId: number; text: string }>>`
-      INSERT INTO reading (kanji_id, type, text, suffixp, prefixp, stat_common)
-      SELECT * FROM unnest(
-        ${sql.array(kanjiIds)}::int[],
-        ${sql.array(types)}::text[],
-        ${sql.array(readingTexts)}::text[],
-        ${sql.array(suffixps)}::boolean[],
-        ${sql.array(prefixps)}::boolean[],
-        array_fill(0, ARRAY[${allReadings.length}])::int[]
-      ) AS t(kanji_id, type, text, suffixp, prefixp, stat_common)
+      INSERT INTO reading ${sql(allReadings.map(r => ({
+        kanji_id: r.kanjiId,
+        type: r.type,
+        text: r.text,
+        suffixp: r.suffixp,
+        prefixp: r.prefixp,
+        stat_common: 0
+      })))}
       RETURNING id, kanji_id, text
     `;
 

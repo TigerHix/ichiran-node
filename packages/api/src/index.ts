@@ -15,7 +15,7 @@ config();
 
 // Helper to parse connection from env (moved from core)
 function getConnectionFromEnv(): ConnectionSpec | null {
-  const dbUrl = process.env.ICHIRAN_TEST_DB_URL || process.env.ICHIRAN_DB_URL;
+  const dbUrl = process.env.ICHIRAN_DB_URL;
   if (!dbUrl) return null;
 
   try {

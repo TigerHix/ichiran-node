@@ -500,19 +500,86 @@ export class MunicipalityCsvLoader extends CustomSource {
       else if (lastChar === '村') type = 'village';
 
       const typeStr = this.getTypeString(lastChar);
+      const prefectureReading = convertKatakanaToHiragana(prefectureKana);
+      const prefectureRomanized = romanizeWordGeo(prefectureReading);
+      const prefectureTypeStr = this.getTypeString(prefectureKanji[prefectureKanji.length - 1]);
+      const prefecture = `${prefectureRomanized} ${prefectureTypeStr}`;
 
+      // Full municipality entry (with suffix: 市/町/村)
       entries.push({
         id,
         text: municipalityKanji,
         reading: muniReading,
         romanized,
         type,
-        fullName: `${romanized} ${typeStr}`,
+        fullName: `${romanized} ${typeStr}, ${prefecture}`,
         isPrefecture: false
       });
+
+      // Short municipality entry (without suffix) - dict-custom.lisp:171-176
+      // Don't create short version for 道 (Hokkaido)
+      if (lastChar !== '道') {
+        const shortName = this.municipalityShort(municipalityKanji, muniReading);
+        if (shortName) {
+          entries.push({
+            id,
+            text: shortName.text,
+            reading: shortName.reading,
+            romanized: romanizeWordGeo(shortName.reading),
+            type,
+            fullName: `${romanized} ${typeStr}, ${prefecture}`,
+            isPrefecture: false
+          });
+        }
+      }
     }
 
     return entries;
+  }
+
+  /**
+   * Gets short form of municipality by removing suffix
+   * Ported from dict-custom.lisp:117-127 municipality-short
+   *
+   * @param text - Full municipality name (e.g., "札幌市")
+   * @param reading - Full reading (e.g., "さっぽろし")
+   * @returns Short form { text, reading } or null
+   */
+  private municipalityShort(text: string, reading: string): { text: string; reading: string } | null {
+    // Special case: 道 (Hokkaido) - return as-is
+    if (text.endsWith('道')) {
+      return { text, reading };
+    }
+
+    const typeChar = text[text.length - 1];
+    const shortText = text.substring(0, text.length - 1);
+
+    // Type readings for each suffix character (dict-custom.lisp:98-105)
+    const typeReadings: Record<string, string[]> = {
+      '都': ['と'],
+      '道': ['どう'],
+      '府': ['ふ'],
+      '県': ['けん'],
+      '市': ['し'],
+      '町': ['ちょう', 'まち'],
+      '村': ['そん', 'むら'],
+      '区': ['く']
+    };
+
+    const possibleReadings = typeReadings[typeChar];
+    if (!possibleReadings) {
+      return null;
+    }
+
+    // Find which suffix the reading ends with
+    for (const typeSuffix of possibleReadings) {
+      if (reading.endsWith(typeSuffix)) {
+        const shortReading = reading.substring(0, reading.length - typeSuffix.length);
+        return { text: shortText, reading: shortReading };
+      }
+    }
+
+    return null;
   }
 
   /**

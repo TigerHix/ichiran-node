@@ -58,16 +58,4 @@ describe('Custom Data Loading', () => {
       })
     ).resolves.toBeUndefined();
   });
-
-  test('loadCustomData warns about unimplemented loaders', async () => {
-    // Test that municipality and ward loaders show warnings
-    // (They're not implemented yet, just marked as TODO)
-    await loadCustomData({
-      types: ['municipality', 'ward'],
-      silent: true
-    });
-
-    // Should complete without errors even though loaders aren't implemented
-    expect(true).toBe(true);
-  });
 });

@@ -77,6 +77,17 @@ export const createGlossTable = (sql: postgres.Sql) => sql`
 `;
 
 /**
+ * Creates entry_reading_sig table - Signature-based dedupe for conjugated entries
+ * Ensures idempotent conjugation generation across parallel runs
+ */
+export const createEntryReadingSigTable = (sql: postgres.Sql) => sql`
+  CREATE TABLE IF NOT EXISTS entry_reading_sig (
+    sig TEXT PRIMARY KEY,
+    seq INTEGER NOT NULL UNIQUE
+  )
+`;
+
+/**
  * Creates the sense_prop table - Sense properties (POS, misc, field, dial, etc.)
  */
 export const createSensePropTable = (sql: postgres.Sql) => sql`
@@ -110,7 +121,8 @@ export const createConjugationTable = (sql: postgres.Sql) => sql`
     id SERIAL PRIMARY KEY,
     seq INTEGER NOT NULL,
     "from" INTEGER NOT NULL,
-    via INTEGER
+    via INTEGER,
+    via_n INTEGER GENERATED ALWAYS AS (COALESCE(via, -1)) STORED
   )
 `;
 
@@ -124,7 +136,9 @@ export const createConjPropTable = (sql: postgres.Sql) => sql`
     conj_type INTEGER NOT NULL,
     pos TEXT NOT NULL,
     neg BOOLEAN,
-    fml BOOLEAN
+    fml BOOLEAN,
+    neg_i SMALLINT GENERATED ALWAYS AS (CASE WHEN neg THEN 1 WHEN neg IS FALSE THEN 0 ELSE -1 END) STORED,
+    fml_i SMALLINT GENERATED ALWAYS AS (CASE WHEN fml THEN 1 WHEN fml IS FALSE THEN 0 ELSE -1 END) STORED
   )
 `;
 
@@ -143,22 +157,26 @@ export const createConjSourceReadingTable = (sql: postgres.Sql) => sql`
 /**
  * Creates indexes for kanji_text table
  */
-export const createKanjiTextIndexes = (sql: postgres.Sql) => sql.begin(async (sql) => {
+export const createKanjiTextIndexes = async (sql: postgres.Sql) => {
   await sql`CREATE INDEX IF NOT EXISTS kanji_text_seq_idx ON kanji_text (seq)`;
   await sql`CREATE INDEX IF NOT EXISTS kanji_text_ord_idx ON kanji_text (ord)`;
   await sql`CREATE INDEX IF NOT EXISTS kanji_text_text_idx ON kanji_text (text)`;
   await sql`CREATE INDEX IF NOT EXISTS kanji_text_common_idx ON kanji_text (common)`;
-});
+  // Unique constraint to prevent duplicate texts per entry (guards against race conditions)
+  await sql`CREATE UNIQUE INDEX IF NOT EXISTS kanji_text_seq_text_unique_idx ON kanji_text (seq, text)`;
+};
 
 /**
  * Creates indexes for kana_text table
  */
-export const createKanaTextIndexes = (sql: postgres.Sql) => sql.begin(async (sql) => {
+export const createKanaTextIndexes = async (sql: postgres.Sql) => {
   await sql`CREATE INDEX IF NOT EXISTS kana_text_seq_idx ON kana_text (seq)`;
   await sql`CREATE INDEX IF NOT EXISTS kana_text_ord_idx ON kana_text (ord)`;
   await sql`CREATE INDEX IF NOT EXISTS kana_text_text_idx ON kana_text (text)`;
   await sql`CREATE INDEX IF NOT EXISTS kana_text_common_idx ON kana_text (common)`;
-});
+  // Unique constraint to prevent duplicate texts per entry (guards against race conditions)
+  await sql`CREATE UNIQUE INDEX IF NOT EXISTS kana_text_seq_text_unique_idx ON kana_text (seq, text)`;
+};
 
 /**
  * Creates indexes for sense table
@@ -193,24 +211,54 @@ export const createRestrictedReadingsIndexes = (sql: postgres.Sql) => sql`
 /**
  * Creates indexes for conjugation table
  */
-export const createConjugationIndexes = (sql: postgres.Sql) => sql.begin(async (sql) => {
+export const createConjugationIndexes = async (sql: postgres.Sql) => {
   await sql`CREATE INDEX IF NOT EXISTS conjugation_seq_idx ON conjugation (seq)`;
   await sql`CREATE INDEX IF NOT EXISTS conjugation_from_idx ON conjugation ("from")`;
-});
+  // Unique constraint on generated column for clean ON CONFLICT handling
+  await sql`
+    DO $$ 
+    BEGIN
+      IF NOT EXISTS (
+        SELECT 1 FROM pg_constraint WHERE conname = 'conjugation_from_seq_via_n_unique'
+      ) THEN
+        ALTER TABLE conjugation ADD CONSTRAINT conjugation_from_seq_via_n_unique UNIQUE ("from", seq, via_n);
+      END IF;
+    END $$`;
+};
 
 /**
  * Creates indexes for conj_prop table
  */
-export const createConjPropIndexes = (sql: postgres.Sql) => sql`
-  CREATE INDEX IF NOT EXISTS conj_prop_conj_id_idx ON conj_prop (conj_id)
-`;
+export const createConjPropIndexes = async (sql: postgres.Sql) => {
+  await sql`CREATE INDEX IF NOT EXISTS conj_prop_conj_id_idx ON conj_prop (conj_id)`;
+  // Unique constraint on generated columns for clean ON CONFLICT handling
+  await sql`
+    DO $$ 
+    BEGIN
+      IF NOT EXISTS (
+        SELECT 1 FROM pg_constraint WHERE conname = 'conj_prop_unique'
+      ) THEN
+        ALTER TABLE conj_prop ADD CONSTRAINT conj_prop_unique UNIQUE (conj_id, conj_type, pos, neg_i, fml_i);
+      END IF;
+    END $$`;
+};
 
 /**
  * Creates indexes for conj_source_reading table
  */
-export const createConjSourceReadingIndexes = (sql: postgres.Sql) => sql`
-  CREATE INDEX IF NOT EXISTS conj_source_reading_conj_id_text_idx ON conj_source_reading (conj_id, text)
-`;
+export const createConjSourceReadingIndexes = async (sql: postgres.Sql) => {
+  await sql`CREATE INDEX IF NOT EXISTS conj_source_reading_conj_id_text_idx ON conj_source_reading (conj_id, text)`;
+  // Unique constraint for clean ON CONFLICT handling
+  await sql`
+    DO $$ 
+    BEGIN
+      IF NOT EXISTS (
+        SELECT 1 FROM pg_constraint WHERE conname = 'conj_source_reading_unique'
+      ) THEN
+        ALTER TABLE conj_source_reading ADD CONSTRAINT conj_source_reading_unique UNIQUE (conj_id, text, source_text);
+      END IF;
+    END $$`;
+};
 
 /**
  * Creates foreign key constraints for all tables
@@ -470,6 +518,7 @@ export async function initTables(sql: postgres.Sql): Promise<void> {
   await createGlossTable(sql);
   await createSensePropTable(sql);
   await createRestrictedReadingsTable(sql);
+  await createEntryReadingSigTable(sql);
 
   console.log('Creating conjugation tables...');
   await createConjugationTable(sql);

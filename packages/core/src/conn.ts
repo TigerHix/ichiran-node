@@ -85,7 +85,7 @@ export function getQuerySummary() {
 }
 
 export function getConnectionFromEnv(): ConnectionSpec | null {
-  const dbUrl = process.env.ICHIRAN_TEST_DB_URL || process.env.ICHIRAN_DB_URL;
+  const dbUrl = process.env.ICHIRAN_DB_URL;
   if (!dbUrl) return null;
 
   try {
@@ -234,7 +234,7 @@ export function setConnection(spec: ConnectionSpec) {
 export function validateDatabaseSafety(operation: string = 'operation') {
   const spec = getConnectionFromEnv();
   if (!spec) {
-    throw new Error('No database connection configured. Set ICHIRAN_TEST_DB_URL or ICHIRAN_DB_URL environment variable.');
+    throw new Error('No database connection configured. Set ICHIRAN_DB_URL environment variable.');
   }
 
   const dbName = spec.database.toLowerCase();
@@ -244,7 +244,7 @@ export function validateDatabaseSafety(operation: string = 'operation') {
     throw new Error(
       `SAFETY CHECK FAILED: Cannot perform ${operation} on production database 'jmdict'.\n` +
       `Use 'jmdict_test' or another test database instead.\n` +
-      `Current ICHIRAN_DB_URL: ${process.env.ICHIRAN_DB_URL || process.env.ICHIRAN_TEST_DB_URL}`
+      `Current ICHIRAN_DB_URL: ${process.env.ICHIRAN_DB_URL}`
     );
   }
 
@@ -255,7 +255,7 @@ export function getConnection(): postgres.Sql {
   if (!connection) {
     const spec = getConnectionFromEnv();
     if (!spec) {
-      throw new Error('No database connection configured. Set ICHIRAN_TEST_DB_URL or ICHIRAN_DB_URL environment variable.');
+      throw new Error('No database connection configured. Set ICHIRAN_DB_URL environment variable.');
     }
     connection = createSqlConnection(spec);
   }

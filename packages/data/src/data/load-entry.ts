@@ -6,6 +6,8 @@
 import { XMLParser } from 'fast-xml-parser';
 import type postgres from 'postgres';
 import { getConnection } from '@ichiran/core';
+import { conjugateEntryOuter, loadSecondaryConjugations } from './conjugate.js';
+import { POS_WITH_CONJ_RULES } from './conj-rules.js';
 
 /**
  * XML parser configuration
@@ -337,20 +339,23 @@ export async function loadEntry(
   }
 
   // Handle ifExists option
-  if (options.ifExists === 'skip') {
-    const existing = await sql`SELECT seq FROM entry WHERE seq = ${seq}`;
-    if (existing.length > 0) {
-      return undefined;
-    }
-  } else if (options.ifExists === 'overwrite') {
+  if (options.ifExists === 'overwrite') {
     await sql`DELETE FROM entry WHERE seq = ${seq}`;
   }
+  // Note: 'skip' is handled by ON CONFLICT below (more efficient than separate SELECT)
 
-  // Create main entry record
-  await sql`
-    INSERT INTO entry (seq, content, root_p)
-    VALUES (${seq}, ${content}, true)
+  // Create main entry record (idempotent - uses ON CONFLICT for reloads)
+  const insertResult = await sql`
+    INSERT INTO entry (seq, content, root_p, n_kanji, n_kana, primary_nokanji)
+    VALUES (${seq}, ${content}, true, 0, 0, false)
+    ON CONFLICT (seq) DO NOTHING
+    RETURNING seq
   `;
+  
+  // If nothing was inserted (conflict), entry already exists
+  if (insertResult.length === 0) {
+    return undefined; // Handles ifExists='skip' case
+  }
 
   // Extract and insert readings
   const kanjiNodes = asArray(entry.k_ele);
@@ -361,19 +366,22 @@ export async function loadEntry(
   await insertReadings(kanaNodes, 'reb', 'kana_text', seq, 're_pri', sql);
   await insertSenses(senseNodes, seq, sql);
 
-  // TODO: Implement conjugation generation
-  // if (options.conjugateP) {
-  //   const posi = await sql`
-  //     SELECT DISTINCT text FROM sense_prop
-  //     WHERE seq = ${seq} AND tag = 'pos'
-  //       AND text IN (${sql(POS_WITH_CONJ_RULES)})
-  //   `;
-  //
-  //   if (posi.length > 0) {
-  //     await conjugateEntryOuter(seq, posi.map(p => p.text));
-  //     await loadSecondaryConjugations([seq]);
-  //   }
-  // }
+  // Note: Entry statistics (n_kanji, n_kana) are recalculated in bulk at the end
+  // of load-jmdict and apply-errata via recalcEntryStatsAll() - no need for per-entry recalc
+
+  // Conjugate entry if requested (dict-load.lisp:151-158)
+  if (options.conjugateP) {
+    const posi = await sql<{ text: string }[]>`
+      SELECT DISTINCT text FROM sense_prop
+      WHERE seq = ${seq} AND tag = 'pos'
+        AND text = ANY(${sql.array(POS_WITH_CONJ_RULES)})
+    `;
+
+    if (posi.length > 0) {
+      await conjugateEntryOuter(seq, { asPosi: posi.map(p => p.text) });
+      await loadSecondaryConjugations({ from: [seq] });
+    }
+  }
 
   return seq;
 }

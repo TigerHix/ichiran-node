@@ -18,6 +18,17 @@ import {
 import { createEntrySeqGenerator, resetEntrySeqGenerator } from './schema.js';
 
 /**
+ * Normalize a string to NFKC for consistent comparison
+ * Mirrors Lisp's Unicode normalization behavior
+ */
+function normalizeNFKC(text: string): string {
+  return text.normalize('NFKC').trim();
+}
+
+// Note: DB-level deduplication uses SQL INTERSECT queries (dict-load.lisp:387-408)
+// Cache still uses signature-based keys for fast in-memory lookups
+
+/**
  * In-memory cache of existing entry readings for fast duplicate detection
  * Maps "kanji1,kanji2|kana1,kana2" -> seq number
  */
@@ -26,10 +37,11 @@ class ReadingsCache {
 
   /**
    * Builds cache key from kanji and kana readings
+   * Uses NFKC normalization for consistency
    */
   private static makeKey(kanjiReadings: string[], kanaReadings: string[]): string {
-    const kanjiPart = kanjiReadings.sort().join(',');
-    const kanaPart = kanaReadings.sort().join(',');
+    const kanjiPart = kanjiReadings.map(normalizeNFKC).sort().join(',');
+    const kanaPart = kanaReadings.map(normalizeNFKC).sort().join(',');
     return `${kanjiPart}|${kanaPart}`;
   }
 
@@ -97,30 +109,26 @@ export async function getNextSeq(): Promise<number> {
 }
 
 /**
- * Allocates a batch of sequence numbers at once (thread-safe)
- * Returns the starting sequence number and count
+ * Allocates a batch of sequence numbers at once (concurrency-safe)
+ * Returns an array of actual sequence values reserved for this batch
  */
-export async function allocateSeqBatch(count: number): Promise<number> {
-  if (count <= 0) return 0;
+export async function allocateSeqBatch(count: number): Promise<number[]> {
+  if (count <= 0) return [];
   const sql = getConnection();
 
-  // Get the last value after advancing by count
-  const result = await sql<{ lastValue: number }[]>`
-    SELECT last_value FROM (
-      SELECT nextval('entry_seq_generator') as last_value
-      FROM generate_series(1, ${count})
-    ) AS batch
-    ORDER BY last_value DESC
-    LIMIT 1
+  // Get actual nextval() for each sequence - these are properly reserved
+  const result = await sql<{ seq: number }[]>`
+    SELECT nextval('entry_seq_generator') as seq
+    FROM generate_series(1, ${count})
   `;
 
-  // Return the starting value (last - count + 1)
-  return result[0].lastValue - count + 1;
+  return result.map(r => r.seq);
 }
 
 /**
  * Gets all readings (kanji + kana) for an entry
  * Ported from dict-errata.lisp:257-261 get-all-readings
+ * Returns NFKC-normalized readings for consistent comparison
  */
 export async function getAllReadings(seq: number): Promise<string[]> {
   const sql = getConnection();
@@ -129,7 +137,7 @@ export async function getAllReadings(seq: number): Promise<string[]> {
     UNION
     SELECT text FROM kana_text WHERE seq = ${seq}
   `;
-  return results.map(r => r.text);
+  return results.map(r => normalizeNFKC(r.text));
 }
 
 /**
@@ -180,6 +188,13 @@ export async function conjugateEntryInner(
 
   const conjMatrix: ConjugationMatrix = new Map();
 
+  // Load restricted readings (Lisp: only allowed kanji↔kana pairs)
+  const restrictedPairs = await sql<{ reading: string; text: string }[]>`
+    SELECT reading, text FROM restricted_readings
+    WHERE seq = ${seq}
+  `;
+  const hasRestrictions = restrictedPairs.length > 0;
+
   for (const pos of posi) {
     const posId = getPosIndex(pos);
     if (!posId) continue;
@@ -209,6 +224,16 @@ export async function conjugateEntryInner(
 
         const key = `${posId},${conjId}`;
         const conjText = constructConjugation(reading.text, rule);
+
+        // Apply restricted readings filter (Lisp: only allowed kanji↔kana pairs)
+        // If entry has restrictions and this is a kanji reading, check if it pairs with any allowed kana
+        if (hasRestrictions && reading.kanjiFlag) {
+          // Check if this kanji reading pairs with any allowed kana reading
+          const hasAllowedPair = restrictedPairs.some(rp => rp.text === reading.text);
+          if (!hasAllowedPair) {
+            continue; // Skip this reading - not in allowed kanji set
+          }
+        }
 
         // Initialize 2x2 matrix if not exists
         if (!conjMatrix.has(key)) {
@@ -249,76 +274,174 @@ export async function conjugateEntryOuter(
     via?: number;        // Intermediate conjugation (for secondary conjugations)
     conjTypes?: number[]; // Filter to specific conjugation types
     asPosi?: string[];    // Override POS tags
+    cache?: ReadingsCache; // Optional cache for batch operations
   } = {}
 ): Promise<void> {
-  const { via, conjTypes, asPosi } = options;
+  const { via, conjTypes, asPosi, cache } = options;
 
-  // For secondary conjugations, conjugate from the intermediate form
-  const seq = via || seqFrom;
+  // Use cached batch version if cache provided
+  if (cache) {
+    const seq = via || seqFrom;
+    const conjMatrix = await conjugateEntryInner(seq, { conjTypes, asPosi });
+    const originalReadings = await getAllReadings(seq);
 
-  const conjMatrix = await conjugateEntryInner(seq, { conjTypes, asPosi });
-  const originalReadings = await getAllReadings(seq);
-
-  // First pass: collect all conjugations to insert and count them
-  interface ConjToInsert {
-    readings: ConjugatedReading[];
-    pos: string;
-    conjType: number;
-    neg: boolean | null;
-    fml: boolean | null;
-  }
-  const toInsert: ConjToInsert[] = [];
-
-  for (const [key, matrix] of conjMatrix.entries()) {
-    const [posIdStr, conjIdStr] = key.split(',');
-    const posId = parseInt(posIdStr);
-    const conjId = parseInt(conjIdStr);
-    const pos = getPosByIndex(posId);
-    if (!pos) continue;
-
-    // Check if negative/formal forms are missing
-    const ignoreNeg = !matrix[1][0].length && !matrix[1][1].length;
-    const ignoreFml = !matrix[0][1].length && !matrix[1][1].length;
-
-    // Process each cell of the 2x2 matrix
-    for (let ii = 0; ii < 4; ii++) {
-      const neg = ii >= 2;
-      const fml = ii % 2 === 1;
-      const negIdx = neg ? 1 : 0;
-      const fmlIdx = fml ? 1 : 0;
-
-      let readings = matrix[negIdx][fmlIdx];
-
-      // Filter out readings that match the original entry
-      readings = readings.filter(r => !originalReadings.includes(r.text));
-
-      if (readings.length === 0) continue;
-
-      toInsert.push({
-        readings,
-        pos,
-        conjType: conjId,
-        neg: ignoreNeg ? null : neg,
-        fml: ignoreFml ? null : fml
-      });
+    interface ConjToInsert {
+      readings: ConjugatedReading[];
+      pos: string;
+      conjType: number;
+      neg: boolean | null;
+      fml: boolean | null;
     }
-  }
+    const toInsert: ConjToInsert[] = [];
 
-  // Allocate all sequences at once (single DB roundtrip)
-  const startSeq = await allocateSeqBatch(toInsert.length);
+    for (const [key, matrix] of conjMatrix.entries()) {
+      const [posIdStr, conjIdStr] = key.split(',');
+      const posId = parseInt(posIdStr);
+      const conjId = parseInt(conjIdStr);
+      const pos = getPosByIndex(posId);
+      if (!pos) continue;
 
-  // Second pass: insert with pre-allocated sequences
-  for (let i = 0; i < toInsert.length; i++) {
-    const conj = toInsert[i];
-    await insertConjugation(conj.readings, {
-      seq: startSeq + i,
-      from: seqFrom,
-      pos: conj.pos,
-      conjType: conj.conjType,
-      neg: conj.neg,
-      fml: conj.fml,
-      via: via || null
-    });
+      const ignoreNeg = !matrix[1][0].length && !matrix[1][1].length;
+      const ignoreFml = !matrix[0][1].length && !matrix[1][1].length;
+
+      for (let ii = 0; ii < 4; ii++) {
+        const neg = ii >= 2;
+        const fml = ii % 2 === 1;
+        const negIdx = neg ? 1 : 0;
+        const fmlIdx = fml ? 1 : 0;
+
+        let readings = matrix[negIdx][fmlIdx];
+        readings = readings.filter(r => !originalReadings.includes(normalizeNFKC(r.text)));
+
+        if (readings.length === 0) continue;
+        
+        // Skip negative-stem (type 52) for v5r-i (ある) - Lisp alignment
+        // v5r-i has irregular negative, so negative-stem should not be generated
+        if (conjId === 52 && pos === 'v5r-i') continue;
+
+        toInsert.push({
+          readings,
+          pos,
+          conjType: conjId,
+          neg: ignoreNeg ? null : neg,
+          fml: ignoreFml ? null : fml
+        });
+      }
+    }
+
+    // Use cache-based batch processing
+    const itemsWithSeq: Array<ConjToInsert & { seq: number; isNew: boolean }> = [];
+    const newEntryIndices: number[] = [];
+    
+    for (let i = 0; i < toInsert.length; i++) {
+      const conj = toInsert[i];
+      const uniqueKanjiReadings = [...new Set(conj.readings.filter(r => r.kanjiFlag).map(r => r.text))];
+      const uniqueKanaReadings = [...new Set(conj.readings.filter(r => !r.kanjiFlag).map(r => r.text))];
+      
+      const existingSeq = cache.findExisting(uniqueKanjiReadings, uniqueKanaReadings);
+      if (existingSeq !== null) {
+        itemsWithSeq.push({ ...conj, seq: existingSeq, isNew: false });
+      } else {
+        newEntryIndices.push(i);
+      }
+    }
+    
+    const allocatedSeqs = newEntryIndices.length > 0 ? await allocateSeqBatch(newEntryIndices.length) : [];
+    for (let i = 0; i < newEntryIndices.length; i++) {
+      const idx = newEntryIndices[i];
+      const conj = toInsert[idx];
+      const assignedSeq = allocatedSeqs[i];
+      
+      itemsWithSeq.push({ ...conj, seq: assignedSeq, isNew: true });
+    }
+    
+    // Insert batch (DB signature upsert will handle dedupe and count actual inserts)
+    await insertConjugationsBatch(itemsWithSeq.map(item => ({
+      readings: item.readings,
+      options: {
+        seq: item.seq,
+        from: seqFrom,
+        pos: item.pos,
+        conjType: item.conjType,
+        neg: item.neg,
+        fml: item.fml,
+        via: via || null
+      },
+      isNew: item.isNew
+    })), cache);
+    
+    // Publish to cache AFTER successful insert (Lisp semantics: only real rows exist)
+    for (const item of itemsWithSeq) {
+      const uniqueKanjiReadings = [...new Set(item.readings.filter(r => r.kanjiFlag).map(r => r.text))];
+      const uniqueKanaReadings = [...new Set(item.readings.filter(r => !r.kanjiFlag).map(r => r.text))];
+      cache.add(item.seq, uniqueKanjiReadings, uniqueKanaReadings);
+    }
+  } else {
+    // Non-cached version: one-at-a-time for compatibility
+    const seq = via || seqFrom;
+    const conjMatrix = await conjugateEntryInner(seq, { conjTypes, asPosi });
+    const originalReadings = await getAllReadings(seq);
+
+    interface ConjToInsert {
+      readings: ConjugatedReading[];
+      pos: string;
+      conjType: number;
+      neg: boolean | null;
+      fml: boolean | null;
+    }
+    const toInsert: ConjToInsert[] = [];
+
+    for (const [key, matrix] of conjMatrix.entries()) {
+      const [posIdStr, conjIdStr] = key.split(',');
+      const posId = parseInt(posIdStr);
+      const conjId = parseInt(conjIdStr);
+      const pos = getPosByIndex(posId);
+      if (!pos) continue;
+
+      const ignoreNeg = !matrix[1][0].length && !matrix[1][1].length;
+      const ignoreFml = !matrix[0][1].length && !matrix[1][1].length;
+
+      for (let ii = 0; ii < 4; ii++) {
+        const neg = ii >= 2;
+        const fml = ii % 2 === 1;
+        const negIdx = neg ? 1 : 0;
+        const fmlIdx = fml ? 1 : 0;
+
+        let readings = matrix[negIdx][fmlIdx];
+        readings = readings.filter(r => !originalReadings.includes(normalizeNFKC(r.text)));
+
+        if (readings.length === 0) continue;
+        
+        // Skip negative-stem (type 52) for v5r-i (ある) - Lisp alignment
+        // v5r-i has irregular negative, so negative-stem should not be generated
+        if (conjId === 52 && pos === 'v5r-i') continue;
+
+        toInsert.push({
+          readings,
+          pos,
+          conjType: conjId,
+          neg: ignoreNeg ? null : neg,
+          fml: ignoreFml ? null : fml
+        });
+      }
+    }
+
+    let nextSeq = await getNextSeq();
+    for (const conj of toInsert) {
+      const created = await insertConjugation(conj.readings, {
+        seq: nextSeq,
+        from: seqFrom,
+        pos: conj.pos,
+        conjType: conj.conjType,
+        neg: conj.neg,
+        fml: conj.fml,
+        via: via || null
+      });
+      
+      if (created) {
+        nextSeq = await getNextSeq();
+      }
+    }
   }
 }
 
@@ -424,8 +547,8 @@ export async function insertConjugation(
   } else {
     // Create new entry (with conflict handling for parallel execution)
     await sql`
-      INSERT INTO entry (seq, content)
-      VALUES (${seq}, '')
+      INSERT INTO entry (seq, content, root_p, n_kanji, n_kana, primary_nokanji)
+      VALUES (${seq}, '', false, 0, 0, false)
       ON CONFLICT (seq) DO NOTHING
     `;
 
@@ -435,31 +558,58 @@ export async function insertConjugation(
                        && (!neg || neg === null)
                        && (!fml || fml === null);
 
-    // Batch insert kanji readings (dict-load.lisp:411-414)
-    if (uniqueKanjiReadings.length > 0) {
-      const kanjiRows = uniqueKanjiReadings.map((text, i) => ({
+    // Sort readings lexicographically and deduplicate to get deterministic ord
+    // (dict-load.lisp:379, 411-418)
+    const kanjiReadingsOrdered: Array<{ text: string; ord: number }> = [];
+    const kanaReadingsOrdered: Array<{ text: string; ord: number }> = [];
+    const seenKanji = new Set<string>();
+    const seenKana = new Set<string>();
+
+    for (const reading of sortedReadings) {
+      if (reading.kanjiFlag) {
+        if (!seenKanji.has(reading.text)) {
+          kanjiReadingsOrdered.push({ text: reading.text, ord: kanjiReadingsOrdered.length });
+          seenKanji.add(reading.text);
+        }
+      } else {
+        if (!seenKana.has(reading.text)) {
+          kanaReadingsOrdered.push({ text: reading.text, ord: kanaReadingsOrdered.length });
+          seenKana.add(reading.text);
+        }
+      }
+    }
+
+    // Batch insert kanji readings
+    if (kanjiReadingsOrdered.length > 0) {
+      const kanjiRows = kanjiReadingsOrdered.map(({ text, ord }) => ({
         seq,
         text,
-        ord: i,
+        ord,
         common: null,
-        conjugateP
+        commonTags: '',
+        conjugateP,
+        nokanji: false
       }));
       await sql`
-        INSERT INTO kanji_text ${sql(kanjiRows, 'seq', 'text', 'ord', 'common', 'conjugateP')}
+        INSERT INTO kanji_text ${sql(kanjiRows, 'seq', 'text', 'ord', 'common', 'commonTags', 'conjugateP', 'nokanji')}
+        ON CONFLICT (seq, text) DO NOTHING
       `;
     }
 
-    // Batch insert kana readings (dict-load.lisp:415-418)
-    if (uniqueKanaReadings.length > 0) {
-      const kanaRows = uniqueKanaReadings.map((text, i) => ({
+    // Batch insert kana readings
+    if (kanaReadingsOrdered.length > 0) {
+      const kanaRows = kanaReadingsOrdered.map(({ text, ord }) => ({
         seq,
         text,
-        ord: i,
+        ord,
         common: null,
-        conjugateP
+        commonTags: '',
+        conjugateP,
+        nokanji: false
       }));
       await sql`
-        INSERT INTO kana_text ${sql(kanaRows, 'seq', 'text', 'ord', 'common', 'conjugateP')}
+        INSERT INTO kana_text ${sql(kanaRows, 'seq', 'text', 'ord', 'common', 'commonTags', 'conjugateP', 'nokanji')}
+        ON CONFLICT (seq, text) DO NOTHING
       `;
     }
   }
@@ -537,6 +687,7 @@ export async function insertConjugation(
     await sql`
       INSERT INTO conj_source_reading (conj_id, text, source_text)
       VALUES ${sql(newSourceReadings.map(([text, sourceText]) => [conjId, text, sourceText]))}
+      ON CONFLICT (conj_id, text, source_text) DO NOTHING
     `;
   }
 
@@ -579,6 +730,10 @@ async function conjugateEntryOuterWithCache(seq: number, cache: ReadingsCache): 
       readings = readings.filter(r => !originalReadings.includes(r.text));
 
       if (readings.length === 0) continue;
+      
+      // Skip negative-stem (type 52) for v5r-i (ある) - Lisp alignment
+      // v5r-i has irregular negative, so negative-stem should not be generated
+      if (conjId === 52 && pos === 'v5r-i') continue;
 
       toInsert.push({
         readings,
@@ -590,33 +745,82 @@ async function conjugateEntryOuterWithCache(seq: number, cache: ReadingsCache): 
     }
   }
 
-  // Allocate all sequences at once
-  const startSeq = await allocateSeqBatch(toInsert.length);
-
-  // Use batch insert for better performance (same as loadSecondaryConjugations)
-  const batchResults = await insertConjugationsBatch(toInsert.map((conj, i) => ({
-    readings: conj.readings,
-    options: {
-      seq: startSeq + i,
-      from: seq,
-      pos: conj.pos,
-      conjType: conj.conjType,
-      neg: conj.neg,
-      fml: conj.fml,
-      via: null
+  // Batch check cache and allocate sequences deterministically
+  const itemsWithSeq: Array<ConjToInsert & { seq: number; isNew: boolean }> = [];
+  let cacheHits = 0;
+  let newEntries = 0;
+  
+  // First pass: identify cache hits vs new entries
+  const newEntryIndices: number[] = [];
+  for (let i = 0; i < toInsert.length; i++) {
+    const conj = toInsert[i];
+    const uniqueKanjiReadings = [...new Set(conj.readings.filter(r => r.kanjiFlag).map(r => r.text))];
+    const uniqueKanaReadings = [...new Set(conj.readings.filter(r => !r.kanjiFlag).map(r => r.text))];
+    
+    const existingSeq = cache.findExisting(uniqueKanjiReadings, uniqueKanaReadings);
+    if (existingSeq !== null) {
+      // Cache hit - reuse existing seq
+      itemsWithSeq.push({ ...conj, seq: existingSeq, isNew: false });
+      cacheHits++;
+    } else {
+      // New entry needed - mark index for sequence allocation
+      newEntryIndices.push(i);
     }
+  }
+  
+  // Allocate actual sequences for new entries (concurrency-safe)
+  const allocatedSeqs = newEntryIndices.length > 0 ? await allocateSeqBatch(newEntryIndices.length) : [];
+  
+  // Second pass: assign allocated sequences to new entries in order
+  const newEntryIndexSet = new Set(newEntryIndices);
+  let seqIdx = 0;
+  for (let i = 0; i < toInsert.length; i++) {
+    if (newEntryIndexSet.has(i)) {
+      const conj = toInsert[i];
+      const assignedSeq = allocatedSeqs[seqIdx];
+      seqIdx++;
+      
+      itemsWithSeq.push({ ...conj, seq: assignedSeq, isNew: true });
+      newEntries++;
+    }
+  }
+  
+  // Batch insert using deterministic sequences (DB signature upsert will handle dedupe)
+  const actualNewEntries = await insertConjugationsBatch(itemsWithSeq.map(item => ({
+    readings: item.readings,
+    options: {
+      seq: item.seq,
+      from: seq,
+      pos: item.pos,
+      conjType: item.conjType,
+      neg: item.neg,
+      fml: item.fml,
+      via: null
+    },
+    isNew: item.isNew
   })), cache);
+  
+  // Publish to cache AFTER successful insert (Lisp semantics: only real rows exist)
+  for (const item of itemsWithSeq) {
+    const uniqueKanjiReadings = [...new Set(item.readings.filter(r => r.kanjiFlag).map(r => r.text))];
+    const uniqueKanaReadings = [...new Set(item.readings.filter(r => !r.kanjiFlag).map(r => r.text))];
+    cache.add(item.seq, uniqueKanjiReadings, uniqueKanaReadings);
+  }
 
-  return { cacheHits: batchResults.cacheHits, newEntries: batchResults.newEntries };
+  return { cacheHits, newEntries: actualNewEntries };
 }
 
 /**
  * Loads primary conjugations for all conjugatable entries
  * Ported from dict-load.lisp:425-433 load-conjugations
  * Optimized with in-memory cache for duplicate detection
+ * 
+ * @param options - Optional configuration
+ * @param options.limit - Maximum number of entries to process (for testing)
  */
-export async function loadConjugations(): Promise<void> {
+export async function loadConjugations(options: { limit?: number } = {}): Promise<void> {
   const sql = getConnection();
+  const { limit } = options;
 
   // Initialize or reset the sequence for conjugated entry seq numbers
   console.log('Initializing entry sequence generator...');
@@ -628,18 +832,21 @@ export async function loadConjugations(): Promise<void> {
   await cache.initialize();
 
   console.log('Finding conjugatable entries...');
-  const seqs = await sql<{ seq: number }[]>`
+  const allSeqs = await sql<{ seq: number }[]>`
     SELECT DISTINCT seq FROM sense_prop
     WHERE seq NOT IN ${sql(DO_NOT_CONJUGATE_SEQ)}
       AND tag = 'pos'
       AND text IN ${sql(POS_WITH_CONJ_RULES)}
   `;
 
-  console.log(`Processing ${seqs.length} entries...`);
+  // Apply limit if specified
+  const seqs = limit ? allSeqs.slice(0, limit) : allSeqs;
+
+  console.log(`Processing ${seqs.length}${limit ? ` (limited from ${allSeqs.length})` : ''} entries...`);
   const startTime = Date.now();
 
-  // Parallel loading configuration (matching load-jmdict pattern)
-  const parallelism = 10;  // Process 10 entries in parallel
+  // Parallel processing is OK now - each entry's conjugations are processed atomically
+  const parallelism = 10;
   let batch: number[] = [];
   let count = 0;
   let errors = 0;
@@ -717,6 +924,7 @@ export async function loadConjugations(): Promise<void> {
 
 /**
  * Batch insert multiple conjugations with true batch DB operations
+ * FIXED: Now creates conjugation links even when reusing existing entries (cache hits)
  */
 async function insertConjugationsBatch(
   batch: Array<{
@@ -730,143 +938,311 @@ async function insertConjugationsBatch(
       fml: boolean | null;
       via: number | null;
     };
+    isNew: boolean;
   }>,
-  cache: ReadingsCache
-): Promise<{ cacheHits: number; newEntries: number }> {
+  _cache: ReadingsCache
+): Promise<number> {
   const sql = getConnection();
-  let cacheHits = 0;
-  let newEntries = 0;
 
-  // Filter out cache hits
-  const toInsert = batch.filter(({ readings, options }) => {
-    const uniqueKanjiReadings = [...new Set(readings.filter(r => r.kanjiFlag).map(r => r.text))];
-    const uniqueKanaReadings = [...new Set(readings.filter(r => !r.kanjiFlag).map(r => r.text))];
+  let actualNewEntries = 0;
 
-    if (cache.findExisting(uniqueKanjiReadings, uniqueKanaReadings) !== null) {
-      cacheHits++;
-      return false;
-    }
-
-    // Add to cache with the seq we'll be using
-    cache.add(options.seq, uniqueKanjiReadings, uniqueKanaReadings);
-    return true;
-  });
-
-  if (toInsert.length === 0) {
-    return { cacheHits, newEntries: 0 };
-  }
-
-  newEntries = toInsert.length;
-
-  // Batch INSERT entries (entry table only has seq, content will be empty string)
-  const entryValues = toInsert.map(({ options }) => ({
-    seq: options.seq,
-    content: '',
-    rootP: false,
-    nKanji: 0,
-    nKana: 0,
-    primaryNokanji: false,
-  }));
-  await sql`
-    INSERT INTO entry ${sql(entryValues)}
-    ON CONFLICT DO NOTHING
-  `;
-
-  // Batch INSERT text records
-  const kanjiTexts: any[] = [];
-  const kanaTexts: any[] = [];
-
-  for (const { readings, options } of toInsert) {
-    // Get unique readings
-    const uniqueKanjiReadings = [...new Set(readings.filter(r => r.kanjiFlag).map(r => r.text))];
-    const uniqueKanaReadings = [...new Set(readings.filter(r => !r.kanjiFlag).map(r => r.text))];
-
-    // Determine if this conjugation can be further conjugated
-    // Only plain affirmative forms (neg=false/null, fml=false/null) can be secondarily conjugated
-    const conjugateP = SECONDARY_CONJUGATION_TYPES_FROM.includes(options.conjType)
-                       && (!options.neg || options.neg === null)
-                       && (!options.fml || options.fml === null);
-
-    // Use sequential indices for ord, not original reading ord
-    for (let i = 0; i < uniqueKanjiReadings.length; i++) {
-      kanjiTexts.push({
-        seq: options.seq,
-        text: uniqueKanjiReadings[i],
-        ord: i,
-        common: null,
-        conjugateP
+  // Wrap entire batch in transaction for atomicity and FK integrity
+  await sql.begin(async (tx) => {
+    // DB-backed dedupe using SQL queries (matches Lisp dict-load.lisp:387-408)
+    const dedupeResults: Array<{
+      item: typeof batch[0];
+      tentativeSeq: number;
+      canonicalSeq: number;
+      isNew: boolean;
+    }> = [];
+    
+    for (const item of batch) {
+      const { readings, options } = item;
+      const uniqueKanjiReadings = [...new Set(readings.filter(r => r.kanjiFlag).map(r => r.text))];
+      const uniqueKanaReadings = [...new Set(readings.filter(r => !r.kanjiFlag).map(r => r.text))];
+      
+      // Find existing entries with these readings (SQL INTERSECT)
+      let seqCandidates: number[];
+      
+      if (uniqueKanjiReadings.length > 0) {
+        const results = await tx<{ seq: number }[]>`
+          SELECT seq FROM kanji_text
+          WHERE text IN ${tx(uniqueKanjiReadings)}
+          GROUP BY seq
+          HAVING COUNT(id) = ${uniqueKanjiReadings.length}
+          INTERSECT
+          SELECT seq FROM kana_text
+          WHERE text IN ${tx(uniqueKanaReadings)}
+          GROUP BY seq
+          HAVING COUNT(id) = ${uniqueKanaReadings.length}
+          ORDER BY seq
+        `;
+        seqCandidates = results.map(r => r.seq);
+      } else {
+        const results = await tx<{ seq: number }[]>`
+          SELECT r.seq
+          FROM kana_text r
+          LEFT JOIN kanji_text k ON r.seq = k.seq
+          WHERE k.text IS NULL
+            AND r.text IN ${tx(uniqueKanaReadings)}
+          GROUP BY r.seq
+          HAVING COUNT(r.id) = ${uniqueKanaReadings.length}
+        `;
+        seqCandidates = results.map(r => r.seq).sort((a, b) => a - b);
+      }
+      
+      // Don't self-conjugate
+      seqCandidates = seqCandidates.filter(s => s !== options.from && s !== options.via);
+      
+      let canonicalSeq: number;
+      let isNew: boolean;
+      
+      if (seqCandidates.length > 0) {
+        // Reuse existing entry
+        canonicalSeq = seqCandidates[0];
+        isNew = false;
+      } else {
+        // Will create new entry
+        canonicalSeq = options.seq;
+        isNew = true;
+      }
+      
+      dedupeResults.push({
+        item: { ...item, options: { ...options, seq: canonicalSeq } },
+        tentativeSeq: options.seq,
+        canonicalSeq,
+        isNew
       });
     }
+    
+    // Separate based on actual DB state
+    const toInsertNew = dedupeResults.filter(r => r.isNew).map(r => r.item);
+    const toReuseExisting = dedupeResults.filter(r => !r.isNew).map(r => r.item);
 
-    for (let i = 0; i < uniqueKanaReadings.length; i++) {
-      kanaTexts.push({
+    // Part 1: Create new entries with text records
+    if (toInsertNew.length > 0) {
+      // Batch INSERT entries and count actual inserts
+      const entryValues = toInsertNew.map(({ options }) => ({
         seq: options.seq,
-        text: uniqueKanaReadings[i],
-        ord: i,
-        common: null,
-        conjugateP
-      });
+        content: '',
+        root_p: false,
+        n_kanji: 0,
+        n_kana: 0,
+        primary_nokanji: false,
+      }));
+      const insertedEntries = await tx`
+        INSERT INTO entry ${tx(entryValues)}
+        ON CONFLICT DO NOTHING
+        RETURNING 1
+      `;
+      actualNewEntries = insertedEntries.length;
+
+    // Batch INSERT text records
+    const kanjiTexts: any[] = [];
+    const kanaTexts: any[] = [];
+
+    for (const { readings, options } of toInsertNew) {
+      // Sort readings lexicographically by (ord, onum) to match Lisp (dict-load.lisp:379)
+      const sortedReadings = [...readings].sort(lexCompare);
+
+      // Separate and deduplicate while preserving sorted order
+      const kanjiReadings: Array<{ text: string; ord: number }> = [];
+      const kanaReadings: Array<{ text: string; ord: number }> = [];
+      const seenKanji = new Set<string>();
+      const seenKana = new Set<string>();
+
+      for (const reading of sortedReadings) {
+        if (reading.kanjiFlag) {
+          if (!seenKanji.has(reading.text)) {
+            kanjiReadings.push({ text: reading.text, ord: kanjiReadings.length });
+            seenKanji.add(reading.text);
+          }
+        } else {
+          if (!seenKana.has(reading.text)) {
+            kanaReadings.push({ text: reading.text, ord: kanaReadings.length });
+            seenKana.add(reading.text);
+          }
+        }
+      }
+
+      // Determine if this conjugation can be further conjugated
+      // Ported from dict-load.lisp:415 - only checks conj-type
+      const conjugateP = SECONDARY_CONJUGATION_TYPES_FROM.includes(options.conjType);
+
+      // Insert with deterministic ord based on sorted position
+      for (const { text, ord } of kanjiReadings) {
+        kanjiTexts.push({
+          seq: options.seq,
+          text,
+          ord,
+          common: null,
+          commonTags: '',
+          conjugateP,
+          nokanji: false
+        });
+      }
+
+      for (const { text, ord } of kanaReadings) {
+        kanaTexts.push({
+          seq: options.seq,
+          text,
+          ord,
+          common: null,
+          commonTags: '',
+          conjugateP,
+          nokanji: false
+        });
+      }
     }
-  }
 
-  if (kanjiTexts.length > 0) {
-    await sql`INSERT INTO kanji_text ${sql(kanjiTexts)} ON CONFLICT DO NOTHING`;
-  }
-  if (kanaTexts.length > 0) {
-    await sql`INSERT INTO kana_text ${sql(kanaTexts)} ON CONFLICT DO NOTHING`;
-  }
+      if (kanjiTexts.length > 0) {
+        await tx`INSERT INTO kanji_text ${tx(kanjiTexts)} 
+          ON CONFLICT (seq, text) DO NOTHING`;
+      }
+      if (kanaTexts.length > 0) {
+        await tx`INSERT INTO kana_text ${tx(kanaTexts)} 
+          ON CONFLICT (seq, text) DO NOTHING`;
+      }
+    }
 
-  // Batch INSERT conjugation records and get IDs
-  const conjValues = toInsert.map(({ options }) => ({
-    seq: options.seq,
-    from: options.from,
-    via: options.via,
-  }));
-  const conjResults = await sql`
-    INSERT INTO conjugation ${sql(conjValues)}
-    ON CONFLICT DO NOTHING
-    RETURNING id, seq
-  `;
+    // Ensure entry rows exist for reused seqs (FK integrity for conjugation links)
+    if (toReuseExisting.length > 0) {
+      const reuseEntryValues = toReuseExisting.map(({ options }) => ({
+        seq: options.seq,
+        content: '',
+        root_p: false,
+        n_kanji: 0,
+        n_kana: 0,
+        primary_nokanji: false,
+      }));
+      await tx`
+        INSERT INTO entry ${tx(reuseEntryValues)}
+        ON CONFLICT DO NOTHING
+      `;
+    }
 
-  // Create map of seq -> conj_id
-  const seqToConjId = new Map<number, number>();
-  for (const row of conjResults) {
-    seqToConjId.set(row.seq, row.id);
-  }
+    // Part 2: Create conjugation links for BOTH new entries AND reused entries
+    const allConjugations = [
+      ...toInsertNew.map(({ options }) => ({
+        seq: options.seq,
+        from: options.from,
+        via: options.via,
+      })),
+      ...toReuseExisting.map(({ options }) => ({
+        seq: options.seq,  // Use seq from caller (already resolved)
+        from: options.from,
+        via: options.via,
+      }))
+    ];
 
-  // Batch INSERT conj_prop using conj_id (one row per conjugation)
-  const propValues = toInsert
-    .map(({ options }) => {
-      const conjId = seqToConjId.get(options.seq);
-      if (!conjId) return null;
-      return {
+    if (allConjugations.length === 0) {
+      return;
+    }
+
+    // Deduplicate within batch first (cannot have duplicates in VALUES list for DO UPDATE)
+    const uniqueConjugations: typeof allConjugations = [];
+    const seen = new Set<string>();
+    for (const c of allConjugations) {
+      const key = `${c.seq},${c.from},${c.via ?? 'null'}`;
+      if (!seen.has(key)) {
+        seen.add(key);
+        uniqueConjugations.push(c);
+      }
+    }
+    
+    // Batch INSERT with upsert (using generated column constraint)
+    const conjResults = await tx`
+      INSERT INTO conjugation ${tx(uniqueConjugations)}
+      ON CONFLICT ON CONSTRAINT conjugation_from_seq_via_n_unique DO UPDATE
+        SET via = EXCLUDED.via
+      RETURNING id, seq, "from", via
+    `;
+
+    // Create map of (seq, from, via) -> conj_id
+    const conjKeyToId = new Map<string, number>();
+    for (const row of conjResults) {
+      const key = `${row.seq},${row.from},${row.via ?? 'null'}`;
+      conjKeyToId.set(key, row.id);
+    }
+
+  // Part 3: Insert conj_prop for all conjugations
+  const propValues: any[] = [];
+  
+  for (const { options } of toInsertNew) {
+    const key = `${options.seq},${options.from},${options.via ?? 'null'}`;
+    const conjId = conjKeyToId.get(key);
+    if (conjId) {
+      propValues.push({
         conjId,
         conjType: options.conjType,
         pos: options.pos,
         neg: options.neg,
         fml: options.fml,
-      };
-    })
-    .filter((v): v is NonNullable<typeof v> => v !== null);
-  if (propValues.length > 0) {
-    await sql`INSERT INTO conj_prop ${sql(propValues)} ON CONFLICT DO NOTHING`;
+      });
+    }
   }
 
-  // Batch INSERT conj_source_reading using conj_id (one row per reading)
-  const sourceValues = toInsert.flatMap(({ readings, options }) => {
-    const conjId = seqToConjId.get(options.seq);
-    if (!conjId) return [];
-    return readings.map(r => ({
-      conjId,
-      text: r.text,
-      sourceText: r.sourceText,
-    }));
-  });
-  if (sourceValues.length > 0) {
-    await sql`INSERT INTO conj_source_reading ${sql(sourceValues)} ON CONFLICT DO NOTHING`;
+  for (const { options } of toReuseExisting) {
+    const key = `${options.seq},${options.from},${options.via ?? 'null'}`;
+    const conjId = conjKeyToId.get(key);
+    if (conjId) {
+      propValues.push({
+        conjId,
+        conjType: options.conjType,
+        pos: options.pos,
+        neg: options.neg,
+        fml: options.fml,
+      });
+    }
   }
 
-  return { cacheHits, newEntries };
+    if (propValues.length > 0) {
+      await tx`
+        INSERT INTO conj_prop ${tx(propValues)}
+        ON CONFLICT ON CONSTRAINT conj_prop_unique DO NOTHING
+      `;
+    }
+
+    // Part 4: Insert conj_source_reading for all conjugations
+    const sourceValues: any[] = [];
+
+    for (const { readings, options } of toInsertNew) {
+      const key = `${options.seq},${options.from},${options.via ?? 'null'}`;
+      const conjId = conjKeyToId.get(key);
+      if (conjId) {
+        for (const r of readings) {
+          sourceValues.push({
+            conjId,
+            text: r.text,
+            sourceText: r.sourceText,
+          });
+        }
+      }
+    }
+
+    for (const { readings, options } of toReuseExisting) {
+      const key = `${options.seq},${options.from},${options.via ?? 'null'}`;
+      const conjId = conjKeyToId.get(key);
+      if (conjId) {
+        for (const r of readings) {
+          sourceValues.push({
+            conjId,
+            text: r.text,
+            sourceText: r.sourceText,
+          });
+        }
+      }
+    }
+
+    if (sourceValues.length > 0) {
+      await tx`
+        INSERT INTO conj_source_reading ${tx(sourceValues)}
+        ON CONFLICT ON CONSTRAINT conj_source_reading_unique DO NOTHING
+      `;
+    }
+  }); // End transaction
+  
+  return actualNewEntries;
 }
 
 /**
@@ -926,28 +1302,28 @@ export async function loadSecondaryConjugations(options: {
   let cacheHits = 0;
   let newEntries = 0;
 
+  // Batch process for speed - collect all conjugations first,  allocate sequences, then batch insert
+  interface SecondaryBatch {
+    seqFrom: number;
+    seq: number;
+    conjType: number;
+    readings: ConjugatedReading[];
+    pos: string;
+    neg: boolean | null;
+    fml: boolean | null;
+  }
+  const allSecondaryConjs: SecondaryBatch[] = [];
+
+  // First: generate all conjugation matrices
   for (const { seqFrom, seq, conjType } of toConj) {
     try {
-      // Treat as v5s for causative-su, v1 otherwise
-      const asPosi = conjType === 9 ? ['v5s'] : ['v1'];  // 9 = causative-su
-
-      // Generate conjugations using existing conjugateEntryInner
+      const asPosi = conjType === 53 ? ['v5s'] : ['v1'];
       const conjMatrix = await conjugateEntryInner(seq, {
         conjTypes: SECONDARY_CONJUGATION_TYPES,
         asPosi
       });
 
       const originalReadings = await getAllReadings(seq);
-
-      // Collect all conjugations to insert
-      interface ConjToInsert {
-        readings: ConjugatedReading[];
-        pos: string;
-        conjType: number;
-        neg: boolean | null;
-        fml: boolean | null;
-      }
-      const toInsert: ConjToInsert[] = [];
 
       for (const [key, matrix] of conjMatrix.entries()) {
         const [posIdStr, conjIdStr] = key.split(',');
@@ -966,58 +1342,100 @@ export async function loadSecondaryConjugations(options: {
           const fmlIdx = fml ? 1 : 0;
 
           let readings = matrix[negIdx][fmlIdx];
-          readings = readings.filter(r => !originalReadings.includes(r.text));
+          readings = readings.filter(r => !originalReadings.includes(normalizeNFKC(r.text)));
 
           if (readings.length === 0) continue;
+          
+          // Skip negative-stem (type 52) for v5r-i (ある) - Lisp alignment
+          // v5r-i has irregular negative, so negative-stem should not be generated
+          if (conjId === 52 && pos === 'v5r-i') continue;
 
-          toInsert.push({
+          allSecondaryConjs.push({
+            seqFrom,
+            seq,
+            conjType: conjId,
             readings,
             pos,
-            conjType: conjId,
             neg: ignoreNeg ? null : neg,
             fml: ignoreFml ? null : fml
           });
         }
       }
 
-      // Allocate all sequences at once
-      const startSeq = await allocateSeqBatch(toInsert.length);
-
-      // Batch insert all conjugations for this source entry
-      const batchResults = await insertConjugationsBatch(toInsert.map((conj, i) => ({
-        readings: conj.readings,
-        options: {
-          seq: startSeq + i,
-          from: seqFrom,
-          pos: conj.pos,
-          conjType: conj.conjType,
-          neg: conj.neg,
-          fml: conj.fml,
-          via: seq
-        }
-      })), cache);
-
-      cacheHits += batchResults.cacheHits;
-      newEntries += batchResults.newEntries;
-
       count++;
-
-      if (count % 100 === 0 || count === toConj.length) {
-        const elapsed = (Date.now() - startTime) / 1000;
-        const rate = count / elapsed;
-        const remaining = toConj.length - count;
-        const eta = remaining / rate;
-        console.log(`${count}/${toConj.length} secondary (${rate.toFixed(1)}/sec, ${cacheHits} cache hits, ${newEntries} new) - ETA: ${Math.ceil(eta)}s`);
+      if (count % 500 === 0) {
+        console.log(`${count}/${toConj.length} matrices generated...`);
       }
     } catch (error) {
       errors++;
-      console.error(`Error generating secondary conjugation:`, error);
+      console.error(`Error generating conjugation matrix:`, error);
+    }
+  }
+
+  console.log(`Generated ${allSecondaryConjs.length} conjugations from ${count} source entries`);
+
+  // Second: batch check cache and allocate sequences
+  const conjsWithSeq: Array<SecondaryBatch & { assignedSeq: number; isNew: boolean }> = [];
+  const newIndices: number[] = [];
+  
+  for (let i = 0; i < allSecondaryConjs.length; i++) {
+    const conj = allSecondaryConjs[i];
+    const uniqueKanjiReadings = [...new Set(conj.readings.filter(r => r.kanjiFlag).map(r => r.text))];
+    const uniqueKanaReadings = [...new Set(conj.readings.filter(r => !r.kanjiFlag).map(r => r.text))];
+    
+    const existingSeq = cache.findExisting(uniqueKanjiReadings, uniqueKanaReadings);
+    if (existingSeq !== null) {
+      conjsWithSeq.push({ ...conj, assignedSeq: existingSeq, isNew: false });
+      cacheHits++;
+    } else {
+      newIndices.push(i);
+    }
+  }
+  
+  const allocatedSeqs = newIndices.length > 0 ? await allocateSeqBatch(newIndices.length) : [];
+  for (let i = 0; i < newIndices.length; i++) {
+    const idx = newIndices[i];
+    const conj = allSecondaryConjs[idx];
+    const assignedSeq = allocatedSeqs[i];
+    
+    const uniqueKanjiReadings = [...new Set(conj.readings.filter(r => r.kanjiFlag).map(r => r.text))];
+    const uniqueKanaReadings = [...new Set(conj.readings.filter(r => !r.kanjiFlag).map(r => r.text))];
+    cache.add(assignedSeq, uniqueKanjiReadings, uniqueKanaReadings);
+    
+    conjsWithSeq.push({ ...conj, assignedSeq, isNew: true });
+    newEntries++;
+  }
+
+  console.log(`Inserting ${conjsWithSeq.length} secondary conjugations (${newEntries} new, ${cacheHits} reused)...`);
+
+  // Third: batch insert in chunks to avoid MAX_PARAMETERS_EXCEEDED
+  const CHUNK_SIZE = 1000;
+  let actualNewEntries = 0;
+  for (let i = 0; i < conjsWithSeq.length; i += CHUNK_SIZE) {
+    const chunk = conjsWithSeq.slice(i, i + CHUNK_SIZE);
+    const chunkNewEntries = await insertConjugationsBatch(chunk.map(conj => ({
+      readings: conj.readings,
+      options: {
+        seq: conj.assignedSeq,
+        from: conj.seqFrom,
+        pos: conj.pos,
+        conjType: conj.conjType,
+        neg: conj.neg,
+        fml: conj.fml,
+        via: conj.seq
+      },
+      isNew: conj.isNew
+    })), cache);
+    actualNewEntries += chunkNewEntries;
+    
+    if ((i + CHUNK_SIZE) < conjsWithSeq.length) {
+      console.log(`  ${i + chunk.length}/${conjsWithSeq.length} inserted...`);
     }
   }
 
   const totalTime = ((Date.now() - startTime) / 1000).toFixed(1);
   console.log(`✓ ${count} secondary conjugations generated in ${totalTime}s`);
-  console.log(`  Cache hits: ${cacheHits.toLocaleString()}, New entries: ${newEntries.toLocaleString()}`);
+  console.log(`  Cache hits: ${cacheHits.toLocaleString()}, New entries: ${actualNewEntries.toLocaleString()}`);
 
   if (errors > 0) {
     console.warn(`⚠ ${errors} secondary conjugations failed`);

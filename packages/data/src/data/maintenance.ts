@@ -17,49 +17,85 @@ import { getConnection } from '@ichiran/core';
  *   - Finds the first kanji_text (by ord) that is not restricted
  *   - Sets best_kanji to that kanji text
  */
-export async function calculateBestReadings(): Promise<void> {
+export async function calculateBestReadings(options: { reset?: boolean } = {}): Promise<void> {
   const sql = getConnection();
+
+  // Reset existing values if requested
+  if (options.reset) {
+    console.log('Resetting existing best_kana and best_kanji values...');
+    await sql`UPDATE kanji_text SET best_kana = NULL`;
+    await sql`UPDATE kana_text SET best_kanji = NULL`;
+  }
 
   console.log('Calculating best_kana for kanji_text...');
 
-  // Update best_kana for each kanji_text
-  // Select the first (lowest ord) kana_text that is not restricted
+  // Update best_kana for each kanji_text entry
+  // Logic from dict-load.lisp:494-509 (defmethod set-reading ((obj kanji-text)))
+  // For each kanji, find the first kana reading (by ord) where:
+  // - kana is not marked as nokanji
+  // - either no restrictions exist, OR this kanji is in the allowed list for that kana
   await sql`
     UPDATE kanji_text kt
     SET best_kana = (
       SELECT r.text
       FROM kana_text r
       WHERE r.seq = kt.seq
-        AND NOT EXISTS (
-          SELECT 1 FROM restricted_readings rr
-          WHERE rr.seq = kt.seq
-            AND rr.text = kt.text
-            AND rr.reading = r.text
+        AND r.nokanji = false
+        AND (
+          -- No restrictions for this kana reading
+          NOT EXISTS (
+            SELECT 1 FROM restricted_readings rr
+            WHERE rr.seq = kt.seq AND rr.reading = r.text
+          )
+          OR
+          -- This kanji is in the allowed list for this kana reading
+          EXISTS (
+            SELECT 1 FROM restricted_readings rr
+            WHERE rr.seq = kt.seq
+              AND rr.reading = r.text
+              AND rr.text = kt.text
+          )
         )
       ORDER BY r.ord
       LIMIT 1
     )
+    FROM entry e
+    WHERE kt.seq = e.seq AND e.root_p = true AND kt.best_kana IS NULL
   `;
 
   console.log('Calculating best_kanji for kana_text...');
 
-  // Update best_kanji for each kana_text
-  // Select the first (lowest ord) kanji_text that is not restricted
+  // Update best_kanji for each kana_text entry
+  // Logic from dict-load.lisp:511-531 (defmethod set-reading ((obj kana-text)))
+  // For each kana, find the first kanji reading (by ord) where:
+  // - kana is not marked as nokanji
+  // - either no restrictions exist, OR kanji is in the allowed list
   await sql`
     UPDATE kana_text r
     SET best_kanji = (
       SELECT kt.text
       FROM kanji_text kt
       WHERE kt.seq = r.seq
-        AND NOT EXISTS (
-          SELECT 1 FROM restricted_readings rr
-          WHERE rr.seq = r.seq
-            AND rr.reading = r.text
-            AND rr.text = kt.text
+        AND (
+          -- No restrictions for this kana reading
+          NOT EXISTS (
+            SELECT 1 FROM restricted_readings rr
+            WHERE rr.seq = r.seq AND rr.reading = r.text
+          )
+          OR
+          -- This kanji is in the allowed list for this kana reading
+          EXISTS (
+            SELECT 1 FROM restricted_readings rr
+            WHERE rr.seq = r.seq
+              AND rr.reading = r.text
+              AND rr.text = kt.text
+          )
         )
       ORDER BY kt.ord
       LIMIT 1
     )
+    FROM entry e
+    WHERE r.seq = e.seq AND e.root_p = true AND r.nokanji = false AND r.best_kanji IS NULL
   `;
 
   // Get counts for verification
@@ -78,7 +114,7 @@ export async function calculateBestReadings(): Promise<void> {
   `;
 
   console.log(`✓ Best readings calculated:`);
-  console.log(`  Kanji texts: ${kanaStats.withBestKana}/${kanjiStats.totalKanji} have best_kana`);
+  console.log(`  Kanji texts: ${kanjiStats.withBestKana}/${kanjiStats.totalKanji} have best_kana`);
   console.log(`  Kana texts:  ${kanaStats.withBestKanji}/${kanaStats.totalKana} have best_kanji`);
 }
 

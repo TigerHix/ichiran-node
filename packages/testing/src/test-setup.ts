@@ -7,7 +7,7 @@ import './load-env.js'; // Load .env file
 
 // Helper to parse connection from env (for tests)
 function getConnectionFromEnv(): ConnectionSpec | null {
-  const dbUrl = process.env.ICHIRAN_TEST_DB_URL || process.env.ICHIRAN_DB_URL;
+  const dbUrl = process.env.ICHIRAN_DB_URL;
   if (!dbUrl) return null;
 
   try {
