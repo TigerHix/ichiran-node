@@ -20,6 +20,9 @@
     "@ichiran/core": "0.0.0",
     "lru-cache": "^10.2.2"
   },
+  "devDependencies": {
+    "@ichiran/testing": "workspace:*"
+  },
   "sideEffects": false
 }
 
