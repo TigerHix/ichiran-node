@@ -12,6 +12,7 @@
     "typecheck": "cd packages/core && bun run typecheck && cd ../grammar && bun run typecheck && cd ../api && bun run typecheck && cd ../cli && bun run typecheck && cd ../data && bun run typecheck",
     "test": "bun run build && bun test packages/*/tests/",
     "test:watch": "bun test --watch packages/*/tests/",
+    "test:parity": "bun run build && RUN_PARITY_TESTS=true bun test packages/*/tests/",
     "cli": "node packages/cli/dist/index.js",
     "dev": "concurrently -n core,grammar,api -c blue,magenta,green \"cd packages/core && bun run build:watch\" \"cd packages/grammar && bun run build:watch\" \"tsx --watch --env-file=.env packages/api/src/index.ts\"",
     "data": "node packages/data/dist/index.js"

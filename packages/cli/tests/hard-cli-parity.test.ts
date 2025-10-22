@@ -8,6 +8,8 @@ import {
   normalizeJson,
 } from './cli-parity-helpers.js';
 
+const RUN_PARITY_TESTS = process.env.RUN_PARITY_TESTS === 'true';
+
 const { testCases, expectedOutputs } = loadParityTestData(
   'hard-cli.json',
   'hard-cli-lisp-outputs.json',
@@ -16,7 +18,7 @@ const { testCases, expectedOutputs } = loadParityTestData(
 
 setupTests();
 
-describe('Hard CLI Full JSON Comparison (-f flag)', () => {
+describe.skipIf(!RUN_PARITY_TESTS)('Hard CLI Full JSON Comparison (-f flag)', () => {
   test.each(testCases.fullJson)('full JSON matches for: $text (limit: $limit)', async (data) => {
     const tsOutput = await runTsCli(data.text, { full: true, limit: data.limit });
     const key = `${data.text}|${data.limit}`;

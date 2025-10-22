@@ -8,6 +8,8 @@ import {
   normalizeJson,
 } from './cli-parity-helpers.js';
 
+const RUN_PARITY_TESTS = process.env.RUN_PARITY_TESTS === 'true';
+
 const { testCases, expectedOutputs } = loadParityTestData(
   'cli.json',
   'cli-lisp-outputs.json',
@@ -16,7 +18,7 @@ const { testCases, expectedOutputs } = loadParityTestData(
 
 setupTests();
 
-describe('CLI Romanization Comparison', () => {
+describe.skipIf(!RUN_PARITY_TESTS)('CLI Romanization Comparison', () => {
   test.each(testCases.romanization)('romanization matches for: %s', async (text) => {
     const tsOutput = await runTsCli(text);
     const expectedOutput = expectedOutputs.romanization[text];
@@ -24,7 +26,7 @@ describe('CLI Romanization Comparison', () => {
   });
 });
 
-describe('CLI Info Output Comparison (-i flag)', () => {
+describe.skipIf(!RUN_PARITY_TESTS)('CLI Info Output Comparison (-i flag)', () => {
   test.each(testCases.info)('info output matches for: %s', async (text) => {
     const tsOutput = await runTsCli(text, { withInfo: true });
     const expectedOutput = expectedOutputs.info[text];
@@ -32,7 +34,7 @@ describe('CLI Info Output Comparison (-i flag)', () => {
   });
 });
 
-describe('CLI Full JSON Comparison (-f flag)', () => {
+describe.skipIf(!RUN_PARITY_TESTS)('CLI Full JSON Comparison (-f flag)', () => {
   test.each(testCases.fullJson)('full JSON matches for: $text (limit: $limit)', async (data) => {
     const tsOutput = await runTsCli(data.text, { full: true, limit: data.limit });
     const key = `${data.text}|${data.limit}`;

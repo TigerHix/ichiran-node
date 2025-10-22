@@ -1,4 +1,4 @@
-# Ichiran API Documentation
+# Ichiran API
 
 Japanese text segmentation and romanization API.
 
@@ -157,7 +157,7 @@ curl -X POST http://localhost:3000/api/segment \
 
 ---
 
-### Combined Grammar Analysis and Segmentation
+### Grammar Analysis (Experimental)
 
 **POST** `/api/analyze`
 
