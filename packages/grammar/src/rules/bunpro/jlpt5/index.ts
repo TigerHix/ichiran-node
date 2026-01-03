@@ -40,6 +40,7 @@ import keredomo from './けれども.js';
 import koko from './ここ.js';
 import kono from './この.js';
 import kore from './これ.js';
+import sono from './その.js';
 
 export const BUNPRO_JLPT5: Ruleset = {
   id: 'bunpro.jlpt5',
@@ -79,6 +80,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     ne,
     ndesu,
     shite,
+    sono,
     tekara,
     tsumorida,
     uVerbs,
