@@ -14,6 +14,7 @@ import da from './だ.js';
 import desu from './です.js';
 import wa from './は.js';
 import wo from './を.js';
+import uVerbs from './う-Verbs.js';
 import de from './で.js';
 import ni from './に.js';
 import he from './へ.js';
@@ -39,6 +40,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     desu,
     wa,
     wo,
+    uVerbs,
     de,
     ni,
     he,
