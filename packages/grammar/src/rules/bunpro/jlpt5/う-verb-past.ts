@@ -31,7 +31,7 @@ export default linguisticRule('う-verb-past', (r) => {
   // Match any u-verb (godan) followed by past tense auxiliary
   r.either(
     // Branch for each godan conjugation class
-    ...godanClasses.map((cc) =>
+    ...godanClasses.map((cc): ((b: any) => void) =>
       (b) => {
         const uVerb = b.verb({ conjugationClass: cc }, 'verb');
 

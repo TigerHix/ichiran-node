@@ -31,6 +31,7 @@ import uVerbs from './う-Verbs.js';
 import uverbNai from './うverb--ない.js';
 import uVerbPast from './う-verb-past.js';
 import uVerbNegPast from './う-verb-neg-past.js';
+import verbNiIku from './verb-にいく.js';
 import kirai from './きらい.js';
 import kurai1 from './くらい1.js';
 import kureru from './くれる.js';
@@ -85,5 +86,6 @@ export const BUNPRO_JLPT5: Ruleset = {
     uVerbNegPast,
     uVerbPast,
     uverbNai,
+    verbNiIku,
   ],
 };
