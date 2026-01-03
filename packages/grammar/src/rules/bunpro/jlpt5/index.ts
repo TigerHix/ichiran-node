@@ -40,6 +40,7 @@ import keredomo from './けれども.js';
 import koko from './ここ.js';
 import kono from './この.js';
 import kore from './これ.js';
+import soko from './そこ.js';
 
 export const BUNPRO_JLPT5: Ruleset = {
   id: 'bunpro.jlpt5',
@@ -64,6 +65,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     kono,
     kore,
     kuru,
+    soko,
     kurai1,
     kureru,
     da,
