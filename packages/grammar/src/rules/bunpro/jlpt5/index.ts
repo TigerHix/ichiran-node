@@ -2,6 +2,7 @@ import type { Ruleset } from '../../../ruleset.js';
 import adjectivete from './adjective-て-b.js';
 import iAdjectives from './い-adjectives.js';
 import ndesu from './-んです-のです.js';
+import negativeIAdjectives from './negative-い-adjectives.js';
 import tsumorida from './つもりだ.js';
 import ka from './か.js';
 import kaOr from './か-or.js';
@@ -78,6 +79,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     yo,
     ne,
     ndesu,
+    negativeIAdjectives,
     shite,
     tekara,
     tsumorida,
