@@ -20,6 +20,7 @@ import janai from './じゃない.js';
 import wa from './は.js';
 import wo from './を.js';
 import de from './で.js';
+import deBy from './で-by.js';
 import ni from './に.js';
 import he from './へ.js';
 import to from './と.js';
@@ -67,6 +68,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     kurai1,
     kureru,
     da,
+    deBy,
     desu,
     janai,
     de,
