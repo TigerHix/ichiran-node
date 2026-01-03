@@ -20,19 +20,11 @@ const negatives = [
   // ある → ない - special case where ない is ADJ, not AUX
   'ケーキはない',
   'お金はない',
-
-  // Negative with ません (polite form) - different auxiliary
-  '歩きません',
-  '歌いません',
 ];
 
 // Sentences that should be skipped because they don't actually contain
-// the u-verb negative pattern (they use polite form or are ある→ない)
+// the u-verb negative pattern (they have other issues)
 const skipPositives = [
-  // Uses ません (polite), not ない (casual)
-  '私は泳ぎません。',
-  '彼女は川で泳ぎません。',
-
   // ある → ない is parsed as ADJ, not AUX (special case)
   'ケーキはない。 [[ケーキはないです。ケーキはありません。]]',
   'お金はない。 [[お金はないです。お金はありません。]]',
