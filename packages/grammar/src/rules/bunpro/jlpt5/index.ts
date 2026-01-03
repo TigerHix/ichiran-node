@@ -30,9 +30,11 @@ import verbTaNoun from './verb-た-noun.js';
 import verbNiIku from './verb-にいく.js';
 import verbNonPast from './verb-non-past.js';
 import da from './だ.js';
+import dare from './だれ.js';
 import desu from './です.js';
 import tai from './たい.js';
 import janai from './じゃない.js';
+import janakatta from './じゃなかった.js';
 import wa from './は.js';
 import wo from './を.js';
 import de from './で.js';
@@ -120,6 +122,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     desu,
     tai,
     janai,
+    janakatta,
     de,
     deBy,
     ni,

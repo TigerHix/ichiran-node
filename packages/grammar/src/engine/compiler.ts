@@ -524,11 +524,12 @@ function compileSingleRule(spec: RuleSpec): CompiledRule {
 /**
  * Compile a rule spec into one or more CompiledRules.
  * If the spec uses either(), it's expanded into N separate rules (one per branch).
+ * Handles nested either() by recursively compiling branch specs.
  */
 export function compileRule(spec: RuleSpec): CompiledRule[] {
   // Find either clause (if any)
   const eitherClause = spec.where.find((c): c is Extract<Clause, { kind: 'either' }> => c.kind === 'either');
-  
+
   if (!eitherClause) {
     // No either - compile as single rule
     return [compileSingleRule(spec)];
@@ -537,15 +538,20 @@ export function compileRule(spec: RuleSpec): CompiledRule[] {
   // Expand either into N rules (one per branch)
   // Each branch becomes its own rule with the same id
   const otherClauses = spec.where.filter((c) => c.kind !== 'either');
-  
-  return eitherClause.branches.map((branch) => {
+
+  // Recursively compile each branch to handle nested either()
+  const results: CompiledRule[] = [];
+  for (const branch of eitherClause.branches) {
     const branchSpec: RuleSpec = {
       id: spec.id,
       where: [...otherClauses, ...branch.clauses],
       captures: [...spec.captures, ...branch.captures],
     };
-    return compileSingleRule(branchSpec);
-  });
+    // Recursive call to handle nested either() in branch.clauses
+    const compiled = compileRule(branchSpec);
+    results.push(...compiled);
+  }
+  return results;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
