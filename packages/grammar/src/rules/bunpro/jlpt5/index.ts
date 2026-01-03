@@ -6,6 +6,7 @@ import tsumorida from './つもりだ.js';
 import ka from './か.js';
 import karaBecause from './から-because.js';
 import ga from './が.js';
+import gaaru from './がある.js';
 import gairu from './がいる.js';
 import kuru from './くる.js';
 import shite from './して.js';
@@ -31,6 +32,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     ka,
     karaBecause,
     ga,
+    gaaru,
     gairu,
     kuru,
     shite,
