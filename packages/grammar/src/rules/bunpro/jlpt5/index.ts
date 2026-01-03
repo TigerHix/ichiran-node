@@ -40,11 +40,13 @@ import keredomo from './けれども.js';
 import koko from './ここ.js';
 import kono from './この.js';
 import kore from './これ.js';
+import adjectivenoha from './adjective-の-は.js';
 
 export const BUNPRO_JLPT5: Ruleset = {
   id: 'bunpro.jlpt5',
   rules: [
     adjectivete,
+    adjectivenoha,
     ageru,
     gaAru,
     gaBut,
