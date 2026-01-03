@@ -12,6 +12,7 @@ import shite from './して.js';
 import tekara from './てから.js';
 import da from './だ.js';
 import desu from './です.js';
+import janai from './じゃない.js';
 import wa from './は.js';
 import wo from './を.js';
 import de from './で.js';
@@ -37,6 +38,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     tekara,
     da,
     desu,
+    janai,
     wa,
     wo,
     de,
