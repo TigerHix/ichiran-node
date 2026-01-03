@@ -14,6 +14,7 @@ import gairu from './がいる.js';
 import kuru from './くる.js';
 import shite from './して.js';
 import tekara from './てから.js';
+import tekudasai from './てください.js';
 import da from './だ.js';
 import desu from './です.js';
 import janai from './じゃない.js';
@@ -80,6 +81,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     ndesu,
     shite,
     tekara,
+    tekudasai,
     tsumorida,
     uVerbs,
     uVerbNegPast,
