@@ -26,6 +26,7 @@ import to from './と.js';
 import yo from './よ.js';
 import ne from './ね.js';
 import ageru from './あげる.js';
+import are from './あれ.js';
 import ii from './いい.js';
 import uVerbs from './う-Verbs.js';
 import uverbNai from './うverb--ない.js';
@@ -46,6 +47,7 @@ export const BUNPRO_JLPT5: Ruleset = {
   rules: [
     adjectivete,
     ageru,
+    are,
     gaAru,
     gaBut,
     ga,
