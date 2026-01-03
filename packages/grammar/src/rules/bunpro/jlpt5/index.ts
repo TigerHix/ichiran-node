@@ -23,6 +23,7 @@ import de from './で.js';
 import ni from './に.js';
 import he from './へ.js';
 import to from './と.js';
+import toWith from './と-with.js';
 import yo from './よ.js';
 import ne from './ね.js';
 import ageru from './あげる.js';
@@ -73,6 +74,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     ni,
     he,
     to,
+    toWith,
     wo,
     wa,
     yo,
