@@ -2,7 +2,27 @@ import type { GrammarDefinition, MatchHit, MatchOptions, Token, PatternNode, Cap
 import type { TransformedRomanizeStarResult } from '@ichiran/core/src/presentation/transformers.js';
 import { resolvePredicate, type AsyncPredicateFn } from './predicates.js';
 import { performance } from 'node:perf_hooks';
-import { segmentText, splitTextBySentences, type SegmentationAlternative } from './segmentation.js';
+import { segmentText, splitTextBySentences, type SegmentationAlternative, type EntityHint } from './segmentation.js';
+
+/**
+ * Filter and adjust entity hints for a specific sentence within the full text.
+ * Entity positions are relative to the full text, so we need to:
+ * 1. Filter entities that fall within this sentence's range
+ * 2. Adjust their start/end positions to be relative to the sentence
+ */
+function getEntitiesForSentence(
+  entities: EntityHint[],
+  sentenceStart: number,
+  sentenceEnd: number
+): EntityHint[] {
+  return entities
+    .filter(e => e.start >= sentenceStart && e.end <= sentenceEnd)
+    .map(e => ({
+      ...e,
+      start: e.start - sentenceStart,
+      end: e.end - sentenceStart
+    }));
+}
 import { GRAMMAR_PROFILE } from './profile.js';
 import { matchGrammars } from './matcher.js';
 import { getCompiledMatcher, resetCacheStats, getCacheStats } from './cache.js';
@@ -125,10 +145,11 @@ function computeMinTokens(node: PatternNode | undefined): number {
 export async function matchText(
   text: string,
   defs: GrammarDefinition[],
-  options: MatchOptions & { limit?: number; normalizePunctuation?: boolean } = {}
+  options: MatchOptions & { limit?: number; normalizePunctuation?: boolean; entities?: EntityHint[] } = {}
 ): Promise<MatchHit[]> {
   const limit = options.limit ?? 5;
   const normalizePunctuation = options.normalizePunctuation ?? false;
+  const entities = options.entities ?? [];
   if (GRAMMAR_PROFILE) {
     currentProfile = {
       romanizeStarMs: 0,
@@ -152,10 +173,19 @@ export async function matchText(
   // Step 1: Split text into sentences by stop marks
   const sentences = splitTextBySentences(text);
   
+  // Calculate sentence offsets for entity filtering
+  const sentenceOffsets: { start: number; end: number }[] = [];
+  let offset = 0;
+  for (const sentence of sentences) {
+    sentenceOffsets.push({ start: offset, end: offset + sentence.length });
+    offset += sentence.length;
+  }
+  
   // Step 2: Generate tokenization alternatives for each sentence in parallel
   const sentenceAlternatives = await Promise.all(
-    sentences.map(async (sentence: string) => {
-      const { alternatives } = await segmentText(sentence, limit, normalizePunctuation);
+    sentences.map(async (sentence: string, i: number) => {
+      const sentenceEntities = getEntitiesForSentence(entities, sentenceOffsets[i].start, sentenceOffsets[i].end);
+      const { alternatives } = await segmentText(sentence, limit, normalizePunctuation, sentenceEntities);
       return alternatives;
     })
   );
@@ -350,10 +380,11 @@ export interface AnalysisResult {
 export async function analyzeText(
   text: string,
   defs: GrammarDefinition[],
-  options: MatchOptions & { limit?: number; normalizePunctuation?: boolean } = {}
+  options: MatchOptions & { limit?: number; normalizePunctuation?: boolean; entities?: EntityHint[] } = {}
 ): Promise<AnalysisResult> {
   const limit = options.limit ?? 5;
   const normalizePunctuation = options.normalizePunctuation ?? false;
+  const entities = options.entities ?? [];
   if (GRAMMAR_PROFILE) {
     currentProfile = {
       romanizeStarMs: 0,
@@ -377,10 +408,19 @@ export async function analyzeText(
   // Step 1: Split text into sentences
   const sentences = splitTextBySentences(text);
   
+  // Calculate sentence offsets for entity filtering
+  const sentenceOffsets: { start: number; end: number }[] = [];
+  let offset = 0;
+  for (const sentence of sentences) {
+    sentenceOffsets.push({ start: offset, end: offset + sentence.length });
+    offset += sentence.length;
+  }
+  
   // Step 2: Process each sentence independently in parallel using unified segmentation
   const sentenceResults = await Promise.all(
-    sentences.map(async (sentence: string) => {
-      const { alternatives, transformedResult } = await segmentText(sentence, limit, normalizePunctuation);
+    sentences.map(async (sentence: string, i: number) => {
+      const sentenceEntities = getEntitiesForSentence(entities, sentenceOffsets[i].start, sentenceOffsets[i].end);
+      const { alternatives, transformedResult } = await segmentText(sentence, limit, normalizePunctuation, sentenceEntities);
       return { alternatives, transformedResult } as { alternatives: SegmentationAlternative[]; transformedResult: TransformedRomanizeStarResult };
     })
   );

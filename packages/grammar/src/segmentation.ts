@@ -1,5 +1,6 @@
 import type { Token } from './types.js';
 import { romanizeStar, type RomanizeStarResult } from '@ichiran/core/src/romanize.js';
+import type { EntityHint } from '@ichiran/core';
 import { transformRomanizeStarResult, type TransformedRomanizeStarResult } from '@ichiran/core/src/presentation/transformers.js';
 import { parseGrammarInfoFromToken, parseTokenAlternatives } from './parsing.js';
 import { time, timeAsync } from './profile.js';
@@ -8,6 +9,8 @@ export interface SegmentationAlternative {
   tokens: Token[];
   score: number;
 }
+
+export type { EntityHint };
 
 function convertToTokens(romanizeStarResultTokens: any[]): Token[] {
   return romanizeStarResultTokens.map((romanizeStarResultToken) => {
@@ -28,9 +31,10 @@ function convertToTokens(romanizeStarResultTokens: any[]): Token[] {
 export async function segmentText(
   text: string,
   limit: number = 5,
-  normalizePunctuation: boolean = false
+  normalizePunctuation: boolean = false,
+  entities: EntityHint[] = []
 ): Promise<{ alternatives: SegmentationAlternative[]; transformedResult: TransformedRomanizeStarResult }> {
-  const result: RomanizeStarResult = await timeAsync('romanizeStar', () => romanizeStar(text, { limit, normalizePunctuation }));
+  const result: RomanizeStarResult = await timeAsync('romanizeStar', () => romanizeStar(text, { limit, normalizePunctuation, entities }));
   const transformedResult: TransformedRomanizeStarResult = await timeAsync('transformRomanizeStarResult', () => transformRomanizeStarResult(result));
 
   const tokenAlternativesWithScores = time('parseTokenAlternatives', () => parseTokenAlternatives(result, transformedResult));

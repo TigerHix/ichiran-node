@@ -5,6 +5,7 @@ import { CHAR_CLASS_HASH, MODIFIER_CHARACTERS, voiceChar, basicSplit, normalize,
 import { processHints, stripHints } from './dict/splitDefinitions.js';
 import { dictSegment, simpleSegment, wordInfoStr, WordInfo, simplifyReadingList } from './dict/presentation.js';
 import { initializeIchiran } from './init.js';
+import type { EntityHint } from './presentation/types.js';
 
 // Phase 3: Removed top-level initialization call - using lazy initialization instead
 // initializeIchiran() is now called in functions that need it (romanize, romanizeStar)
@@ -736,6 +737,7 @@ export async function romanizeStar(
     limit?: number;
     wordpropFn?: (romanized: string, word: WordInfo) => any;
     normalizePunctuation?: boolean;
+    entities?: EntityHint[];
   } = {}
 ): Promise<RomanizeStarResult> {
   // Lazy initialization - ensure Ichiran is initialized before using dict functions
@@ -746,17 +748,33 @@ export async function romanizeStar(
   // Note: Lisp default is (constantly nil), which jsown serializes as []
   const wordpropFn = options.wordpropFn ?? (() => []);
   const normalizePunctuation = options.normalizePunctuation ?? false;
+  const entities = options.entities ?? [];
 
   // Line 275: Normalize input
   const normalized = normalize(input, undefined, !normalizePunctuation);
 
   const result: Array<string | Array<[Array<[string, WordInfo, any]>, number]>> = [];
+  
+  // Track current offset for entity adjustment
+  let currentOffset = 0;
 
   // Line 276-289: Process each segment from basic-split
   for (const segment of basicSplit(normalized)) {
     if (segment.type === 'word') {
+      const segmentStart = currentOffset;
+      const segmentEnd = currentOffset + segment.text.length;
+      
+      // Filter and adjust entity hints for this segment
+      const segmentEntities: EntityHint[] = entities
+        .filter(e => e.start >= segmentStart && e.end <= segmentEnd)
+        .map(e => ({
+          start: e.start - segmentStart,
+          end: e.end - segmentStart,
+          boost: e.boost
+        }));
+      
       // Line 278-289: Get dict-segment with limit and process
-      const segmentResult = await dictSegment(segment.text, { limit });
+      const segmentResult = await dictSegment(segment.text, { limit, entities: segmentEntities });
 
       const wordListResults: Array<[Array<[string, WordInfo, any]>, number]> = await Promise.all(
         segmentResult.map(async ([wordList, score]) => {
@@ -775,9 +793,11 @@ export async function romanizeStar(
       );
 
       result.push(wordListResults);
+      currentOffset = segmentEnd;
     } else {
       // Line 290: Keep non-word segments as-is
       result.push(segment.text);
+      currentOffset += segment.text.length;
     }
   }
 

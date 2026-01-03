@@ -11,9 +11,11 @@ import type { Synergy } from '../grammar/types.js';
 import type {
   Segment,
   SegmentList,
-  AnyWord
+  AnyWord,
+  KanaText
 } from '../types.js';
 import { TopArray, isCompoundText, isProxyText, isSegmentList, isCounterText, isSimpleWord, isSimpleText } from '../types.js';
+import type { EntityHint } from '../presentation/types.js';
 
 // Import from other dict modules
 import {
@@ -171,8 +173,47 @@ function collectSeqsForPrefetch(
   }
 }
 
+// Default boost score for entity hints
+const DEFAULT_ENTITY_BOOST = 50;
+
+/**
+ * Create a synthetic KanaText word for an entity hint
+ * Used when an entity span doesn't match any dictionary entry
+ */
+function createEntityWord(text: string): KanaText {
+  return {
+    id: -1,  // Synthetic entry
+    seq: -1, // No dictionary seq - marker for entity
+    text,
+    ord: 0,
+    common: null,
+    commonTags: '',
+    conjugateP: false,
+    nokanji: true,
+    bestKanji: null,
+  };
+}
+
+/**
+ * Create a synthetic segment for an entity hint
+ */
+function createEntitySegment(text: string, start: number, end: number, boost: number): Segment {
+  const word = createEntityWord(text);
+  return {
+    start,
+    end,
+    word,
+    score: boost, // High score to prefer this segmentation
+    text,
+  };
+}
+
 // Line 1111-1127: defun join-substring-words
-export async function joinSubstringWords2(str: string): Promise<SegmentList[]> {
+export async function joinSubstringWords2(
+  str: string,
+  options: { entities?: EntityHint[] } = {}
+): Promise<SegmentList[]> {
+  const { entities = [] } = options;
   const [result, kanjiBreak] = await joinSubstringWords(str);
   const seqsForPrefetch = new Set<number>();
   for (const [, , segments] of result) {
@@ -214,6 +255,24 @@ export async function joinSubstringWords2(str: string): Promise<SegmentList[]> {
       });
     }
   }
+  
+  // Always create synthetic segments for all entity hints
+  // This ensures entity spans can compete with dictionary segments via boost
+  for (const entity of entities) {
+    const text = str.slice(entity.start, entity.end);
+    const boost = entity.boost ?? DEFAULT_ENTITY_BOOST;
+    const syntheticSegment = createEntitySegment(text, entity.start, entity.end, boost);
+    
+    segmentLists.push({
+      segments: [syntheticSegment],
+      start: entity.start,
+      end: entity.end,
+      matches: 1
+    });
+  }
+  
+  // Sort by start position (entities may have been added out of order)
+  segmentLists.sort((a, b) => a.start - b.start || a.end - b.end);
 
   return segmentLists;
 }
@@ -258,14 +317,33 @@ async function expandSegmentList(segmentList: SegmentList): Promise<void> {
   segmentList.segments = expanded;
 }
 
+/**
+ * Calculate entity boost for a segment based on entity hints
+ * Returns boost if segment exactly matches an entity span
+ */
+function getEntityBoost(segment: Segment | SegmentList, entities: EntityHint[]): number {
+  let boost = 0;
+  const start = segment.start;
+  const end = segment.end;
+  
+  for (const entity of entities) {
+    if (entity.start === start && entity.end === end) {
+      boost += entity.boost ?? DEFAULT_ENTITY_BOOST;
+    }
+  }
+  
+  return boost;
+}
+
 // Line 1188-1231: defun find-best-path
 export async function findBestPath(
   segmentLists: SegmentList[],
   strLength: number,
-  options: { limit?: number } = {}
+  options: { limit?: number; entities?: EntityHint[] } = {}
 ): Promise<Array<[any[], number]>> {
   const endTimer = startTimer('findBestPath');
   const limit = options.limit ?? 5;
+  const entities = options.entities ?? [];
   const top = new TopArray(limit);
 
   top.registerItem(gapPenalty(0, strLength), []);
@@ -281,11 +359,12 @@ export async function findBestPath(
     const seg1 = segmentLists[i];
     const gapLeft = gapPenalty(0, seg1.start);
     const gapRight = gapPenalty(seg1.end, strLength);
+    const entityBoost1 = getEntityBoost(seg1, entities);
 
     // Initial segments
     const initialSegs = getSegInitial(seg1);
     for (const seg of initialSegs) {
-      const score1 = getSegmentScore(seg);
+      const score1 = getSegmentScore(seg) + entityBoost1;
       seg1.top!.registerItem(gapLeft + score1, [seg]);
       top.registerItem(gapLeft + score1 + gapRight, [seg]);
     }
@@ -298,6 +377,7 @@ export async function findBestPath(
         const score2 = getSegmentScore(seg2);
         const gapLeft2 = gapPenalty(seg1.end, seg2.start);
         const gapRight2 = gapPenalty(seg2.end, strLength);
+        const entityBoost2 = getEntityBoost(seg2, entities);
 
         for (const tai of seg1.top!.getArray()) {
           const payload = tai.payload;
@@ -309,7 +389,7 @@ export async function findBestPath(
           for (const split of splits) {
             const splitArray = Array.isArray(split) ? split : [split];
             // Line 1241: (reduce #'+ split :key #'get-segment-score)
-            const splitScore = splitArray.reduce((sum, s) => sum + getSegmentScore(s), 0);
+            const splitScore = splitArray.reduce((sum, s) => sum + getSegmentScore(s), 0) + entityBoost2;
             const accum = gapLeft2 + Math.max(splitScore, score3 + 1, score2 + 1) + scoreTail;
             const path = [...splitArray, ...payload.slice(1)] as any as Segment[];
 
@@ -331,9 +411,26 @@ export async function findBestPath(
   return top.getArray().map(tai => [tai.payload.reverse(), tai.score]);
 }
 
+/**
+ * Check if a WordInfo matches an entity hint span
+ */
+function matchesEntityHint(wi: WordInfo, entities: EntityHint[]): boolean {
+  for (const entity of entities) {
+    if (entity.start === wi.start && entity.end === wi.end) {
+      return true;
+    }
+  }
+  return false;
+}
+
 // Line 1388-1405: defun fill-segment-path
-export async function fillSegmentPath(str: string, path: (SegmentList | any)[]): Promise<WordInfo[]> {
+export async function fillSegmentPath(
+  str: string,
+  path: (SegmentList | any)[],
+  options: { entities?: EntityHint[] } = {}
+): Promise<WordInfo[]> {
   const endTimer = startTimer('fillSegmentPath');
+  const entities = options.entities ?? [];
 
   const result: WordInfo[] = [];
   let idx = 0;
@@ -355,7 +452,14 @@ export async function fillSegmentPath(str: string, path: (SegmentList | any)[]):
         }));
       }
 
-      result.push(await wordInfoFromSegmentList(sl));
+      const wi = await wordInfoFromSegmentList(sl);
+      
+      // Mark as entity if matches an entity hint
+      if (matchesEntityHint(wi, entities)) {
+        wi.isEntity = true;
+      }
+      
+      result.push(wi);
       idx = sl.end;
     }
   }

@@ -38,6 +38,19 @@ export interface SegmentResponse {
 }
 
 /**
+ * Named entity hint for segmentation
+ * Boosts score of segments matching the entity span and assigns proper noun PoS
+ */
+export interface EntityHint {
+  /** Start character offset (0-indexed, inclusive) */
+  start: number;
+  /** End character offset (0-indexed, exclusive) */
+  end: number;
+  /** Score boost for matching segments (default: 50) */
+  boost?: number;
+}
+
+/**
  * Request parameters for segment endpoint
  */
 export interface SegmentRequest {
@@ -45,6 +58,8 @@ export interface SegmentRequest {
   text: string;
   /** Maximum number of alternative segmentations per position */
   limit?: number;
+  /** Named entity hints to guide segmentation */
+  entities?: EntityHint[];
 }
 
 /**

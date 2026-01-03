@@ -3,16 +3,18 @@
 # Optimized for fly.io deployment with persistent volume for PostgreSQL data
 FROM postgres:16
 
-# Install Node.js 20 and curl (needed for health checks)
+# Install Node.js 20, curl (needed for health checks), and unzip (needed for bun)
 RUN apt-get update && apt-get install -y \
     curl \
     ca-certificates \
     gnupg \
+    unzip \
     && mkdir -p /etc/apt/keyrings \
     && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg \
     && echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list \
     && apt-get update \
-    && apt-get install -y nodejs
+    && apt-get install -y nodejs \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install bun
 RUN curl -fsSL https://bun.sh/install | bash && \
@@ -37,6 +39,7 @@ COPY packages/grammar/package.json packages/grammar/
 COPY packages/api/package.json packages/api/
 COPY packages/data/package.json packages/data/
 COPY packages/cli/package.json packages/cli/
+COPY packages/testing/package.json packages/testing/
 COPY tsconfig.base.json ./
 RUN bun install --frozen-lockfile
 

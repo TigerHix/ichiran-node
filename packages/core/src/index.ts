@@ -38,9 +38,12 @@ export {
   type TransformedRomanizeStarResultTokenTuple
 } from './presentation/transformers.js';
 
+// Presentation types
+export type { EntityHint } from './presentation/types.js';
+
 // Dict types and functions
 export type { ConjInfoJson, WordInfoGlossJson } from './dict/presentation.js';
-export { WordInfo, dictSegment, simpleSegment } from './dict/presentation.js';
+export { WordInfo, dictSegment, simpleSegment, wordInfoGlossJson } from './dict/presentation.js';
 export { printPerfCountersAndReset } from './dict/profiling.js';
 export { findWordWithPos } from './dict/suffixHelpers.js';
 export { getConjDescription } from './dict/conj-description.js';

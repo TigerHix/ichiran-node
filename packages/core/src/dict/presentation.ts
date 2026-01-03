@@ -31,6 +31,7 @@ import {
   fillSegmentPath,
   wordInfoFromSegmentList
 } from './segmentation.js';
+import type { EntityHint } from '../presentation/types.js';
 
 // =============================================================================
 // WordInfo Class (Lines 1243-1297 in dict.lisp)
@@ -52,6 +53,8 @@ export class WordInfo {
   end?: number;
   counter?: [string, boolean] | null;
   skipped: number;
+  /** True if this word matches an entity hint (proper noun) */
+  isEntity?: boolean;
 
   constructor(data: Partial<WordInfo> & { type: WordInfo['type']; text: string; kana: WordInfo['kana'] }) {
     this.type = data.type;
@@ -68,6 +71,7 @@ export class WordInfo {
     this.end = data.end;
     this.counter = data.counter;
     this.skipped = data.skipped ?? 0;
+    this.isEntity = data.isEntity;
   }
 
   // Line 1260-1278: defun word-info-json
@@ -86,7 +90,8 @@ export class WordInfo {
       start: this.start,
       end: this.end,
       counter: this.counter,
-      skipped: this.skipped
+      skipped: this.skipped,
+      isEntity: this.isEntity
     };
   }
 }
@@ -217,16 +222,17 @@ export async function wordInfoReading(wordInfo: WordInfo | any): Promise<KanjiTe
 // Line 1448-1451: defun dict-segment
 export async function dictSegment(
   str: string,
-  options: { limit?: number } = {}
+  options: { limit?: number; entities?: EntityHint[] } = {}
 ): Promise<Array<[WordInfo[], number]>> {
   // Ensure suffix definitions are registered
   initializeIchiran();
   
   const limit = options.limit ?? 5;
-  const segmentLists = await joinSubstringWords2(str);
-  const paths = await findBestPath(segmentLists, str.length, { limit });
+  const entities = options.entities ?? [];
+  const segmentLists = await joinSubstringWords2(str, { entities });
+  const paths = await findBestPath(segmentLists, str.length, { limit, entities });
 
-  return Promise.all(paths.map(async ([path, score]) => [await fillSegmentPath(str, path), score]));
+  return Promise.all(paths.map(async ([path, score]) => [await fillSegmentPath(str, path, { entities }), score]));
 }
 
 // Line 1453-1454: defun simple-segment
@@ -1171,6 +1177,7 @@ export async function wordInfoGlossJson(
   const counter = readWordInfoProp(wordInfo, 'counter');
   const conjugations = readWordInfoProp(wordInfo, 'conjugations');
   const trueText = readWordInfoProp(wordInfo, 'trueText') || readWordInfoProp(wordInfo, 'truetext');
+  const isEntity = readWordInfoProp(wordInfo, 'isEntity');
 
   // Handle alternative case
   if (alternative) {
@@ -1276,7 +1283,7 @@ export async function wordInfoGlossJson(
 
   // Add conjugation info
   // Note: Lisp always calls conj-info-json if seq exists, regardless of conjs value
-  if (js.seq) {
+  if (js.seq && js.seq !== -1) {
     const conjInfo = await conjInfoJson(js.seq, {
       conjugations: (conjs as number[] | ':root') || undefined,
       text: (trueText as string | string[]) || undefined,
@@ -1285,6 +1292,25 @@ export async function wordInfoGlossJson(
 
     // Always add conj field, even if empty (to match Lisp behavior)
     js.conj = conjInfo;
+  }
+  
+  // Handle entity hints - add proper noun PoS
+  if (isEntity) {
+    const nprGloss = { pos: '[n-pr]', gloss: 'proper noun (named entity)' };
+    if (!js.gloss || js.gloss.length === 0) {
+      // For entities without gloss, add proper noun gloss
+      js.gloss = [nprGloss];
+    } else {
+      // For entities with existing gloss, prepend proper noun PoS
+      const hasNpr = js.gloss.some((g: any) => g.pos === '[n-pr]');
+      if (!hasNpr) {
+        js.gloss.unshift(nprGloss);
+      }
+    }
+    // Remove seq for synthetic entities
+    if (js.seq === -1) {
+      delete js.seq;
+    }
   }
 
   return js;

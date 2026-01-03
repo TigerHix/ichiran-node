@@ -7,6 +7,7 @@ export * from './runtime.js';
 
 // Main exports for external use
 export type { CompiledGrammar } from './runtime.js';
+export type { EntityHint } from './segmentation.js';
 export { matchText, analyzeText } from './runtime.js';
 export { clearCompiledGrammarCache, setCompiledGrammarCacheCapacity } from './cache.js';
 export { selectBestOutcome } from './matcher.js';

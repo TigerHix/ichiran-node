@@ -278,7 +278,8 @@ async function handleRequest(req: IncomingMessage, res: ServerResponse): Promise
       }
 
       const limit = body.limit ?? 1;
-      const result = await romanizeStar(body.text, { limit, normalizePunctuation: false });
+      const entities = body.entities ?? [];
+      const result = await romanizeStar(body.text, { limit, normalizePunctuation: false, entities });
       const segments = await transformRomanizeStarResult(result);
 
       sendJson(res, {
@@ -299,6 +300,7 @@ async function handleRequest(req: IncomingMessage, res: ServerResponse): Promise
 
       const limit = body.limit ?? 1;
       const maxMatches = body.maxMatches;
+      const entities = body.entities ?? [];
       
       // Perform combined analysis (single DB call)
       const analysis = await analyzeText(
@@ -307,7 +309,8 @@ async function handleRequest(req: IncomingMessage, res: ServerResponse): Promise
         {
           maxMatches,
           limit,
-          normalizePunctuation: false  // Preserve original punctuation
+          normalizePunctuation: false,  // Preserve original punctuation
+          entities
         }
       );
 

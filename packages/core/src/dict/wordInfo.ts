@@ -23,6 +23,8 @@ export class WordInfo {
   end?: number;
   counter?: [string, boolean] | null;
   skipped: number;
+  /** True if this word matches an entity hint (proper noun) */
+  isEntity?: boolean;
 
   constructor(data: Partial<WordInfo> & { type: WordInfo['type']; text: string; kana: WordInfo['kana'] }) {
     this.type = data.type;
@@ -39,6 +41,7 @@ export class WordInfo {
     this.end = data.end;
     this.counter = data.counter;
     this.skipped = data.skipped ?? 0;
+    this.isEntity = data.isEntity;
   }
 
   // Line 1260-1278: defun word-info-json
@@ -57,7 +60,8 @@ export class WordInfo {
       start: this.start,
       end: this.end,
       counter: this.counter,
-      skipped: this.skipped
+      skipped: this.skipped,
+      isEntity: this.isEntity
     };
   }
 }
