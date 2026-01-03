@@ -20,11 +20,13 @@ import he from './へ.js';
 import to from './と.js';
 import yo from './よ.js';
 import ne from './ね.js';
+import ageru from './あげる.js';
 
 export const BUNPRO_JLPT5: Ruleset = {
   id: 'bunpro.jlpt5',
   rules: [
     adjectivete,
+    ageru,
     iAdjectives,
     ndesu,
     tsumorida,
