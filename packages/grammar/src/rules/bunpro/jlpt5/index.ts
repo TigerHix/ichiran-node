@@ -21,6 +21,7 @@ import wa from './は.js';
 import wo from './を.js';
 import de from './で.js';
 import ni from './に.js';
+import niSuru from './にする.js';
 import he from './へ.js';
 import to from './と.js';
 import yo from './よ.js';
@@ -71,6 +72,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     janai,
     de,
     ni,
+    niSuru,
     he,
     to,
     wo,
