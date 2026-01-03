@@ -3,6 +3,7 @@ import adjectivete from './adjective-て-b.js';
 import iAdjectives from './い-adjectives.js';
 import ndesu from './-んです-のです.js';
 import tsumorida from './つもりだ.js';
+import uVerbNegPast from './う-verb-neg-past.js';
 import ka from './か.js';
 import karaBecause from './から-because.js';
 import ga from './が.js';
@@ -28,6 +29,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     iAdjectives,
     ndesu,
     tsumorida,
+    uVerbNegPast,
     ka,
     karaBecause,
     ga,

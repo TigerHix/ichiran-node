@@ -579,6 +579,7 @@ function describeClause(c: Clause): string {
         if (p.kind === 'dep') return `dep=${p.value}`;
         if (p.kind === 'inflectionForm') return `inflForm=${p.value}`;
         if (p.kind === 'conjugationClass') return `conjClass=${p.value}`;
+        if (p.kind === 'conjugationClassOneOf') return `conjClass∈[${p.value.join(',')}]`;
         return `${p.kind}=...`;
       });
       return `node(${c.node.v}: ${preds.join(', ')})`;
