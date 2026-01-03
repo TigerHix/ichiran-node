@@ -1,6 +1,6 @@
 import type { RuleSpec, NodeRef, TokPred, CaptureSpec, EitherBranch } from './dsl.js';
 import type { GinzaPOS, GinzaDep, GinzaInflectionForm, GinzaConjugationClass } from '../ginza/generated.js';
-import { V, node, edge, before, text, textOneOf, lemma, lemmaOneOf, pos, posOneOf, dep, depOneOf, inflectionForm, conjugationClass, tag, not } from './dsl.js';
+import { V, node, edge, before, text, textOneOf, lemma, lemmaOneOf, pos, posOneOf, dep, depOneOf, inflectionForm, conjugationClass, conjugationClassOneOf, tag, not } from './dsl.js';
 import type { Clause } from './dsl.js';
 
 export type TokenCond = {
@@ -14,6 +14,7 @@ export type TokenCond = {
   depOneOf?: GinzaDep[];
   inflectionForm?: GinzaInflectionForm;
   conjugationClass?: GinzaConjugationClass;
+  conjugationClassOneOf?: GinzaConjugationClass[];
   tag?: string;
 };
 
@@ -35,6 +36,7 @@ function condToPreds(cond: TokenCond): TokPred[] {
   if (cond.depOneOf !== undefined) out.push(depOneOf(cond.depOneOf));
   if (cond.inflectionForm !== undefined) out.push(inflectionForm(cond.inflectionForm));
   if (cond.conjugationClass !== undefined) out.push(conjugationClass(cond.conjugationClass));
+  if (cond.conjugationClassOneOf !== undefined) out.push(conjugationClassOneOf(cond.conjugationClassOneOf));
   if (cond.tag !== undefined) out.push(tag(cond.tag));
   return out;
 }
