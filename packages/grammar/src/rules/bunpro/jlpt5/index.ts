@@ -25,6 +25,7 @@ import he from './へ.js';
 import to from './と.js';
 import yo from './よ.js';
 import ne from './ね.js';
+import mo from './も.js';
 import ageru from './あげる.js';
 import ii from './いい.js';
 import uVerbs from './う-Verbs.js';
@@ -75,6 +76,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     to,
     wo,
     wa,
+    mo,
     yo,
     ne,
     ndesu,
