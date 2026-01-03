@@ -1,6 +1,7 @@
 import type { Ruleset } from '../../../ruleset.js';
 import adjectivete from './adjective-て-b.js';
 import iAdjectives from './い-adjectives.js';
+import iAdjKunakatta from './い-Adjective-くなかった.js';
 import ndesu from './-んです-のです.js';
 import tsumorida from './つもりだ.js';
 import ka from './か.js';
@@ -52,6 +53,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     gairu,
     ii,
     iAdjectives,
+    iAdjKunakatta,
     ka,
     kaOr,
     kara,
