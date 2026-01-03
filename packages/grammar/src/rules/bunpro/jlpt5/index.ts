@@ -8,10 +8,11 @@ import karaBecause from './から-because.js';
 import ga from './が.js';
 import gairu from './がいる.js';
 import kuru from './くる.js';
+import he from './へ.js';
 import shite from './して.js';
 import tekara from './てから.js';
 
 export const BUNPRO_JLPT5: Ruleset = {
   id: 'bunpro.jlpt5',
-  rules: [adjectivete, iAdjectives, ndesu, tsumorida, ka, karaBecause, ga, gairu, kuru, shite, tekara],
+  rules: [adjectivete, iAdjectives, ndesu, tsumorida, ka, karaBecause, ga, gairu, kuru, he, shite, tekara],
 };
