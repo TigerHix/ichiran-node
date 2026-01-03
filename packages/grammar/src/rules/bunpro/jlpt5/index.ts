@@ -8,6 +8,7 @@ import karaBecause from './から-because.js';
 import ga from './が.js';
 import gairu from './がいる.js';
 import kuru from './くる.js';
+import kureru from './くれる.js';
 import shite from './して.js';
 import tekara from './てから.js';
 import da from './だ.js';
@@ -33,6 +34,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     ga,
     gairu,
     kuru,
+    kureru,
     shite,
     tekara,
     da,
