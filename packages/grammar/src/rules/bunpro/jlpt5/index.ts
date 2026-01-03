@@ -3,6 +3,7 @@ import adjectivete from './adjective-て-b.js';
 import iAdjectives from './い-adjectives.js';
 import ndesu from './-んです-のです.js';
 import tsumorida from './つもりだ.js';
+import tehaikenas from './てはいけない.js';
 import ka from './か.js';
 import kaOr from './か-or.js';
 import karaBecause from './から-because.js';
@@ -80,6 +81,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     ndesu,
     shite,
     tekara,
+    tehaikenas,
     tsumorida,
     uVerbs,
     uVerbNegPast,

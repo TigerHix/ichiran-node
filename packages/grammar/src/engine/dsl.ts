@@ -134,7 +134,7 @@ export function tokenMatchesPreds(tok: GinzaToken, preds: TokPred[]): boolean {
     if (p.kind === 'depOneOf' && !p.value.includes(tok.dep)) return false;
     if (p.kind === 'inflectionForm' && tok.inflectionForm !== p.value) return false;
     if (p.kind === 'conjugationClass' && tok.conjugationClass !== p.value) return false;
-    if (p.kind === 'conjugationClassOneOf' && !p.value.includes(tok.conjugationClass)) return false;
+    if (p.kind === 'conjugationClassOneOf' && tok.conjugationClass && !p.value.includes(tok.conjugationClass)) return false;
     if (p.kind === 'tag' && tok.tag !== p.value) return false;
   }
   return true;

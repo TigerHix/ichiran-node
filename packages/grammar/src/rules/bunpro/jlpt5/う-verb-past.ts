@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { linguisticRule, type LinguisticRuleBuilder } from '../../../engine/lang.js';
 
 /**
  * JLPT5: う-Verb (Past) - u-verb past tense
@@ -32,8 +32,8 @@ export default linguisticRule('う-verb-past', (r) => {
   r.either(
     // Branch for each godan conjugation class
     ...godanClasses.map((cc) =>
-      (b) => {
-        const uVerb = b.verb({ conjugationClass: cc }, 'verb');
+      (b: LinguisticRuleBuilder) => {
+        const uVerb = b.verb({ conjugationClass: cc as any }, 'verb');
 
         // Past tense auxiliary た (or だ after n-sound verbs)
         // Note: lemma can be た or だ depending on the verb stem sound
