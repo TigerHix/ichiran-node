@@ -7,6 +7,7 @@ import ka from './か.js';
 import karaBecause from './から-because.js';
 import ga from './が.js';
 import gairu from './がいる.js';
+import kedoDakedo from './けど-だけど.js';
 import kuru from './くる.js';
 import shite from './して.js';
 import tekara from './てから.js';
@@ -32,6 +33,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     karaBecause,
     ga,
     gairu,
+    kedoDakedo,
     kuru,
     shite,
     tekara,
