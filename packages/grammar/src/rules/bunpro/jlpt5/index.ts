@@ -20,6 +20,7 @@ import he from './へ.js';
 import to from './と.js';
 import yo from './よ.js';
 import ne from './ね.js';
+import kekkou from './けっこう.js';
 
 export const BUNPRO_JLPT5: Ruleset = {
   id: 'bunpro.jlpt5',
@@ -45,5 +46,6 @@ export const BUNPRO_JLPT5: Ruleset = {
     to,
     yo,
     ne,
+    kekkou,
   ],
 };
