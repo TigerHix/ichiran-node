@@ -15,6 +15,7 @@ import kuru from './くる.js';
 import shite from './して.js';
 import tekara from './てから.js';
 import da from './だ.js';
+import dare from './だれ.js';
 import desu from './です.js';
 import janai from './じゃない.js';
 import wa from './は.js';
@@ -67,6 +68,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     kurai1,
     kureru,
     da,
+    dare,
     desu,
     janai,
     de,
