@@ -191,7 +191,99 @@ git add -A packages/grammar/src/rules/bunpro/jlpt5/
 git commit -m "Merge JLPT5 grammar rules: Batch N (X new rules)"
 ```
 
-### Step 7: Clean Up Worktrees
+### Step 7: Review and Fix Skips (CRITICAL)
+
+**IMPORTANT:** Agents may incorrectly skip test cases. Always review skips after merging.
+
+After running tests, you'll see output like: `XXX pass, Y skip, 0 fail`
+
+**Review all skips to verify legitimacy:**
+
+```bash
+# Check each file's skipPositives
+grep -r "skipPositives" packages/grammar/src/rules/bunpro/jlpt5/*.test.ts
+```
+
+**Legitimate skip reasons:**
+- GiNZA parsing limitations (inconsistent POS/lemma assignment)
+- Data quality issues (Bunpro extraction bugs, malformed sentences)
+- Different grammatical structures (e.g., ある→ない is ADJ not AUX)
+- Teaching materials (cloze format with "→" arrows)
+
+**ILLEGITIMATE skip reasons (fix required):**
+- "Separate grammar rule" - If the Bunpro data includes both casual AND polite forms, the rule should handle BOTH using `r.either()` branches
+- "Different register" (polite vs casual) - Check if the grammar point's `nuance_translation` mentions both variants
+
+**How to check if a grammar point covers multiple forms:**
+
+```bash
+# Check the grammar point description
+cat packages/grammar/data/bunpro/JLPT5/{RULE}.json | grep -E "nuance_translation|meaning|polite_structure"
+```
+
+Look for phrases like:
+- "in either its **polite or casual variant**"
+- "casual or polite"
+- Examples showing both ～ない and ～ません
+
+**Step 7a: Identify Illegitimate Skips**
+
+For each skip, read the test file comments:
+```bash
+# Read the skipPositives section and comments
+head -50 packages/grammar/src/rules/bunpro/jlpt5/{RULE}.test.ts
+```
+
+Count skips by category:
+- **Polite forms (ません, ませんでした, ではありません)** - Likely ILLEGITIMATE if grammar covers both
+- **GiNZA limitations** - Legitimate
+- **Data bugs** - Legitimate
+
+**Step 7b: Spawn Second-Pass Agents to Fix**
+
+For each rule with illegitimate skips, spawn a fix agent:
+
+```
+You are fixing a Japanese grammar rule in the ichiran-node project.
+
+**Your task:** Fix the **{RULE}** rule to also handle {POLITE_FORM} forms.
+
+**Context:**
+- Working directory: /home/tiger/ichiran-node (on branch main)
+- Current rule only handles {CASUAL_FORM} forms
+- The grammar point covers BOTH casual and polite variants
+- N sentences are incorrectly skipped
+
+**Files to modify:**
+1. **Rule file:** Add `r.either()` branch for polite forms
+2. **Test file:** Remove {COUNT} sentences from skipPositives (list them)
+
+**Important:**
+- Read current rule first
+- Use `r.either()` for both patterns
+- Run tests: `bun test packages/grammar/src/rules/bunpro/jlpt5/{RULE}.test.ts`
+- Commit: "Fix {RULE}: handle polite {FORM} forms"
+
+Report back with test results.
+```
+
+**Step 7c: Re-verify All Tests**
+
+```bash
+cd packages/grammar && bun test src/rules/bunpro/jlpt5/
+```
+
+Expected: Skip count should decrease, pass count should increase.
+
+**Common Fix Patterns:**
+
+| Pattern | Casual | Polite | Fix |
+|---------|--------|--------|-----|
+| Verb negative | ～ない | ～ません | Add branch with `lemma='ます', inflectionForm='未然形-一般'` |
+| Verb neg-past | ～なかった | ～ませんでした | Add branch with `lemma='ません' + 'でした'` |
+| Negation | じゃない | ではない/ではありません | Check if same grammar point first |
+
+### Step 8: Clean Up Worktrees
 
 ```bash
 git worktree prune
