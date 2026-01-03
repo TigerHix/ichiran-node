@@ -10,6 +10,7 @@ import kara from './から.js';
 import ga from './が.js';
 import gaBut from './が-but.js';
 import gaAru from './がある.js';
+import gaAruNoun from './がある-noun.js';
 import gairu from './がいる.js';
 import kuru from './くる.js';
 import shite from './して.js';
@@ -47,6 +48,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     adjectivete,
     ageru,
     gaAru,
+    gaAruNoun,
     gaBut,
     ga,
     gairu,
