@@ -13,6 +13,7 @@ import gaAru from './がある.js';
 import gairu from './がいる.js';
 import kuru from './くる.js';
 import shite from './して.js';
+import suru from './する.js';
 import tekara from './てから.js';
 import da from './だ.js';
 import desu from './です.js';
@@ -79,6 +80,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     ne,
     ndesu,
     shite,
+    suru,
     tekara,
     tsumorida,
     uVerbs,
