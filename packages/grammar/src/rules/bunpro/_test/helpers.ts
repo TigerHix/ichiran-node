@@ -6,7 +6,7 @@ import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { BunproGrammarItem, BunproLevel } from '@grammar/data/bunpro/types.js';
-import { loadBunproGrammarItem } from '@grammar/data/bunpro/loader.js';
+import { loadBunproGrammarItemWithOptions } from '@grammar/data/bunpro/loader.js';
 import type { GrammarEngine } from '../../../program.js';
 import type { RuleSpec } from '../../../engine/dsl.js';
 
@@ -17,7 +17,7 @@ export function loadTestItem(ruleId: string, level: BunproLevel): BunproGrammarI
   if (!existsSync(filePath)) {
     throw new Error(`Missing test data: ${filePath} for rule '${ruleId}'`);
   }
-  const item = loadBunproGrammarItem(filePath, level);
+  const item = loadBunproGrammarItemWithOptions(filePath, level, { allowTrivialSlug: true });
   if (!item) {
     throw new Error(`Failed to load bunpro item: ${filePath}`);
   }
