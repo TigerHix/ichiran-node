@@ -1,0 +1,777 @@
+{
+  "data": {
+    "id": "940",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 940,
+      "level": "JLPT1",
+      "lesson_id": 50,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "始末だ",
+      "nuance": "(A)という<strong>好（この）ましくない</strong>結果（けっか）を<strong>強（つよ）く</strong>示（しめ）す表現（ひょうげん）。<strong>最初（さいしょ）から最後（さいご）まで</strong>(A)だった。",
+      "grammar_order": 906,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 941,
+        "title": "ものなら②",
+        "slug": "ものなら②"
+      },
+      "previous_grammar_point": {
+        "id": 939,
+        "title": "に堪えない",
+        "slug": "に堪えない"
+      },
+      "lesson_count": "3/22",
+      "title": "始末だ",
+      "furigana": "始末（しまつ）だ",
+      "meaning": "Ends up, Finally, In the end, (Unfortunately) As a result, This is what happened, To come about, To wind up",
+      "nuance_translation": "A <strong>strong</strong> construction, showing the <strong>unfavorable</strong> result of (A). From <strong>start to finish</strong> it all wound up as (A).",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Verb[る] + <strong>始末（しまつ）だ</strong><br>この<strong>始末（しまつ）だ</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/38339",
+      "metadata": "始末だ, しまつだ, shimatuda, shimatsuda, noun, expression, negative sequence of events"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "9976",
+            "type": "study_question"
+          },
+          {
+            "id": "9979",
+            "type": "study_question"
+          },
+          {
+            "id": "183132",
+            "type": "study_question"
+          },
+          {
+            "id": "183133",
+            "type": "study_question"
+          },
+          {
+            "id": "183134",
+            "type": "study_question"
+          },
+          {
+            "id": "9975",
+            "type": "study_question"
+          },
+          {
+            "id": "9974",
+            "type": "study_question"
+          },
+          {
+            "id": "9977",
+            "type": "study_question"
+          },
+          {
+            "id": "9973",
+            "type": "study_question"
+          },
+          {
+            "id": "9978",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "977",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1989",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1990",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1991",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1992",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1993",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1994",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": []
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2598",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2599",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2600",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "9976",
+      "type": "study_question",
+      "attributes": {
+        "id": 9976,
+        "content": "<span class='name-highlight'>武田（たけだ）</span>：「山田（やまだ）さん、顔色（かおいろ）が悪（わる）いですけど・・・」<br><span class='name-highlight'>山田（やまだ）</span>：「夜（よる）遅（おそ）くまでゲームをしていたので、おかげでこの<span class='study-area-input'>____</span>。」",
+        "answer": "しまつだ",
+        "alternate_grammar": [
+          "しまつだ",
+          "しまつです"
+        ],
+        "kanji_answer": "始末（しまつ）だ",
+        "kanji_alt_grammar": [
+          "始末（しまつ）です",
+          "始末（しまつ）だ"
+        ],
+        "nuance": "(A)という<strong>好（この）ましくない</strong>結果（けっか）を<strong>強（つよ）く</strong>示（しめ）す表現（ひょうげん）。<strong>最初（さいしょ）から最後（さいご）まで</strong>(A)だった。",
+        "tense": "Emphasis on effect, Undesired result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/武田「山田さん、顔色が悪いですけど・・・」山田「夜遅くまでゲームをしていたので、おかげでこの始末だ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "こんなことになってしまった": {
+            "en": "Natural! Could you say it another way?",
+            "es": ""
+          },
+          "こんなことになってしまいました": {
+            "en": "Natural! Could you say it another way?",
+            "es": ""
+          },
+          "こんなことになっちゃった": {
+            "en": "Natural! Could you say it another way?",
+            "es": ""
+          },
+          "このありさまです": {
+            "en": "Natural! Could you say it another way?",
+            "es": ""
+          },
+          "このありさまだ": {
+            "en": "Natural! Could you say it another way?",
+            "es": ""
+          },
+          "このざまです": {
+            "en": "Natural! Could you say it another way?",
+            "es": ""
+          },
+          "このざまだ": {
+            "en": "Natural! Could you say it another way?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Takeda</span>: 'Yamada-san, you don't look so good...'<br><span class='name-highlight'>Yamada</span> : 'I was playing video games until late at night, and <strong>this is the result</strong>.'",
+        "nuance_translation": "A <strong>strong</strong> construction, showing the <strong>unfavorable</strong> result of (A). From <strong>start to finish</strong> it all wound up as (A).",
+        "extra_info": "",
+        "reviewable_id": 940,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9979",
+      "type": "study_question",
+      "attributes": {
+        "id": 9979,
+        "content": "<span class='name-highlight'>重（おも）い買（か）い物袋（ものぶくろ）が破（やぶ）れて中身（なかみ）が地面（じめん）に落（お）ちたところ</span>：「下（した）から抱（かか）えなかったら、<span class='study-area-input'>____</span>。」",
+        "answer": "このしまつだ",
+        "alternate_grammar": [
+          "このしまつだ",
+          "このしまつです"
+        ],
+        "kanji_answer": "この始末（しまつ）だ",
+        "kanji_alt_grammar": [
+          "この始末（しまつ）です",
+          "この始末（しまつ）だ"
+        ],
+        "nuance": "(A)という<strong>好（この）ましくない</strong>結果（けっか）を<strong>強（つよ）く</strong>示（しめ）す表現（ひょうげん）。<strong>最初（さいしょ）から最後（さいご）まで</strong>(A)だった。",
+        "tense": "Emphasis on effect, Undesired result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/重い買い物袋が破れて中身が地面に落ちたところ：「下から抱えなかったら、この始末だ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "こんなことになってしまった": {
+            "en": "Natural! Could you say it another way?",
+            "es": ""
+          },
+          "こんなことになってしまいました": {
+            "en": "Natural! Could you say it another way?",
+            "es": ""
+          },
+          "こんなことになっちゃった": {
+            "en": "Natural! Could you say it another way?",
+            "es": ""
+          },
+          "このありさまです": {
+            "en": "Natural! Could you say it another way?",
+            "es": ""
+          },
+          "このありさまだ": {
+            "en": "Natural! Could you say it another way?",
+            "es": ""
+          },
+          "このざまです": {
+            "en": "Natural! Could you say it another way?",
+            "es": ""
+          },
+          "このざまだ": {
+            "en": "Natural! Could you say it another way?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>After a heavy shopping bag has just ripped, and the contents fell out</span>: '<strong>This is what comes about</strong> when you don't hold it from the bottom.'",
+        "nuance_translation": "A <strong>strong</strong> construction, showing the <strong>unfavorable</strong> result of (A). From <strong>start to finish</strong> it all wound up as (A).",
+        "extra_info": "",
+        "reviewable_id": 940,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183132",
+      "type": "study_question",
+      "attributes": {
+        "id": 183132,
+        "content": "\r\nあんだけダブルチェックをするように言（い）ったのに、この<span class='study-area-input'>____</span>。",
+        "answer": "しまつだ",
+        "alternate_grammar": [],
+        "kanji_answer": "始末（しまつ）だ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/あんだけダブルチェックをするように言ったのに、この始末だ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI told him so many times to double check, but <strong>this is the result</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 940,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183133",
+      "type": "study_question",
+      "attributes": {
+        "id": 183133,
+        "content": "\r\n\r\n\r\nみんなで祭（まつ）りに行（い）くつもりだったのに、みんながドタキャンするから、結局（けっきょく）一人（ひとり）で行（い）く<span class='study-area-input'>____</span>。",
+        "answer": "しまつだ",
+        "alternate_grammar": [],
+        "kanji_answer": "始末（しまつ）だ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/みんなで祭りに行くつもりだったのに、みんながドタキャンするから、結局一人で行く始末だ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nWe were supposed to go to the festival together, but everyone canceled suddenly, so <strong>I ended up</strong> going alone.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 940,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183134",
+      "type": "study_question",
+      "attributes": {
+        "id": 183134,
+        "content": "\r\n\r\n\r\nその客（きゃく）は店中（みせじゅう）をぐちゃぐちゃにしたあげく、何（なに）も買（か）わないで帰（かえ）る<span class='study-area-input'>____</span>。",
+        "answer": "しまつだ",
+        "alternate_grammar": [],
+        "kanji_answer": "始末（しまつ）だ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/その客は店中をぐちゃぐちゃにしたあげく、何も買わないで帰る始末だ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nAfter messing up the whole store, <strong>they ended up</strong> leaving without buying anything.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 940,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9975",
+      "type": "study_question",
+      "attributes": {
+        "id": 9975,
+        "content": "せっかく友達（ともだち）と海（うみ）へ行（い）く計画（けいかく）を立（た）てたのに、田中（たなか）は大事（だいじ）な用（よう）があって行（い）けないとか、武田（たけだ）もシフトが入（はい）ってたとかで、結局（けっきょく）私（わたし）一（ひと）人（り）だけで行（い）く<span class='study-area-input'>____</span>。",
+        "answer": "しまつだ",
+        "alternate_grammar": [
+          "しまつだ",
+          "しまつです"
+        ],
+        "kanji_answer": "始末（しまつ）だ",
+        "kanji_alt_grammar": [
+          "始末（しまつ）です",
+          "始末（しまつ）だ"
+        ],
+        "nuance": "(A)という<strong>好（この）ましくない</strong>結果（けっか）を<strong>強（つよ）く</strong>示（しめ）す表現（ひょうげん）。<strong>最初（さいしょ）から最後（さいご）まで</strong>(A)だった。",
+        "tense": "Emphasis on effect, Undesired result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/せっかく友達と海へ行く計画を立てたのに、田中は大事な用があって行けないとか、武田もシフトが入ってたとかで、結局私一人だけで行く始末だ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "というわるいけっかだ": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "というわるいけっかです": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "というわるいけっかになった": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "というわるいけっかになりました": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "はめになった": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "はめになりました": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "ことになった": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Even though I went out of my way to plan this trip to the beach with friends, Tanaka said that he had something important to do and couldn't go, while Takeda said that he had a shift. So I <strong>ended up</strong> going all by myself.",
+        "nuance_translation": "A <strong>strong</strong> construction, showing the <strong>unfavorable</strong> result of (A). From <strong>start to finish</strong> it all wound up as (A).",
+        "extra_info": "",
+        "reviewable_id": 940,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9974",
+      "type": "study_question",
+      "attributes": {
+        "id": 9974,
+        "content": "あいつは、自分（じぶん）が起（お）こしたミスなのに、謝（あやま）るどころか私（わたし）のせいにする<span class='study-area-input'>____</span>。",
+        "answer": "しまつだ",
+        "alternate_grammar": [
+          "しまつだ",
+          "しまつです"
+        ],
+        "kanji_answer": "始末（しまつ）だ",
+        "kanji_alt_grammar": [
+          "始末（しまつ）です",
+          "始末（しまつ）だ"
+        ],
+        "nuance": "(A)という<strong>好（この）ましくない</strong>結果（けっか）を<strong>強（つよ）く</strong>示（しめ）す表現（ひょうげん）。<strong>最初（さいしょ）から最後（さいご）まで</strong>(A)だった。",
+        "tense": "Emphasis on effect, Undesired result",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/あいつは、自分が起こしたミスなのに、謝るどころか私のせいにする始末だ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "というわるいけっかだ": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "というわるいけっかです": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "というわるいけっかになった": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "というわるいけっかになりました": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "はめになった": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "はめになりました": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Even though it was a mistake that he had made, far from apologizing, he <strong>ended up</strong> blaming me!",
+        "nuance_translation": "A <strong>strong</strong> construction, showing the <strong>unfavorable</strong> result of (A). From <strong>start to finish</strong> it all wound up as (A).",
+        "extra_info": "",
+        "reviewable_id": 940,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9977",
+      "type": "study_question",
+      "attributes": {
+        "id": 9977,
+        "content": "田中（たなか）には二度（にど）と仕事（しごと）は頼（たの）まないぞ。納期（のうき）は守（まも）らないし仕上（しあ）がりも悪（わる）かったのに、言（い）い訳（わけ）ばかりならべて。最後（さいご）には追加（ついか）の料金（りょうきん）を払（はら）えと言（い）い出（だ）す<span class='study-area-input'>____</span>。",
+        "answer": "しまつだ",
+        "alternate_grammar": [
+          "しまつだ",
+          "しまつです"
+        ],
+        "kanji_answer": "始末（しまつ）だ",
+        "kanji_alt_grammar": [
+          "始末（しまつ）です",
+          "始末（しまつ）だ"
+        ],
+        "nuance": "(A)という<strong>好（この）ましくない</strong>結果（けっか）を<strong>強（つよ）く</strong>示（しめ）す表現（ひょうげん）。<strong>最初（さいしょ）から最後（さいご）まで</strong>(A)だった。",
+        "tense": "Emphasis on effect, Undesired result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/田中には二度と仕事は頼まないぞ。納期は守らないし仕上がりも悪かったのに、言い訳ばかりならべて。最後には追加の料金を払えと言い出す始末だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "というわるいけっかだ": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "というわるいけっかです": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "というわるいけっかになった": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "というわるいけっかになりました": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "はめになった": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "はめになりました": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I'll never ask Tanaka to work for me again. He can't meet deadlines, his workmanship is poor, and he only gives excuse after excuse. <strong>In the end</strong> he told me to pay an additional fee.",
+        "nuance_translation": "A <strong>strong</strong> construction, showing the <strong>unfavorable</strong> result of (A). From <strong>start to finish</strong> it all wound up as (A).",
+        "extra_info": "",
+        "reviewable_id": 940,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9973",
+      "type": "study_question",
+      "attributes": {
+        "id": 9973,
+        "content": "武田（たけだ）さんは小（ちい）さな声（こえ）で職場（しょくば）でハラスメントを受（う）けたことを伝（つた）えてきて、しまいに大（おお）きな声（こえ）で泣（な）き出（だ）す<span class='study-area-input'>____</span>。",
+        "answer": "しまつだ",
+        "alternate_grammar": [
+          "しまつだ",
+          "しまつです"
+        ],
+        "kanji_answer": "始末（しまつ）だ",
+        "kanji_alt_grammar": [
+          "始末（しまつ）です",
+          "始末（しまつ）だ"
+        ],
+        "nuance": "(A)という<strong>好（この）ましくない</strong>結果（けっか）を<strong>強（つよ）く</strong>示（しめ）す表現（ひょうげん）。<strong>最初（さいしょ）から最後（さいご）まで</strong>(A)だった。",
+        "tense": "Emphasis on effect, Undesired result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/武田さんは小さな声で職場でハラスメントを受けたことを伝えてきて、しまいに大きな声で泣き出す始末だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "というわるいけっかだ": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "というわるいけっかです": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "というわるいけっかになった": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "というわるいけっかになりました": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "はめになった": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "はめになりました": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Takeda-san quietly told me that she was being harassed at work, and <strong>wound up</strong> crying out loud.",
+        "nuance_translation": "A <strong>strong</strong> construction, showing the <strong>unfavorable</strong> result of (A). From <strong>start to finish</strong> it all wound up as (A).",
+        "extra_info": "",
+        "reviewable_id": 940,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9978",
+      "type": "study_question",
+      "attributes": {
+        "id": 9978,
+        "content": "プロジェクトを期限内（きげんない）に終（お）えることができなくて、上司（じょうし）の逆鱗（げきりん）に触（ふ）れてしまう<span class='study-area-input'>____</span>。",
+        "answer": "しまつだ",
+        "alternate_grammar": [
+          "しまつだ",
+          "しまつです"
+        ],
+        "kanji_answer": "始末（しまつ）だ",
+        "kanji_alt_grammar": [
+          "始末（しまつ）です",
+          "始末（しまつ）だ"
+        ],
+        "nuance": "(A)という<strong>好（この）ましくない</strong>結果（けっか）を<strong>強（つよ）く</strong>示（しめ）す表現（ひょうげん）。<strong>最初（さいしょ）から最後（さいご）まで</strong>(A)だった。",
+        "tense": "Emphasis on effect, Undesired result",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/プロジェクトを期限内に終えることができなくて、上司の逆鱗に触れてしまう始末だ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "というわるいけっかだ": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "というわるいけっかです": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "というわるいけっかになった": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "というわるいけっかになりました": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "はめになった": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          },
+          "はめになりました": {
+            "en": "Natural! Could you use a noun that literally means an \"end result\" that is usually bad?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I couldn't finish the project on time, and I <strong>wound up</strong> infuriating my boss.",
+        "nuance_translation": "A <strong>strong</strong> construction, showing the <strong>unfavorable</strong> result of (A). From <strong>start to finish</strong> it all wound up as (A).",
+        "extra_info": "",
+        "reviewable_id": 940,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "977",
+      "type": "writeup",
+      "attributes": {
+        "id": 977,
+        "body_ja": "<p>「始末（しまつ）」は、「処理（しょり）」や「最終的（さいしゅうてき）な結果（けっか）」を表（あらわ）す名詞（めいし）ですが、文法表現（ぶんぽうひょうげん）として使（つか）う場合（ばあい）は、良（よ）くない出来事（できごと）が続（つづ）いた末（すえ）に、悪（わる）い結果（けっか）になったことを表（あらわ）します。「(A) という（悪（わる）い）結果（けっか）に終（お）わった」や「(A) という結末（けつまつ）になった」といった意味（いみ）で使（つか）われます。</p>\r\n\r\n<p>この表現（ひょうげん）は、主（おも）に動詞（どうし）の辞書形（じしょけい）の後（あと）に使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183132'>\r\n<li data-study-question='183133'>\r\n<li data-study-question='183134'>\r\n</ul>\r\n\r\n<p>「始末（しまつ）」は「とうとう」「挙句（あげく）」「結局（けっきょく）」といった副詞（ふくし）と一緒（いっしょ）に使（つか）われることも多（おお）いです。これらの表現（ひょうげん）は一見（いっけん）すると無駄（むだ）な繰（く）り返（かえ）しに見（み）えるかもしれませんが、「始末（しまつ）」が持（も）つ「初（はじ）めから終（お）わりまでの一連（いちれん）の流（なが）れを経（へ）てそうなった」という意味（いみ）をより強調（きょうちょう）する役割（やくわり）を果（は）たしています。</p>",
+        "body": "<p>始末（しまつ）, a noun meaning ‘settlement’, or ‘end result’ is commonly used in order to indicate a negative sequence of events that has been passed through, causing an equally negative result to come about at the end. It will be translated as ‘to wind up as (A)’, ‘to end up as (A)’, or ‘to come about that (A)’.</p>\r\n\r\n<p>This expression will be used primarily after verbs in their <span data-term='辞書形・じしょけい'>dictionary form</span>.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183132'>\r\n<li data-study-question='183133'>\r\n<li data-study-question='183134'>\r\n</ul>\r\n\r\n<p>Due to 始末（しまつ） being used to highlight negative outcomes that are the result of going through a specific event, it will often appear in sentences that also include words like とうとう ‘to come to a head’, 挙（あ）げ句（く） ‘after a long process’, or 結局（けっきょく） ‘in the end’. It may seem redundant to include these phrases, but as 始末（しまつ） has the more literal translation of ‘to culminate in’ (including everything from beginning to end), it is more emphatic, rather than redundant.</p>"
+      }
+    },
+    {
+      "id": "1989",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1989,
+        "source": "Try N1",
+        "location": "Page 41",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1990",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1990,
+        "source": "Shin Kanzen Master N1 Bunpou",
+        "location": "Page 71",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1991",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1991,
+        "source": "A Dictionary of Advanced Japanese Grammar",
+        "location": "Page 133",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1992",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1992,
+        "source": "Try N1",
+        "location": "Page 85",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1993",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1993,
+        "source": "Shin Kanzen Master N1 Bunpou",
+        "location": "Page 68",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1994",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1994,
+        "source": "A Dictionary of Advanced Japanese Grammar",
+        "location": "Page 728",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2598",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2598,
+        "site": "JapaneseTest4You",
+        "description": "始末だ",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n1-grammar-%E3%81%97%E3%81%BE%E3%81%A4%E3%81%A0-shimatsu-da/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2599",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2599,
+        "site": "JLPTSensei",
+        "description": "始末だ",
+        "link": "https://jlptsensei.com/learn-japanese-grammar/%E5%A7%8B%E6%9C%AB%E3%81%A0-%E3%81%97%E3%81%BE%E3%81%A4%E3%81%A0-shimatsu-da-meaning/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2600",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2600,
+        "site": "Imabi",
+        "description": "Result",
+        "link": "https://imabi.org/result/",
+        "type": "SupplementalLink"
+      }
+    }
+  ]
+}

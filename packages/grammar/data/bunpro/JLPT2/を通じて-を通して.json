@@ -1,0 +1,1200 @@
+{
+  "data": {
+    "id": "514",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 514,
+      "level": "JLPT2",
+      "lesson_id": 36,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "を通じて-を通して",
+      "nuance": "(A)が行（おこな）われた<strong>手段（しゅだん）</strong>を説明（せつめい）する表現（ひょうげん）。(A)の中（なか）を<strong>経（へ）て</strong>(B)を行（おこな）う。",
+      "grammar_order": 641,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 568,
+        "title": "に応えて",
+        "slug": "に応えて"
+      },
+      "previous_grammar_point": {
+        "id": 599,
+        "title": "に応じて",
+        "slug": "に応じて"
+      },
+      "lesson_count": "9/20",
+      "title": "を通じて・を通して",
+      "furigana": "を通（つう）じて",
+      "meaning": "Through, Via, Throughout",
+      "nuance_translation": "An expression which explains the means <strong>through</strong> which (A) was done. Literally with (A) as the <strong>flow point</strong>, (B).",
+      "rare_kanji_warning": "",
+      "caution": "Used when something has been done not directly, but by a proxy/some means/tool/etc.",
+      "polite_structure": "",
+      "casual_structure": "Noun + <strong><span class='gp-popout' data-gp-id='21'>を</span>通（とお）し<span class='gp-popout' data-gp-id='416'>て</span></strong><br>Noun + <strong><span class='gp-popout' data-gp-id='21'>を</span>通（つう）じ<span class='gp-popout' data-gp-id='416'>て</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/17597",
+      "metadata": "を通じて, を通して, をとおして, をつうじて, wotooshite, wotsuujite, wotuujite, expression, information, communication"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "182122",
+            "type": "study_question"
+          },
+          {
+            "id": "182123",
+            "type": "study_question"
+          },
+          {
+            "id": "182124",
+            "type": "study_question"
+          },
+          {
+            "id": "182125",
+            "type": "study_question"
+          },
+          {
+            "id": "184468",
+            "type": "study_question"
+          },
+          {
+            "id": "184466",
+            "type": "study_question"
+          },
+          {
+            "id": "184467",
+            "type": "study_question"
+          },
+          {
+            "id": "184469",
+            "type": "study_question"
+          },
+          {
+            "id": "6835",
+            "type": "study_question"
+          },
+          {
+            "id": "3879",
+            "type": "study_question"
+          },
+          {
+            "id": "6832",
+            "type": "study_question"
+          },
+          {
+            "id": "6837",
+            "type": "study_question"
+          },
+          {
+            "id": "6834",
+            "type": "study_question"
+          },
+          {
+            "id": "6831",
+            "type": "study_question"
+          },
+          {
+            "id": "6836",
+            "type": "study_question"
+          },
+          {
+            "id": "3880",
+            "type": "study_question"
+          },
+          {
+            "id": "3881",
+            "type": "study_question"
+          },
+          {
+            "id": "6838",
+            "type": "study_question"
+          },
+          {
+            "id": "6833",
+            "type": "study_question"
+          },
+          {
+            "id": "6839",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "656",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "564",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1526",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1141",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1142",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1143",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "182122",
+      "type": "study_question",
+      "attributes": {
+        "id": 182122,
+        "content": "その事件（じけん）はネットニュース<span class='study-area-input'>____</span>知（し）りました。",
+        "answer": "をつうじて",
+        "alternate_grammar": [],
+        "kanji_answer": "を通（つう）じて",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/その事件はネットニュースを通じて知りました。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I learned about that incident <strong>through</strong> online news.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182123",
+      "type": "study_question",
+      "attributes": {
+        "id": 182123,
+        "content": "彼（かれ）はアニメ<span class='study-area-input'>____</span>日本語（にほんご）を学（まな）んだそうだ。",
+        "answer": "をつうじて",
+        "alternate_grammar": [],
+        "kanji_answer": "を通（つう）じて",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼はアニメを通じて日本語を学んだそうだ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I heard that he learned Japanese <strong>through</strong> anime.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182124",
+      "type": "study_question",
+      "attributes": {
+        "id": 182124,
+        "content": "語学（ごがく）留学（りゅうがく）<span class='study-area-input'>____</span>日本（にほん）の文化（ぶんか）などを学（まな）びました。",
+        "answer": "をとおして",
+        "alternate_grammar": [],
+        "kanji_answer": "を通（とお）して",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/語学留学を通して日本の文化などを学びました。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I learned about Japanese culture and other aspects of Japan <strong>through</strong> language study.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182125",
+      "type": "study_question",
+      "attributes": {
+        "id": 182125,
+        "content": "仕事（しごと）<span class='study-area-input'>____</span>今（いま）の妻（つま）と出会（であ）いました。",
+        "answer": "をとおして",
+        "alternate_grammar": [],
+        "kanji_answer": "を通（とお）して",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/仕事を通して今の妻と出会いました。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I met my current wife <strong>through</strong> work.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184468",
+      "type": "study_question",
+      "attributes": {
+        "id": 184468,
+        "content": " 事故（じこ）にあった際（さい）には弁護士（べんごし）<span class='study-area-input'>____</span>相手（あいて）に連絡（れんらく）をするようにしてください。",
+        "answer": "をとおして",
+        "alternate_grammar": [],
+        "kanji_answer": "を通（とお）して",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/事故にあった際には弁護士を通して相手に連絡をするようにしてください。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 14,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "If you are involved in an accident, you should contact the other party <strong>through</strong> your attorney. (Natural Japanese)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184466",
+      "type": "study_question",
+      "attributes": {
+        "id": 184466,
+        "content": "ロシアには年間（ねんかん）<span class='study-area-input'>____</span>寒（さむ）い村（むら）があるらしい。",
+        "answer": "をつうじて",
+        "alternate_grammar": [],
+        "kanji_answer": "を通（つう）じて",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/ロシアには年間を通じて寒い村があるらしい。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I heard that there is a town in Russia that is cold <strong>throughout</strong> the year. (Natural Japanese)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184467",
+      "type": "study_question",
+      "attributes": {
+        "id": 184467,
+        "content": "事故（じこ）にあった際（さい）には弁護士（べんごし）<span class='study-area-input'>____</span>相手（あいて）に連絡（れんらく）をするようにしてください。",
+        "answer": "をつうじて",
+        "alternate_grammar": [],
+        "kanji_answer": "を通（つう）じて",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/事故にあった際には弁護士を通じて相手に連絡をするようにしてください。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "If you are involved in an accident, you should contact the other party through your attorney. (Unnatural Japanese)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184469",
+      "type": "study_question",
+      "attributes": {
+        "id": 184469,
+        "content": "ロシアには年間（ねんかん）<span class='study-area-input'>____</span>寒（さむ）い村（むら）があるらしい。",
+        "answer": "をとおして",
+        "alternate_grammar": [],
+        "kanji_answer": "を通（とお）して",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/ロシアには年間を通して寒い村があるらしい。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 15,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I heard that there is a town in Russia that is cold throughout the year. (Unnatural Japanese)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6835",
+      "type": "study_question",
+      "attributes": {
+        "id": 6835,
+        "content": "看病（かんびょう）<span class='study-area-input'>____</span>人（ひと）の愛（あい）を知（し）りました。",
+        "answer": "をとおして",
+        "alternate_grammar": [
+          "をつうじて",
+          "をとおして"
+        ],
+        "kanji_answer": "を通（とお）して",
+        "kanji_alt_grammar": [
+          "を通（つう）じて",
+          "を通（とお）して"
+        ],
+        "nuance": "(A)が行（おこな）われた<strong>手段（しゅだん）</strong>を説明（せつめい）する表現（ひょうげん）。(A)の中（なか）を<strong>経（へ）て</strong>(B)を行（おこな）う。",
+        "tense": "て, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/看病を通して人の愛を知りました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つうじて": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "とおして": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "によって": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "にとおして": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          },
+          "につうじて": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          }
+        },
+        "translation": "<strong>Through</strong> nursing a patient, I came to know human affection.",
+        "nuance_translation": "An expression which explains the means <strong>through</strong> which (A) was done. Literally with (A) as the <strong>flow point</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3879",
+      "type": "study_question",
+      "attributes": {
+        "id": 3879,
+        "content": "今（いま）の奥（おく）さんには友達（ともだち）<span class='study-area-input'>____</span>出会（であ）った。",
+        "answer": "をつうじて",
+        "alternate_grammar": [
+          "をつうじて",
+          "をとおして"
+        ],
+        "kanji_answer": "を通（つう）じて",
+        "kanji_alt_grammar": [
+          "を通（とお）して",
+          "を通（つう）じて"
+        ],
+        "nuance": "(A)が行（おこな）われた<strong>手段（しゅだん）</strong>を説明（せつめい）する表現（ひょうげん）。(A)の中（なか）を<strong>経（へ）て</strong>(B)を行（おこな）う。",
+        "tense": "て, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/今の奥さんには友達を通じて出会った。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つうじて": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "とおして": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "によって": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "にとおして": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          },
+          "につうじて": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          }
+        },
+        "translation": "I met my current wife <strong>through</strong> a friend.",
+        "nuance_translation": "An expression which explains the means <strong>through</strong> which (A) was done. Literally with (A) as the <strong>flow point</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6832",
+      "type": "study_question",
+      "attributes": {
+        "id": 6832,
+        "content": "オルガン<span class='study-area-input'>____</span>練習（れんしゅう）することの大切（たいせつ）さを学（まな）んだ。",
+        "answer": "をとおして",
+        "alternate_grammar": [
+          "をつうじて",
+          "をとおして"
+        ],
+        "kanji_answer": "を通（とお）して",
+        "kanji_alt_grammar": [
+          "を通（つう）じて",
+          "を通（とお）して"
+        ],
+        "nuance": "(A)が行（おこな）われた<strong>手段（しゅだん）</strong>を説明（せつめい）する表現（ひょうげん）。(A)の中（なか）を<strong>経（へ）て</strong>(B)を行（おこな）う。",
+        "tense": "て, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/オルガンを通して練習することの大切さを学んだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つうじて": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "とおして": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "によって": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "にとおして": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          },
+          "につうじて": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          }
+        },
+        "translation": "<strong>Through</strong> the organ, I learned the importance of practice.",
+        "nuance_translation": "An expression which explains the means <strong>through</strong> which (A) was done. Literally with (A) as the <strong>flow point</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6837",
+      "type": "study_question",
+      "attributes": {
+        "id": 6837,
+        "content": "叔父（おじ）さん<span class='study-area-input'>____</span>仕事（しごと）の依頼（いらい）がきた。",
+        "answer": "をとおして",
+        "alternate_grammar": [
+          "をつうじて",
+          "をとおして"
+        ],
+        "kanji_answer": "を通（とお）して",
+        "kanji_alt_grammar": [
+          "を通（つう）じて",
+          "を通（とお）して"
+        ],
+        "nuance": "(A)が行（おこな）われた<strong>手段（しゅだん）</strong>を説明（せつめい）する表現（ひょうげん）。(A)の中（なか）を<strong>経（へ）て</strong>(B)を行（おこな）う。",
+        "tense": "て, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/叔父さんを通して仕事の依頼がきた。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つうじて": {
+            "en": "How about adding a particle?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とおして": {
+            "en": "How about adding a particle?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "によって": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "にとおして": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "",
+            "id": ""
+          },
+          "につうじて": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Through</strong> my uncle, I got a job commission.",
+        "nuance_translation": "An expression which explains the means <strong>through</strong> which (A) was done. Literally with (A) as the <strong>flow point</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6834",
+      "type": "study_question",
+      "attributes": {
+        "id": 6834,
+        "content": "観測（かんそく）<span class='study-area-input'>____</span>、研究（けんきゅう）の大変（たいへん）さがよく分（わ）かった。",
+        "answer": "をつうじて",
+        "alternate_grammar": [
+          "をつうじて",
+          "をとおして"
+        ],
+        "kanji_answer": "を通（つう）じて",
+        "kanji_alt_grammar": [
+          "を通（とお）して",
+          "を通（つう）じて"
+        ],
+        "nuance": "(A)が行（おこな）われた<strong>手段（しゅだん）</strong>を説明（せつめい）する表現（ひょうげん）。(A)の中（なか）を<strong>経（へ）て</strong>(B)を行（おこな）う。",
+        "tense": "て, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/演劇を通じてコミュニケーション能力が向上した。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つうじて": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "とおして": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "によって": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "にとおして": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          },
+          "につうじて": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          }
+        },
+        "translation": "<strong>Through</strong> observation, I fully understood the difficulty of research.",
+        "nuance_translation": "An expression which explains the means <strong>through</strong> which (A) was done. Literally with (A) as the <strong>flow point</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6831",
+      "type": "study_question",
+      "attributes": {
+        "id": 6831,
+        "content": "演劇（えんげき）<span class='study-area-input'>____</span>コミュニケーション能力（のうりょく）が向上（こうじょう）した。",
+        "answer": "をつうじて",
+        "alternate_grammar": [
+          "をつうじて",
+          "をとおして"
+        ],
+        "kanji_answer": "を通（つう）じて",
+        "kanji_alt_grammar": [
+          "を通（とお）して",
+          "を通（つう）じて"
+        ],
+        "nuance": "(A)が行（おこな）われた<strong>手段（しゅだん）</strong>を説明（せつめい）する表現（ひょうげん）。(A)の中（なか）を<strong>経（へ）て</strong>(B)を行（おこな）う。",
+        "tense": "て, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/観測を通じて、研究の大変さがよく分かった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つうじて": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "とおして": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "によって": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "にとおして": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          },
+          "につうじて": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          }
+        },
+        "translation": "<strong>Through</strong> the theatrical play, my communication ability improved.",
+        "nuance_translation": "An expression which explains the means <strong>through</strong> which (A) was done. Literally with (A) as the <strong>flow point</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6836",
+      "type": "study_question",
+      "attributes": {
+        "id": 6836,
+        "content": "学会（がっかい）<span class='study-area-input'>____</span>与（あた）えられた指針（ししん）が役立（やくだ）ちました。",
+        "answer": "をとおして",
+        "alternate_grammar": [
+          "をつうじて",
+          "をとおして"
+        ],
+        "kanji_answer": "を通（とお）して",
+        "kanji_alt_grammar": [
+          "を通（つう）じて",
+          "を通（とお）して"
+        ],
+        "nuance": "(A)が行（おこな）われた<strong>手段（しゅだん）</strong>を説明（せつめい）する表現（ひょうげん）。(A)の中（なか）を<strong>経（へ）て</strong>(B)を行（おこな）う。",
+        "tense": "て, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/学会を通して与えられた指針が役立ちました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つうじて": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "とおして": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "によって": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "にとおして": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          },
+          "につうじて": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          }
+        },
+        "translation": "<strong>Throughout</strong> the academic conference, the guidelines that were given were helpful.",
+        "nuance_translation": "An expression which explains the means <strong>through</strong> which (A) was done. Literally with (A) as the <strong>flow point</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3880",
+      "type": "study_question",
+      "attributes": {
+        "id": 3880,
+        "content": "このプロジェクト<span class='study-area-input'>____</span>多（おお）くのことを学（まな）んだ。",
+        "answer": "をつうじて",
+        "alternate_grammar": [
+          "をとおして",
+          "をつうじて"
+        ],
+        "kanji_answer": "を通（つう）じて",
+        "kanji_alt_grammar": [
+          "を通（とお）して",
+          "を通（つう）じて"
+        ],
+        "nuance": "(A)が行（おこな）われた<strong>手段（しゅだん）</strong>を説明（せつめい）する表現（ひょうげん）。(A)の中（なか）を<strong>経（へ）て</strong>(B)を行（おこな）う。",
+        "tense": "て, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/このプロジェクトを通じて多くのことを学んだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つうじて": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "とおして": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "によって": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "にとおして": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          },
+          "につうじて": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          }
+        },
+        "translation": "I have learned a lot <strong>through</strong> participating in this project.",
+        "nuance_translation": "An expression which explains the means <strong>through</strong> which (A) was done. Literally with (A) as the <strong>flow point</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3881",
+      "type": "study_question",
+      "attributes": {
+        "id": 3881,
+        "content": "親（おや）と弁護士（べんごし）だけ<span class='study-area-input'>____</span>連絡（れんらく）できることになった。親（おや）が私（わたし）のことを憎（にく）んでいる。",
+        "answer": "をつうじて",
+        "alternate_grammar": [
+          "をとおして",
+          "をつうじて"
+        ],
+        "kanji_answer": "を通（つう）じて",
+        "kanji_alt_grammar": [
+          "を通（とお）して",
+          "を通（つう）じて"
+        ],
+        "nuance": "(A)が行（おこな）われた<strong>手段（しゅだん）</strong>を説明（せつめい）する表現（ひょうげん）。(A)の中（なか）を<strong>経（へ）て</strong>(B)を行（おこな）う。",
+        "tense": "て, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/親と弁護士だけを通じて連絡できることになった。親が私のことを憎んでいる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とおして": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "つうじて": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "によって": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "につうじて": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          },
+          "にとおして": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          }
+        },
+        "translation": "I ended up being able to communicate with my parents only <strong>via</strong> the lawyer. My parents hate me.",
+        "nuance_translation": "An expression which explains the means <strong>through</strong> which (A) was done. Literally with (A) as the <strong>flow point</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6838",
+      "type": "study_question",
+      "attributes": {
+        "id": 6838,
+        "content": "打合（うちあわ）せ<span class='study-area-input'>____</span>新（あら）たな発見（はっけん）をすることもよくある。",
+        "answer": "をとおして",
+        "alternate_grammar": [
+          "をつうじて",
+          "をとおして"
+        ],
+        "kanji_answer": "を通（とお）して",
+        "kanji_alt_grammar": [
+          "を通（つう）じて",
+          "を通（とお）して"
+        ],
+        "nuance": "(A)が行（おこな）われた<strong>手段（しゅだん）</strong>を説明（せつめい）する表現（ひょうげん）。(A)の中（なか）を<strong>経（へ）て</strong>(B)を行（おこな）う。",
+        "tense": "て, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/打合せを通して新たな発見をすることもよくある。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つうじて": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "とおして": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "によって": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "をへて": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "にとおして": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          },
+          "につうじて": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          }
+        },
+        "translation": "There are many new discoveries made <strong>through</strong> business meetings.",
+        "nuance_translation": "An expression which explains the means <strong>through</strong> which (A) was done. Literally with (A) as the <strong>flow point</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6833",
+      "type": "study_question",
+      "attributes": {
+        "id": 6833,
+        "content": "家屋（かおく）調査（ちょうさ）<span class='study-area-input'>____</span>、建物（たてもの）の現状（げんじょう）がかなり理解（りかい）できた。",
+        "answer": "をつうじて",
+        "alternate_grammar": [
+          "をつうじて",
+          "をとおして"
+        ],
+        "kanji_answer": "を通（つう）じて",
+        "kanji_alt_grammar": [
+          "を通（とお）して",
+          "を通（つう）じて"
+        ],
+        "nuance": "(A)が行（おこな）われた<strong>手段（しゅだん）</strong>を説明（せつめい）する表現（ひょうげん）。(A)の中（なか）を<strong>経（へ）て</strong>(B)を行（おこな）う。",
+        "tense": "て, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/家屋調査を通じて、建物の現状がかなり理解できた。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つうじて": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "とおして": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "によって": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "にとおして": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          },
+          "につうじて": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          }
+        },
+        "translation": "<strong>Through</strong> the house inspection, I was able to understand a lot about the state of the building.",
+        "nuance_translation": "An expression which explains the means <strong>through</strong> which (A) was done. Literally with (A) as the <strong>flow point</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6839",
+      "type": "study_question",
+      "attributes": {
+        "id": 6839,
+        "content": "植木（うえき）<span class='study-area-input'>____</span>自然（しぜん）の尊（とうと）さを学（まな）びました。",
+        "answer": "をとおして",
+        "alternate_grammar": [
+          "をつうじて",
+          "をとおして"
+        ],
+        "kanji_answer": "を通（とお）して",
+        "kanji_alt_grammar": [
+          "を通（つう）じて",
+          "を通（とお）して"
+        ],
+        "nuance": "(A)が行（おこな）われた<strong>手段（しゅだん）</strong>を説明（せつめい）する表現（ひょうげん）。(A)の中（なか）を<strong>経（へ）て</strong>(B)を行（おこな）う。",
+        "tense": "て, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/植木を通して自然の尊さを学びました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つうじて": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "とおして": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "によって": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "にとおして": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          },
+          "につうじて": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente."
+          }
+        },
+        "translation": "I learned the nobility of nature <strong>through</strong> planting.",
+        "nuance_translation": "An expression which explains the means <strong>through</strong> which (A) was done. Literally with (A) as the <strong>flow point</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 514,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "656",
+      "type": "writeup",
+      "attributes": {
+        "id": 656,
+        "body_ja": "<p>「<span data-gp-id='514'>を通（つう）じて</span>」と「<span data-gp-id='514'>を通（とお）して</span>」はとても似（に）た意味（いみ）を持（も）ち、多（おお）くの場合（ばあい）に入（い）れ替（か）えて使（つか）うことができる文法（ぶんぽう）です。主（おも）に手段（しゅだん）や場所（ばしょ）を示（しめ）し、「(A) を手段（しゅだん）として (B)」や「(A) を経由（けいゆ）して (B)」のような意味（いみ）を表（あらわ）します。</p>\r\n\r\n<p>「通（つう）じる」と「通（とお）す」の違（ちが）いは、前者（ぜんしゃ）が自動詞（じどうし）で、後者（こうしゃ）が他動詞（たどうし）であることです。そのため、「通（つう）じる」は、情報（じょうほう）やコミュニケーションのような、(A) が (B) を成立（せいりつ）させるための目（め）に見（み）えない繋（つな）がりや、情報（じょうほう）の流（なが）れによく使（つか）われます。一方（いっぽう）で「通（とお）す」は、物理的（ぶつりてき）な場所（ばしょ）を経由（けいゆ）するときに使（つか）われることが多（おお）いです。「を」で始（はじ）まるこれらの表現（ひょうげん）は、名詞（めいし）の後（あと）に置（お）かれ、その後（ご）の (B) の部分（ぶぶん）で (A) を通（とお）って行（おこな）われたことが述（の）べられます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182122'>\r\n<li data-study-question='182123'>\r\n<li data-study-question='182124'>\r\n<li data-study-question='182125'>\r\n</ul>\r\n\r\n<section class='caution'><h4>注意点</h4>\r\n<p>「<span data-gp-id='514'>を通（つう）じて</span>」と「<span data-gp-id='514'>を通（とお）して</span>」の主（おも）な違（ちが）いは、自動詞（じどうし）と他動詞（たどうし）という動詞（どうし）そのものの性質（せいしつ）の違（ちが）いからきています。そのため、物事（ものごと）が意図的（いとてき）に「(A) を利用（りよう）して」行（おこな）われる場合（ばあい）には「通（とお）して」が使（つか）われやすく、意図（いと）せず受動的（じゅどうてき）に「(A) を通過（つうか）して」行（おこな）われる場合（ばあい）には「通（つう）じて」が使（つか）われやすいです。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184466'>\r\n<li data-study-question='184467'>\r\n<li data-study-question='184468'>\r\n<li data-study-question='184469'></ul></section>",
+        "body": "<p><span data-gp-id='514'>を通（つう）じて</span> and <span data-gp-id='514'>を通（とお）して</span> are two grammar patterns in Japanese that have very similar meanings to each other, and are used in many overlapping situations. Primarily, they can be thought of as meaning 'through (A), (B)', or 'via (A), (B)'. This 'through' may either indicate a method, or a location.</p>\r\n\r\n<p>通（つう）じる 'to flow', or 'to go through' and 通（とお）す 'to make a path', only differ in that the former is intransitive, while the latter is transitive. Because of this, 通（つう）じる will be seen more often in regard to information or communication where (A) is the connection through which (B) occurs. 通（とお）す on the other hand more often refers to direct locations through which something is transferred or relocated. As this expression begins with を, it will appear after nouns, before expressing in the (B) part of the sentence exactly what was done 'through' (A).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182122'>\r\n<li data-study-question='182123'>\r\n<li data-study-question='182124'>\r\n<li data-study-question='182125'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>The primary difference between <span data-gp-id='514'>を通（つう）じて</span> and <span data-gp-id='514'>を通（とお）して</span> lies in the intransitive and transitive nature of the verbs themselves. Due to this, things that are being done 'intentionally', or 'by use of (A)' will tend to use <span data-gp-id='514'>を通（とお）して</span>. <span data-gp-id='514'>を通（つう）じて</span> is more common when something is being done 'throughout (A)'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184466'>\r\n<li data-study-question='184467'>\r\n<li data-study-question='184468'>\r\n<li data-study-question='184469'></ul></section>"
+      }
+    },
+    {
+      "id": "564",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 564,
+        "source": "Tobira",
+        "location": "Page 257",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1141",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1141,
+        "site": "Japanese Stack Exchange",
+        "description": "Difference between を通して and を通じて",
+        "link": "https://japanese.stackexchange.com/questions/13123/whats-the-difference-between-を通とおして-and-を通つうじて",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1142",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1142,
+        "site": "JGram",
+        "description": "Additional Sentences",
+        "link": "https://takoboto.jp/jgram/pages/viewOne.php?tagE=tsuujite",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1143",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1143,
+        "site": "JapaneseTest4You",
+        "description": "Additional Breakdown and Example Sentences",
+        "link": "http://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-をつうじてをとおして-o-tsuujite-o-tooshite/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1526",
+      "type": "related_content",
+      "attributes": {
+        "id": 1526,
+        "relationship_type": "related",
+        "body": "These are both formal expressions that use the て form of a verb to express the idea of 'through' or 'after'. を経て (as might be expected from its derivation from the verb 経る（へる） ’to pass’ or 経つ（たつ） ‘to pass (specifically of time)’ can be used with time expressions, e.g. 2年の交際を経て結婚しました ('They got married after a two-year relationship.'). In contrast, を通じて・を通して can be used for experiences or other avenues that do not necessarily imply a passage of time, e.g. 弁護士を通じて相手に連絡する 'contact someone through a lawyer'.",
+        "first_relatable": {
+          "id": 790,
+          "slug": "を経て",
+          "title": "を経て",
+          "meaning": "Via, Through, After (experience at job, university, etc.), Pass through",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 514,
+          "slug": "を通じて-を通して",
+          "title": "を通じて・を通して",
+          "meaning": "Through, Via, Throughout",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

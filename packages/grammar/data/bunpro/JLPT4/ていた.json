@@ -1,0 +1,995 @@
+{
+  "data": {
+    "id": "136",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 136,
+      "level": "JLPT4",
+      "lesson_id": 12,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "ていた",
+      "nuance": "ある行動（こうどう）が<strong>過去（かこ）に継続（けいぞく）していた</strong>ことを表（あらわ）す表現（ひょうげん）。",
+      "grammar_order": 155,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 142,
+        "title": "に (Frequency)",
+        "slug": "に-frequency"
+      },
+      "previous_grammar_point": {
+        "id": 116,
+        "title": "あとで",
+        "slug": "あとで"
+      },
+      "lesson_count": "10/17",
+      "title": "ていた ",
+      "furigana": "～ていた ",
+      "meaning": "Was doing ~",
+      "nuance_translation": "A phrase that shows when an action <strong>was continuing in the past</strong>.",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": "<span class='gp-popout' data-gp-id='27'>Verb［てい<del>る</del>］</span>+ <strong><span class='gp-popout' data-gp-id='895'>ました</span></strong>",
+      "casual_structure": "<span class='gp-popout' data-gp-id='27'>Verb［てい<del>る</del>］</span>+ <strong><span class='gp-popout' data-gp-id='895'>た</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/9981",
+      "metadata": "ていた, ていました, teita, teimashita, verb, conjunction particle, ongoing"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "2889",
+            "type": "study_question"
+          },
+          {
+            "id": "180273",
+            "type": "study_question"
+          },
+          {
+            "id": "2883",
+            "type": "study_question"
+          },
+          {
+            "id": "2884",
+            "type": "study_question"
+          },
+          {
+            "id": "180270",
+            "type": "study_question"
+          },
+          {
+            "id": "180271",
+            "type": "study_question"
+          },
+          {
+            "id": "180272",
+            "type": "study_question"
+          },
+          {
+            "id": "180269",
+            "type": "study_question"
+          },
+          {
+            "id": "240",
+            "type": "study_question"
+          },
+          {
+            "id": "2886",
+            "type": "study_question"
+          },
+          {
+            "id": "2887",
+            "type": "study_question"
+          },
+          {
+            "id": "2890",
+            "type": "study_question"
+          },
+          {
+            "id": "2891",
+            "type": "study_question"
+          },
+          {
+            "id": "2888",
+            "type": "study_question"
+          },
+          {
+            "id": "238",
+            "type": "study_question"
+          },
+          {
+            "id": "239",
+            "type": "study_question"
+          },
+          {
+            "id": "2885",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "154",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "588",
+            "type": "related_content"
+          },
+          {
+            "id": "627",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "267",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "2889",
+      "type": "study_question",
+      "attributes": {
+        "id": 2889,
+        "content": "一生懸命（いっしょうけんめい）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='45'>から</span>、疲（つか）れ<span class='gp-popout' data-gp-id='895'>た</span>。",
+        "answer": "はしっていた",
+        "alternate_grammar": [
+          "はしってた",
+          "はしっていた"
+        ],
+        "kanji_answer": "走（はし）っていた",
+        "kanji_alt_grammar": [
+          "走（はし）ってた",
+          "走（はし）っていた"
+        ],
+        "nuance": "ある行動（こうどう）が<strong>過去（かこ）に継続（けいぞく）していた</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past-progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/136/male_audio/230224_1311.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/一生懸命走っていたから、疲れた。.mp3",
+        "word_prompt": "走（はし）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はしりつつあった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>was running</strong> my hardest, so I became exhausted.",
+        "nuance_translation": "A phrase that shows when an action <strong>was continuing in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 136,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180273",
+      "type": "study_question",
+      "attributes": {
+        "id": 180273,
+        "content": "お父（とう）さん<span class=\"gp-popout\" data-gp-id=\"10\">が</span><span class=\"gp-popout\" data-gp-id=\"37\">その</span>椅子（いす）<span class=\"gp-popout\" data-gp-id=\"32\">に</span>座（すわ）っ<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"45\">から</span>、こっち<span class=\"gp-popout\" data-gp-id=\"32\">に</span>座（すわ）りな。",
+        "answer": "ていた",
+        "alternate_grammar": [],
+        "kanji_answer": "ていた",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/お父さんがその椅子に座っていたから、こっちに座りな。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Dad <strong>was</strong> sitt<strong>ing</strong> there, so sit here please.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 136,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2883",
+      "type": "study_question",
+      "attributes": {
+        "id": 2883,
+        "content": "４（よ）時間（じかん）<span class='gp-popout' data-gp-id='119'>も</span>椅子（いす）に<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='45'>から</span>、お尻（しり）<span class='gp-popout' data-gp-id='10'>が</span>痛（いた）<span class='gp-popout' data-gp-id='24'>い</span>。",
+        "answer": "すわっていた",
+        "alternate_grammar": [
+          "すわってた",
+          "すわっていた"
+        ],
+        "kanji_answer": "座（すわ）っていた",
+        "kanji_alt_grammar": [
+          "座（すわ）ってた",
+          "座（すわ）っていた"
+        ],
+        "nuance": "ある行動（こうどう）が<strong>過去（かこ）に継続（けいぞく）していた</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past-progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/136/male_audio/230224_1308.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/４時間も椅子に座っていたから、お尻が痛い。.mp3",
+        "word_prompt": "座（すわ）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "すわりつつあった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "すわった": {
+            "en": "This means 'did (A)'. Can you try a grammar point that expresses 'was doing (A)' instead?",
+            "es": "",
+            "fr": ""
+          },
+          "すわていた": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I <strong>was sitting</strong> for as much as four hours, so my butt hurts.",
+        "nuance_translation": "A phrase that shows when an action <strong>was continuing in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 136,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2884",
+      "type": "study_question",
+      "attributes": {
+        "id": 2884,
+        "content": "お母（かあ）さん<span class='gp-popout' data-gp-id='10'>が</span>帰（かえ）<span class='gp-popout' data-gp-id='416'>って</span>来（き）た<span class='gp-popout' data-gp-id='93'>時（とき）</span>私（わたし）<span class='gp-popout' data-gp-id='3'>は</span>ご飯（はん）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "つくっていた",
+        "alternate_grammar": [
+          "つくってた",
+          "つくっていた"
+        ],
+        "kanji_answer": "作（つく）っていた",
+        "kanji_alt_grammar": [
+          "作（つく）ってた",
+          "作（つく）っていた"
+        ],
+        "nuance": "ある行動（こうどう）が<strong>過去（かこ）に継続（けいぞく）していた</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past-progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/136/male_audio/230224_1308_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/お母さんが帰って来た時私はご飯を作っていた。.mp3",
+        "word_prompt": "作（つく）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つくりつつあった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "つくっていました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "つくっている": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "つくていた": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "When my mom came home I <strong>was making</strong> food. ",
+        "nuance_translation": "A phrase that shows when an action <strong>was continuing in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 136,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180270",
+      "type": "study_question",
+      "attributes": {
+        "id": 180270,
+        "content": "昨日（きのう）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>夜遅（よるおそ）く<span class=\"gp-popout\" data-gp-id=\"58\">まで</span>カラオケ<span class=\"gp-popout\" data-gp-id=\"25\">で</span>歌（うた）っ<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"62\">ので</span>、のど<span class=\"gp-popout\" data-gp-id=\"10\">が</span>痛（いた）<span class=\"gp-popout\" data-gp-id=\"24\">い</span><span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "ていた",
+        "alternate_grammar": [],
+        "kanji_answer": "ていた",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/昨日は夜遅くまでカラオケで歌っていたので、のどが痛いです。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>was</strong> sing<strong>ing</strong> until late last night at karaoke, so my throat hurts. (Was doing karaoke)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 136,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180271",
+      "type": "study_question",
+      "attributes": {
+        "id": 180271,
+        "content": "昔（むかし）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>パーマ<span class=\"gp-popout\" data-gp-id=\"21\">を</span>かけ<span class='study-area-input'>____</span>。",
+        "answer": "ていました",
+        "alternate_grammar": [],
+        "kanji_answer": "ていました",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/昔はパーマをかけていました。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "In the past, I used to have my hair permed. (<strong>Was</strong> gett<strong>ing</strong> perms)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 136,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180272",
+      "type": "study_question",
+      "attributes": {
+        "id": 180272,
+        "content": "窓（まど）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>割（わ）れ<span class='study-area-input'>____</span>。",
+        "answer": "ていました",
+        "alternate_grammar": [],
+        "kanji_answer": "ていました",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/窓が割れていました。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The window <strong>was</strong> smashed. (Was in the state of being smashed)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 136,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180269",
+      "type": "study_question",
+      "attributes": {
+        "id": 180269,
+        "content": "シャワー<span class=\"gp-popout\" data-gp-id=\"10\">が</span>壊（こわ）れ<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"45\">から</span>二日（ふつか）間（かん）<span class=\"gp-popout\" data-gp-id=\"4\">も</span>シャワー<span class=\"gp-popout\" data-gp-id=\"21\">を</span>浴（あ）<span class=\"gp-popout\" data-gp-id=\"132\">びれ</span><span class=\"gp-popout\" data-gp-id=\"896\">なかった</span>。",
+        "answer": "ていた",
+        "alternate_grammar": [],
+        "kanji_answer": "ていた",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/シャワーが壊れていたから二日間もシャワーを浴びれなかった。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Because the shower <strong>was broken</strong>, I was not able to take a shower for 2 days. (Was in the state of being broken)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 136,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "240",
+      "type": "study_question",
+      "attributes": {
+        "id": 240,
+        "content": "昨日（きのう）１（いち）時（じ）<span class='gp-popout' data-gp-id='125'>ごろ</span>に<span class='study-area-input'>____</span>。",
+        "answer": "ねていた",
+        "alternate_grammar": [
+          "ねてた",
+          "ねていた"
+        ],
+        "kanji_answer": "寝（ね）ていた",
+        "kanji_alt_grammar": [
+          "寝（ね）てた",
+          "寝（ね）ていた"
+        ],
+        "nuance": "ある行動（こうどう）が<strong>過去（かこ）に継続（けいぞく）していた</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past-progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/136/male_audio/230425_1216.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/昨日１時ごろに寝ていた。.mp3",
+        "word_prompt": "寝（ね）<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ねていました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ねつつあった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Yesterday around one o'clock I <strong>was</strong> sleep<strong>ing</strong>. ",
+        "nuance_translation": "A phrase that shows when an action <strong>was continuing in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 136,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2886",
+      "type": "study_question",
+      "attributes": {
+        "id": 2886,
+        "content": "長（なが）<span class='gp-popout' data-gp-id='24'>い</span>間（あいだ）ランニング<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='45'>から</span>、喉（のど）<span class='gp-popout' data-gp-id='10'>が</span>乾（かわ）きました。",
+        "answer": "していた",
+        "alternate_grammar": [
+          "してた",
+          "していた"
+        ],
+        "kanji_answer": "していた",
+        "kanji_alt_grammar": [
+          "してた",
+          "していた"
+        ],
+        "nuance": "ある行動（こうどう）が<strong>過去（かこ）に継続（けいぞく）していた</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past-progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/136/male_audio/230224_1309_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/長い間ランニングをしていたから、喉が乾きました。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しつつあった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "している": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "して": {
+            "en": "We are looking for a grammar point with the meaning of 'was doing (A)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Because I <strong>was</strong> runn<strong>ing</strong> for a long time, I became thirsty.",
+        "nuance_translation": "A phrase that shows when an action <strong>was continuing in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 136,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2887",
+      "type": "study_question",
+      "attributes": {
+        "id": 2887,
+        "content": "テレビ<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='93'>時（とき）</span>停電（ていでん）<span class='gp-popout' data-gp-id='57'>にな</span><span class='gp-popout' data-gp-id='41'>った</span>。",
+        "answer": "みていた",
+        "alternate_grammar": [
+          "みてた",
+          "みていた"
+        ],
+        "kanji_answer": "見（み）ていた",
+        "kanji_alt_grammar": [
+          "見（み）てた",
+          "見（み）ていた"
+        ],
+        "nuance": "ある行動（こうどう）が<strong>過去（かこ）に継続（けいぞく）していた</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past-progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/136/male_audio/230224_1309_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/テレビを見ていた時停電になった。.mp3",
+        "word_prompt": "見（み）<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みつつあった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "みている": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "みた": {
+            "en": "This means 'did (A)'. Can you try a grammar point that expresses 'was doing (A)' instead?",
+            "es": "",
+            "fr": ""
+          },
+          "みっていた": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "When I <strong>was watching</strong> TV the power went out. ",
+        "nuance_translation": "A phrase that shows when an action <strong>was continuing in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 136,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2890",
+      "type": "study_question",
+      "attributes": {
+        "id": 2890,
+        "content": "<span class='gp-popout' data-gp-id='364'>また</span>僕（ぼく）<span class='gp-popout' data-gp-id='10'>が</span>勉強（べんきょう）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='93'>時（とき）</span>邪魔（じゃま）した<span class='gp-popout' data-gp-id='71'>ね</span>。やめ<span class='gp-popout' data-gp-id='103'>てくれる</span>？",
+        "answer": "していた",
+        "alternate_grammar": [
+          "してた",
+          "していた"
+        ],
+        "kanji_answer": "していた",
+        "kanji_alt_grammar": [
+          "してた",
+          "していた"
+        ],
+        "nuance": "ある行動（こうどう）が<strong>過去（かこ）に継続（けいぞく）していた</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past-progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/136/male_audio/230224_1311_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/また僕が勉強していた時邪魔したね。やめてくれる？.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しつつあった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "している": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "した": {
+            "en": "This means 'did (A)'. Can you try a grammar point that expresses 'was doing (A)' instead?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "You bothered me again when I <strong>was studying</strong>, yeah? Would you cut it out? ",
+        "nuance_translation": "A phrase that shows when an action <strong>was continuing in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 136,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2891",
+      "type": "study_question",
+      "attributes": {
+        "id": 2891,
+        "content": "神田（かんだ）さん<span class='gp-popout' data-gp-id='3'>は</span>増田（ますだ）さん<span class='gp-popout' data-gp-id='108'>より</span>練習（れんしゅう）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='45'>から</span>、神田（かんだ）さん<span class='gp-popout' data-gp-id='73'>の方（ほう）が</span>うま<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "していた",
+        "alternate_grammar": [
+          "してた",
+          "していた"
+        ],
+        "kanji_answer": "していた",
+        "kanji_alt_grammar": [
+          "してた",
+          "していた"
+        ],
+        "nuance": "ある行動（こうどう）が<strong>過去（かこ）に継続（けいぞく）していた</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past-progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/136/male_audio/230224_1311_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/神田さんは増田さんより練習をしていたから、神田さんの方がうまいです。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しつつあった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "している": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "した": {
+            "en": "This means 'did (A)'. Can you try a grammar point that expresses 'was doing (A)' instead?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Kanda-san <strong>was practicing</strong> more than Masuda-san, so Kanda-san is more skilled.",
+        "nuance_translation": "A phrase that shows when an action <strong>was continuing in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 136,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2888",
+      "type": "study_question",
+      "attributes": {
+        "id": 2888,
+        "content": "日本（にほん）<span class='gp-popout' data-gp-id='25'>で</span>日本語（にほんご）<span class='gp-popout' data-gp-id='10'>が</span><span class='gp-popout' data-gp-id='672'>だんだん</span>上手（じょうず）に<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='130'>のに</span>、アメリカに帰（かえ）っ<span class='gp-popout' data-gp-id='128'>てきて</span>凄（すご）く下手（へた）<span class='gp-popout' data-gp-id='57'>にな</span><span class='gp-popout' data-gp-id='41'>った</span>。",
+        "answer": "なっていた",
+        "alternate_grammar": [
+          "なってた",
+          "なっていた"
+        ],
+        "kanji_answer": "なっていた",
+        "kanji_alt_grammar": [
+          "なってた",
+          "なっていた"
+        ],
+        "nuance": "ある行動（こうどう）が<strong>過去（かこ）に継続（けいぞく）していた</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past-progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/136/male_audio/230224_1310.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/日本で日本語がだんだん上手になっていたのに、アメリカに帰ってきて凄く下手になった。.mp3",
+        "word_prompt": "なる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なりつつあった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "In Japan my Japanese <strong>was getting</strong> better, but now that I have come back to America my Japanese ability has gone way down.",
+        "nuance_translation": "A phrase that shows when an action <strong>was continuing in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 136,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "238",
+      "type": "study_question",
+      "attributes": {
+        "id": 238,
+        "content": "勉強（べんきょう）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='361'>けど</span>、今（いま）<span class='gp-popout' data-gp-id='3'>は</span>休（やす）んでいる。",
+        "answer": "していた",
+        "alternate_grammar": [
+          "してた",
+          "していた"
+        ],
+        "kanji_answer": "していた",
+        "kanji_alt_grammar": [
+          "してた",
+          "していた"
+        ],
+        "nuance": "ある行動（こうどう）が<strong>過去（かこ）に継続（けいぞく）していた</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past-progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/136/male_audio/230224_1307_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/勉強をしていたけど、今は休んでいる。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "していました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しつつあった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "している": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "した": {
+            "en": "This means 'did (A)'. Can you try a grammar point that expresses 'was doing (A)' instead?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I <strong>was studying</strong> but am taking a break right now.",
+        "nuance_translation": "A phrase that shows when an action <strong>was continuing in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 136,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "239",
+      "type": "study_question",
+      "attributes": {
+        "id": 239,
+        "content": "音楽（おんがく）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='45'>から</span>、電話（でんわ）<span class='gp-popout' data-gp-id='10'>が</span><span class='gp-popout' data-gp-id='767'>聞（き）こえ</span><span class='gp-popout' data-gp-id='896'>なかった</span>。",
+        "answer": "きいていた",
+        "alternate_grammar": [
+          "きいてた",
+          "きいていた"
+        ],
+        "kanji_answer": "聴（き）いていた",
+        "kanji_alt_grammar": [
+          "聴（き）いてた",
+          "聴（き）いていた"
+        ],
+        "nuance": "ある行動（こうどう）が<strong>過去（かこ）に継続（けいぞく）していた</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past-progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/136/male_audio/230224_1307_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/音楽を聴いていたから、電話が聞こえなかった。.mp3",
+        "word_prompt": "聴（き）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きいていました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ききつつあった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "きいた": {
+            "en": "This means 'did (A)'. Can you try a grammar point that expresses 'was doing (A)' instead?",
+            "es": "",
+            "fr": ""
+          },
+          "きっていた": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          },
+          "きていた": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Because I <strong>was listening to music</strong> I couldn't hear the phone.",
+        "nuance_translation": "A phrase that shows when an action <strong>was continuing in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 136,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2885",
+      "type": "study_question",
+      "attributes": {
+        "id": 2885,
+        "content": "あっ、ごめん。腰（こし）<span class='gp-popout' data-gp-id='10'>が</span>痛（いた）<span class='gp-popout' data-gp-id='24'>い</span>って<span class='study-area-input'>____</span>。",
+        "answer": "わすれていた",
+        "alternate_grammar": [
+          "わすれてた",
+          "わすれていた"
+        ],
+        "kanji_answer": "忘（わす）れていた",
+        "kanji_alt_grammar": [
+          "忘（わす）れてた",
+          "忘（わす）れていた"
+        ],
+        "nuance": "ある行動（こうどう）が<strong>過去（かこ）に継続（けいぞく）していた</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past-progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/136/male_audio/230224_1309.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/あっ、ごめん。腰が痛いって忘れていた。.mp3",
+        "word_prompt": "忘（わす）れ<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "わすれつつあった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "わすれていました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "わすれた": {
+            "en": "This means 'did (A)'. Can you try a grammar point that expresses 'was doing (A)' instead?",
+            "es": "",
+            "fr": ""
+          },
+          "わすれっていた": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Oh, sorry. I <strong>was forgetting</strong> that your lower back hurt.",
+        "nuance_translation": "A phrase that shows when an action <strong>was continuing in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 136,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154",
+      "type": "writeup",
+      "attributes": {
+        "id": 154,
+        "body_ja": "",
+        "body": "<p>To convey that '(A) was happening', or that somebody 'was doing (A)' in Japanese, <span data-gp-id='136'>ていた</span> (or ていました) will be used. <span data-gp-id='136'>ていた</span> is a construction which uses the conjunction particle <span data-gp-id='416'>て</span>, and the ichidan verb <span data-gp-id='23'>いる</span> (to exist), in its past tense form いた.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180269'>\r\n<li data-study-question='180270'>\r\n<li data-study-question='180271'>\r\n<li data-study-question='180272'>\r\n</ul>\r\n\r\n<p>Sometimes <span data-gp-id='136'>ていた</span> is used to express things that are still ongoing, but the speaker is not sure about, or would like to politely advise the listener about. This is very similar to the way in which English uses '(A) was doing (B)'.</p>\r\n\r\n<ul class='writeup-examples--holder'><li data-study-question='180273'></ul>\r\n\r\n<p>In this example, although the action of 'sitting' is not finished, we can imagine that the speaker is suggesting that 'dad was sitting here, and he still is, but he just went to get a drink'.</p>\r\n\r\n<p>The same kind of sentence could be used when the speaker has walked away from where their dad was sitting, and doesn't actually know if he is still sitting there or not.</p>"
+      }
+    },
+    {
+      "id": "267",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 267,
+        "site": "JStackExchange",
+        "description": "What is Vて+た construction?",
+        "link": "https://japanese.stackexchange.com/questions/18498/what-is-v%e3%81%a6%e3%81%9f-construction/18510#18510",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "588",
+      "type": "related_content",
+      "attributes": {
+        "id": 588,
+        "relationship_type": "related",
+        "body": "The Verb + て form connects verbs or parts of a sentence. When combined with いた, it describes a past state. For example, 食べていた means 'I was eating,' and 死んでいた means 'it was dead.' Whether ていた conveys an action ('was -ing') or a state depends on the verb. In casual speech, ていた is often shortened to てた.",
+        "first_relatable": {
+          "id": 136,
+          "slug": "ていた",
+          "title": "ていた ",
+          "meaning": "Was doing ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 416,
+          "slug": "verb-て",
+          "title": "Verb + て",
+          "meaning": "And, Then (Linking events)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "627",
+      "type": "related_content",
+      "attributes": {
+        "id": 627,
+        "relationship_type": "related",
+        "body": "The う-Verb (Past) expresses a completed action or one that took place in the past, similar to '-ed' in English. The ていた form conveys an ongoing action or state in the past, similar to 'was -ing' in English. In other words, ていた indicates an action that was continuous or repeated, while the regular past form describes a single, completed action.",
+        "first_relatable": {
+          "id": 136,
+          "slug": "ていた",
+          "title": "ていた ",
+          "meaning": "Was doing ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 41,
+          "slug": "う-verb-past",
+          "title": "う-Verb (Past)",
+          "meaning": "う - Verbs (Past tense)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

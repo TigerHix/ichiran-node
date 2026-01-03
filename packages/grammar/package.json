@@ -11,17 +11,15 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.json && cp -r src/grammars dist/",
-    "build:watch": "concurrently \"tsc -p tsconfig.json --watch\" \"chokidar 'src/grammars/**/*.json' -c 'cp -r src/grammars dist/' --initial\"",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && cp -r python dist/python && cp -r data dist/data",
     "typecheck": "tsc --noEmit",
     "test": "bun test tests/"
   },
   "dependencies": {
-    "@ichiran/core": "0.0.0",
-    "lru-cache": "^10.2.2"
+    "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@ichiran/testing": "workspace:*"
+    "@types/node": "^22.10.2"
   },
   "sideEffects": false
 }

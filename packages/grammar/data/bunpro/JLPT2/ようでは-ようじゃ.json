@@ -1,0 +1,924 @@
+{
+  "data": {
+    "id": "414",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 414,
+      "level": "JLPT2",
+      "lesson_id": 38,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "ようでは-ようじゃ",
+      "nuance": "あるものが(A)の<strong>作法（さほう）</strong>とされたら、(B)もそうであるということを示（しめ）す表現（ひょうげん）。",
+      "grammar_order": 695,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 496,
+        "title": "さすが",
+        "slug": "さすが"
+      },
+      "previous_grammar_point": {
+        "id": 694,
+        "title": "幸い・幸いなことに",
+        "slug": "幸い-幸いなことに"
+      },
+      "lesson_count": "21/23",
+      "title": "ようでは・ようじゃ",
+      "furigana": "様（よう）では",
+      "meaning": "If, If it is true that",
+      "nuance_translation": "An expression stating that if something is determined to be the <strong>manner</strong> of (A), then (B) will also be the case.",
+      "rare_kanji_warning": "",
+      "caution": "ようじゃ is more casual.",
+      "polite_structure": "",
+      "casual_structure": "Verb + <strong><span class='gp-popout' data-gp-id='149'>よう</span></strong><strong><span class='gp-popout' data-gp-id='562'>では</span></strong><sup>(2)</sup> + (Negative Result)<br><br><sup>(2)</sup> <span class='gp-popout' data-gp-id='149'>よう</span><span class='gp-popout' data-gp-id='562'>じゃ</span>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/11164",
+      "metadata": "ようでは, ようじゃ, 様では, 様じゃ, youdeha, youja, youdewa, expression, auxiliary verb, conjunction, hypothetical"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "182340",
+            "type": "study_question"
+          },
+          {
+            "id": "182342",
+            "type": "study_question"
+          },
+          {
+            "id": "182341",
+            "type": "study_question"
+          },
+          {
+            "id": "6493",
+            "type": "study_question"
+          },
+          {
+            "id": "6494",
+            "type": "study_question"
+          },
+          {
+            "id": "6489",
+            "type": "study_question"
+          },
+          {
+            "id": "6488",
+            "type": "study_question"
+          },
+          {
+            "id": "1463",
+            "type": "study_question"
+          },
+          {
+            "id": "1464",
+            "type": "study_question"
+          },
+          {
+            "id": "6490",
+            "type": "study_question"
+          },
+          {
+            "id": "6491",
+            "type": "study_question"
+          },
+          {
+            "id": "1465",
+            "type": "study_question"
+          },
+          {
+            "id": "6496",
+            "type": "study_question"
+          },
+          {
+            "id": "6495",
+            "type": "study_question"
+          },
+          {
+            "id": "6492",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "708",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "462",
+            "type": "related_content"
+          },
+          {
+            "id": "358",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2731",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "910",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "911",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "182340",
+      "type": "study_question",
+      "attributes": {
+        "id": 182340,
+        "content": "こんな毎日（まいにち）同（おな）じミスをする<span class='study-area-input'>____</span>、いつまで経（た）っても店長（てんちょう）にはなれませんよ。",
+        "answer": "ようでは",
+        "alternate_grammar": [],
+        "kanji_answer": "ようでは",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/こんな毎日同じミスをするようでは、いつまで経っても店長にはなれませんよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> you keep making the same mistake everyday, you will never be able to become a manager.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 414,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182342",
+      "type": "study_question",
+      "attributes": {
+        "id": 182342,
+        "content": "これぐらいの高（たか）さで怖（こわ）がっている<span class='study-area-input'>____</span>消防士（しょうぼうし）にはなれませんよ。",
+        "answer": "ようでは",
+        "alternate_grammar": [],
+        "kanji_answer": "ようでは",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/これぐらいの高さで怖がっているようでは消防士にはなれませんよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "You can't become a firefighter <strong>if</strong> you're afraid of heights like this.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 414,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182341",
+      "type": "study_question",
+      "attributes": {
+        "id": 182341,
+        "content": "これらの文法（ぶんぽう）が分（わ）からない<span class='study-area-input'>____</span>、Ｎ（エヌ）２（ツー）に合格（ごうかく）することはできません。",
+        "answer": "ようでは",
+        "alternate_grammar": [],
+        "kanji_answer": "ようでは",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/これらの文法が分からないようでは、N2に合格することはできません。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> you do not understand these grammar points, you will not be able to pass N2.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 414,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6493",
+      "type": "study_question",
+      "attributes": {
+        "id": 6493,
+        "content": "反省（はんせい）する気（き）がない<span class='study-area-input'>____</span>、今後（こんご）の成長（せいちょう）は見込（みこ）めない。",
+        "answer": "ようでは",
+        "alternate_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "kanji_answer": "ようでは",
+        "kanji_alt_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "nuance": "あるものが(A)の<strong>作法（さほう）</strong>とされたら、(B)もそうであるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/反省する気がないようでは、今後の成長は見込めない。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "と": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "としたら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "なら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> you do not feel like reflecting on your actions, you cannot anticipate growing any further. (<strong>...it appears that...</strong>)",
+        "nuance_translation": "An expression stating that if something is determined to be the <strong>manner</strong> of (A), then (B) will also be the case.",
+        "extra_info": "",
+        "reviewable_id": 414,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6494",
+      "type": "study_question",
+      "attributes": {
+        "id": 6494,
+        "content": "日当（ひあ）たりが悪（わる）い<span class='study-area-input'>____</span>、部屋（へや）の借（か）り手（て）はなかなか見（み）つからないと思（おも）います。",
+        "answer": "ようでは",
+        "alternate_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "kanji_answer": "ようでは",
+        "kanji_alt_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "nuance": "あるものが(A)の<strong>作法（さほう）</strong>とされたら、(B)もそうであるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/日当たりが悪いようでは、部屋の借り手はなかなか見つからないと思います。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "と": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "としたら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "なら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> this place doesn't get enough sun, I don't think you will find a renter for the room. (<strong>...it appears that...</strong>)",
+        "nuance_translation": "An expression stating that if something is determined to be the <strong>manner</strong> of (A), then (B) will also be the case.",
+        "extra_info": "",
+        "reviewable_id": 414,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6489",
+      "type": "study_question",
+      "attributes": {
+        "id": 6489,
+        "content": "勉強（べんきょう）の日課（にっか）を守（まも）れない<span class='study-area-input'>____</span>、試験（しけん）に受（う）からないと思（おも）います。",
+        "answer": "ようでは",
+        "alternate_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "kanji_answer": "ようでは",
+        "kanji_alt_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "nuance": "あるものが(A)の<strong>作法（さほう）</strong>とされたら、(B)もそうであるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/勉強の日課を守れないようでは、試験に受からないと思います。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "と": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "としたら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "なら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> you can't keep up with your daily study routine, I don't think you can pass the test. (<strong>...it appears that...</strong>)",
+        "nuance_translation": "An expression stating that if something is determined to be the <strong>manner</strong> of (A), then (B) will also be the case.",
+        "extra_info": "",
+        "reviewable_id": 414,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6488",
+      "type": "study_question",
+      "attributes": {
+        "id": 6488,
+        "content": "こんなに日時（にちじ）を間違（まちが）える<span class='study-area-input'>____</span>、仕事（しごと）なんてできないよ。",
+        "answer": "ようでは",
+        "alternate_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "kanji_answer": "ようでは",
+        "kanji_alt_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "nuance": "あるものが(A)の<strong>作法（さほう）</strong>とされたら、(B)もそうであるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/こんなに日時を間違えるようでは、仕事なんてできないよ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "と": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "としたら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "なら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> you can make these kinds of mistakes about the time and date, you can't do your job. (<strong>...it appears that...</strong>)",
+        "nuance_translation": "An expression stating that if something is determined to be the <strong>manner</strong> of (A), then (B) will also be the case.",
+        "extra_info": "",
+        "reviewable_id": 414,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1463",
+      "type": "study_question",
+      "attributes": {
+        "id": 1463,
+        "content": "赤（あか）ん坊（ぼう）のおむつを替（か）えられない<span class='study-area-input'>____</span>、とてもイクメン（子育（こそだ）てする男性（だんせい））とは呼（よ）べない。",
+        "answer": "ようでは",
+        "alternate_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "kanji_answer": "ようでは",
+        "kanji_alt_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "nuance": "あるものが(A)の<strong>作法（さほう）</strong>とされたら、(B)もそうであるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/赤ん坊のおむつを替えられないようでは、とてもイクメンてする男性）とは呼べない。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "と": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "としたら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "なら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> he can't change a baby's diapers, he can't be called a man who can raise a child. (<strong>...it appears that...</strong>)",
+        "nuance_translation": "An expression stating that if something is determined to be the <strong>manner</strong> of (A), then (B) will also be the case.",
+        "extra_info": "",
+        "reviewable_id": 414,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1464",
+      "type": "study_question",
+      "attributes": {
+        "id": 1464,
+        "content": "人（ひと）の成功（せいこう）を羨（うらや）んでいる<span class='study-area-input'>____</span>、自分（じぶん）の成功（せいこう）にはつながらない。",
+        "answer": "ようでは",
+        "alternate_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "kanji_answer": "ようでは",
+        "kanji_alt_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "nuance": "あるものが(A)の<strong>作法（さほう）</strong>とされたら、(B)もそうであるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/人の成功を羨んでいるようでは、自分の成功にはつながらない。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "と": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "としたら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "なら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> you envy other people's achievements, it won't lead to your own achievements. (<strong>...it appears that...</strong>)",
+        "nuance_translation": "An expression stating that if something is determined to be the <strong>manner</strong> of (A), then (B) will also be the case.",
+        "extra_info": "",
+        "reviewable_id": 414,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6490",
+      "type": "study_question",
+      "attributes": {
+        "id": 6490,
+        "content": "この程度（ていど）で吐（は）き気（け）がする<span class='study-area-input'>____</span>、もっと強（つよ）い薬（くすり）は使（つか）えない。",
+        "answer": "ようでは",
+        "alternate_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "kanji_answer": "ようでは",
+        "kanji_alt_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "nuance": "あるものが(A)の<strong>作法（さほう）</strong>とされたら、(B)もそうであるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/この程度で吐き気がするようでは、もっと強い薬は使えない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "と": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "としたら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "なら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> you are having this degree of nausea, you cannot use a stronger medicine. (<strong>...it appears that...</strong>)",
+        "nuance_translation": "An expression stating that if something is determined to be the <strong>manner</strong> of (A), then (B) will also be the case.",
+        "extra_info": "",
+        "reviewable_id": 414,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6491",
+      "type": "study_question",
+      "attributes": {
+        "id": 6491,
+        "content": "緊張（きんちょう）して実力（じつりょく）を発揮（はっき）できない<span class='study-area-input'>____</span>、この世界（せかい）では通用（つうよう）しない。",
+        "answer": "ようでは",
+        "alternate_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "kanji_answer": "ようでは",
+        "kanji_alt_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "nuance": "あるものが(A)の<strong>作法（さほう）</strong>とされたら、(B)もそうであるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/緊張して実力を発揮できないようでは、この世界では通用しない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "と": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "としたら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "なら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> you get nervous and can't demonstrate your true ability, you will not make it in this world. (<strong>...it appears that...</strong>)",
+        "nuance_translation": "An expression stating that if something is determined to be the <strong>manner</strong> of (A), then (B) will also be the case.",
+        "extra_info": "",
+        "reviewable_id": 414,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1465",
+      "type": "study_question",
+      "attributes": {
+        "id": 1465,
+        "content": "この程度（ていど）の距離（きょり）で音（ね）を上（あ）げている<span class='study-area-input'>____</span>、本格的（ほんかくてき）な登山（とざん）に挑戦（ちょうせん）することなどできない。",
+        "answer": "ようでは",
+        "alternate_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "kanji_answer": "ようでは",
+        "kanji_alt_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "nuance": "あるものが(A)の<strong>作法（さほう）</strong>とされたら、(B)もそうであるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/この程度の距離で音を上げているようでは、本格的な登山に挑戦することなどできない。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "と": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "としたら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "なら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> you are going to give up at this distance, you won't be able to take on the challenge of real mountain climbing. (<strong>...it appears that...</strong>)",
+        "nuance_translation": "An expression stating that if something is determined to be the <strong>manner</strong> of (A), then (B) will also be the case.",
+        "extra_info": "",
+        "reviewable_id": 414,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6496",
+      "type": "study_question",
+      "attributes": {
+        "id": 6496,
+        "content": "そこまで甘（あま）やかす<span class='study-area-input'>____</span>、ろくな大人（おとな）にならないですよ。",
+        "answer": "ようでは",
+        "alternate_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "kanji_answer": "ようでは",
+        "kanji_alt_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "nuance": "あるものが(A)の<strong>作法（さほう）</strong>とされたら、(B)もそうであるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/そこまで甘やかすようでは、ろくな大人にならないですよ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "と": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "としたら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "なら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> you are spoiled to that extent, you can't become a decent adult. (<strong>...it appears that...</strong>)",
+        "nuance_translation": "An expression stating that if something is determined to be the <strong>manner</strong> of (A), then (B) will also be the case.",
+        "extra_info": "",
+        "reviewable_id": 414,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6495",
+      "type": "study_question",
+      "attributes": {
+        "id": 6495,
+        "content": "こんな問題（もんだい）も解（と）けない<span class='study-area-input'>____</span>、次（つぎ）のテストが思（おも）いやられる。",
+        "answer": "ようでは",
+        "alternate_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "kanji_answer": "ようでは",
+        "kanji_alt_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "nuance": "あるものが(A)の<strong>作法（さほう）</strong>とされたら、(B)もそうであるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/こんな問題も解けないようでは、次のテストが思いやられる。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "と": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "としたら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "なら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> you can't solve a problem like this, I am worried about your next test. (<strong>...it appears that...</strong>)",
+        "nuance_translation": "An expression stating that if something is determined to be the <strong>manner</strong> of (A), then (B) will also be the case.",
+        "extra_info": "",
+        "reviewable_id": 414,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6492",
+      "type": "study_question",
+      "attributes": {
+        "id": 6492,
+        "content": "仕事（しごと）と休息（きゅうそく）のバランスが取（と）れない<span class='study-area-input'>____</span>、体（からだ）を壊（こわ）してしまいます。",
+        "answer": "ようでは",
+        "alternate_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "kanji_answer": "ようでは",
+        "kanji_alt_grammar": [
+          "ようじゃ",
+          "ようでは"
+        ],
+        "nuance": "あるものが(A)の<strong>作法（さほう）</strong>とされたら、(B)もそうであるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/仕事と休息のバランスが取れないようでは、体を壊してしまいます。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "と": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "としたら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          },
+          "なら": {
+            "en": "Looking for a grammar point that presents a negative result. Think \"if *it appears* that...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> you cannot balance work and rest, your body will end up breaking down. (<strong>...it appears that...</strong>)",
+        "nuance_translation": "An expression stating that if something is determined to be the <strong>manner</strong> of (A), then (B) will also be the case.",
+        "extra_info": "",
+        "reviewable_id": 414,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "708",
+      "type": "writeup",
+      "attributes": {
+        "id": 708,
+        "body_ja": "<p>「<span data-gp-id='414'>ようでは</span>」は、助動詞（じょどうし）「様（よう）」と「それなら」を短（みじか）くした接続詞（せつぞくし）「では」が組（く）み合（あ）わさった表現（ひょうげん）です。この表現（ひょうげん）は「もし (A) なら」というような仮定（かてい）の意味（いみ）で使（つか）われますが、(A) が確実（かくじつ）ではなく、話（はな）し手（て）が見（み）た目（め）や様子（ようす）から推測（すいそく）したことである点（てん）が強調（きょうちょう）されるのが特徴（とくちょう）です。</p>\r\n\r\n<p>ほとんどの場合（ばあい）、「<span data-gp-id='414'>ようでは</span>」は「(A) が本当（ほんとう）なら」または「(A) の状況（じょうきょう）が続（つづ）けば」、望（のぞ）ましくない結果（けっか）が起（お）こる、というニュアンスで使（つか）われます。話（はな）し手（て）が評価（ひょうか）を述（の）べるときに使（つか）う表現（ひょうげん）です。</p>\r\n\r\n<p>「<span data-gp-id='414'>ようでは</span>」は、動詞（どうし）の普通形（ふつうけい）の後（あと）に続（つづ）けて使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182340'>\r\n<li data-study-question='182341'>\r\n<li data-study-question='182342'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='414'>ようでは</span>」は、話（はな）し手（て）から見（み）た (A) の様子（ようす）や状況（じょうきょう）に焦点（しょうてん）を当（あ）てた表現（ひょうげん）なので、後半（こうはん）の内容（ないよう）は、話（はな）し手（て）の主観的（しゅかんてき）な（そして否定的（ひていてき）な）意見（いけん）や評価（ひょうか）であることが多（おお）いです。</p>",
+        "body": "<p><span data-gp-id='414'>ようでは</span> is a combination of the <span data-term='助動詞・じょどうし'>auxiliary verb</span> 様（よう） 'manner', or 'seeming', and では, a conjunction that is frequently used as an abbreviation of それなら in expressing 'if'. Due to this, <span data-gp-id='414'>ようでは</span> itself often has the meaning of 'if', with extra focus on the fact that (A) is something unconfirmed, or only being guessed at. This may be translated as 'if it is the case that (A)', or 'if that which seems to be (A) is true'.</p>\r\n\r\n<p>In most cases, <span data-gp-id='414'>ようでは</span> will be used to make an evaluation that if (A) is true, then some particular negative result will arise from it.</p>\r\n\r\n<p><span data-gp-id='414'>ようでは</span> will primarily appear after verbs in any of their standard forms.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182340'>\r\n<li data-study-question='182341'>\r\n<li data-study-question='182342'>\r\n</ul>\r\n\r\n<p><span data-gp-id='414'>ようでは</span> puts extra focus on the appearance or condition of (A), based on what is observable by the speaker. In this way, it is often the speaker's subjective (negative) opinion about what they perceive to be true.</p>"
+      }
+    },
+    {
+      "id": "2731",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2731,
+        "site": "BriefJapanese",
+        "description": "All uses of volitional form and よう explained",
+        "link": "https://briefjapanese.fun/%e3%82%88%e3%81%86/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "910",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 910,
+        "site": "N1ET",
+        "description": "ようでは",
+        "link": "https://jn1et.com/youdeha/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "911",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 911,
+        "site": "JapaneseTest4You",
+        "description": "ようでは Examples",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-%E3%82%88%E3%81%86%E3%81%A7%E3%81%AF-you-dewa/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "462",
+      "type": "related_content",
+      "attributes": {
+        "id": 462,
+        "relationship_type": "related",
+        "body": "While both use よう, their meanings differ. ようだ expresses a neutral observation, e.g. 雨が降るようだ ('It seems it will rain.'). ようでは／ようじゃ introduces a hypothetical or ongoing situation that leads to an undesirable outcome, e.g. 雨が降るようじゃ、試合ができない ('If it rains, we can't hold the game.').",
+        "first_relatable": {
+          "id": 414,
+          "slug": "ようでは-ようじゃ",
+          "title": "ようでは・ようじゃ",
+          "meaning": "If, If it is true that",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 149,
+          "slug": "ようだ",
+          "title": "ようだ",
+          "meaning": "It seems that, It appears that, It looks like",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "358",
+      "type": "related_content",
+      "attributes": {
+        "id": 358,
+        "relationship_type": "related",
+        "body": "ようでは・ようじゃ expresses concern or dissatisfaction, implying that if things stay as they are, the outcome will be undesirable, as in この成績では合格できないようじゃないか (With these grades, you won’t pass, will you?). ては introduces a condition leading to a result, which can be neutral or negative, as in 遊んでいては合格できない (If you keep playing, you won’t pass).",
+        "first_relatable": {
+          "id": 414,
+          "slug": "ようでは-ようじゃ",
+          "title": "ようでは・ようじゃ",
+          "meaning": "If, If it is true that",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 562,
+          "slug": "ては",
+          "title": "ては",
+          "meaning": "If, With, Since, Because",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

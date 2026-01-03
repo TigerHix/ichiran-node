@@ -1,0 +1,910 @@
+{
+  "data": {
+    "id": "657",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 657,
+      "level": "JLPT2",
+      "lesson_id": 36,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "ぬ",
+      "nuance": "特定（とくてい）のフレーズで使（つか）われることが多（おお）い、<strong>動詞（どうし）を否定（ひてい）形（けい）にする古文（こぶん）</strong>。",
+      "grammar_order": 649,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 428,
+        "title": "ことなく",
+        "slug": "ことなく"
+      },
+      "previous_grammar_point": {
+        "id": 350,
+        "title": "それにしても",
+        "slug": "それにしても"
+      },
+      "lesson_count": "17/20",
+      "title": "ぬ",
+      "furigana": "ぬ",
+      "meaning": "Classical negative, Classical verb [ない]",
+      "nuance_translation": "A <strong>classical negative verb structure</strong> that tends to be used in set phrases.",
+      "rare_kanji_warning": "",
+      "caution": "Some set phrases cannot be rephrased to ない",
+      "polite_structure": "",
+      "casual_structure": "<span class='gp-popout' data-gp-id='888'>Verb［<del>ない</del>］</span>+ <strong>ぬ</strong><br><span class='gp-popout' data-gp-id='888'>Verb［<del>ない</del>］</span>+ <strong>ぬ</strong> + Noun<br><br>Exceptions:<br> <span class='gp-popout' data-gp-id='22'>する</span> ￫ せ<strong>ぬ</strong><br><span class='gp-popout' data-gp-id='39'>くる</span> ￫ こ<strong>ぬ</strong><br><span class='gp-popout' data-gp-id='23'>いる</span> ￫ おら<strong>ぬ</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10543",
+      "metadata": "ぬ, nu, classical auxiliary verb, auxiliary verb, attributive form, negation, classical, artistic"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "8350",
+            "type": "study_question"
+          },
+          {
+            "id": "182157",
+            "type": "study_question"
+          },
+          {
+            "id": "182158",
+            "type": "study_question"
+          },
+          {
+            "id": "182159",
+            "type": "study_question"
+          },
+          {
+            "id": "182160",
+            "type": "study_question"
+          },
+          {
+            "id": "182161",
+            "type": "study_question"
+          },
+          {
+            "id": "182162",
+            "type": "study_question"
+          },
+          {
+            "id": "8345",
+            "type": "study_question"
+          },
+          {
+            "id": "8349",
+            "type": "study_question"
+          },
+          {
+            "id": "8343",
+            "type": "study_question"
+          },
+          {
+            "id": "8347",
+            "type": "study_question"
+          },
+          {
+            "id": "8354",
+            "type": "study_question"
+          },
+          {
+            "id": "8344",
+            "type": "study_question"
+          },
+          {
+            "id": "8353",
+            "type": "study_question"
+          },
+          {
+            "id": "8348",
+            "type": "study_question"
+          },
+          {
+            "id": "8351",
+            "type": "study_question"
+          },
+          {
+            "id": "8352",
+            "type": "study_question"
+          },
+          {
+            "id": "8346",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "664",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "694",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1418",
+            "type": "offline_resource"
+          },
+          {
+            "id": "2091",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": []
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1820",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1818",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2308",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "8350",
+      "type": "study_question",
+      "attributes": {
+        "id": 8350,
+        "content": "彼（かれ）は、自伝（じでん）を書（か）き上（あ）げて１（いち）年（ねん）も<span class='study-area-input'>____</span>うちに亡（な）くなった。",
+        "answer": "たたぬ",
+        "alternate_grammar": [],
+        "kanji_answer": "経（た）たぬ",
+        "kanji_alt_grammar": [],
+        "nuance": "特定（とくてい）のフレーズで使（つか）われることが多（おお）い、<strong>動詞（どうし）を否定（ひてい）形（けい）にする古文（こぶん）</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼は、自伝を書き上げて１年も経たぬうちに亡くなった。.mp3",
+        "word_prompt": "経（た）つ",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たたない": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "",
+            "fr": ""
+          },
+          "たたず": {
+            "en": "Let's try a grammar pattern that is a bit more old-fashioned.",
+            "es": "Prueba con un patrón gramatical un poco más anticuado.",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He died <strong>without</strong> even one year <strong>passing</strong> after finishing his autobiography.",
+        "nuance_translation": "A <strong>classical negative verb structure</strong> that tends to be used in set phrases.",
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182157",
+      "type": "study_question",
+      "attributes": {
+        "id": 182157,
+        "content": "こんなに狭（せま）い道（みち）は通（とお）れ<span class='study-area-input'>____</span>。",
+        "answer": "ぬ",
+        "alternate_grammar": [],
+        "kanji_answer": "ぬ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/こんなに狭い道は通れぬ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I can<strong>not</strong> pass a road this narrow.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182158",
+      "type": "study_question",
+      "attributes": {
+        "id": 182158,
+        "content": "なんだこの飯（めし）は！こんなまずそうなものは口（くち）に入（い）れ<span class='study-area-input'>____</span>！",
+        "answer": "ぬ",
+        "alternate_grammar": [],
+        "kanji_answer": "ぬ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/なんだこの飯は！こんなまずそうなものは口に入れぬ！.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "What is this food? I will <strong>not</strong> put this disgusting thing in my mouth!",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182159",
+      "type": "study_question",
+      "attributes": {
+        "id": 182159,
+        "content": "貴様（きさま）みたいなものには、わしなど殺（ころ）せ<span class='study-area-input'>____</span>。",
+        "answer": "ぬ",
+        "alternate_grammar": [],
+        "kanji_answer": "ぬ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/貴様みたいなものには、わしなど殺せぬ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I can<strong>not</strong> be killed by someone like you.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182160",
+      "type": "study_question",
+      "attributes": {
+        "id": 182160,
+        "content": "鈴木（すずき）殿（どの）はここには<span class='study-area-input'>____</span>。",
+        "answer": "おらぬ",
+        "alternate_grammar": [],
+        "kanji_answer": "おらぬ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/鈴木殿はここにはおらぬ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Suzuki-dono is <strong>not</strong> here.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182161",
+      "type": "study_question",
+      "attributes": {
+        "id": 182161,
+        "content": "あの方（かた）は人（ひと）を傷（きず）つけるようなことは<span class='study-area-input'>____</span>。",
+        "answer": "せぬ",
+        "alternate_grammar": [],
+        "kanji_answer": "せぬ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あの方は人を傷つけるようなことはせぬ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "That person would <strong>never</strong> do anything to hurt anyone.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182162",
+      "type": "study_question",
+      "attributes": {
+        "id": 182162,
+        "content": "婆（ばあ）さんが川（かわ）から帰（かえ）って<span class='study-area-input'>____</span>。",
+        "answer": "こぬ",
+        "alternate_grammar": [],
+        "kanji_answer": "こぬ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/婆さんが川から帰ってこぬ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "My wife <strong>won't</strong> come back from the river.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8345",
+      "type": "study_question",
+      "attributes": {
+        "id": 8345,
+        "content": "「愚（おろ）か者（もの）、男（おとこ）には<span class='study-area-input'>____</span>のだ。」",
+        "answer": "ころせぬ",
+        "alternate_grammar": [],
+        "kanji_answer": "殺（ころ）せぬ",
+        "kanji_alt_grammar": [],
+        "nuance": "特定（とくてい）のフレーズで使（つか）われることが多（おお）い、<strong>動詞（どうし）を否定（ひてい）形（けい）にする古文（こぶん）</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/「愚か者、男には殺せぬのだ。」.mp3",
+        "word_prompt": "殺（ころ）せる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ころせない": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ころさない": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ころせざる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'Fool, <strong>no</strong> man <strong>can kill</strong> me.'",
+        "nuance_translation": "A <strong>classical negative verb structure</strong> that tends to be used in set phrases.",
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8349",
+      "type": "study_question",
+      "attributes": {
+        "id": 8349,
+        "content": "予期（よき）<span class='study-area-input'>____</span>事態（じたい）が起（お）きた場合（ばあい）は、この番号（ばんごう）に電話（でんわ）をください。",
+        "answer": "せぬ",
+        "alternate_grammar": [],
+        "kanji_answer": "せぬ",
+        "kanji_alt_grammar": [],
+        "nuance": "特定（とくてい）のフレーズで使（つか）われることが多（おお）い、<strong>動詞（どうし）を否定（ひてい）形（けい）にする古文（こぶん）</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/予期せぬ事態が起きた場合は、この番号に電話をください。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しない": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "しぬ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "せざる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "If something <strong>un</strong>expected happens, please call this number. (<strong>not</strong>)",
+        "nuance_translation": "A <strong>classical negative verb structure</strong> that tends to be used in set phrases.",
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8343",
+      "type": "study_question",
+      "attributes": {
+        "id": 8343,
+        "content": "「隅（すみ）に<span class='study-area-input'>____</span>人（ひと）」というのは「侮（あなど）れない人（ひと）」ということなのだ。",
+        "answer": "おけぬ",
+        "alternate_grammar": [],
+        "kanji_answer": "置（お）けぬ",
+        "kanji_alt_grammar": [],
+        "nuance": "特定（とくてい）のフレーズで使（つか）われることが多（おお）い、<strong>動詞（どうし）を否定（ひてい）形（けい）にする古文（こぶん）</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/「隅に置けぬ人」というのは「侮れない人」ということなのだ。.mp3",
+        "word_prompt": "置（お）ける",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おけない": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'A person who (<strong>can't be placed</strong>) in a corner' means 'a person who <strong>cannot</strong> be taken lightly'.",
+        "nuance_translation": "A <strong>classical negative verb structure</strong> that tends to be used in set phrases.",
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8347",
+      "type": "study_question",
+      "attributes": {
+        "id": 8347,
+        "content": "上司（じょうし）は部下（ぶか）が向上（こうじょう）できるように、<span class='study-area-input'>____</span>点（てん）を教（おし）えてあげるべきだ。",
+        "answer": "いたらぬ",
+        "alternate_grammar": [],
+        "kanji_answer": "至（いた）らぬ",
+        "kanji_alt_grammar": [],
+        "nuance": "特定（とくてい）のフレーズで使（つか）われることが多（おお）い、<strong>動詞（どうし）を否定（ひてい）形（けい）にする古文（こぶん）</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/上司は部下が向上できるように、至らぬ点を教えてあげるべきだ。.mp3",
+        "word_prompt": "至（いた）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いたらない": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "いたらず": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A superior should tell his/her subordinates where they <strong>fall short</strong> so that they can improve.",
+        "nuance_translation": "A <strong>classical negative verb structure</strong> that tends to be used in set phrases.",
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8354",
+      "type": "study_question",
+      "attributes": {
+        "id": 8354,
+        "content": "<span class='name-highlight'>ペーネロペー</span>：「オデュッセウスはまだ<span class='study-area-input'>____</span>のか？」",
+        "answer": "もどってこぬ",
+        "alternate_grammar": [],
+        "kanji_answer": "戻（もど）ってこぬ",
+        "kanji_alt_grammar": [],
+        "nuance": "特定（とくてい）のフレーズで使（つか）われることが多（おお）い、<strong>動詞（どうし）を否定（ひてい）形（けい）にする古文（こぶん）</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/ペーネロペー：「オデュッセウスはまだ戻ってこぬのか？」.mp3",
+        "word_prompt": "戻（もど）ってくる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "もどってこない": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Penelope</span>: 'Odysseus has <strong>not returned</strong> yet?'",
+        "nuance_translation": "A <strong>classical negative verb structure</strong> that tends to be used in set phrases.",
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8344",
+      "type": "study_question",
+      "attributes": {
+        "id": 8344,
+        "content": "こちらでは性（せい）による差別（さべつ）は許可（きょか）<span class='study-area-input'>____</span>。",
+        "answer": "されておらぬ",
+        "alternate_grammar": [],
+        "kanji_answer": "されておらぬ",
+        "kanji_alt_grammar": [],
+        "nuance": "特定（とくてい）のフレーズで使（つか）われることが多（おお）い、<strong>動詞（どうし）を否定（ひてい）形（けい）にする古文（こぶん）</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/こちらでは性による差別は許可されておらぬ。.mp3",
+        "word_prompt": "されている",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "されていない": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "されていません": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "されておらない": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "されておりません": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Sex discrimination is <strong>not</strong> permitted here.",
+        "nuance_translation": "A <strong>classical negative verb structure</strong> that tends to be used in set phrases.",
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8353",
+      "type": "study_question",
+      "attributes": {
+        "id": 8353,
+        "content": "何（なん）でジュリエットはロメオを愛（あい）せなくなったかというと変（か）わら<span class='study-area-input'>____</span>愛（あい）などは存在（そんざい）せ<span class='study-area-input'>____</span>ためだ。",
+        "answer": "ぬ",
+        "alternate_grammar": [],
+        "kanji_answer": "ぬ",
+        "kanji_alt_grammar": [],
+        "nuance": "特定（とくてい）のフレーズで使（つか）われることが多（おお）い、<strong>動詞（どうし）を否定（ひてい）形（けい）にする古文（こぶん）</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/何でジュリエットはロメオを愛せなくなったかというと変わらぬ愛などは存在せぬためだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ない": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "If I were to say why Juliet stopped loving Romeo, well it is because there is <strong>no</strong> such thing as eternal love (<strong>un</strong>changing).",
+        "nuance_translation": "A <strong>classical negative verb structure</strong> that tends to be used in set phrases.",
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8348",
+      "type": "study_question",
+      "attributes": {
+        "id": 8348,
+        "content": "海（うみ）のデッドゾーンは魚（さかな）などの大量死（たいりょうし）の原因（げんいん）となりうる<span class='study-area-input'>____</span>。",
+        "answer": "かもしれぬ",
+        "alternate_grammar": [
+          "かもしれぬ",
+          "かもしれませぬ"
+        ],
+        "kanji_answer": "かもしれぬ",
+        "kanji_alt_grammar": [
+          "かもしれませぬ",
+          "かもしれぬ"
+        ],
+        "nuance": "特定（とくてい）のフレーズで使（つか）われることが多（おお）い、<strong>動詞（どうし）を否定（ひてい）形（けい）にする古文（こぶん）</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/海のデッドゾーンは魚などの大量死の原因となりうるかもしれぬ。.mp3",
+        "word_prompt": "かも...",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かもしれない": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "かもしれません": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "かもしれないです": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "かも": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "かもしらん": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The ocean's dead zones <strong>might</strong> become the cause of large amounts of death among fish (and other sea life).",
+        "nuance_translation": "A <strong>classical negative verb structure</strong> that tends to be used in set phrases.",
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8351",
+      "type": "study_question",
+      "attributes": {
+        "id": 8351,
+        "content": "日本語（にほんご）の「<span class='study-area-input'>____</span>が花（はな） 」はおおよそ英語（えいご）の「silence is golden」に当（あ）たるようである。",
+        "answer": "いわぬ",
+        "alternate_grammar": [],
+        "kanji_answer": "言（い）わぬ",
+        "kanji_alt_grammar": [],
+        "nuance": "特定（とくてい）のフレーズで使（つか）われることが多（おお）い、<strong>動詞（どうし）を否定（ひてい）形（けい）にする古文（こぶん）</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/日本語の「言わぬが花 」はおおよそ英語の「silence is golden」に当たるようである。.mp3",
+        "word_prompt": "言（い）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いわない": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It seems that the Japanese 'a flower <strong>does not</strong> speak', is roughly equivalent to 'silence is golden' in English.",
+        "nuance_translation": "A <strong>classical negative verb structure</strong> that tends to be used in set phrases.",
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8352",
+      "type": "study_question",
+      "attributes": {
+        "id": 8352,
+        "content": "<span class='name-highlight'>魔王様（まおうさま）</span>：「 じゃからアンタを殺（ころ）すと悪（わる）い気（き）は<span class='study-area-input'>____</span>ぞ。」",
+        "answer": "せぬ",
+        "alternate_grammar": [],
+        "kanji_answer": "せぬ",
+        "kanji_alt_grammar": [],
+        "nuance": "特定（とくてい）のフレーズで使（つか）われることが多（おお）い、<strong>動詞（どうし）を否定（ひてい）形（けい）にする古文（こぶん）</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/魔王様：「 じゃからアンタを殺すと悪い気はせぬぞ。」.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しない": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "しぬ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "しないです": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "しません": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Demon King</span>: 'That's why if I kill you I <strong>won't</strong> feel bad.'",
+        "nuance_translation": "A <strong>classical negative verb structure</strong> that tends to be used in set phrases.",
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8346",
+      "type": "study_question",
+      "attributes": {
+        "id": 8346,
+        "content": "言（い）うまでもないことだが、知人（ちじん）に対（たい）して<span class='study-area-input'>____</span>ふりをするのは失礼（しつれい）である。",
+        "answer": "そしらぬ",
+        "alternate_grammar": [],
+        "kanji_answer": "素知（そし）らぬ",
+        "kanji_alt_grammar": [],
+        "nuance": "特定（とくてい）のフレーズで使（つか）われることが多（おお）い、<strong>動詞（どうし）を否定（ひてい）形（けい）にする古文（こぶん）</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/言うまでもないことだが、知人に対して素知らぬふりをするのは失礼である。.mp3",
+        "word_prompt": "素知（そし）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "そしらない": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Needless to say, <strong>pretending not to know</strong> acquaintances is rude.",
+        "nuance_translation": "A <strong>classical negative verb structure</strong> that tends to be used in set phrases.",
+        "extra_info": "",
+        "reviewable_id": 657,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "664",
+      "type": "writeup",
+      "attributes": {
+        "id": 664,
+        "body_ja": "<p>「<span data-gp-id='657'>ぬ</span>」は、「ない」と同（おな）じように否定（ひてい）を表（あらわ）す文語（ぶんご）助動詞（じょどうし）「ず」の連体形（れんたいけい）です。「ない」と同（おな）じように動詞（どうし）に接続（せつぞく）して使（つか）われます。</p>\r\n\r\n<p>「<span data-gp-id='657'>ぬ</span>」は「ず」の連体形（れんたいけい）なので名詞（めいし）を直接（ちょくせつ）修飾（しゅうしょく）することができますが、現代（げんだい）ではあまり使（つか）われません。否定（ひてい）の表現（ひょうげん）としては「ず」よりも「ない」の方（ほう）が一般的（いっぱんてき）なので、「ぬ」は昔（むかし）から変（か）わらない慣用的（かんようてき）な表現（ひょうげん）の一部（いちぶ）として使（つか）われることがほとんどです。また、芸術的（げいじゅつてき）な表現（ひょうげん）として使（つか）われたり、登場（とうじょう）人物（じんぶつ）に「古風（こふう）」な印象（いんしょう）を与（あた）えたいときに使（つか）われたりすることはあります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182157'>\r\n<li data-study-question='182158'>\r\n<li data-study-question='182159'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='657'>ぬ</span>」を使（つか）って動詞（どうし）の「いる」を否定形（ひていけい）にする場合（ばあい）、古（ふる）い表現（ひょうげん）である「おる」が使（つか）われ、「<span data-gp-id='657'>おらぬ</span>」という形（かたち）になります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182160'>\r\n</ul>\r\n\r\n<p>また、「する」の否定形（ひていけい）は「<span data-gp-id='657'>せぬ</span>」になり、「くる」の否定形（ひていけい）は「<span data-gp-id='657'>こぬ</span>」になります。これは動詞（どうし）が「ず」と接続（せつぞく）するときの活用（かつよう）パターンと同（おな）じです。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182161'>\r\n<li data-study-question='182162'>\r\n</ul>",
+        "body": "<p><span data-gp-id='657'>ぬ</span> is the attributive form of ず, a <span data-term='文語助動詞・ぶんごじょどうし'>classical auxiliary verb</span> that is used for negation like ない, and connects to verbs in the same way.</p>\r\n\r\n<p>As <span data-gp-id='657'>ぬ</span> is the attributive form of ず, it may be seen modifying nouns that directly follow it. However, this use is not common in modern times, and in many cases it will be used as part of set expressions that have not changed in the time since ない became the far more widely used structure for negation. Alternatively, it may just be used for artistic expression, or to make a character seem 'classical'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182157'>\r\n<li data-study-question='182158'>\r\n<li data-study-question='182159'>\r\n</ul>\r\n\r\n<p>In the case that the verb being negated is いる, the old fashion おる will be modified to <span data-gp-id='657'>おらぬ</span> instead.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182160'>\r\n</ul>\r\n\r\n<p>Alternatively, する will be negated as <span data-gp-id='657'>せぬ</span>, and くる will be negated as <span data-gp-id='657'>こぬ</span>. This is consistent with the standard conjugation patterns seen with the use of ず.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182161'>\r\n<li data-study-question='182162'>\r\n</ul>"
+      }
+    },
+    {
+      "id": "694",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 694,
+        "source": "Tobira",
+        "location": "Page 260",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1418",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1418,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 282",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2091",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2091,
+        "source": "A Handbook of Japanese Grammar Patterns",
+        "location": "Page 493",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1820",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1820,
+        "site": "Japanese StackExchange",
+        "description": "ず vs. ぬ",
+        "link": "https://japanese.stackexchange.com/questions/235/what-is-the-difference-between-the-negative-forms-%E3%81%9A-and-%E3%81%AC",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1818",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1818,
+        "site": "Tae Kim",
+        "description": "Classical negative verbs",
+        "link": "https://guidetojapanese.org/learn/grammar/negativeverbs2",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2308",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2308,
+        "site": "Japanese Naturally...  By Mizue Sasaki",
+        "description": "浮かぬ顔",
+        "link": "http://www.nihongonosekai.com/newspapers/Japanese_Naturally/articles/19900112jn.htm",
+        "type": "SupplementalLink"
+      }
+    }
+  ]
+}

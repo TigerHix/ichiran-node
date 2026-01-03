@@ -1,0 +1,885 @@
+{
+  "data": {
+    "id": "536",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 536,
+      "level": "JLPT2",
+      "lesson_id": 37,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "という風に",
+      "nuance": "あることを(A)<strong>の様（よう）に</strong>述（の）べられているということを表（あらわ）す表現（ひょうげん）。(A)と述（の）べる様（よう）に。",
+      "grammar_order": 660,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 546,
+        "title": "ものの",
+        "slug": "ものの"
+      },
+      "previous_grammar_point": {
+        "id": 423,
+        "title": "ふうに",
+        "slug": "ふうに"
+      },
+      "lesson_count": "8/22",
+      "title": "という風に",
+      "furigana": "と言（い）う風（ふう）に",
+      "meaning": "As if to say, As if to suggest that, In such a way that, Things like",
+      "nuance_translation": "A structure meaning that something is being said in the <strong>way</strong> or <strong>wind</strong> of (A). As if to say (A).",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Verb + <strong><span class='gp-popout' data-gp-id='202'>という</span><span class='gp-popout' data-gp-id='423'>ふうに</span></strong> + Phrase<br>(Topic)<span class='gp-popout' data-gp-id='3'>は</span>(Method) + <strong><span class='gp-popout' data-gp-id='202'>という</span><span class='gp-popout' data-gp-id='423'>ふうに</span></strong> + Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/17908",
+      "metadata": "という風に, というふうに, toiufuuni, suffix, expression"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "182204",
+            "type": "study_question"
+          },
+          {
+            "id": "182205",
+            "type": "study_question"
+          },
+          {
+            "id": "182206",
+            "type": "study_question"
+          },
+          {
+            "id": "182207",
+            "type": "study_question"
+          },
+          {
+            "id": "6978",
+            "type": "study_question"
+          },
+          {
+            "id": "6980",
+            "type": "study_question"
+          },
+          {
+            "id": "5346",
+            "type": "study_question"
+          },
+          {
+            "id": "5350",
+            "type": "study_question"
+          },
+          {
+            "id": "5351",
+            "type": "study_question"
+          },
+          {
+            "id": "6979",
+            "type": "study_question"
+          },
+          {
+            "id": "6975",
+            "type": "study_question"
+          },
+          {
+            "id": "6977",
+            "type": "study_question"
+          },
+          {
+            "id": "5349",
+            "type": "study_question"
+          },
+          {
+            "id": "5348",
+            "type": "study_question"
+          },
+          {
+            "id": "5347",
+            "type": "study_question"
+          },
+          {
+            "id": "6976",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "675",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "2100",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1194",
+            "type": "related_content"
+          },
+          {
+            "id": "342",
+            "type": "related_content"
+          },
+          {
+            "id": "1198",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1323",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1324",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "182204",
+      "type": "study_question",
+      "attributes": {
+        "id": 182204,
+        "content": "彼女（かのじょ）は昼（ひる）休憩（きゅうけい）に帰（かえ）る<span class='study-area-input'>____</span>聞（き）いています。",
+        "answer": "というふうに",
+        "alternate_grammar": [],
+        "kanji_answer": "というふうに",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼女は昼休憩に帰るというふうに聞いています。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I heard something <strong>as if to suggest</strong> that she is going to go home during lunch break.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 536,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182205",
+      "type": "study_question",
+      "attributes": {
+        "id": 182205,
+        "content": "鈴木（すずき）さんはこの試験（しけん）に命（いのち）がかかっている<span class='study-area-input'>____</span>勉強（べんきょう）をした。",
+        "answer": "というふうに",
+        "alternate_grammar": [],
+        "kanji_answer": "というふうに",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/鈴木さんはこの試験に命がかかっているというふうに勉強をした。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Suzuki-san studied <strong>as if to suggest</strong> that his life depended on this exam.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 536,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182206",
+      "type": "study_question",
+      "attributes": {
+        "id": 182206,
+        "content": "私（わたし）は今（いま）まで自分（じぶん）が一番（いちばん）仕事（しごと）ができる人（ひと）だ<span class='study-area-input'>____</span>思（おも）っていた。",
+        "answer": "というふうに",
+        "alternate_grammar": [],
+        "kanji_answer": "というふうに",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/私は今まで自分が一番仕事ができる人だというふうに思っていた。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Until recently, I always thought <strong>in such a way as to</strong> suggest that I was the most capable person when it comes to work.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 536,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182207",
+      "type": "study_question",
+      "attributes": {
+        "id": 182207,
+        "content": "彼（かれ）はデザイン、僕（ぼく）はプログラミング、<span class='study-area-input'>____</span>役割（やくわり）を分（わ）けてアプリを開発（かいはつ）することにした。",
+        "answer": "というふうに",
+        "alternate_grammar": [],
+        "kanji_answer": "というふうに",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼はデザイン、僕はプログラミング、というふうに役割を分けてアプリを開発することにした。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "We decided to develop the application by dividing the roles in the following <strong>way</strong>: he would do the design and I would do the programming.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 536,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6978",
+      "type": "study_question",
+      "attributes": {
+        "id": 6978,
+        "content": "「これは仮定（かてい）の話（はなし）です」<span class='study-area-input'>____</span>言（い）われても、あまりにもリアルすぎる。",
+        "answer": "というふうに",
+        "alternate_grammar": [],
+        "kanji_answer": "という風（ふう）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることを(A)<strong>の様（よう）に</strong>述（の）べられているということを表（あらわ）す表現（ひょうげん）。(A)と述（の）べる様（よう）に。",
+        "tense": "Quotation, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/「これは仮定の話です」という風に言われても、あまりにもリアルすぎる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "というように": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ように": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Even if I was told <strong>in such a way that suggested</strong> 'this is just a hypothetical conversation,' it is just too real.",
+        "nuance_translation": "A structure meaning that something is being said in the <strong>way</strong> or <strong>wind</strong> of (A). As if to say (A).",
+        "extra_info": "",
+        "reviewable_id": 536,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6980",
+      "type": "study_question",
+      "attributes": {
+        "id": 6980,
+        "content": "今度（こんど）の転勤（てんきん）、「関東（かんとう）」<span class='study-area-input'>____</span>はいかないだろうな。",
+        "answer": "というふうに",
+        "alternate_grammar": [],
+        "kanji_answer": "という風（ふう）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることを(A)<strong>の様（よう）に</strong>述（の）べられているということを表（あらわ）す表現（ひょうげん）。(A)と述（の）べる様（よう）に。",
+        "tense": "Quotation, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/今度の転勤、「関東」という風にはいかないだろうな。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "というように": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ように": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "With this job transfer, I am wondering <strong>if it is to say</strong> that I won't be going to 'Kanto'.",
+        "nuance_translation": "A structure meaning that something is being said in the <strong>way</strong> or <strong>wind</strong> of (A). As if to say (A).",
+        "extra_info": "",
+        "reviewable_id": 536,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5346",
+      "type": "study_question",
+      "attributes": {
+        "id": 5346,
+        "content": "<span class='name-highlight'>刑事（けいじ）：</span>「武（たけ）さんはその事故（じこ）のことを知（し）っていた<span class='study-area-input'>____</span>私（わたし）を見（み）ていた。」",
+        "answer": "というふうに",
+        "alternate_grammar": [],
+        "kanji_answer": "という風（ふう）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることを(A)<strong>の様（よう）に</strong>述（の）べられているということを表（あらわ）す表現（ひょうげん）。(A)と述（の）べる様（よう）に。",
+        "tense": "Quotation, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/刑事：「武さんはその事故のことを知っていたという風に私を見ていた。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "というように": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ように": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Detective:</span> He looked at me <strong>as if to suggest that</strong> he knew some circumstances of that accident.",
+        "nuance_translation": "A structure meaning that something is being said in the <strong>way</strong> or <strong>wind</strong> of (A). As if to say (A).",
+        "extra_info": "",
+        "reviewable_id": 536,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5350",
+      "type": "study_question",
+      "attributes": {
+        "id": 5350,
+        "content": "私（わたし）は掃除（そうじ）、母（はは）は晩（ばん）御飯（ごはん）、父（ちち）は暖炉（だんろ）に火（ひ）を付（つ）ける、<span class='study-area-input'>____</span>みんなが客（きゃく）の来訪（らいほう）のために、準備（じゅんび）した。",
+        "answer": "というふうに",
+        "alternate_grammar": [],
+        "kanji_answer": "という風（ふう）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることを(A)<strong>の様（よう）に</strong>述（の）べられているということを表（あらわ）す表現（ひょうげん）。(A)と述（の）べる様（よう）に。",
+        "tense": "Quotation, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/私は掃除、母は晩御飯、父は暖炉に火を付ける、という風にみんなが客の来訪のために、準備した。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "というように": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ように": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "We all prepared for a guest visit, <strong>in the following ways</strong>: I cleaned, mom made dinner, and dad fired up the fireplace.",
+        "nuance_translation": "A structure meaning that something is being said in the <strong>way</strong> or <strong>wind</strong> of (A). As if to say (A).",
+        "extra_info": "",
+        "reviewable_id": 536,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5351",
+      "type": "study_question",
+      "attributes": {
+        "id": 5351,
+        "content": "私（わたし）は科学（かがく）、武（たけし）は人文（じんぶん）科学（かがく）、<span class='study-area-input'>____</span>それぞれが自分（じぶん）の好（す）きな科目（かもく）を専攻（せんこう）することにしました。",
+        "answer": "というふうに",
+        "alternate_grammar": [],
+        "kanji_answer": "という風（ふう）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることを(A)<strong>の様（よう）に</strong>述（の）べられているということを表（あらわ）す表現（ひょうげん）。(A)と述（の）べる様（よう）に。",
+        "tense": "Quotation, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/私は科学、武は人文科学、という風にそれぞれが自分の好きな科目を専攻することにしました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "というように": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ように": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Each of us decided to major in our favorite school subjects <strong>in the following way</strong>: Me - science, Takeshi - humanities. ",
+        "nuance_translation": "A structure meaning that something is being said in the <strong>way</strong> or <strong>wind</strong> of (A). As if to say (A).",
+        "extra_info": "",
+        "reviewable_id": 536,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6979",
+      "type": "study_question",
+      "attributes": {
+        "id": 6979,
+        "content": "わざとではないけど、「勘違（かんちが）い」<span class='study-area-input'>____</span>は思（おも）ってもらえないだろうな。",
+        "answer": "というふうに",
+        "alternate_grammar": [],
+        "kanji_answer": "という風（ふう）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることを(A)<strong>の様（よう）に</strong>述（の）べられているということを表（あらわ）す表現（ひょうげん）。(A)と述（の）べる様（よう）に。",
+        "tense": "Quotation, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/わざとではないけど、「勘違い」という風には思ってもらえないだろうな。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "というように": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "なんか": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "なんて": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "ように": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It wasn't on purpose, but I wonder if we can't get them to think that it was <strong>something like</strong> a 'misunderstanding'.",
+        "nuance_translation": "A structure meaning that something is being said in the <strong>way</strong> or <strong>wind</strong> of (A). As if to say (A).",
+        "extra_info": "",
+        "reviewable_id": 536,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6975",
+      "type": "study_question",
+      "attributes": {
+        "id": 6975,
+        "content": "過剰（かじょう）包装（ほうそう）<span class='study-area-input'>____</span>言（い）われるが、これにはこだわりがある。",
+        "answer": "というふうに",
+        "alternate_grammar": [],
+        "kanji_answer": "という風（ふう）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることを(A)<strong>の様（よう）に</strong>述（の）べられているということを表（あらわ）す表現（ひょうげん）。(A)と述（の）べる様（よう）に。",
+        "tense": "Quotation, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/過剰包装という風に言われるが、これにはこだわりがある。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "というように": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ように": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I was told <strong>in such a way that</strong> I overdo it when it comes to wrapping, but it is something that I am picky about.",
+        "nuance_translation": "A structure meaning that something is being said in the <strong>way</strong> or <strong>wind</strong> of (A). As if to say (A).",
+        "extra_info": "",
+        "reviewable_id": 536,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6977",
+      "type": "study_question",
+      "attributes": {
+        "id": 6977,
+        "content": "入団（にゅうだん）してすぐに活躍（かつやく）<span class='study-area-input'>____</span>なかなかいかない。",
+        "answer": "というふうに",
+        "alternate_grammar": [],
+        "kanji_answer": "という風（ふう）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることを(A)<strong>の様（よう）に</strong>述（の）べられているということを表（あらわ）す表現（ひょうげん）。(A)と述（の）べる様（よう）に。",
+        "tense": "Quotation, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/入団してすぐに活躍という風になかなかいかない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "というように": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "なんか": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "なんて": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "ように": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It is quite difficult to do <strong>things like</strong> activities immediately after enrolling.",
+        "nuance_translation": "A structure meaning that something is being said in the <strong>way</strong> or <strong>wind</strong> of (A). As if to say (A).",
+        "extra_info": "",
+        "reviewable_id": 536,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5349",
+      "type": "study_question",
+      "attributes": {
+        "id": 5349,
+        "content": "<span class='name-highlight'>父（ちち）</span>：「母（はは）に、遅（おく）れるだろう<span class='study-area-input'>____</span>言（い）って。」",
+        "answer": "というふうに",
+        "alternate_grammar": [],
+        "kanji_answer": "という風（ふう）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることを(A)<strong>の様（よう）に</strong>述（の）べられているということを表（あらわ）す表現（ひょうげん）。(A)と述（の）べる様（よう）に。",
+        "tense": "Quotation, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/父：「母に、遅れるだろうという風に言って。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "というように": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ように": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Father</span>: 'Tell mom <strong>in such a way as to suggest</strong> that I will be late.'",
+        "nuance_translation": "A structure meaning that something is being said in the <strong>way</strong> or <strong>wind</strong> of (A). As if to say (A).",
+        "extra_info": "",
+        "reviewable_id": 536,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5348",
+      "type": "study_question",
+      "attributes": {
+        "id": 5348,
+        "content": "秘書（ひしょ）が仕事（しごと）を辞（や）める<span class='study-area-input'>____</span>聞（き）いていた。",
+        "answer": "というふうに",
+        "alternate_grammar": [],
+        "kanji_answer": "という風（ふう）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることを(A)<strong>の様（よう）に</strong>述（の）べられているということを表（あらわ）す表現（ひょうげん）。(A)と述（の）べる様（よう）に。",
+        "tense": "Quotation, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/秘書が仕事を辞めるという風に聞いていた。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "というように": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ように": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I heard something <strong>as if to suggest that</strong> the secretary decided to quit.",
+        "nuance_translation": "A structure meaning that something is being said in the <strong>way</strong> or <strong>wind</strong> of (A). As if to say (A).",
+        "extra_info": "",
+        "reviewable_id": 536,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5347",
+      "type": "study_question",
+      "attributes": {
+        "id": 5347,
+        "content": "彼女（かのじょ）は命（いのち）がかかってる<span class='study-area-input'>____</span>走（はし）っていた。",
+        "answer": "というふうに",
+        "alternate_grammar": [],
+        "kanji_answer": "という風（ふう）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることを(A)<strong>の様（よう）に</strong>述（の）べられているということを表（あらわ）す表現（ひょうげん）。(A)と述（の）べる様（よう）に。",
+        "tense": "Quotation, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼女は命がかかってるという風に走っていた。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "というように": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ように": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "She was running <strong>in a way that suggested</strong> her life depended on it.",
+        "nuance_translation": "A structure meaning that something is being said in the <strong>way</strong> or <strong>wind</strong> of (A). As if to say (A).",
+        "extra_info": "",
+        "reviewable_id": 536,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6976",
+      "type": "study_question",
+      "attributes": {
+        "id": 6976,
+        "content": "合格（ごうかく）は堅（かた）い<span class='study-area-input'>____</span>言（い）われても、やっぱり不安（ふあん）です。",
+        "answer": "というふうに",
+        "alternate_grammar": [],
+        "kanji_answer": "という風（ふう）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることを(A)<strong>の様（よう）に</strong>述（の）べられているということを表（あらわ）す表現（ひょうげん）。(A)と述（の）べる様（よう）に。",
+        "tense": "Quotation, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/合格は堅いという風に言われても、やっぱり不安です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "というように": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ように": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Even if I am told <strong>in such a way that suggests</strong> that passing is a given, I am still uneasy.",
+        "nuance_translation": "A structure meaning that something is being said in the <strong>way</strong> or <strong>wind</strong> of (A). As if to say (A).",
+        "extra_info": "",
+        "reviewable_id": 536,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "675",
+      "type": "writeup",
+      "attributes": {
+        "id": 675,
+        "body_ja": "<p>「<span data-gp-id='536'>というふうに</span>」は「<span data-gp-id='423'>ふうに</span>」と同様（どうよう）に接尾（せつび）語（ご）「風（ふう）」を含（ふく）み、「(A) の方法（ほうほう）で」「(A) の様子（ようす）で」「(A) のように」というような意味（いみ）を表（あらわ）します。</p>\r\n\r\n<p>この表現（ひょうげん）は「という」と「<span data-gp-id='423'>ふうに</span>」の組（く）み合（あ）わせでなので、「(A) と言（い）うような様子（ようす）で」というニュアンスを持っています。つまり、話（はな）し手（て）が実際（じっさい）の状況（じょうきょう）について確信（かくしん）を持（も）っているわけではなく、ただ見（み）た目（め）や印象（いんしょう）について述（の）べていることを示（しめ）します。</p>\r\n\r\n<p>「<span data-gp-id='536'>というふうに</span>」は動詞（どうし）や、やり方（かた）や様子（ようす）を指（さ）す名詞（めいし）の後（あと）に置（お）かれます。その後（あと）の (B) の部分（ぶぶん）では、(A) の方法（ほうほう）で行（おこな）われたことが説明（せつめい）されます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182204'>\r\n<li data-study-question='182205'>\r\n<li data-study-question='182206'>\r\n<li data-study-question='182207'>\r\n</ul>\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>「という」はその前（まえ）に置（お）かれた文（ぶん）全体（ぜんたい）を引用（いんよう）することがよくあります。「<span data-gp-id='536'>というふうに</span>」が文（ぶん）のどの部分（ぶぶん）を指（さ）しているかを正（ただ）しく理解（りかい）するため、この特徴（とくちょう）を覚（おぼ）えておきましょう。</p></section>",
+        "body": "<p>Like <span data-gp-id='423'>ふうに</span>, the grammar point indicating that something is being done 'in the way of (A)', <span data-gp-id='536'>というふうに</span> uses the same <span data-term='接尾語・せつびご'>suffix</span> of 風（ふう） 'wind', 'air', to express that something is being done 'as if to say (A)', 'as if to suggest (A)', or 'in such a way that (A)'.</p>\r\n\r\n<p>As this construction is just a combination of という 'to say', and ふうに 'in a manner', the literal meaning of this expression is similar to 'in a way that would say that (A)'. This simply highlights the speaker's uncertainty about what the actual situation is, and that they are only commenting on appearances.</p>\r\n\r\n<p>というふうに may be seen directly after verbs, or after nouns expressing the way in which something is being done. The (B) portion of these phrases will then indicate exactly what is being done 'in a way as if to say (A)'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182204'>\r\n<li data-study-question='182205'>\r\n<li data-study-question='182206'>\r\n<li data-study-question='182207'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>Because という often quotes the entire statement before it, it will be important to remember this when figuring out exactly what <span data-gp-id='536'>というふうに</span> is emphasizing.</p></section>"
+      }
+    },
+    {
+      "id": "2100",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2100,
+        "source": "A Dictionary of Intermediate Japanese Grammar",
+        "location": "Page 478",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1323",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1323,
+        "site": "JGram",
+        "description": "という風に",
+        "link": "https://takoboto.jp/jgram/pages/viewOne.php?tagE=fuuni",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1324",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1324,
+        "site": "JapaneseTest4You",
+        "description": "というふうに",
+        "link": "http://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-というふうに-to-iu-fuu-ni/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1194",
+      "type": "related_content",
+      "attributes": {
+        "id": 1194,
+        "relationship_type": "related",
+        "body": "Both という風に and ように・ような can be used to express similarity or comparison, but their nuance differs. という風に suggests doing something in a way 'as if to say' something else, meaning that the comparison can be uncertain or abstract. In contrast, ように・ような expresses a more direct comparison, implying similar qualities.",
+        "first_relatable": {
+          "id": 536,
+          "slug": "という風に",
+          "title": "という風に",
+          "meaning": "As if to say, As if to suggest that, In such a way that, Things like",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 138,
+          "slug": "ように-ような",
+          "title": "ように・ような",
+          "meaning": "As・like, Just like",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "342",
+      "type": "related_content",
+      "attributes": {
+        "id": 342,
+        "relationship_type": "synonym",
+        "body": "Both mean in the way of, but differ in usage. ふうに often attaches to demonstratives like こんなふうに (in this way). という風に follows whole phrases, as in すべて分かっているというふうに (as if they knew everything), and can sound slightly more indirect.",
+        "first_relatable": {
+          "id": 536,
+          "slug": "という風に",
+          "title": "という風に",
+          "meaning": "As if to say, As if to suggest that, In such a way that, Things like",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 423,
+          "slug": "ふうに",
+          "title": "ふうに",
+          "meaning": "~ way, In a way that suggests, Like ~",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1198",
+      "type": "related_content",
+      "attributes": {
+        "id": 1198,
+        "relationship_type": "related",
+        "body": "Both describe how something appears, but differ in tone. かのようだ often conveys imagination or unreality, as in 幻かのようだ (It’s like an illusion). という風に shows how something visibly seems, as in 分かっているというふうに笑った (He smiled as if he knew).",
+        "first_relatable": {
+          "id": 682,
+          "slug": "かのようだ",
+          "title": "かのようだ",
+          "meaning": "As if, Just like",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 536,
+          "slug": "という風に",
+          "title": "という風に",
+          "meaning": "As if to say, As if to suggest that, In such a way that, Things like",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

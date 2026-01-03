@@ -1,0 +1,861 @@
+{
+  "data": {
+    "id": "188",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 188,
+      "level": "JLPT4",
+      "lesson_id": 17,
+      "part_of_speech": null,
+      "register": "敬語",
+      "word_type": "",
+      "slug": "でございます",
+      "nuance": "あるものが何（なに）であるかを<strong>判断（はんだん）</strong>するときに使（つか）われる、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+      "grammar_order": 250,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 726,
+        "title": "お〜する",
+        "slug": "お-する"
+      },
+      "previous_grammar_point": {
+        "id": 187,
+        "title": "ございます",
+        "slug": "ございます"
+      },
+      "lesson_count": "15/18",
+      "title": "でございます",
+      "furigana": "で御座（ござ）います",
+      "meaning": "To be, Polite copula",
+      "nuance_translation": "A <strong>very polite</strong> expression to <strong>determine</strong> what something <strong>is</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "<span class='gp-popout' data-gp-id='2'>です</span> ￫ <strong>でござ</strong><span class='chui'>い</span></strong>ます</strong>",
+      "casual_structure": "<span class='gp-popout' data-gp-id='1'>だ</span> ￫ <strong>でござる</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Polite",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10122",
+      "metadata": "でございます, で御座います, でござる, degozaimasu, degozaru, expression, copula, polite, special class, introduction, respectful"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "381",
+            "type": "study_question"
+          },
+          {
+            "id": "3509",
+            "type": "study_question"
+          },
+          {
+            "id": "180683",
+            "type": "study_question"
+          },
+          {
+            "id": "180684",
+            "type": "study_question"
+          },
+          {
+            "id": "180685",
+            "type": "study_question"
+          },
+          {
+            "id": "383",
+            "type": "study_question"
+          },
+          {
+            "id": "3501",
+            "type": "study_question"
+          },
+          {
+            "id": "3503",
+            "type": "study_question"
+          },
+          {
+            "id": "3505",
+            "type": "study_question"
+          },
+          {
+            "id": "3508",
+            "type": "study_question"
+          },
+          {
+            "id": "3506",
+            "type": "study_question"
+          },
+          {
+            "id": "3507",
+            "type": "study_question"
+          },
+          {
+            "id": "382",
+            "type": "study_question"
+          },
+          {
+            "id": "3502",
+            "type": "study_question"
+          },
+          {
+            "id": "3504",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "247",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "199",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1020",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1368",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1215",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "21",
+            "type": "related_content"
+          },
+          {
+            "id": "20",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "356",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "357",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "381",
+      "type": "study_question",
+      "attributes": {
+        "id": 381,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span><span class='gp-popout' data-gp-id='729'>方（かた）</span><span class='gp-popout' data-gp-id='3'>は</span>田中（たなか）さん<span class='study-area-input'>____</span>。",
+        "answer": "でございます",
+        "alternate_grammar": [],
+        "kanji_answer": "で御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが何（なに）であるかを<strong>判断（はんだん）</strong>するときに使（つか）われる、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Kenjougo, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/188/male_audio/230408_1454.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この方は田中さんで御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This <strong>is</strong> Mr. Tanaka.",
+        "nuance_translation": "A <strong>very polite</strong> expression to <strong>determine</strong> what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 188,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3509",
+      "type": "study_question",
+      "attributes": {
+        "id": 3509,
+        "content": "竹物（たけもの）ピアノ<span class='study-area-input'>____</span>。ご用件（ようけん）<span class='gp-popout' data-gp-id='21'>を</span>承（うけたまわ）り<span class='gp-popout' data-gp-id='26'>ます</span>。",
+        "answer": "でございます",
+        "alternate_grammar": [],
+        "kanji_answer": "で御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが何（なに）であるかを<strong>判断（はんだん）</strong>するときに使（つか）われる、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Kenjougo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/188/male_audio/230408_1456_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/竹物ピアノで御座います。ご用件を承ります。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This <strong>is</strong> Takemono Pianos. How may I help you?",
+        "nuance_translation": "A <strong>very polite</strong> expression to <strong>determine</strong> what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 188,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180683",
+      "type": "study_question",
+      "attributes": {
+        "id": 180683,
+        "content": "郵便局（ゆうびんきょく）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>隣（となり）<span class='study-area-input'>____</span>。",
+        "answer": "でございます",
+        "alternate_grammar": [],
+        "kanji_answer": "でございます",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/郵便局は隣でございます。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The post office <strong>is</strong> next door.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 188,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180684",
+      "type": "study_question",
+      "attributes": {
+        "id": 180684,
+        "content": "運転手（うんてんしゅ）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>タナカ<span class='study-area-input'>____</span>。",
+        "answer": "でございます",
+        "alternate_grammar": [],
+        "kanji_answer": "でございます",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/運転手のタナカでございます。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>am</strong> Tanaka, the driver.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 188,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180685",
+      "type": "study_question",
+      "attributes": {
+        "id": 180685,
+        "content": "拙者（せっしゃ）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>ハットリ<span class='study-area-input'>____</span>。",
+        "answer": "でござる",
+        "alternate_grammar": [],
+        "kanji_answer": "でござる",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/拙者がハットリでござる。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>am</strong> Hattori. (拙者 is a very common word that was used by samurai, and simply means 'I')",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 188,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "383",
+      "type": "study_question",
+      "attributes": {
+        "id": 383,
+        "content": "こちら<span class='gp-popout' data-gp-id='10'>が</span>先生（せんせい）<span class='gp-popout' data-gp-id='6'>の</span>机（つくえ）<span class='study-area-input'>____</span>。",
+        "answer": "でございます",
+        "alternate_grammar": [],
+        "kanji_answer": "で御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが何（なに）であるかを<strong>判断（はんだん）</strong>するときに使（つか）われる、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Kenjougo, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/188/male_audio/230408_1454_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/こちらが先生の机で御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This <strong>is</strong> the teacher's desk. ",
+        "nuance_translation": "A <strong>very polite</strong> expression to <strong>determine</strong> what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 188,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3501",
+      "type": "study_question",
+      "attributes": {
+        "id": 3501,
+        "content": "こちら<span class='gp-popout' data-gp-id='3'>は</span>図書館（としょかん）<span class='study-area-input'>____</span>。",
+        "answer": "でございます",
+        "alternate_grammar": [],
+        "kanji_answer": "で御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが何（なに）であるかを<strong>判断（はんだん）</strong>するときに使（つか）われる、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Kenjougo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/188/male_audio/230408_1454_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/こちらは図書館で御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "でござる": {
+            "en": "How about a grammar structure that is a bit more modern?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This <strong>is</strong> the library. ",
+        "nuance_translation": "A <strong>very polite</strong> expression to <strong>determine</strong> what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 188,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3503",
+      "type": "study_question",
+      "attributes": {
+        "id": 3503,
+        "content": "本日（ほんじつ）<span class='gp-popout' data-gp-id='6'>の</span>スペシャル<span class='gp-popout' data-gp-id='3'>は</span>ホットケーキ<span class='study-area-input'>____</span>。",
+        "answer": "でございます",
+        "alternate_grammar": [],
+        "kanji_answer": "で御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが何（なに）であるかを<strong>判断（はんだん）</strong>するときに使（つか）われる、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Kenjougo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/188/male_audio/230408_1455.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/本日のスペシャルはホットケーキで御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Today's special <strong>is</strong> pancakes. ",
+        "nuance_translation": "A <strong>very polite</strong> expression to <strong>determine</strong> what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 188,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3505",
+      "type": "study_question",
+      "attributes": {
+        "id": 3505,
+        "content": "お子（こ）さん<span class='gp-popout' data-gp-id='6'>の</span>お飲（の）み物（もの）は無料（むりょう）<span class='study-area-input'>____</span>。",
+        "answer": "でございます",
+        "alternate_grammar": [],
+        "kanji_answer": "で御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが何（なに）であるかを<strong>判断（はんだん）</strong>するときに使（つか）われる、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Kenjougo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/188/male_audio/230408_1455_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/お子さんのお飲み物は無料で御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Children's beverages <strong>are</strong> free. ",
+        "nuance_translation": "A <strong>very polite</strong> expression to <strong>determine</strong> what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 188,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3508",
+      "type": "study_question",
+      "attributes": {
+        "id": 3508,
+        "content": "お冷（ひ）や<span class='study-area-input'>____</span>。",
+        "answer": "でございます",
+        "alternate_grammar": [],
+        "kanji_answer": "で御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが何（なに）であるかを<strong>判断（はんだん）</strong>するときに使（つか）われる、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Kenjougo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/188/male_audio/230408_1456.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/お冷やで御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "(Here <strong>is</strong> your) water.",
+        "nuance_translation": "A <strong>very polite</strong> expression to <strong>determine</strong> what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 188,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3506",
+      "type": "study_question",
+      "attributes": {
+        "id": 3506,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span>大統領（だいとうりょう）<span class='gp-popout' data-gp-id='6'>の</span>ペン<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "でございます",
+        "alternate_grammar": [],
+        "kanji_answer": "で御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが何（なに）であるかを<strong>判断（はんだん）</strong>するときに使（つか）われる、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Kenjougo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/188/male_audio/230408_1455_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/これは大統領のペンで御座いますか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Is</strong> this the president's pen? ",
+        "nuance_translation": "A <strong>very polite</strong> expression to <strong>determine</strong> what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 188,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3507",
+      "type": "study_question",
+      "attributes": {
+        "id": 3507,
+        "content": "ただいま校長（こうちょう）先生（せんせい）<span class='gp-popout' data-gp-id='10'>が</span>留守（るす）<span class='study-area-input'>____</span>。",
+        "answer": "でございます",
+        "alternate_grammar": [],
+        "kanji_answer": "で御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが何（なに）であるかを<strong>判断（はんだん）</strong>するときに使（つか）われる、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Kenjougo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/188/male_audio/230408_1455_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ただいま校長先生が留守で御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ございます": {
+            "en": "ございます is the polite form of the verb ある, which is used to express the existence of inanimate objects. In this case, we're describing the state or condition of a person, so we need the polite form of the copula だ, not a verb of existence.",
+            "es": "",
+            "fr": ""
+          },
+          "いらっしゃいます": {
+            "en": "いらっしゃる is an honorific verb used in place of いる, 来る, or 行く, and is only used for people or living things. However, in this sentence, we're not talking about the presence or movement of the person, but rather their status (being out), so we need the polite form of the copula だ, not an honorific verb of existence.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "At the moment, the principal <strong>is</strong> out. ",
+        "nuance_translation": "A <strong>very polite</strong> expression to <strong>determine</strong> what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 188,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "382",
+      "type": "study_question",
+      "attributes": {
+        "id": 382,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>商品（しょうひん）<span class='gp-popout' data-gp-id='3'>は</span>本当（ほんとう）に便利（べんり）<span class='study-area-input'>____</span>。",
+        "answer": "でございます",
+        "alternate_grammar": [],
+        "kanji_answer": "で御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが何（なに）であるかを<strong>判断（はんだん）</strong>するときに使（つか）われる、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Kenjougo, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/188/male_audio/230408_1454_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この商品は本当に便利で御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "These goods really <strong>are</strong> convenient. ",
+        "nuance_translation": "A <strong>very polite</strong> expression to <strong>determine</strong> what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 188,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3502",
+      "type": "study_question",
+      "attributes": {
+        "id": 3502,
+        "content": "英語（えいご）担当（たんとう）<span class='gp-popout' data-gp-id='6'>の</span>浜田（はまだ）<span class='study-area-input'>____</span>。",
+        "answer": "でございます",
+        "alternate_grammar": [],
+        "kanji_answer": "で御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが何（なに）であるかを<strong>判断（はんだん）</strong>するときに使（つか）われる、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Kenjougo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/188/male_audio/230408_1454_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/英語担当の浜田で御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "(I <strong>am</strong>) head of English, Hamada.",
+        "nuance_translation": "A <strong>very polite</strong> expression to <strong>determine</strong> what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 188,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3504",
+      "type": "study_question",
+      "attributes": {
+        "id": 3504,
+        "content": "こちら<span class='gp-popout' data-gp-id='6'>の</span>商品（しょうひん）<span class='gp-popout' data-gp-id='3'>は</span>手作（てづく）り<span class='study-area-input'>____</span>。",
+        "answer": "でございます",
+        "alternate_grammar": [],
+        "kanji_answer": "で御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが何（なに）であるかを<strong>判断（はんだん）</strong>するときに使（つか）われる、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Kenjougo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/188/male_audio/230408_1455_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/こちらの商品は手作りで御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "These products <strong>are</strong> all hand made.",
+        "nuance_translation": "A <strong>very polite</strong> expression to <strong>determine</strong> what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 188,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "247",
+      "type": "writeup",
+      "attributes": {
+        "id": 247,
+        "body_ja": "",
+        "body": "<p>As mentioned briefly in the <span data-gp-id='187'>ございます</span> lesson, <span data-gp-id='188'>でございます</span> is a structure which can be used as a replacement for <span data-gp-id='436'>であります</span>, the polite form of <span data-gp-id='436'>である</span> (which itself is the formal equivalent of <span data-gp-id='1'>だ</span>). Both <span data-gp-id='2'>です</span> and <span data-gp-id='188'>でございます</span> are considered <span data-term='丁寧語・ていねいご'>polite speech</span>. However, <span data-gp-id='188'>でございます</span> is the more polite of the two. Let's take a look at a few examples.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180683'>\r\n<li data-study-question='180684'>\r\n</ul>\r\n\r\n<p><span data-gp-id='188'>でござる</span> may also be seen, as it is the base form of <span data-gp-id='1'>で</span> + <span data-gp-id='187'>ございます</span> a (special-class) verb. However, in modern Japanese, this is primarily restricted to historical dramas, or characters that have a somewhat 'quirky' personality.</p>\r\n\r\n<ul class='writeup-examples--holder'><li data-study-question='180685'></ul>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>Using <span data-gp-id='188'>でございます</span> to introduce yourself is considered quite polite, however, when referring to other people, <span data-gp-id='191'>いらっしゃる</span> 'to be' is preferred, as <span data-term='尊敬語・そんけいご'>honorific language</span> is more respectful than <span data-term='丁寧語・ていねいご'>polite speech</span>.</p></section>"
+      }
+    },
+    {
+      "id": "199",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 199,
+        "source": "Genki II 1st Edition",
+        "location": "Page 138",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1020",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1020,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 41",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1368",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1368,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 226",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1215",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1215,
+        "source": "Genki II 2nd Edition",
+        "location": "Page 188",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "356",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 356,
+        "site": "Tae Kim",
+        "description": "Other substitutions",
+        "link": "https://guidetojapanese.org/learn/grammar/honorific",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "357",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 357,
+        "site": "Teach Me Nihongo",
+        "description": "\\\"Extra Formal\\\"",
+        "link": "https://teach-me-nihongo.tumblr.com/post/41006535346/conjugation-1-the-copula",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "21",
+      "type": "related_content",
+      "attributes": {
+        "id": 21,
+        "relationship_type": "synonym",
+        "body": "です and でございます are both polite forms of 'is' or 'to be.' です is polite but commonly used in everyday conversation. でございます is extremely polite and formal, used in customer service, ceremonial speech, or other situations requiring a high level of respect.",
+        "first_relatable": {
+          "id": 2,
+          "slug": "です",
+          "title": "です",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 188,
+          "slug": "でございます",
+          "title": "でございます",
+          "meaning": "To be, Polite copula",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "20",
+      "type": "related_content",
+      "attributes": {
+        "id": 20,
+        "relationship_type": "synonym",
+        "body": "だ conveys a casual, informal, or blunt tone, except when required by certain grammatical patterns. In contrast, でございます is a highly polite form, primarily used in business settings or when addressing someone of higher social status such as a boss or customer.",
+        "first_relatable": {
+          "id": 1,
+          "slug": "だ",
+          "title": "だ",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 188,
+          "slug": "でございます",
+          "title": "でございます",
+          "meaning": "To be, Polite copula",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

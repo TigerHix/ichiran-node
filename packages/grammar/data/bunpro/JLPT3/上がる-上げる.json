@@ -1,0 +1,1744 @@
+{
+  "data": {
+    "id": "479",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 479,
+      "level": "JLPT3",
+      "lesson_id": 29,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "上がる-上げる",
+      "nuance": "ある行動（こうどう）を中断（ちゅうだん）した、又（また）は<strong>終（お）えた</strong>ということを示（しめ）す文法（ぶんぽう）。",
+      "grammar_order": 487,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 282,
+        "title": "切る",
+        "slug": "切る"
+      },
+      "previous_grammar_point": {
+        "id": 272,
+        "title": "向け",
+        "slug": "向け"
+      },
+      "lesson_count": "5/22",
+      "title": "上がる・上げる",
+      "furigana": "上（あ）がる",
+      "meaning": "Something is finished, To finish something, Something has come to an end, To do something completely, To do something through",
+      "nuance_translation": "A structure used for showing that a particular action has been <strong>finished up</strong>, or finished to completion.",
+      "rare_kanji_warning": "",
+      "caution": "上がる is intransitive, 上げる is transitive",
+      "polite_structure": "（Noun + <span class='chui'><span class='gp-popout' data-gp-id='10'>が</span></span>） + Verb ［stem］ + <strong>上（あ）がります</strong><br>（Noun + <span class='chui'>を</span>） + Verb ［stem］ + <strong>上（あ）げます</strong>",
+      "casual_structure": "（Noun + <span class='chui'><span class='gp-popout' data-gp-id='10'>が</span></span>） + Verb ［stem］ + <strong>上（あ）がる</strong><br>（Noun + <span class='chui'><span class='gp-popout' data-gp-id='21'>を</span></span>） + Verb ［stem］ + <strong>上（あ）げる</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/3668",
+      "metadata": "上がる, 上げる, あがる, あげる, agaru, ageru, raise, rise, る-verb, る verb, ru-verb, ru verb, ichidan, ichidan verb, one level, conjugation, plain form, casual form, short form, う-verb, う verb, u-verb, u verb, godan, godan verb, five level, conjugation, dictionary form, standard form, plain form, intransitive, transitive"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "3775",
+            "type": "study_question"
+          },
+          {
+            "id": "180170",
+            "type": "study_question"
+          },
+          {
+            "id": "5088",
+            "type": "study_question"
+          },
+          {
+            "id": "180166",
+            "type": "study_question"
+          },
+          {
+            "id": "180167",
+            "type": "study_question"
+          },
+          {
+            "id": "180168",
+            "type": "study_question"
+          },
+          {
+            "id": "180169",
+            "type": "study_question"
+          },
+          {
+            "id": "180165",
+            "type": "study_question"
+          },
+          {
+            "id": "184305",
+            "type": "study_question"
+          },
+          {
+            "id": "184306",
+            "type": "study_question"
+          },
+          {
+            "id": "5093",
+            "type": "study_question"
+          },
+          {
+            "id": "3774",
+            "type": "study_question"
+          },
+          {
+            "id": "3776",
+            "type": "study_question"
+          },
+          {
+            "id": "5086",
+            "type": "study_question"
+          },
+          {
+            "id": "5087",
+            "type": "study_question"
+          },
+          {
+            "id": "5089",
+            "type": "study_question"
+          },
+          {
+            "id": "5094",
+            "type": "study_question"
+          },
+          {
+            "id": "5092",
+            "type": "study_question"
+          },
+          {
+            "id": "5090",
+            "type": "study_question"
+          },
+          {
+            "id": "5091",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "505",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "639",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1072",
+            "type": "related_content"
+          },
+          {
+            "id": "574",
+            "type": "related_content"
+          },
+          {
+            "id": "1071",
+            "type": "related_content"
+          },
+          {
+            "id": "551",
+            "type": "related_content"
+          },
+          {
+            "id": "1073",
+            "type": "related_content"
+          },
+          {
+            "id": "768",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1056",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1057",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "3775",
+      "type": "study_question",
+      "attributes": {
+        "id": 3775,
+        "content": "その日（ひ）のうちに部屋（へや）の壁（かべ）<span class='chui'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "ぬりあげた",
+        "alternate_grammar": [
+          "ぬりあげました",
+          "ぬりあげた"
+        ],
+        "kanji_answer": "塗（ぬ）り上（あ）げた",
+        "kanji_alt_grammar": [
+          "塗（ぬ）り上（あ）げました",
+          "塗（ぬ）り上（あ）げた"
+        ],
+        "nuance": "ある行動（こうどう）を中断（ちゅうだん）した、又（また）は<strong>終（お）えた</strong>ということを示（しめ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/479/male_audio/231123_1300_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/その日のうちに部屋の壁を塗り上げた。.mp3",
+        "word_prompt": "塗（ぬ）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ぬりあがった": {
+            "en": "This is describing the speaker's action so think transitive",
+            "es": ""
+          },
+          "ぬりあがりました": {
+            "en": "This is describing the speaker's action so think transitive",
+            "es": ""
+          },
+          "ぬりきる": {
+            "en": "切る is used for when things are completely used up or when something has come to a complete end. Looking for a grammar point that implies that something is/was produced/created (to completion). Think of something made, built, or baked to completion.",
+            "es": ""
+          },
+          "ぬりきった": {
+            "en": "切る is used for when things are completely used up or when something has come to a complete end. Looking for a grammar point that implies that something is/was produced/created (to completion). Think of something made, built, or baked to completion.",
+            "es": ""
+          },
+          "ぬりきります": {
+            "en": "切る is used for when things are completely used up or when something has come to a complete end. Looking for a grammar point that implies that something is/was produced/created (to completion). Think of something made, built, or baked to completion.",
+            "es": ""
+          },
+          "ぬりきりました": {
+            "en": "切る is used for when things are completely used up or when something has come to a complete end. Looking for a grammar point that implies that something is/was produced/created (to completion). Think of something made, built, or baked to completion.",
+            "es": ""
+          },
+          "ぬりおわった": {
+            "en": "Nice guess! Think of completing something and \"raising it up\"",
+            "es": ""
+          },
+          "ぬりおわりました": {
+            "en": "Nice guess! Think of completing something and \"raising it up\"",
+            "es": ""
+          },
+          "ぬいあげた": {
+            "en": "Can you try answering using the prompted verb?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ぬりあげる": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "ぬりあげった": {
+            "en": "Can you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ぬりあがた": {
+            "en": "Can you try checking your conjugation? Also note that the を particle is used, so 上（あ）がる is not correct.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ぬ": {
+            "en": "We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ぬりきた": {
+            "en": "切（き）った expresses something is done thoroughly or completely, but doesn't imply a finished product. We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ぬり": {
+            "en": "We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I <strong>finished painting</strong> the room walls before the day was over.",
+        "nuance_translation": "A structure used for showing that a particular action has been <strong>finished up</strong>, or finished to completion.",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180170",
+      "type": "study_question",
+      "attributes": {
+        "id": 180170,
+        "content": "古（ふる）いコンピューターは立（た）ち<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"130\">のに</span>１０分（じゅっぷん）かかる。",
+        "answer": "あがる",
+        "alternate_grammar": [],
+        "kanji_answer": "上（あ）がる",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/古いコンピューターは立ち上がるのに１０分かかる。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It takes an old computer 10 minutes to <strong>finish up</strong> booting.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5088",
+      "type": "study_question",
+      "attributes": {
+        "id": 5088,
+        "content": "家族（かぞく）の後押（あとお）しのおかげで初（はじ）めての子供（こども）向（む）けの本（ほん）<span class='chui'>を</span><span class='study-area-input'>____</span>ことができました。",
+        "answer": "かきあげる",
+        "alternate_grammar": [],
+        "kanji_answer": "書（か）き上（あ）げる",
+        "kanji_alt_grammar": [],
+        "nuance": "ある行動（こうどう）を中断（ちゅうだん）した、又（また）は<strong>終（お）えた</strong>ということを示（しめ）す文法（ぶんぽう）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/479/male_audio/231123_1300_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/家族の後押しのおかげで初めての子供向けの本を書き上げることができました。.mp3",
+        "word_prompt": "書（か）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かきあがる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "かきあがります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "かききる": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "かききった": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "かきおわった": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "かきおわりました": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Thanks to the support of my family I was able to <strong>finish writing</strong> my first book for children.",
+        "nuance_translation": "A structure used for showing that a particular action has been <strong>finished up</strong>, or finished to completion.",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180166",
+      "type": "study_question",
+      "attributes": {
+        "id": 180166,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"30\">この</span>炊飯器（すいはんき）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>使（つか）え<span class=\"gp-popout\" data-gp-id=\"154\">ば</span>２０分（にじゅっぷん）<span class=\"gp-popout\" data-gp-id=\"25\">で</span>ご飯（はん）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>炊（た）き<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"78\">よ。</span>",
+        "answer": "あがる",
+        "alternate_grammar": [],
+        "kanji_answer": "あがる",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/この炊飯器を使えば２０分でご飯が炊きあがるよ。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "If you use this rice cooker, your rice will <strong>finish</strong> cooking in 20 minutes.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180167",
+      "type": "study_question",
+      "attributes": {
+        "id": 180167,
+        "content": "<span class=\"vocab-popout\" data-vocab-id=\"643\">明日（あした）</span><span class=\"gp-popout\" data-gp-id=\"6\">の</span>朝（あさ）<span class=\"gp-popout\" data-gp-id=\"104\">までに</span>書（か）き<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"16\">の</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span>無理（むり）<span class=\"gp-popout\" data-gp-id=\"120\">かな</span>？頑張（がんば）ら<span class=\"gp-popout\" data-gp-id=\"74\">なきゃ</span>。",
+        "answer": "あげる",
+        "alternate_grammar": [],
+        "kanji_answer": "上（あ）げる",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/明日の朝までに書き上げるのは無理かな？頑張らなきゃ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Is it impossible to <strong>finish</strong> up writing this paper by tomorrow? I should give it my all.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180168",
+      "type": "study_question",
+      "attributes": {
+        "id": 180168,
+        "content": "彼（かれ）は砂（すな）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>使（つか）って小（ちい）さな街（まち）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>作（つく）り<span class='study-area-input'>____</span>。",
+        "answer": "あげた",
+        "alternate_grammar": [],
+        "kanji_answer": "上（あ）げた",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/彼は砂を使って小さな街を作り上げた。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "He used sand <strong>to build up</strong> a small city.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180169",
+      "type": "study_question",
+      "attributes": {
+        "id": 180169,
+        "content": "彼（かれ）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>作品（さくひん）は５分（ごふん）<span class=\"gp-popout\" data-gp-id=\"25\">で</span>書（か）き<span class='study-area-input'>____</span>。",
+        "answer": "あがる",
+        "alternate_grammar": [],
+        "kanji_answer": "あがる",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/彼の作品は５分で書きあがる。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "His pieces are <strong>drawn up</strong> in 5 minutes.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180165",
+      "type": "study_question",
+      "attributes": {
+        "id": 180165,
+        "content": "レポートは書（か）き<span class='study-area-input'>____</span>？",
+        "answer": "あげた",
+        "alternate_grammar": [],
+        "kanji_answer": "上（あ）げた",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/レポートは書き上げた？.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Did you <strong>finish</strong> writing the paper?",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184305",
+      "type": "study_question",
+      "attributes": {
+        "id": 184305,
+        "content": "ラッピング<span data-gp-id='10'>が</span><strong>仕上（しあ）がっ</strong><span data-gp-id='102'>たら</span>番号（ばんごう）<span data-gp-id='36'>で</span>お呼（よ）びします。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "We will call you by your number once we <strong>finish</strong> wrapping it.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184306",
+      "type": "study_question",
+      "attributes": {
+        "id": 184306,
+        "content": "<span data-gp-id='19'>あれ</span>は<span data-gp-id='369'>どんな</span>風（ふう）<span data-gp-id='32'>に</span><strong>仕上（しあ）がる</strong><span data-gp-id='120'>かな</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I wonder how that will be <strong>completed</strong>.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5093",
+      "type": "study_question",
+      "attributes": {
+        "id": 5093,
+        "content": "論文（ろんぶん）<span class='chui'>が</span><span class='study-area-input'>____</span>。",
+        "answer": "かきあがる",
+        "alternate_grammar": [
+          "かきあがります",
+          "かきあがる"
+        ],
+        "kanji_answer": "書（か）き上（あ）がる",
+        "kanji_alt_grammar": [
+          "書（か）きあがります",
+          "書（か）き上（あ）がる"
+        ],
+        "nuance": "ある行動（こうどう）を中断（ちゅうだん）した、又（また）は<strong>終（お）えた</strong>ということを示（しめ）す文法（ぶんぽう）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/479/male_audio/231123_1301_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/論文が書き上がる。.mp3",
+        "word_prompt": "書（か）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かきおわる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "かきおわります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "かきあげる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "かきあげました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "かききる": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "かききった": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "かききります": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "かききりました": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "かきおわった": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "かきおわりました": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To <strong>finish up writing</strong> an essay.",
+        "nuance_translation": "A structure used for showing that a particular action has been <strong>finished up</strong>, or finished to completion.",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3774",
+      "type": "study_question",
+      "attributes": {
+        "id": 3774,
+        "content": "ところで、やっと絵（え）<span class='chui'>が</span><span class='study-area-input'>____</span>よ。",
+        "answer": "えがきあがった",
+        "alternate_grammar": [
+          "えがきあがりました",
+          "えがきあがった",
+          "えがきあがったです",
+          "かきあがった",
+          "かきあがりました"
+        ],
+        "kanji_answer": "描（えが）き上（あ）がった",
+        "kanji_alt_grammar": [
+          "描（えが）き上（あ）がりました",
+          "描（えが）き上（あ）がったです",
+          "描（えが）き上（あ）がった"
+        ],
+        "nuance": "ある行動（こうどう）を中断（ちゅうだん）した、又（また）は<strong>終（お）えた</strong>ということを示（しめ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/479/male_audio/231123_1300.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ところで、やっと絵が描き上がったよ。.mp3",
+        "word_prompt": "描（えが）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "えがきおわった": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "えがきおわりました": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "えがきあげました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "えがきあげた": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "えがききる": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "えがききった": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "えがききります": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "えがききりました": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "えがきあがる": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "かきあげた": {
+            "en": "Can you try answering with the prompted verb? Also note that the が particle is used, so 上（あ）げる is not correct.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "えがきあがた": {
+            "en": "Can you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "えが": {
+            "en": "We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "えがき": {
+            "en": "We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "えがききた": {
+            "en": "切（き）った expresses something is done thoroughly or completely, but doesn't imply a finished product. We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "かききった": {
+            "en": "Can you try answering with the prompted verb? Also, 切（き）った expresses something is done thoroughly or completely, but doesn't imply a finished product. We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "By the way, the picture <strong>has</strong> finally <strong>been completely painted</strong>.",
+        "nuance_translation": "A structure used for showing that a particular action has been <strong>finished up</strong>, or finished to completion.",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3776",
+      "type": "study_question",
+      "attributes": {
+        "id": 3776,
+        "content": "作品（さくひん）<span class='chui'>が</span><span class='study-area-input'>____</span>。",
+        "answer": "しあがる",
+        "alternate_grammar": [
+          "しあがる",
+          "しあがります"
+        ],
+        "kanji_answer": "し上（あ）がる",
+        "kanji_alt_grammar": [
+          "し上（あ）がります",
+          "し上（あ）がる"
+        ],
+        "nuance": "ある行動（こうどう）を中断（ちゅうだん）した、又（また）は<strong>終（お）えた</strong>ということを示（しめ）す文法（ぶんぽう）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/479/male_audio/231123_1300_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/作品がし上がる。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しおわる": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "しおわります": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "しあげる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "しあげます": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "しきる": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "しきります": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "しおわった": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "しおわりました": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "しあがった": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しあげた": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "し": {
+            "en": "We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "してあがる": {
+            "en": "This grammar point attaches to verb stems.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "The piece <strong>will be finished</strong>.",
+        "nuance_translation": "A structure used for showing that a particular action has been <strong>finished up</strong>, or finished to completion.",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5086",
+      "type": "study_question",
+      "attributes": {
+        "id": 5086,
+        "content": "なんとかドレス<span class='chui'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "ぬいあげました",
+        "alternate_grammar": [
+          "ぬいあげました",
+          "ぬいあげた"
+        ],
+        "kanji_answer": "縫（ぬ）い上（あ）げました",
+        "kanji_alt_grammar": [
+          "縫（ぬ）い上（あ）げました",
+          "縫（ぬ）い上（あ）げた"
+        ],
+        "nuance": "ある行動（こうどう）を中断（ちゅうだん）した、又（また）は<strong>終（お）えた</strong>ということを示（しめ）す文法（ぶんぽう）。",
+        "tense": "Past, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/479/male_audio/231123_1300_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/なんとかドレスを縫い上げました。.mp3",
+        "word_prompt": "縫（ぬ）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ぬいあがった": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ぬいあがりました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ぬいきる": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "ぬいきった": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "ぬいきります": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "ぬいきりました": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "ぬいおわった": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬいおわりました": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬりあげた": {
+            "en": "Can you try answering with the prompted verb?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ぬいあげる": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "ぬ": {
+            "en": "We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ぬい": {
+            "en": "We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ぬいあがた": {
+            "en": "Check the tense hint and conjugation! Also note that the を particle is used, so 上（あ）がる is not correct.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ぬいあげった": {
+            "en": "Check the tense hint and conjugation!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ぬいきた": {
+            "en": "切（き）った expresses something is done thoroughly or completely, but doesn't imply a finished product. We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I have somehow manag<strong>ed</strong> to <strong>finish sewing</strong> the dress.",
+        "nuance_translation": "A structure used for showing that a particular action has been <strong>finished up</strong>, or finished to completion.",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5087",
+      "type": "study_question",
+      "attributes": {
+        "id": 5087,
+        "content": "ご飯（はん）<span class='chui'>が</span><span class='study-area-input'>____</span>。",
+        "answer": "たきあがる",
+        "alternate_grammar": [
+          "たきあがります",
+          "たきあがる"
+        ],
+        "kanji_answer": "炊（た）きあがる",
+        "kanji_alt_grammar": [
+          "炊（た）き上（あ）がります",
+          "炊（た）きあがる"
+        ],
+        "nuance": "ある行動（こうどう）を中断（ちゅうだん）した、又（また）は<strong>終（お）えた</strong>ということを示（しめ）す文法（ぶんぽう）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/479/male_audio/231123_1300_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ご飯が炊きあがる。.mp3",
+        "word_prompt": "炊（た）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たきおわる": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "たきおわります": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "たきあげる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "たきあげます": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "たききる": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "たききります": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "たきおわった": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "たきおわりました": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "たきあがった": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "たきあげた": {
+            "en": "Check the tense hint! Also note that the が particle is used, so 上（あ）げる is not correct.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "たき": {
+            "en": "We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "た": {
+            "en": "We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "The rice <strong>will finish up cooking</strong>.",
+        "nuance_translation": "A structure used for showing that a particular action has been <strong>finished up</strong>, or finished to completion.",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5089",
+      "type": "study_question",
+      "attributes": {
+        "id": 5089,
+        "content": "空（そら）は雨（あめ）の後（あと）で<span class='study-area-input'>____</span>。",
+        "answer": "はれあがった",
+        "alternate_grammar": [
+          "はれあがりました",
+          "はれあがった"
+        ],
+        "kanji_answer": "晴（は）れ上（あ）がった",
+        "kanji_alt_grammar": [
+          "晴（は）れ上（あ）がりました",
+          "晴（は）れ上（あ）がった"
+        ],
+        "nuance": "ある行動（こうどう）を中断（ちゅうだん）した、又（また）は<strong>終（お）えた</strong>ということを示（しめ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/479/male_audio/231123_1301.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/空は雨の後で晴れ上がった。.mp3",
+        "word_prompt": "晴（は）れる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はれおわった": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "はれおわりました": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "はれあげた": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "はれきった": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "はれきりました": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "はれきる": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "はれきります": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "はれあがた": {
+            "en": "Can you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "はれきれた": {
+            "en": "We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "はれ": {
+            "en": "We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "はれきた": {
+            "en": "切（き）った expresses something is done thoroughly or completely, but doesn't imply a finished product. We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "The weather <strong>cleared completely</strong> after the rain.",
+        "nuance_translation": "A structure used for showing that a particular action has been <strong>finished up</strong>, or finished to completion.",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5094",
+      "type": "study_question",
+      "attributes": {
+        "id": 5094,
+        "content": "子供（こども）は雪（ゆき）で城（しろ）<span class='chui'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "つくりあげた",
+        "alternate_grammar": [
+          "つくりあげました",
+          "つくりあげた"
+        ],
+        "kanji_answer": "作（つく）り上（あ）げた",
+        "kanji_alt_grammar": [
+          "作（つく）り上（あ）げました",
+          "作（つく）り上（あ）げた"
+        ],
+        "nuance": "ある行動（こうどう）を中断（ちゅうだん）した、又（また）は<strong>終（お）えた</strong>ということを示（しめ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/479/male_audio/231123_1301_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/子供は雪で城を作り上げた。.mp3",
+        "word_prompt": "作（つく）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つくりあがった": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "つくりあがりました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "つくりきる": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "つくりきった": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "つくりきります": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "つくりきりました": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "つくりおわった": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "つくりおわりました": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "つくりあげる": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "つくってあげた": {
+            "en": "This grammar point attaches to the stem form of verbs.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つくり": {
+            "en": "We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つくりあがた": {
+            "en": "Can you try checking your conjugation? Also note that the を particle is used, so 上（あ）がる is not correct.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つくりあげった": {
+            "en": "Can you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つく": {
+            "en": "We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "Children have <strong>finished making</strong> a snow castle.",
+        "nuance_translation": "A structure used for showing that a particular action has been <strong>finished up</strong>, or finished to completion.",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5092",
+      "type": "study_question",
+      "attributes": {
+        "id": 5092,
+        "content": "本物（ほんもの）そっくりの模型（もけい）<span class='chui'>が</span><span class='study-area-input'>____</span>。",
+        "answer": "できあがった",
+        "alternate_grammar": [
+          "できあがりました",
+          "できあがった"
+        ],
+        "kanji_answer": "でき上（あ）がった",
+        "kanji_alt_grammar": [
+          "でき上（あ）がりました",
+          "でき上（あ）がった"
+        ],
+        "nuance": "ある行動（こうどう）を中断（ちゅうだん）した、又（また）は<strong>終（お）えた</strong>ということを示（しめ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/479/male_audio/231123_1301_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/本物そっくりの模型ができ上がった。.mp3",
+        "word_prompt": "できる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "できあげた": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "できあげました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "でききる": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "でききった": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "でききります": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "でききりました": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "できおわった": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "できおわりました": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "できている": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "できた": {
+            "en": "We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "でき": {
+            "en": "We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "できあがた": {
+            "en": "Can you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "The model that looks exactly like the real thing <strong>has been completed</strong>.",
+        "nuance_translation": "A structure used for showing that a particular action has been <strong>finished up</strong>, or finished to completion.",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5090",
+      "type": "study_question",
+      "attributes": {
+        "id": 5090,
+        "content": "５（ご）分（ふん）後（ご）に、卵（たまご）を加（くわ）えて一緒（いっしょ）に<span class='study-area-input'>____</span>。",
+        "answer": "ゆであげる",
+        "alternate_grammar": [
+          "ゆであげます",
+          "ゆであげる"
+        ],
+        "kanji_answer": "ゆで上（あ）げる",
+        "kanji_alt_grammar": [
+          "ゆで上（あ）げます",
+          "ゆで上（あ）げる"
+        ],
+        "nuance": "ある行動（こうどう）を中断（ちゅうだん）した、又（また）は<strong>終（お）えた</strong>ということを示（しめ）す文法（ぶんぽう）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/479/male_audio/231123_1301_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/５分後に、卵を加えて一緒にゆで上げる。.mp3",
+        "word_prompt": "ゆでる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ゆであげて": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ゆであげてください": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ゆであがる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ゆであがります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ゆできる": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "ゆできります": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "ゆでおわった": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ゆでおわりました": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ゆであげた": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "ゆで": {
+            "en": "We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ゆであがった": {
+            "en": "Check the tense hint! Also note that the を particle is used, so 上（あ）がる is not correct.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "After five minutes add an egg and <strong>boil it </strong>together<strong> until it is done</strong>.",
+        "nuance_translation": "A structure used for showing that a particular action has been <strong>finished up</strong>, or finished to completion.",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5091",
+      "type": "study_question",
+      "attributes": {
+        "id": 5091,
+        "content": "やっぱりご飯（はん）は<span class='study-area-input'>____</span>ばかりのに限（かぎ）るね。",
+        "answer": "たきあがった",
+        "alternate_grammar": [],
+        "kanji_answer": "炊（た）き上（あ）がった",
+        "kanji_alt_grammar": [],
+        "nuance": "ある行動（こうどう）を中断（ちゅうだん）した、又（また）は<strong>終（お）えた</strong>ということを示（しめ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/479/male_audio/231123_1301_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/やっぱりご飯は炊き上がったばかりのに限るね。.mp3",
+        "word_prompt": "炊（た）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たきあげた": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "たききる": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "たききった": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "たききります": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "たききりました": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "たきおわった": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "たきおわりました": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "たきあがる": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "たきたて": {
+            "en": "We are looking for a grammar point attached to verb stems that means something 'is finished' or 'done completely' with the nuance that it has been 'done to the limit'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "たきあがた": {
+            "en": "Can you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "As expected, the rice that has just <strong>finished cooking</strong> is the best. ",
+        "nuance_translation": "A structure used for showing that a particular action has been <strong>finished up</strong>, or finished to completion.",
+        "extra_info": "",
+        "reviewable_id": 479,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "505",
+      "type": "writeup",
+      "attributes": {
+        "id": 505,
+        "body_ja": "<p>動詞（どうし）の連用形（れんようけい）のあとに「上（あ）がる」または「上（あ）げる」を付（つ）けると、その動作（どうさ）が「最後（さいご）まで」行（おこな）われたことを表（あらわ）すことができます。「上（あ）がる」は物事（ものごと）が自然（しぜん）に起（お）こる場合（ばあい）に使（つか）われて、「上（あ）げる」はそれをする人（ひと）がいる場合（ばあい）に使（つか）われます。</p>\r\n\r\n<p>「上（あ）げる」と「上（あ）がる」は、「(A) を完成（かんせい）させる」や「(A) を完了（かんりょう）させる」という意味（いみ）で使（つか）われます。この表現（ひょうげん）は、(A) をそれ以上（いじょう）できなくなったために終（お）わりを迎（むか）えたような場合（ばあい）ではなく、自然（しぜん）に「そこが終（お）わりだ」と見（み）なされる地点（ちてん）に達（たっ）したような場合（ばあい）に使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180165'>\r\n<li data-study-question='180166'>\r\n<li data-study-question='180167'>\r\n<li data-study-question='180168'>\r\n</ul>\r\n\r\n<p>また、「上（あ）げる」や「上（あ）がる」は、行動（こうどう）の結果（けっか）として何（なん）らかの結果（けっか）や効果（こうか）が生（う）まれる場合（ばあい）によく使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180169'>\r\n<li data-study-question='180170'>\r\n</ul>\r\n\r\n<section class=\"caution\"><h4>注意点（ちゅういてん）</h4>\r\n<p>「仕上（しあ）がる」は時間（じかん）や手間（てま）をかけて完成（かんせい）させることを表（あらわ）します。これはとてもよく使（つか）われる表現（ひょうげん）です。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184305'>\r\n<li data-study-question='184306'></ul></section>",
+        "body": "<p>When used after the <span data-term='連用形・れんようけい'>conjunctive form</span> of a verb, either of the verbs 上（あ）げる 'to raise', or <span data-gp-id='479'>上（あ）がる</span> 'to rise' may be used. They will convey that something has been done 'to the limit'. <span data-gp-id='479'>上（あ）がる</span> will be used for actions that take place by themselves (intransitive), while <span data-gp-id='722'>上（あ）げる</span> will be used for actions that have an instigator (transitive).</p>\r\n\r\n<p>Although 上（あ）げる and <span data-gp-id='479'>上（あ）がる</span> show that something has been done 'to the limit', the nuance is usually 'to do (A) to the point of completion', or 'to do (A) through to the end'. Therefore, the 'limit' that is being highlighted is usually a natural ending, and not due to running out of some kind of resource. Let's have a look at some examples.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180165'>\r\n<li data-study-question='180166'>\r\n<li data-study-question='180167'>\r\n<li data-study-question='180168'>\r\n</ul>\r\n\r\n<p>上（あ）げる and <span data-gp-id='479'>上（あ）がる</span> are most commonly used when some kind of effect or product is produced as a result of the (A) action. In these cases, the literal meaning of 'to (A) up' is very similar to 'to finish up (A)' in English.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180169'>\r\n<li data-study-question='180170'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>仕上（しあ）がる is a very common expression that is used for many things. Usually it conveys that something has been completed after some involved or time consuming process.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184305'>\r\n<li data-study-question='184306'></ul></section>"
+      }
+    },
+    {
+      "id": "639",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 639,
+        "source": "Tobira",
+        "location": "Page 308",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1056",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1056,
+        "site": "Kanshudo",
+        "description": "Breakdown and Example Sentences",
+        "link": "https://www.kanshudo.com/grammar/%E3%81%82%E3%81%92%E3%82%8B",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1057",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1057,
+        "site": "Quora",
+        "description": "More information on Verb[stem] + 上がる",
+        "link": "https://www.quora.com/What-does-this-structure-%E3%80%8Cverb-stem-+%E4%B8%8A%E3%81%8C%E3%82%8B%E3%80%8D-mean-ex-%E8%B5%B7%E3%81%8D%E4%B8%8A%E3%81%8C%E3%82%8B",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1072",
+      "type": "related_content",
+      "attributes": {
+        "id": 1072,
+        "relationship_type": "related",
+        "body": "Both can attach to verb stems to express the completion of an action, but differ in nuance. 上がる・上げる is typically used when the action results in a finished product, e.g. '論文を書き上げる' ('finish writing a thesis'). 抜く highlights the effort or perseverance involved in following something through to the end, e.g. 'やり抜く' ('see it through').",
+        "first_relatable": {
+          "id": 479,
+          "slug": "上がる-上げる",
+          "title": "上がる・上げる",
+          "meaning": "Something is finished, To finish something, Something has come to an end, To do something completely, To do something through",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 571,
+          "slug": "抜く",
+          "title": "抜く",
+          "meaning": "All~, Completely, See through, Overcome, To the bitter end",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "574",
+      "type": "related_content",
+      "attributes": {
+        "id": 574,
+        "relationship_type": "related",
+        "body": "While おわる and 上がる・上げる both attach to verb stems to express finishing an action, their nuances differ. おわる can describe completing any action, e.g. ケーキを食べおわった ('I finished eating the cake.') or 映画を観おわった ('I finished watching a movie.'). 上がる・上げる is typically used when the action results in some completed product, e.g. 論文を書きあげた ('I finished writing the paper.').",
+        "first_relatable": {
+          "id": 126,
+          "slug": "おわる",
+          "title": "おわる",
+          "meaning": "To finish, To end",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 479,
+          "slug": "上がる-上げる",
+          "title": "上がる・上げる",
+          "meaning": "Something is finished, To finish something, Something has come to an end, To do something completely, To do something through",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1071",
+      "type": "related_content",
+      "attributes": {
+        "id": 1071,
+        "relationship_type": "related",
+        "body": "Both can attach to verb stems to express the completion of an action, but differ in nuance. 上がる・上げる is typically used when the action results in a finished product, e.g. '論文を書き上げる' ('finish writing a thesis'). 切る expresses that something has been done thoroughly or completely, but doesn't necessarily imply a final product, e.g. '読み切る' ('read all the way through') or '使い切る' ('use up').",
+        "first_relatable": {
+          "id": 479,
+          "slug": "上がる-上げる",
+          "title": "上がる・上げる",
+          "meaning": "Something is finished, To finish something, Something has come to an end, To do something completely, To do something through",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 282,
+          "slug": "切る",
+          "title": "切る",
+          "meaning": "To do something completely to the end, Utterly, Resolutely",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "551",
+      "type": "related_content",
+      "attributes": {
+        "id": 551,
+        "relationship_type": "antonym",
+        "body": "はじめる attaches to verb stems to express 'beginning to' do something, e.g. 作りはじめる 'to start making'. In contrast, 上がる・上げる also attach to verb stems but express completing an action, e.g. 作りあげる 'to finish making', often with a sense of effort or finality.",
+        "first_relatable": {
+          "id": 115,
+          "slug": "はじめる",
+          "title": "はじめる",
+          "meaning": "To start, To begin to",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 479,
+          "slug": "上がる-上げる",
+          "title": "上がる・上げる",
+          "meaning": "Something is finished, To finish something, Something has come to an end, To do something completely, To do something through",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1073",
+      "type": "related_content",
+      "attributes": {
+        "id": 1073,
+        "relationship_type": "antonym",
+        "body": "These phrases are opposites—one expresses a completed action, the other, incompleteness. 上がる・上げる is typically used when the action results in a finished product, e.g. '論文を書き上げる' ('finish writing a thesis'). 切れない expresses the inability to finish something fully, e.g. '食べ切れなかった' ('I couldn't finish eating it').",
+        "first_relatable": {
+          "id": 479,
+          "slug": "上がる-上げる",
+          "title": "上がる・上げる",
+          "meaning": "Something is finished, To finish something, Something has come to an end, To do something completely, To do something through",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 293,
+          "slug": "切れない",
+          "title": "切れない",
+          "meaning": "Being unable to finish or complete",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "768",
+      "type": "related_content",
+      "attributes": {
+        "id": 768,
+        "relationship_type": "related",
+        "body": "上がる・上げる can express the idea of completing an action, which overlaps with てしまう・ちゃう, but they differ in nuance. てしまう・ちゃう can express regret or lack of control, while 上がる・上げる focuses on the act of producing a finished result. For example, 書き上げる 'finish writing'. In contrast, てしまう・ちゃう can be used with any verb, regardless of whether a tangible result is produced.",
+        "first_relatable": {
+          "id": 172,
+          "slug": "てしまう-ちゃう",
+          "title": "てしまう・ちゃう",
+          "meaning": "To do something by accident, To finish completely・totally, Unfortunately",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 479,
+          "slug": "上がる-上げる",
+          "title": "上がる・上げる",
+          "meaning": "Something is finished, To finish something, Something has come to an end, To do something completely, To do something through",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

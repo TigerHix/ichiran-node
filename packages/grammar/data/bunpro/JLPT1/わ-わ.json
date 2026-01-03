@@ -1,0 +1,432 @@
+{
+  "data": {
+    "id": "960",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 960,
+      "level": "JLPT1",
+      "lesson_id": 46,
+      "part_of_speech": null,
+      "register": "硬い",
+      "word_type": "",
+      "slug": "わ-わ",
+      "nuance": "(A)が<strong>次（つぎ）から次（つぎ）へ</strong>と発生（はっせい）したこと、又（また）は頻繁（ひんぱん）に発生（はっせい）していることに話（はな）し手（て）が驚（おどろ）いているということを強調（きょうちょう）する時（とき）に使（つか）われる<strong>丁寧（ていねい）</strong>な<strong>接続詞（せつぞくし）</strong>。",
+      "grammar_order": 845,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 1089,
+        "title": "なりとも",
+        "slug": "なりとも"
+      },
+      "previous_grammar_point": {
+        "id": 962,
+        "title": "とばかり（に）",
+        "slug": "とばかり"
+      },
+      "lesson_count": "17/18",
+      "title": "わ〜わ",
+      "furigana": "わ〜わ",
+      "meaning": "~and ~and, Keep ~ing, One after another, So much, So many, One after the other",
+      "nuance_translation": "A <strong>formal</strong> <strong>particle</strong> construction, emphasizing the speaker's astonishment about (A) happening <strong>one after the other</strong>, or to a large degree.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<span class='gp-popout' data-gp-id='950'>Verb［る］</span>+ <strong>わ</strong> + <span class='gp-popout' data-gp-id='950'>Verb［る］</span>+ <strong>わ</strong><sup>(*)</sup><br><br><sup>(*)</sup> The same verb has to be repeated",
+      "part_of_speech_translation": null,
+      "register_translation": "Formal",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/40795/2",
+      "metadata": "わわ, わ, wawa, wa, particle, adverbial particle, emphasis, surprise, masculine, male"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "10172",
+            "type": "study_question"
+          },
+          {
+            "id": "10170",
+            "type": "study_question"
+          },
+          {
+            "id": "10171",
+            "type": "study_question"
+          },
+          {
+            "id": "10168",
+            "type": "study_question"
+          },
+          {
+            "id": "10167",
+            "type": "study_question"
+          },
+          {
+            "id": "182900",
+            "type": "study_question"
+          },
+          {
+            "id": "182901",
+            "type": "study_question"
+          },
+          {
+            "id": "182902",
+            "type": "study_question"
+          },
+          {
+            "id": "182903",
+            "type": "study_question"
+          },
+          {
+            "id": "10169",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "919",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "2082",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": []
+      },
+      "supplemental_links": {
+        "data": []
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "10172",
+      "type": "study_question",
+      "attributes": {
+        "id": 10172,
+        "content": "「雨（あめ）<span class='gp-popout' data-gp-id='744'>だろうが</span>雪（ゆき）<span class='gp-popout' data-gp-id='744'>だろうが</span>、走（はし）<span class='gp-popout' data-gp-id='26'>る</span><span class='study-area-input'>____</span>走（はし）<span class='gp-popout' data-gp-id='26'>る</span><span class='study-area-input'>____</span>。<span class='gp-popout' data-gp-id='42'>もう</span>走（はし）<span class='gp-popout' data-gp-id='26'>る</span>病気（びょうき）<span class='gp-popout' data-gp-id='358'>って</span>感（かん）じ<span class='gp-popout' data-gp-id='1'>だ</span><span class='gp-popout' data-gp-id='78'>よ</span>。」",
+        "answer": "わ",
+        "alternate_grammar": [],
+        "kanji_answer": "わ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>次（つぎ）から次（つぎ）へ</strong>と発生（はっせい）したこと、又（また）は頻繁（ひんぱん）に発生（はっせい）していることに話（はな）し手（て）が驚（おどろ）いているということを強調（きょうちょう）する時（とき）に使（つか）われる<strong>丁寧（ていねい）</strong>な<strong>接続詞（せつぞくし）</strong>。",
+        "tense": "Emphatic, Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「雨だろうが雪だろうが、走るわ走るわ。もう走る病気って感じだよ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "'Whether it is rain or snow, he <strong>keeps</strong> on runn<strong>ing</strong>. It seems that he has an incurable passion for running.'",
+        "nuance_translation": "A <strong>formal</strong> <strong>particle</strong> construction, emphasizing the speaker's astonishment about (A) happening <strong>one after the other</strong>, or to a large degree.",
+        "extra_info": "",
+        "reviewable_id": 960,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10170",
+      "type": "study_question",
+      "attributes": {
+        "id": 10170,
+        "content": "「先輩（せんぱい）<span class='gp-popout' data-gp-id='3'>は</span>面白（おもしろ）<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='826'>のなんのって</span>喋（しゃべ）<span class='gp-popout' data-gp-id='26'>る</span><span class='gp-popout' data-gp-id='143'>と</span>笑（わら）<span class='gp-popout' data-gp-id='26'>う</span><span class='study-area-input'>____</span>笑（わら）<span class='gp-popout' data-gp-id='26'>う</span><span class='study-area-input'>____</span>。」",
+        "answer": "わ",
+        "alternate_grammar": [],
+        "kanji_answer": "わ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>次（つぎ）から次（つぎ）へ</strong>と発生（はっせい）したこと、又（また）は頻繁（ひんぱん）に発生（はっせい）していることに話（はな）し手（て）が驚（おどろ）いているということを強調（きょうちょう）する時（とき）に使（つか）われる<strong>丁寧（ていねい）</strong>な<strong>接続詞（せつぞくし）</strong>。",
+        "tense": "Emphatic, Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「先輩は面白いのなんのって喋ると笑うわ笑うわ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "'Senpai is so funny, that I laugh <strong>so much</strong> whenever he talks.'",
+        "nuance_translation": "A <strong>formal</strong> <strong>particle</strong> construction, emphasizing the speaker's astonishment about (A) happening <strong>one after the other</strong>, or to a large degree.",
+        "extra_info": "",
+        "reviewable_id": 960,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10171",
+      "type": "study_question",
+      "attributes": {
+        "id": 10171,
+        "content": "「ちょっとからかっ<span class='gp-popout' data-gp-id='41'>た</span><span class='gp-popout' data-gp-id='109'>だけで</span>、あいつ怒（おこ）<span class='gp-popout' data-gp-id='26'>る</span><span class='study-area-input'>____</span>怒（おこ）<span class='gp-popout' data-gp-id='26'>る</span><span class='study-area-input'>____</span>。」",
+        "answer": "わ",
+        "alternate_grammar": [],
+        "kanji_answer": "わ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>次（つぎ）から次（つぎ）へ</strong>と発生（はっせい）したこと、又（また）は頻繁（ひんぱん）に発生（はっせい）していることに話（はな）し手（て）が驚（おどろ）いているということを強調（きょうちょう）する時（とき）に使（つか）われる<strong>丁寧（ていねい）</strong>な<strong>接続詞（せつぞくし）</strong>。",
+        "tense": "Emphatic, Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「ちょっとからかっただけで、あいつ怒るわ怒るわ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "'He gets <strong>so</strong> angry just by teasing him a bit.'",
+        "nuance_translation": "A <strong>formal</strong> <strong>particle</strong> construction, emphasizing the speaker's astonishment about (A) happening <strong>one after the other</strong>, or to a large degree.",
+        "extra_info": "",
+        "reviewable_id": 960,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10168",
+      "type": "study_question",
+      "attributes": {
+        "id": 10168,
+        "content": "「新婚（しんこん）旅行（りょこう）<span class='gp-popout' data-gp-id='52'>から</span>戻（もど）っ<span class='gp-popout' data-gp-id='102'>たら</span>メールボックス<span class='gp-popout' data-gp-id='32'>に</span><span class='gp-popout' data-gp-id='3'>は</span>郵便物（ゆうびんぶつ）<span class='gp-popout' data-gp-id='16'>がある</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='16'>ある</span><span class='study-area-input'>____</span>、つかえ<span class='gp-popout' data-gp-id='172'>てしま</span><span class='gp-popout' data-gp-id='416'>って</span>引（ひ）っ張（ぱ）る<span class='gp-popout' data-gp-id='110'>ことができ</span><span class='gp-popout' data-gp-id='896'>なかった</span>。」",
+        "answer": "わ",
+        "alternate_grammar": [],
+        "kanji_answer": "わ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>次（つぎ）から次（つぎ）へ</strong>と発生（はっせい）したこと、又（また）は頻繁（ひんぱん）に発生（はっせい）していることに話（はな）し手（て）が驚（おどろ）いているということを強調（きょうちょう）する時（とき）に使（つか）われる<strong>丁寧（ていねい）</strong>な<strong>接続詞（せつぞくし）</strong>。",
+        "tense": "Emphatic, Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「新婚旅行から戻ったらメールボックスには郵便物があるわあるわ、つかえてしまって引っ張ることができなかった。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "'When we got back from our honeymoon, there was <strong>so much</strong> mail in the mailbox that it was stuck and I couldn't pull it out.'",
+        "nuance_translation": "A <strong>formal</strong> <strong>particle</strong> construction, emphasizing the speaker's astonishment about (A) happening <strong>one after the other</strong>, or to a large degree.",
+        "extra_info": "",
+        "reviewable_id": 960,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10167",
+      "type": "study_question",
+      "attributes": {
+        "id": 10167,
+        "content": "「病院（びょういん）<span class='gp-popout' data-gp-id='32'>に</span>入院（にゅういん）し<span class='gp-popout' data-gp-id='136'>てた</span><span class='gp-popout' data-gp-id='93'>時（とき）</span>、いろいろ検査（けんさ）し<span class='gp-popout' data-gp-id='102'>たら</span>まあ、出（で）<span class='gp-popout' data-gp-id='12'>る</span><span class='study-area-input'>____</span>出（で）<span class='gp-popout' data-gp-id='12'>る</span><span class='study-area-input'>____</span>…（思（おも）った<span class='gp-popout' data-gp-id='338'>以上（いじょう）</span><span class='gp-popout' data-gp-id='6'>の</span><span class='gp-popout' data-gp-id='98'>こと</span><span class='gp-popout' data-gp-id='10'>が</span>指摘（してき）<span class='gp-popout' data-gp-id='145'>され</span><span class='gp-popout' data-gp-id='895'>た</span>）。」",
+        "answer": "わ",
+        "alternate_grammar": [],
+        "kanji_answer": "わ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>次（つぎ）から次（つぎ）へ</strong>と発生（はっせい）したこと、又（また）は頻繁（ひんぱん）に発生（はっせい）していることに話（はな）し手（て）が驚（おどろ）いているということを強調（きょうちょう）する時（とき）に使（つか）われる<strong>丁寧（ていねい）</strong>な<strong>接続詞（せつぞくし）</strong>。",
+        "tense": "Emphatic, Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「病院に入院してた時、いろいろ検査したらまあ、出るわ出るわ…った以上のことが指摘された）。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "'When I was in the hospital, they did various tests and, well, they just <strong>kept</strong> com<strong>ing</strong> up...' （the results that were worse than expected）",
+        "nuance_translation": "A <strong>formal</strong> <strong>particle</strong> construction, emphasizing the speaker's astonishment about (A) happening <strong>one after the other</strong>, or to a large degree.",
+        "extra_info": "",
+        "reviewable_id": 960,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182900",
+      "type": "study_question",
+      "attributes": {
+        "id": 182900,
+        "content": "もう、昨日（きのう）子供達（こどもたち）が喧嘩（けんか）して泣（な）く<span class='study-area-input'>____</span>泣（な）く<span class='study-area-input'>____</span>で大変（たいへん）だったんだから。",
+        "answer": "わ",
+        "alternate_grammar": [],
+        "kanji_answer": "わ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/もう、昨日子供達が喧嘩して泣くわ泣くわで大変だったんだから。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Oh my god, it was so hectic yesterday because the kids got into a fight and <strong>cried so much</strong>.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 960,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182901",
+      "type": "study_question",
+      "attributes": {
+        "id": 182901,
+        "content": "空（あ）き家（や）を買（か）ったのはいいけど、家中（いえじゅう）にはゴキブリがいる<span class='study-area-input'>____</span>いる<span class='study-area-input'>____</span>。多分（たぶん）自分（じぶん）じゃ何（なん）もできないから業者（ぎょうしゃ）に頼（たの）むしかなさそう。",
+        "answer": "わ",
+        "alternate_grammar": [],
+        "kanji_answer": "わ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/空き家を買ったのはいいけど、家中にはゴキブリがいるわいるわ。多分自分じゃ何もできないから業者に頼むしかなさそう。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I bought a vacant house, and that's exciting, but there are <strong>so many</strong> cockroaches all over the house. I probably won't be able to do anything myself, so I will have to call someone.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 960,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182902",
+      "type": "study_question",
+      "attributes": {
+        "id": 182902,
+        "content": "私（わたし）の息子（むすこ）なんて、部活（ぶかつ）を始（はじ）めてからというもの食（た）べる<span class='study-area-input'>____</span>食（た）べる<span class='study-area-input'>____</span>、食費（しょくひ）が心配（しんぱい）だよ。",
+        "answer": "わ",
+        "alternate_grammar": [],
+        "kanji_answer": "わ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/私の息子なんて、部活を始めてからというもの食べるわ食べるわ、食費が心配だよ。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Ever since my son has started after school activities, he eats <strong>so much</strong> that I am worried about the cost of food.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 960,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182903",
+      "type": "study_question",
+      "attributes": {
+        "id": 182903,
+        "content": "あの子（こ）は医者（いしゃ）になりたいって決（き）めてから、毎日（まいにち）勉強（べんきょう）する<span class='study-area-input'>____</span>する<span class='study-area-input'>____</span>。",
+        "answer": "わ",
+        "alternate_grammar": [],
+        "kanji_answer": "わ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/あの子は医者になりたいって決めてから、毎日勉強するわするわ。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Ever since he has decided that he wants to be a doctor, he studies <strong>a lot</strong>.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 960,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10169",
+      "type": "study_question",
+      "attributes": {
+        "id": 10169,
+        "content": "「子供（こども）<span class='gp-popout' data-gp-id='10'>が</span>転（ころ）ん<span class='gp-popout' data-gp-id='416'>で</span>泣（な）<span class='gp-popout' data-gp-id='26'>く</span><span class='study-area-input'>____</span>泣（な）<span class='gp-popout' data-gp-id='26'>く</span><span class='study-area-input'>____</span>。なだめ<span class='gp-popout' data-gp-id='12'>る</span><span class='gp-popout' data-gp-id='16'>の</span>大変（たいへん）<span class='gp-popout' data-gp-id='40'>だった</span>。」",
+        "answer": "わ",
+        "alternate_grammar": [],
+        "kanji_answer": "わ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>次（つぎ）から次（つぎ）へ</strong>と発生（はっせい）したこと、又（また）は頻繁（ひんぱん）に発生（はっせい）していることに話（はな）し手（て）が驚（おどろ）いているということを強調（きょうちょう）する時（とき）に使（つか）われる<strong>丁寧（ていねい）</strong>な<strong>接続詞（せつぞくし）</strong>。",
+        "tense": "Emphatic, Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「子供が転んで泣くわ泣くわ。なだめるの大変だった。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "'Our child fell and cried <strong>so much</strong> that it was hard to calm her down.'",
+        "nuance_translation": "A <strong>formal</strong> <strong>particle</strong> construction, emphasizing the speaker's astonishment about (A) happening <strong>one after the other</strong>, or to a large degree.",
+        "extra_info": "",
+        "reviewable_id": 960,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "919",
+      "type": "writeup",
+      "attributes": {
+        "id": 919,
+        "body_ja": "<p>「<span data-gp-id='960'>わ</span>」は、強調（きょうちょう）を表（あらわ）すときによく使（つか）われる副助詞（ふくじょし）です。動詞（どうし）の辞書形（じしょけい）に「<span data-gp-id='960'>わ</span>」を付（つ）けて、同（おな）じ動詞（どうし）を繰（く）り返（かえ）すと、量（りょう）が多（おお）いことや、物事（ものごと）が次々（つぎつぎ）と勢（いきお）いよく起（お）こる様子（ようす）を表（あらわ）します。この表現（ひょうげん）は「どんどん (A) する」、「(A) が起（お）こり続（つづ）ける」または「たくさん (A) する」という意味合（いみあ）いで使（つか）われます。また、肯定的（こうていてき）な文脈（ぶんみゃく）にも否定的（ひていてき）な文脈（ぶんみゃく）にも使（つか）われます。</p>\r\n\r\n<p>この表現（ひょうげん）を使（つか）うときは、動詞（どうし）の後（あと）に「<span data-gp-id='960'>わ</span>」を付（つ）けて、同（おな）じ動詞（どうし）と「<span data-gp-id='960'>わ</span>」をもう一度（いちど）繰（く）り返（かえ）します。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182900'>\r\n<li data-study-question='182901'>\r\n<li data-study-question='182902'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='960'>わ～わ</span>」は、(A) の量（りょう）や程度（ていど）に対（たい）する話（はな）し手（て）の驚（おどろ）きを強調（きょうちょう）する表現（ひょうげん）です。主（おも）に男性（だんせい）が使（つか）う表現（ひょうげん）ですが、女性（じょせい）が使（つか）うこともあります。「<span data-gp-id='960'>わ</span>」は文中（ぶんちゅう）のどこで使（つか）われるかによって用法（ようほう）が変（か）わり、性別（せいべつ）による使（つか）い方（かた）の違（ちが）いもあるため、意識（いしき）して使（つか）いましょう。</p>\r\n\r\n<p>この表現（ひょうげん）がスル動詞（どうし）と一緒（いっしょ）に使（つか）われる場合（ばあい）、二（に）回目（かいめ）の動詞（どうし）は省略（しょうりゃく）されて「する」だけになるのが一般的（いっぱんてき）です。例（たと）えば、「勉強（べんきょう）する<span data-gp-id='960'>わ</span>勉強（べんきょう）する<span data-gp-id='960'>わ</span>」は「勉強（べんきょう）する<span data-gp-id='960'>わ</span>する<span data-gp-id='960'>わ</span>」となります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182903'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>豆知識（まめちしき）</h4>\r\n<p>「<span data-gp-id='960'>わ</span>」はもともと副助詞（ふくじょし）の「は」が変化（へんか）してできたもので、「は」を強調（きょうちょう）した表現（ひょうげん）です。つまり、「<span data-gp-id='960'>わ</span>」は主題（しゅだい）を表（あらわ）す「は」が持（も）つ「(A) については」という意味（いみ）をより強（つよ）める役割（やくわり）を果（は）たします。このことから、「<span data-gp-id='960'>わ～わ</span>」という表現（ひょうげん）は、もともと強調（きょうちょう）の意味（いみ）を持（も）つ「<span data-gp-id='960'>わ</span>」を繰（く）り返（か）すことで、さらに強調（きょうちょう）を加（くわ）え、その勢（いきお）いや強（つよ）さを印象（いんしょう）づける表現（ひょうげん）になっていると言（い）えます。</section>",
+        "body": "<p><span data-gp-id='960'>わ</span> is an <span data-term='副助詞・ふくじょし'>adverbial particle</span> that is commonly used in cases of stress of emphasis in Japanese. When appearing after the <span data-term='辞書形・じしょけい'>dictionary form</span> of a verb that is being repeated, it highlights a large amount, something happening successively, or more and more. It will often be translated as 'more and more (A)', '(A) keeps on happening', or 'so much (A)'. <span data-gp-id='960'>わ～わ</span> may be used either positively or negatively.</p>\r\n\r\n<p>To use this structure, simply place <span data-gp-id='960'>わ</span> after the verb, and then repeat the same verb with a second <span data-gp-id='960'>わ</span>.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182900'>\r\n<li data-study-question='182901'>\r\n<li data-study-question='182902'>\r\n</ul>\r\n\r\n<p><span data-gp-id='960'>わ～わ</span> primarily emphasizes the speaker's surprise in regard to the amount or extent of (A). This structure is predominantly used by men, but it may also sometimes be used by women. However, there are several different variations of わ depending on where they appear in sentences, each of which have gender usage tendencies that will need to be learned.</p>\r\n\r\n<p>In many cases where a する verb is being used with <span data-gp-id='960'>わ～わ</span>, the second instance of the action will be omitted, with する appearing by itself. For example, instead of 勉強（べんきょう）する<span data-gp-id='960'>わ</span>勉強（べんきょう）する<span data-gp-id='960'>わ</span>, 勉強（べんきょう）する<span data-gp-id='960'>わ</span>する<span data-gp-id='960'>わ</span> would be used.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182903'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p><span data-gp-id='960'>わ</span> is simply an emphatic version of the usual は <span data-term='副助詞・ふくじょし'>adverbial particle</span>, and originates from は being changed to <span data-gp-id='960'>わ</span>. Due to this, the literal meaning can be thought of as a stronger version of the standard 'as for (A)' meaning of は. This would come across something like 'as for (A), it did (A)', with the repetition itself adding to the emphasis.</p></section>"
+      }
+    },
+    {
+      "id": "2082",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2082,
+        "source": "A Dictionary of Advanced Japanese Grammar",
+        "location": "Page 701",
+        "type": "OfflineResource"
+      }
+    }
+  ]
+}

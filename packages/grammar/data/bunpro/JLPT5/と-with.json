@@ -1,0 +1,918 @@
+{
+  "data": {
+    "id": "955",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 955,
+      "level": "JLPT5",
+      "lesson_id": 3,
+      "part_of_speech": "助詞",
+      "register": "一般",
+      "word_type": "格助詞",
+      "slug": "と-with",
+      "nuance": "<strong>複数（ふくすう）のことが同時（どうじ）に起（お）こっている</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+      "grammar_order": 29,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 9,
+        "title": "でしょう",
+        "slug": "でしょう"
+      },
+      "previous_grammar_point": {
+        "id": 33,
+        "title": "か",
+        "slug": "か-or"
+      },
+      "lesson_count": "4/13",
+      "title": "と",
+      "furigana": "と",
+      "meaning": "With",
+      "nuance_translation": "A <strong>particle</strong> which highlights <strong>actions that are happening mutually</strong>, with <strong>several things involved</strong>.",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "Noun (A) + は + Noun (B) + <strong>と</strong> + Verb",
+      "part_of_speech_translation": "Particle",
+      "register_translation": "Standard",
+      "word_type_translation": "Case Marking Particle",
+      "discourse_link": "https://community.bunpro.jp/t/with-grammar-discussion/48186",
+      "metadata": "と, to, particle, case-marking particle, with"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154787",
+            "type": "study_question"
+          },
+          {
+            "id": "154790",
+            "type": "study_question"
+          },
+          {
+            "id": "154788",
+            "type": "study_question"
+          },
+          {
+            "id": "10091",
+            "type": "study_question"
+          },
+          {
+            "id": "10102",
+            "type": "study_question"
+          },
+          {
+            "id": "154789",
+            "type": "study_question"
+          },
+          {
+            "id": "10096",
+            "type": "study_question"
+          },
+          {
+            "id": "10092",
+            "type": "study_question"
+          },
+          {
+            "id": "10093",
+            "type": "study_question"
+          },
+          {
+            "id": "10094",
+            "type": "study_question"
+          },
+          {
+            "id": "10095",
+            "type": "study_question"
+          },
+          {
+            "id": "10097",
+            "type": "study_question"
+          },
+          {
+            "id": "10098",
+            "type": "study_question"
+          },
+          {
+            "id": "10099",
+            "type": "study_question"
+          },
+          {
+            "id": "10100",
+            "type": "study_question"
+          },
+          {
+            "id": "10101",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "28",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "2157",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1339",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2737",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154787",
+      "type": "study_question",
+      "attributes": {
+        "id": 154787,
+        "content": "カレー<span class=\"gp-popout\" data-gp-id=\"3\">は</span>ご飯（はん）<span class='study-area-input'>____</span>食（た）べ<span class=\"gp-popout\" data-gp-id=\"12\">る</span><span class=\"gp-popout\" data-gp-id=\"78\">よ</span>。",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/カレーはご飯と食べるよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I eat curry <strong>with</strong> rice. (I eat rice 'and' curry)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 955,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154790",
+      "type": "study_question",
+      "attributes": {
+        "id": 154790,
+        "content": "先生（せんせい）<span class=\"gp-popout\" data-gp-id=\"32\">に</span>話（はな）<span class=\"gp-popout\" data-gp-id=\"26\">す</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/先生に話す。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I will talk to my teacher. (Focus on only one person talking)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 955,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154788",
+      "type": "study_question",
+      "attributes": {
+        "id": 154788,
+        "content": "コーヒー<span class=\"gp-popout\" data-gp-id=\"21\">を</span>妻（つま）<span class='study-area-input'>____</span>飲（の）<span class=\"gp-popout\" data-gp-id=\"26\">む</span>。",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/コーヒーを妻と飲む。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I drink coffee <strong>with</strong> my wife. (I 'and' my wife drink coffee)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 955,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10091",
+      "type": "study_question",
+      "attributes": {
+        "id": 10091,
+        "content": "トム<span class='study-area-input'>____</span>話（はな）<span class='gp-popout' data-gp-id='26'>す</span>。",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>複数（ふくすう）のことが同時（どうじ）に起（お）こっている</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Exhaustive, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/955/male_audio/05-トムと話す.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/トムと話す。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "や": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "または": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I talk <strong>with</strong> Tom.",
+        "nuance_translation": "A <strong>particle</strong> which highlights <strong>actions that are happening mutually</strong>, with <strong>several things involved</strong>.",
+        "extra_info": "",
+        "reviewable_id": 955,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10102",
+      "type": "study_question",
+      "attributes": {
+        "id": 10102,
+        "content": "ななさん<span class='gp-popout' data-gp-id='3'>は</span>はなさん<span class='study-area-input'>____</span>友達（ともだち）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>複数（ふくすう）のことが同時（どうじ）に起（お）こっている</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Exhaustive, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/955/male_audio/03-ななさんははなさんと友達です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ななさんははなさんと友達です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "や": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "または": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "の": {
+            "en": "Let's try an expression that specifically implies she is friends 'with' Hana-san, not that she 'is Hana-san's friend' (possessive).",
+            "es": "Prueba con usar una expresión que indique que la relación de amistad es 'con' Hana-san, no que es 'la amiga de Hana' (posesivo).",
+            "fr": "Essayons une expression qui implique qu'elle est amie avec Hana-san, et non qu'elle est l'amie d'Hana-san (possessif).",
+            "id": "Mari coba ekspresi yang secara khusus menyiratkan bahwa dia berteman \"dengan\" Hana-san, bukan dia \"adalah teman Hana-san\" (posesif)."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Nana-san is friends <strong>with</strong> Hana-san.",
+        "nuance_translation": "A <strong>particle</strong> which highlights <strong>actions that are happening mutually</strong>, with <strong>several things involved</strong>.",
+        "extra_info": "",
+        "reviewable_id": 955,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154789",
+      "type": "study_question",
+      "attributes": {
+        "id": 154789,
+        "content": "先生（せんせい）<span class='study-area-input'>____</span>話（はな）<span class=\"gp-popout\" data-gp-id=\"26\">す</span>。",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/先生と話す。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I will talk <strong>with</strong> my teacher. (Focus on both people talking)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 955,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10096",
+      "type": "study_question",
+      "attributes": {
+        "id": 10096,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='3'>は</span>先生（せんせい）<span class='study-area-input'>____</span>食（た）べ<span class='gp-popout' data-gp-id='12'>ます</span>。",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>複数（ふくすう）のことが同時（どうじ）に起（お）こっている</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Exhaustive, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/955/male_audio/12-私は先生と食べます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私は先生と食べます。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "や": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "または": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I will eat <strong>with</strong> the teacher.",
+        "nuance_translation": "A <strong>particle</strong> which highlights <strong>actions that are happening mutually</strong>, with <strong>several things involved</strong>.",
+        "extra_info": "",
+        "reviewable_id": 955,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10092",
+      "type": "study_question",
+      "attributes": {
+        "id": 10092,
+        "content": "僕（ぼく）<span class='gp-popout' data-gp-id='3'>は</span>友達（ともだち）<span class='study-area-input'>____</span>ごはん<span class='gp-popout' data-gp-id='21'>を</span>食（た）べ<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>複数（ふくすう）のことが同時（どうじ）に起（お）こっている</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Exhaustive, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/955/male_audio/07-僕は友達とご飯を食べる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/僕は友達とごはんを食べる。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "や": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "または": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I will eat food <strong>with</strong> my friend.",
+        "nuance_translation": "A <strong>particle</strong> which highlights <strong>actions that are happening mutually</strong>, with <strong>several things involved</strong>.",
+        "extra_info": "",
+        "reviewable_id": 955,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10093",
+      "type": "study_question",
+      "attributes": {
+        "id": 10093,
+        "content": "ゆうこさん<span class='gp-popout' data-gp-id='3'>は</span>みおさん<span class='study-area-input'>____</span>コーヒー<span class='gp-popout' data-gp-id='21'>を</span>飲（の）<span class='gp-popout' data-gp-id='26'>む</span>。",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>複数（ふくすう）のことが同時（どうじ）に起（お）こっている</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Exhaustive, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/955/male_audio/04-ゆうこさんはみおさんとコーヒーを飲む.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ゆうこさんはみおさんとコーヒーを飲む。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "や": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "または": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Yuko-san drinks coffee <strong>with</strong> Mio-san.",
+        "nuance_translation": "A <strong>particle</strong> which highlights <strong>actions that are happening mutually</strong>, with <strong>several things involved</strong>.",
+        "extra_info": "",
+        "reviewable_id": 955,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10094",
+      "type": "study_question",
+      "attributes": {
+        "id": 10094,
+        "content": "タキ<span class='gp-popout' data-gp-id='3'>は</span>ミツハ<span class='study-area-input'>____</span></strong>走（はし）<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>複数（ふくすう）のことが同時（どうじ）に起（お）こっている</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Exhaustive, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/955/male_audio/02-たきはみつはと走る.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/タキはミツハと走る。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "や": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "または": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Taki runs <strong>with</strong> Mitsuha.",
+        "nuance_translation": "A <strong>particle</strong> which highlights <strong>actions that are happening mutually</strong>, with <strong>several things involved</strong>.",
+        "extra_info": "",
+        "reviewable_id": 955,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10095",
+      "type": "study_question",
+      "attributes": {
+        "id": 10095,
+        "content": "田中（たなか）さん<span class='gp-popout' data-gp-id='3'>は</span>山田（やまだ）さん<span class='study-area-input'>____</span>話（はな）<span class='gp-popout' data-gp-id='26'>す</span>。",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>複数（ふくすう）のことが同時（どうじ）に起（お）こっている</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Exhaustive, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/955/male_audio/11-田中さんは山田さんと話す.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/田中さんは山田さんと話す。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "や": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "または": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Tanaka-san talks <strong>with</strong> Yamada-san.",
+        "nuance_translation": "A <strong>particle</strong> which highlights <strong>actions that are happening mutually</strong>, with <strong>several things involved</strong>.",
+        "extra_info": "",
+        "reviewable_id": 955,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10097",
+      "type": "study_question",
+      "attributes": {
+        "id": 10097,
+        "content": "リカ<span class='study-area-input'>____</span>一緒（いっしょ）<span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='8'>か</span>？",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>複数（ふくすう）のことが同時（どうじ）に起（お）こっている</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Exhaustive, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/955/male_audio/06-リカと一緒ですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/リカと一緒ですか？.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "や": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "または": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Are you together <strong>with</strong> Rika? ",
+        "nuance_translation": "A <strong>particle</strong> which highlights <strong>actions that are happening mutually</strong>, with <strong>several things involved</strong>.",
+        "extra_info": "",
+        "reviewable_id": 955,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10098",
+      "type": "study_question",
+      "attributes": {
+        "id": 10098,
+        "content": "彼（かれ）<span class='gp-popout' data-gp-id='10'>が</span>うざきさん<span class='study-area-input'>____</span>遊（あそ）び<span class='gp-popout' data-gp-id='26'>ます</span>。",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>複数（ふくすう）のことが同時（どうじ）に起（お）こっている</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Exhaustive, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/955/male_audio/彼がうざきさんと遊びます。mp3.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼がうざきさんと遊びます。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "や": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "または": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He hangs out <strong>with</strong> Uzaki-san.",
+        "nuance_translation": "A <strong>particle</strong> which highlights <strong>actions that are happening mutually</strong>, with <strong>several things involved</strong>.",
+        "extra_info": "",
+        "reviewable_id": 955,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10099",
+      "type": "study_question",
+      "attributes": {
+        "id": 10099,
+        "content": "朝（あさ）、私（わたし）<span class='gp-popout' data-gp-id='3'>は</span>クマ<span class='study-area-input'>____</span>歩（ある）<span class='gp-popout' data-gp-id='26'>く</span>。",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>複数（ふくすう）のことが同時（どうじ）に起（お）こっている</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Exhaustive, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/955/male_audio/10-朝私はクマと歩く.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/朝、私はクマと歩く。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "や": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "または": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "In the morning, I will walk <strong>with</strong> Kuma.",
+        "nuance_translation": "A <strong>particle</strong> which highlights <strong>actions that are happening mutually</strong>, with <strong>several things involved</strong>.",
+        "extra_info": "",
+        "reviewable_id": 955,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10100",
+      "type": "study_question",
+      "attributes": {
+        "id": 10100,
+        "content": "「すみません、明日（あした）<span class='gp-popout' data-gp-id='3'>は</span>友達（ともだち）<span class='study-area-input'>____</span>出（で）かけ<span class='gp-popout' data-gp-id='12'>ます</span>。」",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>複数（ふくすう）のことが同時（どうじ）に起（お）こっている</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Exhaustive, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/955/male_audio/01-すみません明日は友達と出かけます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「すみません、明日は友達と出かけます。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "や": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "または": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'I am sorry, I am going out <strong>with</strong> friends tomorrow.'",
+        "nuance_translation": "A <strong>particle</strong> which highlights <strong>actions that are happening mutually</strong>, with <strong>several things involved</strong>.",
+        "extra_info": "",
+        "reviewable_id": 955,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10101",
+      "type": "study_question",
+      "attributes": {
+        "id": 10101,
+        "content": "「妹（いもうと）<span class='study-area-input'>____</span>ジュース<span class='gp-popout' data-gp-id='21'>を</span>飲（の）<span class='gp-popout' data-gp-id='26'>む</span>。」",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>複数（ふくすう）のことが同時（どうじ）に起（お）こっている</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Exhaustive, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/955/male_audio/「妹とジュースを飲む。」.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「妹とジュースを飲む。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "や": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "または": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'I will drink juice <strong>with</strong> my sister.'",
+        "nuance_translation": "A <strong>particle</strong> which highlights <strong>actions that are happening mutually</strong>, with <strong>several things involved</strong>.",
+        "extra_info": "",
+        "reviewable_id": 955,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "28",
+      "type": "writeup",
+      "attributes": {
+        "id": 28,
+        "body_ja": "",
+        "body": "<p>In our second lesson about <span data-gp-id='955'>と</span>, we will look at the common translation of 'with' that is associated with this particle. <span data-gp-id='955'>と</span> shows that there is a relationship between (A) and (B), regardless of if that relationship is translated as '<span data-gp-id='15'>and</span>', or '<span data-gp-id='955'>with</span>'.</p>\r\n\r\n<p>In either case, the nouns that are marked with <span data-gp-id='955'>と</span> are usually all performing some mutual action (that mutual action may simply be existing).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154787'>\r\n<li data-study-question='154788'></ul>\r\n\r\n<p>When <span data-gp-id='955'>と</span> is used as 'with', it means that both/all people or objects are equally involved in the action. However, <span data-gp-id='32'>に</span> highlights that one person is the target (destination) of an action, so will result in something sounding a lot more one sided.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154789'>\r\n<li data-study-question='154790'></ul>\r\n\r\n<p>Here we can see that both people are talking when <span data-gp-id='955'>と</span> is used. It is a mutual conversation. When <span data-gp-id='32'>に</span> is used, however, the person marked by <span data-gp-id='32'>に</span> is being talked 'to', and is usually not actively participating in the conversation.</p>"
+      }
+    },
+    {
+      "id": "2157",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2157,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 113 (Chapter 4)",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2737",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2737,
+        "site": "Tae Kim",
+        "description": "The Inclusive 「と」 particle",
+        "link": "https://guidetojapanese.org/learn/grammar/nounparticles#The_Inclusive_particle ",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1339",
+      "type": "related_content",
+      "attributes": {
+        "id": 1339,
+        "relationship_type": "related",
+        "body": "Both と and と共に express mutual action or relation, similar to the English 'with.' と is more common and used in everyday speech and writing, but it only follows nouns (e.g., 友だちと遊ぶ = 'play with a friend'). In contrast, と共に is more formal, appearing in written Japanese or structured speech, and can follow verbs, adjectives, and nouns.",
+        "first_relatable": {
+          "id": 291,
+          "slug": "と共に",
+          "title": "と共に",
+          "meaning": "Together with, At the same time,  As well as",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 955,
+          "slug": "と-with",
+          "title": "と",
+          "meaning": "With",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

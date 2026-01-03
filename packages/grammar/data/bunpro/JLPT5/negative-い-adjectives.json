@@ -1,0 +1,845 @@
+{
+  "data": {
+    "id": "873",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 873,
+      "level": "JLPT5",
+      "lesson_id": 4,
+      "part_of_speech": "形容詞",
+      "register": "一般",
+      "word_type": "助動詞",
+      "slug": "negative-い-adjectives",
+      "nuance": "何（なに）かが(A)の性質（せいしつ）を<strong>持（も）っていない</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+      "grammar_order": 51,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 36,
+        "title": "で",
+        "slug": "で-by"
+      },
+      "previous_grammar_point": {
+        "id": 355,
+        "title": "がある + Noun",
+        "slug": "がある-noun"
+      },
+      "lesson_count": "13/13",
+      "title": "い-Adjectives くない",
+      "furigana": "くない",
+      "meaning": "Not (Adjective)",
+      "nuance_translation": "A <strong>conjugating-adjective form</strong> used when highlighting that something <strong>does not</strong> have the characteristic of (A).",
+      "rare_kanji_warning": "",
+      "caution": "い-Adjectives, whether positive or negative, cannot be used with だ",
+      "polite_structure": "<span class='gp-popout' data-gp-id='769'>［い］Adjective［く］</span>+ <strong>ない</strong> + <span class='gp-popout' data-gp-id='2'>です</span><br><span class='gp-popout' data-gp-id='769'>［い］Adjective［く］</span>+ <strong>ありません</strong><br><br>Examples:<br>おもしろ<span class='chui'>く</span> + <strong>ない</strong> + <span class='gp-popout' data-gp-id='2'>です</span><br>おもしろ<span class='chui'>く</span> + <strong>ありません</strong><br><br>新（あたら）し<span class='chui'>く</span> + <strong>ない</strong> + <span class='gp-popout' data-gp-id='2'>です</span><br>新（あたら）し<span class='chui'>く</span> + <strong>ありません</strong>",
+      "casual_structure": "<span class='gp-popout' data-gp-id='769'>［い］Adjective［く］</span>+ <strong>ない</strong><br><br>Examples:<br>おもしろ<span class='chui'>く</span> + <strong>ない</strong><br>新（あたら）し<span class='chui'>く</span> + <strong>ない</strong>",
+      "part_of_speech_translation": "Adjective",
+      "register_translation": "Standard",
+      "word_type_translation": "Auxiliary Verb",
+      "discourse_link": "https://community.bunpro.jp/t/negative-adjectives/34974",
+      "metadata": "い-adjective, i-adjective, adjective, い, i, くない, kunai, negative, conjugation, ない, nai, conjunctive form, auxiliary verb"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154882",
+            "type": "study_question"
+          },
+          {
+            "id": "154884",
+            "type": "study_question"
+          },
+          {
+            "id": "9720",
+            "type": "study_question"
+          },
+          {
+            "id": "154883",
+            "type": "study_question"
+          },
+          {
+            "id": "154885",
+            "type": "study_question"
+          },
+          {
+            "id": "9719",
+            "type": "study_question"
+          },
+          {
+            "id": "10191",
+            "type": "study_question"
+          },
+          {
+            "id": "9724",
+            "type": "study_question"
+          },
+          {
+            "id": "9725",
+            "type": "study_question"
+          },
+          {
+            "id": "9726",
+            "type": "study_question"
+          },
+          {
+            "id": "9859",
+            "type": "study_question"
+          },
+          {
+            "id": "9727",
+            "type": "study_question"
+          },
+          {
+            "id": "9860",
+            "type": "study_question"
+          },
+          {
+            "id": "9721",
+            "type": "study_question"
+          },
+          {
+            "id": "9722",
+            "type": "study_question"
+          },
+          {
+            "id": "9723",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "50",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1913",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1344",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2505",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2506",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2507",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154882",
+      "type": "study_question",
+      "attributes": {
+        "id": 154882,
+        "content": "あなた<span class=\"gp-popout\" data-gp-id=\"3\">は</span>悪（わる）く<span class='study-area-input'>____</span>。",
+        "answer": "ない",
+        "alternate_grammar": [],
+        "kanji_answer": "ない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あなたは悪くない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "You are not to blame. (Translates directly to, you are <strong>not bad</strong>.)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 873,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154884",
+      "type": "study_question",
+      "attributes": {
+        "id": 154884,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"30\">この</span>お茶（ちゃ）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>、温（ぬる）くません。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/このお茶は、温くません。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This tea don't lukewarm. (Incorrect example, with incorrect English to match!)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 873,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9720",
+      "type": "study_question",
+      "attributes": {
+        "id": 9720,
+        "content": "今日（きょう）<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "さむくない",
+        "alternate_grammar": [
+          "さむくないです",
+          "さむくない"
+        ],
+        "kanji_answer": "寒（さむ）くない",
+        "kanji_alt_grammar": [
+          "寒（さむ）くないです",
+          "寒（さむ）くない"
+        ],
+        "nuance": "何（なに）かが(A)の性質（せいしつ）を<strong>持（も）っていない</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/873/male_audio/07-今日は寒くない.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/今日は寒くない。.mp3",
+        "word_prompt": "寒（さむ）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あつくない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It is <strong>not cold</strong> today.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> used when highlighting that something <strong>does not</strong> have the characteristic of (A).",
+        "extra_info": "",
+        "reviewable_id": 873,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154883",
+      "type": "study_question",
+      "attributes": {
+        "id": 154883,
+        "content": "今日（きょう）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>暑（あつ）く<span class='study-area-input'>____</span>。",
+        "answer": "ない",
+        "alternate_grammar": [],
+        "kanji_answer": "ない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/今日は暑くない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It is <strong>not hot</strong> today.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 873,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154885",
+      "type": "study_question",
+      "attributes": {
+        "id": 154885,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"30\">この</span>お茶（ちゃ）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>、温（ぬる）く<span class='study-area-input'>____</span>。",
+        "answer": "ありません",
+        "alternate_grammar": [],
+        "kanji_answer": "ありません",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/このお茶は、温くありません。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This tea is <strong>not lukewarm</strong>. (Natural Japanese)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 873,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9719",
+      "type": "study_question",
+      "attributes": {
+        "id": 9719,
+        "content": "<span class='study-area-input'>____</span>。",
+        "answer": "あつくないです",
+        "alternate_grammar": [
+          "あつくないです",
+          "あつくありません"
+        ],
+        "kanji_answer": "暑（あつ）くないです",
+        "kanji_alt_grammar": [
+          "暑（あつ）くないです",
+          "暑（あつ）くありません"
+        ],
+        "nuance": "何（なに）かが(A)の性質（せいしつ）を<strong>持（も）っていない</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "Negative, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/873/male_audio/09-暑くないです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/暑くないです。.mp3",
+        "word_prompt": "暑（あつ）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あつくない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It is <strong>not hot</strong>. ",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> used when highlighting that something <strong>does not</strong> have the characteristic of (A).",
+        "extra_info": "",
+        "reviewable_id": 873,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10191",
+      "type": "study_question",
+      "attributes": {
+        "id": 10191,
+        "content": "<span class='gp-popout vocab-popout' data-gp-id='5' data-vocab-id='95'>これ</span><span class='gp-popout' data-gp-id='3'>は</span></span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "たのしくない",
+        "alternate_grammar": [],
+        "kanji_answer": "楽（たの）しくない",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の性質（せいしつ）を<strong>持（も）っていない</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これは楽しくないです。.mp3",
+        "word_prompt": "楽（たの）し<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たのしくないです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "たのしくありません": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This is <strong>not fun</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> used when highlighting that something <strong>does not</strong> have the characteristic of (A).",
+        "extra_info": "",
+        "reviewable_id": 873,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9724",
+      "type": "study_question",
+      "attributes": {
+        "id": 9724,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='6'>の</span>家（いえ）<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "とおくありません",
+        "alternate_grammar": [
+          "とおくないです",
+          "とおくありません"
+        ],
+        "kanji_answer": "遠（とお）くありません",
+        "kanji_alt_grammar": [
+          "遠（とお）くないです",
+          "遠（とお）くありません",
+          "遠（とお）くありません"
+        ],
+        "nuance": "何（なに）かが(A)の性質（せいしつ）を<strong>持（も）っていない</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "Negative, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/873/male_audio/10-私の家は遠くありません.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私の家は遠くありません。.mp3",
+        "word_prompt": "遠（とお）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とおくない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "My house is <strong>not far</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> used when highlighting that something <strong>does not</strong> have the characteristic of (A).",
+        "extra_info": "",
+        "reviewable_id": 873,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9725",
+      "type": "study_question",
+      "attributes": {
+        "id": 9725,
+        "content": "鉛筆（えんぴつ）<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "おいしくない",
+        "alternate_grammar": [],
+        "kanji_answer": "美味（おい）しくない",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の性質（せいしつ）を<strong>持（も）っていない</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/873/male_audio/11-鉛筆は美味しくない.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/鉛筆は美味しくない。.mp3",
+        "word_prompt": "美味（おい）し<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おもしろくないです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Pencils are <strong>not tasty</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> used when highlighting that something <strong>does not</strong> have the characteristic of (A).",
+        "extra_info": "",
+        "reviewable_id": 873,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9726",
+      "type": "study_question",
+      "attributes": {
+        "id": 9726,
+        "content": "<span class='gp-popout' data-gp-id='11'>それ</span><span class='gp-popout' data-gp-id='4'>も</span><span class='study-area-input'>____</span>。",
+        "answer": "たのしくありません",
+        "alternate_grammar": [
+          "たのしくないです",
+          "たのしくありません"
+        ],
+        "kanji_answer": "楽（たの）しくありません",
+        "kanji_alt_grammar": [
+          "楽（たの）しくないです",
+          "楽（たの）しくありません"
+        ],
+        "nuance": "何（なに）かが(A)の性質（せいしつ）を<strong>持（も）っていない</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "Negative, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/873/male_audio/04-それも楽しくありません.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/それも楽しくありません。.mp3",
+        "word_prompt": "楽（たの）し<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たのしくない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That is also <strong>not fun</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> used when highlighting that something <strong>does not</strong> have the characteristic of (A).",
+        "extra_info": "",
+        "reviewable_id": 873,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9859",
+      "type": "study_question",
+      "attributes": {
+        "id": 9859,
+        "content": "犬（いぬ）<span class='gp-popout' data-gp-id='6'>の</span>うんこ<span class='gp-popout' data-gp-id='6'>の</span>匂（にお）い<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "あまくない",
+        "alternate_grammar": [],
+        "kanji_answer": "甘（あま）くない",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の性質（せいしつ）を<strong>持（も）っていない</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/犬のうんこの匂いは甘くない。.mp3",
+        "word_prompt": "甘（あま）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おもしろくないです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The smell of dog poop is <strong>not sweet</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> used when highlighting that something <strong>does not</strong> have the characteristic of (A).",
+        "extra_info": "",
+        "reviewable_id": 873,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9727",
+      "type": "study_question",
+      "attributes": {
+        "id": 9727,
+        "content": "ゲーム<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "むずかしくありません",
+        "alternate_grammar": [
+          "むずかしくないです",
+          "むずかしくありません"
+        ],
+        "kanji_answer": "難（むずか）しくありません",
+        "kanji_alt_grammar": [
+          "難（むずか）しくないです",
+          "難（むずか）しくありません"
+        ],
+        "nuance": "何（なに）かが(A)の性質（せいしつ）を<strong>持（も）っていない</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "Negative, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/873/male_audio/05-ゲームは難しくありません.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ゲームは難しくありません。.mp3",
+        "word_prompt": "難（むずか）し<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "むずかしくない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The game is <strong>not hard</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> used when highlighting that something <strong>does not</strong> have the characteristic of (A).",
+        "extra_info": "",
+        "reviewable_id": 873,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9860",
+      "type": "study_question",
+      "attributes": {
+        "id": 9860,
+        "content": "スープ<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "まずくない",
+        "alternate_grammar": [
+          "まずくないです"
+        ],
+        "kanji_answer": "まずくない",
+        "kanji_alt_grammar": [
+          "まずくないです"
+        ],
+        "nuance": "何（なに）かが(A)の性質（せいしつ）を<strong>持（も）っていない</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/873/male_audio/06-スープはまずくない.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/スープはまずくない。.mp3",
+        "word_prompt": "まず<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まずくありません": {
+            "en": "Let's try a more casual conjugation here.",
+            "es": "Prueba con una conjugación más informal.",
+            "fr": "Essayons une conjugaison plus informelle ici.",
+            "id": "Mari coba bentuk konjugasi yang lebih kasual di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The soup is <strong>not bad tasting</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> used when highlighting that something <strong>does not</strong> have the characteristic of (A).",
+        "extra_info": "",
+        "reviewable_id": 873,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9721",
+      "type": "study_question",
+      "attributes": {
+        "id": 9721,
+        "content": "<span class='study-area-input'>____</span>コンピューター。",
+        "answer": "あたらしくない",
+        "alternate_grammar": [],
+        "kanji_answer": "新（あたら）しくない",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の性質（せいしつ）を<strong>持（も）っていない</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/873/male_audio/08-新しくないコンピューター.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/新しくないコンピューター。.mp3",
+        "word_prompt": "新（あたら）し<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あたらしくないです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A computer that is <strong>not new</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> used when highlighting that something <strong>does not</strong> have the characteristic of (A).",
+        "extra_info": "",
+        "reviewable_id": 873,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9722",
+      "type": "study_question",
+      "attributes": {
+        "id": 9722,
+        "content": "<span class='gp-popout' data-gp-id='11'>それ</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "やすくないです",
+        "alternate_grammar": [
+          "やすくないです",
+          "やすくありません"
+        ],
+        "kanji_answer": "安（やす）くないです",
+        "kanji_alt_grammar": [
+          "安（やす）くないです",
+          "安（やす）くありません"
+        ],
+        "nuance": "何（なに）かが(A)の性質（せいしつ）を<strong>持（も）っていない</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "Negative, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/873/male_audio/03-それは安くないです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/それは安くないです。.mp3",
+        "word_prompt": "安（やす）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やすくない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That is <strong>not cheap</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> used when highlighting that something <strong>does not</strong> have the characteristic of (A).",
+        "extra_info": "",
+        "reviewable_id": 873,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9723",
+      "type": "study_question",
+      "attributes": {
+        "id": 9723,
+        "content": "<span class='study-area-input'>____</span>仕事（しごと）。",
+        "answer": "おもしろくない",
+        "alternate_grammar": [],
+        "kanji_answer": "面白（おもしろ）くない",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の性質（せいしつ）を<strong>持（も）っていない</strong>ことを強調（きょうちょう）するために使（つか）われる<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/873/male_audio/12-面白くない仕事.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/面白くない仕事。.mp3",
+        "word_prompt": "面白（おもしろ）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おもしろくないです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A job that is <strong>not fun</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> used when highlighting that something <strong>does not</strong> have the characteristic of (A).",
+        "extra_info": "",
+        "reviewable_id": 873,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "50",
+      "type": "writeup",
+      "attributes": {
+        "id": 50,
+        "body_ja": null,
+        "body": "<p>The negative form of <span data-gp-id='24'>い-Adjectives</span> in Japanese is created by using the <span data-term='連用形・れんようけい'>conjunctive form</span> of the adjective, followed by <span data-gp-id='873'>ない</span>. <span data-term='連用形・れんようけい'>conjunctive form</span> just means 'agglutinative', or 'conjunctive' in Japanese. For <span data-gp-id='24'>い-Adjectives</span>, this <span data-term='連用形・れんようけい'>conjunctive form</span> is created by removing い, and replacing it with く.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154882'>\r\n<li data-study-question='154883'></ul>\r\n\r\n<p>The <span data-gp-id='873'>ない</span> used with <span data-gp-id='24'>い-Adjectives</span> is considered to be a different word to the <span data-gp-id='888'>ない</span> used with verbs. When used with <span data-gp-id='24'>い-Adjectives</span>, <span data-gp-id='873'>ない</span> itself is also an <span data-gp-id='24'>い-Adjective</span>. This means that it follows the same rules as regular <span data-gp-id='24'>い-Adjectives</span>. Due to ません (the polite negative form) being an <span data-term='助動詞・じょどうし'>auxiliary verb</span>,  it cannot be conjugated with <span data-gp-id='24'>い-Adjectives</span> in the same way as verbs.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154884'>\r\n<li data-study-question='154885'></ul>\r\n\r\n<p>As can be seen here, you must first add the verb <span data-gp-id='26'>ある</span>, and then conjugate it into its negative form using the <span data-term='助動詞・じょどうし'>auxiliary verb</span> ません. This is how the polite negative is created.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>As with regular <span data-gp-id='24'>い-Adjectives</span>, you cannot use <span data-gp-id='1'>だ</span> after <span data-gp-id='873'>ない</span>. <span data-gp-id='2'>です</span> is acceptable to create a semi-polite form, but is best used in spoken language only.</p></section>"
+      }
+    },
+    {
+      "id": "1913",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1913,
+        "source": "Genki 1",
+        "location": "Page 132",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2505",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2505,
+        "site": "GuideToJapanese",
+        "description": "Adjectives",
+        "link": "https://guidetojapanese.org/learn/grammar/adjectives",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2506",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2506,
+        "site": "Tofugu",
+        "description": "い Adjective negative form",
+        "link": "https://www.tofugu.com/japanese-grammar/i-adjective-negative-form-kunai/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2507",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2507,
+        "site": "Imabi",
+        "description": "Adjectives",
+        "link": "https://imabi.org/adjectives%e3%80%80%e5%bd%a2%e5%ae%b9%e8%a9%9e/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1344",
+      "type": "related_content",
+      "attributes": {
+        "id": 1344,
+        "relationship_type": "related",
+        "body": "い-Adjectives form a negative by replacing い with くない (e.g., 赤い = 'it's red,' 赤くない = 'it's not red'). For nouns and な-Adjectives, the negative is formed by adding じゃない (e.g., 大変じゃない = 'it's not difficult,' バナナじゃない = 'it's not a banana'). Both forms are plain and used in casual conversation or other grammatical patterns.",
+        "first_relatable": {
+          "id": 873,
+          "slug": "negative-い-adjectives",
+          "title": "い-Adjectives くない",
+          "meaning": "Not (Adjective)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 49,
+          "slug": "じゃない",
+          "title": "じゃない",
+          "meaning": "Is not, Isn't",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1359 @@
+{
+  "data": {
+    "id": "725",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 725,
+      "level": "JLPT4",
+      "lesson_id": 15,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "number-しか-ない",
+      "nuance": "ここに<strong>存在（そんざい）している</strong>のは<strong>特定（とくてい）の数（かず）</strong>の(A)だけだということを表（あらわ）す表現（ひょうげん）。",
+      "grammar_order": 215,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 391,
+        "title": "～は～の一つだ",
+        "slug": "は-の一つだ"
+      },
+      "previous_grammar_point": {
+        "id": 394,
+        "title": "真(っ)",
+        "slug": "真(っ)"
+      },
+      "lesson_count": "16/20",
+      "title": "Number + しか〜ない",
+      "furigana": "(Number) + しか〜ない",
+      "meaning": "No more than, Not exceeding, As few as・as little as, Only",
+      "nuance_translation": "A phrase showing that the <strong>only things</strong> that exist are a <strong>specific number</strong> of (A).",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "Number + <strong>しか</strong> + <span class='gp-popout' data-gp-id='888'>Verb［ない］</span>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/number-grammar-discussion/6997",
+      "metadata": "しか, ない, しかない, shika, nai, shikanai, adverbial particle, particle, negative, expression"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "180530",
+            "type": "study_question"
+          },
+          {
+            "id": "7801",
+            "type": "study_question"
+          },
+          {
+            "id": "7803",
+            "type": "study_question"
+          },
+          {
+            "id": "7798",
+            "type": "study_question"
+          },
+          {
+            "id": "183932",
+            "type": "study_question"
+          },
+          {
+            "id": "7799",
+            "type": "study_question"
+          },
+          {
+            "id": "7800",
+            "type": "study_question"
+          },
+          {
+            "id": "7802",
+            "type": "study_question"
+          },
+          {
+            "id": "180528",
+            "type": "study_question"
+          },
+          {
+            "id": "183933",
+            "type": "study_question"
+          },
+          {
+            "id": "180529",
+            "type": "study_question"
+          },
+          {
+            "id": "7804",
+            "type": "study_question"
+          },
+          {
+            "id": "7794",
+            "type": "study_question"
+          },
+          {
+            "id": "7795",
+            "type": "study_question"
+          },
+          {
+            "id": "7793",
+            "type": "study_question"
+          },
+          {
+            "id": "7797",
+            "type": "study_question"
+          },
+          {
+            "id": "7796",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "212",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "931",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1391",
+            "type": "related_content"
+          },
+          {
+            "id": "592",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1581",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1580",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "180530",
+      "type": "study_question",
+      "attributes": {
+        "id": 180530,
+        "content": "今日（きょう）<span class=\"gp-popout\" data-gp-id=\"3\">は</span><span class=\"gp-popout\" data-gp-id=\"715\">たくさん</span><span class=\"gp-popout\" data-gp-id=\"6\">の</span>宿題（しゅくだい）<span class=\"gp-popout\" data-gp-id=\"13\">がある</span><span class=\"gp-popout\" data-gp-id=\"45\">から</span>２時間（にじかん）<span class='study-area-input'>____</span>遊（あそ）<span class=\"gp-popout\" data-gp-id=\"132\">べ</span><strong><span class=\"gp-popout\" data-gp-id=\"725\">ない</span></strong>。",
+        "answer": "しか",
+        "alternate_grammar": [],
+        "kanji_answer": "しか",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/今日はたくさんの宿題があるから２時間しか遊べない。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I have a lot of homework today, so I can <strong>only</strong> hang out for 2 hours.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 725,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7801",
+      "type": "study_question",
+      "attributes": {
+        "id": 7801,
+        "content": "研究（けんきゅう）し<span class='gp-popout' data-gp-id='59'>たい</span><span class='gp-popout' data-gp-id='361'>けど</span>４８時間（よんじゅうはちじかん）<span class='study-area-input'>____</span>。",
+        "answer": "しかない",
+        "alternate_grammar": [
+          "しかない",
+          "しかないです",
+          "しかありません"
+        ],
+        "kanji_answer": "しかない",
+        "kanji_alt_grammar": [
+          "しかない",
+          "しかないです",
+          "しかありません"
+        ],
+        "nuance": "ここに<strong>存在（そんざい）している</strong>のは<strong>特定（とくてい）の数（かず）</strong>の(A)だけだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/725/male_audio/230303_1455.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/研究したいけど４８時間しかない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけしかない": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "いか": {
+            "en": "Can you try answering using the prompted verb?",
+            "es": "",
+            "fr": ""
+          },
+          "いじょう": {
+            "en": "Can you try answering using the prompted verb?",
+            "es": "",
+            "fr": ""
+          },
+          "しか": {
+            "en": "Can you try answering using the prompted verb?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I want to do some research, but <strong>I have no more than</strong> 48 hours.",
+        "nuance_translation": "A phrase showing that the <strong>only things</strong> that exist are a <strong>specific number</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 725,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7803",
+      "type": "study_question",
+      "attributes": {
+        "id": 7803,
+        "content": "うち<span class='gp-popout' data-gp-id='6'>の</span>研究室（けんきゅうしつ）に<span class='gp-popout' data-gp-id='3'>は</span>本（ほん）<span class='gp-popout' data-gp-id='10'>が</span>１０冊（じゅっさつ）<span class='study-area-input'>____</span>。",
+        "answer": "しかない",
+        "alternate_grammar": [
+          "しかない",
+          "しかないです",
+          "しかありません"
+        ],
+        "kanji_answer": "しかない",
+        "kanji_alt_grammar": [
+          "しかない",
+          "しかないです",
+          "しかありません"
+        ],
+        "nuance": "ここに<strong>存在（そんざい）している</strong>のは<strong>特定（とくてい）の数（かず）</strong>の(A)だけだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/725/male_audio/230303_1456.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/うちの研究室には本が１０冊しかない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけしかない": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しか": {
+            "en": "しか must always be used with verbs in the negative form.",
+            "es": "",
+            "fr": ""
+          },
+          "いか": {
+            "en": "Using いか here would not be grammatically correct and would have the nuance of '10 or fewer'. We are looking for a grammar point that means 'no more than' or 'only'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>I have no more than</strong> 10 books in my office.",
+        "nuance_translation": "A phrase showing that the <strong>only things</strong> that exist are a <strong>specific number</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 725,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7798",
+      "type": "study_question",
+      "attributes": {
+        "id": 7798,
+        "content": "２（に）回（かい）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='130'>のに</span>、自信（じしん）満々（まんまん）だ<span class='gp-popout' data-gp-id='71'>ね</span>。",
+        "answer": "しかけいけんしていない",
+        "alternate_grammar": [
+          "しかけいけんしていない",
+          "しかけいけんしてない"
+        ],
+        "kanji_answer": "しか経験（けいけん）していない",
+        "kanji_alt_grammar": [
+          "しか経験（けいけん）してない",
+          "しか経験（けいけん）していない"
+        ],
+        "nuance": "ここに<strong>存在（そんざい）している</strong>のは<strong>特定（とくてい）の数（かず）</strong>の(A)だけだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/725/male_audio/230303_1454.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/２回しか経験していないのに、自信満々だね。.mp3",
+        "word_prompt": "経験（けいけん）し<span class='gp-popout' data-gp-id='27'>ている</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけしかけいけんしていない": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけしかけいけんしてない": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけしかけいけんしていません": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけけいけんしている": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "だけけいけんしていません": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "しかけいかんしていない": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "いか": {
+            "en": "Can you try answering using the prompted verb?",
+            "es": "",
+            "fr": ""
+          },
+          "しか": {
+            "en": "Can you try answering using the prompted verb?",
+            "es": "",
+            "fr": ""
+          },
+          "は": {
+            "en": "Can you try answering using the prompted verb?",
+            "es": "",
+            "fr": ""
+          },
+          "も": {
+            "en": "Can you try answering using the prompted verb?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "けいけんしていない": {
+            "en": "Can you try adding a particle to the beginning with the nuance of  'no more than' or 'only'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>(You) have experienced</strong> (it) <strong>no more than</strong> twice, and yet (you) are brimming with confidence.",
+        "nuance_translation": "A phrase showing that the <strong>only things</strong> that exist are a <strong>specific number</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 725,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183932",
+      "type": "study_question",
+      "attributes": {
+        "id": 183932,
+        "content": "冷蔵庫（れいぞうこ）<span data-gp-id='6'>の</span>中（なか）<span data-gp-id='32'>に</span><span data-gp-id='3'>は</span>色々（いろいろ）<span data-gp-id='28'>な</span>物（もの）<span data-gp-id='10'>が</span>入（はい）っ<span data-gp-id='136'>ていた</span><span data-gp-id='361'>けど</span>、リンゴ<span data-gp-id='43'>だけ</span><span data-gp-id='21'>を</span>取（と）り出（だ）し<span data-gp-id='41'>た</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "There were a lot of things in the refrigerator, but I just took out an apple.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 725,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7799",
+      "type": "study_question",
+      "attributes": {
+        "id": 7799,
+        "content": "５人（ごにん）<span class='study-area-input'>____</span>見物客（けんぶつきゃく）<span class='gp-popout' data-gp-id='10'>が</span><strong>い<span class='gp-popout' data-gp-id='775'>なくて</span></strong>寂（さび）し<span class='gp-popout' data-gp-id='24'>い</span>。",
+        "answer": "しか",
+        "alternate_grammar": [],
+        "kanji_answer": "しか",
+        "kanji_alt_grammar": [],
+        "nuance": "ここに<strong>存在（そんざい）している</strong>のは<strong>特定（とくてい）の数（かず）</strong>の(A)だけだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Exclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/725/male_audio/230303_1454_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/５人しか見物客がいなくて寂しい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけしか": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "は": {
+            "en": "は is a topic-marking particle. We are looking for a grammar point that means 'no more than' or 'only'.",
+            "es": "",
+            "fr": ""
+          },
+          "も": {
+            "en": "We are looking for a grammar point that means 'no more than' or 'only'.",
+            "es": "",
+            "fr": ""
+          },
+          "すこしも": {
+            "en": "This means 'not in the least' or 'not at all'. We are looking for a grammar point that means 'no more than' or 'only'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "It will be lonely with <strong>only</strong> five spectators.",
+        "nuance_translation": "A phrase showing that the <strong>only things</strong> that exist are a <strong>specific number</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 725,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7800",
+      "type": "study_question",
+      "attributes": {
+        "id": 7800,
+        "content": "彼（かれ）に<span class='gp-popout' data-gp-id='3'>は</span>１度（いちど）<span class='study-area-input'>____</span>。",
+        "answer": "しかかっていない",
+        "alternate_grammar": [
+          "しかかっていない",
+          "しかかってない",
+          "しかかっていません"
+        ],
+        "kanji_answer": "しか勝（か）っていない",
+        "kanji_alt_grammar": [
+          "しか勝（か）ってない",
+          "しか勝（か）っていません",
+          "しか勝（か）っていない"
+        ],
+        "nuance": "ここに<strong>存在（そんざい）している</strong>のは<strong>特定（とくてい）の数（かず）</strong>の(A)だけだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/725/male_audio/230303_1454_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/彼には１度しか勝っていない。.mp3",
+        "word_prompt": "勝（か）っ<span class='gp-popout' data-gp-id='27'>ている</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけしかかっていない": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけしかかってない": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけしかかっていません": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけかっている": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "だけかっていません": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "しかかたなかった": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "しかかっていなかった": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "しかかっていた": {
+            "en": "しか must always be used with verbs in the negative form.",
+            "es": "",
+            "fr": ""
+          },
+          "しかかっている": {
+            "en": "しか must always be used with verbs in the negative form.",
+            "es": "",
+            "fr": ""
+          },
+          "かって": {
+            "en": "We are looking for a grammar point that means 'no more than' or 'only'.",
+            "es": "",
+            "fr": ""
+          },
+          "かっていない": {
+            "en": "This doesn't sound natural as-is. Try adding a particle before the verb that means 'only' or 'nothing but', especially when talking about a limited number of times.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>He has won no more than</strong> once.",
+        "nuance_translation": "A phrase showing that the <strong>only things</strong> that exist are a <strong>specific number</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 725,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7802",
+      "type": "study_question",
+      "attributes": {
+        "id": 7802,
+        "content": "半年（はんとし）<span class='gp-popout' data-gp-id='25'>で</span>１回（いっかい）<span class='study-area-input'>____</span>。",
+        "answer": "しかけんかしなかった",
+        "alternate_grammar": [
+          "しかけんかしなかった",
+          "しかけんかしなかったです",
+          "しかけんかしませんでした"
+        ],
+        "kanji_answer": "しか喧嘩（けんか）しなかった",
+        "kanji_alt_grammar": [
+          "しか喧嘩（けんか）しなかったです",
+          "しか喧嘩（けんか）しませんでした",
+          "しか喧嘩（けんか）しなかった"
+        ],
+        "nuance": "ここに<strong>存在（そんざい）している</strong>のは<strong>特定（とくてい）の数（かず）</strong>の(A)だけだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/725/male_audio/230303_1455_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/半年で１回しか喧嘩しなかった。.mp3",
+        "word_prompt": "喧嘩（けんか）<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけしかけんかしなかった": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけしかけんかしなかったです": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけしかけんかしませんでした": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "だけしました": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "しかけんかした": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          },
+          "しかけんかしていない": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          },
+          "しかけんかしない": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "けんか": {
+            "en": "We are looking for a grammar point that means 'no more than' or 'only'.",
+            "es": "",
+            "fr": ""
+          },
+          "しかけんかしなった": {
+            "en": "Can you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          },
+          "けんかしなかった": {
+            "en": "Can you try adding a particle to the beginning with the nuance of  'no more than' or 'only'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "In half a year, <strong>we fought no more than</strong> once.",
+        "nuance_translation": "A phrase showing that the <strong>only things</strong> that exist are a <strong>specific number</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 725,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180528",
+      "type": "study_question",
+      "attributes": {
+        "id": 180528,
+        "content": "今日（きょう）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>五（ご）キロ<span class='study-area-input'>____</span>走（はし）れ<strong><span class=\"gp-popout\" data-gp-id=\"725\">ない</span></strong>。",
+        "answer": "しか",
+        "alternate_grammar": [],
+        "kanji_answer": "しか",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/今日は五キロしか走れない。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I can <strong>only</strong> run 5 km today.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 725,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183933",
+      "type": "study_question",
+      "attributes": {
+        "id": 183933,
+        "content": "冷蔵庫（れいぞうこ）<span data-gp-id='6'>の</span>中（なか）<span data-gp-id='32'>に</span><span data-gp-id='3'>は</span>リンゴ<span class='study-area-input'>____</span><strong>なかった<span data-gp-id='45'></strong>から</span>、リンゴ<span data-gp-id='21'>を</span>食（た）べ<span data-gp-id='895'>た</span>。",
+        "answer": "しか",
+        "alternate_grammar": [],
+        "kanji_answer": "しか",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Apples were <strong>all that was</strong> in the refrigerator, so I ate an apple.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 725,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180529",
+      "type": "study_question",
+      "attributes": {
+        "id": 180529,
+        "content": "今日（きょう）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>１００円（ひゃくえん）<span class='study-area-input'>____</span>持（も）っ<span class=\"gp-popout\" data-gp-id=\"764\">てい</span><strong><span class=\"gp-popout\" data-gp-id=\"725\">ない</span></strong>。",
+        "answer": "しか",
+        "alternate_grammar": [],
+        "kanji_answer": "しか",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/今日は１００円しか持っていない。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I have <strong>nothing but</strong> 100 yen on me.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 725,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7804",
+      "type": "study_question",
+      "attributes": {
+        "id": 7804,
+        "content": "先生（せんせい）<span class='gp-popout' data-gp-id='10'>が</span>厳（きび）し<span class='gp-popout' data-gp-id='76'>すぎ</span>て、２節（にせつ）<span class='study-area-input'>____</span>。",
+        "answer": "しかすすまなかった",
+        "alternate_grammar": [
+          "しかすすまなかった",
+          "しかすすまなかったです",
+          "しかすすみませんでした"
+        ],
+        "kanji_answer": "しか進（すす）まなかった",
+        "kanji_alt_grammar": [
+          "しか進（すす）まなかったです",
+          "しか進（すす）みませんでした",
+          "しか進（すす）まなかった"
+        ],
+        "nuance": "ここに<strong>存在（そんざい）している</strong>のは<strong>特定（とくてい）の数（かず）</strong>の(A)だけだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/725/male_audio/230303_1457.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/先生が厳しすぎて、２節しか進まなかった。.mp3",
+        "word_prompt": "進（すす）<span class='gp-popout' data-gp-id='26'>む</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけしかすすまなかった": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけしかすすまなかったです": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけしかすすみませんでした": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけすすんだ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "だけすすみました": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The teacher is so strict that <strong>he advanced</strong> through <strong>no more than</strong> two paragraphs.",
+        "nuance_translation": "A phrase showing that the <strong>only things</strong> that exist are a <strong>specific number</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 725,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7794",
+      "type": "study_question",
+      "attributes": {
+        "id": 7794,
+        "content": "彼女（かのじょ）に<span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='83'>まだ</span>１回（いっかい）<span class='study-area-input'>____</span>。",
+        "answer": "しかあっていない",
+        "alternate_grammar": [
+          "しかあっていない",
+          "しかあってない",
+          "しかあっていません"
+        ],
+        "kanji_answer": "しか会（あ）っていない",
+        "kanji_alt_grammar": [
+          "しか会（あ）ってない",
+          "しか会（あ）っていません",
+          "しか会（あ）っていない"
+        ],
+        "nuance": "ここに<strong>存在（そんざい）している</strong>のは<strong>特定（とくてい）の数（かず）</strong>の(A)だけだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/725/male_audio/230303_1453_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/彼女にはまだ１回しか会っていない。.mp3",
+        "word_prompt": "会（あ）っ<span class='gp-popout' data-gp-id='27'>ている</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけしかあっていない": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけしかあってない": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけしかあっていません": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけあっている": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "だけあっていません": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "しかあっていなかった": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "もあっていない": {
+            "en": "も would mean 'have not met her, even once'. We are looking for a grammar point that means 'no more than' or 'only'.",
+            "es": "",
+            "fr": ""
+          },
+          "しかあっていた": {
+            "en": "しか must always be used with verbs in the negative form.",
+            "es": "",
+            "fr": ""
+          },
+          "しかあっている": {
+            "en": "しか must always be used with verbs in the negative form.",
+            "es": "",
+            "fr": ""
+          },
+          "あって": {
+            "en": "We are looking for a grammar point that means 'no more than' or 'only'.",
+            "es": "",
+            "fr": ""
+          },
+          "あっている": {
+            "en": "We are looking for a grammar point that means 'no more than' or 'only'.",
+            "es": "",
+            "fr": ""
+          },
+          "あっていない": {
+            "en": "This doesn't sound natural as-is. Try adding a particle before the verb that means 'only' or 'nothing but', especially when talking about a limited number of times.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I have <strong>met her no more than</strong> once.",
+        "nuance_translation": "A phrase showing that the <strong>only things</strong> that exist are a <strong>specific number</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 725,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7795",
+      "type": "study_question",
+      "attributes": {
+        "id": 7795,
+        "content": "計画書（けいかくしょ）<span class='gp-popout' data-gp-id='3'>は</span>１枚（いちまい）<span class='study-area-input'>____</span>。",
+        "answer": "しかていしゅつできない",
+        "alternate_grammar": [],
+        "kanji_answer": "しか提出（ていしゅつ）できない",
+        "kanji_alt_grammar": [],
+        "nuance": "ここに<strong>存在（そんざい）している</strong>のは<strong>特定（とくてい）の数（かず）</strong>の(A)だけだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/725/male_audio/230303_1453_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/計画書は１枚しか提出出来ない。.mp3",
+        "word_prompt": "提出（ていしゅつ）でき<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけしかていしゅつできない": {
+            "en": "Can you include something else at the beginning?",
+            "es": "",
+            "fr": ""
+          },
+          "だけしかていしゅつできません": {
+            "en": "Can you include something else at the beginning?",
+            "es": "",
+            "fr": ""
+          },
+          "だけていしゅつできる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "",
+            "fr": ""
+          },
+          "だけていしゅつできます": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "",
+            "fr": ""
+          },
+          "しかていしゅうできない": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "しかてしゅつできない": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "ていしゅつできるだけ": {
+            "en": "できるだけ means 'as best as one can' or 'as much as possible'. We are looking for a grammar point that means 'no more than' or 'only'.",
+            "es": "",
+            "fr": ""
+          },
+          "しかていしゅつできる": {
+            "en": "しか must always be used with verbs in the negative form.",
+            "es": "",
+            "fr": ""
+          },
+          "ていしゅつできる": {
+            "en": "Try adding a particle before the verb that means 'only' or 'nothing but', especially when talking about a limited number of times.",
+            "es": "",
+            "fr": ""
+          },
+          "ていしゅつできない": {
+            "en": "This doesn't sound natural as-is. Try adding a particle before the verb that means 'only' or 'nothing but', especially when talking about a limited number of times.",
+            "es": "",
+            "fr": ""
+          },
+          "ていしゅつでき": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "You <strong>can submit only</strong> one plan.",
+        "nuance_translation": "A phrase showing that the <strong>only things</strong> that exist are a <strong>specific number</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 725,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7793",
+      "type": "study_question",
+      "attributes": {
+        "id": 7793,
+        "content": "お金持（かねも）ちな<span class='gp-popout' data-gp-id='130'>のに</span>現金（げんきん）<span class='gp-popout' data-gp-id='3'>は</span>１０００円（せんえん）<span class='study-area-input'>____</span>。",
+        "answer": "しかもっていない",
+        "alternate_grammar": [
+          "しかもっていない",
+          "しかもってない",
+          "しかもっていません"
+        ],
+        "kanji_answer": "しか持（も）っていない",
+        "kanji_alt_grammar": [
+          "しか持（も）ってない",
+          "しか持（も）っていません",
+          "しか持（も）っていない"
+        ],
+        "nuance": "ここに<strong>存在（そんざい）している</strong>のは<strong>特定（とくてい）の数（かず）</strong>の(A)だけだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/725/male_audio/230303_1453.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/お金持ちなのに現金は１０００円しか持っていない。.mp3",
+        "word_prompt": "持（も）っ<span class='gp-popout' data-gp-id='27'>ている</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけしかもっていない": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけしかもってない": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけしかもっていません": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけもっている": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "だけもっていません": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ももってない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte."
+          },
+          "いか": {
+            "en": "Can you try answering using the prompted verb?",
+            "es": "",
+            "fr": ""
+          },
+          "しか": {
+            "en": "Can you try answering using the prompted verb?",
+            "es": "",
+            "fr": ""
+          },
+          "も": {
+            "en": "Can you try answering using the prompted verb?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "しかもっている": {
+            "en": "しか must always be used with verbs in the negative form.",
+            "es": "",
+            "fr": ""
+          },
+          "いじょうもっていない": {
+            "en": "いじょう means 'or more'. We are looking for a grammar point that means 'no more than' or 'only'.",
+            "es": "",
+            "fr": ""
+          },
+          "もっていない": {
+            "en": "Can you try adding a particle to the beginning with the nuance of  'no more than' or 'only'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Even though (they) are rich, (they) <strong>have no more than</strong> 1000 yen in cash.",
+        "nuance_translation": "A phrase showing that the <strong>only things</strong> that exist are a <strong>specific number</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 725,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7797",
+      "type": "study_question",
+      "attributes": {
+        "id": 7797,
+        "content": "一（いっ）ヶ月（かげつ）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='130'>のに</span>、あなた<span class='gp-popout' data-gp-id='3'>は</span>変（か）<span class='gp-popout' data-gp-id='132'>われる</span>の？",
+        "answer": "しかきかんがない",
+        "alternate_grammar": [
+          "しかきかんがない",
+          "しかきかんない"
+        ],
+        "kanji_answer": "しか期間（きかん）がない",
+        "kanji_alt_grammar": [
+          "しか期間（きかん）ない",
+          "しか期間（きかん）がない"
+        ],
+        "nuance": "ここに<strong>存在（そんざい）している</strong>のは<strong>特定（とくてい）の数（かず）</strong>の(A)だけだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/725/male_audio/230303_1453_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/一ヶ月しか期間がないのに、あなたは変われるの？.mp3",
+        "word_prompt": "期間（きかん）<span class='gp-popout' data-gp-id='13'>がある</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけしかきかんがない": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけしかきかんない": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけしかきかんがありません": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけきかんがある": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "だけきかんがあります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "しか": {
+            "en": "Can you try answering using the prompted verb?",
+            "es": "",
+            "fr": ""
+          },
+          "だけ": {
+            "en": "Can you try answering using the prompted verb?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "しかきかんがある": {
+            "en": "しか must always be used with verbs in the negative form.",
+            "es": "",
+            "fr": ""
+          },
+          "しかきかんがあらない": {
+            "en": "Can you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          },
+          "きかんがある": {
+            "en": "Can you try adding a particle to the beginning with the nuance of  'no more than' or 'only'.",
+            "es": "",
+            "fr": ""
+          },
+          "きかんがない": {
+            "en": "Can you try adding a particle to the beginning with the nuance of  'no more than' or 'only'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>You only have (the period of)</strong> one month. Can you change?",
+        "nuance_translation": "A phrase showing that the <strong>only things</strong> that exist are a <strong>specific number</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 725,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7796",
+      "type": "study_question",
+      "attributes": {
+        "id": 7796,
+        "content": "髪（かみ）<span class='gp-popout' data-gp-id='6'>の</span>毛（け）<span class='gp-popout' data-gp-id='10'>が</span>３本（さんぼん）<span class='study-area-input'>____</span>。",
+        "answer": "しかはえていない",
+        "alternate_grammar": [
+          "しかはえていない",
+          "しかはえてない",
+          "しかはえていません"
+        ],
+        "kanji_answer": "しか生（は）えていない",
+        "kanji_alt_grammar": [
+          "しか生（は）えてない",
+          "しか生（は）えていません",
+          "しか生（は）えていない"
+        ],
+        "nuance": "ここに<strong>存在（そんざい）している</strong>のは<strong>特定（とくてい）の数（かず）</strong>の(A)だけだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/725/male_audio/230303_1453_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/髪の毛が３本しか生えていない。.mp3",
+        "word_prompt": "生（は）え<span class='gp-popout' data-gp-id='27'>ている</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけしかはえていない": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけしかはえてない": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけしかはえていません": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "だけはえている": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "だけはえていません": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "しかうえていない": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "しか": {
+            "en": "Can you try answering using the prompted verb?",
+            "es": "",
+            "fr": ""
+          },
+          "いか": {
+            "en": "Can you try answering using the prompted verb?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "しかはえている": {
+            "en": "しか must always be used with verbs in the negative form.",
+            "es": "",
+            "fr": ""
+          },
+          "いかはえている": {
+            "en": "いか would mean '3 or less'. We are looking for a grammar point with the nuance of 'no more than' or 'only'.",
+            "es": "",
+            "fr": ""
+          },
+          "はえていない": {
+            "en": "This doesn't sound natural as-is. Try adding a particle before the verb that means 'only' or 'nothing but', especially when talking about a limited number of times.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "He has <strong>no more than</strong> three hairs on his head.",
+        "nuance_translation": "A phrase showing that the <strong>only things</strong> that exist are a <strong>specific number</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 725,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "212",
+      "type": "writeup",
+      "attributes": {
+        "id": 212,
+        "body_ja": "",
+        "body": "<p>The <span data-term='副助詞・ふくじょし'>adverbial particle</span> <span data-gp-id='182'>しか</span> is often compared to <span data-gp-id='43'>だけ</span>, in that it also expresses 'only'. However, unlike <span data-gp-id='43'>だけ</span>, <span data-gp-id='182'>しか</span> can only be used in <span data-term='否定表現・ひていひょうげん'>negative statements</span>. Due to this, <span data-gp-id='182'>しか～ない</span> is regularly translated as 'there's only (A)', or 'there's nothing but (A)'. <span data-gp-id='182'>しか～ない</span> may be used to express numbers, or nouns. In this lesson we will examine numbers.</p>\r\n\r\n<p>To use this construction, the number that you want to express as being 'all that exists' will go before <span data-gp-id='182'>しか</span>, then <span data-gp-id='182'>しか</span> will be followed by a verb in its ない, or ありません form.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180528'>\r\n<li data-study-question='180529'>\r\n<li data-study-question='180530'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>The main difference between <span data-gp-id='182'>しか</span> and <span data-gp-id='43'>だけ</span>, is that <span data-gp-id='43'>だけ</span> suggests that (A) was 'chosen' from among a group where several other choices exist. <span data-gp-id='182'>しか</span> on the other hand, implies that there are no other choices, and (A) is the only possibility/thing that exists.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183932'>\r\n<li data-study-question='183933'></ul></section>"
+      }
+    },
+    {
+      "id": "931",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 931,
+        "source": "Genki II 2nd Edition",
+        "location": "Page 58",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1581",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1581,
+        "site": "J-Nihongo",
+        "description": "Additional Examples",
+        "link": "https://j-nihongo.com/shika-nai/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1580",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1580,
+        "site": "Wasabi",
+        "description": "Nothing Except for X ",
+        "link": "https://wasabi-jpn.com/magazine/japanese-grammar/expressions-for-numbers-and-amounts/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1391",
+      "type": "related_content",
+      "attributes": {
+        "id": 1391,
+        "relationship_type": "antonym",
+        "body": "Number + も emphasizes a large quantity, like 'as many as (A)' or 'a whole (A)' in English. In contrast, Number + しか〜ない emphasizes a small quantity. For example, おにぎりを３個も食べた ('I ate three whole rice balls.') vs. おにぎり１個しか食べなかった ('I only ate one rice ball.').",
+        "first_relatable": {
+          "id": 119,
+          "slug": "number-も",
+          "title": "Number + も",
+          "meaning": "Emphasis, As ~ as, Not even",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 725,
+          "slug": "number-しか-ない",
+          "title": "Number + しか〜ない",
+          "meaning": "No more than, Not exceeding, As few as・as little as, Only",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "592",
+      "type": "related_content",
+      "attributes": {
+        "id": 592,
+        "relationship_type": "related",
+        "body": "しか～ない expresses the meaning of 'only' or 'nothing but'. For example, バナナしか食べなかった ('I only ate a banana', or literally 'I didn't eat anything but a banana.'). When used with numbers in the Number + しか〜ない pattern, it emphasizes that the quantity is small, e.g., ５人しか来なかった ('Only 5 people came.', or literally 'No one came but five people.').",
+        "first_relatable": {
+          "id": 182,
+          "slug": "しか-ない",
+          "title": "しか～ない ",
+          "meaning": "There's only, Nothing but",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 725,
+          "slug": "number-しか-ない",
+          "title": "Number + しか〜ない",
+          "meaning": "No more than, Not exceeding, As few as・as little as, Only",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,969 @@
+{
+  "data": {
+    "id": "771",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 771,
+      "level": "JLPT5",
+      "lesson_id": 10,
+      "part_of_speech": "助詞",
+      "register": "一般",
+      "word_type": "接続助詞",
+      "slug": "adjective-て-b",
+      "nuance": "(A)の<strong>複数（ふくすう）の特徴（とくちょう）を挙（あ）げる</strong>ために使（つか）われる<strong>カジュアル</strong>で飾（かざ）らない接続詞（せつぞくし）。",
+      "grammar_order": 119,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 85,
+        "title": "のがへた",
+        "slug": "のがへた"
+      },
+      "previous_grammar_point": {
+        "id": 769,
+        "title": "Adjective + て・Noun + で",
+        "slug": "adjective-て-noun-で"
+      },
+      "lesson_count": "4/12",
+      "title": "Adjective + て + B",
+      "furigana": "～て (Qualities and States)",
+      "meaning": "And..., Both and (Conjunctive)",
+      "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used to <strong>list several characteristics</strong> of (A).",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "<span class='gp-popout' data-gp-id='769'>［い］Adjective［<del>い</del>］</span> + <span class='chui'>く</span> + <strong>て</strong><br><span class='gp-popout' data-gp-id='28'><span class='gp-popout' data-gp-id='769'>［な］Adjective</span> + <span class='chui'>で</span></span> + Phrase<br><span class='gp-popout' data-gp-id='769'>Noun + <span class='chui'>で</span></span> + Phrase",
+      "part_of_speech_translation": "Particle",
+      "register_translation": "Standard",
+      "word_type_translation": "Conjunctive Particle",
+      "discourse_link": "https://community.bunpro.jp/t/adjective-b-qualities-states-grammar-discussion/17624",
+      "metadata": "て, で, くて, te, de, kute, particle, conjunction particle, quality, state"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "155436",
+            "type": "study_question"
+          },
+          {
+            "id": "155435",
+            "type": "study_question"
+          },
+          {
+            "id": "155434",
+            "type": "study_question"
+          },
+          {
+            "id": "183824",
+            "type": "study_question"
+          },
+          {
+            "id": "183823",
+            "type": "study_question"
+          },
+          {
+            "id": "183825",
+            "type": "study_question"
+          },
+          {
+            "id": "8908",
+            "type": "study_question"
+          },
+          {
+            "id": "8904",
+            "type": "study_question"
+          },
+          {
+            "id": "8905",
+            "type": "study_question"
+          },
+          {
+            "id": "8906",
+            "type": "study_question"
+          },
+          {
+            "id": "8907",
+            "type": "study_question"
+          },
+          {
+            "id": "8909",
+            "type": "study_question"
+          },
+          {
+            "id": "8910",
+            "type": "study_question"
+          },
+          {
+            "id": "8911",
+            "type": "study_question"
+          },
+          {
+            "id": "8912",
+            "type": "study_question"
+          },
+          {
+            "id": "8913",
+            "type": "study_question"
+          },
+          {
+            "id": "8914",
+            "type": "study_question"
+          },
+          {
+            "id": "8915",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "118",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1279",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1239",
+            "type": "related_content"
+          },
+          {
+            "id": "1300",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2009",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "155436",
+      "type": "study_question",
+      "attributes": {
+        "id": 155436,
+        "content": "トミー<span class=\"gp-popout\" data-gp-id=\"3\">は</span>漫画家（まんがか）<span class='study-area-input'>____</span><span class=\"vocab-popout\" data-vocab-id=\"1551\">たまに</span><span class=\"vocab-popout\" data-vocab-id=\"506\">学校（がっこう）</span><span class=\"gp-popout\" data-gp-id=\"25\">で</span>国語（こくご）<span class=\"gp-popout\" data-gp-id=\"21\">を</span><span class=\"gp-popout vocab-popout\" data-gp-id=\"765\" data-vocab-id=\"618\">教（おし）えている</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/トミーは漫画家でたまに学校で国語を教えている。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Tommy is a cartoonist, <strong>and</strong> occasionally teaches the national language at school.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155435",
+      "type": "study_question",
+      "attributes": {
+        "id": 155435,
+        "content": "マサミ<span class=\"gp-popout\" data-gp-id=\"3\">は</span>綺麗（きれい）<span class='study-area-input'>____</span><span class=\"vocab-popout\" data-vocab-id=\"1787\">水泳（すいえい）</span><span class=\"gp-popout\" data-gp-id=\"10\">が</span><span class=\"vocab-popout\" data-vocab-id=\"983\">趣味（しゅみ）</span><span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/マサミは綺麗で水泳が趣味です。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Masami is beautiful, <strong>and</strong> swimming is her hobby.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155434",
+      "type": "study_question",
+      "attributes": {
+        "id": 155434,
+        "content": "田中（たなか）さん<span class=\"gp-popout\" data-gp-id=\"6\">の</span>犬（いぬ）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>大（おお）きく<span class='study-area-input'>____</span><span class=\"gp-popout vocab-popout\" data-gp-id=\"26\" data-vocab-id=\"1008\">遊（あそ）ぶ</span><span class=\"gp-popout\" data-gp-id=\"34\">のが好（す）き</span><span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "て",
+        "alternate_grammar": [],
+        "kanji_answer": "て",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/田中さんの犬は大きくて遊ぶのが好きです。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Tanaka-san's dog is big <strong>and</strong> likes playing.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183824",
+      "type": "study_question",
+      "attributes": {
+        "id": 183824,
+        "content": "<span data-gp-id='30'>この</span>アイスクリーム<span data-gp-id='3'>は</span>甘（あま）く<span data-gp-id='416'>て</span>美味（おい）し<span data-gp-id='24'>い</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This ice cream is delicious because it is sweet. (Reasons)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183823",
+      "type": "study_question",
+      "attributes": {
+        "id": 183823,
+        "content": "<span data-gp-id='30'>この</span>スマホ<span data-gp-id='3'>は</span>新（あたら）しく<span data-gp-id='771'>て</span>速（はや）<span data-gp-id='24'>い</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This phone is new <strong>and</strong> fast. (Linking)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183825",
+      "type": "study_question",
+      "attributes": {
+        "id": 183825,
+        "content": "声（こえ）<span data-gp-id='21'>を</span>出（だ）し<span data-gp-id='416'>て</span>話（はな）し<span data-gp-id='60'>てください</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 14,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Please project when you speak. (Manner)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8908",
+      "type": "study_question",
+      "attributes": {
+        "id": 8908,
+        "content": "新田（にった）さん<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>寂（さび）し<span class='gp-popout' data-gp-id='874'>かった</span><span class='gp-popout' data-gp-id='17'>んです</span>。",
+        "answer": "かなしくて",
+        "alternate_grammar": [],
+        "kanji_answer": "悲（かな）しくて",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>複数（ふくすう）の特徴（とくちょう）を挙（あ）げる</strong>ために使（つか）われる<strong>カジュアル</strong>で飾（かざ）らない接続詞（せつぞくし）。",
+        "tense": "て",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/771/male_audio/12-新田さんは悲しくて寂しかったんです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/新田さんは悲しくて寂しかったんです。.mp3",
+        "word_prompt": "悲（かな）し<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かなしく": {
+            "en": "Let's try adding something else to the end.",
+            "es": "Prueba con agregar algo más al final.",
+            "fr": "Essayons d'ajouter autre chose à la fin.",
+            "id": "Mari coba menambahkan sesuatu yang lain di bagian akhir."
+          },
+          "かなしいと": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Nitta was (used to be) <strong>sad and</strong> lonely.",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used to <strong>list several characteristics</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8904",
+      "type": "study_question",
+      "attributes": {
+        "id": 8904,
+        "content": "りさ<span class='gp-popout' data-gp-id='3'>は</span>背（せ）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>かわい<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "たかくて",
+        "alternate_grammar": [],
+        "kanji_answer": "高（たか）くて",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>複数（ふくすう）の特徴（とくちょう）を挙（あ）げる</strong>ために使（つか）われる<strong>カジュアル</strong>で飾（かざ）らない接続詞（せつぞくし）。",
+        "tense": "て",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/771/male_audio/07-リサは背が高くてかわいいです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/りさは背が高くてかわいいです。.mp3",
+        "word_prompt": "高（たか）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たかく": {
+            "en": "Let's try adding something else to the end.",
+            "es": "Prueba con agregar algo más al final.",
+            "fr": "Essayons d'ajouter autre chose à la fin.",
+            "id": "Mari coba menambahkan sesuatu yang lain di bagian akhir."
+          },
+          "たかいと": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Risa is <strong>tall and</strong> cute.",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used to <strong>list several characteristics</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8905",
+      "type": "study_question",
+      "attributes": {
+        "id": 8905,
+        "content": "<span class='study-area-input'>____</span>平和（へいわ）<span class='gp-popout' data-gp-id='28'>な</span>ところ<span class='gp-popout' data-gp-id='32'>に</span>住（す）み<span class='gp-popout' data-gp-id='59'>たい</span>。",
+        "answer": "しずかで",
+        "alternate_grammar": [],
+        "kanji_answer": "静（しず）かで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>複数（ふくすう）の特徴（とくちょう）を挙（あ）げる</strong>ために使（つか）われる<strong>カジュアル</strong>で飾（かざ）らない接続詞（せつぞくし）。",
+        "tense": "て",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/771/male_audio/14-静かで平和なところに住みたい.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/静かで平和なところに住みたい。.mp3",
+        "word_prompt": "静（しず）か",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しずかであり": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          },
+          "しずかであって": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          },
+          "しずかと": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I want to live in a <strong>quiet and</strong> peaceful place.",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used to <strong>list several characteristics</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8906",
+      "type": "study_question",
+      "attributes": {
+        "id": 8906,
+        "content": "ほろさん<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>優（やさ）し<span class='gp-popout' data-gp-id='24'>い</span>。",
+        "answer": "しんせつで",
+        "alternate_grammar": [],
+        "kanji_answer": "親切（しんせつ）で",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>複数（ふくすう）の特徴（とくちょう）を挙（あ）げる</strong>ために使（つか）われる<strong>カジュアル</strong>で飾（かざ）らない接続詞（せつぞくし）。",
+        "tense": "て",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/771/male_audio/06-ホロさんは親切で優しい.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ほろさんは親切で優しい。.mp3",
+        "word_prompt": "親切（しんせつ）",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しんせつであり": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          },
+          "しんせつであって": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          },
+          "しんせつと": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Holo is <strong>kind and</strong> gentle.",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used to <strong>list several characteristics</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8907",
+      "type": "study_question",
+      "attributes": {
+        "id": 8907,
+        "content": "「ルフィさん<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='7'>いい</span>人（ひと）<span class='gp-popout' data-gp-id='2'>です</span>よ<span class='gp-popout' data-gp-id='71'>ね</span>。」<br>「そう<span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='78'>よ</span>。」",
+        "answer": "あかるくて",
+        "alternate_grammar": [],
+        "kanji_answer": "明（あか）るくて",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>複数（ふくすう）の特徴（とくちょう）を挙（あ）げる</strong>ために使（つか）われる<strong>カジュアル</strong>で飾（かざ）らない接続詞（せつぞくし）。",
+        "tense": "て",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/771/male_audio/08-ルフィーさんは明るくていい人ですね.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「ルフィさんは明るくていい人ですよね。」「そうですよ。」.mp3",
+        "word_prompt": "明（あか）る<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あかるく": {
+            "en": "Let's try adding something else to the end.",
+            "es": "Prueba con agregar algo más al final.",
+            "fr": "Essayons d'ajouter autre chose à la fin.",
+            "id": "Mari coba menambahkan sesuatu yang lain di bagian akhir."
+          },
+          "あかるいと": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'Luffy is a <strong>bright and</strong> good-natured person, isn't he?'<br>'That's right.'",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used to <strong>list several characteristics</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8909",
+      "type": "study_question",
+      "attributes": {
+        "id": 8909,
+        "content": "クエンティンさん<span class='gp-popout' data-gp-id='3'>は</span>映画監督（えいがかんとく）<span class='study-area-input'>____</span>俳優（はいゆう）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>複数（ふくすう）の特徴（とくちょう）を挙（あ）げる</strong>ために使（つか）われる<strong>カジュアル</strong>で飾（かざ）らない接続詞（せつぞくし）。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/771/male_audio/01-くウェンティンは監督で俳優です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/クエンティンさんは映画監督で俳優です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "であり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "であって": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          },
+          "と": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Mr. Quentin is a movie director <strong>and</strong> actor.",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used to <strong>list several characteristics</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8910",
+      "type": "study_question",
+      "attributes": {
+        "id": 8910,
+        "content": "<span class='study-area-input'>____</span>冷（つめ）た<span class='gp-popout' data-gp-id='24'>い</span>風（かぜ）<span class='gp-popout' data-gp-id='10'>が</span>吹（ふ）い<span class='gp-popout' data-gp-id='27'>ている</span>。",
+        "answer": "つよくて",
+        "alternate_grammar": [],
+        "kanji_answer": "強（つよ）くて",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>複数（ふくすう）の特徴（とくちょう）を挙（あ）げる</strong>ために使（つか）われる<strong>カジュアル</strong>で飾（かざ）らない接続詞（せつぞくし）。",
+        "tense": "て",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/771/male_audio/10-強くて冷たい風が吹いている.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/強くて冷たい風が吹いている。.mp3",
+        "word_prompt": "強（つよ）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つよく": {
+            "en": "Let's try adding something else to the end.",
+            "es": "Prueba con agregar algo más al final.",
+            "fr": "Essayons d'ajouter autre chose à la fin.",
+            "id": "Mari coba menambahkan sesuatu yang lain di bagian akhir."
+          },
+          "つよいと": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A <strong>strong and</strong> cold wind is blowing.",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used to <strong>list several characteristics</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8911",
+      "type": "study_question",
+      "attributes": {
+        "id": 8911,
+        "content": "ハリー<span class='gp-popout' data-gp-id='6'>の</span>部屋（へや）<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>汚（きたな）<span class='gp-popout' data-gp-id='874'>かった</span>。",
+        "answer": "せまくて",
+        "alternate_grammar": [],
+        "kanji_answer": "狭（せま）くて",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>複数（ふくすう）の特徴（とくちょう）を挙（あ）げる</strong>ために使（つか）われる<strong>カジュアル</strong>で飾（かざ）らない接続詞（せつぞくし）。",
+        "tense": "て",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/771/male_audio/05-ハリーの部屋は狭くて汚かった.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ハリーの部屋は狭くて汚かった。.mp3",
+        "word_prompt": "狭（せま）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "せまく": {
+            "en": "Let's try adding something else to the end.",
+            "es": "Prueba con agregar algo más al final.",
+            "fr": "Essayons d'ajouter autre chose à la fin.",
+            "id": "Mari coba menambahkan sesuatu yang lain di bagian akhir."
+          },
+          "せまいと": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Harry's room was <strong>small and</strong> dirty.",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used to <strong>list several characteristics</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8912",
+      "type": "study_question",
+      "attributes": {
+        "id": 8912,
+        "content": "サーリー<span class='gp-popout' data-gp-id='6'>の</span>部屋（へや）<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>ハリー<span class='gp-popout' data-gp-id='6'>の</span>部屋（へや）<span class='gp-popout' data-gp-id='3'>は</span>綺麗（きれい）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "きたなくて",
+        "alternate_grammar": [],
+        "kanji_answer": "汚（きたな）くて",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>複数（ふくすう）の特徴（とくちょう）を挙（あ）げる</strong>ために使（つか）われる<strong>カジュアル</strong>で飾（かざ）らない接続詞（せつぞくし）。",
+        "tense": "て",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/771/male_audio/03-サーリーの部屋はきたなくてハリーの部屋は綺麗です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/サーリーの部屋は汚くてハリーの部屋は綺麗です。.mp3",
+        "word_prompt": "汚（きたな）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きたなく": {
+            "en": "Let's try adding something else to the end.",
+            "es": "Prueba con agregar algo más al final.",
+            "fr": "Essayons d'ajouter autre chose à la fin.",
+            "id": "Mari coba menambahkan sesuatu yang lain di bagian akhir."
+          },
+          "きたないと": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Sally's room is <strong>dirty</strong>, <strong>and</strong> Harry's room is tidy.",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used to <strong>list several characteristics</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8913",
+      "type": "study_question",
+      "attributes": {
+        "id": 8913,
+        "content": "シンプル<span class='study-area-input'>____</span>便利（べんり）<span class='gp-popout' data-gp-id='28'>な</span>スマホ<span class='gp-popout' data-gp-id='21'>を</span>買（か）<span class='gp-popout' data-gp-id='26'>う</span><span class='gp-popout' data-gp-id='80'>つもりだ</span><span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>複数（ふくすう）の特徴（とくちょう）を挙（あ）げる</strong>ために使（つか）われる<strong>カジュアル</strong>で飾（かざ）らない接続詞（せつぞくし）。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/771/male_audio/04-シンプルで便利なスマホを買うつもりだよ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/シンプルで便利なスマホを買うつもりだよ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "であり": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          },
+          "であって": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          },
+          "と": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I plan to buy a simple <strong>and</strong> convenient smartphone.",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used to <strong>list several characteristics</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8914",
+      "type": "study_question",
+      "attributes": {
+        "id": 8914,
+        "content": "丸（まる）<span class='study-area-input'>____</span>大（おお）き<span class='study-area-input'>____</span>赤（あか）<span class='gp-popout' data-gp-id='24'>い</span>リンゴ<span class='gp-popout' data-gp-id='10'>が</span>大好（だいす）き<span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='78'>よ</span>！",
+        "answer": "くて",
+        "alternate_grammar": [],
+        "kanji_answer": "くて",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>複数（ふくすう）の特徴（とくちょう）を挙（あ）げる</strong>ために使（つか）われる<strong>カジュアル</strong>で飾（かざ）らない接続詞（せつぞくし）。",
+        "tense": "て",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/771/male_audio/09-丸くて大きくて赤いリンゴ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/丸くて大きくて赤いリンゴが大好きですよ！.mp3",
+        "word_prompt": "い-adjective)",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "く": {
+            "en": "Let's try adding something else to the end.",
+            "es": "Prueba con agregar algo más al final.",
+            "fr": "Essayons d'ajouter autre chose à la fin.",
+            "id": "Mari coba menambahkan sesuatu yang lain di bagian akhir."
+          },
+          "と": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I love <strong>big, round</strong>, <strong>and</strong> red apples!",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used to <strong>list several characteristics</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8915",
+      "type": "study_question",
+      "attributes": {
+        "id": 8915,
+        "content": "彼（かれ）<span class='gp-popout' data-gp-id='3'>は</span>アメリカ<span class='gp-popout' data-gp-id='6'>の</span>数学者（すうがくしゃ）<span class='study-area-input'>____</span>大学教授（だいがくきょうじゅ）<span class='gp-popout' data-gp-id='40'>だった</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>複数（ふくすう）の特徴（とくちょう）を挙（あ）げる</strong>ために使（つか）われる<strong>カジュアル</strong>で飾（かざ）らない接続詞（せつぞくし）。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/771/male_audio/11-彼はアメリカの数学者で大学教授だった.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼はアメリカの数学者で大学教授だった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "であり": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          },
+          "であって": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          },
+          "と": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He was an American mathematician <strong>and</strong> a university professor.",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used to <strong>list several characteristics</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 771,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "118",
+      "type": "writeup",
+      "attributes": {
+        "id": 118,
+        "body_ja": "",
+        "body": "<p>The <span data-gp-id='769'>て</span> form of an <span data-gp-id='24'>い-Adjective</span>, or <span data-gp-id='769'>で</span> form of a noun (or <span data-gp-id='28'>な-Adjective</span>) is exactly the same as the <span data-gp-id='416'>て</span> form of a verb, in that it carries the meaning of 'and', and is used for linking.</p>\r\n\r\n<p>Building on from the <span data-gp-id='769'>adjective +て, noun + で</span> grammar point, instead of linking adjectives, <span data-gp-id='771'>adjective + て + (B)</span> is used for linking an adjective to an entire phrase. With this construction, the phrase is simply added after <span data-gp-id='769'>て</span> (with <span data-gp-id='24'>い-Adjectives</span>), or <span data-gp-id='769'>で</span> (with nouns and <span data-gp-id='28'>な-Adjectives</span>), without any extra consideration for the phrase following it (this means that the (B) phrase will behave as if it was its own sentence).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155434'>\r\n<li data-study-question='155435'>\r\n<li data-study-question='155436'>\r\n</ul>\r\n\r\n<p>As with <span data-gp-id='769'>adjective +て, noun + で</span>, it should be noted that <span data-gp-id='769'>て</span> and <span data-gp-id='769'>で</span> are different structures here. <span data-gp-id='416'>て</span> is the same conjunction particle that is used with verbs (meaning that <span data-gp-id='24'>い-Adjectives</span> are similar to verbs), while <span data-gp-id='1'>で</span> is actually a form of <span data-gp-id='1'>だ</span> that is used for conjugation. It is the same <span data-gp-id='436'>で</span> as the one that is used in the formal version of <span data-gp-id='1'>だ</span>, <span data-gp-id='436'>である</span>. Which we will learn later.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>Like other <span data-gp-id='416'>て</span> forms (<span data-gp-id='27'>ている 1</span>, <span data-gp-id='764'>ている 2</span>, and <span data-gp-id='765'>ている 3</span>), the <span data-gp-id='416'>て</span> (or <span data-gp-id='436'>で</span>) form of other words can have several possible meanings. These meanings are as follows.</p>\r\n\r\n<p>Linking - Like 'and' in English.</p>\r\n\r\n<p>Reasons - Like 'with (A)', or 'because of (A)' in English.</p>\r\n\r\n<p>Manner - Like 'to do (B) in an (A) way' in English.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183823'>\r\n<li data-study-question='183824'>\r\n<li data-study-question='183825'>\r\n</ul>\r\n</section>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>As with all other conjugations of <span data-gp-id='7'>いい</span>, remember that it will be よくて, and not いくて.</p></section>"
+      }
+    },
+    {
+      "id": "1279",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1279,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 103",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2009",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2009,
+        "site": "Tae Kim",
+        "description": "Expressing a sequence of states",
+        "link": "https://guidetojapanese.org/learn/grammar/compound",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1239",
+      "type": "related_content",
+      "attributes": {
+        "id": 1239,
+        "relationship_type": "related",
+        "body": "Both of these patterns involve connecting an adjective or noun phrase to the rest of the sentence using the て form. The meaning of the connection depends on context. Sometimes it simply links words, as in 大きくてきれい ('big and pretty'), while in other cases, the first part may provide a reason for the second, as in 甘くておいしい ('sweet and tasty').",
+        "first_relatable": {
+          "id": 769,
+          "slug": "adjective-て-noun-で",
+          "title": "Adjective + て・Noun + で",
+          "meaning": "And... (Conjunctive)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 771,
+          "slug": "adjective-て-b",
+          "title": "Adjective + て + B",
+          "meaning": "And..., Both and (Conjunctive)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1300",
+      "type": "related_content",
+      "attributes": {
+        "id": 1300,
+        "relationship_type": "related",
+        "body": "し～し lists multiple reasons, similar to 'because of A, B, and so on' in English. In contrast, Adjective + て + B just connects adjectives. While it can imply the first quality supports the second (e.g. 甘くておいしい = 'sweet and delicious'), it doesn't suggest a broader conclusion. し often implies one, as in 甘いし、おいしいし, meaning 'It's sweet and delicious… (so I like it).'",
+        "first_relatable": {
+          "id": 141,
+          "slug": "し-し",
+          "title": "し～し ",
+          "meaning": "And, Giving reasons",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 771,
+          "slug": "adjective-て-b",
+          "title": "Adjective + て + B",
+          "meaning": "And..., Both and (Conjunctive)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1494 @@
+{
+  "data": {
+    "id": "8",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 8,
+      "level": "JLPT5",
+      "lesson_id": 1,
+      "part_of_speech": "助詞",
+      "register": "一般",
+      "word_type": "終助詞",
+      "slug": "か",
+      "nuance": "<strong>不明（ふめい）な点（てん）</strong>がある時（とき）や<strong>質問（しつもん）</strong>をするときに使（つか）われる文法（ぶんぽう）。",
+      "grammar_order": 12,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 10,
+        "title": "が",
+        "slug": "が"
+      },
+      "previous_grammar_point": {
+        "id": 28,
+        "title": "な-Adjectives",
+        "slug": "な-adjectives"
+      },
+      "lesson_count": "12/12",
+      "title": "か",
+      "furigana": "か",
+      "meaning": "Question marking particle",
+      "nuance_translation": "A grammar point used to <strong>express uncertainty</strong> or <strong>direct questions</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "か is also often used to mark uncertainty/doubt",
+      "polite_structure": "",
+      "casual_structure": "Phrase + <strong>か</strong>",
+      "part_of_speech_translation": "Particle",
+      "register_translation": "Standard",
+      "word_type_translation": "Sentence Ending Particle",
+      "discourse_link": "https://community.bunpro.jp/t/discussion-topic/480",
+      "metadata": "か, ka, particle, sentence-ending particle, question-marking particle, interrogative particle, ?, question mark, uncertainty"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154721",
+            "type": "study_question"
+          },
+          {
+            "id": "154720",
+            "type": "study_question"
+          },
+          {
+            "id": "154725",
+            "type": "study_question"
+          },
+          {
+            "id": "154724",
+            "type": "study_question"
+          },
+          {
+            "id": "154723",
+            "type": "study_question"
+          },
+          {
+            "id": "154722",
+            "type": "study_question"
+          },
+          {
+            "id": "8",
+            "type": "study_question"
+          },
+          {
+            "id": "618",
+            "type": "study_question"
+          },
+          {
+            "id": "619",
+            "type": "study_question"
+          },
+          {
+            "id": "620",
+            "type": "study_question"
+          },
+          {
+            "id": "621",
+            "type": "study_question"
+          },
+          {
+            "id": "1528",
+            "type": "study_question"
+          },
+          {
+            "id": "1529",
+            "type": "study_question"
+          },
+          {
+            "id": "1530",
+            "type": "study_question"
+          },
+          {
+            "id": "1531",
+            "type": "study_question"
+          },
+          {
+            "id": "1532",
+            "type": "study_question"
+          },
+          {
+            "id": "1533",
+            "type": "study_question"
+          },
+          {
+            "id": "1534",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "12",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "739",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1089",
+            "type": "offline_resource"
+          },
+          {
+            "id": "66",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1273",
+            "type": "offline_resource"
+          },
+          {
+            "id": "3",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1334",
+            "type": "related_content"
+          },
+          {
+            "id": "35",
+            "type": "related_content"
+          },
+          {
+            "id": "34",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "16",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "15",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "17",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154721",
+      "type": "study_question",
+      "attributes": {
+        "id": 154721,
+        "content": "あなた<span class=\"gp-popout\" data-gp-id=\"6\">の</span>アパート<span class=\"gp-popout\" data-gp-id=\"3\">は</span>大（おお）き<span class=\"gp-popout\" data-gp-id=\"24\">い</span><span class=\"gp-popout\" data-gp-id=\"2\">です</span><span class='study-area-input'>____</span>。",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あなたのアパートは大きいですか。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Is your apartment big<strong>?</strong> (Plain question)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154720",
+      "type": "study_question",
+      "attributes": {
+        "id": 154720,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"5\">これ</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span>コップ<span class=\"gp-popout\" data-gp-id=\"2\">です</span><span class='study-area-input'>____</span>。",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これはコップですか。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Is this a cup<strong>?</strong> (Plain question)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154725",
+      "type": "study_question",
+      "attributes": {
+        "id": 154725,
+        "content": "大丈夫（だいじょうぶ）<span class='study-area-input'>____</span>？",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/大丈夫か？.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Are you okay<strong>?</strong> (Very casual pattern)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154724",
+      "type": "study_question",
+      "attributes": {
+        "id": 154724,
+        "content": "大丈夫（だいじょうぶ）<span class=\"gp-popout\" data-gp-id=\"2\">です</span><span class='study-area-input'>____</span>？",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/大丈夫ですか？.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Are you okay<strong>?</strong> (Standard pattern)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154723",
+      "type": "study_question",
+      "attributes": {
+        "id": 154723,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"5\">これ</span>は何（なに）<span class='study-area-input'>____</span>分（わ）からない。",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これは何か分からない。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I don't know what this is. <strong>(Expressing uncertainty, but not a question)</strong>",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154722",
+      "type": "study_question",
+      "attributes": {
+        "id": 154722,
+        "content": "美味（おい）し<span class=\"gp-popout\" data-gp-id=\"24\">い</span><span class='study-area-input'>____</span>分（わ）からない。",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/美味しいか分からない。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I don't know if this is delicious or not. <strong>(Expressing uncertainty, but not a question)</strong>",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8",
+      "type": "study_question",
+      "attributes": {
+        "id": 8,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span>ペン<span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>不明（ふめい）な点（てん）</strong>がある時（とき）や<strong>質問（しつもん）</strong>をするときに使（つか）われる文法（ぶんぽう）。",
+        "tense": "",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/8/male_audio/07-これはペンですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これはペンですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かい": {
+            "en": "Can you remove something from the end?",
+            "es": "Prueba a quitar algo del final.",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          },
+          "ですか": {
+            "en": "(ಠ_ಠ)",
+            "es": "(ಠ_ಠ)",
+            "fr": "(ಠ_ಠ).",
+            "id": "(ಠ_ಠ)"
+          }
+        },
+        "wrong_answers": {
+          "の": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "な": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "ね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "が": {
+            "en": "Could you try checking your spelling?",
+            "es": "Comprueba que lo has escrito bien.",
+            "fr": "Pouvez-vous vérifier votre orthographe ?",
+            "id": "Mungkin coba periksa lagi ejaanmu?"
+          }
+        },
+        "translation": "Is this a pen<strong>?</strong>",
+        "nuance_translation": "A grammar point used to <strong>express uncertainty</strong> or <strong>direct questions</strong>.",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "618",
+      "type": "study_question",
+      "attributes": {
+        "id": 618,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span>本（ほん）<span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>不明（ふめい）な点（てん）</strong>がある時（とき）や<strong>質問（しつもん）</strong>をするときに使（つか）われる文法（ぶんぽう）。",
+        "tense": "Interrogative, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/8/male_audio/これは本ですか-2.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これは本ですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ですか": {
+            "en": "(ಠ_ಠ)",
+            "es": "(ಠ_ಠ)",
+            "fr": "(ಠ_ಠ).",
+            "id": "(ಠ_ಠ)"
+          }
+        },
+        "wrong_answers": {
+          "の": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "な": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "ね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "が": {
+            "en": "The spelling you have entered is incorrect.",
+            "es": "Lo has escrito de manera incorrecta.",
+            "fr": "L'orthographe saisie est incorrecte.",
+            "id": "Ejaan yang kamu masukkan tidak benar."
+          }
+        },
+        "translation": "Is this a book<strong>?</strong>",
+        "nuance_translation": "A grammar point used to <strong>express uncertainty</strong> or <strong>direct questions</strong>.",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "619",
+      "type": "study_question",
+      "attributes": {
+        "id": 619,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span>あなた<span class='gp-popout' data-gp-id='6'>の</span>本（ほん）<span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>不明（ふめい）な点（てん）</strong>がある時（とき）や<strong>質問（しつもん）</strong>をするときに使（つか）われる文法（ぶんぽう）。",
+        "tense": "Interrogative, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/8/male_audio/03-これはあなたの本ですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これはあなたの本ですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ですか": {
+            "en": "(ಠ_ಠ)",
+            "es": "(ಠ_ಠ)",
+            "fr": "(ಠ_ಠ).",
+            "id": "(ಠ_ಠ)"
+          }
+        },
+        "wrong_answers": {
+          "の": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "な": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "ね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "が": {
+            "en": "The spelling you have entered is incorrect.",
+            "es": "Lo has escrito de manera incorrecta.",
+            "fr": "L'orthographe saisie est incorrecte.",
+            "id": "Ejaan yang kamu masukkan tidak benar."
+          }
+        },
+        "translation": "Is this your book<strong>?</strong>",
+        "nuance_translation": "A grammar point used to <strong>express uncertainty</strong> or <strong>direct questions</strong>.",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "620",
+      "type": "study_question",
+      "attributes": {
+        "id": 620,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='4'>も</span>あなた<span class='gp-popout' data-gp-id='6'>の</span>本（ほん）<span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>不明（ふめい）な点（てん）</strong>がある時（とき）や<strong>質問（しつもん）</strong>をするときに使（つか）われる文法（ぶんぽう）。",
+        "tense": "Interrogative, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/8/male_audio/10-これもあなたの本ですかrerec.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これもあなたの本ですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ですか": {
+            "en": "(ಠ_ಠ)",
+            "es": "(ಠ_ಠ)",
+            "fr": "(ಠ_ಠ).",
+            "id": "(ಠ_ಠ)"
+          }
+        },
+        "wrong_answers": {
+          "の": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "な": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "ね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "が": {
+            "en": "The spelling you have entered is incorrect.",
+            "es": "Lo has escrito de manera incorrecta.",
+            "fr": "L'orthographe saisie est incorrecte.",
+            "id": "Ejaan yang kamu masukkan tidak benar."
+          }
+        },
+        "translation": "Is this also your book<strong>?</strong>",
+        "nuance_translation": "A grammar point used to <strong>express uncertainty</strong> or <strong>direct questions</strong>.",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "621",
+      "type": "study_question",
+      "attributes": {
+        "id": 621,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='7'>いい</span><span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>不明（ふめい）な点（てん）</strong>がある時（とき）や<strong>質問（しつもん）</strong>をするときに使（つか）われる文法（ぶんぽう）。",
+        "tense": "Interrogative, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/8/male_audio/04-これはいいですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これはいいですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ですか": {
+            "en": "(ಠ_ಠ)",
+            "es": "(ಠ_ಠ)",
+            "fr": "(ಠ_ಠ).",
+            "id": "(ಠ_ಠ)"
+          }
+        },
+        "wrong_answers": {
+          "の": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con otra partícula.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "な": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con otra partícula.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "よ": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con otra partícula.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "わ": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con otra partícula.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "ね": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con otra partícula.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "よね": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con otra partícula.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "が": {
+            "en": "Could you try checking your spelling?",
+            "es": "Comprueba que lo has escrito bien.",
+            "fr": "Pouvez-vous vérifier votre orthographe ?",
+            "id": "Mungkin coba periksa lagi ejaanmu?"
+          }
+        },
+        "translation": "Is this good<strong>?</strong>",
+        "nuance_translation": "A grammar point used to <strong>express uncertainty</strong> or <strong>direct questions</strong>.",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1528",
+      "type": "study_question",
+      "attributes": {
+        "id": 1528,
+        "content": "明日（あした）<span class='gp-popout' data-gp-id='4'>も</span><span class='gp-popout' data-gp-id='7'>いい</span><span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>不明（ふめい）な点（てん）</strong>がある時（とき）や<strong>質問（しつもん）</strong>をするときに使（つか）われる文法（ぶんぽう）。",
+        "tense": "Interrogative, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/8/male_audio/11-明日もいいですかrerec.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/明日もいいですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ですか": {
+            "en": "(ಠ_ಠ)",
+            "es": "(ಠ_ಠ)",
+            "fr": "(ಠ_ಠ).",
+            "id": "(ಠ_ಠ)"
+          }
+        },
+        "wrong_answers": {
+          "の": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "な": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "ね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "が": {
+            "en": "Could you try checking your spelling?",
+            "es": "Comprueba que lo has escrito bien.",
+            "fr": "Pouvez-vous vérifier votre orthographe ?",
+            "id": "Mungkin coba periksa lagi ejaanmu?"
+          }
+        },
+        "translation": "Is tomorrow also good<strong>?</strong>",
+        "nuance_translation": "A grammar point used to <strong>express uncertainty</strong> or <strong>direct questions</strong>.",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1529",
+      "type": "study_question",
+      "attributes": {
+        "id": 1529,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span>、ユウキさん<span class='gp-popout' data-gp-id='6'>の</span>お母（かあ）さん<span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>不明（ふめい）な点（てん）</strong>がある時（とき）や<strong>質問（しつもん）</strong>をするときに使（つか）われる文法（ぶんぽう）。",
+        "tense": "Interrogative, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/8/male_audio/08-これはユウキさんのお母さんですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これは、ユウキさんのお母さんですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ですか": {
+            "en": "(ಠ_ಠ)",
+            "es": "(ಠ_ಠ)",
+            "fr": "(ಠ_ಠ).",
+            "id": "(ಠ_ಠ)"
+          }
+        },
+        "wrong_answers": {
+          "の": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "な": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "が": {
+            "en": "Could you try checking your spelling?",
+            "es": "Comprueba que lo has escrito bien.",
+            "fr": "Pouvez-vous vérifier votre orthographe ?",
+            "id": "Mungkin coba periksa lagi ejaanmu?"
+          }
+        },
+        "translation": "Is this Yuki's mother<strong>?</strong>",
+        "nuance_translation": "A grammar point used to <strong>express uncertainty</strong> or <strong>direct questions</strong>.",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1530",
+      "type": "study_question",
+      "attributes": {
+        "id": 1530,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span>ゾンビ<span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>不明（ふめい）な点（てん）</strong>がある時（とき）や<strong>質問（しつもん）</strong>をするときに使（つか）われる文法（ぶんぽう）。",
+        "tense": "Interrogative, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/8/male_audio/06-これはゾンビですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これはゾンビですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ですか": {
+            "en": "(ಠ_ಠ)",
+            "es": "(ಠ_ಠ)",
+            "fr": "(ಠ_ಠ).",
+            "id": "(ಠ_ಠ)"
+          }
+        },
+        "wrong_answers": {
+          "の": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "な": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "ね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "が": {
+            "en": "Could you try checking your spelling?",
+            "es": "Comprueba que lo has escrito bien.",
+            "fr": "Pouvez-vous vérifier votre orthographe ?",
+            "id": "Mungkin coba periksa lagi ejaanmu?"
+          }
+        },
+        "translation": "Is this a zombie<strong>?</strong>",
+        "nuance_translation": "A grammar point used to <strong>express uncertainty</strong> or <strong>direct questions</strong>.",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1531",
+      "type": "study_question",
+      "attributes": {
+        "id": 1531,
+        "content": "お元気（げんき）<span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>不明（ふめい）な点（てん）</strong>がある時（とき）や<strong>質問（しつもん）</strong>をするときに使（つか）われる文法（ぶんぽう）。",
+        "tense": "Interrogative, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/8/male_audio/02-おげんきですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/お元気ですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ですか": {
+            "en": "(ಠ_ಠ)",
+            "es": "(ಠ_ಠ)",
+            "fr": "(ಠ_ಠ).",
+            "id": "(ಠ_ಠ)"
+          }
+        },
+        "wrong_answers": {
+          "の": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "な": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "ね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "が": {
+            "en": "Could you try checking your spelling?",
+            "es": "Comprueba que lo has escrito bien.",
+            "fr": "Pouvez-vous vérifier votre orthographe ?",
+            "id": "Mungkin coba periksa lagi ejaanmu?"
+          }
+        },
+        "translation": "How are you<strong>?</strong>",
+        "nuance_translation": "A grammar point used to <strong>express uncertainty</strong> or <strong>direct questions</strong>.",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1532",
+      "type": "study_question",
+      "attributes": {
+        "id": 1532,
+        "content": "映画（えいが）<span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='7'>いい</span><span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>不明（ふめい）な点（てん）</strong>がある時（とき）や<strong>質問（しつもん）</strong>をするときに使（つか）われる文法（ぶんぽう）。",
+        "tense": "Interrogative, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/8/male_audio/01-えいがはいいですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/映画はいいですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ですか": {
+            "en": "(ಠ_ಠ)",
+            "es": "(ಠ_ಠ)",
+            "fr": "(ಠ_ಠ).",
+            "id": "(ಠ_ಠ)"
+          }
+        },
+        "wrong_answers": {
+          "ね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "の": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "な": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "が": {
+            "en": "Could you try checking your spelling?",
+            "es": "Comprueba que lo has escrito bien.",
+            "fr": "Pouvez-vous vérifier votre orthographe ?",
+            "id": "Mungkin coba periksa lagi ejaanmu?"
+          }
+        },
+        "translation": "Is the movie good<strong>?</strong>",
+        "nuance_translation": "A grammar point used to <strong>express uncertainty</strong> or <strong>direct questions</strong>.",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1533",
+      "type": "study_question",
+      "attributes": {
+        "id": 1533,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='7'>よくない</span><span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>不明（ふめい）な点（てん）</strong>がある時（とき）や<strong>質問（しつもん）</strong>をするときに使（つか）われる文法（ぶんぽう）。",
+        "tense": "Interrogative, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/8/male_audio/05-これはよくないですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これはよくないですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ですか": {
+            "en": "(ಠ_ಠ)",
+            "es": "(ಠ_ಠ)",
+            "fr": "(ಠ_ಠ).",
+            "id": "(ಠ_ಠ)"
+          }
+        },
+        "wrong_answers": {
+          "ね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "の": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "な": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "が": {
+            "en": "Could you try checking your spelling?",
+            "es": "Comprueba que lo has escrito bien.",
+            "fr": "Pouvez-vous vérifier votre orthographe ?",
+            "id": "Mungkin coba periksa lagi ejaanmu?"
+          }
+        },
+        "translation": "Is this not good<strong>?</strong>",
+        "nuance_translation": "A grammar point used to <strong>express uncertainty</strong> or <strong>direct questions</strong>.",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1534",
+      "type": "study_question",
+      "attributes": {
+        "id": 1534,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span>、必要（ひつよう）<span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。",
+        "answer": "か",
+        "alternate_grammar": [],
+        "kanji_answer": "か",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>不明（ふめい）な点（てん）</strong>がある時（とき）や<strong>質問（しつもん）</strong>をするときに使（つか）われる文法（ぶんぽう）。",
+        "tense": "Interrogative, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/8/male_audio/09-これは必要ですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これは、必要ですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ですか": {
+            "en": "(ಠ_ಠ)",
+            "es": "(ಠ_ಠ)",
+            "fr": "(ಠ_ಠ).",
+            "id": "(ಠ_ಠ)"
+          }
+        },
+        "wrong_answers": {
+          "ね": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "の": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "な": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "よ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "が": {
+            "en": "Could you try checking your spelling?",
+            "es": "Comprueba que lo has escrito bien.",
+            "fr": "Pouvez-vous vérifier votre orthographe ?",
+            "id": "Mungkin coba periksa lagi ejaanmu?"
+          }
+        },
+        "translation": "Is this necessary<strong>?</strong>",
+        "nuance_translation": "A grammar point used to <strong>express uncertainty</strong> or <strong>direct questions</strong>.",
+        "extra_info": "",
+        "reviewable_id": 8,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "12",
+      "type": "writeup",
+      "attributes": {
+        "id": 12,
+        "body_ja": "",
+        "body": "<p><span data-gp-id='8'>か</span> is a particle that frequently comes at the end of sentences in Japanese, and carries the same meaning as a question mark in English. (It is not limited to appearing at the end of sentences, however). In addition to questions, <span data-gp-id='727'>か</span> can also express uncertainty about something, without strictly being a question.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154720'>\r\n<li data-study-question='154721'>\r\n<li data-study-question='154722'>\r\n<li data-study-question='154723'></ul>\r\n\r\n<p><span data-gp-id='8'>か</span> regularly comes after the polite form of words, such as ～<span data-gp-id='2'>です</span><span data-gp-id='8'>か</span>, ～ます<span data-gp-id='8'>か</span>. However, in casual conversation, <span data-gp-id='8'>か</span> can be used directly after the word that the speaker is showing uncertainty about.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154724'>\r\n<li data-study-question='154725'></ul>\r\n\r\n<p>Both examples are grammatically correct, but the sentence without <span data-gp-id='2'>です</span> may be considered rude by some people (as it sounds too familiar/direct).</p>"
+      }
+    },
+    {
+      "id": "739",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 739,
+        "source": "みんなの日本語 I",
+        "location": "Page 14 [CH 1]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1089",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1089,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 14, 45 & 166",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "66",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 66,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 43",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1273",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1273,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 96",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "3",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 3,
+        "source": "Genki I 3rd Edition",
+        "location": "Page 42",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "16",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 16,
+        "site": "Elon",
+        "description": "Overview with examples",
+        "link": "https://elon.io/learn-japanese/lesson/the-question-particle-%E3%81%8B",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "15",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 15,
+        "site": "Tae Kim",
+        "description": "Questions in polite form",
+        "link": "https://guidetojapanese.org/learn/grammar/question",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "17",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 17,
+        "site": "Imabi",
+        "description": "Intro and 'Basic Questions in Plain Speech'",
+        "link": "https://imabi.org/the-particle-ka-%e3%81%8b-i-basic-questions/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1334",
+      "type": "related_content",
+      "attributes": {
+        "id": 1334,
+        "relationship_type": "antonym",
+        "body": "よ is a common sentence-ending particle used for emphasis, often indicating that the speaker is providing new information (e.g., 面白いですよ = 'It's interesting, I'm telling you!'). In contrast, か is the standard question particle, which has the opposite function, asking for information (e.g., 面白いですか？ = 'Is it interesting?').",
+        "first_relatable": {
+          "id": 78,
+          "slug": "よ",
+          "title": "よ",
+          "meaning": "Emphasis (Sentence ending particle)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 8,
+          "slug": "か",
+          "title": "か",
+          "meaning": "Question marking particle",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "35",
+      "type": "related_content",
+      "attributes": {
+        "id": 35,
+        "relationship_type": "related",
+        "body": "か is the standard question particle, used at the end of sentences to ask questions (e.g., どんな本が好きですか？ = 'What kind of books do you like?') and also within other grammar patterns. っけ, on the other hand, is a casual sentence-ending particle used when trying to recall something (e.g., 名前はなんだっけ？ = 'What was his name again?').",
+        "first_relatable": {
+          "id": 8,
+          "slug": "か",
+          "title": "か",
+          "meaning": "Question marking particle",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 308,
+          "slug": "っけ",
+          "title": "っけ",
+          "meaning": "What is…again?, Was it... that... ?, Did you say...?",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "34",
+      "type": "related_content",
+      "attributes": {
+        "id": 34,
+        "relationship_type": "synonym",
+        "body": "か is the standard question particle, used at the end of sentences to form questions (e.g., どんな本が好きですか？ = 'What kind of books do you like?'). It also appears in the middle of other grammar patterns. かい is a casual, informal question particle often used by older men at the end of yes/no questions (e.g., 元気かい？ = 'Are you feeling okay?').",
+        "first_relatable": {
+          "id": 8,
+          "slug": "か",
+          "title": "か",
+          "meaning": "Question marking particle",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 175,
+          "slug": "かい",
+          "title": "かい",
+          "meaning": "Question marker",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

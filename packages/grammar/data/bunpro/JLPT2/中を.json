@@ -1,0 +1,801 @@
+{
+  "data": {
+    "id": "429",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 429,
+      "level": "JLPT2",
+      "lesson_id": 32,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "中を",
+      "nuance": "(A)の<strong>内側（うちがわ）</strong>が(B)の舞台（ぶたい）となる面（めん）や面積（めんせき）であることを強調（きょうちょう）する時（とき）に使（つか）う表現（ひょうげん）。",
+      "grammar_order": 554,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 687,
+        "title": "を中心に",
+        "slug": "を中心に"
+      },
+      "previous_grammar_point": {
+        "id": 508,
+        "title": "途中に・途中で",
+        "slug": "途中に・途中で"
+      },
+      "lesson_count": "6/24",
+      "title": "中を",
+      "furigana": "中（なか）を",
+      "meaning": "In, On, Into, Inside of",
+      "nuance_translation": "An expression which highlights the <strong>inside of</strong> (A) as being the surface or area for which (B) takes place.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Noun + <span class='chui'><span class='gp-popout' data-gp-id='6'>の</span></span> + <strong>中（なか）<span class='gp-popout' data-gp-id='21'>を</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/11264",
+      "metadata": "中を, なかを, nakawo, nakao, expression, noun, case-marking particle"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "6617",
+            "type": "study_question"
+          },
+          {
+            "id": "6623",
+            "type": "study_question"
+          },
+          {
+            "id": "181761",
+            "type": "study_question"
+          },
+          {
+            "id": "181762",
+            "type": "study_question"
+          },
+          {
+            "id": "2313",
+            "type": "study_question"
+          },
+          {
+            "id": "184391",
+            "type": "study_question"
+          },
+          {
+            "id": "6620",
+            "type": "study_question"
+          },
+          {
+            "id": "6621",
+            "type": "study_question"
+          },
+          {
+            "id": "6622",
+            "type": "study_question"
+          },
+          {
+            "id": "6618",
+            "type": "study_question"
+          },
+          {
+            "id": "6615",
+            "type": "study_question"
+          },
+          {
+            "id": "2312",
+            "type": "study_question"
+          },
+          {
+            "id": "2314",
+            "type": "study_question"
+          },
+          {
+            "id": "6619",
+            "type": "study_question"
+          },
+          {
+            "id": "6616",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "569",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": []
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "946",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "6617",
+      "type": "study_question",
+      "attributes": {
+        "id": 6617,
+        "content": "あの箱（はこ）の<span class='study-area-input'>____</span>覗（のぞ）いてみたら、空（から）っぽだった。",
+        "answer": "なかを",
+        "alternate_grammar": [],
+        "kanji_answer": "中（なか）を",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>内側（うちがわ）</strong>が(B)の舞台（ぶたい）となる面（めん）や面積（めんせき）であることを強調（きょうちょう）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Concrete",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あの箱の中を覗いてみたら、空っぽだった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なか": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なかで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "うち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "うちを": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "When I peeked <strong>into</strong> that box, I saw that it was empty.",
+        "nuance_translation": "An expression which highlights the <strong>inside of</strong> (A) as being the surface or area for which (B) takes place.",
+        "extra_info": "",
+        "reviewable_id": 429,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6623",
+      "type": "study_question",
+      "attributes": {
+        "id": 6623,
+        "content": "スーパーの<span class='study-area-input'>____</span>行（い）ったり来（き）たりして、安（やす）い商品（しょうひん）を探（さが）した。",
+        "answer": "なかを",
+        "alternate_grammar": [],
+        "kanji_answer": "中（なか）を",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>内側（うちがわ）</strong>が(B)の舞台（ぶたい）となる面（めん）や面積（めんせき）であることを強調（きょうちょう）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Concrete",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/スーパーの中を行ったり来たりして、安い商品を探した。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なか": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なかで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "うち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "うちを": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He looked for cheap merchandise, going to and from <strong>inside of</strong> the supermarket.",
+        "nuance_translation": "An expression which highlights the <strong>inside of</strong> (A) as being the surface or area for which (B) takes place.",
+        "extra_info": "",
+        "reviewable_id": 429,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181761",
+      "type": "study_question",
+      "attributes": {
+        "id": 181761,
+        "content": "家（いえ）に帰（かえ）ってきたら、まずは弁当（べんとう）箱（ばこ）の<span class='study-area-input'>____</span>空（から）にしてっていつも言（い）ってるじゃん！",
+        "answer": "なかを",
+        "alternate_grammar": [],
+        "kanji_answer": "中（なか）を",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/家に帰ってきたら、まずは弁当箱の中を空にしてっていつも言ってるじゃん！.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I always tell you to empty out the <strong>inside</strong> of the lunch box first thing when you come home, don't I?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 429,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181762",
+      "type": "study_question",
+      "attributes": {
+        "id": 181762,
+        "content": "スーパーの<span class='study-area-input'>____</span>何（なに）も買（か）わずにウロウロしていたら、警備員（けいびいん）のおじさんに怪（あや）しまれて声（こえ）をかけられた。",
+        "answer": "なかを",
+        "alternate_grammar": [],
+        "kanji_answer": "中（なか）を",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/スーパーの中を何も買わずにウロウロしていたら、警備員のおじさんに怪しまれて声をかけられた。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "When I was wandering around (<strong>inside</strong>) the supermarket without buying anything, the security guard thought I was suspicious so he came to talk to me.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 429,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2313",
+      "type": "study_question",
+      "attributes": {
+        "id": 2313,
+        "content": "トンネルの<span class='study-area-input'>____</span>覗（のぞ）く。",
+        "answer": "なかを",
+        "alternate_grammar": [],
+        "kanji_answer": "中（なか）を",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>内側（うちがわ）</strong>が(B)の舞台（ぶたい）となる面（めん）や面積（めんせき）であることを強調（きょうちょう）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Concrete",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/トンネルの中を覗く。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なかで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "うち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "うちを": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I will peer <strong>into</strong> a tunnel.",
+        "nuance_translation": "An expression which highlights the <strong>inside of</strong> (A) as being the surface or area for which (B) takes place.",
+        "extra_info": "",
+        "reviewable_id": 429,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184391",
+      "type": "study_question",
+      "attributes": {
+        "id": 184391,
+        "content": "子供（こども）が妙（みょう）に静（しず）かだな〜と思（おも）い、子供（こども）部屋（べや）の<span class='study-area-input'>____</span>覗（のぞ）いてみたらただ寝（ね）ていただけだった。",
+        "answer": "なかを",
+        "alternate_grammar": [],
+        "kanji_answer": "中（なか）を",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/子供が妙に静かだな〜と思い、子供部屋の中を覗いてみたらただ寝ていただけだった。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I thought, 'My kid is suspiciously quiet', so I peeked <strong>into</strong> their room, but they were just sleeping.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 429,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6620",
+      "type": "study_question",
+      "attributes": {
+        "id": 6620,
+        "content": "家（いえ）の<span class='study-area-input'>____</span>自動（じどう）で掃除（そうじ）してくれるロボットが流行（はや）っています。",
+        "answer": "なかを",
+        "alternate_grammar": [],
+        "kanji_answer": "中（なか）を",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>内側（うちがわ）</strong>が(B)の舞台（ぶたい）となる面（めん）や面積（めんせき）であることを強調（きょうちょう）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Concrete",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/家の中を自動で掃除してくれるロボットが流行っています。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なか": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なかで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "うち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "うちを": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Robots that automatically clean the <strong>inside of</strong> your house are popular.",
+        "nuance_translation": "An expression which highlights the <strong>inside of</strong> (A) as being the surface or area for which (B) takes place.",
+        "extra_info": "",
+        "reviewable_id": 429,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6621",
+      "type": "study_question",
+      "attributes": {
+        "id": 6621,
+        "content": "久々（ひさびさ）に車（くるま）の<span class='study-area-input'>____</span>掃除（そうじ）できて良（よ）かった。",
+        "answer": "なかを",
+        "alternate_grammar": [],
+        "kanji_answer": "中（なか）を",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>内側（うちがわ）</strong>が(B)の舞台（ぶたい）となる面（めん）や面積（めんせき）であることを強調（きょうちょう）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Concrete",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/久々に車の中を掃除できて良かった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なか": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なかで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "うち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "うちを": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I am glad I was able to clean the <strong>inside of</strong> the car for the first time in a long time.",
+        "nuance_translation": "An expression which highlights the <strong>inside of</strong> (A) as being the surface or area for which (B) takes place.",
+        "extra_info": "",
+        "reviewable_id": 429,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6622",
+      "type": "study_question",
+      "attributes": {
+        "id": 6622,
+        "content": "心（こころ）の<span class='study-area-input'>____</span>知（し）られないように、いつもポーカーフェイスでいる。",
+        "answer": "なかを",
+        "alternate_grammar": [],
+        "kanji_answer": "中（なか）を",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>内側（うちがわ）</strong>が(B)の舞台（ぶたい）となる面（めん）や面積（めんせき）であることを強調（きょうちょう）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Concrete",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/心の中を知られないように、いつもポーカーフェイスでいる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なか": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なかで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "うち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "うちを": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "So that you can't know what is going on <strong>inside of</strong> his mind, he always puts on a poker face.",
+        "nuance_translation": "An expression which highlights the <strong>inside of</strong> (A) as being the surface or area for which (B) takes place.",
+        "extra_info": "",
+        "reviewable_id": 429,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6618",
+      "type": "study_question",
+      "attributes": {
+        "id": 6618,
+        "content": "ペットボトルの<span class='study-area-input'>____</span>ちゃんと洗（あら）ってください。",
+        "answer": "なかを",
+        "alternate_grammar": [],
+        "kanji_answer": "中（なか）を",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>内側（うちがわ）</strong>が(B)の舞台（ぶたい）となる面（めん）や面積（めんせき）であることを強調（きょうちょう）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Concrete",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/ペットボトルの中をちゃんと洗ってください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なか": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なかで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "うち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "うちを": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Please wash the <strong>inside of</strong> the plastic bottle.",
+        "nuance_translation": "An expression which highlights the <strong>inside of</strong> (A) as being the surface or area for which (B) takes place.",
+        "extra_info": "",
+        "reviewable_id": 429,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6615",
+      "type": "study_question",
+      "attributes": {
+        "id": 6615,
+        "content": "人混（ひとご）みの<span class='study-area-input'>____</span>歩（ある）くのは大変（たいへん）です。",
+        "answer": "なかを",
+        "alternate_grammar": [],
+        "kanji_answer": "中（なか）を",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>内側（うちがわ）</strong>が(B)の舞台（ぶたい）となる面（めん）や面積（めんせき）であることを強調（きょうちょう）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Concrete",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/人混みの中を歩くのは大変です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なか": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なかで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "うち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "うちを": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It is hard to walk <strong>within</strong> a crowd of people.",
+        "nuance_translation": "An expression which highlights the <strong>inside of</strong> (A) as being the surface or area for which (B) takes place.",
+        "extra_info": "",
+        "reviewable_id": 429,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2312",
+      "type": "study_question",
+      "attributes": {
+        "id": 2312,
+        "content": "家（いえ）の<span class='study-area-input'>____</span>猫（ねこ）が駆（か）け回（まわ）っている。",
+        "answer": "なかを",
+        "alternate_grammar": [
+          "なかを",
+          "なかでは"
+        ],
+        "kanji_answer": "中（なか）を",
+        "kanji_alt_grammar": [
+          "中（なか）では",
+          "中（なか）を"
+        ],
+        "nuance": "(A)の<strong>内側（うちがわ）</strong>が(B)の舞台（ぶたい）となる面（めん）や面積（めんせき）であることを強調（きょうちょう）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Concrete",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/家の中を猫が駆け回っている。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なかで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "うち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "うちを": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The cat is running around the <strong>inside of</strong> the house.",
+        "nuance_translation": "An expression which highlights the <strong>inside of</strong> (A) as being the surface or area for which (B) takes place.",
+        "extra_info": "",
+        "reviewable_id": 429,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2314",
+      "type": "study_question",
+      "attributes": {
+        "id": 2314,
+        "content": "鍋（なべ）の<span class='study-area-input'>____</span>洗（あら）う。",
+        "answer": "なかを",
+        "alternate_grammar": [],
+        "kanji_answer": "中（なか）を",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>内側（うちがわ）</strong>が(B)の舞台（ぶたい）となる面（めん）や面積（めんせき）であることを強調（きょうちょう）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Concrete",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/鍋の中を洗う。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なかで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "うち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "うちを": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I will wash the <strong>inside of</strong> a pot.",
+        "nuance_translation": "An expression which highlights the <strong>inside of</strong> (A) as being the surface or area for which (B) takes place.",
+        "extra_info": "",
+        "reviewable_id": 429,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6619",
+      "type": "study_question",
+      "attributes": {
+        "id": 6619,
+        "content": "鳥（とり）かごの<span class='study-area-input'>____</span>少（すこ）し改造（かいぞう）してみた。",
+        "answer": "なかを",
+        "alternate_grammar": [],
+        "kanji_answer": "中（なか）を",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>内側（うちがわ）</strong>が(B)の舞台（ぶたい）となる面（めん）や面積（めんせき）であることを強調（きょうちょう）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Concrete",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/鳥かごの中を少し改造してみた。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なか": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なかで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "うち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "うちを": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I tried remodeling a little the <strong>inside of</strong> the bird cage.",
+        "nuance_translation": "An expression which highlights the <strong>inside of</strong> (A) as being the surface or area for which (B) takes place.",
+        "extra_info": "",
+        "reviewable_id": 429,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6616",
+      "type": "study_question",
+      "attributes": {
+        "id": 6616,
+        "content": "この水族館（すいぞくかん）は、まるで海（うみ）の<span class='study-area-input'>____</span>歩（ある）いているようだ。",
+        "answer": "なかを",
+        "alternate_grammar": [],
+        "kanji_answer": "中（なか）を",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>内側（うちがわ）</strong>が(B)の舞台（ぶたい）となる面（めん）や面積（めんせき）であることを強調（きょうちょう）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Concrete",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/この水族館は、まるで海の中を歩いているようだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なか": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なかで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "うち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "うちを": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This aquarium is like walking <strong>inside of</strong> the ocean.",
+        "nuance_translation": "An expression which highlights the <strong>inside of</strong> (A) as being the surface or area for which (B) takes place.",
+        "extra_info": "",
+        "reviewable_id": 429,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "569",
+      "type": "writeup",
+      "attributes": {
+        "id": 569,
+        "body_ja": "<p>何（なに）かに囲（かこ）い込（こ）まれた場所（ばしょ）を示（しめ）す名詞（めいし）の「中（なか）」と、動作（どうさ）の場所（ばしょ）を示（しめ）す格助詞（かくじょし）の「を」が結（むす）びつくと、(A) の中（なか）で (B) が行（おこな）われていることを表（あらわ）す文型（ぶんけい）になります。</p>\r\n\r\n<p>この文法（ぶんぽう）では、(B) に動作（どうさ）を表（あらわ）す動詞（どうし）が入（はい）り、(A) に場所（ばしょ）や位置（いち）を示（しめ）す名詞（めいし）が入（はい）ります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181761'>\r\n<li data-study-question='181762'>\r\n</ul>\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>この表現（ひょうげん）は、動作（どうさ）を行（おこな）う人（ひと）や物（もの）が実際（じっさい）に (A) の中（なか）にいない場合（ばあい）にも使（つか）うことができます。例（たと）えば、五段動詞（ごだんどうし）「覗（のぞ）く」は「(A) の<span data-gp-id='429'>中（なか）を</span>覗（のぞ）く」という形（かたち）でよく使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184391'></ul></section>",
+        "body": "<p>Coming from the base meaning of the <span data-term='名詞・めいし'>noun</span> 中（なか） meaning 'inside', the addition of the <span data-term='格助詞・かくじょし'>case marking particle</span> を in its role of identifying the place where an action is taking place creates a grammar structure that can be translated as 'doing (B) in (A)', 'doing (B) on (A)', or 'doing (B) inside of (A)'.</p>\r\n\r\n<p>With this grammar point, (B) will be the action, while (A) will be a noun indicating the location.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181761'>\r\n<li data-study-question='181762'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>The person or thing that is doing the action that <span data-gp-id='429'>中（なか）を</span> is indicating may not actually be within the noun being marked with (A). A good example of this is 'doing (B) into (A)', such as with the う-Verb 覗（のぞ）く 'to peek'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184391'></ul></section>"
+      }
+    },
+    {
+      "id": "946",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 946,
+        "site": "Japanese Test 4 You",
+        "description": "中を and 中では",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-%E3%81%AA%E3%81%8B%E3%82%92%E3%81%AA%E3%81%8B%E3%81%A7%E3%81%AF-naka-onaka-dewa/",
+        "type": "SupplementalLink"
+      }
+    }
+  ]
+}

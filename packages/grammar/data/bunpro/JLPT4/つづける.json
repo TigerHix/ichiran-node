@@ -1,0 +1,1134 @@
+{
+  "data": {
+    "id": "180",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 180,
+      "level": "JLPT4",
+      "lesson_id": 19,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "つづける",
+      "nuance": "(A)は<strong>継続（けいぞく）する</strong>動作（どうさ）、又（また）は<strong>繰（く）り返（かえ）し行（おこな）われる</strong>動作（どうさ）だということを強調（きょうちょう）する表現（ひょうげん）。",
+      "grammar_order": 281,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 386,
+        "title": "ようにいう",
+        "slug": "ようにいう"
+      },
+      "previous_grammar_point": {
+        "id": 170,
+        "title": "なければならない",
+        "slug": "なければならない"
+      },
+      "lesson_count": "10/16",
+      "title": "つづける",
+      "furigana": "続（つづ）ける",
+      "meaning": "To continue",
+      "nuance_translation": "A phrase that highlights (A) as an action that is <strong>being continued</strong>, or occuring <strong>over and over</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "<span class='gp-popout' data-gp-id='26'>Verb［stem］</span>+ <strong>続けます</strong>",
+      "casual_structure": "<span class='gp-popout' data-gp-id='26'>Verb［stem］</span>+ <strong>続ける</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10109",
+      "metadata": "続ける, つづける, tudukeru, tsuzukeru, verb, る-verb, る verb, ru-verb, ru verb, ichidan, ichidan verb, one level, transitive, auxiliary verb, conjugation"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "180809",
+            "type": "study_question"
+          },
+          {
+            "id": "180810",
+            "type": "study_question"
+          },
+          {
+            "id": "184013",
+            "type": "study_question"
+          },
+          {
+            "id": "184014",
+            "type": "study_question"
+          },
+          {
+            "id": "361",
+            "type": "study_question"
+          },
+          {
+            "id": "3404",
+            "type": "study_question"
+          },
+          {
+            "id": "3406",
+            "type": "study_question"
+          },
+          {
+            "id": "359",
+            "type": "study_question"
+          },
+          {
+            "id": "3408",
+            "type": "study_question"
+          },
+          {
+            "id": "3409",
+            "type": "study_question"
+          },
+          {
+            "id": "3401",
+            "type": "study_question"
+          },
+          {
+            "id": "3402",
+            "type": "study_question"
+          },
+          {
+            "id": "360",
+            "type": "study_question"
+          },
+          {
+            "id": "3407",
+            "type": "study_question"
+          },
+          {
+            "id": "3403",
+            "type": "study_question"
+          },
+          {
+            "id": "3405",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "278",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "618",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1385",
+            "type": "related_content"
+          },
+          {
+            "id": "779",
+            "type": "related_content"
+          },
+          {
+            "id": "777",
+            "type": "related_content"
+          },
+          {
+            "id": "1287",
+            "type": "related_content"
+          },
+          {
+            "id": "778",
+            "type": "related_content"
+          },
+          {
+            "id": "1350",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "674",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "346",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "180809",
+      "type": "study_question",
+      "attributes": {
+        "id": 180809,
+        "content": "サリー<span class=\"gp-popout\" data-gp-id=\"3\">は</span>暗（くら）<span class=\"gp-popout\" data-gp-id=\"57\">くなる</span><span class=\"gp-popout\" data-gp-id=\"360\">まで</span>走（はし）り<span class='study-area-input'>____</span>。",
+        "answer": "つづける",
+        "alternate_grammar": [],
+        "kanji_answer": "続（つづ）ける",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/サリーは暗くなるまで走り続ける。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Sally will <strong>continue</strong> to run until it gets dark.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 180,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180810",
+      "type": "study_question",
+      "attributes": {
+        "id": 180810,
+        "content": "私（わたし）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>漢字（かんじ）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>覚（おぼ）え<span class=\"gp-popout\" data-gp-id=\"12\">る</span><span class=\"gp-popout\" data-gp-id=\"360\">まで</span>、同（おな）じ漢字（かんじ）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>書（か）き<span class='study-area-input'>____</span>。",
+        "answer": "つづける",
+        "alternate_grammar": [],
+        "kanji_answer": "続（つづ）ける",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/私は漢字を覚えるまで、同じ漢字を書き続ける。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I will <strong>continue</strong> to write the same kanji until I memorize it.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 180,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184013",
+      "type": "study_question",
+      "attributes": {
+        "id": 184013,
+        "content": "日本語（にほんご）<span data-gp-id='3'>は</span>難（むずか）し<span data-gp-id='24'>い</span><span data-gp-id='361'>けど</span>、勉強（べんきょう）<span data-gp-id='21'>を</span>頑張（がんば）っ<span data-gp-id='773'>て</span><span data-gp-id='180'>続（つづ）ける</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Japanese is difficult, but I will give it my best and <strong>continue</strong> with study. (Emphasis on the continuation of studying)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 180,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184014",
+      "type": "study_question",
+      "attributes": {
+        "id": 184014,
+        "content": "日本語（にほんご）<span data-gp-id='3'>は</span>難（むずか）しい<span data-gp-id='361'>けど</span>、勉強（べんきょう）<span data-gp-id='21'>を</span>頑張（がんば）り<span data-gp-id='180'>続（つづ）ける</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Japanese is difficult, but I will <strong>continue</strong> giving it my best with study. (Emphasis on the continuation of giving it one's best)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 180,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "361",
+      "type": "study_question",
+      "attributes": {
+        "id": 361,
+        "content": "<span class='gp-popout' data-gp-id='47'>あの</span>警察官（けいさつかん）<span class='gp-popout' data-gp-id='3'>は</span>一時間（いちじかん）<span class='gp-popout' data-gp-id='382'>以上（いじょう）</span><span class='study-area-input'>____</span>。",
+        "answer": "みまわりつづけた",
+        "alternate_grammar": [],
+        "kanji_answer": "見回（みまわ）り続（つづ）けた",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)は<strong>継続（けいぞく）する</strong>動作（どうさ）、又（また）は<strong>繰（く）り返（かえ）し行（おこな）われる</strong>動作（どうさ）だということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson9/180/male_audio/230411_1236_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/あの警察官は一時間以上見回り続けた。.mp3",
+        "word_prompt": "見回（みまわ）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みまわりつづけました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "みまわりつづけていた": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          },
+          "みまわりつづける": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "みまわつづけた": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          },
+          "みまわりつづいた": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "That police officer <strong>continued to patrol</strong> around for over one hour.",
+        "nuance_translation": "A phrase that highlights (A) as an action that is <strong>being continued</strong>, or occuring <strong>over and over</strong>.",
+        "extra_info": "",
+        "reviewable_id": 180,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3404",
+      "type": "study_question",
+      "attributes": {
+        "id": 3404,
+        "content": "餌（えさ）<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='722'>あげ</span><span class='gp-popout' data-gp-id='174'>ても</span>、<span class='gp-popout' data-gp-id='37'>その</span>犬（いぬ）<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "なきつづける",
+        "alternate_grammar": [],
+        "kanji_answer": "鳴（な）き続（つづ）ける",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)は<strong>継続（けいぞく）する</strong>動作（どうさ）、又（また）は<strong>繰（く）り返（かえ）し行（おこな）われる</strong>動作（どうさ）だということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Standard, Ongoing",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson9/180/male_audio/230411_1237_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/餌をあげても、その犬は鳴き続けるよ。.mp3",
+        "word_prompt": "鳴（な）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なきつづけます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "なきつづく": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          },
+          "なきつづけている": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "ないている": {
+            "en": "We are looking for a grammar point that emphasizes that something is 'continuing'. ",
+            "es": "",
+            "fr": ""
+          },
+          "ないてつづける": {
+            "en": "This grammar structure can only be attached to the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Even if you give that dog a treat, <strong>it will continue to bark</strong>.",
+        "nuance_translation": "A phrase that highlights (A) as an action that is <strong>being continued</strong>, or occuring <strong>over and over</strong>.",
+        "extra_info": "",
+        "reviewable_id": 180,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3406",
+      "type": "study_question",
+      "attributes": {
+        "id": 3406,
+        "content": "お母（かあ）さんにテレビ<span class='gp-popout' data-gp-id='21'>を</span>消（け）し<span class='gp-popout' data-gp-id='95'>なさい</span><span class='gp-popout' data-gp-id='184'>と言（い）われている</span><span class='gp-popout' data-gp-id='130'>のに</span>、<span class='gp-popout' data-gp-id='72'>まだ</span><span class='study-area-input'>____</span>の？",
+        "answer": "みつづける",
+        "alternate_grammar": [],
+        "kanji_answer": "見（み）続（つづ）ける",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)は<strong>継続（けいぞく）する</strong>動作（どうさ）、又（また）は<strong>繰（く）り返（かえ）し行（おこな）われる</strong>動作（どうさ）だということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Standard, Ongoing",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson9/180/male_audio/230411_1238.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/お母さんにテレビを消しなさいと言われているのに、まだ見続けるの？.mp3",
+        "word_prompt": "見（み）<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みつづけます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "みつづけている": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "みている": {
+            "en": "We are looking for a grammar point that emphasizes that something is 'continuing'. ",
+            "es": "",
+            "fr": ""
+          },
+          "みてつづける": {
+            "en": "This grammar structure can only be attached to the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Even though mom told you to turn off the TV, you still <strong>continue to watch</strong> it?",
+        "nuance_translation": "A phrase that highlights (A) as an action that is <strong>being continued</strong>, or occuring <strong>over and over</strong>.",
+        "extra_info": "",
+        "reviewable_id": 180,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "359",
+      "type": "study_question",
+      "attributes": {
+        "id": 359,
+        "content": "テレビ<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='80'>つもり</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "みつづける",
+        "alternate_grammar": [],
+        "kanji_answer": "見（み）続（つづ）ける",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)は<strong>継続（けいぞく）する</strong>動作（どうさ）、又（また）は<strong>繰（く）り返（かえ）し行（おこな）われる</strong>動作（どうさ）だということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson9/180/male_audio/230411_1236_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/テレビを見続けるつもりですか。.mp3",
+        "word_prompt": "見（み）<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みつづく": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          },
+          "みつづけて": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "みている": {
+            "en": "We are looking for a grammar point that emphasizes that something is 'continuing'. ",
+            "es": "",
+            "fr": ""
+          },
+          "みてつづける": {
+            "en": "This grammar structure can only be attached to the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Do you plan to <strong>continue to watch</strong> TV?",
+        "nuance_translation": "A phrase that highlights (A) as an action that is <strong>being continued</strong>, or occuring <strong>over and over</strong>.",
+        "extra_info": "",
+        "reviewable_id": 180,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3408",
+      "type": "study_question",
+      "attributes": {
+        "id": 3408,
+        "content": "大学（だいがく）<span class='gp-popout' data-gp-id='21'>を</span>卒業（そつぎょう）した<span class='gp-popout' data-gp-id='62'>ので</span>、どうやって<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='52'>から</span>日本語（にほんご）<span class='gp-popout' data-gp-id='6'>の</span>勉強（べんきょう）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>いいの<span class='gp-popout' data-gp-id='18'>だろう</span>？",
+        "answer": "しつづけたら",
+        "alternate_grammar": [
+          "しつづければ",
+          "しつづけたら"
+        ],
+        "kanji_answer": "し続（つづ）けたら",
+        "kanji_alt_grammar": [
+          "し続（つづ）ければ",
+          "し続（つづ）けたら"
+        ],
+        "nuance": "(A)は<strong>継続（けいぞく）する</strong>動作（どうさ）、又（また）は<strong>繰（く）り返（かえ）し行（おこな）われる</strong>動作（どうさ）だということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Conditional, Ongoing",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson9/180/male_audio/230411_1238_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/大学を卒業したので、どうやってこれから日本語の勉強をし続けたらいいのだろう？.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しつづけば": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "しつづけて": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          },
+          "しつづける": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "しつづければ": {
+            "en": "Could you try a less formal conditional form?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Since I graduated university, how am I supposed to <strong>continue</strong> my Japanese studies?",
+        "nuance_translation": "A phrase that highlights (A) as an action that is <strong>being continued</strong>, or occuring <strong>over and over</strong>.",
+        "extra_info": "",
+        "reviewable_id": 180,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3409",
+      "type": "study_question",
+      "attributes": {
+        "id": 3409,
+        "content": "今日（きょう）<span class='gp-popout' data-gp-id='6'>の</span>天気（てんき）<span class='gp-popout' data-gp-id='3'>は</span>晴（は）れ<span class='gp-popout' data-gp-id='6'>の</span><span class='gp-popout' data-gp-id='151'>はず</span><span class='gp-popout' data-gp-id='40'>だった</span><span class='gp-popout' data-gp-id='130'>のに</span>、雨（あめ）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='71'>ね</span>。",
+        "answer": "ふりつづけています",
+        "alternate_grammar": [
+          "ふりつづいています"
+        ],
+        "kanji_answer": "降（ふ）り続（つづ）けています",
+        "kanji_alt_grammar": [
+          "降（ふ）り続（つづ）いています"
+        ],
+        "nuance": "(A)は<strong>継続（けいぞく）する</strong>動作（どうさ）、又（また）は<strong>繰（く）り返（かえ）し行（おこな）われる</strong>動作（どうさ）だということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Progressive, Polite, Ongoing",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson9/180/male_audio/230411_1238_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/今日の天気は晴れのはずだったのに、雨が降り続けていますね。.mp3",
+        "word_prompt": "降（ふ）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ふりつづけている": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ふりつづいている": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ふりつづけます": {
+            "en": "How about expanding the base grammar pattern to include the extra nuance within the translation?",
+            "es": "",
+            "fr": ""
+          },
+          "ふりつづける": {
+            "en": "How about expanding the base grammar pattern to include the extra nuance within the translation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "It was supposed to be a clear day today, but it is <strong>continuing to</strong> rain.",
+        "nuance_translation": "A phrase that highlights (A) as an action that is <strong>being continued</strong>, or occuring <strong>over and over</strong>.",
+        "extra_info": "",
+        "reviewable_id": 180,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3401",
+      "type": "study_question",
+      "attributes": {
+        "id": 3401,
+        "content": "大（おお）き<span class='gp-popout' data-gp-id='24'>い</span>魚（さかな）<span class='gp-popout' data-gp-id='21'>を</span>釣（つ）る<span class='gp-popout' data-gp-id='360'>まで</span><span class='study-area-input'>____</span>。",
+        "answer": "つりつづけます",
+        "alternate_grammar": [],
+        "kanji_answer": "釣（つ）り続（つづ）けます",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)は<strong>継続（けいぞく）する</strong>動作（どうさ）、又（また）は<strong>繰（く）り返（かえ）し行（おこな）われる</strong>動作（どうさ）だということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Polite, Ongoing",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson9/180/male_audio/230411_1236_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/大きい魚を釣るまで釣り続けます。.mp3",
+        "word_prompt": "釣（つ）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つりつづける": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "つりつづきます": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "つりつづけています": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          },
+          "つりつづけている": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>I will continue to fish</strong> until I catch a big fish.",
+        "nuance_translation": "A phrase that highlights (A) as an action that is <strong>being continued</strong>, or occuring <strong>over and over</strong>.",
+        "extra_info": "",
+        "reviewable_id": 180,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3402",
+      "type": "study_question",
+      "attributes": {
+        "id": 3402,
+        "content": "まっすぐ見（み）<span class='gp-popout' data-gp-id='416'>て</span>、<span class='study-area-input'>____</span>！",
+        "answer": "あるきつづけなさい",
+        "alternate_grammar": [
+          "あるきつづけてください",
+          "あるきつづけなさい",
+          "あるきつづけて"
+        ],
+        "kanji_answer": "歩（ある）き続（つづ）けなさい",
+        "kanji_alt_grammar": [
+          "歩（ある）き続（つづ）けてください",
+          "歩（ある）き続（つづ）けて",
+          "歩（ある）き続（つづ）けなさい"
+        ],
+        "nuance": "(A)は<strong>継続（けいぞく）する</strong>動作（どうさ）、又（また）は<strong>繰（く）り返（かえ）し行（おこな）われる</strong>動作（どうさ）だということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Ongoing, Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson9/180/male_audio/230411_1237.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/まっすぐ見て、歩き続けなさい！.mp3",
+        "word_prompt": "歩（ある）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あるきつづけ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "あるきつづけろ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ある": {
+            "en": "We are looking for a grammar point that emphasizes that something is 'continuing'. ",
+            "es": "",
+            "fr": ""
+          },
+          "あるいてつづけなさい": {
+            "en": "This grammar structure can only be attached to the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "あるきつづける": {
+            "en": "How about expanding the base grammar pattern to include the extra nuance within the translation?",
+            "es": "",
+            "fr": ""
+          },
+          "あるきなさい": {
+            "en": "Could you try using a grammar point that emphasizes that something is 'continuing'. ",
+            "es": "",
+            "fr": ""
+          },
+          "あるきつづきなさい": {
+            "en": "Close! However, なさい can only be attached to the stem form of words.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Look straight, and <strong>continue walking</strong>!",
+        "nuance_translation": "A phrase that highlights (A) as an action that is <strong>being continued</strong>, or occuring <strong>over and over</strong>.",
+        "extra_info": "",
+        "reviewable_id": 180,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "360",
+      "type": "study_question",
+      "attributes": {
+        "id": 360,
+        "content": "文法（ぶんぽう）<span class='gp-popout' data-gp-id='6'>の</span>間違（まちが）え<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>み<span class='gp-popout' data-gp-id='177'>たらどう</span><span class='gp-popout' data-gp-id='1'>だ</span>？",
+        "answer": "なおしつづけて",
+        "alternate_grammar": [],
+        "kanji_answer": "直（なお）し続（つづ）けて",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)は<strong>継続（けいぞく）する</strong>動作（どうさ）、又（また）は<strong>繰（く）り返（かえ）し行（おこな）われる</strong>動作（どうさ）だということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "て",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson9/180/male_audio/230411_1236_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/文法の間違えを直し続けてみたらどうだ？.mp3",
+        "word_prompt": "直（なお）<span class='gp-popout' data-gp-id='26'>す</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なおしつづける": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "なおして": {
+            "en": "We are looking for a grammar point that emphasizes that something is 'continuing'. ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Why don't you <strong>try continuing to fix</strong> your grammar mistakes?",
+        "nuance_translation": "A phrase that highlights (A) as an action that is <strong>being continued</strong>, or occuring <strong>over and over</strong>.",
+        "extra_info": "",
+        "reviewable_id": 180,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3407",
+      "type": "study_question",
+      "attributes": {
+        "id": 3407,
+        "content": "怪我（けが）<span class='gp-popout' data-gp-id='21'>を</span>したし、水（みず）も<span class='gp-popout' data-gp-id='42'>もう</span>なくなったが彼（かれ）<span class='gp-popout' data-gp-id='10'>が</span>マラソン<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>って。",
+        "answer": "はしりつづける",
+        "alternate_grammar": [],
+        "kanji_answer": "走（はし）り続（つづ）ける",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)は<strong>継続（けいぞく）する</strong>動作（どうさ）、又（また）は<strong>繰（く）り返（かえ）し行（おこな）われる</strong>動作（どうさ）だということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Standard, Ongoing",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson9/180/male_audio/230411_1238_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/怪我をしたし、水ももうなくなったが彼がマラソンを走り続けるって。.mp3",
+        "word_prompt": "走（はし）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はしりつづけます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "はしりつづけ": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "はしつづける": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I heard that even though he got injured and is out of water, <strong>he will continue to run</strong> the marathon.",
+        "nuance_translation": "A phrase that highlights (A) as an action that is <strong>being continued</strong>, or occuring <strong>over and over</strong>.",
+        "extra_info": "",
+        "reviewable_id": 180,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3403",
+      "type": "study_question",
+      "attributes": {
+        "id": 3403,
+        "content": "携帯（けいたい）<span class='gp-popout' data-gp-id='10'>が</span>鳴（な）っ<span class='gp-popout' data-gp-id='136'>ていた</span><span class='gp-popout' data-gp-id='44'>が</span>、彼（かれ）<span class='gp-popout' data-gp-id='3'>は</span>無視（むし）して、<span class='study-area-input'>____</span>。",
+        "answer": "はなしつづけた",
+        "alternate_grammar": [],
+        "kanji_answer": "話（はな）し続（つづ）けた",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)は<strong>継続（けいぞく）する</strong>動作（どうさ）、又（また）は<strong>繰（く）り返（かえ）し行（おこな）われる</strong>動作（どうさ）だということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Past, Standard, Ongoing",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson9/180/male_audio/230411_1237_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/携帯が鳴っていたが、彼は無視して、話し続けた。.mp3",
+        "word_prompt": "話（はな）<span class='gp-popout' data-gp-id='26'>す</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はなしつづけました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "はなしつづけていた": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          },
+          "はなしつづける": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "His phone was ringing, but he ignored it and <strong>continued talking</strong>.",
+        "nuance_translation": "A phrase that highlights (A) as an action that is <strong>being continued</strong>, or occuring <strong>over and over</strong>.",
+        "extra_info": "",
+        "reviewable_id": 180,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3405",
+      "type": "study_question",
+      "attributes": {
+        "id": 3405,
+        "content": "文法（ぶんぽう）<span class='gp-popout' data-gp-id='6'>の</span>勉強（べんきょう）<span class='gp-popout' data-gp-id='21'>を</span>毎日（まいにち）<span class='study-area-input'>____</span>ら、すぐ上手（じょうず）<span class='gp-popout' data-gp-id='57'>にな</span>る<span class='gp-popout' data-gp-id='18'>だろう</span>。",
+        "answer": "しつづけた",
+        "alternate_grammar": [],
+        "kanji_answer": "し続（つづ）けた",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)は<strong>継続（けいぞく）する</strong>動作（どうさ）、又（また）は<strong>繰（く）り返（かえ）し行（おこな）われる</strong>動作（どうさ）だということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Conditional, Standard, Ongoing",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson9/180/male_audio/231204_1214_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/文法の勉強を毎日し続けたら、すぐ上手になるだろう。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='22'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しつづいた": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          },
+          "しつづけて": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          },
+          "しつづける": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "した": {
+            "en": "We are looking for a grammar point that emphasizes that something is 'continuing'. ",
+            "es": "",
+            "fr": ""
+          },
+          "してつづけた": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>If you continue to</strong> study grammar everyday, you will become more proficient.",
+        "nuance_translation": "A phrase that highlights (A) as an action that is <strong>being continued</strong>, or occuring <strong>over and over</strong>.",
+        "extra_info": "",
+        "reviewable_id": 180,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "278",
+      "type": "writeup",
+      "attributes": {
+        "id": 278,
+        "body_ja": "",
+        "body": "<p>By attaching the verb <span data-gp-id='180'>続（つづ）ける</span> 'to continue' to the <span data-term='連用形・れんようけい'>conjunctive form</span> of another verb, we will be able to express that '(A) is continuing'. Let's have a look at a few examples of this structure.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180809'>\r\n<li data-study-question='180810'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>There is a difference in nuance between connecting one verb to another verb through the <span data-term='連用形・れんようけい'>conjunctive form</span>, or through the use of the <span data-term='接続助詞・せつぞくじょし'>conjunction particle</span> <span data-gp-id='416'>て</span>. The former implies that '(A) is being done in the way of (B)', while the latter implies that '(A) is being done, and then (B)'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184013'>\r\n<li data-study-question='184014'></ul></section>"
+      }
+    },
+    {
+      "id": "618",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 618,
+        "source": "Tobira",
+        "location": "Page 144",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "674",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 674,
+        "site": "E-Japanese",
+        "description": "Additional Example Sentences and Listening Practice",
+        "link": "http://www.e-japanese.jp/?p=1142",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "346",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 346,
+        "site": "Wasabi",
+        "description": "…続つづける and …つつある: the Middle of Actions or Events",
+        "link": "https://wasabi-jpn.com/magazine/japanese-grammar/japanese-aspect-the-beginning-middle-end-of-actions/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1385",
+      "type": "related_content",
+      "attributes": {
+        "id": 1385,
+        "relationship_type": "related",
+        "body": "なおす can be attached to the stem of other verbs to express the idea of 're-doing' or doing something over. つづける can be attached to verb stems in the same way, but expresses the meaning of 'continuing' to do something. For example, やりなおす means 'to do over', while やりつづける means 'to keep doing'.",
+        "first_relatable": {
+          "id": 393,
+          "slug": "なおす",
+          "title": "なおす",
+          "meaning": "To do over, To redo",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 180,
+          "slug": "つづける",
+          "title": "つづける",
+          "meaning": "To continue",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "779",
+      "type": "related_content",
+      "attributes": {
+        "id": 779,
+        "relationship_type": "related",
+        "body": "Both つづける and てくる can show the progression of an action over time. つづける attaches to the verb stem and focuses on the continuation of the action itself. てくる uses the て-form and emphasizes that the action started in the past and has continued up to the present.",
+        "first_relatable": {
+          "id": 180,
+          "slug": "つづける",
+          "title": "つづける",
+          "meaning": "To continue",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 128,
+          "slug": "てくる",
+          "title": "てくる ",
+          "meaning": "To come to, To become, To continue, To be starting to, Has been ~ing",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "777",
+      "type": "related_content",
+      "attributes": {
+        "id": 777,
+        "relationship_type": "related",
+        "body": "つづける and ばかりだ both show continuation, but with different nuances. つづける attaches to verb stems and shows simple ongoing action, e.g. 減り続けている 'is continuing to decrease'. ばかりだ adds the sense of 'more and more,' often negatively, e.g. 減るばかりだ 'keeps on decreasing'.",
+        "first_relatable": {
+          "id": 180,
+          "slug": "つづける",
+          "title": "つづける",
+          "meaning": "To continue",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 231,
+          "slug": "ばかりだ",
+          "title": "ばかりだ",
+          "meaning": "(Only) continue to, Keep on -ing, More and more",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1287",
+      "type": "related_content",
+      "attributes": {
+        "id": 1287,
+        "relationship_type": "related",
+        "body": "ている expresses an ongoing action or state. つづける attached to the verb stem expresses a similar meaning, but with a greater emphasis on the idea of continuation. For example, 増えている means that something is increasing or has increased, while 増えつづけている carries the additional nuance that it is continuing to increase.",
+        "first_relatable": {
+          "id": 764,
+          "slug": "ている2",
+          "title": "ている②",
+          "meaning": "State of being, Has (have) done",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 180,
+          "slug": "つづける",
+          "title": "つづける",
+          "meaning": "To continue",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "778",
+      "type": "related_content",
+      "attributes": {
+        "id": 778,
+        "relationship_type": "related",
+        "body": "つづける and 一方だ both indicate continuation but differ in tone. つづける means a simple ongoing action, e.g. 減り続けている 'is still decreasing'. 一方だ follows dictionary-form verbs and adds a sense of progression in one direction, often negatively, e.g., 減る一方だ 'is getting worse and worse'.",
+        "first_relatable": {
+          "id": 180,
+          "slug": "つづける",
+          "title": "つづける",
+          "meaning": "To continue",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 280,
+          "slug": "一方だ",
+          "title": "一方だ",
+          "meaning": "More and more, Continue to, Keep on, -er and -er",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1350",
+      "type": "related_content",
+      "attributes": {
+        "id": 1350,
+        "relationship_type": "related",
+        "body": "ている is a common structure in Japanese to express an ongoing action or state. つづける attached to the verb stem expresses a similar meaning, but with a greater emphasis on the idea of continuation. For example, 増えている means that something is increasing or has increased, while 増えつづけている carries the additional nuance that it is continuing to increase.",
+        "first_relatable": {
+          "id": 27,
+          "slug": "ている1",
+          "title": "ている①",
+          "meaning": "Is, Am, Are (~ing)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 180,
+          "slug": "つづける",
+          "title": "つづける",
+          "meaning": "To continue",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,950 @@
+{
+  "data": {
+    "id": "730",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 730,
+      "level": "JLPT1",
+      "lesson_id": 41,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "たところで",
+      "nuance": "たとえ(A)という<strong>場所（ばしょ）</strong>、又（また）は<strong>状況（じょうきょう）</strong>であっても、結果（けっか）は予想（よそう）できないということを強調（きょうちょう）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)であっても(B)。",
+      "grammar_order": 743,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 732,
+        "title": "如く・如き・如し",
+        "slug": "如く-如き-如し"
+      },
+      "previous_grammar_point": {
+        "id": 655,
+        "title": "に至るまで",
+        "slug": "に至るまで"
+      },
+      "lesson_count": "2/17",
+      "title": "たところで",
+      "furigana": "～たところで",
+      "meaning": "Even if ~ cannot or will not, Even though ~ not",
+      "nuance_translation": "A <strong>hypothetical</strong> structure, highlighting that even in the <strong>situation or location</strong> of (A), the result will not be as expected. Even though (A), (B).",
+      "rare_kanji_warning": "所",
+      "caution": "The た-form is generally not used in the clause following ところで",
+      "polite_structure": "",
+      "casual_structure": "<span class='gp-popout' data-gp-id='874'>Verb［た］</span>+ <strong>ところで</strong> +Phrase［ない］",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/18142",
+      "metadata": "たところで, た所で, tatokorode, expression, unfavorable"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "10428",
+            "type": "study_question"
+          },
+          {
+            "id": "9004",
+            "type": "study_question"
+          },
+          {
+            "id": "180046",
+            "type": "study_question"
+          },
+          {
+            "id": "180047",
+            "type": "study_question"
+          },
+          {
+            "id": "180048",
+            "type": "study_question"
+          },
+          {
+            "id": "7855",
+            "type": "study_question"
+          },
+          {
+            "id": "10432",
+            "type": "study_question"
+          },
+          {
+            "id": "10427",
+            "type": "study_question"
+          },
+          {
+            "id": "9005",
+            "type": "study_question"
+          },
+          {
+            "id": "9006",
+            "type": "study_question"
+          },
+          {
+            "id": "7853",
+            "type": "study_question"
+          },
+          {
+            "id": "7854",
+            "type": "study_question"
+          },
+          {
+            "id": "10429",
+            "type": "study_question"
+          },
+          {
+            "id": "10430",
+            "type": "study_question"
+          },
+          {
+            "id": "10431",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "819",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "263",
+            "type": "related_content"
+          },
+          {
+            "id": "345",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1598",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1599",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1600",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "10428",
+      "type": "study_question",
+      "attributes": {
+        "id": 10428,
+        "content": "五分（ごふん）の運動（うんどう）を三日間（みっかかん）<span class='study-area-input'>____</span>直（す）ぐに成果（せいか）が見（み）られるとは限（かぎ）り<strong>ません</strong>。",
+        "answer": "つづけたところで",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "続（つづ）けたところで",
+        "kanji_alt_grammar": [],
+        "nuance": "たとえ(A)という<strong>場所（ばしょ）</strong>、又（また）は<strong>状況（じょうきょう）</strong>であっても、結果（けっか）は予想（よそう）できないということを強調（きょうちょう）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)であっても(B)。",
+        "tense": "Hypothetical",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/五分の運動を三日間続けたところで直ぐに成果が見られるとは限りません。.mp3",
+        "word_prompt": "続（つづ）ける",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つづけても": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "つづけるとしても": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "つづけるにしても": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "つづけてでも": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "つづけたって": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Even if</strong> you continued to exercise for 5 minutes daily for three days, it is <strong>not certain</strong> that any positive results would immediately be visible.",
+        "nuance_translation": "A <strong>hypothetical</strong> structure, highlighting that even in the <strong>situation or location</strong> of (A), the result will not be as expected. Even though (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 730,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9004",
+      "type": "study_question",
+      "attributes": {
+        "id": 9004,
+        "content": "「<span class='study-area-input'>____</span>、彼女（かのじょ）が許（ゆる）してくれるわけ<strong>じゃない</strong>けど。」",
+        "answer": "あやまってみたところで",
+        "alternate_grammar": [
+          "あやまってみたところで"
+        ],
+        "kanji_answer": "謝（あやま）ってみたところで",
+        "kanji_alt_grammar": [
+          "謝（あやま）ってみたところで"
+        ],
+        "nuance": "たとえ(A)という<strong>場所（ばしょ）</strong>、又（また）は<strong>状況（じょうきょう）</strong>であっても、結果（けっか）は予想（よそう）できないということを強調（きょうちょう）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)であっても(B)。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「謝ってみたところで、 彼女が許してくれるわけじゃないけど。」.mp3",
+        "word_prompt": "謝（あやま）ってみる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あやまってみたって": {
+            "en": "Could you use a grammar structure that is often used with negative form or expression of hopelessness (like 無理) in following clause?",
+            "es": ""
+          },
+          "あやまってみても": {
+            "en": "Could you use a grammar structure that is often used with negative form or expression of hopelessness (like 無理) in following clause?",
+            "es": ""
+          },
+          "あやまってみてでも": {
+            "en": "Could you use a grammar structure that is often used with negative form or expression of hopelessness (like 無理) in following clause?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'<strong>Even if</strong> I try to apologize, it <strong>doesn't</strong> mean she will forgive me.'",
+        "nuance_translation": "A <strong>hypothetical</strong> structure, highlighting that even in the <strong>situation or location</strong> of (A), the result will not be as expected. Even though (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 730,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180046",
+      "type": "study_question",
+      "attributes": {
+        "id": 180046,
+        "content": "\r\n今更（いまさら）勉強（べんきょう）を始（はじ）め<span class='study-area-input'>____</span>、合格（ごうかく）はできないだろう。",
+        "answer": "たところで",
+        "alternate_grammar": [],
+        "kanji_answer": "たところで",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/今更勉強を始めたところで、合格はできないだろう。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>Even if</strong> I were to start studying now, I <strong>would not</strong> be able to pass.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 730,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180047",
+      "type": "study_question",
+      "attributes": {
+        "id": 180047,
+        "content": "\r\n\r\n\r\nもう電車（でんしゃ）は発車（はっしゃ）してしまったから、急（いそ）い<span class='study-area-input'>____</span>間（ま）に合（あ）わないよ。",
+        "answer": "だところで",
+        "alternate_grammar": [],
+        "kanji_answer": "だところで",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/もう電車は発車してしまったから、急いだところで間に合わないよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nThe train has already left, so <strong>even if</strong> you hurry, you <strong>won't</strong> make it.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 730,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180048",
+      "type": "study_question",
+      "attributes": {
+        "id": 180048,
+        "content": "\r\n\r\n\r\n少（すこ）し走（はし）っ<span class='study-area-input'>____</span>、すぐには痩（や）せないよ。",
+        "answer": "たところで",
+        "alternate_grammar": [],
+        "kanji_answer": "たところで",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/少し走ったところで、すぐには痩せないよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nJust merely <strong>by</strong> runn<strong>ing</strong>, you <strong>won't</strong> lose weight that quickly.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 730,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7855",
+      "type": "study_question",
+      "attributes": {
+        "id": 7855,
+        "content": "すみませんが、今（いま）注文（ちゅうもん）をキャンセル<span class='study-area-input'>____</span>、お金（かね）は返金（へんきん）<strong>できません</strong>よ。",
+        "answer": "したところで",
+        "alternate_grammar": [],
+        "kanji_answer": "したところで",
+        "kanji_alt_grammar": [],
+        "nuance": "たとえ(A)という<strong>場所（ばしょ）</strong>、又（また）は<strong>状況（じょうきょう）</strong>であっても、結果（けっか）は予想（よそう）できないということを強調（きょうちょう）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)であっても(B)。",
+        "tense": "Contrastive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/すみませんが、今注文をキャンセルしたところで、お金は返金できませんよ。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しても": {
+            "en": "Think 'less likely result' and 'more emotional'",
+            "es": ""
+          },
+          "としても": {
+            "en": "Think 'less likely result' and 'more emotional'",
+            "es": ""
+          },
+          "してでも": {
+            "en": "Think 'less likely result' and 'more emotional'",
+            "es": ""
+          },
+          "としたところで": {
+            "en": "So close! You do not need the と here",
+            "es": ""
+          },
+          "にしろ": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "したって": {
+            "en": "Can you say it another way?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I am sorry, <strong>even if</strong> you cancel the order now, we <strong>cannot</strong> refund your money.",
+        "nuance_translation": "A <strong>hypothetical</strong> structure, highlighting that even in the <strong>situation or location</strong> of (A), the result will not be as expected. Even though (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 730,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10432",
+      "type": "study_question",
+      "attributes": {
+        "id": 10432,
+        "content": "冷房（れいぼう）の設定（せってい）温度（おんど）を一度（いちど）<span class='study-area-input'>____</span>節約（せつやく）できる電力（でんりょく）はあまり多（おお）く<strong>ない</strong>が、そのような小（ちい）さな積（つ）み重（かさ）ねが大事（だいじ）なのである。",
+        "answer": "あげたところで",
+        "alternate_grammar": [],
+        "kanji_answer": "上（あ）げたところで",
+        "kanji_alt_grammar": [],
+        "nuance": "たとえ(A)という<strong>場所（ばしょ）</strong>、又（また）は<strong>状況（じょうきょう）</strong>であっても、結果（けっか）は予想（よそう）できないということを強調（きょうちょう）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)であっても(B)。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/冷房の設定温度を一度上げたところで節約できる電力はあまり多くないが、そのような小さな積み重ねが大事なのである。.mp3",
+        "word_prompt": "上（あ）げる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あげても": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "あげるとしても": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "あげるにしても": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "あげてでも": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "あげたって": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Even if</strong> you raise the temperature setting of the air-con one degree, you <strong>won't</strong> be able to economize much on electricity output, but even small accumulations like that are important.",
+        "nuance_translation": "A <strong>hypothetical</strong> structure, highlighting that even in the <strong>situation or location</strong> of (A), the result will not be as expected. Even though (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 730,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10427",
+      "type": "study_question",
+      "attributes": {
+        "id": 10427,
+        "content": "そんなにお金（かね）を<span class='study-area-input'>____</span>使（つか）い切（き）れ<strong>ない</strong>でしょうから、募金（ぼきん）してみてはどうですか？",
+        "answer": "かせいだところで",
+        "alternate_grammar": [],
+        "kanji_answer": "稼（かせ）いだところで",
+        "kanji_alt_grammar": [],
+        "nuance": "たとえ(A)という<strong>場所（ばしょ）</strong>、又（また）は<strong>状況（じょうきょう）</strong>であっても、結果（けっか）は予想（よそう）できないということを強調（きょうちょう）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)であっても(B)。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/そんなにお金を稼いだところで使い切れないでしょうから、募金してみてはどうですか？.mp3",
+        "word_prompt": "稼（かせ）ぐ",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かせいでも": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "かせぐとしても": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "かせぐにしても": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "かせいででも": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "かせいだって": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Even if</strong> you made that much money, since you surely <strong>wouldn't be able</strong> to use it all, why don't you try donating them?",
+        "nuance_translation": "A <strong>hypothetical</strong> structure, highlighting that even in the <strong>situation or location</strong> of (A), the result will not be as expected. Even though (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 730,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9005",
+      "type": "study_question",
+      "attributes": {
+        "id": 9005,
+        "content": "「いまごろ車（くるま）に<span class='study-area-input'>____</span>間（ま）に合（あ）いようが<strong>ない</strong>。」",
+        "answer": "のっていったところで",
+        "alternate_grammar": [
+          "のっていったところで"
+        ],
+        "kanji_answer": "乗（の）って行（い）ったところで",
+        "kanji_alt_grammar": [
+          "乗（の）って行（い）ったところで"
+        ],
+        "nuance": "たとえ(A)という<strong>場所（ばしょ）</strong>、又（また）は<strong>状況（じょうきょう）</strong>であっても、結果（けっか）は予想（よそう）できないということを強調（きょうちょう）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)であっても(B)。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「いまごろ車に乗って行ったところで間に合いようがない。」.mp3",
+        "word_prompt": "乗（の）って行（い）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のっていっても": {
+            "en": "Could you use a grammar structure that is often used with negative form or expression of hopelessness (like 無理) in following clause?",
+            "es": ""
+          },
+          "のっていってでも": {
+            "en": "Could you use a grammar structure that is often used with negative form or expression of hopelessness (like 無理) in following clause?",
+            "es": ""
+          },
+          "のっていくにしても": {
+            "en": "Could you use a grammar structure that is often used with negative form or expression of hopelessness (like 無理) in following clause?",
+            "es": ""
+          },
+          "のっていったって": {
+            "en": "Could you use a grammar structure that is often used with negative form or expression of hopelessness (like 無理) in following clause?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Even if</strong> you went by car right now, you would <strong>not</strong> to be on time.",
+        "nuance_translation": "A <strong>hypothetical</strong> structure, highlighting that even in the <strong>situation or location</strong> of (A), the result will not be as expected. Even though (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 730,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9006",
+      "type": "study_question",
+      "attributes": {
+        "id": 9006,
+        "content": "「たとえ失敗（しっぱい）<span class='study-area-input'>____</span>、 問題（もんだい）は<strong>ありません</strong>。」",
+        "answer": "してしまったところで",
+        "alternate_grammar": [],
+        "kanji_answer": "してしまったところで",
+        "kanji_alt_grammar": [],
+        "nuance": "たとえ(A)という<strong>場所（ばしょ）</strong>、又（また）は<strong>状況（じょうきょう）</strong>であっても、結果（けっか）は予想（よそう）できないということを強調（きょうちょう）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)であっても(B)。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「たとえ失敗してしまったところで、 問題はありません。」.mp3",
+        "word_prompt": "してしまう",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "してしまっても": {
+            "en": "Could you use a grammar structure that is often used with negative form or expression of hopelessness (like 無理) in following clause?",
+            "es": ""
+          },
+          "してしまってでも": {
+            "en": "Could you use a grammar structure that is often used with negative form or expression of hopelessness (like 無理) in following clause?",
+            "es": ""
+          },
+          "してしまったって": {
+            "en": "Could you use a grammar structure that is often used with negative form or expression of hopelessness (like 無理) in following clause?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'<strong>Even if</strong> you fail, there will <strong>not</strong> be a problem.'",
+        "nuance_translation": "A <strong>hypothetical</strong> structure, highlighting that even in the <strong>situation or location</strong> of (A), the result will not be as expected. Even though (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 730,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7853",
+      "type": "study_question",
+      "attributes": {
+        "id": 7853,
+        "content": "私（わたし）が告白（こくはく）<span class='study-area-input'>____</span>、彼女（かのじょ）は応（おう）じ<strong>ない</strong>だろう。",
+        "answer": "したところで",
+        "alternate_grammar": [],
+        "kanji_answer": "したところで",
+        "kanji_alt_grammar": [],
+        "nuance": "たとえ(A)という<strong>場所（ばしょ）</strong>、又（また）は<strong>状況（じょうきょう）</strong>であっても、結果（けっか）は予想（よそう）できないということを強調（きょうちょう）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)であっても(B)。",
+        "tense": "Contrastive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/私が告白したところで、彼女は応じないだろう。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しても": {
+            "en": "Think 'less likely result' and 'more emotional'",
+            "es": ""
+          },
+          "としても": {
+            "en": "Think 'less likely result' and 'more emotional'",
+            "es": ""
+          },
+          "してでも": {
+            "en": "Think 'less likely result' and 'more emotional'",
+            "es": ""
+          },
+          "としたところで": {
+            "en": "So close! You do not need the と here",
+            "es": ""
+          },
+          "にしろ": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "したって": {
+            "en": "Can you say it another way?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Even if</strong> I confessed my love, she <strong>wouldn't</strong> respond.",
+        "nuance_translation": "A <strong>hypothetical</strong> structure, highlighting that even in the <strong>situation or location</strong> of (A), the result will not be as expected. Even though (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 730,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7854",
+      "type": "study_question",
+      "attributes": {
+        "id": 7854,
+        "content": "徹夜（てつや）<span class='gp-popout' data-gp-id='36'>で</span>勉強（べんきょう）<span class='study-area-input'>____</span>、合格（ごうかく）し<strong>ない</strong>。",
+        "answer": "したところで",
+        "alternate_grammar": [],
+        "kanji_answer": "したところで",
+        "kanji_alt_grammar": [],
+        "nuance": "たとえ(A)という<strong>場所（ばしょ）</strong>、又（また）は<strong>状況（じょうきょう）</strong>であっても、結果（けっか）は予想（よそう）できないということを強調（きょうちょう）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)であっても(B)。",
+        "tense": "Contrastive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/徹夜で勉強したところで、合格しない。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しても": {
+            "en": "Think 'less likely result' and 'more emotional'",
+            "es": ""
+          },
+          "としても": {
+            "en": "Think 'less likely result' and 'more emotional'",
+            "es": ""
+          },
+          "してでも": {
+            "en": "Think 'less likely result' and 'more emotional'",
+            "es": ""
+          },
+          "としたところで": {
+            "en": "So close! You do not need the と here",
+            "es": ""
+          },
+          "にしろ": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "したって": {
+            "en": "Can you say it another way?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Even if</strong> I studied all night, I <strong>would not</strong> pass.",
+        "nuance_translation": "A <strong>hypothetical</strong> structure, highlighting that even in the <strong>situation or location</strong> of (A), the result will not be as expected. Even though (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 730,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10429",
+      "type": "study_question",
+      "attributes": {
+        "id": 10429,
+        "content": "今更（いまさら）焦（あせ）って勉強（べんきょう）を<span class='study-area-input'>____</span>あなたが志望（しぼう）する大学（だいがく）に受（う）かる見込（みこ）みは<strong>ない</strong>だろう。",
+        "answer": "はじめたところで",
+        "alternate_grammar": [],
+        "kanji_answer": "始（はじ）めたところで",
+        "kanji_alt_grammar": [],
+        "nuance": "たとえ(A)という<strong>場所（ばしょ）</strong>、又（また）は<strong>状況（じょうきょう）</strong>であっても、結果（けっか）は予想（よそう）できないということを強調（きょうちょう）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)であっても(B)。",
+        "tense": "Hypothetical",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/今更焦って勉強を始めたところであなたが志望する大学に受かる見込みはないだろう。.mp3",
+        "word_prompt": "始（はじ）める",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はじめても": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "はじめるとしても": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "はじめるにしても": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "はじめてでも": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "はじめたって": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Even if</strong> you started studying in a rush at this late point, you probably have <strong>no chance</strong> of being accepted by the university that you're hoping for, right?",
+        "nuance_translation": "A <strong>hypothetical</strong> structure, highlighting that even in the <strong>situation or location</strong> of (A), the result will not be as expected. Even though (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 730,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10430",
+      "type": "study_question",
+      "attributes": {
+        "id": 10430,
+        "content": "ちょっとやそっと妻（つま）に優（やさ）しく<span class='study-area-input'>____</span>妻（つま）が機嫌（きげん）を直（なお）してくれるとは思（おも）わ<strong>ない</strong>。",
+        "answer": "したところで",
+        "alternate_grammar": [],
+        "kanji_answer": "したところで",
+        "kanji_alt_grammar": [],
+        "nuance": "たとえ(A)という<strong>場所（ばしょ）</strong>、又（また）は<strong>状況（じょうきょう）</strong>であっても、結果（けっか）は予想（よそう）できないということを強調（きょうちょう）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)であっても(B)。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ちょっとやそっと妻に優しくしたところで妻が機嫌を直してくれるとは思わない。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しても": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "するとしても": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "するにしても": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "してでも": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "したって": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Just merely by</strong> going out of your way for your wife, I <strong>don't think</strong> that she'll cheer up.",
+        "nuance_translation": "A <strong>hypothetical</strong> structure, highlighting that even in the <strong>situation or location</strong> of (A), the result will not be as expected. Even though (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 730,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10431",
+      "type": "study_question",
+      "attributes": {
+        "id": 10431,
+        "content": "真犯人（しんはんにん）を追及（ついきゅう）<span class='study-area-input'>____</span>遺族（いぞく）の悲（かな）しみが消（き）えることは<strong>ありません</strong>が、刑事（けいじ）として何（なん）としてでも真犯人（しんはんにん）を見（み）つける所存（しょぞん）であります。",
+        "answer": "したところで",
+        "alternate_grammar": [],
+        "kanji_answer": "したところで",
+        "kanji_alt_grammar": [],
+        "nuance": "たとえ(A)という<strong>場所（ばしょ）</strong>、又（また）は<strong>状況（じょうきょう）</strong>であっても、結果（けっか）は予想（よそう）できないということを強調（きょうちょう）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)であっても(B)。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/真犯人を追及したところで遺族の悲しみが消えることはありませんが、刑事として何としてでも真犯人を見つける所存であります。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しても": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "するとしても": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "するにしても": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "してでも": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          },
+          "したって": {
+            "en": "It works, but let's try something that focuses strongly on hopelessness and is often used together with verbs in negative form.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It is <strong>not</strong> like the bereaved family's sadness will disappear <strong>even if</strong> the true culprit is sought out, but as a detective, I have the intention of doing whatever it takes to find them.",
+        "nuance_translation": "A <strong>hypothetical</strong> structure, highlighting that even in the <strong>situation or location</strong> of (A), the result will not be as expected. Even though (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 730,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "819",
+      "type": "writeup",
+      "attributes": {
+        "id": 819,
+        "body_ja": "<p>「<span data-gp-id='730'>～たところで</span>」は、動詞（どうし）の過去形（かこけい）と名詞（めいし）の「ところ」、そして助詞（じょし）の「で」で構成（こうせい）される文型（ぶんけい）です。</p>\r\n\r\n<p>この文型（ぶんけい）は「たとえ (A) をしても (B) にはならない」という意味（いみ）で使（つか）われます。「ところ」を含（ふく）むほかの多（おお）くの文型（ぶんけい）と同（おな）じように、この文型（ぶんけい）も動作（どうさ）が起（お）こる場面（ばめん）や状況（じょうきょう）に焦点（しょうてん）を当（あ）てています。</p>\r\n\r\n<p>「<span data-gp-id='730'>～たところで</span>」が「たとえ〜ても」という仮定（かてい）の意味合（いみあ）いを持（も）つのは、文（ぶん）の前半（ぜんはん）が過去形（かこけい）になる一方（いっぽう）で、後半（こうはん）には過去（かこ）の出来事（できごと）が来（こ）ないところから生（う）まれています。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180046'>\r\n<li data-study-question='180047'>\r\n<li data-study-question='180048'></ul>\r\n\r\n<p>上記（じょうき）の例文（れいぶん）からもわかるように、「<span data-gp-id='730'>～たところで</span>」は通常（つうじょう）、話（はな）し手（て）が望（のぞ）んでいることや願（ねが）っていることとは逆（ぎゃく）の結果（けっか）になることを述（の）べるときに使（つか）われます。そのため、文（ぶん）の後半（こうはん） (B) は話（はな）し手（て）にとって好（この）ましくない内容（ないよう）になることがほとんどです。</p>\r\n\r\n<section class='funfact'><h4>豆知識（まめちしき）</h4>\r\n<p>「<span data-gp-id='730'>～たところで</span>」の文（ぶん）では、(B) に悪（わる）い結果（けっか）が来（く）るため、(A) の始（はじ）めに「今（いま）さら」「いくら」「どんなに」といった言葉（ことば）がよく出（で）てきます。これらの言葉（ことば）は、期待（きたい）に反（はん）する残念（ざんねん）な結果（けっか） (B) に対（たい）して、話（はな）し手（て）が感（かん）じる苛立（いらだ）ちや諦（あきら）めの気持（きも）ちをさらに強調（きょうちょう）する役割（やくわり）を果（は）たしています。</p></section>",
+        "body": "<p><span data-gp-id='730'>～たところで</span> is a grammar construction that combines the simple-past form of a verb, the noun ところ 'place', and the case-marking particle で.</p>\r\n\r\n<p>As with most other grammar patterns that ところ is seen with, the focus is on the situation of the verb occurring. <span data-gp-id='730'>～たところで</span> is often translated as 'even if (A), not (B)', or 'even if (A), it won't be (B)'.</p>\r\n\r\n<p>This 'even if' nuance is created by the fact that ～たところで sentences will never have something in the past tense in the second half of the sentence, despite using the past tense before ところ. This is similar to the English 'even if (A) were to happen, (B) would still not occur'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180046'>\r\n<li data-study-question='180047'>\r\n<li data-study-question='180048'></ul>\r\n\r\n<p>As can be seen by the examples above, <span data-gp-id='730'>～たところで</span> will convey things that are counter to what the speaker either wants to, or wishes would happen. Due to this, the (B) half of the sentence will almost always be something unfavorable.</p>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>Due to <span data-gp-id='730'>～たところで</span> always marking some kind of negative result in (B), (A) will often be preceded by words such as 今（いま）さら, いくら, or どんなに. These usually just emphasize the frustration that the speaker feels about the inevitable result.</p></section>"
+      }
+    },
+    {
+      "id": "1598",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1598,
+        "site": "Maggie Sensei",
+        "description": "How to use verb + ところ",
+        "link": "http://maggiesensei.com/2015/09/02/how-to-use-verb-ところ-tokoro/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1599",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1599,
+        "site": "JLPT 先生",
+        "description": "Breakdown and Grammar Notes",
+        "link": "https://jlptsensei.com/learn-japanese-grammar/%e3%81%9f%e3%81%a8%e3%81%93%e3%82%8d%e3%81%a7-ta-tokoro-de/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1600",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1600,
+        "site": "JapaneseTest4You",
+        "description": "Breakdown and Examples",
+        "link": "http://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-たところで-ta-tokoro-de/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "263",
+      "type": "related_content",
+      "attributes": {
+        "id": 263,
+        "relationship_type": "synonym",
+        "body": "Both share an even if nuance. にせよ・にしろ asserts that the conclusion doesn’t change, as in 成功しないにせよ挑戦すべきだ (Even if you don’t succeed, you should try). たところで adds futility, as in 今さら謝ったところで遅い (Even if you apologize now, it’s too late).",
+        "first_relatable": {
+          "id": 526,
+          "slug": "にせよ-にしろ",
+          "title": "にせよ・にしろ",
+          "meaning": "Even if, Even though, No matter, Whether… or",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 730,
+          "slug": "たところで",
+          "title": "たところで",
+          "meaning": "Even if ~ cannot or will not, Even though ~ not",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "345",
+      "type": "related_content",
+      "attributes": {
+        "id": 345,
+        "relationship_type": "related",
+        "body": "Both translate as even if, but differ in nuance. たって is a casual equivalent of ても, as in 雨が降ったって行く (I’ll go even if it rains). たところで appears in negative or futile contexts, as in 頑張ったところで無駄だ (Even if you try hard, it’s useless).",
+        "first_relatable": {
+          "id": 575,
+          "slug": "たって",
+          "title": "たって",
+          "meaning": "Even if, Even though, No matter how",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 730,
+          "slug": "たところで",
+          "title": "たところで",
+          "meaning": "Even if ~ cannot or will not, Even though ~ not",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

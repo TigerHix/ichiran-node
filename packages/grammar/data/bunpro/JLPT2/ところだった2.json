@@ -1,0 +1,857 @@
+{
+  "data": {
+    "id": "413",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 413,
+      "level": "JLPT2",
+      "lesson_id": 34,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "ところだった2",
+      "nuance": "あるものが(A)に<strong>いた</strong>、又（また）は(A)という<strong>状況（じょうきょう）</strong>に巻（ま）き込（こ）まれる寸前（すんぜん）だったということを表（あらわ）す表現（ひょうげん）。",
+      "grammar_order": 609,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 422,
+        "title": "どころではない",
+        "slug": "どころではない"
+      },
+      "previous_grammar_point": {
+        "id": 695,
+        "title": "ていては",
+        "slug": "ていては"
+      },
+      "lesson_count": "13/18",
+      "title": "ところだった ②",
+      "furigana": "ところだった ②",
+      "meaning": "Was just about to do something, Was in the middle of...",
+      "nuance_translation": "A structure expressing that something <strong>was</strong> in, or about to be in the <strong>position or situation</strong> of (A).",
+      "rare_kanji_warning": "所",
+      "caution": "",
+      "polite_structure": "<span class='gp-popout' data-gp-id='135'>Verb［る］ + <strong>ところ</span><span class='gp-popout' data-gp-id='40'>でした</span></strong>",
+      "casual_structure": "<span class='gp-popout' data-gp-id='135'>Verb［る］ + <strong>ところ</span><span class='gp-popout' data-gp-id='40'>だった</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/11163",
+      "metadata": "ところだった, 所だった, tokorodatta, expression, emphasis"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "1461",
+            "type": "study_question"
+          },
+          {
+            "id": "181988",
+            "type": "study_question"
+          },
+          {
+            "id": "181989",
+            "type": "study_question"
+          },
+          {
+            "id": "181990",
+            "type": "study_question"
+          },
+          {
+            "id": "181991",
+            "type": "study_question"
+          },
+          {
+            "id": "1462",
+            "type": "study_question"
+          },
+          {
+            "id": "6485",
+            "type": "study_question"
+          },
+          {
+            "id": "1460",
+            "type": "study_question"
+          },
+          {
+            "id": "6479",
+            "type": "study_question"
+          },
+          {
+            "id": "6480",
+            "type": "study_question"
+          },
+          {
+            "id": "6484",
+            "type": "study_question"
+          },
+          {
+            "id": "6487",
+            "type": "study_question"
+          },
+          {
+            "id": "6481",
+            "type": "study_question"
+          },
+          {
+            "id": "6482",
+            "type": "study_question"
+          },
+          {
+            "id": "6483",
+            "type": "study_question"
+          },
+          {
+            "id": "6486",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "624",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1379",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "446",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "908",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2096",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "1461",
+      "type": "study_question",
+      "attributes": {
+        "id": 1461,
+        "content": "今（いま）から関西弁（かんさいべん）を教（おそ）わる<span class='study-area-input'>____</span>のに。",
+        "answer": "ところだった",
+        "alternate_grammar": [
+          "ところだった",
+          "ところでした"
+        ],
+        "kanji_answer": "ところだった",
+        "kanji_alt_grammar": [
+          "ところでした",
+          "ところだった"
+        ],
+        "nuance": "あるものが(A)に<strong>いた</strong>、又（また）は(A)という<strong>状況（じょうきょう）</strong>に巻（ま）き込（こ）まれる寸前（すんぜん）だったということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past, Standard, Precise time frame",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/今から関西弁を教わるところだったのに。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>was just about to</strong> be taught the Kansai dialect.",
+        "nuance_translation": "A structure expressing that something <strong>was</strong> in, or about to be in the <strong>position or situation</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 413,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181988",
+      "type": "study_question",
+      "attributes": {
+        "id": 181988,
+        "content": "危（あぶ）なかった。危（あや）うくあの人（ひと）をひく<span class='study-area-input'>____</span>。",
+        "answer": "ところだった",
+        "alternate_grammar": [],
+        "kanji_answer": "ところだった",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/起きるのが3分遅かったら、遅刻するところだった。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "That was close. I <strong>was about to</strong> run over that person.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 413,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181989",
+      "type": "study_question",
+      "attributes": {
+        "id": 181989,
+        "content": "起（お）きるのが３（さん）分（ぷん）遅（おそ）かったら、遅刻（ちこく）する<span class='study-area-input'>____</span>。",
+        "answer": "ところだった",
+        "alternate_grammar": [],
+        "kanji_answer": "ところだった",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/危なかった。危うくあの人をひくところだった。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>was about to be</strong> late if I had woken up three minutes later.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 413,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181990",
+      "type": "study_question",
+      "attributes": {
+        "id": 181990,
+        "content": "今（いま）から家（いえ）を出（で）る<span class='study-area-input'>____</span>のに、いきなり雨（あめ）が降（ふ）ってきたから雨（あめ）が止（や）むまで待（ま）つ。",
+        "answer": "ところだった",
+        "alternate_grammar": [],
+        "kanji_answer": "ところだった",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/今から家を出るところだったのに、いきなり雨が降ってきたから雨が止むまで待つ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>was just about to</strong> leave the house, but it suddenly started raining, so I'm going to wait until the rain stops.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 413,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181991",
+      "type": "study_question",
+      "attributes": {
+        "id": 181991,
+        "content": "もうすぐ犯人（はんにん）が自白（じはく）する<span class='study-area-input'>____</span>のに、お前（まえ）が余計（よけい）なことを言（い）うから...。",
+        "answer": "ところだった",
+        "alternate_grammar": [],
+        "kanji_answer": "ところだった",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/もうすぐ犯人が自白するところだったのに、お前が余計なことを言うから...。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The killer <strong>was just about to</strong> confess, but you went off on a tangent...",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 413,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1462",
+      "type": "study_question",
+      "attributes": {
+        "id": 1462,
+        "content": "危（あや）うく期限（きげん）が切（き）れてしまう<span class='study-area-input'>____</span>。",
+        "answer": "ところだった",
+        "alternate_grammar": [
+          "ところだった",
+          "ところでした"
+        ],
+        "kanji_answer": "ところだった",
+        "kanji_alt_grammar": [
+          "ところでした",
+          "ところだった"
+        ],
+        "nuance": "あるものが(A)に<strong>いた</strong>、又（また）は(A)という<strong>状況（じょうきょう）</strong>に巻（ま）き込（こ）まれる寸前（すんぜん）だったということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past, Standard, Precise time frame",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/危うく期限が切れてしまうところだった。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>was just about to</strong> narrowly miss the deadline.",
+        "nuance_translation": "A structure expressing that something <strong>was</strong> in, or about to be in the <strong>position or situation</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 413,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6485",
+      "type": "study_question",
+      "attributes": {
+        "id": 6485,
+        "content": "携帯（けいたい）の電池（でんち）がなくなる<span class='study-area-input'>____</span>が、なんとか間（ま）に合（あ）った。",
+        "answer": "ところだった",
+        "alternate_grammar": [
+          "ところだった",
+          "ところでした"
+        ],
+        "kanji_answer": "ところだった",
+        "kanji_alt_grammar": [
+          "ところでした",
+          "ところだった"
+        ],
+        "nuance": "あるものが(A)に<strong>いた</strong>、又（また）は(A)という<strong>状況（じょうきょう）</strong>に巻（ま）き込（こ）まれる寸前（すんぜん）だったということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past, Standard, Precise time frame",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ばかりだった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ばかりでした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The battery on my phone <strong>was just about to</strong> die, but I somehow managed to make it in time.",
+        "nuance_translation": "A structure expressing that something <strong>was</strong> in, or about to be in the <strong>position or situation</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 413,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1460",
+      "type": "study_question",
+      "attributes": {
+        "id": 1460,
+        "content": "絵（え）の具（ぐ）をつけてしまう<span class='study-area-input'>____</span>。",
+        "answer": "ところだった",
+        "alternate_grammar": [
+          "ところだった",
+          "ところでした"
+        ],
+        "kanji_answer": "ところだった",
+        "kanji_alt_grammar": [
+          "ところでした",
+          "ところだった"
+        ],
+        "nuance": "あるものが(A)に<strong>いた</strong>、又（また）は(A)という<strong>状況（じょうきょう）</strong>に巻（ま）き込（こ）まれる寸前（すんぜん）だったということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past, Standard, Precise time frame",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/絵の具をつけてしまうところだった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ばかりだった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>was just about to</strong> apply the paint.",
+        "nuance_translation": "A structure expressing that something <strong>was</strong> in, or about to be in the <strong>position or situation</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 413,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6479",
+      "type": "study_question",
+      "attributes": {
+        "id": 6479,
+        "content": "悪友（あくゆう）と付（つ）き合（あ）って、寿命（じゅみょう）を縮（ちぢ）める<span class='study-area-input'>____</span>。",
+        "answer": "ところでした",
+        "alternate_grammar": [
+          "ところだった",
+          "ところでした"
+        ],
+        "kanji_answer": "ところでした",
+        "kanji_alt_grammar": [
+          "ところだった",
+          "ところでした"
+        ],
+        "nuance": "あるものが(A)に<strong>いた</strong>、又（また）は(A)という<strong>状況（じょうきょう）</strong>に巻（ま）き込（こ）まれる寸前（すんぜん）だったということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past, Polite, Precise time frame",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ばかりだった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ばかりでした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>was just about to</strong> become friends with a bad person and shorten my lifespan.",
+        "nuance_translation": "A structure expressing that something <strong>was</strong> in, or about to be in the <strong>position or situation</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 413,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6480",
+      "type": "study_question",
+      "attributes": {
+        "id": 6480,
+        "content": "お湯（ゆ）の温度（おんど）を調整（ちょうせい）している<span class='study-area-input'>____</span>のに、ブレーカーが落（お）ちてしまった。",
+        "answer": "ところだった",
+        "alternate_grammar": [
+          "ところだった",
+          "ところでした"
+        ],
+        "kanji_answer": "ところだった",
+        "kanji_alt_grammar": [
+          "ところでした",
+          "ところだった"
+        ],
+        "nuance": "あるものが(A)に<strong>いた</strong>、又（また）は(A)という<strong>状況（じょうきょう）</strong>に巻（ま）き込（こ）まれる寸前（すんぜん）だったということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past, Standard, Precise time frame",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ばかりだった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ばかりでした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Just as I was in the middle of</strong> adjusting the hot water temperature, the breaker unfortunately tripped.",
+        "nuance_translation": "A structure expressing that something <strong>was</strong> in, or about to be in the <strong>position or situation</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 413,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6484",
+      "type": "study_question",
+      "attributes": {
+        "id": 6484,
+        "content": "出掛（でか）ける<span class='study-area-input'>____</span>が、雨（あめ）が降（ふ）ってきたのでやめました。",
+        "answer": "ところだった",
+        "alternate_grammar": [
+          "ところだった",
+          "ところでした"
+        ],
+        "kanji_answer": "ところだった",
+        "kanji_alt_grammar": [
+          "ところでした",
+          "ところだった"
+        ],
+        "nuance": "あるものが(A)に<strong>いた</strong>、又（また）は(A)という<strong>状況（じょうきょう）</strong>に巻（ま）き込（こ）まれる寸前（すんぜん）だったということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past, Standard, Precise time frame",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/出掛けるところだったが、雨が降ってきたのでやめました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ばかりだった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ばかりでした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>was just about to</strong> go out, but because it started raining, I stopped.",
+        "nuance_translation": "A structure expressing that something <strong>was</strong> in, or about to be in the <strong>position or situation</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 413,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6487",
+      "type": "study_question",
+      "attributes": {
+        "id": 6487,
+        "content": "捕（つか）まえた犯人（はんにん）を危（あや）うく逃（のが）す<span class='study-area-input'>____</span>。",
+        "answer": "ところだった",
+        "alternate_grammar": [
+          "ところだった",
+          "ところでした"
+        ],
+        "kanji_answer": "ところだった",
+        "kanji_alt_grammar": [
+          "ところでした",
+          "ところだった"
+        ],
+        "nuance": "あるものが(A)に<strong>いた</strong>、又（また）は(A)という<strong>状況（じょうきょう）</strong>に巻（ま）き込（こ）まれる寸前（すんぜん）だったということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past, Standard, Precise time frame",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ばかりだった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ばかりでした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The captured criminal <strong>was just about to</strong> barely escape.",
+        "nuance_translation": "A structure expressing that something <strong>was</strong> in, or about to be in the <strong>position or situation</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 413,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6481",
+      "type": "study_question",
+      "attributes": {
+        "id": 6481,
+        "content": "お風呂（ふろ）に入（はい）っている<span class='study-area-input'>____</span>から、電話（でんわ）に出（で）られませんでした。",
+        "answer": "ところだった",
+        "alternate_grammar": [
+          "ところだった",
+          "ところでした"
+        ],
+        "kanji_answer": "ところだった",
+        "kanji_alt_grammar": [
+          "ところでした",
+          "ところだった"
+        ],
+        "nuance": "あるものが(A)に<strong>いた</strong>、又（また）は(A)という<strong>状況（じょうきょう）</strong>に巻（ま）き込（こ）まれる寸前（すんぜん）だったということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past, Standard, Precise time frame",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ばかりだった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ばかりでした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Since I <strong>was in the middle of</strong> taking a bath, I couldn't answer the phone.",
+        "nuance_translation": "A structure expressing that something <strong>was</strong> in, or about to be in the <strong>position or situation</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 413,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6482",
+      "type": "study_question",
+      "attributes": {
+        "id": 6482,
+        "content": "あんな人（ひと）だって知（し）らなかったら、危（あや）うく付（つ）き合（あ）う<span class='study-area-input'>____</span>。",
+        "answer": "ところだった",
+        "alternate_grammar": [
+          "ところだった",
+          "ところでした"
+        ],
+        "kanji_answer": "ところだった",
+        "kanji_alt_grammar": [
+          "ところでした",
+          "ところだった"
+        ],
+        "nuance": "あるものが(A)に<strong>いた</strong>、又（また）は(A)という<strong>状況（じょうきょう）</strong>に巻（ま）き込（こ）まれる寸前（すんぜん）だったということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past, Standard, Precise time frame",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あんな人だって知らなかったら、危うく付き合うところだった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ばかりだった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ばかりでした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>was just about to</strong> go out with that person, if I didn't know who they were.",
+        "nuance_translation": "A structure expressing that something <strong>was</strong> in, or about to be in the <strong>position or situation</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 413,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6483",
+      "type": "study_question",
+      "attributes": {
+        "id": 6483,
+        "content": "今（いま）作（つく）る<span class='study-area-input'>____</span>けど、「夕飯（ゆうはん）はいらない」と連絡（れんらく）が入（はい）った。",
+        "answer": "ところだった",
+        "alternate_grammar": [
+          "ところだった",
+          "ところでした"
+        ],
+        "kanji_answer": "ところだった",
+        "kanji_alt_grammar": [
+          "ところでした",
+          "ところだった"
+        ],
+        "nuance": "あるものが(A)に<strong>いた</strong>、又（また）は(A)という<strong>状況（じょうきょう）</strong>に巻（ま）き込（こ）まれる寸前（すんぜん）だったということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past, Standard, Precise time frame",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ばかりだった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ばかりでした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>was just about to</strong> make it, but I got a message saying, 'I don't need dinner.'",
+        "nuance_translation": "A structure expressing that something <strong>was</strong> in, or about to be in the <strong>position or situation</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 413,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6486",
+      "type": "study_question",
+      "attributes": {
+        "id": 6486,
+        "content": "やっと慣（な）れてきた<span class='study-area-input'>____</span>のに、仕事（しごと）を辞（や）めなければいけなくなった。",
+        "answer": "ところだった",
+        "alternate_grammar": [
+          "ところだった",
+          "ところでした"
+        ],
+        "kanji_answer": "ところだった",
+        "kanji_alt_grammar": [
+          "ところでした",
+          "ところだった"
+        ],
+        "nuance": "あるものが(A)に<strong>いた</strong>、又（また）は(A)という<strong>状況（じょうきょう）</strong>に巻（ま）き込（こ）まれる寸前（すんぜん）だったということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past, Standard, Precise time frame",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ばかりだった": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ばかりでした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Despite <strong>just about</strong> getting used to it, I had to quit my job.",
+        "nuance_translation": "A structure expressing that something <strong>was</strong> in, or about to be in the <strong>position or situation</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 413,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "624",
+      "type": "writeup",
+      "attributes": {
+        "id": 624,
+        "body_ja": "<p>動詞（どうし）の辞書形（じしょけい）と組（く）み合（あ）わされた「<span data-gp-id='413'>ところだった</span>」は「もう少（すこ）しで (A) しそうだった」や「(A) の途中（とちゅう）だった」のような意味（いみ）を表（あらわ）す文型（ぶんけい）です。多（おお）くの場合（ばあい）、「<span data-gp-id='413'>ところだった</span>」は (A) をしなかったことによって生（しょう）じた良（よ）い結果（けっか）や悪（わる）い結果（けっか）を表（あらわ）します。</p>\r\n\r\n<p>この文型（ぶんけい）は、場所（ばしょ）を意味（いみ）する名詞（めいし）の「ところ」と「だ」の過去形（かこけい）「だった」を組（く）み合（あ）わせて、「(A) の場所（ばしょ）や状況（じょうきょう）にいたこと」を強調（きょうちょう）します。そして、その時点（じてん）で起（お）こるはずだったことが、予想外（よそうがい）の出来事（できごと）によって変（か）わった時（とき）に使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181988'>\r\n<li data-study-question='181989'>\r\n</ul>\r\n\r\n<p>あと少（すこ）しで良（よ）い結果（けっか）を得（え）られそうだったがそれを逃（のが）してしまったという場合（ばあい）、「<span data-gp-id='413'>ところだった</span>」の直後（ちょくご）に「のに」を使（つか）うことがあります。これは「あと少（すこ）しで (A) だったが、(B) という悪（わる）い結果（けっか）になってしまった」という意味（いみ）で使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181990'>\r\n<li data-study-question='181991'>\r\n</ul>",
+        "body": "<p>When combined with the dictionary form of verbs, <span data-gp-id='413'>ところだった</span> will indicate that something was about to happen, and will regularly be translated as 'was just about to do (A)', or 'was in the middle of (A)'. In many cases, <span data-gp-id='413'>ところだった</span> will indicate either a positive or negative result that came about from 'not doing (A)'.</p>\r\n\r\n<p>As this grammar pattern is a combination of ところ 'place', and the past tense of だ, だった; it will put emphasis of 'having been in the place or situation of (A)', before something happened that caused the expected result to change.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181988'>\r\n<li data-study-question='181989'>\r\n</ul>\r\n\r\n<p>In cases where a positive result was narrowly missed out on, のに will often appear directly after ところだった. This can be interpreted as 'despite almost doing (A), (B)'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181990'>\r\n<li data-study-question='181991'>\r\n</ul>"
+      }
+    },
+    {
+      "id": "1379",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1379,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 237",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "908",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 908,
+        "site": "Nihongoの森",
+        "description": "～ところだった VS ～ずじまい（だ）",
+        "link": "https://www.youtube.com/watch?v=hjpISg6S2XA",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2096",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2096,
+        "site": "Tae Kim",
+        "description": "Using 「ところ」 as an abstract place",
+        "link": "https://guidetojapanese.org/learn/grammar/genericnouns",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "446",
+      "type": "related_content",
+      "attributes": {
+        "id": 446,
+        "relationship_type": "related",
+        "body": "ところだった can be used with two closely related nuances. The more literal meaning expresses the idea of 'was just about to (A)', as in: 昼ご飯を食べるところだった ('I was just about to eat lunch.'). The more figurative meaning conveys that something nearly happened but ultimately didn't, similar to 'I almost (A)' or 'I nearly (A)' in English, as in: 死ぬところだった ('I almost died' [but didn't]).",
+        "first_relatable": {
+          "id": 413,
+          "slug": "ところだった2",
+          "title": "ところだった ②",
+          "meaning": "Was just about to do something, Was in the middle of...",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 448,
+          "slug": "ところだった1",
+          "title": "ところだった ①",
+          "meaning": "Almost, Nearly, About to, On the verge of",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1417 @@
+{
+  "data": {
+    "id": "309",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 309,
+      "level": "JLPT3",
+      "lesson_id": 29,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "きり",
+      "nuance": "何（なに）かの<strong>最初（さいしょ）で最後（さいご）</strong>の時間（じかん）、又（また）は何（なに）かの<strong>限度（げんど）</strong>を切（き）り口（くち）として時点（じてん）を表（あらわ）す表現（ひょうげん）。",
+      "grammar_order": 490,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 307,
+        "title": "かけ",
+        "slug": "かけ"
+      },
+      "previous_grammar_point": {
+        "id": 293,
+        "title": "切れない",
+        "slug": "切れない"
+      },
+      "lesson_count": "8/22",
+      "title": "きり",
+      "furigana": "きり",
+      "meaning": "Only, Just, Since",
+      "nuance_translation": "A phrase that expresses the <strong>first and last</strong> time or limit for something as the <strong>cutoff</strong> point.",
+      "rare_kanji_warning": "",
+      "caution": "っきり is more casual than きり",
+      "polite_structure": "",
+      "casual_structure": "<span class='gp-popout' data-gp-id='874'>Verb［た］</span> + <strong>きり</strong><sup>(1)</sup><br>Noun + <strong>きり</strong><br><span class='gp-popout' data-gp-id='5'>これ</span><sup>(2)</sup> + <strong>きり</strong><sup>(1)</sup><br>Number + Counter + <strong>きり</strong><sup>(1)</sup><br><br><sup>(1)</sup> っきり<br><sup>(2)</sup> <span class='gp-popout' data-gp-id='11'>それ</span>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/5596",
+      "metadata": "きり, っきり, kiri, kkiri, particle, adverbial particle"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "181546",
+            "type": "study_question"
+          },
+          {
+            "id": "5555",
+            "type": "study_question"
+          },
+          {
+            "id": "181543",
+            "type": "study_question"
+          },
+          {
+            "id": "181544",
+            "type": "study_question"
+          },
+          {
+            "id": "181545",
+            "type": "study_question"
+          },
+          {
+            "id": "181547",
+            "type": "study_question"
+          },
+          {
+            "id": "1138",
+            "type": "study_question"
+          },
+          {
+            "id": "1136",
+            "type": "study_question"
+          },
+          {
+            "id": "5556",
+            "type": "study_question"
+          },
+          {
+            "id": "5557",
+            "type": "study_question"
+          },
+          {
+            "id": "5560",
+            "type": "study_question"
+          },
+          {
+            "id": "5561",
+            "type": "study_question"
+          },
+          {
+            "id": "5562",
+            "type": "study_question"
+          },
+          {
+            "id": "5558",
+            "type": "study_question"
+          },
+          {
+            "id": "5559",
+            "type": "study_question"
+          },
+          {
+            "id": "5563",
+            "type": "study_question"
+          },
+          {
+            "id": "1137",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "508",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1187",
+            "type": "related_content"
+          },
+          {
+            "id": "1587",
+            "type": "related_content"
+          },
+          {
+            "id": "1129",
+            "type": "related_content"
+          },
+          {
+            "id": "1131",
+            "type": "related_content"
+          },
+          {
+            "id": "1260",
+            "type": "related_content"
+          },
+          {
+            "id": "1130",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "626",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "181546",
+      "type": "study_question",
+      "attributes": {
+        "id": 181546,
+        "content": "彼（かれ）<span class=\"gp-popout\" data-gp-id=\"955\">と</span>は一度（いちど）<span class='study-area-input'>____</span><span cla class=\"gp-popout\" data-gp-id=\"182\">しか</span>会（あ）えてい<span class=\"gp-popout\" data-gp-id=\"182\">ない</span>。",
+        "answer": "きり",
+        "alternate_grammar": [],
+        "kanji_answer": "きり",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/彼とは一度きりしか会えていない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I was <strong>only</strong> able to meet him once.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 309,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5555",
+      "type": "study_question",
+      "attributes": {
+        "id": 5555,
+        "content": "父（ちち）がついに<strong>寝（ね）た</strong><span class='study-area-input'>____</span>になってしまった。",
+        "answer": "きり",
+        "alternate_grammar": [
+          "っきり"
+        ],
+        "kanji_answer": "きり",
+        "kanji_alt_grammar": [
+          "っきり"
+        ],
+        "nuance": "何（なに）かの<strong>最初（さいしょ）で最後（さいご）</strong>の時間（じかん）、又（また）は何（なに）かの<strong>限度（げんど）</strong>を切（き）り口（くち）として時点（じてん）を表（あらわ）す表現（ひょうげん）。",
+        "tense": "Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/309/male_audio/231123_1519_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/父がついに寝たきりになってしまった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけ": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "まま": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "My dad has become completely bedridden (<strong>only/just sleeps</strong>).",
+        "nuance_translation": "A phrase that expresses the <strong>first and last</strong> time or limit for something as the <strong>cutoff</strong> point.",
+        "extra_info": "",
+        "reviewable_id": 309,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181543",
+      "type": "study_question",
+      "attributes": {
+        "id": 181543,
+        "content": "昨日（きのう）、晩（ばん）ご飯（はん）食（た）べた<span class='study-area-input'>____</span>何（なに）も食（た）べて<span class=\"gp-popout\" data-gp-id=\"51\">ない</span><span class=\"gp-popout\" data-gp-id=\"45\">から</span>、めちゃお腹（なか）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>空（す）いた。",
+        "answer": "きり",
+        "alternate_grammar": [],
+        "kanji_answer": "きり",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/昨日、晩ご飯食べたきり何も食べてないから、めちゃお腹が空いた。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I haven't eaten anything <strong>since</strong> last night, so I am extremely hungry.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 309,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181544",
+      "type": "study_question",
+      "attributes": {
+        "id": 181544,
+        "content": "お祖母（ばあ）ちゃんは去年（きょねん）病気（びょうき）<span class=\"gp-popout\" data-gp-id=\"36\">で</span>倒（たお）れて、寝（ね）た<span class='study-area-input'>____</span>になった。",
+        "answer": "きり",
+        "alternate_grammar": [],
+        "kanji_answer": "きり",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/お祖母ちゃんは去年病気で倒れて、寝たきりになった。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Grandma got sick last year, and has become bedridden. (Can <strong>only</strong> sleep)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 309,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181545",
+      "type": "study_question",
+      "attributes": {
+        "id": 181545,
+        "content": "一人（ひとり）<span class='study-area-input'>____</span>になれる時間（じかん）<span class=\"gp-popout\" data-gp-id=\"91\">が欲（ほ）しい</span>。",
+        "answer": "きり",
+        "alternate_grammar": [],
+        "kanji_answer": "きり",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/一人きりになれる時間が欲しい。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I  want some time where I can be <strong>alone</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 309,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181547",
+      "type": "study_question",
+      "attributes": {
+        "id": 181547,
+        "content": "二人（ふたり）っ<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"6\">の</span>時間（じかん）は<span class=\"gp-popout\" data-gp-id=\"7\">いい</span>ね！",
+        "answer": "きり",
+        "alternate_grammar": [],
+        "kanji_answer": "きり",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/二人っきりの時間はいいね！.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "A time <strong>just</strong> for the two of us is nice, isn't it!",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 309,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1138",
+      "type": "study_question",
+      "attributes": {
+        "id": 1138,
+        "content": "寂（さび）しい時（とき）、<strong>一人（ひとり）</strong><span class='study-area-input'>____</span>で泣（な）く。",
+        "answer": "っきり",
+        "alternate_grammar": [
+          "きり"
+        ],
+        "kanji_answer": "っきり",
+        "kanji_alt_grammar": [
+          "きり"
+        ],
+        "nuance": "何（なに）かの<strong>最初（さいしょ）で最後（さいご）</strong>の時間（じかん）、又（また）は何（なに）かの<strong>限度（げんど）</strong>を切（き）り口（くち）として時点（じてん）を表（あらわ）す表現（ひょうげん）。",
+        "tense": "Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/309/male_audio/231123_1519_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/寂しい時、一人っきりで泣く。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きり": {
+            "en": "",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "だけ": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ぼっち": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "で": {
+            "en": "で is already in the sentence, so this would be ungrammatical. We are looking for a grammar point frequently used with counters that implies (A) is all that will be included in some particular situation/action.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ばかり": {
+            "en": "ばかりimplies quantitative limitation, similar to 'nothing but' and doesn't sound natural here. We are looking for a grammar point frequently used with counters that implies (A) is all that will be included in some particular situation/action.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "だけしか": {
+            "en": "だけしか is typically followed by a negative verb, so it sounds unnatural here. We are looking for a grammar point frequently used with counters that implies (A) is all that will be included in some particular situation/action.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "きる": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "きって": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "When I am sad, I cry <strong>alone</strong>. (<strong>just/only myself</strong>)",
+        "nuance_translation": "A phrase that expresses the <strong>first and last</strong> time or limit for something as the <strong>cutoff</strong> point.",
+        "extra_info": "",
+        "reviewable_id": 309,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1136",
+      "type": "study_question",
+      "attributes": {
+        "id": 1136,
+        "content": "やっと<strong>二人（ふたり）</strong><span class='study-area-input'>____</span>になれたね。",
+        "answer": "っきり",
+        "alternate_grammar": [
+          "きり"
+        ],
+        "kanji_answer": "っきり",
+        "kanji_alt_grammar": [
+          "きり"
+        ],
+        "nuance": "何（なに）かの<strong>最初（さいしょ）で最後（さいご）</strong>の時間（じかん）、又（また）は何（なに）かの<strong>限度（げんど）</strong>を切（き）り口（くち）として時点（じてん）を表（あらわ）す表現（ひょうげん）。",
+        "tense": "Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/309/male_audio/231123_1519.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/やっと二人っきりになれたね。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけ": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "ばかり": {
+            "en": "ばかりimplies quantitative limitation, similar to 'nothing but' and doesn't sound natural here. We are looking for a grammar point frequently used with counters that implies (A) is all that will be included in some particular situation/action.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "きって": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ぎり": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "き": {
+            "en": "We are looking for a grammar point frequently used with counters that implies (A) is all that will be included in some particular situation/action.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "きる": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "だけしか": {
+            "en": "だけしか is typically followed by a negative verb, so it sounds unnatural here. We are looking for a grammar point frequently used with counters that implies (A) is all that will be included in some particular situation/action.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "It is finally <strong>just the two of us</strong>.",
+        "nuance_translation": "A phrase that expresses the <strong>first and last</strong> time or limit for something as the <strong>cutoff</strong> point.",
+        "extra_info": "",
+        "reviewable_id": 309,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5556",
+      "type": "study_question",
+      "attributes": {
+        "id": 5556,
+        "content": "彼女（かのじょ）とは<strong>喧嘩（けんか）した</strong><span class='study-area-input'>____</span>会（あ）っていません。",
+        "answer": "っきり",
+        "alternate_grammar": [
+          "っきり",
+          "きり"
+        ],
+        "kanji_answer": "っきり",
+        "kanji_alt_grammar": [
+          "きり",
+          "っきり"
+        ],
+        "nuance": "何（なに）かの<strong>最初（さいしょ）で最後（さいご）</strong>の時間（じかん）、又（また）は何（なに）かの<strong>限度（げんど）</strong>を切（き）り口（くち）として時点（じてん）を表（あらわ）す表現（ひょうげん）。",
+        "tense": "Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/309/male_audio/231123_1519_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/彼女とは喧嘩したっきり会っていません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけ": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "から": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "いらい": {
+            "en": "いらい follows verbs in their て form. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ばかり": {
+            "en": "たばかり implies something just finished. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "からには": {
+            "en": "からには means 'since' or 'given that' and implies that a given action is unavoidable or logical. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "にかけて": {
+            "en": "This is used with nouns and has a different nuance than we are looking for. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いじょう": {
+            "en": "以上（いじょう）is a formal grammar point meaning 'now that' or 'as long as', highlighting circumstances as the reason for an action. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ので": {
+            "en": "This simply means 'so'. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しだい": {
+            "en": "This attaches to verb stems and means 'as soon as'. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I haven't seen my girlfriend <strong>since we had a fight</strong>.",
+        "nuance_translation": "A phrase that expresses the <strong>first and last</strong> time or limit for something as the <strong>cutoff</strong> point.",
+        "extra_info": "",
+        "reviewable_id": 309,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5557",
+      "type": "study_question",
+      "attributes": {
+        "id": 5557,
+        "content": "チャンスは<strong>一度（いちど）</strong><span class='study-area-input'>____</span><span class='chui'>しかない</span>から緊張（きんちょう）する。",
+        "answer": "きり",
+        "alternate_grammar": [
+          "っきり",
+          "きり"
+        ],
+        "kanji_answer": "きり",
+        "kanji_alt_grammar": [
+          "っきり",
+          "きり"
+        ],
+        "nuance": "何（なに）かの<strong>最初（さいしょ）で最後（さいご）</strong>の時間（じかん）、又（また）は何（なに）かの<strong>限度（げんど）</strong>を切（き）り口（くち）として時点（じてん）を表（あらわ）す表現（ひょうげん）。",
+        "tense": "Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/309/male_audio/231123_1520.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/チャンスは一度きりしかないから緊張する。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけ": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "だけしか": {
+            "en": "しか is already used here, so this is not grammatical. We are looking for a grammar point frequently used with counters that implies (A) is all that will be included in some particular situation/action.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "も": {
+            "en": "も doesn't sound natural here. We are looking for a grammar point frequently used with counters that implies (A) is all that will be included in some particular situation/action.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ばかり": {
+            "en": "ばかりimplies quantitative limitation, similar to 'nothing but' and doesn't sound natural here. We are looking for a grammar point frequently used with counters that implies (A) is all that will be included in some particular situation/action.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しか": {
+            "en": "しか is already used here, so this is not grammatical. We are looking for a grammar point frequently used with counters that implies (A) is all that will be included in some particular situation/action.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "きって": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I am nervous because I have <strong>only one</strong> chance.",
+        "nuance_translation": "A phrase that expresses the <strong>first and last</strong> time or limit for something as the <strong>cutoff</strong> point.",
+        "extra_info": "",
+        "reviewable_id": 309,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5560",
+      "type": "study_question",
+      "attributes": {
+        "id": 5560,
+        "content": "<strong>一度（いちど）習（なら）った</strong><span class='study-area-input'>____</span>だから、やり方（かた）を忘（わす）れてしまいました。",
+        "answer": "きり",
+        "alternate_grammar": [
+          "っきり",
+          "きり"
+        ],
+        "kanji_answer": "きり",
+        "kanji_alt_grammar": [
+          "っきり",
+          "きり"
+        ],
+        "nuance": "何（なに）かの<strong>最初（さいしょ）で最後（さいご）</strong>の時間（じかん）、又（また）は何（なに）かの<strong>限度（げんど）</strong>を切（き）り口（くち）として時点（じてん）を表（あらわ）す表現（ひょうげん）。",
+        "tense": "Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/309/male_audio/231204_1205_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/一度習ったきりだから、やり方を忘れてしまいました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけ": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ばかり": {
+            "en": "たばかり implies something just finished. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しかない": {
+            "en": "しか typically comes after nouns, so it sounds unnatural here. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しか": {
+            "en": "しか typically comes after nouns, so it sounds unnatural here. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "だけしか": {
+            "en": "だけしか typically comes after nouns, so it sounds unnatural here. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "きった": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I have forgotten how to do it because I had <strong>only learned it once</strong>.",
+        "nuance_translation": "A phrase that expresses the <strong>first and last</strong> time or limit for something as the <strong>cutoff</strong> point.",
+        "extra_info": "",
+        "reviewable_id": 309,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5561",
+      "type": "study_question",
+      "attributes": {
+        "id": 5561,
+        "content": "３（さん）年（ねん）前（まえ）に<strong>飲（の）んだ</strong><span class='study-area-input'>____</span>薬（くすり）を飲（の）む機会（きかい）がない。",
+        "answer": "っきり",
+        "alternate_grammar": [
+          "っきり",
+          "きり"
+        ],
+        "kanji_answer": "っきり",
+        "kanji_alt_grammar": [
+          "きり",
+          "っきり"
+        ],
+        "nuance": "何（なに）かの<strong>最初（さいしょ）で最後（さいご）</strong>の時間（じかん）、又（また）は何（なに）かの<strong>限度（げんど）</strong>を切（き）り口（くち）として時点（じてん）を表（あらわ）す表現（ひょうげん）。",
+        "tense": "Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/309/male_audio/231123_1521.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/3年前に飲んだっきり薬を飲む機会がない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけ": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "から": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ばかり": {
+            "en": "たばかり implies something just finished. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いらい": {
+            "en": "いらい follows verbs in their て form. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ばかりに": {
+            "en": "This means 'simply because'. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "だけに": {
+            "en": "This means 'as might be expected' or 'it's only natural due to (A)'. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いじょう": {
+            "en": "以上（いじょう）is a formal grammar point meaning 'now that' or 'as long as', highlighting circumstances as the reason for an action. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ぶり": {
+            "en": "ぶり comes directly after time expressions.  We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Since I took</strong> medicine three years ago, I have not had the chance to take it (again). (<strong>only</strong>)",
+        "nuance_translation": "A phrase that expresses the <strong>first and last</strong> time or limit for something as the <strong>cutoff</strong> point.",
+        "extra_info": "",
+        "reviewable_id": 309,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5562",
+      "type": "study_question",
+      "attributes": {
+        "id": 5562,
+        "content": "「また後（あと）で電話（でんわ）します」と<strong>言（い）った</strong><span class='study-area-input'>____</span>全然（ぜんぜん）連絡（れんらく）がありません。",
+        "answer": "きり",
+        "alternate_grammar": [
+          "っきり",
+          "きり"
+        ],
+        "kanji_answer": "きり",
+        "kanji_alt_grammar": [
+          "っきり",
+          "きり"
+        ],
+        "nuance": "何（なに）かの<strong>最初（さいしょ）で最後（さいご）</strong>の時間（じかん）、又（また）は何（なに）かの<strong>限度（げんど）</strong>を切（き）り口（くち）として時点（じてん）を表（あらわ）す表現（ひょうげん）。",
+        "tense": "Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/309/male_audio/231123_1521_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/「また後で電話します」と言ったきり全然連絡がありません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけ": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "から": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "いらい": {
+            "en": "いらい follows verbs in their て form. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "からには": {
+            "en": "からには means 'since' or 'given that' and implies that a given action is unavoidable or logical. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ばかり": {
+            "en": "たばかり implies something just finished. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いじょう": {
+            "en": "以上（いじょう）is a formal grammar point meaning 'now that' or 'as long as', highlighting circumstances as the reason for an action. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ので": {
+            "en": "This simply means 'so'. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことから": {
+            "en": "This means 'from the fact that' andis used when drawing a logical conclusion. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "There has been absolutely no word from them <strong>since they said</strong> that they would get back to me.",
+        "nuance_translation": "A phrase that expresses the <strong>first and last</strong> time or limit for something as the <strong>cutoff</strong> point.",
+        "extra_info": "",
+        "reviewable_id": 309,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5558",
+      "type": "study_question",
+      "attributes": {
+        "id": 5558,
+        "content": "朝（あさ）ご飯（はん）を<strong>食（た）べた</strong><span class='study-area-input'>____</span>何（なに）も食（た）べていないから、お腹（なか）がすいている。",
+        "answer": "っきり",
+        "alternate_grammar": [
+          "っきり",
+          "きり"
+        ],
+        "kanji_answer": "っきり",
+        "kanji_alt_grammar": [
+          "きり",
+          "っきり"
+        ],
+        "nuance": "何（なに）かの<strong>最初（さいしょ）で最後（さいご）</strong>の時間（じかん）、又（また）は何（なに）かの<strong>限度（げんど）</strong>を切（き）り口（くち）として時点（じてん）を表（あらわ）す表現（ひょうげん）。",
+        "tense": "Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/309/male_audio/231123_1520_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/309/朝ご飯を食べたっきり何も食 べていないから、お腹がすいている。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけ": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "から": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "いらい": {
+            "en": "いらい follows verbs in their て form. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ばかり": {
+            "en": "たばかり implies something just finished. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いじょう": {
+            "en": "以上（いじょう）is a formal grammar point meaning 'now that' or 'as long as', highlighting circumstances as the reason for an action. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "からには": {
+            "en": "からには means 'since' or 'given that' and implies that a given action is unavoidable or logical. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "きって": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ので": {
+            "en": "This simply means 'so'. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ところ": {
+            "en": "We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I haven't had anything <strong>since I ate</strong> breakfast, so I'm hungry.",
+        "nuance_translation": "A phrase that expresses the <strong>first and last</strong> time or limit for something as the <strong>cutoff</strong> point.",
+        "extra_info": "",
+        "reviewable_id": 309,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5559",
+      "type": "study_question",
+      "attributes": {
+        "id": 5559,
+        "content": "５（ご）年（ねん）前（まえ）に<strong>会（あ）った</strong><span class='study-area-input'>____</span>だから、また会（あ）いたいですね。",
+        "answer": "きり",
+        "alternate_grammar": [
+          "っきり",
+          "きり"
+        ],
+        "kanji_answer": "きり",
+        "kanji_alt_grammar": [
+          "っきり",
+          "きり"
+        ],
+        "nuance": "何（なに）かの<strong>最初（さいしょ）で最後（さいご）</strong>の時間（じかん）、又（また）は何（なに）かの<strong>限度（げんど）</strong>を切（き）り口（くち）として時点（じてん）を表（あらわ）す表現（ひょうげん）。",
+        "tense": "Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/309/male_audio/231204_1205_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/5年前に会ったきりだから、また会いたいですね。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけ": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "から": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ぶり": {
+            "en": "ぶり comes directly after time expressions.  We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ぶりに": {
+            "en": "ぶり comes directly after time expressions.  We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いらい": {
+            "en": "いらい follows verbs in their て form. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "It has been five years <strong>since we last met</strong>, so I want to see you again.",
+        "nuance_translation": "A phrase that expresses the <strong>first and last</strong> time or limit for something as the <strong>cutoff</strong> point.",
+        "extra_info": "",
+        "reviewable_id": 309,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5563",
+      "type": "study_question",
+      "attributes": {
+        "id": 5563,
+        "content": "<strong>それ</strong><span class='study-area-input'>____</span><span class='vocab-popout' data-vocab-id='564'>彼（かれ）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='vocab-popout' data-vocab-id='1018'>部屋（へや）</span><span class='gp-popout' data-gp-id='52'>から</span>出（で）なくなった。",
+        "answer": "っきり",
+        "alternate_grammar": [
+          "っきり",
+          "きり"
+        ],
+        "kanji_answer": "っきり",
+        "kanji_alt_grammar": [
+          "きり",
+          "っきり"
+        ],
+        "nuance": "何（なに）かの<strong>最初（さいしょ）で最後（さいご）</strong>の時間（じかん）、又（また）は何（なに）かの<strong>限度（げんど）</strong>を切（き）り口（くち）として時点（じてん）を表（あらわ）す表現（ひょうげん）。",
+        "tense": "Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/309/male_audio/231123_1521_02.mp3",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけ": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "から": {
+            "en": "While から could work here grammatically, it has a different nuance than we are looking for. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "いらい": {
+            "en": "This implies (B) is something that has continued nonstop since (A). We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ばかり": {
+            "en": "ばかりimplies quantitative limitation, similar to 'nothing but' and doesn't sound natural here. We are looking for a grammar point frequently used with counters that implies (A) is all that will be included in some particular situation/action.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "だけで": {
+            "en": "だけで emphasizes that (B) is done or accomplished only with (A). We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いじょう": {
+            "en": "以上（いじょう）is a formal grammar point meaning 'now that' or 'as long as', highlighting circumstances as the reason for an action. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Since that</strong>, he reached the point where he would not come out of his room. (<strong>just/only</strong>)",
+        "nuance_translation": "A phrase that expresses the <strong>first and last</strong> time or limit for something as the <strong>cutoff</strong> point.",
+        "extra_info": "",
+        "reviewable_id": 309,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1137",
+      "type": "study_question",
+      "attributes": {
+        "id": 1137,
+        "content": "その店（みせ）に<strong>一回（いっかい）行（い）った</strong><span class='study-area-input'>____</span>、行（い）っていない。",
+        "answer": "きり",
+        "alternate_grammar": [
+          "っきり"
+        ],
+        "kanji_answer": "きり",
+        "kanji_alt_grammar": [
+          "っきり"
+        ],
+        "nuance": "何（なに）かの<strong>最初（さいしょ）で最後（さいご）</strong>の時間（じかん）、又（また）は何（なに）かの<strong>限度（げんど）</strong>を切（き）り口（くち）として時点（じてん）を表（あらわ）す表現（ひょうげん）。",
+        "tense": "Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/309/male_audio/231123_1519_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/その店に一回行ったきり、行っていない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけ": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "まま": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "ばかり": {
+            "en": "たばかり implies something just finished. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "だけしか": {
+            "en": "だけしか typically comes after nouns, so it sounds unnatural here. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しか": {
+            "en": "しか typically comes after nouns, so it sounds unnatural here. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "だけで": {
+            "en": "だけで emphasizes that (B) is done or accomplished only with (A). We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "きって": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しかない": {
+            "en": "しか typically comes after nouns, so it sounds unnatural here. We're looking for a grammar point that shows something happened once and hasn't occurred again since, often emphasizing that it was the first and last time, usually resulting in some lasting consequence or change of feeling.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "きった": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I <strong>went to</strong> that store <strong>just once</strong> and haven't gone again.",
+        "nuance_translation": "A phrase that expresses the <strong>first and last</strong> time or limit for something as the <strong>cutoff</strong> point.",
+        "extra_info": "",
+        "reviewable_id": 309,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "508",
+      "type": "writeup",
+      "attributes": {
+        "id": 508,
+        "body_ja": "<p>「きり」は、五段動詞（ごだんどうし）「切（き）る」から生（う）まれた表現（ひょうげん）です。動詞（どうし）の過去形（かこけい）や名詞（めいし）、または数詞（すうし）のあとに付（つ）いて、その出来事（できごと）や数量（すうりょう）だけに限（かぎ）る副助詞（ふくじょし）として働（はたら）きます。まずは、動詞（どうし）と一緒（いっしょ）に使（つか）う「きり」の例（れい）を見（み）てみましょう。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181543'>\r\n<li data-study-question='181544'>\r\n</ul>\r\n\r\n<p>「きり」を動詞（どうし）と一緒（いっしょ）に使（つか）う場合（ばあい）は、主（おも）に「(A) が一度（いちど）起（お）こってから、その状態（じょうたい）が続（つづ）いている」ことを意味（いみ）します。</p>\r\n\r\n<p>「きり」が名詞（めいし）や数詞（すうし）と一緒（いっしょ）に使（つか）われる場合（ばあい）は、「(A) だけ」で、それ以上（いじょう）でもそれ以下（いか）でもないことを表（あらわ）します。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181545'>\r\n<li data-study-question='181546'>\r\n<li data-study-question='181547'>\r\n</ul>\r\n\r\n<section class=\"caution\"><h4>注意点（ちゅういてん）</h4>\r\n<p>「きり」は「っきり」や「キリ」と表現（ひょうげん）されることもあります。この場合（ばあい）も特（とく）にニュアンスは変（か）わりません。ただし、くだけた場面（ばめん）では「っきり」がよく使（つか）われます。</p></section>",
+        "body": "<p>As an <span data-term='副助詞・ふくじょし'>adverbial particle</span>, <span data-gp-id='309'>きり</span> may convey that 'upon (A)', where (A) is usually a verb, that action was the 'first and last time'. This is frequently translated as 'only', 'just', or 'since'. <span data-gp-id='309'>きり</span> comes from the う - Verb <span data-gp-id='282'>切（き）る</span> 'to cut'. <span data-gp-id='309'>きり</span> is often used after the plain past form of verbs, with nouns, or with counters. Let's look at verbs first.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181543'>\r\n<li data-study-question='181544'>\r\n</ul>\r\n\r\n<p>With verbs, <span data-gp-id='309'>きり</span> is primarily used to show that (A) occurring was all that was required for (B). Usually, this results in some permanent consequence, or permanent change of opinion. In almost every situation, (A) is something that has only happened once, and <span data-gp-id='309'>きり</span> can be interpreted as 'ever since'.</p>\r\n\r\n<p>When it comes to the use of <span data-gp-id='309'>きり</span> with nouns or counters, it will express that something is happening with (A) as the limit 'nothing more, nothing less'. In other words, (A) is all that will be included in some particular situation/action.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181545'>\r\n<li data-study-question='181546'>\r\n<li data-study-question='181547'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p><span data-gp-id='309'>きり</span> may also be seen as <span data-gp-id='309'>っきり</span> or <span data-gp-id='309'>キリ</span>. There is no specific change in nuance, but <span data-gp-id='309'>っきり</span> is the most common casual form.</p></section>"
+      }
+    },
+    {
+      "id": "626",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 626,
+        "site": "日本語の森",
+        "description": "「だけ」「きり」「のみ」",
+        "link": "https://www.youtube.com/watch?v=AronxfWWvLs",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1187",
+      "type": "related_content",
+      "attributes": {
+        "id": 1187,
+        "relationship_type": "related",
+        "body": "きり often marks an action done once and left that way, as in 去年会ったきり連絡がない ('I haven't heard from them since we met last year'). まま(に) marks an ongoing unchanged state, as in 靴を履いたまま入らないで ('Don't enter with your shoes on'). Both can imply continuation, but きり emphasizes a cutoff point.",
+        "first_relatable": {
+          "id": 309,
+          "slug": "きり",
+          "title": "きり",
+          "meaning": "Only, Just, Since",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 235,
+          "slug": "まま",
+          "title": "まま(に)",
+          "meaning": "As is, While remaining, Left in a state",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1587",
+      "type": "related_content",
+      "attributes": {
+        "id": 1587,
+        "relationship_type": "related",
+        "body": "Both を限りに  and きり mark a point after which something stops or changes, but they differ in formality and nuance. を限りに is a fixed, formal expression used mainly in written or public contexts to indicate a clear and definitive final point, often for events, careers, or official actions, as in 本日を限りに閉店します (‘As of today, we will close for good.’). In contrast, きり is more casual and flexible, commonly used in everyday speech to say that something has not happened again since a certain point, and often used with number + counter expressions such as 一度きりしか会っていない ('I haven't met him except that one time.')",
+        "first_relatable": {
+          "id": 946,
+          "slug": "を限りに",
+          "title": "を限りに",
+          "meaning": "As of (the end of), (Starting) from, (No longer) after, By (the), Ending with",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 309,
+          "slug": "きり",
+          "title": "きり",
+          "meaning": "Only, Just, Since",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1129",
+      "type": "related_content",
+      "attributes": {
+        "id": 1129,
+        "relationship_type": "related",
+        "body": "きり and だけしか both express limitation, but with different nuance. きり often implies that something has happened only once or hasn't changed since, e.g. 去年会ったきり一度も連絡が来ない 'I haven't heard from them even once since we met last year.' だけしか means 'Nothing but', typically in a way that emphasizes lack or even disappointment, e.g. 千円だけしか持っていない 'I only have 1000 yen.'",
+        "first_relatable": {
+          "id": 309,
+          "slug": "きり",
+          "title": "きり",
+          "meaning": "Only, Just, Since",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 489,
+          "slug": "だけしか",
+          "title": "だけしか",
+          "meaning": " To emphasize '~only', Nothing but",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1131",
+      "type": "related_content",
+      "attributes": {
+        "id": 1131,
+        "relationship_type": "related",
+        "body": "だけ means 'only' or 'just,' while きり has a more specific nuance. After a past tense verb, きり suggests a permanent change after an event. For example, 日本に行ったきり、戻ってこなかった means 'Once (he) went to Japan, he never returned.' When used after a number + counter (e.g. 一人きり), it emphasizes 'nothing more, nothing less.'",
+        "first_relatable": {
+          "id": 309,
+          "slug": "きり",
+          "title": "きり",
+          "meaning": "Only, Just, Since",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 43,
+          "slug": "だけ",
+          "title": "だけ",
+          "meaning": "Only, Just",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1260",
+      "type": "related_content",
+      "attributes": {
+        "id": 1260,
+        "relationship_type": "related",
+        "body": "たなり・なり and きり are very similar in meaning, both expressing that a certain state persists without the expected result occurring, and are often interchangeable. For example, in '東京に行ったきり地元に帰って来なかった' ('Once he went to Tokyo, he never came back to his hometown') and '東京に行ったなり地元に帰って来なかった' both convey the same lingering, unresolved situation.",
+        "first_relatable": {
+          "id": 792,
+          "slug": "たなり-なり",
+          "title": "たなり・なり",
+          "meaning": "While... ~ing, Remaining, Not or ever since, Keep or leave",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 309,
+          "slug": "きり",
+          "title": "きり",
+          "meaning": "Only, Just, Since",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1130",
+      "type": "related_content",
+      "attributes": {
+        "id": 1130,
+        "relationship_type": "related",
+        "body": "きり and しか～ない can both express the idea of 'only,' but in different ways. きり is used primarily with number+counter expressions, like 一度きり 'only one time' or 二人きり 'only/just the two of us'. In contrast, しか～ない is used with a noun and negative verb to mean 'only' or 'nothing but', e.g. １００円しかない ('I have only 100 yen.'). In some cases, the two can be used together, e.g. 一度きりしか行っていない ('I only went just the once.').",
+        "first_relatable": {
+          "id": 309,
+          "slug": "きり",
+          "title": "きり",
+          "meaning": "Only, Just, Since",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 182,
+          "slug": "しか-ない",
+          "title": "しか～ない ",
+          "meaning": "There's only, Nothing but",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

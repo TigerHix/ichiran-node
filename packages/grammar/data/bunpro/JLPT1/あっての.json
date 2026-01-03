@@ -1,0 +1,717 @@
+{
+  "data": {
+    "id": "788",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 788,
+      "level": "JLPT1",
+      "lesson_id": 43,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "あっての",
+      "nuance": "(B)は(A)が<strong>存在（そんざい）している</strong>から可能（かのう）だということを強調（きょうちょう）する表現（ひょうげん）。(B)は(A)なしでは成（な）り立（た）たない。",
+      "grammar_order": 777,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 789,
+        "title": "～たまでだ",
+        "slug": "たまでだ"
+      },
+      "previous_grammar_point": {
+        "id": 787,
+        "title": "すら",
+        "slug": "すら"
+      },
+      "lesson_count": "2/17",
+      "title": "あっての",
+      "furigana": "あっての",
+      "meaning": "Exist only because of or due to, Owe everything to",
+      "nuance_translation": "A structure emphasizing that (B) is only possible because (A) <strong>exists</strong>. (B) owes everything to (A).",
+      "rare_kanji_warning": "",
+      "caution": "が is usually omitted",
+      "polite_structure": "",
+      "casual_structure": "Noun (A) + （<span class='gp-popout' data-gp-id='10'>が</span>）+ <strong><span class='gp-popout' data-gp-id='16'>あっ</span><span class='gp-popout' data-gp-id='416'>て</span><span class='gp-popout' data-gp-id='6'>の</span></strong> + Noun (B)",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "",
+      "metadata": "あっての, atteno, noun, expression, positive benefit"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "10647",
+            "type": "study_question"
+          },
+          {
+            "id": "10645",
+            "type": "study_question"
+          },
+          {
+            "id": "182640",
+            "type": "study_question"
+          },
+          {
+            "id": "182641",
+            "type": "study_question"
+          },
+          {
+            "id": "9183",
+            "type": "study_question"
+          },
+          {
+            "id": "9180",
+            "type": "study_question"
+          },
+          {
+            "id": "9179",
+            "type": "study_question"
+          },
+          {
+            "id": "10644",
+            "type": "study_question"
+          },
+          {
+            "id": "9182",
+            "type": "study_question"
+          },
+          {
+            "id": "10646",
+            "type": "study_question"
+          },
+          {
+            "id": "10649",
+            "type": "study_question"
+          },
+          {
+            "id": "182642",
+            "type": "study_question"
+          },
+          {
+            "id": "9184",
+            "type": "study_question"
+          },
+          {
+            "id": "10648",
+            "type": "study_question"
+          },
+          {
+            "id": "9181",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "853",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1525",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2188",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2187",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "10647",
+      "type": "study_question",
+      "attributes": {
+        "id": 10647,
+        "content": "<span class='name-highlight'>娘（むすめ）</span>：「お金（かね）と愛（あい）、どっちが大事（だいじ）だと思（おも）う？」<span class='name-highlight'>母（はは）</span>：「そうね〜、お金（かね）<span class='study-area-input'>____</span>幸（しあわ）せだと思（おも）うわ。」",
+        "answer": "あっての",
+        "alternate_grammar": [],
+        "kanji_answer": "あっての",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は(A)が<strong>存在（そんざい）している</strong>から可能（かのう）だということを強調（きょうちょう）する表現（ひょうげん）。(B)は(A)なしでは成（な）り立（た）たない。",
+        "tense": "Emphatic, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/娘：「お金と愛、どっちが大事だと思う？」母：「そうね〜、お金あっての幸せだと思うわ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "があっての": {
+            "en": "Close, but while including が is acceptable, it is generally a good idea to omit it.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Daughter</span>: 'Money and love, which do you think is more important?'Mom: 'Hmm, happiness <strong>exists only because of </strong>money I think.'",
+        "nuance_translation": "A structure emphasizing that (B) is only possible because (A) <strong>exists</strong>. (B) owes everything to (A).",
+        "extra_info": "",
+        "reviewable_id": 788,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10645",
+      "type": "study_question",
+      "attributes": {
+        "id": 10645,
+        "content": "兄（あに）が一人（ひとり）暮（ぐ）らしを始（はじ）め、私（わたし）たちの家族（かぞく）は兄（あに）<span class='study-area-input'>____</span>家族（かぞく）だった事（こと）が分（わ）かった。",
+        "answer": "あっての",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "あっての",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は(A)が<strong>存在（そんざい）している</strong>から可能（かのう）だということを強調（きょうちょう）する表現（ひょうげん）。(B)は(A)なしでは成（な）り立（た）たない。",
+        "tense": "Emphatic, Emphasis on cause",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/兄が一人暮らしを始め、私たちの家族は兄あっての家族だった事が分かった。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "があっての": {
+            "en": "Close, but while including が is acceptable, it is generally a good idea to omit it.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "When he started living independently, I realized that my family <strong>existed only because of</strong> my older brother.",
+        "nuance_translation": "A structure emphasizing that (B) is only possible because (A) <strong>exists</strong>. (B) owes everything to (A).",
+        "extra_info": "",
+        "reviewable_id": 788,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182640",
+      "type": "study_question",
+      "attributes": {
+        "id": 182640,
+        "content": "\r\nお客様（きゃくさま）<span class='study-area-input'>____</span>仕事（しごと）だと思（おも）うのですが、理不尽（りふじん）なクレームを言（い）われるとちょっとイラっときます。",
+        "answer": "あっての",
+        "alternate_grammar": [],
+        "kanji_answer": "あっての",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/お客様あっての仕事だと思うのですが、理不尽なクレームを言われるとちょっとイラっときます。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nMy job <strong>only exists because of</strong> the customers, but I get a little annoyed when people make unreasonable complaints.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 788,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182641",
+      "type": "study_question",
+      "attributes": {
+        "id": 182641,
+        "content": "\r\n\r\n\r\n今回（こんかい）は皆様（みなさま）の努力（どりょく）<span class='study-area-input'>____</span>結果（けっか）です。皆様（みなさま）本当（ほんとう）にありがとうございました。",
+        "answer": "あっての",
+        "alternate_grammar": [],
+        "kanji_answer": "あっての",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/今回は皆様の努力あっての結果です。皆様本当にありがとうございました。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nThis time, the results are <strong>because of</strong> your efforts. Thank you very much.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 788,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9183",
+      "type": "study_question",
+      "attributes": {
+        "id": 9183,
+        "content": "切手（きって）のコレクションが火事（かじ）で全焼（ぜんしょう）して悲（かな）しいのは分（わ）かっているけどさ、生（い）きて逃（に）げられたのは何（なに）よりだよ。「命（いのち）<span class='study-area-input'>____</span>物種（ものだね）」だね。",
+        "answer": "あっての",
+        "alternate_grammar": [],
+        "kanji_answer": "あっての",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は(A)が<strong>存在（そんざい）している</strong>から可能（かのう）だということを強調（きょうちょう）する表現（ひょうげん）。(B)は(A)なしでは成（な）り立（た）たない。",
+        "tense": "Emphatic, Emphasis on cause",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/切手のコレクションが火事で全焼して悲しいのは分かっているけどさ、生きて逃げられたのは何よりだよ。「命あっての物種」だね。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "があっての": {
+            "en": "While including が is acceptable, it is generally a good idea to omit it",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I understand that you are sad because your stamp collection was destroyed in the fire, but getting out of there with your life is more important than anything. 'While there is life, there is hope,' right? (<strong>only exist because of</strong>)",
+        "nuance_translation": "A structure emphasizing that (B) is only possible because (A) <strong>exists</strong>. (B) owes everything to (A).",
+        "extra_info": "",
+        "reviewable_id": 788,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9180",
+      "type": "study_question",
+      "attributes": {
+        "id": 9180,
+        "content": "彼（かれ）が大学（だいがく）をやめるのは、何（なに）か理由（りゆう）が<span class='study-area-input'>____</span><span class='chui'>こと</span>だろう。",
+        "answer": "あっての",
+        "alternate_grammar": [
+          "あっての"
+        ],
+        "kanji_answer": "あっての",
+        "kanji_alt_grammar": [
+          "あっての"
+        ],
+        "nuance": "(B)は(A)が<strong>存在（そんざい）している</strong>から可能（かのう）だということを強調（きょうちょう）する表現（ひょうげん）。(B)は(A)なしでは成（な）り立（た）たない。",
+        "tense": "Emphatic, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/彼が大学をやめるのは、何か理由があってのことだろう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I guess he is dropping out of university <strong>only because</strong> some sort of reason <strong>exists</strong>.",
+        "nuance_translation": "A structure emphasizing that (B) is only possible because (A) <strong>exists</strong>. (B) owes everything to (A).",
+        "extra_info": "",
+        "reviewable_id": 788,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9179",
+      "type": "study_question",
+      "attributes": {
+        "id": 9179,
+        "content": "「あなた<span class='study-area-input'>____</span>わたしです。あなたがいなければ私（わたし）の人生（じんせい）は無意味（むいみ）ですよ。」",
+        "answer": "あっての",
+        "alternate_grammar": [],
+        "kanji_answer": "あっての",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は(A)が<strong>存在（そんざい）している</strong>から可能（かのう）だということを強調（きょうちょう）する表現（ひょうげん）。(B)は(A)なしでは成（な）り立（た）たない。",
+        "tense": "Emphatic, Emphasis on cause",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「あなたあってのわたしです。あなたがいなければ私の人生は無意味ですよ。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "があっての": {
+            "en": "While including が is acceptable, it is generally a good idea to omit it",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'I can <strong>only exist because of</strong> you. My life would be meaningless without you.' (<strong>owe everything to</strong>)",
+        "nuance_translation": "A structure emphasizing that (B) is only possible because (A) <strong>exists</strong>. (B) owes everything to (A).",
+        "extra_info": "",
+        "reviewable_id": 788,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10644",
+      "type": "study_question",
+      "attributes": {
+        "id": 10644,
+        "content": "部員（ぶいん）<span class='study-area-input'>____</span>クラブ活動（かつどう）なんだから、部員（ぶいん）に対（たい）してもっと優（やさ）しくするべきだ。",
+        "answer": "あっての",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "あっての",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は(A)が<strong>存在（そんざい）している</strong>から可能（かのう）だということを強調（きょうちょう）する表現（ひょうげん）。(B)は(A)なしでは成（な）り立（た）たない。",
+        "tense": "Emphatic, Emphasis on cause",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/部員あってのクラブ活動なんだから、部員に対してもっと優しくするべきだ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "があっての": {
+            "en": "Close, but while including が is acceptable, it is generally a good idea to omit it.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Since club activities <strong>exist only because of </strong>our club members, we must be nicer to them.",
+        "nuance_translation": "A structure emphasizing that (B) is only possible because (A) <strong>exists</strong>. (B) owes everything to (A).",
+        "extra_info": "",
+        "reviewable_id": 788,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9182",
+      "type": "study_question",
+      "attributes": {
+        "id": 9182,
+        "content": "<span class='name-highlight'>ベストセラー作者（さくしゃ）の演説（えんぜつ）</span>：「 私（わたし）の本（ほん）は、家族（かぞく）の支（ささ）え<span class='study-area-input'>____</span><span class='chui'>もの</span>です。息子（むすこ）と夫（おっと）がいなければここまでやってこれなかったと思（おも）います。」",
+        "answer": "あっての",
+        "alternate_grammar": [],
+        "kanji_answer": "あっての",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は(A)が<strong>存在（そんざい）している</strong>から可能（かのう）だということを強調（きょうちょう）する表現（ひょうげん）。(B)は(A)なしでは成（な）り立（た）たない。",
+        "tense": "Emphatic, Emphasis on cause",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ベストセラー作者の演説：「 私の本は、家族の支えあってのものです。息子と夫がいなければここまでやってこれなかったと思います。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "があっての": {
+            "en": "While including が is acceptable, it is generally a good idea to omit it",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Best Selling author's speech</span>: 'My books exist <strong>only because of</strong> the support from my family. I believe, if it was not for my son and husband, I would not have gotten this far.' (<strong>owe everything to</strong>)",
+        "nuance_translation": "A structure emphasizing that (B) is only possible because (A) <strong>exists</strong>. (B) owes everything to (A).",
+        "extra_info": "",
+        "reviewable_id": 788,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10646",
+      "type": "study_question",
+      "attributes": {
+        "id": 10646,
+        "content": "君（きみ）が志望（しぼう）校（こう）に合格（ごうかく）したのは君（きみ）の努力（どりょく）<span class='study-area-input'>____</span>成果（せいか）で、僕（ぼく）はただ側（そば）にいただけさ。",
+        "answer": "あっての",
+        "alternate_grammar": [],
+        "kanji_answer": "あっての",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は(A)が<strong>存在（そんざい）している</strong>から可能（かのう）だということを強調（きょうちょう）する表現（ひょうげん）。(B)は(A)なしでは成（な）り立（た）たない。",
+        "tense": "Emphatic, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/君が志望校に合格したのは君の努力あっての成果で、僕はただ側にいただけさ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "があっての": {
+            "en": "Close, but while including が is acceptable, it is generally a good idea to omit it.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Successfully getting your first-preference school was <strong>only possible due to </strong>your own efforts, all I did was stay by your side. (<strong>owe everything to</strong>)",
+        "nuance_translation": "A structure emphasizing that (B) is only possible because (A) <strong>exists</strong>. (B) owes everything to (A).",
+        "extra_info": "",
+        "reviewable_id": 788,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10649",
+      "type": "study_question",
+      "attributes": {
+        "id": 10649,
+        "content": "お客（きゃく）様（さま）や取引（とりひき）先（さき）相手（あいて）<span class='study-area-input'>____</span>ビジネスなので、ビジネスにおいて礼儀（れいぎ）を欠（か）く事（こと）は命取（いのちと）りになります。",
+        "answer": "あっての",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "あっての",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は(A)が<strong>存在（そんざい）している</strong>から可能（かのう）だということを強調（きょうちょう）する表現（ひょうげん）。(B)は(A)なしでは成（な）り立（た）たない。",
+        "tense": "Emphatic, Emphasis on cause",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/お客様や取引先相手あってのビジネスなので、ビジネスにおいて礼儀を欠く事は命取りになります。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "があっての": {
+            "en": "Close, but while including が is acceptable, it is generally a good idea to omit it.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Since we are a business that <strong>owes everything to</strong> our customers and clients, lacking manners in business would prove fatal.",
+        "nuance_translation": "A structure emphasizing that (B) is only possible because (A) <strong>exists</strong>. (B) owes everything to (A).",
+        "extra_info": "",
+        "reviewable_id": 788,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182642",
+      "type": "study_question",
+      "attributes": {
+        "id": 182642,
+        "content": "\r\n私（わたし）はお金（かね）がなかったら愛（あい）もない、お金（かね）が<span class='study-area-input'>____</span>幸（しあわ）せだと思（おも）います。",
+        "answer": "あっての",
+        "alternate_grammar": [],
+        "kanji_answer": "あっての",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/私はお金がなかったら愛もない、お金があっての幸せだと思います。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I think that without money, there’s no love and happiness is something that <strong>exists only due to</strong> money.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 788,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9184",
+      "type": "study_question",
+      "attributes": {
+        "id": 9184,
+        "content": "恋愛（れんあい）は相手（あいて）<span class='study-area-input'>____</span><span class='chui'>こと</span>だから一人（ひとり）だけでは無理（むり）だ...と思（おも）っていませんか？",
+        "answer": "あっての",
+        "alternate_grammar": [],
+        "kanji_answer": "あっての",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は(A)が<strong>存在（そんざい）している</strong>から可能（かのう）だということを強調（きょうちょう）する表現（ひょうげん）。(B)は(A)なしでは成（な）り立（た）たない。",
+        "tense": "Emphatic, Emphasis on cause",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/恋愛は相手あってのことだから一人だけでは無理だ...と思っていませんか？.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "があっての": {
+            "en": "While including が is acceptable, it is generally a good idea to omit it",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Love <strong>only exists because</strong> you have a partner, so it is impossible to love when you are alone… don't you think? (<strong>owe everything to</strong>)",
+        "nuance_translation": "A structure emphasizing that (B) is only possible because (A) <strong>exists</strong>. (B) owes everything to (A).",
+        "extra_info": "",
+        "reviewable_id": 788,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10648",
+      "type": "study_question",
+      "attributes": {
+        "id": 10648,
+        "content": "結婚（けっこん）という契約（けいやく）は愛（あい）<span class='study-area-input'>____</span><span class='chui'>もの</span>であって、愛（あい）の無（な）い結婚（けっこん）など全（まった）く意味（いみ）を成（な）しません。",
+        "answer": "あっての",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "あっての",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は(A)が<strong>存在（そんざい）している</strong>から可能（かのう）だということを強調（きょうちょう）する表現（ひょうげん）。(B)は(A)なしでは成（な）り立（た）たない。",
+        "tense": "Emphatic, Emphasis on cause",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/結婚という契約は愛あってのものであって、愛の無い結婚など全く意味を成しません。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "があっての": {
+            "en": "Close, but while including が is acceptable, it is generally a good idea to omit it.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The contract of marriage <strong>owes everything to</strong> love, and something such as a loveless marriage will amount to nothing.",
+        "nuance_translation": "A structure emphasizing that (B) is only possible because (A) <strong>exists</strong>. (B) owes everything to (A).",
+        "extra_info": "",
+        "reviewable_id": 788,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9181",
+      "type": "study_question",
+      "attributes": {
+        "id": 9181,
+        "content": "<span class='name-highlight'>支配人（しはいにん）、社員（しゃいん）に</span>：「ゲスト<span class='study-area-input'>____</span>遊園地（ゆうえんち）だということを忘（わす）れてはいけません。」",
+        "answer": "あっての",
+        "alternate_grammar": [],
+        "kanji_answer": "あっての",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は(A)が<strong>存在（そんざい）している</strong>から可能（かのう）だということを強調（きょうちょう）する表現（ひょうげん）。(B)は(A)なしでは成（な）り立（た）たない。",
+        "tense": "Emphatic, Emphasis on cause",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/支配人、社員に：「ゲストあっての遊園地だということを忘れてはいけません。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "があっての": {
+            "en": "While including が is acceptable, it is generally a good idea to omit it",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Manager to employees</span>: 'You must not forget that the amusement park exists <strong>only because of</strong> the customers.'",
+        "nuance_translation": "A structure emphasizing that (B) is only possible because (A) <strong>exists</strong>. (B) owes everything to (A).",
+        "extra_info": "",
+        "reviewable_id": 788,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "853",
+      "type": "writeup",
+      "attributes": {
+        "id": 853,
+        "body_ja": "<p>「<span data-gp-id='788'>あっての</span>」は「(A) があるからこそ (B) が成（な）り立（た）つ」や「(A) のおかげで (B) が存在（そんざい）する」といった意味（いみ）で使（つか）われる表現（ひょうげん）です。(B) が存在（そんざい）するためには (A) が不可欠（ふかけつ）であることを強調（きょうちょう）します。これは、五段動詞（ごだんどうし）「ある」のテ形（けい）と、格助詞（かくじょし）「の」の組（く）み合（あ）わせでできています。</p>\r\n\r\n<p>「<span data-gp-id='788'>あっての</span>」の前後（ぜんご）には名詞（めいし）が入（はい）り、語順（ごじゅん）は「(A) <span data-gp-id='788'>あっての</span> (B)」になります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182640'>\r\n<li data-study-question='182641'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='788'>あっての</span>」は、(B) が (A) に支（ささ）えられていたり、何（なに）かしらの恩恵（おんけい）を受（う）けているときに、感謝（かんしゃ）の気持（きも）ちを表（あらわ）すために使（つか）われることが多（おお）いです。</p>\r\n\r\n<p>名詞（めいし）の (A) と「<span data-gp-id='788'>あっての</span>」の間（あいだ）に、格助詞（かくじょし）の「が」が入（はい）ることもありますが、大抵（たいてい）は省略（しょうりゃく）されます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182642'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>豆知識（まめちしき）</h4>\r\n<p>「<span data-gp-id='788'>あっての</span>」は「がある」という文型（ぶんけい）からできた表現（ひょうげん）です。「の」が付（つ）くことで、(B) が (A) を含（ふく）み、その上（うえ）に成（な）り立（た）っている関係（かんけい）であることが示（しめ）されます。さらに、テ形（けい）の「あって」によって、そのあとに「なぜ (A) が大切（たいせつ）なのか」を説明（せつめい）する文（ぶん）が続（つづ）くことが示（しめ）されます。そのため、この表現（ひょうげん）の後（あと）には「から」や「ので」を使（つか）った、理由（りゆう）を説明（せつめい）する文（ぶん）が続（つづ）くことが多（おお）いです</p></section>",
+        "body": "<p><span data-gp-id='788'>あっての</span> is a pattern which emphasizes that (B) is something that only exists because of (A). It will often be translated as '(B) owes everything to (A)', or '(B) existing is only due to (A)'. This structure is a combination of the う-Verb ある 'to be' in its て-form, and the case-marking particle の.</p>\r\n\r\n<p><span data-gp-id='788'>あっての</span> will be preceded and followed directly by nouns, where the first noun is (A), and the second noun is (B).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182640'>\r\n<li data-study-question='182641'>\r\n</ul>\r\n\r\n<p><span data-gp-id='788'>あっての</span> will primarily be used when (B) is something that benefits positively from (A), and therefore is showing or should show some kind of gratitude toward it.</p>\r\n\r\n<p>Occasionally, the case-marking particle が will come between the (A) noun and <span data-gp-id='788'>あっての</span>. However, it is often omitted.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182642'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p><span data-gp-id='788'>あっての</span> can be thought of as an evolution of the basic grammar structure がある 'to have'. The main difference being that の allows (B) to be marked as the thing that has (A), while the て-form indicates that there is more information that will be given later about why this is important. Since this information is an explanation, (B) will almost always be followed by structures like から, or ので.</p></section>"
+      }
+    },
+    {
+      "id": "2188",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2188,
+        "site": "日本語NET ",
+        "description": "意味・接続・例文",
+        "link": "https://nihongokyoshi-net.com/2019/05/07/jlptn1-grammar-atteno/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2187",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2187,
+        "site": "JLPT先生",
+        "description": "Definition and examples",
+        "link": "https://jlptsensei.com/learn-japanese-grammar/%e3%81%82%e3%81%a3%e3%81%a6%e3%81%ae-atte-no-meaning/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1525",
+      "type": "related_content",
+      "attributes": {
+        "id": 1525,
+        "relationship_type": "related",
+        "body": "These are both emphatic expressions that can be used in similar contexts to express 'it's entirely because of (A) that (B)'. あっての is narrower in use, saying that something was possible only because something else 'exists', e.g. 皆さんの努力あっての成功だ ('This success is entirely because of everyone's effort.'). てこそ can be used with a wider variety of verbs, such as 留学してこそ学べること ('things you can only learn by studying abroad'.).",
+        "first_relatable": {
+          "id": 788,
+          "slug": "あっての",
+          "title": "あっての",
+          "meaning": "Exist only because of or due to, Owe everything to",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 352,
+          "slug": "-てこそ",
+          "title": "～てこそ",
+          "meaning": "Only if, Because, By, Unless, Until",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

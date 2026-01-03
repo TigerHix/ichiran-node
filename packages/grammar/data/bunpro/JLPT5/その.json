@@ -1,0 +1,1426 @@
+{
+  "data": {
+    "id": "37",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 37,
+      "level": "JLPT5",
+      "lesson_id": 3,
+      "part_of_speech": "連体詞",
+      "register": "一般",
+      "word_type": "自立語",
+      "slug": "その",
+      "nuance": "<strong>聞（き）き手（て）の近（ちか）くにある場所（ばしょ）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）う<strong>連体詞（れんたいし）</strong>。",
+      "grammar_order": 35,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 47,
+        "title": "あの",
+        "slug": "あの"
+      },
+      "previous_grammar_point": {
+        "id": 30,
+        "title": "この",
+        "slug": "この"
+      },
+      "lesson_count": "10/13",
+      "title": "その",
+      "furigana": "その",
+      "meaning": "That",
+      "nuance_translation": "A <strong>pre-noun adjectival</strong> word, used to express <strong>places or situations close to the listener</strong>.",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "Demonstrative, <strong>その</strong> + Noun",
+      "part_of_speech_translation": "Fixed Adjective",
+      "register_translation": "Standard",
+      "word_type_translation": "Independent Word",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/517",
+      "metadata": "その, sono, pre-noun adjectival, fixed adjective, thing near the listener, near the listener, kosoado words"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154811",
+            "type": "study_question"
+          },
+          {
+            "id": "154812",
+            "type": "study_question"
+          },
+          {
+            "id": "683",
+            "type": "study_question"
+          },
+          {
+            "id": "684",
+            "type": "study_question"
+          },
+          {
+            "id": "685",
+            "type": "study_question"
+          },
+          {
+            "id": "1789",
+            "type": "study_question"
+          },
+          {
+            "id": "1790",
+            "type": "study_question"
+          },
+          {
+            "id": "1791",
+            "type": "study_question"
+          },
+          {
+            "id": "1792",
+            "type": "study_question"
+          },
+          {
+            "id": "1793",
+            "type": "study_question"
+          },
+          {
+            "id": "1794",
+            "type": "study_question"
+          },
+          {
+            "id": "1795",
+            "type": "study_question"
+          },
+          {
+            "id": "1796",
+            "type": "study_question"
+          },
+          {
+            "id": "1797",
+            "type": "study_question"
+          },
+          {
+            "id": "37",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "34",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "72",
+            "type": "offline_resource"
+          },
+          {
+            "id": "764",
+            "type": "offline_resource"
+          },
+          {
+            "id": "846",
+            "type": "offline_resource"
+          },
+          {
+            "id": "876",
+            "type": "offline_resource"
+          },
+          {
+            "id": "9",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "111",
+            "type": "related_content"
+          },
+          {
+            "id": "115",
+            "type": "related_content"
+          },
+          {
+            "id": "114",
+            "type": "related_content"
+          },
+          {
+            "id": "113",
+            "type": "related_content"
+          },
+          {
+            "id": "112",
+            "type": "related_content"
+          },
+          {
+            "id": "109",
+            "type": "related_content"
+          },
+          {
+            "id": "110",
+            "type": "related_content"
+          },
+          {
+            "id": "300",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "83",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "84",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154811",
+      "type": "study_question",
+      "attributes": {
+        "id": 154811,
+        "content": "<span class='study-area-input'>____</span>パズル<span class=\"gp-popout\" data-gp-id=\"3\">は</span>難（むずか）し<span class=\"gp-popout\" data-gp-id=\"24\">い</span>？",
+        "answer": "その",
+        "alternate_grammar": [],
+        "kanji_answer": "その",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/そのパズルは難しい？.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Is <strong>that</strong> puzzle hard? (If a sentence finishes in a rising tone, questions markers like <span class=\"gp-popout\" data-gp-id=\"2\">です</span><span class=\"gp-popout\" data-gp-id=\"8\">か</span> may be dropped in casual speech)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 37,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154812",
+      "type": "study_question",
+      "attributes": {
+        "id": 154812,
+        "content": "<span class='study-area-input'>____</span>話（はなし）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>絶対（ぜったい）嘘（うそ）<span class=\"gp-popout\" data-gp-id=\"9\">でしょう</span>。",
+        "answer": "その",
+        "alternate_grammar": [],
+        "kanji_answer": "その",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/その話は絶対嘘でしょう。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>That</strong> story is definitely a lie.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 37,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "683",
+      "type": "study_question",
+      "attributes": {
+        "id": 683,
+        "content": "<span class='study-area-input'>____</span>本（ほん）<span class='gp-popout' data-gp-id='10'>が</span><span class='gp-popout' data-gp-id='7'>いい</span>。",
+        "answer": "その",
+        "alternate_grammar": [],
+        "kanji_answer": "その",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）の近（ちか）くにある場所（ばしょ）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）う<strong>連体詞（れんたいし）</strong>。",
+        "tense": "Near the listener",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/37/male_audio/09-その本がいい.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/その本がいい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "ここ": {
+            "en": "ここ means ‘here’.",
+            "es": "ここ significa ‘aquí’.",
+            "fr": "ここ signifie « ici ».",
+            "id": "ここ berarti \"di sini\"."
+          },
+          "そこ": {
+            "en": "そこ means ‘there’.",
+            "es": "そこ significa ‘ahí’.",
+            "fr": "そこ signifie « là ».",
+            "id": "そこ berarti \"di sana\"."
+          },
+          "あそこ": {
+            "en": "あそこ means ‘over there’.",
+            "es": "あそこ significa ‘allí’.",
+            "fr": "あそこ signifie « là-bas ».",
+            "id": "あそこ berarti \"di sana\"."
+          },
+          "これ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          },
+          "それ": {
+            "en": "Close! However, それ cannot directly pair with nouns.",
+            "es": "¡Cerca! Sin embargo, それ no puede agregarse directamente a sustantivos.",
+            "fr": "Presque ! Cependant, それ ne peut pas être directement suivi d'un nom.",
+            "id": "Hampir! Namun, それ tidak dapat langsung berpasangan dengan kata benda."
+          },
+          "あれ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          }
+        },
+        "translation": "<strong>That</strong> book is good.",
+        "nuance_translation": "A <strong>pre-noun adjectival</strong> word, used to express <strong>places or situations close to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 37,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "684",
+      "type": "study_question",
+      "attributes": {
+        "id": 684,
+        "content": "<span class='study-area-input'>____</span>映画（えいが）<span class='gp-popout' data-gp-id='21'>を</span>見（み）<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "その",
+        "alternate_grammar": [],
+        "kanji_answer": "その",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）の近（ちか）くにある場所（ばしょ）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）う<strong>連体詞（れんたいし）</strong>。",
+        "tense": "Near the listener",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/37/male_audio/07-その映画を見る.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/その映画を見る。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "ここ": {
+            "en": "ここ means ‘here’.",
+            "es": "ここ significa ‘aquí’.",
+            "fr": "ここ signifie « ici ».",
+            "id": "ここ berarti \"di sini\"."
+          },
+          "そこ": {
+            "en": "そこ means ‘there’.",
+            "es": "そこ significa ‘ahí’.",
+            "fr": "そこ signifie « là ».",
+            "id": "そこ berarti \"di sana\"."
+          },
+          "あそこ": {
+            "en": "あそこ means ‘over there’.",
+            "es": "あそこ significa ‘allí’.",
+            "fr": "あそこ signifie « là-bas ».",
+            "id": "あそこ berarti \"di sana\"."
+          },
+          "これ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          },
+          "それ": {
+            "en": "Close! However, それ cannot directly pair with nouns.",
+            "es": "¡Cerca! Sin embargo, それ no puede agregarse directamente a sustantivos.",
+            "fr": "Presque ! Cependant, それ ne peut pas être directement suivi d'un nom.",
+            "id": "Hampir! Namun, それ tidak dapat langsung berpasangan dengan kata benda."
+          },
+          "あれ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          }
+        },
+        "translation": "I will watch <strong>that</strong> movie.",
+        "nuance_translation": "A <strong>pre-noun adjectival</strong> word, used to express <strong>places or situations close to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 37,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "685",
+      "type": "study_question",
+      "attributes": {
+        "id": 685,
+        "content": "<span class='study-area-input'>____</span>店（みせ）<span class='gp-popout' data-gp-id='3'>は</span>安（やす）<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "その",
+        "alternate_grammar": [],
+        "kanji_answer": "その",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）の近（ちか）くにある場所（ばしょ）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）う<strong>連体詞（れんたいし）</strong>。",
+        "tense": "Near the listener",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/37/male_audio/06-その店は安いですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/その店は安いですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "ここ": {
+            "en": "ここ means ‘here’.",
+            "es": "ここ significa ‘aquí’.",
+            "fr": "ここ signifie « ici ».",
+            "id": "ここ berarti \"di sini\"."
+          },
+          "そこ": {
+            "en": "そこ means ‘there’.",
+            "es": "そこ significa ‘ahí’.",
+            "fr": "そこ signifie « là ».",
+            "id": "そこ berarti \"di sana\"."
+          },
+          "あそこ": {
+            "en": "あそこ means ‘over there’.",
+            "es": "あそこ significa ‘allí’.",
+            "fr": "あそこ signifie « là-bas ».",
+            "id": "あそこ berarti \"di sana\"."
+          },
+          "これ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          },
+          "それ": {
+            "en": "Close! However, それ cannot directly pair with nouns.",
+            "es": "¡Cerca! Sin embargo, それ no puede agregarse directamente a sustantivos.",
+            "fr": "Presque ! Cependant, それ ne peut pas être directement suivi d'un nom.",
+            "id": "Hampir! Namun, それ tidak dapat langsung berpasangan dengan kata benda."
+          },
+          "あれ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          }
+        },
+        "translation": "Is <strong>that</strong> store cheap?",
+        "nuance_translation": "A <strong>pre-noun adjectival</strong> word, used to express <strong>places or situations close to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 37,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1789",
+      "type": "study_question",
+      "attributes": {
+        "id": 1789,
+        "content": "<span class='study-area-input'>____</span>動物（どうぶつ）<span class='gp-popout' data-gp-id='3'>は</span>猿（さる）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "その",
+        "alternate_grammar": [],
+        "kanji_answer": "その",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）の近（ちか）くにある場所（ばしょ）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）う<strong>連体詞（れんたいし）</strong>。",
+        "tense": "Near the listener",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/37/male_audio/04-その動物はサルです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/その動物は猿です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "ここ": {
+            "en": "ここ means ‘here’.",
+            "es": "ここ significa ‘aquí’.",
+            "fr": null,
+            "id": "ここ berarti \"di sini\"."
+          },
+          "そこ": {
+            "en": "そこ means ‘there’.",
+            "es": "そこ significa ‘ahí’.",
+            "fr": null,
+            "id": "そこ berarti \"di sana\"."
+          },
+          "あそこ": {
+            "en": "あそこ means ‘over there’.",
+            "es": "あそこ significa ‘allí’.",
+            "fr": null,
+            "id": "あそこ berarti \"di sana\"."
+          },
+          "これ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": null,
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          },
+          "それ": {
+            "en": "Close! However, それ cannot directly pair with nouns.",
+            "es": "¡Cerca! Sin embargo, それ no puede agregarse directamente a sustantivos.",
+            "fr": null,
+            "id": "Hampir! Namun, それ tidak dapat langsung berpasangan dengan kata benda."
+          },
+          "あれ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": null,
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          }
+        },
+        "translation": "<strong>That</strong> animal is a monkey.",
+        "nuance_translation": "A <strong>pre-noun adjectival</strong> word, used to express <strong>places or situations close to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 37,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1790",
+      "type": "study_question",
+      "attributes": {
+        "id": 1790,
+        "content": "<span class='study-area-input'>____</span>時計（とけい）<span class='gp-popout' data-gp-id='3'>は</span>高（たか）い<span class='gp-popout' data-gp-id='9'>でしょう</span>。",
+        "answer": "その",
+        "alternate_grammar": [],
+        "kanji_answer": "その",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）の近（ちか）くにある場所（ばしょ）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）う<strong>連体詞（れんたいし）</strong>。",
+        "tense": "Near the listener",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/37/male_audio/08-その時計は高いでしょう.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/その時計は高いでしょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "ここ": {
+            "en": "ここ means ‘here’.",
+            "es": "ここ significa ‘aquí’.",
+            "fr": "ここ signifie « ici ».",
+            "id": "ここ berarti \"di sini\"."
+          },
+          "そこ": {
+            "en": "そこ means ‘there’.",
+            "es": "そこ significa ‘ahí’.",
+            "fr": "そこ signifie « là ».",
+            "id": "そこ berarti \"di sana\"."
+          },
+          "あそこ": {
+            "en": "あそこ means ‘over there’.",
+            "es": "あそこ significa ‘allí’.",
+            "fr": "あそこ signifie « là-bas ».",
+            "id": "あそこ berarti \"di sana\"."
+          },
+          "これ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          },
+          "それ": {
+            "en": "Close! However, それ cannot directly pair with nouns.",
+            "es": "¡Cerca! Sin embargo, それ no puede agregarse directamente a sustantivos.",
+            "fr": "Presque ! Cependant, それ ne peut pas être directement suivi d'un nom.",
+            "id": "Hampir! Namun, それ tidak dapat langsung berpasangan dengan kata benda."
+          },
+          "あれ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          }
+        },
+        "translation": "<strong>That</strong> clock is expensive, isn't it.",
+        "nuance_translation": "A <strong>pre-noun adjectival</strong> word, used to express <strong>places or situations close to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 37,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1791",
+      "type": "study_question",
+      "attributes": {
+        "id": 1791,
+        "content": "<span class='study-area-input'>____</span>バス<span class='gp-popout' data-gp-id='3'>は</span>速（はや）い<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "その",
+        "alternate_grammar": [],
+        "kanji_answer": "その",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）の近（ちか）くにある場所（ばしょ）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）う<strong>連体詞（れんたいし）</strong>。",
+        "tense": "Near the listener",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/37/male_audio/01-そのバスは早いです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/そのバスは速いです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "ここ": {
+            "en": "ここ means ‘here’.",
+            "es": "ここ significa ‘aquí’.",
+            "fr": "ここ signifie « ici ».",
+            "id": "ここ berarti \"di sini\"."
+          },
+          "そこ": {
+            "en": "そこ means ‘there’.",
+            "es": "そこ significa ‘ahí’.",
+            "fr": "そこ signifie « là ».",
+            "id": "そこ berarti \"di sana\"."
+          },
+          "あそこ": {
+            "en": "あそこ means ‘over there’.",
+            "es": "あそこ significa ‘allí’.",
+            "fr": "あそこ signifie « là-bas ».",
+            "id": "あそこ berarti \"di sana\"."
+          },
+          "これ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          },
+          "それ": {
+            "en": "Close! However, それ cannot directly pair with nouns.",
+            "es": "¡Cerca! Sin embargo, それ no puede agregarse directamente a sustantivos.",
+            "fr": "Presque ! Cependant, それ ne peut pas être directement suivi d'un nom.",
+            "id": "Hampir! Namun, それ tidak dapat langsung berpasangan dengan kata benda."
+          },
+          "あれ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          }
+        },
+        "translation": "<strong>That</strong> bus is fast.",
+        "nuance_translation": "A <strong>pre-noun adjectival</strong> word, used to express <strong>places or situations close to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 37,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1792",
+      "type": "study_question",
+      "attributes": {
+        "id": 1792,
+        "content": "<span class='study-area-input'>____</span>人（ひと）<span class='gp-popout' data-gp-id='3'>は</span>私（わたし）<span class='gp-popout' data-gp-id='6'>の</span>弟（おとうと）。",
+        "answer": "その",
+        "alternate_grammar": [],
+        "kanji_answer": "その",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）の近（ちか）くにある場所（ばしょ）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）う<strong>連体詞（れんたいし）</strong>。",
+        "tense": "Near the listener",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/37/male_audio/02-その人は私の弟.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/その人は私の弟。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "ここ": {
+            "en": "ここ means ‘here’.",
+            "es": "ここ significa ‘aquí’.",
+            "fr": "ここ signifie « ici ».",
+            "id": "ここ berarti \"di sini\"."
+          },
+          "そこ": {
+            "en": "そこ means ‘there’.",
+            "es": "そこ significa ‘ahí’.",
+            "fr": "そこ signifie « là ».",
+            "id": "そこ berarti \"di sana\"."
+          },
+          "あそこ": {
+            "en": "あそこ means ‘over there’.",
+            "es": "あそこ significa ‘allí’.",
+            "fr": "あそこ signifie « là-bas ».",
+            "id": "あそこ berarti \"di sana\"."
+          },
+          "これ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          },
+          "それ": {
+            "en": "Close! However, それ cannot directly pair with nouns.",
+            "es": "¡Cerca! Sin embargo, それ no puede agregarse directamente a sustantivos.",
+            "fr": "Presque ! Cependant, それ ne peut pas être directement suivi d'un nom.",
+            "id": "Hampir! Namun, それ tidak dapat langsung berpasangan dengan kata benda."
+          },
+          "あれ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          }
+        },
+        "translation": "<strong>That</strong> person is my younger brother.",
+        "nuance_translation": "A <strong>pre-noun adjectival</strong> word, used to express <strong>places or situations close to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 37,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1793",
+      "type": "study_question",
+      "attributes": {
+        "id": 1793,
+        "content": "<span class='study-area-input'>____</span>授業（じゅぎょう）<span class='gp-popout' data-gp-id='3'>は</span>楽（たの）し<span class='gp-popout' data-gp-id='24'>い</span>。",
+        "answer": "その",
+        "alternate_grammar": [],
+        "kanji_answer": "その",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）の近（ちか）くにある場所（ばしょ）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）う<strong>連体詞（れんたいし）</strong>。",
+        "tense": "Near the listener",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/37/male_audio/その授業は楽しい.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/その授業は楽しい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "ここ": {
+            "en": "ここ means ‘here’.",
+            "es": "ここ significa ‘aquí’.",
+            "fr": "ここ signifie « ici ».",
+            "id": "ここ berarti \"di sini\"."
+          },
+          "そこ": {
+            "en": "そこ means ‘there’.",
+            "es": "そこ significa ‘ahí’.",
+            "fr": "そこ signifie « là ».",
+            "id": "そこ berarti \"di sana\"."
+          },
+          "あそこ": {
+            "en": "あそこ means ‘over there’.",
+            "es": "あそこ significa ‘allí’.",
+            "fr": "あそこ signifie « là-bas ».",
+            "id": "あそこ berarti \"di sana\"."
+          },
+          "これ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          },
+          "それ": {
+            "en": "Close! However, それ cannot directly pair with nouns.",
+            "es": "¡Cerca! Sin embargo, それ no puede agregarse directamente a sustantivos.",
+            "fr": "Presque ! Cependant, それ ne peut pas être directement suivi d'un nom.",
+            "id": "Hampir! Namun, それ tidak dapat langsung berpasangan dengan kata benda."
+          },
+          "あれ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          }
+        },
+        "translation": "<strong>That</strong> class is fun.",
+        "nuance_translation": "A <strong>pre-noun adjectival</strong> word, used to express <strong>places or situations close to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 37,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1794",
+      "type": "study_question",
+      "attributes": {
+        "id": 1794,
+        "content": "<span class='study-area-input'>____</span>家（いえ）<span class='gp-popout' data-gp-id='21'>を</span>買（か）<span class='gp-popout' data-gp-id='26'>う</span>。",
+        "answer": "その",
+        "alternate_grammar": [],
+        "kanji_answer": "その",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）の近（ちか）くにある場所（ばしょ）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）う<strong>連体詞（れんたいし）</strong>。",
+        "tense": "Near the listener",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/37/male_audio/05-その家を買う.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/その家を買う。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "ここ": {
+            "en": "ここ means ‘here’.",
+            "es": "ここ significa ‘aquí’.",
+            "fr": "ここ signifie « ici ».",
+            "id": "ここ berarti \"di sini\"."
+          },
+          "そこ": {
+            "en": "そこ means ‘there’.",
+            "es": "そこ significa ‘ahí’.",
+            "fr": "そこ signifie « là ».",
+            "id": "そこ berarti \"di sana\"."
+          },
+          "あそこ": {
+            "en": "あそこ means ‘over there’.",
+            "es": "あそこ significa ‘allí’.",
+            "fr": "あそこ signifie « là-bas ».",
+            "id": "あそこ berarti \"di sana\"."
+          },
+          "これ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          },
+          "それ": {
+            "en": "Close! However, それ cannot directly pair with nouns.",
+            "es": "¡Cerca! Sin embargo, それ no puede agregarse directamente a sustantivos.",
+            "fr": "Presque ! Cependant, それ ne peut pas être directement suivi d'un nom.",
+            "id": "Hampir! Namun, それ tidak dapat langsung berpasangan dengan kata benda."
+          },
+          "あれ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          }
+        },
+        "translation": "I will buy <strong>that</strong> house.",
+        "nuance_translation": "A <strong>pre-noun adjectival</strong> word, used to express <strong>places or situations close to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 37,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1795",
+      "type": "study_question",
+      "attributes": {
+        "id": 1795,
+        "content": "<span class='study-area-input'>____</span>車（くるま）<span class='gp-popout' data-gp-id='4'>も</span><span class='gp-popout' data-gp-id='7'>いい</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "その",
+        "alternate_grammar": [],
+        "kanji_answer": "その",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）の近（ちか）くにある場所（ばしょ）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）う<strong>連体詞（れんたいし）</strong>。",
+        "tense": "Near the listener",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/37/male_audio/11-その車もいいですよrerec.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/その車もいいですよ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "ここ": {
+            "en": "ここ means ‘here’.",
+            "es": "ここ significa ‘aquí’.",
+            "fr": "ここ signifie « ici ».",
+            "id": "ここ berarti \"di sini\"."
+          },
+          "そこ": {
+            "en": "そこ means ‘there’.",
+            "es": "そこ significa ‘ahí’.",
+            "fr": "そこ signifie « là ».",
+            "id": "そこ berarti \"di sana\"."
+          },
+          "あそこ": {
+            "en": "あそこ means ‘over there’.",
+            "es": "あそこ significa ‘allí’.",
+            "fr": "あそこ signifie « là-bas ».",
+            "id": "あそこ berarti \"di sana\"."
+          },
+          "これ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          },
+          "それ": {
+            "en": "Close! However, それ cannot directly pair with nouns.",
+            "es": "¡Cerca! Sin embargo, それ no puede agregarse directamente a sustantivos.",
+            "fr": "Presque ! Cependant, それ ne peut pas être directement suivi d'un nom.",
+            "id": "Hampir! Namun, それ tidak dapat langsung berpasangan dengan kata benda."
+          },
+          "あれ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          }
+        },
+        "translation": "<strong>That</strong> car is also good.",
+        "nuance_translation": "A <strong>pre-noun adjectival</strong> word, used to express <strong>places or situations close to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 37,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1796",
+      "type": "study_question",
+      "attributes": {
+        "id": 1796,
+        "content": "<span class='study-area-input'>____</span>果物（くだもの）<span class='gp-popout' data-gp-id='3'>は</span>バナナ<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "その",
+        "alternate_grammar": [],
+        "kanji_answer": "その",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）の近（ちか）くにある場所（ばしょ）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）う<strong>連体詞（れんたいし）</strong>。",
+        "tense": "Near the listener",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/37/male_audio/10-その果物はバナナですrerec.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/その果物はバナナです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "ここ": {
+            "en": "ここ means ‘here’.",
+            "es": "ここ significa ‘aquí’.",
+            "fr": "ここ signifie « ici ».",
+            "id": "ここ berarti \"di sini\"."
+          },
+          "そこ": {
+            "en": "そこ means ‘there’.",
+            "es": "そこ significa ‘ahí’.",
+            "fr": "そこ signifie « là ».",
+            "id": "そこ berarti \"di sana\"."
+          },
+          "あそこ": {
+            "en": "あそこ means ‘over there’.",
+            "es": "あそこ significa ‘allí’.",
+            "fr": "あそこ signifie « là-bas ».",
+            "id": "あそこ berarti \"di sana\"."
+          },
+          "これ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          },
+          "それ": {
+            "en": "Close! However, それ cannot directly pair with nouns.",
+            "es": "¡Cerca! Sin embargo, それ no puede agregarse directamente a sustantivos.",
+            "fr": "Presque ! Cependant, それ ne peut pas être directement suivi d'un nom.",
+            "id": "Hampir! Namun, それ tidak dapat langsung berpasangan dengan kata benda."
+          },
+          "あれ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          }
+        },
+        "translation": "<strong>That</strong> fruit is a banana.",
+        "nuance_translation": "A <strong>pre-noun adjectival</strong> word, used to express <strong>places or situations close to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 37,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1797",
+      "type": "study_question",
+      "attributes": {
+        "id": 1797,
+        "content": "<span class='study-area-input'>____</span>仕事（しごと）<span class='gp-popout' data-gp-id='3'>は</span>難（むずか）し<span class='gp-popout' data-gp-id='24'>い</span>。",
+        "answer": "その",
+        "alternate_grammar": [],
+        "kanji_answer": "その",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）の近（ちか）くにある場所（ばしょ）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）う<strong>連体詞（れんたいし）</strong>。",
+        "tense": "Near the listener",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/37/male_audio/03-その仕事は難しい.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/その仕事は難しい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "ここ": {
+            "en": "ここ means ‘here’.",
+            "es": "ここ significa ‘aquí’.",
+            "fr": "ここ signifie « ici ».",
+            "id": "ここ berarti \"di sini\"."
+          },
+          "そこ": {
+            "en": "そこ means ‘there’.",
+            "es": "そこ significa ‘ahí’.",
+            "fr": "そこ signifie « là ».",
+            "id": "そこ berarti \"di sana\"."
+          },
+          "あそこ": {
+            "en": "あそこ means ‘over there’.",
+            "es": "あそこ significa ‘allí’.",
+            "fr": "あそこ signifie « là-bas ».",
+            "id": "あそこ berarti \"di sana\"."
+          },
+          "これ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          },
+          "それ": {
+            "en": "Close! However, それ cannot directly pair with nouns.",
+            "es": "¡Cerca! Sin embargo, それ no puede agregarse directamente a sustantivos.",
+            "fr": "Presque ! Cependant, それ ne peut pas être directement suivi d'un nom.",
+            "id": "Hampir! Namun, それ tidak dapat langsung berpasangan dengan kata benda."
+          },
+          "あれ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          }
+        },
+        "translation": "<strong>That</strong> job is difficult.",
+        "nuance_translation": "A <strong>pre-noun adjectival</strong> word, used to express <strong>places or situations close to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 37,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "37",
+      "type": "study_question",
+      "attributes": {
+        "id": 37,
+        "content": "<span class='study-area-input'>____</span>犬（いぬ）は私（わたし）の犬（いぬ）です。",
+        "answer": "その",
+        "alternate_grammar": [],
+        "kanji_answer": "その",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）の近（ちか）くにある場所（ばしょ）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）う連<strong>体詞（れんたいし）</strong>。",
+        "tense": "Near listener",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/その犬は私の犬です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "そ": {
+            "en": "Location. Location. Location. :)",
+            "es": "Ubicación. Ubicación. Ubicación. :)",
+            "fr": "L'emplacement. L'emplacement. L'emplacement. :)",
+            "id": "Lokasi. Lokasi. Lokasi. :)"
+          }
+        },
+        "wrong_answers": {
+          "ここ": {
+            "en": "ここ means ‘here’.",
+            "es": "ここ significa ‘aquí’.",
+            "fr": "ここ signifie « ici ».",
+            "id": "ここ berarti \"di sini\"."
+          },
+          "そこ": {
+            "en": "そこ means ‘there’.",
+            "es": "そこ significa ‘ahí’.",
+            "fr": "そこ signifie « là ».",
+            "id": "そこ berarti \"di sana\"."
+          },
+          "あそこ": {
+            "en": "あそこ means ‘over there’.",
+            "es": "あそこ significa ‘allí’.",
+            "fr": "あそこ signifie « là-bas ».",
+            "id": "あそこ berarti \"di sana\"."
+          },
+          "これ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          },
+          "それ": {
+            "en": "Close! However, それ cannot directly pair with nouns.",
+            "es": "¡Cerca! Sin embargo, それ no puede agregarse directamente a sustantivos.",
+            "fr": "Presque ! Cependant, それ ne peut pas être directement suivi d'un nom.",
+            "id": "Hampir! Namun, それ tidak dapat langsung berpasangan dengan kata benda."
+          },
+          "あれ": {
+            "en": "This is a noun itself and can’t modify another noun directly.",
+            "es": "Esto es un sustantivo per se y no puede modificar directamente a otro sustantivo.",
+            "fr": "C'est un nom en soi, il ne peut pas en modifier un autre directement.",
+            "id": "Ini adalah kata benda itu sendiri dan tidak dapat langsung memodifikasi kata benda lain."
+          }
+        },
+        "translation": "<strong>That</strong> dog is my dog.",
+        "nuance_translation": "A <strong>pre-noun adjectival</strong> word, used to express <strong>places or situations close to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 37,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "34",
+      "type": "writeup",
+      "attributes": {
+        "id": 34,
+        "body_ja": null,
+        "body": "<p><span data-gp-id='37'>その</span> is classified as a '<span data-term='連体詞・れんたいし'>pre-noun adjectival</span>' in Japanese. These are a special type of word that do not conjugate. This means that they will always appear in the same form. <span data-gp-id='37'>その</span> comes from the same family of words as <span data-gp-id='11'>それ</span> and <span data-gp-id='20'>そこ</span>, and is used to identify a 'thing' that is near the listener.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154811'>\r\n<li data-study-question='154812'></ul>\r\n\r\n<p>As the name '<span data-term='連体詞・れんたいし'>pre-noun adjectival</span>' suggests, these words will always appear before a noun, and describe that noun in some way.</p>"
+      }
+    },
+    {
+      "id": "72",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 72,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 63",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "764",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 764,
+        "source": "みんなの日本語 I",
+        "location": "Page 20 [CH 2]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "846",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 846,
+        "source": "みんなの日本語 II",
+        "location": "Page 30 [CH 29]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "876",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 876,
+        "source": "みんなの日本語 II",
+        "location": "Page 78 [CH 37]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "9",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 9,
+        "source": "Genki I",
+        "location": "Page 35",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "83",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 83,
+        "site": "Imabi",
+        "description": "That:「それ」&「その」",
+        "link": "https://imabi.org/kosoado-i-this-that/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "84",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 84,
+        "site": "St.Olaf",
+        "description": "Examples",
+        "link": "https://wp.stolaf.edu/japanese/ressource-projects/genki-i-ii-grammar-index/kono-sono-ano-dono-genki-i-chapter-2/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "111",
+      "type": "related_content",
+      "attributes": {
+        "id": 111,
+        "relationship_type": "related",
+        "body": "その and それ both refer to something closer to the listener than the speaker, like 'that' in English. それ is used by itself to mean 'that' or 'that thing.' その must be followed by a noun, as in その本 ('that book'). In other words, それ stands alone, while その comes before a noun.",
+        "first_relatable": {
+          "id": 37,
+          "slug": "その",
+          "title": "その",
+          "meaning": "That",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 11,
+          "slug": "それ",
+          "title": "それ",
+          "meaning": "That",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "115",
+      "type": "related_content",
+      "attributes": {
+        "id": 115,
+        "relationship_type": "related",
+        "body": "その refers to something physically or figuratively close to the listener, similar to 'that' in English, and must directly precede a noun (e.g., その本 = 'that book'). In contrast, あそこ refers specifically to a location distant from both the speaker and listener, equivalent to 'over there' in English. Unlike その, あそこ can stand alone without needing a noun.",
+        "first_relatable": {
+          "id": 37,
+          "slug": "その",
+          "title": "その",
+          "meaning": "That",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 29,
+          "slug": "あそこ",
+          "title": "あそこ",
+          "meaning": "Over there",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "114",
+      "type": "related_content",
+      "attributes": {
+        "id": 114,
+        "relationship_type": "related",
+        "body": "その refers to something closer to the listener than the speaker, like 'that' in English, and must be followed by a noun (e.g., その本 = 'that book'). あれ refers to something far from both the speaker and listener, or something both people know. Unlike その, あれ can stand alone and means 'that' or 'that thing.'",
+        "first_relatable": {
+          "id": 37,
+          "slug": "その",
+          "title": "その",
+          "meaning": "That",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 19,
+          "slug": "あれ",
+          "title": "あれ",
+          "meaning": "That (over there)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "113",
+      "type": "related_content",
+      "attributes": {
+        "id": 113,
+        "relationship_type": "related",
+        "body": "その refers to something near the listener, similar to 'that' in English, and must directly precede a noun (e.g., その本 = 'that book'). In contrast, ここ refers to a location near or indicated by the speaker, similar to 'here.' Unlike その, ここ stands alone as 'this place' and doesn't require a noun.",
+        "first_relatable": {
+          "id": 37,
+          "slug": "その",
+          "title": "その",
+          "meaning": "That",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 14,
+          "slug": "ここ",
+          "title": "ここ",
+          "meaning": "Here, This place",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "112",
+      "type": "related_content",
+      "attributes": {
+        "id": 112,
+        "relationship_type": "related",
+        "body": "その must always precede a noun and refers to something physically or figuratively closer to the listener (e.g., その本 = 'that book'). In contrast, そこ stands alone and refers specifically to a place near the listener, similar to 'there' or 'that place' in English. Thus, both その and そこ point to things near the listener but differ in usage (noun vs. place).",
+        "first_relatable": {
+          "id": 37,
+          "slug": "その",
+          "title": "その",
+          "meaning": "That",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 20,
+          "slug": "そこ",
+          "title": "そこ",
+          "meaning": "There, That place",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "109",
+      "type": "related_content",
+      "attributes": {
+        "id": 109,
+        "relationship_type": "related",
+        "body": "Both この and その are used before nouns to describe their position relative to the speaker, similar to 'this' and 'that' in English. The difference lies in perspective: この refers to something close to the speaker (like 'this'), while その refers to something closer to the listener or something just mentioned (like 'that').",
+        "first_relatable": {
+          "id": 37,
+          "slug": "その",
+          "title": "その",
+          "meaning": "That",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 30,
+          "slug": "この",
+          "title": "この",
+          "meaning": "This",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "110",
+      "type": "related_content",
+      "attributes": {
+        "id": 110,
+        "relationship_type": "related",
+        "body": "Both その and あの are used before nouns to express 'that,' referring to an object or concept away from the speaker. その points to something closer to the listener than the speaker, or something just mentioned. In contrast, あの refers to something far from both the speaker and listener, or something familiar to both but not close to either.",
+        "first_relatable": {
+          "id": 37,
+          "slug": "その",
+          "title": "その",
+          "meaning": "That",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 47,
+          "slug": "あの",
+          "title": "あの",
+          "meaning": "That (over there)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "300",
+      "type": "related_content",
+      "attributes": {
+        "id": 300,
+        "relationship_type": "related",
+        "body": "Both どの and その are used before nouns. その refers to something physically or figuratively closer to the listener than the speaker, or something that was just mentioned, similar to the English 'that.' In contrast, どの is a question word used to ask 'which' when there are three or more choices (e.g., どの色が好きですか？ = 'Which color do you like?').",
+        "first_relatable": {
+          "id": 713,
+          "slug": "どの",
+          "title": "どの",
+          "meaning": "Which (of three or more), What (kind)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 37,
+          "slug": "その",
+          "title": "その",
+          "meaning": "That",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

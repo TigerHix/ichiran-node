@@ -1,0 +1,1068 @@
+{
+  "data": {
+    "id": "98",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 98,
+      "level": "JLPT4",
+      "lesson_id": 13,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "こと",
+      "nuance": "全体（ぜんたい）のフレーズを一（ひと）つの<strong>名詞（めいし）みたいな</strong>表現（ひょうげん）に変（か）える言葉（ことば）。",
+      "grammar_order": 166,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 105,
+        "title": "そう ",
+        "slug": "そう"
+      },
+      "previous_grammar_point": {
+        "id": 97,
+        "title": "みたい",
+        "slug": "みたい"
+      },
+      "lesson_count": "4/18",
+      "title": "こと",
+      "furigana": "こと",
+      "meaning": "Converting a verb into a noun",
+      "nuance_translation": "A word that transforms whole phrases into single, <strong>noun-like</strong> expressions.",
+      "rare_kanji_warning": null,
+      "caution": "Can also express something that is concrete - a fact.",
+      "polite_structure": null,
+      "casual_structure": "Verb + <strong>こと</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/1194",
+      "metadata": "こと, 事, koto, noun, nominalizer, describable particle, sentence-ending particle"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "122",
+            "type": "study_question"
+          },
+          {
+            "id": "2463",
+            "type": "study_question"
+          },
+          {
+            "id": "180309",
+            "type": "study_question"
+          },
+          {
+            "id": "180310",
+            "type": "study_question"
+          },
+          {
+            "id": "183872",
+            "type": "study_question"
+          },
+          {
+            "id": "123",
+            "type": "study_question"
+          },
+          {
+            "id": "2458",
+            "type": "study_question"
+          },
+          {
+            "id": "2462",
+            "type": "study_question"
+          },
+          {
+            "id": "180308",
+            "type": "study_question"
+          },
+          {
+            "id": "2457",
+            "type": "study_question"
+          },
+          {
+            "id": "2464",
+            "type": "study_question"
+          },
+          {
+            "id": "2461",
+            "type": "study_question"
+          },
+          {
+            "id": "2465",
+            "type": "study_question"
+          },
+          {
+            "id": "2460",
+            "type": "study_question"
+          },
+          {
+            "id": "124",
+            "type": "study_question"
+          },
+          {
+            "id": "2459",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "165",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "116",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1074",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "99",
+            "type": "related_content"
+          },
+          {
+            "id": "692",
+            "type": "related_content"
+          },
+          {
+            "id": "145",
+            "type": "related_content"
+          },
+          {
+            "id": "702",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "203",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2234",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2676",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "204",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "122",
+      "type": "study_question",
+      "attributes": {
+        "id": 122,
+        "content": "日本語（にほんご）<span class='gp-popout' data-gp-id='21'>を</span>話（はな）<span class='gp-popout' data-gp-id='26'>す</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>難（むずか）し<span class='gp-popout' data-gp-id='24'>い</span>。",
+        "answer": "こと",
+        "alternate_grammar": [],
+        "kanji_answer": "こと",
+        "kanji_alt_grammar": [],
+        "nuance": "全体（ぜんたい）のフレーズを一（ひと）つの<strong>名詞（めいし）みたいな</strong>表現（ひょうげん）に変（か）える言葉（ことば）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/98/male_audio/230225_1208_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/日本語を話すことは難しい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "の": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ということ": {
+            "en": "ということは isn’t used to nominalize verbs on its own, it’s a phrase used to draw a logical conclusion from something. Here, we're looking for a grammar point that simply turns a verb into a noun-like phrase.",
+            "es": "",
+            "fr": ""
+          },
+          "のは": {
+            "en": "We are looking for a nominalizer that carries the nuance of 'the thing that is (A)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Speaking</strong> Japanese is difficult.",
+        "nuance_translation": "A word that transforms whole phrases into single, <strong>noun-like</strong> expressions.",
+        "extra_info": "",
+        "reviewable_id": 98,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2463",
+      "type": "study_question",
+      "attributes": {
+        "id": 2463,
+        "content": "職場（しょくば）<span class='gp-popout' data-gp-id='25'>で</span>ワープロ<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>ある？",
+        "answer": "つかうこと",
+        "alternate_grammar": [],
+        "kanji_answer": "使（つか）うこと",
+        "kanji_alt_grammar": [],
+        "nuance": "全体（ぜんたい）のフレーズを一（ひと）つの<strong>名詞（めいし）みたいな</strong>表現（ひょうげん）に変（か）える言葉（ことば）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/98/male_audio/230225_1210_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/職場でワープロを使うことはある？.mp3",
+        "word_prompt": "使（つか）<span class='gp-popout' data-gp-id='26'>う</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つかうの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "の": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "つかうとき": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Are there times when you are <strong>using</strong> a word processor at work?",
+        "nuance_translation": "A word that transforms whole phrases into single, <strong>noun-like</strong> expressions.",
+        "extra_info": "",
+        "reviewable_id": 98,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180309",
+      "type": "study_question",
+      "attributes": {
+        "id": 180309,
+        "content": "ファックス<span class=\"gp-popout\" data-gp-id=\"21\">を</span><span class=\"gp-popout\" data-gp-id=\"22\">する</span><span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"717\">が嫌（きら）い</span>。",
+        "answer": "こと",
+        "alternate_grammar": [],
+        "kanji_answer": "こと",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ファックスをすることが嫌い。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I dislike things like <strong>faxing</strong>. (That which is 'faxing')",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 98,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180310",
+      "type": "study_question",
+      "attributes": {
+        "id": 180310,
+        "content": "お金（かね）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>使（つか）い<span class=\"gp-popout\" data-gp-id=\"76\">過（す）ぎ</span><span class=\"gp-popout\" data-gp-id=\"51\">ない</span><span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"10\">が</span>大事（だいじ）<span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "こと",
+        "alternate_grammar": [],
+        "kanji_answer": "こと",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/お金を使い過ぎないことが大事です。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It is important to not <strong>use too much</strong> money. (That which is 'not using too much money')",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 98,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183872",
+      "type": "study_question",
+      "attributes": {
+        "id": 183872,
+        "content": "1．クラスメイト<span data-gp-id='21'>を</span>いじめないこと。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "1. Do not bully your classmates.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 98,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "123",
+      "type": "study_question",
+      "attributes": {
+        "id": 123,
+        "content": "スポーツ<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='22'>する</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='10'>が</span><span class='gp-popout' data-gp-id='716'>好（す）き</span>。",
+        "answer": "こと",
+        "alternate_grammar": [],
+        "kanji_answer": "こと",
+        "kanji_alt_grammar": [],
+        "nuance": "全体（ぜんたい）のフレーズを一（ひと）つの<strong>名詞（めいし）みたいな</strong>表現（ひょうげん）に変（か）える言葉（ことば）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/98/male_audio/230225_1209.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/スポーツをすることが好き。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "の": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "のが": {
+            "en": "We are looking for a nominalizer that carries the nuance of 'the thing that is (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "のは": {
+            "en": "We are looking for a nominalizer that carries the nuance of 'the thing that is (A)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I like <strong>playing</strong> sports.",
+        "nuance_translation": "A word that transforms whole phrases into single, <strong>noun-like</strong> expressions.",
+        "extra_info": "",
+        "reviewable_id": 98,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2458",
+      "type": "study_question",
+      "attributes": {
+        "id": 2458,
+        "content": "フォーク<span class='gp-popout' data-gp-id='774'>じゃなくて</span>、お箸（はし）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "つかうこと",
+        "alternate_grammar": [],
+        "kanji_answer": "使（つか）うこと",
+        "kanji_alt_grammar": [],
+        "nuance": "全体（ぜんたい）のフレーズを一（ひと）つの<strong>名詞（めいし）みたいな</strong>表現（ひょうげん）に変（か）える言葉（ことば）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/98/male_audio/230225_1209_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/フォークじゃなくて、お箸を使うこと。.mp3",
+        "word_prompt": "使（つか）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "の": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Not using a fork, <strong>using</strong> chopsticks.",
+        "nuance_translation": "A word that transforms whole phrases into single, <strong>noun-like</strong> expressions.",
+        "extra_info": "",
+        "reviewable_id": 98,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2462",
+      "type": "study_question",
+      "attributes": {
+        "id": 2462,
+        "content": "健康（けんこう）<span class='gp-popout' data-gp-id='32'>に</span><span class='gp-popout' data-gp-id='7'>いい</span><span class='gp-popout' data-gp-id='719'>のは</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "ねること",
+        "alternate_grammar": [],
+        "kanji_answer": "寝（ね）ること",
+        "kanji_alt_grammar": [],
+        "nuance": "全体（ぜんたい）のフレーズを一（ひと）つの<strong>名詞（めいし）みたいな</strong>表現（ひょうげん）に変（か）える言葉（ことば）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/98/male_audio/230225_1210_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/健康にいいのは寝ることです。.mp3",
+        "word_prompt": "寝（ね）<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ねるの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "の": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ねている": {
+            "en": "We are looking for a grammar point that can be attached to a verb to turn it into a noun.",
+            "es": "",
+            "fr": ""
+          },
+          "ねる": {
+            "en": "We are looking for a grammar point that can be attached to a verb to turn it into a noun.",
+            "es": "",
+            "fr": ""
+          },
+          "ねこと": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Sleeping</strong> is good for your health.",
+        "nuance_translation": "A word that transforms whole phrases into single, <strong>noun-like</strong> expressions.",
+        "extra_info": "",
+        "reviewable_id": 98,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180308",
+      "type": "study_question",
+      "attributes": {
+        "id": 180308,
+        "content": "近所（きんじょ）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>迷惑（めいわく）<span class=\"gp-popout\" data-gp-id=\"57\">になる</span><span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"21\">を</span><span class=\"gp-popout\" data-gp-id=\"22\">し</span><span class=\"gp-popout\" data-gp-id=\"67\">てはいけない</span>。",
+        "answer": "こと",
+        "alternate_grammar": [],
+        "kanji_answer": "こと",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/近所の迷惑になることをしてはいけない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "You should not do things that will cause <strong>annoyance</strong> to your neighbors. (That which is 'causing a problem in the neighborhood')",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 98,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2457",
+      "type": "study_question",
+      "attributes": {
+        "id": 2457,
+        "content": "大（おお）き<span class='gp-popout' data-gp-id='24'>い</span>声（こえ）<span class='gp-popout' data-gp-id='36'>で</span><span class='study-area-input'>____</span>。",
+        "answer": "しゃべらないこと",
+        "alternate_grammar": [],
+        "kanji_answer": "喋（しゃべ）らないこと",
+        "kanji_alt_grammar": [],
+        "nuance": "全体（ぜんたい）のフレーズを一（ひと）つの<strong>名詞（めいし）みたいな</strong>表現（ひょうげん）に変（か）える言葉（ことば）。",
+        "tense": "Negative, Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/98/male_audio/230225_1209_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/大きい声で喋らないこと。.mp3",
+        "word_prompt": "喋（しゃべ）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しゃべらないの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "しゃべらないことじゃない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しゃべらない": {
+            "en": "We are looking for a grammar point that can be attached to a verb to turn it into a noun.",
+            "es": "",
+            "fr": ""
+          },
+          "しゃべないこと": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Not talking</strong> loudly.",
+        "nuance_translation": "A word that transforms whole phrases into single, <strong>noun-like</strong> expressions.",
+        "extra_info": "",
+        "reviewable_id": 98,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2464",
+      "type": "study_question",
+      "attributes": {
+        "id": 2464,
+        "content": "毎日（まいにち）日本語（にほんご）<span class='gp-popout' data-gp-id='21'>を</span>勉強（べんきょう）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>楽（たの）し<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "すること",
+        "alternate_grammar": [],
+        "kanji_answer": "すること",
+        "kanji_alt_grammar": [],
+        "nuance": "全体（ぜんたい）のフレーズを一（ひと）つの<strong>名詞（めいし）みたいな</strong>表現（ひょうげん）に変（か）える言葉（ことば）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/98/male_audio/230225_1211.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/毎日日本語を勉強することは楽しいです。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "するの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "の": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "している": {
+            "en": "We are looking for a grammar point that can be attached to a verb to turn it into a noun.",
+            "es": "",
+            "fr": ""
+          },
+          "こと": {
+            "en": "Could you try using the prompted word?",
+            "es": "",
+            "fr": ""
+          },
+          "しこと": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Studying</strong> Japanese every day is fun.",
+        "nuance_translation": "A word that transforms whole phrases into single, <strong>noun-like</strong> expressions.",
+        "extra_info": "",
+        "reviewable_id": 98,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2461",
+      "type": "study_question",
+      "attributes": {
+        "id": 2461,
+        "content": "<span class='gp-popout' data-gp-id='362'>どんどん</span>太（ふと）<span class='gp-popout' data-gp-id='26'>る</span><span class='gp-popout' data-gp-id='45'>から</span>、寝（ね）<span class='gp-popout' data-gp-id='12'>る</span><span class='gp-popout' data-gp-id='53'>前（まえ）に</span>甘（あま）いもの<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='10'>が</span>大事（だいじ）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "たべないこと",
+        "alternate_grammar": [],
+        "kanji_answer": "食（た）べないこと",
+        "kanji_alt_grammar": [],
+        "nuance": "全体（ぜんたい）のフレーズを一（ひと）つの<strong>名詞（めいし）みたいな</strong>表現（ひょうげん）に変（か）える言葉（ことば）。",
+        "tense": "Negative, Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/98/male_audio/230225_1210.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/どんどん太るから、寝る前に甘いものを食べないことが大事です。.mp3",
+        "word_prompt": "食（た）べない",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たべないの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "の": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "たべない": {
+            "en": "We are looking for a nominalizer that carries the nuance of 'the thing that is (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "たべないで": {
+            "en": "We are looking for a nominalizer that carries the nuance of 'the thing that is (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "たべなこと": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Not eating</strong> sweets before bed is important because you will rapidly gain weight (if you do).",
+        "nuance_translation": "A word that transforms whole phrases into single, <strong>noun-like</strong> expressions.",
+        "extra_info": "",
+        "reviewable_id": 98,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2465",
+      "type": "study_question",
+      "attributes": {
+        "id": 2465,
+        "content": "プラスチック<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>環境（かんきょう）に悪（わる）<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "すてること",
+        "alternate_grammar": [],
+        "kanji_answer": "捨（す）てること",
+        "kanji_alt_grammar": [],
+        "nuance": "全体（ぜんたい）のフレーズを一（ひと）つの<strong>名詞（めいし）みたいな</strong>表現（ひょうげん）に変（か）える言葉（ことば）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/98/male_audio/230225_1211_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/プラスチックを捨てることは環境に悪いよ。.mp3",
+        "word_prompt": "捨（す）て<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "すてるの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "の": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "すて": {
+            "en": "We are looking for a nominalizer that carries the nuance of 'the thing that is (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "すてる": {
+            "en": "We are looking for a nominalizer that carries the nuance of 'the thing that is (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "すてこと": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Throwing away</strong> plastic is bad for the environment, you know.",
+        "nuance_translation": "A word that transforms whole phrases into single, <strong>noun-like</strong> expressions.",
+        "extra_info": "",
+        "reviewable_id": 98,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2460",
+      "type": "study_question",
+      "attributes": {
+        "id": 2460,
+        "content": "想像（そうぞう）<span class='gp-popout' data-gp-id='22'>する</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>大切（たいせつ）なこと<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "こと",
+        "alternate_grammar": [],
+        "kanji_answer": "こと",
+        "kanji_alt_grammar": [],
+        "nuance": "全体（ぜんたい）のフレーズを一（ひと）つの<strong>名詞（めいし）みたいな</strong>表現（ひょうげん）に変（か）える言葉（ことば）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/98/male_audio/230225_1209_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/想像することは大切なことです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "の": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ということ": {
+            "en": "ということは isn’t used to nominalize verbs on its own, it’s a phrase used to draw a logical conclusion from something. Here, we're looking for a grammar point that simply turns a verb into a noun-like phrase.",
+            "es": "",
+            "fr": ""
+          },
+          "のは": {
+            "en": "We are looking for a nominalizer that carries the nuance of 'the thing that is (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "のこと": {
+            "en": "The の particle is not needed here. This grammar point can be directly attached to the plain form of verbs. ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Using</strong> your imagination is important.",
+        "nuance_translation": "A word that transforms whole phrases into single, <strong>noun-like</strong> expressions.",
+        "extra_info": "",
+        "reviewable_id": 98,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "124",
+      "type": "study_question",
+      "attributes": {
+        "id": 124,
+        "content": "ダンス<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='22'>する</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>楽（たの）し<span class='gp-popout' data-gp-id='24'>い</span>。",
+        "answer": "こと",
+        "alternate_grammar": [],
+        "kanji_answer": "こと",
+        "kanji_alt_grammar": [],
+        "nuance": "全体（ぜんたい）のフレーズを一（ひと）つの<strong>名詞（めいし）みたいな</strong>表現（ひょうげん）に変（か）える言葉（ことば）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/98/male_audio/230225_1209_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ダンスをすることは楽しい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "の": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ということ": {
+            "en": "ということは isn’t used to nominalize verbs on its own, it’s a phrase used to draw a logical conclusion from something. Here, we're looking for a grammar point that simply turns a verb into a noun-like phrase.",
+            "es": "",
+            "fr": ""
+          },
+          "のが": {
+            "en": "We are looking for a nominalizer that carries the nuance of 'the thing that is (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "のは": {
+            "en": "We are looking for a nominalizer that carries the nuance of 'the thing that is (A)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Dancing</strong> is fun!",
+        "nuance_translation": "A word that transforms whole phrases into single, <strong>noun-like</strong> expressions.",
+        "extra_info": "",
+        "reviewable_id": 98,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2459",
+      "type": "study_question",
+      "attributes": {
+        "id": 2459,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>部屋（へや）<span class='gp-popout' data-gp-id='183'>の中（なか）で</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>し<span class='gp-popout' data-gp-id='65'>ないでください</span>。",
+        "answer": "あそぶこと",
+        "alternate_grammar": [],
+        "kanji_answer": "遊（あそ）ぶこと",
+        "kanji_alt_grammar": [],
+        "nuance": "全体（ぜんたい）のフレーズを一（ひと）つの<strong>名詞（めいし）みたいな</strong>表現（ひょうげん）に変（か）える言葉（ことば）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/98/male_audio/230225_1209_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この部屋の中で遊ぶことはしないでください。.mp3",
+        "word_prompt": "遊（あそ）<span class='gp-popout' data-gp-id='26'>ぶ</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あそぶの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "の": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "あそばないこと": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "あそびこと": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Please do not play in this room. (Not <strong>playing</strong> in this room)",
+        "nuance_translation": "A word that transforms whole phrases into single, <strong>noun-like</strong> expressions.",
+        "extra_info": "",
+        "reviewable_id": 98,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "165",
+      "type": "writeup",
+      "attributes": {
+        "id": 165,
+        "body_ja": "",
+        "body": "<p>In a very similar way to <span data-gp-id='16'>のは</span>, <span data-gp-id='98'>こと</span> is used in Japanese for nominalization (creating a noun-like phrase). However, unlike <span data-gp-id='16'>のは</span>, which is a combination of two particles, <span data-gp-id='98'>こと</span> is a <span data-term='名詞・めいし'>noun</span>. To use <span data-gp-id='98'>こと</span>, just add it to the end of a verb in its dictionary form.</p>\r\n\r\n<p><span data-gp-id='98'>こと</span> (or <span data-gp-id='98'>事（こと）</span> in its kanji form) is a noun that is often translated as 'thing', and in this way, literally means 'the thing that is (A)' when used for nominalization.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180308'>\r\n<li data-study-question='180309'>\r\n<li data-study-question='180310'>\r\n</ul>\r\n\r\n<p>As we can see from these examples, ない can also be used between the verb and <span data-gp-id='98'>こと</span>, to form a 'not' statement. There are other <span data-term='助動詞・じょどうし'>auxiliary verbs</span> that may be used with <span data-gp-id='98'>こと</span> in this way, but ない is the most common.</p>\r\n\r\n<p>Although this lesson discusses <span data-gp-id='98'>こと</span> pairing with the dictionary form of verbs, it can actually pair with any standard verb form. Standard form just means anything that does not finish with the polite ます.</p>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>Unlike <span data-gp-id='213'>もの</span> (another noun used to describe 'things'), <span data-gp-id='98'>こと</span> is a noun that is frequently used to describe things that are 'intrinsic'. This basically means things that are describable, but not necessarily always observable (feelings, conditions, events, etc.).</p></section>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>When a sentence (usually short) finishes with <span data-gp-id='199'>こと</span>, it quite often has the nuance of being a rule, or command. This <span data-gp-id='199'>こと</span> is not actually a noun, but a <span data-term='終助詞・しゅうじょし'>sentence ending particle</span>.</p>\r\n\r\n<ul class='writeup-examples--holder'><li data-study-question='183872'></ul>\r\n\r\n<p><span data-gp-id='199'>こと</span> as a particle will almost never be written in the kanji form. However, it does originate from the same word.</p></section>"
+      }
+    },
+    {
+      "id": "116",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 116,
+        "source": "Marugoto Elementary 1 (A2) Rikai",
+        "location": "Page 32",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1074",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1074,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 7 & 194",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "203",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 203,
+        "site": "BriefJapanese",
+        "description": "の、こと differences and history",
+        "link": "https://briefjapanese.fun/%e3%81%ae-and-%e3%81%93%e3%81%a8/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2234",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2234,
+        "site": "Bunpro Community [mrnoone]",
+        "description": "の vs. こと",
+        "link": "https://community.bunpro.jp/t/im-having-some-troubles-with-verb-nominalizers/568/5?u=pushindawood",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2676",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2676,
+        "site": "JStackExchange",
+        "description": "What is the difference between the nominalizers こと and の?",
+        "link": "https://japanese.stackexchange.com/questions/1395/what-is-the-difference-between-the-nominalizers-%e3%81%93%e3%81%a8-and-%e3%81%ae/1396#1396",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "204",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 204,
+        "site": "Wasabi",
+        "description": "Verbs Treated as Nouns",
+        "link": "https://wasabi-jpn.com/magazine/japanese-grammar/nominalizers-koto-and-no/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "99",
+      "type": "related_content",
+      "attributes": {
+        "id": 99,
+        "relationship_type": "related",
+        "body": "This phrase combines the nominalizer の with the な-Adjective 好き to express liking an activity (e.g., 本を読むのが好き = 'I like to read books'). の can be replaced with こと, another nominalizer. The difference is subtle: の implies a concrete or tangible action, while こと is more abstract (e.g., 本を読むことが好き implies liking the 'act of reading').",
+        "first_relatable": {
+          "id": 34,
+          "slug": "のがすき",
+          "title": "のがすき",
+          "meaning": "Like doing, Love doing",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 98,
+          "slug": "こと",
+          "title": "こと",
+          "meaning": "Converting a verb into a noun",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "692",
+      "type": "related_content",
+      "attributes": {
+        "id": 692,
+        "relationship_type": "related",
+        "body": "These related expressions both use the noun こと, or 事 in kanji. On its own, こと turns a verb or adjective into a noun phrase, e.g. 食べる 'to eat' becomes 食べること 'the act of eating'. When combined with the explanatory/emphatic なの, it conveys meaning or definition, e.g. 'It means that (A)' or '(A) is how it is.'",
+        "first_relatable": {
+          "id": 630,
+          "slug": "ことなの",
+          "title": "ことなの",
+          "meaning": "(A) is (Description of A), (A) means that (Description of A)",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 98,
+          "slug": "こと",
+          "title": "こと",
+          "meaning": "Converting a verb into a noun",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "145",
+      "type": "related_content",
+      "attributes": {
+        "id": 145,
+        "relationship_type": "related",
+        "body": "Both こと and の turn verbs or adjectives into noun phrases. こと is used for intangible or conceptual ideas, while の is used for more tangible or physical concepts. For example, 走るのが好きです and 走ることが好きです both mean 'I like running,' with の feeling more physical and こと more conceptual. However, they aren't interchangeable in set phrases like ことができる or ことがある.",
+        "first_relatable": {
+          "id": 98,
+          "slug": "こと",
+          "title": "こと",
+          "meaning": "Converting a verb into a noun",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 16,
+          "slug": "のは",
+          "title": "の",
+          "meaning": "Verb nominalizer, The one who..., That which...",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "702",
+      "type": "related_content",
+      "attributes": {
+        "id": 702,
+        "relationship_type": "related",
+        "body": "こと attaches to the dictionary form of verbs to turn them into nouns, e.g. 行くこと '(the act of) going'. ということ has a similar function, but adds the quoting phrase という, so it's often used to clarify information or reported speech, e.g. 日本に行くということ 'the fact that (he) is going to Japan'.",
+        "first_relatable": {
+          "id": 98,
+          "slug": "こと",
+          "title": "こと",
+          "meaning": "Converting a verb into a noun",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 185,
+          "slug": "ということ",
+          "title": "ということ",
+          "meaning": "~ing, The ~ that ~ (Nominalization)",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

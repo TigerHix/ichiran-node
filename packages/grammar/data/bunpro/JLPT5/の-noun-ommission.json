@@ -1,0 +1,865 @@
+{
+  "data": {
+    "id": "720",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 720,
+      "level": "JLPT5",
+      "lesson_id": 6,
+      "part_of_speech": "助詞",
+      "register": "一般",
+      "word_type": "格助詞",
+      "slug": "の-noun-ommission",
+      "nuance": "(A)が<strong>以前（いぜん）話題（わだい）</strong>に上（あ）がっていた<strong>もの</strong>だということを表（あらわ）すために使（つか）われる<strong>助詞（じょし）</strong>。",
+      "grammar_order": 75,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 66,
+        "title": "な",
+        "slug": "な"
+      },
+      "previous_grammar_point": {
+        "id": 357,
+        "title": "Verb［た・ている］+ Noun",
+        "slug": "verb-た-noun"
+      },
+      "lesson_count": "12/13",
+      "title": "の",
+      "furigana": "の",
+      "meaning": "Possessive use (Noun omission)",
+      "nuance_translation": "A <strong>particle</strong> used to <strong>refer back</strong> to (A) as being <strong>the one</strong> previously mentioned.",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "Noun + <strong><span class='gp-popout' data-gp-id='6'>の</span></strong> +  (previously mentioned noun)<br><br><br>Note: The previously mentioned noun is dropped.",
+      "part_of_speech_translation": "Particle",
+      "register_translation": "Standard",
+      "word_type_translation": "Case Marking Particle",
+      "discourse_link": "https://community.bunpro.jp/t/pronoun-one-grammar-discussion/6986",
+      "metadata": "の, no, particle, case-marking particle, possession, subject marker, possessive, noun omission, omission"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154988",
+            "type": "study_question"
+          },
+          {
+            "id": "183785",
+            "type": "study_question"
+          },
+          {
+            "id": "154989",
+            "type": "study_question"
+          },
+          {
+            "id": "7735",
+            "type": "study_question"
+          },
+          {
+            "id": "7736",
+            "type": "study_question"
+          },
+          {
+            "id": "7733",
+            "type": "study_question"
+          },
+          {
+            "id": "7734",
+            "type": "study_question"
+          },
+          {
+            "id": "7737",
+            "type": "study_question"
+          },
+          {
+            "id": "7738",
+            "type": "study_question"
+          },
+          {
+            "id": "7739",
+            "type": "study_question"
+          },
+          {
+            "id": "7740",
+            "type": "study_question"
+          },
+          {
+            "id": "7741",
+            "type": "study_question"
+          },
+          {
+            "id": "7743",
+            "type": "study_question"
+          },
+          {
+            "id": "7744",
+            "type": "study_question"
+          },
+          {
+            "id": "7742",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "74",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "926",
+            "type": "offline_resource"
+          },
+          {
+            "id": "936",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1259",
+            "type": "offline_resource"
+          },
+          {
+            "id": "3269",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1369",
+            "type": "related_content"
+          },
+          {
+            "id": "1368",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1568",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1569",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2110",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154988",
+      "type": "study_question",
+      "attributes": {
+        "id": 154988,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"30\">この</span>本（ほん）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>たけしさん<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/この本はたけしさんのです。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This book is Takeshi-san<strong>'s (book)</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 720,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183785",
+      "type": "study_question",
+      "attributes": {
+        "id": 183785,
+        "content": "<span data-gp-id='47'>あの</span>車（くるま）、あなた<span data-gp-id='10'>が</span>乗（の）っ<span data-gp-id='27'>ている</span><span class='study-area-input'>____</span><span data-gp-id='2'>です</span><span data-gp-id='8'>か</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "That car, is it the car (<strong>one</strong>) you drive? (<span data-gp-id='720'>の</span> is used here instead of repeating 'car'.)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 720,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154989",
+      "type": "study_question",
+      "attributes": {
+        "id": 154989,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"37\">その</span>ペン<span class=\"gp-popout\" data-gp-id=\"3\">は</span>誰（だれ）<span class='study-area-input'>____</span>？あなた<span class='study-area-input'>____</span>？",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/そのペンは誰の？あなたの？.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "That pen, <strong>whose (pen)</strong> is it? Is it <strong>your (pen)</strong>?",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 720,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7735",
+      "type": "study_question",
+      "attributes": {
+        "id": 7735,
+        "content": "木綿（もめん）<span class='gp-popout' data-gp-id='6'>の</span>スカーフ<span class='gp-popout' data-gp-id='3'>は</span><span class='vocab-popout' data-vocab-id='849'>私（わたし）</span><span class='study-area-input'>____</span>(スカーフ)<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>以前（いぜん）話題（わだい）</strong>に上（あ）がっていた<strong>もの</strong>だということを表（あらわ）すために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/720/male_audio/11-木綿のスカーフは私のです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/木綿のスカーフは私の(スカーフ)です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The cotton scarf is <strong>my (scarf)</strong>.",
+        "nuance_translation": "A <strong>particle</strong> used to <strong>refer back</strong> to (A) as being <strong>the one</strong> previously mentioned.",
+        "extra_info": "",
+        "reviewable_id": 720,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7736",
+      "type": "study_question",
+      "attributes": {
+        "id": 7736,
+        "content": "「<span class='gp-popout vocab-popout' data-gp-id='30' data-vocab-id='91'>この</span><span class='vocab-popout' data-vocab-id='685'>本（ほん）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout vocab-popout' data-gp-id='714' data-vocab-id='964'>誰（だれ）</span><span class='study-area-input'>____</span>(<span class='vocab-popout' data-vocab-id='685'>本（ほん）</span>)？」<br>「<span class='vocab-popout' data-vocab-id='360'>先週（せんしゅう）</span><span class='gp-popout' data-gp-id='32'>に</span><span class='gp-popout vocab-popout' data-gp-id='41' data-vocab-id='691'>来（き）た</span>お<span class='vocab-popout' data-vocab-id='510'>客（きゃく）</span><span class='vocab-popout' data-vocab-id='113'>さん</span><span class='study-area-input'>____</span>(<span class='vocab-popout' data-vocab-id='685'>本（ほん）</span>)。」",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>以前（いぜん）話題（わだい）</strong>に上（あ）がっていた<strong>もの</strong>だということを表（あらわ）すために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/720/male_audio/03-この本は誰の.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「この本は誰の(本)？」「先週に来たお客さんの(本)。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のだ": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          },
+          "のですか": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          },
+          "のです": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'<strong>Whose</strong> book is this <strong>(book)</strong>?'<br>'It's the customer<strong>'s</strong> (who came in last week) <strong>(book)</strong>.'",
+        "nuance_translation": "A <strong>particle</strong> used to <strong>refer back</strong> to (A) as being <strong>the one</strong> previously mentioned.",
+        "extra_info": "",
+        "reviewable_id": 720,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7733",
+      "type": "study_question",
+      "attributes": {
+        "id": 7733,
+        "content": "<span class='gp-popout vocab-popout' data-gp-id='37' data-vocab-id='148'>その</span><span class='vocab-popout' data-vocab-id='540'>帽子（ぼうし）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='vocab-popout' data-vocab-id='498'>娘（むすめ）</span><span class='study-area-input'>____</span>(<span class='vocab-popout' data-vocab-id='540'>帽子（ぼうし）</span>)<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>以前（いぜん）話題（わだい）</strong>に上（あ）がっていた<strong>もの</strong>だということを表（あらわ）すために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/720/male_audio/07-その帽子は娘のです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/その帽子は娘の(帽子)です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That hat is my daughter<strong>'s (hat)</strong>.",
+        "nuance_translation": "A <strong>particle</strong> used to <strong>refer back</strong> to (A) as being <strong>the one</strong> previously mentioned.",
+        "extra_info": "",
+        "reviewable_id": 720,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7734",
+      "type": "study_question",
+      "attributes": {
+        "id": 7734,
+        "content": "<span class='gp-popout vocab-popout' data-gp-id='47' data-vocab-id='9'>あの</span><span class='vocab-popout' data-vocab-id='198'>パソコン</span><span class='gp-popout' data-gp-id='3'>は</span>君（きみ）<span class='study-area-input'>____</span>(<span class='vocab-popout' data-vocab-id='198'>パソコン</span>)<span class='gp-popout' data-gp-id='9'>でしょう</span>？",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>以前（いぜん）話題（わだい）</strong>に上（あ）がっていた<strong>もの</strong>だということを表（あらわ）すために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/720/male_audio/02-あのパソコンは君のでしょう.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あのパソコンは君の(パソコン)でしょう？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That computer is <strong>your(s) (computer)</strong> right?",
+        "nuance_translation": "A <strong>particle</strong> used to <strong>refer back</strong> to (A) as being <strong>the one</strong> previously mentioned.",
+        "extra_info": "",
+        "reviewable_id": 720,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7737",
+      "type": "study_question",
+      "attributes": {
+        "id": 7737,
+        "content": "<span class='gp-popout vocab-popout' data-gp-id='30' data-vocab-id='91'>この</span>駐車場（ちゅうしゃじょう）<span class='gp-popout' data-gp-id='4'>も</span><span class='vocab-popout' data-vocab-id='972'>あなた</span><span class='gp-popout' data-gp-id='6'>の</span><span class='vocab-popout' data-vocab-id='324'>会社（かいしゃ）</span><span class='study-area-input'>____</span>(駐車場（ちゅうしゃじょう）)<span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>以前（いぜん）話題（わだい）</strong>に上（あ）がっていた<strong>もの</strong>だということを表（あらわ）すために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/720/male_audio/04-この駐車場もあなたの会社のですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/この駐車場もあなたの会社の(駐車場)ですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This parking lot is also your company<strong>'s (parking lot)</strong>?",
+        "nuance_translation": "A <strong>particle</strong> used to <strong>refer back</strong> to (A) as being <strong>the one</strong> previously mentioned.",
+        "extra_info": "",
+        "reviewable_id": 720,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7738",
+      "type": "study_question",
+      "attributes": {
+        "id": 7738,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span>僕（ぼく）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='49'>じゃない</span><span class='gp-popout' data-gp-id='2'>です</span>。田中（たなか）さん<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>以前（いぜん）話題（わだい）</strong>に上（あ）がっていた<strong>もの</strong>だということを表（あらわ）すために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/720/male_audio/05-これは僕のじゃないです田中さんのです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これは僕のじゃないです。田中さんのです。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This is not <strong>mine</strong>. It is Tanaka-san<strong>'s</strong>.",
+        "nuance_translation": "A <strong>particle</strong> used to <strong>refer back</strong> to (A) as being <strong>the one</strong> previously mentioned.",
+        "extra_info": "",
+        "reviewable_id": 720,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7739",
+      "type": "study_question",
+      "attributes": {
+        "id": 7739,
+        "content": "日本（にほん）<span class='study-area-input'>____</span>(寿司（すし）)は</span>美味（おい）し<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>以前（いぜん）話題（わだい）</strong>に上（あ）がっていた<strong>もの</strong>だどいうことを表（あらわ）すために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/720/male_audio/日本の(寿司)は美味しいですよ。.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/日本の(寿司)は美味しいですよ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Japan<strong>'s (sushi)</strong> is delicious.",
+        "nuance_translation": "A <strong>particle</strong> used to <strong>refer back</strong> to (A) as being <strong>the one</strong> previously mentioned.",
+        "extra_info": "",
+        "reviewable_id": 720,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7740",
+      "type": "study_question",
+      "attributes": {
+        "id": 7740,
+        "content": "<span class='vocab-popout' data-vocab-id='309'>今日（きょう）</span><span class='gp-popout' data-gp-id='357'>きた</span><span class='vocab-popout' data-vocab-id='600'>手紙（てがみ）</span><span class='gp-popout' data-gp-id='3'>は</span>タケル<span class='study-area-input'>____</span></span>(<span class='vocab-popout' data-vocab-id='600'>手紙（てがみ）</span>)。",
+        "answer": "の",
+        "alternate_grammar": [
+          "の"
+        ],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [
+          "の"
+        ],
+        "nuance": "(A)が<strong>以前（いぜん）話題（わだい）</strong>に上（あ）がっていた<strong>もの</strong>だということを表（あらわ）すために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/720/male_audio/08-今日来た手紙は猛の.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/今日きた手紙はタケルの(手紙)。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のだ": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          },
+          "のです": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The letter that came today is Takeru<strong>'s (letter)</strong>.",
+        "nuance_translation": "A <strong>particle</strong> used to <strong>refer back</strong> to (A) as being <strong>the one</strong> previously mentioned.",
+        "extra_info": "",
+        "reviewable_id": 720,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7741",
+      "type": "study_question",
+      "attributes": {
+        "id": 7741,
+        "content": "昨日（きのう）<span class='gp-popout' data-gp-id='357'>行（い）った</span>家（いえ）<span class='gp-popout' data-gp-id='3'>は</span>ヨシ<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>以前（いぜん）話題（わだい）</strong>に上（あ）がっていた<strong>もの</strong>だということを表（あらわ）すために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/720/male_audio/10-昨日言ったいえはよしのだ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/昨日行った家はヨシのだ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The house that I went to yesterday was Yoshi<strong>'s (house)</strong>.",
+        "nuance_translation": "A <strong>particle</strong> used to <strong>refer back</strong> to (A) as being <strong>the one</strong> previously mentioned.",
+        "extra_info": "",
+        "reviewable_id": 720,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7743",
+      "type": "study_question",
+      "attributes": {
+        "id": 7743,
+        "content": "「<span class='vocab-popout' data-vocab-id='909'>自転車（じてんしゃ）</span><span class='gp-popout' data-gp-id='36'>で</span><span class='gp-popout vocab-popout' data-gp-id='41' data-vocab-id='935'>行（い）った</span>？<span class='gp-popout vocab-popout' data-gp-id='714' data-vocab-id='964'>誰（だれ）</span><span class='study-area-input'>____</span>(<span class='vocab-popout' data-vocab-id='909'>自転車（じてんしゃ）</span>)<span class='gp-popout' data-gp-id='36'>で</span>？」<br>「<span class='vocab-popout' data-vocab-id='416'>友達（ともだち）</span><span class='study-area-input'>____</span>(<span class='vocab-popout' data-vocab-id='909'>自転車（じてんしゃ）</span>)<span class='gp-popout' data-gp-id='36'>で</span><span class='gp-popout vocab-popout' data-gp-id='41' data-vocab-id='935'>行（い）った</span><span class='gp-popout' data-gp-id='78'>よ</span>。」",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>以前（いぜん）話題（わだい）</strong>に上（あ）がっていた<strong>もの</strong>だということを表（あらわ）すために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/720/male_audio/01-自転車で行った.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「自転車で行った？誰の(自転車)で？」「友達の(自転車)で行ったよ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'You went by bicycle? <strong>Whose (bicycle)</strong> did you go on?'<br>'I went on my friend<strong>'s (bicycle)</strong>.'",
+        "nuance_translation": "A <strong>particle</strong> used to <strong>refer back</strong> to (A) as being <strong>the one</strong> previously mentioned.",
+        "extra_info": "",
+        "reviewable_id": 720,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7744",
+      "type": "study_question",
+      "attributes": {
+        "id": 7744,
+        "content": "「<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='714'>誰（だれ）</span><span class='study-area-input'>____</span>か教（おし）え<span class='gp-popout' data-gp-id='60'>てください</span>。」<br>「<span class='gp-popout' data-gp-id='11'>それ</span><span class='gp-popout' data-gp-id='3'>は</span>私（わたし）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。」 ",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>以前（いぜん）話題（わだい）</strong>に上（あ）がっていた<strong>もの</strong>だということを表（あらわ）すために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/720/male_audio/06-これは誰のか教えてください.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「これは誰のか教えてください。」「それは私のです。」 .mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'Please tell me <strong>whose</strong> this is.'<br>'That is <strong>mine</strong>.'",
+        "nuance_translation": "A <strong>particle</strong> used to <strong>refer back</strong> to (A) as being <strong>the one</strong> previously mentioned.",
+        "extra_info": "",
+        "reviewable_id": 720,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7742",
+      "type": "study_question",
+      "attributes": {
+        "id": 7742,
+        "content": "<span class='gp-popout vocab-popout' data-gp-id='29' data-vocab-id='566'>あそこ</span><span class='gp-popout' data-gp-id='32'>に</span><span class='gp-popout vocab-popout' data-gp-id='13' data-vocab-id='676'>ある</span><span class='vocab-popout' data-vocab-id='680'>服（ふく）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='vocab-popout' data-vocab-id='849'>私（わたし）</span><span class='study-area-input'>____</span>(<span class='vocab-popout' data-vocab-id='680'>服（ふく）</span>)</span><span class='gp-popout' data-gp-id='1'>だ</span><span class='gp-popout' data-gp-id='361'>けど</span>、<span class='gp-popout vocab-popout' data-gp-id='11' data-vocab-id='149'>それ</span><span class='gp-popout' data-gp-id='3'>は</span><span class='vocab-popout' data-vocab-id='972'>あなた</span><span class='study-area-input'>____</span>(<span class='vocab-popout' data-vocab-id='680'>服（ふく）</span>)。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>以前（いぜん）話題（わだい）</strong>に上（あ）がっていた<strong>もの</strong>だということを表（あらわ）すために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/720/male_audio/01-あそこにあるのは私のだけど.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あそこにある服は私の(服)だけど、それはあなたの(服)。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のだ": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          },
+          "のです": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The clothes over there are <strong>my (clothes)</strong>, but those are <strong>your (clothes)</strong>.",
+        "nuance_translation": "A <strong>particle</strong> used to <strong>refer back</strong> to (A) as being <strong>the one</strong> previously mentioned.",
+        "extra_info": "",
+        "reviewable_id": 720,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "74",
+      "type": "writeup",
+      "attributes": {
+        "id": 74,
+        "body_ja": "",
+        "body": "<p>A common pattern in Japanese is referring back to a noun that has already been mentioned, without actually repeating it.  This is achieved through the use of the particle <span data-gp-id='720'>の</span>, in a similar way to its standard possessive use. The noun that would usually follow <span data-gp-id='720'>の</span> is dropped, as it has either been said earlier in the sentence, or is understood clearly from context.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154988'>\r\n<li data-study-question='154989'></ul>\r\n\r\n<p>In these examples, it would also be grammatically correct to use the same noun following <span data-gp-id='720'>の</span>, but as can be seen in the English translation, it results in unnecessary repetition. This is called word stacking/redundant words (重（かさ）ね言葉（ことば）) in Japanese, and is considered a poor writing/speech habit. Despite this, it is important to know that this <span data-gp-id='720'>の</span> is exactly the same as the possessive <span data-gp-id='6'>の</span> (with the following word simply being left out).<section class='caution'>In the following sentence, we can see another common use of の that translates similarly to 'one' in English, when referring to non-specific things.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183785'></ul>\r\n\r\n<p>From this, it is clear that the repeated noun is not needed. Japanese is a language that avoids repeating words in many situations. This example shows noun replacement, rather than noun omission, another common use of の which we will cover in another lesson.</p></section>"
+      }
+    },
+    {
+      "id": "926",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 926,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 233",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "936",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 936,
+        "source": "みんなの日本語 I",
+        "location": "Page 21 [CH 2]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1259",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1259,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 70",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "3269",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 3269,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 315",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1568",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1568,
+        "site": "Maggie Sensei",
+        "description": "の: one (indefinite pronoun)",
+        "link": "https://maggiesensei.com/2013/07/17/how-to-use-%E3%81%AEno-one-indefinite-pronoun/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1569",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1569,
+        "site": "St. Olaf College",
+        "description": "no as a pronoun (Genki I Chapter 10)",
+        "link": "https://wp.stolaf.edu/japanese/grammar-index/genki-i-ii-grammar-index/no-as-a-pronoun-genki-i-chapter-10/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2110",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2110,
+        "site": "Tae Kim",
+        "description": "The 「の」 particle",
+        "link": "https://guidetojapanese.org/learn/grammar/nounparticles",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1369",
+      "type": "related_content",
+      "attributes": {
+        "id": 1369,
+        "relationship_type": "related",
+        "body": "The particle の connects nouns to indicate possession or description. For example, 私の本 means 'my book.' When used with the pronoun の (meaning 'one'), the second の is dropped. For instance, to say 'It's mine,' you would say 私のです, not 私ののです.",
+        "first_relatable": {
+          "id": 720,
+          "slug": "の-noun-ommission",
+          "title": "の",
+          "meaning": "Possessive use (Noun omission)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 16,
+          "slug": "のは",
+          "title": "の",
+          "meaning": "Verb nominalizer, The one who..., That which...",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1368",
+      "type": "related_content",
+      "attributes": {
+        "id": 1368,
+        "relationship_type": "synonym",
+        "body": "The particle の connects two nouns, usually to indicate possession or describe a noun. For example, 私の本 means 'my book.' When used with the pronoun の (meaning 'one'), the second の is dropped. For example, to say 'It's mine,' you would say 私のです, not 私ののです.",
+        "first_relatable": {
+          "id": 720,
+          "slug": "の-noun-ommission",
+          "title": "の",
+          "meaning": "Possessive use (Noun omission)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 6,
+          "slug": "の",
+          "title": "の",
+          "meaning": "Indicates possession",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,612 @@
+{
+  "data": {
+    "id": "943",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 943,
+      "level": "JLPT1",
+      "lesson_id": 50,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "それまでだ",
+      "nuance": "何（なに）かが(A)であれば、それは無駄（むだ）であるということを意味（いみ）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)<strong>まで</strong>行（い）ったら、それが全（すべ）てである。",
+      "grammar_order": 909,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 944,
+        "title": "といおうか",
+        "slug": "といおうか"
+      },
+      "previous_grammar_point": {
+        "id": 942,
+        "title": "にひきかえ",
+        "slug": "にひきかえ"
+      },
+      "lesson_count": "6/22",
+      "title": "それまでだ",
+      "furigana": "それまでだ",
+      "meaning": "If… then it is all in vain, It's done, It is useless, No point, It is a waste, That's it, It is all gone, ",
+      "nuance_translation": "A <strong>hypothetical</strong> phrase, implying that something is <strong>in vain</strong> if it is (A). If it goes <strong>until</strong> (A), then that is all there is.",
+      "rare_kanji_warning": "迄",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Verb [たら] + <strong>それまでだ</strong><br>Verb [ば] + <strong>それまでだ</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/38342",
+      "metadata": "それまでだ, それ迄だ, soremadeda, expression, hypothetical, unfortunate"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "9992",
+            "type": "study_question"
+          },
+          {
+            "id": "9995",
+            "type": "study_question"
+          },
+          {
+            "id": "9996",
+            "type": "study_question"
+          },
+          {
+            "id": "183143",
+            "type": "study_question"
+          },
+          {
+            "id": "183144",
+            "type": "study_question"
+          },
+          {
+            "id": "183145",
+            "type": "study_question"
+          },
+          {
+            "id": "183146",
+            "type": "study_question"
+          },
+          {
+            "id": "9997",
+            "type": "study_question"
+          },
+          {
+            "id": "9993",
+            "type": "study_question"
+          },
+          {
+            "id": "9994",
+            "type": "study_question"
+          },
+          {
+            "id": "184618",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "980",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "2022",
+            "type": "offline_resource"
+          },
+          {
+            "id": "2023",
+            "type": "offline_resource"
+          },
+          {
+            "id": "2024",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1583",
+            "type": "related_content"
+          },
+          {
+            "id": "1584",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2623",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2625",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2626",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "9992",
+      "type": "study_question",
+      "attributes": {
+        "id": 9992,
+        "content": "<span class='name-highlight'>Ａ（エー）</span>：「毎日（まいにち）毎日（まいにち）勉強（べんきょう）していてとても疲（つか）れてるんだ。大学（だいがく）を中退（ちゅうたい）したい…。」<br><span class='name-highlight'>Ｂ（ビー）</span>：「でも、もう３年生（さんねんせい）だよ！あきらめてしまったら<span class='study-area-input'>____</span>よ。」",
+        "answer": "それまでだ",
+        "alternate_grammar": [
+          "それまでだ",
+          "それまでです"
+        ],
+        "kanji_answer": "それまでだ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)であれば、それは無駄（むだ）であるということを意味（いみ）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)<strong>まで</strong>行（い）ったら、それが全（すべ）てである。",
+        "tense": "Hypothetical, Undesired result",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>A</span>: 'I'm studying every single day, I am so tired. I want to drop out of college...'<br><span class='name-highlight'>B</span>: 'But you're already in your third year! <strong>If you</strong> give up <strong>then it's all in vain</strong>.'",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, implying that something is <strong>in vain</strong> if it is (A). If it goes <strong>until</strong> (A), then that is all there is.",
+        "extra_info": "",
+        "reviewable_id": 943,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9995",
+      "type": "study_question",
+      "attributes": {
+        "id": 9995,
+        "content": "<span class='name-highlight'>ダイエットしている友達（ともだち）へ</span>：「頑張（がんば）って運動（うんどう）しても毎日（まいにち）食（た）べ過（す）ぎたら<span class='study-area-input'>____</span>よ。」",
+        "answer": "それまでだ",
+        "alternate_grammar": [],
+        "kanji_answer": "それまでだ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)であれば、それは無駄（むだ）であるということを意味（いみ）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)<strong>まで</strong>行（い）ったら、それが全（すべ）てである。",
+        "tense": "Hypothetical, Undesired result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ダイエットしている友達へ：「頑張って運動しても毎日食べ過ぎたらそれまでだよ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>To a friend who is dieting</span>: 'Even if you do your best exercising, <strong>if</strong> you eat too much every day <strong>then it's all in vain</strong>.'",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, implying that something is <strong>in vain</strong> if it is (A). If it goes <strong>until</strong> (A), then that is all there is.",
+        "extra_info": "",
+        "reviewable_id": 943,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9996",
+      "type": "study_question",
+      "attributes": {
+        "id": 9996,
+        "content": "<span class='name-highlight'>スパイ映画（えいが）</span>：「敵（てき）に発見（はっけん）されたら<span class='study-area-input'>____</span>。」",
+        "answer": "それまでだ",
+        "alternate_grammar": [
+          "それまでだ",
+          "それまでです"
+        ],
+        "kanji_answer": "それまでだ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)であれば、それは無駄（むだ）であるということを意味（いみ）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)<strong>まで</strong>行（い）ったら、それが全（すべ）てである。",
+        "tense": "Hypothetical, Undesired result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/スパイ映画：「敵に発見されたらそれまでだ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Spy movie</span>: '<strong>If</strong> we are discovered <strong>then it's all in vain</strong>.'",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, implying that something is <strong>in vain</strong> if it is (A). If it goes <strong>until</strong> (A), then that is all there is.",
+        "extra_info": "",
+        "reviewable_id": 943,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183143",
+      "type": "study_question",
+      "attributes": {
+        "id": 183143,
+        "content": "\r\nこのことが外部（がいぶ）に漏（も）れれ<span class='study-area-input'>____</span>。",
+        "answer": "ばそれまでだ",
+        "alternate_grammar": [],
+        "kanji_answer": "ばそれまでだ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/このことが外部に漏れればそれまでだ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>If</strong> this information gets leaked, <strong>then it’s all in vain</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 943,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183144",
+      "type": "study_question",
+      "attributes": {
+        "id": 183144,
+        "content": "\r\n\r\n\r\nやっとここまでたどり着（つ）いた。ここでミスを犯（おか）せ<span class='study-area-input'>____</span>。",
+        "answer": "ばそれまでだ",
+        "alternate_grammar": [],
+        "kanji_answer": "ばそれまでだ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/やっとここまでたどり着いた。ここでミスを犯せばそれまでだ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nWe finally got to this point. <strong>If</strong> we make a mistake <strong>then it’s all in vain</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 943,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183145",
+      "type": "study_question",
+      "attributes": {
+        "id": 183145,
+        "content": "もう少（すこ）し我慢（がまん）をしろ！ここで見（み）つかっ<span class='study-area-input'>____</span>。",
+        "answer": "たらそれまでだ",
+        "alternate_grammar": [],
+        "kanji_answer": "たらそれまでだ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/もう少し我慢をしろ!ここで見つかったらそれまでだ。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nHave a little more patience! <strong>If</strong> they find you here, <strong>that's it</strong>.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 943,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183146",
+      "type": "study_question",
+      "attributes": {
+        "id": 183146,
+        "content": "\r\n\r\n\r\n彼（かれ）らに訴（うった）えられ<span class='study-area-input'>____</span>。",
+        "answer": "たらそれまでだ",
+        "alternate_grammar": [],
+        "kanji_answer": "たらそれまでだ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/彼らに訴えられたらそれまでだ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>If</strong> they sue us, <strong>that's it</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 943,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9997",
+      "type": "study_question",
+      "attributes": {
+        "id": 9997,
+        "content": "彼女（かのじょ）が日本語（にほんご）能力（のうりょく）試験（しけん）に一回（いっかい）で合格（ごうかく）したのは彼女（かのじょ）が才能（さいのう）に溢（あふ）れているからと言（い）ってしまえば<span class='study-area-input'>____</span>が、実（じつ）は彼女（かのじょ）も努力（どりょく）をしたんだよ。",
+        "answer": "それまでだ",
+        "alternate_grammar": [],
+        "kanji_answer": "それまでだ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)であれば、それは無駄（むだ）であるということを意味（いみ）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)<strong>まで</strong>行（い）ったら、それが全（すべ）てである。",
+        "tense": "Hypothetical, Undesired result",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/彼女が日本語能力試験に一回で合格したのは彼女が才能に溢れているからと言ってしまえばそれまでだが、実は彼女も努力をしたんだよ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> you say that she passed the JLPT on the first try because she is overflowing with talent then <strong>that is the end of the discussion</strong>, but the truth is that she also put forth an effort.",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, implying that something is <strong>in vain</strong> if it is (A). If it goes <strong>until</strong> (A), then that is all there is.",
+        "extra_info": "",
+        "reviewable_id": 943,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9993",
+      "type": "study_question",
+      "attributes": {
+        "id": 9993,
+        "content": "どんなに大（おお）きな家（いえ）でも、誰（だれ）も住（す）まなければ<span class='study-area-input'>____</span>。",
+        "answer": "それまでだ",
+        "alternate_grammar": [],
+        "kanji_answer": "それまでだ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)であれば、それは無駄（むだ）であるということを意味（いみ）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)<strong>まで</strong>行（い）ったら、それが全（すべ）てである。",
+        "tense": "Hypothetical, Undesired result",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/どんなに大きな家でも、誰も住まなければそれまでだ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "No matter how big the house is, <strong>if</strong> no one lives there <strong>then it's all in vain</strong>.",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, implying that something is <strong>in vain</strong> if it is (A). If it goes <strong>until</strong> (A), then that is all there is.",
+        "extra_info": "",
+        "reviewable_id": 943,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9994",
+      "type": "study_question",
+      "attributes": {
+        "id": 9994,
+        "content": "この内定（ないてい）を受諾（じゅだく）することに興味（きょうみ）がないだけと言（い）えば<span class='study-area-input'>____</span>が、もういちどよく考（かんが）えて決（き）めたほうがいいだろうな。こんなチャンスは二度（にど）とないよ。",
+        "answer": "それまでだ",
+        "alternate_grammar": [
+          "それまでだ",
+          "それまでです"
+        ],
+        "kanji_answer": "それまでだ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)であれば、それは無駄（むだ）であるということを意味（いみ）する<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)<strong>まで</strong>行（い）ったら、それが全（すべ）てである。",
+        "tense": "Hypothetical, Undesired result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/この内定を受諾することに興味がないだけと言えばそれまでだが、もういちどよく考えて決めたほうがいいだろうな。こんなチャンスは二度とないよ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> you say that you are not interested in accepting this offer <strong>then there is no point (in discussing further)</strong>, but I think you'd better think it over once again and then decide. You won't get a second chance like this.",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, implying that something is <strong>in vain</strong> if it is (A). If it goes <strong>until</strong> (A), then that is all there is.",
+        "extra_info": "",
+        "reviewable_id": 943,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184618",
+      "type": "study_question",
+      "attributes": {
+        "id": 184618,
+        "content": "不可能（ふかのう）だ<span data-gp-id='943'>と言（い）われればそれまでだ</span>。せめて一回（いっかい）でもいいから試（ため）してみよう。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/不可能だと言われればそれまでだ。せめて一回でもいいから試してみよう。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 6,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> you say it's impossible, <strong>that's the end</strong> of the story. Let’s at least give it a try, even if it's just once.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 943,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "980",
+      "type": "writeup",
+      "attributes": {
+        "id": 980,
+        "body_ja": "<p>「<span data-gp-id='943'>ばそれまでだ</span>」は「もし (A) になったら、それ以上（いじょう）はどうしようもない」と言（い）いたいときに使（つか）われる仮定的（かていてき）な表現（ひょうげん）です。この表現（ひょうげん）は通常（つうじょう）、それまでに行（おこな）われたすべてが、残念（ざんねん）ながら無駄（むだ）になってしまうことを表（あらわ）し、「もし (A) なら、すべて無駄（むだ）になる」や「もし (A) なら、それで終（お）わりだ」といった意味（いみ）でも使（つか）われます。</p>\r\n\r\n<p>この文型（ぶんけい）では、動詞（どうし）に接続助詞（せつぞくじょし）「ば」を組（く）み合（あ）わせるのが基本（きほん）ですが、接続助詞（せつぞくじょし）「たら」が使（つか）われることもあります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183143'>\r\n<li data-study-question='183144'>\r\n<li data-study-question='183145'>\r\n<li data-study-question='183146'>\r\n</ul>\r\n\r\n<p>また、文（ぶん）の前半（ぜんはん）に「ても」や「でも」を含（ふく）むことが多（おお）く、その場合（ばあい）、「<span data-gp-id='943'>ばそれまでだ</span>」は文（ぶん）の後半（こうはん）に登場（とうじょう）します。このような文（ぶん）は、「たとえ (A) であっても、(B) であれば意味（いみ）がない」という意味（いみ）を表（あらわ）します。</p>\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>「<span data-gp-id='943'>と言（い）われればそれまでだ</span>」は、「(A) は確（たし）かにそのとおりだが、一方（いっぽう）で (B)」または文字通（もじどお）り「もし (A) と言（い）われたらそれでおしまいだが、(B)」を意味（いみ）する定型表現（ていけいひょうげん）です。これは、相手（あいて）の意見（いけん）を認（みと）めつつ、自分（じぶん）の意見（いけん）を丁寧（ていねい）に表現（ひょうげん）するときによく使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184618'></ul></section>",
+        "body": "<p><span data-gp-id='943'>ばそれまでだ</span> is a hypothetical expression used when one wishes to indicate that ‘if (A) is reached, that’s as far as it will go’. This usually indicates that everything up to that point will unfortunately go to waste. Standard translations include ‘if (A), then it’s all been in vain’, ‘if (A), then all is a waste’, or ‘if (A), then there’s no point.</p>\r\n\r\n<p>Although verbs combining with the <span data-term='接続助詞・せつぞくじょし'>conjunction particle</span> ば is the <span data-term='普通形・ふつうけい'>standard form</span> of this grammar structure. The <span data-term='接続助詞・せつぞくじょし'>conjunction particle</span> たら may also occasionally be used.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183143'>\r\n<li data-study-question='183144'>\r\n<li data-study-question='183145'>\r\n<li data-study-question='183146'>\r\n</ul>\r\n\r\n<p>Frequently this grammar structure will be seen in sentences that include ても or でも in the first half, with <span data-gp-id='943'>ばそれまでだ</span> coming closer to the end. This indicates that ‘even if (A), if also (B), then there’s no point’.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p><span data-gp-id='943'>と言（い）われればそれまでだ</span> is a set expression that means ‘while it is true that (A), (B)’, or ‘although certainly (A), (B)’. It is often used for politely expressing one’s personal opinion in relation to something. This phrase literally means ‘if It were to be said that it was (A), then that’s all there is to it, but (B)’.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184618'></ul></section>"
+      }
+    },
+    {
+      "id": "2022",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2022,
+        "source": "Try N1",
+        "location": "Page 110",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2023",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2023,
+        "source": "Shin Kanzen Master N1 Bunpou",
+        "location": "Page 81",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2024",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2024,
+        "source": "Sou Matome Bunpou N1",
+        "location": "Page 46",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2623",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2623,
+        "site": "LearnJapaneseAtoZ",
+        "description": "ばそればでだ",
+        "link": "https://learnjapaneseaz.com/ba-sore-made-da.html",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2625",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2625,
+        "site": "JapaneseTest4You",
+        "description": "ばそればでだ",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n1-grammar-%E3%81%B0%E3%81%9D%E3%82%8C%E3%81%BE%E3%81%A7%E3%81%A0-ba-sore-made-da/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2626",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2626,
+        "site": "JLPTSensei",
+        "description": "ばそればでだ Meaning",
+        "link": "https://jlptsensei.com/learn-japanese-grammar/%E3%81%B0%E3%81%9D%E3%82%8C%E3%81%BE%E3%81%A7%E3%81%A0-%E3%81%9F%E3%82%89%E3%81%9D%E3%82%8C%E3%81%BE%E3%81%A7%E3%81%A0-ba-sore-made-da-meaning/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1583",
+      "type": "related_content",
+      "attributes": {
+        "id": 1583,
+        "relationship_type": "related",
+        "body": "Both それまでだ and たまでだ use までだ to mark a limit, but the type of limit is different. それまでだ expresses a harsh evaluation meaning “that’s all there is” or “that’s the end,” often used to judge that nothing more can be done if a condition is lost, as in 信頼を失ったらそれまでだ (‘If you lose trust, that’s the end.’). By contrast, たまでだ uses the past tense to downplay an action and means “I only did (A),” emphasizing that the action was small or not worth blaming, as in 俺はただ自分の意見を言ったまでだ (‘I only expressed my opinion.’) or 困っていたから助けたまでだ (‘I just helped because she looked troubled.’).",
+        "first_relatable": {
+          "id": 943,
+          "slug": "それまでだ",
+          "title": "それまでだ",
+          "meaning": "If… then it is all in vain, It's done, It is useless, No point, It is a waste, That's it, It is all gone, ",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 789,
+          "slug": "たまでだ",
+          "title": "～たまでだ",
+          "meaning": "Just, Merely, Simply, Only",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1584",
+      "type": "related_content",
+      "attributes": {
+        "id": 1584,
+        "relationship_type": "related",
+        "body": "Both involve a limit, but the type of limit is different. それまでだ is an evaluative expression meaning “that’s the end,” used to judge that nothing more can be done if a crucial condition is lost, as in 信頼を失ったらそれまでだ (‘If you lose trust, that’s the end.’). By contrast, Vるまでだ (and までのことだ) expresses resignation, meaning “one can only but (B),” often used with なら to show that (B) is the only remaining option in a negative situation, as in 誰にも教えてもらえないなら、ネットで調べてみるまでだ (‘If no one will teach me, I’ll just have to look it up online.’).",
+        "first_relatable": {
+          "id": 943,
+          "slug": "それまでだ",
+          "title": "それまでだ",
+          "meaning": "If… then it is all in vain, It's done, It is useless, No point, It is a waste, That's it, It is all gone, ",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 731,
+          "slug": "～るまでだ",
+          "title": "～るまでだ",
+          "meaning": "Just, Merely, Simply, Only",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

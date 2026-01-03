@@ -1,0 +1,599 @@
+================================================================================
+GiNZA vs Ichiran Tokenization Comparison
+================================================================================
+
+Loaded 10 N5 and 10 N3 examples
+
+
+================================================================================
+[1] N5 - n5.a-soreja-b
+================================================================================
+JP: 会議は以上です。では、解散します。
+EN: That concludes the meeting. Then, we will adjourn.
+
+--- GiNZA (12 tokens) ---
+会議 | は | 以上 | です | 。 | で | は | 、 | 解散 | し | ます | 。
+
+--- GiNZA Detailed ---
+  会議         lemma=会議         pos=NOUN  tag=名詞-普通名詞-サ変可能    dep=nsubj      head=以上
+  は          lemma=は          pos=ADP   tag=助詞-係助詞          dep=case       head=会議
+  以上         lemma=以上         pos=NOUN  tag=名詞-普通名詞-副詞可能    dep=ROOT       head=以上
+  です         lemma=です         pos=AUX   tag=助動詞             dep=cop        head=以上
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=以上
+  で          lemma=で          pos=CCONJ tag=助詞-格助詞          dep=cc         head=解散
+  は          lemma=は          pos=ADP   tag=助詞-係助詞          dep=fixed      head=で
+  、          lemma=、          pos=PUNCT tag=補助記号-読点         dep=punct      head=で
+  解散         lemma=解散         pos=VERB  tag=名詞-普通名詞-サ変可能    dep=ROOT       head=解散
+  し          lemma=する         pos=AUX   tag=動詞-非自立可能        dep=aux        head=解散
+  ます         lemma=ます         pos=AUX   tag=助動詞             dep=aux        head=解散
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=解散
+
+--- Ichiran (9 tokens) ---
+会議 | は | 以上 | です | 。 |  | 、 | 解散します | 。
+
+--- Ichiran Detailed ---
+  会議              kana=かいぎ             romaji=kaigi                gloss=meeting; conference; session; assembly; council; c
+  は               kana=‌は              romaji=wa                   gloss=indicates sentence topic
+  以上              kana=いじょう            romaji=ijō                  gloss=not less than ...; ... and over; ... and above; ..
+  です              kana=です              romaji=desu                 gloss=be; is
+  。               kana=                romaji=                     gloss=
+                  kana=                romaji=de·wa                gloss=
+  、               kana=                romaji=                     gloss=
+  解散します           kana=かいさん します        romaji=kaisan shimasu       compound=['解散', 'します'] gloss=
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[2] N5 - n5.tokidoki
+================================================================================
+JP: ときどき、早起きします。
+EN: Sometimes, I get up early.
+
+--- GiNZA (6 tokens) ---
+ときどき | 、 | 早起き | し | ます | 。
+
+--- GiNZA Detailed ---
+  ときどき       lemma=ときどき       pos=ADV   tag=名詞-普通名詞-副詞可能    dep=advmod     head=早起き
+  、          lemma=、          pos=PUNCT tag=補助記号-読点         dep=punct      head=ときどき
+  早起き        lemma=早起き        pos=VERB  tag=名詞-普通名詞-サ変可能    dep=ROOT       head=早起き
+  し          lemma=する         pos=AUX   tag=動詞-非自立可能        dep=aux        head=早起き
+  ます         lemma=ます         pos=AUX   tag=助動詞             dep=aux        head=早起き
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=早起き
+
+--- Ichiran (4 tokens) ---
+ときどき | 、 | 早起きします | 。
+
+--- Ichiran Detailed ---
+  ときどき            kana=ときどき            romaji=tokidoki             gloss=sometimes; occasionally; at times; from time to ti
+  、               kana=                romaji=                     gloss=
+  早起きします          kana=はやおき します        romaji=hayaoki shimasu      compound=['早起き', 'します'] gloss=
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[3] N5 - n5.dou-shimasu-ka
+================================================================================
+JP: この後はどうしますか。
+EN: What shall we do after this?
+
+--- GiNZA (8 tokens) ---
+この | 後 | は | どう | し | ます | か | 。
+
+--- GiNZA Detailed ---
+  この         lemma=この         pos=DET   tag=連体詞             dep=det        head=後
+  後          lemma=後          pos=NOUN  tag=名詞-普通名詞-副詞可能    dep=obl        head=し
+  は          lemma=は          pos=ADP   tag=助詞-係助詞          dep=case       head=後
+  どう         lemma=どう         pos=ADV   tag=副詞              dep=advmod     head=し
+  し          lemma=する         pos=VERB  tag=動詞-非自立可能        dep=ROOT       head=し
+  ます         lemma=ます         pos=AUX   tag=助動詞             dep=aux        head=し
+  か          lemma=か          pos=PART  tag=助詞-終助詞          dep=mark       head=し
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=し
+
+--- Ichiran (4 tokens) ---
+この後 | は | どうしますか | 。
+
+--- Ichiran Detailed ---
+  この後             kana=このあと            romaji=konoato              gloss=after this; henceforth; henceforward; from now on
+  は               kana=‌は              romaji=wa                   gloss=indicates sentence topic
+  どうしますか          kana=どうしますか          romaji=dōshimasuka          gloss=what would (you) do?; what to do about it
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[4] N5 - n5.sakki
+================================================================================
+JP: さっき駅で友だちに会った。
+EN: I ran into a friend at the station a little while ago.
+
+--- GiNZA (8 tokens) ---
+さっき | 駅 | で | 友だち | に | 会っ | た | 。
+
+--- GiNZA Detailed ---
+  さっき        lemma=さっき        pos=ADV   tag=名詞-普通名詞-副詞可能    dep=advmod     head=会っ
+  駅          lemma=駅          pos=NOUN  tag=名詞-普通名詞-一般      dep=obl        head=会っ
+  で          lemma=で          pos=ADP   tag=助詞-格助詞          dep=case       head=駅
+  友だち        lemma=友だち        pos=NOUN  tag=名詞-普通名詞-一般      dep=obl        head=会っ
+  に          lemma=に          pos=ADP   tag=助詞-格助詞          dep=case       head=友だち
+  会っ         lemma=会う         pos=VERB  tag=動詞-一般           dep=ROOT       head=会っ
+  た          lemma=た          pos=AUX   tag=助動詞             dep=aux        head=会っ
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=会っ
+
+--- Ichiran (7 tokens) ---
+さっき | 駅 | で | 友だち | に | 会った | 。
+
+--- Ichiran Detailed ---
+  さっき             kana=さっき             romaji=sakki                gloss=a short while ago; a moment ago; just now; some ti
+  駅               kana=えき              romaji=eki                  gloss=railway station; train station
+  で               kana=で               romaji=de                   gloss=at; in
+  友だち             kana=ともだち            romaji=tomodachi            gloss=friend; companion
+  に               kana=に               romaji=ni                   gloss=at (place, time); in; on; during
+  会った             kana=あった             romaji=atta                 gloss=
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[5] N5 - n5.a-shikashi-b
+================================================================================
+JP: 今日は雨だ。 しかし、出発する。
+EN: It’s rainy today. However, we’re going to depart.
+
+--- GiNZA (10 tokens) ---
+今日 | は | 雨 | だ | 。 | しかし | 、 | 出発 | する | 。
+
+--- GiNZA Detailed ---
+  今日         lemma=今日         pos=NOUN  tag=名詞-普通名詞-副詞可能    dep=obl        head=雨
+  は          lemma=は          pos=ADP   tag=助詞-係助詞          dep=case       head=今日
+  雨          lemma=雨          pos=NOUN  tag=名詞-普通名詞-一般      dep=ROOT       head=雨
+  だ          lemma=だ          pos=AUX   tag=助動詞             dep=cop        head=雨
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=雨
+  しかし        lemma=しかし        pos=CCONJ tag=接続詞             dep=cc         head=出発
+  、          lemma=、          pos=PUNCT tag=補助記号-読点         dep=punct      head=しかし
+  出発         lemma=出発         pos=VERB  tag=名詞-普通名詞-サ変可能    dep=ROOT       head=出発
+  する         lemma=する         pos=AUX   tag=動詞-非自立可能        dep=aux        head=出発
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=出発
+
+--- Ichiran (9 tokens) ---
+今日 | は | 雨 | だ | 。  | しかし | 、 | 出発する | 。
+
+--- Ichiran Detailed ---
+  今日              kana=きょう             romaji=kyō                  gloss=today; this day
+  は               kana=‌は              romaji=wa                   gloss=indicates sentence topic
+  雨               kana=あめ              romaji=ame                  gloss=rain
+  だ               kana=だ               romaji=da                   gloss=be; is
+  。               kana=                romaji=                     gloss=
+  しかし             kana=しかし             romaji=shikashi             gloss=however; but
+  、               kana=                romaji=                     gloss=
+  出発する            kana=しゅっぱつ する        romaji=shuppatsu suru       compound=['出発', 'する'] gloss=
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[6] N5 - n5.noun-ka-noun-ka
+================================================================================
+JP: 会場が体育館か講堂かがまだ分かりません。
+EN: I still don’t know whether the venue is the gym or the auditorium.
+
+--- GiNZA (12 tokens) ---
+会場 | が | 体育館 | か | 講堂 | か | が | まだ | 分かり | ませ | ん | 。
+
+--- GiNZA Detailed ---
+  会場         lemma=会場         pos=NOUN  tag=名詞-普通名詞-一般      dep=nsubj      head=講堂
+  が          lemma=が          pos=ADP   tag=助詞-格助詞          dep=case       head=会場
+  体育館        lemma=体育館        pos=NOUN  tag=名詞-普通名詞-一般      dep=nmod       head=講堂
+  か          lemma=か          pos=ADP   tag=助詞-副助詞          dep=case       head=体育館
+  講堂         lemma=講堂         pos=NOUN  tag=名詞-普通名詞-一般      dep=obl        head=分かり
+  か          lemma=か          pos=ADP   tag=助詞-副助詞          dep=case       head=講堂
+  が          lemma=が          pos=ADP   tag=助詞-格助詞          dep=case       head=講堂
+  まだ         lemma=まだ         pos=ADV   tag=副詞              dep=advmod     head=分かり
+  分かり        lemma=分かる        pos=VERB  tag=動詞-一般           dep=ROOT       head=分かり
+  ませ         lemma=ます         pos=AUX   tag=助動詞             dep=aux        head=分かり
+  ん          lemma=ぬ          pos=AUX   tag=助動詞             dep=aux        head=分かり
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=分かり
+
+--- Ichiran (10 tokens) ---
+会場 | が | 体育館 | か | 講堂 | か | が | まだ | 分かりません | 。
+
+--- Ichiran Detailed ---
+  会場              kana=かいじょう           romaji=kaijō                gloss=assembly hall; meeting place; venue; site; grounds
+  が               kana=が               romaji=ga                   gloss=indicates the subject of a sentence
+  体育館             kana=たいいくかん          romaji=taiikukan            gloss=gymnasium
+  か               kana=か               romaji=ka                   gloss=indicates a question
+  講堂              kana=こうどう            romaji=kōdō                 gloss=auditorium; lecture hall
+  か               kana=か               romaji=ka                   gloss=indicates a question
+  が               kana=が               romaji=ga                   gloss=indicates the subject of a sentence
+  まだ              kana=まだ              romaji=mada                 gloss=still; as yet; only
+  分かりません          kana=わかりません          romaji=wakarimasen          gloss=
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[7] N5 - n5.donata
+================================================================================
+JP: 失礼ですが、どなたですか。
+EN: Excuse me, who are you?
+
+--- GiNZA (8 tokens) ---
+失礼 | です | が | 、 | どなた | です | か | 。
+
+--- GiNZA Detailed ---
+  失礼         lemma=失礼         pos=ADJ   tag=名詞-普通名詞-サ変形状詞可能 dep=advcl      head=どなた
+  です         lemma=です         pos=AUX   tag=助動詞             dep=aux        head=失礼
+  が          lemma=が          pos=SCONJ tag=助詞-接続助詞         dep=mark       head=失礼
+  、          lemma=、          pos=PUNCT tag=補助記号-読点         dep=punct      head=失礼
+  どなた        lemma=どなた        pos=PRON  tag=代名詞             dep=ROOT       head=どなた
+  です         lemma=です         pos=AUX   tag=助動詞             dep=cop        head=どなた
+  か          lemma=か          pos=PART  tag=助詞-終助詞          dep=mark       head=どなた
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=どなた
+
+--- Ichiran (7 tokens) ---
+失礼 | ですが | 、 | どなた | です | か | 。
+
+--- Ichiran Detailed ---
+  失礼              kana=しつれい            romaji=shitsurei            gloss=discourtesy; impoliteness
+  ですが             kana=ですが             romaji=desuga               gloss=but; however; (and) yet; nevertheless; still; for 
+  、               kana=                romaji=                     gloss=
+  どなた             kana=どなた             romaji=donata               gloss=who
+  です              kana=です              romaji=desu                 gloss=be; is
+  か               kana=か               romaji=ka                   gloss=indicates a question
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[8] N5 - n5.verb-masenka
+================================================================================
+JP: ちょっと、いっしょに駅まで歩きませんか。
+EN: How about we walk to the station together for a bit?
+
+--- GiNZA (11 tokens) ---
+ちょっと | 、 | いっしょ | に | 駅 | まで | 歩き | ませ | ん | か | 。
+
+--- GiNZA Detailed ---
+  ちょっと       lemma=ちょっと       pos=ADV   tag=副詞              dep=advmod     head=歩き
+  、          lemma=、          pos=PUNCT tag=補助記号-読点         dep=punct      head=ちょっと
+  いっしょ       lemma=いっしょ       pos=NOUN  tag=名詞-普通名詞-サ変可能    dep=obl        head=歩き
+  に          lemma=に          pos=ADP   tag=助詞-格助詞          dep=case       head=いっしょ
+  駅          lemma=駅          pos=NOUN  tag=名詞-普通名詞-一般      dep=obl        head=歩き
+  まで         lemma=まで         pos=ADP   tag=助詞-副助詞          dep=case       head=駅
+  歩き         lemma=歩く         pos=VERB  tag=動詞-一般           dep=ROOT       head=歩き
+  ませ         lemma=ます         pos=AUX   tag=助動詞             dep=aux        head=歩き
+  ん          lemma=ぬ          pos=AUX   tag=助動詞             dep=aux        head=歩き
+  か          lemma=か          pos=PART  tag=助詞-終助詞          dep=mark       head=歩き
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=歩き
+
+--- Ichiran (8 tokens) ---
+ちょっと | 、 | いっしょに | 駅 | まで | 歩きません | か | 。
+
+--- Ichiran Detailed ---
+  ちょっと            kana=ちょっと            romaji=chotto               gloss=a little; a bit; slightly
+  、               kana=                romaji=                     gloss=
+  いっしょに           kana=いっしょに           romaji=isshoni              gloss=together (with)
+  駅               kana=えき              romaji=eki                  gloss=railway station; train station
+  まで              kana=まで              romaji=made                 gloss=until (a time); till; to; up to
+  歩きません           kana=あるきません          romaji=arukimasen           gloss=
+  か               kana=か               romaji=ka                   gloss=indicates a question
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[9] N5 - n5.a-dewa-b
+================================================================================
+JP: 図書館では、声を小さくしてください。
+EN: In the library, please keep your voice down.
+
+--- GiNZA (11 tokens) ---
+図書館 | で | は | 、 | 声 | を | 小さく | し | て | ください | 。
+
+--- GiNZA Detailed ---
+  図書館        lemma=図書館        pos=NOUN  tag=名詞-普通名詞-一般      dep=obl        head=し
+  で          lemma=で          pos=ADP   tag=助詞-格助詞          dep=case       head=図書館
+  は          lemma=は          pos=ADP   tag=助詞-係助詞          dep=case       head=図書館
+  、          lemma=、          pos=PUNCT tag=補助記号-読点         dep=punct      head=図書館
+  声          lemma=声          pos=NOUN  tag=名詞-普通名詞-一般      dep=obj        head=し
+  を          lemma=を          pos=ADP   tag=助詞-格助詞          dep=case       head=声
+  小さく        lemma=小さい        pos=ADJ   tag=形容詞-一般          dep=advcl      head=し
+  し          lemma=する         pos=VERB  tag=動詞-非自立可能        dep=ROOT       head=し
+  て          lemma=て          pos=SCONJ tag=助詞-接続助詞         dep=mark       head=し
+  ください       lemma=くださる       pos=AUX   tag=動詞-非自立可能        dep=fixed      head=て
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=し
+
+--- Ichiran (8 tokens) ---
+図書館 | では | 、 | 声 | を | 小さく | してください | 。
+
+--- Ichiran Detailed ---
+  図書館             kana=としょかん           romaji=toshokan             gloss=library
+  では              kana=で ‌は            romaji=de wa                compound=['で', 'は'] gloss=
+  、               kana=                romaji=                     gloss=
+  声               kana=こえ              romaji=koe                  gloss=voice
+  を               kana=を               romaji=wo                   gloss=indicates direct object of action
+  小さく             kana=ちいさく            romaji=chiisaku             gloss=
+  してください          kana=して ください         romaji=shite kudasai        compound=['して', 'ください'] gloss=
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[10] N5 - n5.dare-mo-masen
+================================================================================
+JP: 誰も来ない。
+EN: No one is coming.
+
+--- GiNZA (5 tokens) ---
+誰 | も | 来 | ない | 。
+
+--- GiNZA Detailed ---
+  誰          lemma=誰          pos=PRON  tag=代名詞             dep=nsubj      head=来
+  も          lemma=も          pos=ADP   tag=助詞-係助詞          dep=case       head=誰
+  来          lemma=来る         pos=VERB  tag=動詞-非自立可能        dep=ROOT       head=来
+  ない         lemma=ない         pos=AUX   tag=助動詞             dep=aux        head=来
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=来
+
+--- Ichiran (3 tokens) ---
+誰も | 来ない | 。
+
+--- Ichiran Detailed ---
+  誰も              kana=だれも             romaji=daremo               gloss=everyone; anyone
+  来ない             kana=こない             romaji=konai                gloss=
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[11] N3 - n3.beki-da
+================================================================================
+JP: 学生は勉強するべきだ。
+EN: Students should study.
+
+--- GiNZA (7 tokens) ---
+学生 | は | 勉強 | する | べき | だ | 。
+
+--- GiNZA Detailed ---
+  学生         lemma=学生         pos=NOUN  tag=名詞-普通名詞-一般      dep=nsubj      head=勉強
+  は          lemma=は          pos=ADP   tag=助詞-係助詞          dep=case       head=学生
+  勉強         lemma=勉強         pos=VERB  tag=名詞-普通名詞-サ変可能    dep=ROOT       head=勉強
+  する         lemma=する         pos=AUX   tag=動詞-非自立可能        dep=aux        head=勉強
+  べき         lemma=べし         pos=AUX   tag=助動詞             dep=aux        head=勉強
+  だ          lemma=だ          pos=AUX   tag=助動詞             dep=aux        head=勉強
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=勉強
+
+--- Ichiran (6 tokens) ---
+学生 | は | 勉強する | べき | だ | 。
+
+--- Ichiran Detailed ---
+  学生              kana=がくせい            romaji=gakusei              gloss=student (esp. a university student)
+  は               kana=‌は              romaji=wa                   gloss=indicates sentence topic
+  勉強する            kana=べんきょう する        romaji=benkyō suru          compound=['勉強', 'する'] gloss=
+  べき              kana=べき              romaji=beki                 gloss=should; must; ought to
+  だ               kana=だ               romaji=da                   gloss=be; is
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[12] N3 - n3.hazu-da
+================================================================================
+JP: 彼は来るはずだ。
+EN: He should come.
+
+--- GiNZA (6 tokens) ---
+彼 | は | 来る | はず | だ | 。
+
+--- GiNZA Detailed ---
+  彼          lemma=彼          pos=PRON  tag=代名詞             dep=nsubj      head=来る
+  は          lemma=は          pos=ADP   tag=助詞-係助詞          dep=case       head=彼
+  来る         lemma=来る         pos=VERB  tag=動詞-非自立可能        dep=acl        head=はず
+  はず         lemma=はず         pos=NOUN  tag=名詞-普通名詞-一般      dep=ROOT       head=はず
+  だ          lemma=だ          pos=AUX   tag=助動詞             dep=cop        head=はず
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=はず
+
+--- Ichiran (6 tokens) ---
+彼 | は | 来る | はず | だ | 。
+
+--- Ichiran Detailed ---
+  彼               kana=かれ              romaji=kare                 gloss=he; him
+  は               kana=‌は              romaji=wa                   gloss=indicates sentence topic
+  来る              kana=くる              romaji=kuru                 gloss=to come (spatially or temporally); to approach; to
+  はず              kana=はず              romaji=hazu                 gloss=should (be); bound (to be); expected (to be); must
+  だ               kana=だ               romaji=da                   gloss=be; is
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[13] N3 - n3.wake-da
+================================================================================
+JP: だから遅れたわけだ。
+EN: That's why I was late.
+
+--- GiNZA (7 tokens) ---
+だ | から | 遅れ | た | わけ | だ | 。
+
+--- GiNZA Detailed ---
+  だ          lemma=だ          pos=CCONJ tag=助動詞             dep=cc         head=遅れ
+  から         lemma=から         pos=SCONJ tag=助詞-接続助詞         dep=fixed      head=だ
+  遅れ         lemma=遅れる        pos=VERB  tag=動詞-非自立可能        dep=acl        head=わけ
+  た          lemma=た          pos=AUX   tag=助動詞             dep=aux        head=遅れ
+  わけ         lemma=わけ         pos=NOUN  tag=名詞-普通名詞-一般      dep=ROOT       head=わけ
+  だ          lemma=だ          pos=AUX   tag=助動詞             dep=cop        head=わけ
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=わけ
+
+--- Ichiran (5 tokens) ---
+ | 遅れた |  | だ | 。
+
+--- Ichiran Detailed ---
+                  kana=                romaji=da·kara              gloss=
+  遅れた             kana=おくれた            romaji=okureta              gloss=
+                  kana=                romaji=wake                 gloss=
+  だ               kana=だ               romaji=da                   gloss=be; is
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[14] N3 - n3.you-ni-natta
+================================================================================
+JP: 日本語が話せるようになった。
+EN: I've become able to speak Japanese.
+
+--- GiNZA (8 tokens) ---
+日本語 | が | 話せる | よう | に | なっ | た | 。
+
+--- GiNZA Detailed ---
+  日本語        lemma=日本語        pos=NOUN  tag=名詞-普通名詞-一般      dep=nsubj      head=話せる
+  が          lemma=が          pos=ADP   tag=助詞-格助詞          dep=case       head=日本語
+  話せる        lemma=話せる        pos=VERB  tag=動詞-一般           dep=advcl      head=なっ
+  よう         lemma=よう         pos=AUX   tag=形状詞-助動詞語幹       dep=aux        head=話せる
+  に          lemma=だ          pos=AUX   tag=助動詞             dep=aux        head=話せる
+  なっ         lemma=なる         pos=VERB  tag=動詞-非自立可能        dep=ROOT       head=なっ
+  た          lemma=た          pos=AUX   tag=助動詞             dep=aux        head=なっ
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=なっ
+
+--- Ichiran (5 tokens) ---
+日本語 | が |  | ようになった | 。
+
+--- Ichiran Detailed ---
+  日本語             kana=にほんご            romaji=nihongo              gloss=Japanese (language)
+  が               kana=が               romaji=ga                   gloss=indicates the subject of a sentence
+                  kana=                romaji=hanaseru             gloss=
+  ようになった          kana=ようになった          romaji=yōninatta            gloss=
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[15] N3 - n3.koto-ni-natte-iru
+================================================================================
+JP: 来週出発することになっている。
+EN: It's been decided that we'll depart next week.
+
+--- GiNZA (9 tokens) ---
+来週 | 出発 | する | こと | に | なっ | て | いる | 。
+
+--- GiNZA Detailed ---
+  来週         lemma=来週         pos=ADV   tag=名詞-普通名詞-副詞可能    dep=advmod     head=出発
+  出発         lemma=出発         pos=VERB  tag=名詞-普通名詞-サ変可能    dep=ROOT       head=出発
+  する         lemma=する         pos=AUX   tag=動詞-非自立可能        dep=aux        head=出発
+  こと         lemma=こと         pos=NOUN  tag=名詞-普通名詞-一般      dep=compound   head=出発
+  に          lemma=に          pos=ADP   tag=助詞-格助詞          dep=fixed      head=こと
+  なっ         lemma=なる         pos=VERB  tag=動詞-非自立可能        dep=fixed      head=こと
+  て          lemma=て          pos=SCONJ tag=助詞-接続助詞         dep=mark       head=出発
+  いる         lemma=いる         pos=VERB  tag=動詞-非自立可能        dep=fixed      head=て
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=出発
+
+--- Ichiran (4 tokens) ---
+来週 | 出発する | ことになっている | 。
+
+--- Ichiran Detailed ---
+  来週              kana=らいしゅう           romaji=raishū               gloss=next week
+  出発する            kana=しゅっぱつ する        romaji=shuppatsu suru       compound=['出発', 'する'] gloss=
+  ことになっている        kana=ことになっている        romaji=kotoninatteiru       compound=['ことになって', 'いる'] gloss=
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[16] N3 - n3.te-hoshii
+================================================================================
+JP: 手伝ってほしい。
+EN: I want you to help me.
+
+--- GiNZA (4 tokens) ---
+手伝っ | て | ほしい | 。
+
+--- GiNZA Detailed ---
+  手伝っ        lemma=手伝う        pos=VERB  tag=動詞-一般           dep=ROOT       head=手伝っ
+  て          lemma=て          pos=SCONJ tag=助詞-接続助詞         dep=mark       head=手伝っ
+  ほしい        lemma=ほしい        pos=AUX   tag=形容詞-非自立可能       dep=fixed      head=て
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=手伝っ
+
+--- Ichiran (3 tokens) ---
+手伝って | ほしい | 。
+
+--- Ichiran Detailed ---
+  手伝って            kana=てつだって           romaji=tetsudatte           gloss=
+  ほしい             kana=ほしい             romaji=hoshii               gloss=wanting (to have); desiring; wishing for
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[17] N3 - n3.ba-yokatta
+================================================================================
+JP: もっと早く起きればよかった。
+EN: I should have woken up earlier.
+
+--- GiNZA (7 tokens) ---
+もっと | 早く | 起きれ | ば | よかっ | た | 。
+
+--- GiNZA Detailed ---
+  もっと        lemma=もっと        pos=ADV   tag=副詞              dep=advmod     head=早く
+  早く         lemma=早い         pos=ADJ   tag=形容詞-一般          dep=advcl      head=起きれ
+  起きれ        lemma=起きる        pos=VERB  tag=動詞-一般           dep=advcl      head=よかっ
+  ば          lemma=ば          pos=SCONJ tag=助詞-接続助詞         dep=mark       head=起きれ
+  よかっ        lemma=よい         pos=ADJ   tag=形容詞-非自立可能       dep=ROOT       head=よかっ
+  た          lemma=た          pos=AUX   tag=助動詞             dep=aux        head=よかっ
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=よかっ
+
+--- Ichiran (5 tokens) ---
+もっと |  | 起きれば | よかった | 。
+
+--- Ichiran Detailed ---
+  もっと             kana=もっと             romaji=motto                gloss=(some) more; even more; longer; further
+                  kana=                romaji=hayaku               gloss=
+  起きれば            kana=おきれば            romaji=okireba              gloss=
+  よかった            kana=よかった            romaji=yokatta              gloss=
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[18] N3 - n3.rashii
+================================================================================
+JP: 明日は雨らしい。
+EN: It seems like it'll rain tomorrow.
+
+--- GiNZA (5 tokens) ---
+明日 | は | 雨 | らしい | 。
+
+--- GiNZA Detailed ---
+  明日         lemma=明日         pos=NOUN  tag=名詞-普通名詞-副詞可能    dep=obl        head=雨
+  は          lemma=は          pos=ADP   tag=助詞-係助詞          dep=case       head=明日
+  雨          lemma=雨          pos=NOUN  tag=名詞-普通名詞-一般      dep=ROOT       head=雨
+  らしい        lemma=らしい        pos=AUX   tag=助動詞             dep=aux        head=雨
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=雨
+
+--- Ichiran (5 tokens) ---
+明日 | は | 雨 | らしい | 。
+
+--- Ichiran Detailed ---
+  明日              kana=あした             romaji=ashita               gloss=tomorrow
+  は               kana=‌は              romaji=wa                   gloss=indicates sentence topic
+  雨               kana=あめ              romaji=ame                  gloss=rain
+  らしい             kana=らしい             romaji=rashii               gloss=seeming ...; appearing ...
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[19] N3 - n3.nai-to
+================================================================================
+JP: 早く行かないと。
+EN: I have to go soon.
+
+--- GiNZA (5 tokens) ---
+早く | 行か | ない | と | 。
+
+--- GiNZA Detailed ---
+  早く         lemma=早い         pos=ADJ   tag=形容詞-一般          dep=advcl      head=行か
+  行か         lemma=行く         pos=VERB  tag=動詞-非自立可能        dep=ROOT       head=行か
+  ない         lemma=ない         pos=AUX   tag=助動詞             dep=aux        head=行か
+  と          lemma=と          pos=ADP   tag=助詞-格助詞          dep=case       head=行か
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=行か
+
+--- Ichiran (4 tokens) ---
+ | 行かない | と | 。
+
+--- Ichiran Detailed ---
+                  kana=                romaji=hayaku               gloss=
+  行かない            kana=いかない            romaji=ikanai               gloss=
+  と               kana=と               romaji=to                   gloss=if; when
+  。               kana=                romaji=                     gloss=
+
+================================================================================
+[20] N3 - n3.koto-wa-nai
+================================================================================
+JP: 心配することはない。
+EN: There's no need to worry.
+
+--- GiNZA (6 tokens) ---
+心配 | する | こと | は | ない | 。
+
+--- GiNZA Detailed ---
+  心配         lemma=心配         pos=VERB  tag=名詞-普通名詞-サ変形状詞可能 dep=ROOT       head=心配
+  する         lemma=する         pos=AUX   tag=動詞-非自立可能        dep=aux        head=心配
+  こと         lemma=こと         pos=NOUN  tag=名詞-普通名詞-一般      dep=compound   head=心配
+  は          lemma=は          pos=ADP   tag=助詞-係助詞          dep=fixed      head=こと
+  ない         lemma=ない         pos=AUX   tag=形容詞-非自立可能       dep=fixed      head=こと
+  。          lemma=。          pos=PUNCT tag=補助記号-句点         dep=punct      head=心配
+
+--- Ichiran (3 tokens) ---
+心配する | ことはない | 。
+
+--- Ichiran Detailed ---
+  心配する            kana=しんぱい する         romaji=shimpai suru         compound=['心配', 'する'] gloss=
+  ことはない           kana=こと​‌は​ない        romaji=koto wa nai          gloss=there is no need to ...
+  。               kana=                romaji=                     gloss=
+
+
+Results saved to /home/tiger/ichiran-node/scripts/tokenizer-comparison-results.json

@@ -1,0 +1,1246 @@
+{
+  "data": {
+    "id": "434",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 434,
+      "level": "JLPT2",
+      "lesson_id": 31,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "ようがない・ようもない",
+      "nuance": "話（はな）し手（て）が(A)を行（おこな）いたいが、それを行（おこな）う<strong>手段（しゅだん）</strong>がないということを強調（きょうちょう）する表現（ひょうげん）。",
+      "grammar_order": 540,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 538,
+        "title": "にほかならない",
+        "slug": "にほかならない"
+      },
+      "previous_grammar_point": {
+        "id": 513,
+        "title": "万が一",
+        "slug": "万が一"
+      },
+      "lesson_count": "16/24",
+      "title": "ようがない・ようもない",
+      "furigana": "様（よう）がない",
+      "meaning": "There's no way to, It's impossible to",
+      "nuance_translation": "An expression that highlights when the speaker wants to do (A), but there is no possible <strong>manner</strong> in which to do it.",
+      "rare_kanji_warning": "",
+      "caution": "This is not Verb[volitional]",
+      "polite_structure": "<span class='gp-popout' data-gp-id='26'>Verb［stem］</span>+ <strong>よう + <span class='gp-popout' data-gp-id='10'>が</span><sup>(1)</sup> + ありません</strong>.<br>［する］Verb + （<span class='chui'><span class='gp-popout' data-gp-id='6'>の</span></span>）+ <strong>しよう + <span class='gp-popout' data-gp-id='10'>が</span><sup>(1)</sup> + ありません</strong><br><br><sup>(1)</sup>  <span class='gp-popout' data-gp-id='4'>も</span>",
+      "casual_structure": "<span class='gp-popout' data-gp-id='26'>Verb［stem］</span>+ <strong>よう + <span class='gp-popout' data-gp-id='10'>が</span><sup>(1)</sup> + ない</strong>.<br>［する］Verb + （<span class='chui'><span class='gp-popout' data-gp-id='6'>の</span></span>）+ <strong>しよう + <span class='gp-popout' data-gp-id='10'>が</span><sup>(1)</sup> + ない</strong><br><br><sup>(1)</sup>  <span class='gp-popout' data-gp-id='4'>も</span>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/11269",
+      "metadata": "ようがない, ようもない, 様がない, 様もない, youganai, youmonai, expression, impossible"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "6662",
+            "type": "study_question"
+          },
+          {
+            "id": "6668",
+            "type": "study_question"
+          },
+          {
+            "id": "181708",
+            "type": "study_question"
+          },
+          {
+            "id": "181710",
+            "type": "study_question"
+          },
+          {
+            "id": "181709",
+            "type": "study_question"
+          },
+          {
+            "id": "6665",
+            "type": "study_question"
+          },
+          {
+            "id": "6660",
+            "type": "study_question"
+          },
+          {
+            "id": "6667",
+            "type": "study_question"
+          },
+          {
+            "id": "6663",
+            "type": "study_question"
+          },
+          {
+            "id": "2327",
+            "type": "study_question"
+          },
+          {
+            "id": "2329",
+            "type": "study_question"
+          },
+          {
+            "id": "6664",
+            "type": "study_question"
+          },
+          {
+            "id": "2328",
+            "type": "study_question"
+          },
+          {
+            "id": "6666",
+            "type": "study_question"
+          },
+          {
+            "id": "6661",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "556",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "2092",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "690",
+            "type": "related_content"
+          },
+          {
+            "id": "976",
+            "type": "related_content"
+          },
+          {
+            "id": "1050",
+            "type": "related_content"
+          },
+          {
+            "id": "208",
+            "type": "related_content"
+          },
+          {
+            "id": "753",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "956",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "957",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2385",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "6662",
+      "type": "study_question",
+      "attributes": {
+        "id": 6662,
+        "content": "そんなバレバレのサプライズ、<span class='study-area-input'>____</span>。",
+        "answer": "おどろきようがない",
+        "alternate_grammar": [
+          "おどろきようがない",
+          "おどろきようもない",
+          "おどろきようがないです",
+          "おどろきようもないです",
+          "おどろきようがありません",
+          "おどろきようもありません"
+        ],
+        "kanji_answer": "驚（おどろ）きようがない",
+        "kanji_alt_grammar": [
+          "驚（おどろ）きようもない",
+          "驚（おどろ）きようがないです",
+          "驚（おどろ）きようもないです",
+          "驚（おどろ）きようがありません",
+          "驚（おどろ）きようもありません",
+          "驚（おどろ）きようがない"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を行（おこな）いたいが、それを行（おこな）う<strong>手段（しゅだん）</strong>がないということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Negative, Standard, Objective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/そんなバレバレのサプライズ、驚きようがない。.mp3",
+        "word_prompt": "驚（おどろ）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おどろくほうほうがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "おどろくことがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "おどろきっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "おどろこうがない": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "おどろこうもない": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "おどろくわけがない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>It is impossible to be surprised</strong> by such an obvious surprise.",
+        "nuance_translation": "An expression that highlights when the speaker wants to do (A), but there is no possible <strong>manner</strong> in which to do it.",
+        "extra_info": "",
+        "reviewable_id": 434,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6668",
+      "type": "study_question",
+      "attributes": {
+        "id": 6668,
+        "content": "あんなにやる気（き）のない選手（せんしゅ）なら、応援（おうえん）<span class='study-area-input'>____</span>。",
+        "answer": "のしようもない",
+        "alternate_grammar": [
+          "のしようがない",
+          "のしようもない",
+          "のしようがないです",
+          "のしようもないです",
+          "のしようがありません",
+          "のしようもありません",
+          "しようがない",
+          "しようもない",
+          "しようがないです",
+          "しようもないです",
+          "しようがありません",
+          "しようもありません"
+        ],
+        "kanji_answer": "のしようもない",
+        "kanji_alt_grammar": [
+          "のしようがない",
+          "のしようがないです",
+          "のしようもないです",
+          "のしようがありません",
+          "のしようもありません",
+          "しようがない",
+          "しようもない",
+          "しようがないです",
+          "しようもないです",
+          "しようがありません",
+          "しようもありません",
+          "のしようもない"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を行（おこな）いたいが、それを行（おこな）う<strong>手段（しゅだん）</strong>がないということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Negative, Standard, Objective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あんなにやる気のない選手なら、応援のしようもない。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "するほうほうがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "することがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "しっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のしっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>It is impossible</strong> to cheer for an athlete if they have so little motivation.",
+        "nuance_translation": "An expression that highlights when the speaker wants to do (A), but there is no possible <strong>manner</strong> in which to do it.",
+        "extra_info": "",
+        "reviewable_id": 434,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181708",
+      "type": "study_question",
+      "attributes": {
+        "id": 181708,
+        "content": "車（くるま）も自転車（じてんしゃ）も壊（こわ）れているので買（か）い物（もの）に行（い）き<span class='study-area-input'>____</span>。",
+        "answer": "ようがない",
+        "alternate_grammar": [],
+        "kanji_answer": "ようがない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/車も自転車も壊れているので買い物に行きようがない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Because my car and bicycle are broken, <strong>there is no way</strong> for me to go shopping.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 434,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181710",
+      "type": "study_question",
+      "attributes": {
+        "id": 181710,
+        "content": "電話（でんわ）番号（ばんごう）もメールアドレスも分（わ）からないので、連絡（れんらく）のし<span class='study-area-input'>____</span>。",
+        "answer": "ようがありません",
+        "alternate_grammar": [],
+        "kanji_answer": "ようがありません",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/電話番号もメールアドレスも分からないので、連絡のしようがありません。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I have <strong>no way to</strong> contact them because I don't know their phone number nor their email address.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 434,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181709",
+      "type": "study_question",
+      "attributes": {
+        "id": 181709,
+        "content": "パソコンが車（くるま）にひかれて粉々（こなごな）になったため直（なお）し<span class='study-area-input'>____</span>。",
+        "answer": "ようがない",
+        "alternate_grammar": [],
+        "kanji_answer": "ようがない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/パソコンが車にひかれて粉々になったため直しようがない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>It's impossible to</strong> fix my computer because it was run over by a car and smashed to pieces.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 434,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6665",
+      "type": "study_question",
+      "attributes": {
+        "id": 6665,
+        "content": "あまりにも雑（ざつ）すぎて、カバー<span class='study-area-input'>____</span>。",
+        "answer": "のしようもない",
+        "alternate_grammar": [
+          "のしようがない",
+          "のしようもない",
+          "のしようがないです",
+          "のしようもないです",
+          "のしようがありません",
+          "のしようもありません",
+          "しようがない",
+          "しようがない",
+          "しようがないです",
+          "しようもないです",
+          "しようがありません",
+          "しようもありません"
+        ],
+        "kanji_answer": "のしようもない",
+        "kanji_alt_grammar": [
+          "のしようがない",
+          "のしようがないです",
+          "のしようもないです",
+          "のしようがありません",
+          "のしようもありません",
+          "しようがない",
+          "しようがないです",
+          "しようもないです",
+          "しようがありません",
+          "しようもありません",
+          "のしようもない"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を行（おこな）いたいが、それを行（おこな）う<strong>手段（しゅだん）</strong>がないということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Negative, Standard, Objective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あまりにも雑すぎて、カバーのしようもない。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "するほうほうがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "することがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "しっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のしっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Being exceedingly messy, <strong>it is impossible to</strong> cover it up.",
+        "nuance_translation": "An expression that highlights when the speaker wants to do (A), but there is no possible <strong>manner</strong> in which to do it.",
+        "extra_info": "",
+        "reviewable_id": 434,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6660",
+      "type": "study_question",
+      "attributes": {
+        "id": 6660,
+        "content": "彼（かれ）は速（はや）すぎて<span class='study-area-input'>____</span>。",
+        "answer": "おいこしようがない",
+        "alternate_grammar": [
+          "おいこしようがない",
+          "おいこしようもない",
+          "おいこしようがないです",
+          "おいこしようもないです",
+          "おいこしようがありません",
+          "おいこしようもありません"
+        ],
+        "kanji_answer": "追（お）い越（こ）しようがない",
+        "kanji_alt_grammar": [
+          "追（お）い越（こ）しようもない",
+          "追（お）い越（こ）しようがないです",
+          "追（お）い越（こ）しようもないです",
+          "追（お）い越（こ）しようがありません",
+          "追（お）い越（こ）しようもありません",
+          "追（お）い越（こ）しようがない"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を行（おこな）いたいが、それを行（おこな）う<strong>手段（しゅだん）</strong>がないということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Negative, Standard, Objective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼は速すぎて追い越しようがない。.mp3",
+        "word_prompt": "追（お）い越（こ）す",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おいこすほうほうがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "おいこすことがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "おいこしっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "おいこそうがない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "おいこそうもない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He is too fast, <strong>there is no way to overtake</strong> him.",
+        "nuance_translation": "An expression that highlights when the speaker wants to do (A), but there is no possible <strong>manner</strong> in which to do it.",
+        "extra_info": "",
+        "reviewable_id": 434,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6667",
+      "type": "study_question",
+      "attributes": {
+        "id": 6667,
+        "content": "そんな支離滅裂（しりめつれつ）な質問（しつもん）、回答（かいとう）<span class='study-area-input'>____</span>。",
+        "answer": "のしようもない",
+        "alternate_grammar": [
+          "のしようがない",
+          "のしようもない",
+          "のしようがないです",
+          "のしようもないです",
+          "のしようがありません",
+          "のしようもありません",
+          "しようがない",
+          "しようもない",
+          "しようがないです",
+          "しようもないです",
+          "しようがありません",
+          "しようもありません"
+        ],
+        "kanji_answer": "のしようもない",
+        "kanji_alt_grammar": [
+          "のしようがない",
+          "のしようがないです",
+          "のしようもないです",
+          "のしようがありません",
+          "のしようもありません",
+          "しようがない",
+          "しようもない",
+          "しようがないです",
+          "しようもないです",
+          "しようがありません",
+          "しようもありません",
+          "のしようもない"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を行（おこな）いたいが、それを行（おこな）う<strong>手段（しゅだん）</strong>がないということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Negative, Standard, Objective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/そんな支離滅裂な質問、回答のしようもない。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "するほうほうがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "することがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "しっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のしっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>It is impossible</strong> to answer such an incoherent question.",
+        "nuance_translation": "An expression that highlights when the speaker wants to do (A), but there is no possible <strong>manner</strong> in which to do it.",
+        "extra_info": "",
+        "reviewable_id": 434,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6663",
+      "type": "study_question",
+      "attributes": {
+        "id": 6663,
+        "content": "確率（かくりつ）が低（ひく）すぎて、投資（とうし）<span class='study-area-input'>____</span>。",
+        "answer": "のしようがない",
+        "alternate_grammar": [
+          "のしようがない",
+          "のしようもない",
+          "のしようがないです",
+          "のしようもないです",
+          "のしようがありません",
+          "のしようもありません",
+          "しようがない",
+          "しようもない",
+          "しようがないです",
+          "しようもないです",
+          "しようがありません",
+          "しようもありません"
+        ],
+        "kanji_answer": "のしようがない",
+        "kanji_alt_grammar": [
+          "のしようもない",
+          "のしようがないです",
+          "のしようもないです",
+          "のしようがありません",
+          "のしようもありません",
+          "しようがない",
+          "しようもない",
+          "しようがないです",
+          "しようもないです",
+          "しようがありません",
+          "しようもありません",
+          "のしようがない"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を行（おこな）いたいが、それを行（おこな）う<strong>手段（しゅだん）</strong>がないということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Negative, Standard, Objective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/確率が低すぎて、投資のしようがない。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "するほうほうがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "することがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "しっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のしっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The chances are too low, <strong>it is impossible to</strong> invest in it.",
+        "nuance_translation": "An expression that highlights when the speaker wants to do (A), but there is no possible <strong>manner</strong> in which to do it.",
+        "extra_info": "",
+        "reviewable_id": 434,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2327",
+      "type": "study_question",
+      "attributes": {
+        "id": 2327,
+        "content": "何（なん）とも<span class='study-area-input'>____</span>味（あじ）だ。",
+        "answer": "いいようがない",
+        "alternate_grammar": [
+          "いいようもない",
+          "いいようがない"
+        ],
+        "kanji_answer": "言（い）いようがない",
+        "kanji_alt_grammar": [
+          "言（い）いようもない",
+          "言（い）いようがない"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を行（おこな）いたいが、それを行（おこな）う<strong>手段（しゅだん）</strong>がないということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Negative, Objective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/何とも言いようがない味だ。.mp3",
+        "word_prompt": "言（い）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いうほうほうがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "いいっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "いいおうがない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "いいおうもない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "いいえない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "いえない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "いいがたい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>There is no way to put</strong> this taste/flavor <strong>into words</strong>. ",
+        "nuance_translation": "An expression that highlights when the speaker wants to do (A), but there is no possible <strong>manner</strong> in which to do it.",
+        "extra_info": "",
+        "reviewable_id": 434,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2329",
+      "type": "study_question",
+      "attributes": {
+        "id": 2329,
+        "content": "これはどうにも<span class='study-area-input'>____</span>。",
+        "answer": "しようがない",
+        "alternate_grammar": [
+          "しようもない",
+          "しようがない"
+        ],
+        "kanji_answer": "しようがない",
+        "kanji_alt_grammar": [
+          "しようもない",
+          "しようがない"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を行（おこな）いたいが、それを行（おこな）う<strong>手段（しゅだん）</strong>がないということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Negative, Objective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/これはどうにもしようがない。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "するほうほうがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "することがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "しっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>There is no way to do</strong> this.",
+        "nuance_translation": "An expression that highlights when the speaker wants to do (A), but there is no possible <strong>manner</strong> in which to do it.",
+        "extra_info": "",
+        "reviewable_id": 434,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6664",
+      "type": "study_question",
+      "attributes": {
+        "id": 6664,
+        "content": "あまりにも固（かた）い態度（たいど）で、親（した）しく<span class='study-area-input'>____</span>。",
+        "answer": "なりようがない",
+        "alternate_grammar": [
+          "なりようがない",
+          "なりようもない",
+          "なりようがないです",
+          "なりようもないです",
+          "なりようがありません",
+          "なりようもありません"
+        ],
+        "kanji_answer": "なりようがない",
+        "kanji_alt_grammar": [
+          "なりようもない",
+          "なりようがないです",
+          "なりようもないです",
+          "なりようがありません",
+          "なりようもありません",
+          "なりようがない"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を行（おこな）いたいが、それを行（おこな）う<strong>手段（しゅだん）</strong>がないということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Negative, Standard, Objective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あまりにも固い態度で、親しくなりようがない。.mp3",
+        "word_prompt": "なる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なるほうほうがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "なることがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "なりっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "なろうがない": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "なろうもない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "なりえない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "With an exceedingly hard attitude, <strong>it is impossible to become</strong> close.",
+        "nuance_translation": "An expression that highlights when the speaker wants to do (A), but there is no possible <strong>manner</strong> in which to do it.",
+        "extra_info": "",
+        "reviewable_id": 434,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2328",
+      "type": "study_question",
+      "attributes": {
+        "id": 2328,
+        "content": "弁解（べんかい）<span class='study-area-input'>____</span>。",
+        "answer": "のしようがない",
+        "alternate_grammar": [
+          "のしようもない",
+          "のしようがない",
+          "しようがない",
+          "しようもない"
+        ],
+        "kanji_answer": "のしようがない",
+        "kanji_alt_grammar": [
+          "のしようもない",
+          "しようもない",
+          "のしようがない"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を行（おこな）いたいが、それを行（おこな）う<strong>手段（しゅだん）</strong>がないということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Negative, Objective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/弁解のしようがない。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "することがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "しっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のしっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>It is impossible to</strong> explain.",
+        "nuance_translation": "An expression that highlights when the speaker wants to do (A), but there is no possible <strong>manner</strong> in which to do it.",
+        "extra_info": "",
+        "reviewable_id": 434,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6666",
+      "type": "study_question",
+      "attributes": {
+        "id": 6666,
+        "content": "そんな架空（かくう）の話（はなし）をされても、反応（はんのう）<span class='study-area-input'>____</span>。",
+        "answer": "のしようもない",
+        "alternate_grammar": [
+          "のしようがない",
+          "のしようもない",
+          "のしようがないです",
+          "のしようもないです",
+          "のしようがありません",
+          "のしようもありません",
+          "しようがない",
+          "しようもない",
+          "しようがないです",
+          "しようもないです",
+          "しようがありません",
+          "しようもありません"
+        ],
+        "kanji_answer": "のしようもない",
+        "kanji_alt_grammar": [
+          "のしようがない",
+          "のしようがないです",
+          "のしようもないです",
+          "のしようがありません",
+          "のしようもありません",
+          "しようがない",
+          "しようもない",
+          "しようがないです",
+          "しようもないです",
+          "しようがありません",
+          "しようもありません",
+          "のしようもない"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を行（おこな）いたいが、それを行（おこな）う<strong>手段（しゅだん）</strong>がないということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Negative, Standard, Objective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/そんな架空の話をされても、反応のしようもない。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "するほうほうがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "することがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "しっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のしっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Even if such a fictitious story is told, <strong>it is impossible to</strong> react to it.",
+        "nuance_translation": "An expression that highlights when the speaker wants to do (A), but there is no possible <strong>manner</strong> in which to do it.",
+        "extra_info": "",
+        "reviewable_id": 434,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6661",
+      "type": "study_question",
+      "attributes": {
+        "id": 6661,
+        "content": "そんな無理（むり）な要求（ようきゅう）をされても、<span class='study-area-input'>____</span>。",
+        "answer": "おうじようがない",
+        "alternate_grammar": [
+          "おうじようがない",
+          "おうじようもない",
+          "おうじようがないです",
+          "おうじようもないです",
+          "おうじようがありません",
+          "おうじようもありません"
+        ],
+        "kanji_answer": "応（おう）じようがない",
+        "kanji_alt_grammar": [
+          "応（おう）じようもない",
+          "応（おう）じようがないです",
+          "応（おう）じようもないです",
+          "応（おう）じようがありません",
+          "応（おう）じようもありません",
+          "応（おう）じようがない"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を行（おこな）いたいが、それを行（おこな）う<strong>手段（しゅだん）</strong>がないということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Negative, Standard, Objective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/そんな無理な要求をされても、応じようがない。.mp3",
+        "word_prompt": "応（おう）じる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おうじるほうほうがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "おうじることがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "おうじっこない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Even if such an impossible demand is made, <strong>it is impossible to comply</strong>.",
+        "nuance_translation": "An expression that highlights when the speaker wants to do (A), but there is no possible <strong>manner</strong> in which to do it.",
+        "extra_info": "",
+        "reviewable_id": 434,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "556",
+      "type": "writeup",
+      "attributes": {
+        "id": 556,
+        "body_ja": "<p>「<span data-gp-id='434'>様（よう）がない</span>」または「<span data-gp-id='434'>様（よう）もない</span>」は、(A) をする方法（ほうほう）や手段（しゅだん）がないことを強調（きょうちょう）する表現（ひょうげん）です。「(A) をする方法（ほうほう）がない」や「(A) ができない」という意味（いみ）で使（つか）われます。</p>\r\n\r\n<p>この表現（ひょうげん）は動詞（どうし）の連用形（れんようけい）にくっついて使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181708'>\r\n<li data-study-question='181709'>\r\n<li data-study-question='181710'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='434'>様（よう）がない</span>」は、話（はな）し手（て）は (A) をしたいと思（おも）っているのに、 その方法（ほうほう）がないからできないというニュアンスを強調（きょうちょう）することが多（おお）いです。</p>\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>「様（よう）」はひらがなで書（か）かれることが多（おお）いため、「する」のような動詞（どうし）の意向形（いこうけい）を作（つく）る助動詞（じょどうし）の「よう」と混同（こんどう）しないよう注意（ちゅうい）しましょう。</p></section>",
+        "body": "<p><span data-gp-id='434'>様（よう）がない</span> or <span data-gp-id='434'>様（よう）もない</span> is an expression used to highlight that there is no 'method' or 'manner' in which to do (A). It can be interpreted as 'there is no way to (A)', or 'it's impossible to (A)'.</p>\r\n\r\n<p>This phrase will appear attached to the <span data-term='連用形・れんようけい'>conjunctive form</span> of verbs.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181708'>\r\n<li data-study-question='181709'>\r\n<li data-study-question='181710'>\r\n</ul>\r\n\r\n<p><span data-gp-id='434'>様（よう）がない</span> often focuses on that the action of (A) is not possible, despite that the speaker may actually want to do it.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>Because 様（よう） will often appear in hiragana, it is important not to get it mixed up with よう, the <span data-term='助動詞・じょどうし'>auxiliary verb</span> used to create the volitional form of verbs such as する.</p></section>"
+      }
+    },
+    {
+      "id": "2092",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2092,
+        "source": "A Handbook of Japanese Grammar Patterns",
+        "location": "Page 654",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "956",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 956,
+        "site": "Renshuu",
+        "description": "～ようがない and 〜ようもない",
+        "link": "https://www.renshuu.org/grammar/176/%E3%82%88%E3%81%86%E3%81%8C%E3%81%AA%E3%81%84%EF%BC%8F%E3%82%88%E3%81%86%E3%82%82%E3%81%AA%E3%81%84",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "957",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 957,
+        "site": "JLPT文法解説",
+        "description": "ようがない／ようがある　ようもない",
+        "link": "https://jn1et.com/youganai/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2385",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2385,
+        "site": "にほんごの里",
+        "description": "接続・意味・使い方・例文",
+        "link": "https://nihongonosato.com/jlpt/n2-grammar/n2-youganai/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "690",
+      "type": "related_content",
+      "attributes": {
+        "id": 690,
+        "relationship_type": "related",
+        "body": "ようがない・ようもない and っこない both express impossibility, but differ in tone and focus. ようがない・ようもない conveys that there is no way or method to do something, as in 助けようがない (There’s no way to help). っこない is more absolute and emphatic, denying any chance of occurrence, as in 勝てっこない (There’s no way we can win).",
+        "first_relatable": {
+          "id": 434,
+          "slug": "ようがない・ようもない",
+          "title": "ようがない・ようもない",
+          "meaning": "There's no way to, It's impossible to",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 598,
+          "slug": "っこない",
+          "title": "っこない",
+          "meaning": "There is no chance of, There is no way of, Impossible",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "976",
+      "type": "related_content",
+      "attributes": {
+        "id": 976,
+        "relationship_type": "related",
+        "body": "わけがない and ようがない・ようもない are similar in that both express impossibility. わけがない rejects something as logically unthinkable, e.g. 彼がそんなことをするわけがない ('There's no way he'd do that'). ようがない emphasizes that there is no way or means to do something, e.g. 助けようがない ('There's no way to help').",
+        "first_relatable": {
+          "id": 253,
+          "slug": "わけがない",
+          "title": "わけがない",
+          "meaning": "There is no way, There is no reason, It is impossible, Cannot be",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 434,
+          "slug": "ようがない・ようもない",
+          "title": "ようがない・ようもない",
+          "meaning": "There's no way to, It's impossible to",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1050",
+      "type": "related_content",
+      "attributes": {
+        "id": 1050,
+        "relationship_type": "related",
+        "body": "While both express impossibility, そうもない focuses on visual or situational cues suggesting unlikelihood, e.g. '雨が降りそうもない' ('It doesn't look like it'll rain'). ようがない・ようもない implies there is no method or way to perform the action, e.g. '連絡のしようがない' ('There's no way to contact them').",
+        "first_relatable": {
+          "id": 275,
+          "slug": "そうもない",
+          "title": "そうもない",
+          "meaning": "Very unlikely to, Does not seem that, Does not appear that",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 434,
+          "slug": "ようがない・ようもない",
+          "title": "ようがない・ようもない",
+          "meaning": "There's no way to, It's impossible to",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "208",
+      "type": "related_content",
+      "attributes": {
+        "id": 208,
+        "relationship_type": "related",
+        "body": "Both ようがない・ようもない and がたい express difficulty or unfeasibility of an action, but differ in nuance. ようがない・ようもない conveys that there is no way or means to do something. For example, 連絡のしようがない ('There's no way to contact him'). がたい, on the other hand, indicates that something is very difficult to do, often due to factors beyond the speaker's control. For example, 信じがたい話だ ('It's a story that is hard to believe').",
+        "first_relatable": {
+          "id": 434,
+          "slug": "ようがない・ようもない",
+          "title": "ようがない・ようもない",
+          "meaning": "There's no way to, It's impossible to",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 257,
+          "slug": "がたい",
+          "title": "がたい",
+          "meaning": "Hard to, Difficult to",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "753",
+      "type": "related_content",
+      "attributes": {
+        "id": 753,
+        "relationship_type": "related",
+        "body": "These both express impossibility, but in different ways. はずがない asserts a strong disbelief based on knowledge, like 雨が降るはずがない ('It can't possibly rain.'). ようがない・ようもない focuses on the lack of a method, as in 連絡のしようがない ('There's no way to contact them.').",
+        "first_relatable": {
+          "id": 161,
+          "slug": "はずがない",
+          "title": "はずがない",
+          "meaning": "Hardly possible, Cannot be, Highly unlikely, Improbable",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 434,
+          "slug": "ようがない・ようもない",
+          "title": "ようがない・ようもない",
+          "meaning": "There's no way to, It's impossible to",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1406 @@
+{
+  "data": {
+    "id": "6",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 6,
+      "level": "JLPT5",
+      "lesson_id": 1,
+      "part_of_speech": "助詞",
+      "register": "一般",
+      "word_type": "格助詞",
+      "slug": "の",
+      "nuance": "<strong>所有（しょゆう）権（けん）</strong>や、(A)と(B)の<strong>関係（かんけい）性（せい）</strong>を表（あらわ）すときに使（つか）われる構造（こうぞう）。",
+      "grammar_order": 8,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 7,
+        "title": "いい",
+        "slug": "いい"
+      },
+      "previous_grammar_point": {
+        "id": 19,
+        "title": "あれ",
+        "slug": "あれ"
+      },
+      "lesson_count": "8/12",
+      "title": "の",
+      "furigana": "の",
+      "meaning": "Indicates possession",
+      "nuance_translation": "A structure used for highlighting <strong>ownership</strong> or a <strong>relationship</strong> between (A) and (B).",
+      "rare_kanji_warning": null,
+      "caution": "(A) の (B) = (B) belongs to, or is a quality of (A)",
+      "polite_structure": null,
+      "casual_structure": "Noun (A) + <strong>の</strong> + Noun (B)",
+      "part_of_speech_translation": "Particle",
+      "register_translation": "Standard",
+      "word_type_translation": "Case Marking Particle",
+      "discourse_link": "https://community.bunpro.jp/t/discussion-topic/478",
+      "metadata": "の, no, particle, case-marking particle, possession, relationship, nominalizer"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154705",
+            "type": "study_question"
+          },
+          {
+            "id": "154707",
+            "type": "study_question"
+          },
+          {
+            "id": "612",
+            "type": "study_question"
+          },
+          {
+            "id": "1515",
+            "type": "study_question"
+          },
+          {
+            "id": "154706",
+            "type": "study_question"
+          },
+          {
+            "id": "154704",
+            "type": "study_question"
+          },
+          {
+            "id": "1518",
+            "type": "study_question"
+          },
+          {
+            "id": "611",
+            "type": "study_question"
+          },
+          {
+            "id": "6",
+            "type": "study_question"
+          },
+          {
+            "id": "613",
+            "type": "study_question"
+          },
+          {
+            "id": "614",
+            "type": "study_question"
+          },
+          {
+            "id": "1513",
+            "type": "study_question"
+          },
+          {
+            "id": "1514",
+            "type": "study_question"
+          },
+          {
+            "id": "1519",
+            "type": "study_question"
+          },
+          {
+            "id": "1517",
+            "type": "study_question"
+          },
+          {
+            "id": "1516",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "8",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "4",
+            "type": "offline_resource"
+          },
+          {
+            "id": "67",
+            "type": "offline_resource"
+          },
+          {
+            "id": "737",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1131",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1257",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1343",
+            "type": "related_content"
+          },
+          {
+            "id": "1341",
+            "type": "related_content"
+          },
+          {
+            "id": "78",
+            "type": "related_content"
+          },
+          {
+            "id": "1368",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "11",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2256",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154705",
+      "type": "study_question",
+      "attributes": {
+        "id": 154705,
+        "content": "今日（きょう）<span class='study-area-input'>____</span>夜（よる）。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/今日の夜。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Today<strong>'s</strong> night. (Not very natural in English, but 'tonight' is an attribute of 'today' in Japanese, so it works)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 6,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154707",
+      "type": "study_question",
+      "attributes": {
+        "id": 154707,
+        "content": "私（わたし）<span class='study-area-input'>____</span>好（す）きなお酒（さけ）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>ビール<span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私の好きなお酒はビールです。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>My</strong> preferred drink is beer. (Alcoholic drink)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 6,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "612",
+      "type": "study_question",
+      "attributes": {
+        "id": 612,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='4'>も</span>私（わたし）<span class='study-area-input'>____</span>ペン<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>所有（しょゆう）権（けん）</strong>や、(A)と(B)の<strong>関係（かんけい）性（せい）</strong>を表（あらわ）すときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/6/male_audio/09-これも私のペンです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これも私のペンです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "が": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "も": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "に": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          }
+        },
+        "translation": "This is also <strong>my</strong> pen.",
+        "nuance_translation": "A structure used for highlighting <strong>ownership</strong> or a <strong>relationship</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 6,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1515",
+      "type": "study_question",
+      "attributes": {
+        "id": 1515,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span>お父（とう）さん<span class='study-area-input'>____</span>時計（とけい）<span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>所有（しょゆう）権（けん）</strong>や、(A)と(B)の<strong>関係（かんけい）性（せい）</strong>を表（あらわ）すときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/6/male_audio/04-これはお父さんの時計だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これはお父さんの時計だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "が": {
+            "en": "A different particle is required here",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "を": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "も": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "に": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "か": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          }
+        },
+        "translation": "This is dad<strong>'s</strong> watch (clock).",
+        "nuance_translation": "A structure used for highlighting <strong>ownership</strong> or a <strong>relationship</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 6,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154706",
+      "type": "study_question",
+      "attributes": {
+        "id": 154706,
+        "content": "私（わたし）<span data-gp-id=\"10\">が</span>好（す）きなお酒（さけ）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>ビール<span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私が好きなお酒はビールです。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "My preferred drink is beer. (Alcoholic drink)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 6,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154704",
+      "type": "study_question",
+      "attributes": {
+        "id": 154704,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"5\">これ</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span>妹（いもうと）<span class='study-area-input'>____</span>車（くるま）<span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これは妹の車です。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This is my younger sister<strong>'s</strong> car.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 6,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1518",
+      "type": "study_question",
+      "attributes": {
+        "id": 1518,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span>お母（かあ）さん<span class='study-area-input'>____</span>部屋（へや）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>所有（しょゆう）権（けん）</strong>や、(A)と(B)の<strong>関係（かんけい）性（せい）</strong>を表（あらわ）すときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/6/male_audio/03-これはお母さんの部屋です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これはお母さんの部屋です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "が": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "を": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "も": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "に": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "か": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          }
+        },
+        "translation": "This is mom<strong>'s</strong> room.",
+        "nuance_translation": "A structure used for highlighting <strong>ownership</strong> or a <strong>relationship</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 6,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "611",
+      "type": "study_question",
+      "attributes": {
+        "id": 611,
+        "content": "<span class='gp-popout' data-gp-id='19'>あれ</span><span class='gp-popout' data-gp-id='3'>は</span>私（わたし）<span class='study-area-input'>____</span>ペン<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>所有（しょゆう）権（けん）</strong>や、(A)と(B)の<strong>関係（かんけい）性（せい）</strong>を表（あらわ）すときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/6/male_audio/02-あれは私のペンです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれは私のペンです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "が": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "も": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "を": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          }
+        },
+        "translation": "That over there is <strong>my</strong> pen.",
+        "nuance_translation": "A structure used for highlighting <strong>ownership</strong> or a <strong>relationship</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 6,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6",
+      "type": "study_question",
+      "attributes": {
+        "id": 6,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span>私（わたし）<span class='study-area-input'>____</span>猫（ねこ）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>所有（しょゆう）権（けん）</strong>や、(A)と(B)の<strong>関係（かんけい）性（せい）</strong>を表（あらわ）すときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/6/male_audio/07-これは私の猫です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これは私の猫です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "が": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "も": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "に": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "を": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "か": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          }
+        },
+        "translation": "This is <strong>my</strong> cat.",
+        "nuance_translation": "A structure used for highlighting <strong>ownership</strong> or a <strong>relationship</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 6,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "613",
+      "type": "study_question",
+      "attributes": {
+        "id": 613,
+        "content": "先生（せんせい）<span class='study-area-input'>____</span>傘（かさ）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>所有（しょゆう）権（けん）</strong>や、(A)と(B)の<strong>関係（かんけい）性（せい）</strong>を表（あらわ）すときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/6/male_audio/11-先生の傘です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/先生の傘です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "が": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "も": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "を": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "に": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "か": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          }
+        },
+        "translation": "(It) is the teacher<strong>'s</strong> umbrella.",
+        "nuance_translation": "A structure used for highlighting <strong>ownership</strong> or a <strong>relationship</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 6,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "614",
+      "type": "study_question",
+      "attributes": {
+        "id": 614,
+        "content": "あなた<span class='study-area-input'>____</span>名前（なまえ）<span class='gp-popout' data-gp-id='3'>は</span>？",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>所有（しょゆう）権（けん）</strong>や、(A)と(B)の<strong>関係（かんけい）性（せい）</strong>を表（あらわ）すときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/6/male_audio/01-あなたの名前は.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あなたの名前は？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "が": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "も": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "を": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "に": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "か": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          }
+        },
+        "translation": "<strong>Your</strong> name is?",
+        "nuance_translation": "A structure used for highlighting <strong>ownership</strong> or a <strong>relationship</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 6,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1513",
+      "type": "study_question",
+      "attributes": {
+        "id": 1513,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span>、私（わたし）<span class='study-area-input'>____</span>兄（あに）<span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>所有（しょゆう）権（けん）</strong>や、(A)と(B)の<strong>関係（かんけい）性（せい）</strong>を表（あらわ）すときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/6/male_audio/06-これは私の兄だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これは、私の兄だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "が": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "を": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "も": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "に": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "か": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          }
+        },
+        "translation": "This is <strong>my</strong> older brother.",
+        "nuance_translation": "A structure used for highlighting <strong>ownership</strong> or a <strong>relationship</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 6,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1514",
+      "type": "study_question",
+      "attributes": {
+        "id": 1514,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span>生徒（せいと）<span class='study-area-input'>____</span>ノート<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>所有（しょゆう）権（けん）</strong>や、(A)と(B)の<strong>関係（かんけい）性（せい）</strong>を表（あらわ）すときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/6/male_audio/05-これは生徒のノートです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これは生徒のノートです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "が": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "を": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "も": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "に": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "か": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          }
+        },
+        "translation": "This is the student<strong>'s</strong> notebook.",
+        "nuance_translation": "A structure used for highlighting <strong>ownership</strong> or a <strong>relationship</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 6,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1519",
+      "type": "study_question",
+      "attributes": {
+        "id": 1519,
+        "content": "駅（えき）<span class='study-area-input'>____</span>ホーム。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>所有（しょゆう）権（けん）</strong>や、(A)と(B)の<strong>関係（かんけい）性（せい）</strong>を表（あらわ）すときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/6/male_audio/12-駅のホーム.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/駅のホーム。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "が": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "を": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "も": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "に": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "か": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          }
+        },
+        "translation": "The station<strong>'s</strong> platform.",
+        "nuance_translation": "A structure used for highlighting <strong>ownership</strong> or a <strong>relationship</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 6,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1517",
+      "type": "study_question",
+      "attributes": {
+        "id": 1517,
+        "content": "今日（きょう）<span class='study-area-input'>____</span>夜（よる）。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>所有（しょゆう）権（けん）</strong>や、(A)と(B)の<strong>関係（かんけい）性（せい）</strong>を表（あらわ）すときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/6/male_audio/10-今日の夜.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/今日の夜。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "が": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "を": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "も": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "に": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "か": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          }
+        },
+        "translation": "Today<strong>'s</strong> night (tonight).",
+        "nuance_translation": "A structure used for highlighting <strong>ownership</strong> or a <strong>relationship</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 6,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1516",
+      "type": "study_question",
+      "attributes": {
+        "id": 1516,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='4'>も</span>生徒（せいと）<span class='study-area-input'>____</span>ノート<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "の",
+        "alternate_grammar": [],
+        "kanji_answer": "の",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>所有（しょゆう）権（けん）</strong>や、(A)と(B)の<strong>関係（かんけい）性（せい）</strong>を表（あらわ）すときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/6/male_audio/08-これも生徒のノートです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これも生徒のノートです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "が": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "を": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "も": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "わ": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "に": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "か": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          }
+        },
+        "translation": "This is also the student<strong>'s</strong> notebook.",
+        "nuance_translation": "A structure used for highlighting <strong>ownership</strong> or a <strong>relationship</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 6,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8",
+      "type": "writeup",
+      "attributes": {
+        "id": 8,
+        "body_ja": "",
+        "body": "<p>From the perspective of English, <span data-gp-id='6'>の</span> has several different meanings. It can indicate possession, like putting (A)'s on the end of a word. In Japanese, however, the meaning is a bit broader, and shows that (B) is an attribute/possession of (A).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154704'></li>\r\n<li data-study-question='154705'></li>\r\n</ul>\r\n\r\n<p>In the first sentence, we can see that <span data-gp-id='6'>の</span> is showing ownership, however in the second sentence, it is simply showing a relationship between (A) and (B).</p>\r\n<p><span data-gp-id='6'>の</span> is also often used in the same way as <span data-gp-id='10'>が</span>, to highlight the subject of a statement. Our lesson for <span data-gp-id='10'>が</span> will be covered separately.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154706'></li>\r\n<li data-study-question='154707'></li>\r\n</ul>\r\n\r\nBoth of these examples are slightly advanced and use adjectives, but don't worry, we will be covering them next!</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p><span data-gp-id='6'>の</span> is usually used after nouns, but can also be used after other types of words, specifically when it is transforming them into a noun-like phrase. This is called <span data-gp-id='16'>nominalization</span> in English. We will cover this in detail in the <span data-gp-id='16'>の - Nominalization</span> grammar point.</p></section>"
+      }
+    },
+    {
+      "id": "4",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 4,
+        "source": "Genki I",
+        "location": "Page 16",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "67",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 67,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 44",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "737",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 737,
+        "source": "みんなの日本語 I",
+        "location": "Page 14 [CH 1]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1131",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1131,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 312",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1257",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1257,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 70",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "11",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 11,
+        "site": "Tae Kim",
+        "description": "The 「の」 particle",
+        "link": "https://guidetojapanese.org/learn/grammar/nounparticles",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2256",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2256,
+        "site": "Imabi",
+        "description": "The Particles の & と",
+        "link": "https://imabi.org/the-particles-%E3%81%AE-%E3%81%A8/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1343",
+      "type": "related_content",
+      "attributes": {
+        "id": 1343,
+        "relationship_type": "related",
+        "body": "がある + Noun expresses possession, using a phrase with a noun, the particle が, and the verb ある to describe another noun (e.g., ピアノがあるレストラン = 'a restaurant with a piano'). In these cases, が can be replaced with の without changing the meaning (e.g., ピアノのあるレストラン).",
+        "first_relatable": {
+          "id": 355,
+          "slug": "がある-noun",
+          "title": "がある + Noun",
+          "meaning": "Noun (B) that has Noun (A), Noun (B) with Noun (A)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 6,
+          "slug": "の",
+          "title": "の",
+          "meaning": "Indicates possession",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1341",
+      "type": "related_content",
+      "attributes": {
+        "id": 1341,
+        "relationship_type": "misc",
+        "body": "な-Adjectives describe nouns and connect to them using な (e.g., 好きな本 = 'a book I like'). の also connects nouns, with the first noun describing the second (e.g., 日本人の学生 = 'a Japanese student'). The choice between な and の depends on the type of word, though some words can function as both な-Adjectives or nouns with different nuances (e.g., 幸せな日 vs. 幸せの理由).",
+        "first_relatable": {
+          "id": 954,
+          "slug": "な-adjective-noun",
+          "title": "な-Adjective + Noun",
+          "meaning": "Describing a noun",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 6,
+          "slug": "の",
+          "title": "の",
+          "meaning": "Indicates possession",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "78",
+      "type": "related_content",
+      "attributes": {
+        "id": 78,
+        "relationship_type": "related",
+        "body": "の shows possession, like the English 's' (e.g., ケンジの本 = 'Kenji's book'). が marks the subject of a clause, often the doer of an action or the one with a certain trait. In modifying phrases, の and が are sometimes interchangeable without changing the meaning—for example, 先生が書いた本 and 先生の書いた本 both mean 'the book the teacher wrote.'",
+        "first_relatable": {
+          "id": 16,
+          "slug": "のは",
+          "title": "の",
+          "meaning": "Verb nominalizer, The one who..., That which...",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 6,
+          "slug": "の",
+          "title": "の",
+          "meaning": "Indicates possession",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1368",
+      "type": "related_content",
+      "attributes": {
+        "id": 1368,
+        "relationship_type": "synonym",
+        "body": "The particle の connects two nouns, usually to indicate possession or describe a noun. For example, 私の本 means 'my book.' When used with the pronoun の (meaning 'one'), the second の is dropped. For example, to say 'It's mine,' you would say 私のです, not 私ののです.",
+        "first_relatable": {
+          "id": 720,
+          "slug": "の-noun-ommission",
+          "title": "の",
+          "meaning": "Possessive use (Noun omission)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 6,
+          "slug": "の",
+          "title": "の",
+          "meaning": "Indicates possession",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

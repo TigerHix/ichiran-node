@@ -1,0 +1,936 @@
+{
+  "data": {
+    "id": "506",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 506,
+      "level": "JLPT2",
+      "lesson_id": 36,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "それとも",
+      "nuance": "選択肢（せんたくし）が(A)と(B)しかないということを表（あらわ）す表現（ひょうげん）。文字通（もじどお）り、その(A)、(B)<strong>と共（とも）に</strong>。",
+      "grammar_order": 643,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 328,
+        "title": "にしたら",
+        "slug": "にしたら"
+      },
+      "previous_grammar_point": {
+        "id": 568,
+        "title": "に応えて",
+        "slug": "に応えて"
+      },
+      "lesson_count": "11/20",
+      "title": "それとも",
+      "furigana": "それとも",
+      "meaning": "Or, Or else, Rather",
+      "nuance_translation": "A phrase which specifically expresses a choice between only (A) and (B). Literally, <strong>together with that</strong> (A), (B).",
+      "rare_kanji_warning": "",
+      "caution": "Used in questions, where the choice is limited to the two mentioned options.",
+      "polite_structure": "",
+      "casual_structure": "Option (A) + <strong><span class='gp-popout' data-gp-id='11'>それ</span>とも</strong> + Option (B)",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/17589",
+      "metadata": "それとも, soretomo, conjunction, highlight alternative option"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "182130",
+            "type": "study_question"
+          },
+          {
+            "id": "182131",
+            "type": "study_question"
+          },
+          {
+            "id": "3856",
+            "type": "study_question"
+          },
+          {
+            "id": "6759",
+            "type": "study_question"
+          },
+          {
+            "id": "3855",
+            "type": "study_question"
+          },
+          {
+            "id": "6767",
+            "type": "study_question"
+          },
+          {
+            "id": "6766",
+            "type": "study_question"
+          },
+          {
+            "id": "6760",
+            "type": "study_question"
+          },
+          {
+            "id": "182132",
+            "type": "study_question"
+          },
+          {
+            "id": "6761",
+            "type": "study_question"
+          },
+          {
+            "id": "6765",
+            "type": "study_question"
+          },
+          {
+            "id": "3857",
+            "type": "study_question"
+          },
+          {
+            "id": "6762",
+            "type": "study_question"
+          },
+          {
+            "id": "6763",
+            "type": "study_question"
+          },
+          {
+            "id": "6764",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "658",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1160",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "950",
+            "type": "related_content"
+          },
+          {
+            "id": "95",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1121",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1122",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "182130",
+      "type": "study_question",
+      "attributes": {
+        "id": 182130,
+        "content": "今日（きょう）は文法（ぶんぽう）の勉強（べんきょう）をしますか。<span class='study-area-input'>____</span>漢字（かんじ）の勉強（べんきょう）をしますか。",
+        "answer": "それとも",
+        "alternate_grammar": [],
+        "kanji_answer": "それとも",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/今日は文法の勉強をしますか。それとも漢字の勉強をしますか。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Do you want to study grammar today? <strong>Or rather</strong>, do you want to study Kanji?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 506,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182131",
+      "type": "study_question",
+      "attributes": {
+        "id": 182131,
+        "content": "来週（らいしゅう）はどこに行（い）きたい？動物園（どうぶつえん）に行（い）く？<span class='study-area-input'>____</span>家（いえ）でゆっくりする？",
+        "answer": "それとも",
+        "alternate_grammar": [],
+        "kanji_answer": "それとも",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/来週はどこに行きたい？動物園に行く？それとも家でゆっくりする？.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Where do you want to go next week? Do you want to go to the zoo? <strong>Or rather</strong> do you want to relax at home?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 506,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3856",
+      "type": "study_question",
+      "attributes": {
+        "id": 3856,
+        "content": "クレジットカードで払（はら）う？<span class='study-area-input'>____</span>現金（げんきん）で？",
+        "answer": "それとも",
+        "alternate_grammar": [],
+        "kanji_answer": "それとも",
+        "kanji_alt_grammar": [],
+        "nuance": "選択肢（せんたくし）が(A)と(B)しかないということを表（あらわ）す表現（ひょうげん）。文字通（もじどお）り、その(A)、(B)<strong>と共（とも）に</strong>。",
+        "tense": "Contrastive, Inclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/クレジットカードで払う？それとも現金で？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "または": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "もしくは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Are you paying with a credit card? <strong>Or rather</strong>, in cash?",
+        "nuance_translation": "A phrase which specifically expresses a choice between only (A) and (B). Literally, <strong>together with that</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 506,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6759",
+      "type": "study_question",
+      "attributes": {
+        "id": 6759,
+        "content": "苦情（くじょう）を言（い）うべきか、<span class='study-area-input'>____</span>我慢（がまん）すべきか。",
+        "answer": "それとも",
+        "alternate_grammar": [],
+        "kanji_answer": "それとも",
+        "kanji_alt_grammar": [],
+        "nuance": "選択肢（せんたくし）が(A)と(B)しかないということを表（あらわ）す表現（ひょうげん）。文字通（もじどお）り、その(A)、(B)<strong>と共（とも）に</strong>。",
+        "tense": "Contrastive, Inclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/苦情を言うべきか、それとも我慢すべきか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "むしろ": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "それか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "または": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "もしくは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Should we complain? <strong>Or rather</strong>, should we persevere?",
+        "nuance_translation": "A phrase which specifically expresses a choice between only (A) and (B). Literally, <strong>together with that</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 506,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3855",
+      "type": "study_question",
+      "attributes": {
+        "id": 3855,
+        "content": "今夜（こんや）はカラオケに行（い）く？<span class='study-area-input'>____</span>映画館（えいがかん）？",
+        "answer": "それとも",
+        "alternate_grammar": [],
+        "kanji_answer": "それとも",
+        "kanji_alt_grammar": [],
+        "nuance": "選択肢（せんたくし）が(A)と(B)しかないということを表（あらわ）す表現（ひょうげん）。文字通（もじどお）り、その(A)、(B)<strong>と共（とも）に</strong>。",
+        "tense": "Contrastive, Inclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/今夜はカラオケに行く？それとも映画館？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "または": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "もしくは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Are you going to karaoke tonight? <strong>Or rather</strong>, to the cinema?",
+        "nuance_translation": "A phrase which specifically expresses a choice between only (A) and (B). Literally, <strong>together with that</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 506,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6767",
+      "type": "study_question",
+      "attributes": {
+        "id": 6767,
+        "content": "紺（こん）？<span class='study-area-input'>____</span>黒（くろ）？どちらのスーツがいいと思（おも）いますか？",
+        "answer": "それとも",
+        "alternate_grammar": [],
+        "kanji_answer": "それとも",
+        "kanji_alt_grammar": [],
+        "nuance": "選択肢（せんたくし）が(A)と(B)しかないということを表（あらわ）す表現（ひょうげん）。文字通（もじどお）り、その(A)、(B)<strong>と共（とも）に</strong>。",
+        "tense": "Contrastive, Inclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/紺？それとも黒？どちらのスーツがいいと思いますか？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "むしろ": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "それか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "または": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "もしくは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Dark blue, <strong>or rather</strong> black? Which suit do you think is good?",
+        "nuance_translation": "A phrase which specifically expresses a choice between only (A) and (B). Literally, <strong>together with that</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 506,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6766",
+      "type": "study_question",
+      "attributes": {
+        "id": 6766,
+        "content": "白（しろ）胡椒（こしょう）？<span class='study-area-input'>____</span>黒（くろ）胡椒（こしょう）？どちらがいいですか？",
+        "answer": "それとも",
+        "alternate_grammar": [],
+        "kanji_answer": "それとも",
+        "kanji_alt_grammar": [],
+        "nuance": "選択肢（せんたくし）が(A)と(B)しかないということを表（あらわ）す表現（ひょうげん）。文字通（もじどお）り、その(A)、(B)<strong>と共（とも）に</strong>。",
+        "tense": "Contrastive, Inclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/白胡椒？それとも黒胡椒？どちらがいいですか？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "むしろ": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "それか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "または": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "もしくは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "White pepper? <strong>Or rather</strong>, black pepper? Which is good?",
+        "nuance_translation": "A phrase which specifically expresses a choice between only (A) and (B). Literally, <strong>together with that</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 506,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6760",
+      "type": "study_question",
+      "attributes": {
+        "id": 6760,
+        "content": "自分（じぶん）で洗（あら）おうか、<span class='study-area-input'>____</span>クリーニングに出（だ）そうか迷（まよ）うところです。",
+        "answer": "それとも",
+        "alternate_grammar": [],
+        "kanji_answer": "それとも",
+        "kanji_alt_grammar": [],
+        "nuance": "選択肢（せんたくし）が(A)と(B)しかないということを表（あらわ）す表現（ひょうげん）。文字通（もじどお）り、その(A)、(B)<strong>と共（とも）に</strong>。",
+        "tense": "Contrastive, Inclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/自分で洗おうか、それともクリーニングに出そうか迷うところです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "むしろ": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "それか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "または": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "もしくは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I am hesitant. Shall I wash it myself? <strong>Or rather</strong>, shall I send it off to the dry cleaners?",
+        "nuance_translation": "A phrase which specifically expresses a choice between only (A) and (B). Literally, <strong>together with that</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 506,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182132",
+      "type": "study_question",
+      "attributes": {
+        "id": 182132,
+        "content": "今日（きょう）は海（うみ）に行（い）こうか、<span class='study-area-input'>____</span>川（かわ）に行（い）こうか、迷（まよ）うな。",
+        "answer": "それとも",
+        "alternate_grammar": [],
+        "kanji_answer": "それとも",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/今日は海に行こうか、それとも川に行こうか、迷うな。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I don't know whether to go to the ocean <strong>or</strong> the river today.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 506,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6761",
+      "type": "study_question",
+      "attributes": {
+        "id": 6761,
+        "content": "少（すこ）し風邪（かぜ）気味（ぎみ）だ。稽古（けいこ）をすべきか、<span class='study-area-input'>____</span>休（やす）むべきか、微妙（びみょう）だ。",
+        "answer": "それとも",
+        "alternate_grammar": [],
+        "kanji_answer": "それとも",
+        "kanji_alt_grammar": [],
+        "nuance": "選択肢（せんたくし）が(A)と(B)しかないということを表（あらわ）す表現（ひょうげん）。文字通（もじどお）り、その(A)、(B)<strong>と共（とも）に</strong>。",
+        "tense": "Contrastive, Inclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/少し風邪気味だ。稽古をすべきか、それとも休むべきか、微妙だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "むしろ": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "それか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "または": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "もしくは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I am feeling a little sick. It is questionable whether I should practice, <strong>or</strong> (<strong>rather</strong>) should I take it easy.",
+        "nuance_translation": "A phrase which specifically expresses a choice between only (A) and (B). Literally, <strong>together with that</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 506,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6765",
+      "type": "study_question",
+      "attributes": {
+        "id": 6765,
+        "content": "あなたの大学（だいがく）は国立（こくりつ）？<span class='study-area-input'>____</span>私立（しりつ）？",
+        "answer": "それとも",
+        "alternate_grammar": [],
+        "kanji_answer": "それとも",
+        "kanji_alt_grammar": [],
+        "nuance": "選択肢（せんたくし）が(A)と(B)しかないということを表（あらわ）す表現（ひょうげん）。文字通（もじどお）り、その(A)、(B)<strong>と共（とも）に</strong>。",
+        "tense": "Contrastive, Inclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あなたの大学は国立？それとも私立？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "むしろ": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "それか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "または": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "もしくは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Is your university a national one, <strong>or rather</strong> a private one?",
+        "nuance_translation": "A phrase which specifically expresses a choice between only (A) and (B). Literally, <strong>together with that</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 506,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3857",
+      "type": "study_question",
+      "attributes": {
+        "id": 3857,
+        "content": "生（い）きるべきか、<span class='study-area-input'>____</span>死（し）ぬべきか。それが問題（もんだい）だ。",
+        "answer": "それとも",
+        "alternate_grammar": [],
+        "kanji_answer": "それとも",
+        "kanji_alt_grammar": [],
+        "nuance": "選択肢（せんたくし）が(A)と(B)しかないということを表（あらわ）す表現（ひょうげん）。文字通（もじどお）り、その(A)、(B)<strong>と共（とも）に</strong>。",
+        "tense": "Contrastive, Inclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/生きるべきか、それとも死ぬべきか。それが問題だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "または": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "もしくは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To live, <strong>or</strong> to die. That is the question.",
+        "nuance_translation": "A phrase which specifically expresses a choice between only (A) and (B). Literally, <strong>together with that</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 506,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6762",
+      "type": "study_question",
+      "attributes": {
+        "id": 6762,
+        "content": "敬語（けいご）を使（つか）うべきか、<span class='study-area-input'>____</span>タメ口（ぐち）で親（した）しさをアピールすべきか。",
+        "answer": "それとも",
+        "alternate_grammar": [],
+        "kanji_answer": "それとも",
+        "kanji_alt_grammar": [],
+        "nuance": "選択肢（せんたくし）が(A)と(B)しかないということを表（あらわ）す表現（ひょうげん）。文字通（もじどお）り、その(A)、(B)<strong>と共（とも）に</strong>。",
+        "tense": "Contrastive, Inclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/敬語を使うべきか、それともタメ口で親しさをアピールすべきか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "むしろ": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "それか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "または": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "もしくは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Should I use keigo? <strong>Or rather</strong>, should I appeal to their intimate side and speak frankly?",
+        "nuance_translation": "A phrase which specifically expresses a choice between only (A) and (B). Literally, <strong>together with that</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 506,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6763",
+      "type": "study_question",
+      "attributes": {
+        "id": 6763,
+        "content": "継続（けいぞく）すべきか、<span class='study-area-input'>____</span>心（こころ）を鬼（おに）にして打（う）ち切（き）るべきか…",
+        "answer": "それとも",
+        "alternate_grammar": [],
+        "kanji_answer": "それとも",
+        "kanji_alt_grammar": [],
+        "nuance": "選択肢（せんたくし）が(A)と(B)しかないということを表（あらわ）す表現（ひょうげん）。文字通（もじどお）り、その(A)、(B)<strong>と共（とも）に</strong>。",
+        "tense": "Contrastive, Inclusive",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "むしろ": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "それか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "または": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "もしくは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Should I continue? <strong>Or rather</strong>, should I harden my heart and abort.",
+        "nuance_translation": "A phrase which specifically expresses a choice between only (A) and (B). Literally, <strong>together with that</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 506,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6764",
+      "type": "study_question",
+      "attributes": {
+        "id": 6764,
+        "content": "競馬（けいば）<span class='study-area-input'>____</span>競輪（けいりん）？今日（きょう）はどちらに行（い）くんですか？",
+        "answer": "それとも",
+        "alternate_grammar": [],
+        "kanji_answer": "それとも",
+        "kanji_alt_grammar": [],
+        "nuance": "選択肢（せんたくし）が(A)と(B)しかないということを表（あらわ）す表現（ひょうげん）。文字通（もじどお）り、その(A)、(B)<strong>と共（とも）に</strong>。",
+        "tense": "Contrastive, Inclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/競馬それとも競輪？今日はどちらに行くんですか？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "むしろ": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "それか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "または": {
+            "en": "Let's try a similar phrase that uses a different word type.",
+            "es": ""
+          },
+          "あるいは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "もしくは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Horse racing, <strong>or rather</strong> bicycle racing? Which are you going to today?",
+        "nuance_translation": "A phrase which specifically expresses a choice between only (A) and (B). Literally, <strong>together with that</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 506,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "658",
+      "type": "writeup",
+      "attributes": {
+        "id": 658,
+        "body_ja": "<p>「<span data-gp-id='506'>それとも</span>」は「あるいは」や「もしくは」と同（おな）じように選択肢（せんたくし）を示（しめ）す接続詞（せつぞくし）で、(A) か (B) のどちらかを選（えら）ぶ場合（ばあい）に使（つか）われます。「それとも」は「それ」と助詞（じょし）の「と」と「も」が組（く）み合（あ）わさってできています。この文型（ぶんけい）は選択肢（せんたくし）が (A) か (B) の二（ふた）つに限（かぎ）られている場合（ばあい）にのみ使（つか）われます。</p>\r\n\r\n<p>「<span data-gp-id='506'>それとも</span>」は読点（どくてん）の後（あと）か、新（あたら）しい文（ぶん）の先頭（せんとう）に置（お）かれます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182130'>\r\n<li data-study-question='182131'>\r\n<li data-study-question='182132'>\r\n</ul>\r\n\r\n<p>(A) と (B) には対照的（たいしょうてき）な内容（ないよう）が入（はい）ることが多（おお）いですが、必（かなら）ずしもそうなるわけではありません。</p>",
+        "body": "<p><span data-gp-id='506'>それとも</span> is a conjunction in Japanese that may be translated as 'or', or 'otherwise'. It is used to highlight alternative options or choices between (A) and (B). <span data-gp-id='506'>それとも</span> is a combination of それ, and the particles と, and も. This grammar structure will only be used when the options are limited to either (A), or (B).</p>\r\n\r\n<p><span data-gp-id='506'>それとも</span> will appear either after a comma, or at the beginning of new sentences.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182130'>\r\n<li data-study-question='182131'>\r\n<li data-study-question='182132'>\r\n</ul>\r\n\r\n<p>In many cases, (A) and (B) will be opposites of each other. However, this is not a requirement for using <span data-gp-id='506'>それとも</span>.</p>"
+      }
+    },
+    {
+      "id": "1160",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1160,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 421",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1121",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1121,
+        "site": "Japanese Stack Exchange",
+        "description": "それとも, または, もしくは and あるいは",
+        "link": "https://japanese.stackexchange.com/questions/15377/differences-between-それとも-または-もしくは-あるいは",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1122",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1122,
+        "site": "JapaneseTest4You",
+        "description": "Additional Breakdown and Example Sentences",
+        "link": "http://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-それとも-soretomo/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "950",
+      "type": "related_content",
+      "attributes": {
+        "id": 950,
+        "relationship_type": "misc",
+        "body": "Both むしろ and それとも involve choices, but in different ways. むしろ is used to clarify or emphasize a preferred option, e.g. ワインよりむしろビールが飲みたい ('I'd rather have beer than wine'). それとも offers neutral choices in questions, e.g. ワインにする？それともビール？ ('Will you have wine? Or beer?').",
+        "first_relatable": {
+          "id": 459,
+          "slug": "むしろ",
+          "title": "むしろ",
+          "meaning": "Rather, Instead, Over",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 506,
+          "slug": "それとも",
+          "title": "それとも",
+          "meaning": "Or, Or else, Rather",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "95",
+      "type": "related_content",
+      "attributes": {
+        "id": 95,
+        "relationship_type": "synonym",
+        "body": "Both か and それとも present alternatives. か directly follows nouns to mean 'or' (e.g., 今日か明日休みます = 'I'll take off today or tomorrow'). In contrast, それとも means 'or' as well, but is used at the start of sentences or questions, not directly after nouns (e.g., 今日休む？それとも明日にする？ = 'Will you take off today? Or [will you do it] tomorrow?').",
+        "first_relatable": {
+          "id": 33,
+          "slug": "か-or",
+          "title": "か",
+          "meaning": "Or",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 506,
+          "slug": "それとも",
+          "title": "それとも",
+          "meaning": "Or, Or else, Rather",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

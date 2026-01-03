@@ -1,0 +1,912 @@
+{
+  "data": {
+    "id": "383",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 383,
+      "level": "JLPT4",
+      "lesson_id": 15,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "いか",
+      "nuance": "(A)が<strong>最大限（さいだいげん）</strong>で、それより<strong>減（へ）ったり少（すく）なくなったりする</strong>ことを表現（ひょうげん）するフレーズ。",
+      "grammar_order": 206,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 390,
+        "title": "いがい",
+        "slug": "いがい"
+      },
+      "previous_grammar_point": {
+        "id": 382,
+        "title": "以上 ①",
+        "slug": "以上1"
+      },
+      "lesson_count": "7/20",
+      "title": "いか",
+      "furigana": "以下（いか）",
+      "meaning": "Less than (or equal to), Under・(and) below, Any less・fewer, Not exceeding",
+      "nuance_translation": "A structure which highlights that (A) is the <strong>maximum amount</strong>, for which something is <strong>less than</strong> or <strong>under</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "Actual Amount ≤ Amount + Counter",
+      "polite_structure": "",
+      "casual_structure": "Noun + Amount + <strong>以下（いか）</strong><br><span class='gp-popout' data-gp-id='11'>それ</span><sup>(1)</sup> +  <strong>以下（いか）</strong><br><br><sup>(1)</sup> <span class='gp-popout' data-gp-id='5'>これ</span>、<span class='gp-popout' data-gp-id='19'>あれ</span>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10022",
+      "metadata": "いか, 以下, ika, noun"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "1369",
+            "type": "study_question"
+          },
+          {
+            "id": "180489",
+            "type": "study_question"
+          },
+          {
+            "id": "180490",
+            "type": "study_question"
+          },
+          {
+            "id": "180491",
+            "type": "study_question"
+          },
+          {
+            "id": "180492",
+            "type": "study_question"
+          },
+          {
+            "id": "3087",
+            "type": "study_question"
+          },
+          {
+            "id": "3089",
+            "type": "study_question"
+          },
+          {
+            "id": "1368",
+            "type": "study_question"
+          },
+          {
+            "id": "3092",
+            "type": "study_question"
+          },
+          {
+            "id": "3094",
+            "type": "study_question"
+          },
+          {
+            "id": "1367",
+            "type": "study_question"
+          },
+          {
+            "id": "3088",
+            "type": "study_question"
+          },
+          {
+            "id": "3090",
+            "type": "study_question"
+          },
+          {
+            "id": "3091",
+            "type": "study_question"
+          },
+          {
+            "id": "3093",
+            "type": "study_question"
+          },
+          {
+            "id": "3095",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "204",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "504",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "717",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "849",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "848",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "1369",
+      "type": "study_question",
+      "attributes": {
+        "id": 1369,
+        "content": "８０（はちじゅっ）点（てん）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='123'>なら</span>、<span class='gp-popout' data-gp-id='42'>もう</span>一回（いっかい）テスト<span class='gp-popout' data-gp-id='21'>を</span>受（う）け<span class='gp-popout' data-gp-id='86'>なくてはいけない</span>。",
+        "answer": "いか",
+        "alternate_grammar": [],
+        "kanji_answer": "以下（いか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>最大限（さいだいげん）</strong>で、それより<strong>減（へ）ったり少（すく）なくなったりする</strong>ことを表現（ひょうげん）するフレーズ。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/383/male_audio/230303_1352.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/８０点以下なら、もう一回テストを受けなくてはいけない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みまん": {
+            "en": "未満 means 'less than'. Let’s try a word that technically means 'less than or equal to' for numbers.",
+            "es": "未満 significa 'menos que'. Prueba con una palabra que significa 'menor o igual que' para números."
+          }
+        },
+        "wrong_answers": {
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いがい": {
+            "en": "いがい means 'other than'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "If you get <strong>80 points or less</strong>, you have to take the test one more time.",
+        "nuance_translation": "A structure which highlights that (A) is the <strong>maximum amount</strong>, for which something is <strong>less than</strong> or <strong>under</strong>.",
+        "extra_info": "",
+        "reviewable_id": 383,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180489",
+      "type": "study_question",
+      "attributes": {
+        "id": 180489,
+        "content": "１７（じゅうなな）歳（さい）<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"6\">の</span>方（かた）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>保護者（ほごしゃ）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>方（かた）<span class=\"gp-popout\" data-gp-id=\"955\">と</span><span class=\"gp-popout\" data-gp-id=\"39\">来（き）</span><span class=\"gp-popout\" data-gp-id=\"60\">てください</span>。",
+        "answer": "いか",
+        "alternate_grammar": [],
+        "kanji_answer": "以下（いか）",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/１７歳以下の方は保護者の方と来てください。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "For those of the ages 17 <strong>and under</strong>, please come with a guardian.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 383,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180490",
+      "type": "study_question",
+      "attributes": {
+        "id": 180490,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"30\">この</span>車（くるま）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>３０（さんじゅう）万円（まんえん）<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"40\">だった</span>。",
+        "answer": "いか",
+        "alternate_grammar": [],
+        "kanji_answer": "以下（いか）",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この車は３０万円以下だった。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This car was <strong>under</strong> 300,000 yen.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 383,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180491",
+      "type": "study_question",
+      "attributes": {
+        "id": 180491,
+        "content": "<span class='study-area-input'>____</span>同文（どうぶん）。",
+        "answer": "いか",
+        "alternate_grammar": [],
+        "kanji_answer": "以下（いか）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/以下同文。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>The rest</strong> is the same. (Usually seen in documents to notify the reader that the rest of the document basically repeats what has already been said)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 383,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180492",
+      "type": "study_question",
+      "attributes": {
+        "id": 180492,
+        "content": "空港（くうこう）<span class=\"gp-popout\" data-gp-id=\"32\">に</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span><span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"6\">の</span>もの<span class=\"gp-popout\" data-gp-id=\"21\">を</span>持（も）って来（き）<span class=\"gp-popout\" data-gp-id=\"60\">てください</span>。",
+        "answer": "いか",
+        "alternate_grammar": [],
+        "kanji_answer": "以下（いか）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/空港には以下のものを持って来てください。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Please bring <strong>the following</strong> to the airport.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 383,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3087",
+      "type": "study_question",
+      "attributes": {
+        "id": 3087,
+        "content": "五千（ごせん）円（えん）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='6'>の</span>コーヒーメーカー<span class='gp-popout' data-gp-id='13'>がない</span><span class='gp-popout' data-gp-id='17'>んです</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "いか",
+        "alternate_grammar": [],
+        "kanji_answer": "以下（いか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>最大限（さいだいげん）</strong>で、それより<strong>減（へ）ったり少（すく）なくなったりする</strong>ことを表現（ひょうげん）するフレーズ。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/383/male_audio/230303_1352_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/五千円以下のコーヒーメーカーがないんですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みまん": {
+            "en": "未満 means 'less than'. Let’s try a word that technically means 'less than or equal to' for numbers.",
+            "es": "未満 significa 'menos que'. Prueba con una palabra que significa 'menor o igual que' para números."
+          },
+          "いない": {
+            "en": "Let's try a different word here.",
+            "es": "Prueba con otra palabra."
+          }
+        },
+        "wrong_answers": {
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いがい": {
+            "en": "いがい means 'other than'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Are there no coffee makers <strong>below</strong> 5000 yen? (<strong>not exceeding</strong>)",
+        "nuance_translation": "A structure which highlights that (A) is the <strong>maximum amount</strong>, for which something is <strong>less than</strong> or <strong>under</strong>.",
+        "extra_info": "",
+        "reviewable_id": 383,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3089",
+      "type": "study_question",
+      "attributes": {
+        "id": 3089,
+        "content": "残（のこ）っ<span class='gp-popout' data-gp-id='357'>ている</span>ジュース<span class='gp-popout' data-gp-id='3'>は</span>十（じゅっ）本（ぽん）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "いか",
+        "alternate_grammar": [],
+        "kanji_answer": "以下（いか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>最大限（さいだいげん）</strong>で、それより<strong>減（へ）ったり少（すく）なくなったりする</strong>ことを表現（ひょうげん）するフレーズ。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/383/male_audio/230303_1353_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/残っているジュースは十本以下だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みまん": {
+            "en": "未満 means 'less than'. Let’s try a word that technically means 'less than or equal to' for numbers.",
+            "es": "未満 significa 'menos que'. Prueba con una palabra que significa 'menor o igual que' para números."
+          }
+        },
+        "wrong_answers": {
+          "しか": {
+            "en": "しか is closer to 'nothing but' and used with verbs in their negative form, so it is ungrammatical here. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "There are <strong>fewer than 10</strong> juices left. (<strong>under・not more than</strong>)",
+        "nuance_translation": "A structure which highlights that (A) is the <strong>maximum amount</strong>, for which something is <strong>less than</strong> or <strong>under</strong>.",
+        "extra_info": "",
+        "reviewable_id": 383,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1368",
+      "type": "study_question",
+      "attributes": {
+        "id": 1368,
+        "content": "日本（にほん）で<span class='gp-popout' data-gp-id='3'>は</span>１７（じゅうなな）歳（さい）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='6'>の</span>人（ひと）<span class='gp-popout' data-gp-id='3'>は</span>運転（うんてん）<span class='gp-popout' data-gp-id='10'>が</span>出来（でき）<span class='gp-popout' data-gp-id='51'>ない</span>。",
+        "answer": "いか",
+        "alternate_grammar": [],
+        "kanji_answer": "以下（いか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>最大限（さいだいげん）</strong>で、それより<strong>減（へ）ったり少（すく）なくなったりする</strong>ことを表現（ひょうげん）するフレーズ。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/383/male_audio/230303_1351_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/日本では１７歳以下の人は運転が出来ない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みまん": {
+            "en": "未満 means 'less than'. Let’s try a word that technically means 'less than or equal to' for numbers.",
+            "es": "未満 significa 'menos que'. Prueba con una palabra que significa 'menor o igual que' para números."
+          }
+        },
+        "wrong_answers": {
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いがい": {
+            "en": "いがい means 'other than'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          },
+          "だい": {
+            "en": "We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "In Japan, those <strong>17 or younger</strong> cannot drive.",
+        "nuance_translation": "A structure which highlights that (A) is the <strong>maximum amount</strong>, for which something is <strong>less than</strong> or <strong>under</strong>.",
+        "extra_info": "",
+        "reviewable_id": 383,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3092",
+      "type": "study_question",
+      "attributes": {
+        "id": 3092,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='6'>の</span>大学（だいがく）<span class='gp-popout' data-gp-id='52'>から</span>日本（にほん）に留学（りゅうがく）した<span class='gp-popout' data-gp-id='16'>のは</span>１０人（じゅうにん）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "いか",
+        "alternate_grammar": [],
+        "kanji_answer": "以下（いか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>最大限（さいだいげん）</strong>で、それより<strong>減（へ）ったり少（すく）なくなったりする</strong>ことを表現（ひょうげん）するフレーズ。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/383/male_audio/230303_1354.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/私の大学から日本に留学したのは１０人以下です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みまん": {
+            "en": "未満 means 'less than'. Let’s try a word that technically means 'less than or equal to' for numbers.",
+            "es": "未満 significa 'menos que'. Prueba con una palabra que significa 'menor o igual que' para números."
+          }
+        },
+        "wrong_answers": {
+          "しかない": {
+            "en": "しかない is closer to 'nothing but'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Fewer than 10</strong> people from my college studied abroad in Japan. (<strong>not more than</strong>)",
+        "nuance_translation": "A structure which highlights that (A) is the <strong>maximum amount</strong>, for which something is <strong>less than</strong> or <strong>under</strong>.",
+        "extra_info": "",
+        "reviewable_id": 383,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3094",
+      "type": "study_question",
+      "attributes": {
+        "id": 3094,
+        "content": "<span class='vocab-popout' data-vocab-id='849'>私（わたし）</span><span class='gp-popout' data-gp-id='3'>は</span>テストで９８（きゅうじゅうはっ）点（てん）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='21'>を</span>取（と）ったことがありません。",
+        "answer": "いか",
+        "alternate_grammar": [],
+        "kanji_answer": "以下（いか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>最大限（さいだいげん）</strong>で、それより<strong>減（へ）ったり少（すく）なくなったりする</strong>ことを表現（ひょうげん）するフレーズ。",
+        "tense": "Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/私はテストで９８点以下を取ったことがありません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みまん": {
+            "en": "未満 means 'less than'. Let’s try a word that technically means 'less than or equal to' for numbers.",
+            "es": "未満 significa 'menos que'. Prueba con una palabra que significa 'menor o igual que' para números."
+          }
+        },
+        "wrong_answers": {
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いがい": {
+            "en": "いがい means 'other than'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I have never gotten a score <strong>lower than</strong> 98 on a test. (<strong>less than or equal to</strong>)",
+        "nuance_translation": "A structure which highlights that (A) is the <strong>maximum amount</strong>, for which something is <strong>less than</strong> or <strong>under</strong>.",
+        "extra_info": "",
+        "reviewable_id": 383,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1367",
+      "type": "study_question",
+      "attributes": {
+        "id": 1367,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>家（いえ）<span class='gp-popout' data-gp-id='3'>は</span>２０００（にせん）万（まん）円（えん）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "いか",
+        "alternate_grammar": [],
+        "kanji_answer": "以下（いか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>最大限（さいだいげん）</strong>で、それより<strong>減（へ）ったり少（すく）なくなったりする</strong>ことを表現（ひょうげん）するフレーズ。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/383/male_audio/230303_1351.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この家は２０００万円以下です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いない": {
+            "en": "Let's try a different word here.",
+            "es": "Prueba con otra palabra."
+          },
+          "みまん": {
+            "en": "未満 means 'less than'. Let’s try a word that technically means 'less than or equal to' for numbers.",
+            "es": "未満 significa 'menos que'. Prueba con una palabra que significa 'menor o igual que' para números."
+          }
+        },
+        "wrong_answers": {
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いがい": {
+            "en": "いがい means 'other than'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "This house costs <strong>less than</strong> 20 million yen. (<strong>or equal to</strong>)",
+        "nuance_translation": "A structure which highlights that (A) is the <strong>maximum amount</strong>, for which something is <strong>less than</strong> or <strong>under</strong>.",
+        "extra_info": "",
+        "reviewable_id": 383,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3088",
+      "type": "study_question",
+      "attributes": {
+        "id": 3088,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='6'>の</span>値段（ねだん）<span class='gp-popout' data-gp-id='13'>がありません</span>。",
+        "answer": "いか",
+        "alternate_grammar": [],
+        "kanji_answer": "以下（いか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>最大限（さいだいげん）</strong>で、それより<strong>減（へ）ったり少（すく）なくなったりする</strong>ことを表現（ひょうげん）するフレーズ。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/383/male_audio/230303_1353.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/これ以下の値段がありません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みまん": {
+            "en": "未満 means 'less than'. Let’s try a word that technically means 'less than or equal to' for numbers.",
+            "es": "未満 significa 'menos que'. Prueba con una palabra que significa 'menor o igual que' para números."
+          }
+        },
+        "wrong_answers": {
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いがい": {
+            "en": "いがい means 'other than'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "There are none <strong>under</strong> this price. (<strong>less than or equal to</strong>)",
+        "nuance_translation": "A structure which highlights that (A) is the <strong>maximum amount</strong>, for which something is <strong>less than</strong> or <strong>under</strong>.",
+        "extra_info": "",
+        "reviewable_id": 383,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3090",
+      "type": "study_question",
+      "attributes": {
+        "id": 3090,
+        "content": "コンサート<span class='gp-popout' data-gp-id='32'>に</span>行（い）<span class='gp-popout' data-gp-id='41'>った</span><span class='gp-popout' data-gp-id='16'>のは</span>１００（ひゃく）人（にん）<span class='study-area-input'>____</span>。",
+        "answer": "いか",
+        "alternate_grammar": [
+          "いかだ",
+          "いかです",
+          "いか"
+        ],
+        "kanji_answer": "以下（いか）",
+        "kanji_alt_grammar": [
+          "以下（いか）だ",
+          "以下（いか）です",
+          "以下（いか）"
+        ],
+        "nuance": "(A)が<strong>最大限（さいだいげん）</strong>で、それより<strong>減（へ）ったり少（すく）なくなったりする</strong>ことを表現（ひょうげん）するフレーズ。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/383/male_audio/230303_1353_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/コンサートに行ったのは１００人以下。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みまん": {
+            "en": "未満 means 'less than'. Let’s try a word that technically means 'less than or equal to' for numbers.",
+            "es": "未満 significa 'menos que'. Prueba con una palabra que significa 'menor o igual que' para números."
+          }
+        },
+        "wrong_answers": {
+          "しか": {
+            "en": "しか is closer to 'nothing but' and used with verbs in their negative form, so it is ungrammatical here. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いがい": {
+            "en": "いがい means 'other than'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>100 or less</strong> people went to the concert.",
+        "nuance_translation": "A structure which highlights that (A) is the <strong>maximum amount</strong>, for which something is <strong>less than</strong> or <strong>under</strong>.",
+        "extra_info": "",
+        "reviewable_id": 383,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3091",
+      "type": "study_question",
+      "attributes": {
+        "id": 3091,
+        "content": "文法（ぶんぽう）<span class='gp-popout' data-gp-id='10'>が</span>平均点（へいきんてん）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='40'>だった</span>。",
+        "answer": "いか",
+        "alternate_grammar": [],
+        "kanji_answer": "以下（いか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>最大限（さいだいげん）</strong>で、それより<strong>減（へ）ったり少（すく）なくなったりする</strong>ことを表現（ひょうげん）するフレーズ。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/383/male_audio/230303_1353_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/文法が平均点以下だった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みまん": {
+            "en": "未満 means 'less than'. Let’s try a word that technically means 'less than or equal to' for numbers.",
+            "es": "未満 significa 'menos que'. Prueba con una palabra que significa 'menor o igual que' para números.",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "My grammar score was <strong>less than</strong> average. ",
+        "nuance_translation": "A structure which highlights that (A) is the <strong>maximum amount</strong>, for which something is <strong>less than</strong> or <strong>under</strong>.",
+        "extra_info": "",
+        "reviewable_id": 383,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3093",
+      "type": "study_question",
+      "attributes": {
+        "id": 3093,
+        "content": "<span class='gp-popout' data-gp-id='11'>それ</span>が少（すく）な<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='94'>と思（おも）う</span>？私（わたし）<span class='gp-popout' data-gp-id='6'>の</span>大学（だいがく）<span class='gp-popout' data-gp-id='52'>から</span>、５（ご）人（にん）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "いか",
+        "alternate_grammar": [],
+        "kanji_answer": "以下（いか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>最大限（さいだいげん）</strong>で、それより<strong>減（へ）ったり少（すく）なくなったりする</strong>ことを表現（ひょうげん）するフレーズ。",
+        "tense": "Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/それが少ないと思う？私の大学から、５人以下ですよ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みまん": {
+            "en": "未満 means 'less than'. Let’s try a word that technically means 'less than or equal to' for numbers.",
+            "es": "未満 significa 'menos que'. Prueba con una palabra que significa 'menor o igual que' para números."
+          }
+        },
+        "wrong_answers": {
+          "しか": {
+            "en": "しか is closer to 'nothing but' and used with verbs in their negative form, so it is ungrammatical here. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いがい": {
+            "en": "いがい means 'other than'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "You think that's low? <strong>Five or fewer</strong> people from my college went.",
+        "nuance_translation": "A structure which highlights that (A) is the <strong>maximum amount</strong>, for which something is <strong>less than</strong> or <strong>under</strong>.",
+        "extra_info": "",
+        "reviewable_id": 383,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3095",
+      "type": "study_question",
+      "attributes": {
+        "id": 3095,
+        "content": "卒業（そつぎょう）出来（でき）た人（ひと）<span class='gp-popout' data-gp-id='3'>は</span>１００（ひゃく）人（にん）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='40'>でした</span>。",
+        "answer": "いか",
+        "alternate_grammar": [],
+        "kanji_answer": "以下（いか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>最大限（さいだいげん）</strong>で、それより<strong>減（へ）ったり少（すく）なくなったりする</strong>ことを表現（ひょうげん）するフレーズ。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/383/male_audio/230303_1355.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/卒業出来た人は１００人以下でした。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みまん": {
+            "en": "未満 means 'less than'. Let’s try a word that technically means 'less than or equal to' for numbers.",
+            "es": "未満 significa 'menos que'. Prueba con una palabra que significa 'menor o igual que' para números."
+          }
+        },
+        "wrong_answers": {
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いがい": {
+            "en": "いがい means 'other than'. We are looking for a grammar point that is used to express 'less than (or equal to)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Less than</strong> 100 people were able to graduate. (<strong>...or equal to</strong>)",
+        "nuance_translation": "A structure which highlights that (A) is the <strong>maximum amount</strong>, for which something is <strong>less than</strong> or <strong>under</strong>.",
+        "extra_info": "",
+        "reviewable_id": 383,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "204",
+      "type": "writeup",
+      "attributes": {
+        "id": 204,
+        "body_ja": "",
+        "body": "<p>In order to mark something as 'equal to, or less than (A)', <span data-gp-id='383'>以下（いか）</span> will be used. This is simply a combination of the kanji 以（い） which means 'by means of', and 下（か） 'below'. This expression may also be translated as 'under (A)', or 'fewer than (A)'.</p>\r\n\r\n<p>To use <span data-gp-id='383'>以下（いか）</span>, attach it to the amount that you want to highlight as the 'maximum' amount.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180489'>\r\n<li data-study-question='180490'>\r\n</ul>\r\n\r\n<p>Similarly to the way that <span data-gp-id='382'>以上（いじょう）</span> can be used to mark 'everything up until now', <span data-gp-id='383'>以下（いか）</span> can and often is used to highlight 'everything after now', 'the rest', or 'the following'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180491'>\r\n<li data-study-question='180492'>\r\n</ul>"
+      }
+    },
+    {
+      "id": "504",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 504,
+        "source": "Tobira",
+        "location": "Page 119",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "849",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 849,
+        "site": "Learn Japanese",
+        "description": "以上 and 以下",
+        "link": "https://www.youtube.com/watch?v=ndRqmhaTqJM",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "848",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 848,
+        "site": "Japanese Stack Exchange",
+        "description": "Do 以上 and 以下 include the number preceding them?",
+        "link": "https://japanese.stackexchange.com/questions/1765/do-%e4%bb%a5%e4%b8%8a-and-%e4%bb%a5%e4%b8%8b-include-the-number-preceding-them/1766#1766",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "717",
+      "type": "related_content",
+      "attributes": {
+        "id": 717,
+        "relationship_type": "antonym",
+        "body": "以上① and いか (written as 以下) both attach to amounts or nouns like それ, but express opposite meanings: 以上① means 'X or more', while いか means 'X or less'. For example, １００円以上 '100 yen or more' vs. １００円以下 means '100 yen or less'. In both cases, the stated number is included. 以上 and 以下 can also refer to earlier or later content in a document.",
+        "first_relatable": {
+          "id": 382,
+          "slug": "以上1",
+          "title": "以上 ①",
+          "meaning": "More than (or equal to), Over・(and) above, Any more・Greater, Exceeding",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 383,
+          "slug": "いか",
+          "title": "いか",
+          "meaning": "Less than (or equal to), Under・(and) below, Any less・fewer, Not exceeding",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

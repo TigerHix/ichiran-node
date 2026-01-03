@@ -1,0 +1,165 @@
+================================================================================
+Grammar Detection Evaluation: GiNZA vs Ichiran
+================================================================================
+
+========================================
+Loading JLPT5...
+Loaded 20 grammars with study questions
+
+--- を ---
+Sentence: 建物の中を走る。
+Answer: を
+GiNZA (24.4ms): 建物 | の | 中 | を | 走る | 。
+Ichiran (124.9ms): 
+Detection: {'found': True, 'method': 'direct_substring', 'confidence': 1.0}
+
+--- だれ ---
+Sentence: だれを連れて来ますか？
+Answer: だれ
+GiNZA (23.2ms): だれ | を | 連れ | て | 来 | ます | か | ？
+Ichiran (89.1ms): 
+Detection: {'found': True, 'method': 'direct_substring', 'confidence': 1.0}
+
+--- たい ---
+Sentence: 昔は先生になりたくなかった。
+Answer: たくなかった
+GiNZA (18.0ms): 昔 | は | 先生 | に | なり | たく | なかっ | た | 。
+Ichiran (159.4ms): 
+Detection: {'found': True, 'method': 'direct_substring', 'confidence': 1.0}
+
+JLPT5 Detection Rate: 100.0% (60/60)
+
+========================================
+Loading JLPT4...
+Loaded 20 grammars with study questions
+
+--- number-amount-は ---
+Sentence: ドミニク：「沖縄に一度は行こうと思っています。」
+Answer: は
+GiNZA (13.4ms): ドミニク | ： | 「 | 沖縄 | に | 一度 | は | 行こう | と | 思っ | て | い | ます | 。 | 」
+Ichiran (164.1ms): 
+Detection: {'found': True, 'method': 'direct_substring', 'confidence': 1.0}
+
+--- だけでなく ---
+Sentence: 名古屋の夏は暑いだけでなく、湿気もひどい。
+Answer: だけでなく
+GiNZA (14.0ms): 名古屋 | の | 夏 | は | 暑い | だけ | で | なく | 、 | 湿気 | も | ひどい | 。
+Ichiran (150.5ms): 
+Detection: {'found': True, 'method': 'direct_substring', 'confidence': 1.0}
+
+--- まで ---
+Sentence: バイクまで持っているの？
+Answer: まで
+GiNZA (8.6ms): バイク | まで | 持っ | て | いる | の | ？
+Ichiran (21.4ms): 
+Detection: {'found': True, 'method': 'direct_substring', 'confidence': 1.0}
+
+JLPT4 Detection Rate: 100.0% (60/60)
+
+========================================
+Loading JLPT3...
+Loaded 20 grammars with study questions
+
+--- てもかまわない ---
+Sentence: 暇な時はゲームをやってもかまわない。
+Answer: やってもかまわない
+GiNZA (10.2ms): 暇 | な | 時 | は | ゲーム | を | やっ | て | も | かまわ | ない | 。
+Ichiran (106.4ms): 
+Detection: {'found': True, 'method': 'direct_substring', 'confidence': 1.0}
+
+--- は言うまでもない1 ---
+Sentence: 彼女は歌うのが上手い。ピアノもいうまでもない。
+Answer: いうまでもない
+GiNZA (11.1ms): 彼女 | は | 歌う | の | が | 上手い | 。 | ピアノ | も | いう | まで | も | ない | 。
+Ichiran (92.0ms): 
+Detection: {'found': True, 'method': 'direct_substring', 'confidence': 1.0}
+
+--- では-それでは-じゃあ ---
+Sentence: じゃあ、ここで失礼します。
+Answer: じゃあ
+GiNZA (9.2ms): じゃあ | 、 | ここ | で | 失礼 | し | ます | 。
+Ichiran (54.7ms): 
+Detection: {'found': True, 'method': 'direct_substring', 'confidence': 1.0}
+
+JLPT3 Detection Rate: 100.0% (60/60)
+
+========================================
+Loading JLPT2...
+Loaded 20 grammars with study questions
+
+--- 一応1 ---
+Sentence: 今日はずっと晴れって天気予報で言ってたけど曇ってきたから いちおう傘を持って行ったほうがいいかも。
+Answer: いちおう
+GiNZA (17.3ms): 今日 | は | ずっと | 晴れ | って | 天気予報 | で | 言っ | て | た | けど | 曇っ | て | き | た | から | いちおう | 傘 | を | 持っ | て | 行っ | た | ほう | が | いい | か | も | 。
+Ichiran (190.1ms): 
+Detection: {'found': True, 'method': 'direct_substring', 'confidence': 1.0}
+
+--- から見ると ---
+Sentence: 素人からみるとかなりうまい人でも、プロの世界では全然通用しないらしい。
+Answer: からみると
+GiNZA (14.9ms): 素人 | から | みる | と | かなり | うまい | 人 | で | も | 、 | プロ | の | 世界 | で | は | 全然 | 通用 | し | ない | らしい | 。
+Ichiran (190.3ms): 
+Detection: {'found': True, 'method': 'direct_substring', 'confidence': 1.0}
+
+--- いつの間にか ---
+Sentence: ３年間日本人の友達と毎日日本語で話していたら、いつのまにか日本語が上手になっていた。
+Answer: いつのまにか
+GiNZA (14.9ms): ３ | 年間 | 日本人 | の | 友達 | と | 毎日 | 日本語 | で | 話し | て | い | たら | 、 | いつ | の | ま | に | か | 日本語 | が | 上手 | に | なっ | て | い | た | 。
+Ichiran (203.1ms): 
+Detection: {'found': True, 'method': 'direct_substring', 'confidence': 1.0}
+
+JLPT2 Detection Rate: 100.0% (60/60)
+
+========================================
+Loading JLPT1...
+Loaded 20 grammars with study questions
+
+--- ものと思っていた ---
+Sentence: 雷に打たれて死ぬものとおもっていたが、どうやら生き残ったようだ…。
+Answer: ものとおもっていた
+GiNZA (14.2ms): 雷 | に | 打た | れ | て | 死ぬ | もの | と | おもっ | て | い | た | が | 、 | どう | やら | 生き残っ | た | よう | だ | … | 。
+Ichiran (203.7ms): 
+Detection: {'found': True, 'method': 'direct_substring', 'confidence': 1.0}
+
+--- なり ---
+Sentence: 実家のお母さんからの電報がくるなり、山田さんは青ざめた。
+Answer: くるなり
+GiNZA (11.6ms): 実家 | の | お母さん | から | の | 電報 | が | くる | なり | 、 | 山田 | さん | は | 青ざめ | た | 。
+Ichiran (110.6ms): 
+Detection: {'found': True, 'method': 'direct_substring', 'confidence': 1.0}
+
+--- を経て ---
+Sentence: 私たちは２０１９年に出会って、約２年間の交際をへて結婚しました。
+Answer: をへて
+GiNZA (14.2ms): 私たち | は | ２０１９ | 年 | に | 出会っ | て | 、 | 約 | ２ | 年間 | の | 交際 | を | へ | て | 結婚 | し | まし | た | 。
+Ichiran (116.2ms): 
+Detection: {'found': True, 'method': 'direct_substring', 'confidence': 1.0}
+
+JLPT1 Detection Rate: 100.0% (60/60)
+
+================================================================================
+PERFORMANCE SUMMARY
+================================================================================
+
+GiNZA Latency:
+  Mean: 12.21ms
+  Min:  7.46ms
+  Max:  24.39ms
+
+Ichiran Latency:
+  Mean: 101.22ms
+  Min:  10.48ms
+  Max:  447.19ms
+
+================================================================================
+DETECTION SUMMARY
+================================================================================
+JLPT5: 100.0% (60/60)
+JLPT4: 100.0% (60/60)
+JLPT3: 100.0% (60/60)
+JLPT2: 100.0% (60/60)
+JLPT1: 100.0% (60/60)
+
+Overall: 100.0% (300/300)
+
+Detailed results saved to: /home/tiger/ichiran-node/scripts/grammar-detection-results.json

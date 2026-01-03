@@ -1,0 +1,1299 @@
+{
+  "data": {
+    "id": "84",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 84,
+      "level": "JLPT5",
+      "lesson_id": 8,
+      "part_of_speech": "表現",
+      "register": "一般",
+      "word_type": "動詞",
+      "slug": "にする",
+      "nuance": "話（はな）し手（て）が(A)を<strong>する</strong>、または<strong>(A)でいく</strong>事（こと）を選択（せんたく）したこと表（あらわ）す表現（ひょうげん）。",
+      "grammar_order": 97,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 57,
+        "title": "～になる・～くなる",
+        "slug": "になる-くなる"
+      },
+      "previous_grammar_point": {
+        "id": 76,
+        "title": "すぎる",
+        "slug": "すぎる"
+      },
+      "lesson_count": "8/13",
+      "title": "にする",
+      "furigana": "にする",
+      "meaning": "To decide on, To choose, To make something into, To view something as",
+      "nuance_translation": "A phrase used for expressing that the speaker has <strong>decided</strong> on doing (A), or <strong>going with</strong> (A).",
+      "rare_kanji_warning": null,
+      "caution": "Sometimes written as とする, which focuses on the result, rather than the process of 'making'",
+      "polite_structure": "Noun + <strong><span class='gp-popout' data-gp-id='32'>に</span></strong> + <strong><span class='gp-popout' data-gp-id='22'>します</span></strong>",
+      "casual_structure": "Noun + <strong><span class='gp-popout' data-gp-id='32'>に</span></strong> + <strong><span class='gp-popout' data-gp-id='22'>する</span></strong>",
+      "part_of_speech_translation": "Expression",
+      "register_translation": "Standard",
+      "word_type_translation": "Verb",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/1177",
+      "metadata": "にする, にします, とする, とします, nisuru, nishimasu, tosuru, toshimasu, expression, verb, direct control, assertive"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "155072",
+            "type": "study_question"
+          },
+          {
+            "id": "155073",
+            "type": "study_question"
+          },
+          {
+            "id": "793",
+            "type": "study_question"
+          },
+          {
+            "id": "155071",
+            "type": "study_question"
+          },
+          {
+            "id": "2248",
+            "type": "study_question"
+          },
+          {
+            "id": "155070",
+            "type": "study_question"
+          },
+          {
+            "id": "2249",
+            "type": "study_question"
+          },
+          {
+            "id": "84",
+            "type": "study_question"
+          },
+          {
+            "id": "2240",
+            "type": "study_question"
+          },
+          {
+            "id": "2242",
+            "type": "study_question"
+          },
+          {
+            "id": "2243",
+            "type": "study_question"
+          },
+          {
+            "id": "2244",
+            "type": "study_question"
+          },
+          {
+            "id": "2245",
+            "type": "study_question"
+          },
+          {
+            "id": "2246",
+            "type": "study_question"
+          },
+          {
+            "id": "2247",
+            "type": "study_question"
+          },
+          {
+            "id": "2241",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "96",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "899",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1130",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1301",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1522",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "390",
+            "type": "related_content"
+          },
+          {
+            "id": "389",
+            "type": "related_content"
+          },
+          {
+            "id": "391",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "177",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "176",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "155072",
+      "type": "study_question",
+      "attributes": {
+        "id": 155072,
+        "content": "今日（きょう）<span class=\"gp-popout\" data-gp-id=\"3\">は</span><span class=\"gp-popout\" data-gp-id=\"14\">ここ</span><span class=\"gp-popout\" data-gp-id=\"58\">まで</span><span class='study-area-input'>____</span>。",
+        "answer": "にする",
+        "alternate_grammar": [],
+        "kanji_answer": "にする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/今日はここまでにする。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Today, I will <strong>decide to</strong> end it here. (I'm going to call it a day)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 84,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155073",
+      "type": "study_question",
+      "attributes": {
+        "id": 155073,
+        "content": "ハイキング<span class=\"gp-popout\" data-gp-id=\"31\">へ行（い）く</span><span class=\"gp-popout\" data-gp-id=\"6\">の</span>日曜日（にちようび）<span class='study-area-input'>____</span>？",
+        "answer": "にする",
+        "alternate_grammar": [],
+        "kanji_answer": "にする",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ハイキングへ行くの日曜日にする.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Is Sunday ok for hiking? (Literally, 'as for heading hiking, will you <strong>make it</strong> Sunday?')",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 84,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "793",
+      "type": "study_question",
+      "attributes": {
+        "id": 793,
+        "content": "何（なに）<span class='study-area-input'>____</span>？",
+        "answer": "にする",
+        "alternate_grammar": [],
+        "kanji_answer": "にする",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）が(A)を<strong>する</strong>、または<strong>(A)でいく</strong>事（こと）を選択（せんたく）したこと表（あらわ）す表現（ひょうげん）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/84/male_audio/10-何にする.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/何にする？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にしますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "にします": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "にした": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "にしました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "にきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "What will you <strong>decide on</strong>? ",
+        "nuance_translation": "A phrase used for expressing that the speaker has <strong>decided</strong> on doing (A), or <strong>going with</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 84,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155071",
+      "type": "study_question",
+      "attributes": {
+        "id": 155071,
+        "content": "今日（きょう）<span class=\"gp-popout\" data-gp-id=\"3\">は</span><span class=\"gp-popout\" data-gp-id=\"14\">ここ</span><span class=\"gp-popout\" data-gp-id=\"58\">まで</span><span class='study-area-input'>____</span>。",
+        "answer": "とする",
+        "alternate_grammar": [],
+        "kanji_answer": "とする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/今日はここまでとする。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Today, I will <strong>decide to</strong> make this the end. (Why don't we call it a day, if that's ok)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 84,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2248",
+      "type": "study_question",
+      "attributes": {
+        "id": 2248,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>音楽（おんがく）<span class='study-area-input'>____</span>。",
+        "answer": "にする",
+        "alternate_grammar": [
+          "にする",
+          "にします",
+          "にした",
+          "にしました"
+        ],
+        "kanji_answer": "にする",
+        "kanji_alt_grammar": [
+          "にする",
+          "にします",
+          "にした",
+          "にしました"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を<strong>する</strong>、または<strong>(A)でいく</strong>事（こと）を選択（せんたく）したこと表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/84/male_audio/06-この音楽にする.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/この音楽にする。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To decide on</strong> this music.",
+        "nuance_translation": "A phrase used for expressing that the speaker has <strong>decided</strong> on doing (A), or <strong>going with</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 84,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155070",
+      "type": "study_question",
+      "attributes": {
+        "id": 155070,
+        "content": "俺（おれ）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>ビール<span class='study-area-input'>____</span>。",
+        "answer": "にする",
+        "alternate_grammar": [],
+        "kanji_answer": "にする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/俺はビールにする。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I'm going to <strong>decide on</strong> this beer.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 84,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2249",
+      "type": "study_question",
+      "attributes": {
+        "id": 2249,
+        "content": "どちら<span class='study-area-input'>____</span>。",
+        "answer": "にしますか",
+        "alternate_grammar": [],
+        "kanji_answer": "にしますか",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）が(A)を<strong>する</strong>、または<strong>(A)でいく</strong>事（こと）を選択（せんたく）したこと表（あらわ）す表現（ひょうげん）。",
+        "tense": "Polite, Interrogative",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/どちらにしますか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にする": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "にきめよう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にきめましょうか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめよう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめましょうか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Which will you <strong>decide on</strong>? ",
+        "nuance_translation": "A phrase used for expressing that the speaker has <strong>decided</strong> on doing (A), or <strong>going with</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 84,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "84",
+      "type": "study_question",
+      "attributes": {
+        "id": 84,
+        "content": "今日（きょう）<span class='gp-popout' data-gp-id='6'>の</span>晩（ばん）ごはん<span class='gp-popout' data-gp-id='3'>は</span>何（なに）<span class='study-area-input'>____</span>？",
+        "answer": "にする",
+        "alternate_grammar": [],
+        "kanji_answer": "にする",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）が(A)を<strong>する</strong>、または<strong>(A)でいく</strong>事（こと）を選択（せんたく）したこと表（あらわ）す表現（ひょうげん）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/84/male_audio/09-今日の晩御飯は何にする.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/今日の晩ごはんは何にする？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にしますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "にした": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "にしましたか": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "にきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にします": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "をきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "What <strong>have you decided</strong> on for today's dinner?",
+        "nuance_translation": "A phrase used for expressing that the speaker has <strong>decided</strong> on doing (A), or <strong>going with</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 84,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2240",
+      "type": "study_question",
+      "attributes": {
+        "id": 2240,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>かばん<span class='study-area-input'>____</span>。",
+        "answer": "にします",
+        "alternate_grammar": [
+          "にする",
+          "にします"
+        ],
+        "kanji_answer": "にします",
+        "kanji_alt_grammar": [
+          "にする",
+          "にします"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を<strong>する</strong>、または<strong>(A)でいく</strong>事（こと）を選択（せんたく）したこと表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Polite, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/84/male_audio/03-このかばんにします.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/このかばんにします。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にした": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "にしました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "にきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To decide on</strong> this bag. ",
+        "nuance_translation": "A phrase used for expressing that the speaker has <strong>decided</strong> on doing (A), or <strong>going with</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 84,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2242",
+      "type": "study_question",
+      "attributes": {
+        "id": 2242,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>レストラン<span class='study-area-input'>____</span>。",
+        "answer": "にします",
+        "alternate_grammar": [
+          "にする",
+          "にします"
+        ],
+        "kanji_answer": "にします",
+        "kanji_alt_grammar": [
+          "にする",
+          "にします"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を<strong>する</strong>、または<strong>(A)でいく</strong>事（こと）を選択（せんたく）したこと表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Polite, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/84/male_audio/04-このレストランにします.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/このレストランにします。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にした": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "にしました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To decide on</strong> this restaurant. ",
+        "nuance_translation": "A phrase used for expressing that the speaker has <strong>decided</strong> on doing (A), or <strong>going with</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 84,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2243",
+      "type": "study_question",
+      "attributes": {
+        "id": 2243,
+        "content": "<span class='gp-popout' data-gp-id='14'>ここ</span><span class='study-area-input'>____</span>。",
+        "answer": "にする",
+        "alternate_grammar": [
+          "にする",
+          "にします"
+        ],
+        "kanji_answer": "にする",
+        "kanji_alt_grammar": [
+          "にする",
+          "にします"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を<strong>する</strong>、または<strong>(A)でいく</strong>事（こと）を選択（せんたく）したこと表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/84/male_audio/02-ここにする.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ここにする。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にした": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "にしました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To decide on</strong> here.",
+        "nuance_translation": "A phrase used for expressing that the speaker has <strong>decided</strong> on doing (A), or <strong>going with</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 84,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2244",
+      "type": "study_question",
+      "attributes": {
+        "id": 2244,
+        "content": "お風呂（ふろ）に入（はい）<span class='gp-popout' data-gp-id='26'>る</span><span class='gp-popout' data-gp-id='16'>のは</span>７（しち）時（じ）<span class='study-area-input'>____</span>。",
+        "answer": "にする",
+        "alternate_grammar": [
+          "にする",
+          "にします"
+        ],
+        "kanji_answer": "にする",
+        "kanji_alt_grammar": [
+          "にする",
+          "にします"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を<strong>する</strong>、または<strong>(A)でいく</strong>事（こと）を選択（せんたく）したこと表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/84/male_audio/01-お風呂に入るのは7時にする.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/お風呂に入るのは７時にする。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にした": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "にしました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To decide on</strong> taking a bath at seven o'clock.",
+        "nuance_translation": "A phrase used for expressing that the speaker has <strong>decided</strong> on doing (A), or <strong>going with</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 84,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2245",
+      "type": "study_question",
+      "attributes": {
+        "id": 2245,
+        "content": "来月（らいげつ）<span class='study-area-input'>____</span>。",
+        "answer": "にします",
+        "alternate_grammar": [
+          "にする",
+          "にします"
+        ],
+        "kanji_answer": "にします",
+        "kanji_alt_grammar": [
+          "にする",
+          "にします"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を<strong>する</strong>、または<strong>(A)でいく</strong>事（こと）を選択（せんたく）したこと表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Polite, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/84/male_audio/12-来月にします.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/来月にします。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にした": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "にしました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To decide on</strong> next month.",
+        "nuance_translation": "A phrase used for expressing that the speaker has <strong>decided</strong> on doing (A), or <strong>going with</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 84,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2246",
+      "type": "study_question",
+      "attributes": {
+        "id": 2246,
+        "content": "テスト<span class='gp-popout' data-gp-id='3'>は</span>月曜日（げつようび）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='358'>って</span>先生（せんせい）<span class='gp-popout' data-gp-id='10'>が</span>言（い）<span class='gp-popout' data-gp-id='41'>った</span>。",
+        "answer": "にする",
+        "alternate_grammar": [],
+        "kanji_answer": "にする",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）が(A)を<strong>する</strong>、または<strong>(A)でいく</strong>事（こと）を選択（せんたく）したこと表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/84/male_audio/08-テストは月曜日にすると先生が言った.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/テストは月曜日にするって先生が言った。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にします": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "にした": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "にしました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "にきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The teacher said, 'I have <strong>decided on</strong> Monday for the test.' (<strong>Literally - We'll do it</strong>)",
+        "nuance_translation": "A phrase used for expressing that the speaker has <strong>decided</strong> on doing (A), or <strong>going with</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 84,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2247",
+      "type": "study_question",
+      "attributes": {
+        "id": 2247,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>赤（あか）<span class='gp-popout' data-gp-id='24'>い</span>上着（うわぎ）<span class='study-area-input'>____</span>。",
+        "answer": "にする",
+        "alternate_grammar": [
+          "にします",
+          "にする"
+        ],
+        "kanji_answer": "にする",
+        "kanji_alt_grammar": [
+          "にします",
+          "にする"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を<strong>する</strong>、または<strong>(A)でいく</strong>事（こと）を選択（せんたく）したこと表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/84/male_audio/05-この赤い上着にする.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/この赤い上着にする。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To decide on</strong> this red jacket.",
+        "nuance_translation": "A phrase used for expressing that the speaker has <strong>decided</strong> on doing (A), or <strong>going with</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 84,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2241",
+      "type": "study_question",
+      "attributes": {
+        "id": 2241,
+        "content": "明日（あした）<span class='gp-popout' data-gp-id='6'>の</span>朝（あさ）ごはん<span class='gp-popout' data-gp-id='3'>は</span>魚（さかな）<span class='study-area-input'>____</span>。",
+        "answer": "にします",
+        "alternate_grammar": [
+          "にする",
+          "にします"
+        ],
+        "kanji_answer": "にします",
+        "kanji_alt_grammar": [
+          "にする",
+          "にします"
+        ],
+        "nuance": "話（はな）し手（て）が(A)を<strong>する</strong>、または<strong>(A)でいく</strong>事（こと）を選択（せんたく）したこと表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Polite, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/84/male_audio/11-明日の朝ご飯は魚にします.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/明日の朝ごはんは魚にします。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をきめます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "にした": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "にしました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To decide on</strong> fish for breakfast tomorrow.",
+        "nuance_translation": "A phrase used for expressing that the speaker has <strong>decided</strong> on doing (A), or <strong>going with</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 84,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "96",
+      "type": "writeup",
+      "attributes": {
+        "id": 96,
+        "body_ja": null,
+        "body": "<p><span data-gp-id='84'>にする</span> is a structure that combines the <span data-gp-id='32'>に</span> particle (a location/target), with the verb <span data-gp-id='22'>する</span>. It means to 'make/decide' something in a certain way. The nuance with <span data-gp-id='84'>にする</span> is that the speaker has direct control over the outcome. This is where the strong feeling of 'choice' comes from. The noun that comes before <span data-gp-id='84'>にする</span> is the thing that is being decided.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155070'></ul>\r\n\r\n<p>In this example, although the common translation is 'to decide', it is actually much closer to the slang expression 'to do (A)' in English. This means that the literal translation is actually 'I'll do a beer', or 'I'll make it a beer'.</p>\r\n\r\n<p>Sometimes the particle <span data-gp-id='955'>と</span> is used instead of に. Although this has the same meaning, it changes the nuance slightly. When <span data-gp-id='955'>と</span> is used, it takes away the feeling of being a direct decision. <span data-gp-id='84'>とする</span> tends to be used in more formal situations, but this is only because <span data-gp-id='955'>と</span> is less 'definite', so results in the phrase sounding less pushy.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155071'>\r\n<li data-study-question='155072'></ul>\r\n\r\n<p>If you were going to compare these two to an English equivalent, it would be similar to the difference between the following sentences.</p>\r\n\r\n<p><span data-gp-id='32'>に</span> - I'll buy a burger. (A burger is the direct target of 'buy')</p>\r\n\r\n<p><span data-gp-id='955'>と</span> - I'll go with a burger. (You aren't 'going' anywhere, it just sounds softer)</p>\r\n\r\n<p>This grammar point may be used for more abstract nouns, and does not specifically need to be 'items'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155073'></ul>"
+      }
+    },
+    {
+      "id": "899",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 899,
+        "source": "みんなの日本語 II",
+        "location": "Page 120 [CH 44]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1130",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1130,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 310",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1301",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1301,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 129",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1522",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1522,
+        "source": "[AIAIJ] An Integrated Approach to Intermediate Japanese",
+        "location": "Page 72",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "177",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 177,
+        "site": "Renshuu",
+        "description": "Examples",
+        "link": "https://www.renshuu.org/grammar/329/%E3%81%8F%E3%81%99%E3%82%8B%EF%BC%8F%E3%81%AB%E3%81%99%E3%82%8B",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "176",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 176,
+        "site": "Tae Kim",
+        "description": "Using する and なる with the に particle",
+        "link": "https://guidetojapanese.org/learn/grammar/surunaru",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "390",
+      "type": "related_content",
+      "attributes": {
+        "id": 390,
+        "relationship_type": "related",
+        "body": "Both にする and ことになる relate to decisions but differ in agency. にする is used when the speaker actively chooses something, often in daily situations like deciding what to eat, similar to 'I'll go with X.' ことになる, on the other hand, expresses decisions made by others or by circumstance, like saying 'It's been decided that X.'",
+        "first_relatable": {
+          "id": 84,
+          "slug": "にする",
+          "title": "にする",
+          "meaning": "To decide on, To choose, To make something into, To view something as",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 283,
+          "slug": "ことになる",
+          "title": "ことになる",
+          "meaning": "It will end up being, It is the result of, It has been decided that",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "389",
+      "type": "related_content",
+      "attributes": {
+        "id": 389,
+        "relationship_type": "related",
+        "body": "Both にする and に決まっている relate to decisions but differ in use. にする expresses making a choice, often in daily contexts like picking what to eat, similar to 'I'll go with X.' に決まっている, despite using 決まる, often just shows strong belief, meaning 'It's surely X' or 'It's bound to be X,' rather than an actual decision.",
+        "first_relatable": {
+          "id": 84,
+          "slug": "にする",
+          "title": "にする",
+          "meaning": "To decide on, To choose, To make something into, To view something as",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 524,
+          "slug": "に決まっている",
+          "title": "に決まっている",
+          "meaning": "Surely, Bound to, Certainly, Be decided",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "391",
+      "type": "related_content",
+      "attributes": {
+        "id": 391,
+        "relationship_type": "synonym",
+        "body": "Both にする and ことにする share the same core meaning: making a choice or decision. にする is used when choosing a thing and follows a noun, like ビールにする ('I'll have a beer'). ことにする follows plain-form verbs and expresses the speaker's decision to do or not do something, like 行くことにする or 行かないことにする.",
+        "first_relatable": {
+          "id": 84,
+          "slug": "にする",
+          "title": "にする",
+          "meaning": "To decide on, To choose, To make something into, To view something as",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 294,
+          "slug": "ことにする",
+          "title": "ことにする",
+          "meaning": "To decide on, Have decided to",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

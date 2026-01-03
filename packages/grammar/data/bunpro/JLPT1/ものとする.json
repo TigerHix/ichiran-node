@@ -1,0 +1,656 @@
+{
+  "data": {
+    "id": "987",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 987,
+      "level": "JLPT1",
+      "lesson_id": 50,
+      "part_of_speech": null,
+      "register": "硬い",
+      "word_type": "",
+      "slug": "ものとする",
+      "nuance": null,
+      "grammar_order": 918,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 988,
+        "title": "との",
+        "slug": "との"
+      },
+      "previous_grammar_point": {
+        "id": 986,
+        "title": "ただ〜のみ",
+        "slug": "ただ-のみ"
+      },
+      "lesson_count": "15/22",
+      "title": "ものとする",
+      "furigana": "ものとする",
+      "meaning": "Shall, To assume, To suppose, To consider",
+      "nuance_translation": null,
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": "    Verb + <strong>ものとします</strong>    ",
+      "casual_structure": "    Verb + <strong>ものとする</strong>    ",
+      "part_of_speech_translation": null,
+      "register_translation": "Formal",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/47938",
+      "metadata": "ものとする, 物とする, monotosuru, expression, suru verb, formal, strong determination, facts in legalese, facts in contractual writing"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "10391",
+            "type": "study_question"
+          },
+          {
+            "id": "10392",
+            "type": "study_question"
+          },
+          {
+            "id": "10402",
+            "type": "study_question"
+          },
+          {
+            "id": "183178",
+            "type": "study_question"
+          },
+          {
+            "id": "183179",
+            "type": "study_question"
+          },
+          {
+            "id": "183180",
+            "type": "study_question"
+          },
+          {
+            "id": "10399",
+            "type": "study_question"
+          },
+          {
+            "id": "10398",
+            "type": "study_question"
+          },
+          {
+            "id": "10394",
+            "type": "study_question"
+          },
+          {
+            "id": "10400",
+            "type": "study_question"
+          },
+          {
+            "id": "10395",
+            "type": "study_question"
+          },
+          {
+            "id": "10396",
+            "type": "study_question"
+          },
+          {
+            "id": "10397",
+            "type": "study_question"
+          },
+          {
+            "id": "10393",
+            "type": "study_question"
+          },
+          {
+            "id": "10401",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "989",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "2129",
+            "type": "offline_resource"
+          },
+          {
+            "id": "2130",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": []
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2663",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "10391",
+      "type": "study_question",
+      "attributes": {
+        "id": 10391,
+        "content": " 契約（けいやく）者（しゃ）<span class='gp-popout' data-gp-id='3'>は</span>、<span class='vocab-popout' data-vocab-id='713'>次（つぎ）に</span>掲（かか）げる業務（ぎょうむ）を<span class='gp-popout vocab-popout' data-gp-id='26' data-vocab-id='1612'>行（おこな）う</span><span class='study-area-input'>____</span>。",
+        "answer": "ものとする",
+        "alternate_grammar": [
+          "ものとします"
+        ],
+        "kanji_answer": "ものとする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Standard, Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/契約者は、次に掲げる業務を行うものとする。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "A contractor <strong>shall</strong> perform the duties listed below.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 987,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10392",
+      "type": "study_question",
+      "attributes": {
+        "id": 10392,
+        "content": " 別表（べっぴょう）第（だい）七（なな）に定（さだ）める帳簿（ちょうぼ）は、五（ご）年間（ねんかん）保存（ほぞん）する<span class='study-area-input'>____</span>。",
+        "answer": "ものとする",
+        "alternate_grammar": [
+          "ものとします"
+        ],
+        "kanji_answer": "ものとする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Standard, Literary",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/別表第七に定める帳簿は、五年間保存するものとする。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The account books provided in attached table 7 <strong>shall</strong> be retained for five years.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 987,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10402",
+      "type": "study_question",
+      "attributes": {
+        "id": 10402,
+        "content": " 監査（かんさ）役（やく）は、常時（じょうじ）、すべての文書（ぶんしょ）等（とう）を閲覧（えつらん）できる<span class='study-area-input'>____</span>。",
+        "answer": "ものとする",
+        "alternate_grammar": [
+          "ものとします"
+        ],
+        "kanji_answer": "ものとする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Standard, Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/監査役は、常時、すべての文書等を閲覧できるものとする。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Auditors <strong>shall</strong> be authorized to inspect all documents, etc. at any time.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 987,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183178",
+      "type": "study_question",
+      "attributes": {
+        "id": 183178,
+        "content": "\r\n住民税（じゅうみんぜい）は世帯主（せたいぬし）が払（はら）う<span class='study-area-input'>____</span>。",
+        "answer": "ものとする",
+        "alternate_grammar": [],
+        "kanji_answer": "ものとする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/住民税は世帯主が払うものとする。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nThe head of the household <strong>shall</strong> pay the resident’s tax.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 987,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183179",
+      "type": "study_question",
+      "attributes": {
+        "id": 183179,
+        "content": "\r\n\r\n\r\n契約者（けいやくしゃ）の都合（つごう）で解約（かいやく）をした場合（ばあい）、契約者（けいやくしゃ）に解約金（かいやくきん）を請求（せいきゅう）する<span class='study-area-input'>____</span>。",
+        "answer": "ものとする",
+        "alternate_grammar": [],
+        "kanji_answer": "ものとする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/契約者の都合で解約をした場合、契約者に解約金を請求するものとする。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nIn the event that the subscription is canceled due to the subscriber’s personal reasons, a termination fee <strong>shall</strong> be charged to the subscriber.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 987,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183180",
+      "type": "study_question",
+      "attributes": {
+        "id": 183180,
+        "content": "ダム建設（けんせつ）に対（たい）して批判（ひはん）の声（こえ）が上（あ）がったときには、ダム建設（けんせつ）を取（と）り下（さ）げる<span class='study-area-input'>____</span>。",
+        "answer": "ものとする",
+        "alternate_grammar": [],
+        "kanji_answer": "ものとする",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ダム建設に対して批判の声が上がったときには、ダム建設を取り下げるものとする。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "We <strong>shall</strong> withdraw from building a dam in the event where people oppose it.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 987,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10399",
+      "type": "study_question",
+      "attributes": {
+        "id": 10399,
+        "content": " 応募（おうぼ）者（しゃ）は採用（さいよう）通知（つうち）受領（じゅりょう）から１４（じゅうよっ）日（か）以内（いない）に、就業（しゅうぎょう）にあたり求（もと）められたすべての書類（しょるい）を提出（ていしゅつ）する<span class='study-area-input'>____</span>。",
+        "answer": "ものとする",
+        "alternate_grammar": [
+          "ものとします"
+        ],
+        "kanji_answer": "ものとする",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Standard, Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/応募者は採用通知受領から１４日以内に、就業にあたり求められたすべての書類を提出するものとする。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Applicants <strong>shall</strong> submit all required documents for employment within 14 days of receiving the offer of employment.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 987,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10398",
+      "type": "study_question",
+      "attributes": {
+        "id": 10398,
+        "content": " 裁判（さいばん）費用（ひよう）は敗訴（はいそ）当事者（とうじしゃ）が支払（しはら）う<span class='study-area-input'>____</span>。",
+        "answer": "ものとする",
+        "alternate_grammar": [
+          "ものとします"
+        ],
+        "kanji_answer": "ものとする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Standard, Literary",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/裁判費用は敗訴当事者が支払うものとする。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The losing party <strong>shall</strong> pay the costs of the trial.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 987,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10394",
+      "type": "study_question",
+      "attributes": {
+        "id": 10394,
+        "content": " 延滞（えんたい）金（きん）<span class='gp-popout' data-gp-id='3'>は</span>、納付（のうふ）金（きん）に先立（さきだ）つ<span class='study-area-input'>____</span>。",
+        "answer": "ものとする",
+        "alternate_grammar": [
+          "ものとします"
+        ],
+        "kanji_answer": "ものとする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Standard, Literary",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/延滞金は、納付金に先立つものとする。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Penal interest <strong>shall</strong> be collected prior to the payment.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 987,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10400",
+      "type": "study_question",
+      "attributes": {
+        "id": 10400,
+        "content": " 利用（りよう）者（しゃ）がこの製品（せいひん）を、当社（とうしゃ）が意図（いと）したとおりに使用（しよう）しなかったことによって生（しょう）じた損害（そんがい）や紛争（ふんそう）について、当社（とうしゃ）は一切（いっさい）責任（せきにん）を負（お）わない<span class='study-area-input'>____</span>。",
+        "answer": "ものとする",
+        "alternate_grammar": [
+          "ものとします"
+        ],
+        "kanji_answer": "ものとする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Standard, Literary",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/利用者がこの製品を、当社が意図したとおりに使用しなかったことによって生じた損害や紛争について、当社は一切責任を負わないものとする。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The Company <strong>shall</strong> not be liable for any damages or disputes arising from the user's failure to use this product as intended.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 987,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10395",
+      "type": "study_question",
+      "attributes": {
+        "id": 10395,
+        "content": " 契約（けいやく）書（しょ）<span class='gp-popout' data-gp-id='3'>は</span>、<span class='vocab-popout' data-vocab-id='920'>英語（えいご）</span><span class='gp-popout' data-gp-id='15'>と</span><span class='vocab-popout' data-vocab-id='637'>日本語（にほんご）</span><span class='gp-popout' data-gp-id='739'>をもって</span>記載（きさい）<span class='gp-popout vocab-popout' data-gp-id='22' data-vocab-id='138'>する</span><span class='study-area-input'>____</span>。",
+        "answer": "ものとする",
+        "alternate_grammar": [
+          "ものとします"
+        ],
+        "kanji_answer": "ものとする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Standard, Literary",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/契約書は、英語と日本語をもって記載するものとする。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The contract <strong>shall</strong> be recorded in both English and Japanese.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 987,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10396",
+      "type": "study_question",
+      "attributes": {
+        "id": 10396,
+        "content": " <span class='gp-popout' data-gp-id='660'>第（だい）一（いち）</span>条（じょう） <span class='gp-popout vocab-popout' data-gp-id='30' data-vocab-id='91'>この</span><span class='vocab-popout' data-vocab-id='2090'>法律（ほうりつ）</span><span class='gp-popout' data-gp-id='3'>は</span>、法（ほう）の<span class='vocab-popout' data-vocab-id='1939'>適用（てきよう）</span><span class='gp-popout' data-gp-id='236'>に関（かん）する</span>通則（つうそく）<span class='gp-popout' data-gp-id='225'>について</span>定（さだ）める<span class='study-area-input'>____</span>。",
+        "answer": "ものとする",
+        "alternate_grammar": [
+          "ものとします"
+        ],
+        "kanji_answer": "ものとする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Standard, Literary",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/第一条 この法律は、法の適用に関する通則について定めるものとする。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Article 1 This Act <strong>shall</strong> provide for the general rules for the application of laws.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 987,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10397",
+      "type": "study_question",
+      "attributes": {
+        "id": 10397,
+        "content": " 取締役（とりしまりやく）会（かい）<span class='gp-popout' data-gp-id='3'>は</span>、毎（まい）年度（ねんど）、前項（ぜんこう）<span class='gp-popout' data-gp-id='6'>の</span>報告（ほうこく）<span class='gp-popout' data-gp-id='21'>を</span>取（と）りまとめ、<span class='gp-popout' data-gp-id='37'>その</span>概要（がいよう）<span class='gp-popout' data-gp-id='21'>を</span>公表（こうひょう）<span class='gp-popout vocab-popout' data-gp-id='22' data-vocab-id='138'>する</span><span class='study-area-input'>____</span>。",
+        "answer": "ものとする",
+        "alternate_grammar": [
+          "ものとします"
+        ],
+        "kanji_answer": "ものとする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Standard, Literary",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/取締役会は、毎年度、前項の報告を取りまとめ、その概要を公表するものとする。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Each year the board of directors <strong>shall</strong> compile the reports stated in the preceding paragraph and publicly announce their outline.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 987,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10393",
+      "type": "study_question",
+      "attributes": {
+        "id": 10393,
+        "content": " 当該（とうがい）<span class='vocab-popout' data-vocab-id='1577'>研究（けんきゅう）</span><span class='gp-popout' data-gp-id='3'>は</span>、法令（ほうれい）<span class='gp-popout' data-gp-id='6'>の</span>範囲（はんい）内（ない）<span class='gp-popout' data-gp-id='25'>で</span><span class='gp-popout vocab-popout' data-gp-id='26' data-vocab-id='1612'>行（おこな）う</span><span class='study-area-input'>____</span>。",
+        "answer": "ものとする",
+        "alternate_grammar": [
+          "ものとします"
+        ],
+        "kanji_answer": "ものとする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Standard, Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/当該研究は、法令の範囲内で行うものとする。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The said research <strong>shall</strong> be conducted within the limits permitted by laws and regulations.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 987,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10401",
+      "type": "study_question",
+      "attributes": {
+        "id": 10401,
+        "content": " 会長（かいちょう）職（しょく）および副（ふく）会長（かいちょう）職（しょく）への就任（しゅうにん）は、株主（かぶぬし）総会（そうかい）での承認（しょうにん）を経（へ）る<span class='study-area-input'>____</span>。",
+        "answer": "ものとする",
+        "alternate_grammar": [
+          "ものとします"
+        ],
+        "kanji_answer": "ものとする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Standard, Literary",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/会長職および副会長職への就任は、株主総会での承認を経るものとする。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The appointment to the positions of chairman and vice chairman <strong>shall</strong> be subject to approval by the General Meeting of Shareholders.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 987,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "989",
+      "type": "writeup",
+      "attributes": {
+        "id": 989,
+        "body_ja": "<p>「もの」という名詞（めいし）を使（つか）う多（おお）くの文法表現（ぶんぽうひょうげん）では、その前（まえ）に置（お）かれた語句（ごく）が確（たし）かなこととして扱（あつか）われていることを示（しめ）します。「もの」に「とする」（意味（いみ）：(A) として・(A) の立場（たちば）で）が加（くわ）わった「<span data-gp-id='987'>ものとする</span>」は、話（はな）し手（て）が議論（ぎろん）や説明（せつめい）を進（すす）めるにあたって、(A) を一旦（いったん）事実（じじつ）と見（み）なすことを表（あらわ）します。この文型（ぶんけい）は、「(A) と規定（きてい）する」という意味（いみ）で使（つか）われることが多（おお）いです。</p>\r\n\r\n<p>「<span data-gp-id='987'>ものとする</span>」は、「ものとして」と同（おな）じく主（おも）に動詞（どうし）の後（あと）に置（お）かれますが、「ものとして」とは異（こと）なり、ほぼ常（つね）に文（ぶん）の終（お）わりで使（つか）われます。そして、法的（ほうてき）文書（ぶんしょ）や契約書（けいやくしょ）などにおいて、事実（じじつ）として扱（あつか）う内容（ないよう）を強調（きょうちょう）する役割（やくわり）を果（は）たします。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183178'>\r\n<li data-study-question='183179'>\r\n<li data-study-question='183180'>\r\n</ul>\r\n",
+        "body": "<p>Like many grammar expressions that use もの, this noun will imply that the word or phrase that comes before it is a strong determination. Due to this, when とする ‘as (A)’, or ‘in the capacity of (A)’ is added, it presents a situation in which the speaker is determining that (A) is true for the sake of discussion. In English, this may be interpreted as ‘supposing that (A)’, or ‘on the assumption that (A)’.</p>\r\n\r\n<p><span data-gp-id='987'>ものとする</span>, like ものとして, will primarily be seen after verbs. However, unlike ものとして, <span data-gp-id='987'>ものとする</span> will almost always appear at the end of a sentence, and highlights things that are being taken as facts in legalese, and other forms of contractual writing.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183178'>\r\n<li data-study-question='183179'>\r\n<li data-study-question='183180'>\r\n</ul>"
+      }
+    },
+    {
+      "id": "2129",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2129,
+        "source": "Sou Matome N1",
+        "location": "Page 17",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2130",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2130,
+        "source": "A Handbook of Japanese Grammar Patterns for Teachers and Learners",
+        "location": "Page 367",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2663",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2663,
+        "site": "JLPT先生",
+        "description": "ものとする",
+        "link": "https://jlptsensei.com/learn-japanese-grammar/%E3%82%82%E3%81%AE%E3%81%A8%E3%81%99%E3%82%8B-mono-to-suru-meaning/",
+        "type": "SupplementalLink"
+      }
+    }
+  ]
+}

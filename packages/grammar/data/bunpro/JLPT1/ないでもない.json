@@ -1,0 +1,921 @@
+{
+  "data": {
+    "id": "844",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 844,
+      "level": "JLPT1",
+      "lesson_id": 46,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "ないでもない",
+      "nuance": "何（なに）かが微妙（びみょう）に(A)をしている又（また）は不可能（ふかのう）ではないということを表（あらわ）す時（とき）に使（つか）われる文法（ぶんぽう）。(A)が<strong>起（お）こっていないということではない</strong>。",
+      "grammar_order": 838,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 845,
+        "title": "もさることながら",
+        "slug": "もさることながら"
+      },
+      "previous_grammar_point": {
+        "id": 843,
+        "title": "～なり～なり",
+        "slug": "-なり-なり"
+      },
+      "lesson_count": "10/18",
+      "title": "ないでもない",
+      "furigana": "ないでもない",
+      "meaning": "Kind of, Might, Slightly, It’s not (impossible) that, Somewhat, In some respects",
+      "nuance_translation": "A grammar point indicating that something is slightly doing (A), or that it's not impossible. It's <strong>not even</strong> that (A) <strong>isn't</strong> happening.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<span class='gp-popout' data-gp-id='888'>Verb［ない］</span>+ （<strong>もの</strong>）+ <strong><span class='gp-popout' data-gp-id='387'>でも</span></strong><sup>(1)</sup> + <strong><SPAN CLASS='GP-POPOUT' DATA-GP-ID='888'>ない</SPAN></strong><br><br><sup>(1)</sup>では",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/verb-grammar-discussion/30748",
+      "metadata": "ないでもない, naidemonai, expression"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "183352",
+            "type": "study_question"
+          },
+          {
+            "id": "9542",
+            "type": "study_question"
+          },
+          {
+            "id": "9540",
+            "type": "study_question"
+          },
+          {
+            "id": "9544",
+            "type": "study_question"
+          },
+          {
+            "id": "183356",
+            "type": "study_question"
+          },
+          {
+            "id": "183353",
+            "type": "study_question"
+          },
+          {
+            "id": "180038",
+            "type": "study_question"
+          },
+          {
+            "id": "180039",
+            "type": "study_question"
+          },
+          {
+            "id": "180040",
+            "type": "study_question"
+          },
+          {
+            "id": "180041",
+            "type": "study_question"
+          },
+          {
+            "id": "180042",
+            "type": "study_question"
+          },
+          {
+            "id": "9543",
+            "type": "study_question"
+          },
+          {
+            "id": "183354",
+            "type": "study_question"
+          },
+          {
+            "id": "183355",
+            "type": "study_question"
+          },
+          {
+            "id": "9541",
+            "type": "study_question"
+          },
+          {
+            "id": "183357",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "912",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1830",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1829",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1831",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1313",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2406",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2407",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2408",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "183352",
+      "type": "study_question",
+      "attributes": {
+        "id": 183352,
+        "content": "あなたの考（かんが）えが<span class='study-area-input'>____</span>けど、反対（はんたい）するね。",
+        "answer": "わからないでもない",
+        "alternate_grammar": [],
+        "kanji_answer": "分（わ）からないでもない",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが微妙（びみょう）に(A)をしている又（また）は不可能（ふかのう）ではないということを表（あらわ）す時（とき）に使（つか）われる文法（ぶんぽう）。(A)が<strong>起（お）こっていないということではない</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/あなたの考えが分からないでもないけど、反対するね。.mp3",
+        "word_prompt": "分（わ）かる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "わからなくはない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une structure grammaticale différente ici.",
+            "id": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>kind of</strong> understand what you’re thinking, but I object.",
+        "nuance_translation": "A grammar point indicating that something is slightly doing (A), or that it's not impossible. It's <strong>not even</strong> that (A) <strong>isn't</strong> happening.",
+        "extra_info": "",
+        "reviewable_id": 844,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9542",
+      "type": "study_question",
+      "attributes": {
+        "id": 9542,
+        "content": " <span class='name-highlight'>友人（ゆうじん）に文句（もんく）を言（い）う</span>：「最近（さいきん）、両親（りょうしん）はうちの子犬（こいぬ）に夢中（むちゅう）だよ。まあその気持（きも）ちは<span class='study-area-input'>____</span>けど。とても可愛（かわい）らしいから。」",
+        "answer": "わからないでもない",
+        "alternate_grammar": [
+          "わからないでもない",
+          "わからないではない"
+        ],
+        "kanji_answer": "わからないでもない",
+        "kanji_alt_grammar": [
+          "わからないではない",
+          "わからないでもない"
+        ],
+        "nuance": "何（なに）かが微妙（びみょう）に(A)をしている又（また）は不可能（ふかのう）ではないということを表（あらわ）す時（とき）に使（つか）われる文法（ぶんぽう）。(A)が<strong>起（お）こっていないということではない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/友人に文句を言う：「最近、両親はうちの子犬に夢中だよ。まあその気持ちはわからないでもないけど。とても可愛らしいから。」.mp3",
+        "word_prompt": "わかる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "わからないものではない": {
+            "en": "Great! This is natural, however try to avoid using this expression. Use a less formal and rare variant of the expression.",
+            "es": ""
+          },
+          "わからないものでもない": {
+            "en": "Great! This is natural, however try to avoid using this expression. Use a less formal and rare variant of the expression.",
+            "es": ""
+          },
+          "わからないことはない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          },
+          "わからないこともない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          },
+          "わからなくはない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          },
+          "わからなくもない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Complaining to a friend: 'Recently, my parents are all about our puppy! I <strong>kind of</strong> understand them though. It's pretty adorable.'",
+        "nuance_translation": "A grammar point indicating that something is slightly doing (A), or that it's not impossible. It's <strong>not even</strong> that (A) <strong>isn't</strong> happening.",
+        "extra_info": "",
+        "reviewable_id": 844,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9540",
+      "type": "study_question",
+      "attributes": {
+        "id": 9540,
+        "content": " <span class='name-highlight'>先輩（せんぱい）</span>：「あの雲（くも）を見（み）ろよ。シマウマみたいに見（み）えるぞ。」<br> <span class='name-highlight'>後輩（こうはい）</span>：「まあシマウマに<span class='study-area-input'>____</span>ですね。」",
+        "answer": "みえないでもない",
+        "alternate_grammar": [
+          "みえないでもない",
+          "みえないではない"
+        ],
+        "kanji_answer": "見（み）えないでもない",
+        "kanji_alt_grammar": [
+          "見（み）えないではない",
+          "見（み）えないでもない"
+        ],
+        "nuance": "何（なに）かが微妙（びみょう）に(A)をしている又（また）は不可能（ふかのう）ではないということを表（あらわ）す時（とき）に使（つか）われる文法（ぶんぽう）。(A)が<strong>起（お）こっていないということではない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/先輩「あの雲を見ろよ。シマウマみたいに見えるぞ。」後輩「まあシマウマに見えないでもないですね。」.mp3",
+        "word_prompt": "見（み）える",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みえないものではない": {
+            "en": "Great! This is natural, however try to avoid using this expression. Use a less formal and rare variant of the expression.",
+            "es": ""
+          },
+          "みえないものでもない": {
+            "en": "Great! This is natural, however try to avoid using this expression. Use a less formal and rare variant of the expression.",
+            "es": ""
+          },
+          "みえないことはない:": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          },
+          "みえないこともない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          },
+          "みえなくはない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          },
+          "みえなくもない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Senpai: 'Look at that cloud! It looks like a zebra.'<br>Kouhai: 'Well, it <strong>kind of</strong> looks like a zebra.'",
+        "nuance_translation": "A grammar point indicating that something is slightly doing (A), or that it's not impossible. It's <strong>not even</strong> that (A) <strong>isn't</strong> happening.",
+        "extra_info": "",
+        "reviewable_id": 844,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9544",
+      "type": "study_question",
+      "attributes": {
+        "id": 9544,
+        "content": " <span class='name-highlight'>ペトルーチオ</span>：「ケイトは顔（かお）だけ見（み）ると、とても美（うつく）しいと<span class='study-area-input'>____</span>んだけど・・・性格（せいかく）が悪（わる）い。」",
+        "answer": "かんじられないでもない",
+        "alternate_grammar": [
+          "かんじられないでもない",
+          "かんじられないではない"
+        ],
+        "kanji_answer": "感（かん）じられないでもない",
+        "kanji_alt_grammar": [
+          "感（かん）じられないではない",
+          "感（かん）じられないでもない"
+        ],
+        "nuance": "何（なに）かが微妙（びみょう）に(A)をしている又（また）は不可能（ふかのう）ではないということを表（あらわ）す時（とき）に使（つか）われる文法（ぶんぽう）。(A)が<strong>起（お）こっていないということではない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ペトルーチオ「ケイトは顔だけ見ると、とても美しいと感じられないでもないんだけど・・・性格が悪い。」.mp3",
+        "word_prompt": "感（かん）じられる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かんじられないものではない": {
+            "en": "Great! This is natural, however try to avoid using this expression. Use a less formal and rare variant of the expression.",
+            "es": ""
+          },
+          "かんじられないものでもない": {
+            "en": "Great! This is natural, however try to avoid using this expression. Use a less formal and rare variant of the expression.",
+            "es": ""
+          },
+          "かんじられないことはない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          },
+          "かんじられないこともない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          },
+          "かんじられなくはない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          },
+          "かんじられなくもない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Petruchio: 'When looking only at the face, Kate can seem <strong>kind of</strong> pretty, but her character is awful.'",
+        "nuance_translation": "A grammar point indicating that something is slightly doing (A), or that it's not impossible. It's <strong>not even</strong> that (A) <strong>isn't</strong> happening.",
+        "extra_info": "",
+        "reviewable_id": 844,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183356",
+      "type": "study_question",
+      "attributes": {
+        "id": 183356,
+        "content": "このブランドのあのバッグは１０（じゅう）万円（まんえん）？！<span class='study-area-input'>____</span>けど、勇気（ゆうき）が出（で）ないなぁ〜。",
+        "answer": "かえないでもない",
+        "alternate_grammar": [],
+        "kanji_answer": "買（か）えないでもない",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが微妙（びみょう）に(A)をしている又（また）は不可能（ふかのう）ではないということを表（あらわ）す時（とき）に使（つか）われる文法（ぶんぽう）。(A)が<strong>起（お）こっていないということではない</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/このブランドのあのバッグは１０万円？！買えないでもないけど、勇気が出ないなぁ〜。.mp3",
+        "word_prompt": "買（か）える",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かえなくはない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That bag from this brand is $1,000?! <strong>It’s not that</strong> I can’t buy it, but I can’t muster up the courage to get it.",
+        "nuance_translation": "A grammar point indicating that something is slightly doing (A), or that it's not impossible. It's <strong>not even</strong> that (A) <strong>isn't</strong> happening.",
+        "extra_info": "",
+        "reviewable_id": 844,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183353",
+      "type": "study_question",
+      "attributes": {
+        "id": 183353,
+        "content": "この洋服（ようふく）、<span class='study-area-input'>____</span>けど、やっぱりキツイなぁ〜。",
+        "answer": "きられないでもない",
+        "alternate_grammar": [],
+        "kanji_answer": "着（き）られないでもない",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが微妙（びみょう）に(A)をしている又（また）は不可能（ふかのう）ではないということを表（あらわ）す時（とき）に使（つか）われる文法（ぶんぽう）。(A)が<strong>起（お）こっていないということではない</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/この洋服、着られないでもないけど、やっぱりキツイなぁ〜。.mp3",
+        "word_prompt": "着（き）られる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "These clothes, <strong>it’s not that</strong> I can’t wear them, but they really are tight.",
+        "nuance_translation": "A grammar point indicating that something is slightly doing (A), or that it's not impossible. It's <strong>not even</strong> that (A) <strong>isn't</strong> happening.",
+        "extra_info": "",
+        "reviewable_id": 844,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180038",
+      "type": "study_question",
+      "attributes": {
+        "id": 180038,
+        "content": "\r\nあいつが悪（わる）いとは思（おも）わ<span class='study-area-input'>____</span>けど、お前（まえ）にも少（すこ）しは非（ひ）があると思（おも）うよ。",
+        "answer": "ないでもない",
+        "alternate_grammar": [],
+        "kanji_answer": "ないでもない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/あいつが悪いとは思わないでもないけど、お前にも少しは非があると思うよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI <strong>kind of</strong> think he is in the wrong, but I think you are a little at fault too.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 844,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180039",
+      "type": "study_question",
+      "attributes": {
+        "id": 180039,
+        "content": "\r\n\r\n\r\nまあ、そう言（い）われてみれば鳥（とり）に見（み）え<span class='study-area-input'>____</span>けど...",
+        "answer": "なくもない",
+        "alternate_grammar": [],
+        "kanji_answer": "なくもない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/まあ、そう言われてみれば鳥に見えなくもないけど....mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nWell, when you put it like that, it <strong>kind of</strong> looks like a bird…",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 844,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180040",
+      "type": "study_question",
+      "attributes": {
+        "id": 180040,
+        "content": "\r\n\r\n\r\n彼女（かのじょ）が謝（あやま）ってきたら、彼女（かのじょ）がしたことを許（ゆる）す気（き）が<span class='study-area-input'>____</span>。",
+        "answer": "ないでもない",
+        "alternate_grammar": [],
+        "kanji_answer": "ないでもない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/彼女が謝ってきたら、彼女がしたことを許す気がないでもない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nIf she comes apologizing, I <strong>might</strong> forgive her for what she's done.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 844,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180041",
+      "type": "study_question",
+      "attributes": {
+        "id": 180041,
+        "content": "\r\n\r\n\r\nピアノを弾（ひ）くのは好（す）きだが、ピアノのレッスンをやめようと思（おも）うことが<span class='study-area-input'>____</span>。",
+        "answer": "なくもない",
+        "alternate_grammar": [],
+        "kanji_answer": "なくもない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ピアノを弾くのは好きだが、ピアノのレッスンをやめようと思うことがなくもない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI like to play the piano, but there are times when I <strong>kind of</strong> think about quitting piano lessons.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 844,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180042",
+      "type": "study_question",
+      "attributes": {
+        "id": 180042,
+        "content": "\r\nあなたの考（かんが）えが分（わ）から<span class='study-area-input'>____</span>けど、そういうことはあまり口（くち）に出（だ）さないほうがいいと思（おも）うよ。",
+        "answer": "ないものでもない",
+        "alternate_grammar": [],
+        "kanji_answer": "ないものでもない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/あなたの考えが分からないものでもないけど、そういうことはあまり口に出さないほうがいいと思うよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI <strong>kind of</strong> understand your opinion, but I don't think you should say things like that out loud.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 844,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9543",
+      "type": "study_question",
+      "attributes": {
+        "id": 9543,
+        "content": "「なんとなく彼（かれ）が言（い）った話（はなし）には欠陥（けっかん）や問題（もんだい）がたくさんあるような気（き）が<span class='study-area-input'>____</span>が、いってくれないよりマシだ。」",
+        "answer": "しないでもない",
+        "alternate_grammar": [
+          "しないでもない",
+          "しないではない"
+        ],
+        "kanji_answer": "しないでもない",
+        "kanji_alt_grammar": [
+          "しないでもない",
+          "しないではない",
+          "しないでもない"
+        ],
+        "nuance": "何（なに）かが微妙（びみょう）に(A)をしている又（また）は不可能（ふかのう）ではないということを表（あらわ）す時（とき）に使（つか）われる文法（ぶんぽう）。(A)が<strong>起（お）こっていないということではない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「なんとなく彼が言った話には欠陥や問題がたくさんあるような気がしないでもないが、いってくれないよりマシだ。」.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しないものではない": {
+            "en": "Great! This is natural, however try to avoid using this expression. Use a less formal and rare variant of the expression.",
+            "es": ""
+          },
+          "しないものでもない": {
+            "en": "Great! This is natural, however try to avoid using this expression. Use a less formal and rare variant of the expression.",
+            "es": ""
+          },
+          "しないことはない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          },
+          "しないこともない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          },
+          "しなくはない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          },
+          "しなくもない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'I <strong>kind of</strong> feel that there are many gaps and problems in his story, but it is better than nothing.'",
+        "nuance_translation": "A grammar point indicating that something is slightly doing (A), or that it's not impossible. It's <strong>not even</strong> that (A) <strong>isn't</strong> happening.",
+        "extra_info": "",
+        "reviewable_id": 844,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183354",
+      "type": "study_question",
+      "attributes": {
+        "id": 183354,
+        "content": "パクチーは<span class='study-area-input'>____</span>けどさ、食（た）べるとウッてなるんだよ。",
+        "answer": "たべられないでもない",
+        "alternate_grammar": [],
+        "kanji_answer": "食（た）べられないでもない",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが微妙（びみょう）に(A)をしている又（また）は不可能（ふかのう）ではないということを表（あらわ）す時（とき）に使（つか）われる文法（ぶんぽう）。(A)が<strong>起（お）こっていないということではない</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/パクチーは食べられないでもないけどさ、食べるとウッてなるんだよ。.mp3",
+        "word_prompt": "食（た）べられる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たべられなくはない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>It’s not that</strong> I can’t eat coriander, but if I eat it, I feel like I am gonna hurl.",
+        "nuance_translation": "A grammar point indicating that something is slightly doing (A), or that it's not impossible. It's <strong>not even</strong> that (A) <strong>isn't</strong> happening.",
+        "extra_info": "",
+        "reviewable_id": 844,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183355",
+      "type": "study_question",
+      "attributes": {
+        "id": 183355,
+        "content": "トイレに行（い）きたい気（き）が<span class='study-area-input'>____</span>けど、まだ並（なら）ばなくてもいいかな…。",
+        "answer": "しないでもない",
+        "alternate_grammar": [],
+        "kanji_answer": "しないでもない",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが微妙（びみょう）に(A)をしている又（また）は不可能（ふかのう）ではないということを表（あらわ）す時（とき）に使（つか）われる文法（ぶんぽう）。(A)が<strong>起（お）こっていないということではない</strong>。",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/トイレに行きたい気がしないでもないけど、まだ並ばなくてもいいかな…。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>kind of</strong> feel like going to the toilet, but it’s probably fine if we don’t line up yet...",
+        "nuance_translation": "A grammar point indicating that something is slightly doing (A), or that it's not impossible. It's <strong>not even</strong> that (A) <strong>isn't</strong> happening.",
+        "extra_info": "",
+        "reviewable_id": 844,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9541",
+      "type": "study_question",
+      "attributes": {
+        "id": 9541,
+        "content": " <span class='name-highlight'>友達（ともだち）との話（はなし）、ちよ</span>：「猫（ねこ）が好（す）きじゃないの？かわいくない？」<br> <span class='name-highlight'>さかき</span>：「猫（ねこ）はかわいいと<span class='study-area-input'>____</span>けど、噛（か）むしひっかくしできるだけ避（さ）けるよ。」",
+        "answer": "おもわないでもない",
+        "alternate_grammar": [
+          "おもわないでもない",
+          "おもわないではない"
+        ],
+        "kanji_answer": "思（おも）わないでもない",
+        "kanji_alt_grammar": [
+          "思（おも）わないではない",
+          "思（おも）わないでもない"
+        ],
+        "nuance": "何（なに）かが微妙（びみょう）に(A)をしている又（また）は不可能（ふかのう）ではないということを表（あらわ）す時（とき）に使（つか）われる文法（ぶんぽう）。(A)が<strong>起（お）こっていないということではない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/友達との話、ちよ：「猫が好きじゃないの？かわいくない？」さかき：「猫はかわいいと思わないでもないけど、噛むしひっかくしできるだけ避けるよ。」.mp3",
+        "word_prompt": "思（おも）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おもわないものではない": {
+            "en": "Great! This is natural, however try to avoid using this expression. Use a less formal and rare variant of the expression.",
+            "es": ""
+          },
+          "おもわないものでもない": {
+            "en": "Great! This is natural, however try to avoid using this expression. Use a less formal and rare variant of the expression.",
+            "es": ""
+          },
+          "おもわないことはない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          },
+          "おもわないこともない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          },
+          "おもわなくはない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          },
+          "おもわなくもない": {
+            "en": "Great! Actually this is even more common than the expression we are looking for. Can you think of a slightly less common variant, mostly used with expressions of feelings and sensations?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Chat between friends, Chiyo: 'Don't you like cats? Aren't they cute?'<br>Sakaki: 'I think that they are <strong>kind of</strong> cute, but they bite and scratch so I try to avoid them as much as possible.'",
+        "nuance_translation": "A grammar point indicating that something is slightly doing (A), or that it's not impossible. It's <strong>not even</strong> that (A) <strong>isn't</strong> happening.",
+        "extra_info": "",
+        "reviewable_id": 844,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183357",
+      "type": "study_question",
+      "attributes": {
+        "id": 183357,
+        "content": "お金（かね）が全（すべ）てだという彼（かれ）の考（かんが）えが正（ただ）しいと<span class='study-area-input'>____</span>が、それが事実（じじつ）だとしたら悲（かな）しい。",
+        "answer": "おもわないでもない",
+        "alternate_grammar": [],
+        "kanji_answer": "思（おも）わないでもない",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが微妙（びみょう）に(A)をしている又（また）は不可能（ふかのう）ではないということを表（あらわ）す時（とき）に使（つか）われる文法（ぶんぽう）。(A)が<strong>起（お）こっていないということではない</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/お金が全てだという彼の考えが正しいと思わないでもないが、それが事実だとしたら悲しい。.mp3",
+        "word_prompt": "思（おも）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おもわなくはない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>It’s not that</strong> I don’t think that his way of thinking that money is everything is correct, but assuming that is the reality, it is sad.",
+        "nuance_translation": "A grammar point indicating that something is slightly doing (A), or that it's not impossible. It's <strong>not even</strong> that (A) <strong>isn't</strong> happening.",
+        "extra_info": "",
+        "reviewable_id": 844,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "912",
+      "type": "writeup",
+      "attributes": {
+        "id": 912,
+        "body_ja": "<p>「<span data-gp-id='844'>ないでもない</span>」と「<span data-gp-id='844'>なくもない</span>」は、「少（すこ）しは (A) だ」「(A) と言（い）えなくはない」「(A) の可能性（かのうせい）もある」といった弱（よわ）い肯定（こうてい）を表（あらわ）す文型（ぶんけい）です。主（おも）に話（はな）し手（て）が (A) をはっきりと肯定（こうてい）も否定（ひてい）もできないときや、誰（だれ）かの発言（はつげん）に真正面（ましょうめん）から反対（はんたい）したくないときに使（つか）われます。</p>\r\n\r\n<p>これらの表現（ひょうげん）は、どちらも動詞（どうし）の否定形（ひていけい）の後（うし）ろや、格助詞（かくじょし）の「が」が付（つ）いた名詞（めいし）の後（うし）ろに置（お）かれます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180038'>\r\n<li data-study-question='180039'>\r\n<li data-study-question='180040'>\r\n<li data-study-question='180041'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='844'>ないでもない</span>」と「<span data-gp-id='844'>なくもない</span>」は入（い）れ替（か）えて使（つか）うこともできますが、「<span data-gp-id='844'>なくもない</span>」の方（ほう）が使用頻度（しようひんど）は低（ひく）めです。また、「<span data-gp-id='844'>ないものでもない</span>」という言（い）い方（かた）もありますが、「<span data-gp-id='844'>ないでもない</span>」と比（くら）べると、それほど頻繁（ひんぱん）には使（つか）われません。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180042'>\r\n</ul>\r\n",
+        "body": "<p><span data-gp-id='844'>ないでもない</span>, and <span data-gp-id='844'>なくもない</span> are structures that have the literal meaning of 'to not not be (A)', and are used to express that something is 'a little (A)', or 'kinda (A)'. These structures are used primarily when the speaker can neither confirm or deny (A), but may also be used simply when not wanting to directly disagree with something that another person has said.</p>\r\n\r\n<p>Both <span data-gp-id='844'>ないでもない</span> and <span data-gp-id='844'>なくもない</span> may be used after either the negated form of verbs, or <span data-term='名詞・めいし'>nouns</span> followed by the <span data-term='格助詞・かくじょし'>case marking particle</span> が.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180038'>\r\n<li data-study-question='180039'>\r\n<li data-study-question='180040'>\r\n<li data-study-question='180041'>\r\n</ul>\r\n\r\n<p><span data-gp-id='844'>ないでもない</span> and <span data-gp-id='844'>なくもない</span> are completely interchangeable, with the primary difference simply being that <span data-gp-id='844'>なくもない</span> is less frequently used. Additionally,  <span data-gp-id='844'>ないものでもない</span> may also be seen, but just like <span data-gp-id='844'>なくもない</span>, it is far less common.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180042'>\r\n</ul>"
+      }
+    },
+    {
+      "id": "1830",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1830,
+        "source": "Try N1",
+        "location": "Page 41",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1829",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1829,
+        "source": "A Dictionary of Intermediate Japanese Grammar",
+        "location": "Page 223",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1831",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1831,
+        "source": "A Dictionary of Advanced Japanese Grammar",
+        "location": "Page 300",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2406",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2406,
+        "site": "JapaneseTest4You",
+        "description": "なり～なり",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n1-grammar-%E3%81%AA%E3%82%8A%EF%BD%9E%E3%81%AA%E3%82%8A-narinari/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2407",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2407,
+        "site": "MaggieSensei",
+        "description": "Double negative: ない+ない",
+        "link": "https://maggiesensei.com/2015/09/09/double-negative-%E3%81%AA%E3%81%84%E3%81%AA%E3%81%84-nainai/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2408",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2408,
+        "site": "JapaneseTest4You",
+        "description": "ないものでもない",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n1-grammar-%E3%81%AA%E3%81%84%E3%82%82%E3%81%AE%E3%81%A7%E3%82%82%E3%81%AA%E3%81%84-nai-mono-demo-nai/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1313",
+      "type": "related_content",
+      "attributes": {
+        "id": 1313,
+        "relationship_type": "related",
+        "body": "These forms are similar in that both can make a statement sound less certain, but their nuance differs. ないでもない uses a double negative, literally 'It's not not (A).', to express a somewhat unsure positive, e.g., 分からないでもない ('I kind of understand.', or literally 'It's not that I don't understand.'). といってもいい suggests 'you could say (A)', e.g. 問題ないといってもいい ('You could say there's no problem.').",
+        "first_relatable": {
+          "id": 844,
+          "slug": "ないでもない",
+          "title": "ないでもない",
+          "meaning": "Kind of, Might, Slightly, It’s not (impossible) that, Somewhat, In some respects",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 147,
+          "slug": "といってもいい",
+          "title": "といってもいい",
+          "meaning": "You could say, You might say",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

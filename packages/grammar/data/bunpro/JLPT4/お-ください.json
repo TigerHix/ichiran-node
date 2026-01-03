@@ -1,0 +1,1270 @@
+{
+  "data": {
+    "id": "189",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 189,
+      "level": "JLPT4",
+      "lesson_id": 17,
+      "part_of_speech": null,
+      "register": "敬語",
+      "word_type": "",
+      "slug": "お-ください",
+      "nuance": "<strong>聞（き）き手（て）に敬意（けいい）を払（はら）った</strong>、<strong>丁寧（ていねい）</strong>なお願（ねが）いの仕方（しかた）。",
+      "grammar_order": 247,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 191,
+        "title": "いらっしゃる",
+        "slug": "いらっしゃる"
+      },
+      "previous_grammar_point": {
+        "id": 193,
+        "title": "なさる",
+        "slug": "なさる"
+      },
+      "lesson_count": "12/18",
+      "title": "お～ください ",
+      "furigana": "お～ください",
+      "meaning": "Please do (Honorific)",
+      "nuance_translation": "A <strong>polite</strong> way to ask someone to do something, that <strong>pays respect to the listener</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "お気をつけください is quite commonly used and accepted. This comes from treating <a href=\"https://bunpro.jp/grammar_points/518\">気をつける</a> as one expression.",
+      "polite_structure": "",
+      "casual_structure": "<span class='chui'>お</span> + <span class='gp-popout' data-gp-id='26'>Verb［stem］</span>+ <strong><span class='gp-popout' data-gp-id='60'>ください</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Polite",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10123",
+      "metadata": "おください, ごください, お, ご, 御, okudasai, gokudasai, o, go, expression, honorific, polite, formal, imperative form, request, keigo, humble, sonkeigo, sonkei"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "180671",
+            "type": "study_question"
+          },
+          {
+            "id": "180672",
+            "type": "study_question"
+          },
+          {
+            "id": "180673",
+            "type": "study_question"
+          },
+          {
+            "id": "180670",
+            "type": "study_question"
+          },
+          {
+            "id": "384",
+            "type": "study_question"
+          },
+          {
+            "id": "3512",
+            "type": "study_question"
+          },
+          {
+            "id": "3515",
+            "type": "study_question"
+          },
+          {
+            "id": "385",
+            "type": "study_question"
+          },
+          {
+            "id": "386",
+            "type": "study_question"
+          },
+          {
+            "id": "3510",
+            "type": "study_question"
+          },
+          {
+            "id": "3514",
+            "type": "study_question"
+          },
+          {
+            "id": "3516",
+            "type": "study_question"
+          },
+          {
+            "id": "3517",
+            "type": "study_question"
+          },
+          {
+            "id": "3518",
+            "type": "study_question"
+          },
+          {
+            "id": "3513",
+            "type": "study_question"
+          },
+          {
+            "id": "3511",
+            "type": "study_question"
+          },
+          {
+            "id": "3519",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "244",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "200",
+            "type": "offline_resource"
+          },
+          {
+            "id": "589",
+            "type": "offline_resource"
+          },
+          {
+            "id": "914",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1139",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1371",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "408",
+            "type": "related_content"
+          },
+          {
+            "id": "807",
+            "type": "related_content"
+          },
+          {
+            "id": "214",
+            "type": "related_content"
+          },
+          {
+            "id": "236",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "359",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2049",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "180671",
+      "type": "study_question",
+      "attributes": {
+        "id": 180671,
+        "content": "こちら<span class=\"gp-popout\" data-gp-id=\"6\">の</span>スリッパ<span class=\"gp-popout\" data-gp-id=\"21\">を</span><span class='study-area-input'>____</span>使（つか）い<span class=\"gp-popout\" data-gp-id=\"189\">ください</span>。",
+        "answer": "お",
+        "alternate_grammar": [],
+        "kanji_answer": "お",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/こちらのスリッパをお使いください。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Please use</strong> these slippers over here.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 189,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180672",
+      "type": "study_question",
+      "attributes": {
+        "id": 180672,
+        "content": "後（うし）ろ<span class=\"gp-popout\" data-gp-id=\"6\">の</span>扉（とびら）<span class=\"gp-popout\" data-gp-id=\"21\">を</span><span class='study-area-input'>____</span>閉（し）め<span class=\"gp-popout\" data-gp-id=\"189\">ください</span>。",
+        "answer": "お",
+        "alternate_grammar": [],
+        "kanji_answer": "お",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/後ろの扉をお閉めください。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Please close</strong> the door behind you.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 189,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180673",
+      "type": "study_question",
+      "attributes": {
+        "id": 180673,
+        "content": "どうぞ、こちら<span class=\"gp-popout\" data-gp-id=\"32\">に</span><span class='study-area-input'>____</span>掛（か）け<span class=\"gp-popout\" data-gp-id=\"189\">ください</span>。",
+        "answer": "お",
+        "alternate_grammar": [],
+        "kanji_answer": "お",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/どうぞ、こちらにお掛けください。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Go ahead, <strong>please sit</strong> right here.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 189,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180670",
+      "type": "study_question",
+      "attributes": {
+        "id": 180670,
+        "content": "こちら<span class=\"gp-popout\" data-gp-id=\"6\">の</span>サービス<span class=\"gp-popout\" data-gp-id=\"21\">を</span>使（つか）う<span class=\"gp-popout\" data-gp-id=\"32\">に</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span>インターネット<span class=\"gp-popout\" data-gp-id=\"36\">で</span><span class='study-area-input'>____</span>申込（もうしこ）み<span class=\"gp-popout\" data-gp-id=\"189\">ください</span>。",
+        "answer": "お",
+        "alternate_grammar": [],
+        "kanji_answer": "お",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/こちらのサービスを使うにはインターネットでお申込みください。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "To use this service, <strong>please register</strong> via the internet.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 189,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "384",
+      "type": "study_question",
+      "attributes": {
+        "id": 384,
+        "content": "少（すこ）し<span class='study-area-input'>____</span>。",
+        "answer": "おまちください",
+        "alternate_grammar": [],
+        "kanji_answer": "お待（ま）ちください",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）に敬意（けいい）を払（はら）った</strong>、<strong>丁寧（ていねい）</strong>なお願（ねが）いの仕方（しかた）。",
+        "tense": "Sonkeigo, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/189/male_audio/230408_1443_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/少しお待ちください。.mp3",
+        "word_prompt": "待（ま）<span class='gp-popout' data-gp-id='26'>つ</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おまちねがいます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "おまちねがいますか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "まってください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "おもちください": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "おまってください": {
+            "en": "This is blending two levels of politeness and is grammatically incorrect. We're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          },
+          "まってください": {
+            "en": "〜てください is a polite request, but we're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Please wait</strong> just a minute. ",
+        "nuance_translation": "A <strong>polite</strong> way to ask someone to do something, that <strong>pays respect to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 189,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3512",
+      "type": "study_question",
+      "attributes": {
+        "id": 3512,
+        "content": "どうか<span class='study-area-input'>____</span>。",
+        "answer": "おゆるしください",
+        "alternate_grammar": [],
+        "kanji_answer": "お許（ゆる）しください",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）に敬意（けいい）を払（はら）った</strong>、<strong>丁寧（ていねい）</strong>なお願（ねが）いの仕方（しかた）。",
+        "tense": "Sonkeigo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/189/male_audio/230408_1444_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/どうかお許しください。.mp3",
+        "word_prompt": "許（ゆる）<span class='gp-popout' data-gp-id='26'>す</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ゆるしなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "ゆるしてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "ゆるして": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "ゆるしていただけませんか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "おゆるしねがいます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "おゆるしてください": {
+            "en": "This is blending two levels of politeness and is grammatically incorrect. We're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          },
+          "ゆるしてください": {
+            "en": "〜てください is a polite request, but we're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Please</strong> find a way to <strong>forgive</strong> me.",
+        "nuance_translation": "A <strong>polite</strong> way to ask someone to do something, that <strong>pays respect to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 189,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3515",
+      "type": "study_question",
+      "attributes": {
+        "id": 3515,
+        "content": "楽（たの）し<span class='gp-popout' data-gp-id='24'>い</span>時間（じかん）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "おすごしください",
+        "alternate_grammar": [],
+        "kanji_answer": "お過（す）ごしください",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）に敬意（けいい）を払（はら）った</strong>、<strong>丁寧（ていねい）</strong>なお願（ねが）いの仕方（しかた）。",
+        "tense": "Sonkeigo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/189/male_audio/230408_1445_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/楽しい時間をお過ごしください。.mp3",
+        "word_prompt": "過（す）ごす",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "すごしください": {
+            "en": "You're close! This is a polite request, but when using this type of word, we typically add a respectful prefix to make it more formal. Try adding that to make the expression more natural.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "おすごしてください": {
+            "en": "This is blending two levels of politeness and is grammatically incorrect. We're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Please</strong> enjoy your <strong>time</strong>. ",
+        "nuance_translation": "A <strong>polite</strong> way to ask someone to do something, that <strong>pays respect to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 189,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "385",
+      "type": "study_question",
+      "attributes": {
+        "id": 385,
+        "content": "どうぞ<span class='study-area-input'>____</span>。",
+        "answer": "おめしあがりください",
+        "alternate_grammar": [
+          "めしあがってください",
+          "おめしあがってください",
+          "おめしあがりください"
+        ],
+        "kanji_answer": "お召（め）し上（あ）がりください",
+        "kanji_alt_grammar": [
+          "召（め）し上（あ）がってください",
+          "お召（め）し上（あ）がってください",
+          "お召（め）し上（あ）がりください"
+        ],
+        "nuance": "<strong>聞（き）き手（て）に敬意（けいい）を払（はら）った</strong>、<strong>丁寧（ていねい）</strong>なお願（ねが）いの仕方（しかた）。",
+        "tense": "Sonkeigo, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/189/male_audio/230408_1444.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/どうぞお召し上がりください。.mp3",
+        "word_prompt": "召（め）し上（あ）がる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "めしあがりください": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "めしあがれ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "おめしあがりなさい": {
+            "en": "This sounds a bit too direct. Can you try using a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          },
+          "おめしあがてください": {
+            "en": "This is blending two levels of politeness and is grammatically incorrect. We're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          },
+          "おめしあげてください": {
+            "en": "This is blending two levels of politeness and is grammatically incorrect. We're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          },
+          "めしあがてください": {
+            "en": "This is blending two levels of politeness and is grammatically incorrect. We're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          },
+          "おめしあがりになります": {
+            "en": "Can you try using a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          },
+          "おめしあがください": {
+            "en": "Can you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          },
+          "おめしあげりください": {
+            "en": "Can you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          },
+          "めしあがりなさい": {
+            "en": "Can you add something to the beginning?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Please</strong> go ahead and <strong>eat</strong>. ",
+        "nuance_translation": "A <strong>polite</strong> way to ask someone to do something, that <strong>pays respect to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 189,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "386",
+      "type": "study_question",
+      "attributes": {
+        "id": 386,
+        "content": "しばらく<span class='study-area-input'>____</span>。",
+        "answer": "おやすみください",
+        "alternate_grammar": [],
+        "kanji_answer": "お休（やす）みください",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）に敬意（けいい）を払（はら）った</strong>、<strong>丁寧（ていねい）</strong>なお願（ねが）いの仕方（しかた）。",
+        "tense": "Sonkeigo, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/189/male_audio/230408_1444_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/しばらくお休みください。.mp3",
+        "word_prompt": "休（やす）<span class='gp-popout' data-gp-id='26'>む</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "おやすみなさい": {
+            "en": "This sounds a bit too direct. Can you try using a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          },
+          "おやすんでください": {
+            "en": "This is blending two levels of politeness and is grammatically incorrect. We're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          },
+          "やすんでください": {
+            "en": "〜てください is a polite request, but we're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Please take a</strong> short <strong>break</strong>. ",
+        "nuance_translation": "A <strong>polite</strong> way to ask someone to do something, that <strong>pays respect to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 189,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3510",
+      "type": "study_question",
+      "attributes": {
+        "id": 3510,
+        "content": "どうぞ、<span class='study-area-input'>____</span>。",
+        "answer": "おかけください",
+        "alternate_grammar": [],
+        "kanji_answer": "お掛（か）けください",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）に敬意（けいい）を払（はら）った</strong>、<strong>丁寧（ていねい）</strong>なお願（ねが）いの仕方（しかた）。",
+        "tense": "Sonkeigo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/189/male_audio/230408_1444_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/どうぞ、お掛けください。.mp3",
+        "word_prompt": "掛（か）け<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かけてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "かけていただけますか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "おかけねがいます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "おかけてください": {
+            "en": "This is blending two levels of politeness and is grammatically incorrect. We're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          },
+          "おかけりください": {
+            "en": "Can you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Please, have a seat</strong>. ",
+        "nuance_translation": "A <strong>polite</strong> way to ask someone to do something, that <strong>pays respect to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 189,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3514",
+      "type": "study_question",
+      "attributes": {
+        "id": 3514,
+        "content": "お名前（なまえ）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "おかきください",
+        "alternate_grammar": [],
+        "kanji_answer": "お書（か）きください",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）に敬意（けいい）を払（はら）った</strong>、<strong>丁寧（ていねい）</strong>なお願（ねが）いの仕方（しかた）。",
+        "tense": "Sonkeigo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/189/male_audio/230421_1257.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/お名前をお書きください。.mp3",
+        "word_prompt": "書（か）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かきなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "かいてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "おかきになってください": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "かいていただけませんか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "おかきねがいます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "かきください": {
+            "en": "You're close! This is a polite request, but when using this type of word, we typically add a respectful prefix to make it more formal. Try adding that to make the expression more natural.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "おかいてください": {
+            "en": "This is blending two levels of politeness and is grammatically incorrect. We're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          },
+          "かいてください": {
+            "en": "〜てください is a polite request, but we're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Please write</strong> your name. ",
+        "nuance_translation": "A <strong>polite</strong> way to ask someone to do something, that <strong>pays respect to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 189,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3516",
+      "type": "study_question",
+      "attributes": {
+        "id": 3516,
+        "content": "思（おも）っ<span class='gp-popout' data-gp-id='27'>ている</span><span class='gp-popout' data-gp-id='98'>こと</span><span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "おはなしください",
+        "alternate_grammar": [],
+        "kanji_answer": "お話（はな）しください",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）に敬意（けいい）を払（はら）った</strong>、<strong>丁寧（ていねい）</strong>なお願（ねが）いの仕方（しかた）。",
+        "tense": "Sonkeigo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/189/male_audio/230408_1445_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/思っていることをお話しください。.mp3",
+        "word_prompt": "話（はな）<span class='gp-popout' data-gp-id='26'>す</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はなしてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "はなしなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "おはなししてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "おはなしねがいます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "はなしていただけませんか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "はなしください": {
+            "en": "You're close! This is a polite request, but when using this type of word, we typically add a respectful prefix to make it more formal. Try adding that to make the expression more natural.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "おはなしてください": {
+            "en": "This is blending two levels of politeness and is grammatically incorrect. We're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Please tell</strong> me what you are thinking.",
+        "nuance_translation": "A <strong>polite</strong> way to ask someone to do something, that <strong>pays respect to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 189,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3517",
+      "type": "study_question",
+      "attributes": {
+        "id": 3517,
+        "content": "ご感想（かんそう）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "おきかせください",
+        "alternate_grammar": [],
+        "kanji_answer": "お聞（き）かせください",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）に敬意（けいい）を払（はら）った</strong>、<strong>丁寧（ていねい）</strong>なお願（ねが）いの仕方（しかた）。",
+        "tense": "Sonkeigo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/189/male_audio/230408_1446.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ご感想をお聞かせください。.mp3",
+        "word_prompt": "聞（き）<span class='gp-popout' data-gp-id='153'>かせ</span>る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きかせていただきます": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "きかせてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "おきかせねがいます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "きかせください": {
+            "en": "You're close! This is a polite request, but when using this type of word, we typically add a respectful prefix to make it more formal. Try adding that to make the expression more natural.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "おきかせてください": {
+            "en": "This is blending two levels of politeness and is grammatically incorrect. We're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Please let me hear</strong> your impression. ",
+        "nuance_translation": "A <strong>polite</strong> way to ask someone to do something, that <strong>pays respect to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 189,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3518",
+      "type": "study_question",
+      "attributes": {
+        "id": 3518,
+        "content": "お出（で）かけ<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='22'>する</span><span class='gp-popout' data-gp-id='123'>なら</span>、<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "おもちください",
+        "alternate_grammar": [],
+        "kanji_answer": "お持（も）ちください",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）に敬意（けいい）を払（はら）った</strong>、<strong>丁寧（ていねい）</strong>なお願（ねが）いの仕方（しかた）。",
+        "tense": "Sonkeigo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/189/male_audio/230408_1446_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/お出かけをするなら、これをお持ちください。.mp3",
+        "word_prompt": "持（も）<span class='gp-popout' data-gp-id='26'>つ</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "もっていってください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "もってください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "おもちねがいます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "もちください": {
+            "en": "You're close! This is a polite request, but when using this type of word, we typically add a respectful prefix to make it more formal. Try adding that to make the expression more natural.",
+            "es": "",
+            "fr": ""
+          },
+          "おまちください": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "おもってください": {
+            "en": "This is blending two levels of politeness and is grammatically incorrect. We're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          },
+          "もってください": {
+            "en": "〜てください is a polite request, but we're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "If you are going out, <strong>please take</strong> this with you.",
+        "nuance_translation": "A <strong>polite</strong> way to ask someone to do something, that <strong>pays respect to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 189,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3513",
+      "type": "study_question",
+      "attributes": {
+        "id": 3513,
+        "content": "ご意見（いけん）<span class='gp-popout' data-gp-id='10'>が</span>いただける<span class='gp-popout' data-gp-id='143'>と</span>嬉（うれ）し<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='2'>です</span>。<span class='study-area-input'>____</span>。",
+        "answer": "おつたえください",
+        "alternate_grammar": [],
+        "kanji_answer": "お伝（つた）えください",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）に敬意（けいい）を払（はら）った</strong>、<strong>丁寧（ていねい）</strong>なお願（ねが）いの仕方（しかた）。",
+        "tense": "Sonkeigo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/189/male_audio/230408_1444_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ご意見がいただけると嬉しいです。お伝えください。.mp3",
+        "word_prompt": "伝（つた）え<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つたえなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "つたえてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "つたえていただけませんか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "おつたえねがいます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "つたえください": {
+            "en": "You're close! This is a polite request, but when using this type of word, we typically add a respectful prefix to make it more formal. Try adding that to make the expression more natural.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "おつたえてください": {
+            "en": "This is blending two levels of politeness and is grammatically incorrect. We're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          },
+          "つたえてください": {
+            "en": "〜てください is a polite request, but we're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I would be thrilled to hear your opinion. <strong>Please tell me</strong>. ",
+        "nuance_translation": "A <strong>polite</strong> way to ask someone to do something, that <strong>pays respect to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 189,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3511",
+      "type": "study_question",
+      "attributes": {
+        "id": 3511,
+        "content": "明日（あした）<span class='gp-popout' data-gp-id='104'>までに</span><span class='study-area-input'>____</span>。",
+        "answer": "おしはらいください",
+        "alternate_grammar": [],
+        "kanji_answer": "お支払（しはら）いください",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）に敬意（けいい）を払（はら）った</strong>、<strong>丁寧（ていねい）</strong>なお願（ねが）いの仕方（しかた）。",
+        "tense": "Sonkeigo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/189/male_audio/230408_1444_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/明日までにお支払いください。.mp3",
+        "word_prompt": "支（し）払（はら）<span class='gp-popout' data-gp-id='26'>う</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おしはらいになってください": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "しはらっていただけませんか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "おしはらいねがいます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "しはらいください": {
+            "en": "You're close! This is a polite request, but when using this type of word, we typically add a respectful prefix to make it more formal. Try adding that to make the expression more natural.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "おしはらってください": {
+            "en": "This is blending two levels of politeness and is grammatically incorrect. We're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          },
+          "しはらってください": {
+            "en": "〜てください is a polite request, but we're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Please</strong> complete the payment by tomorrow.",
+        "nuance_translation": "A <strong>polite</strong> way to ask someone to do something, that <strong>pays respect to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 189,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3519",
+      "type": "study_question",
+      "attributes": {
+        "id": 3519,
+        "content": "<span class='gp-popout' data-gp-id='718'>何（なに）か</span>言（い）い<span class='gp-popout' data-gp-id='59'>たい</span>ことがあ<span class='gp-popout' data-gp-id='154'>れば</span>、<span class='study-area-input'>____</span>。",
+        "answer": "おつたえください",
+        "alternate_grammar": [],
+        "kanji_answer": "お伝（つた）えください",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>聞（き）き手（て）に敬意（けいい）を払（はら）った</strong>、<strong>丁寧（ていねい）</strong>なお願（ねが）いの仕方（しかた）。",
+        "tense": "Sonkeigo",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/189/male_audio/230408_1446_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/何か言いたいことがあれば、お伝えください。.mp3",
+        "word_prompt": "伝（つた）える",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おつたえねがいます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "つたえてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "つたえなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "つたえていただけませんか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "つたえください": {
+            "en": "You're close! This is a polite request, but when using this type of word, we typically add a respectful prefix to make it more formal. Try adding that to make the expression more natural.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "おつたえてください": {
+            "en": "This is blending two levels of politeness and is grammatically incorrect. We're looking for a grammar point that uses honorific language to say 'please do (A)', showing extra respect toward the person being asked.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "If you have something to say, <strong>please say</strong> it. ",
+        "nuance_translation": "A <strong>polite</strong> way to ask someone to do something, that <strong>pays respect to the listener</strong>.",
+        "extra_info": "",
+        "reviewable_id": 189,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "244",
+      "type": "writeup",
+      "attributes": {
+        "id": 244,
+        "body_ja": "",
+        "body": "<p><span data-gp-id='189'>お～ください</span> is an <span data-term='尊敬語・そんけいご'>honorific language</span> expression in Japanese which is used in a similar way to <span data-gp-id='95'>なさい</span>.  It is the <span data-term='命令形・めいれいけい'>imperative form</span> of くださる, which itself is the <span data-term='尊敬語・そんけいご'>honorific language</span> equivalent of <span data-gp-id='723'>くれる</span>. In this way, it conveys 'please do (A) for me'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180670'>\r\n<li data-study-question='180671'>\r\n</ul>\r\n\r\n<p><span data-gp-id='189'>お～ください</span> is more polite than <span data-gp-id='95'>なさい</span>, and may be used when making requests to almost anybody, regardless of if they are higher, or lower status than you.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180672'>\r\n<li data-study-question='180673'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p><span data-gp-id='189'>ご～ください</span> will only be used as part of the <span data-term='謙譲語・けんじょうご'>humble speech</span> expression, <span data-gp-id='726'>ご～する</span> (or <span data-gp-id='726'>お〜する</span>). In these cases, it becomes <span data-gp-id='189'>ご～してください</span>.</p></section>"
+      }
+    },
+    {
+      "id": "200",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 200,
+        "source": "Genki II 1st Edition",
+        "location": "Page 140",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "589",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 589,
+        "source": "Genki II 2nd Edition",
+        "location": "Page 170",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "914",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 914,
+        "source": "みんなの日本語 II",
+        "location": "Page 150 [CH 49]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1139",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1139,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 343",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1371",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1371,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 229",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "359",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 359,
+        "site": "Talk In Japan",
+        "description": "「お／ご…ください。」",
+        "link": "https://www.youtube.com/watch?v=B8KdiXMmLq0",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2049",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2049,
+        "site": "Tae Kim",
+        "description": "Using 「ください」 with honorifics",
+        "link": "https://guidetojapanese.org/learn/grammar/honorific",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "408",
+      "type": "related_content",
+      "attributes": {
+        "id": 408,
+        "relationship_type": "related",
+        "body": "Both forms ask someone to do something, but the tone is different. なさい is a polite but direct command, often used by parents or teachers, as in これを使いなさい ('Use this.'). お～ください is a respectful request form, used to politely encourage someone like a customer or superior to do something, as in これをお使いください ('Please use this.').",
+        "first_relatable": {
+          "id": 95,
+          "slug": "なさい",
+          "title": "なさい",
+          "meaning": "Command to do",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 189,
+          "slug": "お-ください",
+          "title": "お～ください ",
+          "meaning": "Please do (Honorific)",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "807",
+      "type": "related_content",
+      "attributes": {
+        "id": 807,
+        "relationship_type": "related",
+        "body": "お～ください and お～願う are both honorific request forms but differ in nuance and setting. お～ください is often used when politely encouraging someone to take an action, such as お上がりください ('Please come in.'). お～願う is more formal and is typically used in public announcements or formal situations. For example, ご注意願います ('Please be careful.') might be used in a train announcement.",
+        "first_relatable": {
+          "id": 189,
+          "slug": "お-ください",
+          "title": "お～ください ",
+          "meaning": "Please do (Honorific)",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 532,
+          "slug": "お-願う",
+          "title": "お～願う",
+          "meaning": "Please, Could you please",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "214",
+      "type": "related_content",
+      "attributes": {
+        "id": 214,
+        "relationship_type": "synonym",
+        "body": "てください is a polite, neutral way to say 'Please do (something),' and is used with strangers or equals. The honorific form, お〜ください, is used for superiors or customers. However, some verbs like 食べる and 行く have special honorific forms, such as 召し上がる and いらっしゃる, which are used instead.",
+        "first_relatable": {
+          "id": 60,
+          "slug": "てください",
+          "title": "てください",
+          "meaning": "Please do (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 189,
+          "slug": "お-ください",
+          "title": "お～ください ",
+          "meaning": "Please do (Honorific)",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "236",
+      "type": "related_content",
+      "attributes": {
+        "id": 236,
+        "relationship_type": "antonym",
+        "body": "ないでください is a polite way to ask someone not to do something. It's neutral and can be used with strangers or people of equal status. In contrast, お〜ください is an honorific request form used with superiors, customers, or others of higher status. Some verbs, like 食べる and 行く, have special honorific forms such as 召し上がる and いらっしゃる, which are used instead of the お〜ください structure.",
+        "first_relatable": {
+          "id": 65,
+          "slug": "ないでください",
+          "title": "ないでください",
+          "meaning": "Please don't (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 189,
+          "slug": "お-ください",
+          "title": "お～ください ",
+          "meaning": "Please do (Honorific)",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+================================================================================
+Grammar Classification Evaluation
+Can we identify which grammar a sentence demonstrates?
+================================================================================
+
+============================================================
+Testing JLPT5
+============================================================
+Loaded 10 grammars
+
+✓ Sentence: 建物の中を走る。...
+  True: を, Predicted: を (conf: 1.00)
+  GiNZA: 7.8ms, Ichiran: 85.2ms
+
+✓ Sentence: バターを食べる。...
+  True: を, Predicted: を (conf: 1.00)
+  GiNZA: 7.5ms, Ichiran: 11.8ms
+
+✗ Sentence: だれを連れて来ますか？...
+  True: だれ, Predicted: を (conf: 1.00)
+  GiNZA: 8.8ms, Ichiran: 27.2ms
+  Top 3 scores: [('を', 1.0), ('だれ', 1.0), ('たい', 0)]
+
+✓ Sentence: これはだれのノートですか。...
+  True: だれ, Predicted: だれ (conf: 1.00)
+  GiNZA: 8.8ms, Ichiran: 24.4ms
+
+✓ Sentence: 昔は先生になりたくなかった。...
+  True: たい, Predicted: たい (conf: 1.00)
+  GiNZA: 10.6ms, Ichiran: 35.2ms
+
+JLPT5 Accuracy: 75.0% (15/20)
+
+============================================================
+Testing JLPT4
+============================================================
+Loaded 10 grammars
+
+✓ Sentence: ドミニク：「沖縄に一度は行こうと思っています。」...
+  True: number-amount-は, Predicted: number-amount-は (conf: 1.00)
+  GiNZA: 11.0ms, Ichiran: 39.6ms
+
+✓ Sentence: ディズニーランドには年に５回は行っている。...
+  True: number-amount-は, Predicted: number-amount-は (conf: 1.00)
+  GiNZA: 10.5ms, Ichiran: 38.6ms
+
+✗ Sentence: 名古屋の夏は暑いだけでなく、湿気もひどい。...
+  True: だけでなく, Predicted: number-amount-は (conf: 1.00)
+  GiNZA: 11.8ms, Ichiran: 23.5ms
+  Top 3 scores: [('number-amount-は', 1.0), ('だけでなく', 1.0), ('まで', 0.4666666666666666)]
+
+✗ Sentence: 田舎は静かなだけでなく、空気もきれいだ。...
+  True: だけでなく, Predicted: number-amount-は (conf: 1.00)
+  GiNZA: 11.7ms, Ichiran: 26.2ms
+  Top 3 scores: [('number-amount-は', 1.0), ('だけでなく', 1.0), ('まで', 0.4666666666666666)]
+
+✓ Sentence: バイクまで持っているの？...
+  True: まで, Predicted: まで (conf: 1.00)
+  GiNZA: 9.1ms, Ichiran: 21.0ms
+
+JLPT4 Accuracy: 50.0% (10/20)
+
+============================================================
+Testing JLPT3
+============================================================
+Loaded 10 grammars
+
+✓ Sentence: 暇な時はゲームをやってもかまわない。...
+  True: てもかまわない, Predicted: てもかまわない (conf: 1.00)
+  GiNZA: 9.7ms, Ichiran: 21.4ms
+
+✓ Sentence: アルバイト募集中。未経験者でもかまいません。...
+  True: てもかまわない, Predicted: てもかまわない (conf: 1.00)
+  GiNZA: 10.4ms, Ichiran: 23.1ms
+
+✓ Sentence: 彼女は歌うのが上手い。ピアノもいうまでもない。...
+  True: は言うまでもない1, Predicted: は言うまでもない1 (conf: 1.00)
+  GiNZA: 12.2ms, Ichiran: 17.4ms
+
+✓ Sentence: Ａ：「レオンはプロだそうだよ。」Ｂ：「うん、それはいうまでもないね。」...
+  True: は言うまでもない1, Predicted: は言うまでもない1 (conf: 1.00)
+  GiNZA: 15.2ms, Ichiran: 20.3ms
+
+✓ Sentence: じゃあ、ここで失礼します。...
+  True: では-それでは-じゃあ, Predicted: では-それでは-じゃあ (conf: 1.00)
+  GiNZA: 9.2ms, Ichiran: 22.8ms
+
+JLPT3 Accuracy: 95.0% (19/20)
+
+============================================================
+Testing JLPT2
+============================================================
+Loaded 10 grammars
+
+✓ Sentence: 今日はずっと晴れって天気予報で言ってたけど曇ってきたから いちおう傘を持って行ったほうがいいかも。...
+  True: 一応1, Predicted: 一応1 (conf: 1.00)
+  GiNZA: 15.2ms, Ichiran: 94.6ms
+
+✓ Sentence: これで大丈夫だと思うけど、 いちおうチェックしておいてくれない？...
+  True: 一応1, Predicted: 一応1 (conf: 1.00)
+  GiNZA: 12.3ms, Ichiran: 92.3ms
+
+✓ Sentence: 素人からみるとかなりうまい人でも、プロの世界では全然通用しないらしい。...
+  True: から見ると, Predicted: から見ると (conf: 1.00)
+  GiNZA: 14.2ms, Ichiran: 100.6ms
+
+✓ Sentence: 脇役からみると主役は羨ましいが、主役は主役で大変らしい。...
+  True: から見ると, Predicted: から見ると (conf: 1.00)
+  GiNZA: 10.8ms, Ichiran: 52.8ms
+
+✓ Sentence: ３年間日本人の友達と毎日日本語で話していたら、いつのまにか日本語が上手になっていた。...
+  True: いつの間にか, Predicted: いつの間にか (conf: 1.00)
+  GiNZA: 14.5ms, Ichiran: 163.8ms
+
+JLPT2 Accuracy: 100.0% (20/20)
+
+============================================================
+Testing JLPT1
+============================================================
+Loaded 10 grammars
+
+✓ Sentence: 雷に打たれて死ぬものとおもっていたが、どうやら生き残ったようだ…。...
+  True: ものと思っていた, Predicted: ものと思っていた (conf: 1.00)
+  GiNZA: 13.2ms, Ichiran: 52.0ms
+
+✓ Sentence: 強盗に殺されるものとおもっていたが、意外にも強盗犯は傷一つすらつけてこなかった。...
+  True: ものと思っていた, Predicted: ものと思っていた (conf: 1.00)
+  GiNZA: 15.2ms, Ichiran: 100.7ms
+
+✓ Sentence: 実家のお母さんからの電報がくるなり、山田さんは青ざめた。...
+  True: なり, Predicted: なり (conf: 1.00)
+  GiNZA: 13.3ms, Ichiran: 48.5ms
+
+✓ Sentence: 息子が家に上がるなりトイレへと駆け込んだ。...
+  True: なり, Predicted: なり (conf: 1.00)
+  GiNZA: 10.2ms, Ichiran: 32.3ms
+
+✗ Sentence: 私たちは２０１９年に出会って、約２年間の交際をへて結婚しました。...
+  True: を経て, Predicted: なり (conf: 1.00)
+  GiNZA: 14.6ms, Ichiran: 68.8ms
+  Top 3 scores: [('なり', 1.0), ('を経て', 1.0), ('を機に', 0.5599999999999999)]
+
+JLPT1 Accuracy: 20.0% (4/20)
+
+================================================================================
+FINAL RESULTS
+================================================================================
+
+--- Classification Accuracy ---
+JLPT5: 75.0% (15/20)
+JLPT4: 50.0% (10/20)
+JLPT3: 95.0% (19/20)
+JLPT2: 100.0% (20/20)
+JLPT1: 20.0% (4/20)
+
+Overall: 68.0% (68/100)
+
+--- Latency Comparison ---
+GiNZA (parse + classify):
+  Mean: 11.94ms
+  P95:  16.09ms
+
+Ichiran (tokenize only):
+  Mean: 45.89ms
+  P95:  104.21ms
+
+--- Key Insight ---
+GiNZA is ~8x faster AND provides dependency parsing.
+Current simple pattern matching works well for direct matches.
+Challenge: Similar patterns (e.g., ても vs てもいい) need disambiguation.

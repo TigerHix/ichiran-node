@@ -1,0 +1,1336 @@
+{
+  "data": {
+    "id": "713",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 713,
+      "level": "JLPT5",
+      "lesson_id": 7,
+      "part_of_speech": "連体詞",
+      "register": "一般",
+      "word_type": "自立語",
+      "slug": "どの",
+      "nuance": "(A)の中（なか）から具体（ぐたい）的（てき）に<strong>どれ</strong>が示（しめ）されているかを<strong>聞（き）きたい</strong>ときに、<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれる言葉（ことば）。",
+      "grammar_order": 80,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 764,
+        "title": "ている②",
+        "slug": "ている2"
+      },
+      "previous_grammar_point": {
+        "id": 56,
+        "title": "どこ",
+        "slug": "どこ"
+      },
+      "lesson_count": "4/13",
+      "title": "どの",
+      "furigana": "どの",
+      "meaning": "Which (of three or more), What (kind)",
+      "nuance_translation": "A structure which <strong>precedes nouns</strong>, <strong>asking</strong> about specifically <strong>which</strong> (A) is being indicated.",
+      "rare_kanji_warning": null,
+      "caution": "どの precedes a noun, どれ follows a noun",
+      "polite_structure": null,
+      "casual_structure": "Demonstrative, <strong>どの</strong> + Noun",
+      "part_of_speech_translation": "Fixed Adjective",
+      "register_translation": "Standard",
+      "word_type_translation": "Independent Word",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/6982",
+      "metadata": "どの, dono, fixed adjective, pre-noun adjectival, adjective, kosoado words, question, interrogative"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "155007",
+            "type": "study_question"
+          },
+          {
+            "id": "155008",
+            "type": "study_question"
+          },
+          {
+            "id": "183789",
+            "type": "study_question"
+          },
+          {
+            "id": "183788",
+            "type": "study_question"
+          },
+          {
+            "id": "7655",
+            "type": "study_question"
+          },
+          {
+            "id": "7657",
+            "type": "study_question"
+          },
+          {
+            "id": "7652",
+            "type": "study_question"
+          },
+          {
+            "id": "7649",
+            "type": "study_question"
+          },
+          {
+            "id": "7650",
+            "type": "study_question"
+          },
+          {
+            "id": "7651",
+            "type": "study_question"
+          },
+          {
+            "id": "7653",
+            "type": "study_question"
+          },
+          {
+            "id": "7654",
+            "type": "study_question"
+          },
+          {
+            "id": "7656",
+            "type": "study_question"
+          },
+          {
+            "id": "7658",
+            "type": "study_question"
+          },
+          {
+            "id": "7659",
+            "type": "study_question"
+          },
+          {
+            "id": "7660",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "79",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "919",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1014",
+            "type": "offline_resource"
+          },
+          {
+            "id": "950",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "261",
+            "type": "related_content"
+          },
+          {
+            "id": "363",
+            "type": "related_content"
+          },
+          {
+            "id": "300",
+            "type": "related_content"
+          },
+          {
+            "id": "241",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1554",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1553",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "155007",
+      "type": "study_question",
+      "attributes": {
+        "id": 155007,
+        "content": "<span class='study-area-input'>____</span>飲（の）み物（もの）<span class=\"gp-popout\" data-gp-id=\"10\">が</span><span class=\"gp-popout\" data-gp-id=\"7\">いい</span>？",
+        "answer": "どの",
+        "alternate_grammar": [],
+        "kanji_answer": "どの",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/どの飲み物がいい？.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Which</strong> drink would you like?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 713,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155008",
+      "type": "study_question",
+      "attributes": {
+        "id": 155008,
+        "content": "<span class='study-area-input'>____</span>色（いろ）<span class=\"gp-popout\" data-gp-id=\"46\">でもいい</span><span class=\"gp-popout\" data-gp-id=\"78\">よ</span>。",
+        "answer": "どの",
+        "alternate_grammar": [],
+        "kanji_answer": "どの",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/どの色でもいいよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Whatever</strong> color is okay. (Literally 'even any of whichever color is good')",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 713,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183789",
+      "type": "study_question",
+      "attributes": {
+        "id": 183789,
+        "content": "<span data-gp-id='713'>どの</span>色（いろ）<span data-gp-id='10'>が</span><span data-gp-id='716'>好（す）き</span>？",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>What</strong> color do you like?",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 713,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183788",
+      "type": "study_question",
+      "attributes": {
+        "id": 183788,
+        "content": "赤（あか）<span data-gp-id='33'>か</span>青（あお）、<span data-gp-id='152'>どっち</span><span data-gp-id='10'>が</span><span data-gp-id='7'>いい</span>？",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Do you prefer red or blue?",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 713,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7655",
+      "type": "study_question",
+      "attributes": {
+        "id": 7655,
+        "content": "<span class='study-area-input'>____</span>スポーツ<span class='gp-popout' data-gp-id='10'>が</span><span class='gp-popout vocab-popout' data-gp-id='716' data-vocab-id='492'>好（す）き</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "どの",
+        "alternate_grammar": [],
+        "kanji_answer": "どの",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の中（なか）から具体（ぐたい）的（てき）に<strong>どれ</strong>が示（しめ）されているかを<strong>聞（き）きたい</strong>ときに、<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれる言葉（ことば）。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/713/male_audio/どのスポーツが好きですか。.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/どのスポーツが好きですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "なんの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どれ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちら": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっちの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちらの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Which</strong> sports do you like?",
+        "nuance_translation": "A structure which <strong>precedes nouns</strong>, <strong>asking</strong> about specifically <strong>which</strong> (A) is being indicated.",
+        "extra_info": "",
+        "reviewable_id": 713,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7657",
+      "type": "study_question",
+      "attributes": {
+        "id": 7657,
+        "content": "<span class='study-area-input'>____</span>ラーメン屋（や）<span class='gp-popout' data-gp-id='10'>が</span>美味（おい）し<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "どの",
+        "alternate_grammar": [],
+        "kanji_answer": "どの",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の中（なか）から具体（ぐたい）的（てき）に<strong>どれ</strong>が示（しめ）されているかを<strong>聞（き）きたい</strong>ときに、<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれる言葉（ことば）。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/713/male_audio/07-どのラーメン屋がおいしいんですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/どのラーメン屋が美味しいですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "なんの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どれ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちら": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっちの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちらの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Which</strong> ramen place is delicious?",
+        "nuance_translation": "A structure which <strong>precedes nouns</strong>, <strong>asking</strong> about specifically <strong>which</strong> (A) is being indicated.",
+        "extra_info": "",
+        "reviewable_id": 713,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7652",
+      "type": "study_question",
+      "attributes": {
+        "id": 7652,
+        "content": "<span class='study-area-input'>____</span>パソコン<span class='gp-popout' data-gp-id='10'>が</span><span class='gp-popout' data-gp-id='716'>好（す）き</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "どの",
+        "alternate_grammar": [],
+        "kanji_answer": "どの",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の中（なか）から具体（ぐたい）的（てき）に<strong>どれ</strong>が示（しめ）されているかを<strong>聞（き）きたい</strong>ときに、<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれる言葉（ことば）。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/713/male_audio/05-どのパソコンが好きですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/どのパソコンが好きですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "なんの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どれ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちら": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっちの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちらの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Which</strong> computer do you like?",
+        "nuance_translation": "A structure which <strong>precedes nouns</strong>, <strong>asking</strong> about specifically <strong>which</strong> (A) is being indicated.",
+        "extra_info": "",
+        "reviewable_id": 713,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7649",
+      "type": "study_question",
+      "attributes": {
+        "id": 7649,
+        "content": "<span class='study-area-input'>____</span>寿司屋（すしや）<span class='gp-popout' data-gp-id='10'>が</span><span class='gp-popout' data-gp-id='7'>いい</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "どの",
+        "alternate_grammar": [],
+        "kanji_answer": "どの",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の中（なか）から具体（ぐたい）的（てき）に<strong>どれ</strong>が示（しめ）されているかを<strong>聞（き）きたい</strong>ときに、<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれる言葉（ことば）。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/713/male_audio/11-どの寿司屋がいいですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/どの寿司屋がいいですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "なんの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どれ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちら": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっちの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちらの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Which</strong> sushi restaurant is good?",
+        "nuance_translation": "A structure which <strong>precedes nouns</strong>, <strong>asking</strong> about specifically <strong>which</strong> (A) is being indicated.",
+        "extra_info": "",
+        "reviewable_id": 713,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7650",
+      "type": "study_question",
+      "attributes": {
+        "id": 7650,
+        "content": "<span class='study-area-input'>____</span>レストラン<span class='gp-popout' data-gp-id='32'>に</span><span class='gp-popout vocab-popout' data-gp-id='26' data-vocab-id='935'>行（い）く</span>？",
+        "answer": "どの",
+        "alternate_grammar": [],
+        "kanji_answer": "どの",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の中（なか）から具体（ぐたい）的（てき）に<strong>どれ</strong>が示（しめ）されているかを<strong>聞（き）きたい</strong>ときに、<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれる言葉（ことば）。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/713/male_audio/どのレストランに行く？.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/どのレストランに行く？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "なんの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どれ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちら": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっちの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちらの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Which</strong> restaurant will you go to?",
+        "nuance_translation": "A structure which <strong>precedes nouns</strong>, <strong>asking</strong> about specifically <strong>which</strong> (A) is being indicated.",
+        "extra_info": "",
+        "reviewable_id": 713,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7651",
+      "type": "study_question",
+      "attributes": {
+        "id": 7651,
+        "content": "<span class='study-area-input'>____</span>ブランド<span class='gp-popout' data-gp-id='21'>を</span>選（えら）<span class='gp-popout' data-gp-id='26'>びます</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "どの",
+        "alternate_grammar": [],
+        "kanji_answer": "どの",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の中（なか）から具体（ぐたい）的（てき）に<strong>どれ</strong>が示（しめ）されているかを<strong>聞（き）きたい</strong>ときに、<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれる言葉（ことば）。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/713/male_audio/06-どのブランドを選びますか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/どのブランドを選びますか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "なんの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どれ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちら": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっちの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちらの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Which</strong> brand will you choose?",
+        "nuance_translation": "A structure which <strong>precedes nouns</strong>, <strong>asking</strong> about specifically <strong>which</strong> (A) is being indicated.",
+        "extra_info": "",
+        "reviewable_id": 713,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7653",
+      "type": "study_question",
+      "attributes": {
+        "id": 7653,
+        "content": "<span class='study-area-input'>____</span>お茶（ちゃ）<span class='gp-popout' data-gp-id='21'>を</span>飲（の）み<span class='gp-popout' data-gp-id='26'>ます</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "どの",
+        "alternate_grammar": [],
+        "kanji_answer": "どの",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の中（なか）から具体（ぐたい）的（てき）に<strong>どれ</strong>が示（しめ）されているかを<strong>聞（き）きたい</strong>ときに、<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれる言葉（ことば）。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/713/male_audio/03-どのお茶を飲みますか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/どのお茶を飲みますか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "なんの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どれ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちら": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっちの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちらの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Which</strong> tea will you drink?",
+        "nuance_translation": "A structure which <strong>precedes nouns</strong>, <strong>asking</strong> about specifically <strong>which</strong> (A) is being indicated.",
+        "extra_info": "",
+        "reviewable_id": 713,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7654",
+      "type": "study_question",
+      "attributes": {
+        "id": 7654,
+        "content": "<span class='study-area-input'>____</span>国（くに）に行（い）く<span class='gp-popout' data-gp-id='17'>んです</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "どの",
+        "alternate_grammar": [],
+        "kanji_answer": "どの",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の中（なか）から具体（ぐたい）的（てき）に<strong>どれ</strong>が示（しめ）されているかを<strong>聞（き）きたい</strong>ときに、<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれる言葉（ことば）。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/713/male_audio/10-どの国に行くんですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/どの国に行くんですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "なんの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どれ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちら": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっちの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちらの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Which</strong> country are you going to?",
+        "nuance_translation": "A structure which <strong>precedes nouns</strong>, <strong>asking</strong> about specifically <strong>which</strong> (A) is being indicated.",
+        "extra_info": "",
+        "reviewable_id": 713,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7656",
+      "type": "study_question",
+      "attributes": {
+        "id": 7656,
+        "content": "<span class='study-area-input'>____</span>ラーメン屋（や）<span class='gp-popout' data-gp-id='25'>で</span>食（た）べ<span class='gp-popout' data-gp-id='12'>る</span>ん<span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "どの",
+        "alternate_grammar": [],
+        "kanji_answer": "どの",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の中（なか）から具体（ぐたい）的（てき）に<strong>どれ</strong>が示（しめ）されているかを<strong>聞（き）きたい</strong>ときに、<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれる言葉（ことば）。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/713/male_audio/08-どのラーメン屋で食べるんですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/どのラーメン屋で食べるんですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "なんの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どれ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちら": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっちの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちらの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "At <strong>which</strong> ramen place will you eat?",
+        "nuance_translation": "A structure which <strong>precedes nouns</strong>, <strong>asking</strong> about specifically <strong>which</strong> (A) is being indicated.",
+        "extra_info": "",
+        "reviewable_id": 713,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7658",
+      "type": "study_question",
+      "attributes": {
+        "id": 7658,
+        "content": "<span class='study-area-input'>____</span>車（くるま）が速（はや）<span class='gp-popout' data-gp-id='24'>い</span>？",
+        "answer": "どの",
+        "alternate_grammar": [],
+        "kanji_answer": "どの",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の中（なか）から具体（ぐたい）的（てき）に<strong>どれ</strong>が示（しめ）されているかを<strong>聞（き）きたい</strong>ときに、<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれる言葉（ことば）。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/713/male_audio/どの車が速い？.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/どの車が速い？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "なんの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どれ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちら": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっちの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちらの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Which</strong> car is fast?",
+        "nuance_translation": "A structure which <strong>precedes nouns</strong>, <strong>asking</strong> about specifically <strong>which</strong> (A) is being indicated.",
+        "extra_info": "",
+        "reviewable_id": 713,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7659",
+      "type": "study_question",
+      "attributes": {
+        "id": 7659,
+        "content": "<span class='study-area-input'>____</span>料理（りょうり）<span class='gp-popout' data-gp-id='10'>が</span>おすすめ<span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "どの",
+        "alternate_grammar": [],
+        "kanji_answer": "どの",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の中（なか）から具体（ぐたい）的（てき）に<strong>どれ</strong>が示（しめ）されているかを<strong>聞（き）きたい</strong>ときに、<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれる言葉（ことば）。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/713/male_audio/12-どの料理がおすすめですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/どの料理がおすすめですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "なんの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どれ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちら": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっちの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちらの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Which</strong> dish do you recommend?",
+        "nuance_translation": "A structure which <strong>precedes nouns</strong>, <strong>asking</strong> about specifically <strong>which</strong> (A) is being indicated.",
+        "extra_info": "",
+        "reviewable_id": 713,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7660",
+      "type": "study_question",
+      "attributes": {
+        "id": 7660,
+        "content": "<span class='name-highlight'>友達（ともだち）</span>：「<span class='study-area-input'>____</span>漫画（まんが）<span class='gp-popout' data-gp-id='21'>を</span>読（よ）み<span class='gp-popout' data-gp-id='26'>ます</span><span class='gp-popout' data-gp-id='8'>か</span>？」<span class='name-highlight'>私（わたし）</span>：「<span class='gp-popout' data-gp-id='29'>あそこ</span> <span class='gp-popout' data-gp-id='32'>に</span>ある漫画（まんが）<span class='gp-popout' data-gp-id='21'>を</span>読（よ）み<span class='gp-popout' data-gp-id='26'>ます</span>。」",
+        "answer": "どの",
+        "alternate_grammar": [],
+        "kanji_answer": "どの",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の中（なか）から具体（ぐたい）的（てき）に<strong>どれ</strong>が示（しめ）されているかを<strong>聞（き）きたい</strong>ときに、<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれる言葉（ことば）。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/713/male_audio/02-ともだちどの漫画を読みますか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/友達：「どの漫画を読みますか？」私：「あそこ にある漫画を読みます。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "なんの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どれ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちら": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どっちの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "どちらの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Friend</span>: '<strong>Which</strong> manga are you going to read?' <span class='name-highlight'>Me</span>: 'I will read the manga that is over there.'",
+        "nuance_translation": "A structure which <strong>precedes nouns</strong>, <strong>asking</strong> about specifically <strong>which</strong> (A) is being indicated.",
+        "extra_info": "",
+        "reviewable_id": 713,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "79",
+      "type": "writeup",
+      "attributes": {
+        "id": 79,
+        "body_ja": "",
+        "body": "<p><span data-gp-id='713'>どの</span> is classified as a 'pre-noun adjectival' in Japanese. These are a special type of word that do not conjugate, which means that they will always appear in the same form. <span data-gp-id='713'>どの</span> comes from the same family of words as <span data-gp-id='712'>どれ</span> and <span data-gp-id='56'>どこ</span>, and is used for asking about 'which' thing someone will choose.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155007'>\r\n<li data-study-question='155008'></ul>\r\n\r\n<p>In these examples, we can see that <span data-gp-id='713'>どの</span> may be used to ask a question, or it may also be used in a similar way to 'whatever', or 'whichever' in English.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p><span data-gp-id='713'>どの</span> is only used when there are 3 or more possible choices, and <span data-gp-id='152'>どっち</span>（<span data-gp-id='6'>の</span>）・<span data-gp-id='152'>どちら</span>（<span data-gp-id='6'>の</span>） will be used when there are only 2 possible choices.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183788'>\r\n<li data-study-question='183789'></ul>\r\n\r\n<p>In the first example, the speaker is asking specifically about 2 options 'red or blue', so <span data-gp-id='152'>どっち</span> will be used. However, in the second example, since the answer could be any color, <span data-gp-id='713'>どの</span> will be used instead.</p></section>"
+      }
+    },
+    {
+      "id": "919",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 919,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 63",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1014",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1014,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 13",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "950",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 950,
+        "source": "みんなの日本語 I",
+        "location": "Page 105 [CH 16]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1554",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1554,
+        "site": "Japanese StackExchange",
+        "description": "どの vs. どれ",
+        "link": "https://japanese.stackexchange.com/questions/44575/%E3%81%A9%E3%81%AE%EF%BD%96%EF%BD%93%E3%81%A9%E3%82%8C-can-i-use-them-interchangeably",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1553",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1553,
+        "site": "Wasabi",
+        "description": "Japanese wh-Questions",
+        "link": "https://wasabi-jpn.com/magazine/japanese-grammar/japanese-wh-questions/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "261",
+      "type": "related_content",
+      "attributes": {
+        "id": 261,
+        "relationship_type": "related",
+        "body": "どれ and どの are both question words used to ask 'which' when given the option of three or more choices. The key difference is that, while どれ stands alone and asks about one specific thing or choice (i.e. 'Which one,' or 'Which thing'), どの must always be followed by a noun. For example, どの本 means 'Which book'? ",
+        "first_relatable": {
+          "id": 712,
+          "slug": "どれ",
+          "title": "どれ",
+          "meaning": "Which (of three or more)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 713,
+          "slug": "どの",
+          "title": "どの",
+          "meaning": "Which (of three or more), What (kind)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "363",
+      "type": "related_content",
+      "attributes": {
+        "id": 363,
+        "relationship_type": "related",
+        "body": "Both どの and この are used before nouns. この refers to something physically or figuratively close to the speaker, similar to 'this' in English (e.g., この色 = 'this color'). In contrast, どの is a question word used to ask 'which' when there are three or more choices (e.g., どの色が好きですか？ = 'Which color do you like?').",
+        "first_relatable": {
+          "id": 713,
+          "slug": "どの",
+          "title": "どの",
+          "meaning": "Which (of three or more), What (kind)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 30,
+          "slug": "この",
+          "title": "この",
+          "meaning": "This",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "300",
+      "type": "related_content",
+      "attributes": {
+        "id": 300,
+        "relationship_type": "related",
+        "body": "Both どの and その are used before nouns. その refers to something physically or figuratively closer to the listener than the speaker, or something that was just mentioned, similar to the English 'that.' In contrast, どの is a question word used to ask 'which' when there are three or more choices (e.g., どの色が好きですか？ = 'Which color do you like?').",
+        "first_relatable": {
+          "id": 713,
+          "slug": "どの",
+          "title": "どの",
+          "meaning": "Which (of three or more), What (kind)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 37,
+          "slug": "その",
+          "title": "その",
+          "meaning": "That",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "241",
+      "type": "related_content",
+      "attributes": {
+        "id": 241,
+        "relationship_type": "related",
+        "body": "Both どの and あの are used before nouns. あの refers to something far from both the speaker and listener, or something familiar to both but not close, similar to 'that' in English. In contrast, どの is a question word meaning 'which' when there are three or more choices (e.g., どの色が好きですか？ = 'Which color do you like?').",
+        "first_relatable": {
+          "id": 713,
+          "slug": "どの",
+          "title": "どの",
+          "meaning": "Which (of three or more), What (kind)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 47,
+          "slug": "あの",
+          "title": "あの",
+          "meaning": "That (over there)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

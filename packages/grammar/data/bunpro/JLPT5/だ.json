@@ -1,0 +1,1201 @@
+{
+  "data": {
+    "id": "1",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 1,
+      "level": "JLPT5",
+      "lesson_id": 1,
+      "part_of_speech": "助動詞",
+      "register": "一般",
+      "word_type": "付属語",
+      "slug": "だ",
+      "nuance": "何（なに）かが何（なに）であるかを<strong>カジュアル</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+      "grammar_order": 1,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 2,
+        "title": "です",
+        "slug": "です"
+      },
+      "previous_grammar_point": null,
+      "lesson_count": "1/12",
+      "title": "だ",
+      "furigana": "だ",
+      "meaning": "To be, Is",
+      "nuance_translation": "A <strong>casual determiner</strong> of what something <strong>is</strong>.",
+      "rare_kanji_warning": "",
+      "caution": " だ cannot be used with い-Adjectives ",
+      "polite_structure": "",
+      "casual_structure": "Noun + <strong>だ</strong><br><span class='gp-popout' data-gp-id='28'>［な］Adjective </span> + <strong>だ</strong>",
+      "part_of_speech_translation": "Auxiliary Verb",
+      "register_translation": "Standard",
+      "word_type_translation": "Dependent Word",
+      "discourse_link": "https://community.bunpro.jp/t/discussion-topic/473",
+      "metadata": "だ, da, auxiliary verb, casual, copula"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "598",
+            "type": "study_question"
+          },
+          {
+            "id": "146359",
+            "type": "study_question"
+          },
+          {
+            "id": "146361",
+            "type": "study_question"
+          },
+          {
+            "id": "183745",
+            "type": "study_question"
+          },
+          {
+            "id": "183746",
+            "type": "study_question"
+          },
+          {
+            "id": "146362",
+            "type": "study_question"
+          },
+          {
+            "id": "146360",
+            "type": "study_question"
+          },
+          {
+            "id": "1470",
+            "type": "study_question"
+          },
+          {
+            "id": "1159",
+            "type": "study_question"
+          },
+          {
+            "id": "1476",
+            "type": "study_question"
+          },
+          {
+            "id": "597",
+            "type": "study_question"
+          },
+          {
+            "id": "1",
+            "type": "study_question"
+          },
+          {
+            "id": "599",
+            "type": "study_question"
+          },
+          {
+            "id": "1469",
+            "type": "study_question"
+          },
+          {
+            "id": "1471",
+            "type": "study_question"
+          },
+          {
+            "id": "1472",
+            "type": "study_question"
+          },
+          {
+            "id": "1473",
+            "type": "study_question"
+          },
+          {
+            "id": "1474",
+            "type": "study_question"
+          },
+          {
+            "id": "1475",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "1",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1231",
+            "type": "offline_resource"
+          },
+          {
+            "id": "732",
+            "type": "offline_resource"
+          },
+          {
+            "id": "723",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "19",
+            "type": "related_content"
+          },
+          {
+            "id": "51",
+            "type": "related_content"
+          },
+          {
+            "id": "1333",
+            "type": "related_content"
+          },
+          {
+            "id": "18",
+            "type": "related_content"
+          },
+          {
+            "id": "121",
+            "type": "related_content"
+          },
+          {
+            "id": "55",
+            "type": "related_content"
+          },
+          {
+            "id": "20",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "725",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1172",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "598",
+      "type": "study_question",
+      "attributes": {
+        "id": 598,
+        "content": "猫（ねこ）<span class='study-area-input'>____</span>。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>カジュアル</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/1/male_audio/10-猫だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/猫だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "でございます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {
+          "ます": {
+            "en": "Use casual form like だ.",
+            "es": "Use casual form like だ.",
+            "fr": "Use casual form like だ."
+          }
+        },
+        "translation": "(It) <strong>is</strong> a cat. ",
+        "nuance_translation": "A <strong>casual determiner</strong> of what something <strong>is</strong>. ",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "146359",
+      "type": "study_question",
+      "attributes": {
+        "id": 146359,
+        "content": "アイスクリーム<span class='study-area-input'>____</span>。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/アイスクリームだ。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> ice cream.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "146361",
+      "type": "study_question",
+      "attributes": {
+        "id": 146361,
+        "content": "危険（きけん）<span class='study-area-input'>____</span>。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/危険だ。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> dangerous.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183745",
+      "type": "study_question",
+      "attributes": {
+        "id": 183745,
+        "content": "大（おお）きい<span class=\"gp-popout\" data-gp-id=\"1\">だ</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> big. (Unnatural Japanese)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183746",
+      "type": "study_question",
+      "attributes": {
+        "id": 183746,
+        "content": "大（おお）きい<span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 14,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> big. (Natural Japanese)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "146362",
+      "type": "study_question",
+      "attributes": {
+        "id": 146362,
+        "content": "大切（たいせつ）<span class='study-area-input'>____</span>。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/大切だ。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> important.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "146360",
+      "type": "study_question",
+      "attributes": {
+        "id": 146360,
+        "content": "お寺（てら）<span class='study-area-input'>____</span>。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/お寺だ。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> a temple.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1470",
+      "type": "study_question",
+      "attributes": {
+        "id": 1470,
+        "content": "映画（えいが）<span class='study-area-input'>____</span>。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>カジュアル</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/1/male_audio/06-映画だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/映画だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "でございます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> a movie.",
+        "nuance_translation": "A <strong>casual determiner</strong> of what something <strong>is</strong>. ",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1159",
+      "type": "study_question",
+      "attributes": {
+        "id": 1159,
+        "content": "綺麗（きれい）<span class='study-area-input'>____</span>。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>カジュアル</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/1/male_audio/12-綺麗だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/綺麗だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "でございます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> beautiful. ",
+        "nuance_translation": "A <strong>casual determiner</strong> of what something <strong>is</strong>. ",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1476",
+      "type": "study_question",
+      "attributes": {
+        "id": 1476,
+        "content": "質問（しつもん）<span class='study-area-input'>____</span>。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>カジュアル</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/1/male_audio/13-質問だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/質問だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "でございます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> a question. ",
+        "nuance_translation": "A <strong>casual determiner</strong> of what something <strong>is</strong>. ",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "597",
+      "type": "study_question",
+      "attributes": {
+        "id": 597,
+        "content": "私（わたし）<span class='study-area-input'>____</span>。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>カジュアル</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/1/male_audio/11-私だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "でございます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> me.",
+        "nuance_translation": "A <strong>casual determiner</strong> of what something <strong>is</strong>. ",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1",
+      "type": "study_question",
+      "attributes": {
+        "id": 1,
+        "content": "本（ほん）<span class='study-area-input'>____</span>。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>カジュアル</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/1/male_audio/07-本だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/本だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "でございます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> a book.",
+        "nuance_translation": "A <strong>casual determiner</strong> of what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "599",
+      "type": "study_question",
+      "attributes": {
+        "id": 599,
+        "content": "学生（がくせい）<span class='study-area-input'>____</span>。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>カジュアル</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/1/male_audio/04-学生だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/学生だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "でございます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "(I) <strong>am</strong> a student. ",
+        "nuance_translation": "A <strong>casual determiner</strong> of what something <strong>is</strong>. ",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1469",
+      "type": "study_question",
+      "attributes": {
+        "id": 1469,
+        "content": "海（うみ）<span class='study-area-input'>____</span>。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>カジュアル</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/1/male_audio/09-海だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/海だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "でございます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> the sea.",
+        "nuance_translation": "A <strong>casual determiner</strong> of what something <strong>is</strong>. ",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1471",
+      "type": "study_question",
+      "attributes": {
+        "id": 1471,
+        "content": "<span class='gp-popout' data-gp-id='716'>好（す）き</span><span class='study-area-input'>____</span>。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>カジュアル</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/1/male_audio/03-好きだ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/好きだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "でございます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> liked.",
+        "nuance_translation": "A <strong>casual determiner</strong> of what something <strong>is</strong>. ",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1472",
+      "type": "study_question",
+      "attributes": {
+        "id": 1472,
+        "content": "家（いえ）<span class='study-area-input'>____</span>。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>カジュアル</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/1/male_audio/05-家だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/家だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "でございます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> a house. ",
+        "nuance_translation": "A <strong>casual determiner</strong> of what something <strong>is</strong>. ",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1473",
+      "type": "study_question",
+      "attributes": {
+        "id": 1473,
+        "content": "水（みず）<span class='study-area-input'>____</span>。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>カジュアル</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/1/male_audio/08-水だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/水だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "でございます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> water. ",
+        "nuance_translation": "A <strong>casual determiner</strong> of what something <strong>is</strong>. ",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1474",
+      "type": "study_question",
+      "attributes": {
+        "id": 1474,
+        "content": "同（おな）じ<span class='study-area-input'>____</span>。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>カジュアル</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/1/male_audio/01-同じだ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/同じだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "でございます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> the same. ",
+        "nuance_translation": "A <strong>casual determiner</strong> of what something <strong>is</strong>. ",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1475",
+      "type": "study_question",
+      "attributes": {
+        "id": 1475,
+        "content": "大変（たいへん）<span class='study-area-input'>____</span>。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>カジュアル</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/1/male_audio/02-大変だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/大変だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "です": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "でございます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> terrible.",
+        "nuance_translation": "A <strong>casual determiner</strong> of what something <strong>is</strong>. ",
+        "extra_info": "",
+        "reviewable_id": 1,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1",
+      "type": "writeup",
+      "attributes": {
+        "id": 1,
+        "body_ja": "",
+        "body": "<p>For the most part, <span class=\"gp-popout\" data-gp-id=\"1\">だ</span> is the equivalent of 'is' in English. Its role is to strongly express determination or assertion. It is a casual grammar structure, which means that you won't see it in polite sentences.</p>\r\n\r\n<p>Technically, <span class=\"gp-popout\" data-gp-id=\"1\">だ</span> is an <span class=\"info-highlight\" data-term=\"助動詞・じょどうし\">auxiliary verb</span>, a group of words that attach themselves to other words to give them meaning. <span class=\"gp-popout\" data-gp-id=\"2\">です</span> has the same role as <span class=\"gp-popout\" data-gp-id=\"1\">だ</span>, but <span class=\"gp-popout\" data-gp-id=\"2\">です</span> is the one that will be used in polite sentences, and is also one of the first Japanese grammar patterns many people are exposed to.</p>\r\n\r\n<p><span class=\"gp-popout\" data-gp-id=\"1\">だ</span> will always follow nouns, or words that behave like nouns, such as <span class=\"gp-popout\" data-gp-id=\"28\">な-Adjectives</span>.</p>\r\n\r\n<ul class=\"writeup-examples--holder\">\r\n<li data-study-question=\"146359\"></li>\r\n<li data-study-question=\"146360\"></li>\r\n<li data-study-question=\"146361\"></li>\r\n<li data-study-question=\"146362\"></li></ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>Although <span class=\"gp-popout\" data-gp-id=\"2\">です</span>, the polite equivalent of <span class=\"gp-popout\" data-gp-id=\"1\">だ</span>, can be seen following <span class=\"gp-popout\" data-gp-id=\"24\">い-Adjectives</span>, <span class=\"gp-popout\" data-gp-id=\"1\">だ</span> itself will never be used directly after an <span class=\"gp-popout\" data-gp-id=\"24\">い-Adjective</span>.</p>\r\n\r\n<ul class=\"writeup-examples--holder\">\r\n<li data-study-question=\"183745\">\r\n<li data-study-question=\"183746\"></ul></section>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>While <span class=\"gp-popout\" data-gp-id=\"1\">だ</span> is often thought of as the 'casual form' of <span class=\"gp-popout\" data-gp-id=\"2\">です</span>, that is actually not entirely true. <span class=\"gp-popout\" data-gp-id=\"2\">です</span> is a <span class=\"info-highlight\" data-term=\"丁寧語・ていねいご\">polite speech</span> word. The official 'formal version' of <span class=\"gp-popout\" data-gp-id=\"1\">だ</span> is <span class=\"gp-popout\" data-gp-id=\"436\">である</span>. We will learn this grammar point a bit later. <span class=\"gp-popout\" data-gp-id=\"436\">である</span> can often be seen in articles, and formal writing, while <span class=\"gp-popout\" data-gp-id=\"2\">です</span> is more common in <span class=\"info-highlight\" data-term=\"丁寧語・ていねいご\">polite speech</span>.</p></section>"
+      }
+    },
+    {
+      "id": "1231",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1231,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 29",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "732",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 732,
+        "source": "みんなの日本語 I",
+        "location": "Page 14 [CH 1]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "723",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 723,
+        "source": "みんなの日本語 I",
+        "location": "Page 128 [CH 20]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "725",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 725,
+        "site": "Tae Kim",
+        "description": "だ cannot be used with い-Adjectives",
+        "link": "https://guidetojapanese.org/learn/grammar/adjectives",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1172",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1172,
+        "site": "An Introduction to Japanese",
+        "description": "The copula だ",
+        "link": "https://pomax.github.io/nrGrammar/#section-2-3-2-Inflection",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1,
+        "site": "Tae Kim",
+        "description": "Declaring something is so and so using 「だ」",
+        "link": "https://guidetojapanese.org/learn/grammar/stateofbeing",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "19",
+      "type": "related_content",
+      "attributes": {
+        "id": 19,
+        "relationship_type": "antonym",
+        "body": "だ follows nouns and な-adjectives, with a meaning similar to the English 'is.' For instance, これはペンだ translates to 'This is a pen.' On the other hand, じゃない (a contraction of ではない) is used to create the negative of such expressions. For example, これはペンじゃない translates to 'This isn't a pen.'",
+        "first_relatable": {
+          "id": 1,
+          "slug": "だ",
+          "title": "だ",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 49,
+          "slug": "じゃない",
+          "title": "じゃない",
+          "meaning": "Is not, Isn't",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "51",
+      "type": "related_content",
+      "attributes": {
+        "id": 51,
+        "relationship_type": "related",
+        "body": "がある indicates the existence or possession of something. For example, ペンがある means 'There is a pen (on the table, etc.)' or 'I have a pen.' On the other hand, だ expresses assertion or determination similar to 'is/are' in English. In contrast to the がある example, ペンだ would mean 'It (=the thing we are looking at) is a pen.'",
+        "first_relatable": {
+          "id": 13,
+          "slug": "がある",
+          "title": "がある",
+          "meaning": "To be, There is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 1,
+          "slug": "だ",
+          "title": "だ",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1333",
+      "type": "related_content",
+      "attributes": {
+        "id": 1333,
+        "relationship_type": "related",
+        "body": "よ is a common sentence-ending particle used to add emphasis, often indicating the speaker is sharing new information (e.g., 面白いよ = 'It's interesting, I'm telling you!'). だ is a grammatical form expressing assertion, similar to 'is' or 'am.' These two are often combined, especially in casual or masculine speech (元気だよ = 'I'm feeling good!'). In softer or more feminine speech, the だ is frequently omitted (e.g., 元気よ).",
+        "first_relatable": {
+          "id": 78,
+          "slug": "よ",
+          "title": "よ",
+          "meaning": "Emphasis (Sentence ending particle)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 1,
+          "slug": "だ",
+          "title": "だ",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "18",
+      "type": "related_content",
+      "attributes": {
+        "id": 18,
+        "relationship_type": "synonym",
+        "body": "だ and です both function like the English 'is.' The main difference is politeness: だ is casual and used in plain speech, while です is polite. だ can't be used after い-adjectives, but です can, acting as a general politeness marker. You may still see だ in set expressions like ～だと思います, even in polite sentences.",
+        "first_relatable": {
+          "id": 1,
+          "slug": "だ",
+          "title": "だ",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 2,
+          "slug": "です",
+          "title": "です",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "121",
+      "type": "related_content",
+      "attributes": {
+        "id": 121,
+        "relationship_type": "related",
+        "body": "だった・でした and だ are all used to assert or identify something. The difference among them is in formality and tense. だ is casual and present tense (similar to the English 'is'/'am'), while だった・でした is past tense ('was'), with だった being casual (the past tense of だ) and でした being polite (the past tense of です).",
+        "first_relatable": {
+          "id": 40,
+          "slug": "だった-でした",
+          "title": "だった・でした",
+          "meaning": "Was, Were (Past tense) ",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 1,
+          "slug": "だ",
+          "title": "だ",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "55",
+      "type": "related_content",
+      "attributes": {
+        "id": 55,
+        "relationship_type": "synonym",
+        "body": "The main difference between だ and である is formality. だ is casual and common in conversation, while である is more formal and mainly used in writing. Both だ and である follow nouns or noun phrases, but である has a more literary tone. である slight differs from the verb ある (to exist) in that である is a fixed connector.",
+        "first_relatable": {
+          "id": 1,
+          "slug": "だ",
+          "title": "だ",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 436,
+          "slug": "である",
+          "title": "である",
+          "meaning": "Formal or literary だ, Authoritative, Copula",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "20",
+      "type": "related_content",
+      "attributes": {
+        "id": 20,
+        "relationship_type": "synonym",
+        "body": "だ conveys a casual, informal, or blunt tone, except when required by certain grammatical patterns. In contrast, でございます is a highly polite form, primarily used in business settings or when addressing someone of higher social status such as a boss or customer.",
+        "first_relatable": {
+          "id": 1,
+          "slug": "だ",
+          "title": "だ",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 188,
+          "slug": "でございます",
+          "title": "でございます",
+          "meaning": "To be, Polite copula",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

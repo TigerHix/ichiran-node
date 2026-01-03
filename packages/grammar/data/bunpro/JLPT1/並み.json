@@ -1,0 +1,600 @@
+{
+  "data": {
+    "id": "992",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 992,
+      "level": "JLPT1",
+      "lesson_id": 50,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "並み",
+      "nuance": null,
+      "grammar_order": 923,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 993,
+        "title": "に先駆けて",
+        "slug": "に先駆けて"
+      },
+      "previous_grammar_point": {
+        "id": 991,
+        "title": "こそすれ〜ない",
+        "slug": "こそすれ-ない"
+      },
+      "lesson_count": "20/22",
+      "title": "並み",
+      "furigana": "並（な）み",
+      "meaning": "As, On par with, Worthy of",
+      "nuance_translation": null,
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "Noun + <strong>並（な）み</strong> + です<br>Noun + <strong>並（な）み</strong> + <span class='chui'>の</span> + Noun<br>Noun + <strong>並（な）み</strong> + <span class='chui'>に</span> + Phrase",
+      "casual_structure": "Noun + <strong>並（な）み</strong> + だ<br>Noun + <strong>並（な）み</strong> + <span class='chui'>の</span> + Noun<br>Noun + <strong>並（な）み</strong> + <span class='chui'>に</span> + Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/48640",
+      "metadata": "並み, なみ, 並みの, なみの, 並みに, なみに, nami, namino, namini, noun, suffix"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "10535",
+            "type": "study_question"
+          },
+          {
+            "id": "183199",
+            "type": "study_question"
+          },
+          {
+            "id": "183200",
+            "type": "study_question"
+          },
+          {
+            "id": "183201",
+            "type": "study_question"
+          },
+          {
+            "id": "184625",
+            "type": "study_question"
+          },
+          {
+            "id": "184627",
+            "type": "study_question"
+          },
+          {
+            "id": "10536",
+            "type": "study_question"
+          },
+          {
+            "id": "10539",
+            "type": "study_question"
+          },
+          {
+            "id": "184626",
+            "type": "study_question"
+          },
+          {
+            "id": "10537",
+            "type": "study_question"
+          },
+          {
+            "id": "10538",
+            "type": "study_question"
+          },
+          {
+            "id": "10540",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "994",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "2138",
+            "type": "offline_resource"
+          },
+          {
+            "id": "2139",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1594",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": []
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "10535",
+      "type": "study_question",
+      "attributes": {
+        "id": 10535,
+        "content": "私（わたし）の妻（つま）の歌（うた）はプロ<span class='study-area-input'>____</span>だ。",
+        "answer": "なみ",
+        "alternate_grammar": [],
+        "kanji_answer": "並（な）み",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Subjective",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/私の妻の歌はプロ並みだ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とおなじくらい": {
+            "en": "Natural, but let's use different expression.",
+            "es": ""
+          },
+          "とおなじぐらい": {
+            "en": "Natural, but let's use different expression.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "My wife's singing is <strong>on par with</strong> pros.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 992,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183199",
+      "type": "study_question",
+      "attributes": {
+        "id": 183199,
+        "content": "\r\nあの子（こ）のサーブの仕方（しかた）はプロ<span class='study-area-input'>____</span>だ。",
+        "answer": "なみ",
+        "alternate_grammar": [],
+        "kanji_answer": "並（な）み",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/あの子のサーブの仕方はプロ並みだ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nTheir serve is <strong>on par with</strong> pros.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 992,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183200",
+      "type": "study_question",
+      "attributes": {
+        "id": 183200,
+        "content": "\r\n\r\n\r\nまだ５月（ごがつ）なのに８月（はちがつ）<span class='study-area-input'>____</span>の暑（あつ）さだ。",
+        "answer": "なみ",
+        "alternate_grammar": [],
+        "kanji_answer": "並（な）み",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/まだ５月なのに８月並みの暑さだ。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nDespite it still being May, it is as hot <strong>as</strong> August.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 992,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183201",
+      "type": "study_question",
+      "attributes": {
+        "id": 183201,
+        "content": "\r\n\r\n\r\n彼（かれ）は日本語（にほんご）をネイティブ<span class='study-area-input'>____</span>に話（はな）せるから、彼（かれ）がいると安心（あんしん）できる。",
+        "answer": "なみ",
+        "alternate_grammar": [],
+        "kanji_answer": "並（な）み",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/彼は日本語をネイティブ並みに話せるから、彼がいると安心できる。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nHe can speak Japanese as well <strong>as</strong> a native, so I feel at ease when he is around.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 992,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184625",
+      "type": "study_question",
+      "attributes": {
+        "id": 184625,
+        "content": "あのような家（いえ）は<span data-gp-id='992'>並（なみ）</span>の人（ひと）には高（たか）すぎます。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/あのような家は並の人には高すぎます。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 6,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "A house like that is too expensive for the <strong>average</strong> person.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 992,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184627",
+      "type": "study_question",
+      "attributes": {
+        "id": 184627,
+        "content": "この子供（こども）の柔軟（じゅうなん）さはトカゲ<span data-gp-id='992'>並（な）み</span>のレベルがありそうです。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/この子供の柔軟さはトカゲ並みのレベルがありそうです。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 8,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It seems that this kid’s flexibility is on par with that of a lizard. (Unnatural Japanese, as the flexibility of a lizard is not something that is either easy to imagine, or common knowledge)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 992,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10536",
+      "type": "study_question",
+      "attributes": {
+        "id": 10536,
+        "content": "アトランタの年間（ねんかん）日照（にっしょう）時間（じかん）は、ローマ平均（へいきん）<span class='study-area-input'>____</span>である。",
+        "answer": "なみ",
+        "alternate_grammar": [],
+        "kanji_answer": "並（な）み",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Subjective",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/アトランタの年間日照時間は、ローマ平均並みである。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とおなじくらい": {
+            "en": "Natural, but let's use different expression.",
+            "es": ""
+          },
+          "とおなじぐらい": {
+            "en": "Natural, but let's use different expression.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Atlanta's annual daylight hours are <strong>on par with</strong> Rome's average.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 992,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10539",
+      "type": "study_question",
+      "attributes": {
+        "id": 10539,
+        "content": "統計（とうけい）から推測（すいそく）すると、中国（ちゅうごく）の経済（けいざい）は先進（せんしん）国（こく）<span class='study-area-input'>____</span>になってきている。",
+        "answer": "なみ",
+        "alternate_grammar": [],
+        "kanji_answer": "並（な）み",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Subjective",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/統計から推測すると、中国の経済は先進国並みになってきている。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とおなじくらい": {
+            "en": "Natural, but let's use different expression.",
+            "es": ""
+          },
+          "とおなじぐらい": {
+            "en": "Natural, but let's use different expression.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Statistics suggest that China's economy has come to be <strong>on par with with</strong> that of other developed countries.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 992,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184626",
+      "type": "study_question",
+      "attributes": {
+        "id": 184626,
+        "content": "<span data-gp-id='992'>並（なみ）</span>の大学生（だいがくせい）がお金（かね）を貯（た）めるにはアルバイトだけではなく、節約（せつやく）できるところで節約（せつやく）もしないといけません。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/並の大学生がお金を貯めるにはアルバイトだけではなく、節約できるところで節約もしないといけません。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 7,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "In order for the <strong>average</strong> college student to save money, not only do they have to work part-time, but they also have to cut expenses where they can.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 992,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10537",
+      "type": "study_question",
+      "attributes": {
+        "id": 10537,
+        "content": "チタンは鋼鉄（こうてつ）<span class='study-area-input'>____</span>丈夫（じょうぶ）さだが、はるかに軽量（けいりょう）である。",
+        "answer": "なみの",
+        "alternate_grammar": [],
+        "kanji_answer": "並（な）みの",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Subjective",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/チタンは鋼鉄並みの丈夫さだが、はるかに軽量である。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とおなじくらい": {
+            "en": "Natural, but let's use different expression.",
+            "es": ""
+          },
+          "とおなじぐらい": {
+            "en": "Natural, but let's use different expression.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Titanium is <strong>as strong as</strong> steel, yet much lighter.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 992,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10538",
+      "type": "study_question",
+      "attributes": {
+        "id": 10538,
+        "content": "この映画（えいが）はアカデミー賞（しょう）<span class='study-area-input'>____</span>功績（こうせき）でした。",
+        "answer": "なみの",
+        "alternate_grammar": [],
+        "kanji_answer": "並（な）みの",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Subjective",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/この映画はアカデミー賞並みの功績でした。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とおなじくらい": {
+            "en": "Natural, but let's use different expression.",
+            "es": ""
+          },
+          "とおなじぐらい": {
+            "en": "Natural, but let's use different expression.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This movie was an achievement <strong>on par with</strong> the level of an academy award.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 992,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10540",
+      "type": "study_question",
+      "attributes": {
+        "id": 10540,
+        "content": "現代（げんだい）人（じん）は、２０（にじゅう）年（ねん）前（まえ）のスーパーコンピュータ<span class='study-area-input'>____</span>スマホというデバイスをポケットに入（い）れている。",
+        "answer": "なみの",
+        "alternate_grammar": [],
+        "kanji_answer": "並（な）みの",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Subjective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/現代人は、２０年前のスーパーコンピュータ並みのスマホというデバイスをポケットに入れている。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とおなじくらい": {
+            "en": "Natural, but let's use different expression.",
+            "es": ""
+          },
+          "とおなじぐらい": {
+            "en": "Natural, but let's use different expression.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Modern people carry in their pockets devices known as smartphones, that are <strong>on par with</strong> supercomputers 20 years ago.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 992,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "994",
+      "type": "writeup",
+      "attributes": {
+        "id": 994,
+        "body_ja": "<p>「<span data-gp-id='992'>並（な）み</span>」は、古典的（こてんてき）な動詞（どうし）「並（なら）む」の名詞形（めいしけい）で、「並（なら）ぶ」（主（おも）な意味（いみ）：列（れつ）になる）と同（おな）じ意味（いみ）を持（も）ちます。名詞（めいし）の後（あと）に付（つ）いて、「(A) と同等（どうとう）」「(A) にふさわしい」「(A) を基準（きじゅん）とした」などの意味（いみ）を表（あらわ）します。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183199'>\r\n<li data-study-question='183200'>\r\n<li data-study-question='183201'>\r\n</ul>\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>「<span data-gp-id='992'>並（な）み</span>」は接尾語（せつびご）として使（つか）われるとき、「(A) を基準（きじゅん）とした」という意味（いみ）になることがありますが、単独（たんどく）の名詞（めいし）として使（つか）われる場合（ばあい）は、「普通（ふつう）」や「平均的（へいきんてき）」という意味（いみ）になります。この場合（ばあい）は「<span data-gp-id='992'>並（なみ）</span>」と書（か）かれることが多（おお）く、その後（あと）に格助詞（かくじょし）「の」と「普通（ふつう）」であることを示（しめ）す名詞（めいし）が来（き）ます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184625'>\r\n<li data-study-question='184626'></ul></section>\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>「<span data-gp-id='992'>並（な）み</span>」は、(A) が広（ひろ）く知（し）られている基準（きじゅん）であったり、多（おお）くの人（ひと）にとって明確（めいかく）な基準（きじゅん）である場合（ばあい）に使（つか）われます。そのため、その基準（きじゅん）が人（ひと）によって異（こと）なる主観的（しゅかんてき）なものである場合（ばあい）は、不自然（ふしぜん）に聞（き）こえることがあります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184627'></ul></section>",
+        "body": "<p><span data-gp-id='992'>並（な）み</span> is the noun form of the classical verb 並（な）む, which has the same meaning as 並（なら）ぶ, ‘to line up’, or ‘to be in line’. It will be used following nouns, and may be interpreted as ‘on par with (A)’, ‘worthy of (A)’, or ‘as standard for (A)’. However, the literal translation of ‘in line with (A)’ also works just as well in many cases.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183199'>\r\n<li data-study-question='183200'>\r\n<li data-study-question='183201'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>Although <span data-gp-id='992'>並（な）み</span> may occasionally have the meaning of ‘as standard for (A)’ as a suffix, the ‘average’ or ‘ordinary’ meaning is often reserved for when <span data-gp-id='992'>並（な）み</span> is used by itself as a noun. In these cases it will usually be written as <span data-gp-id='992'>並（なみ）</span>, and be followed by the <span data-term='格助詞・かくじょし'>case-marking particle</span> の, and then a second noun marking what the average is.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184625'>\r\n<li data-study-question='184626'></ul></section>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p><span data-gp-id='992'>並（な）み</span> may only be used in sentences where (A) has a standard or norm that is well recognized, or easily identifiable. In cases where the ‘norm’ would change based on an individual’s opinion, rather than what the actual standard is, it will sound unnatural.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184627'></ul></section>"
+      }
+    },
+    {
+      "id": "2138",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2138,
+        "source": "Sou Matome Bunpou N1",
+        "location": "Page 67",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2139",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2139,
+        "source": "A Dictionary of Advanced Japanese Grammar",
+        "location": "Page 323",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1594",
+      "type": "related_content",
+      "attributes": {
+        "id": 1594,
+        "relationship_type": "related",
+        "body": "Both expressions are similar in that this refer to something being equivalent to something else. 並み in particular refers to measuring up to a certain standard, e.g. 彼の歌はプロ並みだ ('His singing is on par with a pro.'), while と同じくらい simply expresses an equivalence without implying a certain standard, e.g. 息子と同じぐらいの年 'around the same age as my son'.",
+        "first_relatable": {
+          "id": 992,
+          "slug": "並み",
+          "title": "並み",
+          "meaning": "As, On par with, Worthy of",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 624,
+          "slug": "と同じくらい",
+          "title": "と同じくらい",
+          "meaning": "About the same as, About as, No less",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

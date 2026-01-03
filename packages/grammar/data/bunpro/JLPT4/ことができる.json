@@ -1,0 +1,976 @@
+{
+  "data": {
+    "id": "110",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 110,
+      "level": "JLPT4",
+      "lesson_id": 18,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "ことができる",
+      "nuance": "ある<strong>表現（ひょうげん）が可能（かのう）である</strong>ということを強調（きょうちょう）するために使（つか）われる文法（ぶんぽう）。",
+      "grammar_order": 269,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 175,
+        "title": "かい",
+        "slug": "かい"
+      },
+      "previous_grammar_point": {
+        "id": 380,
+        "title": "だけでなく",
+        "slug": "だけでなく"
+      },
+      "lesson_count": "16/18",
+      "title": "ことができる",
+      "furigana": "ことが出来（でき）る",
+      "meaning": "Can, Be able to",
+      "nuance_translation": "A grammar point that can highlight an <strong>entire phrase</strong> as <strong>being possible</strong>.",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": "Verb + <strong><span class='gp-popout' data-gp-id='98'>こと</span> + <span class='gp-popout' data-gp-id='10'>が</span> + できます</strong><br>Noun + <strong><span class='gp-popout' data-gp-id='10'>が</span> + できます</strong>",
+      "casual_structure": "Verb + <strong><span class='gp-popout' data-gp-id='98'>こと</span> + <span class='gp-popout' data-gp-id='10'>が</span> + できる</strong><br>Noun + <strong><span class='gp-popout' data-gp-id='10'>が</span> + できる</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/3961",
+      "metadata": "ことができる, kotogadekiru, expression, nominalizer, nominalization"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "180762",
+            "type": "study_question"
+          },
+          {
+            "id": "180764",
+            "type": "study_question"
+          },
+          {
+            "id": "180765",
+            "type": "study_question"
+          },
+          {
+            "id": "2594",
+            "type": "study_question"
+          },
+          {
+            "id": "2595",
+            "type": "study_question"
+          },
+          {
+            "id": "158",
+            "type": "study_question"
+          },
+          {
+            "id": "161",
+            "type": "study_question"
+          },
+          {
+            "id": "2597",
+            "type": "study_question"
+          },
+          {
+            "id": "159",
+            "type": "study_question"
+          },
+          {
+            "id": "180763",
+            "type": "study_question"
+          },
+          {
+            "id": "2590",
+            "type": "study_question"
+          },
+          {
+            "id": "2596",
+            "type": "study_question"
+          },
+          {
+            "id": "2591",
+            "type": "study_question"
+          },
+          {
+            "id": "2592",
+            "type": "study_question"
+          },
+          {
+            "id": "160",
+            "type": "study_question"
+          },
+          {
+            "id": "2593",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "266",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "813",
+            "type": "offline_resource"
+          },
+          {
+            "id": "835",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1077",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1298",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "540",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "223",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "650",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1163",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1247",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2027",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "180762",
+      "type": "study_question",
+      "attributes": {
+        "id": 180762,
+        "content": "魚（さかな）<span class=\"gp-popout\" data-gp-id=\"373\">のように</span>泳（およ）<span class=\"gp-popout\" data-gp-id=\"26\">ぐ</span><span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"628\">ように</span>毎日（まいにち）練習（れんしゅう）<span class=\"gp-popout\" data-gp-id=\"22\">する</span>。",
+        "answer": "ことができる",
+        "alternate_grammar": [],
+        "kanji_answer": "ことができる",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/魚のように泳ぐことができるように毎日練習する。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I practice everyday so that I will <strong>be able to</strong> swim like a fish.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 110,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180764",
+      "type": "study_question",
+      "attributes": {
+        "id": 180764,
+        "content": "運転（うんてん）<span class='study-area-input'>____</span>彼氏（かれし）<span class=\"gp-popout\" data-gp-id=\"91\">が欲（ほ）しい</span>。",
+        "answer": "ができる",
+        "alternate_grammar": [],
+        "kanji_answer": "ができる",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/運転ができる彼氏が欲しい。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I want a boyfriend that <strong>can</strong> drive.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 110,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180765",
+      "type": "study_question",
+      "attributes": {
+        "id": 180765,
+        "content": "力仕事（ちからしごと）<span class='study-area-input'>____</span>人（ひと）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>探（さが）し<span class=\"gp-popout\" data-gp-id=\"27\">ています</span>。",
+        "answer": "ができる",
+        "alternate_grammar": [],
+        "kanji_answer": "ができる",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/力仕事ができる人を探しています。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "We are looking for a person that is <strong>able to</strong> do physical labor.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 110,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2594",
+      "type": "study_question",
+      "attributes": {
+        "id": 2594,
+        "content": "明日（あした）<span class='gp-popout' data-gp-id='104'>までに</span>提出（ていしゅつ）<span class='gp-popout' data-gp-id='22'>する</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='94'>と思（おも）います</span>。",
+        "answer": "ことができる",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）が出来（でき）る",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>表現（ひょうげん）が可能（かのう）である</strong>ということを強調（きょうちょう）するために使（つか）われる文法（ぶんぽう）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson8/110/male_audio/230411_1059.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/明日までに提出する事が出来ると思います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のができる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のができます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I think that I will <strong>be able to</strong> submit it by tomorrow.",
+        "nuance_translation": "A grammar point that can highlight an <strong>entire phrase</strong> as <strong>being possible</strong>.",
+        "extra_info": "",
+        "reviewable_id": 110,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2595",
+      "type": "study_question",
+      "attributes": {
+        "id": 2595,
+        "content": "歌（うた）<span class='gp-popout' data-gp-id='26'>う</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='9'>でしょう</span>？やり<span class='gp-popout' data-gp-id='95'>なさい</span>。",
+        "answer": "ことができる",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）が出来（でき）る",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>表現（ひょうげん）が可能（かのう）である</strong>ということを強調（きょうちょう）するために使（つか）われる文法（ぶんぽう）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson8/110/male_audio/230411_1059_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/歌う事が出来るでしょう？やりなさい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のができる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のができます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ことができます": {
+            "en": "It is a little unnatural to use ます + でしょう",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "You are <strong>able to</strong> sing, right? Do it!",
+        "nuance_translation": "A grammar point that can highlight an <strong>entire phrase</strong> as <strong>being possible</strong>.",
+        "extra_info": "",
+        "reviewable_id": 110,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "158",
+      "type": "study_question",
+      "attributes": {
+        "id": 158,
+        "content": "馬（うま）に乗（の）<span class='gp-popout' data-gp-id='26'>る</span><span class='study-area-input'>____</span>。",
+        "answer": "ことができる",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）が出来（でき）る",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>表現（ひょうげん）が可能（かのう）である</strong>ということを強調（きょうちょう）するために使（つか）われる文法（ぶんぽう）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson8/110/male_audio/230411_1057_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/馬に乗る事が出来る。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことができます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のができる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のができます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>can</strong> ride a horse.",
+        "nuance_translation": "A grammar point that can highlight an <strong>entire phrase</strong> as <strong>being possible</strong>.",
+        "extra_info": "",
+        "reviewable_id": 110,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "161",
+      "type": "study_question",
+      "attributes": {
+        "id": 161,
+        "content": "初（はじ）めて、漢字（かんじ）<span class='gp-popout' data-gp-id='21'>を</span>書（か）<span class='gp-popout' data-gp-id='26'>く</span><span class='study-area-input'>____</span>。",
+        "answer": "ことができた",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）が出来（でき）た",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>表現（ひょうげん）が可能（かのう）である</strong>ということを強調（きょうちょう）するために使（つか）われる文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson8/110/male_audio/230411_1058_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/初めて、漢字を書く事が出来た。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことができました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のができる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のができます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>was able to</strong> write kanji for the first time.",
+        "nuance_translation": "A grammar point that can highlight an <strong>entire phrase</strong> as <strong>being possible</strong>.",
+        "extra_info": "",
+        "reviewable_id": 110,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2597",
+      "type": "study_question",
+      "attributes": {
+        "id": 2597,
+        "content": "やら<span class='gp-popout' data-gp-id='86'>なくてはいけない</span><span class='study-area-input'>____</span>。",
+        "answer": "ことができない",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）が出来（でき）ない",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>表現（ひょうげん）が可能（かのう）である</strong>ということを強調（きょうちょう）するために使（つか）われる文法（ぶんぽう）。",
+        "tense": "Negative non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson8/110/male_audio/230411_1059_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/やらなくてはいけない事が出来ない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のができない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のができません": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ことができません": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ができない": {
+            "en": "が is used to mark the subject. Can you try using something instead that nominalised verbs?",
+            "es": "",
+            "fr": ""
+          },
+          "できない": {
+            "en": "You're close! Can you try expanding this by adding something to nominalize the verb?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I <strong>am unable to</strong> do the things I have to do.",
+        "nuance_translation": "A grammar point that can highlight an <strong>entire phrase</strong> as <strong>being possible</strong>.",
+        "extra_info": "",
+        "reviewable_id": 110,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "159",
+      "type": "study_question",
+      "attributes": {
+        "id": 159,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='6'>の</span>子供（こども）<span class='gp-popout' data-gp-id='3'>は</span>一人（ひとり）<span class='gp-popout' data-gp-id='36'>で</span>買（か）い物（もの）<span class='study-area-input'>____</span>。",
+        "answer": "ができる",
+        "alternate_grammar": [
+          "ができます",
+          "ができる"
+        ],
+        "kanji_answer": "が出来（でき）る",
+        "kanji_alt_grammar": [
+          "が出来（でき）ます",
+          "が出来（でき）る"
+        ],
+        "nuance": "ある<strong>表現（ひょうげん）が可能（かのう）である</strong>ということを強調（きょうちょう）するために使（つか）われる文法（ぶんぽう）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson8/110/male_audio/230411_1058_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/私の子供は一人で買い物が出来る。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "をすることができます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "をするのができる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "をするのができます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "My kid <strong>can</strong> go shopping by himself. ",
+        "nuance_translation": "A grammar point that can highlight an <strong>entire phrase</strong> as <strong>being possible</strong>.",
+        "extra_info": "",
+        "reviewable_id": 110,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180763",
+      "type": "study_question",
+      "attributes": {
+        "id": 180763,
+        "content": "彼（かれ）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>料理（りょうり）<span class=\"gp-popout\" data-gp-id=\"21\">を</span><span class=\"gp-popout\" data-gp-id=\"22\">する</span><span class='study-area-input'>____</span>。",
+        "answer": "ことができる",
+        "alternate_grammar": [],
+        "kanji_answer": "ことができる",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/彼は料理をすることができる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "He is <strong>able to</strong> cook.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 110,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2590",
+      "type": "study_question",
+      "attributes": {
+        "id": 2590,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='6'>の</span>姉（あね）<span class='gp-popout' data-gp-id='3'>は</span>歌（うた）<span class='gp-popout' data-gp-id='26'>う</span><span class='study-area-input'>____</span>。",
+        "answer": "ことができる",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）が出来（でき）る",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>表現（ひょうげん）が可能（かのう）である</strong>ということを強調（きょうちょう）するために使（つか）われる文法（ぶんぽう）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson8/110/male_audio/230411_1058_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/私の姉は歌う事が出来る。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のができる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のができます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ことができます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "My older sister <strong>can</strong> sing. ",
+        "nuance_translation": "A grammar point that can highlight an <strong>entire phrase</strong> as <strong>being possible</strong>.",
+        "extra_info": "",
+        "reviewable_id": 110,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2596",
+      "type": "study_question",
+      "attributes": {
+        "id": 2596,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='108'>より</span>君（きみ）<span class='gp-popout' data-gp-id='73'>の方（ほう）が</span>ピアノ<span class='gp-popout' data-gp-id='21'>を</span>うまく弾（ひ）<span class='gp-popout' data-gp-id='26'>く</span><span class='study-area-input'>____</span>。",
+        "answer": "ことができる",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）が出来（でき）る",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>表現（ひょうげん）が可能（かのう）である</strong>ということを強調（きょうちょう）するために使（つか）われる文法（ぶんぽう）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson8/110/male_audio/230411_1059_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/私より君の方がピアノをうまく弾く事が出来る。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のができる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のができます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ことができます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "You <strong>can</strong> play the piano better than me.",
+        "nuance_translation": "A grammar point that can highlight an <strong>entire phrase</strong> as <strong>being possible</strong>.",
+        "extra_info": "",
+        "reviewable_id": 110,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2591",
+      "type": "study_question",
+      "attributes": {
+        "id": 2591,
+        "content": "毎日（まいにち）日本語（にほんご）<span class='gp-popout' data-gp-id='21'>を</span>勉強（べんきょう）<span class='gp-popout' data-gp-id='22'>する</span><span class='gp-popout' data-gp-id='109'>だけで</span>、将来（しょうらい）日本語（にほんご）<span class='gp-popout' data-gp-id='21'>を</span>話（はな）<span class='gp-popout' data-gp-id='26'>す</span><span class='study-area-input'>____</span>。",
+        "answer": "ことができる",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）が出来（でき）る",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>表現（ひょうげん）が可能（かのう）である</strong>ということを強調（きょうちょう）するために使（つか）われる文法（ぶんぽう）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson8/110/male_audio/230411_1058_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/毎日日本語を勉強するだけで、将来日本語を話す事が出来る。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のができる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のができます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ことができます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "できる": {
+            "en": "You're close! Can you try expanding this by adding something to nominalize the verb?",
+            "es": "",
+            "fr": ""
+          },
+          "ようになる": {
+            "en": "This means 'become able to do' or 'reach the point that'. We are looking for a grammar point that has the nuance of 'be able to do'. ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Just by studying Japanese every day, you will <strong>be able to</strong> speak Japanese in the future.",
+        "nuance_translation": "A grammar point that can highlight an <strong>entire phrase</strong> as <strong>being possible</strong>.",
+        "extra_info": "",
+        "reviewable_id": 110,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2592",
+      "type": "study_question",
+      "attributes": {
+        "id": 2592,
+        "content": "日本語（にほんご）<span class='gp-popout' data-gp-id='21'>を</span>読（よ）<span class='gp-popout' data-gp-id='26'>む</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='109'>だけで</span>、凄（すご）<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='94'>と思（おも）います</span>。",
+        "answer": "ことができる",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）が出来（でき）る",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>表現（ひょうげん）が可能（かのう）である</strong>ということを強調（きょうちょう）するために使（つか）われる文法（ぶんぽう）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson8/110/male_audio/230411_1058_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/日本語を読む事が出来るだけで、凄いと思います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のができる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のができます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ができる": {
+            "en": "が is used to mark the subject. Can you try using something instead that nominalised verbs?",
+            "es": "",
+            "fr": ""
+          },
+          "できる": {
+            "en": "You're close! Can you try expanding this by adding something to nominalize the verb?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Just from the fact that you <strong>are able to</strong> read Japanese, I think you are amazing.",
+        "nuance_translation": "A grammar point that can highlight an <strong>entire phrase</strong> as <strong>being possible</strong>.",
+        "extra_info": "",
+        "reviewable_id": 110,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "160",
+      "type": "study_question",
+      "attributes": {
+        "id": 160,
+        "content": "泳（およ）<span class='gp-popout' data-gp-id='26'>ぐ</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='8'>か</span>？",
+        "answer": "ことができます",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）が出来（でき）ます",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>表現（ひょうげん）が可能（かのう）である</strong>ということを強調（きょうちょう）するために使（つか）われる文法（ぶんぽう）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson8/110/male_audio/230411_1058.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/泳ぐ事が出来ますか？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のができる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のができます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ことができる": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Can</strong> you swim?",
+        "nuance_translation": "A grammar point that can highlight an <strong>entire phrase</strong> as <strong>being possible</strong>.",
+        "extra_info": "",
+        "reviewable_id": 110,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2593",
+      "type": "study_question",
+      "attributes": {
+        "id": 2593,
+        "content": "約束（やくそく）<span class='gp-popout' data-gp-id='21'>を</span>守（まも）<span class='gp-popout' data-gp-id='26'>る</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='106'>すみません</span>。",
+        "answer": "ことができなくて",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）が出来（でき）なくて",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>表現（ひょうげん）が可能（かのう）である</strong>ということを強調（きょうちょう）するために使（つか）われる文法（ぶんぽう）。",
+        "tense": "Negative non-past, Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson8/110/male_audio/230411_1058_06.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/約束を守る事が出来なくてすみません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のができなくて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ことができない": {
+            "en": "Can you try checking the tense hint?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "できなくて": {
+            "en": "You're close! Can you try expanding this by adding something to nominalize the verb? ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I am sorry that I <strong>am unable to</strong> keep my promise.",
+        "nuance_translation": "A grammar point that can highlight an <strong>entire phrase</strong> as <strong>being possible</strong>.",
+        "extra_info": "",
+        "reviewable_id": 110,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "266",
+      "type": "writeup",
+      "attributes": {
+        "id": 266,
+        "body_ja": "",
+        "body": "<p>Like <span data-gp-id='222'>ことがある</span>, <span data-gp-id='110'>ことができる</span> is an expression that nominalizes what comes before it (turns it into a noun-phrase), and then highlights something about that (A) phrase. In the case of <span data-gp-id='110'>ことができる</span>, the thing being highlighted about (A) is that it is 'possible'. This translates as 'can do (A)', or 'to be able to do (A)'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180762'>\r\n<li data-study-question='180763'>\r\n</ul>\r\n\r\n<p>However, <span data-gp-id='98'>こと</span> is only required when the (A) phrase needs nominalization (is not a noun to begin with). Due to this, <span data-gp-id='110'>ができる</span> may be used by itself when following a noun, without changing the meaning.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180764'>\r\n<li data-study-question='180765'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p><span data-gp-id='16'>のが</span> (or <span data-gp-id='16'>のは</span>) is also frequently used for nominalization, but this is rarely the case when a verb follows it. Some other expressions where <span data-gp-id='16'>のが</span> may not be swapped for <span data-gp-id='98'>こと</span> are as follows:</p>\r\n\r\n<p>ことがある - For (A) to exist.</p>\r\n\r\n<p>ことにする - To make something (A).</p>\r\n\r\n<p>ことになる - For (A) to come to be.</p></section>"
+      }
+    },
+    {
+      "id": "813",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 813,
+        "source": "みんなの日本語 I",
+        "location": "Page 116 [CH 18]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "835",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 835,
+        "source": "みんなの日本語 II",
+        "location": "Page 18 [CH 27]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1077",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1077,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 10 & 200",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1298",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1298,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 126",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "223",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 223,
+        "site": "MaggieSensei",
+        "description": "How to use 出来る",
+        "link": "https://maggiesensei.com/2015/04/02/how-to-use-%E5%87%BA%E6%9D%A5%E3%82%8B-%E3%81%A7%E3%81%8D%E3%82%8B-dekiru/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "650",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 650,
+        "site": "Japanese Stack Exchange",
+        "description": "ことができる vs. Other Potential Forms",
+        "link": "https://japanese.stackexchange.com/questions/2689/%E3%81%93%E3%81%A8%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8B-versus-v%E3%81%88%E3%82%8B-form",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1163",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1163,
+        "site": "Japanese Stack Exchange",
+        "description": "Difference between の and こと nominalizers",
+        "link": "https://japanese.stackexchange.com/questions/1395/what-is-the-difference-between-the-nominalizers-%E3%81%93%E3%81%A8-and-%E3%81%AE",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1247",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1247,
+        "site": "Japanese Ammo",
+        "description": "CAN /potential form（られる/ことができる）",
+        "link": "https://www.youtube.com/watch?v=0CyJ01dYgxE&index=42&list=PLd5-Wp_4tLqYZxS5j3g6kbeOfVXlTkr3N",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2027",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2027,
+        "site": "Tae Kim",
+        "description": "The difference between the potential form and 「～ことができる」？",
+        "link": "http://www.guidetojapanese.org/blog/2008/07/30/can-you-do-it-maybe-not-but-it-can-be-done/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "540",
+      "type": "related_content",
+      "attributes": {
+        "id": 540,
+        "relationship_type": "synonym",
+        "body": "Both express potential or ability, like 'can do'. ことができる is more formal and common in writing, e.g. 書くことができる 'can write', while the potential form れる・られる is shorter and used in conversation, e.g. 書ける 'can write'. The meaning is the same, but usage differs by tone and context.",
+        "first_relatable": {
+          "id": 110,
+          "slug": "ことができる",
+          "title": "ことができる",
+          "meaning": "Can, Be able to",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 132,
+          "slug": "Verb[potential]",
+          "title": "れる・られる (Potential)",
+          "meaning": "To be able, Can (Potential)",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

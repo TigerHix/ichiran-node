@@ -1,0 +1,710 @@
+{
+  "data": {
+    "id": "655",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 655,
+      "level": "JLPT1",
+      "lesson_id": 41,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "に至るまで",
+      "nuance": "何（なに）かの広（ひろ）い範囲（はんい）を指（さ）す表現（ひょうげん）。(A)から(B)という<strong>頂点（ちょうてん）</strong>まで。(B)は予想外（よそうがい）であることが多（おお）い。",
+      "grammar_order": 742,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 730,
+        "title": "たところで",
+        "slug": "たところで"
+      },
+      "previous_grammar_point": {
+        "id": 575,
+        "title": "たって",
+        "slug": "たって"
+      },
+      "lesson_count": "1/17",
+      "title": "に至るまで",
+      "furigana": "に至（いた）るまで",
+      "meaning": "(Everything) from...to..., From…up until..., Starting with...ending with...",
+      "nuance_translation": "A phrase indicating a wide range of something. From (A) right up until the <strong>climax</strong> of (B). (B) often being surprising information.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "(Noun (A) + <span class='chui'><span class='gp-popout' data-gp-id='52'>から</span></span><sup>(1)</sup>）+ Noun (B) + <strong>に至（いた）る<span class='gp-popout' data-gp-id='372'>まで</span></strong><br>(Noun (A) + <span class='chui'><span class='gp-popout' data-gp-id='52'>から</span></span><sup>(1)</sup>）+ Noun (B) + <strong>に至（いた）る<span class='gp-popout' data-gp-id='372'>まで</span></strong> + <span class='gp-popout' data-gp-id='6'>の</span> + Noun (C)<br><br><sup>(1)</sup> より",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10545",
+      "metadata": "に至るまで, にいたるまで, niitarumade, expression, extremr extent, unexpected extent, comparison"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "8369",
+            "type": "study_question"
+          },
+          {
+            "id": "180043",
+            "type": "study_question"
+          },
+          {
+            "id": "180044",
+            "type": "study_question"
+          },
+          {
+            "id": "180045",
+            "type": "study_question"
+          },
+          {
+            "id": "8373",
+            "type": "study_question"
+          },
+          {
+            "id": "8376",
+            "type": "study_question"
+          },
+          {
+            "id": "8378",
+            "type": "study_question"
+          },
+          {
+            "id": "8368",
+            "type": "study_question"
+          },
+          {
+            "id": "8367",
+            "type": "study_question"
+          },
+          {
+            "id": "8370",
+            "type": "study_question"
+          },
+          {
+            "id": "8371",
+            "type": "study_question"
+          },
+          {
+            "id": "8377",
+            "type": "study_question"
+          },
+          {
+            "id": "8374",
+            "type": "study_question"
+          },
+          {
+            "id": "8375",
+            "type": "study_question"
+          },
+          {
+            "id": "8372",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "818",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "692",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1499",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1823",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "8369",
+      "type": "study_question",
+      "attributes": {
+        "id": 8369,
+        "content": "今日（こんにち）では、ＣＰＵ（シーピーユー）はパソコン<span class='chui'>から</span>歯（は）ブラシ<span class='study-area-input'>____</span>、さまざまな装置（そうち）に見（み）られる。",
+        "answer": "にいたるまで",
+        "alternate_grammar": [],
+        "kanji_answer": "に至（いた）るまで",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かの広（ひろ）い範囲（はんい）を指（さ）す表現（ひょうげん）。(A)から(B)という<strong>頂点（ちょうてん）</strong>まで。(B)は予想外（よそうがい）であることが多（おお）い。",
+        "tense": "Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/今日では、CPUはパソコンから歯ブラシに至るまで、さまざまな装置に見られる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "This works, but looking for something more formal/literary",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Nowadays, CPUs can be found in various kinds of devices, <strong>from</strong> computers <strong>to</strong> toothbrushes, etc.",
+        "nuance_translation": "A phrase indicating a wide range of something. From (A) right up until the <strong>climax</strong> of (B). (B) often being surprising information.",
+        "extra_info": "",
+        "reviewable_id": 655,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180043",
+      "type": "study_question",
+      "attributes": {
+        "id": 180043,
+        "content": "\r\nこのライトノベルは子供（こども）から大人（おとな）<span class='study-area-input'>____</span>、幅広（はばひろ）い層（そう）で人気（にんき）がある。",
+        "answer": "にいたるまで",
+        "alternate_grammar": [],
+        "kanji_answer": "に至（いた）るまで",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/このライトノベルは子供から大人に至るまで、幅広い層で人気がある。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nThis light novel is popular with a wide range of audiences, <strong>from</strong> children <strong>to</strong> adults.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 655,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180044",
+      "type": "study_question",
+      "attributes": {
+        "id": 180044,
+        "content": "\r\n\r\n\r\n明日（あした）は大阪（おおさか）から福岡（ふくおか）<span class='study-area-input'>____</span>、一日中（いちにちじゅう）雨（あめ）が降（ふ）るようです。",
+        "answer": "にいたるまで",
+        "alternate_grammar": [],
+        "kanji_answer": "に至（いた）るまで",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/明日は大阪から福岡に至るまで、一日中雨が降るようです。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nApparently it is going to be raining all day tomorrow, <strong>from</strong> Osaka <strong>to</strong> Fukuoka.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 655,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180045",
+      "type": "study_question",
+      "attributes": {
+        "id": 180045,
+        "content": "\r\n\r\n\r\n祖父（そふ）は成人（せいじん）してから退職（たいしょく）<span class='study-area-input'>____</span>、ずっと同（おな）じ会社（かいしゃ）で働（はたら）いてきた。",
+        "answer": "にいたるまで",
+        "alternate_grammar": [],
+        "kanji_answer": "に至（いた）るまで",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/祖父は成人してから退職に至るまで、ずっと同じ会社で働いてきた。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nMy grandfather has worked for the same company, <strong>from</strong> when he became an adult <strong>until</strong> retirement.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 655,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8373",
+      "type": "study_question",
+      "attributes": {
+        "id": 8373,
+        "content": "この会社（かいしゃ）はスマートフォンの販売（はんばい）<span class='chui'>から</span>大学（だいがく）の経営（けいえい）<span class='study-area-input'>____</span>、たくさんのビジネスを運営（うんえい）している。",
+        "answer": "にいたるまで",
+        "alternate_grammar": [],
+        "kanji_answer": "に至（いた）るまで",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かの広（ひろ）い範囲（はんい）を指（さ）す表現（ひょうげん）。(A)から(B)という<strong>頂点（ちょうてん）</strong>まで。(B)は予想外（よそうがい）であることが多（おお）い。",
+        "tense": "Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/この会社はスマートフォンの販売から大学の経営に至るまで、たくさんのビジネスを運営している。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "This works, but looking for something more formal/literary",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This company is running numerous businesses, <strong>from</strong> selling smartphones <strong>to</strong> owning a university.",
+        "nuance_translation": "A phrase indicating a wide range of something. From (A) right up until the <strong>climax</strong> of (B). (B) often being surprising information.",
+        "extra_info": "",
+        "reviewable_id": 655,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8376",
+      "type": "study_question",
+      "attributes": {
+        "id": 8376,
+        "content": "航海（こうかい）の初（はじ）め<span class='chui'>から</span>事故（じこ）そのもの<span class='study-area-input'>____</span>の難破船（なんぱせん）の航海日誌（こうかいにっし）が見（み）つかった。",
+        "answer": "にいたるまで",
+        "alternate_grammar": [],
+        "kanji_answer": "に至（いた）るまで",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かの広（ひろ）い範囲（はんい）を指（さ）す表現（ひょうげん）。(A)から(B)という<strong>頂点（ちょうてん）</strong>まで。(B)は予想外（よそうがい）であることが多（おお）い。",
+        "tense": "Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/航海の初めから事故そのものに至るまでの難破船の航海日誌が見つかった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "This works, but looking for something more formal/literary",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A shipwreck's logbook covering everything <strong>from</strong> the beginning of the voyage <strong>to</strong> the accident itself has been found.",
+        "nuance_translation": "A phrase indicating a wide range of something. From (A) right up until the <strong>climax</strong> of (B). (B) often being surprising information.",
+        "extra_info": "",
+        "reviewable_id": 655,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8378",
+      "type": "study_question",
+      "attributes": {
+        "id": 8378,
+        "content": "ふじはらたくみはローター<span class='chui'>から</span>ハンドル操作（そうさ）<span class='study-area-input'>____</span>車（くるま）にかけてはすべてを知（し）っている人物（じんぶつ）です。",
+        "answer": "にいたるまで",
+        "alternate_grammar": [],
+        "kanji_answer": "に至（いた）るまで",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かの広（ひろ）い範囲（はんい）を指（さ）す表現（ひょうげん）。(A)から(B)という<strong>頂点（ちょうてん）</strong>まで。(B)は予想外（よそうがい）であることが多（おお）い。",
+        "tense": "Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ふじはらたくみはローターからハンドル操作に至るまで車にかけてはすべてを知っている人物です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "This works, but looking for something more formal/literary",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "When it comes to cars, Takumi Fujihara is a person that knows everything, <strong>from</strong> rotors <strong>to</strong> operating a steering wheel.",
+        "nuance_translation": "A phrase indicating a wide range of something. From (A) right up until the <strong>climax</strong> of (B). (B) often being surprising information.",
+        "extra_info": "",
+        "reviewable_id": 655,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8368",
+      "type": "study_question",
+      "attributes": {
+        "id": 8368,
+        "content": "にしまさんはバーテンダー<span class='chui'>から</span>大企業（だいきぎょう）の社長（しゃちょう）<span class='study-area-input'>____</span>いろいろな仕事（しごと）を歴任（れきにん）した。",
+        "answer": "にいたるまで",
+        "alternate_grammar": [],
+        "kanji_answer": "に至（いた）るまで",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かの広（ひろ）い範囲（はんい）を指（さ）す表現（ひょうげん）。(A)から(B)という<strong>頂点（ちょうてん）</strong>まで。(B)は予想外（よそうがい）であることが多（おお）い。",
+        "tense": "Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/にしまさんはバーテンダーから大企業の社長に至るまでいろいろな仕事を歴任した。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "This works, but looking for something more formal/literary",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Nishima-san held various positions, <strong>from</strong> a bartender <strong>to</strong> a president of a large company.",
+        "nuance_translation": "A phrase indicating a wide range of something. From (A) right up until the <strong>climax</strong> of (B). (B) often being surprising information.",
+        "extra_info": "",
+        "reviewable_id": 655,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8367",
+      "type": "study_question",
+      "attributes": {
+        "id": 8367,
+        "content": "石川県（いしかわけん）にある「法師（ほうし）」旅館（りょかん）は７１８（ななひゃくじゅうはち）年（ねん）<span class='chui'>から</span>今（いま）<span class='study-area-input'>____</span>１３００（せんさんびゃく）年（ねん）以上（いじょう）商（あきな）いし続（つづ）けている。",
+        "answer": "にいたるまで",
+        "alternate_grammar": [],
+        "kanji_answer": "に至（いた）るまで",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かの広（ひろ）い範囲（はんい）を指（さ）す表現（ひょうげん）。(A)から(B)という<strong>頂点（ちょうてん）</strong>まで。(B)は予想外（よそうがい）であることが多（おお）い。",
+        "tense": "Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/石川県にある「法師」旅館は７１８年から今に至るまで１３００年以上商いし続けている。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "This works, but looking for something more formal/literary",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The Japanese-style inn called 'Houshi' that is located in Ishikawa prefecture has been operating continuously for over 1300 years <strong>from</strong> 718 <strong>right up until</strong> now.",
+        "nuance_translation": "A phrase indicating a wide range of something. From (A) right up until the <strong>climax</strong> of (B). (B) often being surprising information.",
+        "extra_info": "",
+        "reviewable_id": 655,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8370",
+      "type": "study_question",
+      "attributes": {
+        "id": 8370,
+        "content": "アジアでは、箸（はし）は昔（むかし）<span class='chui'>より</span>現在（げんざい）<span class='study-area-input'>____</span>長（なが）きに渡（わた）って、食（た）べるために使（つか）われている。",
+        "answer": "にいたるまで",
+        "alternate_grammar": [],
+        "kanji_answer": "に至（いた）るまで",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かの広（ひろ）い範囲（はんい）を指（さ）す表現（ひょうげん）。(A)から(B)という<strong>頂点（ちょうてん）</strong>まで。(B)は予想外（よそうがい）であることが多（おお）い。",
+        "tense": "Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/アジアでは、箸は昔より現在に至るまで長きに渡って、食べるために使われている。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "This works, but looking for something more formal/literary",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "In Asia, chopsticks have been used to eat for a long time, <strong>from</strong> long ago <strong>to</strong> the present.",
+        "nuance_translation": "A phrase indicating a wide range of something. From (A) right up until the <strong>climax</strong> of (B). (B) often being surprising information.",
+        "extra_info": "",
+        "reviewable_id": 655,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8371",
+      "type": "study_question",
+      "attributes": {
+        "id": 8371,
+        "content": "国税庁（こくぜいちょう）に調（しら）べられるとき、銀行口座（ぎんこうこうざ）のお金（かね）の額（がく）<span class='chui'>から</span>１０（じゅう）年（ねん）前（まえ）の金曜（きんよう）の朝（あさ）にお弁当（べんとう）にいくらで買（か）ったか<span class='study-area-input'>____</span>何（なん）でもチェックされる。",
+        "answer": "にいたるまで",
+        "alternate_grammar": [],
+        "kanji_answer": "に至（いた）るまで",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かの広（ひろ）い範囲（はんい）を指（さ）す表現（ひょうげん）。(A)から(B)という<strong>頂点（ちょうてん）</strong>まで。(B)は予想外（よそうがい）であることが多（おお）い。",
+        "tense": "Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/国税庁に調べられるとき、銀行口座のお金の額から１０年前の金曜の朝にお弁当にいくらで買ったかに至るまで何でもチェックされる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "This works, but looking for something more formal/literary",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "When you are investigated by a national tax agency everything is checked, <strong>from</strong> money in your bank account <strong>to</strong> how much you spent on a bentou, Friday morning 10 years ago.",
+        "nuance_translation": "A phrase indicating a wide range of something. From (A) right up until the <strong>climax</strong> of (B). (B) often being surprising information.",
+        "extra_info": "",
+        "reviewable_id": 655,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8377",
+      "type": "study_question",
+      "attributes": {
+        "id": 8377,
+        "content": "総理大臣（そうりだいじん）<span class='chui'>から</span>一般人（いっぱんじん）<span class='study-area-input'>____</span>あらゆる市民（しみん）は法（ほう）のもとで平等（びょうどう）である。",
+        "answer": "にいたるまで",
+        "alternate_grammar": [],
+        "kanji_answer": "に至（いた）るまで",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かの広（ひろ）い範囲（はんい）を指（さ）す表現（ひょうげん）。(A)から(B)という<strong>頂点（ちょうてん）</strong>まで。(B)は予想外（よそうがい）であることが多（おお）い。",
+        "tense": "Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/総理大臣から一般人に至るまであらゆる市民は法のもとで平等である。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "This works, but looking for something more formal/literary",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "All citizens are equal under the law, <strong>from</strong> the prime minister <strong>to</strong> an ordinary person.",
+        "nuance_translation": "A phrase indicating a wide range of something. From (A) right up until the <strong>climax</strong> of (B). (B) often being surprising information.",
+        "extra_info": "",
+        "reviewable_id": 655,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8374",
+      "type": "study_question",
+      "attributes": {
+        "id": 8374,
+        "content": "​‎バブル景気（けいき）崩壊（ほうかい）にあって、小企業（しょうきぎょう）<span class='chui'>から</span>大企業（だいきぎょう）<span class='study-area-input'>____</span>いろいろな会社（かいしゃ）が倒産（とうさん）を余儀（よぎ）なくされている。",
+        "answer": "にいたるまで",
+        "alternate_grammar": [],
+        "kanji_answer": "に至（いた）るまで",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かの広（ひろ）い範囲（はんい）を指（さ）す表現（ひょうげん）。(A)から(B)という<strong>頂点（ちょうてん）</strong>まで。(B)は予想外（よそうがい）であることが多（おお）い。",
+        "tense": "Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N1/Lesson1/655/​‎バブル景気崩壊にあって、小企業から大企業に至るまでいろいろな会社が倒産を余儀なくされている。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "This works, but looking for something more formal/literary",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Due to the bursting of the bubble economy, various companies were forced into bankruptcy, <strong>from</strong> small ones <strong>to</strong> major ones.",
+        "nuance_translation": "A phrase indicating a wide range of something. From (A) right up until the <strong>climax</strong> of (B). (B) often being surprising information.",
+        "extra_info": "",
+        "reviewable_id": 655,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8375",
+      "type": "study_question",
+      "attributes": {
+        "id": 8375,
+        "content": "手足（てあし）<span class='chui'>から</span>髪（かみ）の毛（け）一本（いっぽん）<span class='study-area-input'>____</span>身体中（しんたいじゅう）のすべてが震（ふる）えていた。そのとき、それくらい怖（こわ）かった。",
+        "answer": "にいたるまで",
+        "alternate_grammar": [],
+        "kanji_answer": "に至（いた）るまで",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かの広（ひろ）い範囲（はんい）を指（さ）す表現（ひょうげん）。(A)から(B)という<strong>頂点（ちょうてん）</strong>まで。(B)は予想外（よそうがい）であることが多（おお）い。",
+        "tense": "Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/手足から髪の毛一本に至るまで身体中のすべてが震えていた。そのとき、それくらい怖かった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "This works, but looking for something more formal/literary",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "My whole body was shaking, <strong>from</strong> my hands and feet <strong>to</strong> the individual strands of my hair. That's just how scared I was then.",
+        "nuance_translation": "A phrase indicating a wide range of something. From (A) right up until the <strong>climax</strong> of (B). (B) often being surprising information.",
+        "extra_info": "",
+        "reviewable_id": 655,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8372",
+      "type": "study_question",
+      "attributes": {
+        "id": 8372,
+        "content": "この自動車（じどうしゃ）修理工場（しゅうりこうじょう）では、修理（しゅうり）はもちろん、洗車（せんしゃ）<span class='chui'>から</span>チューニング<span class='study-area-input'>____</span>、あなたの車（くるま）を安全（あんぜん）にお取（と）り扱（あつか）いします。",
+        "answer": "にいたるまで",
+        "alternate_grammar": [],
+        "kanji_answer": "に至（いた）るまで",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かの広（ひろ）い範囲（はんい）を指（さ）す表現（ひょうげん）。(A)から(B)という<strong>頂点（ちょうてん）</strong>まで。(B)は予想外（よそうがい）であることが多（おお）い。",
+        "tense": "Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/この自動車修理工場では、修理はもちろん、洗車からチューニングに至るまで、あなたの車を安全にお取り扱いします。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "This works, but looking for something more formal/literary",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This auto repair shop will not only make repairs, but will take good care of your car, doing <strong>everything from</strong> cleaning <strong>to</strong> tuning it.",
+        "nuance_translation": "A phrase indicating a wide range of something. From (A) right up until the <strong>climax</strong> of (B). (B) often being surprising information.",
+        "extra_info": "",
+        "reviewable_id": 655,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "818",
+      "type": "writeup",
+      "attributes": {
+        "id": 818,
+        "body_ja": "<p>「至（いた）る」は「ある段階（だんかい）や状態（じょうたい）に達（たっ）する」や 「ある場所（ばしょ）や頂点（ちょうてん）にたどり着（つ）く」といった意味（いみ）を持（も）つ五段動詞（ごだんどうし）です。この動詞（どうし）を含（ふく）む文型（ぶんけい）にはいくつか種類（しゅるい）がありますが、どれも予想外（よそうがい）に広（ひろ）い範囲（はんい）や極端（きょくたん）な程度（ていど）にまで達（たっ）していることを表（あらわ）しているのが特徴（とくちょう）です。「<span data-gp-id='655'>に至（いた）るまで</span>」は、「至（いた）る」に「に」と「まで」を組（く）み合（あ）わせたもので、「(A) から (B) までの範囲（はんい）のもの全（すべ）て」という意味（いみ）で使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180043'>\r\n<li data-study-question='180044'>\r\n<li data-study-question='180045'></ul>\r\n\r\n<p>(A) の直後（ちょくご）には「から」や「より」といった起点（きてん）を示（しめ）す語（ご）がよく置（お）かれ、その後（あと）に「極端（きょくたん）な」範囲（はんい）の上限（じょうげん）を指（さ）す (B) と「至（いた）るまで」が置（お）かれます。(A) と (B) には、名詞（めいし）または名詞句（めいしく）が入（はい）ります。</p>\r\n\r\n<p>「至（いた）る」そのものが「頂点（ちょうてん）に到達（たっする）する」という意味（いみ）を持（も）っていることから、この動詞（どうし）を含（ふく）む文法表現（ぶんぽうひょうげん）は (A) から (B) までの非常（ひじょう）に広（ひろ）い範囲（はんい）を示（しめ）していると考（かんが）えることができます。そのため、「<span data-gp-id='655'>に至（いた）るまで</span>」は、範囲（はんい）を示（しめ）す助詞（じょし）「まで」を強調（きょうちょう）した表現（ひょうげん）だと理解（りかい）してもいいでしょう。</p>\r\n",
+        "body": "<p>至（いた）る is an う-Verb which can be roughly translated as 'to attain (A)', or 'to reach the climax of (A)'. This verb is seen in several different grammar structures that all basically highlight that some extreme or unexpected extent is being reached. When paired with に and まで, <span data-gp-id='655'>に至（いた）るまで</span> is often interpreted as 'everything from (A) to (B)'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180043'>\r\n<li data-study-question='180044'>\r\n<li data-study-question='180045'>\r\n</ul>\r\n\r\n<p>Comparative statements such as から or より frequently come directly after (A), while <span data-gp-id='655'>に至（いた）るまで</span> will come directly after (B). This marks (B) as the 'extreme' extent. Both (A) and (B) will either be nouns or noun phrases.</p>\r\n\r\n<p>The 'to reach a climax' meaning of 至（いた）る itself can be used as an indicator that grammar points that use this verb all indicate some kind of exceptionally wide range between (A) and (B). Due to this, 至（いた）るまで can be thought of as simply a strong emphasis of まで by itself, which also marks an extent.</p>"
+      }
+    },
+    {
+      "id": "692",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 692,
+        "source": " Tobira",
+        "location": "Page 259",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1823",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1823,
+        "site": "JapaneseTest4You",
+        "description": "Additional breakdown and examples",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n1-grammar-%E3%81%AB%E3%81%84%E3%81%9F%E3%82%8B%E3%81%BE%E3%81%A7-ni-itaru-made/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1499",
+      "type": "related_content",
+      "attributes": {
+        "id": 1499,
+        "relationship_type": "related",
+        "body": "These two patterns can be relatively interchangeable when used in the pattern AからBに至るまで 'from A to B' or AからBにかけては (same meaning). However, にかけては has a separate usage, e.g. スポーツにかけては彼が一番強い ('When it comes to basketball, he's the best’) where it cannot be substituted with に至るまで.",
+        "first_relatable": {
+          "id": 655,
+          "slug": "に至るまで",
+          "title": "に至るまで",
+          "meaning": "(Everything) from...to..., From…up until..., Starting with...ending with...",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 579,
+          "slug": "にかけては",
+          "title": "にかけては",
+          "meaning": "When it comes to, Regarding, Concerning",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

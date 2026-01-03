@@ -1,0 +1,932 @@
+{
+  "data": {
+    "id": "217",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 217,
+      "level": "JLPT3",
+      "lesson_id": 22,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "ところで",
+      "nuance": "(A)の<strong>状況（じょうきょう）や場所（ばしょ）</strong>を使（つか）って、新（あたら）しいことを話題（わだい）にあげる時（とき）に使（つか）われる文法（ぶんぽう）。",
+      "grammar_order": 331,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 201,
+        "title": "ほど",
+        "slug": "ほど"
+      },
+      "previous_grammar_point": {
+        "id": 206,
+        "title": "ところが",
+        "slug": "ところが"
+      },
+      "lesson_count": "4/22",
+      "title": "ところで",
+      "furigana": "ところで",
+      "meaning": "By the way, Incidentally",
+      "nuance_translation": "A grammar point that uses the <strong>situation or place</strong> of (A) as a good point to incidentally start talking about a new topic.",
+      "rare_kanji_warning": "所",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<strong>ところで</strong> + (New Topic) Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/1226",
+      "metadata": "ところで, 所で, tokorode, particle, conjunction particle, case-marking particle, question, interrogative"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "180982",
+            "type": "study_question"
+          },
+          {
+            "id": "180983",
+            "type": "study_question"
+          },
+          {
+            "id": "4117",
+            "type": "study_question"
+          },
+          {
+            "id": "863",
+            "type": "study_question"
+          },
+          {
+            "id": "864",
+            "type": "study_question"
+          },
+          {
+            "id": "865",
+            "type": "study_question"
+          },
+          {
+            "id": "4119",
+            "type": "study_question"
+          },
+          {
+            "id": "4120",
+            "type": "study_question"
+          },
+          {
+            "id": "4121",
+            "type": "study_question"
+          },
+          {
+            "id": "4122",
+            "type": "study_question"
+          },
+          {
+            "id": "4123",
+            "type": "study_question"
+          },
+          {
+            "id": "4125",
+            "type": "study_question"
+          },
+          {
+            "id": "4118",
+            "type": "study_question"
+          },
+          {
+            "id": "4124",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "351",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "932",
+            "type": "related_content"
+          },
+          {
+            "id": "873",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "420",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "180982",
+      "type": "study_question",
+      "attributes": {
+        "id": 180982,
+        "content": "<span class='study-area-input'>____</span>、昨日（きのう）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>話（はなし）はどうなった？",
+        "answer": "ところで",
+        "alternate_grammar": [],
+        "kanji_answer": "ところで",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ところで、昨日の話はどうなった？.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>By the way</strong>, what happened to the plan you told me about yesterday?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 217,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180983",
+      "type": "study_question",
+      "attributes": {
+        "id": 180983,
+        "content": "<span class='study-area-input'>____</span>、お宅（たく）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>旦那（だんな）<span class=\"vocab-popout\" data-vocab-id=\"113\">さん</span>は元気（げんき）<span class=\"gp-popout\" data-gp-id=\"32\">に</span>し<span class=\"gp-popout\" data-gp-id=\"764\">ています</span>か。",
+        "answer": "ところで",
+        "alternate_grammar": [],
+        "kanji_answer": "ところで",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ところで、お宅の旦那さんは元気にしていますか。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>By the way</strong>, is your husband doing well?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 217,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4117",
+      "type": "study_question",
+      "attributes": {
+        "id": 4117,
+        "content": "<span class='study-area-input'>____</span>内本（うちもと）さんはどこ出身（しゅっしん）？",
+        "answer": "ところで",
+        "alternate_grammar": [],
+        "kanji_answer": "ところで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>状況（じょうきょう）や場所（ばしょ）</strong>を使（つか）って、新（あたら）しいことを話題（わだい）にあげる時（とき）に使（つか）われる文法（ぶんぽう）。",
+        "tense": "Conjunctive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/217/male_audio/230615_1130_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ところで内本さんはどこ出身？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "そういえば": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ちなみに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ところが": {
+            "en": "ところが highlights that (A) was expected, but the unexpected result (B) occurred. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それで": {
+            "en": "それで means 'because of that' or 'therefore'.  We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>By the way</strong>, where is Uchimoto-san from?",
+        "nuance_translation": "A grammar point that uses the <strong>situation or place</strong> of (A) as a good point to incidentally start talking about a new topic.",
+        "extra_info": "",
+        "reviewable_id": 217,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "863",
+      "type": "study_question",
+      "attributes": {
+        "id": 863,
+        "content": "<span class='study-area-input'>____</span>、どこに行（い）くつもりですか。",
+        "answer": "ところで",
+        "alternate_grammar": [
+          "ところで"
+        ],
+        "kanji_answer": "ところで",
+        "kanji_alt_grammar": [
+          "ところで"
+        ],
+        "nuance": "(A)の<strong>状況（じょうきょう）や場所（ばしょ）</strong>を使（つか）って、新（あたら）しいことを話題（わだい）にあげる時（とき）に使（つか）われる文法（ぶんぽう）。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/217/male_audio/230615_1130.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ところで、どこに行くつもりですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ちなみに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "そういえば": {
+            "en": "そういえば is used when recalling or connecting to something mentioned before. Here we need a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "ところが": {
+            "en": "ところが highlights that (A) was expected, but the unexpected result (B) occurred. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それで": {
+            "en": "それで means 'because of that' or 'therefore'.  We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それでは": {
+            "en": "それでは means 'if that's the case'. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>By the way</strong>, where do you plan on going?",
+        "nuance_translation": "A grammar point that uses the <strong>situation or place</strong> of (A) as a good point to incidentally start talking about a new topic.",
+        "extra_info": "",
+        "reviewable_id": 217,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "864",
+      "type": "study_question",
+      "attributes": {
+        "id": 864,
+        "content": "<span class='study-area-input'>____</span>、明日（あした）のパーティーに何（なに）を持（も）って来（き）ますか？",
+        "answer": "ところで",
+        "alternate_grammar": [
+          "ところで"
+        ],
+        "kanji_answer": "ところで",
+        "kanji_alt_grammar": [
+          "ところで"
+        ],
+        "nuance": "(A)の<strong>状況（じょうきょう）や場所（ばしょ）</strong>を使（つか）って、新（あたら）しいことを話題（わだい）にあげる時（とき）に使（つか）われる文法（ぶんぽう）。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/217/male_audio/230615_1130_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ところで、明日のパーティーに何を持って来ますか？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ちなみに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ところが": {
+            "en": "ところが highlights that (A) was expected, but the unexpected result (B) occurred. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それで": {
+            "en": "それで means 'because of that' or 'therefore'.  We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それでは": {
+            "en": "それでは means 'if that's the case'. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>By the way</strong>, what are you going to bring to the party tomorrow?",
+        "nuance_translation": "A grammar point that uses the <strong>situation or place</strong> of (A) as a good point to incidentally start talking about a new topic.",
+        "extra_info": "",
+        "reviewable_id": 217,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "865",
+      "type": "study_question",
+      "attributes": {
+        "id": 865,
+        "content": "<span class='study-area-input'>____</span>、パソコンの使（つか）い方（かた）をご存知（ぞんじ）ですか。",
+        "answer": "ところで",
+        "alternate_grammar": [
+          "ところで"
+        ],
+        "kanji_answer": "ところで",
+        "kanji_alt_grammar": [
+          "ところで"
+        ],
+        "nuance": "(A)の<strong>状況（じょうきょう）や場所（ばしょ）</strong>を使（つか）って、新（あたら）しいことを話題（わだい）にあげる時（とき）に使（つか）われる文法（ぶんぽう）。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/217/male_audio/230615_1130_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ところで、パソコンの使い方をご存知ですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ちなみに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ところが": {
+            "en": "ところが highlights that (A) was expected, but the unexpected result (B) occurred. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それでは": {
+            "en": "それでは means 'if that's the case'. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>By the way</strong>, do you know how to use a computer?",
+        "nuance_translation": "A grammar point that uses the <strong>situation or place</strong> of (A) as a good point to incidentally start talking about a new topic.",
+        "extra_info": "",
+        "reviewable_id": 217,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4119",
+      "type": "study_question",
+      "attributes": {
+        "id": 4119,
+        "content": "<span class='study-area-input'>____</span>大谷（おおたに）さんも一緒（いっしょ）に旅行（りょこう）に行（い）くんですか？",
+        "answer": "ところで",
+        "alternate_grammar": [],
+        "kanji_answer": "ところで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>状況（じょうきょう）や場所（ばしょ）</strong>を使（つか）って、新（あたら）しいことを話題（わだい）にあげる時（とき）に使（つか）われる文法（ぶんぽう）。",
+        "tense": "Conjunctive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/217/male_audio/230615_1130_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ところで大谷さんも一緒に旅行に行くんですか？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "そういえば": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ちなみに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ところが": {
+            "en": "ところが highlights that (A) was expected, but the unexpected result (B) occurred. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それでは": {
+            "en": "それでは means 'if that's the case'. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>By the way</strong>, is Otani-san going with you on the trip?",
+        "nuance_translation": "A grammar point that uses the <strong>situation or place</strong> of (A) as a good point to incidentally start talking about a new topic.",
+        "extra_info": "",
+        "reviewable_id": 217,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4120",
+      "type": "study_question",
+      "attributes": {
+        "id": 4120,
+        "content": "<span class='study-area-input'>____</span>昨日（きのう）渡（わた）した報告書（ほうこくしょ）は読（よ）んでもらえましたか？",
+        "answer": "ところで",
+        "alternate_grammar": [],
+        "kanji_answer": "ところで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>状況（じょうきょう）や場所（ばしょ）</strong>を使（つか）って、新（あたら）しいことを話題（わだい）にあげる時（とき）に使（つか）われる文法（ぶんぽう）。",
+        "tense": "Conjunctive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/217/male_audio/230615_1131.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ところで昨日渡した報告書は読んでもらえましたか？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "そういえば": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ちなみに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ところが": {
+            "en": "ところが highlights that (A) was expected, but the unexpected result (B) occurred. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それで": {
+            "en": "それで means 'because of that' or 'therefore'.  We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>By the way</strong>, have you read the report I submitted yesterday?",
+        "nuance_translation": "A grammar point that uses the <strong>situation or place</strong> of (A) as a good point to incidentally start talking about a new topic.",
+        "extra_info": "",
+        "reviewable_id": 217,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4121",
+      "type": "study_question",
+      "attributes": {
+        "id": 4121,
+        "content": "<span class='study-area-input'>____</span>そばとうどん、どっちが食（た）べたい？",
+        "answer": "ところで",
+        "alternate_grammar": [],
+        "kanji_answer": "ところで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>状況（じょうきょう）や場所（ばしょ）</strong>を使（つか）って、新（あたら）しいことを話題（わだい）にあげる時（とき）に使（つか）われる文法（ぶんぽう）。",
+        "tense": "Conjunctive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/217/male_audio/230615_1131_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ところでそばとうどん、どっちが食べたい？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "そういえば": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ちなみに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ところが": {
+            "en": "ところが highlights that (A) was expected, but the unexpected result (B) occurred. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それで": {
+            "en": "それで means 'because of that' or 'therefore'.  We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それでは": {
+            "en": "それでは means 'if that's the case'. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>By the way</strong>, which would you like to have, soba or udon?",
+        "nuance_translation": "A grammar point that uses the <strong>situation or place</strong> of (A) as a good point to incidentally start talking about a new topic.",
+        "extra_info": "",
+        "reviewable_id": 217,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4122",
+      "type": "study_question",
+      "attributes": {
+        "id": 4122,
+        "content": "<span class='study-area-input'>____</span>あの話（はなし）はどうなったの？ちゃんと考（かんが）えてくれた？",
+        "answer": "ところで",
+        "alternate_grammar": [],
+        "kanji_answer": "ところで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>状況（じょうきょう）や場所（ばしょ）</strong>を使（つか）って、新（あたら）しいことを話題（わだい）にあげる時（とき）に使（つか）われる文法（ぶんぽう）。",
+        "tense": "Conjunctive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/217/male_audio/230615_1131_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ところであの話はどうなったの？ちゃんと考えてくれた？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "そういえば": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ちなみに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ところが": {
+            "en": "ところが highlights that (A) was expected, but the unexpected result (B) occurred. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それでは": {
+            "en": "それでは means 'if that's the case'. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それで": {
+            "en": "それで means 'because of that' or 'therefore'.  We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>By the way</strong>, what happened to what we talked about? Have you thought about it?",
+        "nuance_translation": "A grammar point that uses the <strong>situation or place</strong> of (A) as a good point to incidentally start talking about a new topic.",
+        "extra_info": "",
+        "reviewable_id": 217,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4123",
+      "type": "study_question",
+      "attributes": {
+        "id": 4123,
+        "content": "<span class='study-area-input'>____</span>来週（らいしゅう）の予定（よてい）はどうしますか？",
+        "answer": "ところで",
+        "alternate_grammar": [],
+        "kanji_answer": "ところで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>状況（じょうきょう）や場所（ばしょ）</strong>を使（つか）って、新（あたら）しいことを話題（わだい）にあげる時（とき）に使（つか）われる文法（ぶんぽう）。",
+        "tense": "Conjunctive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/217/male_audio/230615_1131_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ところで来週の予定はどうしますか？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "そういえば": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ちなみに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ところが": {
+            "en": "ところが highlights that (A) was expected, but the unexpected result (B) occurred. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それで": {
+            "en": "それで means 'because of that' or 'therefore'.  We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>By the way</strong>, what will you do about next week's plans?",
+        "nuance_translation": "A grammar point that uses the <strong>situation or place</strong> of (A) as a good point to incidentally start talking about a new topic.",
+        "extra_info": "",
+        "reviewable_id": 217,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4125",
+      "type": "study_question",
+      "attributes": {
+        "id": 4125,
+        "content": "<span class='study-area-input'>____</span>北海道（ほっかいどう）で一人暮（ひとりぐ）らしをしている娘（むすめ）さんは元気（げんき）？",
+        "answer": "ところで",
+        "alternate_grammar": [],
+        "kanji_answer": "ところで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>状況（じょうきょう）や場所（ばしょ）</strong>を使（つか）って、新（あたら）しいことを話題（わだい）にあげる時（とき）に使（つか）われる文法（ぶんぽう）。",
+        "tense": "Conjunctive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/217/male_audio/230615_1132.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ところで北海道で一人暮らしをしている娘さんは元気？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "そういえば": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ちなみに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ところが": {
+            "en": "ところが highlights that (A) was expected, but the unexpected result (B) occurred. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それで": {
+            "en": "それで means 'because of that' or 'therefore'. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それに": {
+            "en": "それに means 'besides' or 'in addition'. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>By the way</strong>, is your daughter, who lives alone in Hokkaido, well?",
+        "nuance_translation": "A grammar point that uses the <strong>situation or place</strong> of (A) as a good point to incidentally start talking about a new topic.",
+        "extra_info": "",
+        "reviewable_id": 217,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4118",
+      "type": "study_question",
+      "attributes": {
+        "id": 4118,
+        "content": "<span class='study-area-input'>____</span>もう雨（あめ）はやみましたか？",
+        "answer": "ところで",
+        "alternate_grammar": [],
+        "kanji_answer": "ところで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>状況（じょうきょう）や場所（ばしょ）</strong>を使（つか）って、新（あたら）しいことを話題（わだい）にあげる時（とき）に使（つか）われる文法（ぶんぽう）。",
+        "tense": "Conjunctive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/217/male_audio/230615_1130_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ところでもう雨はやみましたか？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "そういえば": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ちなみに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ところが": {
+            "en": "ところが highlights that (A) was expected, but the unexpected result (B) occurred. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それでは": {
+            "en": "それでは means 'if that's the case'. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>By the way</strong>, has it stopped raining yet?",
+        "nuance_translation": "A grammar point that uses the <strong>situation or place</strong> of (A) as a good point to incidentally start talking about a new topic.",
+        "extra_info": "",
+        "reviewable_id": 217,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4124",
+      "type": "study_question",
+      "attributes": {
+        "id": 4124,
+        "content": "<span class='study-area-input'>____</span>部長（ぶちょう）はいつ帰（かえ）ってくるの？",
+        "answer": "ところで",
+        "alternate_grammar": [],
+        "kanji_answer": "ところで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>状況（じょうきょう）や場所（ばしょ）</strong>を使（つか）って、新（あたら）しいことを話題（わだい）にあげる時（とき）に使（つか）われる文法（ぶんぽう）。",
+        "tense": "Conjunctive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/217/male_audio/230615_1131_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ところで部長はいつ帰ってくるの？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "そういえば": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ちなみに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ところが": {
+            "en": "ところが highlights that (A) was expected, but the unexpected result (B) occurred. We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それで": {
+            "en": "それで means 'because of that' or 'therefore'.  We are looking for a grammar point that means 'by the way' and introduces a new, unrelated topic.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>By the way</strong>, when was it that our department head was coming back?",
+        "nuance_translation": "A grammar point that uses the <strong>situation or place</strong> of (A) as a good point to incidentally start talking about a new topic.",
+        "extra_info": "",
+        "reviewable_id": 217,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "351",
+      "type": "writeup",
+      "attributes": {
+        "id": 351,
+        "body_ja": "<p>「ところで」は、名詞（めいし）の「ところ」と格助詞（かくじょし）の「で」からできた接続助詞（せつぞくじょし）です。新（あたら）しい話題（わだい）を出（だ）して、会話（かいわ）の流（なが）れを変（か）えるときに使（つか）います。</p>\r\n\r\n<p>「ところで」は、主（おも）に、それまでの話（はなし）とは別（べつ）の話題（わだい）や質問（しつもん）を始（はじ）めるときに、文（ぶん）の頭（あたま）で使（つか）います。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180982'>\r\n<li data-study-question='180983'>\r\n</ul>\r\n\r\n<p>「ところで」には、それまで話（はな）していたことから、話（はな）し手（て）が突然（とつぜん）別（べつ）のことを思（おも）い出（だ）して、新（あたら）しい話題（わだい）に変（か）えるようなニュアンスがあります。</p>\r\n\r\n<section class=\"caution\"><h4>注意点（ちゅういてん）</h4>\r\n<p>「ところで」が動詞（どうし）の過去形（かこけい）のあとに付（つ）くと、全（まった）く別（べつ）の意味（いみ）になります。この「たところで」は、「もし (A) をしても意味（いみ）がない」を意味（いみ）します。これは上級（じょうきゅう）の文法（ぶんぽう）なので、またあとで学（まな）びましょう。</p></section>",
+        "body": "<p>ところで is a <span data-term='接続助詞・せつぞくじょし'>conjunction particle</span> that is made up of the noun, ところ 'place', and the <span data-term='格助詞・かくじょし'>case marking particle</span> で. It is used in a similar way to 'by the way', or 'incidentally' in English, but will only be used for introducing new topics, not continuing within the same topic.</p>\r\n\r\n<p>ところで will primarily appear at the beginning of a sentence, before making a statement or asking a question about something unrelated.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180982'>\r\n<li data-study-question='180983'>\r\n</ul>\r\n\r\n<p>The literal translation of ところで is closer to 'and with that', and implies that something (within the previous topic) suddenly reminded the speaker of another thing (that happens to be a new topic).</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>When ところで appears after the past tense of a verb as たところで, it carries a different meaning, and will express that something isn't the case, despite (A). This is an advanced grammar point that will be covered at another stage.</p></section>"
+      }
+    },
+    {
+      "id": "420",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 420,
+        "site": "JStackExchange",
+        "description": "What's the difference between ところで and ちなみに ?",
+        "link": "https://japanese.stackexchange.com/questions/1444/whats-the-difference-between-%e3%81%a8%e3%81%93%e3%82%8d%e3%81%a7-and-%e3%81%a1%e3%81%aa%e3%81%bf%e3%81%ab/1445#1445",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "932",
+      "type": "related_content",
+      "attributes": {
+        "id": 932,
+        "relationship_type": "related",
+        "body": "Both can be used to shift the topic, but といえば is used after a noun to bring up something related or comment on that thing, e.g. 京都といえば、有名なお寺が多いね ('Speaking of Kyoto, there many famous temples, aren't there.'). In contrast, ところで typically starts a new sentence to introduce an unrelated topic, e.g. ところで、週末の予定は？ ('By the way, what are your plans for the weekend?').",
+        "first_relatable": {
+          "id": 240,
+          "slug": "といえば",
+          "title": "といえば",
+          "meaning": "Speaking of, If it were the case that",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 217,
+          "slug": "ところで",
+          "title": "ところで",
+          "meaning": "By the way, Incidentally",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "873",
+      "type": "related_content",
+      "attributes": {
+        "id": 873,
+        "relationship_type": "related",
+        "body": "Both can be used at the beginning of a sentence to introduce a new topic, but with different nuance. ところで marks a clear, unrelated shift, similar to 'by the way' in English, e.g. ところで、週末は何してた？ ('By the way, what did you do this weekend?') そういえば recalls something related to the current topic, e.g. そういえば、田中さんに会ったよ ('Speaking of which, I saw Tanaka.')",
+        "first_relatable": {
+          "id": 217,
+          "slug": "ところで",
+          "title": "ところで",
+          "meaning": "By the way, Incidentally",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 332,
+          "slug": "そういえば",
+          "title": "そういえば",
+          "meaning": "Speaking of which, By the way, Come to think of it",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

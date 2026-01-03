@@ -1,0 +1,866 @@
+{
+  "data": {
+    "id": "845",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 845,
+      "level": "JLPT1",
+      "lesson_id": 46,
+      "part_of_speech": null,
+      "register": "硬い",
+      "word_type": "",
+      "slug": "もさることながら",
+      "nuance": "(A)が真実（しんじつ）であっても(B)だということを<strong>丁寧（ていねい）</strong>に強調（きょうちょう）する文法（ぶんぽう）。(A)が<strong>そうであっても</strong>、(B)。",
+      "grammar_order": 839,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 846,
+        "title": "ものと思っていた",
+        "slug": "ものと思っていた"
+      },
+      "previous_grammar_point": {
+        "id": 844,
+        "title": "ないでもない",
+        "slug": "ないでもない"
+      },
+      "lesson_count": "11/18",
+      "title": "もさることながら",
+      "furigana": "もさることながら",
+      "meaning": "It is a fact that, But, Even more than, It goes without saying, Not only but also,",
+      "nuance_translation": "A <strong>formal</strong> grammar point, highlighting that while (A) is true, (B). <strong>Even while that sort of</strong> (A) <strong>is the case</strong>, (B).",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Noun + <strong><span class='gp-popout' data-gp-id='4'>も</span>さること<span class='gp-popout' data-gp-id='285'>ながら</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Formal",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/verb-grammar-discussion/30748",
+      "metadata": "もさることながら, mosarukotonagara, expression, formal, adverbial particle, pre-noun adjectival"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "9549",
+            "type": "study_question"
+          },
+          {
+            "id": "9546",
+            "type": "study_question"
+          },
+          {
+            "id": "183358",
+            "type": "study_question"
+          },
+          {
+            "id": "183360",
+            "type": "study_question"
+          },
+          {
+            "id": "183363",
+            "type": "study_question"
+          },
+          {
+            "id": "182878",
+            "type": "study_question"
+          },
+          {
+            "id": "182879",
+            "type": "study_question"
+          },
+          {
+            "id": "182880",
+            "type": "study_question"
+          },
+          {
+            "id": "9550",
+            "type": "study_question"
+          },
+          {
+            "id": "183362",
+            "type": "study_question"
+          },
+          {
+            "id": "183359",
+            "type": "study_question"
+          },
+          {
+            "id": "183361",
+            "type": "study_question"
+          },
+          {
+            "id": "9548",
+            "type": "study_question"
+          },
+          {
+            "id": "9545",
+            "type": "study_question"
+          },
+          {
+            "id": "9547",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "913",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1832",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1833",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1834",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1835",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1314",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2410",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "9549",
+      "type": "study_question",
+      "attributes": {
+        "id": 9549,
+        "content": " <span class='name-highlight'>伝記（でんき）</span>：「選手（せんしゅ）としての彼（かれ）の素晴（すば）らしい才能（さいのう）<span class='study-area-input'>____</span>、何（なに）より信望（しんぼう）や指導力（しどうりょく）が成功（せいこう）の要因（よういん）となった。」",
+        "answer": "もさることながら",
+        "alternate_grammar": [],
+        "kanji_answer": "もさることながら",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が真実（しんじつ）であっても(B)だということを<strong>丁寧（ていねい）</strong>に強調（きょうちょう）する文法（ぶんぽう）。(A)が<strong>そうであっても</strong>、(B)。",
+        "tense": "Literary, Emphatic, Conjunctive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/伝記：「選手としての彼の素晴らしい才能もさることながら、何より信望や指導力が成功の要因となった。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ばかりか": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "だけではなくて": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "ばかりでなく": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "ばかりでなくて": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "はもちろん": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "はもとより": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "にとどまらず": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Biography: '<strong>It is a fact that</strong> he has great ability as a player, <strong>but</strong> more than anything, his popularity and leadership skills were the cause of his success.'",
+        "nuance_translation": "A <strong>formal</strong> grammar point, highlighting that while (A) is true, (B). <strong>Even while that sort of</strong> (A) <strong>is the case</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 845,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9546",
+      "type": "study_question",
+      "attributes": {
+        "id": 9546,
+        "content": " <span class='name-highlight'>小説（しょうせつ）</span>：「だが、この国（くに）の強（つよ）さは、自国（じこく）の単独（たんどく）力量（りきりょう）<span class='study-area-input'>____</span>、同盟国（どうめいこく）の多（おお）さにある。」",
+        "answer": "もさることながら",
+        "alternate_grammar": [],
+        "kanji_answer": "もさることながら",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が真実（しんじつ）であっても(B)だということを<strong>丁寧（ていねい）</strong>に強調（きょうちょう）する文法（ぶんぽう）。(A)が<strong>そうであっても</strong>、(B)。",
+        "tense": "Literary, Emphatic, Conjunctive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/小説：「だが、この国の強さは、自国の単独力量もさることながら、同盟国の多さにある。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ばかりか": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "だけではなくて": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "ばかりでなく": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "ばかりでなくて": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "はもちろん": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "はもとより": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "にとどまらず": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Novel: 'However, <strong>it is a fact that</strong> the strength of this country lies in its power, <strong>but</strong> it also has numerous allies.'",
+        "nuance_translation": "A <strong>formal</strong> grammar point, highlighting that while (A) is true, (B). <strong>Even while that sort of</strong> (A) <strong>is the case</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 845,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183358",
+      "type": "study_question",
+      "attributes": {
+        "id": 183358,
+        "content": "日頃（ひごろ）の心（こころ）がけ<span class='study-area-input'>____</span>、今回（こんかい）は運（うん）が味方（みかた）してくれたようだ。",
+        "answer": "もさることながら",
+        "alternate_grammar": [],
+        "kanji_answer": "もさることながら",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が真実（しんじつ）であっても(B)だということを<strong>丁寧（ていねい）</strong>に強調（きょうちょう）する文法（ぶんぽう）。(A)が<strong>そうであっても</strong>、(B)。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/日頃の心がけもさることながら、今回は運が味方してくれたようだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Even more than</strong> my usual efforts, it would seem luck was on my side this time.",
+        "nuance_translation": "A <strong>formal</strong> grammar point, highlighting that while (A) is true, (B). <strong>Even while that sort of</strong> (A) <strong>is the case</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 845,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183360",
+      "type": "study_question",
+      "attributes": {
+        "id": 183360,
+        "content": "歌詞（かし）<span class='study-area-input'>____</span>メロディーもいいのだから、この曲（きょく）はやっぱり最高（さいこう）だ。",
+        "answer": "もさることながら",
+        "alternate_grammar": [],
+        "kanji_answer": "もさることながら",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が真実（しんじつ）であっても(B)だということを<strong>丁寧（ていねい）</strong>に強調（きょうちょう）する文法（ぶんぽう）。(A)が<strong>そうであっても</strong>、(B)。",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/歌詞もさることながらメロディーもいいのだから、この曲はやっぱり最高だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Even more than</strong> the lyrics, since the melody is good too, this song is really the best.",
+        "nuance_translation": "A <strong>formal</strong> grammar point, highlighting that while (A) is true, (B). <strong>Even while that sort of</strong> (A) <strong>is the case</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 845,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183363",
+      "type": "study_question",
+      "attributes": {
+        "id": 183363,
+        "content": "体（からだ）の柔軟（じゅうなん）さ<span class='study-area-input'>____</span>スタミナまであるその体操（たいそう）選手（せんしゅ）の演技（えんぎ）は、圧巻（あっかん）である。",
+        "answer": "もさることながら",
+        "alternate_grammar": [],
+        "kanji_answer": "もさることながら",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が真実（しんじつ）であっても(B)だということを<strong>丁寧（ていねい）</strong>に強調（きょうちょう）する文法（ぶんぽう）。(A)が<strong>そうであっても</strong>、(B)。",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/体の柔軟さもさることながらスタミナまであるその体操選手の演技は、圧巻である。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Even more than</strong> their flexibility, since that gymnast’s performance is also full of energy, it is superb.",
+        "nuance_translation": "A <strong>formal</strong> grammar point, highlighting that while (A) is true, (B). <strong>Even while that sort of</strong> (A) <strong>is the case</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 845,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182878",
+      "type": "study_question",
+      "attributes": {
+        "id": 182878,
+        "content": "\r\nあのブランドが出（だ）す商品（しょうひん）<span class='study-area-input'>____</span>、マーケティングも素晴（すば）らしい。",
+        "answer": "もさることながら",
+        "alternate_grammar": [],
+        "kanji_answer": "もさることながら",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/あのブランドが出す商品もさることながら、マーケティングも素晴らしい。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>It is a fact that</strong> the products that the brand produces are amazing, but also how they market them.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 845,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182879",
+      "type": "study_question",
+      "attributes": {
+        "id": 182879,
+        "content": "\r\n\r\n\r\nこのパソコンは機能（きのう）<span class='study-area-input'>____</span>、デザインもいい。",
+        "answer": "もさることながら",
+        "alternate_grammar": [],
+        "kanji_answer": "もさることながら",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/このパソコンは機能もさることながら、デザインもいい。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>It is a fact that</strong> the features of this computer are good, but so is the design.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 845,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182880",
+      "type": "study_question",
+      "attributes": {
+        "id": 182880,
+        "content": "\r\n\r\n\r\n日本語（にほんご）を勉強（べんきょう）するにおいて漢字（かんじ）<span class='study-area-input'>____</span>、文法（ぶんぽう）も勉強（べんきょう）しなくてはいけない。",
+        "answer": "もさることながら",
+        "alternate_grammar": [],
+        "kanji_answer": "もさることながら",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/日本語を勉強するにおいて漢字もさることながら、文法も勉強しなくてはいけない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nWhen it comes to studying Japanese, <strong>it is a fact that</strong> you need to study not only kanji, but also grammar too.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 845,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9550",
+      "type": "study_question",
+      "attributes": {
+        "id": 9550,
+        "content": "モナ・リザは美（うつく）しい画（え）<span class='study-area-input'>____</span>、やはり目（め）を引（ひ）くのは神秘的（しんぴてき）な微笑（びしょう）である。",
+        "answer": "もさることながら",
+        "alternate_grammar": [],
+        "kanji_answer": "もさることながら",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が真実（しんじつ）であっても(B)だということを<strong>丁寧（ていねい）</strong>に強調（きょうちょう）する文法（ぶんぽう）。(A)が<strong>そうであっても</strong>、(B)。",
+        "tense": "Literary, Emphatic, Conjunctive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/モナ・リザは美しい画もさることながら、やはり目を引くのは神秘的な微笑である。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ばかりか": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "だけではなくて": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "ばかりでなく": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "ばかりでなくて": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "はもちろん": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "はもとより": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "にとどまらず": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>It is a fact that</strong> Mona Lisa is a beautiful painting, <strong>but</strong> it is the mysterious smile that attracts the attention after all.",
+        "nuance_translation": "A <strong>formal</strong> grammar point, highlighting that while (A) is true, (B). <strong>Even while that sort of</strong> (A) <strong>is the case</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 845,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183362",
+      "type": "study_question",
+      "attributes": {
+        "id": 183362,
+        "content": "リーダーの発表（はっぴょう）は、内容（ないよう）がまとまっているの<span class='study-area-input'>____</span>、パワーポイントが見（み）やすい。",
+        "answer": "もさることながら",
+        "alternate_grammar": [],
+        "kanji_answer": "もさることながら",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が真実（しんじつ）であっても(B)だということを<strong>丁寧（ていねい）</strong>に強調（きょうちょう）する文法（ぶんぽう）。(A)が<strong>そうであっても</strong>、(B)。",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/リーダーの発表は、内容がまとまっているのもさることながら、パワーポイントが見やすい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "While <strong>it’s a fact that</strong> the content of the leader’s announcement is organized, the power point is also easy to see.",
+        "nuance_translation": "A <strong>formal</strong> grammar point, highlighting that while (A) is true, (B). <strong>Even while that sort of</strong> (A) <strong>is the case</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 845,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183359",
+      "type": "study_question",
+      "attributes": {
+        "id": 183359,
+        "content": "見（み）た目（め）<span class='study-area-input'>____</span>性格（せいかく）も素晴（すば）らしい彼（かれ）がモテるのは当然（とうぜん）のことです。",
+        "answer": "もさることながら",
+        "alternate_grammar": [],
+        "kanji_answer": "もさることながら",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が真実（しんじつ）であっても(B)だということを<strong>丁寧（ていねい）</strong>に強調（きょうちょう）する文法（ぶんぽう）。(A)が<strong>そうであっても</strong>、(B)。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/見た目もさることながら性格も素晴らしい彼がモテるのは当然のことです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It’s only natural that he’s popular, given that <strong>not only</strong> his appearance <strong>but also</strong> his personality is wonderful.",
+        "nuance_translation": "A <strong>formal</strong> grammar point, highlighting that while (A) is true, (B). <strong>Even while that sort of</strong> (A) <strong>is the case</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 845,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183361",
+      "type": "study_question",
+      "attributes": {
+        "id": 183361,
+        "content": "美味（おい）しさ<span class='study-area-input'>____</span>見（み）た目（め）も凄（すご）いこのフレンチレストランは、大人気（だいにんき）です。",
+        "answer": "もさることながら",
+        "alternate_grammar": [],
+        "kanji_answer": "もさることながら",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が真実（しんじつ）であっても(B)だということを<strong>丁寧（ていねい）</strong>に強調（きょうちょう）する文法（ぶんぽう）。(A)が<strong>そうであっても</strong>、(B)。",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/美味しさもさることながら見た目も凄いこのフレンチレストランは、大人気です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "While <strong>it is a fact that</strong> the food is delicious, since the look of this French restaurant is awesome too, it’s super popular.",
+        "nuance_translation": "A <strong>formal</strong> grammar point, highlighting that while (A) is true, (B). <strong>Even while that sort of</strong> (A) <strong>is the case</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 845,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9548",
+      "type": "study_question",
+      "attributes": {
+        "id": 9548,
+        "content": "日本語（にほんご）を勉強（べんきょう）するとき、熱心（ねっしん）さ<span class='study-area-input'>____</span>、長（なが）い目（め）で見（み）て一貫性（いっかんせい）も重要（じゅうよう）な要素（ようそ）である。",
+        "answer": "もさることながら",
+        "alternate_grammar": [],
+        "kanji_answer": "もさることながら",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が真実（しんじつ）であっても(B)だということを<strong>丁寧（ていねい）</strong>に強調（きょうちょう）する文法（ぶんぽう）。(A)が<strong>そうであっても</strong>、(B)。",
+        "tense": "Literary, Emphatic, Conjunctive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/日本語を勉強するとき、熱心さもさることながら、長い目で見て一貫性も重要な要素である。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ばかりか": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "だけではなくて": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "ばかりでなく": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "ばかりでなくて": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "はもちろん": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "はもとより": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "にとどまらず": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "When learning Japanese, <strong>it is a fact that</strong> enthusiasm is an important factor, <strong>but</strong> in the long term - consistency too.",
+        "nuance_translation": "A <strong>formal</strong> grammar point, highlighting that while (A) is true, (B). <strong>Even while that sort of</strong> (A) <strong>is the case</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 845,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9545",
+      "type": "study_question",
+      "attributes": {
+        "id": 9545,
+        "content": " <span class='name-highlight'>経営（けいえい）会議（かいぎ）、社長（しゃちょう）</span>：「競争（きょうそう）が激（はげ）しいからマーケティング予算（よさん）を上（あ）げよう。」<br> <span class='name-highlight'>部長（ぶちょう）</span>：「マーケティング<span class='study-area-input'>____</span>製品（せいひん）品質（ひんしつ）も重要（じゅうよう）なのではないでしょうか？」",
+        "answer": "もさることながら",
+        "alternate_grammar": [],
+        "kanji_answer": "もさることながら",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が真実（しんじつ）であっても(B)だということを<strong>丁寧（ていねい）</strong>に強調（きょうちょう）する文法（ぶんぽう）。(A)が<strong>そうであっても</strong>、(B)。",
+        "tense": "Literary, Emphatic, Conjunctive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/経営会議：社長「競争が激しいからマーケティング予算を上げよう。」部長「マーケティングもさることながら製品品質も重要なのではないでしょうか？」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ばかりか": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "だけではなくて": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "ばかりでなく": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "ばかりでなくて": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "はもちろん": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "はもとより": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "にとどまらず": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Management meeting, company president: 'The competition is intense, so we will increase the marketing budget.'<br>Head director: '<strong>It is a fact that</strong> marketing is important, <strong>but</strong> isn't the product quality too?'",
+        "nuance_translation": "A <strong>formal</strong> grammar point, highlighting that while (A) is true, (B). <strong>Even while that sort of</strong> (A) <strong>is the case</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 845,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9547",
+      "type": "study_question",
+      "attributes": {
+        "id": 9547,
+        "content": "入学（にゅうがく）試験（しけん）を受（う）けることは、当人（とうにん）の苦痛（くつう）<span class='study-area-input'>____</span>、家族（かぞく）にも、大（おお）きな心理的（しんりてき）負担（ふたん）を与（あた）えます。",
+        "answer": "もさることながら",
+        "alternate_grammar": [],
+        "kanji_answer": "もさることながら",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が真実（しんじつ）であっても(B)だということを<strong>丁寧（ていねい）</strong>に強調（きょうちょう）する文法（ぶんぽう）。(A)が<strong>そうであっても</strong>、(B)。",
+        "tense": "Literary, Emphatic, Conjunctive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/入学試験を受けることは、当人の苦痛もさることながら、家族にも、大きな心理的負担を与えます。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ばかりか": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "だけではなくて": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "ばかりでなく": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "ばかりでなくて": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "はもちろん": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "はもとより": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          },
+          "にとどまらず": {
+            "en": "Great! Could you use formal expression that indirectly emphasizes following clause as better?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>It is a fact that</strong> taking an entrance exam is stressful for the person concerned, <strong>but</strong> it also places a psychological burden on the family.",
+        "nuance_translation": "A <strong>formal</strong> grammar point, highlighting that while (A) is true, (B). <strong>Even while that sort of</strong> (A) <strong>is the case</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 845,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "913",
+      "type": "writeup",
+      "attributes": {
+        "id": 913,
+        "body_ja": "<p>「<span data-gp-id='845'>もさることながら</span>」は、「(A) は言（い）うまでもなく (B) も」や「(A) だけではなく (B) も」といった意味（いみ）で使（つか）われる表現（ひょうげん）です。副助詞（ふくじょし）「も」、連体詞（れんたいし）「さる」（意味（いみ）：そのような・ある）、名詞（めいし）「事（こと）」、そして接続助詞（せつぞくじょし）「ながら」でできており、より文字通（もじどお）りに読（よ）めば「(A) にもそのような点（てん）はありますが、(B)」となります。これは、(A) を重要（じゅうよう）だと認（みと）めつつ、(B) はそれ以上（いじょう）に重要（じゅうよう）であるという「<span data-gp-id='845'>もさることながら</span>」のニュアンスにそのまま繋（つな）がっています。</p>\r\n\r\n<p>「<span data-gp-id='845'>もさることながら</span>」は名詞（めいし）の後（あと）、もしくは名詞句（めいしく）の後（あと）に置（お）かれます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182878'>\r\n<li data-study-question='182879'>\r\n<li data-study-question='182880'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='845'>もさることながら</span>」は (B) の部分（ぶぶん）を強調（きょうちょう）する表現（ひょうげん）ですが、これをさらに強（つよ）めるために、「さらに」「なにより」「以上（いじょう）」のような強調表現（きょうちょうひょうげん）が一緒（いっしょ）に使（つか）われることもあります。</p>",
+        "body": "<p><span data-gp-id='845'>もさることながら</span> is a construction in Japanese that is often translated as 'it goes without saying that (A), but (B)', or 'not only (A), but (B) too'. This expression is a combination of the <span data-term='副助詞・ふくじょし'>adverbial particle</span> も, the <span data-term='連体詞・れんたいし'>pre-noun adjectival</span> さる 'particular', or 'certain', the <span data-term='名詞・めいし'>noun</span> 事（こと） 'thing', and the <span data-term='接続助詞・せつぞくじょし'>conjunction particle</span> ながら 'while'. Due to this, the more literal translation is simply 'while (A) is also of particular merit, (B)'. This literal translation will be helpful to remember, as <span data-gp-id='845'>もさることながら</span> will always present (A) as important, but (B) as even more important than that.</p>\r\n\r\n<p><span data-gp-id='845'>もさることながら</span> will be attached to the end of <span data-term='名詞・めいし'>nouns</span> and <span data-term='名詞・めいし'>noun</span> phrases.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182878'>\r\n<li data-study-question='182879'>\r\n<li data-study-question='182880'>\r\n</ul>\r\n\r\n<p>As (B) is being emphasized in sentences that use this grammar structure, it is common to see other expressions of emphasis combined with <span data-gp-id='845'>もさることながら</span>. Some examples include さらに 'additionally', なにより 'more than anything', and 以上（いじょう） 'above that'.</p>"
+      }
+    },
+    {
+      "id": "1832",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1832,
+        "source": "Try N1",
+        "location": "Page 60",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1833",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1833,
+        "source": "Shin Kanzen Master N1 Bunpou",
+        "location": "Page 17",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1834",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1834,
+        "source": "Sou Matome Bunpou N1",
+        "location": "Page 98",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1835",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1835,
+        "source": "A Dictionary of Advanced Japanese Grammar",
+        "location": "Page 283",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2410",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2410,
+        "site": "JapaneseTest4You",
+        "description": "もさることながら",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n1-grammar-%E3%82%82%E3%81%95%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AA%E3%81%8C%E3%82%89-mo-saru-koto-nagara/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1314",
+      "type": "related_content",
+      "attributes": {
+        "id": 1314,
+        "relationship_type": "related",
+        "body": "Both emphasize a truth, but differ in nuance and tone. ～というのは事実だ explicitly affirms something as a fact, e.g. 彼がやったというのは事実だ ('It's a fact that he did it'). もさることながら highlights one point while further stressing another, e.g. 見た目もさることながら味も最高だ ('Not only the appearance, but the taste is excellent'). Both are formal, but the former is more clinical, while the latter sounds more literary or poetic.",
+        "first_relatable": {
+          "id": 845,
+          "slug": "もさることながら",
+          "title": "もさることながら",
+          "meaning": "It is a fact that, But, Even more than, It goes without saying, Not only but also,",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 455,
+          "slug": "というのは事実だ",
+          "title": "～というのは事実だ",
+          "meaning": "It is a fact that ~, There is no doubt that",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

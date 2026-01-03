@@ -1,0 +1,926 @@
+{
+  "data": {
+    "id": "111",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 111,
+      "level": "JLPT4",
+      "lesson_id": 13,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "さ",
+      "nuance": "<strong>量（りょう）</strong>を示（しめ）すために<strong>形容詞（けいようし）を名詞（めいし）に変（か）える</strong>ことができる表現（ひょうげん）。",
+      "grammar_order": 168,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 131,
+        "title": "とか～とか",
+        "slug": "とか-とか"
+      },
+      "previous_grammar_point": {
+        "id": 105,
+        "title": "そう ",
+        "slug": "そう"
+      },
+      "lesson_count": "6/18",
+      "title": "さ",
+      "furigana": "さ",
+      "meaning": "Converting adjectives to nouns",
+      "nuance_translation": "An expression that can <strong>turn adjectives into nouns</strong> that express an <strong>amount</strong>.",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "<span class='gp-popout' data-gp-id='873'>［い］Adjective［<del>い</del>］</span>+ <strong>さ</strong><br><span class='gp-popout' data-gp-id='28'>［な］Adjective</span> + <strong>さ</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/3962",
+      "metadata": "さ, sa, suffix, nominalizer, degree"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "180315",
+            "type": "study_question"
+          },
+          {
+            "id": "164",
+            "type": "study_question"
+          },
+          {
+            "id": "2604",
+            "type": "study_question"
+          },
+          {
+            "id": "2599",
+            "type": "study_question"
+          },
+          {
+            "id": "183878",
+            "type": "study_question"
+          },
+          {
+            "id": "183879",
+            "type": "study_question"
+          },
+          {
+            "id": "180314",
+            "type": "study_question"
+          },
+          {
+            "id": "162",
+            "type": "study_question"
+          },
+          {
+            "id": "2602",
+            "type": "study_question"
+          },
+          {
+            "id": "2606",
+            "type": "study_question"
+          },
+          {
+            "id": "163",
+            "type": "study_question"
+          },
+          {
+            "id": "2603",
+            "type": "study_question"
+          },
+          {
+            "id": "2605",
+            "type": "study_question"
+          },
+          {
+            "id": "2598",
+            "type": "study_question"
+          },
+          {
+            "id": "2600",
+            "type": "study_question"
+          },
+          {
+            "id": "2601",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "167",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "458",
+            "type": "offline_resource"
+          },
+          {
+            "id": "888",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1149",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1395",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "541",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "224",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "651",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1467",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2028",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "180315",
+      "type": "study_question",
+      "attributes": {
+        "id": 180315,
+        "content": "\r\n        大人（おとな）<span class=\"gp-popout\" data-gp-id=\"57\">になっ</span><span class=\"gp-popout\" data-gp-id=\"64\">てから</span>家族（かぞく）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>大切（たいせつ）<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"10\">が</span>分（わ）かっ<span class=\"gp-popout\" data-gp-id=\"128\">てきた</span>。\r\n      ",
+        "answer": "さ",
+        "alternate_grammar": [],
+        "kanji_answer": "さ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/大人になってから家族の大切さが分かってきた。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n        After becoming an adult, I came to understand the <strong>importance</strong> of family. (Family's importantness)\r\n      ",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 111,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "164",
+      "type": "study_question",
+      "attributes": {
+        "id": 164,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>美味（おい）し<span class='gp-popout' data-gp-id='24'>い</span>。",
+        "answer": "あまさ",
+        "alternate_grammar": [],
+        "kanji_answer": "甘（あま）さ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>量（りょう）</strong>を示（しめ）すために<strong>形容詞（けいようし）を名詞（めいし）に変（か）える</strong>ことができる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/111/male_audio/230225_1322_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この甘さは美味しい。.mp3",
+        "word_prompt": "甘（あま）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あまみ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This <strong>sweetness</strong> is delicious.",
+        "nuance_translation": "An expression that can <strong>turn adjectives into nouns</strong> that express an <strong>amount</strong>.",
+        "extra_info": "",
+        "reviewable_id": 111,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2604",
+      "type": "study_question",
+      "attributes": {
+        "id": 2604,
+        "content": "琵琶湖（びわこ）<span class='gp-popout' data-gp-id='6'>の</span><span class='study-area-input'>____</span>って知（し）っ<span class='gp-popout' data-gp-id='27'>ている</span>？",
+        "answer": "ふかさ",
+        "alternate_grammar": [],
+        "kanji_answer": "深（ふか）さ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>量（りょう）</strong>を示（しめ）すために<strong>形容詞（けいようし）を名詞（めいし）に変（か）える</strong>ことができる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/111/male_audio/230225_1325_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/琵琶湖の深さって知っている？.mp3",
+        "word_prompt": "深（ふか）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "ふかいこと": {
+            "en": "We’re looking for a noun-forming suffix that expresses the degree or quality of the adjective, not a grammar point that simply turns it into a general concept.",
+            "es": "",
+            "fr": ""
+          },
+          "ふくさ": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Do you know the <strong>depth</strong> of Lake Biwa? ",
+        "nuance_translation": "An expression that can <strong>turn adjectives into nouns</strong> that express an <strong>amount</strong>.",
+        "extra_info": "",
+        "reviewable_id": 111,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2599",
+      "type": "study_question",
+      "attributes": {
+        "id": 2599,
+        "content": "箱（はこ）<span class='gp-popout' data-gp-id='6'>の</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='21'>を</span>測（はか）ってください。",
+        "answer": "おもさ",
+        "alternate_grammar": [],
+        "kanji_answer": "重（おも）さ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>量（りょう）</strong>を示（しめ）すために<strong>形容詞（けいようし）を名詞（めいし）に変（か）える</strong>ことができる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/111/male_audio/230225_1323_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/箱の重さを測ってください。.mp3",
+        "word_prompt": "重（おも）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Please weigh the <strong>heaviness</strong> of the box for me?",
+        "nuance_translation": "An expression that can <strong>turn adjectives into nouns</strong> that express an <strong>amount</strong>.",
+        "extra_info": "",
+        "reviewable_id": 111,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183878",
+      "type": "study_question",
+      "attributes": {
+        "id": 183878,
+        "content": "学校（がっこう）<span data-gp-id='620'>からの</span>帰（かえ）<span data-gp-id='26'>る</span><span data-gp-id='111'>さ</span>にお金（かね）<span data-gp-id='21'>を</span>拾（ひろ）っ<span data-gp-id='41'>た</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "On the way back from school, I picked up some money. (At the '<strong>point</strong>' of returning home)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 111,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183879",
+      "type": "study_question",
+      "attributes": {
+        "id": 183879,
+        "content": "行（い）<span data-gp-id='26'>く</span><span data-gp-id='111'>さ</span><span data-gp-id='25'>で</span>家（いえ）<span data-gp-id='32'>に</span>忘（わす）れ物（もの）<span data-gp-id='21'>を</span><span data-gp-id='22'>し</span><span data-gp-id='895'>た</span><span data-gp-id='98'>こと</span><span data-gp-id='21'>を</span>思（おも）い<span data-gp-id='178'>出（だ）し</span><span data-gp-id='41'>た</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "When I was on my way there, I remembered that I had left something at home. (At the '<strong>point</strong>' of going somewhere)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 111,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180314",
+      "type": "study_question",
+      "attributes": {
+        "id": 180314,
+        "content": "\r\n        私（わたし）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>道（みち）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>長（なが）<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"21\">を</span>測（はか）り<span class=\"gp-popout\" data-gp-id=\"26\">ます</span>。\r\n      ",
+        "answer": "さ",
+        "alternate_grammar": [],
+        "kanji_answer": "さ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/私が道の長さを測ります。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n        I will measure the <strong>length</strong> of the road. (The road's lengthiness)\r\n      ",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 111,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "162",
+      "type": "study_question",
+      "attributes": {
+        "id": 162,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>初（はじ）めて<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "うつくしさ",
+        "alternate_grammar": [],
+        "kanji_answer": "美（うつく）しさ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>量（りょう）</strong>を示（しめ）すために<strong>形容詞（けいようし）を名詞（めいし）に変（か）える</strong>ことができる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/111/male_audio/230225_1322.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この美しさは初めてです。.mp3",
+        "word_prompt": "美（うつく）し<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きれいさ": {
+            "en": "Let's try a different word here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "うつくしい": {
+            "en": "We’re looking for a noun-forming suffix that expresses the degree or quality of the adjective, not a grammar point that simply turns it into a general concept.",
+            "es": "",
+            "fr": ""
+          },
+          "うつくしいこと": {
+            "en": "We’re looking for a noun-forming suffix that expresses the degree or quality of the adjective, not a grammar point that simply turns it into a general concept.",
+            "es": "",
+            "fr": ""
+          },
+          "うつくしこと": {
+            "en": "We’re looking for a noun-forming suffix that expresses the degree or quality of the adjective, not a grammar point that simply turns it into a general concept.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "This <strong>beauty</strong> is a first for me.",
+        "nuance_translation": "An expression that can <strong>turn adjectives into nouns</strong> that express an <strong>amount</strong>.",
+        "extra_info": "",
+        "reviewable_id": 111,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2602",
+      "type": "study_question",
+      "attributes": {
+        "id": 2602,
+        "content": "何（なに）<span class='gp-popout' data-gp-id='30'>この</span><span class='study-area-input'>____</span>！早（はや）く掃除（そうじ）<span class='gp-popout' data-gp-id='21'>を</span>してください。",
+        "answer": "きたなさ",
+        "alternate_grammar": [],
+        "kanji_answer": "汚（きたな）さ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>量（りょう）</strong>を示（しめ）すために<strong>形容詞（けいようし）を名詞（めいし）に変（か）える</strong>ことができる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/111/male_audio/230225_1324_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/何この汚さ！早く掃除をしてください。.mp3",
+        "word_prompt": "汚（きたな）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "きたないこと": {
+            "en": "We’re looking for a noun-forming suffix that expresses the degree or quality of the adjective, not a grammar point that simply turns it into a general concept.",
+            "es": "",
+            "fr": ""
+          },
+          "きたないさ": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "What is this filth<strong>iness</strong>! Please hurry up and clean it.",
+        "nuance_translation": "An expression that can <strong>turn adjectives into nouns</strong> that express an <strong>amount</strong>.",
+        "extra_info": "",
+        "reviewable_id": 111,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2606",
+      "type": "study_question",
+      "attributes": {
+        "id": 2606,
+        "content": "彼（かれ）<span class='gp-popout' data-gp-id='10'>が</span>や<span class='gp-popout' data-gp-id='41'>った</span>ことの<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>永遠（えいえん）に忘（わす）れない。",
+        "answer": "ひどさ",
+        "alternate_grammar": [],
+        "kanji_answer": "酷（ひど）さ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>量（りょう）</strong>を示（しめ）すために<strong>形容詞（けいようし）を名詞（めいし）に変（か）える</strong>ことができる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/111/male_audio/230225_1325_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/彼がやったことの酷さは永遠に忘れない。.mp3",
+        "word_prompt": "酷（ひど）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "ひどみ": {
+            "en": "み is used to highlight the 'condition', or 'place' in which something exists in a constant state. We’re looking for a noun-forming suffix that expresses the degree or quality of the adjective, not a grammar point that simply turns it into a general concept.",
+            "es": "",
+            "fr": ""
+          },
+          "ひどいこと": {
+            "en": "We’re looking for a noun-forming suffix that expresses the degree or quality of the adjective, not a grammar point that simply turns it into a general concept.",
+            "es": "",
+            "fr": ""
+          },
+          "ひどいさ": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I will never forget the <strong>harshness</strong> of what he did.",
+        "nuance_translation": "An expression that can <strong>turn adjectives into nouns</strong> that express an <strong>amount</strong>.",
+        "extra_info": "",
+        "reviewable_id": 111,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "163",
+      "type": "study_question",
+      "attributes": {
+        "id": 163,
+        "content": "彼（かれ）の<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>子供（こども）みたい。",
+        "answer": "げんきさ",
+        "alternate_grammar": [],
+        "kanji_answer": "元気（げんき）さ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>量（りょう）</strong>を示（しめ）すために<strong>形容詞（けいようし）を名詞（めいし）に変（か）える</strong>ことができる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/111/male_audio/230225_1322_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/彼の元気さは子供みたい。.mp3",
+        "word_prompt": "元気（げんき）",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "げんき": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "げんきこと": {
+            "en": "We’re looking for a noun-forming suffix that expresses the degree or quality of the adjective, not a grammar point that simply turns it into a general concept.",
+            "es": "",
+            "fr": ""
+          },
+          "げんきの": {
+            "en": "We’re looking for a noun-forming suffix that expresses the degree or quality of the adjective, not a grammar point that simply turns it into a general concept.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "His <strong>energy</strong> is like that of a child.",
+        "nuance_translation": "An expression that can <strong>turn adjectives into nouns</strong> that express an <strong>amount</strong>.",
+        "extra_info": "",
+        "reviewable_id": 111,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2603",
+      "type": "study_question",
+      "attributes": {
+        "id": 2603,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='109'>だけで</span>死（し）<span class='gp-popout' data-gp-id='26'>ぬ</span><span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "さむさ",
+        "alternate_grammar": [],
+        "kanji_answer": "寒（さむ）さ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>量（りょう）</strong>を示（しめ）すために<strong>形容詞（けいようし）を名詞（めいし）に変（か）える</strong>ことができる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/111/male_audio/230225_1325.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この寒さだけで死ぬよ。.mp3",
+        "word_prompt": "寒（さむ）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "さむこと": {
+            "en": "We’re looking for a noun-forming suffix that expresses the degree or quality of the adjective, not a grammar point that simply turns it into a general concept.",
+            "es": "",
+            "fr": ""
+          },
+          "さむいこと": {
+            "en": "We are looking for a suffix that transforms the an adjective into a noun and illustrates the 'amount' of that particular adjective.",
+            "es": "",
+            "fr": ""
+          },
+          "さむいさ": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Just by this <strong>coldness</strong> you will die.",
+        "nuance_translation": "An expression that can <strong>turn adjectives into nouns</strong> that express an <strong>amount</strong>.",
+        "extra_info": "",
+        "reviewable_id": 111,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2605",
+      "type": "study_question",
+      "attributes": {
+        "id": 2605,
+        "content": "日本（にほん）<span class='gp-popout' data-gp-id='6'>の</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='21'>を</span>体験（たいけん）し<span class='gp-popout' data-gp-id='59'>たい</span><span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "すばらしさ",
+        "alternate_grammar": [],
+        "kanji_answer": "素晴（すば）らしさ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>量（りょう）</strong>を示（しめ）すために<strong>形容詞（けいようし）を名詞（めいし）に変（か）える</strong>ことができる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/111/male_audio/230225_1325_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/日本の素晴らしさを体験したいよ。.mp3",
+        "word_prompt": "素晴（すば）らし<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "すばらしいこと": {
+            "en": "We’re looking for a noun-forming suffix that expresses the degree or quality of the adjective, not a grammar point that simply turns it into a general concept.",
+            "es": "",
+            "fr": ""
+          },
+          "すばらしこと": {
+            "en": "We are looking for a suffix that transforms the an adjective into a noun and illustrates the 'amount' of that particular adjective.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I want to experience Japan's <strong>greatness</strong>.",
+        "nuance_translation": "An expression that can <strong>turn adjectives into nouns</strong> that express an <strong>amount</strong>.",
+        "extra_info": "",
+        "reviewable_id": 111,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2598",
+      "type": "study_question",
+      "attributes": {
+        "id": 2598,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>景色（けしき）<span class='gp-popout' data-gp-id='6'>の</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>言葉（ことば）で<span class='gp-popout' data-gp-id='3'>は</span>説明（せつめい）できない。",
+        "answer": "きれいさ",
+        "alternate_grammar": [],
+        "kanji_answer": "綺麗（きれい）さ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>量（りょう）</strong>を示（しめ）すために<strong>形容詞（けいようし）を名詞（めいし）に変（か）える</strong>ことができる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/111/male_audio/230225_1323.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この景色の綺麗さは言葉では説明できない。.mp3",
+        "word_prompt": "綺麗（きれい）",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うつくしさ": {
+            "en": "Let's try a different word here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "きれいこと": {
+            "en": "We’re looking for a noun-forming suffix that expresses the degree or quality of the adjective, not a grammar point that simply turns it into a general concept.",
+            "es": "",
+            "fr": ""
+          },
+          "きれさ": {
+            "en": "Could you try checking your conjugation? Remember, きれい is a な adjective.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I am unable to explain the <strong>prettiness</strong> of this scenery with words.",
+        "nuance_translation": "An expression that can <strong>turn adjectives into nouns</strong> that express an <strong>amount</strong>.",
+        "extra_info": "",
+        "reviewable_id": 111,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2600",
+      "type": "study_question",
+      "attributes": {
+        "id": 2600,
+        "content": "食（た）べ<span class='gp-popout' data-gp-id='895'>た</span><span class='gp-popout' data-gp-id='98'>こと</span>のない<span class='study-area-input'>____</span>のクッキー<span class='gp-popout' data-gp-id='21'>を</span>作（つく）り<span class='gp-popout' data-gp-id='59'>たい</span>。",
+        "answer": "あまさ",
+        "alternate_grammar": [],
+        "kanji_answer": "甘（あま）さ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>量（りょう）</strong>を示（しめ）すために<strong>形容詞（けいようし）を名詞（めいし）に変（か）える</strong>ことができる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/111/male_audio/230225_1324.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/食べたことのない甘さのクッキーを作りたい。.mp3",
+        "word_prompt": "甘（あま）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あまみ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "さ": {
+            "en": "Could you try using the prompted word?",
+            "es": "",
+            "fr": ""
+          },
+          "あまいさ": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I want to make a cookie that has a sweet<strong>ness</strong> that I have never tasted before.",
+        "nuance_translation": "An expression that can <strong>turn adjectives into nouns</strong> that express an <strong>amount</strong>.",
+        "extra_info": "",
+        "reviewable_id": 111,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2601",
+      "type": "study_question",
+      "attributes": {
+        "id": 2601,
+        "content": "<span class='vocab-popout' data-vocab-id='648'>昨日（きのう）</span><span class='gp-popout vocab-popout' data-vocab-id='1077'>食（た）べ<span class='gp-popout' data-gp-id='895'>た</span></span>ラーメン<span class='gp-popout' data-gp-id='6'>の</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='21'>を</span><span class='vocab-popout' data-vocab-id='416'>友達（ともだち）</span>に教（おし）えたい。",
+        "answer": "おいしさ",
+        "alternate_grammar": [],
+        "kanji_answer": "美味（おい）しさ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>量（りょう）</strong>を示（しめ）すために<strong>形容詞（けいようし）を名詞（めいし）に変（か）える</strong>ことができる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/111/male_audio/230225_1324_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/昨日食べたラーメンの美味しさを友達に教えたい。.mp3",
+        "word_prompt": "美味（おい）し<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うまさ": {
+            "en": "Let's try a different word here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "おいしこと": {
+            "en": "We’re looking for a noun-forming suffix that expresses the degree or quality of the adjective, not a grammar point that simply turns it into a general concept.",
+            "es": "",
+            "fr": ""
+          },
+          "おいしいさ": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I want my friend to know the <strong>deliciousness</strong> of the ramen I ate yesterday.",
+        "nuance_translation": "An expression that can <strong>turn adjectives into nouns</strong> that express an <strong>amount</strong>.",
+        "extra_info": "",
+        "reviewable_id": 111,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "167",
+      "type": "writeup",
+      "attributes": {
+        "id": 167,
+        "body_ja": "",
+        "body": "<p><span data-gp-id='111'>さ</span> is a <span data-term='接尾語・せつびご'>suffix</span> in Japanese that can be attached to the stem form of <span data-gp-id='24'>い-Adjectives</span> and <span data-gp-id='28'>な-Adjectives</span>. When this happens, it transforms the target adjective into a noun that illustrates the 'amount' of that particular adjective. This commonly translates as '-ness' in English (sweetness, tallness, spiciness, etc), but is referred to as <span data-term='程度・ていど'>degree</span> in Japanese.</p>\r\n \r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180314'>\r\n<li data-study-question='180315'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>It is thought that this <span data-term='接尾語・せつびご'>suffix</span> originally stemmed from the kanji 差（さ） (meaning 'distinction'), and was used for highlighting things that were distinctive features of something. In this way, <span data-gp-id='111'>さ</span> is also sometimes used after the dictionary form of verbs, to highlight a distinct point in time that something happens.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183878'>\r\n\r\n<li data-study-question='183879'></ul>\r\n\r\n<p>However, this use of the <span data-term='接尾語・せつびご'>suffix</span> is far less common in modern Japanese, and is known as '<span data-term='雅語・がご'>poetic language</span>'. It was primarily used during Japan's 'middle ages', which spanned from (around) 1100, until close to the end of the 1500's.</p></section>\r\n"
+      }
+    },
+    {
+      "id": "458",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 458,
+        "source": "Tobira",
+        "location": "Page 17",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "888",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 888,
+        "source": "みんなの日本語 II",
+        "location": "Page 96 [CH 40]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1149",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1149,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 381",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1395",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1395,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 257",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "224",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 224,
+        "site": "MaggieSensei",
+        "description": "The difference between さ & み",
+        "link": "https://maggiesensei.com/2017/04/17/the-difference-between-%E3%81%95-%E3%81%BF-sa-mi-suffixes-to-make-a-noun/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "651",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 651,
+        "site": "Japanese Stack Exchange",
+        "description": "The Purpose of さ",
+        "link": "https://japanese.stackexchange.com/questions/6665/what-is-the-purpose-of-the-suffix-%E3%81%95-on-adjectives",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1467",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1467,
+        "site": "Japanese Stack Exchange",
+        "description": "さ and み differences further explained",
+        "link": "https://japanese.stackexchange.com/questions/1417/what-is-the-difference-between-%E3%81%95-and-%E3%81%BF-suffixes-to-make-a-noun-out-of-an-adjec",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2028",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2028,
+        "site": "Tae Kim",
+        "description": "Expressing degree with 「さ」",
+        "link": "https://guidetojapanese.org/learn/complete/more_amounts",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "541",
+      "type": "related_content",
+      "attributes": {
+        "id": 541,
+        "relationship_type": "related",
+        "body": "さ and み both nominalize adjectives, similar to '~ness' in English, but differ in nuance and usage. さ works with both い and な-adjectives and expresses measurable degree, e.g. 高さ 'height' or 大変さ 'difficulty'. み is typically used with い-adjectives and focuses on quality or characteristics rather than degree, e.g. 面白み 'that which makes (something) interesting'.",
+        "first_relatable": {
+          "id": 111,
+          "slug": "さ",
+          "title": "さ",
+          "meaning": "Converting adjectives to nouns",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 462,
+          "slug": "み",
+          "title": "み",
+          "meaning": "~ness, Used to indicate conditions or nature",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

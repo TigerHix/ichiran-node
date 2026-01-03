@@ -1,0 +1,1553 @@
+{
+  "data": {
+    "id": "390",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 390,
+      "level": "JLPT4",
+      "lesson_id": 15,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "いがい",
+      "nuance": "(A)を<strong>除（のぞ）いて</strong>、または(A)<strong>ではない</strong>ものを示（しめ）す言葉（ことば）。",
+      "grammar_order": 207,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 667,
+        "title": "ずっと ①",
+        "slug": "ずっと1"
+      },
+      "previous_grammar_point": {
+        "id": 383,
+        "title": "いか",
+        "slug": "いか"
+      },
+      "lesson_count": "8/20",
+      "title": "いがい",
+      "furigana": "以外（いがい）",
+      "meaning": "Except・besides, Other than, With the exception of",
+      "nuance_translation": "A word which indicates everything <strong>outside of</strong> (A), or <strong>except for</strong> (A).",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Verb + <strong>以外（いがい）</strong><br>Noun + <strong>以外（いがい）</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10117",
+      "metadata": "いがい, 以外, igai, adverbial noun"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "180493",
+            "type": "study_question"
+          },
+          {
+            "id": "3478",
+            "type": "study_question"
+          },
+          {
+            "id": "3475",
+            "type": "study_question"
+          },
+          {
+            "id": "3477",
+            "type": "study_question"
+          },
+          {
+            "id": "183925",
+            "type": "study_question"
+          },
+          {
+            "id": "183926",
+            "type": "study_question"
+          },
+          {
+            "id": "180494",
+            "type": "study_question"
+          },
+          {
+            "id": "3474",
+            "type": "study_question"
+          },
+          {
+            "id": "1388",
+            "type": "study_question"
+          },
+          {
+            "id": "1390",
+            "type": "study_question"
+          },
+          {
+            "id": "3473",
+            "type": "study_question"
+          },
+          {
+            "id": "3479",
+            "type": "study_question"
+          },
+          {
+            "id": "3480",
+            "type": "study_question"
+          },
+          {
+            "id": "3476",
+            "type": "study_question"
+          },
+          {
+            "id": "1389",
+            "type": "study_question"
+          },
+          {
+            "id": "3481",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "205",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "545",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1512",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "799",
+            "type": "related_content"
+          },
+          {
+            "id": "515",
+            "type": "related_content"
+          },
+          {
+            "id": "703",
+            "type": "related_content"
+          },
+          {
+            "id": "1207",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "863",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1875",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "862",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "180493",
+      "type": "study_question",
+      "attributes": {
+        "id": 180493,
+        "content": "今日（きょう）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>和食（わしょく）<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"6\">の</span>もの<span class=\"gp-popout\" data-gp-id=\"10\">が</span>食（た）べ<span class=\"gp-popout\" data-gp-id=\"59\">たい</span>。",
+        "answer": "いがい",
+        "alternate_grammar": [],
+        "kanji_answer": "以外（いがい）",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/今日は和食いがいのものが食べたい。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Today I want to eat something <strong>other than</strong> Japanese food.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 390,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3478",
+      "type": "study_question",
+      "attributes": {
+        "id": 3478,
+        "content": "彼（かれ）<span class='gp-popout' data-gp-id='3'>は</span>エスプレッソ<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='6'>の</span>コーヒー<span class='gp-popout' data-gp-id='3'>は</span>飲（の）ま<span class='gp-popout' data-gp-id='888'>ない</span>。",
+        "answer": "いがい",
+        "alternate_grammar": [],
+        "kanji_answer": "以外（いがい）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>除（のぞ）いて</strong>、または(A)<strong>ではない</strong>ものを示（しめ）す言葉（ことば）。",
+        "tense": "Exclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/390/male_audio/230303_1358_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/彼はエスプレッソ以外のコーヒーは飲まない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のほかに": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "のほかは": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "のほか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "をのぞいて": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のぞいて": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "のぞく": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "のぞい": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "をのぞく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "より": {
+            "en": "より is used when comparing two things (like AよりBのほうが～). But We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほか": {
+            "en": "ほか means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "He doesn't drink any <strong>other</strong> coffee <strong>than</strong> espresso.",
+        "nuance_translation": "A word which indicates everything <strong>outside of</strong> (A), or <strong>except for</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 390,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3475",
+      "type": "study_question",
+      "attributes": {
+        "id": 3475,
+        "content": "ピザ<span class='gp-popout' data-gp-id='15'>と</span>コーラ<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='395'>他（ほか）に</span>頼（たの）み<span class='gp-popout' data-gp-id='59'>たい</span>物（もの）ある？",
+        "answer": "いがい",
+        "alternate_grammar": [],
+        "kanji_answer": "以外（いがい）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>除（のぞ）いて</strong>、または(A)<strong>ではない</strong>ものを示（しめ）す言葉（ことば）。",
+        "tense": "Exclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/390/male_audio/230303_1357.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ピザとコーラ以外他に頼みたい物ある？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "の": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "をのぞいて": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のぞいて": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "をのぞく": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のぞく": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "のぞい": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ほかの": {
+            "en": "ほかの means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほかに": {
+            "en": "ほかに means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "のに": {
+            "en": "のに means 'despite'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "でも": {
+            "en": "でも is used when offering suggestions. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いか": {
+            "en": "いか means 'less than (or equal to)'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "それに": {
+            "en": "We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "とか": {
+            "en": "We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "は": {
+            "en": "We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Besides</strong> pizza and cola, is there anything else you want to order?",
+        "nuance_translation": "A word which indicates everything <strong>outside of</strong> (A), or <strong>except for</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 390,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3477",
+      "type": "study_question",
+      "attributes": {
+        "id": 3477,
+        "content": "<span class='gp-popout vocab-popout' data-gp-id='11' data-vocab-id='149'>それ</span><span class='study-area-input'>____</span>に好（す）きなことないの？",
+        "answer": "いがい",
+        "alternate_grammar": [],
+        "kanji_answer": "以外（いがい）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>除（のぞ）いて</strong>、または(A)<strong>ではない</strong>ものを示（しめ）す言葉（ことば）。",
+        "tense": "Exclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/390/male_audio/230303_1358.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/それ以外に好きなことないの？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のほかに": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "のほかは": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "のほか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のぞい": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "をのぞいて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のぞいて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "をのぞく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のぞく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ほか": {
+            "en": "ほか means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "でも": {
+            "en": "でも means 'but'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Don't you have anything you like <strong>besides</strong> that?",
+        "nuance_translation": "A word which indicates everything <strong>outside of</strong> (A), or <strong>except for</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 390,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183925",
+      "type": "study_question",
+      "attributes": {
+        "id": 183925,
+        "content": "たかし君（くん）<span data-gp-id='4'>も</span>アニメ<span data-gp-id='716'>好（す）き</span><span data-gp-id='17'>なの</span>？ちょっと<span data-gp-id='390'>意外（いがい）</span>だ<span data-gp-id='71'>ね</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Takashi-kun, do you like anime too? <strong>I'm</strong> a little <strong>surprised</strong>.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 390,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183926",
+      "type": "study_question",
+      "attributes": {
+        "id": 183926,
+        "content": "俺（おれ）こう<span data-gp-id='768'>見（み）</span>え<span data-gp-id='174'>ても</span>意外（いがい）に肉（にく）<span data-gp-id='21'>を</span>食（た）べ<span data-gp-id='51'>ない</span><span data-gp-id='17'>の</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It may come off as a surprise based on how I look, but I don't eat meat.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 390,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180494",
+      "type": "study_question",
+      "attributes": {
+        "id": 180494,
+        "content": "タロウ<span class=\"gp-popout\" data-gp-id=\"3\">は</span>ゲーム<span class='study-area-input'>____</span>に趣味（しゅみ）<span class=\"gp-popout\" data-gp-id=\"3\">は</span><span class=\"gp-popout\" data-gp-id=\"13\">ある</span><span class=\"gp-popout\" data-gp-id=\"17\">の</span>？",
+        "answer": "いがい",
+        "alternate_grammar": [],
+        "kanji_answer": "以外（いがい）",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/タロウはゲームいがいに趣味はあるの？.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Taro, do you have any other interests <strong>besides</strong> gaming?",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 390,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3474",
+      "type": "study_question",
+      "attributes": {
+        "id": 3474,
+        "content": "<span class='vocab-popout' data-vocab-id='564'>彼（かれ）</span><span class='gp-popout' data-gp-id='3'>は</span>言（い）わ<span class='gp-popout' data-gp-id='145'>れた</span>こと<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='718'>何（なに）も</span>しない<span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "いがい",
+        "alternate_grammar": [],
+        "kanji_answer": "以外（いがい）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>除（のぞ）いて</strong>、または(A)<strong>ではない</strong>ものを示（しめ）す言葉（ことば）。",
+        "tense": "Exclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/彼は言われたこと以外何もしないよ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のほかに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のほかは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のほか": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "をのぞいて": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のぞいて": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "のぞく": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "のぞい": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "をのぞく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ほかの": {
+            "en": "ほかの means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほかに": {
+            "en": "ほかに means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほか": {
+            "en": "ほか means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "He will not do anything <strong>other than</strong> what he is told.",
+        "nuance_translation": "A word which indicates everything <strong>outside of</strong> (A), or <strong>except for</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 390,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1388",
+      "type": "study_question",
+      "attributes": {
+        "id": 1388,
+        "content": "メアリー<span class='study-area-input'>____</span>、<span class='gp-popout' data-gp-id='721'>誰（だれ）も</span>来（こ）なかった。",
+        "answer": "いがい",
+        "alternate_grammar": [],
+        "kanji_answer": "以外（いがい）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>除（のぞ）いて</strong>、または(A)<strong>ではない</strong>ものを示（しめ）す言葉（ことば）。",
+        "tense": "Exclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/390/male_audio/230303_1355_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/メアリー以外、誰も来なかった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のほかに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のほかは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のほか": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "をのぞいて": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のぞいて": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "をのぞく": {
+            "en": "'Could you try a grammar point that is more casual here?'.",
+            "es": ""
+          },
+          "のぞく": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "のぞい": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "いかい": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "だけで": {
+            "en": "Although this could work here, we are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "だけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "しか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ほかに": {
+            "en": "ほかに means 'in addition to'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "でも": {
+            "en": "でも means 'but'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "しかない": {
+            "en": "しかない is closer to 'only'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いか": {
+            "en": "いか means 'less than (or equal to)'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "No one <strong>except</strong> Mary came.",
+        "nuance_translation": "A word which indicates everything <strong>outside of</strong> (A), or <strong>except for</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 390,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1390",
+      "type": "study_question",
+      "attributes": {
+        "id": 1390,
+        "content": "<span class='gp-popout' data-gp-id='11'>それ</span><span class='study-area-input'>____</span>、聞（き）い<span class='gp-popout' data-gp-id='764'>てない</span><span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "いがい",
+        "alternate_grammar": [],
+        "kanji_answer": "以外（いがい）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>除（のぞ）いて</strong>、または(A)<strong>ではない</strong>ものを示（しめ）す言葉（ことば）。",
+        "tense": "Exclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/390/male_audio/230303_1356.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/それ以外、聞いてないよ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のほかに": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "しか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のほかは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のほか": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "をのぞいて": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のぞいて": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "をのぞく": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "のぞく": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "のぞい": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "だけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ほかに": {
+            "en": "ほかに means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほか": {
+            "en": "ほか means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I haven't heard anything <strong>other than</strong> that.",
+        "nuance_translation": "A word which indicates everything <strong>outside of</strong> (A), or <strong>except for</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 390,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3473",
+      "type": "study_question",
+      "attributes": {
+        "id": 3473,
+        "content": "納豆（なっとう）<span class='study-area-input'>____</span>何（なん）<span class='gp-popout' data-gp-id='174'>でも</span>食（た）べ<span class='gp-popout' data-gp-id='132'>られる</span>。",
+        "answer": "いがい",
+        "alternate_grammar": [],
+        "kanji_answer": "以外（いがい）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>除（のぞ）いて</strong>、または(A)<strong>ではない</strong>ものを示（しめ）す言葉（ことば）。",
+        "tense": "Exclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/390/male_audio/230303_1356_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/納豆以外何でも食べられる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のほかに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のほかは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のほか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "をのぞいて": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のぞいて": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "をのぞく": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のぞく": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "のぞい": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ほかの": {
+            "en": "ほかの means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほかに": {
+            "en": "ほかに means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほか": {
+            "en": "ほか means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "しか": {
+            "en": "しか is closer to 'only' and would be more natural and grammatical if the last verb was conjugated negatively. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I can eat anything <strong>other than</strong> natto.",
+        "nuance_translation": "A word which indicates everything <strong>outside of</strong> (A), or <strong>except for</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 390,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3479",
+      "type": "study_question",
+      "attributes": {
+        "id": 3479,
+        "content": "寿司（すし）<span class='study-area-input'>____</span>に何（なに）<span class='gp-popout' data-gp-id='21'>を</span>食（た）べ<span class='gp-popout' data-gp-id='59'>たい</span>？",
+        "answer": "いがい",
+        "alternate_grammar": [],
+        "kanji_answer": "以外（いがい）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>除（のぞ）いて</strong>、または(A)<strong>ではない</strong>ものを示（しめ）す言葉（ことば）。",
+        "tense": "Exclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/390/male_audio/230303_1359.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/寿司以外に何を食べたい？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のほかに": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "のほかは": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "のほか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のぞいて": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "のぞく": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "のぞい": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "をのぞいて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "をのぞく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ほかの": {
+            "en": "ほかの means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほか": {
+            "en": "ほか means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Other than</strong> sushi, what do you want to eat?",
+        "nuance_translation": "A word which indicates everything <strong>outside of</strong> (A), or <strong>except for</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 390,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3480",
+      "type": "study_question",
+      "attributes": {
+        "id": 3480,
+        "content": "「関係者（かんけいしゃ）<span class='study-area-input'>____</span>入（はい）っ<span class='gp-popout' data-gp-id='67'>てはいけない</span>」<span class='gp-popout' data-gp-id='356'>と</span>書（か）いてある<span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "いがい",
+        "alternate_grammar": [],
+        "kanji_answer": "以外（いがい）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>除（のぞ）いて</strong>、または(A)<strong>ではない</strong>ものを示（しめ）す言葉（ことば）。",
+        "tense": "Exclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/390/male_audio/230303_1400.mp3",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のほかに": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "のほかは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のほか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "をのぞいて": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のぞいて": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "のぞく": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "のぞい": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "をのぞく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "だけ": {
+            "en": "だけ means 'only'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いか": {
+            "en": "いか means 'less than (or equal to)'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "のいがい": {
+            "en": "This grammar point is directly attached to nouns and verbs, so the の is unnecessary.",
+            "es": "",
+            "fr": ""
+          },
+          "いがいに": {
+            "en": "Can you remove something from the end here?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "It is written that '<strong>With the exception of</strong> authorized personnel, entry is prohibited.'",
+        "nuance_translation": "A word which indicates everything <strong>outside of</strong> (A), or <strong>except for</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 390,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3476",
+      "type": "study_question",
+      "attributes": {
+        "id": 3476,
+        "content": "昨日（きのう）日本語（にほんご）<span class='gp-popout' data-gp-id='6'>の</span>勉強（べんきょう）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='718'>何（なに）も</span>し<span class='gp-popout' data-gp-id='27'>ていない</span>。",
+        "answer": "いがい",
+        "alternate_grammar": [],
+        "kanji_answer": "以外（いがい）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>除（のぞ）いて</strong>、または(A)<strong>ではない</strong>ものを示（しめ）す言葉（ことば）。",
+        "tense": "Exclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/390/male_audio/230303_1357_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/昨日日本語の勉強以外何もしていない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のほかには": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のほかに": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "のほかは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のほか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "をのぞいて": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のぞいて": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "のぞく": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "のぞい": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "をのぞく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ほかは": {
+            "en": "ほかは means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほかの": {
+            "en": "ほかの means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほかに": {
+            "en": "ほかに means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほか": {
+            "en": "ほか means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Yesterday, I didn't do anything <strong>other than</strong> study Japanese.",
+        "nuance_translation": "A word which indicates everything <strong>outside of</strong> (A), or <strong>except for</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 390,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1389",
+      "type": "study_question",
+      "attributes": {
+        "id": 1389,
+        "content": "今（いま）<span class='gp-popout' data-gp-id='58'>まで</span>漢字（かんじ）<span class='study-area-input'>____</span>、<span class='gp-popout' data-gp-id='718'>何（なに）も</span>勉強（べんきょう）していなかった。",
+        "answer": "いがい",
+        "alternate_grammar": [],
+        "kanji_answer": "以外（いがい）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>除（のぞ）いて</strong>、または(A)<strong>ではない</strong>ものを示（しめ）す言葉（ことば）。",
+        "tense": "Exclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/390/male_audio/230303_1355_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/今まで漢字以外、何も勉強していなかった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のほかに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のほかは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のほか": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "をのぞいて": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のぞいて": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "のぞく": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "のぞい": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "だけで": {
+            "en": "Although this could work here, we are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "だけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "しか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "をのぞく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のに": {
+            "en": "のに means 'despite'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "でも": {
+            "en": "でも means 'but'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "しかない": {
+            "en": "しかない is closer to 'only'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いか": {
+            "en": "いか means 'less than (or equal to)'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "も": {
+            "en": "We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Until now, I haven't been studying anything <strong>except</strong> kanji.",
+        "nuance_translation": "A word which indicates everything <strong>outside of</strong> (A), or <strong>except for</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 390,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3481",
+      "type": "study_question",
+      "attributes": {
+        "id": 3481,
+        "content": "日本語（にほんご）と英語（えいご）<span class='study-area-input'>____</span>話（はな）<span class='gp-popout' data-gp-id='132'>せる</span>言語（げんご）はあります<span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "いがいに",
+        "alternate_grammar": [
+          "いがい"
+        ],
+        "kanji_answer": "以外（いがい）に",
+        "kanji_alt_grammar": [
+          "以外（いがい）"
+        ],
+        "nuance": "(A)を<strong>除（のぞ）いて</strong>、または(A)<strong>ではない</strong>ものを示（しめ）す言葉（ことば）。",
+        "tense": "Exclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/390/male_audio/230303_1403.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/日本語と英語以外に話せる言語はありますか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のほかに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のほかは": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "のほか": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "をのぞいて": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のぞいて": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "をのぞく": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のぞく": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "のぞい": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ほかの": {
+            "en": "ほかの means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほかに": {
+            "en": "ほかに means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほか": {
+            "en": "ほか means 'other'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          },
+          "いじょう": {
+            "en": "いじょう means 'greater than (A)' or 'exceeding (A)'. We are looking for a grammar point that is used to express 'except (A)', or 'besides (A)'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Other than</strong> Japanese and English are there any other languages that you can speak?",
+        "nuance_translation": "A word which indicates everything <strong>outside of</strong> (A), or <strong>except for</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 390,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "205",
+      "type": "writeup",
+      "attributes": {
+        "id": 205,
+        "body_ja": "",
+        "body": "<p>In order to mark something as 'except (A)', or 'besides (A)', <span data-gp-id='390'>以外（いがい）</span> will be used. This construction is a combination of the kanji 以（い） which means 'by means of', and 外（がい） 'outside'. This expression can most accurately be translated as 'with the exception of (A)', or 'everything outside of (A)'.</p>\r\n\r\n<p>To use <span data-gp-id='390'>以外（いがい）</span>, attach it to the thing that you want to highlight as being the 'all inclusive' amount/area.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180493'>\r\n<li data-study-question='180494'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p><span data-gp-id='390'>以外（いがい）</span> is also regularly used simply as an expression of surprise, when someone sees, hears, or reads something that is 'outside' of what they expected. However, in these cases, the more correct kanji construction is 意外（いがい） 'out of mind'. This is a regular mistake that even native speakers make, so in many  cases, either 意外（いがい） or <span data-gp-id='390'>以外（いがい）</span> would be understandable.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183925'>\r\n<li data-study-question='183926'></ul></section>"
+      }
+    },
+    {
+      "id": "545",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 545,
+        "source": "Tobira",
+        "location": "Page 216",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1512",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1512,
+        "source": "[AIAIJ] An Integrated Approach to Intermediate Japanese",
+        "location": "Page 54",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "863",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 863,
+        "site": "Japanese For Beginners",
+        "description": "以外 in various situations",
+        "link": "https://www.japaneseforbeginners.info/2016/07/igai.html",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1875",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1875,
+        "site": "Self Taught Japanese",
+        "description": "Different ways of saying \"except\"",
+        "link": "https://selftaughtjapanese.com/2014/04/01/different-ways-of-saying-except-in-japanese/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "862",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 862,
+        "site": "Imabi",
+        "description": "Adverbial Nouns",
+        "link": "https://imabi.org/%e4%bb%a5-adverbial-nouns/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "799",
+      "type": "related_content",
+      "attributes": {
+        "id": 799,
+        "relationship_type": "related",
+        "body": "いがい and を除いて both express exclusion, similar to 'other than' or 'with the exception of' in English. Their meanings are very close and often interchangeable. The main difference is that を除いて is more formal and mainly used in writing, while いがい appears in both casual speech and writing. 土日以外毎日働いています and 土日を除いて毎日働いています both mean 'I work every day except Saturday and Sunday.'.",
+        "first_relatable": {
+          "id": 390,
+          "slug": "いがい",
+          "title": "いがい",
+          "meaning": "Except・besides, Other than, With the exception of",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 552,
+          "slug": "を除いて",
+          "title": "を除いて",
+          "meaning": "Except, With the exception of, Unless",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "515",
+      "type": "related_content",
+      "attributes": {
+        "id": 515,
+        "relationship_type": "related",
+        "body": "Both forms can express the idea of 'other than', but their nuance and usage differ slightly. いがい emphasizes exceptions, like 'except for' or 'other than,' and attaches directly after nouns, e.g. バナナ以外の果物 means 'fruits other than bananas.' In contrast, ほかに highlights the presence of alternatives, takes の when linking to nouns, e.g. バナナの他に 'other than bananas', and can also start a sentence or phrase.",
+        "first_relatable": {
+          "id": 390,
+          "slug": "いがい",
+          "title": "いがい",
+          "meaning": "Except・besides, Other than, With the exception of",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 395,
+          "slug": "ほかにも-ほかには",
+          "title": "ほかに(も)・ほか(に)は",
+          "meaning": "Other, Another, Any other, Anything else, As well as, Besides, In addition",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "703",
+      "type": "related_content",
+      "attributes": {
+        "id": 703,
+        "relationship_type": "related",
+        "body": "はともかく carries the nuance of setting something aside to focus on the rest. For example, 田中さんはともかく、みんな来ると思う means 'Setting Tanaka aside, I think everyone will come.'. In contrast, いがい emphasizes exclusion, 田中さん以外はみんな来ると思う means 'I think everyone but Tanaka will come.' So, はともかく avoids commenting on Tanaka, while いがい explicitly excludes him.",
+        "first_relatable": {
+          "id": 577,
+          "slug": "はともかく",
+          "title": "はともかく",
+          "meaning": "Setting aside, Apart from",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 390,
+          "slug": "いがい",
+          "title": "いがい",
+          "meaning": "Except・besides, Other than, With the exception of",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1207",
+      "type": "related_content",
+      "attributes": {
+        "id": 1207,
+        "relationship_type": "related",
+        "body": "Both forms express exclusion, but with key differences. いがい (often written in kanji as 以外)  attaches directly to nouns, e.g. サッカー以外 'other than soccer'. It's common in both speech and writing. In contrast, をおいてほかに〜ない is much more formal and academic. It's also used almost exclusively to positively highlight something, while いがい carries no such nuance.",
+        "first_relatable": {
+          "id": 783,
+          "slug": "をおいてほかに-ない",
+          "title": "をおいてほかに〜ない",
+          "meaning": "No...but, Nothing else but, None other than",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 390,
+          "slug": "いがい",
+          "title": "いがい",
+          "meaning": "Except・besides, Other than, With the exception of",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

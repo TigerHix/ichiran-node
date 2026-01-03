@@ -1,0 +1,922 @@
+{
+  "data": {
+    "id": "709",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 709,
+      "level": "JLPT2",
+      "lesson_id": 39,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "何より",
+      "nuance": "(A)についての安心（あんしん）感（かん）や、(A)が一番（いちばん）であるということを表（あらわ）す時（とき）に使（つか）われることが多（おお）い表現（ひょうげん）。(A)<strong>を超（こ）えるものはない</strong>。",
+      "grammar_order": 712,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 407,
+        "title": "何といっても",
+        "slug": "何といっても"
+      },
+      "previous_grammar_point": {
+        "id": 335,
+        "title": "だけあって",
+        "slug": "だけあって"
+      },
+      "lesson_count": "15/23",
+      "title": "何より",
+      "furigana": "何（なに）より",
+      "meaning": "Be glad, Be relieved, Most, Best, Above all else, More than anything",
+      "nuance_translation": "A structure often used to show relief about (A), or that (A) is the best. <strong>More than whatever else</strong>, (A).",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<strong>何（なに）<span class='gp-popout' data-gp-id='108'>より</span></strong> + （<span class='gp-popout' data-gp-id='4'>も</span>）+ Phrase<br><strong>何（なに）<span class='gp-popout' data-gp-id='108'>より</span></strong> + <span class='chui'><span class='gp-popout' data-gp-id='6'>の</span></span> + Noun",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/14969",
+      "metadata": "何より, 何よりも, 何よりの, なにより, なによりも, なによりの, naniyori, naniyorimo, naniyorino, expression, adverb, emphasis"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "182403",
+            "type": "study_question"
+          },
+          {
+            "id": "182404",
+            "type": "study_question"
+          },
+          {
+            "id": "182405",
+            "type": "study_question"
+          },
+          {
+            "id": "182406",
+            "type": "study_question"
+          },
+          {
+            "id": "8790",
+            "type": "study_question"
+          },
+          {
+            "id": "8785",
+            "type": "study_question"
+          },
+          {
+            "id": "8784",
+            "type": "study_question"
+          },
+          {
+            "id": "8789",
+            "type": "study_question"
+          },
+          {
+            "id": "8791",
+            "type": "study_question"
+          },
+          {
+            "id": "8780",
+            "type": "study_question"
+          },
+          {
+            "id": "8781",
+            "type": "study_question"
+          },
+          {
+            "id": "8786",
+            "type": "study_question"
+          },
+          {
+            "id": "8787",
+            "type": "study_question"
+          },
+          {
+            "id": "8788",
+            "type": "study_question"
+          },
+          {
+            "id": "8783",
+            "type": "study_question"
+          },
+          {
+            "id": "8782",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "725",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "826",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1583",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1498",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1914",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "182403",
+      "type": "study_question",
+      "attributes": {
+        "id": 182403,
+        "content": "<span class='study-area-input'>____</span>驚（おどろ）いたのは、あの中田（なかた）くんが医者（いしゃ）になったことだ。",
+        "answer": "なにより",
+        "alternate_grammar": [],
+        "kanji_answer": "何（なに）より",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/何より驚いたのは、あの中田くんが医者になったことだ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>The most</strong> surprising thing is that Nakata-kun became a doctor.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 709,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182404",
+      "type": "study_question",
+      "attributes": {
+        "id": 182404,
+        "content": "田中（たなか）様（さま）のお役（やく）に立（た）てて<span class='study-area-input'>____</span>です。",
+        "answer": "なにより",
+        "alternate_grammar": [],
+        "kanji_answer": "何（なに）より",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/田中様のお役に立てて何よりです。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "We are <strong>glad to be</strong> of service to you, Tanaka-sama.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 709,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182405",
+      "type": "study_question",
+      "attributes": {
+        "id": 182405,
+        "content": "<span class='study-area-input'>____</span>大切（たいせつ）なのは、何（なん）でも諦（あきら）めずに頑張（がんば）ってやることだ。",
+        "answer": "なによりも",
+        "alternate_grammar": [],
+        "kanji_answer": "何（なに）よりも",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/何よりも大切なのは、何でも諦めずに頑張ってやることだ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>The most</strong> important thing is to not give up and to do your best in anything you do.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 709,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182406",
+      "type": "study_question",
+      "attributes": {
+        "id": 182406,
+        "content": "休（やす）みの日（ひ）に妻（つま）とドライブに行（い）くのが<span class='study-area-input'>____</span>の楽（たの）しみです。",
+        "answer": "なにより",
+        "alternate_grammar": [],
+        "kanji_answer": "何（なに）より",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/休みの日に妻とドライブに行くのが何よりの楽しみです。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I love going on drives with my wife on weekends <strong>more than anything</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 709,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8790",
+      "type": "study_question",
+      "attributes": {
+        "id": 8790,
+        "content": "<span class='name-highlight'>友達（ともだち）</span>：「互（たが）いに助（たす）け合（あ）うことが<span class='study-area-input'>____</span><span class='chui'>大事（だいじ）</span>なのよ。」",
+        "answer": "なにより",
+        "alternate_grammar": [
+          "なにより",
+          "なによりも"
+        ],
+        "kanji_answer": "何（なに）より",
+        "kanji_alt_grammar": [
+          "何（なに）よりも",
+          "何（なに）より"
+        ],
+        "nuance": "(A)についての安心（あんしん）感（かん）や、(A)が一番（いちばん）であるということを表（あらわ）す時（とき）に使（つか）われることが多（おお）い表現（ひょうげん）。(A)<strong>を超（こ）えるものはない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/友達：「互いに助け合うことが何より大事なのよ。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うれしい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "さいわい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "しあわせ": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Friend</span>: 'Helping one another is <strong>the most</strong> important thing.' (<strong>above all else・more than anything</strong>)",
+        "nuance_translation": "A structure often used to show relief about (A), or that (A) is the best. <strong>More than whatever else</strong>, (A).",
+        "extra_info": "",
+        "reviewable_id": 709,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8785",
+      "type": "study_question",
+      "attributes": {
+        "id": 8785,
+        "content": "<span class='name-highlight'>プレゼントなどにたいして感謝（かんしゃ）を述（の）べる時（とき）</span>：「<span class='study-area-input'>____</span>プレゼントをありがとう。」",
+        "answer": "なによりの",
+        "alternate_grammar": [
+          "なによりも",
+          "なによりの",
+          "なにより"
+        ],
+        "kanji_answer": "何（なに）よりの",
+        "kanji_alt_grammar": [
+          "何（なに）よりも",
+          "何（なに）より",
+          "何（なに）よりの"
+        ],
+        "nuance": "(A)についての安心（あんしん）感（かん）や、(A)が一番（いちばん）であるということを表（あらわ）す時（とき）に使（つか）われることが多（おお）い表現（ひょうげん）。(A)<strong>を超（こ）えるものはない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/プレゼントなどにたいして感謝を述べる時：「何よりのプレゼントをありがとう。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うれしい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "さいわい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "しあわせ": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>When saying thanks for presents and the like</span>: 'Thank you for <strong>the most</strong> wonderful gift!' (<strong>above all else・more than anything</strong>)",
+        "nuance_translation": "A structure often used to show relief about (A), or that (A) is the best. <strong>More than whatever else</strong>, (A).",
+        "extra_info": "",
+        "reviewable_id": 709,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8784",
+      "type": "study_question",
+      "attributes": {
+        "id": 8784,
+        "content": "「見（み）つけた時（とき）、すべて折半（せっぱん）だよ。」<br>「どっちにしろ、そのためには、<span class='study-area-input'>____</span>まず見（み）つけないと話（はなし）にならん。」",
+        "answer": "なにより",
+        "alternate_grammar": [
+          "なにより",
+          "なによりも"
+        ],
+        "kanji_answer": "何（なに）より",
+        "kanji_alt_grammar": [
+          "何（なに）よりも",
+          "何（なに）より"
+        ],
+        "nuance": "(A)についての安心（あんしん）感（かん）や、(A)が一番（いちばん）であるということを表（あらわ）す時（とき）に使（つか）われることが多（おお）い表現（ひょうげん）。(A)<strong>を超（こ）えるものはない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/「見つけた時、すべて折半だよ。」「どっちにしろ、そのためには、何よりまず見つけないと話にならん。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うれしい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "さいわい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "しあわせ": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'When we find it, we split everything equally.'<br>'Either way, for that, <strong>above all else</strong>, if we can't find it first, we won't get anywhere.'",
+        "nuance_translation": "A structure often used to show relief about (A), or that (A) is the best. <strong>More than whatever else</strong>, (A).",
+        "extra_info": "",
+        "reviewable_id": 709,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8789",
+      "type": "study_question",
+      "attributes": {
+        "id": 8789,
+        "content": "<span class='name-highlight'>久（ひさ）しぶりに目上（めうえ）に挨拶（あいさつ）する時（とき）</span>：「お元気（げんき）になられて<span class='study-area-input'>____</span>です。」",
+        "answer": "なにより",
+        "alternate_grammar": [],
+        "kanji_answer": "何（なに）より",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)についての安心（あんしん）感（かん）や、(A)が一番（いちばん）であるということを表（あらわ）す時（とき）に使（つか）われることが多（おお）い表現（ひょうげん）。(A)<strong>を超（こ）えるものはない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/久しぶりに目上に挨拶する時：「お元気になられて何よりです。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なによりも": {
+            "en": "You do not use も when なにより falls at the end of a sentence",
+            "es": ""
+          },
+          "うれしい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "さいわい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "しあわせ": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>When greeting a superior they haven't seen for a long time</span>: '<strong>I am glad</strong> that you are in good health.'",
+        "nuance_translation": "A structure often used to show relief about (A), or that (A) is the best. <strong>More than whatever else</strong>, (A).",
+        "extra_info": "",
+        "reviewable_id": 709,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8791",
+      "type": "study_question",
+      "attributes": {
+        "id": 8791,
+        "content": "<span class='name-highlight'>部長（ぶちょう）</span>：「お子（こ）さんが生（う）まれたのですね。」<br><span class='name-highlight'>部下（ぶか）</span>：「はい。長女（ちょうじょ）が無事（ぶじ）に誕生（たんじょう）いたしました。」<br><span class='name-highlight'>部長（ぶちょう）</span>：「そうですか。<span class='chui'>それは</span><span class='study-area-input'>____</span>です。」",
+        "answer": "なにより",
+        "alternate_grammar": [],
+        "kanji_answer": "何（なに）より",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)についての安心（あんしん）感（かん）や、(A)が一番（いちばん）であるということを表（あらわ）す時（とき）に使（つか）われることが多（おお）い表現（ひょうげん）。(A)<strong>を超（こ）えるものはない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/部長：「お子さんが生まれたのですね。」部下：「はい。長女が無事に誕生いたしました。」部長：「そうですか。それは何よりです。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なによりも": {
+            "en": "You do not use も when なにより falls at the end of a sentence",
+            "es": ""
+          },
+          "うれしい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "さいわい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "しあわせ": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Department chief</span>: 'You had a baby, right?'<br><span class='name-highlight'>Subordinate</span>: 'Yes. My first daughter was born, without any problems.'<br><span class='name-highlight'>Department chief</span>: 'Is that so? <strong>I am really glad</strong>.'",
+        "nuance_translation": "A structure often used to show relief about (A), or that (A) is the best. <strong>More than whatever else</strong>, (A).",
+        "extra_info": "",
+        "reviewable_id": 709,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8780",
+      "type": "study_question",
+      "attributes": {
+        "id": 8780,
+        "content": "<span class='name-highlight'>久（ひさ）しぶりに挨拶（あいさつ）する時（とき）</span>：「<span class='chui'>お元気（げんき）そうで</span><span class='study-area-input'>____</span>です。」",
+        "answer": "なにより",
+        "alternate_grammar": [],
+        "kanji_answer": "何（なに）より",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)についての安心（あんしん）感（かん）や、(A)が一番（いちばん）であるということを表（あらわ）す時（とき）に使（つか）われることが多（おお）い表現（ひょうげん）。(A)<strong>を超（こ）えるものはない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/久しぶりに挨拶する時：「お元気そうで何よりです。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なによりも": {
+            "en": "You do not use も when なにより falls at the end of a sentence",
+            "es": ""
+          },
+          "うれしい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "さいわい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "しあわせ": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>When greeting someone we haven't seen for a long time</span>: '<strong>I am really glad</strong> that you seem to be doing well.' (<strong>above all else・more than anything</strong>)",
+        "nuance_translation": "A structure often used to show relief about (A), or that (A) is the best. <strong>More than whatever else</strong>, (A).",
+        "extra_info": "",
+        "reviewable_id": 709,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8781",
+      "type": "study_question",
+      "attributes": {
+        "id": 8781,
+        "content": "<span class='name-highlight'>記事（きじ）</span>：「両親（りょうしん）にとって自分（じぶん）の子供（こども）の健康（けんこう）が<span class='study-area-input'>____</span><span class='chui'>大切（たいせつ）</span>です。」",
+        "answer": "なにより",
+        "alternate_grammar": [
+          "なにより",
+          "なによりも"
+        ],
+        "kanji_answer": "何（なに）より",
+        "kanji_alt_grammar": [
+          "何（なに）よりも",
+          "何（なに）より"
+        ],
+        "nuance": "(A)についての安心（あんしん）感（かん）や、(A)が一番（いちばん）であるということを表（あらわ）す時（とき）に使（つか）われることが多（おお）い表現（ひょうげん）。(A)<strong>を超（こ）えるものはない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/記事：「両親にとって自分の子供の健康が何より大切です。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うれしい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "さいわい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "しあわせ": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Article</span>: 'For parents, there is <strong>nothing more</strong> important <strong>than</strong> the health of their children.' (<strong>above all else・more than anything</strong>)",
+        "nuance_translation": "A structure often used to show relief about (A), or that (A) is the best. <strong>More than whatever else</strong>, (A).",
+        "extra_info": "",
+        "reviewable_id": 709,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8786",
+      "type": "study_question",
+      "attributes": {
+        "id": 8786,
+        "content": "<span class='name-highlight'>友達（ともだち）との話（はなし）</span>：「わたしは本（ほん）を読（よ）むことが<span class='study-area-input'>____</span><span class='chui'>好（す）き</span>だ。」",
+        "answer": "なにより",
+        "alternate_grammar": [
+          "なにより",
+          "なによりも"
+        ],
+        "kanji_answer": "何（なに）より",
+        "kanji_alt_grammar": [
+          "何（なに）よりも",
+          "何（なに）より"
+        ],
+        "nuance": "(A)についての安心（あんしん）感（かん）や、(A)が一番（いちばん）であるということを表（あらわ）す時（とき）に使（つか）われることが多（おお）い表現（ひょうげん）。(A)<strong>を超（こ）えるものはない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/友達との話：「わたしは本を読むことが何より好きだ。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うれしい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "さいわい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "しあわせ": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Chat between friends</span>: 'What I like <strong>the most</strong> is reading books.' (<strong>above all else・more than anything</strong>)",
+        "nuance_translation": "A structure often used to show relief about (A), or that (A) is the best. <strong>More than whatever else</strong>, (A).",
+        "extra_info": "",
+        "reviewable_id": 709,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8787",
+      "type": "study_question",
+      "attributes": {
+        "id": 8787,
+        "content": "<span class='name-highlight'>メグニンさん</span>：「お店（みせ）を爆発（ばくはつ）させちゃってすみませんでした。」<br><span class='name-highlight'>ウィスさん</span>：「問題（もんだい）ないし無事（ぶじ）で<span class='study-area-input'>____</span>よ。」",
+        "answer": "なにより",
+        "alternate_grammar": [],
+        "kanji_answer": "何（なに）より",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)についての安心（あんしん）感（かん）や、(A)が一番（いちばん）であるということを表（あらわ）す時（とき）に使（つか）われることが多（おお）い表現（ひょうげん）。(A)<strong>を超（こ）えるものはない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/メグニンさん：「お店を爆発させちゃってすみませんでした。」ウィスさん：「問題ないし無事で何よりよ。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なによりも": {
+            "en": "You do not use も when なにより falls at the end of a sentence",
+            "es": ""
+          },
+          "うれしい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "さいわい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "しあわせ": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Megunin</span>: 'I am sorry for blowing up your shop.'<br><span class='name-highlight'>Vis</span>: 'No problem, <strong>I am glad</strong> that you are safe.'",
+        "nuance_translation": "A structure often used to show relief about (A), or that (A) is the best. <strong>More than whatever else</strong>, (A).",
+        "extra_info": "",
+        "reviewable_id": 709,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8788",
+      "type": "study_question",
+      "attributes": {
+        "id": 8788,
+        "content": "<span class='name-highlight'>記事（きじ）</span>：「そして<span class='study-area-input'>____</span>驚（おどろ）くべきことは、セガが日本（にほん）で設立（せつりつ）されなかったということだ。」",
+        "answer": "なにより",
+        "alternate_grammar": [
+          "なにより",
+          "なによりも",
+          "なによりの"
+        ],
+        "kanji_answer": "何（なに）より",
+        "kanji_alt_grammar": [
+          "何（なに）よりも",
+          "何（なに）よりの",
+          "何（なに）より"
+        ],
+        "nuance": "(A)についての安心（あんしん）感（かん）や、(A)が一番（いちばん）であるということを表（あらわ）す時（とき）に使（つか）われることが多（おお）い表現（ひょうげん）。(A)<strong>を超（こ）えるものはない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/記事：「そして何より驚くべきことは、セガが日本で設立されなかったということだ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うれしい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "さいわい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "しあわせ": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Article</span>: 'And <strong>the most</strong> surprising thing is that SEGA was not founded in Japan.' (<strong>above all else・more than anything</strong>)",
+        "nuance_translation": "A structure often used to show relief about (A), or that (A) is the best. <strong>More than whatever else</strong>, (A).",
+        "extra_info": "",
+        "reviewable_id": 709,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8783",
+      "type": "study_question",
+      "attributes": {
+        "id": 8783,
+        "content": "「ありがとうございます。」<br>「お役（やく）に立（た）てれば、<span class='study-area-input'>____</span>幸（しあわ）せです。」",
+        "answer": "なによりの",
+        "alternate_grammar": [
+          "なによりも",
+          "なによりの",
+          "なにより"
+        ],
+        "kanji_answer": "何（なに）よりの",
+        "kanji_alt_grammar": [
+          "何（なに）よりも",
+          "何（なに）より",
+          "何（なに）よりの"
+        ],
+        "nuance": "(A)についての安心（あんしん）感（かん）や、(A)が一番（いちばん）であるということを表（あらわ）す時（とき）に使（つか）われることが多（おお）い表現（ひょうげん）。(A)<strong>を超（こ）えるものはない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/「ありがとうございます。」「お役に立てれば、何よりの幸せです。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うれしい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "さいわい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "しあわせ": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'Thank you very much.'<br>'<strong>More than anything</strong> it is a blessing to be able to help.' (<strong>above all else・more than anything</strong>)",
+        "nuance_translation": "A structure often used to show relief about (A), or that (A) is the best. <strong>More than whatever else</strong>, (A).",
+        "extra_info": "",
+        "reviewable_id": 709,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8782",
+      "type": "study_question",
+      "attributes": {
+        "id": 8782,
+        "content": "<span class='name-highlight'>らくさん</span>：「あなたにもらった本（ほん）、わたしの息子（むすこ）がとても気（き）に入（い）っています。」<br><span class='name-highlight'>おのでらさん</span>：「<span class='chui'>それは</span><span class='study-area-input'>____</span>です。」",
+        "answer": "なにより",
+        "alternate_grammar": [],
+        "kanji_answer": "何（なに）より",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)についての安心（あんしん）感（かん）や、(A)が一番（いちばん）であるということを表（あらわ）す時（とき）に使（つか）われることが多（おお）い表現（ひょうげん）。(A)<strong>を超（こ）えるものはない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/らくさん：「あなたにもらった本、わたしの息子がとても気に入っています。」おのでらさん：「それは何よりです。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なによりも": {
+            "en": "You do not use も when なにより falls at the end of a sentence",
+            "es": ""
+          },
+          "うれしい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "さいわい": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          },
+          "しあわせ": {
+            "en": "Nice guess! Think \"above all else\" or \"more than anything.\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Raku</span>: 'My child loved the book he received from you.'<br><span class='name-highlight'>Onodera</span>: '<strong>I am really glad</strong>.'",
+        "nuance_translation": "A structure often used to show relief about (A), or that (A) is the best. <strong>More than whatever else</strong>, (A).",
+        "extra_info": "",
+        "reviewable_id": 709,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "725",
+      "type": "writeup",
+      "attributes": {
+        "id": 725,
+        "body_ja": "<p>「<span data-gp-id='709'>何（なに）より</span>」や、それを強調（きょうちょう）した「何（なに）よりも」は、「(A) がほかと比（くら）べて一番（いちばん）だ」という意味（いみ）を表（あらわ）します。この表現（ひょうげん）は、(A) が嬉（うれ）しいこと、重要（じゅうよう）なこと、安心（あんしん）したことなど、ポジティブな内容（ないよう）の場合（ばあい）に使（つか）われることが多（おお）いです。また、「例（たと）え悪（わる）い状況（じょうきょう）の中（なか）にあっても、一番（いちばん）大切（たいせつ）なのは (A) だ」という前向（まえむ）きな意見（いけん）を表（あらわ）すこともあります。この表現（ひょうげん）は、代名詞（だいめいし）の「何（なに）」と助詞（じょし）の「より」の組（く）み合（あ）わせです。</p>\r\n\r\n<p>「<span data-gp-id='709'>何（なに）より</span>」や「何（なに）よりも」は副詞（ふくし）として使（つか）われることが多（おお）く、文（ぶん）の始（はじ）めや、修飾（しゅうしょく）したい語句（ごく）の直前（ちょくぜん）に置（お）かれます。また、「の」を伴（ともな）う名詞（めいし）の前（まえ）に置（お）かれることもあります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182403'>\r\n<li data-study-question='182404'>\r\n<li data-study-question='182405'>\r\n<li data-study-question='182406'>\r\n</ul>\r\n\r\n<p>「も」を付（つ）けると少（すこ）しだけ強調（きょうちょう）が加（くわ）わりますが、ニュアンスそのものはあまり変（か）わりません。</p>",
+        "body": "<p><span data-gp-id='709'>何（なに）より</span>, or <span data-gp-id='709'>何（なに）よりも</span> when emphasized, is a common phrase in Japanese that is used when one wants to express that they are 'glad', 'relieved', or that '(A) is more important than anything'. As this structure is simply a combination of the <span data-term='代名詞・だいめいし'>substitute noun</span> 何（なに） 'what', or 'whatever', and the particle より 'than', the closest literal translation is 'more than anything, (A)'. <span data-gp-id='709'>何（なに）より</span> is primarily used to express positive feelings when the actual situation may have been worse, but (A) is the most important.</p>\r\n\r\n<p><span data-gp-id='709'>何（なに）より</span>, and <span data-gp-id='709'>何（なに）よりも</span> most often behave adverbially, meaning that they can be used at the beginning of a sentence, or right before the word they are describing. However, they occasionally come directly before a noun when followed by の.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182403'>\r\n<li data-study-question='182404'>\r\n<li data-study-question='182405'>\r\n<li data-study-question='182406'>\r\n</ul>\r\n\r\n<p>As in most cases, も just strengthens the phrase slightly, with no other significant change in nuance.</p>"
+      }
+    },
+    {
+      "id": "826",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 826,
+        "source": "Tobira",
+        "location": "Page 282",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1583",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1583,
+        "source": "[AIAIJ] An Integrated Approach to Intermediate Japanese",
+        "location": "Page 188",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1914",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1914,
+        "site": "Nihongo Master",
+        "description": "Additional 何より sentences",
+        "link": "https://www.nihongomaster.com/japanese/dictionary/word/17745/naniyori-%E4%BD%95%E3%82%88%E3%82%8A-%E3%81%AA%E3%81%AB%E3%82%88%E3%82%8A",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1498",
+      "type": "related_content",
+      "attributes": {
+        "id": 1498,
+        "relationship_type": "related",
+        "body": "Both highlight priority or importance. 何より stresses value or priority, as in 健康が何より大切だ (Health is more important than anything). 何といっても emphasizes undeniability or decisiveness, as in 何といっても彼が一番だ (No matter what, he’s the best).3",
+        "first_relatable": {
+          "id": 709,
+          "slug": "何より",
+          "title": "何より",
+          "meaning": "Be glad, Be relieved, Most, Best, Above all else, More than anything",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 407,
+          "slug": "何といっても",
+          "title": "何といっても",
+          "meaning": "By any account, All the same, No doubt",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

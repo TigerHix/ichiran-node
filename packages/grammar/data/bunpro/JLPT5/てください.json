@@ -1,0 +1,1340 @@
+{
+  "data": {
+    "id": "60",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 60,
+      "level": "JLPT5",
+      "lesson_id": 9,
+      "part_of_speech": "表現",
+      "register": "敬語",
+      "word_type": "接続助詞",
+      "slug": "てください",
+      "nuance": "誰（だれ）かに<strong>何（なに）かをやってもらいたい</strong>ときに使（つか）う<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。",
+      "grammar_order": 107,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 65,
+        "title": "ないでください",
+        "slug": "ないでください"
+      },
+      "previous_grammar_point": {
+        "id": 35,
+        "title": "Verb + てもいい",
+        "slug": "verb-てもいい"
+      },
+      "lesson_count": "5/13",
+      "title": "てください",
+      "furigana": "～て下（くだ）さい",
+      "meaning": "Please do (Polite request)",
+      "nuance_translation": "A <strong>polite</strong> expression for <strong>requesting</strong> that something <strong>be</strong> done.",
+      "rare_kanji_warning": null,
+      "caution": "In casual speech, ください can be omitted, resulting in the request finishing in て",
+      "polite_structure": null,
+      "casual_structure": " <span class='gp-popout' data-gp-id='416'>Verb［て］</span>+ <strong>ください</strong><br><a href='https://community.bunpro.jp/t/so-how-do-you-ask-for-a-favor/9771/9?' target='_blank'>Politeness Levels</a>",
+      "part_of_speech_translation": "Expression",
+      "register_translation": "Polite",
+      "word_type_translation": "Conjunctive Particle",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/588",
+      "metadata": "てください, て, でください, で, tekudasai, te, dekudasai, de, conjunction particle, polite, request, desire, keigo, honorific, sonkeigo, sonkei, sentence ender"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "2006",
+            "type": "study_question"
+          },
+          {
+            "id": "155117",
+            "type": "study_question"
+          },
+          {
+            "id": "155114",
+            "type": "study_question"
+          },
+          {
+            "id": "155115",
+            "type": "study_question"
+          },
+          {
+            "id": "155116",
+            "type": "study_question"
+          },
+          {
+            "id": "740",
+            "type": "study_question"
+          },
+          {
+            "id": "60",
+            "type": "study_question"
+          },
+          {
+            "id": "741",
+            "type": "study_question"
+          },
+          {
+            "id": "742",
+            "type": "study_question"
+          },
+          {
+            "id": "2007",
+            "type": "study_question"
+          },
+          {
+            "id": "2008",
+            "type": "study_question"
+          },
+          {
+            "id": "2009",
+            "type": "study_question"
+          },
+          {
+            "id": "2010",
+            "type": "study_question"
+          },
+          {
+            "id": "2011",
+            "type": "study_question"
+          },
+          {
+            "id": "2012",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "106",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "37",
+            "type": "offline_resource"
+          },
+          {
+            "id": "100",
+            "type": "offline_resource"
+          },
+          {
+            "id": "785",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1108",
+            "type": "offline_resource"
+          },
+          {
+            "id": "124",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1351",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "217",
+            "type": "related_content"
+          },
+          {
+            "id": "213",
+            "type": "related_content"
+          },
+          {
+            "id": "220",
+            "type": "related_content"
+          },
+          {
+            "id": "212",
+            "type": "related_content"
+          },
+          {
+            "id": "216",
+            "type": "related_content"
+          },
+          {
+            "id": "219",
+            "type": "related_content"
+          },
+          {
+            "id": "471",
+            "type": "related_content"
+          },
+          {
+            "id": "1380",
+            "type": "related_content"
+          },
+          {
+            "id": "214",
+            "type": "related_content"
+          },
+          {
+            "id": "215",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "132",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "131",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1217",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "2006",
+      "type": "study_question",
+      "attributes": {
+        "id": 2006,
+        "content": "<span class='gp-popout' data-gp-id='14'>ここ</span><span class='gp-popout' data-gp-id='52'>から</span>、写真（しゃしん）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "とってください",
+        "alternate_grammar": [],
+        "kanji_answer": "撮（と）ってください",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに<strong>何（なに）かをやってもらいたい</strong>ときに使（つか）う<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/60/male_audio/01-ここから写真を撮ってください.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ここから、写真を撮ってください。.mp3",
+        "word_prompt": "撮（と）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とって": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "とってなさい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "おとりください": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "とりなさい": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": "Prueba una estructura gramatical diferente que tenga un matiz más suave.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus faible.",
+            "id": "Mari coba struktur tata bahasa lain yang memiliki nuansa lebih lemah."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Please take</strong> the photo from here.",
+        "nuance_translation": "A <strong>polite</strong> expression for <strong>requesting</strong> that something <strong>be</strong> done.",
+        "extra_info": "",
+        "reviewable_id": 60,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155117",
+      "type": "study_question",
+      "attributes": {
+        "id": 155117,
+        "content": "クッキー<span class=\"gp-popout\" data-gp-id=\"21\">を</span>作（つく）っ<span class=\"gp-popout\" data-gp-id=\"41\">た</span><span class=\"gp-popout\" data-gp-id=\"45\">から</span>食（た）べ<span class='study-area-input'>____</span>。",
+        "answer": "て",
+        "alternate_grammar": [],
+        "kanji_answer": "て",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/クッキーを作ったから食べて。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Because I made cookies, you <strong>can</strong> eat them.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 60,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155114",
+      "type": "study_question",
+      "attributes": {
+        "id": 155114,
+        "content": "手（て）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>洗（あら）っ<span class='study-area-input'>____</span>。",
+        "answer": "てください",
+        "alternate_grammar": [],
+        "kanji_answer": "てください",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/手を洗ってください。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Please</strong> wash your hands.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 60,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155115",
+      "type": "study_question",
+      "attributes": {
+        "id": 155115,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"5\">これ</span><span class=\"gp-popout\" data-gp-id=\"21\">を</span>見（み）<span class='study-area-input'>____</span>。",
+        "answer": "てください",
+        "alternate_grammar": [],
+        "kanji_answer": "てください",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これを見てください。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Please</strong> look at this.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 60,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155116",
+      "type": "study_question",
+      "attributes": {
+        "id": 155116,
+        "content": "ちょっとテレビ<span class=\"gp-popout\" data-gp-id=\"21\">を</span>消（け）し<span class='study-area-input'>____</span>。",
+        "answer": "て",
+        "alternate_grammar": [],
+        "kanji_answer": "て",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ちょっとテレビを消して。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Hey, <strong>can</strong> you turn off the TV? (ちょっと is often used simply to get the attention of the listener)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 60,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "740",
+      "type": "study_question",
+      "attributes": {
+        "id": 740,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>本（ほん）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "よんでください",
+        "alternate_grammar": [],
+        "kanji_answer": "読（よ）んでください",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに<strong>何（なに）かをやってもらいたい</strong>ときに使（つか）う<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Polite, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/60/male_audio/02-この本を読んでください.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/この本を読んでください。.mp3",
+        "word_prompt": "読（よ）<span class='gp-popout' data-gp-id='26'>む</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "よんで": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "よんでなさい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "よんてください": {
+            "en": "Could you try a different spelling here?",
+            "es": "Intenta escribirlo de otra manera.",
+            "fr": "Pouvez-vous essayer une orthographe différente ici ?",
+            "id": "Mungkin kamu bisa coba ejaan yang berbeda di sini?"
+          },
+          "およみください": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "よみなさい": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": "Prueba una estructura gramatical diferente que tenga un matiz más suave.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus faible.",
+            "id": "Mari coba struktur tata bahasa lain yang memiliki nuansa lebih lemah."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Please read</strong> this book.",
+        "nuance_translation": "A <strong>polite</strong> expression for <strong>requesting</strong> that something <strong>be</strong> done.",
+        "extra_info": "",
+        "reviewable_id": 60,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "60",
+      "type": "study_question",
+      "attributes": {
+        "id": 60,
+        "content": "<span class='study-area-input'>____</span>。",
+        "answer": "たべてください",
+        "alternate_grammar": [],
+        "kanji_answer": "食（た）べてください",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに<strong>何（なに）かをやってもらいたい</strong>ときに使（つか）う<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Polite, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/60/male_audio/食べてください.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/食べてください。.mp3",
+        "word_prompt": "食（た）べ<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たべて": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "たべてなさい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "おたべください": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "おめしあがってください": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "おめしあがりください": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "たべなさい": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": "Prueba una estructura gramatical diferente que tenga un matiz más suave.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus faible.",
+            "id": "Mari coba struktur tata bahasa lain yang memiliki nuansa lebih lemah."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Please eat</strong>.",
+        "nuance_translation": "A <strong>polite</strong> expression for <strong>requesting</strong> that something <strong>be</strong> done.",
+        "extra_info": "",
+        "reviewable_id": 60,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "741",
+      "type": "study_question",
+      "attributes": {
+        "id": 741,
+        "content": "<span class='study-area-input'>____</span>。",
+        "answer": "やめてください",
+        "alternate_grammar": [],
+        "kanji_answer": "やめてください",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに<strong>何（なに）かをやってもらいたい</strong>ときに使（つか）う<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Polite, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/60/male_audio/08-止めてください.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/やめてください。.mp3",
+        "word_prompt": "やめ<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やめて": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "やめてなさい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "おやめください": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "やめなさい": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": "Prueba una estructura gramatical diferente que tenga un matiz más suave.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus faible.",
+            "id": "Mari coba struktur tata bahasa lain yang memiliki nuansa lebih lemah."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Please stop</strong>. ",
+        "nuance_translation": "A <strong>polite</strong> expression for <strong>requesting</strong> that something <strong>be</strong> done.",
+        "extra_info": "",
+        "reviewable_id": 60,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "742",
+      "type": "study_question",
+      "attributes": {
+        "id": 742,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>えんぴつ<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "つかってください",
+        "alternate_grammar": [],
+        "kanji_answer": "使（つか）ってください",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに<strong>何（なに）かをやってもらいたい</strong>ときに使（つか）う<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Polite, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/60/male_audio/03-この鉛筆を使ってください.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/このえんぴつを使ってください。.mp3",
+        "word_prompt": "使（つか）<span class='gp-popout' data-gp-id='26'>う</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つかって": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "つかってなさい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "おつかいください": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "つかいなさい": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": "Prueba una estructura gramatical diferente que tenga un matiz más suave.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus faible.",
+            "id": "Mari coba struktur tata bahasa lain yang memiliki nuansa lebih lemah."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Please use</strong> this pencil.",
+        "nuance_translation": "A <strong>polite</strong> expression for <strong>requesting</strong> that something <strong>be</strong> done.",
+        "extra_info": "",
+        "reviewable_id": 60,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2007",
+      "type": "study_question",
+      "attributes": {
+        "id": 2007,
+        "content": "授業（じゅぎょう）<span class='gp-popout' data-gp-id='32'>に</span><span class='study-area-input'>____</span>。",
+        "answer": "でてください",
+        "alternate_grammar": [],
+        "kanji_answer": "出（で）てください",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに<strong>何（なに）かをやってもらいたい</strong>ときに使（つか）う<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/60/male_audio/07-授業に出てください.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/授業に出てください。.mp3",
+        "word_prompt": "出（で）<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でて": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "でてなさい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "おでください": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "でていってください": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "でなさい": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": "Prueba una estructura gramatical diferente que tenga un matiz más suave.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus faible.",
+            "id": "Mari coba struktur tata bahasa lain yang memiliki nuansa lebih lemah."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Please attend</strong> class.",
+        "nuance_translation": "A <strong>polite</strong> expression for <strong>requesting</strong> that something <strong>be</strong> done.",
+        "extra_info": "",
+        "reviewable_id": 60,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2008",
+      "type": "study_question",
+      "attributes": {
+        "id": 2008,
+        "content": "洗濯（せんたく）もの<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "してください",
+        "alternate_grammar": [],
+        "kanji_answer": "してください",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに<strong>何（なに）かをやってもらいたい</strong>ときに使（つか）う<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/60/male_audio/09-洗濯ものをしてください.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/洗濯ものをしてください。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='22'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "して": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "してなさい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "しなさい": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": "Prueba una estructura gramatical diferente que tenga un matiz más suave.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus faible.",
+            "id": "Mari coba struktur tata bahasa lain yang memiliki nuansa lebih lemah."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Please do</strong> the laundry.",
+        "nuance_translation": "A <strong>polite</strong> expression for <strong>requesting</strong> that something <strong>be</strong> done.",
+        "extra_info": "",
+        "reviewable_id": 60,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2009",
+      "type": "study_question",
+      "attributes": {
+        "id": 2009,
+        "content": "そこ<span class='gp-popout' data-gp-id='25'>で</span><span class='study-area-input'>____</span>。",
+        "answer": "まっていてください",
+        "alternate_grammar": [],
+        "kanji_answer": "待（ま）っていてください",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに<strong>何（なに）かをやってもらいたい</strong>ときに使（つか）う<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/60/male_audio/04-そこで待っていてください.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/そこで待っていてください。.mp3",
+        "word_prompt": "待（ま）っ<span class='gp-popout' data-gp-id='27'>ている</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まっていて": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "まっていてなさい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "まってて": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "まっててください": {
+            "en": "Could you try a different spelling here?",
+            "es": "Intenta escribirlo de otra manera.",
+            "fr": "Pouvez-vous essayer une orthographe différente ici ?",
+            "id": "Mungkin kamu bisa coba ejaan yang berbeda di sini?"
+          },
+          "おまちください": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "まちなさい": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": "Prueba una estructura gramatical diferente que tenga un matiz más suave.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus faible.",
+            "id": "Mari coba struktur tata bahasa lain yang memiliki nuansa lebih lemah."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Please be waiting</strong> there.",
+        "nuance_translation": "A <strong>polite</strong> expression for <strong>requesting</strong> that something <strong>be</strong> done.",
+        "extra_info": "",
+        "reviewable_id": 60,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2010",
+      "type": "study_question",
+      "attributes": {
+        "id": 2010,
+        "content": "今（いま）<span class='gp-popout' data-gp-id='52'>から</span>、掃除（そうじ）<span class='study-area-input'>____</span>。",
+        "answer": "してください",
+        "alternate_grammar": [],
+        "kanji_answer": "してください",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに<strong>何（なに）かをやってもらいたい</strong>ときに使（つか）う<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/60/male_audio/06-今から掃除してください.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/今から、掃除してください。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='22'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "して": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "をしてください": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "をして": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "してなさい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "しなさい": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": "Prueba una estructura gramatical diferente que tenga un matiz más suave.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus faible.",
+            "id": "Mari coba struktur tata bahasa lain yang memiliki nuansa lebih lemah."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Please clean</strong> starting now.",
+        "nuance_translation": "A <strong>polite</strong> expression for <strong>requesting</strong> that something <strong>be</strong> done.",
+        "extra_info": "",
+        "reviewable_id": 60,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2011",
+      "type": "study_question",
+      "attributes": {
+        "id": 2011,
+        "content": "部屋（へや）<span class='gp-popout' data-gp-id='52'>から</span><span class='study-area-input'>____</span>。",
+        "answer": "でてください",
+        "alternate_grammar": [],
+        "kanji_answer": "出（で）てください",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに<strong>何（なに）かをやってもらいたい</strong>ときに使（つか）う<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/60/male_audio/11-部屋から出てください.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/部屋から出てください。.mp3",
+        "word_prompt": "出（で）<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でて": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "でてなさい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "おでください": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "でなさい": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": "Prueba una estructura gramatical diferente que tenga un matiz más suave.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus faible.",
+            "id": "Mari coba struktur tata bahasa lain yang memiliki nuansa lebih lemah."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Please leave</strong> the room.",
+        "nuance_translation": "A <strong>polite</strong> expression for <strong>requesting</strong> that something <strong>be</strong> done.",
+        "extra_info": "",
+        "reviewable_id": 60,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2012",
+      "type": "study_question",
+      "attributes": {
+        "id": 2012,
+        "content": "誕生日（たんじょうび）プレゼント<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "かってください",
+        "alternate_grammar": [],
+        "kanji_answer": "買（か）ってください",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに<strong>何（なに）かをやってもらいたい</strong>ときに使（つか）う<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Polite, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/60/male_audio/10-誕生日プレゼントを買ってください.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/誕生日プレゼントを買ってください。.mp3",
+        "word_prompt": "買（か）<span class='gp-popout' data-gp-id='26'>う</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かって": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "かってなさい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "おかいください": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "かいなさい": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": "Prueba una estructura gramatical diferente que tenga un matiz más suave.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus faible.",
+            "id": "Mari coba struktur tata bahasa lain yang memiliki nuansa lebih lemah."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Please buy</strong> a birthday present.",
+        "nuance_translation": "A <strong>polite</strong> expression for <strong>requesting</strong> that something <strong>be</strong> done.",
+        "extra_info": "",
+        "reviewable_id": 60,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "106",
+      "type": "writeup",
+      "attributes": {
+        "id": 106,
+        "body_ja": null,
+        "body": "<p><span data-gp-id='60'>てください</span> is a polite expression that is used for asking people to do something. It is most often translated as 'please do (A)'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155114'>\r\n<li data-study-question='155115'></ul>\r\n\r\n<p><span data-gp-id='60'>ください</span> is actually classified as <span data-term='尊敬語・そんけいご'>honorific language</span>, a type of polite speech that is used to refer to the actions of other people. くださる itself is the base form of this verb. While <span data-gp-id='60'>ください</span> is exclusively used for making requests. くださる is the <span data-term='尊敬語・そんけいご'>honorific language</span> equivalent of <span data-gp-id='723'>くれる</span>.</p>\r\n\r\n<p>In friendly conversation, <span data-gp-id='60'>ください</span> can be omitted from this expression, and the <span data-gp-id='416'>て</span> form itself can be used as a very casual way of saying 'please do (A)'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155116'>\r\n<li data-study-question='155117'></ul>"
+      }
+    },
+    {
+      "id": "37",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 37,
+        "source": "Genki I",
+        "location": "Page 120",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "100",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 100,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 151",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "785",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 785,
+        "source": "みんなの日本語 I",
+        "location": "Page 92 [CH 14]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1108",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1108,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 209",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "124",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 124,
+        "source": "Marugoto Elementary 1 (A2) Rikai",
+        "location": "Page 64",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1351",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1351,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 177",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "132",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 132,
+        "site": "いいね Nihongo",
+        "description": "Explanations and example sentences.",
+        "link": "https://iinenihongo.com/%ef%bd%9e%e3%81%a6%ef%bc%88%e3%81%a7%ef%bc%89%e3%81%8f%e3%81%a0%e3%81%95%e3%81%84/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "131",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 131,
+        "site": "Tae Kim",
+        "description": "Making Requests",
+        "link": "https://guidetojapanese.org/learn/grammar/requests",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1217",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1217,
+        "site": "Japanese Ammo",
+        "description": "Request (TE) form + Present Continuous (doING)",
+        "link": "https://www.youtube.com/watch?v=iNF7ntoPDCs&index=13&list=PLd5-Wp_4tLqYZxS5j3g6kbeOfVXlTkr3N",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "217",
+      "type": "related_content",
+      "attributes": {
+        "id": 217,
+        "relationship_type": "antonym",
+        "body": "The てください form is used to make polite requests, similar to the English 'Please do [this]'. In contrast, the dictionary/non-past form of a verb + な expresses an extremely blunt or brusque command not to do something. The two forms have opposite meanings and are completely different in politeness levels (i.e. 'please do' vs. 'don't do!').",
+        "first_relatable": {
+          "id": 60,
+          "slug": "てください",
+          "title": "てください",
+          "meaning": "Please do (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 66,
+          "slug": "な",
+          "title": "な",
+          "meaning": "Do not, Don't (Prohibitive)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "213",
+      "type": "related_content",
+      "attributes": {
+        "id": 213,
+        "relationship_type": "related",
+        "body": "てください is a basic way to express a polite request ('Please do…'). For example, 食べてください would mean 'Please eat (this).' It is polite and neutral, and can be used with strangers or people equal in status to you. てごらん is a gentle request form often used by adults to children, etc., that adds a nuance of 'Give this a try' or 'Try doing this (to see how you like it).'",
+        "first_relatable": {
+          "id": 60,
+          "slug": "てください",
+          "title": "てください",
+          "meaning": "Please do (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 314,
+          "slug": "てごらん",
+          "title": "てごらん",
+          "meaning": "(Please) try to, (Please) look",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "220",
+      "type": "related_content",
+      "attributes": {
+        "id": 220,
+        "relationship_type": "antonym",
+        "body": "〜てください is a polite way to say 'Please do (something),' as in 食べてください ('Please eat'). Its negative form, 〜ないで, means 'Don't do (something),' as in 食べないで ('Don't eat'). To make this negative request polite, simply add ください, as in 食べないでください means 'Please don't eat.'",
+        "first_relatable": {
+          "id": 60,
+          "slug": "てください",
+          "title": "てください",
+          "meaning": "Please do (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 96,
+          "slug": "ないで",
+          "title": "ないで",
+          "meaning": "Without doing, Not ~ and ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "212",
+      "type": "related_content",
+      "attributes": {
+        "id": 212,
+        "relationship_type": "synonym",
+        "body": "てください is a basic way to express a polite request (e.g., 'Please do…'). It is polite and neutral, and can be used with strangers or people equal in status to you. In comparison, お～願う is a very polite and formal expression, often used in professional contexts (such as to a customer or client) or formal announcements.",
+        "first_relatable": {
+          "id": 60,
+          "slug": "てください",
+          "title": "てください",
+          "meaning": "Please do (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 532,
+          "slug": "お-願う",
+          "title": "お～願う",
+          "meaning": "Please, Could you please",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "216",
+      "type": "related_content",
+      "attributes": {
+        "id": 216,
+        "relationship_type": "related",
+        "body": "てください and なさい are both used to tell or ask someone to do something in Japanese. てください is a polite request, similar to 'Please (do this),' and is appropriate in neutral or formal situations, such as with strangers or people of equal status. なさい, on the other hand, is a firm command, closer to 'Do (this),' and is typically used by someone in a higher position, like teachers to students or adults to children.",
+        "first_relatable": {
+          "id": 60,
+          "slug": "てください",
+          "title": "てください",
+          "meaning": "Please do (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 95,
+          "slug": "なさい",
+          "title": "なさい",
+          "meaning": "Command to do",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "219",
+      "type": "related_content",
+      "attributes": {
+        "id": 219,
+        "relationship_type": "antonym",
+        "body": "てください is a basic way to make a polite request, meaning 'Please do (something),' while ないでください is its negative counterpart, meaning 'Please don't do (something).' For example, 食べてください means 'Please eat (this),' while 食べないでください means 'Please don't eat (this).'",
+        "first_relatable": {
+          "id": 60,
+          "slug": "てください",
+          "title": "てください",
+          "meaning": "Please do (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 65,
+          "slug": "ないでください",
+          "title": "ないでください",
+          "meaning": "Please don't (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "471",
+      "type": "related_content",
+      "attributes": {
+        "id": 471,
+        "relationship_type": "related",
+        "body": "Both the 〜て  and 〜てください are used to make requests. てください is polite and neutral, and can be used with strangers or people of equal status. In contrast, the 〜て form is more casual and is used when speaking with friends or family. Requests using either form, especially the plain 〜て, can be softened further by adding the sentence-ending particle ね (e.g. 食べてね), which adds a gentle, caring tone.",
+        "first_relatable": {
+          "id": 777,
+          "slug": "verbて-request",
+          "title": "Verb[て]",
+          "meaning": "Please do for me (Casual request)",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 60,
+          "slug": "てください",
+          "title": "てください",
+          "meaning": "Please do (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1380",
+      "type": "related_content",
+      "attributes": {
+        "id": 1380,
+        "relationship_type": "related",
+        "body": "てください is a basic way to express a polite request (e.g., 'Please do...') For example, 食べてください would mean 'Please eat (this).' It is polite and neutral, and can be used with strangers or people equal in status to you. In comparison, てくれる (when used with rising question intonation), is a casual, gentle way of making a request to a close friend or family member.",
+        "first_relatable": {
+          "id": 60,
+          "slug": "てください",
+          "title": "てください",
+          "meaning": "Please do (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 103,
+          "slug": "てくれる",
+          "title": "てくれる",
+          "meaning": "To do something for someone (usually you)",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "214",
+      "type": "related_content",
+      "attributes": {
+        "id": 214,
+        "relationship_type": "synonym",
+        "body": "てください is a polite, neutral way to say 'Please do (something),' and is used with strangers or equals. The honorific form, お〜ください, is used for superiors or customers. However, some verbs like 食べる and 行く have special honorific forms, such as 召し上がる and いらっしゃる, which are used instead.",
+        "first_relatable": {
+          "id": 60,
+          "slug": "てください",
+          "title": "てください",
+          "meaning": "Please do (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 189,
+          "slug": "お-ください",
+          "title": "お～ください ",
+          "meaning": "Please do (Honorific)",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "215",
+      "type": "related_content",
+      "attributes": {
+        "id": 215,
+        "relationship_type": "synonym",
+        "body": "てください is a basic way to express a polite request (e.g., 'Please do…'). It is polite and neutral, and can be used with strangers or people equal in status to you. For more formal situations, ていただけませんか is a more polite and humble request, often used when speaking to clients, customers, or superiors. It softens the tone further—similar to saying 'Would you mind doing...for me?' in English.",
+        "first_relatable": {
+          "id": 60,
+          "slug": "てください",
+          "title": "てください",
+          "meaning": "Please do (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 134,
+          "slug": "ていただけませんか",
+          "title": "ていただけませんか",
+          "meaning": "Won't you, Could you please (Humble request)",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

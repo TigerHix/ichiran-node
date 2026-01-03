@@ -1,0 +1,902 @@
+{
+  "data": {
+    "id": "187",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 187,
+      "level": "JLPT4",
+      "lesson_id": 17,
+      "part_of_speech": null,
+      "register": "敬語",
+      "word_type": "",
+      "slug": "ございます",
+      "nuance": "何（なに）かが<strong>存在（そんざい）</strong>していることを表（あらわ）す、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+      "grammar_order": 249,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 188,
+        "title": "でございます",
+        "slug": "でございます"
+      },
+      "previous_grammar_point": {
+        "id": 191,
+        "title": "いらっしゃる",
+        "slug": "いらっしゃる"
+      },
+      "lesson_count": "14/18",
+      "title": "ございます",
+      "furigana": "御座（ござ）います",
+      "meaning": "To be, To exist (Polite)",
+      "nuance_translation": "A <strong>very polite</strong> expression to show that something <strong>exists</strong>.",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": "<span class='gp-popout' data-gp-id='16'>あります</span> ￫ <strong>ござ</strong><span class='chui'>い</span></strong>ます</strong>",
+      "casual_structure": "<span class='gp-popout' data-gp-id='16'>ある</span> ￫ <strong>ござる</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Polite",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10121",
+      "metadata": "ございます, 御座います, ござる, gozaimasu, gozaru, verb, auxiliary verb, polite, old-fashioned, intransitive, sentence ender"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "3500",
+            "type": "study_question"
+          },
+          {
+            "id": "3497",
+            "type": "study_question"
+          },
+          {
+            "id": "180681",
+            "type": "study_question"
+          },
+          {
+            "id": "180682",
+            "type": "study_question"
+          },
+          {
+            "id": "183972",
+            "type": "study_question"
+          },
+          {
+            "id": "183973",
+            "type": "study_question"
+          },
+          {
+            "id": "183974",
+            "type": "study_question"
+          },
+          {
+            "id": "3496",
+            "type": "study_question"
+          },
+          {
+            "id": "180680",
+            "type": "study_question"
+          },
+          {
+            "id": "3492",
+            "type": "study_question"
+          },
+          {
+            "id": "379",
+            "type": "study_question"
+          },
+          {
+            "id": "3493",
+            "type": "study_question"
+          },
+          {
+            "id": "380",
+            "type": "study_question"
+          },
+          {
+            "id": "3494",
+            "type": "study_question"
+          },
+          {
+            "id": "3495",
+            "type": "study_question"
+          },
+          {
+            "id": "3498",
+            "type": "study_question"
+          },
+          {
+            "id": "3499",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "246",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "401",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1369",
+            "type": "offline_resource"
+          },
+          {
+            "id": "198",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "806",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "355",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "679",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "3500",
+      "type": "study_question",
+      "attributes": {
+        "id": 3500,
+        "content": "時間（じかん）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='62'>ので</span>、ごゆっくり。",
+        "answer": "ございます",
+        "alternate_grammar": [],
+        "kanji_answer": "御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが<strong>存在（そんざい）</strong>していることを表（あらわ）す、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/187/male_audio/230408_1453_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/時間が御座いますので、ごゆっくり。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ある": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "あります": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ござる": {
+            "en": "How about a grammar structure that is a bit more modern?",
+            "es": "Prueba con una estructura gramatical un poco más moderna."
+          }
+        },
+        "wrong_answers": {
+          "ござる": {
+            "en": "でございます is a polite form of the copula だ, not a verb that expresses existence. Since this sentence uses the particle が to mark the subject, we are looking for the polite form of the verb ある, which indicates that something inanimate exists.",
+            "es": "",
+            "fr": ""
+          },
+          "いらっしゃる": {
+            "en": "いらっしゃる is an honorific verb that takes the place of いる, 来る, or 行く, only used for living things. We are looking for the polite form of the verb ある, which indicates that something inanimate exists.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "There <strong>is</strong> still time, so please take your time. (<strong>exists</strong>)",
+        "nuance_translation": "A <strong>very polite</strong> expression to show that something <strong>exists</strong>.",
+        "extra_info": "",
+        "reviewable_id": 187,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3497",
+      "type": "study_question",
+      "attributes": {
+        "id": 3497,
+        "content": "出口（でぐち）<span class='gp-popout' data-gp-id='3'>は</span>左（ひだり）に<span class='study-area-input'>____</span>。",
+        "answer": "ございます",
+        "alternate_grammar": [],
+        "kanji_answer": "御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが<strong>存在（そんざい）</strong>していることを表（あらわ）す、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/187/male_audio/230408_1453.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/出口は左に御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ある": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "あります": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The exit <strong>is</strong> to the left. (<strong>exists</strong>)",
+        "nuance_translation": "A <strong>very polite</strong> expression to show that something <strong>exists</strong>.",
+        "extra_info": "",
+        "reviewable_id": 187,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180681",
+      "type": "study_question",
+      "attributes": {
+        "id": 180681,
+        "content": "質問（しつもん）<span class=\"gp-popout\" data-gp-id=\"3\">は</span><span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"8\">か</span>。",
+        "answer": "ございます",
+        "alternate_grammar": [],
+        "kanji_answer": "ございます",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/質問はございますか。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Do you <strong>have</strong> any questions?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 187,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180682",
+      "type": "study_question",
+      "attributes": {
+        "id": 180682,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"14\">ここ</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span>私（わたし）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>家（いえ）でござる。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ここは私の家でござる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This <strong>is</strong> my humble abode.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 187,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183972",
+      "type": "study_question",
+      "attributes": {
+        "id": 183972,
+        "content": "私（わたし）<span data-gp-id='10'>が</span>担当者（たんとうしゃ）<span data-gp-id='188'>で<strong>ございます</strong></span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 11,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>am</strong> the representative.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 187,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183973",
+      "type": "study_question",
+      "attributes": {
+        "id": 183973,
+        "content": "タナカ様（さま）<span data-gp-id='188'>で<strong>ございます</strong></span><span data-gp-id='8'>か</span>？",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Are</strong> you Mr. Tanaka?",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 187,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183974",
+      "type": "study_question",
+      "attributes": {
+        "id": 183974,
+        "content": "タナカ様（さま）でいらっしゃいます<span data-gp-id='8'>か</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Are you Mr. Tanaka?",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 187,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3496",
+      "type": "study_question",
+      "attributes": {
+        "id": 3496,
+        "content": "明（あ）けましておめでとう<span class='study-area-input'>____</span>。",
+        "answer": "ございます",
+        "alternate_grammar": [],
+        "kanji_answer": "御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが<strong>存在（そんざい）</strong>していることを表（あらわ）す、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/187/male_audio/230408_1452_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/明けましておめでとう御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ある": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "あります": {
+            "en": "More polite + often used in humble situations",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Happy New Year! (<strong>polite expression</strong>)",
+        "nuance_translation": "A <strong>very polite</strong> expression to show that something <strong>exists</strong>.",
+        "extra_info": "",
+        "reviewable_id": 187,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180680",
+      "type": "study_question",
+      "attributes": {
+        "id": 180680,
+        "content": "ありがとう<span class='study-area-input'>____</span>。",
+        "answer": "ございます",
+        "alternate_grammar": [],
+        "kanji_answer": "ございます",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ありがとうございます。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Thank you very much. (<strong>Polite expression</strong>)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 187,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3492",
+      "type": "study_question",
+      "attributes": {
+        "id": 3492,
+        "content": "おはよう<span class='study-area-input'>____</span>。",
+        "answer": "ございます",
+        "alternate_grammar": [],
+        "kanji_answer": "御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが<strong>存在（そんざい）</strong>していることを表（あらわ）す、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/187/male_audio/230408_1452_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/おはよう御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ある": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "あります": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Good morning. (<strong>Polite greeting</strong>)",
+        "nuance_translation": "A <strong>very polite</strong> expression to show that something <strong>exists</strong>.",
+        "extra_info": "",
+        "reviewable_id": 187,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "379",
+      "type": "study_question",
+      "attributes": {
+        "id": 379,
+        "content": "布団（ふとん）<span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='29'>あそこ</span><span class='gp-popout' data-gp-id='6'>の</span>部屋（へや）に<span class='study-area-input'>____</span>。",
+        "answer": "ございます",
+        "alternate_grammar": [],
+        "kanji_answer": "御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが<strong>存在（そんざい）</strong>していることを表（あらわ）す、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Kenjougo, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/187/male_audio/230408_1451_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/布団はあそこの部屋に御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ある": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "あります": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Your futon <strong>is</strong> in that room over there. (<strong>exists</strong>)",
+        "nuance_translation": "A <strong>very polite</strong> expression to show that something <strong>exists</strong>.",
+        "extra_info": "",
+        "reviewable_id": 187,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3493",
+      "type": "study_question",
+      "attributes": {
+        "id": 3493,
+        "content": "お水（みず）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>。",
+        "answer": "ございます",
+        "alternate_grammar": [],
+        "kanji_answer": "御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが<strong>存在（そんざい）</strong>していることを表（あらわ）す、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/187/male_audio/230408_1452_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/お水が御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ある": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "あります": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "でございます": {
+            "en": "でございます is a polite form of the copula だ, not a verb that expresses existence. Since this sentence uses the particle が to mark the subject, we are looking for the polite form of the verb ある, which indicates that something inanimate exists.",
+            "es": "",
+            "fr": ""
+          },
+          "いらっしゃいます": {
+            "en": "いらっしゃる is an honorific verb that takes the place of いる, 来る, or 行く, only used for living things. We are looking for the polite form of the verb ある, which indicates that something inanimate exists.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "There <strong>is</strong> water. (<strong>exists</strong>)",
+        "nuance_translation": "A <strong>very polite</strong> expression to show that something <strong>exists</strong>.",
+        "extra_info": "",
+        "reviewable_id": 187,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "380",
+      "type": "study_question",
+      "attributes": {
+        "id": 380,
+        "content": "すみません。青色（あおいろ）<span class='gp-popout' data-gp-id='719'>の</span>椅子（いす）<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "ございません",
+        "alternate_grammar": [],
+        "kanji_answer": "御座（ござ）いません",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが<strong>存在（そんざい）</strong>していることを表（あらわ）す、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Negative, Kenjougo, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/187/male_audio/230408_1452.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/すみません。青色の椅子は御座いません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ある": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "あります": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "でございません": {
+            "en": "でございます is a polite form of the copula だ, not a verb that expresses existence. We are looking for the polite form of the verb ある, which indicates that something inanimate exists.",
+            "es": "",
+            "fr": ""
+          },
+          "いらっしゃいません": {
+            "en": "いらっしゃる is an honorific verb that takes the place of いる, 来る, or 行く, only used for living things. We are looking for the polite form of the verb ある, which indicates that something inanimate exists.",
+            "es": "",
+            "fr": ""
+          },
+          "ありません": {
+            "en": "Can you try using the polite form of the verb ある?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I am sorry. We <strong>don't have</strong> any blue chairs. (<strong>does not exist</strong>)",
+        "nuance_translation": "A <strong>very polite</strong> expression to show that something <strong>exists</strong>.",
+        "extra_info": "",
+        "reviewable_id": 187,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3494",
+      "type": "study_question",
+      "attributes": {
+        "id": 3494,
+        "content": "鶴（つる）<span class='gp-popout' data-gp-id='6'>の</span>折（お）り紙（がみ）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>。",
+        "answer": "ございます",
+        "alternate_grammar": [],
+        "kanji_answer": "御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが<strong>存在（そんざい）</strong>していることを表（あらわ）す、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/187/male_audio/230408_1452_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/鶴の折り紙が御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ある": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "あります": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "There <strong>is</strong> an origami crane. (<strong>exists</strong>)",
+        "nuance_translation": "A <strong>very polite</strong> expression to show that something <strong>exists</strong>.",
+        "extra_info": "",
+        "reviewable_id": 187,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3495",
+      "type": "study_question",
+      "attributes": {
+        "id": 3495,
+        "content": "駅（えき）<span class='gp-popout' data-gp-id='10'>が</span>あちらに<span class='study-area-input'>____</span>。",
+        "answer": "ございます",
+        "alternate_grammar": [],
+        "kanji_answer": "御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが<strong>存在（そんざい）</strong>していることを表（あらわ）す、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/187/male_audio/230408_1452_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/駅があちらに御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ある": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "あります": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The station <strong>is</strong> over there. (<strong>exists</strong>)",
+        "nuance_translation": "A <strong>very polite</strong> expression to show that something <strong>exists</strong>.",
+        "extra_info": "",
+        "reviewable_id": 187,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3498",
+      "type": "study_question",
+      "attributes": {
+        "id": 3498,
+        "content": "トイレ<span class='gp-popout' data-gp-id='3'>は</span>こちらに<span class='study-area-input'>____</span>。",
+        "answer": "ございます",
+        "alternate_grammar": [],
+        "kanji_answer": "御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが<strong>存在（そんざい）</strong>していることを表（あらわ）す、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/187/male_audio/230408_1453_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/トイレはこちらに御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ある": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "あります": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The restroom <strong>is</strong> this way. (<strong>exists</strong>)",
+        "nuance_translation": "A <strong>very polite</strong> expression to show that something <strong>exists</strong>.",
+        "extra_info": "",
+        "reviewable_id": 187,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3499",
+      "type": "study_question",
+      "attributes": {
+        "id": 3499,
+        "content": "服屋（ふくや）<span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='30'>この</span>ビル<span class='gp-popout' data-gp-id='6'>の</span>２（に）階（かい）に<span class='study-area-input'>____</span>。",
+        "answer": "ございます",
+        "alternate_grammar": [],
+        "kanji_answer": "御座（ござ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが<strong>存在（そんざい）</strong>していることを表（あらわ）す、<strong>とても丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/187/male_audio/230408_1453_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/服屋はこのビルの２階に御座います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ある": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "あります": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The clothing store <strong>is</strong> on the second floor of this building. (<strong>exists</strong>)",
+        "nuance_translation": "A <strong>very polite</strong> expression to show that something <strong>exists</strong>.",
+        "extra_info": "",
+        "reviewable_id": 187,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "246",
+      "type": "writeup",
+      "attributes": {
+        "id": 246,
+        "body_ja": "",
+        "body": "<p><span data-gp-id='187'>ございます</span> is a combination of the (special-class) verb, <span data-gp-id='187'>ござる</span> (<span data-gp-id='187'>御座（ござ）る</span> in its kanji form), and the <span data-term='助動詞・じょどうし'>auxiliary verb</span> ます. It is considered <span data-term='丁寧語・ていねいご'>polite speech</span>, and is directly equivalent to <span data-gp-id='13'>ある</span> (or <span data-gp-id='23'>いる</span>).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180680'>\r\n<li data-study-question='180681'>\r\n</ul>\r\n\r\n<p><span data-gp-id='187'>ござる</span> itself is almost never used in daily conversation in modern Japanese, due to the preference of the polite form, <span data-gp-id='187'>ございます</span>. However, <span data-gp-id='187'>ござる</span> is regularly used in dramas, manga, and other forms of media (especially historical dramas).</p>\r\n\r\n<ul class='writeup-examples--holder'><li data-study-question='180682'></ul>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>御座（ござ）る literally means 'to be', and it does not matter whether the object that is being described is animate (would usually use いる), or inanimate (would usually use ある). However, <span data-gp-id='191'>いらっしゃる</span> 'to be' is preferred when referring to other people, as <span data-term='尊敬語・そんけいご'>honorific language</span> is more respectful than <span data-term='丁寧語・ていねいご'>polite speech</span>. Due to this, <span data-gp-id='187'>ございます</span> will often be used in reference to people, in place of であります (the polite form of <span data-gp-id='436'>である</span>).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183972'>\r\n<li data-study-question='183973'>\r\n<li data-study-question='183974'></ul>\r\n\r\n<p>Notice that <span data-gp-id='1'>で</span> is used in these examples. <span data-gp-id='188'>でございます</span> itself is considered its own grammatical structure, that we will examine in a separate grammar point.</p></section>"
+      }
+    },
+    {
+      "id": "401",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 401,
+        "source": "Genki II 2nd Edition",
+        "location": "Page 188",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1369",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1369,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 226",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "198",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 198,
+        "source": "Genki II 1st Edition",
+        "location": "Page 158",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "355",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 355,
+        "site": "Tae Kim",
+        "description": "Other substitutions",
+        "link": "https://guidetojapanese.org/learn/grammar/honorific",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "679",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 679,
+        "site": "Renshuu",
+        "description": "Polite form of ある",
+        "link": "https://www.renshuu.org/index.php?page=grammar/individual&id=136",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "806",
+      "type": "related_content",
+      "attributes": {
+        "id": 806,
+        "relationship_type": "related",
+        "body": "ある and ございます are both verbs of existence. ある is the plain form used in everyday conversation, while ございます is the polite form used in formal settings or speeches. For example, 本がある means 'I have / there is a book' in casual speech, while 本がございます is the same phrase in a more polite and formal context (note that が must be used in both cases).",
+        "first_relatable": {
+          "id": 187,
+          "slug": "ございます",
+          "title": "ございます",
+          "meaning": "To be, To exist (Polite)",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 13,
+          "slug": "がある",
+          "title": "がある",
+          "meaning": "To be, There is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

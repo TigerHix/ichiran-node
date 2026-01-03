@@ -1,0 +1,1163 @@
+{
+  "data": {
+    "id": "108",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 108,
+      "level": "JLPT4",
+      "lesson_id": 12,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "より",
+      "nuance": "(A)と(B)を<strong>比（くら）べる</strong>ためによく使（つか）われる言葉（ことば）。",
+      "grammar_order": 158,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 388,
+        "title": "ごとに",
+        "slug": "ごとに"
+      },
+      "previous_grammar_point": {
+        "id": 368,
+        "title": "とうとう",
+        "slug": "とうとう"
+      },
+      "lesson_count": "13/17",
+      "title": "より",
+      "furigana": "より",
+      "meaning": "More than, Over",
+      "nuance_translation": "A word that is often used for <strong>highlighting comparisons</strong> between (A) and (B).",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Verb + <strong>より</strong> + Adjective<br>Noun + <strong>より</strong> + Adjective",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/3959",
+      "metadata": "より, yori, particle, case-marking particle, comparison"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "152",
+            "type": "study_question"
+          },
+          {
+            "id": "154",
+            "type": "study_question"
+          },
+          {
+            "id": "2572",
+            "type": "study_question"
+          },
+          {
+            "id": "183863",
+            "type": "study_question"
+          },
+          {
+            "id": "180280",
+            "type": "study_question"
+          },
+          {
+            "id": "180281",
+            "type": "study_question"
+          },
+          {
+            "id": "153",
+            "type": "study_question"
+          },
+          {
+            "id": "2577",
+            "type": "study_question"
+          },
+          {
+            "id": "2578",
+            "type": "study_question"
+          },
+          {
+            "id": "2576",
+            "type": "study_question"
+          },
+          {
+            "id": "2573",
+            "type": "study_question"
+          },
+          {
+            "id": "2574",
+            "type": "study_question"
+          },
+          {
+            "id": "2575",
+            "type": "study_question"
+          },
+          {
+            "id": "2579",
+            "type": "study_question"
+          },
+          {
+            "id": "2580",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "157",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "812",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1204",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1409",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "538",
+            "type": "related_content"
+          },
+          {
+            "id": "537",
+            "type": "related_content"
+          },
+          {
+            "id": "1558",
+            "type": "related_content"
+          },
+          {
+            "id": "371",
+            "type": "related_content"
+          },
+          {
+            "id": "539",
+            "type": "related_content"
+          },
+          {
+            "id": "680",
+            "type": "related_content"
+          },
+          {
+            "id": "331",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "221",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1249",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "220",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "152",
+      "type": "study_question",
+      "attributes": {
+        "id": 152,
+        "content": "あなた<span class='gp-popout' data-gp-id='6'>の</span>絵（え）<span class='gp-popout' data-gp-id='3'>は</span>私（わたし）の絵（え）<span class='study-area-input'>____</span>上手（じょうず）。",
+        "answer": "より",
+        "alternate_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "kanji_answer": "より",
+        "kanji_alt_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "nuance": "(A)と(B)を<strong>比（くら）べる</strong>ためによく使（つか）われる言葉（ことば）。",
+        "tense": "Contrastive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/108/male_audio/230224_1325.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/あなたの絵は私の絵より上手。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "のほうが": {
+            "en": "We are looking for a standalone case marking particle that is used to express that (A) is more than (B)",
+            "es": "",
+            "fr": ""
+          },
+          "ほうが": {
+            "en": "This is grammatically incorrect and would mean 'As for your painting, my painting is better.'",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Your paintings are better<strong> than</strong> mine.",
+        "nuance_translation": "A word that is often used for <strong>highlighting comparisons</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 108,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154",
+      "type": "study_question",
+      "attributes": {
+        "id": 154,
+        "content": "日本語（にほんご）<span class='gp-popout' data-gp-id='3'>は</span>英語（えいご）<span class='study-area-input'>____</span>話（はな）し<span class='gp-popout' data-gp-id='100'>にくい</span>。",
+        "answer": "より",
+        "alternate_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "kanji_answer": "より",
+        "kanji_alt_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "nuance": "(A)と(B)を<strong>比（くら）べる</strong>ためによく使（つか）われる言葉（ことば）。",
+        "tense": "Contrastive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/108/male_audio/230224_1325_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/日本語は英語より話しにくい。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "のより": {
+            "en": "より is used directly after a noun when making comparisons. The の particle is not needed here.",
+            "es": "",
+            "fr": ""
+          },
+          "のほうが": {
+            "en": "We are looking for a standalone case marking particle that is used to express that (A) is more than (B)",
+            "es": "",
+            "fr": ""
+          },
+          "ほうが": {
+            "en": "This would mean 'As for Japanese, English is harder to speak.' Can you try using a different grammar point that shows which one is being compared against, not which one is preferred.",
+            "es": "",
+            "fr": ""
+          },
+          "が": {
+            "en": "How about trying a grammar point that means 'more than' or 'over'?",
+            "es": "",
+            "fr": ""
+          },
+          "に": {
+            "en": "How about trying a grammar point that means 'more than' or 'over'?",
+            "es": "",
+            "fr": ""
+          },
+          "よる": {
+            "en": "How about trying a grammar point that means 'more than' or 'over'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Japanese is harder to speak <strong>than</strong> English.",
+        "nuance_translation": "A word that is often used for <strong>highlighting comparisons</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 108,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2572",
+      "type": "study_question",
+      "attributes": {
+        "id": 2572,
+        "content": "いつも飲（の）ん<span class='gp-popout' data-gp-id='765'>でいる</span>水（みず）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='716'>好（す）き</span>。",
+        "answer": "より",
+        "alternate_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "kanji_answer": "より",
+        "kanji_alt_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "nuance": "(A)と(B)を<strong>比（くら）べる</strong>ためによく使（つか）われる言葉（ことば）。",
+        "tense": "Contrastive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/108/male_audio/230224_1325_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/いつも飲んでいる水より好き。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "いじょう": {
+            "en": "以上 is used for numbers or quantities (like '10 people or more'). Let's try a grammar point that is used for comparing things like preferences.",
+            "es": "",
+            "fr": ""
+          },
+          "のほうが": {
+            "en": "We are looking for a standalone case marking particle that is used to express that (A) is more than (B)",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I like this (drink) <strong>more than</strong> the water that I usually drink.",
+        "nuance_translation": "A word that is often used for <strong>highlighting comparisons</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 108,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183863",
+      "type": "study_question",
+      "attributes": {
+        "id": 183863,
+        "content": "<span data-gp-id='5'>これ</span><span data-gp-id='10'>が</span><span data-gp-id='108'>より</span>高（たか）いもの<span data-gp-id='57'>になります</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This is the thing that would be <strong>more</strong> expensive. (Compared to everything else that is here)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 108,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180280",
+      "type": "study_question",
+      "attributes": {
+        "id": 180280,
+        "content": "パンダ<span class=\"gp-popout\" data-gp-id=\"3\">は</span>バナナ<span class='study-area-input'>____</span>重（おも）<span class=\"gp-popout\" data-gp-id=\"24\">い</span>。",
+        "answer": "より",
+        "alternate_grammar": [],
+        "kanji_answer": "より",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/パンダはバナナより重い。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Pandas are heavi<strong>er than</strong> bananas.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 108,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180281",
+      "type": "study_question",
+      "attributes": {
+        "id": 180281,
+        "content": "太陽（たいよう）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>ロウソク<span class='study-area-input'>____</span>明（あか）る<span class=\"gp-popout\" data-gp-id=\"24\">い</span>。",
+        "answer": "より",
+        "alternate_grammar": [],
+        "kanji_answer": "より",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/太陽はロウソクより明るい。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The sun is bright<strong>er than</strong> a candle.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 108,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "153",
+      "type": "study_question",
+      "attributes": {
+        "id": 153,
+        "content": "月曜日（げつようび）<span class='study-area-input'>____</span>日曜日（にちようび）<span class='gp-popout' data-gp-id='10'>が</span><span class='gp-popout' data-gp-id='7'>いい</span>。",
+        "answer": "より",
+        "alternate_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "kanji_answer": "より",
+        "kanji_alt_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "nuance": "(A)と(B)を<strong>比（くら）べる</strong>ためによく使（つか）われる言葉（ことば）。",
+        "tense": "Contrastive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/108/male_audio/230224_1325_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/月曜日より日曜日がいい。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "のより": {
+            "en": "より is used directly after a noun when making comparisons. The の particle is not needed here.",
+            "es": "",
+            "fr": ""
+          },
+          "のほうが": {
+            "en": "We are looking for a standalone case marking particle that is used to express that (A) is more than (B)",
+            "es": "",
+            "fr": ""
+          },
+          "と": {
+            "en": "This means 'and'. How about trying a grammar point that means 'more than' or 'over'?",
+            "es": "",
+            "fr": ""
+          },
+          "か": {
+            "en": "How about trying a word that means 'more than' or 'over'?",
+            "es": "",
+            "fr": ""
+          },
+          "よる": {
+            "en": "how about trying a word that means 'more than' or 'over'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Sunday is better<strong> than</strong> Monday.",
+        "nuance_translation": "A word that is often used for <strong>highlighting comparisons</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 108,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2577",
+      "type": "study_question",
+      "attributes": {
+        "id": 2577,
+        "content": "<span class='gp-popout' data-gp-id='47'>あの</span>家（いえ）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='30'>この</span><span class='vocab-popout' data-vocab-id='511'>家（いえ）</span><span class='gp-popout' data-gp-id='73'>の方（ほう）が</span>好（す）き。",
+        "answer": "より",
+        "alternate_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "kanji_answer": "より",
+        "kanji_alt_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "nuance": "(A)と(B)を<strong>比（くら）べる</strong>ためによく使（つか）われる言葉（ことば）。",
+        "tense": "Contrastive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/108/male_audio/230224_1327.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/あの家よりこの家の方が好き。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I like this house <strong>more than</strong> that house.",
+        "nuance_translation": "A word that is often used for <strong>highlighting comparisons</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 108,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2578",
+      "type": "study_question",
+      "attributes": {
+        "id": 2578,
+        "content": "カタカナ<span class='study-area-input'>____</span>ひらがなの方（ほう）が覚（おぼ）え<span class='gp-popout' data-gp-id='90'>やすい</span>。",
+        "answer": "より",
+        "alternate_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "kanji_answer": "より",
+        "kanji_alt_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "nuance": "(A)と(B)を<strong>比（くら）べる</strong>ためによく使（つか）われる言葉（ことば）。",
+        "tense": "Contrastive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/108/male_audio/230224_1327_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/カタカナよりひらがなの方が覚えやすい。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "いじょう": {
+            "en": "以上 is used for numbers or quantities (like '10 people or more'). Let's try a grammar point that is used for comparing things like preferences.",
+            "es": "",
+            "fr": ""
+          },
+          "のより": {
+            "en": "より is used directly after a noun when making comparisons. The の particle is not needed here.",
+            "es": "",
+            "fr": ""
+          },
+          "のほうが": {
+            "en": "We are looking for a standalone case marking particle that is used to express that (A) is more than (B)",
+            "es": "",
+            "fr": ""
+          },
+          "と": {
+            "en": "This means 'and'. How about trying a grammar point that means 'more than' or 'over'?",
+            "es": "",
+            "fr": ""
+          },
+          "か": {
+            "en": "How about trying a grammar point that means 'more than' or 'over'?",
+            "es": "",
+            "fr": ""
+          },
+          "が": {
+            "en": "How about trying a grammar point that means 'more than' or 'over'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Hiragana is easier to memorize <strong>than</strong> katakana.",
+        "nuance_translation": "A word that is often used for <strong>highlighting comparisons</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 108,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2576",
+      "type": "study_question",
+      "attributes": {
+        "id": 2576,
+        "content": "食（た）べ物（もの）<span class='gp-popout' data-gp-id='3'>は</span>、お寿司（すし）<span class='study-area-input'>____</span>、ピザ<span class='gp-popout' data-gp-id='73'>の方（ほう）が</span><span class='gp-popout' data-gp-id='716'>好（す）き</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "より",
+        "alternate_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "kanji_answer": "より",
+        "kanji_alt_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "nuance": "(A)と(B)を<strong>比（くら）べる</strong>ためによく使（つか）われる言葉（ことば）。",
+        "tense": "Contrastive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/108/male_audio/230224_1326_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/食べ物は、お寿司より、ピザの方が好きです。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "If it's food, I like pizza <strong>more than</strong> sushi.",
+        "nuance_translation": "A word that is often used for <strong>highlighting comparisons</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 108,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2573",
+      "type": "study_question",
+      "attributes": {
+        "id": 2573,
+        "content": "スポーツ<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='22'>する</span><span class='study-area-input'>____</span>、ゲーム<span class='gp-popout' data-gp-id='73'>の方（ほう）が</span>楽（たの）しい。",
+        "answer": "より",
+        "alternate_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "kanji_answer": "より",
+        "kanji_alt_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "nuance": "(A)と(B)を<strong>比（くら）べる</strong>ためによく使（つか）われる言葉（ことば）。",
+        "tense": "Contrastive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/108/male_audio/230224_1326.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/スポーツをするより、ゲームの方が楽しい。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "いじょう": {
+            "en": "以上 is used for numbers or quantities (like '10 people or more'). Let's try a grammar point that is used for comparing things like preferences.",
+            "es": "",
+            "fr": ""
+          },
+          "のより": {
+            "en": "より is used directly after a noun when making comparisons. The の particle is not needed here.",
+            "es": "",
+            "fr": ""
+          },
+          "のほうが": {
+            "en": "We are looking for a standalone case marking particle that is used to express that (A) is more than (B)",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Video games are <strong>more</strong> exciting <strong>than</strong> sports.",
+        "nuance_translation": "A word that is often used for <strong>highlighting comparisons</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 108,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2574",
+      "type": "study_question",
+      "attributes": {
+        "id": 2574,
+        "content": "大学生（だいがくせい）<span class='gp-popout' data-gp-id='3'>は</span>高校生（こうこうせい）<span class='study-area-input'>____</span>宿題（しゅくだい）<span class='gp-popout' data-gp-id='10'>が</span>少（すく）な<span class='gp-popout' data-gp-id='24'>い</span>。",
+        "answer": "より",
+        "alternate_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "kanji_answer": "より",
+        "kanji_alt_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "nuance": "(A)と(B)を<strong>比（くら）べる</strong>ためによく使（つか）われる言葉（ことば）。",
+        "tense": "Contrastive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/108/male_audio/230224_1326_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/大学生は高校生より宿題が少ない。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "いじょう": {
+            "en": "以上 is used for numbers or quantities (like '10 people or more'). Let's try a grammar point that is used for comparing things like preferences.",
+            "es": "",
+            "fr": ""
+          },
+          "のより": {
+            "en": "より is used directly after a noun when making comparisons. The の particle is not needed here.",
+            "es": "",
+            "fr": ""
+          },
+          "のほうが": {
+            "en": "We are looking for a standalone case marking particle that is used to express that (A) is more than (B)",
+            "es": "",
+            "fr": ""
+          },
+          "ほうが": {
+            "en": "This would mean 'high school students have less homework than college students'. Can you try using a different grammar point that shows which one is being compared against, not which one is preferred.",
+            "es": "",
+            "fr": ""
+          },
+          "いか": {
+            "en": "How about trying a grammar point that means 'more than' or 'over'?",
+            "es": "",
+            "fr": ""
+          },
+          "よる": {
+            "en": "How about trying a grammar point that means 'more than' or 'over'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "College students have less homework <strong>than</strong> high school students.",
+        "nuance_translation": "A word that is often used for <strong>highlighting comparisons</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 108,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2575",
+      "type": "study_question",
+      "attributes": {
+        "id": 2575,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='3'>は</span>警察官（けいさつかん）<span class='study-area-input'>____</span>消防士（しょうぼうし）になり<span class='gp-popout' data-gp-id='59'>たい</span>。",
+        "answer": "より",
+        "alternate_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "kanji_answer": "より",
+        "kanji_alt_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "nuance": "(A)と(B)を<strong>比（くら）べる</strong>ためによく使（つか）われる言葉（ことば）。",
+        "tense": "Contrastive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/108/male_audio/230224_1326_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/私は警察官より消防士になりたい。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I want to become a firefighter <strong>more than</strong> a police officer.",
+        "nuance_translation": "A word that is often used for <strong>highlighting comparisons</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 108,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2579",
+      "type": "study_question",
+      "attributes": {
+        "id": 2579,
+        "content": "<span class='vocab-popout' data-vocab-id='849'>私（わたし）</span><span class='study-area-input'>____</span>勉強（べんきょう）<span class='gp-popout' data-gp-id='10'>が</span>出来（でき）る人（ひと）<span class='gp-popout' data-gp-id='3'>は</span>いないだろう。",
+        "answer": "より",
+        "alternate_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "kanji_answer": "より",
+        "kanji_alt_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "nuance": "(A)と(B)を<strong>比（くら）べる</strong>ためによく使（つか）われる言葉（ことば）。",
+        "tense": "Contrastive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/108/male_audio/230224_1327_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/私より勉強が出来る人はいないだろう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ほど": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "There probably isn't anyone who can study <strong>more than</strong> me.",
+        "nuance_translation": "A word that is often used for <strong>highlighting comparisons</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 108,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2580",
+      "type": "study_question",
+      "attributes": {
+        "id": 2580,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>飲（の）み物（もの）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='37'>その</span>飲（の）み物（もの）<span class='gp-popout' data-gp-id='73'>の方（ほう）が</span>美味（おい）し<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='71'>ね</span>。",
+        "answer": "より",
+        "alternate_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "kanji_answer": "より",
+        "kanji_alt_grammar": [
+          "よりも",
+          "より",
+          "よりむしろ"
+        ],
+        "nuance": "(A)と(B)を<strong>比（くら）べる</strong>ためによく使（つか）われる言葉（ことば）。",
+        "tense": "Contrastive, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/108/male_audio/230224_1328.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この飲み物よりその飲み物の方が美味しいね。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "いじょう": {
+            "en": "以上 is used for numbers or quantities (like '10 people or more'). Let's try a grammar point that is used for comparing things like preferences.",
+            "es": "",
+            "fr": ""
+          },
+          "のほうが": {
+            "en": "We are looking for a standalone case marking particle that is used to express that (A) is more than (B)",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "That drink is <strong>more</strong> delicious <strong>than</strong> this drink.",
+        "nuance_translation": "A word that is often used for <strong>highlighting comparisons</strong> between (A) and (B).",
+        "extra_info": "",
+        "reviewable_id": 108,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "157",
+      "type": "writeup",
+      "attributes": {
+        "id": 157,
+        "body_ja": "",
+        "body": "<p>In N5, we learned about the use of <span data-gp-id='108'>より</span> that is seen when making comparisons in <span data-gp-id='73'>より～のほうが</span>. However, in this lesson, we will take a look at how this <span data-term='格助詞・かくじょし'>case marking particle</span> can be used by itself. When used alone, this particle expresses that (A) (a noun or verb) is being compared to (B) (a noun or verb that is regularly paired with an adjective). The word that <span data-gp-id='108'>より</span> is directly attached to will always be 'less than' the comparison being made. However, the overall expression is used to describe that (B) is 'more' (something) than (A).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180280'>\r\n<li data-study-question='180281'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>In many textbooks, <span data-gp-id='108'>より</span> is taught as meaning 'more', but the word that <span data-gp-id='108'>より</span> is attached to will actually be the thing that is 'less' (something). The word/quote that has <span data-gp-id='10'>が</span> attached to it will be the thing that is 'more' (adjective). This is particularly confusing when <span data-gp-id='108'>より</span> is not directly attached to a word, something which is common in casual spoken language.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183863'></ul>\r\n\r\n<p>In this sentence, because the <span data-gp-id='10'>が</span> is attached to <span data-gp-id='5'>これ</span>, <span data-gp-id='5'>これ</span> is the thing that is 'more expensive'. As <span data-gp-id='108'>より</span> is not actually directly connected to any other word, it therefore means that <span data-gp-id='5'>これ</span> is expensive, compared to 'other things'. When you see <span data-gp-id='108'>より</span> like this, just pretend that it says 'other things' before it.</p></section>"
+      }
+    },
+    {
+      "id": "812",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 812,
+        "source": "みんなの日本語 I",
+        "location": "Page 80 [CH 12]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1204",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1204,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 564",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1409",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1409,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 270",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "221",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 221,
+        "site": "Tae Kim",
+        "description": "Using 「より」 for comparisons",
+        "link": "https://guidetojapanese.org/learn/grammar/comparison",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1249",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1249,
+        "site": "Japanese Ammo",
+        "description": "A is MORE / BETTER than B (comparison)",
+        "link": "https://www.youtube.com/watch?v=s1m91QGqiOU&list=PLd5-Wp_4tLqYZxS5j3g6kbeOfVXlTkr3N&index=43",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "220",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 220,
+        "site": "MaggieSensei",
+        "description": "How to use より",
+        "link": "https://maggiesensei.com/2015/10/22/how-to-use-%E3%82%88%E3%82%8A-yori-comparative-form/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "538",
+      "type": "related_content",
+      "attributes": {
+        "id": 538,
+        "relationship_type": "synonym",
+        "body": "Both より and 以上に are used for comparisons. In some cases, their meaning and usage can overlap, e.g. 思っていたより and 思っていた以上に both mean 'more than I thought'. In other cases, they can differ in that 以上に suggests a shared quality between the two things being compared. For example, AはBより強い simply states that A is stronger than B, while AはB以上に強い suggests that A is even stronger than B (who is also strong).",
+        "first_relatable": {
+          "id": 108,
+          "slug": "より",
+          "title": "より",
+          "meaning": "More than, Over",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 338,
+          "slug": "以上に",
+          "title": "以上に",
+          "meaning": "More than, No less than, Even more",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "537",
+      "type": "related_content",
+      "attributes": {
+        "id": 537,
+        "relationship_type": "related",
+        "body": "より expresses a general comparison, like 'more than (A)' or '~er,' e.g. 月曜日より水曜日がいい ('Wednesday is better than Monday.') or 走るより野球をするのが好き ('I prefer playing baseball to running.'). In contrast, というより specifically means 'more/rather than saying (A)' and is used primarily when rephrasing or clarifying something.",
+        "first_relatable": {
+          "id": 108,
+          "slug": "より",
+          "title": "より",
+          "meaning": "More than, Over",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 250,
+          "slug": "というより",
+          "title": "というより",
+          "meaning": "...is more of a... than a..., Rather than saying that...",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1558",
+      "type": "related_content",
+      "attributes": {
+        "id": 1558,
+        "relationship_type": "related",
+        "body": "Both express comparison meaning ‘more than,’ and they can overlap in meaning, but the tone differs. にもまして is a more formal, literary variant often used in writing or speeches to emphasize that something exceeds another in degree, as in 昨年にもまして今年は暑い ('This year is even hotter than last year.'). より is the neutral, everyday comparative used broadly in speech and writing without added emphasis, as in 去年より今年の方が暑い ('This year is hotter than last year.').",
+        "first_relatable": {
+          "id": 863,
+          "slug": "にもまして",
+          "title": "にもまして",
+          "meaning": "Even -er than, Even more than, More than anything, More than anybody, More than ever",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 108,
+          "slug": "より",
+          "title": "より",
+          "meaning": "More than, Over",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "371",
+      "type": "related_content",
+      "attributes": {
+        "id": 371,
+        "relationship_type": "synonym",
+        "body": "より is used to make comparisons, with Xより meaning 'more than X.' It often appears in the pattern より～のほうが, as in 'More than X, Y is...' but can also be used without のほうが. In any case, より always follows the thing being compared as 'less.' It can also directly precede adjectives—for example, より高い ('more expensive [than something]'), even if the item being compared isn't stated.",
+        "first_relatable": {
+          "id": 73,
+          "slug": "より-のほうが",
+          "title": "より～のほうが",
+          "meaning": "To be more ~ than ~",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 108,
+          "slug": "より",
+          "title": "より",
+          "meaning": "More than, Over",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "539",
+      "type": "related_content",
+      "attributes": {
+        "id": 539,
+        "relationship_type": "related",
+        "body": "より expresses a general comparison, like 'more than (A)' or '~er,' e.g. 月曜日より水曜日がいい ('Wednesday is better than Monday.') or 走るより野球をするのが好き ('I prefer playing baseball to running.'). In contrast, こそ adds emphasis, highlighting something as especially important, e.g. 月曜日こそ図書館に行きたい ('Monday is precisely when I want to go to the library.').",
+        "first_relatable": {
+          "id": 108,
+          "slug": "より",
+          "title": "より",
+          "meaning": "More than, Over",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 258,
+          "slug": "こそ",
+          "title": "こそ",
+          "meaning": "For sure, For certain, Even more so, Underlined or bolded text",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "680",
+      "type": "related_content",
+      "attributes": {
+        "id": 680,
+        "relationship_type": "related",
+        "body": "Both 以上① and より express comparisons like 'more than (A)', but with different nuances. 以上 follows numbers or nouns like これ, and means '(A) or more,' e.g. ２時間以上かかる ('It will take two or more hours.'). より makes general comparisons and does not necessarily have a nuance of measuring some quantity.",
+        "first_relatable": {
+          "id": 382,
+          "slug": "以上1",
+          "title": "以上 ①",
+          "meaning": "More than (or equal to), Over・(and) above, Any more・Greater, Exceeding",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 108,
+          "slug": "より",
+          "title": "より",
+          "meaning": "More than, Over",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "331",
+      "type": "related_content",
+      "attributes": {
+        "id": 331,
+        "relationship_type": "related",
+        "body": "Both expressions are used for comparisons. ほど～ない makes negative comparisons, e.g. ジョンはトムほど強くない ('John isn't as strong as Tom.'). より is used for positive comparisons, e.g. トムはジョンより強い ('Tom is stronger than John.'). Note that ほど follows the greater of the two options, while より follows the lesser.",
+        "first_relatable": {
+          "id": 221,
+          "slug": "ほど～ない",
+          "title": "ほど～ない",
+          "meaning": "Is not as…as, Isn't... like..., Not to the extent of...",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 108,
+          "slug": "より",
+          "title": "より",
+          "meaning": "More than, Over",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

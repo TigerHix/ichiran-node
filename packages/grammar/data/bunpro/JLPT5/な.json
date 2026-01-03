@@ -1,0 +1,1001 @@
+{
+  "data": {
+    "id": "66",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 66,
+      "level": "JLPT5",
+      "lesson_id": 6,
+      "part_of_speech": "助詞",
+      "register": "一般",
+      "word_type": "終助詞",
+      "slug": "な",
+      "nuance": "行動（こうどう）<strong>を拒（こば）む</strong>時（とき）や<strong>禁（きん）じる</strong>時（とき）などに使（つか）われる<strong>助詞（じょし）</strong>。",
+      "grammar_order": 76,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 43,
+        "title": "だけ",
+        "slug": "だけ"
+      },
+      "previous_grammar_point": {
+        "id": 720,
+        "title": "の",
+        "slug": "の-noun-ommission"
+      },
+      "lesson_count": "13/13",
+      "title": "な",
+      "furigana": "な (Prohibitive)",
+      "meaning": "Do not, Don't (Prohibitive)",
+      "nuance_translation": "A <strong>particle</strong> that is used for <strong>strongly refusing</strong> or <strong>forbidding</strong> actions.",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "Verb + <strong>な</strong>",
+      "part_of_speech_translation": "Particle",
+      "register_translation": "Standard",
+      "word_type_translation": "Sentence Ending Particle",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/1157",
+      "metadata": "な, na, particle, sentence-ending particle, prohibitive, command, demand, plain form, dictionary form, predicative form"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154990",
+            "type": "study_question"
+          },
+          {
+            "id": "154991",
+            "type": "study_question"
+          },
+          {
+            "id": "2070",
+            "type": "study_question"
+          },
+          {
+            "id": "2066",
+            "type": "study_question"
+          },
+          {
+            "id": "66",
+            "type": "study_question"
+          },
+          {
+            "id": "756",
+            "type": "study_question"
+          },
+          {
+            "id": "758",
+            "type": "study_question"
+          },
+          {
+            "id": "2064",
+            "type": "study_question"
+          },
+          {
+            "id": "2065",
+            "type": "study_question"
+          },
+          {
+            "id": "2068",
+            "type": "study_question"
+          },
+          {
+            "id": "2069",
+            "type": "study_question"
+          },
+          {
+            "id": "2067",
+            "type": "study_question"
+          },
+          {
+            "id": "757",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "75",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "860",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1115",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1354",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "233",
+            "type": "related_content"
+          },
+          {
+            "id": "217",
+            "type": "related_content"
+          },
+          {
+            "id": "237",
+            "type": "related_content"
+          },
+          {
+            "id": "239",
+            "type": "related_content"
+          },
+          {
+            "id": "611",
+            "type": "related_content"
+          },
+          {
+            "id": "412",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "144",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "143",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154990",
+      "type": "study_question",
+      "attributes": {
+        "id": 154990,
+        "content": "危険（きけん）！触（さわ）<span class=\"gp-popout\" data-gp-id=\"26\">る</span><span class='study-area-input'>____</span>!",
+        "answer": "な",
+        "alternate_grammar": [],
+        "kanji_answer": "な",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/危険！触るな!.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Danger! <strong>Don't</strong> touch!",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 66,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154991",
+      "type": "study_question",
+      "attributes": {
+        "id": 154991,
+        "content": "「家（いえ）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>中（なか）<span class=\"gp-popout\" data-gp-id=\"25\">で</span>走（はし）<span class=\"gp-popout\" data-gp-id=\"26\">る</span><span class='study-area-input'>____</span>！」<span class=\"gp-popout\" data-gp-id=\"356\">と</span>お母（かあ）さん<span class=\"gp-popout\" data-gp-id=\"10\">が</span>言（い）っ<span class=\"gp-popout\" data-gp-id=\"41\">た</span>。",
+        "answer": "な",
+        "alternate_grammar": [],
+        "kanji_answer": "な",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「家の中で走るな！」とお母さんが言った。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "My mother said, “<strong>Don't</strong> run in the house!”",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 66,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2070",
+      "type": "study_question",
+      "attributes": {
+        "id": 2070,
+        "content": "「トイレに行（い）っ<span class='gp-popout' data-gp-id='35'>てもいい</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='8'>か</span>」<span class='gp-popout' data-gp-id='356'>と</span><span class='study-area-input'>____</span>。",
+        "answer": "きくな",
+        "alternate_grammar": [],
+        "kanji_answer": "聞（き）くな",
+        "kanji_alt_grammar": [],
+        "nuance": "行動（こうどう）<strong>を拒（こば）む</strong>時（とき）や<strong>禁（きん）じる</strong>時（とき）などに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Negative, Assertive, Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/66/male_audio/06-トイレに行ってもいいですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「トイレに行ってもいいですか」と聞くな。.mp3",
+        "word_prompt": "聞（き）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きかないで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "きかないでください": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Don't ask</strong>, 'Is it okay to go to the bathroom?'",
+        "nuance_translation": "A <strong>particle</strong> that is used for <strong>strongly refusing</strong> or <strong>forbidding</strong> actions.",
+        "extra_info": "",
+        "reviewable_id": 66,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2066",
+      "type": "study_question",
+      "attributes": {
+        "id": 2066,
+        "content": "<span class='study-area-input'>____</span>。",
+        "answer": "しぬな",
+        "alternate_grammar": [],
+        "kanji_answer": "死（し）ぬな",
+        "kanji_alt_grammar": [],
+        "nuance": "行動（こうどう）<strong>を拒（こば）む</strong>時（とき）や<strong>禁（きん）じる</strong>時（とき）などに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Negative, Assertive, Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/66/male_audio/09-死ぬな.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/死ぬな。.mp3",
+        "word_prompt": "死（し）<span class='gp-popout' data-gp-id='26'>ぬ</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しなないで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "しなないでください": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "しんではいけない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "しんではならない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Don't die</strong>.",
+        "nuance_translation": "A <strong>particle</strong> that is used for <strong>strongly refusing</strong> or <strong>forbidding</strong> actions.",
+        "extra_info": "",
+        "reviewable_id": 66,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "66",
+      "type": "study_question",
+      "attributes": {
+        "id": 66,
+        "content": "<span class='study-area-input'>____</span>。",
+        "answer": "いくな",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）くな",
+        "kanji_alt_grammar": [],
+        "nuance": "行動（こうどう）<strong>を拒（こば）む</strong>時（とき）や<strong>禁（きん）じる</strong>時（とき）などに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Negative, Assertive, Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/66/male_audio/11-行くな.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/行くな。.mp3",
+        "word_prompt": "行（い）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いかないで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "いかないでください": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Don't go</strong>. ",
+        "nuance_translation": "A <strong>particle</strong> that is used for <strong>strongly refusing</strong> or <strong>forbidding</strong> actions.",
+        "extra_info": "",
+        "reviewable_id": 66,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "756",
+      "type": "study_question",
+      "attributes": {
+        "id": 756,
+        "content": "<span class='gp-popout' data-gp-id='14'>ここ</span><span class='gp-popout' data-gp-id='25'>で</span>サッカー<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "するな",
+        "alternate_grammar": [],
+        "kanji_answer": "するな",
+        "kanji_alt_grammar": [],
+        "nuance": "行動（こうどう）<strong>を拒（こば）む</strong>時（とき）や<strong>禁（きん）じる</strong>時（とき）などに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Negative, Assertive, Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/66/male_audio/03-ここでサッカーをするな.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ここでサッカーをするな。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='22'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しないで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "しないでください": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "してはいけない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "してはならない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Don't play</strong> soccer here. ",
+        "nuance_translation": "A <strong>particle</strong> that is used for <strong>strongly refusing</strong> or <strong>forbidding</strong> actions.",
+        "extra_info": "",
+        "reviewable_id": 66,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "758",
+      "type": "study_question",
+      "attributes": {
+        "id": 758,
+        "content": "一人（ひとり）<span class='gp-popout' data-gp-id='36'>で</span><span class='study-area-input'>____</span>。",
+        "answer": "するな",
+        "alternate_grammar": [],
+        "kanji_answer": "するな",
+        "kanji_alt_grammar": [],
+        "nuance": "行動（こうどう）<strong>を拒（こば）む</strong>時（とき）や<strong>禁（きん）じる</strong>時（とき）などに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Negative, Assertive, Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/66/male_audio/07-一人でするな.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/一人でするな。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='22'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しないで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "しないでください": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "してはいけない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "してはならない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Don't do</strong> it alone.",
+        "nuance_translation": "A <strong>particle</strong> that is used for <strong>strongly refusing</strong> or <strong>forbidding</strong> actions.",
+        "extra_info": "",
+        "reviewable_id": 66,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2064",
+      "type": "study_question",
+      "attributes": {
+        "id": 2064,
+        "content": "「<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span>不味（まず）<span class='gp-popout' data-gp-id='24'>い</span>！」<span class='gp-popout' data-gp-id='358'>って</span><span class='study-area-input'>____</span>。",
+        "answer": "いうな",
+        "alternate_grammar": [],
+        "kanji_answer": "言（い）うな",
+        "kanji_alt_grammar": [],
+        "nuance": "行動（こうどう）<strong>を拒（こば）む</strong>時（とき）や<strong>禁（きん）じる</strong>時（とき）などに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Negative, Assertive, Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/66/male_audio/05-これはまずいって言うな.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「これは不味い！」って言うな。.mp3",
+        "word_prompt": "言（い）<span class='gp-popout' data-gp-id='26'>う</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いわないで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "いわないでください": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Don't say</strong>, 'This tastes bad!'",
+        "nuance_translation": "A <strong>particle</strong> that is used for <strong>strongly refusing</strong> or <strong>forbidding</strong> actions.",
+        "extra_info": "",
+        "reviewable_id": 66,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2065",
+      "type": "study_question",
+      "attributes": {
+        "id": 2065,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>池（いけ）<span class='gp-popout' data-gp-id='25'>で</span><span class='study-area-input'>____</span>。",
+        "answer": "およぐな",
+        "alternate_grammar": [],
+        "kanji_answer": "泳（およ）ぐな",
+        "kanji_alt_grammar": [],
+        "nuance": "行動（こうどう）<strong>を拒（こば）む</strong>時（とき）や<strong>禁（きん）じる</strong>時（とき）などに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Negative, Assertive, Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/66/male_audio/04-この池で泳ぐな.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/この池で泳ぐな。.mp3",
+        "word_prompt": "泳（およ）<span class='gp-popout' data-gp-id='26'>ぐ</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "およがないで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "およがないでください": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "およいではいけない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "およいではならない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Don't swim</strong> in this pond.",
+        "nuance_translation": "A <strong>particle</strong> that is used for <strong>strongly refusing</strong> or <strong>forbidding</strong> actions.",
+        "extra_info": "",
+        "reviewable_id": 66,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2068",
+      "type": "study_question",
+      "attributes": {
+        "id": 2068,
+        "content": "<span class='gp-popout' data-gp-id='29'>あそこ</span><span class='gp-popout' data-gp-id='6'>の</span>橋（はし）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "わたるな",
+        "alternate_grammar": [],
+        "kanji_answer": "渡（わた）るな",
+        "kanji_alt_grammar": [],
+        "nuance": "行動（こうどう）<strong>を拒（こば）む</strong>時（とき）や<strong>禁（きん）じる</strong>時（とき）などに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Negative, Assertive, Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/66/male_audio/01-あそこの橋を渡るな.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あそこの橋を渡るな。.mp3",
+        "word_prompt": "渡（わた）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "わたらないで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "わたらないでください": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "わたってはいけない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "わたってはならない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Don't cross</strong> that bridge over there.",
+        "nuance_translation": "A <strong>particle</strong> that is used for <strong>strongly refusing</strong> or <strong>forbidding</strong> actions.",
+        "extra_info": "",
+        "reviewable_id": 66,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2069",
+      "type": "study_question",
+      "attributes": {
+        "id": 2069,
+        "content": "夜（よる）９時（くじ）<span class='gp-popout' data-gp-id='52'>から</span>、プールに<span class='study-area-input'>____</span>。",
+        "answer": "はいるな",
+        "alternate_grammar": [],
+        "kanji_answer": "入（はい）るな",
+        "kanji_alt_grammar": [],
+        "nuance": "行動（こうどう）<strong>を拒（こば）む</strong>時（とき）や<strong>禁（きん）じる</strong>時（とき）などに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Negative, Assertive, Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/66/male_audio/08-夜9時からプールにはいるなー.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/夜９時から、プールに入るな。.mp3",
+        "word_prompt": "入（はい）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はいらないで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "はいらないでください": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "はいってはいけない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Don't go in</strong> the pool after nine o'clock at night.",
+        "nuance_translation": "A <strong>particle</strong> that is used for <strong>strongly refusing</strong> or <strong>forbidding</strong> actions.",
+        "extra_info": "",
+        "reviewable_id": 66,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2067",
+      "type": "study_question",
+      "attributes": {
+        "id": 2067,
+        "content": "<span class='gp-popout' data-gp-id='14'>ここ</span><span class='gp-popout' data-gp-id='52'>から</span>、写真（しゃしん）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "とるな",
+        "alternate_grammar": [],
+        "kanji_answer": "撮（と）るな",
+        "kanji_alt_grammar": [],
+        "nuance": "行動（こうどう）<strong>を拒（こば）む</strong>時（とき）や<strong>禁（きん）じる</strong>時（とき）などに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Negative, Assertive, Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/66/male_audio/02-ここから写真を撮るな.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ここから、写真を撮るな。.mp3",
+        "word_prompt": "撮（と）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とらないで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "とらないでください": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "とってはならない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "とってはいけない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Don't take</strong> pictures from here.",
+        "nuance_translation": "A <strong>particle</strong> that is used for <strong>strongly refusing</strong> or <strong>forbidding</strong> actions.",
+        "extra_info": "",
+        "reviewable_id": 66,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "757",
+      "type": "study_question",
+      "attributes": {
+        "id": 757,
+        "content": "<span class='study-area-input'>____</span>。",
+        "answer": "なくな",
+        "alternate_grammar": [],
+        "kanji_answer": "泣（な）くな",
+        "kanji_alt_grammar": [],
+        "nuance": "行動（こうどう）<strong>を拒（こば）む</strong>時（とき）や<strong>禁（きん）じる</strong>時（とき）などに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Negative, Assertive, Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/66/male_audio/10-泣くな.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/泣くな。.mp3",
+        "word_prompt": "泣（な）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なかないで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          },
+          "なかないでください": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "Prueba con un patrón gramatical diferente con un matiz más fuerte.",
+            "fr": "Essayons une structure grammaticale différente avec une nuance plus forte.",
+            "id": "Mari coba pola tata bahasa lain dengan nuansa yang lebih kuat."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Don't cry</strong>.",
+        "nuance_translation": "A <strong>particle</strong> that is used for <strong>strongly refusing</strong> or <strong>forbidding</strong> actions.",
+        "extra_info": "",
+        "reviewable_id": 66,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "75",
+      "type": "writeup",
+      "attributes": {
+        "id": 75,
+        "body_ja": null,
+        "body": "<p><span data-gp-id='66'>な</span> is classified as a <span data-term='終助詞・しゅうじょし'>sentence ending particle</span> in Japanese. When attached to the base (dictionary) form of a verb, it has the nuance of strongly demanding that someone 'not' do something.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154990'>\r\n<li data-study-question='154991'></ul>"
+      }
+    },
+    {
+      "id": "860",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 860,
+        "source": "みんなの日本語 II",
+        "location": "Page 54 [CH 33]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1115",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1115,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 46 & 266",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1354",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1354,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 183",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "144",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 144,
+        "site": "Wasabi",
+        "description": "Commands",
+        "link": "https://wasabi-jpn.com/magazine/japanese-grammar/how-to-make-commands-and-requests/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "143",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 143,
+        "site": "Tae Kim",
+        "description": "Negative Command",
+        "link": "https://guidetojapanese.org/learn/grammar/requests",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "233",
+      "type": "related_content",
+      "attributes": {
+        "id": 233,
+        "relationship_type": "synonym",
+        "body": "The ないでください form is used to make polite negative requests, similar to the English 'Please don't do [this]'. In comparison, the dictionary/non-past form of a verb + な expresses an extremely blunt or brusque command not to do something. The two forms have similar meanings (telling someone not to do something) but vary greatly in politeness level.",
+        "first_relatable": {
+          "id": 65,
+          "slug": "ないでください",
+          "title": "ないでください",
+          "meaning": "Please don't (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 66,
+          "slug": "な",
+          "title": "な",
+          "meaning": "Do not, Don't (Prohibitive)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "217",
+      "type": "related_content",
+      "attributes": {
+        "id": 217,
+        "relationship_type": "antonym",
+        "body": "The てください form is used to make polite requests, similar to the English 'Please do [this]'. In contrast, the dictionary/non-past form of a verb + な expresses an extremely blunt or brusque command not to do something. The two forms have opposite meanings and are completely different in politeness levels (i.e. 'please do' vs. 'don't do!').",
+        "first_relatable": {
+          "id": 60,
+          "slug": "てください",
+          "title": "てください",
+          "meaning": "Please do (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 66,
+          "slug": "な",
+          "title": "な",
+          "meaning": "Do not, Don't (Prohibitive)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "237",
+      "type": "related_content",
+      "attributes": {
+        "id": 237,
+        "relationship_type": "related",
+        "body": "The dictionary/non-past form of a verb + な expresses a blunt command not to do something. Similarly, ないで attached to the negative stem of a verb is a more casual and gentle request. For example, するな is a strong way of saying 'Don't do it!' while しないで is a softer, more casual way of saying '[Please] don't do it.'",
+        "first_relatable": {
+          "id": 66,
+          "slug": "な",
+          "title": "な",
+          "meaning": "Do not, Don't (Prohibitive)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 96,
+          "slug": "ないで",
+          "title": "ないで",
+          "meaning": "Without doing, Not ~ and ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "239",
+      "type": "related_content",
+      "attributes": {
+        "id": 239,
+        "relationship_type": "antonym",
+        "body": "The dictionary/non-past form of a verb + な expresses a blunt command not to do something. In contrast, てごらん is a gentle encouragement to try doing something. For example, 食べるな！ means 'Don't eat it!' while 食べてごらん means 'Try eating it' Both are used toward someone of lower status, such as an adult speaking to a child.",
+        "first_relatable": {
+          "id": 66,
+          "slug": "な",
+          "title": "な",
+          "meaning": "Do not, Don't (Prohibitive)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 314,
+          "slug": "てごらん",
+          "title": "てごらん",
+          "meaning": "(Please) try to, (Please) look",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "611",
+      "type": "related_content",
+      "attributes": {
+        "id": 611,
+        "relationship_type": "antonym",
+        "body": "The dictionary/non-past form of a verb + な expresses a blunt command not to do something. In contrast, たまえ expresses a strong, authoritative command to do something. For example, 食べるな！ means 'Don't eat it!' while 食べたまえ means 'I command you: eat it!' な is more casual than the formal たまえ, but both are used toward someone of lower status whom you have power over.",
+        "first_relatable": {
+          "id": 66,
+          "slug": "な",
+          "title": "な",
+          "meaning": "Do not, Don't (Prohibitive)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 608,
+          "slug": "たまえ",
+          "title": "たまえ",
+          "meaning": "(Please) do!, Ask to, Beg to, (Order somebody to do something)",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "412",
+      "type": "related_content",
+      "attributes": {
+        "id": 412,
+        "relationship_type": "antonym",
+        "body": "The dictionary/non-past form of a verb + な expresses a blunt command not to do something. In contrast, a verb stem + なさい expresses a strong but respectful command. For example, 食べるな means 'Don't eat it!' while 食べなさい means 'Eat it!' Despite being derived from an honorific verb, なさい is still a command and is used with lower-status people or children, not superiors.",
+        "first_relatable": {
+          "id": 95,
+          "slug": "なさい",
+          "title": "なさい",
+          "meaning": "Command to do",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 66,
+          "slug": "な",
+          "title": "な",
+          "meaning": "Do not, Don't (Prohibitive)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

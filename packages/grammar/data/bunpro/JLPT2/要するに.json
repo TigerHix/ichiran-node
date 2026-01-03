@@ -1,0 +1,893 @@
+{
+  "data": {
+    "id": "512",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 512,
+      "level": "JLPT2",
+      "lesson_id": 33,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "要するに",
+      "nuance": "(A)として説明（せつめい）するが、(B)しか<strong>必要（ひつよう）</strong>ではないと言（い）いたい時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+      "grammar_order": 590,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 507,
+        "title": "てからでないと",
+        "slug": "てからでないと"
+      },
+      "previous_grammar_point": {
+        "id": 525,
+        "title": "に越したことはない",
+        "slug": "に越したことはない"
+      },
+      "lesson_count": "18/24",
+      "title": "要するに",
+      "furigana": "要（よう）するに",
+      "meaning": "To sum up, In summary, In short",
+      "nuance_translation": "A sentence starter used for summarization, which explains that (A), but to say only what's <strong>needed</strong>, (B).",
+      "rare_kanji_warning": "",
+      "caution": "要するに can only take an initial position in the sentence.",
+      "polite_structure": "",
+      "casual_structure": "<strong>要（よう）するに</strong> + Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/17595",
+      "metadata": "要するに, ようするに, yousuruni, expression, adverb, important information, summarization, summary"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "181913",
+            "type": "study_question"
+          },
+          {
+            "id": "6818",
+            "type": "study_question"
+          },
+          {
+            "id": "181914",
+            "type": "study_question"
+          },
+          {
+            "id": "181915",
+            "type": "study_question"
+          },
+          {
+            "id": "6813",
+            "type": "study_question"
+          },
+          {
+            "id": "6816",
+            "type": "study_question"
+          },
+          {
+            "id": "3873",
+            "type": "study_question"
+          },
+          {
+            "id": "3875",
+            "type": "study_question"
+          },
+          {
+            "id": "6821",
+            "type": "study_question"
+          },
+          {
+            "id": "6819",
+            "type": "study_question"
+          },
+          {
+            "id": "6817",
+            "type": "study_question"
+          },
+          {
+            "id": "3874",
+            "type": "study_question"
+          },
+          {
+            "id": "6820",
+            "type": "study_question"
+          },
+          {
+            "id": "6815",
+            "type": "study_question"
+          },
+          {
+            "id": "6814",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "604",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "138",
+            "type": "related_content"
+          },
+          {
+            "id": "1184",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1137",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1138",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "181913",
+      "type": "study_question",
+      "attributes": {
+        "id": 181913,
+        "content": "<span class='study-area-input'>____</span>、あなたは履歴書（りれきしょ）に嘘（うそ）を書（か）いたと言（い）う事（こと）ですね。",
+        "answer": "ようするに",
+        "alternate_grammar": [],
+        "kanji_answer": "要（よう）するに",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/要するに、あなたは履歴書に嘘を書いたと言う事ですね。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>In short</strong>, this means that you lied on your resume, doesn't it?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 512,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6818",
+      "type": "study_question",
+      "attributes": {
+        "id": 6818,
+        "content": "<span class='study-area-input'>____</span>、発想（はっそう）が貧弱（ひんじゃく）だということでしょう。",
+        "answer": "ようするに",
+        "alternate_grammar": [],
+        "kanji_answer": "要（よう）するに",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)として説明（せつめい）するが、(B)しか<strong>必要（ひつよう）</strong>ではないと言（い）いたい時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/要するに、発想が貧弱だということでしょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ようする": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "すなわち": {
+            "en": "How about a similar grammar structure that puts emphasis on a different part of the sentence?",
+            "es": ""
+          },
+          "ようは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>In summary</strong>, this way of thinking is insubstantial, right?",
+        "nuance_translation": "A sentence starter used for summarization, which explains that (A), but to say only what's <strong>needed</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 512,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181914",
+      "type": "study_question",
+      "attributes": {
+        "id": 181914,
+        "content": "<span class='study-area-input'>____</span>、小麦（こむぎ）が入（はい）っている食（た）べ物（もの）は食（た）べれないと言（い）う事（こと）ですね？",
+        "answer": "ようするに",
+        "alternate_grammar": [],
+        "kanji_answer": "要（よう）するに",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "So, <strong>in summary</strong>, I can't eat any food that has wheat in it?",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 512,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181915",
+      "type": "study_question",
+      "attributes": {
+        "id": 181915,
+        "content": "<span class='study-area-input'>____</span>、俺（おれ）はあいつに使（つか）われていたと言（い）うことだ。",
+        "answer": "ようするに",
+        "alternate_grammar": [],
+        "kanji_answer": "要（よう）するに",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>In short</strong>, I was being used by him.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 512,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6813",
+      "type": "study_question",
+      "attributes": {
+        "id": 6813,
+        "content": "<span class='study-area-input'>____</span>、農薬（のうやく）は一切（いっさい）使（つか）ってはいけないということですよね？",
+        "answer": "ようするに",
+        "alternate_grammar": [],
+        "kanji_answer": "要（よう）するに",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)として説明（せつめい）するが、(B)しか<strong>必要（ひつよう）</strong>ではないと言（い）いたい時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/要するに、農薬は一切使ってはいけないということですよね？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ようする": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "すなわち": {
+            "en": "How about a similar grammar structure that puts emphasis on a different part of the sentence?",
+            "es": ""
+          },
+          "ようは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>In summary</strong>, without exception, you must not use agricultural chemicals, right?",
+        "nuance_translation": "A sentence starter used for summarization, which explains that (A), but to say only what's <strong>needed</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 512,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6816",
+      "type": "study_question",
+      "attributes": {
+        "id": 6816,
+        "content": "<span class='study-area-input'>____</span>、乗換（のりかえ）を間違（まちが）えて遅刻（ちこく）したということですね？",
+        "answer": "ようするに",
+        "alternate_grammar": [],
+        "kanji_answer": "要（よう）するに",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)として説明（せつめい）するが、(B)しか<strong>必要（ひつよう）</strong>ではないと言（い）いたい時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/要するに、乗換を間違えて遅刻したということですね？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ようする": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "すなわち": {
+            "en": "How about a similar grammar structure that puts emphasis on a different part of the sentence?",
+            "es": ""
+          },
+          "ようは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>In summary</strong>, you made a mistake on your train transfer and are late, right?",
+        "nuance_translation": "A sentence starter used for summarization, which explains that (A), but to say only what's <strong>needed</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 512,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3873",
+      "type": "study_question",
+      "attributes": {
+        "id": 3873,
+        "content": "<span class='name-highlight'>行員（こういん）</span>：「<span class='study-area-input'>____</span>お金（かね）が足（た）りない場合（ばあい）デビットカードを使（つか）えないということです。」",
+        "answer": "ようするに",
+        "alternate_grammar": [],
+        "kanji_answer": "要（よう）するに",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)として説明（せつめい）するが、(B)しか<strong>必要（ひつよう）</strong>ではないと言（い）いたい時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/行員：「要するにお金が足りない場合デビットカードを使えないということです。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "もし": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "もしも": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "つまり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ようする": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "すなわち": {
+            "en": "How about a similar grammar structure that puts emphasis on a different part of the sentence?",
+            "es": ""
+          },
+          "ようは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Bank clerk</span>: '<strong>In summary</strong>, if there is not enough money on the debit card, you won't be able to use it.'",
+        "nuance_translation": "A sentence starter used for summarization, which explains that (A), but to say only what's <strong>needed</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 512,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3875",
+      "type": "study_question",
+      "attributes": {
+        "id": 3875,
+        "content": "<span class='study-area-input'>____</span>何（なん）でもいいよね？",
+        "answer": "ようするに",
+        "alternate_grammar": [],
+        "kanji_answer": "要（よう）するに",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)として説明（せつめい）するが、(B)しか<strong>必要（ひつよう）</strong>ではないと言（い）いたい時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/要するに何でもいいよね？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ようする": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "すなわち": {
+            "en": "How about a similar grammar structure that puts emphasis on a different part of the sentence?",
+            "es": ""
+          },
+          "ようは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>In short</strong>, it is all the same to you?",
+        "nuance_translation": "A sentence starter used for summarization, which explains that (A), but to say only what's <strong>needed</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 512,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6821",
+      "type": "study_question",
+      "attributes": {
+        "id": 6821,
+        "content": "<span class='study-area-input'>____</span>、あなたは反省（はんせい）していないということですよ。",
+        "answer": "ようするに",
+        "alternate_grammar": [],
+        "kanji_answer": "要（よう）するに",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)として説明（せつめい）するが、(B)しか<strong>必要（ひつよう）</strong>ではないと言（い）いたい時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/要するに、あなたは反省していないということですよ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ようする": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "すなわち": {
+            "en": "How about a similar grammar structure that puts emphasis on a different part of the sentence?",
+            "es": ""
+          },
+          "ようは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>In summary</strong>, you aren't contemplating your actions.",
+        "nuance_translation": "A sentence starter used for summarization, which explains that (A), but to say only what's <strong>needed</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 512,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6819",
+      "type": "study_question",
+      "attributes": {
+        "id": 6819,
+        "content": "<span class='study-area-input'>____</span>、今年（ことし）の花火（はなび）大会（たいかい）は中止（ちゅうし）にしたいということでしょ。",
+        "answer": "ようするに",
+        "alternate_grammar": [],
+        "kanji_answer": "要（よう）するに",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)として説明（せつめい）するが、(B)しか<strong>必要（ひつよう）</strong>ではないと言（い）いたい時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/要するに、今年の花火大会は中止にしたいということでしょ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ようする": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "すなわち": {
+            "en": "How about a similar grammar structure that puts emphasis on a different part of the sentence?",
+            "es": ""
+          },
+          "ようは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>In summary</strong>, you want to suspend this years firework festival, right?",
+        "nuance_translation": "A sentence starter used for summarization, which explains that (A), but to say only what's <strong>needed</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 512,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6817",
+      "type": "study_question",
+      "attributes": {
+        "id": 6817,
+        "content": "<span class='study-area-input'>____</span>、我々（われわれ）は会社（かいしゃ）の歯車（はぐるま）にすぎないということだ。",
+        "answer": "ようするに",
+        "alternate_grammar": [],
+        "kanji_answer": "要（よう）するに",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)として説明（せつめい）するが、(B)しか<strong>必要（ひつよう）</strong>ではないと言（い）いたい時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/要するに、我々は会社の歯車にすぎないということだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ようする": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "すなわち": {
+            "en": "How about a similar grammar structure that puts emphasis on a different part of the sentence?",
+            "es": ""
+          },
+          "ようは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>In summary</strong>, we are no more than cogs in the wheel (company).",
+        "nuance_translation": "A sentence starter used for summarization, which explains that (A), but to say only what's <strong>needed</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 512,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3874",
+      "type": "study_question",
+      "attributes": {
+        "id": 3874,
+        "content": "<span class='name-highlight'>車（くるま）の職人（しょくにん）</span>：「<span class='study-area-input'>____</span>部品（ぶひん）を替（か）えるよりも機械（きかい）を買（か）い替（か）えればいいってことだ。」",
+        "answer": "ようするに",
+        "alternate_grammar": [],
+        "kanji_answer": "要（よう）するに",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)として説明（せつめい）するが、(B)しか<strong>必要（ひつよう）</strong>ではないと言（い）いたい時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/車の職人：「要するに部品を替えるよりも機械を買い替えればいいってことだ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ようする": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "すなわち": {
+            "en": "How about a similar grammar structure that puts emphasis on a different part of the sentence?",
+            "es": ""
+          },
+          "ようは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Car mechanic</span>: '<strong>In short</strong>, it's better to replace the whole machine, rather than just parts.'",
+        "nuance_translation": "A sentence starter used for summarization, which explains that (A), but to say only what's <strong>needed</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 512,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6820",
+      "type": "study_question",
+      "attributes": {
+        "id": 6820,
+        "content": "<span class='study-area-input'>____</span>、花嫁（はなよめ）が結婚（けっこん）直前（ちょくぜん）に逃（に）げてしまったんですね？",
+        "answer": "ようするに",
+        "alternate_grammar": [],
+        "kanji_answer": "要（よう）するに",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)として説明（せつめい）するが、(B)しか<strong>必要（ひつよう）</strong>ではないと言（い）いたい時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/要するに、花嫁が結婚直前に逃げてしまったんですね？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ようする": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "すなわち": {
+            "en": "How about a similar grammar structure that puts emphasis on a different part of the sentence?",
+            "es": ""
+          },
+          "ようは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>In summary</strong>, the bride ran away right before the wedding, right?",
+        "nuance_translation": "A sentence starter used for summarization, which explains that (A), but to say only what's <strong>needed</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 512,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6815",
+      "type": "study_question",
+      "attributes": {
+        "id": 6815,
+        "content": "<span class='study-area-input'>____</span>、期限（きげん）を延（の）ばすことは許（ゆる）されないということです。",
+        "answer": "ようするに",
+        "alternate_grammar": [],
+        "kanji_answer": "要（よう）するに",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)として説明（せつめい）するが、(B)しか<strong>必要（ひつよう）</strong>ではないと言（い）いたい時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/要するに、期限を延ばすことは許されないということです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ようする": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "すなわち": {
+            "en": "How about a similar grammar structure that puts emphasis on a different part of the sentence?",
+            "es": ""
+          },
+          "ようは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>In summary</strong>, you will not let me extend the deadline.",
+        "nuance_translation": "A sentence starter used for summarization, which explains that (A), but to say only what's <strong>needed</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 512,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6814",
+      "type": "study_question",
+      "attributes": {
+        "id": 6814,
+        "content": "<span class='study-area-input'>____</span>、能率（のうりつ）の悪（わる）い仕事（しごと）は引（ひ）き受（う）ける気（き）がないんですね。",
+        "answer": "ようするに",
+        "alternate_grammar": [],
+        "kanji_answer": "要（よう）するに",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)として説明（せつめい）するが、(B)しか<strong>必要（ひつよう）</strong>ではないと言（い）いたい時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/要するに、能率の悪い仕事は引き受ける気がないんですね。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ようする": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "すなわち": {
+            "en": "How about a similar grammar structure that puts emphasis on a different part of the sentence?",
+            "es": ""
+          },
+          "ようは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>In summary</strong>, you don't feel like undertaking jobs that are inefficient, right?",
+        "nuance_translation": "A sentence starter used for summarization, which explains that (A), but to say only what's <strong>needed</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 512,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "604",
+      "type": "writeup",
+      "attributes": {
+        "id": 604,
+        "body_ja": "<p>「<span data-gp-id='512'>要（よう）するに</span>」は、その前（まえ）に述（の）べた内容（ないよう）を簡単（かんたん）にまとめるときに使（つか）う表現（ひょうげん）です。これはスル動詞（どうし）の「要（よう）する」（意味（いみ）：必要（ひつよう）とする）と「に」の組（く）み合（あ）わせで、文字（もじ）通（どお）りには「必要（ひつよう）なことは (A)」のような意味（いみ）だと解釈（かいしゃく）できますが、実際（じっさい）には「簡単（かんたん）に言（い）うと」や「わかりやすく言（い）うと」などの意味（いみ）で使（つか）われます。</p>\r\n\r\n<p>この表現（ひょうげん）はそれまでの内容（ないよう）のポイントをわかりやすく伝（つた）える場合（ばあい）に使（つか）われるので、常（つね）に文（ぶん）の頭（あたま）に置（お）かれます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181913'>\r\n<li data-study-question='181914'>\r\n<li data-study-question='181915'>\r\n</ul>",
+        "body": "<p><span data-gp-id='512'>要（よう）するに</span> is an expression in Japanese used to highlight important information in a similar way to 'to sum up', 'in summary', or 'in short' in English. It is a combination of the する-Verb 要（よう） 'to need', or 'to require', and に. Literally it means something similar to 'as for what's necessary (A)'.</p>\r\n\r\n<p>This is a phrase that will only ever take the initial position in a sentence, before expressing a condensed version of what has previously been said.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181913'>\r\n<li data-study-question='181914'>\r\n<li data-study-question='181915'>\r\n</ul>"
+      }
+    },
+    {
+      "id": "1137",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1137,
+        "site": "Japanese Stack Exchange",
+        "description": "要するに and つまり",
+        "link": "https://japanese.stackexchange.com/questions/12560/what-is-the-difference-between-要するに-and-つまり",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1138",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1138,
+        "site": "JapaneseTest4You",
+        "description": "Additional Breakdown and Example Sentences",
+        "link": "http://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-要するに-you-suru-ni/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "138",
+      "type": "related_content",
+      "attributes": {
+        "id": 138,
+        "relationship_type": "related",
+        "body": "つまり and 要するに both signal a rephrasing or summary, often translated as 'in other words' or 'to sum up'. つまり is more casual and common in conversation, e.g. つまり、行かないってこと？ ('So, you're not going?'). 要するに is more formal and often used in writing or speeches, e.g. 要するに無理だということです ('To sum up, it's impossible').",
+        "first_relatable": {
+          "id": 252,
+          "slug": "つまり",
+          "title": "つまり",
+          "meaning": "In short, To sum up, In other words",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 512,
+          "slug": "要するに",
+          "title": "要するに",
+          "meaning": "To sum up, In summary, In short",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1184",
+      "type": "related_content",
+      "attributes": {
+        "id": 1184,
+        "relationship_type": "related",
+        "body": "即ち and 要するに both help clarify or summarize a statement, but they differ in function. 即ち gives a formal restatement or definition, e.g. 日本の首都、即ち 'the capital of Japan, that is to say Tokyo'. 要するに summarizes the main point and can be used in speech or semi-formal writing, e.g. 要するに時間がない ('To sum it up, we have no time.').",
+        "first_relatable": {
+          "id": 490,
+          "slug": "即ち",
+          "title": "即ち",
+          "meaning": "In other words, That is, Namely",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 512,
+          "slug": "要するに",
+          "title": "要するに",
+          "meaning": "To sum up, In summary, In short",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}
