@@ -10,6 +10,7 @@ import gairu from './がいる.js';
 import kuru from './くる.js';
 import shite from './して.js';
 import tekara from './てから.js';
+import kore from './これ.js';
 import da from './だ.js';
 import desu from './です.js';
 import wa from './は.js';
@@ -35,6 +36,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     kuru,
     shite,
     tekara,
+    kore,
     da,
     desu,
     wa,
