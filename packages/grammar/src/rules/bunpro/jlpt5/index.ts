@@ -4,6 +4,7 @@ import iAdjectives from './い-adjectives.js';
 import ndesu from './-んです-のです.js';
 import tsumorida from './つもりだ.js';
 import ka from './か.js';
+import kara from './から.js';
 import karaBecause from './から-because.js';
 import ga from './が.js';
 import gairu from './がいる.js';
@@ -29,6 +30,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     ndesu,
     tsumorida,
     ka,
+    kara,
     karaBecause,
     ga,
     gairu,
