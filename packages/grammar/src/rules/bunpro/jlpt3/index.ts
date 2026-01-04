@@ -1,9 +1,9 @@
 import type { Ruleset } from '../../../ruleset.js';
 import dewaSoredewa from './では-それでは-じゃあ.js';
 import youToShinai from './-ようとしない.js';
-import amarini from './あまりに.js';
+import ari from './あり.js';
 
 export const BUNPRO_JLPT3: Ruleset = {
   id: 'bunpro.jlpt3',
-  rules: [dewaSoredewa, youToShinai, amarini],
+  rules: [dewaSoredewa, youToShinai, ari],
 };
