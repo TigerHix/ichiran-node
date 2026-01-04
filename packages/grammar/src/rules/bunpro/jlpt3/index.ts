@@ -60,6 +60,7 @@ import tameNi from './ため-に.js';
 import tameni from './ために.js';
 import tamonoDa from './たものだ.js';
 import dakeDnakuteMo from './だけでなく-て-も.js';
+import dakeShika from './だけしか.js';
 import darake from './だらけ.js';
 import chantoKichinto from './ちゃんと-きちんと.js';
 import ppanashi from './っぱなし.js';
@@ -144,6 +145,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     tameni,
     tamonoDa,
     dakeDnakuteMo,
+    dakeShika,
     darake,
     chantoKichinto,
     ppanashi,
