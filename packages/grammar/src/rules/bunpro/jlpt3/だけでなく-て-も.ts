@@ -55,19 +55,17 @@ export default linguisticRule('だけでなく-て-も', (r) => {
 
     // Pattern 5: だけじゃなく (casual, no て)
     (b) => {
-      const ja = b.tok({ textOneOf: ['じゃ', 'では'] }, 'ja');
-      const mo = b.particle('も', 'mo');
+      const ja = b.tok({ textOneOf: ['じゃ', 'じゃあ', 'では'] }, 'ja');
       b.inOrder(dake, ja, 1).inOrder(ja, nai, 2);
-      b.captureSpan('だけじゃなく', dake, nai);
+      b.captureSpan('pattern', dake, nai);
     },
 
     // Pattern 6: だけじゃなくて (casual with て)
     (b) => {
-      const ja = b.tok({ textOneOf: ['じゃ', 'では'] }, 'ja');
+      const ja = b.tok({ textOneOf: ['じゃ', 'じゃあ', 'では'] }, 'ja');
       const te = b.aux({ lemma: 'て' }, 'te');
-      const mo = b.particle('も', 'mo');
       b.inOrder(dake, ja, 1).inOrder(ja, nai, 2).inOrder(nai, te, 1);
-      b.captureSpan('だけじゃなくて', dake, te);
+      b.captureSpan('pattern', dake, te);
     }
   );
 });

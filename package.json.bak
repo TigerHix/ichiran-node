@@ -19,8 +19,22 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+<<<<<<< HEAD
+    "@types/bun": "latest",
+    "@types/node": "^20.19.19",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.2.1",
+    "dotenv": "^17.2.3",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "zod": "^4.3.4"
+  }
+=======
     "@types/node": "^22.10.2"
   },
   "sideEffects": false
+>>>>>>> jlpt3-koto-ka
 }
 

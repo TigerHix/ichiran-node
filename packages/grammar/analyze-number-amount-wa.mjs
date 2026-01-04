@@ -24,7 +24,12 @@ const sentences = [
 for (const s of sentences) {
   console.log('\n=== ' + s + ' ===');
   const doc = await engine.analyze(s);
-  for (const [i, t] of doc.tokens.entries()) {
+  if (!doc || !doc.sentences[0]) {
+    console.log('No parse');
+    continue;
+  }
+  const sent = doc.sentences[0];
+  for (const [i, t] of sent.tokens.entries()) {
     console.log(`#${i} ${t.text}\tpos=${t.pos}\tlemma=${t.lemma}\ttag=${t.tag}\tdep=${t.dep}\thead=${t.head}`);
   }
 }

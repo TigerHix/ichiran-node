@@ -42,14 +42,8 @@ export default linguisticRule('いくら-でも', (r) => {
           '終止形-一般',  // For edge cases like いくらないても
         ],
       }, 'adj');
-<<<<<<< HEAD
-      const _te = b.tok({ textOneOf: ['て', 'で'], posOneOf: ['SCONJ', 'AUX'] }, 'te');
-      const mo = b.tok({ text: 'も', pos: 'ADP', dep: 'case' }, 'mo');
-      void _te;
-=======
       const te = b.tok({ textOneOf: ['て', 'で'], posOneOf: ['SCONJ', 'AUX'] }, 'te');
       const mo = b.tok({ text: 'も', pos: 'ADP', dep: 'case' }, 'mo');
->>>>>>> jlpt3-ikura-demo
       b.inOrder(ikura, adj, 10);
       b.captureSpan('いくら-ても', ikura, mo);
     },
