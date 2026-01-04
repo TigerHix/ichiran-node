@@ -4,12 +4,10 @@ import nouchide from './-のうち-で.js';
 import ageku from './あげく.js';
 import iwayuru from './いわゆる.js';
 import kanaikanouniuchi from './か-ないかのうちに.js';
-// import kaneru from './かねる.js'; // Has syntax errors, needs fixing
-import karashite from './からして.js';
-import karasurukarasureba from './からすると-からすれば.js';
+import kaneru from './かねる.js';
 
 export const BUNPRO_JLPT2: Ruleset = {
   id: 'bunpro.jlpt2',
-  rules: [tekoso, nouchide, ageku, iwayuru, kanaikanouniuchi, karashite, karasurukarasureba],
+  rules: [tekoso, nouchide, ageku, iwayuru, kanaikanouniuchi, kaneru],
 };
 

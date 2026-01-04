@@ -61,6 +61,7 @@ import he from './へ.js';
 import teiru1 from './ている1.js';
 import teiru2 from './ている2.js';
 import teiru3 from './ている3.js';
+import temoii from './てもいい.js';
 import to from './と.js';
 import toAnd from './と-and.js';
 import toWith from './と-with.js';
@@ -193,6 +194,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     teiru1,
     teiru2,
     teiru3,
+    temoii,
     to,
     toAnd,
     toWith,

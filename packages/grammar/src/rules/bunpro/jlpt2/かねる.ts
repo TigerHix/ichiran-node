@@ -89,13 +89,18 @@ export default linguisticRule('かねる', (r) => {
       b.captureSpan('かねる', stem, kaneru);
     },
 
-    // Branch 5: かねる as VERB token when attached as auxiliary
-    // Some parsings show it as VERB rather than AUX
+    // Branch 5: かねる as VERB token that follows a verb stem
+    // This catches cases where GiNZA parses it as VERB instead of AUX
+    // Must be preceded by a verb stem (連用形) to ensure it's acting as auxiliary
     (b) => {
+      const stem = b.verb({
+        inflectionForm: '連用形-一般',
+      }, 'stem');
       const kaneru = b.verb({
         lemmaOneOf: ['かねる', '兼ねる'],
       }, 'kaneru');
-      b.capture(kaneru);
+      b.inOrder(stem, kaneru, 3);
+      b.captureSpan('かねる', stem, kaneru);
     }
   );
 });
