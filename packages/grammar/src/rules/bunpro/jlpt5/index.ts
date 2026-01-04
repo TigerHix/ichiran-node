@@ -32,6 +32,7 @@ import verbNonPast from './verb-non-past.js';
 import da from './だ.js';
 import dare from './だれ.js';
 import desu from './です.js';
+import deshou from './でしょう.js';
 import tai from './たい.js';
 import janai from './じゃない.js';
 import janakatta from './じゃなかった.js';
@@ -78,7 +79,6 @@ import sono from './その.js';
 import sore from './それ.js';
 import doko from './どこ.js';
 import dono from './どの.js';
-import dare from './だれ.js';
 import dore from './どれ.js';
 import mo from './も.js';
 
@@ -120,6 +120,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     da,
     dare,
     desu,
+    deshou,
     tai,
     janai,
     janakatta,
