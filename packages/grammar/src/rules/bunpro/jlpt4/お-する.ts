@@ -465,7 +465,7 @@ export default linguisticRule('お-する', (r) => {
 
     // Pattern 16: NOUN/VERB/ADP compound starting with お/ご + します (polite)
     // Example: おやすみします, お願いします, お返事します
-    // CRITICAL: Must check tag to exclude suru-verbs (名詞-普通名詞-サ変可能)
+    // The textRe constraint ensures compound starts with お/ご, excluding regular suru-verbs
     (b) => {
       const compound = b.tok({
         textRe: /^(お|ご)/,
@@ -484,8 +484,6 @@ export default linguisticRule('お-する', (r) => {
         inflectionForm: '終止形-一般'
       }, 'masu');
 
-      // CRITICAL: compound must NOT be a regular suru-verb
-      // If it's 名詞-普通名詞-サ変可能, it could be 勉強, 電話, etc.
       b.auxOf(compound, shi);
       b.auxOf(compound, masu);
       b.captureSpan('お-する', compound, masu);
@@ -493,7 +491,7 @@ export default linguisticRule('お-する', (r) => {
 
     // Pattern 17: NOUN/VERB/ADP compound starting with お/ご + しました (polite past)
     // Example: おやすみしました, お願いしました
-    // CRITICAL: Must check tag to exclude suru-verbs (名詞-普通名詞-サ変可能)
+    // The textRe constraint ensures compound starts with お/ご, excluding regular suru-verbs
     (b) => {
       const compound = b.tok({
         textRe: /^(お|ご)/,
@@ -515,7 +513,6 @@ export default linguisticRule('お-する', (r) => {
         lemma: 'た'
       }, 'ta');
 
-      // CRITICAL: compound must NOT be a regular suru-verb
       b.auxOf(compound, shi);
       b.auxOf(compound, mashita);
       b.auxOf(compound, ta);

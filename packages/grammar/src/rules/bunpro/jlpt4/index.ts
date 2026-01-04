@@ -7,6 +7,7 @@ import narubeku from './なるべく.js';
 import nancounteka from './なん-counter-か.js';
 import nifrequency from './に-frequency.js';
 import nikigatsuku from './にきがつく.js';
+import ndakedondesuga from './んだけど-んですが.js';
 import nikui from './にくい.js';
 import nisurukusuru from './にする-くする.js';
 import nimieru from './にみえる.js';
@@ -36,6 +37,7 @@ import dakede from './だけで.js';
 import dasu from './だす.js';
 import dandan from './だんだん.js';
 import daitai from './だいたい.js';
+import dai from './代.js';
 import dagadega from './だが・ですが.js';
 import demo from './でも.js';
 import demodemo from './でも-でも.js';
@@ -88,6 +90,9 @@ import nasai from './なさい.js';
 import nasaru from './なさる.js';
 import nado from './など.js';
 import ra from './ら.js';
+import rashii1 from './らしい1.js';
+import rashii2 from './らしい2.js';
+import rutokoroda from './るところだ.js';
 import wahitotsu from './は-の一つだ.js';
 import hajimeru from './はじめる.js';
 import hazugaai from './はずがない.js';
@@ -99,8 +104,11 @@ import hitsuyougaaru from './ひつようがある.js';
 import hokanimohokaniha from './ほかにも-ほかには.js';
 import hotondo from './ほとんど.js';
 import mazu from './まず.js';
+import makko from './真(っ).js';
 import mata from './また.js';
 import mainoyouni from './まい-のように.js';
+import meireikei from './命令形.js';
+import mieru from './見える.js';
 import made from './まで.js';
 import madeni from './までに.js';
 import mitaini from './みたいに-みたいな.js';
@@ -111,12 +119,20 @@ import youou from './よう-おう.js';
 import youda from './ようだ.js';
 import youtoomou from './ようと思う-おうと思う.js';
 import youni from './ように.js';
+import youniinoru from './ようにいのる.js';
+import youniiu from './ようにいう.js';
+import youninara from './ようになる.js';
+import younisuru from './ようにする.js';
 import yonitehoshii from './ように-てほしい.js';
 import youniyouna from './ように-ような.js';
+import yori from './より.js';
+import yoteida from './よていだ.js';
 import ika from './いか.js';
 import igai from './いがい.js';
 import itasu from './いたす.js';
+import ijou1 from './以上1.js';
 import kaku from './各.js';
+import kikoeru from './聞こえる.js';
 import irassharu from './いらっしゃる.js';
 import okudasai from './お-ください.js';
 import osuru from './お-する.js';
@@ -126,6 +142,7 @@ import kai from './かい.js';
 import kashira from './かしら.js';
 import kata from './かた.js';
 import kadouka from './かどうか.js';
+import kasuru from './化する.js';
 import kana from './かな.js';
 import kamoshirenai from './かもしれない.js';
 import gasuru from './がする.js';
@@ -177,6 +194,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     dakedenaku,
     dasu,
     dandan,
+    dai,
     dedekirukaradekiru,
     degozaimasu,
     demo,
@@ -201,6 +219,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     ika,
     igai,
     irassharu,
+    ijou1,
     itasu,
     janaika,
     kai,
@@ -209,7 +228,9 @@ export const BUNPRO_JLPT4: Ruleset = {
     kata,
     kadouka,
     kaku,
+    kikoeru,
     kashira,
+    kasuru,
     koto,
     kotogadekiru,
     mazu,
@@ -217,12 +238,18 @@ export const BUNPRO_JLPT4: Ruleset = {
     made,
     madeni,
     mata,
+    makko,
+    meireikei,
+    mieru,
     mitai,
     mitaini,
     moshi,
     nado,
     naihanai,
     ra,
+    rashii1,
+    rashii2,
+    rutokoroda,
     naide,
     naito,
     nakerebaikenai,
@@ -237,6 +264,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     nasaru,
     narubeku,
     nancounteka,
+    ndakedondesuga,
     nifrequency,
     nikigatsuku,
     nikui,
@@ -318,7 +346,13 @@ export const BUNPRO_JLPT4: Ruleset = {
     wahitotsu,
     youda,
     youni,
+    youniiu,
+    youniinoru,
+    youninara,
+    younisuru,
     youniyouna,
+    yori,
+    yoteida,
     yonitehoshii,
     youou,
     yasui,
