@@ -121,6 +121,7 @@ import oninaru from './お-になる.js';
 import owaru from './おわる.js';
 import kai from './かい.js';
 import kashira from './かしら.js';
+import kasuru from './化する.js';
 import kata from './かた.js';
 import kadouka from './かどうか.js';
 import kana from './かな.js';
@@ -202,6 +203,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     kai,
     kana,
     kamoshirenai,
+    kasuru,
     kata,
     kadouka,
     kashira,
