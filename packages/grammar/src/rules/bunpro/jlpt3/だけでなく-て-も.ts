@@ -13,59 +13,132 @@ export default linguisticRule('だけでなく-て-も', (r) => {
   // following the second noun/element, emphasizing inclusion of both items.
 
   const dake = r.tok({ lemma: 'だけ' }, 'dake');
-  const de = r.tok({ text: 'で' }, 'de');
-  const nai = r.aux({ lemma: 'ない' }, 'nai');
 
   r.either(
     // Pattern 1: だけでなく (formal, no て)
     (b) => {
-      const mo = b.particle('も', 'mo');
+      const de = b.tok({
+        text: 'で',
+        lemmaOneOf: ['で', 'だ'],
+        posOneOf: ['AUX', 'ADP'],
+        depOneOf: ['cop', 'aux', 'case', 'fixed']
+      }, 'de');
+      const nai = b.aux({
+        text: 'なく',
+        lemma: 'ない',
+        dep: 'fixed'
+      }, 'nai');
+      const mo = b.tok({ text: 'も' }, 'mo');
       b.inOrder(dake, de, 1).inOrder(de, nai, 2);
-      // も should come after なく, not immediately after
-      // The structure is: X+だけでなく、Y+も
+      // Require も to appear somewhere later in the sentence
+      b.inOrder(nai, mo, 10);
       b.captureSpan('だけでなく', dake, nai);
+    },
+
+    // Pattern 1b: ではなく (formal with は, no て)
+    (b) => {
+      const de = b.tok({
+        text: 'で',
+        lemmaOneOf: ['で', 'だ'],
+        posOneOf: ['AUX', 'ADP'],
+        depOneOf: ['cop', 'aux', 'case', 'fixed']
+      }, 'de');
+      const wa = b.tok({ text: 'は' }, 'wa');
+      const nai = b.aux({
+        text: 'なく',
+        lemma: 'ない',
+        dep: 'fixed'
+      }, 'nai');
+      const mo = b.tok({ text: 'も' }, 'mo');
+      b.inOrder(dake, de, 1);
+      b.inOrder(de, wa, 1);
+      b.inOrder(wa, nai, 1);
+      // Require も to appear somewhere later in the sentence
+      b.inOrder(nai, mo, 10);
+      b.captureSpan('ではなく', dake, nai);
     },
 
     // Pattern 2: だけでなくて (formal with て)
     (b) => {
+      const de = b.tok({
+        text: 'で',
+        lemmaOneOf: ['で', 'だ'],
+        posOneOf: ['AUX', 'ADP'],
+        depOneOf: ['cop', 'aux', 'case', 'fixed']
+      }, 'de');
+      const nai = b.aux({
+        text: 'なく',
+        lemma: 'ない',
+        dep: 'fixed'
+      }, 'nai');
       const te = b.aux({ lemma: 'て' }, 'te');
-      const mo = b.particle('も', 'mo');
+      const mo = b.tok({ text: 'も' }, 'mo');
       b.inOrder(dake, de, 1).inOrder(de, nai, 2).inOrder(nai, te, 1);
+      // Require も to appear somewhere later in the sentence
+      b.inOrder(te, mo, 10);
       b.captureSpan('だけでなくて', dake, te);
     },
 
-    // Pattern 3: だけではなく (written form, no て)
+    // Pattern 2b: ではなくて (formal with は and て)
     (b) => {
-      const deParticle = b.particle({ textOneOf: ['は', 'も'] }, 'deParticle');
-      const mo = b.particle('も', 'mo');
-      b.caseMarker(nai, deParticle);
-      b.inOrder(dake, de, 1).inOrder(de, nai, 2);
-      b.captureSpan('だけではなく', dake, nai);
+      const de = b.tok({
+        text: 'で',
+        lemmaOneOf: ['で', 'だ'],
+        posOneOf: ['AUX', 'ADP'],
+        depOneOf: ['cop', 'aux', 'case', 'fixed']
+      }, 'de');
+      const wa = b.tok({ text: 'は', dep: 'fixed' }, 'wa');
+      const nai = b.aux({
+        text: 'なく',
+        lemma: 'ない',
+        dep: 'fixed'
+      }, 'nai');
+      const te = b.tok({ text: 'て', pos: 'SCONJ', dep: 'mark' }, 'te');
+      const mo = b.tok({ text: 'も' }, 'mo');
+      b.inOrder(dake, de, 1);
+      b.inOrder(de, wa, 1);
+      b.inOrder(wa, nai, 1);
+      b.inOrder(nai, te, 1);
+      // Require も to appear somewhere later in the sentence
+      b.inOrder(te, mo, 10);
+      b.captureSpan('ではなくて', dake, te);
     },
 
-    // Pattern 4: だけではなくて (written form with て)
+    // Pattern 3: だけじゃなく (casual, no て)
     (b) => {
-      const te = b.aux({ lemma: 'て' }, 'te');
-      const deParticle = b.particle({ textOneOf: ['は', 'も'] }, 'deParticle');
-      const mo = b.particle('も', 'mo');
-      b.caseMarker(nai, deParticle);
-      b.inOrder(dake, de, 1).inOrder(de, nai, 2).inOrder(nai, te, 1);
-      b.captureSpan('だけではなくて', dake, te);
-    },
-
-    // Pattern 5: だけじゃなく (casual, no て)
-    (b) => {
-      const ja = b.tok({ textOneOf: ['じゃ', 'じゃあ', 'では'] }, 'ja');
+      const ja = b.tok({
+        text: 'じゃ',
+        lemma: 'だ'
+      }, 'ja');
+      const nai = b.aux({
+        text: 'なく',
+        lemma: 'ない',
+        dep: 'fixed'
+      }, 'nai');
+      const mo = b.tok({ text: 'も' }, 'mo');
       b.inOrder(dake, ja, 1).inOrder(ja, nai, 2);
-      b.captureSpan('pattern', dake, nai);
+      // Require も to appear somewhere later in the sentence
+      b.inOrder(nai, mo, 10);
+      b.captureSpan('だけじゃなく', dake, nai);
     },
 
-    // Pattern 6: だけじゃなくて (casual with て)
+    // Pattern 4: だけじゃなくて (casual with て)
     (b) => {
-      const ja = b.tok({ textOneOf: ['じゃ', 'じゃあ', 'では'] }, 'ja');
+      const ja = b.tok({
+        text: 'じゃ',
+        lemma: 'だ'
+      }, 'ja');
+      const nai = b.aux({
+        text: 'なく',
+        lemma: 'ない',
+        dep: 'fixed'
+      }, 'nai');
       const te = b.aux({ lemma: 'て' }, 'te');
+      const mo = b.tok({ text: 'も' }, 'mo');
       b.inOrder(dake, ja, 1).inOrder(ja, nai, 2).inOrder(nai, te, 1);
-      b.captureSpan('pattern', dake, te);
+      // Require も to appear somewhere later in the sentence
+      b.inOrder(te, mo, 10);
+      b.captureSpan('だけじゃなくて', dake, te);
     }
   );
 });
