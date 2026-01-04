@@ -42,9 +42,14 @@ export default linguisticRule('たとえ-ても', (r) => {
           '連用形-融合',
         ],
       }, 'adj');
+<<<<<<< HEAD
       const _te = b.tok({ textOneOf: ['て', 'で'], posOneOf: ['SCONJ', 'AUX'] }, 'te');
       const mo = b.tok({ text: 'も', pos: 'ADP', dep: 'case' }, 'mo');
       void _te;
+=======
+      const te = b.tok({ textOneOf: ['て', 'で'], posOneOf: ['SCONJ', 'AUX'] }, 'te');
+      const mo = b.tok({ text: 'も', pos: 'ADP', dep: 'case' }, 'mo');
+>>>>>>> jlpt3-tatoe-temo
       b.inOrder(tatoe, adj, 10);
       b.captureSpan('たとえ-ても', tatoe, mo);
     },
@@ -97,11 +102,18 @@ export default linguisticRule('たとえ-ても', (r) => {
     (b) => {
       const tatoe = b.tok({ text: 'たとえ', lemma: 'たとえ', pos: 'ADV' }, 'tatoe');
       const pred = b.tok({ posOneOf: ['VERB', 'ADJ'] }, 'pred');
+<<<<<<< HEAD
       const _to = b.tok({ text: 'と', posOneOf: ['SCONJ', 'ADP'] }, 'to');
       const _shi = b.tok({ text: 'し', posOneOf: ['AUX', 'SCONJ'] }, 'shi');
       const _te = b.tok({ text: 'て', pos: 'SCONJ' }, 'te');
       const mo = b.tok({ text: 'も', pos: 'SCONJ' }, 'mo');
       void _to; void _shi; void _te;
+=======
+      const to = b.tok({ text: 'と', posOneOf: ['SCONJ', 'ADP'] }, 'to');
+      const shi = b.tok({ text: 'し', posOneOf: ['AUX', 'SCONJ'] }, 'shi');
+      const te = b.tok({ text: 'て', pos: 'SCONJ' }, 'te');
+      const mo = b.tok({ text: 'も', pos: 'SCONJ' }, 'mo');
+>>>>>>> jlpt3-tatoe-temo
       b.inOrder(tatoe, pred, 10);
       b.captureSpan('たとえ-としても', tatoe, mo);
     }
