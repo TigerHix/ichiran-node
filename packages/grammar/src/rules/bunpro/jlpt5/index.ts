@@ -19,6 +19,7 @@ import gaAruNoun from './がある-noun.js';
 import gairu from './がいる.js';
 import kuru from './くる.js';
 import shite from './して.js';
+import teiru3 from './ている3.js';
 import suru from './する.js';
 import tekara from './てから.js';
 import teKudasai from './てください.js';
@@ -144,6 +145,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     politeVerbEndings,
     shite,
     suru,
+    teiru3,
     soko,
     sono,
     sore,
