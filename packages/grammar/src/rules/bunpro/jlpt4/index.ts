@@ -4,6 +4,9 @@ import amarinai from './あまり-ない.js';
 import dandan from './だんだん.js';
 import dakedenaku from './だけでなく.js';
 import teshimau from './てしまう-ちゃう.js';
+import tearu from './てある.js';
+import teiku from './ていく.js';
+import teiruaidani from './ているあいだに.js';
 import verbTeB from './verbて-b.js';
 import verbTeB2 from './verbて-b2.js';
 import verbTeNounDeB from './verb-て-noun-で-b.js';
@@ -46,6 +49,9 @@ export const BUNPRO_JLPT4: Ruleset = {
     dandan,
     dakedenaku,
     teshimau,
+    tearu,
+    teiku,
+    teiruaidani,
     verbTeB,
     verbTeB2,
     verbTeNounDeB,
