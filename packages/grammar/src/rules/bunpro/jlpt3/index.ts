@@ -6,7 +6,6 @@ import ari from './あり.js';
 import aruiwa from './あるいは.js';
 import ikuraDemo from './いくら-でも.js';
 import uchiNi from './うちに.js';
-import tatoeTemo from './たとえ-ても.js';
 import okageDe from './おかげで.js';
 import okiNi from './おきに.js';
 import kake from './かけ.js';
@@ -33,8 +32,7 @@ import kotoWaNai from './ことはない.js';
 import saCasualYo from './さ-casualよ.js';
 import dewaSoredewa from './では-それでは-じゃあ.js';
 import youToShinai from './-ようとしない.js';
-import zutto2 from './ずっと2.js';
-import tate from './たて.js';
+import tatotanNi from './たとたんに.js';
 
 export const BUNPRO_JLPT3: Ruleset = {
   id: 'bunpro.jlpt3',
@@ -45,7 +43,6 @@ export const BUNPRO_JLPT3: Ruleset = {
     aruiwa,
     ikuraDemo,
     uchiNi,
-    tatoeTemo,
     okageDe,
     okiNi,
     kake,
@@ -72,7 +69,6 @@ export const BUNPRO_JLPT3: Ruleset = {
     saCasualYo,
     dewaSoredewa,
     youToShinai,
-    zutto2,
-    tate,
+    tatotanNi,
   ],
 };
