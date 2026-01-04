@@ -20,6 +20,7 @@ import dakedenaku from './だけでなく.js';
 import dakede from './だけで.js';
 import dasu from './だす.js';
 import dandan from './だんだん.js';
+import demodemo from './でも-でも.js';
 import tsuzukeru from './つづける.js';
 import teshimau from './てしまう-ちゃう.js';
 import tekuretearigatou from './てくれてありがとう.js';
@@ -80,6 +81,7 @@ import taradou from './たらどう.js';
 import daitai from './だいたい.js';
 import dagadega from './だが・ですが.js';
 import dedekirukaradekiru from './でできる-からできる.js';
+import toiwareteiru from './といわれている.js';
 import teyokatta from './てよかった.js';
 import toutou from './とうとう.js';
 
@@ -107,6 +109,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     dakede,
     dasu,
     dandan,
+    demodemo,
     tsuzukeru,
     teshimau,
     tekuretearigatou,
@@ -167,6 +170,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     daitai,
     dagadega,
     dedekirukaradekiru,
+    toiwareteiru,
     teyokatta,
     toutou,
   ],
