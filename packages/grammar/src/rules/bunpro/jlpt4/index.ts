@@ -14,6 +14,7 @@ import nodaroka from './のだろうか.js';
 import nonakade from './のなかで.js';
 import nonidespite from './のに-despite.js';
 import noyoni from './のように-のような.js';
+import rashii1 from './らしい1.js';
 import atode from './あとで.js';
 import amarinai from './あまり-ない.js';
 import verbpassive from './Verb[passive].js';
@@ -248,6 +249,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     owaru,
     osuru,
     questionphraseka,
+    rashii1,
     sa,
     shishi,
     shikanai,
