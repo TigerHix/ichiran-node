@@ -6,6 +6,7 @@ import ari from './あり.js';
 import aruiwa from './あるいは.js';
 import ikuraDemo from './いくら-でも.js';
 import uchiNi from './うちに.js';
+import tatoeTemo from './たとえ-ても.js';
 import okageDe from './おかげで.js';
 import okiNi from './おきに.js';
 import kake from './かけ.js';
@@ -42,6 +43,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     aruiwa,
     ikuraDemo,
     uchiNi,
+    tatoeTemo,
     okageDe,
     okiNi,
     kake,
