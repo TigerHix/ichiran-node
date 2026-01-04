@@ -78,9 +78,9 @@ import sono from './その.js';
 import sore from './それ.js';
 import doko from './どこ.js';
 import dono from './どの.js';
-import dare from './だれ.js';
 import dore from './どれ.js';
 import mo from './も.js';
+import nakuchaNakya from './なくちゃ-なきゃ.js';
 
 export const BUNPRO_JLPT5: Ruleset = {
   id: 'bunpro.jlpt5',
@@ -166,5 +166,6 @@ export const BUNPRO_JLPT5: Ruleset = {
     verbTe,
     verbTeB,
     verbTemoIi,
+    nakuchaNakya,
   ],
 };
