@@ -81,6 +81,7 @@ import tara from './たら.js';
 import taradou from './たらどう.js';
 import daitai from './だいたい.js';
 import dagadega from './だが・ですが.js';
+import nodearouka from './のだろうか.js';
 import dedekirukaradekiru from './でできる-からできる.js';
 import toiwareteiru from './といわれている.js';
 import tokiita from './ときいた.js';
@@ -202,6 +203,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     taradou,
     daitai,
     dagadega,
+    nodearouka,
     dedekirukaradekiru,
     toiwareteiru,
     tokiita,
