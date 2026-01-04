@@ -22,6 +22,7 @@ import gahitsuyou from './がひつよう.js';
 import gahoshii from './がほしい.js';
 import gamirareru from './がみられる.js';
 import kotogadekiru from './ことができる.js';
+import soreni from './それに.js';
 
 export const BUNPRO_JLPT4: Ruleset = {
   id: 'bunpro.jlpt4',
@@ -45,6 +46,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     kana,
     kamoshirenai,
     kotogadekiru,
+    soreni,
     gasuru,
     gahitsuyou,
     gahoshii,

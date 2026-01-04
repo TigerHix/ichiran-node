@@ -6,7 +6,6 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Matches verb + ことにする "decide to do"
  *
  * This expresses the speaker's volitional decision to take (or not take) an action.
- * It's a strong expression showing resolve in the decision.
  *
  * Structure:
  * - Verb［る］+ ことにする (casual present)
@@ -17,272 +16,245 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Verb［ない］+ ことにします (polite present, negative)
  * - Verb［る］+ ことにしました (polite past)
  * - Verb［ない］+ ことにしました (polite past, negative)
- * - Verb［る］+ ことにしている (habitual decision)
- * - Verb［ない］+ ことにしている (habitual decision, negative)
+ * - Verb［る］+ ことにしている (habitual)
+ * - Verb［ない］+ ことにしている (habitual, negative)
  * - Verb［る］+ ことにしてる (casual progressive)
  * - Verb［ない］+ ことにしてる (casual progressive, negative)
- * - Verb［る］+ ことにしない (negative of the decision itself)
- * - Verb［ない］+ ことにしない (negative of the decision itself, double negative)
+ * - Verb［る］+ ことにしない (negative decision)
+ * - Verb［ない］+ ことにしない (negative decision, double negative)
  * - Verb［る］+ ことにし (connective form)
  * - Verb［ない］+ ことにし (connective form, negative)
- *
- * Examples:
- * - 毎日、数分文法を勉強する事にした (I decided to study grammar every day)
- * - タマキさんと箱根に行くことにする (I decide to go to Hakone with Tamaki-san)
- * - 肉を食べないことにする (I decided not to eat meat)
- * - テレビゲームをしないことにします (I have decided not to play video games)
- *
- * GiNZA parse structure:
- * - 勉強する事にした: 勉強する(verb) + こと(noun) + に(particle) + した(verb+aux)
- * - 行くことにする: 行く(verb) + こと(noun) + に(particle) + する(verb)
  */
 export default linguisticRule('ことにする', (r) => {
   r.either(
-    // Branch 1: Verb［る］+ ことにする (casual present)
+    // Branch 1: Verb + こと + に + する (dictionary form present)
     (b) => {
-      const pred = b.verb({}, 'pred'); // Any verb except する, なる, ある
       const koto = b.noun({ lemma: 'こと' }, 'koto');
-      b.inOrder(pred, koto); // No maxDistance - find the right verb before こと
+      const ni = b.particle({ text: 'に' }, 'ni');
+      const suru = b.verb({ text: 'する', lemma: 'する' }, 'suru');
+      b.inOrder(koto, ni, suru);
 
-      const ni = b.particle('に', 'ni');
-      b.inOrder(koto, ni, 1);
-
-      const suru = b.verb({ lemma: 'する' }, 'suru');
-      b.inOrder(ni, suru, 1);
+      const pred = b.verb({}, 'pred');
+      b.inOrder(pred, koto);
 
       b.captureSpan('ことにする', pred, suru);
     },
-    // Branch 2: Verb［ない］+ ことにする (casual present, negative)
-    (b) => {
-      const pred = b.verb({}, 'pred');
-      const nai = b.aux({ lemma: 'ない' }, 'nai');
-      b.auxOf(pred, nai);
 
+    // Branch 2: Verb + こと + に + した (past)
+    (b) => {
       const koto = b.noun({ lemma: 'こと' }, 'koto');
+      const ni = b.particle({ text: 'に' }, 'ni');
+      const shita = b.verb({ text: 'した', lemma: 'する' }, 'shita');
+      b.inOrder(koto, ni, shita);
+
+      const pred = b.verb({}, 'pred');
+      b.inOrder(pred, koto);
+
+      b.captureSpan('ことにする', pred, shita);
+    },
+
+    // Branch 3: Verb + こと + に + します (polite present)
+    (b) => {
+      const koto = b.noun({ lemma: 'こと' }, 'koto');
+      const ni = b.particle({ text: 'に' }, 'ni');
+      const shimasu = b.verb({ text: 'します', lemma: 'する' }, 'shimasu');
+      b.inOrder(koto, ni, shimasu);
+
+      const pred = b.verb({}, 'pred');
+      b.inOrder(pred, koto);
+
+      b.captureSpan('ことにする', pred, shimasu);
+    },
+
+    // Branch 4: Verb + こと + に + しました (polite past)
+    (b) => {
+      const koto = b.noun({ lemma: 'こと' }, 'koto');
+      const ni = b.particle({ text: 'に' }, 'ni');
+      const shimashita = b.verb({ text: 'しました', lemma: 'する' }, 'shimashita');
+      b.inOrder(koto, ni, shimashita);
+
+      const pred = b.verb({}, 'pred');
+      b.inOrder(pred, koto);
+
+      b.captureSpan('ことにする', pred, shimashita);
+    },
+
+    // Branch 5: Verb + ない + こと + に + する (negative verb, present)
+    (b) => {
+      const koto = b.noun({ lemma: 'こと' }, 'koto');
+      const ni = b.particle({ text: 'に' }, 'ni');
+      const suru = b.verb({ text: 'する', lemma: 'する' }, 'suru');
+      b.inOrder(koto, ni, suru);
+
+      const nai = b.aux({ lemma: 'ない' }, 'nai');
       b.inOrder(nai, koto);
 
-      const ni = b.particle('に', 'ni');
-      b.inOrder(koto, ni, 1);
-
-      const suru = b.verb({ lemma: 'する' }, 'suru');
-      b.inOrder(ni, suru, 1);
+      const pred = b.verb({}, 'pred');
+      b.auxOf(pred, nai);
 
       b.captureSpan('ことにする', pred, suru);
     },
-    // Branch 3: Verb［る］+ ことにした (casual past)
+
+    // Branch 6: Verb + ない + こと + に + した (negative verb, past)
     (b) => {
-      const pred = b.verb({}, 'pred');
       const koto = b.noun({ lemma: 'こと' }, 'koto');
-      b.inOrder(pred, koto);
-
-      const ni = b.particle('に', 'ni');
-      b.inOrder(koto, ni, 1);
-
+      const ni = b.particle({ text: 'に' }, 'ni');
       const shita = b.verb({ text: 'した', lemma: 'する' }, 'shita');
-      b.inOrder(ni, shita, 1);
+      b.inOrder(koto, ni, shita);
+
+      const nai = b.aux({ lemma: 'ない' }, 'nai');
+      b.inOrder(nai, koto);
+
+      const pred = b.verb({}, 'pred');
+      b.auxOf(pred, nai);
 
       b.captureSpan('ことにする', pred, shita);
     },
-    // Branch 4: Verb［ない］+ ことにした (casual past, negative)
-    (b) => {
-      const pred = b.verb({}, 'pred');
-      const nai = b.aux({ lemma: 'ない' }, 'nai');
-      b.auxOf(pred, nai);
 
+    // Branch 7: Verb + ない + こと + に + します (negative verb, polite present)
+    (b) => {
       const koto = b.noun({ lemma: 'こと' }, 'koto');
+      const ni = b.particle({ text: 'に' }, 'ni');
+      const shimasu = b.verb({ text: 'します', lemma: 'する' }, 'shimasu');
+      b.inOrder(koto, ni, shimasu);
+
+      const nai = b.aux({ lemma: 'ない' }, 'nai');
       b.inOrder(nai, koto);
 
-      const ni = b.particle('に', 'ni');
-      b.inOrder(koto, ni, 1);
-
-      const shita = b.verb({ text: 'した', lemma: 'する' }, 'shita');
-      b.inOrder(ni, shita, 1);
-
-      b.captureSpan('ことにする', pred, shita);
-    },
-    // Branch 5: Verb［る］+ ことにします (polite present)
-    (b) => {
       const pred = b.verb({}, 'pred');
-      const koto = b.noun({ lemma: 'こと' }, 'koto');
-      b.inOrder(pred, koto);
-
-      const ni = b.particle('に', 'ni');
-      b.inOrder(koto, ni, 1);
-
-      const shimasu = b.verb({ text: 'します', lemma: 'する' }, 'shimasu');
-      b.inOrder(ni, shimasu, 1);
+      b.auxOf(pred, nai);
 
       b.captureSpan('ことにする', pred, shimasu);
     },
-    // Branch 6: Verb［ない］+ ことにします (polite present, negative)
-    (b) => {
-      const pred = b.verb({}, 'pred');
-      const nai = b.aux({ lemma: 'ない' }, 'nai');
-      b.auxOf(pred, nai);
 
+    // Branch 8: Verb + ない + こと + に + しました (negative verb, polite past)
+    (b) => {
       const koto = b.noun({ lemma: 'こと' }, 'koto');
+      const ni = b.particle({ text: 'に' }, 'ni');
+      const shimashita = b.verb({ text: 'しました', lemma: 'する' }, 'shimashita');
+      b.inOrder(koto, ni, shimashita);
+
+      const nai = b.aux({ lemma: 'ない' }, 'nai');
       b.inOrder(nai, koto);
 
-      const ni = b.particle('に', 'ni');
-      b.inOrder(koto, ni, 1);
-
-      const shimasu = b.verb({ text: 'します', lemma: 'する' }, 'shimasu');
-      b.inOrder(ni, shimasu, 1);
-
-      b.captureSpan('ことにする', pred, shimasu);
-    },
-    // Branch 7: Verb［る］+ ことにしました (polite past)
-    (b) => {
       const pred = b.verb({}, 'pred');
-      const koto = b.noun({ lemma: 'こと' }, 'koto');
-      b.inOrder(pred, koto);
-
-      const ni = b.particle('に', 'ni');
-      b.inOrder(koto, ni, 1);
-
-      const shimashita = b.verb({ text: 'しました', lemma: 'する' }, 'shimashita');
-      b.inOrder(ni, shimashita, 1);
+      b.auxOf(pred, nai);
 
       b.captureSpan('ことにする', pred, shimashita);
     },
-    // Branch 8: Verb［ない］+ ことにしました (polite past, negative)
+
+    // Branch 9: Verb + こと + に + している (progressive/habitual)
     (b) => {
-      const pred = b.verb({}, 'pred');
-      const nai = b.aux({ lemma: 'ない' }, 'nai');
-      b.auxOf(pred, nai);
-
       const koto = b.noun({ lemma: 'こと' }, 'koto');
-      b.inOrder(nai, koto);
-
-      const ni = b.particle('に', 'ni');
-      b.inOrder(koto, ni, 1);
-
-      const shimashita = b.verb({ text: 'しました', lemma: 'する' }, 'shimashita');
-      b.inOrder(ni, shimashita, 1);
-
-      b.captureSpan('ことにする', pred, shimashita);
-    },
-    // Branch 9: Verb［る］+ ことにしている (habitual decision - progressive)
-    (b) => {
-      const pred = b.verb({}, 'pred');
-      const koto = b.noun({ lemma: 'こと' }, 'koto');
-      b.inOrder(pred, koto);
-
-      const ni = b.particle('に', 'ni');
-      b.inOrder(koto, ni, 1);
-
+      const ni = b.particle({ text: 'に' }, 'ni');
       const shiteiru = b.verb({ text: 'している', lemma: 'する' }, 'shiteiru');
-      b.inOrder(ni, shiteiru, 1);
+      b.inOrder(koto, ni, shiteiru);
+
+      const pred = b.verb({}, 'pred');
+      b.inOrder(pred, koto);
 
       b.captureSpan('ことにする', pred, shiteiru);
     },
-    // Branch 10: Verb［ない］+ ことにしている (habitual decision - progressive, negative)
-    (b) => {
-      const pred = b.verb({}, 'pred');
-      const nai = b.aux({ lemma: 'ない' }, 'nai');
-      b.auxOf(pred, nai);
 
+    // Branch 10: Verb + ない + こと + に + している (negative verb, progressive)
+    (b) => {
       const koto = b.noun({ lemma: 'こと' }, 'koto');
+      const ni = b.particle({ text: 'に' }, 'ni');
+      const shiteiru = b.verb({ text: 'している', lemma: 'する' }, 'shiteiru');
+      b.inOrder(koto, ni, shiteiru);
+
+      const nai = b.aux({ lemma: 'ない' }, 'nai');
       b.inOrder(nai, koto);
 
-      const ni = b.particle('に', 'ni');
-      b.inOrder(koto, ni, 1);
-
-      const shiteiru = b.verb({ text: 'している', lemma: 'する' }, 'shiteiru');
-      b.inOrder(ni, shiteiru, 1);
+      const pred = b.verb({}, 'pred');
+      b.auxOf(pred, nai);
 
       b.captureSpan('ことにする', pred, shiteiru);
     },
-    // Branch 11: Verb［る］+ ことにしてる (casual progressive)
+
+    // Branch 11: Verb + こと + に + してる (casual progressive)
     (b) => {
-      const pred = b.verb({}, 'pred');
       const koto = b.noun({ lemma: 'こと' }, 'koto');
-      b.inOrder(pred, koto);
-
-      const ni = b.particle('に', 'ni');
-      b.inOrder(koto, ni, 1);
-
+      const ni = b.particle({ text: 'に' }, 'ni');
       const shiteru = b.verb({ text: 'してる', lemma: 'する' }, 'shiteru');
-      b.inOrder(ni, shiteru, 1);
+      b.inOrder(koto, ni, shiteru);
+
+      const pred = b.verb({}, 'pred');
+      b.inOrder(pred, koto);
 
       b.captureSpan('ことにする', pred, shiteru);
     },
-    // Branch 12: Verb［ない］+ ことにしてる (casual progressive, negative)
-    (b) => {
-      const pred = b.verb({}, 'pred');
-      const nai = b.aux({ lemma: 'ない' }, 'nai');
-      b.auxOf(pred, nai);
 
+    // Branch 12: Verb + ない + こと + に + してる (negative verb, casual progressive)
+    (b) => {
       const koto = b.noun({ lemma: 'こと' }, 'koto');
+      const ni = b.particle({ text: 'に' }, 'ni');
+      const shiteru = b.verb({ text: 'してる', lemma: 'する' }, 'shiteru');
+      b.inOrder(koto, ni, shiteru);
+
+      const nai = b.aux({ lemma: 'ない' }, 'nai');
       b.inOrder(nai, koto);
 
-      const ni = b.particle('に', 'ni');
-      b.inOrder(koto, ni, 1);
-
-      const shiteru = b.verb({ text: 'してる', lemma: 'する' }, 'shiteru');
-      b.inOrder(ni, shiteru, 1);
+      const pred = b.verb({}, 'pred');
+      b.auxOf(pred, nai);
 
       b.captureSpan('ことにする', pred, shiteru);
     },
-    // Branch 13: Verb［る］+ ことにしない (negative of the decision itself)
+
+    // Branch 13: Verb + こと + に + しない (negative of decision itself)
     (b) => {
-      const pred = b.verb({}, 'pred');
       const koto = b.noun({ lemma: 'こと' }, 'koto');
-      b.inOrder(pred, koto);
-
-      const ni = b.particle('に', 'ni');
-      b.inOrder(koto, ni, 1);
-
+      const ni = b.particle({ text: 'に' }, 'ni');
       const shinai = b.verb({ text: 'しない', lemma: 'する' }, 'shinai');
-      b.inOrder(ni, shinai, 1);
+      b.inOrder(koto, ni, shinai);
+
+      const pred = b.verb({}, 'pred');
+      b.inOrder(pred, koto);
 
       b.captureSpan('ことにする', pred, shinai);
     },
-    // Branch 14: Verb［ない］+ ことにしない (negative of the decision itself, double negative)
-    (b) => {
-      const pred = b.verb({}, 'pred');
-      const nai = b.aux({ lemma: 'ない' }, 'nai');
-      b.auxOf(pred, nai);
 
+    // Branch 14: Verb + ない + こと + に + しない (negative verb, negative decision)
+    (b) => {
       const koto = b.noun({ lemma: 'こと' }, 'koto');
+      const ni = b.particle({ text: 'に' }, 'ni');
+      const shinai = b.verb({ text: 'しない', lemma: 'する' }, 'shinai');
+      b.inOrder(koto, ni, shinai);
+
+      const nai = b.aux({ lemma: 'ない' }, 'nai');
       b.inOrder(nai, koto);
 
-      const ni = b.particle('に', 'ni');
-      b.inOrder(koto, ni, 1);
-
-      const shinai = b.verb({ text: 'しない', lemma: 'する' }, 'shinai');
-      b.inOrder(ni, shinai, 1);
+      const pred = b.verb({}, 'pred');
+      b.auxOf(pred, nai);
 
       b.captureSpan('ことにする', pred, shinai);
     },
-    // Branch 15: Verb［る］+ ことにし (connective form - te-form without て)
+
+    // Branch 15: Verb + こと + に + し (connective form)
     (b) => {
-      const pred = b.verb({}, 'pred');
       const koto = b.noun({ lemma: 'こと' }, 'koto');
-      b.inOrder(pred, koto);
-
-      const ni = b.particle('に', 'ni');
-      b.inOrder(koto, ni, 1);
-
+      const ni = b.particle({ text: 'に' }, 'ni');
       const shi = b.verb({ text: 'し', lemma: 'する' }, 'shi');
-      b.inOrder(ni, shi, 1);
+      b.inOrder(koto, ni, shi);
+
+      const pred = b.verb({}, 'pred');
+      b.inOrder(pred, koto);
 
       b.captureSpan('ことにする', pred, shi);
     },
-    // Branch 16: Verb［ない］+ ことにし (connective form - te-form without て, negative)
-    (b) => {
-      const pred = b.verb({}, 'pred');
-      const nai = b.aux({ lemma: 'ない' }, 'nai');
-      b.auxOf(pred, nai);
 
+    // Branch 16: Verb + ない + こと + に + し (negative verb, connective form)
+    (b) => {
       const koto = b.noun({ lemma: 'こと' }, 'koto');
+      const ni = b.particle({ text: 'に' }, 'ni');
+      const shi = b.verb({ text: 'し', lemma: 'する' }, 'shi');
+      b.inOrder(koto, ni, shi);
+
+      const nai = b.aux({ lemma: 'ない' }, 'nai');
       b.inOrder(nai, koto);
 
-      const ni = b.particle('に', 'ni');
-      b.inOrder(koto, ni, 1);
-
-      const shi = b.verb({ text: 'し', lemma: 'する' }, 'shi');
-      b.inOrder(ni, shi, 1);
+      const pred = b.verb({}, 'pred');
+      b.auxOf(pred, nai);
 
       b.captureSpan('ことにする', pred, shi);
     }
