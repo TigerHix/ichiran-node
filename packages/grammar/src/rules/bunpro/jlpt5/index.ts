@@ -81,6 +81,7 @@ import uVerbNegPast from './う-verb-neg-past.js';
 import nounMade from './noun-まで.js';
 import vMade from './v-まで.js';
 import negativeIAdjectives from './negative-い-adjectives.js';
+import nogasuki from './のがすき.js';
 import pastTenseIAdjectives from './past-tense-い-adjectives.js';
 import politeVerbEndings from './polite-verb-endings.js';
 import kirai from './きらい.js';
@@ -190,6 +191,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     dono,
     dore,
     mo,
+    nogasuki,
     tekara,
     teKudasai,
     teWaIkenai,
