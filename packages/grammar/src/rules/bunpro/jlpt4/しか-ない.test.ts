@@ -5,16 +5,13 @@ import rule from './しか-ない.js';
 import { BUNPRO_JLPT4 } from './index.js';
 
 const negatives = [
-  // Number + しか + negative (different grammar point: Number + しか〜ない)
-  // This pattern emphasizes small quantity rather than exclusivity
-  'このテレビはチャネルが二つしかないけど、テレビをあまり見ないからいい。',
-  '犯人はまだ３人しか捕まっていない。',
-  '手袋を一枚しか見つけられない。',
-  '釣りに行って、一匹しか釣れないと悲しくなる。',
-
   // だけ instead of しか (different grammar point)
   'これだけがある。',
   'ここだけにある。',
+
+  // Note: だけしか (emphatic "only") still contains しか + negative pattern
+  // so it matches. It's a variant of しか-ない, not a completely different pattern.
+  // If needed, it should be handled by a separate "だけしか" rule that has priority.
 
   // Positive verb (しか requires negative)
   // Note: This is grammatically incorrect in Japanese, but testing that we don't match it

@@ -11,47 +11,56 @@ export default linguisticRule('しか-ない', (r) => {
   const shika = r.particle('しか', 'shika');
 
   r.either(
-    // Pattern 1: Negative verb (～ない)
-    // Noun + しか + Verb［ない］
-    // お茶しかない (ocha + shika + nai)
-    // 牛乳しか残っていない (gyuunyuu + shika + nokotte + iru in 未然形-一般 + nai)
+    // Pattern 1: Noun + しか + ない (existential verb or auxiliary)
+    // Handles: お茶しかない, 牛乳しかない (where ない is "not exist")
     (b) => {
       const noun = b.noun({
-        tagOneOf: ['名詞-普通名詞-一般', '名詞-普通名詞-サ変形状', '名詞-普通名詞-サ変可能', '名詞-代名詞'],
+        // Exclude adverbs like ちょっと
+        textNoneOf: ['ちょっと', 'すこし', '多少', '幾分'],
       }, 'noun');
 
-      // Negative auxiliary ない
-      const nai = b.aux({
+      // ない can be either AUX (助動詞-ナイ)
+      const nai = b.tok({
         lemma: 'ない',
         conjugationClass: '助動詞-ナイ',
       }, 'nai');
 
-      // Optional: main verb before nai (e.g., 残っていない)
-      b.optional((ob) => {
-        const verb = ob.verb({
-          inflectionForm: '未然形-一般',
-        }, 'verb');
-        ob.auxOf(verb, nai);
-        ob.inOrder(noun, verb, 10);
-      });
-
-      // If no verb, noun directly precedes nai (e.g., お茶しかない)
-      b.inOrder(noun, nai, 10);
+      // noun + しか + ない (e.g., お茶しかない)
+      b.inOrder(noun, shika, 3);
       b.inOrder(shika, nai, 10);
 
       b.captureSpan('しか-ない', shika, nai);
     },
 
-    // Pattern 2: Negative polite (～ません / ～ありません)
-    // Noun + しか + ません / ありません
+    // Pattern 2: Noun + しか + verb in 未然形-一般 + ない
+    // Handles: 牛乳しか残っていない, 人しかいわない, ここにしかすまない
+    (b) => {
+      const noun = b.noun({
+        textNoneOf: ['ちょっと', 'すこし', '多少'],
+      }, 'noun');
+
+      const verb = b.verb({
+        inflectionForm: '未然形-一般',
+      }, 'verb');
+      const nai = b.aux({
+        lemma: 'ない',
+        conjugationClass: '助動詞-ナイ',
+      }, 'nai');
+      b.auxOf(verb, nai);
+
+      b.inOrder(noun, shika, 3);
+      b.inOrder(shika, verb, 10);
+
+      b.captureSpan('しか-ない', shika, nai);
+    },
+
+    // Pattern 3: Negative polite (～ません)
+    // Noun + しか + Verb［連用形］ません
     // ここしかありません (koko + shika + arimasen)
     // ここしかいません (koko + shika + imasen)
     (b) => {
-      const noun = b.noun({
-        tagOneOf: ['名詞-普通名詞-一般', '名詞-代名詞'],
-      }, 'noun');
+      const noun = b.noun({}, 'noun');
 
-      // Verb in 連用形-一般 + aux ません
       const verb = b.verb({
         inflectionForm: '連用形-一般',
       }, 'verb');
@@ -61,18 +70,17 @@ export default linguisticRule('しか-ない', (r) => {
       }, 'mase');
       b.auxOf(verb, mase);
 
-      b.inOrder(noun, verb, 10);
+      b.inOrder(noun, shika, 3);
       b.inOrder(shika, mase, 10);
 
       b.captureSpan('しか-ない', shika, mase);
     },
 
-    // Pattern 3: Negative semi-polite (～ないです)
-    // Noun + しか + ないです
-    // ここしかないです (koko + shika + nai + desu)
+    // Pattern 4: Negative semi-polite (～ないです)
+    // Noun + しか + Verb［未然形］ないです or Noun + しか + ないです
     (b) => {
       const noun = b.noun({
-        tagOneOf: ['名詞-普通名詞-一般', '名詞-代名詞'],
+        textNoneOf: ['ちょっと', 'すこし', '多少'],
       }, 'noun');
 
       // Optional verb before nai
@@ -80,9 +88,22 @@ export default linguisticRule('しか-ない', (r) => {
         const verb = ob.verb({
           inflectionForm: '未然形-一般',
         }, 'verb');
+        const nai = ob.aux({
+          lemma: 'ない',
+          conjugationClass: '助動詞-ナイ',
+        }, 'nai');
+        ob.auxOf(verb, nai);
         ob.inOrder(noun, verb, 10);
+        ob.inOrder(shika, nai, 10);
+
+        const desu = ob.aux({
+          lemma: 'です',
+        }, 'desu');
+        ob.inOrder(nai, desu, 1);
+        ob.captureSpan('しか-ない', shika, desu);
       });
 
+      // No verb: Noun + しか + ないです
       const nai = b.aux({
         lemma: 'ない',
         conjugationClass: '助動詞-ナイ',
@@ -92,19 +113,17 @@ export default linguisticRule('しか-ない', (r) => {
       }, 'desu');
       b.inOrder(nai, desu, 1);
 
-      b.inOrder(noun, desu, 10);
+      b.inOrder(noun, shika, 3);
       b.inOrder(shika, desu, 10);
 
       b.captureSpan('しか-ない', shika, desu);
     },
 
-    // Pattern 4: Progressive negative (～ていない)
-    // Noun + しか + ～ていない
-    // ３人しか捕まっていない (sannin + shika + tsukamatte + iru in 未然形-一般 + nai)
+    // Pattern 5: Progressive negative (～ていない)
+    // Noun + しか + Verb［連用形］ている in 未然形 + ない
+    // ３人しか捕まっていない (sannin + shika + tsukamatte + iru + nai)
     (b) => {
-      const noun = b.noun({
-        tagOneOf: ['名詞-普通名詞-一般', '名詞-数詞', '名詞-代名詞'],
-      }, 'noun');
+      const noun = b.noun({}, 'noun');
 
       const verb = b.verb({
         inflectionForm: '連用形-一般',
@@ -127,20 +146,18 @@ export default linguisticRule('しか-ない', (r) => {
       b.inOrder(te, iru, 1);
       b.auxOf(iru, nai);
 
-      b.inOrder(noun, verb, 10);
-      b.inOrder(shika, nai, 10);
+      b.inOrder(noun, shika, 3);
+      b.inOrder(shika, verb, 10);
 
       b.captureSpan('しか-ない', shika, nai);
     },
 
-    // Pattern 5: Potential negative (～れない / ～できない)
-    // Noun + しか + ～れない
-    // 一匹しか釣れない (ippiki + shika + tsure + nai - potential form)
-    // ことしかできない (koto + shika + deki + nai - potential)
+    // Pattern 6: Potential negative (～れない / ～できない)
+    // Noun + しか + Verb［未然形］ない (potential form)
+    // 一匹しか釣れない (ippiki + shika + tsure + nai)
+    // ことしかできない (koto + shika + deki + nai)
     (b) => {
-      const noun = b.noun({
-        tagOneOf: ['名詞-普通名詞-一般', '名詞-数詞', '名詞-普通名詞-サ変形状'],
-      }, 'noun');
+      const noun = b.noun({}, 'noun');
 
       const verb = b.verb({
         inflectionForm: '未然形-一般',
@@ -151,19 +168,17 @@ export default linguisticRule('しか-ない', (r) => {
       }, 'nai');
       b.auxOf(verb, nai);
 
-      b.inOrder(noun, verb, 10);
-      b.inOrder(shika, nai, 10);
+      b.inOrder(noun, shika, 3);
+      b.inOrder(shika, verb, 10);
 
       b.captureSpan('しか-ない', shika, nai);
     },
 
-    // Pattern 6: Past negative (～なかった)
-    // Noun + しか + ～なかった
-    // ロウソクしかとらなかった (rousoku + shika + totra + nakatta)
+    // Pattern 7: Past negative (～なかった)
+    // Noun + しか + Verb［連用形］なかった
+    // ロウソクしかとらなかった (rousoku + shika + toreta + nakatta)
     (b) => {
-      const noun = b.noun({
-        tagOneOf: ['名詞-普通名詞-一般', '名詞-代名詞'],
-      }, 'noun');
+      const noun = b.noun({}, 'noun');
 
       const verb = b.verb({
         inflectionForm: '連用形-一般',
@@ -179,8 +194,8 @@ export default linguisticRule('しか-ない', (r) => {
       b.inOrder(verb, nakat, 1);
       b.inOrder(nakat, ta, 1);
 
-      b.inOrder(noun, verb, 10);
-      b.inOrder(shika, ta, 10);
+      b.inOrder(noun, shika, 3);
+      b.inOrder(shika, verb, 10);
 
       b.captureSpan('しか-ない', shika, ta);
     }
