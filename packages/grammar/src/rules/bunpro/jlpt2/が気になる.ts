@@ -222,6 +222,109 @@ export default linguisticRule('が気になる', (r) => {
       b.auxOf(nat, imasu);
 
       b.captureSpan('が気になる', topic, imasu);
+    },
+    // Branch 7: Merged "がき" token - casual present (〜がきになる)
+    // GiNZA sometimes tokenizes "がき" as a single noun
+    (b) => {
+      const topic = b.tok({
+        posOneOf: ['NOUN', 'PROPN', 'PRON'],
+        depOneOf: ['compound', 'nmod', 'nsubj', 'obj', 'obl'],
+      }, 'topic');
+
+      const gaki = b.noun({ lemma: 'がき' }, 'gaki');
+      b.inOrder(topic, gaki, 5);
+
+      const ni = b.particle('に', 'ni');
+      b.inOrder(gaki, ni, 1);
+
+      const naru = b.verb({
+        lemma: 'なる',
+        inflectionForm: '終止形-一般',
+      }, 'naru');
+      b.inOrder(ni, naru, 3);
+
+      b.captureSpan('が気になる', topic, naru);
+    },
+    // Branch 8: Merged "がき" token - polite present (〜がきになります)
+    (b) => {
+      const topic = b.tok({
+        posOneOf: ['NOUN', 'PROPN', 'PRON'],
+        depOneOf: ['compound', 'nmod', 'nsubj', 'obj', 'obl'],
+      }, 'topic');
+
+      const gaki = b.noun({ lemma: 'がき' }, 'gaki');
+      b.inOrder(topic, gaki, 5);
+
+      const ni = b.particle('に', 'ni');
+      b.inOrder(gaki, ni, 1);
+
+      const nari = b.verb({
+        lemma: 'なる',
+        inflectionForm: '連用形-一般',
+      }, 'nari');
+      b.inOrder(ni, nari, 3);
+
+      const masu = b.aux({
+        lemma: 'ます',
+        inflectionForm: '終止形-一般',
+      }, 'masu');
+      b.auxOf(nari, masu);
+
+      b.captureSpan('が気になる', topic, masu);
+    },
+    // Branch 9: Merged "がき" token - casual progressive (〜がきになっている)
+    (b) => {
+      const topic = b.tok({
+        posOneOf: ['NOUN', 'PROPN', 'PRON'],
+        depOneOf: ['compound', 'nmod', 'nsubj', 'obj', 'obl'],
+      }, 'topic');
+
+      const gaki = b.noun({ lemma: 'がき' }, 'gaki');
+      b.inOrder(topic, gaki, 5);
+
+      const ni = b.particle('に', 'ni');
+      b.inOrder(gaki, ni, 1);
+
+      const nat = b.verb({
+        lemma: 'なる',
+        inflectionForm: '連用形-促音便',
+      }, 'nat');
+      b.inOrder(ni, nat, 1);
+
+      const te = b.tok({ lemma: 'て' }, 'te');
+      b.auxOf(nat, te);
+
+      const iru = b.aux({ lemma: 'いる' }, 'iru');
+      b.auxOf(nat, iru);
+
+      b.captureSpan('が気になる', topic, iru);
+    },
+    // Branch 10: Merged "がき" token - polite progressive (〜がきになっています)
+    (b) => {
+      const topic = b.tok({
+        posOneOf: ['NOUN', 'PROPN', 'PRON'],
+        depOneOf: ['compound', 'nmod', 'nsubj', 'obj', 'obl'],
+      }, 'topic');
+
+      const gaki = b.noun({ lemma: 'がき' }, 'gaki');
+      b.inOrder(topic, gaki, 5);
+
+      const ni = b.particle('に', 'ni');
+      b.inOrder(gaki, ni, 1);
+
+      const nat = b.verb({
+        lemma: 'なる',
+        inflectionForm: '連用形-促音便',
+      }, 'nat');
+      b.inOrder(ni, nat, 1);
+
+      const te = b.tok({ lemma: 'て' }, 'te');
+      b.auxOf(nat, te);
+
+      const imasu = b.aux({ lemma: 'います' }, 'imasu');
+      b.auxOf(nat, imasu);
+
+      b.captureSpan('が気になる', topic, imasu);
     }
   );
 });
