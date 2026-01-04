@@ -12,6 +12,7 @@ import karatoitte from './からといって.js';
 import karamiruto from './から見ると.js';
 import kotoDakara from './ことだから.js';
 import kotoNiNatteiru from './ことになっている.js';
+import gakininaru from './が気になる.js';
 import sasuga from './さすが.js';
 
 export const BUNPRO_JLPT2: Ruleset = {
