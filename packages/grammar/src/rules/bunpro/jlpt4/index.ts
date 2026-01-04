@@ -18,6 +18,7 @@ import verbteb2 from './verbて-b2.js';
 import verbtereq from './verbて-request.js';
 import dakedenaku from './だけでなく.js';
 import dakede from './だけで.js';
+import nisurukusuru from './にする-くする.js';
 import dasu from './だす.js';
 import dandan from './だんだん.js';
 import dondon from './どんどん.js';
@@ -88,6 +89,9 @@ import teyokatta from './てよかった.js';
 import toutou from './とうとう.js';
 import nakerebaikenai from './なければいけない.js';
 import nakerebanaranai from './なければならない.js';
+import mitaini from './みたいに-みたいな.js';
+import mainoyouni from './まい-ように.js';
+import youniyouna from './ように-ような.js';
 import nakute from './なくて.js';
 import nakuteconjunction from './なくて-conjunction.js';
 import nakutemoii from './なくてもいい.js';
@@ -139,6 +143,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     verbtereq,
     dakedenaku,
     dakede,
+    nisurukusuru,
     dasu,
     dandan,
     dondon,
@@ -210,6 +215,9 @@ export const BUNPRO_JLPT4: Ruleset = {
     nakerebaikenai,
     nakerebanaranai,
     nakute,
+    mitaini,
+    mainoyouni,
+    youniyouna,
     nakuteconjunction,
     nakutemoii,
     naosu,
