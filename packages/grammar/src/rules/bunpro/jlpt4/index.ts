@@ -17,6 +17,7 @@ import kata from './かた.js';
 import kadouka from './かどうか.js';
 import kana from './かな.js';
 import kamoshirenai from './かもしれない.js';
+import questionPhraseKa from './question-phrase-か.js';
 import gasuru from './がする.js';
 import gahitsuyou from './がひつよう.js';
 import gahoshii from './がほしい.js';
@@ -47,6 +48,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     kadouka,
     kana,
     kamoshirenai,
+    questionPhraseKa,
     kotogadekiru,
     sou,
     tagaru,
