@@ -56,6 +56,7 @@ import tate from './たて.js';
 import tatoeTemo from './たとえ-ても.js';
 import tatotani from './たとたんに.js';
 import tabini from './たびに.js';
+import toori from './とおり.js';
 import tameNi from './ため-に.js';
 import tameni from './ために.js';
 import tamonoDa from './たものだ.js';
@@ -140,6 +141,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     tatoeTemo,
     tatotani,
     tabini,
+    toori,
     tameNi,
     tameni,
     tamonoDa,
