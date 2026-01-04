@@ -100,6 +100,7 @@ import doko from './どこ.js';
 import dono from './どの.js';
 import dore from './どれ.js';
 import mo from './も.js';
+import mou from './もう.js';
 
 export const BUNPRO_JLPT5: Ruleset = {
   id: 'bunpro.jlpt5',
@@ -190,6 +191,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     dono,
     dore,
     mo,
+    mou,
     tekara,
     teKudasai,
     teWaIkenai,
