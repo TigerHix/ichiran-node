@@ -18,7 +18,6 @@ import gachi from './がち.js';
 import kiri from './きり.js';
 import gimi from './ぎみ.js';
 import kuseni from './くせに.js';
-import zuni from './ずに.js';
 import kurai2 from './くらい2.js';
 import koso from './こそ.js';
 import kotoKa from './ことか.js';
@@ -32,10 +31,8 @@ import kotoNiNaru from './ことになる.js';
 import kotoWaNai from './ことはない.js';
 import saCasualYo from './さ-casualよ.js';
 import dewaSoredewa from './では-それでは-じゃあ.js';
-import zunihairarenai from './ずにはいられない.js';
 import youToShinai from './-ようとしない.js';
-import youToShitaGa from './verb-volitional-としたが.js';
-import zutto2 from './ずっと2.js';
+import zutsu from './ずつ.js';
 
 export const BUNPRO_JLPT3: Ruleset = {
   id: 'bunpro.jlpt3',
@@ -58,7 +55,6 @@ export const BUNPRO_JLPT3: Ruleset = {
     kiri,
     gimi,
     kuseni,
-    zuni,
     kurai2,
     koso,
     kotoKa,
@@ -72,9 +68,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     kotoWaNai,
     saCasualYo,
     dewaSoredewa,
-    zunihairarenai,
     youToShinai,
-    youToShitaGa,
-    zutto2,
+    zutsu,
   ],
 };
