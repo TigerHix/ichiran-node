@@ -66,6 +66,7 @@ import ppanashi from './っぱなし.js';
 import tsuide from './ついでに.js';
 import tsumari from './つまり.js';
 import teGoran from './てごらん.js';
+import tteSlang from './って-slang.js';
 import dewaSoredewa from './では-それでは-じゃあ.js';
 import temoKamawanai from './てもかまわない.js';
 import dearu from './である.js';
@@ -150,6 +151,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     tsuide,
     tsumari,
     teGoran,
+    tteSlang,
     dewaSoredewa,
     temoKamawanai,
     dearu,
