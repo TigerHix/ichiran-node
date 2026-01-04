@@ -1,9 +1,10 @@
 {
   "name": "@ichiran/grammar",
   "version": "0.0.0",
-  "type": "module",
   "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "devDependencies": {
+    "@types/node": "^22.10.2"
+  },
   "exports": {
     ".": "./dist/index.js"
   },
@@ -15,12 +16,10 @@
     "typecheck": "tsc --noEmit",
     "test": "bun test tests/"
   },
+  "sideEffects": false,
+  "type": "module",
+  "types": "./dist/index.d.ts",
   "dependencies": {
     "zod": "^3.24.1"
-  },
-  "devDependencies": {
-    "@types/node": "^22.10.2"
-  },
-  "sideEffects": false
+  }
 }
-

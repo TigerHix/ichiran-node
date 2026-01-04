@@ -11,6 +11,7 @@ import okudasai from './お-ください.js';
 import osuru from './お-する.js';
 import oninaru from './お-になる.js';
 import owaru from './おわる.js';
+import verbpotential from './Verb[potential].ts';
 import kai from './かい.js';
 import kashira from './かしら.js';
 import kata from './かた.js';
@@ -41,6 +42,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     osuru,
     oninaru,
     owaru,
+    verbpotential,
     kai,
     kashira,
     kata,
