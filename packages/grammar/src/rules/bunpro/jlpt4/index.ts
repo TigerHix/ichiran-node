@@ -1,6 +1,7 @@
 import type { Ruleset } from '../../../ruleset.js';
 import atode from './あとで.js';
 import amarinai from './あまり-ない.js';
+import baaiha from './ばあいは.js';
 import verbpassive from './Verb[passive].js';
 import verbpotential from './Verb[potential].js';
 import causativepassive from './causative-passive.js';
@@ -122,6 +123,7 @@ export const BUNPRO_JLPT4: Ruleset = {
   rules: [
     atode,
     amarinai,
+    baaiha,
     verbpassive,
     verbpotential,
     causativepassive,
