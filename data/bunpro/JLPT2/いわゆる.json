@@ -1,0 +1,666 @@
+{
+  "data": {
+    "id": "564",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 564,
+      "level": "JLPT2",
+      "lesson_id": 39,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "いわゆる",
+      "nuance": "あるものが一般（いっぱん）的（てき）には(A)と知（し）られている、又（また）は呼（よ）ばれているということを示（しめ）す時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。",
+      "grammar_order": 718,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 330,
+        "title": "にすぎない",
+        "slug": "にすぎない"
+      },
+      "previous_grammar_point": {
+        "id": 409,
+        "title": "それなのに",
+        "slug": "それなのに"
+      },
+      "lesson_count": "21/23",
+      "title": "いわゆる",
+      "furigana": "いわゆる",
+      "meaning": "What is called, So-called, Generally known",
+      "nuance_translation": "An <strong>old-fashioned</strong> grammar point expressing that something is commonly called or generally known as (A).",
+      "rare_kanji_warning": "所謂",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<strong>いわゆる</strong> + Noun",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/18058",
+      "metadata": "いわゆる, 所謂, iwayuru, pre-noun adjectival"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "182426",
+            "type": "study_question"
+          },
+          {
+            "id": "182427",
+            "type": "study_question"
+          },
+          {
+            "id": "182428",
+            "type": "study_question"
+          },
+          {
+            "id": "7191",
+            "type": "study_question"
+          },
+          {
+            "id": "7193",
+            "type": "study_question"
+          },
+          {
+            "id": "7194",
+            "type": "study_question"
+          },
+          {
+            "id": "7195",
+            "type": "study_question"
+          },
+          {
+            "id": "5780",
+            "type": "study_question"
+          },
+          {
+            "id": "7189",
+            "type": "study_question"
+          },
+          {
+            "id": "7190",
+            "type": "study_question"
+          },
+          {
+            "id": "7192",
+            "type": "study_question"
+          },
+          {
+            "id": "5778",
+            "type": "study_question"
+          },
+          {
+            "id": "7188",
+            "type": "study_question"
+          },
+          {
+            "id": "5779",
+            "type": "study_question"
+          },
+          {
+            "id": "7196",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "731",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1258",
+            "type": "related_content"
+          },
+          {
+            "id": "1257",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1398",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "182426",
+      "type": "study_question",
+      "attributes": {
+        "id": 182426,
+        "content": "ハンバーガーやフライドポテトは<span class='study-area-input'>____</span>ジャンクフードだ。",
+        "answer": "いわゆる",
+        "alternate_grammar": [],
+        "kanji_answer": "いわゆる",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/ハンバーガーやフライドポテトはいわゆるジャンクフードだ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Hamburgers and French fries are <strong>so-called</strong> junk food.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 564,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182427",
+      "type": "study_question",
+      "attributes": {
+        "id": 182427,
+        "content": "それは<span class='study-area-input'>____</span>陰謀論（いんぼうろん）というものですね？",
+        "answer": "いわゆる",
+        "alternate_grammar": [],
+        "kanji_answer": "いわゆる",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/これはいわゆる和製英語というものです。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "That is <strong>what is called</strong> a conspiracy theory, right?",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 564,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182428",
+      "type": "study_question",
+      "attributes": {
+        "id": 182428,
+        "content": "これは<span class='study-area-input'>____</span>和製（わせい）英語（えいご）というものです。",
+        "answer": "いわゆる",
+        "alternate_grammar": [],
+        "kanji_answer": "いわゆる",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/それはいわゆる陰謀論というものですね？.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This is <strong>what is called</strong> a Japan-made pseudo-English word.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 564,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7191",
+      "type": "study_question",
+      "attributes": {
+        "id": 7191,
+        "content": "これは<span class='study-area-input'>____</span>葬式（そうしき）ではありませんので、悲（かな）しまないでください。",
+        "answer": "いわゆる",
+        "alternate_grammar": [],
+        "kanji_answer": "所謂（いわゆる）",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが一般（いっぱん）的（てき）には(A)と知（し）られている、又（また）は呼（よ）ばれているということを示（しめ）す時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。",
+        "tense": "Subjective",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/これは所謂葬式ではありませんので、悲しまないでください。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This is not <strong>what you would call</strong> a funeral, so do not be sad.",
+        "nuance_translation": "An <strong>old-fashioned</strong> grammar point expressing that something is commonly called or generally known as (A).",
+        "extra_info": "",
+        "reviewable_id": 564,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7193",
+      "type": "study_question",
+      "attributes": {
+        "id": 7193,
+        "content": "<span class='study-area-input'>____</span>送料（そうりょう）ですが、無料（むりょう）でやらせてもらっています。",
+        "answer": "いわゆる",
+        "alternate_grammar": [],
+        "kanji_answer": "所謂（いわゆる）",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが一般（いっぱん）的（てき）には(A)と知（し）られている、又（また）は呼（よ）ばれているということを示（しめ）す時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。",
+        "tense": "Subjective",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/所謂送料ですが、無料でやらせてもらっています。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This is <strong>generally known as</strong> (having) postage, but for you there is no charge.",
+        "nuance_translation": "An <strong>old-fashioned</strong> grammar point expressing that something is commonly called or generally known as (A).",
+        "extra_info": "",
+        "reviewable_id": 564,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7194",
+      "type": "study_question",
+      "attributes": {
+        "id": 7194,
+        "content": "<span class='study-area-input'>____</span>速達（そくたつ）でも多分（たぶん）間（ま）に合（あ）わないと思（おも）いますよ。",
+        "answer": "いわゆる",
+        "alternate_grammar": [],
+        "kanji_answer": "所謂（いわゆる）",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが一般（いっぱん）的（てき）には(A)と知（し）られている、又（また）は呼（よ）ばれているということを示（しめ）す時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。",
+        "tense": "Subjective",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/所謂速達でも多分間に合わないと思いますよ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I think the <strong>so-called</strong> express delivery will probably not make it in time.",
+        "nuance_translation": "An <strong>old-fashioned</strong> grammar point expressing that something is commonly called or generally known as (A).",
+        "extra_info": "",
+        "reviewable_id": 564,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7195",
+      "type": "study_question",
+      "attributes": {
+        "id": 7195,
+        "content": "「素質（そしつ）がない」と言（い）ったが、<span class='study-area-input'>____</span>力不足（ちからぶそく）だ。",
+        "answer": "いわゆる",
+        "alternate_grammar": [],
+        "kanji_answer": "所謂（いわゆる）",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが一般（いっぱん）的（てき）には(A)と知（し）られている、又（また）は呼（よ）ばれているということを示（しめ）す時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。",
+        "tense": "Subjective",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/「素質がない」と言ったが、所謂力不足だ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "(They) said '(he) doesn't have the qualities,' but it is <strong>what is called</strong> a lack of power.",
+        "nuance_translation": "An <strong>old-fashioned</strong> grammar point expressing that something is commonly called or generally known as (A).",
+        "extra_info": "",
+        "reviewable_id": 564,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5780",
+      "type": "study_question",
+      "attributes": {
+        "id": 5780,
+        "content": "彼（かれ）は<span class='study-area-input'>____</span>ゴールドラッシュのおかげで大金（たいきん）を稼（かせ）いだ。",
+        "answer": "いわゆる",
+        "alternate_grammar": [],
+        "kanji_answer": "所謂（いわゆる）",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが一般（いっぱん）的（てき）には(A)と知（し）られている、又（また）は呼（よ）ばれているということを示（しめ）す時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。",
+        "tense": "Subjective",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼は所謂ゴールドラッシュのおかげで大金を稼いだ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "He has earned his fortune thanks to the <strong>so-called</strong> gold rush.",
+        "nuance_translation": "An <strong>old-fashioned</strong> grammar point expressing that something is commonly called or generally known as (A).",
+        "extra_info": "",
+        "reviewable_id": 564,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7189",
+      "type": "study_question",
+      "attributes": {
+        "id": 7189,
+        "content": "彼（かれ）を犯罪（はんざい）者（しゃ）扱（あつか）いするのはやめてください。<span class='study-area-input'>____</span>推定（すいてい）無罪（むざい）ということです。",
+        "answer": "いわゆる",
+        "alternate_grammar": [],
+        "kanji_answer": "所謂（いわゆる）",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが一般（いっぱん）的（てき）には(A)と知（し）られている、又（また）は呼（よ）ばれているということを示（しめ）す時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。",
+        "tense": "Subjective",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼を犯罪者扱いするのはやめてください。所謂推定無罪ということです。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Please stop treating him as a criminal. (He) is <strong>what we call</strong> presumed innocent.",
+        "nuance_translation": "An <strong>old-fashioned</strong> grammar point expressing that something is commonly called or generally known as (A).",
+        "extra_info": "",
+        "reviewable_id": 564,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7190",
+      "type": "study_question",
+      "attributes": {
+        "id": 7190,
+        "content": "これは<span class='study-area-input'>____</span>宣伝（せんでん）ですので、ご理解（りかい）ください。",
+        "answer": "いわゆる",
+        "alternate_grammar": [],
+        "kanji_answer": "所謂（いわゆる）",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが一般（いっぱん）的（てき）には(A)と知（し）られている、又（また）は呼（よ）ばれているということを示（しめ）す時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。",
+        "tense": "Subjective",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/これは所謂宣伝ですので、ご理解ください。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Since this is a <strong>so-called</strong> advertisement, please understand.",
+        "nuance_translation": "An <strong>old-fashioned</strong> grammar point expressing that something is commonly called or generally known as (A).",
+        "extra_info": "",
+        "reviewable_id": 564,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7192",
+      "type": "study_question",
+      "attributes": {
+        "id": 7192,
+        "content": "これは<span class='study-area-input'>____</span>総理（そうり）案件（あんけん）というやつでは？",
+        "answer": "いわゆる",
+        "alternate_grammar": [],
+        "kanji_answer": "所謂（いわゆる）",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが一般（いっぱん）的（てき）には(A)と知（し）られている、又（また）は呼（よ）ばれているということを示（しめ）す時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。",
+        "tense": "Subjective",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/これは所謂総理案件というやつでは？.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Isn't this <strong>what is called</strong> a matter related to the prime minister?",
+        "nuance_translation": "An <strong>old-fashioned</strong> grammar point expressing that something is commonly called or generally known as (A).",
+        "extra_info": "",
+        "reviewable_id": 564,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5778",
+      "type": "study_question",
+      "attributes": {
+        "id": 5778,
+        "content": "本物（ほんもの）のように見（み）えるが薬効（やっこう）成分（せいぶん）のない薬（くすり）、<span class='study-area-input'>____</span>偽薬（ぎやく）（プラセボ）が場合（ばあい）によって医者（いしゃ）から処方（しょほう）されているかもしれない。",
+        "answer": "いわゆる",
+        "alternate_grammar": [],
+        "kanji_answer": "所謂（いわゆる）",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが一般（いっぱん）的（てき）には(A)と知（し）られている、又（また）は呼（よ）ばれているということを示（しめ）す時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。",
+        "tense": "Subjective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/本物のように見えるが薬効成分のない薬、所謂偽薬が場合によって医者から処方されているかもしれない。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Medicine that looks like the real thing, but does not have an active ingredient (<strong>what is called</strong> a placebo), might be prescribed by a doctor in some cases. ",
+        "nuance_translation": "An <strong>old-fashioned</strong> grammar point expressing that something is commonly called or generally known as (A).",
+        "extra_info": "",
+        "reviewable_id": 564,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7188",
+      "type": "study_question",
+      "attributes": {
+        "id": 7188,
+        "content": "それは<span class='study-area-input'>____</span>神話（しんわ）というやつです。信用（しんよう）してはいけません。",
+        "answer": "いわゆる",
+        "alternate_grammar": [],
+        "kanji_answer": "所謂（いわゆる）",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが一般（いっぱん）的（てき）には(A)と知（し）られている、又（また）は呼（よ）ばれているということを示（しめ）す時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。",
+        "tense": "Subjective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/それは所謂神話というやつです。信用してはいけません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "That’s <strong>what you’d call</strong> a myth. You shouldn’t believe it.",
+        "nuance_translation": "An <strong>old-fashioned</strong> grammar point expressing that something is commonly called or generally known as (A).",
+        "extra_info": "",
+        "reviewable_id": 564,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5779",
+      "type": "study_question",
+      "attributes": {
+        "id": 5779,
+        "content": "他（ほか）の言語（げんご）から取（と）り入（い）れた言葉（ことば）、<span class='study-area-input'>____</span>借用（しゃくよう）語（ご）は日本語（にほんご）の中（なか）によくみられる。",
+        "answer": "いわゆる",
+        "alternate_grammar": [],
+        "kanji_answer": "所謂（いわゆる）",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが一般（いっぱん）的（てき）には(A)と知（し）られている、又（また）は呼（よ）ばれているということを示（しめ）す時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。",
+        "tense": "Subjective",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/他の言語から取り入れた言葉、所謂借用語は日本語の中によくみられる。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Words introduced from other languages, <strong>so-called</strong> loanwords, can often be seen in Japanese.",
+        "nuance_translation": "An <strong>old-fashioned</strong> grammar point expressing that something is commonly called or generally known as (A).",
+        "extra_info": "",
+        "reviewable_id": 564,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7196",
+      "type": "study_question",
+      "attributes": {
+        "id": 7196,
+        "content": "新（あたら）しい麺（めん）を開発（かいはつ）したそうだが、これは<span class='study-area-input'>____</span>蕎麦（そば）だね。",
+        "answer": "いわゆる",
+        "alternate_grammar": [],
+        "kanji_answer": "所謂（いわゆる）",
+        "kanji_alt_grammar": [],
+        "nuance": "あるものが一般（いっぱん）的（てき）には(A)と知（し）られている、又（また）は呼（よ）ばれているということを示（しめ）す時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。",
+        "tense": "Subjective",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/新しい麺を開発したそうだが、これは所謂蕎麦だね。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I heard that a new noodle was developed, but this is <strong>commonly known as</strong> soba.",
+        "nuance_translation": "An <strong>old-fashioned</strong> grammar point expressing that something is commonly called or generally known as (A).",
+        "extra_info": "",
+        "reviewable_id": 564,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "731",
+      "type": "writeup",
+      "attributes": {
+        "id": 731,
+        "body_ja": "<p>「<span data-gp-id='564'>いわゆる</span>」は名詞（めいし）の前（まえ）に置（お）かれ、「世間（せけん）で言（い）われている (A)」や「一般的（いっぱんてき）に (A) と呼（よ）ばれている」といった意味（いみ）を持（も）つ表現（ひょうげん）です。漢字（かんじ）で「所謂（いわゆる）」と書（か）かれることもあります。</p>\r\n\r\n<p>「<span data-gp-id='564'>いわゆる</span>」は「いは」と「ゆる」の組（く）み合（あ）わせです。「いは」は動詞（どうし）「言（い）う」の未然形（みぜんけい）の歴史的（れきしてき）仮名遣（かなづか）いで、現代（げんだい）では「いわ」と書（か）かれます。「ゆる」は古文（こぶん）で使（つか）われる助動詞（じょどうし）の連体形（れんたいけい）で、現代（げんだい）の「れる」に相当（そうとう）します。このように成（な）り立（た）ちを見（み）ていくと「(A) と言（い）われる」という意味（いみ）がよくわかりますね。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182426'>\r\n<li data-study-question='182427'>\r\n<li data-study-question='182428'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>豆知識（まめちしき）</h4>\r\n<p>「謂（いい）」という漢字（かんじ）には「物事（ものごと）の理由（りゆう）」や「言（い）い伝（つた）え」という意味（いみ）があります。ある言葉（ことば）や名前（なまえ）が時代（じだい）や地域（ちいき）を超（こ）えてどのように呼（よ）ばれてきたかを表（あらわ）しています。</p></section>",
+        "body": "<p><span data-gp-id='564'>いわゆる</span>, occasionally seen in its kanji form <span data-gp-id='564'>所謂（いわゆる）</span>, is a word that is used before nouns to indicate that something is 'what is called (A)', 'the so-called (A)', or 'generally known as (A)'.</p>\r\n\r\n<p><span data-gp-id='564'>いわゆる</span> is a combination of いわ, a modern variant of いは, the indeterminate form of 言（い）う 'to say', and ゆる, which is the classical literary equivalent of the <span data-term='助動詞・じょどうし'>auxiliary verb</span> れる, the displacement verb indicator in its attributive form. In this way, the literal meaning of 'what is said to be (A)' is carried over into the English translations.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182426'>\r\n<li data-study-question='182427'>\r\n<li data-study-question='182428'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>Fun-fact</h4>\r\n<p>The kanji for 謂（いい） means 'oral tradition', and highlights the way that something is referred to over the course of different time periods, or in different places.</p></section>"
+      }
+    },
+    {
+      "id": "1398",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1398,
+        "site": "JapaneseTest4You",
+        "description": "Additional information and examples",
+        "link": "http://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-いわゆる-iwayuru/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1258",
+      "type": "related_content",
+      "attributes": {
+        "id": 1258,
+        "relationship_type": "related",
+        "body": "いわゆる and という both convey the idea of something being referred to by a name, but they function differently. いわゆる comes before a noun to mean 'the so-called (A)'. という appears between two nouns in the form AというB ('a B called A'). Because they serve different grammatical roles, they can appear together, e.g. いわゆる外来語というもの ('What is known as a so-called loanword')",
+        "first_relatable": {
+          "id": 564,
+          "slug": "いわゆる",
+          "title": "いわゆる",
+          "meaning": "What is called, So-called, Generally known",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 202,
+          "slug": "という-called",
+          "title": "という",
+          "meaning": "Called, Named, Known as, As much as",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1257",
+      "type": "related_content",
+      "attributes": {
+        "id": 1257,
+        "relationship_type": "related",
+        "body": "いわゆる and という both express the idea of something being 'called' something, but they are used very differently. いわゆる precedes a noun to mean 'the so-called (A)'. というのは takes a word or phrase and introduces it as a topic to be defined or explained. Because they serve different roles, they can be used together, e.g. いわゆる五月病というのは ('This thing known as the so-called May blues is...')",
+        "first_relatable": {
+          "id": 564,
+          "slug": "いわゆる",
+          "title": "いわゆる",
+          "meaning": "What is called, So-called, Generally known",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 228,
+          "slug": "というのは",
+          "title": "というのは",
+          "meaning": "~ Known as ~ is, ~ Called ~ is, ~ Means ~, Because",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

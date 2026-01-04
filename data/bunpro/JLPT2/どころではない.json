@@ -1,0 +1,987 @@
+{
+  "data": {
+    "id": "422",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 422,
+      "level": "JLPT2",
+      "lesson_id": 34,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "どころではない",
+      "nuance": "(A)をしている<strong>状況（じょうきょう）、場所（ばしょ）ではない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+      "grammar_order": 610,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 318,
+        "title": "ぶりに",
+        "slug": "ぶりに"
+      },
+      "previous_grammar_point": {
+        "id": 413,
+        "title": "ところだった ②",
+        "slug": "ところだった2"
+      },
+      "lesson_count": "14/18",
+      "title": "どころではない",
+      "furigana": "どころではない",
+      "meaning": "This is not the time for…, Far from, Out of the question",
+      "nuance_translation": "An expression emphasizing that it is <strong>hardly the place or situation</strong> for (A).",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "Phrase + <strong>どころ + <span class='gp-popout' data-gp-id='49'>ではありません</span></strong><br>Phrase + <strong>どころ + <span class='gp-popout' data-gp-id='49'>じゃありません</span></strong>",
+      "casual_structure": "Phrase + <strong>どころ + <span class='gp-popout' data-gp-id='49'>ではない</span></strong><br>Phrase + <strong>どころ + <span class='gp-popout' data-gp-id='49'>じゃない</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/11256",
+      "metadata": "どころではない, 所ではない, dokorodehanai, expression, negative situation, negative evaluation, negative"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "181992",
+            "type": "study_question"
+          },
+          {
+            "id": "181993",
+            "type": "study_question"
+          },
+          {
+            "id": "181994",
+            "type": "study_question"
+          },
+          {
+            "id": "181995",
+            "type": "study_question"
+          },
+          {
+            "id": "6553",
+            "type": "study_question"
+          },
+          {
+            "id": "6556",
+            "type": "study_question"
+          },
+          {
+            "id": "2293",
+            "type": "study_question"
+          },
+          {
+            "id": "2295",
+            "type": "study_question"
+          },
+          {
+            "id": "2294",
+            "type": "study_question"
+          },
+          {
+            "id": "6557",
+            "type": "study_question"
+          },
+          {
+            "id": "6558",
+            "type": "study_question"
+          },
+          {
+            "id": "6559",
+            "type": "study_question"
+          },
+          {
+            "id": "6552",
+            "type": "study_question"
+          },
+          {
+            "id": "6554",
+            "type": "study_question"
+          },
+          {
+            "id": "6555",
+            "type": "study_question"
+          },
+          {
+            "id": "6560",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "625",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "2074",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1125",
+            "type": "related_content"
+          },
+          {
+            "id": "173",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "928",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "929",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "181992",
+      "type": "study_question",
+      "attributes": {
+        "id": 181992,
+        "content": "出産（しゅっさん）は痛（いた）い<span class='study-area-input'>____</span>らしい。",
+        "answer": "どころではない",
+        "alternate_grammar": [],
+        "kanji_answer": "どころではない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/出産は痛いどころではないらしい。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "They say childbirth is <strong>far from</strong> painful.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 422,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181993",
+      "type": "study_question",
+      "attributes": {
+        "id": 181993,
+        "content": "締（し）め切（き）りが迫（せま）って来（き）てるから、休憩（きゅうけい）を取（と）る<span class='study-area-input'>____</span>。",
+        "answer": "どころじゃない",
+        "alternate_grammar": [],
+        "kanji_answer": "どころじゃない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/締め切りが迫って来てるから、休憩を取るどころじゃない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The deadline is approaching, so taking a break is <strong>out of the question</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 422,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181994",
+      "type": "study_question",
+      "attributes": {
+        "id": 181994,
+        "content": "お母（かあ）さんからお父（とう）さんが倒（たお）れたと連絡（れんらく）があったので、仕事（しごと）<span class='study-area-input'>____</span>。",
+        "answer": "どころではない",
+        "alternate_grammar": [],
+        "kanji_answer": "どころではない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/お母さんからお父さんが倒れたと連絡があったので、仕事どころではない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>It is not the time for</strong> working, since I got a message from my mother telling me that my father collapsed.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 422,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181995",
+      "type": "study_question",
+      "attributes": {
+        "id": 181995,
+        "content": "今（いま）は仕事（しごと）が忙（いそが）しいし、お金（かね）も全然（ぜんぜん）ないから、結婚（けっこん）<span class='study-area-input'>____</span>。",
+        "answer": "どころじゃない",
+        "alternate_grammar": [],
+        "kanji_answer": "どころじゃない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/今は仕事が忙しいし、お金も全然ないから、結婚どころじゃない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Since I am busy with work and have no money, <strong>it is not the time to</strong> get married.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 422,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6553",
+      "type": "study_question",
+      "attributes": {
+        "id": 6553,
+        "content": "休（やす）みの日（ひ）はたくさん寝（ね）たい。レジャー<span class='study-area-input'>____</span>。",
+        "answer": "どころではない",
+        "alternate_grammar": [
+          "どころではない",
+          "どころじゃない"
+        ],
+        "kanji_answer": "どころではない",
+        "kanji_alt_grammar": [
+          "どころじゃない",
+          "どころではない"
+        ],
+        "nuance": "(A)をしている<strong>状況（じょうきょう）、場所（ばしょ）ではない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/休みの日はたくさん寝たい。レジャーどころではない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どころではないです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころじゃないです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころではありません": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころじゃありません": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "On my day off, I want to sleep a lot. Leisure activities are <strong>out of the question</strong>.",
+        "nuance_translation": "An expression emphasizing that it is <strong>hardly the place or situation</strong> for (A).",
+        "extra_info": "",
+        "reviewable_id": 422,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6556",
+      "type": "study_question",
+      "attributes": {
+        "id": 6556,
+        "content": "なんとか通（つう）じればいい。アクセント<span class='study-area-input'>____</span>。",
+        "answer": "どころではありません",
+        "alternate_grammar": [
+          "どころではありません",
+          "どころじゃありません",
+          "どころではないです",
+          "どころじゃないです"
+        ],
+        "kanji_answer": "どころではありません",
+        "kanji_alt_grammar": [
+          "どころじゃありません",
+          "どころではないです",
+          "どころじゃないです",
+          "どころではありません"
+        ],
+        "nuance": "(A)をしている<strong>状況（じょうきょう）、場所（ばしょ）ではない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Polite",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/なんとか通じればいい。アクセントどころではありません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どころではない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "どころじゃない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It would be good if you could somehow communicate. <strong>This is not the time to</strong> worry about accent.",
+        "nuance_translation": "An expression emphasizing that it is <strong>hardly the place or situation</strong> for (A).",
+        "extra_info": "",
+        "reviewable_id": 422,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2293",
+      "type": "study_question",
+      "attributes": {
+        "id": 2293,
+        "content": "仕事（しごと）が忙（いそが）しすぎて、年休（ねんきゅう）を取（と）る<span class='study-area-input'>____</span>。",
+        "answer": "どころではない",
+        "alternate_grammar": [
+          "どころではない",
+          "どころじゃない",
+          "どころではないです",
+          "どころじゃないです",
+          "どころではありません",
+          "どころじゃありません"
+        ],
+        "kanji_answer": "どころではない",
+        "kanji_alt_grammar": [
+          "どころじゃない",
+          "どころではないです",
+          "どころじゃないです",
+          "どころではありません",
+          "どころじゃありません",
+          "どころではない"
+        ],
+        "nuance": "(A)をしている<strong>状況（じょうきょう）、場所（ばしょ）ではない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/仕事が忙しすぎて、年休を取るどころではない。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I am so busy at work, taking time off is <strong>out of the question</strong>.",
+        "nuance_translation": "An expression emphasizing that it is <strong>hardly the place or situation</strong> for (A).",
+        "extra_info": "",
+        "reviewable_id": 422,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2295",
+      "type": "study_question",
+      "attributes": {
+        "id": 2295,
+        "content": "今（いま）まで恋人（こいびと）も出来（でき）たことがないのに、結婚（けっこん）<span class='study-area-input'>____</span>。",
+        "answer": "どころではない",
+        "alternate_grammar": [
+          "どころではない",
+          "どころじゃない",
+          "どころではないです",
+          "どころじゃないです",
+          "どころではありません",
+          "どころじゃありません"
+        ],
+        "kanji_answer": "どころではない",
+        "kanji_alt_grammar": [
+          "どころじゃない",
+          "どころではないです",
+          "どころじゃないです",
+          "どころではありません",
+          "どころじゃありません",
+          "どころではない"
+        ],
+        "nuance": "(A)をしている<strong>状況（じょうきょう）、場所（ばしょ）ではない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/今まで恋人も出来たことがないのに、結婚どころではない。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Since I haven't even had a lover yet, getting married is <strong>out of the question</strong>.",
+        "nuance_translation": "An expression emphasizing that it is <strong>hardly the place or situation</strong> for (A).",
+        "extra_info": "",
+        "reviewable_id": 422,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2294",
+      "type": "study_question",
+      "attributes": {
+        "id": 2294,
+        "content": "大病（たいびょう）を患（わずら）っているんだから、仕事（しごと）<span class='study-area-input'>____</span>。",
+        "answer": "どころではない",
+        "alternate_grammar": [
+          "どころではない",
+          "どころじゃない",
+          "どころではないです",
+          "どころじゃないです",
+          "どころではありません",
+          "どころじゃありません"
+        ],
+        "kanji_answer": "どころではない",
+        "kanji_alt_grammar": [
+          "どころじゃない",
+          "どころではないです",
+          "どころじゃないです",
+          "どころではありません",
+          "どころじゃありません",
+          "どころではない"
+        ],
+        "nuance": "(A)をしている<strong>状況（じょうきょう）、場所（ばしょ）ではない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/大病を患っているんだから、仕事どころではない。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Since I have become severely ill, <strong>this is not the time for</strong> work.",
+        "nuance_translation": "An expression emphasizing that it is <strong>hardly the place or situation</strong> for (A).",
+        "extra_info": "",
+        "reviewable_id": 422,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6557",
+      "type": "study_question",
+      "attributes": {
+        "id": 6557,
+        "content": "急用（きゅうよう）が入（はい）ったので、お出掛（でか）け<span class='study-area-input'>____</span>。",
+        "answer": "どころではなくなった",
+        "alternate_grammar": [
+          "どころではなくなった",
+          "どころじゃなくなった"
+        ],
+        "kanji_answer": "どころではなくなった",
+        "kanji_alt_grammar": [
+          "どころじゃなくなった",
+          "どころではなくなった"
+        ],
+        "nuance": "(A)をしている<strong>状況（じょうきょう）、場所（ばしょ）ではない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative-past, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/急用が入ったので、お出掛けどころではなくなった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どころではありませんでした": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころじゃありませんでした": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころではなかった": {
+            "en": "How about expanding the base grammar pattern to include the extra nuance within the translation?",
+            "es": ""
+          },
+          "どころじゃなかった": {
+            "en": "How about expanding the base grammar pattern to include the extra nuance within the translation?",
+            "es": ""
+          },
+          "どころじゃなくなりました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころではなくなりました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Urgent business came in, so going out <strong>became out of the question</strong>.",
+        "nuance_translation": "An expression emphasizing that it is <strong>hardly the place or situation</strong> for (A).",
+        "extra_info": "",
+        "reviewable_id": 422,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6558",
+      "type": "study_question",
+      "attributes": {
+        "id": 6558,
+        "content": "落（おと）し物（もの）をしたので、買（か）い物（もの）<span class='study-area-input'>____</span>。",
+        "answer": "どころではなくなった",
+        "alternate_grammar": [
+          "どころではなくなった",
+          "どころじゃなくなった"
+        ],
+        "kanji_answer": "どころではなくなった",
+        "kanji_alt_grammar": [
+          "どころじゃなくなった",
+          "どころではなくなった"
+        ],
+        "nuance": "(A)をしている<strong>状況（じょうきょう）、場所（ばしょ）ではない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative-past, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/落し物をしたので、買い物どころではなくなった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どころではありませんでした": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころじゃありませんでした": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころではなかった": {
+            "en": "How about expanding the base grammar pattern to include the extra nuance within the translation?",
+            "es": ""
+          },
+          "どころじゃなかった": {
+            "en": "How about expanding the base grammar pattern to include the extra nuance within the translation?",
+            "es": ""
+          },
+          "どころじゃなくなりました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころではなくなりました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I lost something, so going shopping <strong>became out of the question</strong>.",
+        "nuance_translation": "An expression emphasizing that it is <strong>hardly the place or situation</strong> for (A).",
+        "extra_info": "",
+        "reviewable_id": 422,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6559",
+      "type": "study_question",
+      "attributes": {
+        "id": 6559,
+        "content": "ゲリラ豪雨（ごうう）で、海水浴（かいすいよく）<span class='study-area-input'>____</span>。",
+        "answer": "どころではない",
+        "alternate_grammar": [
+          "どころではない",
+          "どころじゃない"
+        ],
+        "kanji_answer": "どころではない",
+        "kanji_alt_grammar": [
+          "どころじゃない",
+          "どころではない"
+        ],
+        "nuance": "(A)をしている<strong>状況（じょうきょう）、場所（ばしょ）ではない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/ゲリラ豪雨で、海水浴どころではない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どころではありません": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころじゃありません": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころではないです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころじゃないです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Going swimming in the ocean <strong>is out of the question</strong> when it is downpouring.",
+        "nuance_translation": "An expression emphasizing that it is <strong>hardly the place or situation</strong> for (A).",
+        "extra_info": "",
+        "reviewable_id": 422,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6552",
+      "type": "study_question",
+      "attributes": {
+        "id": 6552,
+        "content": "「早（はや）く美容（びよう）室（しつ）に行（い）け」と言（い）われても、今（いま）はそれ<span class='study-area-input'>____</span>。",
+        "answer": "どころではない",
+        "alternate_grammar": [
+          "どころではない",
+          "どころじゃない"
+        ],
+        "kanji_answer": "どころではない",
+        "kanji_alt_grammar": [
+          "どころじゃない",
+          "どころではない"
+        ],
+        "nuance": "(A)をしている<strong>状況（じょうきょう）、場所（ばしょ）ではない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/「早く美容室に行け」と言われても、今はそれどころではない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どころじゃないです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころではありません": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころじゃありません": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころではないです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Even if you were told, 'Go to a beauty parlor right away!', <strong>now is not the time for</strong> that.",
+        "nuance_translation": "An expression emphasizing that it is <strong>hardly the place or situation</strong> for (A).",
+        "extra_info": "",
+        "reviewable_id": 422,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6554",
+      "type": "study_question",
+      "attributes": {
+        "id": 6554,
+        "content": "腰（こし）を痛（いた）めてしまったから、マラソン<span class='study-area-input'>____</span>。",
+        "answer": "どころではありません",
+        "alternate_grammar": [
+          "どころではありません",
+          "どころじゃありません",
+          "どころではないです",
+          "どころじゃないです"
+        ],
+        "kanji_answer": "どころではありません",
+        "kanji_alt_grammar": [
+          "どころじゃありません",
+          "どころではないです",
+          "どころじゃないです",
+          "どころではありません"
+        ],
+        "nuance": "(A)をしている<strong>状況（じょうきょう）、場所（ばしょ）ではない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Polite",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/腰を痛めてしまったから、マラソンどころではありません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どころではない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "どころじゃない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I unfortunately injured my lower back, a marathon <strong>is out of the question</strong>.",
+        "nuance_translation": "An expression emphasizing that it is <strong>hardly the place or situation</strong> for (A).",
+        "extra_info": "",
+        "reviewable_id": 422,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6555",
+      "type": "study_question",
+      "attributes": {
+        "id": 6555,
+        "content": "熱（ねつ）があるというのに、遊園（ゆうえん）地（ち）<span class='study-area-input'>____</span>よ。",
+        "answer": "どころではない",
+        "alternate_grammar": [
+          "どころではない",
+          "どころじゃない"
+        ],
+        "kanji_answer": "どころではない",
+        "kanji_alt_grammar": [
+          "どころじゃない",
+          "どころではない"
+        ],
+        "nuance": "(A)をしている<strong>状況（じょうきょう）、場所（ばしょ）ではない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/熱があるというのに、遊園地どころではないよ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どころじゃないです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころではないです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころではありません": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころじゃありません": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "When you have a fever, <strong>it is not the time to</strong> go to an amusement park.",
+        "nuance_translation": "An expression emphasizing that it is <strong>hardly the place or situation</strong> for (A).",
+        "extra_info": "",
+        "reviewable_id": 422,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6560",
+      "type": "study_question",
+      "attributes": {
+        "id": 6560,
+        "content": "火山（かざん）が噴火（ふんか）して、学校（がっこう）<span class='study-area-input'>____</span>。",
+        "answer": "どころではない",
+        "alternate_grammar": [
+          "どころではない",
+          "どころじゃない"
+        ],
+        "kanji_answer": "どころではない",
+        "kanji_alt_grammar": [
+          "どころじゃない",
+          "どころではない"
+        ],
+        "nuance": "(A)をしている<strong>状況（じょうきょう）、場所（ばしょ）ではない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/火山が噴火して、学校どころではない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どころではありません": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころじゃありません": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころじゃないです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "どころではないです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The volcano is erupting, <strong>it is not the time</strong> for school.",
+        "nuance_translation": "An expression emphasizing that it is <strong>hardly the place or situation</strong> for (A).",
+        "extra_info": "",
+        "reviewable_id": 422,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "625",
+      "type": "writeup",
+      "attributes": {
+        "id": 625,
+        "body_ja": "<p>「ところ」の「と」の音（おと）が濁（にご）った「どころ」は、悪（わる）い状況（じょうきょう）や評価（ひょうか）を表（あらわ）す表現（ひょうげん）の一部（いちぶ）としてよく使（つか）われます。この「どころ」を含（ふく）む「<span data-gp-id='422'>どころではない</span>」は「(A) からは程（ほど）遠（とお）い」や「(A) は問題（もんだい）外（がい）だ」のような意味（いみ）で使（つか）われます。この表現（ひょうげん）は「どころではない」と結（むす）びついた (A) よりも、実際（じっさい）の程度（ていど）が大（おお）きいときに使（つか）われます。</p>\r\n\r\n<p>この文型（ぶんけい）は、好（この）ましくない状況（じょうきょう）を示（しめ）す句（く）の最後（さいご）に置（お）かれます。また、より砕（くだ）けた場面（ばめん）では「ではない」の代（か）わりに「じゃない」が使（つか）われることもあります。.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181992'>\r\n<li data-study-question='181993'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='422'>どころではない</span>」は「(A) をする時（とき）ではない」という意味（いみ）で使（つか）われることもあります。この場合（ばあい）、(A) よりもっと大切（たいせつ）なことがあるためにそれをする余裕（よゆう）がない、というの主観的（しゅかんてき）な表現（ひょうげん）になります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181994'>\r\n<li data-study-question='181995'>\r\n</ul>",
+        "body": "<p>When the voiced form of ところ 'place', どころ appears in Japanese, it will very often be part of a set phrase expressing some kind of negative situation or evaluation. <span data-gp-id='422'>どころではない</span> is no different, and highlights that it is 'far from (A)', or that '(A) is out of the question'. These translations appear when the actual situation is considered to be even more remarkable than the phrase that <span data-gp-id='422'>どころではない</span> is attached to.</p>\r\n\r\n<p>This grammar pattern will be seen at the end of phrases indicating some situation which is not ideal. Additionally, ではない may be replaced with じゃない in more casual settings.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181992'>\r\n<li data-study-question='181993'>\r\n</ul>\r\n\r\n<p><span data-gp-id='422'>どころではない</span> may also sometimes be translated as 'it is not the time for (A)'. In sentences that use this interpretation, (A) is considered to be something that there is no allowance for due to there being far more important matters. This use will reflect the personal opinion of the speaker.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181994'>\r\n<li data-study-question='181995'>\r\n</ul>"
+      }
+    },
+    {
+      "id": "2074",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2074,
+        "source": "Handbook of Japanese Grammar Patterns",
+        "location": "Page 354",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "928",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 928,
+        "site": "MaggieSensei",
+        "description": "How to use どころ",
+        "link": "https://maggiesensei.com/2015/07/06/how-to-use-%E3%81%A9%E3%81%93%E3%82%8D%EF%BC%88dokoro/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "929",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 929,
+        "site": "日本語 NET",
+        "description": "文型・例文 ～どころではない",
+        "link": "https://nihongokyoshi-net.com/2018/09/14/jlptn2-grammar-dokorodewanai/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1125",
+      "type": "related_content",
+      "attributes": {
+        "id": 1125,
+        "relationship_type": "related",
+        "body": "Both contain どころ and express contrast, but differ in nuance. どころか emphasizes an extreme or surprising contrast. For example, 痩せるどころか、太ってしまった ('Far from slimming down, I actually gained weight'). どころではない conveys that something is completely out of the question due to circumstances. For example, 忙しすぎて年休を取るどころではない ('I'm so busy this is no time to take a day off').",
+        "first_relatable": {
+          "id": 304,
+          "slug": "どころか",
+          "title": "どころか",
+          "meaning": "Far from, Anything but",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 422,
+          "slug": "どころではない",
+          "title": "どころではない",
+          "meaning": "This is not the time for…, Far from, Out of the question",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "173",
+      "type": "related_content",
+      "attributes": {
+        "id": 173,
+        "relationship_type": "antonym",
+        "body": "ものか is a strong, indignant denial, meaning Absolutely not! or As if…, as in 勝てるものか (As if you could win!). どころではない means out of the question due to circumstances, often translated as This is no time for… or Far from…, as in それどころじゃない (This is no time to worry about that!).",
+        "first_relatable": {
+          "id": 503,
+          "slug": "ものか",
+          "title": "ものか",
+          "meaning": "Definitely not, Absolutely not, Impossible, Do you really think~?",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 422,
+          "slug": "どころではない",
+          "title": "どころではない",
+          "meaning": "This is not the time for…, Far from, Out of the question",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

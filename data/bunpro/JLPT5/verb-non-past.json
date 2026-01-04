@@ -1,0 +1,1021 @@
+{
+  "data": {
+    "id": "950",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 950,
+      "level": "JLPT5",
+      "lesson_id": 6,
+      "part_of_speech": "動詞",
+      "register": "一般",
+      "word_type": "辞書形",
+      "slug": "verb-non-past",
+      "nuance": "動詞（どうし）の<strong>過去（かこ）形（けい）ではない形（かたち）</strong>で、３つの可能（かのう）性（せい）のある英語（えいご）のニュアンスを示（しめ）すために使（つか）われる動詞（どうし）。",
+      "grammar_order": 73,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 357,
+        "title": "Verb［た・ている］+ Noun",
+        "slug": "verb-た-noun"
+      },
+      "previous_grammar_point": {
+        "id": 358,
+        "title": "って",
+        "slug": "って"
+      },
+      "lesson_count": "10/13",
+      "title": "Verbs (Non-past)",
+      "furigana": "Verb (Non-Past)",
+      "meaning": "(Non-past)",
+      "nuance_translation": "The <strong>non-past form</strong> of verbs, used to indicate one of 3 possible English nuances.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "Examples:<br>食（た）べ<span class='gp-popout' data-gp-id='12'>ます</span><br>洗（あら）い<span class='gp-popout' data-gp-id='26'>ます</span>",
+      "casual_structure": "Examples:<br>食（た）べ<span class='gp-popout' data-gp-id='12'>る</span><br>洗（あら）<span class='gp-popout' data-gp-id='26'>う</span>",
+      "part_of_speech_translation": "Verb",
+      "register_translation": "Standard",
+      "word_type_translation": "Dictionary Form",
+      "discourse_link": "https://community.bunpro.jp/t/verbs-non-past-grammar-discussion/48016",
+      "metadata": "verb, non-past, non past, plain form, plain, dictionary form, dictionary, facts, habits, future events, in the moment"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154978",
+            "type": "study_question"
+          },
+          {
+            "id": "154979",
+            "type": "study_question"
+          },
+          {
+            "id": "154981",
+            "type": "study_question"
+          },
+          {
+            "id": "154980",
+            "type": "study_question"
+          },
+          {
+            "id": "154982",
+            "type": "study_question"
+          },
+          {
+            "id": "154983",
+            "type": "study_question"
+          },
+          {
+            "id": "10043",
+            "type": "study_question"
+          },
+          {
+            "id": "10034",
+            "type": "study_question"
+          },
+          {
+            "id": "10036",
+            "type": "study_question"
+          },
+          {
+            "id": "10104",
+            "type": "study_question"
+          },
+          {
+            "id": "10103",
+            "type": "study_question"
+          },
+          {
+            "id": "10035",
+            "type": "study_question"
+          },
+          {
+            "id": "10037",
+            "type": "study_question"
+          },
+          {
+            "id": "10038",
+            "type": "study_question"
+          },
+          {
+            "id": "10042",
+            "type": "study_question"
+          },
+          {
+            "id": "10040",
+            "type": "study_question"
+          },
+          {
+            "id": "10041",
+            "type": "study_question"
+          },
+          {
+            "id": "10039",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "63",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1354",
+            "type": "related_content"
+          },
+          {
+            "id": "1357",
+            "type": "related_content"
+          },
+          {
+            "id": "1358",
+            "type": "related_content"
+          },
+          {
+            "id": "1359",
+            "type": "related_content"
+          },
+          {
+            "id": "1360",
+            "type": "related_content"
+          },
+          {
+            "id": "1355",
+            "type": "related_content"
+          },
+          {
+            "id": "1356",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": []
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154978",
+      "type": "study_question",
+      "attributes": {
+        "id": 154978,
+        "content": "嫁（よめ）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>毎晩（まいばん）映画（えいが）<span class=\"gp-popout\" data-gp-id=\"21\">を</span><strong>見（み）</strong><span class=\"gp-popout\" data-gp-id=\"12\"><strong>ます</strong></span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/嫁は毎晩映画を見ます。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "My wife <strong>watches</strong> movies every night.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154979",
+      "type": "study_question",
+      "attributes": {
+        "id": 154979,
+        "content": "俺（おれ）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>明日（あした）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>昼（ひる）<span class=\"gp-popout\" data-gp-id=\"32\">に</span>ピザ<span class=\"gp-popout\" data-gp-id=\"21\">を</span><strong>食（た）べ</strong><span class=\"gp-popout\" data-gp-id=\"12\"><strong>ます</strong></span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/俺は明日の昼にピザを食べます。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>will eat</strong> pizza tomorrow during lunch.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154981",
+      "type": "study_question",
+      "attributes": {
+        "id": 154981,
+        "content": "テイラー<span class=\"gp-popout\" data-gp-id=\"3\">は</span>毎朝（まいあさ）<strong>走（はし）</strong><span class=\"gp-popout\" data-gp-id=\"26\"><strong>る</strong></span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/テイラーは毎朝走る。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Taylor <strong>runs</strong> every morning.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154980",
+      "type": "study_question",
+      "attributes": {
+        "id": 154980,
+        "content": "子供（こども）<span class=\"gp-popout\" data-gp-id=\"3\">は</span><strong>遊（あそ）</strong><span class=\"gp-popout\" data-gp-id=\"26\"><strong>ぶ</strong></span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/子供は遊ぶ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Kids <strong>play</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154982",
+      "type": "study_question",
+      "attributes": {
+        "id": 154982,
+        "content": "カホ<span class=\"gp-popout\" data-gp-id=\"3\">は</span>８時（はちじ）<span class=\"gp-popout\" data-gp-id=\"32\">に</span><strong>寝（ね）</strong><span class=\"gp-popout\" data-gp-id=\"12\">る</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/カホは８時に寝る。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Kaho <strong>will sleep</strong> at 8 p.m.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154983",
+      "type": "study_question",
+      "attributes": {
+        "id": 154983,
+        "content": "赤（あか）ちゃん<span class=\"gp-popout\" data-gp-id=\"3\">は</span><strong>泣（な）き</strong><span class=\"gp-popout\" data-gp-id=\"26\"><strong>ます</strong></span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/赤ちゃんは泣きます。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Babies <strong>cry</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10043",
+      "type": "study_question",
+      "attributes": {
+        "id": 10043,
+        "content": "ロック<span class='gp-popout' data-gp-id='21'>を</span><span class='chui'><span class='vocab-popout' data-vocab-id='653'>時々（ときどき）</span></span><strong><span class='gp-popout vocab-popout' data-gp-id='26' data-vocab-id='893'>聞（き）く</span></strong>。<br> ロック<span class='gp-popout' data-gp-id='21'>を</span><span class='chui'><span class='vocab-popout' data-vocab-id='653'>時々（ときどき）</span></span><span class='study-area-input'>____</span>。",
+        "answer": "ききます",
+        "alternate_grammar": [],
+        "kanji_answer": "聞（き）きます",
+        "kanji_alt_grammar": [],
+        "nuance": "動詞（どうし）の<strong>過去（かこ）形（けい）ではない形（かたち）</strong>で、３つの可能（かのう）性（せい）のある英語（えいご）のニュアンスを示（しめ）すために使（つか）われる動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/950/male_audio/02-ロックを時々聞く.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ロックを時々聞く。 ロックを時々聞きます。.mp3",
+        "word_prompt": "聞（き）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きく": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "きいています": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>listen</strong> to rock sometimes. (<strong>habit</strong>)",
+        "nuance_translation": "The <strong>non-past form</strong> of verbs, used to indicate one of 3 possible English nuances.",
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10034",
+      "type": "study_question",
+      "attributes": {
+        "id": 10034,
+        "content": "たなか<span class='vocab-popout' data-vocab-id='113'>さん</span><span class='gp-popout' data-gp-id='3'>は</span><span class='chui'><span class='vocab-popout' data-vocab-id='736'>毎週（まいしゅう）</span></span><span class='vocab-popout' data-vocab-id='987'>車（くるま）</span><span class='gp-popout' data-gp-id='21'>を</span><strong><span class='gp-popout vocab-popout' data-gp-id='26 data-vocab-id='752'>洗（あら）う</span></strong>。<br>たなか<span class='vocab-popout' data-vocab-id='113'>さん</span><span class='gp-popout' data-gp-id='3'>は</span><span class='chui'><span class='vocab-popout' data-vocab-id='736'>毎週（まいしゅう）</span></span><span class='vocab-popout' data-vocab-id='987'>車（くるま）</span><span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "あらいます",
+        "alternate_grammar": [],
+        "kanji_answer": "洗（あら）います",
+        "kanji_alt_grammar": [],
+        "nuance": "動詞（どうし）の<strong>過去（かこ）形（けい）ではない形（かたち）</strong>で、３つの可能（かのう）性（せい）のある英語（えいご）のニュアンスを示（しめ）すために使（つか）われる動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/950/male_audio/08-田中さんは毎週車を洗う.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/たなかさんは毎週車を洗う。たなかさんは毎週車を洗います。.mp3",
+        "word_prompt": "洗（あら）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あらう": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "あらっています": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Tanaka-san <strong>washes</strong> the car every week. (<strong>habit</strong>)",
+        "nuance_translation": "The <strong>non-past form</strong> of verbs, used to indicate one of 3 possible English nuances.",
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10036",
+      "type": "study_question",
+      "attributes": {
+        "id": 10036,
+        "content": "<span class='chui'><span class='vocab-popout' data-vocab-id='643'>明日（あした）</span></span>、焼（や）きそば<span class='gp-popout' data-gp-id='21'>を</span><strong><span class='gp-popout vocab-popout' data-gp-id='12' data-vocab-id='1077'>食（た）べる</span></strong>。<br><span class='chui'><span class='vocab-popout' data-vocab-id='643'>明日（あした）</span></span>、焼（や）きそば<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "たべます",
+        "alternate_grammar": [],
+        "kanji_answer": "食（た）べます",
+        "kanji_alt_grammar": [],
+        "nuance": "動詞（どうし）の<strong>過去（かこ）形（けい）ではない形（かたち）</strong>で、３つの可能（かのう）性（せい）のある英語（えいご）のニュアンスを示（しめ）すために使（つか）われる動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/950/male_audio/05-明日焼きそばを食べる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/明日、焼きそばを食べる。明日、焼きそばを食べます。.mp3",
+        "word_prompt": "食（た）べる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たべる": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Tomorrow I will <strong>eat</strong> fried noodles. (<strong>future event</strong>)",
+        "nuance_translation": "The <strong>non-past form</strong> of verbs, used to indicate one of 3 possible English nuances.",
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10104",
+      "type": "study_question",
+      "attributes": {
+        "id": 10104,
+        "content": "ヴァンパイア<span class='gp-popout' data-gp-id='3'>は</span>血（ち）<span class='gp-popout' data-gp-id='21'>を</span><strong><span class='gp-popout vocab-popout' data-gp-id='26' data-vocab-id='1081'>飲（の）む</span></strong>。<br>ヴァンパイア<span class='gp-popout' data-gp-id='3'>は</span>血（ち）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "のみます",
+        "alternate_grammar": [],
+        "kanji_answer": "飲（の）みます",
+        "kanji_alt_grammar": [],
+        "nuance": "動詞（どうし）の<strong>過去（かこ）形（けい）ではない形（かたち）</strong>で、３つの可能（かのう）性（せい）のある英語（えいご）のニュアンスを示（しめ）すために使（つか）われる動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/950/male_audio/01-バンパイアは血を飲む.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ヴァンパイアは血を飲む。ヴァンパイアは血を飲みます。.mp3",
+        "word_prompt": "飲（の）む",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のむ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Vampires <strong>drink</strong> blood. (<strong>general truth</strong>)",
+        "nuance_translation": "The <strong>non-past form</strong> of verbs, used to indicate one of 3 possible English nuances.",
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10103",
+      "type": "study_question",
+      "attributes": {
+        "id": 10103,
+        "content": "<span class='vocab-popout' data-vocab-id='849'>私（わたし）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='chui'>九（く）<span class='vocab-popout' data-vocab-id='651'>時（じ）</span><span class='gp-popout' data-gp-id='32'>に</span></span>バナナ<span class='gp-popout' data-gp-id='21'>を</span><strong><span class='gp-popout vocab-popout' data-gp-id='12' data-vocab-id='1077'>食（た）べる</span></strong>。<br><span class='vocab-popout' data-vocab-id='849'>私（わたし）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='chui'>九（く）<span class='vocab-popout' data-vocab-id='651'>時（じ）</span><span class='gp-popout' data-gp-id='32'>に</span></span>バナナ<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "たべます",
+        "alternate_grammar": [],
+        "kanji_answer": "食（た）べます",
+        "kanji_alt_grammar": [],
+        "nuance": "動詞（どうし）の<strong>過去（かこ）形（けい）ではない形（かたち）</strong>で、３つの可能（かのう）性（せい）のある英語（えいご）のニュアンスを示（しめ）すために使（つか）われる動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/950/male_audio/09-私は9時にバナナを食べる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私は九時にバナナを食べる。私は九時にバナナを食べます。.mp3",
+        "word_prompt": "食（た）べる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たべる": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>will eat</strong> a banana at 9 o'clock. (<strong>future event</strong>)",
+        "nuance_translation": "The <strong>non-past form</strong> of verbs, used to indicate one of 3 possible English nuances.",
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10035",
+      "type": "study_question",
+      "attributes": {
+        "id": 10035,
+        "content": "<span class='vocab-popout' data-vocab-id='800'>生徒（せいと）</span><span class='gp-popout' data-gp-id='3'>は</span><strong><span class='gp-popout vocab-popout' data-gp-id='26' data-vocab-id='890'>習（なら）う</span></strong>。<br><span class='vocab-popout' data-vocab-id='800'>生徒（せいと）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "ならいます",
+        "alternate_grammar": [],
+        "kanji_answer": "習（なら）います",
+        "kanji_alt_grammar": [],
+        "nuance": "動詞（どうし）の<strong>過去（かこ）形（けい）ではない形（かたち）</strong>で、３つの可能（かのう）性（せい）のある英語（えいご）のニュアンスを示（しめ）すために使（つか）われる動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/950/male_audio/07-生徒は習う.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/生徒は習う。生徒は習います。.mp3",
+        "word_prompt": "習（なら）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ならう": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Students <strong>take</strong> lessons. (<strong>general truth</strong>)",
+        "nuance_translation": "The <strong>non-past form</strong> of verbs, used to indicate one of 3 possible English nuances.",
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10037",
+      "type": "study_question",
+      "attributes": {
+        "id": 10037,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='3'>は</span><span class='chui'><span class='vocab-popout' data-vocab-id='733'>毎日（まいにち）</span></span><span class='vocab-popout' data-vocab-id='167'>テレビ</span><span class='gp-popout' data-gp-id='21'>を</span><strong><span class='gp-popout vocab-popout' data-gp-id='12' data-vocab-id='948'>見（み）る</span></strong>。<br>私（わたし）<span class='gp-popout' data-gp-id='3'>は</span><span class='chui'><span class='vocab-popout' data-vocab-id='733'>毎日（まいにち）</span></span><span class='vocab-popout' data-vocab-id='167'>テレビ</span><span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "みます",
+        "alternate_grammar": [],
+        "kanji_answer": "見（み）ます",
+        "kanji_alt_grammar": [],
+        "nuance": "動詞（どうし）の<strong>過去（かこ）形（けい）ではない形（かたち）</strong>で、３つの可能（かのう）性（せい）のある英語（えいご）のニュアンスを示（しめ）すために使（つか）われる動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/950/male_audio/10-私は毎日テレビを見る.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私は毎日テレビを見る。私は毎日テレビを見ます。.mp3",
+        "word_prompt": "見（み）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みる": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "みています": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>watch</strong> TV every day. (<strong>habit</strong>)",
+        "nuance_translation": "The <strong>non-past form</strong> of verbs, used to indicate one of 3 possible English nuances.",
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10038",
+      "type": "study_question",
+      "attributes": {
+        "id": 10038,
+        "content": "<span class='vocab-popout' data-vocab-id='358'>先生（せんせい）</span><span class='gp-popout' data-gp-id='3'>は</span><strong><span class='gp-popout vocab-popout' data-gp-id='12' data-vocab-id='618'>教（おし）える</span></strong>。<br><span class='vocab-popout' data-vocab-id='358'>先生（せんせい）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "おしえます",
+        "alternate_grammar": [],
+        "kanji_answer": "教（おし）えます",
+        "kanji_alt_grammar": [],
+        "nuance": "動詞（どうし）の<strong>過去（かこ）形（けい）ではない形（かたち）</strong>で、３つの可能（かのう）性（せい）のある英語（えいご）のニュアンスを示（しめ）すために使（つか）われる動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/950/male_audio/03-先生は教える.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/先生は教える。先生は教えます。.mp3",
+        "word_prompt": "教（おし）える",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おしえる": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Teachers <strong>teach</strong>. (<strong>general truth</strong>)",
+        "nuance_translation": "The <strong>non-past form</strong> of verbs, used to indicate one of 3 possible English nuances.",
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10042",
+      "type": "study_question",
+      "attributes": {
+        "id": 10042,
+        "content": "<span class='chui'><span class='vocab-popout' data-vocab-id='695'>来週（らいしゅう）</span></span><span class='gp-popout' data-gp-id='3'>は</span>、はるこ<span class='gp-popout' data-gp-id='10'>が</span><span class='vocab-popout' data-vocab-id='877'>結婚（けっこん）</span><strong><span class='gp-popout vocab-popout' data-vocab-id='138' data-gp-id='22'>する</span></strong>。<br><span class='chui'><span class='vocab-popout' data-vocab-id='695'>来週（らいしゅう）</span></span><span class='gp-popout' data-gp-id='3'>は</span>、はるこ<span class='gp-popout' data-gp-id='10'>が</span><span class='vocab-popout' data-vocab-id='877'>結婚（けっこん）</span><span class='study-area-input'>____</span>。",
+        "answer": "します",
+        "alternate_grammar": [
+          "をします",
+          "します"
+        ],
+        "kanji_answer": "します",
+        "kanji_alt_grammar": [
+          "をします",
+          "します"
+        ],
+        "nuance": "動詞（どうし）の<strong>過去（かこ）形（けい）ではない形（かたち）</strong>で、３つの可能（かのう）性（せい）のある英語（えいご）のニュアンスを示（しめ）すために使（つか）われる動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/950/male_audio/06-来週は春子が結婚する.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/来週は、はるこが結婚する。来週は、はるこが結婚します。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "する": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Haruko <strong>will get</strong> married next week. (<strong>future event</strong>)",
+        "nuance_translation": "The <strong>non-past form</strong> of verbs, used to indicate one of 3 possible English nuances.",
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10040",
+      "type": "study_question",
+      "attributes": {
+        "id": 10040,
+        "content": "<span class='vocab-popout' data-vocab-id='849'>私（わたし）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='chui'><span class='vocab-popout' data-vocab-id='733'>毎日（まいにち）</span></span><strong><span class='gp-popout vocab-popout' data-gp-id='26' data-vocab-id='724'>歩（ある）く</span></strong>。<br><span class='vocab-popout' data-vocab-id='849'>私（わたし）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='chui'><span class='vocab-popout' data-vocab-id='733'>毎日（まいにち）</span></span><span class='study-area-input'>____</span>。",
+        "answer": "あるきます",
+        "alternate_grammar": [],
+        "kanji_answer": "歩（ある）きます",
+        "kanji_alt_grammar": [],
+        "nuance": "動詞（どうし）の<strong>過去（かこ）形（けい）ではない形（かたち）</strong>で、３つの可能（かのう）性（せい）のある英語（えいご）のニュアンスを示（しめ）すために使（つか）われる動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/950/male_audio/11-私は毎日歩く.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私は毎日歩く。私は毎日歩きます。.mp3",
+        "word_prompt": "歩（ある）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あるく": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "あるいています": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>walk</strong> every day. (<strong>habit</strong>)",
+        "nuance_translation": "The <strong>non-past form</strong> of verbs, used to indicate one of 3 possible English nuances.",
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10041",
+      "type": "study_question",
+      "attributes": {
+        "id": 10041,
+        "content": "<span class='vocab-popout' data-vocab-id='1092'>鳥（とり）</span><span class='gp-popout' data-gp-id='3'>は</span><strong><span class='gp-popout vocab-popout' data-gp-id='26' data-vocab-id='724'>飛（と）ぶ</span></strong>。<br><span class='vocab-popout' data-vocab-id='1092'>鳥（とり）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "とびます",
+        "alternate_grammar": [],
+        "kanji_answer": "飛（と）びます",
+        "kanji_alt_grammar": [],
+        "nuance": "動詞（どうし）の<strong>過去（かこ）形（けい）ではない形（かたち）</strong>で、３つの可能（かのう）性（せい）のある英語（えいご）のニュアンスを示（しめ）すために使（つか）われる動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/950/male_audio/12-鳥は飛ぶ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/鳥は飛ぶ。鳥は飛びます。.mp3",
+        "word_prompt": "飛（と）ぶ",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とぶ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Birds <strong>fly</strong>. (<strong>the verb is used as a general truth</strong>)",
+        "nuance_translation": "The <strong>non-past form</strong> of verbs, used to indicate one of 3 possible English nuances.",
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10039",
+      "type": "study_question",
+      "attributes": {
+        "id": 10039,
+        "content": "<span class='chui'><span class='vocab-popout' data-vocab-id='643'>明日（あした）</span></span>、<span class='vocab-popout' data-vocab-id='506'>学校（がっこう）</span><span class='gp-popout' data-gp-id='38'>へ</span><strong><span class='gp-popout vocab-popout' data-gp-id='26' data-vocab-id='935'>行（い）く</span></strong>。<br><span class='chui'><span class='vocab-popout' data-vocab-id='643'>明日（あした）</span></span>、<span class='vocab-popout' data-vocab-id='506'>学校（がっこう）</span><span class='gp-popout' data-gp-id='38'>へ</span><span class='study-area-input'>____</span>。",
+        "answer": "いきます",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）きます",
+        "kanji_alt_grammar": [],
+        "nuance": "動詞（どうし）の<strong>過去（かこ）形（けい）ではない形（かたち）</strong>で、３つの可能（かのう）性（せい）のある英語（えいご）のニュアンスを示（しめ）すために使（つか）われる動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/950/male_audio/04-明日学校へ行く.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/明日、学校へ行く。明日、学校へ行きます。.mp3",
+        "word_prompt": "行（い）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いく": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Tomorrow <strong>I will go to</strong> school. (<strong>future event</strong>)",
+        "nuance_translation": "The <strong>non-past form</strong> of verbs, used to indicate one of 3 possible English nuances.",
+        "extra_info": "",
+        "reviewable_id": 950,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "63",
+      "type": "writeup",
+      "attributes": {
+        "id": 63,
+        "body_ja": null,
+        "body": "<p>In Japanese, the <span data-gp-id='950'>non-past</span> form of verbs is identical to the dictionary form/casual form. Unlike English, this form of verbs is able to be used in several cases where conjugation/different constructions would be required in English.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154978'>\r\n<li data-study-question='154979'>\r\n<li data-study-question='154980'></ul>\r\n\r\n<p>In these examples, we can see the three forms of English verbs that are covered by the single <span data-gp-id='950'>non-past</span> form of Japanese verbs. These are verbs ending with -s (sees, hears, goes), verbs requiring will (will see, will hear, will go), and verbs that do not require conjugation (see, hear, go).</p>\r\n\r\n<p>Due to this one form of verbs covering several different nuances, it is often important to use expressions of time in the sentence, so that the meaning becomes clear.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154981'>\r\n<li data-study-question='154982'></ul>\r\n\r\n<p>If there is no word distinguishing 'time' in the sentence, the nuance will be that of stating a general fact about something that is true at any time.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154983'></ul>\r\n\r\n<p>From all of these examples, we can see that the non-past form can be thought of as expressing one of three basic ideas. General facts, habits, or future events.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n\r\n<p>In books, the <span data-gp-id='950'>non-past</span> form will regularly be used for events that are happening 'in the moment', but without any time word being used. In these cases it is usually obvious from context that it is happening then and there.</p></section>"
+      }
+    },
+    {
+      "id": "1354",
+      "type": "related_content",
+      "attributes": {
+        "id": 1354,
+        "relationship_type": "related",
+        "body": "In Japanese, the dictionary form and the non-past form of verbs are identical. For example, 食べる is both the dictionary form and the non-past form of the verb 'to eat.' Unlike in English, this form can be used as is to express future actions ('I will eat'), habitual actions ('I regularly eat / I eat everyday'), or general truths ('Lions eat meat').",
+        "first_relatable": {
+          "id": 950,
+          "slug": "verb-non-past",
+          "title": "Verbs (Non-past)",
+          "meaning": "(Non-past)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 12,
+          "slug": "る-Verbs",
+          "title": "る-Verb (Dictionary)",
+          "meaning": "る + ます (Ichidan Verbs)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1357",
+      "type": "related_content",
+      "attributes": {
+        "id": 1357,
+        "relationship_type": "related",
+        "body": "The non-past (or dictionary) form expresses habitual or future actions, while the past form expresses completed actions or past states. For る-Verbs, change the final る to た to form the past tense. Both the non-past and past forms are casual, non-polite forms used in conversation or other grammar patterns.",
+        "first_relatable": {
+          "id": 950,
+          "slug": "verb-non-past",
+          "title": "Verbs (Non-past)",
+          "meaning": "(Non-past)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 895,
+          "slug": "る-verb-past",
+          "title": "る-Verb (Past)",
+          "meaning": "る - Verbs (Past tense)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1358",
+      "type": "related_content",
+      "attributes": {
+        "id": 1358,
+        "relationship_type": "related",
+        "body": "The non-past (or dictionary) form is the base form of a verb, used to express habitual or future actions (e.g., 食べる = 'I eat' or 'I will eat'). To express the negative, use the negative form. For most える/いる-Verbs, change the final る to ない (e.g., 食べない = 'I do not eat' or 'I will not eat'). Both the non-past and negative forms are plain forms used in casual conversation or other grammar patterns.",
+        "first_relatable": {
+          "id": 950,
+          "slug": "verb-non-past",
+          "title": "Verbs (Non-past)",
+          "meaning": "(Non-past)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 51,
+          "slug": "るverb-ない",
+          "title": "る-Verb (Negative)",
+          "meaning": "Will/Does/Do (not)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1359",
+      "type": "related_content",
+      "attributes": {
+        "id": 1359,
+        "relationship_type": "related",
+        "body": "The non-past or dictionary form is the base form of a verb, used to express habitual or future actions To express the negative, change the final kana and add ない (e.g., 買わない = 'I do not buy' or 'I will not buy'). Both the non-past and negative forms are plain forms used in casual conversation or other grammar patterns.",
+        "first_relatable": {
+          "id": 950,
+          "slug": "verb-non-past",
+          "title": "Verbs (Non-past)",
+          "meaning": "(Non-past)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 888,
+          "slug": "うverb--ない",
+          "title": "う-Verb (Negative)",
+          "meaning": "Will/Does/Do (not)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1360",
+      "type": "related_content",
+      "attributes": {
+        "id": 1360,
+        "relationship_type": "related",
+        "body": "The non-past or dictionary form is the base form of a verb, used for habitual or future actions. Meanwhile, the Verb + て form connects verbs, indicating actions in sequence or as part of complex grammar patterns. Note that unlike the non-past form, the Verb + て form has no tense or politeness level on its own, which are instead determined by what follows.",
+        "first_relatable": {
+          "id": 950,
+          "slug": "verb-non-past",
+          "title": "Verbs (Non-past)",
+          "meaning": "(Non-past)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 416,
+          "slug": "verb-て",
+          "title": "Verb + て",
+          "meaning": "And, Then (Linking events)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1355",
+      "type": "related_content",
+      "attributes": {
+        "id": 1355,
+        "relationship_type": "related",
+        "body": "In Japanese, the dictionary form and the non-past form of verbs are identical. For example, 買う is both the dictionary form and the non-past form of the verb 'to buy.' Unlike in English, this form can be used as is to express future actions ('I will buy'), habitual actions ('I regularly buy'), or general truths ('People buy a lot around Christmas').",
+        "first_relatable": {
+          "id": 950,
+          "slug": "verb-non-past",
+          "title": "Verbs (Non-past)",
+          "meaning": "(Non-past)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 26,
+          "slug": "う-Verbs",
+          "title": "う-Verb (Dictionary)",
+          "meaning": "う + ます (Godan Verbs)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1356",
+      "type": "related_content",
+      "attributes": {
+        "id": 1356,
+        "relationship_type": "related",
+        "body": "The non-past (or dictionary) form of a verb expresses habitual or future actions, while the past form indicates completed actions or past states. For う-Verbs, the last kana changes before adding た (or だ) to form the past tense. Both forms are plain and used in casual conversation or other grammar patterns.",
+        "first_relatable": {
+          "id": 950,
+          "slug": "verb-non-past",
+          "title": "Verbs (Non-past)",
+          "meaning": "(Non-past)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 41,
+          "slug": "う-verb-past",
+          "title": "う-Verb (Past)",
+          "meaning": "う - Verbs (Past tense)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

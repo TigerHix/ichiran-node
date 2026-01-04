@@ -1,0 +1,866 @@
+{
+  "data": {
+    "id": "360",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 360,
+      "level": "JLPT5",
+      "lesson_id": 8,
+      "part_of_speech": "名詞",
+      "register": "一般",
+      "word_type": "副助詞",
+      "slug": "v-まで",
+      "nuance": "(B)は、(A)が起（お）こらない限（かぎ）り継続（けいぞく）されるということを示（しめ）す言葉（ことば）。",
+      "grammar_order": 95,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 76,
+        "title": "すぎる",
+        "slug": "すぎる"
+      },
+      "previous_grammar_point": {
+        "id": 58,
+        "title": "Noun + まで",
+        "slug": "noun-まで"
+      },
+      "lesson_count": "6/13",
+      "title": "Verb + まで",
+      "furigana": "Verb + まで",
+      "meaning": "Until (something) happens",
+      "nuance_translation": "A word that indicates that <strong>until</strong> (A) happens, (B) <strong>will continue</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Verb + <strong><span class='gp-popout' data-gp-id='58'>まで</span></strong>",
+      "part_of_speech_translation": "Noun",
+      "register_translation": "Standard",
+      "word_type_translation": "Adverbial Particle",
+      "discourse_link": "https://community.bunpro.jp/t/v-grammar-discussion/1179",
+      "metadata": "まで, verb まで, made, verb made, noun, adverbial particle, particle, plain form, dictionary form"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "2264",
+            "type": "study_question"
+          },
+          {
+            "id": "183804",
+            "type": "study_question"
+          },
+          {
+            "id": "155061",
+            "type": "study_question"
+          },
+          {
+            "id": "2261",
+            "type": "study_question"
+          },
+          {
+            "id": "1295",
+            "type": "study_question"
+          },
+          {
+            "id": "155060",
+            "type": "study_question"
+          },
+          {
+            "id": "1294",
+            "type": "study_question"
+          },
+          {
+            "id": "1296",
+            "type": "study_question"
+          },
+          {
+            "id": "2258",
+            "type": "study_question"
+          },
+          {
+            "id": "2260",
+            "type": "study_question"
+          },
+          {
+            "id": "2262",
+            "type": "study_question"
+          },
+          {
+            "id": "2265",
+            "type": "study_question"
+          },
+          {
+            "id": "2266",
+            "type": "study_question"
+          },
+          {
+            "id": "2259",
+            "type": "study_question"
+          },
+          {
+            "id": "2263",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "94",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "222",
+            "type": "offline_resource"
+          },
+          {
+            "id": "599",
+            "type": "offline_resource"
+          },
+          {
+            "id": "381",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "205",
+            "type": "related_content"
+          },
+          {
+            "id": "206",
+            "type": "related_content"
+          },
+          {
+            "id": "204",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "798",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "799",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2261",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "2264",
+      "type": "study_question",
+      "attributes": {
+        "id": 2264,
+        "content": "彼（かれ）<span class='gp-popout' data-gp-id='10'>が</span>答（こた）え<span class='gp-popout' data-gp-id='12'>る</span><span class='study-area-input'>____</span>、みんな<span class='gp-popout' data-gp-id='3'>は</span>待（ま）ち<span class='gp-popout' data-gp-id='41'>ました</span>。",
+        "answer": "まで",
+        "alternate_grammar": [],
+        "kanji_answer": "まで",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は、(A)が起（お）こらない限（かぎ）り継続（けいぞく）されるということを示（しめ）す言葉（ことば）。",
+        "tense": "Extent, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/360/male_audio/05-彼が答えるまでみんなが待ちました.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼が答えるまで、みんなは待ちました。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "までに": {
+            "en": "This means 'by'",
+            "es": "Esto significa 'por'.",
+            "fr": "Cela signifie « par ».",
+            "id": "Ini berarti \"paling lambat (sebelum waktu tertentu)\""
+          }
+        },
+        "translation": "<strong>Until</strong> he answered, everyone waited.",
+        "nuance_translation": "A word that indicates that <strong>until</strong> (A) happens, (B) <strong>will continue</strong>.",
+        "extra_info": "",
+        "reviewable_id": 360,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183804",
+      "type": "study_question",
+      "attributes": {
+        "id": 183804,
+        "content": "授業（じゅぎょう）<span data-gp-id='10'>が</span>始（はじ）ま<span data-gp-id='26'>る</span><span data-gp-id='360'>まで</span>、先生（せんせい）<span data-gp-id='10'>が</span>来（こ）<span data-gp-id='897'>なかった</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The teacher didn't come <strong>until</strong> the class started.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 360,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155061",
+      "type": "study_question",
+      "attributes": {
+        "id": 155061,
+        "content": "携帯（けいたい）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>壊（こわ）れ<span class=\"gp-popout\" data-gp-id=\"12\">る</span><span class='study-area-input'>____</span>、使（つか）い<span class=\"gp-popout\" data-gp-id=\"26\">ます</span>。",
+        "answer": "まで",
+        "alternate_grammar": [],
+        "kanji_answer": "まで",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/携帯は壊れるまで、使います。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Until</strong> my phone breaks, I will use it.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 360,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2261",
+      "type": "study_question",
+      "attributes": {
+        "id": 2261,
+        "content": "<span class='gp-popout vocab-popout' data-gp-id='30' data-vocab-id='91'>この</span><span class='vocab-popout' data-vocab-id='680'>服（ふく）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout vocab-popout' data-gp-id='24' data-vocab-id='627'>新（あたら）しい</span><span class='vocab-popout' data-vocab-id='680'>服（ふく）</span><span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout vocab-popout' data-gp-id='26' data-vocab-id='974'>買（か）う</span><span class='study-area-input'>____</span>、着（き）<span class='gp-popout' data-gp-id='12'>ます</span>。",
+        "answer": "まで",
+        "alternate_grammar": [],
+        "kanji_answer": "まで",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は、(A)が起（お）こらない限（かぎ）り継続（けいぞく）されるということを示（しめ）す言葉（ことば）。",
+        "tense": "Extent, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/360/male_audio/この服は新しい服を買うまで、着ます。.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/この服は新しい服を買うまで、着ます。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "までに": {
+            "en": "This means 'by'",
+            "es": "Esto significa 'por'.",
+            "fr": "Cela signifie « par ».",
+            "id": "Ini berarti \"paling lambat (sebelum waktu tertentu)\""
+          }
+        },
+        "translation": "I will wear these clothes <strong>until</strong> I get new ones.",
+        "nuance_translation": "A word that indicates that <strong>until</strong> (A) happens, (B) <strong>will continue</strong>.",
+        "extra_info": "",
+        "reviewable_id": 360,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1295",
+      "type": "study_question",
+      "attributes": {
+        "id": 1295,
+        "content": "彼（かれ）<span class='gp-popout' data-gp-id='10'>が</span><span class='gp-popout' data-gp-id='39'>来（く）る</span><span class='study-area-input'>____</span>、日本語（にほんご）<span class='gp-popout' data-gp-id='21'>を</span>勉強（べんきょう）<span class='gp-popout' data-gp-id='22'>します</span>。",
+        "answer": "まで",
+        "alternate_grammar": [
+          "まで",
+          "までは"
+        ],
+        "kanji_answer": "まで",
+        "kanji_alt_grammar": [
+          "まで",
+          "までは"
+        ],
+        "nuance": "(B)は、(A)が起（お）こらない限（かぎ）り継続（けいぞく）されるということを示（しめ）す言葉（ことば）。",
+        "tense": "Particle, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/360/male_audio/彼が来るまで日本語を勉強します.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼が来るまで、日本語を勉強します。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "までに": {
+            "en": "This means 'by'",
+            "es": "Esto significa 'por'.",
+            "fr": "Cela signifie « par ».",
+            "id": "Ini berarti \"paling lambat (sebelum waktu tertentu)\""
+          }
+        },
+        "translation": "<strong>Until</strong> he comes, I will study Japanese.",
+        "nuance_translation": "A word that indicates that <strong>until</strong> (A) happens, (B) <strong>will continue</strong>.",
+        "extra_info": "",
+        "reviewable_id": 360,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155060",
+      "type": "study_question",
+      "attributes": {
+        "id": 155060,
+        "content": "友達（ともだち）<span class=\"gp-popout\" data-gp-id=\"10\">が</span><span class=\"gp-popout\" data-gp-id=\"39\">来（く）る</span><span class='study-area-input'>____</span>、駅（えき）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>ウロウロ<span class=\"gp-popout\" data-gp-id=\"26\">した</span>。",
+        "answer": "まで",
+        "alternate_grammar": [],
+        "kanji_answer": "まで",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/友達が来るまで、駅をウロウロした。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Until</strong> my friend came, I wandered around the station. (<span class=\"gp-popout\" data-gp-id=\"26\">した</span> gives the whole sentence the meaning of past tense)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 360,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1294",
+      "type": "study_question",
+      "attributes": {
+        "id": 1294,
+        "content": "映画（えいが）<span class='gp-popout' data-gp-id='10'>が</span>始（はじ）ま<span class='gp-popout' data-gp-id='26'>る</span><span class='study-area-input'>____</span>、友達（ともだち）<span class='gp-popout' data-gp-id='15'>と</span>話（はな）<span class='gp-popout' data-gp-id='41'>した</span>。",
+        "answer": "まで",
+        "alternate_grammar": [],
+        "kanji_answer": "まで",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は、(A)が起（お）こらない限（かぎ）り継続（けいぞく）されるということを示（しめ）す言葉（ことば）。",
+        "tense": "Particle, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/360/male_audio/07-映画が始まるまで友達と話した.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/映画が始まるまで、友達と話した。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "までに": {
+            "en": "This means 'by'",
+            "es": "Esto significa 'por'.",
+            "fr": "Cela signifie « par ».",
+            "id": "Ini berarti \"paling lambat (sebelum waktu tertentu)\""
+          }
+        },
+        "translation": "<strong>Until</strong> the movie started, I talked with my friend.",
+        "nuance_translation": "A word that indicates that <strong>until</strong> (A) happens, (B) <strong>will continue</strong>.",
+        "extra_info": "",
+        "reviewable_id": 360,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1296",
+      "type": "study_question",
+      "attributes": {
+        "id": 1296,
+        "content": "カタカナ<span class='gp-popout' data-gp-id='21'>を</span>覚（おぼ）え<span class='gp-popout' data-gp-id='12'>る</span><span class='study-area-input'>____</span>、私（わたし）<span class='gp-popout' data-gp-id='3'>は</span>寝（ね）<span class='gp-popout' data-gp-id='51'>ない</span>。",
+        "answer": "まで",
+        "alternate_grammar": [
+          "まで",
+          "までは"
+        ],
+        "kanji_answer": "まで",
+        "kanji_alt_grammar": [
+          "まで",
+          "までは"
+        ],
+        "nuance": "(B)は、(A)が起（お）こらない限（かぎ）り継続（けいぞく）されるということを示（しめ）す言葉（ことば）。",
+        "tense": "Particle, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/360/male_audio/04-カタカナを覚えるまで綿は寝ない.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/カタカナを覚えるまで、私は寝ない。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "までに": {
+            "en": "This means 'by'",
+            "es": "Esto significa 'por'.",
+            "fr": "Cela signifie « par ».",
+            "id": "Ini berarti \"paling lambat (sebelum waktu tertentu)\""
+          }
+        },
+        "translation": "<strong>Until</strong> I memorize katakana, I won't sleep.",
+        "nuance_translation": "A word that indicates that <strong>until</strong> (A) happens, (B) <strong>will continue</strong>.",
+        "extra_info": "",
+        "reviewable_id": 360,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2258",
+      "type": "study_question",
+      "attributes": {
+        "id": 2258,
+        "content": "<span class='gp-popout' data-gp-id='37'>その</span>漢字（かんじ）<span class='gp-popout' data-gp-id='21'>を</span>覚（おぼ）え<span class='gp-popout' data-gp-id='12'>る</span><span class='study-area-input'>____</span>、辞書（じしょ）<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout vocab-popout' data-gp-id='26' data-vocab-id='341'>使（つか）う</span>。",
+        "answer": "まで",
+        "alternate_grammar": [],
+        "kanji_answer": "まで",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は、(A)が起（お）こらない限（かぎ）り継続（けいぞく）されるということを示（しめ）す言葉（ことば）。",
+        "tense": "Extent, Particle",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "までに": {
+            "en": "This means 'by'",
+            "es": "Esto significa 'por'.",
+            "fr": "Cela signifie « par ».",
+            "id": "Ini berarti \"paling lambat (sebelum waktu tertentu)\""
+          }
+        },
+        "translation": " <strong>Until</strong> I remember that kanji, I will use a dictionary.",
+        "nuance_translation": "A word that indicates that <strong>until</strong> (A) happens, (B) <strong>will continue</strong>.",
+        "extra_info": "",
+        "reviewable_id": 360,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2260",
+      "type": "study_question",
+      "attributes": {
+        "id": 2260,
+        "content": "返（かえ）<span class='gp-popout' data-gp-id='26'>す</span><span class='study-area-input'>____</span>、<span class='gp-popout' data-gp-id='359'>結構（けっこう）</span>使（つか）い<span class='gp-popout' data-gp-id='41'>ました</span>。",
+        "answer": "まで",
+        "alternate_grammar": [],
+        "kanji_answer": "まで",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は、(A)が起（お）こらない限（かぎ）り継続（けいぞく）されるということを示（しめ）す言葉（ことば）。",
+        "tense": "Extent, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/360/male_audio/11-返すまで結構使いました.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/返すまで、結構使いました。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "までに": {
+            "en": "This means 'by'",
+            "es": "Esto significa 'por'.",
+            "fr": "Cela signifie « par ».",
+            "id": "Ini berarti \"paling lambat (sebelum waktu tertentu)\""
+          }
+        },
+        "translation": "<strong>Until</strong> I returned it, I used it quite a bit.",
+        "nuance_translation": "A word that indicates that <strong>until</strong> (A) happens, (B) <strong>will continue</strong>.",
+        "extra_info": "",
+        "reviewable_id": 360,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2262",
+      "type": "study_question",
+      "attributes": {
+        "id": 2262,
+        "content": "薬（くすり）<span class='gp-popout' data-gp-id='21'>を</span>飲（の）<span class='gp-popout' data-gp-id='26'>む</span><span class='study-area-input'>____</span>、頭（あたま）<span class='gp-popout' data-gp-id='10'>が</span>痛（いた）<span class='gp-popout' data-gp-id='874'>かった</span>。",
+        "answer": "まで",
+        "alternate_grammar": [],
+        "kanji_answer": "まで",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は、(A)が起（お）こらない限（かぎ）り継続（けいぞく）されるということを示（しめ）す言葉（ことば）。",
+        "tense": "Extent, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/360/male_audio/10-薬を飲むまで頭が痛かった.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/薬を飲むまで、頭が痛かった。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "までに": {
+            "en": "This means 'by'",
+            "es": "Esto significa 'por'.",
+            "fr": "Cela signifie « par ».",
+            "id": "Ini berarti \"paling lambat (sebelum waktu tertentu)\""
+          }
+        },
+        "translation": "<strong>Until</strong> I took the medicine, my head hurt.",
+        "nuance_translation": "A word that indicates that <strong>until</strong> (A) happens, (B) <strong>will continue</strong>.",
+        "extra_info": "",
+        "reviewable_id": 360,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2265",
+      "type": "study_question",
+      "attributes": {
+        "id": 2265,
+        "content": "<span class='gp-popout vocab-popout' data-gp-id='12' data-vocab-id='520'>寝（ね）る</span><span class='study-area-input'>____</span>、本（ほん）<span class='gp-popout' data-gp-id='21'>を</span>読（よ）<span class='gp-popout' data-gp-id='26'>む</span>。",
+        "answer": "まで",
+        "alternate_grammar": [],
+        "kanji_answer": "まで",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は、(A)が起（お）こらない限（かぎ）り継続（けいぞく）されるということを示（しめ）す言葉（ことば）。",
+        "tense": "Extent, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/360/male_audio/寝るまで本を読む.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/寝るまで、本を読む。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "までに": {
+            "en": "This means 'by'",
+            "es": "Esto significa 'por'.",
+            "fr": "Cela signifie « par ».",
+            "id": "Ini berarti \"paling lambat (sebelum waktu tertentu)\""
+          }
+        },
+        "translation": "<strong>Until</strong> I sleep, I will read a book.",
+        "nuance_translation": "A word that indicates that <strong>until</strong> (A) happens, (B) <strong>will continue</strong>.",
+        "extra_info": "",
+        "reviewable_id": 360,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2266",
+      "type": "study_question",
+      "attributes": {
+        "id": 2266,
+        "content": "終（お）わ<span class='gp-popout' data-gp-id='26'>る</span><span class='study-area-input'>____</span>、頑張（がんば）<span class='gp-popout' data-gp-id='41'>った</span>。",
+        "answer": "まで",
+        "alternate_grammar": [],
+        "kanji_answer": "まで",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は、(A)が起（お）こらない限（かぎ）り継続（けいぞく）されるということを示（しめ）す言葉（ことば）。",
+        "tense": "Extent, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/360/male_audio/09-終わるまで頑張った.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/終わるまで、頑張った。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "までに": {
+            "en": "This means 'by'",
+            "es": "Esto significa 'por'.",
+            "fr": "Cela signifie « par ».",
+            "id": "Ini berarti \"paling lambat (sebelum waktu tertentu)\""
+          }
+        },
+        "translation": "<strong>Until</strong> it was finished, I gave my best.",
+        "nuance_translation": "A word that indicates that <strong>until</strong> (A) happens, (B) <strong>will continue</strong>.",
+        "extra_info": "",
+        "reviewable_id": 360,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2259",
+      "type": "study_question",
+      "attributes": {
+        "id": 2259,
+        "content": "お風呂（ふろ）<span class='gp-popout' data-gp-id='32'>に</span>入（はい）<span class='gp-popout' data-gp-id='26'>る</span><span class='study-area-input'>____</span>、ゆっくりし<span class='gp-popout' data-gp-id='59'>たい</span>。",
+        "answer": "まで",
+        "alternate_grammar": [],
+        "kanji_answer": "まで",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は、(A)が起（お）こらない限（かぎ）り継続（けいぞく）されるということを示（しめ）す言葉（ことば）。",
+        "tense": "Extent, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/360/male_audio/01-お風呂に入るまでゆっくりしたい.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/お風呂に入るまで、ゆっくりしたい。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "までに": {
+            "en": "This means 'by'",
+            "es": "Esto significa 'por'.",
+            "fr": "Cela signifie « par ».",
+            "id": "Ini berarti \"paling lambat (sebelum waktu tertentu)\""
+          }
+        },
+        "translation": "<strong>Until</strong> I get in the bath, I want to relax.",
+        "nuance_translation": "A word that indicates that <strong>until</strong> (A) happens, (B) <strong>will continue</strong>.",
+        "extra_info": "",
+        "reviewable_id": 360,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2263",
+      "type": "study_question",
+      "attributes": {
+        "id": 2263,
+        "content": "雨（あめ）<span class='gp-popout' data-gp-id='10'>が</span>降（ふ）<span class='gp-popout' data-gp-id='26'>る</span><span class='study-area-input'>____</span>、外（そと）<span class='gp-popout' data-gp-id='25'>で</span><span class='gp-popout vocab-popout' data-gp-id='26' data-vocab-id='1008'>遊（あそ）ぶ</span>。",
+        "answer": "まで",
+        "alternate_grammar": [],
+        "kanji_answer": "まで",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)は、(A)が起（お）こらない限（かぎ）り継続（けいぞく）されるということを示（しめ）す言葉（ことば）。",
+        "tense": "Extent, Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/360/male_audio/雨が降るまで、外で遊ぶ。.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/雨が降るまで、外で遊ぶ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "までに": {
+            "en": "This means 'by'",
+            "es": "Esto significa 'por'.",
+            "fr": "Cela signifie « par ».",
+            "id": "Ini berarti \"paling lambat (sebelum waktu tertentu)\""
+          }
+        },
+        "translation": "<strong>Until</strong> it rains, I will play outside.",
+        "nuance_translation": "A word that indicates that <strong>until</strong> (A) happens, (B) <strong>will continue</strong>.",
+        "extra_info": "",
+        "reviewable_id": 360,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "94",
+      "type": "writeup",
+      "attributes": {
+        "id": 94,
+        "body_ja": "",
+        "body": "<p><span data-gp-id='360'>まで</span> is a particle that roughly means 'as far as (A)', or 'until the point of (A)'. When used with verbs, it is often translated as 'until (A) happens'.</p>\r\n\r\n<p>Because <span data-gp-id='360'>まで</span> means 'as far as/until the point of', it cannot be used with verbs in past tense, as would usually be the case in English. Due to this, past tense will be made clear by the context of the story, or verbs that come later in the sentence.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155060'>\r\n<li data-study-question='155061'></ul>\r\n\r\n<p>When used with a place, <span data-gp-id='360'>まで</span> functions similarly to に. This means that someone or something will go 'to' the place, but not go any further.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>To get a better idea of how <span data-gp-id='360'>まで</span> is used in relation to the past, let's have a look at another example, and how it would translate in English.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183804'></ul>\r\n\r\n<p>Here we can see that the English sentence will say 'started', but 始（はじ）まる 'start' (<span data-gp-id='12'>non-past tense</span>) is required in Japanese. However, later in the sentence, 来（こ）なかった (<span data-gp-id='897'>past tense</span>) is used. In this way, the overall meaning stays the same, while being slightly different to what an English native speaker would expect.</p></section>"
+      }
+    },
+    {
+      "id": "222",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 222,
+        "source": "Genki II 1st Edition",
+        "location": "Page 228",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "599",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 599,
+        "source": "Genki II 2nd Edition",
+        "location": "Page 260",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "381",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 381,
+        "source": "Marugoto Elementary 2 (A2) Rikai",
+        "location": "Page 80 & 109",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "798",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 798,
+        "site": "Renshuu",
+        "description": "Until A, up to A, as far as A",
+        "link": "https://www.renshuu.org/grammar/115/%E3%81%BE%E3%81%A7",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "799",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 799,
+        "site": "Eigo Gate",
+        "description": "Learn about まで in Japanese!",
+        "link": "https://www.eigo-gate.com/blog/bunpo-juzoku/setsuzoku-until/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2261",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2261,
+        "site": "Imabi",
+        "description": "The particle まで",
+        "link": "https://imabi.org/the-particle-%e3%81%be%e3%81%a7/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "205",
+      "type": "related_content",
+      "attributes": {
+        "id": 205,
+        "relationship_type": "related",
+        "body": "The particle まで means 'until' when used with a verb that can describe a progressive or ongoing action, e.g. 8時までテレビを見る 'watch TV until eight o'clock'. In contrast, までに means 'by', 'before', or 'no later than', and is used with verbs that describe actions with a set completion point, e.g. 8時までに終わる 'to finish by/before eight o'clock.'",
+        "first_relatable": {
+          "id": 360,
+          "slug": "v-まで",
+          "title": "Verb + まで",
+          "meaning": "Until (something) happens",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 104,
+          "slug": "までに",
+          "title": "までに",
+          "meaning": "By ~, By the time that ~, Before ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "206",
+      "type": "related_content",
+      "attributes": {
+        "id": 206,
+        "relationship_type": "related",
+        "body": "The particle まで has a core meaning of 'as far as' or 'to the extent of.' With verbs, it often means 'until A happens'—for example, 友達が来るまでテレビを見ていた ('I was watching TV until my friend came'). In other cases, it can mean 'even,' as in 骨まで食べた ('He even ate the bones'). Both uses reflect the core idea of reaching a certain extent or limit.",
+        "first_relatable": {
+          "id": 360,
+          "slug": "v-まで",
+          "title": "Verb + まで",
+          "meaning": "Until (something) happens",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 372,
+          "slug": "まで",
+          "title": "まで",
+          "meaning": "Even, To even, To the extent of",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "204",
+      "type": "related_content",
+      "attributes": {
+        "id": 204,
+        "relationship_type": "synonym",
+        "body": "The particle まで has the core meaning of 'as far as.' With nouns, it can mean 'until' with time expressions (e.g. 月曜まで休む = 'take off until Monday') or 'up to' with locations (e.g. 駅まで送る = 'see [someone] off to the station'). When used after a plain-form verb, it means 'until A happens. For example, 友達が来るまでテレビを見ていた = 'I was watching TV until my friend came.'",
+        "first_relatable": {
+          "id": 58,
+          "slug": "noun-まで",
+          "title": "Noun + まで",
+          "meaning": "Until, Till,  To (but no further than)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 360,
+          "slug": "v-まで",
+          "title": "Verb + まで",
+          "meaning": "Until (something) happens",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

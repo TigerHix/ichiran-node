@@ -1,0 +1,1051 @@
+{
+  "data": {
+    "id": "85",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 85,
+      "level": "JLPT5",
+      "lesson_id": 10,
+      "part_of_speech": "表現",
+      "register": "一般",
+      "word_type": "形容動詞",
+      "slug": "のがへた",
+      "nuance": "<strong>技術（ぎじゅつ）力（りょく）があまり高（たか）くない</strong>ことを表（あらわ）す表現（ひょうげん）。",
+      "grammar_order": 120,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 77,
+        "title": "のがじょうず",
+        "slug": "のがじょうず"
+      },
+      "previous_grammar_point": {
+        "id": 771,
+        "title": "Adjective + て + B",
+        "slug": "adjective-て-b"
+      },
+      "lesson_count": "5/12",
+      "title": "のがへた",
+      "furigana": "のが下手（へた）",
+      "meaning": "To be bad at, Poor at, Unskillful",
+      "nuance_translation": "An expression used to show a <strong>relatively low level of skill</strong> in something.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Verb + <strong><span class='gp-popout' data-gp-id='16'>の</span></strong><strong><span class='gp-popout' data-gp-id='10'>が</span></strong> + <strong>下手（へた）</strong>",
+      "part_of_speech_translation": "Expression",
+      "register_translation": "Standard",
+      "word_type_translation": "Adjectival Noun",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/1178",
+      "metadata": "のがへた, のが下手, nogaheta, expression, adjectival noun, nominalization"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "85",
+            "type": "study_question"
+          },
+          {
+            "id": "2255",
+            "type": "study_question"
+          },
+          {
+            "id": "2257",
+            "type": "study_question"
+          },
+          {
+            "id": "155438",
+            "type": "study_question"
+          },
+          {
+            "id": "155437",
+            "type": "study_question"
+          },
+          {
+            "id": "183826",
+            "type": "study_question"
+          },
+          {
+            "id": "2253",
+            "type": "study_question"
+          },
+          {
+            "id": "794",
+            "type": "study_question"
+          },
+          {
+            "id": "795",
+            "type": "study_question"
+          },
+          {
+            "id": "2250",
+            "type": "study_question"
+          },
+          {
+            "id": "2251",
+            "type": "study_question"
+          },
+          {
+            "id": "2252",
+            "type": "study_question"
+          },
+          {
+            "id": "2254",
+            "type": "study_question"
+          },
+          {
+            "id": "2256",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "119",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "833",
+            "type": "offline_resource"
+          },
+          {
+            "id": "881",
+            "type": "offline_resource"
+          },
+          {
+            "id": "942",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1699",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "98",
+            "type": "related_content"
+          },
+          {
+            "id": "383",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "179",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "178",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "85",
+      "type": "study_question",
+      "attributes": {
+        "id": 85,
+        "content": "サッカー<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='22'>する</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "のがへた",
+        "alternate_grammar": [],
+        "kanji_answer": "のがへた",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>技術（ぎじゅつ）力（りょく）があまり高（たか）くない</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Adjectivization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/85/male_audio/03-サッカーをするのが下手です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/サッカーをするのがへたです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがへた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I'm <strong>bad at</strong> playing soccer. (<strong>unskillful</strong>)",
+        "nuance_translation": "An expression used to show a <strong>relatively low level of skill</strong> in something.",
+        "extra_info": "",
+        "reviewable_id": 85,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2255",
+      "type": "study_question",
+      "attributes": {
+        "id": 2255,
+        "content": "君（きみ）<span class='gp-popout' data-gp-id='3'>は</span>、泳（およ）<span class='gp-popout' data-gp-id='26'>ぐ</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='71'>ね</span>。",
+        "answer": "のがへた",
+        "alternate_grammar": [],
+        "kanji_answer": "のがへた",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>技術（ぎじゅつ）力（りょく）があまり高（たか）くない</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Adjectivization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/85/male_audio/04-君は泳ぐのが下手ですね.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/君は、泳ぐのがへたですね。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがへた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "You are <strong>bad at</strong> swimming, aren't you. (<strong>unskillful</strong>)",
+        "nuance_translation": "An expression used to show a <strong>relatively low level of skill</strong> in something.",
+        "extra_info": "",
+        "reviewable_id": 85,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2257",
+      "type": "study_question",
+      "attributes": {
+        "id": 2257,
+        "content": "彼（かれ）<span class='gp-popout' data-gp-id='3'>は</span>、自転車（じてんしゃ）<span class='gp-popout' data-gp-id='32'>に</span>乗（の）<span class='gp-popout' data-gp-id='26'>る</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='18'>だろう</span>。",
+        "answer": "のがへた",
+        "alternate_grammar": [],
+        "kanji_answer": "のがへた",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>技術（ぎじゅつ）力（りょく）があまり高（たか）くない</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Adjectivization",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがへた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He is <strong>bad at</strong> riding a bicycle, don't you think? (<strong>unskillful</strong>)",
+        "nuance_translation": "An expression used to show a <strong>relatively low level of skill</strong> in something.",
+        "extra_info": "",
+        "reviewable_id": 85,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155438",
+      "type": "study_question",
+      "attributes": {
+        "id": 155438,
+        "content": "彼（かれ）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>運転（うんてん）<span class=\"gp-popout\" data-gp-id=\"22\">する</span><span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "のがへた",
+        "alternate_grammar": [],
+        "kanji_answer": "のが下手（へた）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼は運転するのが下手です。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "He is <strong>bad at</strong> driving.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 85,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155437",
+      "type": "study_question",
+      "attributes": {
+        "id": 155437,
+        "content": "私（わたし）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>漢字（かんじ）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>教（おし）え<span class=\"gp-popout\" data-gp-id=\"12\">る</span><span class='study-area-input'>____</span>。",
+        "answer": "のがへた",
+        "alternate_grammar": [],
+        "kanji_answer": "のが下手（へた）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私は漢字を教えるのが下手。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I am <strong>bad at</strong> teaching kanji.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 85,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183826",
+      "type": "study_question",
+      "attributes": {
+        "id": 183826,
+        "content": "去年（きょねん）<span data-gp-id='58'>まで</span>料理（りょうり）<span data-gp-id='21'>を</span><span data-gp-id='22'>する</span><span data-gp-id='85'>のが下手（へた）</span><span data-gp-id='40'>だった</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 11,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Until last year, I was <strong>bad at</strong> cooking.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 85,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2253",
+      "type": "study_question",
+      "attributes": {
+        "id": 2253,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='3'>は</span>、掃除（そうじ）<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='22'>する</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "のがへた",
+        "alternate_grammar": [],
+        "kanji_answer": "のがへた",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>技術（ぎじゅつ）力（りょく）があまり高（たか）くない</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Adjectivization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/85/male_audio/10-私は掃除をするのが下手です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私は、掃除をするのがへたです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがへた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I'm <strong>bad at</strong> cleaning. (<strong>unskillful</strong>)",
+        "nuance_translation": "An expression used to show a <strong>relatively low level of skill</strong> in something.",
+        "extra_info": "",
+        "reviewable_id": 85,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "794",
+      "type": "study_question",
+      "attributes": {
+        "id": 794,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='3'>は</span>チェス<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='22'>する</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "のがへた",
+        "alternate_grammar": [],
+        "kanji_answer": "のがへた",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>技術（ぎじゅつ）力（りょく）があまり高（たか）くない</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Standard, Adjectivization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/85/male_audio/13-私はチェスをするのが下手だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私はチェスをするのがへただ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがへた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I'm <strong>bad at</strong> chess. (<strong>unskillful</strong>)",
+        "nuance_translation": "An expression used to show a <strong>relatively low level of skill</strong> in something.",
+        "extra_info": "",
+        "reviewable_id": 85,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "795",
+      "type": "study_question",
+      "attributes": {
+        "id": 795,
+        "content": "カタカナ<span class='gp-popout' data-gp-id='21'>を</span>覚（おぼ）え<span class='gp-popout' data-gp-id='12'>る</span><span class='study-area-input'>____</span>。",
+        "answer": "のがへた",
+        "alternate_grammar": [
+          "のがへただ",
+          "のがへた"
+        ],
+        "kanji_answer": "のがへた",
+        "kanji_alt_grammar": [
+          "のがへただ",
+          "のがへた"
+        ],
+        "nuance": "<strong>技術（ぎじゅつ）力（りょく）があまり高（たか）くない</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Standard, Adjectivization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/85/male_audio/02-カタカナを覚えるのが下手.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/カタカナを覚えるのがへた。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがへた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがへたです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "ことがへたです": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがてです": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがてです": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがてだ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがてだ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I'm <strong>poor at</strong> remembering Katakana. (<strong>unskillful</strong>)",
+        "nuance_translation": "An expression used to show a <strong>relatively low level of skill</strong> in something.",
+        "extra_info": "",
+        "reviewable_id": 85,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2250",
+      "type": "study_question",
+      "attributes": {
+        "id": 2250,
+        "content": "彼女（かのじょ）<span class='gp-popout' data-gp-id='3'>は</span>勉強（べんきょう）<span class='gp-popout' data-gp-id='22'>する</span><span class='study-area-input'>____</span>。",
+        "answer": "のがへた",
+        "alternate_grammar": [
+          "のがへたです",
+          "のがへただ",
+          "のがへた"
+        ],
+        "kanji_answer": "のがへた",
+        "kanji_alt_grammar": [
+          "のがへたです",
+          "のがへただ",
+          "のがへた"
+        ],
+        "nuance": "<strong>技術（ぎじゅつ）力（りょく）があまり高（たか）くない</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Adjectivization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/85/male_audio/08-彼女は勉強するのが下手.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼女は勉強するのがへた。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがへた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがてだ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがてです": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがてだ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがてです": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "She is <strong>bad at</strong> studying. (<strong>unskillful</strong>)",
+        "nuance_translation": "An expression used to show a <strong>relatively low level of skill</strong> in something.",
+        "extra_info": "",
+        "reviewable_id": 85,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2251",
+      "type": "study_question",
+      "attributes": {
+        "id": 2251,
+        "content": "彼（かれ）<span class='gp-popout' data-gp-id='3'>は</span>漢字（かんじ）<span class='gp-popout' data-gp-id='21'>を</span>書（か）<span class='gp-popout' data-gp-id='26'>く</span><span class='study-area-input'>____</span>。",
+        "answer": "のがへた",
+        "alternate_grammar": [
+          "のがへたです",
+          "のがへただ",
+          "のがへた"
+        ],
+        "kanji_answer": "のがへた",
+        "kanji_alt_grammar": [
+          "のがへたです",
+          "のがへただ",
+          "のがへた"
+        ],
+        "nuance": "<strong>技術（ぎじゅつ）力（りょく）があまり高（たか）くない</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Adjectivization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/85/male_audio/06-彼は漢字を書くのが下手.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼は漢字を書くのがへた。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがへた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがてだ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがてです": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがてだ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがてです": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He is <strong>bad at</strong> writing kanji. (<strong>unskillful</strong>)",
+        "nuance_translation": "An expression used to show a <strong>relatively low level of skill</strong> in something.",
+        "extra_info": "",
+        "reviewable_id": 85,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2252",
+      "type": "study_question",
+      "attributes": {
+        "id": 2252,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='3'>は</span>パン<span class='gp-popout' data-gp-id='21'>を</span>作（つく）<span class='gp-popout' data-gp-id='26'>る</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='76'>すぎる</span>。",
+        "answer": "のがへた",
+        "alternate_grammar": [],
+        "kanji_answer": "のがへた",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>技術（ぎじゅつ）力（りょく）があまり高（たか）くない</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Adjectivization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/85/male_audio/09-私はパンを作るのが下手すぎる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私はパンを作るのがへたすぎる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがへた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I'm really <strong>bad at</strong> making bread. (<strong>unskillful</strong>)",
+        "nuance_translation": "An expression used to show a <strong>relatively low level of skill</strong> in something.",
+        "extra_info": "",
+        "reviewable_id": 85,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2254",
+      "type": "study_question",
+      "attributes": {
+        "id": 2254,
+        "content": "彼（かれ）<span class='gp-popout' data-gp-id='3'>は</span>外国人（がいこくじん）<span class='gp-popout' data-gp-id='1'>だ</span><span class='gp-popout' data-gp-id='45'>から</span>、お箸（はし）<span class='gp-popout' data-gp-id='21'>を</span>使（つか）<span class='gp-popout' data-gp-id='26'>う</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "のがへた",
+        "alternate_grammar": [],
+        "kanji_answer": "のがへた",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>技術（ぎじゅつ）力（りょく）があまり高（たか）くない</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Adjectivization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/85/male_audio/05-彼は外国人だからお箸を使うのが下手です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼は外国人だから、お箸を使うのがへたです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがへた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He is a foreigner, so he is <strong>bad at</strong> using chopsticks. (<strong>unskillful</strong>)",
+        "nuance_translation": "An expression used to show a <strong>relatively low level of skill</strong> in something.",
+        "extra_info": "",
+        "reviewable_id": 85,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2256",
+      "type": "study_question",
+      "attributes": {
+        "id": 2256,
+        "content": "<span class='gp-popout' data-gp-id='47'>あの</span>子（こ）<span class='gp-popout' data-gp-id='3'>は</span>料理（りょうり）<span class='gp-popout' data-gp-id='22'>する</span><span class='study-area-input'>____</span>。",
+        "answer": "のがへた",
+        "alternate_grammar": [
+          "のがへたです",
+          "のがへただ",
+          "のがへた"
+        ],
+        "kanji_answer": "のがへた",
+        "kanji_alt_grammar": [
+          "のがへたです",
+          "のがへただ",
+          "のがへた"
+        ],
+        "nuance": "<strong>技術（ぎじゅつ）力（りょく）があまり高（たか）くない</strong>ことを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Adjectivization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/85/male_audio/01-あの子は料理するのが下手.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あの子は料理するのがへた。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがへた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがてだ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "ことがにがてです": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがて": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがてだ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "のがにがてです": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That kid is <strong>bad at</strong> cooking. (<strong>unskillful</strong>)",
+        "nuance_translation": "An expression used to show a <strong>relatively low level of skill</strong> in something.",
+        "extra_info": "",
+        "reviewable_id": 85,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "119",
+      "type": "writeup",
+      "attributes": {
+        "id": 119,
+        "body_ja": "",
+        "body": "<p><span data-gp-id='85'>～のが下手（へた）</span> is a phrase that behaves in almost exactly the same way as <span data-gp-id='77'>～のが上手（じょうず）</span>, but rather than meaning 'to be good at (A)', it means 'to be bad at (A)', (which is a much more handy expression, if you are like me!). This particular expression is used with the plain (dictionary) form of verbs only.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155437'>\r\n<li data-study-question='155438'></ul>\r\n\r\n<p>In these examples, we can see that there is no difference between Ichidan verbs and Godan verbs. Both will appear in their plain form. In this expression, <span data-gp-id='16'>のが</span> is performing the same function as in the regular <span data-gp-id='16'>のは, and のが</span> constructions. This function is nominalization (turning a phrase into a noun).</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>If you want to express that you were bad at something (in the past), the verb will still remain in the plain form, but 下手（へた） will change to the past tense.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183826'></ul></section>"
+      }
+    },
+    {
+      "id": "833",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 833,
+        "source": "みんなの日本語 II",
+        "location": "Page 12 [CH 26]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "881",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 881,
+        "source": "みんなの日本語 II",
+        "location": "Page 84 [CH 38]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "942",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 942,
+        "source": "みんなの日本語 I",
+        "location": "Page 62 [CH 9]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1699",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1699,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 194",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "179",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 179,
+        "site": "EJapanese",
+        "description": "Additional Examples and Listening",
+        "link": "http://www.e-japanese.jp/?p=403",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "178",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 178,
+        "site": "Imabi",
+        "description": "Bad At",
+        "link": "https://imabi.org/good-bad-at/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "98",
+      "type": "related_content",
+      "attributes": {
+        "id": 98,
+        "relationship_type": "antonym",
+        "body": "These phrases combine the nominalizer の with the な-Adjectives 好き and 下手. They are used to express liking something (好き) or not being good at something (下手). In Japanese culture, boasting is rare, so while 下手 can be used to humbly describe a lack of ability, 好き serves as a more modest alternative to the boastful-sounding 上手.",
+        "first_relatable": {
+          "id": 34,
+          "slug": "のがすき",
+          "title": "のがすき",
+          "meaning": "Like doing, Love doing",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 85,
+          "slug": "のがへた",
+          "title": "のがへた",
+          "meaning": "To be bad at, Poor at, Unskillful",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "383",
+      "type": "related_content",
+      "attributes": {
+        "id": 383,
+        "relationship_type": "antonym",
+        "body": "These two opposite terms are used after verbs to express being good or bad at certain actions. のが上手 is used to say someone is good at something, as in 絵を描くのが上手 ('She is good at drawing'). In contrast, 絵を描くのが下手 means 'She is not good at drawing.' Note that in Japanese culture, it's uncommon to use 上手 to describe yourself, as it can come across as boastful.",
+        "first_relatable": {
+          "id": 77,
+          "slug": "のがじょうず",
+          "title": "のがじょうず",
+          "meaning": "To be good at, Proficient",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 85,
+          "slug": "のがへた",
+          "title": "のがへた",
+          "meaning": "To be bad at, Poor at, Unskillful",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

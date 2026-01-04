@@ -1,0 +1,1191 @@
+{
+  "data": {
+    "id": "470",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 470,
+      "level": "JLPT3",
+      "lesson_id": 29,
+      "part_of_speech": null,
+      "register": "硬い",
+      "word_type": "",
+      "slug": "連用形",
+      "nuance": "<strong>て形（けい）</strong>の時（とき）や<strong>「と」</strong>と言いたい時など、いろいろな意味（いみ）で使（つか）われる活用（かつよう）。",
+      "grammar_order": 484,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 261,
+        "title": "向き",
+        "slug": "向き"
+      },
+      "previous_grammar_point": {
+        "id": 486,
+        "title": "必ずしも ",
+        "slug": "必ずしも"
+      },
+      "lesson_count": "2/22",
+      "title": "連用形",
+      "furigana": "連用形（れんようけい）",
+      "meaning": "Formal Conjunctive",
+      "nuance_translation": "A <strong>formal</strong> conjugation pattern used to say <strong>and</strong>, <strong>then</strong>, or several other meanings that could also be implied by <strong>て form</strong>.",
+      "rare_kanji_warning": null,
+      "caution": "Used primarily in written language",
+      "polite_structure": null,
+      "casual_structure": "<span class='gp-popout' data-gp-id='26'>Verb［stem］</span>+ Phrase<br><span class='gp-popout' data-gp-id='769'>［い］Adjective［<del>て</del>］</span>+ Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Formal",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/conjunctive-grammar-discussion/3023",
+      "metadata": "連用形, れんようけい, renyoukei, conjunction, conjunctive form, ます form, masu form, formal conjunctive, formal"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "181526",
+            "type": "study_question"
+          },
+          {
+            "id": "4897",
+            "type": "study_question"
+          },
+          {
+            "id": "4901",
+            "type": "study_question"
+          },
+          {
+            "id": "4902",
+            "type": "study_question"
+          },
+          {
+            "id": "181523",
+            "type": "study_question"
+          },
+          {
+            "id": "181524",
+            "type": "study_question"
+          },
+          {
+            "id": "181525",
+            "type": "study_question"
+          },
+          {
+            "id": "3747",
+            "type": "study_question"
+          },
+          {
+            "id": "4903",
+            "type": "study_question"
+          },
+          {
+            "id": "4905",
+            "type": "study_question"
+          },
+          {
+            "id": "3749",
+            "type": "study_question"
+          },
+          {
+            "id": "3748",
+            "type": "study_question"
+          },
+          {
+            "id": "4898",
+            "type": "study_question"
+          },
+          {
+            "id": "4904",
+            "type": "study_question"
+          },
+          {
+            "id": "4900",
+            "type": "study_question"
+          },
+          {
+            "id": "4899",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "502",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "461",
+            "type": "offline_resource"
+          },
+          {
+            "id": "882",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1434",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1561",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1465",
+            "type": "related_content"
+          },
+          {
+            "id": "1466",
+            "type": "related_content"
+          },
+          {
+            "id": "1022",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1038",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1039",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "181526",
+      "type": "study_question",
+      "attributes": {
+        "id": 181526,
+        "content": "学校（がっこう）は楽（たの）し<span class='study-area-input'>____</span>、色々（いろいろ）学（まな）べる<span class=\"gp-popout\" data-gp-id=\"62\">ので</span>学校（がっこう）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>好（す）き<span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "く",
+        "alternate_grammar": [],
+        "kanji_answer": "く",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/学校は楽しく、色々学べるので学校が好きです。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "School is fun, (<strong>and</strong>) I can learn various things so I like it.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 470,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4897",
+      "type": "study_question",
+      "attributes": {
+        "id": 4897,
+        "content": "<span class='name-highlight'>ナレーター</span>：「ロナルドは赤信号（あかしんごう）で<span class='study-area-input'>____</span>、信号（しんごう）が青（あお）になるまで静（しず）かに待（ま）ちながら手動（しゅどう）で時計（とけい）を設定（せってい）した。その時（とき）彼（かれ）はその簡単（かんたん）に見（み）えることが来週（らいしゅう）、死（し）の原因（げんいん）になろうとは全（まった）く知（し）らなかった。」<br /><span class='name-highlight'>ロナルド</span>：「なに？なんて言（い）ったの？」",
+        "answer": "とまり",
+        "alternate_grammar": [],
+        "kanji_answer": "止（と）まり",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>て形（けい）</strong>の時（とき）や<strong>「と」</strong>と言いたい時など、いろいろな意味（いみ）で使（つか）われる活用（かつよう）。",
+        "tense": "Literary, Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/470/male_audio/230711_1526_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ナレーター：「ロナルドは赤信号で止まり、信号が青になるまで静かに待ちながら手動で時計を設定した。その時彼はその簡単に見えることが来週、死の原因になろうとは全く知らなかった。」ロナルド：「なに？なんて言ったの？」.mp3",
+        "word_prompt": "止（と）まる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とまって": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "とま": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とまし": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<span class='name-highlight'>Narrator</span>: 'Ronald <strong>stopped</strong> at the red light <strong>and</strong> waited calmly for the signal change while manually setting his wristwatch. Little did he know that this seemingly simple act would lead to his death only a week later.'<br /> <span class='name-highlight'>Ronald</span>: 'What? What did you say?'",
+        "nuance_translation": "A <strong>formal</strong> conjugation pattern used to say <strong>and</strong>, <strong>then</strong>, or several other meanings that could also be implied by <strong>て form</strong>.",
+        "extra_info": "",
+        "reviewable_id": 470,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4901",
+      "type": "study_question",
+      "attributes": {
+        "id": 4901,
+        "content": "夢（ゆめ）は<span class='study-area-input'>____</span>、志（こころざし）は高（たか）く！",
+        "answer": "おおきく",
+        "alternate_grammar": [],
+        "kanji_answer": "大（おお）きく",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>て形（けい）</strong>の時（とき）や<strong>「と」</strong>と言いたい時など、いろいろな意味（いみ）で使（つか）われる活用（かつよう）。",
+        "tense": "Literary, Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/470/male_audio/230711_1527_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/夢は大きく、志は高く！.mp3",
+        "word_prompt": "大（おお）きい",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おおきい": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "おおきくて": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Have</strong> big dreams, (<strong>and</strong>) be ambitious!",
+        "nuance_translation": "A <strong>formal</strong> conjugation pattern used to say <strong>and</strong>, <strong>then</strong>, or several other meanings that could also be implied by <strong>て form</strong>.",
+        "extra_info": "",
+        "reviewable_id": 470,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4902",
+      "type": "study_question",
+      "attributes": {
+        "id": 4902,
+        "content": "空（そら）は<span class='study-area-input'>____</span>、海（うみ）より広（ひろ）い。",
+        "answer": "あおく",
+        "alternate_grammar": [],
+        "kanji_answer": "青（あお）く",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>て形（けい）</strong>の時（とき）や<strong>「と」</strong>と言いたい時など、いろいろな意味（いみ）で使（つか）われる活用（かつよう）。",
+        "tense": "Literary, Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/470/male_audio/230711_1527_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/空は青く、海より広い。.mp3",
+        "word_prompt": "青（あお）い",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あおい": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "あおくて": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The sky <strong>is blue</strong>, (<strong>and</strong>) bigger than the sea.",
+        "nuance_translation": "A <strong>formal</strong> conjugation pattern used to say <strong>and</strong>, <strong>then</strong>, or several other meanings that could also be implied by <strong>て form</strong>.",
+        "extra_info": "",
+        "reviewable_id": 470,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181523",
+      "type": "study_question",
+      "attributes": {
+        "id": 181523,
+        "content": "飛行機（ひこうき）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>エンジン<span class=\"gp-popout\" data-gp-id=\"10\">が</span>爆発（ばくはつ）<span class=\"gp-popout\" data-gp-id=\"21\">を</span><span class='study-area-input'>____</span>、海（うみ）<span class=\"gp-popout\" data-gp-id=\"32\">に</span>墜落（ついらく）した。",
+        "answer": "し",
+        "alternate_grammar": [],
+        "kanji_answer": "し",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/飛行機のエンジンが爆発をし、海に墜落した。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The engine of the airplane exploded, (<strong>and</strong>) it crashed into the ocean.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 470,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181524",
+      "type": "study_question",
+      "attributes": {
+        "id": 181524,
+        "content": "朝食（ちょうしょく）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>食（た）<span class='study-area-input'>____</span>、出（で）かける準備（じゅんび）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>し<span class=\"gp-popout\" data-gp-id=\"60\">てください</span>。",
+        "answer": "べ",
+        "alternate_grammar": [],
+        "kanji_answer": "べ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/朝食を食べ、出かける準備をしてください。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Eat your breakfast, (<strong>and</strong>) please get ready to go out.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 470,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181525",
+      "type": "study_question",
+      "attributes": {
+        "id": 181525,
+        "content": "北海道（ほっかいどう）は寒（さむ）<span class='study-area-input'>____</span>、景色（けしき）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>綺麗（きれい）。",
+        "answer": "く",
+        "alternate_grammar": [],
+        "kanji_answer": "く",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/北海道は寒く、景色が綺麗。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Hokkaido is cold, (<strong>and</strong>) the scenery is pretty.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 470,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3747",
+      "type": "study_question",
+      "attributes": {
+        "id": 3747,
+        "content": "風（かぜ）が<span class='study-area-input'>____</span>、悪魔（あくま）が現（あらわ）れた。",
+        "answer": "ふき",
+        "alternate_grammar": [],
+        "kanji_answer": "吹（ふ）き",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>て形（けい）</strong>の時（とき）や<strong>「と」</strong>と言いたい時など、いろいろな意味（いみ）で使（つか）われる活用（かつよう）。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/470/male_audio/230711_1526.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/風が吹き、悪魔が現れた。.mp3",
+        "word_prompt": "吹（ふ）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ふいて": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ふい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ふ": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "The wind <strong>blew</strong><strong>,</strong> a demon appeared. ",
+        "nuance_translation": "A <strong>formal</strong> conjugation pattern used to say <strong>and</strong>, <strong>then</strong>, or several other meanings that could also be implied by <strong>て form</strong>.",
+        "extra_info": "",
+        "reviewable_id": 470,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4903",
+      "type": "study_question",
+      "attributes": {
+        "id": 4903,
+        "content": "時（とき）が過（す）ぎるのは<span class='study-area-input'>____</span>、取（と）り戻（もど）せない。",
+        "answer": "はやく",
+        "alternate_grammar": [],
+        "kanji_answer": "速（はや）く",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>て形（けい）</strong>の時（とき）や<strong>「と」</strong>と言いたい時など、いろいろな意味（いみ）で使（つか）われる活用（かつよう）。",
+        "tense": "Literary, Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/470/male_audio/230711_1527_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/時が過ぎるのは速く、取り戻せない。.mp3",
+        "word_prompt": "速（はや）い",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はやい": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "はやくて": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "はや": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "はやいで": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "Time passes <strong>quickly</strong>, (<strong>and</strong>) you can't get it back.",
+        "nuance_translation": "A <strong>formal</strong> conjugation pattern used to say <strong>and</strong>, <strong>then</strong>, or several other meanings that could also be implied by <strong>て form</strong>.",
+        "extra_info": "",
+        "reviewable_id": 470,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4905",
+      "type": "study_question",
+      "attributes": {
+        "id": 4905,
+        "content": "天候（てんこう）が<span class='study-area-input'>____</span>、遠足（えんそく）は延期（えんき）になった。",
+        "answer": "くずれ",
+        "alternate_grammar": [],
+        "kanji_answer": "崩（くず）れ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>て形（けい）</strong>の時（とき）や<strong>「と」</strong>と言いたい時など、いろいろな意味（いみ）で使（つか）われる活用（かつよう）。",
+        "tense": "Literary, Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/470/male_audio/230711_1527_07.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/天候が崩れ、遠足は延期になった。.mp3",
+        "word_prompt": "崩（くず）れる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "くずれて": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "くすれ": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "くずれり": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "くずれし": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "くずり": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "くずれく": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "くず": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "The weather <strong>took a turn for the worse</strong>, (<strong>and</strong>) the trip was postponed.",
+        "nuance_translation": "A <strong>formal</strong> conjugation pattern used to say <strong>and</strong>, <strong>then</strong>, or several other meanings that could also be implied by <strong>て form</strong>.",
+        "extra_info": "",
+        "reviewable_id": 470,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3749",
+      "type": "study_question",
+      "attributes": {
+        "id": 3749,
+        "content": "スピーチを失敗（しっぱい）<span class='study-area-input'>____</span>、ため息（いき）が出（で）てしまった。",
+        "answer": "し",
+        "alternate_grammar": [],
+        "kanji_answer": "し",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>て形（けい）</strong>の時（とき）や<strong>「と」</strong>と言いたい時など、いろいろな意味（いみ）で使（つか）われる活用（かつよう）。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/470/male_audio/230711_1526_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/スピーチを失敗し、ため息が出てしまった。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "して": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しまして": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "すると": {
+            "en": "すると has the nuance of 'if you...'. We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "してから": {
+            "en": "してから has the nuance of 'once (A) is done...'. We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "した": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しまって": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "する": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しまった": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "してしまって": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しり": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "してしまった": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I <strong>messed up</strong> my speech (<strong>and</strong>), without thinking, let out a sigh.",
+        "nuance_translation": "A <strong>formal</strong> conjugation pattern used to say <strong>and</strong>, <strong>then</strong>, or several other meanings that could also be implied by <strong>て form</strong>.",
+        "extra_info": "",
+        "reviewable_id": 470,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3748",
+      "type": "study_question",
+      "attributes": {
+        "id": 3748,
+        "content": "本（ほん）を暗記（あんき）<span class='study-area-input'>____</span>、試験（しけん）に臨（のぞ）んだ。",
+        "answer": "し",
+        "alternate_grammar": [],
+        "kanji_answer": "し",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>て形（けい）</strong>の時（とき）や<strong>「と」</strong>と言いたい時など、いろいろな意味（いみ）で使（つか）われる活用（かつよう）。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/470/male_audio/230711_1526_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/本を暗記し、試験に臨んだ。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "して": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "してから": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "していて": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "している": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しまして": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "した": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しり": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "すると": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "する": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "してあ": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Memorizing</strong> the book, I then set my sights on the test. ",
+        "nuance_translation": "A <strong>formal</strong> conjugation pattern used to say <strong>and</strong>, <strong>then</strong>, or several other meanings that could also be implied by <strong>て form</strong>.",
+        "extra_info": "",
+        "reviewable_id": 470,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4898",
+      "type": "study_question",
+      "attributes": {
+        "id": 4898,
+        "content": "会社（かいしゃ）に遅刻（ちこく）<span class='study-area-input'>____</span>、上司（じょうし）に大声（おおごえ）で、叱（しか）られた。",
+        "answer": "し",
+        "alternate_grammar": [],
+        "kanji_answer": "し",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>て形（けい）</strong>の時（とき）や<strong>「と」</strong>と言いたい時など、いろいろな意味（いみ）で使（つか）われる活用（かつよう）。",
+        "tense": "Literary, Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/470/male_audio/230711_1527.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/会社に遅刻し、上司に大声で、叱られた。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "して": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "してから": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しまして": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しり": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しては": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "した": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "してあ": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "すると": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I <strong>showed up late</strong>, (<strong>and</strong>) was scolded by my boss.",
+        "nuance_translation": "A <strong>formal</strong> conjugation pattern used to say <strong>and</strong>, <strong>then</strong>, or several other meanings that could also be implied by <strong>て form</strong>.",
+        "extra_info": "",
+        "reviewable_id": 470,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4904",
+      "type": "study_question",
+      "attributes": {
+        "id": 4904,
+        "content": "仕事（しごと）が成功（せいこう）<span class='study-area-input'>____</span>、彼女（かのじょ）はやっと笑顔（えがお）を見（み）せた。",
+        "answer": "し",
+        "alternate_grammar": [],
+        "kanji_answer": "し",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>て形（けい）</strong>の時（とき）や<strong>「と」</strong>と言いたい時など、いろいろな意味（いみ）で使（つか）われる活用（かつよう）。",
+        "tense": "Literary, Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/470/male_audio/230711_1527_06.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/仕事が成功し、彼女はやっと笑顔を見せた。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "して": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しまして": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "していて": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しり": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "する": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "した": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "してあ": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "で": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しつつ": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しく": {
+            "en": "We are looking for the conjunctive form here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "The job <strong>was successful</strong>, (<strong>and</strong>) she finally showed me her smile.",
+        "nuance_translation": "A <strong>formal</strong> conjugation pattern used to say <strong>and</strong>, <strong>then</strong>, or several other meanings that could also be implied by <strong>て form</strong>.",
+        "extra_info": "",
+        "reviewable_id": 470,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4900",
+      "type": "study_question",
+      "attributes": {
+        "id": 4900,
+        "content": "公園（こうえん）に<span class='study-area-input'>____</span>、子供（こども）と遊（あそ）んだ。",
+        "answer": "いき",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）き",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>て形（けい）</strong>の時（とき）や<strong>「と」</strong>と言いたい時など、いろいろな意味（いみ）で使（つか）われる活用（かつよう）。",
+        "tense": "Literary, Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/470/male_audio/230711_1527_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/公園に行き、子供と遊んだ。.mp3",
+        "word_prompt": "行（い）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いって": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "いく": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いっ": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I <strong>went to</strong> the park, (<strong>and</strong>) played with kids.",
+        "nuance_translation": "A <strong>formal</strong> conjugation pattern used to say <strong>and</strong>, <strong>then</strong>, or several other meanings that could also be implied by <strong>て form</strong>.",
+        "extra_info": "",
+        "reviewable_id": 470,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4899",
+      "type": "study_question",
+      "attributes": {
+        "id": 4899,
+        "content": "スピードを出（だ）し<span class='study-area-input'>____</span>、警察（けいさつ）に捕（つか）まった。",
+        "answer": "すぎ",
+        "alternate_grammar": [],
+        "kanji_answer": "すぎ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>て形（けい）</strong>の時（とき）や<strong>「と」</strong>と言いたい時など、いろいろな意味（いみ）で使（つか）われる活用（かつよう）。",
+        "tense": "Literary, Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson9/470/male_audio/230711_1527_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/スピードを出しすぎ、警察に捕まった。.mp3",
+        "word_prompt": "すぎる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "すぎて": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "すぎり": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "すぎし": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I was <strong>going too fast</strong>, (<strong>and</strong>) a cop pulled me over.",
+        "nuance_translation": "A <strong>formal</strong> conjugation pattern used to say <strong>and</strong>, <strong>then</strong>, or several other meanings that could also be implied by <strong>て form</strong>.",
+        "extra_info": "",
+        "reviewable_id": 470,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "502",
+      "type": "writeup",
+      "attributes": {
+        "id": 502,
+        "body_ja": "<p>日本語（にほんご）で「ます」とつながる動詞（どうし）の形（かたち）は「マス形（けい）」と呼（よ）ばれることがあります。しかし、この活用形（かつようけい）が「ます」以外（いがい）の文法（ぶんぽう）要素（ようそ）につながったり、「ます」が付（つ）かない動詞（どうし）以外（いがい）の品詞（ひんし）にも使（つか）われることを考（かんが）えると、「連用形（れんようけい）」と覚（おぼ）えた方（ほう）がわかりやすいかもしれません。連用形（れんようけい）とは、ほかの文法（ぶんぽう）とつながるときに使（つか）われる基本（きほん）の形（かたち）です。ここで扱（あつか）う連用形（れんようけい）は、動詞（どうし）の場合（ばあい）はマス形（けい）の語幹（ごかん）です。イ形容詞（けいようし）の場合（ばあい）は「く」で終（お）わる形（かたち）です。</p>\r\n\r\n<p>これまで学（まな）んだように、文（ぶん）と文（ぶん）をつなぐときは、接続助詞（せつぞくじょし）の「て」を使（つか）います。しかし、このような場合（ばあい）、テ形（けい）ではなく、連用形（れんようけい）を使（つか）うこともできます。連用形（れんようけい）を使（つか）うの場合（ばあい）は、「て」を使（つか）わずに、読点（とうてん）（、）を使（つか）います。例（れい）を見（み）てみましょう。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181523'>\r\n<li data-study-question='181524'>\r\n<li data-study-question='181525'>\r\n<li data-study-question='181526'>\r\n</ul>\r\n\r\n<p>このように、動詞（どうし）のあとに「て」を付（つ）ける必要（ひつよう）ありません。ただし、そうすると文（ぶん）がどこで切（き）れるのかわかりにくくなるので、読点（とうてん）が必要（ひつよう）になります。</p>\r\n\r\n<section class=\"caution\"><h4>注意点（ちゅういてん）</h4>\r\n<p>連用形（れんようけい）は、主（おも）にかたい書（か）き言葉（ことば）に見（み）られる表現（ひょうげん）です。日常会話（にちじょうかいわ）では、テ形（けい）の方（ほう）がよく使（つか）われます。</p></section>",
+        "body": "<p>In Japanese, the <span data-term='連用形・れんようけい'>conjunctive form</span> is often called 'the ます form', or 'the conjunctive form'. 'The conjunctive form' is much more accurate, as it is used with more than just verbs. Basically, the <span data-term='連用形・れんようけい'>conjunctive form</span> is the form of any word that will be used in standard conjugation with other structures. For <span data-gp-id='24'>い-Adjectives</span>, this is the form that uses く, for verbs, the ます stem.</p>\r\n\r\n<p>The reason that <span data-term='連用形・れんようけい'>conjunctive form</span> is sometimes referred to as 'the formal conjunctive' is due to its use before a comma. Usually, the <span data-term='接続助詞・せつぞくじょし'>conjunction particle</span> て would be used to separate clauses in sentences, however, the formal conjunctive allows this to be done without て. Let's look at some examples.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181523'>\r\n<li data-study-question='181524'>\r\n<li data-study-question='181525'>\r\n<li data-study-question='181526'>\r\n</ul>\r\n\r\n<p>As we can see, although て is not required, a 読点（とうてん） (Japanese comma) will be required to prevent the sentence from becoming confusing.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>This type of conjugation is seen primarily in formal writing, and the standard て form will be heard much more frequently in daily speech.</p></section>"
+      }
+    },
+    {
+      "id": "461",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 461,
+        "source": "Tobira",
+        "location": "Page 18",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "882",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 882,
+        "source": "みんなの日本語 II",
+        "location": "Page 90 [CH 39]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1434",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1434,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 302",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1561",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1561,
+        "source": "[AIAIJ] An Integrated Approach to Intermediate Japanese",
+        "location": "Page 133",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1038",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1038,
+        "site": "Tae Kim",
+        "description": "Revisit the basics",
+        "link": "https://guidetojapanese.org/learn/grammar/polite",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1039",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1039,
+        "site": "Reddit Learn Japanese",
+        "description": "Verb [stem] as a sentence connector",
+        "link": "https://www.reddit.com/r/LearnJapanese/comments/1ml8a6/verb_stem_as_a_sentence_connector/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1465",
+      "type": "related_content",
+      "attributes": {
+        "id": 1465,
+        "relationship_type": "related",
+        "body": "Both 連用形 and the て form connect sequential actions, but 連用形 sounds more formal and is often used in writing. For example, 起きて becomes 起き, e.g. ８時に起きて、朝ご飯を食べました 'I got up at 8 o'clock, then ate breakfast.' → ８時に起き、朝ご飯を食べました. (Same meaning, different register.)",
+        "first_relatable": {
+          "id": 470,
+          "slug": "連用形",
+          "title": "連用形",
+          "meaning": "Formal Conjunctive",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 416,
+          "slug": "verb-て",
+          "title": "Verb + て",
+          "meaning": "And, Then (Linking events)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1466",
+      "type": "related_content",
+      "attributes": {
+        "id": 1466,
+        "relationship_type": "related",
+        "body": "連用形 also replaces て or で after adjectives and nouns in formal writing. For example, 優しくて becomes 優しく, e.g. とても優しくて、綺麗です 'She's very kind, and pretty.' → とても優しく、綺麗です. (Same meaning, but more formal and literary.)",
+        "first_relatable": {
+          "id": 470,
+          "slug": "連用形",
+          "title": "連用形",
+          "meaning": "Formal Conjunctive",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 769,
+          "slug": "adjective-て-noun-で",
+          "title": "Adjective + て・Noun + で",
+          "meaning": "And... (Conjunctive)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1022",
+      "type": "related_content",
+      "attributes": {
+        "id": 1022,
+        "relationship_type": "related",
+        "body": "連用形 is a more formal way to connect phrases or clauses, often used in writing. It shares the same basic meaning as the て form. In the case of ではなくて・じゃなくて, the 連用形 becomes ではなく・じゃなく, e.g. 病院ではなく、図書館です 'It's not a hospital, but a library.' (Same meaning, just more formal in tone.)",
+        "first_relatable": {
+          "id": 470,
+          "slug": "連用形",
+          "title": "連用形",
+          "meaning": "Formal Conjunctive",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 474,
+          "slug": "ではなくて-じゃなくて",
+          "title": "ではなくて・じゃなくて",
+          "meaning": "Not A but B, Conjunctive",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

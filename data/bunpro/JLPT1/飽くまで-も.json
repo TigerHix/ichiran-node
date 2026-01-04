@@ -1,0 +1,859 @@
+{
+  "data": {
+    "id": "802",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 802,
+      "level": "JLPT1",
+      "lesson_id": 43,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "飽くまで-も",
+      "nuance": "(A)はただ(B)である、又（また）は(B)でしかないということを示（しめ）す表現（ひょうげん）。<strong>うんざりするまで</strong>(A)である。",
+      "grammar_order": 791,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 803,
+        "title": "であれ〜であれ",
+        "slug": "であれ-であれ"
+      },
+      "previous_grammar_point": {
+        "id": 801,
+        "title": "つ〜つ",
+        "slug": "つ-つ"
+      },
+      "lesson_count": "16/17",
+      "title": "飽くまで(も)",
+      "furigana": "飽（あ）くまで",
+      "meaning": "Just, Only, Merely, Strictly",
+      "nuance_translation": "A construction showing that (A) is just or strictly (B). <strong>Until</strong> the point where one is <strong>sick of it</strong>, just (A).",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<strong>あくまで</strong>(<strong><span class='gp-popout' data-gp-id='4'>も</span></strong>）+ Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/25942",
+      "metadata": "飽くまでも, あくまでも, 飽くまで, あくまで, akumademo, akumade, expression, archaic, poetic, formal, opinion, polite sentence"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "9275",
+            "type": "study_question"
+          },
+          {
+            "id": "10735",
+            "type": "study_question"
+          },
+          {
+            "id": "182696",
+            "type": "study_question"
+          },
+          {
+            "id": "182697",
+            "type": "study_question"
+          },
+          {
+            "id": "182698",
+            "type": "study_question"
+          },
+          {
+            "id": "182699",
+            "type": "study_question"
+          },
+          {
+            "id": "9277",
+            "type": "study_question"
+          },
+          {
+            "id": "9278",
+            "type": "study_question"
+          },
+          {
+            "id": "10736",
+            "type": "study_question"
+          },
+          {
+            "id": "10732",
+            "type": "study_question"
+          },
+          {
+            "id": "10733",
+            "type": "study_question"
+          },
+          {
+            "id": "10734",
+            "type": "study_question"
+          },
+          {
+            "id": "9276",
+            "type": "study_question"
+          },
+          {
+            "id": "10731",
+            "type": "study_question"
+          },
+          {
+            "id": "9273",
+            "type": "study_question"
+          },
+          {
+            "id": "9274",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "867",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1692",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": []
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2223",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "9275",
+      "type": "study_question",
+      "attributes": {
+        "id": 9275,
+        "content": "「その影響（えいきょう）で東京（とうきょう）オリンピックは２０（にせん）Ｘ（エックス）Ｘ（エックス）年（ねん）も開催（かいさい）できないと思（おも）います。でもまぁ、<span class='study-area-input'>____</span>私（わたし）の想像（そうぞう）に過（す）ぎないので、真剣（しんけん）に考（かんが）えないでください。」",
+        "answer": "あくまでも",
+        "alternate_grammar": [
+          "あくまで",
+          "あくまでも"
+        ],
+        "kanji_answer": "飽（あ）くまでも",
+        "kanji_alt_grammar": [
+          "飽（あ）くまで",
+          "飽（あ）くまでも"
+        ],
+        "nuance": "(A)はただ(B)である、又（また）は(B)でしかないということを示（しめ）す表現（ひょうげん）。<strong>うんざりするまで</strong>(A)である。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「その影響で東京オリンピックは２０ＸＸ年も開催できないと思います。でもまぁ、飽くまでも私の想像に過ぎないので、真剣に考えないでください。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけ": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "だけしか": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "わずかに": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "たった": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'I think that due to its influence, the Olympics might also not happen in 20XX. But this is <strong>just</strong> what I imagine will happen, so don't look into it too much.'",
+        "nuance_translation": "A construction showing that (A) is just or strictly (B). <strong>Until</strong> the point where one is <strong>sick of it</strong>, just (A).",
+        "extra_info": "",
+        "reviewable_id": 802,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10735",
+      "type": "study_question",
+      "attributes": {
+        "id": 10735,
+        "content": "結婚（けっこん）するかしないかは<span class='study-area-input'>____</span>本人（ほんにん）が決（き）める事（こと）なので、口出（くちだ）しをするのはよしましょう。",
+        "answer": "あくまでも",
+        "alternate_grammar": [
+          "あくまで"
+        ],
+        "kanji_answer": "飽（あ）くまでも",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)はただ(B)である、又（また）は(B)でしかないということを示（しめ）す表現（ひょうげん）。<strong>うんざりするまで</strong>(A)である。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/結婚するかしないかは飽くまでも本人が決める事なので、口出しをするのはよしましょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "わずかに": {
+            "en": "Great, but use a different expression which is used when the speaker is trying to distance himself to the greatest extent possible from utterances that might sound arrogant or controversial.",
+            "es": ""
+          },
+          "たった": {
+            "en": "Great, but use a different expression which is used when the speaker is trying to distance himself to the greatest extent possible from utterances that might sound arrogant or controversial.",
+            "es": "飽くまで"
+          },
+          "Close! Can you use a word that emphasizes something being strictly within a certain boundary, rather than just calling it ‘merely’ or ‘just’?": {
+            "en": "",
+            "es": ""
+          },
+          "飽くまでも": {
+            "en": "Close! Can you use a word that emphasizes something being strictly within a certain boundary, rather than just calling it ‘merely’ or ‘just’?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Since getting married or not is something that <strong>is only</strong> decided by the person in question, let's quit meddling.",
+        "nuance_translation": "A construction showing that (A) is just or strictly (B). <strong>Until</strong> the point where one is <strong>sick of it</strong>, just (A).",
+        "extra_info": "",
+        "reviewable_id": 802,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182696",
+      "type": "study_question",
+      "attributes": {
+        "id": 182696,
+        "content": "\r\n彼（かれ）は<span class='study-area-input'>____</span>新人（しんじん）なので優（やさ）しく接（せっ）してあげてください。",
+        "answer": "あくまでも",
+        "alternate_grammar": [],
+        "kanji_answer": "あくまでも",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/彼はあくまでも新人なので優しく接してあげてください。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nHe is <strong>merely</strong> a newbie, so please treat him kindly.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 802,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182697",
+      "type": "study_question",
+      "attributes": {
+        "id": 182697,
+        "content": " \r\n\r\n\r\nそれは<span class='study-area-input'>____</span>可能性（かのうせい）に過（す）ぎないからなんの役（やく）にも立（た）たない。",
+        "answer": "あくまで",
+        "alternate_grammar": [],
+        "kanji_answer": "あくまで",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/それはあくまで可能性に過ぎないからなんの役にも立たない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nThat is <strong>merely</strong> a possibility, so it doesn't help.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 802,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182698",
+      "type": "study_question",
+      "attributes": {
+        "id": 182698,
+        "content": "\r\n\r\n\r\n私（わたし）は<span class='study-area-input'>____</span>素人（しろうと）に過（す）ぎませんが、設計（せっけい）にミスがあると思（おも）います。",
+        "answer": "あくまでも",
+        "alternate_grammar": [],
+        "kanji_answer": "あくまでも",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/私はあくまでも素人に過ぎませんが、設計にミスがあると思います。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI am <strong>just</strong> an amateur, but I think that there is a mistake in the design.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 802,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182699",
+      "type": "study_question",
+      "attributes": {
+        "id": 182699,
+        "content": "\r\nこれは<span class='study-area-input'>____</span>私（わたし）の意見（いけん）なので参考（さんこう）にしないでくださいね。",
+        "answer": "あくまで",
+        "alternate_grammar": [],
+        "kanji_answer": "あくまで",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/これはあくまで私の意見なので参考にしないでくださいね。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nThis is <strong>just</strong> my opinion, so please don't refer to it.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 802,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9277",
+      "type": "study_question",
+      "attributes": {
+        "id": 9277,
+        "content": "<span class='name-highlight'>探偵（たんてい）</span>：「その火（ひ）が上（あ）がったのは偶然（ぐうぜん）ではなかったかもしれない。まぁ、これは<span class='study-area-input'>____</span>僕（ぼく）の仮説（かせつ）ですが。」",
+        "answer": "あくまで",
+        "alternate_grammar": [
+          "あくまで",
+          "あくまでも"
+        ],
+        "kanji_answer": "飽（あ）くまで",
+        "kanji_alt_grammar": [
+          "飽（あ）くまでも",
+          "飽（あ）くまで"
+        ],
+        "nuance": "(A)はただ(B)である、又（また）は(B)でしかないということを示（しめ）す表現（ひょうげん）。<strong>うんざりするまで</strong>(A)である。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/探偵：「その火が上がったのは偶然ではなかったかもしれない。まぁ、これは飽くまで僕の仮説ですが。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけ": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "だけしか": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "わずかに": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "たった": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Detective</span>: 'That fire might not have been entirely an accident. This is <strong>just</strong> my hypothesis, though.'",
+        "nuance_translation": "A construction showing that (A) is just or strictly (B). <strong>Until</strong> the point where one is <strong>sick of it</strong>, just (A).",
+        "extra_info": "",
+        "reviewable_id": 802,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9278",
+      "type": "study_question",
+      "attributes": {
+        "id": 9278,
+        "content": "「私（わたし）は<span class='study-area-input'>____</span>素人（しろうと）に過（す）ぎませんが、計算（けいさん）に誤（あやま）りがあると思（おも）います。」",
+        "answer": "あくまでも",
+        "alternate_grammar": [
+          "あくまで",
+          "あくまでも"
+        ],
+        "kanji_answer": "飽（あ）くまでも",
+        "kanji_alt_grammar": [
+          "飽（あ）くまで",
+          "飽（あ）くまでも"
+        ],
+        "nuance": "(A)はただ(B)である、又（また）は(B)でしかないということを示（しめ）す表現（ひょうげん）。<strong>うんざりするまで</strong>(A)である。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「私は飽くまでも素人に過ぎませんが、計算に誤りがあると思います。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけ": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "だけしか": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "わずかに": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "たった": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "ただの": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'I am <strong>just</strong> an amateur, but I think there is an error in the calculation.'",
+        "nuance_translation": "A construction showing that (A) is just or strictly (B). <strong>Until</strong> the point where one is <strong>sick of it</strong>, just (A).",
+        "extra_info": "",
+        "reviewable_id": 802,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10736",
+      "type": "study_question",
+      "attributes": {
+        "id": 10736,
+        "content": "<span class='study-area-input'>____</span>一次（いちじ）選考（せんこう）に通（とお）っただけなので、就職（しゅうしょく）する夢（ゆめ）が叶（かな）うと期待（きたい）しすぎるのは良（よ）くないです。",
+        "answer": "あくまでも",
+        "alternate_grammar": [
+          "あくまで"
+        ],
+        "kanji_answer": "飽（あ）くまでも",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)はただ(B)である、又（また）は(B)でしかないということを示（しめ）す表現（ひょうげん）。<strong>うんざりするまで</strong>(A)である。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/飽くまでも一次選考に通っただけなので、就職する夢が叶うと期待しすぎるのは良くないです。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "わずかに": {
+            "en": "Great, but use a different expression which is used when the speaker is trying to distance himself to the greatest extent possible from utterances that might sound arrogant or controversial.",
+            "es": ""
+          },
+          "たった": {
+            "en": "Great, but use a different expression which is used when the speaker is trying to distance himself to the greatest extent possible from utterances that might sound arrogant or controversial.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Since you've <strong>only</strong> gone through a preliminary selection, it is not good to over anticipate that your dream of getting a job will be granted.",
+        "nuance_translation": "A construction showing that (A) is just or strictly (B). <strong>Until</strong> the point where one is <strong>sick of it</strong>, just (A).",
+        "extra_info": "",
+        "reviewable_id": 802,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10732",
+      "type": "study_question",
+      "attributes": {
+        "id": 10732,
+        "content": "今回（こんかい）の件（けん）の決定権（けっていけん）は<span class='study-area-input'>____</span>あなたにあるので、自分（じぶん）でよく考（かんが）えて下（くだ）さいね。",
+        "answer": "あくまでも",
+        "alternate_grammar": [
+          "あくまで"
+        ],
+        "kanji_answer": "飽（あ）くまでも",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)はただ(B)である、又（また）は(B)でしかないということを示（しめ）す表現（ひょうげん）。<strong>うんざりするまで</strong>(A)である。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/今回の件の決定権は飽くまでもあなたにあるので、自分でよく考えて下さいね。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "わずかに": {
+            "en": "Great, but use a different expression which is used when the speaker is trying to distance himself to the greatest extent possible from utterances that might sound arrogant or controversial.",
+            "es": ""
+          },
+          "たった": {
+            "en": "Great, but use a different expression which is used when the speaker is trying to distance himself to the greatest extent possible from utterances that might sound arrogant or controversial.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This <strong>is strictly</strong> a matter that you have the right to decide, so please consider it carefully yourself.",
+        "nuance_translation": "A construction showing that (A) is just or strictly (B). <strong>Until</strong> the point where one is <strong>sick of it</strong>, just (A).",
+        "extra_info": "",
+        "reviewable_id": 802,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10733",
+      "type": "study_question",
+      "attributes": {
+        "id": 10733,
+        "content": "調査（ちょうさ）結果（けっか）とは<span class='study-area-input'>____</span>一（ひと）つのデータに過（す）ぎないので、そればかり気（き）にするのも良（よ）くありません。",
+        "answer": "あくまでも",
+        "alternate_grammar": [
+          "あくまで"
+        ],
+        "kanji_answer": "飽（あ）くまでも",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)はただ(B)である、又（また）は(B)でしかないということを示（しめ）す表現（ひょうげん）。<strong>うんざりするまで</strong>(A)である。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/調査結果とは飽くまでも一つのデータに過ぎないので、そればかり気にするのも良くありません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "わずかに": {
+            "en": "Great, but use a different expression which is used when the speaker is trying to distance himself to the greatest extent possible from utterances that might sound arrogant or controversial.",
+            "es": ""
+          },
+          "たった": {
+            "en": "Great, but use a different expression which is used when the speaker is trying to distance himself to the greatest extent possible from utterances that might sound arrogant or controversial.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Since the result of this investigation is <strong>just</strong> nothing more than one set of data, paying heed only to that is not good.",
+        "nuance_translation": "A construction showing that (A) is just or strictly (B). <strong>Until</strong> the point where one is <strong>sick of it</strong>, just (A).",
+        "extra_info": "",
+        "reviewable_id": 802,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10734",
+      "type": "study_question",
+      "attributes": {
+        "id": 10734,
+        "content": "先（さき）ほどの件（けん）は<span class='study-area-input'>____</span>私（わたし）と君（きみ）の二人（ふたり）だけの秘密（ひみつ）という事（こと）でよろしくお願（ねが）いしますね。",
+        "answer": "あくまでも",
+        "alternate_grammar": [
+          "あくまで"
+        ],
+        "kanji_answer": "飽（あ）くまでも",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)はただ(B)である、又（また）は(B)でしかないということを示（しめ）す表現（ひょうげん）。<strong>うんざりするまで</strong>(A)である。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/先ほどの件は飽くまでも私と君の二人だけの秘密という事でよろしくお願いしますね。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "わずかに": {
+            "en": "Great, but use a different expression which is used when the speaker is trying to distance himself to the greatest extent possible from utterances that might sound arrogant or controversial.",
+            "es": ""
+          },
+          "たった": {
+            "en": "Great, but use a different expression which is used when the speaker is trying to distance himself to the greatest extent possible from utterances that might sound arrogant or controversial.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I would request that the matter from earlier remain a secret <strong>strictly</strong> between you and I.",
+        "nuance_translation": "A construction showing that (A) is just or strictly (B). <strong>Until</strong> the point where one is <strong>sick of it</strong>, just (A).",
+        "extra_info": "",
+        "reviewable_id": 802,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9276",
+      "type": "study_question",
+      "attributes": {
+        "id": 9276,
+        "content": "<span class='name-highlight'>学術論文（がくじゅつろんぶん）</span>：「このアルゴリズムの実世界（じっせかい）での使用法（しようほう）は場合（ばあい）によって異（こと）なりますので、<span class='study-area-input'>____</span>本稿（ほんこう）はガイドラインとして取（と）り扱（あつか）いください。」",
+        "answer": "あくまでも",
+        "alternate_grammar": [
+          "あくまで",
+          "あくまでも"
+        ],
+        "kanji_answer": "飽（あ）くまでも",
+        "kanji_alt_grammar": [
+          "飽（あ）くまで",
+          "飽（あ）くまでも"
+        ],
+        "nuance": "(A)はただ(B)である、又（また）は(B)でしかないということを示（しめ）す表現（ひょうげん）。<strong>うんざりするまで</strong>(A)である。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/学術論文：「このアルゴリズムの実世界での使用法は場合によって異なりますので、飽くまでも本稿はガイドラインとして取り扱いください。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけ": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "だけしか": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "わずかに": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "たった": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Scientific article</span>: 'The real-world application of this algorithm differs from case to case, therefore use this paper <strong>just</strong> as a reference.'",
+        "nuance_translation": "A construction showing that (A) is just or strictly (B). <strong>Until</strong> the point where one is <strong>sick of it</strong>, just (A).",
+        "extra_info": "",
+        "reviewable_id": 802,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10731",
+      "type": "study_question",
+      "attributes": {
+        "id": 10731,
+        "content": "<span class='study-area-input'>____</span>ここだけの話（はなし）ですが、課長（かちょう）は部下（ぶか）と付（つ）き合（あ）っているそうですよ。",
+        "answer": "あくまでも",
+        "alternate_grammar": [
+          "あくまで"
+        ],
+        "kanji_answer": "飽（あ）くまでも",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)はただ(B)である、又（また）は(B)でしかないということを示（しめ）す表現（ひょうげん）。<strong>うんざりするまで</strong>(A)である。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/飽くまでもここだけの話ですが、課長は部下と付き合っているそうですよ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This <strong>is strictly</strong> a conversation between us, but I heard that the section manager is dating a subordinate.",
+        "nuance_translation": "A construction showing that (A) is just or strictly (B). <strong>Until</strong> the point where one is <strong>sick of it</strong>, just (A).",
+        "extra_info": "",
+        "reviewable_id": 802,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9273",
+      "type": "study_question",
+      "attributes": {
+        "id": 9273,
+        "content": "<span class='name-highlight'>会社（かいしゃ）の代表（だいひょう）はビジネスパートナーに</span>：「今（いま）からお話（はな）しすることは、<span class='study-area-input'>____</span>私（わたし）の個人的（こじんてき）な意見（いけん）で、会社（かいしゃ）としての公式（こうしき）な意見（いけん）ではないことをご了承（りょうしょう）いただきたいのですが、...」",
+        "answer": "あくまで",
+        "alternate_grammar": [
+          "あくまで",
+          "あくまでも"
+        ],
+        "kanji_answer": "飽（あ）くまで",
+        "kanji_alt_grammar": [
+          "飽（あ）くまでも",
+          "飽（あ）くまで"
+        ],
+        "nuance": "(A)はただ(B)である、又（また）は(B)でしかないということを示（しめ）す表現（ひょうげん）。<strong>うんざりするまで</strong>(A)である。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/会社の代表はビジネスパートナーに：「今からお話しすることは、飽くまで私の個人的な意見で、会社としての公式な意見ではないことをご了承いただきたいのですが、...」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけ": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "だけしか": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "わずかに": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "たった": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Company representative to business partners</span>: 'What I am about to say is <strong>just</strong> my personal opinion, so please understand that this is not our official stance as a company…'",
+        "nuance_translation": "A construction showing that (A) is just or strictly (B). <strong>Until</strong> the point where one is <strong>sick of it</strong>, just (A).",
+        "extra_info": "",
+        "reviewable_id": 802,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9274",
+      "type": "study_question",
+      "attributes": {
+        "id": 9274,
+        "content": "<span class='name-highlight'>配偶者（はいぐうしゃ）１（いち）は配偶者（はいぐうしゃ）２（に）に</span>：「もうガスがちゃんと閉（し）めてあるか確認（かくにん）したのを知（し）ってるけど、もう一度（いちど）確認（かくにん）してね。<span class='study-area-input'>____</span>一応（いちおう）だけどね。」",
+        "answer": "あくまでも",
+        "alternate_grammar": [
+          "あくまで",
+          "あくまでも"
+        ],
+        "kanji_answer": "飽（あ）くまでも",
+        "kanji_alt_grammar": [
+          "飽（あ）くまで",
+          "飽（あ）くまでも"
+        ],
+        "nuance": "(A)はただ(B)である、又（また）は(B)でしかないということを示（しめ）す表現（ひょうげん）。<strong>うんざりするまで</strong>(A)である。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/配偶者１は配偶者２に：「もうガスがちゃんと閉めてあるか確認したのを知ってるけど、もう一度確認してね。飽くまでも一応だけどね。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけ": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "だけしか": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "わずかに": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          },
+          "たった": {
+            "en": "Think of something that is used when what is said might sound arrogant or controversial to the listener if it is omitted. The grammar point that Bunpro is looking for is used when the speaker is trying to distance themself to the greatest extent possible by stating that it is only their personal opinion/view.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Spouse 1 to Spouse 2</span>: 'I know you have already checked if the gas is turned off, but please check again. <strong>Just</strong> to be sure.'",
+        "nuance_translation": "A construction showing that (A) is just or strictly (B). <strong>Until</strong> the point where one is <strong>sick of it</strong>, just (A).",
+        "extra_info": "",
+        "reviewable_id": 802,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "867",
+      "type": "writeup",
+      "attributes": {
+        "id": 867,
+        "body_ja": "<p>「飽（あ）く」は一段動詞（いちだんどうし）「飽（あ）きる」の古（ふる）い形（かたち）で、そのため少（すこ）し畏（かし）まったり、詩的（してき）に聞（き）こえる動詞（どうし）です。これに副助詞（ふくじょし）の「まで」が付（つ）いた「<span data-gp-id='802'>飽（あ）くまで</span>」は、「ただ (A) なだけだ」や「厳密（げんみつ）には (A) 」といった意味（いみ）で使（つか）われます。より文字通（もじどお）りの「飽（あ）きるまで (A) を続（つづ）ける」という解釈（かいしゃく）は、(A) がどこまでもずっと (A) であることを示（しめ）という点（てん）で、この表現（ひょうげん）のニュアンスをよく表（あらわ）していると言（い）えます。</p>\r\n\r\n<p>この用法（ようほう）の「<span data-gp-id='802'>飽（あ）くまで</span>」は、文（ぶん）や節（せつ）の始（はじ）めに使（つか）われることが多（おお）く、副詞（ふくし）のように働（はたら）きます。さらに強調（きょうちょう）を加（くわ）えるために副助詞（ふくじょし）の「も」が付（つ）くこともありますが、必須（ひっす）ではありません。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182696'>\r\n<li data-study-question='182697'>\r\n<li data-study-question='182698'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='802'>飽（あ）くまで</span>」は話（はな）し手（て）が自分（じぶん）の意見（いけん）を丁寧（ていねい）に述（の）べるときに使（つか）われることも多（おお）いです。この場合（ばあい）、「これは私（わたし）の意見（いけん）に過（す）ぎない」というニュアンスを含（ふく）む、控（ひか）えめな表現（ひょうげん）になります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182699'>\r\n</ul>\r\n\r\n<p>このような「<span data-gp-id='802'>飽（あ）くまで</span>」は、「けど」や「が」を付（つ）けて、話（はな）し手（て）が自分（じぶん）の発言（はつげん）を和（やわ）らげるための前置（まえお）きとして使（つか）われることもよくあります。</p>",
+        "body": "<p>飽（あ）く is the old-fashioned and somewhat poetic version of 飽（あ）きる the る-Verb meaning 'to tire of (A)', or 'to get sick of (A)'. When used in conjunction with the <span data-term='副助詞・ふくじょし'>adverbial particles</span> まで 'until', <span data-gp-id='802'>飽（あ）くまで</span> can imply that (A) is 'just', 'only', or 'strictly' something. The more literal translation of 'to continue (A) to the point of getting tired of it' fits these interpretations quite well, implying that (A) will never deviate from what is being described about it. This use of <span data-gp-id='802'>飽（あ）くまで</span> often appears at the beginning of a phrase, and functions adverbially. The <span data-term='副助詞・ふくじょし'>adverbial particle</span> も 'even' may be added for extra emphasis, but it is not required.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182696'>\r\n<li data-study-question='182697'>\r\n<li data-study-question='182698'>\r\n</ul>\r\n\r\n<p>In many cases, <span data-gp-id='802'>飽（あ）くまで</span> will be used in polite sentences when the speaker is expressing their own opinion. In these cases, the nuance of 'this is merely my opinion' is conveying to the listener that the speaker realizes that what they are saying is not the only viewpoint.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182699'>\r\n</ul>\r\n\r\n<p>This way of highlighting opinions is often combined with structures like けど, or が when the speaker wants to soften their statement before offering what they think a solution might be.</p>"
+      }
+    },
+    {
+      "id": "1692",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1692,
+        "source": "A Dictionary of Advanced Japanese Grammar",
+        "location": "Page 11",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2223",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2223,
+        "site": "Japanese StackExchange",
+        "description": "Excellent breakdown of あくまで(も)",
+        "link": "https://japanese.stackexchange.com/questions/11363/meaning-of-%e3%81%82%e3%81%8f%e3%81%be%e3%81%a7-in-%e3%81%82%e3%81%8f%e3%81%be%e3%81%a7%e7%a7%81%e5%80%8b%e4%ba%ba%e3%81%ae%e6%84%8f%e8%a6%8b%e3%81%a7%e3%81%99?answertab=votes#tab-top",
+        "type": "SupplementalLink"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1048 @@
+{
+  "data": {
+    "id": "874",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 874,
+      "level": "JLPT5",
+      "lesson_id": 3,
+      "part_of_speech": "形容詞",
+      "register": "一般",
+      "word_type": "助動詞",
+      "slug": "past-tense-い-adjectives",
+      "nuance": "<strong>過去（かこ）</strong>に何（なに）かが(A)の<strong>特徴（とくちょう）があった</strong>ということを表（あらわ）すために使（つか）われる<strong>形容詞（けいようし）の活用（かつよう）</strong>の仕方（しかた）。",
+      "grammar_order": 38,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 16,
+        "title": "の",
+        "slug": "のは"
+      },
+      "previous_grammar_point": {
+        "id": 17,
+        "title": "～んです・のです",
+        "slug": "-んです-のです"
+      },
+      "lesson_count": "13/13",
+      "title": "い-Adjective (Past)",
+      "furigana": "い-Adjective (Past)",
+      "meaning": "Was, Were (Past tense)",
+      "nuance_translation": "A <strong>conjugating-adjective</strong> structure indicating that something <strong>had</strong> the characteristic of (A) <strong>in the past</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "い-Adjectives, whether positive or negative, cannot be used with だ",
+      "polite_structure": "<span class='gp-popout' data-gp-id='873'>［い］Adjective［<del>い</del>］</span>+ <strong>かった</strong> + <span class='gp-popout' data-gp-id='2'>です</span><br><br>Examples:<br>おもしろ<del>い</del> + <strong>かった</strong> + <span class='gp-popout' data-gp-id='2'>です</span><br>新（あたら）し<del>い</del> + <strong>かった</strong> + <span class='gp-popout' data-gp-id='2'>です</span><br>",
+      "casual_structure": "<span class='gp-popout' data-gp-id='873'>［い］Adjective［<del>い</del>］</span>+ <strong>かった</strong><br><br>Examples:<br>おもしろ<del>い</del> + <strong>かった</strong> <br>新（あたら）し<del>い</del> + <strong>かった</strong><br>",
+      "part_of_speech_translation": "Adjective",
+      "register_translation": "Standard",
+      "word_type_translation": "Auxiliary Verb",
+      "discourse_link": "https://community.bunpro.jp/t/past-adjective-grammar-discussion/34975",
+      "metadata": "い-adjective, i-adjective, adjective, い, i, past, past tense, auxiliary verb, conjugation, past conjugation"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154822",
+            "type": "study_question"
+          },
+          {
+            "id": "154821",
+            "type": "study_question"
+          },
+          {
+            "id": "154819",
+            "type": "study_question"
+          },
+          {
+            "id": "9731",
+            "type": "study_question"
+          },
+          {
+            "id": "154820",
+            "type": "study_question"
+          },
+          {
+            "id": "9729",
+            "type": "study_question"
+          },
+          {
+            "id": "9730",
+            "type": "study_question"
+          },
+          {
+            "id": "9732",
+            "type": "study_question"
+          },
+          {
+            "id": "9733",
+            "type": "study_question"
+          },
+          {
+            "id": "9734",
+            "type": "study_question"
+          },
+          {
+            "id": "9735",
+            "type": "study_question"
+          },
+          {
+            "id": "9736",
+            "type": "study_question"
+          },
+          {
+            "id": "9737",
+            "type": "study_question"
+          },
+          {
+            "id": "9728",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "37",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1914",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": []
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2509",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2508",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2510",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154822",
+      "type": "study_question",
+      "attributes": {
+        "id": 154822,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"30\">この</span>ケーキ<span class=\"gp-popout\" data-gp-id=\"3\">は</span>甘（あま）<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "かった",
+        "alternate_grammar": [],
+        "kanji_answer": "かった",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/このケーキは甘かったです。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This cake <strong>was sweet</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 874,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154821",
+      "type": "study_question",
+      "attributes": {
+        "id": 154821,
+        "content": "京都（きょうと）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>涼（すず）し<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "かった",
+        "alternate_grammar": [],
+        "kanji_answer": "かった",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/京都は涼しかったです。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Kyoto <strong>was cool</strong>. (In relation to temperature)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 874,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154819",
+      "type": "study_question",
+      "attributes": {
+        "id": 154819,
+        "content": "お風呂（ふろ）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>温（あたた）か<span class='study-area-input'>____</span>。",
+        "answer": "かった",
+        "alternate_grammar": [],
+        "kanji_answer": "かった",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/お風呂が温かかった。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The bath <strong>was warm</strong>.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 874,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9731",
+      "type": "study_question",
+      "attributes": {
+        "id": 9731,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='6'>の</span>姉（あね）<span class='gp-popout' data-gp-id='6'>の</span>家（いえ）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "ふるかった",
+        "alternate_grammar": [],
+        "kanji_answer": "古（ふる）かった",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>過去（かこ）</strong>に何（なに）かが(A)の<strong>特徴（とくちょう）があった</strong>ということを表（あらわ）すために使（つか）われる<strong>形容詞（けいようし）の活用（かつよう）</strong>の仕方（しかた）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/874/male_audio/11-私の姉の家が古かったです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私の姉の家が古かったです。.mp3",
+        "word_prompt": "古（ふる）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ん": {
+            "en": "This sounds a little odd.",
+            "es": "Esto suena un poco extraño.",
+            "fr": "Cela sonne un peu étrange.",
+            "id": "Ini terdengar agak aneh."
+          },
+          "んでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "のでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "でしょう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "だろう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "です": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "よ": {
+            "en": "The よ particle does not have explanatory nuance. Other than that sentence is natural.",
+            "es": "La partícula よ no tiene matiz explicativo. Aparte de eso, la oración suena natural.",
+            "fr": "La particule よ n'apporte pas de nuance explicative. Sinon, la phrase est naturelle.",
+            "id": "Partikel よ tidak memiliki nuansa penjelasan. Selain itu, kalimatnya sudah alami."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "My (older) sister's house <strong>was old</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective</strong> structure indicating that something <strong>had</strong> the characteristic of (A) <strong>in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 874,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154820",
+      "type": "study_question",
+      "attributes": {
+        "id": 154820,
+        "content": "昨日（きのう）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>夜（よる）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>寒（さむ）<span class='study-area-input'>____</span>。",
+        "answer": "かった",
+        "alternate_grammar": [],
+        "kanji_answer": "かった",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/昨日の夜は寒かった。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": " Last night <strong>was cold</strong>. (Literally 'yesterday's night')",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 874,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9729",
+      "type": "study_question",
+      "attributes": {
+        "id": 9729,
+        "content": "<span class='gp-popout' data-gp-id='11'>それ</span><span class='gp-popout' data-gp-id='3'>は</span>、<span class='study-area-input'>____</span>。",
+        "answer": "たかかった",
+        "alternate_grammar": [
+          "たかかった",
+          "たかかったです"
+        ],
+        "kanji_answer": "高（たか）かった",
+        "kanji_alt_grammar": [
+          "高（たか）かったです",
+          "高（たか）かった"
+        ],
+        "nuance": "<strong>過去（かこ）</strong>に何（なに）かが(A)の<strong>特徴（とくちょう）があった</strong>ということを表（あらわ）すために使（つか）われる<strong>形容詞（けいようし）の活用（かつよう）</strong>の仕方（しかた）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/874/male_audio/02-それは高かった.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/それは、高かった。.mp3",
+        "word_prompt": "高（たか）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ん": {
+            "en": "This sounds a little odd.",
+            "es": "Esto suena un poco extraño.",
+            "fr": "Cela sonne un peu étrange.",
+            "id": "Ini terdengar agak aneh."
+          },
+          "んでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "のでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "でしょう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "だろう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "です": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "よ": {
+            "en": "The よ particle does not have explanatory nuance. Other than that sentence is natural.",
+            "es": "La partícula よ no tiene matiz explicativo. Aparte de eso, la oración suena natural.",
+            "fr": "La particule よ n'apporte pas de nuance explicative. Sinon, la phrase est naturelle.",
+            "id": "Partikel よ tidak memiliki nuansa penjelasan. Selain itu, kalimatnya sudah alami."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That <strong>was expensive</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective</strong> structure indicating that something <strong>had</strong> the characteristic of (A) <strong>in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 874,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9730",
+      "type": "study_question",
+      "attributes": {
+        "id": 9730,
+        "content": "田中（たなか）さん<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "つよかった",
+        "alternate_grammar": [],
+        "kanji_answer": "強（つよ）かった",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>過去（かこ）</strong>に何（なに）かが(A)の<strong>特徴（とくちょう）があった</strong>ということを表（あらわ）すために使（つか）われる<strong>形容詞（けいようし）の活用（かつよう）</strong>の仕方（しかた）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/874/male_audio/10-田中さんは強かったです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/田中さんは強かったです。.mp3",
+        "word_prompt": "強（つよ）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ん": {
+            "en": "This sounds a little odd.",
+            "es": "Esto suena un poco extraño.",
+            "fr": "Cela sonne un peu étrange.",
+            "id": "Ini terdengar agak aneh."
+          },
+          "んでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "のでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "でしょう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "だろう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "です": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "よ": {
+            "en": "The よ particle does not have explanatory nuance. Other than that sentence is natural.",
+            "es": "La partícula よ no tiene matiz explicativo. Aparte de eso, la oración suena natural.",
+            "fr": "La particule よ n'apporte pas de nuance explicative. Sinon, la phrase est naturelle.",
+            "id": "Partikel よ tidak memiliki nuansa penjelasan. Selain itu, kalimatnya sudah alami."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Tanaka-san <strong>was strong</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective</strong> structure indicating that something <strong>had</strong> the characteristic of (A) <strong>in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 874,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9732",
+      "type": "study_question",
+      "attributes": {
+        "id": 9732,
+        "content": "<span class='vocab-popout' data-vocab-id='400'>動物園（どうぶつえん）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "たのしかった",
+        "alternate_grammar": [
+          "たのしかった",
+          "たのしかったです"
+        ],
+        "kanji_answer": "楽（たの）しかった",
+        "kanji_alt_grammar": [
+          "楽（たの）しかったです",
+          "楽（たの）しかった"
+        ],
+        "nuance": "<strong>過去（かこ）</strong>に何（なに）かが(A)の<strong>特徴（とくちょう）があった</strong>ということを表（あらわ）すために使（つか）われる<strong>形容詞（けいようし）の活用（かつよう）</strong>の仕方（しかた）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/874/male_audio/動物園は楽しかった.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/動物園は楽しかった。.mp3",
+        "word_prompt": "楽（たの）し<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ん": {
+            "en": "This sounds a little odd.",
+            "es": "Esto suena un poco extraño.",
+            "fr": "Cela sonne un peu étrange.",
+            "id": "Ini terdengar agak aneh."
+          },
+          "んでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "のでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "でしょう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "だろう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "です": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "よ": {
+            "en": "The よ particle does not have explanatory nuance. Other than that sentence is natural.",
+            "es": "La partícula よ no tiene matiz explicativo. Aparte de eso, la oración suena natural.",
+            "fr": "La particule よ n'apporte pas de nuance explicative. Sinon, la phrase est naturelle.",
+            "id": "Partikel よ tidak memiliki nuansa penjelasan. Selain itu, kalimatnya sudah alami."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The zoo <strong>was fun</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective</strong> structure indicating that something <strong>had</strong> the characteristic of (A) <strong>in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 874,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9733",
+      "type": "study_question",
+      "attributes": {
+        "id": 9733,
+        "content": "山田（やまだ）さん<span class='gp-popout' data-gp-id='6'>の</span>犬（いぬ）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>。",
+        "answer": "かわいかった",
+        "alternate_grammar": [
+          "かわいかった",
+          "かわいかったです"
+        ],
+        "kanji_answer": "可愛（かわい）かった",
+        "kanji_alt_grammar": [
+          "可愛（かわい）かったです",
+          "可愛（かわい）かった"
+        ],
+        "nuance": "<strong>過去（かこ）</strong>に何（なに）かが(A)の<strong>特徴（とくちょう）があった</strong>ということを表（あらわ）すために使（つか）われる<strong>形容詞（けいようし）の活用（かつよう）</strong>の仕方（しかた）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/山田さんの犬が可愛かった。.mp3",
+        "word_prompt": "可愛（かわい）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ん": {
+            "en": "This sounds a little odd.",
+            "es": "Esto suena un poco extraño.",
+            "fr": "Cela sonne un peu étrange.",
+            "id": "Ini terdengar agak aneh."
+          },
+          "んでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "のでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "でしょう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "だろう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "です": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "よ": {
+            "en": "The よ particle does not have explanatory nuance. Other than that sentence is natural.",
+            "es": "La partícula よ no tiene matiz explicativo. Aparte de eso, la oración suena natural.",
+            "fr": "La particule よ n'apporte pas de nuance explicative. Sinon, la phrase est naturelle.",
+            "id": "Partikel よ tidak memiliki nuansa penjelasan. Selain itu, kalimatnya sudah alami."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Mr. Yamada's dog <strong>was cute</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective</strong> structure indicating that something <strong>had</strong> the characteristic of (A) <strong>in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 874,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9734",
+      "type": "study_question",
+      "attributes": {
+        "id": 9734,
+        "content": "納豆（なっとう）<span class='gp-popout' data-gp-id='3'>は</span>、<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "おいしかった",
+        "alternate_grammar": [],
+        "kanji_answer": "美味（おい）しかった",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>過去（かこ）</strong>に何（なに）かが(A)の<strong>特徴（とくちょう）があった</strong>ということを表（あらわ）すために使（つか）われる<strong>形容詞（けいようし）の活用（かつよう）</strong>の仕方（しかた）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/874/male_audio/12-納豆は美味しかったです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/納豆は、美味しかったです。.mp3",
+        "word_prompt": "美味（おい）し<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ん": {
+            "en": "This sounds a little odd.",
+            "es": "Esto suena un poco extraño.",
+            "fr": "Cela sonne un peu étrange.",
+            "id": "Ini terdengar agak aneh."
+          },
+          "んでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "のでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "でしょう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "だろう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "です": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "よ": {
+            "en": "The よ particle does not have explanatory nuance. Other than that sentence is natural.",
+            "es": "La partícula よ no tiene matiz explicativo. Aparte de eso, la oración suena natural.",
+            "fr": "La particule よ n'apporte pas de nuance explicative. Sinon, la phrase est naturelle.",
+            "id": "Partikel よ tidak memiliki nuansa penjelasan. Selain itu, kalimatnya sudah alami."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Natto <strong>was delicious</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective</strong> structure indicating that something <strong>had</strong> the characteristic of (A) <strong>in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 874,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9735",
+      "type": "study_question",
+      "attributes": {
+        "id": 9735,
+        "content": "家（いえ）<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "ちかかった",
+        "alternate_grammar": [
+          "ちかかった",
+          "ちかかったです"
+        ],
+        "kanji_answer": "近（ちか）かった",
+        "kanji_alt_grammar": [
+          "近（ちか）かったです",
+          "近（ちか）かった"
+        ],
+        "nuance": "<strong>過去（かこ）</strong>に何（なに）かが(A)の<strong>特徴（とくちょう）があった</strong>ということを表（あらわ）すために使（つか）われる<strong>形容詞（けいようし）の活用（かつよう）</strong>の仕方（しかた）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/874/male_audio/04-家は近かった.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/家は近かった。.mp3",
+        "word_prompt": "近（ちか）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ん": {
+            "en": "This sounds a little odd.",
+            "es": "Esto suena un poco extraño.",
+            "fr": "Cela sonne un peu étrange.",
+            "id": "Ini terdengar agak aneh."
+          },
+          "んでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "のでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "でしょう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "だろう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "です": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "よ": {
+            "en": "The よ particle does not have explanatory nuance. Other than that sentence is natural.",
+            "es": "La partícula よ no tiene matiz explicativo. Aparte de eso, la oración suena natural.",
+            "fr": "La particule よ n'apporte pas de nuance explicative. Sinon, la phrase est naturelle.",
+            "id": "Partikel よ tidak memiliki nuansa penjelasan. Selain itu, kalimatnya sudah alami."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The house <strong>was close</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective</strong> structure indicating that something <strong>had</strong> the characteristic of (A) <strong>in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 874,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9736",
+      "type": "study_question",
+      "attributes": {
+        "id": 9736,
+        "content": "彼女（かのじょ）<span class='gp-popout' data-gp-id='3'>は</span>犬（いぬ）<span class='gp-popout' data-gp-id='15'>と</span>猫（ねこ）<span class='gp-popout' data-gp-id='32'>に</span><span class='study-area-input'>____</span>。",
+        "answer": "やさしかった",
+        "alternate_grammar": [
+          "やさしかった",
+          "やさしかったです"
+        ],
+        "kanji_answer": "優（やさ）しかった",
+        "kanji_alt_grammar": [
+          "優（やさ）しかったです",
+          "優（やさ）しかった"
+        ],
+        "nuance": "<strong>過去（かこ）</strong>に何（なに）かが(A)の<strong>特徴（とくちょう）があった</strong>ということを表（あらわ）すために使（つか）われる<strong>形容詞（けいようし）の活用（かつよう）</strong>の仕方（しかた）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/874/male_audio/08-彼女は犬と猫にやさしかった.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼女は犬と猫に優しかった。.mp3",
+        "word_prompt": "優（やさ）し<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ん": {
+            "en": "This sounds a little odd.",
+            "es": "Esto suena un poco extraño.",
+            "fr": "Cela sonne un peu étrange.",
+            "id": "Ini terdengar agak aneh."
+          },
+          "んでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "のでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "でしょう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "だろう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "です": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "よ": {
+            "en": "The よ particle does not have explanatory nuance. Other than that sentence is natural.",
+            "es": "La partícula よ no tiene matiz explicativo. Aparte de eso, la oración suena natural.",
+            "fr": "La particule よ n'apporte pas de nuance explicative. Sinon, la phrase est naturelle.",
+            "id": "Partikel よ tidak memiliki nuansa penjelasan. Selain itu, kalimatnya sudah alami."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "She <strong>was kind</strong> to dogs and cats.",
+        "nuance_translation": "A <strong>conjugating-adjective</strong> structure indicating that something <strong>had</strong> the characteristic of (A) <strong>in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 874,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9737",
+      "type": "study_question",
+      "attributes": {
+        "id": 9737,
+        "content": "<span class='vocab-popout' data-vocab-id='522'>寿司（すし）</span><span class='gp-popout' data-gp-id='3'>は</span>、<span class='study-area-input'>____</span>。",
+        "answer": "おいしかった",
+        "alternate_grammar": [
+          "おいしかった"
+        ],
+        "kanji_answer": "美味（おい）しかった",
+        "kanji_alt_grammar": [
+          "美味（おい）しかったです"
+        ],
+        "nuance": "<strong>過去（かこ）</strong>に何（なに）かが(A)の<strong>特徴（とくちょう）があった</strong>ということを表（あらわ）すために使（つか）われる<strong>形容詞（けいようし）の活用（かつよう）</strong>の仕方（しかた）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/寿司は、美味しかった。.mp3",
+        "word_prompt": "<span class='gp-popout vocab-popout' data-gp-id='24' data-vocab-id='888'>美味（おい）しい</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おいしかったです": {
+            "en": "Let's try a more casual conjugation here.",
+            "es": "Prueba con una conjugación más informal.",
+            "fr": "Essayons une conjugaison plus informelle ici.",
+            "id": "Mari coba bentuk konjugasi yang lebih kasual di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The sushi <strong>was delicious</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective</strong> structure indicating that something <strong>had</strong> the characteristic of (A) <strong>in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 874,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9728",
+      "type": "study_question",
+      "attributes": {
+        "id": 9728,
+        "content": "<span class='study-area-input'>____</span>。",
+        "answer": "さむかった",
+        "alternate_grammar": [
+          "さむかった",
+          "さむかったです"
+        ],
+        "kanji_answer": "寒（さむ）かった",
+        "kanji_alt_grammar": [
+          "寒（さむ）かったです",
+          "寒（さむ）かった"
+        ],
+        "nuance": "<strong>過去（かこ）</strong>に何（なに）かが(A)の<strong>特徴（とくちょう）があった</strong>ということを表（あらわ）すために使（つか）われる<strong>形容詞（けいようし）の活用（かつよう）</strong>の仕方（しかた）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/874/male_audio/05-寒かった.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/寒かった。.mp3",
+        "word_prompt": "寒（さむ）<span class='gp-popout' data-gp-id='24'>い</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ん": {
+            "en": "This sounds a little odd.",
+            "es": "Esto suena un poco extraño.",
+            "fr": "Cela sonne un peu étrange.",
+            "id": "Ini terdengar agak aneh."
+          },
+          "んでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "のでしょう": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "でしょう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "だろう": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "です": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "よ": {
+            "en": "The よ particle does not have explanatory nuance. Other than that sentence is natural.",
+            "es": "La partícula よ no tiene matiz explicativo. Aparte de eso, la oración suena natural.",
+            "fr": "La particule よ n'apporte pas de nuance explicative. Sinon, la phrase est naturelle.",
+            "id": "Partikel よ tidak memiliki nuansa penjelasan. Selain itu, kalimatnya sudah alami."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>was cold</strong>.",
+        "nuance_translation": "A <strong>conjugating-adjective</strong> structure indicating that something <strong>had</strong> the characteristic of (A) <strong>in the past</strong>.",
+        "extra_info": "",
+        "reviewable_id": 874,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "37",
+      "type": "writeup",
+      "attributes": {
+        "id": 37,
+        "body_ja": null,
+        "body": "<p>In order to create the past form of <span data-gp-id='24'>い-Adjectives</span>, you must add the <span data-term='助動詞・じょどうし'>auxiliary verb</span> た to the 'past' conjunction form of the <span data-gp-id='24'>い-Adjective</span>. The past conjunction form is created by removing the い and replacing it with かっ. This structure is equivalent to 'was' in English.</p>\r\n\r\n<p>面白（おもしろ）い - 'Interesting' in its base (dictionary form).</p>\r\n\r\n<p>面白（おもしろ）かっ - The conjugation form used with た (and several other <span data-term='助動詞・じょどうし'>auxiliary verbs</span>).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154819'>\r\n<li data-study-question='154820'></ul>\r\n\r\n<p>From these examples, we can see how the casual past form is constructed. In modern Japanese, simply adding <span data-gp-id='2'>です</span> after た is considered to be the standard polite past form.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154821'>\r\n<li data-study-question='154822'></ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>Although this is considered to be polite by most people, using <span data-gp-id='2'>です</span> after かった is not academically correct Japanese. However, considering how common its usage has become, it may be used in almost any situation confidently.</p></section>"
+      }
+    },
+    {
+      "id": "1914",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1914,
+        "source": "Genki 1",
+        "location": "Page 132",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2509",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2509,
+        "site": "Tofugu",
+        "description": "い Adjective past form",
+        "link": "https://www.tofugu.com/japanese-grammar/i-adjective-past-form-katta/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2508",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2508,
+        "site": "GuideToJapanese",
+        "description": "Adjectives",
+        "link": "https://guidetojapanese.org/learn/grammar/adjectives",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2510",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2510,
+        "site": "Imabi",
+        "description": "Adjectives",
+        "link": "https://imabi.org/adjectives%e3%80%80%e5%bd%a2%e5%ae%b9%e8%a9%9e/",
+        "type": "SupplementalLink"
+      }
+    }
+  ]
+}

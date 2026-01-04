@@ -1,0 +1,1057 @@
+{
+  "data": {
+    "id": "22",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 22,
+      "level": "JLPT5",
+      "lesson_id": 4,
+      "part_of_speech": "動詞",
+      "register": "一般",
+      "word_type": "自立語",
+      "slug": "する",
+      "nuance": "色々（いろいろ）な動作（どうさ）を表（あらわ）すために使（つか）われる、<strong>特別（とくべつ）な活用（かつよう）</strong>方法（ほうほう）がある<strong>動詞（どうし）</strong>。",
+      "grammar_order": 43,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 39,
+        "title": "くる",
+        "slug": "くる"
+      },
+      "previous_grammar_point": {
+        "id": 31,
+        "title": "へいく",
+        "slug": "へいく"
+      },
+      "lesson_count": "5/13",
+      "title": "する",
+      "furigana": "する",
+      "meaning": "To do, To make into",
+      "nuance_translation": "A <strong>verb</strong> that has a <strong>special class</strong> of conjugation rules, and is used for many different actions.",
+      "rare_kanji_warning": "為る",
+      "caution": "Although not common, 為る kanji use can be seen",
+      "polite_structure": "します",
+      "casual_structure": "する",
+      "part_of_speech_translation": "Verb",
+      "register_translation": "Standard",
+      "word_type_translation": "Independent Word",
+      "discourse_link": "https://community.bunpro.jp/t/discussion-topic/493",
+      "metadata": "する, 為る, suru, verb, conjugation, さ-column irregular conjugation verbs, さ column irregular conjugation, sa column irregular conjugation"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154843",
+            "type": "study_question"
+          },
+          {
+            "id": "22",
+            "type": "study_question"
+          },
+          {
+            "id": "656",
+            "type": "study_question"
+          },
+          {
+            "id": "154841",
+            "type": "study_question"
+          },
+          {
+            "id": "154844",
+            "type": "study_question"
+          },
+          {
+            "id": "1638",
+            "type": "study_question"
+          },
+          {
+            "id": "154842",
+            "type": "study_question"
+          },
+          {
+            "id": "655",
+            "type": "study_question"
+          },
+          {
+            "id": "657",
+            "type": "study_question"
+          },
+          {
+            "id": "1639",
+            "type": "study_question"
+          },
+          {
+            "id": "1640",
+            "type": "study_question"
+          },
+          {
+            "id": "1641",
+            "type": "study_question"
+          },
+          {
+            "id": "1643",
+            "type": "study_question"
+          },
+          {
+            "id": "1644",
+            "type": "study_question"
+          },
+          {
+            "id": "1645",
+            "type": "study_question"
+          },
+          {
+            "id": "1642",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "42",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "20",
+            "type": "offline_resource"
+          },
+          {
+            "id": "83",
+            "type": "offline_resource"
+          },
+          {
+            "id": "750",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1163",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "813",
+            "type": "related_content"
+          },
+          {
+            "id": "814",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "47",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1974",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "48",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154843",
+      "type": "study_question",
+      "attributes": {
+        "id": 154843,
+        "content": "電話（でんわ）<span class=\"gp-popout\" data-gp-id=\"21\">を</span><span class='study-area-input'>____</span>。",
+        "answer": "します",
+        "alternate_grammar": [],
+        "kanji_answer": "します",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/電話をします。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "To <strong>make</strong> a call.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 22,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "22",
+      "type": "study_question",
+      "attributes": {
+        "id": 22,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='3'>は</span>勉強（べんきょう）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "する",
+        "alternate_grammar": [],
+        "kanji_answer": "する",
+        "kanji_alt_grammar": [],
+        "nuance": "色々（いろいろ）な動作（どうさ）を表（あらわ）すために使（つか）われる、<strong>特別（とくべつ）な活用（かつよう）</strong>方法（ほうほう）がある<strong>動詞（どうし）</strong>。",
+        "tense": "[casual]",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/22/male_audio/11-私は勉強をする.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私は勉強をする。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "します": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "やる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "やります": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I (<strong>will do</strong>) study.",
+        "nuance_translation": "A <strong>verb</strong> that has a <strong>special class</strong> of conjugation rules, and is used for many different actions.",
+        "extra_info": "",
+        "reviewable_id": 22,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "656",
+      "type": "study_question",
+      "attributes": {
+        "id": 656,
+        "content": "サッカー<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "します",
+        "alternate_grammar": [],
+        "kanji_answer": "します",
+        "kanji_alt_grammar": [],
+        "nuance": "色々（いろいろ）な動作（どうさ）を表（あらわ）すために使（つか）われる、<strong>特別（とくべつ）な活用（かつよう）</strong>方法（ほうほう）がある<strong>動詞（どうし）</strong>。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/22/male_audio/01-サッカーをします.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/サッカーをします。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "する": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "やる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "やります": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "あそぶ": {
+            "en": "Let's try a different word here.",
+            "es": "Prueba con con una palabra diferente.",
+            "fr": "Essayons un autre mot ici.",
+            "id": "Mari coba kata yang berbeda."
+          },
+          "あそびます": {
+            "en": "Let's try a different word here.",
+            "es": "Prueba con con una palabra diferente.",
+            "fr": "Essayons un autre mot ici.",
+            "id": "Mari coba kata yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To <strong>play</strong> soccer. (<strong>to do</strong>)",
+        "nuance_translation": "A <strong>verb</strong> that has a <strong>special class</strong> of conjugation rules, and is used for many different actions.",
+        "extra_info": "",
+        "reviewable_id": 22,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154841",
+      "type": "study_question",
+      "attributes": {
+        "id": 154841,
+        "content": "洗濯（せんたく）<span class=\"gp-popout\" data-gp-id=\"21\">を</span><span class='study-area-input'>____</span>。",
+        "answer": "する",
+        "alternate_grammar": [],
+        "kanji_answer": "する",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/洗濯をする。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>To do</strong> laundry.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 22,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154844",
+      "type": "study_question",
+      "attributes": {
+        "id": 154844,
+        "content": "勉強（べんきょう）<span class=\"gp-popout\" data-gp-id=\"21\">を</span><span class='study-area-input'>____</span>。",
+        "answer": "します",
+        "alternate_grammar": [],
+        "kanji_answer": "します",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/勉強をします。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "To <strong>study</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 22,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1638",
+      "type": "study_question",
+      "attributes": {
+        "id": 1638,
+        "content": "掃除（そうじ）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "する",
+        "alternate_grammar": [
+          "する",
+          "します"
+        ],
+        "kanji_answer": "する",
+        "kanji_alt_grammar": [
+          "する",
+          "します"
+        ],
+        "nuance": "色々（いろいろ）な動作（どうさ）を表（あらわ）すために使（つか）われる、<strong>特別（とくべつ）な活用（かつよう）</strong>方法（ほうほう）がある<strong>動詞（どうし）</strong>。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/22/male_audio/09-掃除をする.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/掃除をする。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "やります": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To <strong>clean</strong>. (<strong>to do</strong>)",
+        "nuance_translation": "A <strong>verb</strong> that has a <strong>special class</strong> of conjugation rules, and is used for many different actions.",
+        "extra_info": "",
+        "reviewable_id": 22,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154842",
+      "type": "study_question",
+      "attributes": {
+        "id": 154842,
+        "content": "料理（りょうり）<span class=\"gp-popout\" data-gp-id=\"21\">を</span><span class='study-area-input'>____</span>。",
+        "answer": "する",
+        "alternate_grammar": [],
+        "kanji_answer": "する",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/料理をする。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "To cook. (Literally '<strong>to do</strong> food')",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 22,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "655",
+      "type": "study_question",
+      "attributes": {
+        "id": 655,
+        "content": "サッカー<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "する",
+        "alternate_grammar": [],
+        "kanji_answer": "する",
+        "kanji_alt_grammar": [],
+        "nuance": "色々（いろいろ）な動作（どうさ）を表（あらわ）すために使（つか）われる、<strong>特別（とくべつ）な活用（かつよう）</strong>方法（ほうほう）がある<strong>動詞（どうし）</strong>。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/22/male_audio/02-サッカーをする.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/サッカーをする。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "します": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "やる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "やります": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "あそぶ": {
+            "en": "Let's try a different word here.",
+            "es": "Prueba con con una palabra diferente.",
+            "fr": "Essayons un autre mot ici.",
+            "id": "Mari coba kata yang berbeda."
+          },
+          "あそびます": {
+            "en": "Let's try a different word here.",
+            "es": "Prueba con con una palabra diferente.",
+            "fr": "Essayons un autre mot ici.",
+            "id": "Mari coba kata yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To <strong>play</strong> soccer. (<strong>to do</strong>)",
+        "nuance_translation": "A <strong>verb</strong> that has a <strong>special class</strong> of conjugation rules, and is used for many different actions.",
+        "extra_info": "",
+        "reviewable_id": 22,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "657",
+      "type": "study_question",
+      "attributes": {
+        "id": 657,
+        "content": "何（なに）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "します",
+        "alternate_grammar": [],
+        "kanji_answer": "します",
+        "kanji_alt_grammar": [],
+        "nuance": "色々（いろいろ）な動作（どうさ）を表（あらわ）すために使（つか）われる、<strong>特別（とくべつ）な活用（かつよう）</strong>方法（ほうほう）がある<strong>動詞（どうし）</strong>。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/22/male_audio/06-何をしますか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/何をしますか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "する": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "やります": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "やる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "What <strong>will</strong> you <strong>do</strong>?",
+        "nuance_translation": "A <strong>verb</strong> that has a <strong>special class</strong> of conjugation rules, and is used for many different actions.",
+        "extra_info": "",
+        "reviewable_id": 22,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1639",
+      "type": "study_question",
+      "attributes": {
+        "id": 1639,
+        "content": "君（きみ）<span class='gp-popout' data-gp-id='3'>は</span>文法（ぶんぽう）<span class='gp-popout' data-gp-id='21'>を</span>勉強（べんきょう）<span class='study-area-input'>____</span>。",
+        "answer": "します",
+        "alternate_grammar": [],
+        "kanji_answer": "します",
+        "kanji_alt_grammar": [],
+        "nuance": "色々（いろいろ）な動作（どうさ）を表（あらわ）すために使（つか）われる、<strong>特別（とくべつ）な活用（かつよう）</strong>方法（ほうほう）がある<strong>動詞（どうし）</strong>。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/22/male_audio/07-君は文法を勉強します.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/君は文法を勉強します。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "する": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "やる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "やります": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "をします": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "をする": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "You <strong>study</strong> grammar. (<strong>to do</strong>)",
+        "nuance_translation": "A <strong>verb</strong> that has a <strong>special class</strong> of conjugation rules, and is used for many different actions.",
+        "extra_info": "",
+        "reviewable_id": 22,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1640",
+      "type": "study_question",
+      "attributes": {
+        "id": 1640,
+        "content": "パーティー<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "する",
+        "alternate_grammar": [
+          "する",
+          "します"
+        ],
+        "kanji_answer": "する",
+        "kanji_alt_grammar": [
+          "する",
+          "します"
+        ],
+        "nuance": "色々（いろいろ）な動作（どうさ）を表（あらわ）すために使（つか）われる、<strong>特別（とくべつ）な活用（かつよう）</strong>方法（ほうほう）がある<strong>動詞（どうし）</strong>。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/22/male_audio/05-パーティーをする.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/パーティーをする。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "やります": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To <strong>have</strong> a party. (<strong>to do</strong>)",
+        "nuance_translation": "A <strong>verb</strong> that has a <strong>special class</strong> of conjugation rules, and is used for many different actions.",
+        "extra_info": "",
+        "reviewable_id": 22,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1641",
+      "type": "study_question",
+      "attributes": {
+        "id": 1641,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='3'>は</span>、<span class='gp-popout' data-gp-id='11'>それ</span><span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "します",
+        "alternate_grammar": [],
+        "kanji_answer": "します",
+        "kanji_alt_grammar": [],
+        "nuance": "色々（いろいろ）な動作（どうさ）を表（あらわ）すために使（つか）われる、<strong>特別（とくべつ）な活用（かつよう）</strong>方法（ほうほう）がある<strong>動詞（どうし）</strong>。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/22/male_audio/私は、それをします。.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私は、それをします。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "する": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "やる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "やります": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>I will do</strong> that.",
+        "nuance_translation": "A <strong>verb</strong> that has a <strong>special class</strong> of conjugation rules, and is used for many different actions.",
+        "extra_info": "",
+        "reviewable_id": 22,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1643",
+      "type": "study_question",
+      "attributes": {
+        "id": 1643,
+        "content": "話（はなし）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "する",
+        "alternate_grammar": [
+          "する",
+          "します"
+        ],
+        "kanji_answer": "する",
+        "kanji_alt_grammar": [
+          "する",
+          "します"
+        ],
+        "nuance": "色々（いろいろ）な動作（どうさ）を表（あらわ）すために使（つか）われる、<strong>特別（とくべつ）な活用（かつよう）</strong>方法（ほうほう）がある<strong>動詞（どうし）</strong>。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/22/male_audio/12-話をする.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/話をする。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はなす": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "はなします": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To <strong>talk</strong>. (<strong>to do</strong>)",
+        "nuance_translation": "A <strong>verb</strong> that has a <strong>special class</strong> of conjugation rules, and is used for many different actions.",
+        "extra_info": "",
+        "reviewable_id": 22,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1644",
+      "type": "study_question",
+      "attributes": {
+        "id": 1644,
+        "content": "トム<span class='gp-popout' data-gp-id='3'>は</span>時計（とけい）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "する",
+        "alternate_grammar": [
+          "する",
+          "します",
+          "している",
+          "してる",
+          "しています"
+        ],
+        "kanji_answer": "する",
+        "kanji_alt_grammar": [
+          "する",
+          "します",
+          "している",
+          "してる",
+          "しています"
+        ],
+        "nuance": "色々（いろいろ）な動作（どうさ）を表（あらわ）すために使（つか）われる、<strong>特別（とくべつ）な活用（かつよう）</strong>方法（ほうほう）がある<strong>動詞（どうし）</strong>。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/22/male_audio/04-トムは時計をする.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/トムは時計をする。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つける": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "つけます": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Tom <strong>wears</strong> a watch. (<strong>to do</strong>)",
+        "nuance_translation": "A <strong>verb</strong> that has a <strong>special class</strong> of conjugation rules, and is used for many different actions.",
+        "extra_info": "",
+        "reviewable_id": 22,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1645",
+      "type": "study_question",
+      "attributes": {
+        "id": 1645,
+        "content": "スポーツ<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "する",
+        "alternate_grammar": [],
+        "kanji_answer": "する",
+        "kanji_alt_grammar": [],
+        "nuance": "色々（いろいろ）な動作（どうさ）を表（あらわ）すために使（つか）われる、<strong>特別（とくべつ）な活用（かつよう）</strong>方法（ほうほう）がある<strong>動詞（どうし）</strong>。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/22/male_audio/03-スポーツをする.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/スポーツをする。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "します": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "やります": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "あそぶ": {
+            "en": "Let's try a different word here.",
+            "es": "Prueba con con una palabra diferente.",
+            "fr": "Essayons un autre mot ici.",
+            "id": "Mari coba kata yang berbeda."
+          },
+          "あそびます": {
+            "en": "Let's try a different word here.",
+            "es": "Prueba con con una palabra diferente.",
+            "fr": "Essayons un autre mot ici.",
+            "id": "Mari coba kata yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>play</strong> sports. (<strong>to do</strong>)",
+        "nuance_translation": "A <strong>verb</strong> that has a <strong>special class</strong> of conjugation rules, and is used for many different actions.",
+        "extra_info": "",
+        "reviewable_id": 22,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1642",
+      "type": "study_question",
+      "attributes": {
+        "id": 1642,
+        "content": "彼（かれ）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='18'>だろう</span>。",
+        "answer": "する",
+        "alternate_grammar": [],
+        "kanji_answer": "する",
+        "kanji_alt_grammar": [],
+        "nuance": "色々（いろいろ）な動作（どうさ）を表（あらわ）すために使（つか）われる、<strong>特別（とくべつ）な活用（かつよう）</strong>方法（ほうほう）がある<strong>動詞（どうし）</strong>。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/22/male_audio/08-彼がするだろう.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼がするだろう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He <strong>will do</strong> it, right?",
+        "nuance_translation": "A <strong>verb</strong> that has a <strong>special class</strong> of conjugation rules, and is used for many different actions.",
+        "extra_info": "",
+        "reviewable_id": 22,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "42",
+      "type": "writeup",
+      "attributes": {
+        "id": 42,
+        "body_ja": null,
+        "body": "<p><span data-gp-id='22'>する</span> verbs are one of only two main verbs in Japanese that do not follow the standard rules of conjugation for <span data-gp-id='26'>Godan</span> and <span data-gp-id='12'>Ichidan</span> verbs. The other primary verb being <span data-gp-id='39'>来（く）る</span>. <span data-gp-id='22'>する</span> means to do something, or to make something a certain way.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154841'>\r\n<li data-study-question='154842'></ul>\r\n\r\n<p><span data-gp-id='22'>する</span> will almost always have the particle <span data-gp-id='21'>を</span> attached to the thing that is being done (depending on the form of the verb). The reason that <span data-gp-id='22'>する</span> verbs are called さ-column irregular conjugation verbs in Japanese is because the る in <span data-gp-id='22'>する</span> does not conjugate, but is dropped.</p>\r\n\r\n<p>This will leave す to be the part that conjugates. Because of this, <span data-gp-id='22'>する</span> has qualities of both <span data-gp-id='12'>る-Verbs</span> (the る being dropped), and <span data-gp-id='26'>う-Verbs</span> (the remaining す changing, depending on the conjugation). Here are some examples of how <span data-gp-id='22'>する</span> changes.</p>\r\n\r\n<p><span data-gp-id='153'>（さ）せる</span>, <span data-gp-id='22'>（し）ます</span>, <span data-gp-id='22'>（す）る</span>, <span data-gp-id='526'>（せ）よ</span>.</p>\r\n\r\n<p>We will learn more about each of these conjugations of <span data-gp-id='22'>する</span>, and their individual meanings at a later stage. For now, let's take a look at the polite <span data-gp-id='22'>します</span> conjugation.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154843'>\r\n<li data-study-question='154844'></ul>\r\n\r\n<p>In a broader sense, <span data-gp-id='22'>する</span> can be thought of as meaning 'to do something that has an external effect'.</p>"
+      }
+    },
+    {
+      "id": "20",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 20,
+        "source": "Genki I",
+        "location": "Page 59",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "83",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 83,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 89",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "750",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 750,
+        "source": "みんなの日本語 I",
+        "location": "Page 44 [CH 6]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1163",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1163,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 428",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "47",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 47,
+        "site": "Imabi",
+        "description": "The Verbs する & 来る",
+        "link": "https://imabi.org/the-verbs-suru-%e3%81%99%e3%82%8b-kuru-%e6%9d%a5%e3%82%8b/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1974",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1974,
+        "site": "Japanese StackExchange",
+        "description": "する vs. をする",
+        "link": "https://japanese.stackexchange.com/questions/3395/can-a-noun-suru-have-an-adjective-modify-the-noun-as-well",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "48",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 48,
+        "site": "ThoughtCo",
+        "description": "A broad overview of 「する」",
+        "link": "https://www.thoughtco.com/how-to-conjugate-suru-4058480",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "813",
+      "type": "related_content",
+      "attributes": {
+        "id": 813,
+        "relationship_type": "related",
+        "body": "Both いたす and する express performing an action, similar to the English 'do.' The key difference is politeness: する is the standard, neutral term used in everyday contexts, while いたす is a humble expression used to show respect by 'lowering' your actions (or those of your in-group) in relation to another person.",
+        "first_relatable": {
+          "id": 192,
+          "slug": "いたす",
+          "title": "いたす",
+          "meaning": "To do (Humble), To venerably do",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 22,
+          "slug": "する",
+          "title": "する",
+          "meaning": "To do, To make into",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "814",
+      "type": "related_content",
+      "attributes": {
+        "id": 814,
+        "relationship_type": "related",
+        "body": "Both なさる and する express performing an action, similar to the English 'do.' The key difference is politeness: する is the standard, neutral term used in everyday contexts, while なさる is an honorific expression used to 'elevate' someone else's actions with respect to you (or your in-group).",
+        "first_relatable": {
+          "id": 193,
+          "slug": "なさる",
+          "title": "なさる",
+          "meaning": "To do (Honorific)",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 22,
+          "slug": "する",
+          "title": "する",
+          "meaning": "To do, To make into",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

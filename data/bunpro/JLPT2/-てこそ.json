@@ -1,0 +1,1087 @@
+{
+  "data": {
+    "id": "352",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 352,
+      "level": "JLPT2",
+      "lesson_id": 33,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "-てこそ",
+      "nuance": "(A)をすることが何（なに）かの<strong>理由（りゆう）だ</strong>ということを示（しめ）す表現（ひょうげん）。<strong>英語（えいご）で大文字（おおもじ）</strong>を使（つか）うのに似（に）ている。",
+      "grammar_order": 586,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 519,
+        "title": "を問わず",
+        "slug": "を問わず"
+      },
+      "previous_grammar_point": {
+        "id": 1090,
+        "title": "次第に",
+        "slug": "次第に"
+      },
+      "lesson_count": "14/24",
+      "title": "～てこそ",
+      "furigana": "～てこそ",
+      "meaning": "Only if, Because, By, Unless, Until",
+      "nuance_translation": "An expression that indicates doing (A) as being the <strong>precise</strong> reason for something, in a similar way to <strong>capitalization of a word in English</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<span class='gp-popout' data-gp-id='416'>Verb［て］</span>+ <strong><span class='gp-popout' data-gp-id='258'>こそ</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/11138",
+      "metadata": "てこそ, でこそ, tekoso, dekoso, expression"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "6303",
+            "type": "study_question"
+          },
+          {
+            "id": "181895",
+            "type": "study_question"
+          },
+          {
+            "id": "181896",
+            "type": "study_question"
+          },
+          {
+            "id": "181898",
+            "type": "study_question"
+          },
+          {
+            "id": "6297",
+            "type": "study_question"
+          },
+          {
+            "id": "6301",
+            "type": "study_question"
+          },
+          {
+            "id": "181897",
+            "type": "study_question"
+          },
+          {
+            "id": "6304",
+            "type": "study_question"
+          },
+          {
+            "id": "1271",
+            "type": "study_question"
+          },
+          {
+            "id": "6300",
+            "type": "study_question"
+          },
+          {
+            "id": "1270",
+            "type": "study_question"
+          },
+          {
+            "id": "6296",
+            "type": "study_question"
+          },
+          {
+            "id": "1272",
+            "type": "study_question"
+          },
+          {
+            "id": "6302",
+            "type": "study_question"
+          },
+          {
+            "id": "6298",
+            "type": "study_question"
+          },
+          {
+            "id": "6299",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "600",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1981",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "688",
+            "type": "related_content"
+          },
+          {
+            "id": "1525",
+            "type": "related_content"
+          },
+          {
+            "id": "884",
+            "type": "related_content"
+          },
+          {
+            "id": "1272",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "782",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "783",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2267",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "781",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "6303",
+      "type": "study_question",
+      "attributes": {
+        "id": 6303,
+        "content": "責任（せきにん）を<span class='study-area-input'>____</span>、真（しん）のリーダーだ。",
+        "answer": "とってこそ",
+        "alternate_grammar": [],
+        "kanji_answer": "取（と）ってこそ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をすることが何（なに）かの<strong>理由（りゆう）だ</strong>ということを示（しめ）す表現（ひょうげん）。<strong>英語（えいご）で大文字（おおもじ）</strong>を使（つか）うのに似（に）ている。",
+        "tense": "Conditional",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/責任を取ってこそ、真のリーダーだ。.mp3",
+        "word_prompt": "取（と）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とってから": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "とったこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "とったから": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "とってからこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "とったいじょう": {
+            "en": "How about a grammar structure that is most often heard in conversation?",
+            "es": ""
+          },
+          "とってはじめて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Now that you have taken</strong> responsibility, you are a true leader. (<strong>only because</strong>)",
+        "nuance_translation": "An expression that indicates doing (A) as being the <strong>precise</strong> reason for something, in a similar way to <strong>capitalization of a word in English</strong>.",
+        "extra_info": "",
+        "reviewable_id": 352,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181895",
+      "type": "study_question",
+      "attributes": {
+        "id": 181895,
+        "content": "海外（かいがい）に留学（りゅうがく）し<span class='study-area-input'>____</span>、日本食（にほんしょく）の美味（おい）しさが分（わ）かる。",
+        "answer": "てこそ",
+        "alternate_grammar": [],
+        "kanji_answer": "てこそ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/海外に留学してこそ、日本食の美味しさが分かる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Only by</strong> studying abroad can one appreciate the deliciousness of Japanese food.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 352,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181896",
+      "type": "study_question",
+      "attributes": {
+        "id": 181896,
+        "content": "親（おや）になっ<span class='study-area-input'>____</span>、子育（こそだ）ての大変（たいへん）さがわかる。",
+        "answer": "てこそ",
+        "alternate_grammar": [],
+        "kanji_answer": "てこそ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/親になってこそ、子育ての大変さがわかる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It's <strong>only</strong> when you become a parent that you understand how hard it is to raise a child.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 352,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181898",
+      "type": "study_question",
+      "attributes": {
+        "id": 181898,
+        "content": "他（ほか）のチームに勝（か）っ<span class='study-area-input'>____</span>、世界一（せかいいち）になれる。",
+        "answer": "てこそ",
+        "alternate_grammar": [],
+        "kanji_answer": "てこそ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/他のチームに勝ってこそ、世界一になれる。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Only by</strong> beating other teams can we become the best in the world.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 352,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6297",
+      "type": "study_question",
+      "attributes": {
+        "id": 6297,
+        "content": "全員（ぜんいん）参加（さんか）<span class='study-area-input'>____</span>の遠足（えんそく）だ。",
+        "answer": "してこそ",
+        "alternate_grammar": [],
+        "kanji_answer": "してこそ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をすることが何（なに）かの<strong>理由（りゆう）だ</strong>ということを示（しめ）す表現（ひょうげん）。<strong>英語（えいご）で大文字（おおもじ）</strong>を使（つか）うのに似（に）ている。",
+        "tense": "Conditional",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/全員参加してこその遠足だ。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "してから": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "したから": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "してからこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "したこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "してはじめて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It is <strong>only because</strong> everyone is participating that it is an outing. (<strong>until/unless</strong>)",
+        "nuance_translation": "An expression that indicates doing (A) as being the <strong>precise</strong> reason for something, in a similar way to <strong>capitalization of a word in English</strong>.",
+        "extra_info": "",
+        "reviewable_id": 352,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6301",
+      "type": "study_question",
+      "attributes": {
+        "id": 6301,
+        "content": "自分（じぶん）で<span class='study-area-input'>____</span>、撮影（さつえい）の難（むずか）しさが分（わ）かるはずです。",
+        "answer": "やってみてこそ",
+        "alternate_grammar": [],
+        "kanji_answer": "やってみてこそ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をすることが何（なに）かの<strong>理由（りゆう）だ</strong>ということを示（しめ）す表現（ひょうげん）。<strong>英語（えいご）で大文字（おおもじ）</strong>を使（つか）うのに似（に）ている。",
+        "tense": "Conditional",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/自分でやってみてこそ、撮影の難しさが分かるはずです。.mp3",
+        "word_prompt": "やってみる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やってみてから": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "やってみたこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "やってみたから": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "やってみてからこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "やってはじめて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "You are expected to understand the difficulties of photography <strong>only by trying</strong> it yourself. (<strong>until/unless</strong>)",
+        "nuance_translation": "An expression that indicates doing (A) as being the <strong>precise</strong> reason for something, in a similar way to <strong>capitalization of a word in English</strong>.",
+        "extra_info": "",
+        "reviewable_id": 352,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181897",
+      "type": "study_question",
+      "attributes": {
+        "id": 181897,
+        "content": "チーム全員（ぜんいん）の責任（せきにん）を背負（せお）っ<span class='study-area-input'>____</span>、キャプテンになれる。",
+        "answer": "てこそ",
+        "alternate_grammar": [],
+        "kanji_answer": "てこそ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/チーム全員の責任を背負ってこそ、キャプテンになれる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "You become a captain <strong>only if</strong> you take on the responsibility of the whole team.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 352,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6304",
+      "type": "study_question",
+      "attributes": {
+        "id": 6304,
+        "content": "失敗（しっぱい）<span class='study-area-input'>____</span>、本当（ほんとう）の成功（せいこう）に辿（たど）り着（つ）ける。",
+        "answer": "してこそ",
+        "alternate_grammar": [],
+        "kanji_answer": "してこそ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をすることが何（なに）かの<strong>理由（りゆう）だ</strong>ということを示（しめ）す表現（ひょうげん）。<strong>英語（えいご）で大文字（おおもじ）</strong>を使（つか）うのに似（に）ている。",
+        "tense": "Conditional",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/失敗してこそ、本当の成功に辿り着ける。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "してから": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "したこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "したから": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "してからこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "してはじめて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Only by</strong> failing, one can truly walk the path to success.",
+        "nuance_translation": "An expression that indicates doing (A) as being the <strong>precise</strong> reason for something, in a similar way to <strong>capitalization of a word in English</strong>.",
+        "extra_info": "",
+        "reviewable_id": 352,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1271",
+      "type": "study_question",
+      "attributes": {
+        "id": 1271,
+        "content": "親（おや）に<span class='study-area-input'>____</span>、子供（こども）は奇跡（きせき）だという考（かんが）え方（かた）が分（わ）かる。",
+        "answer": "なってこそ",
+        "alternate_grammar": [],
+        "kanji_answer": "なってこそ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をすることが何（なに）かの<strong>理由（りゆう）だ</strong>ということを示（しめ）す表現（ひょうげん）。<strong>英語（えいご）で大文字（おおもじ）</strong>を使（つか）うのに似（に）ている。",
+        "tense": "Conditional",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/親になってこそ、子供は奇跡だという考え方が分かる。.mp3",
+        "word_prompt": "なる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なってから": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "なったから": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "なったこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "なってからこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "なってはじめて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Only by becoming</strong> a parent, you can understand the mindset that children are miracles.",
+        "nuance_translation": "An expression that indicates doing (A) as being the <strong>precise</strong> reason for something, in a similar way to <strong>capitalization of a word in English</strong>.",
+        "extra_info": "",
+        "reviewable_id": 352,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6300",
+      "type": "study_question",
+      "attributes": {
+        "id": 6300,
+        "content": "手紙（てがみ）は手書（てが）きで<span class='study-area-input'>____</span>、気持（きも）ちが伝（つた）わるものだ。",
+        "answer": "かいてこそ",
+        "alternate_grammar": [],
+        "kanji_answer": "書（か）いてこそ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をすることが何（なに）かの<strong>理由（りゆう）だ</strong>ということを示（しめ）す表現（ひょうげん）。<strong>英語（えいご）で大文字（おおもじ）</strong>を使（つか）うのに似（に）ている。",
+        "tense": "Conditional",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/手紙は手書きで書いてこそ、気持ちが伝わるものだ。.mp3",
+        "word_prompt": "書（か）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かいてから": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "かいたこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "かいたから": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "かいてからこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "かいてはじめて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Only if</strong> you <strong>write</strong> the letter by hand will your feelings will be conveyed.",
+        "nuance_translation": "An expression that indicates doing (A) as being the <strong>precise</strong> reason for something, in a similar way to <strong>capitalization of a word in English</strong>.",
+        "extra_info": "",
+        "reviewable_id": 352,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1270",
+      "type": "study_question",
+      "attributes": {
+        "id": 1270,
+        "content": "日本（にほん）へ<span class='study-area-input'>____</span>、京都（きょうと）の魅力（みりょく）が分（わ）かる。",
+        "answer": "いってこそ",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）ってこそ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をすることが何（なに）かの<strong>理由（りゆう）だ</strong>ということを示（しめ）す表現（ひょうげん）。<strong>英語（えいご）で大文字（おおもじ）</strong>を使（つか）うのに似（に）ている。",
+        "tense": "Conditional",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/日本へ行ってこそ、京都の魅力が分かる。.mp3",
+        "word_prompt": "行（い）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いってから": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "いったからこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "いってからこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "いったから": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "いってはじめて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Only by going</strong> to Japan, one can understand the charm of Kyoto.",
+        "nuance_translation": "An expression that indicates doing (A) as being the <strong>precise</strong> reason for something, in a similar way to <strong>capitalization of a word in English</strong>.",
+        "extra_info": "",
+        "reviewable_id": 352,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6296",
+      "type": "study_question",
+      "attributes": {
+        "id": 6296,
+        "content": "全部（ぜんぶ）<span class='study-area-input'>____</span>のコレクションだ。",
+        "answer": "そろえてこそ",
+        "alternate_grammar": [],
+        "kanji_answer": "揃（そろ）えてこそ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をすることが何（なに）かの<strong>理由（りゆう）だ</strong>ということを示（しめ）す表現（ひょうげん）。<strong>英語（えいご）で大文字（おおもじ）</strong>を使（つか）うのに似（に）ている。",
+        "tense": "Conditional",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "揃（そろ）える",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "そろえてから": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": ""
+          },
+          "そろえたから": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": ""
+          },
+          "そろえてからこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "",
+            "fr": ""
+          },
+          "そろえたこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "",
+            "fr": ""
+          },
+          "そろえてはじめて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A collection is a collection <strong>only when</strong> everything is <strong>complete</strong>. (<strong>because・until/unless</strong>)",
+        "nuance_translation": "An expression that indicates doing (A) as being the <strong>precise</strong> reason for something, in a similar way to <strong>capitalization of a word in English</strong>.",
+        "extra_info": "",
+        "reviewable_id": 352,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1272",
+      "type": "study_question",
+      "attributes": {
+        "id": 1272,
+        "content": "優勝（ゆうしょう）<span class='study-area-input'>____</span>、自信（じしん）に繋（つな）がる。",
+        "answer": "してこそ",
+        "alternate_grammar": [],
+        "kanji_answer": "してこそ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をすることが何（なに）かの<strong>理由（りゆう）だ</strong>ということを示（しめ）す表現（ひょうげん）。<strong>英語（えいご）で大文字（おおもじ）</strong>を使（つか）うのに似（に）ている。",
+        "tense": "Conditional",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "してから": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "したから": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "したからこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "してからこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "したこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "してはじめて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It is <strong>only by</strong> winning that one becomes confident. (<strong>unless/until</strong>)",
+        "nuance_translation": "An expression that indicates doing (A) as being the <strong>precise</strong> reason for something, in a similar way to <strong>capitalization of a word in English</strong>.",
+        "extra_info": "",
+        "reviewable_id": 352,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6302",
+      "type": "study_question",
+      "attributes": {
+        "id": 6302,
+        "content": "くだらないプライドを<span class='study-area-input'>____</span>、男（おとこ）らしくなれる。",
+        "answer": "すててこそ",
+        "alternate_grammar": [],
+        "kanji_answer": "捨（す）ててこそ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をすることが何（なに）かの<strong>理由（りゆう）だ</strong>ということを示（しめ）す表現（ひょうげん）。<strong>英語（えいご）で大文字（おおもじ）</strong>を使（つか）うのに似（に）ている。",
+        "tense": "Conditional",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/くだらないプライドを捨ててこそ、男らしくなれる。.mp3",
+        "word_prompt": "捨（す）てる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "すててから": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "すてたこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "すてたから": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "すててからこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "すててはじめて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Only if</strong> you <strong>throw aside</strong> your worthless pride will you be able to become more manly. (<strong>until/unless</strong>)",
+        "nuance_translation": "An expression that indicates doing (A) as being the <strong>precise</strong> reason for something, in a similar way to <strong>capitalization of a word in English</strong>.",
+        "extra_info": "",
+        "reviewable_id": 352,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6298",
+      "type": "study_question",
+      "attributes": {
+        "id": 6298,
+        "content": "体験（たいけん）<span class='study-area-input'>____</span>、作者（さくしゃ）が苦悩（くのう）した理由（りゆう）が分（わ）かる。",
+        "answer": "してこそ",
+        "alternate_grammar": [],
+        "kanji_answer": "してこそ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をすることが何（なに）かの<strong>理由（りゆう）だ</strong>ということを示（しめ）す表現（ひょうげん）。<strong>英語（えいご）で大文字（おおもじ）</strong>を使（つか）うのに似（に）ている。",
+        "tense": "Conditional",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/体験してこそ、作者が苦悩した理由が分かる。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "してから": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "したから": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "してからこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "したこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "してはじめて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Only by </strong>personally experiencing it, you will understand the reason the author was distressed. (<strong>until/unless</strong>)",
+        "nuance_translation": "An expression that indicates doing (A) as being the <strong>precise</strong> reason for something, in a similar way to <strong>capitalization of a word in English</strong>.",
+        "extra_info": "",
+        "reviewable_id": 352,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6299",
+      "type": "study_question",
+      "attributes": {
+        "id": 6299,
+        "content": "<span class='study-area-input'>____</span>の親友（しんゆう）じゃないか。",
+        "answer": "たすけあってこそ",
+        "alternate_grammar": [],
+        "kanji_answer": "助（たす）け合（あ）ってこそ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をすることが何（なに）かの<strong>理由（りゆう）だ</strong>ということを示（しめ）す表現（ひょうげん）。<strong>英語（えいご）で大文字（おおもじ）</strong>を使（つか）うのに似（に）ている。",
+        "tense": "Conditional",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "助（たす）け合（あ）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たすけあってから": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "たすけあったこそ": {
+            "en": "Close! Can you use a different conjugation here?",
+            "es": ""
+          },
+          "たすけあったから": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "たすけあってからこそ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "てはじめて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "One is being a friend<strong> only by helping one another</strong>, isn't that right? (<strong>only because</strong>)",
+        "nuance_translation": "An expression that indicates doing (A) as being the <strong>precise</strong> reason for something, in a similar way to <strong>capitalization of a word in English</strong>.",
+        "extra_info": "",
+        "reviewable_id": 352,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "600",
+      "type": "writeup",
+      "attributes": {
+        "id": 600,
+        "body_ja": "<p>助詞（じょし）「こそ」には、特定（とくてい）の語（ご）を強調（きょうちょう）し「まさにそれが理由（りゆう）だ」と示（しめ）す働（はたら）きがありますが、動詞（どうし）のテ形（けい）と組（く）み合（あ）わせた「<span data-gp-id='352'>〜てこそ</span>」は (A) を強調（きょうちょう）し「(B) は (A) によって初（はじ）めて成（な）り立（た）つ」ことを表（あらわ）します。この表現（ひょうげん）は「(A) してはじめて (B)」「(A) しなければ (B) しない」「(A) するまで (B) しない」のような意味（いみ）合（あ）いで使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181895'>\r\n<li data-study-question='181896'>\r\n<li data-study-question='181897'>\r\n<li data-study-question='181898'>\r\n</ul>\r\n\r\n<p>この表現（ひょうげん）は、話（はな）し手（て）の意見（いけん）や価値観（かちかん）、または状況（じょうきょう）の理解（りかい）に基（もと）づいて「(A) が (B) の結果（けっか）や評価（ひょうか）を決（き）める」というニュアンスで使（つか）われることが多（おお）いです。</p>",
+        "body": "<p>In a similar way to how the particle こそ highlights a particular word as being the 'precise' or 'exact' reason for something, its combination with the て-form of a verb will indicate that (B) is absolutely reliant on (A). This reliance can be translated in several different ways, and will usually become clear in the (B) part of sentences. Standard interpretations include 'only if (A), (B)', 'unless (A), (B)', or 'until (A), (B)'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181895'>\r\n<li data-study-question='181896'>\r\n<li data-study-question='181897'>\r\n<li data-study-question='181898'>\r\n</ul>\r\n\r\n<p>The reliance that (B) has on (A) can be translated in several different ways, but the most common interpretations are that (A) will determine either the outcome, assessment, or evaluation of (B), based on the speaker's opinion, values, or understanding of the situation.</p>"
+      }
+    },
+    {
+      "id": "1981",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1981,
+        "source": "A Dictionary of Intermediate Japanese Grammar",
+        "location": "133",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "782",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 782,
+        "site": "JapaneseTest4You",
+        "description": "Breakdown and example sentences",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-%E3%81%A6%E3%81%93%E3%81%9D-te-koso/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "783",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 783,
+        "site": "Japanese StackExchange",
+        "description": "Difference between てこそ and からこそ",
+        "link": "https://japanese.stackexchange.com/questions/34209/difference-between-%e3%81%a6%e3%81%93%e3%81%9d-and-%e3%81%8b%e3%82%89%e3%81%93%e3%81%9d/34210#34210",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2267",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2267,
+        "site": "にほんごの里",
+        "description": "接続・意味・使い方・例文",
+        "link": "https://nihongonosato.com/jlpt/n2-grammar/n2-amari/#tekoso",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "781",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 781,
+        "site": "MaggieSensei",
+        "description": "verb +て + こそ:  emphasizing certain condition/reason",
+        "link": "https://maggiesensei.com/2015/10/05/how-to-use-%E3%81%93%E3%81%9D-koso/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "688",
+      "type": "related_content",
+      "attributes": {
+        "id": 688,
+        "relationship_type": "related",
+        "body": "Both use the emphatic こそ but differ by verb form. ～ばこそ is conditional, meaning only if (A), then (B), as in 忙しければこそ 'precisely because you're busy'. ～てこそ focuses on completion, meaning only after (A) happens, then (B), as in 苦労してこそ成功がある ('Only after hardship comes success'). ～ばこそ can introduce a hypothetical condition, while ～てこそ emphasizes the actual realization of (A).",
+        "first_relatable": {
+          "id": 879,
+          "slug": "ばこそ",
+          "title": "～ばこそ",
+          "meaning": "Precisely because, Only because, Because, Due to, Only if",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 352,
+          "slug": "-てこそ",
+          "title": "～てこそ",
+          "meaning": "Only if, Because, By, Unless, Until",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1525",
+      "type": "related_content",
+      "attributes": {
+        "id": 1525,
+        "relationship_type": "related",
+        "body": "These are both emphatic expressions that can be used in similar contexts to express 'it's entirely because of (A) that (B)'. あっての is narrower in use, saying that something was possible only because something else 'exists', e.g. 皆さんの努力あっての成功だ ('This success is entirely because of everyone's effort.'). てこそ can be used with a wider variety of verbs, such as 留学してこそ学べること ('things you can only learn by studying abroad'.).",
+        "first_relatable": {
+          "id": 788,
+          "slug": "あっての",
+          "title": "あっての",
+          "meaning": "Exist only because of or due to, Owe everything to",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 352,
+          "slug": "-てこそ",
+          "title": "～てこそ",
+          "meaning": "Only if, Because, By, Unless, Until",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "884",
+      "type": "related_content",
+      "attributes": {
+        "id": 884,
+        "relationship_type": "related",
+        "body": "Both からこそ and ～てこそ emphasize cause and effect, but they differ in nuance. からこそ highlights a specific reason with a strong emphasis, e.g. 努力したからこそ合格できた ('I was able to pass precisely because I worked hard'). In contrast, ～てこそ indicates that only after a certain condition is fulfilled can something else happen, e.g. 努力してこそ意味がある ('It only has meaning after putting in effort').",
+        "first_relatable": {
+          "id": 446,
+          "slug": "からこそ",
+          "title": "からこそ",
+          "meaning": "Emphasized because, Precisely because",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 352,
+          "slug": "-てこそ",
+          "title": "～てこそ",
+          "meaning": "Only if, Because, By, Unless, Until",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1272",
+      "type": "related_content",
+      "attributes": {
+        "id": 1272,
+        "relationship_type": "related",
+        "body": "Both involve the same こそ, but one attaches to nouns and the other to verb + て form. こそ emphasizes a specific word or element, often to contrast or highlight, e.g. 彼こそできる ('He, if nobody else, can do it.'). In contrast, ～てこそ focuses a condition that must be met for something to be true, e.g. 大人になってこそ分かる 'understand only after becoming an adult'.",
+        "first_relatable": {
+          "id": 258,
+          "slug": "こそ",
+          "title": "こそ",
+          "meaning": "For sure, For certain, Even more so, Underlined or bolded text",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 352,
+          "slug": "-てこそ",
+          "title": "～てこそ",
+          "meaning": "Only if, Because, By, Unless, Until",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

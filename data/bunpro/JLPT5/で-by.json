@@ -1,0 +1,984 @@
+{
+  "data": {
+    "id": "36",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 36,
+      "level": "JLPT5",
+      "lesson_id": 5,
+      "part_of_speech": "助詞",
+      "register": "一般",
+      "word_type": "格助詞",
+      "slug": "で-by",
+      "nuance": "何（なに）かを達成（たっせい）するために使（つか）われる<strong>手段（しゅだん）</strong>や<strong>道具（どうぐ）</strong>を示（しめ）すために使用（しよう）される<strong>助詞（じょし）</strong>。",
+      "grammar_order": 52,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 62,
+        "title": "ので",
+        "slug": "ので"
+      },
+      "previous_grammar_point": {
+        "id": 873,
+        "title": "い-Adjectives くない",
+        "slug": "negative-い-adjectives"
+      },
+      "lesson_count": "1/12",
+      "title": "で",
+      "furigana": "で",
+      "meaning": "With, By (using)",
+      "nuance_translation": "A <strong>particle</strong> which may be used to show the <strong>means</strong> or <strong>tool used</strong> to achieve something.",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "Noun + <strong>で</strong>",
+      "part_of_speech_translation": "Particle",
+      "register_translation": "Standard",
+      "word_type_translation": "Case Marking Particle",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/516",
+      "metadata": "で, にて, nite, de, particle, case-marking particle"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154886",
+            "type": "study_question"
+          },
+          {
+            "id": "154891",
+            "type": "study_question"
+          },
+          {
+            "id": "1781",
+            "type": "study_question"
+          },
+          {
+            "id": "154887",
+            "type": "study_question"
+          },
+          {
+            "id": "154890",
+            "type": "study_question"
+          },
+          {
+            "id": "154889",
+            "type": "study_question"
+          },
+          {
+            "id": "154888",
+            "type": "study_question"
+          },
+          {
+            "id": "1784",
+            "type": "study_question"
+          },
+          {
+            "id": "36",
+            "type": "study_question"
+          },
+          {
+            "id": "681",
+            "type": "study_question"
+          },
+          {
+            "id": "682",
+            "type": "study_question"
+          },
+          {
+            "id": "1780",
+            "type": "study_question"
+          },
+          {
+            "id": "1782",
+            "type": "study_question"
+          },
+          {
+            "id": "1783",
+            "type": "study_question"
+          },
+          {
+            "id": "1786",
+            "type": "study_question"
+          },
+          {
+            "id": "1787",
+            "type": "study_question"
+          },
+          {
+            "id": "1785",
+            "type": "study_question"
+          },
+          {
+            "id": "1788",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "51",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "52",
+            "type": "offline_resource"
+          },
+          {
+            "id": "144",
+            "type": "offline_resource"
+          },
+          {
+            "id": "763",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1041",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1250",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1521",
+            "type": "related_content"
+          },
+          {
+            "id": "1502",
+            "type": "related_content"
+          },
+          {
+            "id": "464",
+            "type": "related_content"
+          },
+          {
+            "id": "504",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "81",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154886",
+      "type": "study_question",
+      "attributes": {
+        "id": 154886,
+        "content": "車（くるま）<span class='study-area-input'>____</span>空港（くうこう）<span class=\"gp-popout\" data-gp-id=\"31\">へ行（い）く</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/車で空港へ行く。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I go to the airport <strong>by</strong> car. (Required to reach a goal)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154891",
+      "type": "study_question",
+      "attributes": {
+        "id": 154891,
+        "content": "お母（かあ）さん<span class=\"gp-popout\" data-gp-id=\"955\">と</span>ご飯（はん）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>食（た）べ<span class=\"gp-popout\" data-gp-id=\"12\">る</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/お母さんとご飯を食べる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I eat with my mom. (Being together is the objective, eating is just what is happening while being together)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1781",
+      "type": "study_question",
+      "attributes": {
+        "id": 1781,
+        "content": "電車（でんしゃ）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='39'>来（き）ます</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを達成（たっせい）するために使（つか）われる<strong>手段（しゅだん）</strong>や<strong>道具（どうぐ）</strong>を示（しめ）すために使用（しよう）される<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/36/male_audio/電車で来ますか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/電車で来ますか。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やすくない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Are you coming <strong>by</strong> train?",
+        "nuance_translation": "A <strong>particle</strong> which may be used to show the <strong>means</strong> or <strong>tool used</strong> to achieve something.",
+        "extra_info": "",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154887",
+      "type": "study_question",
+      "attributes": {
+        "id": 154887,
+        "content": "電車（でんしゃ）<span class='study-area-input'>____</span>行（い）<span class=\"gp-popout\" data-gp-id=\"26\">く</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/電車で行く。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I go <strong>by</strong> train. (Required to reach a goal)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154890",
+      "type": "study_question",
+      "attributes": {
+        "id": 154890,
+        "content": "家族（かぞく）全員（ぜんいん）<span class='study-area-input'>____</span>沖縄（おきなわ）<span class=\"gp-popout\" data-gp-id=\"31\">へ行（い）く</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/家族全員で沖縄へ行く。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I will go to Okinawa <strong>with</strong> everyone in my family. (Being with everyone is what allows/gives purpose to the action)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154889",
+      "type": "study_question",
+      "attributes": {
+        "id": 154889,
+        "content": "来年（らいねん）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>皆（みんな）<span class='study-area-input'>____</span>ハワイ<span class=\"gp-popout\" data-gp-id=\"32\">に</span>行（い）<span class=\"gp-popout\" data-gp-id=\"26\">く</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/来年は皆でハワイに行く。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I will go to Hawaii <strong>with</strong> everyone next year. (Being with everyone is what allows/gives purpose to the action)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154888",
+      "type": "study_question",
+      "attributes": {
+        "id": 154888,
+        "content": "みんな<span class='study-area-input'>____</span>レストラン<span class=\"gp-popout\" data-gp-id=\"32\">に</span>行（い）<span class=\"gp-popout\" data-gp-id=\"26\">く</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/みんなでレストランに行く。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I go to the restaurant <strong>with</strong> everyone. (Being with everyone is what allows/gives purpose to the action)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1784",
+      "type": "study_question",
+      "attributes": {
+        "id": 1784,
+        "content": "バス<span class='study-area-input'>____</span>帰（かえ）<span class='gp-popout' data-gp-id='26'>る</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを達成（たっせい）するために使（つか）われる<strong>手段（しゅだん）</strong>や<strong>道具（どうぐ）</strong>を示（しめ）すために使用（しよう）される<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/36/male_audio/04-バスで帰る.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/バスで帰る。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やすくない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To go home <strong>by</strong> bus.",
+        "nuance_translation": "A <strong>particle</strong> which may be used to show the <strong>means</strong> or <strong>tool used</strong> to achieve something.",
+        "extra_info": "",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "36",
+      "type": "study_question",
+      "attributes": {
+        "id": 36,
+        "content": "バス<span class='study-area-input'>____</span>行（い）<span class='gp-popout' data-gp-id='26'>く</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを達成（たっせい）するために使（つか）われる<strong>手段（しゅだん）</strong>や<strong>道具（どうぐ）</strong>を示（しめ）すために使用（しよう）される<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/36/male_audio/05-バスで行く.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/バスで行く。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やすくない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I go <strong>by</strong> bus.",
+        "nuance_translation": "A <strong>particle</strong> which may be used to show the <strong>means</strong> or <strong>tool used</strong> to achieve something.",
+        "extra_info": "",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "681",
+      "type": "study_question",
+      "attributes": {
+        "id": 681,
+        "content": "バス<span class='study-area-input'>____</span>学校（がっこう）に行（い）<span class='gp-popout' data-gp-id='26'>く</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを達成（たっせい）するために使（つか）われる<strong>手段（しゅだん）</strong>や<strong>道具（どうぐ）</strong>を示（しめ）すために使用（しよう）される<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/36/male_audio/03-バスで学校へ行く.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/バスで学校に行く。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やすくない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I go to school <strong>by</strong> bus.",
+        "nuance_translation": "A <strong>particle</strong> which may be used to show the <strong>means</strong> or <strong>tool used</strong> to achieve something.",
+        "extra_info": "",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "682",
+      "type": "study_question",
+      "attributes": {
+        "id": 682,
+        "content": "自転車（じてんしゃ）<span class='study-area-input'>____</span>、<span class='gp-popout' data-gp-id='7'>いい</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを達成（たっせい）するために使（つか）われる<strong>手段（しゅだん）</strong>や<strong>道具（どうぐ）</strong>を示（しめ）すために使用（しよう）される<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/36/male_audio/09-自転車で良いです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/自転車でいいです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "が": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>By</strong> bicycle is fine.",
+        "nuance_translation": "A <strong>particle</strong> which may be used to show the <strong>means</strong> or <strong>tool used</strong> to achieve something.",
+        "extra_info": "Usually で would not be used this way, but we can assume there is some prior context here where the person is saying this as a casual abbreviation of a longer sentence.",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1780",
+      "type": "study_question",
+      "attributes": {
+        "id": 1780,
+        "content": "自転車（じてんしゃ）<span class='study-area-input'>____</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを達成（たっせい）するために使（つか）われる<strong>手段（しゅだん）</strong>や<strong>道具（どうぐ）</strong>を示（しめ）すために使用（しよう）される<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/36/male_audio/01-じてんしゃで.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/自転車で。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やすくない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>By</strong> bicycle.",
+        "nuance_translation": "A <strong>particle</strong> which may be used to show the <strong>means</strong> or <strong>tool used</strong> to achieve something.",
+        "extra_info": "",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1782",
+      "type": "study_question",
+      "attributes": {
+        "id": 1782,
+        "content": "タクシー<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='7'>いい</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを達成（たっせい）するために使（つか）われる<strong>手段（しゅだん）</strong>や<strong>道具（どうぐ）</strong>を示（しめ）すために使用（しよう）される<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/36/male_audio/02-タクシーで良いですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/タクシーでいいですか。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やすくない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Is <strong>by</strong> taxi okay?",
+        "nuance_translation": "A <strong>particle</strong> which may be used to show the <strong>means</strong> or <strong>tool used</strong> to achieve something.",
+        "extra_info": "",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1783",
+      "type": "study_question",
+      "attributes": {
+        "id": 1783,
+        "content": "車（くるま）<span class='study-area-input'>____</span>病院（びょういん）に行（い）<span class='gp-popout' data-gp-id='26'>く</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを達成（たっせい）するために使（つか）われる<strong>手段（しゅだん）</strong>や<strong>道具（どうぐ）</strong>を示（しめ）すために使用（しよう）される<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/36/male_audio/10-車で病院に行く.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/車で病院に行く。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やすくない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To go to the hospital <strong>by</strong> car.",
+        "nuance_translation": "A <strong>particle</strong> which may be used to show the <strong>means</strong> or <strong>tool used</strong> to achieve something.",
+        "extra_info": "",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1786",
+      "type": "study_question",
+      "attributes": {
+        "id": 1786,
+        "content": "バス<span class='study-area-input'>____</span>行（い）<span class='gp-popout' data-gp-id='26'>く</span><span class='gp-popout' data-gp-id='33'>か</span>タクシー<span class='study-area-input'>____</span>行（い）<span class='gp-popout' data-gp-id='26'>く</span><span class='gp-popout' data-gp-id='33'>か</span>分（わ）か<span class='gp-popout' data-gp-id='26'>ります</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを達成（たっせい）するために使（つか）われる<strong>手段（しゅだん）</strong>や<strong>道具（どうぐ）</strong>を示（しめ）すために使用（しよう）される<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/36/male_audio/06-バスで行くかタクシーで行くか分かりますか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/バスで行くかタクシーで行くか分かりますか。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やすくない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Do you know if you are going <strong>by</strong> bus or <strong>by</strong> taxi?",
+        "nuance_translation": "A <strong>particle</strong> which may be used to show the <strong>means</strong> or <strong>tool used</strong> to achieve something.",
+        "extra_info": "",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1787",
+      "type": "study_question",
+      "attributes": {
+        "id": 1787,
+        "content": "新幹線（しんかんせん）<span class='study-area-input'>____</span>東京（とうきょう）<span class='gp-popout' data-gp-id='31'>へ行（い）く</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを達成（たっせい）するために使（つか）われる<strong>手段（しゅだん）</strong>や<strong>道具（どうぐ）</strong>を示（しめ）すために使用（しよう）される<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/36/male_audio/07-新幹線で東京へ行く.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/新幹線で東京へ行く。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やすくない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To go to Tokyo <strong>by</strong> Shinkansen (bullet train).",
+        "nuance_translation": "A <strong>particle</strong> which may be used to show the <strong>means</strong> or <strong>tool used</strong> to achieve something.",
+        "extra_info": "",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1785",
+      "type": "study_question",
+      "attributes": {
+        "id": 1785,
+        "content": "自転車（じてんしゃ）<span class='study-area-input'>____</span>学校（がっこう）に行（い）<span class='gp-popout' data-gp-id='26'>く</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを達成（たっせい）するために使（つか）われる<strong>手段（しゅだん）</strong>や<strong>道具（どうぐ）</strong>を示（しめ）すために使用（しよう）される<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/36/male_audio/08-自転車で学校に行く.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/自転車で学校に行く。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やすくない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To go to school <strong>by</strong> bicycle.",
+        "nuance_translation": "A <strong>particle</strong> which may be used to show the <strong>means</strong> or <strong>tool used</strong> to achieve something.",
+        "extra_info": "",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1788",
+      "type": "study_question",
+      "attributes": {
+        "id": 1788,
+        "content": "飛行機（ひこうき）<span class='study-area-input'>____</span>帰（かえ）<span class='gp-popout' data-gp-id='26'>る</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを達成（たっせい）するために使（つか）われる<strong>手段（しゅだん）</strong>や<strong>道具（どうぐ）</strong>を示（しめ）すために使用（しよう）される<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/36/male_audio/12-飛行機で帰る.mp3",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やすくない": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To go home <strong>by</strong> airplane.",
+        "nuance_translation": "A <strong>particle</strong> which may be used to show the <strong>means</strong> or <strong>tool used</strong> to achieve something.",
+        "extra_info": "",
+        "reviewable_id": 36,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "51",
+      "type": "writeup",
+      "attributes": {
+        "id": 51,
+        "body_ja": null,
+        "body": "<p><span data-gp-id='36'>で</span> is a particle that has several different uses in Japanese. At its core, it is always used to highlight something that is 'required' to perform some sort of action/reach some kind of goal. One of these uses relates to 'things'. This comes across as 'by' or 'with' in English.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154886'>\r\n<li data-study-question='154887'></ul>\r\n\r\n<p>In these sentences, the item is considered essential for the action to be performed. While other items may be used, <span data-gp-id='36'>で</span> simply highlights the one that was chosen.</p>\r\n\r\n<p><span data-gp-id='36'>で</span> is also used when groups of people perform actions together, this is something that many people learning Japanese have trouble with initially (because <span data-gp-id='955'>と</span> may also be used as 'with' for people). However, the use of <span data-gp-id='36'>で</span> is actually the same as this by/with, meaning that the speaker considers the group as the tool used for performing the action.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154888'>\r\n<li data-study-question='154889'></ul>\r\n\r\n<p>The difference between <span data-gp-id='955'>と</span> and <span data-gp-id='36'>で</span> as 'with', is that <span data-gp-id='36'>で</span> is used when everyone in the group has the same objective/end goal. <span data-gp-id='955'>と</span> is used when each person is performing the action toward each other, not toward an external objective.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154890'>\r\n<li data-study-question='154891'></ul>"
+      }
+    },
+    {
+      "id": "52",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 52,
+        "source": "Genki I",
+        "location": "Page 198",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "144",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 144,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 236",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "763",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 763,
+        "source": "みんなの日本語 I",
+        "location": "Page 38 [CH 5]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1041",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1041,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 106",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1250",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1250,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 58",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "81",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 81,
+        "site": "Tae Kim",
+        "description": "The contextual 「で」 particle",
+        "link": "https://guidetojapanese.org/learn/grammar/verbparticles",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1521",
+      "type": "related_content",
+      "attributes": {
+        "id": 1521,
+        "relationship_type": "related",
+        "body": "を以て can be though of as a formal version of the basic particle で when used to mean 'at this point in time', e.g. これ（で・を以て）閉会します ('With this, we will end the meeting.'). Note that をもって would not typically be used with the meaning of で indicating 'place of an action', e.g. 大手企業で働く 'to work at a major corporation'.",
+        "first_relatable": {
+          "id": 784,
+          "slug": "をもって",
+          "title": "をもって",
+          "meaning": "As of, With, Effective from",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 36,
+          "slug": "で-by",
+          "title": "で",
+          "meaning": "With, By (using)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1502",
+      "type": "related_content",
+      "attributes": {
+        "id": 1502,
+        "relationship_type": "related",
+        "body": "を以て can be though of as a highly formal/written-style version of the basic particle で when used to mean 'with'/'by means of', e.g. 鉛筆で書く 'write with a pencil' vs. 死を以て償う 'to atone (e.g. for a sin) with one's death' or 'at this point in time', e.g. これ（で・を以て）閉会します ('With this, we will end the meeting.'). Note that を以て would not typically be used with the meaning of で indicating 'place of an action', e.g. 大手企業で働く 'to work at a major corporation'.",
+        "first_relatable": {
+          "id": 739,
+          "slug": "を以て",
+          "title": "を以て",
+          "meaning": "By means of, With, By, Via, In view of",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 36,
+          "slug": "で-by",
+          "title": "で",
+          "meaning": "With, By (using)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "464",
+      "type": "related_content",
+      "attributes": {
+        "id": 464,
+        "relationship_type": "synonym",
+        "body": "The particle で has two main uses: the first is indicating the location where an action takes place (e.g., 家で遊ぶ = 'play at home'). The second is marking the means or instrument used to perform an action (e.g., ボールで遊ぶ = 'play with a ball'). These differences can usually be inferred from context, so it's recommended to not stress this too much.",
+        "first_relatable": {
+          "id": 36,
+          "slug": "で-by",
+          "title": "で",
+          "meaning": "With, By (using)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 25,
+          "slug": "で",
+          "title": "で",
+          "meaning": "At, In",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "504",
+      "type": "related_content",
+      "attributes": {
+        "id": 504,
+        "relationship_type": "related",
+        "body": "The particle で follows a noun to describe the means or method of an action (e.g., ペンで書く = 'to write with a pen'). A verb in the て form can express a similar nuance (e.g., ペンを使って書く = 'to write using a pen,' 歩いて行く = 'to go by walking'). The meaning is the same, but the form differs depending on whether the 'method' is expressed with a noun or a verb.",
+        "first_relatable": {
+          "id": 36,
+          "slug": "で-by",
+          "title": "で",
+          "meaning": "With, By (using)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 773,
+          "slug": "verb-て-noun-で-b",
+          "title": "Verb[て]・Noun[で] + B",
+          "meaning": "By, With, On, By means of, ~ing with",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

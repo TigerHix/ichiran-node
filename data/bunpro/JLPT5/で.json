@@ -1,0 +1,961 @@
+{
+  "data": {
+    "id": "25",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 25,
+      "level": "JLPT5",
+      "lesson_id": 3,
+      "part_of_speech": "助詞",
+      "register": "一般",
+      "word_type": "格助詞",
+      "slug": "で",
+      "nuance": "ある<strong>行動（こうどう）が起（お）こっている場所（ばしょ）</strong>を表（あらわ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+      "grammar_order": 26,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 32,
+        "title": "に",
+        "slug": "に"
+      },
+      "previous_grammar_point": {
+        "id": 29,
+        "title": "あそこ",
+        "slug": "あそこ"
+      },
+      "lesson_count": "1/13",
+      "title": "で",
+      "furigana": "で",
+      "meaning": "At, In",
+      "nuance_translation": "A <strong>particle</strong> which expresses the <strong>location</strong> in which an <strong>action takes place</strong>.",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "Place + <strong>で</strong>",
+      "part_of_speech_translation": "Particle",
+      "register_translation": "Standard",
+      "word_type_translation": "Case Marking Particle",
+      "discourse_link": "https://community.bunpro.jp/t/discussion-topic/496",
+      "metadata": "で, de, particle, case-marking particle, place"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154772",
+            "type": "study_question"
+          },
+          {
+            "id": "154773",
+            "type": "study_question"
+          },
+          {
+            "id": "660",
+            "type": "study_question"
+          },
+          {
+            "id": "661",
+            "type": "study_question"
+          },
+          {
+            "id": "154774",
+            "type": "study_question"
+          },
+          {
+            "id": "154775",
+            "type": "study_question"
+          },
+          {
+            "id": "1668",
+            "type": "study_question"
+          },
+          {
+            "id": "1667",
+            "type": "study_question"
+          },
+          {
+            "id": "1670",
+            "type": "study_question"
+          },
+          {
+            "id": "1671",
+            "type": "study_question"
+          },
+          {
+            "id": "25",
+            "type": "study_question"
+          },
+          {
+            "id": "1663",
+            "type": "study_question"
+          },
+          {
+            "id": "1665",
+            "type": "study_question"
+          },
+          {
+            "id": "1666",
+            "type": "study_question"
+          },
+          {
+            "id": "1669",
+            "type": "study_question"
+          },
+          {
+            "id": "1664",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "25",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "115",
+            "type": "offline_resource"
+          },
+          {
+            "id": "753",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1040",
+            "type": "offline_resource"
+          },
+          {
+            "id": "22",
+            "type": "offline_resource"
+          },
+          {
+            "id": "86",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1249",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "464",
+            "type": "related_content"
+          },
+          {
+            "id": "108",
+            "type": "related_content"
+          },
+          {
+            "id": "1305",
+            "type": "related_content"
+          },
+          {
+            "id": "93",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1211",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "54",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2258",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154772",
+      "type": "study_question",
+      "attributes": {
+        "id": 154772,
+        "content": "私（わたし）<span class=\"gp-popout\" data-gp-id=\"3\">は</span><span class=\"gp-popout\" data-gp-id=\"14\">ここ</span><span class='study-area-input'>____</span>ピザ<span class=\"gp-popout\" data-gp-id=\"21\">を</span>食（た）べ<span class=\"gp-popout\" data-gp-id=\"12\">る</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私はここでピザを食べる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I eat pizza here. (<strong>At</strong> this place)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 25,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154773",
+      "type": "study_question",
+      "attributes": {
+        "id": 154773,
+        "content": "私（わたし）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>部屋（へや）<span class='study-area-input'>____</span>寝（ね）<span class=\"gp-popout\" data-gp-id=\"12\">る</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私は部屋で寝る。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I sleep <strong>in</strong> my room.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 25,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "660",
+      "type": "study_question",
+      "attributes": {
+        "id": 660,
+        "content": "<span class='gp-popout' data-gp-id='20'>そこ</span><span class='study-area-input'>____</span>泳（およ）ぎ<span class='gp-popout' data-gp-id='26'>ます</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行動（こうどう）が起（お）こっている場所（ばしょ）</strong>を表（あらわ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/25/male_audio/05-そこで泳ぎますか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/そこで泳ぎますか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Will you swim (<strong>at</strong>) there?",
+        "nuance_translation": "A <strong>particle</strong> which expresses the <strong>location</strong> in which an <strong>action takes place</strong>.",
+        "extra_info": "",
+        "reviewable_id": 25,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "661",
+      "type": "study_question",
+      "attributes": {
+        "id": 661,
+        "content": "教室（きょうしつ）<span class='study-area-input'>____</span>寝（ね）<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行動（こうどう）が起（お）こっている場所（ばしょ）</strong>を表（あらわ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/25/male_audio/12-教室で寝る.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/教室で寝る。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I sleep <strong>in</strong> the classroom. ",
+        "nuance_translation": "A <strong>particle</strong> which expresses the <strong>location</strong> in which an <strong>action takes place</strong>.",
+        "extra_info": "",
+        "reviewable_id": 25,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154774",
+      "type": "study_question",
+      "attributes": {
+        "id": 154774,
+        "content": "彼（かれ）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>公園（こうえん）にい<span class=\"gp-popout\" data-gp-id=\"12\">ます</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼は公園にいます。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "He is at the park. (He is at the park, but the park isn't 'allowing' him to be there)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 25,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154775",
+      "type": "study_question",
+      "attributes": {
+        "id": 154775,
+        "content": "彼（かれ）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>公園（こうえん）<span class='study-area-input'>____</span>バーベキュー<span class=\"gp-popout\" data-gp-id=\"21\">を</span>する。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼は公園でバーベキューをする。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "He BBQs <strong>at</strong> the park. (Because there are barbecues at the park, it is allowing him to cook)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 25,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1668",
+      "type": "study_question",
+      "attributes": {
+        "id": 1668,
+        "content": "学校（がっこう）<span class='study-area-input'>____</span>給食（きゅうしょく）<span class='gp-popout' data-gp-id='21'>を</span>食（た）べ<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行動（こうどう）が起（お）こっている場所（ばしょ）</strong>を表（あらわ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/25/male_audio/11-学校で給食を食べる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/学校で給食を食べる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I eat lunch <strong>at</strong> school.",
+        "nuance_translation": "A <strong>particle</strong> which expresses the <strong>location</strong> in which an <strong>action takes place</strong>.",
+        "extra_info": "",
+        "reviewable_id": 25,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1667",
+      "type": "study_question",
+      "attributes": {
+        "id": 1667,
+        "content": "<span class='gp-popout' data-gp-id='20'>そこ</span><span class='study-area-input'>____</span>寝（ね）<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行動（こうどう）が起（お）こっている場所（ばしょ）</strong>を表（あらわ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/25/male_audio/04-そこで寝る.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/そこで寝る。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I sleep (<strong>at</strong>) there.",
+        "nuance_translation": "A <strong>particle</strong> which expresses the <strong>location</strong> in which an <strong>action takes place</strong>.",
+        "extra_info": "",
+        "reviewable_id": 25,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1670",
+      "type": "study_question",
+      "attributes": {
+        "id": 1670,
+        "content": "ホテル<span class='study-area-input'>____</span>寝（ね）<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行動（こうどう）が起（お）こっている場所（ばしょ）</strong>を表（あらわ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/25/male_audio/07-ホテルで寝る.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ホテルで寝る。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To sleep <strong>at</strong> the hotel.",
+        "nuance_translation": "A <strong>particle</strong> which expresses the <strong>location</strong> in which an <strong>action takes place</strong>.",
+        "extra_info": "",
+        "reviewable_id": 25,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1671",
+      "type": "study_question",
+      "attributes": {
+        "id": 1671,
+        "content": "<span class='gp-popout' data-gp-id='14'>ここ</span><span class='study-area-input'>____</span>曲（ま）が<span class='gp-popout' data-gp-id='26'>ります</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行動（こうどう）が起（お）こっている場所（ばしょ）</strong>を表（あらわ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/25/male_audio/03-ここで曲がります.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ここで曲がります。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To turn (<strong>at</strong>) here.",
+        "nuance_translation": "A <strong>particle</strong> which expresses the <strong>location</strong> in which an <strong>action takes place</strong>.",
+        "extra_info": "",
+        "reviewable_id": 25,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "25",
+      "type": "study_question",
+      "attributes": {
+        "id": 25,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='14'>ここ</span><span class='study-area-input'>____</span>サッカー<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='22'>する</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行動（こうどう）が起（お）こっている場所（ばしょ）</strong>を表（あらわ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/25/male_audio/06-わたしはここでさっかーをする.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私はここでサッカーをする。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I play soccer (<strong>at</strong>) here. ",
+        "nuance_translation": "A <strong>particle</strong> which expresses the <strong>location</strong> in which an <strong>action takes place</strong>.",
+        "extra_info": "",
+        "reviewable_id": 25,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1663",
+      "type": "study_question",
+      "attributes": {
+        "id": 1663,
+        "content": "<span class='gp-popout' data-gp-id='14'>ここ</span><span class='study-area-input'>____</span>サラ<span class='gp-popout' data-gp-id='15'>と</span>文法（ぶんぽう）<span class='gp-popout' data-gp-id='21'>を</span>習（なら）<span class='gp-popout' data-gp-id='26'>う</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行動（こうどう）が起（お）こっている場所（ばしょ）</strong>を表（あらわ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/25/male_audio/01-ここでサラと文法を習う.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ここでサラと文法を習う。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I learn grammar with Sara (<strong>at</strong>) here.",
+        "nuance_translation": "A <strong>particle</strong> which expresses the <strong>location</strong> in which an <strong>action takes place</strong>.",
+        "extra_info": "",
+        "reviewable_id": 25,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1665",
+      "type": "study_question",
+      "attributes": {
+        "id": 1665,
+        "content": "レストラン<span class='study-area-input'>____</span>お母（かあ）さん<span class='gp-popout' data-gp-id='15'>と</span>ご飯（はん）<span class='gp-popout' data-gp-id='21'>を</span>食（た）べ<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行動（こうどう）が起（お）こっている場所（ばしょ）</strong>を表（あらわ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/25/male_audio/08-レストランでお母さんとご飯を食べる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/レストランでお母さんとご飯を食べる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I eat food with my mother <strong>at</strong> the restaurant.",
+        "nuance_translation": "A <strong>particle</strong> which expresses the <strong>location</strong> in which an <strong>action takes place</strong>.",
+        "extra_info": "",
+        "reviewable_id": 25,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1666",
+      "type": "study_question",
+      "attributes": {
+        "id": 1666,
+        "content": "図書館（としょかん）<span class='study-area-input'>____</span>日本語（にほんご）<span class='gp-popout' data-gp-id='21'>を</span>学（まな）<span class='gp-popout' data-gp-id='26'>ぶ</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行動（こうどう）が起（お）こっている場所（ばしょ）</strong>を表（あらわ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/25/male_audio/10-図書館で日本語を学ぶ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/図書館で日本語を学ぶ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I learn Japanese <strong>at</strong> the library.",
+        "nuance_translation": "A <strong>particle</strong> which expresses the <strong>location</strong> in which an <strong>action takes place</strong>.",
+        "extra_info": "",
+        "reviewable_id": 25,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1669",
+      "type": "study_question",
+      "attributes": {
+        "id": 1669,
+        "content": "古（ふる）<span class='gp-popout' data-gp-id='24'>い</span>家（いえ）<span class='study-area-input'>____</span>新聞（しんぶん）<span class='gp-popout' data-gp-id='21'>を</span>読（よ）<span class='gp-popout' data-gp-id='26'>む</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行動（こうどう）が起（お）こっている場所（ばしょ）</strong>を表（あらわ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/25/male_audio/09-古い家で新聞を読む.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/古い家で新聞を読む。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To read a newspaper <strong>in</strong> an old house.",
+        "nuance_translation": "A <strong>particle</strong> which expresses the <strong>location</strong> in which an <strong>action takes place</strong>.",
+        "extra_info": "",
+        "reviewable_id": 25,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1664",
+      "type": "study_question",
+      "attributes": {
+        "id": 1664,
+        "content": "<span class='gp-popout' data-gp-id='14'>ここ</span><span class='study-area-input'>____</span>映画（えいが）<span class='gp-popout' data-gp-id='21'>を</span>見（み）<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "で",
+        "alternate_grammar": [],
+        "kanji_answer": "で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行動（こうどう）が起（お）こっている場所（ばしょ）</strong>を表（あらわ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/25/male_audio/02-ここで映画を見る.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ここで映画を見る。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I will watch a movie (<strong>at</strong>) here. ",
+        "nuance_translation": "A <strong>particle</strong> which expresses the <strong>location</strong> in which an <strong>action takes place</strong>.",
+        "extra_info": "",
+        "reviewable_id": 25,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "25",
+      "type": "writeup",
+      "attributes": {
+        "id": 25,
+        "body_ja": null,
+        "body": "<p><span data-gp-id='25'>で</span> is a particle that has several different uses in Japanese. At its core, it is always used to highlight something that is '<span data-gp-id='36'>required</span>' to perform some sort of action. One of these uses relates to places, and translates roughly as 'at', or 'in' in English.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154772'>\r\n<li data-study-question='154773'></ul>\r\n\r\n<p>In these sentences, the place is considered essential for the action to be performed, or the result of the action to be achieved. This is unlike the particle <span data-gp-id='32'>に</span>, which marks the location itself as being the destination or target of an action. Basically, <span data-gp-id='25'>で</span> means (A) 'place' allows (B) 'action' to occur. While <span data-gp-id='32'>に</span> means (A) 'place' is the target for (B) 'action' occurring.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154774'>\r\n<li data-study-question='154775'></ul>\r\n\r\n<p>In the first example, we can see that <span data-gp-id='32'>に</span> marks the place that the person exists during an action, but the action itself is not dependent on the place. In the second example, the action is considered dependent on being at that place, as there are possibly no barbeques in other areas.</p>"
+      }
+    },
+    {
+      "id": "115",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 115,
+        "source": "Marugoto Elementary 1 (A2) Rikai",
+        "location": "Page 26",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "753",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 753,
+        "source": "みんなの日本語 I",
+        "location": "Page 44 [CH 6]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1040",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1040,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 105",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "22",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 22,
+        "source": "Genki I",
+        "location": "Page 60",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "86",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 86,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 90",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1249",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1249,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 58",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1211",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1211,
+        "site": "Japanese Ammo",
+        "description": "Particles at / in / with に / で / と",
+        "link": "https://www.youtube.com/watch?v=TgguUw-ixF4&index=10&list=PLd5-Wp_4tLqYZxS5j3g6kbeOfVXlTkr3N",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "54",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 54,
+        "site": "Tae Kim",
+        "description": "The contextual 「で」 particle",
+        "link": "https://guidetojapanese.org/learn/grammar/verbparticles",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2258",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2258,
+        "site": "Imabi",
+        "description": "The particle で",
+        "link": "https://imabi.org/the-particle-de-%e3%81%a7-i/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "464",
+      "type": "related_content",
+      "attributes": {
+        "id": 464,
+        "relationship_type": "synonym",
+        "body": "The particle で has two main uses: the first is indicating the location where an action takes place (e.g., 家で遊ぶ = 'play at home'). The second is marking the means or instrument used to perform an action (e.g., ボールで遊ぶ = 'play with a ball'). These differences can usually be inferred from context, so it's recommended to not stress this too much.",
+        "first_relatable": {
+          "id": 36,
+          "slug": "で-by",
+          "title": "で",
+          "meaning": "With, By (using)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 25,
+          "slug": "で",
+          "title": "で",
+          "meaning": "At, In",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "108",
+      "type": "related_content",
+      "attributes": {
+        "id": 108,
+        "relationship_type": "synonym",
+        "body": "で and にて both indicate the location or means of an action, differing mainly in formality. で is used commonly in everyday conversation and informal writing, whereas にて appears primarily in formal contexts such as business, academic documents, or speeches. Historically, で evolved from にて, with their sounds merging over time.",
+        "first_relatable": {
+          "id": 25,
+          "slug": "で",
+          "title": "で",
+          "meaning": "At, In",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 408,
+          "slug": "にて",
+          "title": "にて",
+          "meaning": "In, At, With, Using, By",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1305",
+      "type": "related_content",
+      "attributes": {
+        "id": 1305,
+        "relationship_type": "related",
+        "body": "Both で and において・における indicate the location where an action takes place, but differ significantly in formality. で is common in daily speech and informal writing, whereas において・における appear mainly in formal contexts or written language. Additionally, において・における can express meanings like 'in terms of' or 'with respect to.'",
+        "first_relatable": {
+          "id": 287,
+          "slug": "において-における",
+          "title": "において・における",
+          "meaning": "In, On, At, Regarding, In terms of",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 25,
+          "slug": "で",
+          "title": "で",
+          "meaning": "At, In",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "93",
+      "type": "related_content",
+      "attributes": {
+        "id": 93,
+        "relationship_type": "related",
+        "body": "に is a versatile particle marking direction, destination, targets of actions, or places of existence, often translating as 'to,' 'in,' or similar English prepositions. で specifically marks the location where an action occurs. The main distinction is whether the verb describes an action or existence; for example, 東京に住む ('live in Tokyo') emphasizes existence, while 東京で勉強する ('study in Tokyo') highlights where the action happens.",
+        "first_relatable": {
+          "id": 32,
+          "slug": "に",
+          "title": "に",
+          "meaning": "In, At, To, For, On",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 25,
+          "slug": "で",
+          "title": "で",
+          "meaning": "At, In",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

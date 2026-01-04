@@ -1,0 +1,1345 @@
+{
+  "data": {
+    "id": "314",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 314,
+      "level": "JLPT3",
+      "lesson_id": 21,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "てごらん",
+      "nuance": "誰（だれ）かに(A)を<strong>やるように</strong>頼（たの）む時（とき）や、時間（じかん）に<strong>余裕（よゆう）があれば</strong>何（なに）かをやってほしいということを伝（つた）えるために使（つか）われる、<strong>尊敬（そんけい）語（ご）</strong>を使（つか）った表現（ひょうげん）。",
+      "grammar_order": 327,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 620,
+        "title": "Particle + の",
+        "slug": "particle-の"
+      },
+      "previous_grammar_point": {
+        "id": 625,
+        "title": "Noun＋型",
+        "slug": "noun-型"
+      },
+      "lesson_count": "22/22",
+      "title": "てごらん",
+      "furigana": "てご覧（らん）",
+      "meaning": "(Please) try to, (Please) look",
+      "nuance_translation": "An <strong>honorific</strong> expression used to ask someone to <strong>attempt</strong> to do (A), or to <strong>peruse</strong> at their leisure.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<span class='gp-popout' data-gp-id='416'>Verb［て］</span>+ <strong>ごらん</strong><br><span class='gp-popout' data-gp-id='416'>Verb［て］</span>+ <strong>ごらんなさい</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/5676",
+      "metadata": "てごらん, てご覧, tegoran, conjunction particle, keigo, honorific, teineigo, teinei"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "180970",
+            "type": "study_question"
+          },
+          {
+            "id": "180971",
+            "type": "study_question"
+          },
+          {
+            "id": "5608",
+            "type": "study_question"
+          },
+          {
+            "id": "5606",
+            "type": "study_question"
+          },
+          {
+            "id": "5601",
+            "type": "study_question"
+          },
+          {
+            "id": "1151",
+            "type": "study_question"
+          },
+          {
+            "id": "1153",
+            "type": "study_question"
+          },
+          {
+            "id": "5600",
+            "type": "study_question"
+          },
+          {
+            "id": "5602",
+            "type": "study_question"
+          },
+          {
+            "id": "5603",
+            "type": "study_question"
+          },
+          {
+            "id": "1152",
+            "type": "study_question"
+          },
+          {
+            "id": "5604",
+            "type": "study_question"
+          },
+          {
+            "id": "5605",
+            "type": "study_question"
+          },
+          {
+            "id": "5607",
+            "type": "study_question"
+          },
+          {
+            "id": "184064",
+            "type": "study_question"
+          },
+          {
+            "id": "184065",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "347",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1601",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "213",
+            "type": "related_content"
+          },
+          {
+            "id": "298",
+            "type": "related_content"
+          },
+          {
+            "id": "420",
+            "type": "related_content"
+          },
+          {
+            "id": "407",
+            "type": "related_content"
+          },
+          {
+            "id": "239",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "636",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "637",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "180970",
+      "type": "study_question",
+      "attributes": {
+        "id": 180970,
+        "content": " <span class=\"gp-popout\" data-gp-id=\"30\">この</span>本（ほん）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>読（よ）ん<span class='study-area-input'>____</span>。<span class=\"gp-popout\" data-gp-id=\"30\">この</span>本（ほん）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>読（よ）んだら日本（にほん）<span class=\"gp-popout\" data-gp-id=\"225\">について</span>色々（いろいろ）と学（まな）べる<span class=\"gp-popout\" data-gp-id=\"78\">よ。</span>",
+        "answer": "でごらん",
+        "alternate_grammar": [],
+        "kanji_answer": "でごらん",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/この本を読んでごらん。この本を読んだら日本について色々と学べるよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Try</strong> reading this book. If you read it, you will learn various things about Japan.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 314,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180971",
+      "type": "study_question",
+      "attributes": {
+        "id": 180971,
+        "content": "外（そと）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>見（み）<span class='study-area-input'>____</span>。虹（にじ）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>出（で）<span class=\"gp-popout\" data-gp-id=\"764\">ている</span><span class=\"gp-popout\" data-gp-id=\"78\">よ。</span>",
+        "answer": "てごらん",
+        "alternate_grammar": [],
+        "kanji_answer": "てごらん",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/外を見てごらん。虹が出ているよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Look</strong> outside. There is a rainbow.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 314,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5608",
+      "type": "study_question",
+      "attributes": {
+        "id": 5608,
+        "content": "もう一（ひと）つの方法（ほうほう）を<span class='study-area-input'>____</span>。うまくいくかもしれないよ。",
+        "answer": "ためしてごらん",
+        "alternate_grammar": [],
+        "kanji_answer": "試（ため）してごらん",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに(A)を<strong>やるように</strong>頼（たの）む時（とき）や、時間（じかん）に<strong>余裕（よゆう）があれば</strong>何（なに）かをやってほしいということを伝（つた）えるために使（つか）われる、<strong>尊敬（そんけい）語（ご）</strong>を使（つか）った表現（ひょうげん）。",
+        "tense": "Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson1/314/male_audio/230613_1609_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/314/もう一つの方法を試してごらん。うまくいくかもしれないよ。.mp3",
+        "word_prompt": "試（ため）す",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ためしてみて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ためしてみてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "ためしてみなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "ためしてごらんなさい": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ためしごらん": {
+            "en": "ごらん is not used with the stem form of verbs.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ためてごらん": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ためしなさい": {
+            "en": "なさい is used to give a command. We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Try to do it</strong> another way. It just might work.",
+        "nuance_translation": "An <strong>honorific</strong> expression used to ask someone to <strong>attempt</strong> to do (A), or to <strong>peruse</strong> at their leisure.",
+        "extra_info": "",
+        "reviewable_id": 314,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5606",
+      "type": "study_question",
+      "attributes": {
+        "id": 5606,
+        "content": "<span class='study-area-input'>____</span>。こんな手触（てざわ）り初（はじ）めてだよ。",
+        "answer": "さわってごらん",
+        "alternate_grammar": [],
+        "kanji_answer": "触（さわ）ってごらん",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに(A)を<strong>やるように</strong>頼（たの）む時（とき）や、時間（じかん）に<strong>余裕（よゆう）があれば</strong>何（なに）かをやってほしいということを伝（つた）えるために使（つか）われる、<strong>尊敬（そんけい）語（ご）</strong>を使（つか）った表現（ひょうげん）。",
+        "tense": "Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson1/314/male_audio/230613_1608_07.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/触ってごらん。こんな手触り初めてだよ。.mp3",
+        "word_prompt": "触（さわ）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "さわってみて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "さわってみてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "さわってみなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "さわってごらんなさい": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "すわってごらん": {
+            "en": "Could you try using the prompted verb?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "さわてごらん": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Try touching it</strong>. This is the first time I have ever felt something like this.",
+        "nuance_translation": "An <strong>honorific</strong> expression used to ask someone to <strong>attempt</strong> to do (A), or to <strong>peruse</strong> at their leisure.",
+        "extra_info": "",
+        "reviewable_id": 314,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5601",
+      "type": "study_question",
+      "attributes": {
+        "id": 5601,
+        "content": "手（て）を<span class='study-area-input'>____</span>。手袋（てぶくろ）をはめてあげるから。",
+        "answer": "かしてごらん",
+        "alternate_grammar": [],
+        "kanji_answer": "貸（か）してごらん",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに(A)を<strong>やるように</strong>頼（たの）む時（とき）や、時間（じかん）に<strong>余裕（よゆう）があれば</strong>何（なに）かをやってほしいということを伝（つた）えるために使（つか）われる、<strong>尊敬（そんけい）語（ご）</strong>を使（つか）った表現（ひょうげん）。",
+        "tense": "Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson1/314/male_audio/230613_1608_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/手を貸してごらん。手袋をはめてあげるから。.mp3",
+        "word_prompt": "貸（か）す",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かしてみて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "かしてみてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "かしてみなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "かしてごらんなさい": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "かして": {
+            "en": "This would just mean 'please...'. We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "かしごらん": {
+            "en": "ごらん is not used with the stem form of verbs.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "かしなさい": {
+            "en": "なさい is used to give a command. We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "(<strong>Try to</strong>) <strong>give me</strong> your hands. I will put your gloves on.",
+        "nuance_translation": "An <strong>honorific</strong> expression used to ask someone to <strong>attempt</strong> to do (A), or to <strong>peruse</strong> at their leisure.",
+        "extra_info": "",
+        "reviewable_id": 314,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1151",
+      "type": "study_question",
+      "attributes": {
+        "id": 1151,
+        "content": "その景色（けしき）を<span class='study-area-input'>____</span>。",
+        "answer": "みてごらん",
+        "alternate_grammar": [],
+        "kanji_answer": "見（み）てごらん",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに(A)を<strong>やるように</strong>頼（たの）む時（とき）や、時間（じかん）に<strong>余裕（よゆう）があれば</strong>何（なに）かをやってほしいということを伝（つた）えるために使（つか）われる、<strong>尊敬（そんけい）語（ご）</strong>を使（つか）った表現（ひょうげん）。",
+        "tense": "Authoritative",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson1/314/male_audio/230613_1607_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/その景色を見てごらん。.mp3",
+        "word_prompt": "見（み）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みてごらんなさい": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "みてみて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "みてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "みなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "みてみなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "みて": {
+            "en": "This would just mean 'please look'. We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "みてみる": {
+            "en": "This would mean 'I will try to...' We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "みってごらん": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "みごらん": {
+            "en": "ごらん is not used with the stem form of verbs.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "(<strong>Try to</strong>) <strong>take a look</strong> at that scenery.",
+        "nuance_translation": "An <strong>honorific</strong> expression used to ask someone to <strong>attempt</strong> to do (A), or to <strong>peruse</strong> at their leisure.",
+        "extra_info": "",
+        "reviewable_id": 314,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1153",
+      "type": "study_question",
+      "attributes": {
+        "id": 1153,
+        "content": "ニュースを<span class='study-area-input'>____</span>。あなたが映（うつ）っているよ。",
+        "answer": "みてごらん",
+        "alternate_grammar": [],
+        "kanji_answer": "見（み）てごらん",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに(A)を<strong>やるように</strong>頼（たの）む時（とき）や、時間（じかん）に<strong>余裕（よゆう）があれば</strong>何（なに）かをやってほしいということを伝（つた）えるために使（つか）われる、<strong>尊敬（そんけい）語（ご）</strong>を使（つか）った表現（ひょうげん）。",
+        "tense": "Authoritative",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson1/314/male_audio/230613_1608.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ニュースを見てごらん。あなたが映っているよ。.mp3",
+        "word_prompt": "見（み）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みてごらんなさい": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "みてみて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "みてください": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "みなさい": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "みてみなさい": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "みて": {
+            "en": "This would just mean 'please look'. We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "みてみる": {
+            "en": "～てみる means 'I will try to...' We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "みってごらん": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "(<strong>Try to</strong>) <strong>take a look</strong> at the news. You are on TV.",
+        "nuance_translation": "An <strong>honorific</strong> expression used to ask someone to <strong>attempt</strong> to do (A), or to <strong>peruse</strong> at their leisure.",
+        "extra_info": "",
+        "reviewable_id": 314,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5600",
+      "type": "study_question",
+      "attributes": {
+        "id": 5600,
+        "content": "あの蝶々（ちょうちょう）を<span class='study-area-input'>____</span>。",
+        "answer": "つかまえてごらんなさい",
+        "alternate_grammar": [
+          "つかまえてごらんなさい",
+          "つかまえてごらん"
+        ],
+        "kanji_answer": "捕（つか）まえてごらんなさい",
+        "kanji_alt_grammar": [
+          "捕（つか）まえてごらん",
+          "捕（つか）まえてごらんなさい"
+        ],
+        "nuance": "誰（だれ）かに(A)を<strong>やるように</strong>頼（たの）む時（とき）や、時間（じかん）に<strong>余裕（よゆう）があれば</strong>何（なに）かをやってほしいということを伝（つた）えるために使（つか）われる、<strong>尊敬（そんけい）語（ご）</strong>を使（つか）った表現（ひょうげん）。",
+        "tense": "Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson1/314/male_audio/230613_1608_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/あの蝶々を捕まえてごらんなさい。.mp3",
+        "word_prompt": "捕（つか）まえる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つかまえてみて": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "つかまえてみてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "つかまえてみなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "つかまえごらんなさい": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "つかまえ": {
+            "en": "Could you try an expression that uses honorific language that has the nuance of 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つかまえごらん": {
+            "en": "ごらん is not used with the stem form of verbs.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つかまえなさい": {
+            "en": "なさい is used to give a command. We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つかまえて": {
+            "en": "This would just mean 'please...'. We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つかまえってごらん": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つかまえようとする": {
+            "en": "Could you try an expression that uses honorific language that has the nuance of 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Try to catch</strong> that butterfly.",
+        "nuance_translation": "An <strong>honorific</strong> expression used to ask someone to <strong>attempt</strong> to do (A), or to <strong>peruse</strong> at their leisure.",
+        "extra_info": "",
+        "reviewable_id": 314,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5602",
+      "type": "study_question",
+      "attributes": {
+        "id": 5602,
+        "content": "もう一度（いちど）<span class='study-area-input'>____</span>。きっとうまくできるよ。",
+        "answer": "やってごらん",
+        "alternate_grammar": [],
+        "kanji_answer": "やってごらん",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに(A)を<strong>やるように</strong>頼（たの）む時（とき）や、時間（じかん）に<strong>余裕（よゆう）があれば</strong>何（なに）かをやってほしいということを伝（つた）えるために使（つか）われる、<strong>尊敬（そんけい）語（ご）</strong>を使（つか）った表現（ひょうげん）。",
+        "tense": "Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson1/314/male_audio/230613_1608_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/もう一度やってごらん。きっとうまくできるよ。.mp3",
+        "word_prompt": "やる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やってみて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "やってみてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "やってみなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "やってごらんなさい": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "やてごらん": {
+            "en": "can you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "やって": {
+            "en": "This would just mean 'please...'. We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "やりなさい": {
+            "en": "なさい is used to give a command. We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Try it</strong> once more. I know you can do it.",
+        "nuance_translation": "An <strong>honorific</strong> expression used to ask someone to <strong>attempt</strong> to do (A), or to <strong>peruse</strong> at their leisure.",
+        "extra_info": "",
+        "reviewable_id": 314,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5603",
+      "type": "study_question",
+      "attributes": {
+        "id": 5603,
+        "content": "怒（おこ）らないから…正直（しょうじき）に<span class='study-area-input'>____</span>。",
+        "answer": "いってごらんなさい",
+        "alternate_grammar": [
+          "いってごらんなさい",
+          "いってごらん"
+        ],
+        "kanji_answer": "言（い）ってごらんなさい",
+        "kanji_alt_grammar": [
+          "言（い）ってごらん",
+          "言（い）ってごらんなさい"
+        ],
+        "nuance": "誰（だれ）かに(A)を<strong>やるように</strong>頼（たの）む時（とき）や、時間（じかん）に<strong>余裕（よゆう）があれば</strong>何（なに）かをやってほしいということを伝（つた）えるために使（つか）われる、<strong>尊敬（そんけい）語（ご）</strong>を使（つか）った表現（ひょうげん）。",
+        "tense": "Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson1/314/male_audio/230613_1608_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/怒らないから…正直に言ってごらんなさい。.mp3",
+        "word_prompt": "言（い）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いってみて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "いってみてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "いってみなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "いってごらなさい": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "いって": {
+            "en": "This would just mean 'please...'. We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いいなさい": {
+            "en": "なさい is used to give a command. We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いてごらん": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いうことだ": {
+            "en": "We are looking for a grammar point that uses honorific language to make suggestions to other people about what they should try.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I won't get angry... <strong>Try telling</strong> the truth.",
+        "nuance_translation": "An <strong>honorific</strong> expression used to ask someone to <strong>attempt</strong> to do (A), or to <strong>peruse</strong> at their leisure.",
+        "extra_info": "",
+        "reviewable_id": 314,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1152",
+      "type": "study_question",
+      "attributes": {
+        "id": 1152,
+        "content": "まだ学（まな）んでいない文法（ぶんぽう）を勉強（べんきょう）<span class='study-area-input'>____</span>。",
+        "answer": "してごらん",
+        "alternate_grammar": [],
+        "kanji_answer": "してごらん",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに(A)を<strong>やるように</strong>頼（たの）む時（とき）や、時間（じかん）に<strong>余裕（よゆう）があれば</strong>何（なに）かをやってほしいということを伝（つた）えるために使（つか）われる、<strong>尊敬（そんけい）語（ご）</strong>を使（つか）った表現（ひょうげん）。",
+        "tense": "Authoritative",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson1/314/male_audio/230613_1607_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/まだ学んでいない文法を勉強してごらん。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "してごらんなさい": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "してみて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "しなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "してください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "してみなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "して": {
+            "en": "This would just mean 'please...'. We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "することだ": {
+            "en": "We are looking for a grammar point that uses honorific language to make suggestions to other people about what they should try.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "してみる": {
+            "en": "This would mean 'I will try to...' We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しごらん": {
+            "en": "ごらん is not used with the stem form of verbs.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "したらどう": {
+            "en": "〜たらどう is a casual way to give advice ('why don't you (A)?'). Here we need an honorific expression meaning 'please try to (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Try</strong> studying grammar you haven't learned yet.",
+        "nuance_translation": "An <strong>honorific</strong> expression used to ask someone to <strong>attempt</strong> to do (A), or to <strong>peruse</strong> at their leisure.",
+        "extra_info": "",
+        "reviewable_id": 314,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5604",
+      "type": "study_question",
+      "attributes": {
+        "id": 5604,
+        "content": "耳（みみ）を<span class='study-area-input'>____</span>。小鳥（ことり）の歌声（うたごえ）が聞（き）こえるよ。",
+        "answer": "すましてごらん",
+        "alternate_grammar": [],
+        "kanji_answer": "澄（す）ましてごらん",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに(A)を<strong>やるように</strong>頼（たの）む時（とき）や、時間（じかん）に<strong>余裕（よゆう）があれば</strong>何（なに）かをやってほしいということを伝（つた）えるために使（つか）われる、<strong>尊敬（そんけい）語（ご）</strong>を使（つか）った表現（ひょうげん）。",
+        "tense": "Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson1/314/male_audio/230613_1608_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/耳を澄ましてごらん。小鳥の歌声が聞こえるよ。.mp3",
+        "word_prompt": "澄（す）ます",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "すましてみて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "すましてみてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "すましてみなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "すましてごらんなさい": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "すまってごらん": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "すましごらん": {
+            "en": "ごらん is not used with the stem form of verbs.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "すまてごらん": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "すませてごらん": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Try listening</strong> carefully. You'll hear the birds singing.",
+        "nuance_translation": "An <strong>honorific</strong> expression used to ask someone to <strong>attempt</strong> to do (A), or to <strong>peruse</strong> at their leisure.",
+        "extra_info": "",
+        "reviewable_id": 314,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5605",
+      "type": "study_question",
+      "attributes": {
+        "id": 5605,
+        "content": "もっと練習（れんしゅう）<span class='study-area-input'>____</span>。絶対（ぜったい）できるようになるから。",
+        "answer": "してごらん",
+        "alternate_grammar": [],
+        "kanji_answer": "してごらん",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに(A)を<strong>やるように</strong>頼（たの）む時（とき）や、時間（じかん）に<strong>余裕（よゆう）があれば</strong>何（なに）かをやってほしいということを伝（つた）えるために使（つか）われる、<strong>尊敬（そんけい）語（ご）</strong>を使（つか）った表現（ひょうげん）。",
+        "tense": "Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson1/314/male_audio/230613_1608_06.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/もっと練習してごらん。絶対できるようになるから。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "してみて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "してみてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "してみなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "してごらんなさい": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "して": {
+            "en": "This would just mean 'please...'. We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しなさい": {
+            "en": "なさい is used to give a command. We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "してみる": {
+            "en": "～てみる means 'I will try to...' We are looking for an honorific expression that means 'please try to (A)'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Try</strong> practicing more. You will definitely be able to do it.",
+        "nuance_translation": "An <strong>honorific</strong> expression used to ask someone to <strong>attempt</strong> to do (A), or to <strong>peruse</strong> at their leisure.",
+        "extra_info": "",
+        "reviewable_id": 314,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5607",
+      "type": "study_question",
+      "attributes": {
+        "id": 5607,
+        "content": "まずは辞書（じしょ）で<span class='study-area-input'>____</span>。それでも分（わ）からなかったら質問（しつもん）してね。",
+        "answer": "しらべてごらん",
+        "alternate_grammar": [],
+        "kanji_answer": "調（しら）べてごらん",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かに(A)を<strong>やるように</strong>頼（たの）む時（とき）や、時間（じかん）に<strong>余裕（よゆう）があれば</strong>何（なに）かをやってほしいということを伝（つた）えるために使（つか）われる、<strong>尊敬（そんけい）語（ご）</strong>を使（つか）った表現（ひょうげん）。",
+        "tense": "Command",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson1/314/male_audio/230613_1609.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/まずは辞書で調べてごらん。それでも分からなかったら質問してね。.mp3",
+        "word_prompt": "調（しら）べる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しらべてみて": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "しらべてみてください": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "しらべてみなさい": {
+            "en": "What about a grammar point that is used as a part of honorific speech?",
+            "es": ""
+          },
+          "しらべてごらんなさい": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しゃべてごらん": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "しらべて": {
+            "en": "This would just mean 'please...'. We are looking for an honorific expression that means 'please try to (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しらべごらん": {
+            "en": "ごらん is not used with the stem form of verbs.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しらべてみる": {
+            "en": "～てみる means 'I will try to...' We are looking for an honorific expression that means 'please try to (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しらべなさい": {
+            "en": "なさい is used to give a command. We are looking for an honorific expression that means 'please try to (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "First, <strong>try looking it up</strong> in the dictionary. If you still don't understand, ask me.",
+        "nuance_translation": "An <strong>honorific</strong> expression used to ask someone to <strong>attempt</strong> to do (A), or to <strong>peruse</strong> at their leisure.",
+        "extra_info": "",
+        "reviewable_id": 314,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184064",
+      "type": "study_question",
+      "attributes": {
+        "id": 184064,
+        "content": "<span data-gp-id='5'>これ</span>食（た）べ<span class='study-area-input'>____</span>。あなただっ<span data-gp-id='102'>たら</span>絶対（ぜったい）に<span data-gp-id='716'>好（す）き</span>だ<span data-gp-id='94'>と思（おも）う</span><span data-gp-id='78'>よ。",
+        "answer": "てごらん",
+        "alternate_grammar": [],
+        "kanji_answer": "てごらん",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Try</strong> eating this. If it's you, I think you'll definitely like it.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 314,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184065",
+      "type": "study_question",
+      "attributes": {
+        "id": 184065,
+        "content": "見（み）<span class='study-area-input'>____</span>。こんな酷（ひど）いこと<span data-gp-id='21'>を</span>ネット<span data-gp-id='32'>に</span>書（か）かれたんだよ、酷（ひど）<span data-gp-id='873'>くない</span>？",
+        "answer": "てごらんなさい",
+        "alternate_grammar": [],
+        "kanji_answer": "てごらんなさい",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Look at</strong> this. Someone wrote something this cruel on the internet. Don't you think this is awful?",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 314,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "347",
+      "type": "writeup",
+      "attributes": {
+        "id": 347,
+        "body_ja": "<p>「てご覧（らん）」は、「なさい」と同（おな）じように使（つか）われる、丁寧（ていねい）な表現（ひょうげん）です。主（おも）に「どうぞ (A) をやってみて」のような意味（いみ）で使（つか）われます。(A) は動詞（どうし）のテ形（けい）で、そのあとに「ご覧（らん）」を付（つ）けます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180970'>\r\n<li data-study-question='180971'>\r\n</ul>\r\n\r\n<p>「てご覧（らん）」の「覧（らん）」は、もともと「よく見（み）ること」や「広（ひろ）く眺（なが）めること」を意味（いみ）する漢字（かんじ）です。「てごらん」は「てみる」と使（つか）われる場面（ばめん）が似（に）ていますが、「てごらん」の方（ほう）がより優（やさ）しく丁寧（ていねい）な言（い）い方（かた）です。</p>\r\n\r\n<section class=\"caution\"><h4>注意点（ちゅういてん）</h4>\r\n<p>名詞（めいし）の「ご覧（らん）」は尊敬語（そんけいご）なので、話（はな）し手（て）自身（じしん）の行動（こうどう）には使（つか）えません。ほかの人（ひと）に「やってみて」と勧（すす）めるときにだけ使（つか）えます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184064'></ul></section>\r\n\r\n<section class=\"caution\"><h4>注意点（ちゅういてん）</h4>\r\n<p>「ごらん」と「なさい」が合（あ）わさって、「ごらんなさい」の形（かたち）で使（つか）われるときもあります。この場合（ばあい）、表現（ひょうげん）の強（つよ）さが少（すこ）し増（ま）し、命令（めいれい）のように聞（き）こえるので、目上（めうえ）・年上（としうえ）の人（ひと）が、目下（めした）・年下（としした）の人（ひと）に「やってみなさい」と言（い）うときによく使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184065'></ul></section>",
+        "body": "<p>てご覧（らん） is an <span data-term='尊敬語・そんけいご'>honorific language</span> expression in Japanese that is used in a similar way to <span data-gp-id='95'>なさい</span>. It is usually translated as 'please try to (A)', where (A) is the verb that ご覧（らん） is connected to, through the use of the <span data-term='接続助詞・せつぞくじょし'>conjunction particle</span> て.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180970'>\r\n<li data-study-question='180971'>\r\n</ul>\r\n\r\n<p>However, despite being translated as 'please try to (A)', the literal meaning of 覧（らん） is 'to look', or 'to peruse' (to look at one's own leisure, without needing to rush). Due to this, てごらん can be thought of as being quite similar to <span data-gp-id='99'>てみる</span> 'to try', but with the added emphasis of 'try as you like, when it suits you'.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>As ご覧（らん） is <span data-term='尊敬語・そんけいご'>honorific language</span>, it cannot be used to refer to your own actions, or things that you will 'try'. It will only ever be used to make suggestions to other people about what they should try.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184064'></ul></section>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>Sometimes ごらん and <span data-gp-id='95'>なさい</span> will be paired together. This slightly increases the strength of the suggestion, and may be perceived as a very light command. Because of this, ごらんなさい is primarily used by superiors/elders, when requesting that a subordinate/younger person try something.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184065'></ul></section>"
+      }
+    },
+    {
+      "id": "1601",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1601,
+        "source": "[AIAIJ] An Integrated Approach to Intermediate Japanese",
+        "location": "Page 229",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "636",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 636,
+        "site": "Japanese Test 4 You",
+        "description": "Breakdown and example sentences",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n3-grammar-%E3%81%A6%E3%81%94%E3%82%89%E3%82%93-te-goran/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "637",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 637,
+        "site": "Japanese Stack Exchange",
+        "description": "ちょうだい、ごらん、てください、おいで",
+        "link": "https://japanese.stackexchange.com/questions/19177/do-%E3%81%A1%E3%82%87%E3%81%86%E3%81%A0%E3%81%84-%E3%81%94%E3%82%89%E3%82%93-%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84-%E3%81%8A%E3%81%84%E3%81%A7-constitute-an-own-class-of-part-of-speech",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "213",
+      "type": "related_content",
+      "attributes": {
+        "id": 213,
+        "relationship_type": "related",
+        "body": "てください is a basic way to express a polite request ('Please do…'). For example, 食べてください would mean 'Please eat (this).' It is polite and neutral, and can be used with strangers or people equal in status to you. てごらん is a gentle request form often used by adults to children, etc., that adds a nuance of 'Give this a try' or 'Try doing this (to see how you like it).'",
+        "first_relatable": {
+          "id": 60,
+          "slug": "てください",
+          "title": "てください",
+          "meaning": "Please do (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 314,
+          "slug": "てごらん",
+          "title": "てごらん",
+          "meaning": "(Please) try to, (Please) look",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "298",
+      "type": "related_content",
+      "attributes": {
+        "id": 298,
+        "relationship_type": "antonym",
+        "body": "ないでください is a polite way to ask someone not to do something. It's neutral and appropriate for strangers or people of equal status. In contrast, てごらん is a gentle request form often used by adults to children, etc., that adds a nuance of 'Give this a try' or 'Try doing this (to see how you like it).'",
+        "first_relatable": {
+          "id": 65,
+          "slug": "ないでください",
+          "title": "ないでください",
+          "meaning": "Please don't (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 314,
+          "slug": "てごらん",
+          "title": "てごらん",
+          "meaning": "(Please) try to, (Please) look",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "420",
+      "type": "related_content",
+      "attributes": {
+        "id": 420,
+        "relationship_type": "related",
+        "body": "てみる expresses trying something to see what it's like, similar to the English 'try (doing)', e.g. 食べてみる ('I'll try eating it.'). てごらん is a more directive form that encourages someone else to try something, e.g. 食べてごらん ('Try eating it.' as a gentle request). てごらん is often used by adults to children, or superiors to subordinates. Among peers, something like 食べてみて would be more common.",
+        "first_relatable": {
+          "id": 99,
+          "slug": "てみる",
+          "title": "てみる",
+          "meaning": "To try to",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 314,
+          "slug": "てごらん",
+          "title": "てごらん",
+          "meaning": "(Please) try to, (Please) look",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "407",
+      "type": "related_content",
+      "attributes": {
+        "id": 407,
+        "relationship_type": "related",
+        "body": "Both are command forms, but with different tones. なさい is a polite but direct command, often used by teachers or parents, e.g. 食べなさい ('Eat.'). てごらん is softer and gently encourages someone to give something a try, e.g. 食べてごらん ('Try eating it'). Both are typically used from adults to children, or superiors to subordinates.",
+        "first_relatable": {
+          "id": 95,
+          "slug": "なさい",
+          "title": "なさい",
+          "meaning": "Command to do",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 314,
+          "slug": "てごらん",
+          "title": "てごらん",
+          "meaning": "(Please) try to, (Please) look",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "239",
+      "type": "related_content",
+      "attributes": {
+        "id": 239,
+        "relationship_type": "antonym",
+        "body": "The dictionary/non-past form of a verb + な expresses a blunt command not to do something. In contrast, てごらん is a gentle encouragement to try doing something. For example, 食べるな！ means 'Don't eat it!' while 食べてごらん means 'Try eating it' Both are used toward someone of lower status, such as an adult speaking to a child.",
+        "first_relatable": {
+          "id": 66,
+          "slug": "な",
+          "title": "な",
+          "meaning": "Do not, Don't (Prohibitive)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 314,
+          "slug": "てごらん",
+          "title": "てごらん",
+          "meaning": "(Please) try to, (Please) look",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

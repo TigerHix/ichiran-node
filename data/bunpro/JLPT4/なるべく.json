@@ -1,0 +1,1160 @@
+{
+  "data": {
+    "id": "384",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 384,
+      "level": "JLPT4",
+      "lesson_id": 12,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "なるべく",
+      "nuance": "(A)を<strong>できるだけ頻繁（ひんぱん）</strong>に、又（また）は<strong>可能（かのう）になった時（とき）</strong>に行（おこな）うべきだということを表（あらわ）す表現（ひょうげん）。",
+      "grammar_order": 160,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 135,
+        "title": "るところだ",
+        "slug": "るところだ"
+      },
+      "previous_grammar_point": {
+        "id": 388,
+        "title": "ごとに",
+        "slug": "ごとに"
+      },
+      "lesson_count": "15/17",
+      "title": "なるべく",
+      "furigana": "なるべく",
+      "meaning": "As ~ as possible, Wherever practicable",
+      "nuance_translation": "An expression which indicates that (A) should be done as <strong>often as possible</strong>, or whenever it <strong>becomes permissable</strong>.",
+      "rare_kanji_warning": "成る",
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "<strong>なるべく</strong> + (Action) Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10082",
+      "metadata": "なるべく, 成る可く, narubeku, adverb, expression, possibility, direct, conjunction, indeterminate form"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "3332",
+            "type": "study_question"
+          },
+          {
+            "id": "3331",
+            "type": "study_question"
+          },
+          {
+            "id": "180285",
+            "type": "study_question"
+          },
+          {
+            "id": "180286",
+            "type": "study_question"
+          },
+          {
+            "id": "180287",
+            "type": "study_question"
+          },
+          {
+            "id": "3334",
+            "type": "study_question"
+          },
+          {
+            "id": "3330",
+            "type": "study_question"
+          },
+          {
+            "id": "180284",
+            "type": "study_question"
+          },
+          {
+            "id": "1370",
+            "type": "study_question"
+          },
+          {
+            "id": "3328",
+            "type": "study_question"
+          },
+          {
+            "id": "1371",
+            "type": "study_question"
+          },
+          {
+            "id": "1372",
+            "type": "study_question"
+          },
+          {
+            "id": "3329",
+            "type": "study_question"
+          },
+          {
+            "id": "3327",
+            "type": "study_question"
+          },
+          {
+            "id": "3333",
+            "type": "study_question"
+          },
+          {
+            "id": "3335",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "159",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "493",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1516",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "773",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "850",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "851",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "3332",
+      "type": "study_question",
+      "attributes": {
+        "id": 3332,
+        "content": "<span class='study-area-input'>____</span>速（はや）く行（い）きます。",
+        "answer": "なるべく",
+        "alternate_grammar": [],
+        "kanji_answer": "なるべく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>できるだけ頻繁（ひんぱん）</strong>に、又（また）は<strong>可能（かのう）になった時（とき）</strong>に行（おこな）うべきだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/384/male_audio/230224_1337_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/なるべく早く行きます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "できるだけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ならべく": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "なるべき": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "ほとんど": {
+            "en": "This means 'mostly'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "できれば": {
+            "en": "This means 'if possible'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'finally'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I will go <strong>as</strong> fast <strong>as possible</strong>.",
+        "nuance_translation": "An expression which indicates that (A) should be done as <strong>often as possible</strong>, or whenever it <strong>becomes permissable</strong>.",
+        "extra_info": "",
+        "reviewable_id": 384,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3331",
+      "type": "study_question",
+      "attributes": {
+        "id": 3331,
+        "content": "<span class='study-area-input'>____</span>わかり<span class='gp-popout' data-gp-id='90'>やすく</span>説明（せつめい）し<span class='gp-popout' data-gp-id='60'>てください</span>。",
+        "answer": "なるべく",
+        "alternate_grammar": [],
+        "kanji_answer": "なるべく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>できるだけ頻繁（ひんぱん）</strong>に、又（また）は<strong>可能（かのう）になった時（とき）</strong>に行（おこな）うべきだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/384/male_audio/230224_1337_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/なるべくわかりやすく説明してください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "できるだけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ならべく": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "なるべき": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "あまり": {
+            "en": "We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "お": {
+            "en": "We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほとんど": {
+            "en": "This means 'mostly'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "できれば": {
+            "en": "This means 'if possible'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'finally'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Please explain so that it is <strong>as</strong> easy to understand <strong>as possible</strong>.",
+        "nuance_translation": "An expression which indicates that (A) should be done as <strong>often as possible</strong>, or whenever it <strong>becomes permissable</strong>.",
+        "extra_info": "",
+        "reviewable_id": 384,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180285",
+      "type": "study_question",
+      "attributes": {
+        "id": 180285,
+        "content": "仕事（しごと）<span class=\"gp-popout\" data-gp-id=\"25\">で</span>疲（つか）れ<span class=\"gp-popout\" data-gp-id=\"764\">てい</span><span class=\"gp-popout\" data-gp-id=\"174\">ても</span>、<span class='study-area-input'>____</span>夕食（ゆうしょく）は食（た）べ<span class=\"gp-popout\" data-gp-id=\"60\">てください</span>。",
+        "answer": "なるべく",
+        "alternate_grammar": [],
+        "kanji_answer": "なるべく",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/仕事で疲れていても、なるべく夕食は食べてください。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Even if you are tired from work, please eat dinner <strong>whenever possible</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 384,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180286",
+      "type": "study_question",
+      "attributes": {
+        "id": 180286,
+        "content": "明日（あした）<span class=\"gp-popout\" data-gp-id=\"3\">は</span><span class=\"gp-popout\" data-gp-id=\"132\">できる</span><span class=\"gp-popout\" data-gp-id=\"398\">だけ</span>早（はや）く<span class=\"gp-popout\" data-gp-id=\"39\">来（き）</span><span class=\"gp-popout\" data-gp-id=\"777\">て</span><span class=\"gp-popout\" data-gp-id=\"71\">ね</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/明日はできるだけ早く来てね。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Tomorrow, please make sure to come as early as possible.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 384,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180287",
+      "type": "study_question",
+      "attributes": {
+        "id": 180287,
+        "content": "明日（あした）<span class=\"gp-popout\" data-gp-id=\"3\">は</span><span class='study-area-input'>____</span>早（はや）く<span class=\"gp-popout\" data-gp-id=\"39\">来（き）</span><span class=\"gp-popout\" data-gp-id=\"777\">て</span><span class=\"gp-popout\" data-gp-id=\"71\">ね</span>。",
+        "answer": "なるべく",
+        "alternate_grammar": [],
+        "kanji_answer": "なるべく",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/明日はなるべく早く来てね。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Tomorrow, please come <strong>as</strong> early <strong>as possible</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 384,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3334",
+      "type": "study_question",
+      "attributes": {
+        "id": 3334,
+        "content": "死（し）<span class='gp-popout' data-gp-id='26'>ぬ</span><span class='gp-popout' data-gp-id='53'>前（まえ）に</span><span class='study-area-input'>____</span>多（おお）く<span class='gp-popout' data-gp-id='6'>の</span>国（くに）<span class='gp-popout' data-gp-id='31'>へ行（い）き</span><span class='gp-popout' data-gp-id='59'>たい</span>。",
+        "answer": "なるべく",
+        "alternate_grammar": [],
+        "kanji_answer": "なるべく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>できるだけ頻繁（ひんぱん）</strong>に、又（また）は<strong>可能（かのう）になった時（とき）</strong>に行（おこな）うべきだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/384/male_audio/230224_1338_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/死ぬ前になるべく多くの国へ行きたい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "できるだけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "なるべき": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "お": {
+            "en": "We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほど": {
+            "en": "This means 'the more'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほとんど": {
+            "en": "This means 'mostly'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "できれば": {
+            "en": "This means 'if possible'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'finally'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "ごとに": {
+            "en": "This has the nuance of 'every'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I want to go to <strong>as</strong> many countries <strong>as possible</strong> before I die.",
+        "nuance_translation": "An expression which indicates that (A) should be done as <strong>often as possible</strong>, or whenever it <strong>becomes permissable</strong>.",
+        "extra_info": "",
+        "reviewable_id": 384,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3330",
+      "type": "study_question",
+      "attributes": {
+        "id": 3330,
+        "content": "<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='715'>沢山（たくさん）</span><span class='gp-popout' data-gp-id='6'>の</span>人気（にんき）な場所（ばしょ）<span class='gp-popout' data-gp-id='31'>へ行（い）き</span><span class='gp-popout' data-gp-id='59'>たい</span>。",
+        "answer": "なるべく",
+        "alternate_grammar": [],
+        "kanji_answer": "なるべく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>できるだけ頻繁（ひんぱん）</strong>に、又（また）は<strong>可能（かのう）になった時（とき）</strong>に行（おこな）うべきだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/384/male_audio/230224_1337.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/なるべく沢山の人気な場所へ行きたい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "できるだけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ならべく": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "なるべき": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "ほとんど": {
+            "en": "This means 'mostly'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "できれば": {
+            "en": "This means 'if possible'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'finally'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I want to go to <strong>as</strong> many famous places <strong>as possible</strong>.",
+        "nuance_translation": "An expression which indicates that (A) should be done as <strong>often as possible</strong>, or whenever it <strong>becomes permissable</strong>.",
+        "extra_info": "",
+        "reviewable_id": 384,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180284",
+      "type": "study_question",
+      "attributes": {
+        "id": 180284,
+        "content": "外（そと）に出（で）かけ<span class=\"gp-popout\" data-gp-id=\"12\">る</span><span class=\"gp-popout\" data-gp-id=\"93\">とき</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span><span class='study-area-input'>____</span>ドア<span class=\"gp-popout\" data-gp-id=\"6\">の</span>カギ<span class=\"gp-popout\" data-gp-id=\"21\">を</span>かけ<span class=\"gp-popout\" data-gp-id=\"60\">てください</span>。",
+        "answer": "なるべく",
+        "alternate_grammar": [],
+        "kanji_answer": "なるべく",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/外に出かけるときはなるべくドアのカギをかけてください。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "When you go out, lock your doors <strong>as</strong> often <strong>as possible</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 384,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1370",
+      "type": "study_question",
+      "attributes": {
+        "id": 1370,
+        "content": "インフルエンザにかかった時（とき）<span class='gp-popout' data-gp-id='3'>は</span>、<span class='study-area-input'>____</span>ゆっくり休（やす）<span class='gp-popout' data-gp-id='26'>む</span><span class='gp-popout' data-gp-id='73'>ほうが</span><span class='gp-popout' data-gp-id='7'>いい</span>。",
+        "answer": "なるべく",
+        "alternate_grammar": [],
+        "kanji_answer": "なるべく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>できるだけ頻繁（ひんぱん）</strong>に、又（また）は<strong>可能（かのう）になった時（とき）</strong>に行（おこな）うべきだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/384/male_audio/230224_1335.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/インフルエンザにかかった時は、なるべくゆっくり休むほうがいい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "できるだけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ならべく": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "なるべき": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "ほど": {
+            "en": "This means 'the more'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほとんど": {
+            "en": "This means 'mostly'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "できれば": {
+            "en": "This means 'if possible'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'finally'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "When you catch the flu, you should rest <strong>as</strong> much <strong>as possible</strong>.",
+        "nuance_translation": "An expression which indicates that (A) should be done as <strong>often as possible</strong>, or whenever it <strong>becomes permissable</strong>.",
+        "extra_info": "",
+        "reviewable_id": 384,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3328",
+      "type": "study_question",
+      "attributes": {
+        "id": 3328,
+        "content": "運転（うんてん）し<span class='gp-popout' data-gp-id='27'>ている</span><span class='gp-popout' data-gp-id='93'>時（とき）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>注意（ちゅうい）し<span class='gp-popout' data-gp-id='60'>てください</span>。",
+        "answer": "なるべく",
+        "alternate_grammar": [],
+        "kanji_answer": "なるべく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>できるだけ頻繁（ひんぱん）</strong>に、又（また）は<strong>可能（かのう）になった時（とき）</strong>に行（おこな）うべきだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/384/male_audio/230224_1336_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/運転している時はなるべく注意してください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "できるだけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ならべく": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "なるべき": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "ところ": {
+            "en": "We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほど": {
+            "en": "This means 'the more'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほとんど": {
+            "en": "This means 'mostly'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'finally'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "ごとに": {
+            "en": "This has the nuance of 'every'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "While driving, please be <strong>as</strong> careful <strong>as possible</strong>.",
+        "nuance_translation": "An expression which indicates that (A) should be done as <strong>often as possible</strong>, or whenever it <strong>becomes permissable</strong>.",
+        "extra_info": "",
+        "reviewable_id": 384,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1371",
+      "type": "study_question",
+      "attributes": {
+        "id": 1371,
+        "content": "<span class='study-area-input'>____</span>早（はや）めに連絡（れんらく）し<span class='gp-popout' data-gp-id='60'>てください</span>。",
+        "answer": "なるべく",
+        "alternate_grammar": [],
+        "kanji_answer": "なるべく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>できるだけ頻繁（ひんぱん）</strong>に、又（また）は<strong>可能（かのう）になった時（とき）</strong>に行（おこな）うべきだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/384/male_audio/230224_1335_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/なるべく早めに連絡してください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "できるだけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ならべく": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "なるべき": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "お": {
+            "en": "We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "すぐ": {
+            "en": "We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "まず": {
+            "en": "This means 'firstly'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'finally'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "ごとに": {
+            "en": "This has the nuance of 'every'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Please contact me <strong>as</strong> soon <strong> as possible</strong>.",
+        "nuance_translation": "An expression which indicates that (A) should be done as <strong>often as possible</strong>, or whenever it <strong>becomes permissable</strong>.",
+        "extra_info": "",
+        "reviewable_id": 384,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1372",
+      "type": "study_question",
+      "attributes": {
+        "id": 1372,
+        "content": "<span class='study-area-input'>____</span>正直（しょうじき）に話（はな）し<span class='gp-popout' data-gp-id='60'>てください</span>。",
+        "answer": "なるべく",
+        "alternate_grammar": [],
+        "kanji_answer": "なるべく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>できるだけ頻繁（ひんぱん）</strong>に、又（また）は<strong>可能（かのう）になった時（とき）</strong>に行（おこな）うべきだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/384/male_audio/230224_1336.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/なるべく正直に話してください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "できるだけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ならべく": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "なるべき": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "できれば": {
+            "en": "This means 'if possible'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'finally'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "ごとに": {
+            "en": "This has the nuance of 'every'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Please speak <strong>as</strong> honestly <strong>as possible</strong>.",
+        "nuance_translation": "An expression which indicates that (A) should be done as <strong>often as possible</strong>, or whenever it <strong>becomes permissable</strong>.",
+        "extra_info": "",
+        "reviewable_id": 384,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3329",
+      "type": "study_question",
+      "attributes": {
+        "id": 3329,
+        "content": "<span class='study-area-input'>____</span>早（はや）めに犯人（はんにん）<span class='gp-popout' data-gp-id='21'>を</span>捕（つか）まえ<span class='gp-popout' data-gp-id='12'>る</span><span class='gp-popout' data-gp-id='80'>つもり</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "なるべく",
+        "alternate_grammar": [],
+        "kanji_answer": "なるべく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>できるだけ頻繁（ひんぱん）</strong>に、又（また）は<strong>可能（かのう）になった時（とき）</strong>に行（おこな）うべきだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/384/male_audio/230224_1336_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/なるべく早めに犯人を捕まえるつもりです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "できるだけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ならべく": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "なるべき": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "ほとんど": {
+            "en": "This means 'mostly'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "できれば": {
+            "en": "This means 'if possible'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'finally'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "We intend to catch the criminal <strong>as</strong> soon <strong>as possible</strong>.",
+        "nuance_translation": "An expression which indicates that (A) should be done as <strong>often as possible</strong>, or whenever it <strong>becomes permissable</strong>.",
+        "extra_info": "",
+        "reviewable_id": 384,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3327",
+      "type": "study_question",
+      "attributes": {
+        "id": 3327,
+        "content": "日本（にほん）<span class='gp-popout' data-gp-id='48'>に行（い）く</span><span class='gp-popout' data-gp-id='53'>前（まえ）に</span><span class='study-area-input'>____</span>お金（かね）<span class='gp-popout' data-gp-id='21'>を</span>貯（た）め<span class='gp-popout' data-gp-id='68'>た方（ほう）がいい</span>。",
+        "answer": "なるべく",
+        "alternate_grammar": [],
+        "kanji_answer": "なるべく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>できるだけ頻繁（ひんぱん）</strong>に、又（また）は<strong>可能（かのう）になった時（とき）</strong>に行（おこな）うべきだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/384/male_audio/230224_1336_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/日本に行く前になるべくお金を貯めた方がいい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "できるだけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ならべく": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "なるべき": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "ほど": {
+            "en": "This means 'the more'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほとんど": {
+            "en": "This means 'mostly'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "できれば": {
+            "en": "This means 'if possible'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'finally'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "ごとに": {
+            "en": "This has the nuance of 'every'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Before going to Japan you should save <strong>as</strong> much money <strong>as possible</strong>.",
+        "nuance_translation": "An expression which indicates that (A) should be done as <strong>often as possible</strong>, or whenever it <strong>becomes permissable</strong>.",
+        "extra_info": "",
+        "reviewable_id": 384,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3333",
+      "type": "study_question",
+      "attributes": {
+        "id": 3333,
+        "content": "机（つくえ）<span class='gp-popout' data-gp-id='6'>の</span>上（うえ）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>綺麗（きれい）にしたほうが仕事（しごと）<span class='gp-popout' data-gp-id='10'>が</span>し<span class='gp-popout' data-gp-id='90'>やすい</span>。",
+        "answer": "なるべく",
+        "alternate_grammar": [],
+        "kanji_answer": "なるべく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>できるだけ頻繁（ひんぱん）</strong>に、又（また）は<strong>可能（かのう）になった時（とき）</strong>に行（おこな）うべきだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/384/male_audio/230224_1338.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/机の上をなるべく綺麗にしたほうが仕事がしやすい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "できるだけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ならべく": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "なるべき": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "お": {
+            "en": "We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほど": {
+            "en": "This means 'the more'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほとんど": {
+            "en": "This means 'mostly'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "できれば": {
+            "en": "This means 'if possible'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'finally'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "It is easier to work if the top of your desk is <strong>as</strong> clean <strong>as possible</strong>.",
+        "nuance_translation": "An expression which indicates that (A) should be done as <strong>often as possible</strong>, or whenever it <strong>becomes permissable</strong>.",
+        "extra_info": "",
+        "reviewable_id": 384,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3335",
+      "type": "study_question",
+      "attributes": {
+        "id": 3335,
+        "content": "お客（きゃく）さん<span class='gp-popout' data-gp-id='10'>が</span><span class='gp-popout' data-gp-id='39'>来（く）る</span><span class='gp-popout' data-gp-id='62'>ので</span>、<span class='study-area-input'>____</span>綺麗（きれい）にし<span class='gp-popout' data-gp-id='60'>てください</span>。",
+        "answer": "なるべく",
+        "alternate_grammar": [],
+        "kanji_answer": "なるべく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>できるだけ頻繁（ひんぱん）</strong>に、又（また）は<strong>可能（かのう）になった時（とき）</strong>に行（おこな）うべきだということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/384/male_audio/230224_1339.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/お客さんが来るので、なるべく綺麗にしてください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "できるだけ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ならべく": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "なるべき": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "お": {
+            "en": "We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほど": {
+            "en": "This means 'the more'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "ほとんど": {
+            "en": "This means 'mostly'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "できれば": {
+            "en": "This means 'if possible'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'finally'. We are looking for a grammar point with the nuance of 'as much as possible'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "We are having guests, so please be sure to make (the house) <strong>as</strong> tidy <strong>as possible</strong>.",
+        "nuance_translation": "An expression which indicates that (A) should be done as <strong>often as possible</strong>, or whenever it <strong>becomes permissable</strong>.",
+        "extra_info": "",
+        "reviewable_id": 384,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "159",
+      "type": "writeup",
+      "attributes": {
+        "id": 159,
+        "body_ja": "",
+        "body": "<p>Combining 成（な）る (to become), and <span data-gp-id='797'>可（べ）く</span> (to be permissible), <span data-gp-id='384'>なるべく</span> is an expression that literally means 'as each opportunity becomes permissible/presents itself'. This is often simply translated as 'as much as possible', or 'whenever possible'.</p>\r\n\r\n<p><span data-gp-id='384'>なるべく</span> (usually written in hiragana) is regularly used before an entire phrase, to express that (A) should happen as much as possible.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180284'>\r\n<li data-study-question='180285'> </ul>\r\n\r\n<p>Due to <span data-gp-id='384'>なるべく</span> expressing the 'possibility', or 'having the opportunity' to do something, it will sound considerably softer/more polite than できるだけ. できるだけ is a similar expression which more directly states that something will be done 'to the full extent possible'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180286'>\r\n<li data-study-question='180287'>\r\n</ul>"
+      }
+    },
+    {
+      "id": "493",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 493,
+        "source": "Tobira",
+        "location": "Page 73",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1516",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1516,
+        "source": "[AIAIJ] An Integrated Approach to Intermediate Japanese",
+        "location": "Page 55",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "850",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 850,
+        "site": "NihonOnTheGo",
+        "description": "なるべく: As much as possible",
+        "link": "https://nihononthego.tumblr.com/post/130833325912/grammar-as-much-as",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "851",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 851,
+        "site": "JStackExchange",
+        "description": "what is the difference in the usage of なるべく and できるだけ?",
+        "link": "https://japanese.stackexchange.com/questions/1593/what-is-the-difference-in-the-usage-of-%e6%88%90%e3%81%aa%e3%82%8b%e3%81%b9%e3%81%8f-and-%e3%81%a7%e3%81%8d%e3%82%8b%e3%81%a0%e3%81%91/1715#1715",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "773",
+      "type": "related_content",
+      "attributes": {
+        "id": 773,
+        "relationship_type": "related",
+        "body": "なるべく and できれば・できたら both mean 'to the extent possible', but differ in nuance. なるべく implies doing something as much or as often as possible over time, e.g. 'whenever possible.' できれば・できたら typically are used when referring to a single situation or request, like 'if possible'.",
+        "first_relatable": {
+          "id": 384,
+          "slug": "なるべく",
+          "title": "なるべく",
+          "meaning": "As ~ as possible, Wherever practicable",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 471,
+          "slug": "できれば-できたら",
+          "title": "できれば・できたら",
+          "meaning": "If possible",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

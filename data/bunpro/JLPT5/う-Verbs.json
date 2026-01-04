@@ -1,0 +1,970 @@
+{
+  "data": {
+    "id": "26",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 26,
+      "level": "JLPT5",
+      "lesson_id": 2,
+      "part_of_speech": "動詞",
+      "register": "一般",
+      "word_type": "自立語",
+      "slug": "う-Verbs",
+      "nuance": "カジュアルな場合（ばあい）でも丁寧（ていねい）な場合（ばあい）でも、<strong>活用（かつよう）の仕方（しかた）が複数（ふくすう）ある</strong>動詞（どうし）。",
+      "grammar_order": 17,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 21,
+        "title": "を",
+        "slug": "を"
+      },
+      "previous_grammar_point": {
+        "id": 12,
+        "title": "る-Verb (Dictionary)",
+        "slug": "る-Verbs"
+      },
+      "lesson_count": "5/13",
+      "title": "う-Verb (Dictionary)",
+      "furigana": "う-Verb (Dictionary)",
+      "meaning": "う + ます (Godan Verbs)",
+      "nuance_translation": "The <strong>base form</strong> of a <strong>multi-conjugation verb</strong>, in either its polite or casual variant.",
+      "rare_kanji_warning": "",
+      "caution": "Short form is also often called 'casual form' (because it is used in casual language), or 'plain form'",
+      "polite_structure": "Examples:<br>座（すわ）<del>る</del> + <span class='chui'>り</span><strong>ます</strong><br>歌（うた）<del>う</del> + <span class='chui'>い</span><strong>ます</strong><br>歩（ある）<del>く</del> + <span class='chui'>き</span><strong>ます</strong><br>話（はな）<del>す</del> + <span class='chui'>し</span><strong>ます</strong><br>打（う）<del>つ</del> + <span class='chui'>ち</span><strong>ます</strong><br>死（し）<del>ぬ</del> + <span class='chui'>に</span><strong>ます</strong><br>飛（と）<del>ぶ</del> + <span class='chui'>び</span><strong>ます</strong><br>休（やす）<del>む</del> + <span class='chui'>み</span><strong>ます</strong><br>泳（およ）<del>ぐ</del> + <span class='chui'>ぎ</span><strong>ます</strong><br>",
+      "casual_structure": "Examples:<br>座（すわ）<strong>る</strong><br>歌（うた）<strong>う</strong><br>歩（ある）<strong>く</strong><br>話（はな）<strong>す</strong><br>打（う）<strong>つ</strong><br>死（し）<strong>ぬ</strong><br>飛（と）<strong>ぶ</strong><br>休（やす）<strong>む</strong><br>泳（およ）<strong>ぐ</strong><br>",
+      "part_of_speech_translation": "Verb",
+      "register_translation": "Standard",
+      "word_type_translation": "Independent Word",
+      "discourse_link": "https://community.bunpro.jp/t/verbs-discussion-topic/497",
+      "metadata": "う-verb, う verb, u-verb, u verb, godan, godan verb, five level, conjugation, dictionary form, standard form, plain form"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "1676",
+            "type": "study_question"
+          },
+          {
+            "id": "1681",
+            "type": "study_question"
+          },
+          {
+            "id": "1678",
+            "type": "study_question"
+          },
+          {
+            "id": "1679",
+            "type": "study_question"
+          },
+          {
+            "id": "1677",
+            "type": "study_question"
+          },
+          {
+            "id": "1674",
+            "type": "study_question"
+          },
+          {
+            "id": "1675",
+            "type": "study_question"
+          },
+          {
+            "id": "1673",
+            "type": "study_question"
+          },
+          {
+            "id": "154745",
+            "type": "study_question"
+          },
+          {
+            "id": "154746",
+            "type": "study_question"
+          },
+          {
+            "id": "26",
+            "type": "study_question"
+          },
+          {
+            "id": "1680",
+            "type": "study_question"
+          },
+          {
+            "id": "662",
+            "type": "study_question"
+          },
+          {
+            "id": "1672",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "17",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "19",
+            "type": "offline_resource"
+          },
+          {
+            "id": "754",
+            "type": "offline_resource"
+          },
+          {
+            "id": "82",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1243",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1268",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "76",
+            "type": "related_content"
+          },
+          {
+            "id": "77",
+            "type": "related_content"
+          },
+          {
+            "id": "45",
+            "type": "related_content"
+          },
+          {
+            "id": "1355",
+            "type": "related_content"
+          },
+          {
+            "id": "49",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "56",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1806",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1203",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1208",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1212",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1263",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "57",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "1676",
+      "type": "study_question",
+      "attributes": {
+        "id": 1676,
+        "content": "会（あ）<strong><span class='gp-popout' data-gp-id='26'>う</span></strong> → <span class='study-area-input'>____</span>",
+        "answer": "あいます",
+        "alternate_grammar": [],
+        "kanji_answer": "会（あ）います",
+        "kanji_alt_grammar": [],
+        "nuance": "カジュアルな場合（ばあい）でも丁寧（ていねい）な場合（ばあい）でも、<strong>活用（かつよう）の仕方（しかた）が複数（ふくすう）ある</strong>動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/26/male_audio/01-会う.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/会う → 会います.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To meet</strong>",
+        "nuance_translation": "The <strong>base form</strong> of a <strong>multi-conjugation verb</strong>, in either its polite or casual variant.",
+        "extra_info": "",
+        "reviewable_id": 26,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1681",
+      "type": "study_question",
+      "attributes": {
+        "id": 1681,
+        "content": "<span class='vocab-popout' data-vocab-id='539'>帰（かえ）</span><strong><span class='gp-popout' data-gp-id='26'>る</span></strong> → <span class='study-area-input'>____</span>",
+        "answer": "かえります",
+        "alternate_grammar": [],
+        "kanji_answer": "帰（かえ）ります",
+        "kanji_alt_grammar": [],
+        "nuance": "カジュアルな場合（ばあい）でも丁寧（ていねい）な場合（ばあい）でも、<strong>活用（かつよう）の仕方（しかた）が複数（ふくすう）ある</strong>動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/26/male_audio/帰る → 帰ります.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/帰る → 帰ります.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To return</strong>",
+        "nuance_translation": "The <strong>base form</strong> of a <strong>multi-conjugation verb</strong>, in either its polite or casual variant.",
+        "extra_info": "",
+        "reviewable_id": 26,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1678",
+      "type": "study_question",
+      "attributes": {
+        "id": 1678,
+        "content": "死（し）<strong><span class='gp-popout' data-gp-id='26'>ぬ</span></strong> → <span class='study-area-input'>____</span>",
+        "answer": "しにます",
+        "alternate_grammar": [],
+        "kanji_answer": "死（し）にます",
+        "kanji_alt_grammar": [],
+        "nuance": "カジュアルな場合（ばあい）でも丁寧（ていねい）な場合（ばあい）でも、<strong>活用（かつよう）の仕方（しかた）が複数（ふくすう）ある</strong>動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/26/male_audio/04-死ぬ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/死ぬ → 死にます.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To die</strong>",
+        "nuance_translation": "The <strong>base form</strong> of a <strong>multi-conjugation verb</strong>, in either its polite or casual variant.",
+        "extra_info": "",
+        "reviewable_id": 26,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1679",
+      "type": "study_question",
+      "attributes": {
+        "id": 1679,
+        "content": "<span class='study-area-input'>____</span> → <span class='vocab-popout' data-vocab-id='724'>歩（ある）</span><strong><span class='gp-popout' data-gp-id='26'>きます</span></strong>",
+        "answer": "あるく",
+        "alternate_grammar": [],
+        "kanji_answer": "歩（ある）く",
+        "kanji_alt_grammar": [],
+        "nuance": "カジュアルな場合（ばあい）でも丁寧（ていねい）な場合（ばあい）でも、<strong>活用（かつよう）の仕方（しかた）が複数（ふくすう）ある</strong>動詞（どうし）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/26/male_audio/歩く → 歩きます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/歩く → 歩きます.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To walk</strong>",
+        "nuance_translation": "The <strong>base form</strong> of a <strong>multi-conjugation verb</strong>, in either its polite or casual variant.",
+        "extra_info": "",
+        "reviewable_id": 26,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1677",
+      "type": "study_question",
+      "attributes": {
+        "id": 1677,
+        "content": "<span class='study-area-input'>____</span> → 話（はな）<strong>し<span class='gp-popout' data-gp-id='26'>ます</span></strong>",
+        "answer": "はなす",
+        "alternate_grammar": [],
+        "kanji_answer": "話（はな）す",
+        "kanji_alt_grammar": [],
+        "nuance": "カジュアルな場合（ばあい）でも丁寧（ていねい）な場合（ばあい）でも、<strong>活用（かつよう）の仕方（しかた）が複数（ふくすう）ある</strong>動詞（どうし）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/26/male_audio/10-話す.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/話す → 話します.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To speak</strong> ",
+        "nuance_translation": "The <strong>base form</strong> of a <strong>multi-conjugation verb</strong>, in either its polite or casual variant.",
+        "extra_info": "",
+        "reviewable_id": 26,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1674",
+      "type": "study_question",
+      "attributes": {
+        "id": 1674,
+        "content": "<span class='vocab-popout' data-vocab-id='751'>泳（およ）</span><strong><span class='gp-popout' data-gp-id='26'>ぐ</span></strong> → <span class='study-area-input'>____</span>",
+        "answer": "およぎます",
+        "alternate_grammar": [],
+        "kanji_answer": "泳（およ）ぎます",
+        "kanji_alt_grammar": [],
+        "nuance": "カジュアルな場合（ばあい）でも丁寧（ていねい）な場合（ばあい）でも、<strong>活用（かつよう）の仕方（しかた）が複数（ふくすう）ある</strong>動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/26/male_audio/泳ぐ → 泳ぎます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/泳ぐ → 泳ぎます.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To swim</strong> ",
+        "nuance_translation": "The <strong>base form</strong> of a <strong>multi-conjugation verb</strong>, in either its polite or casual variant.",
+        "extra_info": "",
+        "reviewable_id": 26,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1675",
+      "type": "study_question",
+      "attributes": {
+        "id": 1675,
+        "content": "行（い）<strong><span class='gp-popout' data-gp-id='26'>く</span></strong> → <span class='study-area-input'>____</span>",
+        "answer": "いきます",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）きます",
+        "kanji_alt_grammar": [],
+        "nuance": "カジュアルな場合（ばあい）でも丁寧（ていねい）な場合（ばあい）でも、<strong>活用（かつよう）の仕方（しかた）が複数（ふくすう）ある</strong>動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/26/male_audio/08-行く.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/行く → 行きます.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To go</strong>",
+        "nuance_translation": "The <strong>base form</strong> of a <strong>multi-conjugation verb</strong>, in either its polite or casual variant.",
+        "extra_info": "",
+        "reviewable_id": 26,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1673",
+      "type": "study_question",
+      "attributes": {
+        "id": 1673,
+        "content": "飛（と）<strong>ぶ</strong> → <span class='study-area-input'>____</span>。",
+        "answer": "とびます",
+        "alternate_grammar": [],
+        "kanji_answer": "飛（と）びます",
+        "kanji_alt_grammar": [],
+        "nuance": "カジュアルな場合（ばあい）でも丁寧（ていねい）な場合（ばあい）でも、<strong>活用（かつよう）の仕方（しかた）が複数（ふくすう）ある</strong>動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/26/male_audio/飛ぶ → 飛びます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/飛ぶ → 飛びます。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To fly</strong>",
+        "nuance_translation": "The <strong>base form</strong> of a <strong>multi-conjugation verb</strong>, in either its polite or casual variant.",
+        "extra_info": "",
+        "reviewable_id": 26,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154745",
+      "type": "study_question",
+      "attributes": {
+        "id": 154745,
+        "content": "私（わたし）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>パンク<span class=\"gp-popout\" data-gp-id=\"4\">も</span>聞（き）<span class='study-area-input'>____</span>。",
+        "answer": "く",
+        "alternate_grammar": [],
+        "kanji_answer": "く",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私はパンクも聞く。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I also <strong>listen</strong> to punk music.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 26,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154746",
+      "type": "study_question",
+      "attributes": {
+        "id": 154746,
+        "content": "学生（がくせい）たち<span class=\"gp-popout\" data-gp-id=\"3\">は</span>先生（せんせい）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>話（はなし）<span class=\"gp-popout\" data-gp-id=\"4\">も</span>聞（き）<span class='study-area-input'>____</span>。",
+        "answer": "きます",
+        "alternate_grammar": [],
+        "kanji_answer": "きます",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/学生たちは先生の話も聞きます。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The students <strong>listen</strong> to the teachers also.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 26,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "26",
+      "type": "study_question",
+      "attributes": {
+        "id": 26,
+        "content": "聞（き）<strong><span class='gp-popout' data-gp-id='26'>く</span></strong> → <span class='study-area-input'>____</span>",
+        "answer": "ききます",
+        "alternate_grammar": [],
+        "kanji_answer": "聞（き）きます",
+        "kanji_alt_grammar": [],
+        "nuance": "カジュアルな場合（ばあい）でも丁寧（ていねい）な場合（ばあい）でも、<strong>活用（かつよう）の仕方（しかた）が複数（ふくすう）ある</strong>動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/26/male_audio/聞くききます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/聞く → 聞きます.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To listen/hear</strong>",
+        "nuance_translation": "The <strong>base form</strong> of a <strong>multi-conjugation verb</strong>, in either its polite or casual variant.",
+        "extra_info": "",
+        "reviewable_id": 26,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1680",
+      "type": "study_question",
+      "attributes": {
+        "id": 1680,
+        "content": "<span class='vocab-popout' data-vocab-id='552'>座（すわ）</span><strong><span class='gp-popout' data-gp-id='26'>る</span></strong> → <span class='study-area-input'>____</span>",
+        "answer": "すわります",
+        "alternate_grammar": [],
+        "kanji_answer": "座（すわ）ります",
+        "kanji_alt_grammar": [],
+        "nuance": "カジュアルな場合（ばあい）でも丁寧（ていねい）な場合（ばあい）でも、<strong>活用（かつよう）の仕方（しかた）が複数（ふくすう）ある</strong>動詞（どうし）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/26/male_audio/座る → 座ります.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/座る → 座ります.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To sit down</strong> ",
+        "nuance_translation": "The <strong>base form</strong> of a <strong>multi-conjugation verb</strong>, in either its polite or casual variant.",
+        "extra_info": "",
+        "reviewable_id": 26,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "662",
+      "type": "study_question",
+      "attributes": {
+        "id": 662,
+        "content": "<span class='study-area-input'>____</span>→ 飲（の）<strong>み<span class='gp-popout' data-gp-id='26'>ます</span></strong>",
+        "answer": "のむ",
+        "alternate_grammar": [],
+        "kanji_answer": "飲（の）む",
+        "kanji_alt_grammar": [],
+        "nuance": "カジュアルな場合（ばあい）でも丁寧（ていねい）な場合（ばあい）でも、<strong>活用（かつよう）の仕方（しかた）が複数（ふくすう）ある</strong>動詞（どうし）。",
+        "tense": "Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/26/male_audio/12-飲む.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/飲む→ 飲みます.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To drink</strong> ",
+        "nuance_translation": "The <strong>base form</strong> of a <strong>multi-conjugation verb</strong>, in either its polite or casual variant.",
+        "extra_info": "",
+        "reviewable_id": 26,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1672",
+      "type": "study_question",
+      "attributes": {
+        "id": 1672,
+        "content": "<span class='study-area-input'>____</span> → <span class='vocab-popout' data-vocab-id='1853'>打（う）</span><strong><span class='gp-popout' data-gp-id='26'>ちます</span></strong>",
+        "answer": "うつ",
+        "alternate_grammar": [],
+        "kanji_answer": "打（う）つ",
+        "kanji_alt_grammar": [],
+        "nuance": "カジュアルな場合（ばあい）でも丁寧（ていねい）な場合（ばあい）でも、<strong>活用（かつよう）の仕方（しかた）が複数（ふくすう）ある</strong>動詞（どうし）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/26/male_audio/打つ → 打ちます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/打つ → 打ちます.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To hit</strong>",
+        "nuance_translation": "The <strong>base form</strong> of a <strong>multi-conjugation verb</strong>, in either its polite or casual variant.",
+        "extra_info": "",
+        "reviewable_id": 26,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "17",
+      "type": "writeup",
+      "attributes": {
+        "id": 17,
+        "body_ja": "",
+        "body": "<p><span data-gp-id='26'>う-Verbs</span> include all of the verbs in Japanese that end in う sounds (including some of the verbs that end in る). These verbs are called Godan (五段（ごだん）) 'five-level' verbs in Japanese, due to their conjugations using all 5 of the different sounds in the same column (段（だん）) that their base form comes from.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154745'>\r\n<li data-study-question='154746'> </ul>\r\n\r\n<p>As we can see here, the く in 聞（き）く changes to き when conjugated to the polite form. All of the other sounds in the K-column will be used with 聞（き）く, depending on the conjugation. This is the same for all of the う-Verbs.</p>\r\n\r\n<p>聞（き）か<span data-gp-id='888'>ない</span>, 聞（き）き<span data-gp-id='59'>たい</span>, 聞（き）<span data-gp-id='26'>く</span>, 聞（き）け<span data-gp-id='132'>る</span>, 聞（き）こ<span data-gp-id='121'>う</span></p>\r\n\r\n<p>Here we can see the <span data-gp-id='26'>う-Verb</span> 聞（き）く using all of the different K-column sounds in various conjugations.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>Just like with <span data-gp-id='12'>る-Verbs</span>, the base form of the verb may be called 'plain form', 'casual form', or 'short form', depending on the source/book.</p></section>"
+      }
+    },
+    {
+      "id": "19",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 19,
+        "source": "Genki I",
+        "location": "Page  58",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "754",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 754,
+        "source": "みんなの日本語 I",
+        "location": "Page 116 [CH 18]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "82",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 82,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 88",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1243",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1243,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 43~47",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1268",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1268,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 87",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "56",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 56,
+        "site": "Tae Kim",
+        "description": "Verb basics",
+        "link": "https://guidetojapanese.org/learn/grammar/verbs",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1806",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1806,
+        "site": "Kanji Link",
+        "description": "Japanese verb conjugation",
+        "link": "https://www.kanji-link.com/en/grammar/n5/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1203",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1203,
+        "site": "Japanese Ammo",
+        "description": "Verbs basics & を particle",
+        "link": "https://www.youtube.com/watch?v=ePTdpMF-_H0&index=7&list=PLd5-Wp_4tLqYZxS5j3g6kbeOfVXlTkr3N",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1208",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1208,
+        "site": "Japanese Ammo",
+        "description": "ます Form",
+        "link": "https://www.youtube.com/watch?v=nZXZElTzWjY&list=PLd5-Wp_4tLqYZxS5j3g6kbeOfVXlTkr3N&index=9",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1212",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1212,
+        "site": "Japanese Ammo",
+        "description": "Negation of masu verbs ません",
+        "link": "https://www.youtube.com/watch?v=NC90Tf3fQo8&index=11&list=PLd5-Wp_4tLqYZxS5j3g6kbeOfVXlTkr3N",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1263",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1263,
+        "site": "Wikipedia Commons",
+        "description": "Aeron Buchanan's Japanese Verb Chart",
+        "link": "https://commons.wikimedia.org/wiki/File:AMB_Japanese_Verbs.pdf",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "57",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 57,
+        "site": "Imabi 2",
+        "description": "Regular Verbs II: 五段 Godan Verbs",
+        "link": "https://imabi.org/godan-verbs%E3%80%80%E4%BA%94%E6%AE%B5%E6%B4%BB%E7%94%A8%E5%8B%95%E8%A9%9E/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "76",
+      "type": "related_content",
+      "attributes": {
+        "id": 76,
+        "relationship_type": "related",
+        "body": "The dictionary form of an う-verb (e.g., 買う) is the base form used to describe current, habitual, or future actions (e.g., 買う = 'I buy' or 'I will buy'). In contrast, the past form (-た form) expresses completed actions or past states (e.g., 買った = 'I bought'). Both forms commonly appear in grammar patterns that require the casual/plain form, such as ～と思います ('I think').",
+        "first_relatable": {
+          "id": 26,
+          "slug": "う-Verbs",
+          "title": "う-Verb (Dictionary)",
+          "meaning": "う + ます (Godan Verbs)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 41,
+          "slug": "う-verb-past",
+          "title": "う-Verb (Past)",
+          "meaning": "う - Verbs (Past tense)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "77",
+      "type": "related_content",
+      "attributes": {
+        "id": 77,
+        "relationship_type": "related",
+        "body": "The dictionary form of an う-verb (e.g., 買う) is its base form, describing non-past actions (e.g., 買う = 'I buy' or 'I will buy'). It's used casually or as part of other grammatical patterns. In contrast, the て-form (verb + て) connects verbs to show sequences or to form requests and various other grammar structures (e.g., 買ってください = 'Please buy...').",
+        "first_relatable": {
+          "id": 26,
+          "slug": "う-Verbs",
+          "title": "う-Verb (Dictionary)",
+          "meaning": "う + ます (Godan Verbs)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 416,
+          "slug": "verb-て",
+          "title": "Verb + て",
+          "meaning": "And, Then (Linking events)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "45",
+      "type": "related_content",
+      "attributes": {
+        "id": 45,
+        "relationship_type": "related",
+        "body": "る-Verbs and う-Verbs are the two main verb types in Japanese. Their dictionary forms are the basic forms used in dictionaries and casual non-past sentences (e.g., 食べる = 'I eat' or 'I will eat'). The difference between these verb types is in their conjugation patterns, not their meaning or nuance. Be careful: not all verbs ending in る are る-Verbs (for example, 帰る 'to return' is actually an う-Verb).",
+        "first_relatable": {
+          "id": 12,
+          "slug": "る-Verbs",
+          "title": "る-Verb (Dictionary)",
+          "meaning": "る + ます (Ichidan Verbs)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 26,
+          "slug": "う-Verbs",
+          "title": "う-Verb (Dictionary)",
+          "meaning": "う + ます (Godan Verbs)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1355",
+      "type": "related_content",
+      "attributes": {
+        "id": 1355,
+        "relationship_type": "related",
+        "body": "In Japanese, the dictionary form and the non-past form of verbs are identical. For example, 買う is both the dictionary form and the non-past form of the verb 'to buy.' Unlike in English, this form can be used as is to express future actions ('I will buy'), habitual actions ('I regularly buy'), or general truths ('People buy a lot around Christmas').",
+        "first_relatable": {
+          "id": 950,
+          "slug": "verb-non-past",
+          "title": "Verbs (Non-past)",
+          "meaning": "(Non-past)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 26,
+          "slug": "う-Verbs",
+          "title": "う-Verb (Dictionary)",
+          "meaning": "う + ます (Godan Verbs)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "49",
+      "type": "related_content",
+      "attributes": {
+        "id": 49,
+        "relationship_type": "related",
+        "body": "The dictionary form is the base form of the verb, used for habitual or future actions. The negative form expresses that an action doesn't happen or a state doesn't exist. For る-Verbs, the negative is formed by changing る to ない (e.g., 食べる → 食べない). う-Verbs have different conjugation patterns. Be careful: not all verbs ending in る are る-Verbs—for example, 帰る ('to return') is actually an う-Verb.",
+        "first_relatable": {
+          "id": 51,
+          "slug": "るverb-ない",
+          "title": "る-Verb (Negative)",
+          "meaning": "Will/Does/Do (not)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 26,
+          "slug": "う-Verbs",
+          "title": "う-Verb (Dictionary)",
+          "meaning": "う + ます (Godan Verbs)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1262 @@
+{
+  "data": {
+    "id": "362",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 362,
+      "level": "JLPT4",
+      "lesson_id": 11,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "どんどん",
+      "nuance": "<strong>繰（く）り返（かえ）される大（おお）きな音（おと）</strong>に由来（ゆらい）する言葉（ことば）で、(A)が<strong>急速（きゅうそく）に進（すす）んでいる</strong>ことを表（あらわ）す。",
+      "grammar_order": 132,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 385,
+        "title": "～ら",
+        "slug": "ら"
+      },
+      "previous_grammar_point": {
+        "id": 672,
+        "title": "だんだん",
+        "slug": "だんだん"
+      },
+      "lesson_count": "5/18",
+      "title": "どんどん",
+      "furigana": "どんどん",
+      "meaning": "Progressively, Rapidly increasing, More and more",
+      "nuance_translation": "A word which stems from <strong>loud repetitive noises</strong>, to show that (A) is <strong>rapidly progressing</strong>.",
+      "rare_kanji_warning": null,
+      "caution": "どんどん - Swift change, だんだん - Gradual change",
+      "polite_structure": null,
+      "casual_structure": "<strong>どんどん</strong> + （<span class='chui'><span class='gp-popout' data-gp-id='356'>と</span></span>） + Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10220",
+      "metadata": "どんどん, dondon, adverb, onomatopoeia"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "155488",
+            "type": "study_question"
+          },
+          {
+            "id": "183844",
+            "type": "study_question"
+          },
+          {
+            "id": "1299",
+            "type": "study_question"
+          },
+          {
+            "id": "2443",
+            "type": "study_question"
+          },
+          {
+            "id": "155487",
+            "type": "study_question"
+          },
+          {
+            "id": "155489",
+            "type": "study_question"
+          },
+          {
+            "id": "183845",
+            "type": "study_question"
+          },
+          {
+            "id": "2447",
+            "type": "study_question"
+          },
+          {
+            "id": "2446",
+            "type": "study_question"
+          },
+          {
+            "id": "2445",
+            "type": "study_question"
+          },
+          {
+            "id": "2439",
+            "type": "study_question"
+          },
+          {
+            "id": "2442",
+            "type": "study_question"
+          },
+          {
+            "id": "2444",
+            "type": "study_question"
+          },
+          {
+            "id": "1300",
+            "type": "study_question"
+          },
+          {
+            "id": "2440",
+            "type": "study_question"
+          },
+          {
+            "id": "2441",
+            "type": "study_question"
+          },
+          {
+            "id": "1301",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "131",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "534",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "279",
+            "type": "related_content"
+          },
+          {
+            "id": "416",
+            "type": "related_content"
+          },
+          {
+            "id": "419",
+            "type": "related_content"
+          },
+          {
+            "id": "417",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "803",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1731",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "155488",
+      "type": "study_question",
+      "attributes": {
+        "id": 155488,
+        "content": "<span class='study-area-input'>____</span>頼（たの）ん<span class=\"gp-popout\" data-gp-id=\"416\">で</span><span class=\"gp-popout\" data-gp-id=\"71\">ね</span>！",
+        "answer": "どんどん",
+        "alternate_grammar": [],
+        "kanji_answer": "どんどん",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/どんどん頼んでね！.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Quickly</strong> order! (Literally means 'more and more' in a sentence like this, with the nuance of 'don't hold back, order in rapid succession')",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 362,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183844",
+      "type": "study_question",
+      "attributes": {
+        "id": 183844,
+        "content": "毎日（まいにち）ピアノ<span data-gp-id='21'>を</span>練習（れんしゅう）<span data-gp-id='22'>し</span><span data-gp-id='764'>ている</span><span data-gp-id='45'>から</span>、<span data-gp-id='672'>だんだん</span>ピアノ<span data-gp-id='10'>が</span>上手（じょうず）<span data-gp-id='57'>にな</span>っ<span data-gp-id='416'>て</span><span data-gp-id='39'>き</span><span data-gp-id='41'>た</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Because I practice the piano everyday, I have steadily gotten better at playing. (Slow progression)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 362,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1299",
+      "type": "study_question",
+      "attributes": {
+        "id": 1299,
+        "content": "<span class='study-area-input'>____</span>暑（あつ）<span class='gp-popout' data-gp-id='57'>くな</span>る。",
+        "answer": "どんどん",
+        "alternate_grammar": [
+          "ますます",
+          "どんどん",
+          "どんどんと"
+        ],
+        "kanji_answer": "どんどん",
+        "kanji_alt_grammar": [
+          "ますます",
+          "どんどん",
+          "どんどんと"
+        ],
+        "nuance": "<strong>繰（く）り返（かえ）される大（おお）きな音（おと）</strong>に由来（ゆらい）する言葉（ことば）で、(A)が<strong>急速（きゅうそく）に進（すす）んでいる</strong>ことを表（あらわ）す。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/362/male_audio/どんどん暑くなる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/どんどん暑くなる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ちゃくちゃく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": ""
+          },
+          "だんだん": {
+            "en": "Nice! This works, but let's talk about a rapid change instead.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "とうとう": {
+            "en": "とうとう has the nuance of 'Finally'. Could you try a grammar point that has the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": ""
+          },
+          "とんとん": {
+            "en": "We are looking for a grammar point with the meaning of 'rapidly', or 'quickly'.",
+            "es": "",
+            "fr": ""
+          },
+          "だんだんと": {
+            "en": "This means 'gradually'. Could you try a grammar point that has the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "It will <strong>rapidly</strong> get warmer and warmer.",
+        "nuance_translation": "A word which stems from <strong>loud repetitive noises</strong>, to show that (A) is <strong>rapidly progressing</strong>.",
+        "extra_info": "",
+        "reviewable_id": 362,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2443",
+      "type": "study_question",
+      "attributes": {
+        "id": 2443,
+        "content": "車（くるま）<span class='gp-popout' data-gp-id='6'>の</span>運転（うんてん）免許（めんきょ）<span class='gp-popout' data-gp-id='21'>を</span>取（と）<span class='gp-popout' data-gp-id='41'>った</span><span class='gp-popout' data-gp-id='62'>ので</span>、<span class='study-area-input'>____</span>車（くるま）<span class='gp-popout' data-gp-id='32'>に</span>乗（の）<span class='gp-popout' data-gp-id='416'>って</span>出（で）かけ<span class='gp-popout' data-gp-id='70'>ましょう</span>。",
+        "answer": "どんどん",
+        "alternate_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ"
+        ],
+        "kanji_answer": "どんどん",
+        "kanji_alt_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ"
+        ],
+        "nuance": "<strong>繰（く）り返（かえ）される大（おお）きな音（おと）</strong>に由来（ゆらい）する言葉（ことば）で、(A)が<strong>急速（きゅうそく）に進（すす）んでいる</strong>ことを表（あらわ）す。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/362/male_audio/車の運転免許.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/車の運転免許を取ったので、どんどん車に乗って出かけましょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ちゃくちゃく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "だんだん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "とんとん": {
+            "en": "We are looking for a grammar point with the meaning of 'rapidly', or 'quickly'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'Finally'. Could you try a grammar point that has the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": ""
+          },
+          "もっと": {
+            "en": "Could you try a using an onomatopoeia with the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Since I got my license, let's go out by car <strong>more and more</strong>.",
+        "nuance_translation": "A word which stems from <strong>loud repetitive noises</strong>, to show that (A) is <strong>rapidly progressing</strong>.",
+        "extra_info": "",
+        "reviewable_id": 362,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155487",
+      "type": "study_question",
+      "attributes": {
+        "id": 155487,
+        "content": "彼女（かのじょ）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>出来（でき）<span class=\"gp-popout\" data-gp-id=\"416\">て</span><span class=\"gp-popout\" data-gp-id=\"45\">から</span><span class='study-area-input'>____</span>お金（かね）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>減（へ）っ<span class=\"gp-popout\" data-gp-id=\"416\">て</span>い<span class=\"gp-popout\" data-gp-id=\"26\">く</span>。",
+        "answer": "どんどん",
+        "alternate_grammar": [],
+        "kanji_answer": "どんどん",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/彼女が出来てからどんどんお金が減っていく。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Since I got a girlfriend, my cash has been <strong>rapidly</strong> decreasing.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 362,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155489",
+      "type": "study_question",
+      "attributes": {
+        "id": 155489,
+        "content": "バス<span class=\"gp-popout\" data-gp-id=\"6\">の</span>運転手（うんてんしゅ）<span class=\"gp-popout\" data-gp-id=\"10\">が</span><span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"356\">と</span>減（へ）っ<span class=\"gp-popout\" data-gp-id=\"764\">ている</span>。",
+        "answer": "どんどん",
+        "alternate_grammar": [],
+        "kanji_answer": "どんどん",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/バスの運転手がどんどんと減っている。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The number of bus drivers is <strong>rapidly</strong> decreasing.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 362,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183845",
+      "type": "study_question",
+      "attributes": {
+        "id": 183845,
+        "content": "毎日（まいにち）ピアノ<span data-gp-id='21'>を</span>練習（れんしゅう）<span data-gp-id='22'>し</span><span data-gp-id='764'>ている</span><span data-gp-id='45'>から</span>、<span data-gp-id='362'>どんどん</span>ピアノ<span data-gp-id='10'>が</span>上手（じょうず）<span data-gp-id='57'>にな</span>っ<span data-gp-id='416'>て</span><span data-gp-id='39'>き</span><span data-gp-id='41'>た</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Because I practice the piano everyday, I have <strong>rapidly</strong> gotten better at playing. (Rapid progression)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 362,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2447",
+      "type": "study_question",
+      "attributes": {
+        "id": 2447,
+        "content": "<span class='vocab-popout' data-vocab-id='733'>毎日（まいにち）</span>筋（きん）トレ<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout vocab-popout' data-gp-id='79' data-vocab-id='138'>したり</span>、プロテイン<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout vocab-popout' data-gp-id='79' data-vocab-id='1081'>飲（の）んだりして</span>、<span class='study-area-input'>____</span>マッチョ<span class='gp-popout' data-gp-id='57'>になる</span>。",
+        "answer": "どんどん",
+        "alternate_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ",
+          "どんどんと"
+        ],
+        "kanji_answer": "どんどん",
+        "kanji_alt_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ"
+        ],
+        "nuance": "<strong>繰（く）り返（かえ）される大（おお）きな音（おと）</strong>に由来（ゆらい）する言葉（ことば）で、(A)が<strong>急速（きゅうそく）に進（すす）んでいる</strong>ことを表（あらわ）す。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/362/male_audio/毎日筋トレをしたり.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/毎日筋トレをしたり、プロテインを飲んだりして、どんどんマッチョになる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ちゃくちゃく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "だんだん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "とんとん": {
+            "en": "We are looking for a grammar point with the meaning of 'rapidly', or 'quickly'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'Finally'. Could you try a grammar point that has the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Every day I have been doing things like working out and drinking protein, so I will <strong>progressively</strong> become more macho.",
+        "nuance_translation": "A word which stems from <strong>loud repetitive noises</strong>, to show that (A) is <strong>rapidly progressing</strong>.",
+        "extra_info": "",
+        "reviewable_id": 362,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2446",
+      "type": "study_question",
+      "attributes": {
+        "id": 2446,
+        "content": "<span class='study-area-input'>____</span><span class='vocab-popout' data-vocab-id='626'>料理（りょうり）</span><span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout vocab-popout' data-gp-id='70' data-vocab-id='1067'>頼（たの）みましょう</span>。",
+        "answer": "どんどん",
+        "alternate_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ",
+          "どんどんと"
+        ],
+        "kanji_answer": "どんどん",
+        "kanji_alt_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ"
+        ],
+        "nuance": "<strong>繰（く）り返（かえ）される大（おお）きな音（おと）</strong>に由来（ゆらい）する言葉（ことば）で、(A)が<strong>急速（きゅうそく）に進（すす）んでいる</strong>ことを表（あらわ）す。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/362/male_audio/どんどん料理を.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/どんどん料理を頼みましょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ちゃくちゃく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "だんだん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "きゅうに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "とうとう": {
+            "en": "This means 'Finally'. Could you try a grammar point that has the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": ""
+          },
+          "はやく": {
+            "en": "Could you try a using an onomatopoeia with the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Let's <strong>rapidly</strong> order food.",
+        "nuance_translation": "A word which stems from <strong>loud repetitive noises</strong>, to show that (A) is <strong>rapidly progressing</strong>.",
+        "extra_info": "",
+        "reviewable_id": 362,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2445",
+      "type": "study_question",
+      "attributes": {
+        "id": 2445,
+        "content": "<span class='gp-popout vocab-popout' data-gp-id='30' data-vocab-id='91'>この</span>商品（しょうひん）<span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout vocab-popout' data-gp-id='5' data-vocab-id='95'>これ</span><span class='gp-popout' data-gp-id='52'>から</span><span class='study-area-input'>____</span><span class='gp-popout vocab-popout' data-gp-id='57' data-vocab-id='508'>安（やす）くなるから</span>、<span class='gp-popout vocab-popout' data-gp-id='26' data-vocab-id='974'>買（か）う</span><span class='gp-popout' data-gp-id='6'>の</span><span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout vocab-popout' data-gp-id='70' data-vocab-id='570'>待（ま）ちましょう</span>。",
+        "answer": "どんどん",
+        "alternate_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ",
+          "どんどんと"
+        ],
+        "kanji_answer": "どんどん",
+        "kanji_alt_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ"
+        ],
+        "nuance": "<strong>繰（く）り返（かえ）される大（おお）きな音（おと）</strong>に由来（ゆらい）する言葉（ことば）で、(A)が<strong>急速（きゅうそく）に進（すす）んでいる</strong>ことを表（あらわ）す。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/362/male_audio/この商品はどんどん安くなる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この商品はこれからどんどん安くなるから、買うのを待ちましょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ちゃくちゃく": {
+            "en": "Can you say it another way?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "だんだん": {
+            "en": "Could you use adverb that expresses more rapid change?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "どうどう": {
+            "en": "We are looking for a grammar point with the meaning of 'rapidly', or 'quickly'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とんとん": {
+            "en": "We are looking for a grammar point with the meaning of 'rapidly', or 'quickly'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とうとう": {
+            "en": "This means 'Finally'. Could you try a grammar point that has the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "These goods will <strong>rapidly</strong> get cheaper from here on, so let's wait to buy them.",
+        "nuance_translation": "A word which stems from <strong>loud repetitive noises</strong>, to show that (A) is <strong>rapidly progressing</strong>.",
+        "extra_info": "",
+        "reviewable_id": 362,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2439",
+      "type": "study_question",
+      "attributes": {
+        "id": 2439,
+        "content": "日本（にほん）<span class='gp-popout' data-gp-id='6'>の</span>人口（じんこう）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>減（へ）<span class='gp-popout' data-gp-id='26'>る</span>。",
+        "answer": "どんどん",
+        "alternate_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ",
+          "どんどんと"
+        ],
+        "kanji_answer": "どんどん",
+        "kanji_alt_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ"
+        ],
+        "nuance": "<strong>繰（く）り返（かえ）される大（おお）きな音（おと）</strong>に由来（ゆらい）する言葉（ことば）で、(A)が<strong>急速（きゅうそく）に進（すす）んでいる</strong>ことを表（あらわ）す。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/362/male_audio/日本の人口がどんどん.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/日本の人口がどんどん減る。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ちゃくちゃく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "だんだん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "とんとん": {
+            "en": "We are looking for a grammar point with the meaning of 'rapidly', or 'quickly'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'Finally'. Could you try a grammar point that has the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": ""
+          },
+          "はやく": {
+            "en": "Could you try a using an onomatopoeia with the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "The Japanese population will <strong>rapidly</strong> decrease.",
+        "nuance_translation": "A word which stems from <strong>loud repetitive noises</strong>, to show that (A) is <strong>rapidly progressing</strong>.",
+        "extra_info": "",
+        "reviewable_id": 362,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2442",
+      "type": "study_question",
+      "attributes": {
+        "id": 2442,
+        "content": "川（かわ）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>広（ひろ）<span class='gp-popout' data-gp-id='57'>くな</span>る。",
+        "answer": "どんどん",
+        "alternate_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ",
+          "どんどんと"
+        ],
+        "kanji_answer": "どんどん",
+        "kanji_alt_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ"
+        ],
+        "nuance": "<strong>繰（く）り返（かえ）される大（おお）きな音（おと）</strong>に由来（ゆらい）する言葉（ことば）で、(A)が<strong>急速（きゅうそく）に進（すす）んでいる</strong>ことを表（あらわ）す。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/362/male_audio/川がどんどん広くなる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/川がどんどん広くなる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ちゃくちゃく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "だんだん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "きゅうに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "たんたん": {
+            "en": "We are looking for a grammar point with the meaning of 'rapidly', or 'quickly'.",
+            "es": "",
+            "fr": ""
+          },
+          "とんとん": {
+            "en": "We are looking for a grammar point with the meaning of 'rapidly', or 'quickly'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'Finally'. Could you try a grammar point that has the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "The river will <strong>rapidly</strong> get wider. (<strong>steadily</strong>)",
+        "nuance_translation": "A word which stems from <strong>loud repetitive noises</strong>, to show that (A) is <strong>rapidly progressing</strong>.",
+        "extra_info": "",
+        "reviewable_id": 362,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2444",
+      "type": "study_question",
+      "attributes": {
+        "id": 2444,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='52'>から</span>、<span class='study-area-input'>____</span>寒（さむ）<span class='gp-popout' data-gp-id='57'>くな</span>る<span class='gp-popout' data-gp-id='45'>から</span>、温（あたた）か<span class='gp-popout' data-gp-id='24'>い</span>服（ふく）<span class='gp-popout' data-gp-id='21'>を</span>買（か）わ<span class='gp-popout' data-gp-id='86'>なくてはいけない</span>。",
+        "answer": "どんどん",
+        "alternate_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ",
+          "どんどんと"
+        ],
+        "kanji_answer": "どんどん",
+        "kanji_alt_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ"
+        ],
+        "nuance": "<strong>繰（く）り返（かえ）される大（おお）きな音（おと）</strong>に由来（ゆらい）する言葉（ことば）で、(A)が<strong>急速（きゅうそく）に進（すす）んでいる</strong>ことを表（あらわ）す。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/362/male_audio/これからどんどん寒くなるから暖かい.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/これから、どんどん寒くなるから、温かい服を買わなくてはいけない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ちゃくちゃく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "だんだん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "とんとん": {
+            "en": "We are looking for a grammar point with the meaning of 'rapidly', or 'quickly'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'Finally'. Could you try a grammar point that has the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "From now on, it will get <strong>rapidly</strong> colder, so I have to buy warm clothes.",
+        "nuance_translation": "A word which stems from <strong>loud repetitive noises</strong>, to show that (A) is <strong>rapidly progressing</strong>.",
+        "extra_info": "",
+        "reviewable_id": 362,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1300",
+      "type": "study_question",
+      "attributes": {
+        "id": 1300,
+        "content": "<span class='study-area-input'>____</span>日本語（にほんご）<span class='gp-popout' data-gp-id='10'>が</span>上手（じょうず）になり<span class='gp-popout' data-gp-id='59'>たい</span>。",
+        "answer": "どんどん",
+        "alternate_grammar": [
+          "ますます",
+          "ちょっとずつ",
+          "どんどん"
+        ],
+        "kanji_answer": "どんどん",
+        "kanji_alt_grammar": [
+          "ますます",
+          "ちょっとずつ",
+          "どんどん"
+        ],
+        "nuance": "<strong>繰（く）り返（かえ）される大（おお）きな音（おと）</strong>に由来（ゆらい）する言葉（ことば）で、(A)が<strong>急速（きゅうそく）に進（すす）んでいる</strong>ことを表（あらわ）す。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/362/male_audio/どんどん日本語が上手になりたい.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/どんどん日本語が上手になりたい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ちゃくちゃく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "だんだん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "どんどんと": {
+            "en": "It is more natural here to omit the と.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "たんたん": {
+            "en": "We are looking for a grammar point with the meaning of 'rapidly', or 'quickly'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とんとん": {
+            "en": "We are looking for a grammar point with the meaning of 'rapidly', or 'quickly'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とうとう": {
+            "en": "This means 'Finally'. Could you try a grammar point that has the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "だんだんと": {
+            "en": "Could you try a grammar point that has the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I want to get <strong>better and better</strong> at Japanese.",
+        "nuance_translation": "A word which stems from <strong>loud repetitive noises</strong>, to show that (A) is <strong>rapidly progressing</strong>.",
+        "extra_info": "",
+        "reviewable_id": 362,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2440",
+      "type": "study_question",
+      "attributes": {
+        "id": 2440,
+        "content": "音（おと）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>大（おお）き<span class='gp-popout' data-gp-id='57'>くな</span>る。",
+        "answer": "どんどん",
+        "alternate_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ",
+          "どんどんと"
+        ],
+        "kanji_answer": "どんどん",
+        "kanji_alt_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ"
+        ],
+        "nuance": "<strong>繰（く）り返（かえ）される大（おお）きな音（おと）</strong>に由来（ゆらい）する言葉（ことば）で、(A)が<strong>急速（きゅうそく）に進（すす）んでいる</strong>ことを表（あらわ）す。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/362/male_audio/音がどんどん大きくなる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/音がどんどん大きくなる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ちゃくちゃく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "だんだん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "たんたん": {
+            "en": "We are looking for a grammar point with the meaning of 'rapidly', or 'quickly'.",
+            "es": "",
+            "fr": ""
+          },
+          "とんとん": {
+            "en": "We are looking for a grammar point with the meaning of 'rapidly', or 'quickly'.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'Finally'. Could you try a grammar point that has the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": ""
+          },
+          "もっと": {
+            "en": "Could you try a onomatopoeia that is used with the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "The sound will get <strong>louder and louder</strong>. ",
+        "nuance_translation": "A word which stems from <strong>loud repetitive noises</strong>, to show that (A) is <strong>rapidly progressing</strong>.",
+        "extra_info": "",
+        "reviewable_id": 362,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2441",
+      "type": "study_question",
+      "attributes": {
+        "id": 2441,
+        "content": "彼女（かのじょ）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>綺麗（きれい）<span class='gp-popout' data-gp-id='57'>になる</span>。",
+        "answer": "どんどん",
+        "alternate_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ",
+          "どんどんと"
+        ],
+        "kanji_answer": "どんどん",
+        "kanji_alt_grammar": [
+          "どんどん",
+          "ますます",
+          "ちょっとずつ"
+        ],
+        "nuance": "<strong>繰（く）り返（かえ）される大（おお）きな音（おと）</strong>に由来（ゆらい）する言葉（ことば）で、(A)が<strong>急速（きゅうそく）に進（すす）んでいる</strong>ことを表（あらわ）す。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/362/male_audio/彼女がどんどん綺麗になる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/彼女がどんどん綺麗になる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ちゃくちゃく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": ""
+          },
+          "だんだん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "どうどう": {
+            "en": "We are looking for a grammar point with the meaning of 'rapidly', or 'quickly'.",
+            "es": "",
+            "fr": null
+          },
+          "とんとん": {
+            "en": "We are looking for a grammar point with the meaning of 'rapidly', or 'quickly'.",
+            "es": "",
+            "fr": null
+          },
+          "とうとう": {
+            "en": "This means 'Finally'. Could you try a grammar point that has the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": null
+          }
+        },
+        "translation": "She will become <strong>prettier and prettier</strong> <strong>(quickly)</strong>.",
+        "nuance_translation": "A word which stems from <strong>loud repetitive noises</strong>, to show that (A) is <strong>rapidly progressing</strong>.",
+        "extra_info": "",
+        "reviewable_id": 362,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1301",
+      "type": "study_question",
+      "attributes": {
+        "id": 1301,
+        "content": "先週（せんしゅう）<span class='gp-popout' data-gp-id='52'>から</span>、彼（かれ）<span class='gp-popout' data-gp-id='6'>の</span>意見（いけん）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>増（ふ）えた。",
+        "answer": "どんどん",
+        "alternate_grammar": [
+          "ますます",
+          "どんどん",
+          "どんどんと"
+        ],
+        "kanji_answer": "どんどん",
+        "kanji_alt_grammar": [
+          "ますます",
+          "どんどん"
+        ],
+        "nuance": "<strong>繰（く）り返（かえ）される大（おお）きな音（おと）</strong>に由来（ゆらい）する言葉（ことば）で、(A)が<strong>急速（きゅうそく）に進（すす）んでいる</strong>ことを表（あらわ）す。",
+        "tense": "Emphatic, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/362/male_audio/先週から彼の意見がどんどん.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/先週から、彼の意見がどんどん増えた。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ちゃくちゃく": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "だんだん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "とんとん": {
+            "en": "We are looking for a grammar point with the meaning of 'rapidly', or 'quickly'.",
+            "es": "",
+            "fr": ""
+          },
+          "はやい": {
+            "en": "This structure is not grammatically correct in this sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "とうとう": {
+            "en": "This means 'Finally'. Could you try a grammar point that has the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": ""
+          },
+          "はやく": {
+            "en": "Could you try a using an onomatopoeia with the nuance of 'rapidly', or 'quickly'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "(The number of) his opinions have <strong>rapidly</strong> increased starting from last week.",
+        "nuance_translation": "A word which stems from <strong>loud repetitive noises</strong>, to show that (A) is <strong>rapidly progressing</strong>.",
+        "extra_info": "",
+        "reviewable_id": 362,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "131",
+      "type": "writeup",
+      "attributes": {
+        "id": 131,
+        "body_ja": "",
+        "body": "<p><span data-gp-id='362'>どんどん</span> (or ドンドン) is one of the countless words in Japanese that represent a particular sound or sensation. These words are known as onomatopoeia (オノマトペ in Japanese). <span data-gp-id='362'>どんどん</span> represents the sound of banging (like on a drum), or the pounding of feet. In this way, it is regularly translated as 'rapidly', or 'quickly'.</p>\r\n\r\n<p>Like <span data-gp-id='672'>だんだん</span>, <span data-gp-id='362'>どんどん</span> may be used before almost any phrase.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155487'>\r\n<li data-study-question='155488'></ul>\r\n\r\n<p>While <span data-gp-id='362'>どんどん</span> can take the particle <span data-gp-id='356'>と</span>, it is not required. In fact, <span data-gp-id='356'>と</span> is very often omitted from adverbs/onomatopoeic words in Japanese.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155489'></ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>Initially, it can be easy to mix-up <span data-gp-id='362'>どんどん</span>, with <span data-gp-id='672'>だんだん</span>.  <span data-gp-id='672'>だんだん</span> is used to express slower changes, and may be thought of as similar to 'steadily', or 'step by step' in English.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183844'>\r\n<li data-study-question='183845'></ul></section>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>When the <span data-gp-id='356'>と</span> particle is used with onomatopoeic words, it is very similar to one of <span data-gp-id='356'>と</span>'s main usages as a quotation marker in Japanese. This means that <span data-gp-id='356'>と</span> has a similar role to words like 'went', or 'goes' in English. For example, In English, we would say:</p>\r\n\r\n<p>The door 'goes' BANG with the wind.</p>\r\n\r\n<p>However, the door doesn't actually 'go' anywhere. This is similar to what <span data-gp-id='356'>と</span> is doing here.</p></section>"
+      }
+    },
+    {
+      "id": "534",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 534,
+        "source": "Tobira",
+        "location": "Page 195",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "803",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 803,
+        "site": "NihongoMaster",
+        "description": "Definition of どんどん",
+        "link": "https://www.nihongomaster.com/japanese/dictionary/word/849/dondon-%E3%81%A9%E3%82%93%E3%81%A9%E3%82%93",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1731",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1731,
+        "site": "HiNative",
+        "description": "どんどん vs. 着々",
+        "link": "https://ja.hinative.com/questions/5660483",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "279",
+      "type": "related_content",
+      "attributes": {
+        "id": 279,
+        "relationship_type": "related",
+        "body": "だんだん and どんどん are similar-sounding adverbs that both describe change over time, but with different nuances. だんだん suggests a slow, step-by-step progression, like 'gradually' or 'bit by bit'. どんどん implies faster, more dynamic change; something happening quickly or in leaps and bounds.",
+        "first_relatable": {
+          "id": 672,
+          "slug": "だんだん",
+          "title": "だんだん",
+          "meaning": "Gradually, Little by little, Step by step",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 362,
+          "slug": "どんどん",
+          "title": "どんどん",
+          "meaning": "Progressively, Rapidly increasing, More and more",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "416",
+      "type": "related_content",
+      "attributes": {
+        "id": 416,
+        "relationship_type": "related",
+        "body": "どんどん and ますます are both adverbs used to describe change over time. どんどん emphasizes rapid progress or sudden development, often in leaps and bounds. ますます focuses on something already in a certain state becoming even more so, and is often used in polite expressions like wishes for continued health or success.",
+        "first_relatable": {
+          "id": 362,
+          "slug": "どんどん",
+          "title": "どんどん",
+          "meaning": "Progressively, Rapidly increasing, More and more",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 480,
+          "slug": "ますます",
+          "title": "ますます",
+          "meaning": "Increasingly, More and more, Decreasingly, Less and less, Keep -ing",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "419",
+      "type": "related_content",
+      "attributes": {
+        "id": 419,
+        "relationship_type": "related",
+        "body": "どんどん is an adverb that implies rapid or dramatic change, often in leaps and bounds, and is common in everyday speech. In contrast, 一方だ is more formal and used to describe ongoing change that continues beyond the speaker's control. Structurally, 一方だ follows the verb, unlike どんどん, which appears before it.",
+        "first_relatable": {
+          "id": 362,
+          "slug": "どんどん",
+          "title": "どんどん",
+          "meaning": "Progressively, Rapidly increasing, More and more",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 280,
+          "slug": "一方だ",
+          "title": "一方だ",
+          "meaning": "More and more, Continue to, Keep on, -er and -er",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "417",
+      "type": "related_content",
+      "attributes": {
+        "id": 417,
+        "relationship_type": "related",
+        "body": "どんどん is an adverb that implies rapid or dramatic change, often in leaps and bounds, e.g. どんどん大きくなる 'grow rapidly'. 〜ば〜ほど is a structure that shows proportional change, like 'the more (A), the more (B)' in English. For example, 大きくなればなるほどいい ('The bigger it gets, the better.').",
+        "first_relatable": {
+          "id": 362,
+          "slug": "どんどん",
+          "title": "どんどん",
+          "meaning": "Progressively, Rapidly increasing, More and more",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 207,
+          "slug": "ば-ほど",
+          "title": "ば〜ほど",
+          "meaning": "The more…the more",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

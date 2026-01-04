@@ -1,0 +1,1274 @@
+{
+  "data": {
+    "id": "232",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 232,
+      "level": "JLPT3",
+      "lesson_id": 24,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "いくら-でも",
+      "nuance": "(A)の数（かず）<strong>に関（かか）わらず</strong>、結果（けっか）は変（か）わらないということを強調（きょうちょう）する文法（ぶんぽう）。",
+      "grammar_order": 374,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 619,
+        "title": "〜かは〜によって違う",
+        "slug": "かは-によって違う"
+      },
+      "previous_grammar_point": {
+        "id": 220,
+        "title": "どんなに〜ても",
+        "slug": "どんなに-ても"
+      },
+      "lesson_count": "3/21",
+      "title": "いくら〜でも",
+      "furigana": "いくら～でも",
+      "meaning": "No matter how (much)",
+      "nuance_translation": "A phrase that highlights that <strong>no matter</strong> what number of (A), the result will not change.",
+      "rare_kanji_warning": "幾ら",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<strong>いくら</strong> + <span class='gp-popout' data-gp-id='174'>Verb［ても］</span><br><strong>いくら</strong> + <span class='gp-popout' data-gp-id='174'>［い］Adjective［ても］</span><br><strong>いくら</strong> + Noun + <span class='chui'>でも</span><br><strong>いくら</strong> + <span class='gp-popout' data-gp-id='28'>［な］Adjective</span> + <span class='chui'>でも</span>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/1589",
+      "metadata": "いくらても, いくらでも, いくら, 幾らても, 幾らでも, 幾ら, ikuratemo, ikurademo, ikura, noun, surprising, unexpected, amount"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "181137",
+            "type": "study_question"
+          },
+          {
+            "id": "181139",
+            "type": "study_question"
+          },
+          {
+            "id": "184149",
+            "type": "study_question"
+          },
+          {
+            "id": "184150",
+            "type": "study_question"
+          },
+          {
+            "id": "181138",
+            "type": "study_question"
+          },
+          {
+            "id": "181140",
+            "type": "study_question"
+          },
+          {
+            "id": "181141",
+            "type": "study_question"
+          },
+          {
+            "id": "181142",
+            "type": "study_question"
+          },
+          {
+            "id": "908",
+            "type": "study_question"
+          },
+          {
+            "id": "909",
+            "type": "study_question"
+          },
+          {
+            "id": "4378",
+            "type": "study_question"
+          },
+          {
+            "id": "4380",
+            "type": "study_question"
+          },
+          {
+            "id": "4381",
+            "type": "study_question"
+          },
+          {
+            "id": "4382",
+            "type": "study_question"
+          },
+          {
+            "id": "4383",
+            "type": "study_question"
+          },
+          {
+            "id": "4385",
+            "type": "study_question"
+          },
+          {
+            "id": "910",
+            "type": "study_question"
+          },
+          {
+            "id": "4377",
+            "type": "study_question"
+          },
+          {
+            "id": "4384",
+            "type": "study_question"
+          },
+          {
+            "id": "4379",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "394",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "497",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "893",
+            "type": "related_content"
+          },
+          {
+            "id": "1144",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "449",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "450",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "181137",
+      "type": "study_question",
+      "attributes": {
+        "id": 181137,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"47\">あの</span>人（ひと）に<span class='study-area-input'>____</span>言（い）っ<span class=\"gp-popout\" data-gp-id=\"232\">ても</span>、何（なに）も変（か）わ<span class=\"gp-popout\" data-gp-id=\"888\">らない</span><span class=\"gp-popout\" data-gp-id=\"78\">よ。</span>",
+        "answer": "いくら",
+        "alternate_grammar": [],
+        "kanji_answer": "いくら",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/あの人にいくら言っても、何も変わらないよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": " <strong>No matter how much</strong> you tell him, he won't change.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181139",
+      "type": "study_question",
+      "attributes": {
+        "id": 181139,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"47\">あの</span>人（ひと）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>ことが<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"717\">嫌（きら）い</span><span class=\"gp-popout\" data-gp-id=\"232\">でも</span>、<span class=\"gp-popout\" data-gp-id=\"369\">そんな</span>事（こと）言（い）っ<span class=\"gp-popout\" data-gp-id=\"102\">たら</span>可哀（かわい）そうだ<span class=\"gp-popout\" data-gp-id=\"78\">よ。</span>",
+        "answer": "いくら",
+        "alternate_grammar": [],
+        "kanji_answer": "いくら",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/あの人のことがいくら嫌いでも、そんな事言ったら可哀そうだよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>No matter how much</strong> you dislike them, that is a hurtful thing to say.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184149",
+      "type": "study_question",
+      "attributes": {
+        "id": 184149,
+        "content": "お金（かね）はいくら払（はら）っ<span data-gp-id='46'>てもいい</span>ので<span data-gp-id='37'>その</span>靴（くつ）<span data-gp-id='21'>を</span>私（わたし）<span data-gp-id='32'>に</span>下（くだ）さい。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I will pay <strong>however much</strong> for those shoes, so please let me have them! (Amount only)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184150",
+      "type": "study_question",
+      "attributes": {
+        "id": 184150,
+        "content": "お金（かね）はどんなに払（はら）っ<span data-gp-id='46'>てもいい</span>ので<span data-gp-id='37'>その</span>靴（くつ）<span data-gp-id='21'>を</span>私（わたし）<span data-gp-id='32'>に</span>下（くだ）さい。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I will pay whatever sort of money for those shoes, so please let me have them! (Possible amount or type. Dollar, yen, euro, etc)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181138",
+      "type": "study_question",
+      "attributes": {
+        "id": 181138,
+        "content": "<span class='study-area-input'>____</span>新（あたら）しく<span class=\"gp-popout\" data-gp-id=\"232\">ても</span>落（お）とし<span class=\"gp-popout\" data-gp-id=\"102\">たら</span>壊（こわ）れる<span class=\"gp-popout\" data-gp-id=\"524\">に決（き）まってる</span>じゃん。",
+        "answer": "いくら",
+        "alternate_grammar": [],
+        "kanji_answer": "いくら",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/いくら新しくても落としたら壊れるに決まってるじゃん。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": " <strong>No matter how</strong> new it is, of course it is going to break if you drop it!",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181140",
+      "type": "study_question",
+      "attributes": {
+        "id": 181140,
+        "content": "<span class='study-area-input'>____</span>俺（おれ）<span class=\"gp-popout\" data-gp-id=\"232\">でも</span><span class=\"gp-popout\" data-gp-id=\"369\">そんな</span>重（おも）いものは持（も）て<span class=\"gp-popout\" data-gp-id=\"51\">ない</span><span class=\"gp-popout\" data-gp-id=\"78\">よ。</span>",
+        "answer": "いくら",
+        "alternate_grammar": [],
+        "kanji_answer": "いくら",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/いくら俺でもそんな重いものは持てないよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>No matter</strong> if it is me, I can't lift something that heavy. (Even if it is me, who is strong, I cant lift something that heavy)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181141",
+      "type": "study_question",
+      "attributes": {
+        "id": 181141,
+        "content": "相談（そうだん）なら<span class='study-area-input'>____</span>聞（き）い<span class=\"gp-popout\" data-gp-id=\"92\">てあげる</span><span class=\"gp-popout\" data-gp-id=\"78\">よ。</span>",
+        "answer": "いくらでも",
+        "alternate_grammar": [],
+        "kanji_answer": "いくらでも",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/相談ならいくらでも聞いてあげるよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I'll listen to you vent <strong>however much</strong> you need.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181142",
+      "type": "study_question",
+      "attributes": {
+        "id": 181142,
+        "content": "お菓子（かし）なら<span class='study-area-input'>____</span>ある<span class=\"gp-popout\" data-gp-id=\"45\">から</span>、<span class=\"gp-popout\" data-gp-id=\"716\">好（す）き</span>な<span class=\"gp-popout\" data-gp-id=\"398\">だけ</span>持（も）っていきな！",
+        "answer": "いくらでも",
+        "alternate_grammar": [],
+        "kanji_answer": "いくらでも",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/お菓子ならいくらでもあるから、好きなだけ持っていきな！.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "As for snacks, I have <strong>plenty</strong>, so take all you want!",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "908",
+      "type": "study_question",
+      "attributes": {
+        "id": 908,
+        "content": "<span class='study-area-input'>____</span>土曜日（どようび）までには終（お）わらない。",
+        "answer": "いくらいそいでも",
+        "alternate_grammar": [
+          "どんなにいそいでも"
+        ],
+        "kanji_answer": "いくら急（いそ）いでも",
+        "kanji_alt_grammar": [
+          "どんなに急（いそ）いでも"
+        ],
+        "nuance": "(A)の数（かず）<strong>に関（かか）わらず</strong>、結果（けっか）は変（か）わらないということを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Hypothetical, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson4/232/male_audio/230620_1216.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/いくら急いでも土曜日までには終わらない。.mp3",
+        "word_prompt": "急（いそ）ぐ",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どんないそいでも": {
+            "en": "Although similar, could you try a different word that means 'how much'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくらいそんでも": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくらいそいても": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "いそいでも": {
+            "en": "Can you try adding an adverb meaning 'how much', which when combined with ～ても, means 'no matter how much'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくらいそいで": {
+            "en": "Cold you try adding a particle that is used to add emphasis at the end?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いそ": {
+            "en": "We are looking for a grammar point that expresses 'no matter how much (A), (B)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>No matter how</strong> quickly <strong>I do it</strong>, I won't finish before Saturday.",
+        "nuance_translation": "A phrase that highlights that <strong>no matter</strong> what number of (A), the result will not change.",
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "909",
+      "type": "study_question",
+      "attributes": {
+        "id": 909,
+        "content": "<span class='study-area-input'>____</span>、泣（な）き止（や）まない。",
+        "answer": "いくらないても",
+        "alternate_grammar": [],
+        "kanji_answer": "いくら泣（な）いても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の数（かず）<strong>に関（かか）わらず</strong>、結果（けっか）は変（か）わらないということを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Hypothetical, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson4/232/male_audio/230620_1217.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/いくら泣いても、泣き止まない。.mp3",
+        "word_prompt": "泣（な）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どんなにないても": {
+            "en": "This works, but let’s try a similar grammar structure that can express both quantity and degree here.",
+            "es": ""
+          },
+          "いかにないても": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "いくらないでも": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "いくらなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ないても": {
+            "en": "Can you try adding an adverb meaning 'how much', which when combined with ～ても, means 'no matter how much'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくらないて": {
+            "en": "Cold you try adding a particle that is used to add emphasis at the end?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくつないても": {
+            "en": "Could you try a different word that means 'how much'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくらなっても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>No matter how much they cry</strong>, they won't cry themselves out.",
+        "nuance_translation": "A phrase that highlights that <strong>no matter</strong> what number of (A), the result will not change.",
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4378",
+      "type": "study_question",
+      "attributes": {
+        "id": 4378,
+        "content": "<span class='study-area-input'>____</span>、彼（かれ）にはかなわない。",
+        "answer": "いくらがんばっても",
+        "alternate_grammar": [],
+        "kanji_answer": "いくら頑張（がんば）っても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の数（かず）<strong>に関（かか）わらず</strong>、結果（けっか）は変（か）わらないということを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson4/232/male_audio/230620_1218_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/いくら頑張っても、彼にはかなわない。.mp3",
+        "word_prompt": "頑張（がんば）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どんなにがんばっても": {
+            "en": "Natural, but let’s try a similar grammar structure that can express both quantity and degree here.",
+            "es": ""
+          },
+          "いかにがんばっても": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "どんながんばっても": {
+            "en": "Although similar, could you try a different word that means 'how much'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくらがんばても": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "がんばっても": {
+            "en": "Can you try adding an adverb meaning 'how much', which when combined with ～ても, means 'no matter how much'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "がんば": {
+            "en": "We are looking for a grammar point that expresses 'no matter how much (A), (B)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくらにがんばっても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくらがんばって": {
+            "en": "Cold you try adding a particle that is used to add emphasis at the end?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>No matter how hard I try</strong>, I can't compete with him.",
+        "nuance_translation": "A phrase that highlights that <strong>no matter</strong> what number of (A), the result will not change.",
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4380",
+      "type": "study_question",
+      "attributes": {
+        "id": 4380,
+        "content": "<span class='study-area-input'>____</span>、あの人（ひと）は全然（ぜんぜん）感謝（かんしゃ）しない人（ひと）だ。",
+        "answer": "いくらしんせつにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "いくら親切（しんせつ）にしても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の数（かず）<strong>に関（かか）わらず</strong>、結果（けっか）は変（か）わらないということを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson4/232/male_audio/230620_1218_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/いくら親切にしても、あの人は全然感謝しない人だ。.mp3",
+        "word_prompt": "親切（しんせつ）にする",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どんなにしんせつにしても": {
+            "en": "Natural, but let’s try a similar grammar structure that can express both quantity and degree here.",
+            "es": ""
+          },
+          "いかにしんせつにしても": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "いくらしんせつしても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しんせつにしても": {
+            "en": "Can you try adding an adverb meaning 'how much', which when combined with ～ても, means 'no matter how much'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>No matter how nice I am</strong> to him (her), he (she) is a completely ungrateful person.",
+        "nuance_translation": "A phrase that highlights that <strong>no matter</strong> what number of (A), the result will not change.",
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4381",
+      "type": "study_question",
+      "attributes": {
+        "id": 4381,
+        "content": "<span class='study-area-input'>____</span>社長（しゃちょう）<strong>でも</strong>、あんな言（い）い方（かた）をしてはいけません。",
+        "answer": "いくら",
+        "alternate_grammar": [],
+        "kanji_answer": "いくら",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の数（かず）<strong>に関（かか）わらず</strong>、結果（けっか）は変（か）わらないということを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson4/232/male_audio/230620_1218_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/いくら社長でも、あんな言い方をしてはいけません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どんなに": {
+            "en": "Let’s try a similar grammar structure that can express both quantity and degree here.",
+            "es": ""
+          },
+          "どんな": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "いかに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "だって": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "どうしても": {
+            "en": "どうしても is a standalone adverb meaning 'regardless of' or 'no matter what', but since でも is already used, this sounds unnatural. Could you try a different word that has the nuance of 'mow much'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくらでも": {
+            "en": "でも is already used in the sentence, so this would sound unnatural.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくらに": {
+            "en": "いくら attaches directly to the word, so the に is ungrammatical.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくつ": {
+            "en": "Could you try a different word that means 'how much'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "たとえ": {
+            "en": "たとえ is used for hypothetical situations and menas 'even if'. Could you try a different word that has the nuance of 'mow much'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "くらい": {
+            "en": "Could you try a different word that has the nuance of 'mow much'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>No matter how much</strong> of a boss you are, you cannot speak in that manner.",
+        "nuance_translation": "A phrase that highlights that <strong>no matter</strong> what number of (A), the result will not change.",
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4382",
+      "type": "study_question",
+      "attributes": {
+        "id": 4382,
+        "content": "<span class='study-area-input'>____</span>ご飯（はん）を食（た）べ<strong>ても</strong>、あの人（ひと）は全然（ぜんぜん）お腹（なか）いっぱいにならない。",
+        "answer": "いくら",
+        "alternate_grammar": [],
+        "kanji_answer": "いくら",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の数（かず）<strong>に関（かか）わらず</strong>、結果（けっか）は変（か）わらないということを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson4/232/male_audio/230620_1219.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/いくらご飯を食べても、あの人は全然お腹いっぱいにならない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どんなに": {
+            "en": "Natural, but let’s try a similar grammar structure that can express both quantity and degree here.",
+            "es": ""
+          },
+          "いかに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "どんな": {
+            "en": "Could you try a different word that has the nuance of 'mow much'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "どうしても": {
+            "en": "どうしても is a standalone adverb meaning 'regardless of' or 'no matter what', but since でも is already used, this sounds unnatural. Could you try a different word that has the nuance of 'mow much'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくらでも": {
+            "en": "ても is already used in the sentence, so this would sound unnatural.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくらに": {
+            "en": "いくら attaches directly to the word, so the に is ungrammatical.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>No matter how much</strong> he (she) eats, he (she) doesn't get full at all.",
+        "nuance_translation": "A phrase that highlights that <strong>no matter</strong> what number of (A), the result will not change.",
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4383",
+      "type": "study_question",
+      "attributes": {
+        "id": 4383,
+        "content": "<strong>いくら</strong>優秀（ゆうしゅう）<span class='study-area-input'>____</span>、性格（せいかく）が悪（わる）い人（ひと）とは一緒（いっしょ）に仕事（しごと）をしたくありません。",
+        "answer": "でも",
+        "alternate_grammar": [],
+        "kanji_answer": "でも",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の数（かず）<strong>に関（かか）わらず</strong>、結果（けっか）は変（か）わらないということを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson4/232/male_audio/230620_1219_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/いくら優秀でも、性格が悪い人とは一緒に仕事をしたくありません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だって": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "にしても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I don't want to work with someone who is mean, <strong>no matter how</strong> amazing they may be.",
+        "nuance_translation": "A phrase that highlights that <strong>no matter</strong> what number of (A), the result will not change.",
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4385",
+      "type": "study_question",
+      "attributes": {
+        "id": 4385,
+        "content": "<span class='study-area-input'>____</span>、彼（かれ）は考（かんが）えを変（か）える気（き）がないらしい。",
+        "answer": "いくらちゅうこくしても",
+        "alternate_grammar": [],
+        "kanji_answer": "いくら忠告（ちゅうこく）しても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の数（かず）<strong>に関（かか）わらず</strong>、結果（けっか）は変（か）わらないということを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson4/232/male_audio/230620_1220.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/いくら忠告しても、彼は考えを変える気がないらしい。.mp3",
+        "word_prompt": "忠告（ちゅうこく）する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どんなにちゅうこくしても": {
+            "en": "Natural, but let’s try a similar grammar structure that can express both quantity and degree here.",
+            "es": ""
+          },
+          "いかにちゅうこくしても": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "どんなちゅうこくしても": {
+            "en": "Although similar, could you try a different word that means 'how much'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "ちゅうこくしても": {
+            "en": "Can you try adding an adverb meaning 'how much', which when combined with ～ても, means 'no matter how much'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ちゅうこく": {
+            "en": "We are looking for a grammar point that means 'no matter how much (A), (B)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくらちゅうこくして": {
+            "en": "Cold you try adding a particle that is used to add emphasis at the end?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ちゅうこくしてもかまわない": {
+            "en": "We are looking for a grammar point that means 'no matter how much (A), (B)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>No matter how much advice you give</strong> him, he doesn't seem to want to change his mind.",
+        "nuance_translation": "A phrase that highlights that <strong>no matter</strong> what number of (A), the result will not change.",
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "910",
+      "type": "study_question",
+      "attributes": {
+        "id": 910,
+        "content": "文（ぶん）プロを見（み）つけるまで<strong>いくら</strong>文法（ぶんぽう）を勉強（べんきょう）<span class='study-area-input'>____</span>、理解（りかい）ができなかった。",
+        "answer": "しても",
+        "alternate_grammar": [],
+        "kanji_answer": "しても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の数（かず）<strong>に関（かか）わらず</strong>、結果（けっか）は変（か）わらないということを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Hypothetical, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson4/232/male_audio/230620_1217_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/文プロを見つけるまでいくら文法を勉強しても、理解ができなかった。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "でも": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくらしても": {
+            "en": "いくら is already in the sentence, so using it here would be ungrammatical.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しない": {
+            "en": "We are looking for a grammar point that means 'no matter how much (A), (B)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "Before finding Bunpro, <strong>no matter how much</strong> I studied grammar I couldn't understand it.",
+        "nuance_translation": "A phrase that highlights that <strong>no matter</strong> what number of (A), the result will not change.",
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4377",
+      "type": "study_question",
+      "attributes": {
+        "id": 4377,
+        "content": "<span class='study-area-input'>____</span>、孫（まご）になんでも買（か）ってあげるのは良（よ）くないですよ。",
+        "answer": "いくらかわいくても",
+        "alternate_grammar": [],
+        "kanji_answer": "いくら可愛（かわい）くても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の数（かず）<strong>に関（かか）わらず</strong>、結果（けっか）は変（か）わらないということを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson4/232/male_audio/230620_1218.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/いくら可愛くても、孫になんでも買ってあげるのは良くないですよ。.mp3",
+        "word_prompt": "可愛（かわい）い",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どんなにかわいくても": {
+            "en": "Natural, but let’s try a similar grammar structure that can express both quantity and degree here.",
+            "es": ""
+          },
+          "いかにかわいくても": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "いくらかわくても": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "かわいくても": {
+            "en": "Could you try adding something to the beginning to add the nuance of 'not matter how'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "どんなにかわくても": {
+            "en": "Could you try a different word that has the nuance of 'mow much'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくらかわいても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>No matter how cute</strong> your grandchildren are, it's not good to buy them whatever they want.",
+        "nuance_translation": "A phrase that highlights that <strong>no matter</strong> what number of (A), the result will not change.",
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4384",
+      "type": "study_question",
+      "attributes": {
+        "id": 4384,
+        "content": "<strong>いくら</strong>お金（かね）が<span class='study-area-input'>____</span>、愛（あい）は買（か）えない。",
+        "answer": "あっても",
+        "alternate_grammar": [],
+        "kanji_answer": "あっても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の数（かず）<strong>に関（かか）わらず</strong>、結果（けっか）は変（か）わらないということを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson4/232/male_audio/230620_1219_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/いくらお金があっても、愛は買えない。.mp3",
+        "word_prompt": "ある",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "あれば": {
+            "en": "Could you try using a structure that is often paired with いくら and has the nuance of 'even if'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "なくても": {
+            "en": "Could you try using the prompted verb?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>No matter how much</strong> money <strong>you have</strong>, you can't buy love.",
+        "nuance_translation": "A phrase that highlights that <strong>no matter</strong> what number of (A), the result will not change.",
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4379",
+      "type": "study_question",
+      "attributes": {
+        "id": 4379,
+        "content": "<span class='study-area-input'>____</span>、妻（つま）がすぐに使（つか）ってしまうから困（こま）っている。",
+        "answer": "いくらかせいでも",
+        "alternate_grammar": [],
+        "kanji_answer": "いくら稼（かせ）いでも",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の数（かず）<strong>に関（かか）わらず</strong>、結果（けっか）は変（か）わらないということを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson4/232/male_audio/230620_1218_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/いくら稼いでも、妻がすぐに使ってしまうから困っている。.mp3",
+        "word_prompt": "稼（かせ）ぐ",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "どんなにかせいでも": {
+            "en": "Let’s try a similar grammar structure that can express both quantity and degree here.",
+            "es": ""
+          },
+          "いかにかせいでも": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "いくらかぜいでも": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "いくらかせいても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくらかせんでも": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "かせいでも": {
+            "en": "Can you try adding an adverb meaning 'how much', which when combined with ～ても, means 'no matter how much'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくらかせいで": {
+            "en": "Cold you try adding a particle that is used to add emphasis at the end?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I am having trouble because <strong>no matter how much I earn</strong>, my wife spends it all.",
+        "nuance_translation": "A phrase that highlights that <strong>no matter</strong> what number of (A), the result will not change.",
+        "extra_info": "",
+        "reviewable_id": 232,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "394",
+      "type": "writeup",
+      "attributes": {
+        "id": 394,
+        "body_ja": "<p>「いくら～でも」は、「どんなに〜ても」と似（に）ている表現（ひょうげん）で、「(A) の数（かず）や程度（ていど）がどれくらいでも、(B) の結果（けっか）は変（か）わらない」という意味（いみ）を表（あらわ）します。この「いくら」は、漢字（かんじ）で書（か）くと「幾（いく）ら」（意味（いみ）：どのくらいか）になります。この表現（ひょうげん）を、イ形容詞（けいようし）や動詞（どうし）と使うときは「ても」、名詞（めいし）やナ形容詞（けいようし）と使（つか）うときは「でも」を使（つか）います。</p>\r\n\r\n<p>「いくら〜でも」の文（ぶん）の (B) には、否定文（ひていぶん）が来（く）ることが多（おお）いです。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181137'>\r\n<li data-study-question='181138'>\r\n<li data-study-question='181139'>\r\n<li data-study-question='181140'>\r\n</ul>\r\n\r\n<p>「いくら〜でも」は、「ない」や「ありません」のような否定文（ひていぶん）に使（つか）われることが多（おお）いですが、肯定文（こうていぶん）に使（つか）われることもあります。この場合（ばあい）、(B) には否定的（ひていてき）な内容（ないよう）ではなくても、(A) の量（りょう）や程度（ていど）を考（かんが）えると、意外（いがい）・予想外（よそうがい）だと感（かん）じられる内容（ないよう）が入（はい）ります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181141'>\r\n<li data-study-question='181142'>\r\n</ul>\r\n\r\n<section class=\"funfact\"><h4>豆知識（まめちしき）</h4>\r\n<p>「幾（いく）ら」は、物事（ものごと）の「数（かず）」や「量（りょう）」に焦点（しょうてん）を当（あ）てていますが、「どんなに」は、「種類（しゅるい）」や「状態（じょうたい）」に焦点（しょうてん）を当（あ）てています。そのため、量（りょう）については「いくら」、状態（じょうたい）や様子（ようす）については「どんなに」を使（つか）う方（ほう）がより自然（しぜん）に聞（き）こえることが多（おお）いでしょう。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184149'>\r\n<li data-study-question='184150'></ul>\r\n\r\n<p>こうした小（ちい）さな違（ちが）いはありますが、実際（じっさい）にはどちらもほとんど同（おな）じような場面（ばめん）で使（つか）われます。</p></section>",
+        "body": "<p>In a similar way to どんなに～ても, いくら～でも is regularly translated to 'no matter how (A), (B)'. However, unlike どんな (which is an abbreviation of どのような), いくら is a <span data-term='名詞・めいし'>noun</span> that comes from the kanji 幾（いく）ら, meaning 'how much'. When partnered with <span data-gp-id='174'>ても</span> (with verbs and <span data-gp-id='24'>い-Adjectives</span>), or でも (with nouns and <span data-gp-id='28'>な-Adjectives</span>), the literal meaning means 'however much (A), (B)'.</p>\r\n\r\n<p>With いくら～でも, the (B) part of the phrase will usually highlight something that is being negated, giving the phrase it's 'no matter how much' nuance.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181137'>\r\n<li data-study-question='181138'>\r\n<li data-study-question='181139'>\r\n<li data-study-question='181140'>\r\n</ul>\r\n\r\n<p>Despite this trend of being used in sentences that contain ない or ありません, いくら～でも may also be seen in positive sentences. In these cases, despite not being negative, the (B) phrase will still be something that is surprising/unexpected in some way (due to its extent or amount).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181141'>\r\n<li data-study-question='181142'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>幾（いく）ら places more emphasis on the 'amount' of something, while <span data-gp-id='220'>どんなに</span> places more emphasis on the 'type', or 'style'. Due to this, いくら will be a better choice when the 'volume' of something is being highlighted, while <span data-gp-id='220'>どんなに</span> will sound more natural when the 'state' is being discussed.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184149'>\r\n<li data-study-question='184150'></ul>\r\n\r\n<p>Despite this small difference, いくら and <span data-gp-id='220'>どんなに</span> are used fairly interchangeably in most situations.</p></section>"
+      }
+    },
+    {
+      "id": "497",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 497,
+        "source": "Tobira",
+        "location": "Page 94",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "449",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 449,
+        "site": "Japanese Stack Exchange",
+        "description": "Understanding how to use いくら〜ても in a sentence",
+        "link": "https://japanese.stackexchange.com/questions/42188/%E3%81%84%E3%81%8F%E3%82%89%EF%BC%8Bpronoun%EF%BC%8B%E3%81%A7%E3%82%82-usage-meaning",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "450",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 450,
+        "site": "Japanese For Beginners",
+        "description": "Understanding the multiple uses of いくら〜ても",
+        "link": "https://www.japaneseforbeginners.info/2016/07/ikura-temo-demo.html",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "893",
+      "type": "related_content",
+      "attributes": {
+        "id": 893,
+        "relationship_type": "related",
+        "body": "Both express 'no matter how', but どんなに〜ても is used with qualities or actions, e.g. どんなに忙しくても行きます ('No matter how busy I am, I'll go'), while いくら〜でも is used with amounts or quantities, e.g. いくら頼んでも無理です ('No matter how much you ask, it's impossible').",
+        "first_relatable": {
+          "id": 220,
+          "slug": "どんなに-ても",
+          "title": "どんなに〜ても",
+          "meaning": "No matter how",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 232,
+          "slug": "いくら-でも",
+          "title": "いくら〜でも",
+          "meaning": "No matter how (much)",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1144",
+      "type": "related_content",
+      "attributes": {
+        "id": 1144,
+        "relationship_type": "related",
+        "body": "どうしても and いくら〜でも both express emphasis but in different ways. どうしても is used when something must happen or when the speaker is determined, e.g. どうしても行きたい ('I want to go no matter what'). いくら〜でも means 'no matter how much' or 'how many', often used with amounts or degrees to show that the outcome won't change, e.g. いくら頼んでも無理です ('No matter how much you ask, it's impossible').",
+        "first_relatable": {
+          "id": 491,
+          "slug": "どうしても",
+          "title": "どうしても",
+          "meaning": "Regardless of, No matter what",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 232,
+          "slug": "いくら-でも",
+          "title": "いくら〜でも",
+          "meaning": "No matter how (much)",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

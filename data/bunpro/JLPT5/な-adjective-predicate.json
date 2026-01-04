@@ -1,0 +1,887 @@
+{
+  "data": {
+    "id": "952",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 952,
+      "level": "JLPT5",
+      "lesson_id": 6,
+      "part_of_speech": "名詞",
+      "register": "一般",
+      "word_type": "形容動詞",
+      "slug": "な-adjective-predicate",
+      "nuance": "一般（いっぱん）的（てき）には<strong>単独（たんどく）</strong>、又（また）は<strong>文末（ぶんまつ）</strong>で主語（しゅご）の説明（せつめい）をするときに使（つか）われる<strong>形容動詞（けいようどうし）</strong>。",
+      "grammar_order": 66,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 40,
+        "title": "だった・でした",
+        "slug": "だった-でした"
+      },
+      "previous_grammar_point": {
+        "id": 951,
+        "title": "い-Adjective (Predicate)",
+        "slug": "い-adjective-predicate"
+      },
+      "lesson_count": "3/13",
+      "title": "な-Adjective だ",
+      "furigana": "な-Adjective + だ (Predicate)",
+      "meaning": "な-Adjective (Predicate)",
+      "nuance_translation": "A <strong>non-conjugating adjective form</strong> that often <strong>appears alone</strong>, or <strong>at the end of sentences</strong> when describing the subject.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "［な］Adjective + <strong><span class='gp-popout' data-gp-id='2'>です</span></strong><br><br>Examples:<br>静（しず）か + <strong><span class='gp-popout' data-gp-id='2'>です</span></strong><br>元気（げんき） + <strong><span class='gp-popout' data-gp-id='2'>です</span></strong>",
+      "casual_structure": "［な］Adjective + (<strong><span class='gp-popout' data-gp-id='1'>だ</span></strong>)<br><br>Examples:<br>静（しず）か + <strong><span class='gp-popout' data-gp-id='1'>だ</span></strong><br>元気（げんき） + <strong><span class='gp-popout' data-gp-id='1'>だ</span></strong>",
+      "part_of_speech_translation": "Noun",
+      "register_translation": "Standard",
+      "word_type_translation": "Adjectival Noun",
+      "discourse_link": "https://community.bunpro.jp/t/adjective-grammar-discussion/48017",
+      "metadata": "な-adjective, na-adjective, adjective, な, na, noun, adjectival noun, predicate, statement word"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154952",
+            "type": "study_question"
+          },
+          {
+            "id": "154953",
+            "type": "study_question"
+          },
+          {
+            "id": "154954",
+            "type": "study_question"
+          },
+          {
+            "id": "10105",
+            "type": "study_question"
+          },
+          {
+            "id": "10064",
+            "type": "study_question"
+          },
+          {
+            "id": "10058",
+            "type": "study_question"
+          },
+          {
+            "id": "154955",
+            "type": "study_question"
+          },
+          {
+            "id": "10066",
+            "type": "study_question"
+          },
+          {
+            "id": "10056",
+            "type": "study_question"
+          },
+          {
+            "id": "10057",
+            "type": "study_question"
+          },
+          {
+            "id": "10063",
+            "type": "study_question"
+          },
+          {
+            "id": "10059",
+            "type": "study_question"
+          },
+          {
+            "id": "10062",
+            "type": "study_question"
+          },
+          {
+            "id": "10061",
+            "type": "study_question"
+          },
+          {
+            "id": "10060",
+            "type": "study_question"
+          },
+          {
+            "id": "10065",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "66",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1353",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": []
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154952",
+      "type": "study_question",
+      "attributes": {
+        "id": 154952,
+        "content": "素敵（すてき）。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/素敵。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It's <strong>wonderful</strong>.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 952,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154953",
+      "type": "study_question",
+      "attributes": {
+        "id": 154953,
+        "content": "彼氏（かれし）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>素敵（すてき）<span class=\"gp-popout\" data-gp-id=\"2\"><strong>です</strong></span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼氏は素敵です。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "My boyfriend is <strong>lovely</strong>.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 952,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154954",
+      "type": "study_question",
+      "attributes": {
+        "id": 154954,
+        "content": "有名（ゆうめい）<span class='study-area-input'>____</span>駅（えき）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>汚（きたな）<span class=\"gp-popout\" data-gp-id=\"24\">い</span><span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "な",
+        "alternate_grammar": [],
+        "kanji_answer": "な",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/有名な駅は汚いです。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Popular</strong> stations are dirty. (In general)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 952,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10105",
+      "type": "study_question",
+      "attributes": {
+        "id": 10105,
+        "content": "<span class='vocab-popout' data-vocab-id='464'>夜（よる）</span><span class='gp-popout' data-gp-id='6'>の</span><span class='vocab-popout' data-vocab-id='755'>海（うみ）</span><span class='gp-popout' data-gp-id='3'>は</span><strong><span class='vocab-popout' data-vocab-id='1057'>静（しず）か</span><span class='gp-popout' data-gp-id='1'>だ</span></strong>。<br><span class='vocab-popout' data-vocab-id='464'>夜（よる）</span><span class='gp-popout' data-gp-id='6'>の</span><span class='vocab-popout' data-vocab-id='755'>海（うみ）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "しずかです",
+        "alternate_grammar": [],
+        "kanji_answer": "静（しず）かです",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には<strong>単独（たんどく）</strong>、又（また）は<strong>文末（ぶんまつ）</strong>で主語（しゅご）の説明（せつめい）をするときに使（つか）われる<strong>形容動詞（けいようどうし）</strong>。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/952/male_audio/04-よるのうみはしずかだ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/夜の海は静かだ。夜の海は静かです。.mp3",
+        "word_prompt": "静（しず）か",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しずかだ": {
+            "en": "Let's try a more polite conjugation.",
+            "es": "Prueba con una conjugación más formal.",
+            "fr": "Essayons une conjugaison plus polie.",
+            "id": "Mari coba bentuk konjugasi yang lebih sopan."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The night sea is <strong>quiet</strong>.",
+        "nuance_translation": "A <strong>non-conjugating adjective form</strong> that often <strong>appears alone</strong>, or <strong>at the end of sentences</strong> when describing the subject.",
+        "extra_info": "",
+        "reviewable_id": 952,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10064",
+      "type": "study_question",
+      "attributes": {
+        "id": 10064,
+        "content": "<span class='gp-popout vocab-popout' data-gp-id='11' data-vocab-id='149'>それ</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。<br><span class='gp-popout vocab-popout' data-gp-id='11' data-vocab-id='149'>それ</span><span class='gp-popout' data-gp-id='3'>は</span><strong><span class='gp-popout vocab-popout' data-gp-id='28' data-vocab-id='343'>便利（べんり）</span><span class='gp-popout' data-gp-id='2'>です</span></strong>。",
+        "answer": "べんりだ",
+        "alternate_grammar": [
+          "べんりだ"
+        ],
+        "kanji_answer": "便利（べんり）だ",
+        "kanji_alt_grammar": [
+          "便利（べんり）だ"
+        ],
+        "nuance": "一般（いっぱん）的（てき）には<strong>単独（たんどく）</strong>、又（また）は<strong>文末（ぶんまつ）</strong>で主語（しゅご）の説明（せつめい）をするときに使（つか）われる<strong>形容動詞（けいようどうし）</strong>。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/952/male_audio/02-それは便利だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/それは便利だ。それは便利です。.mp3",
+        "word_prompt": "便利（べんり）",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "べんりな": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "べんりです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "べんり": {
+            "en": "Let's add something at the end here.",
+            "es": "Intenta agregar algo al final.",
+            "fr": "Peut-on ajouter quelque chose à la fin ici ?",
+            "id": "Mari tambahkan sesuatu di bagian akhir."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That is <strong>convenient</strong>.",
+        "nuance_translation": "A <strong>non-conjugating adjective form</strong> that often <strong>appears alone</strong>, or <strong>at the end of sentences</strong> when describing the subject.",
+        "extra_info": "",
+        "reviewable_id": 952,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10058",
+      "type": "study_question",
+      "attributes": {
+        "id": 10058,
+        "content": "<span class='vocab-popout' data-vocab-id='502'>子供（こども）</span>たち<span class='gp-popout' data-gp-id='3'>は</span><strong><span class='vocab-popout' data-vocab-id='351'>元気（げんき）</span><span class='gp-popout' data-gp-id='1'>だ</span></strong>。<br><span class='vocab-popout' data-vocab-id='502'>子供（こども）</span>たち<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "げんきです",
+        "alternate_grammar": [],
+        "kanji_answer": "元気（げんき）です",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には<strong>単独（たんどく）</strong>、又（また）は<strong>文末（ぶんまつ）</strong>で主語（しゅご）の説明（せつめい）をするときに使（つか）われる<strong>形容動詞（けいようどうし）</strong>。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/952/male_audio/08-子供たちは元気だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/子供たちは元気だ。子供たちは元気です。.mp3",
+        "word_prompt": "元気（げんき）",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "げんきな": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "げんき": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "げんきだ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The children are <strong>lively</strong>.",
+        "nuance_translation": "A <strong>non-conjugating adjective form</strong> that often <strong>appears alone</strong>, or <strong>at the end of sentences</strong> when describing the subject.",
+        "extra_info": "",
+        "reviewable_id": 952,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154955",
+      "type": "study_question",
+      "attributes": {
+        "id": 154955,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"30\">この</span>有名（ゆうめい）<span class='study-area-input'>____</span>駅（えき）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>汚（きたな）<span class=\"gp-popout\" data-gp-id=\"24\">い</span><span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "な",
+        "alternate_grammar": [],
+        "kanji_answer": "な",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/この有名な駅が汚いです。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This <strong>popular</strong> station is dirty. (Compared to other popular stations)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 952,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10066",
+      "type": "study_question",
+      "attributes": {
+        "id": 10066,
+        "content": "さいき<span class='vocab-popout' data-vocab-id='113'>さん</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。<br>さいき<span class='vocab-popout' data-vocab-id='113'>さん</span><span class='gp-popout' data-gp-id='3'>は</span><strong><span class='vocab-popout' data-vocab-id='950'>親切（しんせつ）</span><span class='gp-popout' data-gp-id='2'>です</span></strong>。",
+        "answer": "しんせつだ",
+        "alternate_grammar": [
+          "しんせつだ"
+        ],
+        "kanji_answer": "<ruby>親切<rp>（</rp><rt>しんせつ</rt><rp>）</rp></ruby>だ",
+        "kanji_alt_grammar": [
+          "<ruby>親切<rp>（</rp><rt>しんせつ</rt><rp>）</rp></ruby>だ"
+        ],
+        "nuance": "一般（いっぱん）的（てき）には<strong>単独（たんどく）</strong>、又（また）は<strong>文末（ぶんまつ）</strong>で主語（しゅご）の説明（せつめい）をするときに使（つか）われる<strong>形容動詞（けいようどうし）</strong>。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/952/male_audio/10-斉木さんは親切だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/さいきさんは親切だ。さいきさんは親切です。.mp3",
+        "word_prompt": "親切（しんせつ）",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しんせつな": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "しんせつです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "しんせつ": {
+            "en": "Let's add something at the end here.",
+            "es": "Intenta agregar algo al final.",
+            "fr": "Peut-on ajouter quelque chose à la fin ici ?",
+            "id": "Mari tambahkan sesuatu di bagian akhir."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Saiki is <strong>kind</strong>.",
+        "nuance_translation": "A <strong>non-conjugating adjective form</strong> that often <strong>appears alone</strong>, or <strong>at the end of sentences</strong> when describing the subject.",
+        "extra_info": "",
+        "reviewable_id": 952,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10056",
+      "type": "study_question",
+      "attributes": {
+        "id": 10056,
+        "content": "<span class='vocab-popout' data-vocab-id='564'>彼（かれ）</span><span class='gp-popout' data-gp-id='3'>は</span><strong><span class='vocab-popout' data-vocab-id='1057'>静（しず）か</span><span class='gp-popout' data-gp-id='1'>だ</span></strong>。<br><span class='vocab-popout' data-vocab-id='564'>彼（かれ）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "しずかです",
+        "alternate_grammar": [],
+        "kanji_answer": "静（しず）かです",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には<strong>単独（たんどく）</strong>、又（また）は<strong>文末（ぶんまつ）</strong>で主語（しゅご）の説明（せつめい）をするときに使（つか）われる<strong>形容動詞（けいようどうし）</strong>。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/952/male_audio/09-彼は静かだ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼は静かだ。彼は静かです。.mp3",
+        "word_prompt": "静（しず）か",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しずかな": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "しずか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "しずかだ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He is <strong>quiet</strong>.",
+        "nuance_translation": "A <strong>non-conjugating adjective form</strong> that often <strong>appears alone</strong>, or <strong>at the end of sentences</strong> when describing the subject.",
+        "extra_info": "",
+        "reviewable_id": 952,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10057",
+      "type": "study_question",
+      "attributes": {
+        "id": 10057,
+        "content": "<span class='vocab-popout' data-vocab-id='755'>海（うみ）</span><span class='gp-popout' data-gp-id='10'>が</span><strong><span class='vocab-popout' data-vocab-id='882'>綺麗（きれい）</span><span class='gp-popout' data-gp-id='1'>だ</span></strong>。<br><span class='vocab-popout' data-vocab-id='755'>海（うみ）</span><span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>。",
+        "answer": "きれいです",
+        "alternate_grammar": [],
+        "kanji_answer": "綺麗（きれい）です",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には<strong>単独（たんどく）</strong>、又（また）は<strong>文末（ぶんまつ）</strong>で主語（しゅご）の説明（せつめい）をするときに使（つか）われる<strong>形容動詞（けいようどうし）</strong>。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/952/male_audio/11-海がきれいだ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/海が綺麗だ。海が綺麗です。.mp3",
+        "word_prompt": "綺麗（きれい）",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きれいな": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きれい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "きれいだ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The sea is <strong>beautiful</strong>.",
+        "nuance_translation": "A <strong>non-conjugating adjective form</strong> that often <strong>appears alone</strong>, or <strong>at the end of sentences</strong> when describing the subject.",
+        "extra_info": "",
+        "reviewable_id": 952,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10063",
+      "type": "study_question",
+      "attributes": {
+        "id": 10063,
+        "content": "<span class='vocab-popout' data-vocab-id='309'>今日（きょう）</span>、<span class='vocab-popout' data-vocab-id='243'>レストラン</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。<br><span class='vocab-popout' data-vocab-id='309'>今日（きょう）</span>、<span class='vocab-popout' data-vocab-id='243'>レストラン</span><span class='gp-popout' data-gp-id='3'>は</span><span class='vocab-popout' data-vocab-id='976'><strong>賑（にぎ）やか</span><span class='gp-popout' data-gp-id='2'>です</span></strong>。",
+        "answer": "にぎやかだ",
+        "alternate_grammar": [
+          "にぎやかだ"
+        ],
+        "kanji_answer": "賑（にぎ）やかだ",
+        "kanji_alt_grammar": [
+          "賑（にぎ）やかだ"
+        ],
+        "nuance": "一般（いっぱん）的（てき）には<strong>単独（たんどく）</strong>、又（また）は<strong>文末（ぶんまつ）</strong>で主語（しゅご）の説明（せつめい）をするときに使（つか）われる<strong>形容動詞（けいようどうし）</strong>。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/952/male_audio/06-今日レストランはにぎやかだ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/今日、レストランは賑やかだ。今日、レストランは賑やかです。.mp3",
+        "word_prompt": "賑（にぎ）やか",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にぎやかな": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "にぎやかです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "にぎやか": {
+            "en": "Let's add something at the end here.",
+            "es": "Intenta agregar algo al final.",
+            "fr": "Peut-on ajouter quelque chose à la fin ici ?",
+            "id": "Mari tambahkan sesuatu di bagian akhir."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Today, the restaurant is <strong>bustling</strong>.",
+        "nuance_translation": "A <strong>non-conjugating adjective form</strong> that often <strong>appears alone</strong>, or <strong>at the end of sentences</strong> when describing the subject.",
+        "extra_info": "",
+        "reviewable_id": 952,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10059",
+      "type": "study_question",
+      "attributes": {
+        "id": 10059,
+        "content": "<span class='gp-popout vocab-popout' data-gp-id='5' data-vocab-id='95'>これ</span><span class='gp-popout' data-gp-id='3'>は</span><strong><span class='vocab-popout' data-vocab-id='864'>簡単（かんたん）</span><span class='gp-popout' data-gp-id='1'>だ</span></strong>。<br><span class='gp-popout vocab-popout' data-gp-id='5' data-vocab-id='95'>これ</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "かんたんです",
+        "alternate_grammar": [],
+        "kanji_answer": "簡単（かんたん）です",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には<strong>単独（たんどく）</strong>、又（また）は<strong>文末（ぶんまつ）</strong>で主語（しゅご）の説明（せつめい）をするときに使（つか）われる<strong>形容動詞（けいようどうし）</strong>。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/952/male_audio/01-これは簡単だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これは簡単だ。これは簡単です。.mp3",
+        "word_prompt": "簡単（かんたん）",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かんたんな": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "かんたん": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "かんたんだ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This is <strong>easy</strong>.",
+        "nuance_translation": "A <strong>non-conjugating adjective form</strong> that often <strong>appears alone</strong>, or <strong>at the end of sentences</strong> when describing the subject.",
+        "extra_info": "",
+        "reviewable_id": 952,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10062",
+      "type": "study_question",
+      "attributes": {
+        "id": 10062,
+        "content": "りゅうじ<span class='gp-popout' data-gp-id='6'>の</span><span class='vocab-popout' data-vocab-id='1018'>部屋（へや）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。<br>りゅうじ<span class='gp-popout' data-gp-id='6'>の</span><span class='vocab-popout' data-vocab-id='1018'>部屋（へや）</span><span class='gp-popout' data-gp-id='3'>は<strong></span><span class='vocab-popout' data-vocab-id='882'>綺麗（きれい）</span><span class='gp-popout' data-gp-id='2'>です</span></strong>。",
+        "answer": "きれいだ",
+        "alternate_grammar": [
+          "きれいだ"
+        ],
+        "kanji_answer": "綺麗（きれい）だ",
+        "kanji_alt_grammar": [
+          "綺麗（きれい）だ"
+        ],
+        "nuance": "一般（いっぱん）的（てき）には<strong>単独（たんどく）</strong>、又（また）は<strong>文末（ぶんまつ）</strong>で主語（しゅご）の説明（せつめい）をするときに使（つか）われる<strong>形容動詞（けいようどうし）</strong>。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/952/male_audio/05-りゅうじの部屋は綺麗だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/りゅうじの部屋は綺麗だ。りゅうじの部屋は綺麗です。.mp3",
+        "word_prompt": "綺麗（きれい）",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きれいな": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きれいです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "きれい": {
+            "en": "Let's add something at the end here.",
+            "es": "Intenta agregar algo al final.",
+            "fr": "Peut-on ajouter quelque chose à la fin ici ?",
+            "id": "Mari tambahkan sesuatu di bagian akhir."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Ryuuji's room is <strong>clean</strong>.",
+        "nuance_translation": "A <strong>non-conjugating adjective form</strong> that often <strong>appears alone</strong>, or <strong>at the end of sentences</strong> when describing the subject.",
+        "extra_info": "",
+        "reviewable_id": 952,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10061",
+      "type": "study_question",
+      "attributes": {
+        "id": 10061,
+        "content": "<span class='vocab-popout' data-vocab-id='305'>今（いま）</span>、<strong><span class='vocab-popout' data-vocab-id='662'>暇（ひま）</span></strong><span class='gp-popout' data-gp-id='8'>か</span>。<br><span class='vocab-popout' data-vocab-id='305'>今（いま）</span>、<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "ひまです",
+        "alternate_grammar": [
+          "ひまです"
+        ],
+        "kanji_answer": "暇（ひま）です",
+        "kanji_alt_grammar": [
+          "暇（ひま）です"
+        ],
+        "nuance": "一般（いっぱん）的（てき）には<strong>単独（たんどく）</strong>、又（また）は<strong>文末（ぶんまつ）</strong>で主語（しゅご）の説明（せつめい）をするときに使（つか）われる<strong>形容動詞（けいようどうし）</strong>。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/952/male_audio/07-今暇化.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/今、暇か。今、暇ですか。.mp3",
+        "word_prompt": "暇（ひま）",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ひまだ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "ひま": {
+            "en": "Let's add something at the end here.",
+            "es": "Intenta agregar algo al final.",
+            "fr": "Peut-on ajouter quelque chose à la fin ici ?",
+            "id": "Mari tambahkan sesuatu di bagian akhir."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Are you <strong>free</strong> right now?",
+        "nuance_translation": "A <strong>non-conjugating adjective form</strong> that often <strong>appears alone</strong>, or <strong>at the end of sentences</strong> when describing the subject.",
+        "extra_info": "",
+        "reviewable_id": 952,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10060",
+      "type": "study_question",
+      "attributes": {
+        "id": 10060,
+        "content": "<span class='gp-popout vocab-popout' data-gp-id='11' data-vocab-id='149'>それ</span><span class='gp-popout' data-gp-id='3'>は</span><strong><span class='vocab-popout' data-vocab-id='474'>大変（たいへん）</span><span class='gp-popout' data-gp-id='1'>だ</span></strong>。<br><span class='gp-popout vocab-popout' data-gp-id='11' data-vocab-id='149'>それ</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "たいへんです",
+        "alternate_grammar": [],
+        "kanji_answer": "大変（たいへん）です",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には<strong>単独（たんどく）</strong>、又（また）は<strong>文末（ぶんまつ）</strong>で主語（しゅご）の説明（せつめい）をするときに使（つか）われる<strong>形容動詞（けいようどうし）</strong>。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/952/male_audio/03-それは大変だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/それは大変だ。それは大変です。.mp3",
+        "word_prompt": "大変（たいへん）",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たいへんな": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "たいへんか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "たいへんだ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That is <strong>awful</strong>.",
+        "nuance_translation": "A <strong>non-conjugating adjective form</strong> that often <strong>appears alone</strong>, or <strong>at the end of sentences</strong> when describing the subject.",
+        "extra_info": "",
+        "reviewable_id": 952,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10065",
+      "type": "study_question",
+      "attributes": {
+        "id": 10065,
+        "content": "<span class='vocab-popout' data-vocab-id='849'>私（わたし）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。<br><span class='vocab-popout' data-vocab-id='849'>私（わたし）</span><span class='gp-popout' data-gp-id='3'>は</span><strong><span class='vocab-popout' data-vocab-id='662'>暇（ひま）</span><span class='gp-popout' data-gp-id='2'>です</span></strong>。",
+        "answer": "ひまだ",
+        "alternate_grammar": [
+          "ひまだ"
+        ],
+        "kanji_answer": "暇（ひま）だ",
+        "kanji_alt_grammar": [
+          "暇（ひま）だ"
+        ],
+        "nuance": "一般（いっぱん）的（てき）には<strong>単独（たんどく）</strong>、又（また）は<strong>文末（ぶんまつ）</strong>で主語（しゅご）の説明（せつめい）をするときに使（つか）われる<strong>形容動詞（けいようどうし）</strong>。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/952/male_audio/12-私は暇だ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私は暇だ。私は暇です。.mp3",
+        "word_prompt": "暇（ひま）",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ひまな": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "ひまです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "ひま": {
+            "en": "Let's add something at the end here.",
+            "es": "Intenta agregar algo al final.",
+            "fr": "Peut-on ajouter quelque chose à la fin ici ?",
+            "id": "Mari tambahkan sesuatu di bagian akhir."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I am <strong>free</strong>.",
+        "nuance_translation": "A <strong>non-conjugating adjective form</strong> that often <strong>appears alone</strong>, or <strong>at the end of sentences</strong> when describing the subject.",
+        "extra_info": "",
+        "reviewable_id": 952,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "66",
+      "type": "writeup",
+      "attributes": {
+        "id": 66,
+        "body_ja": null,
+        "body": "<p>A <span data-term='述語・じゅつご'>predicate</span> is a word that describes the topic/subject of a sentence. The Japanese equivalent of this is a 述語（じゅつご）, which literally means 'statement word'. As a <span data-term='述語・じゅつご'>predicate</span>, <span data-gp-id='28'>な-Adjectives</span> can appear by themselves (when the word they are describing does not need to be stated), or they may be used at the end of a sentence.</p>\r\n\r\n<p>It is important to remember that all <span data-gp-id='28'>な-Adjectives</span> can also function as nouns, and therefore tend to sound more like a noun than an adjective, when used as a <span data-term='述語・じゅつご'>predicate</span>.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154952'>\r\n<li data-study-question='154953'></ul>\r\n\r\n<p>When there are no other words apart from the adjective itself, it comes across similarly to 'It's pretty', or 'It's hated', and similar expressions in English. We just have to guess what the 'it' is from context.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>Unlike <span data-gp-id='24'>い-Adjectives</span>, <span data-gp-id='28'>な-Adjectives</span> change form depending on where they are in the sentence. At the end of a sentence, they will always be followed by <span data-gp-id='1'>だ</span>, or <span data-gp-id='2'>です</span> (except in casual conversation where <span data-gp-id='1'>だ</span> is omitted). However, when used before the word they are describing, they will always be followed by <span data-gp-id='28'>な</span>. Hence the name <span data-gp-id='28'>な-Adjectives</span>.</p>\r\n\r\n<p></section>In many sentences, either <span data-gp-id='3'>は</span> or <span data-gp-id='10'>が</span> could be used to mark the word/words that the <span data-term='述語・じゅつご'>predicate</span> is describing. Which one sounds more natural will depend on many factors. In general, if you are specifically pointing out something as being different from other things in the same category, <span data-gp-id='10'>が</span> will be used.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154954'>\r\n<li data-study-question='154955'></ul>\r\n\r\n<p>In this example, <span data-gp-id='10'>が</span> is distinguishing a specific station as having a unique level of dirtiness compared to others. <span data-gp-id='3'>は</span> would sound unnatural in this type of sentence.</p>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>Most <span data-gp-id='28'>な-Adjectives</span> are words of foreign (Chinese/English) origin.</p></section>"
+      }
+    },
+    {
+      "id": "1353",
+      "type": "related_content",
+      "attributes": {
+        "id": 1353,
+        "relationship_type": "related",
+        "body": "な-Adjectives describe the state or appearance of nouns, like 好きな本 ('a book I like'). They can also form the predicate with だ (or the polite form です) to describe the main topic, as in それは大変だ ('That's tough'). Note that な-Adjective だ alone can form a complete sentence (e.g., 大変だ means 'It's tough' without needing an equivalent of 'it').",
+        "first_relatable": {
+          "id": 952,
+          "slug": "な-adjective-predicate",
+          "title": "な-Adjective だ",
+          "meaning": "な-Adjective (Predicate)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 28,
+          "slug": "な-adjectives",
+          "title": "な-Adjectives",
+          "meaning": "Adjectives that are also nouns",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

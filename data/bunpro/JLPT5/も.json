@@ -1,0 +1,1024 @@
+{
+  "data": {
+    "id": "4",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 4,
+      "level": "JLPT5",
+      "lesson_id": 1,
+      "part_of_speech": "助詞",
+      "register": "一般",
+      "word_type": "係助詞",
+      "slug": "も",
+      "nuance": "<strong>新（あたら）しい</strong>情報（じょうほう）の追加（ついか）や、何（なに）か<strong>驚（おどろ）くべき</strong>情報（じょうほう）を強調（きょうちょう）したいときに使（つか）われる構造（こうぞう）。",
+      "grammar_order": 4,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 5,
+        "title": "これ",
+        "slug": "これ"
+      },
+      "previous_grammar_point": {
+        "id": 3,
+        "title": "は",
+        "slug": "は"
+      },
+      "lesson_count": "4/12",
+      "title": "も",
+      "furigana": "も",
+      "meaning": "Also, Too, As well, Even, Either, Neither",
+      "nuance_translation": "A structure that highlights <strong>additional</strong>, sometimes <strong>surprising</strong> information.",
+      "rare_kanji_warning": null,
+      "caution": "も's translation will change, depending on if the sentence is positive, or negative",
+      "polite_structure": null,
+      "casual_structure": "Noun + <strong>も</strong>",
+      "part_of_speech_translation": "Particle",
+      "register_translation": "Standard",
+      "word_type_translation": "Linking Particle",
+      "discourse_link": "https://community.bunpro.jp/t/discussion-topic/476",
+      "metadata": "も, mo, particle, adverbial particle, linking particle"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154692",
+            "type": "study_question"
+          },
+          {
+            "id": "154691",
+            "type": "study_question"
+          },
+          {
+            "id": "154693",
+            "type": "study_question"
+          },
+          {
+            "id": "607",
+            "type": "study_question"
+          },
+          {
+            "id": "4",
+            "type": "study_question"
+          },
+          {
+            "id": "606",
+            "type": "study_question"
+          },
+          {
+            "id": "1501",
+            "type": "study_question"
+          },
+          {
+            "id": "1499",
+            "type": "study_question"
+          },
+          {
+            "id": "1498",
+            "type": "study_question"
+          },
+          {
+            "id": "1495",
+            "type": "study_question"
+          },
+          {
+            "id": "1496",
+            "type": "study_question"
+          },
+          {
+            "id": "1497",
+            "type": "study_question"
+          },
+          {
+            "id": "1500",
+            "type": "study_question"
+          },
+          {
+            "id": "1502",
+            "type": "study_question"
+          },
+          {
+            "id": "1503",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "4",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "14",
+            "type": "offline_resource"
+          },
+          {
+            "id": "32",
+            "type": "offline_resource"
+          },
+          {
+            "id": "77",
+            "type": "offline_resource"
+          },
+          {
+            "id": "94",
+            "type": "offline_resource"
+          },
+          {
+            "id": "2155",
+            "type": "offline_resource"
+          },
+          {
+            "id": "735",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1236",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1524",
+            "type": "related_content"
+          },
+          {
+            "id": "1477",
+            "type": "related_content"
+          },
+          {
+            "id": "24",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "7",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154692",
+      "type": "study_question",
+      "attributes": {
+        "id": 154692,
+        "content": "私（わたし）<span class='study-area-input'>____</span>先生（せんせい）<span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私も先生です。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I'm <strong>also</strong> a teacher.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 4,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154691",
+      "type": "study_question",
+      "attributes": {
+        "id": 154691,
+        "content": "私（わたし）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>、先生（せんせい）<span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私は、先生です。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I am a teacher.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 4,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154693",
+      "type": "study_question",
+      "attributes": {
+        "id": 154693,
+        "content": "車（くるま）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>速（はや）い、で<span class='study-area-input'>____</span>危（あぶ）ない。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/車は早い、でも危ない。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>While</strong> cars are fast, they are <strong>also</strong> dangerous.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 4,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "607",
+      "type": "study_question",
+      "attributes": {
+        "id": 607,
+        "content": "彼（かれ）<span class='study-area-input'>____</span>先生（せんせい）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>新（あたら）しい</strong>情報（じょうほう）の追加（ついか）や、何（なに）か<strong>驚（おどろ）くべき</strong>情報（じょうほう）を強調（きょうちょう）したいときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/4/male_audio/07-彼も先生です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼も先生です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "もう": {
+            "en": "Close! This grammar structure does not have an う at the end.",
+            "es": "¡Casi! Esta estructura gramatical no acaba en う.",
+            "fr": "Presque ! Cette structure grammaticale ne se termine pas par う.",
+            "id": "Hampir! Struktur tata bahasa ini tidak memiliki う di akhir."
+          }
+        },
+        "translation": "He is <strong>also</strong> a teacher.",
+        "nuance_translation": "A structure that highlights <strong>additional</strong>, sometimes <strong>surprising</strong> information.",
+        "extra_info": "",
+        "reviewable_id": 4,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4",
+      "type": "study_question",
+      "attributes": {
+        "id": 4,
+        "content": "あなた<span class='study-area-input'>____</span>トム<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>新（あたら）しい</strong>情報（じょうほう）の追加（ついか）や、何（なに）か<strong>驚（おどろ）くべき</strong>情報（じょうほう）を強調（きょうちょう）したいときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/4/male_audio/01-あなたもトムです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あなたもトムです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "もう": {
+            "en": "Close! This grammar structure does not have an う at the end.",
+            "es": "¡Casi! Esta estructura gramatical no acaba en う.",
+            "fr": "Presque ! Cette structure grammaticale ne se termine pas par う.",
+            "id": "Hampir! Struktur tata bahasa ini tidak memiliki う di akhir."
+          }
+        },
+        "translation": "You are <strong>also</strong> Tom.",
+        "nuance_translation": "A structure that highlights <strong>additional</strong>, sometimes <strong>surprising</strong> information.",
+        "extra_info": "",
+        "reviewable_id": 4,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "606",
+      "type": "study_question",
+      "attributes": {
+        "id": 606,
+        "content": "私（わたし）<span class='study-area-input'>____</span>。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>新（あたら）しい</strong>情報（じょうほう）の追加（ついか）や、何（なに）か<strong>驚（おどろ）くべき</strong>情報（じょうほう）を強調（きょうちょう）したいときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/4/male_audio/03-わたしも.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私も。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "もう": {
+            "en": "Close! This grammar structure does not have an う at the end.",
+            "es": "¡Casi! Esta estructura gramatical no acaba en う.",
+            "fr": "Presque ! Cette structure grammaticale ne se termine pas par う.",
+            "id": "Hampir! Struktur tata bahasa ini tidak memiliki う di akhir."
+          }
+        },
+        "translation": "Me <strong>too</strong>.",
+        "nuance_translation": "A structure that highlights <strong>additional</strong>, sometimes <strong>surprising</strong> information.",
+        "extra_info": "",
+        "reviewable_id": 4,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1501",
+      "type": "study_question",
+      "attributes": {
+        "id": 1501,
+        "content": "服（ふく）<span class='study-area-input'>____</span>古（ふる）<span class='gp-popout' data-gp-id='24'>い</span>。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>新（あたら）しい</strong>情報（じょうほう）の追加（ついか）や、何（なに）か<strong>驚（おどろ）くべき</strong>情報（じょうほう）を強調（きょうちょう）したいときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/4/male_audio/10-服も古い.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/服も古い。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "もう": {
+            "en": "Close! This grammar structure does not have an う at the end.",
+            "es": "¡Casi! Esta estructura gramatical no acaba en う.",
+            "fr": "Presque ! Cette structure grammaticale ne se termine pas par う.",
+            "id": "Hampir! Struktur tata bahasa ini tidak memiliki う di akhir."
+          }
+        },
+        "translation": "The clothes, <strong>too</strong>, are old.",
+        "nuance_translation": "A structure that highlights <strong>additional</strong>, sometimes <strong>surprising</strong> information.",
+        "extra_info": "",
+        "reviewable_id": 4,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1499",
+      "type": "study_question",
+      "attributes": {
+        "id": 1499,
+        "content": "君（きみ）<span class='study-area-input'>____</span>、忙（いそが）し<span class='gp-popout' data-gp-id='24'>い</span>。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>新（あたら）しい</strong>情報（じょうほう）の追加（ついか）や、何（なに）か<strong>驚（おどろ）くべき</strong>情報（じょうほう）を強調（きょうちょう）したいときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/4/male_audio/05-君も忙しい.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/君も、忙しい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "もう": {
+            "en": "Close! This grammar structure does not have an う at the end.",
+            "es": "¡Casi! Esta estructura gramatical no acaba en う.",
+            "fr": "Presque ! Cette structure grammaticale ne se termine pas par う.",
+            "id": "Hampir! Struktur tata bahasa ini tidak memiliki う di akhir."
+          }
+        },
+        "translation": "You are <strong>also</strong> busy.",
+        "nuance_translation": "A structure that highlights <strong>additional</strong>, sometimes <strong>surprising</strong> information.",
+        "extra_info": "",
+        "reviewable_id": 4,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1498",
+      "type": "study_question",
+      "attributes": {
+        "id": 1498,
+        "content": "ノート<span class='study-area-input'>____</span>必要（ひつよう）。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>新（あたら）しい</strong>情報（じょうほう）の追加（ついか）や、何（なに）か<strong>驚（おどろ）くべき</strong>情報（じょうほう）を強調（きょうちょう）したいときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/4/male_audio/04-ノートも必要.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ノートも必要。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "もう": {
+            "en": "Close! This grammar structure does not have an う at the end.",
+            "es": "¡Casi! Esta estructura gramatical no acaba en う.",
+            "fr": "Presque ! Cette structure grammaticale ne se termine pas par う.",
+            "id": "Hampir! Struktur tata bahasa ini tidak memiliki う di akhir."
+          }
+        },
+        "translation": "A notebook is <strong>also</strong> necessary. (Needed, required)",
+        "nuance_translation": "A structure that highlights <strong>additional</strong>, sometimes <strong>surprising</strong> information.",
+        "extra_info": "",
+        "reviewable_id": 4,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1495",
+      "type": "study_question",
+      "attributes": {
+        "id": 1495,
+        "content": "彼女（かのじょ）<span class='study-area-input'>____</span>可愛（かわい）<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>新（あたら）しい</strong>情報（じょうほう）の追加（ついか）や、何（なに）か<strong>驚（おどろ）くべき</strong>情報（じょうほう）を強調（きょうちょう）したいときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/4/male_audio/08-彼女もかわいいです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼女も可愛いです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "もう": {
+            "en": "Close! This grammar structure does not have an う at the end.",
+            "es": "¡Casi! Esta estructura gramatical no acaba en う.",
+            "fr": "Presque ! Cette structure grammaticale ne se termine pas par う.",
+            "id": "Hampir! Struktur tata bahasa ini tidak memiliki う di akhir."
+          }
+        },
+        "translation": "She is <strong>also</strong> cute.",
+        "nuance_translation": "A structure that highlights <strong>additional</strong>, sometimes <strong>surprising</strong> information.",
+        "extra_info": "",
+        "reviewable_id": 4,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1496",
+      "type": "study_question",
+      "attributes": {
+        "id": 1496,
+        "content": "お母（かあ）さん<span class='study-area-input'>____</span>元気（げんき）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>新（あたら）しい</strong>情報（じょうほう）の追加（ついか）や、何（なに）か<strong>驚（おどろ）くべき</strong>情報（じょうほう）を強調（きょうちょう）したいときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/4/male_audio/02-お母さんも元気です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/お母さんも元気です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "もう": {
+            "en": "Close! This grammar structure does not have an う at the end.",
+            "es": "¡Casi! Esta estructura gramatical no acaba en う.",
+            "fr": "Presque ! Cette structure grammaticale ne se termine pas par う.",
+            "id": "Hampir! Struktur tata bahasa ini tidak memiliki う di akhir."
+          }
+        },
+        "translation": "My mom is <strong>also</strong> well. (Healthy, fine)",
+        "nuance_translation": "A structure that highlights <strong>additional</strong>, sometimes <strong>surprising</strong> information.",
+        "extra_info": "",
+        "reviewable_id": 4,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1497",
+      "type": "study_question",
+      "attributes": {
+        "id": 1497,
+        "content": "田中（たなか）さん<span class='study-area-input'>____</span>有名（ゆうめい）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>新（あたら）しい</strong>情報（じょうほう）の追加（ついか）や、何（なに）か<strong>驚（おどろ）くべき</strong>情報（じょうほう）を強調（きょうちょう）したいときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/4/male_audio/12-田中さんも有名です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/田中さんも有名です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "もう": {
+            "en": "Close! This grammar structure does not have an う at the end.",
+            "es": "¡Casi! Esta estructura gramatical no acaba en う.",
+            "fr": "Presque ! Cette structure grammaticale ne se termine pas par う.",
+            "id": "Hampir! Struktur tata bahasa ini tidak memiliki う di akhir."
+          }
+        },
+        "translation": "Mr. Tanaka is <strong>also</strong> famous.",
+        "nuance_translation": "A structure that highlights <strong>additional</strong>, sometimes <strong>surprising</strong> information.",
+        "extra_info": "",
+        "reviewable_id": 4,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1500",
+      "type": "study_question",
+      "attributes": {
+        "id": 1500,
+        "content": "和室（わしつ）<span class='study-area-input'>____</span>暗（くら）<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>新（あたら）しい</strong>情報（じょうほう）の追加（ついか）や、何（なに）か<strong>驚（おどろ）くべき</strong>情報（じょうほう）を強調（きょうちょう）したいときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/4/male_audio/06-和室も暗いです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/和室も暗いです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "もう": {
+            "en": "Close! This grammar structure does not have an う at the end.",
+            "es": "¡Casi! Esta estructura gramatical no acaba en う.",
+            "fr": "Presque ! Cette structure grammaticale ne se termine pas par う.",
+            "id": "Hampir! Struktur tata bahasa ini tidak memiliki う di akhir."
+          }
+        },
+        "translation": "The Japanese-style room is <strong>also</strong> dark.",
+        "nuance_translation": "A structure that highlights <strong>additional</strong>, sometimes <strong>surprising</strong> information.",
+        "extra_info": "",
+        "reviewable_id": 4,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1502",
+      "type": "study_question",
+      "attributes": {
+        "id": 1502,
+        "content": "火曜日（かようび）<span class='study-area-input'>____</span>雨（あめ）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>新（あたら）しい</strong>情報（じょうほう）の追加（ついか）や、何（なに）か<strong>驚（おどろ）くべき</strong>情報（じょうほう）を強調（きょうちょう）したいときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/4/male_audio/11-火曜日も雨です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/火曜日も雨です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "もう": {
+            "en": "Close! This grammar structure does not have an う at the end.",
+            "es": "¡Casi! Esta estructura gramatical no acaba en う.",
+            "fr": "Presque ! Cette structure grammaticale ne se termine pas par う.",
+            "id": "Hampir! Struktur tata bahasa ini tidak memiliki う di akhir."
+          }
+        },
+        "translation": "Tuesday is <strong>also</strong> (going to) rain.",
+        "nuance_translation": "A structure that highlights <strong>additional</strong>, sometimes <strong>surprising</strong> information.",
+        "extra_info": "",
+        "reviewable_id": 4,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1503",
+      "type": "study_question",
+      "attributes": {
+        "id": 1503,
+        "content": "晩（ばん）ごはん<span class='study-area-input'>____</span>、パン<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>新（あたら）しい</strong>情報（じょうほう）の追加（ついか）や、何（なに）か<strong>驚（おどろ）くべき</strong>情報（じょうほう）を強調（きょうちょう）したいときに使（つか）われる構造（こうぞう）。",
+        "tense": "Particle, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/4/male_audio/09-晩ご飯もパンです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/晩ごはんも、パンです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "と": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "は": {
+            "en": "A different particle is required here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Une particule différente est requise ici.",
+            "id": "Diperlukan partikel yang berbeda."
+          },
+          "もう": {
+            "en": "Close! This grammar structure does not have an う at the end.",
+            "es": "¡Casi! Esta estructura gramatical no acaba en う.",
+            "fr": "Presque ! Cette structure grammaticale ne se termine pas par う.",
+            "id": "Hampir! Struktur tata bahasa ini tidak memiliki う di akhir."
+          }
+        },
+        "translation": "Dinner (tonight) is <strong>also</strong> bread.",
+        "nuance_translation": "A structure that highlights <strong>additional</strong>, sometimes <strong>surprising</strong> information.",
+        "extra_info": "",
+        "reviewable_id": 4,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4",
+      "type": "writeup",
+      "attributes": {
+        "id": 4,
+        "body_ja": "",
+        "body": "<p><span data-gp-id='4'>も</span> can mean 'too/also', or 'even', or 'neither/either', depending on if the sentence is affirmative or negative. Multiple meanings like this are quite common for Japanese particles, as there is no need to use different words simply to agree with other statements in the sentence (unlike English).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154691'>\r\n<li data-study-question='154692'></ul>\r\n\r\n<p>As you can see here, English requires 'either/neither (when negative)', or 'too/also', but Japanese only requires <span data-gp-id='4'>も</span>. You can think of it as simply meaning 'Whatever is true for (A), is also true for (B)'.</p>\r\n\r\n<p><span data-gp-id='4'>も</span> is part of many other compound grammar structures in which it keeps its original meaning, but shifts the nuance a little bit. Some of these include <span data-gp-id='88'>でも</span>, <span data-gp-id='839'>にも～ない</span>, <span data-gp-id='511'>とも</span>. As we can see, it is frequently paired with other particles!</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154693'></ul>\r\n\r\n<p>Although this was a pairing of <span data-gp-id='36'>で</span> and <span data-gp-id='4'>も</span> as individual structures in the past, in modern Japanese, でも is considered its own word. This is most often translated simply as 'but' in English, despite the nuance sometimes being 'While (A), also (B)', which highlights more clearly the historical concept.</p>"
+      }
+    },
+    {
+      "id": "14",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 14,
+        "source": "Genki I",
+        "location": "Page 37",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "32",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 32,
+        "source": "Genki I",
+        "location": "Page 81",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "77",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 77,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 65",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "94",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 94,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 111",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2155",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2155,
+        "source": "A Dictionary of Basic Japanese Grammar",
+        "location": "Page 247",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "735",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 735,
+        "source": "みんなの日本語 I",
+        "location": "Page 14 [CH 1]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1236",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1236,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 35",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "7",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 7,
+        "site": "Tae Kim",
+        "description": "The 「も」 inclusive topic particle",
+        "link": "https://guidetojapanese.org/learn/grammar/particlesintro",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1524",
+      "type": "related_content",
+      "attributes": {
+        "id": 1524,
+        "relationship_type": "related",
+        "body": "すら and も are fundamentally similar in that both can serve to add emphasis. In cases like 子どもですらできる 'even a child can do it' 子どもでもできる (same meaning) they are essentially interchangeable except that すら is more formal and more emphatic. In examples where も is simply serving to add additional information, e.g. 田中さんも来た ('Mr. Tanaka also came.'), も could not be replaced with すら (unless there is some reason to believe that Tanaka coming would be an extremely rare or unexpected happening).",
+        "first_relatable": {
+          "id": 787,
+          "slug": "すら",
+          "title": "すら",
+          "meaning": "Even",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 4,
+          "slug": "も",
+          "title": "も",
+          "meaning": "Also, Too, As well, Even, Either, Neither",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1477",
+      "type": "related_content",
+      "attributes": {
+        "id": 1477,
+        "relationship_type": "related",
+        "body": "でもある and も can both express 'also' (the も of でもある is the same as the particle も), but there is a key difference to note. AもB means '(A) is also (B)', while Aでもある means 'it is also (A)'. For example, compare 田中さんは学生です。鈴木さんも学生です ('Tanaka is a student. Suzuki is also a student') vs. 田中さんは学生です。日本人でもあります ('Tanaka is a student. He is also Japanese').",
+        "first_relatable": {
+          "id": 666,
+          "slug": "でもある",
+          "title": "でもある",
+          "meaning": "Be also, It also is",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 4,
+          "slug": "も",
+          "title": "も",
+          "meaning": "Also, Too, As well, Even, Either, Neither",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "24",
+      "type": "related_content",
+      "attributes": {
+        "id": 24,
+        "relationship_type": "related",
+        "body": "も and と are two different particles with different meanings. も means 'also' or 'too' and is used to add information, like in 田中さんも来ました ('Tanaka came, too'). と can be used to connect nouns like 'and' (バナナとりんご = 'a banana and an apple') or to mean 'with' (友だちと遊ぶ = 'to play with a friend').",
+        "first_relatable": {
+          "id": 4,
+          "slug": "も",
+          "title": "も",
+          "meaning": "Also, Too, As well, Even, Either, Neither",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 15,
+          "slug": "と-and",
+          "title": "と",
+          "meaning": "And",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

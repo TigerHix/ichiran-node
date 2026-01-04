@@ -1,0 +1,718 @@
+{
+  "data": {
+    "id": "1079",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 1079,
+      "level": "JLPT2",
+      "lesson_id": 31,
+      "part_of_speech": null,
+      "register": "",
+      "word_type": "",
+      "slug": "ざる",
+      "nuance": "<strong>否定（ひてい）</strong>の目的（もくてき）で用（もち）いられる<strong>昔（むかし）ながらの助動詞（じょどうし）</strong>で、主（おも）に<strong>ごく限（かぎ）られた定型句（ていけいく）で使（つか）われる</strong>。",
+      "grammar_order": 528,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 333,
+        "title": "つもりで",
+        "slug": "つもりで"
+      },
+      "previous_grammar_point": {
+        "id": 397,
+        "title": "ざるを得ない",
+        "slug": "ざるを得ない"
+      },
+      "lesson_count": "4/24",
+      "title": "～ざる",
+      "furigana": "～ざる",
+      "meaning": "To not ~, Un~",
+      "nuance_translation": "An <strong>old-fashioned auxiliary verb</strong> that has the purpose of <strong>negation</strong>, and is primarily <strong>used with a very limited number of set phrases</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Verb［<del>ない</del>］+ <strong>ざる</strong> + Noun",
+      "part_of_speech_translation": null,
+      "register_translation": "",
+      "word_type_translation": "",
+      "discourse_link": "",
+      "metadata": "ざる, zaru, attributive form, cassical auxiliary verb"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "155383",
+            "type": "study_question"
+          },
+          {
+            "id": "155374",
+            "type": "study_question"
+          },
+          {
+            "id": "181664",
+            "type": "study_question"
+          },
+          {
+            "id": "181665",
+            "type": "study_question"
+          },
+          {
+            "id": "155384",
+            "type": "study_question"
+          },
+          {
+            "id": "155377",
+            "type": "study_question"
+          },
+          {
+            "id": "155375",
+            "type": "study_question"
+          },
+          {
+            "id": "184369",
+            "type": "study_question"
+          },
+          {
+            "id": "155378",
+            "type": "study_question"
+          },
+          {
+            "id": "155382",
+            "type": "study_question"
+          },
+          {
+            "id": "155381",
+            "type": "study_question"
+          },
+          {
+            "id": "155379",
+            "type": "study_question"
+          },
+          {
+            "id": "155380",
+            "type": "study_question"
+          },
+          {
+            "id": "155385",
+            "type": "study_question"
+          },
+          {
+            "id": "155376",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "1011",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1485",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": []
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "155383",
+      "type": "study_question",
+      "attributes": {
+        "id": 155383,
+        "content": "あの有名（ゆうめい）な作家（さっか）には、知（し）られ<span class='study-area-input'>____</span>傑作（けっさく）があるのだ。",
+        "answer": "ざる",
+        "alternate_grammar": [],
+        "kanji_answer": "ざる",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>否定（ひてい）</strong>の目的（もくてき）で用（もち）いられる<strong>昔（むかし）ながらの助動詞（じょどうし）</strong>で、主（おも）に<strong>ごく限（かぎ）られた定型句（ていけいく）で使（つか）われる</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あの有名な作家には、知られざる傑作があるのだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ぬ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente."
+          },
+          "ない": {
+            "en": "Let's try a grammar pattern that is a bit more old-fashioned.",
+            "es": "Prueba con un patrón gramatical un poco más anticuado."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That famous artist has an <strong>un</strong>known masterpiece.",
+        "nuance_translation": "An <strong>old-fashioned auxiliary verb</strong> that has the purpose of <strong>negation</strong>, and is primarily <strong>used with a very limited number of set phrases</strong>.",
+        "extra_info": "",
+        "reviewable_id": 1079,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155374",
+      "type": "study_question",
+      "attributes": {
+        "id": 155374,
+        "content": "絶（た）え<span class='study-area-input'>____</span>失敗（しっぱい）にも、僕（ぼく）は決（けっ）して負（ま）けません。",
+        "answer": "ざる",
+        "alternate_grammar": [],
+        "kanji_answer": "ざる",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>否定（ひてい）</strong>の目的（もくてき）で用（もち）いられる<strong>昔（むかし）ながらの助動詞（じょどうし）</strong>で、主（おも）に<strong>ごく限（かぎ）られた定型句（ていけいく）で使（つか）われる</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/絶えざる失敗にも、僕は決して負けません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I will absolutely not lose, not even to <strong>un</strong>ending failures.",
+        "nuance_translation": "An <strong>old-fashioned auxiliary verb</strong> that has the purpose of <strong>negation</strong>, and is primarily <strong>used with a very limited number of set phrases</strong>.",
+        "extra_info": "",
+        "reviewable_id": 1079,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181664",
+      "type": "study_question",
+      "attributes": {
+        "id": 181664,
+        "content": "\r\n彼（かれ）はどんな辛（つら）い時（とき）でも弱音（よわね）を言（い）わ<span class='study-area-input'>____</span>人（ひと）だ。",
+        "answer": "ざる",
+        "alternate_grammar": [],
+        "kanji_answer": "ざる",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nHe is a person that will <strong>not</strong> complain, no matter how hard it gets.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 1079,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181665",
+      "type": "study_question",
+      "attributes": {
+        "id": 181665,
+        "content": "\r\n記事（きじ）のタイトル：「演歌（えんか）歌手（かしゅ）鈴木（すずき）太朗（たろう）の知（し）られ<span class='study-area-input'>____</span>過去（かこ）。」",
+        "answer": "ざる",
+        "alternate_grammar": [],
+        "kanji_answer": "ざる",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nTitle of an article: 'The <strong>un</strong>known past of the enka singer Suzuki Taro.'",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 1079,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155384",
+      "type": "study_question",
+      "attributes": {
+        "id": 155384,
+        "content": "たゆま<span class='study-area-input'>____</span>努力（どりょく）があったからこそ、部長（ぶちょう）になることができたのです。",
+        "answer": "ざる",
+        "alternate_grammar": [],
+        "kanji_answer": "ざる",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>否定（ひてい）</strong>の目的（もくてき）で用（もち）いられる<strong>昔（むかし）ながらの助動詞（じょどうし）</strong>で、主（おも）に<strong>ごく限（かぎ）られた定型句（ていけいく）で使（つか）われる</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/たゆまざる努力があったからこそ、部長になることができたのです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ぬ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente."
+          },
+          "ない": {
+            "en": "Let's try a grammar pattern that is a bit more old-fashioned.",
+            "es": "Prueba con un patrón gramatical un poco más anticuado."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I was able to become a section manager precisely because of my <strong>un</strong>wavering efforts.",
+        "nuance_translation": "An <strong>old-fashioned auxiliary verb</strong> that has the purpose of <strong>negation</strong>, and is primarily <strong>used with a very limited number of set phrases</strong>.",
+        "extra_info": "",
+        "reviewable_id": 1079,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155377",
+      "type": "study_question",
+      "attributes": {
+        "id": 155377,
+        "content": "消（き）え<span class='study-area-input'>____</span>傷（きず）を負（お）ってしまい、落（お）ち込（こ）んでいる。",
+        "answer": "ざる",
+        "alternate_grammar": [],
+        "kanji_answer": "ざる",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>否定（ひてい）</strong>の目的（もくてき）で用（もち）いられる<strong>昔（むかし）ながらの助動詞（じょどうし）</strong>で、主（おも）に<strong>ごく限（かぎ）られた定型句（ていけいく）で使（つか）われる</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/消えざる傷を負ってしまい、落ち込んでいる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ぬ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente."
+          },
+          "ない": {
+            "en": "Let's try a grammar pattern that is a bit more old-fashioned.",
+            "es": "Prueba con un patrón gramatical un poco más anticuado."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I suffered a wound that <strong>will not</strong> disappear, so I am depressed.",
+        "nuance_translation": "An <strong>old-fashioned auxiliary verb</strong> that has the purpose of <strong>negation</strong>, and is primarily <strong>used with a very limited number of set phrases</strong>.",
+        "extra_info": "",
+        "reviewable_id": 1079,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155375",
+      "type": "study_question",
+      "attributes": {
+        "id": 155375,
+        "content": "たゆま<span class='study-area-input'>____</span>努力（どりょく）をすることが、成功（せいこう）への鍵（かぎ）だ。",
+        "answer": "ざる",
+        "alternate_grammar": [],
+        "kanji_answer": "ざる",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>否定（ひてい）</strong>の目的（もくてき）で用（もち）いられる<strong>昔（むかし）ながらの助動詞（じょどうし）</strong>で、主（おも）に<strong>ごく限（かぎ）られた定型句（ていけいく）で使（つか）われる</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/たゆまざる努力をすることが、成功への鍵だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ぬ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente."
+          },
+          "ない": {
+            "en": "Let's try a grammar pattern that is a bit more old-fashioned.",
+            "es": "Prueba con un patrón gramatical un poco más anticuado."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Putting in <strong>un</strong>relenting effort is the key to success.",
+        "nuance_translation": "An <strong>old-fashioned auxiliary verb</strong> that has the purpose of <strong>negation</strong>, and is primarily <strong>used with a very limited number of set phrases</strong>.",
+        "extra_info": "",
+        "reviewable_id": 1079,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184369",
+      "type": "study_question",
+      "attributes": {
+        "id": 184369,
+        "content": "病気（びょうき）や事故（じこ）などの理由（りゆう）で、宿泊（しゅくはく）をキャンセルせ<span class='study-area-input'>____</span>をえない場合（ばあい）はキャンセル料（りょう）は発生（はっせい）致（いた）しません。",
+        "answer": "ざる",
+        "alternate_grammar": [],
+        "kanji_answer": "ざる",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "No cancellation fee will be charged if you <strong>need to</strong> cancel your stay due to illness or accident.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 1079,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155378",
+      "type": "study_question",
+      "attributes": {
+        "id": 155378,
+        "content": "嘘（うそ）をつか<span class='study-area-input'>____</span>人（ひと）しか信頼（しんらい）することができない。",
+        "answer": "ざる",
+        "alternate_grammar": [],
+        "kanji_answer": "ざる",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>否定（ひてい）</strong>の目的（もくてき）で用（もち）いられる<strong>昔（むかし）ながらの助動詞（じょどうし）</strong>で、主（おも）に<strong>ごく限（かぎ）られた定型句（ていけいく）で使（つか）われる</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/嘘をつかざる人しか信頼することができない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ぬ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente."
+          },
+          "ない": {
+            "en": "Let's try a grammar pattern that is a bit more old-fashioned.",
+            "es": "Prueba con un patrón gramatical un poco más anticuado."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "You cannot trust anyone apart from a person who <strong>does not</strong> lie.",
+        "nuance_translation": "An <strong>old-fashioned auxiliary verb</strong> that has the purpose of <strong>negation</strong>, and is primarily <strong>used with a very limited number of set phrases</strong>.",
+        "extra_info": "",
+        "reviewable_id": 1079,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155382",
+      "type": "study_question",
+      "attributes": {
+        "id": 155382,
+        "content": "耐（た）え<span class='study-area-input'>____</span>不安（ふあん）がのしかかって鬱（うつ）になりました。",
+        "answer": "ざる",
+        "alternate_grammar": [],
+        "kanji_answer": "ざる",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>否定（ひてい）</strong>の目的（もくてき）で用（もち）いられる<strong>昔（むかし）ながらの助動詞（じょどうし）</strong>で、主（おも）に<strong>ごく限（かぎ）られた定型句（ていけいく）で使（つか）われる</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/耐えざる不安がのしかかって鬱になりました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ぬ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente."
+          },
+          "ない": {
+            "en": "Let's try a grammar pattern that is a bit more old-fashioned.",
+            "es": "Prueba con un patrón gramatical un poco más anticuado."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I became depressed due to anxiety that I <strong>cannot</strong> withstand hanging over me.",
+        "nuance_translation": "An <strong>old-fashioned auxiliary verb</strong> that has the purpose of <strong>negation</strong>, and is primarily <strong>used with a very limited number of set phrases</strong>.",
+        "extra_info": "",
+        "reviewable_id": 1079,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155381",
+      "type": "study_question",
+      "attributes": {
+        "id": 155381,
+        "content": "たゆま<span class='study-area-input'>____</span>努力（どりょく）のおかげで成功者（せいこうしゃ）になった。",
+        "answer": "ざる",
+        "alternate_grammar": [],
+        "kanji_answer": "ざる",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>否定（ひてい）</strong>の目的（もくてき）で用（もち）いられる<strong>昔（むかし）ながらの助動詞（じょどうし）</strong>で、主（おも）に<strong>ごく限（かぎ）られた定型句（ていけいく）で使（つか）われる</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/たゆまざる努力のおかげで成功者になった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ぬ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente."
+          },
+          "ない": {
+            "en": "Let's try a grammar pattern that is a bit more old-fashioned.",
+            "es": "Prueba con un patrón gramatical un poco más anticuado."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Thanks to my <strong>un</strong>relenting efforts, I became a successful person.",
+        "nuance_translation": "An <strong>old-fashioned auxiliary verb</strong> that has the purpose of <strong>negation</strong>, and is primarily <strong>used with a very limited number of set phrases</strong>.",
+        "extra_info": "",
+        "reviewable_id": 1079,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155379",
+      "type": "study_question",
+      "attributes": {
+        "id": 155379,
+        "content": "取（と）り返（かえ）しのつか<span class='study-area-input'>____</span>大変（たいへん）なミスを犯（おか）しました。",
+        "answer": "ざる",
+        "alternate_grammar": [],
+        "kanji_answer": "ざる",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>否定（ひてい）</strong>の目的（もくてき）で用（もち）いられる<strong>昔（むかし）ながらの助動詞（じょどうし）</strong>で、主（おも）に<strong>ごく限（かぎ）られた定型句（ていけいく）で使（つか）われる</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/取り返しのつかざる大変なミスを犯しました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ぬ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente."
+          },
+          "ない": {
+            "en": "Let's try a grammar pattern that is a bit more old-fashioned.",
+            "es": "Prueba con un patrón gramatical un poco más anticuado."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I committed a serious error that cannot be <strong>un</strong>done.",
+        "nuance_translation": "An <strong>old-fashioned auxiliary verb</strong> that has the purpose of <strong>negation</strong>, and is primarily <strong>used with a very limited number of set phrases</strong>.",
+        "extra_info": "",
+        "reviewable_id": 1079,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155380",
+      "type": "study_question",
+      "attributes": {
+        "id": 155380,
+        "content": "絶（た）え<span class='study-area-input'>____</span>失敗（しっぱい）に、完全（かんぜん）に心（こころ）を折（お）られてしまった。",
+        "answer": "ざる",
+        "alternate_grammar": [],
+        "kanji_answer": "ざる",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>否定（ひてい）</strong>の目的（もくてき）で用（もち）いられる<strong>昔（むかし）ながらの助動詞（じょどうし）</strong>で、主（おも）に<strong>ごく限（かぎ）られた定型句（ていけいく）で使（つか）われる</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/絶えざる失敗に、完全に心を折られてしまった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ぬ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente."
+          },
+          "ない": {
+            "en": "Let's try a grammar pattern that is a bit more old-fashioned.",
+            "es": "Prueba con un patrón gramatical un poco más anticuado."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I am completely shattered by these <strong>un</strong>ending failures.",
+        "nuance_translation": "An <strong>old-fashioned auxiliary verb</strong> that has the purpose of <strong>negation</strong>, and is primarily <strong>used with a very limited number of set phrases</strong>.",
+        "extra_info": "",
+        "reviewable_id": 1079,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155385",
+      "type": "study_question",
+      "attributes": {
+        "id": 155385,
+        "content": "彼女（かのじょ）はその曲（きょく）で有名（ゆうめい）ですが、実（じつ）は知（し）られ<span class='study-area-input'>____</span>名曲（めいきょく）が他（ほか）にもあります。",
+        "answer": "ざる",
+        "alternate_grammar": [],
+        "kanji_answer": "ざる",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>否定（ひてい）</strong>の目的（もくてき）で用（もち）いられる<strong>昔（むかし）ながらの助動詞（じょどうし）</strong>で、主（おも）に<strong>ごく限（かぎ）られた定型句（ていけいく）で使（つか）われる</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼女はその曲で有名ですが、実は知られざる名曲が他にもあります。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ぬ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente."
+          },
+          "ない": {
+            "en": "Let's try a grammar pattern that is a bit more old-fashioned.",
+            "es": "Prueba con un patrón gramatical un poco más anticuado."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "She is famous for that song, but she actually also has other great songs that are <strong>un</strong>known.",
+        "nuance_translation": "An <strong>old-fashioned auxiliary verb</strong> that has the purpose of <strong>negation</strong>, and is primarily <strong>used with a very limited number of set phrases</strong>.",
+        "extra_info": "",
+        "reviewable_id": 1079,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155376",
+      "type": "study_question",
+      "attributes": {
+        "id": 155376,
+        "content": "あの作家（さっか）の知（し）られ<span class='study-area-input'>____</span>名画（めいが）を僕（ぼく）は知（し）っています。",
+        "answer": "ざる",
+        "alternate_grammar": [],
+        "kanji_answer": "ざる",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>否定（ひてい）</strong>の目的（もくてき）で用（もち）いられる<strong>昔（むかし）ながらの助動詞（じょどうし）</strong>で、主（おも）に<strong>ごく限（かぎ）られた定型句（ていけいく）で使（つか）われる</strong>。",
+        "tense": "Negative, Archaic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あの作家の知られざる名画を僕は知っています。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ぬ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente."
+          },
+          "ない": {
+            "en": "Let's try a grammar pattern that is a bit more old-fashioned.",
+            "es": "Prueba con un patrón gramatical un poco más anticuado."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I know that artist's <strong>un</strong>known masterpiece.",
+        "nuance_translation": "An <strong>old-fashioned auxiliary verb</strong> that has the purpose of <strong>negation</strong>, and is primarily <strong>used with a very limited number of set phrases</strong>.",
+        "extra_info": "",
+        "reviewable_id": 1079,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1011",
+      "type": "writeup",
+      "attributes": {
+        "id": 1011,
+        "body_ja": "<p>「ざる」は文語（ぶんご）の助動詞（じょどうし）「ず」の連体形（れんたいけい）で、「ず」と同（おな）じように否定（ひてい）「〜ない」を表（あらわ）します。「ない」と同（おな）じように動詞（どうし）に接続（せつぞく）して使（つか）われます。</p>\r\n\r\n<p>ほとんどの場合（ばあい）、「ざる」は動詞（どうし）の後（うし）ろに付（つ）き、動詞（どうし）が修飾（しゅうしょく）する名詞（めいし）がその後（うし）ろに続（つづ）きます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181664'>\r\n<li data-study-question='181665'>\r\n</ul>\r\n\r\n<p>「ざる」は現代（げんだい）の日本語（にほんご）で、「ない」の代（か）わりに使（つか）われることもありますが、ふつうは「ざるを得（え）ない」のように、決（き）まった表現（ひょうげん）の一部（いちぶ）として使（つか）われます。</p>\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>古（ふる）い文型（ぶんけい）によくあるように、「ざる」と「する」が接続（せつぞく）する場合（ばあい）、現代的（げんだいてき）な「し」ではなく「せ」が使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184369'></ul></section>\r\n\r\n<section class='funfact'><h4>豆知識（まめちしき）</h4>\r\n<p>辞書（じしょ）によっては「ざる」が文語（ぶんご）の助動詞（じょどうし）「ざり」の連体形（れんたいけい）として扱（あつか）われていることもあります。「ざり」は単（たん）に「ず」と「あり (存在（そんざい）を表（あらわ）す動詞（どうし）)」を短（みじか）くしたもので、こちらも「ず」を元（もと）にしています。そのため、「ざる」は「ず」の連体形（れんたいけい）だという解釈（かいしゃく）も「ざり」の連体形（れんたいけい）だという解釈（かいしゃく）もどちらも正（ただ）しいとされています。</p></section>",
+        "body": "<p>ざる is the attributive form of the classical auxiliary verb ず. It keeps the same negation 'not' meaning as ず, and will conjugate with verbs in the same way as ない. ざる will also often be translated as 'un~', like in 'unstoppable'.</p>\r\n\r\n<p>In most cases, ざる will be seen attached to verbs that are describing a noun that comes directly after them.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181664'>\r\n<li data-study-question='181665'>\r\n</ul>\r\n\r\n<p>Although ざる may be used in place of ない, in modern Japanese it is primarily only seen as part of common expressions or sayings, such as the ざるを得（え）ない 'have no choice but to (A)' grammar structure.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>As with many old-fashioned grammar patterns, ざる will conjugate with the せ stem of する, rather than the more modern し stem.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184369'></ul></section>\r\n\r\n<section class='funfact'><h4>Fun-fact</h4>\r\n<p>Some dictionaries list ざる as the attributive form of the classical auxiliary verb ざり. However, ざり itself is just a contraction of ず and あり 'to be'. Due to this, both variations may be considered as correct, with ず being the underlying origination.</p></section>"
+      }
+    },
+    {
+      "id": "1485",
+      "type": "related_content",
+      "attributes": {
+        "id": 1485,
+        "relationship_type": "related",
+        "body": "〜ざる is the classical negative form of a verb, functioning like ない when modifying nouns, as in 知られざる名作 (an unknown masterpiece). It also forms the base of ざるを得ない, which conveys inevitability or lack of choice, as in 行かざるを得ない (I have no choice but to go). While 〜ざる alone is literary or archaic, ざるを得ない remains common in formal modern Japanese.",
+        "first_relatable": {
+          "id": 1079,
+          "slug": "ざる",
+          "title": "～ざる",
+          "meaning": "To not ~, Un~",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 397,
+          "slug": "ざるを得ない",
+          "title": "ざるを得ない",
+          "meaning": "Can't help doing, Have no choice but",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

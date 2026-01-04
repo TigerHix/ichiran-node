@@ -1,0 +1,1355 @@
+{
+  "data": {
+    "id": "283",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 283,
+      "level": "JLPT3",
+      "lesson_id": 23,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "ことになる",
+      "nuance": "ある物（もの）が最終（さいしゅう）的（てき）には(A)<strong>というものに変化（へんか）する</strong>、又（また）は(A)を引（ひ）き起（お）こすということを表（あらわ）す文法（ぶんぽう）。",
+      "grammar_order": 359,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 441,
+        "title": "～は～で有名",
+        "slug": "は-で有名"
+      },
+      "previous_grammar_point": {
+        "id": 630,
+        "title": "ことなの",
+        "slug": "ことなの"
+      },
+      "lesson_count": "10/22",
+      "title": "ことになる",
+      "furigana": "事（こと）になる",
+      "meaning": "It will end up being, It is the result of, It has been decided that",
+      "nuance_translation": "A grammar point which expresses that something will end up <strong>being the thing which is</strong> (A), or result in (A).",
+      "rare_kanji_warning": null,
+      "caution": "The \"something has been decided\" meaning only applies to verbs!",
+      "polite_structure": "Verb + <strong><span class='gp-popout' data-gp-id='98'>こと</span>になります</strong><br><span class='gp-popout' data-gp-id='24'>［い］Adjective</span> + <strong><span class='gp-popout' data-gp-id='98'>こと</span>になります</strong><br><span class='gp-popout' data-gp-id='954'>［な］Adjective + <span class='chui'>な</span></span> + <strong><span class='gp-popout' data-gp-id='98'>こと</span>になります</strong>",
+      "casual_structure": "Verb + <strong><span class='gp-popout' data-gp-id='98'>こと</span>になる</strong><br><span class='gp-popout' data-gp-id='24'>［い］Adjective</span> + <strong><span class='gp-popout' data-gp-id='98'>こと</span>になる</strong><br><span class='gp-popout' data-gp-id='28'>［な］Adjective + <span class='chui'>な</span></span> + <strong><span class='gp-popout' data-gp-id='98'>こと</span>になる</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/3988",
+      "metadata": "ことになる, なことになる, な事になる, 事になる, kotoninaru, nakotoninaru, expression, case-marking particle, become"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "5122",
+            "type": "study_question"
+          },
+          {
+            "id": "5129",
+            "type": "study_question"
+          },
+          {
+            "id": "5121",
+            "type": "study_question"
+          },
+          {
+            "id": "5124",
+            "type": "study_question"
+          },
+          {
+            "id": "181085",
+            "type": "study_question"
+          },
+          {
+            "id": "181086",
+            "type": "study_question"
+          },
+          {
+            "id": "181087",
+            "type": "study_question"
+          },
+          {
+            "id": "5125",
+            "type": "study_question"
+          },
+          {
+            "id": "5126",
+            "type": "study_question"
+          },
+          {
+            "id": "5127",
+            "type": "study_question"
+          },
+          {
+            "id": "1062",
+            "type": "study_question"
+          },
+          {
+            "id": "5128",
+            "type": "study_question"
+          },
+          {
+            "id": "1063",
+            "type": "study_question"
+          },
+          {
+            "id": "5123",
+            "type": "study_question"
+          },
+          {
+            "id": "1061",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "379",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "524",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1105",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1302",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1483",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "390",
+            "type": "related_content"
+          },
+          {
+            "id": "1081",
+            "type": "related_content"
+          },
+          {
+            "id": "1082",
+            "type": "related_content"
+          },
+          {
+            "id": "1080",
+            "type": "related_content"
+          },
+          {
+            "id": "760",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "561",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "562",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "563",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2077",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "5122",
+      "type": "study_question",
+      "attributes": {
+        "id": 5122,
+        "content": "この前（まえ）のように風邪（かぜ）を引（ひ）いたら、また入院（にゅういん）する<span class='study-area-input'>____</span>よ。",
+        "answer": "ことになる",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）になる",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）が最終（さいしゅう）的（てき）には(A)<strong>というものに変化（へんか）する</strong>、又（また）は(A)を引（ひ）き起（お）こすということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson3/283/male_audio/230616_1323.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/この前のように風邪を引いたら、また入院する事になるよ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことになります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことになった": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "ようになる": {
+            "en": "ようになる means 'reach the point of (A)' or 'come to be (A)'. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "になる": {
+            "en": "Could you try adding something to the beginning to add the nuance that someone or thing caused (A) to become that way?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "If you catch a cold like the last time, you will <strong>end up </strong>going to the hospital again.",
+        "nuance_translation": "A grammar point which expresses that something will end up <strong>being the thing which is</strong> (A), or result in (A).",
+        "extra_info": "",
+        "reviewable_id": 283,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5129",
+      "type": "study_question",
+      "attributes": {
+        "id": 5129,
+        "content": "どうしてこんな<span class='study-area-input'>____</span>の？意味（いみ）がわからないよ。",
+        "answer": "ことになった",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）になった",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）が最終（さいしゅう）的（てき）には(A)<strong>というものに変化（へんか）する</strong>、又（また）は(A)を引（ひ）き起（お）こすということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson3/283/male_audio/230616_1324_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/どうしてこんな事になったの？意味がわからないよ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことになりました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことになる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "になった": {
+            "en": "Can you try adding a nominalizer that marks the situation as an event or circumstances, so it can then naturally connect to になった?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ようになった": {
+            "en": "ようになる means 'reach the point of (A)' or 'come to be (A)'. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "こと": {
+            "en": "Could you try adding something to the end that carries the nuance of 'to become'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "なった": {
+            "en": "Could you try adding something to the beginning to add the nuance that someone or thing caused (A) to become that way?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "Why <strong>did it end up</strong> like this? I don't get it.",
+        "nuance_translation": "A grammar point which expresses that something will end up <strong>being the thing which is</strong> (A), or result in (A).",
+        "extra_info": "",
+        "reviewable_id": 283,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5121",
+      "type": "study_question",
+      "attributes": {
+        "id": 5121,
+        "content": "大変（たいへん）<span class='study-area-input'>____</span>ぞ。何（なに）か作戦（さくせん）を考（かんが）えなければ。",
+        "answer": "なことになった",
+        "alternate_grammar": [],
+        "kanji_answer": "な事（こと）になった",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）が最終（さいしゅう）的（てき）には(A)<strong>というものに変化（へんか）する</strong>、又（また）は(A)を引（ひ）き起（お）こすということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson3/283/male_audio/230616_1322_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/大変な事になったぞ。何か作戦を考えなければ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なことになりました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "なことになる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことになった": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "になった": {
+            "en": "Could you try adding something to the beginning to add the nuance that someone or thing caused (A) to become that way?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ようになった": {
+            "en": "ようになる means 'reach the point of (A)' or 'come to be (A)'. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "のことになった": {
+            "en": "Could you try using a different particle here? 大変 is a な-adjective.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことになる": {
+            "en": "Could you try adding a particle here? 大変 is a な-adjective.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "We <strong>ended up</strong> getting in trouble. We have to figure out a plan.",
+        "nuance_translation": "A grammar point which expresses that something will end up <strong>being the thing which is</strong> (A), or result in (A).",
+        "extra_info": "",
+        "reviewable_id": 283,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5124",
+      "type": "study_question",
+      "attributes": {
+        "id": 5124,
+        "content": "私（わたし）が会議（かいぎ）に出（で）る<span class='study-area-input'>____</span>。",
+        "answer": "ことになった",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）になった",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）が最終（さいしゅう）的（てき）には(A)<strong>というものに変化（へんか）する</strong>、又（また）は(A)を引（ひ）き起（お）こすということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson3/283/male_audio/230616_1323_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/私が会議に出る事になった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことになりました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことになる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことにした": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "ことにしました": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "ことになっている": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "にした": {
+            "en": "にする is used when the speaker has direct control over the outcome and decides on something. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことにする": {
+            "en": "にする is used when the speaker has direct control over the outcome and decides on something. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "になった": {
+            "en": "Could you try adding something to the beginning to add the nuance that someone or thing caused (A) to become that way?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ようにした": {
+            "en": "ようにする is used when expressing effort or intention to build a habit or try to consistently do something. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>It was decided</strong> that I will attend the meeting.",
+        "nuance_translation": "A grammar point which expresses that something will end up <strong>being the thing which is</strong> (A), or result in (A).",
+        "extra_info": "",
+        "reviewable_id": 283,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181085",
+      "type": "study_question",
+      "attributes": {
+        "id": 181085,
+        "content": "なん<span class=\"gp-popout\" data-gp-id=\"88\">でも</span>後回（あとまわ）し<span class=\"gp-popout\" data-gp-id=\"32\">に</span>し<span class=\"gp-popout\" data-gp-id=\"27\">ている</span><span class=\"gp-popout\" data-gp-id=\"143\">と</span>あと<span class=\"gp-popout\" data-gp-id=\"52\">から</span>苦労（くろう）する<span class='study-area-input'>____</span>。",
+        "answer": "ことになる",
+        "alternate_grammar": [],
+        "kanji_answer": "ことになる",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/なんでも後回しにしているとあとから苦労することになる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "If you wait until it is too late, you are going to <strong>end up</strong> regretting it.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 283,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181086",
+      "type": "study_question",
+      "attributes": {
+        "id": 181086,
+        "content": "そんなこと<span class=\"gp-popout\" data-gp-id=\"21\">を</span>し<span class=\"gp-popout\" data-gp-id=\"102\">たら</span>とんでもない<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"78\">よ。</span>",
+        "answer": "ことになる",
+        "alternate_grammar": [],
+        "kanji_answer": "ことになる",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/そんなことをしたらとんでもないことになるよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "If you do something like that, it is <strong>going to become</strong> a huge deal.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 283,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181087",
+      "type": "study_question",
+      "attributes": {
+        "id": 181087,
+        "content": "出来（でき）る<span class=\"gp-popout\" data-gp-id=\"398\">だけ</span>早（はや）く治療（ちりょう）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>し<span class=\"gp-popout\" data-gp-id=\"766\">ないと</span>、後（あと）<span class=\"gp-popout\" data-gp-id=\"52\">から</span>大変（たいへん）な<span class='study-area-input'>____</span>。",
+        "answer": "ことになる",
+        "alternate_grammar": [],
+        "kanji_answer": "ことになる",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/出来るだけ早く治療をしないと、後から大変なことになる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "If you don't treat it soon, it is going to <strong>end up</strong> being a bigger issue.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 283,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5125",
+      "type": "study_question",
+      "attributes": {
+        "id": 5125,
+        "content": "連絡（れんらく）がなければ、僕（ぼく）が仕事（しごと）に行（い）く<span class='study-area-input'>____</span>。",
+        "answer": "ことになります",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）になります",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）が最終（さいしゅう）的（てき）には(A)<strong>というものに変化（へんか）する</strong>、又（また）は(A)を引（ひ）き起（お）こすということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson3/283/male_audio/230616_1323_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/連絡がなければ、僕が仕事に行く事になります。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことになりました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことになる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことになった": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことになっています": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことになっている": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "ことにします": {
+            "en": "にする is used when the speaker has direct control over the outcome and decides on something we are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ようになります": {
+            "en": "ようになる means 'reach the point of (A)' or 'come to be (A)'. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "になります": {
+            "en": "Could you try adding something to the beginning to add the nuance that someone or thing caused (A) to become that way?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "If we do not hear anything, I <strong>will end up</strong> going to work.",
+        "nuance_translation": "A grammar point which expresses that something will end up <strong>being the thing which is</strong> (A), or result in (A).",
+        "extra_info": "",
+        "reviewable_id": 283,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5126",
+      "type": "study_question",
+      "attributes": {
+        "id": 5126,
+        "content": "困（こま）った<span class='study-area-input'>____</span>な。もう電池（でんち）が切（き）れそうだ。",
+        "answer": "ことになった",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）になった",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）が最終（さいしゅう）的（てき）には(A)<strong>というものに変化（へんか）する</strong>、又（また）は(A)を引（ひ）き起（お）こすということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson3/283/male_audio/230616_1324.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/困った事になったな。もう電池が切れそうだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことになりました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことになる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "になった": {
+            "en": "Could you try adding something to the beginning to add the nuance that someone or thing caused (A) to become that way?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ようになった": {
+            "en": "ようになる means 'reach the point of (A)' or 'come to be (A)'. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しまった": {
+            "en": "しまった expresses regret about something that has happened, not that a situation has ended up a certain way. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "こと": {
+            "en": "Could you try adding something to the end that carries the nuance of 'to become'?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I <strong>ended up</strong> in a jam. It seems that my battery is about to die.",
+        "nuance_translation": "A grammar point which expresses that something will end up <strong>being the thing which is</strong> (A), or result in (A).",
+        "extra_info": "",
+        "reviewable_id": 283,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5127",
+      "type": "study_question",
+      "attributes": {
+        "id": 5127,
+        "content": "来年（らいねん）引（ひ）っ越（こ）す<span class='study-area-input'>____</span>。",
+        "answer": "ことになった",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）になった",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）が最終（さいしゅう）的（てき）には(A)<strong>というものに変化（へんか）する</strong>、又（また）は(A)を引（ひ）き起（お）こすということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson3/283/male_audio/230616_1324_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/来年引っ越す事になった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことになりました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことになる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことにした": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "ことにしました": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "ことになっている": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "にした": {
+            "en": "にする is used when the speaker has direct control over the outcome and decides on something. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことにする": {
+            "en": "にする is used when the speaker has direct control over the outcome and decides on something. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "になった": {
+            "en": "Could you try adding something to the beginning to add the nuance that someone or thing caused (A) to become that way?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ようにした": {
+            "en": "ようにする is used when expressing effort or intention to build a habit or try to consistently do something. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>It was decided</strong> that we will move next year.",
+        "nuance_translation": "A grammar point which expresses that something will end up <strong>being the thing which is</strong> (A), or result in (A).",
+        "extra_info": "",
+        "reviewable_id": 283,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1062",
+      "type": "study_question",
+      "attributes": {
+        "id": 1062,
+        "content": "震災（しんさい）のため、アメリカに帰（かえ）らなければならない<span class='study-area-input'>____</span>。",
+        "answer": "ことになりました",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）になりました",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）が最終（さいしゅう）的（てき）には(A)<strong>というものに変化（へんか）する</strong>、又（また）は(A)を引（ひ）き起（お）こすということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Past, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson3/283/male_audio/230616_1322_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/震災のため、アメリカに帰らなければならない事になりました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことになった": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことになる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことになります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことにした": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "ことにしました": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "ことになっている": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "ことにします": {
+            "en": "にする is used when the speaker has direct control over the outcome and decides on something. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "にしました": {
+            "en": "にする is used when the speaker has direct control over the outcome and decides on something. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことにする": {
+            "en": "にする is used when the speaker has direct control over the outcome and decides on something. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "になりました": {
+            "en": "Could you try adding something to the beginning to add the nuance that someone or thing caused (A) to become that way?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ようになった": {
+            "en": "ようになる means 'reach the point of (A)' or 'come to be (A)'. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ようになりました": {
+            "en": "ようになる means 'reach the point of (A)' or 'come to be (A)'. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ようにしました": {
+            "en": "ようにする is used when expressing effort or intention to build a habit or try to consistently do something. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>It was decided</strong> that I must return to America because of the earthquake.",
+        "nuance_translation": "A grammar point which expresses that something will end up <strong>being the thing which is</strong> (A), or result in (A).",
+        "extra_info": "",
+        "reviewable_id": 283,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5128",
+      "type": "study_question",
+      "attributes": {
+        "id": 5128,
+        "content": "結局（けっきょく）僕（ぼく）がおごる<span class='study-area-input'>____</span>。みんな後輩（こうはい）だから。",
+        "answer": "ことになった",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）になった",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）が最終（さいしゅう）的（てき）には(A)<strong>というものに変化（へんか）する</strong>、又（また）は(A)を引（ひ）き起（お）こすということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson3/283/male_audio/230616_1324_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/結局僕がおごる事になった。みんな後輩だから。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことになりました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことになる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "になった": {
+            "en": "Could you try adding something to the beginning to add the nuance that someone or thing caused (A) to become that way?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ようになった": {
+            "en": "ようになる means 'reach the point of (A)' or 'come to be (A)'. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことにした": {
+            "en": "にする is used when the speaker has direct control over the outcome and decides on something. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しまった": {
+            "en": "This does not sound natural here due to the た. We are looking for a grammar point that has the nuance that someone or thing caused (A) to become that way.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I <strong>ended up</strong> paying. Since I'm the oldest.",
+        "nuance_translation": "A grammar point which expresses that something will end up <strong>being the thing which is</strong> (A), or result in (A).",
+        "extra_info": "",
+        "reviewable_id": 283,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1063",
+      "type": "study_question",
+      "attributes": {
+        "id": 1063,
+        "content": "インフルエンザにかかってしまったので、今日（きょう）の大会（たいかい）に出（で）れない<span class='study-area-input'>____</span>。",
+        "answer": "ことになった",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）になった",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）が最終（さいしゅう）的（てき）には(A)<strong>というものに変化（へんか）する</strong>、又（また）は(A)を引（ひ）き起（お）こすということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson3/283/male_audio/230616_1322_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/インフルエンザにかかってしまったので、今日の大会に出れない事になった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことになりました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことになる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことになります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことになっている": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "ようになった": {
+            "en": "よう is used to expresses that a particular action has reached the point of being completed or able to be completed. We are looking for a grammar point that has the nuance that someone or thing caused (A) to become that way.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "になった": {
+            "en": "Could you try adding something to the beginning to add the nuance that someone or thing caused (A) to become that way?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことにした": {
+            "en": "にする is used when the speaker has direct control over the outcome and decides on something. We are looking for a grammar point that has the nuance that someone or thing caused (A) to become that way.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しまった": {
+            "en": "しまった expresses regret about something that has happened, not that a situation has ended up a certain way. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "Since I got the flu I <strong>ended up being</strong> unable to attend today's tournament. ",
+        "nuance_translation": "A grammar point which expresses that something will end up <strong>being the thing which is</strong> (A), or result in (A).",
+        "extra_info": "",
+        "reviewable_id": 283,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5123",
+      "type": "study_question",
+      "attributes": {
+        "id": 5123,
+        "content": "急（きゅう）に出張（しゅっちょう）する<span class='study-area-input'>____</span>、準備（じゅんび）が大変（たいへん）だ。",
+        "answer": "ことになって",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）になって",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）が最終（さいしゅう）的（てき）には(A)<strong>というものに変化（へんか）する</strong>、又（また）は(A)を引（ひ）き起（お）こすということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "て",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson3/283/male_audio/230616_1323_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/急に出張する事になって、準備が大変だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことになった": {
+            "en": "How about expanding the base grammar pattern to include the extra nuance within the translation?",
+            "es": ""
+          },
+          "ことになる": {
+            "en": "How about expanding the base grammar pattern to include the extra nuance within the translation?",
+            "es": ""
+          },
+          "ことにして": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          },
+          "ことになっている": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "ことにした": {
+            "en": "にする is used when the speaker has direct control over the outcome and decides on something. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "になって": {
+            "en": "Could you try adding something to the beginning to add the nuance that someone or thing caused (A) to become that way?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことにする": {
+            "en": "にする is used when the speaker has direct control over the outcome and decides on something. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "にして": {
+            "en": "にする is used when the speaker has direct control over the outcome and decides on something. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "にした": {
+            "en": "にする is used when the speaker has direct control over the outcome and decides on something. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>It has</strong> suddenly <strong>been decided</strong> that I will go on a business trip and I am having trouble getting ready for it.",
+        "nuance_translation": "A grammar point which expresses that something will end up <strong>being the thing which is</strong> (A), or result in (A).",
+        "extra_info": "",
+        "reviewable_id": 283,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1061",
+      "type": "study_question",
+      "attributes": {
+        "id": 1061,
+        "content": "明日（あした）が雨（あめ）ならば、１週間（いっしゅうかん）降（ふ）り続（つづ）く<span class='study-area-input'>____</span>。",
+        "answer": "ことになる",
+        "alternate_grammar": [],
+        "kanji_answer": "事（こと）になる",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）が最終（さいしゅう）的（てき）には(A)<strong>というものに変化（へんか）する</strong>、又（また）は(A)を引（ひ）き起（お）こすということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson3/283/male_audio/230616_1322.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/明日が雨ならば、１週間降り続く事になる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことになります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "ことになった": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことになっている": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "ようになる": {
+            "en": "ようになる means 'reach the point of (A)' or 'come to be (A)'. We are looking for a grammar point that emphasizes '(A) as a result of (B)' or 'it has been decided that (A)'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "If it rains tomorrow, <strong>it will end up being</strong> a week straight of rain. ",
+        "nuance_translation": "A grammar point which expresses that something will end up <strong>being the thing which is</strong> (A), or result in (A).",
+        "extra_info": "",
+        "reviewable_id": 283,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "379",
+      "type": "writeup",
+      "attributes": {
+        "id": 379,
+        "body_ja": "<p>「ことになる」は、名詞（めいし）を作（つく）る「こと」と格助詞（かくじょし）の「に」、そして五段動詞（ごだんどうし）の「なる」を合（あ）わせた表現（ひょうげん）です。何（なに）かが、ある状態（じょうたい）や結果（けっか）になることを表（あらわ）します。この表現（ひょうげん）は、主（おも）に自分（じぶん）の意思（いし）とは関係（かんけい）しないところで、物事（ものごと）が決（き）まるようなときに使（つか）われます。</p>\r\n\r\n<p>「ことになる」は、主（おも）に、動詞（どうし）やイ形容詞（けいようし）の連体形（れんたいけい）と一緒（いっしょ）に使（つか）われます。また、「な」が付いたナ形容詞（けいようし）に使（つか）われることもあります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181085'>\r\n<li data-study-question='181086'>\r\n<li data-study-question='181087'>\r\n</ul>\r\n\r\n<p>「ことになる」は「(A) に決（き）まる」という意味（いみ）で、ほかの誰（だれ）かの判断（はんだん）や決定（けってい）を表（あらわ）すこともあります。この意味（いみ）になるのは、動詞（どうし）と一緒に使（つか）うときです。</p>\r\n\r\n<section class=\"funfact\"><h4>豆知識（まめちしき）</h4>\r\n<p>「ことになる」は、「なる」が「する」の自動詞（じどうし）だと言（い）われる理由（りゆう）が見（み）える、良（よ）い例（れい）でしょう。「ことになる」は、自分（じぶん）の判断（はんだん）を表（あらわ）す「ことにする」と違（ちが）って、ほかの誰（だれ）かの判断（はんだん）を表（あらわ）すときによく使（つか）われるからです。「なる」の文（ぶん）の焦点（しょうてん）は、「どのような結果（けっか）になったか」にあります。</p></section>",
+        "body": "<p><span data-gp-id='283'>ことになる</span> is an expression that combines the nominalizing use of こと (creating a noun-phrase), with the <span data-term='格助詞・かくじょし'>case marking particle</span> <span data-gp-id='32'>に</span>, and the う - Verb なる 'to become'. This expression can be translated as 'to become (A)', but has the nuance that someone/thing caused (A) to become that way. Due to this, it may also be translated as 'it has been decided that (A)', or 'it will end up being (A)'.</p>\r\n\r\n<p><span data-gp-id='283'>ことになる</span> is primarily used with verbs and <span data-gp-id='24'>い-Adjectives</span> in their <span data-term='連体形・れんたいけい'>attributive form</span>. It may also be used with <span data-gp-id='28'>な-Adjectives</span> followed by な.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181085'>\r\n<li data-study-question='181086'>\r\n<li data-study-question='181087'>\r\n</ul>\r\n\r\n<p>The 'it has been decided that (A)' meaning only applies to verbs, as only verbs will be enacted by someone/thing.</p>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>This structure is a good example of why なる is often viewed as the intransitive form of <span data-gp-id='22'>する</span>. <span data-gp-id='22'>する</span> conveys that someone is performing an action (transitive), while なる implies that something is the result of an action (intransitive). This is why the (A)  phrase in <span data-gp-id='283'>ことになる</span> is usually determined to have been decided/performed by someone else, while still focusing on exactly 'what' (A) became.</p></section>"
+      }
+    },
+    {
+      "id": "524",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 524,
+        "source": "Tobira",
+        "location": "Page 172",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1105",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1105,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 202",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1302",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1302,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 131",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1483",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1483,
+        "source": "[AIAIJ] An Integrated Approach to Intermediate Japanese",
+        "location": "Page 15",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "561",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 561,
+        "site": "MaggieSensei",
+        "description": "ことになる/する",
+        "link": "https://maggiesensei.com/2017/08/22/%E3%81%93%E3%81%A8%E3%81%AB%E3%81%AA%E3%82%8B%E3%81%99%E3%82%8B-koto-ni-naru-%E3%82%88%E3%81%86%E3%81%AB%E3%81%AA%E3%82%8B%E3%81%99%E3%82%8B-you-ni-narusuru/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "562",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 562,
+        "site": "E-Japanese",
+        "description": "ことになる",
+        "link": "http://www.e-japanese.jp/?p=650",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "563",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 563,
+        "site": "JStackExchange",
+        "description": "How do ことになる and ようになる differ?",
+        "link": "https://japanese.stackexchange.com/questions/17954/how-do-%e3%81%93%e3%81%a8%e3%81%ab%e3%81%aa%e3%82%8b-and-%e3%82%88%e3%81%86%e3%81%ab%e3%81%aa%e3%82%8b-differ-when-%e3%81%93%e3%81%a8%e3%81%ab%e3%81%aa%e3%82%8b-cannot-it-has-been-decided-that/17963#17963",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2077",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2077,
+        "site": "Tae Kim",
+        "description": "Using 「なる」 and 「する」 with verbs",
+        "link": "https://guidetojapanese.org/learn/grammar/surunaru",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "390",
+      "type": "related_content",
+      "attributes": {
+        "id": 390,
+        "relationship_type": "related",
+        "body": "Both にする and ことになる relate to decisions but differ in agency. にする is used when the speaker actively chooses something, often in daily situations like deciding what to eat, similar to 'I'll go with X.' ことになる, on the other hand, expresses decisions made by others or by circumstance, like saying 'It's been decided that X.'",
+        "first_relatable": {
+          "id": 84,
+          "slug": "にする",
+          "title": "にする",
+          "meaning": "To decide on, To choose, To make something into, To view something as",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 283,
+          "slug": "ことになる",
+          "title": "ことになる",
+          "meaning": "It will end up being, It is the result of, It has been decided that",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1081",
+      "type": "related_content",
+      "attributes": {
+        "id": 1081,
+        "relationship_type": "related",
+        "body": "These expressions are similar in that both are used to express decisions. ことになる conveys that something has been decided or will happen due to external factors, e.g. 来月転勤することになった ('It's been decided that I'll be transferred next month'), while ことにする describes something the speaker has decided of their own power, e.g. 来月仕事を辞めることにした ('I've decided to quit my job next month').",
+        "first_relatable": {
+          "id": 283,
+          "slug": "ことになる",
+          "title": "ことになる",
+          "meaning": "It will end up being, It is the result of, It has been decided that",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 294,
+          "slug": "ことにする",
+          "title": "ことにする",
+          "meaning": "To decide on, Have decided to",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1082",
+      "type": "related_content",
+      "attributes": {
+        "id": 1082,
+        "relationship_type": "related",
+        "body": "These are closely related patterns with a slight but clear nuance difference. ことになる expresses that something has been decided or will happen, often beyond the speaker's control, e.g. 転勤することになった ('It's been decided that I'll be transferred'), while ことになっている is typically used to refer to an established or habitual rule, e.g. 会議を行うことになっている ('It's been decided we'll hold a meeting').",
+        "first_relatable": {
+          "id": 283,
+          "slug": "ことになる",
+          "title": "ことになる",
+          "meaning": "It will end up being, It is the result of, It has been decided that",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 325,
+          "slug": "ことになっている",
+          "title": "ことになっている",
+          "meaning": "To be expected to, To be scheduled to",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1080",
+      "type": "related_content",
+      "attributes": {
+        "id": 1080,
+        "relationship_type": "related",
+        "body": "These patterns are related in that both center around the idea of something being decided. ことになる expresses that something has been decided or will happen, often beyond the speaker's control, e.g. 転勤することになった ('It's been decided that I'll be transferred'), while に決まっている expresses that something is decisively true, e.g. 勝つに決まっている ('They'll definitely win').",
+        "first_relatable": {
+          "id": 283,
+          "slug": "ことになる",
+          "title": "ことになる",
+          "meaning": "It will end up being, It is the result of, It has been decided that",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 524,
+          "slug": "に決まっている",
+          "title": "に決まっている",
+          "meaning": "Surely, Bound to, Certainly, Be decided",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "760",
+      "type": "related_content",
+      "attributes": {
+        "id": 760,
+        "relationship_type": "related",
+        "body": "Both ようになる and ことになる express something becoming a certain way, but with different nuances. ようになる describes a change in state, e.g. 話せるようになった ('I became able to speak.') ことになる, on the other hand, conveys a decision made, often outside the speaker's control, e.g. 辞めることになった ('It was decided that I/he/she would quit.').",
+        "first_relatable": {
+          "id": 168,
+          "slug": "ようになる",
+          "title": "ようになる",
+          "meaning": "To reach the point that, To come to be that, To turn into",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 283,
+          "slug": "ことになる",
+          "title": "ことになる",
+          "meaning": "It will end up being, It is the result of, It has been decided that",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

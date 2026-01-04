@@ -1,0 +1,1470 @@
+{
+  "data": {
+    "id": "490",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 490,
+      "level": "JLPT3",
+      "lesson_id": 26,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "即ち",
+      "nuance": "前（まえ）に話題（わだい）に出（で）てきていた情報（じょうほう）を要約（ようやく）することで、あることが<strong>つまり</strong>(A)<strong>である</strong>ということを示（しめ）す表現（ひょうげん）。",
+      "grammar_order": 418,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 464,
+        "title": "却って",
+        "slug": "却って"
+      },
+      "previous_grammar_point": {
+        "id": 252,
+        "title": "つまり",
+        "slug": "つまり"
+      },
+      "lesson_count": "4/24",
+      "title": "即ち",
+      "furigana": "即（すなわ）ち",
+      "meaning": "In other words, That is, Namely",
+      "nuance_translation": "A structure showing that something is <strong>namely</strong> (A), by offering summarized information which is <strong>in concordance</strong> with what was previously stated.",
+      "rare_kanji_warning": "乃ち",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<strong>すなわち</strong> + Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/5463",
+      "metadata": "即ち, すなわち, 乃ち, sunawachi, adverb, conjunction, agreeance, correspondence"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "5505",
+            "type": "study_question"
+          },
+          {
+            "id": "184204",
+            "type": "study_question"
+          },
+          {
+            "id": "184205",
+            "type": "study_question"
+          },
+          {
+            "id": "181314",
+            "type": "study_question"
+          },
+          {
+            "id": "181315",
+            "type": "study_question"
+          },
+          {
+            "id": "5507",
+            "type": "study_question"
+          },
+          {
+            "id": "5503",
+            "type": "study_question"
+          },
+          {
+            "id": "3807",
+            "type": "study_question"
+          },
+          {
+            "id": "3808",
+            "type": "study_question"
+          },
+          {
+            "id": "3809",
+            "type": "study_question"
+          },
+          {
+            "id": "5500",
+            "type": "study_question"
+          },
+          {
+            "id": "5501",
+            "type": "study_question"
+          },
+          {
+            "id": "5502",
+            "type": "study_question"
+          },
+          {
+            "id": "5504",
+            "type": "study_question"
+          },
+          {
+            "id": "5506",
+            "type": "study_question"
+          },
+          {
+            "id": "5508",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "437",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "645",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1124",
+            "type": "related_content"
+          },
+          {
+            "id": "1184",
+            "type": "related_content"
+          },
+          {
+            "id": "974",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1079",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "5505",
+      "type": "study_question",
+      "attributes": {
+        "id": 5505,
+        "content": "僕（ぼく）は肉（にく）を食（た）べない。<span class='study-area-input'>____</span>菜食（さいしょく）主義者（しゅぎしゃ）だ。",
+        "answer": "すなわち",
+        "alternate_grammar": [],
+        "kanji_answer": "即（すなわ）ち",
+        "kanji_alt_grammar": [],
+        "nuance": "前（まえ）に話題（わだい）に出（で）てきていた情報（じょうほう）を要約（ようやく）することで、あることが<strong>つまり</strong>(A)<strong>である</strong>ということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson6/490/male_audio/230621_1306.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/僕は肉を食べない。即ち菜食主義者だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ということで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ということは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "すわなち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つなわち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "すなわ": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ようするに": {
+            "en": "This is used to highlight important information in a similar way to 'to sum up', 'in summary', or 'in short' in English. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "いわゆる": {
+            "en": "いわゆる is used to draw out commonly known names or well known expressions. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "むしろ": {
+            "en": "むしろ means 'rather' or 'instead,' and is used to clarify or correct what was just said or to express preference. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I don't eat meat. <strong>In other words</strong>, I am a vegetarian.",
+        "nuance_translation": "A structure showing that something is <strong>namely</strong> (A), by offering summarized information which is <strong>in concordance</strong> with what was previously stated.",
+        "extra_info": "",
+        "reviewable_id": 490,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184204",
+      "type": "study_question",
+      "attributes": {
+        "id": 184204,
+        "content": "<span data-gp-id='30'>この</span>車（くるま）は<span data-gp-id='42'>もう</span>動（うご）かない<span data-gp-id='2'>です</span>。<strong>すなわち</strong>廃車（はいしゃ）<span data-gp-id='2'>です</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This car does not run anymore. <strong>In other words</strong>, it is a decommissioned car.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 490,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184205",
+      "type": "study_question",
+      "attributes": {
+        "id": 184205,
+        "content": "彼（かれ）は僕（ぼく）<span data-gp-id='6'>の</span>父（ちち）<span data-gp-id='6'>の</span>弟（おとうと）<span data-gp-id='2'>です</span>。<span data-gp-id='252'>つまり</span>叔父（おじ）<span data-gp-id='2'>です</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "He is my father's brother. In other words, he is my uncle.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 490,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181314",
+      "type": "study_question",
+      "attributes": {
+        "id": 181314,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"30\">この</span>人（ひと）は私（わたし）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>妻（つま）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>お母（かあ）さん<span class=\"gp-popout\" data-gp-id=\"2\">です</span>。<span class='study-area-input'>____</span>、義理（ぎり）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>母（はは）<span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "すなわち",
+        "alternate_grammar": [],
+        "kanji_answer": "すなわち",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/この人は私の妻のお母さんです。すなわち、義理の母です。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This person is my wife's mother. <strong>In other words</strong>, my mother in law.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 490,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181315",
+      "type": "study_question",
+      "attributes": {
+        "id": 181315,
+        "content": "私（わたし）はゲームしてお金（かね）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>稼（かせ）い<span class=\"gp-popout\" data-gp-id=\"765\">でいます</span>。<span class='study-area-input'>____</span>、プロゲーマー<span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "すなわち",
+        "alternate_grammar": [],
+        "kanji_answer": "すなわち",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/私はゲームしてお金を稼いでいます。すなわち、プロゲーマーです。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I get paid for playing video games. <strong>In other words</strong>, I am a professional gamer.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 490,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5507",
+      "type": "study_question",
+      "attributes": {
+        "id": 5507,
+        "content": "和食（わしょく）、<span class='study-area-input'>____</span>焼（や）き魚（ざかな）やお味噌汁（みそしる）のようなものが食（た）べられるお店（みせ）に行（い）きたいんです。",
+        "answer": "すなわち",
+        "alternate_grammar": [],
+        "kanji_answer": "即（すなわ）ち",
+        "kanji_alt_grammar": [],
+        "nuance": "前（まえ）に話題（わだい）に出（で）てきていた情報（じょうほう）を要約（ようやく）することで、あることが<strong>つまり</strong>(A)<strong>である</strong>ということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson6/490/male_audio/230621_1306_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/和食、即ち焼き魚やお味噌汁のようなものが食べられるお店に行きたいんです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ということで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ということは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "すわなち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "という": {
+            "en": "という means 'the (B) known as (A)'. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いわゆる": {
+            "en": "いわゆる is used to draw out commonly known names or well known expressions. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "というのは": {
+            "en": "というのは is a nominalizing phrase that presents facts or highlights the point of a discussion. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とくに": {
+            "en": "とくに means 'especially'. e’re looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "たとえば": {
+            "en": "たとえば means 'for example'. e’re looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I want to go to a restaurant where I can eat Japanese food, <strong>namely</strong> grilled fish, miso soup and the like.",
+        "nuance_translation": "A structure showing that something is <strong>namely</strong> (A), by offering summarized information which is <strong>in concordance</strong> with what was previously stated.",
+        "extra_info": "",
+        "reviewable_id": 490,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5503",
+      "type": "study_question",
+      "attributes": {
+        "id": 5503,
+        "content": "彼（かれ）は学校（がっこう）の先生（せんせい）、<span class='study-area-input'>____</span>教育者（きょういくしゃ）だ。",
+        "answer": "すなわち",
+        "alternate_grammar": [],
+        "kanji_answer": "即（すなわ）ち",
+        "kanji_alt_grammar": [],
+        "nuance": "前（まえ）に話題（わだい）に出（で）てきていた情報（じょうほう）を要約（ようやく）することで、あることが<strong>つまり</strong>(A)<strong>である</strong>ということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson6/490/male_audio/230621_1305_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/彼は学校の先生、即ち教育者だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ということで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ということは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ようするに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "すわなち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "というのは": {
+            "en": "というのは is a nominalizing phrase that presents facts or highlights the point of a discussion. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それで": {
+            "en": "それで highlights the prior sentence as a reason or cause. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "という": {
+            "en": "という means 'the (B) known as (A)'. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いわゆる": {
+            "en": "いわゆる is used to draw out commonly known names or well known expressions. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "そこで": {
+            "en": "そこで is used to introduce an action or response to a situation. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "として": {
+            "en": "として means ‘as (A)’ or ‘in the role of (A)’. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それは": {
+            "en": "それは does mean 'that is', however it is used to point out something that is close to the speaker, and cannot be used in a context like this. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "He is a school teacher, <strong>that is</strong>, an educator.",
+        "nuance_translation": "A structure showing that something is <strong>namely</strong> (A), by offering summarized information which is <strong>in concordance</strong> with what was previously stated.",
+        "extra_info": "",
+        "reviewable_id": 490,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3807",
+      "type": "study_question",
+      "attributes": {
+        "id": 3807,
+        "content": "彼（かれ）は私（わたし）の母（はは）の弟（おとうと）の息子（むすこ）、<span class='study-area-input'>____</span>従兄弟（いとこ）です。",
+        "answer": "すなわち",
+        "alternate_grammar": [],
+        "kanji_answer": "即（すなわ）ち",
+        "kanji_alt_grammar": [],
+        "nuance": "前（まえ）に話題（わだい）に出（で）てきていた情報（じょうほう）を要約（ようやく）することで、あることが<strong>つまり</strong>(A)<strong>である</strong>ということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson6/490/male_audio/230621_1303.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/彼は私の母の弟の息子、即ち従兄弟です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ということで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ということは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ようするに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "すわなち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つなわち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "ようするに": {
+            "en": "This is used to highlight important information in a similar way to 'to sum up', 'in summary', or 'in short' in English. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いわゆる": {
+            "en": "いわゆる is used to draw out commonly known names or well known expressions. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "かえって": {
+            "en": "かえって means 'on the contrary' and is used when an outcome is opposite to what’s normally expected. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "むしろ": {
+            "en": "むしろ means 'rather' or 'instead,' and is used to clarify or correct what was just said or to express preference. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つまりに": {
+            "en": "This is not a proper grammar structure. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "He is my mother's brother's son. <strong>In other words</strong>, he is my cousin.",
+        "nuance_translation": "A structure showing that something is <strong>namely</strong> (A), by offering summarized information which is <strong>in concordance</strong> with what was previously stated.",
+        "extra_info": "",
+        "reviewable_id": 490,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3808",
+      "type": "study_question",
+      "attributes": {
+        "id": 3808,
+        "content": "５（ご）割引（わりび）きの商品（しょうひん）とは、<span class='study-area-input'>____</span>元（もと）の値段（ねだん）の半額（はんがく）ということだ。",
+        "answer": "すなわち",
+        "alternate_grammar": [],
+        "kanji_answer": "即（すなわ）ち",
+        "kanji_alt_grammar": [],
+        "nuance": "前（まえ）に話題（わだい）に出（で）てきていた情報（じょうほう）を要約（ようやく）することで、あることが<strong>つまり</strong>(A)<strong>である</strong>ということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson6/490/male_audio/230621_1304.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/５割引きの商品とは、即ち元の値段の半額ということだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ということで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ということは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ようするに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "すわなち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つなわち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "むしろ": {
+            "en": "むしろ means 'rather' or 'instead,' and is used to clarify or correct what was just said or to express preference. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "かえって": {
+            "en": "かえって means 'on the contrary' and is used when an outcome is opposite to what’s normally expected. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ようするに": {
+            "en": "This is used to highlight important information in a similar way to 'to sum up', 'in summary', or 'in short' in English. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いわゆる": {
+            "en": "いわゆる is used to draw out commonly known names or well known expressions. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "A product that is 50% off is, <strong>in other words</strong>, half off.",
+        "nuance_translation": "A structure showing that something is <strong>namely</strong> (A), by offering summarized information which is <strong>in concordance</strong> with what was previously stated.",
+        "extra_info": "",
+        "reviewable_id": 490,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3809",
+      "type": "study_question",
+      "attributes": {
+        "id": 3809,
+        "content": "<span class='vocab-popout' data-vocab-id='849'>私（わたし）</span>は将来（しょうらい）、子供（こども）たちに物事（ものごと）を教（おし）える職業（しょくぎょう）に就（つ）きたいです。<span class='study-area-input'>____</span>、<span class='vocab-popout' data-vocab-id='506'>学校（がっこう）</span>の<span class='vocab-popout' data-vocab-id='358'>先生（せんせい）</span>になりたいのです。",
+        "answer": "すなわち",
+        "alternate_grammar": [],
+        "kanji_answer": "即（すなわ）ち",
+        "kanji_alt_grammar": [],
+        "nuance": "前（まえ）に話題（わだい）に出（で）てきていた情報（じょうほう）を要約（ようやく）することで、あることが<strong>つまり</strong>(A)<strong>である</strong>ということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson6/490/male_audio/230621_1304_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/私は将来、子供たちに物事を教える職業に就きたいです。即ち、学校の先生になりたいのです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ということで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ということは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "たとえば": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ようするに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "すわなち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つなわち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "いわゆる": {
+            "en": "いわゆる is used to draw out commonly known names or well known expressions. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "そこで": {
+            "en": "そこで is used to introduce an action or response to a situation. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "というのは": {
+            "en": "というのは is a nominalizing phrase that presents facts or highlights the point of a discussion. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "むしろ": {
+            "en": "むしろ means 'rather' or 'instead,' and is used to clarify or correct what was just said or to express preference. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "かえって": {
+            "en": "かえって means 'on the contrary' and is used when an outcome is opposite to what’s normally expected. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "という": {
+            "en": "という means 'the (B) known as (A)'. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それに": {
+            "en": "それに means 'on top of that' or 'moreover'. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それで": {
+            "en": "それで highlights the prior sentence as a reason or cause. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "In the future, I'd like to take up the profession of teaching various things to kids. <strong>Namely</strong>, I'd like to become a school teacher.",
+        "nuance_translation": "A structure showing that something is <strong>namely</strong> (A), by offering summarized information which is <strong>in concordance</strong> with what was previously stated.",
+        "extra_info": "",
+        "reviewable_id": 490,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5500",
+      "type": "study_question",
+      "attributes": {
+        "id": 5500,
+        "content": "日本（にほん）の議会（ぎかい）は二院制（にいんせい）、<span class='study-area-input'>____</span>衆議院（しゅうぎいん）と参議院（さんぎいん）です。",
+        "answer": "すなわち",
+        "alternate_grammar": [],
+        "kanji_answer": "即（すなわ）ち",
+        "kanji_alt_grammar": [],
+        "nuance": "前（まえ）に話題（わだい）に出（で）てきていた情報（じょうほう）を要約（ようやく）することで、あることが<strong>つまり</strong>(A)<strong>である</strong>ということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/日本の議会は二院制、即ち衆議院と参議院です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ということで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ということは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "すわなち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つなわち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "いわゆる": {
+            "en": "いわゆる is used to draw out commonly known names or well known expressions. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "という": {
+            "en": "という means 'the (B) known as (A)'. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "というのは": {
+            "en": "というのは is a nominalizing phrase that presents facts or highlights the point of a discussion. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "The National Diet of Japan consists of two Houses, <strong>namely</strong> the House of Representatives and the House of Councilors.",
+        "nuance_translation": "A structure showing that something is <strong>namely</strong> (A), by offering summarized information which is <strong>in concordance</strong> with what was previously stated.",
+        "extra_info": "",
+        "reviewable_id": 490,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5501",
+      "type": "study_question",
+      "attributes": {
+        "id": 5501,
+        "content": "彼女（かのじょ）は私（わたし）の弟（おとうと）の妻（つま）、<span class='study-area-input'>____</span>義理（ぎり）の妹（いもうと）です。",
+        "answer": "すなわち",
+        "alternate_grammar": [],
+        "kanji_answer": "即（すなわ）ち",
+        "kanji_alt_grammar": [],
+        "nuance": "前（まえ）に話題（わだい）に出（で）てきていた情報（じょうほう）を要約（ようやく）することで、あることが<strong>つまり</strong>(A)<strong>である</strong>ということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson6/490/male_audio/230621_1305.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/彼女は私の弟の妻、即ち義理の妹です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ということで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ということは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ようするに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "すわなち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つなわち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "それで": {
+            "en": "それで highlights the prior sentence as a reason or cause. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "というのは": {
+            "en": "というのは is a nominalizing phrase that presents facts or highlights the point of a discussion. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "そこで": {
+            "en": "そこで is used to introduce an action or response to a situation. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "かえって": {
+            "en": "かえって means 'on the contrary' and is used when an outcome is opposite to what’s normally expected. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いわゆる": {
+            "en": "いわゆる is used to draw out commonly known names or well known expressions. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "という": {
+            "en": "という means 'the (B) known as (A)'. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "あるいは": {
+            "en": "あるいは means 'or'. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それは": {
+            "en": "それは does mean 'that is', however it is used to point out something that is close to the speaker, and cannot be used in a context like this.We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "She is my brother's wife, <strong>that is</strong>, my sister in law.",
+        "nuance_translation": "A structure showing that something is <strong>namely</strong> (A), by offering summarized information which is <strong>in concordance</strong> with what was previously stated.",
+        "extra_info": "",
+        "reviewable_id": 490,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5502",
+      "type": "study_question",
+      "attributes": {
+        "id": 5502,
+        "content": "彼（かれ）はこの会社（かいしゃ）で最（もっと）も偉（えら）い人（ひと）、<span class='study-area-input'>____</span>社長（しゃちょう）だ。",
+        "answer": "すなわち",
+        "alternate_grammar": [],
+        "kanji_answer": "即（すなわ）ち",
+        "kanji_alt_grammar": [],
+        "nuance": "前（まえ）に話題（わだい）に出（で）てきていた情報（じょうほう）を要約（ようやく）することで、あることが<strong>つまり</strong>(A)<strong>である</strong>ということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson6/490/male_audio/230621_1305_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/彼はこの会社で最も偉い人、即ち社長だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ということで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ということは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ようするに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "すわなち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つなわち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "いわゆる": {
+            "en": "いわゆる is used to draw out commonly known names or well known expressions. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ようするに": {
+            "en": "This is used to highlight important information in a similar way to 'to sum up', 'in summary', or 'in short' in English. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "むしろ": {
+            "en": "むしろ means 'rather' or 'instead,' and is used to clarify or correct what was just said or to express preference. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つもり": {
+            "en": "This means 'to plan to'. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "He is the most important person in the company. <strong>In other words</strong> he is the CEO.",
+        "nuance_translation": "A structure showing that something is <strong>namely</strong> (A), by offering summarized information which is <strong>in concordance</strong> with what was previously stated.",
+        "extra_info": "",
+        "reviewable_id": 490,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5504",
+      "type": "study_question",
+      "attributes": {
+        "id": 5504,
+        "content": "あの人（ひと）はお金（かね）をもらわずにこの辺り（あたり）の掃除（そうじ）をしている。<span class='study-area-input'>____</span>ボランティアだ。",
+        "answer": "すなわち",
+        "alternate_grammar": [],
+        "kanji_answer": "即（すなわ）ち",
+        "kanji_alt_grammar": [],
+        "nuance": "前（まえ）に話題（わだい）に出（で）てきていた情報（じょうほう）を要約（ようやく）することで、あることが<strong>つまり</strong>(A)<strong>である</strong>ということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson6/490/male_audio/230621_1305_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/あの人はお金をもらわずにこの辺りの掃除をしている。即ちボランティアだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ということで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ということは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ようするに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "すわなち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つなわち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "すんわち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "ようするに": {
+            "en": "This is used to highlight important information in a similar way to 'to sum up', 'in summary', or 'in short' in English. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いわゆる": {
+            "en": "いわゆる is used to draw out commonly known names or well known expressions. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "かえって": {
+            "en": "かえって means 'on the contrary' and is used when an outcome is opposite to what’s normally expected. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つもり": {
+            "en": "This means 'to plan to'. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "That person cleans around here without receiving money. <strong>In other words</strong>, that person is a volunteer.",
+        "nuance_translation": "A structure showing that something is <strong>namely</strong> (A), by offering summarized information which is <strong>in concordance</strong> with what was previously stated.",
+        "extra_info": "",
+        "reviewable_id": 490,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5506",
+      "type": "study_question",
+      "attributes": {
+        "id": 5506,
+        "content": "オレは歌（うた）を歌（うた）ってお金（かね）をもらっている。<span class='study-area-input'>____</span>ミュージシャンだ。",
+        "answer": "すなわち",
+        "alternate_grammar": [],
+        "kanji_answer": "即（すなわ）ち",
+        "kanji_alt_grammar": [],
+        "nuance": "前（まえ）に話題（わだい）に出（で）てきていた情報（じょうほう）を要約（ようやく）することで、あることが<strong>つまり</strong>(A)<strong>である</strong>ということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson6/490/male_audio/230621_1306_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/オレは歌を歌ってお金をもらっている。即ちミュージシャンだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ということで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ということは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ようするに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "すわなち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つなわち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "ようするに": {
+            "en": "This is used to highlight important information in a similar way to 'to sum up', 'in summary', or 'in short' in English. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いわゆる": {
+            "en": "いわゆる is used to draw out commonly known names or well known expressions. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "すなわちに": {
+            "en": "Using に after this structure is ungrammatical.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つもり": {
+            "en": "This means 'to plan to'. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I earn money by singing songs. <strong>In other words</strong>, I am a musician.",
+        "nuance_translation": "A structure showing that something is <strong>namely</strong> (A), by offering summarized information which is <strong>in concordance</strong> with what was previously stated.",
+        "extra_info": "",
+        "reviewable_id": 490,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5508",
+      "type": "study_question",
+      "attributes": {
+        "id": 5508,
+        "content": "この会社（かいしゃ）では、兼業（けんぎょう）、<span class='study-area-input'>____</span>二（ふた）つの仕事（しごと）をかけ持（も）ちして働（はたら）くことを禁止（きんし）しています。",
+        "answer": "すなわち",
+        "alternate_grammar": [],
+        "kanji_answer": "即（すなわ）ち",
+        "kanji_alt_grammar": [],
+        "nuance": "前（まえ）に話題（わだい）に出（で）てきていた情報（じょうほう）を要約（ようやく）することで、あることが<strong>つまり</strong>(A)<strong>である</strong>ということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson6/490/male_audio/230621_1306_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/この会社では、兼業、即ち二つの仕事をかけ持ちして働くことを禁止しています。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つまり": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ということで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ということは": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ようするに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "すわなち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つなわち": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "というのは": {
+            "en": "というのは is a nominalizing phrase that presents facts or highlights the point of a discussion. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それで": {
+            "en": "それで highlights the prior sentence as a reason or cause. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いわゆる": {
+            "en": "いわゆる is used to draw out commonly known names or well known expressions. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "という": {
+            "en": "という means 'the (B) known as (A)'. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "あるいは": {
+            "en": "あるいは means 'or'. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "それに": {
+            "en": "それに means 'on top of that' or 'moreover'. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "そこで": {
+            "en": "そこで is used to introduce an action or response to a situation. We're looking for a formal grammar point that means 'in other words' and is used to restate or summarize information.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "In this company, you are not allowed to have a side job, <strong>that is</strong>, to work for two companies at the same time.",
+        "nuance_translation": "A structure showing that something is <strong>namely</strong> (A), by offering summarized information which is <strong>in concordance</strong> with what was previously stated.",
+        "extra_info": "",
+        "reviewable_id": 490,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "437",
+      "type": "writeup",
+      "attributes": {
+        "id": 437,
+        "body_ja": "<p>「即（すなわ）ち」は、「つまり」と似（に）た表現（ひょうげん）で、前（まえ）に述（の）べられたことを別（べつ）の言（い）い方（かた）で言（い）いかえるときに使（つか）われます。「即（すなわ）ち」は副詞（ふくし）ですが、接続詞（せつぞくし）として使（つか）われて、二つの文（ぶん）をつなぐこともよくあります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181314'>\r\n<li data-study-question='181315'>\r\n</ul>\r\n\r\n<section class=\"caution\"><h4>注意点（ちゅういてん）</h4>\r\n<p>「即（すなわ）ち」は同（おな）じ内容（ないよう）の (A) と (B) を別（べつ）の言葉（ことば）で言（い）い換（か）えるときに使（つか）われます。このような「即（すなわ）ち」には、「一致（いっち）する」という意味（いみ）を持（も）つ漢字（かんじ）が当（あ）てられています。これに対（たい）して、「つまり」は、前（まえ）の話（はなし）を短（みじか）くまとめるときに使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184204'>\r\n<li data-study-question='184205'></ul></section>",
+        "body": "<p>In a similar way to <span data-gp-id='252'>つまり</span>, <span data-gp-id='490'>即（すなわ）ち</span> is another grammar pattern in Japanese that is often translated as 'in other words'. It may also be translated as 'namely', or 'that is to say'. While <span data-gp-id='490'>即（すなわ）ち</span> is an <span data-term='副詞・ふくし'>adverb</span>, it is often used as a <span data-term='接続詞・せつぞくし'>conjunction</span>, linking two sentences via some sort of reasoning.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181314'>\r\n<li data-study-question='181315'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>The kanji used in <span data-gp-id='490'>即（すなわ）ち</span> simply means 'in concordance'. This shows that the nuance associated with <span data-gp-id='490'>即（すなわ）ち</span> is that of 'agreeance' or 'correspondence' to something else, while <span data-gp-id='252'>つまり</span> is purely that of 'summarisation'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184204'>\r\n<li data-study-question='184205'></ul></section>"
+      }
+    },
+    {
+      "id": "645",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 645,
+        "source": "Tobira",
+        "location": "Page 330",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1079",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1079,
+        "site": "Japanese Stack Exchange",
+        "description": "つまり vs. すなわち",
+        "link": "https://japanese.stackexchange.com/questions/54899/%E8%A9%B0%E3%81%BE%E3%82%8A-vs-%E5%8D%B3%E3%81%A1-tsumari-vs-sunawachi",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1124",
+      "type": "related_content",
+      "attributes": {
+        "id": 1124,
+        "relationship_type": "related",
+        "body": "即ち and ということは both rephrase information, but differ in tone and function. 即ち is formal and used to define or clarify precisely, often in writing, e.g. 日本の首都、即ち東京 ('The capital of Japan—namely, Tokyo'). ということは is conversational and introduces a conclusion, e.g. 明日は休み？ということは、今日は早く帰れるかもね ('Tomorrow's a holiday? So that means we might get to leave early today').",
+        "first_relatable": {
+          "id": 490,
+          "slug": "即ち",
+          "title": "即ち",
+          "meaning": "In other words, That is, Namely",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 345,
+          "slug": "ということは",
+          "title": "ということは",
+          "meaning": "That means, That is to say",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1184",
+      "type": "related_content",
+      "attributes": {
+        "id": 1184,
+        "relationship_type": "related",
+        "body": "即ち and 要するに both help clarify or summarize a statement, but they differ in function. 即ち gives a formal restatement or definition, e.g. 日本の首都、即ち 'the capital of Japan, that is to say Tokyo'. 要するに summarizes the main point and can be used in speech or semi-formal writing, e.g. 要するに時間がない ('To sum it up, we have no time.').",
+        "first_relatable": {
+          "id": 490,
+          "slug": "即ち",
+          "title": "即ち",
+          "meaning": "In other words, That is, Namely",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 512,
+          "slug": "要するに",
+          "title": "要するに",
+          "meaning": "To sum up, In summary, In short",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "974",
+      "type": "related_content",
+      "attributes": {
+        "id": 974,
+        "relationship_type": "related",
+        "body": "Both つまり and 即ち mean 'in other words', but differ in tone and context. つまり is casual and used in conversation, e.g. つまりしょうがないってこと ('In other words, it can't be helped'). 即ち is formal and often used in academic or written contexts, e.g. 生きることは即ち戦いである ('To live is, in other words, a battle').",
+        "first_relatable": {
+          "id": 252,
+          "slug": "つまり",
+          "title": "つまり",
+          "meaning": "In short, To sum up, In other words",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 490,
+          "slug": "即ち",
+          "title": "即ち",
+          "meaning": "In other words, That is, Namely",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

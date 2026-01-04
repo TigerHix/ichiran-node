@@ -1,0 +1,1030 @@
+{
+  "data": {
+    "id": "23",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 23,
+      "level": "JLPT5",
+      "lesson_id": 3,
+      "part_of_speech": "表現",
+      "register": "一般",
+      "word_type": "動詞",
+      "slug": "がいる",
+      "nuance": "<strong>生（い）き物（もの）</strong>、又（また）はその<strong>存在（そんざい）</strong>を表（あらわ）すために使（つか）われる表現（ひょうげん）。",
+      "grammar_order": 33,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 30,
+        "title": "この",
+        "slug": "この"
+      },
+      "previous_grammar_point": {
+        "id": 13,
+        "title": "がある",
+        "slug": "がある"
+      },
+      "lesson_count": "8/13",
+      "title": "がいる",
+      "furigana": "が居（い）る",
+      "meaning": "To be, There is,  To remain (in a state)",
+      "nuance_translation": "A phrase that expresses a <strong>single living property</strong> of one whole thing, or <strong>existence</strong>.",
+      "rare_kanji_warning": null,
+      "caution": " 居る kanji use can frequently be seen",
+      "polite_structure": "Noun + <strong><span class='gp-popout' data-gp-id='10'>が</span>\r\n + います</strong>",
+      "casual_structure": "Noun + <strong><span class='gp-popout' data-gp-id='10'>が</span>\r\n + いる</strong>",
+      "part_of_speech_translation": "Expression",
+      "register_translation": "Standard",
+      "word_type_translation": "Verb",
+      "discourse_link": "https://community.bunpro.jp/t/discussion-topic/494",
+      "metadata": "がいる, がいます, gairu, gaimasu, expression, verb"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154806",
+            "type": "study_question"
+          },
+          {
+            "id": "154808",
+            "type": "study_question"
+          },
+          {
+            "id": "659",
+            "type": "study_question"
+          },
+          {
+            "id": "154805",
+            "type": "study_question"
+          },
+          {
+            "id": "154807",
+            "type": "study_question"
+          },
+          {
+            "id": "183765",
+            "type": "study_question"
+          },
+          {
+            "id": "658",
+            "type": "study_question"
+          },
+          {
+            "id": "23",
+            "type": "study_question"
+          },
+          {
+            "id": "1646",
+            "type": "study_question"
+          },
+          {
+            "id": "1647",
+            "type": "study_question"
+          },
+          {
+            "id": "1651",
+            "type": "study_question"
+          },
+          {
+            "id": "1649",
+            "type": "study_question"
+          },
+          {
+            "id": "1650",
+            "type": "study_question"
+          },
+          {
+            "id": "1653",
+            "type": "study_question"
+          },
+          {
+            "id": "1654",
+            "type": "study_question"
+          },
+          {
+            "id": "1652",
+            "type": "study_question"
+          },
+          {
+            "id": "1648",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "32",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "29",
+            "type": "offline_resource"
+          },
+          {
+            "id": "92",
+            "type": "offline_resource"
+          },
+          {
+            "id": "751",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1059",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1",
+            "type": "related_content"
+          },
+          {
+            "id": "809",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "49",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "50",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154806",
+      "type": "study_question",
+      "attributes": {
+        "id": 154806,
+        "content": "猫（ねこ）<span class='study-area-input'>____</span>。",
+        "answer": "がいる",
+        "alternate_grammar": [],
+        "kanji_answer": "がいる",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/猫がいる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>There is</strong> a cat.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 23,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154808",
+      "type": "study_question",
+      "attributes": {
+        "id": 154808,
+        "content": "私（わたし）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>、彼女（かのじょ）<span class='study-area-input'>____</span>。",
+        "answer": "がいる",
+        "alternate_grammar": [],
+        "kanji_answer": "が居（い）る",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私は、彼女が居る。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>have</strong> a girlfriend.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 23,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "659",
+      "type": "study_question",
+      "attributes": {
+        "id": 659,
+        "content": "田中（たなか）さん<span class='gp-popout' data-gp-id='15'>と</span>トム<span class='study-area-input'>____</span>。",
+        "answer": "がいます",
+        "alternate_grammar": [],
+        "kanji_answer": "がいます",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>生（い）き物（もの）</strong>、又（また）はその<strong>存在（そんざい）</strong>を表（あらわ）すために使（つか）われる表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/23/male_audio/09-田中さんとトムがいます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/田中さんとトムがいます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "がいる": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "いる": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "います": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Mr. Tanaka and Tom <strong>are</strong> (there). (<strong>exist</strong>)",
+        "nuance_translation": "A phrase that expresses a <strong>single living property</strong> of one whole thing, or <strong>existence</strong>.",
+        "extra_info": "",
+        "reviewable_id": 23,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154805",
+      "type": "study_question",
+      "attributes": {
+        "id": 154805,
+        "content": "警察（けいさつ）<span class='study-area-input'>____</span>。",
+        "answer": "がいる",
+        "alternate_grammar": [],
+        "kanji_answer": "がいる",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/警察がいる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>There is</strong> a police officer.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 23,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154807",
+      "type": "study_question",
+      "attributes": {
+        "id": 154807,
+        "content": "パトカー<span class='study-area-input'>____</span>。",
+        "answer": "がいる",
+        "alternate_grammar": [],
+        "kanji_answer": "がいる",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/パトカーがいる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>There is</strong> a police car. (Operated by police)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 23,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183765",
+      "type": "study_question",
+      "attributes": {
+        "id": 183765,
+        "content": "<span data-gp-id='20'>そこ</span><span data-gp-id='32'>に</span>警察（けいさつ）<span data-gp-id='23'>居（い）る</span><span data-gp-id='78'>よ</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>There is</strong> a cop over there. ",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 23,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "658",
+      "type": "study_question",
+      "attributes": {
+        "id": 658,
+        "content": "私（わたし）<span class='study-area-input'>____</span>。",
+        "answer": "がいる",
+        "alternate_grammar": [],
+        "kanji_answer": "がいる",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>生（い）き物（もの）</strong>、又（また）はその<strong>存在（そんざい）</strong>を表（あらわ）すために使（つか）われる表現（ひょうげん）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/23/male_audio/11-私がいる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私がいる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "がいます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "います": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "いる": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>am</strong> (here). (<strong>exist</strong>)",
+        "nuance_translation": "A phrase that expresses a <strong>single living property</strong> of one whole thing, or <strong>existence</strong>.",
+        "extra_info": "",
+        "reviewable_id": 23,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "23",
+      "type": "study_question",
+      "attributes": {
+        "id": 23,
+        "content": "トム<span class='study-area-input'>____</span>。",
+        "answer": "がいます",
+        "alternate_grammar": [],
+        "kanji_answer": "がいます",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>生（い）き物（もの）</strong>、又（また）はその<strong>存在（そんざい）</strong>を表（あらわ）すために使（つか）われる表現（ひょうげん）。",
+        "tense": "[polite]",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/23/male_audio/03-トムがいます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/トムがいます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "がいる": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "いる": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "います": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Tom <strong>is</strong> (here). (<strong>exists</strong>)",
+        "nuance_translation": "A phrase that expresses a <strong>single living property</strong> of one whole thing, or <strong>existence</strong>.",
+        "extra_info": "",
+        "reviewable_id": 23,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1646",
+      "type": "study_question",
+      "attributes": {
+        "id": 1646,
+        "content": "先生（せんせい）<span class='study-area-input'>____</span>。",
+        "answer": "がいます",
+        "alternate_grammar": [],
+        "kanji_answer": "がいます",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>生（い）き物（もの）</strong>、又（また）はその<strong>存在（そんざい）</strong>を表（あらわ）すために使（つか）われる表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/23/male_audio/06-先生がいます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/先生がいます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "がいる": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "いる": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "います": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>There is</strong> a teacher. (<strong>exists</strong>)",
+        "nuance_translation": "A phrase that expresses a <strong>single living property</strong> of one whole thing, or <strong>existence</strong>.",
+        "extra_info": "",
+        "reviewable_id": 23,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1647",
+      "type": "study_question",
+      "attributes": {
+        "id": 1647,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='15'>と</span>友達（ともだち）<span class='study-area-input'>____</span>。",
+        "answer": "がいます",
+        "alternate_grammar": [
+          "がいる",
+          "がいます"
+        ],
+        "kanji_answer": "がいます",
+        "kanji_alt_grammar": [
+          "がいる",
+          "がいます"
+        ],
+        "nuance": "<strong>生（い）き物（もの）</strong>、又（また）はその<strong>存在（そんざい）</strong>を表（あらわ）すために使（つか）われる表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/23/male_audio/12-私と友達がいます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私と友達がいます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いる": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "います": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A friend and I <strong>are</strong> (here). (<strong>exist</strong>)",
+        "nuance_translation": "A phrase that expresses a <strong>single living property</strong> of one whole thing, or <strong>existence</strong>.",
+        "extra_info": "",
+        "reviewable_id": 23,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1651",
+      "type": "study_question",
+      "attributes": {
+        "id": 1651,
+        "content": "あなた<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='9'>でしょう</span>。",
+        "answer": "がいる",
+        "alternate_grammar": [],
+        "kanji_answer": "がいる",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>生（い）き物（もの）</strong>、又（また）はその<strong>存在（そんざい）</strong>を表（あらわ）すために使（つか）われる表現（ひょうげん）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/23/male_audio/01-あなたがいるでしょう.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あなたがいるでしょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いる": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {
+          "がいます": {
+            "en": "Before でしょう you need to use the casual form.",
+            "es": "Antes de でしょう, necesitas usar la forma sencilla.",
+            "fr": "Avant でしょう, il faut utiliser la forme neutre.",
+            "id": "Sebelum でしょう, kamu perlu menggunakan bentuk kasual."
+          },
+          "います": {
+            "en": "Before でしょう you need to use the casual form.",
+            "es": "Antes de でしょう, necesitas usar la forma sencilla.",
+            "fr": "Avant でしょう, il faut utiliser la forme neutre.",
+            "id": "Sebelum でしょう, kamu perlu menggunakan bentuk kasual."
+          }
+        },
+        "translation": "You <strong>are</strong> (there), right? (<strong>exist</strong>)",
+        "nuance_translation": "A phrase that expresses a <strong>single living property</strong> of one whole thing, or <strong>existence</strong>.",
+        "extra_info": "",
+        "reviewable_id": 23,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1649",
+      "type": "study_question",
+      "attributes": {
+        "id": 1649,
+        "content": "<span class='gp-popout' data-gp-id='7'>いい</span>人（ひと）<span class='study-area-input'>____</span>。",
+        "answer": "がいます",
+        "alternate_grammar": [],
+        "kanji_answer": "がいます",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>生（い）き物（もの）</strong>、又（また）はその<strong>存在（そんざい）</strong>を表（あらわ）すために使（つか）われる表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/23/male_audio/02-いい人がいます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/いい人がいます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "がいる": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "いる": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "います": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>There are</strong> good people. (<strong>exists</strong>)",
+        "nuance_translation": "A phrase that expresses a <strong>single living property</strong> of one whole thing, or <strong>existence</strong>.",
+        "extra_info": "",
+        "reviewable_id": 23,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1650",
+      "type": "study_question",
+      "attributes": {
+        "id": 1650,
+        "content": "犬（いぬ）<span class='study-area-input'>____</span>。",
+        "answer": "がいます",
+        "alternate_grammar": [],
+        "kanji_answer": "がいます",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>生（い）き物（もの）</strong>、又（また）はその<strong>存在（そんざい）</strong>を表（あらわ）すために使（つか）われる表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/23/male_audio/08-犬がいます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/犬がいます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "がいる": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "いる": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "います": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>There is</strong> a dog. (<strong>exists</strong>)",
+        "nuance_translation": "A phrase that expresses a <strong>single living property</strong> of one whole thing, or <strong>existence</strong>.",
+        "extra_info": "",
+        "reviewable_id": 23,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1653",
+      "type": "study_question",
+      "attributes": {
+        "id": 1653,
+        "content": "留学生（りゅうがくせい）<span class='study-area-input'>____</span>。",
+        "answer": "がいる",
+        "alternate_grammar": [],
+        "kanji_answer": "がいる",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>生（い）き物（もの）</strong>、又（また）はその<strong>存在（そんざい）</strong>を表（あらわ）すために使（つか）われる表現（ひょうげん）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/23/male_audio/10-留学生がいる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/留学生がいる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "がいます": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "います": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "いる": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>There is</strong> a foreign exchange student. (<strong>exists</strong>)",
+        "nuance_translation": "A phrase that expresses a <strong>single living property</strong> of one whole thing, or <strong>existence</strong>.",
+        "extra_info": "",
+        "reviewable_id": 23,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1654",
+      "type": "study_question",
+      "attributes": {
+        "id": 1654,
+        "content": "外国人（がいこくじん）<span class='study-area-input'>____</span>。",
+        "answer": "がいます",
+        "alternate_grammar": [],
+        "kanji_answer": "がいます",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>生（い）き物（もの）</strong>、又（また）はその<strong>存在（そんざい）</strong>を表（あらわ）すために使（つか）われる表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/23/male_audio/07-外国人がいます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/外国人がいます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "がいる": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "いる": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "います": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>There is</strong> a foreigner. (<strong>exists</strong>)",
+        "nuance_translation": "A phrase that expresses a <strong>single living property</strong> of one whole thing, or <strong>existence</strong>.",
+        "extra_info": "",
+        "reviewable_id": 23,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1652",
+      "type": "study_question",
+      "attributes": {
+        "id": 1652,
+        "content": "メアリーさん<span class='study-area-input'>____</span>でしょう？。",
+        "answer": "がいる",
+        "alternate_grammar": [],
+        "kanji_answer": "がいる",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>生（い）き物（もの）</strong>、又（また）はその<strong>存在（そんざい）</strong>を表（あらわ）すために使（つか）われる表現（ひょうげん）。",
+        "tense": "Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/メアリーさんがいるでしょう？。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いる": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {
+          "がいます": {
+            "en": "The polite form cannot be used before でしょう.",
+            "es": "La conjugación formal no puede usarse antes de でしょう.",
+            "fr": "On ne peut pas utiliser la forme polie avant でしょう.",
+            "id": "Bentuk sopan tidak dapat digunakan sebelum でしょう."
+          }
+        },
+        "translation": "Mary <strong>is</strong> (here), right? (<strong>exist</strong>)",
+        "nuance_translation": "A phrase that expresses a <strong>single living property</strong> of one whole thing, or <strong>existence</strong>.",
+        "extra_info": "",
+        "reviewable_id": 23,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1648",
+      "type": "study_question",
+      "attributes": {
+        "id": 1648,
+        "content": "二人（ふたり）<span class='study-area-input'>____</span>。",
+        "answer": "がいます",
+        "alternate_grammar": [],
+        "kanji_answer": "がいます",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>生（い）き物（もの）</strong>、又（また）はその<strong>存在（そんざい）</strong>を表（あらわ）すために使（つか）われる表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson3/23/male_audio/05-二人がいます.mp3",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "がいる": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "いる": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "います": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>There are</strong> two people. (<strong>exist</strong>)",
+        "nuance_translation": "A phrase that expresses a <strong>single living property</strong> of one whole thing, or <strong>existence</strong>.",
+        "extra_info": "",
+        "reviewable_id": 23,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "32",
+      "type": "writeup",
+      "attributes": {
+        "id": 32,
+        "body_ja": "",
+        "body": "<p><span data-gp-id='23'>がいる</span> is a common construction that is simply a combination of the <span data-gp-id='10'>が</span> particle, and the verb <span data-gp-id='12'>いる</span>. This expression means 'to exist', or 'there is', and is used in relation to living/animate things.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154805'>\r\n<li data-study-question='154806'>\r\n<li data-study-question='154807'></ul>\r\n\r\n<p>Because the things being described in these examples are considered to be alive (or operated by something that is alive), <span data-gp-id='12'>いる</span> is the verb that will be used. <span data-gp-id='26'>ある</span> is used for non-living things.</p>\r\n\r\n<p>The polite form of <span data-gp-id='12'>いる</span> conjugates as <span data-gp-id='12'>います</span>. Due to the る being removed, we can determine that <span data-gp-id='12'>いる</span> is a <span data-gp-id='12'>る-Verb (Ichidan verb)</span>.</p>\r\n\r\n<p>The kanji form of <span data-gp-id='12'>居（い）る</span> is quite common, and should be learned as early as possible to save any confusion while reading. There is no nuance difference between this expression being used with or without kanji, and is up to the preference of the writer.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154808'></ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>The <span data-gp-id='10'>が</span> in <span data-gp-id='23'>がいる</span> is often omitted in casual speech, or writing that behaves like casual speech (manga, instant messaging, etc).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183765'></ul></section>"
+      }
+    },
+    {
+      "id": "29",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 29,
+        "source": "Genki I",
+        "location": "Page 77",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "92",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 92,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 107",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "751",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 751,
+        "source": "みんなの日本語 I",
+        "location": "Page 68 [CH 10]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1059",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1059,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 10 & 153",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "49",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 49,
+        "site": "いいね Nihongo",
+        "description": "Compare 「がある」and「がいる」",
+        "link": "https://iinenihongo.com/arimasuimasu/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "50",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 50,
+        "site": "Imabi",
+        "description": "ある & いる",
+        "link": "https://imabi.org/the-existential-verbs-%e3%81%82%e3%82%8b-%e3%81%84%e3%82%8b/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1",
+      "type": "related_content",
+      "attributes": {
+        "id": 1,
+        "relationship_type": "synonym",
+        "body": "Both がある and がいる combine the particle が with a verb to express existence or possession. The difference is that ある refers to inanimate objects or intangible concepts (e.g., 車がある = 'I have a car' or 'There is a car,' アイデアがある = 'I have an idea'), while いる is used for living or animate things (e.g., 猫がいる = 'I have a cat' or 'There is a cat').",
+        "first_relatable": {
+          "id": 13,
+          "slug": "がある",
+          "title": "がある",
+          "meaning": "To be, There is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 23,
+          "slug": "がいる",
+          "title": "がいる",
+          "meaning": "To be, There is,  To remain (in a state)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "809",
+      "type": "related_content",
+      "attributes": {
+        "id": 809,
+        "relationship_type": "related",
+        "body": "がいる combines the particle が with the verb いる to express the existence of living or animate beings, like people or animals. いらっしゃる is the honorific equivalent of いる, as well as 行く and 来る. In other words, がいらっしゃる is the honorific version of がいる, and いらっしゃいますか is the honorific equivalent of いますか, 行きますか, or 来ますか.",
+        "first_relatable": {
+          "id": 191,
+          "slug": "いらっしゃる",
+          "title": "いらっしゃる",
+          "meaning": "To be (Honorific), To come (Honorific), To go (Honorific)",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 23,
+          "slug": "がいる",
+          "title": "がいる",
+          "meaning": "To be, There is,  To remain (in a state)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

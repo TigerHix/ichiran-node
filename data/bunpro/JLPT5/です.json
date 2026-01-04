@@ -1,0 +1,1158 @@
+{
+  "data": {
+    "id": "2",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 2,
+      "level": "JLPT5",
+      "lesson_id": 1,
+      "part_of_speech": "助動詞",
+      "register": "敬語",
+      "word_type": "付属語",
+      "slug": "です",
+      "nuance": "何（なに）かが何（なに）であるかを<strong>丁寧（ていねい）</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+      "grammar_order": 2,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 3,
+        "title": "は",
+        "slug": "は"
+      },
+      "previous_grammar_point": {
+        "id": 1,
+        "title": "だ",
+        "slug": "だ"
+      },
+      "lesson_count": "2/12",
+      "title": "です",
+      "furigana": "です",
+      "meaning": "To be, Is",
+      "nuance_translation": "A <strong>polite determiner</strong> of what something <strong>is</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "Unlike だ, です is often used with both い-Adjectives and な-Adjectives",
+      "polite_structure": "Noun + <strong>です</strong><br>Adjective + <strong>です</strong>",
+      "casual_structure": "",
+      "part_of_speech_translation": "Auxiliary Verb",
+      "register_translation": "Polite",
+      "word_type_translation": "Dependent Word",
+      "discourse_link": "https://community.bunpro.jp/t/discussion-topic/474",
+      "metadata": "です, desu, des, auxiliary verb, polite, copula"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154684",
+            "type": "study_question"
+          },
+          {
+            "id": "2",
+            "type": "study_question"
+          },
+          {
+            "id": "154686",
+            "type": "study_question"
+          },
+          {
+            "id": "183747",
+            "type": "study_question"
+          },
+          {
+            "id": "154685",
+            "type": "study_question"
+          },
+          {
+            "id": "154683",
+            "type": "study_question"
+          },
+          {
+            "id": "1482",
+            "type": "study_question"
+          },
+          {
+            "id": "1478",
+            "type": "study_question"
+          },
+          {
+            "id": "602",
+            "type": "study_question"
+          },
+          {
+            "id": "600",
+            "type": "study_question"
+          },
+          {
+            "id": "601",
+            "type": "study_question"
+          },
+          {
+            "id": "603",
+            "type": "study_question"
+          },
+          {
+            "id": "1479",
+            "type": "study_question"
+          },
+          {
+            "id": "1481",
+            "type": "study_question"
+          },
+          {
+            "id": "1484",
+            "type": "study_question"
+          },
+          {
+            "id": "1477",
+            "type": "study_question"
+          },
+          {
+            "id": "1480",
+            "type": "study_question"
+          },
+          {
+            "id": "1483",
+            "type": "study_question"
+          },
+          {
+            "id": "1485",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "2",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "65",
+            "type": "offline_resource"
+          },
+          {
+            "id": "733",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1270",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "64",
+            "type": "related_content"
+          },
+          {
+            "id": "902",
+            "type": "related_content"
+          },
+          {
+            "id": "22",
+            "type": "related_content"
+          },
+          {
+            "id": "18",
+            "type": "related_content"
+          },
+          {
+            "id": "52",
+            "type": "related_content"
+          },
+          {
+            "id": "1328",
+            "type": "related_content"
+          },
+          {
+            "id": "21",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "4",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1169",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1192",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2015",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "3",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154684",
+      "type": "study_question",
+      "attributes": {
+        "id": 154684,
+        "content": "店（みせ）<span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/店です。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> a store.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2",
+      "type": "study_question",
+      "attributes": {
+        "id": 2,
+        "content": "<span data-vocab-id=\"636\">日本人（にほんじん）</span><span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>丁寧（ていねい）</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Non-past, Polite",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/日本人です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 13,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だ": {
+            "en": "This is the casual form. You want the polite form.",
+            "es": "Esta es la versión informal. Necesitas usar la conjugación formal.",
+            "fr": "C'est la forme familière. On veut la forme polie.",
+            "id": "Ini adalah bentuk kasual. Kamu memerlukan bentuk sopan."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "(He/she) <strong>is</strong> Japanese.",
+        "nuance_translation": "A <strong>polite determiner</strong> of what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154686",
+      "type": "study_question",
+      "attributes": {
+        "id": 154686,
+        "content": "面白（おもしろ）い<span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/面白いです。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> funny.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183747",
+      "type": "study_question",
+      "attributes": {
+        "id": 183747,
+        "content": "暑（あつ）い<span data-gp-id='2'>です</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 14,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> hot.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154685",
+      "type": "study_question",
+      "attributes": {
+        "id": 154685,
+        "content": "綺麗（きれい）<span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/綺麗です。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> beautiful.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154683",
+      "type": "study_question",
+      "attributes": {
+        "id": 154683,
+        "content": "<span class=\"vocab-popout\" data-vocab-id=\"478\">大学生（だいがくせい）</span><span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/大学生です。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>am</strong> a college student.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1482",
+      "type": "study_question",
+      "attributes": {
+        "id": 1482,
+        "content": "風邪（かぜ）<span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>丁寧（ていねい）</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Non-past, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/2/male_audio/13-風邪です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/風邪です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> a common cold.",
+        "nuance_translation": "A <strong>polite determiner</strong> of what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1478",
+      "type": "study_question",
+      "attributes": {
+        "id": 1478,
+        "content": "お母（かあ）さん<span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>丁寧（ていねい）</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Non-past, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/2/male_audio/02-お母さんです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/お母さんです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "She <strong>is</strong> (my/her/his) mom. ",
+        "nuance_translation": "A <strong>polite determiner</strong> of what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "602",
+      "type": "study_question",
+      "attributes": {
+        "id": 602,
+        "content": "さくら<span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>丁寧（ていねい）</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/2/male_audio/09-桜です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/さくらです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "(I) <strong>am</strong> Sakura. ",
+        "nuance_translation": "A <strong>polite determiner</strong> of what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "600",
+      "type": "study_question",
+      "attributes": {
+        "id": 600,
+        "content": "あなた<span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>丁寧（ていねい）</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/2/male_audio/01-あなたです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あなたです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> you. ",
+        "nuance_translation": "A <strong>polite determiner</strong> of what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "601",
+      "type": "study_question",
+      "attributes": {
+        "id": 601,
+        "content": "ペン<span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>丁寧（ていねい）</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/2/male_audio/03-ペンです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ペンです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> a pen. ",
+        "nuance_translation": "A <strong>polite determiner</strong> of what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "603",
+      "type": "study_question",
+      "attributes": {
+        "id": 603,
+        "content": "友達（ともだち）<span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>丁寧（ていねい）</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/2/male_audio/06-友達です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/友達です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "(He/she) <strong>is</strong> a friend. ",
+        "nuance_translation": "A <strong>polite determiner</strong> of what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1479",
+      "type": "study_question",
+      "attributes": {
+        "id": 1479,
+        "content": "大丈夫（だいじょうぶ）<span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>丁寧（ていねい）</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Non-past, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/2/male_audio/07-大丈夫です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/大丈夫です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "(It/He/she) <strong>is</strong> fine. ",
+        "nuance_translation": "A <strong>polite determiner</strong> of what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1481",
+      "type": "study_question",
+      "attributes": {
+        "id": 1481,
+        "content": "大好（だいす）き<span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>丁寧（ていねい）</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Non-past, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/2/male_audio/08-大好きです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/大好きです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>am</strong> in love with (you/it).",
+        "nuance_translation": "A <strong>polite determiner</strong> of what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1484",
+      "type": "study_question",
+      "attributes": {
+        "id": 1484,
+        "content": "レストラン<span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>丁寧（ていねい）</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Non-past, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/2/male_audio/04-レストランです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/レストランです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> a restaurant. ",
+        "nuance_translation": "A <strong>polite determiner</strong> of what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1477",
+      "type": "study_question",
+      "attributes": {
+        "id": 1477,
+        "content": "暑（あつ）<span class='gp-popout' data-gp-id='24'>い</span><span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>丁寧（ていねい）</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/2/male_audio/10-熱いです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/暑いです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> hot.",
+        "nuance_translation": "A <strong>polite determiner</strong> of what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1480",
+      "type": "study_question",
+      "attributes": {
+        "id": 1480,
+        "content": "危険（きけん）<span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>丁寧（ていねい）</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Non-past, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/2/male_audio/05-危険です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/危険です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> dangerous. ",
+        "nuance_translation": "A <strong>polite determiner</strong> of what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1483",
+      "type": "study_question",
+      "attributes": {
+        "id": 1483,
+        "content": "犬（いぬ）<span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>丁寧（ていねい）</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Non-past, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/2/male_audio/11-犬です2.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/犬です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> a dog. ",
+        "nuance_translation": "A <strong>polite determiner</strong> of what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1485",
+      "type": "study_question",
+      "attributes": {
+        "id": 1485,
+        "content": "金曜日（きんようび）<span class='study-area-input'>____</span>。",
+        "answer": "です",
+        "alternate_grammar": [],
+        "kanji_answer": "です",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが何（なに）であるかを<strong>丁寧（ていねい）</strong>に限定（げんてい）する<strong>品詞（ひんし）</strong>。",
+        "tense": "Non-past, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/2/male_audio/12-金曜日です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/金曜日です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だ": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>is</strong> Friday. ",
+        "nuance_translation": "A <strong>polite determiner</strong> of what something <strong>is</strong>.",
+        "extra_info": "",
+        "reviewable_id": 2,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2",
+      "type": "writeup",
+      "attributes": {
+        "id": 2,
+        "body_ja": "",
+        "body": "<p>Similarly to <span data-gp-id='1'>だ</span>, <span data-gp-id='2'>です</span> is an <span data-term='助動詞・じょどうし'>auxiliary verb</span> that is an expression of determination or assertion. It states that something 'is' a certain way. <span data-gp-id='2'>です</span> is considered to be the polite variation of <span data-gp-id='1'>だ</span>. Keep in mind though that although their roles are similar, both <span data-gp-id='1'>だ</span> and <span data-gp-id='2'>です</span> are standalone structures.</p>\r\n\r\n<p><span data-gp-id='2'>です</span> connects to words in exactly the same way as <span data-gp-id='1'>だ</span>, but is also regularly seen attached to the end of <span data-gp-id='24'>い-Adjectives</span>.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154683'>\r\n<li data-study-question='154684'>\r\n<li data-study-question='154685'>\r\n<li data-study-question='154686'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>Although <span data-gp-id='2'>です</span> is regularly attached to the end of <span data-gp-id='24'>い-Adjectives</span>, some may actually consider this incorrect Japanese, and it should not be used in formal writing. In daily spoken language/texting, however, it is completely normal.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n\r\n<li data-study-question='183747'>\r\n</ul>\r\n\r\n<p>The above example technically should not be used in formal writing. Despite this, in recent years, it is starting to become the norm.</p></section>"
+      }
+    },
+    {
+      "id": "65",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 65,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 42",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "733",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 733,
+        "source": "みんなの日本語 I",
+        "location": "Page 14 [CH 1]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1270",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1270,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 88",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "4",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 4,
+        "site": "Imabi",
+        "description": "The Grammaticality of Politeness Marker ～です",
+        "link": "https://imabi.org/copular-sentences-ii%e3%80%80%e3%82%b3%e3%83%94%e3%83%a5%e3%83%a9%e6%96%87%ef%bc%88%e4%b8%81%e5%af%a7%e4%bd%93%ef%bc%89/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1169",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1169,
+        "site": "80/20 Japanese",
+        "description": "How to use です",
+        "link": "https://8020japanese.com/desu/?utm_source=desu&utm_medium=email",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1192",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1192,
+        "site": "Japanese Ammo",
+        "description": "は and です",
+        "link": "https://www.youtube.com/watch?v=UneYOL0DQxk&list=PLd5-Wp_4tLqYZxS5j3g6kbeOfVXlTkr3N",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2015",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2015,
+        "site": "Tae Kim",
+        "description": "Using 「です」 for everything else",
+        "link": "https://guidetojapanese.org/learn/grammar/polite",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "3",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 3,
+        "site": "Miageru",
+        "description": "The Japanese version of \"to be\" or \"is\"",
+        "link": "https://miageru.net/grammar/Copula%20-%20%E3%81%A7%E3%81%99",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "64",
+      "type": "related_content",
+      "attributes": {
+        "id": 64,
+        "relationship_type": "related",
+        "body": "～んです・のです are used to clarify context, provide background information, give reasons, or express curiosity. In contrast, です without の or ん is a simple declarative form used to state facts or general statements. Using ～んです・のです adds emphasis, conveys intention, or creates a more explanatory tone by suggesting a larger context.",
+        "first_relatable": {
+          "id": 17,
+          "slug": "-んです-のです",
+          "title": "～んです・のです",
+          "meaning": "Explanatory, Emphasis, The fact is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 2,
+          "slug": "です",
+          "title": "です",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "902",
+      "type": "related_content",
+      "attributes": {
+        "id": 902,
+        "relationship_type": "synonym",
+        "body": "です is often used as the polite form of だ, which is similar in meaning to 'is' or 'to be' in English. It's polite but not overly formal, and it's often used in both speech and writing. In contrast, である is a formal (but not polite) expression mainly used in writing or formal speeches. One key difference is that である can appear in front of nouns in modifying clauses, like in 日本人である留学生 ('an exchange student who is Japanese').",
+        "first_relatable": {
+          "id": 2,
+          "slug": "です",
+          "title": "です",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 436,
+          "slug": "である",
+          "title": "である",
+          "meaning": "Formal or literary だ, Authoritative, Copula",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "22",
+      "type": "related_content",
+      "attributes": {
+        "id": 22,
+        "relationship_type": "antonym",
+        "body": "です works like 'is' or 'to be' in English and is used to politely state something in everyday conversation. じゃない is the casual negative form meaning 'is not,' and it's often used in relaxed speech or in phrases like ～じゃないと思います ('I don't think it is...').",
+        "first_relatable": {
+          "id": 2,
+          "slug": "です",
+          "title": "です",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 49,
+          "slug": "じゃない",
+          "title": "じゃない",
+          "meaning": "Is not, Isn't",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "18",
+      "type": "related_content",
+      "attributes": {
+        "id": 18,
+        "relationship_type": "synonym",
+        "body": "だ and です both function like the English 'is.' The main difference is politeness: だ is casual and used in plain speech, while です is polite. だ can't be used after い-adjectives, but です can, acting as a general politeness marker. You may still see だ in set expressions like ～だと思います, even in polite sentences.",
+        "first_relatable": {
+          "id": 1,
+          "slug": "だ",
+          "title": "だ",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 2,
+          "slug": "です",
+          "title": "です",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "52",
+      "type": "related_content",
+      "attributes": {
+        "id": 52,
+        "relationship_type": "related",
+        "body": "The phrase ～がある is used to show existence or possession. For example, 本がある means 'There is a book' or 'I have a book.' On the other hand, です is used to identify something, like 本です ('It is a book'). がある is more casual and often used with close friends or in certain grammar patterns, while です is polite.",
+        "first_relatable": {
+          "id": 13,
+          "slug": "がある",
+          "title": "がある",
+          "meaning": "To be, There is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 2,
+          "slug": "です",
+          "title": "です",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1328",
+      "type": "related_content",
+      "attributes": {
+        "id": 1328,
+        "relationship_type": "related",
+        "body": "です and だった・でした are all forms of 'is' or 'to be,' but they show different tenses. です is used for the present or future, like in あれは猫です ('That is a cat'). だった and でした are past tense—だった is casual, and でした is polite. For example, あれは猫だった means 'That was a cat.'",
+        "first_relatable": {
+          "id": 2,
+          "slug": "です",
+          "title": "です",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 40,
+          "slug": "だった-でした",
+          "title": "だった・でした",
+          "meaning": "Was, Were (Past tense) ",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "21",
+      "type": "related_content",
+      "attributes": {
+        "id": 21,
+        "relationship_type": "synonym",
+        "body": "です and でございます are both polite forms of 'is' or 'to be.' です is polite but commonly used in everyday conversation. でございます is extremely polite and formal, used in customer service, ceremonial speech, or other situations requiring a high level of respect.",
+        "first_relatable": {
+          "id": 2,
+          "slug": "です",
+          "title": "です",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 188,
+          "slug": "でございます",
+          "title": "でございます",
+          "meaning": "To be, Polite copula",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

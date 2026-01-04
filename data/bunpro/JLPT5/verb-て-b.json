@@ -1,0 +1,878 @@
+{
+  "data": {
+    "id": "770",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 770,
+      "level": "JLPT5",
+      "lesson_id": 7,
+      "part_of_speech": "助詞",
+      "register": "一般",
+      "word_type": "接続助詞",
+      "slug": "verb-て-b",
+      "nuance": "<strong>順番（じゅんばん）に</strong>起（お）こっていたり、何（なに）かのすぐ後（あと）に起（お）こったりすることを表（あらわ）すために使（つか）われる<strong>カジュアル</strong>で単純（たんじゅん）な<strong>活用（かつよう）</strong>。",
+      "grammar_order": 83,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 42,
+        "title": "もう",
+        "slug": "もう"
+      },
+      "previous_grammar_point": {
+        "id": 64,
+        "title": "てから",
+        "slug": "てから"
+      },
+      "lesson_count": "7/13",
+      "title": "Verb + て+ B",
+      "furigana": "～て (Sequence)",
+      "meaning": "And, And then, After that (sequence)",
+      "nuance_translation": "A <strong>casual</strong>, simple <strong>conjunctive form</strong> highlighting things that <strong>happen in sequence</strong>, one after the other.",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "<span class='gp-popout' data-gp-id='416'>Verb［て］</span>+ (Action) Phrase",
+      "part_of_speech_translation": "Particle",
+      "register_translation": "Standard",
+      "word_type_translation": "Conjunctive Particle",
+      "discourse_link": "https://community.bunpro.jp/t/verb-b-sequence-grammar-discussion/17622",
+      "metadata": "て, te, particle, conjunction particle, sequence, list, in order, order"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "155016",
+            "type": "study_question"
+          },
+          {
+            "id": "155015",
+            "type": "study_question"
+          },
+          {
+            "id": "8903",
+            "type": "study_question"
+          },
+          {
+            "id": "8895",
+            "type": "study_question"
+          },
+          {
+            "id": "8892",
+            "type": "study_question"
+          },
+          {
+            "id": "8893",
+            "type": "study_question"
+          },
+          {
+            "id": "8896",
+            "type": "study_question"
+          },
+          {
+            "id": "8897",
+            "type": "study_question"
+          },
+          {
+            "id": "8898",
+            "type": "study_question"
+          },
+          {
+            "id": "8899",
+            "type": "study_question"
+          },
+          {
+            "id": "8901",
+            "type": "study_question"
+          },
+          {
+            "id": "8902",
+            "type": "study_question"
+          },
+          {
+            "id": "8900",
+            "type": "study_question"
+          },
+          {
+            "id": "8894",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "82",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1628",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1280",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1674",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1241",
+            "type": "related_content"
+          },
+          {
+            "id": "721",
+            "type": "related_content"
+          },
+          {
+            "id": "1370",
+            "type": "related_content"
+          },
+          {
+            "id": "711",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2253",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2006",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2007",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2008",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "155016",
+      "type": "study_question",
+      "attributes": {
+        "id": 155016,
+        "content": "パン<span class=\"gp-popout\" data-gp-id=\"21\">を</span>買（か）っ<span class='study-area-input'>____</span>、食（た）べ<span class=\"gp-popout\" data-gp-id=\"895\">た</span>。",
+        "answer": "て",
+        "alternate_grammar": [],
+        "kanji_answer": "て",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/パンを買って、食べた。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I bought some bread, <strong>(and)</strong> then ate it.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 770,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155015",
+      "type": "study_question",
+      "attributes": {
+        "id": 155015,
+        "content": "ショッピングセンター<span class=\"gp-popout\" data-gp-id=\"32\">に</span>行（い）っ<span class='study-area-input'>____</span>、買（か）い物（もの）<span class=\"gp-popout\" data-gp-id=\"21\">を</span><span class=\"gp-popout\" data-gp-id=\"22\">します</span>。",
+        "answer": "て",
+        "alternate_grammar": [],
+        "kanji_answer": "て",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ショッピングセンターに行って、買い物をします。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "To go to the mall <strong>and</strong> then shop.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 770,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8903",
+      "type": "study_question",
+      "attributes": {
+        "id": 8903,
+        "content": "「はるとらさん<span class='gp-popout' data-gp-id='3'>は</span>東京（とうきょう）に<span class='study-area-input'>____</span>、なつめさん<span class='gp-popout' data-gp-id='32'>に</span>会（あ）い<span class='gp-popout' data-gp-id='41'>ました</span>。」",
+        "answer": "いって",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）って",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>順番（じゅんばん）に</strong>起（お）こっていたり、何（なに）かのすぐ後（あと）に起（お）こったりすることを表（あらわ）すために使（つか）われる<strong>カジュアル</strong>で単純（たんじゅん）な<strong>活用（かつよう）</strong>。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/770/male_audio/05-ハルトラサンは東京に行って夏目さんに会いました.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「はるとらさんは東京に行って、なつめさんに会いました。」.mp3",
+        "word_prompt": "行（い）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いってから": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'Harutora <strong>went</strong> to Tokyo <strong>and</strong> met with Natsume.'",
+        "nuance_translation": "A <strong>casual</strong>, simple <strong>conjunctive form</strong> highlighting things that <strong>happen in sequence</strong>, one after the other.",
+        "extra_info": "",
+        "reviewable_id": 770,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8895",
+      "type": "study_question",
+      "attributes": {
+        "id": 8895,
+        "content": "「東京（とうきょう）に<span class='study-area-input'>____</span>何（なに）<span class='gp-popout' data-gp-id='21'>を</span>し<span class='gp-popout' data-gp-id='41'>た</span>の？」",
+        "answer": "いって",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）って",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>順番（じゅんばん）に</strong>起（お）こっていたり、何（なに）かのすぐ後（あと）に起（お）こったりすることを表（あらわ）すために使（つか）われる<strong>カジュアル</strong>で単純（たんじゅん）な<strong>活用（かつよう）</strong>。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/770/male_audio/11-東京に行って何をしたの.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「東京に行って何をしたの？」.mp3",
+        "word_prompt": "行（い）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いってから": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'What did you do <strong>after</strong> you <strong>went</strong> to Tokyo?'<br>（'You <strong>went</strong> to Tokyo, <strong>and</strong> then what did you do?')",
+        "nuance_translation": "A <strong>casual</strong>, simple <strong>conjunctive form</strong> highlighting things that <strong>happen in sequence</strong>, one after the other.",
+        "extra_info": "",
+        "reviewable_id": 770,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8892",
+      "type": "study_question",
+      "attributes": {
+        "id": 8892,
+        "content": "晩（ばん）ご飯（はん）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>歯（は）<span class='gp-popout' data-gp-id='21'>を</span>磨（みが）<span class='gp-popout' data-gp-id='41'>いた</span>。",
+        "answer": "たべて",
+        "alternate_grammar": [],
+        "kanji_answer": "食（た）べて",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>順番（じゅんばん）に</strong>起（お）こっていたり、何（なに）かのすぐ後（あと）に起（お）こったりすることを表（あらわ）すために使（つか）われる<strong>カジュアル</strong>で単純（たんじゅん）な<strong>活用（かつよう）</strong>。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/770/male_audio/10-晩ご飯を食べて歯を磨いた.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/晩ご飯を食べて歯を磨いた。.mp3",
+        "word_prompt": "食（た）べ<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たべてから": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>I ate</strong> dinner <strong>and</strong> brushed my teeth.",
+        "nuance_translation": "A <strong>casual</strong>, simple <strong>conjunctive form</strong> highlighting things that <strong>happen in sequence</strong>, one after the other.",
+        "extra_info": "",
+        "reviewable_id": 770,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8893",
+      "type": "study_question",
+      "attributes": {
+        "id": 8893,
+        "content": "ともこ<span class='gp-popout' data-gp-id='3'>は</span>鍵（かぎ）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>出（で）かけました。",
+        "answer": "かけて",
+        "alternate_grammar": [],
+        "kanji_answer": "かけて",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>順番（じゅんばん）に</strong>起（お）こっていたり、何（なに）かのすぐ後（あと）に起（お）こったりすることを表（あらわ）すために使（つか）われる<strong>カジュアル</strong>で単純（たんじゅん）な<strong>活用（かつよう）</strong>。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/770/male_audio/02-ともこはカギをかけて出かけました.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ともこは鍵をかけて出かけました。.mp3",
+        "word_prompt": "かける",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かけてから": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Tomoko <strong>locked up</strong> the house <strong>and</strong> left.",
+        "nuance_translation": "A <strong>casual</strong>, simple <strong>conjunctive form</strong> highlighting things that <strong>happen in sequence</strong>, one after the other.",
+        "extra_info": "",
+        "reviewable_id": 770,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8896",
+      "type": "study_question",
+      "attributes": {
+        "id": 8896,
+        "content": "ひとみさん<span class='gp-popout' data-gp-id='6'>の</span>お母（かあ）さん<span class='gp-popout' data-gp-id='32'>に</span><span class='study-area-input'>____</span>一緒（いっしょ）<span class='gp-popout' data-gp-id='32'>に</span>戻（もど）り<span class='gp-popout' data-gp-id='41'>ました</span>。",
+        "answer": "あって",
+        "alternate_grammar": [],
+        "kanji_answer": "会（あ）って",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>順番（じゅんばん）に</strong>起（お）こっていたり、何（なに）かのすぐ後（あと）に起（お）こったりすることを表（あらわ）すために使（つか）われる<strong>カジュアル</strong>で単純（たんじゅん）な<strong>活用（かつよう）</strong>。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/770/male_audio/03-ひとみさんのお母さんに会って一緒に戻りました.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ひとみさんのお母さんに会って一緒に戻りました。.mp3",
+        "word_prompt": "会（あ）<span class='gp-popout' data-gp-id='26'>う</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あってから": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>I met</strong> Hitomi's mother, <strong>and</strong> we went back together.",
+        "nuance_translation": "A <strong>casual</strong>, simple <strong>conjunctive form</strong> highlighting things that <strong>happen in sequence</strong>, one after the other.",
+        "extra_info": "",
+        "reviewable_id": 770,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8897",
+      "type": "study_question",
+      "attributes": {
+        "id": 8897,
+        "content": "パスタ<span class='gp-popout' data-gp-id='21'>を</span>買（か）いに<span class='study-area-input'>____</span>、スパゲッティ<span class='gp-popout' data-gp-id='21'>を</span>作（つく）<span class='gp-popout' data-gp-id='26'>ります</span>。",
+        "answer": "いって",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）って",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>順番（じゅんばん）に</strong>起（お）こっていたり、何（なに）かのすぐ後（あと）に起（お）こったりすることを表（あらわ）すために使（つか）われる<strong>カジュアル</strong>で単純（たんじゅん）な<strong>活用（かつよう）</strong>。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/770/male_audio/06-パスタを買いに行ってスパゲッティを作ります.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/パスタを買いに行って、スパゲッティを作ります。.mp3",
+        "word_prompt": "行（い）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いってから": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>will go</strong> buy pasta <strong>and</strong> then I will make spaghetti.",
+        "nuance_translation": "A <strong>casual</strong>, simple <strong>conjunctive form</strong> highlighting things that <strong>happen in sequence</strong>, one after the other.",
+        "extra_info": "",
+        "reviewable_id": 770,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8898",
+      "type": "study_question",
+      "attributes": {
+        "id": 8898,
+        "content": "父（とう）さん<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>テレビ<span class='gp-popout' data-gp-id='21'>を</span>点（つ）け<span class='gp-popout' data-gp-id='895'>た</span>。",
+        "answer": "すわって",
+        "alternate_grammar": [],
+        "kanji_answer": "座（すわ）って",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>順番（じゅんばん）に</strong>起（お）こっていたり、何（なに）かのすぐ後（あと）に起（お）こったりすることを表（あらわ）すために使（つか）われる<strong>カジュアル</strong>で単純（たんじゅん）な<strong>活用（かつよう）</strong>。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/770/male_audio/07-父さんは座ってテレビをつけた.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/父さんは座ってテレビを点けた。.mp3",
+        "word_prompt": "座（すわ）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "すわってから": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          },
+          "すわって": {
+            "en": "",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "すわって": {
+            "en": "Although this verb ends with a る, すわる is a う-verb.",
+            "es": "",
+            "fr": "",
+            "id": "Meskipun kata kerja ini berakhiran る, すわる adalah Kata Kerja-う."
+          }
+        },
+        "translation": "Dad <strong>sat down and</strong> turned on the TV.",
+        "nuance_translation": "A <strong>casual</strong>, simple <strong>conjunctive form</strong> highlighting things that <strong>happen in sequence</strong>, one after the other.",
+        "extra_info": "",
+        "reviewable_id": 770,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8899",
+      "type": "study_question",
+      "attributes": {
+        "id": 8899,
+        "content": "「うち<span class='gp-popout' data-gp-id='32'>に</span><span class='study-area-input'>____</span>昼寝（ひるね）<span class='gp-popout' data-gp-id='21'>を</span>し<span class='gp-popout' data-gp-id='59'>たい</span>。」",
+        "answer": "かえって",
+        "alternate_grammar": [],
+        "kanji_answer": "帰（かえ）って",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>順番（じゅんばん）に</strong>起（お）こっていたり、何（なに）かのすぐ後（あと）に起（お）こったりすることを表（あらわ）すために使（つか）われる<strong>カジュアル</strong>で単純（たんじゅん）な<strong>活用（かつよう）</strong>。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/770/male_audio/08-家に帰って昼寝をしたい.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「うちに帰って昼寝をしたい。」.mp3",
+        "word_prompt": "帰（かえ）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かえってから": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'I want to <strong>go home and</strong> take a nap.'",
+        "nuance_translation": "A <strong>casual</strong>, simple <strong>conjunctive form</strong> highlighting things that <strong>happen in sequence</strong>, one after the other.",
+        "extra_info": "",
+        "reviewable_id": 770,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8901",
+      "type": "study_question",
+      "attributes": {
+        "id": 8901,
+        "content": "「昨日（きのう）<span class='gp-popout' data-gp-id='3'>は</span>朝（あさ）<span class='study-area-input'>____</span>何（なに）<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='41'>した</span><span class='gp-popout' data-gp-id='17'>んです</span><span class='gp-popout' data-gp-id='8'>か</span>。」",
+        "answer": "おきて",
+        "alternate_grammar": [],
+        "kanji_answer": "起（お）きて",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>順番（じゅんばん）に</strong>起（お）こっていたり、何（なに）かのすぐ後（あと）に起（お）こったりすることを表（あらわ）すために使（つか）われる<strong>カジュアル</strong>で単純（たんじゅん）な<strong>活用（かつよう）</strong>。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/770/male_audio/09-昨日は朝起きて何をしたんですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「昨日は朝起きて何をしたんですか。」.mp3",
+        "word_prompt": "起（お）き<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきてから": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'What did you do <strong>after you woke up</strong> yesterday morning?'<br> (You woke up yesterday morning <strong>and</strong> what did you do?)",
+        "nuance_translation": "A <strong>casual</strong>, simple <strong>conjunctive form</strong> highlighting things that <strong>happen in sequence</strong>, one after the other.",
+        "extra_info": "",
+        "reviewable_id": 770,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8902",
+      "type": "study_question",
+      "attributes": {
+        "id": 8902,
+        "content": "「テレビ<span class='gp-popout' data-gp-id='21'>を</span>見（み）<span class='study-area-input'>____</span>シャワー<span class='gp-popout' data-gp-id='21'>を</span>浴（あ）び<span class='study-area-input'>____</span>寝（ね）<span class='gp-popout' data-gp-id='895'>た</span><span class='gp-popout' data-gp-id='17'>んだ</span>。」",
+        "answer": "て",
+        "alternate_grammar": [],
+        "kanji_answer": "て",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>順番（じゅんばん）に</strong>起（お）こっていたり、何（なに）かのすぐ後（あと）に起（お）こったりすることを表（あらわ）すために使（つか）われる<strong>カジュアル</strong>で単純（たんじゅん）な<strong>活用（かつよう）</strong>。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/770/male_audio/04-テレビを見てシャワーを浴びてねたんだ　.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「テレビを見てシャワーを浴びて寝たんだ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "てから": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'I watched TV (<strong>and</strong>), took a shower, <strong>and</strong> slept.'",
+        "nuance_translation": "A <strong>casual</strong>, simple <strong>conjunctive form</strong> highlighting things that <strong>happen in sequence</strong>, one after the other.",
+        "extra_info": "",
+        "reviewable_id": 770,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8900",
+      "type": "study_question",
+      "attributes": {
+        "id": 8900,
+        "content": "顔（かお）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>仕事（しごと）に行（い）<span class='gp-popout' data-gp-id='41'>った</span><span class='gp-popout' data-gp-id='17'>んです</span><span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "あらって",
+        "alternate_grammar": [],
+        "kanji_answer": "洗（あら）って",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>順番（じゅんばん）に</strong>起（お）こっていたり、何（なに）かのすぐ後（あと）に起（お）こったりすることを表（あらわ）すために使（つか）われる<strong>カジュアル</strong>で単純（たんじゅん）な<strong>活用（かつよう）</strong>。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/770/male_audio/12-顔を洗って仕事に行ったんですよ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/顔を洗って仕事に行ったんですよ。.mp3",
+        "word_prompt": "洗（あら）<span class='gp-popout' data-gp-id='26'>う</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あらってから": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>I washed</strong> my face <strong>and</strong> went to work.",
+        "nuance_translation": "A <strong>casual</strong>, simple <strong>conjunctive form</strong> highlighting things that <strong>happen in sequence</strong>, one after the other.",
+        "extra_info": "",
+        "reviewable_id": 770,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8894",
+      "type": "study_question",
+      "attributes": {
+        "id": 8894,
+        "content": "明日（あした）<span class='gp-popout' data-gp-id='3'>は</span>９時（くじ）に起（お）き<span class='study-area-input'>____</span>、朝（あさ）ごはん<span class='gp-popout' data-gp-id='21'>を</span>食（た）べ<span class='study-area-input'>____</span>買（か）い物（もの）に行（い）<span class='gp-popout' data-gp-id='26'>きます</span>。",
+        "answer": "て",
+        "alternate_grammar": [],
+        "kanji_answer": "て",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>順番（じゅんばん）に</strong>起（お）こっていたり、何（なに）かのすぐ後（あと）に起（お）こったりすることを表（あらわ）すために使（つか）われる<strong>カジュアル</strong>で単純（たんじゅん）な<strong>活用（かつよう）</strong>。",
+        "tense": "Conjunctive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson7/770/male_audio/01-あしたは９じにおきて.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/明日は９時に起きて、朝ごはんを食べて買い物に行きます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "てから": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Tomorrow I will wake up at 9 (<strong>and</strong>), eat breakfast, <strong>and</strong> go shopping.",
+        "nuance_translation": "A <strong>casual</strong>, simple <strong>conjunctive form</strong> highlighting things that <strong>happen in sequence</strong>, one after the other.",
+        "extra_info": "",
+        "reviewable_id": 770,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "82",
+      "type": "writeup",
+      "attributes": {
+        "id": 82,
+        "body_ja": null,
+        "body": "<p>The <span data-gp-id='416'>て</span> form of a verb, followed by another verb phrase is often translated to 'then', or 'and then', and is how Japanese lists sequences of events that happen one after another.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155015'>\r\n<li data-study-question='155016'></ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>This grammar construction is used for listing things that happen in order, for example 'I did (A), then (B), then (C)'. Other grammar structures will need to be used if you would like to talk about things that happen/happened in no particular order. For example <span data-gp-id='79'>たり～たりする</span>, which will appear in a sentence like 'I did things like (C), and (A), oh, and (B)!'</p></section>"
+      }
+    },
+    {
+      "id": "1628",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1628,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 152",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1280",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1280,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 105",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1674",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1674,
+        "source": "みんなの日本語 I",
+        "location": "Page 104 [CH 16]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2253",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2253,
+        "site": "Imabi",
+        "description": "The conjunctive particle て",
+        "link": "https://imabi.org/the-particle-te-%e3%81%a6-ii-final-particle/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2006",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2006,
+        "site": "Tae Kim",
+        "description": "Expressing a sequence of verbs with the te-form",
+        "link": "https://guidetojapanese.org/learn/grammar/compound",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2007",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2007,
+        "site": "Kanji Link",
+        "description": "Making requests, linking sentences, & more",
+        "link": "https://www.kanji-link.com/en/grammar/n5/#grammar5verb4",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2008",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2008,
+        "site": "Tofugu",
+        "description": "て Form",
+        "link": "https://www.tofugu.com/japanese-grammar/te-form/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1241",
+      "type": "related_content",
+      "attributes": {
+        "id": 1241,
+        "relationship_type": "related",
+        "body": "Adjective + て, Noun + で, and Verb + て+ B are the same fundamental pattern, using the て form to connect elements in a sentence. The construction of the て form depends on whether the word is an い-Adjective, な-Adjective, noun, or verb, but the function remains consistent, similar to the English 'and.'",
+        "first_relatable": {
+          "id": 769,
+          "slug": "adjective-て-noun-で",
+          "title": "Adjective + て・Noun + で",
+          "meaning": "And... (Conjunctive)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 770,
+          "slug": "verb-て-b",
+          "title": "Verb + て+ B",
+          "meaning": "And, And then, After that (sequence)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "721",
+      "type": "related_content",
+      "attributes": {
+        "id": 721,
+        "relationship_type": "related",
+        "body": "The Verb + て form connects verbs or parts of a sentence. One of the most common uses of this form is to describe actions that occur in sequence, similar to the English 'then' or 'and then.' For example, 水を買って、飲んだ means 'I bought (some) water, and then drank it.'",
+        "first_relatable": {
+          "id": 770,
+          "slug": "verb-て-b",
+          "title": "Verb + て+ B",
+          "meaning": "And, And then, After that (sequence)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 416,
+          "slug": "verb-て",
+          "title": "Verb + て",
+          "meaning": "And, Then (Linking events)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1370",
+      "type": "related_content",
+      "attributes": {
+        "id": 1370,
+        "relationship_type": "related",
+        "body": "Both the Verb + て form and the particle と can express the meaning of 'and.' The difference is that Verb + て is used to connect verb or verb phrases to the rest of the sentence, while と connects nouns with other nouns. For example, パンとバナナを買った means 'I bought bread and a banana.' To say 'I bought bread, and ate it,' however, you would say パンを買って、食べた.",
+        "first_relatable": {
+          "id": 770,
+          "slug": "verb-て-b",
+          "title": "Verb + て+ B",
+          "meaning": "And, And then, After that (sequence)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 15,
+          "slug": "と-and",
+          "title": "と",
+          "meaning": "And",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "711",
+      "type": "related_content",
+      "attributes": {
+        "id": 711,
+        "relationship_type": "related",
+        "body": "Both patterns use the て form to link a verb or verb phrase to the next part of the sentence, but the nuance varies. It can either simply connect actions, as in パンを買って食べた ('I bought bread and ate it'), or suggest a cause or effect, as in 人が多くて入れなかった ('There were too many people, so I couldn't get in'). This interpretation depends on the context.",
+        "first_relatable": {
+          "id": 770,
+          "slug": "verb-て-b",
+          "title": "Verb + て+ B",
+          "meaning": "And, And then, After that (sequence)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 776,
+          "slug": "verbて-b",
+          "title": "Verb[て] + B",
+          "meaning": "Non-sequence, And, But (Contrast), Parallel action/state",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

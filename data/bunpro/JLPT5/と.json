@@ -1,0 +1,1194 @@
+{
+  "data": {
+    "id": "356",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 356,
+      "level": "JLPT5",
+      "lesson_id": 6,
+      "part_of_speech": "助詞",
+      "register": "一般",
+      "word_type": "格助詞",
+      "slug": "と",
+      "nuance": "<strong>誰（だれ）かが言（い）ったこと</strong>を<strong>引用（いんよう）</strong>する時（とき）や<strong>要約（ようやく）</strong>するときに使（つか）われる<strong>助詞（じょし）</strong>。",
+      "grammar_order": 71,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 358,
+        "title": "って",
+        "slug": "って"
+      },
+      "previous_grammar_point": {
+        "id": 876,
+        "title": "い-Adjective くなかった",
+        "slug": "い-Adjective-くなかった"
+      },
+      "lesson_count": "8/13",
+      "title": "と",
+      "furigana": "と",
+      "meaning": "Quotation",
+      "nuance_translation": "A <strong>particle</strong> used when <strong>quoting</strong> or <strong>summarizing</strong> something that <strong>has been said</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "(Quotation) Phrase + <strong>と</strong> + Verb<sup>(*)</sup><br><br>Verb + <strong>と</strong> + Verb<sup>(*)</sup><br>［い］Adjective + <strong>と</strong> + Verb<sup>(*)</sup><br>［な］Adjective + (<span class='chui'><span class='gp-popout' data-gp-id='1'>だ</span></span>) + <strong>と</strong> + Verb<sup>(*)</sup><br>Noun + (<span class='chui'><span class='gp-popout' data-gp-id='1'>だ</span></span>) + <strong>と</strong> + Verb<sup>(*)</sup><br><br><sup>(*)</sup> Verbs like 言（い）う、聞（き）く、思（おも）う、考（かんが）える、仮定（かてい）する and the like are used",
+      "part_of_speech_translation": "Particle",
+      "register_translation": "Standard",
+      "word_type_translation": "Case Marking Particle",
+      "discourse_link": "https://community.bunpro.jp/t/quotation-grammar-discussion/580",
+      "metadata": "と, だと, to, dato, particle, case-marking particle, quotation, quotation particle, reference, citation"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "1937",
+            "type": "study_question"
+          },
+          {
+            "id": "1941",
+            "type": "study_question"
+          },
+          {
+            "id": "1942",
+            "type": "study_question"
+          },
+          {
+            "id": "1283",
+            "type": "study_question"
+          },
+          {
+            "id": "154972",
+            "type": "study_question"
+          },
+          {
+            "id": "154970",
+            "type": "study_question"
+          },
+          {
+            "id": "154973",
+            "type": "study_question"
+          },
+          {
+            "id": "154971",
+            "type": "study_question"
+          },
+          {
+            "id": "154974",
+            "type": "study_question"
+          },
+          {
+            "id": "1944",
+            "type": "study_question"
+          },
+          {
+            "id": "1282",
+            "type": "study_question"
+          },
+          {
+            "id": "1936",
+            "type": "study_question"
+          },
+          {
+            "id": "1938",
+            "type": "study_question"
+          },
+          {
+            "id": "1940",
+            "type": "study_question"
+          },
+          {
+            "id": "1943",
+            "type": "study_question"
+          },
+          {
+            "id": "1284",
+            "type": "study_question"
+          },
+          {
+            "id": "1939",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "71",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "146",
+            "type": "offline_resource"
+          },
+          {
+            "id": "951",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1329",
+            "type": "offline_resource"
+          },
+          {
+            "id": "3270",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "650",
+            "type": "related_content"
+          },
+          {
+            "id": "193",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "790",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1144",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1240",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2089",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "789",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "1937",
+      "type": "study_question",
+      "attributes": {
+        "id": 1937,
+        "content": "「重（おも）<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='8'>か</span>」<span class='study-area-input'>____</span>。",
+        "answer": "とききました",
+        "alternate_grammar": [
+          "とかれはききました",
+          "とききました"
+        ],
+        "kanji_answer": "と聞（き）きました",
+        "kanji_alt_grammar": [
+          "とかれは聞（き）きました",
+          "と聞（き）きました"
+        ],
+        "nuance": "<strong>誰（だれ）かが言（い）ったこと</strong>を<strong>引用（いんよう）</strong>する時（とき）や<strong>要約（ようやく）</strong>するときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Past, Polite, Quotation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/356/male_audio/14-重いですかと聞きました.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「重いですか」と聞きました。.mp3",
+        "word_prompt": "聞（き）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ってきいた": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Vas por buen camino, pero intenta usar un tono más formal en general.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "ときいた": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "ってききました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He <strong>asked</strong>, 'Is it heavy?'",
+        "nuance_translation": "A <strong>particle</strong> used when <strong>quoting</strong> or <strong>summarizing</strong> something that <strong>has been said</strong>.",
+        "extra_info": "",
+        "reviewable_id": 356,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1941",
+      "type": "study_question",
+      "attributes": {
+        "id": 1941,
+        "content": "子供（こども）<span class='gp-popout' data-gp-id='10'>が</span>「野菜（やさい）<span class='gp-popout' data-gp-id='10'>が</span><span class='gp-popout' data-gp-id='716'>好（す）き</span><span class='gp-popout' data-gp-id='2'>です</span>」<span class='study-area-input'>____</span>。",
+        "answer": "といいました",
+        "alternate_grammar": [
+          "といっていました",
+          "といいました"
+        ],
+        "kanji_answer": "と言（い）いました",
+        "kanji_alt_grammar": [
+          "と言（い）っていました",
+          "と言（い）いました"
+        ],
+        "nuance": "<strong>誰（だれ）かが言（い）ったこと</strong>を<strong>引用（いんよう）</strong>する時（とき）や<strong>要約（ようやく）</strong>するときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Past, Polite, Quotation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/356/male_audio/05-子供が野菜が好きですと言いました.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/子供が「野菜が好きです」と言いました。.mp3",
+        "word_prompt": "言（い）<span class='gp-popout' data-gp-id='26'>う</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "っていった": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Vas por buen camino, pero intenta usar un tono más formal en general.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "といった": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "っていいました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "といっていた": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Prueba con una estructura gramatical diferente y más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "といってた": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Prueba con una estructura gramatical diferente y más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The child <strong>said</strong>, 'I like vegetables'.",
+        "nuance_translation": "A <strong>particle</strong> used when <strong>quoting</strong> or <strong>summarizing</strong> something that <strong>has been said</strong>.",
+        "extra_info": "",
+        "reviewable_id": 356,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1942",
+      "type": "study_question",
+      "attributes": {
+        "id": 1942,
+        "content": "彼（かれ）<span class='gp-popout' data-gp-id='3'>は</span>「明日（あした）<span class='gp-popout' data-gp-id='3'>は</span>雨（あめ）<span class='gp-popout' data-gp-id='9'>でしょう</span>」<span class='study-area-input'>____</span>。",
+        "answer": "といいました",
+        "alternate_grammar": [
+          "といっていました",
+          "といいました"
+        ],
+        "kanji_answer": "と言（い）いました",
+        "kanji_alt_grammar": [
+          "と言（い）っていました",
+          "と言（い）いました"
+        ],
+        "nuance": "<strong>誰（だれ）かが言（い）ったこと</strong>を<strong>引用（いんよう）</strong>する時（とき）や<strong>要約（ようやく）</strong>するときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Past, Polite, Quotation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/356/male_audio/08-彼は明日は雨でしょうといいました.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼は「明日は雨でしょう」と言いました。.mp3",
+        "word_prompt": "言（い）<span class='gp-popout' data-gp-id='26'>う</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "っていった": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Vas por buen camino, pero intenta usar un tono más formal en general.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "といった": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "っていいました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "Vas por buen camino, pero intenta usar un tono más informal y la forma sencilla.",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "といってた": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Prueba con una estructura gramatical diferente y más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "といっていた": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Prueba con una estructura gramatical diferente y más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He <strong>said</strong>, 'It will rain tomorrow, right?'",
+        "nuance_translation": "A <strong>particle</strong> used when <strong>quoting</strong> or <strong>summarizing</strong> something that <strong>has been said</strong>.",
+        "extra_info": "",
+        "reviewable_id": 356,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1283",
+      "type": "study_question",
+      "attributes": {
+        "id": 1283,
+        "content": "メモ<span class='gp-popout' data-gp-id='32'>に</span>「私（わたし）<span class='gp-popout' data-gp-id='3'>は</span>今（いま）<span class='gp-popout' data-gp-id='52'>から</span>学校（がっこう）に行（い）<span class='gp-popout' data-gp-id='26'>きます</span>」<span class='study-area-input'>____</span>。",
+        "answer": "とかいた",
+        "alternate_grammar": [],
+        "kanji_answer": "と書（か）いた",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>誰（だれ）かが言（い）ったこと</strong>を<strong>引用（いんよう）</strong>する時（とき）や<strong>要約（ようやく）</strong>するときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Past, Standard, Quotation",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/メモに「私は今から学校に行きます」と書いた。.mp3",
+        "word_prompt": "書（か）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ってかいた": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "とかきました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "ってかきました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "Vas por buen camino, pero intenta usar un tono más informal y la forma sencilla.",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>wrote</strong>, 'I am going to school now' on a note. ",
+        "nuance_translation": "A <strong>particle</strong> used when <strong>quoting</strong> or <strong>summarizing</strong> something that <strong>has been said</strong>.",
+        "extra_info": "",
+        "reviewable_id": 356,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154972",
+      "type": "study_question",
+      "attributes": {
+        "id": 154972,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"19\">あれ</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span>猫（ねこ）<span class=\"gp-popout\" data-gp-id=\"1\">だ</span><span class='study-area-input'>____</span>思（おも）う。",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれは猫だと思う。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>think</strong> that is a cat.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 356,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154970",
+      "type": "study_question",
+      "attributes": {
+        "id": 154970,
+        "content": "先生（せんせい）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>「危（あぶ）ない！」<span class='study-area-input'>____</span>叫（さけ）ん<span class=\"gp-popout\" data-gp-id=\"41\">だ</span>。",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/先生が「危ない！」と叫んだ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The teacher <strong>yelled</strong>, 'Watch out!'",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 356,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154973",
+      "type": "study_question",
+      "attributes": {
+        "id": 154973,
+        "content": "富士山（ふじさん）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>綺麗（きれい）<span class=\"gp-popout\" data-gp-id=\"1\">だ</span><span class='study-area-input'>____</span>思（おも）<span class=\"gp-popout\" data-gp-id=\"26\">う</span>？",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/富士山は綺麗だと思う？.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Do you <strong>think</strong> that Mt. Fuji is beautiful?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 356,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154971",
+      "type": "study_question",
+      "attributes": {
+        "id": 154971,
+        "content": "木村（きむら）さん<span class=\"gp-popout\" data-gp-id=\"10\">が</span>「３（さん）キロ歩（ある）い<span class=\"gp-popout\" data-gp-id=\"41\">た</span>」<span class='study-area-input'>____</span>言（い）っ<span class=\"gp-popout\" data-gp-id=\"41\">た</span>。",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/木村さんが「3キロ歩いた」と言った。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Kimura san <strong>said</strong>, 'I walked 3 km.'",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 356,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154974",
+      "type": "study_question",
+      "attributes": {
+        "id": 154974,
+        "content": "生徒（せいと）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>先生（せんせい）<span class=\"gp-popout\" data-gp-id=\"32\">に</span>「何（なん）で？」<span class='study-area-input'>____</span>。",
+        "answer": "と",
+        "alternate_grammar": [],
+        "kanji_answer": "と",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/生徒が先生に「何で？」と。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The students <strong>asked</strong> the teacher, 'Why?'",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 356,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1944",
+      "type": "study_question",
+      "attributes": {
+        "id": 1944,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='3'>は</span>「<span class='gp-popout' data-gp-id='14'>ここ</span>で<span class='gp-popout' data-gp-id='3'>は</span>遊（あそ）<span class='gp-popout' data-gp-id='888'>ばない</span>」<span class='study-area-input'>____</span>。",
+        "answer": "とかいた",
+        "alternate_grammar": [],
+        "kanji_answer": "と書（か）いた",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>誰（だれ）かが言（い）ったこと</strong>を<strong>引用（いんよう）</strong>する時（とき）や<strong>要約（ようやく）</strong>するときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Past, Standard, Quotation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/356/male_audio/12-私はここでは遊ばないと書いた.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私は「ここでは遊ばない」と書いた。.mp3",
+        "word_prompt": "書（か）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ってかいた": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Vas por buen camino, pero intenta usar un tono más formal en general.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "とかきました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "ってかきました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "Vas por buen camino, pero intenta usar un tono más informal y la forma sencilla.",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>wrote</strong>, 'I don't play here'.",
+        "nuance_translation": "A <strong>particle</strong> used when <strong>quoting</strong> or <strong>summarizing</strong> something that <strong>has been said</strong>.",
+        "extra_info": "",
+        "reviewable_id": 356,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1282",
+      "type": "study_question",
+      "attributes": {
+        "id": 1282,
+        "content": "<span class='vocab-popout' data-vocab-id='564'>彼（かれ）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='vocab-popout' data-vocab-id='178'>とても</span><span class='vocab-popout' data-vocab-id='950'>親切（しんせつ）</span><span class='study-area-input'>____</span>。",
+        "answer": "だとききました",
+        "alternate_grammar": [
+          "だとききました"
+        ],
+        "kanji_answer": "だと聞（き）きました",
+        "kanji_alt_grammar": [
+          "だと聞（き）きました"
+        ],
+        "nuance": "<strong>誰（だれ）かが言（い）ったこと</strong>を<strong>引用（いんよう）</strong>する時（とき）や<strong>要約（ようやく）</strong>するときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Past, Polite, Quotation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/356/male_audio/彼はとても親切だと聞きました。.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼はとても親切だと聞きました。.mp3",
+        "word_prompt": "<span class='gp-popout vocab-popout' data-gp-id='26' data-vocab-id='893'>聞（き）く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だってきいた": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": "Vas por buen camino, pero intenta usar un tono más formal en general.",
+            "fr": "Pouvez-vous utiliser une forme grammaticale non abrégée ?",
+            "id": "Mungkin kamu bisa coba gunakan poin tata bahasa yang tidak disingkat?"
+          },
+          "だときいた": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "だってききました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "Intenta citar de manera más formal.",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "とききました": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "ときいた": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal e incluir algo más al principio.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "だとききます": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>heard</strong> that he is very friendly.",
+        "nuance_translation": "A <strong>particle</strong> used when <strong>quoting</strong> or <strong>summarizing</strong> something that <strong>has been said</strong>.",
+        "extra_info": "",
+        "reviewable_id": 356,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1936",
+      "type": "study_question",
+      "attributes": {
+        "id": 1936,
+        "content": "「晩（ばん）ごはん<span class='gp-popout' data-gp-id='21'>を</span>作（つく）<span class='gp-popout' data-gp-id='41'>った</span>」<span class='study-area-input'>____</span>。",
+        "answer": "といった",
+        "alternate_grammar": [],
+        "kanji_answer": "と言（い）った",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>誰（だれ）かが言（い）ったこと</strong>を<strong>引用（いんよう）</strong>する時（とき）や<strong>要約（ようやく）</strong>するときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Past, Standard, Quotation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/356/male_audio/11-晩ご飯を作ったといった.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「晩ごはんを作った」と言った。.mp3",
+        "word_prompt": "言（い）<span class='gp-popout' data-gp-id='26'>う</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "っていった": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "といいました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "といってた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "といっていた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "といっていました": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente y más informal.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "っていいました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "Vas por buen camino, pero intenta usar un tono más informal y la forma sencilla.",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>said</strong>, 'I made dinner'.",
+        "nuance_translation": "A <strong>particle</strong> used when <strong>quoting</strong> or <strong>summarizing</strong> something that <strong>has been said</strong>.",
+        "extra_info": "",
+        "reviewable_id": 356,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1938",
+      "type": "study_question",
+      "attributes": {
+        "id": 1938,
+        "content": "先生（せんせい）<span class='gp-popout' data-gp-id='10'>が</span>「危（あぶ）ない」<span class='study-area-input'>____</span>。",
+        "answer": "とかいた",
+        "alternate_grammar": [],
+        "kanji_answer": "と書（か）いた",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>誰（だれ）かが言（い）ったこと</strong>を<strong>引用（いんよう）</strong>する時（とき）や<strong>要約（ようやく）</strong>するときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Past, Standard, Quotation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/356/male_audio/02-先生が危ないとかいた.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/先生が「危ない」と書いた。.mp3",
+        "word_prompt": "書（か）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ってかいた": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal en general.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "とかきました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "ってかきました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "Vas por buen camino, pero intenta usar un tono más informal y la forma sencilla.",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The teacher <strong>wrote</strong>, 'It is dangerous'.",
+        "nuance_translation": "A <strong>particle</strong> used when <strong>quoting</strong> or <strong>summarizing</strong> something that <strong>has been said</strong>.",
+        "extra_info": "",
+        "reviewable_id": 356,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1940",
+      "type": "study_question",
+      "attributes": {
+        "id": 1940,
+        "content": "「南（みなみ）<span class='gp-popout' data-gp-id='52'>から</span>風（かぜ）<span class='gp-popout' data-gp-id='10'>が</span><span class='gp-popout' data-gp-id='39'>来（く）る</span>」<span class='study-area-input'>____</span>。",
+        "answer": "ときいた",
+        "alternate_grammar": [],
+        "kanji_answer": "と聞（き）いた",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>誰（だれ）かが言（い）ったこと</strong>を<strong>引用（いんよう）</strong>する時（とき）や<strong>要約（ようやく）</strong>するときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Past, Standard, Quotation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/356/male_audio/04-南から風が来ると聞いた.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「南から風が来る」と聞いた。.mp3",
+        "word_prompt": "聞（き）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ってきいた": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "とききました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "ってききました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "Vas por buen camino, pero intenta usar un tono más informal y la forma sencilla.",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>heard</strong>, 'A wind will come from the south'.",
+        "nuance_translation": "A <strong>particle</strong> used when <strong>quoting</strong> or <strong>summarizing</strong> something that <strong>has been said</strong>.",
+        "extra_info": "",
+        "reviewable_id": 356,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1943",
+      "type": "study_question",
+      "attributes": {
+        "id": 1943,
+        "content": "「寿司（すし）<span class='gp-popout' data-gp-id='10'>が</span><span class='gp-popout' data-gp-id='716'>好（す）き</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='8'>か</span>」<span class='study-area-input'>____</span>。",
+        "answer": "とききました",
+        "alternate_grammar": [
+          "とかれはききました",
+          "とききました"
+        ],
+        "kanji_answer": "と聞（き）きました",
+        "kanji_alt_grammar": [
+          "とかれは聞（き）きました",
+          "と聞（き）きました"
+        ],
+        "nuance": "<strong>誰（だれ）かが言（い）ったこと</strong>を<strong>引用（いんよう）</strong>する時（とき）や<strong>要約（ようやく）</strong>するときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Past, Polite, Quotation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/356/male_audio/06-寿司が好きですかと聞きました.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「寿司が好きですか」と聞きました。.mp3",
+        "word_prompt": "聞（き）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ってきいた": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Vas por buen camino, pero intenta usar un tono más formal en general.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "ときいた": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "ってききました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He <strong>asked</strong>, 'Do you like sushi?'",
+        "nuance_translation": "A <strong>particle</strong> used when <strong>quoting</strong> or <strong>summarizing</strong> something that <strong>has been said</strong>.",
+        "extra_info": "",
+        "reviewable_id": 356,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1284",
+      "type": "study_question",
+      "attributes": {
+        "id": 1284,
+        "content": "「彼（かれ）<span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='14'>ここ</span><span class='gp-popout' data-gp-id='32'>に</span><span class='gp-popout' data-gp-id='39'>来（き）ます</span><span class='gp-popout' data-gp-id='8'>か</span>」<span class='study-area-input'>____</span>。",
+        "answer": "ときいた",
+        "alternate_grammar": [],
+        "kanji_answer": "と聞（き）いた",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>誰（だれ）かが言（い）ったこと</strong>を<strong>引用（いんよう）</strong>する時（とき）や<strong>要約（ようやく）</strong>するときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Past, Standard, Quotation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/356/male_audio/07-彼はここに来ますかと聞いた.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「彼はここに来ますか」と聞いた。.mp3",
+        "word_prompt": "聞（き）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ってきいた": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "とききました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          },
+          "ってききました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "Vas por buen camino, pero intenta usar un tono más informal y la forma sencilla.",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>asked</strong>, 'Is he coming here?' (<strong>asked</strong>)",
+        "nuance_translation": "A <strong>particle</strong> used when <strong>quoting</strong> or <strong>summarizing</strong> something that <strong>has been said</strong>.",
+        "extra_info": "",
+        "reviewable_id": 356,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1939",
+      "type": "study_question",
+      "attributes": {
+        "id": 1939,
+        "content": "「綺麗（きれい）<span class='gp-popout' data-gp-id='50'>じゃなかった</span>」<span class='study-area-input'>____</span>。",
+        "answer": "といいました",
+        "alternate_grammar": [
+          "といっていました",
+          "といいました",
+          "とかれはいいました"
+        ],
+        "kanji_answer": "と言（い）いました",
+        "kanji_alt_grammar": [
+          "と言（い）っていました",
+          "とかれは言（い）いました",
+          "と言（い）いました"
+        ],
+        "nuance": "<strong>誰（だれ）かが言（い）ったこと</strong>を<strong>引用（いんよう）</strong>する時（とき）や<strong>要約（ようやく）</strong>するときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Past, Polite, Quotation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/356/male_audio/13-綺麗じゃなかったと言いました.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「綺麗じゃなかった」と言いました。.mp3",
+        "word_prompt": "言（い）<span class='gp-popout' data-gp-id='26'>う</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "っていった": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Vas por buen camino, pero intenta usar un tono más formal en general.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "といった": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "っていいました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "といってた": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Prueba con una estructura gramatical diferente y más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "といっていた": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Prueba con una estructura gramatical diferente y más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {
+          "いいました": {
+            "en": "Something else is required at the beginning here.",
+            "es": "Prueba con algo diferente al principio.",
+            "fr": "Il faut autre chose au début ici.",
+            "id": "Diperlukan sesuatu yang lain di bagian awal."
+          }
+        },
+        "translation": "He <strong>said</strong>, 'It wasn't beautiful'.",
+        "nuance_translation": "A <strong>particle</strong> used when <strong>quoting</strong> or <strong>summarizing</strong> something that <strong>has been said</strong>.",
+        "extra_info": "",
+        "reviewable_id": 356,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "71",
+      "type": "writeup",
+      "attributes": {
+        "id": 71,
+        "body_ja": null,
+        "body": "<p>One of the regular functions of <span data-gp-id='356'>と</span> in Japanese is as a quotation particle. This use is called 引用（いんよう） in Japanese, which basically translates as 'reference', or 'citation'. This way of using <span data-gp-id='356'>と</span> can appear after almost any type of word (or phrase), but requires <span data-gp-id='1'>だ</span> when used after nouns or <span data-gp-id='28'>な-Adjectives</span>.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154970'>\r\n<li data-study-question='154971'>\r\n<li data-study-question='154972'>\r\n<li data-study-question='154973'></ul>\r\n\r\n<p><span data-gp-id='356'>と</span> as a quotation marker will almost always be followed by a verb that shows what type of 'quote' it is. This can be words like 言（い）う, 思（おも）う, 考（かんが）える, 聞（き）く, etc. However, at the end of a sentence, the verb will often be omitted.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154974'></ul>\r\n\r\n<p>As with other instances of the particle <span data-gp-id='15'>と</span> being used, this use simply expresses the relationship between (A) 'what was communicated', and (B) 'how it was communicated'.</p>"
+      }
+    },
+    {
+      "id": "146",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 146,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 193",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "951",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 951,
+        "source": "みんなの日本語 I",
+        "location": "Page 134 [CH 21]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1329",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1329,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 153",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "3270",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 3270,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 478",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "790",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 790,
+        "site": "LearnJapaneseAdventure",
+        "description": "Quoting What Someone Said Using Japanese Particle と",
+        "link": "https://www.learn-japanese-adventure.com/japanese-particle-to.html",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1144",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1144,
+        "site": "Imabi",
+        "description": "Citation",
+        "link": "https://imabi.org/citation-ii-%ef%bd%9e%e3%81%a8%e3%81%84%e3%81%86-%ef%bd%9e%e3%81%a8%e3%81%84%e3%81%86%e3%81%93%e3%81%a8-%ef%bd%9e%e3%81%a8%e3%81%84%e3%81%86%e3%82%82%e3%81%ae/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1240",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1240,
+        "site": "Japanese Ammo",
+        "description": "Said in Japanese (と言った vs って言ってた)",
+        "link": "https://www.youtube.com/watch?v=TdppYDLXP0E&list=PLd5-Wp_4tLqYZxS5j3g6kbeOfVXlTkr3N&index=38",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2089",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2089,
+        "site": "Tae Kim",
+        "description": "The direct quote",
+        "link": "https://guidetojapanese.org/learn/grammar/actionclause",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "789",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 789,
+        "site": "Wasabi",
+        "description": "と: Generic Quotation",
+        "link": "https://wasabi-jpn.com/magazine/japanese-grammar/quotation/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "650",
+      "type": "related_content",
+      "attributes": {
+        "id": 650,
+        "relationship_type": "related",
+        "body": "と is a quoting particle used to mark the content of direct or indirect speech, thoughts, or feelings. For example, 行くと言っていた means '[He] was saying [he] will go.' といってもいい combines と with 言う and the い-Adjective いい, meaning 'You/one could say' (literally, 'It's fine even if one says...').",
+        "first_relatable": {
+          "id": 147,
+          "slug": "といってもいい",
+          "title": "といってもいい",
+          "meaning": "You could say, You might say",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 356,
+          "slug": "と",
+          "title": "と",
+          "meaning": "Quotation",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "193",
+      "type": "related_content",
+      "attributes": {
+        "id": 193,
+        "relationship_type": "related",
+        "body": "と and って are quoting particles marking direct or indirect speech, thoughts, or feelings. For example, 行くと言っていた and 行くって言っていた both mean '[They] were saying [they] will go.' The difference is that って is used mainly in casual conversation, while と is used in speech or writing. って can also casually introduce a topic, like 日本っていいよね ('Japan is great, isn't it?'), which と cannot.",
+        "first_relatable": {
+          "id": 356,
+          "slug": "と",
+          "title": "と",
+          "meaning": "Quotation",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 358,
+          "slug": "って",
+          "title": "って",
+          "meaning": "Casual quotation",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

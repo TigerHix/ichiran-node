@@ -1,0 +1,1253 @@
+{
+  "data": {
+    "id": "456",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 456,
+      "level": "JLPT3",
+      "lesson_id": 25,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "ても-なくても",
+      "nuance": "(A)が<strong>あってもそうじゃない場合（ばあい）でも</strong>、(B)であるということを示（しめ）す表現（ひょうげん）。",
+      "grammar_order": 397,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 1081,
+        "title": "んじゃない",
+        "slug": "んじゃない"
+      },
+      "previous_grammar_point": {
+        "id": 239,
+        "title": "てもかまわない",
+        "slug": "てもかまわない"
+      },
+      "lesson_count": "5/22",
+      "title": "～ても～なくても",
+      "furigana": "～ても～なくても",
+      "meaning": "Whether ~ or not",
+      "nuance_translation": "A common phrase indicating that <strong>even with</strong> (A), or <strong>even not with</strong> (A), (B).",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "<span class='gp-popout' data-gp-id='174'>Verb［ても］</span>(A) + Verb［なくても］(A)",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/1866",
+      "metadata": "てもなくても, ても, なくても, temonakutemo, temo, nakutemo, expression, whether or not, hypothetical"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "4511",
+            "type": "study_question"
+          },
+          {
+            "id": "4510",
+            "type": "study_question"
+          },
+          {
+            "id": "181240",
+            "type": "study_question"
+          },
+          {
+            "id": "181241",
+            "type": "study_question"
+          },
+          {
+            "id": "181242",
+            "type": "study_question"
+          },
+          {
+            "id": "4504",
+            "type": "study_question"
+          },
+          {
+            "id": "4507",
+            "type": "study_question"
+          },
+          {
+            "id": "4503",
+            "type": "study_question"
+          },
+          {
+            "id": "3707",
+            "type": "study_question"
+          },
+          {
+            "id": "4506",
+            "type": "study_question"
+          },
+          {
+            "id": "3706",
+            "type": "study_question"
+          },
+          {
+            "id": "4509",
+            "type": "study_question"
+          },
+          {
+            "id": "3705",
+            "type": "study_question"
+          },
+          {
+            "id": "4508",
+            "type": "study_question"
+          },
+          {
+            "id": "4505",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "417",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "537",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "791",
+            "type": "related_content"
+          },
+          {
+            "id": "1564",
+            "type": "related_content"
+          },
+          {
+            "id": "940",
+            "type": "related_content"
+          },
+          {
+            "id": "942",
+            "type": "related_content"
+          },
+          {
+            "id": "943",
+            "type": "related_content"
+          },
+          {
+            "id": "944",
+            "type": "related_content"
+          },
+          {
+            "id": "218",
+            "type": "related_content"
+          },
+          {
+            "id": "941",
+            "type": "related_content"
+          },
+          {
+            "id": "736",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1009",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1010",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "4511",
+      "type": "study_question",
+      "attributes": {
+        "id": 4511,
+        "content": "あの授業（じゅぎょう）は<span class='study-area-input'>____</span>いいらしい。",
+        "answer": "いってもいかなくても",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）っても行かなくても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>あってもそうじゃない場合（ばあい）でも</strong>、(B)であるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson5/456/male_audio/230620_1516_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/あの授業は行っても行かなくてもいいらしい。.mp3",
+        "word_prompt": "行（い）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いくかどうか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "いこうがいくまいが": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I heard that it is alright <strong>whether or not you go</strong> to that class.　",
+        "nuance_translation": "A common phrase indicating that <strong>even with</strong> (A), or <strong>even not with</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 456,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4510",
+      "type": "study_question",
+      "attributes": {
+        "id": 4510,
+        "content": "助手（じょしゅ）が<span class='study-area-input'>____</span>、やることはたいして変（か）わらない。",
+        "answer": "いてもいなくても",
+        "alternate_grammar": [],
+        "kanji_answer": "いてもいなくても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>あってもそうじゃない場合（ばあい）でも</strong>、(B)であるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson5/456/male_audio/230620_1516_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/助手がいてもいなくても、やることはたいして変わらない。.mp3",
+        "word_prompt": "いる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いるかどうか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "いろうがいるまいが": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Whether</strong> I have an assistant <strong>or not</strong>, there won't be much difference in what I do.",
+        "nuance_translation": "A common phrase indicating that <strong>even with</strong> (A), or <strong>even not with</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 456,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181240",
+      "type": "study_question",
+      "attributes": {
+        "id": 181240,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"47\">あの</span>人（ひと）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>いてもい<span class='study-area-input'>____</span>、仕事（しごと）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>量（りょう）は変（か）わ<span class=\"gp-popout\" data-gp-id=\"888\">らない</span><span class=\"gp-popout\" data-gp-id=\"45\">から</span>、首（くび）<span class=\"gp-popout\" data-gp-id=\"32\">に</span>してもいい<span class=\"gp-popout\" data-gp-id=\"94\">と思（おも）う</span>。",
+        "answer": "なくても",
+        "alternate_grammar": [],
+        "kanji_answer": "なくても",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/あの人がいてもいなくても、仕事の量は変わらないから、首にしてもいいと思う。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Whether or not</strong> he is here doesn't change the workload, so I think it would be good if we fired him.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 456,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181241",
+      "type": "study_question",
+      "attributes": {
+        "id": 181241,
+        "content": "私（わたし）は運動（うんどう）しても運動（うんどう）し<span class='study-area-input'>____</span>痩（や）せられ<span class=\"gp-popout\" data-gp-id=\"51\">ない</span><span class=\"gp-popout\" data-gp-id=\"45\">から</span>、<span class=\"gp-popout\" data-gp-id=\"42\">もう</span>運動（うんどう）はし<span class=\"gp-popout\" data-gp-id=\"51\">ない</span>。",
+        "answer": "なくても",
+        "alternate_grammar": [],
+        "kanji_answer": "なくても",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/私は運動しても運動しなくても痩せられないから、もう運動はしない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Regardless of <strong>whether or not</strong> I exercise, I can't lose weight, so I will not exercise anymore.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 456,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181242",
+      "type": "study_question",
+      "attributes": {
+        "id": 181242,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"14\">ここ</span><span class=\"gp-popout\" data-gp-id=\"6\">の</span>居酒屋（いざかや）ではビール<span class=\"gp-popout\" data-gp-id=\"21\">を</span>頼（たの）んでも頼（たの）ま<span class='study-area-input'>____</span>、ビール<span class=\"gp-popout\" data-gp-id=\"21\">を</span>持（も）っ<span class=\"gp-popout\" data-gp-id=\"128\">てくる</span>。",
+        "answer": "なくても",
+        "alternate_grammar": [],
+        "kanji_answer": "なくても",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/ここの居酒屋ではビールを頼んでも頼まなくても、ビールを持ってくる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Regardless of <strong>whether</strong> you order beer <strong>or not</strong>, they will bring you one at this izakaya.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 456,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4504",
+      "type": "study_question",
+      "attributes": {
+        "id": 4504,
+        "content": "<span class='study-area-input'>____</span>、釣（つ）りは楽（たの）しいらしい。",
+        "answer": "つれてもつれなくても",
+        "alternate_grammar": [],
+        "kanji_answer": "釣（つ）れても釣（つ）れなくても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>あってもそうじゃない場合（ばあい）でも</strong>、(B)であるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson5/456/male_audio/230620_1515_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/釣れても釣れなくても、釣りは楽しいらしい。.mp3",
+        "word_prompt": "釣（つ）れる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つれるかどうか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "つれってもつれなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つれても": {
+            "en": "This grammar point requires the verb to be repeated with a negative conditional.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つれ": {
+            "en": "We are looking for a grammar point that literally means 'even if (A), even if not (A)', and is used to show that the result will not change regardless of whether or not (A) is the case.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つれてもつらなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つれてつれなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つれてもつれらなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "つれなくても": {
+            "en": "This grammar point requires a positive conditional as well as a negative conditional to be correct.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I heard fishing is fun <strong>whether you are able to catch</strong> any fish <strong>or not</strong>.",
+        "nuance_translation": "A common phrase indicating that <strong>even with</strong> (A), or <strong>even not with</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 456,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4507",
+      "type": "study_question",
+      "attributes": {
+        "id": 4507,
+        "content": "お金（かね）を<span class='study-area-input'>____</span>、幸（しあわ）せになることは可能（かのう）です。",
+        "answer": "もっていてももっていなくても",
+        "alternate_grammar": [],
+        "kanji_answer": "持（も）っていても持（も）っていなくても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>あってもそうじゃない場合（ばあい）でも</strong>、(B)であるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Progressive, Conditional",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson5/456/male_audio/230620_1516.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/お金を持っていても持っていなくても、幸せになることは可能です。.mp3",
+        "word_prompt": "持（も）っている",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "もつかどうか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": ""
+          },
+          "もとうがもつまいが": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": "",
+            "fr": ""
+          },
+          "もってももたなくても": {
+            "en": "Could you try using the prompted verb?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "もってももってなくても": {
+            "en": "Could you try using the prompted verb?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "もってももなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "もってももちなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "You can be happy <strong>whether you have</strong> money <strong>or not</strong>.",
+        "nuance_translation": "A common phrase indicating that <strong>even with</strong> (A), or <strong>even not with</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 456,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4503",
+      "type": "study_question",
+      "attributes": {
+        "id": 4503,
+        "content": "<span class='study-area-input'>____</span>いいので、一度（いちど）見（み）てもらえませんか？",
+        "answer": "かってもかわなくても",
+        "alternate_grammar": [],
+        "kanji_answer": "買（か）っても買（か）わなくても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>あってもそうじゃない場合（ばあい）でも</strong>、(B)であるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson5/456/male_audio/230620_1515_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/買っても買わなくてもいいので、一度見てもらえませんか？.mp3",
+        "word_prompt": "買（か）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かうかどうか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "かおうがかうまいが": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "かいてもかわなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "かっても": {
+            "en": "This grammar point requires the verb to be repeated with a negative conditional.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "かってもかまわない": {
+            "en": "We are looking for a grammar point that means 'even if (A), even if not (A)', to show that whatever the result is will not change, regardless of (A).",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "かってかわなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "かってもかなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "かわなくても": {
+            "en": "This grammar point requires a positive conditional as well as a negative conditional to be correct.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "It doesn't matter <strong>whether you buy it or not</strong>, why don't you take a look?",
+        "nuance_translation": "A common phrase indicating that <strong>even with</strong> (A), or <strong>even not with</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 456,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3707",
+      "type": "study_question",
+      "attributes": {
+        "id": 3707,
+        "content": "担当（たんとう）に<span class='study-area-input'>____</span>、私（わたし）はあなたの味方（みかた）です。",
+        "answer": "なってもならなくても",
+        "alternate_grammar": [],
+        "kanji_answer": "なってもならなくても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>あってもそうじゃない場合（ばあい）でも</strong>、(B)であるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Hypothetical",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson5/456/male_audio/230620_1515_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/担当になってもならなくても、私はあなたの味方です。.mp3",
+        "word_prompt": "なる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なるかどうか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "なれるかどうか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "なろうがなるまいが": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "なってもなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "なっても": {
+            "en": "This grammar point requires the verb to be repeated with a negative conditional.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "なくてもならなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Whether you get to be</strong> in charge <strong>or not</strong>, I support you.",
+        "nuance_translation": "A common phrase indicating that <strong>even with</strong> (A), or <strong>even not with</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 456,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4506",
+      "type": "study_question",
+      "attributes": {
+        "id": 4506,
+        "content": "勉強（べんきょう）<span class='study-area-input'>____</span>、試験（しけん）の結果（けっか）は変（か）わらない。",
+        "answer": "してもしなくても",
+        "alternate_grammar": [],
+        "kanji_answer": "してもしなくても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>あってもそうじゃない場合（ばあい）でも</strong>、(B)であるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson5/456/male_audio/230620_1515_06.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/勉強してもしなくても、試験の結果は変わらない。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "するかどうか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "しようがするまいが": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しても": {
+            "en": "This grammar point requires the verb to be repeated with a negative conditional.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "してしなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "するかしないか": {
+            "en": "We are looking for a grammar point that means 'even if (A), even if not (A)', to show that whatever the result is will not change, regardless of (A).",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しなくても": {
+            "en": "This grammar point requires a positive conditional as well as a negative conditional to be correct.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Whether</strong> I study <strong>or not</strong>, the exam results won't change.",
+        "nuance_translation": "A common phrase indicating that <strong>even with</strong> (A), or <strong>even not with</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 456,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3706",
+      "type": "study_question",
+      "attributes": {
+        "id": 3706,
+        "content": "この単位（たんい）が<span class='study-area-input'>____</span>、卒業（そつぎょう）できるだけの単位（たんい）は取（と）れている。",
+        "answer": "とれてもとれなくても",
+        "alternate_grammar": [],
+        "kanji_answer": "取（と）れても取（と）れなくても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>あってもそうじゃない場合（ばあい）でも</strong>、(B)であるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Hypothetical",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson5/456/male_audio/230620_1515_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/この単位が取れても取れなくても、卒業できるだけの単位は取れている。.mp3",
+        "word_prompt": "取（と）れる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とれるかどうか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "とれてもとらなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とれても": {
+            "en": "This grammar point requires the verb to be repeated with a negative conditional.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とれ": {
+            "en": "We are looking for a grammar point that means 'even if (A), even if not (A)', to show that whatever the result is will not change, regardless of (A).",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とれってもとれなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とれるかとれないか": {
+            "en": "We are looking for a grammar point that means 'even if (A), even if not (A)', to show that whatever the result is will not change, regardless of (A).",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Whether I get</strong> this credit <strong>or not</strong>, I will still have the necessary credits to graduate.",
+        "nuance_translation": "A common phrase indicating that <strong>even with</strong> (A), or <strong>even not with</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 456,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4509",
+      "type": "study_question",
+      "attributes": {
+        "id": 4509,
+        "content": "そろそろ家（いえ）を出（で）るから、食欲（しょくよく）が<span class='study-area-input'>____</span>、今（いま）食（た）べておいた方（ほう）がいい。",
+        "answer": "あってもなくても",
+        "alternate_grammar": [],
+        "kanji_answer": "あってもなくても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>あってもそうじゃない場合（ばあい）でも</strong>、(B)であるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson5/456/male_audio/230620_1516_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/そろそろ家を出るから、食欲があってもなくても、今食べておいた方がいい。.mp3",
+        "word_prompt": "ある",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あるかどうか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "あろうがあるまいが": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "あってもあらなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "あっても": {
+            "en": "This grammar point requires the verb to be repeated with a negative conditional.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "あてもなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "あってもあわなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "Because we are leaving the house soon, you should eat something, <strong>whether you have</strong> an appetite <strong>or not</strong>.",
+        "nuance_translation": "A common phrase indicating that <strong>even with</strong> (A), or <strong>even not with</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 456,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3705",
+      "type": "study_question",
+      "attributes": {
+        "id": 3705,
+        "content": "試験（しけん）に<span class='study-area-input'>____</span>、勉強（べんきょう）していたら自分（じぶん）の身（み）になる。",
+        "answer": "うかってもうからなくても",
+        "alternate_grammar": [],
+        "kanji_answer": "受（う）かっても受（う）からなくても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>あってもそうじゃない場合（ばあい）でも</strong>、(B)であるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Hypothetical",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson5/456/male_audio/230620_1515.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/試験に受かっても受からなくても、勉強していたら自分の身になる。.mp3",
+        "word_prompt": "受（う）かる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うかるかどうか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "うかろうがうかるまいが": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Whether you pass</strong> the exam <strong>or not</strong>, you will still be better off if you studied for it.",
+        "nuance_translation": "A common phrase indicating that <strong>even with</strong> (A), or <strong>even not with</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 456,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4508",
+      "type": "study_question",
+      "attributes": {
+        "id": 4508,
+        "content": "<span class='study-area-input'>____</span>、１８（じゅうはち）時（じ）には解散（かいさん）して帰（かえ）りましょう。",
+        "answer": "あえてもあえなくても",
+        "alternate_grammar": [],
+        "kanji_answer": "会（あ）えても会（あ）えなくても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>あってもそうじゃない場合（ばあい）でも</strong>、(B)であるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson5/456/male_audio/230620_1516_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/会えても会えなくても、18時には解散して帰りましょう。.mp3",
+        "word_prompt": "会（あ）える",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あえるかどうか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "あえってもあえなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "あえてもあわなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "あえても": {
+            "en": "This grammar point requires the verb to be repeated with a negative conditional.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "Let's finish up and go home by 6pm, <strong>whether we can meet</strong> (them) <strong>or not</strong>.",
+        "nuance_translation": "A common phrase indicating that <strong>even with</strong> (A), or <strong>even not with</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 456,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4505",
+      "type": "study_question",
+      "attributes": {
+        "id": 4505,
+        "content": "<span class='study-area-input'>____</span>、彼（かれ）はちゃんと仕事（しごと）ができるよ。",
+        "answer": "いってもいわなくても",
+        "alternate_grammar": [],
+        "kanji_answer": "言（い）っても言（い）わなくても",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>あってもそうじゃない場合（ばあい）でも</strong>、(B)であるということを示（しめ）す表現（ひょうげん）。",
+        "tense": "Conditional",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson5/456/male_audio/230620_1515_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/言っても言わなくても、彼はちゃんと仕事ができるよ。.mp3",
+        "word_prompt": "言（い）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いうかどうか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "いおうがいうまいが": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "いってもいなくても": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いっても": {
+            "en": "This grammar point requires the verb to be repeated with a negative conditional.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Whether you tell</strong> him <strong>or not</strong>, he will get the job done.",
+        "nuance_translation": "A common phrase indicating that <strong>even with</strong> (A), or <strong>even not with</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 456,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "417",
+      "type": "writeup",
+      "attributes": {
+        "id": 417,
+        "body_ja": "<p>「～ても～なくても」は、「(A) かどうかに関係（かんけい）なく」という意味（いみ）を表（あらわ）す文法（ぶんぽう）です。(A) がどうであっても、結果（けっか）は変（か）わらないと言（い）いたいときに使（つか）われます。</p>\r\n\r\n<p>「～ても～なくても」は主（おも）に動詞（どうし）と一緒（いっしょ）に使（つか）われてます。「ても」と「なくても」の前（まえ）には同（おな）じ動詞（どうし）が入（はい）ります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181240'>\r\n<li data-study-question='181241'>\r\n<li data-study-question='181242'>\r\n</ul>",
+        "body": "<p>Like <span data-gp-id='156'>かどうか</span>, another way that Japanese conveys 'whether or not' is through the use of ～ても～なくても. This grammar structure literally means 'even if (A), even if not (A)', to show that whatever the result is will not change, regardless of (A).</p>\r\n\r\n<p>～ても～なくても is used primarily with verbs, and will always have the same verb appearing both before ても and なくても.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181240'>\r\n<li data-study-question='181241'>\r\n<li data-study-question='181242'>\r\n</ul>"
+      }
+    },
+    {
+      "id": "537",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 537,
+        "source": "Tobira",
+        "location": "Page 214",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1009",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1009,
+        "site": "Maggie Sensei",
+        "description": "More uses of ても and なくても",
+        "link": "https://maggiesensei.com/2015/06/22/how-to-use-%E3%81%A6%E3%82%82-temo/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1010",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1010,
+        "site": "JapaneseTest4You",
+        "description": "ても review",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n4-grammar-%E3%81%A6%E3%82%82-temo/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "791",
+      "type": "related_content",
+      "attributes": {
+        "id": 791,
+        "relationship_type": "related",
+        "body": "〜でも〜でも and ～ても～なくても both express 'whether or not'. 〜でも〜でも shows multiple possibilities, e.g. クッキーでもケーキでも甘いものは食べたい ('I want sweets, whether it's cookies or cake.'). ～ても～なくても shows opposition, e.g. 行っても行かなくても大丈夫 ('It's okay whether you go or not.').",
+        "first_relatable": {
+          "id": 387,
+          "slug": "でも-でも",
+          "title": "〜でも 〜でも",
+          "meaning": "Whether ~ or, Neither ~ or",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 456,
+          "slug": "ても-なくても",
+          "title": "～ても～なくても",
+          "meaning": "Whether ~ or not",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1564",
+      "type": "related_content",
+      "attributes": {
+        "id": 1564,
+        "relationship_type": "related",
+        "body": "Both express that something holds regardless of degree, but the framing differs. ないまでも means ‘even if not to that extent’ and concedes a weaker case while still affirming the main point, often implying partial satisfaction, as in 完璧ではないまでも、十分だ ('Even if it’s not perfect, it’s good enough.'). ～ても～なくても states full irrelevance of the condition, meaning the result is the same whether it happens or not, as in 言われても言われなくとも私はやる ('I’ll do it whether I'm told or not.').",
+        "first_relatable": {
+          "id": 883,
+          "slug": "ないまでも",
+          "title": "ないまでも",
+          "meaning": "May not … but (at least), Even though not, Even if not",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 456,
+          "slug": "ても-なくても",
+          "title": "～ても～なくても",
+          "meaning": "Whether ~ or not",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "940",
+      "type": "related_content",
+      "attributes": {
+        "id": 940,
+        "relationship_type": "related",
+        "body": "～ても～なくても and にしても～にしても are similar in that both can mean 'regardless of whether it's (A) or (B)'. The difference is that ～ても～なくても contrasts doing something with not doing it, e.g. 行っても行かなくても ('whether you go or not'), while にしても～にしても contrasts two opposing words or expressions, e.g. 勝つにしても負けるにしても ('whether we win or lose').",
+        "first_relatable": {
+          "id": 456,
+          "slug": "ても-なくても",
+          "title": "～ても～なくても",
+          "meaning": "Whether ~ or not",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 329,
+          "slug": "にしても-にしても",
+          "title": "にしても～にしても",
+          "meaning": "Regardless of whether",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "942",
+      "type": "related_content",
+      "attributes": {
+        "id": 942,
+        "relationship_type": "related",
+        "body": "～ても～なくても and にしろ～にしろ can both mean 'whether it's (A) or (B)', but ～ても～なくても contrasts something with its negative, e.g. 食べても食べなくても ('whether you eat or not'), while にしろ～にしろ typically contrasts two opposing words or ideas, e.g. 勝つにしろ負けるにしろ ('whether we win or lose').",
+        "first_relatable": {
+          "id": 456,
+          "slug": "ても-なくても",
+          "title": "～ても～なくても",
+          "meaning": "Whether ~ or not",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 549,
+          "slug": "にしろ-にしろ",
+          "title": "にしろ～にしろ",
+          "meaning": "Whether… or",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "943",
+      "type": "related_content",
+      "attributes": {
+        "id": 943,
+        "relationship_type": "related",
+        "body": "～ても～なくても and にかかわらず both express that something holds regardless of condition. ～ても～なくても contrasts an action with its negative, e.g. 行っても行かなくても ('whether you go or not'), while にかかわらず can attach to a single noun, e.g. 天気にかかわらず ('regardless of the weather'), or a pair of opposing concepts, e.g. 早いか遅いかに関わらず ('whether early or late').",
+        "first_relatable": {
+          "id": 456,
+          "slug": "ても-なくても",
+          "title": "～ても～なくても",
+          "meaning": "Whether ~ or not",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 545,
+          "slug": "にかかわらず",
+          "title": "にかかわらず",
+          "meaning": "Regardless of, Whether or, No matter, With or without",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "944",
+      "type": "related_content",
+      "attributes": {
+        "id": 944,
+        "relationship_type": "misc",
+        "body": "～ても～なくても and やら～やら both present multiple possibilities, but ～ても～なくても contrasts something with its negative, e.g. 行っても行かなくてもいい ('Go or don't, it's fine'), while やら～やら loosely lists alternatives, which may include opposites, e.g. 行くのやら行かないのやら ('whether he'll go or not'), or not, e.g. 本やら辞書やら ('things like books and dictionaries').",
+        "first_relatable": {
+          "id": 456,
+          "slug": "ても-なくても",
+          "title": "～ても～なくても",
+          "meaning": "Whether ~ or not",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 578,
+          "slug": "やら-やら",
+          "title": "やら～やら",
+          "meaning": "Whether or, Things like, And … so on",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "218",
+      "type": "related_content",
+      "attributes": {
+        "id": 218,
+        "relationship_type": "related",
+        "body": "～ても～なくても and ようが～まいが are identical in meaning, both expressing the idea of 'whether or not', with the difference that ～ても～なくても is more casual and colloquial, while ようが～まいが is more formal/literary and emphatic. For example, 行っても行かなくても and 行こうが行くまいが mean the same thing but differ in tone.",
+        "first_relatable": {
+          "id": 456,
+          "slug": "ても-なくても",
+          "title": "～ても～なくても",
+          "meaning": "Whether ~ or not",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 744,
+          "slug": "-よう--う-まい-が-と",
+          "title": "ようが～まいが",
+          "meaning": "Even if, No matter what, Whether or not, [Emphatic], Volitional + が",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "941",
+      "type": "related_content",
+      "attributes": {
+        "id": 941,
+        "relationship_type": "related",
+        "body": "～ても～なくても and を問わず both express 'regardless of', but ～ても～なくても contrasts doing something with not doing it, e.g. 雨が降っても降らなくても ('whether it rains or not'), while を問わず states that something holds true regardless of category or attribute, e.g. 年齢を問わず ('regardless of age').",
+        "first_relatable": {
+          "id": 456,
+          "slug": "ても-なくても",
+          "title": "～ても～なくても",
+          "meaning": "Whether ~ or not",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 519,
+          "slug": "を問わず",
+          "title": "を問わず",
+          "meaning": "Regardless of, Whether or not, No matter, With or without",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "736",
+      "type": "related_content",
+      "attributes": {
+        "id": 736,
+        "relationship_type": "related",
+        "body": "かどうか expresses uncertainty, like 'whether or not', as in 行くかどうか分からない ('I don't know whether or not they'll go.'). ～ても～なくても presents two opposite possibilities and says the result is unchanged, like 降っても降らなくても行く ('Whether it rains or not, I'm going.').",
+        "first_relatable": {
+          "id": 156,
+          "slug": "かどうか",
+          "title": "かどうか",
+          "meaning": "Whether or not, If...or not",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 456,
+          "slug": "ても-なくても",
+          "title": "～ても～なくても",
+          "meaning": "Whether ~ or not",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

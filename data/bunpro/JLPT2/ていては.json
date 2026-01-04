@@ -1,0 +1,888 @@
+{
+  "data": {
+    "id": "695",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 695,
+      "level": "JLPT2",
+      "lesson_id": 34,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "ていては",
+      "nuance": "一般（いっぱん）的（てき）には(A)をし続（つづ）けていれば、(B)、ということを表（あらわ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)を継続（けいぞく）している状況（じょうきょう）でいる。",
+      "grammar_order": 608,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 413,
+        "title": "ところだった ②",
+        "slug": "ところだった2"
+      },
+      "previous_grammar_point": {
+        "id": 670,
+        "title": "がけに",
+        "slug": "がけに"
+      },
+      "lesson_count": "12/18",
+      "title": "ていては",
+      "furigana": "ていては",
+      "meaning": "If one keeps doing something, When, If something is...",
+      "nuance_translation": "A <strong>hypothetical</strong> phrase, indicating that in general, if one keeps doing (A), (B). Staying in the state of doing (A).",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<span class='gp-popout' data-gp-id='27'>Verb［て］ + <strong>い</span><span class='gp-popout' data-gp-id='562'>ては</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/18116",
+      "metadata": "ていては, teiteha, teitewa, negative, expression, hypothetical"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "7603",
+            "type": "study_question"
+          },
+          {
+            "id": "181985",
+            "type": "study_question"
+          },
+          {
+            "id": "181986",
+            "type": "study_question"
+          },
+          {
+            "id": "181987",
+            "type": "study_question"
+          },
+          {
+            "id": "7604",
+            "type": "study_question"
+          },
+          {
+            "id": "5972",
+            "type": "study_question"
+          },
+          {
+            "id": "7606",
+            "type": "study_question"
+          },
+          {
+            "id": "5971",
+            "type": "study_question"
+          },
+          {
+            "id": "7601",
+            "type": "study_question"
+          },
+          {
+            "id": "7607",
+            "type": "study_question"
+          },
+          {
+            "id": "5970",
+            "type": "study_question"
+          },
+          {
+            "id": "7609",
+            "type": "study_question"
+          },
+          {
+            "id": "7608",
+            "type": "study_question"
+          },
+          {
+            "id": "7602",
+            "type": "study_question"
+          },
+          {
+            "id": "7605",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "623",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1173",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1527",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "7603",
+      "type": "study_question",
+      "attributes": {
+        "id": 7603,
+        "content": "そんな歩（ある）き方（かた）を<span class='study-area-input'>____</span>、ペンギンかと思（おも）われますよ。",
+        "answer": "していては",
+        "alternate_grammar": [],
+        "kanji_answer": "していては",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には(A)をし続（つづ）けていれば、(B)、ということを表（あらわ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)を継続（けいぞく）している状況（じょうきょう）でいる。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/そんな歩き方をしていては、ペンギンかと思われますよ。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "していたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": "",
+            "fr": ""
+          },
+          "していくと": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": "",
+            "fr": ""
+          },
+          "しつづけると": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": "",
+            "fr": ""
+          },
+          "しつづけたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": "",
+            "fr": ""
+          },
+          "しては": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If you keep</strong> walk<strong>ing</strong> like that, people will think that you are a penguin.",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, indicating that in general, if one keeps doing (A), (B). Staying in the state of doing (A).",
+        "extra_info": "",
+        "reviewable_id": 695,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181985",
+      "type": "study_question",
+      "attributes": {
+        "id": 181985,
+        "content": "毎日（まいにち）お菓子（かし）ばかりを食（た）べ<span class='study-area-input'>____</span>、いつまで経（た）っても痩（や）せませんよ。",
+        "answer": "ていては",
+        "alternate_grammar": [],
+        "kanji_answer": "ていては",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/毎日お菓子ばかりを食べていては、いつまで経っても痩せませんよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>If you keep only eating</strong> snacks, you'll never lose any weight.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 695,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181986",
+      "type": "study_question",
+      "attributes": {
+        "id": 181986,
+        "content": "毎晩（まいばん）遊（あそ）ん<span class='study-area-input'>____</span>お金（かね）はたまりませんよ。",
+        "answer": "でいては",
+        "alternate_grammar": [],
+        "kanji_answer": "でいては",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/毎晩遊んでいてはお金はたまりませんよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>If you keep going</strong> out every night, you won't save up money.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 695,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181987",
+      "type": "study_question",
+      "attributes": {
+        "id": 181987,
+        "content": "仕事（しごと）の事（こと）ばかりを気（き）にし<span class='study-area-input'>____</span>、旅行（りょこう）は楽（たの）しめませんよ。",
+        "answer": "ていては",
+        "alternate_grammar": [],
+        "kanji_answer": "ていては",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/仕事の事ばかりを気にしていては、旅行は楽しめませんよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>If you keep worrying</strong> about work, you won't be able to enjoy your trip.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 695,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7604",
+      "type": "study_question",
+      "attributes": {
+        "id": 7604,
+        "content": "<span class='study-area-input'>____</span>メンバーに入（はい）れない。ダイエットをしてください。",
+        "answer": "ふとっていては",
+        "alternate_grammar": [],
+        "kanji_answer": "太（ふと）っていては",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には(A)をし続（つづ）けていれば、(B)、ということを表（あらわ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)を継続（けいぞく）している状況（じょうきょう）でいる。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/太っていてはメンバーに入れない。ダイエットをしてください。.mp3",
+        "word_prompt": "太（ふと）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ふとっていたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "ふとっていくと": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "ふとりつづけると": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "ふとりつづけたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "ふとっては": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If you keep gaining weight</strong>, you cannot become a member. Please lose some weight.",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, indicating that in general, if one keeps doing (A), (B). Staying in the state of doing (A).",
+        "extra_info": "",
+        "reviewable_id": 695,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5972",
+      "type": "study_question",
+      "attributes": {
+        "id": 5972,
+        "content": "理想（りそう）像（ぞう）の彼女（かのじょ）を<span class='study-area-input'>____</span>、決（けっ）して恋人（こいびと）と出会（であ）えないよ。",
+        "answer": "おいもとめていては",
+        "alternate_grammar": [],
+        "kanji_answer": "追（お）い求（もと）めていては",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には(A)をし続（つづ）けていれば、(B)、ということを表（あらわ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)を継続（けいぞく）している状況（じょうきょう）でいる。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/理想像の彼女を追い求めていては、決して恋人と出会えないよ。.mp3",
+        "word_prompt": "追（お）い求（もと）める",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おいもとめていたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "おいもとめていくと": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "おいもとめつづけると": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "おいもとめつづけたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If you keep chasing</strong> the idealized image of a girlfriend, you will never be able to find a lover.",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, indicating that in general, if one keeps doing (A), (B). Staying in the state of doing (A).",
+        "extra_info": "",
+        "reviewable_id": 695,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7606",
+      "type": "study_question",
+      "attributes": {
+        "id": 7606,
+        "content": "来（く）るのが遅（おそ）すぎます。先（さき）に<span class='study-area-input'>____</span>いけませんか？",
+        "answer": "はじめていては",
+        "alternate_grammar": [],
+        "kanji_answer": "始（はじ）めていては",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には(A)をし続（つづ）けていれば、(B)、ということを表（あらわ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)を継続（けいぞく）している状況（じょうきょう）でいる。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/来るのが遅すぎます。先に始めていてはいけませんか？.mp3",
+        "word_prompt": "始（はじ）める",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はじめていたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "はじめていくと": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "はじめつづけると": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "はじめつづけたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "はじめては": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I will be very late. Would you mind <strong>if you start</strong> without me?",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, indicating that in general, if one keeps doing (A), (B). Staying in the state of doing (A).",
+        "extra_info": "",
+        "reviewable_id": 695,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5971",
+      "type": "study_question",
+      "attributes": {
+        "id": 5971,
+        "content": "問題（もんだい）を最後（さいご）まで<span class='study-area-input'>____</span>何（なに）も成（な）し遂（と）げられないでしょ。",
+        "answer": "さけていては",
+        "alternate_grammar": [],
+        "kanji_answer": "避（さ）けていては",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には(A)をし続（つづ）けていれば、(B)、ということを表（あらわ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)を継続（けいぞく）している状況（じょうきょう）でいる。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/問題を最後まで避けていては何も成し遂げられないでしょ。.mp3",
+        "word_prompt": "避（さ）ける",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "さけていたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "さけていくと": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "さけつづけると": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "さけつづけたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If you keep avoiding</strong> problems till the end, you won't be able to accomplish anything.",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, indicating that in general, if one keeps doing (A), (B). Staying in the state of doing (A).",
+        "extra_info": "",
+        "reviewable_id": 695,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7601",
+      "type": "study_question",
+      "attributes": {
+        "id": 7601,
+        "content": "力（ちから）を<span class='study-area-input'>____</span>持（も）てない。もっと力（ちから）を入（い）れて！",
+        "answer": "ぬいていては",
+        "alternate_grammar": [],
+        "kanji_answer": "抜（ぬ）いていては",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には(A)をし続（つづ）けていれば、(B)、ということを表（あらわ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)を継続（けいぞく）している状況（じょうきょう）でいる。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/力を抜いていては持てない。もっと力を入れて！.mp3",
+        "word_prompt": "抜（ぬ）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ぬいていたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "ぬいていくと": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "ぬいつづけると": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "ぬいつづけたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "ぬいては": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If you keep relaxing</strong>, you won't be able to hold it. Put more effort into it!",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, indicating that in general, if one keeps doing (A), (B). Staying in the state of doing (A).",
+        "extra_info": "",
+        "reviewable_id": 695,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7607",
+      "type": "study_question",
+      "attributes": {
+        "id": 7607,
+        "content": "味噌汁（みそしる）は<span class='study-area-input'>____</span>飲（の）めないなぁ。温（あたた）めてもらえませんか？",
+        "answer": "ひえていては",
+        "alternate_grammar": [],
+        "kanji_answer": "冷（ひ）えていては",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には(A)をし続（つづ）けていれば、(B)、ということを表（あらわ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)を継続（けいぞく）している状況（じょうきょう）でいる。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/味噌汁は冷えていては飲めないなぁ。温めてもらえませんか？.mp3",
+        "word_prompt": "冷（ひ）える",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ひえていたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "ひえていくと": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "ひえつづけると": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "ひえつづけたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "ひえては": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "ひえているようでは": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> the miso soup <strong>is cold</strong>, I cannot eat it. Could you heat it up for me?",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, indicating that in general, if one keeps doing (A), (B). Staying in the state of doing (A).",
+        "extra_info": "",
+        "reviewable_id": 695,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5970",
+      "type": "study_question",
+      "attributes": {
+        "id": 5970,
+        "content": "このまま毎日（まいにち）そんな風（ふう）にお金（かね）を<span class='study-area-input'>____</span>、破産（はさん）してしまいますよ。",
+        "answer": "つかっていては",
+        "alternate_grammar": [],
+        "kanji_answer": "使（つか）っていては",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には(A)をし続（つづ）けていれば、(B)、ということを表（あらわ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)を継続（けいぞく）している状況（じょうきょう）でいる。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/このまま毎日そんな風にお金を使っていては、破産してしまいますよ。.mp3",
+        "word_prompt": "使（つか）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つかっていたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "つかっていくと": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "つかいつづけると": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "つかいつづけたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If you keep spending</strong> money like this every day, you will go bankrupt.",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, indicating that in general, if one keeps doing (A), (B). Staying in the state of doing (A).",
+        "extra_info": "",
+        "reviewable_id": 695,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7609",
+      "type": "study_question",
+      "attributes": {
+        "id": 7609,
+        "content": "<span class='study-area-input'>____</span>、相手（あいて）に気持（きも）ちが伝（つた）わらないんじゃない？",
+        "answer": "だまっていては",
+        "alternate_grammar": [],
+        "kanji_answer": "黙（だま）っていては",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には(A)をし続（つづ）けていれば、(B)、ということを表（あらわ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)を継続（けいぞく）している状況（じょうきょう）でいる。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "黙（だま）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だまっていたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "だまっていると": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "だまりつづけると": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "だまりつづけたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "だまれば": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "だまってたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If you stay silent</strong>, how will the other person know how you feel?",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, indicating that in general, if one keeps doing (A), (B). Staying in the state of doing (A).",
+        "extra_info": "",
+        "reviewable_id": 695,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7608",
+      "type": "study_question",
+      "attributes": {
+        "id": 7608,
+        "content": "<span class='study-area-input'>____</span>駄目（だめ）だと言（い）われた。もっと渋（しぶ）いのが好（この）みらしい。",
+        "answer": "ひかっていては",
+        "alternate_grammar": [],
+        "kanji_answer": "光（ひか）っていては",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には(A)をし続（つづ）けていれば、(B)、ということを表（あらわ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)を継続（けいぞく）している状況（じょうきょう）でいる。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/光っていては駄目だと言われた。もっと渋いのが好みらしい。.mp3",
+        "word_prompt": "光（ひか）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ひかっていたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "ひかっていくと": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "ひかりつづけると": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "ひかりつづけたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "ひかっては": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I was told that <strong>if it is brightly shining</strong>, it is no good. Apparently their tastes are more simple.",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, indicating that in general, if one keeps doing (A), (B). Staying in the state of doing (A).",
+        "extra_info": "",
+        "reviewable_id": 695,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7602",
+      "type": "study_question",
+      "attributes": {
+        "id": 7602,
+        "content": "暖房（だんぼう）を<span class='study-area-input'>____</span>暑（あつ）すぎる。もう春（はる）なんだから。",
+        "answer": "つけていては",
+        "alternate_grammar": [],
+        "kanji_answer": "つけていては",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には(A)をし続（つづ）けていれば、(B)、ということを表（あらわ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)を継続（けいぞく）している状況（じょうきょう）でいる。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/暖房をつけていては暑すぎる。もう春なんだから。.mp3",
+        "word_prompt": "つける",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つけていたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "つけていくと": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "つけつづけると": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "つけつづけたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "つけては": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If you keep turning on</strong> the heat, it is too hot. It's already spring, you know.",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, indicating that in general, if one keeps doing (A), (B). Staying in the state of doing (A).",
+        "extra_info": "",
+        "reviewable_id": 695,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7605",
+      "type": "study_question",
+      "attributes": {
+        "id": 7605,
+        "content": "<span class='study-area-input'>____</span>具合（ぐあい）が悪（わる）い。ブラインドを閉（し）めてくれ。",
+        "answer": "みられていては",
+        "alternate_grammar": [],
+        "kanji_answer": "見（み）られていては",
+        "kanji_alt_grammar": [],
+        "nuance": "一般（いっぱん）的（てき）には(A)をし続（つづ）けていれば、(B)、ということを表（あらわ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。(A)を継続（けいぞく）している状況（じょうきょう）でいる。",
+        "tense": "Hypothetical",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/見られていては具合が悪い。ブラインドを閉めてくれ。.mp3",
+        "word_prompt": "見（み）られる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "みられていたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "みられていくと": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "みられつづけると": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "みられつづけたら": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          },
+          "みられては": {
+            "en": "How about trying a grammar structure that often has a negative nuance?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If we keep being watched</strong>, I feel uncomfortable. Close the blinds for me, would you?",
+        "nuance_translation": "A <strong>hypothetical</strong> phrase, indicating that in general, if one keeps doing (A), (B). Staying in the state of doing (A).",
+        "extra_info": "",
+        "reviewable_id": 695,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "623",
+      "type": "writeup",
+      "attributes": {
+        "id": 623,
+        "body_ja": "<p>「<span data-gp-id='695'>ていては</span>」は、動詞（どうし）の後（あと）に続（つづ）いて「もし (A) が続（つづ）けば (B) になる」を表（あらわ）す文型（ぶんけい）です。多（おお）くの場合（ばあい）、この表現（ひょうげん）は悪（わる）い結果（けっか）が生（しょう）じることを表（あらわ）します。「<span data-gp-id='695'>ていては</span>」は、動詞（どうし）のテ形（けい）と「居（い）る」のテ形（けい）、そして「は」が繋（つな）がったものです。最後（さいご）の「ては」は独立（どくりつ）した接続詞（せつぞくし）として扱われることが多（おお）く、仮定（かてい）条件（じょうけん）や繰（く）り返（かえ）して行（おこな）われる行動（こうどう）を示（しめ）すことがあります。この文型（ぶんけい）の場合（ばあい）、これと結（むす）びつく動詞（どうし）によって両方（りょうほう）の意味（いみ）を含（ふく）みます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181985'>\r\n<li data-study-question='181986'>\r\n<li data-study-question='181987'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>豆知識（まめちしき）</h4>\r\n<p>この表現（ひょうげん）には継続（けいぞく）を表（あらわ）すために「<span data-gp-id='27'>ている</span>」が使（つか）われていますね。そのほかにも、「<span data-gp-id='695'>ていては</span>」の「ては」は、過去（かこ）に学（まな）んだ「<span data-gp-id='67'>てはいけない</span>」「<span data-gp-id='516'>てはならない</span>」「てはだめ」など、何（なに）か否定的（ひていてき）な意味（いみ）を持（も）つ文型（ぶんけい）で使（つか）われる「ては」と同（おな）じです。</p></section>",
+        "body": "<p><span data-gp-id='695'>ていては</span> is a structure often seen with verbs that will express that 'if one continues with (A), (B)'. In most cases, this will indicate a negative outcome. <span data-gp-id='695'>ていては</span> is a combination of the て-form of a verb, 居（い）る 'to be' in its て-form, and は. The final ては is often considered its own conjunctive structure that may either exhibit hypothetical situations, or repetitive actions. In this case, it's a bit of a mix of both, depending on the verb it is attached to.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181985'>\r\n<li data-study-question='181986'>\r\n<li data-study-question='181987'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>Fun-fact</h4>\r\n<p>Apart from the inclusion of <span data-gp-id='27'>ている</span> to the base verb in order to show continuation, the ては in <span data-gp-id='695'>ていては</span> is the same ては that appears with other set patterns such as <span data-gp-id='67'>てはいけない</span>, <span data-gp-id='516'>てはならない</span>, and てはだめ when expressing something negative.</p></section>"
+      }
+    },
+    {
+      "id": "1527",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1527,
+        "site": "JapaneseTest4You",
+        "description": "Additional examples and breakdown",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-ていては-te-ite-wa/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1173",
+      "type": "related_content",
+      "attributes": {
+        "id": 1173,
+        "relationship_type": "related",
+        "body": "ていては shows the continuation or repetition of an action and its negative consequences, often with a nuance of warning, as in 遊んでいては合格できない (If you keep playing, you won’t pass). ては marks a conditional result without the progressive sense, and can imply either positive or negative outcomes, as in 褒めてはやる気を出させた (By praising him, I motivated him).",
+        "first_relatable": {
+          "id": 695,
+          "slug": "ていては",
+          "title": "ていては",
+          "meaning": "If one keeps doing something, When, If something is...",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 562,
+          "slug": "ては",
+          "title": "ては",
+          "meaning": "If, With, Since, Because",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

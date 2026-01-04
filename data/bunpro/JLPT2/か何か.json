@@ -1,0 +1,943 @@
+{
+  "data": {
+    "id": "597",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 597,
+      "level": "JLPT2",
+      "lesson_id": 39,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "か何か",
+      "nuance": "(A)である<strong>としてもなくとしても</strong>、話（はな）し手（て）はそれについて<strong>わからない</strong>ということを表（あらわ）す<strong>カジュアル</strong>な表現（ひょうげん）。",
+      "grammar_order": 714,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 353,
+        "title": "てならない",
+        "slug": "てならない"
+      },
+      "previous_grammar_point": {
+        "id": 407,
+        "title": "何といっても",
+        "slug": "何といっても"
+      },
+      "lesson_count": "17/23",
+      "title": "か何か",
+      "furigana": "か何（なに）か",
+      "meaning": "Or something, Or something like that",
+      "nuance_translation": "A <strong>casual</strong> phrase which expresses whether it is (A), or <strong>whatever</strong> it is, the speaker is <strong>not sure</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "Pronounced as なんか in casual situations",
+      "polite_structure": "",
+      "casual_structure": "Noun + <strong><span class='gp-popout' data-gp-id='33'>か</span>何（なに）<span class='gp-popout' data-gp-id='718'>か</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/18083",
+      "metadata": "か何か, かなにか, かなんか, kananika, kanannka, expression, uncertainty"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "182411",
+            "type": "study_question"
+          },
+          {
+            "id": "182412",
+            "type": "study_question"
+          },
+          {
+            "id": "182413",
+            "type": "study_question"
+          },
+          {
+            "id": "182414",
+            "type": "study_question"
+          },
+          {
+            "id": "5879",
+            "type": "study_question"
+          },
+          {
+            "id": "5877",
+            "type": "study_question"
+          },
+          {
+            "id": "7326",
+            "type": "study_question"
+          },
+          {
+            "id": "7328",
+            "type": "study_question"
+          },
+          {
+            "id": "7332",
+            "type": "study_question"
+          },
+          {
+            "id": "5878",
+            "type": "study_question"
+          },
+          {
+            "id": "7325",
+            "type": "study_question"
+          },
+          {
+            "id": "7324",
+            "type": "study_question"
+          },
+          {
+            "id": "7329",
+            "type": "study_question"
+          },
+          {
+            "id": "7330",
+            "type": "study_question"
+          },
+          {
+            "id": "7327",
+            "type": "study_question"
+          },
+          {
+            "id": "7331",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "727",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "262",
+            "type": "related_content"
+          },
+          {
+            "id": "293",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1468",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1469",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "182411",
+      "type": "study_question",
+      "attributes": {
+        "id": 182411,
+        "content": "すみません、お茶（ちゃ）<span class='study-area-input'>____</span>ありませんか？  ",
+        "answer": "かなにか",
+        "alternate_grammar": [],
+        "kanji_answer": "か何（なに）か",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Excuse me, do you have tea <strong>or something</strong>?  ",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 597,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182412",
+      "type": "study_question",
+      "attributes": {
+        "id": 182412,
+        "content": "お巡（まわ）りさん！あそこにナイフ<span class='study-area-input'>____</span>を持（も）った怪（あや）しい人（ひと）がいました。  ",
+        "answer": "かなにか",
+        "alternate_grammar": [],
+        "kanji_answer": "か何（なに）か",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Officer! There was a suspicious person over there holding a knife <strong>or something</strong>.  ",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 597,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182413",
+      "type": "study_question",
+      "attributes": {
+        "id": 182413,
+        "content": "何（なん）でもいいんで、水（みず）<span class='study-area-input'>____</span>をください。  ",
+        "answer": "かなにか",
+        "alternate_grammar": [],
+        "kanji_answer": "か何（なに）か",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Please give me water <strong>or something</strong>. Anything would be fine.  ",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 597,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182414",
+      "type": "study_question",
+      "attributes": {
+        "id": 182414,
+        "content": "紅茶（こうちゃ）<span class='study-area-input'>____</span>飲（の）みませんか？  ",
+        "answer": "かなにか",
+        "alternate_grammar": [],
+        "kanji_answer": "か何（なに）か",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Do you want to drink tea <strong>or something</strong>?  ",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 597,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5879",
+      "type": "study_question",
+      "attributes": {
+        "id": 5879,
+        "content": "<span class='name-highlight'>Ａ（エー）</span>：「彼（かれ）はどうしたの？３（さん）時間（じかん）も遅（おく）れるなんて...」<br><span class='name-highlight'>Ｂ（ビー）</span>：「バスで来（く）るはずだから、交通（こうつう）渋滞（じゅうたい）<span class='study-area-input'>____</span>のような気（き）がする。」",
+        "answer": "かなにか",
+        "alternate_grammar": [
+          "かなにか",
+          "かなんか"
+        ],
+        "kanji_answer": "か何（なに）か",
+        "kanji_alt_grammar": [
+          "か何（なん）か",
+          "か何（なに）か"
+        ],
+        "nuance": "(A)である<strong>としてもなくとしても</strong>、話（はな）し手（て）はそれについて<strong>わからない</strong>ということを表（あらわ）す<strong>カジュアル</strong>な表現（ひょうげん）。",
+        "tense": "Low confidence",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/A：「彼はどうしたの？３時間も遅れるなんて...」B：「バスで来るはずだから、交通渋滞か何かような気がする。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でも": {
+            "en": "Can you say it another way? Focus more on the 'or' part + 'something'",
+            "es": ""
+          },
+          "か": {
+            "en": "Think 'or' + 'something'",
+            "es": ""
+          },
+          "とか": {
+            "en": "Think \"or\" + \"something\" rather than \"and things like...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>A</span>: 'Where could he be? He's like three hours late now…'<br><span class='name-highlight'>B</span>: 'He should be coming by bus, so I have a feeling that he is stuck in traffic <strong>or something</strong>.'",
+        "nuance_translation": "A <strong>casual</strong> phrase which expresses whether it is (A), or <strong>whatever</strong> it is, the speaker is <strong>not sure</strong>.",
+        "extra_info": "",
+        "reviewable_id": 597,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5877",
+      "type": "study_question",
+      "attributes": {
+        "id": 5877,
+        "content": "<span class='name-highlight'>バーテンダーのひとみさん</span>：「お飲（の）み物（もの）はいかが？」<br><span class='name-highlight'>顧客（こきゃく）のにったさん</span>：「ビール<span class='study-area-input'>____</span>がほしいな。」",
+        "answer": "かなにか",
+        "alternate_grammar": [
+          "かなにか",
+          "かなんか"
+        ],
+        "kanji_answer": "か何（なに）か",
+        "kanji_alt_grammar": [
+          "か何（なん）か",
+          "か何（なに）か"
+        ],
+        "nuance": "(A)である<strong>としてもなくとしても</strong>、話（はな）し手（て）はそれについて<strong>わからない</strong>ということを表（あらわ）す<strong>カジュアル</strong>な表現（ひょうげん）。",
+        "tense": "Low confidence",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/バーテンダーのひとみさん：「お飲み物はいかが？」顧客のにったさん：「ビールか何かがほしいな。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でも": {
+            "en": "Can you say it another way? Focus more on the 'or' part + 'something'",
+            "es": ""
+          },
+          "か": {
+            "en": "Think 'or' + 'something'",
+            "es": ""
+          },
+          "とか": {
+            "en": "Think \"or\" + \"something\" rather than \"and things like...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Hitomi, the bartender</span>: 'How about a drink?'.<br><span class='name-highlight'>Nitta, the customer</span>: 'I'd like a beer <strong>or something</strong>'.",
+        "nuance_translation": "A <strong>casual</strong> phrase which expresses whether it is (A), or <strong>whatever</strong> it is, the speaker is <strong>not sure</strong>.",
+        "extra_info": "",
+        "reviewable_id": 597,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7326",
+      "type": "study_question",
+      "attributes": {
+        "id": 7326,
+        "content": "<span class='name-highlight'>子供（こども）</span>：「母（かあ）さん、ご飯（はん）できたの？」<br><span class='name-highlight'>お母（かあ）さん</span>：「まだよ。おなかがすいてたら、ケーキ<span class='study-area-input'>____</span>食（た）べてもいいよ。」",
+        "answer": "かなにか",
+        "alternate_grammar": [
+          "かなにか",
+          "かなんか"
+        ],
+        "kanji_answer": "か何（なに）か",
+        "kanji_alt_grammar": [
+          "か何（なん）か",
+          "か何（なに）か"
+        ],
+        "nuance": "(A)である<strong>としてもなくとしても</strong>、話（はな）し手（て）はそれについて<strong>わからない</strong>ということを表（あらわ）す<strong>カジュアル</strong>な表現（ひょうげん）。",
+        "tense": "Low confidence",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/子供：「母さん、ご飯できたの？」お母さん：「まだよ。おなかがすいてたら、ケーキか何か食べてもいいよ。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でも": {
+            "en": "Can you say it another way? Focus more on the 'or' part + 'something'",
+            "es": ""
+          },
+          "か": {
+            "en": "Think 'or' + 'something'",
+            "es": ""
+          },
+          "とか": {
+            "en": "Think \"or\" + \"something\" rather than \"and things like...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Child</span>: 'Mom, is the food ready?'<br><span class='name-highlight'>Mother</span>: 'Not yet. If you are hungry, you can eat cake <strong>or something</strong>.'",
+        "nuance_translation": "A <strong>casual</strong> phrase which expresses whether it is (A), or <strong>whatever</strong> it is, the speaker is <strong>not sure</strong>.",
+        "extra_info": "",
+        "reviewable_id": 597,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7328",
+      "type": "study_question",
+      "attributes": {
+        "id": 7328,
+        "content": "「仕事（しごと）でいやなことがあった<span class='study-area-input'>____</span>？機嫌（きげん）が悪（わる）そうね。」",
+        "answer": "かなにか",
+        "alternate_grammar": [
+          "かなにか",
+          "かなんか"
+        ],
+        "kanji_answer": "か何（なに）か",
+        "kanji_alt_grammar": [
+          "か何（なん）か",
+          "か何（なに）か"
+        ],
+        "nuance": "(A)である<strong>としてもなくとしても</strong>、話（はな）し手（て）はそれについて<strong>わからない</strong>ということを表（あらわ）す<strong>カジュアル</strong>な表現（ひょうげん）。",
+        "tense": "Low confidence",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/「仕事でいやなことがあったか何か？機嫌が悪そうね。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でも": {
+            "en": "Can you say it another way? Focus more on the 'or' part + 'something'",
+            "es": ""
+          },
+          "か": {
+            "en": "Think 'or' + 'something'",
+            "es": ""
+          },
+          "とか": {
+            "en": "Think \"or\" + \"something\" rather than \"and things like...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'Did something happen at work <strong>or something</strong>? You seem to be in a bad mood.' ",
+        "nuance_translation": "A <strong>casual</strong> phrase which expresses whether it is (A), or <strong>whatever</strong> it is, the speaker is <strong>not sure</strong>.",
+        "extra_info": "",
+        "reviewable_id": 597,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7332",
+      "type": "study_question",
+      "attributes": {
+        "id": 7332,
+        "content": "学校（がっこう）<span class='study-area-input'>____</span>に通（かよ）ってるみたいだけど。",
+        "answer": "かなにか",
+        "alternate_grammar": [
+          "かなにか",
+          "かなんか"
+        ],
+        "kanji_answer": "か何（なに）か",
+        "kanji_alt_grammar": [
+          "か何（なん）か",
+          "か何（なに）か"
+        ],
+        "nuance": "(A)である<strong>としてもなくとしても</strong>、話（はな）し手（て）はそれについて<strong>わからない</strong>ということを表（あらわ）す<strong>カジュアル</strong>な表現（ひょうげん）。",
+        "tense": "Low confidence",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/学校か何かに通ってるみたいだけど。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でも": {
+            "en": "Can you say it another way? Focus more on the 'or' part + 'something'",
+            "es": ""
+          },
+          "か": {
+            "en": "Think 'or' + 'something'",
+            "es": ""
+          },
+          "とか": {
+            "en": "Think \"or\" + \"something\" rather than \"and things like...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He seems to go to school <strong>or something</strong>.",
+        "nuance_translation": "A <strong>casual</strong> phrase which expresses whether it is (A), or <strong>whatever</strong> it is, the speaker is <strong>not sure</strong>.",
+        "extra_info": "",
+        "reviewable_id": 597,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5878",
+      "type": "study_question",
+      "attributes": {
+        "id": 5878,
+        "content": "<span class='name-highlight'>警察官（けいさつかん）</span>：「泥棒（どろぼう）はバール<span class='study-area-input'>____</span>を使（つか）って、窓（まど）を開（あ）けたと思（おも）います。」",
+        "answer": "かなにか",
+        "alternate_grammar": [
+          "かなにか",
+          "かなんか"
+        ],
+        "kanji_answer": "か何（なに）か",
+        "kanji_alt_grammar": [
+          "か何（なん）か",
+          "か何（なに）か"
+        ],
+        "nuance": "(A)である<strong>としてもなくとしても</strong>、話（はな）し手（て）はそれについて<strong>わからない</strong>ということを表（あらわ）す<strong>カジュアル</strong>な表現（ひょうげん）。",
+        "tense": "Low confidence",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/警察官：「泥棒はバールか何かを使って、窓を開けたと思います。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でも": {
+            "en": "Can you say it another way? Focus more on the 'or' part + 'something'",
+            "es": ""
+          },
+          "か": {
+            "en": "Think 'or' + 'something'",
+            "es": ""
+          },
+          "とか": {
+            "en": "Think \"or\" + \"something\" rather than \"and things like...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Policeman</span>: 'I think that the thief opened the window using a crowbar <strong>or something</strong>.'",
+        "nuance_translation": "A <strong>casual</strong> phrase which expresses whether it is (A), or <strong>whatever</strong> it is, the speaker is <strong>not sure</strong>.",
+        "extra_info": "",
+        "reviewable_id": 597,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7325",
+      "type": "study_question",
+      "attributes": {
+        "id": 7325,
+        "content": "<span class='name-highlight'>奥（おく）さん</span>：「コーヒー<span class='study-area-input'>____</span>飲（の）みませんか？」<br><span class='name-highlight'>お客（きゃく）さん</span>：「結構（けっこう）です。」",
+        "answer": "かなにか",
+        "alternate_grammar": [
+          "かなにか",
+          "かなんか"
+        ],
+        "kanji_answer": "か何（なに）か",
+        "kanji_alt_grammar": [
+          "か何（なん）か",
+          "か何（なに）か"
+        ],
+        "nuance": "(A)である<strong>としてもなくとしても</strong>、話（はな）し手（て）はそれについて<strong>わからない</strong>ということを表（あらわ）す<strong>カジュアル</strong>な表現（ひょうげん）。",
+        "tense": "Low confidence",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/奥さん：「コーヒーか何か飲みませんか？」お客さん：「結構です。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でも": {
+            "en": "Can you say it another way? Focus more on the 'or' part + 'something'",
+            "es": ""
+          },
+          "か": {
+            "en": "Think 'or' + 'something'",
+            "es": ""
+          },
+          "とか": {
+            "en": "Think \"or\" + \"something\" rather than \"and things like...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Wife</span>: 'Would you like coffee <strong>or something</strong> to drink?'<br><span class='name-highlight'>Guest</span>: 'No, I'm fine.'",
+        "nuance_translation": "A <strong>casual</strong> phrase which expresses whether it is (A), or <strong>whatever</strong> it is, the speaker is <strong>not sure</strong>.",
+        "extra_info": "",
+        "reviewable_id": 597,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7324",
+      "type": "study_question",
+      "attributes": {
+        "id": 7324,
+        "content": "<span class='name-highlight'>Ａ（エー）</span>：「これ、手品（てじな）じゃなくて、魔法（まほう）だよ！」<br><span class='name-highlight'>スケプティクさん</span>：「そうは思（おも）わないね。本当（ほんとう）に科学（かがく）<span class='study-area-input'>____</span>でこのことは説明（せつめい）できるでしょう。」",
+        "answer": "かなにか",
+        "alternate_grammar": [
+          "かなにか",
+          "かなんか"
+        ],
+        "kanji_answer": "か何（なに）か",
+        "kanji_alt_grammar": [
+          "か何（なん）か",
+          "か何（なに）か"
+        ],
+        "nuance": "(A)である<strong>としてもなくとしても</strong>、話（はな）し手（て）はそれについて<strong>わからない</strong>ということを表（あらわ）す<strong>カジュアル</strong>な表現（ひょうげん）。",
+        "tense": "Low confidence",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/A：「これ、手品じゃなくて、魔法だよ！」スケプティクさん：「そうは思わないね。本当に科学か何かでこのことは説明できるでしょう。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でも": {
+            "en": "Can you say it another way? Focus more on the 'or' part + 'something'",
+            "es": ""
+          },
+          "か": {
+            "en": "Think 'or' + 'something'",
+            "es": ""
+          },
+          "とか": {
+            "en": "Think \"or\" + \"something\" rather than \"and things like...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>A</span>: 'This is not a magic trick, it is MAGIC!'<br><span class='name-highlight'>Mr. Skeptic</span>: 'I don't think so. You probably can explain it with science <strong>or something</strong>.'",
+        "nuance_translation": "A <strong>casual</strong> phrase which expresses whether it is (A), or <strong>whatever</strong> it is, the speaker is <strong>not sure</strong>.",
+        "extra_info": "",
+        "reviewable_id": 597,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7329",
+      "type": "study_question",
+      "attributes": {
+        "id": 7329,
+        "content": "<span class='name-highlight'>郵便配達人（ゆうびんはいたつにん）</span>：「ここに署名（しょめい）していただけますか。」<br><span class='name-highlight'>小包（こづつみ）をもらう人（ひと）、誰（だれ）かへ話（はな）している</span>：「鉛筆（えんぴつ）<span class='study-area-input'>____</span>を貸（か）してくれる？」",
+        "answer": "かなにか",
+        "alternate_grammar": [
+          "かなにか",
+          "かなんか"
+        ],
+        "kanji_answer": "か何（なに）か",
+        "kanji_alt_grammar": [
+          "か何（なん）か",
+          "か何（なに）か"
+        ],
+        "nuance": "(A)である<strong>としてもなくとしても</strong>、話（はな）し手（て）はそれについて<strong>わからない</strong>ということを表（あらわ）す<strong>カジュアル</strong>な表現（ひょうげん）。",
+        "tense": "Low confidence",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/郵便配達人：「ここに署名していただけますか。」小包をもらう人、誰かへ話している：「鉛筆か何かを貸してくれる？」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でも": {
+            "en": "Can you say it another way? Focus more on the 'or' part + 'something'",
+            "es": ""
+          },
+          "か": {
+            "en": "Think 'or' + 'something'",
+            "es": ""
+          },
+          "とか": {
+            "en": "Think \"or\" + \"something\" rather than \"and things like...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Postman</span>: 'Could you sign here?'<br><span class='name-highlight'>The person who is getting the package talking to someone</span>: 'Would you lend me a pencil <strong>or something</strong>?' ",
+        "nuance_translation": "A <strong>casual</strong> phrase which expresses whether it is (A), or <strong>whatever</strong> it is, the speaker is <strong>not sure</strong>.",
+        "extra_info": "",
+        "reviewable_id": 597,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7330",
+      "type": "study_question",
+      "attributes": {
+        "id": 7330,
+        "content": "「彼（かれ）は体調（たいちょう）が悪（わる）くて寝（ね）ている。昨日（きのう）食（た）べた肉（にく）<span class='study-area-input'>____</span>がよくなかったみたい。」",
+        "answer": "かなにか",
+        "alternate_grammar": [
+          "かなにか",
+          "かなんか"
+        ],
+        "kanji_answer": "か何（なに）か",
+        "kanji_alt_grammar": [
+          "か何（なん）か",
+          "か何（なに）か"
+        ],
+        "nuance": "(A)である<strong>としてもなくとしても</strong>、話（はな）し手（て）はそれについて<strong>わからない</strong>ということを表（あらわ）す<strong>カジュアル</strong>な表現（ひょうげん）。",
+        "tense": "Low confidence",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/「彼は体調が悪くて寝ている。昨日食べた肉か何かがよくなかったみたい。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でも": {
+            "en": "Can you say it another way? Focus more on the 'or' part + 'something'",
+            "es": ""
+          },
+          "か": {
+            "en": "Think 'or' + 'something'",
+            "es": ""
+          },
+          "とか": {
+            "en": "Think \"or\" + \"something\" rather than \"and things like...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'He was feeling unwell and went to sleep. Apparently the meat he ate yesterday was not good <strong>or something</strong>. '",
+        "nuance_translation": "A <strong>casual</strong> phrase which expresses whether it is (A), or <strong>whatever</strong> it is, the speaker is <strong>not sure</strong>.",
+        "extra_info": "",
+        "reviewable_id": 597,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7327",
+      "type": "study_question",
+      "attributes": {
+        "id": 7327,
+        "content": "<span class='name-highlight'>友達（ともだち）１（いち）</span>：「どうしたの？まるで幽霊（ゆうれい）<span class='study-area-input'>____</span>を見（み）たような青白（あおじろ）い顔（かお）をしているよ！」<br><span class='name-highlight'>幸運（こううん）に恵（めぐ）まれている友達（ともだち）２（に）</span>：「あのね、たった今（いま）宝（たから）くじが当（あ）たったの。１００（ひゃく）万（まん）ドルをもらうのよ！」",
+        "answer": "かなにか",
+        "alternate_grammar": [
+          "かなにか",
+          "かなんか"
+        ],
+        "kanji_answer": "か何（なに）か",
+        "kanji_alt_grammar": [
+          "か何（なん）か",
+          "か何（なに）か"
+        ],
+        "nuance": "(A)である<strong>としてもなくとしても</strong>、話（はな）し手（て）はそれについて<strong>わからない</strong>ということを表（あらわ）す<strong>カジュアル</strong>な表現（ひょうげん）。",
+        "tense": "Low confidence",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/友達１：「どうしたの？まるで幽霊か何かを見たような青白い顔をしているよ！」幸運に恵まれている友達２：「あのね、たった今宝くじが当たったの。１００万ドルをもらうのよ！」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でも": {
+            "en": "Can you say it another way? Focus more on the 'or' part + 'something'",
+            "es": ""
+          },
+          "か": {
+            "en": "Think 'or' + 'something'",
+            "es": ""
+          },
+          "とか": {
+            "en": "Think \"or\" + \"something\" rather than \"and things like...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Friend 1</span>: 'What happened? Your face is almost as pale as if you had seen a ghost <strong>or something</strong>.'<br><span class='name-highlight'>A friend blessed with good luck 2</span>: 'Well the thing is, I actually just won the lottery. I'm going to get a million dollars!'",
+        "nuance_translation": "A <strong>casual</strong> phrase which expresses whether it is (A), or <strong>whatever</strong> it is, the speaker is <strong>not sure</strong>.",
+        "extra_info": "",
+        "reviewable_id": 597,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7331",
+      "type": "study_question",
+      "attributes": {
+        "id": 7331,
+        "content": "<span class='name-highlight'>友達（ともだち）１（いち）</span>：「コーラ<span class='study-area-input'>____</span>飲（の）みたい。。。」 <br><span class='name-highlight'>友達（ともだち）２（に）</span>：「喉（のど）が渇（かわ）いたわけだね。暑（あつ）いから。」",
+        "answer": "かなにか",
+        "alternate_grammar": [
+          "かなにか",
+          "かなんか"
+        ],
+        "kanji_answer": "か何（なに）か",
+        "kanji_alt_grammar": [
+          "か何（なん）か",
+          "か何（なに）か"
+        ],
+        "nuance": "(A)である<strong>としてもなくとしても</strong>、話（はな）し手（て）はそれについて<strong>わからない</strong>ということを表（あらわ）す<strong>カジュアル</strong>な表現（ひょうげん）。",
+        "tense": "Low confidence",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/友達１：「コーラか何か飲みたい。。。」 友達２：「喉が渇いたわけだね。暑いから。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でも": {
+            "en": "Can you say it another way? Focus more on the 'or' part + 'something'",
+            "es": ""
+          },
+          "か": {
+            "en": "Think 'or' + 'something'",
+            "es": ""
+          },
+          "とか": {
+            "en": "Think \"or\" + \"something\" rather than \"and things like...\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Friend1</span>: 'I want to drink a coke <strong>or something</strong>.'<br><span class='name-highlight'>Friend2</span>: 'No wonder you are thirsty. It's hot.' ",
+        "nuance_translation": "A <strong>casual</strong> phrase which expresses whether it is (A), or <strong>whatever</strong> it is, the speaker is <strong>not sure</strong>.",
+        "extra_info": "",
+        "reviewable_id": 597,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "727",
+      "type": "writeup",
+      "attributes": {
+        "id": 727,
+        "body_ja": "<p>「<span data-gp-id='597'>か何（なに）か</span>」は話（はな）し手（て）がある物事（ものごと）をはっきり特定（とくてい）せずに言（い）いたいときに使（つか）われる表現（ひょうげん）です。これは「か」と代名詞（だいめいし）の「何（なに）」に再（ふたた）び「か」がくっついた形（かたち）で「(A) か、それに似（に）たほかのものか」といった意味（いみ）を表（あらわ）します。</p>\r\n\r\n<p>「<span data-gp-id='597'>か何（なに）か</span>」は、はっきりとは言（い）えないものを指（さ）す名詞（めいし）(A) の直後（ちょくご）に置（お）かれます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182411'>\r\n<li data-study-question='182412'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='597'>か何（なに）か</span>」は質問（しつもん）や提案（ていあん）のときにも使（つか）われることがあります。この場合（ばあい）、(A) 以外（いがい）にも選択肢（せんたくし）があることを柔（やわ）らかく示（しめ）す表現（ひょうげん）になります。このときの、(A) には、選択肢（せんたくし）の中（なか）の一例（いちれい）や大（おお）まかなイメージが入（はい）ります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182413'>\r\n<li data-study-question='182414'>\r\n</ul>",
+        "body": "<p><span data-gp-id='597'>か何（なに）か</span> is a structure in Japanese used for expressing uncertainty about a specific thing. Being a construction of か, the <span data-term='代名詞・だいめいし'>substitute noun</span> 何（なに）, and か, the common translations of 'or something', and 'or something like (A)' are quite close to the more literal meaning which is just '(A), or whatever it is'.</p>\r\n\r\n<p><span data-gp-id='597'>か何（なに）か</span> will follow directly after the noun that it is describing as being something uncertain.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182411'>\r\n<li data-study-question='182412'>\r\n</ul>\r\n<p><span data-gp-id='597'>か何（なに）か</span> will also often be used in questions, or when offering someone something. This is primarily when more than (A) is available as a choice, but the speaker isn't specifying a list just yet. In these situations, (A) just indicates a general category to which 'or something else' would be a part of.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182413'>\r\n<li data-study-question='182414'>\r\n</ul>"
+      }
+    },
+    {
+      "id": "1468",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1468,
+        "site": "JapaneseTest4You",
+        "description": "Further breakdown and examples",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-か何か-ka-nanika/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1469",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1469,
+        "site": "JGram",
+        "description": "Notes and additional examples",
+        "link": "https://takoboto.jp/jgram/pages/viewOne.php?tagE=kananika",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "262",
+      "type": "related_content",
+      "attributes": {
+        "id": 262,
+        "relationship_type": "related",
+        "body": "Both か何か and でも can suggest alternatives, like 'or something' in English. か何か places more emphasis on the idea of other specific options, e.g. お茶か何か飲みませんか？ ('How about some tea or something else?'), while でも is vaguer and implies the suggestion is just one of many possibilities, e.g. お茶でも飲みませんか？ ('How about some tea or something?').",
+        "first_relatable": {
+          "id": 597,
+          "slug": "か何か",
+          "title": "か何か",
+          "meaning": "Or something, Or something like that",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 88,
+          "slug": "でも",
+          "title": "でも",
+          "meaning": "Or something,  Any... (with question words), No matter (who)",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "293",
+      "type": "related_content",
+      "attributes": {
+        "id": 293,
+        "relationship_type": "related",
+        "body": "か何か and かどうか look similar but are used differently. か何か follows a noun and means 'or something,' as in お茶か何か飲みますか？ ('Would you like some tea or something?'). かどうか means 'whether or not' and expresses uncertainty, like 面白いかどうか分からない ('I don't know whether or not it's interesting.').",
+        "first_relatable": {
+          "id": 597,
+          "slug": "か何か",
+          "title": "か何か",
+          "meaning": "Or something, Or something like that",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 156,
+          "slug": "かどうか",
+          "title": "かどうか",
+          "meaning": "Whether or not, If...or not",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

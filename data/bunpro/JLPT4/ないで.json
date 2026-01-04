@@ -1,0 +1,1310 @@
+{
+  "data": {
+    "id": "96",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 96,
+      "level": "JLPT4",
+      "lesson_id": 11,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "ないで",
+      "nuance": "(A)を<strong>せずに</strong>(B)を<strong>する</strong>ということを表（あらわ）す一般（いっぱん）的（てき）に使（つか）われる表現（ひょうげん）。",
+      "grammar_order": 141,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 145,
+        "title": "Verb［れる・られる］",
+        "slug": "Verb[passive]"
+      },
+      "previous_grammar_point": {
+        "id": 775,
+        "title": "なくて",
+        "slug": "なくて"
+      },
+      "lesson_count": "14/18",
+      "title": "ないで",
+      "furigana": "ないで",
+      "meaning": "Without doing, Not ~ and ~",
+      "nuance_translation": "A common way to indicate that (B) will be done <strong>without doing</strong> (A).",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "<span class='gp-popout' data-gp-id='888'>Verb［ない］</span>+ <strong>で</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/1186",
+      "metadata": "ないで, naide, auciliary verb, conjunction, conjunction particle, request"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "180213",
+            "type": "study_question"
+          },
+          {
+            "id": "2425",
+            "type": "study_question"
+          },
+          {
+            "id": "183851",
+            "type": "study_question"
+          },
+          {
+            "id": "183850",
+            "type": "study_question"
+          },
+          {
+            "id": "2421",
+            "type": "study_question"
+          },
+          {
+            "id": "118",
+            "type": "study_question"
+          },
+          {
+            "id": "180212",
+            "type": "study_question"
+          },
+          {
+            "id": "180211",
+            "type": "study_question"
+          },
+          {
+            "id": "2424",
+            "type": "study_question"
+          },
+          {
+            "id": "2427",
+            "type": "study_question"
+          },
+          {
+            "id": "116",
+            "type": "study_question"
+          },
+          {
+            "id": "117",
+            "type": "study_question"
+          },
+          {
+            "id": "2420",
+            "type": "study_question"
+          },
+          {
+            "id": "2422",
+            "type": "study_question"
+          },
+          {
+            "id": "2423",
+            "type": "study_question"
+          },
+          {
+            "id": "2426",
+            "type": "study_question"
+          },
+          {
+            "id": "2428",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "140",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "208",
+            "type": "offline_resource"
+          },
+          {
+            "id": "807",
+            "type": "offline_resource"
+          },
+          {
+            "id": "226",
+            "type": "offline_resource"
+          },
+          {
+            "id": "864",
+            "type": "offline_resource"
+          },
+          {
+            "id": "386",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1118",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1416",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1492",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1513",
+            "type": "related_content"
+          },
+          {
+            "id": "519",
+            "type": "related_content"
+          },
+          {
+            "id": "609",
+            "type": "related_content"
+          },
+          {
+            "id": "413",
+            "type": "related_content"
+          },
+          {
+            "id": "237",
+            "type": "related_content"
+          },
+          {
+            "id": "220",
+            "type": "related_content"
+          },
+          {
+            "id": "410",
+            "type": "related_content"
+          },
+          {
+            "id": "608",
+            "type": "related_content"
+          },
+          {
+            "id": "232",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2688",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "199",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "180213",
+      "type": "study_question",
+      "attributes": {
+        "id": 180213,
+        "content": "上司（じょうし）に伝（つた）え<strong>ないで</strong>休（やす）んだの！？",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/上司に伝えないで休んだの！？.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "You took the day off <strong>without</strong> notifying your boss!?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 96,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2425",
+      "type": "study_question",
+      "attributes": {
+        "id": 2425,
+        "content": "「昨日（きのう）、うちの娘（むすめ）<span class='gp-popout' data-gp-id='3'>は</span>頭（あたま）<span class='gp-popout' data-gp-id='21'>を</span>ぶつけ<span class='gp-popout' data-gp-id='895'>た</span><span class='gp-popout' data-gp-id='361'>けど</span>、<span class='study-area-input'>____</span>『大丈夫（だいじょうぶ）だ<span class='gp-popout' data-gp-id='78'>よ</span>』<span class='gp-popout' data-gp-id='356'>と</span><span class='gp-popout' data-gp-id='43'>だけ</span>言（い）<span class='gp-popout' data-gp-id='41'>った</span><span class='gp-popout' data-gp-id='17'>んだ</span>。本当（ほんとう）に驚（おどろ）<span class='gp-popout' data-gp-id='41'>いた</span>。」",
+        "answer": "なかないで",
+        "alternate_grammar": [],
+        "kanji_answer": "泣（な）かないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>せずに</strong>(B)を<strong>する</strong>ということを表（あらわ）す一般（いっぱん）的（てき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Negative",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/96/male_audio/昨日うちの娘は.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/「昨日、うちの娘は頭をぶつけたけど、泣かないで『大丈夫だよ』とだけ言ったんだ。本当に驚いた。」.mp3",
+        "word_prompt": "泣（な）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なかずに": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "なくことなく": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "なかなくて": {
+            "en": "Could you try using a grammar point that is used to express 'without doing (A), (B)'?",
+            "es": "",
+            "fr": ""
+          },
+          "なくないで": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "'Yesterday, my daughter hit her head, but <strong>without crying</strong>, she just said 'I'm fine.' I was really surprised.'",
+        "nuance_translation": "A common way to indicate that (B) will be done <strong>without doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 96,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183851",
+      "type": "study_question",
+      "attributes": {
+        "id": 183851,
+        "content": "インターネット<span data-gp-id='10'>が</span>繋（つな）がら<span data-gp-id='774'>なくて</span>困（こま）っ<span data-gp-id='764'>てる</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I am bothered because the internet isn't connecting. (Event 2 happened because of event 1)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 96,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183850",
+      "type": "study_question",
+      "attributes": {
+        "id": 183850,
+        "content": "昼（ひる）ご飯（はん）<span data-gp-id='21'>を</span>温（あたた）め<span data-gp-id='778'>ないで</span>食（た）べ<span data-gp-id='895'>た</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I ate my lunch <strong>without</strong> heating it up. (Event 2 happened without event 1)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 96,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2421",
+      "type": "study_question",
+      "attributes": {
+        "id": 2421,
+        "content": "「<span class='study-area-input'>____</span>、<span class='vocab-popout' data-vocab-id='397'>勉強（べんきょう）</span><span class='gp-popout' data-gp-id='21'>を</span>し<span class='gp-popout' data-gp-id='60'>てください</span>」<span class='gp-popout' data-gp-id='358'>って</span><span class='vocab-popout' data-vocab-id='49'>お母（かあ）さん</span><span class='gp-popout' data-gp-id='10'>が</span>言（い）いました。",
+        "answer": "あそばないで",
+        "alternate_grammar": [],
+        "kanji_answer": "遊（あそ）ばないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>せずに</strong>(B)を<strong>する</strong>ということを表（あらわ）す一般（いっぱん）的（てき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Negative",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/96/male_audio/遊ばないで勉強.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/「遊ばないで、勉強をしてください」ってお母さんが言いました。.mp3",
+        "word_prompt": "遊（あそ）<span class='gp-popout' data-gp-id='26'>ぶ</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あそばず": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "あそばずに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "あそぶな": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "あそばなくて": {
+            "en": "Could you try using a grammar point that is used to express 'without doing (A), (B)'?",
+            "es": "",
+            "fr": ""
+          },
+          "あそびないで": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "My mother said 'Please study <strong>without playing</strong>!'",
+        "nuance_translation": "A common way to indicate that (B) will be done <strong>without doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 96,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "118",
+      "type": "study_question",
+      "attributes": {
+        "id": 118,
+        "content": "<span class='study-area-input'>____</span>仕事（しごと）<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='22'>する</span>。",
+        "answer": "やすまないで",
+        "alternate_grammar": [],
+        "kanji_answer": "休（やす）まないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>せずに</strong>(B)を<strong>する</strong>ということを表（あらわ）す一般（いっぱん）的（てき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Negative",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/96/male_audio/休まないで仕事.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/休まないで仕事をする。.mp3",
+        "word_prompt": "休（やす）<span class='gp-popout' data-gp-id='26'>む</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やすまずに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "やすむな": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "やすまない": {
+            "en": "Could you try using a grammar point that is used to express 'without doing (A), (B)'?",
+            "es": "",
+            "fr": ""
+          },
+          "やすまなくて": {
+            "en": "Could you try using a grammar point that is used to express 'without doing (A), (B)'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "To work <strong>without taking a break</strong>.",
+        "nuance_translation": "A common way to indicate that (B) will be done <strong>without doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 96,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180212",
+      "type": "study_question",
+      "attributes": {
+        "id": 180212,
+        "content": "アミ<span class=\"gp-popout\" data-gp-id=\"3\">は</span>ドア<span class=\"gp-popout\" data-gp-id=\"6\">の</span>カギ<span class=\"gp-popout\" data-gp-id=\"21\">を</span>かけ<span class=\"gp-popout\" data-gp-id=\"51\"><strong>ない</strong></span><span class=\"gp-popout\" data-gp-id=\"36\"><strong>で</strong></span>寝（ね）<span class=\"gp-popout\" data-gp-id=\"12\">る</span>の？危（あぶ）ない<span class=\"gp-popout\" data-gp-id=\"78\">よ</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/アミはドアのカギをかけないで寝るの？危ないよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Ami, you sleep <strong>without</strong> locking your doors? That's dangerous.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 96,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180211",
+      "type": "study_question",
+      "attributes": {
+        "id": 180211,
+        "content": "魚（さかな）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>焼（や）か<span class=\"gp-popout\" data-gp-id=\"888\"><strong>ない</strong></span><span class=\"gp-popout\" data-gp-id=\"36\"><strong>で</strong></span>食（た）べ<span class=\"gp-popout\" data-gp-id=\"895\">た</span><span class=\"gp-popout\" data-gp-id=\"45\">から</span>、お腹（なか）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>壊（こわ）し<span class=\"gp-popout\" data-gp-id=\"41\">た</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/魚を焼かないで食べたから、お腹を壊した。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Since I ate fish <strong>without</strong> cooking it, I got a stomach ache. (Literally, to break one's stomach)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 96,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2424",
+      "type": "study_question",
+      "attributes": {
+        "id": 2424,
+        "content": "お父（とう）さん<span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='72'>まだ</span>寝（ね）<span class='gp-popout' data-gp-id='27'>ている</span>から、大（おお）き<span class='gp-popout' data-gp-id='24'>い</span><span class='study-area-input'>____</span>遊（あそ）<span class='gp-popout' data-gp-id='416'>んで</span><span class='gp-popout' data-gp-id='71'>ね</span>。",
+        "answer": "こえをださないで",
+        "alternate_grammar": [],
+        "kanji_answer": "声（こえ）を出（だ）さないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>せずに</strong>(B)を<strong>する</strong>ということを表（あらわ）す一般（いっぱん）的（てき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Negative",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/96/male_audio/お父さんはまだ寝ているから.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/お父さんはまだ寝ているから、大きい声を出さないで遊んでね。.mp3",
+        "word_prompt": "声（こえ）<span class='gp-popout' data-gp-id='21'>を</span>出（だ）<span class='gp-popout' data-gp-id='26'>す</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "こえをださず": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "こえをださずに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "こえをださない": {
+            "en": "Could you try using a grammar point that is used to express 'without doing (A), (B)'?",
+            "es": "",
+            "fr": ""
+          },
+          "こえをだしないで": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Since dad is still sleeping, play <strong>without talking</strong> loudly.",
+        "nuance_translation": "A common way to indicate that (B) will be done <strong>without doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 96,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2427",
+      "type": "study_question",
+      "attributes": {
+        "id": 2427,
+        "content": "「昨日（きのう）<span class='gp-popout' data-gp-id='3'>は</span>夜遅（よるおそ）く家（いえ）<span class='gp-popout' data-gp-id='32'>に</span>帰（かえ）<span class='gp-popout' data-gp-id='41'>った</span><span class='gp-popout' data-gp-id='45'>から</span>シャワー<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>寝（ね）た<span class='gp-popout' data-gp-id='17'>んだ</span>。」",
+        "answer": "あびないで",
+        "alternate_grammar": [],
+        "kanji_answer": "浴（あ）びないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>せずに</strong>(B)を<strong>する</strong>ということを表（あらわ）す一般（いっぱん）的（てき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Negative",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/96/male_audio/昨日は夜遅くだからシャワーを浴びないで.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/「昨日は夜遅く家に帰ったからシャワーを浴びないで寝たんだ。」.mp3",
+        "word_prompt": "浴（あ）び<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あびずに": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "あびることなく": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'I came back home late at night, so I went to sleep <strong>without taking a shower</strong>.'",
+        "nuance_translation": "A common way to indicate that (B) will be done <strong>without doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 96,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "116",
+      "type": "study_question",
+      "attributes": {
+        "id": 116,
+        "content": "「後悔（こうかい）<span class='study-area-input'>____</span>生（い）き<span class='gp-popout' data-gp-id='59'>たい</span>。」",
+        "answer": "しないで",
+        "alternate_grammar": [],
+        "kanji_answer": "しないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>せずに</strong>(B)を<strong>する</strong>ということを表（あらわ）す一般（いっぱん）的（てき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Negative",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/96/male_audio/後悔しないで.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/「後悔しないで生きたい。」.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "せずに": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "することなく": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しずに": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しない": {
+            "en": "Let's try adding something else to the end.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "しなくて": {
+            "en": "Could you try using a grammar point that is used to express 'without doing (A), (B)'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "'I want to live <strong>without</strong> regret.'",
+        "nuance_translation": "A common way to indicate that (B) will be done <strong>without doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 96,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "117",
+      "type": "study_question",
+      "attributes": {
+        "id": 117,
+        "content": "「<span class='gp-popout' data-gp-id='47'>あの</span>人（ひと）<span class='gp-popout' data-gp-id='3'>は</span>便所（べんじょ）<span class='gp-popout' data-gp-id='52'>から</span>手（て）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>出（で）<span class='gp-popout' data-gp-id='128'>てきた</span><span class='gp-popout' data-gp-id='17'>んだ</span><span class='gp-popout' data-gp-id='78'>よ</span>。」",
+        "answer": "あらわないで",
+        "alternate_grammar": [],
+        "kanji_answer": "洗（あら）わないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>せずに</strong>(B)を<strong>する</strong>ということを表（あらわ）す一般（いっぱん）的（てき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Negative",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/96/male_audio/あの人は便所から.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/「あの人は便所から手を洗わないで出てきたんだよ。」.mp3",
+        "word_prompt": "洗（あら）<span class='gp-popout' data-gp-id='26'>う</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あらわずに": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "あらうことなく": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "あらわなくて": {
+            "en": "Could you try using a grammar point that is used to express 'without doing (A), (B)'?",
+            "es": "",
+            "fr": ""
+          },
+          "あらないで": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "'That person left the toilet <strong>without washing</strong> their hands!'",
+        "nuance_translation": "A common way to indicate that (B) will be done <strong>without doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 96,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2420",
+      "type": "study_question",
+      "attributes": {
+        "id": 2420,
+        "content": "夕食（ゆうしょく）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>、寝（ね）<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "たべないで",
+        "alternate_grammar": [],
+        "kanji_answer": "食（た）べないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>せずに</strong>(B)を<strong>する</strong>ということを表（あらわ）す一般（いっぱん）的（てき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Negative",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/96/male_audio/夕食を食べないで.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/夕食を食べないで、寝る。.mp3",
+        "word_prompt": "食（た）べ<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たべず": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "たべずに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "たべるな": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To go to bed <strong>without eating</strong> dinner.",
+        "nuance_translation": "A common way to indicate that (B) will be done <strong>without doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 96,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2422",
+      "type": "study_question",
+      "attributes": {
+        "id": 2422,
+        "content": "「明日（あした）<span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='56'>どこ</span><span class='gp-popout' data-gp-id='32'>に</span>も<span class='study-area-input'>____</span>家（いえ）<span class='gp-popout' data-gp-id='32'>に</span>い<span class='gp-popout' data-gp-id='12'>る</span><span class='gp-popout' data-gp-id='80'>つもり</span><span class='gp-popout' data-gp-id='1'>だ</span>。」",
+        "answer": "いかないで",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）かないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>せずに</strong>(B)を<strong>する</strong>ということを表（あらわ）す一般（いっぱん）的（てき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Negative",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/96/male_audio/明日はどこにも行かないで.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/「明日はどこにも行かないで家にいるつもりだ。」.mp3",
+        "word_prompt": "行（い）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いかずに": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "いくことなく": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "いかず": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "いくこともなく": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "いかない": {
+            "en": "Could you try using a grammar point that is used to express 'without doing (A), (B)'?",
+            "es": "",
+            "fr": ""
+          },
+          "いかなくて": {
+            "en": "Could you try using a grammar point that is used to express 'without doing (A), (B)'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "'I plan to stay home tomorrow <strong>without going</strong> anywhere.'",
+        "nuance_translation": "A common way to indicate that (B) will be done <strong>without doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 96,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2423",
+      "type": "study_question",
+      "attributes": {
+        "id": 2423,
+        "content": "「彼（かれ）<span class='gp-popout' data-gp-id='3'>は</span>いつも朝（あさ）ごはん<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>仕事（しごと）<span class='gp-popout' data-gp-id='48'>に行（い）く</span><span class='gp-popout' data-gp-id='17'>んだ</span>。」",
+        "answer": "たべないで",
+        "alternate_grammar": [],
+        "kanji_answer": "食（た）べないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>せずに</strong>(B)を<strong>する</strong>ということを表（あらわ）す一般（いっぱん）的（てき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Negative",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/96/male_audio/彼はいつも朝ごはんを食べないで.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/「彼はいつも朝ごはんを食べないで仕事に行くんだ。」.mp3",
+        "word_prompt": "食（た）べ<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たべずに": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "たべることなく": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'He always goes to work <strong>without eating</strong> breakfast.'",
+        "nuance_translation": "A common way to indicate that (B) will be done <strong>without doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 96,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2426",
+      "type": "study_question",
+      "attributes": {
+        "id": 2426,
+        "content": "<span class='gp-popout' data-gp-id='718'>何（なに）も</span><span class='study-area-input'>____</span>、出（で）<span class='gp-popout' data-gp-id='416'>て</span>行（い）<span class='gp-popout' data-gp-id='41'>った</span>。",
+        "answer": "いわないで",
+        "alternate_grammar": [
+          "いわないで"
+        ],
+        "kanji_answer": "言（い）わないで",
+        "kanji_alt_grammar": [
+          "言（い）わないで"
+        ],
+        "nuance": "(A)を<strong>せずに</strong>(B)を<strong>する</strong>ということを表（あらわ）す一般（いっぱん）的（てき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Negative",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/96/male_audio/何も言わないで出ていった.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/何も言わないで、出て行った。.mp3",
+        "word_prompt": "言（い）<span class='gp-popout' data-gp-id='26'>う</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いわず": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "いわずに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "いわない": {
+            "en": "Could you try using a grammar point that is used to express 'without doing (A), (B)'?",
+            "es": "",
+            "fr": ""
+          },
+          "いわなくて": {
+            "en": "Could you try using a grammar point that is used to express 'without doing (A), (B)'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Without saying</strong> a word, he left.",
+        "nuance_translation": "A common way to indicate that (B) will be done <strong>without doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 96,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2428",
+      "type": "study_question",
+      "attributes": {
+        "id": 2428,
+        "content": "日本（にほん）<span class='gp-popout' data-gp-id='32'>に</span>行（い）っ<span class='gp-popout' data-gp-id='63'>たことがない</span><span class='gp-popout' data-gp-id='45'>から</span>、勉強（べんきょう）<span class='study-area-input'>____</span>行（い）<span class='gp-popout' data-gp-id='26'>く</span><span class='gp-popout' data-gp-id='16'>のは</span>やめ<span class='gp-popout' data-gp-id='68'>たほうがいい</span><span class='gp-popout' data-gp-id='94'>と思（おも）う</span>。",
+        "answer": "しないで",
+        "alternate_grammar": [],
+        "kanji_answer": "しないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>せずに</strong>(B)を<strong>する</strong>ということを表（あらわ）す一般（いっぱん）的（てき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Negative",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/96/male_audio/日本に行ったことがないから.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/日本に行ったことがないから、勉強しないで行くのはやめたほうがいいと思う。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "せず": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "せずに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しない": {
+            "en": "Could you try using a grammar point that is used to express 'without doing (A), (B)'?",
+            "es": "",
+            "fr": ""
+          },
+          "しなくて": {
+            "en": "Could you try using a grammar point that is used to express 'without doing (A), (B)'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "You have never been to Japan, so I think that you better refrain from going <strong>without</strong> studying (first).",
+        "nuance_translation": "A common way to indicate that (B) will be done <strong>without doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 96,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "140",
+      "type": "writeup",
+      "attributes": {
+        "id": 140,
+        "body_ja": "",
+        "body": "<p>There are two primary ways in which <span data-gp-id='96'>ないで</span> is used with verbs in Japanese. The first is to express 'without doing (A), (B)'. The second is to request that someone 'not do (A)'. We will examine the first in this write-up.</p>\r\n\r\n<p> <span data-gp-id='96'>ないで</span> is a combination of the <span data-term='助動詞・じょどうし'>auxiliary verb</span> ない, and the particle <span data-gp-id='36'>で</span>. Due to this, <span data-gp-id='36'>で</span> keeps its standard meaning of 'with/by', in relation to 'not' doing something.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180211'>\r\n<li data-study-question='180212'>\r\n</ul>\r\n\r\n<p>When <span data-gp-id='96'>ないで</span> is used to express that '(A) has not been done before doing (B)', this is usually contrary to some kind of expectation. Because of this, ないで is often used to express something that may be surprising to the listener.\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180213'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>Be careful of the following two structures:</p>\r\n\r\n<p>(A) <span data-gp-id='96'>ないで</span> (B) - Without doing (A), (B).</p>\r\n\r\n<p>(A) <span data-gp-id='775'>なくて</span> (B) - Without doing (A), (B).</p>\r\n\r\n<p>Technically, these two constructions share a similar meaning. However, in modern Japanese <span data-gp-id='96'>ないで</span> is used more frequently when the (B) action is being highlighted as being done without (A). On the other hand, <span data-gp-id='775'>なくて</span> is used when (A) is being given as a reason for why something else was/wasn't done.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183850'>\r\n<li data-study-question='183851'></ul></section>"
+      }
+    },
+    {
+      "id": "208",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 208,
+        "source": "Genki II 1st Edition",
+        "location": "Page 161",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "807",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 807,
+        "source": "みんなの日本語 I",
+        "location": "Page 110 [CH 17]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "226",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 226,
+        "source": "Genki II 2nd Edition",
+        "location": "Page 191",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "864",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 864,
+        "source": "みんなの日本語 II",
+        "location": "Page 60 [CH 34]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "386",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 386,
+        "source": "Marugoto Elementary 2 (A2) Rikai",
+        "location": "Page 108",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1118",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1118,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 271",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1416",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1416,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 279",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1492",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1492,
+        "source": "[AIAIJ] An Integrated Approach to Intermediate Japanese",
+        "location": "Page 35",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2688",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2688,
+        "site": "BriefJapanese",
+        "description": "なくて vs ないで",
+        "link": "https://briefjapanese.fun/%e3%81%aa%e3%81%84%e3%81%a7-vs-%e3%81%aa%e3%81%8f%e3%81%a6/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "199",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 199,
+        "site": "Tae Kim",
+        "description": "Express \"without doing\" with 「ないで」",
+        "link": "https://guidetojapanese.org/learn/complete/inaction",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1513",
+      "type": "related_content",
+      "attributes": {
+        "id": 1513,
+        "relationship_type": "related",
+        "body": "Though these two phrases appear similar in form, both suggesting 'without doing', they differ in that ともなく・ともなしに is used figuratively to express that the action was performed, but in an absentminded manner, or ‘without even so much as the intention of doing (A), (B)’, e.g. 見るともなく見ていたら 'as I was absentmindedly looking...' whereas ないで literally means that action was not performed, e.g. 見ないでやる 'do without looking'.",
+        "first_relatable": {
+          "id": 745,
+          "slug": "ともなく-ともなしに",
+          "title": "ともなく・ともなしに",
+          "meaning": "Absentmindedly, Mindlessly, Unconsciously, Without paying attention",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 96,
+          "slug": "ないで",
+          "title": "ないで",
+          "meaning": "Without doing, Not ~ and ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "519",
+      "type": "related_content",
+      "attributes": {
+        "id": 519,
+        "relationship_type": "related",
+        "body": "ないで and なくて are both negative connecting forms, but with different uses. ないで is used in negative requests or to mean 'without doing' something, e.g. 食べないでください ('Please don't eat it.'). and 朝ご飯を食べないで学校に行った ('I went to school without eating breakfast.'). なくて connects clauses to describe reasons or states, similar to 'and', e.g. 高くなくて便利です ('It's not expensive, and it's convenient.').",
+        "first_relatable": {
+          "id": 96,
+          "slug": "ないで",
+          "title": "ないで",
+          "meaning": "Without doing, Not ~ and ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 774,
+          "slug": "なくて-conjunction",
+          "title": "なくて",
+          "meaning": "To not ~ and ~, Not ~ and ~ (Conjugations)",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "609",
+      "type": "related_content",
+      "attributes": {
+        "id": 609,
+        "relationship_type": "related",
+        "body": "ないで and なくて are both connecting forms of ない, but with different uses. ないで is used in negative requests or to mean 'without doing' something, e.g. 食べないでください ('Please don't eat it.') and 朝ご飯を食べないで学校に行った ('I went to school without eating breakfast.'). なくて can express a reason or cause, e.g. 行けなくて残念でした ('I couldn't go, which was disappointing.').",
+        "first_relatable": {
+          "id": 96,
+          "slug": "ないで",
+          "title": "ないで",
+          "meaning": "Without doing, Not ~ and ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 775,
+          "slug": "なくて",
+          "title": "なくて",
+          "meaning": "Not ~ and, Not so, Because not (Examples)",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "413",
+      "type": "related_content",
+      "attributes": {
+        "id": 413,
+        "relationship_type": "related",
+        "body": "ないで and ずに both express the idea of 'without doing (A)' and are used in similar ways. For example, 朝ご飯を食べないで学校に行った and 朝ご飯を食べずに学校に行った both mean 'I went to school without eating breakfast.', but ずに has a slightly more formal or literary tone, while ないで is more conversational. Unlike ないで, ずに cannot be used as a negative request form to say 'Don't (A).'.",
+        "first_relatable": {
+          "id": 96,
+          "slug": "ないで",
+          "title": "ないで",
+          "meaning": "Without doing, Not ~ and ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 303,
+          "slug": "ずに",
+          "title": "ずに",
+          "meaning": "Without doing",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "237",
+      "type": "related_content",
+      "attributes": {
+        "id": 237,
+        "relationship_type": "related",
+        "body": "The dictionary/non-past form of a verb + な expresses a blunt command not to do something. Similarly, ないで attached to the negative stem of a verb is a more casual and gentle request. For example, するな is a strong way of saying 'Don't do it!' while しないで is a softer, more casual way of saying '[Please] don't do it.'",
+        "first_relatable": {
+          "id": 66,
+          "slug": "な",
+          "title": "な",
+          "meaning": "Do not, Don't (Prohibitive)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 96,
+          "slug": "ないで",
+          "title": "ないで",
+          "meaning": "Without doing, Not ~ and ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "220",
+      "type": "related_content",
+      "attributes": {
+        "id": 220,
+        "relationship_type": "antonym",
+        "body": "〜てください is a polite way to say 'Please do (something),' as in 食べてください ('Please eat'). Its negative form, 〜ないで, means 'Don't do (something),' as in 食べないで ('Don't eat'). To make this negative request polite, simply add ください, as in 食べないでください means 'Please don't eat.'",
+        "first_relatable": {
+          "id": 60,
+          "slug": "てください",
+          "title": "てください",
+          "meaning": "Please do (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 96,
+          "slug": "ないで",
+          "title": "ないで",
+          "meaning": "Without doing, Not ~ and ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "410",
+      "type": "related_content",
+      "attributes": {
+        "id": 410,
+        "relationship_type": "antonym",
+        "body": "なさい is a firm but polite command form, often used by those in authority (like teachers or parents) toward subordinates. In contrast, ないで is a casual way to ask someone not to do something, e.g. 行かないで ('Don't go.'). It is typically used among close friends or family.",
+        "first_relatable": {
+          "id": 95,
+          "slug": "なさい",
+          "title": "なさい",
+          "meaning": "Command to do",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 96,
+          "slug": "ないで",
+          "title": "ないで",
+          "meaning": "Without doing, Not ~ and ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "608",
+      "type": "related_content",
+      "attributes": {
+        "id": 608,
+        "relationship_type": "related",
+        "body": "The ないで form combines a verb in the negative with で, and has two common uses: (1) to make a negative request, e.g. 食べないで ('Don't eat it.'), and (2) to express 'without doing' something, e.g. 晩ご飯を食べないで出かけた ('I went out without eating dinner.').",
+        "first_relatable": {
+          "id": 778,
+          "slug": "verb-ないで",
+          "title": "Verb[ないで]",
+          "meaning": "(Please) do not (for me), Casual request",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 96,
+          "slug": "ないで",
+          "title": "ないで",
+          "meaning": "Without doing, Not ~ and ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "232",
+      "type": "related_content",
+      "attributes": {
+        "id": 232,
+        "relationship_type": "related",
+        "body": "ないでください is a polite way to ask someone not to do something. The shorter form, ないで, is more casual and typically used with close friends or family. While ないでください is appropriate for strangers or people of equal status, ないで has a softer, more informal tone. Adding the sentence-ending particle ね (e.g. 食べないでね) makes the request even gentler and more caring.",
+        "first_relatable": {
+          "id": 65,
+          "slug": "ないでください",
+          "title": "ないでください",
+          "meaning": "Please don't (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 96,
+          "slug": "ないで",
+          "title": "ないで",
+          "meaning": "Without doing, Not ~ and ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1351 @@
+{
+  "data": {
+    "id": "765",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 765,
+      "level": "JLPT5",
+      "lesson_id": 10,
+      "part_of_speech": "接続助詞",
+      "register": "一般",
+      "word_type": "動詞",
+      "slug": "ている3",
+      "nuance": "ある物（もの）または人（ひと）が<strong>習慣（しゅうかん）的（てき）</strong>に何（なに）かを<strong>継続（けいぞく）する</strong>姿（すがた）を表現（ひょうげん）するために使（つか）われる<strong>動詞（どうし）の活用（かつよう）</strong>。",
+      "grammar_order": 117,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 769,
+        "title": "Adjective + て・Noun + で",
+        "slug": "adjective-て-noun-で"
+      },
+      "previous_grammar_point": {
+        "id": 63,
+        "title": "たことがある",
+        "slug": "たことがある"
+      },
+      "lesson_count": "2/12",
+      "title": "ている③",
+      "furigana": "～ている ③",
+      "meaning": "Has/have done, Is ~ing (Repetition)",
+      "nuance_translation": "A <strong>verb form</strong> indicating that someone or something is <strong>continually performing the action</strong> of (A) <strong>habitually</strong>.",
+      "rare_kanji_warning": null,
+      "caution": "ている is often shortened to てる. This applies to all tenses, including てる, てて, てた, and even てます",
+      "polite_structure": "<span class='gp-popout' data-gp-id='416'>Verb［て］</span>+ <strong><span class='gp-popout' data-gp-id='23'>います</span></strong><br><span class='gp-popout' data-gp-id='416'>Verb［て］</span>+ <strong><span class='gp-popout' data-gp-id='23'>ます</span></strong><br>Verb［<del><strong>て</strong></del>］ + <span class='chui'>と</span><strong>ります</strong>",
+      "casual_structure": "<span class='gp-popout' data-gp-id='416'>Verb［て］</span>+ <strong><span class='gp-popout' data-gp-id='23'>いる</span></strong><br><span class='gp-popout' data-gp-id='416'>Verb［て］</span>+ <strong><span class='gp-popout' data-gp-id='23'>る</span></strong><br>Verb［<del><strong>て</strong></del>］ + <span class='chui'>と</span><strong>る</strong>",
+      "part_of_speech_translation": "Conjunctive Particle",
+      "register_translation": "Standard",
+      "word_type_translation": "Verb",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/17574",
+      "metadata": "ている, でいる, とる, どる, teiru, deiru, toru, doru, conjunction particle, repetition of action"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "155430",
+            "type": "study_question"
+          },
+          {
+            "id": "155428",
+            "type": "study_question"
+          },
+          {
+            "id": "8833",
+            "type": "study_question"
+          },
+          {
+            "id": "8836",
+            "type": "study_question"
+          },
+          {
+            "id": "183819",
+            "type": "study_question"
+          },
+          {
+            "id": "155429",
+            "type": "study_question"
+          },
+          {
+            "id": "8832",
+            "type": "study_question"
+          },
+          {
+            "id": "8842",
+            "type": "study_question"
+          },
+          {
+            "id": "8839",
+            "type": "study_question"
+          },
+          {
+            "id": "8834",
+            "type": "study_question"
+          },
+          {
+            "id": "8835",
+            "type": "study_question"
+          },
+          {
+            "id": "8837",
+            "type": "study_question"
+          },
+          {
+            "id": "8838",
+            "type": "study_question"
+          },
+          {
+            "id": "8840",
+            "type": "study_question"
+          },
+          {
+            "id": "8841",
+            "type": "study_question"
+          },
+          {
+            "id": "8843",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "116",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1290",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1365",
+            "type": "related_content"
+          },
+          {
+            "id": "354",
+            "type": "related_content"
+          },
+          {
+            "id": "352",
+            "type": "related_content"
+          },
+          {
+            "id": "454",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1985",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2114",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2684",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "155430",
+      "type": "study_question",
+      "attributes": {
+        "id": 155430,
+        "content": "彼（かれ）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>学校（がっこう）<span class=\"gp-popout\" data-gp-id=\"25\">で</span>働（はたら）い<span class='study-area-input'>____</span>。",
+        "answer": "ている",
+        "alternate_grammar": [],
+        "kanji_answer": "ている",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼は学校で働いている。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "He <strong>works</strong> at a school. (This is a regular activity for him)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 765,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155428",
+      "type": "study_question",
+      "attributes": {
+        "id": 155428,
+        "content": "私（わたし）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>毎日（まいにち）ギター<span class=\"gp-popout\" data-gp-id=\"21\">を</span>弾（ひ）い<span class='study-area-input'>____</span>。",
+        "answer": "ている",
+        "alternate_grammar": [],
+        "kanji_answer": "ている",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私は毎日ギターを弾いている。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>play </strong>my guitar everyday. (This is a hobby of the speaker)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 765,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8833",
+      "type": "study_question",
+      "attributes": {
+        "id": 8833,
+        "content": "ふうたろうさん<span class='gp-popout' data-gp-id='3'>は</span>毎日（まいにち）みくさん<span class='gp-popout' data-gp-id='15'>と</span>一緒（いっしょ）<span class='gp-popout' data-gp-id='32'>に</span>歴史（れきし）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "べんきょうしている",
+        "alternate_grammar": [
+          "べんきょうしている",
+          "べんきょうしてる",
+          "べんきょうしとる",
+          "べんきょうしています",
+          "べんきょうしてます",
+          "べんきょうしとります"
+        ],
+        "kanji_answer": "勉強（べんきょう）している",
+        "kanji_alt_grammar": [
+          "勉強（べんきょう）してる",
+          "勉強（べんきょう）しとる",
+          "べんきょうしています",
+          "べんきょうしてます",
+          "勉強（べんきょう）しとります",
+          "勉強（べんきょう）している"
+        ],
+        "nuance": "ある物（もの）または人（ひと）が<strong>習慣（しゅうかん）的（てき）</strong>に何（なに）かを<strong>継続（けいぞく）する</strong>姿（すがた）を表現（ひょうげん）するために使（つか）われる<strong>動詞（どうし）の活用（かつよう）</strong>。",
+        "tense": "Progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/765/male_audio/12-風太郎さんは毎日三木さんと歴史を勉強している.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ふうたろうさんは毎日みくさんと一緒に歴史を勉強している。.mp3",
+        "word_prompt": "勉強（べんきょう）<span class='gp-popout' data-gp-id='22'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "べんきょうする": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "べんきょうします": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "べんきょうをする": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "べんきょうをします": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "べんきょうをしています": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "べんきょうをしてます": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "べんきょうをしてる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "べんきょうをしている": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "べんきょうをしとる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "べんきょうをしとります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Fuutarou-san <strong>studies</strong> history every day with Miku. (Fuutarou-san <strong>is studying</strong>...)",
+        "nuance_translation": "A <strong>verb form</strong> indicating that someone or something is <strong>continually performing the action</strong> of (A) <strong>habitually</strong>.",
+        "extra_info": "",
+        "reviewable_id": 765,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8836",
+      "type": "study_question",
+      "attributes": {
+        "id": 8836,
+        "content": "どうしてスティーブン<span class='gp-popout' data-gp-id='3'>は</span>いつも黒（くろ）<span class='gp-popout' data-gp-id='24'>い</span>タートルネック<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='17'>のです</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "きている",
+        "alternate_grammar": [],
+        "kanji_answer": "着（き）ている",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）または人（ひと）が<strong>習慣（しゅうかん）的（てき）</strong>に何（なに）かを<strong>継続（けいぞく）する</strong>姿（すがた）を表現（ひょうげん）するために使（つか）われる<strong>動詞（どうし）の活用（かつよう）</strong>。",
+        "tense": "Progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/765/male_audio/03-どうしてスティーブンはいつも黒いタートルネック.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/どうしてスティーブンはいつも黒いタートルネックを着ているのですか。.mp3",
+        "word_prompt": "着（き）<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きてる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きとる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きています": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きてます": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Why does Steven always <strong>wear</strong> a black turtleneck? (<strong>is wearing</strong>)",
+        "nuance_translation": "A <strong>verb form</strong> indicating that someone or something is <strong>continually performing the action</strong> of (A) <strong>habitually</strong>.",
+        "extra_info": "",
+        "reviewable_id": 765,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183819",
+      "type": "study_question",
+      "attributes": {
+        "id": 183819,
+        "content": "俺（おれ）、毎日（まいにち）勉強（べんきょう）し<span data-gp-id='765'>とる</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>study</strong> every day.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 765,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155429",
+      "type": "study_question",
+      "attributes": {
+        "id": 155429,
+        "content": "毎晩（まいばん）９時（くじ）<span class=\"gp-popout\" data-gp-id=\"32\">に</span>寝（ね）<span class='study-area-input'>____</span>。",
+        "answer": "ている",
+        "alternate_grammar": [],
+        "kanji_answer": "ている",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/毎晩９時に寝ている。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>sleep</strong> at 9 every night. (This is a habit of the speaker)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 765,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8832",
+      "type": "study_question",
+      "attributes": {
+        "id": 8832,
+        "content": "俺（おれ）<span class='gp-popout' data-gp-id='3'>は</span>毎週（まいしゅう）金曜日（きんようび）<span class='gp-popout' data-gp-id='6'>の</span>夜（よる）<span class='gp-popout' data-gp-id='32'>に</span>スーパーに<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='17'>のだ</span>。",
+        "answer": "いっている",
+        "alternate_grammar": [
+          "いっている",
+          "いってる",
+          "いっとる"
+        ],
+        "kanji_answer": "行（い）っている",
+        "kanji_alt_grammar": [
+          "行（い）ってる",
+          "行（い）っとる",
+          "行（い）っている"
+        ],
+        "nuance": "ある物（もの）または人（ひと）が<strong>習慣（しゅうかん）的（てき）</strong>に何（なに）かを<strong>継続（けいぞく）する</strong>姿（すがた）を表現（ひょうげん）するために使（つか）われる<strong>動詞（どうし）の活用（かつよう）</strong>。",
+        "tense": "Progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/765/male_audio/07-俺は毎週の夜にスーパーに言っているのだ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/俺は毎週金曜日の夜にスーパーに行っているのだ。.mp3",
+        "word_prompt": "行（い）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いく": {
+            "en": "How about expanding the base grammar pattern to include the extra nuance within the translation?",
+            "es": "¿Qué tal si desarrollas el patrón gramatical básico para incluir el matiz adicional en la traducción?",
+            "fr": "Et si vous élargissiez la structure grammaticale de base pour inclure la nuance supplémentaire dans la traduction ?",
+            "id": "Bagaimana kalau memperluas pola dasar tata bahasanya agar nuansa tambahannya ikut tercakup dalam terjemahan?"
+          },
+          "いっています": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "いってます": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>I go</strong> to the supermarket every Friday night. (I <strong>am going</strong>...)",
+        "nuance_translation": "A <strong>verb form</strong> indicating that someone or something is <strong>continually performing the action</strong> of (A) <strong>habitually</strong>.",
+        "extra_info": "",
+        "reviewable_id": 765,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8842",
+      "type": "study_question",
+      "attributes": {
+        "id": 8842,
+        "content": "俺（おれ）<span class='gp-popout' data-gp-id='3'>は</span>毎月（まいつき）、両親（りょうしん）<span class='gp-popout' data-gp-id='6'>の</span>家（いえ）<span class='gp-popout' data-gp-id='32'>に</span><span class='study-area-input'>____</span>。",
+        "answer": "かえっています",
+        "alternate_grammar": [
+          "かえっている",
+          "かえってる",
+          "かえっとる",
+          "かえっています",
+          "かえってます",
+          "かえっとります"
+        ],
+        "kanji_answer": "帰（かえ）っています",
+        "kanji_alt_grammar": [
+          "帰（かえ）っている",
+          "帰（かえ）ってる",
+          "帰（かえ）っとる",
+          "帰（かえ）っています",
+          "帰（かえ）ってます",
+          "帰（かえ）っとります"
+        ],
+        "nuance": "ある物（もの）または人（ひと）が<strong>習慣（しゅうかん）的（てき）</strong>に何（なに）かを<strong>継続（けいぞく）する</strong>姿（すがた）を表現（ひょうげん）するために使（つか）われる<strong>動詞（どうし）の活用（かつよう）</strong>。",
+        "tense": "Progressive, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/765/male_audio/06-俺は毎月両親の家に帰っています.mp3",
+        "female_audio_url": "",
+        "word_prompt": "帰（かえ）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かえる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "かえります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>return</strong> to my parents' <strong>home</strong> every month. (I <strong>am returning home</strong>...)",
+        "nuance_translation": "A <strong>verb form</strong> indicating that someone or something is <strong>continually performing the action</strong> of (A) <strong>habitually</strong>.",
+        "extra_info": "",
+        "reviewable_id": 765,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8839",
+      "type": "study_question",
+      "attributes": {
+        "id": 8839,
+        "content": "電車（でんしゃ）<span class='gp-popout' data-gp-id='3'>は</span>毎日（まいにち）、午前（ごぜん）１１（じゅういち）時（じ）ごろに<span class='study-area-input'>____</span>。",
+        "answer": "きています",
+        "alternate_grammar": [
+          "きている",
+          "きてる",
+          "きとる",
+          "きています",
+          "きてます",
+          "きとります"
+        ],
+        "kanji_answer": "来（き）ています",
+        "kanji_alt_grammar": [
+          "来（き）ている",
+          "来（き）てる",
+          "来（き）とる",
+          "来（き）ています",
+          "来（き）てます",
+          "来（き）とります"
+        ],
+        "nuance": "ある物（もの）または人（ひと）が<strong>習慣（しゅうかん）的（てき）</strong>に何（なに）かを<strong>継続（けいぞく）する</strong>姿（すがた）を表現（ひょうげん）するために使（つか）われる<strong>動詞（どうし）の活用（かつよう）</strong>。",
+        "tense": "Progressive, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/765/male_audio/11-電車は毎ィ日午前11時ごろに来ています.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/電車は毎日、午前１１時ごろに来ています。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='39'>来（く）る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "くる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きます": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The train <strong>comes</strong> every day at around 11 a.m. (The train <strong>is coming</strong>...)",
+        "nuance_translation": "A <strong>verb form</strong> indicating that someone or something is <strong>continually performing the action</strong> of (A) <strong>habitually</strong>.",
+        "extra_info": "",
+        "reviewable_id": 765,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8834",
+      "type": "study_question",
+      "attributes": {
+        "id": 8834,
+        "content": "魔王（まおう）さま<span class='gp-popout' data-gp-id='3'>は</span>バーガークイーン<span class='gp-popout' data-gp-id='25'>で</span><span class='study-area-input'>____</span>。",
+        "answer": "はたらいています",
+        "alternate_grammar": [
+          "はたらいている",
+          "はたらいてる",
+          "はたらいとる",
+          "はたらいています",
+          "はたらいてます",
+          "はたらいとります"
+        ],
+        "kanji_answer": "働（はたら）いています",
+        "kanji_alt_grammar": [
+          "働（はたら）いている",
+          "働（はたら）いてる",
+          "働（はたら）いとる",
+          "働（はたら）いてます",
+          "働（はたら）いとります",
+          "働（はたら）いています"
+        ],
+        "nuance": "ある物（もの）または人（ひと）が<strong>習慣（しゅうかん）的（てき）</strong>に何（なに）かを<strong>継続（けいぞく）する</strong>姿（すがた）を表現（ひょうげん）するために使（つか）われる<strong>動詞（どうし）の活用（かつよう）</strong>。",
+        "tense": "Progressive, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/765/male_audio/10-魔王様はバーガークイーンで働いています.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/魔王さまはバーガークイーンで働いています。.mp3",
+        "word_prompt": "働（はたら）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はたらく": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "はたらきます": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The Demon Lord <strong>works</strong> at Burger Queen. (The Demon Lord <strong>is working</strong>...)",
+        "nuance_translation": "A <strong>verb form</strong> indicating that someone or something is <strong>continually performing the action</strong> of (A) <strong>habitually</strong>.",
+        "extra_info": "",
+        "reviewable_id": 765,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8835",
+      "type": "study_question",
+      "attributes": {
+        "id": 8835,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>公園（こうえん）<span class='gp-popout' data-gp-id='25'>で</span><span class='gp-popout' data-gp-id='3'>は</span>毎週末（まいしゅうまつ）多（おお）くの人（ひと）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>。",
+        "answer": "はしっています",
+        "alternate_grammar": [
+          "はしっている",
+          "はしってる",
+          "はしっとる",
+          "はしっています",
+          "はしってます",
+          "はしっとります"
+        ],
+        "kanji_answer": "走（はし）っています",
+        "kanji_alt_grammar": [
+          "走（はし）っている",
+          "走（はし）ってる",
+          "走（はし）っとる",
+          "走（はし）ってます",
+          "走（はし）っとります",
+          "走（はし）っています"
+        ],
+        "nuance": "ある物（もの）または人（ひと）が<strong>習慣（しゅうかん）的（てき）</strong>に何（なに）かを<strong>継続（けいぞく）する</strong>姿（すがた）を表現（ひょうげん）するために使（つか）われる<strong>動詞（どうし）の活用（かつよう）</strong>。",
+        "tense": "Progressive, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/765/male_audio/01-この公園では毎週末多くの人が走っています.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/この公園では毎週末多くの人が走っています。.mp3",
+        "word_prompt": "走（はし）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はしる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "はしります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Many people <strong>run</strong> in this park every weekend. (Many people <strong>are running</strong>...)",
+        "nuance_translation": "A <strong>verb form</strong> indicating that someone or something is <strong>continually performing the action</strong> of (A) <strong>habitually</strong>.",
+        "extra_info": "",
+        "reviewable_id": 765,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8837",
+      "type": "study_question",
+      "attributes": {
+        "id": 8837,
+        "content": "ともこ<span class='gp-popout' data-gp-id='3'>は</span>国語（こくご）<span class='gp-popout' data-gp-id='6'>の</span>教科書（きょうかしょ）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "よんでいる",
+        "alternate_grammar": [
+          "よんでいる",
+          "よんでる",
+          "よんどる",
+          "よんでいます",
+          "よんでます",
+          "よんどります"
+        ],
+        "kanji_answer": "読（よ）んでいる",
+        "kanji_alt_grammar": [
+          "読（よ）んでる",
+          "読（よ）んどる",
+          "読（よ）んでいます",
+          "読（よ）んでます",
+          "読（よ）んどります",
+          "読（よ）んでいる"
+        ],
+        "nuance": "ある物（もの）または人（ひと）が<strong>習慣（しゅうかん）的（てき）</strong>に何（なに）かを<strong>継続（けいぞく）する</strong>姿（すがた）を表現（ひょうげん）するために使（つか）われる<strong>動詞（どうし）の活用（かつよう）</strong>。",
+        "tense": "Progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/765/male_audio/02-ともこは国語の教科書を読んでいる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ともこは国語の教科書を読んでいる。.mp3",
+        "word_prompt": "読（よ）<span class='gp-popout' data-gp-id='26'>む</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "よむ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "よみます": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Tomoko <strong>reads</strong> a Japanese textbook. (Tomoko <strong>is reading</strong>...)",
+        "nuance_translation": "A <strong>verb form</strong> indicating that someone or something is <strong>continually performing the action</strong> of (A) <strong>habitually</strong>.",
+        "extra_info": "",
+        "reviewable_id": 765,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8838",
+      "type": "study_question",
+      "attributes": {
+        "id": 8838,
+        "content": "ひとみさん<span class='gp-popout' data-gp-id='6'>の</span>お母（かあ）さん<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "きょうしをしている",
+        "alternate_grammar": [
+          "きょうしをしている",
+          "きょうしをしてる",
+          "きょうしをしとる",
+          "きょうしをしています",
+          "きょうしをしてます",
+          "きょうしをしとります",
+          "きょうしをやっている",
+          "きょうしをやってる",
+          "きょうしをやっとる",
+          "きょうしをやっています",
+          "きょうしをやってます",
+          "きょうしをやっとります"
+        ],
+        "kanji_answer": "教師（きょうし）をしている",
+        "kanji_alt_grammar": [
+          "教師（きょうし）をしてる",
+          "教師（きょうし）をしとる",
+          "教師（きょうし）をしています",
+          "教師（きょうし）をしてます",
+          "教師（きょうし）をしとります",
+          "教師（きょうし）をやっている",
+          "教師（きょうし）をやってる",
+          "教師（きょうし）をやっとる",
+          "教師（きょうし）をやっています",
+          "教師（きょうし）をやってます",
+          "教師（きょうし）をやっとります",
+          "教師（きょうし）をしている"
+        ],
+        "nuance": "ある物（もの）または人（ひと）が<strong>習慣（しゅうかん）的（てき）</strong>に何（なに）かを<strong>継続（けいぞく）する</strong>姿（すがた）を表現（ひょうげん）するために使（つか）われる<strong>動詞（どうし）の活用（かつよう）</strong>。",
+        "tense": "Progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/765/male_audio/04-ひとみさんのお母さんは教師をしている.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ひとみさんのお母さんは教師をしている。.mp3",
+        "word_prompt": "教師（きょうし）<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='22'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きょうしをする": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうしをします": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうしする": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうしします": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうししています": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうししてます": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうししてる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうししている": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうししとる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうししとります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうしをやる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "きょうしをやります": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "きょうしやる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうしやります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうしやっています": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうしやってます": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうしやってる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうしやっている": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうしやっとる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうしやっとります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "きょうしだ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "きょうしです": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Hitomi's Mother <strong>is a teacher</strong>. (Hitomi's mother <strong>is doing the act of being</strong>...)",
+        "nuance_translation": "A <strong>verb form</strong> indicating that someone or something is <strong>continually performing the action</strong> of (A) <strong>habitually</strong>.",
+        "extra_info": "",
+        "reviewable_id": 765,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8840",
+      "type": "study_question",
+      "attributes": {
+        "id": 8840,
+        "content": "ばあさん<span class='gp-popout' data-gp-id='3'>は</span>毎晩（まいばん）、薬（くすり）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "のんどる",
+        "alternate_grammar": [
+          "のんでいる",
+          "のんでる",
+          "のんどる",
+          "のんでいます",
+          "のんでます",
+          "のんどります"
+        ],
+        "kanji_answer": "飲（の）んどる",
+        "kanji_alt_grammar": [
+          "飲（の）んでいる",
+          "飲（の）んでる",
+          "飲（の）んでいます",
+          "飲（の）んでます",
+          "飲（の）んどります",
+          "飲（の）んどる"
+        ],
+        "nuance": "ある物（もの）または人（ひと）が<strong>習慣（しゅうかん）的（てき）</strong>に何（なに）かを<strong>継続（けいぞく）する</strong>姿（すがた）を表現（ひょうげん）するために使（つか）われる<strong>動詞（どうし）の活用（かつよう）</strong>。",
+        "tense": "Progressive, Standard, Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/765/male_audio/05-ばあさんは毎晩薬を飲んでる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ばあさんは毎晩、薬を飲んどる。.mp3",
+        "word_prompt": "飲（の）<span class='gp-popout' data-gp-id='26'>む</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のむ": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "のみます": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Grandmother <strong>takes</strong> medicine every night. (Grandmother <strong>is drinking</strong>...)",
+        "nuance_translation": "A <strong>verb form</strong> indicating that someone or something is <strong>continually performing the action</strong> of (A) <strong>habitually</strong>.",
+        "extra_info": "",
+        "reviewable_id": 765,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8841",
+      "type": "study_question",
+      "attributes": {
+        "id": 8841,
+        "content": "鹿田（しかだ）さん<span class='gp-popout' data-gp-id='3'>は</span>駄菓子屋（だがしや）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "している",
+        "alternate_grammar": [
+          "している",
+          "してる",
+          "しとる",
+          "しています",
+          "してます",
+          "しとります",
+          "やっている",
+          "やってる",
+          "やっとる",
+          "やっています",
+          "やってます",
+          "やっとります"
+        ],
+        "kanji_answer": "している",
+        "kanji_alt_grammar": [
+          "してる",
+          "しとる",
+          "しています",
+          "してます",
+          "しとります",
+          "やっている",
+          "やってる",
+          "やっとる",
+          "やっています",
+          "やってます",
+          "やっとります",
+          "している"
+        ],
+        "nuance": "ある物（もの）または人（ひと）が<strong>習慣（しゅうかん）的（てき）</strong>に何（なに）かを<strong>継続（けいぞく）する</strong>姿（すがた）を表現（ひょうげん）するために使（つか）われる<strong>動詞（どうし）の活用（かつよう）</strong>。",
+        "tense": "Progressive, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/765/male_audio/09-鹿田さんは駄菓子屋さんをしている.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/鹿田さんは駄菓子屋をしている。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='22'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "する": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "します": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "やる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "やります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "やっとります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "だ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "です": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Mr. Shikada <strong>runs a small-time candy store</strong>. (Mr. Shikada <strong>is doing</strong>...)",
+        "nuance_translation": "A <strong>verb form</strong> indicating that someone or something is <strong>continually performing the action</strong> of (A) <strong>habitually</strong>.",
+        "extra_info": "",
+        "reviewable_id": 765,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8843",
+      "type": "study_question",
+      "attributes": {
+        "id": 8843,
+        "content": "姉（あね）<span class='gp-popout' data-gp-id='3'>は</span>銀行（ぎんこう）<span class='gp-popout' data-gp-id='32'>に</span><span class='study-area-input'>____</span>。",
+        "answer": "つとめています",
+        "alternate_grammar": [
+          "つとめている",
+          "つとめてる",
+          "つとめとる",
+          "つとめています",
+          "つとめてます",
+          "つとめとります"
+        ],
+        "kanji_answer": "勤（つと）めています",
+        "kanji_alt_grammar": [
+          "勤（つと）めている",
+          "勤（つと）めてる",
+          "勤（つと）めとる",
+          "勤（つと）めています",
+          "勤（つと）めてます",
+          "勤（つと）めとります"
+        ],
+        "nuance": "ある物（もの）または人（ひと）が<strong>習慣（しゅうかん）的（てき）</strong>に何（なに）かを<strong>継続（けいぞく）する</strong>姿（すがた）を表現（ひょうげん）するために使（つか）われる<strong>動詞（どうし）の活用（かつよう）</strong>。",
+        "tense": "Progressive, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/765/male_audio/08-姉は銀行に勤めています.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson10/765/220831_1228_04.mp3",
+        "word_prompt": "勤（つと）め<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つとめる": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "つとめます": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "My sister <strong>works</strong> in a bank. (My sister <strong>is working</strong>...)",
+        "nuance_translation": "A <strong>verb form</strong> indicating that someone or something is <strong>continually performing the action</strong> of (A) <strong>habitually</strong>.",
+        "extra_info": "",
+        "reviewable_id": 765,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "116",
+      "type": "writeup",
+      "attributes": {
+        "id": 116,
+        "body_ja": "",
+        "body": "<p>The 3rd most common meaning (in no specific order) that <span data-gp-id='765'>ている</span> is used for in Japanese, is the repetition of common activities. This is for things that are not 'continuing', but happen so often that they are considered to be continuous (like going to work, having a hobby, and similar things).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155428'>\r\n<li data-study-question='155429'>\r\n<li data-study-question='155430'></ul>\r\n\r\n<p>Due to <span data-gp-id='23'>いる</span> being one of the verbs for 'existing' in Japanese, the <span data-gp-id='765'>ている</span> form is closer to 'continuing to exist in a specific state', rather than (A)~ing in English. In this construction, it can be thought of as 'to be existing in the state of performing a regular activity'.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>With this meaning of <span data-gp-id='765'>ている</span>, to make it easier to understand, expressions of time are often used. This can be things like 毎日（まいにち）, 毎晩（まいばん）, 毎週（まいしゅう）, and similar phrases.</p></section>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>Regularly in novels, manga, and specifically some parts of Japan, <span data-gp-id='765'>とる</span> may be used instead of <span data-gp-id='765'>ている</span> with the same meaning.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183819'></ul></section>"
+      }
+    },
+    {
+      "id": "1290",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1290,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 117",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1985",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1985,
+        "site": "Maggie Sensei",
+        "description": "How to use ている",
+        "link": "https://maggiesensei.com/2014/07/31/how-to-use-v%EF%BC%8B%E3%81%A6%E3%81%84%E3%82%8B-teiru-%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99-teimasu/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2114",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2114,
+        "site": "Tae Kim",
+        "description": "Enduring state-of-being vs enduring state of action",
+        "link": "https://guidetojapanese.org/learn/grammar/teform",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2684",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2684,
+        "site": "BriefJapanese",
+        "description": "ている uses explained",
+        "link": "https://briefjapanese.fun/%e3%81%a6%e3%81%84%e3%82%8b-what-is-it-all-about/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1365",
+      "type": "related_content",
+      "attributes": {
+        "id": 1365,
+        "relationship_type": "related",
+        "body": "The ている① form expresses completed actions or past states. Unlike English, verbs can directly modify nouns, similar to い-Adjectives. For example, 行っている学校 means 'the school I am going to.' However, when describing a noun's state, the past form is often preferred over ている. For example, 死んだネズミ ('a dead mouse') is more common than 死んでいるネズミ.",
+        "first_relatable": {
+          "id": 357,
+          "slug": "verb-た-noun",
+          "title": "Verb［た・ている］+ Noun",
+          "meaning": "Verb modified noun, Relative clause",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 765,
+          "slug": "ている3",
+          "title": "ている③",
+          "meaning": "Has/have done, Is ~ing (Repetition)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "354",
+      "type": "related_content",
+      "attributes": {
+        "id": 354,
+        "relationship_type": "related",
+        "body": "The Verb + て form connects verbs or parts of a sentence. One common use of this form is to connect it to the existence verb いる to express continuing or repeated actions, like going to work or going to sleep at the same time every day. Note that the specific nuance of ている can depend on the verb and context (see ている① and ている②).",
+        "first_relatable": {
+          "id": 765,
+          "slug": "ている3",
+          "title": "ている③",
+          "meaning": "Has/have done, Is ~ing (Repetition)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 416,
+          "slug": "verb-て",
+          "title": "Verb + て",
+          "meaning": "And, Then (Linking events)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "352",
+      "type": "related_content",
+      "attributes": {
+        "id": 352,
+        "relationship_type": "synonym",
+        "body": "The ている form describes an ongoing action or state. In the ている① form, it expresses something you are currently doing, like 食べている ('I am eating'). In the ている③ form, it refers to a habitual or repeated action, even if you're not currently doing said action, often paired with a time word. For example, 毎朝３０分走っている means 'I run every morning for 30 minutes.'",
+        "first_relatable": {
+          "id": 27,
+          "slug": "ている1",
+          "title": "ている①",
+          "meaning": "Is, Am, Are (~ing)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 765,
+          "slug": "ている3",
+          "title": "ている③",
+          "meaning": "Has/have done, Is ~ing (Repetition)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "454",
+      "type": "related_content",
+      "attributes": {
+        "id": 454,
+        "relationship_type": "related",
+        "body": "ている expresses an ongoing action or state. The ている② form is used with verbs indicating a single change in state, like 死んでいる ('is dead'), not an action. The ている③ form describes repeated or habitual actions, like 会社で働いている could mean ('I'm working for [that/this] company).",
+        "first_relatable": {
+          "id": 764,
+          "slug": "ている2",
+          "title": "ている②",
+          "meaning": "State of being, Has (have) done",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 765,
+          "slug": "ている3",
+          "title": "ている③",
+          "meaning": "Has/have done, Is ~ing (Repetition)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,972 @@
+{
+  "data": {
+    "id": "998",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 998,
+      "level": "JLPT1",
+      "lesson_id": 48,
+      "part_of_speech": null,
+      "register": "",
+      "word_type": "",
+      "slug": "に限ったことではない",
+      "nuance": null,
+      "grammar_order": 882,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 999,
+        "title": "とは比べものにならない",
+        "slug": "とは比べものにならない"
+      },
+      "previous_grammar_point": {
+        "id": 884,
+        "title": "をよそに",
+        "slug": "をよそに"
+      },
+      "lesson_count": "18/19",
+      "title": "に限ったことではない",
+      "furigana": "に限（かぎ）ったことではない",
+      "meaning": "Not limited to, Not restricted to, Not only",
+      "nuance_translation": null,
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "Noun + <strong>に限（かぎ）ったことではありません</strong>",
+      "casual_structure": "Noun + <strong>に限（かぎ）ったことではない</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "",
+      "word_type_translation": "",
+      "discourse_link": "",
+      "metadata": "に限ったことではない, にかぎったことではない, nikagittakotodehanai, nikagittakotodewanai, expression, emphatic"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "183615",
+            "type": "study_question"
+          },
+          {
+            "id": "183616",
+            "type": "study_question"
+          },
+          {
+            "id": "183617",
+            "type": "study_question"
+          },
+          {
+            "id": "183619",
+            "type": "study_question"
+          },
+          {
+            "id": "183618",
+            "type": "study_question"
+          },
+          {
+            "id": "11007",
+            "type": "study_question"
+          },
+          {
+            "id": "183044",
+            "type": "study_question"
+          },
+          {
+            "id": "183045",
+            "type": "study_question"
+          },
+          {
+            "id": "183046",
+            "type": "study_question"
+          },
+          {
+            "id": "183621",
+            "type": "study_question"
+          },
+          {
+            "id": "183620",
+            "type": "study_question"
+          },
+          {
+            "id": "11005",
+            "type": "study_question"
+          },
+          {
+            "id": "11006",
+            "type": "study_question"
+          },
+          {
+            "id": "11004",
+            "type": "study_question"
+          },
+          {
+            "id": "11002",
+            "type": "study_question"
+          },
+          {
+            "id": "11003",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "954",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "2149",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1566",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2680",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "183615",
+      "type": "study_question",
+      "attributes": {
+        "id": 183615,
+        "content": "浮気（うわき）をするのは男性（だんせい）<span class='study-area-input'>____</span>。",
+        "answer": "にかぎったことではない",
+        "alternate_grammar": [],
+        "kanji_answer": "に限（かぎ）ったことではない",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Negative, Standard, Emphatic",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/浮気をするのは男性に限ったことではない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Cheating is <strong>not</strong> something that is <strong>limited</strong> to men.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 998,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183616",
+      "type": "study_question",
+      "attributes": {
+        "id": 183616,
+        "content": "地震（じしん）が頻繁（ひんぱん）に起（お）きるのは日本（にほん）<span class='study-area-input'>____</span>。",
+        "answer": "にかぎったことではありません",
+        "alternate_grammar": [],
+        "kanji_answer": "に限（かぎ）ったことではありません",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Negative, Polite, Emphatic",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/地震が頻繁に起きるのは日本に限ったことではありません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Frequently occuring earthquakes are <strong>not</strong> something that is <strong>limited</strong> to Japan.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 998,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183617",
+      "type": "study_question",
+      "attributes": {
+        "id": 183617,
+        "content": "不幸（ふこう）が連続（れんぞく）して起（お）こるのは自分（じぶん）<span class='study-area-input'>____</span>と信（しん）じている。",
+        "answer": "にかぎったことではない",
+        "alternate_grammar": [],
+        "kanji_answer": "に限（かぎ）ったことではない",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Negative, Standard, Emphatic",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/不幸が連続して起こるのは自分に限ったことではないと信じている。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I believe that successive misfortunes are <strong>not</strong> something that is <strong>limited</strong> to me.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 998,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183619",
+      "type": "study_question",
+      "attributes": {
+        "id": 183619,
+        "content": "犯罪（はんざい）に遭（あ）うのは警戒（けいかい）を怠（おこた）った人（ひと）<span class='study-area-input'>____</span>、誰（だれ）にでもあり得（う）ることである。",
+        "answer": "にかぎったことではなく",
+        "alternate_grammar": [],
+        "kanji_answer": "に限（かぎ）ったことではなく",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Negative, Standard, Emphatic",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/犯罪に遭うのは警戒を怠った人に限ったことではなく、誰にでもあり得ることである。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Running into a criminal is <strong>not</strong> something that is <strong>limited</strong> to people that lack vigilance, but rather something that is possible to happen to anyone.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 998,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183618",
+      "type": "study_question",
+      "attributes": {
+        "id": 183618,
+        "content": "子犬（こいぬ）にメロメロになるのは女（おんな）の子（こ）<span class='study-area-input'>____</span>。父（ちち）もメロメロだ。",
+        "answer": "にかぎったことではない",
+        "alternate_grammar": [],
+        "kanji_answer": "に限（かぎ）ったことではない",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Negative, Standard, Emphatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/子犬にメロメロになるのは女の子に限ったことではない。父もメロメロだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Being infatuated with puppies is <strong>not</strong> something that is <strong>limited</strong> to girls. My father is infatuated too.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 998,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "11007",
+      "type": "study_question",
+      "attributes": {
+        "id": 11007,
+        "content": "<span class='vocab-popout' data-vocab-id='1589'>言語（げんご）</span><span class='gp-popout' data-gp-id='21'>を</span>学（まな）ぶ<span class='gp-popout' data-gp-id='16'>の</span><span class='gp-popout' data-gp-id='3'>は</span>、<span class='vocab-popout' data-vocab-id='502'>子供（こども）</span><span class='study-area-input'>____</span>。<span class='vocab-popout' data-vocab-id='470'>大人（おとな）</span><span class='gp-popout' data-gp-id='4'>も</span><span class='vocab-popout' data-vocab-id='1589'>言語（げんご）</span><span class='gp-popout' data-gp-id='10'>が</span>学（まな）べる。",
+        "answer": "にかぎったことではない",
+        "alternate_grammar": [],
+        "kanji_answer": "に限（かぎ）ったことではない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Negative, Standard, Emphatic",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/言語を学ぶのは、子供に限ったことではない。大人も言語が学べる。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけではない": {
+            "en": "Great, but let's use more formal expression.",
+            "es": ""
+          },
+          "にげんていされない": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "にとどまらない": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "にかぎらない": {
+            "en": "Great, but let's add something to make it more formal.",
+            "es": ""
+          },
+          "だけではないです": {
+            "en": "Great, but let's use more formal expression.",
+            "es": ""
+          },
+          "だけではありません": {
+            "en": "Great, but let's use more formal expression.",
+            "es": ""
+          },
+          "にげんていされません": {
+            "en": "Great, but let's use different expression and try to keep politeness consistent.",
+            "es": ""
+          },
+          "にとどまりません": {
+            "en": "Great, but let's use different expression and try to keep politeness consistent.",
+            "es": ""
+          },
+          "にかぎりません": {
+            "en": "Great, but let's use different expression and try to keep politeness consistent.",
+            "es": ""
+          },
+          "にかぎったことではないです": {
+            "en": "Great, but let's try to keep politeness consistent.",
+            "es": ""
+          },
+          "にかぎったことではありません": {
+            "en": "Great, but let's try to keep politeness consistent.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Learning a language is <strong>not restricted</strong> to children. Adults are able to learn languages too.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 998,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183044",
+      "type": "study_question",
+      "attributes": {
+        "id": 183044,
+        "content": "\r\n最近（さいきん）の若者（わかもの）は挨拶（あいさつ）ができないと言（い）われているが、若者（わかもの）<span class='study-area-input'>____</span>。",
+        "answer": "にかぎったことではない",
+        "alternate_grammar": [],
+        "kanji_answer": "に限（かぎ）ったことではない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/最近の若者は挨拶ができないと言われているが、若者に限ったことではない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nIt is said that young people these days can't greet people, but it is <strong>not limited to</strong> young people.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 998,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183045",
+      "type": "study_question",
+      "attributes": {
+        "id": 183045,
+        "content": "\r\n\r\n\r\n今日（きょう）<span class='study-area-input'>____</span>が、なんか仕事（しごと）する気（き）にならない。",
+        "answer": "にかぎったことではない",
+        "alternate_grammar": [],
+        "kanji_answer": "に限（かぎ）ったことではない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/今日に限ったことではないが、なんか仕事する気にならない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nIt is <strong>not limited to</strong> today, but for some reason I don't feel like working.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 998,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183046",
+      "type": "study_question",
+      "attributes": {
+        "id": 183046,
+        "content": "\r\n\r\n\r\n文法（ぶんぽう）が難（むずか）しいのは日本語（にほんご）<span class='study-area-input'>____</span>。",
+        "answer": "にかぎったことではない",
+        "alternate_grammar": [],
+        "kanji_answer": "に限（かぎ）ったことではない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/文法が難しいのは日本語に限ったことではない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nGrammar being difficult is <strong>not</strong> something that is <strong>limited to</strong> Japanese.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 998,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183621",
+      "type": "study_question",
+      "attributes": {
+        "id": 183621,
+        "content": "アルコール依存症（いぞんしょう）で家庭（かてい）が壊（こわ）れるのは我（わ）が家（や）<span class='study-area-input'>____</span>、多（おお）くの家庭（かてい）でそれが起（お）こっています。",
+        "answer": "にかぎったことではなく",
+        "alternate_grammar": [],
+        "kanji_answer": "に限（かぎ）ったことではなく",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Negative, Standard, Emphatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/アルコール依存症で家庭が壊れるのは我が家に限ったことではなく、多くの家庭でそれが起こっています。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にかぎらず": {
+            "en": "Let's try using a more formal or official phrase here.",
+            "es": "Prueba con una expresión más formal o de uso oficial."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A fractured household due to alcohol addiction is <strong>not</strong> something that is <strong>limited</strong> to my home, but rather something that occurs in many households.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 998,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183620",
+      "type": "study_question",
+      "attributes": {
+        "id": 183620,
+        "content": "ダイエットが上手（うま）くいかないのはあなた<span class='study-area-input'>____</span>、多（おお）くの人（ひと）が悩（なや）むことです。",
+        "answer": "にかぎったことではなく",
+        "alternate_grammar": [],
+        "kanji_answer": "に限（かぎ）ったことではなく",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Negative, Standard, Emphatic",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ダイエットが上手くいかないのはあなたに限ったことではなく、多くの人が悩むことです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "A diet not going well is something that is <strong>not restricted</strong> to you, but rather something that many people struggle with.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 998,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "11005",
+      "type": "study_question",
+      "attributes": {
+        "id": 11005,
+        "content": "オレオレ詐欺（さぎ）で騙（だま）される<span class='gp-popout' data-gp-id='16'>の</span><span class='gp-popout' data-gp-id='3'>は</span>お年寄（としよ）り<span class='study-area-input'>____</span>。<span class='vocab-popout' data-vocab-id='470'>大人（おとな）</span><span class='gp-popout' data-gp-id='4'>も</span>騙（だま）される。",
+        "answer": "にかぎったことではない",
+        "alternate_grammar": [],
+        "kanji_answer": "に限（かぎ）ったことではない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Negative, Standard, Emphatic",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/オレオレ詐欺で騙されるのはお年寄りに限ったことではない。大人も騙される。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけではない": {
+            "en": "Great, but let's use more formal expression.",
+            "es": ""
+          },
+          "にげんていされない": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "にとどまらない": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "にかぎらない": {
+            "en": "Great, but let's add something to make it more formal.",
+            "es": ""
+          },
+          "だけではないです": {
+            "en": "Great, but let's use more formal expression.",
+            "es": ""
+          },
+          "だけではありません": {
+            "en": "Great, but let's use more formal expression.",
+            "es": ""
+          },
+          "にげんていされません": {
+            "en": "Great, but let's use different expression and try to keep politeness consistent.",
+            "es": ""
+          },
+          "にとどまりません": {
+            "en": "Great, but let's use different expression and try to keep politeness consistent.",
+            "es": ""
+          },
+          "にかぎりません": {
+            "en": "Great, but let's use different expression and try to keep politeness consistent.",
+            "es": ""
+          },
+          "にかぎったことではないです": {
+            "en": "Great, but let's try to keep politeness consistent.",
+            "es": ""
+          },
+          "にかぎったことではありません": {
+            "en": "Great, but let's try to keep politeness consistent.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It is <strong>not only</strong> the elderly who are deceived by the 'ore ore' scam. Adults are too.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 998,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "11006",
+      "type": "study_question",
+      "attributes": {
+        "id": 11006,
+        "content": "<span class='vocab-popout' data-vocab-id='852'>科学（かがく）</span>者（しゃ）<span class='gp-popout' data-gp-id='204'>によると</span>、少子（しょうし）<span class='gp-popout' data-gp-id='635'>化（か）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='718'>なにも</span>日本（にっぽん）<span class='study-area-input'>____</span>と<span class='gp-popout' data-gp-id='6'>の</span>こと。すべて<span class='gp-popout' data-gp-id='6'>の</span>先進（せんしん）国（こく）<span class='gp-popout' data-gp-id='287'>における</span><span class='vocab-popout' data-vocab-id='439'>問題（もんだい）</span><span class='gp-popout' data-gp-id='1'>だ</span><span class='gp-popout' data-gp-id='200'>そう</span><span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "にかぎったことではない",
+        "alternate_grammar": [],
+        "kanji_answer": "に限（かぎ）ったことではない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Negative, Standard, Emphatic",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/科学者によると、少子化はなにも日本に限ったことではないとのこと。すべての先進国における問題だそうだ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけではない": {
+            "en": "Great, but let's use more formal expression.",
+            "es": ""
+          },
+          "にげんていされない": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "にとどまらない": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "にかぎらない": {
+            "en": "Great, but let's add something to make it more formal.",
+            "es": ""
+          },
+          "だけではないです": {
+            "en": "Great, but let's use more formal expression.",
+            "es": ""
+          },
+          "だけではありません": {
+            "en": "Great, but let's use more formal expression.",
+            "es": ""
+          },
+          "にげんていされません": {
+            "en": "Great, but let's use different expression and try to keep politeness consistent.",
+            "es": ""
+          },
+          "にとどまりません": {
+            "en": "Great, but let's use different expression and try to keep politeness consistent.",
+            "es": ""
+          },
+          "にかぎりません": {
+            "en": "Great, but let's use different expression and try to keep politeness consistent.",
+            "es": ""
+          },
+          "にかぎったことではないです": {
+            "en": "Great, but let's try to keep politeness consistent.",
+            "es": ""
+          },
+          "にかぎったことではありません": {
+            "en": "Great, but let's try to keep politeness consistent.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "According to scientists, the declining birthrate is <strong>not limited</strong> to Japan at all. It seems that it is a problem in all developed countries.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 998,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "11004",
+      "type": "study_question",
+      "attributes": {
+        "id": 11004,
+        "content": "松岡（まつおか）<span class='vocab-popout' data-vocab-id='113'>さん</span><span class='gp-popout' data-gp-id='10'>が</span><span class='vocab-popout' data-vocab-id='517'>宿題（しゅくだい）</span><span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='578'>忘（わす）れ</span><span class='gp-popout' data-gp-id='12'>る</span><span class='gp-popout' data-gp-id='16'>の</span><span class='gp-popout' data-gp-id='3'>は</span><span class='vocab-popout' data-vocab-id='309'>今日（きょう）</span><span class='study-area-input'>____</span>。",
+        "answer": "にかぎったことではない",
+        "alternate_grammar": [
+          "にかぎったことではありません",
+          "にかぎったことではないです",
+          "にかぎったことじゃない"
+        ],
+        "kanji_answer": "に限（かぎ）ったことではない",
+        "kanji_alt_grammar": [
+          "に限（かぎ）ったことではありません",
+          "に限（かぎ）ったことではないです",
+          "に限（かぎ）ったことじゃない"
+        ],
+        "nuance": "",
+        "tense": "Negative, Standard, Emphatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/松岡さんが宿題を忘れるのは今日に限ったことではない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけではない": {
+            "en": "Great, but let's use a more formal expression.",
+            "es": "",
+            "fr": ""
+          },
+          "にげんていされない": {
+            "en": "Great, but let's use a different expression.",
+            "es": "",
+            "fr": ""
+          },
+          "にとどまらない": {
+            "en": "Great, but let's use a different expression.",
+            "es": "",
+            "fr": ""
+          },
+          "にかぎらない": {
+            "en": "Great, but let's add something to make it more formal.",
+            "es": "",
+            "fr": ""
+          },
+          "だけではないです": {
+            "en": "Great, but let's use a more formal expression.",
+            "es": "",
+            "fr": ""
+          },
+          "だけではありません": {
+            "en": "Great, but let's use a more formal expression.",
+            "es": "",
+            "fr": ""
+          },
+          "にげんていされません": {
+            "en": "Great, but let's use a different expression.",
+            "es": "",
+            "fr": ""
+          },
+          "にとどまりません": {
+            "en": "Great, but let's use a different expression.",
+            "es": "",
+            "fr": ""
+          },
+          "にかぎりません": {
+            "en": "Great, but let's use a different expression.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Mr. Matsuoka forgetting to do his homework was <strong>not limited</strong> only to today.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 998,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "11002",
+      "type": "study_question",
+      "attributes": {
+        "id": 11002,
+        "content": "うつ病（びょう）<span class='gp-popout' data-gp-id='3'>は</span>人間（にんげん）<span class='study-area-input'>____</span>。<span class='vocab-popout' data-vocab-id='399'>動物（どうぶつ）</span>で<span class='gp-popout' data-gp-id='42'>もう</span>つ病（びょう）と診断（しんだん）<span class='gp-popout' data-gp-id='1'></span><span class='gp-popout' data-gp-id='145'>される</span><span class='gp-popout' data-gp-id='98'>こと</span><span class='gp-popout' data-gp-id='13'>がある</span>。",
+        "answer": "にかぎったことではない",
+        "alternate_grammar": [],
+        "kanji_answer": "に限（かぎ）ったことではない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Negative, Standard, Emphatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/うつ病は人間に限ったことではない。動物でもうつ病と診断されることがある。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけではない": {
+            "en": "Great, but let's use more formal expression.",
+            "es": ""
+          },
+          "にげんていされない": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "にとどまらない": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "にかぎらない": {
+            "en": "Great, but let's add something to make it more formal.",
+            "es": ""
+          },
+          "だけではないです": {
+            "en": "Great, but let's use more formal expression.",
+            "es": ""
+          },
+          "だけではありません": {
+            "en": "Great, but let's use more formal expression.",
+            "es": ""
+          },
+          "にげんていされません": {
+            "en": "Great, but let's use different expression and try to keep politeness consistent.",
+            "es": ""
+          },
+          "にとどまりません": {
+            "en": "Great, but let's use different expression and try to keep politeness consistent.",
+            "es": ""
+          },
+          "にかぎりません": {
+            "en": "Great, but let's use different expression and try to keep politeness consistent.",
+            "es": ""
+          },
+          "にかぎったことではないです": {
+            "en": "Great, but let's try to keep politeness consistent.",
+            "es": ""
+          },
+          "にかぎったことではありません": {
+            "en": "Great, but let's try to keep politeness consistent.",
+            "es": ""
+          },
+          "にかぎったことじゃない": {
+            "en": "Great, but let's try a more formal expression that is often used in writing.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Depression is <strong>not limited</strong> to humans. Even animals can be diagnosed with depression.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 998,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "11003",
+      "type": "study_question",
+      "attributes": {
+        "id": 11003,
+        "content": "<span class='vocab-popout' data-vocab-id='1559'>敬語（けいご）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='718'>何（なに）も</span><span class='vocab-popout' data-vocab-id='637'>日本語（にほんご）</span><span class='study-area-input'>____</span>。他（た）<span class='vocab-popout' data-vocab-id='1589'>言語（げんご）</span>に<span class='gp-popout' data-gp-id='4'>も</span>あるか、<span class='gp-popout' data-gp-id='364'>また</span><span class='gp-popout' data-gp-id='3'>は</span>過去（かこ）に<span class='gp-popout' data-gp-id='627'>あった</span>。",
+        "answer": "にかぎったことではない",
+        "alternate_grammar": [],
+        "kanji_answer": "に限（かぎ）ったことではない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Negative, Standard, Emphatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/敬語は何も日本語に限ったことではない。他言語にもあるか、または過去にあった。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だけではない": {
+            "en": "Great, but let's use more formal expression.",
+            "es": ""
+          },
+          "にげんていされない": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "にとどまらない": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "にかぎらない": {
+            "en": "Great, but let's add something to make it more formal.",
+            "es": ""
+          },
+          "だけではないです": {
+            "en": "Great, but let's use more formal expression.",
+            "es": ""
+          },
+          "だけではありません": {
+            "en": "Great, but let's use more formal expression.",
+            "es": ""
+          },
+          "にげんていされません": {
+            "en": "Great, but let's use different expression and try to keep politeness consistent.",
+            "es": ""
+          },
+          "にとどまりません": {
+            "en": "Great, but let's use different expression and try to keep politeness consistent.",
+            "es": ""
+          },
+          "にかぎりません": {
+            "en": "Great, but let's use different expression and try to keep politeness consistent.",
+            "es": ""
+          },
+          "にかぎったことではないです": {
+            "en": "Great, but let's try to keep politeness consistent.",
+            "es": ""
+          },
+          "にかぎったことではありません": {
+            "en": "Great, but let's try to keep politeness consistent.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Honorifics are <strong>not restricted</strong> to Japanese at all. Other languages also have it, or had it in the past.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 998,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "954",
+      "type": "writeup",
+      "attributes": {
+        "id": 954,
+        "body_ja": "<p>「<span data-gp-id='998'>に限（かぎ）ったことではない</span>」は、五段動詞（ごだんどうし）「限（かぎ）る」を活用（かつよう）した文型（ぶんけい）の一（ひと）つで、かなり強調的（きょうちょうてき）な表現（ひょうげん）です。これは、格助詞（かくじょし）「に」、「限（かぎ）る」の過去形（かこけい）「限（かぎ）った」、名詞（めいし）「こと」、助動詞（じょどうし）「だ」の連用形（れんようけい）「で」、副助詞（ふくじょし）「は」、そしてイ形容詞（けいようし）「ない」が組（く）み合（あ）わさってできています。この文型（ぶんけい）は文字通（もじどお）り「 (A) に限定（げんてい）されない」ことを表（あらわ）し、「(A) だけではなく (B)」や「(A) に限（かぎ）らず (B) も」といった意味（いみ）で使（つか）われます。</p>\r\n\r\n<p>この文型（ぶんけい）は名詞（めいし）の後（あと）に付（つ）き、改（あらた）まった場面（ばめん）で使（つか）われることが多（おお）いです。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183044'>\r\n<li data-study-question='183045'>\r\n<li data-study-question='183046'>\r\n</ul>\r\n\r\n<p>また、この文型（ぶんけい）は、(A) は特（とく）に珍（めずら）しいことではないため、特別（とくべつ）に扱（あつか）う必要（ひつよう）はない、そう扱（あつか）うべきではないと伝（つた）えたいときによく使（つか）われます。</p>",
+        "body": "<p><span data-gp-id='998'>に限（かぎ）ったことではない</span> is a fairly emphatic expression that, like several other grammar patterns, makes use of the う-Verb 限（かぎ）る 'to limit'. It is a combination of the case-marking particle に, the past tense of 限（かぎ）る, 限（かぎ）った, the noun こと 'thing', the <span data-term='連用形・れんようけい'>conjunctive form</span> of the <span data-term='助動詞・じょどうし'>auxiliary verb</span> だ, で, the <span data-term='副助詞・ふくじょし'>adverbial particle</span> は, and the い-Adjective, ない. The literal translation is 'it is not something that is limited to (A)', but other common interpretations include 'not only (A), but (B)', or 'not restricted to (A), (B) too'.</p>\r\n\r\n<p>This structure will be used following nouns, and tends to be reserved for fairly formal situations.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183044'>\r\n<li data-study-question='183045'>\r\n<li data-study-question='183046'>\r\n</ul>\r\n\r\n<p>This grammar pattern often indicates that (A) is something that is not especially rare, so should not be, or does not require to be treated in any special way.</p>"
+      }
+    },
+    {
+      "id": "2149",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2149,
+        "source": "Sou Matome N1",
+        "location": "Page 49",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2680",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2680,
+        "site": "",
+        "description": "jlptsensei",
+        "link": "https://jlptsensei.com/learn-japanese-grammar/%E3%81%AB%E9%99%90%E3%81%A3%E3%81%9F%E3%81%93%E3%81%A8%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%84-ni-kagitta-koto-de-wa-nai-meaning/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1566",
+      "type": "related_content",
+      "attributes": {
+        "id": 1566,
+        "relationship_type": "related",
+        "body": "Both express that something is not exclusive, but with a different nuance. に限ったことではない means ‘not limited to this case’ and is used to say that a problem or tendency applies more broadly than the topic at hand, often generalizing from an example, as in 若者に限ったことではない ('It’s not something limited to young people.'). とは限らない means ‘not necessarily’ and is used to deny certainty about an assumption or conclusion itself, as in 成功するとは限らない ('It won’t necessarily succeed.').",
+        "first_relatable": {
+          "id": 998,
+          "slug": "に限ったことではない",
+          "title": "に限ったことではない",
+          "meaning": "Not limited to, Not restricted to, Not only",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 278,
+          "slug": "とは限らない",
+          "title": "とは限らない",
+          "meaning": "Not necessarily so, Is not always true, There is no guarantee that",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,846 @@
+{
+  "data": {
+    "id": "104",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 104,
+      "level": "JLPT4",
+      "lesson_id": 12,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "までに",
+      "nuance": "あることの<strong>締（し）め切（き）り</strong>を強調（きょうちょう）するためによく使（つか）われるフレーズ。",
+      "grammar_order": 149,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 364,
+        "title": "また",
+        "slug": "また"
+      },
+      "previous_grammar_point": {
+        "id": 372,
+        "title": "まで",
+        "slug": "まで"
+      },
+      "lesson_count": "4/17",
+      "title": "までに",
+      "furigana": "までに",
+      "meaning": "By ~, By the time that ~, Before ~",
+      "nuance_translation": "A phrase commonly used to highlight a deadline <strong>by</strong> which something should be done.",
+      "rare_kanji_warning": "迄",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Verb + <strong><span class='gp-popout' data-gp-id='58'>まで</span><span class='gp-popout' data-gp-id='32'>に</span></strong><br>Noun + <strong><span class='gp-popout' data-gp-id='58'>まで</span><span class='gp-popout' data-gp-id='32'>に</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/1196",
+      "metadata": "までに, 迄に, madeni, adverbial particle, case-marking particle, adverb"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "2514",
+            "type": "study_question"
+          },
+          {
+            "id": "2521",
+            "type": "study_question"
+          },
+          {
+            "id": "140",
+            "type": "study_question"
+          },
+          {
+            "id": "180240",
+            "type": "study_question"
+          },
+          {
+            "id": "183860",
+            "type": "study_question"
+          },
+          {
+            "id": "180239",
+            "type": "study_question"
+          },
+          {
+            "id": "180242",
+            "type": "study_question"
+          },
+          {
+            "id": "141",
+            "type": "study_question"
+          },
+          {
+            "id": "142",
+            "type": "study_question"
+          },
+          {
+            "id": "2513",
+            "type": "study_question"
+          },
+          {
+            "id": "2516",
+            "type": "study_question"
+          },
+          {
+            "id": "2519",
+            "type": "study_question"
+          },
+          {
+            "id": "180241",
+            "type": "study_question"
+          },
+          {
+            "id": "2520",
+            "type": "study_question"
+          },
+          {
+            "id": "2517",
+            "type": "study_question"
+          },
+          {
+            "id": "2515",
+            "type": "study_question"
+          },
+          {
+            "id": "2518",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "148",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "810",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "205",
+            "type": "related_content"
+          },
+          {
+            "id": "202",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "215",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "646",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "2514",
+      "type": "study_question",
+      "attributes": {
+        "id": 2514,
+        "content": "１０（じゅう）時（じ）<span class='study-area-input'>____</span>帰（かえ）っ<span class='gp-popout' data-gp-id='128'>てくる</span><span class='gp-popout' data-gp-id='98'>こと</span><span class='gp-popout' data-gp-id='3'>は</span>無理（むり）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "までに",
+        "alternate_grammar": [],
+        "kanji_answer": "までに",
+        "kanji_alt_grammar": [],
+        "nuance": "あることの<strong>締（し）め切（き）り</strong>を強調（きょうちょう）するためによく使（つか）われるフレーズ。",
+        "tense": "Particle, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/104/male_audio/230224_1136.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/１０時までに帰ってくることは無理です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It will be impossible for me to be back <strong>by</strong> ten.",
+        "nuance_translation": "A phrase commonly used to highlight a deadline <strong>by</strong> which something should be done.",
+        "extra_info": "",
+        "reviewable_id": 104,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2521",
+      "type": "study_question",
+      "attributes": {
+        "id": 2521,
+        "content": "２１（にじゅういっ）歳（さい）<span class='study-area-input'>____</span>、兄（あに）<span class='gp-popout' data-gp-id='108'>より</span>背（せ）が高（たか）くなり<span class='gp-popout' data-gp-id='59'>たい</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "までに",
+        "alternate_grammar": [],
+        "kanji_answer": "までに",
+        "kanji_alt_grammar": [],
+        "nuance": "あることの<strong>締（し）め切（き）り</strong>を強調（きょうちょう）するためによく使（つか）われるフレーズ。",
+        "tense": "Particle, Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/２１歳までに、兄より背が高くなりたいです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "で": {
+            "en": "We are looking for a grammar point with the nuance of 'by', 'by the time that', and 'before'.",
+            "es": "",
+            "fr": ""
+          },
+          "とき": {
+            "en": "We are looking for a grammar point with the nuance of 'by', 'by the time that', and 'before'.",
+            "es": "",
+            "fr": ""
+          },
+          "に": {
+            "en": "We are looking for a grammar point with the nuance of 'by', 'by the time that', and 'before'.",
+            "es": "",
+            "fr": ""
+          },
+          "まえに": {
+            "en": "We are looking for a grammar point with the nuance of 'by', 'by the time that', and 'before'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>By the time</strong> I'm 21, I want to be taller than my older brother.",
+        "nuance_translation": "A phrase commonly used to highlight a deadline <strong>by</strong> which something should be done.",
+        "extra_info": "",
+        "reviewable_id": 104,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "140",
+      "type": "study_question",
+      "attributes": {
+        "id": 140,
+        "content": "明日（あした）<span class='study-area-input'>____</span>電話（でんわ）<span class='gp-popout' data-gp-id='21'>を</span>ください。",
+        "answer": "までに",
+        "alternate_grammar": [],
+        "kanji_answer": "までに",
+        "kanji_alt_grammar": [],
+        "nuance": "あることの<strong>締（し）め切（き）り</strong>を強調（きょうちょう）するためによく使（つか）われるフレーズ。",
+        "tense": "Particle, Restrictive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/104/male_audio/230224_1134_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/明日までに電話をください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Please call <strong>by</strong> tomorrow. ",
+        "nuance_translation": "A phrase commonly used to highlight a deadline <strong>by</strong> which something should be done.",
+        "extra_info": "",
+        "reviewable_id": 104,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180240",
+      "type": "study_question",
+      "attributes": {
+        "id": 180240,
+        "content": "遊（あそ）び<span class=\"gp-popout\" data-gp-id=\"48\">に行（い）く</span><span class='study-area-input'>____</span>片付（かたづ）け<span class=\"gp-popout\" data-gp-id=\"777\">て</span><span class=\"gp-popout\" data-gp-id=\"71\">ね</span>。",
+        "answer": "までに",
+        "alternate_grammar": [],
+        "kanji_answer": "までに",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/遊びに行くまでに片付けてね。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Please tidy up <strong>by</strong> the time you go out to play.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 104,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183860",
+      "type": "study_question",
+      "attributes": {
+        "id": 183860,
+        "content": "冬（ふゆ）<span data-gp-id='10'>が</span>終（お）わ<span data-gp-id='26'>る</span><span data-gp-id='104'>までに</span>スキー<span data-gp-id='21'>を</span><span data-gp-id='22'>し</span><span data-gp-id='59'>たい</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I want to go skiing <strong>by</strong> the end of winter. (Not just 'by winter', but specifically 'by the end of winter')",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 104,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180239",
+      "type": "study_question",
+      "attributes": {
+        "id": 180239,
+        "content": "５時（ごじ）<span class='study-area-input'>____</span>駅（えき）<span class=\"gp-popout\" data-gp-id=\"32\">に</span><span class=\"gp-popout\" data-gp-id=\"39\">来（き）</span><span class=\"gp-popout\" data-gp-id=\"60\">てください</span>。",
+        "answer": "までに",
+        "alternate_grammar": [],
+        "kanji_answer": "までに",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/５時までに駅に来てください。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Please come to the station <strong>by</strong> 5 o'clock.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 104,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180242",
+      "type": "study_question",
+      "attributes": {
+        "id": 180242,
+        "content": "来月（らいげつ）<span class=\"gp-popout\" data-gp-id=\"58\">まで</span>レポート<span class=\"gp-popout\" data-gp-id=\"21\">を</span>書（か）<span class=\"gp-popout\" data-gp-id=\"26\">く</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/来月までレポートを書く。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I am writing a report until next month. (Focus is on 'next month' being the end point for something that will continue until that point)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 104,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "141",
+      "type": "study_question",
+      "attributes": {
+        "id": 141,
+        "content": "８（はち）時（じ）<span class='study-area-input'>____</span>学校（がっこう）<span class='gp-popout' data-gp-id='32'>に</span>つか<span class='gp-popout' data-gp-id='86'>なくてはいけない</span>。",
+        "answer": "までに",
+        "alternate_grammar": [],
+        "kanji_answer": "までに",
+        "kanji_alt_grammar": [],
+        "nuance": "あることの<strong>締（し）め切（き）り</strong>を強調（きょうちょう）するためによく使（つか）われるフレーズ。",
+        "tense": "Particle, Restrictive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/104/male_audio/230224_1134_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/８時までに学校につかなくてはいけない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I have to arrive at school <strong>by</strong> 8 o'clock.",
+        "nuance_translation": "A phrase commonly used to highlight a deadline <strong>by</strong> which something should be done.",
+        "extra_info": "",
+        "reviewable_id": 104,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "142",
+      "type": "study_question",
+      "attributes": {
+        "id": 142,
+        "content": "１１（じゅういち）月（がつ）末（まつ）<span class='study-area-input'>____</span>、クリスマスプレゼント<span class='gp-popout' data-gp-id='21'>を</span>買（か）い<span class='gp-popout' data-gp-id='32'>に</span>行（い）きましょう。",
+        "answer": "までに",
+        "alternate_grammar": [],
+        "kanji_answer": "までに",
+        "kanji_alt_grammar": [],
+        "nuance": "あることの<strong>締（し）め切（き）り</strong>を強調（きょうちょう）するためによく使（つか）われるフレーズ。",
+        "tense": "Particle, Restrictive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/１１月末までに、クリスマスプレゼントを買いに行きましょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Let's go Christmas present shopping <strong>by</strong> the end of November.",
+        "nuance_translation": "A phrase commonly used to highlight a deadline <strong>by</strong> which something should be done.",
+        "extra_info": "",
+        "reviewable_id": 104,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2513",
+      "type": "study_question",
+      "attributes": {
+        "id": 2513,
+        "content": "１０（じゅう）時（じ）<span class='study-area-input'>____</span>帰（かえ）っ<span class='gp-popout' data-gp-id='128'>てき</span><span class='gp-popout' data-gp-id='60'>てください</span>。",
+        "answer": "までに",
+        "alternate_grammar": [],
+        "kanji_answer": "までに",
+        "kanji_alt_grammar": [],
+        "nuance": "あることの<strong>締（し）め切（き）り</strong>を強調（きょうちょう）するためによく使（つか）われるフレーズ。",
+        "tense": "Particle, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/104/male_audio/230224_1135_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/１０時までに帰ってきてください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Could you please come back home <strong>by</strong> 10?",
+        "nuance_translation": "A phrase commonly used to highlight a deadline <strong>by</strong> which something should be done.",
+        "extra_info": "",
+        "reviewable_id": 104,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2516",
+      "type": "study_question",
+      "attributes": {
+        "id": 2516,
+        "content": "下書（したが）き<span class='gp-popout' data-gp-id='21'>を</span>見（み）て欲（ほ）しい人（ひと）<span class='gp-popout' data-gp-id='3'>は</span>、明日（あした）<span class='study-area-input'>____</span>提出（ていしゅつ）し<span class='gp-popout' data-gp-id='60'>てください</span>。",
+        "answer": "までに",
+        "alternate_grammar": [],
+        "kanji_answer": "までに",
+        "kanji_alt_grammar": [],
+        "nuance": "あることの<strong>締（し）め切（き）り</strong>を強調（きょうちょう）するためによく使（つか）われるフレーズ。",
+        "tense": "Particle, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/104/male_audio/230224_1137.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/下書きを見て欲しい人は、明日までに提出してください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "For those who want their first draft to be looked at, please turn it in <strong>by</strong> tomorrow.",
+        "nuance_translation": "A phrase commonly used to highlight a deadline <strong>by</strong> which something should be done.",
+        "extra_info": "",
+        "reviewable_id": 104,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2519",
+      "type": "study_question",
+      "attributes": {
+        "id": 2519,
+        "content": "お<span class='vocab-popout' data-vocab-id='649'>昼（ひる）</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>着（つ）きます。",
+        "answer": "までに",
+        "alternate_grammar": [],
+        "kanji_answer": "までに",
+        "kanji_alt_grammar": [],
+        "nuance": "あることの<strong>締（し）め切（き）り</strong>を強調（きょうちょう）するためによく使（つか）われるフレーズ。",
+        "tense": "Particle, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/104/male_audio/230224_1151_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/お昼までには着きます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I will arrive <strong>by</strong> noon.",
+        "nuance_translation": "A phrase commonly used to highlight a deadline <strong>by</strong> which something should be done.",
+        "extra_info": "",
+        "reviewable_id": 104,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180241",
+      "type": "study_question",
+      "attributes": {
+        "id": 180241,
+        "content": "来月（らいげつ）<span class='study-area-input'>____</span>レポート<span class=\"gp-popout\" data-gp-id=\"21\">を</span>書（か）<span class=\"gp-popout\" data-gp-id=\"26\">く</span>。",
+        "answer": "までに",
+        "alternate_grammar": [],
+        "kanji_answer": "までに",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/来月までにレポートを書 く。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I will write a report <strong>by</strong> next month. (Focus is on 'next month' being the deadline)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 104,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2520",
+      "type": "study_question",
+      "attributes": {
+        "id": 2520,
+        "content": "<span class='gp-popout' data-gp-id='83'>まだ</span>全部（ぜんぶ）覚（おぼ）え<span class='gp-popout' data-gp-id='764'>ていません</span>が、来週（らいしゅう）<span class='study-area-input'>____</span>絶対（ぜったい）に覚（おぼ）え<span class='gp-popout' data-gp-id='12'>ます</span>。",
+        "answer": "までに",
+        "alternate_grammar": [],
+        "kanji_answer": "までに",
+        "kanji_alt_grammar": [],
+        "nuance": "あることの<strong>締（し）め切（き）り</strong>を強調（きょうちょう）するためによく使（つか）われるフレーズ。",
+        "tense": "Particle, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/104/male_audio/230224_1152.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/まだ全部覚えていませんが、来週までに絶対に覚えます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I still haven't memorized it all, but I will definitely have it memorized <strong>by</strong> next week.",
+        "nuance_translation": "A phrase commonly used to highlight a deadline <strong>by</strong> which something should be done.",
+        "extra_info": "",
+        "reviewable_id": 104,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2517",
+      "type": "study_question",
+      "attributes": {
+        "id": 2517,
+        "content": "締（し）め切（き）り<span class='study-area-input'>____</span>出（だ）<span class='gp-popout' data-gp-id='26'>す</span><span class='gp-popout' data-gp-id='98'>こと</span><span class='gp-popout' data-gp-id='3'>は</span>難（むずか）し<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "までに",
+        "alternate_grammar": [],
+        "kanji_answer": "までに",
+        "kanji_alt_grammar": [],
+        "nuance": "あることの<strong>締（し）め切（き）り</strong>を強調（きょうちょう）するためによく使（つか）われるフレーズ。",
+        "tense": "Particle, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/104/male_audio/230224_1151.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/締め切りまでに出すことは難しいです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Turning it in <strong>by</strong> the deadline is going to be difficult.",
+        "nuance_translation": "A phrase commonly used to highlight a deadline <strong>by</strong> which something should be done.",
+        "extra_info": "",
+        "reviewable_id": 104,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2515",
+      "type": "study_question",
+      "attributes": {
+        "id": 2515,
+        "content": "<span class='vocab-popout' data-vocab-id='695'>来週（らいしゅう）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>終（お）わります。",
+        "answer": "までに",
+        "alternate_grammar": [],
+        "kanji_answer": "までに",
+        "kanji_alt_grammar": [],
+        "nuance": "あることの<strong>締（し）め切（き）り</strong>を強調（きょうちょう）するためによく使（つか）われるフレーズ。",
+        "tense": "Particle, Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/104/male_audio/230224_1136_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/来週までには終わります。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I will be done <strong>by</strong> next week.",
+        "nuance_translation": "A phrase commonly used to highlight a deadline <strong>by</strong> which something should be done.",
+        "extra_info": "",
+        "reviewable_id": 104,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2518",
+      "type": "study_question",
+      "attributes": {
+        "id": 2518,
+        "content": "５時（ごじ）<span class='study-area-input'>____</span>漢字（かんじ）１００文字（ひゃくもじ）覚（おぼ）え<span class='gp-popout' data-gp-id='12'>る</span><span class='gp-popout' data-gp-id='16'>のは</span>大変（たいへん）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "までに",
+        "alternate_grammar": [],
+        "kanji_answer": "までに",
+        "kanji_alt_grammar": [],
+        "nuance": "あることの<strong>締（し）め切（き）り</strong>を強調（きょうちょう）するためによく使（つか）われるフレーズ。",
+        "tense": "Particle, Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/５時までに漢字１００文字覚えるのは大変です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まで": {
+            "en": "Let's try adding something else to the end.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Remembering 100 kanji <strong>by</strong> five o'clock is going to be rough.",
+        "nuance_translation": "A phrase commonly used to highlight a deadline <strong>by</strong> which something should be done.",
+        "extra_info": "",
+        "reviewable_id": 104,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "148",
+      "type": "writeup",
+      "attributes": {
+        "id": 148,
+        "body_ja": "",
+        "body": "<p><span data-gp-id='104'>までに</span> is a combination of two different types of particles. The <span data-term='副助詞・ふくじょし'>adverbial particle</span> <span data-gp-id='58'>まで</span>, and the <span data-term='格助詞・かくじょし'>case marking particle</span> <span data-gp-id='32'>に</span>. <span data-gp-id='104'>までに</span> is very similar to <span data-gp-id='58'>まで</span> when it means 'until'. However, there is one very important distinction. This distinction is that <span data-gp-id='104'>までに</span> means 'by', not 'until'.</p>\r\n\r\n<p>To use <span data-gp-id='104'>までに</span>, we will need to attach it to the end of a noun, or verb in the non-past form.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180239'>\r\n<li data-study-question='180240'>\r\n</ul>\r\n\r\n<p>To understand the difference between <span data-gp-id='58'>まで</span>, and <span data-gp-id='104'>までに</span>, we need to remember that <span data-gp-id='32'>に</span> usually marks a 'target', or a 'destination' for where something will happen. In this case, <span data-gp-id='58'>まで</span> is the 'target' that <span data-gp-id='32'>に</span> is marking. This is due to the fact that <span data-gp-id='58'>まで</span> means 'as far as' (<span data-gp-id='58'>まで</span> is sometimes written using kanji <span data-gp-id='58'>迄（まで）</span>, especially in older/formal texts, and newspapers).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180241'>\r\n<li data-study-question='180242'>\r\n</ul>\r\n\r\n<p>In this way, <span data-gp-id='104'>までに</span> more literally means '(A) as far as (<span data-gp-id='32'>に</span> marks the target), (B).</p>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>Originally, <span data-gp-id='58'>まで</span> meant 'as far as' in regard to the passing of a particular event. However, in modern Japanese, most people will assume that the speaker means 'by the beginning of (A)'. Due to this, sentences that have a very broad event, such as 夏（なつ）<span data-gp-id='104'>までに</span> could actually be interpreted as 'by the start of summer', or 'before the end of summer', depending on who you are talking to. In these cases, it would be better to add a more specific time frame.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183860'></ul></section>"
+      }
+    },
+    {
+      "id": "810",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 810,
+        "source": "みんなの日本語 I",
+        "location": "Page 110 [CH 17]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "215",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 215,
+        "site": "r/LearnJapanese",
+        "description": "まで and までに distinction when referring to a specific moment in time",
+        "link": "https://www.reddit.com/r/LearnJapanese/comments/2r9fmg/%E3%81%BE%E3%81%A7_and_%E3%81%BE%E3%81%A7%E3%81%AB_distinction_when_referring_to_a/cndqxfe/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "646",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 646,
+        "site": "J-Nihongo",
+        "description": "Additional Example Sentences and Breakdown",
+        "link": "https://j-nihongo.com/maeni-2/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "205",
+      "type": "related_content",
+      "attributes": {
+        "id": 205,
+        "relationship_type": "related",
+        "body": "The particle まで means 'until' when used with a verb that can describe a progressive or ongoing action, e.g. 8時までテレビを見る 'watch TV until eight o'clock'. In contrast, までに means 'by', 'before', or 'no later than', and is used with verbs that describe actions with a set completion point, e.g. 8時までに終わる 'to finish by/before eight o'clock.'",
+        "first_relatable": {
+          "id": 360,
+          "slug": "v-まで",
+          "title": "Verb + まで",
+          "meaning": "Until (something) happens",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 104,
+          "slug": "までに",
+          "title": "までに",
+          "meaning": "By ~, By the time that ~, Before ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "202",
+      "type": "related_content",
+      "attributes": {
+        "id": 202,
+        "relationship_type": "related",
+        "body": "The particle まで means 'until' when used with a time expression and a verb describing an ongoing action. For example, 8時までテレビを見る means 'watch TV until 8 o'clock.' In contrast, までに means 'by' and is used to express that an action is completed before a certain time. For example, 8時までに終わる means 'finish by 8 o'clock'.",
+        "first_relatable": {
+          "id": 58,
+          "slug": "noun-まで",
+          "title": "Noun + まで",
+          "meaning": "Until, Till,  To (but no further than)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 104,
+          "slug": "までに",
+          "title": "までに",
+          "meaning": "By ~, By the time that ~, Before ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

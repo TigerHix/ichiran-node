@@ -1,0 +1,1642 @@
+{
+  "data": {
+    "id": "778",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 778,
+      "level": "JLPT4",
+      "lesson_id": 17,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "verb-ないで",
+      "nuance": "(A)を<strong>してほしくない</strong>ことを<strong>カジュアル</strong>に伝（つた）えたい時（とき）に使（つか）われる短（みじか）くされた活用（かつよう）。",
+      "grammar_order": 241,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 371,
+        "title": "てくれてありがとう",
+        "slug": "てくれてありがとう"
+      },
+      "previous_grammar_point": {
+        "id": 776,
+        "title": "Verb[て] + B",
+        "slug": "verbて-b"
+      },
+      "lesson_count": "6/18",
+      "title": "Verb[ないで]",
+      "furigana": "ないで (Casual Request)",
+      "meaning": "(Please) do not (for me), Casual request",
+      "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used as an abbreviated way of saying <strong>please don't do</strong> (A).",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "<span class='gp-popout' data-gp-id='96'>Verb［ない］+ <strong>で</span></strong>。",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/verb-casual-request-grammar-discussion/18300",
+      "metadata": "ないで, ないでください, naide, naidekudasai, casual, auxiliary verb, case-marking particle, conjunction, request"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "9002",
+            "type": "study_question"
+          },
+          {
+            "id": "8996",
+            "type": "study_question"
+          },
+          {
+            "id": "180643",
+            "type": "study_question"
+          },
+          {
+            "id": "180642",
+            "type": "study_question"
+          },
+          {
+            "id": "9001",
+            "type": "study_question"
+          },
+          {
+            "id": "9003",
+            "type": "study_question"
+          },
+          {
+            "id": "8999",
+            "type": "study_question"
+          },
+          {
+            "id": "8994",
+            "type": "study_question"
+          },
+          {
+            "id": "180641",
+            "type": "study_question"
+          },
+          {
+            "id": "8997",
+            "type": "study_question"
+          },
+          {
+            "id": "8995",
+            "type": "study_question"
+          },
+          {
+            "id": "8998",
+            "type": "study_question"
+          },
+          {
+            "id": "8992",
+            "type": "study_question"
+          },
+          {
+            "id": "8993",
+            "type": "study_question"
+          },
+          {
+            "id": "9000",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "238",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "608",
+            "type": "related_content"
+          },
+          {
+            "id": "517",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2126",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2128",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2127",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "9002",
+      "type": "study_question",
+      "attributes": {
+        "id": 9002,
+        "content": "冷蔵庫（れいぞうこ）にあるケーキ<span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='72'>まだ</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='71'>ね</span>。",
+        "answer": "たべないで",
+        "alternate_grammar": [],
+        "kanji_answer": "食（た）べないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>してほしくない</strong>ことを<strong>カジュアル</strong>に伝（つた）えたい時（とき）に使（つか）われる短（みじか）くされた活用（かつよう）。",
+        "tense": "Negative, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/778/male_audio/230408_1217_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/冷蔵庫にあるケーキはまだ食べないでね。.mp3",
+        "word_prompt": "食（た）べ<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たべないでくれ": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "たべないでくれる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "たべないでくれない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "たべないでもらえる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "たべないでもらえない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "たべないでくれますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "たべないでくれませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "たべないでちょうだい": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "たべないでください": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "たべないでもらえますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "たべないでもらえませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "たべないでくださいますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "たべないでくださいませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "たべないでいただけますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "たべないでいただけませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "たべるな": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "たべない": {
+            "en": "This is the plain negative form. Can you try adding something to the end to indicate this is polite, casual request not to do something?",
+            "es": "",
+            "fr": ""
+          },
+          "たべなくて": {
+            "en": "～なくて is the negative conjunctive form, used to connect reasons or actions. We are looking for a grammar point that means 'please don't'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>(Please) don't</strong> eat the cake in the refrigerator yet.",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used as an abbreviated way of saying <strong>please don't do</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 778,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8996",
+      "type": "study_question",
+      "attributes": {
+        "id": 8996,
+        "content": "食（た）べ<span class='gp-popout' data-gp-id='64'>てから</span>ジェットコースターに<span class='study-area-input'>____</span>。",
+        "answer": "のらないで",
+        "alternate_grammar": [],
+        "kanji_answer": "乗（の）らないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>してほしくない</strong>ことを<strong>カジュアル</strong>に伝（つた）えたい時（とき）に使（つか）われる短（みじか）くされた活用（かつよう）。",
+        "tense": "Negative, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/778/male_audio/230408_1216_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/食べてからジェットコースターに乗らないで。.mp3",
+        "word_prompt": "乗（の）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のらないでくれ": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "のらないでくれる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "のらないでくれない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "のらないでもらえる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "のらないでもらえない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "のらないでくれますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のらないでくれませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のらないでちょうだい": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "のらないでください": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のらないでもらえますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のらないでもらえませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のらないでくださいますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のらないでくださいませんか": {
+            "en": "Could you try a grammar point that is more casual here?re here.",
+            "es": ""
+          },
+          "のらないでいただけますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のらないでいただけませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のるな": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "のらない": {
+            "en": "This is the plain negative form. Can you try adding something to the end to indicate this is polite, casual request not to do something?",
+            "es": "",
+            "fr": ""
+          },
+          "のないで": {
+            "en": "Can you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          },
+          "のりないで": {
+            "en": "Can you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          },
+          "のりなさい": {
+            "en": "～なさい is a polite command telling someone to do something.  We are looking for a grammar point that means 'please don't'.",
+            "es": "",
+            "fr": ""
+          },
+          "のらなくて": {
+            "en": "～なくて is the negative conjunctive form, used to connect reasons or actions. We are looking for a grammar point that means 'please don't'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>(Please) don't ride</strong> a rollercoaster after eating.",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used as an abbreviated way of saying <strong>please don't do</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 778,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180643",
+      "type": "study_question",
+      "attributes": {
+        "id": 180643,
+        "content": "<span class='name-highlight'>妻（つま）が夫（おっと）に</span>：「貯金（ちょきん）をしたいから、無駄（むだ）な物（もの）にお金（かね）を使（つか）わ<span class='study-area-input'>____</span>。」",
+        "answer": "ないで",
+        "alternate_grammar": [],
+        "kanji_answer": "ないで",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/妻が夫に：「貯金をしたいから、無駄な物にお金を使わないで。」.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Wife to her husband: 'I want to save up, so <strong>please don't</strong> use money recklessly.'",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 778,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180642",
+      "type": "study_question",
+      "attributes": {
+        "id": 180642,
+        "content": "<span class='name-highlight'>母（はは）が娘（むすめ）に</span>：「知（し）らない人（ひと）についていか<span class='study-area-input'>____</span>！約束（やくそく）よ。」",
+        "answer": "ないで",
+        "alternate_grammar": [],
+        "kanji_answer": "ないで",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/母が娘に：「知らない人についていかないで！約束よ。」.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Mother to her daughter: '<strong>Please don't</strong> go with people you don't know! That's a promise.'",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 778,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9001",
+      "type": "study_question",
+      "attributes": {
+        "id": 9001,
+        "content": "<span class='gp-popout' data-gp-id='14'>ここ</span><span class='gp-popout' data-gp-id='3'>は</span>病院（びょういん）な<span class='gp-popout' data-gp-id='62'>ので</span>、走（はし）っ<span class='gp-popout' data-gp-id='79'>たり</span>、騒（さわ）い<span class='gp-popout' data-gp-id='79'>だり</span><span class='study-area-input'>____</span>。",
+        "answer": "しないで",
+        "alternate_grammar": [],
+        "kanji_answer": "しないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>してほしくない</strong>ことを<strong>カジュアル</strong>に伝（つた）えたい時（とき）に使（つか）われる短（みじか）くされた活用（かつよう）。",
+        "tense": "Negative, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/778/male_audio/230408_1217_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ここは病院なので、走ったり、騒いだりしないで。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しないでくれ": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでくれる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでくれない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでもらえる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでもらえない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでくれますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでくれませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでちょうだい": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでください": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでもらえますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでもらえませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでくださいますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでくださいませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでいただけますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでいただけませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "するな": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しない": {
+            "en": "This is the plain negative form. Can you try adding something to the end to indicate this is polite, casual request not to do something?",
+            "es": "",
+            "fr": ""
+          },
+          "しなさい": {
+            "en": "～なさい is a polite command telling someone to do something.  We are looking for a grammar point that means 'please don't'.",
+            "es": "",
+            "fr": ""
+          },
+          "しなくて": {
+            "en": "～なくて is the negative conjunctive form, used to connect reasons or actions. We are looking for a grammar point that means 'please don't'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Since this is a hospital, <strong>(please) don't do</strong> things like run or be boisterous.",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used as an abbreviated way of saying <strong>please don't do</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 778,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9003",
+      "type": "study_question",
+      "attributes": {
+        "id": 9003,
+        "content": "<span class='name-highlight'>母親（ははおや）<span class='gp-popout' data-gp-id='10'>が</span>子供（こども）に言（い）<span class='gp-popout' data-gp-id='26'>う</span></span>：「<span class='gp-popout' data-gp-id='72'>まだ</span>熱（あつ）<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='45'>から</span>、<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='71'>ね</span>。」",
+        "answer": "さわらないで",
+        "alternate_grammar": [],
+        "kanji_answer": "触（さわ）らないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>してほしくない</strong>ことを<strong>カジュアル</strong>に伝（つた）えたい時（とき）に使（つか）われる短（みじか）くされた活用（かつよう）。",
+        "tense": "Negative, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/778/male_audio/230408_1217_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/母親が子供に言う：「まだ熱いから、触らないでね。」.mp3",
+        "word_prompt": "触（さわ）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "さわらないでくれ": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "さわらないでくれる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "さわらないでくれない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "さわらないでもらえる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "さわらないでもらえない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "さわらないでくれますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "さわらないでくれませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "さわらないでちょうだい": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "さわらないでください": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "さわらないでもらえますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "さわらないでもらえませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "さわらないでくださいますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "さわらないでくださいませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "さわらないでいただけますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "さわらないでいただけませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "さわるな": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Mother speaking to her child</span>: 'It is still hot, so <strong>(please) don't touch</strong> it.'",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used as an abbreviated way of saying <strong>please don't do</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 778,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8999",
+      "type": "study_question",
+      "attributes": {
+        "id": 8999,
+        "content": "<span class='gp-popout' data-gp-id='29'>あそこ</span><span class='gp-popout' data-gp-id='6'>の</span>公園（こうえん）<span class='gp-popout' data-gp-id='3'>は</span>危（あぶ）な<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='62'>ので</span>、<span class='study-area-input'>____</span>。",
+        "answer": "あそばないで",
+        "alternate_grammar": [],
+        "kanji_answer": "遊（あそ）ばないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>してほしくない</strong>ことを<strong>カジュアル</strong>に伝（つた）えたい時（とき）に使（つか）われる短（みじか）くされた活用（かつよう）。",
+        "tense": "Negative, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/778/male_audio/230408_1218_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/あそこの公園は危ないので、遊ばないで。.mp3",
+        "word_prompt": "遊（あそ）<span class='gp-popout' data-gp-id='26'>ぶ</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あそばないでくれ": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "あそばないでくれる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "あそばないでくれない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "あそばないでもらえる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "あそばないでもらえない": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "あそばないでくれますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "あそばないでくれませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "あそばないでちょうだい": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "あそばないでください": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "あそばないでもらえますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "あそばないでもらえませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "あそばないでくださいますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "あそばないでくださいませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "あそばないでいただけますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "あそばないでいただけませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "あそぶな": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "あそばない": {
+            "en": "This is the plain negative form. Can you try adding something to the end to indicate this is polite, casual request not to do something?",
+            "es": "",
+            "fr": ""
+          },
+          "あそんで": {
+            "en": "Can you try checking your conjugation? We are looking for a grammar point that uses verbs in their negative short form.",
+            "es": "",
+            "fr": ""
+          },
+          "あそびないで": {
+            "en": "Can you try checking your conjugation? ",
+            "es": "",
+            "fr": ""
+          },
+          "あそばなくて": {
+            "en": "～なくて is the negative conjunctive form, used to connect reasons or actions. We are looking for a grammar point that means 'please don't'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Since that park is dangerous, <strong>(please) don't play</strong> there.",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used as an abbreviated way of saying <strong>please don't do</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 778,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8994",
+      "type": "study_question",
+      "attributes": {
+        "id": 8994,
+        "content": "<span class='name-highlight'>母親（ははおや）<span class='gp-popout' data-gp-id='10'>が</span>子供（こども）に言（い）<span class='gp-popout' data-gp-id='26'>う</span></span>：「いい子（こ）だ<span class='gp-popout' data-gp-id='45'>から</span>、<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='71'>ね</span>。」",
+        "answer": "なかないで",
+        "alternate_grammar": [],
+        "kanji_answer": "泣（な）かないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>してほしくない</strong>ことを<strong>カジュアル</strong>に伝（つた）えたい時（とき）に使（つか）われる短（みじか）くされた活用（かつよう）。",
+        "tense": "Negative, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/778/male_audio/230408_1216.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/母親が子供に言う：「いい子だから、泣かないでね。」.mp3",
+        "word_prompt": "泣（な）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なかないでくれ": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "なかないでくれる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "なかないでくれない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "なかないでもらえる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "なかないでもらえない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "なかないでくれますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "なかないでくれませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "なかないでちょうだい": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "なかないでください": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "なかないでもらえますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "なかないでもらえませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "なかないでくださいますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "なかないでくださいませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "なかないでいただけますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "なかないでいただけませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "なくな": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "なくないで": {
+            "en": "Can you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          },
+          "なかなさい": {
+            "en": "～なさい is a polite command telling someone to do something.  We are looking for a grammar point that means 'please don't'.",
+            "es": "",
+            "fr": ""
+          },
+          "なかなくて": {
+            "en": "～なくて is the negative conjunctive form, used to connect reasons or actions. We are looking for a grammar point that means 'please don't'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<span class='name-highlight'>Mother speaking to her child</span>: 'You are a good child, so <strong>(please) don't cry</strong>, okay? '",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used as an abbreviated way of saying <strong>please don't do</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 778,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180641",
+      "type": "study_question",
+      "attributes": {
+        "id": 180641,
+        "content": "<span class='name-highlight'>先生（せんせい）</span>：「そこの生徒（せいと）、授業中（じゅぎょうちゅう）に寝（ね）<span class='study-area-input'>____</span>！」",
+        "answer": "ないで",
+        "alternate_grammar": [],
+        "kanji_answer": "ないで",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/先生：「そこの生徒、授業中に寝ないで！」.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Teacher: 'The student there, <strong>please don't</strong> sleep during class!'",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 778,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8997",
+      "type": "study_question",
+      "attributes": {
+        "id": 8997,
+        "content": "「バカに<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='78'>よ</span>！はんだくん。」",
+        "answer": "しないで",
+        "alternate_grammar": [],
+        "kanji_answer": "しないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>してほしくない</strong>ことを<strong>カジュアル</strong>に伝（つた）えたい時（とき）に使（つか）われる短（みじか）くされた活用（かつよう）。",
+        "tense": "Negative, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/778/male_audio/230408_1217.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/「バカにしないでよ！はんだくん。」.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しないでくれ": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでくれる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでくれない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでもらえる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでもらえない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでくれますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでくれませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでちょうだい": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでください": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでもらえますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでもらえませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでくださいますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでくださいませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでいただけますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでいただけませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "するな": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しない": {
+            "en": "This is the plain negative form. Can you try adding something to the end to indicate this is polite, casual request not to do something?",
+            "es": "",
+            "fr": ""
+          },
+          "しなさい": {
+            "en": "～なさい is a polite command telling someone to do something.  We are looking for a grammar point that means 'please don't'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "'<strong>(Please) don't</strong> make a fool out of me! Handa.'",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used as an abbreviated way of saying <strong>please don't do</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 778,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8995",
+      "type": "study_question",
+      "attributes": {
+        "id": 8995,
+        "content": "寝（ね）<span class='gp-popout' data-gp-id='12'>る</span><span class='gp-popout' data-gp-id='53'>前（まえ）に</span>携帯（けいたい）<span class='gp-popout' data-gp-id='21'>を</span>使（つか）っ<span class='gp-popout' data-gp-id='79'>たり</span>、おかし<span class='gp-popout' data-gp-id='21'>を</span>食（た）べ<span class='gp-popout' data-gp-id='79'>たり</span><span class='study-area-input'>____</span>。",
+        "answer": "しないで",
+        "alternate_grammar": [],
+        "kanji_answer": "しないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>してほしくない</strong>ことを<strong>カジュアル</strong>に伝（つた）えたい時（とき）に使（つか）われる短（みじか）くされた活用（かつよう）。",
+        "tense": "Negative, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/778/male_audio/230408_1216_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/寝る前に携帯を使ったり、おかしを食べたりしないで。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しないでくれ": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでくれる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでくれない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでもらえる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでもらえない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでくれますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでくれませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでちょうだい": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しないでください": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでもらえますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでもらえませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでくださいますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでくださいませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでいただけますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しないでいただけませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "するな": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しなさい": {
+            "en": "～なさい is a polite command telling someone to do something.  We are looking for a grammar point that means 'please don't'.",
+            "es": "",
+            "fr": ""
+          },
+          "しなくて": {
+            "en": "～なくて is the negative conjunctive form, used to connect reasons or actions. We are looking for a grammar point that means 'please don't'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Before going to bed, <strong>(please)</strong> <strong>don't</strong> do things like use your phone or eat candy.",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used as an abbreviated way of saying <strong>please don't do</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 778,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8998",
+      "type": "study_question",
+      "attributes": {
+        "id": 8998,
+        "content": "明日（あした）<span class='gp-popout' data-gp-id='52'>から</span>旅行（りょこう）<span class='gp-popout' data-gp-id='48'>に行（い）く</span><span class='gp-popout' data-gp-id='45'>から</span>、<strong>風邪（かぜ）<span class='gp-popout' data-gp-id='21'>を</span></strong><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='71'>ね</span>。",
+        "answer": "ひかないで",
+        "alternate_grammar": [],
+        "kanji_answer": "引（ひ）かないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>してほしくない</strong>ことを<strong>カジュアル</strong>に伝（つた）えたい時（とき）に使（つか）われる短（みじか）くされた活用（かつよう）。",
+        "tense": "Negative, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/778/male_audio/230408_1218.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/明日から旅行に行くから、風邪を引かないでね。.mp3",
+        "word_prompt": "引（ひ）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ひかないでくれ": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "ひかないでくれる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "ひかないでくれない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "ひかないでもらえる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "ひかないでもらえない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "ひかないでくれますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ひかないでくれませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ひかないでちょうだい": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "ひかないでください": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ひかないでもらえますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ひかないでもらえませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ひかないでくださいますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ひかないでくださいませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ひかないでいただけますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ひかないでいただけませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ひくな": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ひかない": {
+            "en": "This is the plain negative form. Can you try adding something to the end to indicate this is polite, casual request not to do something?",
+            "es": "",
+            "fr": ""
+          },
+          "ひきないで": {
+            "en": "Can you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          },
+          "ひかなくて": {
+            "en": "～なくて is the negative conjunctive form, used to connect reasons or actions. We are looking for a grammar point that means 'please don't'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Since you are going on a trip tomorrow, <strong>(please) don't catch a cold</strong>.",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used as an abbreviated way of saying <strong>please don't do</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 778,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8992",
+      "type": "study_question",
+      "attributes": {
+        "id": 8992,
+        "content": "<span class='name-highlight'>姉（あね）<span class='gp-popout' data-gp-id='10'>が</span>弟（おとうと）に言（い）<span class='gp-popout' data-gp-id='26'>う</span></span>：「頼（たの）<span class='gp-popout' data-gp-id='26'>む</span><span class='gp-popout' data-gp-id='45'>から</span>、親（おや）に<span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='718'>何（なに）も</span><span class='study-area-input'>____</span>。」",
+        "answer": "いわないで",
+        "alternate_grammar": [],
+        "kanji_answer": "言（い）わないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>してほしくない</strong>ことを<strong>カジュアル</strong>に伝（つた）えたい時（とき）に使（つか）われる短（みじか）くされた活用（かつよう）。",
+        "tense": "Negative, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/778/male_audio/230408_1215.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/姉が弟に言う：「頼むから、親には何も言わないで。」.mp3",
+        "word_prompt": "言（い）<span class='gp-popout' data-gp-id='26'>う</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いわないでくれ": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "いわないでくれる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "いわないでくれない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "いわないでもらえる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "いわないでもらえない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "いわないでくれますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "いわないでくれませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "いわないでちょうだい": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "いわないでください": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "いわないでもらえますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "いわないでもらえませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "いわないでくださいますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "いわないでくださいませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "いわないでいただけますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "いわないでいただけませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "いうな": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "いわない": {
+            "en": "This is the plain negative form. Can you try adding something to the end to indicate this is polite, casual request not to do something?",
+            "es": "",
+            "fr": ""
+          },
+          "いわなくて": {
+            "en": "～なくて is the negative conjunctive form, used to connect reasons or actions. We are looking for a grammar point that means 'please don't'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<span class='name-highlight'>Elder sister speaking to her younger brother</span>: 'I am asking you, so <strong>(please) don't tell</strong> our parents.'",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used as an abbreviated way of saying <strong>please don't do</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 778,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8993",
+      "type": "study_question",
+      "attributes": {
+        "id": 8993,
+        "content": "<span class='name-highlight'>母親（ははおや）<span class='gp-popout' data-gp-id='10'>が</span>子供（こども）に言（い）<span class='gp-popout' data-gp-id='26'>う</span></span>：「お父（とう）さん<span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='72'>まだ</span>寝（ね）<span class='gp-popout' data-gp-id='27'>ている</span><span class='gp-popout' data-gp-id='62'>ので</span>、大（おお）き<span class='gp-popout' data-gp-id='24'>い</span>声（こえ）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='71'>ね</span>。」",
+        "answer": "ださないで",
+        "alternate_grammar": [],
+        "kanji_answer": "出（だ）さないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>してほしくない</strong>ことを<strong>カジュアル</strong>に伝（つた）えたい時（とき）に使（つか）われる短（みじか）くされた活用（かつよう）。",
+        "tense": "Negative, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/778/male_audio/230408_1215_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson4/778/母親が子供に言う：「お父さんはまだ寝ているので、大きい声を出さないでね。」.mp3",
+        "word_prompt": "出（だ）<span class='gp-popout' data-gp-id='26'>す</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ださないでくれ": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "ださないでくれる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "ださないでくれない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "ださないでもらえる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "ださないでもらえない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "ださないでくれますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ださないでくれませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ださないでちょうだい": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "ださないでください": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ださないでもらえますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ださないでもらえませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ださないでくださいますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ださないでくださいませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ださないでいただけますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ださないでいただけませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "だすな": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ださない": {
+            "en": "This is the plain negative form. Can you try adding something to the end to indicate this is polite, casual request not to do something?",
+            "es": "",
+            "fr": ""
+          },
+          "だしないで": {
+            "en": "Can you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<span class='name-highlight'>Mother speaking to her child</span>: 'Since dad is still sleeping, <strong>(please) don't talk loudly</strong>.'",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used as an abbreviated way of saying <strong>please don't do</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 778,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9000",
+      "type": "study_question",
+      "attributes": {
+        "id": 9000,
+        "content": "<span class='name-highlight'>子供（こども）<span class='gp-popout' data-gp-id='10'>が</span>母親（ははおや）に言（い）<span class='gp-popout' data-gp-id='26'>う</span></span>：「ママ、すぐ<span class='gp-popout' data-gp-id='32'>に</span>戻（もど）っ<span class='gp-popout' data-gp-id='128'>てくる</span><span class='gp-popout' data-gp-id='78'>よ</span>。<span class='study-area-input'>____</span>。」",
+        "answer": "しんぱいしないで",
+        "alternate_grammar": [],
+        "kanji_answer": "心配（しんぱい）しないで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>してほしくない</strong>ことを<strong>カジュアル</strong>に伝（つた）えたい時（とき）に使（つか）われる短（みじか）くされた活用（かつよう）。",
+        "tense": "Negative, Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson7/778/male_audio/230408_1218_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson4/778/子供が母親に言う：「ママ、すぐに戻ってくるよ。心配しないで。」.mp3",
+        "word_prompt": "心配（しんぱい）<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しんぱいしないでくれ": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しんぱいしないでくれる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しんぱいしないでくれない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しんぱいしないでもらえる": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しんぱいしないでもらえない": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しんぱいしないでくれますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しんぱいしないでくれませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しんぱいしないでちょうだい": {
+            "en": "Can you remove something from the end?",
+            "es": ""
+          },
+          "しんぱいしないでください": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しんぱいしないでもらえますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しんぱいしないでもらえませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しんぱいしないでくださいますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しんぱいしないでくださいませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しんぱいしないでいただけますか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しんぱいしないでいただけませんか": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しんぱいするな": {
+            "en": "Let's try a different grammar structure that has a weaker nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しんぱいないで": {
+            "en": "Can you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          },
+          "しんぱいしなくて": {
+            "en": "～なくて is the negative conjunctive form, used to connect reasons or actions. We are looking for a grammar point that means 'please don't'.",
+            "es": "",
+            "fr": ""
+          },
+          "しんぱいして": {
+            "en": "～て is the conjunctive form, used to connect reasons or actions. We are looking for a grammar point that means 'please don't'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<span class='name-highlight'>A child speaking to their mother</span>: 'Mom, I will come back soon. <strong>(Please) don't worry</strong>.'",
+        "nuance_translation": "A <strong>casual</strong>, simple conjunctive form used as an abbreviated way of saying <strong>please don't do</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 778,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "238",
+      "type": "writeup",
+      "attributes": {
+        "id": 238,
+        "body_ja": "",
+        "body": "<p><span data-gp-id='65'>ないでください</span> is a polite way to express 'please don't do (A)'. However, such politeness is often not required, like in conversations between close friends. In these cases, <span data-gp-id='778'>ないで</span> by itself may be used for the same purpose. Although grammatically the same as the <span data-gp-id='96'>ないで</span> with the meaning of 'without doing (A), (B)', rather having a part (A) and a part (B) to the sentence, this <span data-gp-id='778'>ないで</span> acts more like a simple statement.</p>\r\n\r\n<p><span data-gp-id='778'>ないで</span> combines the <span data-term='助動詞・じょどうし'>auxiliary verb</span> ない, with the <span data-term='格助詞・かくじょし'>case marking particle</span>, <span data-gp-id='36'>で</span>. To use this structure, simply attach it to the negative stem of the verb that you wish to request someone not to do. The sentence itself usually finishes with <span data-gp-id='778'>ないで</span>.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180641'>\r\n<li data-study-question='180642'>\r\n<li data-study-question='180643'>\r\n</ul>"
+      }
+    },
+    {
+      "id": "2126",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2126,
+        "site": "Tae Kim",
+        "description": "Casual negative request",
+        "link": "https://guidetojapanese.org/learn/grammar/requests",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2128",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2128,
+        "site": "Kansaiben",
+        "description": "Fun with the Kansai dialect",
+        "link": "http://www.kansaiben.com/3.BasicGrammar/2.TE-form/2.Grammar/5G.html",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2127",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2127,
+        "site": "Wasabi",
+        "description": "Exercises",
+        "link": "https://wasabi-jpn.com/magazine/japanese-lessons/japanese-grammar-exercise-making-negative-requests/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "608",
+      "type": "related_content",
+      "attributes": {
+        "id": 608,
+        "relationship_type": "related",
+        "body": "The ないで form combines a verb in the negative with で, and has two common uses: (1) to make a negative request, e.g. 食べないで ('Don't eat it.'), and (2) to express 'without doing' something, e.g. 晩ご飯を食べないで出かけた ('I went out without eating dinner.').",
+        "first_relatable": {
+          "id": 778,
+          "slug": "verb-ないで",
+          "title": "Verb[ないで]",
+          "meaning": "(Please) do not (for me), Casual request",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 96,
+          "slug": "ないで",
+          "title": "ないで",
+          "meaning": "Without doing, Not ~ and ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "517",
+      "type": "related_content",
+      "attributes": {
+        "id": 517,
+        "relationship_type": "related",
+        "body": "Both Verb[ないで] and ないでください are used to express requests not to do something. While ないでください is polite, and can be used with strangers or people equal in status to you, Verb[ないで] (without ください) is more casual, and typically used to make requests of friends or family members in a casual tone. Requests with てください and especially Verb [て] can be followed by ね (e.g. 食べてね) for a softer, more gentle feeling.",
+        "first_relatable": {
+          "id": 778,
+          "slug": "verb-ないで",
+          "title": "Verb[ないで]",
+          "meaning": "(Please) do not (for me), Casual request",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 65,
+          "slug": "ないでください",
+          "title": "ないでください",
+          "meaning": "Please don't (Polite request)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

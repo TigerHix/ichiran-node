@@ -1,0 +1,1217 @@
+{
+  "data": {
+    "id": "171",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 171,
+      "level": "JLPT4",
+      "lesson_id": 16,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "なくてもいい",
+      "nuance": "<strong>何（なに）かをしなくても問題（もんだい）がない</strong>ことを強調（きょうちょう）する文法（ぶんぽう）。",
+      "grammar_order": 233,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 99,
+        "title": "てみる",
+        "slug": "てみる"
+      },
+      "previous_grammar_point": {
+        "id": 160,
+        "title": "ているあいだに",
+        "slug": "ているあいだに"
+      },
+      "lesson_count": "14/16",
+      "title": "なくてもいい",
+      "furigana": "なくてもいい",
+      "meaning": "Don't have to",
+      "nuance_translation": "A grammar point used to highlight that <strong>not doing something is okay</strong>.",
+      "rare_kanji_warning": null,
+      "caution": "も can be dropped in casual speech",
+      "polite_structure": "<span class='gp-popout' data-gp-id='174'>Verb［なくて］ + （<strong>も</strong>）</span> + <strong><span class='gp-popout' data-gp-id='7'>いい</span></strong> + <span class='gp-popout' data-gp-id='2'>です</span>",
+      "casual_structure": "<span class='gp-popout' data-gp-id='174'>Verb［なくて］ + （<strong>も</strong>）</span> + <strong><span class='gp-popout' data-gp-id='7'>いい</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10077",
+      "metadata": "なくてもいい, なくていい, nakutemoii, nakuteii, expression, polite, auxiliary verb, casual"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "338",
+            "type": "study_question"
+          },
+          {
+            "id": "3296",
+            "type": "study_question"
+          },
+          {
+            "id": "337",
+            "type": "study_question"
+          },
+          {
+            "id": "3293",
+            "type": "study_question"
+          },
+          {
+            "id": "3294",
+            "type": "study_question"
+          },
+          {
+            "id": "3295",
+            "type": "study_question"
+          },
+          {
+            "id": "180612",
+            "type": "study_question"
+          },
+          {
+            "id": "180611",
+            "type": "study_question"
+          },
+          {
+            "id": "3297",
+            "type": "study_question"
+          },
+          {
+            "id": "336",
+            "type": "study_question"
+          },
+          {
+            "id": "3289",
+            "type": "study_question"
+          },
+          {
+            "id": "3290",
+            "type": "study_question"
+          },
+          {
+            "id": "180610",
+            "type": "study_question"
+          },
+          {
+            "id": "3291",
+            "type": "study_question"
+          },
+          {
+            "id": "3292",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "230",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "189",
+            "type": "offline_resource"
+          },
+          {
+            "id": "817",
+            "type": "offline_resource"
+          },
+          {
+            "id": "582",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "766",
+            "type": "related_content"
+          },
+          {
+            "id": "913",
+            "type": "related_content"
+          },
+          {
+            "id": "16",
+            "type": "related_content"
+          },
+          {
+            "id": "765",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "330",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "331",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1245",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "338",
+      "type": "study_question",
+      "attributes": {
+        "id": 338,
+        "content": "<span class='gp-popout' data-gp-id='37'>その</span>青（あお）<span class='gp-popout' data-gp-id='24'>い</span>セーター<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "きなくてもいい",
+        "alternate_grammar": [],
+        "kanji_answer": "着（き）なくてもいい",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>何（なに）かをしなくても問題（もんだい）がない</strong>ことを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Negative, Permissive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson6/171/male_audio/230304_1159_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/その青いセーターを着なくてもいいですよ。.mp3",
+        "word_prompt": "着（き）<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きなくていい": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "きるひつようがない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "きらなくてもいい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          },
+          "きないでもいい": {
+            "en": "Although the meaning is similar, this grammar point does not use the structure ないで. Could you try a grammar point that highlights that it is 'ok even if (A) is not done'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>It is alright even if you do not wear</strong> that blue sweater.",
+        "nuance_translation": "A grammar point used to highlight that <strong>not doing something is okay</strong>.",
+        "extra_info": "",
+        "reviewable_id": 171,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3296",
+      "type": "study_question",
+      "attributes": {
+        "id": 3296,
+        "content": "全部（ぜんぶ）<span class='gp-popout' data-gp-id='6'>の</span>漢字（かんじ）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='78'>よ</span>。２０００（にせん）字（じ）覚（おぼ）え<span class='gp-popout' data-gp-id='102'>たら</span>新聞（しんぶん）<span class='gp-popout' data-gp-id='21'>を</span>読（よ）<span class='gp-popout' data-gp-id='132'>める</span><span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "おぼえなくてもいい",
+        "alternate_grammar": [],
+        "kanji_answer": "覚（おぼ）えなくてもいい",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>何（なに）かをしなくても問題（もんだい）がない</strong>ことを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Negative, Standard, Permissive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson6/171/male_audio/230304_1201_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/全部の漢字を覚えなくてもいいよ。２０００字覚えたら新聞を読めるよ。.mp3",
+        "word_prompt": "覚（おぼ）え<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おぼえなくていい": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "おぼえんでいい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "おぼえるひつようがない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "おぼえなくてもいいです": {
+            "en": "Looking for the casual. Also the tenses of both phrases need to match.",
+            "es": ""
+          },
+          "おぼえてもいい": {
+            "en": "We are looking for a grammar point that highlights that it is 'ok even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          },
+          "おぼえらなくてもいい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          },
+          "おぼえなくても": {
+            "en": "Could you add something to the end of this to add the nuance of 'ok even if (A) is not done'?",
+            "es": "",
+            "fr": ""
+          },
+          "おぼえないでもいい": {
+            "en": "Although the meaning is similar, this grammar point does not use the structure ないで. Could you try a grammar point that highlights that it is 'ok even if (A) is not done'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>It is okay even if you don't remember</strong> all of the kanji. If you remember 2000 characters, you can read the newspaper. ",
+        "nuance_translation": "A grammar point used to highlight that <strong>not doing something is okay</strong>.",
+        "extra_info": "",
+        "reviewable_id": 171,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "337",
+      "type": "study_question",
+      "attributes": {
+        "id": 337,
+        "content": "掃除（そうじ）を<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "しなくてもいい",
+        "alternate_grammar": [
+          "しなくてもいい"
+        ],
+        "kanji_answer": "しなくてもいい",
+        "kanji_alt_grammar": [
+          "しなくてもいい"
+        ],
+        "nuance": "<strong>何（なに）かをしなくても問題（もんだい）がない</strong>ことを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Negative, Permissive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson6/171/male_audio/230304_1159_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/掃除をしなくてもいいですか。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しなくていい": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "するひつようがない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "してもいい": {
+            "en": "Could you try a grammar point that highlights that it is 'ok even if (A) is not done'?",
+            "es": "",
+            "fr": ""
+          },
+          "しないでもいい": {
+            "en": "Although the meaning is similar, this grammar point does not use the structure ないで. Could you try a grammar point that highlights that it is 'ok even if (A) is not done'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>It is alright even if I don't</strong> clean?",
+        "nuance_translation": "A grammar point used to highlight that <strong>not doing something is okay</strong>.",
+        "extra_info": "",
+        "reviewable_id": 171,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3293",
+      "type": "study_question",
+      "attributes": {
+        "id": 3293,
+        "content": "<span class='gp-popout' data-gp-id='11'>それ</span><span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='157'>と聞（き）いた</span><span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "しなくてもいい",
+        "alternate_grammar": [],
+        "kanji_answer": "しなくてもいい",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>何（なに）かをしなくても問題（もんだい）がない</strong>ことを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Negative, Standard, Permissive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson6/171/male_audio/230304_1200_03(1).mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/それをしなくてもいいと聞いたよ。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しなくていい": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "せんでいい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "しらんでいい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "するひつようがない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "してもいい": {
+            "en": "We are looking for a grammar point that highlights that it is 'ok even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          },
+          "しないでもいい": {
+            "en": "Although the meaning is similar, this grammar point does not use the structure ないで. Could you try a grammar point that highlights that it is 'ok even if (A) is not done'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I heard that <strong>it is alright even if you don't do</strong> that.",
+        "nuance_translation": "A grammar point used to highlight that <strong>not doing something is okay</strong>.",
+        "extra_info": "",
+        "reviewable_id": 171,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3294",
+      "type": "study_question",
+      "attributes": {
+        "id": 3294,
+        "content": "日本（にほん）に<span class='gp-popout' data-gp-id='3'>は</span>バス<span class='gp-popout' data-gp-id='15'>と</span>電車（でんしゃ）とタクシー<span class='gp-popout' data-gp-id='13'>がある</span><span class='gp-popout' data-gp-id='62'>ので</span>、車（くるま）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "かわなくてもいい",
+        "alternate_grammar": [],
+        "kanji_answer": "買（か）わなくてもいい",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>何（なに）かをしなくても問題（もんだい）がない</strong>ことを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Negative, Standard, Permissive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson6/171/male_audio/230304_1201.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/日本にはバスと電車とタクシーがあるので、車を買わなくてもいい。.mp3",
+        "word_prompt": "買（か）<span class='gp-popout' data-gp-id='26'>う</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かわなくていい": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "かわんでいい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "かわなくてもいいです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "かうひつようがない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "かわない": {
+            "en": "We are looking for a grammar point that highlights that it is 'ok even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          },
+          "かわないほうがいい": {
+            "en": "We are looking for a grammar point that highlights that it is 'ok even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          },
+          "かってはいけない": {
+            "en": "This would mean, 'you should not buy'. We are looking for a grammar point that highlights that it is 'ok even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          },
+          "かわないで": {
+            "en": "This would mean, 'please don't buy'. We are looking for a grammar point that highlights that it is 'ok even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          },
+          "かわないでもいい": {
+            "en": "Although the meaning is similar, this grammar point does not use the structure ないで. Could you try a grammar point that highlights that it is 'ok even if (A) is not done'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "In Japan there are buses, trains and taxis, so <strong>you don't have to buy</strong> a car. ",
+        "nuance_translation": "A grammar point used to highlight that <strong>not doing something is okay</strong>.",
+        "extra_info": "",
+        "reviewable_id": 171,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3295",
+      "type": "study_question",
+      "attributes": {
+        "id": 3295,
+        "content": "今日（きょう）買（か）い物（もの）<span class='gp-popout' data-gp-id='32'>に</span>行（い）<span class='gp-popout' data-gp-id='154'>けば</span>、週末（しゅうまつ）は<span class='study-area-input'>____</span>。",
+        "answer": "いかなくてもいい",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）かなくてもいい",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>何（なに）かをしなくても問題（もんだい）がない</strong>ことを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Negative, Standard, Permissive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson6/171/male_audio/230304_1201_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/今日買い物に行けば、週末は行かなくてもいい。.mp3",
+        "word_prompt": "行（い）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いかなくていい": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "いかんでいい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "いかなくていいです": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "いかなくてもいいです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "いくひつようがない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "いかない": {
+            "en": "We are looking for a grammar point that highlights that it is 'ok even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          },
+          "いけなくてもいい": {
+            "en": "Could you try using the prompted verb?",
+            "es": "",
+            "fr": ""
+          },
+          "いなくてもいい": {
+            "en": "Could you try using the prompted verb?",
+            "es": "",
+            "fr": ""
+          },
+          "いかないでもいい": {
+            "en": "Although the meaning is similar, this grammar point does not use the structure ないで. Could you try a grammar point that highlights that it is 'ok even if (A) is not done'?",
+            "es": "",
+            "fr": ""
+          },
+          "いかないほうがいい": {
+            "en": "～ほうがいい means 'it would be better if you did or didn’t do something'. We’re looking for a grammar point that expresses 'it’s okay even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          },
+          "いってはいけない": {
+            "en": "～てはいけない means 'you must not' or 'is forbidden'. We are looking for a grammar point that highlights that it is 'ok even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "If I can go shopping today, then <strong>I don't have to go</strong> on the weekend. ",
+        "nuance_translation": "A grammar point used to highlight that <strong>not doing something is okay</strong>.",
+        "extra_info": "",
+        "reviewable_id": 171,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180612",
+      "type": "study_question",
+      "attributes": {
+        "id": 180612,
+        "content": "今日（きょう）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>会社（かいしゃ）に<span class=\"gp-popout\" data-gp-id=\"39\">来（こ）</span><span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"78\">よ</span>。",
+        "answer": "なくていい",
+        "alternate_grammar": [
+          "なくてもいい",
+          "なくていい"
+        ],
+        "kanji_answer": "なくていい",
+        "kanji_alt_grammar": [
+          "なくてもいい",
+          "なくていい"
+        ],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/今日は会社に来なくていいよ。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>It is fine if you don't</strong> come to the office today.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 171,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180611",
+      "type": "study_question",
+      "attributes": {
+        "id": 180611,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"37\">その</span>手紙（てがみ）<span class=\"gp-popout\" data-gp-id=\"3\">は</span><span class=\"gp-popout\" data-gp-id=\"42\">もう</span>届（とど）け<span class='study-area-input'>____</span>。",
+        "answer": "なくてもいい",
+        "alternate_grammar": [],
+        "kanji_answer": "なくてもいい",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/その手紙はもう届けなくてもいい。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>It's okay if you don't</strong> deliver that letter anymore.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 171,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3297",
+      "type": "study_question",
+      "attributes": {
+        "id": 3297,
+        "content": "明日（あした）試合（しあい）<span class='gp-popout' data-gp-id='13'>がある</span><span class='gp-popout' data-gp-id='9'>でしょう</span>？練習（れんしゅう）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>の？",
+        "answer": "しなくてもいい",
+        "alternate_grammar": [],
+        "kanji_answer": "しなくてもいい",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>何（なに）かをしなくても問題（もんだい）がない</strong>ことを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Negative, Standard, Permissive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson6/171/male_audio/230304_1202.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/明日試合があるでしょう？練習をしなくてもいいの？.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しなくていい": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "せんでいい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "しらんでいい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "するひつようがない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "してもいい": {
+            "en": "We are looking for a grammar point that highlights that it is 'ok even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          },
+          "しないでもいい": {
+            "en": "Although the meaning is similar, this grammar point does not use the structure ないで. Could you try a grammar point that highlights that it is 'ok even if (A) is not done'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "You have a match tomorrow, right? <strong>Is it alright even if you don't practice</strong>?",
+        "nuance_translation": "A grammar point used to highlight that <strong>not doing something is okay</strong>.",
+        "extra_info": "",
+        "reviewable_id": 171,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "336",
+      "type": "study_question",
+      "attributes": {
+        "id": 336,
+        "content": "忙（いそが）しい<span class='gp-popout' data-gp-id='123'>なら</span>、<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "いかなくてもいい",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）かなくてもいい",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>何（なに）かをしなくても問題（もんだい）がない</strong>ことを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Negative, Permissive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson6/171/male_audio/230304_1159_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/忙しいなら、行かなくてもいいです。.mp3",
+        "word_prompt": "行（い）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いかなくていい": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "いくひつようがない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "いかない": {
+            "en": "We are looking for a grammar point that highlights that it is 'ok even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          },
+          "いなくてもいい": {
+            "en": "Could you try using the prompted verb?",
+            "es": "",
+            "fr": ""
+          },
+          "いかないでもいい": {
+            "en": "Although the meaning is similar, this grammar point does not use the structure ないで. Could you try a grammar point that highlights that it is 'ok even if (A) is not done'?",
+            "es": "",
+            "fr": ""
+          },
+          "いかないほうがいい": {
+            "en": "～ほうがいい means 'it would be better if you did or didn’t do something'. We’re looking for a grammar point that expresses 'it’s okay even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "If you are busy, <strong>you do not have to go</strong>.",
+        "nuance_translation": "A grammar point used to highlight that <strong>not doing something is okay</strong>.",
+        "extra_info": "",
+        "reviewable_id": 171,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3289",
+      "type": "study_question",
+      "attributes": {
+        "id": 3289,
+        "content": "<span class='gp-popout' data-gp-id='144'>そんなに</span><span class='study-area-input'>____</span>。",
+        "answer": "おこらなくてもいい",
+        "alternate_grammar": [],
+        "kanji_answer": "怒（おこ）らなくてもいい",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>何（なに）かをしなくても問題（もんだい）がない</strong>ことを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Negative, Standard, Permissive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson6/171/male_audio/230304_1159_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/そんなに怒らなくてもいい。.mp3",
+        "word_prompt": "怒（おこ）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おこらなくていい": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "おこらんでいい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "おこらなくてもいいです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "おこるひつようがない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "おこ": {
+            "en": "We are looking for a grammar point that highlights that it is 'ok even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          },
+          "おこなくてもいい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          },
+          "おこらないでもいい": {
+            "en": "Although the meaning is similar, this grammar point does not use the structure ないで. Could you try a grammar point that highlights that it is 'ok even if (A) is not done'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>You don't have to be</strong> that <strong>angry</strong>.",
+        "nuance_translation": "A grammar point used to highlight that <strong>not doing something is okay</strong>.",
+        "extra_info": "",
+        "reviewable_id": 171,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3290",
+      "type": "study_question",
+      "attributes": {
+        "id": 3290,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='382'>以上（いじょう）</span><span class='study-area-input'>____</span>。",
+        "answer": "のまなくてもいい",
+        "alternate_grammar": [],
+        "kanji_answer": "飲（の）まなくてもいい",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>何（なに）かをしなくても問題（もんだい）がない</strong>ことを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Negative, Standard, Permissive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson6/171/male_audio/230304_1200.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/これ以上飲まなくてもいい。.mp3",
+        "word_prompt": "飲（の）<span class='gp-popout' data-gp-id='26'>む</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のまなくていい": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "のまんでいい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "のまなくていいです": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "のまんでいいです": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "のまなくてもいいです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "をのまなくてもいい": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "はのまなくてもいい": {
+            "en": "How about removing something from the beginning?",
+            "es": ""
+          },
+          "のむひつようがない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "のんでもいい": {
+            "en": "We are looking for a grammar point that highlights that it is 'ok even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          },
+          "のまないでもいい": {
+            "en": "Although the meaning is similar, this grammar point does not use the structure ないで. Could you try a grammar point that highlights that it is 'ok even if (A) is not done'?",
+            "es": "",
+            "fr": ""
+          },
+          "のまないほうがいい": {
+            "en": "～ほうがいい means 'it would be better if you did or didn’t do something'. We’re looking for a grammar point that expresses 'it’s okay even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>You don't have to drink</strong> more than this.",
+        "nuance_translation": "A grammar point used to highlight that <strong>not doing something is okay</strong>.",
+        "extra_info": "",
+        "reviewable_id": 171,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180610",
+      "type": "study_question",
+      "attributes": {
+        "id": 180610,
+        "content": "ミカ<span class=\"gp-popout\" data-gp-id=\"3\">は</span>悪（わる）く<span class=\"gp-popout\" data-gp-id=\"873\">ない</span><span class=\"gp-popout\" data-gp-id=\"45\">から</span>謝（あやま）ら<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"78\">よ</span>。",
+        "answer": "なくてもいい",
+        "alternate_grammar": [],
+        "kanji_answer": "なくてもいい",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ミカは悪くないから謝らなくてもいいよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Mika, you are not in the wrong, so you <strong>don't have to</strong> apologize.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 171,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3291",
+      "type": "study_question",
+      "attributes": {
+        "id": 3291,
+        "content": "何（なに）も<span class='study-area-input'>____</span>？",
+        "answer": "しなくてもいい",
+        "alternate_grammar": [],
+        "kanji_answer": "しなくてもいい",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>何（なに）かをしなくても問題（もんだい）がない</strong>ことを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Negative, Standard, Permissive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson6/171/male_audio/230304_1200_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/何もしなくてもいい？.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しなくていい": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "せんでいい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "しらんでいい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "するひつようがない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しなくてもいいですか": {
+            "en": "When using か you don't need a question mark.",
+            "es": ""
+          },
+          "してもいい": {
+            "en": "We are looking for a grammar point that highlights that it is 'ok even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          },
+          "しないでもいい": {
+            "en": "Although the meaning is similar, this grammar point does not use the structure ないで. Could you try a grammar point that highlights that it is 'ok even if (A) is not done'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I <strong>don't have to</strong> do anything?",
+        "nuance_translation": "A grammar point used to highlight that <strong>not doing something is okay</strong>.",
+        "extra_info": "",
+        "reviewable_id": 171,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3292",
+      "type": "study_question",
+      "attributes": {
+        "id": 3292,
+        "content": "昨日（きのう）掃除（そうじ）<span class='gp-popout' data-gp-id='21'>を</span>した<span class='gp-popout' data-gp-id='45'>から</span>、今日（きょう）は<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='18'>だろう</span>。",
+        "answer": "しなくてもいい",
+        "alternate_grammar": [],
+        "kanji_answer": "しなくてもいい",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>何（なに）かをしなくても問題（もんだい）がない</strong>ことを強調（きょうちょう）する文法（ぶんぽう）。",
+        "tense": "Negative, Standard, Permissive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson6/171/male_audio/230304_1200_02(1).mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/昨日掃除をしたから、今日はしなくてもいいだろう。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しなくていい": {
+            "en": "How about adding a particle?",
+            "es": ""
+          },
+          "せんでいい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "しらんでいい": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "するひつようがない": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しない": {
+            "en": "We are looking for a grammar point that highlights that it is 'ok even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          },
+          "しないで": {
+            "en": "We are looking for a grammar point that highlights that it is 'ok even if (A) is not done'.",
+            "es": "",
+            "fr": ""
+          },
+          "しないでもいい": {
+            "en": "Although the meaning is similar, this grammar point does not use the structure ないで. Could you try a grammar point that highlights that it is 'ok even if (A) is not done'?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Since I cleaned yesterday, <strong>I don't have to clean</strong> today, right?",
+        "nuance_translation": "A grammar point used to highlight that <strong>not doing something is okay</strong>.",
+        "extra_info": "",
+        "reviewable_id": 171,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "230",
+      "type": "writeup",
+      "attributes": {
+        "id": 230,
+        "body_ja": "",
+        "body": "<p><span data-gp-id='171'>なくてもいい</span> is simply the opposite of <span data-gp-id='46'>てもいい</span>, and highlights that it is 'ok even if (A) is not done'. This usually comes across as being quite polite, and sounds like 'don't worry about doing (A)' in English.</p>\r\n\r\n<p><span data-gp-id='171'>なくてもいい</span> is a combination of the <span data-term='助動詞・じょどうし'>auxiliary verb</span> ない in its conjunction form, with <span data-gp-id='46'>てもいい</span>.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180610'>\r\n<li data-study-question='180611'>\r\n</ul>\r\n\r\n<p>In order to make this phrase sound even more casual, the <span data-term='副助詞・ふくじょし'>adverbial particle</span> <span data-gp-id='4'>も</span> may be omitted. This does not change the nuance at all, but will sound a bit more friendly (when used with people that you know well).</p>\r\n\r\n<ul class='writeup-examples--holder'><li data-study-question='180612'></ul>"
+      }
+    },
+    {
+      "id": "189",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 189,
+        "source": "Genki II 1st Edition",
+        "location": "Page 99",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "817",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 817,
+        "source": "みんなの日本語 I",
+        "location": "Page 110 [CH 17]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "582",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 582,
+        "source": "Genki II 2nd Edition",
+        "location": "Page 125",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "330",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 330,
+        "site": "JStackExchange",
+        "description": "Differences between 「することはない」 and 「しなくてもいい」",
+        "link": "https://japanese.stackexchange.com/questions/19693/differences-between-%e3%81%99%e3%82%8b%e3%81%93%e3%81%a8%e3%81%af%e3%81%aa%e3%81%84-and-%e3%81%97%e3%81%aa%e3%81%8f%e3%81%a6%e3%82%82%e3%81%84%e3%81%84/19755#19755",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "331",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 331,
+        "site": "MaggieSensei",
+        "description": "See examples with なくてもいい",
+        "link": "https://maggiesensei.com/2015/06/22/how-to-use-%E3%81%A6%E3%82%82-temo/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1245",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1245,
+        "site": "Japanese Ammo",
+        "description": "Don't Have to ~（なくてもいい）",
+        "link": "https://www.youtube.com/watch?v=y8isOzPtRjc&list=PLd5-Wp_4tLqYZxS5j3g6kbeOfVXlTkr3N&index=41",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "766",
+      "type": "related_content",
+      "attributes": {
+        "id": 766,
+        "relationship_type": "related",
+        "body": "なくてもいい means there is no obligation to do something, like the English 'you don't have to (A)' (or literally, 'it's okay even without').  For example, 食べなくてもいい means 'You don't have to eat it.' In contrast, てはならない expresses prohibition, like 'must not (A)' or 'cannot (A)'. For example, 食べてはならない means 'You must not eat it.'.",
+        "first_relatable": {
+          "id": 171,
+          "slug": "なくてもいい",
+          "title": "なくてもいい",
+          "meaning": "Don't have to",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 516,
+          "slug": "てはならない",
+          "title": "てはならない",
+          "meaning": "Must not, Cannot, Should not",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "913",
+      "type": "related_content",
+      "attributes": {
+        "id": 913,
+        "relationship_type": "related",
+        "body": "ことはない and なくてもいい can overlap when expressing 'There is no need to...' or 'You don't have to...' For example, 心配することはない and 心配しなくてもいい both mean 'There's no need to worry.' However, ことはない can also be used to express that something never happens. For example, 彼と話すことはない means 'I never talk to him,' which is not a use for なくてもいい.",
+        "first_relatable": {
+          "id": 233,
+          "slug": "ことはない",
+          "title": "ことはない",
+          "meaning": "There is no need to, Never happens",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 171,
+          "slug": "なくてもいい",
+          "title": "なくてもいい",
+          "meaning": "Don't have to",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "16",
+      "type": "related_content",
+      "attributes": {
+        "id": 16,
+        "relationship_type": "antonym",
+        "body": "なくてはいけない expresses obligation or necessity, saying something 'must' or 'needs to' be done. なくてもいい has the opposite meaning, saying that one doesn't have to do something (literally, 'it's okay not to do'). For example, 食べなくてはいけない means '(You) must eat it', while 食べなくてもいい means '(You) don't have to eat it.'",
+        "first_relatable": {
+          "id": 86,
+          "slug": "なくてはいけない",
+          "title": "なくてはいけない",
+          "meaning": "Must do, Have to do",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 171,
+          "slug": "なくてもいい",
+          "title": "なくてもいい",
+          "meaning": "Don't have to",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "765",
+      "type": "related_content",
+      "attributes": {
+        "id": 765,
+        "relationship_type": "related",
+        "body": "なくてもいい means something is optional; 'it's okay not to (do something).' In contrast, てはいけない expresses prohibition; 'you must not' or 'cannot' do something. For example, 食べなくてもいい means 'It's okay not to eat it,' while 食べてはいけない means 'You must not eat it.' The first gives freedom; the second sets a rule.",
+        "first_relatable": {
+          "id": 171,
+          "slug": "なくてもいい",
+          "title": "なくてもいい",
+          "meaning": "Don't have to",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 67,
+          "slug": "てはいけない",
+          "title": "てはいけない",
+          "meaning": "Must not, May not",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1090 @@
+{
+  "data": {
+    "id": "741",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 741,
+      "level": "JLPT1",
+      "lesson_id": 41,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "ならまだしも",
+      "nuance": "<strong>たとえ</strong>(A)<strong>であっても</strong>、(B)でない限（かぎ）り大丈夫（だいじょうぶ）だということを表（あらわ）す仮定（かてい）表現（ひょうげん）。(B)だったら違（ちが）う。",
+      "grammar_order": 750,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 740,
+        "title": "までもない",
+        "slug": "までもない"
+      },
+      "previous_grammar_point": {
+        "id": 738,
+        "title": "きらいがある",
+        "slug": "きらいがある"
+      },
+      "lesson_count": "9/17",
+      "title": "ならまだしも",
+      "furigana": "ならまだしも",
+      "meaning": "A is fine...but B is not, If it's ~ then it is ok...but ~ is not, It's different when...but, It's not so bad when...but",
+      "nuance_translation": "A <strong>hypothetical</strong> expression, stating that <strong>even</strong if> it is <strong>still</strong> (A), that's fine, but not (B). It's different if it's (B).",
+      "rare_kanji_warning": "",
+      "caution": "しも is from classical Japanese and emphasizes まだ",
+      "polite_structure": "",
+      "casual_structure": "Phrase (A) + <strong><span class='gp-popout' data-gp-id='123'>なら</span><span class='gp-popout' data-gp-id='72'>まだ</span>しも</strong> + Phrase (B)",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/18149",
+      "metadata": "ならまだしも, naramadashimo, expression, adverbial particle, classical auxiliary verb"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "7891",
+            "type": "study_question"
+          },
+          {
+            "id": "9025",
+            "type": "study_question"
+          },
+          {
+            "id": "182526",
+            "type": "study_question"
+          },
+          {
+            "id": "182527",
+            "type": "study_question"
+          },
+          {
+            "id": "182528",
+            "type": "study_question"
+          },
+          {
+            "id": "9024",
+            "type": "study_question"
+          },
+          {
+            "id": "184529",
+            "type": "study_question"
+          },
+          {
+            "id": "10468",
+            "type": "study_question"
+          },
+          {
+            "id": "10466",
+            "type": "study_question"
+          },
+          {
+            "id": "9023",
+            "type": "study_question"
+          },
+          {
+            "id": "10467",
+            "type": "study_question"
+          },
+          {
+            "id": "184530",
+            "type": "study_question"
+          },
+          {
+            "id": "10464",
+            "type": "study_question"
+          },
+          {
+            "id": "10465",
+            "type": "study_question"
+          },
+          {
+            "id": "7892",
+            "type": "study_question"
+          },
+          {
+            "id": "7890",
+            "type": "study_question"
+          },
+          {
+            "id": "10463",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "826",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1503",
+            "type": "related_content"
+          },
+          {
+            "id": "1575",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1637",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1638",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "7891",
+      "type": "study_question",
+      "attributes": {
+        "id": 7891,
+        "content": "すごく恥（は）ずかしい！お父（とう）さん、ビーチで<span class='study-area-input'>____</span>、半裸（はんら）で外（そと）に出（で）るのはやめてほしい！",
+        "answer": "ならまだしも",
+        "alternate_grammar": [],
+        "kanji_answer": "ならまだしも",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>たとえ</strong>(A)<strong>であっても</strong>、(B)でない限（かぎ）り大丈夫（だいじょうぶ）だということを表（あらわ）す仮定（かてい）表現（ひょうげん）。(B)だったら違（ちが）う。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まだいいが": {
+            "en": "Can you expand on 'まだ'? Think classical Japanese",
+            "es": ""
+          },
+          "まだなんとかなるが": {
+            "en": "Can you expand on 'まだ' in a different way? Think classical Japanese",
+            "es": ""
+          },
+          "だったらいいが": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "いいが": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "いいけど": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "だったらいいけど": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "はまだましが": {
+            "en": "This is close, but think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "はまだましけど": {
+            "en": "This is close, but think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "ならともかく": {
+            "en": "Could you say it another way?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This is so embarrassing! Papa, <strong>if it is</strong> a beach, <strong>it is ok, but</strong> going half naked outside? I want you to stop! (<strong>it is not okay</strong>)",
+        "nuance_translation": "A <strong>hypothetical</strong> expression, stating that <strong>even</strong if> it is <strong>still</strong> (A), that's fine, but not (B). It's different if it's (B).",
+        "extra_info": "",
+        "reviewable_id": 741,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9025",
+      "type": "study_question",
+      "attributes": {
+        "id": 9025,
+        "content": "「ねぇ、歩（ある）いて行（い）こうよ。」<br>「自転車（じてんしゃ）<span class='study-area-input'>____</span>、そんな遠（とお）くまで歩（ある）いて行（い）くのは無理（むり）だよ。」",
+        "answer": "ならまだしも",
+        "alternate_grammar": [],
+        "kanji_answer": "ならまだしも",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>たとえ</strong>(A)<strong>であっても</strong>、(B)でない限（かぎ）り大丈夫（だいじょうぶ）だということを表（あらわ）す仮定（かてい）表現（ひょうげん）。(B)だったら違（ちが）う。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「ねぇ、歩いて行こうよ。」「自転車ならまだしも、そんな遠くまで歩いて行くのは無理だよ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ならともかく": {
+            "en": "Great guess! Think of a construction that uses elements of classical Japanese",
+            "es": "",
+            "fr": ""
+          },
+          "ならまだいいけど": {
+            "en": "Great guess! Think of a construction that uses elements of classical Japanese",
+            "es": "",
+            "fr": ""
+          },
+          "ならまだいいが": {
+            "en": "Great guess! Think of a construction that uses elements of classical Japanese",
+            "es": "",
+            "fr": ""
+          },
+          "まだいいが": {
+            "en": "Can you expand on 'まだ'? Think classical Japanese",
+            "es": "",
+            "fr": ""
+          },
+          "まだなんとかなるが": {
+            "en": "Can you expand on 'まだ' in a different way? Think classical Japanese",
+            "es": "",
+            "fr": ""
+          },
+          "だったらいいが": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": "",
+            "fr": ""
+          },
+          "いいが": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": "",
+            "fr": ""
+          },
+          "いいけど": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": "",
+            "fr": ""
+          },
+          "だったらいいけど": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": "",
+            "fr": ""
+          },
+          "はまだましが": {
+            "en": "This is close, but think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": "",
+            "fr": ""
+          },
+          "はまだましけど": {
+            "en": "This is close, but think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'C'mon, let's go on foot!'<br>'<strong>If it was</strong> on a bicycle, then <strong>it would be ok, but</strong> it is impossible to go that far on foot!' (<strong>is not okay</strong>)",
+        "nuance_translation": "A <strong>hypothetical</strong> expression, stating that <strong>even</strong> if it is <strong>still</strong> (A), that's fine, but not (B). It's different if it's (B).",
+        "extra_info": "",
+        "reviewable_id": 741,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182526",
+      "type": "study_question",
+      "attributes": {
+        "id": 182526,
+        "content": "\r\n暑（あつ）いだけ<span class='study-area-input'>____</span>、湿度（しつど）も高（たか）いからどこにも行（い）きたくない。",
+        "answer": "ならまだしも",
+        "alternate_grammar": [],
+        "kanji_answer": "ならまだしも",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/暑いだけならまだしも、湿度も高いからどこにも行きたくない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>If</strong> it was hot, that would <strong>be fine, but</strong> because it is also humid, I <strong>don't</strong> want to go.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 741,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182527",
+      "type": "study_question",
+      "attributes": {
+        "id": 182527,
+        "content": "\r\n\r\n\r\n二（に）、三日（さんにち）<span class='study-area-input'>____</span>、二週間（にしゅうかん）なんて待（ま）てませんよ。",
+        "answer": "ならまだしも",
+        "alternate_grammar": [],
+        "kanji_answer": "ならまだしも",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/二、三日ならまだしも、二週間なんて待てませんよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>If</strong> it was 2 or three days, we <strong>could</strong> wait, <strong>but</strong> 2 weeks? We <strong>can't</strong> wait that long.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 741,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182528",
+      "type": "study_question",
+      "attributes": {
+        "id": 182528,
+        "content": "\r\n\r\n\r\n一回（いっかい）だけ<span class='study-area-input'>____</span>、毎日（まいにち）同（おな）じことで怒（おこ）られて何（なん）にも思（おも）わないの。",
+        "answer": "ならまだしも",
+        "alternate_grammar": [],
+        "kanji_answer": "ならまだしも",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/一回だけならまだしも、毎日同じことで怒られて何にも思わないの。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>If</strong> it was only once, <strong>okay, but</strong> don't you feel any sort of way being told the same thing everyday?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 741,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9024",
+      "type": "study_question",
+      "attributes": {
+        "id": 9024,
+        "content": "<span class='name-highlight'>ツイート</span>：「自分（じぶん）が感染（かんせん）する<span class='chui'>だけ</span><span class='study-area-input'>____</span>祖父母（そふぼ）や親（おや）などが病気（びょうき）になってしまうのがとても恐（おそ）ろしいです。」",
+        "answer": "ならまだしも",
+        "alternate_grammar": [],
+        "kanji_answer": "ならまだしも",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>たとえ</strong>(A)<strong>であっても</strong>、(B)でない限（かぎ）り大丈夫（だいじょうぶ）だということを表（あらわ）す仮定（かてい）表現（ひょうげん）。(B)だったら違（ちが）う。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ツイート：「自分が感染するだけならまだしも祖父母や親などが病気になってしまうのがとても恐ろしいです。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ならともかく": {
+            "en": "Great guess! Think of a construction that uses elements of classical Japanese",
+            "es": ""
+          },
+          "ならまだいいけど": {
+            "en": "Great guess! Think of a construction that uses elements of classical Japanese",
+            "es": ""
+          },
+          "ならまだいいが": {
+            "en": "Great guess! Think of a construction that uses elements of classical Japanese",
+            "es": ""
+          },
+          "まだいいが": {
+            "en": "Can you expand on 'まだ'? Think classical Japanese",
+            "es": ""
+          },
+          "まだなんとかなるが": {
+            "en": "Can you expand on 'まだ' in a different way? Think classical Japanese",
+            "es": ""
+          },
+          "だったらいいが": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "いいが": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "いいけど": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "だったらいいけど": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "はまだましが": {
+            "en": "This is close, but think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "はまだましけど": {
+            "en": "This is close, but think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Tweet</span>: '<strong>If it is</strong> just me becoming infected, then <strong>it is ok, but</strong> my grandparents or parents becoming ill is really scary.' (<strong>is not okay</strong>)",
+        "nuance_translation": "A <strong>hypothetical</strong> expression, stating that <strong>even</strong if> it is <strong>still</strong> (A), that's fine, but not (B). It's different if it's (B).",
+        "extra_info": "",
+        "reviewable_id": 741,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184529",
+      "type": "study_question",
+      "attributes": {
+        "id": 184529,
+        "content": "<strong>今（いま）しも</strong>家（いえ）を出（で）ようとしていたところだった。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/今しも家を出ようとしていたところだった。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I was <strong>just about to</strong> leave the house.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 741,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10468",
+      "type": "study_question",
+      "attributes": {
+        "id": 10468,
+        "content": "カロリーが高（たか）い<span class='chui'>だけ</span><span class='study-area-input'>____</span>、材料（ざいりょう）に沢山（たくさん）の添加物（てんかぶつ）まで入（はい）っているのならそれを食（た）べるのは遠慮（えんりょ）しておくよ。",
+        "answer": "ならまだしも",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "ならまだしも",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>たとえ</strong>(A)<strong>であっても</strong>、(B)でない限（かぎ）り大丈夫（だいじょうぶ）だということを表（あらわ）す仮定（かてい）表現（ひょうげん）。(B)だったら違（ちが）う。",
+        "tense": "Contrastive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/カロリーが高いだけならまだしも、材料に沢山の添加物まで入っているのならそれを食べるのは遠慮しておくよ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ならともかく": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          },
+          "ならまだいいけど": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          },
+          "ならまだいいが": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>It's not so bad if</strong> it is just high calorie, <strong>but</strong> if it's something where there are even lots of additives in the ingredients, I will hold back from eating it.",
+        "nuance_translation": "A <strong>hypothetical</strong> expression, stating that <strong>even</strong if> it is <strong>still</strong> (A), that's fine, but not (B). It's different if it's (B).",
+        "extra_info": "",
+        "reviewable_id": 741,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10466",
+      "type": "study_question",
+      "attributes": {
+        "id": 10466,
+        "content": "待（ま）ち合（あ）わせに１０（じゅっ）分（ぷん）遅（おく）れてくる<span class='chui'>くらい</span><span class='study-area-input'>____</span>、２（に）時間（じかん）も遅刻（ちこく）して謝（あやま）らないなんてどうかしているよ！",
+        "answer": "ならまだしも",
+        "alternate_grammar": [],
+        "kanji_answer": "ならまだしも",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>たとえ</strong>(A)<strong>であっても</strong>、(B)でない限（かぎ）り大丈夫（だいじょうぶ）だということを表（あらわ）す仮定（かてい）表現（ひょうげん）。(B)だったら違（ちが）う。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/待ち合わせに１０分遅れてくるくらいならまだしも、２時間も遅刻して謝らないなんてどうかしているよ！.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ならともかく": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          },
+          "ならまだいいけど": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          },
+          "ならまだいいが": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>It is not so bad if</strong> it is coming around 10 minutes late for a meeting time, <strong>but</strong> something like being 2 hours late and not apologizing means they are not right in the head!",
+        "nuance_translation": "A <strong>hypothetical</strong> expression, stating that <strong>even</strong if> it is <strong>still</strong> (A), that's fine, but not (B). It's different if it's (B).",
+        "extra_info": "",
+        "reviewable_id": 741,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9023",
+      "type": "study_question",
+      "attributes": {
+        "id": 9023,
+        "content": "<span class='name-highlight'>友達（ともだち）に出荷（しゅっか）遅延（ちえん）について苦情（くじょう）を言（い）う</span>：「１（いっ）週間（しゅうかん）とか２（に）週間（しゅうかん）<span class='study-area-input'>____</span>、出荷（しゅっか）まで３ヶ月（さんかげつ）も待（ま）つなんて全（まった）く受（う）け入（い）れられない！」",
+        "answer": "ならまだしも",
+        "alternate_grammar": [],
+        "kanji_answer": "ならまだしも",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>たとえ</strong>(A)<strong>であっても</strong>、(B)でない限（かぎ）り大丈夫（だいじょうぶ）だということを表（あらわ）す仮定（かてい）表現（ひょうげん）。(B)だったら違（ちが）う。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/友達に出荷遅延について苦情を言う：「１週間とか２週間ならまだしも、出荷まで３ヶ月も待つなんて全く受け容れられない！」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ならともかく": {
+            "en": "Great guess! Think of a construction that uses elements of classical Japanese",
+            "es": ""
+          },
+          "ならまだいいけど": {
+            "en": "Great guess! Think of a construction that uses elements of classical Japanese",
+            "es": ""
+          },
+          "ならまだいいが": {
+            "en": "Great guess! Think of a construction that uses elements of classical Japanese",
+            "es": ""
+          },
+          "まだいいが": {
+            "en": "Can you expand on 'まだ'? Think classical Japanese",
+            "es": ""
+          },
+          "まだなんとかなるが": {
+            "en": "Can you expand on 'まだ' in a different way? Think classical Japanese",
+            "es": ""
+          },
+          "だったらいいが": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "いいが": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "いいけど": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "だったらいいけど": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "はまだましが": {
+            "en": "This is close, but think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "はまだましけど": {
+            "en": "This is close, but think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Complaining to a friend about a shipment delay</span>: '<strong>If it was</strong> one or two weeks, <strong>that would be fine, but</strong> waiting something like 3 months until the shipment? That is completely unacceptable!' (<strong>not okay</strong>)",
+        "nuance_translation": "A <strong>hypothetical</strong> expression, stating that <strong>even</strong if> it is <strong>still</strong> (A), that's fine, but not (B). It's different if it's (B).",
+        "extra_info": "",
+        "reviewable_id": 741,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10467",
+      "type": "study_question",
+      "attributes": {
+        "id": 10467,
+        "content": "ただ風（かぜ）が強（つよ）い<span class='chui'>だけ</span><span class='study-area-input'>____</span>、台風（たいふう）並（な）みに強（つよ）いこの風（かぜ）の中（なか）で飛行機（ひこうき）が飛（と）ぶことはないでしょう。",
+        "answer": "ならまだしも",
+        "alternate_grammar": [],
+        "kanji_answer": "ならまだしも",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>たとえ</strong>(A)<strong>であっても</strong>、(B)でない限（かぎ）り大丈夫（だいじょうぶ）だということを表（あらわ）す仮定（かてい）表現（ひょうげん）。(B)だったら違（ちが）う。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ただ風が強いだけならまだしも、台風並みに強いこの風の中で飛行機が飛ぶ事は無いでしょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ならともかく": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          },
+          "ならまだいいけど": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          },
+          "ならまだいいが": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>It's fine if</strong> it is merely just a strong wind, <strong>but</strong> not when a plane is flying through wind that's strength is in line with that of a typhoon, right? (<strong>it is not okay</strong>)",
+        "nuance_translation": "A <strong>hypothetical</strong> expression, stating that <strong>even</strong if> it is <strong>still</strong> (A), that's fine, but not (B). It's different if it's (B).",
+        "extra_info": "",
+        "reviewable_id": 741,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184530",
+      "type": "study_question",
+      "attributes": {
+        "id": 184530,
+        "content": "<strong>誰（だれ）しも</strong>長年（ながねん）使（つか）ってきた釣（つ）り竿（ざお）には愛着（あいちゃく）がある。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/誰しも長年使ってきた釣り竿には愛着がある。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Everyone</strong> has an attachment to a fishing rod they have used for many years.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 741,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10464",
+      "type": "study_question",
+      "attributes": {
+        "id": 10464,
+        "content": "ただ寒（さむ）い<span class='chui'>だけ</span><span class='study-area-input'>____</span>こんなに雪（ゆき）が降（ふ）っているなら外（そと）でのピクニックは中止（ちゅうし）か延期（えんき）にするべきだ。",
+        "answer": "ならまだしも",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "ならまだしも",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>たとえ</strong>(A)<strong>であっても</strong>、(B)でない限（かぎ）り大丈夫（だいじょうぶ）だということを表（あらわ）す仮定（かてい）表現（ひょうげん）。(B)だったら違（ちが）う。",
+        "tense": "Contrastive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ただ寒いだけならまだしもこんなに雪が降っているなら外でのピクニックは中止か延期にするべきだ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ならともかく": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          },
+          "ならまだいいけど": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          },
+          "ならまだいいが": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>It's not so bad if</strong> it's just cold, <strong>but</strong> if there's this much snow falling, you ought to cancel or postpone your picnic outside.",
+        "nuance_translation": "A <strong>hypothetical</strong> expression, stating that <strong>even</strong if> it is <strong>still</strong> (A), that's fine, but not (B). It's different if it's (B).",
+        "extra_info": "",
+        "reviewable_id": 741,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10465",
+      "type": "study_question",
+      "attributes": {
+        "id": 10465,
+        "content": "一度（いちど）や二度（にど）<span class='study-area-input'>____</span>三日間（みっかかん）続（つづ）けて遅刻（ちこく）をしてきた社員（しゃいん）には何（なに）かしらの罰（ばつ）を与（あた）えよう…。",
+        "answer": "ならまだしも",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "ならまだしも",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>たとえ</strong>(A)<strong>であっても</strong>、(B)でない限（かぎ）り大丈夫（だいじょうぶ）だということを表（あらわ）す仮定（かてい）表現（ひょうげん）。(B)だったら違（ちが）う。",
+        "tense": "Contrastive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/一度や二度ならまだしも三日間続けて遅刻をしてきた社員には何かしらの罰を与えよう…。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ならともかく": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          },
+          "ならまだいいけど": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          },
+          "ならまだいいが": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>It's different if</strong> it's one or two times, <strong>but</strong> for an employee that has continued to come in late for three days in a row, let's give them some kind of punishment.",
+        "nuance_translation": "A <strong>hypothetical</strong> expression, stating that <strong>even</strong if> it is <strong>still</strong> (A), that's fine, but not (B). It's different if it's (B).",
+        "extra_info": "",
+        "reviewable_id": 741,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7892",
+      "type": "study_question",
+      "attributes": {
+        "id": 7892,
+        "content": "隣人（りんじん）がうちの駐車（ちゅうしゃ）区域（くいき）にたまに車（くるま）を止（と）める<span class='study-area-input'>____</span>、いつも止（と）めているから、いい加減（かげん）腹（はら）が立（た）つよ。",
+        "answer": "ならまだしも",
+        "alternate_grammar": [],
+        "kanji_answer": "ならまだしも",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>たとえ</strong>(A)<strong>であっても</strong>、(B)でない限（かぎ）り大丈夫（だいじょうぶ）だということを表（あらわ）す仮定（かてい）表現（ひょうげん）。(B)だったら違（ちが）う。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/隣人がうちの駐車区域にたまに車を止めるならまだしも、いつも止めているから、いい加減腹が立つよ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まだいいが": {
+            "en": "Can you expand on 'まだ'? Think classical Japanese",
+            "es": ""
+          },
+          "まだなんとかなるが": {
+            "en": "Can you expand on 'まだ' in a different way? Think classical Japanese",
+            "es": ""
+          },
+          "んだったらいいが": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "でいいが": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "でいいけど": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "だったらいいけど": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "はまだましが": {
+            "en": "This is close, but think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "はまだましけど": {
+            "en": "This is close, but think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "ならともかく": {
+            "en": "Great! Could you say it another way?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> my neighbor uses my parking spot from time to time <strong>then it's ok, but</strong> because he is always parking there, I get pissed. (<strong>it is not okay</strong>)",
+        "nuance_translation": "A <strong>hypothetical</strong> expression, stating that <strong>even</strong if> it is <strong>still</strong> (A), that's fine, but not (B). It's different if it's (B).",
+        "extra_info": "",
+        "reviewable_id": 741,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7890",
+      "type": "study_question",
+      "attributes": {
+        "id": 7890,
+        "content": "すみませんが、付（つ）き合（あ）う<span class='chui'>ぐらい</span><span class='study-area-input'>____</span>、結婚（けっこん）は無理（むり）な注文（ちゅうもん）です。",
+        "answer": "ならまだしも",
+        "alternate_grammar": [],
+        "kanji_answer": "ならまだしも",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>たとえ</strong>(A)<strong>であっても</strong>、(B)でない限（かぎ）り大丈夫（だいじょうぶ）だということを表（あらわ）す仮定（かてい）表現（ひょうげん）。(B)だったら違（ちが）う。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/すみませんが、付き合うぐらいならまだしも、結婚は無理な注文です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まだいいが": {
+            "en": "Can you expand on 'まだ'? Think classical Japanese",
+            "es": ""
+          },
+          "まだなんとかなるが": {
+            "en": "Can you expand on 'まだ' in a different way? Think classical Japanese",
+            "es": ""
+          },
+          "だったらいいが": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "でいいが": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "でいいけど": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "だったらいいけど": {
+            "en": "Think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "はまだましが": {
+            "en": "This is close, but think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "はまだましけど": {
+            "en": "This is close, but think 'Phrase 1 is acceptable/permitted, but Phrase 2 is not acceptable/too much/strange'",
+            "es": ""
+          },
+          "ならともかく": {
+            "en": "Could you say it another way?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I am sorry, <strong>if</strong> it is just going out then it <strong>is ok, but</strong> marriage is out of the question. (<strong>is not okay</strong>)",
+        "nuance_translation": "A <strong>hypothetical</strong> expression, stating that <strong>even</strong if> it is <strong>still</strong> (A), that's fine, but not (B). It's different if it's (B).",
+        "extra_info": "",
+        "reviewable_id": 741,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10463",
+      "type": "study_question",
+      "attributes": {
+        "id": 10463,
+        "content": "３（さん）人（にん）や４（よ）人（にん）<span class='study-area-input'>____</span>、１０（じゅう）人（にん）も友達（ともだち）を家（いえ）に呼（よ）んでパーティーをするなんて、隣人（りんじん）から文句（もんく）を言（い）われるに違（ちが）いない。",
+        "answer": "ならまだしも",
+        "alternate_grammar": [],
+        "kanji_answer": "ならまだしも",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>たとえ</strong>(A)<strong>であっても</strong>、(B)でない限（かぎ）り大丈夫（だいじょうぶ）だということを表（あらわ）す仮定（かてい）表現（ひょうげん）。(B)だったら違（ちが）う。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/３人や４人ならまだしも、１０人も友達を家に呼んでパーティーをするなんて、隣人から文句を言われるに違いない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ならともかく": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          },
+          "ならまだいいけど": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          },
+          "ならまだいいが": {
+            "en": "Natural, but let's try a set phrase that uses elements of classical Japanese.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>If</strong> it is 3 or 4 people then <strong>it is ok, but</strong> something like calling 10 or so friends over to your house for a party, there's no mistake that the neighbors will complain. (<strong>it is not okay</strong>)",
+        "nuance_translation": "A <strong>hypothetical</strong> expression, stating that <strong>even</strong if> it is <strong>still</strong> (A), that's fine, but not (B). It's different if it's (B).",
+        "extra_info": "",
+        "reviewable_id": 741,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "826",
+      "type": "writeup",
+      "attributes": {
+        "id": 826,
+        "body_ja": "<p>「<span data-gp-id='741'>ならまだしも</span>」は、「なら」と「まだ」、そして直前（ちょくぜん）の語句（ごく）を強調（きょうちょう）する副助詞（ふくじょし）「しも」の組（く）み合（あ）わせです。この表現（ひょうげん）は「(A) はいいが (B) はだめ」といった形（かたち）で、(A) はなんとか受（う）け入（い）れられるが、(B) は受（う）け入（い）れがたいという意味（いみ）を表（あらわ）します。</p>\r\n\r\n<p>「<span data-gp-id='741'>ならまだしも</span>」は、文（ぶん）の前半（ぜんはん） (A) と後半（こうはん） (B) を区切（くぎ）る表現（ひょうげん）です。そのため、文（ぶん）の前半（ぜんはん） (A) の最後（さいご）に置（お）かれ、話（はな）し手（て）にとって (A) はまだ許容範囲内（きょようはんいない）であることを表（あらわ）します。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182526'>\r\n<li data-study-question='182527'>\r\n<li data-study-question='182528'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='741'>ならまだしも</span>」の「しも」は直前（ちょくぜん）にある「まだ」を強調（きょうちょう）することで、(A) と (B) の対比（たいひ）をより際立（きわだ）たせています。</p>\r\n\r\n<section class='funfact'><h4>豆知識（まめちしき）</h4>\r\n<p>「しも」は古語（こご）に由来（ゆらい）する助詞（じょし）で、現代（げんだい）では「<span data-gp-id='741'>ならまだしも</span>」「今（いま）しも」「誰（だれ）しも」といった決（き）まった表現（ひょうげん）の中（なか）でしか使（つか）われません。どの表現（ひょうげん）においても、「しも」は直前（ちょくぜん）の語句（ごく）を強（つよ）めるためだけに使（つか）われています。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184529'>\r\n<li data-study-question='184530'></ul></section>",
+        "body": "<p><span data-gp-id='741'>ならまだしも</span> is a combination of なら 'if', まだ 'still', and the <span data-term='副助詞・ふくじょし'>adverbial particle</span> しも, which has the primary purpose of strengthening the word that comes before it. When used, this structure will often be translated as '(A) is fine, but not (B)', or '(A) is fine, but it's different when it's (B)'.</p>\r\n\r\n<p><span data-gp-id='741'>ならまだしも</span> is a phrase that usually separates the first and second half of sentences, so will be attached to the end of the (A) phrase, marking the statement that is acceptable.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182526'>\r\n<li data-study-question='182527'>\r\n<li data-study-question='182528'>\r\n</ul>\r\n\r\n<p>Due to the way that しも alters まだ, a more literal translation of this grammar point can be thought of as 'if it's (A), then of course there's still that, but as for (B)'.</p>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>しも is a classical particle that is not frequently used in modern times outside of set phrases or expressions like <span data-gp-id='741'>ならまだしも</span>, 今（いま）しも 'right this moment', and だれしも 'absolutely anybody'. In all cases, it merely strengthens the word directly before it.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184529'>\r\n<li data-study-question='184530'></ul></section>"
+      }
+    },
+    {
+      "id": "1637",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1637,
+        "site": "J-nihongo",
+        "description": "例文と意味",
+        "link": "https://j-nihongo.com/madashimo/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1638",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1638,
+        "site": "Japanese StackExchange",
+        "description": "Literal breakdown of ならまだしも",
+        "link": "https://japanese.stackexchange.com/questions/5701/can-the-word-%E3%81%BE%E3%81%A0%E3%81%97%E3%82%82-be-broken-up-into-distinct-meanings#comment14397_5701",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1503",
+      "type": "related_content",
+      "attributes": {
+        "id": 1503,
+        "relationship_type": "related",
+        "body": "Both are formal expressions derived from classical Japanese that serve to contrast two elements. The difference is that ならまだしも conveys that the first element might be fine, e.g. 一回ならまだしも３回も遅刻するなんて ('Once would be one thing, but to be late three times…'), while ならいざ知らず avoids commenting on the first part, e.g. 昔ならいざ知らず、今は通用しない ('I don't know about the past, but that won't work now.').",
+        "first_relatable": {
+          "id": 741,
+          "slug": "ならまだしも",
+          "title": "ならまだしも",
+          "meaning": "A is fine...but B is not, If it's ~ then it is ok...but ~ is not, It's different when...but, It's not so bad when...but",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 933,
+          "slug": "ならばいざ知らず",
+          "title": "ならいざ知らず",
+          "meaning": "Don’t know about it, Maybe it would or might be possible for",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1575",
+      "type": "related_content",
+      "attributes": {
+        "id": 1575,
+        "relationship_type": "related",
+        "body": "Both are formal expressions derived from classical Japanese that serve to contrast two elements. The difference is that ならまだしも conveys that the first element might be fine, e.g. 一回ならまだしも３回も遅刻するなんて ('Once would be one thing, but to be late three times…') while ならいざ知らず avoids commenting on the first part, e.g. 昔ならいざ知らず、今は通用しない ('I don't know about the past, but that won't work now.').",
+        "first_relatable": {
+          "id": 741,
+          "slug": "ならまだしも",
+          "title": "ならまだしも",
+          "meaning": "A is fine...but B is not, If it's ~ then it is ok...but ~ is not, It's different when...but, It's not so bad when...but",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 933,
+          "slug": "ならばいざ知らず",
+          "title": "ならいざ知らず",
+          "meaning": "Don’t know about it, Maybe it would or might be possible for",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

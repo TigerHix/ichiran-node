@@ -1,0 +1,938 @@
+{
+  "data": {
+    "id": "391",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 391,
+      "level": "JLPT4",
+      "lesson_id": 15,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "は-の一つだ",
+      "nuance": "(A)が(B)の<strong>グループの一部（いちぶ）</strong>だということを表（あらわ）す表現（ひょうげん）。",
+      "grammar_order": 216,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 378,
+        "title": "～ない～はない",
+        "slug": "ない-はない"
+      },
+      "previous_grammar_point": {
+        "id": 725,
+        "title": "Number + しか〜ない",
+        "slug": "number-しか-ない"
+      },
+      "lesson_count": "17/20",
+      "title": "～は～の一つだ",
+      "furigana": "は～の一（ひと）つだ",
+      "meaning": "〜 is one of (many) 〜",
+      "nuance_translation": "An expression which shows that (A) is only <strong>one thing from within the whole category of</strong> (B).",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": "Noun (A) + <strong><span class='gp-popout' data-gp-id='3'>は</span></strong> + (Category) Noun (B) + <strong><span class='gp-popout' data-gp-id='6'>の</span>一つ</strong> + <span class='gp-popout' data-gp-id='2'>です</span>",
+      "casual_structure": "Noun (A) + <strong><span class='gp-popout' data-gp-id='3'>は</span></strong> + (Category) Noun (B) + <strong><span class='gp-popout' data-gp-id='6'>の</span>一つ</strong> + <span class='gp-popout' data-gp-id='1'>だ</span>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10129",
+      "metadata": "は, の一つだ, のひとつだ, ha, wa, nohitotuda, particle, topic marker, expression, counter"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "180532",
+            "type": "study_question"
+          },
+          {
+            "id": "180533",
+            "type": "study_question"
+          },
+          {
+            "id": "180535",
+            "type": "study_question"
+          },
+          {
+            "id": "3575",
+            "type": "study_question"
+          },
+          {
+            "id": "1393",
+            "type": "study_question"
+          },
+          {
+            "id": "180534",
+            "type": "study_question"
+          },
+          {
+            "id": "180531",
+            "type": "study_question"
+          },
+          {
+            "id": "3570",
+            "type": "study_question"
+          },
+          {
+            "id": "3571",
+            "type": "study_question"
+          },
+          {
+            "id": "3573",
+            "type": "study_question"
+          },
+          {
+            "id": "3574",
+            "type": "study_question"
+          },
+          {
+            "id": "1391",
+            "type": "study_question"
+          },
+          {
+            "id": "3576",
+            "type": "study_question"
+          },
+          {
+            "id": "3578",
+            "type": "study_question"
+          },
+          {
+            "id": "1392",
+            "type": "study_question"
+          },
+          {
+            "id": "3572",
+            "type": "study_question"
+          },
+          {
+            "id": "3577",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "213",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "476",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "339",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "864",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "180532",
+      "type": "study_question",
+      "attributes": {
+        "id": 180532,
+        "content": "電車（でんしゃ）<strong><span class='gp-popout' data-gp-id='3'>は</span></strong>乗（の）り物（もの）<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "のひとつ",
+        "alternate_grammar": [],
+        "kanji_answer": "の一（ひと）つ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/電車は乗り物の一つです。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Trains are <strong>one of (many)</strong> vehicles.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 391,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180533",
+      "type": "study_question",
+      "attributes": {
+        "id": 180533,
+        "content": "彼（かれ）<span class=\"gp-popout\" data-gp-id=\"4\">も</span>家族（かぞく）<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"1\">だ</span>。",
+        "answer": "のひとり",
+        "alternate_grammar": [],
+        "kanji_answer": "の一人（ひとり）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/彼も家族の一人だ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "He is also <strong>one</strong> member <strong>of</strong> my family.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 391,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180535",
+      "type": "study_question",
+      "attributes": {
+        "id": 180535,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"30\">この</span>クレヨン<strong><span class='gp-popout' data-gp-id='3'>は</span></strong><span class=\"gp-popout\" data-gp-id=\"30\">この</span>セット<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"1\">だ</span>。",
+        "answer": "のいっぽん",
+        "alternate_grammar": [],
+        "kanji_answer": "の一本（いっぽん）",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/このクレヨンはこのセットの一本だ。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This crayon is <strong>part of</strong> this <strong>set</strong>.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 391,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3575",
+      "type": "study_question",
+      "attributes": {
+        "id": 3575,
+        "content": "キリスト教（きょう）<strong><span class='gp-popout' data-gp-id='3'>は</span></strong>宗教（しゅうきょう）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "のひとつ",
+        "alternate_grammar": [],
+        "kanji_answer": "の一（ひと）つ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が(B)の<strong>グループの一部（いちぶ）</strong>だということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/391/male_audio/230303_1501.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/キリスト教は宗教の一つだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のひつ": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "のなか": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "のなかで": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "ひとつ": {
+            "en": "Something else is required at the beginning here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Christianity <strong>is one of many</strong> religions.",
+        "nuance_translation": "An expression which shows that (A) is only <strong>one thing from within the whole category of</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 391,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1393",
+      "type": "study_question",
+      "attributes": {
+        "id": 1393,
+        "content": "文法（ぶんぽう）<strong><span class='gp-popout' data-gp-id='3'>は</span></strong>大事（だいじ）<span class='gp-popout' data-gp-id='28'>な</span>勉強（べんきょう）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "のひとつ",
+        "alternate_grammar": [],
+        "kanji_answer": "の一（ひと）つ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が(B)の<strong>グループの一部（いちぶ）</strong>だということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/391/male_audio/230303_1459.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/文法は大事な勉強の一つです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "のなかで": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "のなか": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "ひとつ": {
+            "en": "Something else is required at the beginning here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Grammar is <strong>one of (many)</strong> important things to study.",
+        "nuance_translation": "An expression which shows that (A) is only <strong>one thing from within the whole category of</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 391,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180534",
+      "type": "study_question",
+      "attributes": {
+        "id": 180534,
+        "content": "トマト<strong><span class='gp-popout' data-gp-id='3'>は</span></strong>フルーツ<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"1\">だ</span>。",
+        "answer": "のいっしゅ",
+        "alternate_grammar": [],
+        "kanji_answer": "の一種（いっしゅ）",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/トマトはフルーツの一種だ。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Tomatoes are <strong>one of many</strong> types of fruits.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 391,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180531",
+      "type": "study_question",
+      "attributes": {
+        "id": 180531,
+        "content": "アンドロイド<strong><span class='gp-popout' data-gp-id='3'>は</span></strong>スマートフォン<span class=\"gp-popout\" data-gp-id=\"6\">の</span>ＯＳ（オーエス）<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"1\">だ</span>。",
+        "answer": "のひとつ",
+        "alternate_grammar": [],
+        "kanji_answer": "の一（ひと）つ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/アンドロイドはスマートフォンのOSの一つだ。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Android is <strong>one of (many)</strong> smartphone operating systems.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 391,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3570",
+      "type": "study_question",
+      "attributes": {
+        "id": 3570,
+        "content": "コカコーラ<strong><span class='gp-popout' data-gp-id='3'>は</span></strong>コーラ<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "のひとつ",
+        "alternate_grammar": [],
+        "kanji_answer": "の一（ひと）つ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が(B)の<strong>グループの一部（いちぶ）</strong>だということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/391/male_audio/230303_1459 2.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/コカコーラはコーラの一つだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "のなかで": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "のなか": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "ひとつ": {
+            "en": "Something else is required at the beginning here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Coca-cola <strong>is one of many</strong> colas.",
+        "nuance_translation": "An expression which shows that (A) is only <strong>one thing from within the whole category of</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 391,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3571",
+      "type": "study_question",
+      "attributes": {
+        "id": 3571,
+        "content": "寿司（すし）<strong><span class='gp-popout' data-gp-id='3'>は</span></strong>日本（にほん）<span class='gp-popout' data-gp-id='6'>の</span>有名（ゆうめい）<span class='gp-popout' data-gp-id='28'>な</span>食（た）べ物（もの）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "のひとつ",
+        "alternate_grammar": [],
+        "kanji_answer": "の一（ひと）つ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が(B)の<strong>グループの一部（いちぶ）</strong>だということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/391/male_audio/230303_1459_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/寿司は日本の有名な食べ物の一つだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "のなかで": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "のなか": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "ひとつ": {
+            "en": "Something else is required at the beginning here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Sushi <strong>is one of many</strong> famous Japanese foods.",
+        "nuance_translation": "An expression which shows that (A) is only <strong>one thing from within the whole category of</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 391,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3573",
+      "type": "study_question",
+      "attributes": {
+        "id": 3573,
+        "content": "水（みず）<strong><span class='gp-popout' data-gp-id='3'>は</span></strong>体（からだ）に必要（ひつよう）<span class='gp-popout' data-gp-id='28'>な</span>物（もの）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "のひとつ",
+        "alternate_grammar": [],
+        "kanji_answer": "の一（ひと）つ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が(B)の<strong>グループの一部（いちぶ）</strong>だということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/391/male_audio/230303_1500_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/水は体に必要な物の一つだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "のなか": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "のなかで": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "ひとつ": {
+            "en": "Something else is required at the beginning here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Water <strong>is one of many</strong> things the body needs.",
+        "nuance_translation": "An expression which shows that (A) is only <strong>one thing from within the whole category of</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 391,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3574",
+      "type": "study_question",
+      "attributes": {
+        "id": 3574,
+        "content": "相撲（すもう）<strong><span class='gp-popout' data-gp-id='3'>は</span></strong>日本（にほん）<span class='gp-popout' data-gp-id='6'>の</span>伝統的（でんとうてき）<span class='gp-popout' data-gp-id='28'>な</span>スポーツ<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "のひとつ",
+        "alternate_grammar": [],
+        "kanji_answer": "の一（ひと）つ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が(B)の<strong>グループの一部（いちぶ）</strong>だということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/391/male_audio/230303_1500_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/相撲は日本の伝統的なスポーツの一つだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のひつ": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "のなか": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "のなかで": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "ひとつ": {
+            "en": "Something else is required at the beginning here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Sumo <strong>is one of many</strong> Japanese traditional sports.",
+        "nuance_translation": "An expression which shows that (A) is only <strong>one thing from within the whole category of</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 391,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1391",
+      "type": "study_question",
+      "attributes": {
+        "id": 1391,
+        "content": "ホンダ<strong><span class='gp-popout' data-gp-id='3'>は</span></strong>車（くるま）<span class='gp-popout' data-gp-id='6'>の</span>メーカー<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "のひとつ",
+        "alternate_grammar": [],
+        "kanji_answer": "の一（ひと）つ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が(B)の<strong>グループの一部（いちぶ）</strong>だということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/391/male_audio/230303_1458.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ホンダは車のメーカーの一つだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "のなか": {
+            "en": "のなか is used to describe that something is within a group, and then further describing it. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "のなかで": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "ひとつ": {
+            "en": "Something else is required at the beginning here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Honda is <strong>one of (many)</strong> car makers.",
+        "nuance_translation": "An expression which shows that (A) is only <strong>one thing from within the whole category of</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 391,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3576",
+      "type": "study_question",
+      "attributes": {
+        "id": 3576,
+        "content": "ひらがな<strong><span class='gp-popout' data-gp-id='3'>は</span></strong>日本（にほん）<span class='gp-popout' data-gp-id='6'>の</span>アルファベット<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "のひとつ",
+        "alternate_grammar": [],
+        "kanji_answer": "の一（ひと）つ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が(B)の<strong>グループの一部（いちぶ）</strong>だということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/391/male_audio/230303_1501_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ひらがなは日本のアルファベットの一つだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "のなか": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "のなかで": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "の": {
+            "en": "We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "ひとつ": {
+            "en": "Something else is required at the beginning here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Hiragana <strong>is one of the</strong> Japanese alphabets.",
+        "nuance_translation": "An expression which shows that (A) is only <strong>one thing from within the whole category of</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 391,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3578",
+      "type": "study_question",
+      "attributes": {
+        "id": 3578,
+        "content": "ロード・オブ・ザ・リング<strong><span class='gp-popout' data-gp-id='3'>は</span></strong>Ｊ（ジェー）・Ｒ（アール）・Ｒ（アール）・トールキン<span class='gp-popout' data-gp-id='10'>が</span>書（か）<span class='gp-popout' data-gp-id='41'>いた</span>小説（しょうせつ）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "のひとつ",
+        "alternate_grammar": [],
+        "kanji_answer": "の一（ひと）つ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が(B)の<strong>グループの一部（いちぶ）</strong>だということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/391/male_audio/230303_1502.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ロード・オブ・ザ・リングはJ・R・R・トールキンが書いた小説の一つだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のひとつだ": {
+            "en": "(ಠ_ಠ)",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "のなか": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "のなかで": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "ひとつ": {
+            "en": "Something else is required at the beginning here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "The Lord of the Rings <strong>is one of many</strong> novels written by J.R.R. Tolkien.",
+        "nuance_translation": "An expression which shows that (A) is only <strong>one thing from within the whole category of</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 391,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1392",
+      "type": "study_question",
+      "attributes": {
+        "id": 1392,
+        "content": "アイフォン<strong><span class='gp-popout' data-gp-id='3'>は</span></strong>スマートフォン<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "のひとつ",
+        "alternate_grammar": [],
+        "kanji_answer": "の一（ひと）つ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が(B)の<strong>グループの一部（いちぶ）</strong>だということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/391/male_audio/230303_1458_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/アイフォンはスマートフォンの一つだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "のなか": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "のなかで": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "ひとつ": {
+            "en": "Something else is required at the beginning here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "iPhone is <strong>one of (many)</strong> smartphones.",
+        "nuance_translation": "An expression which shows that (A) is only <strong>one thing from within the whole category of</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 391,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3572",
+      "type": "study_question",
+      "attributes": {
+        "id": 3572,
+        "content": "マクドナルド<strong><span class='gp-popout' data-gp-id='3'>は</span></strong>ファストフード<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "のひとつ",
+        "alternate_grammar": [],
+        "kanji_answer": "の一（ひと）つ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が(B)の<strong>グループの一部（いちぶ）</strong>だということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/391/male_audio/230303_1500.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/マクドナルドはファストフードの一つだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "のなか": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "のなかで": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "ひとつ": {
+            "en": "Something else is required at the beginning here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "McDonald's <strong>is one of many</strong> fast food chains.",
+        "nuance_translation": "An expression which shows that (A) is only <strong>one thing from within the whole category of</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 391,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3577",
+      "type": "study_question",
+      "attributes": {
+        "id": 3577,
+        "content": "ルイ・ヴィトン<strong><span class='gp-popout' data-gp-id='3'>は</span></strong>ファッションブランド<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "のひとつ",
+        "alternate_grammar": [],
+        "kanji_answer": "の一（ひと）つ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が(B)の<strong>グループの一部（いちぶ）</strong>だということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/391/male_audio/230303_1501_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ルイ・ヴィトンはファッションブランドの一つだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "のなか": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "のなかで": {
+            "en": "のなか is used to describe that something is within a group, and then further describe that thing. We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "の": {
+            "en": "We are looking for a grammar point that is used to express that something is only one thing from within a larger category.",
+            "es": "",
+            "fr": ""
+          },
+          "ひとつ": {
+            "en": "Something else is required at the beginning here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Louis Vuitton <strong>is one of many</strong> fashion brands.",
+        "nuance_translation": "An expression which shows that (A) is only <strong>one thing from within the whole category of</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 391,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "213",
+      "type": "writeup",
+      "attributes": {
+        "id": 213,
+        "body_ja": "",
+        "body": "<p>In order to express that something is only one thing from within a larger category, the construction <span data-gp-id='391'>～は～の一（ひと）つだ</span> will be used. In this expression, (A), the thing that there is one of, will be followed by <span data-gp-id='3'>は</span>. After this, (B) + <span data-gp-id='6'>の</span><span data-gp-id='391'>一（ひと）つ</span><span data-gp-id='1'>だ</span> will highlight the broader category to which (A) belongs.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180531'>\r\n<li data-study-question='180532'>\r\n</ul>\r\n\r\n<p>In this grammar point, <span data-gp-id='391'>の一（ひと）つ</span> is a standard counter. This means that other counters can and will be used, when they are more appropriate than <span data-gp-id='391'>一（ひと）つ</span>.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180533'>\r\n<li data-study-question='180534'>\r\n<li data-study-question='180535'>\r\n</ul>"
+      }
+    },
+    {
+      "id": "476",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 476,
+        "source": "Tobira",
+        "location": "Page 43",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "864",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 864,
+        "site": "Ameblo",
+        "description": "Examples with people",
+        "link": "https://ameblo.jp/eibunpo/entry-11219382367.html",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "339",
+      "type": "related_content",
+      "attributes": {
+        "id": 339,
+        "relationship_type": "related",
+        "body": "Both ～のうち(で) and ～は～の一つだ are used to identify things within a group or category. ～のうち(で) is most often paired with number + counter phrases to mean 'among', for example, ５人のうち４人が合格した ('Out of 5 people, 4 passed.'). In contrast, ～は～の一つだ identifies something as part of a group, e.g., バナナは果物の一つだ ('A banana is one type of fruit.').",
+        "first_relatable": {
+          "id": 681,
+          "slug": "-のうち-で",
+          "title": "～のうち(で)",
+          "meaning": "Of the, Among(st)",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 391,
+          "slug": "は-の一つだ",
+          "title": "～は～の一つだ",
+          "meaning": "〜 is one of (many) 〜",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

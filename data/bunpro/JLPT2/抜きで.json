@@ -1,0 +1,941 @@
+{
+  "data": {
+    "id": "602",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 602,
+      "level": "JLPT2",
+      "lesson_id": 36,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "抜きで",
+      "nuance": "普段（ふだん）あるはずの(A)が<strong>取（と）り除（のぞ）かれた</strong>ということを表（あらわ）す文法（ぶんぽう）。(A)なしで。",
+      "grammar_order": 637,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 520,
+        "title": "いよいよ",
+        "slug": "いよいよ"
+      },
+      "previous_grammar_point": {
+        "id": 571,
+        "title": "抜く",
+        "slug": "抜く"
+      },
+      "lesson_count": "5/20",
+      "title": "抜きで",
+      "furigana": "抜（ぬ）きで",
+      "meaning": "Without, Unless",
+      "nuance_translation": "A grammar point which expresses that something has had (A) <strong>extracted</strong> from it, which would usually be there. Without (A).",
+      "rare_kanji_warning": "",
+      "caution": "抜きでは can be contracted to 抜きじゃ.",
+      "polite_structure": "",
+      "casual_structure": "Noun + <strong>抜（ぬ）きで</strong>(<span class='gp-popout' data-gp-id='3'>は</span>)<br>Noun + <strong>抜（ぬ）きに</strong>(<span class='gp-popout' data-gp-id='3'>は</span>)<br>Noun + <span class='chui'><span class='gp-popout' data-gp-id='21'>を</span></span> + <strong>抜（ぬ）きにして</strong>(<span class='gp-popout' data-gp-id='3'>は</span>)<br>Noun + <span class='chui'><span class='gp-popout' data-gp-id='3'>は</span></span> + <strong>抜（ぬ）きとして</strong>(<span class='gp-popout' data-gp-id='3'>は</span>)<br>Noun + <strong>抜（ぬ）き</strong> + <span class='chui'><span class='gp-popout' data-gp-id='6'>の</span></span> + Noun",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/18088",
+      "metadata": "抜きで, ぬきで, nukide, う-verb, う verb, u-verb, u verb, godan, godan verb, five level, conjugation, dictionary form, standard form, plain form, expression, suffix"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "182106",
+            "type": "study_question"
+          },
+          {
+            "id": "182107",
+            "type": "study_question"
+          },
+          {
+            "id": "182108",
+            "type": "study_question"
+          },
+          {
+            "id": "182109",
+            "type": "study_question"
+          },
+          {
+            "id": "182110",
+            "type": "study_question"
+          },
+          {
+            "id": "7374",
+            "type": "study_question"
+          },
+          {
+            "id": "7376",
+            "type": "study_question"
+          },
+          {
+            "id": "5893",
+            "type": "study_question"
+          },
+          {
+            "id": "7371",
+            "type": "study_question"
+          },
+          {
+            "id": "5892",
+            "type": "study_question"
+          },
+          {
+            "id": "7369",
+            "type": "study_question"
+          },
+          {
+            "id": "7370",
+            "type": "study_question"
+          },
+          {
+            "id": "7373",
+            "type": "study_question"
+          },
+          {
+            "id": "7375",
+            "type": "study_question"
+          },
+          {
+            "id": "5894",
+            "type": "study_question"
+          },
+          {
+            "id": "7372",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "653",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "2124",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "280",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2000",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1478",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "182106",
+      "type": "study_question",
+      "attributes": {
+        "id": 182106,
+        "content": "あの人（ひと）は冗談（じょうだん）<span class='study-area-input'>____</span>怖（こわ）いから怒（おこ）らせない方（ほう）がいいよ。",
+        "answer": "ぬきで",
+        "alternate_grammar": [],
+        "kanji_answer": "抜（ぬ）きで",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あの人は冗談抜きで怖いから怒らせない方がいいよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "That guy is scary, <strong>no</strong> joke, so you shouldn't upset him.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 602,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182107",
+      "type": "study_question",
+      "attributes": {
+        "id": 182107,
+        "content": "あいつら全然（ぜんぜん）来（こ）ないな、あいつら<span class='study-area-input'>____</span>始（はじ）めちゃおうぜ。",
+        "answer": "ぬきで",
+        "alternate_grammar": [],
+        "kanji_answer": "抜（ぬ）きで",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あいつら全然来ないな、あいつら抜きで始めちゃおうぜ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "They aren't coming at all (it doesn't seem like they are coming anytime soon). Let's start <strong>without</strong> them.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 602,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182108",
+      "type": "study_question",
+      "attributes": {
+        "id": 182108,
+        "content": "ワサビ<span class='study-area-input'>____</span>の寿司（すし）なんて寿司（すし）じゃないよ。",
+        "answer": "ぬき",
+        "alternate_grammar": [],
+        "kanji_answer": "抜（ぬ）き",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/ワサビ抜きの寿司なんて寿司じゃないよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Sushi <strong>without</strong> wasabi is not sushi.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 602,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182109",
+      "type": "study_question",
+      "attributes": {
+        "id": 182109,
+        "content": "若（わか）い労働者（ろうどうしゃ）<span class='study-area-input'>____</span>は、日本（にほん）の建築業（けんちくぎょう）は成（な）り立（た）たない。",
+        "answer": "ぬきにして",
+        "alternate_grammar": [],
+        "kanji_answer": "抜（ぬ）きにして",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Without</strong> young workers, Japan's construction industry would not exist.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 602,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182110",
+      "type": "study_question",
+      "attributes": {
+        "id": 182110,
+        "content": "公共（こうきょう）交通（こうつう）機関（きかん）<span class='study-area-input'>____</span>は便利（べんり）な生活（せいかつ）ができない。",
+        "answer": "ぬきにして",
+        "alternate_grammar": [],
+        "kanji_answer": "抜（ぬ）きにして",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Without</strong> public transportation, you cannot live a convenient life.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 602,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7374",
+      "type": "study_question",
+      "attributes": {
+        "id": 7374,
+        "content": "くろさわあきらという監督（かんとく）<span class='study-area-input'>____</span>して日本（にほん）の映画（えいが）を語（かた）ることはできない。",
+        "answer": "ぬきに",
+        "alternate_grammar": [
+          "ぬきに",
+          "ぬきと",
+          "をぬきに"
+        ],
+        "kanji_answer": "抜（ぬ）きに",
+        "kanji_alt_grammar": [
+          "抜（ぬ）きと",
+          "抜（ぬ）きに",
+          "を抜（ぬ）きに"
+        ],
+        "nuance": "普段（ふだん）あるはずの(A)が<strong>取（と）り除（のぞ）かれた</strong>ということを表（あらわ）す文法（ぶんぽう）。(A)なしで。",
+        "tense": "Exclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/くろさわあきらという監督抜きにして日本の映画を語ることはできない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なしに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": ""
+          },
+          "ぬき": {
+            "en": "Let's try adding something else to the end.",
+            "es": "",
+            "fr": ""
+          },
+          "なし": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": ""
+          },
+          "ぬきで": {
+            "en": "Let's try a different particle here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It is impossible to talk about Japanese cinematography <strong>without</strong> mentioning the director Akira Kurosawa.",
+        "nuance_translation": "A grammar point which expresses that something has had (A) <strong>extracted</strong> from it, which would usually be there. Without (A).",
+        "extra_info": "",
+        "reviewable_id": 602,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7376",
+      "type": "study_question",
+      "attributes": {
+        "id": 7376,
+        "content": "日本語（にほんご）の場合（ばあい）、文脈（ぶんみゃく）<span class='study-area-input'>____</span>スタンドアロンの文（ぶん）は分（わ）かりにくい。",
+        "answer": "ぬきの",
+        "alternate_grammar": [],
+        "kanji_answer": "抜（ぬ）きの",
+        "kanji_alt_grammar": [],
+        "nuance": "普段（ふだん）あるはずの(A)が<strong>取（と）り除（のぞ）かれた</strong>ということを表（あらわ）す文法（ぶんぽう）。(A)なしで。",
+        "tense": "Exclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/日本語の場合、文脈抜きのスタンドアロンの文は分かりにくい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なしの": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬき": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なし": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬきに": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "In the case of Japanese, standalone sentences <strong>without</strong> context are hard to understand.",
+        "nuance_translation": "A grammar point which expresses that something has had (A) <strong>extracted</strong> from it, which would usually be there. Without (A).",
+        "extra_info": "",
+        "reviewable_id": 602,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5893",
+      "type": "study_question",
+      "attributes": {
+        "id": 5893,
+        "content": "<span class='name-highlight'>女（おんな）の子（こ）</span>：「あたしの料理（りょうり）、好（す）きなの？」<span class='name-highlight'>男（おとこ）の子（こ）</span>：「お世辞（せじ）<span class='study-area-input'>____</span>、今（いま）までの人（じん）生（せい）でこれよりうまいものは食（た）べた事（こと）がない。」",
+        "answer": "ぬきで",
+        "alternate_grammar": [
+          "ぬきに",
+          "ぬきで"
+        ],
+        "kanji_answer": "抜（ぬ）きで",
+        "kanji_alt_grammar": [
+          "抜（ぬ）きに",
+          "抜（ぬ）きで"
+        ],
+        "nuance": "普段（ふだん）あるはずの(A)が<strong>取（と）り除（のぞ）かれた</strong>ということを表（あらわ）す文法（ぶんぽう）。(A)なしで。",
+        "tense": "Exclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/女の子：「あたしの料理、好きなの？」男の子：「お世辞抜きで、今までの人生でこれよりうまいものは食べた事がない。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なしで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬき": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なし": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Girl</span>: 'Do you like my cooking?' <span class='name-highlight'>Boy</span>: '<strong>Without</strong> flattery, I haven't eaten anything more delicious than this in my life.'",
+        "nuance_translation": "A grammar point which expresses that something has had (A) <strong>extracted</strong> from it, which would usually be there. Without (A).",
+        "extra_info": "",
+        "reviewable_id": 602,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7371",
+      "type": "study_question",
+      "attributes": {
+        "id": 7371,
+        "content": "<span class='name-highlight'>夫婦（ふうふ）の会話（かいわ）</span>：「子供（こども）<span class='study-area-input'>____</span>どこか面白（おもしろ）いところに行（い）こう！」",
+        "answer": "ぬきで",
+        "alternate_grammar": [
+          "ぬきで",
+          "ぬきにして",
+          "ぬきとして"
+        ],
+        "kanji_answer": "抜（ぬ）きで",
+        "kanji_alt_grammar": [
+          "抜（ぬ）きにして",
+          "抜（ぬ）きとして",
+          "抜（ぬ）きで"
+        ],
+        "nuance": "普段（ふだん）あるはずの(A)が<strong>取（と）り除（のぞ）かれた</strong>ということを表（あらわ）す文法（ぶんぽう）。(A)なしで。",
+        "tense": "Exclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/夫婦の会話：「子供抜きでどこか面白いところに行こう！」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なしで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬき": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なし": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬきに": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>A conversation between a married couple</span>: 'Let's go somewhere fun, <strong>without</strong> the children!'",
+        "nuance_translation": "A grammar point which expresses that something has had (A) <strong>extracted</strong> from it, which would usually be there. Without (A).",
+        "extra_info": "",
+        "reviewable_id": 602,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5892",
+      "type": "study_question",
+      "attributes": {
+        "id": 5892,
+        "content": "<span class='name-highlight'>お寿司（すし）屋（や）さん</span>：「ご注文（ちゅうもん）はお決（き）まりですか？」<span class='name-highlight'>お客（きゃく）さん</span>：「はい、マグロのにぎりをワサビ<span class='study-area-input'>____</span>お願（ねが）いします。」",
+        "answer": "ぬきで",
+        "alternate_grammar": [],
+        "kanji_answer": "抜（ぬ）きで",
+        "kanji_alt_grammar": [],
+        "nuance": "普段（ふだん）あるはずの(A)が<strong>取（と）り除（のぞ）かれた</strong>ということを表（あらわ）す文法（ぶんぽう）。(A)なしで。",
+        "tense": "Exclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/お寿司屋さん：「ご注文はお決まりですか？」お客さん：「はい、マグロのにぎりをワサビ抜きでお願いします。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なしで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬき": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なし": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Sushi restaurant employee</span>: 'Are you ready to order?' <span class='name-highlight'>Guest</span>: 'Yes, I would like to have tuna nigiri <strong>without</strong> wasabi.'",
+        "nuance_translation": "A grammar point which expresses that something has had (A) <strong>extracted</strong> from it, which would usually be there. Without (A).",
+        "extra_info": "",
+        "reviewable_id": 602,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7369",
+      "type": "study_question",
+      "attributes": {
+        "id": 7369,
+        "content": "リスク<span class='study-area-input'>____</span>は決（けっ）してフグを食（た）べられない。",
+        "answer": "ぬきに",
+        "alternate_grammar": [
+          "ぬきに",
+          "ぬきにして",
+          "ぬきとして"
+        ],
+        "kanji_answer": "抜（ぬ）きに",
+        "kanji_alt_grammar": [
+          "抜（ぬ）きにして",
+          "抜（ぬ）きとして",
+          "抜（ぬ）きに"
+        ],
+        "nuance": "普段（ふだん）あるはずの(A)が<strong>取（と）り除（のぞ）かれた</strong>ということを表（あらわ）す文法（ぶんぽう）。(A)なしで。",
+        "tense": "Exclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/リスク抜きには決してフグを食べられない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なしに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬき": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なし": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬきで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "なしで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "をぬきにして": {
+            "en": "How about removing something from the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "You can never eat fugu <strong>without</strong> risk.",
+        "nuance_translation": "A grammar point which expresses that something has had (A) <strong>extracted</strong> from it, which would usually be there. Without (A).",
+        "extra_info": "",
+        "reviewable_id": 602,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7370",
+      "type": "study_question",
+      "attributes": {
+        "id": 7370,
+        "content": "「食（た）べれる」のような「ら」<span class='study-area-input'>____</span>言葉（ことば）は人気（にんき）になっている。",
+        "answer": "ぬきの",
+        "alternate_grammar": [],
+        "kanji_answer": "抜（ぬ）きの",
+        "kanji_alt_grammar": [],
+        "nuance": "普段（ふだん）あるはずの(A)が<strong>取（と）り除（のぞ）かれた</strong>ということを表（あらわ）す文法（ぶんぽう）。(A)なしで。",
+        "tense": "Exclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/「食べれる」のような「ら」抜きの言葉は人気になっている。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なしの": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬき": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なし": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬきに": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Words <strong>without</strong> 'ら', like '食べれる' are getting more popular.",
+        "nuance_translation": "A grammar point which expresses that something has had (A) <strong>extracted</strong> from it, which would usually be there. Without (A).",
+        "extra_info": "",
+        "reviewable_id": 602,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7373",
+      "type": "study_question",
+      "attributes": {
+        "id": 7373,
+        "content": "私（わたし）にとってコーラ<span class='study-area-input'>____</span>ハンバーガーを食（た）べることは考（かんが）えられない。",
+        "answer": "ぬきで",
+        "alternate_grammar": [
+          "ぬきで",
+          "ぬきにして",
+          "ぬきとして"
+        ],
+        "kanji_answer": "抜（ぬ）きで",
+        "kanji_alt_grammar": [
+          "抜（ぬ）きにして",
+          "抜（ぬ）きとして",
+          "抜（ぬ）きで"
+        ],
+        "nuance": "普段（ふだん）あるはずの(A)が<strong>取（と）り除（のぞ）かれた</strong>ということを表（あらわ）す文法（ぶんぽう）。(A)なしで。",
+        "tense": "Exclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/私にとってコーラ抜きでハンバーガーを食べることは考えられない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なしで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬき": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なし": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬきに": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ぬきの": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          }
+        },
+        "translation": "It is totally unacceptable for me to eat a hamburger <strong>without</strong> a coke.",
+        "nuance_translation": "A grammar point which expresses that something has had (A) <strong>extracted</strong> from it, which would usually be there. Without (A).",
+        "extra_info": "",
+        "reviewable_id": 602,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7375",
+      "type": "study_question",
+      "attributes": {
+        "id": 7375,
+        "content": "グルテン<span class='study-area-input'>____</span>食（た）べ物（もの）はセリアック病（びょう）という病気（びょうき）の人（ひと）のために必要（ひつよう）である。",
+        "answer": "ぬきの",
+        "alternate_grammar": [],
+        "kanji_answer": "抜（ぬ）きの",
+        "kanji_alt_grammar": [],
+        "nuance": "普段（ふだん）あるはずの(A)が<strong>取（と）り除（のぞ）かれた</strong>ということを表（あらわ）す文法（ぶんぽう）。(A)なしで。",
+        "tense": "Exclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/グルテン抜きの食べ物はセリアック病という病気の人のために必要である。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なしの": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬき": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なし": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬきに": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Gluten-<strong>removed</strong> food is necessary for those who are ill with celiac disease.",
+        "nuance_translation": "A grammar point which expresses that something has had (A) <strong>extracted</strong> from it, which would usually be there. Without (A).",
+        "extra_info": "",
+        "reviewable_id": 602,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5894",
+      "type": "study_question",
+      "attributes": {
+        "id": 5894,
+        "content": "<span class='name-highlight'>Ｃ（シー）</span>：「Ａ（エー）とＢ（ビー）は付（つ）き合（あ）ってんのよ」<span class='name-highlight'>Ｄ（ディー）</span>：「マジ！？冗談（じょうだん）<span class='study-area-input'>____</span>？」",
+        "answer": "ぬきで",
+        "alternate_grammar": [],
+        "kanji_answer": "抜（ぬ）きで",
+        "kanji_alt_grammar": [],
+        "nuance": "普段（ふだん）あるはずの(A)が<strong>取（と）り除（のぞ）かれた</strong>ということを表（あらわ）す文法（ぶんぽう）。(A)なしで。",
+        "tense": "Exclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/C：「AとBは付き合ってんのよ」D：「マジ！？冗談抜きで？」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なしで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬき": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なし": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>C</span>: 'A and B are dating!' <span class='name-highlight'>D</span>: 'Whaa? No kidding? (<strong>without</strong> joking)'",
+        "nuance_translation": "A grammar point which expresses that something has had (A) <strong>extracted</strong> from it, which would usually be there. Without (A).",
+        "extra_info": "",
+        "reviewable_id": 602,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7372",
+      "type": "study_question",
+      "attributes": {
+        "id": 7372,
+        "content": "「クソ、渋滞（じゅうたい）だ。あいつら、パーティーをオレ<span class='study-area-input'>____</span>始（はじ）めそうだ。」",
+        "answer": "ぬきで",
+        "alternate_grammar": [
+          "ぬきで",
+          "ぬきにして",
+          "ぬきとして"
+        ],
+        "kanji_answer": "抜（ぬ）きで",
+        "kanji_alt_grammar": [
+          "抜（ぬ）きにして",
+          "抜（ぬ）きとして",
+          "抜（ぬ）きで"
+        ],
+        "nuance": "普段（ふだん）あるはずの(A)が<strong>取（と）り除（のぞ）かれた</strong>ということを表（あらわ）す文法（ぶんぽう）。(A)なしで。",
+        "tense": "Exclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/「クソ、渋滞だ。あいつら、パーティーをオレ抜きで始めそうだ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なしで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬき": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "なし": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ぬきに": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "をぬきで": {
+            "en": "How about removing something from the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'Damn, a traffic jam. It seems that they will start the party <strong>without</strong> me.'",
+        "nuance_translation": "A grammar point which expresses that something has had (A) <strong>extracted</strong> from it, which would usually be there. Without (A).",
+        "extra_info": "",
+        "reviewable_id": 602,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "653",
+      "type": "writeup",
+      "attributes": {
+        "id": 653,
+        "body_ja": "<p>「<span data-gp-id='602'>抜（ぬ）きで</span>」は五段動詞（ごだんどうし）「抜（ぬ）く」（意味（いみ）：内（うち）から外（そと）に取（と）り出（だ）す）の連用形（れんようけい）が名詞（めいし）化（か）したものと助詞（じょし）「で」の組（く）み合（あ）わせで、「(A) なしで」何（なに）かを行（おこな）うことを表（あらわ）します。「ぬき」は何（なに）かを取（と）り出（だ）すことを意味（いみ）するため、この表現（ひょうげん）はいつもは含（ふく）まれているものを取（と）り除（のぞ）いたり、省（はぶ）いたりすることを表（あらわ）します</p>\r\n\r\n<p>「<span data-gp-id='602'>抜（ぬ）きで</span>」は接尾（せつび）語（ご）のように機能（きのう）し、名詞（めいし）の後（あと）に置（お）かれて、その名詞（めいし）が省（はぶ）かれることを表（あらわ）します。ひらがな表記（ひょうき）も漢字（かんじ）表記（ひょうき）もどちらも一般的（いっぱんてき）です。また「ぬき」が名詞（めいし）を修飾（しゅうしょく）する場合（ばあい）は「で」の代（か）わりに「の」が使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182106'>\r\n<li data-study-question='182107'>\r\n<li data-study-question='182108'>\r\n</ul>\r\n\r\n<p>場合（ばあい）によっては「で」の代（か）わりに「にして」が使（つか）われることもあります。この表現（ひょうげん）は、(B) の部分（ぶぶん）に「ない」や「できない」が含（ふく）まれるときによく使（つか）われ、「(A) なしではそれは起（お）こらない」や「(A) なしではそれは不可能（ふかのう）だ」のような意味（いみ）を表（あらわ）します。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182109'>\r\n<li data-study-question='182110'>\r\n</ul>\r\n\r\n<p>ただし、(B) が否定（ひてい）文（ぶん）の場合（ばあい）でも、「<span data-gp-id='602'>ぬきで</span>」や「<span data-gp-id='602'>ぬきでは</span>」が使（つか）われることもあり、この場合（ばあい）も意味（いみ）は「ぬきにしては」と同（おな）じです。</p>",
+        "body": "<p><span data-gp-id='602'>抜（ぬ）きで</span>, a combination of the noun form of the う-Verb 抜（ぬ）く 'to extract', and the particle で, is a construction that usually indicates something being done 'without (A)', or 'with the removal of (A)'. As ぬき indicates the extraction of something, this grammar pattern is primarily used to indicate 'leaving out', or 'setting aside' something that is regularly included.</p>\r\n\r\n<p>抜（ぬ）きで acts as a <span data-term='接尾語・せつびご'>suffix</span>, so will be utilized after nouns, to indicate the thing that is being left out. Both the plain hiragana and kanji forms are fairly common. Additionally, の will replace で when ぬき is followed directly by another noun.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182106'>\r\n<li data-study-question='182107'>\r\n<li data-study-question='182108'>\r\n</ul>\r\n\r\n<p>Occasionally, にして may also replace で, but this is structure is more common when the part (B) section of the sentence includes a ない or できない based statement. These expressions indicate that something 'will not happen without (A)', or 'is not possible without (A)'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182109'>\r\n<li data-study-question='182110'>\r\n</ul>\r\n\r\n<p>However; this is not always the case, as <span data-gp-id='602'>ぬきで</span> or <span data-gp-id='602'>ぬきでは</span> may also appear in negative sentences, with the same meaning.</p>"
+      }
+    },
+    {
+      "id": "2124",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2124,
+        "source": "A Handbook of Japanese Grammar Patterns",
+        "location": "Page 494",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2000",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2000,
+        "site": "Japanese StackExchange",
+        "description": "なし vs. ぬき",
+        "link": "https://japanese.stackexchange.com/questions/18015/ordering-food-difference-between-%e3%81%aa%e3%81%97-and-%e6%8a%9c%e3%81%8d/74657#74657",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1478",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1478,
+        "site": "Nihongoの森",
+        "description": "〜を抜きにしては・～抜きではVS 〜ないことには",
+        "link": "https://www.youtube.com/watch?v=itF-QVhA6Hs",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "280",
+      "type": "related_content",
+      "attributes": {
+        "id": 280,
+        "relationship_type": "related",
+        "body": "Both なし and 抜きで express the idea of 'without' in Japanese, but with a slight difference in nuance. なし indicates the absence or lack of something, e.g. '砂糖なしでお願いします' ('I'll have it without sugar'). 抜きで implies the exclusion of something that would typically be expected, e.g. 'ワサビ抜きのお寿司' ('sushi without wasabi') or 'ランチ抜きで仕事する' ('work without eating lunch').",
+        "first_relatable": {
+          "id": 663,
+          "slug": "なし",
+          "title": "なし",
+          "meaning": "Without, No",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 602,
+          "slug": "抜きで",
+          "title": "抜きで",
+          "meaning": "Without, Unless",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

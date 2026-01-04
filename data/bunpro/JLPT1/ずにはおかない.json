@@ -1,0 +1,1067 @@
+{
+  "data": {
+    "id": "945",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 945,
+      "level": "JLPT1",
+      "lesson_id": 50,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "ずにはおかない",
+      "nuance": "誰（だれ）かが確実（かくじつ）に(A)をやるということを示（しめ）す表現（ひょうげん）。(A)<strong>を終（お）えず</strong>にはいられない。",
+      "grammar_order": 911,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 946,
+        "title": "を限りに",
+        "slug": "を限りに"
+      },
+      "previous_grammar_point": {
+        "id": 944,
+        "title": "といおうか",
+        "slug": "といおうか"
+      },
+      "lesson_count": "8/22",
+      "title": "ずにはおかない",
+      "furigana": "ずには措（お）かない",
+      "meaning": "Will definitely, Will certainly, Bound to, Not fail to",
+      "nuance_translation": "A <strong>strong</strong> construction, implying that someone will definitely do (A). I will <strong>not set it aside</strong> with (A) <strong>not</strong> being done.",
+      "rare_kanji_warning": "",
+      "caution": "also used to express that subject (usually non-animate like a book) has an emotional effect on people",
+      "polite_structure": "",
+      "casual_structure": "Verb [ない-stem] + <strong>ずには</strong> + <strong>おかない</strong><br>Verb [ない] + <strong>では</strong> + <strong>おかない</strong><br>Exception:<br><br><span class='chui'>する→せずにはおかない</span><br>Verb [Negative] + <strong>では</strong> + <strong>おかない</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/38344",
+      "metadata": "ずにはおかない, ずには措かない, zunihaokanai, zuniwaokanai, expression, classical auxiliary verb, formal, strong will, causative verb"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "10008",
+            "type": "study_question"
+          },
+          {
+            "id": "183155",
+            "type": "study_question"
+          },
+          {
+            "id": "10010",
+            "type": "study_question"
+          },
+          {
+            "id": "183152",
+            "type": "study_question"
+          },
+          {
+            "id": "183153",
+            "type": "study_question"
+          },
+          {
+            "id": "183154",
+            "type": "study_question"
+          },
+          {
+            "id": "184619",
+            "type": "study_question"
+          },
+          {
+            "id": "10009",
+            "type": "study_question"
+          },
+          {
+            "id": "10007",
+            "type": "study_question"
+          },
+          {
+            "id": "10006",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "982",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "2029",
+            "type": "offline_resource"
+          },
+          {
+            "id": "2028",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1586",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2631",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2632",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "10008",
+      "type": "study_question",
+      "attributes": {
+        "id": 10008,
+        "content": "「彼（かれ）はまた私（わたし）との約束（やくそく）をすっぽかした。絶対（ぜったい）に彼（かれ）に『ごめんなさい』と<span class='study-area-input'>____</span>。」",
+        "answer": "いわせずにはおかない",
+        "alternate_grammar": [
+          "いわせないではおかない",
+          "いわせずにはおかない",
+          "いわせないではおきません",
+          "いわせずにはおきません"
+        ],
+        "kanji_answer": "言（い）わせずにはおかない",
+        "kanji_alt_grammar": [
+          "言（い）わせないではおかない",
+          "言（い）わせずにはおかない",
+          "言（い）わせないではおきません",
+          "言（い）わせずにはおきません",
+          "言（い）せずにはおかない"
+        ],
+        "nuance": "誰（だれ）かが確実（かくじつ）に(A)をやるということを示（しめ）す表現（ひょうげん）。(A)<strong>を終（お）えず</strong>にはいられない。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「彼はまた私との約束をすっぽかした。絶対に彼に『ごめんなさい』と言せずにはおかない。」.mp3",
+        "word_prompt": "言（い）わせる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いわせないではいられない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせずにはいられない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせないわけにはいかない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせざるをえない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせないといけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせなければいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせなきゃいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせなくちゃいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせなくてはいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせてやる": {
+            "en": "Natural. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせてみせる": {
+            "en": "Understandable. However phrase used when one has a strong resolution to exert influence over someone fits here better.",
+            "es": "",
+            "fr": ""
+          },
+          "いわせないではすまされない": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせずにはすまされない": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせないではすまない": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせずにはすまない": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせないではいられません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせずにはいられません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせないわけにはいきません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせざるをえません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせないといけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせなければいけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせなきゃいけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせなくちゃいけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせなくてはいけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせてやります": {
+            "en": "Natural. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせてみせます": {
+            "en": "Understandable. However phrase used when one has a strong resolution to exert influence over someone fits here better.",
+            "es": "",
+            "fr": ""
+          },
+          "いわせないではすまされません": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせずにはすまされません": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせないではすみません": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          },
+          "いわせずにはすみません": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'He skipped our appointment again. <strong>I won't fail to</strong> get him to say \"I'm sorry\".'",
+        "nuance_translation": "A <strong>strong</strong> construction, implying that someone will definitely do (A). I will <strong>not set it aside</strong> with (A) <strong>not</strong> being done.",
+        "extra_info": "",
+        "reviewable_id": 945,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183155",
+      "type": "study_question",
+      "attributes": {
+        "id": 183155,
+        "content": "この犬（いぬ）は３０（さんじゅっ）キロになるから、躾（しつけ）に力（ちから）を入（い）れ<span class='study-area-input'>____</span>。",
+        "answer": "ないではおかない",
+        "alternate_grammar": [],
+        "kanji_answer": "ないではおかない",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/この犬は30キロになるから、躾に力を入れないではおかない。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Since this dog will become 30kg, I <strong>will not fail to</strong> train him.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 945,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10010",
+      "type": "study_question",
+      "attributes": {
+        "id": 10010,
+        "content": "<span class='name-highlight'>小説（しょうせつ）、勇者（ゆうしゃ）</span>：「どんな手段（しゅだん）を用（もち）いても、かならず魔王（まおう）を<span class='study-area-input'>____</span>。」",
+        "answer": "たおさずにはおかない",
+        "alternate_grammar": [
+          "たおさないではおかない",
+          "たおさずにはおかない",
+          "たおさないではおきません",
+          "たおさずにはおきません"
+        ],
+        "kanji_answer": "倒（たお）さずにはおかない",
+        "kanji_alt_grammar": [
+          "倒（たお）さないではおかない",
+          "倒（たお）さずにはおかない",
+          "倒（たお）さないではおきません",
+          "倒（たお）さずにはおきません"
+        ],
+        "nuance": "誰（だれ）かが確実（かくじつ）に(A)をやるということを示（しめ）す表現（ひょうげん）。(A)<strong>を終（お）えず</strong>にはいられない。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/小説、勇者：「どんな手段を用いても、かならず魔王を倒さずにはおかない。」.mp3",
+        "word_prompt": "倒（たお）す",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たおさないではいられない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさずにはいられない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさないわけにはいかない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさざるをえない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさないといけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさなければいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさなきゃいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさなくちゃいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさなくてはいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおしてやる": {
+            "en": "Natural. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおしてみせる": {
+            "en": "Understandable. However phrase used when one has a strong resolution to exert influence over someone fits here better.",
+            "es": ""
+          },
+          "たおさないではすまされない": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさずにはすまされない": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさないではすまない": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさずにはすまない": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさないではいられません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさずにはいられません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさないわけにはいきません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさざるをえません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさないといけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさなければいけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさなきゃいけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさなくちゃいけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさなくてはいけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおしてやります": {
+            "en": "Natural. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおしてみせます": {
+            "en": "Understandable. However phrase used when one has a strong resolution to exert influence over someone fits here better.",
+            "es": ""
+          },
+          "たおさないではすまされません": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさずにはすまされません": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさないではすみません": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "たおさずにはすみません": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Novel</span>: 'No matter what it takes, <strong>I will not fail to</strong> defeat the Demon Lord!'",
+        "nuance_translation": "A <strong>strong</strong> construction, implying that someone will definitely do (A). I will <strong>not set it aside</strong> with (A) <strong>not</strong> being done.",
+        "extra_info": "",
+        "reviewable_id": 945,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183152",
+      "type": "study_question",
+      "attributes": {
+        "id": 183152,
+        "content": "\r\nあんなひどいことをした人（ひと）だから、警察（けいさつ）も捕（つか）まえ<span class='study-area-input'>____</span>だろう。",
+        "answer": "ずにはおかない",
+        "alternate_grammar": [],
+        "kanji_answer": "ずにはおかない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/あんなひどいことをした人だから、警察も捕まえずにはおかないだろう。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI am sure the police <strong>will not fail to</strong> arrest that person, since they did something so horrible.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 945,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183153",
+      "type": "study_question",
+      "attributes": {
+        "id": 183153,
+        "content": "\r\n\r\n\r\nメディアにも取（とり）り上（あ）げられたから、警察（けいさつ）も調査（ちょうさ）をせ<span class='study-area-input'>____</span>。",
+        "answer": "ずにはおかない",
+        "alternate_grammar": [],
+        "kanji_answer": "ずにはおかない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/メディアにも取り上げられたから、警察も調査をせずにはおかない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nSince it was covered by the media, the police <strong>will certainly</strong> investigate.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 945,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183154",
+      "type": "study_question",
+      "attributes": {
+        "id": 183154,
+        "content": "\r\nこんなことをされたのだから、お客（きゃく）さんも訴（うった）え<span class='study-area-input'>____</span>だろう。",
+        "answer": "ないではおかない",
+        "alternate_grammar": [],
+        "kanji_answer": "ないではおかない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/こんなことをされたのだから、お客さんも訴えないではおかないだろう。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nSince they did such a thing to the customers, they <strong>would certainly</strong> sue them.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 945,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184619",
+      "type": "study_question",
+      "attributes": {
+        "id": 184619,
+        "content": "あの人（ひと）のスピーチは聞（き）く人（ひと）を感動（かんどう）させ<span data-gp-id='945'>ずにはおかない</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/あの人のスピーチは聞く人を感動させずにはおかない。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 6,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "That person’s speech <strong>will not fail to</strong> move the audience.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 945,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10009",
+      "type": "study_question",
+      "attributes": {
+        "id": 10009,
+        "content": "<span class='name-highlight'>小説（しょうせつ）</span>：「探偵（たんてい）は『この残虐（ざんぎゃく）行為（こうい）の責任者（せきにんしゃ）を訴追（そつい）<span class='study-area-input'>____</span>』と意（い）を決（けっ）する。」",
+        "answer": "せずにはおかない",
+        "alternate_grammar": [
+          "しないではおかない",
+          "せずにはおかない"
+        ],
+        "kanji_answer": "せずにはおかない",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かが確実（かくじつ）に(A)をやるということを示（しめ）す表現（ひょうげん）。(A)<strong>を終（お）えず</strong>にはいられない。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/小説：「探偵は『この残虐行為の責任者を訴追せずにはおかない』と意を決する。」.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しないではいられない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "せずにはいられない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しないわけにはいかない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "せざるをえない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しないといけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しなければいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しなきゃいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しなくちゃいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しなくてはいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "かならずする": {
+            "en": "Natural. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "まちがいなくする": {
+            "en": "Natural. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "きっとする": {
+            "en": "Natural. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "ぜったいにする": {
+            "en": "Natural. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "してやる": {
+            "en": "Natural. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "してみせる": {
+            "en": "Understandable. However phrase used when one has a strong resolution to exert influence over someone fits here better.",
+            "es": ""
+          },
+          "しないではすまされない": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "せずにはすまされない": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しないではすまない": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "せずにはすまない": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Novel</span>: 'The detective resolved himself, \"<strong>I won't fail to</strong> bring the person responsible for this atrocity to justice\".'",
+        "nuance_translation": "A <strong>strong</strong> construction, implying that someone will definitely do (A). I will <strong>not set it aside</strong> with (A) <strong>not</strong> being done.",
+        "extra_info": "",
+        "reviewable_id": 945,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10007",
+      "type": "study_question",
+      "attributes": {
+        "id": 10007,
+        "content": "「警察（けいさつ）はすべての悪者（わるもの）に必（かなら）ず罰（ばつ）を<span class='study-area-input'>____</span>。」",
+        "answer": "あたえずにはおかない",
+        "alternate_grammar": [
+          "あたえないではおかない",
+          "あたえずにはおかない",
+          "あたえないではおきません",
+          "あたえずにはおきません"
+        ],
+        "kanji_answer": "与（あた）えずにはおかない",
+        "kanji_alt_grammar": [
+          "与（あた）えないではおかない",
+          "与（あた）えずにはおかない",
+          "与（あた）えないではおきません",
+          "与（あた）えずにはおきません"
+        ],
+        "nuance": "誰（だれ）かが確実（かくじつ）に(A)をやるということを示（しめ）す表現（ひょうげん）。(A)<strong>を終（お）えず</strong>にはいられない。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「警察はすべての悪者に必ず罰を与えずにはおかない。」.mp3",
+        "word_prompt": "与（あた）える",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あたえざるをえない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "あたえないといけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "あたえなければいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "あたえなきゃいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "あたえなくちゃいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "あたえなくてはいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "あたえざるをえません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "あたえないといけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "あたえなければいけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "あたえなきゃいけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "あたえなくちゃいけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "あたえなくてはいけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'The police <strong>will not fail to</strong> punish all the wicked people.'",
+        "nuance_translation": "A <strong>strong</strong> construction, implying that someone will definitely do (A). I will <strong>not set it aside</strong> with (A) <strong>not</strong> being done.",
+        "extra_info": "",
+        "reviewable_id": 945,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10006",
+      "type": "study_question",
+      "attributes": {
+        "id": 10006,
+        "content": "「私（わたし）はきっと彼（かれ）に同（おな）じ手（て）で仕返（しかえ）しを<span class='study-area-input'>____</span>。」",
+        "answer": "しないではおかない",
+        "alternate_grammar": [
+          "しないではおかない",
+          "せずにはおかない",
+          "しないではおきません",
+          "せずにはおきません"
+        ],
+        "kanji_answer": "しないではおかない",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かが確実（かくじつ）に(A)をやるということを示（しめ）す表現（ひょうげん）。(A)<strong>を終（お）えず</strong>にはいられない。",
+        "tense": "Negative, Standard",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「私はきっと彼に同じ手で仕返しをしないではおかない。」.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しないではいられない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "せずにはいられない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しないわけにはいかない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "せざるをえない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しないといけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しなければいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しなきゃいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しなくちゃいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しなくてはいけない": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "してやる": {
+            "en": "Natural. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "してみせる": {
+            "en": "Understandable. However phrase used when one has a strong resolution to exert influence over someone fits here better.",
+            "es": ""
+          },
+          "しないではすまされない": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "せずにはすまされない": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しないではすまない": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "せずにはすまない": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しないではいられません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "せずにはいられません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しないわけにはいきません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "せざるをえません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しないといけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しなければいけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しなきゃいけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しなくちゃいけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しなくてはいけません": {
+            "en": "Understandable! Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "してやります": {
+            "en": "Natural. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "してみせます": {
+            "en": "Understandable. However phrase used when one has a strong resolution to exert influence over someone fits here better.",
+            "es": ""
+          },
+          "しないではすまされません": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "せずにはすまされません": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "しないではすみません": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          },
+          "せずにはすみません": {
+            "en": "This phrase is used when one has to do something due to social norms, laws and is generally used in negative contexts. Could you use a phrase used when one has a strong resolution to exert influence over someone?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'<strong>I won't fail to</strong> pay him back in his own coin.'",
+        "nuance_translation": "A <strong>strong</strong> construction, implying that someone will definitely do (A). I will <strong>not set it aside</strong> with (A) <strong>not</strong> being done.",
+        "extra_info": "",
+        "reviewable_id": 945,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "982",
+      "type": "writeup",
+      "attributes": {
+        "id": 982,
+        "body_ja": "<p>「<span data-gp-id='945'>ずにはおかない</span>」は、古語（こご）の助動詞（じょどうし）「ず」、格助詞（かくじょし）「に」、副助詞（ふくじょし）「は」、そして五段動詞（ごだんどうし）「措（お）く」の否定形（ひていけい）「措（お）かない」（意味（いみ）：そのままにしておく・放（ほう）っておく）を組（く）み合（あ）わせた、改（あらた）まった表現（ひょうげん）です。</p>\r\n\r\n<p>これは「絶対（ぜったい）に (A) をする」や「(A) は必（かなら）ず起（お）きる」といった意味（いみ）で使（つか）われます。文字通（もじどお）りの意味（いみ）は「(A) をやらずにそのままにしておくことはできない」ですが、ここから話（はな）し手（て）の強（つよ）い意志（いし）が伝（つた）わってきます。</p>\r\n\r\n<p>この文型（ぶんけい）は「ず」から始（はじ）まるため、動詞（どうし）にしか使（つか）えません。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183152'>\r\n<li data-study-question='183153'>\r\n</ul>\r\n\r\n<p>「ず」の代（か）わりに「ないでは」が使（つか）われることもあり、この場合（ばあい）は「ないではおかない」という形（かたち）になりますが、意味（いみ）は変（か）わりません。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183154'>\r\n<li data-study-question='183155'>\r\n</ul>\r\n\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>この文型（ぶんけい）は、「(A) が終（お）わるまで諦（あきら）めない」という強（つよ）い気持（きも）ちを表（あらわ）すため、(A) には使役動詞（しえきどうし）が入（はい）ることがよくあります。これは、「誰（だれ）かに何（なに）かをさせるまでは絶対（ぜったい）に諦（あきら）めない」という話（はな）し手（て）の決意（けつい）を示（しめ）します。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184619'></ul></section>",
+        "body": "<p><span data-gp-id='945'>ずにはおかない</span> is a combination of the <span data-term='文語助動詞・ぶんごじょどうし'>classical auxiliary verb</span> ず, the <span data-term='格助詞・かくじょし'>case-marking particle</span> に, the <span data-term='副助詞・ふくじょし'>adverbial particle</span> は, and the standard negated form of the う-Verb 措（お）く, 措（お）かない, ‘to set aside’, or ‘to leave as is’. It is interpreted as ‘(A) will definitely happen’, or ‘I will not fail to (A)’.</p>\r\n\r\n<p>This is a formal expression that literally means ‘I cannot leave it as it is with (A) undone’, and therefore indicates strong will to complete the action that is reflected in the standard translations.</p>\r\n\r\n<p>As this structure begins with ず, it will only be used with verbs.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183152'>\r\n<li data-study-question='183153'>\r\n</ul>\r\n\r\n<p>Alternatively, ないでは may replace ず. This will be seen as ないではおかない. However, the meaning will not change at all.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183154'>\r\n<li data-study-question='183155'>\r\n</ul>\r\n\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>Due to this grammar expression showing strong will to not give up until (A) is done, it will often be used with causative verbs in (A). This indicates that the speaker is determined not to quit until they can make another person do something.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184619'></ul></section>"
+      }
+    },
+    {
+      "id": "2029",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2029,
+        "source": "Shin Kanzen Master N1 Bunpou",
+        "location": "Page 89",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2028",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2028,
+        "source": "Try N1",
+        "location": "Page 52",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2631",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2631,
+        "site": "JapaneseTest4You",
+        "description": "ないではおかない",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n1-grammar-%E3%81%AA%E3%81%84%E3%81%A7%E3%81%AF%E3%81%8A%E3%81%8B%E3%81%AA%E3%81%84%E3%81%9A%E3%81%AB%E3%81%AF%E3%81%8A%E3%81%8B%E3%81%AA%E3%81%84-nai-dewa-okanaizu-niwa-okanai/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2632",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2632,
+        "site": "JLPTSensei",
+        "description": "ずにはおかない",
+        "link": "https://jlptsensei.com/learn-japanese-grammar/%E3%81%9A%E3%81%AB%E3%81%AF%E3%81%8A%E3%81%8B%E3%81%AA%E3%81%84-%E3%81%AA%E3%81%84%E3%81%A7%E3%81%AF%E3%81%8A%E3%81%8B%E3%81%AA%E3%81%84-zu-niwa-okanai-meaning/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1586",
+      "type": "related_content",
+      "attributes": {
+        "id": 1586,
+        "relationship_type": "related",
+        "body": "Both ずにはおかない and なくてはならない express inevitability, but they differ in source and nuance. なくてはならない states an objective or logical necessity such as rules, duties, as in 法律を守らなくてはならないパスポートがなくてはならない (‘One must obey the law.'). By contrast, ずにはおかない expresses an inevitable result caused by someone’s actions or by a situation’s inherent force, often implying emotional impact or consequence rather than obligation, as in 彼の言葉は人を感動させずにはおかない (‘His words are bound to move people.’).",
+        "first_relatable": {
+          "id": 945,
+          "slug": "ずにはおかない",
+          "title": "ずにはおかない",
+          "meaning": "Will definitely, Will certainly, Bound to, Not fail to",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 87,
+          "slug": "なくてはならない",
+          "title": "なくてはならない",
+          "meaning": "Must do, Have to do",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

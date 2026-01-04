@@ -1,0 +1,793 @@
+{
+  "data": {
+    "id": "745",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 745,
+      "level": "JLPT1",
+      "lesson_id": 42,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "ともなく-ともなしに",
+      "nuance": "(A)という行動（こうどう）が無意識（むいしき）に行（おこな）われていたということを強調（きょうちょう）する表現（ひょうげん）。(A)を<strong>行（おこ）なっていると気（き）づかずに</strong>(B)。",
+      "grammar_order": 765,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 750,
+        "title": "塗れ",
+        "slug": "塗れ"
+      },
+      "previous_grammar_point": {
+        "id": 751,
+        "title": "なり",
+        "slug": "なり"
+      },
+      "lesson_count": "7/17",
+      "title": "ともなく・ともなしに",
+      "furigana": "とも無（な）く",
+      "meaning": "Absentmindedly, Mindlessly, Unconsciously, Without paying attention",
+      "nuance_translation": "A phrase highlighting that the action of (A) was happening absentmindedly. <strong>While not even sure that</strong> (A) <strong>was happening</strong>, (B).",
+      "rare_kanji_warning": "",
+      "caution": "・It can be also used with うちに、ところに and similar expressions",
+      "polite_structure": "",
+      "casual_structure": "<span class='gp-popout' data-gp-id='26'>Verb［る］</span>(A) + <strong>ともなく</strong><sup>(1)</sup> + <span class='gp-popout' data-gp-id='102'>Verb［たら］</span><sup>(2)</sup>(A)<br><br><sup>(1)</sup> とも<span class='gp-popout' data-gp-id='663'>なしに</span><br><sup>(2)</sup> Verb + <span class='gp-popout' data-gp-id='143'>と</span>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/18164",
+      "metadata": "ともなく, ともなしに, とも無く, とも無しに, tomonaku, tomonashini, expression"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "10574",
+            "type": "study_question"
+          },
+          {
+            "id": "10572",
+            "type": "study_question"
+          },
+          {
+            "id": "182588",
+            "type": "study_question"
+          },
+          {
+            "id": "182589",
+            "type": "study_question"
+          },
+          {
+            "id": "182590",
+            "type": "study_question"
+          },
+          {
+            "id": "182591",
+            "type": "study_question"
+          },
+          {
+            "id": "7910",
+            "type": "study_question"
+          },
+          {
+            "id": "7912",
+            "type": "study_question"
+          },
+          {
+            "id": "9062",
+            "type": "study_question"
+          },
+          {
+            "id": "10573",
+            "type": "study_question"
+          },
+          {
+            "id": "7911",
+            "type": "study_question"
+          },
+          {
+            "id": "9061",
+            "type": "study_question"
+          },
+          {
+            "id": "9060",
+            "type": "study_question"
+          },
+          {
+            "id": "10576",
+            "type": "study_question"
+          },
+          {
+            "id": "10571",
+            "type": "study_question"
+          },
+          {
+            "id": "10575",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "841",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1513",
+            "type": "related_content"
+          },
+          {
+            "id": "1514",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1648",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1649",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1650",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1651",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "10574",
+      "type": "study_question",
+      "attributes": {
+        "id": 10574,
+        "content": "この曲（きょく）は行（い）きつけのバーでいつも流（なが）れているため、覚（おぼ）える<span class='study-area-input'>____</span>覚（おぼ）えてしまった。",
+        "answer": "ともなく",
+        "alternate_grammar": [
+          "ともなしに"
+        ],
+        "kanji_answer": "ともなく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という行動（こうどう）が無意識（むいしき）に行（おこな）われていたということを強調（きょうちょう）する表現（ひょうげん）。(A)を<strong>行（おこ）なっていると気（き）づかずに</strong>(B)。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Since this song is always playing at my favorite bar, I <strong>unconsciously</strong> <span class='chui'>memorized</span> it.",
+        "nuance_translation": "A phrase highlighting that the action of (A) was happening absentmindedly. <strong>While not even sure that</strong> (A) <strong>was happening</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 745,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10572",
+      "type": "study_question",
+      "attributes": {
+        "id": 10572,
+        "content": "<span class='chui'>見（み）る</span><span class='study-area-input'>____</span>テレビを<span class='chui'>見（み）ていると</span>、ビールの広告（こうこく）に友達（ともだち）が出演（しゅつえん）していて驚（おどろ）きました。",
+        "answer": "ともなく",
+        "alternate_grammar": [
+          "ともなしに"
+        ],
+        "kanji_answer": "ともなく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という行動（こうどう）が無意識（むいしき）に行（おこな）われていたということを強調（きょうちょう）する表現（ひょうげん）。(A)を<strong>行（おこ）なっていると気（き）づかずに</strong>(B)。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "While <span class='chui'>watching</span> TV <strong>without paying too much attention</strong>, I was surprised to see a friend appear in a beer commercial.",
+        "nuance_translation": "A phrase highlighting that the action of (A) was happening absentmindedly. <strong>While not even sure that</strong> (A) <strong>was happening</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 745,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182588",
+      "type": "study_question",
+      "attributes": {
+        "id": 182588,
+        "content": "\r\n昨日（きのう）テレビを見（み）る<span class='study-area-input'>____</span>見（み）ていたら、急（きゅう）にお母（かあ）さんが出（で）てきたから驚（おどろ）いた。",
+        "answer": "ともなく",
+        "alternate_grammar": [],
+        "kanji_answer": "ともなく",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/昨日テレビを見るともなく見ていたら、急にお母さんが出てきたから驚いた。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nWhen I was <strong>absentmindedly</strong> watching TV yesterday, I was surprised when my mother suddenly appeared.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 745,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182589",
+      "type": "study_question",
+      "attributes": {
+        "id": 182589,
+        "content": "\r\n\r\n\r\n話（はなし）を聞（き）く<span class='study-area-input'>____</span>、先生（せんせい）と黒板（こくばん）の方向（ほうこう）をぼーっと見（み）ていた。",
+        "answer": "ともなく",
+        "alternate_grammar": [],
+        "kanji_answer": "ともなく",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/話を聞くともなく、先生と黒板の方向をぼーっと見ていた。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>absentmindedly</strong> listened while spacing out in the direction of my teacher and the blackboard.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 745,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182590",
+      "type": "study_question",
+      "attributes": {
+        "id": 182590,
+        "content": "\r\n飲（の）み会（かい）で上司（じょうし）の話（はなし）を聞（き）く<span class='study-area-input'>____</span>聞（き）いていたら、「お前（まえ）はどう思（おも）う」と聞（き）かれたから適当（てきとう）に返事（へんじ）した。",
+        "answer": "ともなしに",
+        "alternate_grammar": [],
+        "kanji_answer": "ともなしに",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/飲み会で上司の話を聞くともなしに聞いていたら、「お前はどう思う」と聞かれたから適当に返事した。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nWhen I was at a drinking party and was <strong>absentmindedly</strong> listening to my boss, he asked what I thought, so I gave him a random response.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 745,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182591",
+      "type": "study_question",
+      "attributes": {
+        "id": 182591,
+        "content": "\r\n\r\n\r\n暇（ひま）だったから近所（きんじょ）を歩（ある）く<span class='study-area-input'>____</span>歩（ある）いていたら、高校（こうこう）の同級生（どうきゅうせい）にばったりあった。",
+        "answer": "ともなしに",
+        "alternate_grammar": [],
+        "kanji_answer": "ともなしに",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/暇だったから近所を歩くともなしに歩いていたら、高校の同級生にばったりあった。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nWhen I was <strong>mindlessly</strong> walking in my neighborhood because I had nothing to do, I met my classmate from high school.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 745,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7910",
+      "type": "study_question",
+      "attributes": {
+        "id": 7910,
+        "content": "山田（やまだ）さんと晩（ばん）御飯（ごはん）を<span class='chui'>食（た）べる</span><span class='study-area-input'>____</span><span class='chui'>食（た）べていたら</span>、急（きゅう）に彼（かれ）が告白（こくはく）してきて驚（おどろ）いた。",
+        "answer": "ともなく",
+        "alternate_grammar": [
+          "ともなく",
+          "ともなしに"
+        ],
+        "kanji_answer": "とも無（な）く",
+        "kanji_alt_grammar": [
+          "とも無（な）しに",
+          "とも無（な）く"
+        ],
+        "nuance": "(A)という行動（こうどう）が無意識（むいしき）に行（おこな）われていたということを強調（きょうちょう）する表現（ひょうげん）。(A)を<strong>行（おこ）なっていると気（き）づかずに</strong>(B)。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/山田さんと晩御飯を食べるとも無く食べていたら、急に彼が告白してきて驚いた。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "When I was <strong>absentmindedly</strong> <span class='chui'>eating</span> dinner with Yamada-san, he suddenly confessed (his feelings for me) and it really surprised me.",
+        "nuance_translation": "A phrase highlighting that the action of (A) was happening absentmindedly. <strong>While not even sure that</strong> (A) <strong>was happening</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 745,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7912",
+      "type": "study_question",
+      "attributes": {
+        "id": 7912,
+        "content": "隣人（りんじん）の窓（まど）を<span class='chui'>見（み）る</span><span class='study-area-input'>____</span><span class='chui'>見（み）ると</span>、驚（おどろ）いたことに裸（はだか）の人（ひと）がいた。",
+        "answer": "ともなく",
+        "alternate_grammar": [
+          "ともなく",
+          "ともなしに"
+        ],
+        "kanji_answer": "とも無（な）く",
+        "kanji_alt_grammar": [
+          "とも無（な）しに",
+          "とも無（な）く"
+        ],
+        "nuance": "(A)という行動（こうどう）が無意識（むいしき）に行（おこな）われていたということを強調（きょうちょう）する表現（ひょうげん）。(A)を<strong>行（おこ）なっていると気（き）づかずに</strong>(B)。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/隣人の窓を見るとも無く見ると、驚いたことに裸の人がいた。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <span class='chui'>looked</span> at my neighbor's window <strong>without paying attention</strong>, and, to my surprise, there was a naked person. ",
+        "nuance_translation": "A phrase highlighting that the action of (A) was happening absentmindedly. <strong>While not even sure that</strong> (A) <strong>was happening</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 745,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9062",
+      "type": "study_question",
+      "attributes": {
+        "id": 9062,
+        "content": "<span class='name-highlight'>ライトノベル、あまくささん</span>：「家（いえ）に<span class='chui'>帰（かえ）る</span><span class='study-area-input'>____</span><span class='chui'>帰（かえ）っていたら</span>、突然（とつぜん）美少女（びしょうじょ）が空（そら）から落（お）ちてきてびっくりした。」",
+        "answer": "ともなく",
+        "alternate_grammar": [
+          "ともなく",
+          "ともなしに"
+        ],
+        "kanji_answer": "とも無（な）く",
+        "kanji_alt_grammar": [
+          "とも無（な）しに",
+          "とも無（な）く"
+        ],
+        "nuance": "(A)という行動（こうどう）が無意識（むいしき）に行（おこな）われていたということを強調（きょうちょう）する表現（ひょうげん）。(A)を<strong>行（おこ）なっていると気（き）づかずに</strong>(B)。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ライトノベル、あまくささん：「家に帰るとも無く帰っていたら、突然美少女が空から落ちてきてびっくりした。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Light Novel, Amakusa</span>: 'When I was <strong>absentmindedly</strong> <span class='chui'>on my way back home</span>, a beautiful girl fell from the sky and startled me.'",
+        "nuance_translation": "A phrase highlighting that the action of (A) was happening absentmindedly. <strong>While not even sure that</strong> (A) <strong>was happening</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 745,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10573",
+      "type": "study_question",
+      "attributes": {
+        "id": 10573,
+        "content": "「何（なに）も無（な）い」とはどういう事（こと）なのか、<span class='chui'>考（かんが）える</span><span class='study-area-input'>____</span><span class='chui'>考（かんが）えてしまう</span>事（こと）がたまにあります。",
+        "answer": "ともなく",
+        "alternate_grammar": [
+          "ともなしに"
+        ],
+        "kanji_answer": "ともなく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という行動（こうどう）が無意識（むいしき）に行（おこな）われていたということを強調（きょうちょう）する表現（ひょうげん）。(A)を<strong>行（おこ）なっていると気（き）づかずに</strong>(B)。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「何も無い」とはどういう事なのか、考えるともなく考えてしまう事がたまにあります。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "There are occasionally times where I <strong>unconsciously</strong> <span class='chui'>contemplate</span> what 'there being nothing' means.",
+        "nuance_translation": "A phrase highlighting that the action of (A) was happening absentmindedly. <strong>While not even sure that</strong> (A) <strong>was happening</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 745,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7911",
+      "type": "study_question",
+      "attributes": {
+        "id": 7911,
+        "content": "勝者（しょうしゃ）の発表（はっぴょう）を<span class='chui'>聞（き）く</span><span class='study-area-input'>____</span><span class='chui'>聞（き）いていたら</span>、なんと私（わたし）の名前（なまえ）が挙（あ）がっていた。",
+        "answer": "ともなく",
+        "alternate_grammar": [
+          "ともなく",
+          "ともなしに"
+        ],
+        "kanji_answer": "とも無（な）く",
+        "kanji_alt_grammar": [
+          "とも無（な）しに",
+          "とも無（な）く"
+        ],
+        "nuance": "(A)という行動（こうどう）が無意識（むいしき）に行（おこな）われていたということを強調（きょうちょう）する表現（ひょうげん）。(A)を<strong>行（おこ）なっていると気（き）づかずに</strong>(B)。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/勝者の発表を聞くとも無く聞いていたら、なんと私の名前が挙がっていた。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <span class='chui'>listened</span> <strong>absentmindedly</strong> to the announcements of the winners, when, to my disbelief, my name came up.",
+        "nuance_translation": "A phrase highlighting that the action of (A) was happening absentmindedly. <strong>While not even sure that</strong> (A) <strong>was happening</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 745,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9061",
+      "type": "study_question",
+      "attributes": {
+        "id": 9061,
+        "content": "<span class='name-highlight'>ノベル</span>：「彼（かれ）は夜遅（よるおそ）くテレビを<span class='chui'>見（み）る</span><span class='study-area-input'>____</span><span class='chui'>見（み）ている</span>うちにいつのまにか寝入（ねい）ってしまったようだ。」",
+        "answer": "ともなく",
+        "alternate_grammar": [
+          "ともなく",
+          "ともなしに"
+        ],
+        "kanji_answer": "とも無（な）く",
+        "kanji_alt_grammar": [
+          "とも無（な）しに",
+          "とも無（な）く"
+        ],
+        "nuance": "(A)という行動（こうどう）が無意識（むいしき）に行（おこな）われていたということを強調（きょうちょう）する表現（ひょうげん）。(A)を<strong>行（おこ）なっていると気（き）づかずに</strong>(B)。",
+        "tense": "Unexpected",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ノベル：「彼は夜遅くテレビを見るとも無く見ているうちにいつのまにか寝入ってしまったようだ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Novel</span>: 'It seems that he fell asleep while he was <strong>mindlessly</strong> <span class='chui'>watching</span> TV late at night.'",
+        "nuance_translation": "A phrase highlighting that the action of (A) was happening absentmindedly. <strong>While not even sure that</strong> (A) <strong>was happening</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 745,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9060",
+      "type": "study_question",
+      "attributes": {
+        "id": 9060,
+        "content": "昨日（きのう）、<span class='chui'>考（かんが）える</span><span class='study-area-input'>____</span><span class='chui'>考（かんが）えている</span>ところに、スズメバチにひどく刺（さ）されて「痛（いた）っ！」思（おも）わず叫（さけ）んでしまった。",
+        "answer": "ともなく",
+        "alternate_grammar": [
+          "ともなく",
+          "ともなしに"
+        ],
+        "kanji_answer": "とも無（な）く",
+        "kanji_alt_grammar": [
+          "とも無（な）しに",
+          "とも無（な）く"
+        ],
+        "nuance": "(A)という行動（こうどう）が無意識（むいしき）に行（おこな）われていたということを強調（きょうちょう）する表現（ひょうげん）。(A)を<strong>行（おこ）なっていると気（き）づかずに</strong>(B)。",
+        "tense": "Unexpected",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/昨日、考えるとも無く考えているところに、スズメバチにひどく刺されて「痛っ！」思わず叫んでしまった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Yesterday, when I was <span class='chui'>thinking</span> <strong>about nothing in particular</strong>, I was badly stung by a wasp, and without thinking shouted: 'Ouch!' (<strong>mindlessly</strong>)",
+        "nuance_translation": "A phrase highlighting that the action of (A) was happening absentmindedly. <strong>While not even sure that</strong> (A) <strong>was happening</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 745,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10576",
+      "type": "study_question",
+      "attributes": {
+        "id": 10576,
+        "content": "カフェでぼんやりしていると気（き）づけば隣（となり）に座（すわ）っている主婦（しゅふ）たちの会話（かいわ）を<span class='chui'>聞（き）く</span><span class='study-area-input'>____</span><span class='chui'>聞（き）いていました</span>。",
+        "answer": "ともなく",
+        "alternate_grammar": [
+          "ともなしに"
+        ],
+        "kanji_answer": "ともなく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という行動（こうどう）が無意識（むいしき）に行（おこな）われていたということを強調（きょうちょう）する表現（ひょうげん）。(A)を<strong>行（おこ）なっていると気（き）づかずに</strong>(B)。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/カフェでぼんやりしていると気づけば隣に座っている主婦たちの会話を聞くともなく聞いていました。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "When lazing around in a cafe, upon reflection, I was <span class='chui'>listening</span> to the conversation of the couple sitting next to me <strong>without paying attention</strong>.",
+        "nuance_translation": "A phrase highlighting that the action of (A) was happening absentmindedly. <strong>While not even sure that</strong> (A) <strong>was happening</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 745,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10571",
+      "type": "study_question",
+      "attributes": {
+        "id": 10571,
+        "content": "学生（がくせい）の頃（ころ）は親友（しんゆう）と何（なに）を話（はな）す<span class='study-area-input'>____</span>話（はな）す時間（じかん）が好（す）きだったが、今（いま）はそんなに暇（ひま）な時間（じかん）が無（な）い。",
+        "answer": "ともなく",
+        "alternate_grammar": [
+          "ともなしに"
+        ],
+        "kanji_answer": "ともなく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という行動（こうどう）が無意識（むいしき）に行（おこな）われていたということを強調（きょうちょう）する表現（ひょうげん）。(A)を<strong>行（おこ）なっていると気（き）づかずに</strong>(B)。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/学生の頃は親友と何を話すともなく話す時間が好きだったが、今はそんなに暇な時間が無い。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "When I was a student, I loved the times when I would <strong>mindlessly</strong> <span class='chui'>talk</span> about something with my best friend, but now I don't have that much free time.",
+        "nuance_translation": "A phrase highlighting that the action of (A) was happening absentmindedly. <strong>While not even sure that</strong> (A) <strong>was happening</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 745,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10575",
+      "type": "study_question",
+      "attributes": {
+        "id": 10575,
+        "content": "嫌（いや）な事（こと）があると、その事（こと）を<span class='chui'>考（かんが）える</span><span class='study-area-input'>____</span><span class='chui'>考（かんが）えてしまう</span>ので、そういう時（とき）は早（はや）く寝（ね）るようにしている。",
+        "answer": "ともなく",
+        "alternate_grammar": [
+          "ともなしに"
+        ],
+        "kanji_answer": "ともなく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という行動（こうどう）が無意識（むいしき）に行（おこな）われていたということを強調（きょうちょう）する表現（ひょうげん）。(A)を<strong>行（おこ）なっていると気（き）づかずに</strong>(B)。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/嫌な事があると、その事を考えるともなく考えてしまうので、そういう時は早く寝るようにしている。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "If there is something that I dislike, since I'll <strong>absentmindedly</strong> <span class='chui'>think</span> about it, I do my best to go to sleep quickly at those times.",
+        "nuance_translation": "A phrase highlighting that the action of (A) was happening absentmindedly. <strong>While not even sure that</strong> (A) <strong>was happening</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 745,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "841",
+      "type": "writeup",
+      "attributes": {
+        "id": 841,
+        "body_ja": "<p>「<span data-gp-id='745'>ともなく</span>」と「<span data-gp-id='745'>ともなしに</span>」は、(B) という出来事（できごと）が起（お）きたときに、(A) が無意識（むいしき）のうちに行（おこな）われていたことを表（あらわ）す表現（ひょうげん）です。「意識（いしき）せずに (A) をする」や「なんとなく (A) をする」といった意味（いみ）で使（つか）われます。</p>\r\n\r\n<p>この表現（ひょうげん）は、格助詞（かくじょし）「と」、副助詞（ふくじょし）「も」、そしてイ形容詞（けいようし）「ない」の連用形（れんようけい）「なく」の組（く）み合（あ）わせでできており、動詞（どうし）の辞書形（じしょけい）の後（あと）に置（お）かれます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182588'>\r\n<li data-study-question='182589'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='745'>ともなしに</span>」と「<span data-gp-id='745'>ともなく</span>」は似（に）ていますが、前者（ぜんしゃ）の「なしに」は「ない」の活用形（かつようけい）ではなく、名詞（めいし）の「なし」と助詞（じょし）の「に」の組（く）み合（あ）わせです。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182590'>\r\n<li data-study-question='182591'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='745'>ともなく</span>」と「<span data-gp-id='745'>ともなしに</span>」は、「たら」を含（ふく）む文（ぶん）の中（なか）でよく使（つか）われます。ここでの「たら」は、ぼんやりと何（なに）かをしていたときに、思（おも）いがけず別（べつ）の出来事（できごと）が起（お）こった瞬間（しゅんかん）を強調（きょうちょう）する役割（やくわり）を持（も）っています。「<span data-gp-id='745'>ともなく</span>」の前（まえ）にある動作（どうさ）は意図的（いとてき）に行（おこな）われているものですが、その結果（けっか）として起（お）きる出来事（できごと）は、その人（ひと）が意図（いと）していたことではありません。</p>",
+        "body": "<p><span data-gp-id='745'>ともなく</span> and <span data-gp-id='745'>ともなしに</span> are structures used to indicate that (A) was being done absentmindedly when (B) happened. It will be translated as 'unconsciously (A) when (B)', or 'without paying attention to (A), (B)'.</p>\r\n\r\n<p>This pattern is a combination of the case-marking particle と, the <span data-term='副助詞・ふくじょし'>adverbial particle</span> も, and the <span data-term='連用形・れんようけい'>conjunctive form</span> of the い-Adjective ない. It will be seen after the <span data-term='辞書形・じしょけい'>dictionary form</span> of verbs, and can be thought of as literally meaning something similar to 'even while not intending to (B), while (A), (B)'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182588'>\r\n<li data-study-question='182589'>\r\n</ul>\r\n\r\n<p><span data-gp-id='745'>ともなしに</span> is similar, but pairs the noun なし 'without' with に, instead of using the conjugative form of ない.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182590'>\r\n<li data-study-question='182591'>\r\n</ul>\r\n\r\n<p><span data-gp-id='745'>ともなく</span> and <span data-gp-id='745'>ともなしに</span> will often be seen in sentences that use たら. This puts emphasis on the specific time that something happened while performing another action absentmindedly. Despite translating this way, the action that precedes <span data-gp-id='745'>ともなく</span> itself will be intentional, but the thing that comes about as a result of performing that action will not be what the doer was aiming to achieve.</p>"
+      }
+    },
+    {
+      "id": "1648",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1648,
+        "site": "日本語教師のN1et",
+        "description": "接続・意味・使い方",
+        "link": "https://jn1et.com/tomonaku-tomonasini-n1/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1649",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1649,
+        "site": "JLPT 先生",
+        "description": "Grammar notes and examples",
+        "link": "https://jlptsensei.com/learn-japanese-grammar/%E3%81%A8%E3%82%82%E3%81%AA%E3%81%8F-tomonaku/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1650",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1650,
+        "site": "JapaneseTest4You",
+        "description": "Breakdown and examples",
+        "link": "http://japanesetest4you.com/flashcard/learn-jlpt-n1-grammar-ともなく-tomonaku/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1651",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1651,
+        "site": "JGram",
+        "description": "Additional information and examples",
+        "link": "https://takoboto.jp/jgram/pages/viewOne.php?tagE=tomonaku%3Btomonashini",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1513",
+      "type": "related_content",
+      "attributes": {
+        "id": 1513,
+        "relationship_type": "related",
+        "body": "Though these two phrases appear similar in form, both suggesting 'without doing', they differ in that ともなく・ともなしに is used figuratively to express that the action was performed, but in an absentminded manner, or ‘without even so much as the intention of doing (A), (B)’, e.g. 見るともなく見ていたら 'as I was absentmindedly looking...' whereas ないで literally means that action was not performed, e.g. 見ないでやる 'do without looking'.",
+        "first_relatable": {
+          "id": 745,
+          "slug": "ともなく-ともなしに",
+          "title": "ともなく・ともなしに",
+          "meaning": "Absentmindedly, Mindlessly, Unconsciously, Without paying attention",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 96,
+          "slug": "ないで",
+          "title": "ないで",
+          "meaning": "Without doing, Not ~ and ~",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1514",
+      "type": "related_content",
+      "attributes": {
+        "id": 1514,
+        "relationship_type": "related",
+        "body": "Though these two phrases appear similar in form, both suggesting 'without doing', they differ in that ともなく・ともなしに is used figuratively to express that the action was performed, but in an absentminded manner, or ‘without even so much as the intention of doing (A), (B)’ e.g. 見るともなく見ていたら 'as I was absentmindedly looking...', whereas ないで literally means that action was not performed, e.g. 見ずにやる 'do without looking'.",
+        "first_relatable": {
+          "id": 745,
+          "slug": "ともなく-ともなしに",
+          "title": "ともなく・ともなしに",
+          "meaning": "Absentmindedly, Mindlessly, Unconsciously, Without paying attention",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 343,
+          "slug": "まい",
+          "title": "まい",
+          "meaning": "Won't, Intend not to, Probably not",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

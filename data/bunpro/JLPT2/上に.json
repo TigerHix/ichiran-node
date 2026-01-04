@@ -1,0 +1,1422 @@
+{
+  "data": {
+    "id": "337",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 337,
+      "level": "JLPT2",
+      "lesson_id": 32,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "上に",
+      "nuance": "<strong>さらに</strong>何（なに）かを言（い）う手段（しゅだん）として(A)に情報（じょうほう）を追加（ついか）する、<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+      "grammar_order": 550,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 317,
+        "title": "以上 ②",
+        "slug": "以上2"
+      },
+      "previous_grammar_point": {
+        "id": 316,
+        "title": "上",
+        "slug": "上"
+      },
+      "lesson_count": "2/24",
+      "title": "上に",
+      "furigana": "上（うえ）に",
+      "meaning": "As well, Besides, In addition to",
+      "nuance_translation": "A <strong>slightly formal</strong> structure which adds information <strong>on top of</strong> (A), as a means of saying something in addition.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Verb + <strong>上（うえ）(に)</strong><br><span class='gp-popout' data-gp-id='24'>［い］Adjective</span> + <strong>上（うえ）(に)</strong><br><span class='gp-popout' data-gp-id='28'>［な］Adjective + <span class='chui'>な</span></span><sup>(1)</sup> + <strong>上（うえ）(に)</strong><br>Noun + <span class='chui'><span class='gp-popout' data-gp-id='6'>の</span></span><sup>(1)</sup> + <strong>上（うえ）(に)</strong><br><br><br><sup>(1)</sup> <span class='gp-popout' data-gp-id='436'>である</span>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10503",
+      "metadata": "上に, うえに, な上に, なうえに, の上に, のうえに, である上に, であるうえに, ueni, naueni, noueni, dearuueni, expression, slightly formal"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "6173",
+            "type": "study_question"
+          },
+          {
+            "id": "1226",
+            "type": "study_question"
+          },
+          {
+            "id": "181739",
+            "type": "study_question"
+          },
+          {
+            "id": "181740",
+            "type": "study_question"
+          },
+          {
+            "id": "181742",
+            "type": "study_question"
+          },
+          {
+            "id": "181743",
+            "type": "study_question"
+          },
+          {
+            "id": "181744",
+            "type": "study_question"
+          },
+          {
+            "id": "6170",
+            "type": "study_question"
+          },
+          {
+            "id": "6171",
+            "type": "study_question"
+          },
+          {
+            "id": "184389",
+            "type": "study_question"
+          },
+          {
+            "id": "184390",
+            "type": "study_question"
+          },
+          {
+            "id": "6175",
+            "type": "study_question"
+          },
+          {
+            "id": "6178",
+            "type": "study_question"
+          },
+          {
+            "id": "181741",
+            "type": "study_question"
+          },
+          {
+            "id": "6177",
+            "type": "study_question"
+          },
+          {
+            "id": "1227",
+            "type": "study_question"
+          },
+          {
+            "id": "1225",
+            "type": "study_question"
+          },
+          {
+            "id": "6172",
+            "type": "study_question"
+          },
+          {
+            "id": "6174",
+            "type": "study_question"
+          },
+          {
+            "id": "6176",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "565",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "558",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "486",
+            "type": "related_content"
+          },
+          {
+            "id": "532",
+            "type": "related_content"
+          },
+          {
+            "id": "1201",
+            "type": "related_content"
+          },
+          {
+            "id": "694",
+            "type": "related_content"
+          },
+          {
+            "id": "430",
+            "type": "related_content"
+          },
+          {
+            "id": "1200",
+            "type": "related_content"
+          },
+          {
+            "id": "596",
+            "type": "related_content"
+          },
+          {
+            "id": "1150",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "735",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "736",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "6173",
+      "type": "study_question",
+      "attributes": {
+        "id": 6173,
+        "content": "友人（ゆうじん）は、知恵（ちえ）が<span class='chui'>ある</span><span class='study-area-input'>____</span>勇（いさ）ましいから頼（たよ）りになります。",
+        "answer": "うえに",
+        "alternate_grammar": [
+          "うえ",
+          "うえに"
+        ],
+        "kanji_answer": "上（うえ）に",
+        "kanji_alt_grammar": [
+          "上（うえ）",
+          "上（うえ）に"
+        ],
+        "nuance": "<strong>さらに</strong>何（なに）かを言（い）う手段（しゅだん）として(A)に情報（じょうほう）を追加（ついか）する、<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Literary, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/友人は、知恵がある上に勇ましいから頼りになります。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "し": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "うえで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "のみならず": {
+            "en": "Do you know a structure that uses kanji that has a similar meaning?",
+            "es": ""
+          },
+          "そのうえ": {
+            "en": "How about removing something from the beginning?",
+            "es": ""
+          },
+          "おまけに": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Because my friend is wise, <strong>as well as</strong> brave, he is reliable. (<strong>on top of that</strong>)",
+        "nuance_translation": "A <strong>slightly formal</strong> structure which adds information <strong>on top of</strong> (A), as a means of saying something in addition.",
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1226",
+      "type": "study_question",
+      "attributes": {
+        "id": 1226,
+        "content": "あの店（みせ）はリフォームした<span class='study-area-input'>____</span>、メニューも変（か）わったらしい。",
+        "answer": "うえに",
+        "alternate_grammar": [
+          "うえ",
+          "うえに"
+        ],
+        "kanji_answer": "上（うえ）に",
+        "kanji_alt_grammar": [
+          "上（うえ）",
+          "上（うえ）に"
+        ],
+        "nuance": "<strong>さらに</strong>何（なに）かを言（い）う手段（しゅだん）として(A)に情報（じょうほう）を追加（ついか）する、<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Literary, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あの店はリフォームした上に、メニューも変わったらしい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "し": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "うえで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "のみならず": {
+            "en": "Do you know a structure that uses kanji that has a similar meaning?",
+            "es": ""
+          },
+          "そのうえ": {
+            "en": "How about removing something from the beginning?",
+            "es": ""
+          },
+          "おまけに": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I heard that restaurant changed its menu, <strong>in addition to</strong> being remodeled. (<strong>on top of</strong>)",
+        "nuance_translation": "A <strong>slightly formal</strong> structure which adds information <strong>on top of</strong> (A), as a means of saying something in addition.",
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181739",
+      "type": "study_question",
+      "attributes": {
+        "id": 181739,
+        "content": "私（わたし）の犬（いぬ）は子供（こども）を見（み）ると吠（ほ）える<span class='study-area-input'>____</span>噛（か）みつこうとするので子供（こども）には近（ちか）づけさせないようにしています。",
+        "answer": "うえに",
+        "alternate_grammar": [],
+        "kanji_answer": "上（うえ）に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/私の犬は子供を見ると吠える上に噛みつこうとするので子供には近づけさせないようにしています。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>In addition to</strong> barking, my dog tries to bite children when he sees them, so I try not to let him get close to them.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181740",
+      "type": "study_question",
+      "attributes": {
+        "id": 181740,
+        "content": "家（いえ）の近所（きんじょ）にあるレストランはまずい<span class='study-area-input'>____</span>、高（たか）いからいつも空（す）いている。",
+        "answer": "うえに",
+        "alternate_grammar": [],
+        "kanji_answer": "上（うえ）に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/家の近所にあるレストランはまずい上に、高いからいつも空いている。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The restaurant near my house is always empty because <strong>in addition to</strong> having bad food, they are expensive.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181742",
+      "type": "study_question",
+      "attributes": {
+        "id": 181742,
+        "content": "彼女（かのじょ）は調理師免許（ちょうりしめんきょ）の<span class='study-area-input'>____</span>健康食（けんこうしょく）アドバイザーの資格（しかく）も持（も）っているので、彼女（かのじょ）が作（つく）る料理（りょうり）は健康的（けんこうてき）で美味（おい）しいです。",
+        "answer": "うえに",
+        "alternate_grammar": [],
+        "kanji_answer": "上（うえ）に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼女は調理師免許の上に健康食アドバイザーの資格も持っているので、彼女が作る料理は健康的で美味しいです。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>In addition to</strong> having a chef's license, she also has qualification as a nutrition advisor, so the food she makes is healthy and delicious.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181743",
+      "type": "study_question",
+      "attributes": {
+        "id": 181743,
+        "content": "あそこの駅（えき）は不便（ふべん）<span class='study-area-input'>____</span>利用者（りようしゃ）が減（へ）っている為（ため）、来月（らいげつ）の中旬（ちゅうじゅん）に取（と）り壊（こわ）されるそうだ。",
+        "answer": "であるうえに",
+        "alternate_grammar": [],
+        "kanji_answer": "である上（うえ）に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あそこの駅は不便である上に利用者が減っている為、来月の中旬に取り壊されるそうだ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I heard that the station over there is going to get torn down in the middle of next month because <strong>in addition to</strong> being inconvenient, it is losing users.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181744",
+      "type": "study_question",
+      "attributes": {
+        "id": 181744,
+        "content": "ケントさんは新聞記者（しんぶんきしゃ）<span class='study-area-input'>____</span>スーパーヒーローでもあった。",
+        "answer": "であるうえに",
+        "alternate_grammar": [],
+        "kanji_answer": "である上（うえ）に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/ケントさんは新聞記者である上にスーパーヒーローでもあった。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Kent-san was a newspaper reporter <strong>as well as</strong> a superhero.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6170",
+      "type": "study_question",
+      "attributes": {
+        "id": 6170,
+        "content": "あの人（ひと）の説明（せつめい）は、曖昧（あいまい）<span class='study-area-input'>____</span>不（ふ）正確（せいかく）だ。",
+        "answer": "なうえに",
+        "alternate_grammar": [
+          "であるうえに",
+          "なうえに",
+          "うえ"
+        ],
+        "kanji_answer": "な上（うえ）に",
+        "kanji_alt_grammar": [
+          "である上（うえ）に",
+          "上（うえ）",
+          "な上（うえ）に"
+        ],
+        "nuance": "<strong>さらに</strong>何（なに）かを言（い）う手段（しゅだん）として(A)に情報（じょうほう）を追加（ついか）する、<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Literary, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "し": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "うえで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "のみならず": {
+            "en": "Do you know a structure that uses kanji that has a similar meaning?",
+            "es": ""
+          },
+          "うえに": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "そのうえ": {
+            "en": "How about removing something from the beginning?",
+            "es": ""
+          },
+          "おまけに": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That person's explanation was vague, <strong>as well as</strong> inaccurate. (<strong>on top of that</strong>)",
+        "nuance_translation": "A <strong>slightly formal</strong> structure which adds information <strong>on top of</strong> (A), as a means of saying something in addition.",
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6171",
+      "type": "study_question",
+      "attributes": {
+        "id": 6171,
+        "content": "彼（かれ）はお酒（さけ）を飲（の）むと、暴（あば）れる<span class='study-area-input'>____</span>悪態（あくたい）をつくから手（て）に負（お）えない。",
+        "answer": "うえに",
+        "alternate_grammar": [
+          "うえ",
+          "うえに"
+        ],
+        "kanji_answer": "上（うえ）に",
+        "kanji_alt_grammar": [
+          "上（うえ）",
+          "上（うえ）に"
+        ],
+        "nuance": "<strong>さらに</strong>何（なに）かを言（い）う手段（しゅだん）として(A)に情報（じょうほう）を追加（ついか）する、<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Literary, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼はお酒を飲むと、暴れる上に悪態をつくから手に負えない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "し": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "うえで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "のみならず": {
+            "en": "Do you know a structure that uses kanji that has a similar meaning?",
+            "es": ""
+          },
+          "そのうえ": {
+            "en": "How about removing something from the beginning?",
+            "es": ""
+          },
+          "おまけに": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "If he drinks alcohol, <strong>in addition to</strong> being violent, he uses abusive language, so he is uncontrollable. (<strong>on top of that</strong>)",
+        "nuance_translation": "A <strong>slightly formal</strong> structure which adds information <strong>on top of</strong> (A), as a means of saying something in addition.",
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184389",
+      "type": "study_question",
+      "attributes": {
+        "id": 184389,
+        "content": "あの建築会社（けんちくがいしゃ）が建（た）てる家（いえ）は丈夫（じょうぶ）な<span data-gp-id='337'>上（うえ）に</span>お洒落（しゃれ）なので、すごく人気（にんき）があるらしい。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あの建築会社が建てる家は丈夫な上にお洒落なので、すごく人気があるらしい。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Apparently that building company is very popular right now because the houses they build are durable <strong>as well as</strong> stylish. (Natural Japanese)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184390",
+      "type": "study_question",
+      "attributes": {
+        "id": 184390,
+        "content": "彼（かれ）はハンサムな<span data-gp-id='337'>上（うえ）に</span>失礼（しつれい）だから、あまりモテない。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼はハンサムな上に失礼だから、あまりモテない。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "He is not very popular because in addition to being handsome, he is rude. (Unnatural Japanese)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6175",
+      "type": "study_question",
+      "attributes": {
+        "id": 6175,
+        "content": "今日（きょう）のおかずは豪華（ごうか）<span class='study-area-input'>____</span>品数（しなかず）も多（おお）いのだが、今日（きょう）は何（なん）の日（ひ）なんだろう？",
+        "answer": "なうえに",
+        "alternate_grammar": [
+          "であるうえに",
+          "であるうえ",
+          "なうえ"
+        ],
+        "kanji_answer": "な上（うえ）に",
+        "kanji_alt_grammar": [
+          "である上（うえ）に",
+          "である上（うえ）",
+          "な上（うえ）"
+        ],
+        "nuance": "<strong>さらに</strong>何（なに）かを言（い）う手段（しゅだん）として(A)に情報（じょうほう）を追加（ついか）する、<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Literary, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/今日のおかずは豪華な上に品数も多いのだが、今日は何の日なんだろう？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "し": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "うえで": {
+            "en": "Let's try a different particle here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "のみならず": {
+            "en": "Do you know a structure that uses kanji that has a similar meaning?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "うえに": {
+            "en": "Can you include something else at the beginning?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "そのうえ": {
+            "en": "How about removing something from the beginning?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "おまけに": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "うえ": {
+            "en": "Can you include something else at the beginning?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Today's side dishes are extravagant <strong>as well as</strong> numerous. I wonder what the occasion is... (<strong>on top of that</strong>)",
+        "nuance_translation": "A <strong>slightly formal</strong> structure which adds information <strong>on top of</strong> (A), as a means of saying something in addition.",
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6178",
+      "type": "study_question",
+      "attributes": {
+        "id": 6178,
+        "content": "彼女（かのじょ）は、おとなしい<span class='study-area-input'>____</span>人見知（ひとみし）りだから、なかなか友達（ともだち）ができません。",
+        "answer": "うえに",
+        "alternate_grammar": [
+          "うえ",
+          "うえに"
+        ],
+        "kanji_answer": "上（うえ）に",
+        "kanji_alt_grammar": [
+          "上（うえ）",
+          "上（うえ）に"
+        ],
+        "nuance": "<strong>さらに</strong>何（なに）かを言（い）う手段（しゅだん）として(A)に情報（じょうほう）を追加（ついか）する、<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Literary, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼女は、おとなしい上に人見知りだから、なかなか友達ができません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "し": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "うえで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "のみならず": {
+            "en": "Do you know a structure that uses kanji that has a similar meaning?",
+            "es": ""
+          },
+          "そのうえ": {
+            "en": "How about removing something from the beginning?",
+            "es": ""
+          },
+          "おまけに": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Because she is quiet <strong>as well as</strong> shy, she is not really able to make friends. (<strong>on top of that</strong>)",
+        "nuance_translation": "A <strong>slightly formal</strong> structure which adds information <strong>on top of</strong> (A), as a means of saying something in addition.",
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181741",
+      "type": "study_question",
+      "attributes": {
+        "id": 181741,
+        "content": "高橋（たかはし）くんは無礼（ぶれい）な<span class='study-area-input'>____</span>清潔感（せいけつかん）がないため、周（まわ）りの人（ひと）たちには避（さ）けられている。",
+        "answer": "うえに",
+        "alternate_grammar": [],
+        "kanji_answer": "上（うえ）に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/高橋くんは無礼な上に清潔感がないため、周りの人たちには避けられている。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Takahashi-kun is rude <strong>as well as</strong> unhygienic, so he is avoided by the people around him.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6177",
+      "type": "study_question",
+      "attributes": {
+        "id": 6177,
+        "content": "あの店（みせ）は、美味（おい）しい<span class='study-area-input'>____</span>落（お）ち着（つ）く雰囲気（ふんいき）だから、また行（い）きたい。",
+        "answer": "うえに",
+        "alternate_grammar": [
+          "うえ",
+          "うえに"
+        ],
+        "kanji_answer": "上（うえ）に",
+        "kanji_alt_grammar": [
+          "上（うえ）",
+          "上（うえ）に"
+        ],
+        "nuance": "<strong>さらに</strong>何（なに）かを言（い）う手段（しゅだん）として(A)に情報（じょうほう）を追加（ついか）する、<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Literary, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あの店は、美味しい上に落ち着く雰囲気だから、また行きたい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "し": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "うえで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "のみならず": {
+            "en": "Do you know a structure that uses kanji that has a similar meaning?",
+            "es": ""
+          },
+          "そのうえ": {
+            "en": "How about removing something from the beginning?",
+            "es": ""
+          },
+          "おまけに": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Because that shop has a calm atmosphere, <strong>in addition to</strong> being delicious, I want to go again. (<strong>on top of that</strong>)",
+        "nuance_translation": "A <strong>slightly formal</strong> structure which adds information <strong>on top of</strong> (A), as a means of saying something in addition.",
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1227",
+      "type": "study_question",
+      "attributes": {
+        "id": 1227,
+        "content": "今日（きょう）の宿題（しゅくだい）は簡単（かんたん）<span class='study-area-input'>____</span>、少（すく）ない。",
+        "answer": "なうえに",
+        "alternate_grammar": [
+          "であるうえに",
+          "なうえに",
+          "うえ"
+        ],
+        "kanji_answer": "な上（うえ）に",
+        "kanji_alt_grammar": [
+          "である上（うえ）に",
+          "上（うえ）",
+          "な上（うえ）に"
+        ],
+        "nuance": "<strong>さらに</strong>何（なに）かを言（い）う手段（しゅだん）として(A)に情報（じょうほう）を追加（ついか）する、<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Literary, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だし": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "うえで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "のみならず": {
+            "en": "Do you know a structure that uses kanji that has a similar meaning?",
+            "es": ""
+          },
+          "うえに": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "そのうえ": {
+            "en": "How about removing something from the beginning?",
+            "es": ""
+          },
+          "おまけに": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "のうえに": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>In addition to</strong> being easy, today's homework load was light. (<strong>on top of that</strong>)",
+        "nuance_translation": "A <strong>slightly formal</strong> structure which adds information <strong>on top of</strong> (A), as a means of saying something in addition.",
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1225",
+      "type": "study_question",
+      "attributes": {
+        "id": 1225,
+        "content": "そのジムは安（やす）い<span class='study-area-input'>____</span>、私（わたし）の家（いえ）から近（ちか）い。",
+        "answer": "うえに",
+        "alternate_grammar": [
+          "うえ",
+          "うえに"
+        ],
+        "kanji_answer": "上（うえ）に",
+        "kanji_alt_grammar": [
+          "上（うえ）",
+          "上（うえ）に"
+        ],
+        "nuance": "<strong>さらに</strong>何（なに）かを言（い）う手段（しゅだん）として(A)に情報（じょうほう）を追加（ついか）する、<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Literary, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/そのジムは安い上に、私の家から近い。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "し": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "うえで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "のみならず": {
+            "en": "Do you know a structure that uses kanji that has a similar meaning?",
+            "es": ""
+          },
+          "そのうえ": {
+            "en": "How about removing something from the beginning?",
+            "es": ""
+          },
+          "おまけに": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>As well as</strong> being cheap, that gym is close to my house. (<strong>on top of that</strong>)",
+        "nuance_translation": "A <strong>slightly formal</strong> structure which adds information <strong>on top of</strong> (A), as a means of saying something in addition.",
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6172",
+      "type": "study_question",
+      "attributes": {
+        "id": 6172,
+        "content": "彼（かれ）は、怪（あや）しい<span class='study-area-input'>____</span>気持（きも）ち悪（わる）いから、まずもてない。",
+        "answer": "うえに",
+        "alternate_grammar": [
+          "うえ",
+          "うえに"
+        ],
+        "kanji_answer": "上（うえ）に",
+        "kanji_alt_grammar": [
+          "上（うえ）",
+          "上（うえ）に"
+        ],
+        "nuance": "<strong>さらに</strong>何（なに）かを言（い）う手段（しゅだん）として(A)に情報（じょうほう）を追加（ついか）する、<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Literary, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼は、怪しい上に気持ち悪いから、まずもてない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "し": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "うえで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "のみならず": {
+            "en": "Do you know a structure that uses kanji that has a similar meaning?",
+            "es": ""
+          },
+          "そのうえ": {
+            "en": "How about removing something from the beginning?",
+            "es": ""
+          },
+          "おまけに": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Besides</strong> being dodgy, he is also unpleasant so he is hardly popular with the ladies. (<strong>on top of that</strong>)",
+        "nuance_translation": "A <strong>slightly formal</strong> structure which adds information <strong>on top of</strong> (A), as a means of saying something in addition.",
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6174",
+      "type": "study_question",
+      "attributes": {
+        "id": 6174,
+        "content": "園芸（えんげい）は、楽（たの）しい<span class='study-area-input'>____</span>達成（たっせい）感（かん）があります。",
+        "answer": "うえに",
+        "alternate_grammar": [
+          "うえ",
+          "うえに"
+        ],
+        "kanji_answer": "上（うえ）に",
+        "kanji_alt_grammar": [
+          "上（うえ）",
+          "上（うえ）に"
+        ],
+        "nuance": "<strong>さらに</strong>何（なに）かを言（い）う手段（しゅだん）として(A)に情報（じょうほう）を追加（ついか）する、<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Literary, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/園芸は、楽しい上に達成感があります。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "し": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "うえで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "のみならず": {
+            "en": "Do you know a structure that uses kanji that has a similar meaning?",
+            "es": ""
+          },
+          "そのうえ": {
+            "en": "How about removing something from the beginning?",
+            "es": ""
+          },
+          "おまけに": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>In addition</strong> to being fun, gardening also gives you a sense of achievement. (<strong>on top of that</strong>)",
+        "nuance_translation": "A <strong>slightly formal</strong> structure which adds information <strong>on top of</strong> (A), as a means of saying something in addition.",
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6176",
+      "type": "study_question",
+      "attributes": {
+        "id": 6176,
+        "content": "彼（かれ）はお洒落（しゃれ）<span class='study-area-input'>____</span>イケメンだから、モテモテだ。",
+        "answer": "なうえに",
+        "alternate_grammar": [
+          "であるうえに",
+          "なうえに",
+          "うえ"
+        ],
+        "kanji_answer": "な上（うえ）に",
+        "kanji_alt_grammar": [
+          "である上（うえ）に",
+          "上（うえ）",
+          "な上（うえ）に"
+        ],
+        "nuance": "<strong>さらに</strong>何（なに）かを言（い）う手段（しゅだん）として(A)に情報（じょうほう）を追加（ついか）する、<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Literary, Idiomatic",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼はお洒落な上にイケメンだから、モテモテだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "し": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "うえで": {
+            "en": "Let's try a different particle here.",
+            "es": ""
+          },
+          "のみならず": {
+            "en": "Do you know a structure that uses kanji that has a similar meaning?",
+            "es": ""
+          },
+          "うえに": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "そのうえ": {
+            "en": "How about removing something from the beginning?",
+            "es": ""
+          },
+          "おまけに": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Because he is stylish <strong>as well as</strong> good-looking, he is well-liked. (<strong>on top of that</strong>)",
+        "nuance_translation": "A <strong>slightly formal</strong> structure which adds information <strong>on top of</strong> (A), as a means of saying something in addition.",
+        "extra_info": "",
+        "reviewable_id": 337,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "565",
+      "type": "writeup",
+      "attributes": {
+        "id": 565,
+        "body_ja": "<p>「<span data-gp-id='337'>上（うえ）に</span>」は (A) に (B) を足（た）すときに使（つか）われる少（すこ）し硬（かた）めの文型（ぶんけい）です。文字（もじ）通（どお）り (A) の上（うえ）に (B) があるようなイメージで「(A) だし、それに (B)」のような意味（いみ）で使（つか）われます。</p>\r\n\r\n<p>「<span data-gp-id='337'>上（うえ）に</span>」は、動詞（どうし）やイ形容詞（けいようし）の普通形（ふつうけい）、後（うし）ろに「な」を伴（ともな）ったナ形容詞（けいようし）、後（うし）ろに「の」を伴（ともな）った名詞（めいし）の後（うし）ろに置（お）かれます。ときどき「に」が省略（しょうりゃく）されることもありますが、意味（いみ）は変（か）わりません。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181739'>\r\n<li data-study-question='181740'>\r\n<li data-study-question='181741'>\r\n<li data-study-question='181742'>\r\n</ul>\r\n\r\n<p>ナ形容詞（けいようし）や名詞（めいし）の場合（ばあい）、「である<span data-gp-id='337'>上（うえ）に</span>」という形（かたち）で使（つか）われることもよくあります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181743'>\r\n<li data-study-question='181744'>\r\n</ul>\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>「<span data-gp-id='337'>上（うえ）に</span>」を使（つか）うとき、(A) と (B) は必（かなら）ず同（おな）じ性質（せいしつ）を持（も）つものになります。例（たと）えば、(A) が良（よ）いことであれば (B) も良（よ）いことになり、(A) が悪（わる）いことなら (B) も悪（わる）いことになります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184389'>\r\n<li data-study-question='184390'></ul></section>",
+        "body": "<p><span data-gp-id='337'>上（うえ）に</span> is a grammar pattern that functions as a slightly formal way of saying 'and' in Japanese. It shows that something is 'in addition to (A)', 'as well as (A)', or 'besides (A)'. Literally, it simply shows that 'on top of (A), (B)'.</p>\r\n\r\n<p><span data-gp-id='337'>上（うえ）に</span> may be used after that standard form of verbs and い-Adjectives, な-Adjectives followed by <span data-gp-id='337'>な上（うえ）に</span>, and nouns followed by <span data-gp-id='337'>の上（うえ）に</span>. Occasionally, the に may be dropped from this structure, without changing the meaning at all.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181739'>\r\n<li data-study-question='181740'>\r\n<li data-study-question='181741'>\r\n<li data-study-question='181742'>\r\n</ul>\r\n\r\n<p>When it comes to な-Adjectives and nouns, it is also common to see <span data-gp-id='337'>である上（うえ）に</span> used as a conjugation pattern.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181743'>\r\n<li data-study-question='181744'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p><span data-gp-id='337'>上（うえ）に</span> must always be used to highlight qualities of things that are equivalent to each other. For example, a good thing and another good thing, or a bad thing and another bad thing.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184389'>\r\n<li data-study-question='184390'></ul></section>"
+      }
+    },
+    {
+      "id": "558",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 558,
+        "source": "Tobira",
+        "location": "Page 238",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "735",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 735,
+        "site": "OobaSensei",
+        "description": "JLPT N2 文法: 上(に)",
+        "link": "http://ooba-sensei.blogspot.com/2011/04/jlptn26.html",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "736",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 736,
+        "site": "日本語教師のN1et",
+        "description": "Breakdown, comparisons and examples",
+        "link": "https://jn1et.com/ueni/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "486",
+      "type": "related_content",
+      "attributes": {
+        "id": 486,
+        "relationship_type": "misc",
+        "body": "上 and 上に share the same kanji but serve distinct functions. 上に adds reasons or qualities in a cumulative way, as in 綺麗な上に頭もいい (In addition to being pretty, she’s also smart). 上 by itself expresses viewpoint, as in 法律上の問題 (a problem from a legal standpoint). The former is additive, the latter indicates perspective. Both are relatively formal expressions.",
+        "first_relatable": {
+          "id": 337,
+          "slug": "上に",
+          "title": "上に",
+          "meaning": "As well, Besides, In addition to",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 316,
+          "slug": "上",
+          "title": "上",
+          "meaning": "From the standpoint of",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "532",
+      "type": "related_content",
+      "attributes": {
+        "id": 532,
+        "relationship_type": "related",
+        "body": "また and 上に both add information, but differ in usage and tone. また appears at the beginning of a sentence or phrase and means 'moreover' or 'again'. It's common in both speech and writing. 上に follows nouns, verbs, or adjectives and conveys a similar meaning, but with a more formal or written tone.",
+        "first_relatable": {
+          "id": 364,
+          "slug": "また",
+          "title": "また",
+          "meaning": "Also, As well, Moreover, Again, Additionally",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 337,
+          "slug": "上に",
+          "title": "上に",
+          "meaning": "As well, Besides, In addition to",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1201",
+      "type": "related_content",
+      "attributes": {
+        "id": 1201,
+        "relationship_type": "related",
+        "body": "上に and おまけに both introduce additional information, but differ in tone. 上に is neutral and formal, as in 彼は親切な上に、頭もいい (He is kind, and on top of that, smart). おまけに often emphasizes worsening conditions, as in 雨だった。おまけに風も強かった (It was raining. On top of that, the wind was strong).",
+        "first_relatable": {
+          "id": 337,
+          "slug": "上に",
+          "title": "上に",
+          "meaning": "As well, Besides, In addition to",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 691,
+          "slug": "おまけに",
+          "title": "おまけに",
+          "meaning": "In addition, On top of that, What is more, To make matters worse",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "694",
+      "type": "related_content",
+      "attributes": {
+        "id": 694,
+        "relationship_type": "related",
+        "body": "上に and 更に both add information, but their nuance differs. 上に connects additive facts or qualities, often with a static or descriptive tone, as in 彼は真面目な上に礼儀正しい (He is serious, and also polite). 更に emphasizes progression or intensification, as in 更に速く走った (He ran even faster).",
+        "first_relatable": {
+          "id": 337,
+          "slug": "上に",
+          "title": "上に",
+          "meaning": "As well, Besides, In addition to",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 505,
+          "slug": "さらに",
+          "title": "更に",
+          "meaning": "Even more or further, Again, More and more",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "430",
+      "type": "related_content",
+      "attributes": {
+        "id": 430,
+        "relationship_type": "related",
+        "body": "上に and 上は share the same kanji but serve different grammatical roles. 上に expresses accumulation of traits or actions, as in 忙しい上に風邪もひいた (I’m busy, and on top of that I caught a cold). 上は introduces a conditional or resolved stance, as in 引き受けた上は最後までやる (Since I accepted it, I’ll see it through).",
+        "first_relatable": {
+          "id": 337,
+          "slug": "上に",
+          "title": "上に",
+          "meaning": "As well, Besides, In addition to",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 396,
+          "slug": "上は",
+          "title": "上は",
+          "meaning": "Once, Since, Now that, As long as",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1200",
+      "type": "related_content",
+      "attributes": {
+        "id": 1200,
+        "relationship_type": "related",
+        "body": "その上 and 上に both convey the idea of in addition, but differ in structure and tone. その上 is a conjunctive adverb used between sentences, as in 彼は遅刻した。その上、宿題も忘れた (He was late. On top of that, he forgot his homework). 上に functions within a sentence to link clauses, and is often used in more structured or descriptive contexts.",
+        "first_relatable": {
+          "id": 417,
+          "slug": "その上",
+          "title": "その上",
+          "meaning": "Besides, In addition, Furthermore",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 337,
+          "slug": "上に",
+          "title": "上に",
+          "meaning": "As well, Besides, In addition to",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "596",
+      "type": "related_content",
+      "attributes": {
+        "id": 596,
+        "relationship_type": "misc",
+        "body": "Both use 上 but differ quite a bit in meaning. 上に adds information, like '(B) in addition to (or 'on top of') (A)', typically within the same general category, e.g. 彼は親切な上に頭もいい ('He's smart in addition to being kind.'). In contrast, 上で expresses an action happening after (lit. 'upon') another action or condition being realized, e.g. 社長に相談した上で決めましょう ('Let's decide after consulting the president.').",
+        "first_relatable": {
+          "id": 337,
+          "slug": "上に",
+          "title": "上に",
+          "meaning": "As well, Besides, In addition to",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 198,
+          "slug": "上で",
+          "title": "上で",
+          "meaning": "After, Upon",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1150",
+      "type": "related_content",
+      "attributes": {
+        "id": 1150,
+        "relationship_type": "related",
+        "body": "上に (literally, 'on top of') can be used as a slightly formal way to express 'in addition to (A), (B)', e.g. 安い上に、美味しい ('In addition to being inexpensive, it's tasty.'). While し～し is similar in that it lists multiple things, it specifically does so in the context of giving reasons for something, e.g. 安いし、美味しいし、一番好きなお店です ('It's inexpensive, it's tasty too, and so it's my favorite shop.').",
+        "first_relatable": {
+          "id": 337,
+          "slug": "上に",
+          "title": "上に",
+          "meaning": "As well, Besides, In addition to",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 141,
+          "slug": "し-し",
+          "title": "し～し ",
+          "meaning": "And, Giving reasons",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}
