@@ -125,6 +125,7 @@ import kata from './かた.js';
 import kadouka from './かどうか.js';
 import kana from './かな.js';
 import kamoshirenai from './かもしれない.js';
+import kikoeru from './聞こえる.js';
 import gasuru from './がする.js';
 import gahitsuyou from './がひつよう.js';
 import gahoshii from './がほしい.js';
@@ -205,6 +206,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     kata,
     kadouka,
     kashira,
+    kikoeru,
     koto,
     kotogadekiru,
     mazu,
