@@ -79,35 +79,16 @@ export default linguisticRule('げ', (r) => {
       b2.capture(geForm);
     },
 
-    // Pattern 3: Split form - げ + な
+    // Pattern 3: Base word + げ (without particle, used as noun)
+    // For forms like かわいげ, ありげ (when followed by other particles)
     (b3) => {
-      const ge = b3.tok({
-        textOneOf: ['げ', '気'],
-        pos: 'NOUN',
-      }, 'ge');
-      const na = b3.particle('な', 'na');
-      b3.inOrder(ge, na, 1);
-      b3.captureSpan('げ', ge, na);
-    },
-
-    // Pattern 4: Split form - げ + に
-    (b4) => {
-      const ge = b4.tok({
-        textOneOf: ['げ', '気'],
-        pos: 'NOUN',
-      }, 'ge');
-      const ni = b4.particle('に', 'ni');
-      b4.inOrder(ge, ni, 1);
-      b4.captureSpan('げ', ge, ni);
-    },
-
-    // Pattern 5: Standalone げ (without particle)
-    (b5) => {
-      const ge = b5.tok({
-        textOneOf: ['げ', '気'],
-        pos: 'NOUN',
-      }, 'ge');
-      b5.capture(ge);
+      const geForm = b3.tok({
+        textOneOf: [
+          'かわいげ',       // cute-seemingness (noun)
+          'ありげ',         // meaningful-looking (as standalone)
+        ],
+      }, 'geForm');
+      b3.capture(geForm);
     }
   );
 });
