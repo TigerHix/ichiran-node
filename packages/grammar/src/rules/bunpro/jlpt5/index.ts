@@ -45,6 +45,7 @@ import he from './へ.js';
 import to from './と.js';
 import toAnd from './と-and.js';
 import toWith from './と-with.js';
+import tte from './って.js';
 import yo from './よ.js';
 import ne from './ね.js';
 import no from './の.js';
@@ -78,7 +79,6 @@ import sono from './その.js';
 import sore from './それ.js';
 import doko from './どこ.js';
 import dono from './どの.js';
-import dare from './だれ.js';
 import dore from './どれ.js';
 import mo from './も.js';
 
@@ -131,6 +131,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     to,
     toAnd,
     toWith,
+    tte,
     wo,
     wa,
     yo,
