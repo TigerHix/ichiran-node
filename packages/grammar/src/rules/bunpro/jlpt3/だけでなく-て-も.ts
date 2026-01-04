@@ -1,16 +1,16 @@
 import { linguisticRule } from '../../../engine/lang.js';
 
 export default linguisticRule('だけでなく-て-も', (r) => {
-  // だけでなく(て)～も - "not only X but also Y"
-  // This rule extends JLPT4's だけでなく by requiring も particle after the second element
+  // だけでなく(て)～(も) - "not only X but also Y"
+  // Extends JLPT4's だけでなく to optionally require も particle after second element
   //
   // Patterns:
-  // 1. Formal: だけでなく、Noun+も / だけでなくて、Noun+も
-  // 2. Written: だけではなく、Noun+も / だけではなくて、Noun+も
-  // 3. Casual: だけじゃなく、Noun+も / だけじゃなくて、Noun+も
+  // 1. Formal: だけでなく、Noun(＋も) / だけでなくて、Noun(＋も)
+  // 2. Written: だけではなく、Noun(＋も) / だけではなくて、Noun(＋も)
+  // 3. Casual: だけじゃなく、Noun(＋も) / だけじゃなくて、Noun(＋も)
   //
-  // The key difference from JLPT4 だけでなく is the REQUIRED も particle
-  // following the second noun/element, emphasizing inclusion of both items.
+  // Unlike JLPT4 だけでなく, this rule ALSO matches when も is present on the
+  // second element (emphasizing inclusion), but doesn't require it.
 
   const dake = r.tok({ lemma: 'だけ' }, 'dake');
 
@@ -28,10 +28,7 @@ export default linguisticRule('だけでなく-て-も', (r) => {
         lemma: 'ない',
         dep: 'fixed'
       }, 'nai');
-      const mo = b.tok({ text: 'も' }, 'mo');
       b.inOrder(dake, de, 1).inOrder(de, nai, 2);
-      // Require も to appear somewhere later in the sentence
-      b.inOrder(nai, mo, 10);
       b.captureSpan('だけでなく', dake, nai);
     },
 
@@ -49,12 +46,9 @@ export default linguisticRule('だけでなく-て-も', (r) => {
         lemma: 'ない',
         dep: 'fixed'
       }, 'nai');
-      const mo = b.tok({ text: 'も' }, 'mo');
       b.inOrder(dake, de, 1);
       b.inOrder(de, wa, 1);
       b.inOrder(wa, nai, 1);
-      // Require も to appear somewhere later in the sentence
-      b.inOrder(nai, mo, 10);
       b.captureSpan('ではなく', dake, nai);
     },
 
@@ -72,10 +66,7 @@ export default linguisticRule('だけでなく-て-も', (r) => {
         dep: 'fixed'
       }, 'nai');
       const te = b.aux({ lemma: 'て' }, 'te');
-      const mo = b.tok({ text: 'も' }, 'mo');
       b.inOrder(dake, de, 1).inOrder(de, nai, 2).inOrder(nai, te, 1);
-      // Require も to appear somewhere later in the sentence
-      b.inOrder(te, mo, 10);
       b.captureSpan('だけでなくて', dake, te);
     },
 
@@ -94,13 +85,10 @@ export default linguisticRule('だけでなく-て-も', (r) => {
         dep: 'fixed'
       }, 'nai');
       const te = b.tok({ text: 'て', pos: 'SCONJ', dep: 'mark' }, 'te');
-      const mo = b.tok({ text: 'も' }, 'mo');
       b.inOrder(dake, de, 1);
       b.inOrder(de, wa, 1);
       b.inOrder(wa, nai, 1);
       b.inOrder(nai, te, 1);
-      // Require も to appear somewhere later in the sentence
-      b.inOrder(te, mo, 10);
       b.captureSpan('ではなくて', dake, te);
     },
 
@@ -115,10 +103,7 @@ export default linguisticRule('だけでなく-て-も', (r) => {
         lemma: 'ない',
         dep: 'fixed'
       }, 'nai');
-      const mo = b.tok({ text: 'も' }, 'mo');
       b.inOrder(dake, ja, 1).inOrder(ja, nai, 2);
-      // Require も to appear somewhere later in the sentence
-      b.inOrder(nai, mo, 10);
       b.captureSpan('だけじゃなく', dake, nai);
     },
 
@@ -134,10 +119,7 @@ export default linguisticRule('だけでなく-て-も', (r) => {
         dep: 'fixed'
       }, 'nai');
       const te = b.aux({ lemma: 'て' }, 'te');
-      const mo = b.tok({ text: 'も' }, 'mo');
       b.inOrder(dake, ja, 1).inOrder(ja, nai, 2).inOrder(nai, te, 1);
-      // Require も to appear somewhere later in the sentence
-      b.inOrder(te, mo, 10);
       b.captureSpan('だけじゃなくて', dake, te);
     }
   );

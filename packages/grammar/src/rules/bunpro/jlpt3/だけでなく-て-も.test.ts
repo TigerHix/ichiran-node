@@ -4,12 +4,6 @@ import { describeRule } from '../_test/helpers.js';
 import rule from './だけでなく-て-も.js';
 import { BUNPRO_JLPT3 } from './index.js';
 
-// Note: '彼は強いだけではなく、とても優しい人だ。' is skipped due to GiNZA tokenization
-// The sentence has two は particles which may cause matching issues
-const skipPositives = [
-  '彼は強いだけではなく、とても優しい人だ。',
-];
-
 const negatives = [
   // だけで without なく - simple "only/with" meaning
   '三日だけで完成した。',
@@ -40,5 +34,5 @@ const negatives = [
 
 describe('bunpro.jlpt3', () => {
   const engine = useSharedEngine([BUNPRO_JLPT3]);
-  describeRule(rule, 'JLPT3', BUNPRO_JLPT3.id, engine.get, { negatives, skipPositives });
+  describeRule(rule, 'JLPT3', BUNPRO_JLPT3.id, engine.get, { negatives });
 });

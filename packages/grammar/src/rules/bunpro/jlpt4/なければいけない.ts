@@ -151,6 +151,52 @@ export default linguisticRule('なければいけない', (r) => {
 
       // Capture from verb through nakya
       b.captureSpan('なければいけない', verb, nakya);
+    },
+
+    // Pattern 5: Past tense form - verb[nai-mizen] + れば + いけなかった
+    // e.g., のらなければいけなかった, 行かなければいけなかった
+    // GiNZA: なけれ[AUX,仮定形] + ば[SCONJ] + いけ[VERB,未然形] + なかっ[AUX,連用形促音便] + た[AUX]
+    (b) => {
+      // Negative auxiliary in conditional form: なけれ (from ない)
+      const nakere = b.aux({
+        text: 'なけれ',
+        lemma: 'ない',
+        inflectionForm: '仮定形-一般',
+      }, 'nakere');
+
+      // Conditional particle: ば
+      const ba = b.tok({
+        text: 'ば',
+        pos: 'SCONJ',
+      }, 'ba');
+
+      // Potential form of iku in irrealis form: いけ (before なかった)
+      // Note: GiNZA uses lemma=いける (potential form) but inflection=未然形
+      const ike = b.tok({
+        text: 'いけ',
+        pos: 'VERB',
+        inflectionForm: '未然形-一般',
+      }, 'ike');
+
+      // Past negative auxiliary: なかっ (促音便 form of ない before た)
+      const nakatta = b.aux({
+        lemma: 'ない',
+        inflectionForm: '連用形-促音便',
+      }, 'nakatta');
+
+      // Past tense auxiliary: た
+      const ta = b.aux({
+        lemma: 'た',
+      }, 'ta');
+
+      // Structure constraints
+      b.inOrder(nakere, ba, 1);
+      b.inOrder(ba, ike, 2);
+      b.inOrder(ike, nakatta, 1);
+      b.inOrder(nakatta, ta, 1);
+
+      // Capture from nakere through ta
+      b.captureSpan('なければいけない', nakere, ta);
     }
   );
 });
