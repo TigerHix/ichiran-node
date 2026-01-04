@@ -21,6 +21,7 @@ import gasuru from './がする.js';
 import gahitsuyou from './がひつよう.js';
 import gahoshii from './がほしい.js';
 import gamirareru from './がみられる.js';
+import tatoeba from './たとえば.js';
 
 export const BUNPRO_JLPT4: Ruleset = {
   id: 'bunpro.jlpt4',
@@ -43,6 +44,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     kadouka,
     kana,
     kamoshirenai,
+    tatoeba,
     gasuru,
     gahitsuyou,
     gahoshii,
