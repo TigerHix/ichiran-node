@@ -78,8 +78,8 @@ import sono from './その.js';
 import sore from './それ.js';
 import doko from './どこ.js';
 import dono from './どの.js';
-import dare from './だれ.js';
 import dore from './どれ.js';
+import dake from './だけ.js';
 import mo from './も.js';
 
 export const BUNPRO_JLPT5: Ruleset = {
@@ -150,6 +150,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     doko,
     dono,
     dore,
+    dake,
     mo,
     tekara,
     teKudasai,
