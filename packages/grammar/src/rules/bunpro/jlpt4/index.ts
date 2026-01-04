@@ -99,6 +99,7 @@ import hotondo from './ほとんど.js';
 import mazu from './まず.js';
 import mata from './また.js';
 import mainoyouni from './まい-のように.js';
+import meireikei from './命令形.js';
 import made from './まで.js';
 import madeni from './までに.js';
 import mitaini from './みたいに-みたいな.js';
@@ -209,6 +210,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     kotogadekiru,
     mazu,
     mainoyouni,
+    meireikei,
     made,
     madeni,
     mata,
