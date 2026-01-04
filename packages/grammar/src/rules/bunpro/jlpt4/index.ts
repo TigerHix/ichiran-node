@@ -115,6 +115,7 @@ import ika from './いか.js';
 import igai from './いがい.js';
 import itasu from './いたす.js';
 import irassharu from './いらっしゃる.js';
+import ijou1 from './以上1.js';
 import okudasai from './お-ください.js';
 import osuru from './お-する.js';
 import oninaru from './お-になる.js';
@@ -196,6 +197,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     hotondo,
     ika,
     igai,
+    ijou1,
     irassharu,
     itasu,
     janaika,
