@@ -31,6 +31,7 @@ import verbnaide from './verb-ないで.js';
 import verbteb from './verbて-b.js';
 import verbteb2 from './verbて-b2.js';
 import verbtereq from './verbて-request.js';
+import rutokoroda from './るところだ.js';
 import dakedenaku from './だけでなく.js';
 import dakede from './だけで.js';
 import dasu from './だす.js';
@@ -248,6 +249,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     owaru,
     osuru,
     questionphraseka,
+    rutokoroda,
     sa,
     shishi,
     shikanai,
