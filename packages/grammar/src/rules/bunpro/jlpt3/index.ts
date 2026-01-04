@@ -22,6 +22,7 @@ import gimi from './ぎみ.js';
 import kuseni from './くせに.js';
 import kurai2 from './くらい2.js';
 import koso from './こそ.js';
+import tokorode from './ところで.js';
 import kotoKa from './ことか.js';
 import kotoKara from './ことから.js';
 import kotoGaAru from './ことがある.js';
@@ -106,6 +107,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     kuseni,
     kurai2,
     koso,
+    tokorode,
     kotoKa,
     kotoKara,
     kotoGaAru,
