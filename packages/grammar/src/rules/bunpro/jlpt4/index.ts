@@ -86,6 +86,7 @@ import toiwareteiru from './といわれている.js';
 import tokiita from './ときいた.js';
 import teyokatta from './てよかった.js';
 import toutou from './とうとう.js';
+import nakerebaikenai from './なければいけない.js';
 
 export const BUNPRO_JLPT4: Ruleset = {
   id: 'bunpro.jlpt4',
@@ -177,5 +178,6 @@ export const BUNPRO_JLPT4: Ruleset = {
     tokiita,
     teyokatta,
     toutou,
+    nakerebaikenai,
   ],
 };
