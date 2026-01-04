@@ -36,6 +36,7 @@ import ika from './いか.js';
 import igai from './いがい.js';
 import itasu from './いたす.js';
 import irassharu from './いらっしゃる.js';
+import nasaru from './なさる.js';
 import okudasai from './お-ください.js';
 import osuru from './お-する.js';
 import oninaru from './お-になる.js';
@@ -120,6 +121,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     igai,
     itasu,
     irassharu,
+    nasaru,
     okudasai,
     osuru,
     oninaru,
