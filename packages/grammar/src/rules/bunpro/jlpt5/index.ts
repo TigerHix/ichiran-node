@@ -46,6 +46,7 @@ import janakatta from './じゃなかった.js';
 import naAdjectiveNoun from './な-adjective-noun.js';
 import naAdjectivePredicate from './な-adjective-predicate.js';
 import naAdjectives from './な-adjectives.js';
+import nanikaNanimo from './なにか-なにも.js';
 import naidekudasai from './ないでください.js';
 import nahogaii from './ないほうがいい.js';
 import nakucha from './なくちゃ-なきゃ.js';
@@ -149,6 +150,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     naAdjectiveNoun,
     naAdjectivePredicate,
     naAdjectives,
+    nanikaNanimo,
     naidekudasai,
     nahogaii,
     nakucha,
