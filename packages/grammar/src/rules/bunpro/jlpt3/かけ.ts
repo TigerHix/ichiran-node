@@ -1,32 +1,61 @@
 import { linguisticRule } from '../../../engine/lang.js';
 
+/**
+ * JLPT3: かけ (kake) - "halfway doing / in the middle of"
+ *
+ * Verb stem + かけ/かける = "halfway doing X", "started X but not finished"
+ *
+ * Examples:
+ * - わすれかけていた (was half-forgetting)
+ * - のみかけのジュース (half-drunk juice)
+ * - 読みかけの本 (half-read book)
+ * - 死にかけの子犬 (about-to-die puppy)
+ *
+ * The pattern attaches to verb stems (masu form/ren'youkei):
+ * - 飲みかけ (half-drinking)
+ * - 読みかけ (half-reading)
+ * - 死にかけ (about-to-die)
+ *
+ * GiNZA parses this in various ways:
+ * - As compound: verb + かける with dep=compound
+ * - As aux: verb + かけ with dep=aux
+ * - Sometimes lemma='かける' on the kake token
+ * - Sometimes lemma='かけ' for the stem form
+ * - Sometimes as NOUN when used as a nominal suffix (のみかけの)
+ */
 export default linguisticRule('かけ', (r) => {
-  // かけ is a helper verb meaning "halfway doing" / "incomplete action"
-  // Pattern: Verb[masu stem/ren'youkei] + かけ/かける
-  // Forms: かけ, かけた, かけて, かけている, かけの, etc.
-  //
-  // GiNZA parses this as:
-  // - Verb stem + かけ: かけ is VERB with lemma=かける
-  // - The かけ attaches as compound or aux to the main verb
-  //
-  // Examples:
-  // - わすれかけていた (was half-forgetting)
-  // - のみかけのジュース (half-drunk juice)
-  // - 読みかけの本 (half-read book)
-  // - 死にかけの子犬 (half-dead puppy = about to die)
+  r.either(
+    // Branch 1: かけ/かける as auxiliary (dep=aux or dep=compound)
+    (b) => {
+      const kake = b.aux({
+        lemmaOneOf: ['かけ', 'かける'],
+      }, 'kake');
+      b.capture(kake);
+    },
 
-  // Main pattern: verb with lemma=かける
-  const kake = r.tok({ lemma: 'かける' }, 'kake');
+    // Branch 2: かけ/かける as verb with aux/compound dependency
+    (b) => {
+      const kake = b.verb({
+        lemmaOneOf: ['かけ', 'かける'],
+        depOneOf: ['aux', 'compound', 'fixed'],
+      }, 'kake');
+      b.capture(kake);
+    },
 
-  // The verb stem precedes かけ - typically as compound, advcl, or similar
-  // We need to match various POS since GiNZA is inconsistent
-  const verb = r.tok({
-    posOneOf: ['VERB', 'AUX', 'NOUN'],
-    lemma: (l) => l !== 'かける' && l !== 'かけ' // exclude kakeru itself
-  }, 'verb');
+    // Branch 3: かけ as NOUN (when used as nominal suffix like のみかけの)
+    (b) => {
+      const kake = b.noun({
+        textOneOf: ['かけ', 'ガケ'],
+      }, 'kake');
+      b.capture(kake);
+    },
 
-  r.inOrder(verb, kake, 1); // verb immediately before kake
-
-  // Capture the whole construction
-  r.captureSpan('かけ', verb, kake);
+    // Branch 4: かける as VERB/AUX with any pos
+    (b) => {
+      const kake = b.tok({
+        textOneOf: ['かけ', 'かける'],
+      }, 'kake');
+      b.capture(kake);
+    }
+  );
 });
