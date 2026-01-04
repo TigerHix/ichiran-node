@@ -25,6 +25,7 @@ import kotogadekiru from './ことができる.js';
 import sou from './そう.js';
 import soreni from './それに.js';
 import tagaru from './たがる.js';
+import transitiveIntransitiveVerbs from './transitive-intransitive-verbs.js';
 
 export const BUNPRO_JLPT4: Ruleset = {
   id: 'bunpro.jlpt4',
@@ -51,6 +52,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     sou,
     tagaru,
     soreni,
+    transitiveIntransitiveVerbs,
     gasuru,
     gahitsuyou,
     gahoshii,
