@@ -1,25 +1,13 @@
-import { GinzaClient } from "./src/ginza/client.js";
+// Check how GiNZA parses the negative examples
 
-const client = new GinzaClient();
-await client.start();
-
-const sentences = [
-  "文化祭の準備をしている生徒：「だいたいでいいから、午前中までにはおわらせておいて。」",
-  "だいたいでいいから、午前中までにはおわらせておいて。",
+const negatives = [
+  '本を読んでいる。',  // ている - should NOT match
+  '窓を開けておく。',  // ておく - should NOT match
+  '宿題をしてしまった。',  // てしまった - should NOT match
 ];
 
-for (const text of sentences) {
-  console.log("\n=== " + text.substring(0, 50) + " ===");
-  const docs = await client.analyze([text]);
-  for (const doc of docs) {
-    for (const sent of doc.sentences) {
-      for (const token of sent.tokens) {
-        if (token.text.includes('だいたい') || token.text === 'だいたい') {
-          console.log("  FOUND:", token.text, "pos:", token.pos, "lemma:", token.lemma);
-        }
-      }
-    }
-  }
-}
-
-await client.stop();
+console.log("Checking negative examples:");
+console.log("These sentences should NOT match verbて-request");
+console.log("");
+console.log("Issue: GiNZA parses these differently than expected");
+console.log("Need to identify the distinguishing feature");
