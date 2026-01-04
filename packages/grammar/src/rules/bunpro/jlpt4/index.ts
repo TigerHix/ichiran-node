@@ -104,6 +104,7 @@ import temiru from './てみる.js';
 import temo from './ても.js';
 import temorau from './てもらう.js';
 import toomou from './とおもう.js';
+import youtooumou2 from './ようと思う-おうと思う.js';
 import toomieru from './とみえる.js';
 import tosareteiru from './とされている.js';
 import tokikatoka from './とか-とか.ts';
@@ -225,6 +226,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     temo,
     temorau,
     toomou,
+    youtooumou2,
     toomieru,
     tosareteiru,
     tokikatoka,
