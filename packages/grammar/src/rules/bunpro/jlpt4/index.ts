@@ -23,6 +23,7 @@ import dandan from './だんだん.js';
 import tsuzukeru from './つづける.js';
 import teshimau from './てしまう-ちゃう.js';
 import tekuretearigatou from './てくれてありがとう.js';
+import tekureru from './てくれる.js';
 import teageru from './てあげる.js';
 import tearu from './てある.js';
 import teiku from './ていく.js';
@@ -107,6 +108,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     tsuzukeru,
     teshimau,
     tekuretearigatou,
+    tekureru,
     teageru,
     tearu,
     teiku,
