@@ -13,6 +13,7 @@ import katoiuto1 from './かというと1.js';
 import kanari from './かなり.js';
 import karaKoso from './からこそ.js';
 import karaIuTo from './から言うと.js';
+import kahaNiyotteChigau from './かは-によって違う.js';
 import gatai from './がたい.js';
 import gachi from './がち.js';
 import kiri from './きり.js';
@@ -49,6 +50,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     kanari,
     karaKoso,
     karaIuTo,
+    kahaNiyotteChigau,
     gatai,
     gachi,
     kiri,
