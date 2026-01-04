@@ -1,6 +1,6 @@
 import type { RuleSpec, NodeRef, TokPred, CaptureSpec, EitherBranch } from './dsl.js';
 import type { GinzaPOS, GinzaDep, GinzaInflectionForm, GinzaConjugationClass } from '../ginza/generated.js';
-import { V, node, edge, before, text, textOneOf, lemma, lemmaOneOf, pos, posOneOf, dep, depOneOf, inflectionForm, inflectionFormOneOf, conjugationClass, conjugationClassOneOf, tag, not } from './dsl.js';
+import { V, node, edge, before, text, textOneOf, lemma, lemmaOneOf, pos, posOneOf, dep, depOneOf, inflectionForm, inflectionFormOneOf, conjugationClass, conjugationClassOneOf, tag, tagOneOf, not } from './dsl.js';
 import type { Clause } from './dsl.js';
 
 export type TokenCond = {
@@ -17,6 +17,7 @@ export type TokenCond = {
   conjugationClass?: GinzaConjugationClass;
   conjugationClassOneOf?: GinzaConjugationClass[];
   tag?: string;
+  tagOneOf?: string[];
 };
 
 export type LangVar = {
@@ -40,6 +41,7 @@ function condToPreds(cond: TokenCond): TokPred[] {
   if (cond.conjugationClass !== undefined) out.push(conjugationClass(cond.conjugationClass));
   if (cond.conjugationClassOneOf !== undefined) out.push(conjugationClassOneOf(cond.conjugationClassOneOf));
   if (cond.tag !== undefined) out.push(tag(cond.tag));
+  if (cond.tagOneOf !== undefined) out.push(tagOneOf(cond.tagOneOf));
   return out;
 }
 
