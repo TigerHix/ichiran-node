@@ -4,36 +4,14 @@ export default linguisticRule('Verb[passive]', (r) => {
   // Passive voice: verb + passive auxiliary (れる/られる/われる/etc.)
   //
   // The passive auxiliary れる/られる has multiple uses:
-  // - Passive (ukemi): 受け身 - something happens to subject
+  // - Passive (ukemi): 受け身 - action done to subject
   // - Potential (kanou): 可能 - possibility
   // - Spontaneous (jihatsu): 自発 - happens spontaneously
   // - Respectful (sonkei): 尊敬 - respectful form
   //
-  // This rule matches passive voice usage. The auxiliary attaches to verb stems.
-  //
-  // Conjugations:
-  // - Casual present: れる, られる, われる, etc.
-  // - Casual past: れた, られた, われた, etc.
-  // - Te-form: れて, られて, われて, etc.
-  // - Polite present: れます, られます, われます, etc.
-  // - Polite past: れました, られました, われました, etc.
-  //
-  // Godan verb passive forms:
-  // - う → われる (歌う → 歌われる)
-  // - く → かれる (書く → 書かれる)
-  // - す → される (話す → 話される)
-  // - つ → たれる (待つ → 待たれる)
-  // - ぬ → なれる (死ぬ → 死なれる)
-  // - ぶ → ばれる (呼ぶ → 呼ばれる)
-  // - む → まれる (読む → 読まれる)
-  // - ぐ → がれる (泳ぐ → 泳がれる)
-  //
-  // Ichidan verb passive forms:
-  // - る → られる (食べる → 食べられる)
-  //
-  // Irregular verbs:
-  // - する → される
-  // - くる → こられる
+  // This rule matches the grammatical form (verb + passive auxiliary).
+  // Causative-passive forms will also match since they contain the passive auxiliary.
+  // A separate rule handles causative-passive specifically.
 
   // Passive auxiliaries (all forms that can attach to verbs)
   const passiveAuxLemmas = [
@@ -49,7 +27,6 @@ export default linguisticRule('Verb[passive]', (r) => {
         inflectionFormOneOf: ['終止形-一般', '連体形-一般'],
       }, 'passive');
 
-      // Must attach to a verb
       const verb = b.tok({
         posOneOf: ['VERB', 'AUX'],
       }, 'verb');
@@ -79,7 +56,6 @@ export default linguisticRule('Verb[passive]', (r) => {
     },
 
     // Branch 3: Te-form (れて/られて/われて/etc.)
-    // て has dep=mark, not aux
     (b) => {
       const passive = b.aux({
         lemmaOneOf: passiveAuxLemmas,

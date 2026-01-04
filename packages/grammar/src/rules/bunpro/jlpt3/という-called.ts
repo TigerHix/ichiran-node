@@ -28,14 +28,8 @@ export default linguisticRule('という-called', (r) => {
 
   r.inOrder(to, iu, 1);
 
-<<<<<<< HEAD
-  // いう is followed by a noun (B)
-  // The noun can have various deps (flat, nmod, etc.) depending on sentence structure
-  // We just require that the next token is a noun/proper noun/pronoun
-=======
   // いう is followed by a noun (B) or auxiliary/quote marker
   // The noun can have various deps (flat, nmod, etc.) depending on sentence structure
->>>>>>> jlpt3-という-called
   r.either(
     // Pattern 1: Followed by regular noun
     (b) => {
@@ -54,8 +48,6 @@ export default linguisticRule('という-called', (r) => {
       const nextNoun = b.tok({ pos: 'PRON' });
       b.inOrder(iu, nextNoun, 1);
       b.captureSpan('という', to, iu);
-<<<<<<< HEAD
-=======
     },
     // Pattern 4: Followed by ん (nominalizer/quote marker in casual speech)
     // Example: 強いというんだけど (he's said to be strong, but...)
@@ -69,7 +61,6 @@ export default linguisticRule('という-called', (r) => {
       const no = b.tok({ text: 'の' });
       b.inOrder(iu, no, 1);
       b.captureSpan('という', to, iu);
->>>>>>> jlpt3-という-called
     }
   );
 });

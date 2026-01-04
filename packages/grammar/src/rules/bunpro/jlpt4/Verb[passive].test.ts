@@ -20,15 +20,14 @@ import { BUNPRO_JLPT4 } from './index.js';
 // The Bunpro Verb[passive] grammar point includes examples showing that られる
 // can express multiple meanings (passive, potential, etc.) with the same form.
 // Therefore, this rule matches all of them.
+//
+// Causative-passive forms (e.g., 食べさせられた) also match since they contain
+// the passive auxiliary. These are handled by a separate causative-passive rule.
 
 const negatives = [
-  // Causative form - different auxiliary (せる/させる)
+  // Causative form - different auxiliary (せる/させる) without passive
   '子供に野菜を食べさせる。',
   '彼を行かせる。',
-
-  // Causative-passive form - combined causative and passive
-  '兄にケーキを食べさせられた。',
-  '毎日勉強させられる。',
 
   // Simple verb forms without passive
   '本を読む。',

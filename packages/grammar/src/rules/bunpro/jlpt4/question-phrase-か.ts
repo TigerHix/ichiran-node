@@ -73,9 +73,11 @@ export default linguisticRule('question-phrase-か', (r) => {
       const verb1 = r2.verb({}, 'verb1');
 
       // The particle か that marks the embedded question
+      // Use dep=mark to exclude the かどうか pattern (where second か has dep=case)
       const ka = r2.tok({
         text: 'か',
-        posOneOf: ['PART', 'ADP'],
+        pos: 'PART',  // Only PART, not ADP (which is used in かどうか)
+        dep: 'mark',  // Embedded question marker
       }, 'ka');
 
       // Verbs that commonly follow embedded questions
