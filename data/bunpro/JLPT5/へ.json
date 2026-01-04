@@ -1,0 +1,870 @@
+{
+  "data": {
+    "id": "38",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 38,
+      "level": "JLPT5",
+      "lesson_id": 5,
+      "part_of_speech": "助詞",
+      "register": "一般",
+      "word_type": "格助詞",
+      "slug": "へ",
+      "nuance": "一（ひと）つの場所（ばしょ）からもう一（ひと）つの場所（ばしょ）までの<strong>距離（きょり）</strong>を強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+      "grammar_order": 62,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 48,
+        "title": "Verb + にいく",
+        "slug": "verb-にいく"
+      },
+      "previous_grammar_point": {
+        "id": 27,
+        "title": "ている①",
+        "slug": "ている1"
+      },
+      "lesson_count": "11/12",
+      "title": "へ",
+      "furigana": "へ",
+      "meaning": "To, Toward",
+      "nuance_translation": "A <strong>particle</strong> that highlights the <strong>distance</strong> between locations.",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "Noun + <strong>へ</strong>",
+      "part_of_speech_translation": "Particle",
+      "register_translation": "Standard",
+      "word_type_translation": "Case Marking Particle",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/518",
+      "metadata": "へ, he, e, particle, case-marking particle, に, ni, distance, effort, destination"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154934",
+            "type": "study_question"
+          },
+          {
+            "id": "154935",
+            "type": "study_question"
+          },
+          {
+            "id": "1798",
+            "type": "study_question"
+          },
+          {
+            "id": "1799",
+            "type": "study_question"
+          },
+          {
+            "id": "154937",
+            "type": "study_question"
+          },
+          {
+            "id": "1802",
+            "type": "study_question"
+          },
+          {
+            "id": "154936",
+            "type": "study_question"
+          },
+          {
+            "id": "686",
+            "type": "study_question"
+          },
+          {
+            "id": "1800",
+            "type": "study_question"
+          },
+          {
+            "id": "1803",
+            "type": "study_question"
+          },
+          {
+            "id": "1804",
+            "type": "study_question"
+          },
+          {
+            "id": "1805",
+            "type": "study_question"
+          },
+          {
+            "id": "1806",
+            "type": "study_question"
+          },
+          {
+            "id": "687",
+            "type": "study_question"
+          },
+          {
+            "id": "1801",
+            "type": "study_question"
+          },
+          {
+            "id": "38",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "61",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "24",
+            "type": "offline_resource"
+          },
+          {
+            "id": "88",
+            "type": "offline_resource"
+          },
+          {
+            "id": "765",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1043",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1248",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "116",
+            "type": "related_content"
+          },
+          {
+            "id": "117",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "86",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2017",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154934",
+      "type": "study_question",
+      "attributes": {
+        "id": 154934,
+        "content": "私（わたし）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>フランス<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"31\">行（い）く</span>。",
+        "answer": "へ",
+        "alternate_grammar": [],
+        "kanji_answer": "へ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私はフランスへ行く。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I will go <strong>to</strong> France.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 38,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154935",
+      "type": "study_question",
+      "attributes": {
+        "id": 154935,
+        "content": "明日（あした）東京（とうきょう）<span class=\"gp-popout\" data-gp-id=\"32\">に</span>行（い）<span class=\"gp-popout\" data-gp-id=\"26\">く</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/明日東京に行く。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I will go <strong>to</strong> Tokyo tomorrow.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 38,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1798",
+      "type": "study_question",
+      "attributes": {
+        "id": 1798,
+        "content": "神戸（こうべ）<span class='study-area-input'>____</span>行（い）く。",
+        "answer": "へ",
+        "alternate_grammar": [],
+        "kanji_answer": "へ",
+        "kanji_alt_grammar": [],
+        "nuance": "一（ひと）つの場所（ばしょ）からもう一（ひと）つの場所（ばしょ）までの<strong>距離（きょり）</strong>を強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/38/male_audio/10-神戸へ行く.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/神戸へ行く。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To go <strong>to</strong> Kobe.",
+        "nuance_translation": "A <strong>particle</strong> that highlights the <strong>distance</strong> between locations.",
+        "extra_info": "",
+        "reviewable_id": 38,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1799",
+      "type": "study_question",
+      "attributes": {
+        "id": 1799,
+        "content": "家（いえ）<span class='study-area-input'>____</span>帰（かえ）<span class='gp-popout' data-gp-id='26'>る</span>。",
+        "answer": "へ",
+        "alternate_grammar": [],
+        "kanji_answer": "へ",
+        "kanji_alt_grammar": [],
+        "nuance": "一（ひと）つの場所（ばしょ）からもう一（ひと）つの場所（ばしょ）までの<strong>距離（きょり）</strong>を強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/38/male_audio/07-家へ帰る.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/家へ帰る。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To return <strong>to</strong> one's house. ",
+        "nuance_translation": "A <strong>particle</strong> that highlights the <strong>distance</strong> between locations.",
+        "extra_info": "",
+        "reviewable_id": 38,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154937",
+      "type": "study_question",
+      "attributes": {
+        "id": 154937,
+        "content": "ＢＰＲ（ビーピーアール）ニュース<span class='study-area-input'>____</span>ようこそ。",
+        "answer": "へ",
+        "alternate_grammar": [],
+        "kanji_answer": "へ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/BPRニュースへようこそ。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Welcome <strong>to</strong> BPR News.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 38,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1802",
+      "type": "study_question",
+      "attributes": {
+        "id": 1802,
+        "content": "京都（きょうと）<span class='study-area-input'>____</span>ようこそ。",
+        "answer": "へ",
+        "alternate_grammar": [],
+        "kanji_answer": "へ",
+        "kanji_alt_grammar": [],
+        "nuance": "一（ひと）つの場所（ばしょ）からもう一（ひと）つの場所（ばしょ）までの<strong>距離（きょり）</strong>を強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/38/male_audio/04-京都へようこそ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/京都へようこそ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Welcome <strong>to</strong> Kyoto. ",
+        "nuance_translation": "A <strong>particle</strong> that highlights the <strong>distance</strong> between locations.",
+        "extra_info": "",
+        "reviewable_id": 38,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154936",
+      "type": "study_question",
+      "attributes": {
+        "id": 154936,
+        "content": "大阪（おおさか）<span class='study-area-input'>____</span>ようこそ！",
+        "answer": "へ",
+        "alternate_grammar": [],
+        "kanji_answer": "へ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/大阪へようこそ！.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Welcome <strong>to</strong> Osaka!",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 38,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "686",
+      "type": "study_question",
+      "attributes": {
+        "id": 686,
+        "content": "大阪（おおさか）<span class='study-area-input'>____</span>ようこそ。",
+        "answer": "へ",
+        "alternate_grammar": [],
+        "kanji_answer": "へ",
+        "kanji_alt_grammar": [],
+        "nuance": "一（ひと）つの場所（ばしょ）からもう一（ひと）つの場所（ばしょ）までの<strong>距離（きょり）</strong>を強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/38/male_audio/06-大阪へようこそ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/大阪へようこそ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Welcome <strong>to</strong> Osaka. ",
+        "nuance_translation": "A <strong>particle</strong> that highlights the <strong>distance</strong> between locations.",
+        "extra_info": "",
+        "reviewable_id": 38,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1800",
+      "type": "study_question",
+      "attributes": {
+        "id": 1800,
+        "content": "道（みち）<span class='study-area-input'>____</span>走（はし）<span class='gp-popout' data-gp-id='26'>る</span>。",
+        "answer": "へ",
+        "alternate_grammar": [],
+        "kanji_answer": "へ",
+        "kanji_alt_grammar": [],
+        "nuance": "一（ひと）つの場所（ばしょ）からもう一（ひと）つの場所（ばしょ）までの<strong>距離（きょり）</strong>を強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/38/male_audio/12-道へ走る.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/道へ走る。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To run <strong>toward</strong> the road. ",
+        "nuance_translation": "A <strong>particle</strong> that highlights the <strong>distance</strong> between locations.",
+        "extra_info": "",
+        "reviewable_id": 38,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1803",
+      "type": "study_question",
+      "attributes": {
+        "id": 1803,
+        "content": "海（うみ）<span class='study-area-input'>____</span>行（い）<span class='gp-popout' data-gp-id='26'>きます</span>。",
+        "answer": "へ",
+        "alternate_grammar": [],
+        "kanji_answer": "へ",
+        "kanji_alt_grammar": [],
+        "nuance": "一（ひと）つの場所（ばしょ）からもう一（ひと）つの場所（ばしょ）までの<strong>距離（きょり）</strong>を強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/38/male_audio/09-海へ行きます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/海へ行きます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To go <strong>to</strong> the ocean.",
+        "nuance_translation": "A <strong>particle</strong> that highlights the <strong>distance</strong> between locations.",
+        "extra_info": "",
+        "reviewable_id": 38,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1804",
+      "type": "study_question",
+      "attributes": {
+        "id": 1804,
+        "content": "教室（きょうしつ）<span class='study-area-input'>____</span>歩（ある）<span class='gp-popout' data-gp-id='26'>く</span>。",
+        "answer": "へ",
+        "alternate_grammar": [],
+        "kanji_answer": "へ",
+        "kanji_alt_grammar": [],
+        "nuance": "一（ひと）つの場所（ばしょ）からもう一（ひと）つの場所（ばしょ）までの<strong>距離（きょり）</strong>を強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/38/male_audio/08-教室へ歩く.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/教室へ歩く。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To walk <strong>to</strong> class. ",
+        "nuance_translation": "A <strong>particle</strong> that highlights the <strong>distance</strong> between locations.",
+        "extra_info": "",
+        "reviewable_id": 38,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1805",
+      "type": "study_question",
+      "attributes": {
+        "id": 1805,
+        "content": "友達（ともだち）<span class='gp-popout' data-gp-id='6'>の</span>家（いえ）<span class='study-area-input'>____</span>行（い）<span class='gp-popout' data-gp-id='26'>きます</span>。",
+        "answer": "へ",
+        "alternate_grammar": [],
+        "kanji_answer": "へ",
+        "kanji_alt_grammar": [],
+        "nuance": "一（ひと）つの場所（ばしょ）からもう一（ひと）つの場所（ばしょ）までの<strong>距離（きょり）</strong>を強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/38/male_audio/05-友達の家へ行きます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/友達の家へ行きます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To go <strong>to</strong> a friend's house.",
+        "nuance_translation": "A <strong>particle</strong> that highlights the <strong>distance</strong> between locations.",
+        "extra_info": "",
+        "reviewable_id": 38,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1806",
+      "type": "study_question",
+      "attributes": {
+        "id": 1806,
+        "content": "<span class='gp-popout' data-gp-id='29'>あそこ</span><span class='gp-popout' data-gp-id='6'>の</span>公園（こうえん）<span class='study-area-input'>____</span>行（い）く。",
+        "answer": "へ",
+        "alternate_grammar": [],
+        "kanji_answer": "へ",
+        "kanji_alt_grammar": [],
+        "nuance": "一（ひと）つの場所（ばしょ）からもう一（ひと）つの場所（ばしょ）までの<strong>距離（きょり）</strong>を強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/38/male_audio/01-あそこの公園へ行く.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あそこの公園へ行く。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To go <strong>to</strong> that park over there. ",
+        "nuance_translation": "A <strong>particle</strong> that highlights the <strong>distance</strong> between locations.",
+        "extra_info": "",
+        "reviewable_id": 38,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "687",
+      "type": "study_question",
+      "attributes": {
+        "id": 687,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='3'>は</span>電車（でんしゃ）<span class='gp-popout' data-gp-id='36'>で</span>大阪（おおさか）<span class='study-area-input'>____</span>行（い）く。",
+        "answer": "へ",
+        "alternate_grammar": [],
+        "kanji_answer": "へ",
+        "kanji_alt_grammar": [],
+        "nuance": "一（ひと）つの場所（ばしょ）からもう一（ひと）つの場所（ばしょ）までの<strong>距離（きょり）</strong>を強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/38/male_audio/11-私は電車で大阪へ行く.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私は電車で大阪へ行く。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I go <strong>to</strong> Osaka by train. ",
+        "nuance_translation": "A <strong>particle</strong> that highlights the <strong>distance</strong> between locations.",
+        "extra_info": "",
+        "reviewable_id": 38,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1801",
+      "type": "study_question",
+      "attributes": {
+        "id": 1801,
+        "content": "バス<span class='gp-popout' data-gp-id='36'>で</span>学校（がっこう）<span class='study-area-input'>____</span>行（い）<span class='gp-popout' data-gp-id='26'>きます</span>。",
+        "answer": "へ",
+        "alternate_grammar": [],
+        "kanji_answer": "へ",
+        "kanji_alt_grammar": [],
+        "nuance": "一（ひと）つの場所（ばしょ）からもう一（ひと）つの場所（ばしょ）までの<strong>距離（きょり）</strong>を強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/38/male_audio/03-バスで学校へ行きます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/バスで学校へ行きます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To go <strong>to</strong> school by bus.",
+        "nuance_translation": "A <strong>particle</strong> that highlights the <strong>distance</strong> between locations.",
+        "extra_info": "",
+        "reviewable_id": 38,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "38",
+      "type": "study_question",
+      "attributes": {
+        "id": 38,
+        "content": "<span class='gp-popout' data-gp-id='14'>ここ</span><span class='study-area-input'>____</span>？",
+        "answer": "へ",
+        "alternate_grammar": [],
+        "kanji_answer": "へ",
+        "kanji_alt_grammar": [],
+        "nuance": "一（ひと）つの場所（ばしょ）からもう一（ひと）つの場所（ばしょ）までの<strong>距離（きょり）</strong>を強調（きょうちょう）するために使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson5/38/male_audio/02-ここへ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ここへ？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "に": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To</strong> here? ",
+        "nuance_translation": "A <strong>particle</strong> that highlights the <strong>distance</strong> between locations.",
+        "extra_info": "",
+        "reviewable_id": 38,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "61",
+      "type": "writeup",
+      "attributes": {
+        "id": 61,
+        "body_ja": null,
+        "body": "<p><span data-gp-id='38'>へ</span> is a particle used when describing a place that someone or something is 'moving toward', or 'in contact with'. In many cases, the particles <span data-gp-id='32'>に</span> and <span data-gp-id='38'>へ</span> are interchangeable, but there is a slight difference in meaning. <span data-gp-id='38'>へ</span> focuses more on the distance/effort required to get between (A) and (B), while <span data-gp-id='32'>に</span> focuses more on the connection between (A) and (B). <span data-gp-id='38'>へ</span> always comes after the noun signifying the destination.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154934'>\r\n<li data-study-question='154935'></ul>\r\n\r\n<p>In these examples, while they may seem the same at first glance, <span data-gp-id='38'>へ</span> shows that there is a space between (A) and (B), while <span data-gp-id='32'>に</span> puts the emphasis solely on the destination. This is why common expressions such as 'city/country name <span data-gp-id='38'>へ</span>ようこそ' sound very polite. It is like saying 'Welcome, and we acknowledge your journey/effort to get here'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154936'>\r\n<li data-study-question='154937'></ul>\r\n\r\n<p>In the TV-show example, this commonly means 'thank you for your effort to watch this particular show, out of all the ones you could have chosen'.</p>"
+      }
+    },
+    {
+      "id": "24",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 24,
+        "source": "Genki I",
+        "location": "Page 61",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "88",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 88,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 91",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "765",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 765,
+        "source": "みんなの日本語 I",
+        "location": "Page 38 [CH 5]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1043",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1043,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 116",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1248",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1248,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 57",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "86",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 86,
+        "site": "Imabi",
+        "description": "The Particle へ",
+        "link": "https://imabi.org/the-particle-e-%e3%81%b8/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2017",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2017,
+        "site": "Tae Kim",
+        "description": "「へ」 Directional Particle",
+        "link": "https://guidetojapanese.org/learn/complete/verb_particles",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "116",
+      "type": "related_content",
+      "attributes": {
+        "id": 116,
+        "relationship_type": "related",
+        "body": "The へ in both patterns is the same directional particle. While it's commonly used with いく to indicate going somewhere or moving in a direction (e.g., 学校へいく, 西へいく), it can also be used with other verbs (e.g., 家へ帰る, 公園へ歩く) or in certain phrases (e.g., 東京へようこそ！). In all cases, へ expresses directionality or movement toward a location.",
+        "first_relatable": {
+          "id": 38,
+          "slug": "へ",
+          "title": "へ",
+          "meaning": "To, Toward",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 31,
+          "slug": "へいく",
+          "title": "へいく",
+          "meaning": "To go to, To head toward",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "117",
+      "type": "related_content",
+      "attributes": {
+        "id": 117,
+        "relationship_type": "related",
+        "body": "The particle へ indicates direction or destination, similar to 'to' or 'toward' in English. に向かって and に向けて emphasize direction rather than destination, unlike へ, which can also imply the final goal. For example, 学校へ行く means 'go to school,' while 学校に向かって走る means 'run toward the school.'",
+        "first_relatable": {
+          "id": 38,
+          "slug": "へ",
+          "title": "へ",
+          "meaning": "To, Toward",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 327,
+          "slug": "に向かって-に向けて",
+          "title": "に向かって・に向けて",
+          "meaning": "Towards, To face, To head to",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

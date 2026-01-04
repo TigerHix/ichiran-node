@@ -1,0 +1,761 @@
+{
+  "data": {
+    "id": "953",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 953,
+      "level": "JLPT5",
+      "lesson_id": 4,
+      "part_of_speech": "表現",
+      "register": "一般",
+      "word_type": "自立語",
+      "slug": "い-adjective-noun",
+      "nuance": "名詞（めいし）の性質（せいしつ）や状況（じょうきょう）を<strong>説明（せつめい）</strong>するために<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれることが多（おお）い、<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+      "grammar_order": 40,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 954,
+        "title": "な-Adjective + Noun",
+        "slug": "な-adjective-noun"
+      },
+      "previous_grammar_point": {
+        "id": 16,
+        "title": "の",
+        "slug": "のは"
+      },
+      "lesson_count": "2/13",
+      "title": "い-Adjective + Noun",
+      "furigana": "い-Adjective + (Noun)",
+      "meaning": "Describing a noun",
+      "nuance_translation": "A <strong>conjugating-adjective form</strong> which may be used <strong>before nouns</strong>, in order to <strong>describe</strong> them.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "［い］Adjective + Noun<br><br>Examples:<br>かわい<strong>い</strong> + 猫（ねこ）<br>新（あたら）し<strong>い</strong> + 車（くるま）<br>寒（さむ）<strong>い</strong> + 冬（ふゆ）",
+      "part_of_speech_translation": "Expression",
+      "register_translation": "Standard",
+      "word_type_translation": "Independent Word",
+      "discourse_link": "https://community.bunpro.jp/t/adjective-noun-grammar-discussion/48046",
+      "metadata": "い-adjective, i-adjective, adjective, い, i, describing a noun"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "10072",
+            "type": "study_question"
+          },
+          {
+            "id": "10073",
+            "type": "study_question"
+          },
+          {
+            "id": "10074",
+            "type": "study_question"
+          },
+          {
+            "id": "10075",
+            "type": "study_question"
+          },
+          {
+            "id": "10077",
+            "type": "study_question"
+          },
+          {
+            "id": "154834",
+            "type": "study_question"
+          },
+          {
+            "id": "154833",
+            "type": "study_question"
+          },
+          {
+            "id": "10067",
+            "type": "study_question"
+          },
+          {
+            "id": "10069",
+            "type": "study_question"
+          },
+          {
+            "id": "10078",
+            "type": "study_question"
+          },
+          {
+            "id": "10076",
+            "type": "study_question"
+          },
+          {
+            "id": "10070",
+            "type": "study_question"
+          },
+          {
+            "id": "10068",
+            "type": "study_question"
+          },
+          {
+            "id": "10071",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "39",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1340",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": []
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "10072",
+      "type": "study_question",
+      "attributes": {
+        "id": 10072,
+        "content": "<span class='study-area-input'>____</span>ピザ<span class='gp-popout' data-gp-id='21'>を</span>食（た）べ<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "おいしい",
+        "alternate_grammar": [],
+        "kanji_answer": "美味（おい）しい",
+        "kanji_alt_grammar": [],
+        "nuance": "名詞（めいし）の性質（せいしつ）や状況（じょうきょう）を<strong>説明（せつめい）</strong>するために<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれることが多（おお）い、<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/953/male_audio/09-美味しいピザを食べる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/美味しいピザを食べる。.mp3",
+        "word_prompt": "美味（おい）しい",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おいしいです": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {
+          "おいしいな": {
+            "en": "You should only add な if you are describing following noun with なAdjective, not いAdjective.",
+            "es": "Solo debes agregar な si estás describiendo el sustantivo siguiente con un Adjetivo な, no con un Adjetivo い.",
+            "fr": "On ne doit ajouter な que si l'on décrit un nom avec un adjectif en -な, pas avec un adjectif en -い.",
+            "id": "Kamu hanya perlu menambahkan な jika kamu menggambarkan kata benda berikut dengan Kata Sifat-な, bukan Kata Sifat-い."
+          }
+        },
+        "translation": "To eat <strong>tasty</strong> pizza.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> which may be used <strong>before nouns</strong>, in order to <strong>describe</strong> them.",
+        "extra_info": "",
+        "reviewable_id": 953,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10073",
+      "type": "study_question",
+      "attributes": {
+        "id": 10073,
+        "content": "<span class='study-area-input'>____</span>スマホ<span class='gp-popout' data-gp-id='21'>を</span>買（か）<span class='gp-popout' data-gp-id='26'>う</span>。",
+        "answer": "あたらしい",
+        "alternate_grammar": [],
+        "kanji_answer": "新（あたら）しい",
+        "kanji_alt_grammar": [],
+        "nuance": "名詞（めいし）の性質（せいしつ）や状況（じょうきょう）を<strong>説明（せつめい）</strong>するために<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれることが多（おお）い、<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/953/male_audio/07-新しいスマホを買う.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/新しいスマホを買う。.mp3",
+        "word_prompt": "新（あたら）しい",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あたらしいです": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {
+          "あたらしいな": {
+            "en": "You should only add な if you are describing following noun with なAdjective, not いAdjective.",
+            "es": "Solo debes agregar な si estás describiendo el sustantivo siguiente con un Adjetivo な, no con un Adjetivo い.",
+            "fr": "On ne doit ajouter な que si l'on décrit un nom avec un adjectif en -な, pas avec un adjectif en -い.",
+            "id": "Kamu hanya perlu menambahkan な jika kamu menggambarkan kata benda berikut dengan Kata Sifat-な, bukan Kata Sifat-い."
+          }
+        },
+        "translation": "To buy a <strong>new</strong> smartphone.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> which may be used <strong>before nouns</strong>, in order to <strong>describe</strong> them.",
+        "extra_info": "",
+        "reviewable_id": 953,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10074",
+      "type": "study_question",
+      "attributes": {
+        "id": 10074,
+        "content": "<span class='study-area-input'>____</span>質問（しつもん）<span class='gp-popout' data-gp-id='21'>を</span>する。",
+        "answer": "むずかしい",
+        "alternate_grammar": [],
+        "kanji_answer": "難（むずか）しい",
+        "kanji_alt_grammar": [],
+        "nuance": "名詞（めいし）の性質（せいしつ）や状況（じょうきょう）を<strong>説明（せつめい）</strong>するために<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれることが多（おお）い、<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/難しい質問をする。.mp3",
+        "word_prompt": "難（むずか）しい",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "むずかしいです": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {
+          "むずかしいな": {
+            "en": "You should only add な if you are describing following noun with なAdjective, not いAdjective.",
+            "es": "Solo debes agregar な si estás describiendo el sustantivo siguiente con un Adjetivo な, no con un Adjetivo い.",
+            "fr": "On ne doit ajouter な que si l'on décrit un nom avec un adjectif en -な, pas avec un adjectif en -い.",
+            "id": "Kamu hanya perlu menambahkan な jika kamu menggambarkan kata benda berikut dengan Kata Sifat-な, bukan Kata Sifat-い."
+          }
+        },
+        "translation": "To ask a <strong>difficult</strong> question.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> which may be used <strong>before nouns</strong>, in order to <strong>describe</strong> them.",
+        "extra_info": "",
+        "reviewable_id": 953,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10075",
+      "type": "study_question",
+      "attributes": {
+        "id": 10075,
+        "content": "<span class='study-area-input'>____</span>猫（ねこ）<span class='gp-popout' data-gp-id='3'>は</span>かわいい。",
+        "answer": "ちいさい",
+        "alternate_grammar": [],
+        "kanji_answer": "小（ちい）さい",
+        "kanji_alt_grammar": [],
+        "nuance": "名詞（めいし）の性質（せいしつ）や状況（じょうきょう）を<strong>説明（せつめい）</strong>するために<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれることが多（おお）い、<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/953/male_audio/06-小さい猫はかわいい.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/小さい猫はかわいい。.mp3",
+        "word_prompt": "小（ちい）さい",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ちいさいです": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {
+          "ちいさいな": {
+            "en": "You should only add な if you are describing following noun with なAdjective, not いAdjective.",
+            "es": "Solo debes agregar な si estás describiendo el sustantivo siguiente con un Adjetivo な, no con un Adjetivo い.",
+            "fr": "On ne doit ajouter な que si l'on décrit un nom avec un adjectif en -な, pas avec un adjectif en -い.",
+            "id": "Kamu hanya perlu menambahkan な jika kamu menggambarkan kata benda berikut dengan Kata Sifat-な, bukan Kata Sifat-い."
+          }
+        },
+        "translation": "<strong>Small</strong> cats are cute.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> which may be used <strong>before nouns</strong>, in order to <strong>describe</strong> them.",
+        "extra_info": "",
+        "reviewable_id": 953,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10077",
+      "type": "study_question",
+      "attributes": {
+        "id": 10077,
+        "content": "「エドワード<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>人（ひと）<span class='gp-popout' data-gp-id='9'>でしょう</span>？」",
+        "answer": "やさしい",
+        "alternate_grammar": [],
+        "kanji_answer": "優（やさ）しい",
+        "kanji_alt_grammar": [],
+        "nuance": "名詞（めいし）の性質（せいしつ）や状況（じょうきょう）を<strong>説明（せつめい）</strong>するために<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれることが多（おお）い、<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/953/male_audio/02-エドワードは優しい人でしょうrerec.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「エドワードは優しい人でしょう？」.mp3",
+        "word_prompt": "優（やさ）しい",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やさしいです": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {
+          "やさしいな": {
+            "en": "You should only add な if you are describing following noun with な-Adjective, not い-Adjective.",
+            "es": "Solo debes agregar な si estás describiendo el sustantivo siguiente con un Adjetivo な, no con un Adjetivo い.",
+            "fr": "On ne doit ajouter な que si l'on décrit un nom avec un adjectif en -な, pas avec un adjectif en -い.",
+            "id": "Kamu hanya perlu menambahkan な jika kamu menggambarkan kata benda berikut dengan Kata Sifat-な, bukan Kata Sifat-い."
+          }
+        },
+        "translation": "'Edward is a <strong>kind</strong> person, right?'",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> which may be used <strong>before nouns</strong>, in order to <strong>describe</strong> them.",
+        "extra_info": "",
+        "reviewable_id": 953,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154834",
+      "type": "study_question",
+      "attributes": {
+        "id": 154834,
+        "content": "怖（こわ）<span class='study-area-input'>____</span>先生（せんせい）。",
+        "answer": "い",
+        "alternate_grammar": [],
+        "kanji_answer": "い",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/怖い先生。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "A <strong>scary</strong> teacher.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 953,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154833",
+      "type": "study_question",
+      "attributes": {
+        "id": 154833,
+        "content": "速（はや）<span class='study-area-input'>____</span>車（くるま）。",
+        "answer": "い",
+        "alternate_grammar": [],
+        "kanji_answer": "い",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/速い車。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "A <strong>fast</strong> car.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 953,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10067",
+      "type": "study_question",
+      "attributes": {
+        "id": 10067,
+        "content": "<span class='study-area-input'>____</span>車（くるま）。",
+        "answer": "あたらしい",
+        "alternate_grammar": [],
+        "kanji_answer": "新（あたら）しい",
+        "kanji_alt_grammar": [],
+        "nuance": "名詞（めいし）の性質（せいしつ）や状況（じょうきょう）を<strong>説明（せつめい）</strong>するために<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれることが多（おお）い、<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/953/male_audio/08-新しい車.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/新しい車。.mp3",
+        "word_prompt": "新（あたら）しい",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あたらしいです": {
+            "en": "Can you remove something from the end?",
+            "es": "",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {
+          "あたらしいな": {
+            "en": "You should only add な if you are describing following noun with な-Adjective, not い-Adjective.",
+            "es": "Solo debes agregar な si estás describiendo el sustantivo siguiente con un Adjetivo な, no con un Adjetivo い.",
+            "fr": "On ne doit ajouter な que si l'on décrit un nom avec un adjectif en -な, pas avec un adjectif en -い.",
+            "id": "Kamu hanya perlu menambahkan な jika kamu menggambarkan kata benda berikut dengan Kata Sifat-な, bukan Kata Sifat-い."
+          }
+        },
+        "translation": "A <strong>new</strong> car.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> which may be used <strong>before nouns</strong>, in order to <strong>describe</strong> them.",
+        "extra_info": "",
+        "reviewable_id": 953,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10069",
+      "type": "study_question",
+      "attributes": {
+        "id": 10069,
+        "content": "<span class='study-area-input'>____</span>先輩（せんぱい）。",
+        "answer": "かっこいい",
+        "alternate_grammar": [
+          "カッコいい"
+        ],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "名詞（めいし）の性質（せいしつ）や状況（じょうきょう）を<strong>説明（せつめい）</strong>するために<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれることが多（おお）い、<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/953/male_audio/01-かっこいい先輩.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/かっこいい先輩。.mp3",
+        "word_prompt": "かっこいい",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かっこいいです": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          },
+          "かっこういい": {
+            "en": "How about a grammar structure that is most often heard in conversation?",
+            "es": "¿Qué tal una estructura gramatical que se escucha más a menudo en la conversación?",
+            "fr": "Et si vous utilisiez une structure grammaticale plus courante à l'oral ?",
+            "id": "Mungkin coba struktur tata bahasa yang paling sering terdengar dalam percakapan?"
+          }
+        },
+        "wrong_answers": {
+          "かっこいいな": {
+            "en": "You should only add な if you are describing following noun with な-Adjective, not い-Adjective.",
+            "es": "Solo debes agregar な si estás describiendo el sustantivo siguiente con un Adjetivo な, no con un Adjetivo い.",
+            "fr": "On ne doit ajouter な que si l'on décrit un nom avec un adjectif en -な, pas avec un adjectif en -い.",
+            "id": "Kamu hanya perlu menambahkan な jika kamu menggambarkan kata benda berikut dengan Kata Sifat-な, bukan Kata Sifat-い."
+          }
+        },
+        "translation": "<strong>Cool</strong> senpai.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> which may be used <strong>before nouns</strong>, in order to <strong>describe</strong> them.",
+        "extra_info": "",
+        "reviewable_id": 953,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10078",
+      "type": "study_question",
+      "attributes": {
+        "id": 10078,
+        "content": "「<span class='study-area-input'>____</span>トイレ<span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='20'>そこ</span><span class='gp-popout' data-gp-id='2'>です</span>。」",
+        "answer": "ふるい",
+        "alternate_grammar": [],
+        "kanji_answer": "古（ふる）い",
+        "kanji_alt_grammar": [],
+        "nuance": "名詞（めいし）の性質（せいしつ）や状況（じょうきょう）を<strong>説明（せつめい）</strong>するために<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれることが多（おお）い、<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/953/male_audio/03-古いトイレはそこです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「古いトイレはそこです。」.mp3",
+        "word_prompt": "古（ふる）い",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ふるいです": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {
+          "ふるいな": {
+            "en": "You should only add な if you are describing following noun with な-Adjective, not い-Adjective.",
+            "es": "Solo debes agregar な si estás describiendo el sustantivo siguiente con un Adjetivo な, no con un Adjetivo い.",
+            "fr": "On ne doit ajouter な que si l'on décrit un nom avec un adjectif en -な, pas avec un adjectif en -い.",
+            "id": "Kamu hanya perlu menambahkan な jika kamu menggambarkan kata benda berikut dengan Kata Sifat-な, bukan Kata Sifat-い."
+          }
+        },
+        "translation": "'The <strong>old</strong> toilet is over there.'",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> which may be used <strong>before nouns</strong>, in order to <strong>describe</strong> them.",
+        "extra_info": "",
+        "reviewable_id": 953,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10076",
+      "type": "study_question",
+      "attributes": {
+        "id": 10076,
+        "content": "「<span class='study-area-input'>____</span>ジョークです。」",
+        "answer": "おもしろい",
+        "alternate_grammar": [],
+        "kanji_answer": "面白（おもしろ）い",
+        "kanji_alt_grammar": [],
+        "nuance": "名詞（めいし）の性質（せいしつ）や状況（じょうきょう）を<strong>説明（せつめい）</strong>するために<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれることが多（おお）い、<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/953/male_audio/面白いジョークです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「面白いジョークです。」.mp3",
+        "word_prompt": "面白（おもしろ）い",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おもしろいです": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {
+          "おもしろいな": {
+            "en": "You should only add な if you are describing following noun with な-Adjective, not い-Adjective.",
+            "es": "Solo debes agregar な si estás describiendo el sustantivo siguiente con un Adjetivo な, no con un Adjetivo い.",
+            "fr": "On ne doit ajouter な que si l'on décrit un nom avec un adjectif en -な, pas avec un adjectif en -い.",
+            "id": "Kamu hanya perlu menambahkan な jika kamu menggambarkan kata benda berikut dengan Kata Sifat-な, bukan Kata Sifat-い."
+          }
+        },
+        "translation": "'It is a <strong>funny</strong> joke.'",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> which may be used <strong>before nouns</strong>, in order to <strong>describe</strong> them.",
+        "extra_info": "",
+        "reviewable_id": 953,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10070",
+      "type": "study_question",
+      "attributes": {
+        "id": 10070,
+        "content": "<span class='study-area-input'>____</span>夜（よる）。",
+        "answer": "さむい",
+        "alternate_grammar": [],
+        "kanji_answer": "寒（さむ）い",
+        "kanji_alt_grammar": [],
+        "nuance": "名詞（めいし）の性質（せいしつ）や状況（じょうきょう）を<strong>説明（せつめい）</strong>するために<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれることが多（おお）い、<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/953/male_audio/05-寒い夜.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/寒い夜。.mp3",
+        "word_prompt": "寒（さむ）い",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "さむいです": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {
+          "さむいな": {
+            "en": "You should only add な if you are describing following noun with な-Adjective, not い-Adjective.",
+            "es": "Solo debes agregar な si estás describiendo el sustantivo siguiente con un Adjetivo な, no con un Adjetivo い.",
+            "fr": "On ne doit ajouter な que si l'on décrit un nom avec un adjectif en -な, pas avec un adjectif en -い.",
+            "id": "Kamu hanya perlu menambahkan な jika kamu menggambarkan kata benda berikut dengan Kata Sifat-な, bukan Kata Sifat-い."
+          }
+        },
+        "translation": "<strong>Cold</strong> night.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> which may be used <strong>before nouns</strong>, in order to <strong>describe</strong> them.",
+        "extra_info": "",
+        "reviewable_id": 953,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10068",
+      "type": "study_question",
+      "attributes": {
+        "id": 10068,
+        "content": "<span class='study-area-input'>____</span>女（おんな）<span class='gp-popout' data-gp-id='6'>の</span>子（こ）<span class='gp-popout' data-gp-id='23'>がいる</span>。",
+        "answer": "かわいい",
+        "alternate_grammar": [],
+        "kanji_answer": "可愛（かわい）い",
+        "kanji_alt_grammar": [],
+        "nuance": "名詞（めいし）の性質（せいしつ）や状況（じょうきょう）を<strong>説明（せつめい）</strong>するために<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれることが多（おお）い、<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/953/male_audio/04-可愛い女の子がいる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/可愛い女の子がいる。.mp3",
+        "word_prompt": "可愛（かわい）い",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かわいいです": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {
+          "かわいいな": {
+            "en": "You should only add な if you are describing following noun with な-Adjective, not い-Adjective.",
+            "es": "Solo debes agregar な si estás describiendo el sustantivo siguiente con un Adjetivo な, no con un Adjetivo い.",
+            "fr": "On ne doit ajouter な que si l'on décrit un nom avec un adjectif en -な, pas avec un adjectif en -い.",
+            "id": "Kamu hanya perlu menambahkan な jika kamu menggambarkan kata benda berikut dengan Kata Sifat-な, bukan Kata Sifat-い."
+          }
+        },
+        "translation": "There is a <strong>cute</strong> girl.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> which may be used <strong>before nouns</strong>, in order to <strong>describe</strong> them.",
+        "extra_info": "",
+        "reviewable_id": 953,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10071",
+      "type": "study_question",
+      "attributes": {
+        "id": 10071,
+        "content": "<span class='study-area-input'>____</span>ゲーム<span class='gp-popout' data-gp-id='21'>を</span>買（か）い<span class='gp-popout' data-gp-id='26'>ます</span>。",
+        "answer": "おもしろい",
+        "alternate_grammar": [],
+        "kanji_answer": "面白（おもしろ）い",
+        "kanji_alt_grammar": [],
+        "nuance": "名詞（めいし）の性質（せいしつ）や状況（じょうきょう）を<strong>説明（せつめい）</strong>するために<strong>名詞（めいし）の前（まえ）</strong>に置（お）かれることが多（おお）い、<strong>活用（かつよう）する形容詞（けいようし）</strong>。",
+        "tense": "",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/953/male_audio/11-面白いゲームを買います.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/面白いゲームを買います。.mp3",
+        "word_prompt": "面白（おもしろ）い",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おもしろいです": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {
+          "おもしろいな": {
+            "en": "You should only add な if you are describing following noun with なAdjective, not いAdjective.",
+            "es": "Solo debes agregar な si estás describiendo el sustantivo siguiente con un Adjetivo な, no con un Adjetivo い.",
+            "fr": "On ne doit ajouter な que si l'on décrit un nom avec un adjectif en -な, pas avec un adjectif en -い.",
+            "id": "Kamu hanya perlu menambahkan な jika kamu menggambarkan kata benda berikut dengan Kata Sifat-な, bukan Kata Sifat-い."
+          }
+        },
+        "translation": "To buy an <strong>interesting</strong> game.",
+        "nuance_translation": "A <strong>conjugating-adjective form</strong> which may be used <strong>before nouns</strong>, in order to <strong>describe</strong> them.",
+        "extra_info": "",
+        "reviewable_id": 953,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "39",
+      "type": "writeup",
+      "attributes": {
+        "id": 39,
+        "body_ja": null,
+        "body": "<p>In Japanese, almost any type of word can be attached to the beginning of a noun to modify the meaning, or describe the qualities of that noun. However, depending on the type of word used, conjugation rules will differ slightly.</p>\r\n\r\n<p>For <span data-gp-id='24'>い-Adjectives</span>, they are simply attached to the front of the noun in their standard (dictionary) form.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154833'>\r\n<li data-study-question='154834'></ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>When identifying what is an <span data-gp-id='24'>い-Adjective</span>, and what is not, remember that an <span data-gp-id='24'>い-Adjective</span> will always have the い outside of any kanji that are in the word. However, the reverse situation with <span data-gp-id='28'>な-Adjectives</span> always having the い in the kanji is not true 100% of the time.</p>\r\n\r\n<p>面白（おもしろ）い - The い is outside of the kanji, so 'interesting' is almost definitely an <span data-gp-id='24'>い-Adjective</span>.</p>\r\n\r\n<p>綺麗（きれい） - The い is inside of the kanji, so 'clean' is definitely not an <span data-gp-id='24'>い-Adjective</span>.</p>\r\n\r\n<p>One example of an exception as mentioned above is 嫌（きら）い. Despite the い being outside of the kanji, 'hate' is actually a <span data-gp-id='28'>な-Adjective</span>. Don't worry though, less than 1% of any adjective that has い on the outside of the kanji will actually be a <span data-gp-id='28'>な-Adjective</span>!</p></section>"
+      }
+    },
+    {
+      "id": "1340",
+      "type": "related_content",
+      "attributes": {
+        "id": 1340,
+        "relationship_type": "related",
+        "body": "い-Adjectives connect directly to nouns (e.g., 面白い本) and aren't followed by だ in plain form (e.g., この本は面白い). な-Adjectives, on the other hand, connect to nouns using な (e.g., 好きな本) and are followed by だ in plain form (e.g., この本は好きだ). Note that not all adjectives ending in い are い-Adjectives (e.g., 綺麗, written as きれい in hiragana, is a な-Adjective, e.g., きれいな月).",
+        "first_relatable": {
+          "id": 953,
+          "slug": "い-adjective-noun",
+          "title": "い-Adjective + Noun",
+          "meaning": "Describing a noun",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 954,
+          "slug": "な-adjective-noun",
+          "title": "な-Adjective + Noun",
+          "meaning": "Describing a noun",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

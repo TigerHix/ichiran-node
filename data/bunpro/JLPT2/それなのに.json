@@ -1,0 +1,1051 @@
+{
+  "data": {
+    "id": "409",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 409,
+      "level": "JLPT2",
+      "lesson_id": 39,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "それなのに",
+      "nuance": "<strong>前（まえ）に言（い）った</strong><strong>にも関（かか）わらず</strong>、(B)であるということを表（あらわ）す時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+      "grammar_order": 717,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 564,
+        "title": "いわゆる",
+        "slug": "いわゆる"
+      },
+      "previous_grammar_point": {
+        "id": 601,
+        "title": "のみならず",
+        "slug": "のみならず"
+      },
+      "lesson_count": "20/23",
+      "title": "それなのに",
+      "furigana": "それなのに",
+      "meaning": "And yet, Despite this",
+      "nuance_translation": "A sentence starter indicating that <strong>even despite</strong> that which was <strong>previously said</strong>, (B).",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Phrase。<strong><span class='gp-popout' data-gp-id='11'>それ</span><span class='gp-popout' data-gp-id='130'>なのに </span></strong> + Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/11159",
+      "metadata": "それなのに, sorenanoni, conjunction, despite, although"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "1449",
+            "type": "study_question"
+          },
+          {
+            "id": "182424",
+            "type": "study_question"
+          },
+          {
+            "id": "182425",
+            "type": "study_question"
+          },
+          {
+            "id": "1447",
+            "type": "study_question"
+          },
+          {
+            "id": "6447",
+            "type": "study_question"
+          },
+          {
+            "id": "6450",
+            "type": "study_question"
+          },
+          {
+            "id": "6445",
+            "type": "study_question"
+          },
+          {
+            "id": "6446",
+            "type": "study_question"
+          },
+          {
+            "id": "6444",
+            "type": "study_question"
+          },
+          {
+            "id": "6451",
+            "type": "study_question"
+          },
+          {
+            "id": "6452",
+            "type": "study_question"
+          },
+          {
+            "id": "6448",
+            "type": "study_question"
+          },
+          {
+            "id": "1448",
+            "type": "study_question"
+          },
+          {
+            "id": "6449",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "730",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "502",
+            "type": "related_content"
+          },
+          {
+            "id": "146",
+            "type": "related_content"
+          },
+          {
+            "id": "1084",
+            "type": "related_content"
+          },
+          {
+            "id": "503",
+            "type": "related_content"
+          },
+          {
+            "id": "1103",
+            "type": "related_content"
+          },
+          {
+            "id": "622",
+            "type": "related_content"
+          },
+          {
+            "id": "800",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "902",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "1449",
+      "type": "study_question",
+      "attributes": {
+        "id": 1449,
+        "content": "早起（はやお）きするために早（はや）く寝（ね）た。<span class='study-area-input'>____</span>寝坊（ねぼう）した。",
+        "answer": "それなのに",
+        "alternate_grammar": [],
+        "kanji_answer": "それなのに",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>前（まえ）に言（い）った</strong><strong>にも関（かか）わらず</strong>、(B)であるということを表（あらわ）す時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Unexpected",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/早起きするために早く寝た、それなのに寝坊した.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しかし": {
+            "en": "Looking for and [yet/despite]",
+            "es": ""
+          },
+          "それにしても": {
+            "en": "Nice guess! それにしても expresses something that is contrary to expectations but expresses an opinion or judgment. Looking for something that expresses an unpredictable/unexpected result of the first sentence.",
+            "es": ""
+          },
+          "それでも": {
+            "en": "Nice guess! While それでも can work here, it is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" and alludes to an unpredictable/unexpected result.",
+            "es": ""
+          },
+          "しかしながら": {
+            "en": "Nice guess! しかしながら is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" ",
+            "es": ""
+          },
+          "なのに": {
+            "en": "Nice! Can you add something at the beginning? Think \"despite *that*\"",
+            "es": ""
+          },
+          "ところが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "In order to wake up early, I went to bed early. <strong>And yet</strong>, I overslept.",
+        "nuance_translation": "A sentence starter indicating that <strong>even despite</strong> that which was <strong>previously said</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 409,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182424",
+      "type": "study_question",
+      "attributes": {
+        "id": 182424,
+        "content": "妻（つま）は今（いま）、風邪（かぜ）をひいて寝込（ねこ）んでいる。<span class='study-area-input'>____</span>、いきなり動物園（どうぶつえん）に行（い）きたいと言（い）ってきた。",
+        "answer": "それなのに",
+        "alternate_grammar": [],
+        "kanji_answer": "それなのに",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/妻は今、風邪をひいて寝込んでいる。それなのに、いきなり動物園に行きたいと言ってきた。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "My wife is currently in bed with a cold. <strong>And yet</strong>, she suddenly told me that she wants to go to the zoo.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 409,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182425",
+      "type": "study_question",
+      "attributes": {
+        "id": 182425,
+        "content": "私（わたし）は毎日（まいにち）３（さん）時間（じかん）日本語（にほんご）の勉強（べんきょう）をしている。<span class='study-area-input'>____</span>全然（ぜんぜん）上達（じょうたつ）している感（かん）じがしない。",
+        "answer": "それなのに",
+        "alternate_grammar": [],
+        "kanji_answer": "それなのに",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/私は毎日３時間日本語の勉強をしている。それなのに全然上達している感じがしない。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I study Japanese for three hours every day. <strong>And yet</strong> I don't feel like I'm improving at all.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 409,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1447",
+      "type": "study_question",
+      "attributes": {
+        "id": 1447,
+        "content": "私（わたし）は努力（どりょく）していると思（おも）う。<span class='study-area-input'>____</span>うまくいかないのか。",
+        "answer": "それなのに",
+        "alternate_grammar": [],
+        "kanji_answer": "それなのに",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>前（まえ）に言（い）った</strong><strong>にも関（かか）わらず</strong>、(B)であるということを表（あらわ）す時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/私は努力していると思う。それなのにうまくいかないのか。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しかし": {
+            "en": "Looking for and [yet/despite]",
+            "es": ""
+          },
+          "それにしても": {
+            "en": "Nice guess! それにしても expresses something that is contrary to expectations but expresses an opinion or judgment. Looking for something that expresses an unpredictable/unexpected result of the first sentence.",
+            "es": ""
+          },
+          "それでも": {
+            "en": "Nice guess! While それでも can work here, it is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" and alludes to an unpredictable/unexpected result.",
+            "es": ""
+          },
+          "しかしながら": {
+            "en": "Nice guess! しかしながら is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" ",
+            "es": ""
+          },
+          "なのに": {
+            "en": "Nice! Can you add something at the beginning? Think \"despite *that*\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I think I am putting in effort <strong>and yet</strong>, why isn't it going well?",
+        "nuance_translation": "A sentence starter indicating that <strong>even despite</strong> that which was <strong>previously said</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 409,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6447",
+      "type": "study_question",
+      "attributes": {
+        "id": 6447,
+        "content": "彼（かれ）は一流（いちりゅう）のアスリートだ。<span class='study-area-input'>____</span>かなり腰（こし）が低（ひく）い。",
+        "answer": "それなのに",
+        "alternate_grammar": [],
+        "kanji_answer": "それなのに",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>前（まえ）に言（い）った</strong><strong>にも関（かか）わらず</strong>、(B)であるということを表（あらわ）す時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Unexpected",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼は一流のアスリートだ。それなのにかなり腰が低い。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しかし": {
+            "en": "Looking for and [yet/despite]",
+            "es": ""
+          },
+          "それにしても": {
+            "en": "Nice guess! それにしても expresses something that is contrary to expectations but expresses an opinion or judgment. Looking for something that expresses an unpredictable/unexpected result of the first sentence.",
+            "es": ""
+          },
+          "それでも": {
+            "en": "Nice guess! While それでも can work here, it is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" and alludes to an unpredictable/unexpected result.",
+            "es": ""
+          },
+          "しかしながら": {
+            "en": "Nice guess! しかしながら is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" ",
+            "es": ""
+          },
+          "なのに": {
+            "en": "Nice! Can you add something at the beginning? Think \"despite *that*\"",
+            "es": ""
+          },
+          "ところが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He is a first class athlete. <strong>And yet</strong>, he is rather humble.",
+        "nuance_translation": "A sentence starter indicating that <strong>even despite</strong> that which was <strong>previously said</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 409,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6450",
+      "type": "study_question",
+      "attributes": {
+        "id": 6450,
+        "content": "明日（あした）は遠足（えんそく）だ。<span class='study-area-input'>____</span>夜更（よふ）かししている。",
+        "answer": "それなのに",
+        "alternate_grammar": [],
+        "kanji_answer": "それなのに",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>前（まえ）に言（い）った</strong><strong>にも関（かか）わらず</strong>、(B)であるということを表（あらわ）す時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/明日は遠足だ。それなのに夜更かししている。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しかし": {
+            "en": "Looking for and [yet/despite]",
+            "es": ""
+          },
+          "それにしても": {
+            "en": "Nice guess! それにしても expresses something that is contrary to expectations but expresses an opinion or judgment. Looking for something that expresses an unpredictable/unexpected result of the first sentence.",
+            "es": ""
+          },
+          "それでも": {
+            "en": "Nice guess! While それでも can work here, it is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" and alludes to an unpredictable/unexpected result.",
+            "es": ""
+          },
+          "しかしながら": {
+            "en": "Nice guess! しかしながら is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" ",
+            "es": ""
+          },
+          "なのに": {
+            "en": "Nice! Can you add something at the beginning? Think \"despite *that*\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Tomorrow I have an outing. <strong>Despite this</strong> I am staying up late.",
+        "nuance_translation": "A sentence starter indicating that <strong>even despite</strong> that which was <strong>previously said</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 409,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6445",
+      "type": "study_question",
+      "attributes": {
+        "id": 6445,
+        "content": "一生懸命（いっしょうけんめい）育児（いくじ）をしている。<span class='study-area-input'>____</span>夫（おっと）は手伝（てつだ）ってくれない。",
+        "answer": "それなのに",
+        "alternate_grammar": [],
+        "kanji_answer": "それなのに",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>前（まえ）に言（い）った</strong><strong>にも関（かか）わらず</strong>、(B)であるということを表（あらわ）す時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/一生懸命育児をしている。それなのに夫は手伝ってくれない。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しかし": {
+            "en": "Looking for and [yet/despite]",
+            "es": ""
+          },
+          "それにしても": {
+            "en": "Nice guess! それにしても expresses something that is contrary to expectations but expresses an opinion or judgment. Looking for something that expresses an unpredictable/unexpected result of the first sentence.",
+            "es": ""
+          },
+          "それでも": {
+            "en": "Nice guess! While それでも can work here, it is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" and alludes to an unpredictable/unexpected result.",
+            "es": ""
+          },
+          "しかしながら": {
+            "en": "Nice guess! しかしながら is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" ",
+            "es": ""
+          },
+          "なのに": {
+            "en": "Nice! Can you add something at the beginning? Think \"despite *that*\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I am giving it my all to raise my child. <strong>And yet</strong>, my husband doesn't help me.",
+        "nuance_translation": "A sentence starter indicating that <strong>even despite</strong> that which was <strong>previously said</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 409,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6446",
+      "type": "study_question",
+      "attributes": {
+        "id": 6446,
+        "content": "衣食住（いしょくじゅう）がちゃんと揃（そろ）っています。<span class='study-area-input'>____</span>感謝（かんしゃ）しないのはよくないと思（おも）います。",
+        "answer": "それなのに",
+        "alternate_grammar": [],
+        "kanji_answer": "それなのに",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>前（まえ）に言（い）った</strong><strong>にも関（かか）わらず</strong>、(B)であるということを表（あらわ）す時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Unexpected",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/衣食住がちゃんと揃っています。それなのに感謝しないのはよくないと思います。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しかし": {
+            "en": "Looking for and [yet/despite]",
+            "es": ""
+          },
+          "それにしても": {
+            "en": "Nice guess! それにしても expresses something that is contrary to expectations but expresses an opinion or judgment. Looking for something that expresses an unpredictable/unexpected result of the first sentence.",
+            "es": ""
+          },
+          "それでも": {
+            "en": "Nice guess! While それでも can work here, it is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" and alludes to an unpredictable/unexpected result.",
+            "es": ""
+          },
+          "しかしながら": {
+            "en": "Nice guess! しかしながら is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" ",
+            "es": ""
+          },
+          "なのに": {
+            "en": "Nice! Can you add something at the beginning? Think \"despite *that*\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "They have all the necessities of life. <strong>Despite this</strong>, the fact that they don't give thanks is bad, I think.",
+        "nuance_translation": "A sentence starter indicating that <strong>even despite</strong> that which was <strong>previously said</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 409,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6444",
+      "type": "study_question",
+      "attributes": {
+        "id": 6444,
+        "content": "アンテナを新（あたら）しくした。<span class='study-area-input'>____</span>テレビの映（うつ）りが悪（わる）い。",
+        "answer": "それなのに",
+        "alternate_grammar": [],
+        "kanji_answer": "それなのに",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>前（まえ）に言（い）った</strong><strong>にも関（かか）わらず</strong>、(B)であるということを表（あらわ）す時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/アンテナを新しくした。それなのにテレビの映りが悪い。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しかし": {
+            "en": "Looking for and [yet/despite]",
+            "es": ""
+          },
+          "それにしても": {
+            "en": "Nice guess! それにしても expresses something that is contrary to expectations but expresses an opinion or judgment. Looking for something that expresses an unpredictable/unexpected result of the first sentence.",
+            "es": ""
+          },
+          "それでも": {
+            "en": "Nice guess! While それでも can work here, it is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" and alludes to an unpredictable/unexpected result.",
+            "es": ""
+          },
+          "しかしながら": {
+            "en": "Nice guess! しかしながら is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" ",
+            "es": ""
+          },
+          "なのに": {
+            "en": "Nice! Can you add something at the beginning? Think \"despite *that*\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I got a new antenna. <strong>Despite this</strong>, the quality of the TV picture is bad.",
+        "nuance_translation": "A sentence starter indicating that <strong>even despite</strong> that which was <strong>previously said</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 409,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6451",
+      "type": "study_question",
+      "attributes": {
+        "id": 6451,
+        "content": "みんな応援（おうえん）してくれた。<span class='study-area-input'>____</span>結果（けっか）を出（だ）せずに申（もう）し訳（わけ）ありません。",
+        "answer": "それなのに",
+        "alternate_grammar": [],
+        "kanji_answer": "それなのに",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>前（まえ）に言（い）った</strong><strong>にも関（かか）わらず</strong>、(B)であるということを表（あらわ）す時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/みんな応援してくれた。それなのに結果を出せずに申し訳ありません。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しかし": {
+            "en": "Looking for and [yet/despite]",
+            "es": ""
+          },
+          "それにしても": {
+            "en": "Nice guess! それにしても expresses something that is contrary to expectations but expresses an opinion or judgment. Looking for something that expresses an unpredictable/unexpected result of the first sentence.",
+            "es": ""
+          },
+          "それでも": {
+            "en": "Nice guess! While それでも can work here, it is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" and alludes to an unpredictable/unexpected result.",
+            "es": ""
+          },
+          "しかしながら": {
+            "en": "Nice guess! しかしながら is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" ",
+            "es": ""
+          },
+          "なのに": {
+            "en": "Nice! Can you add something at the beginning? Think \"despite *that*\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Everyone cheered me on. <strong>And yet</strong>, it is inexcusable that I wasn't able to get (good) results.",
+        "nuance_translation": "A sentence starter indicating that <strong>even despite</strong> that which was <strong>previously said</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 409,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6452",
+      "type": "study_question",
+      "attributes": {
+        "id": 6452,
+        "content": "落（おと）し物（もの）を拾（ひろ）った。<span class='study-area-input'>____</span>警察（けいさつ）に届（とど）けないなんて泥棒（どろぼう）です。",
+        "answer": "それなのに",
+        "alternate_grammar": [],
+        "kanji_answer": "それなのに",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>前（まえ）に言（い）った</strong><strong>にも関（かか）わらず</strong>、(B)であるということを表（あらわ）す時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/落し物を拾った。それなのに警察に届けないなんて泥棒です。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しかし": {
+            "en": "Looking for and [yet/despite]",
+            "es": ""
+          },
+          "それにしても": {
+            "en": "Nice guess! それにしても expresses something that is contrary to expectations but expresses an opinion or judgment. Looking for something that expresses an unpredictable/unexpected result of the first sentence.",
+            "es": ""
+          },
+          "それでも": {
+            "en": "Nice guess! While それでも can work here, it is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" and alludes to an unpredictable/unexpected result.",
+            "es": ""
+          },
+          "しかしながら": {
+            "en": "Nice guess! しかしながら is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" ",
+            "es": ""
+          },
+          "なのに": {
+            "en": "Nice! Can you add something at the beginning? Think \"despite *that*\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "They picked up the lost property. <strong>Despite this</strong>, not handing it over to the police makes them a thief.",
+        "nuance_translation": "A sentence starter indicating that <strong>even despite</strong> that which was <strong>previously said</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 409,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6448",
+      "type": "study_question",
+      "attributes": {
+        "id": 6448,
+        "content": "彼（かれ）は移転（いてん）してきたばかりだ。<span class='study-area-input'>____</span>道（みち）に迷（まよ）わないなんてすごい。",
+        "answer": "それなのに",
+        "alternate_grammar": [],
+        "kanji_answer": "それなのに",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>前（まえ）に言（い）った</strong><strong>にも関（かか）わらず</strong>、(B)であるということを表（あらわ）す時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼は移転してきたばかりだ。それなのに道に迷わないなんてすごい。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しかし": {
+            "en": "Looking for and [yet/despite]",
+            "es": ""
+          },
+          "それにしても": {
+            "en": "Nice guess! それにしても expresses something that is contrary to expectations but expresses an opinion or judgment. Looking for something that expresses an unpredictable/unexpected result of the first sentence.",
+            "es": ""
+          },
+          "それでも": {
+            "en": "Nice guess! While それでも can work here, it is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" and alludes to an unpredictable/unexpected result.",
+            "es": ""
+          },
+          "しかしながら": {
+            "en": "Nice guess! しかしながら is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" ",
+            "es": ""
+          },
+          "なのに": {
+            "en": "Nice! Can you add something at the beginning? Think \"despite *that*\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He just transferred here. <strong>Despite this</strong>, it is amazing that he doesn't get lost.",
+        "nuance_translation": "A sentence starter indicating that <strong>even despite</strong> that which was <strong>previously said</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 409,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1448",
+      "type": "study_question",
+      "attributes": {
+        "id": 1448,
+        "content": "新品（しんぴん）を買（か）った。<span class='study-area-input'>____</span>もう壊（こわ）れた。",
+        "answer": "それなのに",
+        "alternate_grammar": [],
+        "kanji_answer": "それなのに",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>前（まえ）に言（い）った</strong><strong>にも関（かか）わらず</strong>、(B)であるということを表（あらわ）す時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Unexpected",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/新品を買った、それなのにもう壊れた。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しかし": {
+            "en": "Looking for and [yet/despite]",
+            "es": ""
+          },
+          "それにしても": {
+            "en": "Nice guess! それにしても expresses something that is contrary to expectations but expresses an opinion or judgment. Looking for something that expresses an unpredictable/unexpected result of the first sentence.",
+            "es": ""
+          },
+          "それでも": {
+            "en": "Nice guess! While それでも can work here, it is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" and alludes to an unpredictable/unexpected result.",
+            "es": ""
+          },
+          "しかしながら": {
+            "en": "Nice guess! しかしながら is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" ",
+            "es": ""
+          },
+          "なのに": {
+            "en": "Nice! Can you add something at the beginning? Think \"despite *that*\"",
+            "es": ""
+          },
+          "ところが": {
+            "en": "Let's try a different word here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I bought it brand new. <strong>Despite this</strong>, it is already broken.",
+        "nuance_translation": "A sentence starter indicating that <strong>even despite</strong> that which was <strong>previously said</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 409,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6449",
+      "type": "study_question",
+      "attributes": {
+        "id": 6449,
+        "content": "もう薄暗（うすぐら）い。<span class='study-area-input'>____</span>ライトをつけていない車（くるま）がいて危（あぶ）ない。",
+        "answer": "それなのに",
+        "alternate_grammar": [],
+        "kanji_answer": "それなのに",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>前（まえ）に言（い）った</strong><strong>にも関（かか）わらず</strong>、(B)であるということを表（あらわ）す時（とき）に文（ぶん）の頭（あたま）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/もう薄暗い。それなのにライトをつけていない車がいて危ない。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しかし": {
+            "en": "Looking for and [yet/despite]",
+            "es": ""
+          },
+          "それにしても": {
+            "en": "Nice guess! それにしても expresses something that is contrary to expectations but expresses an opinion or judgment. Looking for something that expresses an unpredictable/unexpected result of the first sentence.",
+            "es": ""
+          },
+          "それでも": {
+            "en": "Nice guess! While それでも can work here, it is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" and alludes to an unpredictable/unexpected result.",
+            "es": ""
+          },
+          "しかしながら": {
+            "en": "Nice guess! しかしながら is closer to \"however.\" Looking for a grammar point that expresses \"despite that\" or \"and yet\" ",
+            "es": ""
+          },
+          "なのに": {
+            "en": "Nice! Can you add something at the beginning? Think \"despite *that*\"",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It is already dim. <strong>And yet</strong> there are cars without their lights on and it is dangerous.",
+        "nuance_translation": "A sentence starter indicating that <strong>even despite</strong> that which was <strong>previously said</strong>, (B).",
+        "extra_info": "",
+        "reviewable_id": 409,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "730",
+      "type": "writeup",
+      "attributes": {
+        "id": 730,
+        "body_ja": "<p>「<span data-gp-id='409'>それなのに</span>」は、代名詞（だいめいし）「それ」に「な」と逆接（ぎゃくせつ）を表（あらわ）す助詞（じょし）「のに」を加（くわ）えた表現（ひょうげん）です。これは「しかし」や「にもかかわらず」と同（おな）じように、前（まえ）に述（の）べられたことと、逆（ぎゃく）のことを述（の）べるときに使（つか）われる接続詞（せつぞくし）です。</p>\r\n\r\n<p>「<span data-gp-id='409'>それなのに</span>」は接続詞（せつぞくし）なので、主（おも）に文（ぶん）の頭（あたま）に置（お）かれます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182424'>\r\n<li data-study-question='182425'>\r\n</ul>\r\n\r\n<p>(A) の内容（ないよう）と (B) の内容（ないよう）は逆接（ぎゃくせつ）の関係（かんけい）にあるので、「<span data-gp-id='409'>それなのに</span>」は (A) を考（かんが）えると起（お）こるはずのないことや、予想外（よそうがい）のことを表（あらわ）すためによく使（つか）われます。</p>",
+        "body": "<p>Being a combination of the <span data-term='代名詞・だいめいし'>substitute noun</span> それ, な, and のに, the particle meaning 'although' or 'despite', <span data-gp-id='409'>それなのに</span> acts as a conjunction meaning 'and yet', or 'despite that', and simply refers back to the previous statement made, when the following statement is in contradiction to it.</p>\r\n\r\n<p>Due to its use as a conjunction, <span data-gp-id='409'>それなのに</span> will primarily appear at the beginning of a new sentence.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182424'>\r\n<li data-study-question='182425'>\r\n</ul>\r\n\r\n<p>Being that the (B) sentence is in contradiction to the (A) sentence, <span data-gp-id='409'>それなのに</span> will often indicate something that is unexpected, or was somehow unpredictable based on (A).</p>"
+      }
+    },
+    {
+      "id": "902",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 902,
+        "site": "JapaneseTest4You",
+        "description": "それなのに",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-%E3%81%9D%E3%82%8C%E3%81%AA%E3%81%AE%E3%81%AB-sore-na-noni/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "502",
+      "type": "related_content",
+      "attributes": {
+        "id": 502,
+        "relationship_type": "related",
+        "body": "Both introduce contradiction. それにしても can mean even so or nevertheless, and can also be used to change topics, as in それにしても暑いね (Even so, it’s hot, isn’t it?). それなのに marks direct contrast, closer to and yet, as in 一生懸命勉強した。それなのに落ちた (I studied hard, and yet I failed).",
+        "first_relatable": {
+          "id": 350,
+          "slug": "それにしても",
+          "title": "それにしても",
+          "meaning": "Nevertheless, Even so",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 409,
+          "slug": "それなのに",
+          "title": "それなのに",
+          "meaning": "And yet, Despite this",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "146",
+      "type": "related_content",
+      "attributes": {
+        "id": 146,
+        "relationship_type": "related",
+        "body": "Both can begin a sentence to introduce contrast, but differ in tone and nuance. もっとも is more formal and adds a condition that qualifies the previous statement, e.g. 全員来ました。もっとも、田中さんは遅れましたが 'Everyone came. That said, Tanaka was late.' それなのに is more casual and expresses surprise at an unexpected outcome, e.g. 雨だった。それなのに、試合は行われた 'It rained. And yet, the match was held.'",
+        "first_relatable": {
+          "id": 466,
+          "slug": "もっとも",
+          "title": "もっとも",
+          "meaning": "Although, But, However, For all that, Provided that",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 409,
+          "slug": "それなのに",
+          "title": "それなのに",
+          "meaning": "And yet, Despite this",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1084",
+      "type": "related_content",
+      "attributes": {
+        "id": 1084,
+        "relationship_type": "related",
+        "body": "Both express contrast, but with different nuances and usage. ながらも attaches to verbs, adjectives, or nouns and conveys contradictory states, e.g. '緊張しながらもわくわくしている' ('While feeling anxious, I'm also excited'). それなのに is used at the start of a sentence to mean 'and yet', often with surprise, e.g. '８時間も寝た。それなのに眠い' ('I slept eight whole hours. But still, I'm sleepy').",
+        "first_relatable": {
+          "id": 285,
+          "slug": "ながらも",
+          "title": "ながらも",
+          "meaning": "But, Even while, Even though, Despite, Although",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 409,
+          "slug": "それなのに",
+          "title": "それなのに",
+          "meaning": "And yet, Despite this",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "503",
+      "type": "related_content",
+      "attributes": {
+        "id": 503,
+        "relationship_type": "related",
+        "body": "Both introduce contrast. しかしながら is formal and neutral, used in writing or speeches, as in 実験は失敗した。しかしながら多くを学んだ (The experiment failed. Nevertheless, we learned a lot). それなのに is conversational and conveys surprise or disappointment, as in 約束した。それなのに来なかった (He promised, and yet he didn’t come).",
+        "first_relatable": {
+          "id": 674,
+          "slug": "しかしながら",
+          "title": "しかしながら",
+          "meaning": "However, Nevertheless, But",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 409,
+          "slug": "それなのに",
+          "title": "それなのに",
+          "meaning": "And yet, Despite this",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1103",
+      "type": "related_content",
+      "attributes": {
+        "id": 1103,
+        "relationship_type": "related",
+        "body": "Both express contrast, but differ in usage and implication. くせに follows a phrase and has a critical tone, e.g. 知っているくせに教えてくれない ('He knows but won't tell me.'), implying that the speaker is angry at the person. それなのに comes at the beginning of a sentence, is neutral, and expresses simple contradiction, e.g. 彼は真実を知っている。それなのに、教えてくれない ('He knows. And yet, he won't tell me.') with an objective nuance.",
+        "first_relatable": {
+          "id": 295,
+          "slug": "くせに",
+          "title": "くせに",
+          "meaning": "Even though, And yet, Despite",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 409,
+          "slug": "それなのに",
+          "title": "それなのに",
+          "meaning": "And yet, Despite this",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "622",
+      "type": "related_content",
+      "attributes": {
+        "id": 622,
+        "relationship_type": "related",
+        "body": "のに expresses contrast, similar to 'although,' and follows verbs, adjectives, or nouns (with な for nouns and な-adjectives). It's typically used at the end of a phrase or sentence. それなのに is a related form used at the beginning of a sentence, meaning 'and yet' or 'despite that,' with それ referring back to the previous statement.",
+        "first_relatable": {
+          "id": 130,
+          "slug": "のに-despite",
+          "title": "のに ",
+          "meaning": "Despite, Although, Even though",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 409,
+          "slug": "それなのに",
+          "title": "それなのに",
+          "meaning": "And yet, Despite this",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "800",
+      "type": "related_content",
+      "attributes": {
+        "id": 800,
+        "relationship_type": "related",
+        "body": "それでも and それなのに both show contrast. それでも means 'even so' and sounds neutral, e.g. 雨だった。それでも行った ('It was rainy, but I went anyway.'). それなのに has a stronger emotional tone, often of disbelief or disapproval, e.g. 優しくした。それなのに怒られた ('I was nice and still got yelled at!').",
+        "first_relatable": {
+          "id": 186,
+          "slug": "それでも",
+          "title": "それでも",
+          "meaning": "But still, And yet, Even so, Nevertheless",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 409,
+          "slug": "それなのに",
+          "title": "それなのに",
+          "meaning": "And yet, Despite this",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

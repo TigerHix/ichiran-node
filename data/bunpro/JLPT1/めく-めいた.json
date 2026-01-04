@@ -1,0 +1,945 @@
+{
+  "data": {
+    "id": "860",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 860,
+      "level": "JLPT1",
+      "lesson_id": 47,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "めく-めいた",
+      "nuance": "何（なに）かが(A)の<strong>雰囲気（ふんいき）を出（だ）している</strong>ということを示（しめ）す<strong>接尾（せつび）辞（じ）</strong>。色（いろ）、季節（きせつ）、光（ひかり）、動（うご）きなど、<strong>自然（しぜん）な状態（じょうたい）</strong>を表（あらわ）す時（とき）に使（つか）われることが多（おお）い。",
+      "grammar_order": 858,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 861,
+        "title": "といわず",
+        "slug": "といわず"
+      },
+      "previous_grammar_point": {
+        "id": 859,
+        "title": "はおろか",
+        "slug": "はおろか"
+      },
+      "lesson_count": "12/18",
+      "title": "めく・めいた",
+      "furigana": "めく",
+      "meaning": "Like, To show signs of,  To have the appearance of, To come to a (state) similar to, Somewhat, An air of,  Feels almost like",
+      "nuance_translation": "A <strong>suffix</strong> showing that something is <strong>giving off the signs of</strong> (A). Very often used about <strong>natural states</strong>, such as seasons, colors, lights, or movements.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "Noun + <strong>めい<span class='gp-popout' data-gp-id='416'>て</span></strong><br>Noun + <strong>めい<span class='gp-popout' data-gp-id='764'>ています</span></strong><br>Noun［Season］ + <strong>めい<span class='gp-popout' data-gp-id='128'>てきました</span></strong><br>Noun + <strong>めいた</strong> + Noun",
+      "casual_structure": "Noun + <strong>めい<span class='gp-popout' data-gp-id='416'>て</span></strong><br>Noun + <strong>めい<span class='gp-popout' data-gp-id='764'>ている</span></strong><br>Noun［Season］ + <strong>めい<span class='gp-popout' data-gp-id='128'>てきた​​ </span></strong><br>Noun + <strong>めいた</strong> + Noun",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/33126",
+      "metadata": "めく, めいた, meku, meita, う-verb, う verb, u-verb, u verb, godan, godan verb, five level, conjugation, dictionary form, standard form, plain form, suffix"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "183464",
+            "type": "study_question"
+          },
+          {
+            "id": "9635",
+            "type": "study_question"
+          },
+          {
+            "id": "183467",
+            "type": "study_question"
+          },
+          {
+            "id": "183468",
+            "type": "study_question"
+          },
+          {
+            "id": "183466",
+            "type": "study_question"
+          },
+          {
+            "id": "9636",
+            "type": "study_question"
+          },
+          {
+            "id": "9638",
+            "type": "study_question"
+          },
+          {
+            "id": "9637",
+            "type": "study_question"
+          },
+          {
+            "id": "183469",
+            "type": "study_question"
+          },
+          {
+            "id": "9633",
+            "type": "study_question"
+          },
+          {
+            "id": "183465",
+            "type": "study_question"
+          },
+          {
+            "id": "182949",
+            "type": "study_question"
+          },
+          {
+            "id": "182950",
+            "type": "study_question"
+          },
+          {
+            "id": "182951",
+            "type": "study_question"
+          },
+          {
+            "id": "182952",
+            "type": "study_question"
+          },
+          {
+            "id": "9634",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "931",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1875",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1876",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1557",
+            "type": "related_content"
+          },
+          {
+            "id": "1560",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2474",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2475",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2476",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2477",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "183464",
+      "type": "study_question",
+      "attributes": {
+        "id": 183464,
+        "content": "桜（さくら）も咲（さ）いてすっかり春（はる）<span class='study-area-input'>____</span>きました。",
+        "answer": "めいて",
+        "alternate_grammar": [],
+        "kanji_answer": "めいて",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の<strong>雰囲気（ふんいき）を出（だ）している</strong>ということを示（しめ）す<strong>接尾（せつび）辞（じ）</strong>。色（いろ）、季節（きせつ）、光（ひかり）、動（うご）きなど、<strong>自然（しぜん）な状態（じょうたい）</strong>を表（あらわ）す時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/桜も咲いてすっかり春めいてきました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "びて": {
+            "en": "It sounds unnatural here as びる doesn’t typically pair with 春.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "The cherry blossoms are blooming, and it starting to thoroughly <strong>show signs of </strong>being spring.",
+        "nuance_translation": "A <strong>suffix</strong> showing that something is <strong>giving off the signs of</strong> (A). Very often used about <strong>natural states</strong>, such as seasons, colors, lights, or movements.",
+        "extra_info": "",
+        "reviewable_id": 860,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9635",
+      "type": "study_question",
+      "attributes": {
+        "id": 9635,
+        "content": "作（つく）り物（もの）<span class='study-area-input'>____</span>見（み）えるほど、平穏（へいおん）で美（うつく）しい景色（けしき）だった。",
+        "answer": "めいて",
+        "alternate_grammar": [],
+        "kanji_answer": "めいて",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の<strong>雰囲気（ふんいき）を出（だ）している</strong>ということを示（しめ）す<strong>接尾（せつび）辞（じ）</strong>。色（いろ）、季節（きせつ）、光（ひかり）、動（うご）きなど、<strong>自然（しぜん）な状態（じょうたい）</strong>を表（あらわ）す時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/作り物めいて見えるほど、平穏で美しい景色だった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のように": {
+            "en": "Great! Could you use expression meaning that something feels like the suffixed noun and is often used with 冗談、謎、皮肉 and so on?",
+            "es": "",
+            "fr": ""
+          },
+          "っぽい": {
+            "en": "Great! Could you use expression meaning that something feels like the suffixed noun and is often used with 冗談、謎、皮肉 and so on?",
+            "es": "",
+            "fr": ""
+          },
+          "みたいに": {
+            "en": "Great! Could you use expression meaning that something feels like the suffixed noun and is often used with 冗談、謎、皮肉 and so on?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "びて": {
+            "en": "It sounds unnatural here as びる doesn’t typically pair with 作り物.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "It was calm and beautiful scenery, to the point of <strong>looking</strong> man-made.",
+        "nuance_translation": "A <strong>suffix</strong> showing that something is <strong>giving off the signs of</strong> (A). Very often used about <strong>natural states</strong>, such as seasons, colors, lights, or movements.",
+        "extra_info": "",
+        "reviewable_id": 860,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183467",
+      "type": "study_question",
+      "attributes": {
+        "id": 183467,
+        "content": "芝居（しばい）<span class='study-area-input'>____</span>彼（かれ）のプレゼンには、あまり魅力（みりょく）を感（かん）じません。",
+        "answer": "めいた",
+        "alternate_grammar": [],
+        "kanji_answer": "めいた",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の<strong>雰囲気（ふんいき）を出（だ）している</strong>ということを示（しめ）す<strong>接尾（せつび）辞（じ）</strong>。色（いろ）、季節（きせつ）、光（ひかり）、動（うご）きなど、<strong>自然（しぜん）な状態（じょうたい）</strong>を表（あらわ）す時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Past, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/芝居めいた彼のプレゼンには、あまり魅力を感じません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "びた": {
+            "en": "It sounds unnatural here as びる doesn’t typically pair with 芝居.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I don’t feel any allure toward his presentation that <strong>feels</strong> almost <strong>like</strong> an act.",
+        "nuance_translation": "A <strong>suffix</strong> showing that something is <strong>giving off the signs of</strong> (A). Very often used about <strong>natural states</strong>, such as seasons, colors, lights, or movements.",
+        "extra_info": "",
+        "reviewable_id": 860,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183468",
+      "type": "study_question",
+      "attributes": {
+        "id": 183468,
+        "content": "母（はは）が「宿題（しゅくだい）しなさい」と言（い）うときは、決（き）まって説教（せっきょう）<span class='study-area-input'>____</span>口調（くちょう）になる。",
+        "answer": "めいた",
+        "alternate_grammar": [],
+        "kanji_answer": "めいた",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の<strong>雰囲気（ふんいき）を出（だ）している</strong>ということを示（しめ）す<strong>接尾（せつび）辞（じ）</strong>。色（いろ）、季節（きせつ）、光（ひかり）、動（うご）きなど、<strong>自然（しぜん）な状態（じょうたい）</strong>を表（あらわ）す時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Past, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "びた": {
+            "en": "It sounds unnatural here as びる doesn’t typically pair with 説教.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Whenever my mom tells me to do my homework, she always uses a lecture-<strong>like</strong> tone.",
+        "nuance_translation": "A <strong>suffix</strong> showing that something is <strong>giving off the signs of</strong> (A). Very often used about <strong>natural states</strong>, such as seasons, colors, lights, or movements.",
+        "extra_info": "",
+        "reviewable_id": 860,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183466",
+      "type": "study_question",
+      "attributes": {
+        "id": 183466,
+        "content": "色（いろ）<span class='study-area-input'>____</span>彼女（かのじょ）の表情（ひょうじょう）に、思（おも）わずドキッとしました。",
+        "answer": "めいた",
+        "alternate_grammar": [],
+        "kanji_answer": "めいた",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の<strong>雰囲気（ふんいき）を出（だ）している</strong>ということを示（しめ）す<strong>接尾（せつび）辞（じ）</strong>。色（いろ）、季節（きせつ）、光（ひかり）、動（うご）きなど、<strong>自然（しぜん）な状態（じょうたい）</strong>を表（あらわ）す時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Past, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/色めいた彼女の表情に、思わずドキッとしました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "びた": {
+            "en": "It sounds unnatural here as びる doesn’t typically pair with 色.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "My heart skipped a beat when her expression <strong>showed signs of</strong> being amorous.",
+        "nuance_translation": "A <strong>suffix</strong> showing that something is <strong>giving off the signs of</strong> (A). Very often used about <strong>natural states</strong>, such as seasons, colors, lights, or movements.",
+        "extra_info": "",
+        "reviewable_id": 860,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9636",
+      "type": "study_question",
+      "attributes": {
+        "id": 9636,
+        "content": "<span class='name-highlight'>小説（しょうせつ）</span>：「いつのまにか冬（ふゆ）は去（さ）り、かなり春（はる）<span class='study-area-input'>____</span>。」",
+        "answer": "めいていた",
+        "alternate_grammar": [],
+        "kanji_answer": "めいていた",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の<strong>雰囲気（ふんいき）を出（だ）している</strong>ということを示（しめ）す<strong>接尾（せつび）辞（じ）</strong>。色（いろ）、季節（きせつ）、光（ひかり）、動（うご）きなど、<strong>自然（しぜん）な状態（じょうたい）</strong>を表（あらわ）す時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Past-progressive, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/小説：「いつのまにか冬は去り、かなり春めいていた。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のように": {
+            "en": "Great! Could you use expression meaning that something feels like the suffixed noun and is often used with 冗談、謎、皮肉 and so on?",
+            "es": "",
+            "fr": ""
+          },
+          "っぽい": {
+            "en": "Great! Could you use expression meaning that something feels like the suffixed noun and is often used with 冗談、謎、皮肉 and so on?",
+            "es": "",
+            "fr": ""
+          },
+          "みたいに": {
+            "en": "Great! Could you use expression meaning that something feels like the suffixed noun and is often used with 冗談、謎、皮肉 and so on?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "びていた": {
+            "en": "It sounds unnatural here as びる doesn’t typically pair with 春.",
+            "es": "",
+            "fr": ""
+          },
+          "びた": {
+            "en": "It sounds unnatural here as びる doesn’t typically pair with 春.",
+            "es": "",
+            "fr": ""
+          },
+          "びている": {
+            "en": "It sounds unnatural here as びる doesn’t typically pair with 春.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Novel: 'Before I knew it, it had already gotten quite spring<strong>-like</strong>.'",
+        "nuance_translation": "A <strong>suffix</strong> showing that something is <strong>giving off the signs of</strong> (A). Very often used about <strong>natural states</strong>, such as seasons, colors, lights, or movements.",
+        "extra_info": "",
+        "reviewable_id": 860,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9638",
+      "type": "study_question",
+      "attributes": {
+        "id": 9638,
+        "content": "<span class='name-highlight'>小説（しょうせつ）</span>：「ともこの皮肉（ひにく）<span class='study-area-input'>____</span>聞（き）こえた言葉（ことば）に、ともきが黙（だま）り込（こ）んだ。」",
+        "answer": "めいて",
+        "alternate_grammar": [],
+        "kanji_answer": "めいて",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の<strong>雰囲気（ふんいき）を出（だ）している</strong>ということを示（しめ）す<strong>接尾（せつび）辞（じ）</strong>。色（いろ）、季節（きせつ）、光（ひかり）、動（うご）きなど、<strong>自然（しぜん）な状態（じょうたい）</strong>を表（あらわ）す時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/小説：「ともこの皮肉めいて聞こえた言葉に、ともきが黙り込んだ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のように": {
+            "en": "Great! Could you use expression meaning that something feels like the suffixed noun and is often used with 冗談、謎、皮肉 and so on?",
+            "es": "",
+            "fr": ""
+          },
+          "っぽい": {
+            "en": "Great! Could you use expression meaning that something feels like the suffixed noun and is often used with 冗談、謎、皮肉 and so on?",
+            "es": "",
+            "fr": ""
+          },
+          "みたいに": {
+            "en": "Great! Could you use expression meaning that something feels like the suffixed noun and is often used with 冗談、謎、皮肉 and so on?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "びて": {
+            "en": "It sounds unnatural here as びる doesn’t typically pair with 皮肉.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Novel: 'Tomoki fell silent on the words of Tomoko, <strong>which sounded like</strong> irony.'",
+        "nuance_translation": "A <strong>suffix</strong> showing that something is <strong>giving off the signs of</strong> (A). Very often used about <strong>natural states</strong>, such as seasons, colors, lights, or movements.",
+        "extra_info": "",
+        "reviewable_id": 860,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9637",
+      "type": "study_question",
+      "attributes": {
+        "id": 9637,
+        "content": "彼女（かのじょ）の気分（きぶん）を上（あ）げるため、何（なに）か冗談（じょうだん）<span class='study-area-input'>____</span>、とるに足（た）りない話（はなし）をしようとした。",
+        "answer": "めいた",
+        "alternate_grammar": [],
+        "kanji_answer": "めいた",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の<strong>雰囲気（ふんいき）を出（だ）している</strong>ということを示（しめ）す<strong>接尾（せつび）辞（じ）</strong>。色（いろ）、季節（きせつ）、光（ひかり）、動（うご）きなど、<strong>自然（しぜん）な状態（じょうたい）</strong>を表（あらわ）す時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Past, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/彼女の気分を上げるため、何か冗談めいた、とるに足りない話をしようとした。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のように": {
+            "en": "Great! Could you use expression meaning that something feels like the suffixed noun and is often used with 冗談、謎、皮肉 and so on?",
+            "es": "",
+            "fr": ""
+          },
+          "っぽい": {
+            "en": "Great! Could you use expression meaning that something feels like the suffixed noun and is often used with 冗談、謎、皮肉 and so on?",
+            "es": "",
+            "fr": ""
+          },
+          "みたいに": {
+            "en": "Great! Could you use expression meaning that something feels like the suffixed noun and is often used with 冗談、謎、皮肉 and so on?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "びた": {
+            "en": "It sounds unnatural here as びる doesn’t typically pair with 冗談.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "In order to improve her mood, I tried to tell a joke<strong>-like</strong>, non-serious story.",
+        "nuance_translation": "A <strong>suffix</strong> showing that something is <strong>giving off the signs of</strong> (A). Very often used about <strong>natural states</strong>, such as seasons, colors, lights, or movements.",
+        "extra_info": "",
+        "reviewable_id": 860,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183469",
+      "type": "study_question",
+      "attributes": {
+        "id": 183469,
+        "content": "会社（かいしゃ）の後輩（こうはい）から言（い）い訳（わけ）<span class='study-area-input'>____</span>報告（ほうこく）を長々（ながなが）と聞（き）かされる、金曜日（きんようび）の午後（ごご）６（ろく）時（じ）。",
+        "answer": "めいた",
+        "alternate_grammar": [],
+        "kanji_answer": "めいた",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の<strong>雰囲気（ふんいき）を出（だ）している</strong>ということを示（しめ）す<strong>接尾（せつび）辞（じ）</strong>。色（いろ）、季節（きせつ）、光（ひかり）、動（うご）きなど、<strong>自然（しぜん）な状態（じょうたい）</strong>を表（あらわ）す時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Past, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "びた": {
+            "en": "It sounds unnatural here as びる doesn’t typically pair with 言い訳.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "It's 6 p.m. on a Friday, and I'm being made to listen to a drawn-out report from a junior colleague that <strong>sounds like</strong> an excuse.",
+        "nuance_translation": "A <strong>suffix</strong> showing that something is <strong>giving off the signs of</strong> (A). Very often used about <strong>natural states</strong>, such as seasons, colors, lights, or movements.",
+        "extra_info": "",
+        "reviewable_id": 860,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9633",
+      "type": "study_question",
+      "attributes": {
+        "id": 9633,
+        "content": "<span class='name-highlight'>手紙（てがみ）の挨拶（あいさつ）</span>：「九月（くがつ）になると空（そら）も風（かぜ）もだいぶ秋（あき）<span class='study-area-input'>____</span>まいりました。お変（か）わりありませんか。」",
+        "answer": "めいて",
+        "alternate_grammar": [],
+        "kanji_answer": "めいて",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の<strong>雰囲気（ふんいき）を出（だ）している</strong>ということを示（しめ）す<strong>接尾（せつび）辞（じ）</strong>。色（いろ）、季節（きせつ）、光（ひかり）、動（うご）きなど、<strong>自然（しぜん）な状態（じょうたい）</strong>を表（あらわ）す時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/手紙の挨拶：「九月になると空も風もだいぶ秋めいてまいりました。お変わりありませんか。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "びて": {
+            "en": "It sounds unnatural here as びる doesn’t typically pair with 秋.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Greetings in letter：In September, the sky and wind start to get quite autumn<strong>-like</strong>. How have you been?",
+        "nuance_translation": "A <strong>suffix</strong> showing that something is <strong>giving off the signs of</strong> (A). Very often used about <strong>natural states</strong>, such as seasons, colors, lights, or movements.",
+        "extra_info": "",
+        "reviewable_id": 860,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183465",
+      "type": "study_question",
+      "attributes": {
+        "id": 183465,
+        "content": "脅迫（きょうはく）<span class='study-area-input'>____</span>メールが役所（やくしょ）に届（とど）いたそうだ。",
+        "answer": "めいた",
+        "alternate_grammar": [],
+        "kanji_answer": "めいた",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の<strong>雰囲気（ふんいき）を出（だ）している</strong>ということを示（しめ）す<strong>接尾（せつび）辞（じ）</strong>。色（いろ）、季節（きせつ）、光（ひかり）、動（うご）きなど、<strong>自然（しぜん）な状態（じょうたい）</strong>を表（あらわ）す時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Past, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "びた": {
+            "en": "It sounds unnatural here as びる doesn’t typically pair with 脅迫.",
+            "es": "",
+            "fr": "Cela ne sonne pas très naturel ici, car びる ne s'utilise généralement pas avec 脅迫.",
+            "id": ""
+          }
+        },
+        "translation": "It seems a threatening <strong>sounding</strong> email was delivered to the city office.",
+        "nuance_translation": "A <strong>suffix</strong> showing that something is <strong>giving off the signs of</strong> (A). Very often used about <strong>natural states</strong>, such as seasons, colors, lights, or movements.",
+        "extra_info": "",
+        "reviewable_id": 860,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182949",
+      "type": "study_question",
+      "attributes": {
+        "id": 182949,
+        "content": "\r\n昨日（きのう）までは嘘（うそ）みたいに暑（あつ）かったのに、やっと春（はる）<span class='study-area-input'>____</span>きた！",
+        "answer": "めいて",
+        "alternate_grammar": [],
+        "kanji_answer": "めいて",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/昨日までは嘘みたいに暑かったのに、やっと春めいてきた！.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nIt has been hot until yesterday, but it's finally starting to become spring-<strong>like</strong>!",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 860,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182950",
+      "type": "study_question",
+      "attributes": {
+        "id": 182950,
+        "content": "\r\n\r\n\r\n冗談（じょうだん）<span class='study-area-input'>____</span>言（い）ったが、多分（たぶん）冗談（じょうだん）だったということは気（き）づいていないと思（おも）う。",
+        "answer": "めいて",
+        "alternate_grammar": [],
+        "kanji_answer": "めいて",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/冗談めいて言ったが、多分冗談だったということは気づいていないと思う。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI said it <strong>like a joke</strong>, but I don't think they understood it as a joke.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 860,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182951",
+      "type": "study_question",
+      "attributes": {
+        "id": 182951,
+        "content": "\r\n\r\n\r\n皮肉（ひにく）<span class='study-area-input'>____</span>ことを言（い）ってしまって、相手（あいて）が黙（だま）り込（こ）んでしまった。",
+        "answer": "めいた",
+        "alternate_grammar": [],
+        "kanji_answer": "めいた",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/皮肉めいたことを言ってしまって、相手が黙り込んでしまった。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI said something which sounded <strong>like sarcasm</strong> and the other person fell silent.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 860,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182952",
+      "type": "study_question",
+      "attributes": {
+        "id": 182952,
+        "content": "\r\n\r\n\r\n彼女（かのじょ）はなんか謎（なぞ）<span class='study-area-input'>____</span>雰囲気（ふんいき）があるよね。",
+        "answer": "めいた",
+        "alternate_grammar": [],
+        "kanji_answer": "めいた",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/彼女はなんか謎めいた雰囲気があるよね。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nShe has a somewhat <strong>mysterious vibe</strong>, doesn't she?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 860,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9634",
+      "type": "study_question",
+      "attributes": {
+        "id": 9634,
+        "content": "<span class='name-highlight'>小説（しょうせつ）</span>：「その知（し）らせを聞（き）いて彼女（かのじょ）の顔（かお）には謎（なぞ）<span class='study-area-input'>____</span>微笑（びしょう）が浮（う）かんでいた。」",
+        "answer": "めいた",
+        "alternate_grammar": [],
+        "kanji_answer": "めいた",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の<strong>雰囲気（ふんいき）を出（だ）している</strong>ということを示（しめ）す<strong>接尾（せつび）辞（じ）</strong>。色（いろ）、季節（きせつ）、光（ひかり）、動（うご）きなど、<strong>自然（しぜん）な状態（じょうたい）</strong>を表（あらわ）す時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Past, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/小説：「その知らせを聞いて彼女の顔には謎めいた微笑が浮かんでいた。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "っぽい": {
+            "en": "Good, but 謎 is generally used with certain suffix more often.",
+            "es": ""
+          },
+          "のような": {
+            "en": "Good, but 謎 is generally used with certain suffix more often.",
+            "es": ""
+          },
+          "みたいな": {
+            "en": "Good, but 謎 is generally used with certain suffix more often.",
+            "es": ""
+          },
+          "めく": {
+            "en": "When it comes to めく, the past form is used to modify nouns.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "びた": {
+            "en": "It sounds unnatural because びる doesn’t typically pair with 謎.",
+            "es": ""
+          },
+          "びる": {
+            "en": "It sounds unnatural because びる doesn’t typically pair with 謎.",
+            "es": ""
+          },
+          "びて": {
+            "en": "It sounds unnatural because びる doesn’t typically pair with 謎.",
+            "es": ""
+          }
+        },
+        "translation": "Novel: 'Hearing the news, a <strong>somewhat</strong> mysterious smile appeared on her face.'",
+        "nuance_translation": "A <strong>suffix</strong> showing that something is <strong>giving off the signs of</strong> (A). Very often used about <strong>natural states</strong>, such as seasons, colors, lights, or movements.",
+        "extra_info": "",
+        "reviewable_id": 860,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "931",
+      "type": "writeup",
+      "attributes": {
+        "id": 931,
+        "body_ja": "<p>「<span data-gp-id='860'>めく</span>」は、「(A) のように見（み）える」や「(A) の兆候（ちょうこう）を示（しめ）す」といった意味（いみ）を持（も）つ五段動詞（ごだんどうし）です。この動詞（どうし）は日本語（にほんご）では珍（めずら）しく、単独（たんどく）では使（つか）われず、接尾語（せつびご）としてのみ機能（きのう）します。話（はな）し手（て）が「(A) のようだ」「(A) っぽい」と感（かん）じる名詞（めいし）に付（つ）いて使（つか）われます。</p>\r\n\r\n<p>「<span data-gp-id='860'>めく</span>」は動詞（どうし）なので、文（ぶん）の中（なか）でさまざまな形（かたち）に活用（かつよう）します。特（とく）に、後（うし）ろに名詞（めいし）が来（く）るときには、過去形（かこけい）の「<span data-gp-id='860'>めいた</span>」が最（もっと）もよく使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182949'>\r\n<li data-study-question='182950'>\r\n<li data-study-question='182951'>\r\n<li data-study-question='182952'>\r\n</ul>\r\n\r\n<p>この表現（ひょうげん）で重要（じゅうよう）なのは、「話（はな）し手（て）がどう感（かん）じているか」という点（てん）です。そのため、「<span data-gp-id='860'>めく</span>」が使（つか）われるとき、その (A) は実際（じっさい）に (A) であるとは限（かぎ）らず、話（はな）し手（て）もそれを理解（りかい）した上（うえ）で、あくまでそう「見（み）える」「思（おも）える」という感覚（かんかく）を表（あらわ）します。</p>\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>「<span data-gp-id='860'>めく</span>」と一緒（いっしょ）に使（つか）われる名詞（めいし）は、だいたい決（き）まっています。そのため、これまでに学（まな）んだことのある表現（ひょうげん）だけを使（つか）うのが安全（あんぜん）です。よく使（つか）われる例（れい）としては、「謎（なぞ）<span data-gp-id='860'>めく</span>」（意味（いみ）：謎（なぞ）のように見（み）える）、「皮肉（ひにく）<span data-gp-id='860'>めく</span>」（意味（いみ）：皮肉（ひにく）のように感（かん）じられる）、「言（い）い訳（わけ）<span data-gp-id='860'>めく</span>」（意味（いみ）：言（い）い訳（わけ）のように聞（き）こえる）、「作（つく）り物（もの）<span data-gp-id='860'>めく</span>」（意味（いみ）：偽物（にせもの）のように見（み）える）、それから季節（きせつ）の単語（たんご）などがあります。</p></section>",
+        "body": "<p><span data-gp-id='860'>めく</span> is a fairly unique う-Verb in Japanese in that it will only be used as a <span data-term='接尾語・せつびご'>suffix</span>. This is due to its meaning of 'to show signs of (A)', or 'to have the appearance of (A)'. It will be attached to nouns that the speaker experiences to be the case.</p>\r\n\r\n<p>As <span data-gp-id='860'>めく</span> itself is a verb, it may appear in several different conjugation forms depending on how it is describing the rest of the sentence. When connected directly to a second noun, the past-tense form <span data-gp-id='860'>めいた</span> is most common.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182949'>\r\n<li data-study-question='182950'>\r\n<li data-study-question='182951'>\r\n<li data-study-question='182952'>\r\n</ul>\r\n\r\n<p>This 'that the speaker experiences to be the case' part is important, as <span data-gp-id='860'>めく</span> will almost always highlight the speaker's own personal feelings in regard to (A), and how they perceive it. The thing being described as (A) will usually not actually be (A), and the speaker is often aware of this fact.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p><span data-gp-id='860'> めく</span> is mostly used with set nouns, so it is best to only use it with expressions that you have already heard. Some examples are 謎（なぞ）<span data-gp-id='860'>めく</span> 'to appear to be a riddle', 皮肉（ひにく）<span data-gp-id='860'>めく</span> 'to appear to be sarcastic', 言（い）い訳（わけ）<span data-gp-id='860'>めく</span> 'to appear to be an excuse', 作（つく）り物（もの）<span data-gp-id='860'>めく</span> 'to appear to be fictitious', and seasons of the year.</p></section>"
+      }
+    },
+    {
+      "id": "1875",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1875,
+        "source": "Try N1",
+        "location": "Page 133",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1876",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1876,
+        "source": "Sou Matome Bunpou N1",
+        "location": "Page 114",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2474",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2474,
+        "site": "GuideToJapanese",
+        "description": "Signs",
+        "link": "https://guidetojapanese.org/learn/grammar/signs",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2475",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2475,
+        "site": "Imabi",
+        "description": "Appearance",
+        "link": "https://imabi.org/suf-viappearance/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2476",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2476,
+        "site": "JapaneseTest4You",
+        "description": "JLPT 1 Grammar めく",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n1-grammar-%E3%82%81%E3%81%8F-meku/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2477",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2477,
+        "site": "JapanTimes",
+        "description": "めく",
+        "link": "https://www.japantimes.co.jp/life/2020/04/07/language/japanese-meku-grammar/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1557",
+      "type": "related_content",
+      "attributes": {
+        "id": 1557,
+        "relationship_type": "related",
+        "body": "Both describe something becoming like something else, but the nuance is different. めく・めいた means ‘showing signs of’ and refers to a noticeable change in atmosphere or appearance, without judging whether it is typical, as in 秋めいてきた ('It has started to feel autumn-like.'). らしい②, especially in らしくなってきた, focuses on becoming more typical or expected for that thing, emphasizing how well it matches the usual image, as in 秋らしくなってきた ('It has started to feel properly autumn-like.').",
+        "first_relatable": {
+          "id": 860,
+          "slug": "めく-めいた",
+          "title": "めく・めいた",
+          "meaning": "Like, To show signs of,  To have the appearance of, To come to a (state) similar to, Somewhat, An air of,  Feels almost like",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 637,
+          "slug": "らしい2",
+          "title": "らしい ②",
+          "meaning": "typical of, -ish・like, appropriate for, becoming of, befitting",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1560",
+      "type": "related_content",
+      "attributes": {
+        "id": 1560,
+        "relationship_type": "related",
+        "body": "Both describe something beginning to show a certain quality, but the nuance differs. めく focuses on a noticeable change in atmosphere or appearance, often used for seasons or general impressions, as in 秋めいてきた ('It has started to feel autumn-like.'). びる emphasizes the emergence of a specific visible or behavioral trait, often something concrete or character-related, as in 大人びた話し方をする ('He speaks in a grown-up way.').",
+        "first_relatable": {
+          "id": 860,
+          "slug": "めく-めいた",
+          "title": "めく・めいた",
+          "meaning": "Like, To show signs of,  To have the appearance of, To come to a (state) similar to, Somewhat, An air of,  Feels almost like",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 877,
+          "slug": "びる",
+          "title": "びる",
+          "meaning": "-like, Looking, Feeling, With an air of, To become",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

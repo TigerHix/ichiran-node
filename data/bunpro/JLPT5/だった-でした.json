@@ -1,0 +1,765 @@
+{
+  "data": {
+    "id": "40",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 40,
+      "level": "JLPT5",
+      "lesson_id": 6,
+      "part_of_speech": "助動詞",
+      "register": "一般",
+      "word_type": "",
+      "slug": "だった-でした",
+      "nuance": "<strong>名詞（めいし）やナ形容詞（けいようし）</strong>と一緒（いっしょ）に使（つか）われる、カジュアル又（また）は丁寧（ていねい）に<strong>過去（かこ）形（けい）</strong>にするために使（つか）われる活用（かつよう）。",
+      "grammar_order": 67,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 49,
+        "title": "じゃない",
+        "slug": "じゃない"
+      },
+      "previous_grammar_point": {
+        "id": 952,
+        "title": "な-Adjective だ",
+        "slug": "な-adjective-predicate"
+      },
+      "lesson_count": "4/13",
+      "title": "だった・でした",
+      "furigana": "だった・でした",
+      "meaning": "Was, Were (Past tense) ",
+      "nuance_translation": "The <strong>past</strong> casual or polite conjugation used with <strong>nouns and な-Adjectives</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "い-Adjectives cannot be used with だった・でした",
+      "polite_structure": "Noun + <strong>でした</strong><br><span class='gp-popout' data-gp-id='28'>［な］Adjective</span> + <strong>でした</strong>",
+      "casual_structure": "Noun + <strong>だった</strong><br><span class='gp-popout' data-gp-id='28'>［な］Adjective</span> + <strong>だった</strong>",
+      "part_of_speech_translation": "Auxiliary Verb",
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/520",
+      "metadata": "だった, でした, だ, です, datta, deshita, da, deshita, auxiliary verb, conjunctive form, conjunctive"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154956",
+            "type": "study_question"
+          },
+          {
+            "id": "690",
+            "type": "study_question"
+          },
+          {
+            "id": "154957",
+            "type": "study_question"
+          },
+          {
+            "id": "40",
+            "type": "study_question"
+          },
+          {
+            "id": "1816",
+            "type": "study_question"
+          },
+          {
+            "id": "1817",
+            "type": "study_question"
+          },
+          {
+            "id": "1819",
+            "type": "study_question"
+          },
+          {
+            "id": "1820",
+            "type": "study_question"
+          },
+          {
+            "id": "1821",
+            "type": "study_question"
+          },
+          {
+            "id": "1822",
+            "type": "study_question"
+          },
+          {
+            "id": "1823",
+            "type": "study_question"
+          },
+          {
+            "id": "1818",
+            "type": "study_question"
+          },
+          {
+            "id": "691",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "67",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "767",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1233",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "120",
+            "type": "related_content"
+          },
+          {
+            "id": "121",
+            "type": "related_content"
+          },
+          {
+            "id": "1328",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "90",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "89",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1202",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154956",
+      "type": "study_question",
+      "attributes": {
+        "id": 154956,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"47\">あの</span>電車（でんしゃ）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>静（しず）か<span class='study-area-input'>____</span>。",
+        "answer": "だった",
+        "alternate_grammar": [],
+        "kanji_answer": "だった",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あの電車は静かだった。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "That train <strong>was</strong> quiet.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 40,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "690",
+      "type": "study_question",
+      "attributes": {
+        "id": 690,
+        "content": "綺麗（きれい）<span class='study-area-input'>____</span>。",
+        "answer": "だった",
+        "alternate_grammar": [],
+        "kanji_answer": "だった",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>名詞（めいし）やナ形容詞（けいようし）</strong>と一緒（いっしょ）に使（つか）われる、カジュアル又（また）は丁寧（ていねい）に<strong>過去（かこ）形（けい）</strong>にするために使（つか）われる活用（かつよう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/40/male_audio/11-綺麗だった.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/綺麗だった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でした": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>was</strong> beautiful.",
+        "nuance_translation": "The <strong>past</strong> casual or polite conjugation used with <strong>nouns and な-Adjectives</strong>.",
+        "extra_info": "",
+        "reviewable_id": 40,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154957",
+      "type": "study_question",
+      "attributes": {
+        "id": 154957,
+        "content": "富士山（ふじさん）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>綺麗（きれい）<span class='study-area-input'>____</span>。",
+        "answer": "でした",
+        "alternate_grammar": [],
+        "kanji_answer": "でした",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/富士山は綺麗でした。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Mt. Fuji <strong>was</strong> beautiful.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 40,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "40",
+      "type": "study_question",
+      "attributes": {
+        "id": 40,
+        "content": "<span class='gp-popout' data-gp-id='11'>それ</span><span class='gp-popout' data-gp-id='3'>は</span>、昨日（きのう）<span class='study-area-input'>____</span>。",
+        "answer": "でした",
+        "alternate_grammar": [],
+        "kanji_answer": "でした",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>名詞（めいし）やナ形容詞（けいようし）</strong>と一緒（いっしょ）に使（つか）われる、カジュアル又（また）は丁寧（ていねい）に<strong>過去（かこ）形（けい）</strong>にするために使（つか）われる活用（かつよう）。",
+        "tense": "Past, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/40/male_audio/02-それは昨日でした.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/それは、昨日でした。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だった": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That <strong>was</strong> yesterday.",
+        "nuance_translation": "The <strong>past</strong> casual or polite conjugation used with <strong>nouns and な-Adjectives</strong>.",
+        "extra_info": "",
+        "reviewable_id": 40,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1816",
+      "type": "study_question",
+      "attributes": {
+        "id": 1816,
+        "content": "猫（ねこ）<span class='gp-popout' data-gp-id='10'>が</span>大（だい）好（す）き<span class='study-area-input'>____</span>。",
+        "answer": "だった",
+        "alternate_grammar": [],
+        "kanji_answer": "だった",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>名詞（めいし）やナ形容詞（けいようし）</strong>と一緒（いっしょ）に使（つか）われる、カジュアル又（また）は丁寧（ていねい）に<strong>過去（かこ）形（けい）</strong>にするために使（つか）われる活用（かつよう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/40/male_audio/09-猫が大好きだった.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/猫が大好きだった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でした": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I really lik<strong>ed</strong> cats. (Cats <strong>were</strong> lov<strong>ed</strong> by me)",
+        "nuance_translation": "The <strong>past</strong> casual or polite conjugation used with <strong>nouns and な-Adjectives</strong>.",
+        "extra_info": "",
+        "reviewable_id": 40,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1817",
+      "type": "study_question",
+      "attributes": {
+        "id": 1817,
+        "content": "大変（たいへん）<span class='study-area-input'>____</span>。",
+        "answer": "だった",
+        "alternate_grammar": [],
+        "kanji_answer": "だった",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>名詞（めいし）やナ形容詞（けいようし）</strong>と一緒（いっしょ）に使（つか）われる、カジュアル又（また）は丁寧（ていねい）に<strong>過去（かこ）形（けい）</strong>にするために使（つか）われる活用（かつよう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/40/male_audio/07-大変だった.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/大変だった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でした": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>was</strong> terrible. ",
+        "nuance_translation": "The <strong>past</strong> casual or polite conjugation used with <strong>nouns and な-Adjectives</strong>.",
+        "extra_info": "",
+        "reviewable_id": 40,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1819",
+      "type": "study_question",
+      "attributes": {
+        "id": 1819,
+        "content": "教室（きょうしつ）<span class='gp-popout' data-gp-id='3'>は</span>静（しず）か<span class='study-area-input'>____</span>。",
+        "answer": "でした",
+        "alternate_grammar": [],
+        "kanji_answer": "でした",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>名詞（めいし）やナ形容詞（けいようし）</strong>と一緒（いっしょ）に使（つか）われる、カジュアル又（また）は丁寧（ていねい）に<strong>過去（かこ）形（けい）</strong>にするために使（つか）われる活用（かつよう）。",
+        "tense": "Past, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/40/male_audio/08-教室は静かでした.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/教室は静かでした。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だった": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The classroom <strong>was</strong> quiet.",
+        "nuance_translation": "The <strong>past</strong> casual or polite conjugation used with <strong>nouns and な-Adjectives</strong>.",
+        "extra_info": "",
+        "reviewable_id": 40,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1820",
+      "type": "study_question",
+      "attributes": {
+        "id": 1820,
+        "content": "電話（でんわ）<span class='gp-popout' data-gp-id='3'>は</span>、田中（たなか）さん<span class='study-area-input'>____</span>。",
+        "answer": "だった",
+        "alternate_grammar": [],
+        "kanji_answer": "だった",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>名詞（めいし）やナ形容詞（けいようし）</strong>と一緒（いっしょ）に使（つか）われる、カジュアル又（また）は丁寧（ていねい）に<strong>過去（かこ）形（けい）</strong>にするために使（つか）われる活用（かつよう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/40/male_audio/12-電話は田中さんだった.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/電話は、田中さんだった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でした": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The phone call <strong>was</strong> Tanaka-san. (Tanaka-san <strong>was</strong> on the phone)",
+        "nuance_translation": "The <strong>past</strong> casual or polite conjugation used with <strong>nouns and な-Adjectives</strong>.",
+        "extra_info": "",
+        "reviewable_id": 40,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1821",
+      "type": "study_question",
+      "attributes": {
+        "id": 1821,
+        "content": "<span class='gp-popout' data-gp-id='47'>あの</span>野菜（やさい）<span class='gp-popout' data-gp-id='21'>を</span>食（た）べ<span class='gp-popout' data-gp-id='895'>た</span><span class='gp-popout' data-gp-id='16'>のは</span>、私（わたし）<span class='study-area-input'>____</span>。",
+        "answer": "だった",
+        "alternate_grammar": [],
+        "kanji_answer": "だった",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>名詞（めいし）やナ形容詞（けいようし）</strong>と一緒（いっしょ）に使（つか）われる、カジュアル又（また）は丁寧（ていねい）に<strong>過去（かこ）形（けい）</strong>にするために使（つか）われる活用（かつよう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/40/male_audio/あの野菜を食べたのは、私だった。.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あの野菜を食べたのは、私だった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でした": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>was</strong> the one who ate those vegetables.",
+        "nuance_translation": "The <strong>past</strong> casual or polite conjugation used with <strong>nouns and な-Adjectives</strong>.",
+        "extra_info": "",
+        "reviewable_id": 40,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1822",
+      "type": "study_question",
+      "attributes": {
+        "id": 1822,
+        "content": "パーティ<span class='gp-popout' data-gp-id='3'>は</span>賑（にぎ）やか<span class='study-area-input'>____</span>。",
+        "answer": "でした",
+        "alternate_grammar": [],
+        "kanji_answer": "でした",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>名詞（めいし）やナ形容詞（けいようし）</strong>と一緒（いっしょ）に使（つか）われる、カジュアル又（また）は丁寧（ていねい）に<strong>過去（かこ）形（けい）</strong>にするために使（つか）われる活用（かつよう）。",
+        "tense": "Past, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/40/male_audio/04-パーティーは賑やかでした.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/パーティは賑やかでした。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だった": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The party <strong>was</strong> lively.",
+        "nuance_translation": "The <strong>past</strong> casual or polite conjugation used with <strong>nouns and な-Adjectives</strong>.",
+        "extra_info": "",
+        "reviewable_id": 40,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1823",
+      "type": "study_question",
+      "attributes": {
+        "id": 1823,
+        "content": "便利（べんり）<span class='study-area-input'>____</span>。",
+        "answer": "だった",
+        "alternate_grammar": [],
+        "kanji_answer": "だった",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>名詞（めいし）やナ形容詞（けいようし）</strong>と一緒（いっしょ）に使（つか）われる、カジュアル又（また）は丁寧（ていねい）に<strong>過去（かこ）形（けい）</strong>にするために使（つか）われる活用（かつよう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/40/male_audio/05-便利だった.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/便利だった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でした": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>was</strong> convenient.",
+        "nuance_translation": "The <strong>past</strong> casual or polite conjugation used with <strong>nouns and な-Adjectives</strong>.",
+        "extra_info": "",
+        "reviewable_id": 40,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1818",
+      "type": "study_question",
+      "attributes": {
+        "id": 1818,
+        "content": "先週（せんしゅう）<span class='gp-popout' data-gp-id='3'>は</span>、私（わたし）<span class='gp-popout' data-gp-id='6'>の</span>誕生日（たんじょうび）<span class='study-area-input'>____</span>。",
+        "answer": "だった",
+        "alternate_grammar": [],
+        "kanji_answer": "だった",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>名詞（めいし）やナ形容詞（けいようし）</strong>と一緒（いっしょ）に使（つか）われる、カジュアル又（また）は丁寧（ていねい）に<strong>過去（かこ）形（けい）</strong>にするために使（つか）われる活用（かつよう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/40/male_audio/06-先週は私の誕生日だった.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/先週は、私の誕生日だった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でした": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "My birthday <strong>was</strong> last week.",
+        "nuance_translation": "The <strong>past</strong> casual or polite conjugation used with <strong>nouns and な-Adjectives</strong>.",
+        "extra_info": "",
+        "reviewable_id": 40,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "691",
+      "type": "study_question",
+      "attributes": {
+        "id": 691,
+        "content": "トム<span class='study-area-input'>____</span>。",
+        "answer": "だった",
+        "alternate_grammar": [],
+        "kanji_answer": "だった",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>名詞（めいし）やナ形容詞（けいようし）</strong>と一緒（いっしょ）に使（つか）われる、カジュアル又（また）は丁寧（ていねい）に<strong>過去（かこ）形（けい）</strong>にするために使（つか）われる活用（かつよう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/40/male_audio/03-トムだった.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/トムだった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でした": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It <strong>was</strong> Tom.",
+        "nuance_translation": "The <strong>past</strong> casual or polite conjugation used with <strong>nouns and な-Adjectives</strong>.",
+        "extra_info": "",
+        "reviewable_id": 40,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "67",
+      "type": "writeup",
+      "attributes": {
+        "id": 67,
+        "body_ja": null,
+        "body": "<p>In order to say that something 'was' a certain way in Japanese, you will need to use <span data-gp-id='40'>だった</span> (casual) or <span data-gp-id='40'>でした</span> (polite) attached to the end of a noun or <span data-gp-id='28'>な-Adjective</span>. This is simply a combination of two <span data-term='助動詞・じょどうし'>auxiliary verbs</span>, <span data-gp-id='1'>だ</span> (or <span data-gp-id='2'>です</span> when polite) with た. For <span data-gp-id='40'>だった</span>, we will need to add った to the base form of <span data-gp-id='1'>だ</span>. For <span data-gp-id='2'>です</span>, す will change to し before adding た.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154956'>\r\n<li data-study-question='154957'></ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>The past form of <span data-gp-id='24'>い-Adjectives</span> cannot be linked with <span data-gp-id='40'>だった</span> or <span data-gp-id='40'>でした</span>, as they have their own set of conjugation rules.</p></section>"
+      }
+    },
+    {
+      "id": "767",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 767,
+        "source": "みんなの日本語 I",
+        "location": "Page 128 [CH 20]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1233",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1233,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 32",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "90",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 90,
+        "site": "Fluentu",
+        "description": "Under Nouns and Adjectives",
+        "link": "https://www.fluentu.com/blog/japanese/informal-japanese/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "89",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 89,
+        "site": "Tae Kim",
+        "description": "Conjugating to the past state-of-being",
+        "link": "https://guidetojapanese.org/learn/grammar/stateofbeing",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1202",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1202,
+        "site": "Japanese Ammo",
+        "description": "Adjectives Past & Past Negatives",
+        "link": "https://www.youtube.com/watch?v=5_woSKucmUg&index=6&list=PLd5-Wp_4tLqYZxS5j3g6kbeOfVXlTkr3N",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "120",
+      "type": "related_content",
+      "attributes": {
+        "id": 120,
+        "relationship_type": "related",
+        "body": "The past form of う-Verbs expresses a completed action or an event that took place in the past, similar to the English '-ed.' In contrast, だった and でした are used after nouns to express the past tense, indicating that something 'was' or 'were' in a certain state. While the meaning (something happened or existed in the past) is the same, the grammatical expression differs depending on the word type (verb vs. noun).",
+        "first_relatable": {
+          "id": 40,
+          "slug": "だった-でした",
+          "title": "だった・でした",
+          "meaning": "Was, Were (Past tense) ",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 41,
+          "slug": "う-verb-past",
+          "title": "う-Verb (Past)",
+          "meaning": "う - Verbs (Past tense)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "121",
+      "type": "related_content",
+      "attributes": {
+        "id": 121,
+        "relationship_type": "related",
+        "body": "だった・でした and だ are all used to assert or identify something. The difference among them is in formality and tense. だ is casual and present tense (similar to the English 'is'/'am'), while だった・でした is past tense ('was'), with だった being casual (the past tense of だ) and でした being polite (the past tense of です).",
+        "first_relatable": {
+          "id": 40,
+          "slug": "だった-でした",
+          "title": "だった・でした",
+          "meaning": "Was, Were (Past tense) ",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 1,
+          "slug": "だ",
+          "title": "だ",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1328",
+      "type": "related_content",
+      "attributes": {
+        "id": 1328,
+        "relationship_type": "related",
+        "body": "です and だった・でした are all forms of 'is' or 'to be,' but they show different tenses. です is used for the present or future, like in あれは猫です ('That is a cat'). だった and でした are past tense—だった is casual, and でした is polite. For example, あれは猫だった means 'That was a cat.'",
+        "first_relatable": {
+          "id": 2,
+          "slug": "です",
+          "title": "です",
+          "meaning": "To be, Is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 40,
+          "slug": "だった-でした",
+          "title": "だった・でした",
+          "meaning": "Was, Were (Past tense) ",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1054 @@
+{
+  "data": {
+    "id": "539",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 539,
+      "level": "JLPT2",
+      "lesson_id": 35,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "はたして",
+      "nuance": "(A)の<strong>結果（けっか）</strong>を示（しめ）す表現（ひょうげん）。「どの様（よう）に(A)」や「もちろん(A)」と解釈（かいしゃく）することができる。",
+      "grammar_order": 618,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 540,
+        "title": "甲斐がある",
+        "slug": "甲斐がある"
+      },
+      "previous_grammar_point": {
+        "id": 605,
+        "title": "に先立ち",
+        "slug": "に先立ち"
+      },
+      "lesson_count": "4/18",
+      "title": "はたして",
+      "furigana": "果（は）たして",
+      "meaning": "Wonder if ~ (really)?, Wonder how ~ (actually)?, Sure enough, As expected",
+      "nuance_translation": "An expression used to highlight the <strong>end product</strong> of (A). Comes across as how actually when asking (A), or sure enough when stating (A).",
+      "rare_kanji_warning": "",
+      "caution": "<strong>果たして</strong> + Phrase → Mostly found in literature",
+      "polite_structure": "",
+      "casual_structure": "<strong>はたして</strong> + (Question) Phrase<br><strong>はたして</strong> + Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/17936",
+      "metadata": "はたして, 果たして, hatashite, adverb, literary, literature"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "182025",
+            "type": "study_question"
+          },
+          {
+            "id": "182026",
+            "type": "study_question"
+          },
+          {
+            "id": "182028",
+            "type": "study_question"
+          },
+          {
+            "id": "5670",
+            "type": "study_question"
+          },
+          {
+            "id": "184450",
+            "type": "study_question"
+          },
+          {
+            "id": "184451",
+            "type": "study_question"
+          },
+          {
+            "id": "182027",
+            "type": "study_question"
+          },
+          {
+            "id": "5667",
+            "type": "study_question"
+          },
+          {
+            "id": "5668",
+            "type": "study_question"
+          },
+          {
+            "id": "7001",
+            "type": "study_question"
+          },
+          {
+            "id": "7002",
+            "type": "study_question"
+          },
+          {
+            "id": "7000",
+            "type": "study_question"
+          },
+          {
+            "id": "5669",
+            "type": "study_question"
+          },
+          {
+            "id": "5671",
+            "type": "study_question"
+          },
+          {
+            "id": "5672",
+            "type": "study_question"
+          },
+          {
+            "id": "5673",
+            "type": "study_question"
+          },
+          {
+            "id": "5674",
+            "type": "study_question"
+          },
+          {
+            "id": "5675",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "633",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "583",
+            "type": "related_content"
+          },
+          {
+            "id": "156",
+            "type": "related_content"
+          },
+          {
+            "id": "618",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1335",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1336",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "182025",
+      "type": "study_question",
+      "attributes": {
+        "id": 182025,
+        "content": "<span class='study-area-input'>____</span>彼（かれ）が言（い）っていることは本当（ほんとう）なのだろうか。",
+        "answer": "はたして",
+        "alternate_grammar": [],
+        "kanji_answer": "果（は）たして",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/果たして彼が言っていることは本当なのだろうか。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>I wonder if</strong> what he is saying is the truth.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182026",
+      "type": "study_question",
+      "attributes": {
+        "id": 182026,
+        "content": "<span class='study-area-input'>____</span>、あのやり方（かた）で本当（ほんとう）に成功（せいこう）するのでしょうか。",
+        "answer": "はたして",
+        "alternate_grammar": [],
+        "kanji_answer": "果（は）たして",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/果たして、あのやり方で本当に成功するのでしょうか。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>I wonder if</strong> that approach will <strong>really</strong> work.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182028",
+      "type": "study_question",
+      "attributes": {
+        "id": 182028,
+        "content": "彼女（かのじょ）は自分（じぶん）の意見（いけん）を彼（かれ）に押（お）し付（つ）けようとしたが、<span class='study-area-input'>____</span>彼（かれ）は自分（じぶん）の意見（いけん）を変（か）えなかった。",
+        "answer": "はたして",
+        "alternate_grammar": [],
+        "kanji_answer": "果（は）たして",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼女は自分の意見を彼に押し付けようとしたが、果たして彼は自分の意見を変えなかった。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "She tried to push her opinions onto him, but <strong>as expected</strong> he did not change his.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5670",
+      "type": "study_question",
+      "attributes": {
+        "id": 5670,
+        "content": "<span class='name-highlight'>Ａ（エー）</span>：「バンジージャンプしてみたいなぁ〜。」 <br><span class='name-highlight'>Ｂ（ビー）</span>：「<span class='study-area-input'>____</span>できるかしら？」",
+        "answer": "はたして",
+        "alternate_grammar": [],
+        "kanji_answer": "果（は）たして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>結果（けっか）</strong>を示（しめ）す表現（ひょうげん）。「どの様（よう）に(A)」や「もちろん(A)」と解釈（かいしゃく）することができる。",
+        "tense": "Introspective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/A：「バンジージャンプしてみたいなぁ〜。」 B：「果たしてできるかしら？」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ほんとうに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすがに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "やっぱり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>A</span>: 'I want to try bungee jumping.' <br><span class='name-highlight'>B</span>: '<strong>I wonder if</strong> you can <strong>actually</strong> do it?'",
+        "nuance_translation": "An expression used to highlight the <strong>end product</strong> of (A). Comes across as how actually when asking (A), or sure enough when stating (A).",
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184450",
+      "type": "study_question",
+      "attributes": {
+        "id": 184450,
+        "content": "大学院（だいがくいん）に進学（しんがく）するのは<span data-gp-id='539'>果（は）たして</span>私（わたし）にメリットがあるのでしょうか？",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/大学院に進学するのは果たして私にメリットがあるのでしょうか？.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>I wonder if</strong> going on to graduate school will <strong>actually</strong> benefit me in the end.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184451",
+      "type": "study_question",
+      "attributes": {
+        "id": 184451,
+        "content": "彼（かれ）以外（いがい）誰（だれ）も仕事（しごと）に来（こ）なかったため、<span data-gp-id='539'>果（は）たして</span>彼（かれ）が全員（ぜんいん）の仕事（しごと）をすることになった。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼以外誰も仕事に来なかったため、果たして彼が全員の仕事をすることになった。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Since no one came to work except him, he ended up having to do everyone's job in the end <strong>as expected</strong>.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182027",
+      "type": "study_question",
+      "attributes": {
+        "id": 182027,
+        "content": "彼（かれ）は取引先（とりひきさき）の信頼（しんらい）を失（うしな）う事（こと）をしてしまった。<span class='study-area-input'>____</span>、彼（かれ）はクビになった。",
+        "answer": "はたして",
+        "alternate_grammar": [],
+        "kanji_answer": "果（は）たして",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼は取引先の信頼を失う事をしてしまった。果たして、彼はクビになった。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "He did something to lose the trust of his clients. <strong>As expected</strong> he was fired.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5667",
+      "type": "study_question",
+      "attributes": {
+        "id": 5667,
+        "content": "<span class='name-highlight'>迷子（まいご）</span>：「<span class='study-area-input'>____</span>どうやって帰（かえ）るの？」",
+        "answer": "はたして",
+        "alternate_grammar": [],
+        "kanji_answer": "果（は）たして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>結果（けっか）</strong>を示（しめ）す表現（ひょうげん）。「どの様（よう）に(A)」や「もちろん(A)」と解釈（かいしゃく）することができる。",
+        "tense": "Introspective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/迷子：「果たしてどうやって帰るの？」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ほんとうに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすがに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "やっぱり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Lost child</span>: '<strong>I wonder how</strong> will I <strong>actually </strong>get back home?'",
+        "nuance_translation": "An expression used to highlight the <strong>end product</strong> of (A). Comes across as how actually when asking (A), or sure enough when stating (A).",
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5668",
+      "type": "study_question",
+      "attributes": {
+        "id": 5668,
+        "content": "最近（さいきん）、「スポーツは健康（けんこう）に等（ひと）しい」とスローガンをよく耳（みみ）にする。<span class='study-area-input'>____</span>それは本当（ほんとう）なのでしょうか。",
+        "answer": "はたして",
+        "alternate_grammar": [],
+        "kanji_answer": "果（は）たして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>結果（けっか）</strong>を示（しめ）す表現（ひょうげん）。「どの様（よう）に(A)」や「もちろん(A)」と解釈（かいしゃく）することができる。",
+        "tense": "Introspective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/最近、「スポーツは健康に等しい」とスローガンをよく耳にする。果たしてそれは本当なのでしょうか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ほんとうに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすがに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "やっぱり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Lately, I often hear the slogan 'Sport is equal to health'. <strong>I wonder if</strong> that is <strong>really </strong>the case?",
+        "nuance_translation": "An expression used to highlight the <strong>end product</strong> of (A). Comes across as how actually when asking (A), or sure enough when stating (A).",
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7001",
+      "type": "study_question",
+      "attributes": {
+        "id": 7001,
+        "content": "かなり癖（くせ）のある字（じ）で宛名（あてな）を書（か）いていたが、<span class='study-area-input'>____</span>届（とど）くだろうか。",
+        "answer": "はたして",
+        "alternate_grammar": [],
+        "kanji_answer": "果（は）たして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>結果（けっか）</strong>を示（しめ）す表現（ひょうげん）。「どの様（よう）に(A)」や「もちろん(A)」と解釈（かいしゃく）することができる。",
+        "tense": "Introspective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/かなり癖のある字で宛名を書いていたが、果たして届くだろうか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ほんとうに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすがに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "やっぱり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I wrote the address in really quirky handwriting. <strong>I wonder if</strong> the letter will <strong>really</strong> make it.",
+        "nuance_translation": "An expression used to highlight the <strong>end product</strong> of (A). Comes across as how actually when asking (A), or sure enough when stating (A).",
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7002",
+      "type": "study_question",
+      "attributes": {
+        "id": 7002,
+        "content": "あんな怪（あや）しい格好（かっこう）で、<span class='study-area-input'>____</span>あのレストランに入（はい）れるのだろうか。",
+        "answer": "はたして",
+        "alternate_grammar": [],
+        "kanji_answer": "果（は）たして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>結果（けっか）</strong>を示（しめ）す表現（ひょうげん）。「どの様（よう）に(A)」や「もちろん(A)」と解釈（かいしゃく）することができる。",
+        "tense": "Introspective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あんな怪しい格好で、果たしてあのレストランに入れるのだろうか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ほんとうに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすがに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "やっぱり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>I wonder if</strong> (he) will be <strong>really</strong> able to get into that restaurant with that dodgy clothing.",
+        "nuance_translation": "An expression used to highlight the <strong>end product</strong> of (A). Comes across as how actually when asking (A), or sure enough when stating (A).",
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7000",
+      "type": "study_question",
+      "attributes": {
+        "id": 7000,
+        "content": "あんな厚（あつ）かましいお願（ねが）いをして、<span class='study-area-input'>____</span>うまくいくのだろうか。",
+        "answer": "はたして",
+        "alternate_grammar": [],
+        "kanji_answer": "果（は）たして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>結果（けっか）</strong>を示（しめ）す表現（ひょうげん）。「どの様（よう）に(A)」や「もちろん(A)」と解釈（かいしゃく）することができる。",
+        "tense": "Introspective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あんな厚かましいお願いをして、果たしてうまくいくのだろうか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ほんとうに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすがに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "やっぱり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>I wonder</strong>, with such an impudent request, <strong>if</strong> it will <strong>actually </strong>turn out well.",
+        "nuance_translation": "An expression used to highlight the <strong>end product</strong> of (A). Comes across as how actually when asking (A), or sure enough when stating (A).",
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5669",
+      "type": "study_question",
+      "attributes": {
+        "id": 5669,
+        "content": "ある人（ひと）は地球（ちきゅう）が平（たい）らであると証明（しょうめい）しようとしたが、<span class='study-area-input'>____</span>失敗（しっぱい）した。",
+        "answer": "はたして",
+        "alternate_grammar": [],
+        "kanji_answer": "果（は）たして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>結果（けっか）</strong>を示（しめ）す表現（ひょうげん）。「どの様（よう）に(A)」や「もちろん(A)」と解釈（かいしゃく）することができる。",
+        "tense": "Expected",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/ある人は地球が平らであると証明しようとしたが、果たして失敗した。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やっぱり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "やはり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "おもったとおり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "よそうどおり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ほんとうに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすがに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A certain person tried to prove that the Earth was flat, however, <strong>just as expected</strong> that person failed to do so.",
+        "nuance_translation": "An expression used to highlight the <strong>end product</strong> of (A). Comes across as how actually when asking (A), or sure enough when stating (A).",
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5671",
+      "type": "study_question",
+      "attributes": {
+        "id": 5671,
+        "content": "大学（だいがく）を中退（ちゅうたい）するのは<span class='study-area-input'>____</span>賢明（けんめい）な行動（こうどう）でしょうか。",
+        "answer": "はたして",
+        "alternate_grammar": [],
+        "kanji_answer": "果（は）たして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>結果（けっか）</strong>を示（しめ）す表現（ひょうげん）。「どの様（よう）に(A)」や「もちろん(A)」と解釈（かいしゃく）することができる。",
+        "tense": "Introspective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/大学を中退するのは果たして賢明な行動でしょうか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ほんとうに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすがに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "やっぱり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>I wonder if</strong> dropping out of university is <strong>really </strong>a wise thing to do?",
+        "nuance_translation": "An expression used to highlight the <strong>end product</strong> of (A). Comes across as how actually when asking (A), or sure enough when stating (A).",
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5672",
+      "type": "study_question",
+      "attributes": {
+        "id": 5672,
+        "content": "首相（しゅしょう）は減税（げんぜい）を約束（やくそく）した。<span class='study-area-input'>____</span>首相（しゅしょう）は公約（こうやく）を守（まも）らなかった。",
+        "answer": "はたして",
+        "alternate_grammar": [],
+        "kanji_answer": "果（は）たして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>結果（けっか）</strong>を示（しめ）す表現（ひょうげん）。「どの様（よう）に(A)」や「もちろん(A)」と解釈（かいしゃく）することができる。",
+        "tense": "Expected",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/首相は減税を約束した。果たして首相は公約を守らなかった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やっぱり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "やはり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "おもったとおり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "よそうどおり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ほんとうに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすがに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The prime minister promised to cut taxes. <strong>Sure enough</strong>, he broke his promise.",
+        "nuance_translation": "An expression used to highlight the <strong>end product</strong> of (A). Comes across as how actually when asking (A), or sure enough when stating (A).",
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5673",
+      "type": "study_question",
+      "attributes": {
+        "id": 5673,
+        "content": "シンポジウムの中（なか）で科学（かがく）者（しゃ）は<span class='study-area-input'>____</span>時間（じかん）旅行（りょこう）が可能（かのう）なのだろうかと疑問（ぎもん）に思（おも）った。",
+        "answer": "はたして",
+        "alternate_grammar": [],
+        "kanji_answer": "果（は）たして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>結果（けっか）</strong>を示（しめ）す表現（ひょうげん）。「どの様（よう）に(A)」や「もちろん(A)」と解釈（かいしゃく）することができる。",
+        "tense": "Introspective",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ほんとうに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすがに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "やっぱり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "At the symposium, scientists <strong>wondered if</strong> time travel is <strong>really </strong>possible.",
+        "nuance_translation": "An expression used to highlight the <strong>end product</strong> of (A). Comes across as how actually when asking (A), or sure enough when stating (A).",
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5674",
+      "type": "study_question",
+      "attributes": {
+        "id": 5674,
+        "content": "私（わたし）が今（いま）の二倍（にばい）の給料（きゅうりょう）を得（え）るとしたら、東京（とうきょう）で３（さん）ＬＤＫ（エルディーケー）の家（いえ）を<span class='study-area-input'>____</span>買（か）えるだろうか。",
+        "answer": "はたして",
+        "alternate_grammar": [],
+        "kanji_answer": "果（は）たして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>結果（けっか）</strong>を示（しめ）す表現（ひょうげん）。「どの様（よう）に(A)」や「もちろん(A)」と解釈（かいしゃく）することができる。",
+        "tense": "Introspective",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ほんとうに": {
+            "en": "Think interrogative emphasis or assumption/skepticism",
+            "es": ""
+          },
+          "さすが": {
+            "en": "Think interrogative emphasis or assumption/skepticism",
+            "es": ""
+          },
+          "さすがに": {
+            "en": "Think interrogative emphasis or assumption/skepticism",
+            "es": ""
+          },
+          "やっぱり": {
+            "en": "Nice try! Think interrogative emphasis or assumption/skepticism",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>I wonder if</strong> I would <strong>actually</strong> be able to buy a 3LDK in Tokyo, assuming that I earn twice as much as I do now.",
+        "nuance_translation": "An expression used to highlight the <strong>end product</strong> of (A). Comes across as how actually when asking (A), or sure enough when stating (A).",
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5675",
+      "type": "study_question",
+      "attributes": {
+        "id": 5675,
+        "content": "ゆきさんとともこさんは長（なが）い間（あいだ）、付（つ）き合（あ）っていた。<span class='study-area-input'>____</span>、彼（かれ）らは結婚（けっこん）した。",
+        "answer": "はたして",
+        "alternate_grammar": [],
+        "kanji_answer": "果（は）たして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)の<strong>結果（けっか）</strong>を示（しめ）す表現（ひょうげん）。「どの様（よう）に(A)」や「もちろん(A)」と解釈（かいしゃく）することができる。",
+        "tense": "Introspective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/ゆきさんとともこさんは長い間、付き合っていた。果たして、彼らは結婚した。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やっぱり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "やはり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "おもったとおり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "よそうどおり": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ほんとうに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さすがに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Yuki-san and Tomoko-san had been going out for a long time. <strong>Sure enough</strong>, they got married.",
+        "nuance_translation": "An expression used to highlight the <strong>end product</strong> of (A). Comes across as how actually when asking (A), or sure enough when stating (A).",
+        "extra_info": "",
+        "reviewable_id": 539,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "633",
+      "type": "writeup",
+      "attributes": {
+        "id": 633,
+        "body_ja": "<p>「<span data-gp-id='539'>果（は）たして</span>」は五段動詞（ごだんどうし）「果（は）たす」のテ形（けい）で、仮定（かてい）や疑問（ぎもん）を強調（きょうちょう）するために副詞的（ふくしてき）に使（つか）われる表現（ひょうげん）です。これは「一体（いったい） (A) なのだろうか」や「本当（ほんとう）に (A) なのだろうか」のような意味（いみ）を表（あらわ）します。</p>\r\n\r\n<p>「<span data-gp-id='539'>果（は）たして</span>」は「だろうか」「でしょうか」「かな」「かしら」などの文型（ぶんけい）とよく一緒（いっしょ）に使（つか）われ、これらの表現（ひょうげん）が持（も）つ推測（すいそく）や疑問（ぎもん）の意味（いみ）合（あ）いをより強調（きょうちょう）します。</p>\r\n\r\n<p>この表現（ひょうげん）は副詞（ふくし）として機能（きのう）するため、主（おも）に文（ぶん）の頭（あたま）で使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182025'>\r\n<li data-study-question='182026'>\r\n</ul>\r\n\r\n<p>「だろうか」のような疑問（ぎもん）表現（ひょうげん）を伴（ともな）わない文（ぶん）では、「果（は）たして」は「予想（よそう）通（どお）り」や「やはり」という意味（いみ）を表（あらわ）します。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182027'>\r\n<li data-study-question='182028'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>豆知識（まめちしき）</h4>\r\n<p>「<span data-gp-id='539'>果（は）たして</span>」は「完全（かんぜん）に実行（じっこう）する、実現（じつげん）する」を意味（いみ）する動詞（どうし）の「果（は）たす」から来（き）ており、「最終的（さいしゅうてき）にどうなるか／どうなったか」に対（たい）する話（はな）し手（て）の思考（しこう）を表（あらわ）します。そのため、ほとんどの場合（ばあい）、この文型（ぶんけい）は「最終的（さいしゅうてき）に」や「結局（けっきょく）のところ」のようなニュアンスを持（も）つと考（かんが）えられます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184450'>\r\n<li data-study-question='184451'></ul>\r\n\r\n<p>「<span data-gp-id='539'>果（は）たして</span>」を「最終的（さいしゅうてき）に」という意味（いみ）で使（つか）うときには、その結果（けっか）は話（はな）し手（て）が期待（きたい）していることや、最初（さいしょ）からそうなると予想（よそう）していたことになることを覚（おぼ）えておきましょう。</p></section>",
+        "body": "<p><span data-gp-id='539'>果（は）たして</span>, being the て-form of the う-Verb 果（は）たす 'to fulfill', or 'to come to fruition', is an expression that is used adverbially to strengthen phrases of speculation. It may be translated as 'I wonder if (A)', 'how actually (A)', or 'how really (A)'.</p>\r\n\r\n<p><span data-gp-id='539'>果（は）たして</span> will often be seen paired with other structures that indicate speculation, such as だろうか, でしょうか, かな, or かしら; and can be thought of as just emphasizing them further.</p>\r\n\r\n<p>As this grammar point will be used adverbially, it will primarily appear at the beginning of sentences.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182025'>\r\n<li data-study-question='182026'>\r\n</ul>\r\n\r\n<p>In sentences that do not include other speculative grammar patterns such as だろうか, <span data-gp-id='539'>果（は）たして</span> will regularly be translated as 'sure enough', or 'as expected'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182027'>\r\n<li data-study-question='182028'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>Fun-fact</h4>\r\n<p>Coming from the base meaning of 果（は）たす 'to come to fruition', <span data-gp-id='539'>果（は）たして</span> can be thought of as similar to 'in the end' in almost all cases, as it merely expresses the speakers thought process about 'what will' or 'what has' happened 'in the end'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184450'>\r\n<li data-study-question='184451'></ul>\r\n\r\n<p>If using this translation to memorize <span data-gp-id='539'>果（は）たして</span>, it should also be noted that the nuance of what happens 'in the end' is almost always something that the speaker either expected, or assumed would happen in the first place.</p></section>"
+      }
+    },
+    {
+      "id": "1335",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1335,
+        "site": "Mayonez",
+        "description": "どういう場合に使うのか！？",
+        "link": "https://mayonez.jp/topic/1088621",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1336",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1336,
+        "site": "JapaneseTest4You",
+        "description": "Additional example sentences",
+        "link": "http://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-はたして-hatashite/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "583",
+      "type": "related_content",
+      "attributes": {
+        "id": 583,
+        "relationship_type": "related",
+        "body": "Both かな and はたして express doubt, but their usage differs. かな is a casual sentence-ending particle meaning 'I wonder,' e.g. 寒いかな？ ('I wonder if it's cold?'). はたして appears at the beginning of a sentence for emphasis, often with かな or ～のだろうか, e.g. はたして来るのだろうか？ ('Will they really come, I wonder?').",
+        "first_relatable": {
+          "id": 120,
+          "slug": "かな",
+          "title": "かな",
+          "meaning": "I wonder",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 539,
+          "slug": "はたして",
+          "title": "はたして",
+          "meaning": "Wonder if ~ (really)?, Wonder how ~ (actually)?, Sure enough, As expected",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "156",
+      "type": "related_content",
+      "attributes": {
+        "id": 156,
+        "relationship_type": "related",
+        "body": "はたして conveys doubt or skepticism, questioning whether something is really true, as in はたして成功するだろうか (Will it really succeed?). さすが affirms expectations, showing that someone or something lives up to reputation, as in さすが先生だ (That’s just like the teacher).",
+        "first_relatable": {
+          "id": 539,
+          "slug": "はたして",
+          "title": "はたして",
+          "meaning": "Wonder if ~ (really)?, Wonder how ~ (actually)?, Sure enough, As expected",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 496,
+          "slug": "さすが",
+          "title": "さすが",
+          "meaning": "as one would expect, only natural, that is just like..., even",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "618",
+      "type": "related_content",
+      "attributes": {
+        "id": 618,
+        "relationship_type": "related",
+        "body": "～のだろうか means 'I wonder...' and is used at the end of a sentence to express doubt. はたして adds emphasis and often appears at the start of a sentence to heighten that feeling. They're often used together, as in 果たして勝てるのだろうか？ ('Can we actually win?').",
+        "first_relatable": {
+          "id": 366,
+          "slug": "のだろうか",
+          "title": "～のだろうか",
+          "meaning": "I wonder...",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 539,
+          "slug": "はたして",
+          "title": "はたして",
+          "meaning": "Wonder if ~ (really)?, Wonder how ~ (actually)?, Sure enough, As expected",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

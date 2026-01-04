@@ -1,0 +1,629 @@
+{
+  "data": {
+    "id": "997",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 997,
+      "level": "JLPT1",
+      "lesson_id": 49,
+      "part_of_speech": null,
+      "register": "",
+      "word_type": "",
+      "slug": "を前提に",
+      "nuance": null,
+      "grammar_order": 903,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 938,
+        "title": "ずにはすまない",
+        "slug": "ずにはすまない"
+      },
+      "previous_grammar_point": {
+        "id": 996,
+        "title": "ものとして",
+        "slug": "ものとして"
+      },
+      "lesson_count": "20/20",
+      "title": "を前提に",
+      "furigana": "を前提（ぜんてい）に",
+      "meaning": "On the premise of",
+      "nuance_translation": null,
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Noun + <strong><span class='gp-popout' data-gp-id='21'>を</span>前提（ぜんてい）に</strong><sup>(1)</sup><br>Verb + <span class='gp-popout' data-gp-id='98'>こと</span> + <strong><span class='gp-popout' data-gp-id='21'>を</span>前提（ぜんてい）に</strong><sup>(1)</sup><br><br><sup>(1)</sup> として、にして",
+      "part_of_speech_translation": null,
+      "register_translation": "",
+      "word_type_translation": "",
+      "discourse_link": "",
+      "metadata": "を前提に, をぜんていに, wozennteini, expression, hypothetical"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "10997",
+            "type": "study_question"
+          },
+          {
+            "id": "10996",
+            "type": "study_question"
+          },
+          {
+            "id": "183116",
+            "type": "study_question"
+          },
+          {
+            "id": "183117",
+            "type": "study_question"
+          },
+          {
+            "id": "183120",
+            "type": "study_question"
+          },
+          {
+            "id": "183118",
+            "type": "study_question"
+          },
+          {
+            "id": "183119",
+            "type": "study_question"
+          },
+          {
+            "id": "11001",
+            "type": "study_question"
+          },
+          {
+            "id": "10999",
+            "type": "study_question"
+          },
+          {
+            "id": "11000",
+            "type": "study_question"
+          },
+          {
+            "id": "10998",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "974",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "2148",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1577",
+            "type": "related_content"
+          },
+          {
+            "id": "1578",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": []
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "10997",
+      "type": "study_question",
+      "attributes": {
+        "id": 10997,
+        "content": "元々（もともと）、<span class='vocab-popout' data-vocab-id='301'> 一人（ひとり）</span>で<span class='vocab-popout' data-vocab-id='329'>住（す）</span><span class='gp-popout' data-gp-id='26'>む</span><span class='gp-popout' data-gp-id='98'>こと</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='30'>この</span><span class='vocab-popout' data-vocab-id='511'>家（いえ）</span><span class='gp-popout' data-gp-id='21'>を</span><span class='vocab-popout' data-vocab-id='1576'>建（た）て</span><span class='gp-popout' data-gp-id='895'>た</span><span class='gp-popout' data-gp-id='45'>から</span>、<span class='gp-popout' data-gp-id='93'>時（とき）</span><span class='gp-popout' data-gp-id='10'>が</span>経（た）ったら<span class='vocab-popout' data-vocab-id='248'>ちょっと</span>狭（せま）<span class='gp-popout' data-gp-id='57'>くなった</span>。",
+        "answer": "をぜんていに",
+        "alternate_grammar": [
+          "をぜんていにして",
+          "をぜんていとして"
+        ],
+        "kanji_answer": "を前提（ぜんてい）に",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/元々、 1人で住むことを前提にこの家を建てたから、時が経ったらちょっと狭くなった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ということをかんがえて": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "をふまえて": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "をふまえてうえで": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The house was originally built <strong>on the premise</strong> that I would live there by myself, so it turned out to be a little small over time.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 997,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10996",
+      "type": "study_question",
+      "attributes": {
+        "id": 10996,
+        "content": "<span class='vocab-popout' data-vocab-id='849'>私（わたし）</span>たち<span class='gp-popout' data-gp-id='3'>は</span>、<span class='vocab-popout' data-vocab-id='877'>結婚（けっこん）</span><span class='study-area-input'>____</span><span class='vocab-popout' data-vocab-id='318'>付（つ）</span><span class='gp-popout' data-gp-id='470'>き</span><span class='gp-popout' data-gp-id='627'>合（あ）って</span>いる。",
+        "answer": "をぜんていに",
+        "alternate_grammar": [
+          "をぜんていにして",
+          "をぜんていとして"
+        ],
+        "kanji_answer": "を前提（ぜんてい）に",
+        "kanji_alt_grammar": [
+          "を前提（ぜんてい）にして",
+          "を前提（ぜんてい）として",
+          "を前提（ぜんてい）に"
+        ],
+        "nuance": "",
+        "tense": "Literary",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/私たちは、結婚を前提に付き合っている。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ということをかんがえて": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "をふまえて": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "をふまえてうえで": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "We are dating <strong>on the premise</strong> of marriage.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 997,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183116",
+      "type": "study_question",
+      "attributes": {
+        "id": 183116,
+        "content": "\r\nこのパソコンは仕事場（しごとば）で使（つか）われること<span class='study-area-input'>____</span>作（つく）られているので、ゲームなどには向（む）いていないです。",
+        "answer": "をぜんていに",
+        "alternate_grammar": [],
+        "kanji_answer": "を前提（ぜんてい）に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/このパソコンは仕事場で使われることを前提に作られているので、ゲームなどには向いていないです。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nThis computer was made <strong>on the premise that</strong> it would be used in the workplace, so it is not suitable for games.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 997,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183117",
+      "type": "study_question",
+      "attributes": {
+        "id": 183117,
+        "content": "\r\n\r\n\r\n娘（むすめ）さんとは結婚（けっこん）<span class='study-area-input'>____</span>お付（つ）き合（あ）いをさせていただいています。",
+        "answer": "をぜんていに",
+        "alternate_grammar": [],
+        "kanji_answer": "を前提（ぜんてい）に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/娘さんとは結婚を前提にお付き合いをさせていただいています。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI am dating your daughter <strong>on the premise of</strong> marriage.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 997,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183120",
+      "type": "study_question",
+      "attributes": {
+        "id": 183120,
+        "content": "\r\n\r\n\r\nこのアパートは、一人（ひとり）で住（す）むこと<span class='study-area-input'>____</span>作（つく）られているので、キッチンとお風呂場（ふろば）は小（ちい）さいです。",
+        "answer": "をぜんていとして",
+        "alternate_grammar": [],
+        "kanji_answer": "を前提（ぜんてい）として",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/このアパートは、一人で住むことを前提として作られているので、キッチンとお風呂場は小さいです。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nThis apartment was built <strong>on the premise that</strong> only one person will live here, so the kitchen and the bathroom is small.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 997,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183118",
+      "type": "study_question",
+      "attributes": {
+        "id": 183118,
+        "content": "\r\n\r\n\r\nこの車（くるま）はレースをするということ<span class='study-area-input'>____</span>改造（かいぞう）されているため公道（こうどう）では運転（うんてん）できません。",
+        "answer": "をぜんていに",
+        "alternate_grammar": [],
+        "kanji_answer": "を前提（ぜんてい）に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/この車はレースをするということを前提に改造されているため公道では運転できません。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nThis car was customized <strong>on the premise of</strong> racing, so you can’t drive it on public roads.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 997,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183119",
+      "type": "study_question",
+      "attributes": {
+        "id": 183119,
+        "content": "\r\n名前（なまえ）を出（だ）さないということ<span class='study-area-input'>____</span>、労基（ろうき）に上司（じょうし）のパワハラなどを通報（つうほう）した。",
+        "answer": "をぜんていにして",
+        "alternate_grammar": [],
+        "kanji_answer": "を前提（ぜんてい）にして",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/名前を出さないということを前提にして、労基に上司のパワハラなどを通報した。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>On the premise that</strong> they don’t make my name known, I reported to the Labor standards inspection office about my boss harassing me.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 997,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "11001",
+      "type": "study_question",
+      "attributes": {
+        "id": 11001,
+        "content": "当社（とうしゃ）<span class='gp-popout' data-gp-id='6'>の</span>製品（せいひん）<span class='gp-popout' data-gp-id='3'>は</span>長期（ちょうき）使用（しよう）<span class='study-area-input'>____</span>設計（せっけい）されています。",
+        "answer": "をぜんていに",
+        "alternate_grammar": [
+          "をぜんていにして",
+          "をぜんていとして"
+        ],
+        "kanji_answer": "を前提（ぜんてい）に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Literary",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/当社の製品は長期使用を前提に設計されています。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ということをかんがえて": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "をふまえて": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "をふまえてうえで": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Our products are engineered <strong>on the premise</strong> of long-term use.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 997,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10999",
+      "type": "study_question",
+      "attributes": {
+        "id": 10999,
+        "content": "<span class='vocab-popout' data-vocab-id='462'>多（おお）</span><span class='gp-popout' data-gp-id='470'>く</span><span class='gp-popout' data-gp-id='16'>の</span><span class='vocab-popout' data-vocab-id='1449'>家庭（かてい）</span><span class='vocab-popout' data-vocab-id='2153'>用（よう）</span><span class='vocab-popout' data-vocab-id='83'>ゲーム</span>機（き）<span class='gp-popout' data-gp-id='21'>を</span>所有（しょゆう）<span class='gp-popout' data-gp-id='22'>し</span><span class='gp-popout' data-gp-id='416'>て</span>いる<span class='vocab-popout' data-vocab-id='300'>人（ひと）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='vocab-popout' data-vocab-id='83'>ゲーム</span><span class='gp-popout' data-gp-id='10'>が</span><span class='vocab-popout' data-vocab-id='874'>終（お）わ</span><span class='gp-popout' data-gp-id='41'>った</span>ら<span class='vocab-popout' data-vocab-id='452'>売（う）</span><span class='gp-popout' data-gp-id='26'>る</span>こと<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='37'>その</span><span class='vocab-popout' data-vocab-id='83'>ゲーム</span><span class='gp-popout' data-gp-id='21'>を</span><span class='vocab-popout' data-vocab-id='974'>買（か）</span><span class='gp-popout' data-gp-id='416'>って</span>いる。",
+        "answer": "をぜんていに",
+        "alternate_grammar": [
+          "をぜんていにして",
+          "をぜんていとして"
+        ],
+        "kanji_answer": "を前提（ぜんてい）に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Literary",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/多くの家庭用ゲーム機を所有している人はゲームが終わったら売ることを前提にそのゲームを買っている。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ということをかんがえて": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "をふまえて": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "をふまえてうえで": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Many console owners purchase games based <strong>on the premise</strong> that they will sell them after finishing.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 997,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "11000",
+      "type": "study_question",
+      "attributes": {
+        "id": 11000,
+        "content": "<span class='vocab-popout' data-vocab-id='685'>本（ほん）</span><span class='vocab-popout' data-vocab-id='621'>教科書（きょうかしょ）</span><span class='gp-popout' data-gp-id='3'>は</span>、<span class='vocab-popout' data-vocab-id='624'>文法（ぶんぽう）</span><span class='gp-popout' data-gp-id='236'>に関（かん）する</span>知識（ちしき）<span class='gp-popout' data-gp-id='13'>がある</span>こと<span class='study-area-input'>____</span>書（か）かれています。",
+        "answer": "をぜんていに",
+        "alternate_grammar": [
+          "をぜんていにして",
+          "をぜんていとして"
+        ],
+        "kanji_answer": "を前提（ぜんてい）に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Literary",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/本教科書は、文法に関する知識があることを前提に書かれています。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ということをかんがえて": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "をふまえて": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "をふまえてうえで": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This textbook was written <strong>on the premise</strong> that you have an understanding of basic grammar.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 997,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10998",
+      "type": "study_question",
+      "attributes": {
+        "id": 10998,
+        "content": "原価（げんか）見積（みつもり）<span class='gp-popout' data-gp-id='3'>は</span>、建材（けんざい）<span class='gp-popout' data-gp-id='6'>の</span>価格（かかく）<span class='gp-popout' data-gp-id='10'>が</span>緩（ゆる）やかに上昇（じょうしょう）<span class='gp-popout' data-gp-id='22'>する</span>こと<span class='study-area-input'>____</span>計算（けいさん）<span class='gp-popout' data-gp-id='145'>されます</span>。",
+        "answer": "をぜんていに",
+        "alternate_grammar": [
+          "をぜんていにして",
+          "をぜんていとして"
+        ],
+        "kanji_answer": "を前提（ぜんてい）に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Literary",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/原価見積は、建材の価格が緩やかに上昇することを前提に計算されます。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ということをかんがえて": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "をふまえて": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "をふまえてうえで": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Cost estimates are calculated <strong>on the premise</strong> of a slow increase in the price of building materials.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 997,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "974",
+      "type": "writeup",
+      "attributes": {
+        "id": 974,
+        "body_ja": "<p>「<span data-gp-id='997'>を前提（ぜんてい）に</span>」は、副助詞（ふくじょし）「を」、名詞（めいし）「前提（ぜんてい）」、そして格助詞（かくじょし）「に」を組（く）み合（あ）わせた文型（ぶんけい）です。(A) を土台（どだい）となる考（かんが）えや目的（もくてき）として、その上（うえ）で (B) の行動（こうどう）をすることを表（あらわ）します。意味（いみ）としては、「(A) を条件（じょうけん）として (B)」「(A) を念頭（ねんとう）に置（お）いて (B)」「(A) ありきで (B)」などが挙（あ）げられます。</p>\r\n\r\n<p>この文法（ぶんぽう）は、名詞（めいし）の後（あと）、または「こと」によって名詞化（めいしか）された動詞（どうし）の後（あと）に置（お）かれます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183116'>\r\n<li data-study-question='183117'>\r\n<li data-study-question='183118'>\r\n</ul>\r\n\r\n<p>また、「に」の代（か）わりに「にして」や「として」が使（つか）われることもあります。これらの語句（ごく）を使（つか）うと、表現（ひょうげん）の印象（いんしょう）がほんの少（すこ）しだけ変（か）わります。「を前提（ぜんてい）にして」は「(A) という前提（ぜんてい）に向（む）かって (B)」のように、より能動的（のうどうてき）に聞（き）こえますが、「を前提（ぜんてい）として」は「(A) という前提（ぜんてい）をもとにして (B)」のように、より受動的（じゅどうてき）に聞（き）こえます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183119'>\r\n<li data-study-question='183120'>\r\n</ul>",
+        "body": "<p><span data-gp-id='997'>を前提（ぜんてい）に</span> is a pattern that combines the <span data-term='副助詞・ふくじょし'>adverbial particle</span> を, the noun 前提（ぜんてい） ‘premise’ or ‘hypothesis’, and the <span data-term='格助詞・かくじょし'>case-marking particle</span> に. It is often translated as ‘on the premise of (A)’, and marks something as the base thought or goal toward which some other (B) action is being taken.</p>\r\n\r\n<p>This structure will be used following nouns, or verbs that have been nominalized with こと.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183116'>\r\n<li data-study-question='183117'>\r\n<li data-study-question='183118'>\r\n</ul>\r\n\r\n<p>Alternatively, either にして or として may be used in place of に by itself. This only slightly changes the nuance in the same way that is to be expected of these structures. を前提（ぜんてい）にして will sound more active as ‘toward the premise of (A), (B)’. While を前提（ぜんてい）として sounds more passive as ‘with (A) as the premise (B).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183119'>\r\n<li data-study-question='183120'>\r\n</ul>"
+      }
+    },
+    {
+      "id": "2148",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2148,
+        "source": "Sou Matone N1",
+        "location": "Page 104",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1577",
+      "type": "related_content",
+      "attributes": {
+        "id": 1577,
+        "relationship_type": "related",
+        "body": "Both refer to using information as a basis, but the stance is different. を前提に means ‘on the assumption that’ and treats something as a condition that must be accepted before proceeding, often hypothetical or conditional, as in 雨が降ることを前提に計画を立てる ('We make the plan assuming it will rain.'). を踏まえて means ‘taking into account’ and is used after facts or results that are already known, emphasizing reflection or consideration rather than assumption, as in 調査結果を踏まえて方針を決めた ('We decided the policy taking the survey results into account.').",
+        "first_relatable": {
+          "id": 997,
+          "slug": "を前提に",
+          "title": "を前提に",
+          "meaning": "On the premise of",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 814,
+          "slug": "を踏まえて",
+          "title": "を踏まえて",
+          "meaning": "Based on, Considering, Keeping in mind, Taking into account, Therefore",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1578",
+      "type": "related_content",
+      "attributes": {
+        "id": 1578,
+        "relationship_type": "related",
+        "body": "Both indicate a basis, but the type of basis differs. を前提に sets a condition or assumption that must hold true, often before action is taken, as in 合意があることを前提に話を進める ('We proceed with the discussion on the assumption that there is agreement.'). をもとに means ‘based on’ and refers to concrete materials, data, or sources actually used to create or decide something, as in 実話をもとに映画が作られた ('The movie was made based on a true story.').",
+        "first_relatable": {
+          "id": 997,
+          "slug": "を前提に",
+          "title": "を前提に",
+          "meaning": "On the premise of",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 550,
+          "slug": "をもとに",
+          "title": "をもとに",
+          "meaning": "Based on, From, According to",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

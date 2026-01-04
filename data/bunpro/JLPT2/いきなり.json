@@ -1,0 +1,868 @@
+{
+  "data": {
+    "id": "500",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 500,
+      "level": "JLPT2",
+      "lesson_id": 39,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "いきなり",
+      "nuance": "何（なに）かを行（おこな）って(A)になるという意味（いみ）をする表現（ひょうげん）。<strong>急（きゅう）にや突然（とつぜん）</strong>など、<strong>予想（よそう）外（がい）</strong>のことが起（お）こった時（とき）に使（つか）われることが多（おお）い。",
+      "grammar_order": 703,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 412,
+        "title": "といった",
+        "slug": "といった"
+      },
+      "previous_grammar_point": {
+        "id": 698,
+        "title": "たちまち",
+        "slug": "たちまち"
+      },
+      "lesson_count": "6/23",
+      "title": "いきなり",
+      "furigana": "いきなり",
+      "meaning": "For no reason, Suddenly, All of a sudden",
+      "nuance_translation": "An expression meaning to go and become (A). Often used to mean <strong>suddenly</strong>, or <strong>abruptly</strong>, when something <strong>uncontrollable</strong> happens.",
+      "rare_kanji_warning": "行き成り",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<strong>いきなり</strong> + (Action) Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/17582",
+      "metadata": "いきなり, 行き成り, ikinari, adverb, suddenly, all of a sudden, for no reason"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "182365",
+            "type": "study_question"
+          },
+          {
+            "id": "182366",
+            "type": "study_question"
+          },
+          {
+            "id": "182367",
+            "type": "study_question"
+          },
+          {
+            "id": "6713",
+            "type": "study_question"
+          },
+          {
+            "id": "3839",
+            "type": "study_question"
+          },
+          {
+            "id": "6708",
+            "type": "study_question"
+          },
+          {
+            "id": "6711",
+            "type": "study_question"
+          },
+          {
+            "id": "6710",
+            "type": "study_question"
+          },
+          {
+            "id": "6712",
+            "type": "study_question"
+          },
+          {
+            "id": "6705",
+            "type": "study_question"
+          },
+          {
+            "id": "3838",
+            "type": "study_question"
+          },
+          {
+            "id": "6707",
+            "type": "study_question"
+          },
+          {
+            "id": "6709",
+            "type": "study_question"
+          },
+          {
+            "id": "3837",
+            "type": "study_question"
+          },
+          {
+            "id": "6706",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "716",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1255",
+            "type": "related_content"
+          },
+          {
+            "id": "1254",
+            "type": "related_content"
+          },
+          {
+            "id": "776",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1102",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1103",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1104",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "182365",
+      "type": "study_question",
+      "attributes": {
+        "id": 182365,
+        "content": "<span class='study-area-input'>____</span>電話（でんわ）してごめん。ちょっと相談（そうだん）したい事（こと）があるんだけど今（いま）時間（じかん）大丈夫（だいじょうぶ）？",
+        "answer": "いきなり",
+        "alternate_grammar": [],
+        "kanji_answer": "いきなり",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/いきなり電話してごめん。ちょっと相談したい事があるんだけど今時間大丈夫？.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Sorry for calling you <strong>suddenly</strong>. I need to talk to you about something, but is now a good time for you?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 500,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182366",
+      "type": "study_question",
+      "attributes": {
+        "id": 182366,
+        "content": "<span class='study-area-input'>____</span>雨（あめ）が降（ふ）ってきたからびしょびしょだよ。",
+        "answer": "いきなり",
+        "alternate_grammar": [],
+        "kanji_answer": "いきなり",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/いきなり雨が降ってきたからびしょびしょだよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It <strong>suddenly</strong> started raining and I'm drenched.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 500,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182367",
+      "type": "study_question",
+      "attributes": {
+        "id": 182367,
+        "content": "ペットのワンちゃんが<span class='study-area-input'>____</span>吠（ほ）え出（だ）したからびっくりして起（お）きた。",
+        "answer": "いきなり",
+        "alternate_grammar": [],
+        "kanji_answer": "いきなり",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/ペットのワンちゃんがいきなり吠え出したからびっくりして起きた。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I was startled awake when my pet dog <strong>suddenly</strong> started barking.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 500,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6713",
+      "type": "study_question",
+      "attributes": {
+        "id": 6713,
+        "content": "<span class='study-area-input'>____</span>飛（と）び込（こ）んだ店（みせ）で契約（けいやく）が取（と）れました。",
+        "answer": "いきなり",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）き成（な）り",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを行（おこな）って(A)になるという意味（いみ）をする表現（ひょうげん）。<strong>急（きゅう）にや突然（とつぜん）</strong>など、<strong>予想（よそう）外（がい）</strong>のことが起（お）こった時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/行き成り飛び込んだ店で契約が取れました。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きゅうに": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "とつぜん": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "ぐうぜん": {
+            "en": "More abrupt",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I was able to land a contract with the shop that I <strong>suddenly</strong> showed up to unannounced.",
+        "nuance_translation": "An expression meaning to go and become (A). Often used to mean <strong>suddenly</strong>, or <strong>abruptly</strong>, when something <strong>uncontrollable</strong> happens.",
+        "extra_info": "",
+        "reviewable_id": 500,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3839",
+      "type": "study_question",
+      "attributes": {
+        "id": 3839,
+        "content": "散歩（さんぽ）の最中（さいちゅう）に、岩村（いわむら）さんが<span class='study-area-input'>____</span><br>「好（す）きな女（おんな）の子（こ）がいるの？」と私（わたし）に聞（き）いたので、びっくりした。",
+        "answer": "いきなり",
+        "alternate_grammar": [
+          "いきなり",
+          "きゅうに",
+          "とつぜん"
+        ],
+        "kanji_answer": "行（い）き成（な）り",
+        "kanji_alt_grammar": [
+          "行（い）き成（な）り",
+          "急（きゅう）に",
+          "突然（とつぜん）"
+        ],
+        "nuance": "何（なに）かを行（おこな）って(A)になるという意味（いみ）をする表現（ひょうげん）。<strong>急（きゅう）にや突然（とつぜん）</strong>など、<strong>予想（よそう）外（がい）</strong>のことが起（お）こった時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Unexpected",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/散歩の最中に、岩村さんが行き成り「好きな女の子がいるの？」と私に聞いたので、びっくりした。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "In the middle of our walk, Iwamura-san <strong>suddenly</strong> asked me<br> 'Do you have a girl you like?', and it surprised me.",
+        "nuance_translation": "An expression meaning to go and become (A). Often used to mean <strong>suddenly</strong>, or <strong>abruptly</strong>, when something <strong>uncontrollable</strong> happens.",
+        "extra_info": "",
+        "reviewable_id": 500,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6708",
+      "type": "study_question",
+      "attributes": {
+        "id": 6708,
+        "content": "<span class='study-area-input'>____</span>テーマと違（ちが）う話（はなし）をするのはやめてください。",
+        "answer": "いきなり",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）き成（な）り",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを行（おこな）って(A)になるという意味（いみ）をする表現（ひょうげん）。<strong>急（きゅう）にや突然（とつぜん）</strong>など、<strong>予想（よそう）外（がい）</strong>のことが起（お）こった時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/行き成りテーマと違う話をするのはやめてください。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きゅうに": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "とつぜん": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "ぐうぜん": {
+            "en": "More abrupt",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Please stop <strong>abruptly</strong> talking about stuff different from the current project <strong>for no reason</strong>.",
+        "nuance_translation": "An expression meaning to go and become (A). Often used to mean <strong>suddenly</strong>, or <strong>abruptly</strong>, when something <strong>uncontrollable</strong> happens.",
+        "extra_info": "",
+        "reviewable_id": 500,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6711",
+      "type": "study_question",
+      "attributes": {
+        "id": 6711,
+        "content": "<span class='study-area-input'>____</span>電波（でんぱ）が切（き）れてしまうのは困（こま）る。",
+        "answer": "いきなり",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）き成（な）り",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを行（おこな）って(A)になるという意味（いみ）をする表現（ひょうげん）。<strong>急（きゅう）にや突然（とつぜん）</strong>など、<strong>予想（よそう）外（がい）</strong>のことが起（お）こった時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Unexpected",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/いきなり電波が切れてしまうのは困る。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きゅうに": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "とつぜん": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "ぐうぜん": {
+            "en": "More abrupt",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Suddenly</strong> losing phone service gets on my nerves.",
+        "nuance_translation": "An expression meaning to go and become (A). Often used to mean <strong>suddenly</strong>, or <strong>abruptly</strong>, when something <strong>uncontrollable</strong> happens.",
+        "extra_info": "",
+        "reviewable_id": 500,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6710",
+      "type": "study_question",
+      "attributes": {
+        "id": 6710,
+        "content": "<span class='study-area-input'>____</span>の展開（てんかい）に驚（おどろ）きを隠（かく）せない。",
+        "answer": "いきなり",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）き成（な）り",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを行（おこな）って(A)になるという意味（いみ）をする表現（ひょうげん）。<strong>急（きゅう）にや突然（とつぜん）</strong>など、<strong>予想（よそう）外（がい）</strong>のことが起（お）こった時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Unexpected",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/いきなりの展開に驚きを隠せない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きゅうに": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "とつぜん": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "ぐうぜん": {
+            "en": "More abrupt",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I can't hide my surprise at the <strong>sudden</strong> development.",
+        "nuance_translation": "An expression meaning to go and become (A). Often used to mean <strong>suddenly</strong>, or <strong>abruptly</strong>, when something <strong>uncontrollable</strong> happens.",
+        "extra_info": "",
+        "reviewable_id": 500,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6712",
+      "type": "study_question",
+      "attributes": {
+        "id": 6712,
+        "content": "床屋（とこや）さんが何（なに）も聞（き）かずに<span class='study-area-input'>____</span>髪（かみ）を切（き）り始（はじ）めた。",
+        "answer": "いきなり",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）き成（な）り",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを行（おこな）って(A)になるという意味（いみ）をする表現（ひょうげん）。<strong>急（きゅう）にや突然（とつぜん）</strong>など、<strong>予想（よそう）外（がい）</strong>のことが起（お）こった時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/床屋さんが何も聞かずに行き成り髪を切り始めた。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きゅうに": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "とつぜん": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "ぐうぜん": {
+            "en": "More abrupt",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The barber <strong>suddenly</strong> began cutting my hair without asking anything.",
+        "nuance_translation": "An expression meaning to go and become (A). Often used to mean <strong>suddenly</strong>, or <strong>abruptly</strong>, when something <strong>uncontrollable</strong> happens.",
+        "extra_info": "",
+        "reviewable_id": 500,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6705",
+      "type": "study_question",
+      "attributes": {
+        "id": 6705,
+        "content": "<span class='study-area-input'>____</span>難問（なんもん）に突（つ）き当（あ）たってしまった。",
+        "answer": "いきなり",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）き成（な）り",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを行（おこな）って(A)になるという意味（いみ）をする表現（ひょうげん）。<strong>急（きゅう）にや突然（とつぜん）</strong>など、<strong>予想（よそう）外（がい）</strong>のことが起（お）こった時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/行き成り難問に突き当たってしまった。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きゅうに": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "とつぜん": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "ぐうぜん": {
+            "en": "More abrupt",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I <strong>suddenly</strong>, and unfortunately, ran into a hard problem.",
+        "nuance_translation": "An expression meaning to go and become (A). Often used to mean <strong>suddenly</strong>, or <strong>abruptly</strong>, when something <strong>uncontrollable</strong> happens.",
+        "extra_info": "",
+        "reviewable_id": 500,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3838",
+      "type": "study_question",
+      "attributes": {
+        "id": 3838,
+        "content": "お婆（ばあ）さんは何（なに）も言（い）わず、<span class='study-area-input'>____</span>私（わたし）を抱（だ）きしめました。",
+        "answer": "いきなり",
+        "alternate_grammar": [
+          "いきなり",
+          "きゅうに",
+          "とつぜん"
+        ],
+        "kanji_answer": "行（い）き成（な）り",
+        "kanji_alt_grammar": [
+          "急（きゅう）に",
+          "突然（とつぜん）",
+          "行（い）き成（な）り"
+        ],
+        "nuance": "何（なに）かを行（おこな）って(A)になるという意味（いみ）をする表現（ひょうげん）。<strong>急（きゅう）にや突然（とつぜん）</strong>など、<strong>予想（よそう）外（がい）</strong>のことが起（お）こった時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/お婆さんは何も言わず、行き成り私を抱きしめました。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Grandma, without saying a word, <strong>suddenly</strong> hugged me.",
+        "nuance_translation": "An expression meaning to go and become (A). Often used to mean <strong>suddenly</strong>, or <strong>abruptly</strong>, when something <strong>uncontrollable</strong> happens.",
+        "extra_info": "",
+        "reviewable_id": 500,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6707",
+      "type": "study_question",
+      "attributes": {
+        "id": 6707,
+        "content": "そんな<span class='study-area-input'>____</span>停車（ていしゃ）したら危（あぶ）ないですよ。",
+        "answer": "いきなり",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）き成（な）り",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを行（おこな）って(A)になるという意味（いみ）をする表現（ひょうげん）。<strong>急（きゅう）にや突然（とつぜん）</strong>など、<strong>予想（よそう）外（がい）</strong>のことが起（お）こった時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/そんな行き成り停車したら危ないですよ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きゅうに": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "とつぜん": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "ぐうぜん": {
+            "en": "More abrupt",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Abruptly</strong> stopping like that is dangerous!",
+        "nuance_translation": "An expression meaning to go and become (A). Often used to mean <strong>suddenly</strong>, or <strong>abruptly</strong>, when something <strong>uncontrollable</strong> happens.",
+        "extra_info": "",
+        "reviewable_id": 500,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6709",
+      "type": "study_question",
+      "attributes": {
+        "id": 6709,
+        "content": "<span class='study-area-input'>____</span>手続（てつづ）きはできません。書類（しょるい）を揃（そろ）えてください。",
+        "answer": "いきなり",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）き成（な）り",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを行（おこな）って(A)になるという意味（いみ）をする表現（ひょうげん）。<strong>急（きゅう）にや突然（とつぜん）</strong>など、<strong>予想（よそう）外（がい）</strong>のことが起（お）こった時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/行き成り手続きはできません。書類を揃えてください。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きゅうに": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "とつぜん": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "ぐうぜん": {
+            "en": "More abrupt",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I cannot just <strong>all of a sudden</strong> process it. Please put the documents in order.",
+        "nuance_translation": "An expression meaning to go and become (A). Often used to mean <strong>suddenly</strong>, or <strong>abruptly</strong>, when something <strong>uncontrollable</strong> happens.",
+        "extra_info": "",
+        "reviewable_id": 500,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3837",
+      "type": "study_question",
+      "attributes": {
+        "id": 3837,
+        "content": "弟（おとうと）は、<span class='study-area-input'>____</span>手（て）づかみでご飯（はん）を食（た）べ始（はじ）めた。",
+        "answer": "いきなり",
+        "alternate_grammar": [
+          "いきなり",
+          "きゅうに",
+          "とつぜん"
+        ],
+        "kanji_answer": "行（い）き成（な）り",
+        "kanji_alt_grammar": [
+          "きゅうに",
+          "とつぜん",
+          "行（い）き成（な）り"
+        ],
+        "nuance": "何（なに）かを行（おこな）って(A)になるという意味（いみ）をする表現（ひょうげん）。<strong>急（きゅう）にや突然（とつぜん）</strong>など、<strong>予想（よそう）外（がい）</strong>のことが起（お）こった時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/弟は、行き成り手づかみでご飯を食べ始めた。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "My younger brother <strong>suddenly</strong> started eating rice with his hands <strong>for no reason</strong>.",
+        "nuance_translation": "An expression meaning to go and become (A). Often used to mean <strong>suddenly</strong>, or <strong>abruptly</strong>, when something <strong>uncontrollable</strong> happens.",
+        "extra_info": "",
+        "reviewable_id": 500,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6706",
+      "type": "study_question",
+      "attributes": {
+        "id": 6706,
+        "content": "出会（であ）って<span class='study-area-input'>____</span>結婚（けっこん）を申（もう）し込（こ）むなんて、何（なに）を考（かんが）えているんだ。",
+        "answer": "いきなり",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）き成（な）り",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かを行（おこな）って(A)になるという意味（いみ）をする表現（ひょうげん）。<strong>急（きゅう）にや突然（とつぜん）</strong>など、<strong>予想（よそう）外（がい）</strong>のことが起（お）こった時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Unexpected",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/出会って行き成り結婚を申し込むなんて、何を考えているんだ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きゅうに": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "とつぜん": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "ぐうぜん": {
+            "en": "More abrupt",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "What are you thinking, <strong>suddenly</strong> proposing to someone after running into them.",
+        "nuance_translation": "An expression meaning to go and become (A). Often used to mean <strong>suddenly</strong>, or <strong>abruptly</strong>, when something <strong>uncontrollable</strong> happens.",
+        "extra_info": "",
+        "reviewable_id": 500,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "716",
+      "type": "writeup",
+      "attributes": {
+        "id": 716,
+        "body_ja": "<p>「<span data-gp-id='500'>いきなり</span>」は主（おも）にひらがなで書（か）かれる副詞（ふくし）で、「突然（とつぜん）」や「最初（さいしょ）から」と同（おな）じような意味（いみ）で使（つか）われます。「<span data-gp-id='500'>いきなり</span>」は、何（なに）かが前触（まえぶ）れなくまたは段階（だんかい）を踏（ふ）まずに起（お）こったときに使（つか）われます。</p>\r\n\r\n<p>「<span data-gp-id='500'>いきなり</span>」は副詞（ふくし）なので、文（ぶん）の始（はじ）めか、修飾（しゅうしょく）する動詞（どうし）の前（まえ）に置（お）かれます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182365'>\r\n<li data-study-question='182366'>\r\n<li data-study-question='182367'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>豆知識（まめちしき）</h4>\r\n<p>「<span data-gp-id='500'>いきなり</span>」は漢字（かんじ）の「行（い）き成（な）り」から来（き）ている言葉（ことば）ですが、漢字（かんじ）で書（か）かれることはほとんどありません。この「行（い）き成（な）り」は「物事（ものごと）の成（な）り行（ゆ）きに任（まか）せる」という意味（いみ）を表（あらわ）します。そのため、「いきなり」には本来（ほんらい）あるべき順序（じゅんじょ）や段階（だんかい）を飛（と）ばして、状況（じょうきょう）が急（きゅう）に変化（へんか）するというニュアンスがあります。一方（いっぽう）、類義語（るいぎご）である「突然（とつぜん）」は、予想外（よそうがい）の出来事（できごと）が一瞬（いっしゅん）で起（お）こることに焦点（しょうてん）を当（あ）てた表現（ひょうげん）です。</p></section>",
+        "body": "<p><span data-gp-id='500'>いきなり</span>, a word appearing almost exclusively in hiragana, is an adverb that conveys the meaning of 'suddenly', 'all of a sudden', or 'for no reason'. <span data-gp-id='500'>いきなり</span> indicates when something happens abruptly, and without any prior warning.</p>\r\n\r\n<p>As <span data-gp-id='500'>いきなり</span> is an adverb, it will primarily appear at the beginning of sentences, or directly before the verb that it is describing.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182365'>\r\n<li data-study-question='182366'>\r\n<li data-study-question='182367'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>Fun-fact</h4>\r\n<p><span data-gp-id='500'>いきなり</span> comes from <span data-gp-id='500'>行（い）き成（な）り</span>, but is rarely seen in its kanji form. This original meaning referred to a particular situation's development or unfolding. Due to this, although often being used purely as 'suddenly', it has a similar nuance to English phrases like 'a sudden turn of events'. This just expresses that the way the situation developed was abrupt or unexpected.</p></section>"
+      }
+    },
+    {
+      "id": "1102",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1102,
+        "site": "Japanese Stack Exchange",
+        "description": "Difference between いきなり, 急に, and 突然",
+        "link": "https://japanese.stackexchange.com/questions/14020/the-differences-between-いきなり-急きゅうに-and-突然とつぜん",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1103",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1103,
+        "site": "Maggie Sensei",
+        "description": "Example Sentences with いきなり、急に、and 突然",
+        "link": "http://maggiesensei.com/2015/06/09/how-to-use-是非-zehi/#comment-60351",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1104",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1104,
+        "site": "JapaneseTest4You",
+        "description": "Breakdown and Example Sentences",
+        "link": "http://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-いきなり-ikinari/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1255",
+      "type": "related_content",
+      "attributes": {
+        "id": 1255,
+        "relationship_type": "related",
+        "body": "Both convey suddenness. いきなり emphasizes lack of warning, as in いきなり泣き出した (She suddenly burst into tears). たちまち highlights speed or immediacy, as in 話題はたちまち広まった (The topic spread immediately).",
+        "first_relatable": {
+          "id": 500,
+          "slug": "いきなり",
+          "title": "いきなり",
+          "meaning": "For no reason, Suddenly, All of a sudden",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 698,
+          "slug": "たちまち",
+          "title": "たちまち",
+          "meaning": "Immediately, Quickly, Suddenly, In a moment or flash",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1254",
+      "type": "related_content",
+      "attributes": {
+        "id": 1254,
+        "relationship_type": "related",
+        "body": "いきなり highlights the suddenness or surprise of an action, as in いきなり泣き出した (She suddenly burst into tears). いつの間にか describes a change that happened unnoticed, focusing on the speaker’s realization, as in いつの間にか夜になっていた (Before I knew it, night had fallen).",
+        "first_relatable": {
+          "id": 500,
+          "slug": "いきなり",
+          "title": "いきなり",
+          "meaning": "For no reason, Suddenly, All of a sudden",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 613,
+          "slug": "いつの間にか",
+          "title": "いつの間にか",
+          "meaning": "Suddenly, Unnoticed, Without noticing, Too soon",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "776",
+      "type": "related_content",
+      "attributes": {
+        "id": 776,
+        "relationship_type": "related",
+        "body": "Both だす and いきなり express sudden action, but they differ in usage. だす attaches to verb stems to mean 'to suddenly start doing something.' For example, 動き出す 'begin to move'. In contrast, いきなり appears before verbs or phrases, like 'suddenly' in English. They can also be used together, as in いきなり動き出した ('It suddenly started moving.').",
+        "first_relatable": {
+          "id": 178,
+          "slug": "だす",
+          "title": "だす",
+          "meaning": "To suddenly begin, To start doing",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 500,
+          "slug": "いきなり",
+          "title": "いきなり",
+          "meaning": "For no reason, Suddenly, All of a sudden",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

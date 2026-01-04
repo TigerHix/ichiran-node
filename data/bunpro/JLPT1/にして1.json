@@ -1,0 +1,907 @@
+{
+  "data": {
+    "id": "780",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 780,
+      "level": "JLPT1",
+      "lesson_id": 42,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "にして1",
+      "nuance": "ある特定（とくてい）の段階（だんかい）や時間（じかん）を強調（きょうちょう）する表現（ひょうげん）。(A)<strong>から始（はじ）まって</strong>、(B)。",
+      "grammar_order": 769,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 781,
+        "title": "ものを",
+        "slug": "ものを"
+      },
+      "previous_grammar_point": {
+        "id": 779,
+        "title": "からする",
+        "slug": "からする"
+      },
+      "lesson_count": "11/17",
+      "title": "にして①",
+      "furigana": "にして ①",
+      "meaning": "At, Over, In, Only (after, when, or because)",
+      "nuance_translation": "An expression which emphasizes a specific phase or time. <strong>Going off</strong> (A), (B).",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Number + Counter + <strong>にして</strong><br>Noun + <strong>にして</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "",
+      "metadata": "にして, nishite, number, counter, expression, emphasis"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "10596",
+            "type": "study_question"
+          },
+          {
+            "id": "182606",
+            "type": "study_question"
+          },
+          {
+            "id": "182607",
+            "type": "study_question"
+          },
+          {
+            "id": "182608",
+            "type": "study_question"
+          },
+          {
+            "id": "182609",
+            "type": "study_question"
+          },
+          {
+            "id": "182610",
+            "type": "study_question"
+          },
+          {
+            "id": "10597",
+            "type": "study_question"
+          },
+          {
+            "id": "9076",
+            "type": "study_question"
+          },
+          {
+            "id": "9072",
+            "type": "study_question"
+          },
+          {
+            "id": "10595",
+            "type": "study_question"
+          },
+          {
+            "id": "10599",
+            "type": "study_question"
+          },
+          {
+            "id": "10600",
+            "type": "study_question"
+          },
+          {
+            "id": "10598",
+            "type": "study_question"
+          },
+          {
+            "id": "9074",
+            "type": "study_question"
+          },
+          {
+            "id": "9075",
+            "type": "study_question"
+          },
+          {
+            "id": "9077",
+            "type": "study_question"
+          },
+          {
+            "id": "9073",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "845",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1648",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1649",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1650",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1647",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1517",
+            "type": "related_content"
+          },
+          {
+            "id": "1518",
+            "type": "related_content"
+          },
+          {
+            "id": "1534",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2160",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2161",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "10596",
+      "type": "study_question",
+      "attributes": {
+        "id": 10596,
+        "content": "大学（だいがく）一（いち）年生（ねんせい）<span class='study-area-input'>____</span>起業（きぎょう）した友達（ともだち）の木村（きむら）はお金（かね）に余裕（よゆう）があるらしく、一緒（いっしょ）に食事（しょくじ）をするといつも奢（おご）ってくれる。",
+        "answer": "にして",
+        "alternate_grammar": [],
+        "kanji_answer": "にして",
+        "kanji_alt_grammar": [],
+        "nuance": "ある特定（とくてい）の段階（だんかい）や時間（じかん）を強調（きょうちょう）する表現（ひょうげん）。(A)<strong>から始（はじ）まって</strong>、(B)。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/大学一年生にして起業した友達の木村はお金に余裕があるらしく、一緒に食事をするといつも奢ってくれる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "で": {
+            "en": "Natural, but let's try to put more emphasis.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "As for my friend Kimura, who started his own enterprise <strong>in</strong> the first year of university, it appears as though he has an abundance of cash, and he always treats me if we eat together.",
+        "nuance_translation": "An expression which emphasizes a specific phase or time. <strong>Going off</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 780,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182606",
+      "type": "study_question",
+      "attributes": {
+        "id": 182606,
+        "content": "\r\n３０（さんじゅっ）歳（さい）<span class='study-area-input'>____</span>初（はじ）めて海外（かいがい）旅行（りょこう）に行（い）った。",
+        "answer": "にして",
+        "alternate_grammar": [],
+        "kanji_answer": "にして",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/３０歳にして初めて海外旅行に行った。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>At</strong> the age of 30, I traveled abroad for the first time.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 780,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182607",
+      "type": "study_question",
+      "attributes": {
+        "id": 182607,
+        "content": "\r\n\r\n\r\n五（ご）回目（かいめ）<span class='study-area-input'>____</span>やっと資格（しかく）を取（と）ることができた。",
+        "answer": "にして",
+        "alternate_grammar": [],
+        "kanji_answer": "にして",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/五回目にしてやっと資格を取ることができた。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI was finally able to get my qualification <strong>only after</strong> my fifth try.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 780,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182608",
+      "type": "study_question",
+      "attributes": {
+        "id": 182608,
+        "content": "\r\n\r\n\r\n犯人（はんにん）たちは道（みち）を曲（ま）がって、一瞬（いっしゅん）<span class='study-area-input'>____</span>暗闇（くらやみ）の中（なか）へと消（き）えた。",
+        "answer": "にして",
+        "alternate_grammar": [],
+        "kanji_answer": "にして",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/犯人たちは道を曲がって、一瞬にして暗闇の中へと消えた。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nThe perpetrators turned off the road and disappeared into the darkness <strong>in</strong> an instant.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 780,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182609",
+      "type": "study_question",
+      "attributes": {
+        "id": 182609,
+        "content": "\r\n５０（ごじゅっ）歳（さい）<span class='study-area-input'>____</span>ようやく、イタリアに住（す）んでいる従兄弟（いとこ）の家（いえ）に行（い）くことができた。",
+        "answer": "にして",
+        "alternate_grammar": [],
+        "kanji_answer": "にして",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/５０歳にしてようやく、イタリアに住んでいる従兄弟の家に行くことができた。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>At</strong> age 50, I was finally able to visit my cousin who lives in Italy.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 780,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182610",
+      "type": "study_question",
+      "attributes": {
+        "id": 182610,
+        "content": "\r\n\r\n\r\n母（はは）は６０（ろくじゅっ）歳（さい）<span class='study-area-input'>____</span>初（はじ）めて、コンサートに行（い）ったらしい。",
+        "answer": "にして",
+        "alternate_grammar": [],
+        "kanji_answer": "にして",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/母は６０歳にして初めて、コンサートに行ったらしい。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nMy mother went to a concert for the first time <strong>at</strong> the age of 60.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 780,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10597",
+      "type": "study_question",
+      "attributes": {
+        "id": 10597,
+        "content": "日本語（にほんご）の勉強（べんきょう）を始（はじ）めて１１年（じゅういちねん）目（め）<span class='study-area-input'>____</span>ようやくＪＬＰＴ（ジェーエルピーティー）のＮ（エヌ）１（いち）に合格（ごうかく）する事（こと）が出来（でき）ました。",
+        "answer": "にして",
+        "alternate_grammar": [],
+        "kanji_answer": "にして",
+        "kanji_alt_grammar": [],
+        "nuance": "ある特定（とくてい）の段階（だんかい）や時間（じかん）を強調（きょうちょう）する表現（ひょうげん）。(A)<strong>から始（はじ）まって</strong>、(B)。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/日本語の勉強を始めて１１年目にしてようやくJLPTのN１に合格する事が出来ました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "で": {
+            "en": "Natural, but let's try to put more emphasis.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "From when I started studying Japanese, it was <strong>only in </strong> my 11th year that I was finally able to pass the JLPT N1.",
+        "nuance_translation": "An expression which emphasizes a specific phase or time. <strong>Going off</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 780,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9076",
+      "type": "study_question",
+      "attributes": {
+        "id": 9076,
+        "content": "ふうかはあきつき氏（し）夫妻（ふさい）の結婚（けっこん）２０（にじゅう）年（ねん）目（め）<span class='study-area-input'>____</span>初（はじ）めて授（さず）かった長女（ちょうじょ）だった。",
+        "answer": "にして",
+        "alternate_grammar": [],
+        "kanji_answer": "にして",
+        "kanji_alt_grammar": [],
+        "nuance": "ある特定（とくてい）の段階（だんかい）や時間（じかん）を強調（きょうちょう）する表現（ひょうげん）。(A)<strong>から始（はじ）まって</strong>、(B)。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ふうかはあきつき氏夫妻の結婚２０年目にして初めて授かった長女だった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "で": {
+            "en": "Great! Could you emphasize it more?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Fuuka was the first daughter that the Akitsuki couple was blessed with <strong>in</strong> the 20th year of their marriage. <strong>(only (after/when/because))</strong>",
+        "nuance_translation": "An expression which emphasizes a specific phase or time. <strong>Going off</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 780,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9072",
+      "type": "study_question",
+      "attributes": {
+        "id": 9072,
+        "content": "今（いま）<span class='study-area-input'>____</span>思（おも）えばあの頃（ころ）５（ご）ドルでビットコインを売（う）るのは間違（まちが）った決定（けってい）だったかも。",
+        "answer": "にして",
+        "alternate_grammar": [],
+        "kanji_answer": "にして",
+        "kanji_alt_grammar": [],
+        "nuance": "ある特定（とくてい）の段階（だんかい）や時間（じかん）を強調（きょうちょう）する表現（ひょうげん）。(A)<strong>から始（はじ）まって</strong>、(B)。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/今にして思えばあの頃５ドルでビットコインを売るのは間違った決定だったかも。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "で": {
+            "en": "Great! Could you emphasize it more?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>When</strong> I think about it now, selling bitcoin for 5 dollars at that time might have been a bad decision. <strong>(only (after/when/because))</strong>",
+        "nuance_translation": "An expression which emphasizes a specific phase or time. <strong>Going off</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 780,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10595",
+      "type": "study_question",
+      "attributes": {
+        "id": 10595,
+        "content": "宝（たから）くじに当（あ）たって一夜（いちや）<span class='study-area-input'>____</span>大金持（おおがねも）ちになった彼（かれ）が、お金（かね）の価値（かち）を理解（りかい）する事（こと）は無（な）いでしょう。",
+        "answer": "にして",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "にして",
+        "kanji_alt_grammar": [],
+        "nuance": "ある特定（とくてい）の段階（だんかい）や時間（じかん）を強調（きょうちょう）する表現（ひょうげん）。(A)<strong>から始（はじ）まって</strong>、(B)。",
+        "tense": "て",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/宝くじに当たって一夜にして大金持ちになった彼が、お金の価値を理解する事は無いでしょう。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "で": {
+            "en": "Natural, but let's try to put more emphasis.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Having won the lottery and becoming incredibly rich <strong>over</strong>night, he cannot understand the value of money, can he?",
+        "nuance_translation": "An expression which emphasizes a specific phase or time. <strong>Going off</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 780,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10599",
+      "type": "study_question",
+      "attributes": {
+        "id": 10599,
+        "content": "結婚（けっこん）５０（ごじゅう）年（ねん）目（め）<span class='study-area-input'>____</span>離婚（りこん）をするなんて、一体（いったい）どんな理由（りゆう）があったのか気（き）になって仕方（しかた）がありません。",
+        "answer": "にして",
+        "alternate_grammar": [],
+        "kanji_answer": "にして",
+        "kanji_alt_grammar": [],
+        "nuance": "ある特定（とくてい）の段階（だんかい）や時間（じかん）を強調（きょうちょう）する表現（ひょうげん）。(A)<strong>から始（はじ）まって</strong>、(B)。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/結婚５０年目にして離婚をするなんて、一体どんな理由があったのか気になって仕方がありません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "で": {
+            "en": "Natural, but let's try to put more emphasis.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To think that they would do something like divorce <strong>only after</strong> 50 years of marriage, I cannot help but to wonder what the heck kind of reason there was.",
+        "nuance_translation": "An expression which emphasizes a specific phase or time. <strong>Going off</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 780,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10600",
+      "type": "study_question",
+      "attributes": {
+        "id": 10600,
+        "content": "６０（ろくじゅっ）歳（さい）<span class='study-area-input'>____</span>初（はじ）めて海外（かいがい）で生活（せいかつ）する事（こと）になった叔母（おば）の話（はなし）を聞（き）き、海外（かいがい）へ移住（いじゅう）する勇気（ゆうき）が湧（わ）いてきました。",
+        "answer": "にして",
+        "alternate_grammar": [],
+        "kanji_answer": "にして",
+        "kanji_alt_grammar": [],
+        "nuance": "ある特定（とくてい）の段階（だんかい）や時間（じかん）を強調（きょうちょう）する表現（ひょうげん）。(A)<strong>から始（はじ）まって</strong>、(B)。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/６０歳にして初めて海外で生活する事になった叔母の話を聞き、海外へ移住する勇気が湧いてきました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "で": {
+            "en": "Close, but let's try to put more emphasis and notice the 初めて.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Hearing my aunt's story of how she is <strong>only now</strong> living abroad for the first time after turning 60, my courage to migrate has been welling up.",
+        "nuance_translation": "An expression which emphasizes a specific phase or time. <strong>Going off</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 780,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10598",
+      "type": "study_question",
+      "attributes": {
+        "id": 10598,
+        "content": "五十歳（ごじゅっさい）<span class='study-area-input'>____</span>、もう孫（まご）が二人（ふたり）もいるなんて、あなたはとんでもなく若（わか）いおじいちゃんですね！",
+        "answer": "にして",
+        "alternate_grammar": [],
+        "kanji_answer": "にして",
+        "kanji_alt_grammar": [],
+        "nuance": "ある特定（とくてい）の段階（だんかい）や時間（じかん）を強調（きょうちょう）する表現（ひょうげん）。(A)<strong>から始（はじ）まって</strong>、(B)。",
+        "tense": "て",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/五十歳にして、もう孫が二人もいるなんて、あなたはとんでもなく若いおじいちゃんですね！.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "で": {
+            "en": "Natural, but let's try to put more emphasis.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To think that <strong>at</strong> 50 years old you would already have something like 2 grandchildren, you're an absurdly young grandpa, right!",
+        "nuance_translation": "An expression which emphasizes a specific phase or time. <strong>Going off</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 780,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9074",
+      "type": "study_question",
+      "attributes": {
+        "id": 9074,
+        "content": "彼（かれ）はバブルがはじけたことにより一夜（いちや）<span class='study-area-input'>____</span>破産者（はさんしゃ）となった。",
+        "answer": "にして",
+        "alternate_grammar": [],
+        "kanji_answer": "にして",
+        "kanji_alt_grammar": [],
+        "nuance": "ある特定（とくてい）の段階（だんかい）や時間（じかん）を強調（きょうちょう）する表現（ひょうげん）。(A)<strong>から始（はじ）まって</strong>、(B)。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/彼はバブルがはじけたことにより一夜にして破産者となった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "で": {
+            "en": "Great! Could you emphasize it more?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Due to the bubble burst, he went bankrupt <strong>over</strong>night. <strong>(only (after/when/because))</strong>",
+        "nuance_translation": "An expression which emphasizes a specific phase or time. <strong>Going off</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 780,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9075",
+      "type": "study_question",
+      "attributes": {
+        "id": 9075,
+        "content": "<span class='name-highlight'>小説（しょうせつ）、語（かた）り手（て）</span>：「ミステリアスなその見知（みし）らぬ人（ひと）は、一瞬（いっしゅん）<span class='study-area-input'>____</span>二人（ふたり）の暗殺者（あんさつしゃ）を同時（どうじ）に殺（ころ）してしまった。」",
+        "answer": "にして",
+        "alternate_grammar": [],
+        "kanji_answer": "にして",
+        "kanji_alt_grammar": [],
+        "nuance": "ある特定（とくてい）の段階（だんかい）や時間（じかん）を強調（きょうちょう）する表現（ひょうげん）。(A)<strong>から始（はじ）まって</strong>、(B)。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/小説、語り手：「ミステリアスなその見知らぬ人は、一瞬にして二人の暗殺者を同時に殺してしまった。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "で": {
+            "en": "Great! Could you emphasize it more?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>A novel, narrator</span>: 'The mysterious stranger, <strong>in</strong> a moment, killed two assassins at once.' <strong>(only (after/when/because))</strong>",
+        "nuance_translation": "An expression which emphasizes a specific phase or time. <strong>Going off</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 780,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9077",
+      "type": "study_question",
+      "attributes": {
+        "id": 9077,
+        "content": "これは西尾維新（にしおいしん）のような文豪（ぶんごう）<span class='study-area-input'>____</span>初（はじ）めて書（か）ける名著（めいちょ）だ。",
+        "answer": "にして",
+        "alternate_grammar": [],
+        "kanji_answer": "にして",
+        "kanji_alt_grammar": [],
+        "nuance": "ある特定（とくてい）の段階（だんかい）や時間（じかん）を強調（きょうちょう）する表現（ひょうげん）。(A)<strong>から始（はじ）まって</strong>、(B)。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/これは西尾維新のような文豪にして初めて書ける名著だ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "で": {
+            "en": "Great! Could you say it another way? Could you emphasize it more that only after a certain age/at high level something can be acomplished?",
+            "es": ""
+          },
+          "がいて": {
+            "en": "Great! Could you say it another way? Could you emphasize it more that only after a certain age/at high level something can be acomplished?",
+            "es": ""
+          },
+          "だからこそ": {
+            "en": "Great! Could you say it another way? Could you emphasize it more that only after a certain age/at high level something can be acomplished?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This is a masterpiece that could <strong>only</strong> be written <strong>when</strong> a literary giant like Nishio Ishin did it for the first time.",
+        "nuance_translation": "An expression which emphasizes a specific phase or time. <strong>Going off</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 780,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9073",
+      "type": "study_question",
+      "attributes": {
+        "id": 9073,
+        "content": "釈迦（しゃか）は２９（にじゅうきゅう）歳（さい）<span class='study-area-input'>____</span>初（はじ）めて、宮殿（きゅうでん）を出（で）た。",
+        "answer": "にして",
+        "alternate_grammar": [],
+        "kanji_answer": "にして",
+        "kanji_alt_grammar": [],
+        "nuance": "ある特定（とくてい）の段階（だんかい）や時間（じかん）を強調（きょうちょう）する表現（ひょうげん）。(A)<strong>から始（はじ）まって</strong>、(B)。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/釈迦は２９歳にして初めて、宮殿を出た。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "で": {
+            "en": "Great! Could you emphasize it more? Also notice the はじめて",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Buddha left the palace for the first time <strong>at</strong> the age of 29. <strong>(only (after/when/because))</strong>",
+        "nuance_translation": "An expression which emphasizes a specific phase or time. <strong>Going off</strong> (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 780,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "845",
+      "type": "writeup",
+      "attributes": {
+        "id": 845,
+        "body_ja": "<p>格助詞（かくじょし）「に」と「する」のテ形（けい）が組（く）み合（あ）わさると、「(A) で」「(A) になって」といった意味（いみ）を表（あらわ）すことがあります。これは、通常（つうじょう）話（はな）し手（て）が (A) の段階（だんかい）や条件（じょうけん）で (B) が起（お）こることに驚（おどろ）きを感（かん）じているときに、その気持（きも）ちを強調（きょうちょう）するために使（つか）われます。</p>\r\n\r\n<p>「<span data-gp-id='780'>にして</span>」は、時間（じかん）や回数（かいすう）などを表（あらわ）す数量詞（すうりょうし）や名詞（めいし）の後（うし）ろに置（お）かれます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182606'>\r\n<li data-study-question='182607'>\r\n<li data-study-question='182608'>\r\n</ul>\r\n\r\n<p>(A) には特別（とくべつ）な段階（だんかい）・条件（じょうけん）・立場（たちば）などが入（はい）ります。その後（あと）に続（つづ）く内容（ないよう）は (A) の段階（だんかい）・条件（じょうけん）・立場（たちば）で起（お）こるのに相応（ふさわ）しいこともあれば、そうでないこともあります。</p>\r\n\r\n<p>「<span data-gp-id='780'>にして</span>」は「ようやく」や「初（はじ）めて」のような表現（ひょうげん）を伴（ともな）うこともよくあります。そうすることで、「(A) というレベルに達（たっ）して、ようやく (B) ができた」や「(A) になって初（はじ）めて (B) になった」のように、何（なに）かを達成（たっせい）・実現（じつげん）した段階（だんかい）として、(A) をさらに強調（きょうちょう）することができます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182609'>\r\n<li data-study-question='182610'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>豆知識（まめちしき）</h4>\r\n<p>「にする」を使（つか）ったほかの表現（ひょうげん）と同じように、「<span data-gp-id='780'>にして</span>」は、すでに決（き）められている状態（じょうたい）や立場（たちば）などを土台（どだい）として、そこから新（あたら）しい状況（じょうたい）や結果（けっか）が生（う）まれることを表（あらわ）します。</p></section>",
+        "body": "<p>When the case-marking particle に is combined with the て-form of する, it often carries the meaning of 'at (A)', 'over (A)', or 'only when (A)'. This nuance is used when (A) is something that is a fairly high level, or some point that would be considered a prime example for any given topic.</p>\r\n\r\n<p><span data-gp-id='780'>にして</span> may appear following counters, or standard nouns.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182606'>\r\n<li data-study-question='182607'>\r\n<li data-study-question='182608'>\r\n</ul>\r\n\r\n<p>While <span data-gp-id='780'>にして</span> marks (A) as some particular exemplar, what follows may either be something that is or is not considered befitting of that example. In this way, (B) generally describes something that either does or does not fulfill the expectations of (A), and perhaps why.</p>\r\n\r\n<p>It is common to see <span data-gp-id='780'>にして</span> followed by grammar patterns such as ようやく 'finally', or 初（はじ）めて 'only when'. These function to emphasize <span data-gp-id='780'>にして</span> even further as being a point from which something is achieved or attained.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182609'>\r\n<li data-study-question='182610'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>Just like other structures that make use of the various conjugations of にする, <span data-gp-id='780'>にして</span> indicates something that has been decided upon, or is being accepted as a fact from which a new condition will arise, or has arisen.</p></section>"
+      }
+    },
+    {
+      "id": "1648",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1648,
+        "source": "Try N1",
+        "location": "Page 143",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1649",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1649,
+        "source": "Sou Matome Bunpou N1",
+        "location": "Page 64",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1650",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1650,
+        "source": "Shin Kanzen Master N1",
+        "location": "Bunpou Page 77",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1647",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1647,
+        "source": "A Dictionary of Advanced Japanese Grammar",
+        "location": "Page 426",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2160",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2160,
+        "site": "JLPT 先生",
+        "description": "Breakdown and examples",
+        "link": "https://jlptsensei.com/learn-japanese-grammar/%E3%81%AB%E3%81%97%E3%81%A6-ni-shite-meaning/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2161",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2161,
+        "site": "日本語 NET",
+        "description": "Related grammar and examples",
+        "link": "https://nihongokyoshi-net.com/2019/07/21/jlptn1-grammar-nishite/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1517",
+      "type": "related_content",
+      "attributes": {
+        "id": 1517,
+        "relationship_type": "related",
+        "body": "These expressions are often found together because their meanings complement each other. にして suggests a significant occasion or example of something, while て初めて describes something happening for the first time 'only after' a certain event. Together, they can express an idea like 結婚10年目にして初めて二人で旅行した ('They vacationed together for the first time in their 10th year of marriage.').",
+        "first_relatable": {
+          "id": 780,
+          "slug": "にして1",
+          "title": "にして①",
+          "meaning": "At, Over, In, Only (after, when, or because)",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 277,
+          "slug": "て初めて",
+          "title": "て初めて",
+          "meaning": "For the first time, Not until, Only after, Only when, Only because",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1518",
+      "type": "related_content",
+      "attributes": {
+        "id": 1518,
+        "relationship_type": "related",
+        "body": "These expressions are often found together because their meanings complement each other. にして suggests a significant occasion or example of something, while て初めて describes something happening for the first time 'only after' a certain event. Together, they can express an idea like 結婚10年目にして初めて二人で旅行した ('They vacationed together for the first time in their 10th year of marriage.').",
+        "first_relatable": {
+          "id": 780,
+          "slug": "にして1",
+          "title": "にして①",
+          "meaning": "At, Over, In, Only (after, when, or because)",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 277,
+          "slug": "て初めて",
+          "title": "て初めて",
+          "meaning": "For the first time, Not until, Only after, Only when, Only because",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1534",
+      "type": "related_content",
+      "attributes": {
+        "id": 1534,
+        "relationship_type": "related",
+        "body": "These are the same combination of particle に and verb する and on a fundamental level have the same meaning of 'while being (A), (B)'. In practice, they may seem to have different functions, as にしては② expresses that something is two qualities at once, e.g. シンプルにして複雑 'both simple and complex', while にして① expresses something that is a condition for what follows, e.g. 30歳にして初めて海外旅行に行く 'to go on a trip abroad for the first time at thirty'.",
+        "first_relatable": {
+          "id": 800,
+          "slug": "にして2",
+          "title": "にして②",
+          "meaning": "To be ~ and ~, To be ~ as well as ~, Both ~ and ~",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 780,
+          "slug": "にして1",
+          "title": "にして①",
+          "meaning": "At, Over, In, Only (after, when, or because)",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

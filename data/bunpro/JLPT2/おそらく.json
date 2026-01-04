@@ -1,0 +1,913 @@
+{
+  "data": {
+    "id": "604",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 604,
+      "level": "JLPT2",
+      "lesson_id": 38,
+      "part_of_speech": null,
+      "register": "硬い",
+      "word_type": "",
+      "slug": "おそらく",
+      "nuance": "(A)という<strong>不幸（ふこう）な可能（かのう）性（せい）</strong>を強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>が心配（しんぱい）</strong>。",
+      "grammar_order": 679,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 503,
+        "title": "ものか",
+        "slug": "ものか"
+      },
+      "previous_grammar_point": {
+        "id": 688,
+        "title": "恐れがある",
+        "slug": "恐れがある"
+      },
+      "lesson_count": "5/23",
+      "title": "おそらく",
+      "furigana": "恐（おそ）らく",
+      "meaning": "Probably, Perhaps, (Most) likely, (I) fear that",
+      "nuance_translation": "A <strong>formal</strong> structure used to highlight the <strong>unfortunate likelihood</strong> of (A). <strong>I fear that</strong> (A)",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<strong>おそらく</strong> + Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Formal",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/18090",
+      "metadata": "おそらく, 恐らく, osoraku, adverb"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "7391",
+            "type": "study_question"
+          },
+          {
+            "id": "182272",
+            "type": "study_question"
+          },
+          {
+            "id": "182273",
+            "type": "study_question"
+          },
+          {
+            "id": "182274",
+            "type": "study_question"
+          },
+          {
+            "id": "5898",
+            "type": "study_question"
+          },
+          {
+            "id": "5900",
+            "type": "study_question"
+          },
+          {
+            "id": "7392",
+            "type": "study_question"
+          },
+          {
+            "id": "7393",
+            "type": "study_question"
+          },
+          {
+            "id": "7394",
+            "type": "study_question"
+          },
+          {
+            "id": "5899",
+            "type": "study_question"
+          },
+          {
+            "id": "7388",
+            "type": "study_question"
+          },
+          {
+            "id": "7389",
+            "type": "study_question"
+          },
+          {
+            "id": "7390",
+            "type": "study_question"
+          },
+          {
+            "id": "7387",
+            "type": "study_question"
+          },
+          {
+            "id": "7386",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "693",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "571",
+            "type": "offline_resource"
+          },
+          {
+            "id": "457",
+            "type": "offline_resource"
+          },
+          {
+            "id": "456",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "470",
+            "type": "related_content"
+          },
+          {
+            "id": "505",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1482",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "7391",
+      "type": "study_question",
+      "attributes": {
+        "id": 7391,
+        "content": "彼（かれ）は何（なに）か言（い）いたそうに私（わたし）をみた。<span class='study-area-input'>____</span>何（なに）か重要（じゅうよう）なことでしょう。",
+        "answer": "おそらく",
+        "alternate_grammar": [],
+        "kanji_answer": "恐（おそ）らく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>不幸（ふこう）な可能（かのう）性（せい）</strong>を強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>が心配（しんぱい）</strong>。",
+        "tense": "Potential, Extent",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たぶん": {
+            "en": "Can you say it another way? - Higher likelihood",
+            "es": ""
+          },
+          "ぜったい": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "ぜったいに": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "もしかしたら": {
+            "en": "Nice guess! もしかしたら can work here, but can you use a more formal expression?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It seemed to me that he was about to say something. <strong>Most likely</strong> something important. (<strong>I fear that...</strong>)",
+        "nuance_translation": "A <strong>formal</strong> structure used to highlight the <strong>unfortunate likelihood</strong> of (A). <strong>I fear that</strong> (A)",
+        "extra_info": "",
+        "reviewable_id": 604,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182272",
+      "type": "study_question",
+      "attributes": {
+        "id": 182272,
+        "content": "妻（つま）は今夜（こんや）会社（かいしゃ）の人（ひと）たちと飲（の）み会（かい）に行（い）くと言（い）っていたので、<span class='study-area-input'>____</span>１１（じゅういち）時（じ）ごろぐらいまでは帰（かえ）ってこないと思（おも）います。",
+        "answer": "おそらく",
+        "alternate_grammar": [],
+        "kanji_answer": "おそらく",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/妻は今夜会社の人たちと飲み会に行くと言っていたので、おそらく１１時ごろぐらいまでは帰ってこないと思います。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "My wife said she was going to a drinking party tonight with some people from work, so she <strong>probably</strong> won't be home until around 11:00 or so.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 604,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182273",
+      "type": "study_question",
+      "attributes": {
+        "id": 182273,
+        "content": "あいつの不自然（ふしぜん）な行動（こうどう）からして、<span class='study-area-input'>____</span>あいつが犯人（はんにん）だろう！",
+        "answer": "おそらく",
+        "alternate_grammar": [],
+        "kanji_answer": "おそらく",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あいつの不自然な行動からして、おそらくあいつが犯人だろう！.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Judging by that guy's unnatural behavior, he's <strong>probably</strong> the culprit!",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 604,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182274",
+      "type": "study_question",
+      "attributes": {
+        "id": 182274,
+        "content": "<span class='study-area-input'>____</span>明日（あした）は雨（あめ）なので、明日（あした）予定（よてい）していたピクニックは中止（ちゅうし）しましょう。",
+        "answer": "おそらく",
+        "alternate_grammar": [],
+        "kanji_answer": "おそらく",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/おそらく明日は雨なので、明日予定していたピクニックは中止しましょう。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Perhaps</strong> it may rain tomorrow, so let's cancel the picnic we had planned for tomorrow.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 604,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5898",
+      "type": "study_question",
+      "attributes": {
+        "id": 5898,
+        "content": "<span class='study-area-input'>____</span>彼（かれ）はここにいないだろう。",
+        "answer": "おそらく",
+        "alternate_grammar": [],
+        "kanji_answer": "恐（おそ）らく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>不幸（ふこう）な可能（かのう）性（せい）</strong>を強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>が心配（しんぱい）</strong>。",
+        "tense": "Potential, Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/恐らく彼はここにいないだろう。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たぶん": {
+            "en": "Can you say it another way? - Higher likelihood",
+            "es": ""
+          },
+          "ぜったい": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "ぜったいに": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "もしかしたら": {
+            "en": "Nice guess! もしかしたら can work here, but can you use a more formal expression?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He <strong>most likely</strong> isn't here.",
+        "nuance_translation": "A <strong>formal</strong> structure used to highlight the <strong>unfortunate likelihood</strong> of (A). <strong>I fear that</strong> (A)",
+        "extra_info": "",
+        "reviewable_id": 604,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5900",
+      "type": "study_question",
+      "attributes": {
+        "id": 5900,
+        "content": "彼（かれ）だったら、<span class='study-area-input'>____</span>こんなことできっこないでしょう。",
+        "answer": "おそらく",
+        "alternate_grammar": [],
+        "kanji_answer": "恐（おそ）らく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>不幸（ふこう）な可能（かのう）性（せい）</strong>を強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>が心配（しんぱい）</strong>。",
+        "tense": "Potential, Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼だったら、恐らくこんなことできっこないでしょう。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たぶん": {
+            "en": "Can you say it another way? - Higher likelihood",
+            "es": ""
+          },
+          "ぜったい": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "ぜったいに": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "もしかしたら": {
+            "en": "Nice guess! もしかしたら can work here, but can you use a more formal expression?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "If it's him, he <strong>most likely</strong> won't be able to do it. (<strong>I fear that...</strong>)",
+        "nuance_translation": "A <strong>formal</strong> structure used to highlight the <strong>unfortunate likelihood</strong> of (A). <strong>I fear that</strong> (A)",
+        "extra_info": "",
+        "reviewable_id": 604,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7392",
+      "type": "study_question",
+      "attributes": {
+        "id": 7392,
+        "content": "問題（もんだい）の原因（げんいん）を特定（とくてい）するために最（もっと）もすべきことは、<span class='study-area-input'>____</span>その機械（きかい）の分解（ぶんかい）と分析（ぶんせき）だろう。",
+        "answer": "おそらく",
+        "alternate_grammar": [],
+        "kanji_answer": "恐（おそ）らく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>不幸（ふこう）な可能（かのう）性（せい）</strong>を強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>が心配（しんぱい）</strong>。",
+        "tense": "Potential, Extent",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たぶん": {
+            "en": "Can you say it another way? - Higher likelihood",
+            "es": ""
+          },
+          "ぜったい": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "ぜったいに": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "もしかしたら": {
+            "en": "Nice guess! もしかしたら can work here, but can you use a more formal expression?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Probably</strong>, the most effective action to identify the cause of the problem would be the decomposition and analysis of the machine.",
+        "nuance_translation": "A <strong>formal</strong> structure used to highlight the <strong>unfortunate likelihood</strong> of (A). <strong>I fear that</strong> (A)",
+        "extra_info": "",
+        "reviewable_id": 604,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7393",
+      "type": "study_question",
+      "attributes": {
+        "id": 7393,
+        "content": "<span class='name-highlight'>妊婦（にんぷ）</span>：「赤（あか）ちゃんの性別（せいべつ）はなんですか？」<span class='name-highlight'>医者（いしゃ）</span>：「<span class='study-area-input'>____</span>女（おんな）の子（こ）です。でもまだわかりません。」",
+        "answer": "おそらく",
+        "alternate_grammar": [],
+        "kanji_answer": "恐（おそ）らく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>不幸（ふこう）な可能（かのう）性（せい）</strong>を強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>が心配（しんぱい）</strong>。",
+        "tense": "Potential, Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/妊婦：「赤ちゃんの性別はなんですか？」医者：「恐らく女の子です。でもまだわかりません。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たぶん": {
+            "en": "Can you say it another way? - Higher likelihood",
+            "es": ""
+          },
+          "ぜったい": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "ぜったいに": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "もしかしたら": {
+            "en": "Nice guess! もしかしたら can work here, but can you use a more formal expression?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Pregnant woman</span>: 'Is it a baby boy or girl?' <span class='name-highlight'>Doctor</span>: '<strong>Probably</strong> a baby girl. However, I am not sure yet.'",
+        "nuance_translation": "A <strong>formal</strong> structure used to highlight the <strong>unfortunate likelihood</strong> of (A). <strong>I fear that</strong> (A)",
+        "extra_info": "",
+        "reviewable_id": 604,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7394",
+      "type": "study_question",
+      "attributes": {
+        "id": 7394,
+        "content": "<span class='name-highlight'>名探偵（めいたんてい）</span>：「この人（ひと）の背（せ）の高（たか）さを鑑（かんが）みると<span class='study-area-input'>____</span>彼女（かのじょ）が殺人犯（さつじんはん）だろう！」",
+        "answer": "おそらく",
+        "alternate_grammar": [],
+        "kanji_answer": "恐（おそ）らく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>不幸（ふこう）な可能（かのう）性（せい）</strong>を強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>が心配（しんぱい）</strong>。",
+        "tense": "Potential, Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/名探偵：「この人の背の高さを鑑みると恐らく彼女が殺人犯だろう！」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たぶん": {
+            "en": "Can you say it another way? - Higher likelihood",
+            "es": ""
+          },
+          "ぜったい": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "ぜったいに": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "もしかしたら": {
+            "en": "Nice guess! もしかしたら can work here, but can you use a more formal expression?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Great detective</span>: 'Taking this person's height into account, she is <strong>most likely</strong> our killer.'",
+        "nuance_translation": "A <strong>formal</strong> structure used to highlight the <strong>unfortunate likelihood</strong> of (A). <strong>I fear that</strong> (A)",
+        "extra_info": "",
+        "reviewable_id": 604,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5899",
+      "type": "study_question",
+      "attributes": {
+        "id": 5899,
+        "content": "<span class='study-area-input'>____</span>明日（あした）雨（あめ）が降（ふ）る。",
+        "answer": "おそらく",
+        "alternate_grammar": [],
+        "kanji_answer": "恐（おそ）らく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>不幸（ふこう）な可能（かのう）性（せい）</strong>を強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>が心配（しんぱい）</strong>。",
+        "tense": "Potential, Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/恐らく明日雨が降る。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たぶん": {
+            "en": "Can you say it another way? - Higher likelihood",
+            "es": ""
+          },
+          "ぜったい": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "ぜったいに": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "もしかしたら": {
+            "en": "Nice guess! もしかしたら can work here, but can you use a more formal expression?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Perhaps</strong> it will rain tomorrow. (<strong>I fear that...</strong>)",
+        "nuance_translation": "A <strong>formal</strong> structure used to highlight the <strong>unfortunate likelihood</strong> of (A). <strong>I fear that</strong> (A)",
+        "extra_info": "",
+        "reviewable_id": 604,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7388",
+      "type": "study_question",
+      "attributes": {
+        "id": 7388,
+        "content": "道路（どうろ）に沿（そ）って行（い）けば<span class='study-area-input'>____</span>ガソリンスタンドが見（み）つかるでしょう。",
+        "answer": "おそらく",
+        "alternate_grammar": [],
+        "kanji_answer": "恐（おそ）らく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>不幸（ふこう）な可能（かのう）性（せい）</strong>を強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>が心配（しんぱい）</strong>。",
+        "tense": "Potential, Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/道路に沿って行けば恐らくガソリンスタンドが見つかるでしょう。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たぶん": {
+            "en": "Can you say it another way? - Higher likelihood",
+            "es": ""
+          },
+          "ぜったい": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "ぜったいに": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "もしかしたら": {
+            "en": "Nice guess! もしかしたら can work here, but can you use a more formal expression?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "If you go along the road, you <strong>will most likely</strong> see the gas station.",
+        "nuance_translation": "A <strong>formal</strong> structure used to highlight the <strong>unfortunate likelihood</strong> of (A). <strong>I fear that</strong> (A)",
+        "extra_info": "",
+        "reviewable_id": 604,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7389",
+      "type": "study_question",
+      "attributes": {
+        "id": 7389,
+        "content": "「くそ、<span class='study-area-input'>____</span>あなたの結婚式（けっこんしき）には行（い）けないじゃないか。」",
+        "answer": "おそらく",
+        "alternate_grammar": [],
+        "kanji_answer": "恐（おそ）らく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>不幸（ふこう）な可能（かのう）性（せい）</strong>を強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>が心配（しんぱい）</strong>。",
+        "tense": "Potential, Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/「くそ、恐らくあなたの結婚式には行けないじゃないか。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たぶん": {
+            "en": "Can you say it another way? - Higher likelihood",
+            "es": ""
+          },
+          "ぜったい": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "ぜったいに": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "もしかしたら": {
+            "en": "Nice guess! もしかしたら can work here, but can you use a more formal expression?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'Dang it, I think I <strong>probably</strong> won't be able to go to your wedding.' (<strong>I fear that...</strong>)",
+        "nuance_translation": "A <strong>formal</strong> structure used to highlight the <strong>unfortunate likelihood</strong> of (A). <strong>I fear that</strong> (A)",
+        "extra_info": "",
+        "reviewable_id": 604,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7390",
+      "type": "study_question",
+      "attributes": {
+        "id": 7390,
+        "content": "凶器（きょうき）は怪我（けが）から察（さっ）するに<span class='study-area-input'>____</span>ナイフのようなものでしょう。",
+        "answer": "おそらく",
+        "alternate_grammar": [],
+        "kanji_answer": "恐（おそ）らく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>不幸（ふこう）な可能（かのう）性（せい）</strong>を強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>が心配（しんぱい）</strong>。",
+        "tense": "Potential, Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/凶器は怪我から察するに恐らくナイフのようなものでしょう。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たぶん": {
+            "en": "Can you say it another way? - Higher likelihood",
+            "es": ""
+          },
+          "ぜったい": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "ぜったいに": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "もしかしたら": {
+            "en": "Nice guess! もしかしたら can work here, but can you use a more formal expression?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The murder weapon was, judging from the injuries, <strong>most likely</strong> something resembling to a knife.",
+        "nuance_translation": "A <strong>formal</strong> structure used to highlight the <strong>unfortunate likelihood</strong> of (A). <strong>I fear that</strong> (A)",
+        "extra_info": "",
+        "reviewable_id": 604,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7387",
+      "type": "study_question",
+      "attributes": {
+        "id": 7387,
+        "content": "代表（だいひょう）者（しゃ）が「大統領（だいとうりょう）は<span class='study-area-input'>____</span>再選（さいせん）をねらうまい」と言（い）っていた。",
+        "answer": "おそらく",
+        "alternate_grammar": [],
+        "kanji_answer": "恐（おそ）らく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>不幸（ふこう）な可能（かのう）性（せい）</strong>を強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>が心配（しんぱい）</strong>。",
+        "tense": "Potential, Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/代表者が「大統領は恐らく再選をねらうまい」と言っていた。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たぶん": {
+            "en": "Can you say it another way? - Higher likelihood",
+            "es": ""
+          },
+          "ぜったい": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "ぜったいに": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "もしかしたら": {
+            "en": "Nice guess! もしかしたら can work here, but can you use a more formal expression?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The representative was saying that 'the president <strong>will most likely</strong> not aim for re-election'.",
+        "nuance_translation": "A <strong>formal</strong> structure used to highlight the <strong>unfortunate likelihood</strong> of (A). <strong>I fear that</strong> (A)",
+        "extra_info": "",
+        "reviewable_id": 604,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7386",
+      "type": "study_question",
+      "attributes": {
+        "id": 7386,
+        "content": "私（わたし）の兄（あに）は<span class='study-area-input'>____</span>１１（じゅういち）月（がつ）頃（ごろ）アメリカから帰（かえ）ってくるでしょう。",
+        "answer": "おそらく",
+        "alternate_grammar": [],
+        "kanji_answer": "恐（おそ）らく",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>不幸（ふこう）な可能（かのう）性（せい）</strong>を強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>が心配（しんぱい）</strong>。",
+        "tense": "Potential, Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/私の兄は恐らく１１月頃アメリカから帰ってくるでしょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たぶん": {
+            "en": "Can you say it another way? - Higher likelihood",
+            "es": ""
+          },
+          "ぜったい": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "ぜったいに": {
+            "en": "Something that is likely, but not for sure",
+            "es": ""
+          },
+          "もしかしたら": {
+            "en": "Nice guess! もしかしたら can work here, but can you use a more formal expression?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "My older brother <strong>will probably</strong> return home from the US around November.",
+        "nuance_translation": "A <strong>formal</strong> structure used to highlight the <strong>unfortunate likelihood</strong> of (A). <strong>I fear that</strong> (A)",
+        "extra_info": "",
+        "reviewable_id": 604,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "693",
+      "type": "writeup",
+      "attributes": {
+        "id": 693,
+        "body_ja": "<p>「<span data-gp-id='604'>恐（おそ）らく</span>」は四段（よだん）動詞（どうし）「恐（おそ）る」からできた副詞（ふくし）です。ほとんどの場合（ばあい）、「恐（おそ）らく」は「だろう」や「かもしれない」のような推量（すいりょう）を表（あらわ）す表現（ひょうげん）と結（むす）びつき、「たぶん」や「もしかすると」というような意味（いみ）をより丁寧（ていねい）に表（あらわ）します。</p>\r\n\r\n<p>「<span data-gp-id='604'>恐（おそ）らく</span>」は副詞（ふくし）として機能（きのう）するため、推量（すいりょう）を述（の）べる文（ぶん）の最初（さいしょ）に使（つか）われることが多（おお）いです。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182272'>\r\n<li data-study-question='182273'>\r\n<li data-study-question='182274'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='604'>恐（おそ）らく</span>」は「(A) であること心配（しんぱい）している」というようなニュアンスで使（つか）われることもありますが、必（かなら）ずしも悪（わる）い内容（ないよう）を指（さ）すとは限（かぎ）りません。この「恐（おそ）らく」が持つ「心配（しんぱい）」のニュアンスには、が（え）られた情報（じょうほう）をもとに推測（すいそく）を述（の）べるとき、その推測（すいそく）が当（あ）たっているかもしれないという話（はな）し手（て）の遠慮（えんりょ）や謙遜（けんそん）の気持（きも）ちが含（ふく）まれているためです。</p>\r\n\r\n<section class='funfact'><h4>豆知識（まめちしき）</h4>\r\n<p>四段動詞（よだんどうし）は、日本語（にほんご）の古文（こぶん）における動詞（どうし）の一種（いっしゅ）です。現代（げんだい）の日本語（にほんご）では、そのほとんどが五段動詞（ごだんどうし）に置（お）き換（か）えられています。\r\n</p></section>",
+        "body": "<p><span data-gp-id='604'>恐（おそ）らく</span> is an adverb which originally stems from the conjugation of the yodan verb, 恐（おそ）る 'to fear'. In most cases, <span data-gp-id='604'>恐（おそ）らく</span> is simply used as a formal way to say 'probably', or 'perhaps', and is usually partnered with other structures of conjecture such as だろう, かもしれない, etc.</p>\r\n\r\n<p>As <span data-gp-id='604'>恐（おそ）らく</span> behaves adverbially, it will most often appear at the beginning of sentences before a statement of conjecture is made.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182272'>\r\n<li data-study-question='182273'>\r\n<li data-study-question='182274'>\r\n</ul>\r\n\r\n<p>Although <span data-gp-id='604'>恐（おそ）らく</span> can, and often does, carry the meaning of 'I fear that (A)', it isn't necessarily always used in relation to negative things. In the case of this particular grammar pattern, the main nuance that 'I fear that (A)' conveys is modesty on behalf of the speaker in that they fear their assumption may be right, given the available information.</p>\r\n\r\n<section class='funfact'><h4>Fun-fact</h4>\r\n<p>Yodan, or 四段活用（よだんかつよう） verbs are a type of classical-Japanese verb that have primarily been replaced by godan (う-Verbs) in modern day Japanese.</p></section>"
+      }
+    },
+    {
+      "id": "571",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 571,
+        "source": "Tobira",
+        "location": "Page 261",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "457",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 457,
+        "source": "Tobira (Gateway to Advanced Japanese)",
+        "location": "Page 218-3",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "456",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 456,
+        "source": "新完全マスター文法、N2",
+        "location": "Page 92-5",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1482",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1482,
+        "site": "JapaneseTest4You",
+        "description": "Further Examples",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-%E3%81%8A%E3%81%9D%E3%82%89%E3%81%8F-osoraku/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "470",
+      "type": "related_content",
+      "attributes": {
+        "id": 470,
+        "relationship_type": "synonym",
+        "body": "おそらく and かもしれない both express possibility, but differ in certainty and placement. かもしれない comes at the end of sentences or phrases and means 'might' or 'may', e.g. 行くかもしれない ('I might go.'). おそらく appears at the beginning and expresses a stronger likelihood, e.g. おそらく行くだろう ('Most likely, I'll go.').",
+        "first_relatable": {
+          "id": 604,
+          "slug": "おそらく",
+          "title": "おそらく",
+          "meaning": "Probably, Perhaps, (Most) likely, (I) fear that",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 113,
+          "slug": "かもしれない",
+          "title": "かもしれない",
+          "meaning": "Might, Maybe, Probably",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "505",
+      "type": "related_content",
+      "attributes": {
+        "id": 505,
+        "relationship_type": "synonym",
+        "body": "Both express possibility, but differ in how likely something seems. おそらく suggests a high chance and is often used with だろう or でしょう, e.g. おそらく来るでしょう 'Most likely, he will come.' もしかしたら suggests a lower chance or speculation, and pairs with かもしれない or かもしれません, e.g. もしかしたら雨が降るかもしれない 'Perhaps it will rain.'",
+        "first_relatable": {
+          "id": 604,
+          "slug": "おそらく",
+          "title": "おそらく",
+          "meaning": "Probably, Perhaps, (Most) likely, (I) fear that",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 284,
+          "slug": "もしかしたら",
+          "title": "もしかしたら",
+          "meaning": "Perhaps, Maybe, Possibly",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

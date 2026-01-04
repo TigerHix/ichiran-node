@@ -1,0 +1,771 @@
+{
+  "data": {
+    "id": "823",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 823,
+      "level": "JLPT1",
+      "lesson_id": 45,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "かれ-かれ",
+      "nuance": "反対（はんたい）の意味（いみ）をする形容詞（けいようし）を比較（ひかく）する時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。(A)を通（とお）して<strong>であろうと</strong>(B)を通（とお）して<strong>であろうと</strong>（C）は起（お）こる。",
+      "grammar_order": 815,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 824,
+        "title": "〜に〜ない",
+        "slug": "-に-ない"
+      },
+      "previous_grammar_point": {
+        "id": 822,
+        "title": "まま(に)",
+        "slug": "ままに"
+      },
+      "lesson_count": "5/18",
+      "title": "かれ〜かれ",
+      "furigana": "かれ〜かれ",
+      "meaning": "Or, Either or",
+      "nuance_translation": "An <strong>old-fashioned</strong> construction, contrasting opposite adjectives. Although it is <strong>uncertain whether</strong> it will be via (A) or (B), (C) will still happen.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<span class='gp-popout' data-gp-id='873'>［い］Adjective［<del>い</del>］</span>+ <strong>かれ</strong> + <span class='gp-popout' data-gp-id='873'>［い］Adjective［<del>い</del>］</span>(Antonym) + <strong>かれ</strong><br><br>遅（おそ）<strong>かれ</strong>早（はや）<strong>かれ</strong> - sooner or later<br>多（おお）<strong>かれ</strong>少（すく）な<strong>かれ</strong> - more or less<br>to a greater or lesser extent<br>良（よ）<strong>かれ</strong>悪（あ）し<strong>かれ</strong> - good or bad<br>for better or worse",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/27602",
+      "metadata": "かれかれ, かれ, karekare, kare, abbreviation, imperative"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "182793",
+            "type": "study_question"
+          },
+          {
+            "id": "10878",
+            "type": "study_question"
+          },
+          {
+            "id": "182791",
+            "type": "study_question"
+          },
+          {
+            "id": "182792",
+            "type": "study_question"
+          },
+          {
+            "id": "184560",
+            "type": "study_question"
+          },
+          {
+            "id": "10876",
+            "type": "study_question"
+          },
+          {
+            "id": "9411",
+            "type": "study_question"
+          },
+          {
+            "id": "10879",
+            "type": "study_question"
+          },
+          {
+            "id": "10880",
+            "type": "study_question"
+          },
+          {
+            "id": "9413",
+            "type": "study_question"
+          },
+          {
+            "id": "9410",
+            "type": "study_question"
+          },
+          {
+            "id": "10875",
+            "type": "study_question"
+          },
+          {
+            "id": "9408",
+            "type": "study_question"
+          },
+          {
+            "id": "10877",
+            "type": "study_question"
+          },
+          {
+            "id": "9409",
+            "type": "study_question"
+          },
+          {
+            "id": "9412",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "890",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1769",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1770",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": []
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2303",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "182793",
+      "type": "study_question",
+      "attributes": {
+        "id": 182793,
+        "content": "遅（おそ）<span class='study-area-input'>____</span>早（はや）<span class='study-area-input'>____</span>提出（ていしゅつ）させないといけないのであるならば、早（はや）めに提出（ていしゅつ）した方（ほう）がいいと思（おも）う。",
+        "answer": "かれ",
+        "alternate_grammar": [],
+        "kanji_answer": "かれ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/遅かれ早かれ提出させないといけないのであるならば、早めに提出した方がいいと思う。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "If it has to be submitted sooner <strong>or</strong> later, I think it is better to submit it as soon as possible.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 823,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10878",
+      "type": "study_question",
+      "attributes": {
+        "id": 10878,
+        "content": "ストレスをアルコールで発散（はっさん）するような生活（せいかつ）を続（つづ）けていたら<span class='study-area-input'>____</span>病院送（びょういんおく）りになってしまうよ。",
+        "answer": "おそかれはやかれ",
+        "alternate_grammar": [],
+        "kanji_answer": "遅（おそ）かれ早（はや）かれ",
+        "kanji_alt_grammar": [],
+        "nuance": "反対（はんたい）の意味（いみ）をする形容詞（けいようし）を比較（ひかく）する時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。(A)を通（とお）して<strong>であろうと</strong>(B)を通（とお）して<strong>であろうと</strong>（C）は起（お）こる。",
+        "tense": "Inclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ストレスをアルコールで発散するような生活を続けていたら遅かれ早かれ病院送りになってしまうよ。.mp3",
+        "word_prompt": "遅（おそ）い",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "If you continue to lead a lifestyle of shaking off stress with alcohol, <strong>sooner or later</strong> you will end up in the hospital.",
+        "nuance_translation": "An <strong>old-fashioned</strong> construction, contrasting opposite adjectives. Although it is <strong>uncertain whether</strong> it will be via (A) or (B), (C) will still happen.",
+        "extra_info": "",
+        "reviewable_id": 823,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182791",
+      "type": "study_question",
+      "attributes": {
+        "id": 182791,
+        "content": "どんな人（ひと）でも多（おお）<span class='study-area-input'>____</span>少（すく）な<span class='study-area-input'>____</span>悩（なや）みを抱（かか）えて生（い）きている。",
+        "answer": "かれ",
+        "alternate_grammar": [],
+        "kanji_answer": "かれ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/どんな人でも多かれ少なかれ悩みを抱えて生きている。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Whether it be to a higher <strong>or</strong> lesser extent, everyone lives burdened by troubles.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 823,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182792",
+      "type": "study_question",
+      "attributes": {
+        "id": 182792,
+        "content": "暑（あつ）<span class='study-area-input'>____</span>寒（さむ）<span class='study-area-input'>____</span>、脱水（だっすい）症状（しょうじょう）は起（お）こりうるので水分（すいぶん）補給（ほきゅう）はこまめにしてください。",
+        "answer": "かれ",
+        "alternate_grammar": [],
+        "kanji_answer": "かれ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/暑かれ寒かれ、脱水症状は起こりうるので水分補給はこまめにしてください。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Dehydration can occur in hot <strong>or</strong> cold weather, so please hydrate frequently.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 823,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184560",
+      "type": "study_question",
+      "attributes": {
+        "id": 184560,
+        "content": "この発明（はつめい）は、良（よ）<span class='study-area-input'>____</span>悪（あ）し<span class='study-area-input'>____</span>たくさんの人（ひと）に影響（えいきょう）を与（あた）えるだろう。",
+        "answer": "かれ",
+        "alternate_grammar": [],
+        "kanji_answer": "かれ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/この発明は、良かれ悪しかれたくさんの人に影響を与えるだろう。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This invention will affect a lot of people, for better <strong>or</strong> worse.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 823,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10876",
+      "type": "study_question",
+      "attributes": {
+        "id": 10876,
+        "content": "私（わたし）は、誰（だれ）もが<span class='study-area-input'>____</span>人（ひと）には言（い）えない秘密（ひみつ）を隠（かく）し持（も）っていると考（かんが）えています。",
+        "answer": "おおかれすくなかれ",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "多（おお）かれ少（すく）なかれ",
+        "kanji_alt_grammar": [],
+        "nuance": "反対（はんたい）の意味（いみ）をする形容詞（けいようし）を比較（ひかく）する時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。(A)を通（とお）して<strong>であろうと</strong>(B)を通（とお）して<strong>であろうと</strong>（C）は起（お）こる。",
+        "tense": "Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/私は、誰もが多かれ少なかれ人には言えない秘密を隠し持っていると考えています。.mp3",
+        "word_prompt": "多（おお）い",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だいなりしょうなり": {
+            "en": "Great, but let's use different expression where conjugation of 多い is used.",
+            "es": ""
+          },
+          "おおかろうとすくなかろうと": {
+            "en": "Great, but let's use something that sounds more archaic and is more common.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I think that everyone<strong> to a greater or lesser extent </strong>has hidden secrets that they will not tell anyone.",
+        "nuance_translation": "An <strong>old-fashioned</strong> construction, contrasting opposite adjectives. Although it is <strong>uncertain whether</strong> it will be via (A) or (B), (C) will still happen.",
+        "extra_info": "",
+        "reviewable_id": 823,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9411",
+      "type": "study_question",
+      "attributes": {
+        "id": 9411,
+        "content": "<span class='study-area-input'>____</span>有人（ゆうじん）火星（かせい）探査（たんさ）の時代（じだい）はやってくるはずだ。",
+        "answer": "おそかれはやかれ",
+        "alternate_grammar": [],
+        "kanji_answer": "遅（おそ）かれはやかれ",
+        "kanji_alt_grammar": [],
+        "nuance": "反対（はんたい）の意味（いみ）をする形容詞（けいようし）を比較（ひかく）する時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。(A)を通（とお）して<strong>であろうと</strong>(B)を通（とお）して<strong>であろうと</strong>（C）は起（お）こる。",
+        "tense": "Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/遅かれはやかれ有人火星探査の時代はやってくるはずだ。.mp3",
+        "word_prompt": "遅（おそ）い",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I am sure that <strong>sooner or later</strong>, the era of manned missions to Mars will come.",
+        "nuance_translation": "An <strong>old-fashioned</strong> construction, contrasting opposite adjectives. Although it is <strong>uncertain whether</strong> it will be via (A) or (B), (C) will still happen.",
+        "extra_info": "",
+        "reviewable_id": 823,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10879",
+      "type": "study_question",
+      "attributes": {
+        "id": 10879,
+        "content": "毎日（まいにち）必死（ひっし）に日本語（にほんご）の勉強（べんきょう）をしているのだから、<span class='study-area-input'>____</span>あなたが日本語（にほんご）を習得（しゅうとく）する日（ひ）が来（く）るでしょう。",
+        "answer": "おそかれはやかれ",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "遅（おそ）かれ早（はや）かれ",
+        "kanji_alt_grammar": [],
+        "nuance": "反対（はんたい）の意味（いみ）をする形容詞（けいようし）を比較（ひかく）する時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。(A)を通（とお）して<strong>であろうと</strong>(B)を通（とお）して<strong>であろうと</strong>（C）は起（お）こる。",
+        "tense": "Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/毎日必死に日本語の勉強をしているのだから、遅かれ早かれあなたが日本語を習得する日が来るでしょう。.mp3",
+        "word_prompt": "遅（おそ）い",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Because you continue to fervently study Japanese every day, <strong>sooner or later</strong> the day will come where you have acquired the skill, right?",
+        "nuance_translation": "An <strong>old-fashioned</strong> construction, contrasting opposite adjectives. Although it is <strong>uncertain whether</strong> it will be via (A) or (B), (C) will still happen.",
+        "extra_info": "",
+        "reviewable_id": 823,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10880",
+      "type": "study_question",
+      "attributes": {
+        "id": 10880,
+        "content": "あなたが他人（たにん）に対（たい）してとる態度（たいど）は、 <span class='study-area-input'>____</span>、いずれ自分（じぶん）に返（かえ）ってくるものだと思（おも）いなさい。",
+        "answer": "よかれあしかれ",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "良（よ）かれ悪（あ）しかれ",
+        "kanji_alt_grammar": [],
+        "nuance": "反対（はんたい）の意味（いみ）をする形容詞（けいようし）を比較（ひかく）する時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。(A)を通（とお）して<strong>であろうと</strong>(B)を通（とお）して<strong>であろうと</strong>（C）は起（お）こる。",
+        "tense": "Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/あなたが他人に対してとる態度は、 良かれ悪しかれ、いずれ自分に返ってくるものだと思いなさい。.mp3",
+        "word_prompt": "よい",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "よかろうわるかろう": {
+            "en": "Great, but let's use something that sounds more archaic and is more common.",
+            "es": ""
+          },
+          "よくもわるくも": {
+            "en": "Great, but let's use something that sounds more archaic and is more common.",
+            "es": ""
+          },
+          "よきにつけあしきにつけ": {
+            "en": "Great, but let's use something that sounds more archaic and is more common.",
+            "es": ""
+          },
+          "いいにせよわるいにせよ": {
+            "en": "Great, but let's use something that sounds more archaic and is more common.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "In regard to the attitude that you adopt toward other people, you better believe that <strong>for better or worse</strong> it will all come back to you at some point.",
+        "nuance_translation": "An <strong>old-fashioned</strong> construction, contrasting opposite adjectives. Although it is <strong>uncertain whether</strong> it will be via (A) or (B), (C) will still happen.",
+        "extra_info": "",
+        "reviewable_id": 823,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9413",
+      "type": "study_question",
+      "attributes": {
+        "id": 9413,
+        "content": "<span class='study-area-input'>____</span>、確（たし）かに社会（しゃかい）がキャッシュレス化（か）する傾向（けいこう）が続（つづ）いている。",
+        "answer": "よかれあしかれ",
+        "alternate_grammar": [],
+        "kanji_answer": "よかれあしかれ",
+        "kanji_alt_grammar": [],
+        "nuance": "反対（はんたい）の意味（いみ）をする形容詞（けいようし）を比較（ひかく）する時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。(A)を通（とお）して<strong>であろうと</strong>(B)を通（とお）して<strong>であろうと</strong>（C）は起（お）こる。",
+        "tense": "Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/よかれあしかれ、確かに社会がキャッシュレス化する傾向が続いている。.mp3",
+        "word_prompt": "よい",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "よくもわるくも": {
+            "en": "Great! Could you use a set expression that has more of an archaic feel?",
+            "es": ""
+          },
+          "よきにつけあしきにつけ": {
+            "en": "Great! Could you use a set expression that has more of an archaic feel?",
+            "es": ""
+          },
+          "いいにせよわるいにせよ": {
+            "en": "Great! Could you use a set expression that has more of an archaic feel?",
+            "es": ""
+          },
+          "よかろうわるかろう": {
+            "en": "Great! Could you use a set expression that has more of an archaic feel?",
+            "es": ""
+          },
+          "よかれわるかれ": {
+            "en": "Some Japanese actually consider よかれわるかれ to be correct, but the majority of natives use a slightly different expression.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "For <strong>better or worse</strong>, the trend of society turning cashless continues.",
+        "nuance_translation": "An <strong>old-fashioned</strong> construction, contrasting opposite adjectives. Although it is <strong>uncertain whether</strong> it will be via (A) or (B), (C) will still happen.",
+        "extra_info": "",
+        "reviewable_id": 823,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9410",
+      "type": "study_question",
+      "attributes": {
+        "id": 9410,
+        "content": "好奇心（こうきしん）は<span class='study-area-input'>____</span>誰（だれ）もが持（も）っているものだろう。",
+        "answer": "おおかれすくなかれ",
+        "alternate_grammar": [],
+        "kanji_answer": "多（おお）かれすくなかれ",
+        "kanji_alt_grammar": [],
+        "nuance": "反対（はんたい）の意味（いみ）をする形容詞（けいようし）を比較（ひかく）する時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。(A)を通（とお）して<strong>であろうと</strong>(B)を通（とお）して<strong>であろうと</strong>（C）は起（お）こる。",
+        "tense": "Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/好奇心は多かれすくなかれ誰もが持っているものだろう。.mp3",
+        "word_prompt": "多（おお）い",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おおかろうとすくなかろうと": {
+            "en": "Could you use a set expression that is more commonly used?",
+            "es": ""
+          },
+          "だいなりしょうなり": {
+            "en": "Great! However, Bunpro is looking for an expression where the conjugation of 多い is used.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Curiosity is something that everybody has, to a <strong>greater or lesser</strong> extent.",
+        "nuance_translation": "An <strong>old-fashioned</strong> construction, contrasting opposite adjectives. Although it is <strong>uncertain whether</strong> it will be via (A) or (B), (C) will still happen.",
+        "extra_info": "",
+        "reviewable_id": 823,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10875",
+      "type": "study_question",
+      "attributes": {
+        "id": 10875,
+        "content": "違法（いほう）薬物（やくぶつ）の使用（しよう）を続（つづ）けている彼女（かのじょ）は、<span class='study-area-input'>____</span>後悔（こうかい）する事（こと）になるだろう。",
+        "answer": "おそかれはやかれ",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "遅（おそ）かれ早（はや）かれ",
+        "kanji_alt_grammar": [],
+        "nuance": "反対（はんたい）の意味（いみ）をする形容詞（けいようし）を比較（ひかく）する時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。(A)を通（とお）して<strong>であろうと</strong>(B)を通（とお）して<strong>であろうと</strong>（C）は起（お）こる。",
+        "tense": "Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/違法薬物の使用を続けている彼女は、遅かれ早かれ後悔する事になるだろう。.mp3",
+        "word_prompt": "遅（おそ）い",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Continuing to use unlawful drugs, she will probably start to regret it <strong>sooner or later</strong>.",
+        "nuance_translation": "An <strong>old-fashioned</strong> construction, contrasting opposite adjectives. Although it is <strong>uncertain whether</strong> it will be via (A) or (B), (C) will still happen.",
+        "extra_info": "",
+        "reviewable_id": 823,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9408",
+      "type": "study_question",
+      "attributes": {
+        "id": 9408,
+        "content": "「こんなにタバコを吸（す）い続（つづ）けては<span class='study-area-input'>____</span>病気（びょうき）になるだろう。」",
+        "answer": "おそかれはやかれ",
+        "alternate_grammar": [],
+        "kanji_answer": "遅（おそ）かれ早（はや）かれ",
+        "kanji_alt_grammar": [],
+        "nuance": "反対（はんたい）の意味（いみ）をする形容詞（けいようし）を比較（ひかく）する時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。(A)を通（とお）して<strong>であろうと</strong>(B)を通（とお）して<strong>であろうと</strong>（C）は起（お）こる。",
+        "tense": "Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「こんなにタバコを吸い続けては遅かれ早かれ病気になるだろう。」.mp3",
+        "word_prompt": "遅（おそ）い",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "'If you keep on smoking like this, <strong>sooner or later</strong> you will get sick.'",
+        "nuance_translation": "An <strong>old-fashioned</strong> construction, contrasting opposite adjectives. Although it is <strong>uncertain whether</strong> it will be via (A) or (B), (C) will still happen.",
+        "extra_info": "",
+        "reviewable_id": 823,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10877",
+      "type": "study_question",
+      "attributes": {
+        "id": 10877,
+        "content": "<span class='study-area-input'>____</span>、どんな親（おや）も子育（こそだ）てに対（たい）して常（つね）に悩（なや）みを持（も）っているものです。",
+        "answer": "おおかれすくなかれ",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "多（おお）かれ少（すく）なかれ",
+        "kanji_alt_grammar": [],
+        "nuance": "反対（はんたい）の意味（いみ）をする形容詞（けいようし）を比較（ひかく）する時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。(A)を通（とお）して<strong>であろうと</strong>(B)を通（とお）して<strong>であろうと</strong>（C）は起（お）こる。",
+        "tense": "Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/多かれ少なかれ、どんな親も子育てに対して常に悩みを持っているものです。.mp3",
+        "word_prompt": "多（おお）い",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だいなりしょうなり": {
+            "en": "Great, but let's use different expression where conjugation of 多い is used.",
+            "es": ""
+          },
+          "おおかろうとすくなかろうと": {
+            "en": "Great, but let's use something that sounds more archaic and is more common.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>To a greater or lesser extent</strong>, all parents constantly have concerns about bringing up their children.",
+        "nuance_translation": "An <strong>old-fashioned</strong> construction, contrasting opposite adjectives. Although it is <strong>uncertain whether</strong> it will be via (A) or (B), (C) will still happen.",
+        "extra_info": "",
+        "reviewable_id": 823,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9409",
+      "type": "study_question",
+      "attributes": {
+        "id": 9409,
+        "content": "この発見（はっけん）は<span class='study-area-input'>____</span>、大（おお）きな変化（へんか）をもたらすだろう。",
+        "answer": "よかれあしかれ",
+        "alternate_grammar": [],
+        "kanji_answer": "よかれあしかれ",
+        "kanji_alt_grammar": [],
+        "nuance": "反対（はんたい）の意味（いみ）をする形容詞（けいようし）を比較（ひかく）する時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。(A)を通（とお）して<strong>であろうと</strong>(B)を通（とお）して<strong>であろうと</strong>（C）は起（お）こる。",
+        "tense": "Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/この発見はよかれあしかれ、大きな変化をもたらすだろう。.mp3",
+        "word_prompt": "よい",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "よくもわるくも": {
+            "en": "Great! Could you use a set expression that has more of an archaic feel?",
+            "es": ""
+          },
+          "よきにつけあしきにつけ": {
+            "en": "Great! Could you use a set expression that has more of an archaic feel?",
+            "es": ""
+          },
+          "いいにせよわるいにせよ": {
+            "en": "Great! Could you use a set expression that has more of an archaic feel?",
+            "es": ""
+          },
+          "よかろうわるかろう": {
+            "en": "Great! Could you use a set expression that has more of an archaic feel?",
+            "es": ""
+          },
+          "よかれわるかれ": {
+            "en": "Some Japanese actually consider よかれわるかれ to be correct, but the majority of natives use a slightly different expression.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "For <strong>better or worse</strong>, this discovery will bring great change.",
+        "nuance_translation": "An <strong>old-fashioned</strong> construction, contrasting opposite adjectives. Although it is <strong>uncertain whether</strong> it will be via (A) or (B), (C) will still happen.",
+        "extra_info": "",
+        "reviewable_id": 823,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9412",
+      "type": "study_question",
+      "attributes": {
+        "id": 9412,
+        "content": "研究（けんきゅう）によるとあらゆる頭部外傷（とうぶがいしょう）は<span class='study-area-input'>____</span>脳（のう）に影響（えいきょう）を及（およ）ぼすということだ。",
+        "answer": "おおかれすくなかれ",
+        "alternate_grammar": [],
+        "kanji_answer": "多（おお）かれすくなかれ",
+        "kanji_alt_grammar": [],
+        "nuance": "反対（はんたい）の意味（いみ）をする形容詞（けいようし）を比較（ひかく）する時（とき）に使（つか）われる<strong>古（ふる）い</strong>文法（ぶんぽう）。(A)を通（とお）して<strong>であろうと</strong>(B)を通（とお）して<strong>であろうと</strong>（C）は起（お）こる。",
+        "tense": "Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/研究によるとあらゆる頭部外傷は多かれすくなかれ脳に影響を及ぼすということだ。.mp3",
+        "word_prompt": "多（おお）い",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おおかろうとすくなかろうと": {
+            "en": "Could you use a set expression that is more commonly used?",
+            "es": ""
+          },
+          "だいなりしょうなり": {
+            "en": "Great! However, Bunpro is looking for an expression where the conjugation of 多い is used.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "According to research, all kinds of head trauma affect the brain to a <strong>greater or lesser</strong> extent.",
+        "nuance_translation": "An <strong>old-fashioned</strong> construction, contrasting opposite adjectives. Although it is <strong>uncertain whether</strong> it will be via (A) or (B), (C) will still happen.",
+        "extra_info": "",
+        "reviewable_id": 823,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "890",
+      "type": "writeup",
+      "attributes": {
+        "id": 890,
+        "body_ja": "<p>「<span data-gp-id='823'>かれ～かれ</span>」は、意味（いみ）が反対（はんたい）の形容詞（けいようし）を組（く）み合（あ）わせて、どちらであっても結果（けっか）は同（おな）じことを表（あらわ）す文型（ぶんぽう）です。「(A) かれ (B) かれ」の形（かたち）で、「(A) でも (B) でも」や「どちらの場合（ばあい）でも」といった意味（いみ）で使（つか）われます。</p>\r\n\r\n<p>この表現（ひょうげん）は、イ形容詞（けいようし）の連用形（れんようけい）「く」と、五段動詞（ごだんどうし）「ある」の命令形（めいれいけい）「あれ」が組（く）み合（あ）わさってできたものです。イ形容詞（けいようし）には命令形（めいれいけい）がないため、命令（めいれい）の意味（いみ）を持（も）たせるために「くあれ」という形（かたち）が生（う）まれ、そこからさらに短（みじか）くなった「かれ」が使（つか）われるようになりました。こういった経緯（けいい）から、「<span data-gp-id='823'>かれ～かれ</span>」を文字通（もじどお）りに解釈（かいしゃく）すると「(A) であれ、または (B) であれ」というような断定的（だんていてき）なニュアンスを持（も）つ表現（ひょうげん）になります。</p>\r\n\r\n<p>「<span data-gp-id='823'>かれ～かれ</span>」は、対義語（たいぎご）である二（ふた）つの形容詞（けいようし）の語幹（ごかん）に付（つ）けて使（つか）われます。その後（あと）には、結果（けっか）が変（か）わらないことを表（あらわ）す内容（ないよう）が続（つづ）きます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182791'>\r\n<li data-study-question='182792'>\r\n<li data-study-question='182793'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='823'>かれ～かれ</span>」と一緒（いっしょ）に使（つか）われる形容詞（けいようし）はかなり限（かぎ）られているので、すでに知（し）っているものだけを使（つか）うのが無難（ぶなん）です。</p>\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>「良（よ）い」と「悪（わる）い」のような形容詞（けいようし）では、「悪（わる）い」の代（か）わりに古語（こご）の「悪（あ）し」に由来（ゆらい）する「悪（あ）しかれ」が使（つか）われます。これは現代（げんだい）でも定型（ていけい）表現（ひょうげん）として扱（あつか）われているので、覚（おぼ）えておくといいでしょう。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184560'></ul></section>",
+        "body": "<p><span data-gp-id='823'>かれ～かれ</span> is a grammar pattern that pairs with opposite い-Adjectives in Japanese to convey that 'whether (A) or (B), the result will be the same'. It is usually translated as 'or', or 'either (A) or (B)'. Originally, this structure was a contraction of the conjunctive stem of い-Adjectives, く, and the <span data-term='命令形・めいれいけい'>imperative form</span> of the う-Verb ある 'to be', あれ. い-Adjectives do not have their own <span data-term='命令形・めいれいけい'>imperative form</span>, so くあれ and then the abbreviation かれ evolved to fill this role. As it is imperative, the literal meaning is simply 'be it (A) or (B)', and is a declaration.</p>\r\n\r\n<p><span data-gp-id='823'>かれ～かれ</span> will attach to the stem of 2 adjectives that are antonyms, before going on to explain how the result remains the same regardless.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182791'>\r\n<li data-study-question='182792'>\r\n<li data-study-question='182793'>\r\n</ul>\r\n\r\n<p><span data-gp-id='823'>かれ～かれ</span> is used with a very limited set of adjectives, so it is best not to use it with words that you have not come across previously.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>In the case of 良（よ）い 'good' and 悪（わる）い 'bad', 悪（わる）い will be read as 悪（あ）しかれ, which comes from the archaic 悪（あ）し 'bad'. This is considered as set phrase in modern Japanese.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184560'></ul></section>"
+      }
+    },
+    {
+      "id": "1769",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1769,
+        "source": "Shin Kanzen Master N1 Bunpou",
+        "location": "Page 104",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1770",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1770,
+        "source": "Sou Matome Bunpou N1",
+        "location": "Page 40",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2303",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2303,
+        "site": "JapaneseTest4You",
+        "description": "Breakdown, examples, and audio",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n1-grammar-%E3%81%8B%E3%82%8C%EF%BD%9E%E3%81%8B%E3%82%8C-karekare/",
+        "type": "SupplementalLink"
+      }
+    }
+  ]
+}

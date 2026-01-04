@@ -1,0 +1,1071 @@
+{
+  "data": {
+    "id": "715",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 715,
+      "level": "JLPT5",
+      "lesson_id": 8,
+      "part_of_speech": "名詞",
+      "register": "一般",
+      "word_type": "一般",
+      "slug": "たくさん",
+      "nuance": "(A)が<strong>いっぱい・結構（けっこう）・十分（じゅうぶん）ある</strong>ということを表（あらわ）すときに<strong>使（つか）われることの多（おお）い</strong>言葉（ことば）。",
+      "grammar_order": 91,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 53,
+        "title": "まえに",
+        "slug": "まえに"
+      },
+      "previous_grammar_point": {
+        "id": 359,
+        "title": "けっこう",
+        "slug": "けっこう"
+      },
+      "lesson_count": "2/13",
+      "title": "たくさん",
+      "furigana": "沢山（たくさん）",
+      "meaning": "Many, A lot of, Plenty, Enough",
+      "nuance_translation": "A <strong>very common word</strong> which highlights that there is <strong>many, plenty, or enough</strong> of (A).",
+      "rare_kanji_warning": null,
+      "caution": "たくさん often comes directly before verbs",
+      "polite_structure": null,
+      "casual_structure": "<strong>たくさん</strong> + Phrase<br><strong>たくさん</strong> +（<span class='chui'><span class='gp-popout' data-gp-id='6'>の</span></span>） + Noun",
+      "part_of_speech_translation": "Noun",
+      "register_translation": "Standard",
+      "word_type_translation": "Ordinary",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/6983",
+      "metadata": "たくさん, たくさんの, 沢山, 沢山の, takusan, takusanno, noun, adverbial noun"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "155044",
+            "type": "study_question"
+          },
+          {
+            "id": "7673",
+            "type": "study_question"
+          },
+          {
+            "id": "7675",
+            "type": "study_question"
+          },
+          {
+            "id": "7682",
+            "type": "study_question"
+          },
+          {
+            "id": "155045",
+            "type": "study_question"
+          },
+          {
+            "id": "183800",
+            "type": "study_question"
+          },
+          {
+            "id": "183801",
+            "type": "study_question"
+          },
+          {
+            "id": "7683",
+            "type": "study_question"
+          },
+          {
+            "id": "7679",
+            "type": "study_question"
+          },
+          {
+            "id": "7676",
+            "type": "study_question"
+          },
+          {
+            "id": "7674",
+            "type": "study_question"
+          },
+          {
+            "id": "7677",
+            "type": "study_question"
+          },
+          {
+            "id": "7681",
+            "type": "study_question"
+          },
+          {
+            "id": "7678",
+            "type": "study_question"
+          },
+          {
+            "id": "7680",
+            "type": "study_question"
+          },
+          {
+            "id": "7684",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "90",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "921",
+            "type": "offline_resource"
+          },
+          {
+            "id": "943",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1261",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1372",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1558",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2107",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "155044",
+      "type": "study_question",
+      "attributes": {
+        "id": 155044,
+        "content": "<span class='study-area-input'>____</span>食（た）べ<span class=\"gp-popout\" data-gp-id=\"416\">て</span><span class=\"gp-popout\" data-gp-id=\"78\">よ</span>!",
+        "answer": "たくさん",
+        "alternate_grammar": [],
+        "kanji_answer": "沢山（たくさん）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/沢山食べてよ!.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Eat <strong>a lot</strong>! (Eat to your heart's content!)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 715,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7673",
+      "type": "study_question",
+      "attributes": {
+        "id": 7673,
+        "content": "<span class='study-area-input'>____</span>あります<span class='gp-popout' data-gp-id='45'>から</span>。食（た）べ<span class='gp-popout' data-gp-id='60'>てください</span>。",
+        "answer": "たくさん",
+        "alternate_grammar": [],
+        "kanji_answer": "たくさん",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>いっぱい・結構（けっこう）・十分（じゅうぶん）ある</strong>ということを表（あらわ）すときに<strong>使（つか）われることの多（おお）い</strong>言葉（ことば）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/715/male_audio/01-たくさんありますから食べてください.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/たくさんありますから。食べてください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "じゅうぶん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "たっぷり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "いっぱい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "おおい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "たくさんが": {
+            "en": "Can you remove something from the end?",
+            "es": "",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "There is <strong>plenty</strong>. So, please eat.",
+        "nuance_translation": "A <strong>very common word</strong> which highlights that there is <strong>many, plenty, or enough</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 715,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7675",
+      "type": "study_question",
+      "attributes": {
+        "id": 7675,
+        "content": "<span class='study-area-input'>____</span>仕事（しごと）<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='22'>します</span>。",
+        "answer": "たくさん",
+        "alternate_grammar": [
+          "たくさん",
+          "たくさんの"
+        ],
+        "kanji_answer": "たくさん",
+        "kanji_alt_grammar": [
+          "たくさん",
+          "たくさんの"
+        ],
+        "nuance": "(A)が<strong>いっぱい・結構（けっこう）・十分（じゅうぶん）ある</strong>ということを表（あらわ）すときに<strong>使（つか）われることの多（おお）い</strong>言葉（ことば）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/715/male_audio/02-たくさん仕事をします.mp3",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "じゅうぶん": {
+            "en": "",
+            "es": "",
+            "fr": ""
+          },
+          "たっぷり": {
+            "en": "",
+            "es": "",
+            "fr": ""
+          },
+          "いっぱい": {
+            "en": "",
+            "es": "",
+            "fr": ""
+          },
+          "おおい": {
+            "en": "",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I will do <strong>a lot of</strong> work.",
+        "nuance_translation": "A <strong>very common word</strong> which highlights that there is <strong>many, plenty, or enough</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 715,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7682",
+      "type": "study_question",
+      "attributes": {
+        "id": 7682,
+        "content": "東京（とうきょう）<span class='gp-popout' data-gp-id='25'>で</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>(の)写真（しゃしん）<span class='gp-popout' data-gp-id='21'>を</span>とり<span class='gp-popout' data-gp-id='41'>ました</span><span class='gp-popout' data-gp-id='44'>が</span>、大阪（おおさか）<span class='gp-popout' data-gp-id='25'>で</span><span class='gp-popout' data-gp-id='3'>は</span>写真（しゃしん）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>とり<span class='gp-popout' data-gp-id='897'>ませんでした</span>。",
+        "answer": "たくさん",
+        "alternate_grammar": [],
+        "kanji_answer": "たくさん",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>いっぱい・結構（けっこう）・十分（じゅうぶん）ある</strong>ということを表（あらわ）すときに<strong>使（つか）われることの多（おお）い</strong>言葉（ことば）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/715/male_audio/東京ではたくさん.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/東京ではたくさん(の)写真をとりましたが、大阪では写真をたくさんとりませんでした。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "じゅうぶん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "たっぷり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "いっぱい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "おおい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "たくさんの": {
+            "en": "Can you remove something from the end?",
+            "es": "¿Puedes quitar algo del final?",
+            "fr": "Pouvez-vous enlever quelque chose à la fin ?",
+            "id": "Mungkin kamu bisa coba hapus sesuatu dari bagian akhir?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "In Tokyo, I took <strong>many</strong> pictures, but I did not take <strong>a lot of</strong> pictures in Osaka.",
+        "nuance_translation": "A <strong>very common word</strong> which highlights that there is <strong>many, plenty, or enough</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 715,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155045",
+      "type": "study_question",
+      "attributes": {
+        "id": 155045,
+        "content": "この島（しま）<span class=\"gp-popout\" data-gp-id=\"32\">に</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span><span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"6\">の</span>猫（ねこ）<span class=\"gp-popout\" data-gp-id=\"23\">がいます</span>。",
+        "answer": "たくさん",
+        "alternate_grammar": [],
+        "kanji_answer": "沢山（たくさん）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/この島には沢山の猫がいます。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "On this island, there are <strong>a lot</strong> of cats. (Unrelated to the sentence, there is actually an island like this in Japan!)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 715,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183800",
+      "type": "study_question",
+      "attributes": {
+        "id": 183800,
+        "content": "<span data-gp-id='47'>あの</span>店（みせ）<span data-gp-id='6'>の</span><span data-gp-id='53'>前（まえ）に</span><span data-gp-id='715'>沢山（たくさん）</span>人（ひと）が集（あつ）まっ<span data-gp-id='27'>ている</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 11,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "There are <strong>a lot</strong> of people gathering in front of that store. (Focuses on the store. I wonder why there are so many people in front of that store)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 715,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183801",
+      "type": "study_question",
+      "attributes": {
+        "id": 183801,
+        "content": "<span data-gp-id='47'>あの</span>店（みせ）<span data-gp-id='6'>の</span><span data-gp-id='53'>前（まえ）に</span><span data-gp-id='715'>沢山（たくさん）</span><span data-gp-id='6'>の</span>人（ひと）が集（あつ）まっ<span data-gp-id='27'>ている</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "There are <strong>a lot</strong> of people gathering in front of that store. (Focuses on the people. The amount of people gathering up in front of that store is unbelievable)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 715,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7683",
+      "type": "study_question",
+      "attributes": {
+        "id": 7683,
+        "content": "<span class='study-area-input'>____</span>寿司（すし）<span class='gp-popout' data-gp-id='21'>を</span>食（た）べ<span class='gp-popout' data-gp-id='12'>る</span><span class='gp-popout' data-gp-id='16'>のは</span><span class='gp-popout' data-gp-id='714'>誰（だれ）</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "たくさん",
+        "alternate_grammar": [
+          "たくさんの",
+          "たくさん"
+        ],
+        "kanji_answer": "たくさん",
+        "kanji_alt_grammar": [
+          "たくさんの",
+          "たくさん"
+        ],
+        "nuance": "(A)が<strong>いっぱい・結構（けっこう）・十分（じゅうぶん）ある</strong>ということを表（あらわ）すときに<strong>使（つか）われることの多（おお）い</strong>言葉（ことば）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/715/male_audio/03-たくさん寿司を食べるのは誰ですか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/たくさん寿司を食べるのは誰ですか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "じゅうぶん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "たっぷり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "いっぱい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "おおい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Who is the one that will eat <strong>a lot of</strong> sushi?",
+        "nuance_translation": "A <strong>very common word</strong> which highlights that there is <strong>many, plenty, or enough</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 715,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7679",
+      "type": "study_question",
+      "attributes": {
+        "id": 7679,
+        "content": "<span class='vocab-popout' data-vocab-id='415'>去年（きょねん）</span>、<span class='vocab-popout' data-vocab-id='567'>彼女（かのじょ）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>絵（え）<span class='gp-popout' data-gp-id='21'>を</span>描（か）き<span class='gp-popout' data-gp-id='41'>ました</span>。",
+        "answer": "たくさん",
+        "alternate_grammar": [
+          "たくさん",
+          "たくさんの"
+        ],
+        "kanji_answer": "たくさん",
+        "kanji_alt_grammar": [
+          "たくさん",
+          "たくさんの"
+        ],
+        "nuance": "(A)が<strong>いっぱい・結構（けっこう）・十分（じゅうぶん）ある</strong>ということを表（あらわ）すときに<strong>使（つか）われることの多（おお）い</strong>言葉（ことば）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/715/male_audio/去年、彼女はたくさん(の)絵を描きました。.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/去年、彼女はたくさん絵を描きました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "じゅうぶん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "たっぷり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "いっぱい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "おおい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Last year, she drew <strong>many</strong> pictures.",
+        "nuance_translation": "A <strong>very common word</strong> which highlights that there is <strong>many, plenty, or enough</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 715,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7676",
+      "type": "study_question",
+      "attributes": {
+        "id": 7676,
+        "content": "日本語（にほんご）<span class='gp-popout' data-gp-id='6'>の</span>勉強（べんきょう）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>し<span class='gp-popout' data-gp-id='41'>ました</span>。",
+        "answer": "たくさん",
+        "alternate_grammar": [],
+        "kanji_answer": "たくさん",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>いっぱい・結構（けっこう）・十分（じゅうぶん）ある</strong>ということを表（あらわ）すときに<strong>使（つか）われることの多（おお）い</strong>言葉（ことば）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/715/male_audio/10-日本語の勉強を沢山しました.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/日本語の勉強をたくさんしました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "じゅうぶん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "たっぷり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "いっぱい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "おおい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I did <strong>a lot of</strong> Japanese studying.",
+        "nuance_translation": "A <strong>very common word</strong> which highlights that there is <strong>many, plenty, or enough</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 715,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7674",
+      "type": "study_question",
+      "attributes": {
+        "id": 7674,
+        "content": "<span class='study-area-input'>____</span>雪（ゆき）<span class='gp-popout' data-gp-id='10'>が</span>降（ふ）り<span class='gp-popout' data-gp-id='41'>ました</span>。",
+        "answer": "たくさん",
+        "alternate_grammar": [
+          "たくさんの",
+          "たくさん"
+        ],
+        "kanji_answer": "たくさん",
+        "kanji_alt_grammar": [
+          "たくさんの",
+          "たくさん"
+        ],
+        "nuance": "(A)が<strong>いっぱい・結構（けっこう）・十分（じゅうぶん）ある</strong>ということを表（あらわ）すときに<strong>使（つか）われることの多（おお）い</strong>言葉（ことば）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/715/male_audio/05-たくさん雪が降りました.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/たくさん雪が降りました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "じゅうぶん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "たっぷり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "いっぱい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "おおい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>A lot of</strong> snow fell.",
+        "nuance_translation": "A <strong>very common word</strong> which highlights that there is <strong>many, plenty, or enough</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 715,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7677",
+      "type": "study_question",
+      "attributes": {
+        "id": 7677,
+        "content": "彼（かれ）<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>本（ほん）<span class='gp-popout' data-gp-id='21'>を</span>読（よ）<span class='gp-popout' data-gp-id='26'>む</span>。",
+        "answer": "たくさんの",
+        "alternate_grammar": [
+          "たくさん",
+          "たくさんの"
+        ],
+        "kanji_answer": "たくさんの",
+        "kanji_alt_grammar": [
+          "たくさん",
+          "たくさんの"
+        ],
+        "nuance": "(A)が<strong>いっぱい・結構（けっこう）・十分（じゅうぶん）ある</strong>ということを表（あらわ）すときに<strong>使（つか）われることの多（おお）い</strong>言葉（ことば）。",
+        "tense": "Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼はたくさんの本を読む。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "じゅうぶんの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "たっぷりの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "いっぱいの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "おおい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He reads <strong>a lot of</strong> books.",
+        "nuance_translation": "A <strong>very common word</strong> which highlights that there is <strong>many, plenty, or enough</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 715,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7681",
+      "type": "study_question",
+      "attributes": {
+        "id": 7681,
+        "content": "<span class='study-area-input'>____</span>服（ふく）<span class='gp-popout' data-gp-id='21'>を</span>買（か）い<span class='gp-popout' data-gp-id='59'>たい</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "たくさんの",
+        "alternate_grammar": [
+          "たくさん",
+          "たくさんの"
+        ],
+        "kanji_answer": "たくさんの",
+        "kanji_alt_grammar": [
+          "たくさん",
+          "たくさんの"
+        ],
+        "nuance": "(A)が<strong>いっぱい・結構（けっこう）・十分（じゅうぶん）ある</strong>ということを表（あらわ）すときに<strong>使（つか）われることの多（おお）い</strong>言葉（ことば）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/715/male_audio/04-たくさん服を買いたいです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/たくさんの服を買いたいです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "じゅうぶん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "たっぷり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "いっぱい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "おおい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I want to buy <strong>a lot of</strong> clothes.",
+        "nuance_translation": "A <strong>very common word</strong> which highlights that there is <strong>many, plenty, or enough</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 715,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7678",
+      "type": "study_question",
+      "attributes": {
+        "id": 7678,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='3'>は</span>スタジオジブリ<span class='gp-popout' data-gp-id='6'>の</span>映画（えいが）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>持（も）っ<span class='gp-popout' data-gp-id='764'>ています</span>。",
+        "answer": "たくさん",
+        "alternate_grammar": [],
+        "kanji_answer": "たくさん",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>いっぱい・結構（けっこう）・十分（じゅうぶん）ある</strong>ということを表（あらわ）すときに<strong>使（つか）われることの多（おお）い</strong>言葉（ことば）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/715/male_audio/12-私はスタジオジブリの映画を沢山持っています.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私はスタジオジブリの映画をたくさん持っています。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "じゅうぶん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "たっぷり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "いっぱい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "おおい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I have <strong>many</strong> Studio Ghibli films.",
+        "nuance_translation": "A <strong>very common word</strong> which highlights that there is <strong>many, plenty, or enough</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 715,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7680",
+      "type": "study_question",
+      "attributes": {
+        "id": 7680,
+        "content": "<span class='name-highlight'>友達（ともだち）</span>：「ピザ<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>食（た）べ<span class='gp-popout' data-gp-id='895'>た</span>。」<br> <span class='name-highlight'>私（わたし）</span>：「私（わたし）も。コーラ<span class='gp-popout' data-gp-id='21'>を</span>飲（の）み<span class='gp-popout' data-gp-id='59'>たい</span>。」",
+        "answer": "たくさん",
+        "alternate_grammar": [],
+        "kanji_answer": "たくさん",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>いっぱい・結構（けっこう）・十分（じゅうぶん）ある</strong>ということを表（あらわ）すときに<strong>使（つか）われることの多（おお）い</strong>言葉（ことば）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/715/male_audio/06-友達ピザを沢山食べた.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/友達：「ピザをたくさん食べた。」 私：「私も。コーラを飲みたい。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "じゅうぶん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "たっぷり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "いっぱい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "おおい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Friend</span>: 'I ate <strong>a lot of</strong> pizza.' <span class='name-highlight'>Me</span>: 'Me too. I want to drink cola.'",
+        "nuance_translation": "A <strong>very common word</strong> which highlights that there is <strong>many, plenty, or enough</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 715,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7684",
+      "type": "study_question",
+      "attributes": {
+        "id": 7684,
+        "content": "彼（かれ）の家（いえ）<span class='gp-popout' data-gp-id='3'>は</span>テレビのある部屋（へや）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='13'>あります</span>。",
+        "answer": "たくさん",
+        "alternate_grammar": [],
+        "kanji_answer": "たくさん",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が<strong>いっぱい・結構（けっこう）・十分（じゅうぶん）ある</strong>ということを表（あらわ）すときに<strong>使（つか）われることの多（おお）い</strong>言葉（ことば）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/715/male_audio/07-彼の家はテレビのある部屋がたくさんあります.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼の家はテレビのある部屋がたくさんあります。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "じゅうぶん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "たっぷり": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "いっぱい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "おおい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "His house has <strong>many</strong> rooms with TVs.",
+        "nuance_translation": "A <strong>very common word</strong> which highlights that there is <strong>many, plenty, or enough</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 715,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "90",
+      "type": "writeup",
+      "attributes": {
+        "id": 90,
+        "body_ja": "",
+        "body": "<p>There are many cases in Japanese where a noun will appear as an adverb, particularly with words that are describing amounts. <span data-gp-id='715'>たくさん</span>, or <span data-gp-id='715'>沢山（たくさん）</span> as it is regularly seen, is one of those words. <span data-gp-id='715'>たくさん</span> means 'a lot', or 'many' in Japanese, and can be used before a phrase, or directly before a noun, when separated via <span data-gp-id='6'>の</span>.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155044'>\r\n<li data-study-question='155045'></ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p><span data-gp-id='715'>たくさん</span> may be used before a noun without also using <span data-gp-id='6'>の</span>. However, in this case, it will feel more like <span data-gp-id='715'>たくさん</span> is describing the whole phrase, rather than just the noun it is in front of. If you strongly want to highlight the noun, using <span data-gp-id='6'>の</span> would be best.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183800'>\r\n<li data-study-question='183801'></ul>\r\n\r\n<p>In these examples, the only difference is that the sentence with <span data-gp-id='6'>の</span> feels like the speaker is putting extra focus on the people, rather than the gathering that is happening.</p></section>"
+      }
+    },
+    {
+      "id": "921",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 921,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 112",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "943",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 943,
+        "source": "みんなの日本語 I",
+        "location": "Page 62 [CH 9]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1261",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1261,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 78",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1558",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1558,
+        "site": "Japanese StackExchange",
+        "description": "Is たくさん an adverb or a noun?",
+        "link": "https://japanese.stackexchange.com/questions/27483/%E3%81%9F%E3%81%8F%E3%81%95%E3%82%93%E3%81%AE%E6%9C%AC%E3%82%92%E8%AA%AD%E3%82%93%E3%81%A7-versus-%E6%9C%AC%E3%82%92%E3%81%9F%E3%81%8F%E3%81%95%E3%82%93%E8%AA%AD%E3%82%93%E3%81%A7",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2107",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2107,
+        "site": "Tae Kim",
+        "description": "Properties of Adverbs",
+        "link": "https://guidetojapanese.org/learn/grammar/adverbs",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1372",
+      "type": "related_content",
+      "attributes": {
+        "id": 1372,
+        "relationship_type": "antonym",
+        "body": "たくさん is a noun meaning 'many' or 'a lot,' often used with verbs (e.g. たくさん食べた = 'I ate a lot'). To express the opposite idea ('not much' or 'not many'), the pattern あまり～ない is used (e.g. あまり食べなかった = 'I didn't eat much'). Note that あまり originally means 'excess' and can also appear in affirmative forms (see あまりに).",
+        "first_relatable": {
+          "id": 715,
+          "slug": "たくさん",
+          "title": "たくさん",
+          "meaning": "Many, A lot of, Plenty, Enough",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 374,
+          "slug": "あまり-ない",
+          "title": "あまり～ない",
+          "meaning": "Not very, Not much, Not really, Hardly",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

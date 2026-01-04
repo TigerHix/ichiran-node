@@ -1,0 +1,968 @@
+{
+  "data": {
+    "id": "889",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 889,
+      "level": "JLPT1",
+      "lesson_id": 49,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "ずじまい",
+      "nuance": "何（なに）かが実現（じつげん）しなかったことを<strong>残念（ざんねん）</strong>に思（おも）うということを<strong>強（つよ）く</strong>表（あらわ）す表現（ひょうげん）。(A)は<strong>実現（じつげん）しなかった</strong>。",
+      "grammar_order": 887,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 890,
+        "title": "に言わせれば・に言わせると・に言わせたら",
+        "slug": "に言わせれば"
+      },
+      "previous_grammar_point": {
+        "id": 887,
+        "title": "に恥じない",
+        "slug": "に恥じない"
+      },
+      "lesson_count": "4/20",
+      "title": "ずじまい",
+      "furigana": "ずじまい",
+      "meaning": "Ended up not, Did not (in the end), Never did",
+      "nuance_translation": "A <strong>strong</strong> construction indicating regret that something <strong>unfortunately</strong> did not happen. (A) <strong>never came about</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "originates from the voiced verb[stem] form of しまう. Very often used in past form.",
+      "polite_structure": "",
+      "casual_structure": "<span class='gp-popout' data-gp-id='888'>Verb［<del>ない</del>］</span>+ <span class='chui'><span class='gp-popout' data-gp-id='303'>ず</span></span> + <strong><span class='gp-popout' data-gp-id='172'>じまい</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/36221",
+      "metadata": "ずじまい, zujimai, classical auxiliary verb, expression"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "183648",
+            "type": "study_question"
+          },
+          {
+            "id": "183651",
+            "type": "study_question"
+          },
+          {
+            "id": "183650",
+            "type": "study_question"
+          },
+          {
+            "id": "183653",
+            "type": "study_question"
+          },
+          {
+            "id": "183649",
+            "type": "study_question"
+          },
+          {
+            "id": "9831",
+            "type": "study_question"
+          },
+          {
+            "id": "9829",
+            "type": "study_question"
+          },
+          {
+            "id": "9832",
+            "type": "study_question"
+          },
+          {
+            "id": "9834",
+            "type": "study_question"
+          },
+          {
+            "id": "9830",
+            "type": "study_question"
+          },
+          {
+            "id": "183061",
+            "type": "study_question"
+          },
+          {
+            "id": "183062",
+            "type": "study_question"
+          },
+          {
+            "id": "183063",
+            "type": "study_question"
+          },
+          {
+            "id": "184600",
+            "type": "study_question"
+          },
+          {
+            "id": "183652",
+            "type": "study_question"
+          },
+          {
+            "id": "183654",
+            "type": "study_question"
+          },
+          {
+            "id": "9833",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "959",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1945",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1569",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2551",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "183648",
+      "type": "study_question",
+      "attributes": {
+        "id": 183648,
+        "content": "伝（つた）えたかったことを<span class='study-area-input'>____</span>で元（もと）カノと別（わか）れたことを後悔（こうかい）しています。",
+        "answer": "つたえずじまい",
+        "alternate_grammar": [],
+        "kanji_answer": "伝（つた）えずじまい",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが実現（じつげん）しなかったことを<strong>残念（ざんねん）</strong>に思（おも）うということを<strong>強（つよ）く</strong>表（あらわ）す表現（ひょうげん）。(A)は<strong>実現（じつげん）しなかった</strong>。",
+        "tense": "Conjunctive, Regret",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/伝えたかったことを伝えずじまいで元カノと別れたことを後悔しています。.mp3",
+        "word_prompt": "伝（つた）える",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>ended up not</strong> conveying what I wanted to, and regret that I broke up with my ex girlfriend.",
+        "nuance_translation": "A <strong>strong</strong> construction indicating regret that something <strong>unfortunately</strong> did not happen. (A) <strong>never came about</strong>.",
+        "extra_info": "",
+        "reviewable_id": 889,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183651",
+      "type": "study_question",
+      "attributes": {
+        "id": 183651,
+        "content": "今年（ことし）こそ彼氏（かれし）とバレンタインデーを過（す）ごす計画（けいかく）だったのに、結局（けっきょく）彼氏（かれし）は<span class='study-area-input'>____</span>、友達（ともだち）と過（す）ごす事（こと）になった。",
+        "answer": "つくれずじまい",
+        "alternate_grammar": [],
+        "kanji_answer": "作（つく）れずじまい",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが実現（じつげん）しなかったことを<strong>残念（ざんねん）</strong>に思（おも）うということを<strong>強（つよ）く</strong>表（あらわ）す表現（ひょうげん）。(A)は<strong>実現（じつげん）しなかった</strong>。",
+        "tense": "Conjunctive, Regret",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/今年こそ彼氏とバレンタインデーを過ごす計画だったのに、結局彼氏は作れずじまい、友達と過ごす事になった。.mp3",
+        "word_prompt": "作（つく）れる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Despite planning to spend time with my boyfriend this valentines day, in the end he <strong>never did</strong> plan anything, and hung out with his friends.",
+        "nuance_translation": "A <strong>strong</strong> construction indicating regret that something <strong>unfortunately</strong> did not happen. (A) <strong>never came about</strong>.",
+        "extra_info": "",
+        "reviewable_id": 889,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183650",
+      "type": "study_question",
+      "attributes": {
+        "id": 183650,
+        "content": "忙（いそが）しい事（こと）を理由（りゆう）に友達（ともだち）からの誘（さそ）いを断（ことわ）り続（つづ）けていたら、結局（けっきょく）<span class='study-area-input'>____</span>になってしまった。",
+        "answer": "あそべずじまい",
+        "alternate_grammar": [],
+        "kanji_answer": "遊（あそ）べずじまい",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが実現（じつげん）しなかったことを<strong>残念（ざんねん）</strong>に思（おも）うということを<strong>強（つよ）く</strong>表（あらわ）す表現（ひょうげん）。(A)は<strong>実現（じつげん）しなかった</strong>。",
+        "tense": "Conjunctive, Regret",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/忙しい事を理由に友達からの誘いを断り続けていたら、結局遊べずじまいになってしまった。.mp3",
+        "word_prompt": "遊（あそ）べる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "When I continued to decline my friend’s invitations with the reason of being busy, we <strong>never did</strong> end up hanging out.",
+        "nuance_translation": "A <strong>strong</strong> construction indicating regret that something <strong>unfortunately</strong> did not happen. (A) <strong>never came about</strong>.",
+        "extra_info": "",
+        "reviewable_id": 889,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183653",
+      "type": "study_question",
+      "attributes": {
+        "id": 183653,
+        "content": "リストラされてしまったせいで家賃（やちん）も水道代（すいどうだい）も電気代（でんきだい）も<span class='study-area-input'>____</span>なので、直（じき）にホームレスになるだろう。",
+        "answer": "はらえずじまい",
+        "alternate_grammar": [],
+        "kanji_answer": "払（はら）えずじまい",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが実現（じつげん）しなかったことを<strong>残念（ざんねん）</strong>に思（おも）うということを<strong>強（つよ）く</strong>表（あらわ）す表現（ひょうげん）。(A)は<strong>実現（じつげん）しなかった</strong>。",
+        "tense": "Conjunctive, Regret",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/リストラされてしまったせいで家賃も水道代も電気代も払えずじまいなので、直にホームレスになるだろう。.mp3",
+        "word_prompt": "払（はら）える",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Since I <strong>ended up not</strong> being able to pay my electricity, rent, or water bills due to being downsized, I’m probably on the verge of becoming homeless.",
+        "nuance_translation": "A <strong>strong</strong> construction indicating regret that something <strong>unfortunately</strong> did not happen. (A) <strong>never came about</strong>.",
+        "extra_info": "",
+        "reviewable_id": 889,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183649",
+      "type": "study_question",
+      "attributes": {
+        "id": 183649,
+        "content": "戦争（せんそう）に行（い）って<span class='study-area-input'>____</span>になってしまった夫婦（ふうふ）の話（はなし）を聞（き）き、涙（なみだ）が止（と）まりませんでした。",
+        "answer": "あえずじまい",
+        "alternate_grammar": [],
+        "kanji_answer": "会（あ）えずじまい",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが実現（じつげん）しなかったことを<strong>残念（ざんねん）</strong>に思（おも）うということを<strong>強（つよ）く</strong>表（あらわ）す表現（ひょうげん）。(A)は<strong>実現（じつげん）しなかった</strong>。",
+        "tense": "Conjunctive, Regret",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/戦争に行って会えずじまいになってしまった夫婦の話を聞き、涙が止まりませんでした。.mp3",
+        "word_prompt": "会（あ）える",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "After hearing the story of going to war and the married couple <strong>ending up never</strong> meeting again, my tears wouldn’t stop.",
+        "nuance_translation": "A <strong>strong</strong> construction indicating regret that something <strong>unfortunately</strong> did not happen. (A) <strong>never came about</strong>.",
+        "extra_info": "",
+        "reviewable_id": 889,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9831",
+      "type": "study_question",
+      "attributes": {
+        "id": 9831,
+        "content": "<span class='name-highlight'>小説（しょうせつ）</span>：「事故（じこ）の原因（げんいん）について調（しら）べようとしたが、ついに<span class='study-area-input'>____</span>だった。」",
+        "answer": "わからずじまい",
+        "alternate_grammar": [],
+        "kanji_answer": "わからずじまい",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが実現（じつげん）しなかったことを<strong>残念（ざんねん）</strong>に思（おも）うということを<strong>強（つよ）く</strong>表（あらわ）す表現（ひょうげん）。(A)は<strong>実現（じつげん）しなかった</strong>。",
+        "tense": "Conjunctive, Regret",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/小説：「事故の原因について調べようとしたが、ついにわからずじまいだった。」.mp3",
+        "word_prompt": "わかる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "わからないでおわった": {
+            "en": "Good. However the expression you used cannot be followed by だった",
+            "es": ""
+          },
+          "わからないでおわってしまった": {
+            "en": "Good. However the expression you used cannot be followed by だった",
+            "es": ""
+          },
+          "わからないでおわっちゃった": {
+            "en": "Good. However the expression you used cannot be followed by だった",
+            "es": ""
+          },
+          "わからないでおわったん": {
+            "en": "Good. Can you use different expression?",
+            "es": ""
+          },
+          "わからないでおわったの": {
+            "en": "Good. Can you use different expression?",
+            "es": ""
+          },
+          "わからないでおわってしまったん": {
+            "en": "Good. Can you use different expression?",
+            "es": ""
+          },
+          "わからないでおわっちゃったん": {
+            "en": "Good. Can you use different expression?",
+            "es": ""
+          },
+          "わからないでおわってしまったの": {
+            "en": "Good. Can you use different expression?",
+            "es": ""
+          },
+          "わからないでおわっちゃったの": {
+            "en": "Good. Can you use different expression?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Novel</span>: 'I tried to investigate the cause of the accident, but I <strong>ended up not</strong> discovering anything.'",
+        "nuance_translation": "A <strong>strong</strong> construction indicating regret that something <strong>unfortunately</strong> did not happen. (A) <strong>never came about</strong>.",
+        "extra_info": "",
+        "reviewable_id": 889,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9829",
+      "type": "study_question",
+      "attributes": {
+        "id": 9829,
+        "content": "<span class='name-highlight'>Ａ（エー）</span>：「結局（けっきょく）、<span class='study-area-input'>____</span>で新（しん）学期（がっき）になっちゃった<span class='gp-popout' data-gp-id='78'>よ</span>。」<br><span class='name-highlight'>Ｂ（ビー）</span>：「なにをやらなかったの？」<br><span class='name-highlight'>Ａ（エー）</span>：「<span class='vocab-popout' data-vocab-id='455'>夏休（なつやす）み</span>の<span class='vocab-popout' data-vocab-id='517'>宿題（しゅくだい）</span>…」",
+        "answer": "やらずじまい",
+        "alternate_grammar": [],
+        "kanji_answer": "やらずじまい",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが実現（じつげん）しなかったことを<strong>残念（ざんねん）</strong>に思（おも）うということを<strong>強（つよ）く</strong>表（あらわ）す表現（ひょうげん）。(A)は<strong>実現（じつげん）しなかった</strong>。",
+        "tense": "Conjunctive, Regret",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/A：「結局、やらずじまいで新学期になっちゃったよ。」B：「なにをやらなかったの？」A：「夏休みの宿題…」.mp3",
+        "word_prompt": "やる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やらない": {
+            "en": "Good. However could you use an expression that emphasizes regret?",
+            "es": ""
+          },
+          "やらないでおわった": {
+            "en": "Good. However the expression you used cannot be followed by で",
+            "es": ""
+          },
+          "やらないでおわってしまった": {
+            "en": "Good. However the expression you used cannot be followed by で",
+            "es": ""
+          },
+          "やらないでおわっちゃった": {
+            "en": "Good. However the expression you used cannot be followed by で",
+            "es": ""
+          },
+          "やらないでおわって": {
+            "en": "Good. However the expression you used cannot be followed by で",
+            "es": ""
+          },
+          "やらないでおわってしまって": {
+            "en": "Good. However the expression you used cannot be followed by で",
+            "es": ""
+          },
+          "やらないでおわっちゃって": {
+            "en": "Good. However the expression you used cannot be followed by で",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>A</span>: 'I <strong>ended up not</strong> doing it, and the new school term started.'<br><span class='name-highlight'>B</span>: 'What did you not do?'<br><span class='name-highlight'>A</span>: 'The summer homework...'",
+        "nuance_translation": "A <strong>strong</strong> construction indicating regret that something <strong>unfortunately</strong> did not happen. (A) <strong>never came about</strong>.",
+        "extra_info": "",
+        "reviewable_id": 889,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9832",
+      "type": "study_question",
+      "attributes": {
+        "id": 9832,
+        "content": "「最新（さいしん）の愛（あい）Ｐｈｏｎｅ（フォン）を買（か）おうとストアに１０（じゅう）時間（じかん）並（なら）んだのに、自分（じぶん）の番（ばん）が来（く）る頃（ころ）には欲（ほ）しい色（いろ）がもう売（う）り切（き）れていて結局（けっきょく）<span class='study-area-input'>____</span>だった。」",
+        "answer": "かえずじまい",
+        "alternate_grammar": [],
+        "kanji_answer": "買（か）えずじまい",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが実現（じつげん）しなかったことを<strong>残念（ざんねん）</strong>に思（おも）うということを<strong>強（つよ）く</strong>表（あらわ）す表現（ひょうげん）。(A)は<strong>実現（じつげん）しなかった</strong>。",
+        "tense": "Conjunctive, Regret",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「最新の愛Phoneを買おうとストアに１０時間並んだのに、自分の番が来る頃には欲しい色がもう売り切れていて結局かえずじまいだった。」.mp3",
+        "word_prompt": "買（か）える",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かえないでおわった": {
+            "en": "Good. However the expression you used cannot be followed by だった",
+            "es": "",
+            "fr": ""
+          },
+          "かえないでおわってしまった": {
+            "en": "Good. However the expression you used cannot be followed by だった",
+            "es": "",
+            "fr": ""
+          },
+          "かえないでおわっちゃった": {
+            "en": "Good. However the expression you used cannot be followed by だった",
+            "es": "",
+            "fr": ""
+          },
+          "かえないでおわったん": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "かえないでおわったの": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "かえないでおわってしまったん": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "かえないでおわっちゃったん": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "かえないでおわってしまったの": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "かえないでおわっちゃったの": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'I stood for 10 hours in line to buy the new 愛Phone, but when my turn came, it turned out that the color I wanted had already sold out, so I <strong>ended up not buying</strong> it.'",
+        "nuance_translation": "A <strong>strong</strong> construction indicating regret that something <strong>unfortunately</strong> did not happen. (A) <strong>never came about</strong>.",
+        "extra_info": "",
+        "reviewable_id": 889,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9834",
+      "type": "study_question",
+      "attributes": {
+        "id": 9834,
+        "content": "「神社（じんじゃ）に初詣（はつもうで）に行（い）きたかったのですが、天気（てんき）が悪（わる）くて<span class='study-area-input'>____</span>でした。」",
+        "answer": "いかずじまい",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）かずじまい",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが実現（じつげん）しなかったことを<strong>残念（ざんねん）</strong>に思（おも）うということを<strong>強（つよ）く</strong>表（あらわ）す表現（ひょうげん）。(A)は<strong>実現（じつげん）しなかった</strong>。",
+        "tense": "Conjunctive, Regret",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「神社に初詣に行きたかったのですが、天気が悪くていかずじまいでした。」.mp3",
+        "word_prompt": "行（い）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いかないでおわった": {
+            "en": "Good. However the expression you used cannot be followed by でした",
+            "es": "",
+            "fr": ""
+          },
+          "いかないでおわってしまった": {
+            "en": "Good. However the expression you used cannot be followed by でした",
+            "es": "",
+            "fr": ""
+          },
+          "いかないでおわっちゃった": {
+            "en": "Good. However the expression you used cannot be followed by でした",
+            "es": "",
+            "fr": ""
+          },
+          "いかないでおわったん": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "いかないでおわったの": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "いかないでおわってしまったん": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "いかないでおわっちゃったん": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "いかないでおわってしまったの": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "いかないでおわっちゃったの": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'I wanted to go for the first shrine visit of the new year, but the weather was bad and I <strong>ended up not</strong> going.'",
+        "nuance_translation": "A <strong>strong</strong> construction indicating regret that something <strong>unfortunately</strong> did not happen. (A) <strong>never came about</strong>.",
+        "extra_info": "",
+        "reviewable_id": 889,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9830",
+      "type": "study_question",
+      "attributes": {
+        "id": 9830,
+        "content": "「宇崎（うざき）さんと映画館（えいがかん）に行（い）こうと思（おも）っていたけど、仕事（しごと）から手（て）が離（はな）せなくて結局（けっきょく）<span class='study-area-input'>____</span>だった。」",
+        "answer": "いけずじまい",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）けずじまい",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが実現（じつげん）しなかったことを<strong>残念（ざんねん）</strong>に思（おも）うということを<strong>強（つよ）く</strong>表（あらわ）す表現（ひょうげん）。(A)は<strong>実現（じつげん）しなかった</strong>。",
+        "tense": "Conjunctive, Regret",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「宇崎さんと映画館に行こうと思っていたけど、仕事から手が離せなくて結局いけずじまいだった。」.mp3",
+        "word_prompt": "行（い）ける",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いけないでおわった": {
+            "en": "Good. However the expression you used cannot be followed by だった",
+            "es": "",
+            "fr": ""
+          },
+          "いけないでおわってしまった": {
+            "en": "Good. However the expression you used cannot be followed by だった",
+            "es": "",
+            "fr": ""
+          },
+          "いけないでおわっちゃった": {
+            "en": "Good. However the expression you used cannot be followed by だった",
+            "es": "",
+            "fr": ""
+          },
+          "いけないでおわったん": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "いけないでおわったの": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "いけないでおわってしまったん": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "いけないでおわっちゃったん": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "いけないでおわってしまったの": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "いけないでおわっちゃったの": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'I planned to go to the cinema with Uzaki, but I couldn't get away from work, so I <strong>ended up not</strong> going.'",
+        "nuance_translation": "A <strong>strong</strong> construction indicating regret that something <strong>unfortunately</strong> did not happen. (A) <strong>never came about</strong>.",
+        "extra_info": "",
+        "reviewable_id": 889,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183061",
+      "type": "study_question",
+      "attributes": {
+        "id": 183061,
+        "content": "\r\nマウンテンバイクを買（か）ったが、使（つか）わ<span class='study-area-input'>____</span>で売（う）ってしまった。",
+        "answer": "ずじまい",
+        "alternate_grammar": [],
+        "kanji_answer": "ずじまい",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/マウンテンバイクを買ったが、使わずじまいで売ってしまった。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI bought a mountain bike, but I <strong>ended up</strong> selling it <strong>without</strong> using it.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 889,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183062",
+      "type": "study_question",
+      "attributes": {
+        "id": 183062,
+        "content": "\r\n\r\n\r\nコンサートのチケットを買（か）ったが、色々（いろいろ）とやることがあって行（い）か<span class='study-area-input'>____</span>だった。",
+        "answer": "ずじまい",
+        "alternate_grammar": [],
+        "kanji_answer": "ずじまい",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/コンサートのチケットを買ったが、色々とやることがあって行かずじまいだった。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI bought the ticket to the concert, but I had a lot on my plate so I <strong>ended up not</strong> going.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 889,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183063",
+      "type": "study_question",
+      "attributes": {
+        "id": 183063,
+        "content": "\r\n\r\n\r\n日本（にほん）で使（つか）うために電子（でんし）辞書（じしょ）を持（も）っていったが、持（も）ち運（はこ）ぶのが面倒（めんどう）だったから結局（けっきょく）使（つか）わ<span class='study-area-input'>____</span>だった。",
+        "answer": "ずじまい",
+        "alternate_grammar": [],
+        "kanji_answer": "ずじまい",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/日本で使うために電子辞書を持っていったが、持ち運ぶのが面倒だったから結局使わずじまいだった。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI brought my electronic dictionary to Japan to use it there, but I <strong>ended up not</strong> using it because it was a pain to carry it.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 889,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184600",
+      "type": "study_question",
+      "attributes": {
+        "id": 184600,
+        "content": "好（す）きな子（こ）に告白（こくはく）せ<span data-gp-id='889'>ずじまい</span>で、高校（こうこう）を卒業（そつぎょう）してしまった。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/好きな子に告白せずじまいで、高校を卒業してしまった。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>ended up</strong> graduating highschool <strong>without</strong> confessing my feelings to the girl I liked.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 889,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183652",
+      "type": "study_question",
+      "attributes": {
+        "id": 183652,
+        "content": "突然（とつぜん）転校（てんこう）してしまい仲直（なかなお）り<span class='study-area-input'>____</span>だった旧友（きゅうゆう）と５（ご）年（ねん）ぶりに再会（さいかい）し、仲直（なかなお）りをすることが出来（でき）ました。",
+        "answer": "できずじまい",
+        "alternate_grammar": [],
+        "kanji_answer": "出来（でき）ずじまい",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが実現（じつげん）しなかったことを<strong>残念（ざんねん）</strong>に思（おも）うということを<strong>強（つよ）く</strong>表（あらわ）す表現（ひょうげん）。(A)は<strong>実現（じつげん）しなかった</strong>。",
+        "tense": "Conjunctive, Regret",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/突然転校してしまい仲直り出来ずじまいだった旧友と５年ぶりに再会し、仲直りをすることが出来ました。.mp3",
+        "word_prompt": "出来（でき）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "After suddenly transferring schools <strong>without ending up</strong> making amends with my old friend, we saw each other for the first time in 5 years and were able to make up.",
+        "nuance_translation": "A <strong>strong</strong> construction indicating regret that something <strong>unfortunately</strong> did not happen. (A) <strong>never came about</strong>.",
+        "extra_info": "",
+        "reviewable_id": 889,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183654",
+      "type": "study_question",
+      "attributes": {
+        "id": 183654,
+        "content": "今度（こんど）こそはダイエットをするって決（き）めたのに、今日（きょう）も<span class='study-area-input'>____</span>で一日（いちにち）が終（お）わってしまいました。",
+        "answer": "うんどうせずじまい",
+        "alternate_grammar": [],
+        "kanji_answer": "運動（うんどう）せずじまい",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが実現（じつげん）しなかったことを<strong>残念（ざんねん）</strong>に思（おも）うということを<strong>強（つよ）く</strong>表（あらわ）す表現（ひょうげん）。(A)は<strong>実現（じつげん）しなかった</strong>。",
+        "tense": "Conjunctive, Regret",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/今度こそはダイエットをするって決めたのに、今日も運動せずじまいで一日が終わってしまいました。.mp3",
+        "word_prompt": "運動（うんどう）する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Despite deciding to really get fit this time, even today <strong>ended up</strong> with me <strong>not </strong>doing any exercise.",
+        "nuance_translation": "A <strong>strong</strong> construction indicating regret that something <strong>unfortunately</strong> did not happen. (A) <strong>never came about</strong>.",
+        "extra_info": "",
+        "reviewable_id": 889,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9833",
+      "type": "study_question",
+      "attributes": {
+        "id": 9833,
+        "content": "「日本語（にほんご）の教科書（きょうかしょ）をたくさん買（か）ったけど、結局（けっきょく）<span class='study-area-input'>____</span>だった。」",
+        "answer": "つかわずじまい",
+        "alternate_grammar": [],
+        "kanji_answer": "使（つか）わずじまい",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが実現（じつげん）しなかったことを<strong>残念（ざんねん）</strong>に思（おも）うということを<strong>強（つよ）く</strong>表（あらわ）す表現（ひょうげん）。(A)は<strong>実現（じつげん）しなかった</strong>。",
+        "tense": "Conjunctive, Regret",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「日本語の教科書をたくさん買ったけど、結局つかわずじまいだった。」.mp3",
+        "word_prompt": "使（つか）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つかわないでおわった": {
+            "en": "Good. However the expression you used cannot be followed by だった",
+            "es": "",
+            "fr": ""
+          },
+          "つかわないでおわってしまった": {
+            "en": "Good. However the expression you used cannot be followed by だった",
+            "es": "",
+            "fr": ""
+          },
+          "つかわないでおわっちゃった": {
+            "en": "Good. However the expression you used cannot be followed by だった",
+            "es": "",
+            "fr": ""
+          },
+          "つかわないでおわったん": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "つかわないでおわったの": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "つかわないでおわってしまったん": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "つかわないでおわっちゃったん": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "つかわないでおわってしまったの": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          },
+          "つかわないでおわっちゃったの": {
+            "en": "Good. Can you use different expression?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'I bought lots of Japanese textbooks, but I <strong>ended up not</strong> using them.'",
+        "nuance_translation": "A <strong>strong</strong> construction indicating regret that something <strong>unfortunately</strong> did not happen. (A) <strong>never came about</strong>.",
+        "extra_info": "",
+        "reviewable_id": 889,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "959",
+      "type": "writeup",
+      "attributes": {
+        "id": 959,
+        "body_ja": "<p>「<span data-gp-id='889'>ずじまい</span>」は、否定（ひてい）を表（あらわ）す文語（ぶんご）の助動詞（じょどうし）「ぬ」の連用形（れんようけい）「ず」と、動作（どうさ）が完了（かんりょう）することを示（しめ）す動詞（どうし）「しまう」の連用形（れんようけい）「しまい」が組（く）み合（あ）わさってできた表現（ひょうげん）です。この「し」は濁音化（だくおんか）して「じ」となっています。「<span data-gp-id='889'>ずじまい</span>」は、「しまう」と同（おな）じように、何（なに）かがある結末（けつまつ）に終（お）わったことを表（あらわ）しますが、その結末（けつまつ）が「(A) をしないまま終（お）わってしまったこと」であり、それに対（たい）する後悔（こうかい）や残念（ざんねん）な気持（きも）ちがあるときに使（つか）われます。</p>\r\n\r\n<p>この文型（ぶんけい）は、動詞（どうし）の未然形（みぜんけい）に接続（せつぞく）し、先（さき）にも触（ふ）れた通（とお）り「結局（けっきょく）、(A) をしないまま終（お）わった」といった意味（いみ）で使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183061'>\r\n<li data-study-question='183062'>\r\n<li data-study-question='183063'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='889'>ずじまい</span>」の後（あと）には、「だった」や「でした」などがよく続（つづ）きます。これにより、動作（どうさ）の主体（しゅたい）が本当（ほんとう）は (A) をしたかったのに、できずに終（お）わったというニュアンスが加（くわ）わります。</p>\r\n\r\n<section class='caution'><h4>注意点</h4>\r\n<p>「ず」を使（つか）う場合（ばあい）、「する」は「せず」に変（か）わります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184600'></ul></section>",
+        "body": "<p><span data-gp-id='889'>ずじまい</span> is a grammar structure that combines the literary form of the <span data-term='文語助動詞・ぶんごじょどうし'>classical auxiliary verb</span> ぬ, ず 'not', and the voiced <span data-term='連用形・れんようけい'>conjunctive form</span> of the う-Verb しまう 'to finish', or 'to bring to a close', じまい. Like しまう, ずじまい will often indicate regret at something ending up a certain way. However, this regret is about '(A) not happening', due to the negation provided by ず.</p>\r\n\r\n<p>This structure will be used following the <span data-term='未然形・みぜんけい'>indeterminate form</span> of verbs. Common translations include 'to end up not (A)', and 'to not have done (A) in the end'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183061'>\r\n<li data-study-question='183062'>\r\n<li data-study-question='183063'>\r\n</ul>\r\n\r\n<p><span data-gp-id='889'>ずじまい</span> will often be followed by だった or でした, indicating that (A) was not something that turned out happening, despite the wishes or intentions of the doer.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>As is always the case with ず, する will be altered to せず.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184600'></ul></section>"
+      }
+    },
+    {
+      "id": "1945",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1945,
+        "source": "Shin Kanzen Master N2 Bunpou",
+        "location": "Page 91",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2551",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2551,
+        "site": "JapaneseTest4You",
+        "description": "ずじまい",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n1-grammar-%E3%81%9A%E3%81%98%E3%81%BE%E3%81%84-zu-jimai/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1569",
+      "type": "related_content",
+      "attributes": {
+        "id": 1569,
+        "relationship_type": "related",
+        "body": "Both relate to a state continuing without change. まま describes a condition or state that remains as it is, neutral in tone, and when used as ないまま it means an action did not happen and that non-action continued, as in 行かないままだった ('I remained in a state of not going.'). ずじまい is especially close to ないまま but emphasizes the outcome that, after time or circumstances, the action never happened at all, often with regret or resignation, as in 結局行かずじまいだった ('In the end, I never went.').",
+        "first_relatable": {
+          "id": 889,
+          "slug": "ずじまい",
+          "title": "ずじまい",
+          "meaning": "Ended up not, Did not (in the end), Never did",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 235,
+          "slug": "まま",
+          "title": "まま(に)",
+          "meaning": "As is, While remaining, Left in a state",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

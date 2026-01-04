@@ -1,0 +1,1024 @@
+{
+  "data": {
+    "id": "693",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 693,
+      "level": "JLPT2",
+      "lesson_id": 40,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "陸に-ない",
+      "nuance": "あることが十分（じゅうぶん）に、または全然（ぜんぜん）(A)ではないということを強調（きょうちょう）する表現（ひょうげん）。(A)が基本（きほん）の<strong>レベルまで上（あ）がって来（き）ていない</strong>。",
+      "grammar_order": 734,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 331,
+        "title": "しかも",
+        "slug": "しかも"
+      },
+      "previous_grammar_point": {
+        "id": 498,
+        "title": "てはいられない",
+        "slug": "てはいられない"
+      },
+      "lesson_count": "14/21",
+      "title": "陸に～ない",
+      "furigana": "陸（ろく）に～ない",
+      "meaning": "Not well or properly, Not much or enough, Barely, Hardly",
+      "nuance_translation": "A grammar point highlighting that something is not satisfactorily, or hardly (A). (A) <strong>doesn't even reach ground level</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "Other forms - 碌に",
+      "polite_structure": "",
+      "casual_structure": "<strong>ろくに</strong> + (Negative) Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/18114",
+      "metadata": "陸にない, ろくにない, rokuninai, expression, adverb, without sufficient effort, half-baked"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "5965",
+            "type": "study_question"
+          },
+          {
+            "id": "7588",
+            "type": "study_question"
+          },
+          {
+            "id": "182490",
+            "type": "study_question"
+          },
+          {
+            "id": "182491",
+            "type": "study_question"
+          },
+          {
+            "id": "182492",
+            "type": "study_question"
+          },
+          {
+            "id": "182493",
+            "type": "study_question"
+          },
+          {
+            "id": "182494",
+            "type": "study_question"
+          },
+          {
+            "id": "7591",
+            "type": "study_question"
+          },
+          {
+            "id": "7589",
+            "type": "study_question"
+          },
+          {
+            "id": "5964",
+            "type": "study_question"
+          },
+          {
+            "id": "5966",
+            "type": "study_question"
+          },
+          {
+            "id": "7583",
+            "type": "study_question"
+          },
+          {
+            "id": "7584",
+            "type": "study_question"
+          },
+          {
+            "id": "7590",
+            "type": "study_question"
+          },
+          {
+            "id": "7585",
+            "type": "study_question"
+          },
+          {
+            "id": "7586",
+            "type": "study_question"
+          },
+          {
+            "id": "7587",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "616",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1598",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "478",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1524",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "5965",
+      "type": "study_question",
+      "attributes": {
+        "id": 5965,
+        "content": "毎日（まいにち）、うちの猫（ねこ）に起（お）こされるせいで<span class='study-area-input'>____</span>。",
+        "answer": "ろくにねられない",
+        "alternate_grammar": [
+          "ろくにねられない",
+          "ろくにねれない",
+          "ろくにねられません",
+          "ろくにねれません"
+        ],
+        "kanji_answer": "陸（ろく）に寝（ね）られない",
+        "kanji_alt_grammar": [
+          "陸（ろく）にねれない",
+          "陸（ろく）にねられません",
+          "陸（ろく）にねれません",
+          "陸（ろく）にねられない"
+        ],
+        "nuance": "あることが十分（じゅうぶん）に、または全然（ぜんぜん）(A)ではないということを強調（きょうちょう）する表現（ひょうげん）。(A)が基本（きほん）の<strong>レベルまで上（あ）がって来（き）ていない</strong>。",
+        "tense": "Negative, Standard, Potential",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/毎日、うちの猫に起こされるせいで陸にねられない。.mp3",
+        "word_prompt": "寝（ね）られる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "よくねられない": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "よくねれない": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "よくねられません": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "よくねれません": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "めったにねられない": {
+            "en": "Bunpro is looking for something that can carry the nuance that the things that you are (barely) doing are lukewarm or half-baked. めったに〜ない does not carry this nuance and is closer to \"seldom\" or \"rarely\"",
+            "es": ""
+          },
+          "めったにねられません": {
+            "en": "Bunpro is looking for something that can carry the nuance that the things that you are (barely) doing are lukewarm or half-baked. めったに〜ない does not carry this nuance and is closer to \"seldom\" or \"rarely\"",
+            "es": ""
+          },
+          "ほとんど": {
+            "en": "ほとんど is primarily used for amounts/a number of. Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "あまり": {
+            "en": "Great guess! Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "ほとんどねられない": {
+            "en": "ほとんど is primarily used for amounts/a number of. Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "ほとんどねられません": {
+            "en": "ほとんど is primarily used for amounts/a number of. Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "あまりねられない": {
+            "en": "Great guess! Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "あまりねられません": {
+            "en": "Great guess! Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Every day I am woken up by my cat, so I <strong>can't sleep well</strong>. (<strong>hardly・not properly</strong>)",
+        "nuance_translation": "A grammar point highlighting that something is not satisfactorily, or hardly (A). (A) <strong>doesn't even reach ground level</strong>.",
+        "extra_info": "",
+        "reviewable_id": 693,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7588",
+      "type": "study_question",
+      "attributes": {
+        "id": 7588,
+        "content": "<span class='study-area-input'>____</span>修行（しゅぎょう）もせ<strong>ず</strong>に始（はじ）めた蕎麦（そば）屋（や）がなぜか大人気（だいにんき）だ。",
+        "answer": "ろくに",
+        "alternate_grammar": [],
+        "kanji_answer": "陸（ろく）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが十分（じゅうぶん）に、または全然（ぜんぜん）(A)ではないということを強調（きょうちょう）する表現（ひょうげん）。(A)が基本（きほん）の<strong>レベルまで上（あ）がって来（き）ていない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/陸に修行もせずに始めた蕎麦屋がなぜか大人気だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "よく": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "めったに": {
+            "en": "Bunpro is looking for something that can carry the nuance that the things that you are (barely) doing are lukewarm or half-baked. めったに〜ない does not carry this nuance and is closer to \"seldom\" or \"rarely\"",
+            "es": ""
+          },
+          "ほとんど": {
+            "en": "ほとんど is primarily used for amounts/a number of. Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "あまり": {
+            "en": "Great guess! Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The soba restaurant that was started <strong>without proper</strong> training is somehow really popular. (<strong>hardly/barely・not well</strong>)",
+        "nuance_translation": "A grammar point highlighting that something is not satisfactorily, or hardly (A). (A) <strong>doesn't even reach ground level</strong>.",
+        "extra_info": "",
+        "reviewable_id": 693,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182490",
+      "type": "study_question",
+      "attributes": {
+        "id": 182490,
+        "content": "息子（むすこ）は英語（えいご）を<span class='study-area-input'>____</span>話（はな）せ<span class=\"gp-popout\" data-gp-id=\"693\">ない</span>のに、アメリカにひとりで行（い）くそうだ。大丈夫（だいじょうぶ）かな。",
+        "answer": "ろくに",
+        "alternate_grammar": [],
+        "kanji_answer": "ろくに",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/息子は英語をろくに話せないのに、アメリカにひとりで行くそうだ。大丈夫かな。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Apparently my son is going to the States, even though he can <strong>barely</strong> speak English. I hope he will be okay.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 693,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182491",
+      "type": "study_question",
+      "attributes": {
+        "id": 182491,
+        "content": "あの人（ひと）は<span class='study-area-input'>____</span>仕事（しごと）も出来（でき）<span class=\"gp-popout\" data-gp-id=\"693\">ない</span>のに、偉（えら）そうな態度（たいど）をとるから会社（かいしゃ）中（じゅう）で嫌（きら）われている。",
+        "answer": "ろくに",
+        "alternate_grammar": [],
+        "kanji_answer": "ろくに",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あの人はろくに仕事も出来ないのに、偉そうな態度をとるから会社中で嫌われている。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "He is disliked by everyone in the company because he has an arrogant attitude even though he can <strong>barely</strong> do his job.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 693,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182492",
+      "type": "study_question",
+      "attributes": {
+        "id": 182492,
+        "content": "仕事（しごと）が忙（いそが）しすぎて、ここ最近（さいきん）、<span class='study-area-input'>____</span>友達（ともだち）にも会（あ）えて<span class=\"gp-popout\" data-gp-id=\"693\">ない</span>。",
+        "answer": "ろくに",
+        "alternate_grammar": [],
+        "kanji_answer": "ろくに",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/仕事が忙しすぎて、ここ最近、ろくに友達にも会えてない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Because I am so busy, I <strong>barely</strong> have time to see my friends.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 693,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182493",
+      "type": "study_question",
+      "attributes": {
+        "id": 182493,
+        "content": "近所（きんじょ）のワンちゃんが朝（あさ）までずっと吠（ほ）えていたから、昨晩（さくばん）は<span class='study-area-input'>____</span>寝（ね）れ<span class=\"gp-popout\" data-gp-id=\"693\">なかった</span>。",
+        "answer": "ろくに",
+        "alternate_grammar": [],
+        "kanji_answer": "陸（ろく）に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/近所のワンちゃんが朝までずっと吠えていたから、昨晩は陸に寝れなかった。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "A dog in my neighborhood was barking until this morning so I <strong>barely</strong> got any sleep.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 693,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182494",
+      "type": "study_question",
+      "attributes": {
+        "id": 182494,
+        "content": "豆（まめ）なんて<span class='study-area-input'>____</span>食（た）べ<span class=\"gp-popout\" data-gp-id=\"693\">ない</span>のに、うちには豆（まめ）の缶詰（かんずめ）がいっぱいある。",
+        "answer": "ろくに",
+        "alternate_grammar": [],
+        "kanji_answer": "碌（ろく）に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/豆なんて碌に食べないのに、うちには豆の缶詰がいっぱいある。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I have a lot of canned beans at home even though I <strong>hardly</strong> eat them.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 693,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7591",
+      "type": "study_question",
+      "attributes": {
+        "id": 7591,
+        "content": "<span class='study-area-input'>____</span>体操（たいそう）もせ<strong>ず</strong>運動（うんどう）したから怪我（けが）をしてしまった。",
+        "answer": "ろくに",
+        "alternate_grammar": [],
+        "kanji_answer": "陸（ろく）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが十分（じゅうぶん）に、または全然（ぜんぜん）(A)ではないということを強調（きょうちょう）する表現（ひょうげん）。(A)が基本（きほん）の<strong>レベルまで上（あ）がって来（き）ていない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/陸に体操もせず運動したから怪我をしてしまった。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "よく": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "めったに": {
+            "en": "Bunpro is looking for something that can carry the nuance that the things that you are (barely) doing are lukewarm or half-baked. めったに〜ない does not carry this nuance and is closer to \"seldom\" or \"rarely\"",
+            "es": ""
+          },
+          "ほとんど": {
+            "en": "ほとんど is primarily used for amounts/a number of. Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "あまり": {
+            "en": "Great guess! Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Since I did <strong>not properly</strong> warm-up, I got injured when I exercised. (<strong>hardly/barely・not well</strong>)",
+        "nuance_translation": "A grammar point highlighting that something is not satisfactorily, or hardly (A). (A) <strong>doesn't even reach ground level</strong>.",
+        "extra_info": "",
+        "reviewable_id": 693,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7589",
+      "type": "study_question",
+      "attributes": {
+        "id": 7589,
+        "content": "<span class='study-area-input'>____</span>知識（ちしき）も<strong>ない</strong>のに田（た）んぼに挑戦（ちょうせん）したが、やっぱり失敗（しっぱい）した。",
+        "answer": "ろくに",
+        "alternate_grammar": [],
+        "kanji_answer": "陸（ろく）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが十分（じゅうぶん）に、または全然（ぜんぜん）(A)ではないということを強調（きょうちょう）する表現（ひょうげん）。(A)が基本（きほん）の<strong>レベルまで上（あ）がって来（き）ていない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/陸に知識もないのに田んぼに挑戦したが、やっぱり失敗した。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "よく": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "めったに": {
+            "en": "Bunpro is looking for something that can carry the nuance that the things that you are (barely) doing are lukewarm or half-baked. めったに〜ない does not carry this nuance and is closer to \"seldom\" or \"rarely\"",
+            "es": ""
+          },
+          "ほとんど": {
+            "en": "ほとんど is primarily used for amounts/a number of. Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "あまり": {
+            "en": "Great guess! Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Even though I <strong>barely</strong> had any knowledge, I tried rice planting and inevitably failed. (<strong>hardly・not well/properly</strong>)",
+        "nuance_translation": "A grammar point highlighting that something is not satisfactorily, or hardly (A). (A) <strong>doesn't even reach ground level</strong>.",
+        "extra_info": "",
+        "reviewable_id": 693,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5964",
+      "type": "study_question",
+      "attributes": {
+        "id": 5964,
+        "content": "彼（かれ）はケーキを焼（や）くどころか、シンプルな料理（りょうり）さえ<span class='study-area-input'>____</span>。",
+        "answer": "ろくにできない",
+        "alternate_grammar": [
+          "ろくにできない",
+          "ろくにできません"
+        ],
+        "kanji_answer": "陸（ろく）にできない",
+        "kanji_alt_grammar": [
+          "陸（ろく）にできません",
+          "陸（ろく）にできない"
+        ],
+        "nuance": "あることが十分（じゅうぶん）に、または全然（ぜんぜん）(A)ではないということを強調（きょうちょう）する表現（ひょうげん）。(A)が基本（きほん）の<strong>レベルまで上（あ）がって来（き）ていない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼はケーキを焼くどころか、シンプルな料理さえ陸にできない。.mp3",
+        "word_prompt": "できる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "よくできない": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "よくできません": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "めったにできない": {
+            "en": "Bunpro is looking for something that can carry the nuance that the things that you are (barely) doing are lukewarm or half-baked. めったに〜ない does not carry this nuance and is closer to \"seldom\" or \"rarely\"",
+            "es": ""
+          },
+          "めったにできません": {
+            "en": "Bunpro is looking for something that can carry the nuance that the things that you are (barely) doing are lukewarm or half-baked. めったに〜ない does not carry this nuance and is closer to \"seldom\" or \"rarely\"",
+            "es": ""
+          },
+          "ほとんどできない": {
+            "en": "ほとんど is primarily used for amounts/a number of. Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "あまりできない": {
+            "en": "Great guess! Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "ほとんどできません": {
+            "en": "ほとんど is primarily used for amounts/a number of. Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "あまりできません": {
+            "en": "Great guess! Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Far from baking a cake, he <strong>can't</strong> even cook a simple meal <strong>properly</strong>. (<strong>hardly・not well</strong>)",
+        "nuance_translation": "A grammar point highlighting that something is not satisfactorily, or hardly (A). (A) <strong>doesn't even reach ground level</strong>.",
+        "extra_info": "",
+        "reviewable_id": 693,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5966",
+      "type": "study_question",
+      "attributes": {
+        "id": 5966,
+        "content": "英語（えいご）を<span class='study-area-input'>____</span>のに父（ちち）が外国（がいこく）人（じん）のカップルに道（みち）を教（おし）えようとした。",
+        "answer": "ろくにしらない",
+        "alternate_grammar": [
+          "ろくにしらない",
+          "ろくにしりません"
+        ],
+        "kanji_answer": "陸（ろく）にしらない",
+        "kanji_alt_grammar": [
+          "陸（ろく）にしりません",
+          "陸（ろく）にしらない"
+        ],
+        "nuance": "あることが十分（じゅうぶん）に、または全然（ぜんぜん）(A)ではないということを強調（きょうちょう）する表現（ひょうげん）。(A)が基本（きほん）の<strong>レベルまで上（あ）がって来（き）ていない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/英語を陸にしらないのに父が外国人のカップルに道を教えようとした。.mp3",
+        "word_prompt": "知（し）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "よくしらない": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "ろくにしれない": {
+            "en": "You don't need to use the potential here",
+            "es": ""
+          },
+          "ろくにしられない": {
+            "en": "You don't need to use the potential here",
+            "es": ""
+          },
+          "よくしりません": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "ろくにしれません": {
+            "en": "You don't need to use the potential here",
+            "es": ""
+          },
+          "ろくにしられません": {
+            "en": "You don't need to use the potential here",
+            "es": ""
+          },
+          "めったにしらない": {
+            "en": "Bunpro is looking for something that can carry the nuance that the things that you are (barely) doing are lukewarm or half-baked. めったに〜ない does not carry this nuance and is closer to \"seldom\" or \"rarely\"",
+            "es": ""
+          },
+          "めったにしりません": {
+            "en": "Bunpro is looking for something that can carry the nuance that the things that you are (barely) doing are lukewarm or half-baked. めったに〜ない does not carry this nuance and is closer to \"seldom\" or \"rarely\"",
+            "es": ""
+          },
+          "ほとんどしらない": {
+            "en": "ほとんど is primarily used for amounts/a number of. Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "あまりしりません": {
+            "en": "Great guess! Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "ほとんどしりません": {
+            "en": "ほとんど is primarily used for amounts/a number of. Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "あまりしらない": {
+            "en": "Great guess! Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Despite <strong>barely knowing</strong> any English, dad tried to give directions to a foreign couple. (<strong>hardly・not well/properly</strong>)",
+        "nuance_translation": "A grammar point highlighting that something is not satisfactorily, or hardly (A). (A) <strong>doesn't even reach ground level</strong>.",
+        "extra_info": "",
+        "reviewable_id": 693,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7583",
+      "type": "study_question",
+      "attributes": {
+        "id": 7583,
+        "content": "<span class='study-area-input'>____</span>準備（じゅんび）もしてい<strong>ない</strong>のに、ショップをオープンさせた。",
+        "answer": "ろくに",
+        "alternate_grammar": [],
+        "kanji_answer": "陸（ろく）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが十分（じゅうぶん）に、または全然（ぜんぜん）(A)ではないということを強調（きょうちょう）する表現（ひょうげん）。(A)が基本（きほん）の<strong>レベルまで上（あ）がって来（き）ていない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/陸に準備もしていないのに、ショップをオープンさせた。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "よく": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "めったに": {
+            "en": "Bunpro is looking for something that can carry the nuance that the things that you are (barely) doing are lukewarm or half-baked. めったに〜ない does not carry this nuance and is closer to \"seldom\" or \"rarely\"",
+            "es": ""
+          },
+          "ほとんど": {
+            "en": "ほとんど is primarily used for amounts/a number of. Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "あまり": {
+            "en": "Great guess! Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Even though we had <strong>barely</strong> prepared, I had them open the shop. (<strong>hardly・not well/properly</strong>)",
+        "nuance_translation": "A grammar point highlighting that something is not satisfactorily, or hardly (A). (A) <strong>doesn't even reach ground level</strong>.",
+        "extra_info": "",
+        "reviewable_id": 693,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7584",
+      "type": "study_question",
+      "attributes": {
+        "id": 7584,
+        "content": "<span class='study-area-input'>____</span>稽古（けいこ）もせ<strong>ず</strong>ステージに出（で）て、悲惨（ひさん）なことになった。",
+        "answer": "ろくに",
+        "alternate_grammar": [],
+        "kanji_answer": "陸（ろく）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが十分（じゅうぶん）に、または全然（ぜんぜん）(A)ではないということを強調（きょうちょう）する表現（ひょうげん）。(A)が基本（きほん）の<strong>レベルまで上（あ）がって来（き）ていない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/陸に稽古もせずステージに出て、悲惨なことになった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "よく": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "めったに": {
+            "en": "Bunpro is looking for something that can carry the nuance that the things that you are (barely) doing are lukewarm or half-baked. めったに〜ない does not carry this nuance and is closer to \"seldom\" or \"rarely\"",
+            "es": ""
+          },
+          "ほとんど": {
+            "en": "ほとんど is primarily used for amounts/a number of. Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "あまり": {
+            "en": "Great guess! Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I went on stage, <strong>not</strong> having <strong>properly</strong> prepared, and it was a disaster. (<strong>hardly/barely・not well</strong>)",
+        "nuance_translation": "A grammar point highlighting that something is not satisfactorily, or hardly (A). (A) <strong>doesn't even reach ground level</strong>.",
+        "extra_info": "",
+        "reviewable_id": 693,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7590",
+      "type": "study_question",
+      "attributes": {
+        "id": 7590,
+        "content": "彼（かれ）は<span class='study-area-input'>____</span>勉強（べんきょう）もしてい<strong>ない</strong>のに、なぜか大学院（だいがくいん）にまで行（い）けた。",
+        "answer": "ろくに",
+        "alternate_grammar": [],
+        "kanji_answer": "陸（ろく）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが十分（じゅうぶん）に、または全然（ぜんぜん）(A)ではないということを強調（きょうちょう）する表現（ひょうげん）。(A)が基本（きほん）の<strong>レベルまで上（あ）がって来（き）ていない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼は陸に勉強もしていないのに、なぜか大学院にまで行けた。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "よく": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "めったに": {
+            "en": "Bunpro is looking for something that can carry the nuance that the things that you are (barely) doing are lukewarm or half-baked. めったに〜ない does not carry this nuance and is closer to \"seldom\" or \"rarely\"",
+            "es": ""
+          },
+          "ほとんど": {
+            "en": "ほとんど is primarily used for amounts/a number of. Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "あまり": {
+            "en": "Great guess! Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Even though he <strong>hardly</strong> studies, he managed to make it into grad school somehow. (<strong>barely・not well/properly</strong>)",
+        "nuance_translation": "A grammar point highlighting that something is not satisfactorily, or hardly (A). (A) <strong>doesn't even reach ground level</strong>.",
+        "extra_info": "",
+        "reviewable_id": 693,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7585",
+      "type": "study_question",
+      "attributes": {
+        "id": 7585,
+        "content": "<span class='study-area-input'>____</span>演技（えんぎ）もでき<strong>ない</strong>のに、テレビドラマのオファーがきた。",
+        "answer": "ろくに",
+        "alternate_grammar": [],
+        "kanji_answer": "陸（ろく）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが十分（じゅうぶん）に、または全然（ぜんぜん）(A)ではないということを強調（きょうちょう）する表現（ひょうげん）。(A)が基本（きほん）の<strong>レベルまで上（あ）がって来（き）ていない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/陸に演技もできないのに、テレビドラマのオファーがきた。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "よく": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "めったに": {
+            "en": "Bunpro is looking for something that can carry the nuance that the things that you are (barely) doing are lukewarm or half-baked. めったに〜ない does not carry this nuance and is closer to \"seldom\" or \"rarely\"",
+            "es": ""
+          },
+          "ほとんど": {
+            "en": "ほとんど is primarily used for amounts/a number of. Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "あまり": {
+            "en": "Great guess! Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I can <strong>hardly</strong> do a stage play, and yet I was offered a part in a television drama. (<strong>hardly/barely・not well</strong>)",
+        "nuance_translation": "A grammar point highlighting that something is not satisfactorily, or hardly (A). (A) <strong>doesn't even reach ground level</strong>.",
+        "extra_info": "",
+        "reviewable_id": 693,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7586",
+      "type": "study_question",
+      "attributes": {
+        "id": 7586,
+        "content": "<span class='study-area-input'>____</span>掃除（そうじ）もし<strong>ない</strong>のに、なぜか洗剤（せんざい）をたくさん持（も）っている。",
+        "answer": "ろくに",
+        "alternate_grammar": [],
+        "kanji_answer": "陸（ろく）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが十分（じゅうぶん）に、または全然（ぜんぜん）(A)ではないということを強調（きょうちょう）する表現（ひょうげん）。(A)が基本（きほん）の<strong>レベルまで上（あ）がって来（き）ていない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/陸に掃除もしないのに、なぜか洗剤をたくさん持っている。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "よく": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "めったに": {
+            "en": "Bunpro is looking for something that can carry the nuance that the things that you are (barely) doing are lukewarm or half-baked. めったに〜ない does not carry this nuance and is closer to \"seldom\" or \"rarely\"",
+            "es": ""
+          },
+          "ほとんど": {
+            "en": "ほとんど is primarily used for amounts/a number of. Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "あまり": {
+            "en": "Great guess! Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Even though I <strong>barely</strong> clean, I have tons of detergent for some reason. (<strong>hardly・not well/properly</strong>)",
+        "nuance_translation": "A grammar point highlighting that something is not satisfactorily, or hardly (A). (A) <strong>doesn't even reach ground level</strong>.",
+        "extra_info": "",
+        "reviewable_id": 693,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7587",
+      "type": "study_question",
+      "attributes": {
+        "id": 7587,
+        "content": "<span class='study-area-input'>____</span>宣伝（せんでん）もせ<strong>ず</strong>店（みせ）を始（はじ）めたから、誰（だれ）も来（き）てくれない。",
+        "answer": "ろくに",
+        "alternate_grammar": [],
+        "kanji_answer": "陸（ろく）に",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが十分（じゅうぶん）に、または全然（ぜんぜん）(A)ではないということを強調（きょうちょう）する表現（ひょうげん）。(A)が基本（きほん）の<strong>レベルまで上（あ）がって来（き）ていない</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/陸に宣伝もせず店を始めたから、誰も来てくれない。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "よく": {
+            "en": "Can you say it another way?",
+            "es": ""
+          },
+          "めったに": {
+            "en": "Bunpro is looking for something that can carry the nuance that the things that you are (barely) doing are lukewarm or half-baked. めったに〜ない does not carry this nuance and is closer to \"seldom\" or \"rarely\"",
+            "es": ""
+          },
+          "ほとんど": {
+            "en": "ほとんど is primarily used for amounts/a number of. Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          },
+          "あまり": {
+            "en": "Great guess! Can you use something that alludes to not doing something properly or hardly doing it?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Since we opened our business <strong>without properly</strong> advertising, no one came. (<strong>hardly/barely・not well</strong>)",
+        "nuance_translation": "A grammar point highlighting that something is not satisfactorily, or hardly (A). (A) <strong>doesn't even reach ground level</strong>.",
+        "extra_info": "",
+        "reviewable_id": 693,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "616",
+      "type": "writeup",
+      "attributes": {
+        "id": 616,
+        "body_ja": "<p>副詞（ふくし）の「陸（ろく）に」は「ない」を含（ふく）む否定形（ひていけい）の文（ぶん）の中（なか）で使（つか）われ、「(A) は十分（じゅうぶん）ではない」や「ちゃんと (A) できない」という意味（いみ）を表（あらわ）します。この副詞（ふくし）は「ない」を含（ふく）む文（ぶん）や節（せつ）の始（はじ）めの方（ほう）に置（お）かれます。「ない」と結（むす）びつく動詞（どうし）は可能形（かのうけい）になることが多（おお）いです。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182490'>\r\n<li data-study-question='182491'>\r\n<li data-study-question='182492'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='693'>ろくに</span>」は漢字（かんじ）で書（か）かれることもありますが、ひらがなの方（ほう）が一般的（いっぱんてき）です。また、「碌（ろく）に」という漢字（かんじ）もありますが、これは当（あ）て字（じ）（意味（いみ）に関係（かんけい）なく、読（よ）み方（かた）だけを当（あ）てはめた漢字（かんじ））です。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182493'>\r\n<li data-study-question='182494'>\r\n</ul>\r\n\r\n<p>この文法（ぶんぽう）は「十分（じゅうぶん）な努力（どりょく）をしていない」「能力（のうりょく）が足（た）りない」「中途半端（ちゅうとはんぱ）だ」という否定的（ひていてき）なニュアンスを含（ふく）んで使（つか）われることが多（おお）いです。</p>\r\n\r\n<section class='funfact'><h4>豆知識（まめちしき）</h4>\r\n<p>「陸（りく）」という漢字（かんじ）は、そのニュアンスが「安定（あんてい）した状態（じょうたい）」や「平（たい）らな状態（じょうたい）」であるときに「ろく」と読（よ）まれます。</p></section>",
+        "body": "<p>When the adverb 陸（ろく）に 'satisfactorily' appears in ない sentences, it indicates that (A) is 'not satisfactory', 'not enough', or 'not being done properly'. This grammar pattern appears at the beginning of phrases, before the (B) part of the sentence will include a ない word, often a verb in its potential form.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182490'>\r\n<li data-study-question='182491'>\r\n<li data-study-question='182492'>\r\n</ul>\r\n\r\n<p>While <span data-gp-id='693'>ろくに</span> will often appear in the kanji form, it is also common to see this structure in hiragana alone. Alternatively, <span data-gp-id='693'>碌（ろく）に</span> may also sometimes be seen, but this particular kanji is ateji (a kanji used purely for its pronunciation, not its meaning).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182493'>\r\n<li data-study-question='182494'>\r\n</ul>\r\n\r\n<p>This particular grammar point often has the nuance of something that is being done without sufficient effort, or is half-baked.</p>\r\n\r\n<section class='funfact'><h4>Fun-fact</h4>\r\n<p>陸（りく） comes from the kanji meaning 'land', and is used with the reading of ろく when the nuance is flatness, correctness, or seriousness.</p></section>"
+      }
+    },
+    {
+      "id": "1598",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1598,
+        "source": "[AIAIJ] An Integrated Approach to Intermediate Japanese",
+        "location": "Page 228",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1524",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1524,
+        "site": "JapaneseTest4You",
+        "description": "Additional example sentences and breakdown",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-ろくに～ない-roku-ninai/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "478",
+      "type": "related_content",
+      "attributes": {
+        "id": 478,
+        "relationship_type": "related",
+        "body": "Both ろくに〜ない and めったに〜ない express the idea of scarcity, but differ in nuance and context. めったに〜ない refers to the rarity of an action or event, e.g. 'めったに外出しない' ('rarely go out'). ろくに〜ない emphasizes inadequacy or insufficiency, often judging something as not measuring up, e.g. 'ろくに話せない' ('barely able to speak').",
+        "first_relatable": {
+          "id": 693,
+          "slug": "陸に-ない",
+          "title": "陸に～ない",
+          "meaning": "Not well or properly, Not much or enough, Barely, Hardly",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 271,
+          "slug": "めったに-ない",
+          "title": "めったに〜ない",
+          "meaning": "Hardly, Rarely, Seldom",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

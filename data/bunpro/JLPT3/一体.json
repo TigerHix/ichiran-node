@@ -1,0 +1,982 @@
+{
+  "data": {
+    "id": "475",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 475,
+      "level": "JLPT3",
+      "lesson_id": 30,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "一体",
+      "nuance": "話（はな）し手（て）の驚（おどろ）きを表（あらわ）す表現（ひょうげん）。何（なに）かを問（と）う時（とき）に使（つか）われることが多（おお）い。",
+      "grammar_order": 516,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 646,
+        "title": "折角",
+        "slug": "せっかく"
+      },
+      "previous_grammar_point": {
+        "id": 492,
+        "title": "わざわざ",
+        "slug": "わざわざ"
+      },
+      "lesson_count": "12/20",
+      "title": "一体",
+      "furigana": "一体（いったい）",
+      "meaning": "(What) the heck?, (Who) in the world?, (Where) on earth?, (How many) f*ing...",
+      "nuance_translation": "An exclamation which shows the speaker's surprise, in a similar way to <strong>what the heck</strong> in English. Primarily used to ask questions.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<strong>いったい</strong> + Question Word + Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/3333",
+      "metadata": "一体, いったい, ittai, adverb, interrogative"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "5054",
+            "type": "study_question"
+          },
+          {
+            "id": "180184",
+            "type": "study_question"
+          },
+          {
+            "id": "180185",
+            "type": "study_question"
+          },
+          {
+            "id": "180186",
+            "type": "study_question"
+          },
+          {
+            "id": "180187",
+            "type": "study_question"
+          },
+          {
+            "id": "184342",
+            "type": "study_question"
+          },
+          {
+            "id": "5057",
+            "type": "study_question"
+          },
+          {
+            "id": "5058",
+            "type": "study_question"
+          },
+          {
+            "id": "5051",
+            "type": "study_question"
+          },
+          {
+            "id": "5050",
+            "type": "study_question"
+          },
+          {
+            "id": "3762",
+            "type": "study_question"
+          },
+          {
+            "id": "3763",
+            "type": "study_question"
+          },
+          {
+            "id": "5055",
+            "type": "study_question"
+          },
+          {
+            "id": "5056",
+            "type": "study_question"
+          },
+          {
+            "id": "3764",
+            "type": "study_question"
+          },
+          {
+            "id": "5052",
+            "type": "study_question"
+          },
+          {
+            "id": "5053",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "534",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "573",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1065",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1048",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "5054",
+      "type": "study_question",
+      "attributes": {
+        "id": 5054,
+        "content": "こんな素晴（すば）らしい絵（え）を描（か）くなんて… 彼（かれ）は<span class='study-area-input'>____</span><span class='chui'>何者（なにもの）</span>なんだ！？",
+        "answer": "いったい",
+        "alternate_grammar": [],
+        "kanji_answer": "一体（いったい）",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）の驚（おどろ）きを表（あらわ）す表現（ひょうげん）。何（なに）かを問（と）う時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Exclamation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/475/male_audio/231124_1609_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/こんな素晴らしい絵を描くなんて… 彼は一体何者なんだ！？.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "まさか": {
+            "en": "まさか means 'it can't be true', 'no way', or 'don't tell me' and used before some statement about what the speaker is shocked/surprised about. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことか": {
+            "en": "ことか is used at the end of sentences. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いたい": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "To think that he drew such an amazing picture... <strong>Who the heck</strong> is he?",
+        "nuance_translation": "An exclamation which shows the speaker's surprise, in a similar way to <strong>what the heck</strong> in English. Primarily used to ask questions.",
+        "extra_info": "",
+        "reviewable_id": 475,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180184",
+      "type": "study_question",
+      "attributes": {
+        "id": 180184,
+        "content": "<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"14\">ここ</span><span class=\"gp-popout\" data-gp-id=\"25\">で</span>何（なに）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>起（お）きたん<span class=\"gp-popout\" data-gp-id=\"1\">だ</span>！",
+        "answer": "いったい",
+        "alternate_grammar": [],
+        "kanji_answer": "一体（いったい）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/一体ここで何が起きたんだ！.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>What the heck</strong> happened here?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 475,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180185",
+      "type": "study_question",
+      "attributes": {
+        "id": 180185,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"5\">これ</span>は<span class='study-area-input'>____</span>どういうこと<span class=\"gp-popout\" data-gp-id=\"1\">だ</span>。",
+        "answer": "いったい",
+        "alternate_grammar": [],
+        "kanji_answer": "一体（いったい）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/これは一体どういうことだ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>What is the meaning</strong> of this?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 475,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180186",
+      "type": "study_question",
+      "attributes": {
+        "id": 180186,
+        "content": "<span class='study-area-input'>____</span>なんで<span class=\"gp-popout\" data-gp-id=\"369\">こんな</span>事（こと）になった<span class=\"gp-popout\" data-gp-id=\"17\">の</span>？",
+        "answer": "いったい",
+        "alternate_grammar": [],
+        "kanji_answer": "一体（いったい）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/一体なんでこんな事になったの？.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Explain to me <strong>in a way that makes sense</strong>, why something like this happened?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 475,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180187",
+      "type": "study_question",
+      "attributes": {
+        "id": 180187,
+        "content": "<span class='study-area-input'>____</span>なんで<span class=\"gp-popout\" data-gp-id=\"369\">あんな</span>奴（やつ）<span class=\"gp-popout\" data-gp-id=\"955\">と</span>付（つ）き合（あ）<span class=\"gp-popout\" data-gp-id=\"122\">おうと思（おも）</span>った<span class=\"gp-popout\" data-gp-id=\"17\">の</span>？",
+        "answer": "いったい",
+        "alternate_grammar": [],
+        "kanji_answer": "一体（いったい）",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/一体なんであんな奴と付き合おうと思ったの？.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>In a way that I can understand</strong>, why did you think of dating someone like him?",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 475,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184342",
+      "type": "study_question",
+      "attributes": {
+        "id": 184342,
+        "content": "アメリカ人（じん）は<span data-gp-id='475'>一体（いったい）</span><span data-gp-id='32'>に</span>親切（しんせつ）<span data-gp-id='2'>です</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Americans are <strong>generally</strong> polite.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 475,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5057",
+      "type": "study_question",
+      "attributes": {
+        "id": 5057,
+        "content": "<span class='study-area-input'>____</span><span class='chui'>いつ</span>、掃除（そうじ）をする暇（ひま）があるというんだ。",
+        "answer": "いったい",
+        "alternate_grammar": [],
+        "kanji_answer": "一体（いったい）",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）の驚（おどろ）きを表（あらわ）す表現（ひょうげん）。何（なに）かを問（と）う時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Exclamation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/475/male_audio/231124_1609_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/一体いつ、掃除をする暇があるというんだ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "まさか": {
+            "en": "まさか means 'it can't be true', 'no way', or 'don't tell me' and used before some statement about what the speaker is shocked/surprised about. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "なんて": {
+            "en": "We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いった": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>When the heck</strong> do I have time to clean?",
+        "nuance_translation": "An exclamation which shows the speaker's surprise, in a similar way to <strong>what the heck</strong> in English. Primarily used to ask questions.",
+        "extra_info": "",
+        "reviewable_id": 475,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5058",
+      "type": "study_question",
+      "attributes": {
+        "id": 5058,
+        "content": "彼（かれ）は<span class='study-area-input'>____</span><span class='chui'>どう</span>いうつもりなんだ。",
+        "answer": "いったい",
+        "alternate_grammar": [],
+        "kanji_answer": "一体（いったい）",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）の驚（おどろ）きを表（あらわ）す表現（ひょうげん）。何（なに）かを問（と）う時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Exclamation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/475/male_audio/231124_1610.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/彼は一体どういうつもりなんだ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "まさか": {
+            "en": "まさか means 'it can't be true', 'no way', or 'don't tell me' and used before some statement about what the speaker is shocked/surprised about. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことか": {
+            "en": "ことか is used at the end of sentences. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いった": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>What on earth</strong> does he intend to do?",
+        "nuance_translation": "An exclamation which shows the speaker's surprise, in a similar way to <strong>what the heck</strong> in English. Primarily used to ask questions.",
+        "extra_info": "",
+        "reviewable_id": 475,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5051",
+      "type": "study_question",
+      "attributes": {
+        "id": 5051,
+        "content": "僕（ぼく）たちの未来（みらい）は<span class='study-area-input'>____</span><span class='chui'>どうなる</span>んだろう…",
+        "answer": "いったい",
+        "alternate_grammar": [],
+        "kanji_answer": "一体（いったい）",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）の驚（おどろ）きを表（あらわ）す表現（ひょうげん）。何（なに）かを問（と）う時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Exclamation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/475/male_audio/231124_1608_06.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/僕たちの未来は一体どうなるんだろう….mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "まさか": {
+            "en": "まさか means 'it can't be true', 'no way', or 'don't tell me' and used before some statement about what the speaker is shocked/surprised about. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことか": {
+            "en": "ことか is used at the end of sentences. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いった": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>What on earth</strong> will become of us in the future?",
+        "nuance_translation": "An exclamation which shows the speaker's surprise, in a similar way to <strong>what the heck</strong> in English. Primarily used to ask questions.",
+        "extra_info": "",
+        "reviewable_id": 475,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5050",
+      "type": "study_question",
+      "attributes": {
+        "id": 5050,
+        "content": "この気持（きも）ちの悪（わる）い生（い）き物（もの）は<span class='study-area-input'>____</span><span class='chui'>何（なん）</span>ですか？",
+        "answer": "いったい",
+        "alternate_grammar": [],
+        "kanji_answer": "一体（いったい）",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）の驚（おどろ）きを表（あらわ）す表現（ひょうげん）。何（なに）かを問（と）う時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Exclamation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/475/male_audio/231124_1608_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/この気持ちの悪い生き物は一体何ですか？.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "まさか": {
+            "en": "まさか means 'it can't be true', 'no way', or 'don't tell me' and used before some statement about what the speaker is shocked/surprised about. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことか": {
+            "en": "ことか is used at the end of sentences. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いった": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>What on earth</strong> is this ugly creature?",
+        "nuance_translation": "An exclamation which shows the speaker's surprise, in a similar way to <strong>what the heck</strong> in English. Primarily used to ask questions.",
+        "extra_info": "",
+        "reviewable_id": 475,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3762",
+      "type": "study_question",
+      "attributes": {
+        "id": 3762,
+        "content": "<span class='study-area-input'>____</span><span class='chui'>いつ</span>になったら外出（がいしゅつ）の準備（じゅんび）ができるんだろう。",
+        "answer": "いったい",
+        "alternate_grammar": [],
+        "kanji_answer": "一体（いったい）",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）の驚（おどろ）きを表（あらわ）す表現（ひょうげん）。何（なに）かを問（と）う時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Exclamation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/475/male_audio/231124_1608_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/一体いつになったら外出の準備ができるんだろう。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "まさか": {
+            "en": "まさか means 'it can't be true', 'no way', or 'don't tell me' and used before some statement about what the speaker is shocked/surprised about. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いたい": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いった": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>When on earth</strong> are you going to be ready to go out?",
+        "nuance_translation": "An exclamation which shows the speaker's surprise, in a similar way to <strong>what the heck</strong> in English. Primarily used to ask questions.",
+        "extra_info": "",
+        "reviewable_id": 475,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3763",
+      "type": "study_question",
+      "attributes": {
+        "id": 3763,
+        "content": "今年（ことし）納（おさ）める税金（ぜいきん）は<span class='study-area-input'>____</span><span class='chui'>いくら</span>になるかしら。",
+        "answer": "いったい",
+        "alternate_grammar": [],
+        "kanji_answer": "一体（いったい）",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）の驚（おどろ）きを表（あらわ）す表現（ひょうげん）。何（なに）かを問（と）う時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Exclamation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/475/male_audio/231124_1608_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/今年納める税金は一体いくらになるかしら。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "まさか": {
+            "en": "まさか means 'it can't be true', 'no way', or 'don't tell me' and used before some statement about what the speaker is shocked/surprised about. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことか": {
+            "en": "ことか is used at the end of sentences. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "どんなに": {
+            "en": "We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "なんて": {
+            "en": "We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I wonder <strong>how</strong> much <strong>freaking</strong> tax I will pay this year.",
+        "nuance_translation": "An exclamation which shows the speaker's surprise, in a similar way to <strong>what the heck</strong> in English. Primarily used to ask questions.",
+        "extra_info": "",
+        "reviewable_id": 475,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5055",
+      "type": "study_question",
+      "attributes": {
+        "id": 5055,
+        "content": "<span class='study-area-input'>____</span><span class='chui'>いくつ</span>餅（もち）を食（た）べれば気（き）がすむの？食（た）べ過（す）ぎだよ。",
+        "answer": "いったい",
+        "alternate_grammar": [],
+        "kanji_answer": "一体（いったい）",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）の驚（おどろ）きを表（あらわ）す表現（ひょうげん）。何（なに）かを問（と）う時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Exclamation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/475/male_audio/231124_1609_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/一体いくつ餅を食べれば気がすむの？食べ過ぎだよ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "まさか": {
+            "en": "まさか means 'it can't be true', 'no way', or 'don't tell me' and used before some statement about what the speaker is shocked/surprised about. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "どんな": {
+            "en": "We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "どんなに": {
+            "en": "We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "なんて": {
+            "en": "We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>How</strong> much <strong>freaking</strong> mochi you will eat before feeling satisfied. You eat too much...",
+        "nuance_translation": "An exclamation which shows the speaker's surprise, in a similar way to <strong>what the heck</strong> in English. Primarily used to ask questions.",
+        "extra_info": "",
+        "reviewable_id": 475,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5056",
+      "type": "study_question",
+      "attributes": {
+        "id": 5056,
+        "content": "あの人（ひと）は<span class='study-area-input'>____</span><span class='chui'>何（なん）</span>歳（さい）なんだろう。",
+        "answer": "いったい",
+        "alternate_grammar": [],
+        "kanji_answer": "一体（いったい）",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）の驚（おどろ）きを表（あらわ）す表現（ひょうげん）。何（なに）かを問（と）う時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Exclamation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/475/male_audio/231124_1609_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/あの人は一体何歳なんだろう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "まさか": {
+            "en": "まさか means 'it can't be true', 'no way', or 'don't tell me' and used before some statement about what the speaker is shocked/surprised about. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことか": {
+            "en": "ことか is used at the end of sentences. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "なんか": {
+            "en": "We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "なんて": {
+            "en": "We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>How</strong> <strong>freaking</strong> old is that person? ",
+        "nuance_translation": "An exclamation which shows the speaker's surprise, in a similar way to <strong>what the heck</strong> in English. Primarily used to ask questions.",
+        "extra_info": "",
+        "reviewable_id": 475,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3764",
+      "type": "study_question",
+      "attributes": {
+        "id": 3764,
+        "content": "この牧場（ぼくじょう）には<span class='study-area-input'>____</span><span class='chui'>何（なん）</span>頭（とう）の牛（うし）がいるかな。",
+        "answer": "いったい",
+        "alternate_grammar": [],
+        "kanji_answer": "一体（いったい）",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）の驚（おどろ）きを表（あらわ）す表現（ひょうげん）。何（なに）かを問（と）う時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Exclamation",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "まさか": {
+            "en": "まさか means 'it can't be true', 'no way', or 'don't tell me' and used before some statement about what the speaker is shocked/surprised about. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことか": {
+            "en": "ことか is used at the end of sentences. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いくら": {
+            "en": "We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "なんか": {
+            "en": "We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "なんて": {
+            "en": "We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I wonder <strong>how</strong> many <strong>freaking</strong> cows there are on this farm.",
+        "nuance_translation": "An exclamation which shows the speaker's surprise, in a similar way to <strong>what the heck</strong> in English. Primarily used to ask questions.",
+        "extra_info": "",
+        "reviewable_id": 475,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5052",
+      "type": "study_question",
+      "attributes": {
+        "id": 5052,
+        "content": "あの人（ひと）は<span class='study-area-input'>____</span><span class='chui'>誰（だれ）</span>なのだろう…",
+        "answer": "いったい",
+        "alternate_grammar": [],
+        "kanji_answer": "一体（いったい）",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）の驚（おどろ）きを表（あらわ）す表現（ひょうげん）。何（なに）かを問（と）う時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Exclamation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/475/male_audio/231124_1609.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/あの人は一体誰なのだろう….mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "まさか": {
+            "en": "まさか means 'it can't be true', 'no way', or 'don't tell me' and used before some statement about what the speaker is shocked/surprised about. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ことか": {
+            "en": "ことか is used at the end of sentences. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "なんて": {
+            "en": "We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いった": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Who the heck</strong> is that person?",
+        "nuance_translation": "An exclamation which shows the speaker's surprise, in a similar way to <strong>what the heck</strong> in English. Primarily used to ask questions.",
+        "extra_info": "",
+        "reviewable_id": 475,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5053",
+      "type": "study_question",
+      "attributes": {
+        "id": 5053,
+        "content": "<span class='study-area-input'>____</span><span class='chui'>誰（だれ）</span>がそんなひどいことを言（い）ったんですか？",
+        "answer": "いったい",
+        "alternate_grammar": [],
+        "kanji_answer": "一体（いったい）",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）の驚（おどろ）きを表（あらわ）す表現（ひょうげん）。何（なに）かを問（と）う時（とき）に使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Exclamation",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/475/male_audio/231124_1609_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/一体誰がそんなひどいことを言ったんですか？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {
+          "まさか": {
+            "en": "まさか means 'it can't be true', 'no way', or 'don't tell me' and used before some statement about what the speaker is shocked/surprised about. We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "なんて": {
+            "en": "We are looking for a word that is used in order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いった": {
+            "en": "Can you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Who the heck</strong> said such a horrible thing?",
+        "nuance_translation": "An exclamation which shows the speaker's surprise, in a similar way to <strong>what the heck</strong> in English. Primarily used to ask questions.",
+        "extra_info": "",
+        "reviewable_id": 475,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "534",
+      "type": "writeup",
+      "attributes": {
+        "id": 534,
+        "body_ja": "<p>「一体（いったい）」は、「どうして」「なに」「なぜ」「どこ」などの疑問文（ぎもんぶん）の中（なか）で、強（つよ）い疑問（ぎもん）を表（あらわ）すときに使（つか）われる副詞（ふくし）です。漢字（かんじ）で「一体」と書（か）かれることも、ひらがなで書（か）かれることもよくあります。</p>\r\n\r\n<p>たいていの場合（ばあい）、 「いったい」は文（ぶん）の頭（あたま）で使（つか）われます。そのあとに、話（はな）し手（て）が「信（しん）じられない」と思（おも）っている内容（ないよう）が続（つづ）きます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180184'>\r\n<li data-study-question='180185'>\r\n</ul>\r\n\r\n<p>「一体（いったい）」は漢字（かんじ）で「一（ひと）つの体（からだ）」と書（か）きますが、これは文字（もじ）どおり、もともと「一（ひと）つにまとまった全体（ぜんたい）」という意味（いみ）を表（あらわ）します。「全体」を見（み）てもわからないところから、強（つよ）い疑問（ぎもん）を表（あらわ）すようになったと考（かんが）えられます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180186'>\r\n<li data-study-question='180187'>\r\n</ul>\r\n\r\n<section class=\"funfact\"><h4>豆知識（まめちしき）</h4>\r\n<p>「一体（いったい）」は、「一体（いったい）に」という形（かたち）で「全体的（ぜんたいてき）」や「たいてい」のような意味（いみ）でも使（つか）われることもあります。しかし、このように使（つか）われることはだんだん減（へ）ってきています。今（いま）では、強（つよ）い疑問（ぎもん）を表（あらわ）す用法（ようほう）が一般的（いっぱんてき）です。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184342'></ul></section>",
+        "body": "<p>In order to convey the feeling of 'what the heck', with any 'how', 'what', 'where' or 'why' type question, the <span data-term='副詞・ふくし'>adverb</span> <span data-gp-id='475'>一体（いったい）</span> will be used in Japanese. いったい appears frequently both with, and without kanji.</p>\r\n\r\n<p>いったい will usually be seen at the beginning of sentences, before some statement about what the speaker finds unbelievable.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180184'>\r\n<li data-study-question='180185'>\r\n</ul>\r\n\r\n<p>The literal meaning of いったい is 'one body', or 'one form'. In this way, when paired with questions, いったい can be thought of meaning 'in a way that can be understood, what is (A)', or 'in a way that makes sense, what is (A)'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180186'>\r\n<li data-study-question='180187'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>Like the 'one body', or 'one form' meaning mentioned above, <span data-gp-id='475'>一体（いったい）</span> is sometimes used to mean 'in general', or 'generally' when seen as 一体（いったい）に. However, this use is slowly becoming less common, partly due to how often <span data-gp-id='475'>一体（いったい）</span> is used simply to express surprise or shock.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184342'></ul></section>"
+      }
+    },
+    {
+      "id": "573",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 573,
+        "source": "Tobira",
+        "location": "Page 282",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1048",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1048,
+        "site": "Japanese Stack Exchange",
+        "description": "What the heck does いったい mean?",
+        "link": "https://japanese.stackexchange.com/questions/6015/why-does-%E4%B8%80%E4%BD%93-mean-what-the-heck",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1065",
+      "type": "related_content",
+      "attributes": {
+        "id": 1065,
+        "relationship_type": "related",
+        "body": "一体 and ことか both add emphasis to questions, but differ in nuance. 一体 strengthens genuine questions with a tone of surprise or frustration, like 'What in the world?', e.g. 一体何があったんですか？ 'What in the world happened?' ことか appears in rhetorical questions or exclamations to express strong emotion, e.g. 彼がどんなに努力したことか 'How hard he worked!'",
+        "first_relatable": {
+          "id": 475,
+          "slug": "一体",
+          "title": "一体",
+          "meaning": "(What) the heck?, (Who) in the world?, (Where) on earth?, (How many) f*ing...",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 245,
+          "slug": "ことか",
+          "title": "ことか",
+          "meaning": "How…, What..., God knows...",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

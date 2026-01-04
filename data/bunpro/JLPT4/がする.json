@@ -1,0 +1,1345 @@
+{
+  "data": {
+    "id": "117",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 117,
+      "level": "JLPT4",
+      "lesson_id": 13,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "がする",
+      "nuance": "何（なに）かが特定（とくてい）の<strong>感覚（かんかく）を引（ひ）き起（お）こしている</strong>、又（また）はその感覚（かんかく）が続（つづ）いていることを表（あらわ）す表現（ひょうげん）。",
+      "grammar_order": 179,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 124,
+        "title": "たがる",
+        "slug": "たがる"
+      },
+      "previous_grammar_point": {
+        "id": 112,
+        "title": "がる",
+        "slug": "がる"
+      },
+      "lesson_count": "17/18",
+      "title": "がする",
+      "furigana": "がする",
+      "meaning": "To give off, Smell, Sound, Taste, Sensation",
+      "nuance_translation": "An expression used to highlight that something is <strong>causing a specific sensory experience</strong>, or that that sense is <strong>going</strong>.",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": "Noun + <strong><span class='gp-popout' data-gp-id='10'>が</span> + <span class='gp-popout' data-gp-id='22'>します</span></strong>",
+      "casual_structure": "Noun + <strong><span class='gp-popout' data-gp-id='10'>が</span> + <span class='gp-popout' data-gp-id='22'>する</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/3967",
+      "metadata": "がする, gasuru, expression, smell, sound, taste, feeling, sensory"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "180378",
+            "type": "study_question"
+          },
+          {
+            "id": "181",
+            "type": "study_question"
+          },
+          {
+            "id": "2653",
+            "type": "study_question"
+          },
+          {
+            "id": "183",
+            "type": "study_question"
+          },
+          {
+            "id": "2656",
+            "type": "study_question"
+          },
+          {
+            "id": "182",
+            "type": "study_question"
+          },
+          {
+            "id": "183893",
+            "type": "study_question"
+          },
+          {
+            "id": "183892",
+            "type": "study_question"
+          },
+          {
+            "id": "180375",
+            "type": "study_question"
+          },
+          {
+            "id": "180376",
+            "type": "study_question"
+          },
+          {
+            "id": "180377",
+            "type": "study_question"
+          },
+          {
+            "id": "2657",
+            "type": "study_question"
+          },
+          {
+            "id": "2650",
+            "type": "study_question"
+          },
+          {
+            "id": "2652",
+            "type": "study_question"
+          },
+          {
+            "id": "2654",
+            "type": "study_question"
+          },
+          {
+            "id": "2655",
+            "type": "study_question"
+          },
+          {
+            "id": "2651",
+            "type": "study_question"
+          },
+          {
+            "id": "2658",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "178",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "526",
+            "type": "offline_resource"
+          },
+          {
+            "id": "909",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1164",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "552",
+            "type": "related_content"
+          },
+          {
+            "id": "1387",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "653",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "236",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1842",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "180378",
+      "type": "study_question",
+      "attributes": {
+        "id": 180378,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"721\">誰（だれ）かに</span>見（み）<span class=\"gp-popout\" data-gp-id=\"145\">られ</span><span class=\"gp-popout\" data-gp-id=\"27\">ている</span>感（かん）じ<span class='study-area-input'>____</span>。",
+        "answer": "がする",
+        "alternate_grammar": [],
+        "kanji_answer": "がする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/誰かに見られている感じがする。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It feels like I'm being watched by someone. (Literally, 'the feeling of being watched <strong>is happening</strong>')",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181",
+      "type": "study_question",
+      "attributes": {
+        "id": 181,
+        "content": "車（くるま）<span class='gp-popout' data-gp-id='6'>の</span>音（おと）<span class='study-area-input'>____</span>。",
+        "answer": "がする",
+        "alternate_grammar": [],
+        "kanji_answer": "がする",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが特定（とくてい）の<strong>感覚（かんかく）を引（ひ）き起（お）こしている</strong>、又（また）はその感覚（かんかく）が続（つづ）いていることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/117/male_audio/230225_1428_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/車の音がする。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "がします": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "する": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "します": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "した": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "しました": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "がきこえる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "きこえる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "がしている": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "にする": {
+            "en": "にする means 'to decide on'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "がる": {
+            "en": "がる means 'to show signs of being (A)'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "A car is <strong>making a sound</strong>. ",
+        "nuance_translation": "An expression used to highlight that something is <strong>causing a specific sensory experience</strong>, or that that sense is <strong>going</strong>.",
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2653",
+      "type": "study_question",
+      "attributes": {
+        "id": 2653,
+        "content": "<span class='gp-popout' data-gp-id='721'>誰（だれ）か</span><span class='gp-popout' data-gp-id='10'>が</span>ギター<span class='gp-popout' data-gp-id='21'>を</span>弾（ひ）い<span class='gp-popout' data-gp-id='27'>ている</span>音（おと）<span class='study-area-input'>____</span>。",
+        "answer": "がする",
+        "alternate_grammar": [],
+        "kanji_answer": "がする",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが特定（とくてい）の<strong>感覚（かんかく）を引（ひ）き起（お）こしている</strong>、又（また）はその感覚（かんかく）が続（つづ）いていることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/117/male_audio/230225_1429_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/誰かがギターを弾いている音がする。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "する": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "します": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "した": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "しました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "がします": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "がきこえる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "きこえる": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "がしている": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          },
+          "がした": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "にする": {
+            "en": "にする means 'to decide on'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "ときいた": {
+            "en": "ときいた means 'I heard that'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "がる": {
+            "en": "がる means 'to show signs of being (A)'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "がある": {
+            "en": "がある means 'to exist' and is used for inanimate objects. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "きこえた": {
+            "en": "We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "The sound of someone playing the guitar <strong>can be heard</strong>. (Literally 'the sound is being made')",
+        "nuance_translation": "An expression used to highlight that something is <strong>causing a specific sensory experience</strong>, or that that sense is <strong>going</strong>.",
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183",
+      "type": "study_question",
+      "attributes": {
+        "id": 183,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>料理（りょうり）<span class='gp-popout' data-gp-id='3'>は</span>塩（しお）<span class='gp-popout' data-gp-id='6'>の</span>味（あじ）<span class='study-area-input'>____</span>。",
+        "answer": "がします",
+        "alternate_grammar": [],
+        "kanji_answer": "がします",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが特定（とくてい）の<strong>感覚（かんかく）を引（ひ）き起（お）こしている</strong>、又（また）はその感覚（かんかく）が続（つづ）いていることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/117/male_audio/230421_1255.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この料理は塩の味がします。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "がする": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "する": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "します": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "した": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "しました": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "にします": {
+            "en": "にする means 'to decide on'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "にする": {
+            "en": "にする means 'to decide on'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "がります": {
+            "en": "がる means 'to show signs of being (A)'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "がる": {
+            "en": "がる means 'to show signs of being (A)'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "This food <strong>gives off</strong> a salty taste.",
+        "nuance_translation": "An expression used to highlight that something is <strong>causing a specific sensory experience</strong>, or that that sense is <strong>going</strong>.",
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2656",
+      "type": "study_question",
+      "attributes": {
+        "id": 2656,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>食（た）べ物（もの）<span class='gp-popout' data-gp-id='3'>は</span>嫌（いや）<span class='gp-popout' data-gp-id='28'>な</span>味（あじ）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='62'>ので</span>、犬（いぬ）に<span class='gp-popout' data-gp-id='722'>あげ</span>ましょう。",
+        "answer": "がする",
+        "alternate_grammar": [],
+        "kanji_answer": "がする",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが特定（とくてい）の<strong>感覚（かんかく）を引（ひ）き起（お）こしている</strong>、又（また）はその感覚（かんかく）が続（つづ）いていることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/117/male_audio/230225_1429_06.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この食べ物は嫌な味がするので、犬にあげましょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "する": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "します": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "した": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "しました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "がします": {
+            "en": "Can you use the casual here? The sentence ends casually, so it would be more appropriate to use する",
+            "es": ""
+          },
+          "がある": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "がした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "にする": {
+            "en": "にする means 'to decide on'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "がる": {
+            "en": "がる means 'to show signs of being (A)'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Since this food <strong>gives off</strong> an unpleasant taste, let's give it to the dog.",
+        "nuance_translation": "An expression used to highlight that something is <strong>causing a specific sensory experience</strong>, or that that sense is <strong>going</strong>.",
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182",
+      "type": "study_question",
+      "attributes": {
+        "id": 182,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>部屋（へや）<span class='gp-popout' data-gp-id='3'>は</span>コーヒー<span class='gp-popout' data-gp-id='6'>の</span>匂（にお）い<span class='study-area-input'>____</span>。",
+        "answer": "がします",
+        "alternate_grammar": [],
+        "kanji_answer": "がします",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが特定（とくてい）の<strong>感覚（かんかく）を引（ひ）き起（お）こしている</strong>、又（また）はその感覚（かんかく）が続（つづ）いていることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/117/male_audio/230225_1428_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この部屋はコーヒーの匂いがします。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "がする": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "する": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "します": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "した": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "しました": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "にします": {
+            "en": "にする means 'to decide on'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "にする": {
+            "en": "にする means 'to decide on'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "がります": {
+            "en": "がる means 'to show signs of being (A)'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "がる": {
+            "en": "がる means 'to show signs of being (A)'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "がある": {
+            "en": "がある means 'to exist' and is attached to nouns. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "This room is <strong>giving off</strong> a coffee smell.",
+        "nuance_translation": "An expression used to highlight that something is <strong>causing a specific sensory experience</strong>, or that that sense is <strong>going</strong>.",
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183893",
+      "type": "study_question",
+      "attributes": {
+        "id": 183893,
+        "content": "<span data-gp-id='718'>なんか</span>忘（わす）れ<span data-gp-id='895'>た</span>気（き）<span data-gp-id='117'>がする</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>I feel like</strong> I forgot something. (Literally, 'my attention is being drawn to that something was forgotten')",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183892",
+      "type": "study_question",
+      "attributes": {
+        "id": 183892,
+        "content": "ヤバ<span data-gp-id='24'>い</span>、鍵（かぎ）<span data-gp-id='21'>を</span>かけ<span data-gp-id='12'>る</span><span data-gp-id='16'>の</span><span data-gp-id='21'>を</span>忘（わす）れ<span data-gp-id='895'>た</span>気（き）<span data-gp-id='117'>がする</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Shoot, <strong>I feel like</strong> I forgot to lock my door. (Literally, 'my attention is being drawn to that I may have forgotten to lock the door')",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180375",
+      "type": "study_question",
+      "attributes": {
+        "id": 180375,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"30\">この</span>石鹸（せっけん）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>バラ<span class=\"gp-popout\" data-gp-id=\"6\">の</span>匂（にお）い<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"45\">から</span><span class=\"gp-popout\" data-gp-id=\"716\">好（す）き</span><span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "がする",
+        "alternate_grammar": [],
+        "kanji_answer": "がする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この石鹸はバラの匂いがするから好きです。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I like this soap because it smells like roses. (Literally, 'it <strong>gives off</strong> a rose smell')",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180376",
+      "type": "study_question",
+      "attributes": {
+        "id": 180376,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"721\">誰（だれ）か</span><span class=\"gp-popout\" data-gp-id=\"10\">が</span>階段（かいだん）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>上（あ）がっ<span class=\"gp-popout\" data-gp-id=\"27\">ている</span>音（おと）<span class='study-area-input'>____</span>。",
+        "answer": "がする",
+        "alternate_grammar": [],
+        "kanji_answer": "がする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/誰かが階段を上がっている音がする。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I hear someone coming up the stairs. (Literally, 'the sound of someone coming up the stairs <strong>is being made</strong>')",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180377",
+      "type": "study_question",
+      "attributes": {
+        "id": 180377,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"30\">この</span>バナナ<span class=\"gp-popout\" data-gp-id=\"10\">が</span>変（へん）<span class=\"gp-popout\" data-gp-id=\"28\">な</span>味（あじ）<span class='study-area-input'>____</span>。",
+        "answer": "がする",
+        "alternate_grammar": [],
+        "kanji_answer": "がする",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/このバナナが変な味がする。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This banana tastes weird. (Literally, 'it <strong>gives off</strong> a strange flavor')",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2657",
+      "type": "study_question",
+      "attributes": {
+        "id": 2657,
+        "content": "変（へん）な味（あじ）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='62'>ので</span>これを捨（す）てます。",
+        "answer": "がする",
+        "alternate_grammar": [],
+        "kanji_answer": "がする",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが特定（とくてい）の<strong>感覚（かんかく）を引（ひ）き起（お）こしている</strong>、又（また）はその感覚（かんかく）が続（つづ）いていることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/117/male_audio/230225_1430.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/変な味がするのでこれを捨てます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "する": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "します": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "した": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "しました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "がします": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "がある": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "にする": {
+            "en": "にする means 'to decide on'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "がる": {
+            "en": "がる means 'to show signs of being (A)'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "This <strong>gives off</strong> an odd flavor, so I will throw it away.",
+        "nuance_translation": "An expression used to highlight that something is <strong>causing a specific sensory experience</strong>, or that that sense is <strong>going</strong>.",
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2650",
+      "type": "study_question",
+      "attributes": {
+        "id": 2650,
+        "content": "お砂糖（さとう）<span class='gp-popout' data-gp-id='21'>を</span>入（い）れ過（す）ぎた<span class='gp-popout' data-gp-id='45'>から</span>、甘（あま）<span class='gp-popout' data-gp-id='24'>い</span>味（あじ）<span class='study-area-input'>____</span>。",
+        "answer": "がする",
+        "alternate_grammar": [
+          "がします",
+          "がする"
+        ],
+        "kanji_answer": "がする",
+        "kanji_alt_grammar": [
+          "がします",
+          "がする"
+        ],
+        "nuance": "何（なに）かが特定（とくてい）の<strong>感覚（かんかく）を引（ひ）き起（お）こしている</strong>、又（また）はその感覚（かんかく）が続（つづ）いていることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/117/male_audio/230225_1429.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/お砂糖を入れ過ぎたから、甘い味がする。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "する": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "します": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "した": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "しました": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "にする": {
+            "en": "にする means 'to decide on'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "がる": {
+            "en": "がる means 'to show signs of being (A)'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I put too much sugar in, so it <strong>gives off</strong> a sweet taste.",
+        "nuance_translation": "An expression used to highlight that something is <strong>causing a specific sensory experience</strong>, or that that sense is <strong>going</strong>.",
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2652",
+      "type": "study_question",
+      "attributes": {
+        "id": 2652,
+        "content": "風（かぜ）<span class='gp-popout' data-gp-id='10'>が</span>吹（ふ）<span class='gp-popout' data-gp-id='416'>いて</span>、<span class='gp-popout' data-gp-id='7'>いい</span>匂（にお）い<span class='study-area-input'>____</span>。",
+        "answer": "がした",
+        "alternate_grammar": [],
+        "kanji_answer": "がした",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが特定（とくてい）の<strong>感覚（かんかく）を引（ひ）き起（お）こしている</strong>、又（また）はその感覚（かんかく）が続（つづ）いていることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/117/male_audio/230225_1429_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/風が吹いて、いい匂いがした。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "する": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "します": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "した": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "しました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "がしました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "がある": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "As the wind blew, it <strong>made</strong> a good smell.",
+        "nuance_translation": "An expression used to highlight that something is <strong>causing a specific sensory experience</strong>, or that that sense is <strong>going</strong>.",
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2654",
+      "type": "study_question",
+      "attributes": {
+        "id": 2654,
+        "content": "お母（かあ）さん<span class='gp-popout' data-gp-id='10'>が</span>料理（りょうり）し<span class='gp-popout' data-gp-id='27'>ている</span><span class='gp-popout' data-gp-id='9'>でしょう</span>。<span class='gp-popout' data-gp-id='7'>いい</span>匂（にお）い<span class='study-area-input'>____</span>。",
+        "answer": "がします",
+        "alternate_grammar": [],
+        "kanji_answer": "がします",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが特定（とくてい）の<strong>感覚（かんかく）を引（ひ）き起（お）こしている</strong>、又（また）はその感覚（かんかく）が続（つづ）いていることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/117/male_audio/230225_1429_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/お母さんが料理しているでしょう。いい匂いがします。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "する": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "します": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "した": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "しました": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "がする": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "がしています": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          },
+          "がしている": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "にします": {
+            "en": "にする means 'to decide on'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Mom is cooking, right? It's <strong>making</strong> a nice smell.",
+        "nuance_translation": "An expression used to highlight that something is <strong>causing a specific sensory experience</strong>, or that that sense is <strong>going</strong>.",
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2655",
+      "type": "study_question",
+      "attributes": {
+        "id": 2655,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>コーヒー<span class='gp-popout' data-gp-id='3'>は</span>苦（にが）い味（あじ）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='45'>から</span>、お砂糖（さとう）<span class='gp-popout' data-gp-id='21'>を</span>入（い）れ<span class='gp-popout' data-gp-id='60'>てください</span>。",
+        "answer": "がする",
+        "alternate_grammar": [
+          "がします",
+          "がする"
+        ],
+        "kanji_answer": "がする",
+        "kanji_alt_grammar": [
+          "がします",
+          "がする"
+        ],
+        "nuance": "何（なに）かが特定（とくてい）の<strong>感覚（かんかく）を引（ひ）き起（お）こしている</strong>、又（また）はその感覚（かんかく）が続（つづ）いていることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/117/male_audio/230225_1429_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/このコーヒーは苦い味がするから、お砂糖を入れてください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "する": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "します": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "した": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "しました": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "がして": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "にする": {
+            "en": "にする means 'to decide on'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "がる": {
+            "en": "がる means 'to show signs of being (A)'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Because this coffee <strong>gives off</strong> a bitter taste, please use sugar.",
+        "nuance_translation": "An expression used to highlight that something is <strong>causing a specific sensory experience</strong>, or that that sense is <strong>going</strong>.",
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2651",
+      "type": "study_question",
+      "attributes": {
+        "id": 2651,
+        "content": "<span class='gp-popout' data-gp-id='47'>あの</span>人（ひと）<span class='gp-popout' data-gp-id='15'>と</span>一緒（いっしょ）に居（い）るだけで、変（へん）<span class='gp-popout' data-gp-id='28'>な</span>感（かん）じ<span class='study-area-input'>____</span>。",
+        "answer": "がする",
+        "alternate_grammar": [],
+        "kanji_answer": "がする",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが特定（とくてい）の<strong>感覚（かんかく）を引（ひ）き起（お）こしている</strong>、又（また）はその感覚（かんかく）が続（つづ）いていることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/117/male_audio/230225_1429_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/あの人と一緒に居るだけで、変な感じがする。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "する": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "します": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "した": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "しました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "がします": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "にする": {
+            "en": "にする means 'to decide on'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          },
+          "がる": {
+            "en": "がる means 'to show signs of being (A)'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Just being with him <strong>gives off</strong> a weird feeling.",
+        "nuance_translation": "An expression used to highlight that something is <strong>causing a specific sensory experience</strong>, or that that sense is <strong>going</strong>.",
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2658",
+      "type": "study_question",
+      "attributes": {
+        "id": 2658,
+        "content": "爆発音（ばくはつおん）<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='45'>から</span>、テーブル<span class='gp-popout' data-gp-id='6'>の</span>下（した）に隠（かく）れた。",
+        "answer": "がした",
+        "alternate_grammar": [],
+        "kanji_answer": "がした",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが特定（とくてい）の<strong>感覚（かんかく）を引（ひ）き起（お）こしている</strong>、又（また）はその感覚（かんかく）が続（つづ）いていることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson3/117/male_audio/230225_1430_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/爆発音がしたから、テーブルの下に隠れた。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "がしました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "する": {
+            "en": "Can you include something else at the beginning?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "します": {
+            "en": "Can you include something else at the beginning?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "した": {
+            "en": "Can you include something else at the beginning?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "がきこえた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "きこえた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "がする": {
+            "en": "Check the tense hint!",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "にした": {
+            "en": "にする means 'to decide on'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "がして": {
+            "en": "This would mean 'once something happened'. We are looking for a grammar point that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "Because the sound of an explosion <strong>rang out</strong>, I hid under the table.",
+        "nuance_translation": "An expression used to highlight that something is <strong>causing a specific sensory experience</strong>, or that that sense is <strong>going</strong>.",
+        "extra_info": "",
+        "reviewable_id": 117,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "178",
+      "type": "writeup",
+      "attributes": {
+        "id": 178,
+        "body_ja": "",
+        "body": "<p>In Japanese, describing things that can be experienced with the senses (excluding visual), is a little bit different to the way that we would convey it in English. Traditionally, we would use unique verbs for each of these situations, such as 'smells like (A)', 'tastes like (A)', 'feels like (A)', etc. While this is still possible in Japanese, it is not the most common way.</p>\r\n\r\n<p><span data-gp-id='117'>がする</span> is a grammar construction that focuses on the source of the smell, sound, taste, or feeling, and makes the sensory experience itself the subject of the sentence. To use <span data-gp-id='117'>がする</span>, simply attach it to the end of any phrase that expresses which type of 'sense' is being created/given off by the subject.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180375'>\r\n<li data-study-question='180376'>\r\n<li data-study-question='180377'>\r\n<li data-study-question='180378'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>Japanese often uses 気（き） 'energy', 'spirit', as something that can be perceived with the senses. Due to this, there are many phrases which use <span data-gp-id='254'>～気（き）がする</span> in the same way as this grammar point.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183892'>\r\n\r\n<li data-study-question='183893'> </ul></section>"
+      }
+    },
+    {
+      "id": "526",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 526,
+        "source": "Tobira",
+        "location": "Page 173",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "909",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 909,
+        "source": "みんなの日本語 II",
+        "location": "Page 138 [CH 47]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1164",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1164,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 435",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "653",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 653,
+        "site": "Renshuu",
+        "description": "Hear, Smell, Taste",
+        "link": "https://www.renshuu.org/index.php?page=grammar/individual&id=127",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "236",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 236,
+        "site": "Japanese StackExchange",
+        "description": "～をする・～がする",
+        "link": "https://japanese.stackexchange.com/questions/27545/%e3%82%92%e3%81%99%e3%82%8b-and-%e3%81%8c%e3%81%99%e3%82%8b-meanings-and-uses/27557#27557",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1842",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1842,
+        "site": "Japanese StackExchange",
+        "description": "The extended use of する",
+        "link": "https://japanese.stackexchange.com/questions/17850/%e3%81%8c%e3%81%99%e3%82%8b-the-extended-use-of-%e3%81%99%e3%82%8b-to-do",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "552",
+      "type": "related_content",
+      "attributes": {
+        "id": 552,
+        "relationship_type": "related",
+        "body": "がする and にみえる (often written in kanji as に見える) both describe sensations, but differ in usage. がする is used with sensory words, e.g. 音がする 'I hear', 匂いがする 'I smell', and 味がする 'I taste' (literally, 'It gives off a sound/smell/taste.'). に見える specifically describes visual sensations and means 'looks like', e.g. 石に見える ('It looks like a rock.'), without implying that it is the thing it visually resembles.",
+        "first_relatable": {
+          "id": 117,
+          "slug": "がする",
+          "title": "がする",
+          "meaning": "To give off, Smell, Sound, Taste, Sensation",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 166,
+          "slug": "にみえる",
+          "title": "にみえる",
+          "meaning": "To look, To seem, To appear",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1387",
+      "type": "related_content",
+      "attributes": {
+        "id": 1387,
+        "relationship_type": "related",
+        "body": "がする and 聞こえる both express sensory experiences, but differ in nuance.  がする is used with sensory words, e.g. 音がする 'I hear', 匂いがする 'I smell', and 味がする 'I taste' (literally, 'It gives off a sound/smell/taste.'). 聞こえる focuses specifically on sound and means 'to be heard' or 'to sound like', e.g. 音楽が聞こえる ('I hear music.') or 音楽に聞こえる ('It sounds like music.').",
+        "first_relatable": {
+          "id": 117,
+          "slug": "がする",
+          "title": "がする",
+          "meaning": "To give off, Smell, Sound, Taste, Sensation",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 767,
+          "slug": "聞こえる",
+          "title": "聞こえる",
+          "meaning": "To be audible, To sound (like), (Can) hear, To be heard",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

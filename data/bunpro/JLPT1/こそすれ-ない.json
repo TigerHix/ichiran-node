@@ -1,0 +1,732 @@
+{
+  "data": {
+    "id": "991",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 991,
+      "level": "JLPT1",
+      "lesson_id": 50,
+      "part_of_speech": null,
+      "register": "硬い",
+      "word_type": "",
+      "slug": "こそすれ-ない",
+      "nuance": null,
+      "grammar_order": 922,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 992,
+        "title": "並み",
+        "slug": "並み"
+      },
+      "previous_grammar_point": {
+        "id": 990,
+        "title": "ともあろう",
+        "slug": "ともあろう"
+      },
+      "lesson_count": "19/22",
+      "title": "こそすれ〜ない",
+      "furigana": "こそすれ〜ない",
+      "meaning": "And certainly not, But certainly not, But, Although, Even though",
+      "nuance_translation": null,
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "［する］Verb + <strong>こそすれ</strong><br>Verb［stem］+ <strong>こそすれ</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Formal",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/48639",
+      "metadata": "こそすれない, こそすれ, kososurenai, kososure, expression, formal, adverbial particle, perfective form, realis form, hypothetical"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "10530",
+            "type": "study_question"
+          },
+          {
+            "id": "183193",
+            "type": "study_question"
+          },
+          {
+            "id": "183194",
+            "type": "study_question"
+          },
+          {
+            "id": "183195",
+            "type": "study_question"
+          },
+          {
+            "id": "183196",
+            "type": "study_question"
+          },
+          {
+            "id": "183197",
+            "type": "study_question"
+          },
+          {
+            "id": "183198",
+            "type": "study_question"
+          },
+          {
+            "id": "184624",
+            "type": "study_question"
+          },
+          {
+            "id": "10529",
+            "type": "study_question"
+          },
+          {
+            "id": "10534",
+            "type": "study_question"
+          },
+          {
+            "id": "10531",
+            "type": "study_question"
+          },
+          {
+            "id": "10532",
+            "type": "study_question"
+          },
+          {
+            "id": "10533",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "993",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "2137",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": []
+      },
+      "supplemental_links": {
+        "data": []
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "10530",
+      "type": "study_question",
+      "attributes": {
+        "id": 10530,
+        "content": " <span class='name-highlight'>小説（しょうせつ）</span>：「だが実際（じっさい）は、剣士（けんし）の復讐（ふくしゅう）心（しん）は火（ひ）の手（て）を<span class='study-area-input'>____</span>、決（けっ）して冷（さ）めるどころではなかったのである。」",
+        "answer": "つよめこそすれ",
+        "alternate_grammar": [],
+        "kanji_answer": "強（つよ）めこそすれ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Literary, Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/小説：「だが実際は、剣士の復讐心は火の手を強めこそすれ、決して冷めるどころではなかったのである。」.mp3",
+        "word_prompt": "つよめる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つよめるのに": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "つよめるものを": {
+            "en": "Close, but this phrase usually follows a conditional form.Let's try something that focuses on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "つよめるもんを": {
+            "en": "Close, but this phrase usually follows a conditional form.Let's try something that focuses on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "つよめるが": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "つよめるけど": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "つよめるけれど": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "つよめるけれども": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "つよめるけども": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": " <span class='name-highlight'>Novel</span>: 'In reality, however, the swordsman's blazing desire for vengeance was intensifying, <strong>and certainly not</strong> cooling down at all.'",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 991,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183193",
+      "type": "study_question",
+      "attributes": {
+        "id": 183193,
+        "content": "\r\nこのままだと日本（にほん）の経済（けいざい）は悪化（あっか）<span class='study-area-input'>____</span>、回復（かいふく）はしないだろう。",
+        "answer": "こそすれ",
+        "alternate_grammar": [],
+        "kanji_answer": "こそすれ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/このままだと日本の経済は悪化こそすれ、回復はしないだろう。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nAt this rate, Japan's economy will continue to worsen, <strong>and certainly not</strong> recover.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 991,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183194",
+      "type": "study_question",
+      "attributes": {
+        "id": 183194,
+        "content": "\r\n\r\n\r\nあのカードは世界（せかい）に一枚（いちまい）しかないので値段（ねだん）が上（あ）がり<span class='study-area-input'>____</span>、下（さ）がりはしないだろう。",
+        "answer": "こそすれ",
+        "alternate_grammar": [],
+        "kanji_answer": "こそすれ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/あのカードは世界に一枚しかないので値段が上がりこそすれ、下がりはしないだろう。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nThat is the only card that exists in this world, so the price will keep rising, <strong>and certainly not</strong> decrease.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 991,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183195",
+      "type": "study_question",
+      "attributes": {
+        "id": 183195,
+        "content": "\r\n運動（うんどう）は健康（けんこう）のために<span class='study-area-input'>____</span>、絶対（ぜったい）に損（そん）にはならない。",
+        "answer": "こそなれ",
+        "alternate_grammar": [],
+        "kanji_answer": "こそなれ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/運動は健康のためにこそなれ、絶対に損にはならない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nExercise will be beneficial for your health, <strong>and you certainly</strong> won’t regret it.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 991,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183196",
+      "type": "study_question",
+      "attributes": {
+        "id": 183196,
+        "content": "\r\n\r\n\r\nそれは損（そん）に<span class='study-area-input'>____</span>、利益（りえき）になることはないだろう。",
+        "answer": "こそなれ",
+        "alternate_grammar": [],
+        "kanji_answer": "こそなれ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/それは損にこそなれ、利益になることはないだろう。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nThat would be a loss, <strong>and certainly won’t</strong> be profitable.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 991,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183197",
+      "type": "study_question",
+      "attributes": {
+        "id": 183197,
+        "content": "\r\n\r\n\r\n憎（にくし）み<span class='study-area-input'>____</span>、実際（じっさい）に傷（きず）つけようとは思（おも）ったこともない。",
+        "answer": "こそあれ",
+        "alternate_grammar": [],
+        "kanji_answer": "こそあれ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/憎みこそあれ、実際に傷つけようとは思ったこともない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI have felt hatred towards you, but I <strong>certainly have never</strong> thought of actually hurting you.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 991,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183198",
+      "type": "study_question",
+      "attributes": {
+        "id": 183198,
+        "content": "\r\n\r\n\r\n彼（かれ）はコミュニケーションの能力（のうりょく）<span class='study-area-input'>____</span>、仕事（しごと）は得意（とくい）ではない。",
+        "answer": "こそあれ",
+        "alternate_grammar": [],
+        "kanji_answer": "こそあれ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/彼はコミュニケーションの能力こそあれ、仕事は得意ではない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nHe has skill in communication, <strong>but he certainly is not</strong> a skilled worker.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 991,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184624",
+      "type": "study_question",
+      "attributes": {
+        "id": 184624,
+        "content": "感謝（かんしゃ）され<span data-gp-id='991'>こそすれ</span>、文句（もんく）を言（い）われる筋合（すじあ）いはない。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/感謝されこそすれ、文句を言われる筋合いはない。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 6,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I should be thanked, <strong>you certainly are not</strong> in the position to complain.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 991,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10529",
+      "type": "study_question",
+      "attributes": {
+        "id": 10529,
+        "content": "セキュリティ事故（じこ）は<span class='study-area-input'>____</span>、減（へ）りはしないだろう。",
+        "answer": "ふえこそすれ",
+        "alternate_grammar": [],
+        "kanji_answer": "増（ふ）えこそすれ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Literary, Contrastive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/セキュリティ事故は増えこそすれ、減りはしないだろう。.mp3",
+        "word_prompt": "増（ふ）える",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ふえるのに": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "ふえるものを": {
+            "en": "Close, but this phrase usually follows a conditional form.Let's try something that focuses on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "ふえるもんを": {
+            "en": "Close, but this phrase usually follows a conditional form.Let's try something that focuses on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "ふえるが": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "ふえるけど": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "ふえるけれど": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "ふえるけれども": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "ふえるけども": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The security incidents will only increase,<strong> certainly not </strong>decrease.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 991,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10534",
+      "type": "study_question",
+      "attributes": {
+        "id": 10534,
+        "content": "武田（たけだ）さんに敬意（けいい）を<span class='study-area-input'>____</span>嘲弄（ちょうろう）する気持（きも）ちなど一切（いっさい）ない。",
+        "answer": "はらいこそすれ",
+        "alternate_grammar": [],
+        "kanji_answer": "払（はら）いこそすれ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Literary, Contrastive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/武田さんに敬意を払いこそすれ嘲弄する気持ちなど一切ない。.mp3",
+        "word_prompt": "払（はら）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はらうのに": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "はらうものを": {
+            "en": "Close, but this phrase usually follows a conditional form.Let's try something that focuses on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "はらうもんを": {
+            "en": "Close, but this phrase usually follows a conditional form.Let's try something that focuses on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "はらうが": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "はらうけど": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "はらうけれど": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "はらうけれども": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "はらうけども": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I am respectful of Mr. Takeda, <strong>and certainly</strong> have <strong>no</strong> desire to mock him at all.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 991,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10531",
+      "type": "study_question",
+      "attributes": {
+        "id": 10531,
+        "content": "多（おお）くの人（ひと）にとって、その奇妙（きみょう）な現象（げんしょう）は<span class='study-area-input'>____</span>、恐怖（きょうふ）を感（かん）じるほどではなかった。",
+        "answer": "おどろきこそすれ",
+        "alternate_grammar": [],
+        "kanji_answer": "驚（おどろ）きこそすれ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Literary, Contrastive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/多くの人にとって、その奇妙な現象は驚きこそすれ、恐怖を感じるほどではなかった。.mp3",
+        "word_prompt": "驚（おどろ）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おどろくのに": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "おどろくものを": {
+            "en": "Close, but this phrase usually follows a conditional form.Let's try something that focuses on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "おどろくもんを": {
+            "en": "Close, but this phrase usually follows a conditional form.Let's try something that focuses on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "おどろくが": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "おどろくけど": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "おどろくけれど": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "おどろくけれども": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "おどろくけども": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The strange phenomenon was surprising for many,<strong> and certainly not</strong> terrifying.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 991,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10532",
+      "type": "study_question",
+      "attributes": {
+        "id": 10532,
+        "content": "魔法使（まほうつか）いへの恋情（れんじょう）は、<span class='study-area-input'>____</span>弱（よわ）めるものではなかった。",
+        "answer": "つよめこそすれ",
+        "alternate_grammar": [],
+        "kanji_answer": "強（つよ）めこそすれ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Literary, Contrastive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/魔法使いへの恋情は、強めこそすれ弱めるものではなかった。.mp3",
+        "word_prompt": "強（つよ）める",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つよめるのに": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "つよめるものを": {
+            "en": "Close, but this phrase usually follows a conditional form.Let's try something that focuses on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "つよめるもんを": {
+            "en": "Close, but this phrase usually follows a conditional form.Let's try something that focuses on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "つよめるが": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "つよめるけど": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "つよめるけれど": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "つよめるけれども": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "つよめるけども": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Her love for the sorcerer strengthened, and <strong>certainly didn't</strong> weaken.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 991,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10533",
+      "type": "study_question",
+      "attributes": {
+        "id": 10533,
+        "content": "<span class='study-area-input'>____</span>、憎（にく）しみを感（かん）じるなんてちゃんちゃらおかしいよ。",
+        "answer": "かんしゃこそすれ",
+        "alternate_grammar": [],
+        "kanji_answer": "感謝（かんしゃ）こそすれ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Literary, Contrastive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/感謝こそすれ、憎しみを感じるなんてちゃんちゃらおかしいよ。.mp3",
+        "word_prompt": "感謝（かんしゃ）する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かんしゃするのに": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "かんしゃするものを": {
+            "en": "Close, but this phrase usually follows a conditional form.Let's try something that focuses on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "かんしゃするもんを": {
+            "en": "Close, but this phrase usually follows a conditional form.Let's try something that focuses on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "かんしゃするが": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "かんしゃするけど": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "かんしゃするけれど": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "かんしゃするけれども": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          },
+          "かんしゃするけども": {
+            "en": "Natural, but let's focus on emphasis of the preceeding clause.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I feel gratitude, <strong>certainly not</strong> something as ridiculous as hatred.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 991,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "993",
+      "type": "writeup",
+      "attributes": {
+        "id": 993,
+        "body_ja": "<p>日本語（にほんご）で、「こそ」という副助詞（ふくじょし）が使（つか）われると、それに合（あ）わせて動詞（どうし）が已然形（いぜんけい）という形（かたち）になることがあります。已然形（いぜんけい）とは、古典（こてん）の文法（ぶんぽう）に見（み）られる動詞（どうし）の活用形（かつようけい）で、現代（げんだい）の日本語（にほんご）に直接（ちょくせつ）対応（たいおう）する形（かたち）はありませんが、仮定形（かていけい）がその働（はたら）きをある程度（ていど）引（ひ）き継（つ）いでいます。</p>\r\n\r\n<p>この文型（ぶんけい）で使（つか）われる動詞（どうし）には、「する」「なる」「ある」などがあります。これらは、それぞれ「<span data-gp-id='991'>こそすれ</span>」「こそなれ」「こそあれ」という形（かたち）になり、特（とく）に強調（きょうちょう）を表（あらわ）すときに使（つか）われます。意味（いみ）としては、「もちろん (B) ではなく、間違（まちが）いなく (A) だ」や「(A) ではあっても、(B) ではない」です。(B) の部分（ぶぶん）には否定文（ひていぶん）が入（はい）り、他人（たにん）の思（おも）い違（ちが）いや誤解（ごかい）に対（たい）して訂正（ていせい）するニュアンスがあります。</p>\r\n\r\n<p>「<span data-gp-id='991'>こそすれ</span>」は、スル動詞（どうし）の名詞（めいし）の部分（ぶぶん）や、普通（ふつう）の動詞（どうし）の連用形（れんようけい）の後（あと）に付（つ）きます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183193'>\r\n<li data-study-question='183194'>\r\n</ul>\r\n\r\n<p>「こそなれ」と「こそあれ」は、「なる」は名詞（めいし）や形容詞（けいようし）と一緒（いっしょ）に使（つか）われることが多（おお）く、「ある」は名詞（めいし）と一緒（いっしょ）に使（つか）われる、という基本的（きほんてき）な使（つか）い方（かた）に従（したが）って使（つか）い分（わ）けられます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183195'>\r\n<li data-study-question='183196'>\r\n<li data-study-question='183197'>\r\n<li data-study-question='183198'>\r\n</ul>\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>動詞（どうし）に使役（しえき）や受身（うけみ）の助動詞（じょどうし）がついている場合（ばあい）は、それを含（ふく）めた形（かたち）が「こそすれ」などの形（かたち）に変化（へんか）することがあります。そのため、文（ぶん）によっては、どれが動詞（どうし）の語幹（ごかん）なのかを見極（みきわ）める必要（ひつよう）があります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184624'></ul></section>",
+        "body": "<p>Occasionally in Japanese, the <span data-term='副助詞・ふくじょし'>adverbial particle</span> こそ will be seen followed by the <span data-term='已然形・いぜんけい'>realis form</span> (sometimes referred to as the perfective form) of verbs. This is a classical verb form that does not have a modern counterpart. However, the <span data-term='仮定形・かていけい'>hypothetical form</span> has largely replaced the <span data-term='已然形・いぜんけい'>realis form</span> in the manner in conjugates.</p>\r\n\r\n<p>The verbs that will be seen altered this way are する ‘to do’, なる ‘to become’, and ある ‘to be’. They will respectively become <span data-gp-id='991'>こそすれ</span>, こそなれ, and こそあれ , and are used specifically for emphasis. Common translations include ‘certainly not (B), but (A)’, or ‘even though (B), actually (A)’. The (B) phrase in this grammar point will include a negative statement, and is usually something that the speaker is responding to or correcting about what another person mistakenly thought.</p>\r\n\r\n<p><span data-gp-id='991'>こそすれ</span> may attach to either the noun part of する-Verbs, or the <span data-term='連用形・れんようけい'>conjunctive form</span> of standard verbs.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183193'>\r\n<li data-study-question='183194'>\r\n</ul>\r\n\r\n<p>なれ and あれ will be used based on the standard rules of what type of word なる would usually appear with (a noun or adjective), and what type of word ある would usually appear with (a noun).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183195'>\r\n<li data-study-question='183196'>\r\n<li data-study-question='183197'>\r\n<li data-study-question='183198'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>There are cases where the base verb will have been entered in some way, like by having the causative or the passive <span data-term='助動詞・じょどうし'>auxiliary verbs</span> attached to them before the new base will be altered with こそする. So you will need to work out what verb stem is actually being used in any given sentence.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184624'></ul></section>"
+      }
+    },
+    {
+      "id": "2137",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2137,
+        "source": "Sou Matome Bunpou N1",
+        "location": "Page 70",
+        "type": "OfflineResource"
+      }
+    }
+  ]
+}

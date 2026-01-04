@@ -1,0 +1,1274 @@
+{
+  "data": {
+    "id": "355",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 355,
+      "level": "JLPT5",
+      "lesson_id": 4,
+      "part_of_speech": "表現",
+      "register": "一般",
+      "word_type": "名詞",
+      "slug": "がある-noun",
+      "nuance": "(A)が(B)に<strong>属（ぞく）する</strong>こと、または(B)の<strong>中（なか）に存在（そんざい）</strong>していることを表（あらわ）す表現（ひょうげん）。",
+      "grammar_order": 50,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 873,
+        "title": "い-Adjectives くない",
+        "slug": "negative-い-adjectives"
+      },
+      "previous_grammar_point": {
+        "id": 34,
+        "title": "のがすき",
+        "slug": "のがすき"
+      },
+      "lesson_count": "12/13",
+      "title": "がある + Noun",
+      "furigana": "がある + (Noun)",
+      "meaning": "Noun (B) that has Noun (A), Noun (B) with Noun (A)",
+      "nuance_translation": "An expression used to show that (A) <strong>belongs to</strong> (B), or <strong>exists within</strong> (B).",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "Noun + <strong><span class='gp-popout' data-gp-id='13'>がある</span><br></strong><sup>(1)</sup> + Noun<br><br><sup>(1)</sup> のある",
+      "part_of_speech_translation": "Expression",
+      "register_translation": "Standard",
+      "word_type_translation": "Noun",
+      "discourse_link": "https://community.bunpro.jp/t/noun-grammar-discussion/512",
+      "metadata": "がある, のある, gaaru, noaru, expression, noun, relative clause, adjective"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "183772",
+            "type": "study_question"
+          },
+          {
+            "id": "154881",
+            "type": "study_question"
+          },
+          {
+            "id": "1777",
+            "type": "study_question"
+          },
+          {
+            "id": "154880",
+            "type": "study_question"
+          },
+          {
+            "id": "183771",
+            "type": "study_question"
+          },
+          {
+            "id": "1279",
+            "type": "study_question"
+          },
+          {
+            "id": "1281",
+            "type": "study_question"
+          },
+          {
+            "id": "1280",
+            "type": "study_question"
+          },
+          {
+            "id": "1771",
+            "type": "study_question"
+          },
+          {
+            "id": "1772",
+            "type": "study_question"
+          },
+          {
+            "id": "1773",
+            "type": "study_question"
+          },
+          {
+            "id": "1774",
+            "type": "study_question"
+          },
+          {
+            "id": "1775",
+            "type": "study_question"
+          },
+          {
+            "id": "1776",
+            "type": "study_question"
+          },
+          {
+            "id": "1778",
+            "type": "study_question"
+          },
+          {
+            "id": "1779",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "49",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "800",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1028",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1253",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1343",
+            "type": "related_content"
+          },
+          {
+            "id": "53",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "788",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2088",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "183772",
+      "type": "study_question",
+      "attributes": {
+        "id": 183772,
+        "content": "綺麗（きれい）<span data-gp-id='28'>な</span>川（かわ）<span data-gp-id='355'>のある</span>山（やま）。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "A mountain <strong>with a</strong> beautiful river. (Natural Japanese, but less common than <span data-gp-id='10'>が</span>)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 355,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154881",
+      "type": "study_question",
+      "attributes": {
+        "id": 154881,
+        "content": "コンビニ<span class='study-area-input'>____</span>ビル。",
+        "answer": "がある",
+        "alternate_grammar": [],
+        "kanji_answer": "がある",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/コンビニがあるビル。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "A building <strong>that has</strong> a convenience store.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 355,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1777",
+      "type": "study_question",
+      "attributes": {
+        "id": 1777,
+        "content": "静（しず）か<span class='gp-popout' data-gp-id='28'>な</span> 教室（きょうしつ）<span class='study-area-input'>____</span>学校（がっこう）。",
+        "answer": "がある",
+        "alternate_grammar": [
+          "のある",
+          "がある"
+        ],
+        "kanji_answer": "がある",
+        "kanji_alt_grammar": [
+          "のある",
+          "がある"
+        ],
+        "nuance": "(A)が(B)に<strong>属（ぞく）する</strong>こと、または(B)の<strong>中（なか）に存在（そんざい）</strong>していることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/355/male_audio/08-静かかな教室がある学校.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/静かな 教室がある学校。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがすきだ": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすき": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすきです": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "がすきだ": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすき": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすきです": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A school <strong>that has</strong> quiet classrooms.",
+        "nuance_translation": "An expression used to show that (A) <strong>belongs to</strong> (B), or <strong>exists within</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 355,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154880",
+      "type": "study_question",
+      "attributes": {
+        "id": 154880,
+        "content": "ピアノ<span class='study-area-input'>____</span>レストラン。",
+        "answer": "がある",
+        "alternate_grammar": [],
+        "kanji_answer": "がある",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ピアノがあるレストラン。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "A restaurant <strong>with a</strong> piano.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 355,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183771",
+      "type": "study_question",
+      "attributes": {
+        "id": 183771,
+        "content": "漫画（まんが）はある本屋（ほんや）。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "A book store that... well... it has manga. (Unnatural Japanese, unless you're making the point that there is something else that this bookstore doesn't have. This is an advanced use of は)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 355,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1279",
+      "type": "study_question",
+      "attributes": {
+        "id": 1279,
+        "content": "ベッド<span class='study-area-input'>____</span>部屋（へや）。",
+        "answer": "がある",
+        "alternate_grammar": [
+          "のある",
+          "がある"
+        ],
+        "kanji_answer": "がある",
+        "kanji_alt_grammar": [
+          "のある",
+          "がある"
+        ],
+        "nuance": "(A)が(B)に<strong>属（ぞく）する</strong>こと、または(B)の<strong>中（なか）に存在（そんざい）</strong>していることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/355/male_audio/02-ベッドがある部屋.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ベッドがある部屋。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがすきだ": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすき": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすきです": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "がすきだ": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすき": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすきです": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A room <strong>that has</strong> a bed.",
+        "nuance_translation": "An expression used to show that (A) <strong>belongs to</strong> (B), or <strong>exists within</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 355,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1281",
+      "type": "study_question",
+      "attributes": {
+        "id": 1281,
+        "content": "綺麗（きれい）<span class='gp-popout' data-gp-id='28'>な</span>池（いけ）<span class='study-area-input'>____</span>公園（こうえん）。",
+        "answer": "がある",
+        "alternate_grammar": [
+          "のある",
+          "がある"
+        ],
+        "kanji_answer": "がある",
+        "kanji_alt_grammar": [
+          "のある",
+          "がある"
+        ],
+        "nuance": "(A)が(B)に<strong>属（ぞく）する</strong>こと、または(B)の<strong>中（なか）に存在（そんざい）</strong>していることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/355/male_audio/09-綺麗な池がある公園.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/綺麗な池がある公園。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがすきだ": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすき": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすきです": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "がすきだ": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすき": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすきです": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A park <strong>with</strong> a beautiful pond.",
+        "nuance_translation": "An expression used to show that (A) <strong>belongs to</strong> (B), or <strong>exists within</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 355,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1280",
+      "type": "study_question",
+      "attributes": {
+        "id": 1280,
+        "content": "<span class='gp-popout' data-gp-id='715'>たくさん</span>休（やす）み<span class='study-area-input'>____</span>５（ご）月（がつ）が<span class='gp-popout' data-gp-id='716'>好（す）き</span>。",
+        "answer": "がある",
+        "alternate_grammar": [
+          "のある",
+          "がある"
+        ],
+        "kanji_answer": "がある",
+        "kanji_alt_grammar": [
+          "のある",
+          "がある"
+        ],
+        "nuance": "(A)が(B)に<strong>属（ぞく）する</strong>こと、または(B)の<strong>中（なか）に存在（そんざい）</strong>していることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/355/male_audio/たくさん休みがある5月が好き.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/たくさん休みがある５月が好き。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがすきだ": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすき": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすきです": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "がすきだ": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすき": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすきです": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I like the month of May <strong>with</strong> its many holidays. ",
+        "nuance_translation": "An expression used to show that (A) <strong>belongs to</strong> (B), or <strong>exists within</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 355,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1771",
+      "type": "study_question",
+      "attributes": {
+        "id": 1771,
+        "content": "家（いえ）<span class='study-area-input'>____</span>人（ひと）。",
+        "answer": "がある",
+        "alternate_grammar": [
+          "のある",
+          "がある"
+        ],
+        "kanji_answer": "がある",
+        "kanji_alt_grammar": [
+          "のある",
+          "がある"
+        ],
+        "nuance": "(A)が(B)に<strong>属（ぞく）する</strong>こと、または(B)の<strong>中（なか）に存在（そんざい）</strong>していることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/355/male_audio/06-家がある人.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/家がある人。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがすきだ": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすき": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすきです": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "がすきだ": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすき": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすきです": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "People <strong>who have</strong> a house.",
+        "nuance_translation": "An expression used to show that (A) <strong>belongs to</strong> (B), or <strong>exists within</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 355,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1772",
+      "type": "study_question",
+      "attributes": {
+        "id": 1772,
+        "content": "冷蔵庫（れいぞうこ）<span class='study-area-input'>____</span>台所（だいどころ）。",
+        "answer": "がある",
+        "alternate_grammar": [
+          "のある",
+          "がある"
+        ],
+        "kanji_answer": "がある",
+        "kanji_alt_grammar": [
+          "のある",
+          "がある"
+        ],
+        "nuance": "(A)が(B)に<strong>属（ぞく）する</strong>こと、または(B)の<strong>中（なか）に存在（そんざい）</strong>していることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/355/male_audio/05-冷蔵庫がある台所.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/冷蔵庫がある台所。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがすきだ": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすき": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすきです": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "がすきだ": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすき": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすきです": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A kitchen <strong>with</strong> a refrigerator.",
+        "nuance_translation": "An expression used to show that (A) <strong>belongs to</strong> (B), or <strong>exists within</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 355,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1773",
+      "type": "study_question",
+      "attributes": {
+        "id": 1773,
+        "content": "花（はな）<span class='study-area-input'>____</span>木（き）。",
+        "answer": "がある",
+        "alternate_grammar": [
+          "のある",
+          "がある"
+        ],
+        "kanji_answer": "がある",
+        "kanji_alt_grammar": [
+          "のある",
+          "がある"
+        ],
+        "nuance": "(A)が(B)に<strong>属（ぞく）する</strong>こと、または(B)の<strong>中（なか）に存在（そんざい）</strong>していることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/355/male_audio/11-花がある木.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/花がある木。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがすきだ": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすき": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすきです": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "がすきだ": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすき": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすきです": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A tree <strong>that has</strong> blossoms.",
+        "nuance_translation": "An expression used to show that (A) <strong>belongs to</strong> (B), or <strong>exists within</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 355,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1774",
+      "type": "study_question",
+      "attributes": {
+        "id": 1774,
+        "content": "広（ひろ）<span class='gp-popout' data-gp-id='24'>い</span>お風呂（ふろ）<span class='study-area-input'>____</span>家（いえ）。",
+        "answer": "がある",
+        "alternate_grammar": [
+          "のある",
+          "がある"
+        ],
+        "kanji_answer": "がある",
+        "kanji_alt_grammar": [
+          "のある",
+          "がある"
+        ],
+        "nuance": "(A)が(B)に<strong>属（ぞく）する</strong>こと、または(B)の<strong>中（なか）に存在（そんざい）</strong>していることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/355/male_audio/07-広いお風呂がある家.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/広いお風呂がある家。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがすきだ": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすき": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすきです": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "がすきだ": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすき": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすきです": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A house <strong>that has</strong> a spacious bath.",
+        "nuance_translation": "An expression used to show that (A) <strong>belongs to</strong> (B), or <strong>exists within</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 355,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1775",
+      "type": "study_question",
+      "attributes": {
+        "id": 1775,
+        "content": "お金（かね）<span class='study-area-input'>____</span>人（ひと）。",
+        "answer": "がある",
+        "alternate_grammar": [
+          "のある",
+          "がある"
+        ],
+        "kanji_answer": "がある",
+        "kanji_alt_grammar": [
+          "のある",
+          "がある"
+        ],
+        "nuance": "(A)が(B)に<strong>属（ぞく）する</strong>こと、または(B)の<strong>中（なか）に存在（そんざい）</strong>していることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/355/male_audio/01-お金がある人.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/お金がある人。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがすきだ": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすき": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすきです": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "がすきだ": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすき": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすきです": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A person <strong>who has</strong> money.",
+        "nuance_translation": "An expression used to show that (A) <strong>belongs to</strong> (B), or <strong>exists within</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 355,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1776",
+      "type": "study_question",
+      "attributes": {
+        "id": 1776,
+        "content": "美味（おい）し<span class='gp-popout' data-gp-id='24'>い</span>食（た）べ物（もの）<span class='study-area-input'>____</span>レストラン。",
+        "answer": "がある",
+        "alternate_grammar": [
+          "のある",
+          "がある"
+        ],
+        "kanji_answer": "がある",
+        "kanji_alt_grammar": [
+          "のある",
+          "がある"
+        ],
+        "nuance": "(A)が(B)に<strong>属（ぞく）する</strong>こと、または(B)の<strong>中（なか）に存在（そんざい）</strong>していることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/355/male_audio/10-美味しい食べ物があるレストラン.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/美味しい食べ物があるレストラン。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがすきだ": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすき": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすきです": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "がすきだ": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすき": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすきです": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A restaurant <strong>that has</strong> delicious food.",
+        "nuance_translation": "An expression used to show that (A) <strong>belongs to</strong> (B), or <strong>exists within</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 355,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1778",
+      "type": "study_question",
+      "attributes": {
+        "id": 1778,
+        "content": "写真（しゃしん）<span class='study-area-input'>____</span>アルバム。",
+        "answer": "がある",
+        "alternate_grammar": [
+          "のある",
+          "がある"
+        ],
+        "kanji_answer": "がある",
+        "kanji_alt_grammar": [
+          "のある",
+          "がある"
+        ],
+        "nuance": "(A)が(B)に<strong>属（ぞく）する</strong>こと、または(B)の<strong>中（なか）に存在（そんざい）</strong>していることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/355/male_audio/04-写真があるアルバム.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/写真があるアルバム。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがすきだ": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすき": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすきです": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "がすきだ": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすき": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすきです": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "An album <strong>with</strong> pictures.",
+        "nuance_translation": "An expression used to show that (A) <strong>belongs to</strong> (B), or <strong>exists within</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 355,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1779",
+      "type": "study_question",
+      "attributes": {
+        "id": 1779,
+        "content": "仕事（しごと）<span class='study-area-input'>____</span>人（ひと）。",
+        "answer": "がある",
+        "alternate_grammar": [
+          "のある",
+          "がある"
+        ],
+        "kanji_answer": "がある",
+        "kanji_alt_grammar": [
+          "のある",
+          "がある"
+        ],
+        "nuance": "(A)が(B)に<strong>属（ぞく）する</strong>こと、または(B)の<strong>中（なか）に存在（そんざい）</strong>していることを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Non-past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson4/355/male_audio/03-仕事がある人.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/仕事がある人。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことがすきだ": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすき": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "ことがすきです": {
+            "en": "How about removing something from the beginning?",
+            "es": "¿Qué tal si quitas algo del principio?",
+            "fr": "Et si vous supprimiez quelque chose au début ?",
+            "id": "Bagaimana kalau menghapus sesuatu dari bagian awal?"
+          },
+          "がすきだ": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすき": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          },
+          "がすきです": {
+            "en": "Can you include something else at the beginning?",
+            "es": "¿Puedes incluir algo más al principio?",
+            "fr": "Pouvez-vous inclure autre chose au début ?",
+            "id": "Mungkin kamu bisa coba tambahkan sesuatu di bagian awal?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A person <strong>who has</strong> a job.",
+        "nuance_translation": "An expression used to show that (A) <strong>belongs to</strong> (B), or <strong>exists within</strong> (B).",
+        "extra_info": "",
+        "reviewable_id": 355,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "49",
+      "type": "writeup",
+      "attributes": {
+        "id": 49,
+        "body_ja": "",
+        "body": "<p>In this expression, <span data-gp-id='13'>がある</span> has the role of describing the noun that follows it. The description that it is giving is '(A) <span data-gp-id='13'>がある</span> (B)' = '(B) has/with (A)'. This type of phrase is called a relative clause (something that describes a noun), and behaves similarly to an adjective.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154880'>\r\n<li data-study-question='154881'></ul>\r\n\r\n<p>In English, a relative clause would require a <span data-term='代名詞・だいめいし'>pronoun</span> such as 'who' 誰（だれ）, 'which' どれ, 'that' それ・あれ, 'where' どこ. However, these types of words are not required in Japanese, and the noun will follow <span data-gp-id='13'>がある</span> directly.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>In a relative clause, because (A) is describing (B), (B) will be considered the 'main topic/subject'. This means that <span data-gp-id='3'>は</span> will generally not be used in place of <span data-gp-id='10'>が</span>. However, <span data-gp-id='6'>の</span> can be used instead of <span data-gp-id='10'>が</span>, as showing a relationship between (A) and (B) is one of the main functions of <span data-gp-id='6'>の</span>.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183771'>\r\n<li data-study-question='183772'></ul></section>"
+      }
+    },
+    {
+      "id": "800",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 800,
+        "source": "みんなの日本語 I",
+        "location": "Page 62 [CH 9]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1028",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1028,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 376 - Relative Clause ",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1253",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1253,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 63",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "788",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 788,
+        "site": "NihonOnTheGo",
+        "description": "Grammar: Qualifying/Modifying Nouns",
+        "link": "https://nihononthego.tumblr.com/post/100266630257/grammar-qualifyingmodifying-nouns",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2088",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2088,
+        "site": "Tae Kim",
+        "description": "Treating verbs and state-of-being like adjectives",
+        "link": "https://guidetojapanese.org/learn/grammar/clause",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1343",
+      "type": "related_content",
+      "attributes": {
+        "id": 1343,
+        "relationship_type": "related",
+        "body": "がある + Noun expresses possession, using a phrase with a noun, the particle が, and the verb ある to describe another noun (e.g., ピアノがあるレストラン = 'a restaurant with a piano'). In these cases, が can be replaced with の without changing the meaning (e.g., ピアノのあるレストラン).",
+        "first_relatable": {
+          "id": 355,
+          "slug": "がある-noun",
+          "title": "がある + Noun",
+          "meaning": "Noun (B) that has Noun (A), Noun (B) with Noun (A)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 6,
+          "slug": "の",
+          "title": "の",
+          "meaning": "Indicates possession",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "53",
+      "type": "related_content",
+      "attributes": {
+        "id": 53,
+        "relationship_type": "related",
+        "body": "がある expresses the existence or possession of inanimate objects, similar to 'there is' or 'I have' in English (e.g., ピアノがある = 'There is a piano' or 'I have a piano'). When combined with a noun, it describes the noun, much like an adjective (e.g., ピアノがあるレストラン = 'A restaurant with a piano'). Remember, ある changes to いる when referring to animate objects.",
+        "first_relatable": {
+          "id": 13,
+          "slug": "がある",
+          "title": "がある",
+          "meaning": "To be, There is",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 355,
+          "slug": "がある-noun",
+          "title": "がある + Noun",
+          "meaning": "Noun (B) that has Noun (A), Noun (B) with Noun (A)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

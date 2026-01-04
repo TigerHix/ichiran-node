@@ -1,0 +1,1046 @@
+{
+  "data": {
+    "id": "116",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 116,
+      "level": "JLPT4",
+      "lesson_id": 12,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "あとで",
+      "nuance": "ある行動（こうどう）が他（た）の行動（こうどう）の<strong>次（つぎ）に</strong>起（お）こることを強調（きょうちょう）する表現（ひょうげん）。",
+      "grammar_order": 154,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 136,
+        "title": "ていた ",
+        "slug": "ていた"
+      },
+      "previous_grammar_point": {
+        "id": 125,
+        "title": "ごろ",
+        "slug": "ごろ"
+      },
+      "lesson_count": "9/17",
+      "title": "あとで",
+      "furigana": "後（あと）で",
+      "meaning": "After, Later",
+      "nuance_translation": "A phrase that simply highlights that one action will take place <strong>after</strong> another.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<span class='gp-popout' data-gp-id='874'>Verb［た］</span>+ <strong>あと<span class='gp-popout' data-gp-id='769'>で</span></strong><br>Noun + <strong><span class='chui'><span class='gp-popout' data-gp-id='6'>の</span></span> + あと<span class='gp-popout' data-gp-id='769'>で</span></strong><br>後（あと）<span class='gp-popout' data-gp-id='769'>で</span> + Phrase<br>Verb + <span class='chui'>のは</span> + <strong>あと<span class='gp-popout' data-gp-id='769'>で</span></strong><br>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/1198",
+      "metadata": "あとで, のあとで, のはあとで, 後で, の後で, のは後で, atode, noatode, nohaatode, adverb, noun, particle"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "180265",
+            "type": "study_question"
+          },
+          {
+            "id": "2647",
+            "type": "study_question"
+          },
+          {
+            "id": "180",
+            "type": "study_question"
+          },
+          {
+            "id": "180266",
+            "type": "study_question"
+          },
+          {
+            "id": "180268",
+            "type": "study_question"
+          },
+          {
+            "id": "180267",
+            "type": "study_question"
+          },
+          {
+            "id": "177",
+            "type": "study_question"
+          },
+          {
+            "id": "2643",
+            "type": "study_question"
+          },
+          {
+            "id": "178",
+            "type": "study_question"
+          },
+          {
+            "id": "2645",
+            "type": "study_question"
+          },
+          {
+            "id": "2649",
+            "type": "study_question"
+          },
+          {
+            "id": "2644",
+            "type": "study_question"
+          },
+          {
+            "id": "179",
+            "type": "study_question"
+          },
+          {
+            "id": "2646",
+            "type": "study_question"
+          },
+          {
+            "id": "2648",
+            "type": "study_question"
+          },
+          {
+            "id": "2642",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "153",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "129",
+            "type": "offline_resource"
+          },
+          {
+            "id": "863",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1030",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1552",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "819",
+            "type": "related_content"
+          },
+          {
+            "id": "9",
+            "type": "related_content"
+          },
+          {
+            "id": "1019",
+            "type": "related_content"
+          },
+          {
+            "id": "8",
+            "type": "related_content"
+          },
+          {
+            "id": "10",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "235",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "234",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "233",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1954",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1181",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "180265",
+      "type": "study_question",
+      "attributes": {
+        "id": 180265,
+        "content": "勉強（べんきょう）<span class=\"gp-popout\" data-gp-id=\"22\">する</span><span class=\"gp-popout\" data-gp-id=\"16\">の</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span>食（た）べ<span class=\"gp-popout\" data-gp-id=\"895\">た</span><span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"46\">でいい</span>よ。",
+        "answer": "あと",
+        "alternate_grammar": [],
+        "kanji_answer": "後（あと）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/勉強するのは食べた後でいいよ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "You can study <strong>after</strong> you finish eating. (With the time after eating)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 116,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2647",
+      "type": "study_question",
+      "attributes": {
+        "id": 2647,
+        "content": "<span class='study-area-input'>____</span>部屋（へや）の掃除（そうじ）<span class='gp-popout' data-gp-id='21'>を</span>してください。",
+        "answer": "あとで",
+        "alternate_grammar": [],
+        "kanji_answer": "あとで",
+        "kanji_alt_grammar": [],
+        "nuance": "ある行動（こうどう）が他（た）の行動（こうどう）の<strong>次（つぎ）に</strong>起（お）こることを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Imprecise time frame",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/116/male_audio/230224_1306.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/あとで部屋の掃除をしてください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うえで": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Please clean your room <strong>later</strong>.",
+        "nuance_translation": "A phrase that simply highlights that one action will take place <strong>after</strong> another.",
+        "extra_info": "",
+        "reviewable_id": 116,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180",
+      "type": "study_question",
+      "attributes": {
+        "id": 180,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='3'>は</span>アルバイト<span class='study-area-input'>____</span>、疲（つか）れ<span class='gp-popout' data-gp-id='27'>ている</span>。",
+        "answer": "のあとで",
+        "alternate_grammar": [
+          "のあと",
+          "のあとで"
+        ],
+        "kanji_answer": "のあとで",
+        "kanji_alt_grammar": [
+          "のあと",
+          "のあとで"
+        ],
+        "nuance": "ある行動（こうどう）が他（た）の行動（こうどう）の<strong>次（つぎ）に</strong>起（お）こることを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/116/male_audio/230224_1305.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/私はアルバイトのあとで、疲れている。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うえで": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のうえで": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "あとで": {
+            "en": "A の is required when this grammar point follows a noun.",
+            "es": "",
+            "fr": ""
+          },
+          "あと": {
+            "en": "You need a の between あと and a noun.",
+            "es": ""
+          },
+          "から": {
+            "en": "We are looking for a grammar point with the meaning of 'later'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I am tired <strong>after</strong> my part time job.",
+        "nuance_translation": "A phrase that simply highlights that one action will take place <strong>after</strong> another.",
+        "extra_info": "",
+        "reviewable_id": 116,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180266",
+      "type": "study_question",
+      "attributes": {
+        "id": 180266,
+        "content": "仕事（しごと）<span class=\"gp-popout\" data-gp-id=\"6\">の</span><span class='study-area-input'>____</span>、飲（の）み会（かい）<span class=\"gp-popout\" data-gp-id=\"48\">に行（い）きます</span>。",
+        "answer": "あとで",
+        "alternate_grammar": [],
+        "kanji_answer": "後（あと）で",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/仕事の後で、飲み会に行きます。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I will go to the party <strong>after</strong> work. (With the time after work)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 116,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180268",
+      "type": "study_question",
+      "attributes": {
+        "id": 180268,
+        "content": "<span class='study-area-input'>____</span>洗濯（せんたく）もの干（ほ）<span class=\"gp-popout\" data-gp-id=\"22\">し</span><span class=\"gp-popout\" data-gp-id=\"777\">て</span><span class=\"gp-popout\" data-gp-id=\"71\">ね</span>。",
+        "answer": "あとで",
+        "alternate_grammar": [],
+        "kanji_answer": "後（あと）で",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/後で洗濯もの干してね。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Please hang the laundry <strong>later</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 116,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180267",
+      "type": "study_question",
+      "attributes": {
+        "id": 180267,
+        "content": "コピー<span class=\"gp-popout\" data-gp-id=\"21\">を</span>取（と）<span class=\"gp-popout\" data-gp-id=\"12\">る</span><span class=\"gp-popout\" data-gp-id=\"16\">の</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span><span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"46\">でいい</span><span class=\"gp-popout\" data-gp-id=\"45\">から</span>、今（いま）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>上司（じょうし）<span class=\"gp-popout\" data-gp-id=\"32\">に</span>電話（でんわ）<span class=\"gp-popout\" data-gp-id=\"22\">し</span><span class=\"gp-popout\" data-gp-id=\"777\">て</span>。",
+        "answer": "あと",
+        "alternate_grammar": [],
+        "kanji_answer": "後（あと）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/コピーを取るのは後でいいから、今は上司に電話して。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Since it's fine to make the copies <strong>later</strong>, please call the boss right now. (With the time after calling the boss)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 116,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "177",
+      "type": "study_question",
+      "attributes": {
+        "id": 177,
+        "content": "勉強（べんきょう）した<span class='study-area-input'>____</span>、遊（あそ）<span class='gp-popout' data-gp-id='416'>んで</span>も<span class='gp-popout' data-gp-id='7'>いい</span><span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "あとで",
+        "alternate_grammar": [
+          "あと",
+          "あとで"
+        ],
+        "kanji_answer": "あとで",
+        "kanji_alt_grammar": [
+          "あと",
+          "あとで"
+        ],
+        "nuance": "ある行動（こうどう）が他（た）の行動（こうどう）の<strong>次（つぎ）に</strong>起（お）こることを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/116/male_audio/230224_1304.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/勉強したあとで、遊んでもいいよ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うえで": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It is ok to play <strong>after</strong> you study.",
+        "nuance_translation": "A phrase that simply highlights that one action will take place <strong>after</strong> another.",
+        "extra_info": "",
+        "reviewable_id": 116,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2643",
+      "type": "study_question",
+      "attributes": {
+        "id": 2643,
+        "content": "<span class='study-area-input'>____</span>話（はなし）<span class='gp-popout' data-gp-id='13'>がある</span>。",
+        "answer": "あとで",
+        "alternate_grammar": [],
+        "kanji_answer": "あとで",
+        "kanji_alt_grammar": [],
+        "nuance": "ある行動（こうどう）が他（た）の行動（こうどう）の<strong>次（つぎ）に</strong>起（お）こることを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Imprecise time frame",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/116/male_audio/230224_1305_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/あとで話がある。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うえで": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "We will talk <strong>later</strong>.",
+        "nuance_translation": "A phrase that simply highlights that one action will take place <strong>after</strong> another.",
+        "extra_info": "",
+        "reviewable_id": 116,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "178",
+      "type": "study_question",
+      "attributes": {
+        "id": 178,
+        "content": "食事（しょくじ）<span class='study-area-input'>____</span>、お皿（さら）<span class='gp-popout' data-gp-id='21'>を</span>洗（あら）わ<span class='gp-popout' data-gp-id='86'>なくてはいけない</span>。",
+        "answer": "のあとで",
+        "alternate_grammar": [
+          "のあと",
+          "のあとで"
+        ],
+        "kanji_answer": "のあとで",
+        "kanji_alt_grammar": [
+          "のあと",
+          "のあとで"
+        ],
+        "nuance": "ある行動（こうどう）が他（た）の行動（こうどう）の<strong>次（つぎ）に</strong>起（お）こることを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/116/male_audio/230224_1304_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/食事のあとで、お皿を洗わなくてはいけない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うえで": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のうえで": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "あとで": {
+            "en": "A の is required when this grammar point follows a noun.",
+            "es": "",
+            "fr": ""
+          },
+          "あと": {
+            "en": "You need a の between あと and a noun.",
+            "es": ""
+          },
+          "から": {
+            "en": "We are looking for a grammar point with the meaning of 'later'.",
+            "es": "",
+            "fr": ""
+          },
+          "まで": {
+            "en": "We are looking for a grammar point with the meaning of 'later'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I have to wash dishes <strong>after</strong> a meal.",
+        "nuance_translation": "A phrase that simply highlights that one action will take place <strong>after</strong> another.",
+        "extra_info": "",
+        "reviewable_id": 116,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2645",
+      "type": "study_question",
+      "attributes": {
+        "id": 2645,
+        "content": "<span class='study-area-input'>____</span>返（かえ）<span class='gp-popout' data-gp-id='26'>す</span><span class='gp-popout' data-gp-id='45'>から</span>、１００（ひゃく）円（えん）貸（か）し<span class='gp-popout' data-gp-id='60'>てください</span>。",
+        "answer": "あとで",
+        "alternate_grammar": [],
+        "kanji_answer": "あとで",
+        "kanji_alt_grammar": [],
+        "nuance": "ある行動（こうどう）が他（た）の行動（こうどう）の<strong>次（つぎ）に</strong>起（お）こることを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Imprecise time frame",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/116/male_audio/230224_1305_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/あとで返すから、１００円貸してください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うえで": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Since I will pay you back <strong>later</strong>, please lend me 100 yen.",
+        "nuance_translation": "A phrase that simply highlights that one action will take place <strong>after</strong> another.",
+        "extra_info": "",
+        "reviewable_id": 116,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2649",
+      "type": "study_question",
+      "attributes": {
+        "id": 2649,
+        "content": "野菜（やさい）<span class='gp-popout' data-gp-id='21'>を</span>切（き）<span class='gp-popout' data-gp-id='26'>る</span><span class='gp-popout' data-gp-id='16'>のは</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='7'>いい</span><span class='gp-popout' data-gp-id='45'>から</span>、今（いま）お湯（ゆ）沸（わ）かして。",
+        "answer": "あとで",
+        "alternate_grammar": [],
+        "kanji_answer": "あとで",
+        "kanji_alt_grammar": [],
+        "nuance": "ある行動（こうどう）が他（た）の行動（こうどう）の<strong>次（つぎ）に</strong>起（お）こることを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Imprecise time frame",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/116/male_audio/230224_1307.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/野菜を切るのはあとでいいから、今お湯沸かして。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うえで": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "You can cut the vegetables <strong>later</strong>. Right now, boil some water.",
+        "nuance_translation": "A phrase that simply highlights that one action will take place <strong>after</strong> another.",
+        "extra_info": "",
+        "reviewable_id": 116,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2644",
+      "type": "study_question",
+      "attributes": {
+        "id": 2644,
+        "content": "先（さき）にご飯（はん）<span class='gp-popout' data-gp-id='21'>を</span>食（た）べて、<span class='study-area-input'>____</span>映画館（えいがかん）で会（あ）い<span class='gp-popout' data-gp-id='70'>ましょう</span>。",
+        "answer": "あとで",
+        "alternate_grammar": [],
+        "kanji_answer": "あとで",
+        "kanji_alt_grammar": [],
+        "nuance": "ある行動（こうどう）が他（た）の行動（こうどう）の<strong>次（つぎ）に</strong>起（お）こることを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Imprecise time frame",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/116/male_audio/230224_1305_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/先にご飯を食べて、あとで映画館で会いましょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うえで": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "First, I'm going to eat. <strong>Later</strong> let's meet at the movie theater.",
+        "nuance_translation": "A phrase that simply highlights that one action will take place <strong>after</strong> another.",
+        "extra_info": "",
+        "reviewable_id": 116,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "179",
+      "type": "study_question",
+      "attributes": {
+        "id": 179,
+        "content": "<span class='gp-popout' data-gp-id='364'>また</span><span class='study-area-input'>____</span>、会（あ）い<span class='gp-popout' data-gp-id='70'>ましょう</span>。",
+        "answer": "あとで",
+        "alternate_grammar": [],
+        "kanji_answer": "あとで",
+        "kanji_alt_grammar": [],
+        "nuance": "ある行動（こうどう）が他（た）の行動（こうどう）の<strong>次（つぎ）に</strong>起（お）こることを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Casual",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/116/male_audio/230224_1304_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/またあとで、会いましょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うえで": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Let's meet again <strong>later</strong>.",
+        "nuance_translation": "A phrase that simply highlights that one action will take place <strong>after</strong> another.",
+        "extra_info": "",
+        "reviewable_id": 116,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2646",
+      "type": "study_question",
+      "attributes": {
+        "id": 2646,
+        "content": "さっき駅（えき）で見（み）た人（ひと）<span class='gp-popout' data-gp-id='10'>が</span><span class='vocab-popout' data-vocab-id='849'>私（わたし）</span><span class='gp-popout' data-gp-id='6'>の</span><span class='vocab-popout' data-vocab-id='416'>友達（ともだち）</span>だったと、<span class='study-area-input'>____</span>分（わ）か<span class='gp-popout' data-gp-id='41'>った</span>。",
+        "answer": "あとで",
+        "alternate_grammar": [],
+        "kanji_answer": "あとで",
+        "kanji_alt_grammar": [],
+        "nuance": "ある行動（こうどう）が他（た）の行動（こうどう）の<strong>次（つぎ）に</strong>起（お）こることを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Imprecise time frame",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/116/male_audio/230224_1305_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/さっき駅で見た人が私の友達だったと、あとで分かった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うえで": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I found out <strong>later</strong> that the person I saw at the station earlier was my friend.",
+        "nuance_translation": "A phrase that simply highlights that one action will take place <strong>after</strong> another.",
+        "extra_info": "",
+        "reviewable_id": 116,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2648",
+      "type": "study_question",
+      "attributes": {
+        "id": 2648,
+        "content": "<span class='gp-popout' data-gp-id='364'>また</span>グラスが割（わ）れ<span class='gp-popout' data-gp-id='27'>ている</span>！<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='47'>あの</span>子（こ）に話（はな）さなきゃ。",
+        "answer": "あとで",
+        "alternate_grammar": [],
+        "kanji_answer": "あとで",
+        "kanji_alt_grammar": [],
+        "nuance": "ある行動（こうどう）が他（た）の行動（こうどう）の<strong>次（つぎ）に</strong>起（お）こることを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Imprecise time frame",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/116/male_audio/230224_1306_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/またグラスが割れている！あとであの子に話さなきゃ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うえで": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Another glass is broken! <strong>Later</strong> I will need to talk to that kid.",
+        "nuance_translation": "A phrase that simply highlights that one action will take place <strong>after</strong> another.",
+        "extra_info": "",
+        "reviewable_id": 116,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2642",
+      "type": "study_question",
+      "attributes": {
+        "id": 2642,
+        "content": "<span class='study-area-input'>____</span>買（か）い物（もの）に行（い）きます。",
+        "answer": "あとで",
+        "alternate_grammar": [],
+        "kanji_answer": "あとで",
+        "kanji_alt_grammar": [],
+        "nuance": "ある行動（こうどう）が他（た）の行動（こうどう）の<strong>次（つぎ）に</strong>起（お）こることを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Imprecise time frame",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/116/male_audio/230224_1305_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/あとで買い物に行きます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それから": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "うえで": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "あと": {
+            "en": "Let's try adding something else to the end.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "また": {
+            "en": "This means 'again'. We are looking for a grammar point with the meaning of 'later'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I will go shopping <strong>later</strong>.",
+        "nuance_translation": "A phrase that simply highlights that one action will take place <strong>after</strong> another.",
+        "extra_info": "",
+        "reviewable_id": 116,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "153",
+      "type": "writeup",
+      "attributes": {
+        "id": 153,
+        "body_ja": "",
+        "body": "<p>In Japanese, <span data-gp-id='116'>あとで</span> is a combination of the noun <span data-gp-id='679'>後（あと）</span> (behind), and the particle <span data-gp-id='36'>で</span> (with). When these words are linked, they form an adverbial phrase which is used to express 'after', or 'later'. As with <span data-gp-id='36'>で</span>'s standard meaning of 'with', <span data-gp-id='116'>あとで</span> is simply highlighting that something will happen, 'with' the 'after/behind' part of something.</p>\r\n\r\n<p>To use <span data-gp-id='116'>あとで</span>, attach it to the end of any past-tense verb, noun followed by <span data-gp-id='16'>の</span>, or verb followed by <span data-gp-id='16'>のは</span> (nominalization).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180265'>\r\n<li data-study-question='180266'>\r\n<li data-study-question='180267'>\r\n</ul>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>The reason that <span data-gp-id='679'>後（あと）</span> is translated as both 'after', and 'behind', is because sequences of events in Japanese behave similarly to a train. When the head of the train (one action) passes a specific point, there are still potentially many carriages (other actions) coming 'after', or 'behind' it.</section><span data-gp-id='116'>後（あと）で</span> may also be used to alter the meaning of an entire phrase, by appearing at the front. This nuance is just that (A) will happen (at some point) after now.</p>\r\n\r\n<ul class='writeup-examples--holder'><li data-study-question='180268'></ul>"
+      }
+    },
+    {
+      "id": "129",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 129,
+        "source": "Marugoto Elementary 1 (A2) Rikai",
+        "location": "Page 82",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "863",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 863,
+        "source": "みんなの日本語 II",
+        "location": "Page 60 [CH 34]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1030",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1030,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 78",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1552",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1552,
+        "source": "[AIAIJ] An Integrated Approach to Intermediate Japanese",
+        "location": "Page 114",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "235",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 235,
+        "site": "Linguanaut",
+        "description": "た+あとで",
+        "link": "https://www.linguanaut.com/learn-japanese/grammar.php",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "234",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 234,
+        "site": "TalkInJapan",
+        "description": "V [た-form] あとで",
+        "link": "https://www.youtube.com/watch?v=kgPNyekbisI",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "233",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 233,
+        "site": "JStackExchange",
+        "description": "Using (V:た-Form)あとで〜 expression",
+        "link": "https://japanese.stackexchange.com/questions/9438/expressing-the-after-verb-ing-using-%e5%be%8c%e3%81%a7-%e3%81%a6%e3%81%8b%e3%82%89-%e5%be%8c%e3%81%ab-%e5%be%8c%e3%81%8b%e3%82%89/9446#9446",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1954",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1954,
+        "site": "Tae Kim",
+        "description": "Before and after",
+        "link": "https://guidetojapanese.org/learn/complete/verb_sequences",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1181",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1181,
+        "site": "Bunpro",
+        "description": "あとで vs ご vs のち",
+        "link": "https://community.bunpro.jp/t/in-x-time-grammar/292/5",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "819",
+      "type": "related_content",
+      "attributes": {
+        "id": 819,
+        "relationship_type": "related",
+        "body": "Both 上で and あとで express that one action follows another, but with different nuances. あとで simply shows sequence, like 'after doing (A)'. 上で implies the first action is a necessary step for the second, similar to 'upon doing (A)', and is more formal, often used in writing or business contexts.",
+        "first_relatable": {
+          "id": 198,
+          "slug": "上で",
+          "title": "上で",
+          "meaning": "After, Upon",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 116,
+          "slug": "あとで",
+          "title": "あとで",
+          "meaning": "After, Later",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "9",
+      "type": "related_content",
+      "attributes": {
+        "id": 9,
+        "relationship_type": "related",
+        "body": "Both あとで and たら can show that one action follows another, but their usage and nuance differ. あとで simply shows sequence, like 'after doing (A)'. たら adds a conditional nuance and can mean 'when' (temporal) or 'if' (hypothetical). Because of this, they are rarely interchangeable.",
+        "first_relatable": {
+          "id": 116,
+          "slug": "あとで",
+          "title": "あとで",
+          "meaning": "After, Later",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 102,
+          "slug": "たら",
+          "title": "たら",
+          "meaning": "When, From when, Just when, If",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1019",
+      "type": "related_content",
+      "attributes": {
+        "id": 1019,
+        "relationship_type": "related",
+        "body": "前者は and 後者は, like あとで, relate to sequence, but in different ways. あとで (also written in kanji as 後で) refers to the order of actions, like 'after doing (A)'. 前者 and 後者 mean 'the former' and 'the latter', pointing back to the previously mentioned items.",
+        "first_relatable": {
+          "id": 468,
+          "slug": "前者は-後者は",
+          "title": "前者は・後者は",
+          "meaning": "The former ~ the latter, The first ~ the second",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 116,
+          "slug": "あとで",
+          "title": "あとで",
+          "meaning": "After, Later",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "8",
+      "type": "related_content",
+      "attributes": {
+        "id": 8,
+        "relationship_type": "related",
+        "body": "てから and あとで both convey a sequence of events, but their nuances differ. てから uses the Verb + て form to show that one event follows another. In contrast, あとで follows the past tense (た form) and simply indicates that the second event occurred after the first, without implying any connection between the two.",
+        "first_relatable": {
+          "id": 116,
+          "slug": "あとで",
+          "title": "あとで",
+          "meaning": "After, Later",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 64,
+          "slug": "てから",
+          "title": "てから",
+          "meaning": "Once...is done, Once...happens, After doing",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "10",
+      "type": "related_content",
+      "attributes": {
+        "id": 10,
+        "relationship_type": "antonym",
+        "body": "あとで and まえに are both used to describe the timing of actions, but with opposite meanings. まえに usually follows a plain (non-past) verb and means 'before doing A' (e.g., 食べる前に = 'before eating'). In contrast, あとで typically follows the past tense form of a verb and means 'after doing B' (e.g., 食べたあとで = 'after eating').",
+        "first_relatable": {
+          "id": 116,
+          "slug": "あとで",
+          "title": "あとで",
+          "meaning": "After, Later",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 53,
+          "slug": "まえに",
+          "title": "まえに",
+          "meaning": "Before, In front of",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

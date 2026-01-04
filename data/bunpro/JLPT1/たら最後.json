@@ -1,0 +1,822 @@
+{
+  "data": {
+    "id": "804",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 804,
+      "level": "JLPT1",
+      "lesson_id": 44,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "たら最後",
+      "nuance": "<strong>一度（いちど）</strong>(A)が<strong>起（お）こったら</strong>(B)が起（お）こるということを示（しめ）す文法（ぶんぽう）。(A)が終点（しゅうてん）であるため、新（あたら）しい(B)は変（か）わらない。ネガティブなことで使（つか）われることが多（おお）い。",
+      "grammar_order": 793,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 805,
+        "title": "いかなる",
+        "slug": "いかなる"
+      },
+      "previous_grammar_point": {
+        "id": 803,
+        "title": "であれ〜であれ",
+        "slug": "であれ-であれ"
+      },
+      "lesson_count": "1/18",
+      "title": "たら最後",
+      "furigana": "たら最後（さいご）",
+      "meaning": "Once, Now that, As soon as",
+      "nuance_translation": "A grammar point indicating that once (A) happened, (B). With (A) <strong>being the end of it</strong>, the new (B) cannot change. Often negative.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<span class='gp-popout' data-gp-id='874'>Verb［た］</span>+ <span class='gp-popout' data-gp-id='44'>が</span> + <strong>最後（さいご）</strong><br><span class='gp-popout' data-gp-id='102'>Verb［たら］</span>+ <strong>最後（さいご）</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/25944",
+      "metadata": "たら最後, たらさいご, tarasaigo, expression, once"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "10746",
+            "type": "study_question"
+          },
+          {
+            "id": "10748",
+            "type": "study_question"
+          },
+          {
+            "id": "182704",
+            "type": "study_question"
+          },
+          {
+            "id": "182705",
+            "type": "study_question"
+          },
+          {
+            "id": "182706",
+            "type": "study_question"
+          },
+          {
+            "id": "182707",
+            "type": "study_question"
+          },
+          {
+            "id": "184550",
+            "type": "study_question"
+          },
+          {
+            "id": "184549",
+            "type": "study_question"
+          },
+          {
+            "id": "184551",
+            "type": "study_question"
+          },
+          {
+            "id": "9288",
+            "type": "study_question"
+          },
+          {
+            "id": "9291",
+            "type": "study_question"
+          },
+          {
+            "id": "9290",
+            "type": "study_question"
+          },
+          {
+            "id": "9292",
+            "type": "study_question"
+          },
+          {
+            "id": "10743",
+            "type": "study_question"
+          },
+          {
+            "id": "10744",
+            "type": "study_question"
+          },
+          {
+            "id": "10745",
+            "type": "study_question"
+          },
+          {
+            "id": "9289",
+            "type": "study_question"
+          },
+          {
+            "id": "9287",
+            "type": "study_question"
+          },
+          {
+            "id": "10747",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "869",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1734",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1735",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1736",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1535",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2241",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "10746",
+      "type": "study_question",
+      "attributes": {
+        "id": 10746,
+        "content": "看守（かんしゅ）に脱走（だっそう）する計画（けいかく）がバレてしまったが<span class='study-area-input'>____</span>、一生（いっしょう）を刑務所（けいむしょ）で暮（く）らす事（こと）になります。",
+        "answer": "さいご",
+        "alternate_grammar": [],
+        "kanji_answer": "最後（さいご）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>一度（いちど）</strong>(A)が<strong>起（お）こったら</strong>(B)が起（お）こるということを示（しめ）す文法（ぶんぽう）。(A)が終点（しゅうてん）であるため、新（あたら）しい(B)は変（か）わらない。ネガティブなことで使（つか）われることが多（おお）い。",
+        "tense": "Emphatic, Emphasis on order",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/看守に脱走する計画がバレてしまったが最後、一生を刑務所で暮らす事になります。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Once</strong> our plan of fleeing from the prison guard is revealed, we'll end up spending our whole lives in jail.",
+        "nuance_translation": "A grammar point indicating that once (A) happened, (B). With (A) <strong>being the end of it</strong>, the new (B) cannot change. Often negative.",
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10748",
+      "type": "study_question",
+      "attributes": {
+        "id": 10748,
+        "content": "営業（えいぎょう）マンとして有名（ゆうめい）な武田（たけだ）さんの話（はなし）を聞（き）き始（はじ）め<span class='chui'>たら</span><span class='study-area-input'>____</span>、絶対（ぜったい）にその商品（しょうひん）を買（か）う羽目（はめ）になってしまいます。",
+        "answer": "さいご",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "最後（さいご）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>一度（いちど）</strong>(A)が<strong>起（お）こったら</strong>(B)が起（お）こるということを示（しめ）す文法（ぶんぽう）。(A)が終点（しゅうてん）であるため、新（あたら）しい(B)は変（か）わらない。ネガティブなことで使（つか）われることが多（おお）い。",
+        "tense": "Emphatic, Emphasis on order",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/営業マンとして有名な武田さんの話を聞き始めたら最後、絶対にその商品を買う羽目になってしまいます。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Now that</strong> I have heard Takeda-san's pitch, who is famous as a salesman, I'm in the bind of having to buy his products.",
+        "nuance_translation": "A grammar point indicating that once (A) happened, (B). With (A) <strong>being the end of it</strong>, the new (B) cannot change. Often negative.",
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182704",
+      "type": "study_question",
+      "attributes": {
+        "id": 182704,
+        "content": "\r\n恋愛（れんあい）だけではなく、友達（ともだち）の間（あいだ）でも信頼（しんらい）を失（うしな）っ<span class='study-area-input'>____</span>、取（と）り戻（もど）すにはかなりの時間（じかん）がかかる。",
+        "answer": "たがさいご",
+        "alternate_grammar": [],
+        "kanji_answer": "たが最後（さいご）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/恋愛だけではなく、友達の間でも信頼を失ったが最後、取り戻すにはかなりの時間がかかる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>Once</strong> you lose trust, not only in love, but also among friends, it takes a long time to regain it.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182705",
+      "type": "study_question",
+      "attributes": {
+        "id": 182705,
+        "content": "\r\n\r\n\r\nその会社（かいしゃ）と契約（けいやく）をし<span class='study-area-input'>____</span>、解約（かいやく）するのがものすごくめんどくさい。",
+        "answer": "たがさいご",
+        "alternate_grammar": [],
+        "kanji_answer": "たが最後（さいご）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/その会社と契約をしたが最後、解約するのがものすごくめんどくさい。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>Once</strong> you have signed a contract with that company, it is a huge hassle to cancel.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182706",
+      "type": "study_question",
+      "attributes": {
+        "id": 182706,
+        "content": "\r\n\r\n\r\nあの蛇（へび）に噛（か）まれ<span class='study-area-input'>____</span>、体（からだ）が麻痺（まひ）するらしい。",
+        "answer": "たらさいご",
+        "alternate_grammar": [],
+        "kanji_answer": "たら最後（さいご）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/あの蛇に噛まれたら最後、体が麻痺するらしい。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI heard that <strong>once</strong> you get bitten by that snake, your body becomes paralyzed.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182707",
+      "type": "study_question",
+      "attributes": {
+        "id": 182707,
+        "content": "\r\n\r\n\r\n田中（たなか）さんが話（はな）し始（はじ）め<span class='study-area-input'>____</span>、口（くち）が疲（つか）れるまでずっと話（はな）し続（つづ）ける。",
+        "answer": "たらさいご",
+        "alternate_grammar": [],
+        "kanji_answer": "たら最後（さいご）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/田中さんが話し始めたら最後、口が疲れるまでずっと話し続ける。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>Once</strong> Tanaka-san starts talking, he won't stop until his mouth gets tired.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184550",
+      "type": "study_question",
+      "attributes": {
+        "id": 184550,
+        "content": "先生（せんせい）が注意（ちゅうい）しなくなっ<span data-gp-id='804'>たら最後（さいご）</span>だ。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/先生が注意しなくなったら最後だ。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It's the end <strong>once</strong> your teacher stops giving you advice. (Because it means that they have given up on you)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184549",
+      "type": "study_question",
+      "attributes": {
+        "id": 184549,
+        "content": "あの人（ひと）に政治（せいじ）についての意見（いけん）を求（もと）め<span data-gp-id='804'>たら最後（さいご）</span>だ。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/あの人に政治についての意見を求めたら最後だ。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It's the end <strong>once</strong> you ask him for his political opinions. (He won't stop talking after that)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184551",
+      "type": "study_question",
+      "attributes": {
+        "id": 184551,
+        "content": "先生（せんせい）が注意（ちゅうい）しなくなっ<span data-gp-id='804'>たら最後（さいご）</span>だ。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/先生が注意しなくなったら最後だ。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 14,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It's the end <strong>once</strong> your teacher stops giving you advice. (Because it means that they have given up on you)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9288",
+      "type": "study_question",
+      "attributes": {
+        "id": 9288,
+        "content": "<span class='name-highlight'>会社（かいしゃ）、先輩（せんぱい）は後輩（こうはい）に</span>：「イラ次長（じちょう）に目（め）を付（つ）けられ<span class='chui'>たら</span><span class='study-area-input'>____</span>、この会社（かいしゃ）では生きていけなくなるんだよ。もちろん比喩（ひゆ）ではない。」",
+        "answer": "さいご",
+        "alternate_grammar": [],
+        "kanji_answer": "最後（さいご）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>一度（いちど）</strong>(A)が<strong>起（お）こったら</strong>(B)が起（お）こるということを示（しめ）す文法（ぶんぽう）。(A)が終点（しゅうてん）であるため、新（あたら）しい(B)は変（か）わらない。ネガティブなことで使（つか）われることが多（おお）い。",
+        "tense": "Emphatic, Emphasis on order",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/会社、先輩は後輩に：「イラ次長に目を付けられたら最後、この会社では生きていけなくなるんだよ。もちろん比喩ではない。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>At a company, senpai to kouhai</span>: '<strong>Once</strong> vice-director Ira has an eye on you, you won't be able to continue at this company. I'm not joking, of course. '",
+        "nuance_translation": "A grammar point indicating that once (A) happened, (B). With (A) <strong>being the end of it</strong>, the new (B) cannot change. Often negative.",
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9291",
+      "type": "study_question",
+      "attributes": {
+        "id": 9291,
+        "content": "口（くち）を開（ひら）い<span class='chui'>たら</span><span class='study-area-input'>____</span>、自分（じぶん）の意志（いし）では止（と）められなくて何時間（なんじかん）も喋（しゃべ）り続（つづ）けてしまう。",
+        "answer": "さいご",
+        "alternate_grammar": [],
+        "kanji_answer": "最後（さいご）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>一度（いちど）</strong>(A)が<strong>起（お）こったら</strong>(B)が起（お）こるということを示（しめ）す文法（ぶんぽう）。(A)が終点（しゅうてん）であるため、新（あたら）しい(B)は変（か）わらない。ネガティブなことで使（つか）われることが多（おお）い。",
+        "tense": "Emphatic, Emphasis on order",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/口を開いたら最後、自分の意志では止められなくて何時間も喋り続けてしまう。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Once</strong> she opens her mouth, she will keep on talking for hours with no intention of stopping.",
+        "nuance_translation": "A grammar point indicating that once (A) happened, (B). With (A) <strong>being the end of it</strong>, the new (B) cannot change. Often negative.",
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9290",
+      "type": "study_question",
+      "attributes": {
+        "id": 9290,
+        "content": "<span class='name-highlight'>小説（しょうせつ）のカスタマーレビュー</span>：「綺麗（きれい）な話（はなし）です。読（よ）みはじめ<span class='chui'>たら</span><span class='study-area-input'>____</span>、涙（なみだ）がとまりません。」",
+        "answer": "さいご",
+        "alternate_grammar": [],
+        "kanji_answer": "最後（さいご）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>一度（いちど）</strong>(A)が<strong>起（お）こったら</strong>(B)が起（お）こるということを示（しめ）す文法（ぶんぽう）。(A)が終点（しゅうてん）であるため、新（あたら）しい(B)は変（か）わらない。ネガティブなことで使（つか）われることが多（おお）い。",
+        "tense": "Emphatic, Emphasis on order",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/小説のカスタマーレビュー：「綺麗な話です。読みはじめたら最後、涙がとまりません。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Customer review of a book</span>: 'What a beautiful story. <strong>Once</strong> I started reading, I couldn't stop crying.'",
+        "nuance_translation": "A grammar point indicating that once (A) happened, (B). With (A) <strong>being the end of it</strong>, the new (B) cannot change. Often negative.",
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9292",
+      "type": "study_question",
+      "attributes": {
+        "id": 9292,
+        "content": "<span class='name-highlight'>友達（ともだち）との話（はなし）</span>：「うちの犬（いぬ）ったらいったん食（た）べ物（もの）を見（み）つけ<span class='chui'>たら</span><span class='study-area-input'>____</span>、いっぺんに食（た）べてしまう。」",
+        "answer": "さいご",
+        "alternate_grammar": [],
+        "kanji_answer": "最後（さいご）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>一度（いちど）</strong>(A)が<strong>起（お）こったら</strong>(B)が起（お）こるということを示（しめ）す文法（ぶんぽう）。(A)が終点（しゅうてん）であるため、新（あたら）しい(B)は変（か）わらない。ネガティブなことで使（つか）われることが多（おお）い。",
+        "tense": "Emphatic, Emphasis on order",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/友達との話：「うちの犬ったらいったん食べ物を見つけたら最後、いっぺんに食べてしまう。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Chat between friends</span>: '<strong>Once</strong> our dog spots food, it eats everything at once.'",
+        "nuance_translation": "A grammar point indicating that once (A) happened, (B). With (A) <strong>being the end of it</strong>, the new (B) cannot change. Often negative.",
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10743",
+      "type": "study_question",
+      "attributes": {
+        "id": 10743,
+        "content": "その民族（みんぞく）が住（す）む島（しま）には行（い）っ<span class='chui'>たら</span><span class='study-area-input'>____</span>、生（い）きて帰（かえ）れる可能性（かのうせい）は無（な）いだろう。",
+        "answer": "さいご",
+        "alternate_grammar": [
+          "さいご"
+        ],
+        "kanji_answer": "最後（さいご）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>一度（いちど）</strong>(A)が<strong>起（お）こったら</strong>(B)が起（お）こるということを示（しめ）す文法（ぶんぽう）。(A)が終点（しゅうてん）であるため、新（あたら）しい(B)は変（か）わらない。ネガティブなことで使（つか）われることが多（おお）い。",
+        "tense": "Emphatic, Emphasis on order",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/その民族が住む島には行ったら最後、生きて帰れる可能性は無いだろう。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Once</strong> one goes to the island that that tribe lives on, there is no possibility of returning alive, right?",
+        "nuance_translation": "A grammar point indicating that once (A) happened, (B). With (A) <strong>being the end of it</strong>, the new (B) cannot change. Often negative.",
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10744",
+      "type": "study_question",
+      "attributes": {
+        "id": 10744,
+        "content": "恋人（こいびと）関係（かんけい）や友人（ゆうじん）関係（かんけい）において信頼（しんらい）は失（うしな）っ<strong>たが</strong><span class='study-area-input'>____</span>、元（もと）の関係（かんけい）に戻（もど）る事（こと）は出来（でき）ません。",
+        "answer": "さいご",
+        "alternate_grammar": [
+          "さいご"
+        ],
+        "kanji_answer": "最後（さいご）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>一度（いちど）</strong>(A)が<strong>起（お）こったら</strong>(B)が起（お）こるということを示（しめ）す文法（ぶんぽう）。(A)が終点（しゅうてん）であるため、新（あたら）しい(B)は変（か）わらない。ネガティブなことで使（つか）われることが多（おお）い。",
+        "tense": "Emphatic, Emphasis on order",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/恋人関係や友人関係において信頼は失ったが最後、元の関係に戻る事は出来ません。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Once</strong> one loses trust in a friendship or romantic relationship, you cannot return it to the way things were before.",
+        "nuance_translation": "A grammar point indicating that once (A) happened, (B). With (A) <strong>being the end of it</strong>, the new (B) cannot change. Often negative.",
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10745",
+      "type": "study_question",
+      "attributes": {
+        "id": 10745,
+        "content": "この映画（えいが）の主題歌（しゅだいか）は聞（き）い<span class='chui'>たら</span><span class='study-area-input'>____</span>、死（し）ぬまでずっと頭（あたま）のどこかに残（のこ）り続（つづ）けるよ。",
+        "answer": "さいご",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "最後（さいご）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>一度（いちど）</strong>(A)が<strong>起（お）こったら</strong>(B)が起（お）こるということを示（しめ）す文法（ぶんぽう）。(A)が終点（しゅうてん）であるため、新（あたら）しい(B)は変（か）わらない。ネガティブなことで使（つか）われることが多（おお）い。",
+        "tense": "Emphatic, Emphasis on order",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/この映画の主題歌は聞いたら最後、死ぬまでずっと頭のどこかに残り続けるよ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Once</strong> you hear this movie's theme song, it will remain in your head somewhere constantly until the day you die.",
+        "nuance_translation": "A grammar point indicating that once (A) happened, (B). With (A) <strong>being the end of it</strong>, the new (B) cannot change. Often negative.",
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9289",
+      "type": "study_question",
+      "attributes": {
+        "id": 9289,
+        "content": "<span class='name-highlight'>社長（しゃちょう）、社員（しゃいん）に</span>：「会社（かいしゃ）は信頼性（しんらいせい）を一度（いちど）失（うしな）った<span class='chui'>が</span><span class='study-area-input'>____</span>、絶対（ぜったい）に取（と）り戻（もど）すことができないので、クライアントとの対話（たいわ）には気（き）をつけてね。」",
+        "answer": "さいご",
+        "alternate_grammar": [],
+        "kanji_answer": "最後（さいご）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>一度（いちど）</strong>(A)が<strong>起（お）こったら</strong>(B)が起（お）こるということを示（しめ）す文法（ぶんぽう）。(A)が終点（しゅうてん）であるため、新（あたら）しい(B)は変（か）わらない。ネガティブなことで使（つか）われることが多（おお）い。",
+        "tense": "Emphatic, Emphasis on order",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/社長、社員に：「会社は信頼性を一度失ったが最後、絶対に取り戻すことができないので、クライアントとの対話には気をつけてね。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Company president to employees</span>: '<strong>Once</strong> the company loses its reputation, it cannot be regained, so be careful when communicating with clients.'",
+        "nuance_translation": "A grammar point indicating that once (A) happened, (B). With (A) <strong>being the end of it</strong>, the new (B) cannot change. Often negative.",
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9287",
+      "type": "study_question",
+      "attributes": {
+        "id": 9287,
+        "content": "私（わたし）の彼氏（かれし）はゲームをいったんやり始（はじ）め<span class='chui'>たら</span><span class='study-area-input'>____</span>、どうしても深夜（しんや）までやめられない。",
+        "answer": "さいご",
+        "alternate_grammar": [],
+        "kanji_answer": "最後（さいご）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>一度（いちど）</strong>(A)が<strong>起（お）こったら</strong>(B)が起（お）こるということを示（しめ）す文法（ぶんぽう）。(A)が終点（しゅうてん）であるため、新（あたら）しい(B)は変（か）わらない。ネガティブなことで使（つか）われることが多（おお）い。",
+        "tense": "Emphatic, Emphasis on order",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/私の彼氏はゲームをいったんやり始めたら最後、どうしても深夜までやめられない。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Once</strong> my boyfriend starts playing a game, he can't stop until late at night no matter what.",
+        "nuance_translation": "A grammar point indicating that once (A) happened, (B). With (A) <strong>being the end of it</strong>, the new (B) cannot change. Often negative.",
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10747",
+      "type": "study_question",
+      "attributes": {
+        "id": 10747,
+        "content": "ちょっと休憩（きゅうけい）しようと思（おも）いソファーに腰（こし）を掛（か）け<strong>たが</strong><span class='study-area-input'>____</span>、目（め）が覚（さ）めたら翌日（よくじつ）になっていた。",
+        "answer": "さいご",
+        "alternate_grammar": [],
+        "kanji_answer": "最後（さいご）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>一度（いちど）</strong>(A)が<strong>起（お）こったら</strong>(B)が起（お）こるということを示（しめ）す文法（ぶんぽう）。(A)が終点（しゅうてん）であるため、新（あたら）しい(B)は変（か）わらない。ネガティブなことで使（つか）われることが多（おお）い。",
+        "tense": "Emphatic, Emphasis on order",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ちょっと休憩しようと思いソファーに腰を掛けたが最後、目が覚めたら翌日になっていた。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Once</strong> I thought about having a quick break and planted myself down on the sofa, when I awoke it was the following day.",
+        "nuance_translation": "A grammar point indicating that once (A) happened, (B). With (A) <strong>being the end of it</strong>, the new (B) cannot change. Often negative.",
+        "extra_info": "",
+        "reviewable_id": 804,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "869",
+      "type": "writeup",
+      "attributes": {
+        "id": 869,
+        "body_ja": "<p>「<span data-gp-id='804'>たら最後（さいご）</span>」と「<span data-gp-id='804'>たが最後（さいご）</span>」は、どちらも「一度（いちど） (A) が起（お）こったら、必（かなら）ず (B) が起（お）こる」という意味（いみ）を表（あらわ）す表現（ひょうげん）です。(B) には悪（わる）い結果（けっか）が入（はい）ります。</p>\r\n\r\n<p>「たら」は仮定（かてい）を表（あらわ）す接続助詞（せつぞくじょし）で、「が」は逆接（ぎゃくせつ）の接続助詞（せつぞくじょし）です。そのため、「<span data-gp-id='804'>たら最後（さいご）</span>」は「もし (A) をしたら、最終的（さいしゅうてき）には (B) になる」という意味（いみ）になり、「<span data-gp-id='804'>たが最後（さいご）</span>」は「(A) だが、最終的（さいしゅうてき）には (B) になる」という意味（いみ）になります。このように、両者（りょうしゃ）の意味合（いみあ）いは厳密（げんみつ）には異（こと）なりますが、実際（じっさい）にはどちらも同（おな）じように使（つか）われています。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182704'>\r\n<li data-study-question='182705'>\r\n<li data-study-question='182706'>\r\n<li data-study-question='182707'>\r\n</ul>\r\n\r\n<p>これらの表現（ひょうげん）では、「最後（さいご）」の後（あと）に読点（とうてん）が付（つ）くことが多（おお）いため、「たら」や「が」とセットになっているように見（み）えるかもしれません。しかし、この表現（ひょうげん）が「最終的（さいしゅうてき）に (B) になる」という意味（いみ）を表（あらわ）すことからもわかるように、「最後（さいご）」はその後（あと）の (B) と論理的（ろんりてき）に繋（つな）がっています。</p>\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>文（ぶん）の前半（ぜんはん）を読（よ）めば悪（わる）い結果（けっか）になることが明（あき）らかにわかる場合（ばあい）、後半（こうはん）が省略（しょうりゃく）されることもあります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184549'>\r\n<li data-study-question='184551'></ul></section>",
+        "body": "<p><span data-gp-id='804'>たら最後（さいご）</span> and <span data-gp-id='804'>たが最後（さいご）</span> are grammar structures that both share the meaning of 'once (A), definitely (B)'. (B) will always be something negative that is thought to inevitably occur once the action of (A) happens. These expressions may be translated as 'once (A), (B)', 'now that (A), (B)', or 'as soon as (A), (B)'.</p>\r\n\r\n<p>Both たら and が are being used as <span data-term='接続助詞・せつぞくじょし'>conjunction particles</span>. たら carries its usual meaning of 'if' or 'when', while が has the meaning of 'however', or 'but'. This means that たが最後（さいご） means '(A), but it will end up as (B)', while たら最後（さいご） means 'when (A), it will end up as (B)'. Although this nuance is slightly different, they are used completely interchangeably.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182704'>\r\n<li data-study-question='182705'>\r\n<li data-study-question='182706'>\r\n<li data-study-question='182707'>\r\n</ul>\r\n\r\n<p>Because 最後（さいご） is primarily seen before the comma in these types of sentences, it can be easy to think that it is connected to the が or たら. However, it is actually more correctly connected logically to the (B) half of the sentence, and states that the 'final state' will end up being that way.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>Occasionally, the (B) phrase will be omitted from these sentences when the negative result is obvious.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184549'>\r\n<li data-study-question='184551'></ul></section>"
+      }
+    },
+    {
+      "id": "1734",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1734,
+        "source": "Try N1",
+        "location": "Page 53",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1735",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1735,
+        "source": "Sou Matome Bunpou N1",
+        "location": "Page 54",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1736",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1736,
+        "source": "Shin Kanzen Master N1 Bunpou",
+        "location": "Page 42",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2241",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2241,
+        "site": "JapaneseTest4You",
+        "description": "Further breakdown and examples",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n1-grammar-%E3%81%8C%E3%81%95%E3%81%84%E3%81%94-ga-saigo/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1535",
+      "type": "related_content",
+      "attributes": {
+        "id": 1535,
+        "relationship_type": "related",
+        "body": "Both mark a point after which something changes, but the meaning and outlook are very different. たら最後 expresses a strong, often negative inevitability, meaning “once (A) happens, that’s it,” and implies that things will go badly or cannot be undone, as in 一度言ったら最後、もう取り消せない (‘Once you say it, that’s it, you can’t take it back.’). By contrast, 以来 is a neutral, factual expression meaning “since,” used to state that a situation has continued from a certain point in the past without emotional judgment, as in 日本に来て以来、日本語を勉強している (‘I’ve been studying Japanese since I came to Japan.’).",
+        "first_relatable": {
+          "id": 804,
+          "slug": "たら最後",
+          "title": "たら最後",
+          "meaning": "Once, Now that, As soon as",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 556,
+          "slug": "以来",
+          "title": "以来",
+          "meaning": "Since, Henceforth",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

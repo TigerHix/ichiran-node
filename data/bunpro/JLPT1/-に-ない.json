@@ -1,0 +1,1050 @@
+{
+  "data": {
+    "id": "824",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 824,
+      "level": "JLPT1",
+      "lesson_id": 45,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "-に-ない",
+      "nuance": "(A)をしたくてもできないということを表（あらわ）す文法（ぶんぽう）。(A)<strong>よりであっても</strong>、(A)は<strong>できない</strong>。",
+      "grammar_order": 816,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 825,
+        "title": "なくして(は)",
+        "slug": "なくして-は"
+      },
+      "previous_grammar_point": {
+        "id": 823,
+        "title": "かれ〜かれ",
+        "slug": "かれ-かれ"
+      },
+      "lesson_count": "6/18",
+      "title": "〜に〜ない",
+      "furigana": "～に〜ない",
+      "meaning": "Cannot even...if wants, Would like to...but cannot, Wants to...but cannot",
+      "nuance_translation": "A structure implying that one cannot (A) even if they wanted to. <strong>Even toward</strong> (A), (A) <strong>cannot possibly</strong> be done.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<span class='gp-popout' data-gp-id='26'>Verb［る］</span>(A) + <strong>に</strong> + <span class='gp-popout' data-gp-id='132'>Verb［できる］</span><span class='gp-popout' data-gp-id='888'>［ない］</span>(A)",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/28100",
+      "metadata": "にない, ninai, expression"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "9417",
+            "type": "study_question"
+          },
+          {
+            "id": "9419",
+            "type": "study_question"
+          },
+          {
+            "id": "10884",
+            "type": "study_question"
+          },
+          {
+            "id": "10885",
+            "type": "study_question"
+          },
+          {
+            "id": "182794",
+            "type": "study_question"
+          },
+          {
+            "id": "182795",
+            "type": "study_question"
+          },
+          {
+            "id": "182796",
+            "type": "study_question"
+          },
+          {
+            "id": "182797",
+            "type": "study_question"
+          },
+          {
+            "id": "182798",
+            "type": "study_question"
+          },
+          {
+            "id": "184562",
+            "type": "study_question"
+          },
+          {
+            "id": "10886",
+            "type": "study_question"
+          },
+          {
+            "id": "184561",
+            "type": "study_question"
+          },
+          {
+            "id": "10881",
+            "type": "study_question"
+          },
+          {
+            "id": "9416",
+            "type": "study_question"
+          },
+          {
+            "id": "9418",
+            "type": "study_question"
+          },
+          {
+            "id": "10883",
+            "type": "study_question"
+          },
+          {
+            "id": "9414",
+            "type": "study_question"
+          },
+          {
+            "id": "9415",
+            "type": "study_question"
+          },
+          {
+            "id": "10882",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "891",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1773",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1774",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1775",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1776",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": []
+      },
+      "supplemental_links": {
+        "data": []
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "9417",
+      "type": "study_question",
+      "attributes": {
+        "id": 9417,
+        "content": "「彼女（かのじょ）が断（ことわ）れば殺（ころ）すと言（い）って突然（とつぜん）<span class='study-area-input'>____</span>状態（じょうたい）になった。」",
+        "answer": "ことわるにことわれない",
+        "alternate_grammar": [],
+        "kanji_answer": "断（ことわ）るに断（ことわ）れない",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をしたくてもできないということを表（あらわ）す文法（ぶんぽう）。(A)<strong>よりであっても</strong>、(A)は<strong>できない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「彼女が断れば殺すと言って突然断るに断れない状態になった。」.mp3",
+        "word_prompt": "断（ことわ）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことわるにもことわれない": {
+            "en": "Nice guess! However, にも is used in the Verb[volitional]にもVerb[potential[ない]] pattern instead.",
+            "es": ""
+          },
+          "ことわろうにもことわれない": {
+            "en": "Great guess! Can you use 断る with another, nearly identical pattern?",
+            "es": ""
+          },
+          "ことわりたくてもことわれない": {
+            "en": "Great! Can you use a pattern that less directly implies \"want?\"",
+            "es": ""
+          },
+          "ことわりたくともことわれない": {
+            "en": "Great! Can you use a pattern that less directly implies \"want?\"",
+            "es": ""
+          },
+          "ことわろうにことわれない": {
+            "en": "Great guess! However, you should use にも in the Verb[volitional]にもVerb[potential[ない]] pattern. Can you use 断る with another, nearly identical pattern?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'She said, 'If you refuse, I will kill you,' so the situation suddenly turned into one where <strong>I couldn't refuse even if I wanted</strong>.'",
+        "nuance_translation": "A structure implying that one cannot (A) even if they wanted to. <strong>Even toward</strong> (A), (A) <strong>cannot possibly</strong> be done.",
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9419",
+      "type": "study_question",
+      "attributes": {
+        "id": 9419,
+        "content": "<span class='name-highlight'>ドラマ、女主人公（おんなしゅじんこう）</span>：「なら、やめてよ。」<br><span class='name-highlight'>男性（だんせい）主人公（しゅじんこう）</span>：「<span class='study-area-input'>____</span>んだ。俺（おれ）は知（し）り過（す）ぎてるから、引（ひ）いたらやられる。」",
+        "answer": "ひくにひけない",
+        "alternate_grammar": [],
+        "kanji_answer": "引（ひ）くに引（ひ）けない",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をしたくてもできないということを表（あらわ）す文法（ぶんぽう）。(A)<strong>よりであっても</strong>、(A)は<strong>できない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ドラマ、女主人公：「なら、やめてよ。」男性主人公：「引くに引けないんだ。俺は知り過ぎてるから、引いたらやられる。」.mp3",
+        "word_prompt": "引（ひ）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ひくにもひけない": {
+            "en": "Nice guess! However, にも is used in the Verb[volitional]にもVerb[potential[ない]] pattern instead.",
+            "es": ""
+          },
+          "ひこうにもひけない": {
+            "en": "Great guess! Can you use 引く with another, nearly identical pattern?",
+            "es": ""
+          },
+          "ひきたくてもひけない": {
+            "en": "Great! Can you use a pattern that less directly implies \"want?\"",
+            "es": ""
+          },
+          "ひきたくともひけない": {
+            "en": "Great! Can you use a pattern that less directly implies \"want?\"",
+            "es": ""
+          },
+          "ひこうにひけない": {
+            "en": "Great guess! However, you should use にも in the Verb[volitional]にもVerb[potential[ない]] pattern. Can you use 泣く with another, nearly identical pattern?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>TV drama, the female protagonist</span>: 'If that's the case, then just stop!'<br><span class='name-highlight'>Male protagonist</span>: '<strong>Even if I wanted to, I can't pull out</strong>. I know too much. If I stop now, I'll be done for.'",
+        "nuance_translation": "A structure implying that one cannot (A) even if they wanted to. <strong>Even toward</strong> (A), (A) <strong>cannot possibly</strong> be done.",
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10884",
+      "type": "study_question",
+      "attributes": {
+        "id": 10884,
+        "content": "お互（たが）いに意地（いじ）を張（は）って<span class='study-area-input'>____</span>状態（じょうたい）なのは分（わ）かりますが、それでは時間（じかん）の無駄（むだ）ですよ？",
+        "answer": "ひくにひけない",
+        "alternate_grammar": [],
+        "kanji_answer": "引（ひ）くに引（ひ）けない",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をしたくてもできないということを表（あらわ）す文法（ぶんぽう）。(A)<strong>よりであっても</strong>、(A)は<strong>できない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/お互いに意地を張って引くに引けない状況なのは分かりますが、それでは時間の無駄ですよ？.mp3",
+        "word_prompt": "引（ひ）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ひくにもひけない": {
+            "en": "Close, but try to not use も in this pattern, since it is used in verb[よう]にもVerb[られない] pattern instead.",
+            "es": ""
+          },
+          "ひきたくてもひけない": {
+            "en": "Great, but let's try something that only implies 'want'.",
+            "es": ""
+          },
+          "ひこうにひけない": {
+            "en": "Close, but with this pattern you have to use にも. Let's use different expression.",
+            "es": ""
+          },
+          "ひこうにもひけない": {
+            "en": "Great, but 引く is used more often with other, but very similar pattern.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I understand that your stubbornness put you in a situation where <strong>even if you wanted to, you cannot fold</strong>, but doesn't that just make it a waste of time?",
+        "nuance_translation": "A structure implying that one cannot (A) even if they wanted to. <strong>Even toward</strong> (A), (A) <strong>cannot possibly</strong> be done.",
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10885",
+      "type": "study_question",
+      "attributes": {
+        "id": 10885,
+        "content": "本当（ほんとう）はモラハラの夫（おっと）と一刻（いっこく）も早（はや）く離婚（りこん）をしたいですが、実家（じっか）にも<span class='study-area-input'>____</span>のでどうにも出来（でき）ずにいます。",
+        "answer": "かえるにかえれない",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "帰（かえ）るに帰（かえ）れない",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をしたくてもできないということを表（あらわ）す文法（ぶんぽう）。(A)<strong>よりであっても</strong>、(A)は<strong>できない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/本当はモラハラの夫と一刻も早く離婚をしたいですが、実家にも帰るに帰れないのでどうにも出来ずにいます。.mp3",
+        "word_prompt": "帰（かえ）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かえるにもかえれない": {
+            "en": "Close, but try to not use も in this pattern, since it is used in verb[よう]にもVerb[られない] pattern instead.",
+            "es": ""
+          },
+          "かえりたくてもかえれない": {
+            "en": "Great, but let's try something that only implies 'want'.",
+            "es": ""
+          },
+          "かえろうにかえれない": {
+            "en": "Close, but with this pattern you have to use にも. Let's use different expression.",
+            "es": ""
+          },
+          "かえろうにもかえれない": {
+            "en": "Great, but let's use different pattern.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Honestly, I want to divorce from my psychologically abusive husband this very instant, but because I cannot return to my parent's house <strong>even if I wanted to</strong>, there's nothing that can be done.",
+        "nuance_translation": "A structure implying that one cannot (A) even if they wanted to. <strong>Even toward</strong> (A), (A) <strong>cannot possibly</strong> be done.",
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182794",
+      "type": "study_question",
+      "attributes": {
+        "id": 182794,
+        "content": "\r\n生徒（せいと）が言（い）った冗談（じょうだん）は面白（おもしろ）かったが内容（ないよう）が下品（げひん）だったので笑（わら）う<span class='study-area-input'>____</span>笑（わら）え<span class=\"gp-popout\" data-gp-id=\"824\">なかった</span>。",
+        "answer": "に",
+        "alternate_grammar": [],
+        "kanji_answer": "に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/生徒が言った冗談は面白かったが内容が下品だったので笑うに笑えなかった。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nThe joke the student told was funny, but it was inappropriate so I <strong>could not laugh even if I wanted to</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182795",
+      "type": "study_question",
+      "attributes": {
+        "id": 182795,
+        "content": "\r\n\r\n\r\n本当（ほんとう）は時間（じかん）はあんまりなかったが、先輩（せんぱい）に頼（たの）まれたから断（ことわ）る<span class='study-area-input'>____</span>断（ことわ）れ<span class=\"gp-popout\" data-gp-id=\"824\">なかった</span>。",
+        "answer": "に",
+        "alternate_grammar": [],
+        "kanji_answer": "に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/本当は時間はあんまりなかったが、先輩に頼まれたから断るに断れなかった。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI actually didn't really have too much time, but since my senpai asked me I <strong>couldn't refuse even if I wanted to</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182796",
+      "type": "study_question",
+      "attributes": {
+        "id": 182796,
+        "content": "\r\n\r\n\r\n息子（むすこ）には明日（あした）までに滑（すべ）り台（だい）を作（つく）ってあげると約束（やくそく）してしまったので、どんな忙（いそが）しくても引（ひ）く<span class='study-area-input'>____</span>引（ひ）け<span class=\"gp-popout\" data-gp-id=\"824\">ない</span>。",
+        "answer": "に",
+        "alternate_grammar": [],
+        "kanji_answer": "に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/息子には明日までに滑り台を作ってあげると約束してしまったので、どんな忙しくても引くに引けない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI promised my son that I would build him a slide by tomorrow, so I <strong>can't back out no matter how</strong> busy I am.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182797",
+      "type": "study_question",
+      "attributes": {
+        "id": 182797,
+        "content": "\r\n最近（さいきん）は色々（いろいろ）と悩（なや）み事（ごと）が多（おお）くて、集中（しゅうちゅう）する<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"824\">できない</span>。",
+        "answer": "に",
+        "alternate_grammar": [],
+        "kanji_answer": "に",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/最近は色々と悩み事が多くて、集中するにできない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nA lot has been on my mind recently that I <strong>haven't been able to concentrate even if I wanted to</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182798",
+      "type": "study_question",
+      "attributes": {
+        "id": 182798,
+        "content": "息子（むすこ）が一晩中（ひとばんじゅう）泣（な）いていて寝（ね）る<span class='study-area-input'>____</span>寝（ね）れ<span class=\"gp-popout\" data-gp-id=\"824\">ず</span>徹夜（てつや）をしてしまった。",
+        "answer": "に",
+        "alternate_grammar": [],
+        "kanji_answer": "に",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/息子が一晩中泣いていて寝るに寝れず徹夜をしてしまった。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "My son cried all night and because of that I <strong>couldn't sleep even if I wanted to</strong> and stayed up all night.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184562",
+      "type": "study_question",
+      "attributes": {
+        "id": 184562,
+        "content": "今（いま）の仕事（しごと）を辞（や）めようと思（おも）っているが、次（つぎ）のところが見（み）つからないから今（いま）の仕事（しごと）を辞（や）めよう<span data-gp-id='824'>にも</span>辞（や）められ<span data-gp-id='824'>ない</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/今の仕事を辞めようと思っているが、次のところが見つからないから今の仕事を辞めようにも辞められない。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I'm thinking of quitting my current job, but I can't find another one, so I <strong>couldn't quit my current job even if I wanted to</strong>.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10886",
+      "type": "study_question",
+      "attributes": {
+        "id": 10886,
+        "content": "周（まわ）りの人（ひと）は「寝（ね）られる時（とき）に寝（ね）なさい」と言（い）うが、ワンオペで育児（いくじ）をしていては常（つね）に<span class='study-area-input'>____</span>状況（じょうきょう）なのだ。",
+        "answer": "ねるにねられない",
+        "alternate_grammar": [],
+        "kanji_answer": "寝（ね）るに寝（ね）られない",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をしたくてもできないということを表（あらわ）す文法（ぶんぽう）。(A)<strong>よりであっても</strong>、(A)は<strong>できない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/周りの人は「寝られる時に寝なさい」と言うが、ワンオペで育児をしていては常に寝るに寝られない状況なのだ。.mp3",
+        "word_prompt": "寝（ね）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ねたくてもねられない": {
+            "en": "Great, but let's try something that only implies 'want'.",
+            "es": ""
+          },
+          "ねようにねられない": {
+            "en": "Close, but with this pattern you have to use にも. Let's use different expression.",
+            "es": ""
+          },
+          "ねようにもねられない": {
+            "en": "Great, but let's use different pattern.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The people around me say 'you should sleep when you're able to', but because I do all of the child rearing and housework, I am in the situation of never being able to sleep, <strong>even if I want to</strong>.",
+        "nuance_translation": "A structure implying that one cannot (A) even if they wanted to. <strong>Even toward</strong> (A), (A) <strong>cannot possibly</strong> be done.",
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184561",
+      "type": "study_question",
+      "attributes": {
+        "id": 184561,
+        "content": "昨日（きのう）の練習（れんしゅう）で足（あし）の怪我（けが）をしてしまったので歩（ある）こう<span class='study-area-input'>____</span>歩（ある）け<strong><span data-gp-id='824'>ない</span></strong>。",
+        "answer": "にも",
+        "alternate_grammar": [],
+        "kanji_answer": "にも",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/昨日の練習で足の怪我をしてしまったので歩こうにも歩けない。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>couldn't walk even if I wanted to</strong> because I injured my foot in yesterday's practice.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10881",
+      "type": "study_question",
+      "attributes": {
+        "id": 10881,
+        "content": "親友（しんゆう）から土下座（どげざ）をしながら頼（たの）まれては、<span class='study-area-input'>____</span>。",
+        "answer": "ことわるにことわれません",
+        "alternate_grammar": [
+          "ことわるにことわれない",
+          "ことわるにことわれないです"
+        ],
+        "kanji_answer": "断（ことわ）るに断（ことわ）れません",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をしたくてもできないということを表（あらわ）す文法（ぶんぽう）。(A)<strong>よりであっても</strong>、(A)は<strong>できない</strong>。",
+        "tense": "Negative, Polite",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/親友から土下座をしながら頼まれては、断るに断れません。.mp3",
+        "word_prompt": "断（ことわ）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことわるにもことわれない": {
+            "en": "Close, but try to not use も in this pattern, since it is used in verb[よう]にもVerb[られない] pattern instead.",
+            "es": ""
+          },
+          "ことわるにもことわれないです": {
+            "en": "Close, but try to not use も in this pattern, since it is used in verb[よう]にもVerb[られない] pattern instead.",
+            "es": ""
+          },
+          "ことわるにもことわれません": {
+            "en": "Close, but try to not use も in this pattern, since it is used in verb[よう]にもVerb[られない] pattern instead.",
+            "es": ""
+          },
+          "ことわりたくてもことわれない": {
+            "en": "Great, but let's try something that only implies 'want'.",
+            "es": ""
+          },
+          "ことわりたくてもことわれません": {
+            "en": "Great, but let's try something that only implies 'want'.",
+            "es": ""
+          },
+          "ことわりたくてもことわれないです": {
+            "en": "Great, but let's try something that only implies 'want'.",
+            "es": ""
+          },
+          "ことわろうにことわれない": {
+            "en": "Close, but with this pattern you have to use にも. Let's use different expression.",
+            "es": ""
+          },
+          "ことわろうにことわれないです": {
+            "en": "Close, but with this pattern you have to use にも. Let's use different expression.",
+            "es": ""
+          },
+          "ことわろうにことわれません": {
+            "en": "Close, but with this pattern you have to use にも. Let's use different expression.",
+            "es": ""
+          },
+          "ことわろうにもことわれない": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "ことわろうにもことわれないです": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          },
+          "ことわろうにもことわれません": {
+            "en": "Great, but let's use different expression.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Being requested something while my friend is on their hands and knees, I <strong>cannot refuse even if I want to</strong>.",
+        "nuance_translation": "A structure implying that one cannot (A) even if they wanted to. <strong>Even toward</strong> (A), (A) <strong>cannot possibly</strong> be done.",
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9416",
+      "type": "study_question",
+      "attributes": {
+        "id": 9416,
+        "content": "「彼（かれ）はどうして学校（がっこう）に戻（もど）ろうとしないのかな？」<br>「何（なに）があったか知（し）らないけど、<span class='study-area-input'>____</span>事情（じじょう）があるのかな。」",
+        "answer": "いうにいえない",
+        "alternate_grammar": [],
+        "kanji_answer": "言（い）うに言（い）えない",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をしたくてもできないということを表（あらわ）す文法（ぶんぽう）。(A)<strong>よりであっても</strong>、(A)は<strong>できない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「彼はどうして学校に戻ろうとしないのかな？」「何があったか知らないけど、言うに言えない事情があるのかな。」.mp3",
+        "word_prompt": "言（い）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いうにもいえない": {
+            "en": "Nice guess! However, にも is used in the Verb[volitional]にもVerb[potential[ない]] pattern instead.",
+            "es": "",
+            "fr": ""
+          },
+          "いおうにもいえない": {
+            "en": "Great guess! Can you use 言う with another, nearly identical pattern?",
+            "es": "",
+            "fr": ""
+          },
+          "いいたくてもいえない": {
+            "en": "Great! Can you use a pattern that less directly implies \"want?\"",
+            "es": "",
+            "fr": ""
+          },
+          "いいたくともいえない": {
+            "en": "Great! Can you use a pattern that less directly implies \"want?\"",
+            "es": "",
+            "fr": ""
+          },
+          "いおうにいえない": {
+            "en": "Great guess! However, you should use にも in the Verb[volitional]にもVerb[potential[ない]] pattern. Can you use 泣く with another, nearly identical pattern?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'Why is he not willing to go back to school?'<br>'I'm not sure if something happened or not, but maybe he is in a situation where <strong>he cannot talk about it (even though he may want to)</strong>.'",
+        "nuance_translation": "A structure implying that one cannot (A) even if they wanted to. <strong>Even toward</strong> (A), (A) <strong>cannot possibly</strong> be done.",
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9418",
+      "type": "study_question",
+      "attributes": {
+        "id": 9418,
+        "content": "今日（きょう）、会議（かいぎ）があるけど、雪（ゆき）が積（つ）もって道（みち）が通行止（つうこうど）めになったから<span class='study-area-input'>____</span>。",
+        "answer": "いくにいけない",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）くに行（い）けない",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をしたくてもできないということを表（あらわ）す文法（ぶんぽう）。(A)<strong>よりであっても</strong>、(A)は<strong>できない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/今日、会議があるけど、雪が積もって道が通行止めになったから行くに行けない。.mp3",
+        "word_prompt": "行（い）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いくにもいけない": {
+            "en": "Nice guess! However, にも is used in the Verb[volitional]にもVerb[potential[ない]] pattern instead.",
+            "es": ""
+          },
+          "いこうにもいけない": {
+            "en": "Great guess! Can you use 行く with another, nearly identical pattern?",
+            "es": ""
+          },
+          "いきたくてもいけない": {
+            "en": "Great! Can you use a pattern that less directly implies \"want?\"",
+            "es": ""
+          },
+          "いきたくともいけない": {
+            "en": "Great! Can you use a pattern that less directly implies \"want?\"",
+            "es": ""
+          },
+          "いこうにいけない": {
+            "en": "Great guess! However, you should use にも in the Verb[volitional]にもVerb[potential[ない]] pattern. Can you use 行く with another, nearly identical pattern?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I have a meeting today, but snow has piled up and the road is closed, so <strong>I can't go, even if I want to</strong>.",
+        "nuance_translation": "A structure implying that one cannot (A) even if they wanted to. <strong>Even toward</strong> (A), (A) <strong>cannot possibly</strong> be done.",
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10883",
+      "type": "study_question",
+      "attributes": {
+        "id": 10883,
+        "content": "部長（ぶちょう）のその高圧的（こうあつてき）な態度（たいど）のせいで、周（まわ）りの従業員（じゅうぎょういん）は部長（ぶちょう）に不満（ふまん）を<span class='study-area-input'>____</span>でいる。",
+        "answer": "いうにいえない",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "言（い）うに言（い）えない",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をしたくてもできないということを表（あらわ）す文法（ぶんぽう）。(A)<strong>よりであっても</strong>、(A)は<strong>できない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/部長のその高圧的な態度のせいで、周りの従業員は部長に不満を言うに言えないでいる。.mp3",
+        "word_prompt": "言（い）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いうにもいえない": {
+            "en": "Close, but try to not use も in this pattern, since it is used in verb[よう]にもVerb[られない] pattern instead.",
+            "es": ""
+          },
+          "いいたくてもいえない": {
+            "en": "Great, but let's try something that only implies 'want'.",
+            "es": ""
+          },
+          "いおうにいえない": {
+            "en": "Close, but with this pattern you have to use にも. Let's use different expression.",
+            "es": ""
+          },
+          "いおうにもいえない": {
+            "en": "Great, but 言う is used more often with other, but very similar pattern.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Due to that oppressive attitude of my boss, the surrounding employees <strong>cannot express</strong> their dissatisfaction to him <strong>even if they want to</strong>.",
+        "nuance_translation": "A structure implying that one cannot (A) even if they wanted to. <strong>Even toward</strong> (A), (A) <strong>cannot possibly</strong> be done.",
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9414",
+      "type": "study_question",
+      "attributes": {
+        "id": 9414,
+        "content": "中学生（ちゅうがくせい）の頃（ころ）、好（す）きな子（こ）に告白（こくはく）して断（ことわ）られた。周（まわ）りに人（ひと）がいたから<span class='study-area-input'>____</span>状況（じょうきょう）だった。",
+        "answer": "なくになけない",
+        "alternate_grammar": [],
+        "kanji_answer": "泣（な）くに泣（な）けない",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をしたくてもできないということを表（あらわ）す文法（ぶんぽう）。(A)<strong>よりであっても</strong>、(A)は<strong>できない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/中学生の頃、好きな子に告白して断られた。周りに人がいたから泣くに泣けない状況だった。.mp3",
+        "word_prompt": "泣（な）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なくにもなけない": {
+            "en": "Nice guess! However, にも is used in the Verb[volitional]にもVerb[potential[ない]] pattern instead.",
+            "es": ""
+          },
+          "なこうにもなけない": {
+            "en": "Great guess! Can you use 泣く with another, nearly identical pattern?",
+            "es": ""
+          },
+          "なきたくてもなけない": {
+            "en": "Great! Can you use a pattern that less directly implies \"want?\"",
+            "es": ""
+          },
+          "なきたくともなけない": {
+            "en": "Great! Can you use a pattern that less directly implies \"want?\"",
+            "es": ""
+          },
+          "なこうになけない": {
+            "en": "Great guess! However, you should use にも in the Verb[volitional]にもVerb[potential[ない]] pattern. Can you use 泣く with another, nearly identical pattern?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "During my junior high school days, I confessed to a girl I liked and was rejected. There were some people nearby, so I was in a position where <strong>I could not cry even if I wanted to</strong>.",
+        "nuance_translation": "A structure implying that one cannot (A) even if they wanted to. <strong>Even toward</strong> (A), (A) <strong>cannot possibly</strong> be done.",
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9415",
+      "type": "study_question",
+      "attributes": {
+        "id": 9415,
+        "content": "嫌（きら）われている上司（じょうし）が見事（みごと）に転（ころ）んでしまった。従業員（じゅうぎょういん）が<span class='study-area-input'>____</span>、という顔（かお）をしてた。",
+        "answer": "わらうにわらえない",
+        "alternate_grammar": [],
+        "kanji_answer": "笑（わら）うに笑（わら）えない",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をしたくてもできないということを表（あらわ）す文法（ぶんぽう）。(A)<strong>よりであっても</strong>、(A)は<strong>できない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/嫌われている上司が見事に転んでしまった。従業員が笑うに笑えない、という顔をしてた。.mp3",
+        "word_prompt": "笑（わら）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "わらうにもわらえない": {
+            "en": "Nice guess! However, にも is used in the Verb[volitional]にもVerb[potential[ない]] pattern instead.",
+            "es": ""
+          },
+          "わらおうにもわらえない": {
+            "en": "Great guess! Can you use 笑う with another, nearly identical pattern?",
+            "es": ""
+          },
+          "わらいたくてもわらえない": {
+            "en": "Great! Can you use a pattern that less directly implies \"want?\"",
+            "es": ""
+          },
+          "わらいたくともわらえない": {
+            "en": "Great! Can you use a pattern that less directly implies \"want?\"",
+            "es": ""
+          },
+          "わらおうにわらえない": {
+            "en": "Great guess! However, you should use にも in the Verb[volitional]にもVerb[potential[ない]] pattern. Can you use 泣く with another, nearly identical pattern?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The boss that everyone hates had a spectacular fall. The employees' faces looked as though <strong>they wanted to laugh but were unable to</strong>.",
+        "nuance_translation": "A structure implying that one cannot (A) even if they wanted to. <strong>Even toward</strong> (A), (A) <strong>cannot possibly</strong> be done.",
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10882",
+      "type": "study_question",
+      "attributes": {
+        "id": 10882,
+        "content": "<span class='study-area-input'>____</span>状況（じょうきょう）から救（すく）ってくれたのは、いつもは厳（きび）しい先輩（せんぱい）だった。",
+        "answer": "にげるににげられない",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "逃（に）げるに逃（に）げられない",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)をしたくてもできないということを表（あらわ）す文法（ぶんぽう）。(A)<strong>よりであっても</strong>、(A)は<strong>できない</strong>。",
+        "tense": "Negative, Standard",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/逃げるに逃げられない状況から救ってくれたのは、いつもは厳しい先輩だった。.mp3",
+        "word_prompt": "逃（に）げる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にげるにもにげられない": {
+            "en": "Close, but try to not use も in this pattern, since it is used in verb[よう]にもVerb[られない] pattern instead.",
+            "es": ""
+          },
+          "にげたくてもにげられない": {
+            "en": "Great, but let's try something that only implies 'want'.",
+            "es": ""
+          },
+          "にげようににげられない": {
+            "en": "Close, but with this pattern you have to use にも. Let's use different expression.",
+            "es": ""
+          },
+          "にげようにもにげられない": {
+            "en": "Great, but let's use different pattern.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The one who saved me from a situation that I <strong>wanted to escape from but could not</strong>, was my senpai who is always strict.",
+        "nuance_translation": "A structure implying that one cannot (A) even if they wanted to. <strong>Even toward</strong> (A), (A) <strong>cannot possibly</strong> be done.",
+        "extra_info": "",
+        "reviewable_id": 824,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "891",
+      "type": "writeup",
+      "attributes": {
+        "id": 891,
+        "body_ja": "<p>「<span data-gp-id='824'>に～ない</span>」は、同（おな）じ動詞（どうし）を二度（にど）使（つか）って「そうしたくても (A) できない」や「何（なん）らかの事情（じじょう）で (A) できない」を意味（いみ）する文型（ぶんけい）です。この表現（ひょうげん）を使（つか）うときは、まず動詞（どうし）の辞書形（じしょけい）を置（お）き、次（つぎ）に格助詞（かくじょし）「に」、そして最初（さいしょ）と同（おな）じ動詞（どうし）の可能形（かのうけい）を「ない」で否定（ひてい）した形（かたち）を続（つづ）けます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182794'>\r\n<li data-study-question='182795'>\r\n<li data-study-question='182796'>\r\n</ul>\r\n\r\n<p>スル動詞（どうし）のように可能形（かのうけい）がない動詞（どうし）では、後半（こうはん）の動詞（どうし）に「できない」を使（つか）います。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182797'>\r\n</ul>\r\n\r\n<p>また、後半（こうはん）の「ない」の代（か）わりに「ず」のようなほかの否定表現（ひていひょうげん）が使（つか）われることもあります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182798'>\r\n</ul>\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>動詞（どうし）の辞書形（じしょけい）は、助動詞（じょどうし）「う」や「よう」を使（つか）った意向形（いこうけい）になることもあります。この場合（ばあい）は「に」ではなく「にも」が使（つか）われます。なお、後半（こうはん）の動詞（どうし）は、変（か）わらず可能形（かのうけい）の否定形（ひていけい）になります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184561'>\r\n<li data-study-question='184562'></ul>\r\n\r\n<p>動詞（どうし）の形（かたち）が辞書形（じしょけい）でも意向形（いこうけい）でも、文（ぶん）の意味（いみ）に大（おお）きな違（ちが）いはありません。ただし、辞書形（じしょけい）を使（つか）うときは心理的（しんりてき）な理由（りゆう）を表（あらわ）すことが多（おお）く、意向形（いこうけい）を使（つか）うときはより具体的（ぐたいてき）・物理的（ぶつりてき）な理由（りゆう）を表（あらわ）す傾向（けいこう）があります。</p></section>",
+        "body": "<p><span data-gp-id='824'>に～ない</span> is a construction which appears with repeating verbs in Japanese to indicate that one 'cannot (A) even if they want to', or 'due to some circumstances, can't (A)'. the <span data-term='格助詞・かくじょし'>case marking particle</span> に will appear after a verb in its <span data-term='辞書形・じしょけい'>dictionary form</span>, before the potential form of the same verb will be negated with ない. In this way, the more literal meaning is 'for (A), (A) is not possible'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182794'>\r\n<li data-study-question='182795'>\r\n<li data-study-question='182796'>\r\n</ul>\r\n\r\n<p>It will be important to keep in mind that する does not have a potential form, so できない will be used in the latter half of this expression when paired with する verbs.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182797'>\r\n</ul>\r\n\r\n<p>Additionally, ない may sometimes be replaced with other structures that convey negation, such as ず.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182798'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>Occasionally, the <span data-term='辞書形・じしょけい'>dictionary form</span> of a verb will be replaced with the <span data-term='助動詞・じょどうし'>auxiliary verb</span> う or よう volitional forms, and will then be followed by にも. The potential form of the same verb coming before ない will remain the same.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184561'>\r\n<li data-study-question='184562'></ul>\r\n\r\n<p>Although the meanings are the same between both of these, the <span data-term='辞書形・じしょけい'>dictionary form</span> tends to highlight psychological circumstances for why one 'cannot (A)', while the volitional form highlights more concrete or physical circumstances.</p></section>"
+      }
+    },
+    {
+      "id": "1773",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1773,
+        "source": "Try N1",
+        "location": "Page 92",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1774",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1774,
+        "source": "Shin Kanzen Master N1 Bunpou",
+        "location": "Page 58",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1775",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1775,
+        "source": "Sou Matome Bunpou N1",
+        "location": "Page 81",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1776",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1776,
+        "source": "A Dictionary of Advanced Japanese Grammar",
+        "location": "Page 408",
+        "type": "OfflineResource"
+      }
+    }
+  ]
+}

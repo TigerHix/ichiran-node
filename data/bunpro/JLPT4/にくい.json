@@ -1,0 +1,1185 @@
+{
+  "data": {
+    "id": "100",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 100,
+      "level": "JLPT4",
+      "lesson_id": 11,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "にくい",
+      "nuance": "話（はな）し手（て）のスキルの<strong>欠如（けつじょ）</strong>、または<strong>個人（こじん）的（てき）な感情（かんじょう）</strong>が何（なに）かを<strong>難（むずか）しく</strong>しているということを強調（きょうちょう）する表現（ひょうげん）。",
+      "grammar_order": 130,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 672,
+        "title": "だんだん",
+        "slug": "だんだん"
+      },
+      "previous_grammar_point": {
+        "id": 90,
+        "title": "やすい",
+        "slug": "やすい"
+      },
+      "lesson_count": "3/18",
+      "title": "にくい",
+      "furigana": "にくい",
+      "meaning": "Difficult to, Hard to",
+      "nuance_translation": "An expression that focuses on the <strong>difficulty</strong> created by the speaker's <strong>lack of skill</strong>, or <strong>personal feelings</strong>.",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": "<span class='gp-popout' data-gp-id='26'>Verb［stem］</span>+ <strong>にくい</strong> + <span class='gp-popout' data-gp-id='2'>です</span>",
+      "casual_structure": "<span class='gp-popout' data-gp-id='26'>Verb［stem］</span>+ <strong>にくい</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/1193",
+      "metadata": "にくい, nikui, adjective, i-adjective, い-adjective, suffix"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "155480",
+            "type": "study_question"
+          },
+          {
+            "id": "2478",
+            "type": "study_question"
+          },
+          {
+            "id": "2481",
+            "type": "study_question"
+          },
+          {
+            "id": "129",
+            "type": "study_question"
+          },
+          {
+            "id": "155481",
+            "type": "study_question"
+          },
+          {
+            "id": "155482",
+            "type": "study_question"
+          },
+          {
+            "id": "155483",
+            "type": "study_question"
+          },
+          {
+            "id": "2476",
+            "type": "study_question"
+          },
+          {
+            "id": "2479",
+            "type": "study_question"
+          },
+          {
+            "id": "2482",
+            "type": "study_question"
+          },
+          {
+            "id": "2483",
+            "type": "study_question"
+          },
+          {
+            "id": "2484",
+            "type": "study_question"
+          },
+          {
+            "id": "130",
+            "type": "study_question"
+          },
+          {
+            "id": "2480",
+            "type": "study_question"
+          },
+          {
+            "id": "128",
+            "type": "study_question"
+          },
+          {
+            "id": "2477",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "129",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "212",
+            "type": "offline_resource"
+          },
+          {
+            "id": "233",
+            "type": "offline_resource"
+          },
+          {
+            "id": "898",
+            "type": "offline_resource"
+          },
+          {
+            "id": "387",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1128",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1414",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1485",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "998",
+            "type": "related_content"
+          },
+          {
+            "id": "396",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "207",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "208",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1961",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "155480",
+      "type": "study_question",
+      "attributes": {
+        "id": 155480,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"30\">この</span>駐車場（ちゅうしゃじょう）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>狭（せま）<span class=\"gp-popout\" data-gp-id=\"24\">い</span><span class=\"gp-popout\" data-gp-id=\"45\">から</span>止（と）め<span class='study-area-input'>____</span>。",
+        "answer": "にくい",
+        "alternate_grammar": [],
+        "kanji_answer": "にくい",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この駐車場は狭いから止めにくい。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This parking lot is very cramped, so it is <strong>difficult to</strong> park.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 100,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2478",
+      "type": "study_question",
+      "attributes": {
+        "id": 2478,
+        "content": "<span class='gp-popout vocab-popout' data-gp-id='24' data-vocab-id='1046'>難（むずか）しい</span><span class='vocab-popout' data-vocab-id='767'>漢字（かんじ）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>。",
+        "answer": "おぼえにくい",
+        "alternate_grammar": [
+          "おぼえにくいです",
+          "おぼえにくい"
+        ],
+        "kanji_answer": "覚（おぼ）えにくい",
+        "kanji_alt_grammar": [
+          "覚（おぼ）えにくいです",
+          "覚（おぼ）えにくい"
+        ],
+        "nuance": "話（はな）し手（て）のスキルの<strong>欠如（けつじょ）</strong>、または<strong>個人（こじん）的（てき）な感情（かんじょう）</strong>が何（なに）かを<strong>難（むずか）しく</strong>しているということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/100/male_audio/難しい漢字は覚えにくい.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/難しい漢字は覚えにくい。.mp3",
+        "word_prompt": "覚（おぼ）え<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おぼえがたい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "おぼえづらい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "おぼえてにくい": {
+            "en": "にくい can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "おぼえりにくい": {
+            "en": "にくい can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "おぼえ": {
+            "en": "You need to use a grammar point hat has the meaning of 'hard to' here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Tricky Kanji are <strong>difficult to</strong> memorize.",
+        "nuance_translation": "An expression that focuses on the <strong>difficulty</strong> created by the speaker's <strong>lack of skill</strong>, or <strong>personal feelings</strong>.",
+        "extra_info": "",
+        "reviewable_id": 100,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2481",
+      "type": "study_question",
+      "attributes": {
+        "id": 2481,
+        "content": "<span class='gp-popout' data-gp-id='83'>まだ</span>慣（な）れ<span class='gp-popout' data-gp-id='764'>ていない</span><span class='gp-popout' data-gp-id='45'>から</span><span class='study-area-input'>____</span>。",
+        "answer": "やりにくい",
+        "alternate_grammar": [],
+        "kanji_answer": "やりにくい",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）のスキルの<strong>欠如（けつじょ）</strong>、または<strong>個人（こじん）的（てき）な感情（かんじょう）</strong>が何（なに）かを<strong>難（むずか）しく</strong>しているということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/100/male_audio/まだ慣れていないからやりにくい.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/まだ慣れていないからやりにくい。.mp3",
+        "word_prompt": "やる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "やりがたい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "やりにくいです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "やりづらい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "しにくい": {
+            "en": "Let's use a more casual way to say 'do' here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "やるにくい": {
+            "en": "にくい can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "やにくい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Because I am still not used to it, it is <strong>hard to</strong> do.",
+        "nuance_translation": "An expression that focuses on the <strong>difficulty</strong> created by the speaker's <strong>lack of skill</strong>, or <strong>personal feelings</strong>.",
+        "extra_info": "",
+        "reviewable_id": 100,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "129",
+      "type": "study_question",
+      "attributes": {
+        "id": 129,
+        "content": "アフリカ<span class='gp-popout' data-gp-id='32'>に</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "いきにくい",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）きにくい",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）のスキルの<strong>欠如（けつじょ）</strong>、または<strong>個人（こじん）的（てき）な感情（かんじょう）</strong>が何（なに）かを<strong>難（むずか）しく</strong>しているということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Subjective",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/100/male_audio/アフリカには行きにくい.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/アフリカには行きにくいです。.mp3",
+        "word_prompt": "行（い）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いきがたい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "いきづらい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "いってにくい": {
+            "en": "にくい can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "いくにくい": {
+            "en": "にくい can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "いき": {
+            "en": "You need to use a grammar point hat has the meaning of 'hard to' here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "It is <strong>hard to go</strong> to Africa.",
+        "nuance_translation": "An expression that focuses on the <strong>difficulty</strong> created by the speaker's <strong>lack of skill</strong>, or <strong>personal feelings</strong>.",
+        "extra_info": "",
+        "reviewable_id": 100,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155481",
+      "type": "study_question",
+      "attributes": {
+        "id": 155481,
+        "content": "今日（きょう）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>具合（ぐあい）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>悪（わる）い<span class=\"gp-popout\" data-gp-id=\"45\">から</span>呼吸（こきゅう）<span class=\"gp-popout\" data-gp-id=\"10\">が</span><span class=\"gp-popout\" data-gp-id=\"22\">し</span><span class='study-area-input'>____</span>。",
+        "answer": "にくい",
+        "alternate_grammar": [],
+        "kanji_answer": "にくい",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/今日は具合が悪いから呼吸がしにくい。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Because I am not feeling well today, it is <strong>hard to</strong> breathe.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 100,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155482",
+      "type": "study_question",
+      "attributes": {
+        "id": 155482,
+        "content": "私（わたし）<span class=\"gp-popout\" data-gp-id=\"32\">に</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span>英語（えいご）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>「Literally」<span class=\"gp-popout\" data-gp-id=\"202\">という</span>単語（たんご）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>とても言（い）い<span class='study-area-input'>____</span>。",
+        "answer": "にくい",
+        "alternate_grammar": [],
+        "kanji_answer": "にくい",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/私には英語の「Literally」という単語がとても言いにくい。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "For me, the English word 'literally' is very <strong>hard to</strong> say. (Hard due to the individual's skill level)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 100,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155483",
+      "type": "study_question",
+      "attributes": {
+        "id": 155483,
+        "content": "お前（まえ）<span class=\"gp-popout\" data-gp-id=\"32\">に</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span>本当（ほんとう）<span class=\"gp-popout\" data-gp-id=\"32\">に</span>言（い）い<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"361\">けど</span>、お前（まえ）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>ギター<span class=\"gp-popout\" data-gp-id=\"21\">を</span>壊（こわ）し<span class=\"gp-popout\" data-gp-id=\"895\">た</span>。ごめん。",
+        "answer": "づらい",
+        "alternate_grammar": [],
+        "kanji_answer": "づらい",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/お前には本当に言いづらいけど、お前のギターを壊した。ごめん。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This is very <strong>difficult</strong> for me <strong>to</strong> say to you, but I broke your guitar. I'm sorry. (Hard because the speaker knows that telling the listener will cause a negative response)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 100,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2476",
+      "type": "study_question",
+      "attributes": {
+        "id": 2476,
+        "content": "<span class='gp-popout' data-gp-id='47'>あの</span>人（ひと）<span class='gp-popout' data-gp-id='15'>と</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "はなしにくい",
+        "alternate_grammar": [],
+        "kanji_answer": "話（はな）しにくい",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）のスキルの<strong>欠如（けつじょ）</strong>、または<strong>個人（こじん）的（てき）な感情（かんじょう）</strong>が何（なに）かを<strong>難（むずか）しく</strong>しているということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/100/male_audio/あの人とは話しにくい.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/あの人とは話しにくいです。.mp3",
+        "word_prompt": "話（はな）<span class='gp-popout' data-gp-id='26'>す</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はなしがたい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "はなしづらい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "はなすにくい": {
+            "en": "にくい can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "はなにくい": {
+            "en": "にくい can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "はな": {
+            "en": "You need to use a grammar point hat has the meaning of 'hard to' here.",
+            "es": "",
+            "fr": ""
+          },
+          "はなさにくい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "That person is <strong>hard to talk to</strong>. (<strong>Unapproachable</strong>)",
+        "nuance_translation": "An expression that focuses on the <strong>difficulty</strong> created by the speaker's <strong>lack of skill</strong>, or <strong>personal feelings</strong>.",
+        "extra_info": "",
+        "reviewable_id": 100,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2479",
+      "type": "study_question",
+      "attributes": {
+        "id": 2479,
+        "content": "<span class='gp-popout vocab-popout' data-gp-id='30' data-vocab-id='91'>この</span><span class='vocab-popout' data-vocab-id='324'>会社（かいしゃ）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='361'>けど</span>、<span class='gp-popout vocab-popout' data-gp-id='67' data-vocab-id='348'>働（はたら）かなくてはいけない</span>。",
+        "answer": "はたらきにくい",
+        "alternate_grammar": [],
+        "kanji_answer": "働（はたら）きにくい",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）のスキルの<strong>欠如（けつじょ）</strong>、または<strong>個人（こじん）的（てき）な感情（かんじょう）</strong>が何（なに）かを<strong>難（むずか）しく</strong>しているということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/100/male_audio/この会社は働きにくいけど.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この会社は働きにくいけど、働かなくてはいけない。.mp3",
+        "word_prompt": "働（はたら）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はたらきがたい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "はたらきづらい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "はたらくにくい": {
+            "en": "にくい can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "はたらにくい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "It is <strong>difficult to work</strong> at this company, but I have to work.",
+        "nuance_translation": "An expression that focuses on the <strong>difficulty</strong> created by the speaker's <strong>lack of skill</strong>, or <strong>personal feelings</strong>.",
+        "extra_info": "",
+        "reviewable_id": 100,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2482",
+      "type": "study_question",
+      "attributes": {
+        "id": 2482,
+        "content": "緊張（きんちょう）して声（こえ）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>。",
+        "answer": "でにくい",
+        "alternate_grammar": [],
+        "kanji_answer": "出（で）にくい",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）のスキルの<strong>欠如（けつじょ）</strong>、または<strong>個人（こじん）的（てき）な感情（かんじょう）</strong>が何（なに）かを<strong>難（むずか）しく</strong>しているということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/100/male_audio/緊張して声が.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/緊張して声が出にくい。.mp3",
+        "word_prompt": "出（で）<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でがたい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "でにくいです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "でづらい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "でりにくい": {
+            "en": "出る is a る-verb. Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          },
+          "でてにくい": {
+            "en": "にくい can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I'm nervous, making it <strong>hard to talk</strong>. (<strong>Difficult to produce my voice</strong>)",
+        "nuance_translation": "An expression that focuses on the <strong>difficulty</strong> created by the speaker's <strong>lack of skill</strong>, or <strong>personal feelings</strong>.",
+        "extra_info": "",
+        "reviewable_id": 100,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2483",
+      "type": "study_question",
+      "attributes": {
+        "id": 2483,
+        "content": "性格（せいかく）<span class='gp-popout' data-gp-id='10'>が</span>元彼女（もとかのじょ）に似（に）<span class='gp-popout' data-gp-id='27'>ている</span><span class='gp-popout' data-gp-id='45'>から</span>、<span class='study-area-input'>____</span>。",
+        "answer": "はなしにくい",
+        "alternate_grammar": [],
+        "kanji_answer": "話（はな）しにくい",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）のスキルの<strong>欠如（けつじょ）</strong>、または<strong>個人（こじん）的（てき）な感情（かんじょう）</strong>が何（なに）かを<strong>難（むずか）しく</strong>しているということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/100/male_audio/性格が元カノ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/性格が元彼女に似ているから、話しにくい。.mp3",
+        "word_prompt": "話（はな）<span class='gp-popout' data-gp-id='26'>す</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はなしがたい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "はなしにくいです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "はなしづらい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "はなにくい": {
+            "en": "話す is a う-verb. Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          },
+          "はなすにくい": {
+            "en": "にくい can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "はな": {
+            "en": "You need to use a grammar point hat has the meaning of 'hard to' here.",
+            "es": "",
+            "fr": ""
+          },
+          "はなし": {
+            "en": "You need to use a grammar point hat has the meaning of 'hard to' here.",
+            "es": "",
+            "fr": ""
+          },
+          "はなしやすい": {
+            "en": "Could you try using a grammar point that has the meaning of 'hard to'?",
+            "es": "",
+            "fr": ""
+          },
+          "はなさにくい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Her personality is like my ex's, so it is <strong>hard to talk</strong> with her. (<strong>Unapproachable</strong>)",
+        "nuance_translation": "An expression that focuses on the <strong>difficulty</strong> created by the speaker's <strong>lack of skill</strong>, or <strong>personal feelings</strong>.",
+        "extra_info": "",
+        "reviewable_id": 100,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2484",
+      "type": "study_question",
+      "attributes": {
+        "id": 2484,
+        "content": "遠（とお）<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='45'>から</span>日本（にほん）<span class='gp-popout' data-gp-id='32'>に</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='361'>けど</span>、行（い）<span class='gp-popout' data-gp-id='26'>く</span><span class='gp-popout' data-gp-id='80'>つもり</span><span class='gp-popout' data-gp-id='1'>だ</span>。",
+        "answer": "いきにくい",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）きにくい",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）のスキルの<strong>欠如（けつじょ）</strong>、または<strong>個人（こじん）的（てき）な感情（かんじょう）</strong>が何（なに）かを<strong>難（むずか）しく</strong>しているということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/100/male_audio/遠いから日本には行きにくいけど.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/遠いから日本には行きにくいけど、行くつもりだ。.mp3",
+        "word_prompt": "行（い）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いきがたい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "いきづらい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "いくにくい": {
+            "en": "にくい can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "いってにくい": {
+            "en": "にくい can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "いき": {
+            "en": "You need to use a grammar point hat has the meaning of 'hard to' here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Because it is far Japan is <strong>difficult to get to</strong>, but I intend to go.",
+        "nuance_translation": "An expression that focuses on the <strong>difficulty</strong> created by the speaker's <strong>lack of skill</strong>, or <strong>personal feelings</strong>.",
+        "extra_info": "",
+        "reviewable_id": 100,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "130",
+      "type": "study_question",
+      "attributes": {
+        "id": 130,
+        "content": "怖（こわ）<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='98'>こと</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "しにくい",
+        "alternate_grammar": [],
+        "kanji_answer": "しにくい",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）のスキルの<strong>欠如（けつじょ）</strong>、または<strong>個人（こじん）的（てき）な感情（かんじょう）</strong>が何（なに）かを<strong>難（むずか）しく</strong>しているということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Subjective",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/100/male_audio/怖いことはしにくい.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/怖いことはしにくいです。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しがたい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "いきづらい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "しにいく": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "してにくい": {
+            "en": "にくい can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "するにくい": {
+            "en": "Remember, する has a special conjugation rule!",
+            "es": "",
+            "fr": ""
+          },
+          "にくい": {
+            "en": "Could you try answering using the prompted verb?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "It is <strong>difficult to do</strong> scary things.",
+        "nuance_translation": "An expression that focuses on the <strong>difficulty</strong> created by the speaker's <strong>lack of skill</strong>, or <strong>personal feelings</strong>.",
+        "extra_info": "",
+        "reviewable_id": 100,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2480",
+      "type": "study_question",
+      "attributes": {
+        "id": 2480,
+        "content": "<span class='vocab-popout' data-vocab-id='637'>日本語（にほんご）</span><span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='370'>ですが</span>、頑張（がんば）ります。",
+        "answer": "はなしにくい",
+        "alternate_grammar": [],
+        "kanji_answer": "話（はな）しにくい",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）のスキルの<strong>欠如（けつじょ）</strong>、または<strong>個人（こじん）的（てき）な感情（かんじょう）</strong>が何（なに）かを<strong>難（むずか）しく</strong>しているということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/100/male_audio/日本語は話しにくいですが.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/日本語は話しにくいですが、頑張ります。.mp3",
+        "word_prompt": "話（はな）<span class='gp-popout' data-gp-id='26'>す</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はなしがたい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "はなしづらい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "はなすにくい": {
+            "en": "にくい can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "はな": {
+            "en": "You need to use a grammar point hat has the meaning of 'hard to' here.",
+            "es": "",
+            "fr": ""
+          },
+          "はなし": {
+            "en": "You need to use a grammar point hat has the meaning of 'hard to' here.",
+            "es": "",
+            "fr": ""
+          },
+          "はなしやすい": {
+            "en": "We are looking for a grammar point that has the meaning of 'hard to'.",
+            "es": "",
+            "fr": ""
+          },
+          "はなさにくい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Japanese is <strong>difficult to speak</strong>, but I will try my best.",
+        "nuance_translation": "An expression that focuses on the <strong>difficulty</strong> created by the speaker's <strong>lack of skill</strong>, or <strong>personal feelings</strong>.",
+        "extra_info": "",
+        "reviewable_id": 100,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "128",
+      "type": "study_question",
+      "attributes": {
+        "id": 128,
+        "content": "<span class='gp-popout vocab-popout' data-gp-id='873' data-vocab-id='798'>甘（あま）くない</span><span class='vocab-popout' data-vocab-id='82'>ケーキ</span><span class='gp-popout' data-gp-id='3'>は</span></a>、<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "たべにくい",
+        "alternate_grammar": [],
+        "kanji_answer": "食（た）べにくい",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）のスキルの<strong>欠如（けつじょ）</strong>、または<strong>個人（こじん）的（てき）な感情（かんじょう）</strong>が何（なに）かを<strong>難（むずか）しく</strong>しているということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Subjective",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/甘くないケーキは、食べにくいです。.mp3",
+        "word_prompt": "食（た）べ<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たべがたい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "たべづらい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "たべりにくい": {
+            "en": "食べる is a る-verb. Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          },
+          "たべてにくい": {
+            "en": "にくい can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "たべ": {
+            "en": "You need to use a grammar point hat has the meaning of 'hard to' here.",
+            "es": "",
+            "fr": ""
+          },
+          "にくい": {
+            "en": "Could you try answering including the prompted verb?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Cakes that aren't sweet are <strong>hard to</strong> eat.",
+        "nuance_translation": "An expression that focuses on the <strong>difficulty</strong> created by the speaker's <strong>lack of skill</strong>, or <strong>personal feelings</strong>.",
+        "extra_info": "",
+        "reviewable_id": 100,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2477",
+      "type": "study_question",
+      "attributes": {
+        "id": 2477,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>コップ、形（かたち）<span class='gp-popout' data-gp-id='10'>が</span>変（へん）だ<span class='gp-popout' data-gp-id='45'>から</span><span class='study-area-input'>____</span>。",
+        "answer": "のみにくい",
+        "alternate_grammar": [],
+        "kanji_answer": "飲（の）みにくい",
+        "kanji_alt_grammar": [],
+        "nuance": "話（はな）し手（て）のスキルの<strong>欠如（けつじょ）</strong>、または<strong>個人（こじん）的（てき）な感情（かんじょう）</strong>が何（なに）かを<strong>難（むずか）しく</strong>しているということを強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson1/100/male_audio/このコップ形.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/このコップ、形が変だから飲みにくい。.mp3",
+        "word_prompt": "飲（の）<span class='gp-popout' data-gp-id='26'>む</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のみがたい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のみにくいです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "のみづらい": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "のまにくい": {
+            "en": "にくい conjugates with the positive stem form of verbs, not the negative stem.",
+            "es": "",
+            "fr": ""
+          },
+          "のんでにくい": {
+            "en": "にくい can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "のむにくい": {
+            "en": "にくい can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "のみにくいだ": {
+            "en": "Can you remove something from the end? Remember, にくい is an い-adjective!",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Because this cup has a strange shape, it is <strong>hard to drink</strong> out of. ",
+        "nuance_translation": "An expression that focuses on the <strong>difficulty</strong> created by the speaker's <strong>lack of skill</strong>, or <strong>personal feelings</strong>.",
+        "extra_info": "",
+        "reviewable_id": 100,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "129",
+      "type": "writeup",
+      "attributes": {
+        "id": 129,
+        "body_ja": null,
+        "body": "<p>Like <span data-gp-id='90'>易（やす）い</span>, <span data-gp-id='100'>にくい</span> is an <span data-gp-id='24'>い-Adjective</span> that is regularly attached to the ます stem of verbs. However, instead of meaning 'easy to (A)', it means 'difficult to (A)'. (A) will always represent the verb that comes before <span data-gp-id='100'>にくい</span>.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155480'>\r\n<li data-study-question='155481'></ul>\r\n\r\n<p>The nuance of <span data-gp-id='100'>にくい</span> is that (A) is a task that is difficult to do, because of the required skill level, or similar factors. This is different from づらい, which focuses more on a task that is difficult due to being unbearable/hard to endure for some reason.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155482'>\r\n<li data-study-question='155483'></ul>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>An easy way to remember the difference in nuance between <span data-gp-id='100'>にくい</span> and づらい, is that <span data-gp-id='100'>にくい</span> comes from the same kanji as 難（むずか）しい, which usually carries the meaning of 'difficulty' (in relation to skill being required).</p></section>"
+      }
+    },
+    {
+      "id": "212",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 212,
+        "source": "Genki II 1st Edition",
+        "location": "Page 163",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "233",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 233,
+        "source": "Genki II 2nd Edition",
+        "location": "Page 193",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "898",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 898,
+        "source": "みんなの日本語 II",
+        "location": "Page 120 [CH 44]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "387",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 387,
+        "source": "Marugoto Elementary 2 (A2) Rikai",
+        "location": "114",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1128",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1128,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 307",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1414",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1414,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 275",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1485",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1485,
+        "source": "[AIAIJ] An Integrated Approach to Intermediate Japanese",
+        "location": "Page 16",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "207",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 207,
+        "site": "Tae Kim",
+        "description": "Saying something is easy or hard to do",
+        "link": "http://www.guidetojapanese.org/easyhard.html",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "208",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 208,
+        "site": "MaggieSensei",
+        "description": "V + やすい & V + にくい",
+        "link": "https://maggiesensei.com/2013/08/24/v-%E3%82%84%E3%81%99%E3%81%84-v-%E3%81%AB%E3%81%8F%E3%81%84-v-yasui-v-nikui/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1961",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1961,
+        "site": "NHK 文研",
+        "description": "「〜にくい」vs. 「〜づらい」",
+        "link": "https://www.nhk.or.jp/bunken/summary/kotoba/uraomote/023.html",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "998",
+      "type": "related_content",
+      "attributes": {
+        "id": 998,
+        "relationship_type": "related",
+        "body": "がたい and にくい both attach to verb stems and express the idea of 'difficult to do', but with different nuance and formality levels. にくい is used in everyday speech and reflects the speaker's personal sense of difficulty or discomfort. がたい is more formal/written-style and implies something is nearly impossible or extremely difficult due to factors beyond the speaker's control.",
+        "first_relatable": {
+          "id": 257,
+          "slug": "がたい",
+          "title": "がたい",
+          "meaning": "Hard to, Difficult to",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 100,
+          "slug": "にくい",
+          "title": "にくい",
+          "meaning": "Difficult to, Hard to",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "396",
+      "type": "related_content",
+      "attributes": {
+        "id": 396,
+        "relationship_type": "antonym",
+        "body": "やすい and にくい express opposite ideas: 'easy to do' and 'hard to do.' Both attach to verb stems, e.g. 食べやすい 'easy to eat' and 食べにくい 'hard to eat', and function as い-adjectives, meaning they can be seen with tenses like 食べやすかった 'was easy to eat', and modify nouns like with 食べやすい果物 'an easy-to-eat fruit'.",
+        "first_relatable": {
+          "id": 90,
+          "slug": "やすい",
+          "title": "やすい",
+          "meaning": "Easy to, Likely to",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 100,
+          "slug": "にくい",
+          "title": "にくい",
+          "meaning": "Difficult to, Hard to",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

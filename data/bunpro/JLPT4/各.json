@@ -1,0 +1,972 @@
+{
+  "data": {
+    "id": "652",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 652,
+      "level": "JLPT4",
+      "lesson_id": 15,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "各",
+      "nuance": "<strong>グループやシリーズ</strong>に含（ふく）まれている(A)<strong>一（ひと）つ一（ひと）つ</strong>を強調（きょうちょう）したい時（とき）に使（つか）われる<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+      "grammar_order": 204,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 382,
+        "title": "以上 ①",
+        "slug": "以上1"
+      },
+      "previous_grammar_point": {
+        "id": 369,
+        "title": "そんな・こんな・あんな・どんな",
+        "slug": "そんな-こんな-あんな-どんな"
+      },
+      "lesson_count": "5/20",
+      "title": "各",
+      "furigana": "各（かく）",
+      "meaning": "Each, Every, Respective, Various",
+      "nuance_translation": "A <strong>slightly formal</strong> word which highlights <strong>each</strong> respective (A) in a <strong>group</strong> or <strong>series</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<strong>各（かく）</strong> + Noun",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10548",
+      "metadata": "かく, 各, kaku, prefix,"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "8404",
+            "type": "study_question"
+          },
+          {
+            "id": "8406",
+            "type": "study_question"
+          },
+          {
+            "id": "8402",
+            "type": "study_question"
+          },
+          {
+            "id": "8407",
+            "type": "study_question"
+          },
+          {
+            "id": "180485",
+            "type": "study_question"
+          },
+          {
+            "id": "183924",
+            "type": "study_question"
+          },
+          {
+            "id": "8412",
+            "type": "study_question"
+          },
+          {
+            "id": "8403",
+            "type": "study_question"
+          },
+          {
+            "id": "180483",
+            "type": "study_question"
+          },
+          {
+            "id": "180484",
+            "type": "study_question"
+          },
+          {
+            "id": "8410",
+            "type": "study_question"
+          },
+          {
+            "id": "8408",
+            "type": "study_question"
+          },
+          {
+            "id": "8411",
+            "type": "study_question"
+          },
+          {
+            "id": "8405",
+            "type": "study_question"
+          },
+          {
+            "id": "8409",
+            "type": "study_question"
+          },
+          {
+            "id": "8413",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "202",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "689",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1392",
+            "type": "related_content"
+          },
+          {
+            "id": "1469",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2149",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1827",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "8404",
+      "type": "study_question",
+      "attributes": {
+        "id": 8404,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>バス<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>バス停（てい）に止（と）まり<span class='gp-popout' data-gp-id='26'>ます</span>。",
+        "answer": "かく",
+        "alternate_grammar": [],
+        "kanji_answer": "各（かく）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>グループやシリーズ</strong>に含（ふく）まれている(A)<strong>一（ひと）つ一（ひと）つ</strong>を強調（きょうちょう）したい時（とき）に使（つか）われる<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Emphasis on occurence",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/652/male_audio/230302_1501_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/このバスは各バス停に止まります。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それぞれ": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "それぞれの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This bus stops at <strong>each</strong> station.",
+        "nuance_translation": "A <strong>slightly formal</strong> word which highlights <strong>each</strong> respective (A) in a <strong>group</strong> or <strong>series</strong>.",
+        "extra_info": "",
+        "reviewable_id": 652,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8406",
+      "type": "study_question",
+      "attributes": {
+        "id": 8406,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>書類（しょるい）<span class='gp-popout' data-gp-id='6'>の</span><span class='study-area-input'>____</span>ページ<span class='gp-popout' data-gp-id='21'>を</span>プリントアウトし<span class='gp-popout' data-gp-id='60'>てください</span>。",
+        "answer": "かく",
+        "alternate_grammar": [],
+        "kanji_answer": "各（かく）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>グループやシリーズ</strong>に含（ふく）まれている(A)<strong>一（ひと）つ一（ひと）つ</strong>を強調（きょうちょう）したい時（とき）に使（つか）われる<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Emphasis on occurence",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/652/male_audio/230302_1503.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この書類の各ページをプリントアウトしてください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それぞれ": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "それぞれの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Please print <strong>each</strong> page of this document.",
+        "nuance_translation": "A <strong>slightly formal</strong> word which highlights <strong>each</strong> respective (A) in a <strong>group</strong> or <strong>series</strong>.",
+        "extra_info": "",
+        "reviewable_id": 652,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8402",
+      "type": "study_question",
+      "attributes": {
+        "id": 8402,
+        "content": "<span class='gp-popout' data-gp-id='14'>ここ</span>に並（なら）んでいる<span class='study-area-input'>____</span>製品（せいひん）<span class='gp-popout' data-gp-id='3'>は</span>アルミ製品（せいひん）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "かく",
+        "alternate_grammar": [],
+        "kanji_answer": "各（かく）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>グループやシリーズ</strong>に含（ふく）まれている(A)<strong>一（ひと）つ一（ひと）つ</strong>を強調（きょうちょう）したい時（とき）に使（つか）われる<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Emphasis on occurence",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/652/male_audio/230302_1501_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ここに並んでいる各製品はアルミ製品です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それぞれ": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "それぞれの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Each</strong> product lined up here is an aluminum product.",
+        "nuance_translation": "A <strong>slightly formal</strong> word which highlights <strong>each</strong> respective (A) in a <strong>group</strong> or <strong>series</strong>.",
+        "extra_info": "",
+        "reviewable_id": 652,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8407",
+      "type": "study_question",
+      "attributes": {
+        "id": 8407,
+        "content": "<span class='study-area-input'>____</span>部屋（へや）に冷房（れいぼう）<span class='gp-popout' data-gp-id='10'>が</span>つい<span class='gp-popout' data-gp-id='27'>ている</span>。",
+        "answer": "かく",
+        "alternate_grammar": [],
+        "kanji_answer": "各（かく）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>グループやシリーズ</strong>に含（ふく）まれている(A)<strong>一（ひと）つ一（ひと）つ</strong>を強調（きょうちょう）したい時（とき）に使（つか）われる<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Emphasis on occurence",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/652/male_audio/230302_1509.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/各部屋に冷房がついている。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それぞれ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": ""
+          },
+          "それぞれの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "まい": {
+            "en": "まい is attached to a time expression, so it would not sound natural here. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": null
+          },
+          "ごと": {
+            "en": "ごとに is used after nouns and verbs. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": null
+          },
+          "ごとに": {
+            "en": "ごとに is used after nouns and verbs. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": null
+          }
+        },
+        "translation": "<strong>Each</strong> room is equipped with air conditioning.",
+        "nuance_translation": "A <strong>slightly formal</strong> word which highlights <strong>each</strong> respective (A) in a <strong>group</strong> or <strong>series</strong>.",
+        "extra_info": "",
+        "reviewable_id": 652,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180485",
+      "type": "study_question",
+      "attributes": {
+        "id": 180485,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"14\">ここ</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span>正月（しょうがつ）<span class=\"gp-popout\" data-gp-id=\"57\">になる</span><span class=\"gp-popout\" data-gp-id=\"143\">と</span>日本（にほん）<span class='study-area-input'>____</span>地（ち）<span class=\"gp-popout\" data-gp-id=\"52\">から</span><span class=\"gp-popout\" data-gp-id=\"6\">の</span>観光客（かんこうきゃく）<span class=\"gp-popout\" data-gp-id=\"36\">で</span>いっぱい<span class=\"gp-popout\" data-gp-id=\"57\">になる</span>。",
+        "answer": "かく",
+        "alternate_grammar": [],
+        "kanji_answer": "各（かく）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ここは正月になると日本各地からの観光客でいっぱいになる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "When it becomes New Year's, this place is filled with tourists from <strong>each and every</strong> place in Japan.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 652,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183924",
+      "type": "study_question",
+      "attributes": {
+        "id": 183924,
+        "content": "弁当（べんとう）<span data-gp-id='3'>は</span><span data-gp-id='652'>各々（おのおの）</span><span data-gp-id='36'>で</span>用意（ようい）<span data-gp-id='22'>し</span><span data-gp-id='128'>てき</span><span data-gp-id='60'>てください</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Please come prepared with your own lunch. (Each person should bring their own lunch)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 652,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8412",
+      "type": "study_question",
+      "attributes": {
+        "id": 8412,
+        "content": "<span class='name-highlight'>社長（しゃちょう）</span>：「<span class='study-area-input'>____</span>モデル<span class='gp-popout' data-gp-id='6'>の</span>価格（かかく）<span class='gp-popout' data-gp-id='21'>を</span>下（さ）げようと思（おも）<span class='gp-popout' data-gp-id='416'>って</span>います」",
+        "answer": "かく",
+        "alternate_grammar": [],
+        "kanji_answer": "各（かく）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>グループやシリーズ</strong>に含（ふく）まれている(A)<strong>一（ひと）つ一（ひと）つ</strong>を強調（きょうちょう）したい時（とき）に使（つか）われる<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Emphasis on occurence",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/652/male_audio/230302_1514.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/社長：「各モデルの価格を下げようと思っています」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それぞれ": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "それぞれの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ごと": {
+            "en": "ごとに is used after nouns and verbs. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          },
+          "ごとに": {
+            "en": "ごとに is used after nouns and verbs. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          },
+          "かくの": {
+            "en": "Since this is a prefix, using a の is ungrammatical.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<span class='name-highlight'>Company president</span>: 'We plan to decrease the prices of <strong>each</strong> model.'",
+        "nuance_translation": "A <strong>slightly formal</strong> word which highlights <strong>each</strong> respective (A) in a <strong>group</strong> or <strong>series</strong>.",
+        "extra_info": "",
+        "reviewable_id": 652,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8403",
+      "type": "study_question",
+      "attributes": {
+        "id": 8403,
+        "content": "<span class='study-area-input'>____</span>ファイル<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span><span class='chui'>自（じ）</span>アップロード<span class='gp-popout' data-gp-id='22'>する</span><span class='gp-popout' data-gp-id='139'>必要（ひつよう）</span>がある。",
+        "answer": "かく",
+        "alternate_grammar": [],
+        "kanji_answer": "各（かく）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>グループやシリーズ</strong>に含（ふく）まれている(A)<strong>一（ひと）つ一（ひと）つ</strong>を強調（きょうちょう）したい時（とき）に使（つか）われる<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Emphasis on occurence",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/652/male_audio/230302_1501_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/各ファイルを各自アップロードする必要がある。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それぞれ": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "それぞれの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "まい": {
+            "en": "まい is attached to a time expression, so it is not natural here. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          },
+          "ずつ": {
+            "en": "ずつ is used after a counter, 少し, or いくらか. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          },
+          "ごと": {
+            "en": "ごとに is used after nouns and verbs. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          },
+          "ごとに": {
+            "en": "ごとに is used after nouns and verbs. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          },
+          "とか": {
+            "en": "We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "It is necessary to upload <strong>each</strong> file <strong>individually</strong>.",
+        "nuance_translation": "A <strong>slightly formal</strong> word which highlights <strong>each</strong> respective (A) in a <strong>group</strong> or <strong>series</strong>.",
+        "extra_info": "",
+        "reviewable_id": 652,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180483",
+      "type": "study_question",
+      "attributes": {
+        "id": 180483,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"30\">この</span>エレベーター<span class=\"gp-popout\" data-gp-id=\"3\">は</span><span class='study-area-input'>____</span>階（かい）<span class=\"gp-popout\" data-gp-id=\"25\">で</span>止（と）まり<span class=\"gp-popout\" data-gp-id=\"26\">ます</span>。",
+        "answer": "かく",
+        "alternate_grammar": [],
+        "kanji_answer": "各（かく）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/このエレベーターは各階で止まります。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This elevator will stop at <strong>each</strong> floor.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 652,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180484",
+      "type": "study_question",
+      "attributes": {
+        "id": 180484,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"30\">この</span>ホテル<span class=\"gp-popout\" data-gp-id=\"3\">は</span><span class='study-area-input'>____</span>部屋（へや）<span class=\"gp-popout\" data-gp-id=\"32\">に</span>洗濯機（せんたっき）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>つい<span class=\"gp-popout\" data-gp-id=\"764\">ている</span>。",
+        "answer": "かく",
+        "alternate_grammar": [],
+        "kanji_answer": "各（かく）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/このホテルは各部屋に洗濯機がついている。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This hotel has a washing machine in <strong>every</strong> room.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 652,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8410",
+      "type": "study_question",
+      "attributes": {
+        "id": 8410,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>旅館（りょかん）に<span class='gp-popout' data-gp-id='3'>は</span>日本（にほん）<span class='study-area-input'>____</span>地（ち）<span class='gp-popout' data-gp-id='52'>から</span>お客（きゃく）さま<span class='gp-popout' data-gp-id='10'>が</span>来（く）る。",
+        "answer": "かく",
+        "alternate_grammar": [
+          "のかく",
+          "かく"
+        ],
+        "kanji_answer": "各（かく）",
+        "kanji_alt_grammar": [
+          "の各（かく）",
+          "各（かく）"
+        ],
+        "nuance": "<strong>グループやシリーズ</strong>に含（ふく）まれている(A)<strong>一（ひと）つ一（ひと）つ</strong>を強調（きょうちょう）したい時（とき）に使（つか）われる<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Emphasis on occurence",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/652/male_audio/230302_1512.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この旅館には日本各地からお客さまが来る。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それぞれ": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "それぞれの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Customers from all over (<strong>each</strong> place) Japan come to this ryokan.",
+        "nuance_translation": "A <strong>slightly formal</strong> word which highlights <strong>each</strong> respective (A) in a <strong>group</strong> or <strong>series</strong>.",
+        "extra_info": "",
+        "reviewable_id": 652,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8408",
+      "type": "study_question",
+      "attributes": {
+        "id": 8408,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>ビル<span class='gp-popout' data-gp-id='6'>の</span><span class='study-area-input'>____</span>階（かい）にトイレ<span class='gp-popout' data-gp-id='13'>がある</span>。",
+        "answer": "かく",
+        "alternate_grammar": [],
+        "kanji_answer": "各（かく）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>グループやシリーズ</strong>に含（ふく）まれている(A)<strong>一（ひと）つ一（ひと）つ</strong>を強調（きょうちょう）したい時（とき）に使（つか）われる<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Emphasis on occurence",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/652/male_audio/230302_1509_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/このビルの各階にトイレがある。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それぞれ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "それぞれの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "かっ": {
+            "en": "Could you try a different spelling here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Each</strong> floor of this building has a toilet.",
+        "nuance_translation": "A <strong>slightly formal</strong> word which highlights <strong>each</strong> respective (A) in a <strong>group</strong> or <strong>series</strong>.",
+        "extra_info": "",
+        "reviewable_id": 652,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8411",
+      "type": "study_question",
+      "attributes": {
+        "id": 8411,
+        "content": "<span class='study-area-input'>____</span>イベント時間（じかん）<span class='gp-popout' data-gp-id='15'>と</span>場所（ばしょ）<span class='gp-popout' data-gp-id='21'>を</span>こちら<span class='gp-popout' data-gp-id='25'>で</span>チェックでき<span class='gp-popout' data-gp-id='12'>ます</span>。",
+        "answer": "かく",
+        "alternate_grammar": [],
+        "kanji_answer": "各（かく）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>グループやシリーズ</strong>に含（ふく）まれている(A)<strong>一（ひと）つ一（ひと）つ</strong>を強調（きょうちょう）したい時（とき）に使（つか）われる<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Emphasis on occurence",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/652/male_audio/230302_1513.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/各イベント時間と場所をこちらでチェックできます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それぞれ": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "それぞれの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "まい": {
+            "en": "まい is attached to a time expression, so it would not sound natural here. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          },
+          "ごとに": {
+            "en": "ごとに is used after nouns and verbs. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "You can check <strong>each</strong> event's time and place here.",
+        "nuance_translation": "A <strong>slightly formal</strong> word which highlights <strong>each</strong> respective (A) in a <strong>group</strong> or <strong>series</strong>.",
+        "extra_info": "",
+        "reviewable_id": 652,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8405",
+      "type": "study_question",
+      "attributes": {
+        "id": 8405,
+        "content": "<span class='study-area-input'>____</span><span class='chui'>自（じ）</span><span class='gp-popout' data-gp-id='25'>で</span>弁当（べんとう）<span class='gp-popout' data-gp-id='21'>を</span>持（も）っ<span class='gp-popout' data-gp-id='128'>てきて</span><span class='gp-popout' data-gp-id='60'>ください</span>。",
+        "answer": "かく",
+        "alternate_grammar": [],
+        "kanji_answer": "各（かく）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>グループやシリーズ</strong>に含（ふく）まれている(A)<strong>一（ひと）つ一（ひと）つ</strong>を強調（きょうちょう）したい時（とき）に使（つか）われる<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Emphasis on occurence",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/652/male_audio/230302_1502.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/各自で弁当を持ってきてください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それぞれ": {
+            "en": "Nice guess! Can you say it another way? + それぞれ needs a の to attach to nouns",
+            "es": ""
+          },
+          "それぞれの": {
+            "en": "Nice guess! Can you say it another way?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "それぞれ": {
+            "en": "それぞれ means 'each', but it cannot be combined with 自 to make a phrase like 'each person individually.' We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          },
+          "ずつ": {
+            "en": "ずつ is used after a counter, 少し, or いくらか. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          },
+          "ごとに": {
+            "en": "ごとに is used after nouns and verbs. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          },
+          "じぶん": {
+            "en": "We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Please bring your <strong>own respective</strong> bento (<strong>individually</strong>).",
+        "nuance_translation": "A <strong>slightly formal</strong> word which highlights <strong>each</strong> respective (A) in a <strong>group</strong> or <strong>series</strong>.",
+        "extra_info": "",
+        "reviewable_id": 652,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8409",
+      "type": "study_question",
+      "attributes": {
+        "id": 8409,
+        "content": "<span class='study-area-input'>____</span>アカウント<span class='gp-popout' data-gp-id='6'>の</span>名前（なまえ）<span class='gp-popout' data-gp-id='3'>は</span>ユニークである<span class='gp-popout' data-gp-id='139'>必要（ひつよう）</span>がある。",
+        "answer": "かく",
+        "alternate_grammar": [],
+        "kanji_answer": "各（かく）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>グループやシリーズ</strong>に含（ふく）まれている(A)<strong>一（ひと）つ一（ひと）つ</strong>を強調（きょうちょう）したい時（とき）に使（つか）われる<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Emphasis on occurence",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/各アカウントの名前はユニークである必要がある。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それぞれ": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "それぞれの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ごと": {
+            "en": "ごとに is used after nouns and verbs. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          },
+          "ごとに": {
+            "en": "ごとに is used after nouns and verbs. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          },
+          "かくの": {
+            "en": "Since this is a prefix, using a の is ungrammatical.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Each</strong> account name must be unique.",
+        "nuance_translation": "A <strong>slightly formal</strong> word which highlights <strong>each</strong> respective (A) in a <strong>group</strong> or <strong>series</strong>.",
+        "extra_info": "",
+        "reviewable_id": 652,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "8413",
+      "type": "study_question",
+      "attributes": {
+        "id": 8413,
+        "content": "<span class='study-area-input'>____</span>学年（がくねん）、ホールに集（あつ）ま<span class='gp-popout' data-gp-id='41'>った</span>。",
+        "answer": "かく",
+        "alternate_grammar": [],
+        "kanji_answer": "各（かく）",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>グループやシリーズ</strong>に含（ふく）まれている(A)<strong>一（ひと）つ一（ひと）つ</strong>を強調（きょうちょう）したい時（とき）に使（つか）われる<strong>少（すこ）し丁寧（ていねい）</strong>な表現（ひょうげん）。",
+        "tense": "Emphasis on occurence",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/652/male_audio/230302_1515.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/各学年、ホールに集まった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それぞれ": {
+            "en": "Let's try adding something else to the end.",
+            "es": ""
+          },
+          "それぞれの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "まい": {
+            "en": "まい is attached to a time expression, so it would not sound natural here. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          },
+          "ごと": {
+            "en": "ごとに is used after nouns and verbs. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          },
+          "ごとに": {
+            "en": "ごとに is used after nouns and verbs. We are looking for a slightly formal prefix that is used to mean 'each' or 'every'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Each</strong> class gathered in the hall.",
+        "nuance_translation": "A <strong>slightly formal</strong> word which highlights <strong>each</strong> respective (A) in a <strong>group</strong> or <strong>series</strong>.",
+        "extra_info": "",
+        "reviewable_id": 652,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "202",
+      "type": "writeup",
+      "attributes": {
+        "id": 202,
+        "body_ja": "",
+        "body": "<p>One of the slightly more formal ways to say that something is happening 'each', or 'every' (A) in Japanese, is by using the <span data-term='接頭語・せっとうご'>prefix</span> <span data-gp-id='652'>各（かく）</span>. While there is no strict rule for when this <span data-term='接頭語・せっとうご'>prefix</span> can be used, it is almost always seen before words of Chinese origin (kanji compounds), or katakana words.</p>\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180483'>\r\n<li data-study-question='180484'>\r\n<li data-study-question='180485'>\r\n</ul>\r\n\r\n<p>Although this kanji is used to mark 'each', it is very rarely used to mark units of time. The most common/natural usage of <span data-gp-id='652'>各（かく）</span> is for identifying things that are part of a sequence. For example:</p>\r\n\r\n<p> Each/Every stop, on a train line that has many stops.</p>\r\n\r\n<p>Each/Every page, in a book that has many pages.</p>\r\n\r\n<p>Each/Every floor, in a building that has many floors.</p>\r\n\r\n<p>Each/Every house, in a street of many houses.</p>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>This kanji is used in another word, 各々（おのおの）, which also means 'each', but is primarily used for identifying people.</p>\r\n\r\n<ul class='writeup-examples--holder'><li data-study-question='183924'></ul></section>"
+      }
+    },
+    {
+      "id": "689",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 689,
+        "source": "Tobira",
+        "location": "Page 258",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2149",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2149,
+        "site": "Japanese StackExchange",
+        "description": "What is the difference between 各 and 毎ごと?",
+        "link": "https://japanese.stackexchange.com/questions/28579/what-is-the-difference-between-%e5%90%84-and-%e6%af%8e%e3%81%94%e3%81%a8/70087#70087",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1827",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1827,
+        "site": "JP Yokoso",
+        "description": "The Complete Guide To Use それぞれ, 各 and 各々 Easily",
+        "link": "http://jpyokoso.com/sorezore-vs-kaku-vs-onoono/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1392",
+      "type": "related_content",
+      "attributes": {
+        "id": 1392,
+        "relationship_type": "related",
+        "body": "Both 各 and それぞれ express the idea of 'each' or 'every', but they differ in usage. 各 always goes before a noun, for example, 各部屋 'each room', 各階 'each floor', and so on. それぞれ, on the other hand, can stand alone at the start of a sentence or be attached to a noun with の. For example, 人はそれぞれ違う意見がある ('People each have differing opinions.').",
+        "first_relatable": {
+          "id": 652,
+          "slug": "各",
+          "title": "各",
+          "meaning": "Each, Every, Respective, Various",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 449,
+          "slug": "それぞれ",
+          "title": "それぞれ",
+          "meaning": "Each, Respectively",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1469",
+      "type": "related_content",
+      "attributes": {
+        "id": 1469,
+        "relationship_type": "related",
+        "body": "Both mean 'each', but with different usage. ～ずつ follows quantity expressions to mean 'each' or 'at a time', e.g. 一つずつください 'Give me one of each.' or ちょっとずつよくなってきた 'It's gotten better a little at a time.' 各 appears before nouns and means 'every' or 'each', e.g. この電車は各駅にとまります 'This train stops at every station.'",
+        "first_relatable": {
+          "id": 654,
+          "slug": "ずつ",
+          "title": "～ずつ",
+          "meaning": "One at a time, Per, Each, Gradually",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 652,
+          "slug": "各",
+          "title": "各",
+          "meaning": "Each, Every, Respective, Various",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1351 @@
+{
+  "data": {
+    "id": "228",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 228,
+      "level": "JLPT3",
+      "lesson_id": 22,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "というのは",
+      "nuance": "(A)<strong>と呼（よ）ばれるもの</strong>を提示（ていじ）し、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）われる表現（ひょうげん）。",
+      "grammar_order": 341,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 443,
+        "title": "的",
+        "slug": "的"
+      },
+      "previous_grammar_point": {
+        "id": 216,
+        "title": "ということだ",
+        "slug": "ということだ"
+      },
+      "lesson_count": "14/22",
+      "title": "というのは",
+      "furigana": "と言（い）うのは",
+      "meaning": "~ Known as ~ is, ~ Called ~ is, ~ Means ~, Because",
+      "nuance_translation": "A structure that presents <strong>the thing referred to as</strong> (A), before defining it further.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Phrase + <strong><span class='gp-popout' data-gp-id='202'>という</span><span class='gp-popout' data-gp-id='16'>の</span><span class='gp-popout' data-gp-id='3'>は</span></strong><sup>(1)</sup> + (Definition) Phrase<sup>(2)</sup><br><br><sup>(1)</sup> <span class='gp-popout' data-gp-id='356'>と</span><span class='gp-popout' data-gp-id='3'>は</span>、<span class='gp-popout' data-gp-id='358'>って</span><br><sup>(2)</sup> (Reason) Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/1304",
+      "metadata": "というのは, と言うのは, とは, って, toiunoha, toiunowa, toha, tte, case-marking particle, nominalizing particle, nominalizer"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "184086",
+            "type": "study_question"
+          },
+          {
+            "id": "184089",
+            "type": "study_question"
+          },
+          {
+            "id": "184091",
+            "type": "study_question"
+          },
+          {
+            "id": "4278",
+            "type": "study_question"
+          },
+          {
+            "id": "4279",
+            "type": "study_question"
+          },
+          {
+            "id": "4280",
+            "type": "study_question"
+          },
+          {
+            "id": "4281",
+            "type": "study_question"
+          },
+          {
+            "id": "4282",
+            "type": "study_question"
+          },
+          {
+            "id": "4283",
+            "type": "study_question"
+          },
+          {
+            "id": "4285",
+            "type": "study_question"
+          },
+          {
+            "id": "155330",
+            "type": "study_question"
+          },
+          {
+            "id": "155331",
+            "type": "study_question"
+          },
+          {
+            "id": "184085",
+            "type": "study_question"
+          },
+          {
+            "id": "184087",
+            "type": "study_question"
+          },
+          {
+            "id": "184088",
+            "type": "study_question"
+          },
+          {
+            "id": "184090",
+            "type": "study_question"
+          },
+          {
+            "id": "184092",
+            "type": "study_question"
+          },
+          {
+            "id": "898",
+            "type": "study_question"
+          },
+          {
+            "id": "896",
+            "type": "study_question"
+          },
+          {
+            "id": "4284",
+            "type": "study_question"
+          },
+          {
+            "id": "4286",
+            "type": "study_question"
+          },
+          {
+            "id": "897",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "361",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "467",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1335",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "827",
+            "type": "related_content"
+          },
+          {
+            "id": "249",
+            "type": "related_content"
+          },
+          {
+            "id": "1257",
+            "type": "related_content"
+          },
+          {
+            "id": "43",
+            "type": "related_content"
+          },
+          {
+            "id": "788",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "441",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "442",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2065",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "184086",
+      "type": "study_question",
+      "attributes": {
+        "id": 184086,
+        "content": "今年（ことし）も大会（たいかい）で優勝（ゆうしょう）することができた。<span class='study-area-input'>____</span>、コーチが頑張（がんば）ってくれたからだ。",
+        "answer": "というのも",
+        "alternate_grammar": [],
+        "kanji_answer": "というのも",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "We were able to win the competition again this year. <strong>The reason for this</strong> is because the coach worked so hard (for us).",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184089",
+      "type": "study_question",
+      "attributes": {
+        "id": 184089,
+        "content": "おかず<span class='study-area-input'>____</span>なん<span data-gp-id='2'>です</span>か。",
+        "answer": "とは",
+        "alternate_grammar": [],
+        "kanji_answer": "とは",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 16,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>What</strong> are side dishes?",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184091",
+      "type": "study_question",
+      "attributes": {
+        "id": 184091,
+        "content": "夢（ゆめ）<span class='study-area-input'>____</span>簡単（かんたん）に諦（あきら）められ<span data-gp-id='51'>ない</span>よ<span data-gp-id='71'>ね。</span>",
+        "answer": "って",
+        "alternate_grammar": [],
+        "kanji_answer": "って",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 18,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Dreams are so hard to give up. (Dreams <strong>as we know</strong> them)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4278",
+      "type": "study_question",
+      "attributes": {
+        "id": 4278,
+        "content": "人生（じんせい）<span class='study-area-input'>____</span>儚（はかな）いものだな。",
+        "answer": "というのは",
+        "alternate_grammar": [],
+        "kanji_answer": "というのは",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>と呼（よ）ばれるもの</strong>を提示（ていじ）し、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/228/male_audio/230615_1528_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/人生というのは儚いものだな。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のは": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "は": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "とは": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "って": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "ということは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "(<strong>The thing known as</strong>) Life <strong>is</strong> such a fleeting thing, isn't it?",
+        "nuance_translation": "A structure that presents <strong>the thing referred to as</strong> (A), before defining it further.",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4279",
+      "type": "study_question",
+      "attributes": {
+        "id": 4279,
+        "content": "頼（たの）み<span class='study-area-input'>____</span>結局（けっきょく）、お金（かね）を貸（か）してほしいということなの？",
+        "answer": "というのは",
+        "alternate_grammar": [],
+        "kanji_answer": "というのは",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>と呼（よ）ばれるもの</strong>を提示（ていじ）し、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/228/male_audio/230615_1528_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/頼みというのは結局、お金を貸してほしいということなの？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のは": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "は": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "とは": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "って": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "ということは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "So what you really <strong>mean</strong> by your request <strong>is</strong> that you want to borrow money?<br><small>(<strong>the thing called... is</strong>)</small>",
+        "nuance_translation": "A structure that presents <strong>the thing referred to as</strong> (A), before defining it further.",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4280",
+      "type": "study_question",
+      "attributes": {
+        "id": 4280,
+        "content": "働（はたら）く<span class='study-area-input'>____</span>大変（たいへん）なことだ。",
+        "answer": "というのは",
+        "alternate_grammar": [],
+        "kanji_answer": "というのは",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>と呼（よ）ばれるもの</strong>を提示（ていじ）し、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/228/male_audio/230615_1529.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/働くというのは大変なことだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のは": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "は": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "とは": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "って": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "ということは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "(<strong>The thing known as</strong>) work <strong>is</strong> a hard thing.",
+        "nuance_translation": "A structure that presents <strong>the thing referred to as</strong> (A), before defining it further.",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4281",
+      "type": "study_question",
+      "attributes": {
+        "id": 4281,
+        "content": "時間（じかん）<span class='study-area-input'>____</span>あっと言（い）う間（ま）に過（す）ぎてゆくものだ。",
+        "answer": "というのは",
+        "alternate_grammar": [],
+        "kanji_answer": "というのは",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>と呼（よ）ばれるもの</strong>を提示（ていじ）し、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/228/male_audio/230615_1529_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/時間というのはあっと言う間に過ぎてゆくものだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のは": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "は": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "とは": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "って": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "ということは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "(<strong>The thing known as</strong>) Time passes by before you even know it.",
+        "nuance_translation": "A structure that presents <strong>the thing referred to as</strong> (A), before defining it further.",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4282",
+      "type": "study_question",
+      "attributes": {
+        "id": 4282,
+        "content": "子供（こども）<span class='study-area-input'>____</span>かわいいものだな。",
+        "answer": "というのは",
+        "alternate_grammar": [],
+        "kanji_answer": "というのは",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>と呼（よ）ばれるもの</strong>を提示（ていじ）し、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/228/male_audio/230615_1529_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/子供というのはかわいいものだな。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のは": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "は": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "とは": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "って": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "ということは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "(<strong>The thing known as</strong>) Children are cute.",
+        "nuance_translation": "A structure that presents <strong>the thing referred to as</strong> (A), before defining it further.",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4283",
+      "type": "study_question",
+      "attributes": {
+        "id": 4283,
+        "content": "習慣（しゅうかん）<span class='study-area-input'>____</span>恐（おそ）ろしいものだ。",
+        "answer": "というのは",
+        "alternate_grammar": [],
+        "kanji_answer": "というのは",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>と呼（よ）ばれるもの</strong>を提示（ていじ）し、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/228/male_audio/230615_1529_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/習慣というのは恐ろしいものだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のは": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "は": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "とは": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "って": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "ということは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "(<strong>The thing known as</strong>) Habit <strong>is</strong> such a scary thing.",
+        "nuance_translation": "A structure that presents <strong>the thing referred to as</strong> (A), before defining it further.",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4285",
+      "type": "study_question",
+      "attributes": {
+        "id": 4285,
+        "content": "親（おや）<span class='study-area-input'>____</span>いつでも子供（こども）のことを思（おも）うものだ。",
+        "answer": "というのは",
+        "alternate_grammar": [],
+        "kanji_answer": "というのは",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>と呼（よ）ばれるもの</strong>を提示（ていじ）し、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/228/male_audio/230615_1530_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/親というのはいつでも子供のことを思うものだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のは": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "は": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "とは": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "って": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "ということは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "(<strong>Those who are known as</strong>) Parents generally think about their children all the time.",
+        "nuance_translation": "A structure that presents <strong>the thing referred to as</strong> (A), before defining it further.",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155330",
+      "type": "study_question",
+      "attributes": {
+        "id": 155330,
+        "content": "筋肉（きんにく）<span class='study-area-input'>____</span>、鍛（きた）え<span class=\"gp-popout\" data-gp-id=\"766\">ないと</span>すぐになくなる。",
+        "answer": "というのは",
+        "alternate_grammar": [],
+        "kanji_answer": "と言（い）うのは",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/筋肉と言うのは、鍛えないとすぐになくなる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "(The thing <strong>known as</strong>) Muscles need to be trained, or you lose them quickly.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155331",
+      "type": "study_question",
+      "attributes": {
+        "id": 155331,
+        "content": "警察（けいさつ）<span class='study-area-input'>____</span>市民（しみん）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>犯罪（はんざい）<span class=\"gp-popout\" data-gp-id=\"52\">から</span>守（まも）ら<span class=\"gp-popout\" data-gp-id=\"169\">なければいけません</span>。",
+        "answer": "というのは",
+        "alternate_grammar": [],
+        "kanji_answer": "というのは",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/警察というのは市民を犯罪から守らなければいけません。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "(Things <strong>known as</strong>) Police need to protect the citizens from crime.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184085",
+      "type": "study_question",
+      "attributes": {
+        "id": 184085,
+        "content": "今週末（こんしゅうまつ）は遊（あそ）べなくなっちゃった。<span class='study-area-input'>____</span>、義理（ぎり）の両親（りょうしん）が来（く）ることになったからだ。",
+        "answer": "というのも",
+        "alternate_grammar": [],
+        "kanji_answer": "というのも",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It looks like I won’t be able to hangout this weekend. <strong>The reason for this</strong> is because it has been decided for my in-laws to come.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184087",
+      "type": "study_question",
+      "attributes": {
+        "id": 184087,
+        "content": "差別（さべつ）になること<span data-gp-id='21'>を</span>言（い）ってはいけません。<span class='study-area-input'>____</span>、私達（わたしたち）はみんな同（おな）じ人間（にんげん）だから<span data-gp-id='2'>です</span>。",
+        "answer": "というのは",
+        "alternate_grammar": [],
+        "kanji_answer": "というのは",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 14,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "You shouldn't say anything that could be taken as discriminatory. <strong>What I mean to say is</strong>, we're all human.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184088",
+      "type": "study_question",
+      "attributes": {
+        "id": 184088,
+        "content": "あなた<span data-gp-id='44'>が</span>言（い）った事（こと）<span data-gp-id='21'>を</span>否定（ひてい）する<span data-gp-id='80'>つもり</span>で言（い）って<span data-gp-id='888'>いません</span>。<span class='study-area-input'>____</span>、私（わたし）は<span data-gp-id='11'>それ</span><span data-gp-id='10'>が</span>間違（まちが）っ<span data-gp-id='764'>ている</span><span data-gp-id='94'>と思（おも）っ</span>た<span data-gp-id='45'>から</span>言（い）ったの<span data-gp-id='2'>です</span>。",
+        "answer": "というのは",
+        "alternate_grammar": [],
+        "kanji_answer": "というのは",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 15,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I don't mean to disprove what you just said. <strong>What I mean is</strong> that, I said what I said because I personally thought that it was wrong.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184090",
+      "type": "study_question",
+      "attributes": {
+        "id": 184090,
+        "content": "<span data-gp-id='47'>あの</span>人（ひと）<span data-gp-id='10'>が</span>７０（ななじゅっ）歳（さい）<span class='study-area-input'>____</span>信（しん）じられ<span data-gp-id='51'>ない</span>。",
+        "answer": "とは",
+        "alternate_grammar": [],
+        "kanji_answer": "とは",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 17,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I can't believe that person is 70. (70 years old, <strong>as I know</strong> it)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184092",
+      "type": "study_question",
+      "attributes": {
+        "id": 184092,
+        "content": "法律（ほうりつ）<span class='study-area-input'>____</span>ほんとうに必要（ひつよう）<span data-gp-id='17'>なの</span>か。",
+        "answer": "って",
+        "alternate_grammar": [],
+        "kanji_answer": "って",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 19,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Are laws actually necessary? (Laws <strong>as we know</strong> them)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "898",
+      "type": "study_question",
+      "attributes": {
+        "id": 898,
+        "content": "雪（ゆき）<span class='study-area-input'>____</span>、自然（しぜん）現象（げんしょう）です。",
+        "answer": "というのは",
+        "alternate_grammar": [],
+        "kanji_answer": "というのは",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>と呼（よ）ばれるもの</strong>を提示（ていじ）し、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/228/male_audio/230615_1528_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/雪というのは、自然現象です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のは": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "が": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "は": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "とは": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "って": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "ということは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "(<strong>The thing called</strong>) Snow is a natural phenomenon.",
+        "nuance_translation": "A structure that presents <strong>the thing referred to as</strong> (A), before defining it further.",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "896",
+      "type": "study_question",
+      "attributes": {
+        "id": 896,
+        "content": "自販機（じはんき）<span class='study-area-input'>____</span>、自動（じどう）販売（はんばい）機（き）のことだ。",
+        "answer": "というのは",
+        "alternate_grammar": [],
+        "kanji_answer": "というのは",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>と呼（よ）ばれるもの</strong>を提示（ていじ）し、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/228/male_audio/230615_1527.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/自販機というのは、自動販売機のことだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のは": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "とは": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "って": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "ということは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "は": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "という": {
+            "en": "という' connects two nouns and means 'the (B) called (A)'. We are looking for a grammar point that means 'the thing known as (A)' and is used when defining or explaining something.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ということ": {
+            "en": "This is typically used to rephrase, clarify, or draw a conclusion from the previous statement. We are looking for a grammar point that means 'the thing known as (A)' and is used when defining or explaining something.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "Jihanki (vending machine) <strong>means</strong> jidouhanbaiki (vending machine).<br><small>(<strong>the thing called... is</strong>)</small>",
+        "nuance_translation": "A structure that presents <strong>the thing referred to as</strong> (A), before defining it further.",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4284",
+      "type": "study_question",
+      "attributes": {
+        "id": 4284,
+        "content": "お金（かね）<span class='study-area-input'>____</span>、良（よ）くも悪（わる）くも力（ちから）がある。",
+        "answer": "というのは",
+        "alternate_grammar": [],
+        "kanji_answer": "というのは",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>と呼（よ）ばれるもの</strong>を提示（ていじ）し、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/228/male_audio/230615_1530.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/お金というのは、良くも悪くも力がある。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のは": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "は": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "とは": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "って": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "ということは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "という": {
+            "en": "This is used with a format of 'a (B) called (A)'. We are looking for a grammar point that turns a whole phrase into a noun to describe that noun even further.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ということ": {
+            "en": "This is typically used to rephrase, clarify, or draw a conclusion from the previous statement. We are looking for a grammar point is usually followed by a definition or a reason.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "(<strong>The thing known as</strong>) Money <strong>is</strong> powerful, both in good and bad ways.",
+        "nuance_translation": "A structure that presents <strong>the thing referred to as</strong> (A), before defining it further.",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4286",
+      "type": "study_question",
+      "attributes": {
+        "id": 4286,
+        "content": "失敗（しっぱい）<span class='study-area-input'>____</span>、成功（せいこう）の始（はじ）まりだ。",
+        "answer": "というのは",
+        "alternate_grammar": [],
+        "kanji_answer": "というのは",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>と呼（よ）ばれるもの</strong>を提示（ていじ）し、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson2/228/male_audio/230615_1530_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/失敗というのは、成功の始まりだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のは": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "は": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          },
+          "とは": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "って": {
+            "en": "Can you use an unabbreviated grammar point?",
+            "es": ""
+          },
+          "ということは": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ということ": {
+            "en": "This is typically used to rephrase, clarify, or draw a conclusion from the previous statement. We are looking for a grammar point is usually followed by a definition or a reason.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "という": {
+            "en": "という' connects two nouns and means 'the (B) called (A)'. We are looking for a grammar point that means 'the thing known as (A)' and is used when defining or explaining something.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "(<strong>The thing known as</strong>) Failure <strong>is</strong> where success begins.",
+        "nuance_translation": "A structure that presents <strong>the thing referred to as</strong> (A), before defining it further.",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "897",
+      "type": "study_question",
+      "attributes": {
+        "id": 897,
+        "content": "外国（がいこく）語（ご）<span class='study-area-input'>____</span>、母国語（ぼこくご）以外（いがい）の言語（げんご）。",
+        "answer": "というのは",
+        "alternate_grammar": [],
+        "kanji_answer": "というのは",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>と呼（よ）ばれるもの</strong>を提示（ていじ）し、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Nominalization",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/外国語というのは、母国語以外の言語。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のは": {
+            "en": "",
+            "es": ""
+          },
+          "とは": {
+            "en": "",
+            "es": ""
+          },
+          "って": {
+            "en": "",
+            "es": ""
+          },
+          "ということは": {
+            "en": "",
+            "es": ""
+          },
+          "は": {
+            "en": "",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Foreign language <strong>means</strong> a language other than your native language.<br><small>(<strong>the thing called... is</strong>)</small>",
+        "nuance_translation": "A structure that presents <strong>the thing referred to as</strong> (A), before defining it further.",
+        "extra_info": "",
+        "reviewable_id": 228,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "361",
+      "type": "writeup",
+      "attributes": {
+        "id": 361,
+        "body_ja": "<p>「というのは」は、格助詞（かくじょし）の「と」と五段動詞（ごだんどうし）の「言（い）う」、そして前（まえ）の文（ぶん）を名詞化（めいしか）する助詞（じょし）の組（く）み合（あ）わせ「のは」からできた文法（ぶんぽう）です。「というのは」は、前（まえ）に述（の）べられたことの内容（ないよう）を言（い）い換（か）えたり、説明（せつめい）するときに使（つか）われます。意味（いみ）は、「(A) と呼（よ）ばれるそれは (B) だ」や「(A) の名前（なまえ）で知（し）られているそれは (B) だ」などです。(B) に入（はい）るのは、(A) の意味（いみ）や特徴（とくちょう）、理由（りゆう）などです。</p>\r\n\r\n<p>「というのは」は、これから説明（せつめい）したい語（ご）や文（ぶん）(A) のあとに付（つ）けて使（つか）ます。そのあとに意味（いみ）や理由（りゆう）の (B) を述（の）べます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155330'>\r\n<li data-study-question='155331'>\r\n</ul>\r\n\r\n<section class=\"caution\"><h4>注意点（ちゅういてん）</h4>\r\n<p>「というのは」は、主（おも）に事実（じじつ）をはっきりと伝（つた）えたいときや、話（はなし）の中（なか）で重要（じゅうよう）なポイントをはっきりさせたいときに使（つか）われます。また、「というのは」の「は」を副助詞（ふくじょし）「も」に変（か）えた、「というのも」という形（かたち）も使（つか）われます。これは「(B) は (A) と同（おな）じ程度（ていど）に大事（だいじ）だ」や「(B) が (A) の理由（りゆう）だ」ということを表（あらわ）のような意味（いみ）を表（あらわ）します。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184085'>\r\n<li data-study-question='184086'></ul></section>\r\n\r\n<section class=\"caution\"><h4>注意点（ちゅういてん）</h4>\r\n<p>「というのは」は、話（はな）し手（て）が前（まえ）に述（の）べたことに説明（せつめい）を加（くわ）えるときに、文（ぶん）の最初（さいしょ）に使（つか）うこともできます。この場合（ばあい）、「その理由（りゆう）は〜」や「私（わたし）が言（い）いたいことは〜」のような意味（いみ）になります。</p></section>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184087'>\r\n<li data-study-question='184088'></ul></section>\r\n\r\n<section class=\"caution\"><h4>注意点（ちゅういてん）</h4>\r\n<p>くだけた会話（かいわ）では、「というのは」が略（りゃく）されて、「とは」や「って」の形（かたち）で使（つか）われることが多（おお）いです。会話（かいわ）で「とは」や「って」と耳（みみ）にしても、それが「というのは」を略（りゃく）した形（かたち）だと、すぐにはわからないかもしれません。しかし、省略（しょうりゃく）されても「(B) が (A) を説明（せつめい）する」という働（はたら）きは変（か）わりません。文脈（ぶんみゃく）から判断（はんだん）するようにしましょう。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184089'>\r\n<li data-study-question='184090'>\r\n<li data-study-question='184091'>\r\n<li data-study-question='184092'></ul></section>",
+        "body": "<p><span data-gp-id='228'>というのは</span> is a phrase that combines the <span data-term='格助詞・かくじょし'>case marking particle</span> と,  the う - Verb 言（い）う,  and the nominalizing particle combination のは. Together, they are usually translated as 'the ~ known as ~ is ~', or 'the ~ called ~ is ~'. Sometimes, it can even simply be '~ means ~'. In essence, <span data-gp-id='228'>というのは</span> is just a way to turn an entire phrase into a noun, before explaining that noun further. This explanation of (A) will either be to give a definition of it, or to give a reason for it.</p>\r\n\r\n<p>To use <span data-gp-id='228'>というのは</span>, attach it to the end of a phrase that you would like to indicate as being something that will be explained further '(A)', and then follow it with your definition/reason, '(B)'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155330'>\r\n<li data-study-question='155331'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>Unlike というのは, which is mainly used to strongly present facts, or highlight points of discussion, replacement of は with the adverbial particle も can be used either as a rebuttal or as an extension of the original statement. This is when someone wants to show that (B) has equal weight when compared to (A). It may also be used to give the reason or cause for (A).</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184085'>\r\n<li data-study-question='184086'></ul></section>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p><span data-gp-id='228'>というのは</span> is sometimes used at the beginning of a new sentence, when the speaker wants to add extra information about what has already been said. In these situations, the translation is similar to 'what I mean to say is ~', or 'because of that, ~'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184087'>\r\n<li data-study-question='184088'></ul></section>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p><span data-gp-id='228'>というのは</span> is regularly abbreviated as とは, or って. This can be a little bit hard to identify in casual speech, but the '(B) explains (A)' concept will still almost always apply, so should be identified that way.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184089'>\r\n<li data-study-question='184090'>\r\n<li data-study-question='184091'>\r\n<li data-study-question='184092'></ul></section>"
+      }
+    },
+    {
+      "id": "467",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 467,
+        "source": "Tobira",
+        "location": "Page 20",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1335",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1335,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 160",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "441",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 441,
+        "site": "絵でわかる日本語",
+        "description": "〜というのは・とは",
+        "link": "https://www.edewakaru.com/archives/11527328.html",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "442",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 442,
+        "site": "JStackExchange",
+        "description": "Why is というのは used (both times) in this sentence?",
+        "link": "https://japanese.stackexchange.com/questions/33715/why-is-%e3%81%a8%e3%81%84%e3%81%86%e3%81%ae%e3%81%af-used-both-times-in-this-sentence/33718#33718",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2065",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2065,
+        "site": "Tae Kim",
+        "description": "Using 「いう」 to describe anything",
+        "link": "https://guidetojapanese.org/learn/grammar/define",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "827",
+      "type": "related_content",
+      "attributes": {
+        "id": 827,
+        "relationship_type": "related",
+        "body": "Both expressions contain the same という, but are used differently. という is used to name or describe something, typically in the form AというB ('a B called A'). In contrast, というのは introduces something as a topic for explanation or comment, e.g. 人生というのは ('This thing we call life') While という is followed by a single noun, というのは is followed by a phrase that elaborates on the topic.",
+        "first_relatable": {
+          "id": 202,
+          "slug": "という-called",
+          "title": "という",
+          "meaning": "Called, Named, Known as, As much as",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 228,
+          "slug": "というのは",
+          "title": "というのは",
+          "meaning": "~ Known as ~ is, ~ Called ~ is, ~ Means ~, Because",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "249",
+      "type": "related_content",
+      "attributes": {
+        "id": 249,
+        "relationship_type": "related",
+        "body": "というのは and ということは are similar in that both take a phrase and turn it into a topic for further explanation. While sometimes interchangeable, というのは is typically followed by a definition or reason. ということは is primarily used to rephrase, clarify, or draw a conclusion from the previous statement.",
+        "first_relatable": {
+          "id": 228,
+          "slug": "というのは",
+          "title": "というのは",
+          "meaning": "~ Known as ~ is, ~ Called ~ is, ~ Means ~, Because",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 345,
+          "slug": "ということは",
+          "title": "ということは",
+          "meaning": "That means, That is to say",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1257",
+      "type": "related_content",
+      "attributes": {
+        "id": 1257,
+        "relationship_type": "related",
+        "body": "いわゆる and という both express the idea of something being 'called' something, but they are used very differently. いわゆる precedes a noun to mean 'the so-called (A)'. というのは takes a word or phrase and introduces it as a topic to be defined or explained. Because they serve different roles, they can be used together, e.g. いわゆる五月病というのは ('This thing known as the so-called May blues is...')",
+        "first_relatable": {
+          "id": 564,
+          "slug": "いわゆる",
+          "title": "いわゆる",
+          "meaning": "What is called, So-called, Generally known",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 228,
+          "slug": "というのは",
+          "title": "というのは",
+          "meaning": "~ Known as ~ is, ~ Called ~ is, ~ Means ~, Because",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "43",
+      "type": "related_content",
+      "attributes": {
+        "id": 43,
+        "relationship_type": "related",
+        "body": "ことなの and というのは can both be used in explanations, but differ in position and role. ことなの appears at the end of a sentence to emphasize a conclusion or explanation. Literally, 'it's that it's (A)'. というのは follows a noun or phrase to introduce it as a topic to be explained. They can be used together, e.g. 人生というのはこういうことなんだ ('This thing we call life... this is what it means.')",
+        "first_relatable": {
+          "id": 630,
+          "slug": "ことなの",
+          "title": "ことなの",
+          "meaning": "(A) is (Description of A), (A) means that (Description of A)",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 228,
+          "slug": "というのは",
+          "title": "というのは",
+          "meaning": "~ Known as ~ is, ~ Called ~ is, ~ Means ~, Because",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "788",
+      "type": "related_content",
+      "attributes": {
+        "id": 788,
+        "relationship_type": "related",
+        "body": "ということ and というのは both turn phrases into nouns. ということ is often used to clarify what was said, while というのは introduces a topic for further explanation or comment. というのは can also start a sentence to mean 'what I mean is (A)' or 'that is to say (A)'.",
+        "first_relatable": {
+          "id": 185,
+          "slug": "ということ",
+          "title": "ということ",
+          "meaning": "~ing, The ~ that ~ (Nominalization)",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 228,
+          "slug": "というのは",
+          "title": "というのは",
+          "meaning": "~ Known as ~ is, ~ Called ~ is, ~ Means ~, Because",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

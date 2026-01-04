@@ -1,0 +1,1127 @@
+{
+  "data": {
+    "id": "357",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 357,
+      "level": "JLPT5",
+      "lesson_id": 6,
+      "part_of_speech": "表現",
+      "register": "一般",
+      "word_type": "名詞",
+      "slug": "verb-た-noun",
+      "nuance": "(B)が(A)を<strong>やった</strong>、又（また）は(A)を<strong>おこなっている</strong>ということを表（あらわ）す<strong>名詞（めいし）句（く）</strong>を作（つく）るために使（つか）われる構造（こうぞう）。",
+      "grammar_order": 74,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 720,
+        "title": "の",
+        "slug": "の-noun-ommission"
+      },
+      "previous_grammar_point": {
+        "id": 950,
+        "title": "Verbs (Non-past)",
+        "slug": "verb-non-past"
+      },
+      "lesson_count": "11/13",
+      "title": "Verb［た・ている］+ Noun",
+      "furigana": "～た + (Noun)",
+      "meaning": "Verb modified noun, Relative clause",
+      "nuance_translation": "A structure used to create a <strong>noun phrase</strong> to show that (B) is something that <strong>did or is doing</strong> (A).",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "<strong><span class='gp-popout' data-gp-id='41'>Verb［た］</span></strong><sup>(*)</sup> + Noun<br><strong><span class='gp-popout' data-gp-id='27'>Verb［ている］</span></strong><sup>(*)</sup> + Noun<br><br><sup>(*)</sup> Only verbs in short (plain) form can modify nouns. Do not use polite-ます.",
+      "part_of_speech_translation": "Expression",
+      "register_translation": "Standard",
+      "word_type_translation": "Noun",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/581",
+      "metadata": "た, だ, ている, でいる, ta, da, teiru, deiru, expression, noun, plain past, continuous, relative clause"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154985",
+            "type": "study_question"
+          },
+          {
+            "id": "154987",
+            "type": "study_question"
+          },
+          {
+            "id": "154984",
+            "type": "study_question"
+          },
+          {
+            "id": "1286",
+            "type": "study_question"
+          },
+          {
+            "id": "1950",
+            "type": "study_question"
+          },
+          {
+            "id": "183784",
+            "type": "study_question"
+          },
+          {
+            "id": "154986",
+            "type": "study_question"
+          },
+          {
+            "id": "1945",
+            "type": "study_question"
+          },
+          {
+            "id": "1285",
+            "type": "study_question"
+          },
+          {
+            "id": "1287",
+            "type": "study_question"
+          },
+          {
+            "id": "1946",
+            "type": "study_question"
+          },
+          {
+            "id": "1947",
+            "type": "study_question"
+          },
+          {
+            "id": "1948",
+            "type": "study_question"
+          },
+          {
+            "id": "1949",
+            "type": "study_question"
+          },
+          {
+            "id": "1951",
+            "type": "study_question"
+          },
+          {
+            "id": "1953",
+            "type": "study_question"
+          },
+          {
+            "id": "1952",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "73",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "108",
+            "type": "offline_resource"
+          },
+          {
+            "id": "181",
+            "type": "offline_resource"
+          },
+          {
+            "id": "602",
+            "type": "offline_resource"
+          },
+          {
+            "id": "607",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1148",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1252",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1366",
+            "type": "related_content"
+          },
+          {
+            "id": "1367",
+            "type": "related_content"
+          },
+          {
+            "id": "1363",
+            "type": "related_content"
+          },
+          {
+            "id": "1361",
+            "type": "related_content"
+          },
+          {
+            "id": "1362",
+            "type": "related_content"
+          },
+          {
+            "id": "1365",
+            "type": "related_content"
+          },
+          {
+            "id": "1364",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "793",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2090",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2230",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "792",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154985",
+      "type": "study_question",
+      "attributes": {
+        "id": 154985,
+        "content": "貴方（あなた）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>食（た）べ<span class='study-area-input'>____</span>ハンバーガー。",
+        "answer": "た",
+        "alternate_grammar": [],
+        "kanji_answer": "た",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/貴方が食べたハンバーガー。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The hamburger that you <strong>ate</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 357,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154987",
+      "type": "study_question",
+      "attributes": {
+        "id": 154987,
+        "content": "道（みち）<span class=\"gp-popout\" data-gp-id=\"25\">で</span>寝（ね）<span class='study-area-input'>____</span>犬（いぬ）。",
+        "answer": "ている",
+        "alternate_grammar": [],
+        "kanji_answer": "ている",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/道で寝ている犬。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "A dog that is <strong>sleeping</strong> on the road.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 357,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154984",
+      "type": "study_question",
+      "attributes": {
+        "id": 154984,
+        "content": "たかしさん<span class=\"gp-popout\" data-gp-id=\"3\">は</span>東京（とうきょう）<span class=\"gp-popout\" data-gp-id=\"32\">に</span>住（す）ん<span class='study-area-input'>____</span>男（おとこ）。",
+        "answer": "だ",
+        "alternate_grammar": [],
+        "kanji_answer": "だ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/たかしさんは東京に住んだ男。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Takashi-san is a man <strong>that lived</strong> in Tokyo.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 357,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1286",
+      "type": "study_question",
+      "attributes": {
+        "id": 1286,
+        "content": "日本（にほん）<span class='gp-popout' data-gp-id='32'>に</span><span class='study-area-input'>____</span>外国人（がいこくじん）。",
+        "answer": "すんでいる",
+        "alternate_grammar": [
+          "すんでる",
+          "すんでいる"
+        ],
+        "kanji_answer": "住（す）んでいる",
+        "kanji_alt_grammar": [
+          "住（す）んでる",
+          "住（す）んでいる"
+        ],
+        "nuance": "(B)が(A)を<strong>やった</strong>、又（また）は(A)を<strong>おこなっている</strong>ということを表（あらわ）す<strong>名詞（めいし）句（く）</strong>を作（つく）るために使（つか）われる構造（こうぞう）。",
+        "tense": "Progressive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/357/male_audio/08-日本に住んでいる外国人.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/日本に住んでいる外国人。.mp3",
+        "word_prompt": "住（す）<span class='gp-popout' data-gp-id='26'>む</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "すんでいます": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A foreigner <strong>living</strong> in Japan.",
+        "nuance_translation": "A structure used to create a <strong>noun phrase</strong> to show that (B) is something that <strong>did or is doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 357,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1950",
+      "type": "study_question",
+      "attributes": {
+        "id": 1950,
+        "content": "アメリカ<span class='gp-popout' data-gp-id='52'>から</span><span class='study-area-input'>____</span>外国人（がいこくじん）。",
+        "answer": "きた",
+        "alternate_grammar": [],
+        "kanji_answer": "来（き）た",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)が(A)を<strong>やった</strong>、又（また）は(A)を<strong>おこなっている</strong>ということを表（あらわ）す<strong>名詞（めいし）句（く）</strong>を作（つく）るために使（つか）われる構造（こうぞう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/357/male_audio/04-アメリカから来た外国人.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/アメリカから来た外国人。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='39'>来（く）る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A foreigner <strong>who came</strong> from America.",
+        "nuance_translation": "A structure used to create a <strong>noun phrase</strong> to show that (B) is something that <strong>did or is doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 357,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183784",
+      "type": "study_question",
+      "attributes": {
+        "id": 183784,
+        "content": "たかしさんは東京（とうきょう）<span data-gp-id='32'>に</span>住（す）んでいました男（おとこ）。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Takashi-san is a man who lived in Tokyo. (Unnatural Japanese)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 357,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154986",
+      "type": "study_question",
+      "attributes": {
+        "id": 154986,
+        "content": "田中（たなか）さん<span class=\"gp-popout\" data-gp-id=\"10\">が</span>飲（の）ん<span class='study-area-input'>____</span>コーヒー。",
+        "answer": "でいる",
+        "alternate_grammar": [],
+        "kanji_answer": "でいる",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/田中さんが飲んでいるコーヒー。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The coffee that Tanaka-san is <strong>drinking</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 357,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1945",
+      "type": "study_question",
+      "attributes": {
+        "id": 1945,
+        "content": "<span class='study-area-input'>____</span>服（ふく）。",
+        "answer": "あらった",
+        "alternate_grammar": [],
+        "kanji_answer": "洗（あら）った",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)が(A)を<strong>やった</strong>、又（また）は(A)を<strong>おこなっている</strong>ということを表（あらわ）す<strong>名詞（めいし）句（く）</strong>を作（つく）るために使（つか）われる構造（こうぞう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/357/male_audio/10-洗った服.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/洗った服。.mp3",
+        "word_prompt": "洗（あら）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あらいました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Washed</strong> clothes.",
+        "nuance_translation": "A structure used to create a <strong>noun phrase</strong> to show that (B) is something that <strong>did or is doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 357,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1285",
+      "type": "study_question",
+      "attributes": {
+        "id": 1285,
+        "content": "<span class='gp-popout' data-gp-id='715'>たくさん</span>勉強（べんきょう）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>生徒（せいと）。",
+        "answer": "した",
+        "alternate_grammar": [],
+        "kanji_answer": "した",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)が(A)を<strong>やった</strong>、又（また）は(A)を<strong>おこなっている</strong>ということを表（あらわ）す<strong>名詞（めいし）句（く）</strong>を作（つく）るために使（つか）われる構造（こうぞう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/357/male_audio/03-たくさんべんきょうしたせいと.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/たくさん勉強をした生徒。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='22'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A student <strong>who studied</strong> a lot. ",
+        "nuance_translation": "A structure used to create a <strong>noun phrase</strong> to show that (B) is something that <strong>did or is doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 357,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1287",
+      "type": "study_question",
+      "attributes": {
+        "id": 1287,
+        "content": "友達（ともだち）<span class='gp-popout' data-gp-id='52'>から</span><span class='study-area-input'>____</span>ペン。",
+        "answer": "かりた",
+        "alternate_grammar": [],
+        "kanji_answer": "借（か）りた",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)が(A)を<strong>やった</strong>、又（また）は(A)を<strong>おこなっている</strong>ということを表（あらわ）す<strong>名詞（めいし）句（く）</strong>を作（つく）るために使（つか）われる構造（こうぞう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/357/male_audio/06-友達から借りたペン.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/友達から借りたペン。.mp3",
+        "word_prompt": "借（か）り<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かりました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A pen <strong>borrowed</strong> from a friend.",
+        "nuance_translation": "A structure used to create a <strong>noun phrase</strong> to show that (B) is something that <strong>did or is doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 357,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1946",
+      "type": "study_question",
+      "attributes": {
+        "id": 1946,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>椅子（いす）。",
+        "answer": "つくった",
+        "alternate_grammar": [],
+        "kanji_answer": "作（つく）った",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)が(A)を<strong>やった</strong>、又（また）は(A)を<strong>おこなっている</strong>ということを表（あらわ）す<strong>名詞（めいし）句（く）</strong>を作（つく）るために使（つか）われる構造（こうぞう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/357/male_audio/11-私が作った椅子.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私が作った椅子。.mp3",
+        "word_prompt": "作（つく）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "つくりました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A chair I <strong>made</strong>.",
+        "nuance_translation": "A structure used to create a <strong>noun phrase</strong> to show that (B) is something that <strong>did or is doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 357,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1947",
+      "type": "study_question",
+      "attributes": {
+        "id": 1947,
+        "content": "先生（せんせい）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>文法（ぶんぽう）。",
+        "answer": "おしえた",
+        "alternate_grammar": [],
+        "kanji_answer": "教（おし）えた",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)が(A)を<strong>やった</strong>、又（また）は(A)を<strong>おこなっている</strong>ということを表（あらわ）す<strong>名詞（めいし）句（く）</strong>を作（つく）るために使（つか）われる構造（こうぞう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/357/male_audio/05-先生が教えた文法.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/先生が教えた文法。.mp3",
+        "word_prompt": "教（おし）え<span class='gp-popout' data-gp-id='12'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おしえてくれた": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "おしえました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "おしえてくれました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Grammar <strong>taught</strong> by a teacher.",
+        "nuance_translation": "A structure used to create a <strong>noun phrase</strong> to show that (B) is something that <strong>did or is doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 357,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1948",
+      "type": "study_question",
+      "attributes": {
+        "id": 1948,
+        "content": "<span class='gp-popout' data-gp-id='11'>それ</span><span class='gp-popout' data-gp-id='3'>は</span>、<span class='gp-popout' data-gp-id='47'>あの</span>店（みせ）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>お弁当（べんとう）<span class='gp-popout' data-gp-id='9'>でしょう</span>。",
+        "answer": "うった",
+        "alternate_grammar": [],
+        "kanji_answer": "売（う）った",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)が(A)を<strong>やった</strong>、又（また）は(A)を<strong>おこなっている</strong>ということを表（あらわ）す<strong>名詞（めいし）句（く）</strong>を作（つく）るために使（つか）われる構造（こうぞう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/357/male_audio/02-それはあの店が売った弁当でしょう.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/それは、あの店が売ったお弁当でしょう。.mp3",
+        "word_prompt": "売（う）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うりました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That is a bento box <strong>that was sold</strong> by that store over there, right? ",
+        "nuance_translation": "A structure used to create a <strong>noun phrase</strong> to show that (B) is something that <strong>did or is doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 357,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1949",
+      "type": "study_question",
+      "attributes": {
+        "id": 1949,
+        "content": "掃除（そうじ）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>人（ひと）。",
+        "answer": "した",
+        "alternate_grammar": [],
+        "kanji_answer": "した",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)が(A)を<strong>やった</strong>、又（また）は(A)を<strong>おこなっている</strong>ということを表（あらわ）す<strong>名詞（めいし）句（く）</strong>を作（つく）るために使（つか）われる構造（こうぞう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/357/male_audio/07-掃除をした人.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/掃除をした人。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='22'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "している": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          },
+          "しました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A person <strong>who cleaned</strong>.",
+        "nuance_translation": "A structure used to create a <strong>noun phrase</strong> to show that (B) is something that <strong>did or is doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 357,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1951",
+      "type": "study_question",
+      "attributes": {
+        "id": 1951,
+        "content": "<span class='study-area-input'>____</span>飲（の）み物（もの）。",
+        "answer": "かいにいった",
+        "alternate_grammar": [],
+        "kanji_answer": "買（か）いに行（い）った",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)が(A)を<strong>やった</strong>、又（また）は(A)を<strong>おこなっている</strong>ということを表（あらわ）す<strong>名詞（めいし）句（く）</strong>を作（つく）るために使（つか）われる構造（こうぞう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/357/male_audio/13-買いに行った飲み物.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/買いに行った飲み物。.mp3",
+        "word_prompt": "買（か）い<span class='gp-popout' data-gp-id='48'>に行（い）く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かいにいきました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A drink I <strong>went to buy</strong>.",
+        "nuance_translation": "A structure used to create a <strong>noun phrase</strong> to show that (B) is something that <strong>did or is doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 357,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1953",
+      "type": "study_question",
+      "attributes": {
+        "id": 1953,
+        "content": "結婚（けっこん）<span class='gp-popout' data-gp-id='22'>する</span>前（まえ）に<span class='study-area-input'>____</span>言葉（ことば）。",
+        "answer": "いった",
+        "alternate_grammar": [],
+        "kanji_answer": "言（い）った",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)が(A)を<strong>やった</strong>、又（また）は(A)を<strong>おこなっている</strong>ということを表（あらわ）す<strong>名詞（めいし）句（く）</strong>を作（つく）るために使（つか）われる構造（こうぞう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/357/male_audio/12-結婚する前に行った言葉.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/結婚する前に言った言葉。.mp3",
+        "word_prompt": "言（い）<span class='gp-popout' data-gp-id='26'>う</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いいました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Words they <strong>said</strong> before marriage.",
+        "nuance_translation": "A structure used to create a <strong>noun phrase</strong> to show that (B) is something that <strong>did or is doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 357,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1952",
+      "type": "study_question",
+      "attributes": {
+        "id": 1952,
+        "content": "東（ひがし）<span class='gp-popout' data-gp-id='52'>から</span><span class='study-area-input'>____</span>風（かぜ）。",
+        "answer": "きた",
+        "alternate_grammar": [],
+        "kanji_answer": "来（き）た",
+        "kanji_alt_grammar": [],
+        "nuance": "(B)が(A)を<strong>やった</strong>、又（また）は(A)を<strong>おこなっている</strong>ということを表（あらわ）す<strong>名詞（めいし）句（く）</strong>を作（つく）るために使（つか）われる構造（こうぞう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson6/357/male_audio/09-東から来た風.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/東から来た風。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='39'>来（く）る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "きました": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "A wind <strong>that came</strong> from the east.",
+        "nuance_translation": "A structure used to create a <strong>noun phrase</strong> to show that (B) is something that <strong>did or is doing</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 357,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "73",
+      "type": "writeup",
+      "attributes": {
+        "id": 73,
+        "body_ja": "",
+        "body": "<p>In Japanese, if you want to describe something or someone that is performing an action, one of the ways you can do this is through a relative clause. A relative clause is when two phrases are joined into one sentence, rather than two individual sentences. The た (plain-past), or <span data-gp-id='27'>ている</span> (continuous) form of verbs are usually used.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154984'>\r\n<li data-study-question='154985'>\r\n<li data-study-question='154986'>\r\n<li data-study-question='154987'></ul>\r\n\r\n<p><span data-gp-id='12'>る-Verbs</span> and <span data-gp-id='26'>う-Verbs</span> follow their regular conjugation rules when making a relative clause. In the first example, we can see that 'Takashi-san is a man that lived in Tokyo', is one sentence, rather than 'Takashi-san is a man. He lived in Tokyo'. In English, words like 'that', and 'which' are used to create a relative clause. However, seeing as though these words do not exist in Japanese, the first phrase is simply attached to the noun.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>The ます (polite) forms of verbs may not be used when making a relative clause.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183784'></ul></section>"
+      }
+    },
+    {
+      "id": "108",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 108,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 213",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "181",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 181,
+        "source": "Genki II 1st Edition",
+        "location": "Page 56",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "602",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 602,
+        "source": "Genki II 2nd Edition",
+        "location": "Page 80",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "607",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 607,
+        "source": "Tobira",
+        "location": "Page 70",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1148",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1148,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 9 & 376",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1252",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1252,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 63",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "793",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 793,
+        "site": "MaggieSensei",
+        "description": "How to modify a noun in Japanese",
+        "link": "https://maggiesensei.com/2017/02/04/how-to-modify-a-noun-in-japanese/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2090",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2090,
+        "site": "Tae Kim",
+        "description": "Treating verbs and state-of-being like adjectives",
+        "link": "https://guidetojapanese.org/learn/grammar/clause",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2230",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2230,
+        "site": "Masa Sensei [Youtube]",
+        "description": "How to make \"Relative Clause\"",
+        "link": "https://www.youtube.com/watch?v=sQklHSjvnbs&feature=emb_logo",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "792",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 792,
+        "site": "Wasabi",
+        "description": "How to Modify Nouns with the Ta-form",
+        "link": "https://wasabi-jpn.com/magazine/japanese-grammar/how-to-modify-nouns-with-the-ta-form/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1366",
+      "type": "related_content",
+      "attributes": {
+        "id": 1366,
+        "relationship_type": "misc",
+        "body": "い-Adjectives describe the state or characteristics of nouns and can be used at the end of a sentence or directly before a noun. For example, 面白い本 means 'an interesting book.' Similarly, Japanese verbs, unlike English verbs, can also modify nouns. For example, 読んだ本 means 'the book [I] read.'",
+        "first_relatable": {
+          "id": 357,
+          "slug": "verb-た-noun",
+          "title": "Verb［た・ている］+ Noun",
+          "meaning": "Verb modified noun, Relative clause",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 24,
+          "slug": "い-adjectives",
+          "title": "い-Adjectives",
+          "meaning": "Adjectives ending in い",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1367",
+      "type": "related_content",
+      "attributes": {
+        "id": 1367,
+        "relationship_type": "misc",
+        "body": "な-Adjectives describe the state or characteristics of nouns. They can be used at the end of a sentence (followed by だ or です) or precede a noun with な. For example, 大変な仕事 means 'a tough job.' Similarly, Japanese verbs can modify nouns directly, unlike な-Adjectives. For example, 読んだ本 means 'the book (I) read.'",
+        "first_relatable": {
+          "id": 357,
+          "slug": "verb-た-noun",
+          "title": "Verb［た・ている］+ Noun",
+          "meaning": "Verb modified noun, Relative clause",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 28,
+          "slug": "な-adjectives",
+          "title": "な-Adjectives",
+          "meaning": "Adjectives that are also nouns",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1363",
+      "type": "related_content",
+      "attributes": {
+        "id": 1363,
+        "relationship_type": "related",
+        "body": "The ている① form expresses completed actions or past states. Unlike English, verbs can directly modify nouns, similar to い-Adjectives. For example, 読んでいる本 means 'the book [I] am reading.' However, when describing a noun's state, the past form (た) is often preferred over ている. For example, 死んだネズミ ('a dead mouse') is more common than 死んでいるネズミ.",
+        "first_relatable": {
+          "id": 357,
+          "slug": "verb-た-noun",
+          "title": "Verb［た・ている］+ Noun",
+          "meaning": "Verb modified noun, Relative clause",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 27,
+          "slug": "ている1",
+          "title": "ている①",
+          "meaning": "Is, Am, Are (~ing)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1361",
+      "type": "related_content",
+      "attributes": {
+        "id": 1361,
+        "relationship_type": "related",
+        "body": "The う-Verb (Past) expresses completed actions or past states. Unlike English, verbs can directly modify nouns, similar to い-Adjectives. For example, 買った本 means 'the book [I] bought.' This typically applies only to the plain/casual verb form, while the polite ます form is used at the end of sentences or clauses.",
+        "first_relatable": {
+          "id": 357,
+          "slug": "verb-た-noun",
+          "title": "Verb［た・ている］+ Noun",
+          "meaning": "Verb modified noun, Relative clause",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 41,
+          "slug": "う-verb-past",
+          "title": "う-Verb (Past)",
+          "meaning": "う - Verbs (Past tense)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1362",
+      "type": "related_content",
+      "attributes": {
+        "id": 1362,
+        "relationship_type": "related",
+        "body": "The る-Verb (Past) expresses completed actions or past states. Unlike English, verbs can modify nouns directly, similar to い-Adjectives. For example, 食べたケーキ means 'the cake [I] ate.' This applies mainly to the plain/casual form, while the polite ます form is used at the end of clauses or sentences.",
+        "first_relatable": {
+          "id": 357,
+          "slug": "verb-た-noun",
+          "title": "Verb［た・ている］+ Noun",
+          "meaning": "Verb modified noun, Relative clause",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 895,
+          "slug": "る-verb-past",
+          "title": "る-Verb (Past)",
+          "meaning": "る - Verbs (Past tense)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1365",
+      "type": "related_content",
+      "attributes": {
+        "id": 1365,
+        "relationship_type": "related",
+        "body": "The ている① form expresses completed actions or past states. Unlike English, verbs can directly modify nouns, similar to い-Adjectives. For example, 行っている学校 means 'the school I am going to.' However, when describing a noun's state, the past form is often preferred over ている. For example, 死んだネズミ ('a dead mouse') is more common than 死んでいるネズミ.",
+        "first_relatable": {
+          "id": 357,
+          "slug": "verb-た-noun",
+          "title": "Verb［た・ている］+ Noun",
+          "meaning": "Verb modified noun, Relative clause",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 765,
+          "slug": "ている3",
+          "title": "ている③",
+          "meaning": "Has/have done, Is ~ing (Repetition)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1364",
+      "type": "related_content",
+      "attributes": {
+        "id": 1364,
+        "relationship_type": "related",
+        "body": "The ている① form expresses completed actions or past states. Unlike English, verbs can directly modify nouns, similar to い-Adjectives. However, unless emphasizing a changing state, the past form (た) is usually preferred over ている when describing nouns. For example, 死んだネズミ ('a dead mouse') is more common than 死んでいるネズミ.",
+        "first_relatable": {
+          "id": 357,
+          "slug": "verb-た-noun",
+          "title": "Verb［た・ている］+ Noun",
+          "meaning": "Verb modified noun, Relative clause",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 764,
+          "slug": "ている2",
+          "title": "ている②",
+          "meaning": "State of being, Has (have) done",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

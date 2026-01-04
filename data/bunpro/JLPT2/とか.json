@@ -1,0 +1,836 @@
+{
+  "data": {
+    "id": "339",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 339,
+      "level": "JLPT2",
+      "lesson_id": 37,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "とか",
+      "nuance": "<strong>引用（いんよう）に対（たい）して質問（しつもん）</strong>をし、聞（き）いたことに<strong>疑（うたが）い</strong>を抱（だ）いているということ示（しめ）す時（とき）に使（つか）われる表現（ひょうげん）。",
+      "grammar_order": 671,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 421,
+        "title": "〜ようではないか",
+        "slug": "ようではないか"
+      },
+      "previous_grammar_point": {
+        "id": 1092,
+        "title": "～て頂戴",
+        "slug": "て頂戴"
+      },
+      "lesson_count": "19/22",
+      "title": "とか",
+      "furigana": "とか",
+      "meaning": "I heard that… something like, They said ... or something ",
+      "nuance_translation": "A phrase which expresses <strong>uncertainty</strong> about something heard, by <strong>questioning a quote</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "</br> Verb + <strong><span class='gp-popout' data-gp-id='356'>と</span><span class='gp-popout' data-gp-id='8'>か</span></strong><br><span class='gp-popout' data-gp-id='24'>［い］Adjective</span> + <strong><span class='gp-popout' data-gp-id='356'>と</span><span class='gp-popout' data-gp-id='8'>か</span></strong><br><span class='gp-popout' data-gp-id='28'>［な］Adjective</span> + <strong><span class='gp-popout' data-gp-id='356'>と</span><span class='gp-popout' data-gp-id='8'>か</span></strong><br>Noun + <strong><span class='gp-popout' data-gp-id='356'>と</span><span class='gp-popout' data-gp-id='8'>か</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10505",
+      "metadata": "とか, toka, particle, quotation, unconfirmed, uncertain, casual"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "182241",
+            "type": "study_question"
+          },
+          {
+            "id": "182242",
+            "type": "study_question"
+          },
+          {
+            "id": "182243",
+            "type": "study_question"
+          },
+          {
+            "id": "182244",
+            "type": "study_question"
+          },
+          {
+            "id": "1233",
+            "type": "study_question"
+          },
+          {
+            "id": "180337",
+            "type": "study_question"
+          },
+          {
+            "id": "180334",
+            "type": "study_question"
+          },
+          {
+            "id": "180333",
+            "type": "study_question"
+          },
+          {
+            "id": "180332",
+            "type": "study_question"
+          },
+          {
+            "id": "180336",
+            "type": "study_question"
+          },
+          {
+            "id": "180335",
+            "type": "study_question"
+          },
+          {
+            "id": "180338",
+            "type": "study_question"
+          },
+          {
+            "id": "180339",
+            "type": "study_question"
+          },
+          {
+            "id": "180340",
+            "type": "study_question"
+          },
+          {
+            "id": "1231",
+            "type": "study_question"
+          },
+          {
+            "id": "1232",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "685",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1624",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "704",
+            "type": "related_content"
+          },
+          {
+            "id": "683",
+            "type": "related_content"
+          },
+          {
+            "id": "962",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "742",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "741",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "182241",
+      "type": "study_question",
+      "attributes": {
+        "id": 182241,
+        "content": "遠藤（えんどう）さんと近藤（こんどう）さんが結婚（けっこん）する<span class='study-area-input'>____</span>。意外（いがい）じゃない？",
+        "answer": "とか",
+        "alternate_grammar": [],
+        "kanji_answer": "とか",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/遠藤さんと近藤さんが結婚するとか。意外じゃない？.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>I heard that</strong> Endo-san and Kondo-san are getting married <strong>or something</strong>. Isn't that surprising?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 339,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182242",
+      "type": "study_question",
+      "attributes": {
+        "id": 182242,
+        "content": "あの大手（おおて）家電（かでん）メーカーが開発（かいはつ）した最新（さいしん）のスマホはたくさんのブロートウェアがインストールされているせいで動作（どうさ）がものすごく重（おも）い<span class='study-area-input'>____</span>。",
+        "answer": "とか",
+        "alternate_grammar": [],
+        "kanji_answer": "とか",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あの大手家電メーカーが開発した最新のスマホはたくさんのブロートウェアがインストールされているせいで動作がものすごく重いとか。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>I heard that</strong> the latest smartphone developed by that major appliance manufacturer performs extremely slow because of all the bloatware that comes installed, <strong>or something like that</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 339,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182243",
+      "type": "study_question",
+      "attributes": {
+        "id": 182243,
+        "content": "高橋（たかはし）くんの彼女（かのじょ）が美人（びじん）だ<span class='study-area-input'>____</span>。あんなやつに美人（びじん）な彼女（かのじょ）ができたとは信（しん）じられないけどな。",
+        "answer": "とか",
+        "alternate_grammar": [],
+        "kanji_answer": "とか",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/高橋くんの彼女が美人だとか。あんなやつに美人な彼女ができたとは信じられないけどな。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>I heard that</strong> Takahashi's girlfriend is beautiful <strong>or something</strong>. I can't believe that a guy like that could have a beautiful girlfriend, though.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 339,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182244",
+      "type": "study_question",
+      "attributes": {
+        "id": 182244,
+        "content": "あの人（ひと）は実（じつ）はお金持（かねも）ちだ<span class='study-area-input'>____</span>。",
+        "answer": "とか",
+        "alternate_grammar": [],
+        "kanji_answer": "とか",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あの人は実はお金持ちだとか。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>I heard that</strong> person is actually rich <strong>or something</strong>.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 339,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1233",
+      "type": "study_question",
+      "attributes": {
+        "id": 1233,
+        "content": "ＡＫＢ（えーけーびー）４８（ふぉーてぃーえいと）という音楽（おんがく）グループは解散（かいさん）する<span class='study-area-input'>____</span>。",
+        "answer": "とか",
+        "alternate_grammar": [],
+        "kanji_answer": "とか",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>引用（いんよう）に対（たい）して質問（しつもん）</strong>をし、聞（き）いたことに<strong>疑（うたが）い</strong>を抱（だ）いているということ示（しめ）す時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/ＡＫＢ４８という音楽グループは解散するとか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "らしい": {
+            "en": "Can you use something other than ときいた andらしい",
+            "es": ""
+          },
+          "ときいた": {
+            "en": "Can you use something other than ときいた andらしい",
+            "es": ""
+          },
+          "そうだ": {
+            "en": "Can you say it another way? Think 'quote in an indefinite manner + uncertainty'",
+            "es": ""
+          },
+          "そうです": {
+            "en": "Can you say it another way? Think 'quote in an indefinite manner + uncertainty'",
+            "es": ""
+          },
+          "ということだ": {
+            "en": "Can you say it another way? Think 'quote in an indefinite manner + uncertainty'",
+            "es": ""
+          },
+          "ということです": {
+            "en": "Can you say it another way? Think 'quote in an indefinite manner + uncertainty'",
+            "es": ""
+          },
+          "んだって": {
+            "en": "Can you say it another way? Looking for something used to present a quote in an indefinite manner, where one part is a quotation particle and the other is a question particle which adds uncertainty.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>I heard that</strong> the music group called AKB48 is going to break up <strong>or something like that</strong>.",
+        "nuance_translation": "A phrase which expresses <strong>uncertainty</strong> about something heard, by <strong>questioning a quote</strong>.",
+        "extra_info": "",
+        "reviewable_id": 339,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180337",
+      "type": "study_question",
+      "attributes": {
+        "id": 180337,
+        "content": "鉄分（てつぶん）が不足（ふそく）すると無駄（むだ）に落（お）ち込（こ）みやすくなったりするんだ<span class='study-area-input'>____</span>…。",
+        "answer": "とか",
+        "alternate_grammar": [],
+        "kanji_answer": "とか",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>引用（いんよう）に対（たい）して質問（しつもん）</strong>をし、聞（き）いたことに<strong>疑（うたが）い</strong>を抱（だ）いているということ示（しめ）す時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/鉄分が不足すると無駄に落ち込みやすくなったりするんだとか…。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It's said that if you have an iron deficiency, it's easy for you to get pointlessly depressed <strong>or something like that</strong>.",
+        "nuance_translation": "A phrase which expresses <strong>uncertainty</strong> about something heard, by <strong>questioning a quote</strong>.",
+        "extra_info": "",
+        "reviewable_id": 339,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180334",
+      "type": "study_question",
+      "attributes": {
+        "id": 180334,
+        "content": "最近（さいきん）はカラーサングラスが流行（はや）っている<span class='study-area-input'>____</span>。",
+        "answer": "とか",
+        "alternate_grammar": [],
+        "kanji_answer": "とか",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>引用（いんよう）に対（たい）して質問（しつもん）</strong>をし、聞（き）いたことに<strong>疑（うたが）い</strong>を抱（だ）いているということ示（しめ）す時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/最近はカラーサングラスが流行っているとか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I heard that color sunglasses are popular recently <strong>or something like that</strong>.",
+        "nuance_translation": "A phrase which expresses <strong>uncertainty</strong> about something heard, by <strong>questioning a quote</strong>.",
+        "extra_info": "",
+        "reviewable_id": 339,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180333",
+      "type": "study_question",
+      "attributes": {
+        "id": 180333,
+        "content": "このワンピースは体型（たいけい）をカバーする<span class='study-area-input'>____</span>。",
+        "answer": "とか",
+        "alternate_grammar": [],
+        "kanji_answer": "とか",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>引用（いんよう）に対（たい）して質問（しつもん）</strong>をし、聞（き）いたことに<strong>疑（うたが）い</strong>を抱（だ）いているということ示（しめ）す時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/このワンピースは体型をカバーするとか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I heard that this dress conceals your physique <strong>or something like that</strong>.",
+        "nuance_translation": "A phrase which expresses <strong>uncertainty</strong> about something heard, by <strong>questioning a quote</strong>.",
+        "extra_info": "",
+        "reviewable_id": 339,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180332",
+      "type": "study_question",
+      "attributes": {
+        "id": 180332,
+        "content": "納豆（なっとう）は体（からだ）にいいんだ<span class='study-area-input'>____</span>。",
+        "answer": "とか",
+        "alternate_grammar": [],
+        "kanji_answer": "とか",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>引用（いんよう）に対（たい）して質問（しつもん）</strong>をし、聞（き）いたことに<strong>疑（うたが）い</strong>を抱（だ）いているということ示（しめ）す時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/納豆は体にいいんだとか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I heard that Natto is good for your body <strong>or something like that</strong>.",
+        "nuance_translation": "A phrase which expresses <strong>uncertainty</strong> about something heard, by <strong>questioning a quote</strong>.",
+        "extra_info": "",
+        "reviewable_id": 339,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180336",
+      "type": "study_question",
+      "attributes": {
+        "id": 180336,
+        "content": "先生（せんせい）がテストの問題（もんだい）は難（むずか）しくない<span class='study-area-input'>____</span>言（い）ってたけど本当（ほんとう）かな？",
+        "answer": "とか",
+        "alternate_grammar": [],
+        "kanji_answer": "とか",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>引用（いんよう）に対（たい）して質問（しつもん）</strong>をし、聞（き）いたことに<strong>疑（うたが）い</strong>を抱（だ）いているということ示（しめ）す時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/先生がテストの問題は難しくないとか言ってたけど本当かな？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The teacher was saying that the test questions weren't hard <strong>or something like that</strong>, but I wonder if it's true.",
+        "nuance_translation": "A phrase which expresses <strong>uncertainty</strong> about something heard, by <strong>questioning a quote</strong>.",
+        "extra_info": "",
+        "reviewable_id": 339,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180335",
+      "type": "study_question",
+      "attributes": {
+        "id": 180335,
+        "content": "お母（かあ）さんが朝（あさ）ごはんを食（た）べるのは大事（だいじ）だ<span class='study-area-input'>____</span>言（い）っていた。",
+        "answer": "とか",
+        "alternate_grammar": [],
+        "kanji_answer": "とか",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>引用（いんよう）に対（たい）して質問（しつもん）</strong>をし、聞（き）いたことに<strong>疑（うたが）い</strong>を抱（だ）いているということ示（しめ）す時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/お母さんが朝ごはんを食べるのは大事だとか言っていた。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Mom was saying that eating breakfast is important <strong>or something like that</strong>.",
+        "nuance_translation": "A phrase which expresses <strong>uncertainty</strong> about something heard, by <strong>questioning a quote</strong>.",
+        "extra_info": "",
+        "reviewable_id": 339,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180338",
+      "type": "study_question",
+      "attributes": {
+        "id": 180338,
+        "content": "この計画（けいかく）は絶対（ぜったい）成功（せいこう）する<span class='study-area-input'>____</span>言（い）ってたけどさ、そんな甘（あま）くないよね。",
+        "answer": "とか",
+        "alternate_grammar": [],
+        "kanji_answer": "とか",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>引用（いんよう）に対（たい）して質問（しつもん）</strong>をし、聞（き）いたことに<strong>疑（うたが）い</strong>を抱（だ）いているということ示（しめ）す時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/この計画は絶対成功するとか言ってたけどさ、そんな甘くないよね。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "You were saying that this plan will definitely succeed <strong>or something like that</strong>, right? You're not really that naive are you?",
+        "nuance_translation": "A phrase which expresses <strong>uncertainty</strong> about something heard, by <strong>questioning a quote</strong>.",
+        "extra_info": "",
+        "reviewable_id": 339,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180339",
+      "type": "study_question",
+      "attributes": {
+        "id": 180339,
+        "content": "今日（きょう）は雨（あめ）が降（ふ）るんだ<span class='study-area-input'>____</span>。だったら、傘（かさ）を持（も）って行（い）かないわけにはいかない。",
+        "answer": "とか",
+        "alternate_grammar": [],
+        "kanji_answer": "とか",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>引用（いんよう）に対（たい）して質問（しつもん）</strong>をし、聞（き）いたことに<strong>疑（うたが）い</strong>を抱（だ）いているということ示（しめ）す時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/今日は雨が降るんだとか。だったら、傘を持って行かないわけにはいかない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It's going to rain today <strong>or something like that</strong>. If that's the case, then there's no way I can go without an umbrella.",
+        "nuance_translation": "A phrase which expresses <strong>uncertainty</strong> about something heard, by <strong>questioning a quote</strong>.",
+        "extra_info": "",
+        "reviewable_id": 339,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180340",
+      "type": "study_question",
+      "attributes": {
+        "id": 180340,
+        "content": "地球温暖化（ちきゅうおんだんか）に関（かん）する問題（もんだい）は解決（かいけつ）しうる<span class='study-area-input'>____</span>…。でも、現状（げんじょう）は悪（わる）くなる一方（いっぽう）である。",
+        "answer": "とか",
+        "alternate_grammar": [],
+        "kanji_answer": "とか",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>引用（いんよう）に対（たい）して質問（しつもん）</strong>をし、聞（き）いたことに<strong>疑（うたが）い</strong>を抱（だ）いているということ示（しめ）す時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/地球温暖化に関する問題は解決しうるとか…。でも、現状は悪くなる一方である。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It's said that we're able to solve the problems in relation to global warming <strong>or something like that</strong>... But the real situation is that it just keeps getting worse.",
+        "nuance_translation": "A phrase which expresses <strong>uncertainty</strong> about something heard, by <strong>questioning a quote</strong>.",
+        "extra_info": "",
+        "reviewable_id": 339,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1231",
+      "type": "study_question",
+      "attributes": {
+        "id": 1231,
+        "content": "<span class='name-highlight'>めがねちゃん</span>：「彼（かれ）が昨日（きのう）、何（なん）て言（い）ったか覚（おぼ）えてる？」<br /> <span class='chui'>ヤンキー君</span>：「明日（あした）、１１（じゅういち）時（じ）ごろに学校（がっこう）の前（まえ）で会（あ）おう<span class='study-area-input'>____</span>言（い）っていたようだけど、定（さだ）かではない。」",
+        "answer": "とか",
+        "alternate_grammar": [],
+        "kanji_answer": "とか",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>引用（いんよう）に対（たい）して質問（しつもん）</strong>をし、聞（き）いたことに<strong>疑（うたが）い</strong>を抱（だ）いているということ示（しめ）す時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/めがねちゃん：「彼が昨日、何て言ったか覚えてる？」 ヤンキー君：「明日、１１時ごろに学校の前で会おうとか言っていたようだけど、定かではない。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "など": {
+            "en": "Looking for 'Something like'",
+            "es": ""
+          },
+          "と": {
+            "en": "Can you add uncertainty?",
+            "es": ""
+          },
+          "って": {
+            "en": "Can you add uncertainty?",
+            "es": ""
+          },
+          "んだって": {
+            "en": "Can you say it another way? Looking for something used to present a quote in an indefinite manner, where one part is a quotation particle and the other is a question particle which adds uncertainty.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Megane-chan</span>: 'Do you remember what he said yesterday?'<br /> <span class='chui'>Yankee-kun</span>: '<strong>He said</strong>, 'lets meet in front of school around 11' <strong>or something like that</strong>, but I am not really sure.'",
+        "nuance_translation": "A phrase which expresses <strong>uncertainty</strong> about something heard, by <strong>questioning a quote</strong>.",
+        "extra_info": "",
+        "reviewable_id": 339,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1232",
+      "type": "study_question",
+      "attributes": {
+        "id": 1232,
+        "content": "社長（しゃちょう）は年末（ねんまつ）年始（ねんし）に温泉（おんせん）旅行（りょこう）に行（い）ってらっしゃる<span class='study-area-input'>____</span>。",
+        "answer": "とか",
+        "alternate_grammar": [],
+        "kanji_answer": "とか",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>引用（いんよう）に対（たい）して質問（しつもん）</strong>をし、聞（き）いたことに<strong>疑（うたが）い</strong>を抱（だ）いているということ示（しめ）す時（とき）に使（つか）われる表現（ひょうげん）。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/社長は年末年始に温泉旅行に行ってらっしゃるとか。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ときいた": {
+            "en": "Can you use something other than ときいた andらしい",
+            "es": ""
+          },
+          "らしい": {
+            "en": "Can you use something other than ときいた andらしい",
+            "es": ""
+          },
+          "そうだ": {
+            "en": "Can you say it another way? Think 'quote in an indefinite manner + uncertainty'",
+            "es": ""
+          },
+          "ということだ": {
+            "en": "Can you say it another way? Think 'quote in an indefinite manner + uncertainty'",
+            "es": ""
+          },
+          "そうです": {
+            "en": "Can you say it another way? Think 'quote in an indefinite manner + uncertainty'",
+            "es": ""
+          },
+          "ということです": {
+            "en": "Can you say it another way? Think 'quote in an indefinite manner + uncertainty'",
+            "es": ""
+          },
+          "んだって": {
+            "en": "Can you say it another way? Looking for something used to present a quote in an indefinite manner, where one part is a quotation particle and the other is a question particle which adds uncertainty.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>I heard that</strong> the company president is going on a hot springs trip over New Years <strong>or something like that</strong>.",
+        "nuance_translation": "A phrase which expresses <strong>uncertainty</strong> about something heard, by <strong>questioning a quote</strong>.",
+        "extra_info": "",
+        "reviewable_id": 339,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "685",
+      "type": "writeup",
+      "attributes": {
+        "id": 685,
+        "body_ja": "<p>助詞（じょし）「と」と「か」を組（く）み合（あ）わせた「<span data-gp-id='339'>とか</span>」は、誰（だれ）かから聞（き）いた本当（ほんとう）かどうかははっきりしない情報（じょうほう）を伝（つた）えるときの表現（ひょうげん）です。「(A) らしい」や「(A) だそうだ」というような意味（いみ）で使（つか）われます。</p>\r\n\r\n<p>「<span data-gp-id='339'>とか</span>」は動詞（どうし）、イ形容詞（けいようし）、ナ形容詞（けいようし）、そして名詞（めいし）の後（あと）に付（つ）けて使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182241'>\r\n<li data-study-question='182242'>\r\n<li data-study-question='182243'>\r\n<li data-study-question='182244'>\r\n</ul>\r\n\r\n<p>この意味（いみ）の「<span data-gp-id='339'>とか</span>」はかなり砕（くだ）けた表現（ひょうげん）で、日常（にちじょう）会話（かいわ）でよく使（つか）われます。</p>\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>この伝聞（でんぶん）を表（あらわ）す「<span data-gp-id='339'>とか</span>」は、いくつかの例（れい）を挙（あ）げる「とか」と同（おな）じ形（かたち）をしています。しかし、前者（ぜんしゃ）は格助詞（かくじょし）の「と」と副助詞（ふくじょし）の「か」の組（く）み合（あ）わせ、後者（こうしゃ）は「とか」で一（ひと）つの助詞（じょし）として扱（あつか）われています。ただし、どちらも元（もと）は「と」と「か」からできているので、意味（いみ）において重（かさ）なる部分（ぶぶん）はあるでしょう。</p></section>",
+        "body": "<p>Being a combination of the particles と and か, <span data-gp-id='339'>とか</span> 'quotes' the previous statement as being something that has been heard, but is unconfirmed or uncertain. In English, this translates as 'I heard something like (A)', or '(A) or something was said'.</p>\r\n\r\n<p><span data-gp-id='339'>とか</span> may appear after verbs, い-Adjectives, な-Adjectives, or nouns.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182241'>\r\n<li data-study-question='182242'>\r\n<li data-study-question='182243'>\r\n<li data-study-question='182244'>\r\n</ul>\r\n\r\n<p>This meaning of 'or something' when using <span data-gp-id='339'>とか</span> is fairly casual and will often be heard in everyday conversation.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>This combination of と and か may appear the same as the とか used to indicate lists, but the former is simply a combination of the case-marking particle と, and the <span data-term='副助詞・ふくじょし'>adverbial particle</span> か, while the latter is a single <span data-term='並立助詞・へいりつじょし'>listing particle</span>. Despite this, both structures are originally combinations of と and か, and may be thought to have some overlap in meaning.</p></section>"
+      }
+    },
+    {
+      "id": "1624",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1624,
+        "source": "[AIAIJ] An Integrated Approach to Intermediate Japanese",
+        "location": "Page 292",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "742",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 742,
+        "site": "Japanese StackExchange",
+        "description": "とか vs. って vs. という vs. と言われている",
+        "link": "https://japanese.stackexchange.com/questions/14579/%e3%81%a8%e3%81%8b-vs-%e3%81%a3%e3%81%a6-vs-%e3%81%a8%e3%81%84%e3%81%86-vs-%e3%81%a8%e8%a8%80%e3%82%8f%e3%82%8c%e3%81%a6%e3%81%84%e3%82%8b/14580#14580",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "741",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 741,
+        "site": "japanesetest4you",
+        "description": "とか",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-とか-toka/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "704",
+      "type": "related_content",
+      "attributes": {
+        "id": 704,
+        "relationship_type": "related",
+        "body": "Both can report hearsay, but with different tone. とか is casual and vague, often implying uncertainty, similar to 'I heard / They say (A), or something.' ということだ is more formal and declarative, closer to 'The word is (A).' ということだ can also be used to draw conclusions (i.e. 'that means (A)'), which とか cannot.",
+        "first_relatable": {
+          "id": 339,
+          "slug": "とか",
+          "title": "とか",
+          "meaning": "I heard that… something like, They said ... or something ",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 216,
+          "slug": "ということだ",
+          "title": "ということだ",
+          "meaning": "I heard that, Rumor has it that, It is said that, It means that",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "683",
+      "type": "related_content",
+      "attributes": {
+        "id": 683,
+        "relationship_type": "related",
+        "body": "Both can relay hearsay, but with different levels of certainty. とか adds a nuance of vagueness or uncertainty, e.g. 来月引っ越すとか ('I heard they might be moving next month, or something.') そうだ also conveys hearsay, but with less ambiguity, e.g. 来月引っ越すそうだ ('I heard they're moving next month.')",
+        "first_relatable": {
+          "id": 339,
+          "slug": "とか",
+          "title": "とか",
+          "meaning": "I heard that… something like, They said ... or something ",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 200,
+          "slug": "そうだ",
+          "title": "そうだ ",
+          "meaning": "I heard that, It is said that",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "962",
+      "type": "related_content",
+      "attributes": {
+        "id": 962,
+        "relationship_type": "related",
+        "body": "These two expressions are similar in that both can serve as casual expressions of hearsay, i.e. 'they say (A)' or 'I hear (A)'. The difference is that んだって has a slightly more explanatory and emphatic nuance due to the presence of ん, while とか has an uncertain or non-specific tone, i.e. 'I hear (A) or something', because of the presence of the question particle か.",
+        "first_relatable": {
+          "id": 246,
+          "slug": "んだって",
+          "title": "んだって",
+          "meaning": "I heard that, He or She said that",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 339,
+          "slug": "とか",
+          "title": "とか",
+          "meaning": "I heard that… something like, They said ... or something ",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

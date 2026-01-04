@@ -1,0 +1,1249 @@
+{
+  "data": {
+    "id": "115",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 115,
+      "level": "JLPT4",
+      "lesson_id": 12,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "はじめる",
+      "nuance": "ある<strong>行為（こうい）が開始（かいし）されている</strong>ことを表（あらわ）す文法（ぶんぽう）。",
+      "grammar_order": 151,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 126,
+        "title": "おわる",
+        "slug": "おわる"
+      },
+      "previous_grammar_point": {
+        "id": 364,
+        "title": "また",
+        "slug": "また"
+      },
+      "lesson_count": "6/17",
+      "title": "はじめる",
+      "furigana": "始（はじ）める",
+      "meaning": "To start, To begin to",
+      "nuance_translation": "A construction that indicates that an <strong>action</strong> is <strong>being started</strong>.",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": "<span class='gp-popout' data-gp-id='26'>Verb［stem］</span>+ <strong>はじめます</strong>",
+      "casual_structure": "<span class='gp-popout' data-gp-id='26'>Verb［stem］</span>+ <strong>はじめる</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/3966",
+      "metadata": "はじめる, 始める, hajimeru, ichidan verb, ichidankatuyou, る-verb, reu-verb, transitive, auxiliary verb"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "180247",
+            "type": "study_question"
+          },
+          {
+            "id": "180248",
+            "type": "study_question"
+          },
+          {
+            "id": "180250",
+            "type": "study_question"
+          },
+          {
+            "id": "180251",
+            "type": "study_question"
+          },
+          {
+            "id": "2634",
+            "type": "study_question"
+          },
+          {
+            "id": "174",
+            "type": "study_question"
+          },
+          {
+            "id": "175",
+            "type": "study_question"
+          },
+          {
+            "id": "180249",
+            "type": "study_question"
+          },
+          {
+            "id": "2635",
+            "type": "study_question"
+          },
+          {
+            "id": "2636",
+            "type": "study_question"
+          },
+          {
+            "id": "2638",
+            "type": "study_question"
+          },
+          {
+            "id": "2640",
+            "type": "study_question"
+          },
+          {
+            "id": "2633",
+            "type": "study_question"
+          },
+          {
+            "id": "2639",
+            "type": "study_question"
+          },
+          {
+            "id": "176",
+            "type": "study_question"
+          },
+          {
+            "id": "2641",
+            "type": "study_question"
+          },
+          {
+            "id": "2637",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "150",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "463",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1049",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1560",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "550",
+            "type": "related_content"
+          },
+          {
+            "id": "614",
+            "type": "related_content"
+          },
+          {
+            "id": "549",
+            "type": "related_content"
+          },
+          {
+            "id": "1185",
+            "type": "related_content"
+          },
+          {
+            "id": "548",
+            "type": "related_content"
+          },
+          {
+            "id": "551",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "231",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1091",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "232",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "180247",
+      "type": "study_question",
+      "attributes": {
+        "id": 180247,
+        "content": "来月（らいげつ）<span class=\"gp-popout\" data-gp-id=\"52\">から</span>お金（かね）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>ため<span class='study-area-input'>____</span>。",
+        "answer": "はじめます",
+        "alternate_grammar": [],
+        "kanji_answer": "始（はじ）めます",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/来月からお金をため始めます。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I will <strong>start</strong> saving money from next month.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 115,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180248",
+      "type": "study_question",
+      "attributes": {
+        "id": 180248,
+        "content": "歌（うた）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>歌（うた）い<span class='study-area-input'>____</span>。",
+        "answer": "はじめる",
+        "alternate_grammar": [],
+        "kanji_answer": "始（はじ）める",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/歌を歌い始める。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "To <strong>start</strong> singing a song.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 115,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180250",
+      "type": "study_question",
+      "attributes": {
+        "id": 180250,
+        "content": "<span class=\"vocab-popout\" data-vocab-id=\"1047\">雨（あめ）</span><span class=\"gp-popout\" data-gp-id=\"10\">が</span><span class='study-area-input'>____</span>。",
+        "answer": "ふりはじめてきた",
+        "alternate_grammar": [],
+        "kanji_answer": "降（ふ）り始（はじ）めてきた",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/雨が降り始めてきた。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It is <strong>starting</strong> to rain. (Is starting)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 115,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180251",
+      "type": "study_question",
+      "attributes": {
+        "id": 180251,
+        "content": "<span class=\"vocab-popout\" data-vocab-id=\"1089\">高校生（こうこうせい）</span><span class=\"gp-popout\" data-gp-id=\"6\">の</span><span class=\"vocab-popout\" data-vocab-id=\"652\">時（とき）</span><span class=\"gp-popout\" data-gp-id=\"32\">に</span><span class=\"vocab-popout\" data-vocab-id=\"62\">お金（かね）</span><span class=\"gp-popout\" data-gp-id=\"21\">を</span><span class='study-area-input'>____</span>。",
+        "answer": "ためはじめた",
+        "alternate_grammar": [],
+        "kanji_answer": "貯（た）め始（はじ）めた",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/高校生の時にお金を貯め始めた。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": " I <strong>started</strong> saving up money when I was in high school. (Has started)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 115,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2634",
+      "type": "study_question",
+      "attributes": {
+        "id": 2634,
+        "content": "練習（れんしゅう）<span class='study-area-input'>____</span>ください。",
+        "answer": "しはじめて",
+        "alternate_grammar": [],
+        "kanji_answer": "しはじめて",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行為（こうい）が開始（かいし）されている</strong>ことを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Request",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/115/male_audio/230224_1200.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/練習しはじめてください。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はじめた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "しだして": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Please begin to (do)</strong> practice.",
+        "nuance_translation": "A construction that indicates that an <strong>action</strong> is <strong>being started</strong>.",
+        "extra_info": "",
+        "reviewable_id": 115,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "174",
+      "type": "study_question",
+      "attributes": {
+        "id": 174,
+        "content": "今朝（けさ）、雪（ゆき）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>。",
+        "answer": "ふりはじめた",
+        "alternate_grammar": [],
+        "kanji_answer": "降（ふ）りはじめた",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行為（こうい）が開始（かいし）されている</strong>ことを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/115/male_audio/230224_1159.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/今朝、雪が降りはじめた。.mp3",
+        "word_prompt": "降（ふ）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ふりはじめました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "ふりだした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ふりはじめる": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "ふってはじめた": {
+            "en": "はじめる can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "ふりはじまった": {
+            "en": "When used in a compound verb (like “to start doing something”), 始める is always used, even if the main verb is intransitive.",
+            "es": "",
+            "fr": ""
+          },
+          "ふっていた": {
+            "en": "This means 'it was snowing.' We're looking for a grammar point that expresses that an action is starting.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "It <strong>started to snow</strong> this morning. ",
+        "nuance_translation": "A construction that indicates that an <strong>action</strong> is <strong>being started</strong>.",
+        "extra_info": "",
+        "reviewable_id": 115,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "175",
+      "type": "study_question",
+      "attributes": {
+        "id": 175,
+        "content": "明日（あした）<span class='gp-popout' data-gp-id='52'>から</span>、日本語（にほんご）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>。",
+        "answer": "ならいはじめます",
+        "alternate_grammar": [],
+        "kanji_answer": "習（なら）いはじめます",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行為（こうい）が開始（かいし）されている</strong>ことを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Polite",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/115/male_audio/230224_1159_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/明日から、日本語を習いはじめます。.mp3",
+        "word_prompt": "習（なら）<span class='gp-popout' data-gp-id='26'>う</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ならいはじめる": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ならいだします": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ならいはじます": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "ならいはじめた": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "ならってはじめます": {
+            "en": "はじめる can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "ならいます": {
+            "en": "We are looking for a grammar point that is used to express that actions are beginning.",
+            "es": "",
+            "fr": ""
+          },
+          "ならはじめます": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I will <strong>start learning</strong> Japanese from tomorrow. ",
+        "nuance_translation": "A construction that indicates that an <strong>action</strong> is <strong>being started</strong>.",
+        "extra_info": "",
+        "reviewable_id": 115,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180249",
+      "type": "study_question",
+      "attributes": {
+        "id": 180249,
+        "content": "<span class=\"vocab-popout\" data-vocab-id=\"643\">明日（あした）</span><span class=\"gp-popout\" data-gp-id=\"52\">から</span><span class=\"vocab-popout\" data-vocab-id=\"637\">日本語（にほんご）</span><span class=\"gp-popout\" data-gp-id=\"21\">を</span><span class='study-area-input'>____</span>。",
+        "answer": "ならいはじめる",
+        "alternate_grammar": [],
+        "kanji_answer": "習（なら）い始（はじ）める",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/明日から日本語を習い始める。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I <strong>will start</strong> learning Japanese from tomorrow. (Will start)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 115,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2635",
+      "type": "study_question",
+      "attributes": {
+        "id": 2635,
+        "content": "<span class='gp-popout' data-gp-id='364'>また</span><span class='study-area-input'>____</span>。本当（ほんとう）にあいつらうるさいね。",
+        "answer": "さわぎはじめた",
+        "alternate_grammar": [],
+        "kanji_answer": "騒（さわ）ぎはじめた",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行為（こうい）が開始（かいし）されている</strong>ことを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/115/male_audio/230224_1201.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/また騒ぎはじめた。本当にあいつらうるさいね。.mp3",
+        "word_prompt": "騒（さわ）ぐ",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "さわぎだした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "さわぎはじめました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "さわぎはじまた": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": ""
+          },
+          "さわぎはじめて": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          },
+          "さわぎはじめる": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "さわぎはじまった": {
+            "en": "When used in a compound verb (like “to start doing something”), 始める is always used, even if the main verb is intransitive.",
+            "es": "",
+            "fr": ""
+          },
+          "さわ": {
+            "en": "We are looking for a grammar point that is used to express that actions are beginning.",
+            "es": "",
+            "fr": ""
+          },
+          "さわいではじめた": {
+            "en": "We are looking for a grammar point that is used to express that actions are beginning.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "They <strong>started being boisterous</strong> again. They are really noisy, aren't they?",
+        "nuance_translation": "A construction that indicates that an <strong>action</strong> is <strong>being started</strong>.",
+        "extra_info": "",
+        "reviewable_id": 115,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2636",
+      "type": "study_question",
+      "attributes": {
+        "id": 2636,
+        "content": "９（く）時（じ）になっ<span class='gp-popout' data-gp-id='64'>てから</span>、<span class='study-area-input'>____</span>。",
+        "answer": "はたらきはじめた",
+        "alternate_grammar": [],
+        "kanji_answer": "働（はたら）きはじめた",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行為（こうい）が開始（かいし）されている</strong>ことを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/115/male_audio/230224_1201_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/９時になってから、働きはじめた。.mp3",
+        "word_prompt": "働（はたら）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はたらきだした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "はたらきはじめました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "はたらきはじまった": {
+            "en": "When used in a compound verb (like 'to start doing something'), 始める is always used.",
+            "es": "",
+            "fr": ""
+          },
+          "はたらきはじめる": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "はたらいてはじめた": {
+            "en": "はじめる can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "はたらいはじめた": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I <strong>started working</strong> from nine. ",
+        "nuance_translation": "A construction that indicates that an <strong>action</strong> is <strong>being started</strong>.",
+        "extra_info": "",
+        "reviewable_id": 115,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2638",
+      "type": "study_question",
+      "attributes": {
+        "id": 2638,
+        "content": "<span class='vocab-popout' data-vocab-id='564'>彼（かれ）</span><span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>から１（いち）時間（じかん）経（た）った。",
+        "answer": "はなしはじめて",
+        "alternate_grammar": [],
+        "kanji_answer": "話（はな）し始（はじ）めて",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行為（こうい）が開始（かいし）されている</strong>ことを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "て",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/115/male_audio/230224_1202.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/彼が話し始めてから１時間経った。.mp3",
+        "word_prompt": "話（はな）す",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はなしだした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "はなしはじめました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It has been an hour since he <strong>started</strong> talking.",
+        "nuance_translation": "A construction that indicates that an <strong>action</strong> is <strong>being started</strong>.",
+        "extra_info": "",
+        "reviewable_id": 115,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2640",
+      "type": "study_question",
+      "attributes": {
+        "id": 2640,
+        "content": "海（うみ）<span class='gp-popout' data-gp-id='32'>に</span>行（い）ってすぐ<span class='study-area-input'>____</span>。",
+        "answer": "およぎはじめた",
+        "alternate_grammar": [],
+        "kanji_answer": "泳（およ）ぎはじめた",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行為（こうい）が開始（かいし）されている</strong>ことを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/115/male_audio/230224_1202_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/海に行ってすぐ泳ぎはじめた。.mp3",
+        "word_prompt": "泳（およ）<span class='gp-popout' data-gp-id='26'>ぐ</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "およぎだした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "",
+            "fr": ""
+          },
+          "およぎはじめました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "",
+            "fr": ""
+          },
+          "およぎはじめる": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "およいではじめた": {
+            "en": "はじめる can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": null
+          },
+          "およぎはじまった": {
+            "en": "When used in a compound verb (like “to start doing something”), 始める is always used, even if the main verb is intransitive.",
+            "es": "",
+            "fr": null
+          },
+          "およいはじめた": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": null
+          }
+        },
+        "translation": "I went to the ocean and <strong>started swimming</strong> at once. ",
+        "nuance_translation": "A construction that indicates that an <strong>action</strong> is <strong>being started</strong>.",
+        "extra_info": "",
+        "reviewable_id": 115,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2633",
+      "type": "study_question",
+      "attributes": {
+        "id": 2633,
+        "content": "日本（にほん）<span class='gp-popout' data-gp-id='32'>に</span>行（い）っ<span class='gp-popout' data-gp-id='64'>てから</span>、文法（ぶんぽう）<span class='gp-popout' data-gp-id='21'>を</span>勉強（べんきょう）<span class='study-area-input'>____</span>。",
+        "answer": "しはじめた",
+        "alternate_grammar": [],
+        "kanji_answer": "しはじめた",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行為（こうい）が開始（かいし）されている</strong>ことを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/115/male_audio/230224_1159_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/日本に行ってから、文法を勉強しはじめた。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しだす": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "しはじめました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "しはじまった": {
+            "en": "When used in a compound verb (like 'to start doing something'), 始める is always used",
+            "es": "",
+            "fr": ""
+          },
+          "しはじめる": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "してはじめた": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I <strong>started studying</strong> grammar after going to Japan. ",
+        "nuance_translation": "A construction that indicates that an <strong>action</strong> is <strong>being started</strong>.",
+        "extra_info": "",
+        "reviewable_id": 115,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2639",
+      "type": "study_question",
+      "attributes": {
+        "id": 2639,
+        "content": "日本語（にほんご）<span class='gp-popout' data-gp-id='21'>を</span>勉強（べんきょう）<span class='study-area-input'>____</span>すぐ、日本語（にほんご）<span class='gp-popout' data-gp-id='6'>の</span>難（むずか）し<span class='gp-popout' data-gp-id='111'>さ</span><span class='gp-popout' data-gp-id='10'>が</span>分（わ）か<span class='gp-popout' data-gp-id='41'>った</span>。",
+        "answer": "しはじめて",
+        "alternate_grammar": [],
+        "kanji_answer": "しはじめて",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行為（こうい）が開始（かいし）されている</strong>ことを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "て",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/115/male_audio/230224_1202_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/日本語を勉強しはじめてすぐ、日本語の難しさが分かった。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "はじめた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "しだして": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "しだした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "しはじめた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "しはじめ": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          },
+          "しはじめる": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "してはじめた": {
+            "en": "はじめる can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "してはじめて": {
+            "en": "はじめる can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Right after I <strong>started studying</strong> Japanese, I realized the difficulty of the language. ",
+        "nuance_translation": "A construction that indicates that an <strong>action</strong> is <strong>being started</strong>.",
+        "extra_info": "",
+        "reviewable_id": 115,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "176",
+      "type": "study_question",
+      "attributes": {
+        "id": 176,
+        "content": "大学（だいがく）<span class='gp-popout' data-gp-id='21'>を</span>卒業（そつぎょう）し<span class='gp-popout' data-gp-id='64'>てから</span>、仕事（しごと）に<span class='study-area-input'>____</span>。",
+        "answer": "いきはじめた",
+        "alternate_grammar": [],
+        "kanji_answer": "行（い）きはじめた",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行為（こうい）が開始（かいし）されている</strong>ことを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/115/male_audio/230224_1159_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/大学を卒業してから、仕事に行きはじめた。.mp3",
+        "word_prompt": "行（い）<span class='gp-popout' data-gp-id='26'>く</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いきはじめました": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "いきだした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "いきはじめる": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "いってはじめた": {
+            "en": "はじめる can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "I <strong>started going</strong> to work after graduation from college. ",
+        "nuance_translation": "A construction that indicates that an <strong>action</strong> is <strong>being started</strong>.",
+        "extra_info": "",
+        "reviewable_id": 115,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2641",
+      "type": "study_question",
+      "attributes": {
+        "id": 2641,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>商品（しょうひん）<span class='gp-popout' data-gp-id='21'>を</span><span class='study-area-input'>____</span>から、<span class='gp-popout' data-gp-id='362'>どんどん</span>お客（きゃく）さん<span class='gp-popout' data-gp-id='10'>が</span>増（ふ）えています。",
+        "answer": "うりはじめて",
+        "alternate_grammar": [],
+        "kanji_answer": "売（う）りはじめて",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行為（こうい）が開始（かいし）されている</strong>ことを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この商品を売りはじめてから、どんどんお客さんが増えています。.mp3",
+        "word_prompt": "売（う）<span class='gp-popout' data-gp-id='26'>る</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "うりはじめた": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "うりだした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "うりだして": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "うりはじめる": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "うってはじめた": {
+            "en": "はじめる can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "うってはじめて": {
+            "en": "はじめる can only be conjugated with the stem form of verbs.",
+            "es": "",
+            "fr": ""
+          },
+          "うって": {
+            "en": "We are looking for a grammar point that is used to express that actions are beginning.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Since we <strong>started selling</strong> this product, customers have been on the rise.",
+        "nuance_translation": "A construction that indicates that an <strong>action</strong> is <strong>being started</strong>.",
+        "extra_info": "",
+        "reviewable_id": 115,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2637",
+      "type": "study_question",
+      "attributes": {
+        "id": 2637,
+        "content": "<span class='gp-popout' data-gp-id='363'>まず</span>ひらがな<span class='gp-popout' data-gp-id='15'>と</span>カタカナ<span class='gp-popout' data-gp-id='21'>を</span>勉強（べんきょう）して、<span class='gp-popout' data-gp-id='37'>その</span>後（あと）漢字（かんじ）<span class='gp-popout' data-gp-id='21'>を</span>勉強（べんきょう）<span class='study-area-input'>____</span>方（ほう）が<span class='gp-popout' data-gp-id='7'>いい</span><span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "しはじめた",
+        "alternate_grammar": [],
+        "kanji_answer": "しはじめた",
+        "kanji_alt_grammar": [],
+        "nuance": "ある<strong>行為（こうい）が開始（かいし）されている</strong>ことを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Past, Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson2/115/male_audio/230224_1201_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/まずひらがなとカタカナを勉強して、その後漢字を勉強しはじめた方がいいよ。.mp3",
+        "word_prompt": "<span class='gp-popout' data-gp-id='12'>する</span>",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しだした": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "しはじめる": {
+            "en": "Check the tense hint! ",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "しはじめて": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "First study hiragana and katakana. After that it would be better if you <strong>began to study</strong> kanji.",
+        "nuance_translation": "A construction that indicates that an <strong>action</strong> is <strong>being started</strong>.",
+        "extra_info": "",
+        "reviewable_id": 115,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "150",
+      "type": "writeup",
+      "attributes": {
+        "id": 150,
+        "body_ja": "",
+        "body": "<p>To express that actions are beginning or ending in Japanese, the verbs <span data-gp-id='115'>始（はじ）める</span> (to commence), or <span data-gp-id='126'>終（お）わる</span> (to end) will need to be used. In this lesson, we will focus on actions that are 'beginning'.</p>\r\n\r\n<p> To say that (A) is starting/beginning, we will need to attach <span data-gp-id='115'>はじめる</span> to the ます stem of almost any verb. Whether you use the hiragana form, or the kanji form does not matter, as there will be no change in nuance.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180247'>\r\n<li data-study-question='180248'>\r\n</ul>\r\n\r\n<p>Due to <span data-gp-id='115'>はじめる</span> being a verb itself, the tense can be changed, to show that something will start, is starting, or has started.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180249'>\r\n<li data-study-question='180250'>\r\n<li data-study-question='180251'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>It can be easy to accidentally use <span data-gp-id='115'>始（はじ）まる</span>, the intransitive form of this verb. However, with this expression, the transitive form will always be used, due to the verb that <span data-gp-id='115'>はじめる</span> is attached to being the thing that 'is started', by 'something' else.</p></section>"
+      }
+    },
+    {
+      "id": "463",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 463,
+        "source": "Tobira",
+        "location": "Page 18",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1049",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1049,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 131",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1560",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1560,
+        "source": "[AIAIJ] An Integrated Approach to Intermediate Japanese",
+        "location": "Page 133",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "231",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 231,
+        "site": "MaggieSensei",
+        "description": "How to use V+はじめる",
+        "link": "https://maggiesensei.com/2014/11/12/how-to-use-v-%E5%A7%8B%E3%82%81%E3%82%8Bhajimeru-%E3%81%A0%E3%81%99dasu%E3%81%8B%E3%81%91%E3%82%8Bkakeru/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1091",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1091,
+        "site": "Imabi",
+        "description": "Start to: ～始める, ～出す, & ～かける",
+        "link": "https://imabi.org/start-to-%ef%bd%9e%e5%a7%8b%e3%82%81%e3%82%8b-%ef%bd%9e%e5%87%ba%e3%81%99-%ef%bd%9e%e3%81%8b%e3%81%91%e3%82%8b/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "232",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 232,
+        "site": "Wasabi",
+        "description": "…始める and …だす",
+        "link": "https://wasabi-jpn.com/magazine/japanese-grammar/japanese-aspect-the-beginning-middle-end-of-actions/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "550",
+      "type": "related_content",
+      "attributes": {
+        "id": 550,
+        "relationship_type": "antonym",
+        "body": "はじめる attaches to verb stems to mean 'to begin' or 'start' doing something, e.g. 食べはじめる 'to start eating'. In contrast, てしまう・ちゃう follows the て-form and can express doing something unintentionally or completely, e.g. 食べてしまった・食べちゃった ('I ate it unintentionally.' or 'I ate it all.').",
+        "first_relatable": {
+          "id": 115,
+          "slug": "はじめる",
+          "title": "はじめる",
+          "meaning": "To start, To begin to",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 172,
+          "slug": "てしまう-ちゃう",
+          "title": "てしまう・ちゃう",
+          "meaning": "To do something by accident, To finish completely・totally, Unfortunately",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "614",
+      "type": "related_content",
+      "attributes": {
+        "id": 614,
+        "relationship_type": "related",
+        "body": "ていく expresses either literal movement away from the speaker or a change that begins now and continues into the future. In contrast, はじめる attaches to the verb stem to mean 'to start (A)'. The key difference is nuance: ていく highlights ongoing progression and continuation going forward, while はじめる focuses on the starting point and the idea of commencing an action.",
+        "first_relatable": {
+          "id": 137,
+          "slug": "ていく",
+          "title": "ていく",
+          "meaning": "To ~ and go, To go on, To start",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 115,
+          "slug": "はじめる",
+          "title": "はじめる",
+          "meaning": "To start, To begin to",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "549",
+      "type": "related_content",
+      "attributes": {
+        "id": 549,
+        "relationship_type": "antonym",
+        "body": "はじめる and おわる can be attached to the stem of verbs to express the contrasting ideas of 'beginning' and 'finishing' an action, respectively. For example, 読みはじめる means 'to begin reading', while 読みおわる means 'to finish reading'.",
+        "first_relatable": {
+          "id": 115,
+          "slug": "はじめる",
+          "title": "はじめる",
+          "meaning": "To start, To begin to",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 126,
+          "slug": "おわる",
+          "title": "おわる",
+          "meaning": "To finish, To end",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1185",
+      "type": "related_content",
+      "attributes": {
+        "id": 1185,
+        "relationship_type": "related",
+        "body": "はじめる attaches to verb stems to mean 'to begin' or 'start' doing something, e.g. 食べはじめる 'to start eating'. In contrast, かけ also attaches to verb stems but indicates something incomplete or in progress, e.g. 食べかけ 'half-eaten'. Forms with かけ function grammatically as nouns, as in 食べかけのバナナ 'a half-eaten banana'.",
+        "first_relatable": {
+          "id": 307,
+          "slug": "かけ",
+          "title": "かけ",
+          "meaning": "Half-, Not yet finished, About to, Begin to",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 115,
+          "slug": "はじめる",
+          "title": "はじめる",
+          "meaning": "To start, To begin to",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "548",
+      "type": "related_content",
+      "attributes": {
+        "id": 548,
+        "relationship_type": "related",
+        "body": "Both はじめる and だす attach to verb stems to mean 'to start doing (A)', but with different nuances. はじめる implies a deliberate or planned action, e.g. 学びはじめた ('I began to learn.'). In contrast, だす conveys a more spontaneous or unexpected beginning, e.g. 雨が降りだした ('It suddenly began to rain.').",
+        "first_relatable": {
+          "id": 115,
+          "slug": "はじめる",
+          "title": "はじめる",
+          "meaning": "To start, To begin to",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 178,
+          "slug": "だす",
+          "title": "だす",
+          "meaning": "To suddenly begin, To start doing",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "551",
+      "type": "related_content",
+      "attributes": {
+        "id": 551,
+        "relationship_type": "antonym",
+        "body": "はじめる attaches to verb stems to express 'beginning to' do something, e.g. 作りはじめる 'to start making'. In contrast, 上がる・上げる also attach to verb stems but express completing an action, e.g. 作りあげる 'to finish making', often with a sense of effort or finality.",
+        "first_relatable": {
+          "id": 115,
+          "slug": "はじめる",
+          "title": "はじめる",
+          "meaning": "To start, To begin to",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 479,
+          "slug": "上がる-上げる",
+          "title": "上がる・上げる",
+          "meaning": "Something is finished, To finish something, Something has come to an end, To do something completely, To do something through",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

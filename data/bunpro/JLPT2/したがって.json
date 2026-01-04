@@ -1,0 +1,1122 @@
+{
+  "data": {
+    "id": "554",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 554,
+      "level": "JLPT2",
+      "lesson_id": 35,
+      "part_of_speech": "",
+      "register": "硬い",
+      "word_type": "",
+      "slug": "したがって",
+      "nuance": "(A)だから(B)であるということを示（しめ）す<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>に沿（そ）って</strong>(B)という意味（いみ）。",
+      "grammar_order": 621,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 607,
+        "title": "あげく",
+        "slug": "あげく"
+      },
+      "previous_grammar_point": {
+        "id": 612,
+        "title": "やがて",
+        "slug": "やがて"
+      },
+      "lesson_count": "7/18",
+      "title": "したがって",
+      "furigana": "従（したが）って",
+      "meaning": "Therefore, Thus, As a result",
+      "nuance_translation": "A <strong>formal</strong> phrase used to say (A), therefore also (B). Literally <strong>in compliance</strong> with (A), (B).",
+      "rare_kanji_warning": "",
+      "caution": "だから can always take the place of したがって、but したがって cannot always take the place of だから",
+      "polite_structure": "",
+      "casual_structure": "(Cause) + <strong>したがっ<span class='gp-popout' data-gp-id='416'>て</span></strong> + (Result)",
+      "part_of_speech_translation": "",
+      "register_translation": "Formal",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/17951",
+      "metadata": "したがって, 従って, shitagatte, conjunction, formal"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "7112",
+            "type": "study_question"
+          },
+          {
+            "id": "7113",
+            "type": "study_question"
+          },
+          {
+            "id": "182038",
+            "type": "study_question"
+          },
+          {
+            "id": "182039",
+            "type": "study_question"
+          },
+          {
+            "id": "7111",
+            "type": "study_question"
+          },
+          {
+            "id": "182040",
+            "type": "study_question"
+          },
+          {
+            "id": "7108",
+            "type": "study_question"
+          },
+          {
+            "id": "5739",
+            "type": "study_question"
+          },
+          {
+            "id": "7109",
+            "type": "study_question"
+          },
+          {
+            "id": "7114",
+            "type": "study_question"
+          },
+          {
+            "id": "5738",
+            "type": "study_question"
+          },
+          {
+            "id": "5740",
+            "type": "study_question"
+          },
+          {
+            "id": "7115",
+            "type": "study_question"
+          },
+          {
+            "id": "7116",
+            "type": "study_question"
+          },
+          {
+            "id": "7110",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "636",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "556",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1541",
+            "type": "related_content"
+          },
+          {
+            "id": "1256",
+            "type": "related_content"
+          },
+          {
+            "id": "1292",
+            "type": "related_content"
+          },
+          {
+            "id": "1087",
+            "type": "related_content"
+          },
+          {
+            "id": "936",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1375",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "7112",
+      "type": "study_question",
+      "attributes": {
+        "id": 7112,
+        "content": "彼（かれ）は長男（ちょうなん）です。<span class='study-area-input'>____</span>、次期（じき）社長（しゃちょう）はおそらく彼（かれ）でしょう。",
+        "answer": "したがって",
+        "alternate_grammar": [],
+        "kanji_answer": "従（したが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)だから(B)であるということを示（しめ）す<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>に沿（そ）って</strong>(B)という意味（いみ）。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼は長男です。従って、次期社長はおそらく彼でしょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "それで": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "なので": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ですから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "よって": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "そこで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "そのけっか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He is the oldest son. <strong>Therefore</strong>, he will soon be the CEO, right?",
+        "nuance_translation": "A <strong>formal</strong> phrase used to say (A), therefore also (B). Literally <strong>in compliance</strong> with (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 554,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7113",
+      "type": "study_question",
+      "attributes": {
+        "id": 7113,
+        "content": "本番（ほんばん）直前（ちょくぜん）です。<span class='study-area-input'>____</span>、彼（かれ）は極度（きょくど）に緊張（きんちょう）しています。",
+        "answer": "したがって",
+        "alternate_grammar": [],
+        "kanji_answer": "従（したが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)だから(B)であるということを示（しめ）す<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>に沿（そ）って</strong>(B)という意味（いみ）。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/本番直前です。従って、彼は極度に緊張しています。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "それで": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "なので": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ですから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "よって": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "そこで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "そのけっか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It is right before the big game. <strong>Therefore</strong>, he is at maximum nervousness.",
+        "nuance_translation": "A <strong>formal</strong> phrase used to say (A), therefore also (B). Literally <strong>in compliance</strong> with (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 554,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182038",
+      "type": "study_question",
+      "attributes": {
+        "id": 182038,
+        "content": "現在（げんざい）東名（とうめい）高速（こうそく）の名古屋（なごや）インターと岡崎（おかざき）インターの間（あいだ）でリニューアル工事（こうじ）が行（おこな）われている。<span class='study-area-input'>____</span>、その区間（くかん）は現在（げんざい）通行止（つうこうど）めとなっている。",
+        "answer": "したがって",
+        "alternate_grammar": [],
+        "kanji_answer": "従（したが）って",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/現在東名高速の名古屋インターと岡崎インターの間でリニューアル工事が行われている。従って、その区間は現在通行止めとなっている。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Renewal work is currently underway on the Tomei Expressway between the Nagoya Interchange and the Okazaki Interchange. <strong>Therefore</strong>, that section is currently closed.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 554,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182039",
+      "type": "study_question",
+      "attributes": {
+        "id": 182039,
+        "content": "今年（ことし）は去年（きょねん）より台風（たいふう）が多（おお）かったです。<span class='study-area-input'>____</span>、今年（ことし）の米（こめ）の値段（ねだん）は去年（きょねん）より高（たか）くなるでしょう。",
+        "answer": "したがって",
+        "alternate_grammar": [],
+        "kanji_answer": "従（したが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "There were more typhoons this year than last year. <strong>Therefore</strong>, the price of rice this year will be higher than last year.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 554,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7111",
+      "type": "study_question",
+      "attributes": {
+        "id": 7111,
+        "content": "短期大学（たんきだいがく）に進学（しんがく）します。<span class='study-area-input'>____</span>、２（に）年（ねん）後（ご）には就職（しゅうしょく）するでしょう。",
+        "answer": "したがって",
+        "alternate_grammar": [],
+        "kanji_answer": "従（したが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)だから(B)であるということを示（しめ）す<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>に沿（そ）って</strong>(B)という意味（いみ）。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/短期大学に進学します。従って、2年後には就職するでしょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "それで": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "なので": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ですから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "よって": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "そこで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "そのけっか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "You are going to enter a junior college. <strong>Therefore</strong>, you will find employment two years from now, right?",
+        "nuance_translation": "A <strong>formal</strong> phrase used to say (A), therefore also (B). Literally <strong>in compliance</strong> with (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 554,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182040",
+      "type": "study_question",
+      "attributes": {
+        "id": 182040,
+        "content": "会社（かいしゃ）ではインフルエンザが流行（はや）っている。<span class='study-area-input'>____</span>、会議（かいぎ）は全（すべ）てオンラインで行（おこな）われることになった。",
+        "answer": "したがって",
+        "alternate_grammar": [],
+        "kanji_answer": "従（したが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The flu is going around in my company. <strong>Therefore</strong>, it has been decided that all meetings are going to take place online.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 554,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7108",
+      "type": "study_question",
+      "attributes": {
+        "id": 7108,
+        "content": "意見（いけん）の相違（そうい）がありすぎる。<span class='study-area-input'>____</span>、契約（けいやく）は破棄（はき）させていただきます。",
+        "answer": "したがって",
+        "alternate_grammar": [],
+        "kanji_answer": "従（したが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)だから(B)であるということを示（しめ）す<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>に沿（そ）って</strong>(B)という意味（いみ）。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/意見の相違がありすぎる。従って、契約は破棄させていただきます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "それで": {
+            "en": "How about a grammar pattern that is a bit more polite? or (な)ので",
+            "es": ""
+          },
+          "なので": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ですから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "よって": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "そこで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "そのけっか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "There is too much difference in our opinions. <strong>Therefore</strong>, let's break the agreement.",
+        "nuance_translation": "A <strong>formal</strong> phrase used to say (A), therefore also (B). Literally <strong>in compliance</strong> with (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 554,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5739",
+      "type": "study_question",
+      "attributes": {
+        "id": 5739,
+        "content": "この辺（へん）は二（に）週間（しゅうかん）にわたって雨（あめ）が降（ふ）っていた。<span class='study-area-input'>____</span>氾濫（はんらん）の可能（かのう）性（せい）がある。",
+        "answer": "したがって",
+        "alternate_grammar": [],
+        "kanji_answer": "従（したが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)だから(B)であるということを示（しめ）す<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>に沿（そ）って</strong>(B)という意味（いみ）。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/この辺は二週間にわたって雨が降っていた。従って氾濫の可能性がある。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "それで": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "なので": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ですから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "よって": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "そこで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "そのけっか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "In this area, rain has been falling over a span of two weeks. <strong>Thus</strong>, there is a possibility of flooding.",
+        "nuance_translation": "A <strong>formal</strong> phrase used to say (A), therefore also (B). Literally <strong>in compliance</strong> with (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 554,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7109",
+      "type": "study_question",
+      "attributes": {
+        "id": 7109,
+        "content": "公害（こうがい）が増大（ぞうだい）している。<span class='study-area-input'>____</span>、工場（こうじょう）は閉鎖（へいさ）する方向（ほうこう）になります。",
+        "answer": "したがって",
+        "alternate_grammar": [],
+        "kanji_answer": "従（したが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)だから(B)であるということを示（しめ）す<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>に沿（そ）って</strong>(B)という意味（いみ）。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/公害が増大している。従って、工場は閉鎖する方向になります。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "それで": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "なので": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ですから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "よって": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "そこで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "そのけっか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Pollution is increasing. <strong>Therefore</strong>, it has been decided that we will close the factory.",
+        "nuance_translation": "A <strong>formal</strong> phrase used to say (A), therefore also (B). Literally <strong>in compliance</strong> with (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 554,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7114",
+      "type": "study_question",
+      "attributes": {
+        "id": 7114,
+        "content": "あの会社（かいしゃ）は業界（ぎょうかい）大手（おおて）だ。<span class='study-area-input'>____</span>、強気（つよき）に出（で）てくるはずです。",
+        "answer": "したがって",
+        "alternate_grammar": [],
+        "kanji_answer": "従（したが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)だから(B)であるということを示（しめ）す<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>に沿（そ）って</strong>(B)という意味（いみ）。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あの会社は業界大手だ。従って、強気に出てくるはずです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "それで": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "なので": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ですから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "よって": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "そこで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "そのけっか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That company is a major enterprise. <strong>Therefore</strong>, they should show strength.",
+        "nuance_translation": "A <strong>formal</strong> phrase used to say (A), therefore also (B). Literally <strong>in compliance</strong> with (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 554,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5738",
+      "type": "study_question",
+      "attributes": {
+        "id": 5738,
+        "content": "銅（どう）には多（おお）くの用途（ようと）があるにもかかわらず生産（せいさん）量（りょう）がかなり少（すく）ない金属（きんぞく）である。<span class='study-area-input'>____</span>トン当（あ）たりの価格（かかく）が非常（ひじょう）に高（たか）い。",
+        "answer": "したがって",
+        "alternate_grammar": [],
+        "kanji_answer": "従（したが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)だから(B)であるということを示（しめ）す<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>に沿（そ）って</strong>(B)という意味（いみ）。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/銅には多くの用途があるにもかかわらず生産量がかなり少ない金属である。従ってトン当たりの価格が非常に高い。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "それで": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "なので": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ですから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "よって": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "そこで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "そのけっか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Copper, in spite of having many uses, is a metal with a relatively low output. <strong>Therefore</strong>, price per ton is extremely high.",
+        "nuance_translation": "A <strong>formal</strong> phrase used to say (A), therefore also (B). Literally <strong>in compliance</strong> with (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 554,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5740",
+      "type": "study_question",
+      "attributes": {
+        "id": 5740,
+        "content": "「<span class='study-area-input'>____</span>」と「だから」は英単語（えいたんご）「therefore」を意味（いみ）する。<span class='study-area-input'>____</span>、この役割（やくわり）でどちらも使用（しよう）できるが、例外（れいがい）がある。すべての場合（ばあい）に「<span class='study-area-input'>____</span>」を「だから」へ言（い）い換（か）えできるが、逆（ぎゃく）はできるとは限（かぎ）らない。",
+        "answer": "したがって",
+        "alternate_grammar": [],
+        "kanji_answer": "従（したが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)だから(B)であるということを示（しめ）す<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>に沿（そ）って</strong>(B)という意味（いみ）。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/「従って」と「だから」は英単語「therefore」を意味する。従って、この役割でどちらも使用できるが、例外がある。すべての場合に「従って」を「だから」へ言い換えできるが、逆はできるとは限らない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "それで": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "なので": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ですから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "よって": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "そこで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "そのけっか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'______' and 'だから' both mean '<strong>therefore</strong>' in English. <strong>As a result</strong>, both can take on the same role, however, there are exceptions. '______' can be rephrased into 'だから' in every case, but the reverse is not always true.",
+        "nuance_translation": "A <strong>formal</strong> phrase used to say (A), therefore also (B). Literally <strong>in compliance</strong> with (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 554,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7115",
+      "type": "study_question",
+      "attributes": {
+        "id": 7115,
+        "content": "値下（ねさ）げしないよう連絡（れんらく）がありました。<span class='study-area-input'>____</span>、定価（ていか）で売（う）るしかありません。",
+        "answer": "したがって",
+        "alternate_grammar": [],
+        "kanji_answer": "従（したが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)だから(B)であるということを示（しめ）す<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>に沿（そ）って</strong>(B)という意味（いみ）。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/値下げしないよう連絡がありました。従って、定価で売るしかありません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "それで": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "なので": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ですから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "よって": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "そこで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "そのけっか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I received a message not to cut prices. <strong>Therefore</strong> I have no choice but to sell them at the fixed price.",
+        "nuance_translation": "A <strong>formal</strong> phrase used to say (A), therefore also (B). Literally <strong>in compliance</strong> with (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 554,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7116",
+      "type": "study_question",
+      "attributes": {
+        "id": 7116,
+        "content": "社長（しゃちょう）が問題（もんだい）を起（お）こしました。<span class='study-area-input'>____</span>、問（と）い合（あ）わせが殺到（さっとう）するでしょう。",
+        "answer": "したがって",
+        "alternate_grammar": [],
+        "kanji_answer": "従（したが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)だから(B)であるということを示（しめ）す<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>に沿（そ）って</strong>(B)という意味（いみ）。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/社長が問題を起こしました。従って、問い合わせが殺到するでしょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "それで": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "なので": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ですから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "よって": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "そこで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "そのけっか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The CEO caused a problem. <strong>Therefore</strong>, the inquires will come flooding in, won't they?",
+        "nuance_translation": "A <strong>formal</strong> phrase used to say (A), therefore also (B). Literally <strong>in compliance</strong> with (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 554,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7110",
+      "type": "study_question",
+      "attributes": {
+        "id": 7110,
+        "content": "電車（でんしゃ）が脱線（だっせん）してしまった。<span class='study-area-input'>____</span>、今日（きょう）中（じゅう）の到着（とうちゃく）は無理（むり）だと思（おも）われます。",
+        "answer": "したがって",
+        "alternate_grammar": [],
+        "kanji_answer": "従（したが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)だから(B)であるということを示（しめ）す<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)<strong>に沿（そ）って</strong>(B)という意味（いみ）。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/電車が脱線してしまった。従って、今日中の到着は無理だと思われます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "それで": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "なので": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "ですから": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          },
+          "よって": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "そこで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "そのけっか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The train derailed. <strong>Therefore</strong>, I think it is impossible for me to arrive before the day is over.",
+        "nuance_translation": "A <strong>formal</strong> phrase used to say (A), therefore also (B). Literally <strong>in compliance</strong> with (A), (B).",
+        "extra_info": "",
+        "reviewable_id": 554,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "636",
+      "type": "writeup",
+      "attributes": {
+        "id": 636,
+        "body_ja": "<p>五段動詞（ごだんどうし）「従（したが）う」のテ形（けい）「<span data-gp-id='554'>従（したが）って</span>」が接続詞（せつぞくし）として使（つか）われると「(A) のため (B)」や「(A) の結果（けっか） (B)」のような意味（いみ）を表（あらわ）します。「従（したが）う」は「(A) の指示（しじ）や状況（じょうきょう）に合（あ）わせる」などの意味（いみ）を持（も）っていますが、この表現（ひょうげん）は (A) によって生（しょう）じる論理的（ろんりてき）な結果（けっか）を表（あらわ）す場合（ばあい）にだけ使（つか）われます。</p>\r\n\r\n<p>「<span data-gp-id='554'>従（したが）って</span>」を使（つか）う文（ぶん）では、前（まえ）の文（ぶん）で原因（げんいん）が述（の）べられ、その結果（けっか）が「<span data-gp-id='554'>従（したが）って</span>」から始（はじ）まる次（つぎ）の文（ぶん）で述（の）べられる、という形（かたち）が多（おお）いです。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182038'>\r\n<li data-study-question='182039'>\r\n<li data-study-question='182040'>\r\n</ul>\r\n\r\n<p>これはかなり硬（かた）い表現（ひょうげん）なので、正式（せいしき）なスピーチや文書（ぶんしょ）の中（なか）で目（め）にすることが多（おお）いでしょう。</p>",
+        "body": "<p>When used as a conjunction, the う-Verb 従（したが）う 'to comply' in its て-form will indicate that something is 'following on from (A), (B)', or 'as a result of (A), (B)'. As 従（したが）う highlights something that 'obeys with (A)', this construction will only be used to show a logical conclusion that is caused by (A).</p>\r\n\r\n<p>A typical pattern where <span data-gp-id='554'>従（したが）って</span> will be seen, is two sentences in which the first expresses a cause, and the second begins with <span data-gp-id='554'>従（したが）って</span> and then lists the logical result.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182038'>\r\n<li data-study-question='182039'>\r\n<li data-study-question='182040'>\r\n</ul>\r\n\r\n<p>This is a fairly formal grammar pattern, so is more likely to be encountered in more formal speech or writing.</p>"
+      }
+    },
+    {
+      "id": "556",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 556,
+        "source": "Tobira",
+        "location": "Page 238",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1375",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1375,
+        "site": "JapaneseTest4You",
+        "description": "Additional info and examples",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-%E3%81%97%E3%81%9F%E3%81%8C%E3%81%A3%E3%81%A6-shitagatte/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1541",
+      "type": "related_content",
+      "attributes": {
+        "id": 1541,
+        "relationship_type": "related",
+        "body": "Both express logical consequence, but the tone and register differ. ゆえに is a formal, written connector meaning ‘therefore’ that presents a reason–result relation in a stiff, explanatory style, as in 天候が悪化した。ゆえに計画を変更した (‘The weather worsened; therefore, we changed the plan.’). したがって also means ‘therefore’ but is more neutral and common in explanations or academic writing, focusing on logical progression rather than formality, as in 条件が満たされない。したがって実行できない (‘The conditions are not met; therefore, it cannot be carried out.’).",
+        "first_relatable": {
+          "id": 815,
+          "slug": "ゆえに",
+          "title": "ゆえに",
+          "meaning": "Because, The reason is, Due to, Therefore, So",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 554,
+          "slug": "したがって",
+          "title": "したがって",
+          "meaning": "Therefore, Thus, As a result",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1256",
+      "type": "related_content",
+      "attributes": {
+        "id": 1256,
+        "relationship_type": "related",
+        "body": "Both したがって and から express a cause or reason. The difference is that から is common in casual, everyday speech, while したがって is more formal, used in writing or structured speech. Additionally, から appears in the middle of a sentence, while したがって comes at the start. To use から at the start, you would use ですから or だから.",
+        "first_relatable": {
+          "id": 554,
+          "slug": "したがって",
+          "title": "したがって",
+          "meaning": "Therefore, Thus, As a result",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 45,
+          "slug": "から-because",
+          "title": "から",
+          "meaning": "Because, Since",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1292",
+      "type": "related_content",
+      "attributes": {
+        "id": 1292,
+        "relationship_type": "misc",
+        "body": "まま(に) describes being left in a certain state, often implying lack of freedom or control, as in 言われるままに従った (I obeyed just as I was told). したがって is a formal connector meaning therefore or thus, used to show logical consequence, as in 天気は悪い。したがって中止する (The weather is bad. Therefore, it will be canceled).",
+        "first_relatable": {
+          "id": 822,
+          "slug": "ままに",
+          "title": "まま(に)",
+          "meaning": "As (one likes, feels or pleases), Spur of the moment, Wherever one fancies, Spontaneously, On a whim",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 554,
+          "slug": "したがって",
+          "title": "したがって",
+          "meaning": "Therefore, Thus, As a result",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1087",
+      "type": "related_content",
+      "attributes": {
+        "id": 1087,
+        "relationship_type": "related",
+        "body": "その結果 and したがって are similar in that both express a result or consequence with a relatively formal tone. その結果 emphasizes the resulting situation or condition, similar to the English 'as a result of that', while したがって implies a logical conclusion, which may or may not necessarily be a 'resulting' situation.",
+        "first_relatable": {
+          "id": 288,
+          "slug": "その結果",
+          "title": "その結果",
+          "meaning": "As a result",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 554,
+          "slug": "したがって",
+          "title": "したがって",
+          "meaning": "Therefore, Thus, As a result",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "936",
+      "type": "related_content",
+      "attributes": {
+        "id": 936,
+        "relationship_type": "related",
+        "body": "そこで and したがって are both used at the beginning of a sentence to express one action following another, but differ in nuance and tone. そこで is a general-purpose expression usable in various situations and contexts, like the English 'so' or 'as such'. In contrast, したがって is more formal and has a stricter 'following from that' or 'thus' nuance.",
+        "first_relatable": {
+          "id": 454,
+          "slug": "そこで",
+          "title": "そこで",
+          "meaning": "Accordingly, Now, Therefore, To that end",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 554,
+          "slug": "したがって",
+          "title": "したがって",
+          "meaning": "Therefore, Thus, As a result",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

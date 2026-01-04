@@ -1,0 +1,986 @@
+{
+  "data": {
+    "id": "350",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 350,
+      "level": "JLPT2",
+      "lesson_id": 36,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "それにしても",
+      "nuance": "先（さき）に<strong>述（の）べられたことがあっても</strong>、(B)はまだ正（ただ）しいということを表（あらわ）す表現（ひょうげん）。",
+      "grammar_order": 648,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 657,
+        "title": "ぬ",
+        "slug": "ぬ"
+      },
+      "previous_grammar_point": {
+        "id": 341,
+        "title": "としても",
+        "slug": "としても"
+      },
+      "lesson_count": "16/20",
+      "title": "それにしても",
+      "furigana": "それにしても",
+      "meaning": "Nevertheless, Even so",
+      "nuance_translation": "A structure used to show that <strong>even going off</strong> that which was <strong>previously stated</strong>, (B) is still true.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Phrase (A) + <strong><span class='gp-popout' data-gp-id='11'>それ</span><span class='gp-popout' data-gp-id='262'>にしても</span></strong> + Phrase (B)",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/11135",
+      "metadata": "それにしても, sorenishitemo, contradictory, expression"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "182152",
+            "type": "study_question"
+          },
+          {
+            "id": "182153",
+            "type": "study_question"
+          },
+          {
+            "id": "182155",
+            "type": "study_question"
+          },
+          {
+            "id": "182156",
+            "type": "study_question"
+          },
+          {
+            "id": "6281",
+            "type": "study_question"
+          },
+          {
+            "id": "182154",
+            "type": "study_question"
+          },
+          {
+            "id": "6279",
+            "type": "study_question"
+          },
+          {
+            "id": "6280",
+            "type": "study_question"
+          },
+          {
+            "id": "6278",
+            "type": "study_question"
+          },
+          {
+            "id": "6282",
+            "type": "study_question"
+          },
+          {
+            "id": "6283",
+            "type": "study_question"
+          },
+          {
+            "id": "6285",
+            "type": "study_question"
+          },
+          {
+            "id": "1264",
+            "type": "study_question"
+          },
+          {
+            "id": "1265",
+            "type": "study_question"
+          },
+          {
+            "id": "1266",
+            "type": "study_question"
+          },
+          {
+            "id": "6286",
+            "type": "study_question"
+          },
+          {
+            "id": "6284",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "663",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1614",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "348",
+            "type": "related_content"
+          },
+          {
+            "id": "805",
+            "type": "related_content"
+          },
+          {
+            "id": "502",
+            "type": "related_content"
+          },
+          {
+            "id": "457",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "779",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "778",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "182152",
+      "type": "study_question",
+      "attributes": {
+        "id": 182152,
+        "content": "彼女（かのじょ）は新人（しんじん）だから仕方（しかた）がないが、<span class='study-area-input'>____</span>仕事（しごと）ができなさすぎる。",
+        "answer": "それにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "それにしても",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼女は新人だから仕方がないが、それにしても仕事ができなさすぎる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "She's new so we can't blame her, but <strong>even so</strong>, she is not good at her job at all.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 350,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182153",
+      "type": "study_question",
+      "attributes": {
+        "id": 182153,
+        "content": "田中（たなか）くんは遅（おく）れてくると言（い）っていたが、<span class='study-area-input'>____</span>くるのが遅（おそ）すぎる。",
+        "answer": "それにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "それにしても",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/田中くんは遅れてくると言っていたが、それにしてもくるのが遅すぎる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Tanaka-kun said he will be late, but <strong>even so</strong>, it's taking him too long to come.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 350,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182155",
+      "type": "study_question",
+      "attributes": {
+        "id": 182155,
+        "content": "家（いえ）に来（き）たばかりのときなんかお手（て）もできなかったのにね。<span class='study-area-input'>____</span>、大（おお）きくなったね。",
+        "answer": "それにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "それにしても",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/家に来たばかりのときなんかお手もできなかったのにね。それにしても、大きくなったね。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "When he first came to our house, he couldn't even give me his paw. <strong>Nevertheless</strong>, he got so big, don't you think?",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 350,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182156",
+      "type": "study_question",
+      "attributes": {
+        "id": 182156,
+        "content": "先輩（せんぱい）、昨日（きのう）はご馳走様（ちそうさま）でした！<span class='study-area-input'>____</span>、あそこの料理（りょうり）は最高（さいこう）でしたね！",
+        "answer": "それにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "それにしても",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/先輩、昨日はご馳走様でした！それにしても、あそこの料理は最高でしたね！.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Senpai, thank you for treating me yesterday! <strong>Nevertheless</strong>, that restaurant was awesome, wasn't it?!",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 350,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6281",
+      "type": "study_question",
+      "attributes": {
+        "id": 6281,
+        "content": "不祥事（ふしょうじ）の責任（せきにん）は取（と）らなければいけないが、<span class='study-area-input'>____</span>、解散（かいさん）する必要（ひつよう）はなかったと思（おも）います。",
+        "answer": "それにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "それにしても",
+        "kanji_alt_grammar": [],
+        "nuance": "先（さき）に<strong>述（の）べられたことがあっても</strong>、(B)はまだ正（ただ）しいということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/不祥事の責任は取らなければいけないが、それにしても、解散する必要はなかったと思います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それでも": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ところが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "それなのに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Responsibility for the scandal must be taken, but <strong>even so</strong>, I don't think it was necessary for them to break up.",
+        "nuance_translation": "A structure used to show that <strong>even going off</strong> that which was <strong>previously stated</strong>, (B) is still true.",
+        "extra_info": "",
+        "reviewable_id": 350,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182154",
+      "type": "study_question",
+      "attributes": {
+        "id": 182154,
+        "content": "漢字（かんじ）を勉強（べんきょう）し始（はじ）めてから１（いち）年（ねん）になる。<span class='study-area-input'>____</span>、まだ全然（ぜんぜん）漢字（かんじ）が読（よ）めない。",
+        "answer": "それにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "それにしても",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/漢字を勉強し始めてから1年になる。それにしても、まだ全然漢字が読めない。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It has been a year since I started studying kanji. <strong>Nevertheless</strong>, I still can't read kanji at all.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 350,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6279",
+      "type": "study_question",
+      "attributes": {
+        "id": 6279,
+        "content": "送別（そうべつ）会（かい）の準備（じゅんび）をしなければいけない。<span class='study-area-input'>____</span>、この会館（かいかん）は安（やす）く借（か）りられてありがたい。",
+        "answer": "それにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "それにしても",
+        "kanji_alt_grammar": [],
+        "nuance": "先（さき）に<strong>述（の）べられたことがあっても</strong>、(B)はまだ正（ただ）しいということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/送別会の準備をしなければいけない。それにしても、この会館は安く借りられてありがたい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それでも": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ところが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "それなのに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "We have to prepare for the farewell party (ourselves). <strong>Nevertheless</strong>, I am thankful that we could rent this event hall for cheap.",
+        "nuance_translation": "A structure used to show that <strong>even going off</strong> that which was <strong>previously stated</strong>, (B) is still true.",
+        "extra_info": "",
+        "reviewable_id": 350,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6280",
+      "type": "study_question",
+      "attributes": {
+        "id": 6280,
+        "content": "泳（およ）ぐのが好（す）きなのだろうが、<span class='study-area-input'>____</span>、何（なん）回（かい）海水浴（かいすいよく）に行（い）けば気（き）がすむんだ…",
+        "answer": "それにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "それにしても",
+        "kanji_alt_grammar": [],
+        "nuance": "先（さき）に<strong>述（の）べられたことがあっても</strong>、(B)はまだ正（ただ）しいということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/泳ぐのが好きなのだろうが、それにしても、何回海水浴に行けば気がすむんだ….mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それでも": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ところが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "それなのに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "You probably like swimming, but <strong>nevertheless</strong>, how many times do you have to go to the beach for you to grow tired of it.",
+        "nuance_translation": "A structure used to show that <strong>even going off</strong> that which was <strong>previously stated</strong>, (B) is still true.",
+        "extra_info": "",
+        "reviewable_id": 350,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6278",
+      "type": "study_question",
+      "attributes": {
+        "id": 6278,
+        "content": "彼女（かのじょ）と付（つ）き合（あ）って一（いち）年（ねん）になる。<span class='study-area-input'>____</span>、女（おんな）の人（ひと）の気持（きも）ちはよく分（わ）からない。",
+        "answer": "それにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "それにしても",
+        "kanji_alt_grammar": [],
+        "nuance": "先（さき）に<strong>述（の）べられたことがあっても</strong>、(B)はまだ正（ただ）しいということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼女と付き合って一年になる。それにしても、女の人の気持ちはよく分からない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それでも": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ところが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "それなのに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It will be one year since I started dating my girlfriend. <strong>Even so</strong>, I don't understand women's feelings very well.",
+        "nuance_translation": "A structure used to show that <strong>even going off</strong> that which was <strong>previously stated</strong>, (B) is still true.",
+        "extra_info": "",
+        "reviewable_id": 350,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6282",
+      "type": "study_question",
+      "attributes": {
+        "id": 6282,
+        "content": "作（つく）った野菜（やさい）が荒（あ）らされる被害（ひがい）が出（で）ているが、<span class='study-area-input'>____</span>、そこまで厳重（げんじゅう）な垣根（かきね）を作（つく）らなくてもいいのに…",
+        "answer": "それにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "それにしても",
+        "kanji_alt_grammar": [],
+        "nuance": "先（さき）に<strong>述（の）べられたことがあっても</strong>、(B)はまだ正（ただ）しいということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/作った野菜が荒らされる被害が出ているが、それにしても、そこまで厳重な垣根を作らなくてもいいのに….mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それでも": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ところが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "それなのに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The vegetables we are growing are being damaged by pests, <strong>even so</strong>, you don't need to make such a secure fence...",
+        "nuance_translation": "A structure used to show that <strong>even going off</strong> that which was <strong>previously stated</strong>, (B) is still true.",
+        "extra_info": "",
+        "reviewable_id": 350,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6283",
+      "type": "study_question",
+      "attributes": {
+        "id": 6283,
+        "content": "チャレンジするのはいいことだが、<span class='study-area-input'>____</span>、成功（せいこう）する確率（かくりつ）が低（ひく）すぎる。",
+        "answer": "それにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "それにしても",
+        "kanji_alt_grammar": [],
+        "nuance": "先（さき）に<strong>述（の）べられたことがあっても</strong>、(B)はまだ正（ただ）しいということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/チャレンジするのはいいことだが、それにしても、成功する確率が低すぎる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それでも": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ところが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "それなのに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It is good to take on challenges, but <strong>nevertheless</strong>, the rate at which you succeed is too low.",
+        "nuance_translation": "A structure used to show that <strong>even going off</strong> that which was <strong>previously stated</strong>, (B) is still true.",
+        "extra_info": "",
+        "reviewable_id": 350,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6285",
+      "type": "study_question",
+      "attributes": {
+        "id": 6285,
+        "content": "ラッピングをお願（ねが）いしたが、<span class='study-area-input'>____</span>、かなりの過剰（かじょう）包装（ほうそう）だ。",
+        "answer": "それにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "それにしても",
+        "kanji_alt_grammar": [],
+        "nuance": "先（さき）に<strong>述（の）べられたことがあっても</strong>、(B)はまだ正（ただ）しいということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/ラッピングをお願いしたが、それにしても、かなりの過剰包装だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それでも": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ところが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "それなのに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I asked for wrapping, but <strong>even so</strong>, the wrapping was excessive.",
+        "nuance_translation": "A structure used to show that <strong>even going off</strong> that which was <strong>previously stated</strong>, (B) is still true.",
+        "extra_info": "",
+        "reviewable_id": 350,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1264",
+      "type": "study_question",
+      "attributes": {
+        "id": 1264,
+        "content": "彼（かれ）らが問題（もんだい）の解決（かいけつ）に手（て）を貸（か）していますが、<span class='study-area-input'>____</span>それは難問（なんもん）です。",
+        "answer": "それにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "それにしても",
+        "kanji_alt_grammar": [],
+        "nuance": "先（さき）に<strong>述（の）べられたことがあっても</strong>、(B)はまだ正（ただ）しいということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼らが問題の解決に手を貸していますが、それにしてもそれは難問です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それでも": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ところが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "それなのに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "They are lending a hand to solve that problem. <strong>Even so</strong>, that is a tough one.",
+        "nuance_translation": "A structure used to show that <strong>even going off</strong> that which was <strong>previously stated</strong>, (B) is still true.",
+        "extra_info": "",
+        "reviewable_id": 350,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1265",
+      "type": "study_question",
+      "attributes": {
+        "id": 1265,
+        "content": "上司（じょうし）から許可（きょか）を得（え）ました。<span class='study-area-input'>____</span>、本部（ほんぶ）に連絡（れんらく）しないといけません。",
+        "answer": "それにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "それにしても",
+        "kanji_alt_grammar": [],
+        "nuance": "先（さき）に<strong>述（の）べられたことがあっても</strong>、(B)はまだ正（ただ）しいということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/上司から許可を得ました。それにしても、本部に連絡しないといけません。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それでも": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ところが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "それなのに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "We received permission from the boss. <strong>Even so</strong>, we have to contact the headquarters.",
+        "nuance_translation": "A structure used to show that <strong>even going off</strong> that which was <strong>previously stated</strong>, (B) is still true.",
+        "extra_info": "",
+        "reviewable_id": 350,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1266",
+      "type": "study_question",
+      "attributes": {
+        "id": 1266,
+        "content": "災害（さいがい）を防止（ぼうし）するには、避難（ひなん）訓練（くんれん）が必要（ひつよう）だ。<span class='study-area-input'>____</span>、完全（かんぜん）な予防（よぼう）は無理（むり）だろう。",
+        "answer": "それにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "それにしても",
+        "kanji_alt_grammar": [],
+        "nuance": "先（さき）に<strong>述（の）べられたことがあっても</strong>、(B)はまだ正（ただ）しいということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/災害を防止するには、避難訓練が必要だ。それにしても、完全な予防は無理だろう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それでも": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "だが": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "ところが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "それなのに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "In order to prevent disasters, disaster drills are necessary. <strong>Nevertheless</strong>, complete prevention is probably impossible.",
+        "nuance_translation": "A structure used to show that <strong>even going off</strong> that which was <strong>previously stated</strong>, (B) is still true.",
+        "extra_info": "",
+        "reviewable_id": 350,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6286",
+      "type": "study_question",
+      "attributes": {
+        "id": 6286,
+        "content": "古（ふる）い車（くるま）だから仕方（しかた）がないが、<span class='study-area-input'>____</span>加速（かそく）が悪（わる）すぎる。",
+        "answer": "それにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "それにしても",
+        "kanji_alt_grammar": [],
+        "nuance": "先（さき）に<strong>述（の）べられたことがあっても</strong>、(B)はまだ正（ただ）しいということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/古い車だから仕方がないが、それにしても加速が悪すぎる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それでも": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ところが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "それなのに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It is an old car so it can't be helped, but <strong>nevertheless</strong>, the acceleration is terrible.",
+        "nuance_translation": "A structure used to show that <strong>even going off</strong> that which was <strong>previously stated</strong>, (B) is still true.",
+        "extra_info": "",
+        "reviewable_id": 350,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6284",
+      "type": "study_question",
+      "attributes": {
+        "id": 6284,
+        "content": "火山（かざん）の噴火（ふんか）は落（お）ち着（つ）いたが、<span class='study-area-input'>____</span>、今回（こんかい）の被害（ひがい）はひどすぎます。",
+        "answer": "それにしても",
+        "alternate_grammar": [],
+        "kanji_answer": "それにしても",
+        "kanji_alt_grammar": [],
+        "nuance": "先（さき）に<strong>述（の）べられたことがあっても</strong>、(B)はまだ正（ただ）しいということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Contrastive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/火山の噴火は落ち着いたが、それにしても、今回の被害はひどすぎます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "それでも": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ところが": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "それなのに": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The volcanic eruption has died down, <strong>nevertheless</strong> the damage done this time is too severe.",
+        "nuance_translation": "A structure used to show that <strong>even going off</strong> that which was <strong>previously stated</strong>, (B) is still true.",
+        "extra_info": "",
+        "reviewable_id": 350,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "663",
+      "type": "writeup",
+      "attributes": {
+        "id": 663,
+        "body_ja": "<p>「<span data-gp-id='350'>それにしても</span>」は「<span data-gp-id='262'>にしても</span>」が発展（はってん）して生（う）まれた表現（ひょうげん）です。これは「(A) だとしても (B)」という意味（いみ）を表（あらわ）し、前（まえ）に述（の）べられたことに関（かか）わらず、話（はな）し手（て）が言（い）いたいことはその次（つぎ）にあることを示（しめ）します。</p>\r\n\r\n<p>多（おお）くの場合（ばあ）、「<span data-gp-id='350'>それにしても</span>」は話（はな）し手（て）が前（まえ）に述（の）べられたことを事実（じじつ）として受（う）け入（い）れ、認（みと）めつつも、まだ言（い）いたいことがあるときに使（つか）われます。</p>\r\n\r\n<p>「<span data-gp-id='350'>それにしても</span>」は主（おも）に文（ぶん）の先頭（せんとう）か、読点（どくてん）の後（あと）に置（お）かれます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182152'>\r\n<li data-study-question='182153'>\r\n<li data-study-question='182154'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='350'>それにしても</span>」は話（はな）し手（て）がすでに (A) の状況（じょうきょう）を知（し）っていたり、受（う）け入（い）れたりしているときに使（つか）われるため、(B) では (A) から予想（よそう）される範囲（はんい）を超（こ）える内容（ないよう）が述（の）べられることが多（おお）いです。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182155'>\r\n<li data-study-question='182156'>\r\n</ul>",
+        "body": "<p><span data-gp-id='350'>それにしても</span> is an expression used in Japanese as an extension of <span data-gp-id='262'>にしても</span> 'even though', or 'even if'. This grammar pattern may be translated as 'nevertheless', or 'even so', and merely points out that despite what was said previously, the speaker's primary opinion is the following statement.</p>\r\n\r\n<p>In most cases, <span data-gp-id='350'>それにしても</span> simply highlights that while the speaker accepts or acknowledges the previous statement as true, that is not all there is to be considered.</p>\r\n\r\n<p><span data-gp-id='350'>それにしても</span> will primarily appear at the beginning of sentences, or directly after a comma.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182152'>\r\n<li data-study-question='182153'>\r\n<li data-study-question='182154'>\r\n</ul>\r\n\r\n<p>Due to <span data-gp-id='350'>それにしても</span> being used when the speaker is already aware of or accepts the situation of (A), (B) will frequently highlight something that is above or beyond that expectation.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182155'>\r\n<li data-study-question='182156'>\r\n</ul>"
+      }
+    },
+    {
+      "id": "1614",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1614,
+        "source": "[AIAIJ] An Integrated Approach to Intermediate Japanese",
+        "location": "Page 249",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "779",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 779,
+        "site": "JapaneseTest4You",
+        "description": "それにしても Examples",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-%E3%81%9D%E3%82%8C%E3%81%AB%E3%81%97%E3%81%A6%E3%82%82-sore-ni-shite-mo/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "778",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 778,
+        "site": "JStackExchange",
+        "description": "それにしても日本人と変わりませんね - This sentence seems to make no sense",
+        "link": "https://japanese.stackexchange.com/questions/39800/%e3%81%9d%e3%82%8c%e3%81%ab%e3%81%97%e3%81%a6%e3%82%82%e6%97%a5%e6%9c%ac%e4%ba%ba%e3%81%a8%e5%a4%89%e3%82%8f%e3%82%8a%e3%81%be%e3%81%9b%e3%82%93%e3%81%ad-this-sentence-seems-to-make-no-sense/39813#39813",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "348",
+      "type": "related_content",
+      "attributes": {
+        "id": 348,
+        "relationship_type": "related",
+        "body": "Both express contrast, but with different nuance. ところが introduces an unexpected result, e.g. 試合に勝つと思った。ところが負けた ('I thought we'd win the game. But we lost.') それにしても acknowledges the situation but adds an emotional reaction or further judgment, e.g. 仕方がない。それにしても悔しい ('It can't be helped. Even so, it's frustrating.')",
+        "first_relatable": {
+          "id": 206,
+          "slug": "ところが",
+          "title": "ところが",
+          "meaning": "Even so, However, Even though, But",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 350,
+          "slug": "それにしても",
+          "title": "それにしても",
+          "meaning": "Nevertheless, Even so",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "805",
+      "type": "related_content",
+      "attributes": {
+        "id": 805,
+        "relationship_type": "related",
+        "body": "それでも and それにしても both express contrast. それでも adds a contradictory point neutrally. それにしても accepts the previous idea, but adds what the speaker really thinks, often a more critical or stronger opinion, e.g., 暑いね。それにしてもよく歩くね ('It's hot. Still, you sure walk a lot.').",
+        "first_relatable": {
+          "id": 186,
+          "slug": "それでも",
+          "title": "それでも",
+          "meaning": "But still, And yet, Even so, Nevertheless",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 350,
+          "slug": "それにしても",
+          "title": "それにしても",
+          "meaning": "Nevertheless, Even so",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "502",
+      "type": "related_content",
+      "attributes": {
+        "id": 502,
+        "relationship_type": "related",
+        "body": "Both introduce contradiction. それにしても can mean even so or nevertheless, and can also be used to change topics, as in それにしても暑いね (Even so, it’s hot, isn’t it?). それなのに marks direct contrast, closer to and yet, as in 一生懸命勉強した。それなのに落ちた (I studied hard, and yet I failed).",
+        "first_relatable": {
+          "id": 350,
+          "slug": "それにしても",
+          "title": "それにしても",
+          "meaning": "Nevertheless, Even so",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 409,
+          "slug": "それなのに",
+          "title": "それなのに",
+          "meaning": "And yet, Despite this",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "457",
+      "type": "related_content",
+      "attributes": {
+        "id": 457,
+        "relationship_type": "related",
+        "body": "Both can mean nevertheless. しかしながら is formal and used only for explicit contrasts, as in 雨だった。しかしながら試合は行われた (It rained. Nevertheless, the match was held). それにしても is common in everyday speech and can also serve to shift topics.",
+        "first_relatable": {
+          "id": 674,
+          "slug": "しかしながら",
+          "title": "しかしながら",
+          "meaning": "However, Nevertheless, But",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 350,
+          "slug": "それにしても",
+          "title": "それにしても",
+          "meaning": "Nevertheless, Even so",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

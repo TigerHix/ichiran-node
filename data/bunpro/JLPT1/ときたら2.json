@@ -1,0 +1,663 @@
+{
+  "data": {
+    "id": "995",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 995,
+      "level": "JLPT1",
+      "lesson_id": 49,
+      "part_of_speech": "",
+      "register": "",
+      "word_type": "",
+      "slug": "ときたら2",
+      "nuance": null,
+      "grammar_order": 901,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 996,
+        "title": "ものとして",
+        "slug": "ものとして"
+      },
+      "previous_grammar_point": {
+        "id": 937,
+        "title": "べくもない",
+        "slug": "べくもない"
+      },
+      "lesson_count": "18/20",
+      "title": "と来たら",
+      "furigana": "と来（き）たら ②",
+      "meaning": "For …(is the best), When it comes to, Concerning",
+      "nuance_translation": null,
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Phrase + ときたら",
+      "part_of_speech_translation": "",
+      "register_translation": "",
+      "word_type_translation": "",
+      "discourse_link": "",
+      "metadata": "ときたら, と来たら, tokitara, expression, casual, mild frustration, lighthearted, to be expected,"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "183738",
+            "type": "study_question"
+          },
+          {
+            "id": "183739",
+            "type": "study_question"
+          },
+          {
+            "id": "183740",
+            "type": "study_question"
+          },
+          {
+            "id": "183742",
+            "type": "study_question"
+          },
+          {
+            "id": "183743",
+            "type": "study_question"
+          },
+          {
+            "id": "183744",
+            "type": "study_question"
+          },
+          {
+            "id": "10985",
+            "type": "study_question"
+          },
+          {
+            "id": "183109",
+            "type": "study_question"
+          },
+          {
+            "id": "183110",
+            "type": "study_question"
+          },
+          {
+            "id": "183111",
+            "type": "study_question"
+          },
+          {
+            "id": "10986",
+            "type": "study_question"
+          },
+          {
+            "id": "183741",
+            "type": "study_question"
+          },
+          {
+            "id": "10988",
+            "type": "study_question"
+          },
+          {
+            "id": "10984",
+            "type": "study_question"
+          },
+          {
+            "id": "10987",
+            "type": "study_question"
+          },
+          {
+            "id": "10989",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "972",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "2145",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": []
+      },
+      "supplemental_links": {
+        "data": []
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "183738",
+      "type": "study_question",
+      "attributes": {
+        "id": 183738,
+        "content": "暑（あつ）い夏（なつ）<span class='study-area-input'>____</span>、絶対（ぜったい）にプールでしょ！",
+        "answer": "ときたら",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Casual, Conjunctive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/暑い夏、絶対にプールでしょ！.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>When it comes to</strong> the heat in summer, it’s gotta be the pool!",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 995,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183739",
+      "type": "study_question",
+      "attributes": {
+        "id": 183739,
+        "content": "ガトーショコラ<span class='study-area-input'>____</span>、あの美味（おい）しいケーキ屋（や）さんのに限（かぎ）ります。",
+        "answer": "ときたら",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Casual, Conjunctive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ガトーショコラ、あの美味しいケーキ屋さんのに限ります。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>When it comes to</strong> gateau chocolate, there’s nothing better than that cake shop's.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 995,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183740",
+      "type": "study_question",
+      "attributes": {
+        "id": 183740,
+        "content": "数学（すうがく）の先生（せんせい）<span class='study-area-input'>____</span>、あの有名（ゆうめい）講師（こうし）の田中（たなか）先生（せんせい）だ。",
+        "answer": "ときたら",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Casual, Conjunctive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/数学の先生、あの有名講師の田中先生だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>When it comes to</strong> math teachers, it’s gotta be the famous lecturer Mr. Tanaka.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 995,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183742",
+      "type": "study_question",
+      "attributes": {
+        "id": 183742,
+        "content": "ジュエリーブランド<span class='study-area-input'>____</span>ティファニーだと言（い）う彼女（かのじょ）は、お金持（かねも）ちに違（ちが）いない。",
+        "answer": "ときたら",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Casual, Conjunctive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ジュエリーブランドティファニーだと言う彼女は、お金持ちに違いない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Since she says that there is nothing better than Tiffany <strong>when it comes to</strong> jewellery brands, there is no mistaking that she is rich",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 995,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183743",
+      "type": "study_question",
+      "attributes": {
+        "id": 183743,
+        "content": "バラエティ番組（ばんぐみ）の司会者（しかいしゃ）<span class='study-area-input'>____</span>、あの女性（じょせい）をおいて他（ほか）にはいないでしょう。",
+        "answer": "ときたら",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Casual, Conjunctive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/バラエティ番組の司会者、あの女性をおいて他にはいないでしょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>When it comes to</strong> variety show hosts, there is nobody better than that lady.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 995,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183744",
+      "type": "study_question",
+      "attributes": {
+        "id": 183744,
+        "content": "合（ごう）コンがしたいんだって？合（ごう）コン<span class='study-area-input'>____</span>、あの合（ごう）コンマスターの林（はやし）君（くん）に頼（たよ）るのがいいよ。",
+        "answer": "ときたら",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Casual, Conjunctive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/合コンがしたいんだって？合コン、あの合コンマスターの林君に頼るのがいいよ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "You wanna go to a mixer? <strong>When it comes to</strong> mixers you should leave it up to Hayashi-kun, the mixer master.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 995,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10985",
+      "type": "study_question",
+      "attributes": {
+        "id": 10985,
+        "content": "ドーナツ<span class='study-area-input'>____</span><span class='vocab-popout' data-vocab-id='1368'>やっぱり</span><span class='vocab-popout' data-vocab-id='785'>牛乳（ぎゅうにゅう）</span><span class='gp-popout' data-gp-id='9'>でしょ</span>！",
+        "answer": "ときたら",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Casual, Conjunctive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ドーナツやっぱり牛乳でしょ！.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "は": {
+            "en": "Great, but let's try something that focuses on 'for (A) the best match is (B)' nuance.",
+            "es": ""
+          },
+          "って": {
+            "en": "Great, but let's try something that focuses on 'for (A) the best match is (B)' nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>For</strong> donuts, as expected, it's gotta be milk, right?",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 995,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183109",
+      "type": "study_question",
+      "attributes": {
+        "id": 183109,
+        "content": "\r\n夏（なつ）<span class='study-area-input'>____</span>やっぱりキンキンに冷（ひ）えたビールですよ！",
+        "answer": "ときたら",
+        "alternate_grammar": [],
+        "kanji_answer": "ときたら",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/夏ときたらやっぱりキンキンに冷えたビールですよ！.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>When it comes to</strong> summer, as expected, a cold beer is the best!",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 995,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183110",
+      "type": "study_question",
+      "attributes": {
+        "id": 183110,
+        "content": "\r\n\r\n\r\n寒（さむ）い日（ひ）<span class='study-area-input'>____</span>、鍋（なべ）でしょう。",
+        "answer": "ときたら",
+        "alternate_grammar": [],
+        "kanji_answer": "ときたら",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/寒い日ときたら、鍋でしょう。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>For</strong> a cold day, hot pots (<strong>is the best</strong>), don't you think?",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 995,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183111",
+      "type": "study_question",
+      "attributes": {
+        "id": 183111,
+        "content": "\r\n\r\n\r\nパワハラ<span class='study-area-input'>____</span>大問題（だいもんだい）になるのは当然（とうぜん）でしょう。",
+        "answer": "ときたら",
+        "alternate_grammar": [],
+        "kanji_answer": "ときたら",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/パワハラときたら大問題になるのは当然でしょう。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>When it comes to</strong> power harassment, of course it is going to become a huge problem.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 995,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10986",
+      "type": "study_question",
+      "attributes": {
+        "id": 10986,
+        "content": "<span class='vocab-popout' data-vocab-id='164'>テスト</span>で<span class='gp-popout' data-gp-id='791'>毎回（まいかい）</span>０（れい）<span class='vocab-popout' data-vocab-id='775'>点（てん）</span><span class='gp-popout' data-gp-id='21'>を</span><span class='vocab-popout' data-vocab-id='417'>取（と）</span><span class='gp-popout' data-gp-id='416'>って</span>いる<span class='study-area-input'>____</span>、<span class='vocab-popout' data-vocab-id='49'>お母（かあ）さん</span><span class='gp-popout' data-gp-id='10'>が</span><span class='vocab-popout' data-vocab-id='580'>怒（おこ）</span><span class='gp-popout' data-gp-id='888'>らない</span><span class='gp-popout' data-gp-id='253'>わけがない</span>。",
+        "answer": "ときたら",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Casual, Conjunctive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/テストで毎回0点を取っている、お母さんが怒らないわけがない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>When</strong> you get a zero on every test, <strong>there's no way</strong> your mother won't get angry.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 995,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183741",
+      "type": "study_question",
+      "attributes": {
+        "id": 183741,
+        "content": "冬（ふゆ）<span class='study-area-input'>____</span>鍋（なべ）だと思（おも）っていたが、彼（かれ）にとってのそれはミカンらしい。",
+        "answer": "ときたら",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Casual, Conjunctive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/冬鍋だと思っていたが、彼にとってのそれはミカンらしい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I thought that there was nothing better than nabe <strong>when it comes to</strong> winter, but for him it’s apparently mandarin.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 995,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10988",
+      "type": "study_question",
+      "attributes": {
+        "id": 10988,
+        "content": "<span class='gp-popout' data-gp-id='144'>こんなに</span><span class='vocab-popout' data-vocab-id='1978'>曇（くも）</span><span class='gp-popout' data-gp-id='416'>って</span>いる<span class='study-area-input'>____</span>、<span class='vocab-popout' data-vocab-id='1047'>雨（あめ）</span><span class='gp-popout' data-gp-id='10'>が</span><span class='vocab-popout' data-vocab-id='1041'>降（ふ）</span><span class='gp-popout' data-gp-id='888'>らない</span><span class='gp-popout' data-gp-id='161'>はずがない</span>。",
+        "answer": "ときたら",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Casual, Conjunctive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/こんなに曇っている、雨が降らないはずがない。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>When</strong> it is so cloudy, it <strong>is impossible</strong> for it not to rain.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 995,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10984",
+      "type": "study_question",
+      "attributes": {
+        "id": 10984,
+        "content": "「田中（たなか）<span class='vocab-popout' data-vocab-id='113'>さん</span><span class='gp-popout' data-gp-id='10'>が</span>クビ<span class='gp-popout' data-gp-id='57'>になった</span><span class='gp-popout' data-gp-id='157'>と聞（き）いた</span><span class='gp-popout' data-gp-id='78'>よ</span>。」<br>「毎日（まいにち）<span class='vocab-popout' data-vocab-id='1006'>遅刻（ちこく）</span><span class='study-area-input'>____</span>クビ<span class='gp-popout' data-gp-id='57'>になる</span><span class='gp-popout' data-gp-id='719'>のは</span>当然（とうぜん）<span class='gp-popout' data-gp-id='9'>でしょ</span>。」",
+        "answer": "ときたら",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Casual, Conjunctive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「田中さんがクビになったと聞いたよ。」「毎日遅刻クビになるのは当然でしょ。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "'I heard Mr. Tanaka got fired.'<br>'<strong>No wonder</strong> he would get fired <strong>when</strong> he was late every day.'",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 995,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10987",
+      "type": "study_question",
+      "attributes": {
+        "id": 10987,
+        "content": "<span class='vocab-popout' data-vocab-id='663'>暑（あつ）</span><span class='gp-popout' data-gp-id='24'>い</span><span class='vocab-popout' data-vocab-id='1983'>日（ひ）</span><span class='study-area-input'>____</span>、<span class='vocab-popout' data-vocab-id='1368'>やっぱり</span>麦茶（むぎちゃ）よ<span class='gp-popout' data-gp-id='71'>ね</span>。",
+        "answer": "ときたら",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "Casual, Conjunctive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/暑い日、やっぱり麦茶よね。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "は": {
+            "en": "Great, but let's try something that focuses on 'for (A) the best match is (B)' nuance.",
+            "es": ""
+          },
+          "って": {
+            "en": "Great, but let's try something that focuses on 'for (A) the best match is (B)' nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>For</strong> a hot day, as expected, there's nothing like barley tea, right?",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 995,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10989",
+      "type": "study_question",
+      "attributes": {
+        "id": 10989,
+        "content": "<span class='vocab-popout' data-vocab-id='681'>朝（あさ）</span><span class='study-area-input'>____</span>、<span class='vocab-popout' data-vocab-id='1368'>やっぱり</span><span class='vocab-popout' data-vocab-id='86'>コーヒー</span>しか無（な）い<span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='71'>ね</span>。",
+        "answer": "ときたら",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "Casual, Conjunctive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/朝、やっぱりコーヒーしか無いですね。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "は": {
+            "en": "Great, but let's try something that focuses on 'for (A) the best match is (B)' nuance.",
+            "es": ""
+          },
+          "って": {
+            "en": "Great, but let's try something that focuses on 'for (A) the best match is (B)' nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>For</strong> morning, as expected, only coffee (is a good match), right?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 995,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "972",
+      "type": "writeup",
+      "attributes": {
+        "id": 972,
+        "body_ja": "<p>「<span data-gp-id='995'>ときたら</span>」は「(A) についていえば」や「(A) に関（かん）しては」という意味（いみ）で使われます。これは、格助詞（かくじょし）「と」に動詞（どうし）「来（く）る」と接続助詞（せつぞくじょし）「たら」が合（あ）わさった形（かたち）です。不満（ふまん）などを表（あらわ）す「<span data-gp-id='872'>ときたら</span>」とは用法（ようほう）が異（こと）なるので、混同（こんどう）しないように気（き）をつけましょう。</p>\r\n\r\n<p>「<span data-gp-id='995'>ときたら</span>」は、(A) で話題（わだい）を示（しめ）し、その後（あと）、(B) でその話題（わだい）から話（はな）し手（て）の頭（あたま）に自然（しぜん）に浮（う）かんだ考（かんが）えが述（の）べられます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183109'>\r\n<li data-study-question='183110'>\r\n<li data-study-question='183111'>\r\n</ul>\r\n\r\n<p>(A) は、話（はな）し手（て）にとって (B) を強（つよ）く連想（れんそう）させるような話題（わだい）であることが多（おお）いです。(A) と (B) の関係（かんけい）があまりにも当（あ）たり前（まえ）で、説明（せつめい）する必要（ひつよう）がないと感（かん）じられるときには、(B) の文（ぶん）が「やっぱり」や「やはり」などから始（はじ）まることがよくあります。</p>\r\n",
+        "body": "<p>When used in the more literal sense, <span data-gp-id='995'>ときたら</span> is a grammar pattern that means ‘when it comes to (A)’, or ‘concerning (A)’. It is a combination of the <span data-term='格助詞・かくじょし'>case-marking particle</span> と, and 来（く）る combined with the <span data-term='接続助詞・せつぞくじょし'>conjunction particle</span> たら ‘if’, 来（き）たら. This is not to be confused with the alternative translation of <span data-gp-id='872'>ときたら</span> which is ‘that damned (A)’ when used for criticism.</p>\r\n\r\n<p><span data-gp-id='995'>ときたら</span> will attach to the end of a phrase marking what the conversation is ‘concerning’, before that topic will then be explained further. In other words, (A) will present the topic, while (B) will indicate the speaker’s first instinctive thoughts about that topic.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183109'>\r\n<li data-study-question='183110'>\r\n<li data-study-question='183111'>\r\n</ul>\r\n\r\n<p>For the speaker, (A) is usually something that strongly makes them think of (B). However, it may just be that the relationship between (A) and (B) is a thing that the speaker is implying as obvious, or that goes without saying. Due to this, the (B) phrase often begins with やっぱり or やはり ‘sure enough’.</p>"
+      }
+    },
+    {
+      "id": "2145",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 2145,
+        "source": "A Handbook of Japanese Grammar Patterns for Teachers and Learners",
+        "location": "Page 349",
+        "type": "OfflineResource"
+      }
+    }
+  ]
+}

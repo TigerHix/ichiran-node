@@ -1,0 +1,951 @@
+{
+  "data": {
+    "id": "183",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 183,
+      "level": "JLPT4",
+      "lesson_id": 15,
+      "part_of_speech": "",
+      "register": "一般",
+      "word_type": "",
+      "slug": "のなかで",
+      "nuance": "ある物（もの）をある<strong>グループの中（なか）から選択（せんたく）し</strong>、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）う表現（ひょうげん）。",
+      "grammar_order": 210,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 138,
+        "title": "ように・ような",
+        "slug": "ように-ような"
+      },
+      "previous_grammar_point": {
+        "id": 673,
+        "title": "だいたい",
+        "slug": "だいたい"
+      },
+      "lesson_count": "11/20",
+      "title": "のなかで",
+      "furigana": "の中（なか）で",
+      "meaning": "In, Among, Within",
+      "nuance_translation": "A phrase used to <strong>select one thing</strong> from <strong>within</strong> a group, and then describe it further.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Noun + <strong><span class='gp-popout' data-gp-id='6'>の</span> + 中（なか）で</strong><br><span class='gp-popout' data-gp-id='37'>その</span><sup>(1)</sup> + <strong>中（なか）で</strong><br><br><sup>(1)</sup> <span class='gp-popout' data-gp-id='30'>この</span>",
+      "part_of_speech_translation": "",
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10112",
+      "metadata": "のなかで, なかで, の中で, 中で, expression, noun, nonakade, nakade"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "3429",
+            "type": "study_question"
+          },
+          {
+            "id": "180505",
+            "type": "study_question"
+          },
+          {
+            "id": "180506",
+            "type": "study_question"
+          },
+          {
+            "id": "180507",
+            "type": "study_question"
+          },
+          {
+            "id": "3432",
+            "type": "study_question"
+          },
+          {
+            "id": "3434",
+            "type": "study_question"
+          },
+          {
+            "id": "3428",
+            "type": "study_question"
+          },
+          {
+            "id": "368",
+            "type": "study_question"
+          },
+          {
+            "id": "3433",
+            "type": "study_question"
+          },
+          {
+            "id": "3436",
+            "type": "study_question"
+          },
+          {
+            "id": "369",
+            "type": "study_question"
+          },
+          {
+            "id": "370",
+            "type": "study_question"
+          },
+          {
+            "id": "3435",
+            "type": "study_question"
+          },
+          {
+            "id": "3430",
+            "type": "study_question"
+          },
+          {
+            "id": "3431",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "208",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "819",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1294",
+            "type": "related_content"
+          },
+          {
+            "id": "196",
+            "type": "related_content"
+          },
+          {
+            "id": "451",
+            "type": "related_content"
+          },
+          {
+            "id": "1289",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "350",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "676",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "3429",
+      "type": "study_question",
+      "attributes": {
+        "id": 3429,
+        "content": "公園（こうえん）<span class='study-area-input'>____</span>子供（こども）達（たち）<span class='gp-popout' data-gp-id='10'>が</span>遊（あそ）ん<span class='gp-popout' data-gp-id='136'>でいた</span>。",
+        "answer": "のなかで",
+        "alternate_grammar": [],
+        "kanji_answer": "の中（なか）で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）をある<strong>グループの中（なか）から選択（せんたく）し</strong>、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/183/male_audio/230303_1421_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/公園の中で子供達が遊んでいた。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "で": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のうちで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The children were playing <strong>in</strong> the park. (<strong>Within</strong>)",
+        "nuance_translation": "A phrase used to <strong>select one thing</strong> from <strong>within</strong> a group, and then describe it further.",
+        "extra_info": "",
+        "reviewable_id": 183,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180505",
+      "type": "study_question",
+      "attributes": {
+        "id": 180505,
+        "content": "ラーメン<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span>味噌（みそ）ラーメン<span class=\"gp-popout\" data-gp-id=\"10\">が</span><span class=\"gp-popout\" data-gp-id=\"716\">好（す）き</span>。",
+        "answer": "のなかで",
+        "alternate_grammar": [],
+        "kanji_answer": "の中（なか）で",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ラーメンの中では味噌ラーメンが好き。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Among</strong> ramen, I like the miso type.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 183,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180506",
+      "type": "study_question",
+      "attributes": {
+        "id": 180506,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"30\">この</span>バンド<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span><span class=\"gp-popout\" data-gp-id=\"714\">誰（だれ）</span><span class=\"gp-popout\" data-gp-id=\"10\">が</span><span class=\"gp-popout\" data-gp-id=\"716\">好（す）き</span>？",
+        "answer": "のなかで",
+        "alternate_grammar": [],
+        "kanji_answer": "の中（なか）で",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/このバンドの中では誰が好き？.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Who do you like <strong>in</strong> this band?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 183,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "180507",
+      "type": "study_question",
+      "attributes": {
+        "id": 180507,
+        "content": "車（くるま）<span class='study-area-input'>____</span>夕食（ゆうしょく）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>食（た）べ<span class=\"gp-popout\" data-gp-id=\"895\">ました</span>。",
+        "answer": "のなかで",
+        "alternate_grammar": [],
+        "kanji_answer": "の中（なか）で",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/車の中で夕食を食べました。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I ate dinner <strong>in</strong> my car.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 183,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3432",
+      "type": "study_question",
+      "attributes": {
+        "id": 3432,
+        "content": "電車（でんしゃ）<span class='study-area-input'>____</span>大（おお）き<span class='gp-popout' data-gp-id='24'>い</span>声（こえ）<span class='gp-popout' data-gp-id='36'>で</span>喋（しゃべ）ら<span class='gp-popout' data-gp-id='65'>ないでください</span>。",
+        "answer": "のなかで",
+        "alternate_grammar": [],
+        "kanji_answer": "の中（なか）で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）をある<strong>グループの中（なか）から選択（せんたく）し</strong>、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/183/male_audio/230303_1421_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/電車の中で大きい声で喋らないでください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のうちで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Please do not speak loudly <strong>in</strong> the train. (<strong>Within</strong>)",
+        "nuance_translation": "A phrase used to <strong>select one thing</strong> from <strong>within</strong> a group, and then describe it further.",
+        "extra_info": "",
+        "reviewable_id": 183,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3434",
+      "type": "study_question",
+      "attributes": {
+        "id": 3434,
+        "content": "彼（かれ）<span class='gp-popout' data-gp-id='3'>は</span>雨（あめ）<span class='study-area-input'>____</span>歌（うた）っ<span class='gp-popout' data-gp-id='136'>ていた</span><span class='gp-popout' data-gp-id='45'>から</span>、服（ふく）<span class='gp-popout' data-gp-id='10'>が</span>濡（ぬ）れ<span class='gp-popout' data-gp-id='27'>ている</span>。",
+        "answer": "のなかで",
+        "alternate_grammar": [],
+        "kanji_answer": "の中（なか）で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）をある<strong>グループの中（なか）から選択（せんたく）し</strong>、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/183/male_audio/230303_1422_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/彼は雨の中で歌っていたから、服が濡れている。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のうちで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "のうち": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "のなかに": {
+            "en": "に is used for movement into something, like entering a room. But here we're describing an action happening within an environment, so let's try a particle that marks where an action is taking place. ",
+            "es": "",
+            "fr": ""
+          },
+          "で": {
+            "en": "で is used to mark the location where something happens, but rain isn't a location; it's a condition or environment. Let's try a grammar point that means 'among' or 'within'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "He was singing <strong>in</strong> the rain, so his clothes are wet. (<strong>Within</strong>)",
+        "nuance_translation": "A phrase used to <strong>select one thing</strong> from <strong>within</strong> a group, and then describe it further.",
+        "extra_info": "",
+        "reviewable_id": 183,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3428",
+      "type": "study_question",
+      "attributes": {
+        "id": 3428,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span><span class='study-area-input'>____</span>一（ひと）つ<span class='gp-popout' data-gp-id='21'>を</span>選（えら）<span class='gp-popout' data-gp-id='416'>んで</span>ください。",
+        "answer": "なかで",
+        "alternate_grammar": [],
+        "kanji_answer": "中（なか）で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）をある<strong>グループの中（なか）から選択（せんたく）し</strong>、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/183/male_audio/230303_1421_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この中で一つを選んでください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のうちで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Please choose one from <strong>among</strong> these. (<strong>within</strong>)",
+        "nuance_translation": "A phrase used to <strong>select one thing</strong> from <strong>within</strong> a group, and then describe it further.",
+        "extra_info": "",
+        "reviewable_id": 183,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "368",
+      "type": "study_question",
+      "attributes": {
+        "id": 368,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>三（みっ）つ<span class='study-area-input'>____</span>は、<span class='vocab-popout' data-vocab-id='978'>赤（あか）<span class='vocab-popout' data-vocab-id='914'>色（いろ）</span></span>が好（す）き。",
+        "answer": "のなかで",
+        "alternate_grammar": [],
+        "kanji_answer": "の中（なか）で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）をある<strong>グループの中（なか）から選択（せんたく）し</strong>、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Restrictive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/183/male_audio/230303_1420.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この三つの中では、赤色が好き。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のうちで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Among</strong> these three, I like the red one. (<strong>within</strong>)",
+        "nuance_translation": "A phrase used to <strong>select one thing</strong> from <strong>within</strong> a group, and then describe it further.",
+        "extra_info": "",
+        "reviewable_id": 183,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3433",
+      "type": "study_question",
+      "attributes": {
+        "id": 3433,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>四（よっ）つ<span class='study-area-input'>____</span>、三（みっ）つも<span class='gp-popout' data-gp-id='717'>嫌（きら）い</span>なの？",
+        "answer": "のなかで",
+        "alternate_grammar": [],
+        "kanji_answer": "の中（なか）で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）をある<strong>グループの中（なか）から選択（せんたく）し</strong>、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/183/male_audio/230303_1422.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/この四つの中で、三つも嫌いなの？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のうちで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "のなか": {
+            "en": "の中 by itself is a noun phrase meaning 'inside' or 'within'. Can you add a particle to the end to show we are choosing or comparing things within a group?",
+            "es": "",
+            "fr": ""
+          },
+          "のなかに": {
+            "en": "に is used to mark a target or location. Let's use a particle that shows we are choosing or comparing things within a group.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Among</strong> these four, you hate three? (<strong>within</strong>)",
+        "nuance_translation": "A phrase used to <strong>select one thing</strong> from <strong>within</strong> a group, and then describe it further.",
+        "extra_info": "",
+        "reviewable_id": 183,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3436",
+      "type": "study_question",
+      "attributes": {
+        "id": 3436,
+        "content": "今（いま）<span class='gp-popout' data-gp-id='58'>まで</span>の変顔（へんがお）写真（しゃしん）<span class='study-area-input'>____</span>、<span class='gp-popout' data-gp-id='712'>どれ</span><span class='gp-popout' data-gp-id='10'>が</span><span class='gp-popout' data-gp-id='716'>好（す）き</span>?",
+        "answer": "のなかで",
+        "alternate_grammar": [],
+        "kanji_answer": "の中（なか）で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）をある<strong>グループの中（なか）から選択（せんたく）し</strong>、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/183/male_audio/230303_1425.mp3",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のうちで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "のなか": {
+            "en": "の中 by itself is a noun phrase meaning 'inside' or 'within'. Can you add a particle to the end to show we are choosing or comparing things within a group?",
+            "es": "",
+            "fr": ""
+          },
+          "のなかに": {
+            "en": "に is used to mark a target or location. Let's use a particle that shows we are choosing or comparing things within a group.",
+            "es": "",
+            "fr": ""
+          },
+          "のひとつ": {
+            "en": "We are looking for a grammar point that means 'within' or 'among'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Up to this point, <strong>out of</strong> (all) the strange-face pictures, which do you like? (<strong>among・within</strong>)",
+        "nuance_translation": "A phrase used to <strong>select one thing</strong> from <strong>within</strong> a group, and then describe it further.",
+        "extra_info": "",
+        "reviewable_id": 183,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "369",
+      "type": "study_question",
+      "attributes": {
+        "id": 369,
+        "content": "フルーツ<span class='study-area-input'>____</span>、イチゴ<span class='gp-popout' data-gp-id='131'>とか</span>パイン<span class='gp-popout' data-gp-id='10'>が</span><span class='gp-popout' data-gp-id='716'>好（す）き</span>。",
+        "answer": "のなかで",
+        "alternate_grammar": [],
+        "kanji_answer": "の中（なか）で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）をある<strong>グループの中（なか）から選択（せんたく）し</strong>、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Restrictive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/183/male_audio/フルーツの中で、イチゴとかパインが好き.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/フルーツの中で、イチゴとかパインが好き。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のうちで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "のなか": {
+            "en": "の中 by itself is a noun phrase meaning 'inside' or 'within'. Can you add a particle to the end to show we are choosing or comparing things within a group?",
+            "es": "",
+            "fr": ""
+          },
+          "のなかに": {
+            "en": "に is used to mark a target or location. Let's use a particle that shows we are choosing or comparing things within a group.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Among</strong> all fruits, I like strawberries and pineapple. (<strong>within</strong>)",
+        "nuance_translation": "A phrase used to <strong>select one thing</strong> from <strong>within</strong> a group, and then describe it further.",
+        "extra_info": "",
+        "reviewable_id": 183,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "370",
+      "type": "study_question",
+      "attributes": {
+        "id": 370,
+        "content": "ひらがな<span class='gp-popout' data-gp-id='15'>と</span>カタカナ<span class='gp-popout' data-gp-id='15'>と</span>漢字（かんじ）<span class='study-area-input'>____</span>、ひらがな<span class='gp-popout' data-gp-id='182'>しか</span>書（か）けない。",
+        "answer": "のなかで",
+        "alternate_grammar": [],
+        "kanji_answer": "の中（なか）で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）をある<strong>グループの中（なか）から選択（せんたく）し</strong>、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Restrictive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/183/male_audio/230303_1421.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/ひらがなとカタカナと漢字の中で、ひらがなしか書けない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のうちで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "なかで": {
+            "en": "中 and 漢字 are both nouns. When one noun modifies another a particle to connect them.",
+            "es": "",
+            "fr": ""
+          },
+          "のなか": {
+            "en": "の中 by itself is a noun phrase meaning 'inside' or 'within'. Can you add a particle to the end to show we are choosing or comparing things within a group?",
+            "es": "",
+            "fr": ""
+          },
+          "のなかに": {
+            "en": "に is used to mark a target or location. Let's use a particle that shows we are choosing or comparing things within a group.",
+            "es": "",
+            "fr": ""
+          },
+          "とか": {
+            "en": "とか is used for non exhaustive lists. We are looking for a grammar point that means 'within' or 'among'.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Among</strong> hiragana, katakana, and kanji, I can only write hiragana. (<strong>within</strong>)",
+        "nuance_translation": "A phrase used to <strong>select one thing</strong> from <strong>within</strong> a group, and then describe it further.",
+        "extra_info": "",
+        "reviewable_id": 183,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3435",
+      "type": "study_question",
+      "attributes": {
+        "id": 3435,
+        "content": "チーム<span class='study-area-input'>____</span>コミュニケーション能力（のうりょく）<span class='gp-popout' data-gp-id='127'>が必要（ひつよう）</span><span class='gp-popout' data-gp-id='18'>だろう</span>。",
+        "answer": "のなかで",
+        "alternate_grammar": [],
+        "kanji_answer": "の中（なか）で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）をある<strong>グループの中（なか）から選択（せんたく）し</strong>、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/183/male_audio/230303_1422_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/チームの中でコミュニケーション能力が必要だろう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のうちで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "どうし": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "どうしの": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ちゅう": {
+            "en": "中（ちゅう） is used with time-based activities like 'during class'. We are looking for a grammar point that means 'within' or 'among'.",
+            "es": "",
+            "fr": ""
+          },
+          "のなか": {
+            "en": "の中 by itself is a noun phrase meaning 'inside' or 'within'. Can you add a particle to the end to show we are choosing or comparing things within a group?",
+            "es": "",
+            "fr": ""
+          },
+          "のなかに": {
+            "en": "に is used to mark a target or location. Let's use a particle that shows we are choosing or comparing things within a group.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "Communication <strong>among</strong> team members is important, yeah? (<strong>Within</strong>)",
+        "nuance_translation": "A phrase used to <strong>select one thing</strong> from <strong>within</strong> a group, and then describe it further.",
+        "extra_info": "",
+        "reviewable_id": 183,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3430",
+      "type": "study_question",
+      "attributes": {
+        "id": 3430,
+        "content": "全部（ぜんぶ）<span class='gp-popout' data-gp-id='6'>の</span>国（くに）<span class='study-area-input'>____</span>、<span class='gp-popout' data-gp-id='55'>一番（いちばん）</span>行（い）っ<span class='gp-popout' data-gp-id='99'>てみたい</span><span class='gp-popout' data-gp-id='16'>のは</span><span class='gp-popout' data-gp-id='56'>どこ</span>？",
+        "answer": "のなかで",
+        "alternate_grammar": [],
+        "kanji_answer": "の中（なか）で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）をある<strong>グループの中（なか）から選択（せんたく）し</strong>、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/183/male_audio/230303_1421_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/全部の国の中で、一番行ってみたいのはどこ？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のうちで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "のなか": {
+            "en": "の中 by itself is a noun phrase meaning 'inside' or 'within'. Can you add a particle to the end to show we are choosing or comparing things within a group?",
+            "es": "",
+            "fr": ""
+          },
+          "のなかに": {
+            "en": "に is used to mark a target or location. Let's use a particle that shows we are choosing or comparing things within a group.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "<strong>Among</strong> all countries, which one do you want to go to the most? (<strong>within</strong>)",
+        "nuance_translation": "A phrase used to <strong>select one thing</strong> from <strong>within</strong> a group, and then describe it further.",
+        "extra_info": "",
+        "reviewable_id": 183,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3431",
+      "type": "study_question",
+      "attributes": {
+        "id": 3431,
+        "content": "グループ<span class='study-area-input'>____</span>色々（いろいろ）な意見（いけん）がありました。",
+        "answer": "のなかで",
+        "alternate_grammar": [],
+        "kanji_answer": "の中（なか）で",
+        "kanji_alt_grammar": [],
+        "nuance": "ある物（もの）をある<strong>グループの中（なか）から選択（せんたく）し</strong>、それについて詳（くわ）しく説明（せつめい）する時（とき）に使（つか）う表現（ひょうげん）。",
+        "tense": "Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N4/Lesson5/183/male_audio/230303_1421_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n4/グループの中で色々な意見がありました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のうちで": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          },
+          "どうし": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "なかで": {
+            "en": "中 and グループ are both nouns. When one noun modifies another a particle to connect them.",
+            "es": "",
+            "fr": ""
+          },
+          "のなか": {
+            "en": "の中 by itself is a noun phrase meaning 'inside' or 'within'. Can you add a particle to the end to show we are choosing or comparing things within a group?",
+            "es": "",
+            "fr": ""
+          },
+          "のなかに": {
+            "en": "に is used to mark a target or location. Let's use a particle that shows we are choosing or comparing things within a group.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "translation": "There were various opinions <strong>among</strong> the group. (<strong>Within</strong>)",
+        "nuance_translation": "A phrase used to <strong>select one thing</strong> from <strong>within</strong> a group, and then describe it further.",
+        "extra_info": "",
+        "reviewable_id": 183,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "208",
+      "type": "writeup",
+      "attributes": {
+        "id": 208,
+        "body_ja": "",
+        "body": "<p>Just like the grammar point <span data-gp-id='55'>の中（なか）で～が一番（いちばん）～</span>, this grammar point may be used when marking one thing from within a group, and then further describing it. The only difference is that <span data-gp-id='183'>の中（なか）で</span> by itself simply marks something as being 'among (A)', or 'within (A)', rather than being the 'most (A)'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='180505'>\r\n<li data-study-question='180506'>\r\n</ul>\r\n\r\n<p><span data-gp-id='183'>の中（なか）で</span> is also frequently used to describe things that are happening within a place, and will translate simply as 'in (A)', in these cases.</p>\r\n\r\n<ul class='writeup-examples--holder'><li data-study-question='180507'></ul>"
+      }
+    },
+    {
+      "id": "819",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 819,
+        "source": "みんなの日本語 I",
+        "location": "Page 80 [CH 12]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "350",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 350,
+        "site": "JStackExchange",
+        "description": "その中( に / で / から ) What is the correct choice of particles?",
+        "link": "https://japanese.stackexchange.com/questions/2503/%e3%81%9d%e3%81%ae%e4%b8%ad-%e3%81%ab-%e3%81%a7-%e3%81%8b%e3%82%89-what-is-the-correct-choice-of-particles/2520#2520",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "676",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 676,
+        "site": "Japanese Test 4 You",
+        "description": "Additional Example Sentences and Listening Practice",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n4-grammar-%E3%81%AE%E4%B8%AD%E3%81%A7-no-naka-de/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1294",
+      "type": "related_content",
+      "attributes": {
+        "id": 1294,
+        "relationship_type": "misc",
+        "body": "Though both contain なか, their meanings are different. なかなか is often used in negatives to express difficulty, like 'not easily' (なかなかできません), or in positives to mean 'quite' (なかなかいい). In contrast, のなかで means 'among' and is used when referring to one or more members of a group. For example, 果物の中でりんごが一番好き means 'Among fruits, I like apples the best.'.",
+        "first_relatable": {
+          "id": 437,
+          "slug": "なかなか",
+          "title": " なかなか",
+          "meaning": "Very, Quite, Considerably",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 183,
+          "slug": "のなかで",
+          "title": "のなかで",
+          "meaning": "In, Among, Within",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "196",
+      "type": "related_content",
+      "attributes": {
+        "id": 196,
+        "relationship_type": "related",
+        "body": "",
+        "first_relatable": {
+          "id": 55,
+          "slug": "のなかで-がいちばん",
+          "title": "のなかで～がいちばん～",
+          "meaning": "Out of ~, ~ is the best/most ~",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 183,
+          "slug": "のなかで",
+          "title": "のなかで",
+          "meaning": "In, Among, Within",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "451",
+      "type": "related_content",
+      "attributes": {
+        "id": 451,
+        "relationship_type": "related",
+        "body": "のなかで and 同士 can both refer to groups or relationships, but their meanings and usage differ. のなかで means 'among' and is used to highlight one or more members within a group, e.g. サッカー選手の中で誰が好き？ ('Among soccer players, who do you like?'). 同士, on the other hand, emphasizes mutual relationships, e.g. サッカー選手同士で話し合った means 'They talked as fellow soccer players.'.",
+        "first_relatable": {
+          "id": 183,
+          "slug": "のなかで",
+          "title": "のなかで",
+          "meaning": "In, Among, Within",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 656,
+          "slug": "同士",
+          "title": "同士",
+          "meaning": "Fellow, With each other, Mutually, Between, Among, Together, With",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1289",
+      "type": "related_content",
+      "attributes": {
+        "id": 1289,
+        "relationship_type": "synonym",
+        "body": "～のうち(で) and のなかで are similar expressions that both mean 'among', but their usage can differ. ～のうち(で) is most often used with number + counter phrases. For example, 5人のうち4人が合格した ('Out of 5 people, 4 passed.'). With non-numerical groupings, like スポーツの中でどれが一番好き？ ('Among sports, which do you like best?'), のなかで is more common, especially in speech.",
+        "first_relatable": {
+          "id": 681,
+          "slug": "-のうち-で",
+          "title": "～のうち(で)",
+          "meaning": "Of the, Among(st)",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 183,
+          "slug": "のなかで",
+          "title": "のなかで",
+          "meaning": "In, Among, Within",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

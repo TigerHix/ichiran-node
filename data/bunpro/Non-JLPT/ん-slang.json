@@ -1,0 +1,825 @@
+{
+  "data": {
+    "id": "1069",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 1069,
+      "level": "Non-JLPT",
+      "lesson_id": 51,
+      "part_of_speech": null,
+      "register": "タメ語",
+      "word_type": "",
+      "slug": "ん-slang",
+      "nuance": "言葉（ことば）をスムーズにつなげるために、しばしば<strong>「ら」「り」「る」「れ」「ろ」の音（おと）を置（お）き換（か）えて</strong>使（つか）われる<strong>俗称（ぞくしょう）の略語（りゃくご）</strong>。",
+      "grammar_order": 930,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 1070,
+        "title": "つ (Slang)",
+        "slug": "つ-slang"
+      },
+      "previous_grammar_point": {
+        "id": 1068,
+        "title": "い",
+        "slug": "い"
+      },
+      "lesson_count": "5/13",
+      "title": "ん (Slang)",
+      "furigana": "ん (Slang)",
+      "meaning": "Slang abbreviation",
+      "nuance_translation": "A form of <strong>slang abbreviation</strong> that often <strong>replaces ら, り, る, れ, ろ sounds</strong>, in order to link words together more smoothly when speaking.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<del>ら, り, る, れ, ろ</del> + <strong>ん</strong> + ない<br>て<del>いる</del> + <strong>ん</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Casual",
+      "word_type_translation": "",
+      "discourse_link": "",
+      "metadata": "ん, nn, abbreviation"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "155185",
+            "type": "study_question"
+          },
+          {
+            "id": "155189",
+            "type": "study_question"
+          },
+          {
+            "id": "155190",
+            "type": "study_question"
+          },
+          {
+            "id": "155191",
+            "type": "study_question"
+          },
+          {
+            "id": "155301",
+            "type": "study_question"
+          },
+          {
+            "id": "155302",
+            "type": "study_question"
+          },
+          {
+            "id": "155305",
+            "type": "study_question"
+          },
+          {
+            "id": "155192",
+            "type": "study_question"
+          },
+          {
+            "id": "155188",
+            "type": "study_question"
+          },
+          {
+            "id": "155187",
+            "type": "study_question"
+          },
+          {
+            "id": "155300",
+            "type": "study_question"
+          },
+          {
+            "id": "155299",
+            "type": "study_question"
+          },
+          {
+            "id": "155303",
+            "type": "study_question"
+          },
+          {
+            "id": "155304",
+            "type": "study_question"
+          },
+          {
+            "id": "155186",
+            "type": "study_question"
+          },
+          {
+            "id": "155194",
+            "type": "study_question"
+          },
+          {
+            "id": "155195",
+            "type": "study_question"
+          },
+          {
+            "id": "155193",
+            "type": "study_question"
+          },
+          {
+            "id": "155184",
+            "type": "study_question"
+          },
+          {
+            "id": "184638",
+            "type": "study_question"
+          },
+          {
+            "id": "184639",
+            "type": "study_question"
+          },
+          {
+            "id": "184640",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "1001",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": []
+      },
+      "supplemental_links": {
+        "data": []
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "155185",
+      "type": "study_question",
+      "attributes": {
+        "id": 155185,
+        "content": "赤（あか）ちゃんはみんな言葉（ことば）を喋（しゃべ）<span class='study-area-input'>____</span>ない。",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": "言葉（ことば）をスムーズにつなげるために、しばしば<strong>「ら」「り」「る」「れ」「ろ」の音（おと）を置（お）き換（か）えて</strong>使（つか）われる<strong>俗称（ぞくしょう）の略語（りゃくご）</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Toddlers don't speak words. <strong>(slang abbreviation)</strong>",
+        "nuance_translation": "A form of <strong>slang abbreviation</strong> that often <strong>replaces ら, り, る, れ, ろ sounds</strong>, in order to link words together more smoothly when speaking.",
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155189",
+      "type": "study_question",
+      "attributes": {
+        "id": 155189,
+        "content": "あれ…携帯（けいたい）が壊（こわ）れている？画面（がめん）に何（なに）も映（うつ）<span class='study-area-input'>____</span>ない…。",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": "言葉（ことば）をスムーズにつなげるために、しばしば<strong>「ら」「り」「る」「れ」「ろ」の音（おと）を置（お）き換（か）えて</strong>使（つか）われる<strong>俗称（ぞくしょう）の略語（りゃくご）</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Eh… My phone is broken? The screen doesn't display anything. <strong>(slang abbreviation)</strong>",
+        "nuance_translation": "A form of <strong>slang abbreviation</strong> that often <strong>replaces ら, り, る, れ, ろ sounds</strong>, in order to link words together more smoothly when speaking.",
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155190",
+      "type": "study_question",
+      "attributes": {
+        "id": 155190,
+        "content": "針（はり）が針山（はりやま）に刺（さ）さ<span class='study-area-input'>____</span>ないから、ケースに針（はり）をしまった。",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": "言葉（ことば）をスムーズにつなげるために、しばしば<strong>「ら」「り」「る」「れ」「ろ」の音（おと）を置（お）き換（か）えて</strong>使（つか）われる<strong>俗称（ぞくしょう）の略語（りゃくご）</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The pin won't stick in the pincushion, so I put it in the case. <strong>(slang abbreviation)</strong>",
+        "nuance_translation": "A form of <strong>slang abbreviation</strong> that often <strong>replaces ら, り, る, れ, ろ sounds</strong>, in order to link words together more smoothly when speaking.",
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155191",
+      "type": "study_question",
+      "attributes": {
+        "id": 155191,
+        "content": "子供（こども）たちは食（た）べ盛（ざか）りだからカレーは残（のこ）<span class='study-area-input'>____</span>ないだろう。",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": "言葉（ことば）をスムーズにつなげるために、しばしば<strong>「ら」「り」「る」「れ」「ろ」の音（おと）を置（お）き換（か）えて</strong>使（つか）われる<strong>俗称（ぞくしょう）の略語（りゃくご）</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Because the kids eat a lot, there probably won't be any leftover curry. <strong>(slang abbreviation)</strong>",
+        "nuance_translation": "A form of <strong>slang abbreviation</strong> that often <strong>replaces ら, り, る, れ, ろ sounds</strong>, in order to link words together more smoothly when speaking.",
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155301",
+      "type": "study_question",
+      "attributes": {
+        "id": 155301,
+        "content": "\r\nあ゙〜、校長（こうちょう）の話（はなし）マジでつま<span class='study-area-input'>____</span>ねえな。",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nUgh, the principal's stories are so boring, don't you think?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155302",
+      "type": "study_question",
+      "attributes": {
+        "id": 155302,
+        "content": "\r\nまだ引（ひ）っ越（こ）しのバイトやって<span class='study-area-input'>____</span>の？",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nAre you still working part time as a mover?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155305",
+      "type": "study_question",
+      "attributes": {
+        "id": 155305,
+        "content": "\r\n今（いま）何（なに）やってん？(Unnatural Japanese)",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nWhat are you doing now?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155192",
+      "type": "study_question",
+      "attributes": {
+        "id": 155192,
+        "content": "母（はは）が娘（むすめ）に：「キッチンの隅（すみ）っこで何（なに）して<span class='study-area-input'>____</span>の？」",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": "言葉（ことば）をスムーズにつなげるために、しばしば<strong>「ら」「り」「る」「れ」「ろ」の音（おと）を置（お）き換（か）えて</strong>使（つか）われる<strong>俗称（ぞくしょう）の略語（りゃくご）</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Mother to daughter: 'What are you doing in the corner of the kitchen?' <strong>(slang abbreviation)</strong>",
+        "nuance_translation": "A form of <strong>slang abbreviation</strong> that often <strong>replaces ら, り, る, れ, ろ sounds</strong>, in order to link words together more smoothly when speaking.",
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155188",
+      "type": "study_question",
+      "attributes": {
+        "id": 155188,
+        "content": "テレビの音（おと）が鳴（な）<span class='study-area-input'>____</span>ないからカスタマーセンターに電話（でんわ）をした。",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": "言葉（ことば）をスムーズにつなげるために、しばしば<strong>「ら」「り」「る」「れ」「ろ」の音（おと）を置（お）き換（か）えて</strong>使（つか）われる<strong>俗称（ぞくしょう）の略語（りゃくご）</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I made a call to the helpline because the TV doesn't make any sound. <strong>(slang abbreviation)</strong>",
+        "nuance_translation": "A form of <strong>slang abbreviation</strong> that often <strong>replaces ら, り, る, れ, ろ sounds</strong>, in order to link words together more smoothly when speaking.",
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155187",
+      "type": "study_question",
+      "attributes": {
+        "id": 155187,
+        "content": "材料（ざいりょう）を計（はか）<span class='study-area-input'>____</span>ないでケーキを作（つく）ったから失敗（しっぱい）した。",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": "言葉（ことば）をスムーズにつなげるために、しばしば<strong>「ら」「り」「る」「れ」「ろ」の音（おと）を置（お）き換（か）えて</strong>使（つか）われる<strong>俗称（ぞくしょう）の略語（りゃくご）</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Because I made a cake without measuring ingredients, it was stuffed up. <strong>(slang abbreviation)</strong>",
+        "nuance_translation": "A form of <strong>slang abbreviation</strong> that often <strong>replaces ら, り, る, れ, ろ sounds</strong>, in order to link words together more smoothly when speaking.",
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155300",
+      "type": "study_question",
+      "attributes": {
+        "id": 155300,
+        "content": "\r\nこれからはこうな<span class='study-area-input'>____</span>ないように気（き）を付（つ）けようね。",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nFrom now on, let's be careful so this doesn't happen again.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155299",
+      "type": "study_question",
+      "attributes": {
+        "id": 155299,
+        "content": "え、これ分（わ）か<span class='study-area-input'>____</span>ないとかちょっとやばいぞ。",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Dude, it's a bit crazy that you'd not know this.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155303",
+      "type": "study_question",
+      "attributes": {
+        "id": 155303,
+        "content": "\r\nこれってどうなって<span class='study-area-input'>____</span>だろう。",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI wonder what is going on with this.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155304",
+      "type": "study_question",
+      "attributes": {
+        "id": 155304,
+        "content": "\r\nねえ、言（い）われたとおりにやって<span class='study-area-input'>____</span>だけど、全然（ぜんぜん）できない。",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nHey, I did it as you instructed me to, but I can't do it at all.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155186",
+      "type": "study_question",
+      "attributes": {
+        "id": 155186,
+        "content": "僕（ぼく）の１５（じゅうご）歳（さい）のシーズーはもう走（はし）<span class='study-area-input'>____</span>ない。",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": "言葉（ことば）をスムーズにつなげるために、しばしば<strong>「ら」「り」「る」「れ」「ろ」の音（おと）を置（お）き換（か）えて</strong>使（つか）われる<strong>俗称（ぞくしょう）の略語（りゃくご）</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "My 15 year-old Shih Tzu doesn't run anymore. <strong>(slang abbreviation)</strong>",
+        "nuance_translation": "A form of <strong>slang abbreviation</strong> that often <strong>replaces ら, り, る, れ, ろ sounds</strong>, in order to link words together more smoothly when speaking.",
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155194",
+      "type": "study_question",
+      "attributes": {
+        "id": 155194,
+        "content": "アイツは今日（きょう）、新（あたら）しい彼女（かのじょ）とデートをして<span class='study-area-input'>____</span>だろう。",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": "言葉（ことば）をスムーズにつなげるために、しばしば<strong>「ら」「り」「る」「れ」「ろ」の音（おと）を置（お）き換（か）えて</strong>使（つか）われる<strong>俗称（ぞくしょう）の略語（りゃくご）</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "That guy, he's probably on a date with his new girlfriend today. <strong>(slang abbreviation)</strong>",
+        "nuance_translation": "A form of <strong>slang abbreviation</strong> that often <strong>replaces ら, り, る, れ, ろ sounds</strong>, in order to link words together more smoothly when speaking.",
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155195",
+      "type": "study_question",
+      "attributes": {
+        "id": 155195,
+        "content": "アイツのメアドを知（し）って<span class='study-area-input'>____</span>だけど、メールを送（おく）ってもいいかな。",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": "言葉（ことば）をスムーズにつなげるために、しばしば<strong>「ら」「り」「る」「れ」「ろ」の音（おと）を置（お）き換（か）えて</strong>使（つか）われる<strong>俗称（ぞくしょう）の略語（りゃくご）</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I know that guy's email, but I wonder if it's fine to send him a message <strong>(slang abbreviation)</strong>.",
+        "nuance_translation": "A form of <strong>slang abbreviation</strong> that often <strong>replaces ら, り, る, れ, ろ sounds</strong>, in order to link words together more smoothly when speaking.",
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155193",
+      "type": "study_question",
+      "attributes": {
+        "id": 155193,
+        "content": "お前（まえ）、図書館（としょかん）で何（なに）を必死（ひっし）に勉強（べんきょう）して<span class='study-area-input'>____</span>の？",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": "言葉（ことば）をスムーズにつなげるために、しばしば<strong>「ら」「り」「る」「れ」「ろ」の音（おと）を置（お）き換（か）えて</strong>使（つか）われる<strong>俗称（ぞくしょう）の略語（りゃくご）</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Oi, what are you studying fervently in the library? <strong>(slang abbreviation)</strong>",
+        "nuance_translation": "A form of <strong>slang abbreviation</strong> that often <strong>replaces ら, り, る, れ, ろ sounds</strong>, in order to link words together more smoothly when speaking.",
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155184",
+      "type": "study_question",
+      "attributes": {
+        "id": 155184,
+        "content": "あいつは日本語（にほんご）が分（わ）か<span class='study-area-input'>____</span>ない。",
+        "answer": "ん",
+        "alternate_grammar": [],
+        "kanji_answer": "ん",
+        "kanji_alt_grammar": [],
+        "nuance": "言葉（ことば）をスムーズにつなげるために、しばしば<strong>「ら」「り」「る」「れ」「ろ」の音（おと）を置（お）き換（か）えて</strong>使（つか）われる<strong>俗称（ぞくしょう）の略語（りゃくご）</strong>。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "That guy doesn't understand Japanese. <strong>(slang abbreviation)</strong>",
+        "nuance_translation": "A form of <strong>slang abbreviation</strong> that often <strong>replaces ら, り, る, れ, ろ sounds</strong>, in order to link words together more smoothly when speaking.",
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184638",
+      "type": "study_question",
+      "attributes": {
+        "id": 184638,
+        "content": "俺（おれ）は何（なに）も知（し）らん。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I wouldn't have a clue.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184639",
+      "type": "study_question",
+      "attributes": {
+        "id": 184639,
+        "content": "もう一生（いっしょう）走（はし）らん。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I will never run again.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184640",
+      "type": "study_question",
+      "attributes": {
+        "id": 184640,
+        "content": "あいつはそんなことせん。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 14,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "He would not do something like that.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 1069,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1001",
+      "type": "writeup",
+      "attributes": {
+        "id": 1001,
+        "body_ja": "",
+        "body": "<p>Being the shortest sound in the Japanese language, ん is often used for abbreviation, especially in casual speech. Abbreviation with ん occurs primarily for the purpose of making part (A) and part (B) of a statement flow together more smoothly.</p>\r\n\r\n<p>In general, ん will only replace sounds that require rolling of the tongue. Thankfully, this will be easy to remember, as it is just the ら, り, る, れ, ろ sounds.</p>\r\n\r\n<p>The first common way that this ん is used is for replacing the ら negative stem in verbs where る changes to ら. Actually, even if something is not a verb, if it contains らない, it can be shortened in this way. An example of this can be seen in the い-Adjective つまらない, 'boring'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155299'>\r\n<li data-study-question='155300'>\r\n<li data-study-question='155301'></ul>\r\n\r\n<p>The second pattern where ん will be used is when it not only replaces る, but replaces the entire いる 'to be' in the ている progressive form of verbs.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155302'>\r\n<li data-study-question='155303'>\r\n<li data-study-question='155304'></ul>\r\n\r\n<p>One thing that you will notice is that regardless of whether ん abbreviates らない or ている, there is always something following the ん. This will be important to learn, as this type of 'lazy' abbreviation will not have a sentence end with ん. We can remember this by remembering that the goal is to make (A) and (B) flow together, so if there is no (B), there is no need for ん.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155305'></ul>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p>If you see a sentence ending in ん, and the negative stem has not been removed, it will almost always be an abbreviation of the classical-auxiliary verb ぬ, which is used in the same way as the modern ない. Rather than for ease of speech, this ん tends to sound forceful, like stating 'won't (A)', or 'don't (A)'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184638'>\r\n<li data-study-question='184639'>\r\n<li data-study-question='184640'></ul>\r\n\r\n<p>Keep in mind that する will change to せん, not しん, due to the way that ぬ usually conjugates with する.</p></section>"
+      }
+    }
+  ]
+}

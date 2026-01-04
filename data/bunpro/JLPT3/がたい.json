@@ -1,0 +1,1200 @@
+{
+  "data": {
+    "id": "257",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 257,
+      "level": "JLPT3",
+      "lesson_id": 30,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "がたい",
+      "nuance": "あることが難（むずか）しいときに、(A)の<strong>難（むずか）しさ</strong>に焦点（しょうてん）を当（あ）てる表現（ひょうげん）。",
+      "grammar_order": 505,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 467,
+        "title": "まさか",
+        "slug": "まさか"
+      },
+      "previous_grammar_point": {
+        "id": 656,
+        "title": "同士",
+        "slug": "同士"
+      },
+      "lesson_count": "1/20",
+      "title": "がたい",
+      "furigana": "がたい",
+      "meaning": "Hard to, Difficult to",
+      "nuance_translation": "A phrase that focuses on the <strong>difficulty</strong> of (A), in relation to the <strong>task itself</strong> being hard.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "<span class='gp-popout' data-gp-id='26'>Verb［stem］</span>+ <strong>がたいです</strong>",
+      "casual_structure": "<span class='gp-popout' data-gp-id='26'>Verb［stem］</span>+ <strong>がたい</strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/2839",
+      "metadata": "がたい, 難い, gatai, suffix, conjunctive form, difficult, almost impossible,"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "181593",
+            "type": "study_question"
+          },
+          {
+            "id": "181591",
+            "type": "study_question"
+          },
+          {
+            "id": "181592",
+            "type": "study_question"
+          },
+          {
+            "id": "181594",
+            "type": "study_question"
+          },
+          {
+            "id": "4767",
+            "type": "study_question"
+          },
+          {
+            "id": "4768",
+            "type": "study_question"
+          },
+          {
+            "id": "4769",
+            "type": "study_question"
+          },
+          {
+            "id": "4764",
+            "type": "study_question"
+          },
+          {
+            "id": "4765",
+            "type": "study_question"
+          },
+          {
+            "id": "4766",
+            "type": "study_question"
+          },
+          {
+            "id": "983",
+            "type": "study_question"
+          },
+          {
+            "id": "4762",
+            "type": "study_question"
+          },
+          {
+            "id": "4763",
+            "type": "study_question"
+          },
+          {
+            "id": "984",
+            "type": "study_question"
+          },
+          {
+            "id": "982",
+            "type": "study_question"
+          },
+          {
+            "id": "4770",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "523",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1415",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1626",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "998",
+            "type": "related_content"
+          },
+          {
+            "id": "208",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "504",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "505",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "181593",
+      "type": "study_question",
+      "attributes": {
+        "id": 181593,
+        "content": "彼（かれ）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>声（こえ）は聞（き）こえ<span class=\"gp-popout\" data-gp-id=\"100\">にくい</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/彼の声は聞こえにくい。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "His voice is a bit tricky to hear. (It is kind of hard to hear his voice, based on my ability/feeling)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 257,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181591",
+      "type": "study_question",
+      "attributes": {
+        "id": 181591,
+        "content": "あいつ<span class=\"gp-popout\" data-gp-id=\"10\">が</span>言（い）う事（こと）は信（しん）じ<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"44\">が</span>、今（いま）は信（しん）じる<span cla class=\"gp-popout\" data-gp-id=\"182\">しかない</span>。",
+        "answer": "がたい",
+        "alternate_grammar": [],
+        "kanji_answer": "がたい",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/あいつが言う事は信じがたいが、今は信じるしかない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It is <strong>hard to</strong> believe what he says, but we have no choice but to trust him.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 257,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181592",
+      "type": "study_question",
+      "attributes": {
+        "id": 181592,
+        "content": "景気（けいき）が悪化（あっか）しているため、今期（こんき）の売上（うりあげ）は期待（きたい）し<span class='study-area-input'>____</span>。",
+        "answer": "がたい",
+        "alternate_grammar": [],
+        "kanji_answer": "がたい",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Since the market has worsened, it will be <strong>hard to</strong> expect good sales in this period.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 257,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181594",
+      "type": "study_question",
+      "attributes": {
+        "id": 181594,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"30\">この</span>話（はなし）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>信（しん）じ<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"16\">の</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span>分（わ）かる<span class=\"gp-popout\" data-gp-id=\"44\">が</span>、信（しん）じてくれ！",
+        "answer": "がたい",
+        "alternate_grammar": [],
+        "kanji_answer": "がたい",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/この話が信じがたいのは分かるが、信じてくれ！.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": " I understand that this story is <strong>impossible to</strong> believe, but please believe me! (Believing something like this is not easy)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 257,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4767",
+      "type": "study_question",
+      "attributes": {
+        "id": 4767,
+        "content": "もう会（あ）えないと思（おも）うと、<span class='study-area-input'>____</span>。",
+        "answer": "さりがたい",
+        "alternate_grammar": [
+          "さりがたい",
+          "さりがたいです"
+        ],
+        "kanji_answer": "去（さ）りがたい",
+        "kanji_alt_grammar": [
+          "去（さ）りがたい",
+          "去（さ）りがたいです"
+        ],
+        "nuance": "あることが難（むずか）しいときに、(A)の<strong>難（むずか）しさ</strong>に焦点（しょうてん）を当（あ）てる表現（ひょうげん）。",
+        "tense": "Emphatic, Objective",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/257/male_audio/231123_1619_06.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/もう会えないと思うと、去りがたい。.mp3",
+        "word_prompt": "去（さ）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "さりにくい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "さりようがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "さりっこない": {
+            "en": "っこない is used to express doubt, similar to saying 'there's no way'.  We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "さりえない": {
+            "en": "えない is used to express that something cannot be done. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "さ": {
+            "en": "We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "さり": {
+            "en": "We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "さがたい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "Knowing that I will never see you again, it is <strong>nearly impossible</strong> for me <strong>to leave</strong>.",
+        "nuance_translation": "A phrase that focuses on the <strong>difficulty</strong> of (A), in relation to the <strong>task itself</strong> being hard.",
+        "extra_info": "",
+        "reviewable_id": 257,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4768",
+      "type": "study_question",
+      "attributes": {
+        "id": 4768,
+        "content": "あの言葉（ことば）は僕（ぼく）にとっては、何物（なにもの）にも<span class='study-area-input'>____</span>贈（おく）り物（もの）だ。",
+        "answer": "かえがたい",
+        "alternate_grammar": [],
+        "kanji_answer": "代（か）えがたい",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが難（むずか）しいときに、(A)の<strong>難（むずか）しさ</strong>に焦点（しょうてん）を当（あ）てる表現（ひょうげん）。",
+        "tense": "Emphatic, Objective",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/257/male_audio/231123_1619_07.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/あの言葉は僕にとっては、何物にも代えがたい贈り物だ。.mp3",
+        "word_prompt": "代（か）える",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "かえにくい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "かえようがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "かえ": {
+            "en": "We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "かえない": {
+            "en": "This simply means 'can't do (A)'. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "かえりがたい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I <strong>wouldn't exchange</strong> anything in the world for what was said (to me).",
+        "nuance_translation": "A phrase that focuses on the <strong>difficulty</strong> of (A), in relation to the <strong>task itself</strong> being hard.",
+        "extra_info": "",
+        "reviewable_id": 257,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4769",
+      "type": "study_question",
+      "attributes": {
+        "id": 4769,
+        "content": "耐（た）え<span class='study-area-input'>____</span>ことを耐（た）え、忍（しの）び<span class='study-area-input'>____</span>ことを忍（しの）び、天（てん）に向（む）かう！",
+        "answer": "がたい",
+        "alternate_grammar": [],
+        "kanji_answer": "がたい",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが難（むずか）しいときに、(A)の<strong>難（むずか）しさ</strong>に焦点（しょうてん）を当（あ）てる表現（ひょうげん）。",
+        "tense": "Emphatic, Objective",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/257/male_audio/231123_1620.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/耐えがたいことを耐え、忍びがたいことを忍び、天に向かう！.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にくい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ようがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "がち": {
+            "en": "がち is used to express that something or someone has the tendency of doing something. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "えない": {
+            "en": "えない is used to express that something cannot be done. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "さ": {
+            "en": "We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ては": {
+            "en": "We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "でも": {
+            "en": "We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ない": {
+            "en": "We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "きれない": {
+            "en": "This simply means 'can't do (A)'. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "Enduring the <strong>unendurable</strong> and suffering the <strong>insufferable</strong>, reach to the heavens!",
+        "nuance_translation": "A phrase that focuses on the <strong>difficulty</strong> of (A), in relation to the <strong>task itself</strong> being hard.",
+        "extra_info": "",
+        "reviewable_id": 257,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4764",
+      "type": "study_question",
+      "attributes": {
+        "id": 4764,
+        "content": "毎日（まいにち）<span class='study-area-input'>____</span>痛（いた）みに直面（ちょくめん）しているんです。",
+        "answer": "たえがたい",
+        "alternate_grammar": [],
+        "kanji_answer": "耐（た）えがたい",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが難（むずか）しいときに、(A)の<strong>難（むずか）しさ</strong>に焦点（しょうてん）を当（あ）てる表現（ひょうげん）。",
+        "tense": "Emphatic, Objective",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/257/male_audio/231123_1619_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/毎日耐がたい痛みに直面しているんです。.mp3",
+        "word_prompt": "耐（た）える",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たえにくい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": ""
+          },
+          "たえようがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {
+          "たえきれない": {
+            "en": "きれない is used to convey that something cannot be done to completion. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "たえ": {
+            "en": "We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "たえりがたい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I face pain that is<strong> nearly impossible to bear</strong> every day.",
+        "nuance_translation": "A phrase that focuses on the <strong>difficulty</strong> of (A), in relation to the <strong>task itself</strong> being hard.",
+        "extra_info": "",
+        "reviewable_id": 257,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4765",
+      "type": "study_question",
+      "attributes": {
+        "id": 4765,
+        "content": "もう一（ひと）つのアイデアも<span class='study-area-input'>____</span>。",
+        "answer": "すてがたい",
+        "alternate_grammar": [
+          "すてがたい",
+          "すてがたいです"
+        ],
+        "kanji_answer": "捨（す）てがたい",
+        "kanji_alt_grammar": [
+          "捨（す）てがたい",
+          "捨（す）てがたいです"
+        ],
+        "nuance": "あることが難（むずか）しいときに、(A)の<strong>難（むずか）しさ</strong>に焦点（しょうてん）を当（あ）てる表現（ひょうげん）。",
+        "tense": "Emphatic, Objective",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/257/male_audio/231123_1619_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/もう一つのアイデアも捨てがたい。.mp3",
+        "word_prompt": "捨（す）てる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "すてにくい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "すてようがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "すてがち": {
+            "en": "がち is used to express that something or someone has the tendency of doing something. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "すて": {
+            "en": "We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "すてりがたい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "The other idea is also <strong>hard to give up</strong>.",
+        "nuance_translation": "A phrase that focuses on the <strong>difficulty</strong> of (A), in relation to the <strong>task itself</strong> being hard.",
+        "extra_info": "",
+        "reviewable_id": 257,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4766",
+      "type": "study_question",
+      "attributes": {
+        "id": 4766,
+        "content": "僕（ぼく）には理解（りかい）<span class='study-area-input'>____</span>考（かんが）え方（かた）だ。",
+        "answer": "しがたい",
+        "alternate_grammar": [],
+        "kanji_answer": "しがたい",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが難（むずか）しいときに、(A)の<strong>難（むずか）しさ</strong>に焦点（しょうてん）を当（あ）てる表現（ひょうげん）。",
+        "tense": "Emphatic, Objective",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/257/male_audio/231123_1619_05.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/僕には理解しがたい考え方だ。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しにくい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "しようがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しそうもない": {
+            "en": "そうもない is used to express that something is very unlikely. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しえない": {
+            "en": "えない is typically used with non-volitional verbs and expresses abstract or conceptual impossibility. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "し": {
+            "en": "We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しっこない": {
+            "en": "This simply means that they 'won't do (A)'. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "That approach is <strong>nearly impossible</strong> for me to understand.",
+        "nuance_translation": "A phrase that focuses on the <strong>difficulty</strong> of (A), in relation to the <strong>task itself</strong> being hard.",
+        "extra_info": "",
+        "reviewable_id": 257,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "983",
+      "type": "study_question",
+      "attributes": {
+        "id": 983,
+        "content": "あの人（ひと）の言（い）っていることは<span class='study-area-input'>____</span>ですね。",
+        "answer": "しんじがたい",
+        "alternate_grammar": [],
+        "kanji_answer": "信（しん）じがたい",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが難（むずか）しいときに、(A)の<strong>難（むずか）しさ</strong>に焦点（しょうてん）を当（あ）てる表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/257/male_audio/231123_1618_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/あの人の言っていることは信じがたいですね。.mp3",
+        "word_prompt": "信（しん）じる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しんじにくい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "しんじようがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "しんじかたい": {
+            "en": "Could you try checking your spelling?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "しんじ": {
+            "en": "We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しんじられない": {
+            "en": "This simply means 'can't do (A)'. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しんじりがたい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "It's <strong>hard to believe</strong> what that person is saying.",
+        "nuance_translation": "A phrase that focuses on the <strong>difficulty</strong> of (A), in relation to the <strong>task itself</strong> being hard.",
+        "extra_info": "",
+        "reviewable_id": 257,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4762",
+      "type": "study_question",
+      "attributes": {
+        "id": 4762,
+        "content": "<span class='study-area-input'>____</span>出来事（できごと）に遭遇（そうぐう）した。",
+        "answer": "わすれがたい",
+        "alternate_grammar": [],
+        "kanji_answer": "忘（わす）れがたい",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが難（むずか）しいときに、(A)の<strong>難（むずか）しさ</strong>に焦点（しょうてん）を当（あ）てる表現（ひょうげん）。",
+        "tense": "Emphatic, Objective",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/257/male_audio/231123_1619.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/忘れがたい出来事に遭遇した。.mp3",
+        "word_prompt": "忘（わす）れる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "わすれにくい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "わすれっこない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "わすれようがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "わすれそうもない": {
+            "en": "そうもない is used to express that something is very unlikely. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "わすれきれない": {
+            "en": "きれない is used to convey that something cannot be done to completion. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "わすれがち": {
+            "en": "がち is used to express that something or someone has the tendency of doing something. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "わすれ": {
+            "en": "We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I encountered an event that is <strong>nearly impossible to forget</strong>.",
+        "nuance_translation": "A phrase that focuses on the <strong>difficulty</strong> of (A), in relation to the <strong>task itself</strong> being hard.",
+        "extra_info": "",
+        "reviewable_id": 257,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4763",
+      "type": "study_question",
+      "attributes": {
+        "id": 4763,
+        "content": "その人（ひと）は<span class='study-area-input'>____</span>ほど勇敢（ゆうかん）だった。",
+        "answer": "しんじがたい",
+        "alternate_grammar": [],
+        "kanji_answer": "信（しん）じがたい",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが難（むずか）しいときに、(A)の<strong>難（むずか）しさ</strong>に焦点（しょうてん）を当（あ）てる表現（ひょうげん）。",
+        "tense": "Emphatic, Objective",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/257/male_audio/231123_1619_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/その人は信じがたいほど勇敢だった。.mp3",
+        "word_prompt": "信（しん）じる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しんじにくい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "しんじようがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "しんじきれない": {
+            "en": "きれない is used to convey that something cannot be done to completion. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しんじ": {
+            "en": "We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "しんじられない": {
+            "en": "This simply means that they 'can't (A)'. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "That person was brave to the point that <strong>was nearly impossible to believe</strong>.",
+        "nuance_translation": "A phrase that focuses on the <strong>difficulty</strong> of (A), in relation to the <strong>task itself</strong> being hard.",
+        "extra_info": "",
+        "reviewable_id": 257,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "984",
+      "type": "study_question",
+      "attributes": {
+        "id": 984,
+        "content": "皆（みんな）はその映画（えいが）が面白（おもしろ）いって言（い）っているけど、僕（ぼく）はその映画（えいが）が成功（せいこう）するとは<span class='study-area-input'>____</span>。",
+        "answer": "いいがたい",
+        "alternate_grammar": [],
+        "kanji_answer": "言（い）いがたい",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが難（むずか）しいときに、(A)の<strong>難（むずか）しさ</strong>に焦点（しょうてん）を当（あ）てる表現（ひょうげん）。",
+        "tense": "Standard",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/257/male_audio/231123_1618_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/皆はその映画が面白いって言っているけど、僕はその映画が成功するとは言いがたい。.mp3",
+        "word_prompt": "言（い）う",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いいがたいです": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": ""
+          },
+          "いいにくい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "いうのがむずかしい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "なかなかいえない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "いいようがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "いい": {
+            "en": "We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いいたがい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いうがたい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "いがたい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "Everyone is saying that that movie is interesting, but I find it <strong>hard to say</strong> that it will succeed. (Casual)",
+        "nuance_translation": "A phrase that focuses on the <strong>difficulty</strong> of (A), in relation to the <strong>task itself</strong> being hard.",
+        "extra_info": "",
+        "reviewable_id": 257,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "982",
+      "type": "study_question",
+      "attributes": {
+        "id": 982,
+        "content": "皆（みんな）から<span class='study-area-input'>____</span>ってよく言（い）われます。",
+        "answer": "ちかよりがたい",
+        "alternate_grammar": [],
+        "kanji_answer": "近寄（ちかよ）りがたい",
+        "kanji_alt_grammar": [],
+        "nuance": "あることが難（むずか）しいときに、(A)の<strong>難（むずか）しさ</strong>に焦点（しょうてん）を当（あ）てる表現（ひょうげん）。",
+        "tense": "Extent",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/257/male_audio/231123_1618_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/皆から近寄りがたいってよく言われます。.mp3",
+        "word_prompt": "近寄（ちかよ）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ちかよりにくい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ちかよりようがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ちかよにくい": {
+            "en": "Although this could work here, we are looking for a different suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "ちかよ": {
+            "en": "We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ちかよがたい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "I am often told that I am <strong>hard to approach</strong>.",
+        "nuance_translation": "A phrase that focuses on the <strong>difficulty</strong> of (A), in relation to the <strong>task itself</strong> being hard.",
+        "extra_info": "",
+        "reviewable_id": 257,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "4770",
+      "type": "study_question",
+      "attributes": {
+        "id": 4770,
+        "content": "あの罪（つみ）は<span class='study-area-input'>____</span>。",
+        "answer": "ゆるしがたい",
+        "alternate_grammar": [
+          "ゆるしがたい",
+          "ゆるしがたいです"
+        ],
+        "kanji_answer": "許（ゆる）しがたい",
+        "kanji_alt_grammar": [
+          "許（ゆる）しがたい",
+          "許（ゆる）しがたいです"
+        ],
+        "nuance": "あることが難（むずか）しいときに、(A)の<strong>難（むずか）しさ</strong>に焦点（しょうてん）を当（あ）てる表現（ひょうげん）。",
+        "tense": "Emphatic, Objective",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson10/257/male_audio/231123_1620_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/あの罪は許しがたい。.mp3",
+        "word_prompt": "許（ゆる）す",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ゆるしにくい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ゆるしようがない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ゆるしっこない": {
+            "en": "っこない is used to express doubt, similar to saying 'there's no way'.  We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ゆるしえない": {
+            "en": "えない is typically used with non-volitional verbs and expresses abstract or conceptual impossibility. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ゆる": {
+            "en": "We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ゆるし": {
+            "en": "We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ゆるさない": {
+            "en": "This simply means 'won't do (A)'. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "けっしてゆるさない": {
+            "en": "This has the nuance of 'I will never...'. We are looking for a suffix that conveys that something is ''difficult to do'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ゆるがたい": {
+            "en": "Could you try checking your conjugation?",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "That crime is <strong>unforgivable</strong>. (<strong>Nearly impossible to forgive</strong>)",
+        "nuance_translation": "A phrase that focuses on the <strong>difficulty</strong> of (A), in relation to the <strong>task itself</strong> being hard.",
+        "extra_info": "",
+        "reviewable_id": 257,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "523",
+      "type": "writeup",
+      "attributes": {
+        "id": 523,
+        "body_ja": "<p>「難（がた）い」は、動詞（どうし）の連用形（れんようけい）につながって、接尾語（せつびご）として使（つか）われる文法（ぶんぽう）です。漢字（かんじ）からもわかるとおり、「(A) をするのが難（むずか）しい」という意味（いみ）で使（つか）われます。ほとんどの場合（ばあい）、「がたい」はひらがなで書（か）かれます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181591'>\r\n<li data-study-question='181592'>\r\n</ul>\r\n\r\n<p>「にくい」は「個人的（こじんてき）に抵抗感（ていこうかん）があって難（むずか）しい」という場合（ばあい）に使（つか）われます。その一方（いっぽう）で、「がたい」は「それをすること自体（じたい）が非常（ひじょう）に難（むずか）しく、（そうしたくても）そうできない」というニュアンスがあります。そのため、「がたい」は「にくい」よりも強（つよ）い表現（ひょうげん）で、それがほとんど不可能（ふかのう）に近（ちか）いときに使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181593'>\r\n<li data-study-question='181594'>\r\n</ul>\r\n\r\n<p>まとめると、</p>\r\n\r\n<p>にくい ‐ 人の感覚（かんかく）や経験（けいけん）、状況（じょうきょう）によって、難（むずか）しいと感（かん）じる。</p>\r\n\r\n<p>がたい ‐ それ自体（じたい）が難（むずか）しすぎて、そうしたくてもそうできない（ほとんど不可能（ふかのう））。</p>",
+        "body": "<p>Coming from the same kanji as 難（むずか）しい 'difficult', 難（がた）い is a <span data-term='接尾語・せつびご'>suffix</span> that also means 'difficult'. However, in the case of <span data-gp-id='257'>がたい</span>, it will be attached to the <span data-term='連用形・れんようけい'>conjunctive form</span> of verbs, and conveys that '(A) is difficult to do'. <span data-gp-id='257'>がたい</span> is almost always written without kanji in this meaning.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181591'>\r\n<li data-study-question='181592'>\r\n</ul>\r\n\r\n<p>Compared to <span data-gp-id='100'>にくい</span>, which can simply imply that something is 'uncomfortable' to do, <span data-gp-id='257'>がたい</span> refers almost exclusively to 困難（こんなん）であること 'things that involve a high degree of difficulty, distress, or infeasibility'. Due to this, <span data-gp-id='257'>がたい</span> will come across as far stronger than <span data-gp-id='100'>にくい</span>, and may imply that a certain task is almost impossible.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181593'>\r\n<li data-study-question='181594'>\r\n</ul>\r\n\r\n<p>Summed up, these nuances basically translate as the following:</p>\r\n\r\n<p><span data-gp-id='100'>にくい</span> - Something is difficult based on someone's opinion, experience, or general feeling.</p>\r\n\r\n<p><span data-gp-id='257'>がたい</span> - Something is difficult based on the task itself having a high level of difficulty.</p>"
+      }
+    },
+    {
+      "id": "1415",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1415,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 277",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1626",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1626,
+        "source": "[AIAIJ] An Integrated Approach to Intermediate Japanese",
+        "location": "Page 293",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "504",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 504,
+        "site": "Tae Kim",
+        "description": "Describing actions as easy or hard",
+        "link": "http://www.guidetojapanese.org/easyhard.html",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "505",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 505,
+        "site": "Japanese Stack Exchange",
+        "description": "The difference between がたい、にくい、and づらい",
+        "link": "https://japanese.stackexchange.com/questions/3279/the-differences-between-%EF%BD%9E%E3%81%8C%E3%81%9F%E3%81%84-%E3%81%AB%E3%81%8F%E3%81%84-%E3%81%A5%E3%82%89%E3%81%84",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "998",
+      "type": "related_content",
+      "attributes": {
+        "id": 998,
+        "relationship_type": "related",
+        "body": "がたい and にくい both attach to verb stems and express the idea of 'difficult to do', but with different nuance and formality levels. にくい is used in everyday speech and reflects the speaker's personal sense of difficulty or discomfort. がたい is more formal/written-style and implies something is nearly impossible or extremely difficult due to factors beyond the speaker's control.",
+        "first_relatable": {
+          "id": 257,
+          "slug": "がたい",
+          "title": "がたい",
+          "meaning": "Hard to, Difficult to",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 100,
+          "slug": "にくい",
+          "title": "にくい",
+          "meaning": "Difficult to, Hard to",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "208",
+      "type": "related_content",
+      "attributes": {
+        "id": 208,
+        "relationship_type": "related",
+        "body": "Both ようがない・ようもない and がたい express difficulty or unfeasibility of an action, but differ in nuance. ようがない・ようもない conveys that there is no way or means to do something. For example, 連絡のしようがない ('There's no way to contact him'). がたい, on the other hand, indicates that something is very difficult to do, often due to factors beyond the speaker's control. For example, 信じがたい話だ ('It's a story that is hard to believe').",
+        "first_relatable": {
+          "id": 434,
+          "slug": "ようがない・ようもない",
+          "title": "ようがない・ようもない",
+          "meaning": "There's no way to, It's impossible to",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 257,
+          "slug": "がたい",
+          "title": "がたい",
+          "meaning": "Hard to, Difficult to",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

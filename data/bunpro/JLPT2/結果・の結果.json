@@ -1,0 +1,913 @@
+{
+  "data": {
+    "id": "555",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 555,
+      "level": "JLPT2",
+      "lesson_id": 35,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "結果・の結果",
+      "nuance": "(A)が行（おこな）われたことで<strong>もたらされた</strong>ことを具体（ぐたい）的（てき）に強調（きょうちょう）する表現（ひょうげん）。",
+      "grammar_order": 615,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 556,
+        "title": "以来",
+        "slug": "以来"
+      },
+      "previous_grammar_point": {
+        "id": 671,
+        "title": "も又",
+        "slug": "も又"
+      },
+      "lesson_count": "1/18",
+      "title": "結果・の結果",
+      "furigana": "結果（けっか）",
+      "meaning": "As a result of",
+      "nuance_translation": "An expression which specifically highlights things brought about <strong>as a result</strong> of (A).",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "<span class='gp-popout' data-gp-id='874'>Verb［た］</span>+ <strong>結果（けっか）</strong> + Phrase<br>Noun + <span class='chui'><span class='gp-popout' data-gp-id='6'>の</span></span> + <strong>結果（けっか）</strong> +  Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/17952",
+      "metadata": "結果, の結果, けっか, のけっか, noun, positive, negative"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "7118",
+            "type": "study_question"
+          },
+          {
+            "id": "182014",
+            "type": "study_question"
+          },
+          {
+            "id": "182015",
+            "type": "study_question"
+          },
+          {
+            "id": "182016",
+            "type": "study_question"
+          },
+          {
+            "id": "182017",
+            "type": "study_question"
+          },
+          {
+            "id": "184445",
+            "type": "study_question"
+          },
+          {
+            "id": "184444",
+            "type": "study_question"
+          },
+          {
+            "id": "7122",
+            "type": "study_question"
+          },
+          {
+            "id": "5741",
+            "type": "study_question"
+          },
+          {
+            "id": "7117",
+            "type": "study_question"
+          },
+          {
+            "id": "7123",
+            "type": "study_question"
+          },
+          {
+            "id": "7124",
+            "type": "study_question"
+          },
+          {
+            "id": "5743",
+            "type": "study_question"
+          },
+          {
+            "id": "5742",
+            "type": "study_question"
+          },
+          {
+            "id": "5744",
+            "type": "study_question"
+          },
+          {
+            "id": "7119",
+            "type": "study_question"
+          },
+          {
+            "id": "7121",
+            "type": "study_question"
+          },
+          {
+            "id": "7120",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "630",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": []
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1088",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1376",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "7118",
+      "type": "study_question",
+      "attributes": {
+        "id": 7118,
+        "content": "叫（さけ）んで暴（あば）れた<span class='study-area-input'>____</span>、逮捕（たいほ）された。",
+        "answer": "けっか",
+        "alternate_grammar": [],
+        "kanji_answer": "結果（けっか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が行（おこな）われたことで<strong>もたらされた</strong>ことを具体（ぐたい）的（てき）に強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/叫んで暴れた結果、逮捕された。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "から": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": ""
+          },
+          "ので": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": ""
+          },
+          "せいで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": "",
+            "fr": ""
+          },
+          "あげく": {
+            "en": "Let's try a grammar point that highlights both positive and negative results.",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>As a result of</strong> shouting and acting violently, I got arrested.",
+        "nuance_translation": "An expression which specifically highlights things brought about <strong>as a result</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182014",
+      "type": "study_question",
+      "attributes": {
+        "id": 182014,
+        "content": "お酒（さけ）を飲（の）んで運転（うんてん）した<span class='study-area-input'>____</span>、電柱（でんちゅう）にぶつかって免許（めんきょ）を取（と）り消（け）された。",
+        "answer": "けっか",
+        "alternate_grammar": [],
+        "kanji_answer": "結果（けっか）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/お酒を飲んで運転した結果、電柱にぶつかって免許を取り消された。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>As a result of</strong> drinking and driving, I drove into a telephone pole and my license was revoked.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182015",
+      "type": "study_question",
+      "attributes": {
+        "id": 182015,
+        "content": "みんなが努力（どりょく）した<span class='study-area-input'>____</span>、大会（たいかい）で優勝（ゆうしょう）することができた。",
+        "answer": "けっか",
+        "alternate_grammar": [],
+        "kanji_answer": "結果（けっか）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/みんなが努力した結果、大会で優勝することができた。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>As a result of</strong> everyone doing their best, we were able to win the competition.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182016",
+      "type": "study_question",
+      "attributes": {
+        "id": 182016,
+        "content": "話（はな）し合（あ）い<span class='study-area-input'>____</span>、親（おや）が学費（がくひ）を払（はら）ってくれることになりました。",
+        "answer": "のけっか",
+        "alternate_grammar": [],
+        "kanji_answer": "の結果（けっか）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/話し合いの結果、親が学費を払ってくれることになりました。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>As a result of</strong> the discussion, it has been decided that my parents are going to pay my tuition.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182017",
+      "type": "study_question",
+      "attributes": {
+        "id": 182017,
+        "content": "調査（ちょうさ）<span class='study-area-input'>____</span>、この土地（とち）の土（つち）は汚染（おせん）されていることが確認（かくにん）できました。",
+        "answer": "のけっか",
+        "alternate_grammar": [],
+        "kanji_answer": "の結果（けっか）",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/調査の結果、この土地の土は汚染されていることが確認できました。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>As a result of</strong> the examination, we were able to confirm that the soil on this property is contaminated.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184445",
+      "type": "study_question",
+      "attributes": {
+        "id": 184445,
+        "content": "パートナーと話（はな）し合（あ）いをした<span data-gp-id='607'>挙句（あげく）</span>、離婚（りこん）することになった。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/パートナーと話し合いをした挙句、離婚することになった。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 13,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "After having a discussion with my partner, we have decided to get divorced.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184444",
+      "type": "study_question",
+      "attributes": {
+        "id": 184444,
+        "content": "仕事（しごと）で頑張（がんば）った<span data-gp-id='555'>結果（けっか）</span>、昇進（しょうしん）する事（こと）が決（き）まった。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/仕事で頑張った結果、昇進する事が決まった。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>As a result of</strong> my hard work, I'm getting promoted.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7122",
+      "type": "study_question",
+      "attributes": {
+        "id": 7122,
+        "content": "占（うらな）い<span class='study-area-input'>____</span>など信（しん）じたりはしない。",
+        "answer": "のけっか",
+        "alternate_grammar": [],
+        "kanji_answer": "の結果（けっか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が行（おこな）われたことで<strong>もたらされた</strong>ことを具体（ぐたい）的（てき）に強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/占いの結果など信じたりはしない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だから": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "なので": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "のせいで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "けっか": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I don't believe in such things as <strong>the results of</strong> fortunetelling.",
+        "nuance_translation": "An expression which specifically highlights things brought about <strong>as a result</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5741",
+      "type": "study_question",
+      "attributes": {
+        "id": 5741,
+        "content": "国民（こくみん）が反対（はんたい）した<span class='study-area-input'>____</span>、増税（ぞうぜい）の提案（ていあん）は破棄（はき）された。",
+        "answer": "けっか",
+        "alternate_grammar": [],
+        "kanji_answer": "結果（けっか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が行（おこな）われたことで<strong>もたらされた</strong>ことを具体（ぐたい）的（てき）に強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/国民が反対した結果、増税の提案は破棄された。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "から": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ので": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "せいで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>As a result of</strong> public opposition, the tax increase proposal was abandoned.",
+        "nuance_translation": "An expression which specifically highlights things brought about <strong>as a result</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7117",
+      "type": "study_question",
+      "attributes": {
+        "id": 7117,
+        "content": "宿題（しゅくだい）を先（さき）延（の）ばしにした<span class='study-area-input'>____</span>、当日（とうじつ）の明（あ）け方（がた）までかかってしまった。",
+        "answer": "けっか",
+        "alternate_grammar": [],
+        "kanji_answer": "結果（けっか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が行（おこな）われたことで<strong>もたらされた</strong>ことを具体（ぐたい）的（てき）に強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/宿題を先延ばしにした結果、当日の明け方までかかってしまった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "から": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ので": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "せいで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>As a result of</strong> putting off homework until late, it took me until dawn of the day it was due to finish.",
+        "nuance_translation": "An expression which specifically highlights things brought about <strong>as a result</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7123",
+      "type": "study_question",
+      "attributes": {
+        "id": 7123,
+        "content": "運動（うんどう）を怠（おこた）った<span class='study-area-input'>____</span>、太（ふと）ってしまった。",
+        "answer": "けっか",
+        "alternate_grammar": [],
+        "kanji_answer": "結果（けっか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が行（おこな）われたことで<strong>もたらされた</strong>ことを具体（ぐたい）的（てき）に強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/運動を怠った結果、太ってしまった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "から": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ので": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "せいで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>As a result of</strong> neglecting exercise, I got fat.",
+        "nuance_translation": "An expression which specifically highlights things brought about <strong>as a result</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7124",
+      "type": "study_question",
+      "attributes": {
+        "id": 7124,
+        "content": "手厚（てあつ）い看病（かんびょう）<span class='study-area-input'>____</span>、元気（げんき）になって本当（ほんとう）に良（よ）かった。",
+        "answer": "のけっか",
+        "alternate_grammar": [],
+        "kanji_answer": "の結果（けっか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が行（おこな）われたことで<strong>もたらされた</strong>ことを具体（ぐたい）的（てき）に強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/手厚い看病の結果、元気になって本当に良かった.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だから": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "なので": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "のせいで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "けっか": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>As a result of</strong> some tender loving care, (you) became healthy. For that, I am very glad.",
+        "nuance_translation": "An expression which specifically highlights things brought about <strong>as a result</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5743",
+      "type": "study_question",
+      "attributes": {
+        "id": 5743,
+        "content": "家族（かぞく）とよく相談（そうだん）した<span class='study-area-input'>____</span>、一人暮（ひとりぐ）らしを決（き）めたんだ。",
+        "answer": "けっか",
+        "alternate_grammar": [],
+        "kanji_answer": "結果（けっか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が行（おこな）われたことで<strong>もたらされた</strong>ことを具体（ぐたい）的（てき）に強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/家族とよく相談した結果、一人暮らしを決めたんだ.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "から": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ので": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "せいで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>As a result of</strong> discussion with family, I decided to live alone.",
+        "nuance_translation": "An expression which specifically highlights things brought about <strong>as a result</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5742",
+      "type": "study_question",
+      "attributes": {
+        "id": 5742,
+        "content": "研究（けんきゅう）<span class='study-area-input'>____</span>、新（あたら）しい粒子（りゅうし）が見（み）つかった。",
+        "answer": "のけっか",
+        "alternate_grammar": [],
+        "kanji_answer": "の結果（けっか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が行（おこな）われたことで<strong>もたらされた</strong>ことを具体（ぐたい）的（てき）に強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/研究の結果、新しい粒子が見つかった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だから": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "なので": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "のせいで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>As a result of</strong> research, new particles were discovered.",
+        "nuance_translation": "An expression which specifically highlights things brought about <strong>as a result</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5744",
+      "type": "study_question",
+      "attributes": {
+        "id": 5744,
+        "content": "調査（ちょうさ）<span class='study-area-input'>____</span>、容疑（ようぎ）者（しゃ）は無罪（むざい）となった。",
+        "answer": "のけっか",
+        "alternate_grammar": [],
+        "kanji_answer": "の結果（けっか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が行（おこな）われたことで<strong>もたらされた</strong>ことを具体（ぐたい）的（てき）に強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/調査の結果、容疑者は無罪となった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だから": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "なので": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "のせいで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>As a result of</strong> the investigation, the suspect has been found not guilty.",
+        "nuance_translation": "An expression which specifically highlights things brought about <strong>as a result</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7119",
+      "type": "study_question",
+      "attributes": {
+        "id": 7119,
+        "content": "脂（あぶら）を取（と）りすぎた<span class='study-area-input'>____</span>、気持（きも）ち悪（わる）くなってきた。",
+        "answer": "けっか",
+        "alternate_grammar": [],
+        "kanji_answer": "結果（けっか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が行（おこな）われたことで<strong>もたらされた</strong>ことを具体（ぐたい）的（てき）に強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/脂を取りすぎた結果、気持ち悪くなってきた。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "から": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ので": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "せいで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>As a result of</strong> consuming too much fried food, I came to feel unwell.",
+        "nuance_translation": "An expression which specifically highlights things brought about <strong>as a result</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7121",
+      "type": "study_question",
+      "attributes": {
+        "id": 7121,
+        "content": "打合（うちあわ）せ<span class='study-area-input'>____</span>、僕（ぼく）のアイデアは却下（きゃっか）されました。",
+        "answer": "のけっか",
+        "alternate_grammar": [],
+        "kanji_answer": "の結果（けっか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が行（おこな）われたことで<strong>もたらされた</strong>ことを具体（ぐたい）的（てき）に強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/打合せの結果、僕のアイデアは却下されました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だから": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "なので": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "のせいで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "けっか": {
+            "en": "Can you include something else at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>As a result of</strong> the business meeting, my idea was rejected.",
+        "nuance_translation": "An expression which specifically highlights things brought about <strong>as a result</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7120",
+      "type": "study_question",
+      "attributes": {
+        "id": 7120,
+        "content": "裁判（さいばん）で争（あらそ）った<span class='study-area-input'>____</span>負（ま）けてしまうなんて…",
+        "answer": "けっか",
+        "alternate_grammar": [],
+        "kanji_answer": "結果（けっか）",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が行（おこな）われたことで<strong>もたらされた</strong>ことを具体（ぐたい）的（てき）に強調（きょうちょう）する表現（ひょうげん）。",
+        "tense": "Result",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/裁判で争った結果負けてしまうなんて….mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "から": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "ので": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "せいで": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I cannot believe that <strong>the result of</strong> the court battle will end up in me losing...",
+        "nuance_translation": "An expression which specifically highlights things brought about <strong>as a result</strong> of (A).",
+        "extra_info": "",
+        "reviewable_id": 555,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "630",
+      "type": "writeup",
+      "attributes": {
+        "id": 630,
+        "body_ja": "<p>名詞（めいし）の「<span data-gp-id='555'>結果（けっか）</span>」は、動詞（どうし）の過去形（かこけい）や「の」を伴（ともな）う名詞（めいし）とくっつき、(A) が何（なに）かの原因（げんいん）となり、その結果（けっか）として (B) が起（お）こると言（い）いたいときに使（つか）われます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182014'>\r\n<li data-study-question='182015'>\r\n<li data-study-question='182016'>\r\n<li data-study-question='182017'>\r\n</ul>\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>「<span data-gp-id='607'>あげく</span>」という文型（ぶんけい）も「<span data-gp-id='555'>結果（けっか）</span>」と同（おな）じ意味（いみ）を持（も）ちますが、「結果（けっか）」は良（よ）い結果（けっか）にも悪（わる）い結果（けっか）にも使（つか）われるのに対（たい）して、「<span data-gp-id='607'>あげく</span>」は悪（わる）い結果（けっか）にしか使（つか）われないという違（ちが）いがあります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184444'>\r\n<li data-study-question='184445'></ul></section>",
+        "body": "<p><span data-gp-id='555'>結果（けっか）</span> 'result' is a noun in Japanese that is often seen paired with the past form of verbs, or with nouns followed by の. This grammar structure can be translated as 'as a result of (A), (B)', and simply indicates (A) as being the cause for how something ended up.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182014'>\r\n<li data-study-question='182015'>\r\n<li data-study-question='182016'>\r\n<li data-study-question='182017'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>Unlike <span data-gp-id='607'>あげく</span>, a similar grammar point that is used for highlighting causes, <span data-gp-id='555'>結果（けっか）</span> may highlight both positive and negative results, while <span data-gp-id='607'>あげく</span> tends to only be used when the outcome is negative.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184444'>\r\n<li data-study-question='184445'></ul></section>"
+      }
+    },
+    {
+      "id": "1376",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1376,
+        "site": "JapaneseTest4You",
+        "description": "Additional info and example sentences",
+        "link": "http://japanesetest4you.com/flashcard/learn-jlpt-n2-grammar-た結果-の結果-ta-kekka-no-kekka/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1088",
+      "type": "related_content",
+      "attributes": {
+        "id": 1088,
+        "relationship_type": "related",
+        "body": "Both expressions use 結果 to express a resulting situation or condition, like the English 'as a result', but differ in how they connect to the cause. その結果 is used at the beginning of a sentence and points back to something just mentioned, while 結果・の結果 is used in mid-sentence and connects directly to an explicitly mentioned cause, either by attaching to a verb or to a noun with の.",
+        "first_relatable": {
+          "id": 288,
+          "slug": "その結果",
+          "title": "その結果",
+          "meaning": "As a result",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 555,
+          "slug": "結果・の結果",
+          "title": "結果・の結果",
+          "meaning": "As a result of",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

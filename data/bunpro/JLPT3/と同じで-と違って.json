@@ -1,0 +1,1020 @@
+{
+  "data": {
+    "id": "494",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 494,
+      "level": "JLPT3",
+      "lesson_id": 27,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "と同じで-と違って",
+      "nuance": "(A)に<strong>似（に）ている</strong>、又（また）は(A)とは<strong>似（に）ていない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+      "grammar_order": 446,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 658,
+        "title": "と並んで",
+        "slug": "と並んで"
+      },
+      "previous_grammar_point": {
+        "id": 624,
+        "title": "と同じくらい",
+        "slug": "と同じくらい"
+      },
+      "lesson_count": "8/21",
+      "title": "と同じで・と違って",
+      "furigana": "とおなじで・とちがって",
+      "meaning": "Like, Similar to, Unlike, Dissimilar to",
+      "nuance_translation": "One of two phrases which may express something being <strong>like</strong> or <strong>similar</strong> to (A), or <strong>unlike</strong> or <strong>differing</strong> from (A).",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Noun + <strong><span class='gp-popout' data-gp-id='15'>と</span></strong> + <strong>同（おな）じ<span class='gp-popout' data-gp-id='769'>で</span></strong><br>Noun + <strong><span class='gp-popout' data-gp-id='15'>と</span></strong> + <strong><span class='gp-popout' data-gp-id='416'>違（ちが）って</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/5688",
+      "metadata": "とおなじで, とちがって, と同じで, と違って, toonajide, tochigatte, expression, case-marking particle, auxiliary verb, comparison, similarity, dissimilarity"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "181407",
+            "type": "study_question"
+          },
+          {
+            "id": "181408",
+            "type": "study_question"
+          },
+          {
+            "id": "181409",
+            "type": "study_question"
+          },
+          {
+            "id": "181410",
+            "type": "study_question"
+          },
+          {
+            "id": "3821",
+            "type": "study_question"
+          },
+          {
+            "id": "5652",
+            "type": "study_question"
+          },
+          {
+            "id": "5646",
+            "type": "study_question"
+          },
+          {
+            "id": "5650",
+            "type": "study_question"
+          },
+          {
+            "id": "5648",
+            "type": "study_question"
+          },
+          {
+            "id": "3819",
+            "type": "study_question"
+          },
+          {
+            "id": "5645",
+            "type": "study_question"
+          },
+          {
+            "id": "5647",
+            "type": "study_question"
+          },
+          {
+            "id": "5649",
+            "type": "study_question"
+          },
+          {
+            "id": "5651",
+            "type": "study_question"
+          },
+          {
+            "id": "5653",
+            "type": "study_question"
+          },
+          {
+            "id": "3820",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "465",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "510",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "277",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1087",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "181407",
+      "type": "study_question",
+      "attributes": {
+        "id": 181407,
+        "content": "彼（かれ）は僕（ぼく）<span class='study-area-input'>____</span>、猫（ねこ）アレルギー<span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "とおなじで",
+        "alternate_grammar": [],
+        "kanji_answer": "と同（おな）じで",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/彼は僕と同じで、猫アレルギーです。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Just like</strong> me, he is allergic to cats.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 494,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181408",
+      "type": "study_question",
+      "attributes": {
+        "id": 181408,
+        "content": "母（はは）も私（わたし）<span class='study-area-input'>____</span>、アウトドア<span class=\"gp-popout\" data-gp-id=\"716\">が好（す）き</span><span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "とおなじで",
+        "alternate_grammar": [],
+        "kanji_answer": "と同（おな）じで",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/母も私と同じで、アウトドアが好きです。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Just like</strong> me, my mother likes the outdoors.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 494,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181409",
+      "type": "study_question",
+      "attributes": {
+        "id": 181409,
+        "content": "私（わたし）は弟（おとうと）<span class='study-area-input'>____</span>、本（ほん）<span class=\"gp-popout\" data-gp-id=\"21\">を</span>読（よ）む<span class=\"gp-popout\" data-gp-id=\"34\">のが大好（だいす）き</span><span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "とちがって",
+        "alternate_grammar": [],
+        "kanji_answer": "と違（ちが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/私は弟と違って、本を読むのが大好きです。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Unlike</strong> my brother, I love to read books.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 494,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "181410",
+      "type": "study_question",
+      "attributes": {
+        "id": 181410,
+        "content": "彼女（かのじょ）は私（わたし）<span class='study-area-input'>____</span>、遊園地（ゆうえんち）<span class=\"gp-popout\" data-gp-id=\"10\">が</span>苦手（にがて）<span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "とちがって",
+        "alternate_grammar": [],
+        "kanji_answer": "と違（ちが）って",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/彼女は私と違って、遊園地が苦手です。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Unlike</strong> me, she does not like amusement parks very much.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 494,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3821",
+      "type": "study_question",
+      "attributes": {
+        "id": 3821,
+        "content": "他人（たにん）<span class='study-area-input'>____</span>家族（かぞく）の縁（えん）はなかなか切（き）れない。",
+        "answer": "とちがって",
+        "alternate_grammar": [],
+        "kanji_answer": "と違（ちが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)に<strong>似（に）ている</strong>、又（また）は(A)とは<strong>似（に）ていない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "て, Contrastive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson7/494/male_audio/230708_1038_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/他人と違って家族の縁はなかなか切れない。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Unlike</strong> other people, I find it hard to cut ties with my family.",
+        "nuance_translation": "One of two phrases which may express something being <strong>like</strong> or <strong>similar</strong> to (A), or <strong>unlike</strong> or <strong>differing</strong> from (A).",
+        "extra_info": "",
+        "reviewable_id": 494,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5652",
+      "type": "study_question",
+      "attributes": {
+        "id": 5652,
+        "content": "フィンランド<span class='study-area-input'>____</span>、ハワイは一年中（いちねんじゅう）暖（あたた）かい。",
+        "answer": "とちがって",
+        "alternate_grammar": [],
+        "kanji_answer": "と違（ちが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)に<strong>似（に）ている</strong>、又（また）は(A)とは<strong>似（に）ていない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "て, Contrastive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson7/494/male_audio/230708_1040.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/フィンランドと違って、ハワイは一年中暖かい。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Unlike</strong> Finland, Hawaii is warm year round.",
+        "nuance_translation": "One of two phrases which may express something being <strong>like</strong> or <strong>similar</strong> to (A), or <strong>unlike</strong> or <strong>differing</strong> from (A).",
+        "extra_info": "",
+        "reviewable_id": 494,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5646",
+      "type": "study_question",
+      "attributes": {
+        "id": 5646,
+        "content": "大統領（だいとうりょう）<span class='study-area-input'>____</span>、副大統領（ふくだいとうりょう）は優（やさ）しい。",
+        "answer": "とちがって",
+        "alternate_grammar": [],
+        "kanji_answer": "と違（ちが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)に<strong>似（に）ている</strong>、又（また）は(A)とは<strong>似（に）ていない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "て, Contrastive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson7/494/male_audio/230708_1038_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/大統領と違って、副大統領は優しい。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Unlike</strong> the president, the vice president is kind.",
+        "nuance_translation": "One of two phrases which may express something being <strong>like</strong> or <strong>similar</strong> to (A), or <strong>unlike</strong> or <strong>differing</strong> from (A).",
+        "extra_info": "",
+        "reviewable_id": 494,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5650",
+      "type": "study_question",
+      "attributes": {
+        "id": 5650,
+        "content": "天気（てんき）予報（よほう）<span class='study-area-input'>____</span>今日（きょう）はとても暖（あたた）かい。",
+        "answer": "とちがって",
+        "alternate_grammar": [],
+        "kanji_answer": "と違（ちが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)に<strong>似（に）ている</strong>、又（また）は(A)とは<strong>似（に）ていない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "て, Contrastive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson7/494/male_audio/230708_1039_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/天気予報と違って今日はとても暖かい。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Unlike</strong> what the forecast said, today is very warm.",
+        "nuance_translation": "One of two phrases which may express something being <strong>like</strong> or <strong>similar</strong> to (A), or <strong>unlike</strong> or <strong>differing</strong> from (A).",
+        "extra_info": "",
+        "reviewable_id": 494,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5648",
+      "type": "study_question",
+      "attributes": {
+        "id": 5648,
+        "content": "普段（ふだん）<span class='study-area-input'>____</span>、随分（ずいぶん）お洒落（しゃれ）をしてどこに行（い）くんですか？",
+        "answer": "とちがって",
+        "alternate_grammar": [],
+        "kanji_answer": "と違（ちが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)に<strong>似（に）ている</strong>、又（また）は(A)とは<strong>似（に）ていない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "て, Contrastive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson7/494/male_audio/230708_1039_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/普段と違って、随分お洒落をしてどこに行くんですか？.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "That's quite <strong>different</strong> from what you normally wear. Where are you going in such fancy dress?",
+        "nuance_translation": "One of two phrases which may express something being <strong>like</strong> or <strong>similar</strong> to (A), or <strong>unlike</strong> or <strong>differing</strong> from (A).",
+        "extra_info": "",
+        "reviewable_id": 494,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3819",
+      "type": "study_question",
+      "attributes": {
+        "id": 3819,
+        "content": "母親（ははおや）<span class='study-area-input'>____</span>、彼女（かのじょ）はとても料理（りょうり）が上手（じょうず）です。",
+        "answer": "とちがって",
+        "alternate_grammar": [],
+        "kanji_answer": "と違（ちが）って",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)に<strong>似（に）ている</strong>、又（また）は(A)とは<strong>似（に）ていない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "て, Contrastive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson7/494/male_audio/230708_1038.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/母親と違って、彼女はとても料理が上手です。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Unlike</strong> her mother, she is good at cooking.",
+        "nuance_translation": "One of two phrases which may express something being <strong>like</strong> or <strong>similar</strong> to (A), or <strong>unlike</strong> or <strong>differing</strong> from (A).",
+        "extra_info": "",
+        "reviewable_id": 494,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5645",
+      "type": "study_question",
+      "attributes": {
+        "id": 5645,
+        "content": "君（きみ）<span class='study-area-input'>____</span>その意見（いけん）に賛成（さんせい）だ。",
+        "answer": "とおなじで",
+        "alternate_grammar": [],
+        "kanji_answer": "と同（おな）じで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)に<strong>似（に）ている</strong>、又（また）は(A)とは<strong>似（に）ていない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "て, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson7/494/male_audio/230708_1038_03.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/君と同じでその意見に賛成だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のように": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "みたいに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "のような": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "みたい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "とおなじく": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "とおなじように": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "とおなじ": {
+            "en": "Since おなじ is a noun, you must use the conjunctive form of だ at the end.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とおなじに": {
+            "en": "Since おなじ is a noun, you must use the conjunctive form of だ at the end.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ように": {
+            "en": "The の particle would be required for this to be grammatical. However, we are looking for a grammar point that is used for conveying similarity.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "らしい": {
+            "en": "らしい means 'typical of (A)' or 'just like (A)'. We are looking for a grammar point that is used for conveying similarity.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とどうじに": {
+            "en": "This means 'at the same time'. We are looking for a grammar point that is used for conveying similarity.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Like</strong> you, I agree with that opinion.",
+        "nuance_translation": "One of two phrases which may express something being <strong>like</strong> or <strong>similar</strong> to (A), or <strong>unlike</strong> or <strong>differing</strong> from (A).",
+        "extra_info": "",
+        "reviewable_id": 494,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5647",
+      "type": "study_question",
+      "attributes": {
+        "id": 5647,
+        "content": "先生（せんせい）<span class='study-area-input'>____</span>、僕（ぼく）も日本語（にほんご）が大好（だいす）きです。",
+        "answer": "とおなじで",
+        "alternate_grammar": [],
+        "kanji_answer": "と同（おな）じで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)に<strong>似（に）ている</strong>、又（また）は(A)とは<strong>似（に）ていない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "て, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson7/494/male_audio/230708_1039.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/先生と同じで、僕も日本語が大好きです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のように": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "みたいに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "のような": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "みたい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "とおなじく": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "とおなじように": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "とおなじ": {
+            "en": "Since おなじ is a noun, you must use the conjunctive form of だ at the end.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とおなじに": {
+            "en": "Since おなじ is a noun, you must use the conjunctive form of だ at the end.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ように": {
+            "en": "The の particle would be required for this to be grammatical. However, we are looking for a grammar point that is used for conveying similarity.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とどうじに": {
+            "en": "This means 'at the same time'. We are looking for a grammar point that is used for conveying similarity.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とちがって": {
+            "en": "This means 'different from'. We are looking for a grammar point that is used for conveying similarity.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Like</strong> my teacher, I love Japanese.",
+        "nuance_translation": "One of two phrases which may express something being <strong>like</strong> or <strong>similar</strong> to (A), or <strong>unlike</strong> or <strong>differing</strong> from (A).",
+        "extra_info": "",
+        "reviewable_id": 494,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5649",
+      "type": "study_question",
+      "attributes": {
+        "id": 5649,
+        "content": "空気（くうき）<span class='study-area-input'>____</span>、電波（でんぱ）は見（み）えないけど存在（そんざい）しています。",
+        "answer": "とおなじで",
+        "alternate_grammar": [],
+        "kanji_answer": "と同（おな）じで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)に<strong>似（に）ている</strong>、又（また）は(A)とは<strong>似（に）ていない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "て, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson7/494/male_audio/230708_1039_02.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/空気と同じで、電波は見えないけど存在しています。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のように": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "みたいに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "のような": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "みたい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "とおなじく": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "とおなじように": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "とならんで": {
+            "en": "Although this could work, we are looking for a grammar point that is used for conveying similarity.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "wrong_answers": {
+          "とおなじ": {
+            "en": "Since おなじ is a noun, you must use the conjunctive form of だ at the end.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とどうじに": {
+            "en": "This means 'at the same time'. We are looking for a grammar point that is used for conveying similarity.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とおなじに": {
+            "en": "Since おなじ is a noun, you must use the conjunctive form of だ at the end.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とおなじぐらい": {
+            "en": "This means 'about the same'. We are looking for a grammar point that literally means 'the same'.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Similar</strong> to air, radio waves exists even though you can't see them.",
+        "nuance_translation": "One of two phrases which may express something being <strong>like</strong> or <strong>similar</strong> to (A), or <strong>unlike</strong> or <strong>differing</strong> from (A).",
+        "extra_info": "",
+        "reviewable_id": 494,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5651",
+      "type": "study_question",
+      "attributes": {
+        "id": 5651,
+        "content": "チョコの入（はい）った箱（はこ）<span class='study-area-input'>____</span>、人生（じんせい）は驚（おどろ）きに満（み）ちているものだ。",
+        "answer": "とおなじで",
+        "alternate_grammar": [],
+        "kanji_answer": "と同（おな）じで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)に<strong>似（に）ている</strong>、又（また）は(A)とは<strong>似（に）ていない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "て, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson7/494/male_audio/230708_1039_04.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/チョコの入った箱と同じで、人生は驚きに満ちているものだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のように": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "みたいに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "のような": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "みたい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "とおなじく": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "とおなじように": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "ように": {
+            "en": "The の particle would be required for this to be grammatical. However, we are looking for a grammar point that is used for conveying similarity.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とおなじ": {
+            "en": "Since おなじ is a noun, you must use the conjunctive form of だ at the end.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "らしい": {
+            "en": "らしい means 'typical of (A)' or 'just like (A)'. We are looking for a grammar point that is used for conveying similarity.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ような": {
+            "en": "The の particle would be required for this to be grammatical. However, we are looking for a grammar point that is used for conveying similarity.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とどうじに": {
+            "en": "This means 'at the same time'. We are looking for a grammar point that is used for conveying similarity.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とおなじに": {
+            "en": "Since おなじ is a noun, you must use the conjunctive form of だ at the end.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Like</strong> a box of chocolates, life is full of surprises.",
+        "nuance_translation": "One of two phrases which may express something being <strong>like</strong> or <strong>similar</strong> to (A), or <strong>unlike</strong> or <strong>differing</strong> from (A).",
+        "extra_info": "",
+        "reviewable_id": 494,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "5653",
+      "type": "study_question",
+      "attributes": {
+        "id": 5653,
+        "content": "彼（かれ）も私（わたし）<span class='study-area-input'>____</span>スポーツカーを運転（うんてん）するのが好（す）きだ。",
+        "answer": "とおなじで",
+        "alternate_grammar": [],
+        "kanji_answer": "と同（おな）じで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)に<strong>似（に）ている</strong>、又（また）は(A)とは<strong>似（に）ていない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "て, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson7/494/male_audio/230708_1040_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/彼も私と同じでスポーツカーを運転するのが好きだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のように": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "みたいに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "のような": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "みたい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "とおなじく": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "とおなじように": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "とおなじ": {
+            "en": "Since おなじ is a noun, you must use the conjunctive form of だ at the end.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ように": {
+            "en": "The の particle would be required for this to be grammatical. However, we are looking for a grammar point that is used for conveying similarity.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とおなじに": {
+            "en": "Since おなじ is a noun, you must use the conjunctive form of だ at the end.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ような": {
+            "en": "The の particle would be required for this to be grammatical. However, we are looking for a grammar point that is used for conveying similarity.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とどうじに": {
+            "en": "This means 'at the same time'. We are looking for a grammar point that is used for conveying similarity.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Like</strong> me, he likes to drive sports cars.",
+        "nuance_translation": "One of two phrases which may express something being <strong>like</strong> or <strong>similar</strong> to (A), or <strong>unlike</strong> or <strong>differing</strong> from (A).",
+        "extra_info": "",
+        "reviewable_id": 494,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "3820",
+      "type": "study_question",
+      "attributes": {
+        "id": 3820,
+        "content": "父親（ちちおや）<span class='study-area-input'>____</span>、彼（かれ）はとても働（はたら）き者（もの）だ。",
+        "answer": "とおなじで",
+        "alternate_grammar": [],
+        "kanji_answer": "と同（おな）じで",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)に<strong>似（に）ている</strong>、又（また）は(A)とは<strong>似（に）ていない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "て, Inclusive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N3/Lesson7/494/male_audio/230708_1038_01.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n3/父親と同じで、彼はとても働き者だ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "のように": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "みたいに": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "のような": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "みたい": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          },
+          "とおなじく": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          },
+          "とおなじように": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {
+          "とおなじ": {
+            "en": "Since おなじ is a noun, you must use the conjunctive form of だ at the end.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とおなじに": {
+            "en": "Since おなじ is a noun, you must use the conjunctive form of だ at the end.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "ように": {
+            "en": "The の particle would be required for this to be grammatical. However, we are looking for a grammar point that is used for conveying similarity.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          },
+          "とどうじに": {
+            "en": "This means 'at the same time'. We are looking for a grammar point that is used for conveying similarity.",
+            "es": "",
+            "fr": "",
+            "id": ""
+          }
+        },
+        "translation": "<strong>Just like</strong> his father, he is a hard worker.",
+        "nuance_translation": "One of two phrases which may express something being <strong>like</strong> or <strong>similar</strong> to (A), or <strong>unlike</strong> or <strong>differing</strong> from (A).",
+        "extra_info": "",
+        "reviewable_id": 494,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "465",
+      "type": "writeup",
+      "attributes": {
+        "id": 465,
+        "body_ja": "<p>二（ふた）つの物事（ものごと）や二人（ふたり）が同（おな）じことまたは違（ちが）うことを表（あらわ）すときによく使（つか）われる表現（ひょうげん）に、「と同（おな）じで」と「と違（ちが）って」があります。この表現（ひょうげん）は、格助詞（かくじょし）「と」に、名詞（めいし）「同（おな）じ」と助動詞「で」（「だ」の連用形（れんようけい））、または五段動詞（ごだんどうし）「違（ちが）う」のテ形（けい）が付（つ）いてできています。</p>\r\n\r\n<p>「と同（おな）じで」と「と違（ちが）って」はどちらも、名詞（めいし）または名詞句（めいしく）のあとに付（つ）けて使（つか）います。そのあとに、(A) と (B) の同（おな）じ点（てん）や違（ちが）う点（てん）を説明（せつめい）する文（ぶん）が続（つづ）きます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181407'>\r\n<li data-study-question='181408'>\r\n<li data-study-question='181409'>\r\n<li data-study-question='181410'>\r\n</ul>\r\n\r\n<p>接続助詞（せつぞくじょし）の「て」は、「だ」の連用形（れんようけい）の「で」と似（に）たような働（はたら）きをしています。どちらも (A) と (B) が「同じ」か「違う」かという関係（かんけい）を表（あらわ）しています。</p>",
+        "body": "<p>Two regular expressions that are used in Japanese for conveying similarity, and dissimilarity are と同（おな）じで 'the same as (A)', and と違（ちが）って 'different to (A)'. While both of these structures use the <span data-term='格助詞・かくじょし'>case marking particle</span> と to mark (A), 同（おな）じ is a noun, while 違（ちが）って is the て form of the う - Verb, 違（ちが）う. Due to this, the <span data-term='助動詞・じょどうし'>auxiliary verb</span> <span data-gp-id='1'>だ</span> is required after 同（おな）じ, in order to link (A) and (B). <span data-gp-id='1'>だ</span> will appear in its <span data-term='連用形・れんようけい'>conjunctive form</span>.</p>\r\n\r\n<p>Both と同（おな）じで and と違（ちが）って will be preceded by a noun or noun phrase, before the (B) part of the sentence will describe the similarity/dissimilarity.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='181407'>\r\n<li data-study-question='181408'>\r\n<li data-study-question='181409'>\r\n<li data-study-question='181410'>\r\n</ul>\r\n\r\n<p>In this structure, as the <span data-term='接続助詞・せつぞくじょし'>conjunction particle</span> て, has a similar role to the conjunctive form of だ (で), both expressions are simply stating that (B) is existing in a state of 'having sameness', or 'having difference' with (A).</p>"
+      }
+    },
+    {
+      "id": "510",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 510,
+        "source": "Tobira",
+        "location": "Page 121",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1087",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1087,
+        "site": "Learn Japanese",
+        "description": "と同じで and と違って",
+        "link": "https://youtu.be/E_e76ThzAI8",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "277",
+      "type": "related_content",
+      "attributes": {
+        "id": 277,
+        "relationship_type": "related",
+        "body": "みたいに・みたいな and と同じで both express comparison but differ in nuance. みたいに・みたいな suggests similarity or resemblance, e.g. ‘like’ or ‘seems like'. と同じで states something is explicitly the same, showing a stronger degree of similarity. Conversely, と違って means ‘unlike’ or ‘different from'.",
+        "first_relatable": {
+          "id": 107,
+          "slug": "みたいに-みたいな",
+          "title": "みたいに・みたいな",
+          "meaning": "Like, Similar to, Resembling",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 494,
+          "slug": "と同じで-と違って",
+          "title": "と同じで・と違って",
+          "meaning": "Like, Similar to, Unlike, Dissimilar to",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

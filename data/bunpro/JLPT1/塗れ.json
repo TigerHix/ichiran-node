@@ -1,0 +1,842 @@
+{
+  "data": {
+    "id": "750",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 750,
+      "level": "JLPT1",
+      "lesson_id": 42,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "塗れ",
+      "nuance": "何（なに）かが(A)で覆（おお）われている、または浸（ひた）されていることを示（しめ）す表現（ひょうげん）。<strong>完全（かんぜん）に</strong>(A)で<strong>色（いろ）づけられている</strong>。",
+      "grammar_order": 766,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 744,
+        "title": "ようが～まいが",
+        "slug": "-よう--う-まい-が-と"
+      },
+      "previous_grammar_point": {
+        "id": 745,
+        "title": "ともなく・ともなしに",
+        "slug": "ともなく-ともなしに"
+      },
+      "lesson_count": "8/17",
+      "title": "塗れ",
+      "furigana": "塗（まみ）れ",
+      "meaning": "Stained, Covered in, Smeared, Dirty with, Soaked in",
+      "nuance_translation": "A structure implying that something is drenched or soaked in (A). <strong>Completely painted</strong> with (A).",
+      "rare_kanji_warning": "",
+      "caution": "Usually not used for non-physical objects such as mistakes, etc. However, there are exceptions like 借金まみれ.",
+      "polite_structure": "",
+      "casual_structure": "Noun + <strong>まみれ</strong><br>Noun + <strong>まみれ</strong> + <span class='chui'><span class='gp-popout' data-gp-id='6'>の</span></span> + Noun<br>Noun + <strong>まみれ</strong> + になって + Phrase",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/18165",
+      "metadata": "塗れ, まみれ, mamire, noun, suffix"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "10577",
+            "type": "study_question"
+          },
+          {
+            "id": "9063",
+            "type": "study_question"
+          },
+          {
+            "id": "182592",
+            "type": "study_question"
+          },
+          {
+            "id": "182593",
+            "type": "study_question"
+          },
+          {
+            "id": "182594",
+            "type": "study_question"
+          },
+          {
+            "id": "182595",
+            "type": "study_question"
+          },
+          {
+            "id": "10580",
+            "type": "study_question"
+          },
+          {
+            "id": "7928",
+            "type": "study_question"
+          },
+          {
+            "id": "10582",
+            "type": "study_question"
+          },
+          {
+            "id": "7926",
+            "type": "study_question"
+          },
+          {
+            "id": "7927",
+            "type": "study_question"
+          },
+          {
+            "id": "9065",
+            "type": "study_question"
+          },
+          {
+            "id": "10578",
+            "type": "study_question"
+          },
+          {
+            "id": "10579",
+            "type": "study_question"
+          },
+          {
+            "id": "9064",
+            "type": "study_question"
+          },
+          {
+            "id": "10581",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "842",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1458",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1228",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1667",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1668",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1669",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "10577",
+      "type": "study_question",
+      "attributes": {
+        "id": 10577,
+        "content": "血（ち）<span class='study-area-input'>____</span>帰（かえ）ってきた妹（いもうと）を見（み）て、直（す）ぐに警察（けいさつ）へ１１０（ひゃくとお）番（ばん）通報（つうほう）をした。",
+        "answer": "まみれになって",
+        "alternate_grammar": [
+          "まみれで"
+        ],
+        "kanji_answer": "まみれになって",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)で覆（おお）われている、または浸（ひた）されていることを示（しめ）す表現（ひょうげん）。<strong>完全（かんぜん）に</strong>(A)で<strong>色（いろ）づけられている</strong>。",
+        "tense": "て, Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/血まみれになって帰ってきた妹を見て、直ぐに警察へ１１０番通報をした。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だらけで": {
+            "en": "Natural, but let's try something that that is mostly used when someone is covered with nasty liquids and powders.",
+            "es": ""
+          },
+          "だらけになって": {
+            "en": "Natural, but let's try something that that is mostly used when someone is covered with nasty liquids and powders.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "When I saw my little sister come home <strong>smeared with</strong> blood, I immediately reported it to the police via 110.",
+        "nuance_translation": "A structure implying that something is drenched or soaked in (A). <strong>Completely painted</strong> with (A).",
+        "extra_info": "",
+        "reviewable_id": 750,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9063",
+      "type": "study_question",
+      "attributes": {
+        "id": 9063,
+        "content": "頭（あたま）から汗（あせ）<span class='study-area-input'>____</span>、走（はし）っている選手（せんしゅ）はすごいと思（おも）います。",
+        "answer": "まみれになって",
+        "alternate_grammar": [
+          "まみれで",
+          "まみれになって"
+        ],
+        "kanji_answer": "塗（まみ）れになって",
+        "kanji_alt_grammar": [
+          "塗（まみ）れで",
+          "塗（まみ）れになって"
+        ],
+        "nuance": "何（なに）かが(A)で覆（おお）われている、または浸（ひた）されていることを示（しめ）す表現（ひょうげん）。<strong>完全（かんぜん）に</strong>(A)で<strong>色（いろ）づけられている</strong>。",
+        "tense": "て, Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/頭から汗塗れになって、走っている選手はすごいと思います。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まみれ": {
+            "en": "Nice guess! Can you add something to make this a conjunctive?",
+            "es": ""
+          },
+          "だらけになって": {
+            "en": "Great! Could you use another expression that is mostly used when someone is covered with nasty liquids and powders?",
+            "es": ""
+          },
+          "だらけで": {
+            "en": "Great! Could you use another expression that is mostly used when someone is covered with nasty liquids and powders?",
+            "es": ""
+          },
+          "すぐめ": {
+            "en": "This is more 'in its entirety' or 'all in (sweat)'",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I think that players running with their heads <strong>covered in</strong> sweat are amazing.",
+        "nuance_translation": "A structure implying that something is drenched or soaked in (A). <strong>Completely painted</strong> with (A).",
+        "extra_info": "",
+        "reviewable_id": 750,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182592",
+      "type": "study_question",
+      "attributes": {
+        "id": 182592,
+        "content": "<span class='name-highlight'>お母（かあ）さん</span>：「服（ふく）泥（どろ）<span class='study-area-input'>____</span>じゃん！どうしたの？！」",
+        "answer": "まみれ",
+        "alternate_grammar": [],
+        "kanji_answer": "まみれ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/お母さん：「服泥まみれじゃん！どうしたの？！」.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Mother: 'You are <strong>covered in</strong> mud! What happened?!'",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 750,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182593",
+      "type": "study_question",
+      "attributes": {
+        "id": 182593,
+        "content": "\r\n\r\n\r\n家（いえ）に帰（かえ）ったら犬（いぬ）が血（ち）<span class='study-area-input'>____</span>になっていたと思（おも）ったら、どうやらいちごジャムを食（た）べて寝（ね）たみたい。",
+        "answer": "まみれ",
+        "alternate_grammar": [],
+        "kanji_answer": "まみれ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/家に帰ったら犬が血まみれになっていたと思ったら、どうやらいちごジャムを食べて寝たみたい。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nWhen I got home, I thought my dog was <strong>covered in</strong> blood, but it seems like he ate some jam and fell asleep.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 750,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182594",
+      "type": "study_question",
+      "attributes": {
+        "id": 182594,
+        "content": "\r\n\r\n\r\nあんな借金（しゃっきん）<span class='study-area-input'>____</span>の男（おとこ）とは付（つ）き合（あ）わない方（ほう）がいいよ！",
+        "answer": "まみれ",
+        "alternate_grammar": [],
+        "kanji_answer": "塗（まみ）れ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/あんな借金塗れの男とは付き合わない方がいいよ！.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nI don't think you should date a guy like that, who is <strong>drowning in</strong> debt!",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 750,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182595",
+      "type": "study_question",
+      "attributes": {
+        "id": 182595,
+        "content": "\r\n\r\n\r\nストップ！そんな泥（どろ）<span class='study-area-input'>____</span>の服（ふく）を洗濯機（せんたくき）に入（い）れないで！",
+        "answer": "まみれ",
+        "alternate_grammar": [],
+        "kanji_answer": "まみれ",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ストップ！そんな泥まみれの服を洗濯機に入れないで！.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nStop! Don't put clothes <strong>covered in</strong> mud in the washing machine!",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 750,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10580",
+      "type": "study_question",
+      "attributes": {
+        "id": 10580,
+        "content": "<span class='name-highlight'>友達（ともだち）に助言（じょげん）する</span>：「借金（しゃっきん）<span class='study-area-input'>____</span>現状（げんじょう）を変（か）えない限（かぎ）り、誰（だれ）も君（きみ）と付（つ）き合（あ）ってくれないと思（おも）うよ。」",
+        "answer": "まみれの",
+        "alternate_grammar": [],
+        "kanji_answer": "まみれの",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)で覆（おお）われている、または浸（ひた）されていることを示（しめ）す表現（ひょうげん）。<strong>完全（かんぜん）に</strong>(A)で<strong>色（いろ）づけられている</strong>。",
+        "tense": "Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/友達に助言する：「借金まみれの現状を変えない限り、誰も君と付き合ってくれないと思うよ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だらけの": {
+            "en": "Natural, but let's try something that that is mostly used when someone is covered with nasty liquids and powders.",
+            "es": ""
+          },
+          "だらけ": {
+            "en": "Close, but what has to be added when this expression modifies a noun?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Giving advice to a friend</span>: 'As long as you don't change your current state of <strong>drowning in</strong> debt, I don't think anyone is going to date you.' (covered in)",
+        "nuance_translation": "A structure implying that something is drenched or soaked in (A). <strong>Completely painted</strong> with (A).",
+        "extra_info": "",
+        "reviewable_id": 750,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7928",
+      "type": "study_question",
+      "attributes": {
+        "id": 7928,
+        "content": "床（ゆか）は泥（どろ）<span class='study-area-input'>____</span>になった。",
+        "answer": "まみれ",
+        "alternate_grammar": [],
+        "kanji_answer": "塗（まみ）れ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)で覆（おお）われている、または浸（ひた）されていることを示（しめ）す表現（ひょうげん）。<strong>完全（かんぜん）に</strong>(A)で<strong>色（いろ）づけられている</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/床は泥塗れになった。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だらけ": {
+            "en": "Think of something more specific to physical covering rather than 'riddled with'",
+            "es": ""
+          },
+          "すぐめ": {
+            "en": "This is more 'in its entirety' or 'all in (mud)'",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "The floor became <strong>covered in</strong> mud.",
+        "nuance_translation": "A structure implying that something is drenched or soaked in (A). <strong>Completely painted</strong> with (A).",
+        "extra_info": "",
+        "reviewable_id": 750,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10582",
+      "type": "study_question",
+      "attributes": {
+        "id": 10582,
+        "content": "テレビ業界（ぎょうかい）はパワハラやセクハラ<span class='study-area-input'>____</span>だと聞（き）き、アナウンサーに憧（あこが）れる気持（きも）ちが無（な）くなってしまった。",
+        "answer": "まみれ",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "まみれ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)で覆（おお）われている、または浸（ひた）されていることを示（しめ）す表現（ひょうげん）。<strong>完全（かんぜん）に</strong>(A)で<strong>色（いろ）づけられている</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/テレビ業界はパワハラやセクハラまみれだと聞き、アナウンサーに憧れる気持ちが無くなってしまった。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だらけ": {
+            "en": "Natural, but let's try something that that is mostly used when someone is covered with nasty liquids and powders.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Hearing that the entertainment industry is <strong>stained with</strong> things like power abuse and sexual harassment, my fond feelings toward presenters disappeared.",
+        "nuance_translation": "A structure implying that something is drenched or soaked in (A). <strong>Completely painted</strong> with (A).",
+        "extra_info": "",
+        "reviewable_id": 750,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7926",
+      "type": "study_question",
+      "attributes": {
+        "id": 7926,
+        "content": "先生（せんせい）の田中（たなか）さんは氷（こおり）で滑（すべ）って雪（ゆき）の塊（かたまり）で転（ころ）び、雪（ゆき）<span class='study-area-input'>____</span>になってしまった。",
+        "answer": "まみれ",
+        "alternate_grammar": [],
+        "kanji_answer": "塗（まみ）れ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)で覆（おお）われている、または浸（ひた）されていることを示（しめ）す表現（ひょうげん）。<strong>完全（かんぜん）に</strong>(A)で<strong>色（いろ）づけられている</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/先生の田中さんは氷で滑って雪の塊で転び、雪塗れになってしまった。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だらけ": {
+            "en": "Think of something more specific to physical covering rather than 'riddled with'",
+            "es": ""
+          },
+          "すぐめ": {
+            "en": "This is more 'in its entirety' or 'all in (white)'",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Mr. Tanaka slipped on ice and fell on a lump of snow. He was completely <strong>covered in</strong> snow.",
+        "nuance_translation": "A structure implying that something is drenched or soaked in (A). <strong>Completely painted</strong> with (A).",
+        "extra_info": "",
+        "reviewable_id": 750,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7927",
+      "type": "study_question",
+      "attributes": {
+        "id": 7927,
+        "content": "仕事（しごと）で油（あぶら）<span class='study-area-input'>____</span>になったら、家（いえ）に帰（かえ）ってからシャワーを浴（あ）びると気持（きも）ちがいいよね。",
+        "answer": "まみれ",
+        "alternate_grammar": [],
+        "kanji_answer": "塗（まみ）れ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)で覆（おお）われている、または浸（ひた）されていることを示（しめ）す表現（ひょうげん）。<strong>完全（かんぜん）に</strong>(A)で<strong>色（いろ）づけられている</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/仕事で油塗れになったら、家に帰ってからシャワーを浴びると気持ちがいいよね。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だらけ": {
+            "en": "Think of something more specific to physical covering rather than 'riddled with'",
+            "es": ""
+          },
+          "すぐめ": {
+            "en": "This is more 'in its entirety' or 'all in (oil)'",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "After getting <strong>soaked in</strong> oil at work, there's nothing better than having a shower after coming back home, right?",
+        "nuance_translation": "A structure implying that something is drenched or soaked in (A). <strong>Completely painted</strong> with (A).",
+        "extra_info": "",
+        "reviewable_id": 750,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9065",
+      "type": "study_question",
+      "attributes": {
+        "id": 9065,
+        "content": "子供（こども）は泥（どろ）<span class='study-area-input'>____</span><span class='chui'>まま</span>遊（あそ）んでいる。",
+        "answer": "まみれの",
+        "alternate_grammar": [
+          "まみれの",
+          "まみれになった"
+        ],
+        "kanji_answer": "塗（まみ）れの",
+        "kanji_alt_grammar": [
+          "塗（まみ）れになった",
+          "塗（まみ）れの"
+        ],
+        "nuance": "何（なに）かが(A)で覆（おお）われている、または浸（ひた）されていることを示（しめ）す表現（ひょうげん）。<strong>完全（かんぜん）に</strong>(A)で<strong>色（いろ）づけられている</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/子供は泥塗れのまま遊んでいる。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "まみれ": {
+            "en": "Nice guess! You need something to connect まみれ to まま",
+            "es": ""
+          },
+          "だらけになった": {
+            "en": "Great! Could you use another expression that is mostly used when someone is covered with nasty liquids and powders?",
+            "es": ""
+          },
+          "だらけの": {
+            "en": "Great! Could you use another expression that is mostly used when someone is covered with nasty liquids and powders?",
+            "es": ""
+          },
+          "すぐめ": {
+            "en": "This is more 'in its entirety' or 'all in (mud)'",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'Children are playing while <strong>covered in</strong> mud.'",
+        "nuance_translation": "A structure implying that something is drenched or soaked in (A). <strong>Completely painted</strong> with (A).",
+        "extra_info": "",
+        "reviewable_id": 750,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10578",
+      "type": "study_question",
+      "attributes": {
+        "id": 10578,
+        "content": "ずっと放置（ほうち）していた漢和（かんわ）辞典（じてん）が埃（ほこり）<span class='study-area-input'>____</span>になっていたので捨（す）てる事（こと）にしました。",
+        "answer": "まみれ",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "まみれ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)で覆（おお）われている、または浸（ひた）されていることを示（しめ）す表現（ひょうげん）。<strong>完全（かんぜん）に</strong>(A)で<strong>色（いろ）づけられている</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ずっと放置していた漢和辞典が埃まみれになっていたので捨てる事にしました。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だらけ": {
+            "en": "Natural, but let's try something that that is mostly used when someone is covered with nasty liquids and powders.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Since my kanji dictionary that I have been constantly neglecting got absolutely <strong>covered in </strong> dust, I decided to throw it away.",
+        "nuance_translation": "A structure implying that something is drenched or soaked in (A). <strong>Completely painted</strong> with (A).",
+        "extra_info": "",
+        "reviewable_id": 750,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10579",
+      "type": "study_question",
+      "attributes": {
+        "id": 10579,
+        "content": "風（かぜ）の強（つよ）い日（ひ）に窓（まど）を開（あ）けると部屋（へや）が砂（すな）<span class='study-area-input'>____</span>になってしまうのでやめた方（ほう）がいいですよ。",
+        "answer": "まみれ",
+        "alternate_grammar": [
+          ""
+        ],
+        "kanji_answer": "まみれ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)で覆（おお）われている、または浸（ひた）されていることを示（しめ）す表現（ひょうげん）。<strong>完全（かんぜん）に</strong>(A)で<strong>色（いろ）づけられている</strong>。",
+        "tense": "Extent",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/風の強い日に窓を開けると部屋が砂まみれになってしまうのでやめた方がいいですよ。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だらけ": {
+            "en": "Natural, but let's try something that that is mostly used when someone is covered with nasty liquids and powders.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "When you open your window on a day with strong wind, since the room will become <strong>covered in</strong> sand, you should hold off.",
+        "nuance_translation": "A structure implying that something is drenched or soaked in (A). <strong>Completely painted</strong> with (A).",
+        "extra_info": "",
+        "reviewable_id": 750,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9064",
+      "type": "study_question",
+      "attributes": {
+        "id": 9064,
+        "content": "<span class='name-highlight'>彼女（かのじょ）</span>：「キモイ！机（つくえ）がよだれ<span class='study-area-input'>____</span>だわ！」<br><span class='name-highlight'>彼氏（かれし）</span>：「勉強中（べんきょうちゅう）に寝（ね）ちゃったもので...」",
+        "answer": "まみれ",
+        "alternate_grammar": [],
+        "kanji_answer": "塗（まみ）れ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)で覆（おお）われている、または浸（ひた）されていることを示（しめ）す表現（ひょうげん）。<strong>完全（かんぜん）に</strong>(A)で<strong>色（いろ）づけられている</strong>。",
+        "tense": "Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/彼女：「キモイ！机がよだれ塗れだわ！」彼氏：「勉強中に寝ちゃったもので...」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だらけ": {
+            "en": "Great! Could you use another expression that is mostly used when someone is covered with nasty liquids and powders?",
+            "es": ""
+          },
+          "すぐめ": {
+            "en": "This is more 'in its entirety' or 'all in (drool)'",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Girlfriend</span>: 'Gross! The desk is <strong>covered in</strong> drool!'<br><span class='name-highlight'>Boyfriend</span>: 'I fell asleep while studying, so…' ",
+        "nuance_translation": "A structure implying that something is drenched or soaked in (A). <strong>Completely painted</strong> with (A).",
+        "extra_info": "",
+        "reviewable_id": 750,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10581",
+      "type": "study_question",
+      "attributes": {
+        "id": 10581,
+        "content": "所詮（しょせん）人間（にんげん）は欲（よく）<span class='study-area-input'>____</span>なのだから、それほど禁欲（きんよく）を推奨（すいしょう）しなくても良（よ）いと思（おも）います。",
+        "answer": "まみれ",
+        "alternate_grammar": [],
+        "kanji_answer": "まみれ",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)で覆（おお）われている、または浸（ひた）されていることを示（しめ）す表現（ひょうげん）。<strong>完全（かんぜん）に</strong>(A)で<strong>色（いろ）づけられている</strong>。",
+        "tense": "Extent",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/所詮人間は欲まみれなのだから、それほど禁欲を推奨しなくても良いと思います。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だらけ": {
+            "en": "Natural, but let's try something that that is mostly used when someone is covered with nasty liquids and powders.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Since humans are all <strong>defiled with greed</strong> in the end, I think that not endorsing abstinence so much is fine. (smeared with)",
+        "nuance_translation": "A structure implying that something is drenched or soaked in (A). <strong>Completely painted</strong> with (A).",
+        "extra_info": "",
+        "reviewable_id": 750,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "842",
+      "type": "writeup",
+      "attributes": {
+        "id": 842,
+        "body_ja": "<p>「まみれ」は、「(A) で完全（かんぜん）に覆（おお）われている」「(A) がたくさんついている」「(A) で汚（よご）れている」といった意味（いみ）を持（も）つ文型（ぶんけい）で、基本的（きほんてき）にはひらがなで書（か）かれます。通常（つうじょう）、名詞（めいし）の後（あと）に置（お）いて使（つか）われます。また、別（べつ）の名詞（めいし）を修飾（しゅうしょく）する場合（ばあい）は、「の」を伴（ともな）って「まみれの」という形（かたち）になります。</p>\r\n\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182592'>\r\n<li data-study-question='182593'>\r\n<li data-study-question='182594'>\r\n<li data-study-question='182595'>\r\n</ul>\r\n\r\n<p>この表現（ひょうげん）は、血（ち）・泥（どろ）・油（あぶら）などの物理的（ぶつりてき）に不快（ふかい）とされるものや、借金（しゃっきん）・欲望（よくぼう）などの好（この）ましくないとされる事柄（ことがら）に対（たい）して使（つか）われることがほとんどです。</p>\r\n\r\n<section class='funfact'><h4>豆知識（まめちしき）</h4>\r\n<p>「まみれ」は一段動詞（いちだんどうし）「塗（まみ）れる」の名詞形（めいしけい）です。「塗（まみ）れる」は「塗（ぬ）る」という動詞（どうし）と同（おな）じ漢字（かんじ）を使（つか）い、意味（いみ）も似（に）ています。「塗（ぬ）る」という言葉（ことば）には「液状（えきじょう）のものを表面（ひょうめん）にすりつける」や「覆（おお）う」という意味（いみ）がありますが、「まみれる」や「まみれ」もこれと同（おな）じように、物体（ぶったい）の中身（なかみ）ではなく、表面（ひょうめん）が何（なに）かで覆（おお）われている状態（じょうたい）を表現（ひょうげん）するときに使（つか）われます。</p></section>",
+        "body": "<p><span data-gp-id='750'>まみれ</span>, seen primarily in hiragana only, is a grammar pattern that indicates being 'completely covered in (A)', 'smeared all over with (A)', or 'stained with (A)'. It will follow nouns, and may appear as <span data-gp-id='750'>まみれの</span> when linked directly to a second noun that <span data-gp-id='750'>まみれ</span> is modifying.</p>\r\n\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182592'>\r\n<li data-study-question='182593'>\r\n<li data-study-question='182594'>\r\n<li data-study-question='182595'>\r\n</ul>\r\n\r\n<p>In the vast majority of cases, <span data-gp-id='750'>まみれ</span> will be used in regard to something that is negative, or can be perceived negatively even if it is not physical, like debt or desires. Examples of physically negative things include but are not limited to blood, mud, oil, etc.</p>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p><span data-gp-id='750'>まみれ</span> is the noun form of the る-Verb 塗（まみ）れる, coming from the same kanji and with a similar meaning as 塗（ぬ）る, 'to paint'. Just like 'to paint', まみれる and <span data-gp-id='750'>まみれ</span> primarily describe something covering the outer surface of another object, rather than its contents.</p></section>"
+      }
+    },
+    {
+      "id": "1458",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1458,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 343",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1667",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1667,
+        "site": "Tae Kim",
+        "description": "だらけ・まみれ・すぐめ",
+        "link": "https://guidetojapanese.org/learn/grammar/covered",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1668",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1668,
+        "site": "JLPT 先生",
+        "description": "Grammar notes and examples",
+        "link": "https://jlptsensei.com/learn-japanese-grammar/%E3%81%BE%E3%81%BF%E3%82%8C-mamire/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1669",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1669,
+        "site": "JapaneseTest4You",
+        "description": "Breakdown and examples",
+        "link": "http://japanesetest4you.com/flashcard/learn-jlpt-n1-grammar-まみれ-mamire/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1228",
+      "type": "related_content",
+      "attributes": {
+        "id": 1228,
+        "relationship_type": "related",
+        "body": "だらけ and 塗れ (often written in hiragana as まみれ) both describe being covered in something, but differ in nuance. だらけ suggests an overwhelming or chaotic abundance of unpleasant things, e.g. 傷だらけの手 'Hands full of cuts.' 塗れ emphasizes being soaked or stained, either physically or figuratively, e.g. 泥まみれの靴 'Mud-covered shoes' or 借金まみれの男 'A man drowning in debt.'",
+        "first_relatable": {
+          "id": 243,
+          "slug": "だらけ",
+          "title": "だらけ",
+          "meaning": "Completely covered in, Full of",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 750,
+          "slug": "塗れ",
+          "title": "塗れ",
+          "meaning": "Stained, Covered in, Smeared, Dirty with, Soaked in",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

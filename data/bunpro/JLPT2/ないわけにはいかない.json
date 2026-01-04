@@ -1,0 +1,980 @@
+{
+  "data": {
+    "id": "404",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 404,
+      "level": "JLPT2",
+      "lesson_id": 40,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "ないわけにはいかない",
+      "nuance": "(A)を<strong>やらないことにはならない</strong>、又（また）は<strong>やらなくてはいけない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+      "grammar_order": 738,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 537,
+        "title": "というわけではない",
+        "slug": "というわけではない"
+      },
+      "previous_grammar_point": {
+        "id": 511,
+        "title": "とも",
+        "slug": "とも"
+      },
+      "lesson_count": "18/21",
+      "title": "ないわけにはいかない",
+      "furigana": "ない訳（わけ）にはいかない",
+      "meaning": "Can't not, No way to avoid",
+      "nuance_translation": "A <strong>strong expression</strong> highlighting that <strong>not doing</strong> (A) cannot be <strong>so</strong>, or <strong>will not go</strong>.",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": "<span class='gp-popout' data-gp-id='888'>Verb［ない］</span>+ <strong><span class='gp-popout' data-gp-id='266'>わけにはいきません</span></strong>",
+      "casual_structure": "<span class='gp-popout' data-gp-id='888'>Verb［ない］</span>+ <strong><span class='gp-popout' data-gp-id='266'>わけにはいかない</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": null,
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/11154",
+      "metadata": "ないわけにはいかない, ない訳にはいかない, naiwakenihaikanai, naiwakeniwaikanai, expression, double negative"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "6403",
+            "type": "study_question"
+          },
+          {
+            "id": "182505",
+            "type": "study_question"
+          },
+          {
+            "id": "6404",
+            "type": "study_question"
+          },
+          {
+            "id": "182506",
+            "type": "study_question"
+          },
+          {
+            "id": "182507",
+            "type": "study_question"
+          },
+          {
+            "id": "6407",
+            "type": "study_question"
+          },
+          {
+            "id": "1433",
+            "type": "study_question"
+          },
+          {
+            "id": "1434",
+            "type": "study_question"
+          },
+          {
+            "id": "1432",
+            "type": "study_question"
+          },
+          {
+            "id": "6399",
+            "type": "study_question"
+          },
+          {
+            "id": "6400",
+            "type": "study_question"
+          },
+          {
+            "id": "6406",
+            "type": "study_question"
+          },
+          {
+            "id": "6405",
+            "type": "study_question"
+          },
+          {
+            "id": "6401",
+            "type": "study_question"
+          },
+          {
+            "id": "6402",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "749",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1540",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "132",
+            "type": "related_content"
+          },
+          {
+            "id": "422",
+            "type": "related_content"
+          },
+          {
+            "id": "154",
+            "type": "related_content"
+          },
+          {
+            "id": "460",
+            "type": "related_content"
+          },
+          {
+            "id": "28",
+            "type": "related_content"
+          },
+          {
+            "id": "691",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "890",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "6403",
+      "type": "study_question",
+      "attributes": {
+        "id": 6403,
+        "content": "訳（わけ）あって、白髪（しらが）を<span class='study-area-input'>____</span>んです。",
+        "answer": "そめないわけにはいかない",
+        "alternate_grammar": [],
+        "kanji_answer": "染（そ）めないわけにはいかない",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>やらないことにはならない</strong>、又（また）は<strong>やらなくてはいけない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "染（そ）める",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "そめないことはできない": {
+            "en": "Can you use わけ?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "For some reason, he <strong>cannot avoid dyeing</strong> his gray hair.",
+        "nuance_translation": "A <strong>strong expression</strong> highlighting that <strong>not doing</strong> (A) cannot be <strong>so</strong>, or <strong>will not go</strong>.",
+        "extra_info": "",
+        "reviewable_id": 404,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182505",
+      "type": "study_question",
+      "attributes": {
+        "id": 182505,
+        "content": "いつもお世話（せわ）になっている先輩（せんぱい）の結婚式（けっこんしき）だから、行（い）きたくなくても行（い）か<span class='study-area-input'>____</span>。",
+        "answer": "ないわけにはいかない",
+        "alternate_grammar": [],
+        "kanji_answer": "ない訳（わけ）にはいかない",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/いつもお世話になっている先輩の結婚式だから、行きたくなくても行かない訳にはいかない。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It's the wedding of a senior who has always been a great help to me, so even if I didn't want to go, I <strong>can't not</strong> go.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 404,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6404",
+      "type": "study_question",
+      "attributes": {
+        "id": 6404,
+        "content": "帰（かえ）りが深夜（しんや）になってしまったが、化粧（けしょう）を<span class='study-area-input'>____</span>。",
+        "answer": "おとさないわけにはいきません",
+        "alternate_grammar": [
+          "おとさないわけにはいかない",
+          "おとさないわけにはいかないです",
+          "おとさないわけにはいきません"
+        ],
+        "kanji_answer": "落（お）とさないわけにはいきません",
+        "kanji_alt_grammar": [
+          "落（お）とさないわけにはいかない",
+          "落（お）とさないわけにはいかないです",
+          "落（お）とさないわけにはいきません"
+        ],
+        "nuance": "(A)を<strong>やらないことにはならない</strong>、又（また）は<strong>やらなくてはいけない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Polite",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/帰りが深夜になってしまったが、化粧を落とさないわけにはいきません。.mp3",
+        "word_prompt": "落（お）とす",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おとさないことはできない": {
+            "en": "Can you use わけ?",
+            "es": ""
+          },
+          "おとさないことはできません": {
+            "en": "Can you use わけ?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "My return home unfortunately became late, but <strong>there is no way to avoid having to take off</strong> my makeup.",
+        "nuance_translation": "A <strong>strong expression</strong> highlighting that <strong>not doing</strong> (A) cannot be <strong>so</strong>, or <strong>will not go</strong>.",
+        "extra_info": "",
+        "reviewable_id": 404,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182506",
+      "type": "study_question",
+      "attributes": {
+        "id": 182506,
+        "content": "ダイエット中（ちゅう）だからといって、何（なに）も食（た）べ<span class='study-area-input'>____</span>。",
+        "answer": "ないわけにはいかない",
+        "alternate_grammar": [],
+        "kanji_answer": "ない訳（わけ）にはいかない",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/ダイエット中だからといって、何も食べない訳にはいかない。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Just because I am on a diet doesn't mean that I <strong>can avoid</strong> eating food.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 404,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182507",
+      "type": "study_question",
+      "attributes": {
+        "id": 182507,
+        "content": "めんどくさいからと言（い）って、宿題（しゅくだい）をし<span class='study-area-input'>____</span>。",
+        "answer": "ないわけにはいかない",
+        "alternate_grammar": [],
+        "kanji_answer": "ない訳（わけ）にはいかない",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/めんどくさいからと言って、宿題をしない訳にはいかない。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Just because it's a hassle doesn't mean that you <strong>don't do</strong> your homework.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 404,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6407",
+      "type": "study_question",
+      "attributes": {
+        "id": 6407,
+        "content": "苦手（にがて）だからといって、家事（かじ）を<span class='study-area-input'>____</span>。",
+        "answer": "しないわけにはいきません",
+        "alternate_grammar": [
+          "しないわけにはいかない",
+          "しないわけにはいかないです",
+          "しないわけにはいきません"
+        ],
+        "kanji_answer": "しないわけにはいきません",
+        "kanji_alt_grammar": [
+          "しないわけにはいかない",
+          "しないわけにはいかないです",
+          "しないわけにはいきません"
+        ],
+        "nuance": "(A)を<strong>やらないことにはならない</strong>、又（また）は<strong>やらなくてはいけない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Polite",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/苦手だからといって、家事をしないわけにはいきません。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しないことはできない": {
+            "en": "Can you use わけ?",
+            "es": "",
+            "fr": ""
+          },
+          "しないことはできません": {
+            "en": "Can you use わけ?",
+            "es": "",
+            "fr": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Just because you are bad at it, you <strong>can't avoid doing</strong> housework.",
+        "nuance_translation": "A <strong>strong expression</strong> highlighting that <strong>not doing</strong> (A) cannot be <strong>so</strong>, or <strong>will not go</strong>.",
+        "extra_info": "",
+        "reviewable_id": 404,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1433",
+      "type": "study_question",
+      "attributes": {
+        "id": 1433,
+        "content": "ケンカが気（き）まずいからといって、彼女（かのじょ）の誕生日（たんじょうび）パーティに<span class='study-area-input'>____</span>。",
+        "answer": "いかないわけにはいかない",
+        "alternate_grammar": [
+          "いかないわけにはいかない",
+          "いかないわけにはいきません"
+        ],
+        "kanji_answer": "行（い）かないわけにはいかない",
+        "kanji_alt_grammar": [
+          "行（い）かないわけにはいかない",
+          "行（い）かないわけにはいきません"
+        ],
+        "nuance": "(A)を<strong>やらないことにはならない</strong>、又（また）は<strong>やらなくてはいけない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/ケンカが気まずいからといって、彼女の誕生日パーティに行かないわけにはいかない。.mp3",
+        "word_prompt": "行（い）く",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "いかないことができない": {
+            "en": "Looking for the use of わけ",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Just because it is awkward after a fight, <strong>there's no way to avoid going</strong> to her birthday party.",
+        "nuance_translation": "A <strong>strong expression</strong> highlighting that <strong>not doing</strong> (A) cannot be <strong>so</strong>, or <strong>will not go</strong>.",
+        "extra_info": "",
+        "reviewable_id": 404,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1434",
+      "type": "study_question",
+      "attributes": {
+        "id": 1434,
+        "content": "締切（しめきり）前（まえ）だからといって、まったく<span class='study-area-input'>____</span>。",
+        "answer": "ねないわけにはいかない",
+        "alternate_grammar": [
+          "ねないわけにはいかない",
+          "ねないわけにはいきません"
+        ],
+        "kanji_answer": "寝（ね）ないわけにはいかない",
+        "kanji_alt_grammar": [
+          "寝（ね）ないわけにはいかない",
+          "寝（ね）ないわけにはいきません"
+        ],
+        "nuance": "(A)を<strong>やらないことにはならない</strong>、又（また）は<strong>やらなくてはいけない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/締切前だからといって、まったく寝ないわけにはいかない。.mp3",
+        "word_prompt": "寝（ね）る",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ねないことができない": {
+            "en": "Looking for the use of わけ",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Even if it is just before the deadline, you <strong>can't not sleep</strong> at all. (<strong>no way to avoid</strong>)",
+        "nuance_translation": "A <strong>strong expression</strong> highlighting that <strong>not doing</strong> (A) cannot be <strong>so</strong>, or <strong>will not go</strong>.",
+        "extra_info": "",
+        "reviewable_id": 404,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1432",
+      "type": "study_question",
+      "attributes": {
+        "id": 1432,
+        "content": "面倒（めんどう）だからといって、打（う）ち合（あ）わせを<span class='study-area-input'>____</span>。",
+        "answer": "しないわけにはいかない",
+        "alternate_grammar": [
+          "しないわけにはいかない",
+          "しないわけにはいきません"
+        ],
+        "kanji_answer": "しないわけにはいかない",
+        "kanji_alt_grammar": [
+          "しないわけにはいきません",
+          "しないわけにはいかない"
+        ],
+        "nuance": "(A)を<strong>やらないことにはならない</strong>、又（また）は<strong>やらなくてはいけない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/面倒だからといって、打ち合わせをしないわけにはいかない。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しないことができない": {
+            "en": "Looking for the use of わけ",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Even though it is troublesome, <strong>there is no way to avoid</strong> having a meeting.",
+        "nuance_translation": "A <strong>strong expression</strong> highlighting that <strong>not doing</strong> (A) cannot be <strong>so</strong>, or <strong>will not go</strong>.",
+        "extra_info": "",
+        "reviewable_id": 404,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6399",
+      "type": "study_question",
+      "attributes": {
+        "id": 6399,
+        "content": "受験生（じゅけんせい）だからといって、アルバイトを<span class='study-area-input'>____</span>事情（じじょう）がある。",
+        "answer": "しないわけにはいかない",
+        "alternate_grammar": [],
+        "kanji_answer": "しないわけにはいかない",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)を<strong>やらないことにはならない</strong>、又（また）は<strong>やらなくてはいけない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/受験生だからといって、アルバイトをしないわけにはいかない事情がある。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しないことはできない": {
+            "en": "Can you use わけ?",
+            "es": ""
+          },
+          "しないことはできません": {
+            "en": "Can you use わけ?",
+            "es": ""
+          },
+          "しないといけない": {
+            "en": "Let's try a different grammar pattern with a stronger nuance.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "While I may be a student preparing for exams, I have a situation where <strong>I cannot avoid</strong> having a part time job.",
+        "nuance_translation": "A <strong>strong expression</strong> highlighting that <strong>not doing</strong> (A) cannot be <strong>so</strong>, or <strong>will not go</strong>.",
+        "extra_info": "",
+        "reviewable_id": 404,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6400",
+      "type": "study_question",
+      "attributes": {
+        "id": 6400,
+        "content": "慣（な）れたメニューだとはいえ、味見（あじみ）<span class='study-area-input'>____</span>。",
+        "answer": "しないわけにはいかない",
+        "alternate_grammar": [
+          "しないわけにはいかない",
+          "しないわけにはいかないです",
+          "しないわけにはいきません"
+        ],
+        "kanji_answer": "しないわけにはいかない",
+        "kanji_alt_grammar": [
+          "しないわけにはいかないです",
+          "しないわけにはいきません",
+          "しないわけにはいかない"
+        ],
+        "nuance": "(A)を<strong>やらないことにはならない</strong>、又（また）は<strong>やらなくてはいけない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/慣れたメニューだとはいえ、味見しないわけにはいかない。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しないことはできない": {
+            "en": "Can you use わけ?",
+            "es": ""
+          },
+          "しないことはできません": {
+            "en": "Can you use わけ?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Although it is a menu I am used to, <strong>there is no way to avoid</strong> taste testing.",
+        "nuance_translation": "A <strong>strong expression</strong> highlighting that <strong>not doing</strong> (A) cannot be <strong>so</strong>, or <strong>will not go</strong>.",
+        "extra_info": "",
+        "reviewable_id": 404,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6406",
+      "type": "study_question",
+      "attributes": {
+        "id": 6406,
+        "content": "疲（つか）れたからといって、勉強（べんきょう）を<span class='study-area-input'>____</span>。",
+        "answer": "しないわけにはいかない",
+        "alternate_grammar": [
+          "しないわけにはいかない",
+          "しないわけにはいかないです",
+          "しないわけにはいきません"
+        ],
+        "kanji_answer": "しないわけにはいかない",
+        "kanji_alt_grammar": [
+          "しないわけにはいかないです",
+          "しないわけにはいきません",
+          "しないわけにはいかない"
+        ],
+        "nuance": "(A)を<strong>やらないことにはならない</strong>、又（また）は<strong>やらなくてはいけない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/疲れたからといって、勉強をしないわけにはいかない。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しないことはできない": {
+            "en": "Can you use わけ?",
+            "es": ""
+          },
+          "しないことはできません": {
+            "en": "Can you use わけ?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Just because you are tired, you <strong>can't not</strong> study. (<strong>no way to avoid</strong>)",
+        "nuance_translation": "A <strong>strong expression</strong> highlighting that <strong>not doing</strong> (A) cannot be <strong>so</strong>, or <strong>will not go</strong>.",
+        "extra_info": "",
+        "reviewable_id": 404,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6405",
+      "type": "study_question",
+      "attributes": {
+        "id": 6405,
+        "content": "好（す）き嫌（きら）いが激（はげ）しいからといって、出（だ）されたものを<span class='study-area-input'>____</span>。",
+        "answer": "たべないわけにはいかない",
+        "alternate_grammar": [
+          "たべないわけにはいかない",
+          "たべないわけにはいかないです",
+          "たべないわけにはいきません"
+        ],
+        "kanji_answer": "食（た）べないわけにはいかない",
+        "kanji_alt_grammar": [
+          "食（た）べないわけにはいかないです",
+          "食（た）べないわけにはいきません",
+          "食（た）べないわけにはいかない"
+        ],
+        "nuance": "(A)を<strong>やらないことにはならない</strong>、又（また）は<strong>やらなくてはいけない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/好き嫌いが激しいからといって、出されたものを食べないわけにはいかない。.mp3",
+        "word_prompt": "食（た）べる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "たべないことはできない": {
+            "en": "Can you use わけ?",
+            "es": ""
+          },
+          "たべないことはできません": {
+            "en": "Can you use わけ?",
+            "es": ""
+          },
+          "たべざるをえません": {
+            "en": "Let's try a different grammar structure here.",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Just because you are very particular about your likes and dislikes, you <strong>can't not eat</strong> the food that was put out. (<strong>no way to avoid</strong>)",
+        "nuance_translation": "A <strong>strong expression</strong> highlighting that <strong>not doing</strong> (A) cannot be <strong>so</strong>, or <strong>will not go</strong>.",
+        "extra_info": "",
+        "reviewable_id": 404,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6401",
+      "type": "study_question",
+      "attributes": {
+        "id": 6401,
+        "content": "初級（しょきゅう）問題（もんだい）だとはいえ、何（なん）度（ど）か見直（みなお）しを<span class='study-area-input'>____</span>。",
+        "answer": "しないわけにはいかない",
+        "alternate_grammar": [
+          "しないわけにはいかない",
+          "しないわけにはいかないです",
+          "しないわけにはいきません"
+        ],
+        "kanji_answer": "しないわけにはいかない",
+        "kanji_alt_grammar": [
+          "しないわけにはいかない",
+          "しないわけにはいきません"
+        ],
+        "nuance": "(A)を<strong>やらないことにはならない</strong>、又（また）は<strong>やらなくてはいけない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/初級問題だとはいえ、何度か見直しをしないわけにはいかない。.mp3",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しないことはできない": {
+            "en": "Can you use わけ?",
+            "es": ""
+          },
+          "しないことはできません": {
+            "en": "Can you use わけ?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Although it is a beginner problem, <strong>there is no way to avoid</strong> revising it several times.",
+        "nuance_translation": "A <strong>strong expression</strong> highlighting that <strong>not doing</strong> (A) cannot be <strong>so</strong>, or <strong>will not go</strong>.",
+        "extra_info": "",
+        "reviewable_id": 404,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6402",
+      "type": "study_question",
+      "attributes": {
+        "id": 6402,
+        "content": "ベテランの職人（しょくにん）でも、トレーニングを<span class='study-area-input'>____</span>。",
+        "answer": "しないわけにはいかない",
+        "alternate_grammar": [
+          "しないわけにはいかない",
+          "しないわけにはいかないです",
+          "しないわけにはいきません"
+        ],
+        "kanji_answer": "しないわけにはいかない",
+        "kanji_alt_grammar": [
+          "しないわけにはいかないです",
+          "しないわけにはいきません",
+          "しないわけにはいかない"
+        ],
+        "nuance": "(A)を<strong>やらないことにはならない</strong>、又（また）は<strong>やらなくてはいけない</strong>ということを表（あらわ）す表現（ひょうげん）。",
+        "tense": "Negative, Standard",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "する",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "しないことはできない": {
+            "en": "Can you use わけ?",
+            "es": ""
+          },
+          "しないことはできません": {
+            "en": "Can you use わけ?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Even a veteran worker <strong>cannot avoid</strong> training.",
+        "nuance_translation": "A <strong>strong expression</strong> highlighting that <strong>not doing</strong> (A) cannot be <strong>so</strong>, or <strong>will not go</strong>.",
+        "extra_info": "",
+        "reviewable_id": 404,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "749",
+      "type": "writeup",
+      "attributes": {
+        "id": 749,
+        "body_ja": "<p>「<span data-gp-id='404'>ない訳（わけ）にはいかない</span>」は「事情（じじょう）があって (A) したくてもできない」ことを意味（いみ）する「<span data-gp-id='266'>訳（わけ）にはいかない</span>」が発展（はってん）してできた文型（ぶんけい）です。「<span data-gp-id='404'>ない訳（わけ）にはいかない</span>」は「どうしても (A) しなければならない」や「(A) をしない選択肢（せんたくし）はない」といった意味（いみ）で使（つか）われます。</p>\r\n\r\n<p>この表現（ひょうげん）は動詞（どうし）の否定形（ひていけい）と「訳（わけ）」、「に」、「は」、そして「行（い）く」の否定形（ひていけい）の組（く）み合（あ）わせであり、文字（もじ）通（どお）りには「(A) をしない理由（りゆう）はない」といった意味（いみ）になります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182505'>\r\n<li data-study-question='182506'>\r\n<li data-study-question='182507'>\r\n</ul>\r\n\r\n<p>「なければならない」や「ないといけない」のような表現（ひょうげん）と似（に）ていますが、「<span data-gp-id='404'>ない訳（わけ）にはいかない</span>」は、話（はな）し手（て）の意思（いし）に関係（かんけい）なく、(A) を避（さ）けられない事情（じじょう）があることを表（あらわ）します。そのため、なぜ (A) をしなければならないのか、説明（せつめい）したり言（い）い訳（わけ）したりするときによく使（つか）われます。</p>",
+        "body": "<p>As an extension of the grammar pattern <span data-gp-id='266'>訳（わけ）にはいかない</span> 'can't afford to do (A)', or 'impossible to do (A)', <span data-gp-id='404'>ない訳（わけ）にはいかない</span> creates a double negative which is frequently translated simply as 'can't not (A)', or 'no way to avoid (A)'.</p>\r\n\r\n<p>As this is a combination of the negated form of a verb, 訳（わけ） 'reason', or 'logic', に, は, and the negated form of 行（い）く, the literal meaning is just 'there's no reason that (A) can't be done', or 'it cannot be so that (A) won't be done'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182505'>\r\n<li data-study-question='182506'>\r\n<li data-study-question='182507'>\r\n</ul>\r\n\r\n<p>Compared to other similar structures like なければならない, ないといけない, and various others, <span data-gp-id='404'>ない訳（わけ）にはいかない</span> implies that there are some circumstances as to why (A) cannot be avoided, so will often be used when giving an excuse or reasoning as to why one must do (A).</p>"
+      }
+    },
+    {
+      "id": "1540",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1540,
+        "source": "[AIAIJ] An Integrated Approach to Intermediate Japanese",
+        "location": "Page 94",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "890",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 890,
+        "site": "絵でわかる日本語",
+        "description": "〜ないわけにはいかない",
+        "link": "https://www.edewakaru.com/archives/4750951.html",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "132",
+      "type": "related_content",
+      "attributes": {
+        "id": 132,
+        "relationship_type": "related",
+        "body": "Both suggest lack of control, but differ in usage. てならない expresses strong emotions welling up, as in 残念でならない (I can’t help but feel regret). ないわけにはいかない expresses unavoidable obligation, as in 約束したから行かないわけにはいかない (Since I promised, I can’t not go).",
+        "first_relatable": {
+          "id": 353,
+          "slug": "てならない",
+          "title": "てならない",
+          "meaning": "Very, Extremely, Can't help but do",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 404,
+          "slug": "ないわけにはいかない",
+          "title": "ないわけにはいかない",
+          "meaning": "Can't not, No way to avoid",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "422",
+      "type": "related_content",
+      "attributes": {
+        "id": 422,
+        "relationship_type": "related",
+        "body": "ざるを得ない and ないわけにはいかない both express unavoidable action, but differ in tone and motivation. ざるを得ない emphasizes external compulsion or lack of options, as in 行かざるを得ない (I have no choice but to go), while ないわけにはいかない conveys a sense of moral or social obligation, as in 手伝わないわけにはいかない (I can’t not help).",
+        "first_relatable": {
+          "id": 397,
+          "slug": "ざるを得ない",
+          "title": "ざるを得ない",
+          "meaning": "Can't help doing, Have no choice but",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 404,
+          "slug": "ないわけにはいかない",
+          "title": "ないわけにはいかない",
+          "meaning": "Can't not, No way to avoid",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "154",
+      "type": "related_content",
+      "attributes": {
+        "id": 154,
+        "relationship_type": "related",
+        "body": "Both use double negatives but with different nuance. ないわけにはいかない conveys strong necessity or duty, as in やらないわけにはいかない (I can’t not do it). なくはない softens a statement, implying limited possibility or reluctant agreement, as in できなくはない (It’s not that I can’t do it [though maybe not well]).",
+        "first_relatable": {
+          "id": 404,
+          "slug": "ないわけにはいかない",
+          "title": "ないわけにはいかない",
+          "meaning": "Can't not, No way to avoid",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 402,
+          "slug": "なくはない",
+          "title": "なくはない",
+          "meaning": "It's not that…, Kind of, might, Slightly, Somewhat, In some respects",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "460",
+      "type": "related_content",
+      "attributes": {
+        "id": 460,
+        "relationship_type": "antonym",
+        "body": "These are opposites in meaning. わけにはいかない expresses an inability to do something, often out of obligation or social pressure, e.g. 行きたくないけど、断るわけにはいかない 'I don't want to go, but I can't refuse.' ないわけにはいかない means the opposite: 'I have no choice but to (A),' e.g. 助けないわけにはいかない 'I can't not help them.'",
+        "first_relatable": {
+          "id": 404,
+          "slug": "ないわけにはいかない",
+          "title": "ないわけにはいかない",
+          "meaning": "Can't not, No way to avoid",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 266,
+          "slug": "わけにはいかない",
+          "title": "わけにはいかない",
+          "meaning": "Cannot afford to, No way, Impossible to do",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "28",
+      "type": "related_content",
+      "attributes": {
+        "id": 28,
+        "relationship_type": "related",
+        "body": "Both imply that something must be done, but differ in the nature of the obligation. ずにはいられない arises from emotional urgency, e.g. '泣かずにはいられなかった' ('I just couldn't help but cry'). ないわけにはいかない often reflects social duty or pressure, e.g. '謝らないわけにはいかない' ('I have to apologize').",
+        "first_relatable": {
+          "id": 315,
+          "slug": "ずにはいられない",
+          "title": "ずにはいられない",
+          "meaning": "Cannot help doing something, Cannot resist doing something",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 404,
+          "slug": "ないわけにはいかない",
+          "title": "ないわけにはいかない",
+          "meaning": "Can't not, No way to avoid",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "691",
+      "type": "related_content",
+      "attributes": {
+        "id": 691,
+        "relationship_type": "related",
+        "body": "Both describe situations beyond control, but differ in meaning. てたまらない expresses unbearable feelings or desires, often casually, as in 会いたくてたまらない (I miss you so much I can’t stand it). ないわけにはいかない shows unavoidable obligation due to duty or circumstances, as in 助けないわけにはいかない (I can’t very well not help them).",
+        "first_relatable": {
+          "id": 411,
+          "slug": "てたまらない",
+          "title": "てたまらない",
+          "meaning": "Can't help but want to, Very, Extremely",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 404,
+          "slug": "ないわけにはいかない",
+          "title": "ないわけにはいかない",
+          "meaning": "Can't not, No way to avoid",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,990 @@
+{
+  "data": {
+    "id": "814",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 814,
+      "level": "JLPT1",
+      "lesson_id": 44,
+      "part_of_speech": null,
+      "register": "硬い",
+      "word_type": "",
+      "slug": "を踏まえて",
+      "nuance": "何（なに）かが(A)の上（うえ）で、又（また）は(A)をもとにしているという意味（いみ）をする<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)にしっかり足場（あしば）を固（かた）めること。",
+      "grammar_order": 803,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 815,
+        "title": "ゆえに",
+        "slug": "ゆえに"
+      },
+      "previous_grammar_point": {
+        "id": 813,
+        "title": "ものと思う",
+        "slug": "ものと思う"
+      },
+      "lesson_count": "11/18",
+      "title": "を踏まえて",
+      "furigana": "を踏（ふ）まえて",
+      "meaning": "Based on, Considering, Keeping in mind, Taking into account, Therefore",
+      "nuance_translation": "A <strong>formal</strong> construction, implying that something is considering or based on (A). With <strong>footing firmly planted</strong> in (A).",
+      "rare_kanji_warning": "",
+      "caution": "When modifying a noun, を踏まえた is more common",
+      "polite_structure": "",
+      "casual_structure": "Noun + <strong><span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='470'>踏（ふ）まえ</span></strong><span class='gp-popout' data-gp-id='416'>（て）</span></strong><sup>(1)</sup><br>Noun (A) + <strong><span class='gp-popout' data-gp-id='21'>を</span>踏（ふ）まえた</strong><sup>(2)</sup> + Noun (B)<br><br><sup>(1)</sup> <span class='gp-popout' data-gp-id='21'>を</span>踏（ふ）まえた上で<br><sup>(2)</sup> <span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='416'>踏（ふ）まえて</span><span class='gp-popout' data-gp-id='6'>の</span>",
+      "part_of_speech_translation": null,
+      "register_translation": "Formal",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/27446",
+      "metadata": "を踏まえ, を踏まえて, を踏まえた, を踏まえた上で, を踏まえての, をふまえ, をふまえて, をふまえた, をふまえたうえで, をふまえての, wofumae, wofumaete, wofumaetauede, wofumaeteno, expression, formal, being firmly planted"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "10809",
+            "type": "study_question"
+          },
+          {
+            "id": "10810",
+            "type": "study_question"
+          },
+          {
+            "id": "182746",
+            "type": "study_question"
+          },
+          {
+            "id": "182747",
+            "type": "study_question"
+          },
+          {
+            "id": "182748",
+            "type": "study_question"
+          },
+          {
+            "id": "9355",
+            "type": "study_question"
+          },
+          {
+            "id": "10813",
+            "type": "study_question"
+          },
+          {
+            "id": "10808",
+            "type": "study_question"
+          },
+          {
+            "id": "10811",
+            "type": "study_question"
+          },
+          {
+            "id": "182749",
+            "type": "study_question"
+          },
+          {
+            "id": "9353",
+            "type": "study_question"
+          },
+          {
+            "id": "9356",
+            "type": "study_question"
+          },
+          {
+            "id": "9357",
+            "type": "study_question"
+          },
+          {
+            "id": "9354",
+            "type": "study_question"
+          },
+          {
+            "id": "9358",
+            "type": "study_question"
+          },
+          {
+            "id": "10812",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "879",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1751",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1273",
+            "type": "related_content"
+          },
+          {
+            "id": "1577",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2283",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2285",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2282",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "10809",
+      "type": "study_question",
+      "attributes": {
+        "id": 10809,
+        "content": "お客様（きゃくさま）の意見（いけん）<span class='study-area-input'>____</span>、当（とう）ホテルのチェックアウトの時間（じかん）を一時間（いちじかん）遅（おそ）くしました。",
+        "answer": "をふまえて",
+        "alternate_grammar": [
+          "をふまえたうえで",
+          "をふまえまして",
+          "をふまえ"
+        ],
+        "kanji_answer": "を踏（ふ）まえて",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の上（うえ）で、又（また）は(A)をもとにしているという意味（いみ）をする<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)にしっかり足場（あしば）を固（かた）めること。",
+        "tense": "て, Literary, Emphasis on cause",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/お客様の意見を踏まえて、当ホテルのチェックアウトの時間を一時間遅くしました。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にもとづいて": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をぜんていとして": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をこうりょして": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Keeping in mind</strong> customer opinions, the checkout time at this hotel was made one hour later.",
+        "nuance_translation": "A <strong>formal</strong> construction, implying that something is considering or based on (A). With <strong>footing firmly planted</strong> in (A).",
+        "extra_info": "",
+        "reviewable_id": 814,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10810",
+      "type": "study_question",
+      "attributes": {
+        "id": 10810,
+        "content": "彼（かれ）の家庭（かてい）環境（かんきょう）が複雑（ふくざつ）である事（こと）<span class='study-area-input'>____</span>、破格（はかく）の値段（ねだん）で社員用（しゃいんよう）の寮（りょう）を貸（か）し出（だ）す事（こと）にしました。",
+        "answer": "をふまえて",
+        "alternate_grammar": [
+          "をふまえたうえで",
+          "をふまえまして",
+          "をふまえ"
+        ],
+        "kanji_answer": "を踏（ふ）まえて",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の上（うえ）で、又（また）は(A)をもとにしているという意味（いみ）をする<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)にしっかり足場（あしば）を固（かた）めること。",
+        "tense": "て, Literary, Emphasis on cause",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/彼の家庭環境が複雑である事を踏まえて、破格の値段で社員用の寮を貸し出す事にしました。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にもとづいて": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をぜんていとして": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をこうりょして": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Based on</strong> the fact that his household environment was complicated, he was loaned an employee dormitory room at an unprecedented price.",
+        "nuance_translation": "A <strong>formal</strong> construction, implying that something is considering or based on (A). With <strong>footing firmly planted</strong> in (A).",
+        "extra_info": "",
+        "reviewable_id": 814,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182746",
+      "type": "study_question",
+      "attributes": {
+        "id": 182746,
+        "content": "\r\nお客様（きゃくさま）の意見（いけん）<span class='study-area-input'>____</span>、色々（いろいろ）と機能（きのう）を追加（ついか）するつもりです。",
+        "answer": "をふまえて",
+        "alternate_grammar": [],
+        "kanji_answer": "を踏（ふ）まえて",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/お客様の意見を踏まえて、色々と機能を追加するつもりです。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nWe intend to add various features <strong>based on</strong> customer feedback.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 814,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182747",
+      "type": "study_question",
+      "attributes": {
+        "id": 182747,
+        "content": "\r\n\r\n\r\n先週（せんしゅう）の反省（はんせい）<span class='study-area-input'>____</span>、今週（こんしゅう）は別（べつ）のやり方（かた）でやってみようと思（おも）っています。",
+        "answer": "をふまえて",
+        "alternate_grammar": [],
+        "kanji_answer": "を踏（ふ）まえて",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/先週の反省を踏まえて、今週は別のやり方でやってみようと思っています。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>Based on</strong> my reflections from last week, I am going to try a different approach this week.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 814,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182748",
+      "type": "study_question",
+      "attributes": {
+        "id": 182748,
+        "content": "\r\n\r\n\r\n前回（ぜんかい）の失敗（しっぱい）<span class='study-area-input'>____</span>、今回（こんかい）はもう少（すこ）し気（き）をつけて挑戦（ちょうせん）してみる。",
+        "answer": "をふまえて",
+        "alternate_grammar": [],
+        "kanji_answer": "を踏（ふ）まえて",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/前回の失敗を踏まえて、今回はもう少し気をつけて挑戦してみる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\n<strong>Based on</strong> my last failure, I will try to be a little more careful this time.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 814,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9355",
+      "type": "study_question",
+      "attributes": {
+        "id": 9355,
+        "content": "<span class='name-highlight'>会社（かいしゃ）のサイト</span>：「国際的（こくさいてき）な基準（きじゅん）<span class='study-area-input'>____</span>新製品開発（しんせいひんかいはつ）に懸命（けんめい）に取（と）り組（く）んでいます。」",
+        "answer": "をふまえた",
+        "alternate_grammar": [
+          "をふまえた",
+          "をふまえての"
+        ],
+        "kanji_answer": "を踏（ふ）まえた",
+        "kanji_alt_grammar": [
+          "を踏（ふ）まえての",
+          "を踏（ふ）まえた"
+        ],
+        "nuance": "何（なに）かが(A)の上（うえ）で、又（また）は(A)をもとにしているという意味（いみ）をする<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)にしっかり足場（あしば）を固（かた）めること。",
+        "tense": "Past, Literary, Emphasis on cause",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/会社のサイト：「国際的な基準を踏まえた新製品開発に懸命に取り組んでいます。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にもとづいた": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "にもとづいての": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をぜんていとした": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をこうりょした": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Website of a company</span>: 'We work earnestly to develop our products <strong>with</strong> international standards <strong>in mind</strong>. (<strong>while keeping in mind</strong>)",
+        "nuance_translation": "A <strong>formal</strong> construction, implying that something is considering or based on (A). With <strong>footing firmly planted</strong> in (A).",
+        "extra_info": "",
+        "reviewable_id": 814,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10813",
+      "type": "study_question",
+      "attributes": {
+        "id": 10813,
+        "content": "社内（しゃない）アンケートの結果（けっか）<span class='study-area-input'>____</span>、我（わ）が社（しゃ）では今月（こんげつ）から全（すべ）ての社員（しゃいん）が定時（ていじ）で帰宅（きたく）する事（こと）が出来（でき）るように仕事（しごと）の量（りょう）を調節（ちょうせつ）するつもりです。",
+        "answer": "をふまえて",
+        "alternate_grammar": [
+          "をふまえたうえで",
+          "をふまえまして",
+          "をふまえ"
+        ],
+        "kanji_answer": "を踏（ふ）まえて",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の上（うえ）で、又（また）は(A)をもとにしているという意味（いみ）をする<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)にしっかり足場（あしば）を固（かた）めること。",
+        "tense": "て, Literary, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/社内アンケートの結果を踏まえて、我が社では今月から全ての社員が定時で帰宅する事が出来るように仕事の量を調節するつもりです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にもとづいて": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をぜんていとして": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をこうりょして": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>Keeping in mind</strong> the result of the company's internal survey, we intend to regulate the amount of work in order that all staff will be able to return home at a set time.",
+        "nuance_translation": "A <strong>formal</strong> construction, implying that something is considering or based on (A). With <strong>footing firmly planted</strong> in (A).",
+        "extra_info": "",
+        "reviewable_id": 814,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10808",
+      "type": "study_question",
+      "attributes": {
+        "id": 10808,
+        "content": "前回（ぜんかい）の反省（はんせい）<span class='study-area-input'>____</span>今回（こんかい）のテストに挑（いど）んだのに、結果（けっか）は前回（ぜんかい）よりも悪（わる）かった。",
+        "answer": "をふまえて",
+        "alternate_grammar": [
+          "をふまえたうえで",
+          "をふまえ"
+        ],
+        "kanji_answer": "を踏（ふ）まえて",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の上（うえ）で、又（また）は(A)をもとにしているという意味（いみ）をする<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)にしっかり足場（あしば）を固（かた）めること。",
+        "tense": "て, Literary, Emphasis on cause",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/前回の反省を踏まえて今回のテストに挑んだのに、結果は前回よりも悪かった。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にもとづいて": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をぜんていとして": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をこうりょして": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Despite going up against this test <strong>taking into account</strong> my reflection upon the last test, my result was actually even worse than last time.",
+        "nuance_translation": "A <strong>formal</strong> construction, implying that something is considering or based on (A). With <strong>footing firmly planted</strong> in (A).",
+        "extra_info": "",
+        "reviewable_id": 814,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10811",
+      "type": "study_question",
+      "attributes": {
+        "id": 10811,
+        "content": "この判決（はんけつ）は容疑者（ようぎしゃ）がまだ未成年（みせいねん）である事（こと）<span class='study-area-input'>____</span>ものであり、本来（ほんらい）よりかなり減刑（げんけい）されている。",
+        "answer": "をふまえた",
+        "alternate_grammar": [
+          "をふまえた",
+          "をふまえての"
+        ],
+        "kanji_answer": "を踏（ふ）まえた",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の上（うえ）で、又（また）は(A)をもとにしているという意味（いみ）をする<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)にしっかり足場（あしば）を固（かた）めること。",
+        "tense": "Past, Literary, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/この判決は容疑者がまだ未成年である事を踏まえたものであり、本来よりかなり減刑されている。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にもとづいて": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をぜんていとして": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をこうりょして": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "As for this judgment, <strong>taking into account</strong> that the suspect is still underaged, the penalty has been reduced compared to what is usual. ",
+        "nuance_translation": "A <strong>formal</strong> construction, implying that something is considering or based on (A). With <strong>footing firmly planted</strong> in (A).",
+        "extra_info": "",
+        "reviewable_id": 814,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182749",
+      "type": "study_question",
+      "attributes": {
+        "id": 182749,
+        "content": "\r\nアンケートの結果（けっか）<span class='study-area-input'>____</span>、お客様（きゃくさま）に喜（よろこ）んでいただけるアイディアをどんどん提案（ていあん）してください。",
+        "answer": "をふまえて",
+        "alternate_grammar": [],
+        "kanji_answer": "を踏（ふ）まえて",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/アンケートの結果を踏まえて、お客様に喜んでいただけるアイディアをどんどん提案してください。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nBeing firmly <strong>planted on</strong> the results of the survey, please keep throwing in ideas that you would think would please our customers.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 814,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9353",
+      "type": "study_question",
+      "attributes": {
+        "id": 9353,
+        "content": "<span class='name-highlight'>経営陣（けいえいじん）は従業員（じゅうぎょういん）に</span>：「この数（すう）ヶ月（かげつ）でクライアント数（すう）の着実（ちゃくじつ）な増加（ぞうか）が見（み）られます。以上（いじょう）のこと<span class='study-area-input'>____</span>営業時間（えいぎょうじかん）の延長（えんちょう）を決定（けってい）いたしました。」",
+        "answer": "をふまえて",
+        "alternate_grammar": [
+          "をふまえて",
+          "をふまえまして",
+          "をふまえたうえで"
+        ],
+        "kanji_answer": "を踏（ふ）まえて",
+        "kanji_alt_grammar": [
+          "を踏（ふ）まえまして",
+          "を踏（ふ）まえたうえで",
+          "を踏（ふ）まえて"
+        ],
+        "nuance": "何（なに）かが(A)の上（うえ）で、又（また）は(A)をもとにしているという意味（いみ）をする<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)にしっかり足場（あしば）を固（かた）めること。",
+        "tense": "て, Literary, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/経営陣は従業員に：「この数ヶ月でクライアント数の着実な増加が見られます。以上のことを踏まえて営業時間の延長を決定いたしました。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にもとづいて": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をぜんていとして": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をこうりょして": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をふまえ": {
+            "en": "Great guess! This form is more common in written language. Could you rephrase it a bit?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Management to employees</span>: 'In the last few months, a steady increase of the client base can be observed. <strong>Taking</strong> this <strong>into account</strong>, we have decided to extend our hours of operation.' (<strong>while keeping in mind</strong>)",
+        "nuance_translation": "A <strong>formal</strong> construction, implying that something is considering or based on (A). With <strong>footing firmly planted</strong> in (A).",
+        "extra_info": "",
+        "reviewable_id": 814,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9356",
+      "type": "study_question",
+      "attributes": {
+        "id": 9356,
+        "content": "<span class='name-highlight'>経営陣（けいえいじん）との話（はなし）</span>：「市場（しじょう）は成長（せいちょう）が鈍化（どんか）し始（はじ）めているという現状（げんじょう）<span class='study-area-input'>____</span>、新（あら）たな資金源（しきんげん）を探（さが）す必要（ひつよう）があります。」",
+        "answer": "をふまえて",
+        "alternate_grammar": [
+          "をふまえて",
+          "をふまえまして",
+          "をふまえたうえで"
+        ],
+        "kanji_answer": "を踏（ふ）まえて",
+        "kanji_alt_grammar": [
+          "を踏（ふ）まえまして",
+          "を踏（ふ）まえたうえで",
+          "を踏（ふ）まえて"
+        ],
+        "nuance": "何（なに）かが(A)の上（うえ）で、又（また）は(A)をもとにしているという意味（いみ）をする<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)にしっかり足場（あしば）を固（かた）めること。",
+        "tense": "て, Literary, Emphasis on cause",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/経営陣との話：「市場は成長が鈍化し始めているという現状を踏まえて、新たな資金源を探す必要があります。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にもとづいて": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をぜんていとして": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をこうりょして": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をふまえ": {
+            "en": "Great guess! This form is more common in written language. Could you rephrase it a bit?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>A discussion with management</span>: '<strong>Based on</strong> the present circumstances, i.e. the market starting to slow down, there is a need to look for new sources of revenue.' (<strong>while keeping in mind</strong>)",
+        "nuance_translation": "A <strong>formal</strong> construction, implying that something is considering or based on (A). With <strong>footing firmly planted</strong> in (A).",
+        "extra_info": "",
+        "reviewable_id": 814,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9357",
+      "type": "study_question",
+      "attributes": {
+        "id": 9357,
+        "content": "<span class='name-highlight'>代弁者（だいべんしゃ）は記者（きしゃ）の質問（しつもん）に答（こた）える</span>：「このイベント、確（たし）かにいろいろ問題点（もんだいてん）もあるとは思（おも）いますが、それ<span class='study-area-input'>____</span>うちの会社（かいしゃ）は計画（けいかく）どおり進展（しんてん）しようと考（かんが）えています。」",
+        "answer": "をふまえて",
+        "alternate_grammar": [
+          "をふまえて",
+          "をふまえまして",
+          "をふまえたうえで"
+        ],
+        "kanji_answer": "を踏（ふ）まえて",
+        "kanji_alt_grammar": [
+          "を踏（ふ）まえまして",
+          "を踏（ふ）まえたうえで",
+          "を踏（ふ）まえて"
+        ],
+        "nuance": "何（なに）かが(A)の上（うえ）で、又（また）は(A)をもとにしているという意味（いみ）をする<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)にしっかり足場（あしば）を固（かた）めること。",
+        "tense": "て, Literary, Emphasis on cause",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/代弁者は記者の質問に答える：「このイベント、確かにいろいろ問題点もあるとは思いますが、それを踏まえてうちの会社は計画どおり進展しようと考えています。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にもとづいて": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をぜんていとして": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をこうりょして": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をふまえ": {
+            "en": "Great guess! This form is more common in written language. Could you rephrase it a bit?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>A spokesman answers a reporter's question</span>: 'Speaking of the event, surely there are all sorts of problems, however <strong>keeping</strong> these <strong>in mind</strong> we plan to proceed as planned.' (<strong>based on</strong>)",
+        "nuance_translation": "A <strong>formal</strong> construction, implying that something is considering or based on (A). With <strong>footing firmly planted</strong> in (A).",
+        "extra_info": "",
+        "reviewable_id": 814,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9354",
+      "type": "study_question",
+      "attributes": {
+        "id": 9354,
+        "content": "<span class='name-highlight'>経営陣（けいえいじん）との話（はなし）</span>：「去年（きょねん）の反省（はんせい）<span class='study-area-input'>____</span>、今年（ことし）は新（あら）たなマーケティング戦略（せんりゃく）を提唱（ていしょう）いただきたいと思（おも）います。」",
+        "answer": "をふまえて",
+        "alternate_grammar": [
+          "をふまえて",
+          "をふまえまして",
+          "をふまえたうえで"
+        ],
+        "kanji_answer": "を踏（ふ）まえて",
+        "kanji_alt_grammar": [
+          "を踏（ふ）まえまして",
+          "を踏（ふ）まえたうえで",
+          "を踏（ふ）まえて"
+        ],
+        "nuance": "何（なに）かが(A)の上（うえ）で、又（また）は(A)をもとにしているという意味（いみ）をする<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)にしっかり足場（あしば）を固（かた）めること。",
+        "tense": "て, Literary, Emphasis on cause",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/経営陣との話：「去年の反省を踏まえて、今年は新たなマーケティング戦略を提唱いただきたいと思います。」.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にもとづいて": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をぜんていとして": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をこうりょして": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をふまえ": {
+            "en": "Great guess! This form is more common in written language. Could you rephrase it a bit?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>A discussion with management</span>: '<strong>Based on</strong> (my) reflection of last year('s strategy), I would like to propose a new marketing strategy this year.' (<strong>while keeping in mind</strong>)",
+        "nuance_translation": "A <strong>formal</strong> construction, implying that something is considering or based on (A). With <strong>footing firmly planted</strong> in (A).",
+        "extra_info": "",
+        "reviewable_id": 814,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9358",
+      "type": "study_question",
+      "attributes": {
+        "id": 9358,
+        "content": "「我々（われわれ）のアウトソーシング分野（ぶんや）で１０（じゅう）年（ねん）以上（いじょう）の経験（けいけん）<span class='study-area-input'>____</span>提案（ていあん）である。」",
+        "answer": "をふまえた",
+        "alternate_grammar": [
+          "をふまえた",
+          "をふまえての"
+        ],
+        "kanji_answer": "を踏（ふ）まえた",
+        "kanji_alt_grammar": [
+          "を踏（ふ）まえての",
+          "を踏（ふ）まえた"
+        ],
+        "nuance": "何（なに）かが(A)の上（うえ）で、又（また）は(A)をもとにしているという意味（いみ）をする<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)にしっかり足場（あしば）を固（かた）めること。",
+        "tense": "Past, Literary, Emphasis on cause",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「我々のアウトソーシング分野で１０年以上の経験を踏まえた提案である。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にもとづいた": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "にもとづいての": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をぜんていとした": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をこうりょした": {
+            "en": "Could you say it another way? Think 'to have one's feet planted on.'",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'It is a suggestion <strong>based on</strong> ten years of experience in the outsourcing field.' (<strong>while keeping in mind</strong>)",
+        "nuance_translation": "A <strong>formal</strong> construction, implying that something is considering or based on (A). With <strong>footing firmly planted</strong> in (A).",
+        "extra_info": "",
+        "reviewable_id": 814,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "10812",
+      "type": "study_question",
+      "attributes": {
+        "id": 10812,
+        "content": "小学校（しょうがっこう）の先生（せんせい）として、私（わたし）は生徒（せいと）それぞれの多様（たよう）な個性（こせい）<span class='study-area-input'>____</span>生徒（せいと）と接（せっ）するようにしている。",
+        "answer": "をふまえたうえで",
+        "alternate_grammar": [
+          "をふまえて",
+          "をふまえ"
+        ],
+        "kanji_answer": "を踏（ふ）まえた上（うえ）で",
+        "kanji_alt_grammar": [],
+        "nuance": "何（なに）かが(A)の上（うえ）で、又（また）は(A)をもとにしているという意味（いみ）をする<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)にしっかり足場（あしば）を固（かた）めること。",
+        "tense": "Literary, Emphasis on cause",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/小学校の先生として、私は生徒それぞれの多様な個性を踏まえた上で生徒と接するようにしている。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "にもとづいて": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をぜんていとして": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          },
+          "をこうりょして": {
+            "en": "Great, but let's try something that literally means 'to have one's feet planted on.'",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "As a primary school teacher, I make sure to interact with each student <strong>upon considering</strong> their various idiosyncrasies.",
+        "nuance_translation": "A <strong>formal</strong> construction, implying that something is considering or based on (A). With <strong>footing firmly planted</strong> in (A).",
+        "extra_info": "",
+        "reviewable_id": 814,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "879",
+      "type": "writeup",
+      "attributes": {
+        "id": 879,
+        "body_ja": "<p>「踏（ふ）まえる」は「しっかりと踏（ふ）む」という意味（いみ）を持（も）つ一段動詞（いちだんどうし）ですが、そこから転（てん）じて、物事（ものごと）を考慮（こうりょ）するといった意味（いみ）で比喩的（ひゆてき）に使（つか）われることがあります。この「踏（ふ）まえる」をテ形（けい）にし、副助詞（ふくじょし）「を」を付（つ）けた「<span data-gp-id='814'>を踏（ふ）まえて</span>」は、「(A) を考慮（こうりょ）に入（い）れて」や「(A) を念頭（ねんとう）に置（お）いて」といった意味（いみ）を表（あらわ）します。</p>\r\n\r\n<p>「<span data-gp-id='814'>を踏（ふ）まえて</span>」は、主（おも）に (A) を前提（ぜんてい）や根拠（こんきょ）として (B) という判断（はんだん）や行動（こうどう）をする場面（ばめん）で使（つか）われます。この表現（ひょうげん）は「を」から始（はじ）まるので、前（まえ）には名詞（めいし）が来（き）ます。また、硬（かた）めの表現（ひょうげん）でもあるので、ビジネスや公式（こうしき）文書（ぶんしょ）といったフォーマルな場（ば）で使（つか）われることが多（おお）いです。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182746'>\r\n<li data-study-question='182747'>\r\n<li data-study-question='182748'>\r\n</ul>\r\n\r\n<p>最初（さいしょ）に触（ふ）れた通（とお）り、「<span data-gp-id='814'>を踏（ふ）まえて</span>」は、「しっかりと踏（ふ）む」という本来（ほんらい）の意味（いみ）から生（う）まれた、比喩的（ひゆてき）な表現（ひょうげん）です。これが比喩（ひゆ）であることを意識（いしき）して「(A) という土台（どだい）をしっかり踏（ふ）み、その上（うえ）に立（た）つ」のようなイメージを持（も）っておけば、この表現（ひょうげん）を自然（しぜん）に使（つか）いこなすことができるようになるでしょう。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182749'>\r\n</ul>\r\n",
+        "body": "<p>踏（ふ）まえる is a る-Verb that means 'to tread firmly', but is often used figuratively in regard to taking things into account. Because of this, the combination of the <span data-term='副助詞・ふくじょし'>adverbial particle</span> を, and 踏（ふ）まえる in its て-form can frequently be translated as 'considering (A)', or 'keeping (A) in mind'.</p>\r\n\r\n<p><span data-gp-id='814'>を踏（ふ）まえて</span> is primarily used in formal situations where (B) is an action being undertaken with (A) as the premise. As this structure begins with を, it will need to follow a noun.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182746'>\r\n<li data-study-question='182747'>\r\n<li data-study-question='182748'>\r\n</ul>\r\n\r\n<p>In this grammar pattern, the literal meaning of <span data-gp-id='814'>を踏（ふ）まえて</span> as 'being firmly planted' can be used equally as naturally, so long as its figurative nature is kept in mind.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182749'>\r\n</ul>"
+      }
+    },
+    {
+      "id": "1751",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1751,
+        "source": "Shin Kanzen Master N1 Bunpou",
+        "location": "Page 95",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2283",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2283,
+        "site": "JapaneseTest4You",
+        "description": "Breakdown, examples, and audio",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n1-grammar-%E3%82%92%E3%81%B5%E3%81%BE%E3%81%88%E3%81%A6-o-fumaete/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2285",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2285,
+        "site": "Learn Japanese A~Z",
+        "description": "Further breakdown and examples",
+        "link": "https://learnjapaneseaz.com/o-fumaete.html",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2282",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2282,
+        "site": "Imabi",
+        "description": "Based on",
+        "link": "https://imabi.org/based-on/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1273",
+      "type": "related_content",
+      "attributes": {
+        "id": 1273,
+        "relationship_type": "related",
+        "body": "Both have a general meaning of 'based on', but with slightly different nuances. にもとづいて typically shows strict reliance on a fixed source like rules or data, e.g. 法律にもとづいて判断する 'ake a decision based on the law'. を踏まえて means taking something into account as a reference or consideration, e.g. アンケートの結果を踏まえて調節する 'make adjustments taking the survey results into consideration'.",
+        "first_relatable": {
+          "id": 495,
+          "slug": "にもとづいて",
+          "title": "にもとづいて",
+          "meaning": "Based on, In accordance with",
+          "level": "JLPT3",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 814,
+          "slug": "を踏まえて",
+          "title": "を踏まえて",
+          "meaning": "Based on, Considering, Keeping in mind, Taking into account, Therefore",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1577",
+      "type": "related_content",
+      "attributes": {
+        "id": 1577,
+        "relationship_type": "related",
+        "body": "Both refer to using information as a basis, but the stance is different. を前提に means ‘on the assumption that’ and treats something as a condition that must be accepted before proceeding, often hypothetical or conditional, as in 雨が降ることを前提に計画を立てる ('We make the plan assuming it will rain.'). を踏まえて means ‘taking into account’ and is used after facts or results that are already known, emphasizing reflection or consideration rather than assumption, as in 調査結果を踏まえて方針を決めた ('We decided the policy taking the survey results into account.').",
+        "first_relatable": {
+          "id": 997,
+          "slug": "を前提に",
+          "title": "を前提に",
+          "meaning": "On the premise of",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 814,
+          "slug": "を踏まえて",
+          "title": "を踏まえて",
+          "meaning": "Based on, Considering, Keeping in mind, Taking into account, Therefore",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

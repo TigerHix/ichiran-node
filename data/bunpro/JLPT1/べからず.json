@@ -1,0 +1,843 @@
+{
+  "data": {
+    "id": "855",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 855,
+      "level": "JLPT1",
+      "lesson_id": 47,
+      "part_of_speech": null,
+      "register": "硬い",
+      "word_type": "",
+      "slug": "べからず",
+      "nuance": "(A)が起（お）こってはいけないということを強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)であることが<strong>許（ゆる）されない</strong>。",
+      "grammar_order": 853,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 856,
+        "title": "んばかりに",
+        "slug": "んばかりに"
+      },
+      "previous_grammar_point": {
+        "id": 854,
+        "title": "に足りない",
+        "slug": "に足りない"
+      },
+      "lesson_count": "7/18",
+      "title": "べからず",
+      "furigana": "べからず",
+      "meaning": "Do not, Must not, Should not, Cannot (べからざる)",
+      "nuance_translation": "A <strong>formal</strong> grammar point, emphasizing that (A) must not happen. It <strong>cannot</strong> be <strong>permissable</strong> that (A).",
+      "rare_kanji_warning": "可からず",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Verb + <strong><span class='gp-popout' data-gp-id='196'>べから</span><span class='gp-popout' data-gp-id='303'>ず</span></strong><br>Exceptions:<br><span class='gp-popout' data-gp-id='22'>する</span> ￫ <span class='chui'>す</span><sup>(1)</sup> + <strong><span class='gp-popout' data-gp-id='196'>べから</span><span class='gp-popout' data-gp-id='303'>ず</span></strong> <br><br>Verb + <strong><span class='gp-popout' data-gp-id='196'>べから</span>ざる</strong> + Noun<br>which is generally limited to: <br><span class='chui'>許（ゆる）す</span></strong><span class='gp-popout' data-gp-id='196'>べから</span>ざる</strong> + Noun<br>  <span class='chui'>ありう</span></strong><span class='gp-popout' data-gp-id='196'>べから</span>ざる</strong> +  Noun<br> <span class='chui'>欠（か）く</span></strong><span class='gp-popout' data-gp-id='196'>べから</span>ざる</strong> + Noun<br><br><sup>(1)</sup> <span class='gp-popout' data-gp-id='22'>する</span>",
+      "part_of_speech_translation": null,
+      "register_translation": "Formal",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/discussion-topic/31506",
+      "metadata": "べからず, 可からず, べからざる, 可からざる, bekarazu, bekarazaru, expression, formal, helper-conjugation form, classical auxiliary verb, moral obligation, logical obligation"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "9609",
+            "type": "study_question"
+          },
+          {
+            "id": "183438",
+            "type": "study_question"
+          },
+          {
+            "id": "9607",
+            "type": "study_question"
+          },
+          {
+            "id": "9604",
+            "type": "study_question"
+          },
+          {
+            "id": "182930",
+            "type": "study_question"
+          },
+          {
+            "id": "182931",
+            "type": "study_question"
+          },
+          {
+            "id": "182932",
+            "type": "study_question"
+          },
+          {
+            "id": "182933",
+            "type": "study_question"
+          },
+          {
+            "id": "183434",
+            "type": "study_question"
+          },
+          {
+            "id": "183435",
+            "type": "study_question"
+          },
+          {
+            "id": "183436",
+            "type": "study_question"
+          },
+          {
+            "id": "183439",
+            "type": "study_question"
+          },
+          {
+            "id": "9608",
+            "type": "study_question"
+          },
+          {
+            "id": "9606",
+            "type": "study_question"
+          },
+          {
+            "id": "9605",
+            "type": "study_question"
+          },
+          {
+            "id": "183437",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "926",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1858",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1859",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1860",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1861",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1318",
+            "type": "related_content"
+          },
+          {
+            "id": "1319",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2458",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2460",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "9609",
+      "type": "study_question",
+      "attributes": {
+        "id": 9609,
+        "content": "<span class='name-highlight'>新年会（しんねんかい）、社長（しゃちょう）が新（あたら）しい従業員（じゅうぎょういん）に</span>：「新（あたら）しい年（とし）を迎（むか）え、諸君（しょくん）にひと言（こと）だけ言（い）っておこう。『初心（しょしん）忘（わす）る<span class='study-area-input'>____</span>』。そうすれば真（しん）の精通（せいつう）への道（みち）は開（あ）けていくものだ。」",
+        "answer": "べからず",
+        "alternate_grammar": [],
+        "kanji_answer": "べからず",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が起（お）こってはいけないということを強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)であることが<strong>許（ゆる）されない</strong>。",
+        "tense": "Negative, Literary, Advice",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/新年会、社長が新しい従業員に：「新しい年を迎え、諸君にひと言だけ言っておこう。「初心忘るべからず」。そうすれば真の精通への道は開けていくものだ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことができない": {
+            "en": "Great! Could you use an old fashioned expression that also means 'should not'?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>New year's party, company president to new employees</span>: 'Greeting the new year, ladies and gentlemen, I would like to say few words. '<strong>Do not</strong> forget beginner's humility'. That's how the road to real mastery will be open to you.'",
+        "nuance_translation": "A <strong>formal</strong> grammar point, emphasizing that (A) must not happen. It <strong>cannot</strong> be <strong>permissable</strong> that (A).",
+        "extra_info": "",
+        "reviewable_id": 855,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183438",
+      "type": "study_question",
+      "attributes": {
+        "id": 183438,
+        "content": "<span class='name-highlight'>看板（かんばん）</span>：「作品（さくひん）に触（ふ）れる<span class='study-area-input'>____</span>。触（ふ）れた者（もの）は、即（そく）退場（たいじょう）とすることにする。」",
+        "answer": "べからず",
+        "alternate_grammar": [],
+        "kanji_answer": "べからず",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が起（お）こってはいけないということを強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)であることが<strong>許（ゆる）されない</strong>。",
+        "tense": "Negative, Literary, Advice",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/看板：「作品に触れるべからず。触れた者は、即退場とすることにする。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Notice board</span>: ‘<strong>Do not</strong> touch the works. Those who do will be ejected from the premises immediately.’",
+        "nuance_translation": "A <strong>formal</strong> grammar point, emphasizing that (A) must not happen. It <strong>cannot</strong> be <strong>permissable</strong> that (A).",
+        "extra_info": "",
+        "reviewable_id": 855,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9607",
+      "type": "study_question",
+      "attributes": {
+        "id": 9607,
+        "content": "<span class='name-highlight'>もろい歴史的（れきしてき）建造物（けんぞうぶつ）の手前（てまえ）の看板（かんばん）</span>：「中（なか）に入（はい）る<span class='study-area-input'>____</span>」",
+        "answer": "べからず",
+        "alternate_grammar": [],
+        "kanji_answer": "べからず",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が起（お）こってはいけないということを強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)であることが<strong>許（ゆる）されない</strong>。",
+        "tense": "Negative, Literary, Advice",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/もろい歴史的建造物の手前の看板：「中に入るべからず」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "な": {
+            "en": "Great! Could you use a bit more old fashioned expression?",
+            "es": ""
+          },
+          "ことをきんずる": {
+            "en": "Great! Could you use a bit more old fashioned expression?",
+            "es": ""
+          },
+          "ことをきんず": {
+            "en": "Great! Could you use a bit more old fashioned expression?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>A signboard in front of the fragile historic building</span>: '<strong>Do not</strong> enter inside'",
+        "nuance_translation": "A <strong>formal</strong> grammar point, emphasizing that (A) must not happen. It <strong>cannot</strong> be <strong>permissable</strong> that (A).",
+        "extra_info": "",
+        "reviewable_id": 855,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9604",
+      "type": "study_question",
+      "attributes": {
+        "id": 9604,
+        "content": "<span class='name-highlight'>公園（こうえん）の看板（かんばん）</span>：「芝生（しばふ）にゴミ捨（す）てる<span class='study-area-input'>____</span>」",
+        "answer": "べからず",
+        "alternate_grammar": [],
+        "kanji_answer": "べからず",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が起（お）こってはいけないということを強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)であることが<strong>許（ゆる）されない</strong>。",
+        "tense": "Negative, Literary, Advice",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/公園の看板：「芝生にゴミ捨てるべからず」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "な": {
+            "en": "Great! Could you use a bit more old fashioned expression?",
+            "es": ""
+          },
+          "ことをきんずる": {
+            "en": "Great! Could you use a bit more old fashioned expression?",
+            "es": ""
+          },
+          "ことをきんず": {
+            "en": "Great! Could you use a bit more old fashioned expression?",
+            "es": ""
+          },
+          "きんし": {
+            "en": "捨て禁止 is more natural. Could you say it using more old fashioned expression?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>A signboard at the park</span>: '<strong>Do not</strong> dump rubbish on the lawn'",
+        "nuance_translation": "A <strong>formal</strong> grammar point, emphasizing that (A) must not happen. It <strong>cannot</strong> be <strong>permissable</strong> that (A).",
+        "extra_info": "",
+        "reviewable_id": 855,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182930",
+      "type": "study_question",
+      "attributes": {
+        "id": 182930,
+        "content": " <span class='name-highlight'>ことわざ</span>：「初心（しょしん）忘（わす）れる<span class='study-area-input'>____</span>。」",
+        "answer": "べからず",
+        "alternate_grammar": [],
+        "kanji_answer": "べからず",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ことわざ：「初心忘れるべからず。」.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": " <span class='name-highlight'>Proverb</span>: '<strong>Do not</strong> forget beginner's humility.'",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 855,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182931",
+      "type": "study_question",
+      "attributes": {
+        "id": 182931,
+        "content": "\r\n\r\n\r\nこの施設内（しせつない）ではスケートボードなどのことをする<span class='study-area-input'>____</span>。",
+        "answer": "べからず",
+        "alternate_grammar": [],
+        "kanji_answer": "べからず",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/この施設内ではスケートボードなどのことをするべからず。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nYou <strong>must not</strong> skateboard or anything similar in this facility.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 855,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182932",
+      "type": "study_question",
+      "attributes": {
+        "id": 182932,
+        "content": "\r\n\r\n\r\n配達員（はいたついん）を装（よそお）って玄関（げんかん）のドアを開（あ）けさせるのは、許（ゆる）す<span class='study-area-input'>____</span>行為（こうい）だ。",
+        "answer": "べからざる",
+        "alternate_grammar": [],
+        "kanji_answer": "べからざる",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/配達員を装って玄関のドアを開けさせるのは、許すべからざる行為だ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nMaking someone open the door, by pretending to be a delivery person is an act that is <strong>not</strong> to be forgiven.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 855,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182933",
+      "type": "study_question",
+      "attributes": {
+        "id": 182933,
+        "content": "吸（す）う<span class='study-area-input'>____</span>場所（ばしょ）でタバコを吸（す）っているのを見（み）られたら、１０００（せん）円（えん）払（はら）うことになります。",
+        "answer": "べからざる",
+        "alternate_grammar": [],
+        "kanji_answer": "べからざる",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/吸うべからざる場所でタバコを吸っているのを見られたら、1000円払うことになります。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "If you are seen smoking in an area where you <strong>must not</strong> smoke, you will end up having to pay 1000 yen.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 855,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183434",
+      "type": "study_question",
+      "attributes": {
+        "id": 183434,
+        "content": "<span class='name-highlight'>張（は）り紙（がみ）</span>：「この橋（はし）は壊（こわ）れています！渡（わた）る<span class='study-area-input'>____</span>！」",
+        "answer": "べからず",
+        "alternate_grammar": [],
+        "kanji_answer": "べからず",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が起（お）こってはいけないということを強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)であることが<strong>許（ゆる）されない</strong>。",
+        "tense": "Negative, Literary, Advice",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/張り紙：「この橋は壊れています！渡るべからず！」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "な": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Poster</span>: ‘This bridge is damaged! <strong>Do not</strong> cross!’",
+        "nuance_translation": "A <strong>formal</strong> grammar point, emphasizing that (A) must not happen. It <strong>cannot</strong> be <strong>permissable</strong> that (A).",
+        "extra_info": "",
+        "reviewable_id": 855,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183435",
+      "type": "study_question",
+      "attributes": {
+        "id": 183435,
+        "content": "ちゃんと稼（かせ）いでいない人（ひと）はご馳走（ちそう）など食（く）う<span class='study-area-input'>____</span>。",
+        "answer": "べからず",
+        "alternate_grammar": [],
+        "kanji_answer": "べからず",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が起（お）こってはいけないということを強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)であることが<strong>許（ゆる）されない</strong>。",
+        "tense": "Negative, Literary, Advice",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ちゃんと稼いでいない人はご馳走など食うべからず。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Those who are not sufficiently earning <strong>should not</strong> eat treated food.",
+        "nuance_translation": "A <strong>formal</strong> grammar point, emphasizing that (A) must not happen. It <strong>cannot</strong> be <strong>permissable</strong> that (A).",
+        "extra_info": "",
+        "reviewable_id": 855,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183436",
+      "type": "study_question",
+      "attributes": {
+        "id": 183436,
+        "content": "池（いけ）の鯉（こい）に餌（えさ）をあげる<span class='study-area-input'>____</span>！鯉（こい）が増（ふ）え過（す）ぎてしまいます！",
+        "answer": "べからず",
+        "alternate_grammar": [],
+        "kanji_answer": "べからず",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が起（お）こってはいけないということを強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)であることが<strong>許（ゆる）されない</strong>。",
+        "tense": "Negative, Literary, Advice",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/池の鯉に餌をあげるべからず！鯉が増え過ぎてしまいます！.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Do not</strong> feed the koi in the pond! They will multiply too much!",
+        "nuance_translation": "A <strong>formal</strong> grammar point, emphasizing that (A) must not happen. It <strong>cannot</strong> be <strong>permissable</strong> that (A).",
+        "extra_info": "",
+        "reviewable_id": 855,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183439",
+      "type": "study_question",
+      "attributes": {
+        "id": 183439,
+        "content": "立（た）ち入（い）り禁止（きんし）の場所（ばしょ）には入（はい）る<span class='study-area-input'>____</span>。入（はい）れば恐（おそ）ろしいことが待（ま）ち受（う）けているであろう…。",
+        "answer": "べからず",
+        "alternate_grammar": [],
+        "kanji_answer": "べからず",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が起（お）こってはいけないということを強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)であることが<strong>許（ゆる）されない</strong>。",
+        "tense": "Negative, Literary, Advice",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/立ち入り禁止の場所には入るべからず。入れば恐ろしいことが待ち受けているであろう…。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "You <strong>must not</strong> enter places that you are forbidden from entering. If you do, there is likely something terrible awaiting you.",
+        "nuance_translation": "A <strong>formal</strong> grammar point, emphasizing that (A) must not happen. It <strong>cannot</strong> be <strong>permissable</strong> that (A).",
+        "extra_info": "",
+        "reviewable_id": 855,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9608",
+      "type": "study_question",
+      "attributes": {
+        "id": 9608,
+        "content": "<span class='name-highlight'>小説（しょうせつ）</span>：「さだおさんがなにゆえそのような許（ゆる）す<span class='study-area-input'>____</span>大罪（だいざい）を犯（おか）したのか、ゆうささんは解（かい）できなかった。」",
+        "answer": "べからざる",
+        "alternate_grammar": [],
+        "kanji_answer": "べからざる",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が起（お）こってはいけないということを強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)であることが<strong>許（ゆる）されない</strong>。",
+        "tense": "Negative, Literary, Advice",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/小説：「さだおさんがなにゆえそのような許すべからざる大罪を犯したのか、ゆうささんは解できなかった。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことができない": {
+            "en": "Great! Could you use an old fashioned expression that also means 'should not'?",
+            "es": ""
+          },
+          "べからず": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Novel</span>: 'Yusa-san couldn't understand why did Sadao-san commit such an unpardonable crime.' (a crime that <strong>cannot</strong> be forgiven)",
+        "nuance_translation": "A <strong>formal</strong> grammar point, emphasizing that (A) must not happen. It <strong>cannot</strong> be <strong>permissable</strong> that (A).",
+        "extra_info": "",
+        "reviewable_id": 855,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9606",
+      "type": "study_question",
+      "attributes": {
+        "id": 9606,
+        "content": "<span class='name-highlight'>ブログ記事（きじ）</span>：「英語（えいご）で上手（じょうず）にフォーマルな手紙（てがみ）を書（か）くための『べし・<span class='study-area-input'>____</span>』集（しゅう）」",
+        "answer": "べからず",
+        "alternate_grammar": [],
+        "kanji_answer": "べからず",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が起（お）こってはいけないということを強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)であることが<strong>許（ゆる）されない</strong>。",
+        "tense": "Negative, Literary, Advice",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/ブログ記事：「英語で上手にフォーマルな手紙を書くための「べし・べからず」集」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "な": {
+            "en": "Great! Could you use a bit more old fashioned expression?",
+            "es": ""
+          },
+          "ことをきんずる": {
+            "en": "Great! Could you use a bit more old fashioned expression?",
+            "es": ""
+          },
+          "ことをきんず": {
+            "en": "Great! Could you use a bit more old fashioned expression?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<span class='name-highlight'>Blog post</span>: 'Dos and <strong>Don'ts</strong> for writing a formal letter in English skillfully.'",
+        "nuance_translation": "A <strong>formal</strong> grammar point, emphasizing that (A) must not happen. It <strong>cannot</strong> be <strong>permissable</strong> that (A).",
+        "extra_info": "",
+        "reviewable_id": 855,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9605",
+      "type": "study_question",
+      "attributes": {
+        "id": 9605,
+        "content": "空気（くうき）は生（い）きるに欠（か）く<span class='study-area-input'>____</span>ものだ。",
+        "answer": "べからざる",
+        "alternate_grammar": [],
+        "kanji_answer": "べからざる",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が起（お）こってはいけないということを強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)であることが<strong>許（ゆる）されない</strong>。",
+        "tense": "Negative, Literary, Advice",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/空気は生きるに欠くべからざるものだ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "ことができない": {
+            "en": "Great! Could you use an old fashioned expression that also means 'should not'?",
+            "es": ""
+          },
+          "べからず": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Air is essential to life. (<strong>Must not</strong> lack air)",
+        "nuance_translation": "A <strong>formal</strong> grammar point, emphasizing that (A) must not happen. It <strong>cannot</strong> be <strong>permissable</strong> that (A).",
+        "extra_info": "",
+        "reviewable_id": 855,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183437",
+      "type": "study_question",
+      "attributes": {
+        "id": 183437,
+        "content": "人（ひと）の名前（なまえ）を忘（わすれ）る<span class='study-area-input'>____</span>。名前（なまえ）を忘（わす）れるのは最大（さいだい）の失礼（しつれい）に当（あ）たる。",
+        "answer": "べからず",
+        "alternate_grammar": [],
+        "kanji_answer": "べからず",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)が起（お）こってはいけないということを強調（きょうちょう）する<strong>丁寧（ていねい）</strong>な表現（ひょうげん）。(A)であることが<strong>許（ゆる）されない</strong>。",
+        "tense": "Negative, Literary, Advice",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/人の名前を忘るべからず。名前を忘れるのは最大の失礼に当たる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "You <strong>must not</strong> forget people’s names. Forgetting a name is equivalent to the height of rudeness.",
+        "nuance_translation": "A <strong>formal</strong> grammar point, emphasizing that (A) must not happen. It <strong>cannot</strong> be <strong>permissable</strong> that (A).",
+        "extra_info": "",
+        "reviewable_id": 855,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "926",
+      "type": "writeup",
+      "attributes": {
+        "id": 926,
+        "body_ja": "<p>「<span data-gp-id='855'>べからず</span>」と「<span data-gp-id='855'>べからざる</span>」は、「(A) をしてはならない」や「(A) をすべきでない」という意味（いみ）で使（つか）われる硬（かた）い表現（ひょうげん）です。これは、助動詞（じょどうし）「べし」の未然形（みぜんけい）「べから」（補助活用（ほじょかつよう））に、文語（ぶんご）の助動詞（じょどうし）「ず」または「ず」の連体形（れんたいけい）「ざる」（補助活用（ほじょかつよう））の組（く）み合（あ）わせでできています。</p>\r\n\r\n<p>「<span data-gp-id='855'>べからず</span>」と「<span data-gp-id='855'>べからざる</span>」の前（まえ）には動詞（どうし）の辞書形（じしょけい）が付（つ）きます。「べからざる」の後（あと）には名詞（めいし）が続（つづ）き、その名詞（めいし）を修飾（しゅうしょく）します。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182930'>\r\n<li data-study-question='182931'>\r\n<li data-study-question='182932'>\r\n<li data-study-question='182933'>\r\n</ul>\r\n\r\n<p>「<span data-gp-id='855'>べからず</span>」と「<span data-gp-id='855'>べからざる</span>」には「べし」が含（ふく）まれるので、これらの文型（ぶんけい）はもともと道徳的（どうとくてき）・論理的（ろんりてき）に「してはならない」という義務（ぎむ）を表（あらわ）すものでした。しかし、現代（げんだい）では、これらのニュアンスは「義務（ぎむ）」から「(A) をするな」という強（つよ）い禁止（きんし）に変（か）わっています。また、これらの表現（ひょうげん）はほとんどの場合（ばあい）、標識（ひょうしき）や掲示物（けいじぶつ）に使（つか）われます。</p>\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>「<span data-gp-id='855'>べからざる</span>」は、限（かぎ）られた慣用的（かんようてき）な言（い）い回（まわ）しの中（なか）で使（つか）われることがほとんどです。例（たと）えば、「許（ゆる）す<span data-gp-id='855'>べからざる</span>」（意味（いみ）：許（ゆる）してはいけない）「ありう<span data-gp-id='855'>べからざる</span>」（意味（いみ）：決（け）してあってはならない）「欠（か）く<span data-gp-id='855'>べからざる</span>」（意味（いみ）：なくてはならない）などがあります。</p></section>",
+        "body": "<p><span data-gp-id='855'>べからず</span>, and <span data-gp-id='855'>べからざる</span> are two formal expressions used to convey the meaning of 'must not (A)', or 'ought not to (A)'. It is a combination of the <span data-term='補助活用・ほじょかつよう'>helper-conjugation form</span> of the <span data-term='助動詞・じょどうし'>auxiliary verb</span> べし, べから, and the <span data-term='文語助動詞・ぶんごじょどうし'>classical auxiliary verb</span> ず 'not'. ざる itself is just the <span data-term='補助活用・ほじょかつよう'>helper-conjugation form</span> of ず, meaning that the nuance remains exactly the same. In this way, we can see that the literal meaning of 'ought not (A)' exhibits some sort of moral or logical obligation, as is true for all uses of べき derived patterns.</p>\r\n\r\n<p><span data-gp-id='855'>べからず</span> and <span data-gp-id='855'>べからざる</span> will be seen following verbs in their <span data-term='辞書形・じしょけい'>dictionary forms</span>. べからざる will be followed by a noun, indicating that the noun is being modified by the phrase.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182930'>\r\n<li data-study-question='182931'>\r\n<li data-study-question='182932'>\r\n<li data-study-question='182933'>\r\n</ul>\r\n\r\n<p>In modern Japanese, the meanings of both of these grammar patterns have shifted slightly from 'obligation', to simply having a strong nuance of 'don't (A)'. In addition to this, they will almost only ever be used on signs or notices.</p>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>The <span data-gp-id='855'>べからざる</span> form that combines with nouns is usually only seen in a few set variations. These are 許（ゆる）す<span data-gp-id='855'>べからざる</span> 'cannot be forgiven', ありう<span data-gp-id='855'>べからざる</span> 'must not exist' (impossible), and 欠（か）く<span data-gp-id='855'>べからざる</span> 'must not be without'.</p></section>"
+      }
+    },
+    {
+      "id": "1858",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1858,
+        "source": "Shin Kanzen Master N1 Bunpou",
+        "location": "Page 59",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1859",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1859,
+        "source": "Sou Matome Bunpou N1",
+        "location": "Page 88, Page 89",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1860",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1860,
+        "source": "Try N1",
+        "location": "Page 161",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1861",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1861,
+        "source": "A Dictionary of Advanced Japanese Grammar",
+        "location": "Page 29",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2458",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2458,
+        "site": "GuideToJapanese",
+        "description": "Should",
+        "link": "https://guidetojapanese.org/learn/grammar/should",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2460",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2460,
+        "site": "JapaneseTest4You",
+        "description": "べからず",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n1-grammar-%E3%81%B9%E3%81%8B%E3%82%89%E3%81%9A-bekarazu/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1318",
+      "type": "related_content",
+      "attributes": {
+        "id": 1318,
+        "relationship_type": "related",
+        "body": "べからず and てはいけない are similar in that they both express prohibition, or the idea that you 'must not' or 'cannot' do something. The difference is in formality and how they connect to other words. べからず is a highly formal and archaic expression that nowadays is found mostly in regulations, proverbs, and so forth. It follows directly after the plain form of a verb, e.g. 入るべからず ('Do not enter.'). In contrast, てはいけない is far more common in the modern language, and connects to the て-form of verbs, e.g. 入ってはいけない ('You must not enter.')",
+        "first_relatable": {
+          "id": 855,
+          "slug": "べからず",
+          "title": "べからず",
+          "meaning": "Do not, Must not, Should not, Cannot (べからざる)",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 67,
+          "slug": "てはいけない",
+          "title": "てはいけない",
+          "meaning": "Must not, May not",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1319",
+      "type": "related_content",
+      "attributes": {
+        "id": 1319,
+        "relationship_type": "related",
+        "body": "Both indicate prohibition. べからず is old-fashioned and literary, often seen on signs or notices, as in 立入るべからず (Do not enter). てはならない is the standard modern form, still formal but usable in both speech and writing, as in 入ってはならない (You must not enter).",
+        "first_relatable": {
+          "id": 855,
+          "slug": "べからず",
+          "title": "べからず",
+          "meaning": "Do not, Must not, Should not, Cannot (べからざる)",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 516,
+          "slug": "てはならない",
+          "title": "てはならない",
+          "meaning": "Must not, Cannot, Should not",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

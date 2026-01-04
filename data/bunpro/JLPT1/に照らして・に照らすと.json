@@ -1,0 +1,924 @@
+{
+  "data": {
+    "id": "869",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 869,
+      "level": "JLPT1",
+      "lesson_id": 48,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "に照らして・に照らすと",
+      "nuance": "(A)<strong>の視点（してん）から</strong>ということを表（あらわ）す文法（ぶんぽう）。",
+      "grammar_order": 870,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 870,
+        "title": "とあれば",
+        "slug": "とあれば"
+      },
+      "previous_grammar_point": {
+        "id": 868,
+        "title": "ったらない・といったらない",
+        "slug": "ったらない・といったらない"
+      },
+      "lesson_count": "6/19",
+      "title": "に照らして・に照らすと",
+      "furigana": "に照（て）らして",
+      "meaning": "In light of, Based on, According to, Referencing, Comparing against, In view of",
+      "nuance_translation": "A grammar point indicating that something is <strong>in light of</strong> (A).",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Noun + <strong>に<span class='gp-popout' data-gp-id='416'>照（て）らして</span></strong><sup>(1)</sup><br>Noun (A) + <strong>に照（て）らした</strong> + Noun (B)<br><br><sup>(1)</sup>に照（て）らす<span class='gp-popout' data-gp-id='143'>と</span>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/34971",
+      "metadata": "に照らして, に照らすと, にてらして, にてらすと, niterashite, niterasuto, expression, in light of"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "183534",
+            "type": "study_question"
+          },
+          {
+            "id": "183538",
+            "type": "study_question"
+          },
+          {
+            "id": "183539",
+            "type": "study_question"
+          },
+          {
+            "id": "183537",
+            "type": "study_question"
+          },
+          {
+            "id": "183535",
+            "type": "study_question"
+          },
+          {
+            "id": "183536",
+            "type": "study_question"
+          },
+          {
+            "id": "9692",
+            "type": "study_question"
+          },
+          {
+            "id": "182994",
+            "type": "study_question"
+          },
+          {
+            "id": "182995",
+            "type": "study_question"
+          },
+          {
+            "id": "182996",
+            "type": "study_question"
+          },
+          {
+            "id": "182997",
+            "type": "study_question"
+          },
+          {
+            "id": "9691",
+            "type": "study_question"
+          },
+          {
+            "id": "9689",
+            "type": "study_question"
+          },
+          {
+            "id": "183533",
+            "type": "study_question"
+          },
+          {
+            "id": "9690",
+            "type": "study_question"
+          },
+          {
+            "id": "9688",
+            "type": "study_question"
+          },
+          {
+            "id": "9687",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "942",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "1906",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": []
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "2497",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "183534",
+      "type": "study_question",
+      "attributes": {
+        "id": 183534,
+        "content": "常（つね）に自分（じぶん）の基準（きじゅん）<span class='study-area-input'>____</span>善悪（ぜんあく）を判断（はんだん）する父（ちち）は、多（おお）くの人（ひと）からの反感（はんかん）を買（か）っている。",
+        "answer": "にてらして",
+        "alternate_grammar": [],
+        "kanji_answer": "に照（て）らして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>の視点（してん）から</strong>ということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "て",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/常に自分の基準に照らして善悪を判断する父は、多くの人からの反感を買っている。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "My father, who always determines things <strong>in light of</strong> his own standards, draws a lot of opposition from others.",
+        "nuance_translation": "A grammar point indicating that something is <strong>in light of</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 869,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183538",
+      "type": "study_question",
+      "attributes": {
+        "id": 183538,
+        "content": "「恋（こい）は盲目（もうもく）」という諺（ことわざ）があるように、人（ひと）は恋（こい）をすると常識（じょうしき）<span class='study-area-input'>____</span>物事（ものごと）を考（かんが）える事（こと）が出来（でき）なくなります。",
+        "answer": "にてらして",
+        "alternate_grammar": [],
+        "kanji_answer": "に照（て）らして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>の視点（してん）から</strong>ということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "て",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/「恋は盲目」という諺があるように、人は恋をすると常識に照らして物事を考える事が出来なくなります。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Just like the proverb ‘love is blind’, those who fall in love become unable to think <strong>in light of</strong> common sense.",
+        "nuance_translation": "A grammar point indicating that something is <strong>in light of</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 869,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183539",
+      "type": "study_question",
+      "attributes": {
+        "id": 183539,
+        "content": "法律（ほうりつ）<span class='study-area-input'>____</span>考（かんが）えてみれば彼（かれ）は死刑（しけい）になるはずなのに、なぜ彼（かれ）の刑罰（けいばつ）がそんなに軽（かる）くなったのだろうか…。",
+        "answer": "にてらして",
+        "alternate_grammar": [],
+        "kanji_answer": "に照（て）らして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>の視点（してん）から</strong>ということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "て",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/法律に照らして考えてみれば彼は死刑になるはずなのに、なぜ彼の刑罰がそんなに軽くなったのだろうか…。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Despite it being clear that he ought to get the death penalty if we think <strong>in light of</strong> the law, I wonder why his punishment was so light.",
+        "nuance_translation": "A grammar point indicating that something is <strong>in light of</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 869,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183537",
+      "type": "study_question",
+      "attributes": {
+        "id": 183537,
+        "content": "前例（ぜんれい）<span class='study-area-input'>____</span>考（かんが）えれば、社内（しゃない）の人（ひと）と不倫（ふりん）行為（こうい）をした人（ひと）はどちらも会社（かいしゃ）を首（くび）になるでしょう。",
+        "answer": "にてらして",
+        "alternate_grammar": [],
+        "kanji_answer": "に照（て）らして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>の視点（してん）から</strong>ということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "て",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/前例に照らして考えれば、社内の人と不倫行為をした人はどちらも会社を首になるでしょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "If we think <strong>in light of</strong> the previous case, the people who cheated on their partners with their coworker will probably both be fired.",
+        "nuance_translation": "A grammar point indicating that something is <strong>in light of</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 869,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183535",
+      "type": "study_question",
+      "attributes": {
+        "id": 183535,
+        "content": "自分（じぶん）の経験（けいけん）<span class='study-area-input'>____</span>、彼女（かのじょ）がこれから進（すす）もうとしている道（みち）を勧（すす）める事（こと）は出来（でき）ません。",
+        "answer": "にてらすと",
+        "alternate_grammar": [
+          "にてらして",
+          "にてらすと"
+        ],
+        "kanji_answer": "に照（て）らすと",
+        "kanji_alt_grammar": [
+          "に照らして",
+          "に照（て）らすと"
+        ],
+        "nuance": "(A)<strong>の視点（してん）から</strong>ということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>In light of </strong>my own experiences, I cannot recommend the path that she is heading down from here.",
+        "nuance_translation": "A grammar point indicating that something is <strong>in light of</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 869,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183536",
+      "type": "study_question",
+      "attributes": {
+        "id": 183536,
+        "content": "健康（けんこう）診断（しんだん）の結果（けっか）<span class='study-area-input'>____</span>自分（じぶん）の体重（たいじゅう）と体脂肪（たいしぼう）率（りつ）が適正（てきせい）範囲（はんい）内（ない）に無（な）い事（こと）が分（わ）かった。",
+        "answer": "にてらすと",
+        "alternate_grammar": [
+          "にてらして",
+          "にてらすと"
+        ],
+        "kanji_answer": "に照（て）らすと",
+        "kanji_alt_grammar": [
+          "に照（て）らして",
+          "に照（て）らすと"
+        ],
+        "nuance": "(A)<strong>の視点（してん）から</strong>ということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/健康診断の結果に照らすと自分の体重と体脂肪率が適正範囲内に無い事が分かった。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>In light of</strong> the results of my health checkup, I realized that my weight and bodyfat percentage were not within an acceptable standard.",
+        "nuance_translation": "A grammar point indicating that something is <strong>in light of</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 869,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9692",
+      "type": "study_question",
+      "attributes": {
+        "id": 9692,
+        "content": "社内（しゃない）規程（きてい）<span class='study-area-input'>____</span>、作業員（さぎょういん）の効率性（こうりつせい）の検証（けんしょう）を行（おこな）う。",
+        "answer": "にてらして",
+        "alternate_grammar": [],
+        "kanji_answer": "に照（て）らして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>の視点（してん）から</strong>ということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/社内規程に照らして、作業員の効率性の検証を行う。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "におうじて": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "にもとづいて": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "にしたがって": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "にのっとって": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "にそくして": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To perform the validation of workers' efficiency <strong>in accordance with</strong> company regulations.",
+        "nuance_translation": "A grammar point indicating that something is <strong>in light of</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 869,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182994",
+      "type": "study_question",
+      "attributes": {
+        "id": 182994,
+        "content": "\r\n母（はは）は自分（じぶん）の経験（けいけん）<span class='study-area-input'>____</span>、こういう時（とき）はどうすればいいかをアドバイスしてくれた。",
+        "answer": "にてらして",
+        "alternate_grammar": [],
+        "kanji_answer": "に照（て）らして",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/母は自分の経験に照らして、こういう時はどうすればいいかをアドバイスしてくれた。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nMy mother advised me what to do in these situations <strong>in light of</strong> her own experience.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 869,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182995",
+      "type": "study_question",
+      "attributes": {
+        "id": 182995,
+        "content": "\r\n\r\n\r\n労働（ろうどう）基準法（きじゅんほう）を守（まも）らない会社（かいしゃ）は法律（ほうりつ）<span class='study-area-input'>____</span>罰（ばっ）せられるべきだ。",
+        "answer": "にてらして",
+        "alternate_grammar": [],
+        "kanji_answer": "に照（て）らして",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/労働基準法を守らない会社は法律に照らして罰せられるべきだ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nCompanies that do not comply with the labor laws should be punished <strong>in accordance with</strong> the law.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 869,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182996",
+      "type": "study_question",
+      "attributes": {
+        "id": 182996,
+        "content": "\r\n\r\n\r\n経済（けいざい）統計（とうけい）<span class='study-area-input'>____</span>強盗（ごうとう）と窃盗（せっとう）事件（じけん）に関（かん）する犯罪（はんざい）統計（とうけい）。",
+        "answer": "にてらした",
+        "alternate_grammar": [],
+        "kanji_answer": "に照（て）らした",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/経済統計に照らした強盗と窃盗事件に関する犯罪統計。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nCrime statistics on burglaries and thefts <strong>in light of</strong> economic statistics.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 869,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182997",
+      "type": "study_question",
+      "attributes": {
+        "id": 182997,
+        "content": "\r\n\r\n\r\n犯罪者（はんざいしゃ）は刑法（けいほう）<span class='study-area-input'>____</span>罰（ばっ）せられる。",
+        "answer": "にてらして",
+        "alternate_grammar": [],
+        "kanji_answer": "に照（て）らして",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/犯罪者は刑法に照らして罰せられる。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "\r\nCriminals are punished <strong>in accordance with</strong> the law.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 869,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9691",
+      "type": "study_question",
+      "attributes": {
+        "id": 9691,
+        "content": "国内（こくない）の状況（じょうきょう）<span class='study-area-input'>____</span>、国外（こくがい）からの石油（せきゆ）の購入（こうにゅう）は必要（ひつよう）である。",
+        "answer": "にてらすと",
+        "alternate_grammar": [
+          "にてらして",
+          "にてらすと",
+          "にてらしあわせて"
+        ],
+        "kanji_answer": "に照（て）らすと",
+        "kanji_alt_grammar": [
+          "に照（て）らして",
+          "に照（て）らしあわせて",
+          "に照（て）らすと"
+        ],
+        "nuance": "(A)<strong>の視点（してん）から</strong>ということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Formal conjunctive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/国内の状況に照らすと、国外からの石油の購入は必要である。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "からすると": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "からして": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "からいって": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "からいうと": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "にもとづいて": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "におうじて": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "によって": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "にそって": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>In light of</strong> the domestic situation, purchasing petrol abroad is necessary...",
+        "nuance_translation": "A grammar point indicating that something is <strong>in light of</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 869,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9689",
+      "type": "study_question",
+      "attributes": {
+        "id": 9689,
+        "content": "我々（われわれ）の基準（きじゅん）<span class='study-area-input'>____</span>、この製品（せいひん）を粗悪品（そあくひん）と言（い）う人（ひと）は少（すく）なくない。",
+        "answer": "にてらすと",
+        "alternate_grammar": [
+          "にてらして",
+          "にてらすと",
+          "にてらしあわせて"
+        ],
+        "kanji_answer": "に照（て）らすと",
+        "kanji_alt_grammar": [
+          "に照（て）らして",
+          "に照（て）らしあわせて",
+          "に照（て）らすと"
+        ],
+        "nuance": "(A)<strong>の視点（してん）から</strong>ということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "Formal conjunctive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/我々の基準に照らすと、この製品を粗悪品と言う人は少なくない。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "からすると": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "からして": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "からいって": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "からいうと": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "にもとづいて": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "におうじて": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "によって": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "にそって": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "There are quite a few people that would call this product inferior <strong>in light of</strong> our standards.",
+        "nuance_translation": "A grammar point indicating that something is <strong>in light of</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 869,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183533",
+      "type": "study_question",
+      "attributes": {
+        "id": 183533,
+        "content": "社長（しゃちょう）の好（この）み<span class='study-area-input'>____</span>考（かんが）えると、社長（しゃちょう）はクッキーよりもゼリーを選（えら）ぶだろう。",
+        "answer": "にてらして",
+        "alternate_grammar": [],
+        "kanji_answer": "に照（て）らして",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)<strong>の視点（してん）から</strong>ということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "て",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/社長の好みに照らして考えると、社長はクッキーよりもゼリーを選ぶだろう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>In light of</strong> the president’s preferences, he’ll probably choose jelly rather than cookies.",
+        "nuance_translation": "A grammar point indicating that something is <strong>in light of</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 869,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9690",
+      "type": "study_question",
+      "attributes": {
+        "id": 9690,
+        "content": "アルバイトをすることは学校（がっこう）の規則（きそく）<strong><span class='study-area-input'>____</span></strong>規則（きそく）違反（いはん）になる。",
+        "answer": "にてらして",
+        "alternate_grammar": [
+          "にてらして",
+          "にてらすと",
+          "にてらしあわせて"
+        ],
+        "kanji_answer": "に照（て）らして",
+        "kanji_alt_grammar": [
+          "に照（て）らすと",
+          "に照（て）らしあわせて",
+          "に照（て）らして"
+        ],
+        "nuance": "(A)<strong>の視点（してん）から</strong>ということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "て",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/アルバイトをすることは学校の規則に照らして規則違反になる。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "からすると": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "からして": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "からいって": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "からいうと": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "にもとづいて": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "におうじて": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "によって": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "にそって": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Part-time working is a violation <strong>in light of</strong> school rules.",
+        "nuance_translation": "A grammar point indicating that something is <strong>in light of</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 869,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9688",
+      "type": "study_question",
+      "attributes": {
+        "id": 9688,
+        "content": "彼女（かのじょ）の生活（せいかつ）習慣（しゅうかん）<strong><span class='study-area-input'>____</span></strong>罪（つみ）がないことを宣言（せんげん）された。",
+        "answer": "にてらして",
+        "alternate_grammar": [
+          "にてらして",
+          "にてらすと",
+          "にてらしあわせて"
+        ],
+        "kanji_answer": "に照（て）らして",
+        "kanji_alt_grammar": [
+          "に照（て）らすと",
+          "に照（て）らしあわせて",
+          "に照（て）らして"
+        ],
+        "nuance": "(A)<strong>の視点（してん）から</strong>ということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "て",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/彼女の生活習慣に照らして罪がないことを宣言された。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "からすると": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "からして": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "からいって": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "からいうと": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "にもとづいて": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "におうじて": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "によって": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "にそって": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>In light of</strong> her everyday life (alibi), she has been declared innocent.",
+        "nuance_translation": "A grammar point indicating that something is <strong>in light of</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 869,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "9687",
+      "type": "study_question",
+      "attributes": {
+        "id": 9687,
+        "content": "２０１７（にせんじゅうなな）年（ねん）の経験（けいけん）<strong><span class='study-area-input'>____</span></strong>価格（かかく）下落（げらく）は限定的（げんていてき）であると私（わたし）は考（かんが）えています。",
+        "answer": "にてらして",
+        "alternate_grammar": [
+          "にてらして",
+          "にてらすと",
+          "にてらしあわせて"
+        ],
+        "kanji_answer": "に照（て）らして",
+        "kanji_alt_grammar": [
+          "に照（て）らすと",
+          "に照（て）らしあわせて",
+          "に照（て）らして"
+        ],
+        "nuance": "(A)<strong>の視点（してん）から</strong>ということを表（あらわ）す文法（ぶんぽう）。",
+        "tense": "て",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n1/２０１７年の経験に照らして価格下落は限定的であると私は考えています。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "からすると": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "からして": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "からいって": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "からいうと": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "にもとづいて": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "におうじて": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "によって": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          },
+          "にそって": {
+            "en": "Good! Could you use expression that lit. means 'in light of'?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>In light of</strong> the experience of 2017, I believe that price drop will be limited in scope.",
+        "nuance_translation": "A grammar point indicating that something is <strong>in light of</strong> (A).",
+        "extra_info": "",
+        "reviewable_id": 869,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "942",
+      "type": "writeup",
+      "attributes": {
+        "id": 942,
+        "body_ja": "<p>「<span data-gp-id='869'>に照（て）らして</span>」は、五段動詞（ごだんどうし）「照（て）らす」の基本的（きほんてき）な意味（いみ）の一つである「基準（きじゅん）と比（くら）べて確（たし）かめる」を活用（かつよう）した表現（ひょうげん）で、「(A) を参照（さんしょう）して」や「(A) を基準（きじゅん）に」といった意味（いみ）を表（あらわ）します。(A) には主（おも）に法律（ほうりつ）・規則（きそく）・経験（けいけん）などが入（はい）り、それらを参考（さんこう）にして、(B) という判断（はんだん）を行（おこな）うときに使（つか）われます。</p>\r\n\r\n<p>この表現（ひょうげん）を使（つか）うときは、名詞（めいし）の後（あと）に格助詞（かくじょし）の「に」、そして「照（て）らして」を続（つづ）けます。別（べつ）の名詞（めいし）を修飾（しゅうしょく）するときは、「照（て）らした」を続（つづ）けます。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182994'>\r\n<li data-study-question='182995'>\r\n<li data-study-question='182996'>\r\n<li data-study-question='182997'>\r\n</ul>\r\n\r\n<p>「照（て）らす」はもともと「光（ひかり）を当（あ）てて明（あか）るくする」という意味（いみ）を持（も）つ他動詞（たどうし）です。そのため、「(A) という光（ひかり）を当（あ）てて (B) を見（み）る（そうしたら、物事（ものごと）が見（み）えてくる）」といったイメージで覚（おぼ）えてもいいでしょう。この構文（こうぶん）における「に」は、光（ひかり）を当（あ）てる対象（たいしょう）ではなく、「どのような光（ひかり）か」、すなわち参照点（さんしょうてん）を表（あらわ）します。多（おお）くの場合（ばあい）、(B) は (A) をもとに下（くだ）された、論理的（ろんりてき）な判断（はんだん）になります。</p>",
+        "body": "<p><span data-gp-id='869'>に照（て）らして</span> is an expression based on the standard meaning of the う-Verb 照（て）らす 'to illuminate', and is primarily used comparatively in a similar way to 'in light of' in English. This comparative meaning aims to illustrate (B) from the perspective of (A), and usually refers to situations, level of experience, or something similar.</p>\r\n\r\n<p>To use this structure, attach the case-marking particle に to the end of a noun, then follow it with 照（て）らして. If a second noun will be modified directly, then 照（て）らした will be used instead.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182994'>\r\n<li data-study-question='182995'>\r\n<li data-study-question='182996'>\r\n<li data-study-question='182997'>\r\n</ul>\r\n\r\n<p>Keep in mind that the に in this structure is marking (A) as the 'doer' of 照（て）らす 'to illuminate', as it is a transitive verb. This means that the structure has a more literal translation of '(B) as reflected by (A)'. This can also be thought of as 'as made clear by (A), (B)', 'as made evident by (A), (B)'. (B) will almost always be a judgment that is logically based on (A).</p>"
+      }
+    },
+    {
+      "id": "1906",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1906,
+        "source": "Shin Kanzen Master N1 Bunpou",
+        "location": "Page 94",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "2497",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2497,
+        "site": "JapaneseTest4You",
+        "description": "に照らして",
+        "link": "https://japanesetest4you.com/flashcard/learn-jlpt-n1-grammar-%E3%81%AB%E3%81%A6%E3%82%89%E3%81%97%E3%81%A6-ni-terashite/",
+        "type": "SupplementalLink"
+      }
+    }
+  ]
+}

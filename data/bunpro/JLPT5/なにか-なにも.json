@@ -1,0 +1,947 @@
+{
+  "data": {
+    "id": "718",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 718,
+      "level": "JLPT5",
+      "lesson_id": 8,
+      "part_of_speech": "名詞",
+      "register": "一般",
+      "word_type": "副助詞",
+      "slug": "なにか-なにも",
+      "nuance": "(A)が存在（そんざい）する、または存在（そんざい）しないことを表（あらわ）すときに使（つか）われる表現（ひょうげん）。<strong>無（な）い、又（また）は、どれでもよい</strong>という意味（いみ）で使（つか）われることが多（おお）い。",
+      "grammar_order": 101,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 721,
+        "title": "誰か・どこか・誰も・どこも",
+        "slug": "誰か-どこか-誰も-どこも"
+      },
+      "previous_grammar_point": {
+        "id": 73,
+        "title": "より～のほうが",
+        "slug": "より-のほうが"
+      },
+      "lesson_count": "12/13",
+      "title": "なにか・なにも",
+      "furigana": "何（なに） + か",
+      "meaning": "Something, Nothing, Anything, Not anything, Some kind of, Not any kind of",
+      "nuance_translation": "A phrase highlighting that <strong>even whatever</strong> (A), or <strong>whatever uncertain</strong> (A) either exist or do not. Often coming across as <strong>something, nothing, or anything</strong>.",
+      "rare_kanji_warning": "",
+      "caution": "The meaning of these words will change, based on whether the sentence is positive, or negative",
+      "polite_structure": "",
+      "casual_structure": "<strong>何（なに）<span class='gp-popout' data-gp-id='8'>か</span></strong> + Phrase<br><strong>何（なに）<span class='gp-popout' data-gp-id='4'>も</span></strong> + Phrase［ない］",
+      "part_of_speech_translation": "Noun",
+      "register_translation": "Standard",
+      "word_type_translation": "Adverbial Particle",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10217",
+      "metadata": "なにか, なにも, なんにか, なんか, なんにも, なんも, 何か, 何も, 何にか, 何にも, nanika, nanimo, nannnika, nannka, nannnimo, noun, adverbial particle, adverb"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "155087",
+            "type": "study_question"
+          },
+          {
+            "id": "7713",
+            "type": "study_question"
+          },
+          {
+            "id": "7717",
+            "type": "study_question"
+          },
+          {
+            "id": "155086",
+            "type": "study_question"
+          },
+          {
+            "id": "7719",
+            "type": "study_question"
+          },
+          {
+            "id": "7710",
+            "type": "study_question"
+          },
+          {
+            "id": "7715",
+            "type": "study_question"
+          },
+          {
+            "id": "7720",
+            "type": "study_question"
+          },
+          {
+            "id": "7711",
+            "type": "study_question"
+          },
+          {
+            "id": "7714",
+            "type": "study_question"
+          },
+          {
+            "id": "7709",
+            "type": "study_question"
+          },
+          {
+            "id": "7712",
+            "type": "study_question"
+          },
+          {
+            "id": "7716",
+            "type": "study_question"
+          },
+          {
+            "id": "7718",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "100",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "924",
+            "type": "offline_resource"
+          },
+          {
+            "id": "948",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1275",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1374",
+            "type": "related_content"
+          },
+          {
+            "id": "1373",
+            "type": "related_content"
+          },
+          {
+            "id": "1375",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "1563",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1564",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2109",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "155087",
+      "type": "study_question",
+      "attributes": {
+        "id": 155087,
+        "content": "冷蔵庫（れいぞうこ）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>中（なか）<span class=\"gp-popout\" data-gp-id=\"32\">に</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span><span class='study-area-input'>____</span>ない<span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "なにも",
+        "alternate_grammar": [],
+        "kanji_answer": "何（なに）も",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/冷蔵庫の中には何もないです。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "There is <strong>nothing</strong> inside the refrigerator.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 718,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7713",
+      "type": "study_question",
+      "attributes": {
+        "id": 7713,
+        "content": "彼（かれ）<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>答（こた）え<span class='gp-popout' data-gp-id='21'>を</span>探（さが）し<span class='gp-popout' data-gp-id='764'>ている</span>。",
+        "answer": "なにか",
+        "alternate_grammar": [
+          "なにか",
+          "なんにか",
+          "なんか"
+        ],
+        "kanji_answer": "なにか",
+        "kanji_alt_grammar": [
+          "なにか",
+          "なんにか",
+          "なんか"
+        ],
+        "nuance": "(A)が存在（そんざい）する、または存在（そんざい）しないことを表（あらわ）すときに使（つか）われる表現（ひょうげん）。<strong>無（な）い、又（また）は、どれでもよい</strong>という意味（いみ）で使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/718/male_audio/07-彼は何か答えを探している.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/彼はなにか答えを探している。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "He is searching for <strong>some kind of</strong> answer.",
+        "nuance_translation": "A phrase highlighting that <strong>even whatever</strong> (A), or <strong>whatever uncertain</strong> (A) either exist or do not. Often coming across as <strong>something, nothing, or anything</strong>.",
+        "extra_info": "",
+        "reviewable_id": 718,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7717",
+      "type": "study_question",
+      "attributes": {
+        "id": 7717,
+        "content": "校長（こうちょう）先生（せんせい）<span class='gp-popout' data-gp-id='32'>に</span><span class='study-area-input'>____</span>言（い）い<span class='gp-popout' data-gp-id='41'>ました</span><span class='gp-popout' data-gp-id='8'>か</span>？",
+        "answer": "なにか",
+        "alternate_grammar": [
+          "なにか",
+          "なんにか"
+        ],
+        "kanji_answer": "なにか",
+        "kanji_alt_grammar": [
+          "なにか",
+          "なんにか"
+        ],
+        "nuance": "(A)が存在（そんざい）する、または存在（そんざい）しないことを表（あらわ）すときに使（つか）われる表現（ひょうげん）。<strong>無（な）い、又（また）は、どれでもよい</strong>という意味（いみ）で使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/718/male_audio/11-校長先生に何か言いましたか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/校長先生になにか言いましたか？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なんか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Did you say <strong>something</strong> to the principal?",
+        "nuance_translation": "A phrase highlighting that <strong>even whatever</strong> (A), or <strong>whatever uncertain</strong> (A) either exist or do not. Often coming across as <strong>something, nothing, or anything</strong>.",
+        "extra_info": "",
+        "reviewable_id": 718,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155086",
+      "type": "study_question",
+      "attributes": {
+        "id": 155086,
+        "content": "<span class='study-area-input'>____</span>食（た）べ<span class=\"gp-popout\" data-gp-id=\"12\">ます</span><span class=\"gp-popout\" data-gp-id=\"8\">か</span>？",
+        "answer": "なにか",
+        "alternate_grammar": [],
+        "kanji_answer": "何（なに）か",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/何か食べますか？.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Do you want to eat <strong>something</strong>?",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 718,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7719",
+      "type": "study_question",
+      "attributes": {
+        "id": 7719,
+        "content": "「<strong>何（なに）か</strong>危険（きけん）<span class='gp-popout' data-gp-id='13'>があります</span><span class='gp-popout' data-gp-id='8'>か</span>？」<br>「僕（ぼく）<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>怖（こわ）く<strong>ない</strong><span class='gp-popout' data-gp-id='361'>けど</span>、入（はい）ら<span class='gp-popout' data-gp-id='888'>ない</span><span class='gp-popout' data-gp-id='2'>です</span><span class='gp-popout' data-gp-id='78'>よ</span>。」",
+        "answer": "なにも",
+        "alternate_grammar": [
+          "なにも",
+          "なんにも"
+        ],
+        "kanji_answer": "なにも",
+        "kanji_alt_grammar": [
+          "なにも",
+          "なんにも"
+        ],
+        "nuance": "(A)が存在（そんざい）する、または存在（そんざい）しないことを表（あらわ）すときに使（つか）われる表現（ひょうげん）。<strong>無（な）い、又（また）は、どれでもよい</strong>という意味（いみ）で使（つか）われることが多（おお）い。",
+        "tense": "Extent, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/718/male_audio/04-何か危険がありますか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「何か危険がありますか？」「僕はなにも怖くないけど、入らないですよ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なんでも": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "なんも": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'Is there <strong>something</strong> dangerous?'<br>'I'm not scared (of <strong>anything</strong>), but I am not going in (there).'",
+        "nuance_translation": "A phrase highlighting that <strong>even whatever</strong> (A), or <strong>whatever uncertain</strong> (A) either exist or do not. Often coming across as <strong>something, nothing, or anything</strong>.",
+        "extra_info": "",
+        "reviewable_id": 718,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7710",
+      "type": "study_question",
+      "attributes": {
+        "id": 7710,
+        "content": "いいえ、<span class='study-area-input'>____</span>し<span class='gp-popout' data-gp-id='27'>てい<strong>ません</strong></span><span class='gp-popout' data-gp-id='78'>よ</span>。",
+        "answer": "なにも",
+        "alternate_grammar": [
+          "なにも",
+          "なんにも"
+        ],
+        "kanji_answer": "なにも",
+        "kanji_alt_grammar": [
+          "なにも",
+          "なんにも"
+        ],
+        "nuance": "(A)が存在（そんざい）する、または存在（そんざい）しないことを表（あらわ）すときに使（つか）われる表現（ひょうげん）。<strong>無（な）い、又（また）は、どれでもよい</strong>という意味（いみ）で使（つか）われることが多（おお）い。",
+        "tense": "Extent, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/718/male_audio/02-いいえ何もしてませんよ.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/いいえ、なにもしていませんよ。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なんでも": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "なんも": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "ぜんぜん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "No, I <strong>didn't</strong> do <strong>anything</strong> (wrong).",
+        "nuance_translation": "A phrase highlighting that <strong>even whatever</strong> (A), or <strong>whatever uncertain</strong> (A) either exist or do not. Often coming across as <strong>something, nothing, or anything</strong>.",
+        "extra_info": "",
+        "reviewable_id": 718,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7715",
+      "type": "study_question",
+      "attributes": {
+        "id": 7715,
+        "content": "お腹（なか）<span class='gp-popout' data-gp-id='10'>が</span>空（す）いていない<span class='gp-popout' data-gp-id='62'>ので</span>、<span class='study-area-input'>____</span>食（た）べ<span class='gp-popout' data-gp-id='59'>たく<strong>ない</strong></span><span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "なにも",
+        "alternate_grammar": [
+          "なにも",
+          "なんにも"
+        ],
+        "kanji_answer": "なにも",
+        "kanji_alt_grammar": [
+          "なにも",
+          "なんにも"
+        ],
+        "nuance": "(A)が存在（そんざい）する、または存在（そんざい）しないことを表（あらわ）すときに使（つか）われる表現（ひょうげん）。<strong>無（な）い、又（また）は、どれでもよい</strong>という意味（いみ）で使（つか）われることが多（おお）い。",
+        "tense": "Extent, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/718/male_audio/03-お腹が空いていないので何も食べたくないです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/お腹が空いていないので、なにも食べたくないです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なんでも": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "なんも": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "ぜんぜん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Since I am not hungry, I <strong>don't</strong> want to eat <strong>anything</strong>.",
+        "nuance_translation": "A phrase highlighting that <strong>even whatever</strong> (A), or <strong>whatever uncertain</strong> (A) either exist or do not. Often coming across as <strong>something, nothing, or anything</strong>.",
+        "extra_info": "",
+        "reviewable_id": 718,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7720",
+      "type": "study_question",
+      "attributes": {
+        "id": 7720,
+        "content": "「彼（かれ）<span class='gp-popout' data-gp-id='3'>は</span>箱（はこ）<span class='gp-popout' data-gp-id='6'>の</span>中（なか）<span class='gp-popout' data-gp-id='52'>から</span><strong>何（なに）か</strong>取（と）り出（だ）<span class='gp-popout' data-gp-id='41'>した</span>。」<br>「えっ？僕（ぼく）<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>見（み）<span class='gp-popout' data-gp-id='27'>てい<strong>ない</strong></span><span class='gp-popout' data-gp-id='78'>よ</span>。」",
+        "answer": "なにも",
+        "alternate_grammar": [
+          "なにも",
+          "なんも",
+          "なんにも"
+        ],
+        "kanji_answer": "なにも",
+        "kanji_alt_grammar": [
+          "なにも",
+          "なんも",
+          "なんにも"
+        ],
+        "nuance": "(A)が存在（そんざい）する、または存在（そんざい）しないことを表（あらわ）すときに使（つか）われる表現（ひょうげん）。<strong>無（な）い、又（また）は、どれでもよい</strong>という意味（いみ）で使（つか）われることが多（おお）い。",
+        "tense": "Extent, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/718/male_audio/08-彼は箱の中から何か取り出した.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/「彼は箱の中から何か取り出した。」「えっ？僕はなにも見ていないよ。」.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なんでも": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "ぜんぜん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "'He took <strong>something</strong> out of the box.'<br>'Huh? I <strong>didn't</strong> see <strong>anything</strong>.'",
+        "nuance_translation": "A phrase highlighting that <strong>even whatever</strong> (A), or <strong>whatever uncertain</strong> (A) either exist or do not. Often coming across as <strong>something, nothing, or anything</strong>.",
+        "extra_info": "",
+        "reviewable_id": 718,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7711",
+      "type": "study_question",
+      "attributes": {
+        "id": 7711,
+        "content": "日本（にほん）に行（い）っ<span class='gp-popout' data-gp-id='770'>て</span>、<span class='study-area-input'>____</span>食（た）べ<span class='gp-popout' data-gp-id='59'>たい</span>もの<span class='gp-popout' data-gp-id='13'>があります</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "なにか",
+        "alternate_grammar": [
+          "なにか",
+          "なんにか"
+        ],
+        "kanji_answer": "なにか",
+        "kanji_alt_grammar": [
+          "なにか",
+          "なんにか"
+        ],
+        "nuance": "(A)が存在（そんざい）する、または存在（そんざい）しないことを表（あらわ）すときに使（つか）われる表現（ひょうげん）。<strong>無（な）い、又（また）は、どれでもよい</strong>という意味（いみ）で使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/718/male_audio/10-日本に行って何か食べたいものがありますか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/日本に行って、なにか食べたいものがありますか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なんか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "When you go to Japan, is there <strong>something</strong> that you want to eat?",
+        "nuance_translation": "A phrase highlighting that <strong>even whatever</strong> (A), or <strong>whatever uncertain</strong> (A) either exist or do not. Often coming across as <strong>something, nothing, or anything</strong>.",
+        "extra_info": "",
+        "reviewable_id": 718,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7714",
+      "type": "study_question",
+      "attributes": {
+        "id": 7714,
+        "content": "<span class='study-area-input'>____</span>食（た）べ<span class='gp-popout' data-gp-id='12'>る</span>？",
+        "answer": "なにか",
+        "alternate_grammar": [
+          "なにか",
+          "なんか",
+          "なんにか"
+        ],
+        "kanji_answer": "なにか",
+        "kanji_alt_grammar": [
+          "なにか",
+          "なんか",
+          "なんにか"
+        ],
+        "nuance": "(A)が存在（そんざい）する、または存在（そんざい）しないことを表（あらわ）すときに使（つか）われる表現（ひょうげん）。<strong>無（な）い、又（また）は、どれでもよい</strong>という意味（いみ）で使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/718/male_audio/05-何か食べる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/なにか食べる.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なんか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Do you want to eat <strong>something</strong>?",
+        "nuance_translation": "A phrase highlighting that <strong>even whatever</strong> (A), or <strong>whatever uncertain</strong> (A) either exist or do not. Often coming across as <strong>something, nothing, or anything</strong>.",
+        "extra_info": "",
+        "reviewable_id": 718,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7709",
+      "type": "study_question",
+      "attributes": {
+        "id": 7709,
+        "content": "私（わたし）<span class='gp-popout' data-gp-id='10'>が</span><span class='study-area-input'>____</span>嫌（いや）<span class='gp-popout' data-gp-id='28'>な</span>こと<span class='gp-popout' data-gp-id='21'>を</span>し<span class='gp-popout' data-gp-id='41'>ました</span><span class='gp-popout' data-gp-id='8'>か</span>？",
+        "answer": "なにか",
+        "alternate_grammar": [
+          "なにか",
+          "なんにか"
+        ],
+        "kanji_answer": "なにか",
+        "kanji_alt_grammar": [
+          "なにか",
+          "なんにか"
+        ],
+        "nuance": "(A)が存在（そんざい）する、または存在（そんざい）しないことを表（あらわ）すときに使（つか）われる表現（ひょうげん）。<strong>無（な）い、又（また）は、どれでもよい</strong>という意味（いみ）で使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/718/male_audio/12-私が何かいやなことをしましたか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/私がなにか嫌な ことをしましたか？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なんか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Did I do <strong>something</strong> you didn't like?",
+        "nuance_translation": "A phrase highlighting that <strong>even whatever</strong> (A), or <strong>whatever uncertain</strong> (A) either exist or do not. Often coming across as <strong>something, nothing, or anything</strong>.",
+        "extra_info": "",
+        "reviewable_id": 718,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7712",
+      "type": "study_question",
+      "attributes": {
+        "id": 7712,
+        "content": "頑張（がんば）っ<span class='gp-popout' data-gp-id='26'>て</span>勉強（べんきょう）<span class='gp-popout' data-gp-id='41'>した</span><span class='gp-popout' data-gp-id='361'>けど</span><span class='study-area-input'>____</span>わから<strong>ない</strong>。",
+        "answer": "なにも",
+        "alternate_grammar": [
+          "なにも",
+          "なんも",
+          "なんにも"
+        ],
+        "kanji_answer": "なにも",
+        "kanji_alt_grammar": [
+          "なにも",
+          "なんも",
+          "なんにも"
+        ],
+        "nuance": "(A)が存在（そんざい）する、または存在（そんざい）しないことを表（あらわ）すときに使（つか）われる表現（ひょうげん）。<strong>無（な）い、又（また）は、どれでもよい</strong>という意味（いみ）で使（つか）われることが多（おお）い。",
+        "tense": "Extent, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/718/male_audio/13-頑張って勉強したけど何もわからない.mp3",
+        "female_audio_url": "",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なんでも": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "ぜんぜん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I studied diligently, but I <strong>don't</strong> understand <strong>anything</strong>.",
+        "nuance_translation": "A phrase highlighting that <strong>even whatever</strong> (A), or <strong>whatever uncertain</strong> (A) either exist or do not. Often coming across as <strong>something, nothing, or anything</strong>.",
+        "extra_info": "",
+        "reviewable_id": 718,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7716",
+      "type": "study_question",
+      "attributes": {
+        "id": 7716,
+        "content": "<span class='gp-popout' data-gp-id='47'>あの</span>レストラン<span class='gp-popout' data-gp-id='6'>の</span>料理（りょうり）<span class='gp-popout' data-gp-id='3'>は</span><span class='study-area-input'>____</span>美味（おい）しく<strong><span class='gp-popout' data-gp-id='873'>ない</span></strong><span class='gp-popout' data-gp-id='9'>でしょう</span>。",
+        "answer": "なにも",
+        "alternate_grammar": [
+          "なにも",
+          "なんにも"
+        ],
+        "kanji_answer": "なにも",
+        "kanji_alt_grammar": [
+          "なにも",
+          "なんにも"
+        ],
+        "nuance": "(A)が存在（そんざい）する、または存在（そんざい）しないことを表（あらわ）すときに使（つか）われる表現（ひょうげん）。<strong>無（な）い、又（また）は、どれでもよい</strong>という意味（いみ）で使（つか）われることが多（おお）い。",
+        "tense": "Extent, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/718/male_audio/01-あのレストランの料理.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あのレストランの料理はなにも美味しくないでしょう。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なんでも": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "なんも": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "ぜんぜん": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "There is <strong>nothing</strong> good at that restaurant, right?",
+        "nuance_translation": "A phrase highlighting that <strong>even whatever</strong> (A), or <strong>whatever uncertain</strong> (A) either exist or do not. Often coming across as <strong>something, nothing, or anything</strong>.",
+        "extra_info": "",
+        "reviewable_id": 718,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7718",
+      "type": "study_question",
+      "attributes": {
+        "id": 7718,
+        "content": "大学生（だいがくせい）<span class='gp-popout' data-gp-id='6'>の</span>時（とき）に<span class='study-area-input'>____</span>スポーツ<span class='gp-popout' data-gp-id='21'>を</span>してい<span class='gp-popout' data-gp-id='41'>ました</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "なにか",
+        "alternate_grammar": [
+          "なにか",
+          "なんにか"
+        ],
+        "kanji_answer": "なにか",
+        "kanji_alt_grammar": [
+          "なにか",
+          "なんにか"
+        ],
+        "nuance": "(A)が存在（そんざい）する、または存在（そんざい）しないことを表（あらわ）すときに使（つか）われる表現（ひょうげん）。<strong>無（な）い、又（また）は、どれでもよい</strong>という意味（いみ）で使（つか）われることが多（おお）い。",
+        "tense": "Interrogative, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson8/718/male_audio/06-大学生の時に何かスポーツをしていましたか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/大学生の時になにかスポーツをしていましたか。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なんか": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Did you do <strong>any (kind of)</strong> sports when you were in college?",
+        "nuance_translation": "A phrase highlighting that <strong>even whatever</strong> (A), or <strong>whatever uncertain</strong> (A) either exist or do not. Often coming across as <strong>something, nothing, or anything</strong>.",
+        "extra_info": "",
+        "reviewable_id": 718,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "100",
+      "type": "writeup",
+      "attributes": {
+        "id": 100,
+        "body_ja": null,
+        "body": "<p><span data-gp-id='718'>何（なに）か</span> and <span data-gp-id='718'>何（なに）も</span> are constructions that are used in Japanese for expressing 'something', 'anything', or 'nothing'. The main difference between the two being that <span data-gp-id='718'>何（なに）も</span> is used with negative phrases (phrases that use <span data-gp-id='873'>ない</span> or <span data-gp-id='888'>ありません</span>), while <span data-gp-id='718'>何（なに）か</span> is used in other cases.</p>\r\n\r\n<p>To use this expression, we simply need to put <span data-gp-id='718'>何（なに）か</span> or <span data-gp-id='718'>何（なに）も</span> before the desired phrase.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155086'>\r\n<li data-study-question='155087'></ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>There are several casual forms of these expressions that are used in speech, or in certain dialects. These forms are <span data-gp-id='718'>なんにか</span>, <span data-gp-id='718'>なんか</span>, or <span data-gp-id='718'>なんにも</span>, <span data-gp-id='718'>なんも</span>.</p></section>"
+      }
+    },
+    {
+      "id": "924",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 924,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 196",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "948",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 948,
+        "source": "みんなの日本語 I",
+        "location": "Page 87 [CH 13]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1275",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1275,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 100",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1563",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1563,
+        "site": "Maggie Sensei",
+        "description": "How to use なんか",
+        "link": "https://maggiesensei.com/2018/01/10/how-to-use-%E3%81%AA%E3%82%93%E3%81%8B-nanka/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1564",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1564,
+        "site": "Japanese StackExchange",
+        "description": "Difference between 何も and 何でも",
+        "link": "https://japanese.stackexchange.com/questions/30451/difference-between-%E4%BD%95%E3%82%82-and-%E4%BD%95%E3%81%A7%E3%82%82",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2109",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2109,
+        "site": "Tae Kim",
+        "description": "Using question words",
+        "link": "https://guidetojapanese.org/learn/grammar/question",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1374",
+      "type": "related_content",
+      "attributes": {
+        "id": 1374,
+        "relationship_type": "related",
+        "body": "The なにか・なにも pattern combines the question word なに with particles to express ideas like 'something' or 'nothing.' でもなんでもない is a variation of なんでも used after a noun to emphasize 'not A or anything like it.' It can be used with both positive (迷惑でもなんでもない = 'It's not a bother or anything') and negative (好きでもなんでもない = 'I don't like it or anything') nuance.",
+        "first_relatable": {
+          "id": 718,
+          "slug": "なにか-なにも",
+          "title": "なにか・なにも",
+          "meaning": "Something, Nothing, Anything, Not anything, Some kind of, Not any kind of",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 833,
+          "slug": "でもなんでもない",
+          "title": "でもなんでもない",
+          "meaning": "Not at all, By no means, Definitely not, Nothing like that, Not really",
+          "level": "JLPT1",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1373",
+      "type": "related_content",
+      "attributes": {
+        "id": 1373,
+        "relationship_type": "related",
+        "body": "Both なにか・なにも and 誰か・どこか・誰も・どこも combine question words (like なに, 誰, どこ) with particles to express ideas such as 'something,' 'nothing,' 'someone,' or 'somewhere.' Their meanings shift depending on whether the sentence is affirmative or negative.",
+        "first_relatable": {
+          "id": 718,
+          "slug": "なにか-なにも",
+          "title": "なにか・なにも",
+          "meaning": "Something, Nothing, Anything, Not anything, Some kind of, Not any kind of",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 721,
+          "slug": "誰か-どこか-誰も-どこも",
+          "title": "誰か・どこか・誰も・どこも",
+          "meaning": "Someone, Somewhere, Not anyone, Not anywhere",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1375",
+      "type": "related_content",
+      "attributes": {
+        "id": 1375,
+        "relationship_type": "related",
+        "body": "The なにか・なにも pattern combines the question word なに with particles to express ideas like 'something' or 'nothing.' This structure is based on how the particle か is used with question words within a sentence. For example, 何が食べたいか分かりますか？ means 'Do you know what (they) want to eat?'",
+        "first_relatable": {
+          "id": 718,
+          "slug": "なにか-なにも",
+          "title": "なにか・なにも",
+          "meaning": "Something, Nothing, Anything, Not anything, Some kind of, Not any kind of",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 727,
+          "slug": "question-phrase-か",
+          "title": "Question-phrase + か",
+          "meaning": "Including questions within sentences",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

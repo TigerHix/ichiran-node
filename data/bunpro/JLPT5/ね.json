@@ -1,0 +1,1097 @@
+{
+  "data": {
+    "id": "71",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 71,
+      "level": "JLPT5",
+      "lesson_id": 2,
+      "part_of_speech": "助詞",
+      "register": "一般",
+      "word_type": "終助詞",
+      "slug": "ね",
+      "nuance": "誰（だれ）かの<strong>意見（いけん）に賛成（さんせい）だということをフレンドリー</strong>に表（あらわ）したいときに使（つか）う<strong>助詞（じょし）</strong>。",
+      "grammar_order": 15,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 12,
+        "title": "る-Verb (Dictionary)",
+        "slug": "る-Verbs"
+      },
+      "previous_grammar_point": {
+        "id": 78,
+        "title": "よ",
+        "slug": "よ"
+      },
+      "lesson_count": "3/13",
+      "title": "ね",
+      "furigana": "ね",
+      "meaning": "Isn't it?, Right? (Sentence ending particle) ",
+      "nuance_translation": "A <strong>particle</strong> that is often used as a <strong>friendly way to agree</strong> with someone.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Sentence + <strong>ね</strong>",
+      "part_of_speech_translation": "Particle",
+      "register_translation": "Standard",
+      "word_type_translation": "Sentence Ending Particle",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/1162",
+      "metadata": "ね, ねえ, ne, particle, sentence-ending particle, agreement, confirmation, shared opinion, shared thought"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154736",
+            "type": "study_question"
+          },
+          {
+            "id": "154735",
+            "type": "study_question"
+          },
+          {
+            "id": "154739",
+            "type": "study_question"
+          },
+          {
+            "id": "154740",
+            "type": "study_question"
+          },
+          {
+            "id": "2112",
+            "type": "study_question"
+          },
+          {
+            "id": "2116",
+            "type": "study_question"
+          },
+          {
+            "id": "154737",
+            "type": "study_question"
+          },
+          {
+            "id": "183756",
+            "type": "study_question"
+          },
+          {
+            "id": "154738",
+            "type": "study_question"
+          },
+          {
+            "id": "765",
+            "type": "study_question"
+          },
+          {
+            "id": "71",
+            "type": "study_question"
+          },
+          {
+            "id": "2110",
+            "type": "study_question"
+          },
+          {
+            "id": "2111",
+            "type": "study_question"
+          },
+          {
+            "id": "2113",
+            "type": "study_question"
+          },
+          {
+            "id": "2114",
+            "type": "study_question"
+          },
+          {
+            "id": "2115",
+            "type": "study_question"
+          },
+          {
+            "id": "2117",
+            "type": "study_question"
+          },
+          {
+            "id": "2109",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "15",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "792",
+            "type": "offline_resource"
+          },
+          {
+            "id": "17",
+            "type": "offline_resource"
+          },
+          {
+            "id": "79",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1123",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1264",
+            "type": "offline_resource"
+          },
+          {
+            "id": "163",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "66",
+            "type": "related_content"
+          },
+          {
+            "id": "38",
+            "type": "related_content"
+          },
+          {
+            "id": "1330",
+            "type": "related_content"
+          },
+          {
+            "id": "283",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "151",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "152",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154736",
+      "type": "study_question",
+      "attributes": {
+        "id": 154736,
+        "content": "今日（きょう）<span class=\"gp-popout\" data-gp-id=\"4\">も</span>暑（あつ）<span class=\"gp-popout\" data-gp-id=\"24\">い</span><span class='study-area-input'>____</span>。",
+        "answer": "ね",
+        "alternate_grammar": [],
+        "kanji_answer": "ね",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/今日も暑いね。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It's hot today too, <strong>isn't it?</strong>",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154735",
+      "type": "study_question",
+      "attributes": {
+        "id": 154735,
+        "content": "仕事（しごと）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>疲（つか）れる<span class='study-area-input'>____</span>。",
+        "answer": "ね",
+        "alternate_grammar": [],
+        "kanji_answer": "ね",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/仕事は疲れるね。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Work is tiring, <strong>isn't it?</strong>",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154739",
+      "type": "study_question",
+      "attributes": {
+        "id": 154739,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"5\">これ</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span>辛（から）<span class=\"gp-popout\" data-gp-id=\"24\">い</span><span class='study-area-input'>____</span>。",
+        "answer": "ね",
+        "alternate_grammar": [],
+        "kanji_answer": "ね",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これは辛いね。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This is spicy, <strong>don't you think?</strong> (You and your friend are at a curry restaurant. After taking your first mouthful, you turn to your friend and say this, because you think they would agree)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154740",
+      "type": "study_question",
+      "attributes": {
+        "id": 154740,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"5\">これ</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span>辛（から）<span class=\"gp-popout\" data-gp-id=\"24\">い</span><span class=\"gp-popout\" data-gp-id=\"66\">な</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これは辛いな。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This is spicy, <strong>yeah?</strong> (You and your friend are at a curry restaurant. After taking your first mouthful, you notice that it is spicier than usual. You turn to your friend and say this, because you want them to know that you feel this way)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2112",
+      "type": "study_question",
+      "attributes": {
+        "id": 2112,
+        "content": "先生（せんせい）<span class='gp-popout' data-gp-id='6'>の</span><span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。︎",
+        "answer": "ね",
+        "alternate_grammar": [],
+        "kanji_answer": "ね",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かの<strong>意見（いけん）に賛成（さんせい）だということをフレンドリー</strong>に表（あらわ）したいときに使（つか）う<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/71/male_audio/11-先生のですね.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/先生のですね。︎.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だろう": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "でしょう": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This is the teacher's, <strong>right?</strong>",
+        "nuance_translation": "A <strong>particle</strong> that is often used as a <strong>friendly way to agree</strong> with someone.",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2116",
+      "type": "study_question",
+      "attributes": {
+        "id": 2116,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='4'>も</span>美味（おい）し<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。",
+        "answer": "ね",
+        "alternate_grammar": [],
+        "kanji_answer": "ね",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かの<strong>意見（いけん）に賛成（さんせい）だということをフレンドリー</strong>に表（あらわ）したいときに使（つか）う<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/71/male_audio/07-これもおいしいですね.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これも美味しいですね。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でしょう": {
+            "en": "How about expanding the base grammar pattern to include the extra nuance within the translation?",
+            "es": "¿Qué tal si desarrollas el patrón gramatical básico para incluir el matiz adicional en la traducción?",
+            "fr": "Et si vous élargissiez la structure grammaticale de base pour inclure la nuance supplémentaire dans la traduction ?",
+            "id": "Bagaimana kalau memperluas pola dasar tata bahasanya agar nuansa tambahannya ikut tercakup dalam terjemahan?"
+          },
+          "だろう": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This also tastes good, <strong>doesn't it?</strong>",
+        "nuance_translation": "A <strong>particle</strong> that is often used as a <strong>friendly way to agree</strong> with someone.",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154737",
+      "type": "study_question",
+      "attributes": {
+        "id": 154737,
+        "content": "あれ<span class=\"gp-popout\" data-gp-id=\"3\">は</span>綺麗（きれい）<span class=\"gp-popout\" data-gp-id=\"1\">だ</span><span class='study-area-input'>____</span>。",
+        "answer": "ね",
+        "alternate_grammar": [],
+        "kanji_answer": "ね",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれは綺麗だね。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "That is pretty, <strong>isn't it?</strong>",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "183756",
+      "type": "study_question",
+      "attributes": {
+        "id": 183756,
+        "content": "松下（まつした）さん<span data-gp-id='3'>は</span>かわい<span data-gp-id='24'>い</span><span data-gp-id='78'>よ</span><span data-gp-id='71'>ね</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Matsushita-san is cute, isn't she?",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154738",
+      "type": "study_question",
+      "attributes": {
+        "id": 154738,
+        "content": "今日（きょう）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>寒（さむ）<span class=\"gp-popout\" data-gp-id=\"24\">い</span><span class=\"gp-popout\" data-gp-id=\"2\">です</span><span class='study-area-input'>____</span>。",
+        "answer": "ね",
+        "alternate_grammar": [],
+        "kanji_answer": "ね",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/今日は寒いですね。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "It's cold today, <strong>isn't it?</strong>",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "765",
+      "type": "study_question",
+      "attributes": {
+        "id": 765,
+        "content": "<span class='gp-popout' data-gp-id='7'>いい</span><span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。",
+        "answer": "ね",
+        "alternate_grammar": [],
+        "kanji_answer": "ね",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かの<strong>意見（いけん）に賛成（さんせい）だということをフレンドリー</strong>に表（あらわ）したいときに使（つか）う<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/71/male_audio/01-いいですね.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/いいですね。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でしょう": {
+            "en": "How about expanding the base grammar pattern to include the extra nuance within the translation?",
+            "es": "¿Qué tal si desarrollas el patrón gramatical básico para incluir el matiz adicional en la traducción?",
+            "fr": "Et si vous élargissiez la structure grammaticale de base pour inclure la nuance supplémentaire dans la traduction ?",
+            "id": "Bagaimana kalau memperluas pola dasar tata bahasanya agar nuansa tambahannya ikut tercakup dalam terjemahan?"
+          },
+          "だろう": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That's good <strong>right?</strong>",
+        "nuance_translation": "A <strong>particle</strong> that is often used as a <strong>friendly way to agree</strong> with someone.",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "71",
+      "type": "study_question",
+      "attributes": {
+        "id": 71,
+        "content": "美味（おい）しい<span class='study-area-input'>____</span>。",
+        "answer": "ね",
+        "alternate_grammar": [
+          "ですね",
+          "ね"
+        ],
+        "kanji_answer": "ね",
+        "kanji_alt_grammar": [
+          "ですね",
+          "ね"
+        ],
+        "nuance": "誰（だれ）かの<strong>意見（いけん）に賛成（さんせい）だということをフレンドリー</strong>に表（あらわ）したいときに使（つか）う<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/71/male_audio/13-美味しいね.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/美味しいね。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だろう": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "でしょう": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It's delicious, <strong>right?</strong>",
+        "nuance_translation": "A <strong>particle</strong> that is often used as a <strong>friendly way to agree</strong> with someone.",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2110",
+      "type": "study_question",
+      "attributes": {
+        "id": 2110,
+        "content": "<span class='gp-popout' data-gp-id='7'>いい</span>質問（しつもん）<span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。",
+        "answer": "ね",
+        "alternate_grammar": [],
+        "kanji_answer": "ね",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かの<strong>意見（いけん）に賛成（さんせい）だということをフレンドリー</strong>に表（あらわ）したいときに使（つか）う<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/71/male_audio/02-いい質問ですね (2).mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/いい質問ですね。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だろう": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "でしょう": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That is a good question, <strong>right?</strong>",
+        "nuance_translation": "A <strong>particle</strong> that is often used as a <strong>friendly way to agree</strong> with someone.",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2111",
+      "type": "study_question",
+      "attributes": {
+        "id": 2111,
+        "content": "自転車（じてんしゃ）<span class='gp-popout' data-gp-id='3'>は</span><span class='gp-popout' data-gp-id='7'>いい</span><span class='study-area-input'>____</span>。︎",
+        "answer": "ね",
+        "alternate_grammar": [
+          "ですね",
+          "ね"
+        ],
+        "kanji_answer": "ね",
+        "kanji_alt_grammar": [
+          "ですね",
+          "ね"
+        ],
+        "nuance": "誰（だれ）かの<strong>意見（いけん）に賛成（さんせい）だということをフレンドリー</strong>に表（あらわ）したいときに使（つか）う<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/71/male_audio/14-自転車はいいね.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/自転車はいいね。︎.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でしょう": {
+            "en": "How about expanding the base grammar pattern to include the extra nuance within the translation?",
+            "es": "¿Qué tal si desarrollas el patrón gramatical básico para incluir el matiz adicional en la traducción?",
+            "fr": "Et si vous élargissiez la structure grammaticale de base pour inclure la nuance supplémentaire dans la traduction ?",
+            "id": "Bagaimana kalau memperluas pola dasar tata bahasanya agar nuansa tambahannya ikut tercakup dalam terjemahan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Bicycles are nice, <strong>aren't they?</strong>",
+        "nuance_translation": "A <strong>particle</strong> that is often used as a <strong>friendly way to agree</strong> with someone.",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2113",
+      "type": "study_question",
+      "attributes": {
+        "id": 2113,
+        "content": "今日（きょう）<span class='gp-popout' data-gp-id='4'>も</span>忙（いそが）し<span class='gp-popout' data-gp-id='24'>い</span><span class='study-area-input'>____</span>。︎",
+        "answer": "ね",
+        "alternate_grammar": [
+          "ですね",
+          "ね"
+        ],
+        "kanji_answer": "ね",
+        "kanji_alt_grammar": [
+          "ですね",
+          "ね"
+        ],
+        "nuance": "誰（だれ）かの<strong>意見（いけん）に賛成（さんせい）だということをフレンドリー</strong>に表（あらわ）したいときに使（つか）う<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/71/male_audio/10-今日も忙しいね.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/今日も忙しいね。︎.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でしょう": {
+            "en": "How about expanding the base grammar pattern to include the extra nuance within the translation?",
+            "es": "¿Qué tal si desarrollas el patrón gramatical básico para incluir el matiz adicional en la traducción?",
+            "fr": "Et si vous élargissiez la structure grammaticale de base pour inclure la nuance supplémentaire dans la traduction ?",
+            "id": "Bagaimana kalau memperluas pola dasar tata bahasanya agar nuansa tambahannya ikut tercakup dalam terjemahan?"
+          },
+          "だろう": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It is also busy today, <strong>isn't it!</strong>",
+        "nuance_translation": "A <strong>particle</strong> that is often used as a <strong>friendly way to agree</strong> with someone.",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2114",
+      "type": "study_question",
+      "attributes": {
+        "id": 2114,
+        "content": "楽（たの）し<span class='gp-popout' data-gp-id='24'>い</span><span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。︎",
+        "answer": "ね",
+        "alternate_grammar": [],
+        "kanji_answer": "ね",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かの<strong>意見（いけん）に賛成（さんせい）だということをフレンドリー</strong>に表（あらわ）したいときに使（つか）う<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/71/male_audio/12-楽しいですね.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/楽しいですね。︎.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でしょう": {
+            "en": "How about expanding the base grammar pattern to include the extra nuance within the translation?",
+            "es": "¿Qué tal si desarrollas el patrón gramatical básico para incluir el matiz adicional en la traducción?",
+            "fr": "Et si vous élargissiez la structure grammaticale de base pour inclure la nuance supplémentaire dans la traduction ?",
+            "id": "Bagaimana kalau memperluas pola dasar tata bahasanya agar nuansa tambahannya ikut tercakup dalam terjemahan?"
+          },
+          "だろう": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It is fun, <strong>isn't it!</strong>",
+        "nuance_translation": "A <strong>particle</strong> that is often used as a <strong>friendly way to agree</strong> with someone.",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2115",
+      "type": "study_question",
+      "attributes": {
+        "id": 2115,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span><span class='gp-popout' data-gp-id='3'>は</span>まずい<span class='gp-popout' data-gp-id='2'>です</span><span class='study-area-input'>____</span>。︎",
+        "answer": "ね",
+        "alternate_grammar": [],
+        "kanji_answer": "ね",
+        "kanji_alt_grammar": [],
+        "nuance": "誰（だれ）かの<strong>意見（いけん）に賛成（さんせい）だということをフレンドリー</strong>に表（あらわ）したいときに使（つか）う<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/71/male_audio/05-これはまずいですね.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これはまずいですね。︎.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "だろう": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          },
+          "でしょう": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This tastes bad, <strong>doesn't it?</strong>",
+        "nuance_translation": "A <strong>particle</strong> that is often used as a <strong>friendly way to agree</strong> with someone.",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2117",
+      "type": "study_question",
+      "attributes": {
+        "id": 2117,
+        "content": "<span class='gp-popout' data-gp-id='5'>これ</span>は美味（おい）し<span class='gp-popout' data-gp-id='24'>い</span><span class='study-area-input'>____</span>。︎",
+        "answer": "ね",
+        "alternate_grammar": [
+          "ですね",
+          "ね"
+        ],
+        "kanji_answer": "ね",
+        "kanji_alt_grammar": [
+          "ですね",
+          "ね"
+        ],
+        "nuance": "誰（だれ）かの<strong>意見（いけん）に賛成（さんせい）だということをフレンドリー</strong>に表（あらわ）したいときに使（つか）う<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/71/male_audio/04-これはおいしいね.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/これは美味しいね。︎.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でしょう": {
+            "en": "How about expanding the base grammar pattern to include the extra nuance within the translation?",
+            "es": "¿Qué tal si desarrollas el patrón gramatical básico para incluir el matiz adicional en la traducción?",
+            "fr": "Et si vous élargissiez la structure grammaticale de base pour inclure la nuance supplémentaire dans la traduction ?",
+            "id": "Bagaimana kalau memperluas pola dasar tata bahasanya agar nuansa tambahannya ikut tercakup dalam terjemahan?"
+          },
+          "だろう": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "This is delicious <strong>right?</strong>",
+        "nuance_translation": "A <strong>particle</strong> that is often used as a <strong>friendly way to agree</strong> with someone.",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2109",
+      "type": "study_question",
+      "attributes": {
+        "id": 2109,
+        "content": "寒（さむ）<span class='gp-popout' data-gp-id='24'>い</span><span class='study-area-input'>____</span>！",
+        "answer": "ね",
+        "alternate_grammar": [
+          "ですね",
+          "ね"
+        ],
+        "kanji_answer": "ね",
+        "kanji_alt_grammar": [
+          "ですね",
+          "ね"
+        ],
+        "nuance": "誰（だれ）かの<strong>意見（いけん）に賛成（さんせい）だということをフレンドリー</strong>に表（あらわ）したいときに使（つか）う<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Confirming",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/71/male_audio/08-さむいね.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/寒いね！.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "でしょう": {
+            "en": "How about expanding the base grammar pattern to include the extra nuance within the translation?",
+            "es": "¿Qué tal si desarrollas el patrón gramatical básico para incluir el matiz adicional en la traducción?",
+            "fr": "Et si vous élargissiez la structure grammaticale de base pour inclure la nuance supplémentaire dans la traduction ?",
+            "id": "Bagaimana kalau memperluas pola dasar tata bahasanya agar nuansa tambahannya ikut tercakup dalam terjemahan?"
+          },
+          "だろう": {
+            "en": "How about a grammar pattern that is a bit more polite?",
+            "es": "Intenta usar un tono un poco más formal.",
+            "fr": "Et si vous utilisiez une structure grammaticale un peu plus polie ?",
+            "id": "Bagaimana dengan pola tata bahasa yang sedikit lebih sopan?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "It is cold, <strong>isn't it!</strong>",
+        "nuance_translation": "A <strong>particle</strong> that is often used as a <strong>friendly way to agree</strong> with someone.",
+        "extra_info": "",
+        "reviewable_id": 71,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "15",
+      "type": "writeup",
+      "attributes": {
+        "id": 15,
+        "body_ja": "",
+        "body": "<p><span data-gp-id='71'>ね</span> is classified as a <span data-term='終助詞・しゅうじょし'>sentence ending particle</span> in Japanese. It may also be pronounced as <span data-gp-id='71'>ねえ</span>. <span data-gp-id='71'>ね</span> is used when the speaker is looking for agreement from someone, or wants confirmation about something. Due to this, it is often translated as 'right?', or 'isn't it?'. To use <span data-gp-id='71'>ね</span>, simply add it to the end of almost any sentence.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154735'>\r\n<li data-study-question='154736'>\r\n<li data-study-question='154737'>\r\n<li data-study-question='154738'></ul>\r\n\r\n<p>As we will cover in our lesson about the sentence ending particle <span data-gp-id='66'>な</span>, <span data-gp-id='71'>ね</span> can almost be thought of as the opposite. <span data-gp-id='71'>ね</span> is used when expressing a shared opinion, a shared thought, or generally something you think will be agreed with by the listener. However, な focuses almost exclusively on the speaker, and their own thoughts.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154739'>\r\n<li data-study-question='154740'></ul>\r\n\r\n<section class='funfact'><h4>Fun Fact</h4>\r\n<p><span data-gp-id='78'>よ</span> and <span data-gp-id='71'>ね</span> are very frequently combined together to make the sentence ender <span data-gp-id='78'>よ</span><span data-gp-id='71'>ね</span>. This is used purely when you expect the listener will agree with you.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='183756'></ul></section>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p><span data-gp-id='71'>ね</span> is much weaker than <span data-gp-id='9'>でしょう</span> or <span data-gp-id='18'>だろう</span>, and is sometimes said purely out of habit, without much nuance of 'right' at all.</p></section>"
+      }
+    },
+    {
+      "id": "792",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 792,
+        "source": "みんなの日本語 I",
+        "location": "Page 32 [CH 4]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "17",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 17,
+        "source": "Genki I",
+        "location": "Page 38",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "79",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 79,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 66",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1123",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1123,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 286",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1264",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1264,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 79",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "163",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 163,
+        "source": "Dictionary of Basic Japanese Grammar",
+        "location": "Page 45",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "151",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 151,
+        "site": "Tae Kim",
+        "description": "「ね」 sentence ending",
+        "link": "https://guidetojapanese.org/learn/complete/ending_particles",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "152",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 152,
+        "site": "FluentU",
+        "description": "The particle 「ね」",
+        "link": "https://www.fluentu.com/blog/japanese/japanese-particles/#toc_11",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "66",
+      "type": "related_content",
+      "attributes": {
+        "id": 66,
+        "relationship_type": "related",
+        "body": "だろう is a form of だ used when the speaker feels uncertain. It's often translated as 'probably,' 'I guess,' or '...right?' when asking a question. In contrast, ね is used to seek confirmation or agreement, often translated as '...isn't it?' These two can combine to express both uncertainty and confirmation, as in 面白いだろうね ('It's probably interesting, isn't it?').",
+        "first_relatable": {
+          "id": 18,
+          "slug": "だろう",
+          "title": "だろう",
+          "meaning": "Right?, Probably, Isn't it?",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 71,
+          "slug": "ね",
+          "title": "ね",
+          "meaning": "Isn't it?, Right? (Sentence ending particle) ",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "38",
+      "type": "related_content",
+      "attributes": {
+        "id": 38,
+        "relationship_type": "related",
+        "body": "でしょう is a form of です used when the speaker is uncertain, often translated as 'probably,' 'I guess,' or '...right?' when asking a question. In contrast, ね is a sentence-ending particle used to seek confirmation or agreement, similar to '...isn't it?' When combined (e.g., 面白いでしょうね), the sentence expresses both uncertainty and a request for agreement: 'It's probably interesting, isn't it?'",
+        "first_relatable": {
+          "id": 9,
+          "slug": "でしょう",
+          "title": "でしょう",
+          "meaning": "Right?, Probably, Isn't it?",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 71,
+          "slug": "ね",
+          "title": "ね",
+          "meaning": "Isn't it?, Right? (Sentence ending particle) ",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1330",
+      "type": "related_content",
+      "attributes": {
+        "id": 1330,
+        "relationship_type": "related",
+        "body": "よ and ね are common sentence-ending particles that add feeling or nuance. よ adds emphasis and is used when giving new information or asserting something (e.g., 面白いですよ = 'It's interesting, I'm telling you!'). ね is used to seek agreement or confirmation (e.g., 面白いですね = 'It's interesting, isn't it?'). When combined as よね, they express both emphasis and a request for agreement.",
+        "first_relatable": {
+          "id": 78,
+          "slug": "よ",
+          "title": "よ",
+          "meaning": "Emphasis (Sentence ending particle)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 71,
+          "slug": "ね",
+          "title": "ね",
+          "meaning": "Isn't it?, Right? (Sentence ending particle) ",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "283",
+      "type": "related_content",
+      "attributes": {
+        "id": 283,
+        "relationship_type": "related",
+        "body": "じゃないか and ね both seek agreement at the end of a sentence, but they have different nuances and levels of politeness. じゃないか is casual and assertive, often strongly insisting on an opinion, and can feel confrontational, making it best suited for use among close friends. In contrast, ね is softer and used widely to seek gentle agreement or confirmation in various contexts.",
+        "first_relatable": {
+          "id": 173,
+          "slug": "じゃないか",
+          "title": "じゃないか",
+          "meaning": "Isn't it?, Is it not?",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 71,
+          "slug": "ね",
+          "title": "ね",
+          "meaning": "Isn't it?, Right? (Sentence ending particle) ",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

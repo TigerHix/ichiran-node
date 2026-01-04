@@ -1,0 +1,941 @@
+{
+  "data": {
+    "id": "21",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 21,
+      "level": "JLPT5",
+      "lesson_id": 2,
+      "part_of_speech": "助詞",
+      "register": "一般",
+      "word_type": "格助詞",
+      "slug": "を",
+      "nuance": "動作（どうさ）の<strong>目的（もくてき）や対象（たいしょう）</strong>を示（しめ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+      "grammar_order": 18,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 1082,
+        "title": "ます",
+        "slug": "polite-verb-endings"
+      },
+      "previous_grammar_point": {
+        "id": 26,
+        "title": "う-Verb (Dictionary)",
+        "slug": "う-Verbs"
+      },
+      "lesson_count": "6/13",
+      "title": "を",
+      "furigana": "を",
+      "meaning": "Object marking particle",
+      "nuance_translation": "A <strong>particle</strong> that expresses the <strong>object</strong> or <strong>target</strong> of actions.",
+      "rare_kanji_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "Object + <strong>を</strong>",
+      "part_of_speech_translation": "Particle",
+      "register_translation": "Standard",
+      "word_type_translation": "Case Marking Particle",
+      "discourse_link": "https://community.bunpro.jp/t/discussion-topic/492",
+      "metadata": "を, wo, particle, case-marking particle, object-marking particle, object marker"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154750",
+            "type": "study_question"
+          },
+          {
+            "id": "654",
+            "type": "study_question"
+          },
+          {
+            "id": "1633",
+            "type": "study_question"
+          },
+          {
+            "id": "154748",
+            "type": "study_question"
+          },
+          {
+            "id": "154749",
+            "type": "study_question"
+          },
+          {
+            "id": "154747",
+            "type": "study_question"
+          },
+          {
+            "id": "21",
+            "type": "study_question"
+          },
+          {
+            "id": "653",
+            "type": "study_question"
+          },
+          {
+            "id": "1632",
+            "type": "study_question"
+          },
+          {
+            "id": "1634",
+            "type": "study_question"
+          },
+          {
+            "id": "1636",
+            "type": "study_question"
+          },
+          {
+            "id": "1637",
+            "type": "study_question"
+          },
+          {
+            "id": "1635",
+            "type": "study_question"
+          },
+          {
+            "id": "652",
+            "type": "study_question"
+          },
+          {
+            "id": "1629",
+            "type": "study_question"
+          },
+          {
+            "id": "1630",
+            "type": "study_question"
+          },
+          {
+            "id": "1631",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "18",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "85",
+            "type": "offline_resource"
+          },
+          {
+            "id": "749",
+            "type": "offline_resource"
+          },
+          {
+            "id": "26",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1140",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1246",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1336",
+            "type": "related_content"
+          },
+          {
+            "id": "1199",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "46",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "45",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1205",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "2204",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154750",
+      "type": "study_question",
+      "attributes": {
+        "id": 154750,
+        "content": "建物（たてもの）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>中（なか）<span class='study-area-input'>____</span>走（はし）<span class=\"gp-popout\" data-gp-id=\"12\">る</span>。",
+        "answer": "を",
+        "alternate_grammar": [],
+        "kanji_answer": "を",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/建物の中を走る。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "To run through a building. (The inside of the building is the object that 'running' is being performed through) (<strong>Object marker</strong>)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 21,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "654",
+      "type": "study_question",
+      "attributes": {
+        "id": 654,
+        "content": "バター<span class='study-area-input'>____</span>食（た）べ<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "を",
+        "alternate_grammar": [],
+        "kanji_answer": "を",
+        "kanji_alt_grammar": [],
+        "nuance": "動作（どうさ）の<strong>目的（もくてき）や対象（たいしょう）</strong>を示（しめ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/21/male_audio/07-バターを食べる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/バターを食べる。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To eat butter. (<strong>object marker</strong>)",
+        "nuance_translation": "A <strong>particle</strong> that expresses the <strong>object</strong> or <strong>target</strong> of actions.",
+        "extra_info": "",
+        "reviewable_id": 21,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1633",
+      "type": "study_question",
+      "attributes": {
+        "id": 1633,
+        "content": "ニュース<span class='study-area-input'>____</span>見（み）<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "を",
+        "alternate_grammar": [],
+        "kanji_answer": "を",
+        "kanji_alt_grammar": [],
+        "nuance": "動作（どうさ）の<strong>目的（もくてき）や対象（たいしょう）</strong>を示（しめ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/21/male_audio/06-ニュースを見る.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ニュースを見る。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To watch the news. (<strong>object marker</strong>)",
+        "nuance_translation": "A <strong>particle</strong> that expresses the <strong>object</strong> or <strong>target</strong> of actions.",
+        "extra_info": "",
+        "reviewable_id": 21,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154748",
+      "type": "study_question",
+      "attributes": {
+        "id": 154748,
+        "content": "歌（うた）<span class='study-area-input'>____</span>歌（うた）<span class=\"gp-popout\" data-gp-id=\"26\">います</span>。",
+        "answer": "を",
+        "alternate_grammar": [],
+        "kanji_answer": "を",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/歌を歌います。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "To sing a song. (<strong>Object marker</strong>)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 21,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154749",
+      "type": "study_question",
+      "attributes": {
+        "id": 154749,
+        "content": "公園（こうえん）<span class='study-area-input'>____</span>歩（ある）<span class=\"gp-popout\" data-gp-id=\"26\">く</span>。",
+        "answer": "を",
+        "alternate_grammar": [],
+        "kanji_answer": "を",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/公園を歩く。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "To walk through a park. (The park is the <span class=\"gp-popout\" data-gp-id=\"21\">object</span> that 'walking' is being performed through) (<strong>Object marker</strong>)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 21,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154747",
+      "type": "study_question",
+      "attributes": {
+        "id": 154747,
+        "content": "ラーメン<span class='study-area-input'>____</span>食（た）べ<span class=\"gp-popout\" data-gp-id=\"12\">る</span>。",
+        "answer": "を",
+        "alternate_grammar": [],
+        "kanji_answer": "を",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ラーメンを食べる。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "To eat ramen. (<strong>Object marker</strong>)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 21,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "21",
+      "type": "study_question",
+      "attributes": {
+        "id": 21,
+        "content": "スポーツ<span class='study-area-input'>____</span>見（み）<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "を",
+        "alternate_grammar": [],
+        "kanji_answer": "を",
+        "kanji_alt_grammar": [],
+        "nuance": "動作（どうさ）の<strong>目的（もくてき）や対象（たいしょう）</strong>を示（しめ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/21/male_audio/03-スポーツを見る.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/スポーツを見る。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To watch sports. (<strong>object marker</strong>)",
+        "nuance_translation": "A <strong>particle</strong> that expresses the <strong>object</strong> or <strong>target</strong> of actions.",
+        "extra_info": "",
+        "reviewable_id": 21,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "653",
+      "type": "study_question",
+      "attributes": {
+        "id": 653,
+        "content": "何（なに）<span class='study-area-input'>____</span>食（た）べ<span class='gp-popout' data-gp-id='12'>ます</span><span class='gp-popout' data-gp-id='8'>か</span>。",
+        "answer": "を",
+        "alternate_grammar": [],
+        "kanji_answer": "を",
+        "kanji_alt_grammar": [],
+        "nuance": "動作（どうさ）の<strong>目的（もくてき）や対象（たいしょう）</strong>を示（しめ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/21/male_audio/08-何を食べますか.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/何を食べますか。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "What will you have to eat? (<strong>object marker</strong>)",
+        "nuance_translation": "A <strong>particle</strong> that expresses the <strong>object</strong> or <strong>target</strong> of actions.",
+        "extra_info": "",
+        "reviewable_id": 21,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1632",
+      "type": "study_question",
+      "attributes": {
+        "id": 1632,
+        "content": "鶏肉（とりにく）<span class='study-area-input'>____</span>食（た）べ<span class='gp-popout' data-gp-id='12'>ます</span>。",
+        "answer": "を",
+        "alternate_grammar": [],
+        "kanji_answer": "を",
+        "kanji_alt_grammar": [],
+        "nuance": "動作（どうさ）の<strong>目的（もくてき）や対象（たいしょう）</strong>を示（しめ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/21/male_audio/13-鶏肉を食べます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/鶏肉を食べます。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To eat chicken. (<strong>object marker</strong>)",
+        "nuance_translation": "A <strong>particle</strong> that expresses the <strong>object</strong> or <strong>target</strong> of actions.",
+        "extra_info": "",
+        "reviewable_id": 21,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1634",
+      "type": "study_question",
+      "attributes": {
+        "id": 1634,
+        "content": "カタカナ<span class='study-area-input'>____</span>覚（おぼ）え<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "を",
+        "alternate_grammar": [],
+        "kanji_answer": "を",
+        "kanji_alt_grammar": [],
+        "nuance": "動作（どうさ）の<strong>目的（もくてき）や対象（たいしょう）</strong>を示（しめ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/21/male_audio/02-カタカナを覚える.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/カタカナを覚える。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To remember katakana. (<strong>object marker</strong>)",
+        "nuance_translation": "A <strong>particle</strong> that expresses the <strong>object</strong> or <strong>target</strong> of actions.",
+        "extra_info": "",
+        "reviewable_id": 21,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1636",
+      "type": "study_question",
+      "attributes": {
+        "id": 1636,
+        "content": "お金（かね）<span class='study-area-input'>____</span>借（か）り<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "を",
+        "alternate_grammar": [],
+        "kanji_answer": "を",
+        "kanji_alt_grammar": [],
+        "nuance": "動作（どうさ）の<strong>目的（もくてき）や対象（たいしょう）</strong>を示（しめ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/21/male_audio/01-お金を借りる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/お金を借りる。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To borrow money. (<strong>object marker</strong>)",
+        "nuance_translation": "A <strong>particle</strong> that expresses the <strong>object</strong> or <strong>target</strong> of actions.",
+        "extra_info": "",
+        "reviewable_id": 21,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1637",
+      "type": "study_question",
+      "attributes": {
+        "id": 1637,
+        "content": "面白（おもしろ）<span class='gp-popout' data-gp-id='24'>い</span>映画（えいが）<span class='study-area-input'>____</span>見（み）<span class='gp-popout' data-gp-id='12'>ます</span>。",
+        "answer": "を",
+        "alternate_grammar": [],
+        "kanji_answer": "を",
+        "kanji_alt_grammar": [],
+        "nuance": "動作（どうさ）の<strong>目的（もくてき）や対象（たいしょう）</strong>を示（しめ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/21/male_audio/12-面白い映画を見ます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/面白い映画を見ます。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To see an entertaining movie. (<strong>object marker</strong>)",
+        "nuance_translation": "A <strong>particle</strong> that expresses the <strong>object</strong> or <strong>target</strong> of actions.",
+        "extra_info": "",
+        "reviewable_id": 21,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1635",
+      "type": "study_question",
+      "attributes": {
+        "id": 1635,
+        "content": "家（いえ）<span class='study-area-input'>____</span>出（で）<span class='gp-popout' data-gp-id='12'>ます</span>。",
+        "answer": "を",
+        "alternate_grammar": [],
+        "kanji_answer": "を",
+        "kanji_alt_grammar": [],
+        "nuance": "動作（どうさ）の<strong>目的（もくてき）や対象（たいしょう）</strong>を示（しめ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/21/male_audio/09-家を出ます.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/家を出ます。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To leave the house. (<strong>object marker</strong>)",
+        "nuance_translation": "A <strong>particle</strong> that expresses the <strong>object</strong> or <strong>target</strong> of actions.",
+        "extra_info": "",
+        "reviewable_id": 21,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "652",
+      "type": "study_question",
+      "attributes": {
+        "id": 652,
+        "content": "漢字（かんじ）<span class='study-area-input'>____</span>覚（おぼ）え<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "を",
+        "alternate_grammar": [],
+        "kanji_answer": "を",
+        "kanji_alt_grammar": [],
+        "nuance": "動作（どうさ）の<strong>目的（もくてき）や対象（たいしょう）</strong>を示（しめ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/21/male_audio/11-漢字を覚える.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/漢字を覚える。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To memorize kanji. (<strong>object marker</strong>)",
+        "nuance_translation": "A <strong>particle</strong> that expresses the <strong>object</strong> or <strong>target</strong> of actions.",
+        "extra_info": "",
+        "reviewable_id": 21,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1629",
+      "type": "study_question",
+      "attributes": {
+        "id": 1629,
+        "content": "時計（とけい）<span class='study-area-input'>____</span>見（み）<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "を",
+        "alternate_grammar": [],
+        "kanji_answer": "を",
+        "kanji_alt_grammar": [],
+        "nuance": "動作（どうさ）の<strong>目的（もくてき）や対象（たいしょう）</strong>を示（しめ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/21/male_audio/10-時計を見る.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/時計を見る。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To look at the clock. (<strong>object marker</strong>)",
+        "nuance_translation": "A <strong>particle</strong> that expresses the <strong>object</strong> or <strong>target</strong> of actions.",
+        "extra_info": "",
+        "reviewable_id": 21,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1630",
+      "type": "study_question",
+      "attributes": {
+        "id": 1630,
+        "content": "テレビ<span class='study-area-input'>____</span>見（み）<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "を",
+        "alternate_grammar": [],
+        "kanji_answer": "を",
+        "kanji_alt_grammar": [],
+        "nuance": "動作（どうさ）の<strong>目的（もくてき）や対象（たいしょう）</strong>を示（しめ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/21/male_audio/04-テレビを見る.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/テレビを見る。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To watch TV. (<strong>object marker</strong>)",
+        "nuance_translation": "A <strong>particle</strong> that expresses the <strong>object</strong> or <strong>target</strong> of actions.",
+        "extra_info": "",
+        "reviewable_id": 21,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1631",
+      "type": "study_question",
+      "attributes": {
+        "id": 1631,
+        "content": "ドア<span class='study-area-input'>____</span>閉（し）め<span class='gp-popout' data-gp-id='12'>る</span>。",
+        "answer": "を",
+        "alternate_grammar": [],
+        "kanji_answer": "を",
+        "kanji_alt_grammar": [],
+        "nuance": "動作（どうさ）の<strong>目的（もくてき）や対象（たいしょう）</strong>を示（しめ）すときに使（つか）われる<strong>助詞（じょし）</strong>。",
+        "tense": "Particle",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson2/21/male_audio/05-ドアを閉める.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ドアを閉める。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "おきります": {
+            "en": "Could you try another way of conjugating this structure?",
+            "es": "¿Podrías intentar conjugar esta estructura de otra manera?",
+            "fr": "Pouvez-vous essayer une autre façon de conjuguer cette structure ?",
+            "id": "Mungkin kamu bisa coba cara konjugasi lain untuk struktur ini?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To close the door. (<strong>object marker</strong>)",
+        "nuance_translation": "A <strong>particle</strong> that expresses the <strong>object</strong> or <strong>target</strong> of actions.",
+        "extra_info": "",
+        "reviewable_id": 21,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "18",
+      "type": "writeup",
+      "attributes": {
+        "id": 18,
+        "body_ja": null,
+        "body": "<p>In Japanese, <span data-gp-id='21'>を</span> is a particle that marks the object of an action. This means that the <span data-gp-id='10'>subject</span> (the person or thing performing an action) is performing that action with the <span data-gp-id='21'>object</span> being the goal/target of the action. In most cases, whatever <span data-gp-id='21'>を</span> is attached to will not actually be 'doing' anything, but will instead have something being done to it.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154747'>\r\n<li data-study-question='154748'></ul>\r\n\r\n<p>In these sentences, <span data-gp-id='21'>を</span> is marking the thing that is having an action performed 'on' it. This is how the Japanese language views the '<span data-gp-id='21'>object</span>'. However, unlike English, an <span data-gp-id='21'>object</span> can also be a place in which an action is performed 'through', if the goal of that action is based in that location itself.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154749'>\r\n<li data-study-question='154750'></ul>\r\n\r\n<p>In these sentences, <span data-gp-id='21'>を</span> is marking the place 'through' which the action is taking place. This use of <span data-gp-id='21'>を</span> highlights that the place itself is what is being interacted with (running/walking requires interaction with the ground, so the ground/place is the object).</p>"
+      }
+    },
+    {
+      "id": "85",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 85,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 90",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "749",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 749,
+        "source": "みんなの日本語 I",
+        "location": "Page 44 [CH 6]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "26",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 26,
+        "source": "Genki I",
+        "location": "Page 61",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1140",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1140,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 347",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1246",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1246,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 54",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "46",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 46,
+        "site": "BriefJapanese",
+        "description": "All uses of particle を explained",
+        "link": "https://briefjapanese.fun/particle-%e3%82%92/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "45",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 45,
+        "site": "Tae Kim",
+        "description": "The direct object 「を」 particle",
+        "link": "https://guidetojapanese.org/learn/complete/verb_particles",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1205",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1205,
+        "site": "Japanese Ammo",
+        "description": "Verbs basics & を particle",
+        "link": "https://www.youtube.com/watch?v=ePTdpMF-_H0&index=7&list=PLd5-Wp_4tLqYZxS5j3g6kbeOfVXlTkr3N",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "2204",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 2204,
+        "site": "Imabi",
+        "description": "The Particle を: The Direct Object",
+        "link": "https://imabi.org/the-particle-wo-%e3%82%92-i/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1336",
+      "type": "related_content",
+      "attributes": {
+        "id": 1336,
+        "relationship_type": "synonym",
+        "body": "を marks the direct object, the thing an action is done to (e.g., リンゴを食べた = '[I] ate an apple'). に has multiple functions, including marking the destination of movement or the target of an action. Be aware that grammar patterns can differ between English and Japanese: for example, 'I passed the test' uses 試験に合格する in Japanese, not 試験を合格する.",
+        "first_relatable": {
+          "id": 32,
+          "slug": "に",
+          "title": "に",
+          "meaning": "In, At, To, For, On",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 21,
+          "slug": "を",
+          "title": "を",
+          "meaning": "Object marking particle",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "1199",
+      "type": "related_content",
+      "attributes": {
+        "id": 1199,
+        "relationship_type": "related",
+        "body": "が and を are basic Japanese particles. が marks the subject—the one doing the action, while を marks the direct object, the thing being acted upon. For example, ジョンがリンゴを食べた means 'John ate an apple.' が is also used in expressions of preference or ability, like コーヒーが好きです ('I like coffee') or 英語がわかります ('I understand English').",
+        "first_relatable": {
+          "id": 21,
+          "slug": "を",
+          "title": "を",
+          "meaning": "Object marking particle",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 10,
+          "slug": "が",
+          "title": "が",
+          "meaning": "Subject marking particle, Identification particle",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

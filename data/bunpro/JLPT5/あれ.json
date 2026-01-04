@@ -1,0 +1,1762 @@
+{
+  "data": {
+    "id": "19",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 19,
+      "level": "JLPT5",
+      "lesson_id": 1,
+      "part_of_speech": "名詞",
+      "register": "一般",
+      "word_type": "代名詞",
+      "slug": "あれ",
+      "nuance": "<strong>話（はな）し手（て）と聞（き）き手（て）から離（はな）れている物（もの）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）われる言葉（ことば）。同（おな）じ情報（じょうほう）を知（し）っているときにも使（つか）われることがある。",
+      "grammar_order": 7,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 6,
+        "title": "の",
+        "slug": "の"
+      },
+      "previous_grammar_point": {
+        "id": 11,
+        "title": "それ",
+        "slug": "それ"
+      },
+      "lesson_count": "7/12",
+      "title": "あれ",
+      "furigana": "あれ",
+      "meaning": "That (over there)",
+      "nuance_translation": "A word that is used to present <strong>objects</strong> or <strong>situations close to neither the listener or the speaker</strong>, unless it is a mutual memory.",
+      "rare_kanji_warning": "彼れ",
+      "caution": "Although uncommon, its kanji can be seen as 彼れ",
+      "polite_structure": null,
+      "casual_structure": "Demonstrative noun (located away from <em>both</em> the speaker and the listener)",
+      "part_of_speech_translation": "Noun",
+      "register_translation": "Standard",
+      "word_type_translation": "Pronoun",
+      "discourse_link": "https://community.bunpro.jp/t/discussion-topic/490",
+      "metadata": "あれ, 彼れ, are, noun, pronoun, substitute noun, away from the speaker and the listener, kosoado words"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "154702",
+            "type": "study_question"
+          },
+          {
+            "id": "154703",
+            "type": "study_question"
+          },
+          {
+            "id": "1614",
+            "type": "study_question"
+          },
+          {
+            "id": "647",
+            "type": "study_question"
+          },
+          {
+            "id": "648",
+            "type": "study_question"
+          },
+          {
+            "id": "1613",
+            "type": "study_question"
+          },
+          {
+            "id": "1615",
+            "type": "study_question"
+          },
+          {
+            "id": "1616",
+            "type": "study_question"
+          },
+          {
+            "id": "1617",
+            "type": "study_question"
+          },
+          {
+            "id": "1618",
+            "type": "study_question"
+          },
+          {
+            "id": "1620",
+            "type": "study_question"
+          },
+          {
+            "id": "1621",
+            "type": "study_question"
+          },
+          {
+            "id": "19",
+            "type": "study_question"
+          },
+          {
+            "id": "1619",
+            "type": "study_question"
+          },
+          {
+            "id": "646",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "7",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "7",
+            "type": "offline_resource"
+          },
+          {
+            "id": "70",
+            "type": "offline_resource"
+          },
+          {
+            "id": "747",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "85",
+            "type": "related_content"
+          },
+          {
+            "id": "75",
+            "type": "related_content"
+          },
+          {
+            "id": "114",
+            "type": "related_content"
+          },
+          {
+            "id": "190",
+            "type": "related_content"
+          },
+          {
+            "id": "32",
+            "type": "related_content"
+          },
+          {
+            "id": "40",
+            "type": "related_content"
+          },
+          {
+            "id": "61",
+            "type": "related_content"
+          },
+          {
+            "id": "74",
+            "type": "related_content"
+          },
+          {
+            "id": "89",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "41",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "1196",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "40",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "154702",
+      "type": "study_question",
+      "attributes": {
+        "id": 154702,
+        "content": "<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span>、病院（びょういん）<span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "あれ",
+        "alternate_grammar": [],
+        "kanji_answer": "あれ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれは、病院です。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>That</strong> is a hospital. (Away from the speaker and listener)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 19,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "154703",
+      "type": "study_question",
+      "attributes": {
+        "id": 154703,
+        "content": "<span class='study-area-input'>____</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span>、バス停（てい）<span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "あれ",
+        "alternate_grammar": [],
+        "kanji_answer": "あれ",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれは、バス停です。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>That</strong> over there is a bus stop.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 19,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1614",
+      "type": "study_question",
+      "attributes": {
+        "id": 1614,
+        "content": "<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>、兄（あに）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "あれ",
+        "alternate_grammar": [],
+        "kanji_answer": "あれ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>話（はな）し手（て）と聞（き）き手（て）から離（はな）れている物（もの）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）われる言葉（ことば）。同（おな）じ情報（じょうほう）を知（し）っているときにも使（つか）われることがある。",
+        "tense": "Away from both parties",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/19/male_audio/04-あれは兄です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれは、兄です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あちら": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {
+          "これ": {
+            "en": "Let’s try a grammar structure that is used when something is away from both the listener and the speaker.",
+            "es": "Prueba con una palabra que indica que algo está físicamente lejos tanto del oyente como del hablante.",
+            "fr": "Essayons une structure grammaticale utilisée pour parler de quelque chose éloigné à la fois de l'interlocuteur et du locuteur.",
+            "id": "Mari coba struktur tata bahasa yang digunakan ketika sesuatu berada jauh dari pendengar dan pembicara."
+          },
+          "それ": {
+            "en": "Looking for something away from the speaker AND listener.",
+            "es": "Recuerda, algo que está lejos del hablante Y del oyente.",
+            "fr": "On cherche quelque chose éloigné à la fois du locuteur ET de l'interlocuteur.",
+            "id": "Mencari sesuatu yang berada jauh dari pembicara dan pendengar."
+          },
+          "この": {
+            "en": "この usually comes before a noun.",
+            "es": "この suele preceder a un sustantivo.",
+            "fr": "この précède généralement un nom.",
+            "id": "この biasanya digunakan sebelum kata benda."
+          },
+          "その": {
+            "en": "その usually comes before a noun.",
+            "es": "その suele preceder a un sustantivo.",
+            "fr": "その précède généralement un nom.",
+            "id": "その biasanya digunakan sebelum kata benda."
+          },
+          "あの": {
+            "en": "あの usually comes before a noun.",
+            "es": "あの suele preceder a un sustantivo.",
+            "fr": "あの précède généralement un nom.",
+            "id": "あの biasanya digunakan sebelum kata benda."
+          },
+          "ここ": {
+            "en": "ここ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "ここ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "ここ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "ここ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "そこ": {
+            "en": "そこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "そこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "そこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "そこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "あそこ": {
+            "en": "あそこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "あそこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "あそこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "あそこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "どれ": {
+            "en": "どれ means ‘which’. How about a grammar structure that means ’that (over there)’.",
+            "es": "どれ significa ‘¿Cuál?’. Prueba con una estructura gramatical que significa ‘aquello’.",
+            "fr": "どれ signifie « lequel ». On cherche plutôt une structure grammaticale signifiant « ça là-bas ».",
+            "id": "どれ berarti \"yang mana\". Bagaimana dengan struktur tata bahasa yang berarti \"itu (di sana)\"."
+          }
+        },
+        "translation": "<strong>That over there</strong> is my older brother.",
+        "nuance_translation": "A word that is used to present <strong>objects</strong> or <strong>situations close to neither the listener or the speaker</strong>, unless it is a mutual memory.",
+        "extra_info": "",
+        "reviewable_id": 19,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "647",
+      "type": "study_question",
+      "attributes": {
+        "id": 647,
+        "content": "<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>コンビニ<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "あれ",
+        "alternate_grammar": [],
+        "kanji_answer": "あれ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>話（はな）し手（て）と聞（き）き手（て）から離（はな）れている物（もの）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）われる言葉（ことば）。同（おな）じ情報（じょうほう）を知（し）っているときにも使（つか）われることがある。",
+        "tense": "Away from both parties",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/19/male_audio/02-あれはコンビニです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれはコンビニです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あちら": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {
+          "これ": {
+            "en": "Let’s try a grammar structure that is used when something is away from both the listener and the speaker.",
+            "es": "Prueba con una palabra que indica que algo está físicamente lejos tanto del oyente como del hablante.",
+            "fr": "Essayons une structure grammaticale utilisée pour parler de quelque chose éloigné à la fois de l'interlocuteur et du locuteur.",
+            "id": "Mari coba struktur tata bahasa yang digunakan ketika sesuatu berada jauh dari pendengar dan pembicara."
+          },
+          "それ": {
+            "en": "Looking for something away from the speaker AND listener.",
+            "es": "Recuerda, algo que está lejos del hablante Y del oyente.",
+            "fr": "On cherche quelque chose éloigné à la fois du locuteur ET de l'interlocuteur.",
+            "id": "Mencari sesuatu yang berada jauh dari pembicara dan pendengar."
+          },
+          "この": {
+            "en": "この usually comes before a noun.",
+            "es": "この suele preceder a un sustantivo.",
+            "fr": "この précède généralement un nom.",
+            "id": "この biasanya digunakan sebelum kata benda."
+          },
+          "その": {
+            "en": "その usually comes before a noun.",
+            "es": "その suele preceder a un sustantivo.",
+            "fr": "その précède généralement un nom.",
+            "id": "その biasanya digunakan sebelum kata benda."
+          },
+          "あの": {
+            "en": "あの usually comes before a noun.",
+            "es": "あの suele preceder a un sustantivo.",
+            "fr": "あの précède généralement un nom.",
+            "id": "あの biasanya digunakan sebelum kata benda."
+          },
+          "ここ": {
+            "en": "ここ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "ここ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "ここ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "ここ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "そこ": {
+            "en": "そこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "そこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "そこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "そこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "あそこ": {
+            "en": "あそこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "あそこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "あそこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "あそこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "どれ": {
+            "en": "どれ means ‘which’. How about a grammar structure that means ’that (over there)’.",
+            "es": "どれ significa ‘¿Cuál?’. Prueba con una estructura gramatical que significa ‘aquello’.",
+            "fr": "どれ signifie « lequel ». On cherche plutôt une structure grammaticale signifiant « ça là-bas ».",
+            "id": "どれ berarti \"yang mana\". Bagaimana dengan struktur tata bahasa yang berarti \"itu (di sana)\"."
+          }
+        },
+        "translation": "<strong>That over there</strong> is a convenience store. ",
+        "nuance_translation": "A word that is used to present <strong>objects</strong> or <strong>situations close to neither the listener or the speaker</strong>, unless it is a mutual memory.",
+        "extra_info": "",
+        "reviewable_id": 19,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "648",
+      "type": "study_question",
+      "attributes": {
+        "id": 648,
+        "content": "<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>ホテル<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "あれ",
+        "alternate_grammar": [],
+        "kanji_answer": "あれ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>話（はな）し手（て）と聞（き）き手（て）から離（はな）れている物（もの）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）われる言葉（ことば）。同（おな）じ情報（じょうほう）を知（し）っているときにも使（つか）われることがある。",
+        "tense": "Away from both parties",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/19/male_audio/03-あれはホテルです.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれはホテルです。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あちら": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {
+          "これ": {
+            "en": "Let’s try a grammar structure that is used when something is away from both the listener and the speaker.",
+            "es": "Prueba con una palabra que indica que algo está físicamente lejos tanto del oyente como del hablante.",
+            "fr": "Essayons une structure grammaticale utilisée pour parler de quelque chose éloigné à la fois de l'interlocuteur et du locuteur.",
+            "id": "Mari coba struktur tata bahasa yang digunakan ketika sesuatu berada jauh dari pendengar dan pembicara."
+          },
+          "それ": {
+            "en": "Looking for something away from the speaker AND listener.",
+            "es": "Recuerda, algo que está lejos del hablante Y del oyente.",
+            "fr": "On cherche quelque chose éloigné à la fois du locuteur ET de l'interlocuteur.",
+            "id": "Mencari sesuatu yang berada jauh dari pembicara dan pendengar."
+          },
+          "この": {
+            "en": "この usually comes before a noun.",
+            "es": "この suele preceder a un sustantivo.",
+            "fr": "この précède généralement un nom.",
+            "id": "この biasanya digunakan sebelum kata benda."
+          },
+          "その": {
+            "en": "その usually comes before a noun.",
+            "es": "その suele preceder a un sustantivo.",
+            "fr": "その précède généralement un nom.",
+            "id": "その biasanya digunakan sebelum kata benda."
+          },
+          "あの": {
+            "en": "あの usually comes before a noun.",
+            "es": "あの suele preceder a un sustantivo.",
+            "fr": "あの précède généralement un nom.",
+            "id": "あの biasanya digunakan sebelum kata benda."
+          },
+          "ここ": {
+            "en": "ここ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "ここ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "ここ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "ここ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "そこ": {
+            "en": "そこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "そこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "そこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "そこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "あそこ": {
+            "en": "あそこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "あそこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "あそこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "あそこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "どれ": {
+            "en": "どれ means ‘which’. How about a grammar structure that means ’that (over there)’.",
+            "es": "どれ significa ‘¿Cuál?’. Prueba con una estructura gramatical que significa ‘aquello’.",
+            "fr": "どれ signifie « lequel ». On cherche plutôt une structure grammaticale signifiant « ça là-bas ».",
+            "id": "どれ berarti \"yang mana\". Bagaimana dengan struktur tata bahasa yang berarti \"itu (di sana)\"."
+          }
+        },
+        "translation": "<strong>That over there</strong> is a hotel.",
+        "nuance_translation": "A word that is used to present <strong>objects</strong> or <strong>situations close to neither the listener or the speaker</strong>, unless it is a mutual memory.",
+        "extra_info": "",
+        "reviewable_id": 19,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1613",
+      "type": "study_question",
+      "attributes": {
+        "id": 1613,
+        "content": "<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>、電車（でんしゃ）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "あれ",
+        "alternate_grammar": [],
+        "kanji_answer": "あれ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>話（はな）し手（て）と聞（き）き手（て）から離（はな）れている物（もの）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）われる言葉（ことば）。同（おな）じ情報（じょうほう）を知（し）っているときにも使（つか）われることがある。",
+        "tense": "Away from both parties",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/19/male_audio/11-あれは電車です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれは、電車です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あちら": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {
+          "これ": {
+            "en": "Let’s try a grammar structure that is used when something is away from both the listener and the speaker.",
+            "es": "Prueba con una palabra que indica que algo está físicamente lejos tanto del oyente como del hablante.",
+            "fr": "Essayons une structure grammaticale utilisée pour parler de quelque chose éloigné à la fois de l'interlocuteur et du locuteur.",
+            "id": "Mari coba struktur tata bahasa yang digunakan ketika sesuatu berada jauh dari pendengar dan pembicara."
+          },
+          "それ": {
+            "en": "Looking for something away from the speaker AND listener.",
+            "es": "Recuerda, algo que está lejos del hablante Y del oyente.",
+            "fr": "On cherche quelque chose éloigné à la fois du locuteur ET de l'interlocuteur.",
+            "id": "Mencari sesuatu yang berada jauh dari pembicara dan pendengar."
+          },
+          "この": {
+            "en": "この usually comes before a noun.",
+            "es": "この suele preceder a un sustantivo.",
+            "fr": "この précède généralement un nom.",
+            "id": "この biasanya digunakan sebelum kata benda."
+          },
+          "その": {
+            "en": "その usually comes before a noun.",
+            "es": "その suele preceder a un sustantivo.",
+            "fr": "その précède généralement un nom.",
+            "id": "その biasanya digunakan sebelum kata benda."
+          },
+          "あの": {
+            "en": "あの usually comes before a noun.",
+            "es": "あの suele preceder a un sustantivo.",
+            "fr": "あの précède généralement un nom.",
+            "id": "あの biasanya digunakan sebelum kata benda."
+          },
+          "ここ": {
+            "en": "ここ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "ここ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "ここ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "ここ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "そこ": {
+            "en": "そこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "そこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "そこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "そこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "あそこ": {
+            "en": "あそこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "あそこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "あそこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "あそこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "どれ": {
+            "en": "どれ means ‘which’. How about a grammar structure that means ’that (over there)’.",
+            "es": "どれ significa ‘¿Cuál?’. Prueba con una estructura gramatical que significa ‘aquello’.",
+            "fr": "どれ signifie « lequel ». On cherche plutôt une structure grammaticale signifiant « ça là-bas ».",
+            "id": "どれ berarti \"yang mana\". Bagaimana dengan struktur tata bahasa yang berarti \"itu (di sana)\"."
+          }
+        },
+        "translation": "<strong>That over there</strong> is a train.",
+        "nuance_translation": "A word that is used to present <strong>objects</strong> or <strong>situations close to neither the listener or the speaker</strong>, unless it is a mutual memory.",
+        "extra_info": "",
+        "reviewable_id": 19,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1615",
+      "type": "study_question",
+      "attributes": {
+        "id": 1615,
+        "content": "<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='4'>も</span>服（ふく）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "あれ",
+        "alternate_grammar": [],
+        "kanji_answer": "あれ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>話（はな）し手（て）と聞（き）き手（て）から離（はな）れている物（もの）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）われる言葉（ことば）。同（おな）じ情報（じょうほう）を知（し）っているときにも使（つか）われることがある。",
+        "tense": "Away from both parties",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/19/male_audio/13-あれも服です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれも服です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あちら": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {
+          "これ": {
+            "en": "Let’s try a grammar structure that is used when something is away from both the listener and the speaker.",
+            "es": "Prueba con una palabra que indica que algo está físicamente lejos tanto del oyente como del hablante.",
+            "fr": "Essayons une structure grammaticale utilisée pour parler de quelque chose éloigné à la fois de l'interlocuteur et du locuteur.",
+            "id": "Mari coba struktur tata bahasa yang digunakan ketika sesuatu berada jauh dari pendengar dan pembicara."
+          },
+          "それ": {
+            "en": "Looking for something away from the speaker AND listener.",
+            "es": "Recuerda, algo que está lejos del hablante Y del oyente.",
+            "fr": "On cherche quelque chose éloigné à la fois du locuteur ET de l'interlocuteur.",
+            "id": "Mencari sesuatu yang berada jauh dari pembicara dan pendengar."
+          },
+          "この": {
+            "en": "この usually comes before a noun.",
+            "es": "この suele preceder a un sustantivo.",
+            "fr": "この précède généralement un nom.",
+            "id": "この biasanya digunakan sebelum kata benda."
+          },
+          "その": {
+            "en": "その usually comes before a noun.",
+            "es": "その suele preceder a un sustantivo.",
+            "fr": "その précède généralement un nom.",
+            "id": "その biasanya digunakan sebelum kata benda."
+          },
+          "あの": {
+            "en": "あの usually comes before a noun.",
+            "es": "あの suele preceder a un sustantivo.",
+            "fr": "あの précède généralement un nom.",
+            "id": "あの biasanya digunakan sebelum kata benda."
+          },
+          "ここ": {
+            "en": "ここ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "ここ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "ここ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "ここ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "そこ": {
+            "en": "そこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "そこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "そこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "そこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "あそこ": {
+            "en": "あそこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "あそこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "あそこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "あそこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "どれ": {
+            "en": "どれ means ‘which’. How about a grammar structure that means ’that (over there)’.",
+            "es": "どれ significa ‘¿Cuál?’. Prueba con una estructura gramatical que significa ‘aquello’.",
+            "fr": "どれ signifie « lequel ». On cherche plutôt une structure grammaticale signifiant « ça là-bas ».",
+            "id": "どれ berarti \"yang mana\". Bagaimana dengan struktur tata bahasa yang berarti \"itu (di sana)\"."
+          }
+        },
+        "translation": "<strong>That over there</strong> is also clothes.",
+        "nuance_translation": "A word that is used to present <strong>objects</strong> or <strong>situations close to neither the listener or the speaker</strong>, unless it is a mutual memory.",
+        "extra_info": "",
+        "reviewable_id": 19,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1616",
+      "type": "study_question",
+      "attributes": {
+        "id": 1616,
+        "content": "<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>、手紙（てがみ）。",
+        "answer": "あれ",
+        "alternate_grammar": [],
+        "kanji_answer": "あれ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>話（はな）し手（て）と聞（き）き手（て）から離（はな）れている物（もの）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）われる言葉（ことば）。同（おな）じ情報（じょうほう）を知（し）っているときにも使（つか）われることがある。",
+        "tense": "Away from both parties",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/19/male_audio/05-あれは手紙.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれは、手紙。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あちら": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {
+          "これ": {
+            "en": "Let’s try a grammar structure that is used when something is away from both the listener and the speaker.",
+            "es": "Prueba con una palabra que indica que algo está físicamente lejos tanto del oyente como del hablante.",
+            "fr": "Essayons une structure grammaticale utilisée pour parler de quelque chose éloigné à la fois de l'interlocuteur et du locuteur.",
+            "id": "Mari coba struktur tata bahasa yang digunakan ketika sesuatu berada jauh dari pendengar dan pembicara."
+          },
+          "それ": {
+            "en": "Looking for something away from the speaker AND listener.",
+            "es": "Recuerda, algo que está lejos del hablante Y del oyente.",
+            "fr": "On cherche quelque chose éloigné à la fois du locuteur ET de l'interlocuteur.",
+            "id": "Mencari sesuatu yang berada jauh dari pembicara dan pendengar."
+          },
+          "この": {
+            "en": "この usually comes before a noun.",
+            "es": "この suele preceder a un sustantivo.",
+            "fr": "この précède généralement un nom.",
+            "id": "この biasanya digunakan sebelum kata benda."
+          },
+          "その": {
+            "en": "その usually comes before a noun.",
+            "es": "その suele preceder a un sustantivo.",
+            "fr": "その précède généralement un nom.",
+            "id": "その biasanya digunakan sebelum kata benda."
+          },
+          "あの": {
+            "en": "あの usually comes before a noun.",
+            "es": "あの suele preceder a un sustantivo.",
+            "fr": "あの précède généralement un nom.",
+            "id": "あの biasanya digunakan sebelum kata benda."
+          },
+          "ここ": {
+            "en": "ここ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "ここ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "ここ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "ここ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "そこ": {
+            "en": "そこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "そこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "そこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "そこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "あそこ": {
+            "en": "あそこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "あそこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "あそこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "あそこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "どれ": {
+            "en": "どれ means ‘which’. How about a grammar structure that means ’that (over there)’.",
+            "es": "どれ significa ‘¿Cuál?’. Prueba con una estructura gramatical que significa ‘aquello’.",
+            "fr": "どれ signifie « lequel ». On cherche plutôt une structure grammaticale signifiant « ça là-bas ».",
+            "id": "どれ berarti \"yang mana\". Bagaimana dengan struktur tata bahasa yang berarti \"itu (di sana)\"."
+          }
+        },
+        "translation": "<strong>That over there</strong> is a letter.",
+        "nuance_translation": "A word that is used to present <strong>objects</strong> or <strong>situations close to neither the listener or the speaker</strong>, unless it is a mutual memory.",
+        "extra_info": "",
+        "reviewable_id": 19,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1617",
+      "type": "study_question",
+      "attributes": {
+        "id": 1617,
+        "content": "<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>、車（くるま）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "あれ",
+        "alternate_grammar": [],
+        "kanji_answer": "あれ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>話（はな）し手（て）と聞（き）き手（て）から離（はな）れている物（もの）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）われる言葉（ことば）。同（おな）じ情報（じょうほう）を知（し）っているときにも使（つか）われることがある。",
+        "tense": "Away from both parties",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/19/male_audio/10-あれは車です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれは、車です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あちら": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {
+          "これ": {
+            "en": "Let’s try a grammar structure that is used when something is away from both the listener and the speaker.",
+            "es": "Prueba con una palabra que indica que algo está físicamente lejos tanto del oyente como del hablante.",
+            "fr": "Essayons une structure grammaticale utilisée pour parler de quelque chose éloigné à la fois de l'interlocuteur et du locuteur.",
+            "id": "Mari coba struktur tata bahasa yang digunakan ketika sesuatu berada jauh dari pendengar dan pembicara."
+          },
+          "それ": {
+            "en": "Looking for something away from the speaker AND listener.",
+            "es": "Recuerda, algo que está lejos del hablante Y del oyente.",
+            "fr": "On cherche quelque chose éloigné à la fois du locuteur ET de l'interlocuteur.",
+            "id": "Mencari sesuatu yang berada jauh dari pembicara dan pendengar."
+          },
+          "この": {
+            "en": "この usually comes before a noun.",
+            "es": "この suele preceder a un sustantivo.",
+            "fr": "この précède généralement un nom.",
+            "id": "この biasanya digunakan sebelum kata benda."
+          },
+          "その": {
+            "en": "その usually comes before a noun.",
+            "es": "その suele preceder a un sustantivo.",
+            "fr": "その précède généralement un nom.",
+            "id": "その biasanya digunakan sebelum kata benda."
+          },
+          "あの": {
+            "en": "あの usually comes before a noun.",
+            "es": "あの suele preceder a un sustantivo.",
+            "fr": "あの précède généralement un nom.",
+            "id": "あの biasanya digunakan sebelum kata benda."
+          },
+          "ここ": {
+            "en": "ここ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "ここ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "ここ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "ここ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "そこ": {
+            "en": "そこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "そこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "そこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "そこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "あそこ": {
+            "en": "あそこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "あそこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "あそこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "あそこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "どれ": {
+            "en": "どれ means ‘which’. How about a grammar structure that means ’that (over there)’.",
+            "es": "どれ significa ‘¿Cuál?’. Prueba con una estructura gramatical que significa ‘aquello’.",
+            "fr": "どれ signifie « lequel ». On cherche plutôt une structure grammaticale signifiant « ça là-bas ».",
+            "id": "どれ berarti \"yang mana\". Bagaimana dengan struktur tata bahasa yang berarti \"itu (di sana)\"."
+          }
+        },
+        "translation": "<strong>That over there</strong> is a car.",
+        "nuance_translation": "A word that is used to present <strong>objects</strong> or <strong>situations close to neither the listener or the speaker</strong>, unless it is a mutual memory.",
+        "extra_info": "",
+        "reviewable_id": 19,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1618",
+      "type": "study_question",
+      "attributes": {
+        "id": 1618,
+        "content": "<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>、朝（あさ）ごはん。",
+        "answer": "あれ",
+        "alternate_grammar": [],
+        "kanji_answer": "あれ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>話（はな）し手（て）と聞（き）き手（て）から離（はな）れている物（もの）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）われる言葉（ことば）。同（おな）じ情報（じょうほう）を知（し）っているときにも使（つか）われることがある。",
+        "tense": "Away from both parties",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/19/male_audio/07-あれは朝ごはん.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれは、朝ごはん。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あちら": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {
+          "これ": {
+            "en": "Let’s try a grammar structure that is used when something is away from both the listener and the speaker.",
+            "es": "Prueba con una palabra que indica que algo está físicamente lejos tanto del oyente como del hablante.",
+            "fr": "Essayons une structure grammaticale utilisée pour parler de quelque chose éloigné à la fois de l'interlocuteur et du locuteur.",
+            "id": "Mari coba struktur tata bahasa yang digunakan ketika sesuatu berada jauh dari pendengar dan pembicara."
+          },
+          "それ": {
+            "en": "Looking for something away from the speaker AND listener.",
+            "es": "Recuerda, algo que está lejos del hablante Y del oyente.",
+            "fr": "On cherche quelque chose éloigné à la fois du locuteur ET de l'interlocuteur.",
+            "id": "Mencari sesuatu yang berada jauh dari pembicara dan pendengar."
+          },
+          "この": {
+            "en": "この usually comes before a noun.",
+            "es": "この suele preceder a un sustantivo.",
+            "fr": "この précède généralement un nom.",
+            "id": "この biasanya digunakan sebelum kata benda."
+          },
+          "その": {
+            "en": "その usually comes before a noun.",
+            "es": "その suele preceder a un sustantivo.",
+            "fr": "その précède généralement un nom.",
+            "id": "その biasanya digunakan sebelum kata benda."
+          },
+          "あの": {
+            "en": "あの usually comes before a noun.",
+            "es": "あの suele preceder a un sustantivo.",
+            "fr": "あの précède généralement un nom.",
+            "id": "あの biasanya digunakan sebelum kata benda."
+          },
+          "ここ": {
+            "en": "ここ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "ここ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "ここ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "ここ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "そこ": {
+            "en": "そこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "そこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "そこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "そこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "あそこ": {
+            "en": "あそこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "あそこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "あそこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "あそこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "どれ": {
+            "en": "どれ means ‘which’. How about a grammar structure that means ’that (over there)’.",
+            "es": "どれ significa ‘¿Cuál?’. Prueba con una estructura gramatical que significa ‘aquello’.",
+            "fr": "どれ signifie « lequel ». On cherche plutôt une structure grammaticale signifiant « ça là-bas ».",
+            "id": "どれ berarti \"yang mana\". Bagaimana dengan struktur tata bahasa yang berarti \"itu (di sana)\"."
+          }
+        },
+        "translation": "<strong>That over there</strong> is breakfast.",
+        "nuance_translation": "A word that is used to present <strong>objects</strong> or <strong>situations close to neither the listener or the speaker</strong>, unless it is a mutual memory.",
+        "extra_info": "",
+        "reviewable_id": 19,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1620",
+      "type": "study_question",
+      "attributes": {
+        "id": 1620,
+        "content": "<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>、新（あたら）し<span class='gp-popout' data-gp-id='24'>い</span>。",
+        "answer": "あれ",
+        "alternate_grammar": [],
+        "kanji_answer": "あれ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>話（はな）し手（て）と聞（き）き手（て）から離（はな）れている物（もの）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）われる言葉（ことば）。同（おな）じ情報（じょうほう）を知（し）っているときにも使（つか）われることがある。",
+        "tense": "Away from both parties",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/19/male_audio/06-あれは新しい.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれは、新しい。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あちら": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {
+          "これ": {
+            "en": "Let’s try a grammar structure that is used when something is away from both the listener and the speaker.",
+            "es": "Prueba con una palabra que indica que algo está físicamente lejos tanto del oyente como del hablante.",
+            "fr": "Essayons une structure grammaticale utilisée pour parler de quelque chose éloigné à la fois de l'interlocuteur et du locuteur.",
+            "id": "Mari coba struktur tata bahasa yang digunakan ketika sesuatu berada jauh dari pendengar dan pembicara."
+          },
+          "それ": {
+            "en": "Looking for something away from the speaker AND listener.",
+            "es": "Recuerda, algo que está lejos del hablante Y del oyente.",
+            "fr": "On cherche quelque chose éloigné à la fois du locuteur ET de l'interlocuteur.",
+            "id": "Mencari sesuatu yang berada jauh dari pembicara dan pendengar."
+          },
+          "この": {
+            "en": "この usually comes before a noun.",
+            "es": "この suele preceder a un sustantivo.",
+            "fr": "この précède généralement un nom.",
+            "id": "この biasanya digunakan sebelum kata benda."
+          },
+          "その": {
+            "en": "その usually comes before a noun.",
+            "es": "その suele preceder a un sustantivo.",
+            "fr": "その précède généralement un nom.",
+            "id": "その biasanya digunakan sebelum kata benda."
+          },
+          "あの": {
+            "en": "あの usually comes before a noun.",
+            "es": "あの suele preceder a un sustantivo.",
+            "fr": "あの précède généralement un nom.",
+            "id": "あの biasanya digunakan sebelum kata benda."
+          },
+          "ここ": {
+            "en": "ここ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "ここ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "ここ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "ここ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "そこ": {
+            "en": "そこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "そこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "そこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "そこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "あそこ": {
+            "en": "あそこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "あそこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "あそこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "あそこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "どれ": {
+            "en": "どれ means ‘which’. How about a grammar structure that means ’that (over there)’.",
+            "es": "どれ significa ‘¿Cuál?’. Prueba con una estructura gramatical que significa ‘aquello’.",
+            "fr": "どれ signifie « lequel ». On cherche plutôt une structure grammaticale signifiant « ça là-bas ».",
+            "id": "どれ berarti \"yang mana\". Bagaimana dengan struktur tata bahasa yang berarti \"itu (di sana)\"."
+          }
+        },
+        "translation": "<strong>That over there</strong> is new.",
+        "nuance_translation": "A word that is used to present <strong>objects</strong> or <strong>situations close to neither the listener or the speaker</strong>, unless it is a mutual memory.",
+        "extra_info": "",
+        "reviewable_id": 19,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1621",
+      "type": "study_question",
+      "attributes": {
+        "id": 1621,
+        "content": "<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>、椅子（いす）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "あれ",
+        "alternate_grammar": [],
+        "kanji_answer": "あれ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>話（はな）し手（て）と聞（き）き手（て）から離（はな）れている物（もの）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）われる言葉（ことば）。同（おな）じ情報（じょうほう）を知（し）っているときにも使（つか）われることがある。",
+        "tense": "Away from both parties",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/19/male_audio/09-あれは椅子です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれは、椅子です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あちら": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {
+          "これ": {
+            "en": "Let’s try a grammar structure that is used when something is away from both the listener and the speaker.",
+            "es": "Prueba con una palabra que indica que algo está físicamente lejos tanto del oyente como del hablante.",
+            "fr": "Essayons une structure grammaticale utilisée pour parler de quelque chose éloigné à la fois de l'interlocuteur et du locuteur.",
+            "id": "Mari coba struktur tata bahasa yang digunakan ketika sesuatu berada jauh dari pendengar dan pembicara."
+          },
+          "それ": {
+            "en": "Looking for something away from the speaker AND listener.",
+            "es": "Recuerda, algo que está lejos del hablante Y del oyente.",
+            "fr": "On cherche quelque chose éloigné à la fois du locuteur ET de l'interlocuteur.",
+            "id": "Mencari sesuatu yang berada jauh dari pembicara dan pendengar."
+          },
+          "この": {
+            "en": "この usually comes before a noun.",
+            "es": "この suele preceder a un sustantivo.",
+            "fr": "この précède généralement un nom.",
+            "id": "この biasanya digunakan sebelum kata benda."
+          },
+          "その": {
+            "en": "その usually comes before a noun.",
+            "es": "その suele preceder a un sustantivo.",
+            "fr": "その précède généralement un nom.",
+            "id": "その biasanya digunakan sebelum kata benda."
+          },
+          "あの": {
+            "en": "あの usually comes before a noun.",
+            "es": "あの suele preceder a un sustantivo.",
+            "fr": "あの précède généralement un nom.",
+            "id": "あの biasanya digunakan sebelum kata benda."
+          },
+          "ここ": {
+            "en": "ここ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "ここ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "ここ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "ここ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "そこ": {
+            "en": "そこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "そこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "そこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "そこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "あそこ": {
+            "en": "あそこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "あそこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "あそこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "あそこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "どれ": {
+            "en": "どれ means ‘which’. How about a grammar structure that means ’that (over there)’.",
+            "es": "どれ significa ‘¿Cuál?’. Prueba con una estructura gramatical que significa ‘aquello’.",
+            "fr": "どれ signifie « lequel ». On cherche plutôt une structure grammaticale signifiant « ça là-bas ».",
+            "id": "どれ berarti \"yang mana\". Bagaimana dengan struktur tata bahasa yang berarti \"itu (di sana)\"."
+          }
+        },
+        "translation": "<strong>That over there</strong> is a chair.",
+        "nuance_translation": "A word that is used to present <strong>objects</strong> or <strong>situations close to neither the listener or the speaker</strong>, unless it is a mutual memory.",
+        "extra_info": "",
+        "reviewable_id": 19,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "19",
+      "type": "study_question",
+      "attributes": {
+        "id": 19,
+        "content": "<span class='study-area-input'>____</span>は本（ほん）です。",
+        "answer": "あれ",
+        "alternate_grammar": [],
+        "kanji_answer": "あれ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>話（はな）し手（て）と聞（き）き手（て）から離（はな）れている物（もの）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）われる言葉（ことば）。同（おな）じ情報（じょうほう）を知（し）っているときにも使（つか）われることがある。",
+        "tense": "Away from both parties",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/19/male_audio/08-あれは本です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれは本です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 12,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あちら": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {
+          "これ": {
+            "en": "Let’s try a grammar structure that is used when something is away from both the listener and the speaker.",
+            "es": "Prueba con una palabra que indica que algo está físicamente lejos tanto del oyente como del hablante.",
+            "fr": "Essayons une structure grammaticale utilisée pour parler de quelque chose éloigné à la fois de l'interlocuteur et du locuteur.",
+            "id": "Mari coba struktur tata bahasa yang digunakan ketika sesuatu berada jauh dari pendengar dan pembicara."
+          },
+          "それ": {
+            "en": "Looking for something away from the speaker AND listener.",
+            "es": "Recuerda, algo que está lejos del hablante Y del oyente.",
+            "fr": "On cherche quelque chose éloigné à la fois du locuteur ET de l'interlocuteur.",
+            "id": "Mencari sesuatu yang berada jauh dari pembicara dan pendengar."
+          },
+          "この": {
+            "en": "この usually comes before a noun.",
+            "es": "この suele preceder a un sustantivo.",
+            "fr": "この précède généralement un nom.",
+            "id": "この biasanya digunakan sebelum kata benda."
+          },
+          "その": {
+            "en": "その usually comes before a noun.",
+            "es": "その suele preceder a un sustantivo.",
+            "fr": "その précède généralement un nom.",
+            "id": "その biasanya digunakan sebelum kata benda."
+          },
+          "あの": {
+            "en": "あの usually comes before a noun.",
+            "es": "あの suele preceder a un sustantivo.",
+            "fr": "あの précède généralement un nom.",
+            "id": "あの biasanya digunakan sebelum kata benda."
+          },
+          "ここ": {
+            "en": "ここ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "ここ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "ここ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "ここ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "そこ": {
+            "en": "そこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "そこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "そこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "そこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "あそこ": {
+            "en": "あそこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "あそこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "あそこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "あそこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "どれ": {
+            "en": "どれ means ‘which’. How about a grammar structure that means ’that (over there)’.",
+            "es": "どれ significa ‘¿Cuál?’. Prueba con una estructura gramatical que significa ‘aquello’.",
+            "fr": "どれ signifie « lequel ». On cherche plutôt une structure grammaticale signifiant « ça là-bas ».",
+            "id": "どれ berarti \"yang mana\". Bagaimana dengan struktur tata bahasa yang berarti \"itu (di sana)\"."
+          }
+        },
+        "translation": "<strong>That over there</strong> is a book.",
+        "nuance_translation": "A word that is used to present <strong>objects</strong> or <strong>situations close to neither the listener or the speaker</strong>, unless it is a mutual memory.",
+        "extra_info": "",
+        "reviewable_id": 19,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1619",
+      "type": "study_question",
+      "attributes": {
+        "id": 1619,
+        "content": "<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='4'>も</span>お金（かね）<span class='gp-popout' data-gp-id='2'>です</span>。",
+        "answer": "あれ",
+        "alternate_grammar": [],
+        "kanji_answer": "あれ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>話（はな）し手（て）と聞（き）き手（て）から離（はな）れている物（もの）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）われる言葉（ことば）。同（おな）じ情報（じょうほう）を知（し）っているときにも使（つか）われることがある。",
+        "tense": "Away from both parties",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/19/male_audio/12-あれもお金です.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれもお金です。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あちら": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {
+          "これ": {
+            "en": "Let’s try a grammar structure that is used when something is away from both the listener and the speaker.",
+            "es": "Prueba con una palabra que indica que algo está físicamente lejos tanto del oyente como del hablante.",
+            "fr": "Essayons une structure grammaticale utilisée pour parler de quelque chose éloigné à la fois de l'interlocuteur et du locuteur.",
+            "id": "Mari coba struktur tata bahasa yang digunakan ketika sesuatu berada jauh dari pendengar dan pembicara."
+          },
+          "それ": {
+            "en": "Looking for something away from the speaker AND listener.",
+            "es": "Recuerda, algo que está lejos del hablante Y del oyente.",
+            "fr": "On cherche quelque chose éloigné à la fois du locuteur ET de l'interlocuteur.",
+            "id": "Mencari sesuatu yang berada jauh dari pembicara dan pendengar."
+          },
+          "この": {
+            "en": "この usually comes before a noun.",
+            "es": "この suele preceder a un sustantivo.",
+            "fr": "この précède généralement un nom.",
+            "id": "この biasanya digunakan sebelum kata benda."
+          },
+          "その": {
+            "en": "その usually comes before a noun.",
+            "es": "その suele preceder a un sustantivo.",
+            "fr": "その précède généralement un nom.",
+            "id": "その biasanya digunakan sebelum kata benda."
+          },
+          "あの": {
+            "en": "あの usually comes before a noun.",
+            "es": "あの suele preceder a un sustantivo.",
+            "fr": "あの précède généralement un nom.",
+            "id": "あの biasanya digunakan sebelum kata benda."
+          },
+          "ここ": {
+            "en": "ここ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "ここ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "ここ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "ここ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "そこ": {
+            "en": "そこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "そこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "そこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "そこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "あそこ": {
+            "en": "あそこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "あそこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "あそこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "あそこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "どれ": {
+            "en": "どれ means ‘which’. How about a grammar structure that means ’that (over there)’.",
+            "es": "どれ significa ‘¿Cuál?’. Prueba con una estructura gramatical que significa ‘aquello’.",
+            "fr": "どれ signifie « lequel ». On cherche plutôt une structure grammaticale signifiant « ça là-bas ».",
+            "id": "どれ berarti \"yang mana\". Bagaimana dengan struktur tata bahasa yang berarti \"itu (di sana)\"."
+          }
+        },
+        "translation": "<strong>That over there</strong> is also money.",
+        "nuance_translation": "A word that is used to present <strong>objects</strong> or <strong>situations close to neither the listener or the speaker</strong>, unless it is a mutual memory.",
+        "extra_info": "",
+        "reviewable_id": 19,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "646",
+      "type": "study_question",
+      "attributes": {
+        "id": 646,
+        "content": "<span class='study-area-input'>____</span><span class='gp-popout' data-gp-id='3'>は</span>何（なに）？",
+        "answer": "あれ",
+        "alternate_grammar": [],
+        "kanji_answer": "あれ",
+        "kanji_alt_grammar": [],
+        "nuance": "<strong>話（はな）し手（て）と聞（き）き手（て）から離（はな）れている物（もの）や状況（じょうきょう）</strong>を表（あらわ）すときに使（つか）われる言葉（ことば）。同（おな）じ情報（じょうほう）を知（し）っているときにも使（つか）われることがある。",
+        "tense": "Away from both parties",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson1/19/male_audio/01-あれはなに.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あれは何？.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あちら": {
+            "en": "Could you try a grammar point that is more casual here?",
+            "es": "Prueba con un tono más informal.",
+            "fr": "Pouvez-vous essayer une structure grammaticale plus familière ici ?",
+            "id": "Mungkin kamu bisa coba poin tata bahasa yang lebih kasual di sini?"
+          }
+        },
+        "wrong_answers": {
+          "これ": {
+            "en": "Let’s try a grammar structure that is used when something is away from both the listener and the speaker.",
+            "es": "Prueba con una palabra que indica que algo está físicamente lejos tanto del oyente como del hablante.",
+            "fr": "Essayons une structure grammaticale utilisée pour parler de quelque chose éloigné à la fois de l'interlocuteur et du locuteur.",
+            "id": "Mari coba struktur tata bahasa yang digunakan ketika sesuatu berada jauh dari pendengar dan pembicara."
+          },
+          "それ": {
+            "en": "Looking for something away from the speaker AND listener.",
+            "es": "Recuerda, algo que está lejos del hablante Y del oyente.",
+            "fr": "On cherche quelque chose éloigné à la fois du locuteur ET de l'interlocuteur.",
+            "id": "Mencari sesuatu yang berada jauh dari pembicara dan pendengar."
+          },
+          "この": {
+            "en": "この usually comes before a noun.",
+            "es": "この suele preceder a un sustantivo.",
+            "fr": "この précède généralement un nom.",
+            "id": "この biasanya digunakan sebelum kata benda."
+          },
+          "その": {
+            "en": "その usually comes before a noun.",
+            "es": "その suele preceder a un sustantivo.",
+            "fr": "その précède généralement un nom.",
+            "id": "その biasanya digunakan sebelum kata benda."
+          },
+          "あの": {
+            "en": "あの usually comes before a noun.",
+            "es": "あの suele preceder a un sustantivo.",
+            "fr": "あの précède généralement un nom.",
+            "id": "あの biasanya digunakan sebelum kata benda."
+          },
+          "ここ": {
+            "en": "ここ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "ここ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "ここ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "ここ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "そこ": {
+            "en": "そこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "そこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "そこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "そこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "あそこ": {
+            "en": "あそこ refers to a place or location. Here, we’re looking for a grammar point used to indicate an object.",
+            "es": "あそこ hace referencia a un lugar o ubicación. Prueba con un punto gramatical usado para hacer referencia a un objeto.",
+            "fr": "あそこ désigne un lieu. Ici, on cherche un point grammatical indiquant un objet.",
+            "id": "あそこ merujuk pada tempat atau lokasi. Di sini, kita mencari poin tata bahasa yang digunakan untuk menunjukkan suatu objek."
+          },
+          "どれ": {
+            "en": "どれ means ‘which’. How about a grammar structure that means ’that (over there)’.",
+            "es": "どれ significa ‘¿Cuál?’. Prueba con una estructura gramatical que significa ‘aquello’.",
+            "fr": "どれ signifie « lequel ». On cherche plutôt une structure grammaticale signifiant « ça là-bas ».",
+            "id": "どれ berarti \"yang mana\". Bagaimana dengan struktur tata bahasa yang berarti \"itu (di sana)\"."
+          }
+        },
+        "translation": "What is <strong>that over there</strong>?",
+        "nuance_translation": "A word that is used to present <strong>objects</strong> or <strong>situations close to neither the listener or the speaker</strong>, unless it is a mutual memory.",
+        "extra_info": "",
+        "reviewable_id": 19,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "7",
+      "type": "writeup",
+      "attributes": {
+        "id": 7,
+        "body_ja": "",
+        "body": "<p><span data-gp-id='19'>あれ</span>, just like <span data-gp-id='5'>これ</span> and <span data-gp-id='11'>それ</span>, is one of several 'pronoun-like' words in Japanese (<span data-term='代名詞・だいめいし'>substitute nouns</span>). <span data-gp-id='19'>あれ</span> translates roughly to 'that' in English. However, unlike <span data-gp-id='11'>それ</span>, <span data-gp-id='19'>あれ</span> is used to highlight things that are away from both the speaker and the listener. Due to this, it is also often translated as 'that over there'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='154702'>\r\n<li data-study-question='154703'></ul>\r\n\r\n<p><section class='caution'><h4>Caution</h4>Be careful not to mix up <span data-gp-id='19'>あれ</span> with the common spoken expression あれ, which means 'huh?', or 'oh?'. These are not the same words. The difference will usually be clear from context within a sentence, and the way the word is said. あれ as 'huh?' has a rising tone, and sounds like a question.</p></section>"
+      }
+    },
+    {
+      "id": "7",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 7,
+        "source": "Genki I",
+        "location": "Page 34",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "70",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 70,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 62",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "747",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 747,
+        "source": "みんなの日本語 I",
+        "location": "Page 20 [CH 2]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "41",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 41,
+        "site": "いいね Nihongo",
+        "description": "Explanations and example sentences",
+        "link": "https://iinenihongo.com/koresoreare/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1196",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 1196,
+        "site": "Japanese Ammo",
+        "description": "This / That + adjectives これ / それ / あれ",
+        "link": "https://www.youtube.com/watch?v=tecppGPsaPg&index=2&list=PLd5-Wp_4tLqYZxS5j3g6kbeOfVXlTkr3N",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "40",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 40,
+        "site": "Wasabi",
+        "description": "これ、それ、あれ、and どれ",
+        "link": "https://wasabi-jpn.com/magazine/japanese-grammar/japanese-demonstratives/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "85",
+      "type": "related_content",
+      "attributes": {
+        "id": 85,
+        "relationship_type": "related",
+        "body": "あそこ is used to refer to a location that is far from both the speaker and listener. あれ refers to objects similarly far away, or to ideas known to both people, similar to the English 'that' or 'that thing (over there).' In short, あそこ refers to places, while あれ refers to objects, situations, or ideas.",
+        "first_relatable": {
+          "id": 29,
+          "slug": "あそこ",
+          "title": "あそこ",
+          "meaning": "Over there",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 19,
+          "slug": "あれ",
+          "title": "あれ",
+          "meaning": "That (over there)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "75",
+      "type": "related_content",
+      "attributes": {
+        "id": 75,
+        "relationship_type": "related",
+        "body": "Both あれ and あの refer to something far from both the speaker and listener, or to something they both know. あれ is a standalone pronoun that means 'that' or 'that thing.' あの is a modifier that must be followed by a noun, like in あの本 ('that book'). In other words, あれ stands alone, while あの does not.",
+        "first_relatable": {
+          "id": 19,
+          "slug": "あれ",
+          "title": "あれ",
+          "meaning": "That (over there)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 47,
+          "slug": "あの",
+          "title": "あの",
+          "meaning": "That (over there)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "114",
+      "type": "related_content",
+      "attributes": {
+        "id": 114,
+        "relationship_type": "related",
+        "body": "その refers to something closer to the listener than the speaker, like 'that' in English, and must be followed by a noun (e.g., その本 = 'that book'). あれ refers to something far from both the speaker and listener, or something both people know. Unlike その, あれ can stand alone and means 'that' or 'that thing.'",
+        "first_relatable": {
+          "id": 37,
+          "slug": "その",
+          "title": "その",
+          "meaning": "That",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 19,
+          "slug": "あれ",
+          "title": "あれ",
+          "meaning": "That (over there)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "190",
+      "type": "related_content",
+      "attributes": {
+        "id": 190,
+        "relationship_type": "related",
+        "body": "どれ is a question word used to ask 'which' or 'which one' from a group of three or more options. あれ, on the other hand, refers to something far from both the speaker and listener, or something they both know, similar to 'that' or 'that thing' in English. In short, どれ is used to ask a question, while あれ refers to a specific, distant thing.",
+        "first_relatable": {
+          "id": 712,
+          "slug": "どれ",
+          "title": "どれ",
+          "meaning": "Which (of three or more)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 19,
+          "slug": "あれ",
+          "title": "あれ",
+          "meaning": "That (over there)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "32",
+      "type": "related_content",
+      "attributes": {
+        "id": 32,
+        "relationship_type": "related",
+        "body": "これ and あれ are both used to refer to things, but the difference lies in distance. これ means 'this' and refers to something near the speaker. あれ means 'that' and refers to something far from both the speaker and the listener. Both can refer to physical objects or more abstract things.",
+        "first_relatable": {
+          "id": 5,
+          "slug": "これ",
+          "title": "これ",
+          "meaning": "This",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 19,
+          "slug": "あれ",
+          "title": "あれ",
+          "meaning": "That (over there)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "40",
+      "type": "related_content",
+      "attributes": {
+        "id": 40,
+        "relationship_type": "related",
+        "body": "それ and あれ are both similar to the English word 'that' and are used to refer to objects or ideas away from the speaker. それ refers to something near the listener or just mentioned in conversation. あれ points to something far from both the speaker and listener, or something both people are aware of. For physical objects, think of それ as 'that near you' and あれ as 'that over there.'",
+        "first_relatable": {
+          "id": 11,
+          "slug": "それ",
+          "title": "それ",
+          "meaning": "That",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 19,
+          "slug": "あれ",
+          "title": "あれ",
+          "meaning": "That (over there)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "61",
+      "type": "related_content",
+      "attributes": {
+        "id": 61,
+        "relationship_type": "related",
+        "body": "ここ refers to a place where the speaker is or is pointing to, similar to 'here' in English. あれ, on the other hand, refers to something far from both the speaker and listener, or something they both know but isn't nearby, similar to 'that (over there).' The key difference is whether you're talking about a place or a thing, and from whose point of view.",
+        "first_relatable": {
+          "id": 14,
+          "slug": "ここ",
+          "title": "ここ",
+          "meaning": "Here, This place",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 19,
+          "slug": "あれ",
+          "title": "あれ",
+          "meaning": "That (over there)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "74",
+      "type": "related_content",
+      "attributes": {
+        "id": 74,
+        "relationship_type": "related",
+        "body": "あれ refers to something far from both the speaker and listener, or something both people know but isn't nearby, similar to 'that (over there)' in English. そこ refers to a place near the listener, like 'there.' Both relate to distance, but あれ is used for objects or ideas, while そこ is used for locations.",
+        "first_relatable": {
+          "id": 19,
+          "slug": "あれ",
+          "title": "あれ",
+          "meaning": "That (over there)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 20,
+          "slug": "そこ",
+          "title": "そこ",
+          "meaning": "There, That place",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "89",
+      "type": "related_content",
+      "attributes": {
+        "id": 89,
+        "relationship_type": "related",
+        "body": "この refers to something near the speaker, like 'this' in English, and must be followed by a noun (e.g., この本 = 'this book'). あれ, on the other hand, refers to something far from both the speaker and listener, or something known to both but not nearby, similar to 'that.' Unlike この, あれ can be used on its own to mean 'that' or 'that thing.'",
+        "first_relatable": {
+          "id": 30,
+          "slug": "この",
+          "title": "この",
+          "meaning": "This",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 19,
+          "slug": "あれ",
+          "title": "あれ",
+          "meaning": "That (over there)",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,756 @@
+{
+  "data": {
+    "id": "326",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 326,
+      "level": "JLPT2",
+      "lesson_id": 39,
+      "part_of_speech": null,
+      "register": "一般",
+      "word_type": "",
+      "slug": "も-ば-も",
+      "nuance": "(A)という<strong>予想（よそう）外（がい）</strong>の事（こと）以外（いがい）にも、<strong>驚（おどろ）く</strong>ことに(B)も事実（じじつ）であるということを示（しめ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。",
+      "grammar_order": 720,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 324,
+        "title": "でしかない",
+        "slug": "でしかない"
+      },
+      "previous_grammar_point": {
+        "id": 330,
+        "title": "にすぎない",
+        "slug": "にすぎない"
+      },
+      "lesson_count": "23/23",
+      "title": "も～ば～も",
+      "furigana": "も～ば～も",
+      "meaning": "…And…, Both ... and ..., ... And ... as well",
+      "nuance_translation": "A <strong>hypothetical</strong> expression that points out that in addition to the <strong>surprising</strong> (A), the <strong>surprising</strong> (B) is also true.",
+      "rare_kanji_warning": "",
+      "caution": "",
+      "polite_structure": "",
+      "casual_structure": "Noun (A)<strong><span class='gp-popout' data-gp-id='4'>も</span></strong> + <span class='gp-popout' data-gp-id='154'>Verb［ば］</span>+ Noun (B)<strong><span class='gp-popout' data-gp-id='4'>も</span></strong><br><br>Noun (A)<strong><span class='gp-popout' data-gp-id='4'>も</span></strong> + <span class='gp-popout' data-gp-id='154'>［い］Adjective［ば］</span>+ Noun (B)<strong><span class='gp-popout' data-gp-id='4'>も</span></strong><br><br>Noun (A)<strong><span class='gp-popout' data-gp-id='4'>も</span></strong> + <span class='gp-popout' data-gp-id='28'>［な］Adjective</span> + <span class='chui'><span class='gp-popout' data-gp-id='123'>なら</span></span> + Noun (B)<strong><span class='gp-popout' data-gp-id='4'>も</span></strong><br><br>Noun (A)<strong><span class='gp-popout' data-gp-id='4'>も</span></strong> + Noun + <span class='chui'><span class='gp-popout' data-gp-id='123'>なら</span></span> + Noun (B)<strong><span class='gp-popout' data-gp-id='4'>も</span></strong>",
+      "part_of_speech_translation": null,
+      "register_translation": "Standard",
+      "word_type_translation": "",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/10491",
+      "metadata": "もばも, mobamo, hypothetical, hand-in-hand"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "182436",
+            "type": "study_question"
+          },
+          {
+            "id": "182437",
+            "type": "study_question"
+          },
+          {
+            "id": "182438",
+            "type": "study_question"
+          },
+          {
+            "id": "182439",
+            "type": "study_question"
+          },
+          {
+            "id": "6075",
+            "type": "study_question"
+          },
+          {
+            "id": "6077",
+            "type": "study_question"
+          },
+          {
+            "id": "6079",
+            "type": "study_question"
+          },
+          {
+            "id": "6076",
+            "type": "study_question"
+          },
+          {
+            "id": "1193",
+            "type": "study_question"
+          },
+          {
+            "id": "184510",
+            "type": "study_question"
+          },
+          {
+            "id": "1194",
+            "type": "study_question"
+          },
+          {
+            "id": "6074",
+            "type": "study_question"
+          },
+          {
+            "id": "6078",
+            "type": "study_question"
+          },
+          {
+            "id": "1192",
+            "type": "study_question"
+          },
+          {
+            "id": "6071",
+            "type": "study_question"
+          },
+          {
+            "id": "6072",
+            "type": "study_question"
+          },
+          {
+            "id": "6073",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "733",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "614",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": []
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "706",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "707",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "705",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "182436",
+      "type": "study_question",
+      "attributes": {
+        "id": 182436,
+        "content": "お父（とう）さんはイタリア語（ご）<span class='study-area-input'>____</span>出来（でき）れ<strong><span class=\"gp-popout\" data-gp-id=\"326\">ば</span></strong>、スペイン語（ご）<span class='study-area-input'>____</span>話（はな）せる。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/お父さんはイタリア語も出来れば、スペイン語も話せる。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "My father can speak Italian <strong>and</strong> Spanish.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 326,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182437",
+      "type": "study_question",
+      "attributes": {
+        "id": 182437,
+        "content": "日本（にほん）の冬（ふゆ）は湿度（しつど）<span class='study-area-input'>____</span>低（ひく）けれ<strong><span class=\"gp-popout\" data-gp-id=\"326\">ば</span></strong>、温度（おんど）<span class='study-area-input'>____</span>低（ひく）いから外（そと）で火（ひ）を使（つか）う時（とき）は気（き）をつけないといけない。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/日本の冬は湿度も低ければ、温度も低いから外で火を使う時は気をつけないといけない。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Winter in Japan is cold <strong>and</strong> dry, so you have to be careful when using fire outside.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 326,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182438",
+      "type": "study_question",
+      "attributes": {
+        "id": 182438,
+        "content": "このギターの音（おと）<span class='study-area-input'>____</span>好（す）き<strong><span class=\"gp-popout\" data-gp-id=\"326\">なら</span></strong>柄（がら）<span class='study-area-input'>____</span>好（す）きなので、一生（いっしょう）手放（てばな）したくありません。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/このギターの音も好きなら柄も好きなので、一生手放したくありません。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "I like the sound <strong>and</strong> the design of this guitar, so I never want to let it go.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 326,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "182439",
+      "type": "study_question",
+      "attributes": {
+        "id": 182439,
+        "content": "マルチ商法（しょうほう）の話（はなし）を聞（き）くたびに、騙（だま）す方（ほう）<span class='study-area-input'>____</span>騙（だま）す方（ほう）<strong><span class=\"gp-popout\" data-gp-id=\"326\">なら</span></strong>、騙（だま）される方（ほう）<span class='study-area-input'>____</span>騙（だま）される方（ほう）だといつも思（おも）う。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/マルチ商法の話を聞くたびに、騙す方も騙す方なら、騙される方も騙される方だといつも思う。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Whenever I hear about pyramid schemes, I always think that if the scammers are scammers, then the scammed are scammed. (I always think that the scammers <strong>and</strong> the scammed are <strong>both</strong> at fault.)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 326,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6075",
+      "type": "study_question",
+      "attributes": {
+        "id": 6075,
+        "content": "あの人（ひと）は、実力（じつりょく）<span class='study-area-input'>____</span>、努力（どりょく）<strong>も</strong>する。",
+        "answer": "もあれば",
+        "alternate_grammar": [],
+        "kanji_answer": "もあれば",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>予想（よそう）外（がい）</strong>の事（こと）以外（いがい）にも、<strong>驚（おどろ）く</strong>ことに(B)も事実（じじつ）であるということを示（しめ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。",
+        "tense": "Hypothetical, Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あの人は、実力もあれば、努力もする。.mp3",
+        "word_prompt": "ある",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あれば": {
+            "en": "Can you add a particle at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That person <strong>has</strong> capabilities <strong>and</strong> puts forth effort.",
+        "nuance_translation": "A <strong>hypothetical</strong> expression that points out that in addition to the <strong>surprising</strong> (A), the <strong>surprising</strong> (B) is also true.",
+        "extra_info": "",
+        "reviewable_id": 326,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6077",
+      "type": "study_question",
+      "attributes": {
+        "id": 6077,
+        "content": "あの候補者（こうほしゃ）は、地盤（じばん）<span class='study-area-input'>____</span>知名度（ちめいど）<strong>も</strong>ないから、たぶん受（う）からないと思（おも）います。",
+        "answer": "もなければ",
+        "alternate_grammar": [],
+        "kanji_answer": "もなければ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>予想（よそう）外（がい）</strong>の事（こと）以外（いがい）にも、<strong>驚（おどろ）く</strong>ことに(B)も事実（じじつ）であるということを示（しめ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。",
+        "tense": "Hypothetical, Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あの候補者は、地盤もなければ知名度もないから、たぶん受からないと思います。.mp3",
+        "word_prompt": "ない",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なければ": {
+            "en": "Can you add a particle at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Since that candidate <strong>does not have</strong> a base <strong>and</strong> does not have popularity, I think perhaps he will not win.",
+        "nuance_translation": "A <strong>hypothetical</strong> expression that points out that in addition to the <strong>surprising</strong> (A), the <strong>surprising</strong> (B) is also true.",
+        "extra_info": "",
+        "reviewable_id": 326,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6079",
+      "type": "study_question",
+      "attributes": {
+        "id": 6079,
+        "content": "彼（かれ）は、習字（しゅうじ）<span class='study-area-input'>____</span>、ピアノだって弾（ひ）けるし、スポーツ<strong>も</strong>万能（ばんのう）だ。",
+        "answer": "もできれば",
+        "alternate_grammar": [],
+        "kanji_answer": "もできれば",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>予想（よそう）外（がい）</strong>の事（こと）以外（いがい）にも、<strong>驚（おどろ）く</strong>ことに(B)も事実（じじつ）であるということを示（しめ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。",
+        "tense": "Hypothetical, Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼は、習字もできれば、ピアノだって弾けるし、スポーツも万能だ。.mp3",
+        "word_prompt": "できる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "できれば": {
+            "en": "Can you add a particle at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He <strong>can</strong> write well, <strong>as well as</strong> play the piano, <strong>and</strong> he is versatile in sports.",
+        "nuance_translation": "A <strong>hypothetical</strong> expression that points out that in addition to the <strong>surprising</strong> (A), the <strong>surprising</strong> (B) is also true.",
+        "extra_info": "",
+        "reviewable_id": 326,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6076",
+      "type": "study_question",
+      "attributes": {
+        "id": 6076,
+        "content": "あのバスは、指定席（していせき）<span class='study-area-input'>____</span>予約（よやく）<strong>も</strong>できないから、行（い）ってみないと乗（の）れるか分（わ）からない。",
+        "answer": "もなければ",
+        "alternate_grammar": [],
+        "kanji_answer": "もなければ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>予想（よそう）外（がい）</strong>の事（こと）以外（いがい）にも、<strong>驚（おどろ）く</strong>ことに(B)も事実（じじつ）であるということを示（しめ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。",
+        "tense": "Hypothetical, Inclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あのバスは、指定席もなければ予約もできないから、行ってみないと乗れるか分からない。.mp3",
+        "word_prompt": "ない",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なければ": {
+            "en": "Can you add a particle at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Since that bus <strong>does not have</strong> assigned seating <strong>and</strong> you cannot reserve a seat, if you do not go and check, you won't know if you can ride or not.",
+        "nuance_translation": "A <strong>hypothetical</strong> expression that points out that in addition to the <strong>surprising</strong> (A), the <strong>surprising</strong> (B) is also true.",
+        "extra_info": "",
+        "reviewable_id": 326,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1193",
+      "type": "study_question",
+      "attributes": {
+        "id": 1193,
+        "content": "彼女（かのじょ）は地位（ちい）<span class='study-area-input'>____</span>なけれ<strong>ば</strong>お金（かね）<span class='study-area-input'>____</span>ない。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>予想（よそう）外（がい）</strong>の事（こと）以外（いがい）にも、<strong>驚（おどろ）く</strong>ことに(B)も事実（じじつ）であるということを示（しめ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。",
+        "tense": "Particle, Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼女は地位もなければお金もない。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "She has <strong>neither</strong> status nor money.",
+        "nuance_translation": "A <strong>hypothetical</strong> expression that points out that in addition to the <strong>surprising</strong> (A), the <strong>surprising</strong> (B) is also true.",
+        "extra_info": "",
+        "reviewable_id": 326,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "184510",
+      "type": "study_question",
+      "attributes": {
+        "id": 184510,
+        "content": "あの居酒屋（いざかや）のスタッフの態度（たいど）<span data-gp-id='326'>も</span>よけれ<span data-gp-id='326'>ば</span>、値段（ねだん）<span data-gp-id='326'>も</span>高（たか）いから人気（にんき）がある。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あの居酒屋のスタッフの態度もよければ、値段も高いから人気がある。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 12,
+        "validation_status": "",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The attitude of the staff at that izakaya is good and it is expensive, which is why they are so popular. (Unnatural Japanese)",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 326,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1194",
+      "type": "study_question",
+      "attributes": {
+        "id": 1194,
+        "content": "総理大臣（そうりだいじん）は、経済（けいざい）<span class='study-area-input'>____</span>見直（みなお）せれ<strong>ば</strong>、人権（じんけん）問題（もんだい）<span class='study-area-input'>____</span>解決（かいけつ）できます。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>予想（よそう）外（がい）</strong>の事（こと）以外（いがい）にも、<strong>驚（おどろ）く</strong>ことに(B)も事実（じじつ）であるということを示（しめ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。",
+        "tense": "Particle, Inclusive",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/総理大臣は、経済も見直せれば、人権問題も解決できます。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "The Prime Minister can reform the economy <strong>and</strong> resolve human rights issues.",
+        "nuance_translation": "A <strong>hypothetical</strong> expression that points out that in addition to the <strong>surprising</strong> (A), the <strong>surprising</strong> (B) is also true.",
+        "extra_info": "",
+        "reviewable_id": 326,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6074",
+      "type": "study_question",
+      "attributes": {
+        "id": 6074,
+        "content": "「うまくいっている」という実感（じっかん）<span class='study-area-input'>____</span>、兆候（ちょうこう）<strong>も</strong>ない。",
+        "answer": "もなければ",
+        "alternate_grammar": [],
+        "kanji_answer": "もなければ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>予想（よそう）外（がい）</strong>の事（こと）以外（いがい）にも、<strong>驚（おどろ）く</strong>ことに(B)も事実（じじつ）であるということを示（しめ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。",
+        "tense": "Hypothetical, Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/「うまくいっている」という実感もなければ、兆候もない。.mp3",
+        "word_prompt": "ない",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "なければ": {
+            "en": "Can you add a particle at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "<strong>There is not</strong> any feeling of 'it is going well,' <strong>nor</strong> is there any indication.",
+        "nuance_translation": "A <strong>hypothetical</strong> expression that points out that in addition to the <strong>surprising</strong> (A), the <strong>surprising</strong> (B) is also true.",
+        "extra_info": "",
+        "reviewable_id": 326,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6078",
+      "type": "study_question",
+      "attributes": {
+        "id": 6078,
+        "content": "人（ひと）は皆（みんな）、短所（たんしょ）<span class='study-area-input'>____</span>弱（よわ）さ<strong>も</strong>ある。だからこそ、助（たす）け合（あ）って生（い）きるのです。",
+        "answer": "もあれば",
+        "alternate_grammar": [],
+        "kanji_answer": "もあれば",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>予想（よそう）外（がい）</strong>の事（こと）以外（いがい）にも、<strong>驚（おどろ）く</strong>ことに(B)も事実（じじつ）であるということを示（しめ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。",
+        "tense": "Hypothetical, Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/人は皆、短所もあれば弱さもある。だからこそ、助け合って生きるのです。.mp3",
+        "word_prompt": "ある",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "あれば": {
+            "en": "Can you add a particle at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Everyone <strong>has</strong> disadvantages <strong>and</strong> weaknesses. For that reason, live to help each other.",
+        "nuance_translation": "A <strong>hypothetical</strong> expression that points out that in addition to the <strong>surprising</strong> (A), the <strong>surprising</strong> (B) is also true.",
+        "extra_info": "",
+        "reviewable_id": 326,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "1192",
+      "type": "study_question",
+      "attributes": {
+        "id": 1192,
+        "content": "彼（かれ）は、スポーツ<span class='study-area-input'>____</span>上手（じょうず）にできれ<strong>ば</strong>、仕事（しごと）<span class='study-area-input'>____</span>効率（こうりつ）よくできる。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>予想（よそう）外（がい）</strong>の事（こと）以外（いがい）にも、<strong>驚（おどろ）く</strong>ことに(B)も事実（じじつ）であるということを示（しめ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。",
+        "tense": "Particle, Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼は、スポーツも上手にできれば、仕事も効率よくできる。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "He can play sports well <strong>and</strong> does his job efficiently.",
+        "nuance_translation": "A <strong>hypothetical</strong> expression that points out that in addition to the <strong>surprising</strong> (A), the <strong>surprising</strong> (B) is also true.",
+        "extra_info": "",
+        "reviewable_id": 326,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6071",
+      "type": "study_question",
+      "attributes": {
+        "id": 6071,
+        "content": "彼（かれ）は撮影（さつえい）<span class='study-area-input'>____</span>、ナレーション<strong>も</strong>できる。",
+        "answer": "もできれば",
+        "alternate_grammar": [],
+        "kanji_answer": "もできれば",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>予想（よそう）外（がい）</strong>の事（こと）以外（いがい）にも、<strong>驚（おどろ）く</strong>ことに(B)も事実（じじつ）であるということを示（しめ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。",
+        "tense": "Hypothetical, Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/彼は撮影もできれば、ナレーションもできる。.mp3",
+        "word_prompt": "できる",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "できれば": {
+            "en": "Can you add a particle at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "He <strong>can do</strong> photography <strong>and</strong> also narration.",
+        "nuance_translation": "A <strong>hypothetical</strong> expression that points out that in addition to the <strong>surprising</strong> (A), the <strong>surprising</strong> (B) is also true.",
+        "extra_info": "",
+        "reviewable_id": 326,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6072",
+      "type": "study_question",
+      "attributes": {
+        "id": 6072,
+        "content": "あの曲芸師（きょくげいし）は、茶碗（ちゃわん）<span class='study-area-input'>____</span>回（まわ）せれ<strong>ば</strong>、座布団（ざぶとん）<span class='study-area-input'>____</span>回（まわ）せる。",
+        "answer": "も",
+        "alternate_grammar": [],
+        "kanji_answer": "も",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>予想（よそう）外（がい）</strong>の事（こと）以外（いがい）にも、<strong>驚（おどろ）く</strong>ことに(B)も事実（じじつ）であるということを示（しめ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。",
+        "tense": "Emphatic, Particle, Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あの曲芸師は、茶碗も回せれば、座布団も回せる。.mp3",
+        "word_prompt": null,
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "That acrobat <strong>can spin</strong> a tea cup <strong>and</strong> spin a cushion.",
+        "nuance_translation": "A <strong>hypothetical</strong> expression that points out that in addition to the <strong>surprising</strong> (A), the <strong>surprising</strong> (B) is also true.",
+        "extra_info": "",
+        "reviewable_id": 326,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "6073",
+      "type": "study_question",
+      "attributes": {
+        "id": 6073,
+        "content": "あの子（こ）は、算数（さんすう）<span class='study-area-input'>____</span>国語（こくご）<strong>も</strong>できないから、将来（しょうらい）が不安（ふあん）です。",
+        "answer": "もできなければ",
+        "alternate_grammar": [],
+        "kanji_answer": "もできなければ",
+        "kanji_alt_grammar": [],
+        "nuance": "(A)という<strong>予想（よそう）外（がい）</strong>の事（こと）以外（いがい）にも、<strong>驚（おどろ）く</strong>ことに(B)も事実（じじつ）であるということを示（しめ）す<strong>仮定（かてい）</strong>表現（ひょうげん）。",
+        "tense": "Hypothetical, Inclusive",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n2/あの子は、算数もできなければ国語もできないから、将来が不安です。.mp3",
+        "word_prompt": "できない",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "できなければ": {
+            "en": "Can you add a particle at the beginning?",
+            "es": ""
+          }
+        },
+        "wrong_answers": {},
+        "translation": "That child <strong>cannot do</strong> math, <strong>and</strong> cannot do Japanese, so I am anxious about their future.",
+        "nuance_translation": "A <strong>hypothetical</strong> expression that points out that in addition to the <strong>surprising</strong> (A), the <strong>surprising</strong> (B) is also true.",
+        "extra_info": "",
+        "reviewable_id": 326,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "733",
+      "type": "writeup",
+      "attributes": {
+        "id": 733,
+        "body_ja": "​​<p>「<span data-gp-id='326'>も～ば～も</span>」は、(A) も (B) も成（な）り立（た）つことを表（あらわ）す表現（ひょうげん）です。「も」は名詞（めいし）に付（つ）き、仮定（かてい）を表（あらわ）す助詞（じょし）の「ば」は動詞（どうし）やイ形容詞（けいようし）、ナ形容詞（けいようし）、名詞（めいし）に付（つ）きます。ただし、名詞（めいし）やナ形容詞（けいようし）の場合（ばあい）、「ば」ではなく「なら」や「ならば」が使（つか）われます。</p>\r\n\r\n<p>「<span data-gp-id='326'>も～ば～も</span>」は「(A) がそうなら、(B) もそうだ」という意味（いみ）で使（つか）われます。(A) と (B) の両方（りょうほう）に共通（きょうつう）する性質（せいしつ）や特徴（とくちょう）があり、どちらか一方（いっぽう）が成（な）り立（た）つならもう一方（いっぽう）も成（な）り立（た）つことを示（しめ）します。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182436'>\r\n<li data-study-question='182437'>\r\n<li data-study-question='182438'>\r\n<li data-study-question='182439'>\r\n</ul>\r\n\r\n<section class='caution'><h4>注意点（ちゅういてん）</h4>\r\n<p>「<span data-gp-id='326'>も～ば～も</span>」を使（つか）うとき、(A) と (B) には同（おな）じような性質（せいしつ）のものが入（はい）ります。つまり、(A) と (B) の内容（ないよう）はその両方（りょうほう）が肯定的（こうていてき）、否定的（ひていてき）、またはその中間（ちゅうかん）である必要（ひつよう）があります。どれかが混（ま）ざることはふつうありませんが、「好（す）き」と「嫌（きら）い」など対照的（たいしょうてき）な言葉（ことば）が入（はい）ることはあります。</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184510'></ul></section>",
+        "body": "<p><span data-gp-id='326'>も～ば～も</span> is a construction in Japanese which presents aspects of something to which both (A) and (B) are true. も will be connected to a noun, before the hypothetical marking particle ば will appear following a verb, い-Adjective, な-Adjective, or noun. In the case of nouns and な-Adjectives, なら or ならば will be used.</p>\r\n\r\n<p>In this way, <span data-gp-id='326'>も～ば～も</span> just highlights that 'If (A) is true, then so is (B)'. This usually just emphasizes that (A) and (B) are things that go together hand-in-hand, with one trait or characteristic always existing if the other does. Standard translations include 'both (A) and (B) are (C)', or 'the trait of (C), is in (A) and (B) as well'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='182436'>\r\n<li data-study-question='182437'>\r\n<li data-study-question='182438'>\r\n<li data-study-question='182439'>\r\n</ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p>With <span data-gp-id='326'>も～ば～も</span>, both traits will be things that share some sort of mutual connection. This means that both (A) and (B) will either be positive, neutral, or negative, but rarely a mixture of either one. Despite this, (A) and (B) can occasionally be contrastive, such as with 'to like', and 'to hate'.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='184510'></ul></section>"
+      }
+    },
+    {
+      "id": "614",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 614,
+        "source": "Tobira",
+        "location": "Page 142 & 355",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "706",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 706,
+        "site": "NihonOnTheGo",
+        "description": "Grammar: ～も～ば～も",
+        "link": "https://nihononthego.tumblr.com/post/138718910672/grammar-%E3%82%82-%E3%81%B0-%E3%82%82",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "707",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 707,
+        "site": "日本語の森 [video]",
+        "description": "も～ば～も",
+        "link": "https://youtu.be/EDqi3eKbW4E?t=118",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "705",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 705,
+        "site": "日本語教師のN1et",
+        "description": "用法・接続・例文",
+        "link": "https://jn1et.com/mobamo/",
+        "type": "SupplementalLink"
+      }
+    }
+  ]
+}

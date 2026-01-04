@@ -1,0 +1,1221 @@
+{
+  "data": {
+    "id": "81",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 81,
+      "level": "JLPT5",
+      "lesson_id": 9,
+      "part_of_speech": "助詞",
+      "register": "一般",
+      "word_type": "終助詞",
+      "slug": "や",
+      "nuance": "リスト内（ない）の情報（じょうほう）が<strong>包括（ほうかつ）的（てき）ではない</strong>ということを表（あらわ）す<strong>助詞（じょし）</strong>。",
+      "grammar_order": 115,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": {
+        "id": 63,
+        "title": "たことがある",
+        "slug": "たことがある"
+      },
+      "previous_grammar_point": {
+        "id": 74,
+        "title": "なくちゃ・なきゃ",
+        "slug": "なくちゃ-なきゃ"
+      },
+      "lesson_count": "13/13",
+      "title": "や",
+      "furigana": "や",
+      "meaning": "Things like, And the like",
+      "nuance_translation": "A <strong>particle</strong> that expresses <strong>non-exhaustive</strong> lists.",
+      "rare_kanji_warning": null,
+      "caution": "Cannot be used after verbs, unlike とか",
+      "polite_structure": null,
+      "casual_structure": "Noun + <strong>や</strong> + Noun",
+      "part_of_speech_translation": "Particle",
+      "register_translation": "Standard",
+      "word_type_translation": "Sentence Ending Particle",
+      "discourse_link": "https://community.bunpro.jp/t/grammar-discussion/1174",
+      "metadata": "や, ya, particle, adverbial particle, list"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": [
+          {
+            "id": "155424",
+            "type": "study_question"
+          },
+          {
+            "id": "81",
+            "type": "study_question"
+          },
+          {
+            "id": "787",
+            "type": "study_question"
+          },
+          {
+            "id": "2214",
+            "type": "study_question"
+          },
+          {
+            "id": "2219",
+            "type": "study_question"
+          },
+          {
+            "id": "155422",
+            "type": "study_question"
+          },
+          {
+            "id": "155423",
+            "type": "study_question"
+          },
+          {
+            "id": "786",
+            "type": "study_question"
+          },
+          {
+            "id": "155425",
+            "type": "study_question"
+          },
+          {
+            "id": "2215",
+            "type": "study_question"
+          },
+          {
+            "id": "2216",
+            "type": "study_question"
+          },
+          {
+            "id": "2217",
+            "type": "study_question"
+          },
+          {
+            "id": "2220",
+            "type": "study_question"
+          },
+          {
+            "id": "2218",
+            "type": "study_question"
+          },
+          {
+            "id": "2221",
+            "type": "study_question"
+          },
+          {
+            "id": "2222",
+            "type": "study_question"
+          }
+        ]
+      },
+      "writeups": {
+        "data": [
+          {
+            "id": "114",
+            "type": "writeup"
+          }
+        ]
+      },
+      "offline_resources": {
+        "data": [
+          {
+            "id": "56",
+            "type": "offline_resource"
+          },
+          {
+            "id": "155",
+            "type": "offline_resource"
+          },
+          {
+            "id": "798",
+            "type": "offline_resource"
+          },
+          {
+            "id": "121",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1195",
+            "type": "offline_resource"
+          },
+          {
+            "id": "1255",
+            "type": "offline_resource"
+          }
+        ]
+      },
+      "related_contents": {
+        "data": [
+          {
+            "id": "1418",
+            "type": "related_content"
+          },
+          {
+            "id": "63",
+            "type": "related_content"
+          },
+          {
+            "id": "267",
+            "type": "related_content"
+          },
+          {
+            "id": "701",
+            "type": "related_content"
+          },
+          {
+            "id": "388",
+            "type": "related_content"
+          },
+          {
+            "id": "385",
+            "type": "related_content"
+          }
+        ]
+      },
+      "supplemental_links": {
+        "data": [
+          {
+            "id": "172",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "171",
+            "type": "supplemental_link"
+          },
+          {
+            "id": "914",
+            "type": "supplemental_link"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "155424",
+      "type": "study_question",
+      "attributes": {
+        "id": 155424,
+        "content": "昨日（きのう）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>飲（の）み会（かい）<span class=\"gp-popout\" data-gp-id=\"25\">で</span>ビール<span class=\"gp-popout\" data-gp-id=\"15\">と</span>ワイン<span class=\"gp-popout\" data-gp-id=\"21\">を</span>飲（の）ん<span class=\"gp-popout\" data-gp-id=\"41\">だ</span>。",
+        "answer": "",
+        "alternate_grammar": [],
+        "kanji_answer": "",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/昨日の飲み会でビールとワインを飲んだ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Last night at the party, I drank beer and wine. (Only beer and wine)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 81,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "81",
+      "type": "study_question",
+      "attributes": {
+        "id": 81,
+        "content": "コンビニ<span class='gp-popout' data-gp-id='25'>で</span>お水（みず）<span class='study-area-input'>____</span>おかし<span class='gp-popout' data-gp-id='21'>を</span>買（か）<span class='gp-popout' data-gp-id='41'>った</span>。",
+        "answer": "や",
+        "alternate_grammar": [],
+        "kanji_answer": "や",
+        "kanji_alt_grammar": [],
+        "nuance": "リスト内（ない）の情報（じょうほう）が<strong>包括（ほうかつ）的（てき）ではない</strong>ということを表（あらわ）す<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/81/male_audio/04-コンビニでお水やお菓子を買った.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/コンビニでお水やおかしを買った。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "¡Casi! Prueba con una partícula similar que no se agrega después del último elemento.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "し": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "だし": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I bought <strong>things like</strong> water <strong>and</strong> snacks at the convenience store. ",
+        "nuance_translation": "A <strong>particle</strong> that expresses <strong>non-exhaustive</strong> lists.",
+        "extra_info": "",
+        "reviewable_id": 81,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "787",
+      "type": "study_question",
+      "attributes": {
+        "id": 787,
+        "content": "京都（きょうと）<span class='study-area-input'>____</span>東京（とうきょう）<span class='study-area-input'>____</span>大阪（おおさか）に行（い）き<span class='gp-popout' data-gp-id='41'>ました</span>。",
+        "answer": "や",
+        "alternate_grammar": [],
+        "kanji_answer": "や",
+        "kanji_alt_grammar": [],
+        "nuance": "リスト内（ない）の情報（じょうほう）が<strong>包括（ほうかつ）的（てき）ではない</strong>ということを表（あらわ）す<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/81/male_audio/08-京都や東京や大阪へ行きました.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/京都や東京や大阪に行きました。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 2,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "¡Casi! Prueba con una partícula similar que no se agrega después del último elemento.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "し": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "だし": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I went to <strong>places like</strong> Kyoto <strong>and</strong> Tokyo <strong>and</strong> Osaka.",
+        "nuance_translation": "A <strong>particle</strong> that expresses <strong>non-exhaustive</strong> lists.",
+        "extra_info": "",
+        "reviewable_id": 81,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2214",
+      "type": "study_question",
+      "attributes": {
+        "id": 2214,
+        "content": "サッカー<span class='study-area-input'>____</span>テニス<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='22'>する</span><span class='gp-popout' data-gp-id='34'>のが好（す）き</span>。",
+        "answer": "や",
+        "alternate_grammar": [],
+        "kanji_answer": "や",
+        "kanji_alt_grammar": [],
+        "nuance": "リスト内（ない）の情報（じょうほう）が<strong>包括（ほうかつ）的（てき）ではない</strong>ということを表（あらわ）す<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/81/male_audio/06-サッカーやテニスをするのが好き.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/サッカーやテニスをするのが好き。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 3,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "¡Casi! Prueba con una partícula similar que no se agrega después del último elemento.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "と": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "し": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "だし": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I like playing <strong>sports like</strong> soccer <strong>and</strong> tennis.",
+        "nuance_translation": "A <strong>particle</strong> that expresses <strong>non-exhaustive</strong> lists.",
+        "extra_info": "",
+        "reviewable_id": 81,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2219",
+      "type": "study_question",
+      "attributes": {
+        "id": 2219,
+        "content": "<span class='gp-popout' data-gp-id='30'>この</span>絵（え）<span class='gp-popout' data-gp-id='3'>は</span>緑色（みどりいろ）<span class='study-area-input'>____</span>赤色（あかいろ）<span class='gp-popout' data-gp-id='10'>が</span>多（おお）<span class='gp-popout' data-gp-id='24'>い</span>。",
+        "answer": "や",
+        "alternate_grammar": [],
+        "kanji_answer": "や",
+        "kanji_alt_grammar": [],
+        "nuance": "リスト内（ない）の情報（じょうほう）が<strong>包括（ほうかつ）的（てき）ではない</strong>ということを表（あらわ）す<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/81/male_audio/02-この絵は緑色や赤色が多い.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/この絵は緑色や赤色が多い。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 8,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "¡Casi! Prueba con una partícula similar que no se agrega después del último elemento.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "と": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "し": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "だし": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "There are a lot of <strong>colors like</strong> greens <strong>and</strong> reds in this painting.",
+        "nuance_translation": "A <strong>particle</strong> that expresses <strong>non-exhaustive</strong> lists.",
+        "extra_info": "",
+        "reviewable_id": 81,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155422",
+      "type": "study_question",
+      "attributes": {
+        "id": 155422,
+        "content": "<span class=\"gp-popout\" data-gp-id=\"30\">この</span>スーパー<span class=\"gp-popout\" data-gp-id=\"32\">に</span><span class=\"gp-popout\" data-gp-id=\"3\">は</span>果物（くだもの）<span class='study-area-input'>____</span>弁当（べんとう）<span class=\"gp-popout\" data-gp-id=\"13\">がある</span>。",
+        "answer": "や",
+        "alternate_grammar": [],
+        "kanji_answer": "や",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "",
+        "male_audio_url": "",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/このスーパーには果物や弁当がある。.mp3",
+        "word_prompt": "",
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "This super market has <strong>things like</strong> fruit <strong>and</strong> bentos.",
+        "nuance_translation": "",
+        "extra_info": "",
+        "reviewable_id": 81,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155423",
+      "type": "study_question",
+      "attributes": {
+        "id": 155423,
+        "content": "飛行機（ひこうき）<span class='study-area-input'>____</span>船（ふね）<span class=\"gp-popout\" data-gp-id=\"3\">は</span>大（おお）き<span class=\"gp-popout\" data-gp-id=\"24\">い</span><span class=\"gp-popout\" data-gp-id=\"2\">です</span>。",
+        "answer": "や",
+        "alternate_grammar": [],
+        "kanji_answer": "や",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/飛行機や船は大きいです。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "<strong>Things like</strong> planes <strong>and</strong> ships are big.",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 81,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "786",
+      "type": "study_question",
+      "attributes": {
+        "id": 786,
+        "content": "ひらがな<span class='study-area-input'>____</span>カタカナ<span class='study-area-input'>____</span>漢字（かんじ）<span class='gp-popout' data-gp-id='13'>があります</span>。",
+        "answer": "や",
+        "alternate_grammar": [],
+        "kanji_answer": "や",
+        "kanji_alt_grammar": [],
+        "nuance": "リスト内（ない）の情報（じょうほう）が<strong>包括（ほうかつ）的（てき）ではない</strong>ということを表（あらわ）す<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/81/male_audio/03-ひらがなやカタカナや漢字があります.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/ひらがなやカタカナや漢字があります。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 1,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "¡Casi! Prueba con una partícula similar que no se agrega después del último elemento.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "し": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "だし": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "There are <strong>things like</strong> Hiragana <strong>and</strong> Katakana <strong>and</strong> Kanji. ",
+        "nuance_translation": "A <strong>particle</strong> that expresses <strong>non-exhaustive</strong> lists.",
+        "extra_info": "",
+        "reviewable_id": 81,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "155425",
+      "type": "study_question",
+      "attributes": {
+        "id": 155425,
+        "content": "昨日（きのう）<span class=\"gp-popout\" data-gp-id=\"6\">の</span>飲（の）み会（かい）<span class=\"gp-popout\" data-gp-id=\"25\">で</span>ビール<span class='study-area-input'>____</span>ワイン<span class=\"gp-popout\" data-gp-id=\"21\">を</span>飲（の）ん<span class=\"gp-popout\" data-gp-id=\"41\">だ</span>。",
+        "answer": "や",
+        "alternate_grammar": [],
+        "kanji_answer": "や",
+        "kanji_alt_grammar": [],
+        "nuance": null,
+        "tense": "",
+        "male_audio_url": null,
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/昨日の飲み会でビールやワインを飲んだ。.mp3",
+        "word_prompt": null,
+        "used_in": "writeups",
+        "question_type": "readonly",
+        "sentence_order": 0,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {},
+        "wrong_answers": {},
+        "translation": "Last night at the party, I drank <strong>things like</strong> beer <strong>and</strong> wine. (There were other things, but it was mainly beer and wine)",
+        "nuance_translation": null,
+        "extra_info": "",
+        "reviewable_id": 81,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2215",
+      "type": "study_question",
+      "attributes": {
+        "id": 2215,
+        "content": "果物（くだもの）<span class='study-area-input'>____</span>野菜（やさい）<span class='gp-popout' data-gp-id='21'>を</span>食（た）べ<span class='gp-popout' data-gp-id='60'>てください</span>。",
+        "answer": "や",
+        "alternate_grammar": [],
+        "kanji_answer": "や",
+        "kanji_alt_grammar": [],
+        "nuance": "リスト内（ない）の情報（じょうほう）が<strong>包括（ほうかつ）的（てき）ではない</strong>ということを表（あらわ）す<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/81/male_audio/11-果物や野菜を食べてください.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/果物や野菜を食べてください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 4,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "¡Casi! Prueba con una partícula similar que no se agrega después del último elemento.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "と": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "し": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "だし": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Please eat <strong>things like</strong> fruits <strong>and</strong> vegetables.",
+        "nuance_translation": "A <strong>particle</strong> that expresses <strong>non-exhaustive</strong> lists.",
+        "extra_info": "",
+        "reviewable_id": 81,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2216",
+      "type": "study_question",
+      "attributes": {
+        "id": 2216,
+        "content": "新幹線（しんかんせん）<span class='gp-popout' data-gp-id='36'>で</span>、東京（とうきょう）<span class='study-area-input'>____</span>大阪（おおさか）<span class='gp-popout' data-gp-id='32'>に</span>も行（い）<span class='gp-popout' data-gp-id='41'>った</span>。",
+        "answer": "や",
+        "alternate_grammar": [],
+        "kanji_answer": "や",
+        "kanji_alt_grammar": [],
+        "nuance": "リスト内（ない）の情報（じょうほう）が<strong>包括（ほうかつ）的（てき）ではない</strong>ということを表（あらわ）す<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/81/male_audio/10-新幹線で東京や大阪へと行った.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/新幹線で、東京や大阪にも行った。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 5,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "¡Casi! Prueba con una partícula similar que no se agrega después del último elemento.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "と": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "し": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "だし": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I also went to <strong>places like</strong> Tokyo <strong>and</strong> Osaka by bullet train.",
+        "nuance_translation": "A <strong>particle</strong> that expresses <strong>non-exhaustive</strong> lists.",
+        "extra_info": "",
+        "reviewable_id": 81,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2217",
+      "type": "study_question",
+      "attributes": {
+        "id": 2217,
+        "content": "<span class='gp-popout' data-gp-id='47'>あの</span>カフェ<span class='gp-popout' data-gp-id='32'>に</span>猫（ねこ）<span class='study-area-input'>____</span>犬（いぬ）<span class='gp-popout' data-gp-id='23'>がいる</span>。",
+        "answer": "や",
+        "alternate_grammar": [],
+        "kanji_answer": "や",
+        "kanji_alt_grammar": [],
+        "nuance": "リスト内（ない）の情報（じょうほう）が<strong>包括（ほうかつ）的（てき）ではない</strong>ということを表（あらわ）す<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/81/male_audio/01-あのカフェに犬や猫がいる.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/あのカフェに猫や犬がいる。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 6,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "¡Casi! Prueba con una partícula similar que no se agrega después del último elemento.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "と": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "し": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "だし": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "There are <strong>things like</strong> cats <strong>and</strong> dogs in that Cafe over there.",
+        "nuance_translation": "A <strong>particle</strong> that expresses <strong>non-exhaustive</strong> lists.",
+        "extra_info": "",
+        "reviewable_id": 81,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2220",
+      "type": "study_question",
+      "attributes": {
+        "id": 2220,
+        "content": "火曜日（かようび）<span class='study-area-input'>____</span>金曜日（きんようび）<span class='gp-popout' data-gp-id='4'>も</span>、スポーツ<span class='gp-popout' data-gp-id='21'>を</span><span class='gp-popout' data-gp-id='22'>します</span>。",
+        "answer": "や",
+        "alternate_grammar": [],
+        "kanji_answer": "や",
+        "kanji_alt_grammar": [],
+        "nuance": "リスト内（ない）の情報（じょうほう）が<strong>包括（ほうかつ）的（てき）ではない</strong>ということを表（あらわ）す<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/81/male_audio/12-火曜日や金曜日もスポーツをします.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/火曜日や金曜日も、スポーツをします。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 9,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "¡Casi! Prueba con una partícula similar que no se agrega después del último elemento.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "と": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "し": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "だし": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "I will play sports on <strong>days like</strong> Tuesday <strong>and</strong> Friday.",
+        "nuance_translation": "A <strong>particle</strong> that expresses <strong>non-exhaustive</strong> lists.",
+        "extra_info": "",
+        "reviewable_id": 81,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2218",
+      "type": "study_question",
+      "attributes": {
+        "id": 2218,
+        "content": "コーヒー<span class='study-area-input'>____</span>ジュース<span class='gp-popout' data-gp-id='21'>を</span>買（か）っ<span class='gp-popout' data-gp-id='60'>てください</span>。",
+        "answer": "や",
+        "alternate_grammar": [],
+        "kanji_answer": "や",
+        "kanji_alt_grammar": [],
+        "nuance": "リスト内（ない）の情報（じょうほう）が<strong>包括（ほうかつ）的（てき）ではない</strong>ということを表（あらわ）す<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/81/male_audio/05-コーヒーやジュースを買ってください.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/コーヒーやジュースを買ってください。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 7,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "¡Casi! Prueba con una partícula similar que no se agrega después del último elemento.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "と": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "し": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "だし": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "Please buy <strong>things like</strong> coffee <strong>and</strong> juice. ",
+        "nuance_translation": "A <strong>particle</strong> that expresses <strong>non-exhaustive</strong> lists.",
+        "extra_info": "",
+        "reviewable_id": 81,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2221",
+      "type": "study_question",
+      "attributes": {
+        "id": 2221,
+        "content": "冷蔵庫（れいぞうこ）<span class='gp-popout' data-gp-id='32'>に</span>肉（にく）<span class='study-area-input'>____</span>魚（さかな）<span class='gp-popout' data-gp-id='13'>があります</span>。",
+        "answer": "や",
+        "alternate_grammar": [],
+        "kanji_answer": "や",
+        "kanji_alt_grammar": [],
+        "nuance": "リスト内（ない）の情報（じょうほう）が<strong>包括（ほうかつ）的（てき）ではない</strong>ということを表（あらわ）す<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/81/male_audio/冷蔵庫に肉や魚があります.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/冷蔵庫に肉や魚があります。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 10,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とか": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "¡Casi! Prueba con una partícula similar que no se agrega después del último elemento.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          },
+          "と": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "し": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "だし": {
+            "en": "Let's try a different grammar structure here.",
+            "es": "Prueba con una estructura gramatical diferente.",
+            "fr": "Essayons une autre structure grammaticale ici.",
+            "id": "Mari coba struktur tata bahasa yang berbeda di sini."
+          }
+        },
+        "wrong_answers": {},
+        "translation": "There are <strong>things like</strong> meat <strong>and</strong> fish in the refrigerator.",
+        "nuance_translation": "A <strong>particle</strong> that expresses <strong>non-exhaustive</strong> lists.",
+        "extra_info": "",
+        "reviewable_id": 81,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "2222",
+      "type": "study_question",
+      "attributes": {
+        "id": 2222,
+        "content": "バス<span class='study-area-input'>____</span>電車（でんしゃ）<span class='gp-popout' data-gp-id='36'>で</span>行（い）<span class='gp-popout' data-gp-id='26'>く</span>。",
+        "answer": "や",
+        "alternate_grammar": [],
+        "kanji_answer": "や",
+        "kanji_alt_grammar": [],
+        "nuance": "リスト内（ない）の情報（じょうほう）が<strong>包括（ほうかつ）的（てき）ではない</strong>ということを表（あらわ）す<strong>助詞（じょし）</strong>。",
+        "tense": "Particle, Non-exhaustive",
+        "male_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/N5/Lesson9/81/male_audio/07-バスや電車で行く.mp3",
+        "female_audio_url": "https://dk3kgylsgq3k1.cloudfront.net/audio/grammar/n5/バスや電車で行く。.mp3",
+        "word_prompt": "",
+        "used_in": "examples",
+        "question_type": "cloze",
+        "sentence_order": 11,
+        "validation_status": "validated",
+        "level": "",
+        "has_tts_audio": false,
+        "alternate_answers": {
+          "とか": {
+            "en": "Can you say it another way?",
+            "es": "¡Casi! Prueba con una partícula similar que no se agrega después del último elemento.",
+            "fr": "Pouvez-vous le dire autrement ?",
+            "id": "Mungkin kamu bisa coba mengatakannya dengan cara lain?"
+          },
+          "と": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "し": {
+            "en": "Let's try a different particle here.",
+            "es": "Prueba con una partícula diferente.",
+            "fr": "Essayons une autre particule ici.",
+            "id": "Mari coba partikel yang berbeda."
+          },
+          "だし": {
+            "en": "Can you use something that only pairs with nouns?",
+            "es": "¿Puedes agregar algo al principio?",
+            "fr": "Pouvez-vous utiliser quelque chose qui ne se combine qu'avec des noms ?",
+            "id": "Mungkin kamu bisa coba gunakan sesuatu yang hanya berpasangan dengan kata benda?"
+          }
+        },
+        "wrong_answers": {},
+        "translation": "To go by <strong>things like</strong> buses <strong>and</strong> trains. ",
+        "nuance_translation": "A <strong>particle</strong> that expresses <strong>non-exhaustive</strong> lists.",
+        "extra_info": "",
+        "reviewable_id": 81,
+        "reviewable_type": "grammar_point"
+      }
+    },
+    {
+      "id": "114",
+      "type": "writeup",
+      "attributes": {
+        "id": 114,
+        "body_ja": null,
+        "body": "<p><span data-gp-id='81'>や</span> is a particle that has several different roles in Japanese, with the most common being as an <span data-term='副助詞・ふくじょし'>adverbial particle</span>. <span data-gp-id='81'>や</span> is used similarly to <span data-gp-id='15'>と</span> as 'and', but rather than listing specific things in a group, it lists 'things like (A)'.</p>\r\n\r\n<p><span data-gp-id='81'>や</span> is always used to group nouns, and simply comes directly after them.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155422'>\r\n<li data-study-question='155423'></ul>\r\n\r\n<p>To compare how <span data-gp-id='15'>と</span> and <span data-gp-id='81'>や</span> are different, imagine that there is a bowl of fruit. In this bowl there are apples, oranges, and peaches. If <span data-gp-id='15'>と</span> is used to list the apples and oranges, it would give the listener the impression that there are no peaches. This is called an 'exhaustive' list, meaning that all possibilities should be listed. However, if <span data-gp-id='81'>や</span> is used, the listener would know that there are other things in the bowl apart from the apples and oranges. In this way, <span data-gp-id='81'>や</span> is a better choice when you want to say 'and', but don't want to limit the group that you are listing.</p>\r\n\r\n<ul class='writeup-examples--holder'>\r\n<li data-study-question='155424'>\r\n<li data-study-question='155425'></ul>\r\n\r\n<section class='caution'><h4>Caution</h4>\r\n<p><span data-gp-id='81'>や</span> cannot be used after verb phrases. This is done with <span data-gp-id='79'>たり</span>, or <span data-gp-id='131'>とか</span>.</p></section>"
+      }
+    },
+    {
+      "id": "56",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 56,
+        "source": "Genki I",
+        "location": "Page 216",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "155",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 155,
+        "source": "Marugoto Elementary 1 (A2) Rikai",
+        "location": "Page 57",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "798",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 798,
+        "source": "みんなの日本語 I",
+        "location": "Page 68 [CH 10]",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "121",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 121,
+        "source": "Genki I 2nd Edition",
+        "location": "Page 256",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1195",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1195,
+        "source": "[DBJG] A Dictionary of Basic Japanese Grammar",
+        "location": "Page 536",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "1255",
+      "type": "offline_resource",
+      "attributes": {
+        "id": 1255,
+        "source": "Tae Kim's Japanese Grammar Guide",
+        "location": "Page 69",
+        "type": "OfflineResource"
+      }
+    },
+    {
+      "id": "172",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 172,
+        "site": "Wasabi",
+        "description": "Parallel Marker や",
+        "link": "https://wasabi-jpn.com/magazine/japanese-grammar/parallel-markers-to-ya-and-ka/",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "171",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 171,
+        "site": "Tae Kim",
+        "description": "The Vague Listing 「や」",
+        "link": "https://guidetojapanese.org/learn/grammar/nounparticles",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "914",
+      "type": "supplemental_link",
+      "attributes": {
+        "id": 914,
+        "site": "Yuko Sensei [video]",
+        "description": "Japanese Particles と (to), や (ya), か (ka)",
+        "link": "https://www.youtube.com/watch?v=0QrG9Qz1Irg",
+        "type": "SupplementalLink"
+      }
+    },
+    {
+      "id": "1418",
+      "type": "related_content",
+      "attributes": {
+        "id": 1418,
+        "relationship_type": "related",
+        "body": "ら is a pluralizing suffix that attaches to nouns to mean '(A) and others'. や is a particle that links multiple nouns, similar to 'and' in English. While ら can follow a single noun, や must connect two or more. Both imply the presence of other people or things not explicitly mentioned.",
+        "first_relatable": {
+          "id": 385,
+          "slug": "ら",
+          "title": "～ら",
+          "meaning": "We, Them, They, These, Those",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 81,
+          "slug": "や",
+          "title": "や",
+          "meaning": "Things like, And the like",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "63",
+      "type": "related_content",
+      "attributes": {
+        "id": 63,
+        "relationship_type": "synonym",
+        "body": "と and や are particles used to connect nouns, similar to 'and' in English, but differ slightly. と is used when listing all items explicitly (e.g., りんごとバナナ = 'apples and bananas [only]'). In contrast, や indicates examples from a larger set (e.g., りんごやバナナ = 'things like apples and bananas,' implying there are others).",
+        "first_relatable": {
+          "id": 15,
+          "slug": "と-and",
+          "title": "と",
+          "meaning": "And",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 81,
+          "slug": "や",
+          "title": "や",
+          "meaning": "Things like, And the like",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "267",
+      "type": "related_content",
+      "attributes": {
+        "id": 267,
+        "relationship_type": "related",
+        "body": "Both および and や are used to list items, but they differ in nuance and formality. および is a highly formal expression similar to と, often implying a complete list. It is used almost exclusively in writing and structured, formal speech. In contrast, や is less formal and suggests a partial list, such as 'A, B, and things like that.'",
+        "first_relatable": {
+          "id": 697,
+          "slug": "および",
+          "title": "および",
+          "meaning": "And, As well as",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 81,
+          "slug": "や",
+          "title": "や",
+          "meaning": "Things like, And the like",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "701",
+      "type": "related_content",
+      "attributes": {
+        "id": 701,
+        "relationship_type": "related",
+        "body": "Both や and やら～やら are used to list items or examples from a larger set, and are more common in writing or formal speech than in casual conversation. や is a straightforward way to suggest other similar examples, as in 'A, B, and things like that.' In contrast, やら～やら carries a stronger nuance of uncertainty or possibility, as if the speaker is listing examples that may or may not apply.",
+        "first_relatable": {
+          "id": 81,
+          "slug": "や",
+          "title": "や",
+          "meaning": "Things like, And the like",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 578,
+          "slug": "やら-やら",
+          "title": "やら～やら",
+          "meaning": "Whether or, Things like, And … so on",
+          "level": "JLPT2",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "388",
+      "type": "related_content",
+      "attributes": {
+        "id": 388,
+        "relationship_type": "related",
+        "body": "Both や and とか～とか are used to list items non-exhaustively, implying that other, unmentioned items are also included. や is more common in writing or formal speech, while とか is more colloquial. や must follow nouns, while とか can also be used with actions or events involving verbs. Additionally, とか can follow each item in the list, whereas や is not used after the final item.",
+        "first_relatable": {
+          "id": 81,
+          "slug": "や",
+          "title": "や",
+          "meaning": "Things like, And the like",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 131,
+          "slug": "とか-とか",
+          "title": "とか～とか",
+          "meaning": "Among other things, For example, Such as",
+          "level": "JLPT4",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    },
+    {
+      "id": "385",
+      "type": "related_content",
+      "attributes": {
+        "id": 385,
+        "relationship_type": "related",
+        "body": "Both たり～たりする and や can be used to provide or list examples, similar to the English 'things like A and B.' The main difference is that たり can only be used with verbs, adjectives, or noun phrases, while や can only be used to list nouns. Note that both grammar points suggest that the speaker is listing just some of many possible actions or things.",
+        "first_relatable": {
+          "id": 79,
+          "slug": "たり-たりする",
+          "title": "たり～たりする",
+          "meaning": "Things like ~ and ~",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        },
+        "second_relatable": {
+          "id": 81,
+          "slug": "や",
+          "title": "や",
+          "meaning": "Things like, And the like",
+          "level": "JLPT5",
+          "type_pascal": "GrammarPoint",
+          "type_snake": "grammar_point"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "data": {
+    "id": "999",
+    "type": "grammar_point",
+    "attributes": {
+      "id": 999,
+      "level": "JLPT5",
+      "lesson_id": 5,
+      "part_of_speech": "動詞",
+      "register": "一般",
+      "word_type": "接続助詞",
+      "slug": "して",
+      "nuance": "する動詞（どうし）のて形（けい）。<strong>順番（じゅんばん）に</strong>動作（どうさ）をすることを表（あらわ）す。",
+      "grammar_order": 60,
+      "type_snake": "grammar_point",
+      "type_pascal": "GrammarPoint",
+      "next_grammar_point": null,
+      "previous_grammar_point": {
+        "id": 416,
+        "title": "Verb + て",
+        "slug": "verb-て"
+      },
+      "lesson_count": "10/13",
+      "title": "して",
+      "furigana": "して",
+      "meaning": "Do and..., Doing",
+      "nuance_translation": "The te-form of verb する, used to connect actions in sequence.",
+      "rare_kan_warning": null,
+      "caution": null,
+      "polite_structure": null,
+      "casual_structure": "する → <strong>して</strong>",
+      "part_of_speech_translation": "Verb",
+      "register_translation": "Standard",
+      "word_type_translation": "Conjunctive Particle",
+      "discourse_link": null,
+      "metadata": "して, shite, te, verb, conjugation, suru"
+    },
+    "relationships": {
+      "study_questions": {
+        "data": []
+      }
+    }
+  },
+  "included": [
+    {
+      "type": "study_question",
+      "id": "999001",
+      "attributes": {
+        "content": "勉強<strong>____</strong>、宿題をします。",
+        "answer": "して",
+        "alternate_grammar": [],
+        "kanji_answer": "して",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "て",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "examples"
+      }
+    },
+    {
+      "type": "study_question",
+      "id": "999002",
+      "attributes": {
+        "content": "掃除<strong>____</strong>、洗濯をしました。",
+        "answer": "して",
+        "alternate_grammar": [],
+        "kanji_answer": "して",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "て",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "examples"
+      }
+    },
+    {
+      "type": "study_question",
+      "id": "999003",
+      "attributes": {
+        "content": "お母（かあ）さんは料理<strong>____</strong>、掃除をした。",
+        "answer": "して",
+        "alternate_grammar": [],
+        "kanji_answer": "して",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "て",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "examples"
+      }
+    },
+    {
+      "type": "study_question",
+      "id": "999005",
+      "attributes": {
+        "content": "宿題<strong>____</strong>、テレビを見ました。",
+        "answer": "して",
+        "alternate_grammar": [],
+        "kanji_answer": "して",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "て",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "examples"
+      }
+    },
+    {
+      "type": "study_question",
+      "id": "999006",
+      "attributes": {
+        "content": "質問<strong>____</strong>ください。",
+        "answer": "して",
+        "alternate_grammar": [],
+        "kanji_answer": "して",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "て",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "examples"
+      }
+    },
+    {
+      "type": "study_question",
+      "id": "999007",
+      "attributes": {
+        "content": "準備<strong>____</strong>おいてください。",
+        "answer": "して",
+        "alternate_grammar": [],
+        "kanji_answer": "して",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "て",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "examples"
+      }
+    },
+    {
+      "type": "study_question",
+      "id": "999008",
+      "attributes": {
+        "content": "約束（やくそく）<strong>____</strong>しまった。",
+        "answer": "して",
+        "alternate_grammar": [],
+        "kanji_answer": "して",
+        "kanji_alt_grammar": [],
+        "nuance": "",
+        "tense": "て",
+        "male_audio_url": null,
+        "female_audio_url": null,
+        "word_prompt": "",
+        "used_in": "examples"
+      }
+    }
+  ]
+}
