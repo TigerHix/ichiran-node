@@ -1,6 +1,7 @@
 import type { Ruleset } from '../../../ruleset.js';
 import atode from './あとで.js';
 import amarinai from './あまり-ない.js';
+import dakede from './だけで.js';
 import dakedenaku from './だけでなく.js';
 import teshimau from './てしまう-ちゃう.js';
 import ika from './いか.js';
@@ -31,6 +32,7 @@ export const BUNPRO_JLPT4: Ruleset = {
   rules: [
     atode,
     amarinai,
+    dakede,
     dakedenaku,
     teshimau,
     ika,
