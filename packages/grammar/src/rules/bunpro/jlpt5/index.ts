@@ -67,6 +67,7 @@ import tte from './って.js';
 import yo from './よ.js';
 import ne from './ね.js';
 import no from './の.js';
+import nogajouzu from './のがじょうず.js';
 import na from './な.js';
 import ageru from './あげる.js';
 import ano from './あの.js';
@@ -175,6 +176,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     yo,
     ne,
     no,
+    nogajouzu,
     na,
     ndesu,
     negativeIAdjectives,
