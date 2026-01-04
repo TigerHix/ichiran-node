@@ -6,7 +6,6 @@ import ari from './あり.js';
 import aruiwa from './あるいは.js';
 import ikuraDemo from './いくら-でも.js';
 import uchiNi from './うちに.js';
-import darake from './だらけ.js';
 import okageDe from './おかげで.js';
 import okiNi from './おきに.js';
 import kake from './かけ.js';
@@ -17,7 +16,6 @@ import karaIuTo from './から言うと.js';
 import gatai from './がたい.js';
 import gachi from './がち.js';
 import kiri from './きり.js';
-import chantoKichinto from './ちゃんと-きちんと.js';
 import gimi from './ぎみ.js';
 import kuseni from './くせに.js';
 import kurai2 from './くらい2.js';
@@ -31,15 +29,11 @@ import kotoNi from './ことに.js';
 import kotoNiSuru from './ことにする.js';
 import kotoNiNaru from './ことになる.js';
 import kotoWaNai from './ことはない.js';
-import nounGata from './noun-型.js';
 import saCasualYo from './さ-casualよ.js';
 import dewaSoredewa from './では-それでは-じゃあ.js';
-import teGoran from './てごらん.js';
-import toiucalled from './という-called.js';
 import youToShinai from './-ようとしない.js';
-import dakedenakutemo from './だけでなく-て-も.js';
 import zutto2 from './ずっと2.js';
-import tsumari from './つまり.js';
+import ppanashi from './っぱなし.js';
 
 export const BUNPRO_JLPT3: Ruleset = {
   id: 'bunpro.jlpt3',
@@ -50,7 +44,6 @@ export const BUNPRO_JLPT3: Ruleset = {
     aruiwa,
     ikuraDemo,
     uchiNi,
-    darake,
     okageDe,
     okiNi,
     kake,
@@ -61,7 +54,6 @@ export const BUNPRO_JLPT3: Ruleset = {
     gatai,
     gachi,
     kiri,
-    chantoKichinto,
     gimi,
     kuseni,
     kurai2,
@@ -75,14 +67,10 @@ export const BUNPRO_JLPT3: Ruleset = {
     kotoNiSuru,
     kotoNiNaru,
     kotoWaNai,
-    nounGata,
     saCasualYo,
     dewaSoredewa,
-    teGoran,
-    toiucalled,
     youToShinai,
-    dakedenakutemo,
     zutto2,
-    tsumari,
+    ppanashi,
   ],
 };
