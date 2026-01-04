@@ -37,20 +37,12 @@ const negatives = [
 //
 // CONCLUSION: GiNZA limitation for these homographs.
 //
-// ANALYSIS: Verbal nouns that look like verb stems
-//
-// 釣り (fishing) can be either:
-//   - Noun: 釣り (fishing as an activity)
-//   - Verb stem: 釣る (to fish) + る removed
-//
-// GiNZA parses 釣り as tag=名詞-普通名詞-一般 (regular noun), not as a verb form.
-// Matching all nouns with this tag would overcapture regular nouns + に + いく patterns.
-//
-// CONCLUSION: GiNZA limitation for distinguishing verbal nouns from verb stems.
+// NOTE: 釣り (fishing) was previously skipped but is now handled. GiNZA parses it as
+// NOUN with tag=名詞-普通名詞-一般, which our rule now matches (Pattern 2).
 const skipPositives = [
-  '釣りにいく。',
-  'お金をわたしにいった。',
-  '今夜、のみにいきます。',
+  // These are legitimate GiNZA parsing limitations:
+  'お金をわたしにいった。', // わたし parsed as PRON (pronoun), not verb stem
+  '今夜、のみにいきます。', // のみ parsed as ADP (particle "only"), not verb stem
 ];
 
 describe('bunpro.jlpt5', () => {

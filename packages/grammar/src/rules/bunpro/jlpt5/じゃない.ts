@@ -37,29 +37,28 @@ export default linguisticRule('じゃない', (r) => {
       branch.captureSpan('じゃない', ja, nai);
     },
     // Branch 3: Noun + で + は + ない (polite ではない)
+    // 'は' is ADP, not AUX, so use tok() instead of aux()
     (branch) => {
       const head = branch.tok({ posOneOf: ['NOUN', 'PRON', 'DET', 'NUM'] }, 'head');
       const de = branch.aux({ text: 'で', dep: 'cop' }, 'de');
-      const wa = branch.aux({ text: 'は', dep: 'fixed' }, 'wa');
-      const nai = branch.aux({ lemma: 'ない', dep: 'fixed' }, 'nai');
+      const wa = branch.tok({ text: 'は' }, 'wa');
+      const nai = branch.aux({ lemma: 'ない' }, 'nai');
 
       branch.copulaOf(head, de);
-      branch.headChild(de, wa, 'fixed');
-      branch.headChild(de, nai, 'fixed');
-      branch.inOrder(de, wa, nai, 2);
+      branch.inOrder(de, wa, 1);
+      branch.inOrder(wa, nai, 1);
       branch.captureSpan('ではない', de, nai);
     },
     // Branch 4: Na-adjective + で + は + ない (polite ではない)
     (branch) => {
       const naAdj = branch.adj({}, 'naAdj');
       const de = branch.aux({ lemma: 'だ', dep: 'aux' }, 'de');
-      const wa = branch.aux({ text: 'は', dep: 'fixed' }, 'wa');
-      const nai = branch.aux({ lemma: 'ない', dep: 'fixed' }, 'nai');
+      const wa = branch.tok({ text: 'は' }, 'wa');
+      const nai = branch.aux({ lemma: 'ない' }, 'nai');
 
       branch.auxOf(naAdj, de);
-      branch.headChild(de, wa, 'fixed');
-      branch.headChild(de, nai, 'fixed');
-      branch.inOrder(de, wa, nai, 2);
+      branch.inOrder(de, wa, 1);
+      branch.inOrder(wa, nai, 1);
 
       // The naAdj must not be an i-adjective
       branch.not((nr) => {
@@ -69,34 +68,31 @@ export default linguisticRule('じゃない', (r) => {
       branch.captureSpan('ではない', de, nai);
     },
     // Branch 5: Noun + じゃ + あり + ませ + ん (polite じゃありません)
-    // All subsequent auxiliaries point to 'じゃ' with dep='fixed'
     (branch) => {
       const head = branch.tok({ posOneOf: ['NOUN', 'PRON', 'DET', 'NUM'] }, 'head');
       const ja = branch.aux({ text: 'じゃ', lemma: 'だ', dep: 'cop' }, 'ja');
-      const ari = branch.tok({ lemma: 'ある', dep: 'fixed' }, 'ari');
-      const mase = branch.aux({ lemma: 'ます', dep: 'fixed' }, 'mase');
-      const n = branch.aux({ text: 'ん', dep: 'fixed' }, 'n');
+      const ari = branch.tok({ lemma: 'ある' }, 'ari');
+      const mase = branch.aux({ lemma: 'ます' }, 'mase');
+      const n = branch.tok({ text: 'ん' }, 'n');
 
       branch.copulaOf(head, ja);
-      branch.headChild(ja, ari, 'fixed');
-      branch.headChild(ja, mase, 'fixed');
-      branch.headChild(ja, n, 'fixed');
-      branch.inOrder(ja, ari, mase, n, 4);
+      branch.inOrder(ja, ari, 1);
+      branch.inOrder(ari, mase, 1);
+      branch.inOrder(mase, n, 1);
       branch.captureSpan('じゃありません', ja, n);
     },
     // Branch 6: Na-adjective + じゃ + あり + ませ + ん (polite じゃありません)
     (branch) => {
       const naAdj = branch.adj({}, 'naAdj');
       const ja = branch.aux({ text: 'じゃ', lemma: 'だ', dep: 'aux' }, 'ja');
-      const ari = branch.tok({ lemma: 'ある', dep: 'fixed' }, 'ari');
-      const mase = branch.aux({ lemma: 'ます', dep: 'fixed' }, 'mase');
-      const n = branch.aux({ text: 'ん', dep: 'fixed' }, 'n');
+      const ari = branch.tok({ lemma: 'ある' }, 'ari');
+      const mase = branch.aux({ lemma: 'ます' }, 'mase');
+      const n = branch.tok({ text: 'ん' }, 'n');
 
       branch.auxOf(naAdj, ja);
-      branch.headChild(ja, ari, 'fixed');
-      branch.headChild(ja, mase, 'fixed');
-      branch.headChild(ja, n, 'fixed');
-      branch.inOrder(ja, ari, mase, n, 4);
+      branch.inOrder(ja, ari, 1);
+      branch.inOrder(ari, mase, 1);
+      branch.inOrder(mase, n, 1);
 
       // The naAdj must not be an i-adjective
       branch.not((nr) => {
@@ -106,21 +102,20 @@ export default linguisticRule('じゃない', (r) => {
       branch.captureSpan('じゃありません', ja, n);
     },
     // Branch 7: Noun + で + は + あり + ませ + ん (polite ではありません)
-    // For nouns: 'で' has lemma 'で' and dep='cop', subsequent tokens point to 'で'
+    // For nouns: 'で' has lemma 'で' and dep='cop'
     (branch) => {
       const head = branch.tok({ posOneOf: ['NOUN', 'PRON', 'DET', 'NUM'] }, 'head');
       const de = branch.aux({ text: 'で', lemma: 'で', dep: 'cop' }, 'de');
-      const wa = branch.aux({ text: 'は', dep: 'fixed' }, 'wa');
-      const ari = branch.tok({ lemma: 'ある', dep: 'fixed' }, 'ari');
-      const mase = branch.aux({ lemma: 'ます', dep: 'fixed' }, 'mase');
-      const n = branch.aux({ text: 'ん', dep: 'fixed' }, 'n');
+      const wa = branch.tok({ text: 'は' }, 'wa');
+      const ari = branch.tok({ lemma: 'ある' }, 'ari');
+      const mase = branch.aux({ lemma: 'ます' }, 'mase');
+      const n = branch.tok({ text: 'ん' }, 'n');
 
       branch.copulaOf(head, de);
-      branch.headChild(de, wa, 'fixed');
-      branch.headChild(de, ari, 'fixed');
-      branch.headChild(de, mase, 'fixed');
-      branch.headChild(de, n, 'fixed');
-      branch.inOrder(de, wa, ari, mase, n, 5);
+      branch.inOrder(de, wa, 1);
+      branch.inOrder(wa, ari, 1);
+      branch.inOrder(ari, mase, 1);
+      branch.inOrder(mase, n, 1);
       branch.captureSpan('ではありません', de, n);
     },
     // Branch 8: Na-adjective + で + は + あり + ませ + ん (polite ではありません)
@@ -128,17 +123,16 @@ export default linguisticRule('じゃない', (r) => {
     (branch) => {
       const naAdj = branch.adj({}, 'naAdj');
       const de = branch.aux({ text: 'で', lemma: 'だ', dep: 'aux' }, 'de');
-      const wa = branch.aux({ text: 'は', dep: 'fixed' }, 'wa');
-      const ari = branch.tok({ lemma: 'ある', dep: 'fixed' }, 'ari');
-      const mase = branch.aux({ lemma: 'ます', dep: 'fixed' }, 'mase');
-      const n = branch.aux({ text: 'ん', dep: 'fixed' }, 'n');
+      const wa = branch.tok({ text: 'は' }, 'wa');
+      const ari = branch.tok({ lemma: 'ある' }, 'ari');
+      const mase = branch.aux({ lemma: 'ます' }, 'mase');
+      const n = branch.tok({ text: 'ん' }, 'n');
 
       branch.auxOf(naAdj, de);
-      branch.headChild(de, wa, 'fixed');
-      branch.headChild(de, ari, 'fixed');
-      branch.headChild(de, mase, 'fixed');
-      branch.headChild(de, n, 'fixed');
-      branch.inOrder(de, wa, ari, mase, n, 5);
+      branch.inOrder(de, wa, 1);
+      branch.inOrder(wa, ari, 1);
+      branch.inOrder(ari, mase, 1);
+      branch.inOrder(mase, n, 1);
 
       // The naAdj must not be an i-adjective
       branch.not((nr) => {
