@@ -13,6 +13,7 @@ import questionphraseka from './question-phrase-か.js';
 import transitiveintransitive from './transitive-intransitive-verbs.js';
 import verbtenoundeb from './verb-て-noun-で-b.js';
 import verbnaide from './verb-ないで.js';
+import naide from './ないで.js';
 import verbteb from './verbて-b.js';
 import verbteb2 from './verbて-b2.js';
 import verbtereq from './verbて-request.js';
@@ -134,6 +135,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     transitiveintransitive,
     verbtenoundeb,
     verbnaide,
+    naide,
     verbteb,
     verbteb2,
     verbtereq,
