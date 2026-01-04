@@ -56,6 +56,7 @@ import asoko from './あそこ.js';
 import ii from './いい.js';
 import uVerbs from './う-Verbs.js';
 import sugiru from './すぎる.js';
+import tahougaii from './たほうがいい.js';
 import uverbNai from './うverb--ない.js';
 import uVerbPast from './う-verb-past.js';
 import uVerbNegPast from './う-verb-neg-past.js';
@@ -100,6 +101,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     ii,
     iAdjectiveKuNakatta,
     sugiru,
+    tahougaii,
     iAdjectiveNoun,
     iAdjectivePredicate,
     iAdjectives,
