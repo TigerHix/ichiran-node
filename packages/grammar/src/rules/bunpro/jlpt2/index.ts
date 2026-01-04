@@ -4,7 +4,7 @@ import nouchide from './-のうち-で.js';
 import ageku from './あげく.js';
 import iwayuru from './いわゆる.js';
 import kanaikanouniuchi from './か-ないかのうちに.js';
-// import kaneru from './かねる.js'; // Has syntax errors
+// import kaneru from './かねる.js'; // Has syntax errors, needs fixing
 import karashite from './からして.js';
 import karasurukarasureba from './からすると-からすれば.js';
 
