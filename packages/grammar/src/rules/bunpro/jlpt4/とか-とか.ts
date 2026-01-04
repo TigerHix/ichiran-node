@@ -7,7 +7,8 @@ import { linguisticRule } from '../../../engine/lang.js';
  * This is a non-exhaustive listing particle that can follow nouns, verbs, or adjectives.
  *
  * Structure:
- * - Noun/Verb/Adj + とか + Noun/Verb/Adj + とか (at least two occurrences)
+ * - Noun/Verb/Adj + とか (+ Noun/Verb/Adj + とか)
+ * - The second とか is optional - a single とか can mean "things like X, among others"
  *
  * The particle とか is used to give examples of things or actions, implying that
  * there are other examples not mentioned. It's more casual than similar particles
@@ -18,51 +19,50 @@ import { linguisticRule } from '../../../engine/lang.js';
  *   (I don't like things like strawberries and apples, among others.)
  * - 野菜を食べるとか水を飲むとかをしています。
  *   (I do things like eating vegetables and drinking water.)
- * - 掃除とか、料理とか、何もしていない！
- *   (I haven't done anything like cleaning or cooking!)
+ * - 日本語で「th」の音とかはないです。
+ *   (Japanese doesn't have a 'th' sound, among other things.)
  *
  * Key discriminators:
- * - Must have at least two items followed by とか
+ * - Must have at least one item followed by とか
  * - Each とか must have dep=case (particle marking)
- * - This distinguishes from single とか usages
+ * - This distinguishes from other とか usages (like quoting)
  *
  * GiNZA parse structure:
- * - POSITIVE: 苺とか、りんごとか
- *   - 苺(NOUN) + とか(PART, lemma=とか, dep=case, head→noun)
- *   - りんご(NOUN) + とか(PART, lemma=とか, dep=case, head→noun)
- * - POSITIVE: 食べるとか、飲むとか
- *   - 食べる(VERB) + とか(PART, lemma=とか, dep=case)
- *   - 飲む(VERB) + とか(PART, lemma=とか, dep=case)
+ * GiNZA tokenizes とか as TWO separate tokens:
+ * - POSITIVE: 苺とか
+ *   - 苺(NOUN) + と(ADP, lemma=と, dep=case, head→noun)
+ *   - か(ADP/PART, lemma=か, dep=case/mark, head→noun)
+ * - POSITIVE: 音とか
+ *   - 音(NOUN) + と(ADP, lemma=と, dep=case, head→noun)
+ *   - か(ADP, lemma=か, dep=case, head→noun)
  */
 export default linguisticRule('とか-とか', (r) => {
-  // First item + とか
-  // Can be NOUN, VERB, or ADJ (covers い-adjectives)
-  const item1 = r.tok({
-    posOneOf: ['NOUN', 'VERB', 'ADJ', 'PRON', 'PROPN'],
-  }, 'item1');
-  const toka1 = r.tok({
-    text: 'とか',
-    pos: 'PART',
+  // Item + とか (split into と and か by GiNZA)
+  // Can be NOUN, VERB, ADJ (い-adjectives), ADV, PRON, PROPN
+  // ADV is included for words like "とんこつラーメン" that GiNZA parses as adverbial
+  const item = r.tok({
+    posOneOf: ['NOUN', 'VERB', 'ADJ', 'ADV', 'PRON', 'PROPN'],
+  }, 'item');
+  const to = r.tok({
+    text: 'と',
+    pos: 'ADP',
     dep: 'case',
-  }, 'toka1');
-  r.caseMarker(item1, toka1);
-  r.inOrder(item1, toka1, 1);
+  }, 'to');
+  const ka = r.tok({
+    text: 'か',
+    posOneOf: ['ADP', 'PART'],
+    depOneOf: ['case', 'mark'],
+  }, 'ka');
 
-  // Second item + とか (same pattern as first)
-  const item2 = r.tok({
-    posOneOf: ['NOUN', 'VERB', 'ADJ', 'PRON', 'PROPN'],
-  }, 'item2');
-  const toka2 = r.tok({
-    text: 'とか',
-    pos: 'PART',
-    dep: 'case',
-  }, 'toka2');
-  r.caseMarker(item2, toka2);
-  r.inOrder(item2, toka2, 1);
+  // Both particles must be children of the item
+  r.caseMarker(item, to);
+  // ka can be either 'case' or 'mark' dependency - we don't specify, just check it's a child
+  r.headChild(item, ka);
 
-  // The second pair must come after the first (with reasonable distance for commas/particles)
-  r.inOrder(toka1, item2, 10);
+  // Ensure proper ordering: item -> to -> ka (allow small gap for punctuation)
+  r.inOrder(item, to, 1);
+  r.inOrder(to, ka, 2);
 
-  // Capture from the first item through the last とか
-  r.captureSpan('とか-とか', item1, toka2);
+  // Capture the item + とか pattern
+  r.captureSpan('とか-とか', item, ka);
 });
