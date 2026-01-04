@@ -80,6 +80,7 @@ import tabakari from './たばかり.js';
 import tara from './たら.js';
 import taradou from './たらどう.js';
 import daitai from './だいたい.js';
+import hotondo from './ほとんど.js';
 import dagadega from './だが・ですが.js';
 import dedekirukaradekiru from './でできる-からできる.js';
 import toiwareteiru from './といわれている.js';
@@ -201,6 +202,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     tara,
     taradou,
     daitai,
+    hotondo,
     dagadega,
     dedekirukaradekiru,
     toiwareteiru,
