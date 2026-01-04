@@ -4,69 +4,80 @@ export default linguisticRule('る-verb-neg-past', (r) => {
   // る-verb (ichidan verb) negative-past form
   // Matches: 食べなかった, 見なかった, 寝なかった (casual)
   //          食べませんでした, 見ませんでした, 寝ませんでした (polite)
+  //
+  // NOTE: We don't constrain by conjugationClass because GiNZA assigns
+  // different classes to the same verb depending on reading/context.
+  // We rely on lemma dispatch to identify ichidan verbs.
+  //
+  // GiNZA parsing notes:
+  // - GiNZA doesn't always provide inflection forms, so we don't require them
+  // - For polite form, "ません" is split into "ませ" + "ん"
+  // - "でした" is split into "でし" + "た"
+  //
+  // Includes both kanji and hiragana variants (e.g., 見る and みる).
 
   const ichidanVerbs = [
     // 下一段
-    { lemma: '食べる', class: '下一段-ラ行' },
-    { lemma: '寝る', class: '下一段-ラ行' },
-    { lemma: '教える', class: '下一段-ラ行' },
-    { lemma: '始める', class: '下一段-ラ行' },
-    { lemma: '見る', class: '上一段-ラ行' },
-    { lemma: 'いる', class: '上一段-ラ行' },
-    { lemma: 'できる', class: '上一段-ラ行' },
-    { lemma: '起きる', class: '上一段-ラ行' },
-    { lemma: '借りる', class: '上一段-ラ行' },
-    { lemma: '降りる', class: '上一段-ラ行' },
-    { lemma: '着る', class: '上一段-カ行' },
-    { lemma: '出る', class: '下一段-サ行' },
-    { lemma: '受ける', class: '下一段-カ行' },
-    { lemma: 'あげる', class: '下一段-カ行' },
-    { lemma: '閉める', class: '下一段-カ行' },
-    { lemma: '上げる', class: '下一段-ガ行' },
-    { lemma: '捨てる', class: '下一段-タ行' },
-    { lemma: '読める', class: '下一段-バ行' },
-    { lemma: '飲める', class: '下一段-マ行' },
-    { lemma: '過ぎる', class: '上一段-ガ行' },
-    { lemma: '落ちる', class: '上一段-タ行' },
-    { lemma: '似る', class: '上一段-ナ行' },
-    { lemma: '減びる', class: '上一段-バ行' },
-    { lemma: '感じる', class: '上一段-ラ行' },
-    { lemma: '開ける', class: '下一段-ラ行' },
-    { lemma: 'つける', class: '下一段-ラ行' },
-    { lemma: '答える', class: '下一段-ラ行' },
+    '食べる', '寝る', '教える', '始める',
+    '出る', '受ける', 'あげる', '閉める', '上げる', '捨てる', '読める', '飲める',
+    '開ける', 'つける', '答える',
+    'やめる', '消える', '覚える', '別れる', '忘れる',
+    // Hiragana variants
+    'おしえる', 'わすれる', 'でかける', 'かりる',
+    // 上一段
+    '見る', 'いる', 'できる', '起きる', '借りる', '降りる',
+    '着る', '過ぎる', '落ちる', '似る', '減びる', '感じる',
+    // Hiragana variants
+    'みる', 'おきる', 'たべる', 'おりる',
   ];
 
   const branches: Array<(b: typeof r) => void> = [];
 
-  for (const { lemma, class: conjugationClass } of ichidanVerbs) {
+  for (const lemma of ichidanVerbs) {
     // Branch for casual negative-past form (～なかった)
     branches.push((b) => {
       const verb = b.verb({
         lemma,
-        conjugationClass,
-        inflectionForm: '未然形-一般',
       }, 'verb');
       const nakatta = b.aux({
         lemma: 'ない',
-        inflectionForm: '連用形-一般',
       }, 'nakatta');
       b.auxOf(verb, nakatta);
       b.captureSpan('る-verb-neg-past', verb, nakatta);
     });
 
     // Branch for polite negative-past form (～ませんでした)
+    // Structure: verb (ren'yo) + ませ + ん + でし + た
+    // GiNZA parses: 捨てませんでした -> 捨て(verb) + ませ(aux) + ん(aux) + でし(aux) + た(aux)
+    // Dependencies: all auxiliaries attach to verb, not sequentially
     branches.push((b) => {
       const verb = b.verb({
         lemma,
-        conjugationClass,
-        inflectionForm: '連用形-一般',
       }, 'verb');
-      const masendeshita = b.aux({
+      const mase = b.aux({
+        text: 'ませ',
         lemma: 'ます',
-        inflectionForm: '連用形-一般',
-      }, 'masendeshita');
-      b.auxOf(verb, masendeshita);
-      b.captureSpan('る-verb-neg-past', verb, masendeshita);
+      }, 'mase');
+      const nun = b.tok({
+        text: 'ん',
+        lemma: 'ぬ',
+      }, 'nun');
+      const deshi = b.aux({
+        text: 'でし',
+        lemma: 'です',
+      }, 'deshi');
+      const ta = b.aux({
+        lemma: 'た',
+      }, 'ta');
+
+      b.auxOf(verb, mase);
+      b.auxOf(verb, nun);
+      b.auxOf(verb, deshi);
+      b.auxOf(verb, ta);
+      b.inOrder(mase, nun, 1);
+      b.inOrder(nun, deshi, 1);
+      b.inOrder(deshi, ta, 1);
+      b.captureSpan('る-verb-neg-past', verb, ta);
     });
   }
 

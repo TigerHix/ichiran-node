@@ -1,12 +1,14 @@
 import type { RuleSpec, NodeRef, TokPred, CaptureSpec, EitherBranch } from './dsl.js';
 import type { GinzaPOS, GinzaDep, GinzaInflectionForm, GinzaConjugationClass } from '../ginza/generated.js';
-import { V, node, edge, before, text, textOneOf, lemma, lemmaOneOf, pos, posOneOf, dep, depOneOf, inflectionForm, inflectionFormOneOf, conjugationClass, conjugationClassOneOf, tag, tagOneOf, not } from './dsl.js';
+import { V, node, edge, before, text, textRe, textOneOf, lemma, lemmaRe, lemmaOneOf, pos, posOneOf, dep, depOneOf, inflectionForm, inflectionFormOneOf, conjugationClass, conjugationClassOneOf, tag, tagOneOf, textEqualsLemma, not } from './dsl.js';
 import type { Clause } from './dsl.js';
 
 export type TokenCond = {
   text?: string;
+  textRe?: RegExp;
   textOneOf?: string[];
   lemma?: string;
+  lemmaRe?: RegExp;
   lemmaOneOf?: string[];
   pos?: GinzaPOS;
   posOneOf?: GinzaPOS[];
@@ -18,6 +20,7 @@ export type TokenCond = {
   conjugationClassOneOf?: GinzaConjugationClass[];
   tag?: string;
   tagOneOf?: string[];
+  textEqualsLemma?: boolean;
 };
 
 export type LangVar = {
@@ -29,8 +32,10 @@ export type LangVar = {
 function condToPreds(cond: TokenCond): TokPred[] {
   const out: TokPred[] = [];
   if (cond.text !== undefined) out.push(text(cond.text));
+  if (cond.textRe !== undefined) out.push(textRe(cond.textRe));
   if (cond.textOneOf !== undefined) out.push(textOneOf(cond.textOneOf));
   if (cond.lemma !== undefined) out.push(lemma(cond.lemma));
+  if (cond.lemmaRe !== undefined) out.push(lemmaRe(cond.lemmaRe));
   if (cond.lemmaOneOf !== undefined) out.push(lemmaOneOf(cond.lemmaOneOf));
   if (cond.pos !== undefined) out.push(pos(cond.pos));
   if (cond.posOneOf !== undefined) out.push(posOneOf(cond.posOneOf));
@@ -42,6 +47,7 @@ function condToPreds(cond: TokenCond): TokPred[] {
   if (cond.conjugationClassOneOf !== undefined) out.push(conjugationClassOneOf(cond.conjugationClassOneOf));
   if (cond.tag !== undefined) out.push(tag(cond.tag));
   if (cond.tagOneOf !== undefined) out.push(tagOneOf(cond.tagOneOf));
+  if (cond.textEqualsLemma !== undefined) out.push(textEqualsLemma(cond.textEqualsLemma));
   return out;
 }
 

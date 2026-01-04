@@ -20,13 +20,13 @@ export default linguisticRule('って', (r) => {
     },
     // Pattern 2: Before 聞く (ask/hear)
     (r2) => {
-      const kiku = r2.tok({ lemma: '聞く' }, 'kiku');
+      const kiku = r2.tok({ lemmaOneOf: ['聞く', 'きく'] }, 'kiku');
       r2.inOrder(tte, kiku, 3);
       r2.capture(tte);
     },
     // Pattern 3: Before 書く (write)
     (r3) => {
-      const kaku = r3.tok({ lemma: '書く' }, 'kaku');
+      const kaku = r3.tok({ lemmaOneOf: ['書く', 'かく'] }, 'kaku');
       r3.inOrder(tte, kaku, 3);
       r3.capture(tte);
     },

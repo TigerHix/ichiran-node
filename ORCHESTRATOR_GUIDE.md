@@ -96,14 +96,24 @@ You are implementing a Japanese grammar rule for the ichiran-node project.
 - Read the DEV_GUIDE.md at `packages/grammar/DEV_GUIDE.md` for the DSL reference
 - Run tests with: `bun test packages/grammar/src/rules/bunpro/jlpt5/{FILENAME}.test.ts`
 - Inspect parses with the `engine.analyze()` function if needed
+- **All tests must pass (0 fail) before committing. Failing tests are NOT acceptable.**
 - When tests pass, commit: `git add -A && git commit -m "Implement JLPT5: {RULE_NAME} ({DESCRIPTION})"`
 
 **DO NOT:**
 - Modify files outside your worktree
 - Push to remote
 - Merge to main
+- Move failing tests to skipPositives - fix the rule instead
+- Add tests to skipPositives without completing the SKIPPOSITIVES LEGITIMACY CHECKLIST (Step 7)
 
-Report back when complete with test results.
+**Before adding any skipPositive, you MUST verify it against the 5-item checklist:**
+1. Different grammar point? (separate rule exists)
+2. Grammar scope? (JSON doesn't include this form)
+3. GiNZA limitation? (verified with engine.analyze())
+4. Data bug? (malformed data)
+5. Different structure? (fundamentally different construction)
+
+Report back when complete with test results showing 0 failures.
 ```
 
 **Key Customizations per Rule:**
@@ -182,106 +192,278 @@ Run the full JLPT5 test suite:
 cd packages/grammar && bun test src/rules/bunpro/jlpt5/
 ```
 
-Expected output: `XXX pass, Y skip, 0 fail`
+**Expected output: `XXX pass, Y skip, 0 fail`**
 
-Commit the merge:
+**CRITICAL: If there are ANY failures (>0 fail), you MUST NOT proceed.** Go to Step 6a below to fix failures before committing.
+
+If all tests pass (0 fail), commit the merge:
 
 ```bash
 git add -A packages/grammar/src/rules/bunpro/jlpt5/
 git commit -m "Merge JLPT5 grammar rules: Batch N (X new rules)"
 ```
 
-### Step 7: Review and Fix Skips (CRITICAL)
+### Step 6a: Fix Failing Tests (MANDATORY if failures exist)
 
-**IMPORTANT:** Agents may incorrectly skip test cases. Always review skips after merging.
+**Failing test cases are NEVER acceptable.** The orchestrator must spawn fix agents until all failures are resolved.
 
-After running tests, you'll see output like: `XXX pass, Y skip, 0 fail`
-
-**Review all skips to verify legitimacy:**
-
-```bash
-# Check each file's skipPositives
-grep -r "skipPositives" packages/grammar/src/rules/bunpro/jlpt5/*.test.ts
-```
-
-**Legitimate skip reasons:**
-- GiNZA parsing limitations (inconsistent POS/lemma assignment)
-- Data quality issues (Bunpro extraction bugs, malformed sentences)
-- Different grammatical structures (e.g., ある→ない is ADJ not AUX)
-- Teaching materials (cloze format with "→" arrows)
-
-**ILLEGITIMATE skip reasons (fix required):**
-- "Separate grammar rule" - If the Bunpro data includes both casual AND polite forms, the rule should handle BOTH using `r.either()` branches
-- "Different register" (polite vs casual) - Check if the grammar point's `nuance_translation` mentions both variants
-
-**How to check if a grammar point covers multiple forms:**
-
-```bash
-# Check the grammar point description
-cat packages/grammar/data/bunpro/JLPT5/{RULE}.json | grep -E "nuance_translation|meaning|polite_structure"
-```
-
-Look for phrases like:
-- "in either its **polite or casual variant**"
-- "casual or polite"
-- Examples showing both ～ない and ～ません
-
-**Step 7a: Identify Illegitimate Skips**
-
-For each skip, read the test file comments:
-```bash
-# Read the skipPositives section and comments
-head -50 packages/grammar/src/rules/bunpro/jlpt5/{RULE}.test.ts
-```
-
-Count skips by category:
-- **Polite forms (ません, ませんでした, ではありません)** - Likely ILLEGITIMATE if grammar covers both
-- **GiNZA limitations** - Legitimate
-- **Data bugs** - Legitimate
-
-**Step 7b: Spawn Second-Pass Agents to Fix**
-
-For each rule with illegitimate skips, spawn a fix agent:
+**For each failing rule**, spawn a fix agent:
 
 ```
-You are fixing a Japanese grammar rule in the ichiran-node project.
+You are fixing a failing Japanese grammar rule in the ichiran-node project.
 
-**Your task:** Fix the **{RULE}** rule to also handle {POLITE_FORM} forms.
+**Your task:** Fix the **{RULE}** rule which currently has N failing tests.
 
 **Context:**
 - Working directory: /home/tiger/ichiran-node (on branch main)
-- Current rule only handles {CASUAL_FORM} forms
-- The grammar point covers BOTH casual and polite variants
-- N sentences are incorrectly skipped
+- The rule at packages/grammar/src/rules/bunpro/jlpt5/{RULE}.ts has test failures
+- Run tests to see failures: bun test packages/grammar/src/rules/bunpro/jlpt5/{RULE}.test.ts
 
-**Files to modify:**
-1. **Rule file:** Add `r.either()` branch for polite forms
-2. **Test file:** Remove {COUNT} sentences from skipPositives (list them)
+**Process:**
+1. Run the test to see specific failures
+2. Analyze the failing sentences with engine.analyze() to understand why they fail
+3. Modify the rule file to fix the pattern matching
+4. Re-run tests until all pass (0 fail)
+5. Commit: "Fix {RULE}: resolve N test failures"
 
 **Important:**
-- Read current rule first
-- Use `r.either()` for both patterns
-- Run tests: `bun test packages/grammar/src/rules/bunpro/jlpt5/{RULE}.test.ts`
-- Commit: "Fix {RULE}: handle polite {FORM} forms"
+- Read the current rule and test file first
+- Use engine.analyze() on failing sentences to understand the parse
+- DO NOT simply move failures to skipPositives - they must be fixed
+- All tests must pass before you report completion
+
+Report back with final test results showing 0 failures.
+```
+
+**Continue spawning fix agents until test output shows: `XXX pass, Y skip, 0 fail`**
+
+**Only then proceed to Step 7.**
+
+### Step 7: Review and Fix Skips (CRITICAL)
+
+**IMPORTANT:** Agents frequently and incorrectly skip test cases. ALL skips must be verified with the checklist below.
+
+After running tests, you'll see output like: `XXX pass, Y skip, 0 fail`
+
+## SKIPPOSITIVES LEGITIMACY CHECKLIST
+
+**FOR EVERY SKIPPED TEST CASE, the agent/orchestrator MUST complete this checklist in order:**
+
+### Checklist Item 1: Is the sentence actually a different grammar point?
+
+**Question:** Does this sentence belong to a completely different grammar rule that exists elsewhere in Bunpro?
+
+**How to verify:**
+1. Read the sentence carefully
+2. Identify the grammatical pattern being used
+3. Search packages/grammar/data/bunpro/JLPT5/ for that specific pattern
+4. If a separate grammar JSON file exists for this pattern → **LEGITIMATE SKIP**
+
+**Examples of legitimate skips:**
+- A 「だが」 sentence in a 「が (conjunction)」 rule → skip if it's actually 「が (particle)」
+- A 「ている」 progressive form in a 「ている」 resultative state rule → skip if separate rule exists
+
+**If YES → Document in skipPositives comment: "Different grammar point: [pattern name]"**
+
+**If NO → Proceed to Checklist Item 2**
+
+---
+
+### Checklist Item 2: Does the grammar point's data include BOTH forms?
+
+**Question:** Does the JSON file at `packages/grammar/data/bunpro/JLPT5/{RULE}.json` contain examples of BOTH the casual AND polite (or other) forms?
+
+**How to verify:**
+```bash
+# Check the grammar point description
+cat packages/grammar/data/bunpro/JLPT5/{RULE}.json | jq '.nuance_translation, .meaning, .polite_structure'
+```
+
+**Look for these phrases in nuance_translation/meaning:**
+- "in either its **polite or casual variant**"
+- "casual or polite"
+- "both ... and ..."
+- Examples showing both ～ない AND ～ません
+- Examples showing both ～だ AND です
+
+**If the grammar point covers BOTH forms → ILLEGITIMATE SKIP. The rule MUST handle both with `r.either()`.**
+
+**If the grammar point only covers ONE form (e.g., only casual, only negative, etc.) → LEGITIMATE SKIP**
+
+**If YES (covers both) → Spawn a fix agent. DO NOT skip.**
+
+**If NO → Proceed to Checklist Item 3**
+
+---
+
+### Checklist Item 3: Is this a GiNZA parser limitation?
+
+**Question:** Does GiNZA incorrectly tag this sentence's POS/lemma/deprel in a way that cannot be fixed?
+
+**How to verify:**
+1. Run `engine.analyze(sentence)` on the skipped sentence
+2. Compare with expected parse
+3. Check if the issue is:
+   - Incorrect POS tagging (e.g., noun tagged as verb)
+   - Incorrect lemma (e.g., different lemma than expected)
+   - Missing or wrong dependency relations
+
+**Legitimate GiNZA limitations:**
+- Inconsistent POS assignment for the same word across sentences
+- Known Ginza bugs with specific conjugation forms
+- Incorrect particle dependencies in complex sentences
+
+**If you can fix the rule by adjusting the pattern → NOT a GiNZA limitation. Fix the rule.**
+
+**If YES → Document in skipPositives comment with specific analysis: "GiNZA limitation: [explanation]"**
+
+**If NO → Proceed to Checklist Item 4**
+
+---
+
+### Checklist Item 4: Is this a data quality issue?
+
+**Question:** Is the test data malformed, incomplete, or extracted incorrectly from Bunpro?
+
+**Legitimate data issues:**
+- Sentence contains "→" arrows (cloze format teaching material)
+- Sentence is incomplete (truncated)
+- Sentence has obvious typos or encoding issues
+- Duplicate entries
+- Mixed Japanese/English inappropriately
+
+**If YES → Document in skipPositives comment: "Data quality issue: [explanation]"**
+
+**If NO → Proceed to Checklist Item 5**
+
+---
+
+### Checklist Item 5: Is this a different grammatical structure?
+
+**Question:** Does the sentence use a grammatically distinct structure that this rule does not cover?
+
+**How to verify:**
+1. Analyze the grammatical structure of the sentence
+2. Compare with the rule's intended pattern
+3. Is it a fundamentally different construction?
+
+**Examples:**
+- ある→ない where "ない" is an i-adjective (POS=ADJ), not an auxiliary verb
+- Potential form vs non-potential form (different conjugation class)
+- Transitive vs intransitive verb pairs
+
+**If YES → Document in skipPositives comment: "Different structure: [explanation]"**
+
+**If NO → ILLEGITIMATE SKIP. Fix the rule.**
+
+---
+
+### FINAL CHECKLIST SUMMARY
+
+Before committing any skipPositive, you must be able to answer YES to exactly ONE of these:
+
+- [ ] **Different grammar point:** A separate Bunpro grammar rule exists for this pattern
+- [ ] **Grammar scope:** The grammar point's JSON data does NOT include this form (verified by checking the JSON)
+- [ ] **GiNZA limitation:** Parser incorrectly tags in a way that cannot be worked around
+- [ ] **Data bug:** Malformed/invalid test data
+- [ ] **Different structure:** Fundamentally different grammatical construction
+
+**If you cannot check ANY of the above boxes → ILLEGITIMATE SKIP. Fix the rule instead.**
+
+---
+
+## Step 7a: Audit All Skips
+
+For each rule with skipPositives:
+
+```bash
+# Read the test file and examine each skip
+head -100 packages/grammar/src/rules/bunpro/jlpt5/{RULE}.test.ts | grep -A 20 "skipPositives"
+```
+
+**Create a spreadsheet or table documenting:**
+
+| Sentence | Skip Reason | Checklist Item Passed? | Legitimate? | Action |
+|----------|-------------|------------------------|-------------|--------|
+| 「 sentence 」 | "polite form" | Item 2: NO (grammar covers both) | NO | Fix rule |
+| 「 sentence 」 | "GiNZA bug" | Item 3: YES (verified with analyze) | YES | Keep |
+
+**For each ILLEGITIMATE skip, spawn a fix agent.**
+
+---
+
+## Step 7b: Spawn Fix Agents for Illegitimate Skips
+
+For each rule with illegitimate skips:
+
+```
+You are fixing illegitimately skipped tests in a Japanese grammar rule.
+
+**Your task:** Fix the **{RULE}** rule to handle N currently-skipped sentences.
+
+**Context:**
+- Working directory: /home/tiger/ichiran-node (on branch main)
+- These N sentences are in skipPositives but SHOULD NOT BE:
+  {LIST_SENTENCES}
+- They were skipped for: "{CURRENT_REASON}"
+- This reason fails the skipPositives checklist because: {EXPLANATION}
+
+**Required action:** {SPECIFIC_ACTION}
+- Example: "Add r.either() branch for polite forms using lemma='ます'"
+- Example: "Adjust pattern to capture this specific conjugation"
+
+**Files to modify:**
+1. **Rule file:** packages/grammar/src/rules/bunpro/jlpt5/{RULE}.ts
+2. **Test file:** packages/grammar/src/rules/bunpro/jlpt5/{RULE}.test.ts - remove from skipPositives
+
+**Process:**
+1. Read current rule and test file
+2. Run engine.analyze() on each skipped sentence
+3. Modify rule to capture these cases
+4. Remove from skipPositives
+5. Run tests until all pass
+6. Commit: "Fix {RULE}: handle {PATTERN} - remove N illegitimate skips"
+
+**DO NOT:**
+- Add new skipPositives to hide failures
+- Skip without running the checklist first
 
 Report back with test results.
 ```
 
-**Step 7c: Re-verify All Tests**
+---
+
+## Step 7c: Re-verify All Tests
 
 ```bash
 cd packages/grammar && bun test src/rules/bunpro/jlpt5/
 ```
 
-Expected: Skip count should decrease, pass count should increase.
+**Expected outcome:** Skip count should decrease, pass count should increase. If skips remain, verify each one passed the checklist.
 
-**Common Fix Patterns:**
+---
 
-| Pattern | Casual | Polite | Fix |
-|---------|--------|--------|-----|
-| Verb negative | ～ない | ～ません | Add branch with `lemma='ます', inflectionForm='未然形-一般'` |
-| Verb neg-past | ～なかった | ～ませんでした | Add branch with `lemma='ません' + 'でした'` |
-| Negation | じゃない | ではない/ではありません | Check if same grammar point first |
+## Common Illegitimate Skip Patterns (DO NOT DO THIS)
+
+| Illegitimate Reason | Why It's Wrong | Correct Action |
+|---------------------|----------------|----------------|
+| "Polite form" | Grammar covers both casual+polite | Add `r.either()` branch |
+| "Separate rule" | No separate rule exists | Handle in current rule |
+| "Different register" | Register not a distinction | Handle both variants |
+| "Too complex" | Complexity is not a valid reason | Fix the pattern |
+| "GiNZA issue" (unverified) | Not actually a GiNZA bug | Fix the rule |
+| "Later" | Procrastination | Fix now |
+
+---
+
+## Legitimate Skip Examples (Reference)
+
+| Sentence | Reason | Checklist Item |
+|----------|--------|----------------|
+| "これ→penです" | Contains "→" (teaching format) | Item 4: Data quality |
+| "ある" (where ない is ADJ) | ある→ない is adjective, not auxiliary | Item 5: Different structure |
+| "行きます" (in ru-verb rule) | Ru-verb is ichidan, not godan | Item 1: Different grammar point |
+| "[inconsistent POS]" | GiNZA tags noun as verb randomly | Item 3: GiNZA limitation |
 
 ### Step 8: Clean Up Worktrees
 
@@ -329,6 +511,12 @@ git worktree list
 3. **Missing ね file:** If implementing in main worktree, the file may not be in the worktree. Copy from branch with `git show`.
 4. **Overcapture:** Always add negative tests for similar but different grammars.
 5. **GiNZA inconsistencies:** Document parsing limitations with `skipPositives` and detailed analysis.
+6. **FAILING TESTS ARE UNACCEPTABLE:** Never commit with failing tests. Spawn fix agents (Step 6a) and iterate until 0 failures. Moving tests to skipPositives to hide failures is prohibited.
+7. **ILLEGITIMATE SKIPS ARE UNACCEPTABLE:** Before adding any skipPositive, you MUST complete the 5-item checklist in Step 7. Common illegitimate skips:
+   - "Polite form" when grammar point covers both casual+polite
+   - "Separate rule" when no separate rule exists
+   - "Different register" as a standalone reason
+   - Any skip without verifying the JSON data first
 
 ## Quick Commands Reference
 

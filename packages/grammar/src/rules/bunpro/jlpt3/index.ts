@@ -5,6 +5,7 @@ import amariNi from './あまりに.js';
 import ari from './あり.js';
 import aruiwa from './あるいは.js';
 import ikuraDemo from './いくら-でも.js';
+import donnaDemo from './どんなに-ても.js';
 import uchiNi from './うちに.js';
 import okageDe from './おかげで.js';
 import okiNi from './おきに.js';
@@ -65,6 +66,7 @@ import chantoKichinto from './ちゃんと-きちんと.js';
 import ppanashi from './っぱなし.js';
 import tsuide from './ついでに.js';
 import tsumari from './つまり.js';
+import toDoujiNi from './と同時に.js';
 import teGoran from './てごらん.js';
 import dewaSoredewa from './では-それでは-じゃあ.js';
 import temoKamawanai from './てもかまわない.js';
@@ -89,6 +91,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     ari,
     aruiwa,
     ikuraDemo,
+    donnaDemo,
     uchiNi,
     okageDe,
     okiNi,
@@ -149,6 +152,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     ppanashi,
     tsuide,
     tsumari,
+    toDoujiNi,
     teGoran,
     dewaSoredewa,
     temoKamawanai,

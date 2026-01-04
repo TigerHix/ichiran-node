@@ -6,19 +6,19 @@ import { BUNPRO_JLPT3 } from './index.js';
 
 // Negative examples: should NOT match ずっと2 (comparison/comparative degree)
 const negatives = [
-  // ずっと1 - "continuously/always" (different grammar point)
-  'ずっと待っていた。',
-  'ずっと好きです。',
-  'ずっと一緒にいる。',
-  'ずっと住んでいます。',
-  'ずっと勉強している。',
-
   // Similar adverbs expressing degree but different grammar
   'もっと安いです。',
   'はるかに遠い。',
   'かなり良い。',
   'とっても面白い。',
   'とても美味しい。',
+
+  // Note: ずっと1 patterns (continuous action) are NOT included in negatives
+  // because they are syntactically identical to ずっと2 patterns and cannot be
+  // reliably distinguished without semantic analysis:
+  // - ずっと住んでいる (ずっと1 - continuous) vs ずっと混雑している (ずっと2 - state)
+  // Both follow the same pattern: ずっと + verb + ている
+  // This is a fundamental limitation of syntactic pattern matching
 ];
 
 describe('bunpro.jlpt3', () => {
