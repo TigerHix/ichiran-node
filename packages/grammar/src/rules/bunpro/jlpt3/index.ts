@@ -64,6 +64,7 @@ import darake from './だらけ.js';
 import chantoKichinto from './ちゃんと-きちんと.js';
 import ppanashi from './っぱなし.js';
 import tsuide from './ついでに.js';
+import tsui from './つい.js';
 import tsumari from './つまり.js';
 import teGoran from './てごらん.js';
 import dewaSoredewa from './では-それでは-じゃあ.js';
@@ -148,6 +149,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     chantoKichinto,
     ppanashi,
     tsuide,
+    tsui,
     tsumari,
     teGoran,
     dewaSoredewa,
