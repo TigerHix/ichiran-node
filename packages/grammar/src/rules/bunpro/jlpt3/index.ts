@@ -80,6 +80,7 @@ import nounGata from './noun-型.js';
 import zutto2 from './ずっと2.js';
 import particleNo from './particle-の.js';
 import verbVolitionalToShitaGa from './verb-volitional-としたが.js';
+import tokorodatta1 from './ところだった1.js';
 
 export const BUNPRO_JLPT3: Ruleset = {
   id: 'bunpro.jlpt3',
@@ -159,6 +160,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     deYokereba,
     toiukotoDa,
     toiucalled,
+    tokorodatta1,
     youToShinai,
     nounGata,
     zutto2,
