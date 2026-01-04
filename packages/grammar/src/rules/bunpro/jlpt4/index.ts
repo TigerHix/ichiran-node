@@ -125,6 +125,7 @@ import kata from './かた.js';
 import kadouka from './かどうか.js';
 import kana from './かな.js';
 import kamoshirenai from './かもしれない.js';
+import rashii2 from './らしい2.js';
 import gasuru from './がする.js';
 import gahitsuyou from './がひつよう.js';
 import gahoshii from './がほしい.js';
@@ -248,6 +249,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     owaru,
     osuru,
     questionphraseka,
+    rashii2,
     sa,
     shishi,
     shikanai,
