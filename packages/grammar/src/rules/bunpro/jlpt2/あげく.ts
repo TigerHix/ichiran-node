@@ -51,16 +51,13 @@ export default linguisticRule('あげく', (r) => {
         }
       );
 
-      // Followed by あげく (NOUN or PROPN)
-      // GiNZA may parse as either hiragana あげく or kanji 挙げ句
-      // May also parse あげくに as a single adverb
-      // Use text matching since lemma may vary
+      // Followed by あげく (may include に particle)
+      // GiNZA may tokenize as either あげく+に or あげくに as one token
       const ageku = b.tok({
-        textOneOf: ['あげく', 'あげくに', '挙げく', '挙げくに', '挙げ句', '挙句', '挙げ句に', '挙句に'],
-        posOneOf: ['NOUN', 'PROPN', 'ADV'],
+        textOneOf: ['あげく', 'あげくに', '挙げく', '挙げくに', '挙げ句', '挙げ句に', '挙句', '挙句に'],
       }, 'ageku');
 
-      b.inOrder(ta, ageku, 3);
+      b.inOrder(ta, ageku, 5);
 
       b.captureSpan('あげく', verb, ageku);
     },
@@ -78,13 +75,11 @@ export default linguisticRule('あげく', (r) => {
       b.caseMarker(noun, no);
 
       // Followed by あげく (may be hiragana or kanji, with or without に)
-      // Use text matching since lemma may vary
       const ageku = b.tok({
-        textOneOf: ['あげく', 'あげくに', '挙げく', '挙げくに', '挙げ句', '挙句', '挙げ句に', '挙句に'],
-        posOneOf: ['NOUN', 'PROPN', 'ADV'],
+        textOneOf: ['あげく', 'あげくに', '挙げく', '挙げくに', '挙げ句', '挙げ句に', '挙句', '挙句に'],
       }, 'ageku');
 
-      b.inOrder(no, ageku, 3);
+      b.inOrder(no, ageku, 5);
 
       b.captureSpan('あげく', noun, ageku);
     }

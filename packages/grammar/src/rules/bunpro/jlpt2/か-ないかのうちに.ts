@@ -29,35 +29,37 @@ import { linguisticRule } from '../../../engine/lang.js';
  *   - 開ける(VERB) + か(ADP) + 開け(VERB) + ない(AUX) + か(ADP) + の(SCONJ) + うち(NOUN) + に(ADP)
  */
 export default linguisticRule('か-ないかのうちに', (r) => {
-  // First verb: dictionary form (plain form)
-  const verb1 = r.verb({}, 'verb1');
+  // Pattern: Verb + か + Verb-stem + ない + か + の + うち + に
+  // The two verbs should be the same, but in different forms (dictionary vs negative)
+
+  // First verb: dictionary form
+  const verb1 = r.tok({ posOneOf: ['VERB', 'AUX'] }, 'verb1');
 
   // First particle: か
   const ka1 = r.particle('か', 'ka1');
-  r.inOrder(verb1, ka1, 1);
+  r.inOrder(verb1, ka1, 2);
 
-  // Second verb: same verb but in negative form
-  // The negative form has: verb stem + ない (auxiliary)
-  const verb2 = r.verb({}, 'verb2');
+  // Second verb: in stem/negative form (before ない)
+  const verb2 = r.tok({ posOneOf: ['VERB', 'AUX'] }, 'verb2');
 
   // Negative auxiliary ない attached to verb2
   const nai = r.aux({ lemma: 'ない' }, 'nai');
   r.auxOf(verb2, nai);
 
-  r.inOrder(ka1, verb2, 3);
+  r.inOrder(ka1, verb2, 4);
   r.inOrder(verb2, nai, 1);
 
   // Second particle: か (after nai)
   const ka2 = r.particle('か', 'ka2');
   r.inOrder(nai, ka2, 1);
 
-  // の (conjunction/complementizer)
+  // の (conjunction/complementizer) - can be SCONJ or ADP
   const no = r.tok({ text: 'の', posOneOf: ['SCONJ', 'ADP'] }, 'no');
   r.inOrder(ka2, no, 1);
 
   // うち (noun: inside/within)
   const uchi = r.noun({ lemma: 'うち' }, 'uchi');
-  r.inOrder(no, uchi, 1);
+  r.inOrder(no, uchi, 2);
 
   // Final particle: に
   const ni = r.particle('に', 'ni');
