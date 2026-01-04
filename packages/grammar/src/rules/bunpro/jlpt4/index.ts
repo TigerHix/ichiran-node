@@ -79,6 +79,7 @@ import tara from './たら.js';
 import taradou from './たらどう.js';
 import daitai from './だいたい.js';
 import dagadega from './だが・ですが.js';
+import temo from './ても.js';
 
 export const BUNPRO_JLPT4: Ruleset = {
   id: 'bunpro.jlpt4',
@@ -116,6 +117,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     teirutokoroda,
     teoku,
     tekuru,
+    temo,
     ika,
     igai,
     itasu,
