@@ -25,6 +25,7 @@ import teshimau from './てしまう-ちゃう.js';
 import tekuretearigatou from './てくれてありがとう.js';
 import teageru from './てあげる.js';
 import tearu from './てある.js';
+import temorau from './てもらう.js';
 import teiku from './ていく.js';
 import teita from './ていた.js';
 import teitadakemasenka from './ていただけませんか.js';
@@ -109,6 +110,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     tekuretearigatou,
     teageru,
     tearu,
+    temorau,
     teiku,
     teita,
     teitadakemasenka,
