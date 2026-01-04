@@ -68,6 +68,7 @@ import tsumari from './つまり.js';
 import teGoran from './てごらん.js';
 import dewaSoredewa from './では-それでは-じゃあ.js';
 import temoKamawanai from './てもかまわない.js';
+import temoNakutemo from './ても-なくても.js';
 import dearu from './である.js';
 import dekirebaDekitara from './できれば-できたら.js';
 import dewaNakuteJanakute from './ではなくて-じゃなくて.js';
@@ -152,6 +153,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     teGoran,
     dewaSoredewa,
     temoKamawanai,
+    temoNakutemo,
     dearu,
     dekirebaDekitara,
     dewaNakuteJanakute,
