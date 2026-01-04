@@ -4,7 +4,7 @@ import amari from './あまり.js';
 import amariNi from './あまりに.js';
 import ari from './あり.js';
 import aruiwa from './あるいは.js';
-import dekiRebaTara from './できれば-できたら.js';
+import demoaru from './でもある.js';
 import ikuraDemo from './いくら-でも.js';
 import uchiNi from './うちに.js';
 import okageDe from './おかげで.js';
@@ -32,10 +32,8 @@ import kotoNiNaru from './ことになる.js';
 import kotoWaNai from './ことはない.js';
 import saCasualYo from './さ-casualよ.js';
 import dewaSoredewa from './では-それでは-じゃあ.js';
-import dewahnakuteJanakute from './ではなくて-じゃなくて.js';
 import youToShinai from './-ようとしない.js';
 import zutto2 from './ずっと2.js';
-import dearu from './である.js';
 
 export const BUNPRO_JLPT3: Ruleset = {
   id: 'bunpro.jlpt3',
@@ -44,7 +42,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     amariNi,
     ari,
     aruiwa,
-    dekiRebaTara,
+    demoaru,
     ikuraDemo,
     uchiNi,
     okageDe,
@@ -72,9 +70,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     kotoWaNai,
     saCasualYo,
     dewaSoredewa,
-    dewahnakuteJanakute,
     youToShinai,
     zutto2,
-    dearu,
   ],
 };
