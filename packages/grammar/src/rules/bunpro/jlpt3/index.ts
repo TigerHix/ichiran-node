@@ -80,6 +80,7 @@ import nounGata from './noun-型.js';
 import zutto2 from './ずっと2.js';
 import particleNo from './particle-の.js';
 import verbVolitionalToShitaGa from './verb-volitional-としたが.js';
+import verbVolitionalToSuru from './verb-volitionalとする.js';
 
 export const BUNPRO_JLPT3: Ruleset = {
   id: 'bunpro.jlpt3',
@@ -164,5 +165,6 @@ export const BUNPRO_JLPT3: Ruleset = {
     zutto2,
     particleNo,
     verbVolitionalToShitaGa,
+    verbVolitionalToSuru,
   ],
 };
