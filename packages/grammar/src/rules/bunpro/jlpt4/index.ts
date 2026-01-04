@@ -9,6 +9,7 @@ import describingverbs from './describing-verbs.js';
 import numberamountwa from './number-amount-は.js';
 import numbershikanai from './number-しか-ない.js';
 import numbermo from './number-も.js';
+import nancounterka from './なん-counter-か.js';
 import questionphraseka from './question-phrase-か.js';
 import transitiveintransitive from './transitive-intransitive-verbs.js';
 import verbtenoundeb from './verb-て-noun-で-b.js';
@@ -130,6 +131,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     numberamountwa,
     numbershikanai,
     numbermo,
+    nancounterka,
     questionphraseka,
     transitiveintransitive,
     verbtenoundeb,
