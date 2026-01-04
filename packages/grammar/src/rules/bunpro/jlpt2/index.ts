@@ -11,15 +11,14 @@ import oyoyoso from './おおよそ.js';
 import osoraku from './おそらく.js';
 import omakeni from './おまけに.js';
 import oyobi from './および.js';
+import gakininaru from './が気になる.js';
 import kanaikanouniuchi from './か-ないかのうちに.js';
 import katoomotarakatoomouto from './かと思ったら-かと思うと.js';
 import kanenai from './かねない.js';
 import kaneru from './かねる.js';
-import karaniwa from './からには.js';
 import karashite from './からして.js';
 import karasurukarasureba from './からすると-からすれば.js';
 import kikkake from './きっかけ.js';
-import ge from './げ.js';
 import kotoDakara from './ことだから.js';
 import kotoNiNatteiru from './ことになっている.js';
 import kotowaga from './ことは-が.js';
@@ -46,15 +45,14 @@ export const BUNPRO_JLPT2: Ruleset = {
     osoraku,
     omakeni,
     oyobi,
+    gakininaru,
     kanaikanouniuchi,
     katoomotarakatoomouto,
     kanenai,
     kaneru,
-    karaniwa,
     karashite,
     karasurukarasureba,
     kikkake,
-    ge,
     kotoDakara,
     kotoNiNatteiru,
     kotowaga,
