@@ -81,6 +81,7 @@ import dono from './どの.js';
 import dare from './だれ.js';
 import dore from './どれ.js';
 import mo from './も.js';
+import naAdjectivePredicate from './な-adjective-predicate.js';
 
 export const BUNPRO_JLPT5: Ruleset = {
   id: 'bunpro.jlpt5',
@@ -137,6 +138,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     ne,
     no,
     na,
+    naAdjectivePredicate,
     ndesu,
     negativeIAdjectives,
     nounMade,
