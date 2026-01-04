@@ -91,6 +91,7 @@ import nakerebanaranai from './なければならない.js';
 import nakute from './なくて.js';
 import nakuteconjunction from './なくて-conjunction.js';
 import nakutemoii from './なくてもいい.js';
+import nonidespite from './のに-despite.js';
 import naosu from './なおす.js';
 import nagara from './ながら.js';
 import nasai from './なさい.js';
@@ -212,6 +213,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     nakute,
     nakuteconjunction,
     nakutemoii,
+    nonidespite,
     naosu,
     nagara,
     nasai,
