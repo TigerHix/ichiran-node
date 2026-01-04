@@ -7,12 +7,9 @@ await client.start();
 const engine = await GrammarEngine.create([], { client });
 
 const sentences = [
-  '一生懸命しんせつにしてくれた。',
-  '顔をくろくしすぎです。',
-  'もっと簡単にべんりにする方法がありますよ。',
+  '布団をあたらしくしたから気持ちいい。',
   '翻訳をおもしろくするアプリがある。',
-  '歯医者さんで歯をしろくしてもらった。',
-  '昼休みをみじかくして早く帰りたい。',
+  'お花見にはあたたかくして行った方がいい。',
 ];
 
 for (const s of sentences) {

@@ -18,6 +18,7 @@ import verbteb2 from './verbて-b2.js';
 import verbtereq from './verbて-request.js';
 import dakedenaku from './だけでなく.js';
 import dakede from './だけで.js';
+import nisurukusuru from './にする-くする.js';
 import dasu from './だす.js';
 import dandan from './だんだん.js';
 import dondon from './どんどん.js';
@@ -139,6 +140,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     verbtereq,
     dakedenaku,
     dakede,
+    nisurukusuru,
     dasu,
     dandan,
     dondon,
