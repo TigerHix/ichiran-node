@@ -78,6 +78,7 @@ import toiucalled from './という-called.js';
 import youToShinai from './-ようとしない.js';
 import nounGata from './noun-型.js';
 import zutto2 from './ずっと2.js';
+import datte from './だって.js';
 import particleNo from './particle-の.js';
 import verbVolitionalToShitaGa from './verb-volitional-としたが.js';
 
@@ -162,6 +163,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     youToShinai,
     nounGata,
     zutto2,
+    datte,
     particleNo,
     verbVolitionalToShitaGa,
   ],
