@@ -7,8 +7,10 @@
 
 import { createServer, IncomingMessage, ServerResponse } from 'http';
 import { romanize, romanizeStar, setConnection, getConnection, type ConnectionSpec, printPerfCountersAndReset, transformRomanizeStarResult } from '@ichiran/core';
-import { analyzeText, grammarCatalog } from '@ichiran/grammar';
+import { GrammarEngine, BUNPRO_RULESETS, type MatchHit } from '@ichiran/grammar';
 import { config } from 'dotenv';
+
+let grammarEngine: GrammarEngine | null = null;
 
 // Parse environment variables
 config();
@@ -298,41 +300,39 @@ async function handleRequest(req: IncomingMessage, res: ServerResponse): Promise
         return;
       }
 
+      if (!grammarEngine) {
+        sendError(res, 'Grammar engine not initialized', 500);
+        return;
+      }
+
       const limit = body.limit ?? 1;
-      const maxMatches = body.maxMatches;
       const entities = body.entities ?? [];
       
-      // Perform combined analysis (single DB call)
-      const analysis = await analyzeText(
-        body.text,
-        grammarCatalog,
-        {
-          maxMatches,
-          limit,
-          normalizePunctuation: false,  // Preserve original punctuation
-          entities
-        }
-      );
+      // Get segmentation
+      const result = await romanizeStar(body.text, { limit, normalizePunctuation: false, entities });
+      const segments = await transformRomanizeStarResult(result);
 
-      // Group matches by grammarId
+      // Get grammar matches
+      const matches: MatchHit[] = await grammarEngine.match(body.text, {
+        rulesetIds: body.rulesetIds
+      });
+
+      // Group matches by ruleId
       const grammars: Record<string, any> = {};
-      for (const match of analysis.grammarMatches) {
-        if (!grammars[match.grammarId]) {
-          grammars[match.grammarId] = {
-            matchedSentences: [],
-            grammarDetail: analysis.grammarDetails[match.grammarId] || {}
+      for (const match of matches) {
+        if (!grammars[match.ruleId]) {
+          grammars[match.ruleId] = {
+            rulesetId: match.rulesetId,
+            matches: []
           };
         }
-        grammars[match.grammarId].matchedSentences.push({
-          level: match.level,
-          description: match.description,
-          captures: match.captures,
-          segments: match.segments
+        grammars[match.ruleId].matches.push({
+          captures: match.captures
         });
       }
 
       sendJson(res, {
-        segments: analysis.segments,
+        segments,
         grammars
       });
 
@@ -350,7 +350,7 @@ async function handleRequest(req: IncomingMessage, res: ServerResponse): Promise
           'POST /api/romanize': 'Basic romanization (body: {text: string})',
           'POST /api/romanize/info': 'Romanization with dictionary info (body: {text: string})',
           'POST /api/segment': 'Full segmentation (body: {text: string, limit?: number})',
-          'POST /api/analyze': 'Combined grammar analysis and segmentation (body: {text: string, limit?: number, maxMatches?: number})'
+          'POST /api/analyze': 'Combined grammar analysis and segmentation (body: {text: string, limit?: number, rulesetIds?: string[]})'
         },
         examples: {
           romanize: {
@@ -414,6 +414,11 @@ async function main(): Promise<void> {
   setConnection(connSpec);
   console.log('Database connection configured');
 
+  // Initialize grammar engine
+  console.log('Initializing grammar engine...');
+  grammarEngine = await GrammarEngine.create(BUNPRO_RULESETS);
+  console.log(`Grammar engine ready with ${grammarEngine.getRuleIds().length} rules`);
+
   // Create HTTP server
   const server = createServer(handleRequest);
 
@@ -425,22 +430,26 @@ async function main(): Promise<void> {
   });
 
   // Graceful shutdown
-  process.on('SIGTERM', () => {
-    console.log('SIGTERM received, shutting down gracefully...');
-    server.close(() => {
+  const shutdown = async () => {
+    server.close(async () => {
       console.log('Server closed');
+      if (grammarEngine) {
+        await grammarEngine.close();
+        console.log('Grammar engine closed');
+      }
       printPerfCountersAndReset();
       process.exit(0);
     });
+  };
+
+  process.on('SIGTERM', () => {
+    console.log('SIGTERM received, shutting down gracefully...');
+    shutdown();
   });
 
   process.on('SIGINT', () => {
     console.log('\nSIGINT received, shutting down gracefully...');
-    server.close(() => {
-      console.log('Server closed');
-      printPerfCountersAndReset();
-      process.exit(0);
-    });
+    shutdown();
   });
 }
 

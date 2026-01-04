@@ -1,0 +1,230 @@
+Auditing 157 old JLPT4 rules...
+
+=== ALL SKIPPOSITIVES FOUND ===
+
+Total skips found: 79
+
+=== SKIPS BY RULE ===
+
+ほかにも-ほかには: 1 skip(s)
+  - "いいえ、ほかはいりません。"
+    Reason: The failing sentence has a special structure with: - Sentence-initial "いいえ、" (No,) which might affect parsing - "ほかは" followed immediately by "いりません" (don't need) The pattern ほか + は is successfully matched in other contexts, suggesting a GiNZA inconsistency in how it parses this specific sentence structure. CONCLUSION: No reliable discriminator. GiNZA limitation.
+
+かい: 1 skip(s)
+  - "大学生なんかい。中学生だと思った。"
+    Reason: However, GiNZA tokenizes "なんかい" as a single NOUN with lemma="なんかい" and reading="ナンカイ", which is identical to the counter word "how many times" (何回). There is no reliable discriminator because: 1. The token is a single NOUN (not separate particles) 2. lemma="なんかい" could be either the grammar point or the counter 3. Matching all "なんかい" NOUNs would cause overcapture on counter usage CONCLUSION: No reliable discriminator. GiNZA tokenization limitation.
+
+よう-おう: 5 skip(s)
+  - "私が運転しようか？"
+    Reason: 4. "ここで働きたいから、いい履歴書をかこう。" - Expected: text="かこう" or text="書こう" 5. "毎日日本語で話したら、どんどん上手になるから、頑張って日本語ではなそう。" - Expected: text="はなそう" or text="話そう" CONCLUSION: Cannot match these sentences without seeing actual GiNZA parse output. This is a GiNZA parsing limitation where the token text/POS doesn't match expected values.
+  - "ここにはあまりいいものがないからかえろう。"
+    Reason: 4. "ここで働きたいから、いい履歴書をかこう。" - Expected: text="かこう" or text="書こう" 5. "毎日日本語で話したら、どんどん上手になるから、頑張って日本語ではなそう。" - Expected: text="はなそう" or text="話そう" CONCLUSION: Cannot match these sentences without seeing actual GiNZA parse output. This is a GiNZA parsing limitation where the token text/POS doesn't match expected values.
+  - "この店は毎週月曜日がセールだから、牛乳を買うのを月曜日までまとう。"
+    Reason: 4. "ここで働きたいから、いい履歴書をかこう。" - Expected: text="かこう" or text="書こう" 5. "毎日日本語で話したら、どんどん上手になるから、頑張って日本語ではなそう。" - Expected: text="はなそう" or text="話そう" CONCLUSION: Cannot match these sentences without seeing actual GiNZA parse output. This is a GiNZA parsing limitation where the token text/POS doesn't match expected values.
+  - "ここで働きたいから、いい履歴書をかこう。"
+    Reason: 4. "ここで働きたいから、いい履歴書をかこう。" - Expected: text="かこう" or text="書こう" 5. "毎日日本語で話したら、どんどん上手になるから、頑張って日本語ではなそう。" - Expected: text="はなそう" or text="話そう" CONCLUSION: Cannot match these sentences without seeing actual GiNZA parse output. This is a GiNZA parsing limitation where the token text/POS doesn't match expected values.
+  - "毎日日本語で話したら、どんどん上手になるから、頑張って日本語ではなそう。"
+    Reason: 4. "ここで働きたいから、いい履歴書をかこう。" - Expected: text="かこう" or text="書こう" 5. "毎日日本語で話したら、どんどん上手になるから、頑張って日本語ではなそう。" - Expected: text="はなそう" or text="話そう" CONCLUSION: Cannot match these sentences without seeing actual GiNZA parse output. This is a GiNZA parsing limitation where the token text/POS doesn't match expected values.
+
+てほしい: 2 skip(s)
+  - "車できてほしかった。"
+    Reason: The pattern expects ほしい → です (adjacent), but ん appears between them. This is the explanatory んです structure, which attaches to the entire clause. While we could add a pattern for ほしい + ん + です, this would overlap with the separate んです grammar point. The てほしい rule should focus on the core pattern without combining with other sentence-ending structures. Similar sentences that DO work: "一緒に勉強してほしいです。" (no ん)
+  - "一緒にたべにいってほしいんです。"
+    Reason: The pattern expects ほしい → です (adjacent), but ん appears between them. This is the explanatory んです structure, which attaches to the entire clause. While we could add a pattern for ほしい + ん + です, this would overlap with the separate んです grammar point. The てほしい rule should focus on the core pattern without combining with other sentence-ending structures. Similar sentences that DO work: "一緒に勉強してほしいです。" (no ん)
+
+さ: 2 skip(s)
+  - "私が道の長さを測ります。"
+    Reason: But when GiNZA parses a word as a single token, it loses the suffix tag. Single-token nouns like 長さ have tag=名詞-普通名詞-一般 (not 接尾辞-名詞的-一般). Matching all nouns ending in さ would overcapture: ❌ 暇 (hima - free time, unrelated word) ❌ 喫茶店 (kissaten - coffee shop, unrelated word) ❌ Various proper nouns and common words ending in さ CONCLUSION: No reliable discriminator for single-token cases. GiNZA limitation.
+  - "昨日食べたラーメンのおいしさを友達に教えたい。"
+    Reason: But when GiNZA parses a word as a single token, it loses the suffix tag. Single-token nouns like 長さ have tag=名詞-普通名詞-一般 (not 接尾辞-名詞的-一般). Matching all nouns ending in さ would overcapture: ❌ 暇 (hima - free time, unrelated word) ❌ 喫茶店 (kissaten - coffee shop, unrelated word) ❌ Various proper nouns and common words ending in さ CONCLUSION: No reliable discriminator for single-token cases. GiNZA limitation.
+
+ごとに: 1 skip(s)
+  - "あの人は会う人ごとに笑顔で握手します。"
+    Reason: 先生ごとに - ✓ Works (text match for ごとに) 生徒ごとに - ✓ Works (text match for ごとに) ３時間ごとに - ✓ Works (text match for ごとに) The issue is specific to verb-modified nouns + ごとに combinations. This appears to be a rare edge case in the test data (1 out of 17 sentences). CONCLUSION: Skip this one edge case. The rule correctly matches 16/17 (94%) of test cases including all the core patterns for ごとに.
+
+Verb[potential]: 2 skip(s)
+  - "日本語を読むことができる。"
+    Reason: Intransitive verbs ending in similar sounds but not potential form Skip positives: sentences that contain potential forms but are testing a different grammar point (こと が できる)
+  - "運転することができます。"
+    Reason: Intransitive verbs ending in similar sounds but not potential form Skip positives: sentences that contain potential forms but are testing a different grammar point (こと が できる)
+
+なさい: 2 skip(s)
+  - "お前も悪いから謝りな。"
+    Reason: - 入る → inflectionForm=終止形-一般 ✓ CORRECT - 食べる → inflectionForm=終止形-一般 ✓ CORRECT When inflectionForm is null, we can't distinguish between stem and dictionary forms. This means we can't safely match the casual な form without risking false positives on the prohibitive pattern. CONCLUSION: Can't reliably discriminate casual な vs prohibitive な when GiNZA doesn't set inflectionForm. Skip the casual form cases that require this discrimination.
+  - "勉強しな。"
+    Reason: - 入る → inflectionForm=終止形-一般 ✓ CORRECT - 食べる → inflectionForm=終止形-一般 ✓ CORRECT When inflectionForm is null, we can't distinguish between stem and dictionary forms. This means we can't safely match the casual な form without risking false positives on the prohibitive pattern. CONCLUSION: Can't reliably discriminate casual な vs prohibitive な when GiNZA doesn't set inflectionForm. Skip the casual form cases that require this discrimination.
+
+お-ください: 1 skip(s)
+  - "ご感想をおきかせください。"
+    Reason: せ (VERB, lemma=する) ください (AUX, lemma=くださる) The hiragana version doesn't have a separate お prefix token (it's merged into おき), and the verb lemma is wrong (おく instead of 聞く). There's no discriminator that can identify this as お-ください without incorrectly matching unrelated patterns. CONCLUSION: No reliable discriminator for hiragana-only text. GiNZA limitation.
+
+verbて-b2: 1 skip(s)
+  - "メアリーがアメリカにかえって悲しいです。"
+    Reason: メアリーがアメリカにかえって悲しいです。 GiNZA parse: かえって [pos=ADV, lemma=かえって, dep=advmod] Expected: 帰っ [pos=VERB] + て [pos=SCONJ, dep=mark] When the verb is written in hiragana as a single unit, GiNZA treats it as an adverb. When written in kanji (帰って), it parses correctly as VERB + SCONJ. CONCLUSION: GiNZA limitation - cannot distinguish without modifying the input.
+
+ない-はない: 1 skip(s)
+  - "父親：「新しいクラスはどう？友達を作ったの？」 子供：「好きじゃないクラスメイトはいないけど、まだ、できてないよ。」"
+    Reason: (suki ja nai kurasumeito wa inai) which should match Pattern 3. However, the sentence structure with dialog markers and the continuation "けど" (but) appears to cause issues with GiNZA's tokenization or dependency parsing in this specific context. The rule correctly matches the same pattern in simpler sentences like: - 好きじゃない人はいない - 好きではない人はいない This is a context-specific parsing limitation, not a fundamental issue with the rule.
+
+そんなに: 3 skip(s)
+  - "こんなにもらってもいいんですか？"
+    Reason: ANALYSIS: - こんなに: 'this much' (close to speaker) - different lemma - あんなに: 'that much' (over there) - different lemma - どんなに: 'how much' (interrogative) - different lemma GiNZA parses all variants identically (ADJ + AUX with inflectionForm=連用形-ニ), but the discriminator is the lemma of the first token (こんな vs そんな vs あんな vs どんな). Matching all of them would require a more generic rule that could overcapture.
+  - "あんなに食べたのにまだお腹が空いているの？"
+    Reason: ANALYSIS: - こんなに: 'this much' (close to speaker) - different lemma - あんなに: 'that much' (over there) - different lemma - どんなに: 'how much' (interrogative) - different lemma GiNZA parses all variants identically (ADJ + AUX with inflectionForm=連用形-ニ), but the discriminator is the lemma of the first token (こんな vs そんな vs あんな vs どんな). Matching all of them would require a more generic rule that could overcapture.
+  - "どんなに頑張っても、私は先輩みたいにはなれないと思う。"
+    Reason: ANALYSIS: - こんなに: 'this much' (close to speaker) - different lemma - あんなに: 'that much' (over there) - different lemma - どんなに: 'how much' (interrogative) - different lemma GiNZA parses all variants identically (ADJ + AUX with inflectionForm=連用形-ニ), but the discriminator is the lemma of the first token (こんな vs そんな vs あんな vs どんな). Matching all of them would require a more generic rule that could overcapture.
+
+number-しか-ない: 2 skip(s)
+  - "冷蔵庫の中にはリンゴしかなかったから、リンゴを食べた。"
+    Reason: writeup section showing contrast between しか and だけ. These are not actual test sentences for this grammar point, which focuses on numbers. The general しか～ない pattern (nouns + しか + negative) is covered by a different rule ("しか-ない", JLPT4 id 182). Additionally, one test sentence "彼には１度しかかっていない" appears to have an irregular parsing issue - the verb stem is omitted in the test data, resulting in ungrammatical Japanese that doesn't parse consistently.
+  - "彼には１度しかかっていない。"
+    Reason: writeup section showing contrast between しか and だけ. These are not actual test sentences for this grammar point, which focuses on numbers. The general しか～ない pattern (nouns + しか + negative) is covered by a different rule ("しか-ない", JLPT4 id 182). Additionally, one test sentence "彼には１度しかかっていない" appears to have an irregular parsing issue - the verb stem is omitted in the test data, resulting in ungrammatical Japanese that doesn't parse consistently.
+
+てくる: 1 skip(s)
+  - "お母さんににてきたね。"
+    Reason: - pos: "VERB" - tag: "助詞-格助詞" (particle) - dep: "case" This is a compound particle form where the て is embedded within the token, not parsed as a separate SCONJ particle. Our rule requires a separate て token. CONCLUSION: No reliable discriminator. GiNZA parses "にて" as a compound token. Cannot distinguish between particle "にて" (at/in) and verb-te "にて" (ni-te form).
+
+verbて-request: 2 skip(s)
+  - "先生が生徒に言う：「この宿題、明日までに提出して。」"
+    Reason: nor the te particle gets dep=root, making them indistinguishable from non-final te-forms (connecting clauses, auxiliary verbs, etc.). Matching all te-forms without dep=root would overcapture: ❌ ご飯を食べて、学校へ行きました (sequential actions) ❌ 本を読んでいる (progressive ている) CONCLUSION: No reliable discriminator for te-forms in complex clause structures. GiNZA limitation.
+  - "「そこで少しまってて。すぐに戻るから。」"
+    Reason: nor the te particle gets dep=root, making them indistinguishable from non-final te-forms (connecting clauses, auxiliary verbs, etc.). Matching all te-forms without dep=root would overcapture: ❌ ご飯を食べて、学校へ行きました (sequential actions) ❌ 本を読んでいる (progressive ている) CONCLUSION: No reliable discriminator for te-forms in complex clause structures. GiNZA limitation.
+
+かもしれない: 4 skip(s)
+  - "明日は休みだからドライブするかも。"
+    Reason: - しら (VERB, lemma=しらん) - ん (AUX) Different lemma (しらん vs しれる) and structure. Would require a separate rule variant just for this dialectal form. CONCLUSION: Matching shortened forms would overcapture on standalone かも particles. These are legitimate expressions of uncertainty, but structurally indistinguishable from other uses of かも without the full かもしれない pattern.
+  - "そうかもね。"
+    Reason: - しら (VERB, lemma=しらん) - ん (AUX) Different lemma (しらん vs しれる) and structure. Would require a separate rule variant just for this dialectal form. CONCLUSION: Matching shortened forms would overcapture on standalone かも particles. These are legitimate expressions of uncertainty, but structurally indistinguishable from other uses of かも without the full かもしれない pattern.
+  - "財布を家に忘れてきたかもしらん。"
+    Reason: - しら (VERB, lemma=しらん) - ん (AUX) Different lemma (しらん vs しれる) and structure. Would require a separate rule variant just for this dialectal form. CONCLUSION: Matching shortened forms would overcapture on standalone かも particles. These are legitimate expressions of uncertainty, but structurally indistinguishable from other uses of かも without the full かもしれない pattern.
+  - "この時期は晴れの日が続くから、富士山を綺麗に見られるかも。"
+    Reason: - しら (VERB, lemma=しらん) - ん (AUX) Different lemma (しらん vs しれる) and structure. Would require a separate rule variant just for this dialectal form. CONCLUSION: Matching shortened forms would overcapture on standalone かも particles. These are legitimate expressions of uncertainty, but structurally indistinguishable from other uses of かも without the full かもしれない pattern.
+
+すこしも-ない: 3 skip(s)
+  - "あなたは子供の話をすこしも聞いてあげてない。"
+    Reason: 3. 君はすこしもお金がないのにロレックスを買おうとしているの？ - Contains 買おうとしている (volitional + to-suru + progressive) - Main clause doesn't use すこしも-ない pattern (すこしも only modifies first clause) - This is a different grammatical structure Note: These represent edge cases with complex auxiliary chains that would require significantly more complex patterns to match. The core すこしも-ない patterns (simple negative, progressive negative, i-adj negative, noun+ではない) work correctly.
+  - "今の話がすこしも理解出来なかった。"
+    Reason: 3. 君はすこしもお金がないのにロレックスを買おうとしているの？ - Contains 買おうとしている (volitional + to-suru + progressive) - Main clause doesn't use すこしも-ない pattern (すこしも only modifies first clause) - This is a different grammatical structure Note: These represent edge cases with complex auxiliary chains that would require significantly more complex patterns to match. The core すこしも-ない patterns (simple negative, progressive negative, i-adj negative, noun+ではない) work correctly.
+  - "君はすこしもお金がないのにロレックスを買おうとしているの？"
+    Reason: 3. 君はすこしもお金がないのにロレックスを買おうとしているの？ - Contains 買おうとしている (volitional + to-suru + progressive) - Main clause doesn't use すこしも-ない pattern (すこしも only modifies first clause) - This is a different grammatical structure Note: These represent edge cases with complex auxiliary chains that would require significantly more complex patterns to match. The core すこしも-ない patterns (simple negative, progressive negative, i-adj negative, noun+ではない) work correctly.
+
+describing-verbs: 4 skip(s)
+  - "彼女はいつもまえむきに考える。"
+    Reason: Na-adjective as predicate (not adverbial) Skip sentences that GiNZA cannot parse correctly when written in hiragana
+  - "まえむきに"
+    Reason: Na-adjective as predicate (not adverbial) Skip sentences that GiNZA cannot parse correctly when written in hiragana
+  - "試験前の夜ははやめに寝たほうがいい。"
+    Reason: Na-adjective as predicate (not adverbial) Skip sentences that GiNZA cannot parse correctly when written in hiragana
+  - "はやめ"
+    Reason: Na-adjective as predicate (not adverbial) Skip sentences that GiNZA cannot parse correctly when written in hiragana
+
+causative: 2 skip(s)
+  - "学校に行きたくない子をいかせる。"
+    Reason: Sentences that can't be matched due to GiNZA parsing limitations: 1. "学校に行きたくない子をいかせる。" GiNZA parses "いかせる" as a single VERB token (lemma=いかせる, inflection=終止形-一般) instead of verb stem + causative auxiliary. This is a GiNZA tokenization limitation. 2. "赤ちゃんはまだ自分で食べることが出来ないから、たべさせなきゃいけない。" GiNZA may parse hiragana "たべ" differently from kanji "食べ", causing inconsistent tokenization patterns that can't be reliably matched.
+  - "赤ちゃんはまだ自分で食べることが出来ないから、たべさせなきゃいけない。"
+    Reason: Sentences that can't be matched due to GiNZA parsing limitations: 1. "学校に行きたくない子をいかせる。" GiNZA parses "いかせる" as a single VERB token (lemma=いかせる, inflection=終止形-一般) instead of verb stem + causative auxiliary. This is a GiNZA tokenization limitation. 2. "赤ちゃんはまだ自分で食べることが出来ないから、たべさせなきゃいけない。" GiNZA may parse hiragana "たべ" differently from kanji "食べ", causing inconsistent tokenization patterns that can't be reliably matched.
+
+まい-のように: 10 skip(s)
+  - "彼は８月になるとまい年のように平和記念資料館へ行く。"
+    Reason: - まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.
+  - "仕事を終わったときはまいばんのようにジムに行く。"
+    Reason: - まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.
+  - "まい日のようにポテトチップス食べてるから太ってきた。"
+    Reason: - まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.
+  - "ともきさんは仕事前にまいにちのように釣りに行った。"
+    Reason: - まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.
+  - "彼女は彼に出会う前は、まいにちのように高校をサボっていた。"
+    Reason: - まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.
+  - "子供の頃、雨に濡れてひどい風邪を引いたので、出かけるときはまいかいのように傘を持っていく。"
+    Reason: - まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.
+  - "彼はまいにちのように砂糖を食べすぎたので、病気になった。"
+    Reason: - まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.
+  - "夏にはまいばんのようにコオロギの鳴き声が聞こえる。"
+    Reason: - まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.
+  - "１０歳になってからはまいとしのようにお父さんと一緒に初日の出を見に行った。"
+    Reason: - まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.
+  - "彼は死ぬまでまいつきのように彼女の墓の上にバラを置いた。"
+    Reason: - まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.
+
+かた: 1 skip(s)
+  - "変わったさきかたをする花がある。"
+    Reason: 難しい (muzukashii) - adjective ending in かたい but not a verb stem GiNZA parsing limitation: 変わったさきかた - GiNZA parses "さき" as proper name (tag=名詞-固有名詞-人名-名) instead of verb stem (lemma=さく, inflectionForm=連用形-一般) This is a GiNZA error - it misidentifies the verb as a person's name. Matching all "名詞-固有名詞-人名-名" + かた would overcapture on actual names.
+
+は-の一つだ: 3 skip(s)
+  - "彼も家族のひとりだ。"
+    Reason: - いっぽん (one long object) → NOUN ✗ INDISTINGUISHABLE from regular nouns - いっしゅ (one type) → NOUN ✗ INDISTINGUISHABLE from regular nouns When counters are tagged as NOUN instead of NUM, we can't distinguish them from regular nouns using only POS information. Using a looser constraint (POS=NOUN) would cause overcapture: ❌ これは私の本です (possessive: this is my book) ❌ 彼は日本の学生です (noun modification: he is a Japanese student) CONCLUSION: No reliable discriminator. GiNZA limitation.
+  - "このクレヨンはこのセットのいっぽんだ。"
+    Reason: - いっぽん (one long object) → NOUN ✗ INDISTINGUISHABLE from regular nouns - いっしゅ (one type) → NOUN ✗ INDISTINGUISHABLE from regular nouns When counters are tagged as NOUN instead of NUM, we can't distinguish them from regular nouns using only POS information. Using a looser constraint (POS=NOUN) would cause overcapture: ❌ これは私の本です (possessive: this is my book) ❌ 彼は日本の学生です (noun modification: he is a Japanese student) CONCLUSION: No reliable discriminator. GiNZA limitation.
+  - "トマトはフルーツのいっしゅだ。"
+    Reason: - いっぽん (one long object) → NOUN ✗ INDISTINGUISHABLE from regular nouns - いっしゅ (one type) → NOUN ✗ INDISTINGUISHABLE from regular nouns When counters are tagged as NOUN instead of NUM, we can't distinguish them from regular nouns using only POS information. Using a looser constraint (POS=NOUN) would cause overcapture: ❌ これは私の本です (possessive: this is my book) ❌ 彼は日本の学生です (noun modification: he is a Japanese student) CONCLUSION: No reliable discriminator. GiNZA limitation.
+
+あまり-ない: 1 skip(s)
+  - "最近はどこもあまり平和ではない。"
+    Reason: contextually ambiguous and difficult to distinguish purely syntactically. Sentences that can't be matched due to GiNZA parsing limitations: 1. 最近はどこもあまり平和ではない。 - "平和" (peace) is tagged as '形容詞-一般' instead of expected noun/na-adj tag - The rule expects tags: ['名詞-普通名詞-一般', '形状詞-一般'] - GiNZA incorrectly tags "平和" as an adjective in this context
+
+たらどう: 1 skip(s)
+  - "暇なら外に行ったら？"
+    Reason: However, this sentence LITERALLY contains only "たら" and not "どう", so it cannot be matched by a rule looking for the pattern "verb-tara-dou". Matching all "たら" would overcapture: ❌ 暇なら外に行ったら、家に帰る。(If I'm free, when I go outside, I'll go home.) ❌ 雨が降ったら、行かない。(If it rains, I won't go.) CONCLUSION: No reliable discriminator. The abbreviated form is context-dependent and cannot be distinguished from plain conditional "たら".
+
+にくい: 1 skip(s)
+  - "お前には本当に言いづらいけど、お前のギターを壊した。ごめん。"
+    Reason: Sentences that must be skipped from positive tests This is a contrast example in the writeup showing the difference between にくい and づらい. The answer is "づらい", not "にくい", so it correctly should NOT match the にくい rule.
+
+てよかった: 1 skip(s)
+  - "おばあちゃんが亡くなる前にもう一度あえてよかった。"
+    Reason: 1. Match any VERB/AUX before よかった - but this would match standalone よかった 2. Use inflectionForm to detect te-forms - but potential verbs use 連用形-一般, same as other conjugations Using looser constraints (just matching any token before よかった) would cause overcapture on unrelated patterns like "買って、よかったと思った" where よかった is not attached to the te-form verb. CONCLUSION: No reliable discriminator without separate て particle. GiNZA limitation.
+
+お-する: 4 skip(s)
+  - "し"
+    Reason: Honorific form (お～になる) - different grammar します without humble prefix (regular polite) Sentences that can't be matched due to GiNZA parsing limitations:
+  - "僕がお守りします！"
+    Reason: Honorific form (お～になる) - different grammar します without humble prefix (regular polite) Sentences that can't be matched due to GiNZA parsing limitations:
+  - "おかり"
+    Reason: Honorific form (お～になる) - different grammar します without humble prefix (regular polite) Sentences that can't be matched due to GiNZA parsing limitations:
+  - "友達のお母さんにパソコンをおかりしました。"
+    Reason: Honorific form (お～になる) - different grammar します without humble prefix (regular polite) Sentences that can't be matched due to GiNZA parsing limitations:
+
+いたす: 2 skip(s)
+  - "はいしゃくしてもよろしいですか。"
+    Reason: According to the Bunpro caution for いたす: "Words that include the kanji 拝 'to worship' do not usually require お, ご, or いたす. This is due to the word itself being 'respectful'." These humble compound verbs use する (not いたす): - 拝借する (humbly borrow) - uses 拝借して, not 拝借いたして - 拝見する (humbly look) - uses 拝見して, not 拝見いたして These should NOT match the いたす rule since they use regular する.
+  - "まだその映画をはいけんしていないので、一緒に見に行きませんか。"
+    Reason: According to the Bunpro caution for いたす: "Words that include the kanji 拝 'to worship' do not usually require お, ご, or いたす. This is due to the word itself being 'respectful'." These humble compound verbs use する (not いたす): - 拝借する (humbly borrow) - uses 拝借して, not 拝借いたして - 拝見する (humbly look) - uses 拝見して, not 拝見いたして These should NOT match the いたす rule since they use regular する.
+
+ばよかった: 1 skip(s)
+  - "サービスエリアが一つもないじゃないか。高速に乗る前にトイレに行けばよかった。"
+    Reason: Similar sentences like "すればよかった" work fine, suggesting this is an edge case in how GiNZA handles sentence-final "よかった" after certain verb forms. Attempting to match all variations would require very loose constraints that could cause false positives on similar patterns. CONCLUSION: Documented as GiNZA parsing limitation for this specific sentence structure.
+
+なん-counter-か: 13 skip(s)
+  - "なんだいか"
+    Reason: Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations
+  - "昨日なんだいかの車が盗まれたらしい。"
+    Reason: Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations
+  - "な"
+    Reason: Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations
+  - "ん"
+    Reason: Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations
+  - "だ"
+    Reason: Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations
+  - "いか"
+    Reason: Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations
+  - "の"
+    Reason: Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations
+  - "か"
+    Reason: Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations
+  - "いか"
+    Reason: Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations
+  - "か"
+    Reason: Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations
+  - "何を食べますか"
+    Reason: Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations
+  - "何かありますか"
+    Reason: Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations
+  - "昨日なんだいかの車が盗まれたらしい。"
+    Reason: Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations
+
+ことができる: 1 skip(s)
+  - "日本語を読むことができるだけで、凄いと思います。"
+    Reason: GiNZA parsing limitation: 日本語を読むことができるだけで - GiNZA parses "できるだけ" as a single adverb token (pos=ADV, lemma=できるだけ) instead of "できる" (verb) + "だけ" (particle) This is a GiNZA tokenization issue where できる + だけ forms a compound adverb. Matching all ADV tokens with lemma=できるだけ would be too specific and wouldn't help us match the general pattern of verb + ことができる.
+
+
+Raw data saved to skip-audit-raw.json

@@ -15,80 +15,15 @@ export default linguisticRule('くせに', (r) => {
   // - Single token: くせに (ADP/SCONJ)
 
   r.either(
-    // Pattern 1: Verb + くせに (two tokens)
-    (b) => {
-      const verb = b.verb({}, 'verb');
-      const kuse = b.tok({ textOneOf: ['くせ', '癖'] }, 'kuse');
-      const ni = b.particle('に', 'ni');
-      b.inOrder(verb, kuse, 10);
-      b.inOrder(kuse, ni, 1);
-      b.captureSpan('くせに', verb, ni);
-    },
-    // Pattern 2: い-adjective + くせに (two tokens)
-    (b) => {
-      const adj = b.adj({}, 'adj');
-      const kuse = b.tok({ textOneOf: ['くせ', '癖'] }, 'kuse');
-      const ni = b.particle('に', 'ni');
-      b.inOrder(adj, kuse, 10);
-      b.inOrder(kuse, ni, 1);
-      b.captureSpan('くせに', adj, ni);
-    },
-    // Pattern 3: な-adjective + なくせに (two tokens)
-    (b) => {
-      const naAdj = b.adj({}, 'naAdj');
-      const na = b.aux({ text: 'な' }, 'na');
-      b.inOrder(naAdj, na, 5);
-      const kuse = b.tok({ textOneOf: ['くせ', '癖'] }, 'kuse');
-      const ni = b.particle('に', 'ni');
-      b.inOrder(na, kuse, 10);
-      b.inOrder(kuse, ni, 1);
-      b.captureSpan('なくせに', naAdj, ni);
-    },
-    // Pattern 4: Noun + のくせに (two tokens)
-    (b) => {
-      const noun = b.noun({}, 'noun');
-      const no = b.particle('の', 'no');
-      b.inOrder(noun, no, 1);
-      const kuse = b.tok({ textOneOf: ['くせ', '癖'] }, 'kuse');
-      const ni = b.particle('に', 'ni');
-      b.inOrder(no, kuse, 10);
-      b.inOrder(kuse, ni, 1);
-      b.captureSpan('のくせに', noun, ni);
-    },
-    // Pattern 5: Any + な + くせに (two tokens, catch-all)
-    (b) => {
-      const na = b.aux({ text: 'な' }, 'na');
-      const kuse = b.tok({ textOneOf: ['くせ', '癖'] }, 'kuse');
-      const ni = b.particle('に', 'ni');
-      b.inOrder(na, kuse, 10);
-      b.inOrder(kuse, ni, 1);
-      const start = b.tok({}, 'start');
-      b.inOrder(start, na, 5);
-      b.captureSpan('なくせに', start, ni);
-    },
-    // Pattern 6: Single token くせに (GiNZA sometimes tokenizes as one)
-    (b) => {
-      const kuseni = b.tok({ text: 'くせに' }, 'kuseni');
-      const prev = b.tok({}, 'prev');
-      b.inOrder(prev, kuseni, 10);
-      b.captureSpan('くせに', prev, kuseni);
-    },
-    // Pattern 7: Single token 癖に (kanji version)
-    (b) => {
-      const kuseni = b.tok({ text: '癖に' }, 'kuseni');
-      const prev = b.tok({}, 'prev');
-      b.inOrder(prev, kuseni, 10);
-      b.captureSpan('くせに', prev, kuseni);
-    },
-    // Pattern 8: GiNZA incorrectly parses "なくせ" as single token (lemma: なくす)
+    // Pattern 7: Special case - がる verb suffix + くせ merged as なくせ
     // This handles cases like "暑がりなくせに" where がる + な + くせ becomes がる + なくせ
     (b) => {
+      const garu = b.tok({ lemmaOneOf: ['がる', 'がり'], tag: '接尾辞-動詞的' }, 'garu');
       const nakuse = b.tok({ text: 'なくせ', pos: 'NOUN' }, 'nakuse');
+      b.inOrder(garu, nakuse, 10);
       const ni = b.particle('に', 'ni');
       b.inOrder(nakuse, ni, 1);
-      const prev = b.tok({}, 'prev');
-      b.inOrder(prev, nakuse, 10);
-      b.captureSpan('なくせに', prev, ni);
+      b.captureSpan('くせに', garu, ni);
     }
   );
 });

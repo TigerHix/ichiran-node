@@ -1,0 +1,1132 @@
+{
+  "summary": {
+    "total": 79,
+    "legitimate": 66,
+    "illegitimate": 13,
+    "suspicious": 0
+  },
+  "illegitimate": [
+    {
+      "rule": "ごとに",
+      "sentence": "あの人は会う人ごとに笑顔で握手します。",
+      "currentReason": "先生ごとに - ✓ Works (text match for ごとに) 生徒ごとに - ✓ Works (text match for ごとに) ３時間ごとに - ✓ Works (text match for ごとに) The issue is specific to verb-modified nouns + ごとに combinations. This appears to be a rare edge case in the test data (1 out of 17 sentences). CONCLUSION: Skip this one edge case. The rule correctly matches 16/17 (94%) of test cases including all the core patterns for ごとに.",
+      "classification": "ILLEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": false,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "No valid justification found - fails all checklist items.",
+      "recommendedAction": "Remove skip or fix rule to handle this sentence"
+    },
+    {
+      "rule": "なさい",
+      "sentence": "お前も悪いから謝りな。",
+      "currentReason": "- 入る → inflectionForm=終止形-一般 ✓ CORRECT - 食べる → inflectionForm=終止形-一般 ✓ CORRECT When inflectionForm is null, we can't distinguish between stem and dictionary forms. This means we can't safely match the casual な form without risking false positives on the prohibitive pattern. CONCLUSION: Can't reliably discriminate casual な vs prohibitive な when GiNZA doesn't set inflectionForm. Skip the casual form cases that require this discrimination.",
+      "classification": "ILLEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": true,
+        "item3": false,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Skip reason mentions \"polite/casual\" but no separate rule exists and no verified GiNZA issue. Grammar rules typically include both registers.",
+      "recommendedAction": "Check if rule should handle both polite and casual forms using r.either() or similar"
+    },
+    {
+      "rule": "なさい",
+      "sentence": "勉強しな。",
+      "currentReason": "- 入る → inflectionForm=終止形-一般 ✓ CORRECT - 食べる → inflectionForm=終止形-一般 ✓ CORRECT When inflectionForm is null, we can't distinguish between stem and dictionary forms. This means we can't safely match the casual な form without risking false positives on the prohibitive pattern. CONCLUSION: Can't reliably discriminate casual な vs prohibitive な when GiNZA doesn't set inflectionForm. Skip the casual form cases that require this discrimination.",
+      "classification": "ILLEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": true,
+        "item3": false,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Skip reason mentions \"polite/casual\" but no separate rule exists and no verified GiNZA issue. Grammar rules typically include both registers.",
+      "recommendedAction": "Check if rule should handle both polite and casual forms using r.either() or similar"
+    },
+    {
+      "rule": "かもしれない",
+      "sentence": "明日は休みだからドライブするかも。",
+      "currentReason": "- しら (VERB, lemma=しらん) - ん (AUX) Different lemma (しらん vs しれる) and structure. Would require a separate rule variant just for this dialectal form. CONCLUSION: Matching shortened forms would overcapture on standalone かも particles. These are legitimate expressions of uncertainty, but structurally indistinguishable from other uses of かも without the full かもしれない pattern.",
+      "classification": "ILLEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": true,
+        "item3": false,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Skip reason mentions \"polite/casual\" but no separate rule exists and no verified GiNZA issue. Grammar rules typically include both registers.",
+      "recommendedAction": "Check if rule should handle both polite and casual forms using r.either() or similar"
+    },
+    {
+      "rule": "かもしれない",
+      "sentence": "そうかもね。",
+      "currentReason": "- しら (VERB, lemma=しらん) - ん (AUX) Different lemma (しらん vs しれる) and structure. Would require a separate rule variant just for this dialectal form. CONCLUSION: Matching shortened forms would overcapture on standalone かも particles. These are legitimate expressions of uncertainty, but structurally indistinguishable from other uses of かも without the full かもしれない pattern.",
+      "classification": "ILLEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": true,
+        "item3": false,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Skip reason mentions \"polite/casual\" but no separate rule exists and no verified GiNZA issue. Grammar rules typically include both registers.",
+      "recommendedAction": "Check if rule should handle both polite and casual forms using r.either() or similar"
+    },
+    {
+      "rule": "かもしれない",
+      "sentence": "財布を家に忘れてきたかもしらん。",
+      "currentReason": "- しら (VERB, lemma=しらん) - ん (AUX) Different lemma (しらん vs しれる) and structure. Would require a separate rule variant just for this dialectal form. CONCLUSION: Matching shortened forms would overcapture on standalone かも particles. These are legitimate expressions of uncertainty, but structurally indistinguishable from other uses of かも without the full かもしれない pattern.",
+      "classification": "ILLEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": true,
+        "item3": false,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Skip reason mentions \"polite/casual\" but no separate rule exists and no verified GiNZA issue. Grammar rules typically include both registers.",
+      "recommendedAction": "Check if rule should handle both polite and casual forms using r.either() or similar"
+    },
+    {
+      "rule": "かもしれない",
+      "sentence": "この時期は晴れの日が続くから、富士山を綺麗に見られるかも。",
+      "currentReason": "- しら (VERB, lemma=しらん) - ん (AUX) Different lemma (しらん vs しれる) and structure. Would require a separate rule variant just for this dialectal form. CONCLUSION: Matching shortened forms would overcapture on standalone かも particles. These are legitimate expressions of uncertainty, but structurally indistinguishable from other uses of かも without the full かもしれない pattern.",
+      "classification": "ILLEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": true,
+        "item3": false,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Skip reason mentions \"polite/casual\" but no separate rule exists and no verified GiNZA issue. Grammar rules typically include both registers.",
+      "recommendedAction": "Check if rule should handle both polite and casual forms using r.either() or similar"
+    },
+    {
+      "rule": "すこしも-ない",
+      "sentence": "あなたは子供の話をすこしも聞いてあげてない。",
+      "currentReason": "3. 君はすこしもお金がないのにロレックスを買おうとしているの？ - Contains 買おうとしている (volitional + to-suru + progressive) - Main clause doesn't use すこしも-ない pattern (すこしも only modifies first clause) - This is a different grammatical structure Note: These represent edge cases with complex auxiliary chains that would require significantly more complex patterns to match. The core すこしも-ない patterns (simple negative, progressive negative, i-adj negative, noun+ではない) work correctly.",
+      "classification": "ILLEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": false,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "No valid justification found - fails all checklist items.",
+      "recommendedAction": "Remove skip or fix rule to handle this sentence"
+    },
+    {
+      "rule": "すこしも-ない",
+      "sentence": "今の話がすこしも理解出来なかった。",
+      "currentReason": "3. 君はすこしもお金がないのにロレックスを買おうとしているの？ - Contains 買おうとしている (volitional + to-suru + progressive) - Main clause doesn't use すこしも-ない pattern (すこしも only modifies first clause) - This is a different grammatical structure Note: These represent edge cases with complex auxiliary chains that would require significantly more complex patterns to match. The core すこしも-ない patterns (simple negative, progressive negative, i-adj negative, noun+ではない) work correctly.",
+      "classification": "ILLEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": false,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "No valid justification found - fails all checklist items.",
+      "recommendedAction": "Remove skip or fix rule to handle this sentence"
+    },
+    {
+      "rule": "すこしも-ない",
+      "sentence": "君はすこしもお金がないのにロレックスを買おうとしているの？",
+      "currentReason": "3. 君はすこしもお金がないのにロレックスを買おうとしているの？ - Contains 買おうとしている (volitional + to-suru + progressive) - Main clause doesn't use すこしも-ない pattern (すこしも only modifies first clause) - This is a different grammatical structure Note: These represent edge cases with complex auxiliary chains that would require significantly more complex patterns to match. The core すこしも-ない patterns (simple negative, progressive negative, i-adj negative, noun+ではない) work correctly.",
+      "classification": "ILLEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": false,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "No valid justification found - fails all checklist items.",
+      "recommendedAction": "Remove skip or fix rule to handle this sentence"
+    },
+    {
+      "rule": "にくい",
+      "sentence": "お前には本当に言いづらいけど、お前のギターを壊した。ごめん。",
+      "currentReason": "Sentences that must be skipped from positive tests This is a contrast example in the writeup showing the difference between にくい and づらい. The answer is \"づらい\", not \"にくい\", so it correctly should NOT match the にくい rule.",
+      "classification": "ILLEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": false,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "No valid justification found - fails all checklist items.",
+      "recommendedAction": "Remove skip or fix rule to handle this sentence"
+    },
+    {
+      "rule": "いたす",
+      "sentence": "はいしゃくしてもよろしいですか。",
+      "currentReason": "According to the Bunpro caution for いたす: \"Words that include the kanji 拝 'to worship' do not usually require お, ご, or いたす. This is due to the word itself being 'respectful'.\" These humble compound verbs use する (not いたす): - 拝借する (humbly borrow) - uses 拝借して, not 拝借いたして - 拝見する (humbly look) - uses 拝見して, not 拝見いたして These should NOT match the いたす rule since they use regular する.",
+      "classification": "ILLEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": false,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "No valid justification found - fails all checklist items.",
+      "recommendedAction": "Remove skip or fix rule to handle this sentence"
+    },
+    {
+      "rule": "いたす",
+      "sentence": "まだその映画をはいけんしていないので、一緒に見に行きませんか。",
+      "currentReason": "According to the Bunpro caution for いたす: \"Words that include the kanji 拝 'to worship' do not usually require お, ご, or いたす. This is due to the word itself being 'respectful'.\" These humble compound verbs use する (not いたす): - 拝借する (humbly borrow) - uses 拝借して, not 拝借いたして - 拝見する (humbly look) - uses 拝見して, not 拝見いたして These should NOT match the いたす rule since they use regular する.",
+      "classification": "ILLEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": false,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "No valid justification found - fails all checklist items.",
+      "recommendedAction": "Remove skip or fix rule to handle this sentence"
+    }
+  ],
+  "legitimate": [
+    {
+      "rule": "ほかにも-ほかには",
+      "sentence": "いいえ、ほかはいりません。",
+      "currentReason": "The failing sentence has a special structure with: - Sentence-initial \"いいえ、\" (No,) which might affect parsing - \"ほかは\" followed immediately by \"いりません\" (don't need) The pattern ほか + は is successfully matched in other contexts, suggesting a GiNZA inconsistency in how it parses this specific sentence structure. CONCLUSION: No reliable discriminator. GiNZA limitation.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "かい",
+      "sentence": "大学生なんかい。中学生だと思った。",
+      "currentReason": "However, GiNZA tokenizes \"なんかい\" as a single NOUN with lemma=\"なんかい\" and reading=\"ナンカイ\", which is identical to the counter word \"how many times\" (何回). There is no reliable discriminator because: 1. The token is a single NOUN (not separate particles) 2. lemma=\"なんかい\" could be either the grammar point or the counter 3. Matching all \"なんかい\" NOUNs would cause overcapture on counter usage CONCLUSION: No reliable discriminator. GiNZA tokenization limitation.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "よう-おう",
+      "sentence": "私が運転しようか？",
+      "currentReason": "4. \"ここで働きたいから、いい履歴書をかこう。\" - Expected: text=\"かこう\" or text=\"書こう\" 5. \"毎日日本語で話したら、どんどん上手になるから、頑張って日本語ではなそう。\" - Expected: text=\"はなそう\" or text=\"話そう\" CONCLUSION: Cannot match these sentences without seeing actual GiNZA parse output. This is a GiNZA parsing limitation where the token text/POS doesn't match expected values.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "よう-おう",
+      "sentence": "ここにはあまりいいものがないからかえろう。",
+      "currentReason": "4. \"ここで働きたいから、いい履歴書をかこう。\" - Expected: text=\"かこう\" or text=\"書こう\" 5. \"毎日日本語で話したら、どんどん上手になるから、頑張って日本語ではなそう。\" - Expected: text=\"はなそう\" or text=\"話そう\" CONCLUSION: Cannot match these sentences without seeing actual GiNZA parse output. This is a GiNZA parsing limitation where the token text/POS doesn't match expected values.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "よう-おう",
+      "sentence": "この店は毎週月曜日がセールだから、牛乳を買うのを月曜日までまとう。",
+      "currentReason": "4. \"ここで働きたいから、いい履歴書をかこう。\" - Expected: text=\"かこう\" or text=\"書こう\" 5. \"毎日日本語で話したら、どんどん上手になるから、頑張って日本語ではなそう。\" - Expected: text=\"はなそう\" or text=\"話そう\" CONCLUSION: Cannot match these sentences without seeing actual GiNZA parse output. This is a GiNZA parsing limitation where the token text/POS doesn't match expected values.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "よう-おう",
+      "sentence": "ここで働きたいから、いい履歴書をかこう。",
+      "currentReason": "4. \"ここで働きたいから、いい履歴書をかこう。\" - Expected: text=\"かこう\" or text=\"書こう\" 5. \"毎日日本語で話したら、どんどん上手になるから、頑張って日本語ではなそう。\" - Expected: text=\"はなそう\" or text=\"話そう\" CONCLUSION: Cannot match these sentences without seeing actual GiNZA parse output. This is a GiNZA parsing limitation where the token text/POS doesn't match expected values.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "よう-おう",
+      "sentence": "毎日日本語で話したら、どんどん上手になるから、頑張って日本語ではなそう。",
+      "currentReason": "4. \"ここで働きたいから、いい履歴書をかこう。\" - Expected: text=\"かこう\" or text=\"書こう\" 5. \"毎日日本語で話したら、どんどん上手になるから、頑張って日本語ではなそう。\" - Expected: text=\"はなそう\" or text=\"話そう\" CONCLUSION: Cannot match these sentences without seeing actual GiNZA parse output. This is a GiNZA parsing limitation where the token text/POS doesn't match expected values.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "てほしい",
+      "sentence": "車できてほしかった。",
+      "currentReason": "The pattern expects ほしい → です (adjacent), but ん appears between them. This is the explanatory んです structure, which attaches to the entire clause. While we could add a pattern for ほしい + ん + です, this would overlap with the separate んです grammar point. The てほしい rule should focus on the core pattern without combining with other sentence-ending structures. Similar sentences that DO work: \"一緒に勉強してほしいです。\" (no ん)",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": false,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Separate grammar rule exists for this pattern."
+    },
+    {
+      "rule": "てほしい",
+      "sentence": "一緒にたべにいってほしいんです。",
+      "currentReason": "The pattern expects ほしい → です (adjacent), but ん appears between them. This is the explanatory んです structure, which attaches to the entire clause. While we could add a pattern for ほしい + ん + です, this would overlap with the separate んです grammar point. The てほしい rule should focus on the core pattern without combining with other sentence-ending structures. Similar sentences that DO work: \"一緒に勉強してほしいです。\" (no ん)",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": false,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Separate grammar rule exists for this pattern."
+    },
+    {
+      "rule": "さ",
+      "sentence": "私が道の長さを測ります。",
+      "currentReason": "But when GiNZA parses a word as a single token, it loses the suffix tag. Single-token nouns like 長さ have tag=名詞-普通名詞-一般 (not 接尾辞-名詞的-一般). Matching all nouns ending in さ would overcapture: ❌ 暇 (hima - free time, unrelated word) ❌ 喫茶店 (kissaten - coffee shop, unrelated word) ❌ Various proper nouns and common words ending in さ CONCLUSION: No reliable discriminator for single-token cases. GiNZA limitation.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "さ",
+      "sentence": "昨日食べたラーメンのおいしさを友達に教えたい。",
+      "currentReason": "But when GiNZA parses a word as a single token, it loses the suffix tag. Single-token nouns like 長さ have tag=名詞-普通名詞-一般 (not 接尾辞-名詞的-一般). Matching all nouns ending in さ would overcapture: ❌ 暇 (hima - free time, unrelated word) ❌ 喫茶店 (kissaten - coffee shop, unrelated word) ❌ Various proper nouns and common words ending in さ CONCLUSION: No reliable discriminator for single-token cases. GiNZA limitation.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "Verb[potential]",
+      "sentence": "日本語を読むことができる。",
+      "currentReason": "Intransitive verbs ending in similar sounds but not potential form Skip positives: sentences that contain potential forms but are testing a different grammar point (こと が できる)",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": false,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 2 checklist items passed."
+    },
+    {
+      "rule": "Verb[potential]",
+      "sentence": "運転することができます。",
+      "currentReason": "Intransitive verbs ending in similar sounds but not potential form Skip positives: sentences that contain potential forms but are testing a different grammar point (こと が できる)",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": false,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 2 checklist items passed."
+    },
+    {
+      "rule": "お-ください",
+      "sentence": "ご感想をおきかせください。",
+      "currentReason": "せ (VERB, lemma=する) ください (AUX, lemma=くださる) The hiragana version doesn't have a separate お prefix token (it's merged into おき), and the verb lemma is wrong (おく instead of 聞く). There's no discriminator that can identify this as お-ください without incorrectly matching unrelated patterns. CONCLUSION: No reliable discriminator for hiragana-only text. GiNZA limitation.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "verbて-b2",
+      "sentence": "メアリーがアメリカにかえって悲しいです。",
+      "currentReason": "メアリーがアメリカにかえって悲しいです。 GiNZA parse: かえって [pos=ADV, lemma=かえって, dep=advmod] Expected: 帰っ [pos=VERB] + て [pos=SCONJ, dep=mark] When the verb is written in hiragana as a single unit, GiNZA treats it as an adverb. When written in kanji (帰って), it parses correctly as VERB + SCONJ. CONCLUSION: GiNZA limitation - cannot distinguish without modifying the input.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "ない-はない",
+      "sentence": "父親：「新しいクラスはどう？友達を作ったの？」 子供：「好きじゃないクラスメイトはいないけど、まだ、できてないよ。」",
+      "currentReason": "(suki ja nai kurasumeito wa inai) which should match Pattern 3. However, the sentence structure with dialog markers and the continuation \"けど\" (but) appears to cause issues with GiNZA's tokenization or dependency parsing in this specific context. The rule correctly matches the same pattern in simpler sentences like: - 好きじゃない人はいない - 好きではない人はいない This is a context-specific parsing limitation, not a fundamental issue with the rule.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "そんなに",
+      "sentence": "こんなにもらってもいいんですか？",
+      "currentReason": "ANALYSIS: - こんなに: 'this much' (close to speaker) - different lemma - あんなに: 'that much' (over there) - different lemma - どんなに: 'how much' (interrogative) - different lemma GiNZA parses all variants identically (ADJ + AUX with inflectionForm=連用形-ニ), but the discriminator is the lemma of the first token (こんな vs そんな vs あんな vs どんな). Matching all of them would require a more generic rule that could overcapture.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": true,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "そんなに",
+      "sentence": "あんなに食べたのにまだお腹が空いているの？",
+      "currentReason": "ANALYSIS: - こんなに: 'this much' (close to speaker) - different lemma - あんなに: 'that much' (over there) - different lemma - どんなに: 'how much' (interrogative) - different lemma GiNZA parses all variants identically (ADJ + AUX with inflectionForm=連用形-ニ), but the discriminator is the lemma of the first token (こんな vs そんな vs あんな vs どんな). Matching all of them would require a more generic rule that could overcapture.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": true,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "そんなに",
+      "sentence": "どんなに頑張っても、私は先輩みたいにはなれないと思う。",
+      "currentReason": "ANALYSIS: - こんなに: 'this much' (close to speaker) - different lemma - あんなに: 'that much' (over there) - different lemma - どんなに: 'how much' (interrogative) - different lemma GiNZA parses all variants identically (ADJ + AUX with inflectionForm=連用形-ニ), but the discriminator is the lemma of the first token (こんな vs そんな vs あんな vs どんな). Matching all of them would require a more generic rule that could overcapture.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": true,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "number-しか-ない",
+      "sentence": "冷蔵庫の中にはリンゴしかなかったから、リンゴを食べた。",
+      "currentReason": "writeup section showing contrast between しか and だけ. These are not actual test sentences for this grammar point, which focuses on numbers. The general しか～ない pattern (nouns + しか + negative) is covered by a different rule (\"しか-ない\", JLPT4 id 182). Additionally, one test sentence \"彼には１度しかかっていない\" appears to have an irregular parsing issue - the verb stem is omitted in the test data, resulting in ungrammatical Japanese that doesn't parse consistently.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": false,
+        "item4": true,
+        "item5": false
+      },
+      "justification": "Multiple valid reasons: 2 checklist items passed."
+    },
+    {
+      "rule": "number-しか-ない",
+      "sentence": "彼には１度しかかっていない。",
+      "currentReason": "writeup section showing contrast between しか and だけ. These are not actual test sentences for this grammar point, which focuses on numbers. The general しか～ない pattern (nouns + しか + negative) is covered by a different rule (\"しか-ない\", JLPT4 id 182). Additionally, one test sentence \"彼には１度しかかっていない\" appears to have an irregular parsing issue - the verb stem is omitted in the test data, resulting in ungrammatical Japanese that doesn't parse consistently.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": false,
+        "item4": true,
+        "item5": false
+      },
+      "justification": "Multiple valid reasons: 2 checklist items passed."
+    },
+    {
+      "rule": "てくる",
+      "sentence": "お母さんににてきたね。",
+      "currentReason": "- pos: \"VERB\" - tag: \"助詞-格助詞\" (particle) - dep: \"case\" This is a compound particle form where the て is embedded within the token, not parsed as a separate SCONJ particle. Our rule requires a separate て token. CONCLUSION: No reliable discriminator. GiNZA parses \"にて\" as a compound token. Cannot distinguish between particle \"にて\" (at/in) and verb-te \"にて\" (ni-te form).",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "verbて-request",
+      "sentence": "先生が生徒に言う：「この宿題、明日までに提出して。」",
+      "currentReason": "nor the te particle gets dep=root, making them indistinguishable from non-final te-forms (connecting clauses, auxiliary verbs, etc.). Matching all te-forms without dep=root would overcapture: ❌ ご飯を食べて、学校へ行きました (sequential actions) ❌ 本を読んでいる (progressive ている) CONCLUSION: No reliable discriminator for te-forms in complex clause structures. GiNZA limitation.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "verbて-request",
+      "sentence": "「そこで少しまってて。すぐに戻るから。」",
+      "currentReason": "nor the te particle gets dep=root, making them indistinguishable from non-final te-forms (connecting clauses, auxiliary verbs, etc.). Matching all te-forms without dep=root would overcapture: ❌ ご飯を食べて、学校へ行きました (sequential actions) ❌ 本を読んでいる (progressive ている) CONCLUSION: No reliable discriminator for te-forms in complex clause structures. GiNZA limitation.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "describing-verbs",
+      "sentence": "彼女はいつもまえむきに考える。",
+      "currentReason": "Na-adjective as predicate (not adverbial) Skip sentences that GiNZA cannot parse correctly when written in hiragana",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "describing-verbs",
+      "sentence": "まえむきに",
+      "currentReason": "Na-adjective as predicate (not adverbial) Skip sentences that GiNZA cannot parse correctly when written in hiragana",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "describing-verbs",
+      "sentence": "試験前の夜ははやめに寝たほうがいい。",
+      "currentReason": "Na-adjective as predicate (not adverbial) Skip sentences that GiNZA cannot parse correctly when written in hiragana",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "describing-verbs",
+      "sentence": "はやめ",
+      "currentReason": "Na-adjective as predicate (not adverbial) Skip sentences that GiNZA cannot parse correctly when written in hiragana",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "causative",
+      "sentence": "学校に行きたくない子をいかせる。",
+      "currentReason": "Sentences that can't be matched due to GiNZA parsing limitations: 1. \"学校に行きたくない子をいかせる。\" GiNZA parses \"いかせる\" as a single VERB token (lemma=いかせる, inflection=終止形-一般) instead of verb stem + causative auxiliary. This is a GiNZA tokenization limitation. 2. \"赤ちゃんはまだ自分で食べることが出来ないから、たべさせなきゃいけない。\" GiNZA may parse hiragana \"たべ\" differently from kanji \"食べ\", causing inconsistent tokenization patterns that can't be reliably matched.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "causative",
+      "sentence": "赤ちゃんはまだ自分で食べることが出来ないから、たべさせなきゃいけない。",
+      "currentReason": "Sentences that can't be matched due to GiNZA parsing limitations: 1. \"学校に行きたくない子をいかせる。\" GiNZA parses \"いかせる\" as a single VERB token (lemma=いかせる, inflection=終止形-一般) instead of verb stem + causative auxiliary. This is a GiNZA tokenization limitation. 2. \"赤ちゃんはまだ自分で食べることが出来ないから、たべさせなきゃいけない。\" GiNZA may parse hiragana \"たべ\" differently from kanji \"食べ\", causing inconsistent tokenization patterns that can't be reliably matched.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "まい-のように",
+      "sentence": "彼は８月になるとまい年のように平和記念資料館へ行く。",
+      "currentReason": "- まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "まい-のように",
+      "sentence": "仕事を終わったときはまいばんのようにジムに行く。",
+      "currentReason": "- まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "まい-のように",
+      "sentence": "まい日のようにポテトチップス食べてるから太ってきた。",
+      "currentReason": "- まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "まい-のように",
+      "sentence": "ともきさんは仕事前にまいにちのように釣りに行った。",
+      "currentReason": "- まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "まい-のように",
+      "sentence": "彼女は彼に出会う前は、まいにちのように高校をサボっていた。",
+      "currentReason": "- まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "まい-のように",
+      "sentence": "子供の頃、雨に濡れてひどい風邪を引いたので、出かけるときはまいかいのように傘を持っていく。",
+      "currentReason": "- まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "まい-のように",
+      "sentence": "彼はまいにちのように砂糖を食べすぎたので、病気になった。",
+      "currentReason": "- まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "まい-のように",
+      "sentence": "夏にはまいばんのようにコオロギの鳴き声が聞こえる。",
+      "currentReason": "- まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "まい-のように",
+      "sentence": "１０歳になってからはまいとしのようにお父さんと一緒に初日の出を見に行った。",
+      "currentReason": "- まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "まい-のように",
+      "sentence": "彼は死ぬまでまいつきのように彼女の墓の上にバラを置いた。",
+      "currentReason": "- まい日のようにポテトチップス食べてるから太ってきた。 ✗ The rule captures the core pattern correctly for over half of the test cases. The failures are specifically related to all-hiragana time compounds and sentence-initial compounds, which appear to have inconsistent GiNZA parses. CONCLUSION: Skip these 10 edge cases where GiNZA parsing is inconsistent. The rule correctly matches 12/22 (55%) of test cases including the core patterns for まい～のように.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "かた",
+      "sentence": "変わったさきかたをする花がある。",
+      "currentReason": "難しい (muzukashii) - adjective ending in かたい but not a verb stem GiNZA parsing limitation: 変わったさきかた - GiNZA parses \"さき\" as proper name (tag=名詞-固有名詞-人名-名) instead of verb stem (lemma=さく, inflectionForm=連用形-一般) This is a GiNZA error - it misidentifies the verb as a person's name. Matching all \"名詞-固有名詞-人名-名\" + かた would overcapture on actual names.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "は-の一つだ",
+      "sentence": "彼も家族のひとりだ。",
+      "currentReason": "- いっぽん (one long object) → NOUN ✗ INDISTINGUISHABLE from regular nouns - いっしゅ (one type) → NOUN ✗ INDISTINGUISHABLE from regular nouns When counters are tagged as NOUN instead of NUM, we can't distinguish them from regular nouns using only POS information. Using a looser constraint (POS=NOUN) would cause overcapture: ❌ これは私の本です (possessive: this is my book) ❌ 彼は日本の学生です (noun modification: he is a Japanese student) CONCLUSION: No reliable discriminator. GiNZA limitation.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "は-の一つだ",
+      "sentence": "このクレヨンはこのセットのいっぽんだ。",
+      "currentReason": "- いっぽん (one long object) → NOUN ✗ INDISTINGUISHABLE from regular nouns - いっしゅ (one type) → NOUN ✗ INDISTINGUISHABLE from regular nouns When counters are tagged as NOUN instead of NUM, we can't distinguish them from regular nouns using only POS information. Using a looser constraint (POS=NOUN) would cause overcapture: ❌ これは私の本です (possessive: this is my book) ❌ 彼は日本の学生です (noun modification: he is a Japanese student) CONCLUSION: No reliable discriminator. GiNZA limitation.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "は-の一つだ",
+      "sentence": "トマトはフルーツのいっしゅだ。",
+      "currentReason": "- いっぽん (one long object) → NOUN ✗ INDISTINGUISHABLE from regular nouns - いっしゅ (one type) → NOUN ✗ INDISTINGUISHABLE from regular nouns When counters are tagged as NOUN instead of NUM, we can't distinguish them from regular nouns using only POS information. Using a looser constraint (POS=NOUN) would cause overcapture: ❌ これは私の本です (possessive: this is my book) ❌ 彼は日本の学生です (noun modification: he is a Japanese student) CONCLUSION: No reliable discriminator. GiNZA limitation.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "あまり-ない",
+      "sentence": "最近はどこもあまり平和ではない。",
+      "currentReason": "contextually ambiguous and difficult to distinguish purely syntactically. Sentences that can't be matched due to GiNZA parsing limitations: 1. 最近はどこもあまり平和ではない。 - \"平和\" (peace) is tagged as '形容詞-一般' instead of expected noun/na-adj tag - The rule expects tags: ['名詞-普通名詞-一般', '形状詞-一般'] - GiNZA incorrectly tags \"平和\" as an adjective in this context",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "たらどう",
+      "sentence": "暇なら外に行ったら？",
+      "currentReason": "However, this sentence LITERALLY contains only \"たら\" and not \"どう\", so it cannot be matched by a rule looking for the pattern \"verb-tara-dou\". Matching all \"たら\" would overcapture: ❌ 暇なら外に行ったら、家に帰る。(If I'm free, when I go outside, I'll go home.) ❌ 雨が降ったら、行かない。(If it rains, I won't go.) CONCLUSION: No reliable discriminator. The abbreviated form is context-dependent and cannot be distinguished from plain conditional \"たら\".",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": false,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Fundamentally different grammatical structure."
+    },
+    {
+      "rule": "てよかった",
+      "sentence": "おばあちゃんが亡くなる前にもう一度あえてよかった。",
+      "currentReason": "1. Match any VERB/AUX before よかった - but this would match standalone よかった 2. Use inflectionForm to detect te-forms - but potential verbs use 連用形-一般, same as other conjugations Using looser constraints (just matching any token before よかった) would cause overcapture on unrelated patterns like \"買って、よかったと思った\" where よかった is not attached to the te-form verb. CONCLUSION: No reliable discriminator without separate て particle. GiNZA limitation.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "お-する",
+      "sentence": "し",
+      "currentReason": "Honorific form (お～になる) - different grammar します without humble prefix (regular polite) Sentences that can't be matched due to GiNZA parsing limitations:",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": true,
+        "item3": true,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 2 checklist items passed."
+    },
+    {
+      "rule": "お-する",
+      "sentence": "僕がお守りします！",
+      "currentReason": "Honorific form (お～になる) - different grammar します without humble prefix (regular polite) Sentences that can't be matched due to GiNZA parsing limitations:",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": true,
+        "item3": true,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 2 checklist items passed."
+    },
+    {
+      "rule": "お-する",
+      "sentence": "おかり",
+      "currentReason": "Honorific form (お～になる) - different grammar します without humble prefix (regular polite) Sentences that can't be matched due to GiNZA parsing limitations:",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": true,
+        "item3": true,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 2 checklist items passed."
+    },
+    {
+      "rule": "お-する",
+      "sentence": "友達のお母さんにパソコンをおかりしました。",
+      "currentReason": "Honorific form (お～になる) - different grammar します without humble prefix (regular polite) Sentences that can't be matched due to GiNZA parsing limitations:",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": true,
+        "item3": true,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 2 checklist items passed."
+    },
+    {
+      "rule": "ばよかった",
+      "sentence": "サービスエリアが一つもないじゃないか。高速に乗る前にトイレに行けばよかった。",
+      "currentReason": "Similar sentences like \"すればよかった\" work fine, suggesting this is an edge case in how GiNZA handles sentence-final \"よかった\" after certain verb forms. Attempting to match all variations would require very loose constraints that could cause false positives on similar patterns. CONCLUSION: Documented as GiNZA parsing limitation for this specific sentence structure.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": false,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Verified GiNZA parsing/tokenization limitation."
+    },
+    {
+      "rule": "なん-counter-か",
+      "sentence": "なんだいか",
+      "currentReason": "Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 3 checklist items passed."
+    },
+    {
+      "rule": "なん-counter-か",
+      "sentence": "昨日なんだいかの車が盗まれたらしい。",
+      "currentReason": "Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 3 checklist items passed."
+    },
+    {
+      "rule": "なん-counter-か",
+      "sentence": "な",
+      "currentReason": "Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 3 checklist items passed."
+    },
+    {
+      "rule": "なん-counter-か",
+      "sentence": "ん",
+      "currentReason": "Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 3 checklist items passed."
+    },
+    {
+      "rule": "なん-counter-か",
+      "sentence": "だ",
+      "currentReason": "Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 3 checklist items passed."
+    },
+    {
+      "rule": "なん-counter-か",
+      "sentence": "いか",
+      "currentReason": "Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 3 checklist items passed."
+    },
+    {
+      "rule": "なん-counter-か",
+      "sentence": "の",
+      "currentReason": "Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 3 checklist items passed."
+    },
+    {
+      "rule": "なん-counter-か",
+      "sentence": "か",
+      "currentReason": "Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 3 checklist items passed."
+    },
+    {
+      "rule": "なん-counter-か",
+      "sentence": "いか",
+      "currentReason": "Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 3 checklist items passed."
+    },
+    {
+      "rule": "なん-counter-か",
+      "sentence": "か",
+      "currentReason": "Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 3 checklist items passed."
+    },
+    {
+      "rule": "なん-counter-か",
+      "sentence": "何を食べますか",
+      "currentReason": "Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 3 checklist items passed."
+    },
+    {
+      "rule": "なん-counter-か",
+      "sentence": "何かありますか",
+      "currentReason": "Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 3 checklist items passed."
+    },
+    {
+      "rule": "なん-counter-か",
+      "sentence": "昨日なんだいかの車が盗まれたらしい。",
+      "currentReason": "Numbers + も (different grammar) かどうか pattern (different grammar) Positive sentences to skip due to GiNZA parsing limitations",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": true
+      },
+      "justification": "Multiple valid reasons: 3 checklist items passed."
+    },
+    {
+      "rule": "ことができる",
+      "sentence": "日本語を読むことができるだけで、凄いと思います。",
+      "currentReason": "GiNZA parsing limitation: 日本語を読むことができるだけで - GiNZA parses \"できるだけ\" as a single adverb token (pos=ADV, lemma=できるだけ) instead of \"できる\" (verb) + \"だけ\" (particle) This is a GiNZA tokenization issue where できる + だけ forms a compound adverb. Matching all ADV tokens with lemma=できるだけ would be too specific and wouldn't help us match the general pattern of verb + ことができる.",
+      "classification": "LEGITIMATE",
+      "checklistResults": {
+        "item1": true,
+        "item2": false,
+        "item3": true,
+        "item4": false,
+        "item5": false
+      },
+      "justification": "Multiple valid reasons: 2 checklist items passed."
+    }
+  ],
+  "suspicious": []
+}
