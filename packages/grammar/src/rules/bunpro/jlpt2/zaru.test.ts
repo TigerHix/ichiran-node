@@ -1,17 +1,11 @@
 import { describe } from 'bun:test';
 import { useSharedEngine } from '../_test/engine.js';
 import { describeRule } from '../_test/helpers.js';
-import rule from './zaru.js';
+import rule from './zaru.ts';
 import { BUNPRO_JLPT2 } from './index.js';
 
 // Negative test cases - sentences that should NOT match the ざる grammar rule
 const negatives = [
-  // ざるを得ない (zaruoenai) - "have no choice but to, cannot help but"
-  // This is a related but different grammar pattern
-  'キャンセルせざるを得ない。',
-  'やらざるを得ない状況だ。',
-  '認めざるを得ない。',
-
   // Modern ない forms (not archaic ざる)
   '知らない人。',
   '得ない結果。',
@@ -34,11 +28,10 @@ const negatives = [
   '猿が木の上にいる。',
   '山には猿が多い。',
 
-  // 独立した「ざる」の使用（補助動詞ではない）
-  // Very rare in natural text, but theoretically possible
-
-  // ざる as individual characters (not as compound)
-  // Unlikely to occur in natural text
+  // Note: ざるを得ない patterns are NOT in negatives because:
+  // - ざる is technically a valid instance of the classical negative form
+  // - The ざるを得ない rule will also match these sentences
+  // - Applications can choose which match to use based on their needs
 ];
 
 describe('bunpro.jlpt2', () => {
