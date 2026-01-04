@@ -32,6 +32,7 @@ import teiruaidani from './ているあいだに.js';
 import teirutokoroda from './ているところだ.js';
 import teoku from './ておく.js';
 import tekuru from './てくる.js';
+import temiru from './てみる.js';
 import ika from './いか.js';
 import igai from './いがい.js';
 import itasu from './いたす.js';
@@ -116,6 +117,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     teirutokoroda,
     teoku,
     tekuru,
+    temiru,
     ika,
     igai,
     itasu,
