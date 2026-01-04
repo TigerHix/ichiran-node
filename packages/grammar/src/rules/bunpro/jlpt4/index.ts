@@ -21,6 +21,7 @@ import dakede from './だけで.js';
 import dasu from './だす.js';
 import dandan from './だんだん.js';
 import dondon from './どんどん.js';
+import hajimeru from './はじめる.js';
 import demodemo from './でも-でも.js';
 import tsuzukeru from './つづける.js';
 import teshimau from './てしまう-ちゃう.js';
@@ -142,6 +143,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     dasu,
     dandan,
     dondon,
+    hajimeru,
     demodemo,
     tsuzukeru,
     teshimau,
