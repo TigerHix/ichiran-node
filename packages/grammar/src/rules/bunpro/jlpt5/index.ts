@@ -50,6 +50,7 @@ import naidekudasai from './ないでください.js';
 import nahogaii from './ないほうがいい.js';
 import nakucha from './なくちゃ-なきゃ.js';
 import nakuteisikenai from './なくてはいけない.js';
+import node from './ので.js';
 import wa from './は.js';
 import wo from './を.js';
 import de from './で.js';
@@ -153,6 +154,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     nahogaii,
     nakucha,
     nakuteisikenai,
+    node,
     tahogaii,
     takotoegaaru,
     takusan,
