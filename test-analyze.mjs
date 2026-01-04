@@ -1,17 +1,14 @@
-import { GrammarEngine } from './packages/grammar/src/program.js';
-import { GinzaClient } from './packages/grammar/src/ginza/client.js';
+import { createEngine } from './packages/grammar/src/engine/index.js';
 
-const client = new GinzaClient();
-await client.waitForReady();
-
-const engine = GrammarEngine.create([], { client });
+const engine = await createEngine();
 
 const sentences = [
   '妹が孫のように甘える。',
   'スープのようなカレー。',
-  'お箸はこのように使います。',
-  'そのように使ってはいけない。',
+  'ウサインボルトのように走るのが夢です。',
+  'この先生は鬼のように怖い。',
   'このような洋服を探しています。',
+  '今はスマートフォンのような携帯がたくさんあります。',
 ];
 
 for (const sentence of sentences) {
@@ -23,5 +20,3 @@ for (const sentence of sentences) {
     console.log(`  ${token.text}: pos=${token.pos}, lemma=${token.lemma}, tag=${tag}, dep=${token.dep}, inflectionForm=${inf}`);
   }
 }
-
-await client.close();
