@@ -9,10 +9,11 @@ import karashite from './からして.js';
 import karasurutokarasureba from './からすると-からすれば.js';
 import kotoDakara from './ことだから.js';
 import kotoNiNatteiru from './ことになっている.js';
+import osoraku from './おそらく.js';
 import sasuga from './さすが.js';
 
 export const BUNPRO_JLPT2: Ruleset = {
   id: 'bunpro.jlpt2',
-  rules: [tekoso, nouchide, ageku, iwayuru, kanaikanouniuchi, kaneru, karashite, karasurutokarasureba, kotoDakara, kotoNiNatteiru, sasuga],
+  rules: [tekoso, nouchide, ageku, iwayuru, kanaikanouniuchi, kaneru, karashite, karasurutokarasureba, kotoDakara, kotoNiNatteiru, osoraku, sasuga],
 };
 
