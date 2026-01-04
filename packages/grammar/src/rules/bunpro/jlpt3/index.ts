@@ -10,6 +10,7 @@ import okageDe from './おかげで.js';
 import okiNi from './おきに.js';
 import kake from './かけ.js';
 import katoiuto1 from './かというと1.js';
+import katoiuto2 from './かというと2.js';
 import kanari from './かなり.js';
 import karaKoso from './からこそ.js';
 import karaIuTo from './から言うと.js';
@@ -46,6 +47,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     okiNi,
     kake,
     katoiuto1,
+    katoiuto2,
     kanari,
     karaKoso,
     karaIuTo,
