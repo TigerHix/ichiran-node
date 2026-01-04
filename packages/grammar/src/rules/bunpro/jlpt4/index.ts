@@ -111,6 +111,7 @@ import youtoomou from './ようと思う-おうと思う.js';
 import youni from './ように.js';
 import yonitehoshii from './ように-てほしい.js';
 import youniyouna from './ように-ような.js';
+import younisuru from './ようにする.js';
 import ika from './いか.js';
 import igai from './いがい.js';
 import itasu from './いたす.js';
@@ -313,6 +314,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     youda,
     youni,
     youniyouna,
+    younisuru,
     yonitehoshii,
     youou,
     yasui,
