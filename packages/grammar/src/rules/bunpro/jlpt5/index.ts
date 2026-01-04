@@ -57,6 +57,7 @@ import deBy from './で-by.js';
 import ni from './に.js';
 import niSuru from './にする.js';
 import he from './へ.js';
+import heiku from './へいく.js';
 import teiru1 from './ている1.js';
 import teiru2 from './ている2.js';
 import teiru3 from './ている3.js';
@@ -163,6 +164,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     ni,
     niSuru,
     he,
+    heiku,
     teiru1,
     teiru2,
     teiru3,
