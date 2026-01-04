@@ -83,6 +83,7 @@ import daitai from './だいたい.js';
 import dagadega from './だが・ですが.js';
 import dedekirukaradekiru from './でできる-からできる.js';
 import toiwareteiru from './といわれている.js';
+import tokiita from './ときいた.js';
 import teyokatta from './てよかった.js';
 import toutou from './とうとう.js';
 
@@ -173,6 +174,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     dagadega,
     dedekirukaradekiru,
     toiwareteiru,
+    tokiita,
     teyokatta,
     toutou,
   ],
