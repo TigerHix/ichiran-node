@@ -16,7 +16,8 @@ export type TokPred =
   | { kind: 'inflectionFormOneOf'; value: GinzaInflectionForm[] }
   | { kind: 'conjugationClass'; value: GinzaConjugationClass }
   | { kind: 'conjugationClassOneOf'; value: GinzaConjugationClass[] }
-  | { kind: 'tag'; value: string };
+  | { kind: 'tag'; value: string }
+  | { kind: 'tagOneOf'; value: string[] };
 
 export type NodeRef = { v: string }; // variable name
 
@@ -106,6 +107,9 @@ export function conjugationClassOneOf(value: GinzaConjugationClass[]): TokPred {
 export function tag(value: string): TokPred {
   return { kind: 'tag', value };
 }
+export function tagOneOf(value: string[]): TokPred {
+  return { kind: 'tagOneOf', value };
+}
 
 export function node(node: NodeRef, preds: TokPred[]): Clause {
   return { kind: 'node', node, preds };
@@ -141,6 +145,7 @@ export function tokenMatchesPreds(tok: GinzaToken, preds: TokPred[]): boolean {
     if (p.kind === 'conjugationClass' && tok.conjugationClass !== p.value) return false;
     if (p.kind === 'conjugationClassOneOf' && tok.conjugationClass && !p.value.includes(tok.conjugationClass)) return false;
     if (p.kind === 'tag' && tok.tag !== p.value) return false;
+    if (p.kind === 'tagOneOf' && tok.tag && !p.value.includes(tok.tag)) return false;
   }
   return true;
 }
