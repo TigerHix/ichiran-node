@@ -88,7 +88,7 @@ export default linguisticRule('ことだから', (r) => {
     // Pattern 3: な-adjective + な + こと + だから
     // Example: それは学術的なことだから、僕はうまく説明できない。
     (b3) => {
-      const adj = b3.adj({ inflectionForm: '体言接続-タ' }, 'adj');
+      const adj = b3.adj({}, 'adj');
       const na = b3.particle('な', 'na');
       const koto = b3.noun({ text: 'こと', lemma: 'こと' }, 'koto');
       const da = b3.aux({ text: 'だ', lemma: 'だ' }, 'da');
@@ -140,7 +140,7 @@ export default linguisticRule('ことだから', (r) => {
 
     // Pattern 6: な-adjective + な + こと + だから (looser dependencies)
     (b6) => {
-      const adj = b6.adj({ inflectionForm: '体言接続-タ' }, 'adj');
+      const adj = b6.adj({}, 'adj');
       const na = b6.particle('な', 'na');
       const koto = b6.noun({ text: 'こと', lemma: 'こと' }, 'koto');
       const da = b6.aux({ text: 'だ', lemma: 'だ' }, 'da');
@@ -152,6 +152,87 @@ export default linguisticRule('ことだから', (r) => {
       b6.inOrder(da, kara, 1);
 
       b6.captureSpan('ことだから', adj, kara);
+    },
+
+    // Pattern 7: Polite form: ...ことな + から (copula is な instead of だ)
+    // Example: お客様のプライバシーに関わることなので、これ以上詳しいことは言えません。
+    (b7) => {
+      const noun = b7.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON'] }, 'noun');
+      const no = b7.particle('の', 'no');
+      const koto = b7.noun({ text: 'こと', lemma: 'こと' }, 'koto');
+      const na = b7.aux({ text: 'な', lemma: 'だ' }, 'na');
+      const kara = b7.particle('から', 'kara');
+
+      b7.inOrder(noun, no, 1);
+      b7.inOrder(no, koto, 1);
+      b7.inOrder(koto, na, 1);
+      b7.inOrder(na, kara, 1);
+
+      b7.captureSpan('ことだから', noun, kara);
+    },
+
+    // Pattern 8: Verb + こと + な + から (polite verb form)
+    (b8) => {
+      const verb = b8.verb({}, 'verb');
+      const koto = b8.noun({ text: 'こと', lemma: 'こと' }, 'koto');
+      const na = b8.aux({ text: 'な', lemma: 'だ' }, 'na');
+      const kara = b8.particle('から', 'kara');
+
+      b8.inOrder(verb, koto, 1);
+      b8.inOrder(koto, na, 1);
+      b8.inOrder(na, kara, 1);
+
+      b8.captureSpan('ことだから', verb, kara);
+    },
+
+    // Pattern 9: ...とのこと + だから (quoted clause + こと)
+    // Example: お相手が「感激した」とのことだから、結果的にはあれで良かったと思います。
+    (b9) => {
+      const to = b9.particle('と', 'to');
+      const no = b9.particle('の', 'no');
+      const koto = b9.noun({ text: 'こと', lemma: 'こと' }, 'koto');
+      const da = b9.aux({ text: 'だ', lemma: 'だ' }, 'da');
+      const kara = b9.particle('から', 'kara');
+
+      b9.inOrder(to, no, 1);
+      b9.inOrder(no, koto, 1);
+      b9.inOrder(koto, da, 1);
+      b9.inOrder(da, kara, 1);
+
+      // Capture from との (or just noun + の)
+      b9.captureSpan('ことだから', to, kara);
+    },
+
+    // Pattern 10: Any token + の + こと + だから (very loose, for quoted patterns)
+    (b10) => {
+      const prev = b10.tok({}, 'prev');
+      const no = b10.particle('の', 'no');
+      const koto = b10.noun({ text: 'こと', lemma: 'こと' }, 'koto');
+      const da = b10.aux({ text: 'だ', lemma: 'だ' }, 'da');
+      const kara = b10.particle('から', 'kara');
+
+      b10.inOrder(prev, no, 1);
+      b10.inOrder(no, koto, 1);
+      b10.inOrder(koto, da, 1);
+      b10.inOrder(da, kara, 1);
+
+      b10.captureSpan('ことだから', prev, kara);
+    },
+
+    // Pattern 11: な-adjective + な + こと + な + から (polite adjective form)
+    (b11) => {
+      const adj = b11.adj({ inflectionForm: '体言接続-タ' }, 'adj');
+      const na1 = b11.particle('な', 'na1');
+      const koto = b11.noun({ text: 'こと', lemma: 'こと' }, 'koto');
+      const na2 = b11.aux({ text: 'な', lemma: 'だ' }, 'na2');
+      const kara = b11.particle('から', 'kara');
+
+      b11.inOrder(adj, na1, 1);
+      b11.inOrder(na1, koto, 1);
+      b11.inOrder(koto, na2, 1);
+      b11.inOrder(na2, kara, 1);
+
+      b11.captureSpan('ことだから', adj, kara);
     }
   );
 });

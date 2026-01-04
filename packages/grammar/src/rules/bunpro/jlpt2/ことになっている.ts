@@ -47,13 +47,18 @@ export default linguisticRule('ことになっている', (r) => {
       const nat = b.verb({ lemma: 'なる', dep: 'fixed', inflectionForm: '連用形-促音便' }, 'nat');
       b.inOrder(ni, nat, 1);
 
-      // Followed by て (te-form)
+      // Followed by て (te-form) - attaches to pred with dep=mark
       const te = b.tok({ lemma: 'て', depOneOf: ['mark', 'fixed'] }, 'te');
-      b.inOrder(nat, te, 1);
+      b.headChild(pred, te, 'mark');
 
-      // Followed by いる (progressive) - attaches to pred as aux
-      const iru = b.aux({ lemma: 'いる', inflectionForm: '終止形-一般' }, 'iru');
-      b.auxOf(pred, iru);
+      // Followed by いる (progressive) - attaches to te with dep=fixed
+      const iru = b.tok({
+        lemma: 'いる',
+        posOneOf: ['VERB', 'AUX'],
+        inflectionForm: '終止形-一般',
+        dep: 'fixed',
+      }, 'iru');
+      b.headChild(te, iru, 'fixed');
 
       b.captureSpan('ことになっている', pred, iru);
     },
@@ -70,11 +75,16 @@ export default linguisticRule('ことになっている', (r) => {
       b.inOrder(ni, nat, 1);
 
       const te = b.tok({ lemma: 'て', depOneOf: ['mark', 'fixed'] }, 'te');
-      b.inOrder(nat, te, 1);
+      b.headChild(pred, te, 'mark');
 
-      // います (polite progressive) - attaches to pred as aux
-      const imasu = b.aux({ lemma: 'います', inflectionForm: '終止形-一般' }, 'imasu');
-      b.auxOf(pred, imasu);
+      // います (polite progressive) - attaches to te with dep=fixed
+      const imasu = b.tok({
+        lemma: 'います',
+        posOneOf: ['VERB', 'AUX'],
+        inflectionForm: '終止形-一般',
+        dep: 'fixed',
+      }, 'imasu');
+      b.headChild(te, imasu, 'fixed');
 
       b.captureSpan('ことになっている', pred, imasu);
     },

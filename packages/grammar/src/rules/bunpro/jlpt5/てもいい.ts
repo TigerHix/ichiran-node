@@ -9,17 +9,22 @@ export default linguisticRule('てもいい', (r) => {
   // na-adjective and noun use で (e.g., 静かでもいい, 水曜日でもいい)
   //
   // GiNZA parsing varies:
-  // - i-adj stem (つめたく): pos=VERB, inflectionForm=連用形-一般
+  // - i-adj stem (つめたく): pos=VERB, inflectionForm=連用形-一般, lemma ends in い
   // - で from copula: pos=AUX, lemma=だ
   // - で as case marker: pos=ADP, lemma=で (for bare nouns)
+  // - Some nouns are parsed as ADJ (e.g., 焼きそば)
 
   r.either(
     // Branch 1: i-adjective stem + て + も + いい (casual)
     // GiNZA tags i-adj stems as VERB with inflectionForm=連用形-一般
+    // Key: lemma ends in い (i-adj) not る (verb)
     (b1) => {
       const adjStem = b1.tok({
         posOneOf: ['VERB', 'ADJ'],
         inflectionForm: '連用形-一般',
+        // Exclude verbs by checking lemma ends in い
+        // i-adj lemmas end in い (e.g., 冷たい, 高い, 早い, 狭い)
+        lemmaRe: /い$/,
       }, 'adjStem');
 
       const te = b1.tok({
@@ -50,6 +55,7 @@ export default linguisticRule('てもいい', (r) => {
       const adjStem = b2.tok({
         posOneOf: ['VERB', 'ADJ'],
         inflectionForm: '連用形-一般',
+        lemmaRe: /い$/,
       }, 'adjStem');
 
       const te = b2.tok({
@@ -76,14 +82,14 @@ export default linguisticRule('てもいい', (r) => {
       b2.inOrder(adjStem, te, 1);
       b2.inOrder(te, mo, 1);
       b2.inOrder(mo, ii, 1);
-      b2.inOrder(ii, desu, 2);
+      b2.inOrder(ii, desu, 3);
 
       b2.captureSpan('てもいい', adjStem, desu);
     },
     // Branch 3: na-adjective + で(lemma=だ) + も + いい (casual)
     (b3) => {
-      const adj = b3.adj({
-        pos: 'ADJ',
+      const adj = b3.tok({
+        posOneOf: ['ADJ', 'NOUN'],
       }, 'adj');
 
       const de = b3.tok({
@@ -108,9 +114,11 @@ export default linguisticRule('てもいい', (r) => {
 
       b3.captureSpan('でもいい', adj, ii);
     },
-    // Branch 4: noun + で(lemma=で as case marker) + も + いい (casual)
+    // Branch 4: noun/pronoun + で(lemma=で as case marker) + も + いい (casual)
     (b4) => {
-      const noun = b4.noun({}, 'noun');
+      const noun = b4.tok({
+        posOneOf: ['NOUN', 'PRON', 'ADJ'],
+      }, 'noun');
 
       const de = b4.tok({
         text: 'で',
@@ -135,17 +143,16 @@ export default linguisticRule('てもいい', (r) => {
 
       b4.captureSpan('でもいい', noun, ii);
     },
-    // Branch 5: pronoun + で(lemma=で as case marker) + も + いい (casual)
+    // Branch 5: na-adjective + で(lemma=だ) + も + いい + です (polite)
     (b5) => {
-      const pronoun = b5.tok({
-        pos: 'PRON',
-      }, 'pronoun');
+      const adj = b5.tok({
+        posOneOf: ['ADJ', 'NOUN'],
+      }, 'adj');
 
       const de = b5.tok({
         text: 'で',
-        lemma: 'で',
-        pos: 'ADP',
-        dep: 'case',
+        lemma: 'だ',
+        pos: 'AUX',
       }, 'de');
 
       const mo = b5.tok({
@@ -158,22 +165,28 @@ export default linguisticRule('てもいい', (r) => {
         pos: 'ADJ',
       }, 'ii');
 
-      b5.inOrder(pronoun, de, 2);
+      const desu = b5.aux({
+        lemma: 'です',
+      }, 'desu');
+
+      b5.inOrder(adj, de, 2);
       b5.inOrder(de, mo, 1);
       b5.inOrder(mo, ii, 2);
+      b5.inOrder(ii, desu, 3);
 
-      b5.captureSpan('でもいい', pronoun, ii);
+      b5.captureSpan('でもいい', adj, desu);
     },
-    // Branch 6: na-adjective + で(lemma=だ) + も + いい + です (polite)
+    // Branch 6: noun/pronoun + で(lemma=で as case marker) + も + いい + です (polite)
     (b6) => {
-      const adj = b6.adj({
-        pos: 'ADJ',
-      }, 'adj');
+      const noun = b6.tok({
+        posOneOf: ['NOUN', 'PRON', 'ADJ'],
+      }, 'noun');
 
       const de = b6.tok({
         text: 'で',
-        lemma: 'だ',
-        pos: 'AUX',
+        lemma: 'で',
+        pos: 'ADP',
+        dep: 'case',
       }, 'de');
 
       const mo = b6.tok({
@@ -190,78 +203,12 @@ export default linguisticRule('てもいい', (r) => {
         lemma: 'です',
       }, 'desu');
 
-      b6.inOrder(adj, de, 2);
+      b6.inOrder(noun, de, 2);
       b6.inOrder(de, mo, 1);
       b6.inOrder(mo, ii, 2);
-      b6.inOrder(ii, desu, 2);
+      b6.inOrder(ii, desu, 3);
 
-      b6.captureSpan('でもいい', adj, desu);
-    },
-    // Branch 7: noun + で(lemma=で as case marker) + も + いい + です (polite)
-    (b7) => {
-      const noun = b7.noun({}, 'noun');
-
-      const de = b7.tok({
-        text: 'で',
-        lemma: 'で',
-        pos: 'ADP',
-        dep: 'case',
-      }, 'de');
-
-      const mo = b7.tok({
-        text: 'も',
-        pos: 'ADP',
-      }, 'mo');
-
-      const ii = b7.adj({
-        lemmaOneOf: ['いい', 'よい'],
-        pos: 'ADJ',
-      }, 'ii');
-
-      const desu = b7.aux({
-        lemma: 'です',
-      }, 'desu');
-
-      b7.inOrder(noun, de, 2);
-      b7.inOrder(de, mo, 1);
-      b7.inOrder(mo, ii, 2);
-      b7.inOrder(ii, desu, 2);
-
-      b7.captureSpan('でもいい', noun, desu);
-    },
-    // Branch 8: pronoun + で(lemma=で as case marker) + も + いい + です (polite)
-    (b8) => {
-      const pronoun = b8.tok({
-        pos: 'PRON',
-      }, 'pronoun');
-
-      const de = b8.tok({
-        text: 'で',
-        lemma: 'で',
-        pos: 'ADP',
-        dep: 'case',
-      }, 'de');
-
-      const mo = b8.tok({
-        text: 'も',
-        pos: 'ADP',
-      }, 'mo');
-
-      const ii = b8.adj({
-        lemmaOneOf: ['いい', 'よい'],
-        pos: 'ADJ',
-      }, 'ii');
-
-      const desu = b8.aux({
-        lemma: 'です',
-      }, 'desu');
-
-      b8.inOrder(pronoun, de, 2);
-      b8.inOrder(de, mo, 1);
-      b8.inOrder(mo, ii, 2);
-      b8.inOrder(ii, desu, 2);
-
-      b8.captureSpan('でもいい', pronoun, desu);
+      b6.captureSpan('でもいい', noun, desu);
     }
   );
 });
