@@ -44,22 +44,27 @@ export default linguisticRule('ことなく', (r) => {
     // Branch 1: Basic form (verb + ことなく)
     (b) => {
       // Preceding predicate (verb in dictionary form)
+      // This is the verb that precedes こと (e.g., 捕まる in 捕まることなく)
       const pred = b.tok({}, 'pred');
 
-      // Followed by こと (nominalizer) - dep=compound points to pred
-      const koto = b.noun({ lemma: 'こと', dep: 'compound' }, 'koto');
-      b.headChild(pred, koto, 'compound');
+      // Followed by こと (nominalizer)
+      // GiNZA parses こと as NOUN with dep=obl
+      // The verb (pred) has dep=acl and head pointing to こと
+      const koto = b.noun({ lemma: 'こと', dep: 'obl' }, 'koto');
+      b.headChild(koto, pred, 'acl');
 
       // Followed by なく (adverbial form of ない)
-      // This is the negative auxiliary in adverbial form (連用形)
+      // GiNZA parses this as ADJ (adjective) with lemma=ない
+      // inflection=形容詞,連用形-一般
       const naku = b.tok({
         lemma: 'ない',
         text: 'なく',
-        posOneOf: ['AUX', 'ADV'],
+        pos: 'ADJ',
         inflectionForm: '連用形-一般',
       }, 'naku');
 
-      b.inOrder(koto, naku, 5);
+      // こと has head pointing to なく (dep=advcl)
+      b.headChild(naku, koto, 'obl');
 
       b.captureSpan('ことなく', pred, naku);
     },
@@ -68,8 +73,8 @@ export default linguisticRule('ことなく', (r) => {
     (b) => {
       const pred = b.tok({}, 'pred');
 
-      const koto = b.noun({ lemma: 'こと', dep: 'compound' }, 'koto');
-      b.headChild(pred, koto, 'compound');
+      const koto = b.noun({ lemma: 'こと', dep: 'obl' }, 'koto');
+      b.headChild(koto, pred, 'acl');
 
       // Particle も (also/emphatic) - follows こと
       const mo = b.particle('も', 'mo');
@@ -79,10 +84,12 @@ export default linguisticRule('ことなく', (r) => {
       const naku = b.tok({
         lemma: 'ない',
         text: 'なく',
-        posOneOf: ['AUX', 'ADV'],
+        pos: 'ADJ',
         inflectionForm: '連用形-一般',
       }, 'naku');
 
+      // When も is present, なく's head might still point to the main verb
+      // but we can verify order constraint
       b.inOrder(mo, naku, 3);
 
       b.captureSpan('ことなく', pred, naku);
@@ -92,8 +99,8 @@ export default linguisticRule('ことなく', (r) => {
     (b) => {
       const pred = b.tok({}, 'pred');
 
-      const koto = b.noun({ lemma: 'こと', dep: 'compound' }, 'koto');
-      b.headChild(pred, koto, 'compound');
+      const koto = b.noun({ lemma: 'こと', dep: 'obl' }, 'koto');
+      b.headChild(koto, pred, 'acl');
 
       // なし (archaic negative form, equivalent to ない)
       // This is the classical negative form acting as an adverb/noun

@@ -79,32 +79,35 @@ export default linguisticRule('げ', (r) => {
       b2.capture(geForm);
     },
 
-    // Pattern 3: Split form - げ as separate token followed by な or に
-    // (may occur if GiNZA parses the suffix separately)
+    // Pattern 3: Split form - げ + な
     (b3) => {
       const ge = b3.tok({
         textOneOf: ['げ', '気'],
         pos: 'NOUN',
       }, 'ge');
+      const na = b3.particle('な', 'na');
+      b3.inOrder(ge, na, 1);
+      b3.captureSpan('げ', ge, na);
+    },
 
-      r.either(
-        // げ + な
-        (b3a) => {
-          const na = b3a.particle('な', 'na');
-          b3a.inOrder(ge, na, 1);
-          b3a.captureSpan('げ', ge, na);
-        },
-        // げ + に
-        (b3b) => {
-          const ni = b3b.particle('に', 'ni');
-          b3b.inOrder(ge, ni, 1);
-          b3b.captureSpan('げ', ge, ni);
-        },
-        // Standalone げ
-        (b3c) => {
-          b3c.capture(ge);
-        }
-      );
+    // Pattern 4: Split form - げ + に
+    (b4) => {
+      const ge = b4.tok({
+        textOneOf: ['げ', '気'],
+        pos: 'NOUN',
+      }, 'ge');
+      const ni = b4.particle('に', 'ni');
+      b4.inOrder(ge, ni, 1);
+      b4.captureSpan('げ', ge, ni);
+    },
+
+    // Pattern 5: Standalone げ (without particle)
+    (b5) => {
+      const ge = b5.tok({
+        textOneOf: ['げ', '気'],
+        pos: 'NOUN',
+      }, 'ge');
+      b5.capture(ge);
     }
   );
 });

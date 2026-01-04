@@ -124,10 +124,10 @@ export default linguisticRule('か何か', (r) => {
     },
 
     // Pattern 6: Noun + compound "かなにか" (single token)
-    // GiNZA sometimes parses the entire "かなにか" as a single ADV/NOUN token
+    // GiNZA sometimes parses the entire "かなにか" as a single ADV/NOUN/PART token
     (b6) => {
       const noun = b6.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON'] }, 'noun');
-      const nanika = b6.tok({ textOneOf: ['かなにか', 'かなんか'], posOneOf: ['ADV', 'NOUN', 'PRON'] }, 'nanika');
+      const nanika = b6.tok({ textOneOf: ['かなにか', 'かなんか'] }, 'nanika');
 
       b6.inOrder(noun, nanika, 1);
 
@@ -139,12 +139,34 @@ export default linguisticRule('か何か', (r) => {
     (b7) => {
       const noun = b7.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON'] }, 'noun');
       const ka1 = b7.particle('か', 'ka1');
-      const nanika = b7.tok({ textOneOf: ['何か', 'なにか'], posOneOf: ['NOUN', 'PRON'] }, 'nanika');
+      const nanika = b7.tok({ textOneOf: ['何か', 'なにか'] }, 'nanika');
 
       b7.inOrder(noun, ka1, 1);
       b7.inOrder(ka1, nanika, 1);
 
       b7.captureSpan('か何か', noun, nanika);
+    },
+
+    // Pattern 8: Noun + 何か (when か is omitted/merged into nanika)
+    // Handles cases where "か何か" becomes "何か" after noun
+    (b8) => {
+      const noun = b8.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON', 'NOUN_OR_PROPN'] }, 'noun');
+      const nanika = b8.tok({ textOneOf: ['何か', 'なにか'] }, 'nanika');
+
+      b8.inOrder(noun, nanika, 1);
+
+      b8.captureSpan('か何か', noun, nanika);
+    },
+
+    // Pattern 9: Any token + かなにか (catch-all for compound forms)
+    // When noun constraint is too strict (e.g., for こと, の, etc.)
+    (b9) => {
+      const noun = b9.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON', 'NOUN_OR_PROPN'] }, 'noun');
+      const nanika = b9.tok({ textOneOf: ['かなにか', 'かなんか', 'か何か'] }, 'nanika');
+
+      b9.inOrder(noun, nanika, 2);
+
+      b9.captureSpan('か何か', noun, nanika);
     }
   );
 });
