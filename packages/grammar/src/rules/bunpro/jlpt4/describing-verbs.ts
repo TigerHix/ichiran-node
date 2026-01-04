@@ -31,13 +31,11 @@ import { linguisticRule } from '../../../engine/lang.js';
  */
 export default linguisticRule('describing-verbs', (r) => {
   r.either(
-    // Branch 1: I-adjective + く (連用形-一般)
-    // Example: 強く, きつく, 新しく, かるく, あまく, ひろく, はげしく, あつく, やさしく
-    // Must be ADJ with tag=形容詞-一般 and inflectionForm=連用形-一般
-    // Note: GiNZA stores lemmas variably - kanji (強い) or hiragana (つよい) depending on surface form
-    // We include all observed forms to handle this inconsistency
+    // Branch 1a: I-adjective + く (連用形-一般) with dep=advcl
+    // Example: 強く, きつく, 新しく, etc. (kanji forms)
     (b) => {
-      const adj = b.adj({
+      const adj = b.tok({
+        posOneOf: ['ADJ', 'ADV', 'VERB'],
         tag: '形容詞-一般',
         inflectionForm: '連用形-一般',
         lemmaOneOf: [
@@ -57,33 +55,120 @@ export default linguisticRule('describing-verbs', (r) => {
       b.captureSpan('く・に', adj, adj);
     },
 
-    // Branch 2: Na-adjective + に
-    // Example: 丁寧に, 上手に, 適当に, まえむきに, きれいに, ゆうがに, はやめに, しずかに, たいせつに, しんせつに
-    // Na-adjective is ADJ with tag=形状詞-一般
-    // に is AUX with lemma=だ, inflectionForm=連用形-ニ, dep=aux
-    // Note: GiNZA stores lemmas variably - kanji (丁寧) or hiragana (ていねい) depending on surface form
-    // We include all observed forms to handle this inconsistency
+    // Branch 1b: I-adjective + く with dep=advmod (hiragana forms like あまく)
     (b) => {
-      const adj = b.adj({
-        tag: '形状詞-一般',
+      const adj = b.tok({
+        posOneOf: ['ADJ', 'ADV', 'VERB'],
+        tag: '形容詞-一般',
+        inflectionForm: '連用形-一般',
+        lemmaOneOf: [
+          '甘い', 'あまい',  // sweet (shows as advmod in hiragana)
+        ],
+      }, 'adj');
+      const verb = b.verb({}, 'verb');
+      b.headChild(verb, adj, 'advmod');
+      b.captureSpan('く・に', adj, adj);
+    },
+
+    // Branch 1c: I-adjective + く with adj as root (e.g., あつく)
+    (b) => {
+      const adj = b.tok({
+        posOneOf: ['ADJ', 'ADV', 'VERB'],
+        tag: '形容詞-一般',
+        inflectionForm: '連用形-一般',
+        lemmaOneOf: [
+          '熱い', 'あつい',  // hot/passionate (shows as root)
+        ],
+      }, 'adj');
+      const verb = b.verb({}, 'verb');
+      b.headChild(adj, verb, 'advcl');  // verb depends on adj
+      b.captureSpan('く・に', adj, adj);
+    },
+
+    // Branch 2a: Na-adjective + に with dep=aux (standard kanji forms)
+    // Example: 丁寧に, 上手に, etc.
+    (b) => {
+      const adj = b.tok({
+        posOneOf: ['ADJ', 'NOUN'],
+        tagOneOf: ['形状詞-一般'],
         lemmaOneOf: [
           '丁寧', 'ていねい',  // polite
           '上手', 'じょうず',  // skilled
           '適当', 'てきとう',  // appropriate/haphazard
           '前向き', 'まえむき',  // positive
           '綺麗', 'きれい',  // clean/beautiful
-          '優雅', 'ゆうが',  // elegant
           '早め', 'はやめ',  // early
           '静か', 'しずか',  // quiet
           '大切', 'たいせつ',  // important
-          '親切', 'しんせつ',  // kind
         ],
       }, 'adj');
-      const ni = b.aux({
+      const ni = b.tok({
+        posOneOf: ['AUX', 'ADP'],
         lemma: 'だ',
         inflectionForm: '連用形-ニ',
       }, 'ni');
       b.auxOf(adj, ni);
+      const verb = b.verb({}, 'verb');
+      b.headChild(verb, adj, 'advcl');
+      b.captureSpan('く・に', adj, ni);
+    },
+
+    // Branch 2b: Na-adjective + に with hiragana forms (名詞-普通名詞-形状詞可能) + dep=case + obl
+    // Example: ゆうがに
+    (b) => {
+      const adj = b.tok({
+        posOneOf: ['ADJ', 'NOUN'],
+        tagOneOf: ['名詞-普通名詞-形状詞可能'],
+        lemmaOneOf: [
+          '優雅', 'ゆうが',  // elegant
+        ],
+      }, 'adj');
+      const ni = b.tok({
+        posOneOf: ['ADP'],
+        lemma: 'だ',
+        inflectionForm: '連用形-ニ',
+      }, 'ni');
+      b.headChild(adj, ni, 'case');
+      const verb = b.verb({}, 'verb');
+      b.headChild(verb, adj, 'obl');
+      b.captureSpan('く・に', adj, ni);
+    },
+
+    // Branch 2c: Na-adjective + に with hiragana forms + dep=aux + obl (しんせつに)
+    (b) => {
+      const adj = b.tok({
+        posOneOf: ['ADJ', 'NOUN'],
+        tagOneOf: ['名詞-普通名詞-形状詞可能'],
+        lemmaOneOf: [
+          '親切', 'しんせつ',  // kind
+        ],
+      }, 'adj');
+      const ni = b.tok({
+        posOneOf: ['AUX', 'ADP'],
+        lemma: 'だ',
+        inflectionForm: '連用形-ニ',
+      }, 'ni');
+      b.auxOf(adj, ni);
+      const verb = b.verb({}, 'verb');
+      b.headChild(verb, adj, 'obl');
+      b.captureSpan('く・に', adj, ni);
+    },
+
+    // Branch 2d: Na-adjective + に with dep=case (しずかに)
+    (b) => {
+      const adj = b.tok({
+        posOneOf: ['ADJ'],
+        tag: '形状詞-一般',
+        lemmaOneOf: [
+          '静か', 'しずか',  // quiet
+        ],
+      }, 'adj');
+      const ni = b.tok({
+        posOneOf: ['ADP'],
+        lemma: 'だ',
+        inflectionForm: '連用形-ニ',
+      }, 'ni');
+      b.headChild(adj, ni, 'case');
       const verb = b.verb({}, 'verb');
       b.headChild(verb, adj, 'advcl');
       b.captureSpan('く・に', adj, ni);

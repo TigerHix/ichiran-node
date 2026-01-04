@@ -1,45 +1,22 @@
-<<<<<<< HEAD
-import { useSharedEngine } from './packages/grammar/src/rules/bunpro/_test/engine.js';
-import { BUNPRO_JLPT3 } from './packages/grammar/src/rules/bunpro/jlpt3/index.js';
+import { GrammarEngine } from './packages/grammar/src/program.js';
+import { BUNPRO_JLPT4 } from './packages/grammar/src/rules/bunpro/jlpt4/index.js';
 
-async function test() {
-  const { get: engine } = useSharedEngine([BUNPRO_JLPT3]);
-  const doc = await engine().analyze('面倒くさくても朝ご飯を食べることだ。');
-  console.log('Tokens:');
-  doc.tokens.forEach((t, i) => {
-    console.log(`${i}: ${t.text} (lemma=${t.lemma}, pos=${t.pos}, inflection=${t.inflectionForm}, head=${t.head})`);
-  });
-}
+async function debug() {
+  const engine = await GrammarEngine.create([BUNPRO_JLPT4]);
 
-test().catch(console.error);
-=======
-// Quick debug script to see GiNZA parses
-import { spawn } from 'child_process';
+  const sentence = '彼女はゆうがに踊る。';
+  console.log(`=== ${sentence} ===`);
+  const doc = await engine.analyze(sentence);
+  const tokens = doc.sentences[0].tokens;
 
-const sentences = [
-  'クライアントに電話を掛けようとしたが、夜遅かったので朝まで待つことにした。',
-  '池で泳ごうとしたら、警察に止められた。',
-  '逃げようとしたけど、捕まったら大変なことになるから逃げなかった。',
-  '説得しようとしたが、失敗した。',
-  'お弁当をたべようとしたが、箸が入っていなかった。',
-  'でかけようとしたけれど、あまりにも天気が悪いのでやめました。',
-];
-
-async function testSentence(sentence) {
-  console.log('\n=== ' + sentence + ' ===\n');
-  
-  const proc = spawn('bun', ['run', '-s', 'src/engine/ginza-cli.ts', sentence], {
-    cwd: '/tmp/jlpt3-3/packages/grammar'
-  });
-  
-  for await (const line of proc.stdout) {
-    console.log(line.toString());
+  for (let i = 0; i < tokens.length; i++) {
+    const t = tokens[i];
+    const tag = t.tag || 'none';
+    const infl = t.inflectionForm || 'none';
+    console.log(`[${i}] ${t.text}: pos=${t.pos} tag=${tag} inflection=${infl} lemma=${t.lemma} dep=${t.dep} head=${t.head}`);
   }
-  
-  await new Promise(resolve => proc.on('close', resolve));
+
+  await engine.close();
 }
 
-for (const s of sentences) {
-  await testSentence(s);
-}
->>>>>>> jlpt3-verb-volitional-としたが
+debug().catch(console.error);
