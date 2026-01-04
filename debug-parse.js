@@ -1,38 +1,20 @@
-import { GrammarEngine } from './src/index.js';
+import { GinzaClient } from './packages/grammar/src/ginza/client.js';
 
-async function debug() {
-  const engine = await GrammarEngine.create([], {
-    ginza: { python: 'python3' },
-  });
+async function main() {
+  const client = await GinzaClient.create();
   
   const sentences = [
-    'マサミは綺麗で水泳が趣味です。',
-    'シンプルで便利なスマホを買うつもりだよ。',
+    '私は一ヶ月に一回友達と遊園地に行く。',
+    '公務員は一年に一回ボーナスをもらう。',
   ];
-
+  
   for (const sentence of sentences) {
-    console.log('\n' + '='.repeat(60));
-    console.log(`Sentence: ${sentence}`);
-    const doc = await engine.analyze(sentence);
-    
-    // Find "で" token and show context
-    for (const token of doc.sentences[0].tokens) {
-      if (token.text === 'で') {
-        console.log(`Token ${token.i}: "${token.text}" (pos=${token.pos}, tag=${token.tag}, lemma=${token.lemma}, dep=${token.dep})`);
-        // Show previous and next tokens
-        if (token.i > 0) {
-          const prev = doc.sentences[0].tokens[token.i - 1];
-          console.log(`  Previous: "${prev.text}" (pos=${prev.pos}, tag=${prev.tag}, lemma=${prev.lemma}, dep=${prev.dep})`);
-        }
-        if (token.i < doc.sentences[0].tokens.length - 1) {
-          const next = doc.sentences[0].tokens[token.i + 1];
-          console.log(`  Next: "${next.text}" (pos=${next.pos}, tag=${next.tag}, lemma=${next.lemma}, dep=${next.dep})`);
-        }
-      }
-    }
+    console.log('\n=== ' + sentence + ' ===\n');
+    const doc = await client.analyze(sentence);
+    console.log(JSON.stringify(doc, null, 2));
   }
   
-  await engine.close();
+  await client.stop();
 }
 
-debug();
+main().catch(console.error);
