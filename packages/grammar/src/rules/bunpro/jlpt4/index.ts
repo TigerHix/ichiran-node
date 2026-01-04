@@ -41,6 +41,7 @@ import demo from './でも.js';
 import demodemo from './でも-でも.js';
 import dedekirukaradekiru from './でできる-からできる.js';
 import degozaimasu from './でございます.js';
+import fuu from './風.js';
 import toconditional from './と-conditional.js';
 import totodochiraga from './と-と-どちらが.js';
 import toiwareteiru from './といわれている.js';
@@ -86,6 +87,7 @@ import nagara from './ながら.js';
 import nasai from './なさい.js';
 import nasaru from './なさる.js';
 import nado from './など.js';
+import ra from './ら.js';
 import wahitotsu from './は-の一つだ.js';
 import hajimeru from './はじめる.js';
 import hazugaai from './はずがない.js';
@@ -114,6 +116,7 @@ import youniyouna from './ように-ような.js';
 import ika from './いか.js';
 import igai from './いがい.js';
 import itasu from './いたす.js';
+import kaku from './各.js';
 import irassharu from './いらっしゃる.js';
 import okudasai from './お-ください.js';
 import osuru from './お-する.js';
@@ -180,6 +183,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     demodemo,
     describingverbs,
     dondon,
+    fuu,
     gasuru,
     gahitsuyou,
     gahoshii,
@@ -204,6 +208,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     kamoshirenai,
     kata,
     kadouka,
+    kaku,
     kashira,
     koto,
     kotogadekiru,
@@ -217,6 +222,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     moshi,
     nado,
     naihanai,
+    ra,
     naide,
     naito,
     nakerebaikenai,
