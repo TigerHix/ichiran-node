@@ -96,6 +96,7 @@ import nagara from './ながら.js';
 import nasai from './なさい.js';
 import nasaru from './なさる.js';
 import nado from './など.js';
+import narubeku from './なるべく.js';
 import tekurenyaoraenai from './てくれない-てもらえない.js';
 import tekureru from './てくれる.js';
 import tesumimasen from './てすみません.js';
@@ -217,6 +218,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     nasai,
     nasaru,
     nado,
+    narubeku,
     tekurenyaoraenai,
     tekureru,
     tesumimasen,
