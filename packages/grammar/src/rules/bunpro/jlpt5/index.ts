@@ -8,6 +8,7 @@ import iAdjectiveNoun from './い-adjective-noun.js';
 import iAdjectivePredicate from './い-adjective-predicate.js';
 import ndesu from './-んです-のです.js';
 import tsumorida from './つもりだ.js';
+import teiru2 from './ている2.js';
 import ka from './か.js';
 import kaOr from './か-or.js';
 import karaBecause from './から-because.js';
@@ -153,6 +154,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     mo,
     tekara,
     teKudasai,
+    teiru2,
     teWaIkenai,
     tsumorida,
     uVerbs,
