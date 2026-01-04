@@ -75,6 +75,7 @@ import demoAru from './でもある.js';
 import deYokereba from './でよければ.js';
 import toiukotoDa from './ということだ.js';
 import toiucalled from './という-called.js';
+import toiuriyuude from './という理由で.js';
 import youToShinai from './-ようとしない.js';
 import nounGata from './noun-型.js';
 import zutto2 from './ずっと2.js';
@@ -159,6 +160,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     deYokereba,
     toiukotoDa,
     toiucalled,
+    toiuriyuude,
     youToShinai,
     nounGata,
     zutto2,
