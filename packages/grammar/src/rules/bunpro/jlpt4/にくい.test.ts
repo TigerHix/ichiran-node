@@ -5,7 +5,12 @@ import rule from './にくい.js';
 import { BUNPRO_JLPT4 } from './index.js';
 
 // Sentences that must be skipped from positive tests
-const skipPositives: string[] = [];
+const skipPositives = [
+  // Data quality issue: This sentence is in the source data as a にくい example,
+  // but it actually uses づらい (psychologically difficult), not にくい (objectively difficult).
+  // These are different grammar points. The sentence should not be in the source data.
+  'お前には本当に言いづらいけど、お前のギターを壊した。ごめん。',
+];
 
 // Negative test cases - sentences that should NOT match the にくい grammar rule
 const negatives = [
@@ -18,7 +23,6 @@ const negatives = [
   '言いづらいことを聞く。',
   'これは読みづらい。',
   'その話は聞きづらい。',
-  'お前には本当に言いづらいけど、お前のギターを壊した。ごめん。',
 
   // やすい (yasui) - opposite meaning (easy to)
   'この本は読みやすい。',
