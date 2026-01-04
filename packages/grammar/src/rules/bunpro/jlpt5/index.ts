@@ -30,6 +30,7 @@ import verbTaNoun from './verb-た-noun.js';
 import verbNiIku from './verb-にいく.js';
 import verbNonPast from './verb-non-past.js';
 import da from './だ.js';
+import darou from './だろう.js';
 import dare from './だれ.js';
 import desu from './です.js';
 import tai from './たい.js';
@@ -118,6 +119,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     kurai1,
     kureru,
     da,
+    darou,
     dare,
     desu,
     tai,
