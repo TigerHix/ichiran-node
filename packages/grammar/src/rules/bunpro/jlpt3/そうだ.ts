@@ -40,17 +40,16 @@ import { linguisticRule } from '../../../engine/lang.js';
  */
 export default linguisticRule('そうだ', (r) => {
   r.either(
-    // Branch 1: Verb/adj (+ aux) + そう + だ (with tag=名詞-助動詞語幹 - definite hearsay)
-    // Allows one auxiliary between pred and sou (e.g., あったそうだ, 到達するそうだ)
+    // Branch 1: Verb/adj + そう + だ (with tag constraint - primary)
     (b) => {
       const pred = b.tok({
         posOneOf: ['VERB', 'ADJ'],
       }, 'pred');
       const sou = b.tok({
         text: 'そう',
-        tag: '名詞-助動詞語幹',
+        tagOneOf: ['名詞-助動詞語幹', '助動詞-一般'],
       }, 'sou');
-      b.inOrder(pred, sou, 2);  // Allow up to 2 tokens distance (pred + aux + sou)
+      b.inOrder(pred, sou, 1);
 
       const da = b.aux({
         lemma: 'だ',
@@ -59,16 +58,16 @@ export default linguisticRule('そうだ', (r) => {
 
       b.captureSpan('そうだ', pred, da);
     },
-    // Branch 2: Verb/adj (+ aux) + そう + です (with tag=名詞-助動詞語幹 - definite hearsay)
+    // Branch 2: Verb/adj + そう + です (with tag constraint)
     (b) => {
       const pred = b.tok({
         posOneOf: ['VERB', 'ADJ'],
       }, 'pred');
       const sou = b.tok({
         text: 'そう',
-        tag: '名詞-助動詞語幹',
+        tagOneOf: ['名詞-助動詞語幹', '助動詞-一般'],
       }, 'sou');
-      b.inOrder(pred, sou, 2);  // Allow up to 2 tokens distance
+      b.inOrder(pred, sou, 1);
 
       const desu = b.aux({
         lemma: 'です',
@@ -77,50 +76,12 @@ export default linguisticRule('そうだ', (r) => {
 
       b.captureSpan('そうだ', pred, desu);
     },
-    // Branch 3: Noun (+ aux) + そう + だ
-    // For compound verbs where GiNZA parses as NOUN + AUX + そう (e.g., さむくなるそうだ)
+    // Branch 3: Verb/adj + そう + だ (without tag - for sentences where GiNZA doesn't tag)
+    // Require pred to be in dictionary form to avoid matching appearance (stem form)
     (b) => {
-      const pred = b.noun({}, 'pred');
-      const sou = b.tok({
-        text: 'そう',
-        tag: '名詞-助動詞語幹',
-      }, 'sou');
-      b.inOrder(pred, sou, 2);  // Allow up to 2 tokens distance (noun + aux + sou)
-
-      const da = b.aux({
-        lemma: 'だ',
-      }, 'copula');
-      b.inOrder(sou, da, 1);
-
-      b.captureSpan('そうだ', pred, da);
-    },
-    // Branch 4: Noun (+ aux) + そう + です
-    (b) => {
-      const pred = b.noun({}, 'pred');
-      const sou = b.tok({
-        text: 'そう',
-        tag: '名詞-助動詞語幹',
-      }, 'sou');
-      b.inOrder(pred, sou, 2);  // Allow up to 2 tokens distance
-
-      const desu = b.aux({
-        lemma: 'です',
-      }, 'copula');
-      b.inOrder(sou, desu, 1);
-
-      b.captureSpan('そうだ', pred, desu);
-    },
-    // Branch 5: Verb (dictionary form) + そう + だ
-    // For cases where GiNZA tags そう as 形状詞-助動詞語幹 (usually for appearance)
-    // Discriminator: pred must be verb in dictionary form (text === lemma), not stem form
-    // - Hearsay: 鳴くそうだ (text=鳴く, lemma=鳴く, tag=動詞-一般) ✓
-    // - Appearance: 降りそうだ (text=降り, lemma=降る) ✗
-    // - Appearance: 元気そうだ (ADJ, not VERB) ✗
-    // - Appearance: 人気そうだ (VERB but tag=名詞-普通名詞-一般) ✗
-    (b) => {
-      const pred = b.verb({
-        textEqualsLemma: true,  // Dictionary form (text === lemma)
-        tag: '動詞-一般',  // Must be actual verb, not noun mis-tagged as verb
+      const pred = b.tok({
+        posOneOf: ['VERB', 'ADJ'],
+        inflectionForm: '終止形-一般',  // Dictionary form
       }, 'pred');
       const sou = b.tok({
         text: 'そう',
@@ -134,11 +95,11 @@ export default linguisticRule('そうだ', (r) => {
 
       b.captureSpan('そうだ', pred, da);
     },
-    // Branch 6: Verb (dictionary form) + そう + です
+    // Branch 4: Verb/adj + そう + です (without tag)
     (b) => {
-      const pred = b.verb({
-        textEqualsLemma: true,  // Dictionary form (text === lemma)
-        tag: '動詞-一般',  // Must be actual verb, not noun mis-tagged as verb
+      const pred = b.tok({
+        posOneOf: ['VERB', 'ADJ'],
+        inflectionForm: '終止形-一般',
       }, 'pred');
       const sou = b.tok({
         text: 'そう',
@@ -152,7 +113,7 @@ export default linguisticRule('そうだ', (r) => {
 
       b.captureSpan('そうだ', pred, desu);
     },
-    // Branch 7: Noun/na-adj + だ + そう + だ
+    // Branch 5: Noun + だ + そう + だ
     (b) => {
       const pred = b.noun({}, 'pred');
       const da1 = b.aux({
@@ -174,7 +135,7 @@ export default linguisticRule('そうだ', (r) => {
 
       b.captureSpan('そうだ', pred, da2);
     },
-    // Branch 8: Noun/na-adj + だ + そう + です
+    // Branch 6: Noun + だ + そう + です
     (b) => {
       const pred = b.noun({}, 'pred');
       const da1 = b.aux({

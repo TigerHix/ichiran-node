@@ -7,10 +7,12 @@ export default linguisticRule('そのため-に', (r) => {
   // GiNZA parses this as:
   // - その (DET) + ため (NOUN)
   // - Optional に (ADP) as case particle
-  // - Functions as conjunction (dep=advcl or dep=discourse)
+  // - Functions as conjunction (dep=obl for conjunction, dep=nmod for possessive)
+  //
+  // DISCRIMINATOR: Use dep=obl to exclude possessive そのための patterns
 
   const sono = r.tok({ text: 'その', pos: 'DET' }, 'sono');
-  const tame = r.noun({ lemma: 'ため' }, 'tame');
+  const tame = r.noun({ lemma: 'ため', dep: 'obl' }, 'tame');
 
   r.headChild(tame, sono, 'det');
   r.inOrder(sono, tame, 1);

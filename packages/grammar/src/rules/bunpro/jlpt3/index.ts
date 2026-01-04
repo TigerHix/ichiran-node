@@ -5,7 +5,6 @@ import amariNi from './あまりに.js';
 import ari from './あり.js';
 import aruiwa from './あるいは.js';
 import ikuraDemo from './いくら-でも.js';
-import donnaDemo from './どんなに-ても.js';
 import uchiNi from './うちに.js';
 import okageDe from './おかげで.js';
 import okiNi from './おきに.js';
@@ -66,7 +65,6 @@ import chantoKichinto from './ちゃんと-きちんと.js';
 import ppanashi from './っぱなし.js';
 import tsuide from './ついでに.js';
 import tsumari from './つまり.js';
-import toDoujiNi from './と同時に.js';
 import teGoran from './てごらん.js';
 import dewaSoredewa from './では-それでは-じゃあ.js';
 import temoKamawanai from './てもかまわない.js';
@@ -82,6 +80,46 @@ import nounGata from './noun-型.js';
 import zutto2 from './ずっと2.js';
 import particleNo from './particle-の.js';
 import verbVolitionalToShitaGa from './verb-volitional-としたが.js';
+import verbVolitionalToSuru from './verb-volitionalとする.js';
+import taraIiToIi from './たらいい-といい.js';
+import dakeShika from './だけしか.js';
+import datte from './だって.js';
+import kke from './っけ.js';
+import tteSlang from './って-slang.js';
+import ppoi from './っぽい.js';
+import tsui from './つい.js';
+import temoNakutemo from './ても-なくても.js';
+import tehajimete from './て初めて.js';
+import deIuTo from './で言うと.js';
+import toiunoha from './というのは.js';
+import toiunohaJijitsuDa from './というのは事実だ.js';
+import toiuyori from './というより.js';
+import toiuriyuude from './という理由で.js';
+import toieba from './といえば.js';
+import toori from './とおり.js';
+import tokoroga from './ところが.js';
+import tokorodatta1 from './ところだった1.js';
+import tokorode from './ところで.js';
+import toshitaraTosurebaTosuruto from './としたら-とすれば-とすると.js';
+import toshite from './として.js';
+import totemoNai from './とても-ない.js';
+import towaKagiranai from './とは限らない.js';
+import tonarande from './と並んで.js';
+import toTomoni from './と共に.js';
+import toOnajiKurai from './と同じくらい.js';
+import toOnajiDeToChigatte from './と同じで-と違って.js';
+import toDoujiNi from './と同時に.js';
+import toIeru from './と言える.js';
+import toIttemo from './と言っても.js';
+import doushitemo from './どうしても.js';
+import dokoroka from './どころか.js';
+import donnaNiTemo from './どんなに-ても.js';
+import naiUchiNi from './ないうちに.js';
+import naikotowanai from './ないことはない.js';
+import nakanaka from './なかなか.js';
+import nakanakaNai from './なかなか-ない.js';
+import nagaramo from './ながらも.js';
+import nashi from './なし.js';
 
 export const BUNPRO_JLPT3: Ruleset = {
   id: 'bunpro.jlpt3',
@@ -91,7 +129,6 @@ export const BUNPRO_JLPT3: Ruleset = {
     ari,
     aruiwa,
     ikuraDemo,
-    donnaDemo,
     uchiNi,
     okageDe,
     okiNi,
@@ -152,7 +189,6 @@ export const BUNPRO_JLPT3: Ruleset = {
     ppanashi,
     tsuide,
     tsumari,
-    toDoujiNi,
     teGoran,
     dewaSoredewa,
     temoKamawanai,
@@ -168,5 +204,45 @@ export const BUNPRO_JLPT3: Ruleset = {
     zutto2,
     particleNo,
     verbVolitionalToShitaGa,
+    verbVolitionalToSuru,
+    taraIiToIi,
+    dakeShika,
+    datte,
+    kke,
+    tteSlang,
+    ppoi,
+    tsui,
+    temoNakutemo,
+    tehajimete,
+    deIuTo,
+    toiunoha,
+    toiunohaJijitsuDa,
+    toiuyori,
+    toiuriyuude,
+    toieba,
+    toori,
+    tokoroga,
+    tokorodatta1,
+    tokorode,
+    toshitaraTosurebaTosuruto,
+    toshite,
+    totemoNai,
+    towaKagiranai,
+    tonarande,
+    toTomoni,
+    toOnajiKurai,
+    toOnajiDeToChigatte,
+    toDoujiNi,
+    toIeru,
+    toIttemo,
+    doushitemo,
+    dokoroka,
+    donnaNiTemo,
+    naiUchiNi,
+    naikotowanai,
+    nakanaka,
+    nakanakaNai,
+    nagaramo,
+    nashi,
   ],
 };
