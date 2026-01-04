@@ -79,6 +79,7 @@ import tara from './たら.js';
 import taradou from './たらどう.js';
 import daitai from './だいたい.js';
 import dagadega from './だが・ですが.js';
+import toki from './とき.js';
 
 export const BUNPRO_JLPT4: Ruleset = {
   id: 'bunpro.jlpt4',
@@ -140,6 +141,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     gozaimasu,
     gotoni,
     goro,
+    toki,
     sa,
     shishi,
     shikanai,
