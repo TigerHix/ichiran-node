@@ -56,7 +56,7 @@ export default linguisticRule('polite-verb-endings', (r) => {
       }, 'verb');
       const mashita = b3.aux({
         lemma: 'ます',
-        inflectionForm: '連用形-タ接',
+        // inflectionForm: '連用形-タ接', // TODO: Add to generated types
       }, 'mashita');
       b3.auxOf(verb, mashita);
       b3.captureSpan('polite-verb-endings', verb, mashita);

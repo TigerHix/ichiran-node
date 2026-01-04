@@ -31,9 +31,9 @@ export default linguisticRule('う-verb-past', (r) => {
   // Match any u-verb (godan) followed by past tense auxiliary
   r.either(
     // Branch for each godan conjugation class
-    ...godanClasses.map((cc) =>
+    ...godanClasses.map((cc): Parameters<typeof r.either>[0] =>
       (b) => {
-        const uVerb = b.verb({ conjugationClass: cc }, 'verb');
+        const uVerb = b.verb({ conjugationClass: cc as any }, 'verb');
 
         // Past tense auxiliary た (or だ after n-sound verbs)
         // Note: lemma can be た or だ depending on the verb stem sound
