@@ -112,6 +112,20 @@ import nogajouzu from './のがじょうず.js';
 import noheta from './のがへた.js';
 import nanikahananimo from './なにか-なにも.js';
 import nakutehanaranai from './なくてはならない.js';
+import node from './ので.js';
+import maeni from './まえに.js';
+import mashouka from './ましょうか.js';
+import masenka from './ませんか.js';
+import mada from './まだ.js';
+import madadeteimasen from './まだ-ていません.js';
+import morau from './もらう.js';
+import ya from './や.js';
+import yorinohouga from './より-のほうが.js';
+import ruVerbs from './る-Verbs.js';
+import ruVerbNegPast from './る-verb-neg-past.js';
+import ruVerbPast from './る-verb-past.js';
+import ruverbNai from './るverb-ない.js';
+import darekadokokadaremodokomo from './誰か-どこか-誰も-どこも.js';
 
 export const BUNPRO_JLPT5: Ruleset = {
   id: 'bunpro.jlpt5',
@@ -229,5 +243,19 @@ export const BUNPRO_JLPT5: Ruleset = {
     verbTe,
     verbTeB,
     verbTemoIi,
+    node,
+    maeni,
+    mashouka,
+    masenka,
+    mada,
+    madadeteimasen,
+    morau,
+    ya,
+    yorinohouga,
+    ruVerbs,
+    ruVerbNegPast,
+    ruVerbPast,
+    ruverbNai,
+    darekadokokadaremodokomo,
   ],
 };

@@ -35,26 +35,28 @@ async function main() {
   console.log('=== Benchmark: Full pipeline (GiNZA + matching) ===\n');
 
   const iterations = 10;
-  const results: { sentence: string; avgMs: number; hits: number }[] = [];
+  const results: { sentence: string; avgMs: number; ruleIds: string[] }[] = [];
 
   for (const sentence of TEST_SENTENCES) {
     const times: number[] = [];
-    let hitCount = 0;
+    let ruleIds: string[] = [];
 
     for (let i = 0; i < iterations; i++) {
       const start = performance.now();
       const hits = await engine.match(sentence);
       const elapsed = performance.now() - start;
       times.push(elapsed);
-      hitCount = hits.length;
+      if (i === 0) ruleIds = hits.map((h) => h.ruleId);
     }
 
     const avgMs = times.reduce((a, b) => a + b, 0) / times.length;
-    results.push({ sentence, avgMs, hits: hitCount });
+    results.push({ sentence, avgMs, ruleIds });
   }
 
   for (const r of results) {
-    console.log(`${r.avgMs.toFixed(2).padStart(7)} ms | ${r.hits} hits | ${r.sentence.slice(0, 40)}`);
+    const hitsStr = r.ruleIds.length > 0 ? r.ruleIds.join(', ') : '(none)';
+    console.log(`${r.avgMs.toFixed(2).padStart(7)} ms | ${r.sentence}`);
+    console.log(`           → ${hitsStr}`);
   }
 
   const overallAvg = results.reduce((sum, r) => sum + r.avgMs, 0) / results.length;

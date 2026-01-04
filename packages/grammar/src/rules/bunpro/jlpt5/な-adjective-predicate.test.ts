@@ -48,26 +48,20 @@ const negatives = [
   '彼は会社員だ。',
 ];
 
-// Sentences that can't be matched due to Bunpro test data including unrelated examples:
-//
-// 1. "有名な駅は汚いです。" and "この有名な駅が汚いです。"
-//    These demonstrate na-adjective + な (attributive form) modifying a noun, NOT
-//    na-adjective as predicate. The い-adjective "汚い" is the predicate, not "有名".
-//    Our rule correctly doesn't match because "有名" has dep=acl (not root) and
-//    "な" has inflectionForm=連体形-一般 (attributive), not 終止形-一般 (terminal).
-//
-// 2. "今、暇か。今、ひまですか。"
-//    First part "今、暇か" is casual copula-drop form (no copula). The second part
-//    "今、ひまですか." should match, but the Bunpro data combines them as one test.
-//    The loader doesn't split on period, so our rule sees the compound sentence.
-//
-const skipPositives = [
-  '有名な駅は汚いです。',
-  'この有名な駅が汚いです。',
-  '今、暇か。今、ひまですか。',
-];
-
 describe('bunpro.jlpt5', () => {
   const engine = useSharedEngine([BUNPRO_JLPT5]);
-  describeRule(rule, 'JLPT5', BUNPRO_JLPT5.id, engine.get, { negatives, skipPositives });
+
+  // DATA ERROR: The Bunpro data includes explanation/writup examples that are NOT
+  // actual na-adjective predicates:
+  // 1. "有名な駅は汚いです。" - "有名" modifies "駅" (attributive), "汚い" is the actual predicate
+  // 2. "今、暇か。今、ひまですか。" - Compound sentence with copula-drop + proper form
+  // These are marked as question_type="readonly" and used_in="writeups" in the source data.
+  describeRule(rule, 'JLPT5', BUNPRO_JLPT5.id, engine.get, {
+    negatives,
+    skipPositives: [
+      '有名な駅は汚いです。',
+      'この有名な駅が汚いです。',
+      '今、暇か。今、ひまですか。',
+    ],
+  });
 });

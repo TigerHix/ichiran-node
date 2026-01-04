@@ -8,6 +8,8 @@ import { buildProgram, matchDoc, type MatchHit, type CompiledProgram, type Rules
 
 export type GrammarEngineOptions = {
   ginza?: GinzaClientOptions;
+  /** Use an existing GinzaClient instead of creating a new one */
+  client?: GinzaClient;
 };
 
 export class GrammarEngine {
@@ -29,8 +31,10 @@ export class GrammarEngine {
         specsMap.set(r.id, r);
       }
     }
-    const client = new GinzaClient(opts.ginza);
-    await client.start();
+    const client = opts.client ?? new GinzaClient(opts.ginza);
+    if (!opts.client) {
+      await client.start();
+    }
     return new GrammarEngine(client, program, specsMap);
   }
 

@@ -8,7 +8,29 @@ import { BUNPRO_JLPT4 } from './index.js';
 const negatives = [
   // Regular suru-verbs without honorific prefix
   '勉強する',
+  '勉強します',
   '連絡する',
+  '連絡しました',
+  '電話します',   // NOUN compound without humble prefix (should NOT match)
+  '電話しました',
+  '確認します',   // NOUN compound without humble prefix (should NOT match)
+  '確認しました',
+  '散歩しました', // NOUN compound without humble prefix (should NOT match)
+  '食事します',   // NOUN compound without humble prefix (should NOT match)
+  '約束します',
+  '予約しました',
+  '注文します',
+  '発見しました',
+  '満足します',
+  '心配しました',
+  '成功します',
+  '失敗しました',
+  '開始しました',
+  '終了します',
+  '通話します',
+  '到着しました',
+  '出発します',
+  '参加します',
 
   // Regular verbs without honorific prefix
   '閉めます',
@@ -27,13 +49,6 @@ const negatives = [
   // します without humble prefix (regular polite)
   'ドアを閉めます',
   '本を読みます',
-
-  // NOTE: The following are KNOWN FALSE POSITIVES that have been removed
-  // from the negative tests to avoid test failures. These should be fixed
-  // in a future update by improving the rule's pattern matching:
-  // - 電話します
-  // - 確認します
-  // - 散歩しました
 ];
 
 // Sentences that can't be matched due to GiNZA parsing limitations:
@@ -42,8 +57,6 @@ const skipPositives = [
   '僕がお守りします！',
   // Hiragana "おかり" is parsed as irrealis form (未然形) + る auxiliary
   '友達のお母さんにパソコンをおかりしました。',
-  // "おやすみ" parsed as compound but doesn't match expected patterns
-  '明日はクラブをおやすみします。',
 ];
 
 describe('bunpro.jlpt4', () => {

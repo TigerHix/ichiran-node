@@ -2,7 +2,7 @@ import { linguisticRule } from '../../../engine/lang.js';
 
 export default linguisticRule('じゃない', (r) => {
   // Match the casual and polite negative copula (is not)
-  // Casual: じゃない, ではない
+  // Casual: じゃない, ではない, slang: じゃねえ
   // Polite: じゃありません, ではありません
   // じゃ is a contraction of では
   // Note: GiNZA uses dep='cop' for nouns, but dep='aux' for na-adjectives
@@ -140,6 +140,33 @@ export default linguisticRule('じゃない', (r) => {
       });
 
       branch.captureSpan('ではありません', de, n);
+    },
+    // Branch 9: Noun + じゃ + ねえ (slang じゃねえ - casual "ja nee")
+    // "ねえ" is the slang pronunciation of "ない" in casual speech
+    (branch) => {
+      const head = branch.tok({ posOneOf: ['NOUN', 'PRON', 'DET', 'NUM'] }, 'head');
+      const ja = branch.aux({ text: 'じゃ', lemma: 'だ', dep: 'cop' }, 'ja');
+      const nee = branch.tok({ text: 'ねえ' }, 'nee');
+
+      branch.copulaOf(head, ja);
+      branch.inOrder(ja, nee, 1);
+      branch.captureSpan('じゃねえ', ja, nee);
+    },
+    // Branch 10: Na-adjective + じゃ + ねえ (slang じゃねえ - casual "ja nee")
+    (branch) => {
+      const naAdj = branch.adj({}, 'naAdj');
+      const ja = branch.aux({ text: 'じゃ', lemma: 'だ', dep: 'aux' }, 'ja');
+      const nee = branch.tok({ text: 'ねえ' }, 'nee');
+
+      branch.auxOf(naAdj, ja);
+      branch.inOrder(ja, nee, 1);
+
+      // The naAdj must not be an i-adjective
+      branch.not((nr) => {
+        nr.adj({ conjugationClass: '形容詞' }, 'naAdj');
+      });
+
+      branch.captureSpan('じゃねえ', ja, nee);
     }
   );
 });

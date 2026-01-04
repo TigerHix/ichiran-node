@@ -12,12 +12,7 @@ const negatives = [
   '新しくない。',
 ];
 
-// Sentences that should match but are skipped due to GiNZA limitations
-const skipPositives = [
-  '俺は馬鹿じゃねえよ。',  // Uses じゃねえ (slang pronunciation), not じゃない
-];
-
 describe('bunpro.jlpt5', () => {
   const engine = useSharedEngine([BUNPRO_JLPT5]);
-  describeRule(rule, 'JLPT5', BUNPRO_JLPT5.id, engine.get, { negatives, skipPositives });
+  describeRule(rule, 'JLPT5', BUNPRO_JLPT5.id, engine.get, { negatives });
 });

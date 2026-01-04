@@ -1,31 +1,33 @@
 /**
  * Shared GrammarEngine singleton for tests.
- * Uses globalThis to persist across module boundaries in bun test.
+ * Uses the GinzaClient started in preload.ts.
  */
-import { afterAll, beforeAll } from 'bun:test';
+import { beforeAll } from 'bun:test';
+import type { GinzaClient } from '../../../ginza/client.js';
 import { GrammarEngine } from '../../../program.js';
 import type { Ruleset } from '../../../ruleset.js';
 
 declare global {
-  var __bunproTestEngine: GrammarEngine | undefined;
-  var __bunproTestEnginePromise: Promise<GrammarEngine> | undefined;
+  var __sharedGinzaClient: GinzaClient | undefined;
+  var __sharedGinzaClientReady: Promise<void> | undefined;
   var __bunproTestEngineRefCount: number;
 }
 
 globalThis.__bunproTestEngineRefCount ??= 0;
 
 /**
- * Get the shared GrammarEngine instance.
- * Lazily creates one engine for all bunpro tests.
+ * Get or create a GrammarEngine using the shared GinzaClient from preload.
  */
 export async function getSharedEngine(rulesets: Ruleset[]): Promise<GrammarEngine> {
-  if (!globalThis.__bunproTestEnginePromise) {
-    globalThis.__bunproTestEnginePromise = GrammarEngine.create(rulesets, {
-      ginza: { python: 'python3' },
-    });
-    globalThis.__bunproTestEngine = await globalThis.__bunproTestEnginePromise;
+  // Wait for the shared client started in preload.ts
+  if (globalThis.__sharedGinzaClientReady) {
+    await globalThis.__sharedGinzaClientReady;
   }
-  return globalThis.__bunproTestEnginePromise;
+  const client = globalThis.__sharedGinzaClient;
+  if (!client) {
+    throw new Error('Shared GinzaClient not found. Make sure preload.ts is configured in bunfig.toml');
+  }
+  return GrammarEngine.create(rulesets, { client });
 }
 
 /**
@@ -37,18 +39,9 @@ export function useSharedEngine(rulesets: Ruleset[]): { get: () => GrammarEngine
 
   beforeAll(async () => {
     engine = await getSharedEngine(rulesets);
-    globalThis.__bunproTestEngineRefCount++;
   });
 
-  afterAll(async () => {
-    globalThis.__bunproTestEngineRefCount--;
-    // Close engine when last test file finishes
-    if (globalThis.__bunproTestEngineRefCount === 0 && globalThis.__bunproTestEngine) {
-      await globalThis.__bunproTestEngine.close();
-      globalThis.__bunproTestEngine = undefined;
-      globalThis.__bunproTestEnginePromise = undefined;
-    }
-  });
+  // Don't close - the GinzaClient is shared and will be cleaned up when process exits
 
   return {
     get: () => engine,

@@ -65,11 +65,12 @@ export default linguisticRule('お-する', (r) => {
       }, 'masu');
 
       b.inOrder(prefix, stem, 2);
+      // CRITICAL: prefix's head must point to stem (compound dependency)
+      b.headChild(stem, prefix, 'compound');
       b.auxOf(stem, shi);
       b.auxOf(stem, masu);
       b.captureSpan('お-する', prefix, masu);
     },
-
     // Pattern 3: お/ご prefix (接頭辞) + verb + しました (polite past)
     // Example: お閉めしました, お電話しました, お借りしました
     (b) => {
@@ -98,6 +99,8 @@ export default linguisticRule('お-する', (r) => {
       }, 'ta');
 
       b.inOrder(prefix, stem, 2);
+      // CRITICAL: prefix's head must point to stem (compound dependency)
+      b.headChild(stem, prefix, 'compound');
       b.auxOf(stem, shi);
       b.auxOf(stem, mashita);
       b.auxOf(stem, ta);
@@ -127,6 +130,7 @@ export default linguisticRule('お-する', (r) => {
       }, 'te');
 
       b.inOrder(prefix, stem, 2);
+      b.headChild(stem, prefix, 'compound');
       b.auxOf(stem, shi);
       b.inOrder(shi, te, 1);
       b.captureSpan('お-する', prefix, te);
@@ -154,6 +158,7 @@ export default linguisticRule('お-する', (r) => {
       }, 'mashou');
 
       b.inOrder(prefix, stem, 2);
+      b.headChild(stem, prefix, 'compound');
       b.auxOf(stem, shi);
       b.auxOf(stem, mashou);
       b.captureSpan('お-する', prefix, mashou);
@@ -181,6 +186,7 @@ export default linguisticRule('お-する', (r) => {
       }, 'ta');
 
       b.inOrder(prefix, stem, 2);
+      b.headChild(stem, prefix, 'compound');
       b.auxOf(stem, shi);
       b.auxOf(stem, ta);
       b.inOrder(shi, ta, 1);
@@ -209,6 +215,7 @@ export default linguisticRule('お-する', (r) => {
       }, 'te');
 
       b.inOrder(prefix, stem, 2);
+      b.headChild(stem, prefix, 'compound');
       b.auxOf(stem, shi);
       b.inOrder(shi, te, 1);
       b.captureSpan('お-する', prefix, te);
@@ -454,6 +461,63 @@ export default linguisticRule('お-する', (r) => {
       b.inOrder(compound, shi, 1);
       b.auxOf(shi, masu);
       b.captureSpan('お-する', compound, masu);
+    },
+
+    // Pattern 16: NOUN/VERB/ADP compound starting with お/ご + します (polite)
+    // Example: おやすみします, お願いします, お返事します
+    // The textRe constraint ensures compound starts with お/ご, excluding regular suru-verbs
+    (b) => {
+      const compound = b.tok({
+        textRe: /^(お|ご)/,
+        posOneOf: ['NOUN', 'VERB', 'ADP'],
+        tagOneOf: ['名詞-普通名詞-一般', '感動詞-一般'],  // 感動詞-一般 for おやすみ
+      }, 'compound');
+
+      const shi = b.tok({
+        lemma: 'する',
+        posOneOf: ['AUX', 'VERB'],
+        inflectionForm: '連用形-一般'
+      }, 'shi');
+
+      const masu = b.aux({
+        lemma: 'ます',
+        inflectionForm: '終止形-一般'
+      }, 'masu');
+
+      b.auxOf(compound, shi);
+      b.auxOf(compound, masu);
+      b.captureSpan('お-する', compound, masu);
+    },
+
+    // Pattern 17: NOUN/VERB/ADP compound starting with お/ご + しました (polite past)
+    // Example: おやすみしました, お願いしました
+    // The textRe constraint ensures compound starts with お/ご, excluding regular suru-verbs
+    (b) => {
+      const compound = b.tok({
+        textRe: /^(お|ご)/,
+        posOneOf: ['NOUN', 'VERB', 'ADP'],
+        tagOneOf: ['名詞-普通名詞-一般', '感動詞-一般'],  // 感動詞-一般 for おやすみ
+      }, 'compound');
+
+      const shi = b.aux({
+        lemma: 'する',
+        inflectionForm: '連用形-一般'
+      }, 'shi');
+
+      const mashita = b.aux({
+        lemma: 'ます',
+        inflectionForm: '連用形-一般'
+      }, 'mashita');
+
+      const ta = b.aux({
+        lemma: 'た'
+      }, 'ta');
+
+      b.auxOf(compound, shi);
+      b.auxOf(compound, mashita);
+      b.auxOf(compound, ta);
+      b.inOrder(mashita, ta, 1);
+      b.captureSpan('お-する', compound, ta);
     }
   );
 });
