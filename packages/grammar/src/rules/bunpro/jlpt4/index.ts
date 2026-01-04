@@ -88,6 +88,7 @@ import teyokatta from './てよかった.js';
 import toutou from './とうとう.js';
 import nakerebaikenai from './なければいけない.js';
 import nakerebanaranai from './なければならない.js';
+import nikigatsuku from './にきがつく.js';
 import nakute from './なくて.js';
 import nakuteconjunction from './なくて-conjunction.js';
 import nakutemoii from './なくてもいい.js';
@@ -209,6 +210,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     toutou,
     nakerebaikenai,
     nakerebanaranai,
+    nikigatsuku,
     nakute,
     nakuteconjunction,
     nakutemoii,
