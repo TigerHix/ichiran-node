@@ -21,6 +21,7 @@ import gasuru from './がする.js';
 import gahitsuyou from './がひつよう.js';
 import gahoshii from './がほしい.js';
 import gamirareru from './がみられる.js';
+import dagademosu from './だが・ですが.js';
 
 export const BUNPRO_JLPT4: Ruleset = {
   id: 'bunpro.jlpt4',
@@ -47,5 +48,6 @@ export const BUNPRO_JLPT4: Ruleset = {
     gahitsuyou,
     gahoshii,
     gamirareru,
+    dagademosu,
   ],
 };
