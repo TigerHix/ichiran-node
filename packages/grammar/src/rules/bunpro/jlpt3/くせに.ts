@@ -105,17 +105,17 @@ export default linguisticRule('くせに', (r) => {
     },
     // Pattern 10: Single token くせに (GiNZA sometimes tokenizes as one)
     (b) => {
-      const kuseniTok = b.tok({ text: 'くせに' }, 'kuseniTok');
-      const prevTok = b.tok({}, 'prevTok');
-      b.inOrder(prevTok, kuseniTok, 10);
-      b.captureSpan('くせに', prevTok, kuseniTok);
+      const kuseniHiragana = b.tok({ text: 'くせに' }, 'kuseniHiragana');
+      const prevTok = b.tok({}, 'prevTok10');
+      b.inOrder(prevTok, kuseniHiragana, 10);
+      b.captureSpan('くせに', prevTok, kuseniHiragana);
     },
     // Pattern 11: Single token 癖に (kanji version)
     (b) => {
-      const kuseNiTok = b.tok({ text: '癖に' }, 'kuseNiTok');
-      const prevTok2 = b.tok({}, 'prevTok2');
-      b.inOrder(prevTok2, kuseNiTok, 10);
-      b.captureSpan('くせに', prevTok2, kuseNiTok);
+      const kuseniKanji = b.tok({ text: '癖に' }, 'kuseniKanji');
+      const prevTok = b.tok({}, 'prevTok11');
+      b.inOrder(prevTok, kuseniKanji, 10);
+      b.captureSpan('くせに', prevTok, kuseniKanji);
     }
   );
 });

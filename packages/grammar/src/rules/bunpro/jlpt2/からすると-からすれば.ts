@@ -29,8 +29,9 @@ import { linguisticRule } from '../../../engine/lang.js';
  */
 export default linguisticRule('からすると-からすれば', (r) => {
   // Preceding noun (evidence or standpoint)
+  // Note: GiNZA sometimes tags adjectival nouns (甘さ, etc.) without explicit NOUN tag
   const noun = r.tok({
-    posOneOf: ['NOUN', 'PROPN', 'PRON'],
+    posOneOf: ['NOUN', 'PROPN', 'PRON', 'ADJ', 'SYM'],
   }, 'noun');
 
   // Particle から (from)

@@ -32,22 +32,30 @@ export default linguisticRule('か-ないかのうちに', (r) => {
   // Pattern: Verb + か + Verb-stem + ない + か + の + うち + に
   // The two verbs should be the same, but in different forms (dictionary vs negative)
 
-  // First verb: dictionary form
-  const verb1 = r.tok({ posOneOf: ['VERB', 'AUX'] }, 'verb1');
+  // First verb: dictionary form - explicitly exclude "ない" from being matched
+  const verb1 = r.tok({
+    posOneOf: ['VERB', 'AUX'],
+    textRe: /^(?!ない).+$/ // Negative lookahead to exclude "ない"
+  }, 'verb1');
 
-  // First particle: か
+  // First particle: か (must come immediately after verb1)
   const ka1 = r.particle('か', 'ka1');
-  r.inOrder(verb1, ka1, 2);
+  r.inOrder(verb1, ka1, 1);
 
   // Second verb: in stem/negative form (before ない)
-  const verb2 = r.tok({ posOneOf: ['VERB', 'AUX'] }, 'verb2');
+  const verb2 = r.tok({
+    posOneOf: ['VERB', 'AUX'],
+    textRe: /^(?!ない).+$/ // Also exclude "ない"
+  }, 'verb2');
 
-  // Negative auxiliary ない attached to verb2
+  // Negative auxiliary ない
   const nai = r.aux({ lemma: 'ない' }, 'nai');
-  r.auxOf(verb2, nai);
 
-  r.inOrder(ka1, verb2, 4);
+  // verb2 should come immediately before nai
   r.inOrder(verb2, nai, 1);
+
+  // ka1 comes before verb2 (with some distance for compound verbs)
+  r.inOrder(ka1, verb2, 4);
 
   // Second particle: か (after nai)
   const ka2 = r.particle('か', 'ka2');

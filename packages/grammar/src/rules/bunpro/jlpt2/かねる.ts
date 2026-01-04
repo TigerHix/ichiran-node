@@ -29,11 +29,18 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Should be used only with transitive words (except わかる and できる)
  * - Formal register, used in business contexts
  * - Different from かねない (possibility of negative outcome)
+ * - Different from independent use of 兼ねる (to combine/serve dual purpose)
  *
  * GiNZA parse structure:
  * - し(VERB) + かねる(AUX) or かねる(VERB)
  * - 対応し(VERB) + 兼ねる(AUX/VERB)
  * - Various dependency relations (aux, fixed, compound, advcl)
+ *
+ * Important: Matches only when attached as auxiliary to verb stem
+ * to exclude:
+ * - かねない (negative form - different grammar, pattern is verb+かね+ない)
+ * - かねて (te-form - as in を兼ねて, stem is かね)
+ * - Independent use of 兼ねる (to combine/serve dual purpose)
  */
 export default linguisticRule('かねる', (r) => {
   r.either(
@@ -82,17 +89,10 @@ export default linguisticRule('かねる', (r) => {
       b.captureSpan('かねる', stem, kaneru);
     },
 
-    // Branch 5: かねる as VERB token (GiNZA sometimes parses this way)
+    // Branch 5: かねる as VERB token when attached as auxiliary
+    // Some parsings show it as VERB rather than AUX
     (b) => {
       const kaneru = b.verb({
-        lemmaOneOf: ['かねる', '兼ねる'],
-      }, 'kaneru');
-      b.capture(kaneru);
-    },
-
-    // Branch 6: Any token with lemma=かねる or 兼ねる (catch-all for unexpected parsings)
-    (b) => {
-      const kaneru = b.tok({
         lemmaOneOf: ['かねる', '兼ねる'],
       }, 'kaneru');
       b.capture(kaneru);

@@ -1,7 +1,7 @@
-import { GrammarEngine } from './program.js';
-import { rules } from './rules/bunpro/index.js';
+import { GrammarEngine } from './dist/program.js';
+import { rules } from './dist/rules/bunpro/index.js';
 
-const ginza = new (await import('./ginza/client.js')).GinzaClient();
+const ginza = new (await import('./dist/ginza/client.js')).GinzaClient();
 const engine = await GrammarEngine.create(rules, { client });
 
 const sentences = [

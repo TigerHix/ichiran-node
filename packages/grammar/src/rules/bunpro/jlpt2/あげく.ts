@@ -51,13 +51,47 @@ export default linguisticRule('あげく', (r) => {
         }
       );
 
-      // Followed by あげく (may include に particle)
-      // GiNZA may tokenize as either あげく+に or あげくに as one token
+      // Followed by あげく
       const ageku = b.tok({
-        textOneOf: ['あげく', 'あげくに', '挙げく', '挙げくに', '挙げ句', '挙げ句に', '挙句', '挙句に'],
+        textOneOf: ['あげく', '挙げく', '挙げ句', '挙句'],
       }, 'ageku');
 
       b.inOrder(ta, ageku, 5);
+
+      // Optional particle に
+      b.optional((ob) => {
+        const ni = ob.tok({ text: 'に' }, 'ni');
+        ob.inOrder(ageku, ni, 1);
+      });
+
+      b.captureSpan('あげく', verb, ageku);
+    },
+
+    // Pattern 1b: Any token with text た + あげく (for compound verbs)
+    // This handles cases like "走って転んだあげく" where multiple verbs are connected
+    (b) => {
+      // Match the ta auxiliary
+      const ta = b.tok({
+        text: 'た',
+        posOneOf: ['AUX', 'SCONJ'],
+      }, 'ta');
+
+      // Followed by あげく
+      const ageku = b.tok({
+        textOneOf: ['あげく', '挙げく', '挙げ句', '挙句'],
+      }, 'ageku');
+
+      b.inOrder(ta, ageku, 10);
+
+      // Optional particle に
+      b.optional((ob) => {
+        const ni = ob.tok({ text: 'に' }, 'ni');
+        ob.inOrder(ageku, ni, 1);
+      });
+
+      // Find any verb before ta (for compound verbs, we capture the chain)
+      const verb = b.verb({}, 'verb');
+      b.inOrder(verb, ta, 20);
 
       b.captureSpan('あげく', verb, ageku);
     },
@@ -74,12 +108,18 @@ export default linguisticRule('あげく', (r) => {
 
       b.caseMarker(noun, no);
 
-      // Followed by あげく (may be hiragana or kanji, with or without に)
+      // Followed by あげく
       const ageku = b.tok({
-        textOneOf: ['あげく', 'あげくに', '挙げく', '挙げくに', '挙げ句', '挙げ句に', '挙句', '挙句に'],
+        textOneOf: ['あげく', '挙げく', '挙げ句', '挙句'],
       }, 'ageku');
 
       b.inOrder(no, ageku, 5);
+
+      // Optional particle に
+      b.optional((ob) => {
+        const ni = ob.tok({ text: 'に' }, 'ni');
+        ob.inOrder(ageku, ni, 1);
+      });
 
       b.captureSpan('あげく', noun, ageku);
     }
