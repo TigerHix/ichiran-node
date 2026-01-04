@@ -68,6 +68,7 @@ import yo from './よ.js';
 import ne from './ね.js';
 import no from './の.js';
 import na from './な.js';
+import nonoha from './のは.js';
 import ageru from './あげる.js';
 import ano from './あの.js';
 import are from './あれ.js';
@@ -176,6 +177,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     ne,
     no,
     na,
+    nonoha,
     ndesu,
     negativeIAdjectives,
     nounMade,
