@@ -6,6 +6,7 @@ import iAdjectives from './い-adjectives.js';
 import iAdjectiveKuNakatta from './い-Adjective-くなかった.js';
 import iAdjectiveNoun from './い-adjective-noun.js';
 import iAdjectivePredicate from './い-adjective-predicate.js';
+import naAdjectiveNoun from './な-adjective-noun.js';
 import ndesu from './-んです-のです.js';
 import tsumorida from './つもりだ.js';
 import ka from './か.js';
@@ -103,6 +104,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     iAdjectiveNoun,
     iAdjectivePredicate,
     iAdjectives,
+    naAdjectiveNoun,
     ka,
     kaOr,
     kara,
