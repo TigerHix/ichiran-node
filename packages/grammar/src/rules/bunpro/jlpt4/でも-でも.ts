@@ -40,55 +40,64 @@ import { linguisticRule } from '../../../engine/lang.js';
  *   - ドル(NOUN) + だ(AUX, lemma=だ, dep=case, head=1→NOUN) + も(ADP, lemma=も, dep=case, head=1→NOUN)
  * - NEGATIVE (それでも): それでも行きます
  *   - それ(CCONJ,dep=cc) + で(ADP,dep=fixed) + も(ADP,dep=fixed)
- *
- * Note: The rule uses optional() to capture 3+ alternatives like AでもBでもCでも
  */
 export default linguisticRule('でも-でも', (r) => {
   // First noun + で + も pair
-  const noun1 = r.tok({ posOneOf: ['NOUN', 'PRON', 'PROPN'] }, 'noun1');
-  const de1 = r.tok({ textOneOf: ['で', 'だ'], posOneOf: ['ADP', 'AUX'], depOneOf: ['case', 'cop'] }, 'de1');
+  // Include ADJ for loanwords like ドル that GiNZA tags as adjectives
+  const noun1 = r.tok({ posOneOf: ['NOUN', 'PRON', 'PROPN', 'ADJ'] }, 'noun1');
   const mo1 = r.tok({ text: 'も', pos: 'ADP', dep: 'case' }, 'mo1');
-  r.caseMarker(noun1, de1);
   r.caseMarker(noun1, mo1);
-  r.inOrder(noun1, de1, 1);
-  r.inOrder(de1, mo1, 1);
+
+  // Handle both dep=case and dep=cop for で
+  r.either(
+    // dep=case: use caseMarker
+    (b) => {
+      const de1 = b.tok({ textOneOf: ['で', 'だ'], posOneOf: ['ADP', 'AUX'], dep: 'case' }, 'de1');
+      b.caseMarker(noun1, de1);
+      b.inOrder(noun1, de1, 1);
+      b.inOrder(de1, mo1, 1);
+      b.capture(de1, 'de1');
+    },
+    // dep=cop: use headChild
+    (b) => {
+      const de1 = b.tok({ textOneOf: ['で', 'だ'], posOneOf: ['ADP', 'AUX'], dep: 'cop' }, 'de1');
+      b.headChild(noun1, de1, 'cop');
+      b.inOrder(noun1, de1, 1);
+      b.inOrder(de1, mo1, 1);
+      b.capture(de1, 'de1');
+    }
+  );
 
   // Second noun + で + も pair
-  const noun2 = r.tok({ posOneOf: ['NOUN', 'PRON', 'PROPN'] }, 'noun2');
-  const de2 = r.tok({ textOneOf: ['で', 'だ'], posOneOf: ['ADP', 'AUX'], depOneOf: ['case', 'cop'] }, 'de2');
+  const noun2 = r.tok({ posOneOf: ['NOUN', 'PRON', 'PROPN', 'ADJ'] }, 'noun2');
   const mo2 = r.tok({ text: 'も', pos: 'ADP', dep: 'case' }, 'mo2');
-  r.caseMarker(noun2, de2);
   r.caseMarker(noun2, mo2);
-  r.inOrder(noun2, de2, 1);
-  r.inOrder(de2, mo2, 1);
 
-  // Must appear in order with reasonable distance (allow for commas)
+  // Handle both dep=case and dep=cop for で
+  r.either(
+    // dep=case: use caseMarker
+    (b) => {
+      const de2 = b.tok({ textOneOf: ['で', 'だ'], posOneOf: ['ADP', 'AUX'], dep: 'case' }, 'de2');
+      b.caseMarker(noun2, de2);
+      b.inOrder(noun2, de2, 1);
+      b.inOrder(de2, mo2, 1);
+      b.capture(de2, 'de2');
+    },
+    // dep=cop: use headChild
+    (b) => {
+      const de2 = b.tok({ textOneOf: ['で', 'だ'], posOneOf: ['ADP', 'AUX'], dep: 'cop' }, 'de2');
+      b.headChild(noun2, de2, 'cop');
+      b.inOrder(noun2, de2, 1);
+      b.inOrder(de2, mo2, 1);
+      b.capture(de2, 'de2');
+    }
+  );
+
+  // The second pair must come after the first (with reasonable distance for commas)
+  // Require de2 to come after mo1 to ensure proper ordering
   r.inOrder(mo1, noun2, 10);
+  r.inOrder(mo1, mo2, 10);
 
-  // Optional third pair (for patterns like AでもBでもCでも)
-  r.optional((b) => {
-    const noun3 = b.tok({ posOneOf: ['NOUN', 'PRON', 'PROPN'] }, 'noun3');
-    const de3 = b.tok({ textOneOf: ['で', 'だ'], posOneOf: ['ADP', 'AUX'], depOneOf: ['case', 'cop'] }, 'de3');
-    const mo3 = b.tok({ text: 'も', pos: 'ADP', dep: 'case' }, 'mo3');
-    b.caseMarker(noun3, de3);
-    b.caseMarker(noun3, mo3);
-    b.inOrder(noun3, de3, 1);
-    b.inOrder(de3, mo3, 1);
-    b.inOrder(mo2, noun3, 10);
-
-    // Optional fourth pair (for longer lists)
-    b.optional((c) => {
-      const noun4 = c.tok({ posOneOf: ['NOUN', 'PRON', 'PROPN'] }, 'noun4');
-      const de4 = c.tok({ textOneOf: ['で', 'だ'], posOneOf: ['ADP', 'AUX'], depOneOf: ['case', 'cop'] }, 'de4');
-      const mo4 = c.tok({ text: 'も', pos: 'ADP', dep: 'case' }, 'mo4');
-      c.caseMarker(noun4, de4);
-      c.caseMarker(noun4, mo4);
-      c.inOrder(noun4, de4, 1);
-      c.inOrder(de4, mo4, 1);
-      c.inOrder(mo3, noun4, 10);
-    });
-  });
-
-  // Capture from first noun through the last も we matched
+  // Capture from the first noun through the last も
   r.captureSpan('でも-でも', noun1, mo2);
 });
