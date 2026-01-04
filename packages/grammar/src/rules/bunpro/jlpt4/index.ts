@@ -4,10 +4,14 @@ import amarinai from './あまり-ない.js';
 import dandan from './だんだん.js';
 import dakedenaku from './だけでなく.js';
 import teshimau from './てしまう-ちゃう.js';
+import verbTeB from './verbて-b.js';
+import verbTeB2 from './verbて-b2.js';
+import verbTeNounDeB from './verb-て-noun-で-b.js';
 import ika from './いか.js';
 import igai from './いがい.js';
 import itasu from './いたす.js';
 import irassharu from './いらっしゃる.js';
+import shikanai from './しか-ない.js';
 import okudasai from './お-ください.js';
 import osuru from './お-する.js';
 import oninaru from './お-になる.js';
@@ -41,10 +45,13 @@ export const BUNPRO_JLPT4: Ruleset = {
     dandan,
     dakedenaku,
     teshimau,
+    verbTeB,
+    verbTeB2,
     ika,
     igai,
     itasu,
     irassharu,
+    shikanai,
     okudasai,
     osuru,
     oninaru,

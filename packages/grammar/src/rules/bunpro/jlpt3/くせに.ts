@@ -26,11 +26,7 @@ export default linguisticRule('くせに', (r) => {
     },
     // Pattern 2: い-adjective + くせに (two tokens)
     (b) => {
-<<<<<<< HEAD
       const adj = b.adj({}, 'adj');
-=======
-      const adj = b.adj({ pos: 'ADJ' }, 'adj');
->>>>>>> jlpt3-kuse-ni
       const kuse = b.tok({ textOneOf: ['くせ', '癖'] }, 'kuse');
       const ni = b.particle('に', 'ni');
       b.inOrder(adj, kuse, 10);
