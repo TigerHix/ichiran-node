@@ -87,6 +87,35 @@ import tokiita from './ときいた.js';
 import teyokatta from './てよかった.js';
 import toutou from './とうとう.js';
 import nakerebaikenai from './なければいけない.js';
+import nakerebanaranai from './なければならない.js';
+import nakute from './なくて.js';
+import nakuteconjunction from './なくて-conjunction.js';
+import nakutemoii from './なくてもいい.js';
+import naosu from './なおす.js';
+import nagara from './ながら.js';
+import nasai from './なさい.js';
+import nasaru from './なさる.js';
+import nado from './など.js';
+import tekurenyaoraenai from './てくれない-てもらえない.js';
+import tekureru from './てくれる.js';
+import tesumimasen from './てすみません.js';
+import tehoshii from './てほしい.js';
+import temiru from './てみる.js';
+import temo from './ても.js';
+import temorau from './てもらう.js';
+import toomou from './とおもう.js';
+import toomieru from './とみえる.js';
+import tosareteiru from './とされている.js';
+import tokikatoka from './とか-とか.ts';
+import tokangaeRareteiru from './とかんがえられている.js';
+import toki from './とき.js';
+import toii from './といい.js';
+import toiuKoto from './ということ.js';
+import toitemoii from './といってもいい.js';
+import toconditional from './と-conditional.ts';
+import totodochiraga from './と-と-どちらが.ts';
+import demo from './でも.js';
+import degozaimasu from './でございます.js';
 
 export const BUNPRO_JLPT4: Ruleset = {
   id: 'bunpro.jlpt4',
@@ -179,5 +208,34 @@ export const BUNPRO_JLPT4: Ruleset = {
     teyokatta,
     toutou,
     nakerebaikenai,
+    nakerebanaranai,
+    nakute,
+    nakuteconjunction,
+    nakutemoii,
+    naosu,
+    nagara,
+    nasai,
+    nasaru,
+    nado,
+    tekurenyaoraenai,
+    tekureru,
+    tesumimasen,
+    tehoshii,
+    temiru,
+    temo,
+    temorau,
+    toomou,
+    toomieru,
+    tosareteiru,
+    tokikatoka,
+    tokangaeRareteiru,
+    toki,
+    toii,
+    toiuKoto,
+    toitemoii,
+    toconditional,
+    totodochiraga,
+    demo,
+    degozaimasu,
   ],
 };
