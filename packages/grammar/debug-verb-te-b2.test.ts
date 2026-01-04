@@ -109,9 +109,7 @@ describe('Debug: verbて-b2 parsing', () => {
     console.log('\n=== メアリーがアメリカにかえって悲しいです。 ===');
     if (doc && doc.sentences && doc.sentences[0]) {
       doc.sentences[0].tokens.forEach((t, i) => {
-        if (t.pos === 'VERB' || t.pos === 'SCONJ' || t.text === 'て') {
-          console.log(`[${i}] ${t.text}: pos=${t.pos} lemma=${t.lemma} dep=${t.dep} head=${t.head}`);
-        }
+        console.log(`[${i}] ${t.text}: pos=${t.pos} lemma=${t.lemma} dep=${t.dep} head=${t.head}`);
       });
     }
   });

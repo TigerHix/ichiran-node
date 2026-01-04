@@ -29,7 +29,7 @@ export default linguisticRule('verbて-b2', (r) => {
 
       // Require that te is attached to the verb/adj
       b1.headChild(verb, te, 'mark');
-      b1.inOrder(verb, te, 1);
+      b1.inOrder(verb, te, 5); // Allow up to 5 tokens for auxiliaries (e.g., して)
 
       b1.capture(te);
     },
