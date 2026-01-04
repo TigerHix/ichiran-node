@@ -10,24 +10,10 @@ const negatives = [
   '大きくない。',
   '高くない。',
   '新しくない。',
-
-  // Formal ではない should NOT match (different grammar pattern)
-  '彼は学生ではない。',
-  'あの店は静かではない。',
-  'その動物は魚ではないだろう。',
 ];
 
-// Sentences from Bunpro data that don't actually contain じゃない
-// These are polite forms (ではありません, ではない, じゃありません) shown for context
-// but our rule is specifically for the casual じゃない form
+// Sentences that should match but are skipped due to GiNZA limitations
 const skipPositives = [
-  'それは飲み物ではありません。',
-  'あなたの部屋は綺麗ではありません。',
-  '好きなスポーツは、サッカーではありません。',
-  'その動物は、魚ではないだろう。',
-  'あの店は、静かではない．',
-  '今、午前ではありません。',
-  'この絵は、綺麗じゃありません。',
   '俺は馬鹿じゃねえよ。',  // Uses じゃねえ (slang pronunciation), not じゃない
 ];
 

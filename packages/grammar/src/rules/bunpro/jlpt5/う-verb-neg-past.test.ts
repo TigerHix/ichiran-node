@@ -6,30 +6,25 @@ import { BUNPRO_JLPT5 } from './index.js';
 
 // Sentences that can't be matched due to different grammatical structures:
 //
-// ANALYSIS: Polite forms of ある, and i-adjective forms
+// ANALYSIS: i-adjective forms only
 //
-// This rule matches u-verbs in negative past form, both casual (～なかった) and polite (～ませんでした):
+// This rule matches u-verbs in negative past form, both casual (～なかった) and polite (～ませんでした, ～なかったです):
 //   Casual: VERB conjClass="五段-*" + AUX lemma="ない" infl="連用形-促音便"
-//   Polite: VERB infl="連用形-一般" + AUX lemma="ます" infl="未然形-一般" + AUX lemma="ぬ" +
-//           AUX lemma="です" infl="連用形-一般" + AUX lemma="た"
+//   Polite 1: VERB infl="連用形-一般" + AUX lemma="ます" infl="未然形-一般" + AUX lemma="ぬ" +
+//             AUX lemma="です" infl="連用形-一般" + AUX lemma="た"
+//   Polite 2: VERB infl="未然形-一般" + AUX lemma="ない" infl="連用形-促音便" +
+//             AUX lemma="です" infl="連用形-一般" + AUX lemma="た"
 //
-// The Bunpro data also includes:
-// 1. Polite forms of ある (～ありませんでした) - ある is not a u-verb (五段):
-//    ある is an irregular verb with conjugation class "五段-ワア行-アル"
-//    The rule only matches 五段-* verb classes, not this irregular form.
+// The rule now handles the special case of ある (五段-ワア行-アル) for all three forms.
 //
-// 2. i-adjective なかった (as in 紙がなかった, お客さんに怪我はなかった) - different POS:
+// The Bunpro data also includes i-adjective なかった forms - different POS:
 //    ADJ conjClass="形容詞" (not AUX)
 //    This is the adjective ない (negation of ある), not the auxiliary verb ない.
 //    GiNZA parses these as ADJ, not AUX, so they can't be matched by this rule.
 //
-// CONCLUSION: Skip polite forms of ある and i-adjective forms. The rule matches both casual
-// and polite u-verb negative past forms for regular u-verbs.
+// CONCLUSION: Skip only i-adjective forms. The rule matches both casual and polite
+// u-verb negative past forms for regular u-verbs and ある.
 const skipPositives = [
-  // Polite forms of ある (～ありませんでした) - ある is not a regular u-verb
-  '紙がありませんでした。',
-  'そこには本がありませんでした。',
-
   // i-adjective なかった (negation of ある, not a verb)
   '紙がなかった。',
   'お客さんに怪我はなかった。[[お客さんに怪我はなかったです。お客さんに怪我はありませんでした。]]',

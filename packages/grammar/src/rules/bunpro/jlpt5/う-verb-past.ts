@@ -32,7 +32,7 @@ export default linguisticRule('う-verb-past', (r) => {
   r.either(
     // Branch for each godan conjugation class
     ...godanClasses.map((cc) =>
-      (b) => {
+      (b: any) => {
         const uVerb = b.verb({ conjugationClass: cc }, 'verb');
 
         // Past tense auxiliary た (or だ after n-sound verbs)

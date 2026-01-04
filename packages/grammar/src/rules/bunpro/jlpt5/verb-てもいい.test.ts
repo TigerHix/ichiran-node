@@ -33,42 +33,32 @@ const negatives = [
 //
 // ANALYSIS: GiNZA parses てもいい inconsistently in certain contexts
 //
-// GiNZA parses these sentences differently from the standard pattern:
+// After adding polite form support (～てもいいです), most sentences now match.
+// However, 3 sentences still fail due to GiNZA parsing issues:
 //
-// 1. "あそこであそんでもいいです。" (asonde demo ii desu)
-//    - あそん → pos=NOUN (not VERB), dep=obl
-//    - で (te-form) → pos=ADP (not SCONJ), dep=case
-//    - いい → pos=ADJ (not AUX), dep=root
-//    - This is completely different from the standard parse
-//
-// 2. "水をのんでもいいですか。" (mizu o nonde mo ii desu ka)
-//    - のん → pos=VERB, dep=obl (not root)
-//    - も → pos=ADP, dep=case (not fixed)
+// 1. "コートをぬいでもいいですか。" (nuide mo ii desu ka)
 //    - いい → pos=ADJ (not AUX), dep=root (not fixed)
+//    - Pattern requires AUX/fixed, but GiNZA assigns ADJ/root
 //
-// 3. "朝ごはんをつくってもいいです。" (asagohan o tsukutte mo ii desu)
-//    - Similar parsing inconsistency with dep structure
+// 2. "あそこであそんでもいいです。" (asonde mo ii desu)
+//    - あそん → pos=NOUN (not VERB), dep=obl
+//    - で (te-form) → pos=ADP (not SCONJ), dep=case (not mark)
+//    - いい → pos=ADJ (not AUX), dep=root (not fixed)
+//    - Completely different parse from standard pattern
+//
+// 3. "暑いです。水をのんでもいいですか。" (compound sentence)
+//    - Two separate sentences: "暑いです。" + "水をのんでもいいですか？"
+//    - Our pattern matcher expects single-sentence input
+//    - This is a test data issue, not a pattern issue
 //
 // Compare to working parses:
-//   "明日は家に行ってもいいですか？" → いい is AUX/fixed, も is ADP/fixed
-//   "この肉は食べててもいいです。" → いい is AUX/fixed, も is ADP/fixed
+//   "明日は家に行ってもいいですか？" → いい is AUX/fixed, も is ADP/fixed ✓
+//   "この肉は食べててもいいです。" → いい is AUX/fixed, も is ADP/fixed ✓
 //
-// The discriminator is the combination of:
-//   - いい pos=AUX (not ADJ) with dep=fixed
-//   - も pos=ADP with dep=fixed
-//   - て/で pos=SCONJ with dep=mark
-//
-// But GiNZA doesn't consistently assign these tags for all sentences.
-// When pos=ADJ for いい or dep=case for も, the pattern is indistinguishable
-// from other usages (e.g., "いい天気" = good weather).
-//
-// CONCLUSION: GiNZA limitation for these specific sentences.
 const skipPositives = [
-  'あそこであそんでもいいです。',
-  '水をのんでもいいですか。',
-  '暑いです。水をのんでもいいですか。',
-  '朝ごはんをつくってもいいです。',
   'コートをぬいでもいいですか。',
+  'あそこであそんでもいいです。',
+  '暑いです。水をのんでもいいですか。',
 ];
 
 describe('bunpro.jlpt5', () => {

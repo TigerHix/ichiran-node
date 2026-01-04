@@ -49,14 +49,14 @@ export default linguisticRule('polite-verb-endings', (r) => {
 
     // Pattern 3: Past polite ～ました
     // e.g., 食べました, 行きました, 飲みました
-    // GiNZA parses as: VERB (連用形-一般) + まし (ます in 連用形-タ接) + た
+    // GiNZA parses as: VERB (連用形-一般) + まし (ます in 連用形-促音便) + た
     (b3) => {
       const verb = b3.verb({
         inflectionForm: '連用形-一般',
       }, 'verb');
       const mashita = b3.aux({
         lemma: 'ます',
-        inflectionForm: '連用形-タ接',
+        inflectionForm: '連用形-促音便',
       }, 'mashita');
       b3.auxOf(verb, mashita);
       b3.captureSpan('polite-verb-endings', verb, mashita);

@@ -30,11 +30,26 @@ import verbTaNoun from './verb-た-noun.js';
 import verbNiIku from './verb-にいく.js';
 import verbNonPast from './verb-non-past.js';
 import da from './だ.js';
+import dake from './だけ.js';
 import dare from './だれ.js';
+import darou from './だろう.js';
+import dattadeshita from './だった-でした.js';
 import desu from './です.js';
+import deshou from './でしょう.js';
 import tai from './たい.js';
+import takotoegaaru from './たことがある.js';
+import tahogaii from './たほうがいい.js';
+import takusan from './たくさん.js';
+import taritari from './たり-たりする.js';
 import janai from './じゃない.js';
 import janakatta from './じゃなかった.js';
+import naAdjectiveNoun from './な-adjective-noun.js';
+import naAdjectivePredicate from './な-adjective-predicate.js';
+import naAdjectives from './な-adjectives.js';
+import naidekudasai from './ないでください.js';
+import nahogaii from './ないほうがいい.js';
+import nakucha from './なくちゃ-なきゃ.js';
+import nakuteisikenai from './なくてはいけない.js';
 import wa from './は.js';
 import wo from './を.js';
 import de from './で.js';
@@ -42,9 +57,13 @@ import deBy from './で-by.js';
 import ni from './に.js';
 import niSuru from './にする.js';
 import he from './へ.js';
+import teiru1 from './ている1.js';
+import teiru2 from './ている2.js';
+import teiru3 from './ている3.js';
 import to from './と.js';
 import toAnd from './と-and.js';
 import toWith from './と-with.js';
+import tte from './って.js';
 import yo from './よ.js';
 import ne from './ね.js';
 import no from './の.js';
@@ -65,6 +84,7 @@ import negativeIAdjectives from './negative-い-adjectives.js';
 import pastTenseIAdjectives from './past-tense-い-adjectives.js';
 import politeVerbEndings from './polite-verb-endings.js';
 import kirai from './きらい.js';
+import suki from './すき.js';
 import kurai1 from './くらい1.js';
 import kureru from './くれる.js';
 import kekkou from './けっこう.js';
@@ -78,7 +98,6 @@ import sono from './その.js';
 import sore from './それ.js';
 import doko from './どこ.js';
 import dono from './どの.js';
-import dare from './だれ.js';
 import dore from './どれ.js';
 import mo from './も.js';
 
@@ -92,6 +111,13 @@ export const BUNPRO_JLPT5: Ruleset = {
     ano,
     are,
     asoko,
+    dake,
+    da,
+    darou,
+    dattadeshita,
+    dare,
+    desu,
+    deshou,
     gaAru,
     gaAruNoun,
     gaBut,
@@ -103,6 +129,8 @@ export const BUNPRO_JLPT5: Ruleset = {
     iAdjectiveNoun,
     iAdjectivePredicate,
     iAdjectives,
+    janai,
+    janakatta,
     ka,
     kaOr,
     kara,
@@ -111,26 +139,37 @@ export const BUNPRO_JLPT5: Ruleset = {
     keredomo,
     kekkou,
     kirai,
+    suki,
     koko,
     kono,
     kore,
     kuru,
     kurai1,
     kureru,
-    da,
-    dare,
-    desu,
+    naAdjectiveNoun,
+    naAdjectivePredicate,
+    naAdjectives,
+    naidekudasai,
+    nahogaii,
+    nakucha,
+    nakuteisikenai,
+    tahogaii,
+    takotoegaaru,
+    takusan,
     tai,
-    janai,
-    janakatta,
+    taritari,
     de,
     deBy,
     ni,
     niSuru,
     he,
+    teiru1,
+    teiru2,
+    teiru3,
     to,
     toAnd,
     toWith,
+    tte,
     wo,
     wa,
     yo,
