@@ -27,9 +27,9 @@ import { linguisticRule } from '../../../engine/lang.js';
  */
 export default linguisticRule('ないと', (r) => {
   r.either(
-    // Pattern 1: Standard form with ない + と
+    // Pattern 1: Standard form with ない + と (SCONJ, dep=mark)
     // e.g., 勉強しないと, 行かないと, 食べないと
-    // Use pos=SCONJ to distinguish from quotation と (ADP)
+    // Uses dep=mark to distinguish from quotation と (ADP, dep=case)
     (b) => {
       const nai = b.tok(
         {
@@ -42,6 +42,7 @@ export default linguisticRule('ないと', (r) => {
         {
           text: 'と',
           pos: 'SCONJ',
+          dep: 'mark',
         },
         'to'
       );
@@ -50,7 +51,30 @@ export default linguisticRule('ないと', (r) => {
       b.captureSpan('ないと', nai, to);
     },
 
-    // Pattern 2: Colloquial form with ん + と
+    // Pattern 2: Standard form with ない + と (SCONJ, dep=case)
+    // e.g., 勉強しないと, 行かないと (te-form verbs use dep=case)
+    (b) => {
+      const nai = b.tok(
+        {
+          lemma: 'ない',
+        },
+        'nai'
+      );
+
+      const to = b.tok(
+        {
+          text: 'と',
+          pos: 'SCONJ',
+          dep: 'case',
+        },
+        'to'
+      );
+
+      b.inOrder(nai, to, 1);
+      b.captureSpan('ないと', nai, to);
+    },
+
+    // Pattern 3: Colloquial form with ん + と (SCONJ)
     // e.g., 勉強せんと, 行かんと (casual contraction)
     // GiNZA parses ん with lemma=ない
     (b) => {
@@ -72,6 +96,32 @@ export default linguisticRule('ないと', (r) => {
 
       b.inOrder(n, to, 1);
       b.captureSpan('ないと', n, to);
+    },
+
+    // Pattern 4: Sentence-final form with ない + と (ADP)
+    // e.g., 「合格したらまず両親や先生につたえないと。」
+    // Some sentence-final conditionals are parsed with と as ADP, dep=case
+    // Note: This may also match some quotation patterns, but those are structurally
+    // identical to conditionals (verb + nai + to + speech_verb), so we accept this limitation
+    (b) => {
+      const nai = b.tok(
+        {
+          lemma: 'ない',
+        },
+        'nai'
+      );
+
+      const to = b.tok(
+        {
+          text: 'と',
+          pos: 'ADP',
+          dep: 'case',
+        },
+        'to'
+      );
+
+      b.inOrder(nai, to, 1);
+      b.captureSpan('ないと', nai, to);
     }
   );
 });
