@@ -23,9 +23,8 @@ const negatives = [
   '危険だと知りつつも、行った。',
 ];
 
-// Skip the problematic sentence that can't be matched due to GiNZA tokenization
 const skipPositives = [
-  '暑がりなくせに、あの人は毎日セーターを着て仕事に行く。',
+  // All sentences now match - no skips needed
 ];
 
 describe('bunpro.jlpt3', () => {

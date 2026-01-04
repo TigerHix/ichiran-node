@@ -79,6 +79,16 @@ export default linguisticRule('くせに', (r) => {
       const prev = b.tok({}, 'prev');
       b.inOrder(prev, kuseni, 10);
       b.captureSpan('くせに', prev, kuseni);
+    },
+    // Pattern 8: GiNZA incorrectly parses "なくせ" as single token (lemma: なくす)
+    // This handles cases like "暑がりなくせに" where がる + な + くせ becomes がる + なくせ
+    (b) => {
+      const nakuse = b.tok({ text: 'なくせ', pos: 'NOUN' }, 'nakuse');
+      const ni = b.particle('に', 'ni');
+      b.inOrder(nakuse, ni, 1);
+      const prev = b.tok({}, 'prev');
+      b.inOrder(prev, nakuse, 10);
+      b.captureSpan('なくせに', prev, ni);
     }
   );
 });
