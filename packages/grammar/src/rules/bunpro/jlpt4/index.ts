@@ -101,6 +101,7 @@ import tekureru from './てくれる.js';
 import tesumimasen from './てすみません.js';
 import tehoshii from './てほしい.js';
 import temiru from './てみる.js';
+import younitehoshii from './ように-てほしい.js';
 import temo from './ても.js';
 import temorau from './てもらう.js';
 import toomou from './とおもう.js';
@@ -222,6 +223,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     tesumimasen,
     tehoshii,
     temiru,
+    younitehoshii,
     temo,
     temorau,
     toomou,
