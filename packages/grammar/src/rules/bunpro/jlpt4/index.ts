@@ -10,6 +10,7 @@ import nikigatsuku from './にきがつく.js';
 import nikui from './にくい.js';
 import nisurukusuru from './にする-くする.js';
 import nimieru from './にみえる.js';
+import mieru from './見える.js';
 import nodaroka from './のだろうか.js';
 import nonakade from './のなかで.js';
 import nonidespite from './のに-despite.js';
@@ -234,6 +235,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     nifrequency,
     nikigatsuku,
     nikui,
+    mieru,
     nimieru,
     nisurukusuru,
     nodaroka,
