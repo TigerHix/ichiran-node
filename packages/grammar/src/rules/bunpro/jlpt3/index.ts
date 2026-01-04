@@ -18,6 +18,7 @@ import karaIuTo from './から言うと.js';
 import gatai from './がたい.js';
 import gachi from './がち.js';
 import kiri from './きり.js';
+import tokoroga from './ところが.js';
 import gimi from './ぎみ.js';
 import kuseni from './くせに.js';
 import kurai2 from './くらい2.js';
@@ -102,6 +103,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     gatai,
     gachi,
     kiri,
+    tokoroga,
     gimi,
     kuseni,
     kurai2,
