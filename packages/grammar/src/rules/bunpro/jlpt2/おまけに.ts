@@ -8,7 +8,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * contexts, but can be used for positive situations as well.
  *
  * Structure:
- * - おまけに (conjunctive adverb)
+ * - おまけ (NOUN: freebie/discount) + に (ADP: case particle)
  *
  * Examples:
  * - 今日は仕事に遅刻して部長に怒られたし、おまけに取引先の人も怒らせちゃったから、
@@ -22,16 +22,22 @@ import { linguisticRule } from '../../../engine/lang.js';
  *   so I can't work at all.)
  *
  * Key discriminators:
- * - POS is ADV or CCONJ (can be parsed as either)
- * - This distinguishes from other conjunctions like その上, それに, さらに, etc.
+ * - おまけ must be a NOUN (lemma: おまけ)
+ * - に must be ADP with dep=case (case marker)
+ * - The particle must attach to the noun (head relationship)
+ * - This distinguishes from other uses of おまけ + に (e.g., locative)
  *
  * GiNZA parse structure:
- * - おまけに: text=おまけに, pos=ADV or CCONJ
+ * - おまけ: text=おまけ, lemma=おまけ, pos=NOUN
+ * - に: text=に, lemma=に, pos=ADP, dep=case, head=0
  */
 export default linguisticRule('おまけに', (r) => {
-  const omakeni = r.tok({
-    text: 'おまけに',
-    posOneOf: ['ADV', 'CCONJ'],
-  }, 'omakeni');
-  r.capture(omakeni);
+  const omake = r.noun({ lemma: 'おまけ' }, 'omake');
+  const ni = r.particle('に', 'ni');
+
+  // The particle must attach to the noun as a case marker
+  r.caseMarker(omake, ni);
+
+  // Capture both tokens
+  r.captureSpan('おまけに', omake, ni);
 });
