@@ -1,6 +1,7 @@
 import type { Ruleset } from '../../../ruleset.js';
 import atode from './あとで.js';
 import amarinai from './あまり-ない.js';
+import dandan from './だんだん.js';
 import dakedenaku from './だけでなく.js';
 import teshimau from './てしまう-ちゃう.js';
 import ika from './いか.js';
@@ -29,6 +30,7 @@ import numberAmountWa from './number-amount-は.js';
 import sou from './そう.js';
 import soreni from './それに.js';
 import tagaru from './たがる.js';
+import tsuzukeru from './つづける.js';
 import verbPassive from './Verb[passive].js';
 
 export const BUNPRO_JLPT4: Ruleset = {
@@ -36,6 +38,7 @@ export const BUNPRO_JLPT4: Ruleset = {
   rules: [
     atode,
     amarinai,
+    dandan,
     dakedenaku,
     teshimau,
     ika,
@@ -57,8 +60,9 @@ export const BUNPRO_JLPT4: Ruleset = {
     kotogadekiru,
     numberMo,
     sou,
-    tagaru,
     soreni,
+    tagaru,
+    tsuzukeru,
     gasuru,
     gahitsuyou,
     gahoshii,
