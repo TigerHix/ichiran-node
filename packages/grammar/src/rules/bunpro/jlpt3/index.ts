@@ -31,6 +31,7 @@ import kotoNi from './ことに.js';
 import kotoNiSuru from './ことにする.js';
 import kotoNiNaru from './ことになる.js';
 import kotoWaNai from './ことはない.js';
+import nashi from './なし.js';
 import saCasualYo from './さ-casualよ.js';
 import saFiller from './さ-filler.js';
 import saInterjection from './さ-interjection.js';
@@ -115,6 +116,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     kotoNiSuru,
     kotoNiNaru,
     kotoWaNai,
+    nashi,
     saCasualYo,
     saFiller,
     saInterjection,
