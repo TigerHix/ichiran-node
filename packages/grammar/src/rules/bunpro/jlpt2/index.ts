@@ -3,6 +3,7 @@ import tekoso from './-てこそ.js';
 import nouchide from './-のうち-で.js';
 import ageku from './あげく.js';
 import iwayuru from './いわゆる.js';
+import oyobi from './および.js';
 import kanaikanouniuchi from './か-ないかのうちに.js';
 import kaneru from './かねる.js';
 import karashite from './からして.js';
@@ -13,6 +14,6 @@ import sasuga from './さすが.js';
 
 export const BUNPRO_JLPT2: Ruleset = {
   id: 'bunpro.jlpt2',
-  rules: [tekoso, nouchide, ageku, iwayuru, kanaikanouniuchi, kaneru, karashite, karasurutokarasureba, kotoDakara, kotoNiNatteiru, sasuga],
+  rules: [tekoso, nouchide, ageku, iwayuru, oyobi, kanaikanouniuchi, kaneru, karashite, karasurutokarasureba, kotoDakara, kotoNiNatteiru, sasuga],
 };
 
