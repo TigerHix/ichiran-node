@@ -36,7 +36,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * verb endings. This may not cover all possible volitional forms.
  */
 export default linguisticRule('ようと思う-おうと思う', (r) => {
-  // Match common volitional forms + と + 思う
+  // Match volitional forms + と + 思う
   const vol = r.tok({
     textOneOf: [
       // Ichidan verbs ending in よう
@@ -81,7 +81,9 @@ export default linguisticRule('ようと思う-おうと思う', (r) => {
       '見てあげよう', 'みてあげよう',
       'たべてあげよう', 'かってあげよう',
       '勉強してあげよう', 'べんきょうしてあげよう',
-      '家事をしてもらおう',
+      '家事をしてもらおう', '弟にしてもらおう',
+      // Shorter forms (GiNZA might tokenize compound verbs differently)
+      'あげよう', 'もらおう', 'てあげ', 'てもら',
     ]
   }, 'vol');
 
@@ -91,27 +93,31 @@ export default linguisticRule('ようと思う-おうと思う', (r) => {
   r.either(
     // Pattern 1a: ようと思う (casual, present)
     (r) => {
-      const omou = r.tok({
-        textOneOf: ['思う', 'おもう'],
-        posOneOf: ['VERB', 'AUX']
-      }, 'omou');
+      const omou = r.tok({ textOneOf: ['思う', 'おもう'] }, 'omou');
       r.inOrder(to, omou, 3);
       r.captureSpan('ようと思う', vol, omou);
     },
+    // Pattern 1e: ようと思っている (continuous/state) - moved before 1b to prioritize
+    (r) => {
+      const omotteiru = r.verb({ textOneOf: ['思っ', 'おもっ'] }, 'omotteiru');
+      const te = r.tok({ text: 'て' }, 'te');
+      const iru = r.tok({ textOneOf: ['いる', 'てる'] }, 'iru');
+      r.inOrder(to, omotteiru, 3);
+      r.inOrder(omotteiru, te, 1);
+      r.inOrder(te, iru, 1);
+      r.captureSpan('ようと思う', vol, iru);
+    },
     // Pattern 1b: ようと思った (casual, past)
     (r) => {
-      const omou = r.tok({ textOneOf: ['思っ', 'おもっ'] }, 'omou');
-      const ta = r.aux({ lemma: 'た' }, 'ta');
-      r.inOrder(to, omou, 3);
-      r.auxOf(omou, ta);
+      const omotta = r.tok({ textOneOf: ['思っ', 'おもっ'] }, 'omotta');
+      const ta = r.tok({ text: 'た' }, 'ta');
+      r.inOrder(to, omotta, 3);
+      r.inOrder(omotta, ta, 1);
       r.captureSpan('ようと思う', vol, ta);
     },
     // Pattern 1c: ようと思います (polite, present)
     (r) => {
-      const omoi = r.tok({
-        textOneOf: ['思', 'おも', '思い', 'おもい'],
-        posOneOf: ['VERB', 'NOUN', 'AUX']
-      }, 'omoi');
+      const omoi = r.tok({ textOneOf: ['思', 'おも', '思い', 'おもい'] }, 'omoi');
       const masu = r.aux({ lemma: 'ます' }, 'masu');
       r.inOrder(to, omoi, 2);
       r.inOrder(omoi, masu, 1);
@@ -119,33 +125,20 @@ export default linguisticRule('ようと思う-おうと思う', (r) => {
     },
     // Pattern 1d: ようと思いました (polite, past)
     (r) => {
-      const omomashi = r.tok({
-        textOneOf: ['思い', 'おもい', '思', 'おも'],
-        posOneOf: ['VERB', 'NOUN', 'AUX']
-      }, 'omomashi');
+      const omomashi = r.tok({ textOneOf: ['思い', 'おもい', '思', 'おも'] }, 'omomashi');
       const mashita = r.aux({ lemma: 'ました' }, 'mashita');
       r.inOrder(to, omomashi, 2);
       r.inOrder(omomashi, mashita, 1);
       r.captureSpan('ようと思う', vol, mashita);
     },
-    // Pattern 1e: ようと思っている (continuous/state)
-    (r) => {
-      const omou = r.tok({ textOneOf: ['思っ', 'おもっ'] }, 'omou');
-      const te = r.aux({ text: 'て' }, 'te');
-      const iru = r.aux({ lemma: 'いる' }, 'iru');
-      r.inOrder(to, omou, 3);
-      r.auxOf(omou, te);
-      r.auxOf(te, iru);
-      r.captureSpan('ようと思う', vol, iru);
-    },
     // Pattern 1f: ようと思っています (polite continuous)
     (r) => {
-      const omou = r.tok({ textOneOf: ['思っ', 'おもっ'] }, 'omou');
-      const te = r.aux({ text: 'て' }, 'te');
+      const omotteimasu = r.tok({ textOneOf: ['思っ', 'おもっ'] }, 'omotteimasu');
+      const te = r.tok({ text: 'て' }, 'te');
       const imasu = r.aux({ lemma: 'います' }, 'imasu');
-      r.inOrder(to, omou, 3);
-      r.auxOf(omou, te);
-      r.auxOf(te, imasu);
+      r.inOrder(to, omotteimasu, 3);
+      r.inOrder(omotteimasu, te, 1);
+      r.inOrder(te, imasu, 1);
       r.captureSpan('ようと思う', vol, imasu);
     }
   );
