@@ -86,6 +86,7 @@ import nagara from './ながら.js';
 import nasai from './なさい.js';
 import nasaru from './なさる.js';
 import nado from './など.js';
+import ra from './ら.js';
 import wahitotsu from './は-の一つだ.js';
 import hajimeru from './はじめる.js';
 import hazugaai from './はずがない.js';
@@ -217,6 +218,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     moshi,
     nado,
     naihanai,
+    ra,
     naide,
     naito,
     nakerebaikenai,
