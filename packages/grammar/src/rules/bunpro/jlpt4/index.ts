@@ -29,6 +29,7 @@ import gahitsuyou from './がひつよう.js';
 import gahoshii from './がほしい.js';
 import gamirareru from './がみられる.js';
 import kotogadekiru from './ことができる.js';
+import dasu from './だす.js';
 import numberMo from './number-も.js';
 import numberAmountWa from './number-amount-は.js';
 import sou from './そう.js';
@@ -47,6 +48,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     teshimau,
     verbTeB,
     verbTeB2,
+    verbTeNounDeB,
     ika,
     igai,
     itasu,
@@ -65,6 +67,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     causative,
     questionPhraseKa,
     kotogadekiru,
+    dasu,
     numberMo,
     sou,
     soreni,
