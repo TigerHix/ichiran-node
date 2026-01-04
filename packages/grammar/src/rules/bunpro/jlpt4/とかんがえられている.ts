@@ -60,7 +60,7 @@ export default linguisticRule('とかんがえられている', (r) => {
     (b1) => {
       // 考える (kangaeru) in passive form (未然形-一般)
       const kangaeru = b1.verb({
-        lemma: '考える',
+        lemma: 'かんがえる',
         inflectionForm: '未然形-一般',
       }, 'kangaeru');
 
@@ -114,7 +114,7 @@ export default linguisticRule('とかんがえられている', (r) => {
 
       // Rest is same as Pattern 1
       const kangaeru = b2.verb({
-        lemma: '考える',
+        lemma: 'かんがえる',
         inflectionForm: '未然形-一般',
       }, 'kangaeru');
 
@@ -152,13 +152,14 @@ export default linguisticRule('とかんがえられている', (r) => {
     (b3) => {
       // 思う (omou) in passive form (未然形-一般)
       const omou = b3.verb({
-        lemma: '思う',
+        lemma: 'おもう',
         inflectionForm: '未然形-一般',
       }, 'omou');
 
-      // Passive auxiliary われる (wareru) in 連用形-一般
+      // Passive auxiliary れる (reru) in 連用形-一般
+      // Note: GiNZA analyzes おもわ (stem of おもう) + れ (aux, lemma=れる)
       const wareru = b3.aux({
-        lemma: 'われる',
+        lemma: 'れる',
         inflectionForm: '連用形-一般',
       }, 'wareru');
 
@@ -205,12 +206,12 @@ export default linguisticRule('とかんがえられている', (r) => {
 
       // Rest is same as Pattern 3
       const omou = b4.verb({
-        lemma: '思う',
+        lemma: 'おもう',
         inflectionForm: '未然形-一般',
       }, 'omou');
 
       const wareru = b4.aux({
-        lemma: 'われる',
+        lemma: 'れる',
         inflectionForm: '連用形-一般',
       }, 'wareru');
 

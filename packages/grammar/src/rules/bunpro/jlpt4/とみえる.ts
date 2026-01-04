@@ -40,7 +40,7 @@ export default linguisticRule('とみえる', (r) => {
     // e.g., 暑いとみえる, 知っていたとみえる
     (b1) => {
       const mieru = b1.verb({
-        lemma: '見える',
+        lemma: 'みえる',
         inflectionForm: '終止形-一般',
       }, 'mieru');
 
@@ -52,31 +52,37 @@ export default linguisticRule('とみえる', (r) => {
     // e.g., 暑いとみえて、汗をかいている, 難しかったとみえて
     (b2) => {
       const miete = b2.verb({
-        lemma: '見える',
-        inflectionForm: '連用形-て',
+        lemma: 'みえる',
+        inflectionForm: '連用形-一般',
       }, 'mieru');
 
+      const te = b2.tok({ text: 'て', pos: 'SCONJ' }, 'te');
+      b2.inOrder(miete, te, 1);
+
       b2.inOrder(to, miete, 1);
-      b2.captureSpan('とみえる', to, miete);
+      b2.captureSpan('とみえる', to, te);
     },
 
     // Pattern 3: Past tense (とみえた)
     // e.g., 留守とみえた, 驚いたとみえる
     (b3) => {
       const mieta = b3.verb({
-        lemma: '見える',
-        inflectionFormOneOf: ['連体形-タ', '終止形-タ'],
+        lemma: 'みえる',
+        inflectionForm: '連用形-一般',
       }, 'mieru');
 
+      const ta = b3.aux({ text: 'た' }, 'ta');
+      b3.inOrder(mieta, ta, 1);
+
       b3.inOrder(to, mieta, 1);
-      b3.captureSpan('とみえる', to, mieta);
+      b3.captureSpan('とみえる', to, ta);
     },
 
     // Pattern 4: Polite form (とみえます)
     // e.g., 暑いとみえます, 静かだとみえます
     (b4) => {
       const mieru = b4.verb({
-        lemma: '見える',
+        lemma: 'みえる',
         inflectionForm: '連用形-一般',
       }, 'mieru');
       const masu = b4.aux({
@@ -94,17 +100,21 @@ export default linguisticRule('とみえる', (r) => {
     // e.g., 難しかったとみえてまして
     (b5) => {
       const miete = b5.verb({
-        lemma: '見える',
-        inflectionForm: '連用形-て',
+        lemma: 'みえる',
+        inflectionForm: '連用形-一般',
       }, 'mieru');
+
+      const te = b5.tok({ text: 'て', pos: 'SCONJ' }, 'te');
+      b5.inOrder(miete, te, 1);
+
       const mashite = b5.aux({
         lemma: 'ます',
         dep: 'aux',
         inflectionForm: '連用形-イ音便',
       }, 'mashite');
+      b5.inOrder(te, mashite, 1);
 
       b5.inOrder(to, miete, 1);
-      b5.inOrder(miete, mashite, 1);
       b5.captureSpan('とみえる', to, mashite);
     }
   );

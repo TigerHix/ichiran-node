@@ -53,10 +53,10 @@ export default linguisticRule('とされている', (r) => {
     // Pattern 1: とされている (standard/casual form)
     // e.g., 重要とされている、議論が苦手とされている
     (b1) => {
-      // する (suru) in passive form (未然形-一般)
+      // する (suru) in passive form (未然形-一般 or 未然形-サ)
       const suru = b1.verb({
         lemma: 'する',
-        inflectionForm: '未然形-一般',
+        inflectionFormOneOf: ['未然形-一般', '未然形-サ'],
       }, 'suru');
 
       // Passive auxiliary れる (reru) in 連用形-一般
@@ -95,6 +95,47 @@ export default linguisticRule('とされている', (r) => {
       b1.captureSpan('とされている', to, iru);
     },
 
+    // Pattern 1.5: とされていた (past progressive, without だ)
+    // e.g., 重要とされていた
+    (b15) => {
+      const suru = b15.verb({
+        lemma: 'する',
+        inflectionFormOneOf: ['未然形-一般', '未然形-サ'],
+      }, 'suru');
+
+      const reru = b15.aux({
+        lemma: 'れる',
+        inflectionForm: '連用形-一般',
+      }, 'reru');
+
+      b15.auxOf(suru, reru);
+
+      const te = b15.tok({
+        text: 'て',
+        pos: 'SCONJ',
+        dep: 'mark',
+      }, 'te');
+
+      const ita = b15.tok({
+        text: 'い',
+        lemma: 'いる',
+        posOneOf: ['VERB', 'AUX'],
+        inflectionForm: '連用形-一般',
+      }, 'ita');
+
+      const ta = b15.aux({
+        text: 'た',
+      }, 'ta');
+
+      b15.inOrder(to, suru, 3);
+      b15.inOrder(suru, reru, 1);
+      b15.inOrder(reru, te, 1);
+      b15.inOrder(te, ita, 1);
+      b15.inOrder(ita, ta, 1);
+
+      b15.captureSpan('とされている', to, ta);
+    },
+
     // Pattern 2: だとされている (after noun/na-adj)
     // e.g., 必要だとされている、王様だとされている
     (b2) => {
@@ -110,7 +151,7 @@ export default linguisticRule('とされている', (r) => {
       // Rest is same as Pattern 1
       const suru = b2.verb({
         lemma: 'する',
-        inflectionForm: '未然形-一般',
+        inflectionFormOneOf: ['未然形-一般', '未然形-サ'],
       }, 'suru');
 
       const reru = b2.aux({
@@ -142,12 +183,61 @@ export default linguisticRule('とされている', (r) => {
       b2.captureSpan('とされている', da, iru);
     },
 
+    // Pattern 2.5: とされていた (past progressive)
+    // e.g., 悪魔の音楽とされていた、女のものだとされていた
+    (b25) => {
+      const da = b25.aux({
+        lemma: 'だ',
+        inflectionFormOneOf: ['終止形-一般', '連体形-一般'],
+      }, 'da');
+
+      b25.inOrder(da, to, 1);
+
+      const suru = b25.verb({
+        lemma: 'する',
+        inflectionFormOneOf: ['未然形-一般', '未然形-サ'],
+      }, 'suru');
+
+      const reru = b25.aux({
+        lemma: 'れる',
+        inflectionForm: '連用形-一般',
+      }, 'reru');
+
+      b25.auxOf(suru, reru);
+
+      const te = b25.tok({
+        text: 'て',
+        pos: 'SCONJ',
+        dep: 'mark',
+      }, 'te');
+
+      // Past progressive: いて + た (いる in 連用形-一般 + た)
+      const ita = b25.tok({
+        text: 'い',
+        lemma: 'いる',
+        posOneOf: ['VERB', 'AUX'],
+        inflectionForm: '連用形-一般',
+      }, 'ita');
+
+      const ta = b25.aux({
+        text: 'た',
+      }, 'ta');
+
+      b25.inOrder(to, suru, 3);
+      b25.inOrder(suru, reru, 1);
+      b25.inOrder(reru, te, 1);
+      b25.inOrder(te, ita, 1);
+      b25.inOrder(ita, ta, 1);
+
+      b25.captureSpan('とされている', da, ta);
+    },
+
     // Pattern 3: とされてる (colloquial contraction - てる instead of ている)
     // e.g., 重要とされてる、一番とされてる
     (b3) => {
       const suru = b3.verb({
         lemma: 'する',
-        inflectionForm: '未然形-一般',
+        inflectionFormOneOf: ['未然形-一般', '未然形-サ'],
       }, 'suru');
 
       const reru = b3.aux({
@@ -189,7 +279,7 @@ export default linguisticRule('とされている', (r) => {
 
       const suru = b4.verb({
         lemma: 'する',
-        inflectionForm: '未然形-一般',
+        inflectionFormOneOf: ['未然形-一般', '未然形-サ'],
       }, 'suru');
 
       const reru = b4.aux({
