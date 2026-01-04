@@ -32,6 +32,7 @@ import kotoNiNaru from './ことになる.js';
 import kotoWaNai from './ことはない.js';
 import saCasualYo from './さ-casualよ.js';
 import dewaSoredewa from './では-それでは-じゃあ.js';
+import zunihairarenai from './ずにはいられない.js';
 import youToShinai from './-ようとしない.js';
 import youToShitaGa from './verb-volitional-としたが.js';
 import zutto2 from './ずっと2.js';
@@ -71,6 +72,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     kotoWaNai,
     saCasualYo,
     dewaSoredewa,
+    zunihairarenai,
     youToShinai,
     youToShitaGa,
     zutto2,
