@@ -80,6 +80,7 @@ import uVerbPast from './う-verb-past.js';
 import uVerbNegPast from './う-verb-neg-past.js';
 import nounMade from './noun-まで.js';
 import vMade from './v-まで.js';
+import nogaheta from './のがへた.js';
 import negativeIAdjectives from './negative-い-adjectives.js';
 import pastTenseIAdjectives from './past-tense-い-adjectives.js';
 import politeVerbEndings from './polite-verb-endings.js';
@@ -178,6 +179,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     na,
     ndesu,
     negativeIAdjectives,
+    nogaheta,
     nounMade,
     pastTenseIAdjectives,
     politeVerbEndings,
