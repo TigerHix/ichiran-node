@@ -30,6 +30,7 @@ import kotoNiSuru from './ことにする.js';
 import kotoNiNaru from './ことになる.js';
 import kotoWaNai from './ことはない.js';
 import saCasualYo from './さ-casualよ.js';
+import sudeni from './すでに.js';
 import dewaSoredewa from './では-それでは-じゃあ.js';
 import youToShinai from './-ようとしない.js';
 import sousuruto from './そうすると.js';
@@ -67,6 +68,7 @@ export const BUNPRO_JLPT3: Ruleset = {
     kotoNiNaru,
     kotoWaNai,
     saCasualYo,
+    sudeni,
     dewaSoredewa,
     youToShinai,
     sousuruto,

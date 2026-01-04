@@ -12,6 +12,13 @@ export default linguisticRule('すでに', (r) => {
   // POS='ADV' (adverb)
   // Used to modify verbs, adjectives, or appear at sentence start
 
+<<<<<<< HEAD
+=======
+  const sudeni = r.adv({
+    lemma: 'すでに',
+  }, 'sudeni');
+
+>>>>>>> jlpt3-sudeni
   r.either(
     // Branch 1: すでに as adverb modifying verbs/adj (dep='advmod')
     (branch) => {
