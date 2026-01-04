@@ -36,6 +36,7 @@ import dakede from './だけで.js';
 import dasu from './だす.js';
 import dandan from './だんだん.js';
 import daitai from './だいたい.js';
+import dai from './代.js';
 import dagadega from './だが・ですが.js';
 import demo from './でも.js';
 import demodemo from './でも-でも.js';
@@ -169,6 +170,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     causative,
     causativepassive,
     daitai,
+    dai,
     dagadega,
     dakede,
     dakedenaku,
