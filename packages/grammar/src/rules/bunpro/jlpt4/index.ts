@@ -17,14 +17,18 @@ import kata from './かた.js';
 import kadouka from './かどうか.js';
 import kana from './かな.js';
 import kamoshirenai from './かもしれない.js';
+import questionPhraseKa from './question-phrase-か.js';
 import gasuru from './がする.js';
 import gahitsuyou from './がひつよう.js';
 import gahoshii from './がほしい.js';
 import gamirareru from './がみられる.js';
 import kotogadekiru from './ことができる.js';
+import numberMo from './number-も.js';
+import numberAmountWa from './number-amount-は.js';
 import sou from './そう.js';
 import soreni from './それに.js';
 import tagaru from './たがる.js';
+import verbPassive from './Verb[passive].js';
 
 export const BUNPRO_JLPT4: Ruleset = {
   id: 'bunpro.jlpt4',
@@ -47,7 +51,9 @@ export const BUNPRO_JLPT4: Ruleset = {
     kadouka,
     kana,
     kamoshirenai,
+    questionPhraseKa,
     kotogadekiru,
+    numberMo,
     sou,
     tagaru,
     soreni,
@@ -55,5 +61,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     gahitsuyou,
     gahoshii,
     gamirareru,
+    numberAmountWa,
+    verbPassive,
   ],
 };
