@@ -73,10 +73,10 @@ export default linguisticRule('question-phrase-か', (r) => {
       const verb1 = r2.verb({}, 'verb1');
 
       // The particle か that marks the embedded question
-      // Use dep=mark to exclude the かどうか pattern (where second か has dep=case)
+      // Use dep=mark to exclude some patterns (though かどうか also has dep=mark on first か)
       const ka = r2.tok({
         text: 'か',
-        pos: 'PART',  // Only PART, not ADP (which is used in かどうか)
+        pos: 'PART',  // Only PART, not ADP
         dep: 'mark',  // Embedded question marker
       }, 'ka');
 
@@ -93,8 +93,9 @@ export default linguisticRule('question-phrase-か', (r) => {
       }, 'verb2');
 
       // Require the sequence: verb + か + verb (of knowing)
+      // Use smaller distance to avoid matching かどうか patterns (which have intervening tokens)
       r2.inOrder(verb1, ka, 2);
-      r2.inOrder(ka, verb2, 5);
+      r2.inOrder(ka, verb2, 2);  // Reduced to 2 to avoid かどうか (distance 3)
 
       // Capture the question phrase (verb + か)
       r2.captureSpan('question-phrase-か', verb1, ka);
