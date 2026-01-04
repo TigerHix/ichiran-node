@@ -81,6 +81,7 @@ import dono from './どの.js';
 import dare from './だれ.js';
 import dore from './どれ.js';
 import mo from './も.js';
+import takusan from './たくさん.js';
 
 export const BUNPRO_JLPT5: Ruleset = {
   id: 'bunpro.jlpt5',
@@ -121,6 +122,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     dare,
     desu,
     tai,
+    takusan,
     janai,
     janakatta,
     de,
