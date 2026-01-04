@@ -1,4 +1,4 @@
-import { describe } from 'bun:test';
+import { describe, it } from 'bun:test';
 import { useSharedEngine } from './src/rules/bunpro/_test/engine.js';
 
 describe('DEBUG: Analyze だす parses', () => {

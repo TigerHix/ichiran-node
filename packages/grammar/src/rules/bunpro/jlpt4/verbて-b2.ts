@@ -12,13 +12,25 @@ export default linguisticRule('verbて-b2', (r) => {
   // This grammatically is similar to verb-て-b (sequence) and verbて-b (contrast),
   // but pragmatically expresses cause/reason instead. The "because" nuance is
   // influenced by the second clause expressing something uncontrollable or a result.
+  //
+  // Note: This rule will match te-forms used in other patterns (e.g., ている, てある, てしまう).
+  // This is acceptable because the distinction is semantic/contextual, not structural.
+  // Those patterns have their own specific grammar rules that take precedence.
 
   r.either(
     // Pattern 1: SCONJ て/で as mark (verb te-forms, i-adj te-forms)
     (b1) => {
-      // Match any て/で that is a conjunctive particle (mark)
-      // This handles verbs and i-adjectives in te-form
+      // Match verb/adj in te-form (must have dep=advcl for causal usage)
+      // This excludes request forms where the verb has dep=root
+      const verb = b1.tok({ dep: 'advcl' }, 'verb');
+
+      // Match て/で as conjunctive particle
       const te = b1.tok({ textOneOf: ['て', 'で'], pos: 'SCONJ', dep: 'mark' }, 'te');
+
+      // Require that te is attached to the verb/adj
+      b1.headChild(verb, te, 'mark');
+      b1.inOrder(verb, te, 1);
+
       b1.capture(te);
     },
     // Pattern 2: AUX で (na-adjective + だ → で)
