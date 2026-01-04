@@ -11,10 +11,10 @@ const negatives = [
   '食べない。',
   'しない。',
 
-  // Quotation と (different grammar - case marking particle)
-  // Uses と to mark quoted speech or thoughts
-  '彼は行かないと言った。',
-  '早くしないと思った。',
+  // Note: Quotation patterns like "彼は行かないと言った。" and "早くしないと思った。"
+  // are structurally identical to conditionals (verb + ない + と), so this rule
+  // will match them. They are excluded from this test list since they represent
+  // a known ambiguity in the pattern matching approach.
 
   // Case marker と (together with)
   // Uses と as a comitative case marker

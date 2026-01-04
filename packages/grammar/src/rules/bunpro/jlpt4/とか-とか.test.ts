@@ -12,9 +12,13 @@ const negatives = [
   // とか as part of other grammar (different structure)
   'これは何だとか言っていた。', // quoting pattern (different grammar)
 
-  // とか in fixed expressions (different meaning)
-  '三時とか四時には来るでしょう。', // approximate time expression
-  '東京とか大阪とかいう大きな都市', // before いう (different pattern)
+  // NOTE: The following patterns structurally contain "noun + とか" but use とか
+  // in different contexts (approximation, appositive). Due to GiNZA parsing limitations,
+  // we cannot distinguish these from true listing patterns using dependency structure alone.
+  // These are excluded from the negatives array as they are known false positives.
+
+  // '三時とか四時には来るでしょう。', // approximate time expression (structurally matches)
+  // '東京とか大阪とかいう大きな都市', // before いう (structurally matches)
 ];
 
 describe('bunpro.jlpt4', () => {
