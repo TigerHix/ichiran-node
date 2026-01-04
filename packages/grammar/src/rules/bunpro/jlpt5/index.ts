@@ -6,6 +6,7 @@ import iAdjectives from './い-adjectives.js';
 import iAdjectiveKuNakatta from './い-Adjective-くなかった.js';
 import iAdjectiveNoun from './い-adjective-noun.js';
 import iAdjectivePredicate from './い-adjective-predicate.js';
+import ninaruKunaru from './になる-くなる.js';
 import ndesu from './-んです-のです.js';
 import tsumorida from './つもりだ.js';
 import ka from './か.js';
@@ -67,6 +68,7 @@ import tte from './って.js';
 import yo from './よ.js';
 import ne from './ね.js';
 import no from './の.js';
+import noNounOmission from './の-noun-ommission.js';
 import na from './な.js';
 import ageru from './あげる.js';
 import ano from './あの.js';
@@ -100,6 +102,16 @@ import doko from './どこ.js';
 import dono from './どの.js';
 import dore from './どれ.js';
 import mo from './も.js';
+import mou from './もう.js';
+import mashou from './ましょう.js';
+import heiku from './へいく.js';
+import nowa from './のは.js';
+import nonakadegaichiban from './のなかで-がいちばん.js';
+import nosukinote from './のがすき.js';
+import nogajouzu from './のがじょうず.js';
+import noheta from './のがへた.js';
+import nanikahananimo from './なにか-なにも.js';
+import nakutehanaranai from './なくてはならない.js';
 
 export const BUNPRO_JLPT5: Ruleset = {
   id: 'bunpro.jlpt5',
@@ -150,6 +162,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     naAdjectivePredicate,
     naAdjectives,
     naidekudasai,
+    ninaruKunaru,
     nahogaii,
     nakucha,
     nakuteisikenai,
@@ -175,6 +188,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     yo,
     ne,
     no,
+    noNounOmission,
     na,
     ndesu,
     negativeIAdjectives,
@@ -190,6 +204,16 @@ export const BUNPRO_JLPT5: Ruleset = {
     dono,
     dore,
     mo,
+    mou,
+    mashou,
+    heiku,
+    nowa,
+    nonakadegaichiban,
+    nosukinote,
+    nogajouzu,
+    noheta,
+    nanikahananimo,
+    nakutehanaranai,
     tekara,
     teKudasai,
     teWaIkenai,
