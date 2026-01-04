@@ -26,7 +26,7 @@ export default linguisticRule('くせに', (r) => {
     },
     // Pattern 2: い-adjective + くせに (two tokens)
     (b) => {
-      const adj = b.adj({ pos: 'ADJ' }, 'adj');
+      const adj = b.adj({}, 'adj');
       const kuse = b.tok({ textOneOf: ['くせ', '癖'] }, 'kuse');
       const ni = b.particle('に', 'ni');
       b.inOrder(adj, kuse, 10);

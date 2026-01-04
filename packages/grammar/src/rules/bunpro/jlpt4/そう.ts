@@ -117,12 +117,13 @@ export default linguisticRule('そう', (r) => {
       b.captureSpan('そう', stem, sou);
     },
 
-    // Branch 6: Na-adjective (ADV) + そう
-    // Example: かんたんそうだ (かんたん is ADV, tag=形状詞-一般)
+    // Branch 6: Na-adjective (ADV/NOUN) + そう
+    // Example: かんたんそうだ (かんたん can be ADV or NOUN depending on context)
     // そう is ADV with tag=形状詞-助動詞語幹 (not hearsay which is 名詞-助動詞語幹)
+    // Note: GiNZA tags かんたん as NOUN in some contexts (e.g., with sentence prefixes)
     (b) => {
       const stem = b.tok({
-        pos: 'ADV',
+        posOneOf: ['ADV', 'NOUN'],  // GiNZA tags vary by context
         tag: '形状詞-一般',
       }, 'stem');
       const sou = b.tok({

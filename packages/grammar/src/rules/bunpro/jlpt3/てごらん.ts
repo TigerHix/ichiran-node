@@ -1,0 +1,60 @@
+import { linguisticRule } from '../../../engine/lang.js';
+
+export default linguisticRule('てごらん', (r) => {
+  // てごらん (te-form verb + ごらん): "try doing X" / "please try X"
+  // An honorific expression used to ask someone to attempt to do something,
+  // or to look at something at their leisure.
+  //
+  // Structure: Verb[て-form] + ごらん
+  // Variants: Verb[て-form] + ごらんなさい (slightly stronger, more like a command)
+  //
+  // GiNZA parsing:
+  //   - Verb in て-form: VERB with various inflection forms + SCONJ (て/で) with dep=mark
+  //   - ごらん alone: NOUN with lemma=ごらん, dep=ROOT
+  //   - ごらんなさい: VERB (ごらん) + AUX (なさい with lemma=なさる)
+  //
+  // Examples:
+  //   読んでごらん → 読ん[VERB,acl] + で[SCONJ,mark] + ごらん[NOUN,ROOT]
+  //   捕まえてごらんなさい → 捕まえ[VERB,advcl] + て[SCONJ,mark] + ごらん[VERB,ROOT] + なさい[AUX,aux]
+  //
+  // We use r.either() to handle the two variants:
+  //   1. Verb-て + ごらん (NOUN)
+  //   2. Verb-て + ごらん (VERB) + なさい (AUX)
+
+  r.either(
+    // Variant 1: Verb-て + ごらん (basic form)
+    (b1) => {
+      // Match any verb て-form (all conjunctive variants)
+      // We don't use inflectionForm constraint because some て-forms parse
+      // without explicit inflectionForm in GiNZA
+      const verbTe = b1.tok({ posOneOf: ['VERB', 'AUX'] }, 'verbTe');
+      const te = b1.tok({ textOneOf: ['て', 'で'], pos: 'SCONJ', dep: 'mark' }, 'te');
+      const goran = b1.tok({ lemma: 'ごらん', posOneOf: ['NOUN', 'VERB'] }, 'goran');
+
+      // Structural constraints
+      b1.headChild(verbTe, te, 'mark');
+      b1.inOrder(verbTe, te, 1);
+      b1.inOrder(te, goran, 1);
+
+      // Capture the full pattern
+      b1.captureSpan('てごらん', verbTe, goran);
+    },
+
+    // Variant 2: Verb-て + ごらんなさい (stronger form)
+    (b2) => {
+      const verbTe = b2.tok({ posOneOf: ['VERB', 'AUX'] }, 'verbTe');
+      const te = b2.tok({ textOneOf: ['て', 'で'], pos: 'SCONJ', dep: 'mark' }, 'te');
+      const goran = b2.tok({ lemma: 'ごらん', pos: 'VERB' }, 'goran');
+      const nasai = b2.aux({ lemma: 'なさる' }, 'nasai');
+
+      // Structural constraints
+      b2.headChild(verbTe, te, 'mark');
+      b2.inOrder(verbTe, te, 1);
+      b2.inOrder(te, goran, 1);
+      b2.auxOf(goran, nasai);
+
+      // Capture the full pattern
+      b2.captureSpan('てごらんなさい', verbTe, nasai);
+    }
+  );
+});

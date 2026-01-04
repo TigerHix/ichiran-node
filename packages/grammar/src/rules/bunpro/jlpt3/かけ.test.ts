@@ -18,17 +18,11 @@ const negatives = [
 // Skip positives: GiNZA parsing limitations
 // These are valid かけ usages that GiNZA parses in ways the rule cannot match.
 const skipPositives = [
-  // Nominalized かけ (verb stem + かけ used as noun before particles)
-  // GiNZA tokenizes these as single compound nouns or with different POS tags
-  'のみかけのジュースがあるのを忘れていた。',  // のみかけ as NOUN + の
-  '飲みかけた水を捨てる。',                      // 飲みかけた as single token or different structure
-  '俺の食べかけだけど大丈夫？',                 // 食べかけ + だ (copula)
-  'これは私の飲みかけだ。',                      // 飲みかけ + だ (copula)
-  'はがれかけているポスターを貼り直してください。', // はがれかけて (te-form + iru)
-  'ふきかけたテーブルをちゃんと最後まで拭いてください。', // ふきかけた (ta-form)
-  '私は、何冊もよみかけの本がある。',           // よみかけ + の (particle)
-  '靴をはきかけて、靴下を履いていないことに気づいた。', // はきかけて (te-form)
-  'この時計こわれかけだけど、ないよりはいいか。', // こわれかけ + だ (copula)
+  // GiNZA incorrectly tokenizes よみかけ as よ + みかけ (見掛け "appearance")
+  // The sentence means "half-read books" but GiNZA parses it as "appearance"
+  '私は、何冊もよみかけの本がある。',
+  // Same issue: のみかけ is parsed as 見掛け "appearance", not the かけ helper verb
+  'のみかけのジュースがあるのを忘れていた。',
 ];
 
 describe('bunpro.jlpt3', () => {
