@@ -3,6 +3,7 @@ import atode from './あとで.js';
 import amarinai from './あまり-ない.js';
 import dakedenaku from './だけでなく.js';
 import teshimau from './てしまう-ちゃう.js';
+import teirutokoroda from './ているところだ.js';
 import ika from './いか.js';
 import igai from './いがい.js';
 import itasu from './いたす.js';
@@ -33,6 +34,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     amarinai,
     dakedenaku,
     teshimau,
+    teirutokoroda,
     ika,
     igai,
     itasu,
