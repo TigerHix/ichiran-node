@@ -14,6 +14,7 @@ import nodaroka from './のだろうか.js';
 import nonakade from './のなかで.js';
 import nonidespite from './のに-despite.js';
 import noyoni from './のように-のような.js';
+import youniiu from './ようにいう.js';
 import atode from './あとで.js';
 import amarinai from './あまり-ない.js';
 import verbpassive from './Verb[passive].js';
@@ -240,6 +241,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     nonidespite,
     nonakade,
     noyoni,
+    youniiu,
     numberamountwa,
     numbershikanai,
     numbermo,
