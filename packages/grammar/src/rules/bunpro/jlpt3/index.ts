@@ -33,6 +33,7 @@ import saCasualYo from './さ-casualよ.js';
 import dewaSoredewa from './では-それでは-じゃあ.js';
 import tameNi from './ために.js';
 import youToShinai from './-ようとしない.js';
+import tamonoda from './たものだ.js';
 
 export const BUNPRO_JLPT3: Ruleset = {
   id: 'bunpro.jlpt3',
@@ -70,5 +71,6 @@ export const BUNPRO_JLPT3: Ruleset = {
     dewaSoredewa,
     tameNi,
     youToShinai,
+    tamonoda,
   ],
 };
