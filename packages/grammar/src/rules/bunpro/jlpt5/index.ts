@@ -23,6 +23,7 @@ import suru from './する.js';
 import tekara from './てから.js';
 import teKudasai from './てください.js';
 import teWaIkenai from './てはいけない.js';
+import naidekudasai from './ないでください.js';
 import verbTeB from './verb-て-b.js';
 import verbTe from './verb-て.js';
 import verbTemoIi from './verb-てもいい.js';
@@ -78,7 +79,6 @@ import sono from './その.js';
 import sore from './それ.js';
 import doko from './どこ.js';
 import dono from './どの.js';
-import dare from './だれ.js';
 import dore from './どれ.js';
 import mo from './も.js';
 
@@ -154,6 +154,7 @@ export const BUNPRO_JLPT5: Ruleset = {
     tekara,
     teKudasai,
     teWaIkenai,
+    naidekudasai,
     tsumorida,
     uVerbs,
     uVerbNegPast,
