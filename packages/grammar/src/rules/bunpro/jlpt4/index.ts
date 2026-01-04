@@ -51,6 +51,7 @@ import kamoshirenai from './かもしれない.js';
 import gasuru from './がする.js';
 import gahitsuyou from './がひつよう.js';
 import gahoshii from './がほしい.js';
+import hazuganai from './はずがない.js';
 import gamirareru from './がみられる.js';
 import garu from './がる.js';
 import koto from './こと.js';
@@ -172,6 +173,7 @@ export const BUNPRO_JLPT4: Ruleset = {
     gasuru,
     gahitsuyou,
     gahoshii,
+    hazuganai,
     gamirareru,
     garu,
     koto,
