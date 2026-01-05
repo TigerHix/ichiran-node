@@ -3,10 +3,13 @@ import tekoso from './-てこそ.js';
 import nouchide from './-のうち-で.js';
 import ageku from './あげく.js';
 import iwayuru from './いわゆる.js';
+import gakeni from './がけに.js';
 import kanaikanouniuchi from './か-ないかのうちに.js';
 import kaneru from './かねる.js';
+import karaniha from './からには.js';
 import karashite from './からして.js';
 import karasurutokarasureba from './からすると-からすれば.js';
+import karatoitte from './からといって.js';
 import kotoDakara from './ことだから.js';
 import kotoNiNatteiru from './ことになっている.js';
 import sasuga from './さすが.js';
@@ -28,10 +31,13 @@ export const BUNPRO_JLPT2: Ruleset = {
     nouchide,
     ageku,
     iwayuru,
+    gakeni,
     kanaikanouniuchi,
     kaneru,
+    karaniha,
     karashite,
     karasurutokarasureba,
+    karatoitte,
     kotoDakara,
     kotoNiNatteiru,
     sasuga,
