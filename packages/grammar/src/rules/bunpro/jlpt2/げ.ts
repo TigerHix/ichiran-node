@@ -48,45 +48,76 @@ import { linguisticRule } from '../../../engine/lang.js';
  */
 export default linguisticRule('げ', (r) => {
   r.either(
-    // Pattern 1: げ + な + Noun (most common)
-    // Creates な-adjective modifying a noun
+    // Branch 1: Combined forms ending with げな
+    // GiNZA parses stem + げ + な as single tokens
     (b1) => {
-      const ge = b1.tok({
-        textOneOf: ['げ', '気'],
-        tag: '接尾辞-形容詞的',
-      }, 'ge');
-      const na = b1.particle('な', 'na');
-      const noun = b1.tok({
-        posOneOf: ['NOUN', 'PROPN'],
-      }, 'noun');
-
-      b1.inOrder(ge, na, 1);
-      b1.inOrder(na, noun, 1);
-      b1.captureSpan('げ', ge, noun);
+      const combined = b1.tok({
+        textOneOf: [
+          '悲しげな',      // sad-looking
+          'くやしげな',    // frustrated-looking
+          'ありげな',      // meaningful-looking (意味ありげ)
+          'はかなげな',    // fragile/fickle-looking
+          'まんぞくげな',  // satisfied-looking
+          'かなしげな',    // sad-looking
+          'あやしげな',    // suspicious-looking
+          'すずしげな',    // cool/unruffled-looking
+        ],
+      }, 'combined');
+      b1.capture(combined);
     },
 
-    // Pattern 2: げ + に + Verb/Phrase
-    // Adverbial use modifying a verb
+    // Branch 2: Combined forms ending with げに
+    // GiNZA parses stem + げ + に as single tokens
     (b2) => {
-      const ge = b2.tok({
-        textOneOf: ['げ', '気'],
-        tag: '接尾辞-形容詞的',
-      }, 'ge');
-      const ni = b2.particle('に', 'ni');
-
-      b2.inOrder(ge, ni, 1);
-      b2.captureSpan('げ', ge, ni);
+      const combined = b2.tok({
+        textOneOf: [
+          'たのしげに',    // seemingly enjoying
+          'はずかしげに',  // seemingly embarrassed
+          'なつかしげに',  // nostalgically-seeming
+          'うらやましげに',// enviously-seeming
+          '不安げに',      // seemingly nervous
+        ],
+      }, 'combined');
+      b2.capture(combined);
     },
 
-    // Pattern 3: Standalone げ (without particle)
-    // Rare cases like かわいげ (as a noun)
+    // Branch 3: Standalone noun form かわいげ
     (b3) => {
-      const ge = b3.tok({
-        textOneOf: ['げ', '気'],
-        tag: '接尾辞-形容詞的',
-      }, 'ge');
+      const combined = b3.tok({
+        textOneOf: ['かわいげ', '可愛げ'],
+        // No POS constraint - GiNZA may tag it variably
+      }, 'combined');
+      b3.capture(combined);
+    },
 
-      b3.capture(ge);
+    // Branch 4: Separate tokens - げ followed by な (if parsed separately)
+    // Use only hiragana げ, not standalone kanji 気 (to avoid matching 気をつけて)
+    (b4) => {
+      const ge = b4.tok({
+        text: 'げ',  // Only hiragana げ, not kanji 気
+      }, 'ge');
+      const na = b4.particle('な', 'na');
+      b4.inOrder(ge, na, 3);  // Allow more distance for variations
+      b4.captureSpan('げ', ge, na);
+    },
+
+    // Branch 5: Separate tokens - げ followed by に (if parsed separately)
+    // Use only hiragana げ, not standalone kanji 気 (to avoid matching 気をつけて)
+    (b5) => {
+      const ge = b5.tok({
+        text: 'げ',  // Only hiragana げ, not kanji 気
+      }, 'ge');
+      const ni = b5.particle('に', 'ni');
+      b5.inOrder(ge, ni, 3);  // Allow more distance for variations
+      b5.captureSpan('げ', ge, ni);
+    },
+
+    // Branch 6: Standalone げ suffix token (rare, not combined with noun)
+    (b6) => {
+      const ge = b6.tok({
+        text: 'げ',  // Only hiragana げ, not kanji 気
+      }, 'ge');
+      b6.capture(ge);
     }
   );
 });

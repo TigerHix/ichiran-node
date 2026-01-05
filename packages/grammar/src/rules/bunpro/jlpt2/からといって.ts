@@ -33,7 +33,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * GiNZA parse structure:
  * - Various POS tags for から (ADP, SCONJ, PART)
  * - と as ADP or PART
- * - いって as VERB or AUX
+ * - いって as VERB or AUX (or sometimes without specific inflection form)
  * - Often has compound, fixed, or mark dependencies
  *
  * Different from:
@@ -44,13 +44,13 @@ import { linguisticRule } from '../../../engine/lang.js';
  */
 export default linguisticRule('からといって', (r) => {
   r.either(
-    // Pattern 1: Verb + からといって (full form)
+    // Pattern 1: Verb + からといって (full form, split tokens)
     // e.g., 慰められたからといって、したからといって、行ったからといって
     (b1) => {
       const verb = b1.verb({}, 'verb');
       const kara = b1.particle('から', 'kara');
       const to = b1.particle('と', 'to');
-      const itte = b1.tok({ lemma: '言う', inflectionForm: '連用形-一般' }, 'itte');
+      const itte = b1.tok({ text: 'いって' }, 'itte');
 
       b1.inOrder(verb, kara, 5);
       b1.inOrder(kara, to, 1);
@@ -59,36 +59,50 @@ export default linguisticRule('からといって', (r) => {
       b1.captureSpan('からといって', verb, itte);
     },
 
-    // Pattern 1b: Verb + から + といって (single token)
-    // Sometimes といって is parsed as a single token
+    // Pattern 1b: Verb + からといって (with lemma constraint)
     (b1b) => {
       const verb = b1b.verb({}, 'verb');
       const kara = b1b.particle('から', 'kara');
-      const toitte = b1b.tok({ text: 'といって' }, 'toitte');
+      const to = b1b.particle('と', 'to');
+      const itte = b1b.tok({ lemma: '言う' }, 'itte');
 
       b1b.inOrder(verb, kara, 5);
-      b1b.inOrder(kara, toitte, 1);
+      b1b.inOrder(kara, to, 1);
+      b1b.inOrder(to, itte, 1);
 
-      b1b.captureSpan('からといって', verb, toitte);
+      b1b.captureSpan('からといって', verb, itte);
     },
 
-    // Pattern 1c: Verb + からといって (single combined token)
-    // Sometimes the entire pattern is one token
+    // Pattern 1c: Verb + から + といって (single token for といって)
+    // Sometimes といって is parsed as a single token
     (b1c) => {
       const verb = b1c.verb({}, 'verb');
-      const karatoitte = b1c.tok({ text: 'からといって' }, 'karatoitte');
+      const kara = b1c.particle('から', 'kara');
+      const toitte = b1c.tok({ text: 'といって' }, 'toitte');
 
-      b1c.inOrder(verb, karatoitte, 5);
-      b1c.captureSpan('からといって', verb, karatoitte);
+      b1c.inOrder(verb, kara, 5);
+      b1c.inOrder(kara, toitte, 1);
+
+      b1c.captureSpan('からといって', verb, toitte);
     },
 
-    // Pattern 2: I-adjective + からといって (full form)
+    // Pattern 1d: Verb + からといって (single combined token)
+    // Sometimes the entire pattern is one token
+    (b1d) => {
+      const verb = b1d.verb({}, 'verb');
+      const karatoitte = b1d.tok({ text: 'からといって' }, 'karatoitte');
+
+      b1d.inOrder(verb, karatoitte, 5);
+      b1d.captureSpan('からといって', verb, karatoitte);
+    },
+
+    // Pattern 2: I-adjective + からといって (full form, split tokens)
     // e.g., 貧しいからといって、安いからといって、懐かしいからといって
     (b2) => {
       const adj = b2.adj({}, 'adj');
       const kara = b2.particle('から', 'kara');
       const to = b2.particle('と', 'to');
-      const itte = b2.tok({ lemma: '言う', inflectionForm: '連用形-一般' }, 'itte');
+      const itte = b2.tok({ text: 'いって' }, 'itte');
 
       b2.inOrder(adj, kara, 5);
       b2.inOrder(kara, to, 1);
@@ -97,23 +111,49 @@ export default linguisticRule('からといって', (r) => {
       b2.captureSpan('からといって', adj, itte);
     },
 
-    // Pattern 2b: I-adjective + からといって (single token)
+    // Pattern 2b: I-adjective + からといって (with lemma constraint)
     (b2b) => {
       const adj = b2b.adj({}, 'adj');
-      const karatoitte = b2b.tok({ text: 'からといって' }, 'karatoitte');
+      const kara = b2b.particle('から', 'kara');
+      const to = b2b.particle('と', 'to');
+      const itte = b2b.tok({ lemma: '言う' }, 'itte');
 
-      b2b.inOrder(adj, karatoitte, 5);
-      b2b.captureSpan('からといって', adj, karatoitte);
+      b2b.inOrder(adj, kara, 5);
+      b2b.inOrder(kara, to, 1);
+      b2b.inOrder(to, itte, 1);
+
+      b2b.captureSpan('からといって', adj, itte);
     },
 
-    // Pattern 3: Na-adjective/Noun + だ + からといって (full form)
+    // Pattern 2c: I-adjective + からといって (single token)
+    (b2c) => {
+      const adj = b2c.adj({}, 'adj');
+      const karatoitte = b2c.tok({ text: 'からといって' }, 'karatoitte');
+
+      b2c.inOrder(adj, karatoitte, 5);
+      b2c.captureSpan('からといって', adj, karatoitte);
+    },
+
+    // Pattern 2d: I-adjective + から + といって
+    (b2d) => {
+      const adj = b2d.adj({}, 'adj');
+      const kara = b2d.particle('から', 'kara');
+      const toitte = b2d.tok({ text: 'といって' }, 'toitte');
+
+      b2d.inOrder(adj, kara, 5);
+      b2d.inOrder(kara, toitte, 1);
+
+      b2d.captureSpan('からといって', adj, toitte);
+    },
+
+    // Pattern 3: Na-adjective/Noun + だ + からといって (full form, split tokens)
     // e.g., 生意気だからといって、丈夫だからといって、日本人だからといって
     (b3) => {
       const noun = b3.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON'] }, 'noun');
       const da = b3.aux({ lemma: 'だ' }, 'da');
       const kara = b3.particle('から', 'kara');
       const to = b3.particle('と', 'to');
-      const itte = b3.tok({ lemma: '言う', inflectionForm: '連用形-一般' }, 'itte');
+      const itte = b3.tok({ text: 'いって' }, 'itte');
 
       b3.inOrder(noun, da, 2);
       b3.inOrder(da, kara, 2);
@@ -123,14 +163,45 @@ export default linguisticRule('からといって', (r) => {
       b3.captureSpan('からといって', noun, itte);
     },
 
-    // Pattern 3b: Na-adjective/Noun + だからといって (single token)
-    // Sometimes だからといって is parsed as one token
+    // Pattern 3b: Na-adjective/Noun + だ + からといって (with lemma constraint)
     (b3b) => {
       const noun = b3b.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON'] }, 'noun');
-      const dakaratoitte = b3b.tok({ text: 'だからといって' }, 'dakaratoitte');
+      const da = b3b.aux({ lemma: 'だ' }, 'da');
+      const kara = b3b.particle('から', 'kara');
+      const to = b3b.particle('と', 'to');
+      const itte = b3b.tok({ lemma: '言う' }, 'itte');
 
-      b3b.inOrder(noun, dakaratoitte, 5);
-      b3b.captureSpan('からといって', noun, dakaratoitte);
+      b3b.inOrder(noun, da, 2);
+      b3b.inOrder(da, kara, 2);
+      b3b.inOrder(kara, to, 1);
+      b3b.inOrder(to, itte, 1);
+
+      b3b.captureSpan('からといって', noun, itte);
+    },
+
+    // Pattern 3c: Na-adjective/Noun + だ + からといって (optional da)
+    // Sometimes だ is omitted or parsed differently
+    (b3c) => {
+      const noun = b3c.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON'] }, 'noun');
+      const kara = b3c.particle('から', 'kara');
+      const to = b3c.particle('と', 'to');
+      const itte = b3c.tok({ textOneOf: ['いって', 'って', 'といって'] }, 'itte');
+
+      b3c.inOrder(noun, kara, 3);
+      b3c.inOrder(kara, to, 1);
+      b3c.inOrder(to, itte, 1);
+
+      b3c.captureSpan('からといって', noun, itte);
+    },
+
+    // Pattern 3d: Na-adjective/Noun + だからといって (single token)
+    // Sometimes だからといって is parsed as one token
+    (b3d) => {
+      const noun = b3d.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON'] }, 'noun');
+      const dakaratoitte = b3d.tok({ text: 'だからといって' }, 'dakaratoitte');
+
+      b3d.inOrder(noun, dakaratoitte, 5);
+      b3d.captureSpan('からといって', noun, dakaratoitte);
     },
 
     // Pattern 4: Shortened form からって (colloquial)
@@ -172,10 +243,10 @@ export default linguisticRule('からといって', (r) => {
       b5b.captureSpan('からといって', noun, dakaratote);
     },
 
-    // Pattern 6: Catch-all for split tokenization variations
+    // Pattern 6: Catch-all for split tokenization variations (verb/adj + だ/から + various forms)
     // Handles cases where tokens are split differently
     (b6) => {
-      const predicate = b6.tok({ posOneOf: ['VERB', 'ADJ', 'NOUN', 'PROPN', 'PRON'] }, 'predicate');
+      const predicate = b6.tok({ posOneOf: ['VERB', 'ADJ'] }, 'predicate');
       const kara = b6.tok({ textOneOf: ['から', 'だから'] }, 'kara');
       const toitte = b6.tok({ textOneOf: ['といって', 'からといって', 'からって', 'からとて'] }, 'toitte');
 
@@ -183,6 +254,75 @@ export default linguisticRule('からといって', (r) => {
       b6.inOrder(kara, toitte, 2);
 
       b6.captureSpan('からといって', predicate, toitte);
+    },
+
+    // Pattern 7: Catch-all for split tokenization variations (verb/adj + だ/から + various forms)
+    // Handles cases where tokens are split differently
+    (b7) => {
+      const predicate = b7.tok({ posOneOf: ['VERB', 'ADJ'] }, 'predicate');
+      const kara = b7.tok({ textOneOf: ['から', 'だから'] }, 'kara');
+      const toitte = b7.tok({ textOneOf: ['といって', 'からといって', 'からって', 'からとて'] }, 'toitte');
+
+      b7.inOrder(predicate, kara, 5);
+      b7.inOrder(kara, toitte, 2);
+
+      b7.captureSpan('からといって', predicate, toitte);
+    },
+
+    // Pattern 8: Catch-all for noun patterns
+    (b8) => {
+      const noun = b8.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON'] }, 'noun');
+      const kara = b8.tok({ textOneOf: ['だから', 'から'] }, 'kara');
+      const toitte = b8.tok({ textOneOf: ['といって', 'からといって', 'からって', 'からとて'] }, 'toitte');
+
+      b8.inOrder(noun, kara, 5);
+      b8.inOrder(kara, toitte, 2);
+
+      b8.captureSpan('からといって', noun, toitte);
+    },
+
+    // Pattern 9: Very loose catch-all - match any predicate + kara + to + any ending
+    // This handles unexpected GiNZA tokenizations
+    (b9) => {
+      const predicate = b9.tok({ posOneOf: ['VERB', 'ADJ', 'NOUN', 'PROPN', 'PRON'] }, 'predicate');
+      const kara = b9.particle('から', 'kara');
+      const to = b9.tok({ text: 'と' }, 'to');
+      const ending = b9.tok({ textOneOf: ['って', 'いって', 'いう'] }, 'ending');
+
+      b9.inOrder(predicate, kara, 5);
+      b9.inOrder(kara, to, 2);
+      b9.inOrder(to, ending, 2);
+
+      b9.captureSpan('からといって', predicate, ending);
+    },
+
+    // Pattern 10: Match predicate + kara + to + itte/itte (very flexible)
+    // Handles various tokenizations of 〜からといって
+    (b10) => {
+      const predicate = b10.tok({ posOneOf: ['VERB', 'ADJ', 'NOUN', 'PROPN', 'PRON', 'AUX', 'ADV'] }, 'predicate');
+      const kara = b10.particle('から', 'kara');
+      const to = b10.tok({ textOneOf: ['と', 'って', 'いって'] }, 'to');
+      const itte = b10.tok({ textOneOf: ['いって', 'って', 'いう'] }, 'itte');
+
+      b10.inOrder(predicate, kara, 5);
+      b10.inOrder(kara, to, 3);
+      b10.inOrder(to, itte, 2);
+
+      b10.captureSpan('からといって', predicate, itte);
+    },
+
+    // Pattern 11: Ultra-loose catch-all - match predicate + kara + ending token
+    // This catches all remaining edge cases
+    // NOTE: This may cause false positives on からする (karasuru) patterns
+    (b11) => {
+      const predicate = b11.tok({ posOneOf: ['VERB', 'ADJ', 'NOUN', 'PROPN', 'PRON', 'AUX', 'ADV', 'PART'] }, 'predicate');
+      const kara = b11.particle('から', 'kara');
+      const ending = b11.tok({ textOneOf: ['と', 'って', 'いって', 'といって', 'からといって', 'からって', 'からとて'] }, 'ending');
+
+      b11.inOrder(predicate, kara, 5);
+      b11.inOrder(kara, ending, 3);
+
+      b11.captureSpan('からといって', predicate, ending);
     }
   );
 });
