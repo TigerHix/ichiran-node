@@ -13,7 +13,7 @@ import sasuga from './さすが.js';
 import souieba from './そういえば.js';
 import souninai from './そうにない.js';
 import sonoue from './その上.js';
-import soretomo from './それとも.js';
+// import soretomo from './それとも.js'; // Has textRe trigger issue - needs fix
 import sorenanoni from './それなのに.js';
 import sorenara from './それなら.js';
 import sorenishitemo from './それにしても.js';

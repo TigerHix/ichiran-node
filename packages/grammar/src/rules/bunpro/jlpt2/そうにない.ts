@@ -37,17 +37,15 @@ import { linguisticRule } from '../../../engine/lang.js';
  */
 export default linguisticRule('そうにない', (r) => {
   r.either(
-    // Branch 1: Verb stem (連用形-一般) + そう (ADV, dep=advmod) + に + (も) + ない
-    // Example: 遊べそうにない (遊べ is VERB, 連用形-一般; そう is ADV, dep=advmod)
+    // Branch 1: Verb stem + そう + に + (も) + ない (no dependency constraints)
+    // This is the fallback pattern that just requires tokens to appear in order
     (b) => {
       const stem = b.verb({}, 'stem');
       const sou = b.tok({
         lemma: 'そう',
         tag: '形状詞-助動詞語幹',
-        pos: 'ADV',
-        dep: 'advmod',
       }, 'sou');
-      b.headChild(stem, sou, 'advmod');
+      b.inOrder(stem, sou, 10);
       const ni = b.particle('に', 'ni');
       b.inOrder(sou, ni, 3);
       b.optional((ob) => {
@@ -57,53 +55,11 @@ export default linguisticRule('そうにない', (r) => {
       const nai = b.adj({
         lemma: 'ない',
       }, 'nai');
+      b.inOrder(ni, nai, 3);
       b.captureSpan('そうにない', stem, nai);
     },
 
-    // Branch 2: Verb stem + そう (AUX, dep=aux) + に + (も) + ない
-    // Example: できそうにない (でき is VERB, 連用形-一般; そう is AUX, dep=aux)
-    (b) => {
-      const stem = b.verb({}, 'stem');
-      const sou = b.tok({
-        lemma: 'そう',
-        tag: '形状詞-助動詞語幹',
-        pos: 'AUX',
-        dep: 'aux',
-      }, 'sou');
-      b.auxOf(stem, sou);
-      const ni = b.particle('に', 'ni');
-      b.caseMarker(stem, ni);
-      b.optional((ob) => {
-        const mo = ob.particle('も', 'mo');
-        ob.inOrder(ni, mo, 1);
-      });
-      const nai = b.adj({
-        lemma: 'ない',
-      }, 'nai');
-      b.captureSpan('そうにない', stem, nai);
-    },
-
-    // Branch 3: Verb stem + そう (no pos constraint) + に + (も) + ない
-    (b) => {
-      const stem = b.verb({}, 'stem');
-      const sou = b.tok({
-        lemma: 'そう',
-        tag: '形状詞-助動詞語幹',
-      }, 'sou');
-      b.headChild(stem, sou, 'advmod');
-      const ni = b.particle('に', 'ni');
-      b.inOrder(sou, ni, 3);
-      b.optional((ob) => {
-        const mo = ob.particle('も', 'mo');
-        ob.inOrder(ni, mo, 1);
-      });
-      const nai = b.adj({
-        lemma: 'ない',
-      }, 'nai');
-      b.captureSpan('そうにない', stem, nai);
-    },
-
-    // Branch 4: Verb stem + auxiliary (られる) + そう (AUX, dep=aux) + に + (も) + ない
+    // Branch 2: Verb stem + auxiliary (られる) + そう + に + (も) + ない
     // Example: 食べられそうにない, 受け取れそうにない
     (b) => {
       const stem = b.verb({}, 'stem');
@@ -114,12 +70,10 @@ export default linguisticRule('そうにない', (r) => {
       const sou = b.tok({
         lemma: 'そう',
         tag: '形状詞-助動詞語幹',
-        pos: 'AUX',
-        dep: 'aux',
       }, 'sou');
-      b.auxOf(stem, sou);
+      b.inOrder(rareru, sou, 5);
       const ni = b.particle('に', 'ni');
-      b.caseMarker(stem, ni);
+      b.inOrder(sou, ni, 3);
       b.optional((ob) => {
         const mo = ob.particle('も', 'mo');
         ob.inOrder(ni, mo, 1);
@@ -127,36 +81,11 @@ export default linguisticRule('そうにない', (r) => {
       const nai = b.adj({
         lemma: 'ない',
       }, 'nai');
+      b.inOrder(ni, nai, 3);
       b.captureSpan('そうにない', stem, nai);
     },
 
-    // Branch 5: Verb parsed as ADJ (うかる type) + そう (AUX, dep=aux) + に + (も) + ない
-    // Example: うかりそうにない (うかり is ADJ, tag=動詞-一般, 連用形-一般)
-    // Some verbs like うかる (to pass) are parsed as ADJ by GiNZA
-    (b) => {
-      const stem = b.adj({
-        tag: '動詞-一般',
-      }, 'stem');
-      const sou = b.tok({
-        lemma: 'そう',
-        tag: '形状詞-助動詞語幹',
-        pos: 'AUX',
-        dep: 'aux',
-      }, 'sou');
-      b.auxOf(stem, sou);
-      const ni = b.particle('に', 'ni');
-      b.caseMarker(stem, ni);
-      b.optional((ob) => {
-        const mo = ob.particle('も', 'mo');
-        ob.inOrder(ni, mo, 1);
-      });
-      const nai = b.adj({
-        lemma: 'ない',
-      }, 'nai');
-      b.captureSpan('そうにない', stem, nai);
-    },
-
-    // Branch 6: Noun (サ変可能) + auxiliary verb (できる) + そう (AUX, dep=aux) + に + (も) + ない
+    // Branch 3: Noun (サ変可能) + auxiliary verb (できる) + そう + に + (も) + ない
     // Example: 合格できそうにない (合格 is VERB/NOUN, tag=名詞-普通名詞-サ変可能; でき is AUX, lemma=できる)
     (b) => {
       const noun = b.tok({
@@ -169,12 +98,10 @@ export default linguisticRule('そうにない', (r) => {
       const sou = b.tok({
         lemma: 'そう',
         tag: '形状詞-助動詞語幹',
-        pos: 'AUX',
-        dep: 'aux',
       }, 'sou');
-      b.auxOf(noun, sou);
+      b.inOrder(deki, sou, 5);
       const ni = b.particle('に', 'ni');
-      b.caseMarker(noun, ni);
+      b.inOrder(sou, ni, 3);
       b.optional((ob) => {
         const mo = ob.particle('も', 'mo');
         ob.inOrder(ni, mo, 1);
@@ -182,10 +109,36 @@ export default linguisticRule('そうにない', (r) => {
       const nai = b.adj({
         lemma: 'ない',
       }, 'nai');
+      b.inOrder(ni, nai, 3);
       b.captureSpan('そうにない', noun, nai);
     },
 
-    // Branch 7: Irregular きそう (single NOUN token) + に + (も) + ない
+    // Branch 4: Verb parsed as ADJ (うかる type) + そう + に + (も) + ない
+    // Example: うかりそうにない (うかり is ADJ, tag=動詞-一般, 連用形-一般)
+    // Some verbs like うかる (to pass) are parsed as ADJ by GiNZA
+    (b) => {
+      const stem = b.adj({
+        tag: '動詞-一般',
+      }, 'stem');
+      const sou = b.tok({
+        lemma: 'そう',
+        tag: '形状詞-助動詞語幹',
+      }, 'sou');
+      b.inOrder(stem, sou, 10);
+      const ni = b.particle('に', 'ni');
+      b.inOrder(sou, ni, 3);
+      b.optional((ob) => {
+        const mo = ob.particle('も', 'mo');
+        ob.inOrder(ni, mo, 1);
+      });
+      const nai = b.adj({
+        lemma: 'ない',
+      }, 'nai');
+      b.inOrder(ni, nai, 3);
+      b.captureSpan('そうにない', stem, nai);
+    },
+
+    // Branch 5: Irregular きそう (single NOUN token) + に + (も) + ない
     // Example: きそうにない (きそう is single NOUN token, lemma=きそう, tag=名詞-普通名詞-一般)
     // GiNZA sometimes parses "来+そう" as a single noun token
     (b) => {
@@ -194,7 +147,7 @@ export default linguisticRule('そうにない', (r) => {
         tag: '名詞-普通名詞-一般',
       }, 'kisou');
       const ni = b.particle('に', 'ni');
-      b.caseMarker(kisou, ni);
+      b.inOrder(kisou, ni, 1);
       b.optional((ob) => {
         const mo = ob.particle('も', 'mo');
         ob.inOrder(ni, mo, 1);
@@ -202,8 +155,7 @@ export default linguisticRule('そうにない', (r) => {
       const nai = b.adj({
         lemma: 'ない',
       }, 'nai');
-      b.inOrder(kisou, ni, 1);
-      b.inOrder(ni, nai, 3);
+      b.inOrder(ni || mo, nai, 3);
       b.captureSpan('そうにない', kisou, nai);
     }
   );

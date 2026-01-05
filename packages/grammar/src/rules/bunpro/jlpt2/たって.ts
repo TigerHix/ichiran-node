@@ -44,6 +44,12 @@ export default linguisticRule('たって', (r) => {
       b2bspec.captureSpan('たって', yoku, tatte);
     },
 
+    // Pattern 2b-combined: よくたって as single token
+    (b2bcomb) => {
+      const yukutatte = b2bcomb.tok({ text: 'よくたって' }, 'yukutatte');
+      b2bcomb.captureSpan('たって', yukutatte, yukutatte);
+    },
+
     // Pattern 2c: I-adjective + た + って (split)
     (b2c) => {
       const adj = b2c.adj({}, 'adj');

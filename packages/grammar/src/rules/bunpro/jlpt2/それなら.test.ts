@@ -53,5 +53,19 @@ const negatives = [
 
 describe('bunpro.jlpt2', () => {
   const engine = useSharedEngine([BUNPRO_JLPT2]);
+
+  // Debug: test specific sentences
+  describe('debug', () => {
+    it('debug: だったら sentence', async () => {
+      const e = engine.get();
+      const sent = '一人で食べに行くの？だったら僕も一緒に行ってもいい？';
+      const hits = await e.match(sent);
+      console.log('\n=== DEBUG:', sent, '===');
+      console.log('All hits:', hits.map(h => ({ruleId: h.ruleId, captures: h.captures})));
+      const hit = hits.find(h => h.ruleId === 'それなら');
+      console.log('Hit for それなら:', hit);
+    });
+  });
+
   describeRule(rule, 'JLPT2', BUNPRO_JLPT2.id, engine.get, { negatives });
 });

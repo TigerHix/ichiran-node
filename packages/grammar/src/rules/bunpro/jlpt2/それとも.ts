@@ -65,7 +65,7 @@ export default linguisticRule('それとも', (r) => {
       const tomo = b2.tok({
         text: 'とも',
       }, 'tomo');
-      b2.inOrder(sore, tomo, 1);
+      b2.inOrder(sore, tomo, 2);
       b2.captureSpan('それとも', sore, tomo);
     }
   );
