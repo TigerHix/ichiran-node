@@ -519,12 +519,15 @@ async function handleRequest(req: IncomingMessage, res: ServerResponse): Promise
 
       console.log(`[${requestId}] segment=${segmentMs}ms, grammar=${grammarMs}ms`);
 
-      // Group matches by ruleId (details fetched separately via /api/grammar/:id)
+      // Group matches by ruleId with summary info
       const grammars: Record<string, any> = {};
       for (const match of matches) {
         if (!grammars[match.ruleId]) {
+          const summary = grammarEngine.getRuleSummary(match.ruleId);
           grammars[match.ruleId] = {
             rulesetId: match.rulesetId,
+            name: summary?.name,
+            description: summary?.description,
             matches: []
           };
         }
@@ -599,7 +602,7 @@ async function handleRequest(req: IncomingMessage, res: ServerResponse): Promise
           'POST /api/romanize/info': 'Romanization with dictionary info (body: {text: string})',
           'POST /api/segment': 'Full segmentation (body: {text: string, limit?: number, skipLLM?: boolean})',
           'POST /api/analyze': 'Combined grammar analysis and segmentation (body: {text: string, limit?: number, rulesetIds?: string[], skipLLM?: boolean})',
-          'GET /api/grammar/:ruleId': 'Get grammar rule details (returns: {ruleId, rulesetId, name?, description?})'
+          'GET /api/grammar/:ruleId': 'Get full grammar rule details (returns: {ruleId, rulesetId, name?, description?, details?})'
         },
         examples: {
           romanize: {

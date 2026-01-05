@@ -12,11 +12,15 @@ export type GrammarEngineOptions = {
   client?: GinzaClient;
 };
 
-export type RuleDetails = {
+export type RuleSummary = {
   ruleId: string;
   rulesetId: string;
   name?: string;
   description?: string;
+};
+
+export type RuleDetails = RuleSummary & {
+  details?: any;
 };
 
 export class GrammarEngine {
@@ -61,7 +65,7 @@ export class GrammarEngine {
     return this.program.rulesets.flatMap((rs) => rs.rules.map((r) => r.id));
   }
 
-  getRuleDetails(ruleId: string): RuleDetails | null {
+  getRuleSummary(ruleId: string): RuleSummary | null {
     const spec = this.ruleSpecs.get(ruleId);
     if (!spec) return null;
     const rulesetId = this.ruleToRuleset.get(ruleId);
@@ -73,6 +77,13 @@ export class GrammarEngine {
       name: raw?.data?.attributes?.title,
       description: raw?.data?.attributes?.meaning,
     };
+  }
+
+  getRuleDetails(ruleId: string): RuleDetails | null {
+    const summary = this.getRuleSummary(ruleId);
+    if (!summary) return null;
+    const spec = this.ruleSpecs.get(ruleId)!;
+    return { ...summary, details: spec.details };
   }
 
   async match(text: string, opts: MatchOptions = {}): Promise<MatchHit[]> {

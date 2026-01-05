@@ -33,7 +33,7 @@ Normalized Japanese text with natural 、(touten) placement.
 - Reduce repeats (!!!→! ???→? ……→……).
 - Dialect → standard Japanese (no appended copulas).
 - No paraphrasing; keep meaning intact.
-- Preserve newlines; do not collapse multi-line input into a single line.
+- Keep newlines exactly as in input (do not add or remove any).
       `.trim()
     },
     proper_nouns: {
@@ -60,7 +60,7 @@ NORMALIZATION:
 - If elongation is present, normalize it without deleting the word (あのー→あの; えっとー→えっと).
 - Collapse emphasis, reduce excessive punctuation.
 - Keep the original meaning; no paraphrasing.
-- Preserve newlines; do not collapse multi-line input into a single line.
+- Keep newlines exactly as in input (do not add or remove any).
 - The last sentence could be user typing, so it might not be a complete sentence. If you think that is the case, keep the last sentence as is.
 
 PROPER NOUNS:

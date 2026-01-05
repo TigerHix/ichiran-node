@@ -72,7 +72,15 @@ export default bunproLinguisticRule('Verb[potential]', (r) => {
       const masu = b.aux({ lemma: 'ます' }, 'masu');
 
       // The stem (見られ, 書け) attaches to ます
-      const stem = b.tok({}, 'stem');
+      const stem = b.tok({
+        // Exclude standard polite forms:
+        // - Godan verb polite stems end in "i" (行き, 読み, 話し, etc.)
+        // - Ichidan verb polite stems end in "ri" or similar (食べ, 見, etc.)
+        // Potential forms:
+        // - Ichidan potential: 見られ, 食べられ (end in rare)
+        // - Godan potential: 読め, 書け (end in e, not i)
+        textNotEndingIn: ['i', 'ri', 'chi', 'shi', 'ki', 'gi', 'bi', 'mi'],
+      }, 'stem');
 
       b.auxOf(stem, masu);
       b.captureSpan('Verb[potential]', stem, masu);
