@@ -7,6 +7,7 @@ import kanaikanouniuchi from './か-ないかのうちに.js';
 import kaneru from './かねる.js';
 import karashite from './からして.js';
 import karasurutokarasureba from './からすると-からすれば.js';
+import dakenokotowaaru from './だけのことはある.js';
 import kotoDakara from './ことだから.js';
 import kotoNiNatteiru from './ことになっている.js';
 import sasuga from './さすが.js';
@@ -32,6 +33,7 @@ export const BUNPRO_JLPT2: Ruleset = {
     kaneru,
     karashite,
     karasurutokarasureba,
+    dakenokotowaaru,
     kotoDakara,
     kotoNiNatteiru,
     sasuga,
