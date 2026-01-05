@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('まえに', (r) => {
+export default bunproLinguisticRule('まえに', (r) => {
   // まえに (mae ni): before, in front of
   // Shows one action occurring prior to or in front of another
   //

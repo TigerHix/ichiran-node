@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: だけで - Just by / Just with / Only with
@@ -35,7 +35,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * locative "location" (電子レンジだけで = just with a microwave), which are both valid
  * usages of this grammar point.
  */
-export default linguisticRule('だけで', (r) => {
+export default bunproLinguisticRule('だけで', (r) => {
   const dake = r.tok({ lemma: 'だけ' }, 'dake');
 
   // で must have dep=case OR dep=aux to exclude だけでなく (dep=fixed)

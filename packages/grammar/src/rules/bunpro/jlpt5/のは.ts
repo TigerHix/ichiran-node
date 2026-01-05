@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('のは', (r) => {
+export default bunproLinguisticRule('のは', (r) => {
   // Verb + の(は/が/も) - nominalizer followed by particle
   // Matches: verb/verb-phrase + の + (は/が/も)
   // The grammar point "の" (slug: のは) covers the nominalizer の followed by various particles

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('いい', (r) => {
+export default bunproLinguisticRule('いい', (r) => {
   // Match いい as an adjective meaning "good" (irregular form of よい)
   const ii = r.adj({
     lemmaOneOf: ['いい', 'よい'],

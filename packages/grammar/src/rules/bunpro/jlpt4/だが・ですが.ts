@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('だが・ですが', (r) => {
+export default bunproLinguisticRule('だが・ですが', (r) => {
   // だが・ですが (but / however - conjunction at sentence start or between clauses)
   // Formal conjunction combining copula (だ/です) + conjunction particle (が)
   // Matches:

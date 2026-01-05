@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('どんなに-ても', (r) => {
+export default bunproLinguisticRule('どんなに-ても', (r) => {
   r.either(
     // Pattern 1: どんな + に + Verb[て-form] + ても
     // e.g., どんなに頑張っても, どんなに勉強しても, どんなに笑われても
@@ -45,7 +45,6 @@ export default linguisticRule('どんなに-ても', (r) => {
           '連用形-融合',
         ],
       }, 'adj');
-      const te = b.tok({ textOneOf: ['て', 'で'], posOneOf: ['SCONJ', 'AUX'] }, 'te');
       const mo = b.tok({ text: 'も', pos: 'ADP', dep: 'case' }, 'mo');
       b.inOrder(ni, adj, 10);
       b.captureSpan('どんなに-ても', donna, mo);

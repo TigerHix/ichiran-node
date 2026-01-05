@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('どころか', (r) => {
+export default bunproLinguisticRule('どころか', (r) => {
   // どころか (dokoroka) - "far from, on the contrary, let alone"
   //
   // Used to strongly negate the preceding statement while emphasizing what follows.

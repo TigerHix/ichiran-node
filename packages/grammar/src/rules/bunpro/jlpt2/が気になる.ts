@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: が気になる (ga ki ni naru) - "to be worried about, to be on one's mind"
@@ -45,7 +45,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Simple 気になる (without が) - intransitive "to be curious"
  *   The が marks the specific thing causing the concern/interest
  */
-export default linguisticRule('が気になる', (r) => {
+export default bunproLinguisticRule('が気になる', (r) => {
   r.either(
     // Branch 1: Noun + が + 気 + に + なる (casual non-past)
     // Example: この足跡が気になる。

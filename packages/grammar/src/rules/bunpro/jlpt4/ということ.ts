@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ということ - the thing is / it means that / nominalizer
@@ -34,7 +34,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * The key constraint: という must be immediately followed by こと (not は or other particles)
  */
-export default linguisticRule('ということ', (r) => {
+export default bunproLinguisticRule('ということ', (r) => {
   r.either(
     // Pattern 1: ということ (formal/casual)
     (b) => {

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: るところだ - About to do / On the verge of doing
@@ -28,7 +28,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - 出かける場所だ: 出かける(verb,inflectionForm=連体形-一般) + ところ(noun) + だ(aux,dep=cop)
  * - 会う場所です: 会う(verb,inflectionForm=連体形-一般) + ところ(noun) + です(aux,dep=cop)
  */
-export default linguisticRule('るところだ', (r) => {
+export default bunproLinguisticRule('るところだ', (r) => {
   // Verb in dictionary form (連体形-一般)
   // Key discriminators:
   // - Must have dep=acl or dep=advcl (not dep=fixed which indicates ている pattern)

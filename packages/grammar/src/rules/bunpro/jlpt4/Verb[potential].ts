@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: Verb[potential] - Potential form (can/be able to)
@@ -22,7 +22,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * the same auxiliary (れる/られる), which is acceptable since they share
  * the same form. Context determines the actual meaning.
  */
-export default linguisticRule('Verb[potential]', (r) => {
+export default bunproLinguisticRule('Verb[potential]', (r) => {
   r.either(
     // Pattern 1: Dictionary form potential verbs (書ける, 読める, いける, かける)
     // These are single tokens with potential form ending

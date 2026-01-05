@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('てごらん', (r) => {
+export default bunproLinguisticRule('てごらん', (r) => {
   // てごらん (te-form verb + ごらん): "try doing X" / "please try X"
   // An honorific expression used to ask someone to attempt to do something,
   // or to look at something at their leisure.

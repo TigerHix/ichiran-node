@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('と-with', (r) => {
+export default bunproLinguisticRule('と-with', (r) => {
   // Match と as "with" particle (accompaniment)
   // Distinct from:
   // - Conditional と (SCONJ + mark dep) - different POS

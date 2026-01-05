@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('にくい', (r) => {
+export default bunproLinguisticRule('にくい', (r) => {
   // にくい (nikui) - auxiliary suffix meaning "hard to" or "difficult to"
   // Attaches to verb stem (masu form) to indicate something is difficult to do
   // due to the speaker's lack of skill or personal feelings. Less formal than がたい.

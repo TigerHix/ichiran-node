@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: ところだった1 - "was just about to", "almost did", "on the verge of"
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Different from たところだ (just finished) - this uses dictionary form
  * - Different from ところだ (about to do now) - this uses past copula だった
  */
-export default linguisticRule('ところだった1', (r) => {
+export default bunproLinguisticRule('ところだった1', (r) => {
   // Verb in dictionary form (る-form) or negative form (ない-form)
   const verb = r.verb({}, 'verb');
 

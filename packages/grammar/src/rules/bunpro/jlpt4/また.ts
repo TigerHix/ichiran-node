@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: また (又) - Also, As well, Moreover, Again, Additionally
@@ -26,7 +26,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * and means "moreover" or "additionally". When used as an adverb in the middle
  * of a sentence, it typically means "again" or "also".
  */
-export default linguisticRule('また', (r) => {
+export default bunproLinguisticRule('また', (r) => {
   const mata = r.tok({
     textOneOf: ['また', '又'],
     posOneOf: ['ADV', 'CCONJ'],  // ADV when used as adverb, CCONJ when used as conjunction

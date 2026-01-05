@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: たった（の）(tatta no) - "only, just, no more than"
@@ -36,7 +36,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - わずか (wazuka) - "slightly/barely" (more formal)
  * - 仅仅 (merry) - Chinese loan word with similar meaning
  */
-export default linguisticRule('たった-の', (r) => {
+export default bunproLinguisticRule('たった-の', (r) => {
   r.either(
     // Pattern 1: たった + の + Number/Noun (with particle)
     // Most common pattern when emphasizing a specific amount

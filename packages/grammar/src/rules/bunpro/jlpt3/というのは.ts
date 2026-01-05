@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('というのは', (r) => {
+export default bunproLinguisticRule('というのは', (r) => {
   // というのは (to iu no wa) - "the thing known as... is", "what we call... is"
   // Meaning: Presents something (A) as a topic to be defined or explained further
   //

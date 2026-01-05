@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('さえ', (r) => {
+export default bunproLinguisticRule('さえ', (r) => {
   // さえ (sae) - "even" particle
   // Emphasizes that something is surprising or extreme enough to be included
   //

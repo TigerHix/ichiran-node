@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ましょう', (r) => {
+export default bunproLinguisticRule('ましょう', (r) => {
   // Polite volitional form: verb stem + ましょう (let's do)
   // Examples: 行きましょう (let's go), 食べましょう (let's eat), しましょう (let's do)
   //

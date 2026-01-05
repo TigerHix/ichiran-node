@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: ずつ (each, per, at a time)
@@ -27,7 +27,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - ごとに: attaches to nouns, means "every X" without interval emphasis
  * - あたり: attaches to number + counter, means "per X" (apiece)
  */
-export default linguisticRule('ずつ', (r) => {
+export default bunproLinguisticRule('ずつ', (r) => {
   // ずつ suffix particle - typically parsed as ADP or PART
   // It's an adverbial particle (副助詞) that functions as a suffix
   const zutsu = r.tok({

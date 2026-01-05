@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('のなかで-がいちばん', (r) => {
+export default bunproLinguisticRule('のなかで-がいちばん', (r) => {
   // Pattern: [Noun/この/その] のなかで/中で + [noun + が/は] + 一番/いちばん
   // Meaning: "Out of (group), (item) is the most (adjective)"
   //

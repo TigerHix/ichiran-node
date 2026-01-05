@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('たり-たりする', (r) => {
+export default bunproLinguisticRule('たり-たりする', (r) => {
   // たり-たりする (doing things like, alternating actions)
   // Verb[た]り + (Verb[た]り +) する (alternating action pattern)
   // This expresses "doing things like A and B" or "activities such as A and B"

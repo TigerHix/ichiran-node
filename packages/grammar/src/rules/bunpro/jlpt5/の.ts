@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('の', (r) => {
+export default bunproLinguisticRule('の', (r) => {
   // の as possessive particle / nominalizer
   // Structure: [NOUN/PROPN/PRON] の [NOUN/PROPN/PRON/VERB/ADJ]
   // or: [VERB/ADJ] の (nominalization)

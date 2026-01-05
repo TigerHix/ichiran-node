@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('がん-totally', (r) => {
+export default bunproLinguisticRule('がん-totally', (r) => {
   // がん (gan) - slang prefix meaning "totally/completely"
   // Pattern: ガン/がん + verb stem + optional auxiliaries
   // Examples:

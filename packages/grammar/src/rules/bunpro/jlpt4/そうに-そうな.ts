@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('そうに-そうな', (r) => {
+export default bunproLinguisticRule('そうに-そうな', (r) => {
   // そうに・そうな attaches to verb/adjective stems to express "seeming/appearing"
   // Matches patterns like:
   // - 優しそうに (stem + そう + に) - adverbial form

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('すでに', (r) => {
+export default bunproLinguisticRule('すでに', (r) => {
   // すでに - formal adverb meaning "already"
   // A formal alternative to もう, with nuances:
   // - "already" (completion, can't go back)
@@ -11,10 +11,6 @@ export default linguisticRule('すでに', (r) => {
   //
   // POS='ADV' (adverb)
   // Used to modify verbs, adjectives, or appear at sentence start
-
-  const sudeni = r.adv({
-    lemma: 'すでに',
-  }, 'sudeni');
 
   r.either(
     // Branch 1: すでに as adverb modifying verbs/adj (dep='advmod')

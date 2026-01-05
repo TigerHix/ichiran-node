@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: さすが (sasuga) - "as expected, as one would expect"
@@ -37,7 +37,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - やっぱり/やはり (yappari/yahari) - "as expected/after all" (less emphatic)
  * - はたして (hatashite) - "really, actually" (expresses doubt, not affirmation)
  */
-export default linguisticRule('さすが', (r) => {
+export default bunproLinguisticRule('さすが', (r) => {
   r.either(
     // Pattern 1: さすが + に + Phrase (adverbial with particle)
     // Most common pattern: sasuga ni + predicate

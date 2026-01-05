@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('この', (r) => {
+export default bunproLinguisticRule('この', (r) => {
   // この is a demonstrative adjective/pre-noun (連体詞) meaning "this"
   // It must be followed by a noun (DET + NOUN with dep=det)
   //

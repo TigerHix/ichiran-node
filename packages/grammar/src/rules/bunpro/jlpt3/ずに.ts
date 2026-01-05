@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: ずに (zuni) - "without doing"
@@ -43,7 +43,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * 3. ず(に) as SCONJ with dep=mark
  * 4. Various inflection forms and lemma values
  */
-export default linguisticRule('ずに', (r) => {
+export default bunproLinguisticRule('ずに', (r) => {
   r.either(
     // Pattern 1: ずに/ず as auxiliary (AUX) with dep=aux
     // Most common pattern for classical auxiliary attached to verb

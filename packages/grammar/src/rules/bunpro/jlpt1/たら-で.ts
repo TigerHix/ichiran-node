@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: たら-で (tara-de pattern)
@@ -17,7 +17,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * The pattern captures from the first conditional marker to the final で particle.
  */
-export default linguisticRule('たら-で', (r) => {
+export default bunproLinguisticRule('たら-で', (r) => {
   // All conditionals we want to match
   const conditionals = r.tok({
     textOneOf: ['たら', 'ったら', 'だら', 'なら', 'ば', 'れば'],

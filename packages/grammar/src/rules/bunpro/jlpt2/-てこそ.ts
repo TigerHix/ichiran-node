@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('-てこそ', (r) => {
+export default bunproLinguisticRule('-てこそ', (r) => {
   const te = r.tok({ text: 'て' }, 'te');
   const koso = r.tok({ text: 'こそ' }, 'koso');
   r.inOrder(te, koso, 1);

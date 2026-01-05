@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('たって', (r) => {
+export default bunproLinguisticRule('たって', (r) => {
   r.either(
     // Pattern 1: Verb + たって (e.g., 聞いたって, 謝ったって, 行ったって, したって, 勝ったって)
     (b1) => {

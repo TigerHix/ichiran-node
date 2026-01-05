@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('い-adjective-noun', (r) => {
+export default bunproLinguisticRule('い-adjective-noun', (r) => {
   // Match い-adjective directly modifying a noun
   // い-adjectives can directly modify nouns without any particle
   // e.g., "あついひと" (hot person), "おおきいいえ" (big house)

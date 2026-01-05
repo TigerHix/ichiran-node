@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ただ-のみ', (r) => {
+export default bunproLinguisticRule('ただ-のみ', (r) => {
   // Pattern: (ただ) + X + のみ (formal version of だけ)
   // X can be:
   // 1. Verb (e.g., 待つのみだ, ただ待つのみだ, 従うのみだ, 降伏するのみだ)

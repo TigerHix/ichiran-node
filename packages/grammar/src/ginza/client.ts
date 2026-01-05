@@ -1,5 +1,7 @@
 import { spawn, type ChildProcessWithoutNullStreams } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { once } from 'node:events';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { createInterface } from 'node:readline';
 import { join } from 'node:path';
 import { z } from 'zod';
@@ -164,6 +166,8 @@ export type GinzaClientOptions = {
   python?: string;
   workerPath?: string;
   warmup?: boolean;
+  /** Directory to cache GiNZA parse results (for faster test runs) */
+  cacheDir?: string;
 };
 
 export class GinzaClient {
@@ -177,11 +181,24 @@ export class GinzaClient {
   private nextId = 1;
   private python: string;
   private workerPath: string;
+  private cacheDir: string | null;
 
   constructor(opts: GinzaClientOptions = {}) {
     this.python = opts.python ?? 'python3';
     const pkgRoot = findPackageRoot(import.meta.url);
     this.workerPath = opts.workerPath ?? join(pkgRoot, 'python', 'ginza_worker.py');
+    this.cacheDir = opts.cacheDir ?? null;
+    if (this.cacheDir && !existsSync(this.cacheDir)) {
+      mkdirSync(this.cacheDir, { recursive: true });
+    }
+  }
+
+  private getCacheKey(texts: string[]): string {
+    return createHash('sha256').update(JSON.stringify(texts)).digest('hex');
+  }
+
+  private getCachePath(key: string): string | null {
+    return this.cacheDir ? join(this.cacheDir, `${key}.json`) : null;
   }
 
   async start(): Promise<void> {
@@ -248,6 +265,14 @@ export class GinzaClient {
   }
 
   async analyze(texts: string[]): Promise<GinzaDoc[]> {
+    // Check cache first
+    const cacheKey = this.getCacheKey(texts);
+    const cachePath = this.getCachePath(cacheKey);
+    if (cachePath && existsSync(cachePath)) {
+      const cached = JSON.parse(readFileSync(cachePath, 'utf-8')) as GinzaDoc[];
+      return cached;
+    }
+
     if (!this.proc || !this.rl) await this.start();
     if (!this.proc) throw new Error('ginza worker not running');
 
@@ -257,7 +282,14 @@ export class GinzaClient {
       this.pending.set(id, { kind: 'analyze', resolve, reject });
     });
     this.proc.stdin.write(payload + '\n');
-    return await p;
+    const result = await p;
+
+    // Write to cache
+    if (cachePath) {
+      writeFileSync(cachePath, JSON.stringify(result), 'utf-8');
+    }
+
+    return result;
   }
 
   async meta(): Promise<GinzaMeta> {

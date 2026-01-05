@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT5: verb-てもいい (Verb + てもいい - May do.../It's okay to do...)
@@ -23,7 +23,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Simple て form without もいい (e.g., 行って - just te-form)
  * - て-form used for other purposes (e.g., 行ってください - please go)
  */
-export default linguisticRule('verb-てもいい', (r) => {
+export default bunproLinguisticRule('verb-てもいい', (r) => {
   r.either(
     // Branch 1: Verb + て + も + いい (e.g., 行ってもいい)
     (b1) => {

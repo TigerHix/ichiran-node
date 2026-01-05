@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('いか', (r) => {
+export default bunproLinguisticRule('いか', (r) => {
   // いか (ika) - noun suffix meaning "less than or equal to", "under", "below"
   // Written as 以下 in kanji. Attach to: Number + いか, Noun/Pronoun + いか
   //

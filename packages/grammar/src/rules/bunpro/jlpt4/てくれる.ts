@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: てくれる (te-kureru) - someone does something for me
@@ -25,7 +25,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Polite: てくれます, てくれました
  * - Volitional: てくれましょう
  */
-export default linguisticRule('てくれる', (r) => {
+export default bunproLinguisticRule('てくれる', (r) => {
   r.either(
     // Pattern 1: Present/past forms (てくれる, てくれた, でくれる, でくれた)
     // Example: 作ってくれる, 買ってくれた, してくれた, 急いでくれた

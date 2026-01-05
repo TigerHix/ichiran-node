@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: とかんがえられている - It is considered that / Is thought to be
@@ -50,7 +50,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - とされている (JLPT4) - "it is considered that" (uses する instead of 考える/思う)
  * - と考えられる (JLPT2) - "it can be considered" (potential form, not progressive)
  */
-export default linguisticRule('とかんがえられている', (r) => {
+export default bunproLinguisticRule('とかんがえられている', (r) => {
   // Quote particle と (marks the quoted phrase)
   const to = r.particle('と', 'to');
 

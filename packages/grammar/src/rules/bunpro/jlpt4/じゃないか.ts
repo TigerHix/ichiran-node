@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('じゃないか', (r) => {
+export default bunproLinguisticRule('じゃないか', (r) => {
   // じゃないか (isn't it? / right?) - Casual negated question seeking agreement
   // Variants: じゃないか, ではないか, じゃないですか, ではないですか
   // Attaches to: verbs, i-adjectives, nouns, na-adjectives

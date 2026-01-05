@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: てすみません (te-sumimasen) - I'm sorry for doing/will do
@@ -22,7 +22,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Past: てすみませんでした, てすいませんでした
  * - Negative te-form: なくてすみません
  */
-export default linguisticRule('てすみません', (r) => {
+export default bunproLinguisticRule('てすみません', (r) => {
   r.either(
     // Pattern 1: てすみません (present)
     // Example: 遅れてすみません, たべてすみません

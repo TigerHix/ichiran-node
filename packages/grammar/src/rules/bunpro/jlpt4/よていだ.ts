@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: よていだ (よていだ) - Plan to, Intend to
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Note: Standalone 予定 (without copula) is NOT matched
  * to avoid false positives and ensure we match the full grammar pattern.
  */
-export default linguisticRule('よていだ', (r) => {
+export default bunproLinguisticRule('よていだ', (r) => {
   r.either(
     // Branch 1: よてい + だ (casual, present) - after verb or noun+の
     (b) => {

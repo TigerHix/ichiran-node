@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ている3', (r) => {
+export default bunproLinguisticRule('ている3', (r) => {
   // ている③: Habitual/repeated actions
   // Verb[て] + いる (has/have done, does regularly)
   // Examples: 働いている (works/is working), 勉強している (studies/is studying)

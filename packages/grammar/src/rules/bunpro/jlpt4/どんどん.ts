@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: どんどん - Progressively / Rapidly increasing / More and more
@@ -23,7 +23,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Note: Similar to だんだん (gradual progression) but どんどん expresses
  * faster, more dynamic change - something happening rapidly or in leaps and bounds.
  */
-export default linguisticRule('どんどん', (r) => {
+export default bunproLinguisticRule('どんどん', (r) => {
   const dondon = r.adv({
     text: 'どんどん',
   }, 'dondon');

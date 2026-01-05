@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('見える', (r) => {
+export default bunproLinguisticRule('見える', (r) => {
   r.either(
     // Pattern 1: Subject + が + 見える (standard form with subject marker)
     (b) => {

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('あるいは', (r) => {
+export default bunproLinguisticRule('あるいは', (r) => {
   // あるいは as a conjunction meaning "or/alternatively"
   // GiNZA tokenizes this as a single CCONJ token with lemma=あるいは
   // This distinguishes it from verb ある + particle は (separate tokens)

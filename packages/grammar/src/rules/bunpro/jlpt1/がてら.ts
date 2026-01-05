@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: がてら (gatera) - "while doing X", "on the occasion of"
@@ -33,7 +33,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Verb stems + がてら: pos=NOUN (e.g., 行きがてら)
  * The tag is always: 接尾辞-名詞的-副詞可能
  */
-export default linguisticRule('がてら', (r) => {
+export default bunproLinguisticRule('がてら', (r) => {
   // Common constraint: がてら has this specific tag
   const gateraTag = '接尾辞-名詞的-副詞可能';
 

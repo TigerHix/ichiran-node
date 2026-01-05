@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('しかない', (r) => {
+export default bunproLinguisticRule('しかない', (r) => {
   // しかない (nothing but/only/have no choice but to)
   // Pattern: Verb + しか + ない (negative auxiliary)
   // The particle しか emphasizes "nothing but" and requires negative

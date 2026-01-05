@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('な', (r) => {
+export default bunproLinguisticRule('な', (r) => {
   // Prohibitive particle な (verb + な = "don't do!")
   // Must be pos=PART (not AUX which is for na-adjective copula)
   // Must have dep=mark (sentence-ending particle marker)

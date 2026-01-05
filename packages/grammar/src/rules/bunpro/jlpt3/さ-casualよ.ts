@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('さ-casualよ', (r) => {
+export default bunproLinguisticRule('さ-casualよ', (r) => {
   // さ is a casual sentence-ending particle (similar to よ but softer/masculine)
   // Used at the end of casual speech for emphasis, to convey new information,
   // or as a filler/emphasis particle

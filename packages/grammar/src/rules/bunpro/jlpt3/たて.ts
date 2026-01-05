@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: たて (tate) - "freshly done, just completed"
@@ -21,7 +21,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Key point: たて is a suffix that transforms the verb stem into a noun,
  * indicating the action was just completed and the result is still "fresh".
  */
-export default linguisticRule('たて', (r) => {
+export default bunproLinguisticRule('たて', (r) => {
   r.either(
     // Branch 1: たて as NOUN (separate token)
     // Example: むしたてのお芋 (freshly steamed potatoes)

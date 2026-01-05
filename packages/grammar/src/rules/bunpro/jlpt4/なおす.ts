@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('なおす', (r) => {
+export default bunproLinguisticRule('なおす', (r) => {
   // なおす attaches to verb stems (masu form without ます) to mean "do completely" or "redo"
   // Similar to つづける and おわる, GiNZA parses this with various POS/dep combinations:
   //

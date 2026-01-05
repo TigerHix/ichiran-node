@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: まい～のように - Almost every ~, Nearly every ~, On a ~ basis
@@ -42,7 +42,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * with the same pattern are parsed differently. This rule uses `r.either()` to
  * handle the variations.
  */
-export default linguisticRule('まい-のように', (r) => {
+export default bunproLinguisticRule('まい-のように', (r) => {
   r.either(
     // Branch 1: Pattern with tokens close together (most common)
     (b) => {

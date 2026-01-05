@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('おわる', (r) => {
+export default bunproLinguisticRule('おわる', (r) => {
   // おわる attaches to verb stems (masu form) to mean "finish doing"
   // GiNZA parses this inconsistently depending on conjugation:
   //

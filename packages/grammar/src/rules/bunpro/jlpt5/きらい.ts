@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('きらい', (r) => {
+export default bunproLinguisticRule('きらい', (r) => {
   // Match the na-adjective きらい/嫌い (to dislike, hate)
   // Despite ending in い, this is a na-adjective, not an i-adjective
   //

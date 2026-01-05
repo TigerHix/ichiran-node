@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ね', (r) => {
+export default bunproLinguisticRule('ね', (r) => {
   // Match sentence-ending particle ね (for agreement/confirmation)
   // Note: This matches any ね particle since GiNZA doesn't reliably distinguish
   // sentence-final vs filler usage based on dependency structure alone.

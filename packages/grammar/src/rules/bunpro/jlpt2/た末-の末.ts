@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: た末・の末 (ta sue - no sue) - After, As a conclusion of
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - 考えた末: 考え(VERB) + た(AUX) + 末(NOUN)
  * - 争いの末: 争い(NOUN) + の(ADP) + 末(NOUN)
  */
-export default linguisticRule('た末-の末', (r) => {
+export default bunproLinguisticRule('た末-の末', (r) => {
   r.either(
     // Pattern 1: Verb［た］+ 末
     (b) => {

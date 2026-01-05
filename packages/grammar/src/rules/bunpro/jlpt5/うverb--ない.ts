@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('うverb--ない', (r) => {
+export default bunproLinguisticRule('うverb--ない', (r) => {
   // u-verb (godan verb) negative form
   // Matches: 歩かない, 歌わない, 泳がない, 話さない, etc. (casual)
   //          歩きません, 歌いません, 泳ぎません, 話しません, etc. (polite)

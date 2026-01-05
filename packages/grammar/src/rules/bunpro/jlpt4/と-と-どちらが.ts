@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('と-と-どちらが', (r) => {
+export default bunproLinguisticRule('と-と-どちらが', (r) => {
   // Pattern: A と B (と)、どちら(が/に/を) (between A and B, which...)
   // The second と is often omitted
   // The particle after どちら can be が, に, or を (or omitted with を選ぶ etc.)

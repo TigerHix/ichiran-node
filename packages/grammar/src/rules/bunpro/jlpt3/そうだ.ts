@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: そうだ - hearsay (I heard that / they say that)
@@ -38,7 +38,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Discriminator to avoid matching appearance form:
  * - Must have tag='名詞-助動詞語幹' (hearsay), NOT '形状詞-助動詞語幹' (appearance)
  */
-export default linguisticRule('そうだ', (r) => {
+export default bunproLinguisticRule('そうだ', (r) => {
   r.either(
     // Branch 1: Verb/adj (+ aux) + そう + だ (with tag=名詞-助動詞語幹 - definite hearsay)
     // Allows one auxiliary between pred and sou (e.g., あったそうだ, 到達するそうだ)

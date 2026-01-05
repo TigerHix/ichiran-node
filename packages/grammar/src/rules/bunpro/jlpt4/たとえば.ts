@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: たとえば (たとえば) - For example
@@ -20,7 +20,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * GiNZA parse structure:
  * - たとえば: text=たとえば, lemma=たとえば, pos=ADV, dep=advmod
  */
-export default linguisticRule('たとえば', (r) => {
+export default bunproLinguisticRule('たとえば', (r) => {
   const tatoeba = r.adv({ lemma: 'たとえば' }, 'tatoeba');
   r.capture(tatoeba);
 });

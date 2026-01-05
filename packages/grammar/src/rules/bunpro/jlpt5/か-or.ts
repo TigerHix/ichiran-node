@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('か-or', (r) => {
+export default bunproLinguisticRule('か-or', (r) => {
   // The particle か used to present alternatives (A or B) or as a question marker
   // Matches patterns like:
   // - AかB (A or B): か with pos=ADP, dep=case between content words

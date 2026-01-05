@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ら (ra) - Casual plural marker suffix
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - POSITIVE: これらを捨ててください
  *   - これら(NOUN or PRON) + を(PART)
  */
-export default linguisticRule('ら', (r) => {
+export default bunproLinguisticRule('ら', (r) => {
   // ら is a suffix that attaches to pronouns/demonstratives
   // In GiNZA, the base word+ら is often parsed as a single token
   const ra = r.tok({

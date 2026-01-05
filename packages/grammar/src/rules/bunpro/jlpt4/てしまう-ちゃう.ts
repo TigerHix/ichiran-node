@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('てしまう-ちゃう', (r) => {
+export default bunproLinguisticRule('てしまう-ちゃう', (r) => {
   // GiNZA parses てしまう/ちゃう/じゃう inconsistently:
   // - 食べてしまった: しまう as VERB, dep=fixed
   // - 太っちゃう: ちゃう as AUX, dep=aux

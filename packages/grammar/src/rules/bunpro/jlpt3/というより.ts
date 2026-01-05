@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: というより - rather than saying / more X than Y
@@ -33,7 +33,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * GiNZA parse structure:
  * - というより: と(particle) + いう(verb) + より(particle/aux)
  */
-export default linguisticRule('というより', (r) => {
+export default bunproLinguisticRule('というより', (r) => {
   // Quote particle と (marks what's being quoted/evaluated)
   const to = r.particle('と', 'to');
 

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: とき (時) - When / At the time of
@@ -33,7 +33,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - 大変なとき: 大変(adj) + な(aux) + とき(noun)
  * - 授業のとき: 授業(noun) + の(particle) + とき(noun)
  */
-export default linguisticRule('とき', (r) => {
+export default bunproLinguisticRule('とき', (r) => {
   r.either(
     // Branch 1: Plain とき (hiragana form)
     (b) => {

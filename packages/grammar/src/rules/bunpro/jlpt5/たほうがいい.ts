@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('たほうがいい', (r) => {
+export default bunproLinguisticRule('たほうがいい', (r) => {
   // Match Verb[た] + ほう + が + いい/いいです (had better do, should do)
   // e.g., きいたほうがいい, かえったほうがいいです, たべたほうがいい
   // Also matches Verb[dictionary form] + ほう + が + いい/いいです (general opinion)

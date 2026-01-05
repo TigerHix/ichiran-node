@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('がある-noun', (r) => {
+export default bunproLinguisticRule('がある-noun', (r) => {
   // This rule matches がある when it modifies a following noun (relative clause)
   // e.g., "ベッドがある部屋" (a room that has a bed)
   // This is distinct from がある at the end of a sentence

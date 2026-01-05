@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('verb-て-noun-で-b', (r) => {
+export default bunproLinguisticRule('verb-て-noun-で-b', (r) => {
   // Verb[て]・Noun[で] (B) - means/manner "by, with"
   // A casual, simple conjunctive form showing that (B) was done in the way of (A).
   // Covers both:

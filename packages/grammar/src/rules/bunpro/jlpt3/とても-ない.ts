@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('とても-ない', (r) => {
+export default bunproLinguisticRule('とても-ない', (r) => {
   // とても-ない (totemo-nai) - "not at all, cannot possibly"
   // Pattern: とても + negative verb (cannot/very much not)
   // Used for emphasis with negatives to express impossibility

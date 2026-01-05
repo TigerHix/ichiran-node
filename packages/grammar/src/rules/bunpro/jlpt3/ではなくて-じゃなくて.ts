@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ではなくて-じゃなくて', (r) => {
+export default bunproLinguisticRule('ではなくて-じゃなくて', (r) => {
   // ではなくて/じゃなくて (not X but Y) - conjunctive form of negation
   // Formal: Noun/Adj + の + ではなく（て）
   // Casual: Noun/Adj + の + じゃなく（て）

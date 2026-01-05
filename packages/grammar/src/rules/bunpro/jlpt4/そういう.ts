@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: そういう (that kind of / such)
@@ -27,7 +27,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * We match all variants (そういう, こういう, ああいう, どういう) since they
  * share the same grammatical structure and are taught together in Bunpro.
  */
-export default linguisticRule('そういう', (r) => {
+export default bunproLinguisticRule('そういう', (r) => {
   r.either(
     // Pattern 1: Multi-token (そう/こう/ああ + いう + noun)
     // GiNZA parses as: ADV/INTJ + VERB(inflectionForm=連体形-一般, dep=acl) + NOUN

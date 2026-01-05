@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('い-adj-く-もなんともない', (r) => {
+export default bunproLinguisticRule('い-adj-く-もなんともない', (r) => {
   // Match i-adjective (く-form) or auxiliary たい + も + なん + と + も + ない pattern
   // e.g., 美味しくもなんともない (not delicious at all)
   // e.g., しりたくもなんともない (don't want to know at all)

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: そういえば (souieba) - "come to think of it, speaking of which, by the way"
@@ -44,7 +44,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - ちなみに (chinami ni) - "by the way, incidentally" (related information)
  * - そうすると (sousuruto) - "then, in that case" (consequence)
  */
-export default linguisticRule('そういえば', (r) => {
+export default bunproLinguisticRule('そういえば', (r) => {
   // そういえば is a fixed expression consisting of:
   // 1. そう (ADV - adverb "so/like that")
   // 2. いえ (VERB - conditional stem of "言う")

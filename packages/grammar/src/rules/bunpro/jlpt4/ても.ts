@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ても (temo/demo) - even if / even though
@@ -31,7 +31,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - でも as conjunction "but" (dep=cc)
  * - でも after question words (lemma=で, pos=ADP)
  */
-export default linguisticRule('ても', (r) => {
+export default bunproLinguisticRule('ても', (r) => {
   r.either(
     // Pattern 1: Verb te-form + も (ても)
     // Example: しても, 行っても, 食べても, 負けても

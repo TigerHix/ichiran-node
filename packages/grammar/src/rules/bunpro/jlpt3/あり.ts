@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('あり', (r) => {
+export default bunproLinguisticRule('あり', (r) => {
   // Linguistic view:
   // あり is the literary form (文語形) of ある used to indicate:
   // 1. "one possibility among many" (～というあり)

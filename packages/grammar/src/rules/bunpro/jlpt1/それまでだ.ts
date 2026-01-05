@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('それまでだ', (r) => {
+export default bunproLinguisticRule('それまでだ', (r) => {
   // Core pattern: それ + まで + だ
   const sore = r.tok({ text: 'それ' }, 'sore');
   const made = r.tok({ text: 'まで' }, 'made');

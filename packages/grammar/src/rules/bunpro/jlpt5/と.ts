@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('と', (r) => {
+export default bunproLinguisticRule('と', (r) => {
   // Match quotation particle と (quotative marker)
   // This is distinct from:
   // - Conditional と (SCONJ + mark dep)

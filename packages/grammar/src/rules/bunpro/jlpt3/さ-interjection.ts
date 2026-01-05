@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('さ-interjection', (r) => {
+export default bunproLinguisticRule('さ-interjection', (r) => {
   // さ as an interjection particle (attention-getter, filler, or encouragement)
   // Used at the beginning of sentences or utterances
   // Variations: さ, さあ, さぁ, さー

@@ -1,7 +1,6 @@
 import type { Ruleset } from '../../../ruleset.js';
-import woHete from './を経て.js';
-import jaArumaishi from './じゃあるまいし.js';
-// Batch 1: New JLPT1 rules
+
+// Batch 1: New JLPT1 rules (40 rules)
 import narinari from './-なり-なり.js';
 import ninai from './-に-ない.js';
 import yougamaigato from './-よう--う-まい-が-と.js';
@@ -43,11 +42,13 @@ import tarasaigo from './たら最後.js';
 import taru from './たる.js';
 import danishinai from './だに-しない.js';
 
+// Previously existing rules
+import jaArumaishi from './じゃあるまいし.js';
+import woHete from './を経て.js';
+
 export const BUNPRO_JLPT1: Ruleset = {
   id: 'bunpro.jlpt1',
   rules: [
-    woHete,
-    jaArumaishi,
     // Batch 1: New JLPT1 rules (alphabetical order)
     akumademo,
     atteno,
@@ -56,8 +57,8 @@ export const BUNPRO_JLPT1: Ruleset = {
     gantotally,
     gatera,
     gurumide,
-    ikanzu,
     ikanaru,
+    ikanzu,
     ikukumonantomonai,
     jaArumaishi,
     kainika,
@@ -75,8 +76,8 @@ export const BUNPRO_JLPT1: Ruleset = {
     ninai,
     sazo,
     sura,
-    soremadeda,
     sobakara,
+    soremadeda,
     tadanomi,
     tamameda,
     tanarinari,

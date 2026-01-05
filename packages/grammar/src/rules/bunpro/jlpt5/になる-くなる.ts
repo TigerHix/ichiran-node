@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('になる-くなる', (r) => {
+export default bunproLinguisticRule('になる-くなる', (r) => {
   // になる/くなる: becomes (change of state)
   // Patterns:
   // - Noun + に + なる (noun becomes)

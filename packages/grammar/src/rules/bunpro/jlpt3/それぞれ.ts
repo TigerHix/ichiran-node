@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('それぞれ', (r) => {
+export default bunproLinguisticRule('それぞれ', (r) => {
   // それぞれ - adverb/noun meaning "each, respectively, individual"
   // Indicates separate/different treatment of items in a group
   // Patterns:

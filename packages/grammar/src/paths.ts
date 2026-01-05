@@ -13,5 +13,3 @@ export function findPackageRoot(fromUrl: string): string {
   // Fallback: best effort.
   return dirname(fileURLToPath(fromUrl));
 }
-
-

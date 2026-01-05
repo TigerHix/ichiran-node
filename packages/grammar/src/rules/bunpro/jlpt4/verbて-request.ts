@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('verbて-request', (r) => {
+export default bunproLinguisticRule('verbて-request', (r) => {
   // Verbて-request: verb in te-form used as casual request at end of sentence
   // Examples: ちょっとまって。部屋を片付けてね。助けて！
   // Key: te-form verb that is sentence-final (possibly followed by sentence-final particles)

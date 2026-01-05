@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: てもらう (te-morau) - to have someone do something for you
@@ -26,7 +26,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Polite: てもらいます, てもらいました
  * - Humble (尊敬): ていただく, ていただいた, ていただいて
  */
-export default linguisticRule('てもらう', (r) => {
+export default bunproLinguisticRule('てもらう', (r) => {
   r.either(
     // Pattern 1: Present/past forms (てもらう, てもらった)
     // Example: いれてもらった, してもらう, かってもらう, よんでもらう

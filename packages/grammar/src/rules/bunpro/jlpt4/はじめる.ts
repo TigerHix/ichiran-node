@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('はじめる', (r) => {
+export default bunproLinguisticRule('はじめる', (r) => {
   // はじめる attaches to verb stems (masu form without ます) to mean "start doing"
   // Similar to おわる and つづける, GiNZA parses this with various POS/dep combinations:
   //

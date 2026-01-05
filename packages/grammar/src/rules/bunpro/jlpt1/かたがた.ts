@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: かたがた (katagata) - While doing, also doing; partly for the purpose of
@@ -33,7 +33,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - かたがた has various dependencies: compound, nmod, obl, advmod
  * - The key is the sequence: noun + かたがた
  */
-export default linguisticRule('かたがた', (r) => {
+export default bunproLinguisticRule('かたがた', (r) => {
   r.either(
     // Branch 1: Noun + かたがた (most common pattern)
     (b) => {

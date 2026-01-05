@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('です', (r) => {
+export default bunproLinguisticRule('です', (r) => {
   r.either(
     // Pattern 1: Noun + です (copula)
     // e.g., 学生です, 日本人です, レストランです

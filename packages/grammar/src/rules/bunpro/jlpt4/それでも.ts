@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: それでも - Even so / Nevertheless
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - タバコは...それでも、止めにくい: それ(PRON,dep=cc) + で(ADP,dep=fixed) + も(ADP,dep=fixed)
  * - 寒すぎて...それでも、暖かくならなかった: それ(PRON,dep=dep) + で(ADP,dep=fixed) + も(ADP,dep=fixed)
  */
-export default linguisticRule('それでも', (r) => {
+export default bunproLinguisticRule('それでも', (r) => {
   // Match それ (pronoun/demonstrative used as conjunction)
   // GiNZA inconsistently tags it as dep=cc or dep=dep depending on context
   const sore = r.tok({

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('よ', (r) => {
+export default bunproLinguisticRule('よ', (r) => {
   // Sentence-ending particle よ for emphasis
   // Must have dep='mark' and be followed by punctuation (end of sentence)
   // or another sentence particle like ね

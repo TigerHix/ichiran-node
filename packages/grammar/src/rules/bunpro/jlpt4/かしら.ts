@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('かしら', (r) => {
+export default bunproLinguisticRule('かしら', (r) => {
   // かしら - feminine sentence-final particle expressing wonder/uncertainty
   // Must be at sentence end (followed by punctuation or another particle)
   r.either(

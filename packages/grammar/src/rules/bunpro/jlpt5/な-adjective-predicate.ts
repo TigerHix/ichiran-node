@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT5: な-adjective-predicate - な-Adjective (Predicate)
@@ -25,7 +25,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * This rule captures the entire predicate form including the copula.
  */
-export default linguisticRule('な-adjective-predicate', (r) => {
+export default bunproLinguisticRule('な-adjective-predicate', (r) => {
   r.either(
     // ========== CASUAL FORM: na-adjective + だ ==========
 

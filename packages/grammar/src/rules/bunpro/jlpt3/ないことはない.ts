@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: ないことはない - not impossible / it doesn't mean that it isn't
@@ -27,7 +27,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - あぶなくないことはない: あぶない(adj) + ない(aux) + こと(noun) + は(particle) + ない(aux)
  * - 元気ではないことはない: 元気(adj) + ではない(copula) + こと(noun) + は(particle) + ない(aux)
  */
-export default linguisticRule('ないことはない', (r) => {
+export default bunproLinguisticRule('ないことはない', (r) => {
   r.either(
     // Branch 1: Verb negative + ことはない (casual)
     // 食べられないことはない, 行けないことはない, できないことはない

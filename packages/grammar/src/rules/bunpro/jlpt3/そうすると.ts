@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('そうすると', (r) => {
+export default bunproLinguisticRule('そうすると', (r) => {
   // そうすると (conjunction: "and then", "so", "with that")
   // A sentence starter meaning "once (A) is done, (B)" or "upon (A), (B)"
   // Similar to すると but with そう (like that/as such) added

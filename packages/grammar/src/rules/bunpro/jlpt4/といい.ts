@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: といい - it would be good if / I hope / I wish
@@ -41,7 +41,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - After i-adjectives (e.g., 楽しいと)
  * - After na-adjectives/nouns + だ (e.g., 休みだと, 綺麗だと)
  */
-export default linguisticRule('といい', (r) => {
+export default bunproLinguisticRule('といい', (r) => {
   // いい (good/would be good) - the key distinguishing word
   // This MUST be lemma=いい to avoid matching other adjectives
   const ii = r.tok({

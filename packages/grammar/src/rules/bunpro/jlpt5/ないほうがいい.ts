@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT5: ないほうがいい (Verb[nai] + hou + ga + ii - had better not)
@@ -22,7 +22,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Simple negative (～ない)
  * - ほうがいい without verb negative (e.g., このほうがいい)
  */
-export default linguisticRule('ないほうがいい', (r) => {
+export default bunproLinguisticRule('ないほうがいい', (r) => {
   r.either(
     // Branch 1: Standard parsing (verb + ない as auxiliary)
     // Example: 食べないほうがいい, 吸わないほうがいい, たべないほうがいい

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('がする', (r) => {
+export default bunproLinguisticRule('がする', (r) => {
   r.either(
     // Pattern 1: Casual non-past (がする)
     (b) => {

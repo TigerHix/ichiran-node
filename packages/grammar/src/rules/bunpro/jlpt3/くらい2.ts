@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('くらい2', (r) => {
+export default bunproLinguisticRule('くらい2', (r) => {
   // くらい/ぐらい expressing "to the extent that" or "so...that"
   // Follows: Verb, [い]Adj, [な]Adj+な, or Noun
   // This is the extent/degree usage (JLPT3), distinct from approximate amount (JLPT5)

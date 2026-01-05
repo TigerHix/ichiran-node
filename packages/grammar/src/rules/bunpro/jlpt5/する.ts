@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT5: する (suru) - the basic "to do" verb
@@ -17,7 +17,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Note: This rule matches standalone する, NOT suru-verb compounds
  * like 勉強する, サッカーする, etc. (those are separate dictionary entries).
  */
-export default linguisticRule('する', (r) => {
+export default bunproLinguisticRule('する', (r) => {
   r.either(
     // Dictionary form: する
     (b) => {

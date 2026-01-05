@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: など (nado) - Such as, Things like, Etc., And so on
@@ -31,7 +31,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - POSITIVE: イタリアやアメリカなどに行きたい
  *   - イタリア(NOUN) + や(PART) + アメリカ(NOUN) + など(ADP, lemma=など, dep=case) + に(PART)
  */
-export default linguisticRule('など', (r) => {
+export default bunproLinguisticRule('など', (r) => {
   // など is parsed as ADP (adposition/particle) by GiNZA
   const nado = r.tok({
     lemma: 'など',

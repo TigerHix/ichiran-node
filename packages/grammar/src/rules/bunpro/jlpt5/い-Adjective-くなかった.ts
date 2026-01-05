@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('い-Adjective-くなかった', (r) => {
+export default bunproLinguisticRule('い-Adjective-くなかった', (r) => {
   // Match i-adjectives in negative past form (～くなかった)
 
   // Simplified approach: just match the three key components in sequence

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('けれども', (r) => {
+export default bunproLinguisticRule('けれども', (r) => {
   // けれども is a formal conjunction meaning "but/however"
   // Variants: けれども, けれど, だけれども, だけれど, けども
   // Similar to が-but but more formal

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('な-adjective-noun', (r) => {
+export default bunproLinguisticRule('な-adjective-noun', (r) => {
   // Match na-adjective + な + noun
   // na-adjectives require な when modifying a noun
   // e.g., "きれいな人" (clean person), "静かな部屋" (quiet room)

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('いわゆる', (r) => {
+export default bunproLinguisticRule('いわゆる', (r) => {
   // いわゆる (so-called, what is called, generally known)
   // Pre-nominal adjectival verb (連体詞 - pre-noun adjective)
   // Can also appear as 所謂 (kanji form)

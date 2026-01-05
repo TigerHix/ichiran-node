@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('くせに', (r) => {
+export default bunproLinguisticRule('くせに', (r) => {
   // くせに - "despite/even though" with critical/complaining nuance
   // GiNZA tokenizes くせに as two tokens: くせ (noun) + に (particle)
   // Patterns:

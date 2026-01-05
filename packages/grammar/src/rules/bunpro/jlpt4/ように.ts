@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ように - So that, In order to, In such a way that
@@ -36,7 +36,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * These are semantically different but structurally similar, and may have
  * some overlap. The rule focuses on matching the core pattern correctly.
  */
-export default linguisticRule('ように', (r) => {
+export default bunproLinguisticRule('ように', (r) => {
   r.either(
     // Branch 1: ように as single token
     (b) => {

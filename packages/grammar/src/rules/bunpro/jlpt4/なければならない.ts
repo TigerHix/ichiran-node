@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('なければならない', (r) => {
+export default bunproLinguisticRule('なければならない', (r) => {
   r.either(
     // Pattern 1: Standard form - verb[nai-condition] + ならない (casual)
     // e.g., しなければならない, 行かなければならない, 買わなければならない

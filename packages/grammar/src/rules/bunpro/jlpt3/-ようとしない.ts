@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('-ようとしない', (r) => {
+export default bunproLinguisticRule('-ようとしない', (r) => {
   // Linguistic view:
   // - main predicate is する (ROOT or advcl)
   // - negation is AUX ない attached as aux

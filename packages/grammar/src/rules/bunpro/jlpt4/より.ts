@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: より - Comparison marker (from/than)
@@ -36,7 +36,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Note: This is the standalone comparison marker. For the pattern
  * "より～のほうが" (more X than Y), see JLPT5 rule より-のほうが.
  */
-export default linguisticRule('より', (r) => {
+export default bunproLinguisticRule('より', (r) => {
   const yori = r.particle('より', 'yori', { dep: 'case' });
 
   r.either(

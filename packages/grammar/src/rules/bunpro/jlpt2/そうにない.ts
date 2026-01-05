@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: そうにない (souninai) - Unlikely to, showing no signs of
@@ -35,7 +35,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Note: This is the negative conjecture form, weaker than そうもない due to the particle に instead of も.
  * The variant そうにもない is slightly stronger but still weaker than そうもない.
  */
-export default linguisticRule('そうにない', (r) => {
+export default bunproLinguisticRule('そうにない', (r) => {
   r.either(
     // Branch 1: Verb stem + そう + に + (も) + ない (no dependency constraints)
     // This is the fallback pattern that just requires tokens to appear in order
@@ -155,7 +155,7 @@ export default linguisticRule('そうにない', (r) => {
       const nai = b.adj({
         lemma: 'ない',
       }, 'nai');
-      b.inOrder(ni || mo, nai, 3);
+      b.inOrder(ni, nai, 3);
       b.captureSpan('そうにない', kisou, nai);
     }
   );

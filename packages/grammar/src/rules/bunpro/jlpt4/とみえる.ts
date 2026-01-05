@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: とみえる (it appears that / it seems that / one can conclude that)
@@ -31,7 +31,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - と is ADP/PART with dep=case (quotative particle)
  * - 見える is VERB with various inflection forms (終止形, 連用形-て, 連体形-タ)
  */
-export default linguisticRule('とみえる', (r) => {
+export default bunproLinguisticRule('とみえる', (r) => {
   // Quote particle と (marks the quoted content/conclusion)
   const to = r.particle('と', 'to');
 

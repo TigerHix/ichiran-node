@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ないと (conditional: "if not/do not")
@@ -25,7 +25,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Dictionary form: ない (e.g., 行かないと)
  * - Contraction: ねば (e.g., 行かねばと - rare but possible)
  */
-export default linguisticRule('ないと', (r) => {
+export default bunproLinguisticRule('ないと', (r) => {
   r.either(
     // Pattern 1: Standard form with ない + と (SCONJ, dep=mark)
     // e.g., 勉強しないと, 行かないと, 食べないと

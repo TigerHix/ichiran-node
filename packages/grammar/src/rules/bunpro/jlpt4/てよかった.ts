@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: てよかった (verb/adjective[te] + よかった)
@@ -31,7 +31,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - よかっ (VERB/ADJ, tag=形容詞-一般, conjugationClass=形容詞, inflectionForm=連用形-促音便)
  * - た (AUX, lemma=た, tag=助動詞, conjugationClass=助動詞-タ, dep=aux)
  */
-export default linguisticRule('てよかった', (r) => {
+export default bunproLinguisticRule('てよかった', (r) => {
   // Either casual or polite form
   r.either(
     // Pattern 1: Casual form with て/で particle (〜てよかった / 〜でよかった)

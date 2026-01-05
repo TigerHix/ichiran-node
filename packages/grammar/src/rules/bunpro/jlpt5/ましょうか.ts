@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ましょうか', (r) => {
+export default bunproLinguisticRule('ましょうか', (r) => {
   // ましょうか (mashou ka): shall we, shall I
   // Polite expression for suggesting mutual activities, with indirect invitation nuance
   // Verb stem + ましょうか

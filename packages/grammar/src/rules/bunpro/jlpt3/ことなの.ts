@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: ことなの (koto nano) - "the thing is/it is that"
@@ -27,7 +27,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * The key is matching こと followed by なの or なん (contraction),
  * which creates the explanatory "it means that / the thing is" construction.
  */
-export default linguisticRule('ことなの', (r) => {
+export default bunproLinguisticRule('ことなの', (r) => {
   r.either(
     // Branch 1: ... + こと + なの (explanatory)
     (b1) => {

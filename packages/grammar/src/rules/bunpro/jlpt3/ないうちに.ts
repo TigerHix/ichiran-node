@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ないうちに', (r) => {
+export default bunproLinguisticRule('ないうちに', (r) => {
   // ないうちに - "while X is not yet" / "before X happens" / "without X"
   // Pattern: Verb[negative form] + うちに
   //

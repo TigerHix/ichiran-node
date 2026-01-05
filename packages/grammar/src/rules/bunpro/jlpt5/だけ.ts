@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('だけ', (r) => {
+export default bunproLinguisticRule('だけ', (r) => {
   // だけ (dake) - adverbial particle meaning "only, just"
   // Attaches to: Verb + だけ, i-adj + だけ, na-adj + なだけ, Noun + だけ
   //

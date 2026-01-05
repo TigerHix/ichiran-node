@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('にきがつく', (r) => {
+export default bunproLinguisticRule('にきがつく', (r) => {
   // に気がつく / に気づく (to notice/realize)
   //
   // Structure variations:

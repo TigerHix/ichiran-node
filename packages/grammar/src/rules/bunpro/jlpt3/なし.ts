@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('なし', (r) => {
+export default bunproLinguisticRule('なし', (r) => {
   // Linguistic view:
   // なし is the literary form (文語形) of ない used to indicate "without X" (exclusion)
   // It's the opposite of あり (with X)

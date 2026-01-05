@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('なくてはならない', (r) => {
+export default bunproLinguisticRule('なくてはならない', (r) => {
   r.either(
     // Pattern 1: Standard form - verb[nai-ren'you] + なく + て + は + ならない (casual)
     // e.g., 飲まなくてはならない, 行かなくてはならない, しなくてはならない

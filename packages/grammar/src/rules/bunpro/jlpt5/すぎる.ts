@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('すぎる', (r) => {
+export default bunproLinguisticRule('すぎる', (r) => {
   // すぎる (sugiru) - auxiliary verb meaning "too much" or "excessively"
   // Attaches to verb stems and adjectives to mean "too [stem]"
   // Examples: 食べすぎる (eat too much), 高すぎる (too expensive), 静かすぎる (too quiet)

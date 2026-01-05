@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('さぞ', (r) => {
+export default bunproLinguisticRule('さぞ', (r) => {
   // さぞ - adverb expressing conjecture (surely, probably, must be)
   // Key discriminator: GiNZA parses さぞ as NOUN (not ADV like other adverbs)
   // Often followed by conjecture endings: だろう, でしょう, に違いない

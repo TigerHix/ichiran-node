@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT5: verb-た-noun - Verb + た + Noun (Noun modified by verb)
@@ -23,7 +23,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * Note: The continuous form uses て or で (voiced form after certain sounds).
  */
-export default linguisticRule('verb-た-noun', (r) => {
+export default bunproLinguisticRule('verb-た-noun', (r) => {
   r.either(
     // Branch 1: Verb + た (past tense) + Noun
     (b) => {

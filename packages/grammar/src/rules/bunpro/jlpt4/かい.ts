@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('かい', (r) => {
+export default bunproLinguisticRule('かい', (r) => {
   // かい - Masculine sentence-final question particle
   // Casual, blunt way to ask questions, typically used by men
   // GiNZA parses "かい" as two tokens: か + い

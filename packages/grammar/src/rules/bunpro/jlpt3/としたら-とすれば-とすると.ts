@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('としたら-とすれば-とすると', (r) => {
+export default bunproLinguisticRule('としたら-とすれば-とすると', (r) => {
   // としたら・とすれば・とすると - "if we suppose/assuming that/in that case"
   r.either(
     // Pattern 1: と + し + たら (したら split form)

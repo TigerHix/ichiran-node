@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('たがる', (r) => {
+export default bunproLinguisticRule('たがる', (r) => {
   // Verb stem + たがる (third-person desire)
   // Examples: 行きたがる, 食べたがる, したがる
   //

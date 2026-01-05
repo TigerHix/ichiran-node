@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: がけに (gake ni) - On the way to, As you go
@@ -35,7 +35,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Note: がけ can be parsed as NOUN or PART by GiNZA depending on context
  * Note: Verb stems may be written in kanji or hiragana
  */
-export default linguisticRule('がけに', (r) => {
+export default bunproLinguisticRule('がけに', (r) => {
   r.either(
     // Branch 1: Strict stem form with 連用形
     (b) => {

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ばよかった (Verb[ba] + よかった)
@@ -29,7 +29,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *   2. Two tokens: VERB(lemma=X, 仮定形-一般) + SCONJ(ば) - e.g., まてば
  * - よかった as: よかっ(VERB/ADJ, 連用形-促音便) + た(AUX, lemma=た)
  */
-export default linguisticRule('ばよかった', (r) => {
+export default bunproLinguisticRule('ばよかった', (r) => {
   r.either(
     // Pattern 1a: Standard casual form - verb[ba] (single token) + よかった (as single token)
     // Some sentences parse よかった as a single ADJ token

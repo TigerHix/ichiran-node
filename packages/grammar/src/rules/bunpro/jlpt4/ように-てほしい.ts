@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ように～てほしい (want someone to do like/in the way of ~)
@@ -33,7 +33,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Verb in te-form (VERB/AUX連用形 + SCONJて/で)
  * - ほしい as AUX (lemma=ほしい)
  */
-export default linguisticRule('ように-てほしい', (r) => {
+export default bunproLinguisticRule('ように-てほしい', (r) => {
   r.either(
     // Pattern 1a: Verb/Adj dictionary form + ように + Verb[て] + ほしい (positive present)
     // e.g., よくなるように勉強してほしい

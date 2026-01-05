@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: と-conditional (when/if - conditional form)
@@ -35,7 +35,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - I-adjective + と (SCONJ, dep=mark)
  * - Na-adjective/Noun + だ (AUX) + と (ADP, dep=case) with advcl dependency
  */
-export default linguisticRule('と-conditional', (r) => {
+export default bunproLinguisticRule('と-conditional', (r) => {
   r.either(
     // Pattern 1: Simple と conditional (verb/i-adj + と)
     // Example: 食べると, 行くと, 汚いと

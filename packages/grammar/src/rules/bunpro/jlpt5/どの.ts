@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('どの', (r) => {
+export default bunproLinguisticRule('どの', (r) => {
   // どの is an interrogative pre-nominal adjective (連体詞) meaning "which"
   // It must be followed by a noun (DET + NOUN with dep=det)
   //

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('と同じで-と違って', (r) => {
+export default bunproLinguisticRule('と同じで-と違って', (r) => {
   // と同じで・と違って (to onaji de / to chigatte) - "same as" / "different from"
   //
   // Two patterns for comparison:

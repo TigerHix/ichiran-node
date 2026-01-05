@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: それとも (soretomo) - "or, or else"
@@ -38,18 +38,18 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - あるいは (aruiwa) - "or" (formal, written)
  * - それか (soreka) - "or that, or" (less formal)
  */
-export default linguisticRule('それとも', (r) => {
+export default bunproLinguisticRule('それとも', (r) => {
   // それとも is a conjunction presenting alternative choices
   // Used primarily in questions between two options
   //
-  // GiNZA parses それとも as:
+  // GiNZA may parse それとも in different ways:
   // 1. Single token: それとも (CCONJ/ADV/SCONJ)
-  // 2. Multi-token: それ (CCONJ) + と (ADP,dep=fixed) + も (ADP,dep=fixed)
+  // 2. Multi-token: それ (PRON/CCONJ) + とも (PART/SCONJ/ADP)
   //
   // The rule matches both patterns to handle GiNZA parsing variations.
 
   r.either(
-    // Pattern 1: Single token それとも
+    // Pattern 1: Single token それとも (most likely)
     (b1) => {
       const soretomo = b1.tok({
         lemma: 'それとも',
@@ -57,20 +57,16 @@ export default linguisticRule('それとも', (r) => {
       b1.capture(soretomo);
     },
 
-    // Pattern 2: Multi-token - それ + と + も (three separate tokens)
+    // Pattern 2: Multi-token - それ (pronoun/conjunction) + とも (particle/adverb)
     (b2) => {
       const sore = b2.tok({
         lemma: 'それ',
       }, 'sore');
-      const to = b2.tok({
-        text: 'と',
-      }, 'to');
-      const mo = b2.tok({
-        text: 'も',
-      }, 'mo');
-      b2.inOrder(sore, to, 2);
-      b2.inOrder(to, mo, 1);
-      b2.captureSpan('それとも', sore, mo);
+      const tomo = b2.tok({
+        lemma: 'とも',
+      }, 'tomo');
+      b2.inOrder(sore, tomo, 5);
+      b2.captureSpan('それとも', sore, tomo);
     }
   );
 });

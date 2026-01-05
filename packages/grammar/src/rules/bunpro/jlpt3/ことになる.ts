@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: ことになる - "it is decided that/it turns out that"
@@ -41,7 +41,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Key insight: koto.dep can be 'compound' (when modified by verb/adj) or 'obl' (when used as object).
  * The に+なる attach to koto or vice versa depending on parse.
  */
-export default linguisticRule('ことになる', (r) => {
+export default bunproLinguisticRule('ことになる', (r) => {
   r.either(
     // Branch 1: Casual past with compound koto (〜ことになった)
     (b) => {

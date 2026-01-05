@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ておく', (r) => {
+export default bunproLinguisticRule('ておく', (r) => {
   // ておく (verb-te-form + おく): "to do something in advance"
   // Indicates doing something now for future benefit or to prevent something.
   //

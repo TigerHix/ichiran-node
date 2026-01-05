@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('particle-の', (r) => {
+export default bunproLinguisticRule('particle-の', (r) => {
   // Particle + の - Possessive particle construction
   // Combines particles (から, と, へ, で, まで) with の to show ownership/relationship
   // Pattern: Noun(A) + particle + の + Noun(B)

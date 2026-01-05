@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('なかなか', (r) => {
+export default bunproLinguisticRule('なかなか', (r) => {
   // なかなか (nakanaka) - "quite/rather/fairly"
   // An adverb expressing that something is "quite" or "considerably" (A),
   // often implying it exceeds expectations.

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ようと思う-おうと思う - thinking of doing / intend to do
@@ -35,7 +35,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * reliable inflectionForm markers, this rule explicitly lists common volitional
  * verb endings. This may not cover all possible volitional forms.
  */
-export default linguisticRule('ようと思う-おうと思う', (r) => {
+export default bunproLinguisticRule('ようと思う-おうと思う', (r) => {
   // Match volitional forms + と + 思う
   const vol = r.tok({
     textOneOf: [

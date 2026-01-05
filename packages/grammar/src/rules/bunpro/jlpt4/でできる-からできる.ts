@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: でできる・からできる - made of/made from
@@ -25,7 +25,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - 木でできている: 木(noun) + で(particle) + できて(verb/aux) + いる(aux)
  * - 石油からできます: 石油(noun) + から(particle) + でき(verb/aux) + ます(aux)
  */
-export default linguisticRule('でできる-からできる', (r) => {
+export default bunproLinguisticRule('でできる-からできる', (r) => {
   r.either(
     // Pattern 1: Noun + でできる (casual) - Accept both VERB and AUX
     (b) => {

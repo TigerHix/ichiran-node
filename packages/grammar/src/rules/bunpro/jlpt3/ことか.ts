@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: ことか (koto ka) - "How...!", "What...!", "God knows..."
@@ -21,7 +21,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Or as separate tokens: こと(NOUN) + か(PARTICLE/ADP)
  * - The key is that this appears at the end of an exclamatory clause
  */
-export default linguisticRule('ことか', (r) => {
+export default bunproLinguisticRule('ことか', (r) => {
   r.either(
     // Branch 1: ことか as single token (GiNZA sometimes fuses these)
     (b) => {

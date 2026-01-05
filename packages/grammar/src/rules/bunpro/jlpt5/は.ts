@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('は', (r) => {
+export default bunproLinguisticRule('は', (r) => {
   // Match topic marker は (wa)
   // Note: This will match は even in compound particles like には, では, etc.
   // From a linguistic perspective, は is still a topic marker in these cases.

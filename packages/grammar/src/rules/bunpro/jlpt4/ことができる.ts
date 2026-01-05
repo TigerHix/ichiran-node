@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ことができる - can do / be able to
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - 運転ができる: 運転(noun) + が(particle) + できる(verb)
  * - できません: でき(verb) + ません(aux)
  */
-export default linguisticRule('ことができる', (r) => {
+export default bunproLinguisticRule('ことができる', (r) => {
   r.either(
     // Pattern 1: Verb dictionary form + ことができる (casual)
     // Verb is in 連体形-一般 (attributive) before こと, and できる is parsed as AUX

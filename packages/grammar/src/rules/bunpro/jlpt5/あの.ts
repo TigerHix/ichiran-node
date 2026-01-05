@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('あの', (r) => {
+export default bunproLinguisticRule('あの', (r) => {
   // あの is a demonstrative adjective/pre-noun (連体詞) meaning "that (over there)"
   // It must be followed by a noun (DET + NOUN with dep=det)
   // Refers to something far from both speaker and listener, or mutually known

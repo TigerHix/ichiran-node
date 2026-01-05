@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ながら', (r) => {
+export default bunproLinguisticRule('ながら', (r) => {
   // Verb masu stem + ながら (while doing X)
   // Use either() to handle two patterns:
   // 1. Standard: verb with inflectionForm=連用形-一般 (e.g., 聴き, 食べ, し)

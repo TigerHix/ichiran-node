@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ぎみ', (r) => {
+export default bunproLinguisticRule('ぎみ', (r) => {
   // ぎみ/気味 (gimi) - suffix indicating slight sign or tendency
   // Pattern: Verb [stem] or Noun + ぎみ
   //

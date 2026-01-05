@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: たものだ - used to / naturally did
@@ -28,7 +28,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - たことだ (different grammar: fact/states that)
  * - Simple ものだ without past tense (different grammar)
  */
-export default linguisticRule('たものだ', (r) => {
+export default bunproLinguisticRule('たものだ', (r) => {
   r.either(
     // Pattern 1: Verb［た］+ ものだ (casual)
     // 過去の verb + た (AUX) + もの (NOUN) + だ (AUX)

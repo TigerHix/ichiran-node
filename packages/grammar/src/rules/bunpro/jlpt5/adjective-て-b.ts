@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('adjective-て-b', (r) => {
+export default bunproLinguisticRule('adjective-て-b', (r) => {
   r.either(
     // Pattern 1: i-adjective + くて (e.g., 大きくて, 明るくて, 悲しくて)
     // Note: GiNZA parses some i-adjectives in conjunctive form as VERB, not ADJ

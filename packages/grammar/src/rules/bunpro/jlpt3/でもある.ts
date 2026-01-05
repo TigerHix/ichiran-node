@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('でもある', (r) => {
+export default bunproLinguisticRule('でもある', (r) => {
   // でもある (demo aru) - "is also X" / "also is X"
   // Used in sentences like "X is A, and also B" or "While X, it is also Y"
   //

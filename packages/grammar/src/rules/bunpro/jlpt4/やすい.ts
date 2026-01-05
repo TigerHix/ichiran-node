@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: やすい (易い) - Easy to do; Likely to
@@ -29,7 +29,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Note: やすい is written in hiragana. The kanji 易い is rarely used.
  * Don't confuse with 安い (cheap) which is a different word.
  */
-export default linguisticRule('やすい', (r) => {
+export default bunproLinguisticRule('やすい', (r) => {
   // GiNZA parses verb stem + やすい in multiple ways:
   // 1. As separate tokens (verb stem + auxiliary)
   // 2. As single ADJ token

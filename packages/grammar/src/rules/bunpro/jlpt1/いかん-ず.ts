@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: いかん〜ず (ikan~zu) - Regardless of, Irrespective of
@@ -32,7 +32,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Ends with かかわらず/よらず/とわず/問わず (verb forms)
  * - Formal written register
  */
-export default linguisticRule('いかん-ず', (r) => {
+export default bunproLinguisticRule('いかん-ず', (r) => {
   r.either(
     // Pattern 1: Noun + の + いかん + に + かかわら + ず (AUX)
     (b1) => {

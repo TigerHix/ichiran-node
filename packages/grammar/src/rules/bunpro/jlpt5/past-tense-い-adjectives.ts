@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT5: past-tense-い-adjectives - い-Adjectives (Past)
@@ -19,7 +19,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * This rule captures the entire past tense form including optional です.
  */
-export default linguisticRule('past-tense-い-adjectives', (r) => {
+export default bunproLinguisticRule('past-tense-い-adjectives', (r) => {
   r.either(
     // Casual form: い-adjective stem + た
     (b) => {

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('あっての', (r) => {
+export default bunproLinguisticRule('あっての', (r) => {
   // Match Noun (A) + (が) + あって (te-form of ある) + の + Noun (B)
   // The "が" particle between the first noun and あって is optional
   //

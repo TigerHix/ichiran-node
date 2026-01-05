@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: ずじまい (zujimai) - "ended up not doing X; unfortunately X didn't happen"
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - ず as PART with dep=mark or dep=case
  * - じまい as NOUN or AUX following ず
  */
-export default linguisticRule('ずじまい', (r) => {
+export default bunproLinguisticRule('ずじまい', (r) => {
   r.either(
     // Pattern 1: ず as auxiliary (AUX) with dep=aux
     (b) => {

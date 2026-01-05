@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: だんだん (段々) - Gradually / Little by little / Step by step
@@ -23,7 +23,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Note: Similar to どんどん (rapid progression) but だんだん expresses
  * slower, step-by-step progression.
  */
-export default linguisticRule('だんだん', (r) => {
+export default bunproLinguisticRule('だんだん', (r) => {
   const dandan = r.adv({
     textOneOf: ['だんだん', '段々'],
   }, 'dandan');

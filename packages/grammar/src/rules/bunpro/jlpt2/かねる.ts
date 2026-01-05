@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: かねる (kaneru) - Cannot, Be unable to, Hard to, Hesitant to
@@ -42,102 +42,65 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - かねて (te-form - as in を兼ねて, stem is かね)
  * - Independent use of 兼ねる (to combine/serve dual purpose)
  */
-export default linguisticRule('かねる', (r) => {
+export default bunproLinguisticRule('かねる', (r) => {
   r.either(
-    // Branch 1: Verb stem + かね (PART) + ます
-    // Example: でき + かね + ます
+    // Branch 1: かねる as auxiliary with dep=aux attached to verb
+    // Most common pattern for verb stem + aux
     (b) => {
-      const stem = b.tok({
-        posOneOf: ['VERB', 'ADJ'],
-      }, 'stem');
-      const kane = b.tok({
-        pos: 'PART',
+      const kaneru = b.aux({
         lemmaOneOf: ['かねる', '兼ねる'],
-      }, 'kane');
-      b.inOrder(stem, kane, 2);
-      const masu = b.aux({ lemma: 'ます' }, 'masu');
-      b.inOrder(kane, masu, 1);
-      b.captureSpan('かねる', stem, masu);
+        dep: 'aux',
+      }, 'kaneru');
+      b.capture(kaneru);
     },
 
-    // Branch 2: Verb stem (連用形) + かねる (終止形) - sentence-final
+    // Branch 2: かねる as auxiliary with dep=fixed
+    // Alternative parsing for some verb forms
     (b) => {
-      const stem = b.tok({
+      const kaneru = b.aux({
+        lemmaOneOf: ['かねる', '兼ねる'],
+        dep: 'fixed',
+      }, 'kaneru');
+      b.capture(kaneru);
+    },
+
+    // Branch 3: Verb stem (ren'youkei) + かねる with advcl dependency
+    // Stem is syntactic head, かねる modifies it
+    (b) => {
+      const stem = b.verb({
         inflectionForm: '連用形-一般',
       }, 'stem');
-      const kaneru = b.tok({
+      const kaneru = b.aux({
         lemmaOneOf: ['かねる', '兼ねる'],
-        inflectionForm: '終止形-一般',
+      }, 'kaneru');
+      b.headChild(stem, kaneru, 'advcl');
+      b.captureSpan('かねる', stem, kaneru);
+    },
+
+    // Branch 4: Verb stem + かねる with compound dependency
+    (b) => {
+      const stem = b.verb({
+        inflectionForm: '連用形-一般',
+      }, 'stem');
+      const kaneru = b.aux({
+        lemmaOneOf: ['かねる', '兼ねる'],
+      }, 'kaneru');
+      b.headChild(stem, kaneru, 'compound');
+      b.captureSpan('かねる', stem, kaneru);
+    },
+
+    // Branch 5: かねる as VERB token that follows a verb stem
+    // This catches cases where GiNZA parses it as VERB instead of AUX
+    // Must be preceded by a verb stem (連用形) to ensure it's acting as auxiliary
+    (b) => {
+      const stem = b.verb({
+        inflectionForm: '連用形-一般',
+      }, 'stem');
+      const kaneru = b.verb({
+        lemmaOneOf: ['かねる', '兼ねる'],
       }, 'kaneru');
       b.inOrder(stem, kaneru, 3);
       b.captureSpan('かねる', stem, kaneru);
-    },
-
-    // Branch 3: Suru-verb stem (no inflection form) + し + かねる
-    // Example: 推薦(VERB) + し(AUX) + かねる(VERB)
-    (b) => {
-      const noun = b.tok({ posOneOf: ['NOUN', 'VERB'] }, 'noun');
-      const shi = b.aux({ lemma: 'する', inflectionForm: '連用形-一般' }, 'shi');
-      b.auxOf(noun, shi);
-
-      const kaneru = b.tok({
-        lemmaOneOf: ['かねる', '兼ねる'],
-        inflectionForm: '終止形-一般',
-      }, 'kaneru');
-      b.inOrder(shi, kaneru, 2);
-      b.captureSpan('かねる', noun, kaneru);
-    },
-
-    // Branch 4: Suru-verb stem + し + かね (未然形) + ます
-    // Example: 承諾 + し + かね + ます
-    (b) => {
-      const noun = b.tok({ posOneOf: ['NOUN', 'VERB'] }, 'noun');
-      const shi = b.aux({ lemma: 'する', inflectionForm: '連用形-一般' }, 'shi');
-      b.auxOf(noun, shi);
-
-      const kane = b.tok({
-        lemmaOneOf: ['かねる', '兼ねる'],
-        inflectionForm: '未然形-一般',
-      }, 'kane');
-      b.inOrder(shi, kane, 2);
-
-      const masu = b.aux({ lemma: 'ます' }, 'masu');
-      b.inOrder(kane, masu, 1);
-
-      b.captureSpan('かねる', noun, masu);
-    },
-
-    // Branch 5: Irregular zu-verbs (parsed as ADJ) + かねる
-    // Example: しんじ(ADJ,lemma=しんずる) + かねる
-    // GiNZA parses these irregular verbs as ADJ in their stem form
-    (b) => {
-      const stem = b.adj({
-        inflectionForm: '連用形-一般',
-      }, 'stem');
-      const kaneru = b.tok({
-        lemmaOneOf: ['かねる', '兼ねる'],
-        inflectionForm: '終止形-一般',
-      }, 'kaneru');
-      b.inOrder(stem, kaneru, 2);
-      b.captureSpan('かねる', stem, kaneru);
-    },
-
-    // Branch 6: Irregular zu-verbs (parsed as ADJ) + かね + ます
-    // Example: おうじ(ADJ,lemma=おうずる) + かね + ます
-    (b) => {
-      const stem = b.adj({
-        inflectionForm: '連用形-一般',
-      }, 'stem');
-      const kane = b.tok({
-        lemmaOneOf: ['かねる', '兼ねる'],
-        inflectionForm: '未然形-一般',
-      }, 'kane');
-      b.inOrder(stem, kane, 2);
-
-      const masu = b.aux({ lemma: 'ます' }, 'masu');
-      b.inOrder(kane, masu, 1);
-
-      b.captureSpan('かねる', stem, masu);
     }
   );
 });

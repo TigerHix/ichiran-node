@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: なるべく - As much as possible / Whenever practicable
@@ -28,7 +28,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Sometimes as two tokens: なる (VERB) + べく (AUX)
  * - We handle both cases with r.either()
  */
-export default linguisticRule('なるべく', (r) => {
+export default bunproLinguisticRule('なるべく', (r) => {
   // Variant 1: Single adverb token (most common)
   // GiNZA sometimes parses なるべく as a single adverb
   r.either((b) => {

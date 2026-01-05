@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('のに-despite', (r) => {
+export default bunproLinguisticRule('のに-despite', (r) => {
   // のに (despite, although, even though)
   // Contrastive conjunction particle connecting two clauses
   // Pattern: Verb/Adj + のに = "despite X, Y"

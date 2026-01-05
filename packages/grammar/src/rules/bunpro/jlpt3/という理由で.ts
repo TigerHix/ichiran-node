@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: という理由で - "for this reason", "on the grounds of", "with the reasoning that"
@@ -32,7 +32,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Note: This rule does NOT match という理由では (topic form) or という理由だけで
  * (with だけ inserted before で).
  */
-export default linguisticRule('という理由で', (r) => {
+export default bunproLinguisticRule('という理由で', (r) => {
   r.either(
     // Pattern 1a: という理由で (with という, kanji)
     // 安くて美味しいという理由で、この店の前にはいつも行列ができています。

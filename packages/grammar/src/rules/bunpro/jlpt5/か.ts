@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('か', (r) => {
+export default bunproLinguisticRule('か', (r) => {
   r.either(
     (b) => {
       const ka = b.particle('か', 'ka');

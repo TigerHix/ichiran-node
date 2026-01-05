@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('あくまでも', (r) => {
+export default bunproLinguisticRule('あくまでも', (r) => {
   // あくまでも (akumademo) - adverb meaning "thoroughly, absolutely, to the bitter end, persistently, stubbornly"
   // Can be written as あくまでも (hiragana) or 飽くまでも (kanji)
   // Short form あくまで / 飽くまで is also accepted

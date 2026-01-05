@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ないで', (r) => {
+export default bunproLinguisticRule('ないで', (r) => {
   // ないで - Negative te-form: "without doing X, Y happened"
   // This is the conjunctive form of verb negation, used to express
   // that action B happens without doing action A.

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('るverb-ない', (r) => {
+export default bunproLinguisticRule('るverb-ない', (r) => {
   // る-verb (ichidan verb) negative form
   // Matches: 食べない, 見ない, 寝ない (casual)
   //          食べません, 見ません, 寝ません (polite)

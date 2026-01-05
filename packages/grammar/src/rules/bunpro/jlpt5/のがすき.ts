@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('のがすき', (r) => {
+export default bunproLinguisticRule('のがすき', (r) => {
   // Pattern: Verb (dictionary form) + の + が + 好き(すき)
   // Meaning: "Like doing, love doing" something
   // Examples:

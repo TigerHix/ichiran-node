@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('だけしか', (r) => {
+export default bunproLinguisticRule('だけしか', (r) => {
   // だけしか (dake + shika) - emphatic "only/nothing but"
   // Pattern: Noun + だけ + しか + negative verb
   // This is a double particle construction for strong emphasis

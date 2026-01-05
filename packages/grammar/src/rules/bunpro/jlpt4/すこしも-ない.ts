@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('すこしも-ない', (r) => {
+export default bunproLinguisticRule('すこしも-ない', (r) => {
   // すこしも + negative form (not even a little, not at all)
   // Patterns: すこしも + negative verb/adj/noun
   // - すこしも + Verb［ない］: 少しも食べない, 少しもない

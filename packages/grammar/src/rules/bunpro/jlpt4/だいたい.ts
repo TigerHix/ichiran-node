@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: だいたい (大体) - Generally / Mostly / Approximately
@@ -27,7 +27,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * of a sentence (e.g., 大体、なんでお前がここにいるの？). This is captured
  * by the same rule since it's the same word with a different nuance.
  */
-export default linguisticRule('だいたい', (r) => {
+export default bunproLinguisticRule('だいたい', (r) => {
   const daitai = r.tok({
     posOneOf: ['ADV', 'NOUN', 'PRON'],  // PRON is used when sentence has context prefix
     textOneOf: ['だいたい', '大体'],

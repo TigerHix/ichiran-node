@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('あまり', (r) => {
+export default bunproLinguisticRule('あまり', (r) => {
   // あまり (amari) - "so much...that" (excessive degree leading to negative result)
   // This is DIFFERENT from あまり-ない (JLPT4) which means "not very"
   //

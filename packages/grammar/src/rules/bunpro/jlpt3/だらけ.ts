@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: だらけ (full of/covered with - usually negative)
@@ -33,7 +33,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * This rule matches nouns + だらけ suffix
  */
-export default linguisticRule('だらけ', (r) => {
+export default bunproLinguisticRule('だらけ', (r) => {
   // だらけ as suffix (PART, tag=接尾辞-形状詞的)
   const darake = r.tok({
     lemma: 'だらけ',

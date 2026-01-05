@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('それに', (r) => {
+export default bunproLinguisticRule('それに', (r) => {
   // それに (moreover / besides / in addition)
   // Conjunction adding information to previous clause
   // GiNZA parses as either:

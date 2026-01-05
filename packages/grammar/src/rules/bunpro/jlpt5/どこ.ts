@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('どこ', (r) => {
+export default bunproLinguisticRule('どこ', (r) => {
   // どこ (doko) - interrogative pronoun meaning "where"
   // Refers to an unknown place/location
   //

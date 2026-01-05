@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ごとに - Each, Every
@@ -24,7 +24,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - ごとに is usually parsed as a single ADP/PART token
  * - Sometimes NOUN+ごと is parsed as a compound with separate に
  */
-export default linguisticRule('ごとに', (r) => {
+export default bunproLinguisticRule('ごとに', (r) => {
   r.either(
     // Branch 1: ごとに as a single particle
     (b) => {

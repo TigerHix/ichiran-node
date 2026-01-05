@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: ことにする (koto ni suru) - decide to
@@ -25,7 +25,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Verb［る］+ ことにし (connective form)
  * - Verb［ない］+ ことにし (connective form, negative)
  */
-export default linguisticRule('ことにする', (r) => {
+export default bunproLinguisticRule('ことにする', (r) => {
   r.either(
     // Branch 1: Verb + こと + に + する (dictionary form present)
     (b) => {
@@ -130,7 +130,8 @@ export default linguisticRule('ことにする', (r) => {
       const koto = b.noun({ lemma: 'こと' }, 'koto');
       const ni = b.tok({ lemma: 'に', dep: 'fixed' }, 'ni');
       const suru = b.verb({ lemma: 'する', dep: 'fixed' }, 'suru');
-      b.inOrder(koto, ni, suru);
+      b.inOrder(koto, ni, 1);
+      b.inOrder(ni, suru, 1);
 
       const nai = b.aux({ lemma: 'ない' }, 'nai');
       b.inOrder(nai, koto);

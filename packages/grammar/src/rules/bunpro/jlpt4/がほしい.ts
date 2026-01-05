@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('がほしい', (r) => {
+export default bunproLinguisticRule('がほしい', (r) => {
   // Noun + が + ほしい (I want Noun)
   // Examples: 機会がほしい, お金がほしい, 犬がほしい
   //

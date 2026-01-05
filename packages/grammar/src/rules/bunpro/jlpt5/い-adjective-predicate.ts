@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('い-adjective-predicate', (r) => {
+export default bunproLinguisticRule('い-adjective-predicate', (r) => {
   // い-adjectives used as sentence predicates
   // Unlike な-adjectives, い-adjectives can end sentences directly
   // They can also take です for politeness

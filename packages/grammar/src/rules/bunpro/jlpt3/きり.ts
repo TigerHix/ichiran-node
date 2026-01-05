@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('きり', (r) => {
+export default bunproLinguisticRule('きり', (r) => {
   // きり meaning "only/just/since"
   // Patterns:
   // 1. Verb (past form) + きり/っきり - "since doing X, haven't done Y"

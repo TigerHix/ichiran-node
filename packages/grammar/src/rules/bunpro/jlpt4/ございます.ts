@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ございます', (r) => {
+export default bunproLinguisticRule('ございます', (r) => {
   // ございます is the very polite form of ある (to be/exist for inanimate things)
   // GiNZA parses it with lemma=ござる, pos=VERB
   //

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('あまりに', (r) => {
+export default bunproLinguisticRule('あまりに', (r) => {
   // あまりに / あまりにも - "exceedingly, so much that"
   // Adverbial form meaning "excessively" used with adjectives/verbs
   // Also matches あまりの + noun (excessive [noun])

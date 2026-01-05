@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('すくなくない', (r) => {
+export default bunproLinguisticRule('すくなくない', (r) => {
   // Double negative i-adjective: 少ない/すくない (few) + ない (not) = 少なくない/すくなくない (not a few = quite a few)
   // This is a specific i-adjective that forms a double negative meaning "many" or "quite a few"
   //

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: と同時に (at the same time as)
@@ -21,7 +21,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * Note: Test sentences use hiragana "どうじに" from answer field, but actual Japanese uses kanji "同時に"
  */
-export default linguisticRule('と同時に', (r) => {
+export default bunproLinguisticRule('と同時に', (r) => {
   r.either(
     // Pattern 1: Verb/Aux (dictionary form/past) + と + 同時/どうじ + に
     // 目覚める + と + 同時 + に

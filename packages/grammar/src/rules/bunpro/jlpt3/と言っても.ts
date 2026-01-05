@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('と言っても', (r) => {
+export default bunproLinguisticRule('と言っても', (r) => {
   // と言っても (to itte mo) - "even if I say / although I say"
   // Concessive expression: "although (A) might be said, (B) is more accurate"
   //

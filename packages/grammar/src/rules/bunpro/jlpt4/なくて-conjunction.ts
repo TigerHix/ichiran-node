@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('なくて-conjunction', (r) => {
+export default bunproLinguisticRule('なくて-conjunction', (r) => {
   // なくて-conjunction: "to not (A), and..." / "not (A), and..."
   // This is a negative conjunctive form showing sequences of events/states where (A) does NOT happen.
   //

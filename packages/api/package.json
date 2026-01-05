@@ -11,6 +11,7 @@
     "dist"
   ],
   "scripts": {
+    "dev": "bun --watch src/index.ts",
     "build": "tsc -p tsconfig.json",
     "build:watch": "tsc -p tsconfig.json --watch",
     "typecheck": "tsc --noEmit",
@@ -22,7 +23,8 @@
   "dependencies": {
     "@ichiran/core": "0.0.0",
     "@ichiran/grammar": "0.0.0",
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "lru-cache": "^11.0.2"
   },
   "sideEffects": false
 }

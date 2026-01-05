@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('は-の一つだ', (r) => {
+export default bunproLinguisticRule('は-の一つだ', (r) => {
   // Pattern: Noun(A) + は/も + NounPhrase(B) + の + [counter] + だ/です
   // Meaning: "X is one of (many) Y"
   //

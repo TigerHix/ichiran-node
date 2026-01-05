@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ように・ような - As/like, Just like
@@ -26,7 +26,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Note: This covers both verb/adj + ように/ような AND noun + の + ように/ような.
  * The test data includes both patterns.
  */
-export default linguisticRule('ように-ような', (r) => {
+export default bunproLinguisticRule('ように-ような', (r) => {
   r.either(
     // Pattern 1: ように (adverbial - modifies verbs/adjectives)
     (b) => {

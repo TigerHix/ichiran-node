@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('verb-ないで', (r) => {
+export default bunproLinguisticRule('verb-ないで', (r) => {
   // Casual negative request: verb nai-form + で (please don't)
   // Examples: 行かないで (please don't go), 食べないで (please don't eat)
   //

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: そんなに - So (much), That much, Like that
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * are grammatically identical but are separate words (kosoado words) and could be handled
  * separately if needed.
  */
-export default linguisticRule('そんなに', (r) => {
+export default bunproLinguisticRule('そんなに', (r) => {
   // そんな + に (copula in conjunctive form)
   // GiNZA parses as two tokens: そんな (ADJ) + に (AUX with lemma=だ)
   const sonna = r.tok({

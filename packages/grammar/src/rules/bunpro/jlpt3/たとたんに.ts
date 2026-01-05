@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: たとたん(に) - "the moment that", "just as", "as soon as"
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - "とたん" is parsed as a single NOUN token with lemma=とたん
  * - "とたん" has dep=obl (oblique nominal) indicating temporal function
  */
-export default linguisticRule('たとたんに', (r) => {
+export default bunproLinguisticRule('たとたんに', (r) => {
   // Any verb in any form
   const verb = r.verb({}, 'verb');
 

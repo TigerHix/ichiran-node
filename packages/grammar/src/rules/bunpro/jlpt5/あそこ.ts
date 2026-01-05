@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('あそこ', (r) => {
+export default bunproLinguisticRule('あそこ', (r) => {
   // あそこ (asoko) - demonstrative pronoun meaning "over there"
   // Refers to a place far from both the speaker and the listener
   //

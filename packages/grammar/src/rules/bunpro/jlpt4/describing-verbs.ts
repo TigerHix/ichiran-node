@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: describing-verbs - Adverbial forms (く・に)
@@ -29,7 +29,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Note: This is for productive adverbial forms, not lexical adverbs.
  * True adverbs (e.g., もっと, とても) are not matched by this rule.
  */
-export default linguisticRule('describing-verbs', (r) => {
+export default bunproLinguisticRule('describing-verbs', (r) => {
   r.either(
     // Branch 1a: I-adjective + く (連用形-一般) with dep=advcl
     // Example: 強く, きつく, 新しく, etc. (kanji forms)

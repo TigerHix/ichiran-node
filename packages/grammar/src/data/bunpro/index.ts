@@ -1,3 +1,9 @@
 export * from './types.js';
-export * from './loader.js';
+export { 
+  loadBunproGrammarItem, 
+  loadBunproGrammarItemWithOptions, 
+  sampleBunproGrammars,
+  getBunproIndex,
+  loadBunproRaw 
+} from './loader.js';
 

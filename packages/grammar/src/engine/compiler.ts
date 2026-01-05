@@ -514,6 +514,7 @@ function compileSingleRule(spec: RuleSpec): CompiledRule {
   return {
     id: spec.id,
     triggers,
+    details: spec.details,
     match: (sent: GinzaSentence, sourceText: string, idx?: SentenceIndex) => {
       const index = idx ?? buildSentenceIndex(sent);
       return findMatches(compiled, sent, sourceText, index);

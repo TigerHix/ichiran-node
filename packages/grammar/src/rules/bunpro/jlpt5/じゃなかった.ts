@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('じゃなかった', (r) => {
+export default bunproLinguisticRule('じゃなかった', (r) => {
   // Match the negative past copula じゃなかった (was not)
   // Pattern: noun/na-adj + じゃ/では + なかった
   // Also matches polite variants: じゃありませんでした, ではありませんでした

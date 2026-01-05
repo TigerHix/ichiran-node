@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('で言うと', (r) => {
+export default bunproLinguisticRule('で言うと', (r) => {
   // で言うと/でいうと/で言えば/でいえば - "in terms of/speaking of"
   // Pattern: noun + で + 言う(inflected) + conjunction particle
   //

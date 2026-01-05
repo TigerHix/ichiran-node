@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: ことだし (koto dashi) - "because X; and also X"
@@ -24,7 +24,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * The し particle lists reasons, and こと + だ nominalizes the preceding
  * clause to make it one of the reasons.
  */
-export default linguisticRule('ことだし', (r) => {
+export default bunproLinguisticRule('ことだし', (r) => {
   r.either(
     // Branch 1: Na-adj + な + こと + だ + し
     (b1) => {

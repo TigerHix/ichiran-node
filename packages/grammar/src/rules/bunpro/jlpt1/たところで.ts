@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('たところで', (r) => {
+export default bunproLinguisticRule('たところで', (r) => {
   // Pattern: Verb ta-form + ところ + で
   // e.g., 怒ったところで, 行ったところで, 続けたところで, 稼いだところで
   r.either(

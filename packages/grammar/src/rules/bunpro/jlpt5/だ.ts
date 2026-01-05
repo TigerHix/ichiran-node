@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('だ', (r) => {
+export default bunproLinguisticRule('だ', (r) => {
   // Match the copula だ (auxiliary verb, lemma=だ)
   // Note: GiNZA uses dep='cop' for nouns, but dep='aux' for na-adjectives
 

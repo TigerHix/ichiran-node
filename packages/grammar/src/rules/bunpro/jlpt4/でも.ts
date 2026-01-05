@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: でも - Or something / Any... (with question words)
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - でも、高いから買えない。 (Sentence-initial conjunction "but")
  * - 東京でも雨が降っている。 (Locative "even in Tokyo" - different grammar)
  */
-export default linguisticRule('でも', (r) => {
+export default bunproLinguisticRule('でも', (r) => {
   // Match で (particle, case marker)
   const de = r.tok({
     text: 'で',

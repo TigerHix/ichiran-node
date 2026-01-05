@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ずとも', (r) => {
+export default bunproLinguisticRule('ずとも', (r) => {
   // Pattern: verb/noun stem + ず + とも (classical negative form meaning "even without X")
   // Examples: 見ずとも, 言わずとも, 専門家ならずとも
   //

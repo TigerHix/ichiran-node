@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('せいで', (r) => {
+export default bunproLinguisticRule('せいで', (r) => {
   // Pattern: noun/verb/adj + せいで (because of / due to - negative consequence)
   // せいで expresses blame or assigns responsibility for a negative result
   //

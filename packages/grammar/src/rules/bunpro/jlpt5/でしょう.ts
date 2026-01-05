@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('でしょう', (r) => {
+export default bunproLinguisticRule('でしょう', (r) => {
   r.either(
     // Pattern 1: Verb/Adj/Adv + でしょう (conjecture/probability)
     // e.g., 踊るでしょう, 寒いでしょう, いいでしょう, 無理でしょう, 初めてでしょう

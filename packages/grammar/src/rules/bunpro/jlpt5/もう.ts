@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('もう', (r) => {
+export default bunproLinguisticRule('もう', (r) => {
   // もう (mou) is an adverb meaning "already" or "anymore"
   // - With past tense: "already" (something happened unexpectedly soon)
   // - With negative: "anymore" (something stopped unexpectedly)

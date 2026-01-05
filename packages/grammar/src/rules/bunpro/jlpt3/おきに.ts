@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: おきに (every interval, at intervals of)
@@ -25,7 +25,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - ごとに: means "each" or "every" without emphasis on interval
  * - Both can attach to numbers + counters
  */
-export default linguisticRule('おきに', (r) => {
+export default bunproLinguisticRule('おきに', (r) => {
   // おき suffix - typically parsed as NOUN with suffix tag
   const oki = r.tok({
     lemma: 'おき',

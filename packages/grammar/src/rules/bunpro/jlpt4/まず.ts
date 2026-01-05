@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: まず - First of all / To start with
@@ -25,7 +25,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * more conversational and directly connects to sentences without needing the に particle.
  * The meaning emphasizes order of action rather than rank or position.
  */
-export default linguisticRule('まず', (r) => {
+export default bunproLinguisticRule('まず', (r) => {
   const mazu = r.adv({
     text: 'まず',
   }, 'mazu');

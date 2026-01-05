@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT5: ている2 (resultative state)
@@ -26,7 +26,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - てる: VERB(連用形) + AUX(てる, dep=aux) - single token!
  * - でいる: Same as ている but with で for verbs like 死ぬ
  */
-export default linguisticRule('ている2', (r) => {
+export default bunproLinguisticRule('ている2', (r) => {
   r.either(
     // Pattern 1: Standard form (ている) - normal verbs
     // e.g., 知っている, 始まっている, 怒っている

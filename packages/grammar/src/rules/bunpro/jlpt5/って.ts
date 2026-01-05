@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('って', (r) => {
+export default bunproLinguisticRule('って', (r) => {
   // Match casual quotation particle って (quotative marker)
   // This is the casual version of と (quotation)
   // Used in casual speech before verbs like 言う, 聞く, 思う, 書く

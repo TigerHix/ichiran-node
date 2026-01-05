@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: らしい1 (rashii1) - Hearsay / "I heard that..."
@@ -35,7 +35,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - 降るらしい: 降る(VERB) + らしい(AUX/ADJ, lemma=らしい)
  * - フランス人らしい: フランス人(NOUN) + らしい(AUX/ADJ, lemma=らしい)
  */
-export default linguisticRule('らしい1', (r) => {
+export default bunproLinguisticRule('らしい1', (r) => {
   r.either(
     // Branch 1: Verb (any form) + らしい
     // Example: 行くらしい, 降るらしい, できるらしい, 続けるらしい, 働いていたらしい
@@ -51,9 +51,7 @@ export default linguisticRule('らしい1', (r) => {
     // Branch 2: I-adjective + らしい
     // Example: カッコいいらしい, 安いらしい
     (b) => {
-      const adj = b.adj({
-        pos: 'ADJ',
-      }, 'adj');
+      const adj = b.adj({}, 'adj');
       const rashii = b.tok({
         lemma: 'らしい',
       }, 'rashii');

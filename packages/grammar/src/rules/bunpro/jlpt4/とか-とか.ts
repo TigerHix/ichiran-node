@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: とか-とか (things like A and B / etc.)
@@ -36,7 +36,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *   - 音(NOUN) + と(ADP, lemma=と, dep=case, head→noun)
  *   - か(ADP, lemma=か, dep=case, head→noun)
  */
-export default linguisticRule('とか-とか', (r) => {
+export default bunproLinguisticRule('とか-とか', (r) => {
   // Item + とか (split into と and か by GiNZA)
   // Can be NOUN, VERB, ADJ (い-adjectives), ADV, PRON, PROPN
   // ADV is included for words like "とんこつラーメン" that GiNZA parses as adverbial

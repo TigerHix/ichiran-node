@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ない-はない', (r) => {
+export default bunproLinguisticRule('ない-はない', (r) => {
   // Double negative pattern: "There is no (Noun) that doesn't/ isn't (X)"
   // Meaning: "All (Nouns) are (X)" - emphatic positive through double negative
   //

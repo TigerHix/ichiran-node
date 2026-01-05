@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('で-by', (r) => {
+export default bunproLinguisticRule('で-by', (r) => {
   // Instrumental で particle (by means of/with/using)
   // Indicates the means, method, or tool used to perform an action
   // Examples: バスで行く (go by bus), 鉛筆で書く (write with pencil)

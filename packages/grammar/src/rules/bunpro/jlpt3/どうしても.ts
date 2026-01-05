@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('どうしても', (r) => {
+export default bunproLinguisticRule('どうしても', (r) => {
   // どうしても (doushitemo) - adverb meaning "by all means, no matter what, at any cost"
   // Expresses strong volition, necessity, or inevitability
   //

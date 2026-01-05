@@ -2,6 +2,7 @@ import type { RuleSpec, NodeRef, TokPred, CaptureSpec, EitherBranch } from './ds
 import type { GinzaPOS, GinzaDep, GinzaInflectionForm, GinzaConjugationClass } from '../ginza/generated.js';
 import { V, node, edge, before, text, textRe, textOneOf, lemma, lemmaRe, lemmaOneOf, pos, posOneOf, dep, depOneOf, inflectionForm, inflectionFormOneOf, conjugationClass, conjugationClassOneOf, tag, tagOneOf, textEqualsLemma, not } from './dsl.js';
 import type { Clause } from './dsl.js';
+import { loadBunproRaw } from '../data/bunpro/loader.js';
 
 export type TokenCond = {
   text?: string;
@@ -229,5 +230,14 @@ export function linguisticRule(
   const r = new LinguisticRuleBuilder(id);
   build(r);
   return r.build();
+}
+
+export function bunproLinguisticRule(
+  id: string,
+  build: (r: LinguisticRuleBuilder) => void
+): RuleSpec {
+  const spec = linguisticRule(id, build);
+  spec.details = loadBunproRaw(id);
+  return spec;
 }
 

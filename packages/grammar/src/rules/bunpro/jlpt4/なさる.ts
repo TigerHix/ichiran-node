@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('なさる', (r) => {
+export default bunproLinguisticRule('なさる', (r) => {
   // なさる is an honorific verb that replaces する (to do)
   // GiNZA parses it as lemma=なさる, but POS varies:
   // - Standalone: pos=VERB

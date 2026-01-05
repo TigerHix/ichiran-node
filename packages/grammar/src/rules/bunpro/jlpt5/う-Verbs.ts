@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('う-Verbs', (r) => {
+export default bunproLinguisticRule('う-Verbs', (r) => {
   // u-verbs (godan verbs) - all conjugation classes starting with 五段
   // Use r.either() to provide literal triggers for representative u-verbs from test data
   // Each branch matches a specific u-verb lemma with its godan conjugation class

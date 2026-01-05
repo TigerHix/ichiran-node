@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('あまり-ない', (r) => {
+export default bunproLinguisticRule('あまり-ない', (r) => {
   // あまり + negative form (not very, not much)
   // Patterns: あまり + negative verb/adj/noun
   // - あまり + Verb［ない］: あまり食べない, ありません

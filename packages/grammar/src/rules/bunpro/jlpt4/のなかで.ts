@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: のなかで - Among/Within/In (a group)
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - この中で: この(det) + 中(noun) + で(particle,dep=case)
  * - 中で alone: 中(noun) + で(particle,dep=case)
  */
-export default linguisticRule('のなかで', (r) => {
+export default bunproLinguisticRule('のなかで', (r) => {
   r.either(
     // Branch 1: Noun + の + 中/なかで (among N, within N)
     (b) => {

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ほかにも-ほかには (他/ほか + particles) - Other than, Besides, In addition, Another
@@ -19,7 +19,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Particles must have dep=case (particle attachment)
  * - This distinguishes from locative 外 (outside) and similar homonyms
  */
-export default linguisticRule('ほかにも-ほかには', (r) => {
+export default bunproLinguisticRule('ほかにも-ほかには', (r) => {
   r.either(
     // Pattern 1: ほかにも (他/ほか + に + も) - "also/besides/anything else"
     (b) => {

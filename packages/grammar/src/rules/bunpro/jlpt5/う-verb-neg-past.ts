@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('う-verb-neg-past', (r) => {
+export default bunproLinguisticRule('う-verb-neg-past', (r) => {
   // Match u-verbs (godan verbs) in negative past form
   // Both casual (～なかった) and polite (～ませんでした, ～なかったです) forms
   //
@@ -46,7 +46,7 @@ export default linguisticRule('う-verb-neg-past', (r) => {
   // - ru-verbs (下一段): 食べなかった, 見なかった
   // - i-adjectives (形容詞): 高くなかった
 
-  const godanClasses = [
+  const godanClasses: import('../../../ginza/generated.js').GinzaConjugationClass[] = [
     '五段-カ行',
     '五段-ガ行',
     '五段-サ行',
@@ -56,7 +56,6 @@ export default linguisticRule('う-verb-neg-past', (r) => {
     '五段-マ行',
     '五段-ラ行',
     '五段-ワア行',
-    '五段-ワア行-アル', // Special case for ある (existential verb)
   ];
 
   r.either(
@@ -102,7 +101,6 @@ export default linguisticRule('う-verb-neg-past', (r) => {
 
       const ta = b.aux({
         lemma: 'た',
-        pos: 'AUX',
       }, 'ta');
 
       b.auxOf(verb, masu);
@@ -135,7 +133,6 @@ export default linguisticRule('う-verb-neg-past', (r) => {
 
       const ta = b.aux({
         lemma: 'た',
-        pos: 'AUX',
       }, 'ta');
 
       b.auxOf(verb, nai);

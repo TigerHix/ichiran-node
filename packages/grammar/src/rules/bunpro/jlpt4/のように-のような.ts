@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: のように・のような (like/similar to)
@@ -26,7 +26,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - "のような" typically parses as: の(ADP) + よう(NOUN/AUX) + な(AUX)
  * - Demonstratives: この/その(DET) + よう(NOUN) + に/な
  */
-export default linguisticRule('のように-のような', (r) => {
+export default bunproLinguisticRule('のように-のような', (r) => {
   r.either(
     // Pattern 1: Noun + の + よう + に (modifies verb/adj)
     (b) => {

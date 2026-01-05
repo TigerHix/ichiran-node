@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('まだ-ていません', (r) => {
+export default bunproLinguisticRule('まだ-ていません', (r) => {
   // まだ～ていません (mada te imasen): still haven't done (something)
   // Expresses that (A) remains in a state of not being done
   // Pattern: まだ + Verb［て］+ いません/いない

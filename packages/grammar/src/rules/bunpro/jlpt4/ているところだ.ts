@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ているところだ - In the middle of doing (right now)
@@ -28,7 +28,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - してる場所: し(verb) + てる(aux) + ところ(noun)
  * - のんでいる場所で: のん(verb) + て(sconj) + いる(verb) + ところ(sconj) + で(sconj)
  */
-export default linguisticRule('ているところだ', (r) => {
+export default bunproLinguisticRule('ているところだ', (r) => {
   r.either(
     // Branch 1: Verb［ている］+ ところ (standard pattern)
     // e.g., 見ているところだ, 食べているところです

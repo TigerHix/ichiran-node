@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: それなのに (sore nanoni) - "and yet, despite that, even though"
@@ -39,7 +39,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - のに (noni) - "despite" (used after verb/adj, not standalone)
  * - Noun + な + のに (e.g., 彼は学生なのに - "although he is a student")
  */
-export default linguisticRule('それなのに', (r) => {
+export default bunproLinguisticRule('それなのに', (r) => {
   // それなのに is a fixed conjunction expression
   // It consists of: それ (that) + な (aux/copula) + のに (despite)
 

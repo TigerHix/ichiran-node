@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: かたわら (katawara) - "while doing X; at the same time as X"
@@ -24,7 +24,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Verbs may be simple (通う), complex (経営している -> いる), or suru-verbs (製造する -> する)
  * - For suru-verbs, match both VERB and AUX (with inflectionForm=連体形-一般)
  */
-export default linguisticRule('かたわら', (r) => {
+export default bunproLinguisticRule('かたわら', (r) => {
   r.either(
     // Pattern 1: Verb/AUX (attributive form) + かたわら
     // 通うかたわら, 教えるかたわら, 活動するかたわら, 経営しているかたわら

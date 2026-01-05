@@ -8,6 +8,9 @@ tmp/
 *.sql.gz
 tsconfig.tsbuildinfo
 
+# GiNZA test cache
+.ginza-cache/
+
 # Deployment and config files
 CLAUDE.md
 DEPLOYMENT.md

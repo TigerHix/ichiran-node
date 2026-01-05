@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('これ', (r) => {
+export default bunproLinguisticRule('これ', (r) => {
   // Demonstrative pronoun "kore" - this one (thing near speaker)
   // Can be written as hiragana これ or kanji 此れ (rare)
   r.either(

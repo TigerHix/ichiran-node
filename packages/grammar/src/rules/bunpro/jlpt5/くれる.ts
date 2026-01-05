@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('くれる', (r) => {
+export default bunproLinguisticRule('くれる', (r) => {
   // くれる (kureru) - to give (to me/speaker)
   // Match both hiragana and kanji forms
   r.either(

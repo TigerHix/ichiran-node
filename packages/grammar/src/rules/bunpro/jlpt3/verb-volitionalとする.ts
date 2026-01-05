@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('verb-volitionalとする', (r) => {
+export default bunproLinguisticRule('verb-volitionalとする', (r) => {
   // Linguistic view:
   // - volitional clause (…よう/おう) + と + する
   // - する is the main verb (present tense, non-past)

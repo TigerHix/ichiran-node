@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('なければいけない', (r) => {
+export default bunproLinguisticRule('なければいけない', (r) => {
   r.either(
     // Pattern 1: Standard casual form - verb[nai-mizen] + れば + いけない
     // e.g., 行かなければいけない, しなければいけない, 飲まなければいけない

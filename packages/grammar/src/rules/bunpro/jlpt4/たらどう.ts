@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: たらどう - Why don't you...? / What if you did...?
@@ -24,7 +24,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Must have a verb followed by an auxiliary ending in "たら"
  * - Must be followed by どう (adverb)
  */
-export default linguisticRule('たらどう', (r) => {
+export default bunproLinguisticRule('たらどう', (r) => {
   // Any verb that can be conjugated
   const verb = r.verb({}, 'verb');
 

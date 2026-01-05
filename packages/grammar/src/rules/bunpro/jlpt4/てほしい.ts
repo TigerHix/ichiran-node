@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: てほしい (verb[te] + ほしい)
@@ -32,7 +32,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - For suru-verbs: NOUN + AUX(する, 連用形) + SCONJ(て) + AUX(ほしい)
  * - です can have dep=aux or dep=fixed depending on context
  */
-export default linguisticRule('てほしい', (r) => {
+export default bunproLinguisticRule('てほしい', (r) => {
   r.either(
     // Pattern 1a: Present positive (てほしい) - regular verbs
     // e.g., してほしい, 買ってほしい, 来てほしい

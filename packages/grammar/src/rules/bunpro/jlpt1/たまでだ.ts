@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('たまでだ', (r) => {
+export default bunproLinguisticRule('たまでだ', (r) => {
   // Pattern: Verb[ta-form] + まで + (のこと)? + だ/です/で
   // Meaning: "merely did X", "just did X", emphasizes the action was nothing special
   // Examples: 言ったまでだ, 助けたまでだ, したまでのことだ
@@ -32,12 +32,12 @@ export default linguisticRule('たまでだ', (r) => {
       // Copula: だ (casual), です (polite), or で (conjunctive)
       b.either(
         (cb) => {
-          const da = cb.aux({ lemma: 'だ', pos: 'AUX' }, 'da');
+          const da = cb.aux({ lemma: 'だ' }, 'da');
           cb.inOrder(made, da, 4);
           cb.captureSpan('たまでだ', verbStem, da);
         },
         (cb) => {
-          const desu = cb.aux({ lemma: 'です', pos: 'AUX' }, 'da');
+          const desu = cb.aux({ lemma: 'です' }, 'da');
           cb.inOrder(made, desu, 4);
           cb.captureSpan('たまでだ', verbStem, desu);
         },
@@ -65,12 +65,12 @@ export default linguisticRule('たまでだ', (r) => {
 
       b.either(
         (cb) => {
-          const da = cb.aux({ lemma: 'だ', pos: 'AUX' }, 'da');
+          const da = cb.aux({ lemma: 'だ' }, 'da');
           cb.inOrder(made, da, 4);
           cb.captureSpan('たまでだ', verbStem, da);
         },
         (cb) => {
-          const desu = cb.aux({ lemma: 'です', pos: 'AUX' }, 'da');
+          const desu = cb.aux({ lemma: 'です' }, 'da');
           cb.inOrder(made, desu, 4);
           cb.captureSpan('たまでだ', verbStem, desu);
         },
@@ -98,12 +98,12 @@ export default linguisticRule('たまでだ', (r) => {
 
       b.either(
         (cb) => {
-          const da = cb.aux({ lemma: 'だ', pos: 'AUX' }, 'da');
+          const da = cb.aux({ lemma: 'だ' }, 'da');
           cb.inOrder(made, da, 4);
           cb.captureSpan('たまでだ', verbStem, da);
         },
         (cb) => {
-          const desu = cb.aux({ lemma: 'です', pos: 'AUX' }, 'da');
+          const desu = cb.aux({ lemma: 'です' }, 'da');
           cb.inOrder(made, desu, 4);
           cb.captureSpan('たまでだ', verbStem, desu);
         },
@@ -131,12 +131,12 @@ export default linguisticRule('たまでだ', (r) => {
 
       b.either(
         (cb) => {
-          const da = cb.aux({ lemma: 'だ', pos: 'AUX' }, 'da');
+          const da = cb.aux({ lemma: 'だ' }, 'da');
           cb.inOrder(made, da, 4);
           cb.captureSpan('たまでだ', verbStem, da);
         },
         (cb) => {
-          const desu = cb.aux({ lemma: 'です', pos: 'AUX' }, 'da');
+          const desu = cb.aux({ lemma: 'です' }, 'da');
           cb.inOrder(made, desu, 4);
           cb.captureSpan('たまでだ', verbStem, desu);
         },

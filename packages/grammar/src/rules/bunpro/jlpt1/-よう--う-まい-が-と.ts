@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('-よう--う-まい-が-と', (r) => {
+export default bunproLinguisticRule('-よう--う-まい-が-と', (r) => {
   // Pattern: volitional (よう/う) + が/と + negative volitional (まい) + が/と
   // e.g., 行こうが行くまいが, 読もうと読むまいと
 

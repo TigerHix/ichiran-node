@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('じゃあるまいし', (r) => {
+export default bunproLinguisticRule('じゃあるまいし', (r) => {
   // Core pattern: ある + まい + し (always present, consecutive)
   const aru = r.verb({ lemma: 'ある' }, 'aru');
   const mai = r.tok({ text: 'まい' }, 'mai');

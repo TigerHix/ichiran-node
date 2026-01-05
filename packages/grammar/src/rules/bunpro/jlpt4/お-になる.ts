@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('お-になる', (r) => {
+export default bunproLinguisticRule('お-になる', (r) => {
   // Case particle に
   const ni = r.particle('に', 'ni');
 

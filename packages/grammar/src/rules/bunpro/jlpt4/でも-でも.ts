@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: でも-でも (Noun + でも + Noun + でも) - Whether ~ or, Neither ~ or
@@ -41,7 +41,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - NEGATIVE (それでも): それでも行きます
  *   - それ(CCONJ,dep=cc) + で(ADP,dep=fixed) + も(ADP,dep=fixed)
  */
-export default linguisticRule('でも-でも', (r) => {
+export default bunproLinguisticRule('でも-でも', (r) => {
   // First noun + で + も pair
   // Include ADJ for loanwords like ドル that GiNZA tags as adjectives
   const noun1 = r.tok({ posOneOf: ['NOUN', 'PRON', 'PROPN', 'ADJ'] }, 'noun1');
@@ -56,7 +56,7 @@ export default linguisticRule('でも-でも', (r) => {
       b.caseMarker(noun1, de1);
       b.inOrder(noun1, de1, 1);
       b.inOrder(de1, mo1, 1);
-      b.capture(de1, 'de1');
+      b.captureAs('de1', de1);
     },
     // dep=cop: use headChild
     (b) => {
@@ -64,7 +64,7 @@ export default linguisticRule('でも-でも', (r) => {
       b.headChild(noun1, de1, 'cop');
       b.inOrder(noun1, de1, 1);
       b.inOrder(de1, mo1, 1);
-      b.capture(de1, 'de1');
+      b.captureAs('de1', de1);
     }
   );
 
@@ -81,7 +81,7 @@ export default linguisticRule('でも-でも', (r) => {
       b.caseMarker(noun2, de2);
       b.inOrder(noun2, de2, 1);
       b.inOrder(de2, mo2, 1);
-      b.capture(de2, 'de2');
+      b.captureAs('de2', de2);
     },
     // dep=cop: use headChild
     (b) => {
@@ -89,7 +89,7 @@ export default linguisticRule('でも-でも', (r) => {
       b.headChild(noun2, de2, 'cop');
       b.inOrder(noun2, de2, 1);
       b.inOrder(de2, mo2, 1);
-      b.capture(de2, 'de2');
+      b.captureAs('de2', de2);
     }
   );
 

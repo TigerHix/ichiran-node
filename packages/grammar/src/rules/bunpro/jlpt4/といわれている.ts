@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: といわれている - It is said that / Is known as
@@ -44,7 +44,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - とされている (JLPT4) - "it is considered that" (uses される instead of 言われている)
  * - という (JLPT3) - "called/named" (no auxiliary verbs)
  */
-export default linguisticRule('といわれている', (r) => {
+export default bunproLinguisticRule('といわれている', (r) => {
   // Quote particle と (marks the quoted phrase)
   const to = r.particle('と', 'to');
 

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('てはいけない', (r) => {
+export default bunproLinguisticRule('てはいけない', (r) => {
   r.either(
     // Pattern 1a: Standard form - verb[te] + て/で + は + いけない (casual, te and wa separate)
     // e.g., 入ってはいけない, 行ってはいけない, 食べてはいけない, やすんではいけない

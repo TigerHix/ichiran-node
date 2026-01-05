@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('て初めて', (r) => {
+export default bunproLinguisticRule('て初めて', (r) => {
   // て初めて (te-form verb + 初めて): "only after doing X", "not until X"
   // Expresses that something happened only after a certain action or event for the first time.
   // Often conveys realization or discovery: "Only after (A) did I (B)"

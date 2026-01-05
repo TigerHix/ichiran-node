@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: ずくめ (entirely X; nothing but X)
@@ -26,7 +26,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * This rule matches noun + ずくめ suffix
  */
-export default linguisticRule('ずくめ', (r) => {
+export default bunproLinguisticRule('ずくめ', (r) => {
   // Noun (any type)
   const noun = r.noun({}, 'noun');
 

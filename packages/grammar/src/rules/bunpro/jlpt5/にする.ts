@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('にする', (r) => {
+export default bunproLinguisticRule('にする', (r) => {
   // にする: to decide on / to choose (noun + ni/to + suru)
   // This expresses the speaker's choice/decision: "I'll have X", "Let's go with X"
   // Both にする (more definite/direct) and とする (softer/less pushy) are supported

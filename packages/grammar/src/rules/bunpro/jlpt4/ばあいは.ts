@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ばあいは', (r) => {
+export default bunproLinguisticRule('ばあいは', (r) => {
   // 場合は (in the case of / in the event of)
   // Pattern analysis:
   // - Verb + 場合(は): 行く場合は, 遊んでいる場合は

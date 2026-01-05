@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('して', (r) => {
+export default bunproLinguisticRule('して', (r) => {
   // Match して (te-form of する) used as conjunction
   // GiNZA parses as: verb + "し" (AUX) + "て" (SCONJ)
   // Both "し" and "て" are attached to the same verb (not to each other)

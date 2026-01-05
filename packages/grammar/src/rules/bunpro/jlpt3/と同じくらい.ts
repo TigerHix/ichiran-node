@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('と同じくらい', (r) => {
+export default bunproLinguisticRule('と同じくらい', (r) => {
   // と同じくらい (to onaji kurai) - "about the same as" or "equally"
   // Patterns:
   // 1. Noun + と + 同じ/おなじ + くらい/ぐらい: プリンターと同じくらい, トモキとおなじぐらい

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ところが', (r) => {
+export default bunproLinguisticRule('ところが', (r) => {
   // ところが (conjunction: "however", "unexpectedly")
   // Connects expectation with unexpected result
   // GiNZA tokenizes as either:

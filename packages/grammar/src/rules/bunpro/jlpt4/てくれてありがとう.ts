@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('てくれてありがとう', (r) => {
+export default bunproLinguisticRule('てくれてありがとう', (r) => {
   // Verb[te-form] + くれて + ありがとう (thank you for doing)
   // Structure: Any verb in te-form + くれて + ありがとう (or polite variants)
   // Examples:

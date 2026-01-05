@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('る-verb-neg-past', (r) => {
+export default bunproLinguisticRule('る-verb-neg-past', (r) => {
   // る-verb (ichidan verb) negative-past form
   // Matches: 食べなかった, 見なかった, 寝なかった (casual)
   //          食べませんでした, 見ませんでした, 寝ませんでした (polite)

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('verbて-b2', (r) => {
+export default bunproLinguisticRule('verbて-b2', (r) => {
   // Match て-form used for giving reasons or causes
   // Patterns:
   //   Verb[て] + Phrase (e.g., 帰って悲しいです)

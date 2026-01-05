@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: それなら (sore nara) - "in that case, if so, if that's the case"
@@ -46,7 +46,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - そうすれば (sureba) - conditional: "if (you) do that"
  * - なら (nara) alone - general conditional particle without "that" reference
  */
-export default linguisticRule('それなら', (r) => {
+export default bunproLinguisticRule('それなら', (r) => {
   // それなら is a discourse marker that responds to previous context
   // It can appear in several forms:
   // 1. それなら (standard: "that" + conditional particle)

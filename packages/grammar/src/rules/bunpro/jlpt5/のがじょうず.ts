@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('のがじょうず', (r) => {
+export default bunproLinguisticRule('のがじょうず', (r) => {
   // Pattern: Verb (dictionary form) + の + が + 上手(じょうず)
   // Meaning: "Good at, skilled at" doing something
   // Example: 歌うのが上手 (good at singing)

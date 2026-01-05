@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: はずだ - Should be / Expected to be / Bound to be
@@ -32,7 +32,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Note: Standalone はず (without copula) at end of sentence is NOT matched
  * to avoid false positives on はずがない (different grammar point).
  */
-export default linguisticRule('はずだ', (r) => {
+export default bunproLinguisticRule('はずだ', (r) => {
   r.either(
     // Branch 1: はず + だ (casual, present)
     (b) => {

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: もし (if/in case) - Conditional emphasis marker
@@ -29,7 +29,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Can be combined with various conditional endings
  * - もしも (moshimo) is a more emphatic variant (JLPT3 grammar point)
  */
-export default linguisticRule('もし', (r) => {
+export default bunproLinguisticRule('もし', (r) => {
   const moshi = r.adv({
     textOneOf: ['もし', '若し'],
   }, 'moshi');

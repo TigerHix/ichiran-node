@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('transitive-intransitive-verbs', (r) => {
+export default bunproLinguisticRule('transitive-intransitive-verbs', (r) => {
   // Transitive verbs use を (direct object marker)
   // Intransitive verbs use が (subject marker)
   //

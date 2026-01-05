@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ずにはいられない', (r) => {
+export default bunproLinguisticRule('ずにはいられない', (r) => {
   // ずにはいられない (zu ni wa irarenai) - "can't help but do something"
   // Double negative expression meaning "cannot be without doing X"
   // attaches to verb negative stem (未然形/mizenkei)

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ときいた - I heard that
@@ -39,7 +39,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - といわれている (it is said that) - uses passive progressive form
  * - Physical hearing (聞こえる) - different verb meaning
  */
-export default linguisticRule('ときいた', (r) => {
+export default bunproLinguisticRule('ときいた', (r) => {
   // Quote particle と (marks the quoted phrase)
   const to = r.particle('と', 'to');
 

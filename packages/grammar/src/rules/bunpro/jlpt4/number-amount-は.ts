@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: Number/Amount + は (at least, or so)
@@ -34,7 +34,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - 肉ぐらいは: 肉(NOUN) + ぐらい(ADP, case) + は(ADP, case)
  * - これぐらいは: これ(PRON) + ぐらい(ADP, case) + は(ADP, case)
  */
-export default linguisticRule('number-amount-は', (r) => {
+export default bunproLinguisticRule('number-amount-は', (r) => {
   r.either(
     // Branch 1: Number + Counter + は
     // Examples: ５回は, ８回は, ３秒は, ６人は

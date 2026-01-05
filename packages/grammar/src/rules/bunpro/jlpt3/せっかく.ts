@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('せっかく', (r) => {
+export default bunproLinguisticRule('せっかく', (r) => {
   // せっかく - adverb meaning "with trouble, at great pains, take the trouble, might as well"
   // Indicates doing something with much effort or a rare/long-awaited occasion
   //

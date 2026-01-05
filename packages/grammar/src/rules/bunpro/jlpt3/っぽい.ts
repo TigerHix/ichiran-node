@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: っぽい (-ish/-like suffix)
@@ -36,7 +36,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * This rule uses flexible matching to catch the various formations.
  */
-export default linguisticRule('っぽい', (r) => {
+export default bunproLinguisticRule('っぽい', (r) => {
   // Match various forms of the っぽい suffix
   // Including conjugated forms as an i-adjective:
   // - Dictionary form: っぽい

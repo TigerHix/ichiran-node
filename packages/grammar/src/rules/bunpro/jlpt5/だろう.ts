@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('だろう', (r) => {
+export default bunproLinguisticRule('だろう', (r) => {
   // だろう is the casual conjecture form (volitional form of だ)
   // Attaches to: verbs, i-adjectives, nouns, na-adjectives, adverbs
   // Key discriminators: lemma=だ, inflectionForm=意志推量形

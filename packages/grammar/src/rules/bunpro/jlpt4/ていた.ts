@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ていた', (r) => {
+export default bunproLinguisticRule('ていた', (r) => {
   // ていた = verb te-form + いた/いました (past of いる)
   // Matches: 待っていた, 食べていた, 見ていた, していた, etc.
   // Meaning: "was doing", past continuous aspect

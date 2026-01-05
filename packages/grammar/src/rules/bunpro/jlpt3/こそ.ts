@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('こそ', (r) => {
+export default bunproLinguisticRule('こそ', (r) => {
   // こそ is an emphatic particle that replaces を/が/は
   // Pattern: Noun/Pronoun/Adv + こそ
   // The こそ particle acts as a case marker (dep=case) emphasizing the preceding element

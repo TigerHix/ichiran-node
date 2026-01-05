@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ながらも', (r) => {
+export default bunproLinguisticRule('ながらも', (r) => {
   // ながらも (nagara mo) - "although", "even while", "despite"
   // Expresses two contradictory states that coexist, often with surprise
   //
@@ -90,12 +90,10 @@ export default linguisticRule('ながらも', (r) => {
       const dearu = b.aux({
         lemma: 'だ',
         text: 'である',
-        pos: 'AUX',
       }, 'dearu');
       const de = b.aux({
         lemma: 'だ',
         text: 'で',
-        pos: 'AUX',
       }, 'de');
       const nagara = b.tok({
         text: 'ながら',

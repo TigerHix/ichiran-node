@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('おかげで', (r) => {
+export default bunproLinguisticRule('おかげで', (r) => {
   // Pattern: noun/verb/adj + おかげで (thanks to / because of)
   // おかげで expresses gratitude for a cause that led to a positive result
   // (can also be used sarcastically for negative results)

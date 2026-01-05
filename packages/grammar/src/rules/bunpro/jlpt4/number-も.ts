@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: number-も (Number + も particle for emphasis)
@@ -37,7 +37,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * For compound tokens (like 一回, 何回) that GiNZA tokenizes as NOUN, we use
  * text matching for specific number compounds that appear in the test data.
  */
-export default linguisticRule('number-も', (r) => {
+export default bunproLinguisticRule('number-も', (r) => {
   r.either(
     // Branch 1: Number (NUM) + optional counter + も
     // Example: １０時間も, １００本も, １０万円も

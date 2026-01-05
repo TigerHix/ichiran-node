@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('くる', (r) => {
+export default bunproLinguisticRule('くる', (r) => {
   const kuru = r.verb({ lemma: 'くる', conjugationClass: 'カ行変格' }, 'kuru');
   r.capture(kuru);
 });

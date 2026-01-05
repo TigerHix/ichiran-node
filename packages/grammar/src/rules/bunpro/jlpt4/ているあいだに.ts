@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ているあいだに - While doing / During the time that ~
@@ -27,7 +27,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - 見ている間に: 見る(verb) + て(sconj) + いる(aux/verb) + 間(noun) + に(particle,dep=case)
  * - 運んでいる間に: 運ぶ(verb) + で(sconj/aux) + いる(aux/verb) + 間(noun) + に(particle,dep=case)
  */
-export default linguisticRule('ているあいだに', (r) => {
+export default bunproLinguisticRule('ているあいだに', (r) => {
   r.either(
     // Branch 1: Verb[て] + いる + 間 + に (standard pattern)
     (b) => {

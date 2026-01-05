@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('とおり', (r) => {
+export default bunproLinguisticRule('とおり', (r) => {
   // とおり (toori) - "just as, according to, exactly as"
   // Meaning: "in that way", "exactly", "precisely", "just as"
   //

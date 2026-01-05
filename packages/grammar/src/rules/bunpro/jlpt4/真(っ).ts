@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: 真(っ) (ま, まっ, まん) - Genuine/Real/True/Completely
@@ -41,7 +41,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * 2. Have specific lemmas (dictionary forms) of the compounds
  * 3. Are adverbs or nouns
  */
-export default linguisticRule('真(っ)', (r) => {
+export default bunproLinguisticRule('真(っ)', (r) => {
   // Match various forms of the 真 prefix compounds
   // We match by lemma since GiNZA may use different surface forms (kanji vs kana)
   const maPrefix = r.tok({

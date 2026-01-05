@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('命令形', (r) => {
+export default bunproLinguisticRule('命令形', (r) => {
   // Imperative form (命令形/meireikei): verb command form
   // Used for giving direct orders or commands. Can sound harsh/rude.
   //

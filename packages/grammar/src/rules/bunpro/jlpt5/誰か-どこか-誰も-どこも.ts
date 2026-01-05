@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('誰か-どこか-誰も-どこも', (r) => {
+export default bunproLinguisticRule('誰か-どこか-誰も-どこも', (r) => {
   // 誰か・どこか・誰も・どこも (dareka/dokoka/daremo/dokomo): someone, somewhere, not anyone, not anywhere
   // Indefinite pronouns for uncertain people or places
   // Pattern: WH-Word (どこ、誰) + か/も + Particle

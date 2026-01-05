@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('よう-おう', (r) => {
+export default bunproLinguisticRule('よう-おう', (r) => {
   // Volitional form: Verb + よう/う (let's, I shall)
   //
   // Ichidan verbs (る-verbs): replace る with よう

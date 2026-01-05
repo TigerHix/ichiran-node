@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('な-adjectives', (r) => {
+export default bunproLinguisticRule('な-adjectives', (r) => {
   // Na-adjectives (形容動詞): Adjectival nouns that conjugate like nouns
   //
   // Examples:

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('と並んで', (r) => {
+export default bunproLinguisticRule('と並んで', (r) => {
   // と並んで (to narande) - "alongside, on par with, comparable to"
   // Formal expression showing something is comparable to (A), in line with it
   //

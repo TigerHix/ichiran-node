@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('てもいい', (r) => {
+export default bunproLinguisticRule('てもいい', (r) => {
   // Pattern: i-adj/na-adj/noun + て/で + も + いい
   // Meaning: "It is okay/fine even if [is adj/noun]"
   // This is the non-verb version of てもいい (verbs are handled by verb-てもいい)
@@ -105,7 +105,6 @@ export default linguisticRule('てもいい', (r) => {
 
       const ii = b3.adj({
         lemmaOneOf: ['いい', 'よい'],
-        pos: 'ADJ',
       }, 'ii');
 
       b3.inOrder(adj, de, 2);
@@ -134,7 +133,6 @@ export default linguisticRule('てもいい', (r) => {
 
       const ii = b4.adj({
         lemmaOneOf: ['いい', 'よい'],
-        pos: 'ADJ',
       }, 'ii');
 
       b4.inOrder(noun, de, 2);
@@ -162,7 +160,6 @@ export default linguisticRule('てもいい', (r) => {
 
       const ii = b5.adj({
         lemmaOneOf: ['いい', 'よい'],
-        pos: 'ADJ',
       }, 'ii');
 
       const desu = b5.aux({
@@ -196,7 +193,6 @@ export default linguisticRule('てもいい', (r) => {
 
       const ii = b6.adj({
         lemmaOneOf: ['いい', 'よい'],
-        pos: 'ADJ',
       }, 'ii');
 
       const desu = b6.aux({

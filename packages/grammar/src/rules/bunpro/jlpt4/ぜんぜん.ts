@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ぜんぜん', (r) => {
+export default bunproLinguisticRule('ぜんぜん', (r) => {
   // 全然 + negative (not at all) or positive slang (entirely/completely)
   // Patterns:
   // - 全然 + Verb［ない］: 全然食べない

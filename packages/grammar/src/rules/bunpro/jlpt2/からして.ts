@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: からして (karashite) - Even..., Judging from, Based on
@@ -36,7 +36,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - にしては ("considering, for")
  * - からすると (more objective judgment)
  */
-export default linguisticRule('からして', (r) => {
+export default bunproLinguisticRule('からして', (r) => {
   r.either(
     // Pattern 1: Noun + から(ADP) + して(AUX) with compound dependency
     // Most common pattern: NOUN is head, から and して form compound

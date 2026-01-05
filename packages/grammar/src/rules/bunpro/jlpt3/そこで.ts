@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('そこで', (r) => {
+export default bunproLinguisticRule('そこで', (r) => {
   // そこで (therefore / accordingly / so / to that end)
   // Conjunction showing consequence or action taken in response to a situation
   // GiNZA tokenizes as either:

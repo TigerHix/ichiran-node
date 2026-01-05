@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('かは-によって違う', (r) => {
+export default bunproLinguisticRule('かは-によって違う', (r) => {
   // Pattern: question + かは + によって + 違う/違います
   // Meaning: "(A) depends on (B)" or "(A) differs depending on (B)"
   //

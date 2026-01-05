@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ごろ (頃/ころ) - Around/approximate time
@@ -27,7 +27,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - ８時ごろ: ８(NUM) + 時(NOUN) + ごろ(NOUN/PART)
  * - 子供の頃: 子供(NOUN) + の(PART) + 頃(NOUN)
  */
-export default linguisticRule('ごろ', (r) => {
+export default bunproLinguisticRule('ごろ', (r) => {
   r.either(
     // Branch 1: ごろ (colloquial form)
     (b) => {

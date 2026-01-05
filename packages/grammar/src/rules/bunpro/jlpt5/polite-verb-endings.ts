@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('polite-verb-endings', (r) => {
+export default bunproLinguisticRule('polite-verb-endings', (r) => {
   // Polite verb endings with ます (masu form)
   // Matches verbs in polite form: 食べます, 行きます, 飲みます, etc.
   // Also matches negative and past forms: 食べません, 食べました

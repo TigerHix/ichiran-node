@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: なん-counter-か (何 + counter + か)
@@ -35,7 +35,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Due to GiNZA's extremely inconsistent and unpredictable tokenization,
  * we need multiple branches with flexible POS matching.
  */
-export default linguisticRule('なん-counter-か', (r) => {
+export default bunproLinguisticRule('なん-counter-か', (r) => {
   r.either(
     // Branch 1: いくつか (some things/a few things)
     // This is a fixed expression, not followed by a counter

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('たとえ-ても', (r) => {
+export default bunproLinguisticRule('たとえ-ても', (r) => {
   r.either(
     // Pattern 1: たとえ + Verb[て-form] + ても
     // e.g., たとえ試合で勝っても, たとえ雪が降らなくても, たとえ笑われても
@@ -42,7 +42,6 @@ export default linguisticRule('たとえ-ても', (r) => {
           '連用形-融合',
         ],
       }, 'adj');
-      const te = b.tok({ textOneOf: ['て', 'で'], posOneOf: ['SCONJ', 'AUX'] }, 'te');
       const mo = b.tok({ text: 'も', pos: 'ADP', dep: 'case' }, 'mo');
       b.inOrder(tatoe, adj, 10);
       b.captureSpan('たとえ-ても', tatoe, mo);
@@ -96,9 +95,6 @@ export default linguisticRule('たとえ-ても', (r) => {
     (b) => {
       const tatoe = b.tok({ text: 'たとえ', lemma: 'たとえ', pos: 'ADV' }, 'tatoe');
       const pred = b.tok({ posOneOf: ['VERB', 'ADJ'] }, 'pred');
-      const to = b.tok({ text: 'と', posOneOf: ['SCONJ', 'ADP'] }, 'to');
-      const shi = b.tok({ text: 'し', posOneOf: ['AUX', 'SCONJ'] }, 'shi');
-      const te = b.tok({ text: 'て', pos: 'SCONJ' }, 'te');
       const mo = b.tok({ text: 'も', pos: 'SCONJ' }, 'mo');
       b.inOrder(tatoe, pred, 10);
       b.captureSpan('たとえ-としても', tatoe, mo);

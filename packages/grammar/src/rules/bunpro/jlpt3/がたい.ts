@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('がたい', (r) => {
+export default bunproLinguisticRule('がたい', (r) => {
   // がたい (gatai) - auxiliary suffix meaning "hard to" or "difficult to"
   // Attaches to verb stem (masu form) to indicate something is extremely difficult
   // or nearly impossible to do. Stronger than にくい, focuses on the inherent

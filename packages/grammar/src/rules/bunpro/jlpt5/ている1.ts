@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ている1', (r) => {
+export default bunproLinguisticRule('ている1', (r) => {
   // Progressive form: Verb[て] + いる (doing something right now)
   // Matches: 食べている (am eating), している (am doing), ねています (is sleeping)
   // Also matches contracted forms like 食べてる, してる

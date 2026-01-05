@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: 化する (to become, to -ize)
@@ -21,7 +21,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Question particles: "雨か？" (is it rain?)
  * - Alternative particles: "本か雑誌" (book or magazine)
  */
-export default linguisticRule('化する', (r) => {
+export default bunproLinguisticRule('化する', (r) => {
   r.either(
     // Pattern 1: Noun/Adj + 化/か + する (dictionary form)
     (b) => {

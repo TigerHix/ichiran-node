@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('が', (r) => {
+export default bunproLinguisticRule('が', (r) => {
   const ga = r.particle('が', 'ga', { dep: 'case' });
   const noun = r.tok({ posOneOf: ['NOUN', 'PRON', 'DET', 'NUM'] }, 'noun');
   r.caseMarker(noun, ga);

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ていく', (r) => {
+export default bunproLinguisticRule('ていく', (r) => {
   // Verb[te] + いく (to go on doing, to continue toward future)
   //
   // Key discriminators:

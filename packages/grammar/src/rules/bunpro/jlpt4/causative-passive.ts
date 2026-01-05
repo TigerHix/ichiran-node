@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('causative-passive', (r) => {
+export default bunproLinguisticRule('causative-passive', (r) => {
   // Causative-passive form: Verb + せられる/される (casual) or せられます/されます (polite)
   // Meaning: To be made/forced to do something (usually against one's will)
   //

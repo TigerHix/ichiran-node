@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('し-し', (r) => {
+export default bunproLinguisticRule('し-し', (r) => {
   // し-し (listing reasons)
   // A conjunction particle (接続助詞) used for listing multiple reasons
   // Patterns:

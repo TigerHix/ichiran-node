@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('なにか-なにも', (r) => {
+export default bunproLinguisticRule('なにか-なにも', (r) => {
   // なにか (nanika) - "something, anything" - indefinite pronoun
   // なにも (nanimo) - "nothing, not anything" - used with negative verbs
   //

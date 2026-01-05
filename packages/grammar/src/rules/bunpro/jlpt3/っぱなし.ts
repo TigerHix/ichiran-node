@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: っぱなし (leave in state/neglect)
@@ -28,7 +28,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * This rule matches verb stems (連用形-一般) + っぱなし/っ放し suffix
  */
-export default linguisticRule('っぱなし', (r) => {
+export default bunproLinguisticRule('っぱなし', (r) => {
   // Verb stem (masu form, 連用形-一般)
   const stem = r.tok({
     inflectionForm: '連用形-一般',

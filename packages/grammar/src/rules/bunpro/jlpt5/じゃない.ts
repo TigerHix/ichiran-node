@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('じゃない', (r) => {
+export default bunproLinguisticRule('じゃない', (r) => {
   // Match the casual and polite negative copula (is not)
   // Casual: じゃない, ではない, slang: じゃねえ
   // Polite: じゃありません, ではありません

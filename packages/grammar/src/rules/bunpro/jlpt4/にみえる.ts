@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: にみえる (to look like / to seem / to appear)
@@ -23,7 +23,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - そうだ - hearsay or impression
  * - らしい - hearsay or general impression
  */
-export default linguisticRule('にみえる', (r) => {
+export default bunproLinguisticRule('にみえる', (r) => {
   r.either(
     // Pattern 1: Noun + に + みえる (direct visual appearance)
     // e.g., アイスクリームにみえる, 雲にみえる, ニキビ

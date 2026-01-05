@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ほとんど (殆ど) - Almost all / Mostly / Hardly any
@@ -25,7 +25,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * both positive and negative predicates. In positive contexts it means "almost
  * all" or "mostly", while in negative contexts it means "hardly any".
  */
-export default linguisticRule('ほとんど', (r) => {
+export default bunproLinguisticRule('ほとんど', (r) => {
   const hotondo = r.tok({
     posOneOf: ['ADV', 'NOUN', 'PRON'],
     textOneOf: ['ほとんど', '殆ど'],

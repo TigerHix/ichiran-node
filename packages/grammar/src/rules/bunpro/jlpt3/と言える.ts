@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: と言える - "it can be said that", "one could say that"
@@ -34,7 +34,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - と: ADP/particle (quotational/citation marker, dep=case or dep=mark)
  * - 言える: VERB (potential form of 言う, lemma=言える or 言う)
  */
-export default linguisticRule('と言える', (r) => {
+export default bunproLinguisticRule('と言える', (r) => {
   // Quotational particle と (marks what is being said)
   // Note: GiNZA may tag と as ADP or PART
   const to = r.tok({

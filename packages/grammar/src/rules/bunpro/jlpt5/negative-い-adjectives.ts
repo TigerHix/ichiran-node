@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('negative-い-adjectives', (r) => {
+export default bunproLinguisticRule('negative-い-adjectives', (r) => {
   // Negative i-adjectives: 形容詞-一般 in 連用形-一般 (ren'yo/ku-form) + ない/あります/です
   //
   // Examples:

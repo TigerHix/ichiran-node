@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('たる', (r) => {
+export default bunproLinguisticRule('たる', (r) => {
   // たる - classical/formal copula (attributive form of たり)
   // Meaning: "as X", "being X" (formal/literary)
   // Patterns:

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('Verb[passive]', (r) => {
+export default bunproLinguisticRule('Verb[passive]', (r) => {
   // Passive voice: verb + passive auxiliary (れる/られる/われる/etc.)
   //
   // The passive auxiliary れる/られる has multiple uses:

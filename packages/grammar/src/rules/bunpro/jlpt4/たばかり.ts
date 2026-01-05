@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('たばかり', (r) => {
+export default bunproLinguisticRule('たばかり', (r) => {
   // Verb ta-form (た) + ばかり (just did / just finished)
   // Matches: 買ったばかり, 食べたばかり, 行ったばかり, etc.
 

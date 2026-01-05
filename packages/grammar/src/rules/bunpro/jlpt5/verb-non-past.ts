@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT5: verb-non-past - Verb Non-Past (Dictionary form)
@@ -25,7 +25,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * The key discriminator: dictionary form verbs have text === lemma (e.g., "走る" has text="走る" and lemma="走る")
  * Conjugated forms have text !== lemma (e.g., "走ります" has text="走り" but lemma="走る")
  */
-export default linguisticRule('verb-non-past', (r) => {
+export default bunproLinguisticRule('verb-non-past', (r) => {
   // Use r.either() to provide literal triggers for representative verbs from test data
   // Each branch matches a specific verb lemma with its conjugation class
   r.either(

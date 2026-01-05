@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('すら', (r) => {
+export default bunproLinguisticRule('すら', (r) => {
   // すら (sura) - "even" particle (formal, more emphatic than さえ)
   // Emphasizes extreme examples; often used with negative
   //

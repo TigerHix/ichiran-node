@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('なくちゃ-なきゃ', (r) => {
+export default bunproLinguisticRule('なくちゃ-なきゃ', (r) => {
   r.either(
     // Pattern 1a: なくちゃ (verb[irrealis] + なく + ちゃ) - with ikenai
     // e.g., 食べなくちゃいけない, 勉強しなくちゃいけない

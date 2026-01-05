@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('として', (r) => {
+export default bunproLinguisticRule('として', (r) => {
   // として (toshite) - "as" / "in the role of"
   // Pattern: Noun + として (Noun + として + Noun also valid)
   //

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('という-called', (r) => {
+export default bunproLinguisticRule('という-called', (r) => {
   // Pattern: Noun/Phrase + という + Noun
   // Meaning: "called X", "named X", "known as X"
   // Examples: ポケモンというゲーム (a game called Pokemon), 佐藤浩一という人 (a person named Sato Koichi)

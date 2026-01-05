@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: なくてもいい (Don't have to do.../It's okay not to do...)
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Simple negative なくて without もいい (e.g., 行かなくて - just negative te-form)
  * - ないで forms (different negative pattern)
  */
-export default linguisticRule('なくてもいい', (r) => {
+export default bunproLinguisticRule('なくてもいい', (r) => {
   r.either(
     // Branch 1: Verb + なく + て + も + いい (e.g., 行かなくてもいい)
     (b1) => {

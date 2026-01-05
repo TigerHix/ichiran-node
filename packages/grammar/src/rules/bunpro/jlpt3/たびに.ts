@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: たびに (every time/whenever)
@@ -28,7 +28,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - ごとに: means "each/every" for regular intervals or items
  * - おきに: "at intervals of" for time/distance measurements
  */
-export default linguisticRule('たびに', (r) => {
+export default bunproLinguisticRule('たびに', (r) => {
   // たび is a temporal noun (NOUN)
   // に is a case particle marking temporal reference
   const tabi = r.noun({ lemma: 'たび' }, 'tabi');

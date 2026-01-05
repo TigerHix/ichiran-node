@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('る-verb-past', (r) => {
+export default bunproLinguisticRule('る-verb-past', (r) => {
   // る-verb (ichidan verb) past form
   // Matches: 食べた, 見た, 寝た (casual)
   //          食べました, 見ました, 寝ました (polite)
@@ -34,7 +34,6 @@ export default linguisticRule('る-verb-past', (r) => {
       }, 'verb');
       const ta = b.aux({
         lemma: 'た',
-        pos: 'AUX',
       }, 'ta');
       b.auxOf(verb, ta);
       b.captureSpan('る-verb-past', verb, ta);

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: がひつよう (need, necessary)
@@ -22,7 +22,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * The test data uses hiragana ひつよう, but real Japanese text uses kanji 必要.
  * Both forms should match.
  */
-export default linguisticRule('がひつよう', (r) => {
+export default bunproLinguisticRule('がひつよう', (r) => {
   const ga = r.particle('が', 'ga');
   // Match both kanji (必要) and hiragana (ひつよう) forms
   // GiNZA parses these inconsistently: sometimes NOUN, sometimes ADJ, sometimes VERB

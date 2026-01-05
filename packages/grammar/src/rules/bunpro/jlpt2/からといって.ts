@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: からといって (kara to itte) - Just because... doesn't mean
@@ -42,7 +42,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - からして (judging from)
  * - からすると (more objective judgment)
  */
-export default linguisticRule('からといって', (r) => {
+export default bunproLinguisticRule('からといって', (r) => {
   r.either(
     // Pattern 1: Verb + からといって (full form, split tokens)
     // e.g., 慰められたからといって、したからといって、行ったからといって

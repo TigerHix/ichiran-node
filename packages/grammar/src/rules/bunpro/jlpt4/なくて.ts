@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('なくて', (r) => {
+export default bunproLinguisticRule('なくて', (r) => {
   // なくて - Negative te-form conjunction (reasons/causes)
   // Used for connecting clauses with negative meaning, expressing reasons or causes.
   //

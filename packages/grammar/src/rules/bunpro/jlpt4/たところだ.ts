@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: たところだ - Just finished doing / Was just doing
@@ -28,7 +28,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - のんだ場所で: のん(verb) + た(aux) + ところ(sconj) + で(sconj,dep=fixed)
  * - 楽しんでいた場所で: 楽しん(verb) + て(sconj) + い(verb) + た(aux) + ところ(sconj)
  */
-export default linguisticRule('たところだ', (r) => {
+export default bunproLinguisticRule('たところだ', (r) => {
   r.either(
     // Branch 1: Verb［た］+ ところ (standard pattern)
     // GiNZA parses た as either AUX or SCONJ depending on sentence

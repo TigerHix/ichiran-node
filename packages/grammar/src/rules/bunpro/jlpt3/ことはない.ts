@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: ことはない - no need to / never happens
@@ -37,7 +37,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * is NOT in past tense. The た-form patterns (食べたこと, 行ったこと) won't match
  * because we don't include た auxiliaries in our pattern.
  */
-export default linguisticRule('ことはない', (r) => {
+export default bunproLinguisticRule('ことはない', (r) => {
   r.either(
     // Branch 1: Verb + ことはない (casual)
     (b) => {

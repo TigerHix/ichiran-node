@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('い-adjectives', (r) => {
+export default bunproLinguisticRule('い-adjectives', (r) => {
   const adj = r.tok({
     lemmaOneOf: [
       'さむい', 'あつい', 'たのしい', 'たかい',

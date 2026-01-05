@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: といってもいい (だといってもいい) - you could say that... / you might say that...
@@ -37,7 +37,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * The pattern is: と + いう(conjugated to いっ) + ても + いい
  * where "いっても" is the て-form of いう + も
  */
-export default linguisticRule('といってもいい', (r) => {
+export default bunproLinguisticRule('といってもいい', (r) => {
   // Quotation particle と
   const to = r.particle('と', 'to');
 

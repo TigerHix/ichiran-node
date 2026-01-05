@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: からには (kara ni wa) - "Now that, Since, Given that"
@@ -39,7 +39,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - からして (judging from, based on) - more subjective
  * - からすると・からすれば (more objective judgment)
  */
-export default linguisticRule('からには', (r) => {
+export default bunproLinguisticRule('からには', (r) => {
   r.either(
     // Pattern 1: Verb/Aux (dictionary form or ta-form) + からには
     (b1) => {

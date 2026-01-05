@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: にする・くする - Making something X state
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Note: In te-form (して, した), GiNZA analyzes し as an AUX attached TO the
  * adjective (reversed from standard form). Must handle both directions.
  */
-export default linguisticRule('にする-くする', (r) => {
+export default bunproLinguisticRule('にする-くする', (r) => {
   r.either(
     // Branch 1: I-adjective + くする (standard form)
     // Example: 大きくする, 甘くする, 新しくする, 熱くする

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: とおもう - I think that...
@@ -34,7 +34,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *   - ます (polite auxiliary)
  *   - いる (te-form auxiliary for continuous/state)
  */
-export default linguisticRule('とおもう', (r) => {
+export default bunproLinguisticRule('とおもう', (r) => {
   r.either(
     // Branch 1: Standard quotation と (pos=ADP, dep=case) - preferred pattern
     (b) => {

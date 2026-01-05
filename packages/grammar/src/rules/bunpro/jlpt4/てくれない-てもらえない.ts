@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('てくれない-てもらえない', (r) => {
+export default bunproLinguisticRule('てくれない-てもらえない', (r) => {
   // This grammar point captures casual negative request forms:
   // 1. てくれない (か) - "Won't you do (A) for me?"
   // 2. てもらえない (か) - "Could I get you to do (A) for me?"

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: てあげる (te-ageru) - to do something for someone
@@ -24,7 +24,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Polite: てあげます, てあげました
  * - Volitional: てあげましょう
  */
-export default linguisticRule('てあげる', (r) => {
+export default bunproLinguisticRule('てあげる', (r) => {
   r.either(
     // Pattern 1: Present/past forms (てあげる, てあげた)
     // Example: 作ってあげる, 買ってあげた, してあげた

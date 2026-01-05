@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('る-Verbs', (r) => {
+export default bunproLinguisticRule('る-Verbs', (r) => {
   // る-verbs (ichidan verbs): single-conjugation verbs ending in る
   // All conjugation classes starting with 下一段 or 一段 (ichidan)
   //

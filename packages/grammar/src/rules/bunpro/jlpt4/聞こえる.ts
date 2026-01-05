@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('聞こえる', (r) => {
+export default bunproLinguisticRule('聞こえる', (r) => {
   // 聞こえる is an intransitive verb meaning "to be audible" or "can hear"
   // It's a spontaneous/potential form verb - sound naturally reaches the ears
   // Uses が to mark what is being heard

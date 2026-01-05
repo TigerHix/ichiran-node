@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('って-slang', (r) => {
+export default bunproLinguisticRule('って-slang', (r) => {
   // って (casual topic marker) - casual version of は
   // "As for, Speaking of"
   //

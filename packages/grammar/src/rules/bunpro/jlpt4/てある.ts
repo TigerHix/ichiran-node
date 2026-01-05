@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: てある (transitive verb[te] + ある)
@@ -31,7 +31,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * IMPORTANT: We exclude common intransitive verbs via negative constraints
  * because てある is ONLY used with transitive verbs
  */
-export default linguisticRule('てある', (r) => {
+export default bunproLinguisticRule('てある', (r) => {
   // Common intransitive verbs that should NOT match てある
   const intransitiveLemmas = [
     'ある',      // exist (inanimate)

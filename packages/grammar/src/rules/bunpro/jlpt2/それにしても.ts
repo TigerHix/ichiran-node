@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: それにしても (sorenishitemo) - "even so, nevertheless, having said that"
@@ -38,7 +38,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - ところが (tokoroga) - "however" (introduces unexpected result)
  * - にもかかわらず (nimokakawarazu) - "despite" (formal, strong contrast)
  */
-export default linguisticRule('それにしても', (r) => {
+export default bunproLinguisticRule('それにしても', (r) => {
   // それにしても is a conjunction meaning "even so, nevertheless"
   // It appears at the beginning of sentences or after punctuation
   // to acknowledge previous context while adding the speaker's main point

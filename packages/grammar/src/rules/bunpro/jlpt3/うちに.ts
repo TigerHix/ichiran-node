@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('うちに', (r) => {
+export default bunproLinguisticRule('うちに', (r) => {
   // うちに attaches to:
   // 1. [い]Adjective + うちに
   // 2. Verb［ている］+ うちに

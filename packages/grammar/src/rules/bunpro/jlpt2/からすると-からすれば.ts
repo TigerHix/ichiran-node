@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: からすると・からすれば (karasuruto/karasureba) - "Judging from, Considering"
@@ -27,7 +27,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - 表情からすると:
  *   - 表情(NOUN) + から(ADP) + する(VERB) + と(ADP)
  */
-export default linguisticRule('からすると-からすれば', (r) => {
+export default bunproLinguisticRule('からすると-からすれば', (r) => {
   // Preceding noun (evidence or standpoint)
   const noun = r.tok({
     posOneOf: ['NOUN', 'PROPN', 'PRON'],

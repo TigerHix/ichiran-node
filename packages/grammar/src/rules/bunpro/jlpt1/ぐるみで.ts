@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: ぐるみで (suffix meaning "the whole X", "including all of X")
@@ -17,7 +17,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * ぐるみ is a suffix from the verb 包む (to wrap/envelop).
  * It indicates that something encompasses ALL of the preceding noun/group.
  */
-export default linguisticRule('ぐるみで', (r) => {
+export default bunproLinguisticRule('ぐるみで', (r) => {
   r.either(
     // Pattern 1: Noun + ぐるみで (instrumental/agentive usage)
     (b) => {

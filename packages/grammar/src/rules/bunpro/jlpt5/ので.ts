@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ので', (r) => {
+export default bunproLinguisticRule('ので', (r) => {
   // ので (node): conjunction particle meaning "because, so, since"
   // Semi-formal expression indicating A caused or instigated B
   // Similar to から but more polite/formal
@@ -65,9 +65,9 @@ export default linguisticRule('ので', (r) => {
     // GiNZA parses じゃ as single token (ADP/fixed)
     (r4) => {
       const naAdj = r4.adj({}, 'naAdj');
-      const de = r4.aux({ lemma: 'だ', text: 'で', pos: 'AUX', dep: 'aux' }, 'de');
+      const de = r4.aux({ lemma: 'だ', text: 'で', dep: 'aux' }, 'de');
       const wa = r4.particle('は', 'wa');
-      const nai = r4.aux({ lemma: 'ない', pos: 'AUX', dep: 'fixed' }, 'nai');
+      const nai = r4.aux({ lemma: 'ない', dep: 'fixed' }, 'nai');
       const no = r4.tok({ text: 'の', pos: 'SCONJ', dep: 'mark', lemma: 'の' }, 'no');
       const nodeDe = r4.tok({ text: 'で', pos: 'AUX', dep: 'fixed', lemma: 'だ' }, 'nodeDe');
 

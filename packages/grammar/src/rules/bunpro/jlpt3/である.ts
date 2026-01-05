@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('である', (r) => {
+export default bunproLinguisticRule('である', (r) => {
   // である - formal written copula (academic, formal writing)
   // Formal version of だ (casual copula) and です (polite copula)
   // Structure: Noun/Na-adj + で (continuative form of だ) + ある (verb "to exist")

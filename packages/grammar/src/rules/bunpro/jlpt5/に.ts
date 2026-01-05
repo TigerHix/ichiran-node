@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('に', (r) => {
+export default bunproLinguisticRule('に', (r) => {
   // に as a dative particle (direction, time, location)
   const ni = r.particle('に', 'ni', { depOneOf: ['case', 'obl'] });
   const noun = r.tok({ posOneOf: ['NOUN', 'PRON', 'DET', 'NUM'] }, 'noun');

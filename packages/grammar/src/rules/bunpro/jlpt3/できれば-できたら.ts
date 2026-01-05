@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('できれば-できたら', (r) => {
+export default bunproLinguisticRule('できれば-できたら', (r) => {
   // できれば/できたら (if possible) - conditional expressions using できる
   // Both mean "if possible" and are used at the beginning of sentences
   // to make polite requests or express desires

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ようだ', (r) => {
+export default bunproLinguisticRule('ようだ', (r) => {
   // ようだ/ようです expresses "seems like" or "appears to be" based on objective/visual evidence
   // Pattern: plain form + ようだ/ようです (for verbs/i-adj)
   //          noun + の + ようだ/ようです

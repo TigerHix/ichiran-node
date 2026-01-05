@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT5: たことがある - Have done before (past experience)
@@ -26,7 +26,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *   the quotative particle (と) rather than each other. We rely on surface order rather
  *   than dependency structure in these cases.
  */
-export default linguisticRule('たことがある', (r) => {
+export default bunproLinguisticRule('たことがある', (r) => {
   r.either(
     // Branch 1: Casual affirmative (ある)
     (b) => {

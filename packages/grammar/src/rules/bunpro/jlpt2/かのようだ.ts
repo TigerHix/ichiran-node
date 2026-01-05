@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: かのようだ (ka no you da) - As if it were, looks like, seems like
@@ -42,7 +42,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Preceding predicate + か (PART, dep=mark) + の (PART/SCONJ) + よう (AUX) + だ (AUX)
  * - Often combined with まるで (marude - "just as if") for emphasis
  */
-export default linguisticRule('かのようだ', (r) => {
+export default bunproLinguisticRule('かのようだ', (r) => {
   r.either(
     // Branch 1: Verb/plain form + か + の + ようだ (sentence-final)
     // e.g., 操縦しているかのようだ

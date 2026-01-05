@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ここ', (r) => {
+export default bunproLinguisticRule('ここ', (r) => {
   // ここ (koko) - demonstrative pronoun meaning "here" or "this place"
   // Refers to a place near the speaker
   //

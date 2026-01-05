@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('それ', (r) => {
+export default bunproLinguisticRule('それ', (r) => {
   // Demonstrative pronoun "sore" - that one (thing near listener, far from speaker)
   // Can be written as hiragana それ or kanji 其れ (rare)
   r.either(

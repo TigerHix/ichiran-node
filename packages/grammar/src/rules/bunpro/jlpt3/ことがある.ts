@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: ことがある - sometimes / there are times when
@@ -29,7 +29,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * To exclude たことがある (past experience), we require verb directly before koto.
  * This prevents matching 食べたことがある (verb + た + こと).
  */
-export default linguisticRule('ことがある', (r) => {
+export default bunproLinguisticRule('ことがある', (r) => {
   r.either(
     // Branch 1: Verb + ことがある (casual)
     (b) => {

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: そう - Looks like / Seems (appearance-based conjecture)
@@ -33,7 +33,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * The reported speech version attaches to plain forms (降るそうだ) and has tag=名詞-助動詞語幹,
  * while this version attaches to stems (降りそうだ) and has tag=形状詞-助動詞語幹.
  */
-export default linguisticRule('そう', (r) => {
+export default bunproLinguisticRule('そう', (r) => {
   r.either(
     // Branch 1: Verb stem (連用形-一般) + そう
     // Example: 降りそう, なりそう, できそう, ありそう, 正しそう

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('がみられる', (r) => {
+export default bunproLinguisticRule('がみられる', (r) => {
   r.either(
     // Pattern 1: Standard potential form as single token (みられる)
     (b) => {

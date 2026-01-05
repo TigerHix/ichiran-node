@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('その', (r) => {
+export default bunproLinguisticRule('その', (r) => {
   // その is a demonstrative adjective/pre-noun (連体詞) meaning "that"
   // It must be followed by a noun (DET + NOUN with dep=det)
   // Refers to something close to the listener (not the speaker)

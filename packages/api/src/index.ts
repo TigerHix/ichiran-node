@@ -6,18 +6,160 @@
  */
 
 import { createServer, IncomingMessage, ServerResponse } from 'http';
-import { romanize, romanizeStar, setConnection, getConnection, type ConnectionSpec, printPerfCountersAndReset, transformRomanizeStarResult } from '@ichiran/core';
+import { romanize, romanizeStar, setConnection, getConnection, type ConnectionSpec, printPerfCountersAndReset, transformRomanizeStarResult, type RomanizeStarResult, type EntityHint } from '@ichiran/core';
 import { GrammarEngine, BUNPRO_RULESETS, type MatchHit } from '@ichiran/grammar';
 import { config } from 'dotenv';
+import { LRUCache } from 'lru-cache';
+import { preprocessText, isLLMEnabled, getLLMConfig } from './llm-preprocess.js';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { existsSync } from 'fs';
 
 let grammarEngine: GrammarEngine | null = null;
 
-// Parse environment variables
-config();
+// =============================================================================
+// SENTENCE-LEVEL MEMOIZATION FOR romanizeStar
+// =============================================================================
+
+// Terminal punctuation that splits sentences
+const SENTENCE_SPLIT_REGEX = /([。？！?!]+)/;
+
+interface SentenceCacheValue {
+  result: RomanizeStarResult;
+}
+
+// LRU cache for sentence-level romanizeStar results
+const sentenceCache = new LRUCache<string, SentenceCacheValue>({
+  max: 5000,
+  // Cache entries are relatively small (just result references)
+});
+
+function makeSentenceCacheKey(text: string, limit: number): string {
+  return JSON.stringify({ text, limit });
+}
+
+interface SentenceSegment {
+  type: 'sentence' | 'punctuation';
+  text: string;
+  start: number;
+  end: number;
+}
+
+/**
+ * Split text into sentences and punctuation segments
+ * Preserves original positions for entity hint adjustment
+ */
+function splitIntoSentences(text: string): SentenceSegment[] {
+  const segments: SentenceSegment[] = [];
+  const parts = text.split(SENTENCE_SPLIT_REGEX);
+  let offset = 0;
+
+  for (let i = 0; i < parts.length; i++) {
+    const part = parts[i];
+    if (part.length === 0) continue;
+
+    const isPunctuation = i % 2 === 1; // Split regex captures are at odd indices
+    segments.push({
+      type: isPunctuation ? 'punctuation' : 'sentence',
+      text: part,
+      start: offset,
+      end: offset + part.length
+    });
+    offset += part.length;
+  }
+
+  return segments;
+}
+
+/**
+ * Process romanizeStar with sentence-level caching and parallelization
+ */
+async function romanizeStarWithCache(
+  text: string,
+  options: { limit?: number; entities?: EntityHint[] } = {}
+): Promise<RomanizeStarResult> {
+  const limit = options.limit ?? 1;
+  const entities = options.entities ?? [];
+
+  // Split into sentences
+  const segments = splitIntoSentences(text);
+
+  // If no splitting occurred (single sentence), just process directly
+  if (segments.length <= 1) {
+    const cacheKey = makeSentenceCacheKey(text, limit);
+    const cached = sentenceCache.get(cacheKey);
+    if (cached) return cached.result;
+
+    const result = await romanizeStar(text, { limit, normalizePunctuation: false, entities });
+    sentenceCache.set(cacheKey, { result });
+    return result;
+  }
+
+  // Process each segment - parallelize sentence segments, punctuation is trivial
+  const segmentResults = await Promise.all(
+    segments.map(async (seg): Promise<RomanizeStarResult> => {
+      if (seg.type === 'punctuation') {
+        // Punctuation segments are returned as-is (string in result array)
+        return [seg.text];
+      }
+
+      // Check cache for this sentence
+      const cacheKey = makeSentenceCacheKey(seg.text, limit);
+      const cached = sentenceCache.get(cacheKey);
+      if (cached) return cached.result;
+
+      // Filter entities for this segment's range and adjust offsets
+      const segmentEntities = entities
+        .filter(e => e.start >= seg.start && e.end <= seg.end)
+        .map(e => ({
+          start: e.start - seg.start,
+          end: e.end - seg.start,
+          boost: e.boost
+        }));
+
+      // Process sentence
+      const result = await romanizeStar(seg.text, {
+        limit,
+        normalizePunctuation: false,
+        entities: segmentEntities
+      });
+
+      // Cache result
+      sentenceCache.set(cacheKey, { result });
+      return result;
+    })
+  );
+
+  // Flatten results - each segment result is an array, concatenate them
+  return segmentResults.flat();
+}
+
+// Parse environment variables - search multiple locations
+function loadEnv() {
+  // Try cwd first
+  if (existsSync(resolve(process.cwd(), '.env'))) {
+    config();
+    console.log(`Loaded .env from ${process.cwd()}`);
+    return;
+  }
+
+  // Try monorepo root (3 levels up from packages/api/src)
+  const __dirname = dirname(fileURLToPath(import.meta.url));
+  const monorepoRoot = resolve(__dirname, '../../..');
+  const rootEnv = resolve(monorepoRoot, '.env');
+  if (existsSync(rootEnv)) {
+    config({ path: rootEnv });
+    console.log(`Loaded .env from ${monorepoRoot}`);
+    return;
+  }
+
+  console.log('No .env file found, using existing environment variables');
+}
+loadEnv();
 
 // Helper to parse connection from env (moved from core)
 function getConnectionFromEnv(): ConnectionSpec | null {
-  const dbUrl = process.env.ICHIRAN_DB_URL;
+  const dbUrl = process.env.ICHIRAN_DB_URL || 'postgresql://postgres:password@localhost:6777/jmdict';
   if (!dbUrl) return null;
 
   try {
@@ -223,20 +365,6 @@ async function handleRequest(req: IncomingMessage, res: ServerResponse): Promise
       }
     }
 
-    // Minimal test endpoint (no database)
-    if (url.pathname === '/api/test' && req.method === 'POST') {
-      const body = await parseJsonBody(req);
-      console.log(`[${requestId}] Test endpoint - body: ${JSON.stringify(body)}`);
-      sendJson(res, {
-        echo: body,
-        timestamp: new Date().toISOString(),
-        memory: process.memoryUsage(),
-        uptime: process.uptime()
-      }, 200, requestId);
-      console.log(`[${requestId}] END ${url.pathname} - ${Date.now() - startTime}ms`);
-      return;
-    }
-
     // Basic romanization: POST /api/romanize
     if (url.pathname === '/api/romanize' && req.method === 'POST') {
       const body = await parseJsonBody(req);
@@ -280,15 +408,61 @@ async function handleRequest(req: IncomingMessage, res: ServerResponse): Promise
       }
 
       const limit = body.limit ?? 1;
-      const entities = body.entities ?? [];
-      const result = await romanizeStar(body.text, { limit, normalizePunctuation: false, entities });
-      const segments = await transformRomanizeStarResult(result);
+      let textToProcess = body.text;
+      let entities: EntityHint[] = body.entities ?? [];
 
-      sendJson(res, {
-        text: body.text,
+      // LLM preprocessing: normalize text and extract named entities
+      let llmStats: Record<string, any> | undefined;
+      let properNouns: string[] = [];
+      if (isLLMEnabled() && !body.skipLLM) {
+        const preprocessed = await preprocessText(body.text);
+        textToProcess = preprocessed.text;
+        properNouns = preprocessed.properNouns;
+        entities = [...entities, ...preprocessed.entities];
+        if (preprocessed.stats) {
+          llmStats = {
+            latencyMs: preprocessed.stats.latencyMs,
+            tokens: preprocessed.stats.tokens,
+            model: preprocessed.stats.model,
+            cached: preprocessed.stats.cached,
+            retries: preprocessed.stats.retries
+          };
+        }
+        console.log(`[${requestId}] LLM preprocess: ${preprocessed.stats?.latencyMs ?? 0}ms, ${preprocessed.stats?.cached ? 'cached' : 'fresh'}, entities=${preprocessed.entities.length}`);
+      }
+
+      const segmentStart = performance.now();
+      const result = await romanizeStarWithCache(textToProcess, { limit, entities });
+      const segments = await transformRomanizeStarResult(result);
+      const segmentMs = Math.round(performance.now() - segmentStart);
+
+      console.log(`[${requestId}] segment=${segmentMs}ms`);
+
+      const response: Record<string, any> = {
+        text: textToProcess,
         segments,
         limit
-      });
+      };
+
+      if (isLLMEnabled() && !body.skipLLM) {
+        if (textToProcess !== body.text) {
+          response.normalizedText = textToProcess;
+          response.originalText = body.text;
+        }
+        if (properNouns.length > 0) {
+          response.properNouns = properNouns;
+        }
+        if (llmStats) {
+          response.llm = llmStats;
+        }
+      }
+
+      response.timing = {
+        segmentMs,
+        ...(llmStats?.latencyMs !== undefined && { llmMs: llmStats.latencyMs })
+      };
+
+      sendJson(res, response);
       return;
     }
 
@@ -306,18 +480,46 @@ async function handleRequest(req: IncomingMessage, res: ServerResponse): Promise
       }
 
       const limit = body.limit ?? 1;
-      const entities = body.entities ?? [];
-      
-      // Get segmentation
-      const result = await romanizeStar(body.text, { limit, normalizePunctuation: false, entities });
-      const segments = await transformRomanizeStarResult(result);
+      let textToProcess = body.text;
+      let entities: EntityHint[] = body.entities ?? [];
 
-      // Get grammar matches
-      const matches: MatchHit[] = await grammarEngine.match(body.text, {
+      // LLM preprocessing: normalize text and extract named entities
+      let llmStats: Record<string, any> | undefined;
+      let properNouns: string[] = [];
+      if (isLLMEnabled() && !body.skipLLM) {
+        const preprocessed = await preprocessText(body.text);
+        textToProcess = preprocessed.text;
+        properNouns = preprocessed.properNouns;
+        // Merge LLM-extracted entities with any provided entities
+        entities = [...entities, ...preprocessed.entities];
+        if (preprocessed.stats) {
+          llmStats = {
+            latencyMs: preprocessed.stats.latencyMs,
+            tokens: preprocessed.stats.tokens,
+            model: preprocessed.stats.model,
+            cached: preprocessed.stats.cached,
+            retries: preprocessed.stats.retries
+          };
+        }
+        console.log(`[${requestId}] LLM preprocess: ${preprocessed.stats?.latencyMs ?? 0}ms, ${preprocessed.stats?.cached ? 'cached' : 'fresh'}, entities=${preprocessed.entities.length}, properNouns=${properNouns.join(',') || 'none'}`);
+      }
+
+      const segmentStart = performance.now();
+      // Get segmentation with sentence-level caching
+      const result = await romanizeStarWithCache(textToProcess, { limit, entities });
+      const segments = await transformRomanizeStarResult(result);
+      const segmentMs = Math.round(performance.now() - segmentStart);
+
+      const grammarStart = performance.now();
+      // Get grammar matches (on normalized text if LLM was used)
+      const matches: MatchHit[] = await grammarEngine.match(textToProcess, {
         rulesetIds: body.rulesetIds
       });
+      const grammarMs = Math.round(performance.now() - grammarStart);
 
-      // Group matches by ruleId
+      console.log(`[${requestId}] segment=${segmentMs}ms, grammar=${grammarMs}ms`);
+
+      // Group matches by ruleId (details fetched separately via /api/grammar/:id)
       const grammars: Record<string, any> = {};
       for (const match of matches) {
         if (!grammars[match.ruleId]) {
@@ -331,26 +533,73 @@ async function handleRequest(req: IncomingMessage, res: ServerResponse): Promise
         });
       }
 
-      sendJson(res, {
+      const response: Record<string, any> = {
         segments,
         grammars
-      });
+      };
+
+      // Include normalized text and LLM stats in response if LLM was used
+      if (isLLMEnabled() && !body.skipLLM) {
+        if (textToProcess !== body.text) {
+          response.normalizedText = textToProcess;
+          response.originalText = body.text;
+        }
+        if (properNouns.length > 0) {
+          response.properNouns = properNouns;
+        }
+        if (llmStats) {
+          response.llm = llmStats;
+        }
+      }
+
+      // Include timing in response
+      response.timing = {
+        segmentMs,
+        grammarMs,
+        ...(llmStats?.latencyMs !== undefined && { llmMs: llmStats.latencyMs })
+      };
+
+      sendJson(res, response);
 
       printPerfCountersAndReset();
       return;
     }
 
+    // Grammar rule details endpoint
+    const grammarMatch = url.pathname.match(/^\/api\/grammar\/(.+)$/);
+    if (grammarMatch && req.method === 'GET') {
+      if (!grammarEngine) {
+        sendError(res, 'Grammar engine not initialized', 500);
+        return;
+      }
+      const ruleId = decodeURIComponent(grammarMatch[1]!);
+      const details = grammarEngine.getRuleDetails(ruleId);
+      if (!details) {
+        sendError(res, `Rule not found: ${ruleId}`, 404);
+        return;
+      }
+      sendJson(res, details);
+      return;
+    }
+
     // API documentation endpoint
     if (url.pathname === '/api' && req.method === 'GET') {
+      const llmConfig = getLLMConfig();
       sendJson(res, {
         name: 'Ichiran REST API',
         version: '0.1.0',
+        llm: {
+          enabled: isLLMEnabled(),
+          model: llmConfig?.model ?? null,
+          description: 'When USE_LLM=true, /segment and /analyze normalize text and extract named entities via LLM'
+        },
         endpoints: {
           'GET /health': 'Health check',
           'POST /api/romanize': 'Basic romanization (body: {text: string})',
           'POST /api/romanize/info': 'Romanization with dictionary info (body: {text: string})',
-          'POST /api/segment': 'Full segmentation (body: {text: string, limit?: number})',
-          'POST /api/analyze': 'Combined grammar analysis and segmentation (body: {text: string, limit?: number, rulesetIds?: string[]})'
+          'POST /api/segment': 'Full segmentation (body: {text: string, limit?: number, skipLLM?: boolean})',
+          'POST /api/analyze': 'Combined grammar analysis and segmentation (body: {text: string, limit?: number, rulesetIds?: string[], skipLLM?: boolean})',
+          'GET /api/grammar/:ruleId': 'Get grammar rule details (returns: {ruleId, rulesetId, name?, description?})'
         },
         examples: {
           romanize: {
@@ -427,6 +676,10 @@ async function main(): Promise<void> {
     console.log(`Ichiran API server listening on http://0.0.0.0:${PORT}`);
     console.log(`Health check: http://0.0.0.0:${PORT}/health`);
     console.log(`API docs: http://0.0.0.0:${PORT}/api`);
+    if (isLLMEnabled()) {
+      const config = getLLMConfig();
+      console.log(`LLM preprocessing: enabled (model: ${config?.model ?? 'not configured'})`);
+    }
   });
 
   // Graceful shutdown

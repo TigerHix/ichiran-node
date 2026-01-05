@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('てください', (r) => {
+export default bunproLinguisticRule('てください', (r) => {
   // Polite request form: verb te-form + ください (please do)
   // Examples: 書いてください (please write), 待ってください (please wait)
   // Handles both て and で forms

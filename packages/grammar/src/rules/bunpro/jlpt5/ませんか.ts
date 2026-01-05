@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ませんか', (r) => {
+export default bunproLinguisticRule('ませんか', (r) => {
   // ませんか (masen ka): won't you, would you not
   // Polite expression for directly inviting someone to do something
   // Verb stem + ませんか

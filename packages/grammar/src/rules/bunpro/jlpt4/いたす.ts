@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: いたす (itasu) - humble form of する (suru)
@@ -14,7 +14,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Conjugated: いたしました, いたして, etc.
  * - Humble constructions: お+verb-stem+いたす, ご+suru-verb+いたす
  */
-export default linguisticRule('いたす', (r) => {
+export default bunproLinguisticRule('いたす', (r) => {
   r.either(
     // Pattern 1: Simple いたす (dictionary form)
     (b) => {

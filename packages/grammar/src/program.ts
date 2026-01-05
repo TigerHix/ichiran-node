@@ -12,30 +12,41 @@ export type GrammarEngineOptions = {
   client?: GinzaClient;
 };
 
+export type RuleDetails = {
+  ruleId: string;
+  rulesetId: string;
+  name?: string;
+  description?: string;
+};
+
 export class GrammarEngine {
   private client: GinzaClient;
   private program: CompiledProgram;
   private ruleSpecs: Map<string, RuleSpec>;
+  private ruleToRuleset: Map<string, string>;
 
-  private constructor(client: GinzaClient, program: CompiledProgram, ruleSpecs: Map<string, RuleSpec>) {
+  private constructor(client: GinzaClient, program: CompiledProgram, ruleSpecs: Map<string, RuleSpec>, ruleToRuleset: Map<string, string>) {
     this.client = client;
     this.program = program;
     this.ruleSpecs = ruleSpecs;
+    this.ruleToRuleset = ruleToRuleset;
   }
 
   static async create(rulesets: Ruleset[], opts: GrammarEngineOptions = {}): Promise<GrammarEngine> {
     const program = buildProgram(rulesets);
     const specsMap = new Map<string, RuleSpec>();
+    const ruleToRuleset = new Map<string, string>();
     for (const rs of rulesets) {
       for (const r of rs.rules) {
         specsMap.set(r.id, r);
+        ruleToRuleset.set(r.id, rs.id);
       }
     }
     const client = opts.client ?? new GinzaClient(opts.ginza);
     if (!opts.client) {
       await client.start();
     }
-    return new GrammarEngine(client, program, specsMap);
+    return new GrammarEngine(client, program, specsMap, ruleToRuleset);
   }
 
   async close(): Promise<void> {
@@ -48,6 +59,20 @@ export class GrammarEngine {
 
   getRuleIds(): string[] {
     return this.program.rulesets.flatMap((rs) => rs.rules.map((r) => r.id));
+  }
+
+  getRuleDetails(ruleId: string): RuleDetails | null {
+    const spec = this.ruleSpecs.get(ruleId);
+    if (!spec) return null;
+    const rulesetId = this.ruleToRuleset.get(ruleId);
+    if (!rulesetId) return null;
+    const raw = spec.details;
+    return {
+      ruleId,
+      rulesetId,
+      name: raw?.data?.attributes?.title,
+      description: raw?.data?.attributes?.meaning,
+    };
   }
 
   async match(text: string, opts: MatchOptions = {}): Promise<MatchHit[]> {

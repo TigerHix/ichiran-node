@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('だって', (r) => {
+export default bunproLinguisticRule('だって', (r) => {
   // だって (datte) - casual particle with multiple meanings:
   // 1. Sentence-final: Noun+だって/なんだって = "I heard/they said" (hearsay)
   // 2. Sentence-initial: だって = "because" (casual explanation)

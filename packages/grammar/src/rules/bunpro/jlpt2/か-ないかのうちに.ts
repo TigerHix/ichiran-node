@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: か〜ないかのうちに (ka-naika-no-uchini) - As soon as, Just when, Right after
@@ -28,7 +28,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - 開けるか開けないかのうちに:
  *   - 開ける(VERB) + か(ADP) + 開け(VERB) + ない(AUX) + か(ADP) + の(SCONJ) + うち(NOUN) + に(ADP)
  */
-export default linguisticRule('か-ないかのうちに', (r) => {
+export default bunproLinguisticRule('か-ないかのうちに', (r) => {
   // Pattern: Verb + か + Verb-stem + ない + か + の + うち + に
   // The two verbs should be the same, but in different forms (dictionary vs negative)
 

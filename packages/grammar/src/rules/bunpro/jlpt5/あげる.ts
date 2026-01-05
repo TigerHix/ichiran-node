@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('あげる', (r) => {
+export default bunproLinguisticRule('あげる', (r) => {
   // Match あげる (ageru) as a main verb meaning "to give"
   // This is the basic giving verb, not the auxiliary てあげる construction
   // Note: Due to DSL limitations with negating dependency edge groups,

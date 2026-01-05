@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('-なり-なり', (r) => {
+export default bunproLinguisticRule('-なり-なり', (r) => {
   // Pattern: (Verb/Noun) + [に] + なり + (Verb/Noun) + [に] + なり
   // Matches: 売るなり捨てるなり, 両親なり友達なり, 俺になり母さんになり, etc.
   //

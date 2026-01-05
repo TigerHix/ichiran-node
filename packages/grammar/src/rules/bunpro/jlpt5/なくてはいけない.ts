@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('なくてはいけない', (r) => {
+export default bunproLinguisticRule('なくてはいけない', (r) => {
   r.either(
     // Pattern 1a: Standard form - verb[nai-ren'you] + なく + て + は + いけない (casual, separate tokens)
     // e.g., 飲まなくてはいけない, 行かなくてはいけない, しなくてはいけない

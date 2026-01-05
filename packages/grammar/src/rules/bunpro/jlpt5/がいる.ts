@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('がいる', (r) => {
+export default bunproLinguisticRule('がいる', (r) => {
   r.either(
     // Pattern 1: Simple form (いる)
     (b) => {

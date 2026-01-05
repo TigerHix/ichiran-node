@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('たなり-なり', (r) => {
+export default bunproLinguisticRule('たなり-なり', (r) => {
   // Match verb ta-form + なり pattern
   // Pattern: Verb[ta-form] + た/だ + なり (e.g., 行ったなり, 入ったなり, 倒れ込んだなり)
   // Means: "did X and remained in that state" or "ever since X happened"

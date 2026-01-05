@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: ついでに (tsui de ni) - "while I'm at it", "take the opportunity to"
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - に may be a separate particle (ADP) or part of ついでに
  * - The pattern needs to handle both: tokenized as one word or split into two
  */
-export default linguisticRule('ついでに', (r) => {
+export default bunproLinguisticRule('ついでに', (r) => {
   r.either(
     // Pattern 1: Verb + ついでに (as single token)
     // 行くついでに, 行ったついでに, 来るついでに, 送ったついでに

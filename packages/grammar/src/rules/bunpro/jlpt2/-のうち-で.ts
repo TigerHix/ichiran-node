@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('-のうち-で', (r) => {
+export default bunproLinguisticRule('-のうち-で', (r) => {
   // Match うち used partitively (のうち, このうち, or standalone うち)
   // うち can have dep: obl, nmod, compound
   r.either(

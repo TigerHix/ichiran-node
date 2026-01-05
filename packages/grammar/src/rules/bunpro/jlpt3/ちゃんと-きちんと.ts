@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ちゃんと-きちんと', (r) => {
+export default bunproLinguisticRule('ちゃんと-きちんと', (r) => {
   // ちゃんと・きちんと - adverbs meaning "properly, neatly, correctly"
   // These two adverbs have very similar meanings and usage patterns.
   // They modify verbs to indicate doing something properly, correctly, neatly.
@@ -28,7 +28,7 @@ export default linguisticRule('ちゃんと-きちんと', (r) => {
     (b) => {
       const shita = b.verb({
         lemma: 'する',
-        inflectionForm: '連体形-タ系',
+        inflectionForm: '連体形-一般',
       }, 'shita');
       const noun = b.noun({}, 'noun');
       b.inOrder(adv, shita, 2);

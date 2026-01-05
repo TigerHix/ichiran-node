@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: かた (way of doing)
@@ -28,7 +28,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * We handle this by creating separate pattern branches for each GiNZA parsing variant.
  */
-export default linguisticRule('かた', (r) => {
+export default bunproLinguisticRule('かた', (r) => {
   r.either(
     // Pattern 1a: Verb stem (NOUN/VERB/ADJ with tag=動詞-一般) + かた
     (b) => {

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: といえば - speaking of / now that you mention
@@ -36,7 +36,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * The key insight: For "といえば", GiNZA parses "いえ" as a verb form with lemma="いう",
  * not the full "いう". This is the 仮定形 (conditional form) of the verb いう.
  */
-export default linguisticRule('といえば', (r) => {
+export default bunproLinguisticRule('といえば', (r) => {
   r.either(
     // Pattern 1: といえば (speaking of / if we speak of)
     // GiNZA parses this as: と + いえ(verb, lemma=いう) + ば

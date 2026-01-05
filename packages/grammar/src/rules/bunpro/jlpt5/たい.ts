@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('たい', (r) => {
+export default bunproLinguisticRule('たい', (r) => {
   // たい - auxiliary verb meaning "want to"
   // Attaches to verb stems (masu-stem) to express desire
   // Functions like an i-adjective (conjugates as たくない, たかった, etc.)

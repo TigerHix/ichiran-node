@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('がある', (r) => {
+export default bunproLinguisticRule('がある', (r) => {
   r.either(
     // Pattern 1: Simple affirmative (ある)
     (b) => {

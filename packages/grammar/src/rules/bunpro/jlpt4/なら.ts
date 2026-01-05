@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: なら (conditional: "if it's X")
@@ -23,7 +23,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - 行くなら (if (you) go)
  * - デザートなら (if it's dessert)
  */
-export default linguisticRule('なら', (r) => {
+export default bunproLinguisticRule('なら', (r) => {
   // Match なら as conditional form of copula だ
   const nara = r.aux({
     text: 'なら',

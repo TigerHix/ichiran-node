@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('いらっしゃる', (r) => {
+export default bunproLinguisticRule('いらっしゃる', (r) => {
   // いらっしゃる is an honorific verb that replaces いる/くる/いく
   // GiNZA parses it as lemma=いらっしゃる, but POS varies:
   // - Plain forms: pos=VERB

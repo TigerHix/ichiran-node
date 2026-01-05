@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('causative', (r) => {
+export default bunproLinguisticRule('causative', (r) => {
   // Causative form: Verb + せる/させる (make/let someone do)
   //
   // Regular verbs: verb stem + せる/させる
@@ -36,7 +36,6 @@ export default linguisticRule('causative', (r) => {
     (b) => {
       const seru = b.aux({
         lemma: 'せる',
-        pos: 'AUX',
         inflectionFormOneOf: ['終止形-一般', '連用形-一般', '連体形-一般'],
       }, 'seru');
 
@@ -56,7 +55,6 @@ export default linguisticRule('causative', (r) => {
     (b) => {
       const saseru = b.aux({
         lemma: 'させる',
-        pos: 'AUX',
         inflectionFormOneOf: ['終止形-一般', '連用形-一般', '連体形-一般'],
       }, 'saseru');
 

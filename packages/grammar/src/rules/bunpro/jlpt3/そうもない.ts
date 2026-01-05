@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: そうもない - Very unlikely to / doesn't seem like
@@ -33,7 +33,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * Note: This is the negative conjecture form, stronger than そうにない due to the emphatic particle も.
  */
-export default linguisticRule('そうもない', (r) => {
+export default bunproLinguisticRule('そうもない', (r) => {
   r.either(
     // Branch 1: Verb stem (連用形-一般) + そう (ADV, dep=advmod) + も + ない
     // Example: 遊べそうもない (遊べ is VERB, 連用形-一般; そう is ADV, dep=advmod)

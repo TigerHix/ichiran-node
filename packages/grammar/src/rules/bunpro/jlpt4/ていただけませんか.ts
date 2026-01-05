@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ていただけませんか', (r) => {
+export default bunproLinguisticRule('ていただけませんか', (r) => {
   // This grammar point has TWO forms:
   // 1. ていただけませんか (more humble/polite)
   // 2. てもらえませんか (slightly less formal but still polite)

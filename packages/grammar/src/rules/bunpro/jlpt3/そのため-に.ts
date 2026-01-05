@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('そのため-に', (r) => {
+export default bunproLinguisticRule('そのため-に', (r) => {
   // Pattern: そのため(に) - "for that reason", "because of that", "to that end"
   // Connective expression indicating cause. Can appear as そのため or そのために.
   //

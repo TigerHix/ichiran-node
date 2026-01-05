@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: たちまち (tachimachi) - "immediately, instantly, in a flash"
@@ -37,7 +37,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - いつの間にか (itsu no ma ni ka) - "unnoticed, before realizing" (gradual/unnoticed)
  * - はやく (hayaku) - "quickly, early" (general speed)
  */
-export default linguisticRule('たちまち', (r) => {
+export default bunproLinguisticRule('たちまち', (r) => {
   // たちまち/忽ち (immediately, instantly, in a flash)
   // Adverb meaning something happens spontaneously and quickly without control
   // Can be written in hiragana (たちまち) or kanji (忽ち)

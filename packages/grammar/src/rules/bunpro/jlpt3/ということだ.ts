@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: ということだ - it means that / I hear that / it is said that
@@ -32,7 +32,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - ということです: と(particle) + いう(verb) + こと(noun) + です(aux/copula)
  * - とのことだ: と(particle) + の(particle/noun) + こと(noun) + だ(aux/copula)
  */
-export default linguisticRule('ということだ', (r) => {
+export default bunproLinguisticRule('ということだ', (r) => {
   // Quote particle と (marks the quoted phrase)
   const to = r.particle('と', 'to');
 

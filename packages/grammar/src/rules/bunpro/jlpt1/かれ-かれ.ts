@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: かれ-かれ (either X or Y; regardless of which)
@@ -28,7 +28,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * NOTE: Each Adj-かれ is a SINGLE token in GiNZA (e.g., "遅かれ" is one token, not "遅"+"かれ")
  */
-export default linguisticRule('かれ-かれ', (r) => {
+export default bunproLinguisticRule('かれ-かれ', (r) => {
   // First adjective + かれ (classical imperative form, single token)
   // textOneOf provides literal triggers for dispatch
   const adj1 = r.tok({

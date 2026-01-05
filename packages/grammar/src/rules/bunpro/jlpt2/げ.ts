@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: げ (ge) - "appearance, sign, look of"
@@ -46,7 +46,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Strategy: Match げ as a suffix followed by な or に.
  * Standalone げ (without な/に) is rare but exists (かわいげ).
  */
-export default linguisticRule('げ', (r) => {
+export default bunproLinguisticRule('げ', (r) => {
   r.either(
     // Branch 1: Combined forms ending with げな
     // GiNZA parses stem + げ + な as single tokens

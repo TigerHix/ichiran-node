@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: ずにはすまない (zu ni wa sumanai) - Cannot avoid doing; must do
@@ -34,7 +34,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - ず is parsed as AUX with lemma=ぬ (classical negative)
  * - すまない is parsed as: すむ (VERB, lemma=すむ) + ない (AUX, lemma=ない)
  */
-export default linguisticRule('ずにはすまない', (r) => {
+export default bunproLinguisticRule('ずにはすまない', (r) => {
   r.either(
     // Variant 1: Verb stem + ずには + すまない
     // 謝らずにはすまない, 行かずにはすまない, etc.

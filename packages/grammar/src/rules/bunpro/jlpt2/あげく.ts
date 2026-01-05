@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: あげく (ageku) - After, In the end, After all, Eventually
@@ -29,7 +29,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - 泣いたあげく: 泣い(VERB) + た(AUX) + あげく(NOUN)
  * - 口論のあげく: 口論(NOUN) + の(ADP) + あげく(NOUN)
  */
-export default linguisticRule('あげく', (r) => {
+export default bunproLinguisticRule('あげく', (r) => {
   r.either(
     // Pattern 1: Verb［た］+ あげく
     (b) => {

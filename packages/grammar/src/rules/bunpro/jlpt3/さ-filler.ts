@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('さ-filler', (r) => {
+export default bunproLinguisticRule('さ-filler', (r) => {
   // さ as a filler particle (like "you know", "like" in English)
   // Used mid-sentence to fill silence while thinking
   // Variations: さ, さぁ, さあ, さー

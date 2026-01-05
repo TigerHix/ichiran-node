@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('へいく', (r) => {
+export default bunproLinguisticRule('へいく', (r) => {
   // Match noun + へ + motion verb (go/come toward somewhere)
   // e.g., 学校へいく (go to school), 東京へいきます (head to Tokyo)
   //

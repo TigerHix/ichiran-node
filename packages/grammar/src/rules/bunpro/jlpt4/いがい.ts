@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('いがい', (r) => {
+export default bunproLinguisticRule('いがい', (r) => {
   // 以外/いがい (except/other than) - NOUN/ADV usage
   // Key discriminator: must NOT be ADJ (which would be 意外 = surprise/unexpected)
   //

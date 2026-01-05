@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('だす', (r) => {
+export default bunproLinguisticRule('だす', (r) => {
   // だす attaches to verb stems (masu form) to mean "suddenly start doing"
   // GiNZA parses this similarly to おわる:
   //

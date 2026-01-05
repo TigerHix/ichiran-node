@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('だけでなく-て-も', (r) => {
+export default bunproLinguisticRule('だけでなく-て-も', (r) => {
   // だけでなく(て)～(も) - "not only X but also Y"
   // Extends JLPT4's だけでなく to optionally require も particle after second element
   //

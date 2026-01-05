@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: までに (by the time/until)
@@ -31,7 +31,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - 来月までレポートを書く (write report until next month - continuous action)
  * - 来月までにレポートを書く (write report by next month - deadline)
  */
-export default linguisticRule('までに', (r) => {
+export default bunproLinguisticRule('までに', (r) => {
   r.either(
     // Branch 1: Noun/Time + まで + に
     (b) => {

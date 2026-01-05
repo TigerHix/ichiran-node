@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ずっと2', (r) => {
+export default bunproLinguisticRule('ずっと2', (r) => {
   // ずっと2 (zutto) - adverb meaning "by far, way, far more"
   // Used in comparisons to show that A is much greater than B
   // Different from ずっと1 which means "continuously/always"

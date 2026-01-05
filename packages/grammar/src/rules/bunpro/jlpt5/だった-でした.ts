@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT5: だった・でした (was, were - past copula)
@@ -19,7 +19,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Casual: noun/na-adj (root) <- だっ (cop/aux) <- た (aux, head points to root)
  * - Polite: noun/na-adj (root) <- でし (cop/aux) <- た (aux, head points to root)
  */
-export default linguisticRule('だった-でした', (r) => {
+export default bunproLinguisticRule('だった-でした', (r) => {
   r.either(
     // Pattern 1: Casual - だった (past of だ)
     // Structure: noun/na-adj + だっ + た (both auxiliaries attach to head)

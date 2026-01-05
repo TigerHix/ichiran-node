@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('の-noun-ommission', (r) => {
+export default bunproLinguisticRule('の-noun-ommission', (r) => {
   // の as noun omission nominalizer
   // Pattern: [NOUN/PROPN/PRON] の (end of sentence or before copula/particle)
   // The noun after の is omitted because it was previously mentioned or is clear from context

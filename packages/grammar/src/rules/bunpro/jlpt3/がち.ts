@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: がち (tendency to/prone to)
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * This rule matches verb stems (連用形-一般) or nouns + がち suffix
  */
-export default linguisticRule('がち', (r) => {
+export default bunproLinguisticRule('がち', (r) => {
   r.either(
     // Pattern 1: Verb stem (連用形-一般) + がち
     (b) => {

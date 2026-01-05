@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('verb-にいく', (r) => {
+export default bunproLinguisticRule('verb-にいく', (r) => {
   // Match verb stem + に + motion verb (go/come to do something)
   // e.g., たべにいく (go to eat), しにいきます (go to do)
   //

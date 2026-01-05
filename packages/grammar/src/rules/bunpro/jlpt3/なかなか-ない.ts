@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('なかなか-ない', (r) => {
+export default bunproLinguisticRule('なかなか-ない', (r) => {
   // なかなか-ない (nakanaka-nai) - "not easily, hardly, not readily"
   // This is the NEGATIVE usage of なかなか, different from positive なかなか (JLPT3)
   //

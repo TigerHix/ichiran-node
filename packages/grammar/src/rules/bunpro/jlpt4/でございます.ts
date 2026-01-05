@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('でございます', (r) => {
+export default bunproLinguisticRule('でございます', (r) => {
   // でございます is the very polite form of the copula です (is/am/are)
   // It's equivalent to です but in humble/polite register (敬語)
   // Structure: Noun + でございます (copula form of ござる)

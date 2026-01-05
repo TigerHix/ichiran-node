@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('のだろうか', (r) => {
+export default bunproLinguisticRule('のだろうか', (r) => {
   // のだろうか/んだろうか/だろうか/んでしょうか/でしょうか expresses wondering/uncertainty ("I wonder if...")
   // Pattern: (plain form) + (の/ん) + (な) + だろう/でしょう + か
   //

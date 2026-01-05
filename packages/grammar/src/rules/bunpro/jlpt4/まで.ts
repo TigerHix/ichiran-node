@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('まで', (r) => {
+export default bunproLinguisticRule('まで', (r) => {
   // JLPT4 まで - "even" or "to the extent of" (surprising degree)
   // Unlike JLPT5 noun-まで (simple "until"), this emphasizes surprising/extreme extent
   //

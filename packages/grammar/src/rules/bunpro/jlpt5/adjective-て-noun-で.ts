@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('adjective-て-noun-で', (r) => {
+export default bunproLinguisticRule('adjective-て-noun-で', (r) => {
   // Adjective + て・Noun + で - "And..." (Conjunctive)
   //
   // Matches the conjunctive form used to connect adjectives and nouns,

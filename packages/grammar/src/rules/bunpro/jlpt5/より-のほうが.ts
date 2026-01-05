@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('より-のほうが', (r) => {
+export default bunproLinguisticRule('より-のほうが', (r) => {
   // より～のほうが (yori no hou ga): more ~ than ~
   // Compares and presents the better/more option
   // Patterns: Verb/Adj (A) + より + Verb/Adj (B) + 方（ほう）+ が

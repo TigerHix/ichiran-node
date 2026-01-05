@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: が早いか (gahayaika) - As soon as, The moment, No sooner than
@@ -29,7 +29,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - か is the final particle (question/indefinite)
  * - This is a fixed expression: "が + 早い + か"
  */
-export default linguisticRule('が早いか', (r) => {
+export default bunproLinguisticRule('が早いか', (r) => {
   // Any verb (can be dictionary form, past form, etc.)
   // We don't constrain the form since both dictionary and past forms are valid
   const verb = r.tok({

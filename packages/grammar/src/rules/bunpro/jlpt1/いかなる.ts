@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('いかなる', (r) => {
+export default bunproLinguisticRule('いかなる', (r) => {
   // いかなる (ikanaru) - formal/literary "what kind of", "any", "no matter what"
   // Pre-nominal adjectival (連体詞 - pre-noun adjective)
   // Formal version of どんな (casual "what kind of")

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: んだけど・んですが (but/although with explanatory tone)
@@ -29,7 +29,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - POSITIVE: 買おうと思っているのですが
  *   - 買う(VERB) + おう(AUX) + と思っている + の(SCONJ, dep=mark) + です(AUX) + が(SCONJ)
  */
-export default linguisticRule('んだけど-んですが', (r) => {
+export default bunproLinguisticRule('んだけど-んですが', (r) => {
   r.either(
     // Pattern 1: ん + だけど (casual form with ん)
     (b) => {

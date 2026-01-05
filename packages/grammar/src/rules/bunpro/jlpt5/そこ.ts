@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('そこ', (r) => {
+export default bunproLinguisticRule('そこ', (r) => {
   // そこ (soko) - demonstrative pronoun meaning "there" or "that place"
   // Refers to a place near the listener (or previously mentioned place)
   //

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('verb-て-b', (r) => {
+export default bunproLinguisticRule('verb-て-b', (r) => {
   // Match verb て-form used for connecting sequential actions
   // Pattern: Verb[連用形] + て + (next action)
   // Meaning: "and", "and then", "after that" - sequence of events

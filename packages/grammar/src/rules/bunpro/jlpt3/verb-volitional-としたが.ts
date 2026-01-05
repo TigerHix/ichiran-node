@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('verb-volitional-としたが', (r) => {
+export default bunproLinguisticRule('verb-volitional-としたが', (r) => {
   // Linguistic view:
   // - volitional clause (…よう) + と + した + conjunction
   // - した is the past tense of する (must be past form!)

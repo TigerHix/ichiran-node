@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('お-ください', (r) => {
+export default bunproLinguisticRule('お-ください', (r) => {
   // Honorific prefix お or ご
   const o = r.tok({ textOneOf: ['お', 'ご'], pos: 'NOUN', dep: 'compound' }, 'o');
 

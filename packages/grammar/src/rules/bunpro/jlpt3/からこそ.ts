@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('からこそ', (r) => {
+export default bunproLinguisticRule('からこそ', (r) => {
   r.either(
     // Pattern 1: Noun/PROPN/PRON + だ + から + こそ (e.g., 君だからこそ, 操作が簡単だからこそ)
     // こそ is ADP with dep=case or dep=mark (GiNZA inconsistency)

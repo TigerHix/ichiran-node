@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: こととて (kototote) - "due to, since, on account of"
@@ -37,7 +37,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - ことだし (and so, more conversational)
  * - だから (therefore, not formal/archaic)
  */
-export default linguisticRule('こととて', (r) => {
+export default bunproLinguisticRule('こととて', (r) => {
   r.either(
     // Pattern 1: Noun + の + こと + とて (most common pattern)
     // Example: 新人のこととて、まだ分からないことがたくさんあります。

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: それで - Therefore / So / And then
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - それで: それ(CCONJ/PRON) + で(particle)
  * - Both POS variants (CCONJ for conjunction, PRON for pronoun) are accepted
  */
-export default linguisticRule('それで', (r) => {
+export default bunproLinguisticRule('それで', (r) => {
   // それで as conjunction (pronoun + particle)
   // GiNZA parses this as either CCONJ or PRON + particle
   r.either(

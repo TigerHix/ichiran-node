@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('以上1', (r) => {
+export default bunproLinguisticRule('以上1', (r) => {
   // 以上① (ijou1) - noun suffix meaning "more than or equal to", "over", "greater than"
   // Can also mean "since" or "now that" when used with verbs/sentences
   //

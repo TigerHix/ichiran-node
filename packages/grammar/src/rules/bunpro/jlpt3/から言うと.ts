@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('から言うと', (r) => {
+export default bunproLinguisticRule('から言うと', (r) => {
   // から言うと/から言えば/から言って - "from X's standpoint"
   // Pattern: noun + から + 言う(inflected) + conjunction particle
   //

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: だに-しない (dani-shinai) - Not even, Won't even
@@ -33,7 +33,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - だに alone with positive verbs (Verb+だに pattern)
  * - Simple だに followed by non-する verbs
  */
-export default linguisticRule('だに-しない', (r) => {
+export default bunproLinguisticRule('だに-しない', (r) => {
   r.either(
     // Pattern 1: だに + し + ない (split tokenization)
     // GiNZA often splits "しない" into "し" (aux) + "ない" (aux)

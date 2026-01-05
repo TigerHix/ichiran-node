@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: らしい② (rashii 2) - Typical of, characteristic of
@@ -34,7 +34,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Context determines the actual meaning. This rule matches noun + らしい, which
  * covers both usages since they're grammatically identical.
  */
-export default linguisticRule('らしい2', (r) => {
+export default bunproLinguisticRule('らしい2', (r) => {
   // GiNZA parses noun + らしい in multiple ways:
   // 1. As separate tokens (noun + auxiliary)
   // 2. As single ADJ token

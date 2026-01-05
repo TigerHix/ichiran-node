@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: ことに (koto ni) - "surprisingly/fortunately/unfortunately"
@@ -37,7 +37,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * CRITICAL: In GiNZA's parse, the original predicate (verb/adj) has head=koto.index,
  * even when there are auxiliaries between them. We use this to find the real predicate.
  */
-export default linguisticRule('ことに', (r) => {
+export default bunproLinguisticRule('ことに', (r) => {
   r.either(
     // Branch 1: Verb + (auxiliaries) + ことに
     (b) => {

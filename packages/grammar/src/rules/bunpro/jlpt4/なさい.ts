@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: なさい (imperative suffix)
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Note: The casual short form (verb stem + な) is not supported due to
  * GiNZA limitations in distinguishing it from the prohibitive pattern (verb dict form + な).
  */
-export default linguisticRule('なさい', (r) => {
+export default bunproLinguisticRule('なさい', (r) => {
   // なさい as imperative auxiliary (lemma=なさる, imperative form)
   const nasai = r.aux({
     text: 'なさい',

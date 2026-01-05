@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('かもしれない', (r) => {
+export default bunproLinguisticRule('かもしれない', (r) => {
   // かもしれない/かもしれません expresses uncertainty ("might be", "may be")
   // Pattern: plain form + かもしれない/かもしれません
   //

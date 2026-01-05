@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: かけ (kake) - "halfway doing / in the middle of"
@@ -26,7 +26,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * The compound form (e.g., 飲みかけ) has text ending with "け" but lemma ending with "かける",
  * so we use lemmaRe to match these patterns.
  */
-export default linguisticRule('かけ', (r) => {
+export default bunproLinguisticRule('かけ', (r) => {
   r.either(
     // Branch 1: かけ/かける as auxiliary (separate token)
     (b) => {

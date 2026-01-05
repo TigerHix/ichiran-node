@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('と共に', (r) => {
+export default bunproLinguisticRule('と共に', (r) => {
   // と共に (to tomo ni) - "together with", "at the same time as", "as well as"
   // Shows two or more things happening or existing in unison, or as one.
   //

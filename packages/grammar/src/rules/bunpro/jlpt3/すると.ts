@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('すると', (r) => {
+export default bunproLinguisticRule('すると', (r) => {
   // すると (conjunction: "and then", "so", "upon doing")
   // A sentence starter meaning "once (A) is done, (B)" or "upon (A), (B)"
   // Often considered abbreviation of そうすると

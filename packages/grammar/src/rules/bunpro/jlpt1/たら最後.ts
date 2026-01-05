@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('たら最後', (r) => {
+export default bunproLinguisticRule('たら最後', (r) => {
   // たら最後 / たが最後 (tara saigo / ta saigo) - "once X happens, there's no turning back"
   // Pattern: Verb［た］+ が/ら + 最後
   // Examples:

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: からある (karaaru) - As much as, As many as, At least
@@ -34,7 +34,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - 以上① (more general "X or more")
  * - から alone as "because" or "from"
  */
-export default linguisticRule('からある', (r) => {
+export default bunproLinguisticRule('からある', (r) => {
   r.either(
     // Pattern 1: Number + Counter + からある (inanimate objects)
     // GiNZA sometimes parses ある as DET when it's part of a quantifier compound

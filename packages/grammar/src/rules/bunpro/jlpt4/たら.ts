@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: たら (conditional / when)
@@ -12,7 +12,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * The key is matching the らら token with inflectionForm=仮定形-一般.
  */
-export default linguisticRule('たら', (r) => {
+export default bunproLinguisticRule('たら', (r) => {
   // Match らら as a conditional auxiliary
   const tara = r.aux({
     textOneOf: ['たら', 'ったら', 'だら', 'なら'],

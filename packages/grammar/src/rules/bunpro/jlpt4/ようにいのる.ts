@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ようにいのる - Pray that/for, Hope that/for
@@ -36,7 +36,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * Note: This pattern is distinct from other ように patterns because it
  * specifically requires the verb 祈る (to pray/wish).
  */
-export default linguisticRule('ようにいのる', (r) => {
+export default bunproLinguisticRule('ようにいのる', (r) => {
   r.either(
     // Branch 1: ように as single token + various forms of 祈る
     (b1) => {

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('-んです-のです', (r) => {
+export default bunproLinguisticRule('-んです-のです', (r) => {
   const n = r.tok({ textOneOf: ['ん', 'の'] }, 'n');
   const desu = r.aux({ lemma: 'です' }, 'desu');
   r.inOrder(n, desu, 2);

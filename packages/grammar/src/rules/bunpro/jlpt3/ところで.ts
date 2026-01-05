@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ところで', (r) => {
+export default bunproLinguisticRule('ところで', (r) => {
   // ところで (tokorode) - "by the way", "incidentally"
   // A conjunction/discourse marker used to change topics or start a new topic
   //

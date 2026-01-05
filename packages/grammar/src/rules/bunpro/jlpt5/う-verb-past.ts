@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT5: う-Verb (Past) - u-verb past tense
@@ -14,7 +14,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * This rule matches both terminal form (終止形) and attributive form (連体形)
  * since past tense verbs can end sentences or modify nouns.
  */
-export default linguisticRule('う-verb-past', (r) => {
+export default bunproLinguisticRule('う-verb-past', (r) => {
   // All godan (u-verb) conjugation classes
   const godanClasses = [
     '五段-カ行',

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('たくさん', (r) => {
+export default bunproLinguisticRule('たくさん', (r) => {
   // たくさん (takusan) / 沢山 is an adverbial noun meaning "many, a lot of, plenty"
   // It can modify verbs directly (advmod) or nouns with の (genitive case)
   // Matches both hiragana (たくさん) and kanji (沢山) forms

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: てみる (te-form verb + みる) - to try doing something
@@ -27,7 +27,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Polite: てみます, てみました
  * - Desire: てみたい (want to try)
  */
-export default linguisticRule('てみる', (r) => {
+export default bunproLinguisticRule('てみる', (r) => {
   r.either(
     // Pattern 0: Casual command/request (てみ/でみ) - sentence ends with te-form
     // This must come FIRST because it's the most specific (no auxiliaries)

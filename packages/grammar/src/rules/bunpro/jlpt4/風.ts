@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: 風 (ふう) - style, manner, way of doing
@@ -23,7 +23,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * Note: 風 is read as "ふう" in this grammar point, not "かぜ" (wind).
  */
-export default linguisticRule('風', (r) => {
+export default bunproLinguisticRule('風', (r) => {
   r.either(
     // Pattern 1: Noun + ふう (hiragana form - most common in tests)
     (b) => {

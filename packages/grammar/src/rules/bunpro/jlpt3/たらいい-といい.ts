@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: たらいい・といい - "it would be good if", "should do", "I hope"
@@ -32,7 +32,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - と follows verb dictionary form or potential form
  * - Both must be immediately followed by いい (or いいです for polite)
  */
-export default linguisticRule('たらいい-といい', (r) => {
+export default bunproLinguisticRule('たらいい-といい', (r) => {
   r.either(
     // Pattern 1a: Verb/Adj + たら (single token) + いい
     // GiNZA sometimes parses たら as a single AUX token

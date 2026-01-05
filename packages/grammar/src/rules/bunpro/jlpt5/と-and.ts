@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('と-and', (r) => {
+export default bunproLinguisticRule('と-and', (r) => {
   // Match と as "and" (listing particle connecting nouns)
   // This is distinct from:
   // - Quotation と (head has dep=ccomp/advcl/acl/root)

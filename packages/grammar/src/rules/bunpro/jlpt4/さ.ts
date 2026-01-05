@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: さ (adjective nominalizer)
@@ -37,7 +37,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - 琵琶湖の深さって知っている？ (depth of Lake Biwa)
  * - 箱の重さを測ってください (weight of the box)
  */
-export default linguisticRule('さ', (r) => {
+export default bunproLinguisticRule('さ', (r) => {
   // GiNZA parses さ as PART (not NOUN) with tag=接尾辞-名詞的-一般
   const sa = r.tok({
     text: 'さ',

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('けど-だけど', (r) => {
+export default bunproLinguisticRule('けど-だけど', (r) => {
   r.either(
     // Pattern 1: だけど (dakedo) - after noun or な-adjective (e.g., 便利だけど, 秋だけど)
     // Note: GiNZA tokenizes this as "だ" + "けど" as two separate tokens

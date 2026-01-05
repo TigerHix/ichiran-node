@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('つい', (r) => {
+export default bunproLinguisticRule('つい', (r) => {
   // つい - adverb meaning "unintentionally, carelessly, against one's better judgment"
   // Used to express doing something without thinking or despite knowing better
   // Usually paired with てしまう to emphasize the unintentional nature

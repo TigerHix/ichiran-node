@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ようにいう - To tell, request, or order to do (in such a way)
@@ -44,7 +44,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - に is pos=AUX, lemma=だ (copula auxiliary)
  * - The speech verbs conjugate normally (言う, 言った, 言われた, etc.)
  */
-export default linguisticRule('ようにいう', (r) => {
+export default bunproLinguisticRule('ようにいう', (r) => {
   r.either(
     // Branch 1: ように as single token
     (b) => {

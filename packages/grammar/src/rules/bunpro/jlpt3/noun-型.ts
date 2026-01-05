@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: noun-型 (suffix meaning type/model/style)
@@ -33,7 +33,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * 1. Noun/Adj + 型/形/がた/かた/けい (suffix with lemma or text match)
  * 2. Noun/Adj + の + 型/形/かた (particle の in between)
  */
-export default linguisticRule('noun-型', (r) => {
+export default bunproLinguisticRule('noun-型', (r) => {
   r.either(
     // Pattern 1: Noun/Adj + 型/形 suffix (kanji or hiragana)
     (b) => {

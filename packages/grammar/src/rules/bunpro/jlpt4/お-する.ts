@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('お-する', (r) => {
+export default bunproLinguisticRule('お-する', (r) => {
   // Humble action form: お/ご + verb-stem + する/します
   // Examples:
   //   お電話します (I humbly call)

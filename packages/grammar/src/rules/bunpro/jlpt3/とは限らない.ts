@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('とは限らない', (r) => {
+export default bunproLinguisticRule('とは限らない', (r) => {
   // とは限らない (to wa kagiranai) - "not necessarily", "not always the case"
   // Meaning: Expresses that something is not necessarily true or guaranteed
   //

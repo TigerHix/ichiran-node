@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('かというと1', (r) => {
+export default bunproLinguisticRule('かというと1', (r) => {
   // Pattern: question word + か + と(いう) + と/いえば
   // Meaning: "if (we were to) ask" / "speaking of"
   //

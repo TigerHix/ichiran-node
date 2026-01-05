@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('各', (r) => {
+export default bunproLinguisticRule('各', (r) => {
   // 各 (かく/kaku) - prefix meaning "each", "every", "respective"
   // Read as かく (kaku) or それぞれ (sorezore)
   //

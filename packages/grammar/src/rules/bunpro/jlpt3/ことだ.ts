@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: ことだ - should / ought to (advice)
@@ -32,7 +32,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - ことにする (JLPT3) - "decide to"
  * - ものだ (JLPT3) - "supposed to" or "that's how it is"
  */
-export default linguisticRule('ことだ', (r) => {
+export default bunproLinguisticRule('ことだ', (r) => {
   r.either(
     // Branch 1: Verb dictionary form + ことだ (casual)
     (b) => {

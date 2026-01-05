@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('はずがない', (r) => {
+export default bunproLinguisticRule('はずがない', (r) => {
   // はずがない/はずがありません expresses strong disbelief or impossibility
   // Pattern: plain form + はず + が + ない/ありません
   //
@@ -34,7 +34,7 @@ export default linguisticRule('はずがない', (r) => {
     // Pattern 2: い-adj + はずがない (casual present)
     // Example: 有名人は人気だから、寂しいはずがない
     (b) => {
-      const adj = b.adj({ pos: 'ADJ' }, 'adj');
+      const adj = b.adj({}, 'adj');
       const hazu = b.noun({ lemma: 'はず' }, 'hazu');
       const ga = b.particle('が', 'ga');
       const nai = b.adj({ lemma: 'ない', inflectionForm: '終止形-一般' }, 'nai');
@@ -48,7 +48,7 @@ export default linguisticRule('はずがない', (r) => {
     // Pattern 3: な-adj + なはずがない (casual present)
     // Example: 少年の部屋だから、綺麗なはずがない
     (b) => {
-      const adj = b.adj({ pos: 'ADJ' }, 'adj');
+      const adj = b.adj({}, 'adj');
       const na = b.particle('な', 'na');
       const hazu = b.noun({ lemma: 'はず' }, 'hazu');
       const ga = b.particle('が', 'ga');
@@ -94,7 +94,7 @@ export default linguisticRule('はずがない', (r) => {
 
     // Pattern 6: い-adj + はずがありません (polite present)
     (b) => {
-      const adj = b.adj({ pos: 'ADJ' }, 'adj');
+      const adj = b.adj({}, 'adj');
       const hazu = b.noun({ lemma: 'はず' }, 'hazu');
       const ga = b.particle('が', 'ga');
       const arimasen = b.tok({ lemma: 'ある' }, 'arimasen');
@@ -109,7 +109,7 @@ export default linguisticRule('はずがない', (r) => {
 
     // Pattern 7: な-adj + なはずがありません (polite present)
     (b) => {
-      const adj = b.adj({ pos: 'ADJ' }, 'adj');
+      const adj = b.adj({}, 'adj');
       const na = b.particle('な', 'na');
       const hazu = b.noun({ lemma: 'はず' }, 'hazu');
       const ga = b.particle('が', 'ga');
@@ -158,7 +158,7 @@ export default linguisticRule('はずがない', (r) => {
 
     // Pattern 10: い-adj + はずがなかった (casual past)
     (b) => {
-      const adj = b.adj({ pos: 'ADJ' }, 'adj');
+      const adj = b.adj({}, 'adj');
       const hazu = b.noun({ lemma: 'はず' }, 'hazu');
       const ga = b.particle('が', 'ga');
       const nakatta = b.adj({ lemma: 'ない', inflectionForm: '連用形-促音便' }, 'nakatta');
@@ -174,7 +174,7 @@ export default linguisticRule('はずがない', (r) => {
     // Pattern 11: な-adj + なはずがなかった (casual past)
     // Example: 母親が綺麗じゃなかったので、彼女も綺麗なはずがなかった
     (b) => {
-      const adj = b.adj({ pos: 'ADJ' }, 'adj');
+      const adj = b.adj({}, 'adj');
       const na = b.particle('な', 'na');
       const hazu = b.noun({ lemma: 'はず' }, 'hazu');
       const ga = b.particle('が', 'ga');
@@ -225,7 +225,7 @@ export default linguisticRule('はずがない', (r) => {
 
     // Pattern 14: な-adj + なはずがありませんでした (polite past)
     (b) => {
-      const adj = b.adj({ pos: 'ADJ' }, 'adj');
+      const adj = b.adj({}, 'adj');
       const na = b.particle('な', 'na');
       const hazu = b.noun({ lemma: 'はず' }, 'hazu');
       const ga = b.particle('が', 'ga');

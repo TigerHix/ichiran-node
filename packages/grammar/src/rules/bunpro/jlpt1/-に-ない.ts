@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: -に-ない (verb + に + same verb + potential negative)
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * In practice, this pattern is strongly correlated with same-verb usage,
  * so false positives on different verbs are rare.
  */
-export default linguisticRule('-に-ない', (r) => {
+export default bunproLinguisticRule('-に-ない', (r) => {
   r.either(
     // Pattern 1: Standard form with ない
     (b1) => {

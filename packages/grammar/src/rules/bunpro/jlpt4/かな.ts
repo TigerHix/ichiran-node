@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('かな', (r) => {
+export default bunproLinguisticRule('かな', (r) => {
   // かな (I wonder) - sentence-final particle expressing uncertainty
   // GiNZA parses as two separate particles: か + な
   // Both have pos=PART and dep=mark, pointing to the sentence root

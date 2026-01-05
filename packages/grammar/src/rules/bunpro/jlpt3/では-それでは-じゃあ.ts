@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('では-それでは-じゃあ', (r) => {
+export default bunproLinguisticRule('では-それでは-じゃあ', (r) => {
   // GiNZA tokenizes these differently:
   // - じゃあ → single token
   // - では → two tokens: で + は (both ADP)

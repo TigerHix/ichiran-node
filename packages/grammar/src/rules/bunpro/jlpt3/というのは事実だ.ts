@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: というのは事実だ - the fact is that / it is a fact that
@@ -34,7 +34,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - というのは事実だ: と(particle) + いう(verb) + の(noun/particle) + は(particle) + 事実(noun) + だ(aux/copula)
  * - のは事実だ: の(noun/particle) + は(particle) + 事実(noun) + だ(aux/copula)
  */
-export default linguisticRule('というのは事実だ', (r) => {
+export default bunproLinguisticRule('というのは事実だ', (r) => {
   r.either(
     // Pattern 1: というのはじじつだ / というのは事実だ (casual - "the fact is that")
     // Note: Try matching by text only first, to handle hiragana vs kanji

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('から-because', (r) => {
+export default bunproLinguisticRule('から-because', (r) => {
   r.either(
     // Pattern 1: Noun + だ + から (e.g., 会社だから, 冬だから, お菓子だから)
     (r1) => {

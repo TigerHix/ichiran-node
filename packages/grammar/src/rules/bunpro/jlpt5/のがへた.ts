@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('のがへた', (r) => {
+export default bunproLinguisticRule('のがへた', (r) => {
   // Verb (dictionary form) + の + が + 下手(へた) = "poor at doing, unskilled at"
   // Examples: 歌うのが下手 (poor at singing), 漢字を書くのが下手 (poor at writing kanji)
   //

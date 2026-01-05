@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('そばから', (r) => {
+export default bunproLinguisticRule('そばから', (r) => {
   // Pattern: verb (ta-form or dictionary form) + そばから
   // Means "as soon as X happens" - often negative connotation
   // Examples: するそばから, したそばから, 読んだそばから, etc.

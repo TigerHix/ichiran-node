@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('でよければ', (r) => {
+export default bunproLinguisticRule('でよければ', (r) => {
   // でよければ - "if X is acceptable/if X works"
   // Pattern: Noun + で + よければ (conditional form of いい)
   //

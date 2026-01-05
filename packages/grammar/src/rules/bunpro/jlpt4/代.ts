@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: 代 (dai - decade of age, generation, or era)
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * Strategy: Match both "だい" (standalone) and "ねんだい" (compound form).
  */
-export default linguisticRule('代', (r) => {
+export default bunproLinguisticRule('代', (r) => {
   // Match both hiragana forms: standalone "だい" and compound "ねんだい"
   // (test sentences have different answers filled in)
   const dai = r.tok({

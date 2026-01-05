@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('けっこう', (r) => {
+export default bunproLinguisticRule('けっこう', (r) => {
   // けっこう (kekkou) is an adverb meaning "quite", "fairly", "rather"
   // It can also mean "no thank you" when used with です
   // Matches both hiragana (けっこう) and kanji (結構) forms

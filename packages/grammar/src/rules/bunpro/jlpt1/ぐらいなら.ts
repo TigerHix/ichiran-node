@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ぐらいなら', (r) => {
+export default bunproLinguisticRule('ぐらいなら', (r) => {
   // Pattern: Verb (dictionary form) + ぐらい/くらい + なら
   // Expresses preference: "rather than X, I'd Y"
   // Examples: 死ぬぐらいなら, 修理するくらいなら, 嫌々するくらいなら

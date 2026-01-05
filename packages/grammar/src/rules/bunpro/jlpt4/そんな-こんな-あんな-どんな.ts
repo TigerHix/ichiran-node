@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('そんな-こんな-あんな-どんな', (r) => {
+export default bunproLinguisticRule('そんな-こんな-あんな-どんな', (r) => {
   // そんな, こんな, あんな, どんな are casual pre-noun adjectivals (連体詞)
   // meaning "such/this/that/what kind of"
   // They are abbreviations of そのような/このような/あのような/どのような

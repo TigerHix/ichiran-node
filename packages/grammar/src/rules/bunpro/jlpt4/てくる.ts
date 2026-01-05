@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('てくる', (r) => {
+export default bunproLinguisticRule('てくる', (r) => {
   // Verb[te-form] + くる/きます (to come doing, starting to, change toward now)
   // Examples: 歩いてくる, 食べてくる, 増えてくる, なってきた
   //

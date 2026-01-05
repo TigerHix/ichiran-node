@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('こそすれ-ない', (r) => {
+export default bunproLinguisticRule('こそすれ-ない', (r) => {
   // Core pattern: こそ + classical form (すれ/なれ/あれ)
   // こそ is the emphatic particle
   const koso = r.particle('こそ', 'koso');

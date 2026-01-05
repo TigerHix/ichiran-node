@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('question-phrase-か', (r) => {
+export default bunproLinguisticRule('question-phrase-か', (r) => {
   // Question-phrase + か: Embedding questions within sentences
   // Pattern: (Question word OR Verb) + か + verb (of knowing/deciding)
   // Examples:

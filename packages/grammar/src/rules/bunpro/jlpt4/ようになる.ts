@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ようになる - To reach the point that, To come to be that, To turn into
@@ -31,7 +31,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - に is AUX, lemma=だ, inflectionForm=連用形-ニ, dep=aux, points to verb
  * - なる is VERB, lemma=なる (can be various forms: なる, なった, になり, etc.)
  */
-export default linguisticRule('ようになる', (r) => {
+export default bunproLinguisticRule('ようになる', (r) => {
   // Match verb + よう + に + なる pattern
   const verb = r.tok({ posOneOf: ['VERB', 'AUX'] }, 'verb');
   const you = r.aux({ lemma: 'よう' }, 'you');

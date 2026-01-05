@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: きらいがある (kirai ga aru) - Have a tendency to, Tend to, Be slightly~
@@ -34,7 +34,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - The particle が typically has dep: case marking きらい
  * - The verb ある is the main predicate
  */
-export default linguisticRule('きらいがある', (r) => {
+export default bunproLinguisticRule('きらいがある', (r) => {
   r.either(
     // Branch 1: Verb (dictionary form or negative) + きらいがある
     (b) => {

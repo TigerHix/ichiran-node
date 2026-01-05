@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('だけでなく', (r) => {
+export default bunproLinguisticRule('だけでなく', (r) => {
   const dake = r.tok({ lemma: 'だけ' }, 'dake');
   // GiNZA often analyzes だけでなく as a fixed expression; "で" comes out as AUX (lemma=だ, dep=fixed).
   const de = r.tok({ text: 'で' }, 'de');

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('こと', (r) => {
+export default bunproLinguisticRule('こと', (r) => {
   // こと as nominalizer (converts verb phrase to noun)
   // Structure: [VERB/AUX phrase] こと
   //

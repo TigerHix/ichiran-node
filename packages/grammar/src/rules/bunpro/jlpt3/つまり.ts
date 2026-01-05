@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('つまり', (r) => {
+export default bunproLinguisticRule('つまり', (r) => {
   // つまり (in other words / that is to say / to sum up / in short)
   // Conjunctive adverb used to summarize or rephrase what was said before
   // GiNZA parses it as: text="つまり" lemma="つまり" pos="ADV" dep="advmod"

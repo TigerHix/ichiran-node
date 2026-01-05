@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('その結果', (r) => {
+export default bunproLinguisticRule('その結果', (r) => {
   // その結果 (sono kekka) - "as a result", "consequently"
   // Conjunction indicating the outcome of a previously mentioned situation
   //

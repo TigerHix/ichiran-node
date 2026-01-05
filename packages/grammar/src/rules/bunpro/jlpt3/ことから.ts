@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: ことから (koto kara) - "from the fact that", "because of the fact that"
@@ -23,7 +23,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * The key discriminator is that こと has dep=obl, which indicates it's functioning
  * as a nominalized clause marker rather than a regular noun.
  */
-export default linguisticRule('ことから', (r) => {
+export default bunproLinguisticRule('ことから', (r) => {
   // こと (nominalizer) - must have dep=obl to distinguish from regular noun usage
   const koto = r.noun({ lemma: 'こと', dep: 'obl' }, 'koto');
 

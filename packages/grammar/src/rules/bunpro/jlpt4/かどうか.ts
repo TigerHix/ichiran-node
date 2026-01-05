@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('かどうか', (r) => {
+export default bunproLinguisticRule('かどうか', (r) => {
   // Pattern: (verb/adj/noun) + か + どう + か (whether or not)
 
   // The first か (question particle)

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('っけ', (r) => {
+export default bunproLinguisticRule('っけ', (r) => {
   // っけ (kke) - Sentence-final particle for confirmation/remembering
   // Meaning: "What is...again?", "Was it...that...?", "Did you say...?"
   //

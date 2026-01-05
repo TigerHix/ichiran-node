@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('くらい1', (r) => {
+export default bunproLinguisticRule('くらい1', (r) => {
   // くらい/ぐらい as adverbial particle indicating approximate amount or degree
   // Follows quantities, numbers, counters, or question words
   r.either(

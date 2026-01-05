@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: ために (for/because of - verb form)
@@ -18,7 +18,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * This rule handles ために/ため after verbs, adjectives, and nouns
  */
-export default linguisticRule('ために', (r) => {
+export default bunproLinguisticRule('ために', (r) => {
   r.either(
     // Pattern 1: ため (NOUN) + に (ADP) with dep=case
     (b) => {

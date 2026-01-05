@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('ても-なくても', (r) => {
+export default bunproLinguisticRule('ても-なくても', (r) => {
   // ～ても～なくても - "whether ~ or not"
   // Pattern: Verb[て-form] + も + same Verb + なくても
   // e.g., 言っても言わなくても, してもしなくても, あってもなくても

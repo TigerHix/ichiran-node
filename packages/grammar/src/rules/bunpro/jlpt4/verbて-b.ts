@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('verbて-b', (r) => {
+export default bunproLinguisticRule('verbて-b', (r) => {
   // Verb て-form used for non-sequence, contrast, or parallel actions
   // Pattern: Verb[て] + Phrase
   // Meaning: "and", "but (contrast)", "while" - non-sequence, parallel/contrasting states

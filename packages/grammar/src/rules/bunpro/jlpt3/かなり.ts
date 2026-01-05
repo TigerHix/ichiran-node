@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('かなり', (r) => {
+export default bunproLinguisticRule('かなり', (r) => {
   // かなり - adverb meaning "quite, considerably, pretty"
   // Patterns:
   // - かなり + i-adjective: かなり美味しい, かなり痛い, かなり重い

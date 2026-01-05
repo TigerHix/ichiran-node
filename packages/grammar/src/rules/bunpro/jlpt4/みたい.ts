@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: みたい (mitai) - Looks like, Seems like, Similar to
@@ -33,7 +33,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - 嫌いみたい: 嫌い(ADJ) + みたい(AUX/ADJ, lemma=みたい)
  * - みたいな: みたい(ADJ) + な(PART/AUX)
  */
-export default linguisticRule('みたい', (r) => {
+export default bunproLinguisticRule('みたい', (r) => {
   r.either(
     // Branch 1: Noun + みたい
     // Example: 熊みたい, パソコンみたいだ, 有名人みたい
@@ -64,9 +64,7 @@ export default linguisticRule('みたい', (r) => {
     // Branch 3: I-adjective + みたい
     // Example: 浅いみたい, 楽しみたい (rare but possible)
     (b) => {
-      const adj = b.adj({
-        pos: 'ADJ',
-      }, 'adj');
+      const adj = b.adj({}, 'adj');
       const mitai = b.tok({
         lemma: 'みたい',
       }, 'mitai');

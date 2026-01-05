@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('だれ', (r) => {
+export default bunproLinguisticRule('だれ', (r) => {
   // だれ (dare) - interrogative pronoun meaning "who"
   // Refers to an unknown person
   //

@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ひつようがある (need to/it is necessary to)
@@ -28,7 +28,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - が必要 (nouns) vs 必要がある (verbs)
  * - ことはない (there's no need to - JLPT3)
  */
-export default linguisticRule('ひつようがある', (r) => {
+export default bunproLinguisticRule('ひつようがある', (r) => {
   // Match any verb in dictionary form
   const verb = r.verb({}, 'verb');
 

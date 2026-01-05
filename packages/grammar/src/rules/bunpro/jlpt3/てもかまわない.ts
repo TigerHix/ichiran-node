@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('てもかまわない', (r) => {
+export default bunproLinguisticRule('てもかまわない', (r) => {
   // Pattern: Verb/Adj[て-form] + も + かまわない/かまいません (it's fine even if X / I don't mind if X)
   // e.g.:
   //   - やってもかまわない (it's fine even if you do it)

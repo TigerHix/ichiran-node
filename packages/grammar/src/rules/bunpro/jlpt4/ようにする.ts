@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ようにする (you-ni-suru) - To try to, To make sure to, To endeavor to
@@ -39,7 +39,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Sometimes parsed as よう (pos=NOUN) + に (pos=ADP/particle)
  * - する appears as verb with various auxiliaries for conjugations
  */
-export default linguisticRule('ようにする', (r) => {
+export default bunproLinguisticRule('ようにする', (r) => {
   r.either(
     // Branch 1: ように as single token + various する conjugations
     (b1) => {

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('さえ-ば', (r) => {
+export default bunproLinguisticRule('さえ-ば', (r) => {
   // さえ-ば (if only/even if) - conditional pattern with さえ particle
   // Key: The ば (conditional) is always a separate SCONJ token with lemma=ば, dep=mark
   r.either(

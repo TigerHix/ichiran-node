@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('verb-て', (r) => {
+export default bunproLinguisticRule('verb-て', (r) => {
   // Verb て form (conjunctive form of verbs)
   // Matches verbs in て form used to connect actions or form other grammar patterns
   // て form has multiple uses: "and", "because", "request", etc.

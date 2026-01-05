@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: あとで - After doing something / Later
@@ -25,7 +25,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - 仕事の後で: 仕事(noun) + の(particle) + 後(noun) + で(particle,dep=case)
  * - あとで買い物: あと(noun) + で(particle,dep=case) + 買い物(noun)
  */
-export default linguisticRule('あとで', (r) => {
+export default bunproLinguisticRule('あとで', (r) => {
   r.either(
     // Branch 1: Verb-たform + あとで (after doing X)
     (b) => {

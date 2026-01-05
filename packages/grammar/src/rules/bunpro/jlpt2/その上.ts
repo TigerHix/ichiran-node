@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT2: その上 (sono ue) - "moreover, on top of that, in addition"
@@ -43,7 +43,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - なお (nao) - "furthermore" (neutral, formal, simple addition)
  * - 上に (ue ni) - "in addition to" (prepositional, within sentence)
  */
-export default linguisticRule('その上', (r) => {
+export default bunproLinguisticRule('その上', (r) => {
   // その上 is a formal conjunction meaning "moreover, on top of that"
   // It typically appears at the beginning of a sentence to add information
   //

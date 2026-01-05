@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT1: からする (karasuru) - worth at least X, starting at X price
@@ -30,7 +30,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - からして (karashite): "judging from", "even"
  * - Number + もする (mo suru): colloquial emphasis
  */
-export default linguisticRule('からする', (r) => {
+export default bunproLinguisticRule('からする', (r) => {
   r.either(
     // Pattern 1: NUM + NOUN(counter) + から(ADP) + する(VERB) with compound
     (b1) => {

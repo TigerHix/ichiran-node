@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('あれ', (r) => {
+export default bunproLinguisticRule('あれ', (r) => {
   // Demonstrative pronoun "are" - that one over there (thing far from both speaker and listener)
   // Can be written as hiragana あれ or kanji 彼れ (rare)
   r.either(

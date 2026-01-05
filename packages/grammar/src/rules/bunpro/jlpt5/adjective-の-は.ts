@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('adjective-の-は', (r) => {
+export default bunproLinguisticRule('adjective-の-は', (r) => {
   // Adjective + の(は) - The 'one' that... (Indefinite pronoun, Adjective nominalization)
   // Matches both い-adjectives and な-adjectives followed by の + (は/が/も)
   // Also matches sentence-final の as nominalizer

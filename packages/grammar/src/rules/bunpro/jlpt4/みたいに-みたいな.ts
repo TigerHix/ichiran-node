@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('みたいに-みたいな', (r) => {
+export default bunproLinguisticRule('みたいに-みたいな', (r) => {
   // みたいに・みたいな (like/similar to - casual)
   // Casual version of ように/ような
   // Pattern: Noun + みたいに/みたいな = "like X"

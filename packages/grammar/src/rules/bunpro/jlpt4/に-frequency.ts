@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: に-frequency (Time period + に + frequency = "N times per period")
@@ -39,7 +39,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * The key discriminator is that に follows a time period noun AND is followed by a number.
  */
-export default linguisticRule('に-frequency', (r) => {
+export default bunproLinguisticRule('に-frequency', (r) => {
   // The key pattern is: time period + に + frequency expression
   // The frequency can be NUM + counter, or a compound NOUN like 一回
 

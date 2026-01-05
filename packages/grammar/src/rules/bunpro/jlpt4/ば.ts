@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT4: ば (conditional: if/when)
@@ -27,7 +27,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - I-adj:  なけれ[AUX,lemma=ない,infl=仮定形-一般] + ば[SCONJ]
  * - Na-adj: 好き[ADJ] + なら[SCONJ,lemma=だ] + ば[SCONJ]
  */
-export default linguisticRule('ば', (r) => {
+export default bunproLinguisticRule('ば', (r) => {
   r.either(
     // Pattern 1a: Verbs/I-adj with explicit inflectionForm attribute
     // e.g., なけれ + ば (for nai verbs), 見れ + ば (for potential verbs)

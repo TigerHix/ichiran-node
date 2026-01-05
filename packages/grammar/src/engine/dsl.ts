@@ -1,5 +1,6 @@
 import type { GinzaSentence, GinzaToken } from '../ginza/types.js';
 import type { GinzaPOS, GinzaDep, GinzaInflectionForm, GinzaConjugationClass } from '../ginza/generated.js';
+import { SentenceIndex } from './compiler.js';
 
 export type TokPred =
   | { kind: 'text'; value: string }
@@ -45,6 +46,7 @@ export type RuleSpec = {
   id: string;
   where: Clause[];
   captures: CaptureSpec[];
+  details?: any;
 };
 
 export type Trigger = { kind: 'lemma' | 'text'; value: string };
@@ -54,8 +56,9 @@ export type CaptureValue = { start: number; end: number; text: string };
 export type CompiledRule = {
   id: string;
   triggers: Trigger[];
+  details?: any;
   /** Pass pre-built SentenceIndex to avoid rebuilding per-rule */
-  match: (sent: GinzaSentence, sourceText: string, idx?: import('./compiler.js').SentenceIndex) => Array<Record<string, CaptureValue>>;
+  match: (sent: GinzaSentence, sourceText: string, idx?: SentenceIndex) => Array<Record<string, CaptureValue>>;
 };
 
 export function V(v: string): NodeRef {

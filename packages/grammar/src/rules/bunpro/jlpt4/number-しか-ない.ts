@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('number-しか-ない', (r) => {
+export default bunproLinguisticRule('number-しか-ない', (r) => {
   // Number/Noun + しか + Verb[negative] (Only X, nothing but X)
   // Examples: 100円しかない, ２時間しか遊べない, 一人しか行かない
   //

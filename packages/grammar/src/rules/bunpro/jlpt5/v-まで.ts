@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('v-まで', (r) => {
+export default bunproLinguisticRule('v-まで', (r) => {
   // Match the particle まで when it attaches to a verb
   // まで here means "until" or "by the time"
   // Key discriminator: dep=mark (not dep=case like noun-まで)

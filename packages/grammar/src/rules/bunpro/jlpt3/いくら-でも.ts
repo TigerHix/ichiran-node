@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('いくら-でも', (r) => {
+export default bunproLinguisticRule('いくら-でも', (r) => {
   r.either(
     // Pattern 1: いくら + Verb[て-form] + ても
     // e.g., いくら言っても, いくら急いでも, いくら泣いても
@@ -42,7 +42,6 @@ export default linguisticRule('いくら-でも', (r) => {
           '終止形-一般',  // For edge cases like いくらないても
         ],
       }, 'adj');
-      const te = b.tok({ textOneOf: ['て', 'で'], posOneOf: ['SCONJ', 'AUX'] }, 'te');
       const mo = b.tok({ text: 'も', pos: 'ADP', dep: 'case' }, 'mo');
       b.inOrder(ikura, adj, 10);
       b.captureSpan('いくら-ても', ikura, mo);

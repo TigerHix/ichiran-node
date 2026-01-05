@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('も', (r) => {
+export default bunproLinguisticRule('も', (r) => {
   // Match the inclusive particle も (mo) - meaning "also", "too", "as well"
   // Examples: 私も先生です (I am also a teacher), 彼も行く (He also goes)
   //

@@ -1,6 +1,6 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
-export default linguisticRule('しか-ない', (r) => {
+export default bunproLinguisticRule('しか-ない', (r) => {
   // しか + negative form (only, nothing but)
   // Pattern: Noun + しか + negative verb/aux
   // - 牛乳しかない (only milk)

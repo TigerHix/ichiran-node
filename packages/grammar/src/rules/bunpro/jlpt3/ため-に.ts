@@ -1,4 +1,4 @@
-import { linguisticRule } from '../../../engine/lang.js';
+import { bunproLinguisticRule } from '../../../engine/lang.js';
 
 /**
  * JLPT3: ために (tame ni) - "for the sake of", "in order to", "because of"
@@ -28,7 +28,7 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - に after ため(SCONJ): SCONJ with lemma=に, dep=fixed, head=ため
  * - に after ため(NOUN): ADP with lemma=に, dep=case, head=ため
  */
-export default linguisticRule('ため-に', (r) => {
+export default bunproLinguisticRule('ため-に', (r) => {
   r.either(
     // Pattern 1: Verb + ために (purpose: "in order to")
     // 勉強をするために、家を買うために、明日遊びに行くために
