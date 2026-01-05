@@ -60,6 +60,11 @@ export function loadBunproGrammarItemWithOptions(
     const content = typeof a.content === 'string' ? a.content : '';
     const answer = typeof a.answer === 'string' ? a.answer : '';
     const alternates = Array.isArray(a.alternate_grammar) ? a.alternate_grammar : [];
+    const usedIn = typeof a.used_in === 'string' ? a.used_in : '';
+
+    // Only include sentences marked as "examples" - exclude "writeups" examples
+    // which are illustrative examples in grammar explanations, not test cases
+    if (usedIn !== 'examples') continue;
 
     if (answer) answerForms.add(cleanHtml(answer));
     for (const alt of alternates) {

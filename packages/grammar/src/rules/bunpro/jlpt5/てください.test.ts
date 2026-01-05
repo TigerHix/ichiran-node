@@ -22,32 +22,7 @@ const negatives = [
   '待っていた。',
 ];
 
-// Sentences from the Bunpro data that cannot be matched:
-//
-// ANALYSIS: Casual te-form requests (without ください)
-//
-// These sentences are included in the Bunpro てください data as "writeups" examples,
-// but they do NOT actually contain the てください pattern. They are examples of
-// casual requests where ください is omitted (te-form only).
-//
-// The writeup explicitly states: "In friendly conversation, ください can be omitted"
-//
-// Examples:
-//   クッキーを作ったから食べて。 - Because I made cookies, you can eat them.
-//   ちょっとテレビを消して。 - Hey, can you turn off the TV?
-//
-// These sentences end in て (te-form) without ください attached.
-// The rule correctly does NOT match them because there is no ください token.
-//
-// CONCLUSION: Data issue - these are examples in the grammar explanation (writeups)
-// showing the casual form, not actual てください examples. They should not be in
-// the positive test data.
-const skipPositives = [
-  'クッキーを作ったから食べて。',
-  'ちょっとテレビを消して。',
-];
-
 describe('bunpro.jlpt5', () => {
   const engine = useSharedEngine([BUNPRO_JLPT5]);
-  describeRule(rule, 'JLPT5', BUNPRO_JLPT5.id, engine.get, { negatives, skipPositives });
+  describeRule(rule, 'JLPT5', BUNPRO_JLPT5.id, engine.get, { negatives });
 });
