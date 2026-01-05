@@ -28,14 +28,6 @@ const negatives = [
   '行かなくてもいい。',
   '食べなくてもいい。',
 
-  // なくてはならない (similar but different auxiliary - different grammar rule)
-  '行かなくてはならない。',
-  '勉強しなくてはならない。',
-
-  // なくてはダメ (casual form with dame - different grammar)
-  '行かなくてはダメ。',
-  '食べなくてはダメ。',
-
   // Other te-form constructions
   '行かなくて、勉強する。',
   '食べなくて、寝た。',
@@ -47,20 +39,10 @@ const negatives = [
 
 // Sentences that cannot be matched due to test data issues or related grammar:
 //
-// 1. 朝食後に薬を飲まなくてはならない。
-//    This uses "ならない" not "いけない" - this is the related grammar point
-//    "なくてはならない" which is a separate rule (JLPT4).
-//
-// 2. 野菜も食べなくてはダメだよ。
-//    This uses "ダメ" (dame) instead of "いけない" - this is a more casual
-//    form and a different grammar pattern.
-//
-// 3. まだやりたいことがあるけど、もうねなくてはいけない。
+// 1. まだやりたいことがあるけど、もうねなくてはいけない。
 //    The sentence has a typo - "ね" instead of "寝" (neru - to sleep).
 //    GiNZA parses "ね" as a particle, not a verb, so it cannot match.
 const skipPositives = [
-  '朝食後に薬を飲まなくてはならない。',
-  '野菜も食べなくてはダメだよ。',
   'まだやりたいことがあるけど、もうねなくてはいけない。',
 ];
 
