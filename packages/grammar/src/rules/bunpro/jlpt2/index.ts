@@ -8,6 +8,7 @@ import kaneru from './かねる.js';
 import karashite from './からして.js';
 import karasurutokarasureba from './からすると-からすれば.js';
 import kotoDakara from './ことだから.js';
+import kotoWaGa from './ことは-が.js';
 import kotoNiNatteiru from './ことになっている.js';
 import sasuga from './さすが.js';
 import souieba from './そういえば.js';
@@ -33,6 +34,7 @@ export const BUNPRO_JLPT2: Ruleset = {
     karashite,
     karasurutokarasureba,
     kotoDakara,
+    kotoWaGa,
     kotoNiNatteiru,
     sasuga,
     souieba,
