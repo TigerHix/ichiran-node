@@ -20,6 +20,7 @@ import sorenishitemo from './それにしても.js';
 import tachimachi from './たちまち.js';
 import tattano from './たった-の.js';
 import tatte from './たって.js';
+import tamoe from './たまえ.js';
 
 export const BUNPRO_JLPT2: Ruleset = {
   id: 'bunpro.jlpt2',
@@ -45,5 +46,6 @@ export const BUNPRO_JLPT2: Ruleset = {
     tachimachi,
     tattano,
     tatte,
+    tamoe,
   ],
 };
