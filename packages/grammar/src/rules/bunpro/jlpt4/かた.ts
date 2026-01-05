@@ -10,8 +10,9 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - しかた (way of doing, for する verbs only)
  *
  * Key patterns:
- * 1. Verb stem (masu form) + かた - GiNZA parses verb stem as NOUN with tag=動詞-一般
- * 2. Noun + の + 仕方 (special case for suru verbs)
+ * 1. Verb stem (masu form) + かた
+ * 2. Noun + の + verb-stem + かた (e.g., この本のよみかた)
+ * 3. Noun + の + 仕方 (special case for suru verbs)
  *
  * GiNZA parse structure:
  * - たべかた: たべ (NOUN, tag=動詞-一般, inflectionForm=連用形-一般) + かた (NOUN, tag=接尾辞-名詞的-一般)
@@ -25,30 +26,95 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Sometimes as ADJ with tag=動詞-一般 (いい from いう)
  * - Sometimes as NOUN proper name (さき from さく - GiNZA error)
  *
- * We handle this by matching any token with tag=動詞-一般 OR inflectionForm=連用形-一般
+ * We handle this by creating separate pattern branches for each GiNZA parsing variant.
  */
 export default linguisticRule('かた', (r) => {
   r.either(
-    // Pattern 1: Verb stem + かた (standard pattern)
+    // Pattern 1a: Verb stem (NOUN/VERB/ADJ with tag=動詞-一般) + かた
     (b) => {
-      // GiNZA parses verb stems VERY inconsistently:
-      // - NOUN/VERB/ADJ with tag=動詞-一般 and inflectionForm=連用形-一般
-      // - VERB with inflectionForm=連用形-一般 (no tag=動詞-一般)
-      const verb = b.tok({
-        tag: '動詞-一般',
-      }, 'verb');
-
-      // かた/方 as suffix (接尾辞-名詞的-一般)
+      const verb = b.tok({ tag: '動詞-一般' }, 'verb');
       const kata = b.noun({
         lemmaOneOf: ['かた', '方'],
         tag: '接尾辞-名詞的-一般',
       }, 'kata');
-
       b.inOrder(verb, kata, 1);
       b.captureSpan('かた', verb, kata);
     },
 
-    // Pattern 2: Noun + の + 仕方 (for suru-verbs)
+    // Pattern 1b: Verb stem (VERB with 連用形-一般) + かた
+    (b) => {
+      const verb = b.tok({ pos: 'VERB', inflectionForm: '連用形-一般' }, 'verb');
+      const kata = b.noun({
+        lemmaOneOf: ['かた', '方'],
+        tag: '接尾辞-名詞的-一般',
+      }, 'kata');
+      b.inOrder(verb, kata, 1);
+      b.captureSpan('かた', verb, kata);
+    },
+
+    // Pattern 1c: Verb stem (ADJ with 連用形-一般) + かた
+    (b) => {
+      const verb = b.tok({ pos: 'ADJ', inflectionForm: '連用形-一般' }, 'verb');
+      const kata = b.noun({
+        lemmaOneOf: ['かた', '方'],
+        tag: '接尾辞-名詞的-一般',
+      }, 'kata');
+      b.inOrder(verb, kata, 1);
+      b.captureSpan('かた', verb, kata);
+    },
+
+    // Pattern 2a: Noun + の + verb-stem (NOUN/VERB/ADJ with tag=動詞-一般) + かた
+    (b) => {
+      const noun = b.noun({}, 'noun');
+      const no = b.particle('の', 'no');
+      b.inOrder(noun, no, 1);
+
+      const verb = b.tok({ tag: '動詞-一般' }, 'verb');
+      b.inOrder(no, verb, 1);
+
+      const kata = b.noun({
+        lemmaOneOf: ['かた', '方'],
+        tag: '接尾辞-名詞的-一般',
+      }, 'kata');
+      b.inOrder(verb, kata, 1);
+      b.captureSpan('かた', noun, kata);
+    },
+
+    // Pattern 2b: Noun + の + verb-stem (VERB with 連用形-一般) + かた
+    (b) => {
+      const noun = b.noun({}, 'noun');
+      const no = b.particle('の', 'no');
+      b.inOrder(noun, no, 1);
+
+      const verb = b.tok({ pos: 'VERB', inflectionForm: '連用形-一般' }, 'verb');
+      b.inOrder(no, verb, 1);
+
+      const kata = b.noun({
+        lemmaOneOf: ['かた', '方'],
+        tag: '接尾辞-名詞的-一般',
+      }, 'kata');
+      b.inOrder(verb, kata, 1);
+      b.captureSpan('かた', noun, kata);
+    },
+
+    // Pattern 2c: Noun + の + verb-stem (ADJ with 連用形-一般) + かた
+    (b) => {
+      const noun = b.noun({}, 'noun');
+      const no = b.particle('の', 'no');
+      b.inOrder(noun, no, 1);
+
+      const verb = b.tok({ pos: 'ADJ', inflectionForm: '連用形-一般' }, 'verb');
+      b.inOrder(no, verb, 1);
+
+      const kata = b.noun({
+        lemmaOneOf: ['かた', '方'],
+        tag: '接尾辞-名詞的-一般',
+      }, 'kata');
+      b.inOrder(verb, kata, 1);
+      b.captureSpan('かた', noun, kata);
+    },
+
+    // Pattern 3: Noun + の + 仕方 (for suru-verbs)
     (b) => {
       const noun = b.noun({}, 'noun');
       const no = b.particle('の', 'no');
