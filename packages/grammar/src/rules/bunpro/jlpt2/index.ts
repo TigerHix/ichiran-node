@@ -2,6 +2,7 @@ import type { Ruleset } from '../../../ruleset.js';
 import tekoso from './-てこそ.js';
 import nouchide from './-のうち-で.js';
 import ageku from './あげく.js';
+import dakeatte from './だけあって.js';
 import iwayuru from './いわゆる.js';
 import kanaikanouniuchi from './か-ないかのうちに.js';
 import kaneru from './かねる.js';
@@ -27,6 +28,7 @@ export const BUNPRO_JLPT2: Ruleset = {
     tekoso,
     nouchide,
     ageku,
+    dakeatte,
     iwayuru,
     kanaikanouniuchi,
     kaneru,
