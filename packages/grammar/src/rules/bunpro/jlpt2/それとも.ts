@@ -57,14 +57,13 @@ export default linguisticRule('それとも', (r) => {
       b1.capture(soretomo);
     },
 
-    // Pattern 2: Multi-token - それ (pronoun/conjunction) + とも (particle)
+    // Pattern 2: Multi-token - それ (pronoun/conjunction) + とも (particle/adverb)
     (b2) => {
       const sore = b2.tok({
         text: 'それ',
       }, 'sore');
       const tomo = b2.tok({
-        textOneOf: ['とも'],
-        lemmaOneOf: ['とも', '共'],
+        text: 'とも',
       }, 'tomo');
       b2.inOrder(sore, tomo, 1);
       b2.captureSpan('それとも', sore, tomo);

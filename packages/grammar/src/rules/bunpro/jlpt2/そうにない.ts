@@ -49,7 +49,7 @@ export default linguisticRule('そうにない', (r) => {
       }, 'sou');
       b.headChild(stem, sou, 'advmod');
       const ni = b.particle('に', 'ni');
-      b.caseMarker(stem, ni);
+      b.inOrder(sou, ni, 3);
       b.optional((ob) => {
         const mo = ob.particle('も', 'mo');
         ob.inOrder(ni, mo, 1);
@@ -60,12 +60,10 @@ export default linguisticRule('そうにない', (r) => {
       b.captureSpan('そうにない', stem, nai);
     },
 
-    // Branch 2: Verb stem (連用形-一般) + そう (AUX, dep=aux) + に + (も) + ない
+    // Branch 2: Verb stem + そう (AUX, dep=aux) + に + (も) + ない
     // Example: できそうにない (でき is VERB, 連用形-一般; そう is AUX, dep=aux)
     (b) => {
-      const stem = b.verb({
-        // inflectionForm: '連用形-一般',
-      }, 'stem');
+      const stem = b.verb({}, 'stem');
       const sou = b.tok({
         lemma: 'そう',
         tag: '形状詞-助動詞語幹',
@@ -85,18 +83,16 @@ export default linguisticRule('そうにない', (r) => {
       b.captureSpan('そうにない', stem, nai);
     },
 
-    // Branch 3: Verb stem (命令形) + そう + に + (も) + ない
+    // Branch 3: Verb stem + そう (no pos constraint) + に + (も) + ない
     (b) => {
-      const stem = b.verb({
-        // inflectionForm: '命令形',
-      }, 'stem');
+      const stem = b.verb({}, 'stem');
       const sou = b.tok({
         lemma: 'そう',
         tag: '形状詞-助動詞語幹',
       }, 'sou');
       b.headChild(stem, sou, 'advmod');
       const ni = b.particle('に', 'ni');
-      b.caseMarker(stem, ni);
+      b.inOrder(sou, ni, 3);
       b.optional((ob) => {
         const mo = ob.particle('も', 'mo');
         ob.inOrder(ni, mo, 1);
@@ -107,37 +103,10 @@ export default linguisticRule('そうにない', (r) => {
       b.captureSpan('そうにない', stem, nai);
     },
 
-    // Branch 4: Verb stem (仮定形-一般) + そう (AUX, dep=aux) + に + (も) + ない
-    // Example: はこべそうにない (はこべ is VERB, 仮定形-一般)
-    (b) => {
-      const stem = b.verb({
-        // inflectionForm: '仮定形-一般',
-      }, 'stem');
-      const sou = b.tok({
-        lemma: 'そう',
-        tag: '形状詞-助動詞語幹',
-        pos: 'AUX',
-        dep: 'aux',
-      }, 'sou');
-      b.auxOf(stem, sou);
-      const ni = b.particle('に', 'ni');
-      b.caseMarker(stem, ni);
-      b.optional((ob) => {
-        const mo = ob.particle('も', 'mo');
-        ob.inOrder(ni, mo, 1);
-      });
-      const nai = b.adj({
-        lemma: 'ない',
-      }, 'nai');
-      b.captureSpan('そうにない', stem, nai);
-    },
-
-    // Branch 5: Verb stem (未然形-一般) + auxiliary (られる) + そう (AUX, dep=aux) + に + (も) + ない
+    // Branch 4: Verb stem + auxiliary (られる) + そう (AUX, dep=aux) + に + (も) + ない
     // Example: 食べられそうにない, 受け取れそうにない
     (b) => {
-      const stem = b.verb({
-        // inflectionForm: '未然形-一般',
-      }, 'stem');
+      const stem = b.verb({}, 'stem');
       const rareru = b.aux({
         lemma: 'られる',
       }, 'rareru');
@@ -161,39 +130,12 @@ export default linguisticRule('そうにない', (r) => {
       b.captureSpan('そうにない', stem, nai);
     },
 
-    // Branch 6: Verb stem (連用形-イ音便) + そう (AUX, dep=aux) + に + (も) + ない
-    // Example: きいてくれそうにない (きい is VERB, 連用形-イ音便)
-    // Verbs like きく (to listen) conjugate to きいて in 連用形-イ音便
-    (b) => {
-      const stem = b.verb({
-        // inflectionForm: '連用形-イ音便',
-      }, 'stem');
-      const sou = b.tok({
-        lemma: 'そう',
-        tag: '形状詞-助動詞語幹',
-        pos: 'AUX',
-        dep: 'aux',
-      }, 'sou');
-      b.auxOf(stem, sou);
-      const ni = b.particle('に', 'ni');
-      b.caseMarker(stem, ni);
-      b.optional((ob) => {
-        const mo = ob.particle('も', 'mo');
-        ob.inOrder(ni, mo, 1);
-      });
-      const nai = b.adj({
-        lemma: 'ない',
-      }, 'nai');
-      b.captureSpan('そうにない', stem, nai);
-    },
-
-    // Branch 7: Verb parsed as ADJ (うかる type) + そう (AUX, dep=aux) + に + (も) + ない
+    // Branch 5: Verb parsed as ADJ (うかる type) + そう (AUX, dep=aux) + に + (も) + ない
     // Example: うかりそうにない (うかり is ADJ, tag=動詞-一般, 連用形-一般)
     // Some verbs like うかる (to pass) are parsed as ADJ by GiNZA
     (b) => {
       const stem = b.adj({
         tag: '動詞-一般',
-        // inflectionForm: '連用形-一般',
       }, 'stem');
       const sou = b.tok({
         lemma: 'そう',
@@ -214,7 +156,7 @@ export default linguisticRule('そうにない', (r) => {
       b.captureSpan('そうにない', stem, nai);
     },
 
-    // Branch 8: Noun (サ変可能) + auxiliary verb (できる) + そう (AUX, dep=aux) + に + (も) + ない
+    // Branch 6: Noun (サ変可能) + auxiliary verb (できる) + そう (AUX, dep=aux) + に + (も) + ない
     // Example: 合格できそうにない (合格 is VERB/NOUN, tag=名詞-普通名詞-サ変可能; でき is AUX, lemma=できる)
     (b) => {
       const noun = b.tok({
@@ -222,7 +164,6 @@ export default linguisticRule('そうにない', (r) => {
       }, 'noun');
       const deki = b.aux({
         lemma: 'できる',
-        // inflectionForm: '連用形-一般',
       }, 'deki');
       b.auxOf(noun, deki);
       const sou = b.tok({
@@ -244,7 +185,7 @@ export default linguisticRule('そうにない', (r) => {
       b.captureSpan('そうにない', noun, nai);
     },
 
-    // Branch 9: Irregular きそう (single NOUN token) + に + (も) + ない
+    // Branch 7: Irregular きそう (single NOUN token) + に + (も) + ない
     // Example: きそうにない (きそう is single NOUN token, lemma=きそう, tag=名詞-普通名詞-一般)
     // GiNZA sometimes parses "来+そう" as a single noun token
     (b) => {

@@ -3,7 +3,6 @@ import { linguisticRule } from '../../../engine/lang.js';
 export default linguisticRule('たって', (r) => {
   r.either(
     // Pattern 1: Verb + たって (e.g., 聞いたって, 謝ったって, 行ったって, したって, 勝ったって)
-    // "たって" is a casual form of "てform + も" meaning "even if"
     (b1) => {
       const verb = b1.verb({}, 'verb');
       const tatte = b1.tok({ text: 'たって' }, 'tatte');
@@ -21,8 +20,7 @@ export default linguisticRule('たって', (r) => {
       b1b.captureSpan('たって', verb, tte);
     },
 
-    // Pattern 2: I-adjective (ku-form or negative) + たって (e.g., よくたって, 欲しくたって)
-    // "楽しくなくたって" = 楽しく + なく + たって
+    // Pattern 2: I-adjective + たって (e.g., よくたって, 欲しくたって)
     (b2) => {
       const adj = b2.adj({}, 'adj');
       const tatte = b2.tok({ text: 'たって' }, 'tatte');
@@ -30,7 +28,7 @@ export default linguisticRule('たって', (r) => {
       b2.captureSpan('たって', adj, tatte);
     },
 
-    // Pattern 2b: Adverb (e.g., よく) + たって
+    // Pattern 2b: Adverb + たって (e.g., よくたって)
     (b2b) => {
       const adv = b2b.adv({}, 'adv');
       const tatte = b2b.tok({ text: 'たって' }, 'tatte');
@@ -38,7 +36,15 @@ export default linguisticRule('たって', (r) => {
       b2b.captureSpan('たって', adv, tatte);
     },
 
-    // Pattern 2c: I-adjective + た + って (split tokenization, e.g., よくたって)
+    // Pattern 2b-specific: よく + たって (also check split form)
+    (b2bspec) => {
+      const yoku = b2bspec.tok({ text: 'よく' }, 'yoku');
+      const tatte = b2bspec.tok({ textOneOf: ['たって', 'た', 'って'] }, 'tatte');
+      b2bspec.inOrder(yoku, tatte, 5);
+      b2bspec.captureSpan('たって', yoku, tatte);
+    },
+
+    // Pattern 2c: I-adjective + た + って (split)
     (b2c) => {
       const adj = b2c.adj({}, 'adj');
       const ta = b2c.tok({ text: 'た' }, 'ta');
@@ -48,7 +54,17 @@ export default linguisticRule('たって', (r) => {
       b2c.captureSpan('たって', adj, tte);
     },
 
-    // Pattern 3: なく + たって (negative auxiliary, e.g., できなくたって, 楽しくなくたって)
+    // Pattern 2d: Adverb + た + って (split)
+    (b2d) => {
+      const adv = b2d.adv({}, 'adv');
+      const ta = b2d.tok({ text: 'た' }, 'ta');
+      const tte = b2d.tok({ text: 'って' }, 'tte');
+      b2d.inOrder(adv, ta, 5);
+      b2d.inOrder(ta, tte, 1);
+      b2d.captureSpan('たって', adv, tte);
+    },
+
+    // Pattern 3: なく + たって (e.g., できなくたって)
     (b3) => {
       const naku = b3.tok({ text: 'なく', posOneOf: ['AUX', 'PART'] }, 'naku');
       const tatte = b3.tok({ text: 'たって' }, 'tatte');
@@ -56,8 +72,7 @@ export default linguisticRule('たって', (r) => {
       b3.captureSpan('たって', naku, tatte);
     },
 
-    // Pattern 4: Noun/Na-adjective + だって (e.g., 馬鹿だって, 友達だって)
-    // Note: "だって" can also mean "because" or "even", but in this grammar it means "even if"
+    // Pattern 4: Noun + だって (e.g., 馬鹿だって, 友達だって)
     (b4) => {
       const noun = b4.tok({ posOneOf: ['NOUN', 'PROPN'] }, 'noun');
       const datte = b4.tok({ text: 'だって' }, 'datte');
@@ -65,7 +80,7 @@ export default linguisticRule('たって', (r) => {
       b4.captureSpan('たって', noun, datte);
     },
 
-    // Pattern 4b: Noun + だ + って (split tokenization)
+    // Pattern 4b: Noun + だ + って (split)
     (b4b) => {
       const noun = b4b.tok({ posOneOf: ['NOUN', 'PROPN'] }, 'noun');
       const da = b4b.tok({ text: 'だ', posOneOf: ['AUX'] }, 'da');

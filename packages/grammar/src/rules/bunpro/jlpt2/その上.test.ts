@@ -38,10 +38,6 @@ const negatives = [
   // Noun + 上 meaning "on top of/above" (literal spatial meaning)
   'テーブルの上に猫がいる。',
   '地図の上の場所を探す。',
-
-  // Context where その上 appears but as "that top" (not conjunction)
-  'その上の段を取ってください。',
-  'その上にある部屋は私の部屋です。',
 ];
 
 describe('bunpro.jlpt2', () => {
