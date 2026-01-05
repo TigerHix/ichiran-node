@@ -43,45 +43,50 @@ export default linguisticRule('それにしても', (r) => {
   // It appears at the beginning of sentences or after punctuation
   // to acknowledge previous context while adding the speaker's main point
   //
-  // GiNZA typically parses それにしても in one of two ways:
-  // 1. Single token: ADV or CCONJ with dep=advmod/discourse/cc
-  // 2. Split: それ (PRON) + に (ADP) + しても (ADV/AUX)
+  // GiNZA parses それにしても as:
+  // それ (PRON) + に (SCONJ) + し (SCONJ,lemma=する) + て (SCONJ) + も (SCONJ)
+  // All with dep=fixed pointing to に (mark particle)
   //
-  // The key discriminator is that it functions as a conjunction/discourse marker,
-  // not as a pronoun + locative particle + verb phrase.
+  // The key discriminator is that:
+  // - それ has dep=dep (conjunction/discourse usage) pointing to the root verb
+  // - に has dep=mark (case marker)
+  // - し,て,も all have dep=fixed (fixed expression marker)
 
-  r.either(
-    // Pattern 1: Single token - most common parsing
-    // それにしても as ADV or CCONJ (conjunction)
-    (b1) => {
-      const sorenishitemo = b1.tok({
-        text: 'それにしても',
-        posOneOf: ['ADV', 'CCONJ'],
-        depOneOf: ['advmod', 'discourse', 'cc'],
-      }, 'sorenishitemo');
-      b1.capture(sorenishitemo);
-    },
+  const sore = r.tok({
+    text: 'それ',
+    pos: 'PRON',
+    depOneOf: ['dep', 'obl', 'cc'],
+  }, 'sore');
 
-    // Pattern 2: Split into それ + に + しても
-    // Less common but occurs in some parses
-    (b2) => {
-      const sore = b2.tok({
-        text: 'それ',
-        posOneOf: ['PRON', 'NOUN'],
-      }, 'sore');
-      const ni = b2.tok({
-        text: 'に',
-        posOneOf: ['ADP', 'PART'],
-        depOneOf: ['dep', 'case', 'mark'],
-      }, 'ni');
-      const shitemo = b2.tok({
-        textOneOf: ['しても', '為にして'],
-        posOneOf: ['ADV', 'AUX', 'SCONJ'],
-      }, 'shitemo');
+  const ni = r.tok({
+    text: 'に',
+    pos: 'SCONJ',
+    dep: 'mark',
+  }, 'ni');
 
-      b2.inOrder(sore, ni, 1);
-      b2.inOrder(ni, shitemo, 1);
-      b2.captureSpan('それにしても', sore, shitemo);
-    }
-  );
+  const shi = r.tok({
+    text: 'し',
+    lemma: 'する',
+    pos: 'SCONJ',
+    dep: 'fixed',
+  }, 'shi');
+
+  const te = r.tok({
+    text: 'て',
+    pos: 'SCONJ',
+    dep: 'fixed',
+  }, 'te');
+
+  const mo = r.tok({
+    text: 'も',
+    pos: 'SCONJ',
+    dep: 'fixed',
+  }, 'mo');
+
+  r.inOrder(sore, ni, 1);
+  r.inOrder(ni, shi, 1);
+  r.inOrder(shi, te, 1);
+  r.inOrder(te, mo, 1);
+
+  r.captureSpan('それにしても', sore, mo);
 });

@@ -2,36 +2,47 @@ import { linguisticRule } from '../../../engine/lang.js';
 
 export default linguisticRule('たって', (r) => {
   r.either(
-    // Pattern 1: Verb ta-form + ってtte (e.g., 聞いたって, 謝ったって)
+    // Pattern 1: Verb + たって (e.g., 聞いたって, 謝ったって, 行ったって, したって, 勝ったって)
+    // "たって" is a casual form of "てform + も" meaning "even if"
     (b1) => {
-      const verbTa = b1.tok({ inflectionForm: 'タ形-一般' }, 'verbTa');
-      const tte = b1.tok({ text: 'って', pos: 'PART' }, 'tte');
-      b1.inOrder(verbTa, tte, 3);
-      b1.captureSpan('たって', verbTa, tte);
+      const verb = b1.verb({}, 'verb');
+      const tatte = b1.tok({ text: 'たって', posOneOf: ['AUX', 'SCONJ', 'PART'] }, 'tatte');
+      b1.inOrder(verb, tatte, 5);
+      b1.captureSpan('たって', verb, tatte);
     },
 
-    // Pattern 2: Verb naku-form + たって (e.g., なくたって, 楽しくなくたって)
+    // Pattern 2: I-adjective (ku-form or negative) + たって (e.g., よくたって, 欲しくたって, 楽しくなくたって)
+    // "楽しくなくたって" = 楽しく + なく + たって
     (b2) => {
-      const naku = b2.tok({ text: 'なく', pos: 'AUX' }, 'naku');
-      const tatte = b2.tok({ text: 'たって', posOneOf: ['AUX', 'PART', 'SCONJ'] }, 'tatte');
-      b2.inOrder(naku, tatte, 3);
-      b2.captureSpan('たって', naku, tatte);
+      const adj = b2.adj({}, 'adj');
+      const tatte = b2.tok({ text: 'たって', posOneOf: ['AUX', 'SCONJ', 'PART'] }, 'tatte');
+      b2.inOrder(adj, tatte, 5);
+      b2.captureSpan('たって', adj, tatte);
     },
 
-    // Pattern 3: I-adjective ku-form + たって (e.g., よくたって, 欲しくたって)
+    // Pattern 3: なく + たって (negative auxiliary, e.g., できなくたって, 楽しくなくたって)
     (b3) => {
-      const iAdjKu = b3.tok({ inflectionForm: '連用形-一般' }, 'iAdjKu');
-      const tatte = b3.tok({ text: 'たって', posOneOf: ['AUX', 'PART', 'SCONJ'] }, 'tatte');
-      b3.inOrder(iAdjKu, tatte, 3);
-      b3.captureSpan('たって', iAdjKu, tatte);
+      const naku = b3.tok({ text: 'なく', posOneOf: ['AUX', 'PART'] }, 'naku');
+      const tatte = b3.tok({ text: 'たって', posOneOf: ['AUX', 'SCONJ', 'PART'] }, 'tatte');
+      b3.inOrder(naku, tatte, 3);
+      b3.captureSpan('たって', naku, tatte);
     },
 
     // Pattern 4: Noun/Na-adjective + だって (e.g., 馬鹿だって, 友達だって)
+    // Note: "だって" can also mean "because" or "even", but in this grammar it means "even if"
     (b4) => {
       const noun = b4.tok({ posOneOf: ['NOUN', 'PROPN'] }, 'noun');
-      const datte = b4.tok({ text: 'だって', posOneOf: ['AUX', 'PART', 'SCONJ'] }, 'datte');
+      const datte = b4.tok({ text: 'だって', posOneOf: ['AUX', 'SCONJ', 'PART', 'ADP'] }, 'datte');
       b4.inOrder(noun, datte, 3);
       b4.captureSpan('たって', noun, datte);
+    },
+
+    // Pattern 5: じゃなく + たって (e.g., ピザじゃなくたって)
+    (b5) => {
+      const janaku = b5.tok({ textOneOf: ['じゃなく', 'ではなく'] }, 'janaku');
+      const tatte = b5.tok({ text: 'たって', posOneOf: ['AUX', 'SCONJ', 'PART'] }, 'tatte');
+      b5.inOrder(janaku, tatte, 3);
+      b5.captureSpan('たって', janaku, tatte);
     },
   );
 });

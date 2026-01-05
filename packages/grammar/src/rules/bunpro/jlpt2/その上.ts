@@ -47,9 +47,9 @@ export default linguisticRule('その上', (r) => {
   // その上 is a formal conjunction meaning "moreover, on top of that"
   // It typically appears at the beginning of a sentence to add information
   //
-  // GiNZA typically parses その上 as:
+  // GiNZA typically parses その上/そのうえ as:
   // - Compound noun phrase acting as adverbial conjunction
-  // - lemma can be "その上" or sometimes split into その + 上
+  // - Can be written in kanji (その上) or hiragana (そのうえ)
   // - pos: ADV (adverb) or compound ADV
   // - dep: advmod or discourse (sentence connector)
   //
@@ -57,13 +57,12 @@ export default linguisticRule('その上', (r) => {
   // that introduces additional information.
   //
   // Common forms:
-  // - その上 (kanji form - standard)
-  // - Can also be written in hiragana as そのうえ (but test data shows kanji)
+  // - その上 (kanji form - standard writing)
+  // - そのうえ (hiragana form - commonly used in text)
 
   const sonoue = r.tok({
-    text: 'その上',
+    textOneOf: ['その上', 'そのうえ'],
     posOneOf: ['ADV', 'NOUN'],  // Can be ADV or compound NOUN acting as ADV
-    lemma: 'その上',
   }, 'sonoue');
 
   r.capture(sonoue);

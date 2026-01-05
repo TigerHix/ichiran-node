@@ -42,9 +42,10 @@ export default linguisticRule('たちまち', (r) => {
   // Adverb meaning something happens spontaneously and quickly without control
   // Can be written in hiragana (たちまち) or kanji (忽ち)
   // GiNZA tags this as ADV (adverb)
+  // Note: GiNZA uses lemma "たちまち" and norm "忽ち" for kanji form
 
   const tachimachi = r.tok({
-    lemmaOneOf: ['たちまち', '忽ち'],
+    lemma: 'たちまち',
     pos: 'ADV',
   }, 'tachimachi');
 
