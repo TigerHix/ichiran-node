@@ -3,6 +3,8 @@ import { linguisticRule } from '../../../engine/lang.js';
 export default linguisticRule('たほうがいい', (r) => {
   // Match Verb[た] + ほう + が + いい/いいです (had better do, should do)
   // e.g., きいたほうがいい, かえったほうがいいです, たべたほうがいい
+  // Also matches Verb[dictionary form] + ほう + が + いい/いいです (general opinion)
+  // e.g., たべるほうがいい, かたづけるほうがいい
 
   // Pattern 1: Casual form (Verb[た] + ほうがいい)
   r.either(
@@ -67,6 +69,23 @@ export default linguisticRule('たほうがいい', (r) => {
       b.inOrder(ga, ii, 1);
 
       b.captureSpan('たほうがいい', verbStem, ii);
+    },
+    // Dictionary form pattern (e.g., たべるほうがいい, かたづけるほうがいい)
+    (b) => {
+      const verb = b.tok({
+        inflectionForm: '連体形-一般',
+        pos: 'VERB', // Only VERB, not AUX (excludes ない which is AUX)
+        textRe: /^(?!ない$)/ // Exclude auxiliary "ない" (negative form has separate rule: ないほうがいい)
+      }, 'verb');
+      const hou = b.noun({ lemmaOneOf: ['ほう', '方'] }, 'hou');
+      const ga = b.particle('が', 'ga');
+      const ii = b.adj({ lemma: 'いい' }, 'ii');
+
+      b.inOrder(verb, hou, 2);
+      b.inOrder(hou, ga, 1);
+      b.inOrder(ga, ii, 1);
+
+      b.captureSpan('たほうがいい', verb, ii);
     }
   );
 
@@ -139,6 +158,25 @@ export default linguisticRule('たほうがいい', (r) => {
       b.inOrder(ga, ii, 1);
 
       b.captureSpan('たほうがいい', verbStem, ii);
+    },
+    // Dictionary form pattern (e.g., たべるほうがいいです)
+    (b) => {
+      const verb = b.tok({
+        inflectionForm: '連体形-一般',
+        pos: 'VERB', // Only VERB, not AUX (excludes ない which is AUX)
+        textRe: /^(?!ない$)/ // Exclude auxiliary "ない" (negative form has separate rule: ないほうがいい)
+      }, 'verb');
+      const hou = b.noun({ lemmaOneOf: ['ほう', '方'] }, 'hou');
+      const ga = b.particle('が', 'ga');
+      const ii = b.adj({ lemma: 'いい' }, 'ii');
+      const desu = b.aux({ lemma: 'です' }, 'desu');
+
+      b.inOrder(verb, hou, 2);
+      b.inOrder(hou, ga, 1);
+      b.inOrder(ga, ii, 1);
+      b.auxOf(ii, desu);
+
+      b.captureSpan('たほうがいい', verb, ii);
     }
   );
 });
