@@ -32,8 +32,8 @@ export default linguisticRule('たって', (r) => {
 
     // Pattern 2b: Adverb (e.g., よく) + たって
     (b2b) => {
-      const adv = b2.adv({}, 'adv');
-      const tatte = b2.tok({ text: 'たって' }, 'tatte');
+      const adv = b2b.adv({}, 'adv');
+      const tatte = b2b.tok({ text: 'たって' }, 'tatte');
       b2b.inOrder(adv, tatte, 5);
       b2b.captureSpan('たって', adv, tatte);
     },

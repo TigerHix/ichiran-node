@@ -64,7 +64,7 @@ export default linguisticRule('そうにない', (r) => {
     // Example: できそうにない (でき is VERB, 連用形-一般; そう is AUX, dep=aux)
     (b) => {
       const stem = b.verb({
-        inflectionForm: '連用形-一般',
+        // inflectionForm: '連用形-一般',
       }, 'stem');
       const sou = b.tok({
         lemma: 'そう',
@@ -88,7 +88,7 @@ export default linguisticRule('そうにない', (r) => {
     // Branch 3: Verb stem (命令形) + そう + に + (も) + ない
     (b) => {
       const stem = b.verb({
-        inflectionForm: '命令形',
+        // inflectionForm: '命令形',
       }, 'stem');
       const sou = b.tok({
         lemma: 'そう',
@@ -111,7 +111,7 @@ export default linguisticRule('そうにない', (r) => {
     // Example: はこべそうにない (はこべ is VERB, 仮定形-一般)
     (b) => {
       const stem = b.verb({
-        inflectionForm: '仮定形-一般',
+        // inflectionForm: '仮定形-一般',
       }, 'stem');
       const sou = b.tok({
         lemma: 'そう',
@@ -136,7 +136,7 @@ export default linguisticRule('そうにない', (r) => {
     // Example: 食べられそうにない, 受け取れそうにない
     (b) => {
       const stem = b.verb({
-        inflectionForm: '未然形-一般',
+        // inflectionForm: '未然形-一般',
       }, 'stem');
       const rareru = b.aux({
         lemma: 'られる',
@@ -166,7 +166,7 @@ export default linguisticRule('そうにない', (r) => {
     // Verbs like きく (to listen) conjugate to きいて in 連用形-イ音便
     (b) => {
       const stem = b.verb({
-        inflectionForm: '連用形-イ音便',
+        // inflectionForm: '連用形-イ音便',
       }, 'stem');
       const sou = b.tok({
         lemma: 'そう',
@@ -193,7 +193,7 @@ export default linguisticRule('そうにない', (r) => {
     (b) => {
       const stem = b.adj({
         tag: '動詞-一般',
-        inflectionForm: '連用形-一般',
+        // inflectionForm: '連用形-一般',
       }, 'stem');
       const sou = b.tok({
         lemma: 'そう',
@@ -222,7 +222,7 @@ export default linguisticRule('そうにない', (r) => {
       }, 'noun');
       const deki = b.aux({
         lemma: 'できる',
-        inflectionForm: '連用形-一般',
+        // inflectionForm: '連用形-一般',
       }, 'deki');
       b.auxOf(noun, deki);
       const sou = b.tok({

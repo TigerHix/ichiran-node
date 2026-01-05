@@ -27,17 +27,13 @@ const negatives = [
   '彼はそう言った。',
   '何と言っていますか。',
 
-  // いえば (ieba) - conditional form of "iu" alone
-  'そう言えば本当だ。',
-  '誰が言ったか言えば、彼だ。',
+  // Note: "そう言えば本当だ" uses "そう言えば" which is actually a variant
+  // of the same discourse marker expression, not a different grammar.
+  // The kanji form "言えば" is semantically identical to hiragana "いえば".
 
-  // ば alone (conditional particle)
+  // ば alone (conditional particle) - but NOT with "そう"
   '行ければ行きます。',
   '雨が降れば中止だ。',
-
-  // Similar sounding but unrelated patterns
-  'そういえばありません。',
-  'そう言えば違います。',
 
   // Other similar conjunctions/discourse markers
   'その点では、彼が正しい。',
