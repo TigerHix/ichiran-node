@@ -1,8 +1,11 @@
 import type { Ruleset } from '../../../ruleset.js';
 import tekoso from './-てこそ.js';
 import nouchide from './-のうち-で.js';
+import dokorodewanai from './どころではない.js';
 import tasuenonosue from './た末-の末.js';
+import tetouzenda from './て当然だ.js';
 import ageku from './あげく.js';
+import deshikanai from './でしかない.js';
 import gakininaru from './が気になる.js';
 import iwayuru from './いわゆる.js';
 import kanaikanouniuchi from './か-ないかのうちに.js';
@@ -10,8 +13,12 @@ import kaneru from './かねる.js';
 import karashite from './からして.js';
 import karasurutokarasureba from './からすると-からすれば.js';
 import karatoitte from './からといって.js';
+import karaniniwa from './からには.js';
+import tokangaerareru from './と考えられる.js';
 import kotoDakara from './ことだから.js';
 import kotoNiNatteiru from './ことになっている.js';
+import naidehairarenai from './ないではいられない.js';
+import nao2 from './なお2.js';
 import sasuga from './さすが.js';
 import souieba from './そういえば.js';
 import souninai from './そうにない.js';
@@ -29,8 +36,11 @@ export const BUNPRO_JLPT2: Ruleset = {
   rules: [
     tekoso,
     nouchide,
+    dokorodewanai,
     tasuenonosue,
+    tetouzenda,
     ageku,
+    deshikanai,
     gakininaru,
     iwayuru,
     kanaikanouniuchi,
@@ -38,8 +48,12 @@ export const BUNPRO_JLPT2: Ruleset = {
     karashite,
     karasurutokarasureba,
     karatoitte,
+    karaniniwa,
+    tokangaerareru,
     kotoDakara,
     kotoNiNatteiru,
+    naidehairarenai,
+    nao2,
     sasuga,
     souieba,
     souninai,
