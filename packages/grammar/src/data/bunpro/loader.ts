@@ -1,7 +1,43 @@
-import { readFileSync, readdirSync } from 'node:fs';
-import { join } from 'node:path';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { z } from 'zod';
-import type { BunproGrammarItem, BunproLevel } from './types.js';
+import type { BunproGrammarItem, BunproLevel, BunproIndex } from './types.js';
+
+// Resolve data directory relative to this module
+function getBunproDataDir(): string {
+  let dir = dirname(fileURLToPath(import.meta.url));
+  // Walk up to find package root (works from both src/ and dist/)
+  for (let i = 0; i < 8; i++) {
+    const candidate = join(dir, 'data', 'bunpro', '_index.json');
+    if (existsSync(candidate)) return join(dir, 'data', 'bunpro');
+    dir = dirname(dir);
+  }
+  throw new Error('Could not find bunpro data directory');
+}
+
+let cachedIndex: BunproIndex | null = null;
+let cachedDataDir: string | null = null;
+
+export function getBunproIndex(): BunproIndex {
+  if (cachedIndex) return cachedIndex;
+  cachedDataDir = getBunproDataDir();
+  cachedIndex = JSON.parse(readFileSync(join(cachedDataDir, '_index.json'), 'utf8')) as BunproIndex;
+  return cachedIndex;
+}
+
+export function loadBunproRaw(grammarId: string): any | null {
+  const index = getBunproIndex();
+  const entry = index[grammarId];
+  if (!entry) return null;
+  const dataDir = cachedDataDir ?? getBunproDataDir();
+  const filePath = join(dataDir, entry.level, entry.filename);
+  try {
+    return JSON.parse(readFileSync(filePath, 'utf8'));
+  } catch {
+    return null;
+  }
+}
 
 const BunproSchema = z.object({
   data: z.object({
