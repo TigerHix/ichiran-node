@@ -27,42 +27,57 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - Similar to か (or) but used at clause/sentence level
  *
  * GiNZA parse structure:
- * - それとも (CCONJ) - conjunction
+ * - Single token: それとも (CCONJ/ADV/SCONJ)
+ * - Or multi-token: それ (PRON/CCONJ) + とも (PART/SCONJ/ADP)
  * - dep=cc or dep=discourse (conjunction usage)
  *
  * Different from similar conjunctions:
- * - か (or) - directly follows nouns within clauses (今日か明日)
+ * - か (ka) - question particle or "or" within clause (今日か明日)
  * - または (matawa) - "or" (more formal,书面)
  * - もしくは (moshikuwa) - "or" (even more formal, legal documents)
  * - あるいは (aruiwa) - "or" (formal, written)
  * - それか (soreka) - "or that, or" (less formal)
- *
- * The rule matches それとも as a standalone conjunction without requiring
- * specific surrounding context since it's grammatically valid in various
- * positions (after comma, at sentence start, between clauses).
  */
 export default linguisticRule('それとも', (r) => {
   // それとも is a conjunction presenting alternative choices
   // Used primarily in questions between two options
   //
-  // GiNZA typically parses それとも as:
-  // - CCONJ (conjunction) or ADV (adverb)
-  // - lemma = それとも
-  // - dep = cc (coordination) or discourse
+  // GiNZA may parse それとも in different ways:
+  // 1. Single token: それとも (CCONJ/ADV/SCONJ)
+  // 2. Multi-token: それ (PRON/CCONJ) + とも (PART/SCONJ/ADP)
   //
-  // The rule matches the word in all its positions:
-  // - After comma: [A]、それとも[B]
-  // - At sentence start: それとも、[B]
-  // - Between clauses: [A]？それとも[B]？
-  //
-  // No additional structural constraints needed since それとも is a
-  // standalone conjunction that doesn't depend on surrounding context
-  // for grammatical validity.
+  // The rule matches both patterns to handle GiNZA parsing variations.
 
-  const soretomo = r.tok({
-    lemma: 'それとも',
-    posOneOf: ['CCONJ', 'ADV', 'SCONJ'],
-  }, 'soretomo');
+  r.either(
+    // Pattern 1: Single token それとも
+    (b1) => {
+      const soretomo = b1.tok({
+        text: 'それとも',
+        posOneOf: ['CCONJ', 'ADV', 'SCONJ'],
+      }, 'soretomo');
+      b1.capture(soretomo);
+    },
 
-  r.capture(soretomo);
+    // Pattern 2: Multi-token - それ (pronoun/conjunction) + とも (particle)
+    (b2) => {
+      const sore = b2.tok({
+        text: 'それ',
+        posOneOf: ['PRON', 'CCONJ', 'DET'],
+      }, 'sore');
+      const tomo = b2.tok({
+        text: 'とも',
+        posOneOf: ['PART', 'SCONJ', 'ADP', 'ADV'],
+      }, 'tomo');
+      b2.inOrder(sore, tomo, 1);
+      b2.captureSpan('それとも', sore, tomo);
+    },
+
+    // Pattern 3: Catch-all multi-token (relaxed constraints)
+    (b3) => {
+      const sore = b3.tok({ text: 'それ' }, 'sore');
+      const tomo = b3.tok({ text: 'とも' }, 'tomo');
+      b3.inOrder(sore, tomo, 5);
+      b3.captureSpan('それとも', sore, tomo);
+    }
+  );
 });

@@ -66,12 +66,9 @@ export default linguisticRule('それなら', (r) => {
     (b) => {
       const sore = b.tok({
         text: 'それ',
-        posOneOf: ['PRON', 'CCONJ', 'DET'],
       }, 'sore');
       const nara = b.tok({
         text: 'なら',
-        posOneOf: ['ADP', 'SCONJ', 'PART'],
-        depOneOf: ['dep', 'discourse', 'mark', 'advmod'],
       }, 'nara');
       b.inOrder(sore, nara, 1);
       b.captureSpan('それなら', sore, nara);
@@ -80,7 +77,6 @@ export default linguisticRule('それなら', (r) => {
     (b) => {
       const dattara = b.tok({
         text: 'だったら',
-        posOneOf: ['SCONJ', 'ADP', 'PART'],
       }, 'dattara');
       b.capture(dattara);
     },
@@ -88,11 +84,9 @@ export default linguisticRule('それなら', (r) => {
     (b) => {
       const sore = b.tok({
         text: 'それ',
-        posOneOf: ['PRON', 'CCONJ', 'DET'],
       }, 'sore');
       const dattara = b.tok({
         text: 'だったら',
-        posOneOf: ['SCONJ', 'ADP', 'PART'],
       }, 'dattara');
       b.inOrder(sore, dattara, 1);
       b.captureSpan('それだったら', sore, dattara);
