@@ -30,31 +30,80 @@ import { linguisticRule } from '../../../engine/lang.js';
  * GiNZA parse structure:
  * - 帰りがけに: 帰り(VERB,inf=連用形) + がけ(NOUN/PART) + に(ADP)
  * - 行きがけに: 行き(VERB,inf=連用形) + がけ(NOUN/PART) + に(ADP)
+ * - かえりがけ: かえり(VERB) + がけ(NOUN) - sometimes hiragana stems
  *
- * Note: がけ can be parsed as NOUN or PART by GiNZA
+ * Note: がけ can be parsed as NOUN or PART by GiNZA depending on context
+ * Note: Verb stems may be written in kanji or hiragana
  */
 export default linguisticRule('がけに', (r) => {
-  // Verb stem + がけ + に
-  const stem = r.tok({
-    posOneOf: ['VERB', 'ADJ'],
-    inflectionForm: '連用形-一般',
-  }, 'stem');
+  r.either(
+    // Branch 1: Strict stem form with 連用形
+    (b) => {
+      const stem = b.tok({
+        posOneOf: ['VERB', 'ADJ'],
+        inflectionForm: '連用形-一般',
+      }, 'stem');
 
-  // The suffix がけ (can be NOUN or PART depending on GiNZA's parsing)
-  const gake = r.tok({
-    textOneOf: ['がけ', '掛け'],
-    posOneOf: ['NOUN', 'PART'],
-  }, 'gake');
+      const gake = b.tok({
+        textOneOf: ['がけ', '掛け'],
+        posOneOf: ['NOUN', 'PART'],
+      }, 'gake');
 
-  r.inOrder(stem, gake, 2);
+      b.inOrder(stem, gake, 2);
 
-  // Followed by particle に
-  const ni = r.tok({
-    text: 'に',
-    pos: 'ADP',
-  }, 'ni');
+      const ni = b.tok({
+        text: 'に',
+        pos: 'ADP',
+      }, 'ni');
 
-  r.inOrder(gake, ni, 1);
+      b.inOrder(gake, ni, 1);
 
-  r.captureSpan('がけに', stem, ni);
+      b.captureSpan('がけに', stem, ni);
+    },
+
+    // Branch 2: Verb/AUX without strict inflection form
+    // Handles cases where GiNZA doesn't set 連用形 or uses different POS
+    (b) => {
+      const stem = b.tok({
+        posOneOf: ['VERB', 'AUX', 'ADJ'],
+      }, 'stem');
+
+      const gake = b.tok({
+        textOneOf: ['がけ', '掛け'],
+        posOneOf: ['NOUN', 'PART', 'AUX'],
+      }, 'gake');
+
+      b.inOrder(stem, gake, 3);
+
+      const ni = b.tok({
+        text: 'に',
+        posOneOf: ['ADP', 'PART'],
+      }, 'ni');
+
+      b.inOrder(gake, ni, 2);
+
+      b.captureSpan('がけに', stem, ni);
+    },
+
+    // Branch 3: Token + がけ + に (permissive fallback)
+    // Handles edge cases where GiNZA parsing is inconsistent.
+    // The text constraint on gake ensures this doesn't overcapture unrelated patterns.
+    (b) => {
+      const stem = b.tok({}, 'stem');
+
+      const gake = b.tok({
+        textOneOf: ['がけ', '掛け'],
+      }, 'gake');
+
+      b.inOrder(stem, gake, 5);
+
+      const ni = b.tok({
+        text: 'に',
+      }, 'ni');
+
+      b.inOrder(gake, ni, 3);
+
+      b.captureSpan('がけに', stem, ni);
+    }
+  );
 });
