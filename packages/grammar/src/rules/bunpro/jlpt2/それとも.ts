@@ -52,7 +52,7 @@ export default linguisticRule('それとも', (r) => {
     // Pattern 1: Single token それとも (most likely)
     (b1) => {
       const soretomo = b1.tok({
-        text: 'それとも',
+        lemma: 'それとも',
       }, 'soretomo');
       b1.capture(soretomo);
     },
@@ -60,12 +60,12 @@ export default linguisticRule('それとも', (r) => {
     // Pattern 2: Multi-token - それ (pronoun/conjunction) + とも (particle/adverb)
     (b2) => {
       const sore = b2.tok({
-        text: 'それ',
+        lemma: 'それ',
       }, 'sore');
       const tomo = b2.tok({
-        text: 'とも',
+        lemma: 'とも',
       }, 'tomo');
-      b2.inOrder(sore, tomo, 2);
+      b2.inOrder(sore, tomo, 5);
       b2.captureSpan('それとも', sore, tomo);
     }
   );
