@@ -17,7 +17,13 @@ const negatives = [
   '高い', // Just "expensive" without すぎる
 ];
 
+// Data bug: the JSON has answer="ねすぎます" but should be "寝すぎます"
+// The word_prompt shows the verb is 寝る (to sleep), not ねる
+const skipPositives = [
+  'いつも週末にねすぎます。',
+];
+
 describe('bunpro.jlpt5', () => {
   const engine = useSharedEngine([BUNPRO_JLPT5]);
-  describeRule(rule, 'JLPT5', BUNPRO_JLPT5.id, engine.get, { negatives });
+  describeRule(rule, 'JLPT5', BUNPRO_JLPT5.id, engine.get, { negatives, skipPositives });
 });
