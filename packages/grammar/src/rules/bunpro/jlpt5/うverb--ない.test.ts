@@ -54,9 +54,6 @@ const skipPositives = [
 
   // "今日はしなない" - hiragana reading, should be "死なない"
   '今日はしなない！ [[今日は死なないです！今日は死にません！]]',
-
-  // "車はもちません" - uses polite form
-  '[[ 車は持たない。 車は持たないです。 ]] 車はもちません。',
 ];
 
 describe('bunpro.jlpt5', () => {
