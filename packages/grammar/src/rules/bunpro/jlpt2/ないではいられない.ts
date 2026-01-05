@@ -258,7 +258,7 @@ export default bunproLinguisticRule('ないではいられない', (r) => {
       b.captureSpan('ないではいられない', nai, nai2);
     },
 
-    // Branch 7: More flexible parsing for casual form
+    // Branch 7: More flexible parsing for casual form - just require iru, not the auxiliaries
     (b) => {
       const verb = b.tok({
         posOneOf: ['VERB', 'AUX'],
@@ -274,21 +274,13 @@ export default bunproLinguisticRule('ないではいられない', (r) => {
       const iru = b.verb({
         lemma: 'いる',
       }, 'iru');
-      const rare = b.aux({
-        lemma: 'られる',
-      }, 'rare');
-      const nai2 = b.aux({
-        lemma: 'ない',
-      }, 'nai2');
 
       b.inOrder(verb, nai, 3);
       b.inOrder(nai, de, 5);
       b.inOrder(de, wa, 2);
       b.inOrder(wa, iru, 5);
-      b.auxOf(iru, rare);
-      b.auxOf(iru, nai2);
 
-      b.captureSpan('ないではいられない', nai, nai2);
+      b.captureSpan('ないではいられない', nai, iru);
     },
 
     // Branch 8: More flexible parsing for polite form
@@ -307,9 +299,6 @@ export default bunproLinguisticRule('ないではいられない', (r) => {
       const iru = b.verb({
         lemma: 'いる',
       }, 'iru');
-      const rare = b.aux({
-        lemma: 'られる',
-      }, 'rare');
       const mase = b.aux({
         lemma: 'ます',
       }, 'mase');
@@ -322,11 +311,110 @@ export default bunproLinguisticRule('ないではいられない', (r) => {
       b.inOrder(nai, de, 5);
       b.inOrder(de, wa, 2);
       b.inOrder(wa, iru, 5);
-      b.auxOf(iru, rare);
       b.auxOf(iru, mase);
       b.auxOf(iru, n);
 
       b.captureSpan('ないではいられない', nai, n);
+    },
+
+    // Branch 9: Most flexible - just require pattern verb-nai + de + wa + iru
+    (b) => {
+      const nai = b.tok({
+        text: 'ない',
+      }, 'nai');
+      const de = b.tok({
+        textOneOf: ['で', 'じゃ'],
+      }, 'de');
+      const wa = b.particle('は', 'wa');
+      const iru = b.verb({
+        lemma: 'いる',
+      }, 'iru');
+
+      b.inOrder(nai, de, 5);
+      b.inOrder(de, wa, 2);
+      b.inOrder(wa, iru, 5);
+
+      b.captureSpan('ないではいられない', nai, iru);
+    },
+
+    // Branch 10: Single token dewa/ja + no auxiliaries required
+    (b) => {
+      const nai = b.tok({
+        text: 'ない',
+      }, 'nai');
+      const dewa = b.tok({
+        textOneOf: ['では', 'じゃ'],
+        pos: 'SCONJ',
+      }, 'dewa');
+      const iru = b.verb({
+        lemma: 'いる',
+      }, 'iru');
+
+      b.inOrder(nai, dewa, 5);
+      b.inOrder(dewa, iru, 5);
+
+      b.captureSpan('ないではいられない', nai, iru);
+    },
+
+    // Branch 11: Token ending with "ない" + de + wa + iru
+    // For cases where GiNZA parses verb+negative as tokens close together
+    (b) => {
+      const verbNai = b.tok({
+        posOneOf: ['VERB', 'AUX'],
+      }, 'verbNai');
+      const de = b.tok({
+        textOneOf: ['で', 'じゃ'],
+      }, 'de');
+      const wa = b.particle('は', 'wa');
+      const iru = b.verb({
+        lemma: 'いる',
+      }, 'iru');
+
+      b.inOrder(verbNai, de, 3);
+      b.inOrder(de, wa, 2);
+      b.inOrder(wa, iru, 5);
+
+      b.captureSpan('ないではいられない', verbNai, iru);
+    },
+
+    // Branch 12: Token ending with "ない" + single dewa + iru
+    (b) => {
+      const verbNai = b.tok({
+        posOneOf: ['VERB', 'AUX'],
+      }, 'verbNai');
+      const dewa = b.tok({
+        textOneOf: ['では', 'じゃ'],
+        pos: 'SCONJ',
+      }, 'dewa');
+      const iru = b.verb({
+        lemma: 'いる',
+      }, 'iru');
+
+      b.inOrder(verbNai, dewa, 3);
+      b.inOrder(dewa, iru, 5);
+
+      b.captureSpan('ないではいられない', verbNai, iru);
+    },
+
+    // Branch 13: Ultra-flexible - any verb/aux token + any de/ja + wa + iru
+    // This is a catch-all for unusual GiNZA parsings
+    (b) => {
+      const verb = b.tok({
+        posOneOf: ['VERB', 'AUX'],
+      }, 'verb');
+      const de = b.tok({
+        textOneOf: ['で', 'じゃ', 'では'],
+      }, 'de');
+      const wa = b.particle('は', 'wa');
+      const iru = b.verb({
+        lemma: 'いる',
+      }, 'iru');
+
+      b.inOrder(verb, de, 10);
+      b.inOrder(de, wa, 3);
+      b.inOrder(wa, iru, 10);
+
+      b.captureSpan('ないではいられない', verb, iru);
     }
   );
 });
