@@ -125,7 +125,8 @@ export default linguisticRule('たり-たりする', (r) => {
           b3b.auxOf(verb1, shi1);
 
           const tari1 = b3b.tok({ textOneOf: ['たり', 'だり'], posOneOf: ['PART', 'ADP'], depOneOf: ['mark', 'case'] }, 'tari1');
-          b3b.headChild(verb1, tari1, 'mark');
+          // Nouns use 'case' dep for たり, while verbs use 'mark'
+          b3b.headChild(verb1, tari1);
           b3b.inOrder(shi1, tari1, 1);
 
           // verb2 can be VERB or NOUN
@@ -157,7 +158,8 @@ export default linguisticRule('たり-たりする', (r) => {
               b3b2.auxOf(verb2, shi2);
 
               const tari2 = b3b2.tok({ textOneOf: ['たり', 'だり'], posOneOf: ['PART', 'ADP'], depOneOf: ['mark', 'case'] }, 'tari2');
-              b3b2.headChild(verb2, tari2, 'mark');
+              // Nouns use 'case' dep for たり, while verbs use 'mark'
+              b3b2.headChild(verb2, tari2);
               b3b2.inOrder(shi2, tari2, 1);
 
               b3b2.inOrder(tari1, tari2);
@@ -181,7 +183,8 @@ export default linguisticRule('たり-たりする', (r) => {
       b4.auxOf(verb1, shi1);
 
       const tari1 = b4.tok({ textOneOf: ['たり', 'だり'], posOneOf: ['PART', 'ADP'], depOneOf: ['mark', 'case'] }, 'tari1');
-      b4.headChild(verb1, tari1, 'mark');
+      // verb1 can be NOUN (uses 'case') or VERB (uses 'mark')
+      b4.headChild(verb1, tari1);
       b4.inOrder(shi1, tari1, 1);
 
       const verb2 = b4.verb({ inflectionFormOneOf: [
@@ -221,7 +224,8 @@ export default linguisticRule('たり-たりする', (r) => {
       b5.auxOf(verb2, shi2);
 
       const tari2 = b5.tok({ textOneOf: ['たり', 'だり'], posOneOf: ['PART', 'ADP'], depOneOf: ['mark', 'case'] }, 'tari2');
-      b5.headChild(verb2, tari2, 'mark');
+      // verb2 can be NOUN (uses 'case') or VERB (uses 'mark')
+      b5.headChild(verb2, tari2);
       b5.inOrder(shi2, tari2, 1);
 
       b5.inOrder(tari1, tari2);
