@@ -42,14 +42,14 @@ export default linguisticRule('それとも', (r) => {
   // それとも is a conjunction presenting alternative choices
   // Used primarily in questions between two options
   //
-  // GiNZA may parse それとも in different ways:
+  // GiNZA parses それとも as:
   // 1. Single token: それとも (CCONJ/ADV/SCONJ)
-  // 2. Multi-token: それ (PRON/CCONJ) + とも (PART/SCONJ/ADP)
+  // 2. Multi-token: それ (CCONJ) + と (ADP,dep=fixed) + も (ADP,dep=fixed)
   //
   // The rule matches both patterns to handle GiNZA parsing variations.
 
   r.either(
-    // Pattern 1: Single token それとも (most likely)
+    // Pattern 1: Single token それとも
     (b1) => {
       const soretomo = b1.tok({
         lemma: 'それとも',
@@ -57,16 +57,20 @@ export default linguisticRule('それとも', (r) => {
       b1.capture(soretomo);
     },
 
-    // Pattern 2: Multi-token - それ (pronoun/conjunction) + とも (particle/adverb)
+    // Pattern 2: Multi-token - それ + と + も (three separate tokens)
     (b2) => {
       const sore = b2.tok({
         lemma: 'それ',
       }, 'sore');
-      const tomo = b2.tok({
-        lemma: 'とも',
-      }, 'tomo');
-      b2.inOrder(sore, tomo, 5);
-      b2.captureSpan('それとも', sore, tomo);
+      const to = b2.tok({
+        text: 'と',
+      }, 'to');
+      const mo = b2.tok({
+        text: 'も',
+      }, 'mo');
+      b2.inOrder(sore, to, 2);
+      b2.inOrder(to, mo, 1);
+      b2.captureSpan('それとも', sore, mo);
     }
   );
 });

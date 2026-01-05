@@ -31,37 +31,59 @@ import { linguisticRule } from '../../../engine/lang.js';
 export default linguisticRule('ことになっている', (r) => {
   r.either(
     // Branch 1: Casual present progressive (〜ことになっている)
+    // GiNZA parses て+いる as: て(SCONJ,dep=mark) + い(VERB,lemma=いる,dep=fixed)
     (b) => {
-      // Preceding predicate (verb in dictionary form)
       const pred = b.tok({}, 'pred');
-
-      // Followed by こと (nominalizer) - dep=compound points to pred
       const koto = b.noun({ lemma: 'こと', dep: 'compound' }, 'koto');
       b.headChild(pred, koto, 'compound');
 
-      // Followed by に (case marker, fixed)
       const ni = b.tok({ lemma: 'に', dep: 'fixed' }, 'ni');
       b.inOrder(koto, ni, 1);
 
-      // Followed by なっ (連用形-促音便)
       const nat = b.verb({ lemma: 'なる', dep: 'fixed', inflectionForm: '連用形-促音便' }, 'nat');
       b.inOrder(ni, nat, 1);
 
-      // Followed by て (te-form) - attaches to pred with dep=mark
       const te = b.tok({ lemma: 'て', depOneOf: ['mark', 'fixed'] }, 'te');
       b.headChild(pred, te, 'mark');
 
-      // Followed by いる (progressive) - attaches to te with dep=fixed
+      // GiNZA tokenizes いる as 'い' with lemma='いる'
       const iru = b.tok({
         lemma: 'いる',
-        posOneOf: ['VERB', 'AUX'],
-        inflectionForm: '終止形-一般',
+        inflectionForm: '連用形-一般',
         dep: 'fixed',
       }, 'iru');
-      b.headChild(te, iru, 'fixed');
+      b.inOrder(te, iru, 1);
 
       b.captureSpan('ことになっている', pred, iru);
     },
+
+    // Branch 1b: Full いる token (not contracted to 'い')
+    // Some parses have 'いる' with inflectionForm=終止形-一般
+    (b) => {
+      const pred = b.tok({}, 'pred');
+      const koto = b.noun({ lemma: 'こと', dep: 'compound' }, 'koto');
+      b.headChild(pred, koto, 'compound');
+
+      const ni = b.tok({ lemma: 'に', dep: 'fixed' }, 'ni');
+      b.inOrder(koto, ni, 1);
+
+      const nat = b.verb({ lemma: 'なる', dep: 'fixed', inflectionForm: '連用形-促音便' }, 'nat');
+      b.inOrder(ni, nat, 1);
+
+      const te = b.tok({ lemma: 'て', depOneOf: ['mark', 'fixed'] }, 'te');
+      b.headChild(pred, te, 'mark');
+
+      // Full いる token at end of sentence
+      const iru = b.tok({
+        lemma: 'いる',
+        inflectionForm: '終止形-一般',
+        dep: 'fixed',
+      }, 'iru');
+      b.inOrder(te, iru, 1);
+
+      b.captureSpan('ことになっている', pred, iru);
+    },
+
     // Branch 2: Polite present progressive (〜ことになっています)
     (b) => {
       const pred = b.tok({}, 'pred');
@@ -77,17 +99,12 @@ export default linguisticRule('ことになっている', (r) => {
       const te = b.tok({ lemma: 'て', depOneOf: ['mark', 'fixed'] }, 'te');
       b.headChild(pred, te, 'mark');
 
-      // います (polite progressive) - attaches to te with dep=fixed
-      const imasu = b.tok({
-        lemma: 'います',
-        posOneOf: ['VERB', 'AUX'],
-        inflectionForm: '終止形-一般',
-        dep: 'fixed',
-      }, 'imasu');
-      b.headChild(te, imasu, 'fixed');
+      const imasu = b.aux({ lemma: 'ます' }, 'imasu');
+      b.inOrder(te, imasu, 2);
 
       b.captureSpan('ことになっている', pred, imasu);
     },
+
     // Branch 3: Casual past progressive (〜ことになっていた)
     (b) => {
       const pred = b.tok({}, 'pred');
@@ -103,16 +120,19 @@ export default linguisticRule('ことになっている', (r) => {
       const te = b.tok({ lemma: 'て', depOneOf: ['mark', 'fixed'] }, 'te');
       b.inOrder(nat, te, 1);
 
-      // いた (past progressive) - attaches to pred as aux
-      const ita = b.aux({ lemma: 'いる', inflectionForm: '連用形-一般' }, 'ita');
-      b.auxOf(pred, ita);
+      // い (from いる) + た (past)
+      const i = b.tok({
+        lemma: 'いる',
+        inflectionForm: '連用形-一般',
+      }, 'i');
+      b.inOrder(te, i, 1);
 
-      // た (past) - attaches to pred as aux
-      const ta = b.aux({ lemma: 'た', conjugationClass: '助動詞-タ' }, 'ta');
-      b.auxOf(pred, ta);
+      const ta = b.aux({ lemma: 'た' }, 'ta');
+      b.inOrder(i, ta, 1);
 
       b.captureSpan('ことになっている', pred, ta);
     },
+
     // Branch 4: Polite past progressive (〜ことになっていました)
     (b) => {
       const pred = b.tok({}, 'pred');
@@ -128,49 +148,17 @@ export default linguisticRule('ことになっている', (r) => {
       const te = b.tok({ lemma: 'て', depOneOf: ['mark', 'fixed'] }, 'te');
       b.inOrder(nat, te, 1);
 
-      // いました (polite past progressive) - can be:
-      // - imashita as single aux token
-      // - imashita decomposed: いまし(aux of pred) + た(aux of pred)
-      b.either(
-        // 4a: Single いました token
-        (b2) => {
-          const imashita = b2.aux({ lemma: 'いました' }, 'imashita');
-          b2.auxOf(pred, imashita);
-          b2.captureSpan('ことになっている', pred, imashita);
-        },
-        // 4b: いまし + た decomposed
-        (b2) => {
-          const imashi = b2.aux({ lemma: 'います', inflectionForm: '連用形-一般' }, 'imashi');
-          b2.auxOf(pred, imashi);
+      // いまし (from います) + た
+      const imashi = b.tok({
+        lemma: 'ます',
+        inflectionForm: '連用形-一般',
+      }, 'imashi');
+      b.inOrder(te, imashi, 1);
 
-          const ta = b2.aux({ lemma: 'た', conjugationClass: '助動詞-タ' }, 'ta');
-          b2.auxOf(pred, ta);
+      const ta = b.aux({ lemma: 'た' }, 'ta');
+      b.inOrder(imashi, ta, 1);
 
-          b2.captureSpan('ことになっている', pred, ta);
-        }
-      );
-    },
-    // Branch 5: Casual contracted (〜ことになってる)
-    (b) => {
-      const pred = b.tok({}, 'pred');
-      const koto = b.noun({ lemma: 'こと', dep: 'compound' }, 'koto');
-      b.headChild(pred, koto, 'compound');
-
-      const ni = b.tok({ lemma: 'に', dep: 'fixed' }, 'ni');
-      b.inOrder(koto, ni, 1);
-
-      const nat = b.verb({ lemma: 'なる', dep: 'fixed', inflectionForm: '連用形-促音便' }, 'nat');
-      b.inOrder(ni, nat, 1);
-
-      // て (te-form) - may have text=て or be contracted with いる
-      const te = b.tok({ lemma: 'て', depOneOf: ['mark', 'fixed'] }, 'te');
-      b.inOrder(nat, te, 1);
-
-      // る (contracted form of いる) - attaches to pred as aux
-      const ru = b.aux({ lemma: 'いる', text: 'る', inflectionForm: '終止形-一般' }, 'ru');
-      b.auxOf(pred, ru);
-
-      b.captureSpan('ことになっている', pred, ru);
+      b.captureSpan('ことになっている', pred, ta);
     }
   );
 });
