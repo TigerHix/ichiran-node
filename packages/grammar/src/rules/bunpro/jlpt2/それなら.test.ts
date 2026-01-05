@@ -1,4 +1,4 @@
-import { describe, it } from 'bun:test';
+import { describe } from 'bun:test';
 import { useSharedEngine } from '../_test/engine.js';
 import { describeRule } from '../_test/helpers.js';
 import rule from './それなら.js';
@@ -54,32 +54,4 @@ const negatives = [
 describe('bunpro.jlpt2', () => {
   const engine = useSharedEngine([BUNPRO_JLPT2]);
   describeRule(rule, 'JLPT2', BUNPRO_JLPT2.id, engine.get, { negatives });
-});
-
-// Debug: test specific sentences separately
-describe('bunpro.jlpt2 debug', () => {
-  const engine = useSharedEngine([BUNPRO_JLPT2]);
-
-  it('debug: だったら sentence', async () => {
-    const e = engine.get();
-    const sent = '一人で食べに行くの？だったら僕も一緒に行ってもいい？';
-    const hits = await e.match(sent);
-    console.log('\n=== DEBUG:', sent, '===');
-    console.log('All hits:', hits.map(h => ({ruleId: h.ruleId, captures: h.captures})));
-    const hit = hits.find(h => h.ruleId === 'それなら');
-    console.log('Hit for それなら:', hit);
-
-    // Analyze the sentence
-    const doc = await e.analyze(sent);
-    console.log('\nDoc keys:', Object.keys(doc || {}));
-    console.log('Number of sentences:', doc?.sentences?.length);
-    if (doc && doc.sentences) {
-      for (let i = 0; i < doc.sentences.length; i++) {
-        console.log(`\nSentence ${i} tokens:`);
-        for (const token of doc.sentences[i].tokens) {
-          console.log(`  ${token.text}\tPOS=${token.pos}\tLEMMA=${token.lemma || 'N/A'}`);
-        }
-      }
-    }
-  });
 });

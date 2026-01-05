@@ -74,12 +74,35 @@ export default linguisticRule('それなら', (r) => {
       b.captureSpan('それなら', sore, nara);
     },
     // Pattern 2: だったら - casual conversational form
-    // Can appear alone OR after それ (as それだったら)
+    // GiNZA parses this as two tokens: だっ (AUX) + たら (AUX)
     (b) => {
-      const dattara = b.tok({
-        text: 'だったら',
-      }, 'dattara');
-      b.capture(dattara);
+      const da = b.tok({
+        text: 'だっ',
+        pos: 'AUX',
+      }, 'da');
+      const tara = b.tok({
+        text: 'たら',
+        pos: 'AUX',
+      }, 'tara');
+      b.inOrder(da, tara, 1);
+      b.captureSpan('だったら', da, tara);
+    },
+    // Pattern 3: それだったら - emphatic variant (それ + だっ + たら)
+    (b) => {
+      const sore = b.tok({
+        text: 'それ',
+      }, 'sore');
+      const da = b.tok({
+        text: 'だっ',
+        pos: 'AUX',
+      }, 'da');
+      const tara = b.tok({
+        text: 'たら',
+        pos: 'AUX',
+      }, 'tara');
+      b.inOrder(sore, da, 1);
+      b.inOrder(da, tara, 1);
+      b.captureSpan('それだったら', sore, tara);
     }
   );
 });
