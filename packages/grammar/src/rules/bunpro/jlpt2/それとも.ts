@@ -49,11 +49,10 @@ export default linguisticRule('それとも', (r) => {
   // The rule matches both patterns to handle GiNZA parsing variations.
 
   r.either(
-    // Pattern 1: Single token それとも
+    // Pattern 1: Single token それとも (most likely)
     (b1) => {
       const soretomo = b1.tok({
         text: 'それとも',
-        posOneOf: ['CCONJ', 'ADV', 'SCONJ'],
       }, 'soretomo');
       b1.capture(soretomo);
     },
@@ -62,22 +61,13 @@ export default linguisticRule('それとも', (r) => {
     (b2) => {
       const sore = b2.tok({
         text: 'それ',
-        posOneOf: ['PRON', 'CCONJ', 'DET'],
       }, 'sore');
       const tomo = b2.tok({
-        text: 'とも',
-        posOneOf: ['PART', 'SCONJ', 'ADP', 'ADV'],
+        textOneOf: ['とも'],
+        lemmaOneOf: ['とも', '共'],
       }, 'tomo');
       b2.inOrder(sore, tomo, 1);
       b2.captureSpan('それとも', sore, tomo);
-    },
-
-    // Pattern 3: Catch-all multi-token (relaxed constraints)
-    (b3) => {
-      const sore = b3.tok({ text: 'それ' }, 'sore');
-      const tomo = b3.tok({ text: 'とも' }, 'tomo');
-      b3.inOrder(sore, tomo, 5);
-      b3.captureSpan('それとも', sore, tomo);
     }
   );
 });

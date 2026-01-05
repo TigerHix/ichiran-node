@@ -62,7 +62,6 @@ export default linguisticRule('その上', (r) => {
 
   const sonoue = r.tok({
     textOneOf: ['その上', 'そのうえ'],
-    posOneOf: ['ADV', 'NOUN'],  // Can be ADV or compound NOUN acting as ADV
   }, 'sonoue');
 
   r.capture(sonoue);

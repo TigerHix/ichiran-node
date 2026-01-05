@@ -74,22 +74,12 @@ export default linguisticRule('それなら', (r) => {
       b.captureSpan('それなら', sore, nara);
     },
     // Pattern 2: だったら - casual conversational form
+    // Can appear alone OR after それ (as それだったら)
     (b) => {
       const dattara = b.tok({
         text: 'だったら',
       }, 'dattara');
       b.capture(dattara);
-    },
-    // Pattern 3: それだったら - emphatic variant
-    (b) => {
-      const sore = b.tok({
-        text: 'それ',
-      }, 'sore');
-      const dattara = b.tok({
-        text: 'だったら',
-      }, 'dattara');
-      b.inOrder(sore, dattara, 1);
-      b.captureSpan('それだったら', sore, dattara);
     }
   );
 });

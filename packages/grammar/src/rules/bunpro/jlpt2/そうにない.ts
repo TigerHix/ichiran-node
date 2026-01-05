@@ -18,12 +18,12 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * Key discriminators:
  * - そう has tag=形状詞-助動詞語幹 (appearance), not 名詞-助動詞語幹 (hearsay)
- * - The particle に (ADP) attaches as case marker
+ * - The particle に (ADP) attaches as case marker to the verb stem
  * - Optional particle も can follow に (そうにもない variant)
  * - ない (ADJ, lemma=ない) is the main predicate
  *
  * GiNZA parse patterns:
- * 1. Normal: stem(VERB, 連用形-一般) + そう(ADV, dep=advmod, head=stem) + に(ADP, dep=case, head=そう) + (も) + ない
+ * 1. Normal: stem(VERB, 連用形-一般) + そう(ADV, dep=advmod, head=stem) + に(ADP, dep=case, head=stem) + (も) + ない
  * 2. Alternative: stem(VERB, 連用形-一般) + そう(AUX, dep=aux, head=stem) + に(ADP, dep=case, head=stem) + (も) + ない
  * 3. Potential verbs: stem(VERB, 命令形/仮定形-一般) + そう(AUX/ADV) + に + (も) + ない
  * 4. Passive/potential with auxiliary: stem(VERB, 未然形-一般) + auxiliary(AUX) + そう(AUX, dep=aux, head=stem) + に + (も) + ない
@@ -40,9 +40,7 @@ export default linguisticRule('そうにない', (r) => {
     // Branch 1: Verb stem (連用形-一般) + そう (ADV, dep=advmod) + に + (も) + ない
     // Example: 遊べそうにない (遊べ is VERB, 連用形-一般; そう is ADV, dep=advmod)
     (b) => {
-      const stem = b.verb({
-        inflectionForm: '連用形-一般',
-      }, 'stem');
+      const stem = b.verb({}, 'stem');
       const sou = b.tok({
         lemma: 'そう',
         tag: '形状詞-助動詞語幹',
@@ -51,10 +49,10 @@ export default linguisticRule('そうにない', (r) => {
       }, 'sou');
       b.headChild(stem, sou, 'advmod');
       const ni = b.particle('に', 'ni');
-      b.caseMarker(sou, ni);
+      b.caseMarker(stem, ni);
       b.optional((ob) => {
         const mo = ob.particle('も', 'mo');
-        ob.caseMarker(ni, mo);
+        ob.inOrder(ni, mo, 1);
       });
       const nai = b.adj({
         lemma: 'ない',
@@ -79,7 +77,7 @@ export default linguisticRule('そうにない', (r) => {
       b.caseMarker(stem, ni);
       b.optional((ob) => {
         const mo = ob.particle('も', 'mo');
-        ob.caseMarker(ni, mo);
+        ob.inOrder(ni, mo, 1);
       });
       const nai = b.adj({
         lemma: 'ない',
@@ -98,10 +96,10 @@ export default linguisticRule('そうにない', (r) => {
       }, 'sou');
       b.headChild(stem, sou, 'advmod');
       const ni = b.particle('に', 'ni');
-      b.caseMarker(sou, ni);
+      b.caseMarker(stem, ni);
       b.optional((ob) => {
         const mo = ob.particle('も', 'mo');
-        ob.caseMarker(ni, mo);
+        ob.inOrder(ni, mo, 1);
       });
       const nai = b.adj({
         lemma: 'ない',
@@ -126,7 +124,7 @@ export default linguisticRule('そうにない', (r) => {
       b.caseMarker(stem, ni);
       b.optional((ob) => {
         const mo = ob.particle('も', 'mo');
-        ob.caseMarker(ni, mo);
+        ob.inOrder(ni, mo, 1);
       });
       const nai = b.adj({
         lemma: 'ない',
@@ -155,7 +153,7 @@ export default linguisticRule('そうにない', (r) => {
       b.caseMarker(stem, ni);
       b.optional((ob) => {
         const mo = ob.particle('も', 'mo');
-        ob.caseMarker(ni, mo);
+        ob.inOrder(ni, mo, 1);
       });
       const nai = b.adj({
         lemma: 'ない',
@@ -181,7 +179,7 @@ export default linguisticRule('そうにない', (r) => {
       b.caseMarker(stem, ni);
       b.optional((ob) => {
         const mo = ob.particle('も', 'mo');
-        ob.caseMarker(ni, mo);
+        ob.inOrder(ni, mo, 1);
       });
       const nai = b.adj({
         lemma: 'ない',
@@ -208,7 +206,7 @@ export default linguisticRule('そうにない', (r) => {
       b.caseMarker(stem, ni);
       b.optional((ob) => {
         const mo = ob.particle('も', 'mo');
-        ob.caseMarker(ni, mo);
+        ob.inOrder(ni, mo, 1);
       });
       const nai = b.adj({
         lemma: 'ない',
@@ -238,7 +236,7 @@ export default linguisticRule('そうにない', (r) => {
       b.caseMarker(noun, ni);
       b.optional((ob) => {
         const mo = ob.particle('も', 'mo');
-        ob.caseMarker(ni, mo);
+        ob.inOrder(ni, mo, 1);
       });
       const nai = b.adj({
         lemma: 'ない',
@@ -258,7 +256,7 @@ export default linguisticRule('そうにない', (r) => {
       b.caseMarker(kisou, ni);
       b.optional((ob) => {
         const mo = ob.particle('も', 'mo');
-        ob.caseMarker(ni, mo);
+        ob.inOrder(ni, mo, 1);
       });
       const nai = b.adj({
         lemma: 'ない',

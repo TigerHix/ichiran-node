@@ -21,16 +21,15 @@ import { linguisticRule } from '../../../engine/lang.js';
  *   (I study Japanese for three hours every day. And yet, I don't feel like I'm improving at all.)
  *
  * Key discriminators:
- * - それ (demonstrative pronoun/conjunction referring to previous context)
- * - な (auxiliary/copula connecting to のに)
- * - のに (contrastive conjunction particle meaning "despite/although")
- * - The entire phrase acts as a conjunction at sentence/clause boundaries
+ * - The phrase "それなのに" as a fixed 4-token sequence (それ + な + の + に)
+ * - Used at sentence/clause boundaries as a conjunction
+ * - Expresses contrast with an emotional nuance of surprise or disappointment
  *
- * GiNZA parse structure:
- * - それ: PRON or CCONJ (pronoun or conjunction), dep=cc or dep=dep
- * - な: AUX with lemma=だ, dep=fixed (part of fixed expression)
- * - の: SCONJ, dep=mark
- * - に: ADP, dep=case
+ * Note on constraints:
+ * - This rule uses minimal constraints (text matching only) to accommodate
+ *   GiNZA's inconsistent POS/dep tagging across different sentence contexts
+ * - The risk of overcapture is mitigated by the specific 4-token sequence
+ * - Negative tests ensure it doesn't match noun+な+のに patterns (学生なのに, etc.)
  *
  * Different from similar conjunctions:
  * - それでも (soredemo) - "even so, nevertheless" (neutral, less emotional)
@@ -38,78 +37,36 @@ import { linguisticRule } from '../../../engine/lang.js';
  * - だけど (dakedo) - "but" (casual, less emphatic)
  * - くせに (kuse ni) - "despite" (critical, accusatory tone)
  * - のに (noni) - "despite" (used after verb/adj, not standalone)
- *
- * The rule must distinguish それなのに (conjunction) from:
- * - それ + な + のに (separate components in different contexts)
  * - Noun + な + のに (e.g., 彼は学生なのに - "although he is a student")
  */
 export default linguisticRule('それなのに', (r) => {
   // それなのに is a fixed conjunction expression
   // It consists of: それ (that) + な (aux/copula) + のに (despite)
 
-  r.either(
-    // Pattern 1: それ (CCONJ) + な + のに
-    // When GiNZA tags それ as a conjunction
-    (b1) => {
-      const sore = b1.tok({
-        text: 'それ',
-        pos: 'CCONJ',
-        depOneOf: ['cc', 'dep'],
-      }, 'sore');
+  // Match それ (demonstrative pronoun/conjunction)
+  // GiNZA may tag it inconsistently, so we use minimal constraints
+  const sore = r.tok({
+    text: 'それ',
+  }, 'sore');
 
-      const na = b1.tok({
-        text: 'な',
-        dep: 'fixed',
-      }, 'na');
-      b1.inOrder(sore, na, 1);
+  // Followed by な (aux/copula, part of fixed expression)
+  const na = r.tok({
+    text: 'な',
+  }, 'na');
+  r.inOrder(sore, na, 1);
 
-      const no = b1.tok({
-        text: 'の',
-        pos: 'SCONJ',
-        dep: 'mark',
-      }, 'no');
-      b1.inOrder(na, no, 1);
+  // Followed by の (nominalizer particle)
+  const no = r.tok({
+    text: 'の',
+  }, 'no');
+  r.inOrder(na, no, 1);
 
-      const ni = b1.tok({
-        text: 'に',
-        pos: 'ADP',
-        dep: 'case',
-      }, 'ni');
-      b1.inOrder(no, ni, 1);
+  // Followed by に (case particle)
+  const ni = r.tok({
+    text: 'に',
+  }, 'ni');
+  r.inOrder(no, ni, 1);
 
-      b1.captureSpan('それなのに', sore, ni);
-    },
-
-    // Pattern 2: それ (PRON) + な + のに
-    // When GiNZA tags それ as a pronoun
-    (b2) => {
-      const sore = b2.tok({
-        text: 'それ',
-        pos: 'PRON',
-        depOneOf: ['cc', 'dep'],
-      }, 'sore');
-
-      const na = b2.tok({
-        text: 'な',
-        dep: 'fixed',
-      }, 'na');
-      b2.inOrder(sore, na, 1);
-
-      const no = b2.tok({
-        text: 'の',
-        pos: 'SCONJ',
-        dep: 'mark',
-      }, 'no');
-      b2.inOrder(na, no, 1);
-
-      const ni = b2.tok({
-        text: 'に',
-        pos: 'ADP',
-        dep: 'case',
-      }, 'ni');
-      b2.inOrder(no, ni, 1);
-
-      b2.captureSpan('それなのに', sore, ni);
-    }
-  );
+  // Capture the full expression
+  r.captureSpan('それなのに', sore, ni);
 });
