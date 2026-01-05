@@ -14,16 +14,7 @@ const negatives = [
 
 // Sentences that can't be matched due to GiNZA parsing limitations:
 //
-// 1. Shortened form かも (ambiguous - can be standalone particle or part of かもしれない)
-//    - ドライブするかも (could just be "drive + maybe particle")
-//    - そうかもね (could just be "so + maybe particle")
-//    - 見られるかも (could just be "can see + maybe particle")
-//
-//    GiNZA parses か as a particle (PART) with dep=mark in all these cases.
-//    The full かもしれない has も with dep=fixed, which distinguishes it.
-//    But standalone かも lacks the fixed dependency chain.
-//
-// 2. Colloquial form かもしらん (different structure)
+// 1. Colloquial form かもしらん (different structure)
 //    - 忘れてきたかもしらん
 //
 //    GiNZA parses this as:
@@ -35,14 +26,16 @@ const negatives = [
 //    Different lemma (しらん vs しれる) and structure.
 //    Would require a separate rule variant just for this dialectal form.
 //
-// CONCLUSION: Matching shortened forms would overcapture on standalone かも particles.
-// These are legitimate expressions of uncertainty, but structurally indistinguishable
-// from other uses of かも without the full かもしれない pattern.
+// Note: The shortened form かも IS now matched (Pattern 4):
+// - ドライブするかも
+// - そうかもね
+// - 見られるかも
+//
+// These all have か (PART/ADP, dep=mark/case) + も (ADP, dep=case),
+// which Pattern 4 matches successfully.
 const skipPositives = [
-  '明日は休みだからドライブするかも。',
-  'そうかもね。',
+  // Colloquial form かもしらん (different structure - uses しらん instead of しれる)
   '財布を家に忘れてきたかもしらん。',
-  'この時期は晴れの日が続くから、富士山を綺麗に見られるかも。',
 ];
 
 describe('bunpro.jlpt4', () => {

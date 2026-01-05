@@ -14,6 +14,7 @@ export default linguisticRule('かもしれない', (r) => {
   // - かもしれない (plain)
   // - かもしれません (polite)
   // - かもしれん (colloquial, less common)
+  // - かも (shortened colloquial)
 
   r.either(
     // Pattern 1: かもしれない (plain form)
@@ -58,6 +59,17 @@ export default linguisticRule('かもしれない', (r) => {
       b.inOrder(shire, n, 1);
 
       b.captureSpan('かもしれん', ka, n);
+    },
+
+    // Pattern 4: かも (shortened colloquial form)
+    // GiNZA parses this as:
+    // - か (PART, dep=mark)
+    // - も (ADP, dep=case) - different from full form!
+    (b) => {
+      const ka = b.particle('か', 'ka');
+      const mo = b.particle('も', 'mo');
+      b.inOrder(ka, mo, 1);
+      b.captureSpan('かも', ka, mo);
     }
   );
 });
