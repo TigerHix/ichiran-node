@@ -21,6 +21,7 @@ import sorenanoni from './それなのに.js';
 import sorenara from './それなら.js';
 import sorenishitemo from './それにしても.js';
 import tachimachi from './たちまち.js';
+import tashouganai from './てしょうがない.js';
 import tattano from './たった-の.js';
 import tatte from './たって.js';
 
@@ -49,6 +50,7 @@ export const BUNPRO_JLPT2: Ruleset = {
     sorenara,
     sorenishitemo,
     tachimachi,
+    tashouganai,
     tattano,
     tatte,
   ],
