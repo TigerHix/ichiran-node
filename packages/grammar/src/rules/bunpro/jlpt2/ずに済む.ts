@@ -2,12 +2,15 @@ import { linguisticRule } from '../../../engine/lang.js';
 
 export default linguisticRule('ずに済む', (r) => {
   r.either(
+    // Pattern 1: ずに + 済む/すむ (with POS constraints)
     (b1) => {
       const zuni = b1.tok({ text: 'ずに', posOneOf: ['AUX', 'PART', 'SCONJ'] }, 'zuni');
       const sumu = b1.tok({ textOneOf: ['済む', 'すむ', '済み', 'すみ', '済んだ', 'すんだ', '済みます', 'すみます', '済みました', 'すみました'], posOneOf: ['VERB', 'AUX'] }, 'sumu');
       b1.inOrder(zuni, sumu, 3);
       b1.captureSpan('ずに済む', zuni, sumu);
     },
+
+    // Pattern 2: ず + に + 済む/すむ (with POS constraints)
     (b2) => {
       const zu = b2.tok({ text: 'ず', posOneOf: ['AUX', 'PART', 'SCONJ'] }, 'zu');
       const ni = b2.particle('に', 'ni');
@@ -16,6 +19,8 @@ export default linguisticRule('ずに済む', (r) => {
       b2.inOrder(ni, sumu, 2);
       b2.captureSpan('ずに済む', zu, sumu);
     },
+
+    // Pattern 3: ずに + 済む/すむ (with aux dependency)
     (b3) => {
       const zuni = b3.tok({ text: 'ずに' }, 'zuni');
       const sumu = b3.tok({ textOneOf: ['済む', 'すむ', '済み', 'すみ', '済んだ', 'すんだ', '済みます', 'すみます', '済みました', 'すみました'] }, 'sumu');
@@ -23,6 +28,8 @@ export default linguisticRule('ずに済む', (r) => {
       b3.headChild(sumu, zuni, 'aux');
       b3.captureSpan('ずに済む', zuni, sumu);
     },
+
+    // Pattern 4: ず + に + 済む/すむ (with fixed dependency)
     (b4) => {
       const zu = b4.tok({ text: 'ず' }, 'zu');
       const ni = b4.particle('に', 'ni');
@@ -33,19 +40,46 @@ export default linguisticRule('ずに済む', (r) => {
       b4.headChild(sumu, ni, 'fixed');
       b4.captureSpan('ずに済む', zu, sumu);
     },
+
+    // Pattern 5: ずに + 済む/すむ (loose)
     (b5) => {
       const zuni = b5.tok({ text: 'ずに' }, 'zuni');
       const sumu = b5.tok({ textOneOf: ['済む', 'すむ', '済み', 'すみ', '済んだ', 'すんだ', '済みます', 'すみます', '済みました', 'すみました'] }, 'sumu');
-      b5.inOrder(zuni, sumu, 3);
+      b5.inOrder(zuni, sumu, 5);
       b5.captureSpan('ずに済む', zuni, sumu);
     },
+
+    // Pattern 6: ず + に + 済む/すむ (loose)
     (b6) => {
       const zu = b6.tok({ text: 'ず' }, 'zu');
       const ni = b6.particle('に', 'ni');
       const sumu = b6.tok({ textOneOf: ['済む', 'すむ', '済み', 'すみ', '済んだ', 'すんだ', '済みます', 'すみます', '済みました', 'すみました'] }, 'sumu');
-      b6.inOrder(zu, ni, 1);
-      b6.inOrder(ni, sumu, 2);
+      b6.inOrder(zu, ni, 2);
+      b6.inOrder(ni, sumu, 5);
       b6.captureSpan('ずに済む', zu, sumu);
-    }
+    },
+
+    // Pattern 7: ずに + 済ん/すん + だ/です (split conjugation - past tense)
+    (b7) => {
+      const zuni = b7.tok({ text: 'ずに' }, 'zuni');
+      const sun = b7.tok({ textOneOf: ['済ん', 'すん'] }, 'sun');
+      const da = b7.aux({ textOneOf: ['だ', 'です'] }, 'da');
+      b7.inOrder(zuni, sun, 3);
+      b7.inOrder(sun, da, 1);
+      b7.captureSpan('ずに済む', zuni, da);
+    },
+
+    // Pattern 8: ず + に + 済ん/すん + だ/です (split conjugation - past tense)
+    (b8) => {
+      const zu = b8.tok({ text: 'ず' }, 'zu');
+      const ni = b8.particle('に', 'ni');
+      const sun = b8.tok({ textOneOf: ['済ん', 'すん'] }, 'sun');
+      const da = b8.aux({ textOneOf: ['だ', 'です'] }, 'da');
+      b8.inOrder(zu, ni, 1);
+      b8.inOrder(ni, sun, 2);
+      b8.inOrder(sun, da, 1);
+      b8.captureSpan('ずに済む', zu, da);
+    },
+
   );
 });
