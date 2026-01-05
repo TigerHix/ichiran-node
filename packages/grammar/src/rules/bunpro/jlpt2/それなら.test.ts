@@ -72,10 +72,13 @@ describe('bunpro.jlpt2 debug', () => {
     // Analyze the sentence
     const doc = await e.analyze(sent);
     console.log('\nDoc keys:', Object.keys(doc || {}));
-    if (doc && doc.sentences && doc.sentences[0]) {
-      console.log('First sentence tokens:');
-      for (const token of doc.sentences[0].tokens) {
-        console.log(`  ${token.text}\tPOS=${token.pos}\tLEMMA=${token.lemma || 'N/A'}`);
+    console.log('Number of sentences:', doc?.sentences?.length);
+    if (doc && doc.sentences) {
+      for (let i = 0; i < doc.sentences.length; i++) {
+        console.log(`\nSentence ${i} tokens:`);
+        for (const token of doc.sentences[i].tokens) {
+          console.log(`  ${token.text}\tPOS=${token.pos}\tLEMMA=${token.lemma || 'N/A'}`);
+        }
       }
     }
   });

@@ -38,6 +38,7 @@ export const BUNPRO_JLPT2: Ruleset = {
     souieba,
     souninai,
     sonoue,
+    soretomo,
     sorenanoni,
     sorenara,
     sorenishitemo,
