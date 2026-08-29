@@ -70,6 +70,10 @@
         "@types/node": "^22.10.2",
       },
     },
+    "packages/portable": {
+      "name": "@ichiran/portable",
+      "version": "0.0.0",
+    },
     "packages/testing": {
       "name": "@ichiran/testing",
       "version": "0.1.0",
@@ -145,6 +149,8 @@
     "@ichiran/data": ["@ichiran/data@workspace:packages/data"],
 
     "@ichiran/grammar": ["@ichiran/grammar@workspace:packages/grammar"],
+
+    "@ichiran/portable": ["@ichiran/portable@workspace:packages/portable"],
 
     "@ichiran/testing": ["@ichiran/testing@workspace:packages/testing"],
 

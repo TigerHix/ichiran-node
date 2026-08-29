@@ -1,0 +1,41 @@
+{
+  "capturedAt": "2026-08-29T05:39:07Z",
+  "repositoryCommit": "ba1966a0699e4aec9b5cfe2f18b448c21adcc590",
+  "database": {
+    "name": "ichiran_test",
+    "postgresVersion": "16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)",
+    "schemaSha256": "b2d6d6d802a1a1d61306804256d985481bac635e26bbfad58756a3ac5bb5cb56",
+    "analyzerKanjidicReadingsSha256": "48dbe1d6ecb7f4f70bf7260f709110d78815998977cd18f427f84811ddc54138",
+    "bytes": 3844045847,
+    "rows": {
+      "entry": 2489889,
+      "rootEntry": 213732,
+      "kanjiText": 5345137,
+      "rootKanjiText": 224839,
+      "kanaText": 3253367,
+      "rootKanaText": 255641,
+      "sense": 246494,
+      "gloss": 423974,
+      "senseProp": 396408,
+      "restrictedReadings": 6732,
+      "conjugation": 2324547,
+      "conjProp": 2339894,
+      "conjSourceReading": 8270561,
+      "kanji": 13108,
+      "reading": 39007
+    }
+  },
+  "sources": {
+    "data/conj.csv": "46a915afc385e05dfc8174226a5ee7bb4231e30870068e77d52e10a3433b5852",
+    "data/conjo.csv": "b2919a24ecc7f3cdf9b9478eb13526b76cb086c53000316ecb1781ff947c14f3",
+    "data/kwpos.csv": "485b5ac5d8a23a8bcd18e69ca2fdf21d231fb740780a6c7d7ccf40d65ed831e4",
+    "data/sources/extra.xml": "4a056ebe608cb7bb5284e412688ff634d3516f3249a54d37b33645d7a266093b",
+    "data/sources/gyoseiku.csv": "23f706ff84b5c27da86be1d7a6066630d34617e1769edb0673c91d258851ce3f",
+    "data/sources/jichitai.csv": "328bd0779b1bb69a4c1bc3773c5ff71cffb59c825377ca7f31eafda3860e3af8",
+    "packages/data/JMdict_e.gz": "391ec340c994cc82809ff667de74530d320bff9b3d062243b03d40b4826b1fe3"
+  },
+  "toolchain": {
+    "bun": "1.3.5",
+    "node": "22.18.0"
+  }
+}
