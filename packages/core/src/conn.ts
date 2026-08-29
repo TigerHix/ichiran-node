@@ -237,6 +237,24 @@ export function getConnection(): postgres.Sql {
   return connection!;
 }
 
+/**
+ * Temporarily route legacy helpers that call `getConnection()` through an
+ * already-open compiler transaction. This is process-global and therefore
+ * intended only for one-at-a-time build work.
+ */
+export async function withConnectionOverride<T>(
+  sql: postgres.Sql,
+  fn: () => Promise<T>
+): Promise<T> {
+  const previous = connection;
+  connection = sql;
+  try {
+    return await fn();
+  } finally {
+    connection = previous;
+  }
+}
+
 export async function withDb<T>(fn: (sql: postgres.Sql) => Promise<T>): Promise<T> {
   const sql = getConnection();
   return await fn(sql);

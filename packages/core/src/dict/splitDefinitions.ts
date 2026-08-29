@@ -2068,7 +2068,7 @@ function defEasyHint(seq: number, kanjiSplit: string): void {
     }
 
     // Line 930: (insert-hints (get-kana reading-var) (translate-hints kr (translate-hints match hints)))
-    return insertHints(await getKana(reading), translateHints(kr, translateHints(match, hints)));
+    return insertHints(await getKana(reading), translateHints(kr, translateHints(match[0], hints)));
   };
 
   defhint(seq, fn); // Line 924: (defhint (seq) ...)
