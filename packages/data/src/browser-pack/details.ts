@@ -2,7 +2,7 @@ import { gzipSync } from 'node:zlib';
 import type postgres from 'postgres';
 
 const MAGIC = 'ICHIDETL';
-const FORMAT_VERSION = 1;
+const FORMAT_VERSION = 2;
 const HEADER_BYTES = 96;
 const ENTRY_BYTES = 8;
 const BLOCK_BYTES = 24;
@@ -62,8 +62,20 @@ export interface DetailSenseSource {
   readonly properties: readonly DetailPropertySource[];
 }
 
+export interface DetailFormSource {
+  readonly route: 'kanji' | 'kana';
+  readonly text: string;
+  readonly ord: number;
+  readonly common: number | null;
+  readonly commonTags: string;
+  readonly conjugatable: boolean;
+  readonly nokanji: boolean;
+  readonly best: string | null;
+}
+
 export interface DetailEntrySource {
   readonly seq: number;
+  readonly forms: readonly DetailFormSource[];
   readonly senses: readonly DetailSenseSource[];
 }
 
@@ -71,6 +83,7 @@ export interface DetailStoreBuild {
   readonly bytes: Uint8Array;
   readonly stats: {
     readonly entryCount: number;
+    readonly formCount: number;
     readonly senseCount: number;
     readonly glossCount: number;
     readonly propertyCount: number;
@@ -108,6 +121,10 @@ interface PropertyRow {
   tag: string;
   ord: number;
   text: string;
+}
+
+interface FormRow extends DetailFormSource {
+  seq: number;
 }
 
 interface EncodedBlock {
@@ -185,6 +202,40 @@ function compareText(left: string, right: string): number {
 function encodeEntry(entry: DetailEntrySource): Uint8Array {
   const writer = new ByteWriter();
   writer.uint(entry.seq, 'Entry sequence');
+  writer.uint(entry.forms.length, 'Form count');
+  let previousForm: DetailFormSource | null = null;
+  for (const form of entry.forms) {
+    if (form.ord < 0 || form.common !== null && form.common < 0) {
+      throw new DetailStoreEncodingError(`Entry ${entry.seq} has an invalid form ordinal/common rank`);
+    }
+    if (previousForm) {
+      const routeOrder = (previousForm.route === 'kanji' ? 0 : 1) - (form.route === 'kanji' ? 0 : 1);
+      if (
+        routeOrder > 0
+        || (routeOrder === 0 && previousForm.ord > form.ord)
+        || (
+          routeOrder === 0
+          && previousForm.ord === form.ord
+          && compareText(previousForm.text, form.text) >= 0
+        )
+      ) {
+        throw new DetailStoreEncodingError(`Entry ${entry.seq} forms are not canonically ordered`);
+      }
+    }
+    previousForm = form;
+    writer.byte(
+      (form.route === 'kana' ? 1 : 0)
+      | (form.conjugatable ? 1 << 1 : 0)
+      | (form.nokanji ? 1 << 2 : 0)
+      | (form.best !== null ? 1 << 3 : 0),
+      'Form flags'
+    );
+    writer.uint(form.ord, 'Form ordinal');
+    writer.uint(form.common === null ? 0 : form.common + 1, 'Form common rank');
+    writer.text(form.text);
+    writer.text(form.commonTags);
+    if (form.best !== null) writer.text(form.best);
+  }
   writer.uint(entry.senses.length, 'Sense count');
   let previousSenseOrdinal = -1;
   for (const sense of entry.senses) {
@@ -273,6 +324,11 @@ export function buildDetailStore(
 
   const entries = sourceEntries.map((entry) => ({
     ...entry,
+    forms: [...entry.forms].sort((left, right) =>
+      (left.route === 'kanji' ? 0 : 1) - (right.route === 'kanji' ? 0 : 1)
+      || left.ord - right.ord
+      || compareText(left.text, right.text)
+    ),
     senses: entry.senses.map((sense) => ({
       ...sense,
       glosses: [...sense.glosses],
@@ -372,6 +428,7 @@ export function buildDetailStore(
     bytes: output,
     stats: {
       entryCount: entries.length,
+      formCount: entries.reduce((sum, entry) => sum + entry.forms.length, 0),
       senseCount: entries.reduce((sum, entry) => sum + entry.senses.length, 0),
       glossCount: entries.reduce(
         (sum, entry) => sum + entry.senses.reduce((inner, sense) => inner + sense.glosses.length, 0),
@@ -394,9 +451,39 @@ export function buildDetailStore(
 
 /** Load the normalized, root-only detail projection from PostgreSQL. */
 export async function loadDetailEntries(sql: postgres.Sql): Promise<DetailEntrySource[]> {
-  const [entryRows, senseRows, glossRows, propertyRows] = await Promise.all([
+  const [entryRows, formRows, senseRows, glossRows, propertyRows] = await Promise.all([
     sql.unsafe<Array<{ seq: number }>>(`
       SELECT seq FROM entry WHERE root_p = TRUE ORDER BY seq
+    `),
+    sql.unsafe<FormRow[]>(`
+      SELECT forms.* FROM (
+        SELECT kt.seq,
+               'kanji'::text AS route,
+               kt.text,
+               kt.ord,
+               kt.common,
+               COALESCE(kt.common_tags, '') AS "commonTags",
+               kt.conjugate_p AS conjugatable,
+               kt.nokanji,
+               kt.best_kana AS best
+        FROM kanji_text kt
+        JOIN entry e USING (seq)
+        WHERE e.root_p = TRUE
+        UNION ALL
+        SELECT rt.seq,
+               'kana'::text AS route,
+               rt.text,
+               rt.ord,
+               rt.common,
+               COALESCE(rt.common_tags, '') AS "commonTags",
+               rt.conjugate_p AS conjugatable,
+               rt.nokanji,
+               rt.best_kanji AS best
+        FROM kana_text rt
+        JOIN entry e USING (seq)
+        WHERE e.root_p = TRUE
+      ) forms
+      ORDER BY seq, route DESC, ord, text COLLATE "C"
     `),
     sql.unsafe<SenseRow[]>(`
       SELECT s.id, s.seq, s.ord
@@ -422,6 +509,13 @@ export async function loadDetailEntries(sql: postgres.Sql): Promise<DetailEntryS
       ORDER BY s.seq, s.ord, sp.tag COLLATE "C", sp.ord, sp.text COLLATE "C"
     `)
   ]);
+
+  const forms = new Map<number, DetailFormSource[]>();
+  for (const { seq, ...form } of formRows) {
+    const values = forms.get(seq);
+    if (values) values.push(form);
+    else forms.set(seq, [form]);
+  }
 
   const glosses = new Map<number, DetailGlossSource[]>();
   for (const row of glossRows) {
@@ -461,5 +555,12 @@ export async function loadDetailEntries(sql: postgres.Sql): Promise<DetailEntryS
   if (glosses.size !== 0 || properties.size !== 0) {
     throw new DetailStoreEncodingError('Gloss or property references a missing root sense');
   }
-  return entryRows.map(({ seq }) => ({ seq, senses: senses.get(seq) ?? [] }));
+  const entries = entryRows.map(({ seq }) => ({
+    seq,
+    forms: forms.get(seq) ?? [],
+    senses: senses.get(seq) ?? []
+  }));
+  for (const entry of entries) forms.delete(entry.seq);
+  if (forms.size !== 0) throw new DetailStoreEncodingError('Form references a missing root entry');
+  return entries;
 }

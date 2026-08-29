@@ -15,8 +15,10 @@ for (let value = 0; value < CRC32_TABLE.length; value++) {
 export function crc32(bytes: Uint8Array): number {
   let checksum = 0xffff_ffff;
 
-  for (const byte of bytes) {
-    checksum = CRC32_TABLE[(checksum ^ byte) & 0xff]! ^ (checksum >>> 8);
+  // An indexed walk is materially faster than the typed-array iterator in
+  // JavaScript engines used by the browser Worker (and avoids iterator state).
+  for (let index = 0; index < bytes.byteLength; index++) {
+    checksum = CRC32_TABLE[(checksum ^ bytes[index]!) & 0xff]! ^ (checksum >>> 8);
   }
 
   return (checksum ^ 0xffff_ffff) >>> 0;

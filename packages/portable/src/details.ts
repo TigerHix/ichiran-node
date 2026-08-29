@@ -1,7 +1,7 @@
 import { crc32 } from './crc32.js';
 
 export const DETAILS_MAGIC = 'ICHIDETL';
-export const DETAILS_FORMAT_VERSION = 1;
+export const DETAILS_FORMAT_VERSION = 2;
 export const DETAILS_HEADER_BYTES = 96;
 export const DETAILS_ENTRY_BYTES = 8;
 export const DETAILS_BLOCK_BYTES = 24;
@@ -51,8 +51,20 @@ export interface DetailSense {
   readonly properties: readonly DetailProperty[];
 }
 
+export interface DetailForm {
+  readonly route: 'kanji' | 'kana';
+  readonly text: string;
+  readonly ord: number;
+  readonly common: number | null;
+  readonly commonTags: string;
+  readonly conjugatable: boolean;
+  readonly nokanji: boolean;
+  readonly best: string | null;
+}
+
 export interface DetailEntry {
   readonly seq: number;
+  readonly forms: readonly DetailForm[];
   readonly senses: readonly DetailSense[];
 }
 
@@ -385,6 +397,27 @@ export class DetailStoreReader {
       .getUint32(recordOffset, LITTLE_ENDIAN);
     const cursor = new RecordCursor(bytes, recordOffset + 4, recordBytes);
     const seq = cursor.uint();
+    const formCount = cursor.uint();
+    const forms: DetailForm[] = [];
+    for (let formIndex = 0; formIndex < formCount; formIndex++) {
+      const flags = cursor.byte();
+      if ((flags & 0xf0) !== 0) {
+        throw new DetailStoreError('corrupt-block', `Unknown detail form flags ${flags}`);
+      }
+      const route = (flags & 1) !== 0 ? 'kana' : 'kanji';
+      const ord = cursor.uint();
+      const encodedCommon = cursor.uint();
+      forms.push({
+        route,
+        ord,
+        common: encodedCommon === 0 ? null : encodedCommon - 1,
+        text: cursor.text(),
+        commonTags: cursor.text(),
+        conjugatable: (flags & (1 << 1)) !== 0,
+        nokanji: (flags & (1 << 2)) !== 0,
+        best: (flags & (1 << 3)) !== 0 ? cursor.text() : null
+      });
+    }
     const senseCount = cursor.uint();
     const senses: DetailSense[] = [];
     for (let senseIndex = 0; senseIndex < senseCount; senseIndex++) {
@@ -407,7 +440,7 @@ export class DetailStoreReader {
       senses.push({ ord, glosses, properties });
     }
     cursor.finish();
-    return { seq, senses };
+    return { seq, forms, senses };
   }
 
   clearCache(): void {

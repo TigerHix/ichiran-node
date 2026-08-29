@@ -11,6 +11,28 @@ import {
 const FIXTURE: readonly DetailEntrySource[] = [
   {
     seq: 100,
+    forms: [
+      {
+        route: 'kanji',
+        text: '食べる',
+        ord: 0,
+        common: 1,
+        commonTags: 'ichi1;news1',
+        conjugatable: true,
+        nokanji: false,
+        best: 'たべる'
+      },
+      {
+        route: 'kana',
+        text: 'たべる',
+        ord: 0,
+        common: null,
+        commonTags: '',
+        conjugatable: true,
+        nokanji: false,
+        best: '食べる'
+      }
+    ],
     senses: [{
       ord: 0,
       glosses: [{ ord: 0, text: 'to eat' }, { ord: 1, text: 'consume' }],
@@ -22,6 +44,16 @@ const FIXTURE: readonly DetailEntrySource[] = [
   },
   {
     seq: 200,
+    forms: [{
+      route: 'kana',
+      text: 'だけ',
+      ord: 0,
+      common: 0,
+      commonTags: 'ichi1',
+      conjugatable: false,
+      nokanji: true,
+      best: null
+    }],
     senses: [
       {
         ord: 0,
@@ -35,7 +67,7 @@ const FIXTURE: readonly DetailEntrySource[] = [
       }
     ]
   },
-  { seq: 300, senses: [] }
+  { seq: 300, forms: [], senses: [] }
 ];
 
 const decodeGzip = async (bytes: Uint8Array): Promise<Uint8Array> => (
@@ -48,6 +80,7 @@ describe('random-access detail store', () => {
     const second = buildDetailStore([...FIXTURE].reverse(), { targetBlockBytes: 1024 });
     expect(first.bytes).toEqual(second.bytes);
     expect(first.stats.entryCount).toBe(3);
+    expect(first.stats.formCount).toBe(3);
     expect(first.stats.senseCount).toBe(3);
     expect(first.stats.glossCount).toBe(4);
     expect(first.stats.propertyCount).toBe(4);
