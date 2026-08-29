@@ -34,6 +34,23 @@ describe('browser analyzer release manifest', () => {
     expect(first.manifest.manifestSha256).toBe(digest(analyzerManifestDigestInput(unsigned)));
     expect(first.manifest.hot.installedBytes).toBe(options.hot.byteLength);
     expect(first.manifest.hot.downloadBytes).toBe(first.hotDownload.byteLength);
+
+    const shellBytes = 123;
+    const sizes = assertAnalyzerReleaseSize(first, shellBytes);
+    const markerBytes = new TextEncoder().encode(JSON.stringify({
+      state: 'ready',
+      manifest: first.manifest,
+      installedAt: '1970-01-01T00:00:00.000Z'
+    })).byteLength;
+    expect(sizes.cachedManifestBytes).toBe(first.manifestBytes.byteLength);
+    expect(sizes.installedMarkerBytes).toBe(markerBytes);
+    expect(sizes.persistedBytes).toBe(
+      options.hot.byteLength
+      + options.details.byteLength
+      + shellBytes
+      + first.manifestBytes.byteLength
+      + markerBytes
+    );
   });
 
   test('enforces the raw-hot gate independently of compression', () => {

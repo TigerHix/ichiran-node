@@ -1,8 +1,7 @@
 # Browser Analyzer Alpha design specification
 
 Status: accepted implementation reference
-Concepts: `design/mobile-install.png`, `design/mobile-analyzer.png`, and
-`design/desktop-analyzer.png`
+Companion interaction contract: `UI-BLUEPRINT.md`
 
 ## Direction
 
@@ -11,39 +10,39 @@ while installation, controls, and diagnostics stay quiet. It borrows Nemu's usef
 three-level token hierarchy—furigana, surface, POS—and tap-to-inspect behavior, but not
 its OCR drawer, chat actions, multi-selection, blur, or spring-heavy presentation.
 
-The installed application is one persistent page. On narrow screens, selected-token
-details use an anchored bottom sheet. At `min-width: 900px`, results and details become a
-stable two-column workspace. This is a responsive change of placement, not two separate
-products.
+The installed application is one persistent, centered page. Selected-token details
+remain in document flow below the sentence at every width. This keeps one reading order,
+one scroll owner, and one interaction model; the standalone demo does not inherit Nemu's
+reader-specific bottom drawer or introduce a desktop side panel.
 
 ## Locked visible copy
 
 First install:
 
-- `Ichiran`
+- `Browser Analyzer Alpha`
 - `Not installed`
 - `Japanese analyzer data`
-- `One download, then works entirely on this device.`
+- `Download once, then analyze Japanese entirely on this device.`
 - `Dictionary & readings`
 - `Conjugation & scoring`
 - `Complete senses & glosses`
 - `No account. No text leaves this device.`
 - `Download size`
-- `Install analyzer`
+- `Install analyzer data`
 - `Data details`
-- `Downloading`, `Verifying`, `Installing`
+- `Downloading analyzer data`, `Verifying download`, `Installing for offline use`
 - `Retry`
 - `About & licenses`
 
 Installed workspace:
 
-- `Ichiran`
+- `Browser Analyzer Alpha`
 - `Ready offline`
 - `Use sample`
-- `Top 1`
+- `Advanced` with `Top results`, entity spans, and punctuation normalization
 - `Analyze`
 - `Alternatives`
-- `Runtime & data` on wide screens; `Data & benchmark` on narrow screens
+- `Runtime & data`
 - `Base form`
 - `Runs entirely on this device`
 - transient status: `Analyzing…` and `Analysis failed`
@@ -76,23 +75,21 @@ Use OKLCH in CSS where supported, with these sRGB values as review anchors:
 | `--adjective` | `#7656B3` | adjective underline/POS accent |
 | `--particle` | `#B86B16` | particle underline/POS accent |
 
-Background temperature is cool white, never cream. Shadows are absent by default. The
-mobile sheet may use one `0 -1px 0` rule and a very restrained ambient shadow solely to
-separate it from results.
+Background temperature is cool white, never cream. Shadows are absent by default.
 
-Radii are `6px` for controls, `8px` for input/selection, and `20px 20px 0 0` only for the
-mobile sheet. Do not turn rows or metadata into pills. POS and inflection tags may use a
-small `4px` framed label because they encode real structure.
+Radii are `6px` for controls and `8px` for input/selection. Do not turn rows or metadata
+into pills. POS and inflection tags may use a small `4px` framed label because they
+encode real structure.
 
 Spacing uses a 4px base with the main steps `4, 8, 12, 16, 24, 32, 48`. Minimum touch
-target is 44×44 CSS pixels. Mobile side padding is 18px; desktop max width is 1360px with
-32px gutters.
+target is 44×44 CSS pixels. Mobile side padding is 18px; the document column is at most
+768px wide.
 
 ## Typography
 
 - UI and control chrome: `Inter Variable`, followed by the system sans stack.
-- Japanese content: `Noto Serif JP Variable`, then `Hiragino Mincho ProN`, `Yu Mincho`,
-  and `serif`.
+- Japanese content: `Hiragino Mincho ProN`, `Yu Mincho`, `Noto Serif CJK JP`, and
+  `serif`.
 - Header wordmark: Japanese-content serif at 32px mobile / 30px desktop, 600.
 - Editable Japanese input: 22px mobile / 20px desktop, 1.65 line height.
 - Token surface: 30–34px mobile and 28–32px desktop, line height 1.25.
@@ -102,8 +99,9 @@ target is 44×44 CSS pixels. Mobile side padding is 18px; desktop max width is 1
 - Body/gloss: 16px mobile / 15px desktop, 1.55 line height.
 - Controls: deliberately set 15–16px/600; never inherit browser defaults.
 
-Fonts must be bundled into the app shell so the UI remains typographically stable
-offline. Use only the required subsets/weights after measuring their transfer cost.
+Bundle the small Latin UI font subsets. Prefer installed Japanese system fonts for this
+performance milestone; a multi-megabyte Japanese webfont is not required for offline
+correctness and may be added only after measuring transfer and decoded memory.
 
 ## Component inventory
 
@@ -116,12 +114,10 @@ offline. Use only the required subsets/weights after measuring their transfer co
 5. `TokenButton` — furigana/surface/POS stack, POS underline, selected/focus/pressed states.
 6. `TokenInspector` — selected surface/reading, structural tags, numbered senses, base form,
    ordered conjugation path, components, suffix information, and token alternatives.
-7. `MobileDetailSheet` — drag handle, focus management, safe-area padding, and scroll body;
-   it does not depend on a generic drawer library.
-8. `PathAlternatives` — whole-sentence top-N paths, collapsed initially.
-9. `RuntimePanel` — pack/version/bytes, Worker state, recent latency, benchmark action,
+7. `PathAlternatives` — whole-sentence top-N paths, collapsed initially.
+8. `RuntimePanel` — pack/version/bytes, Worker state, recent latency, benchmark action,
    legacy JSON, clear installed data, and reinstall. Collapsed initially.
-10. `AppFooter` — local-execution statement and licenses link.
+9. `AppFooter` — local-execution statement and licenses link.
 
 Cards are not a default primitive. Input, result workspace, inspector, and install section
 use open regions separated by borders and whitespace.
@@ -151,9 +147,9 @@ icons appear in the installed workspace.
   a new result clears selection and resets inspector scroll.
 - Tokens are real buttons with keyboard focus and `aria-pressed`; punctuation is not a
   fake button unless it has details.
-- Mobile token selection opens the sheet without preventing normal sentence scrolling.
-  Escape/back closes it and restores focus to the token.
-- Desktop selection updates the persistent inspector without page jump.
+- Token selection updates the persistent inspector without stealing focus or introducing
+  a nested scroll owner. Escape or the explicit close action clears it and restores
+  focus to the token.
 - Whole-sentence path alternatives and token-level alternative readings are visibly
   distinct concepts.
 - Installation phase changes are announced through one polite live region. Progress uses
@@ -164,22 +160,14 @@ icons appear in the installed workspace.
 
 ## Responsive composition
 
-At 390×844, the header, composer, and sentence are a single column. The selected-token
-sheet occupies at most 56dvh and leaves the selected sentence visible. Detail content
-scrolls inside the sheet, not behind it.
+At 320px, 390×844, and desktop widths, the header, composer, sentence, details, and
+runtime remain one centered column in the same DOM order. Tokens wrap only between
+tokens. The document owns vertical scrolling and must never gain horizontal overflow.
 
-At 900px and wider, the result workspace is a 2:1 split with one shared outer border:
-sentence/path sections on the left and a 360–440px inspector on the right. Empty inspector
-state gives one short instruction and does not become an illustration. The input composer
-stays full width above this split.
+## Reference-concept policy
 
-## Concept deviations already authorized
-
-- Device status bars/home indicators in the generated concepts are framing only and are
-  not implemented.
-- Illustrative download size/progress values are dynamic manifest/runtime values.
-- The mobile concept visually frames structural labels; implementation may use an
-  underline plus text instead if that improves wrapping while preserving hierarchy.
-- Dark mode is optional after the light implementation passes visual and performance QA.
-
-Everything else in the three concepts is the visual implementation target.
+Earlier generated mobile-sheet/two-column concepts are visual references for typography,
+token anatomy, and restrained color only. `UI-BLUEPRINT.md` and the persistent layout
+above own interaction and responsive behavior. Device status bars and illustrative byte
+values are never product UI. Dark mode remains optional after the light implementation
+passes visual and performance QA.

@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "rootDir": "."
+  },
+  "include": [
+    "scripts/browser-alpha-release.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/dist",
+    "**/*.test.ts"
+  ]
+}

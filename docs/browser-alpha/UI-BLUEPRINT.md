@@ -4,6 +4,10 @@ Status: implementation contract, 2026-08-28
 Scope: the installable, analyzer-only browser alpha. OCR, chat, TTS, the
 experimental grammar package, and a general Kanjidic UI are excluded.
 
+Browser capability floor: Safari 26+ or current Chromium. Installation requires a
+Worker, OPFS, Web Locks, writable file streams, and `DecompressionStream`; unsupported browsers
+show the required-feature message and no install action.
+
 ## 1. Product rule
 
 Borrow Nemu's analyzer content and interaction language, not its manga-reader
@@ -211,7 +215,7 @@ Runtime is collapsed by default and contains:
   Worker-open status;
 - last analysis wall time, Worker compute time, requested/returned top-N, input
   length, and whether entity boosts were supplied;
-- `Run benchmark`, its corpus/version, p50, p95, maximum, and 6x-throttle status;
+- `Run benchmark`, its corpus/version, p50, p95, maximum, and calibrated 6x-proxy status;
 - `Copy clean JSON` and `Copy legacy JSON`;
 - `Clear installed data`, visually separated as a destructive maintenance action.
 
@@ -231,7 +235,7 @@ and hot image are ready unless a benchmark is explicitly labeled cold start.
 | Numbered senses, components, conjugation/base form, token alternatives. | Experimental grammar wording and UI. |
 | Reduced-motion and iOS safe-area awareness. | Per-token spring/stagger animation and iOS text-animation workarounds made unnecessary by no animation. |
 | Exact detail ordering and metadata. | Glass blur, large shadows, and nested independently scrolling panes. |
-| Light and dark themes. | Mandatory bundled Noto variable font. |
+| Quiet light palette and legible textbook colors. | Theme switching and a mandatory bundled Noto variable font. |
 | Cancellable stale-request protection. | Analyze-on-every-keystroke behavior. |
 
 ## 10. Responsive behavior
@@ -262,14 +266,14 @@ The alpha UI is complete when automated Chromium coverage and later device QA pr
 - selecting a conjugated token shows its base form and ordered path;
 - clean and legacy JSON are copyable and correspond to the visible selected path;
 - keyboard-only input, Analyze, token selection, disclosures, Retry, and Clear work;
-- focus indication, live announcements, reduced motion, light/dark themes, and text
-  zoom to 200% remain usable;
+- focus indication, live announcements, reduced motion, the implemented light theme,
+  and text zoom to 200% remain usable;
 - the 390 x 844 layout has no clipping, overlap, scroll trap, or unsafe-area issue;
 - analysis creates no main-thread long task and no network request;
 - install, analyze, corruption, no-result, and benchmark errors are visible inline.
 
-Actual iPhone 13-class validation remains a production gate. Chromium at 6x CPU
-throttle is only the agreed alpha proxy.
+Actual iPhone 13-class validation remains a production gate. Chromium with a measured
+5.0-7.5x slowdown on the exact analyzer Worker is only the agreed alpha proxy.
 
 ## 12. Reference harness limitation
 

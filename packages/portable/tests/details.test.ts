@@ -38,7 +38,10 @@ const FIXTURE: readonly DetailEntrySource[] = [
       glosses: [{ ord: 0, text: 'to eat' }, { ord: 1, text: 'consume' }],
       properties: [
         { tag: 'field', ord: 0, text: 'food' },
-        { tag: 'pos', ord: 0, text: 'v1' }
+        // Equal-ordinal properties retain physical database order. This is
+        // observable in the legacy detailed serializer and is not text order.
+        { tag: 'pos', ord: 0, text: 'v1' },
+        { tag: 'pos', ord: 0, text: 'aux-v' }
       ]
     }]
   },
@@ -83,7 +86,7 @@ describe('random-access detail store', () => {
     expect(first.stats.formCount).toBe(3);
     expect(first.stats.senseCount).toBe(3);
     expect(first.stats.glossCount).toBe(4);
-    expect(first.stats.propertyCount).toBe(4);
+    expect(first.stats.propertyCount).toBe(5);
 
     const reader = await openDetailStore(memoryDetailSource(first.bytes), decodeGzip);
     expect(reader.manifest.entryCount).toBe(3);

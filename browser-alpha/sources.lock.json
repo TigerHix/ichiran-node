@@ -1,6 +1,6 @@
 {
   "formatVersion": 1,
-  "oracleRepositoryCommit": "ba1966a0699e4aec9b5cfe2f18b448c21adcc590",
+  "oracleRepositoryCommit": "d583720572fbf26ee201166ac47034c50380a571",
   "database": {
     "name": "ichiran_test",
     "postgresServerVersion": "16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)",
@@ -16,7 +16,8 @@
     "surfaceIndexFormat": 1,
     "rootPayloadFormat": 2,
     "morphologyFormat": 1,
-    "analyzerSupportFormat": 1
+    "analyzerSupportFormat": 2,
+    "analyzerAnnotationsFormat": 4
   },
   "sources": [
     {
@@ -91,5 +92,161 @@
       "rows": 35542,
       "sha256": "0bea1400b8c60ec3949a20f6d7c1e11264c96e1216a32ace3722a837e3f6e8d7"
     }
-  ]
+  ],
+  "directOrderProjection": {
+    "rows": 464802,
+    "surfaces": 432664,
+    "sha256": "9337415834d46b19bae70f6e9383178e580b0db144305ed79148a933b5a9ffe6"
+  },
+  "generatedProjection": {
+    "semanticPaths": 2448839,
+    "matchedPaths": 2448846,
+    "records": 728310,
+    "lookupOrderRecords": 335873,
+    "lookupOrderSourceRows": 533243,
+    "lookupOrderSourceSha256": "1ee01fc57332cfe71e175865efb74eadc78ec3c89a95b3575de26cd238c70228",
+    "lookupOrderSurfaces": 205716,
+    "lookupOrderClasses": 485331,
+    "lookupOrderEquivalenceClasses": 303076,
+    "lookupOrderComponents": 302297,
+    "lookupOrderCyclicComponents": 536,
+    "lookupOrderEdges": 206248,
+    "lookupOrderMaxRank": 52,
+    "lookupOrderSha256": "016dae9f069ad984e23cd495df7cb79e2e0685c54ffe011bf3b70c0ad283b122",
+    "lookupOrderExceptionSurfaces": 1494,
+    "lookupOrderExceptionClasses": 3725,
+    "lookupOrderExceptionLocators": 4123,
+    "countExceptions": 646450,
+    "physicalGroups": 169714,
+    "physicalMembers": 383470,
+    "propertyOverrides": 30730,
+    "maxMemberOrd": 5,
+    "maxViaMemberOrd": 2,
+    "maxPropOrd": 3,
+    "sha256": "8d609215c69d9a6dbae8840eea4e5d620276e978644f092e05ab6d6136232709"
+  },
+  "artifacts": {
+    "surfaceIndex": {
+      "input": 8289868,
+      "accepted": 8273074,
+      "direct": 432664,
+      "morphology": 7849804,
+      "overlap": 9394,
+      "omitted": 16794,
+      "states": 578318,
+      "edges": 952316
+    },
+    "rootPayload": {
+      "surfaces": 432664,
+      "forms": 464802,
+      "entries": 213732,
+      "restrictions": 6732
+    },
+    "morphology": {
+      "positions": 22,
+      "rules": 1161,
+      "templates": 7779,
+      "suffixes": 2568,
+      "rootKeys": 40321,
+      "rootGroups": 14491,
+      "patches": 38,
+      "tombstones": 3
+    },
+    "analyzerSupport": {
+      "suffixKeys": 5531,
+      "suffixValues": 5532,
+      "suffixClasses": 3543,
+      "counterKeys": 748,
+      "counterVariants": 787,
+      "collisions": 5430,
+      "generatedRules": 1161,
+      "generatedAliases": 1030
+    },
+    "annotations": {
+      "blocks": 827,
+      "splits": 37594,
+      "hints": 36388,
+      "generatedBlocks": 36,
+      "generatedRoots": 20115,
+      "generatedRecords": 759040,
+      "lookupOrderRecords": 335873,
+      "lookupOrderRoots": 9456,
+      "lookupOrderBytes": 1343492,
+      "lookupOrderExceptionSurfaces": 1494,
+      "lookupOrderExceptionClasses": 3725,
+      "lookupOrderExceptionLocators": 4123,
+      "lookupOrderExceptionBytes": 76517,
+      "generatedPhysicalGroups": 169714,
+      "generatedFactPairs": 77,
+      "indexBytes": 258496,
+      "uncompressedBytes": 23012698,
+      "compressedBytes": 3232807,
+      "annotationUncompressedBytes": 13676074,
+      "annotationCompressedBytes": 806873,
+      "generatedUncompressedBytes": 9336624,
+      "generatedCompressedBytes": 2425934,
+      "totalBytes": 3491312,
+      "largestUncompressedBlock": 326926,
+      "largestGeneratedBlock": 262104,
+      "largestGeneratedCompressedBlock": 77823
+    },
+    "details": {
+      "entries": 213732,
+      "forms": 480480,
+      "senses": 246494,
+      "glosses": 423974,
+      "properties": 396408
+    }
+  },
+  "artifactDigests": {
+    "surfaceIndex": {
+      "bytes": 8435880,
+      "sha256": "f880f8d9f6873cd495596084330ea408d3216b13fb4c6652bd7ec4625f91386a"
+    },
+    "rootPayload": {
+      "bytes": 8883720,
+      "sha256": "f805a3335e01e6afaabb43d907f16665dc5b643a7348d7754979c8cdd7b08d2d"
+    },
+    "morphology": {
+      "bytes": 2664344,
+      "sha256": "186e24e74168d838bebbfab2d6c5061da79f2906ff66f98f65f120b845852757"
+    },
+    "analyzerSupport": {
+      "bytes": 946872,
+      "sha256": "3777d5a6f9c35c6165e0324adb6e9e53ec24b1df3af15036e198980f8fa51d92"
+    },
+    "analyzerAnnotations": {
+      "bytes": 3491312,
+      "sha256": "ddea80b011220a310515cfd3d6a8536857a4f60d78772b8f5d47b86d0504acda"
+    },
+    "details": {
+      "bytes": 13217948,
+      "sha256": "e5598cb196abf2e70297175f1febbad352ec935cb62a7f7be497980b88cf488b"
+    },
+    "morphologyRelation": {
+      "rows": 392336,
+      "sha256": "e97c7eeea1e54145b8a8dc406c079d787049739a20aefb4d4229d2fe65b467e0",
+      "relationRows": 9045688,
+      "surfaceGroups": 7849201,
+      "exactSurfaceGroups": 7466873,
+      "legacyRelationKeys": 9045688,
+      "alphaRelationKeys": 8653352,
+      "legacyOnly": 392336,
+      "alphaOnly": 0,
+      "duplicateLegacyRows": 0,
+      "duplicateAlphaCandidates": 0,
+      "databaseArtifacts": {
+        "csrRows": 8270561,
+        "installedRouteCsrRows": 8270527,
+        "activeRouteCsrRows": 8269155,
+        "inactiveRouteCsrRows": 1372,
+        "uninstalledCsrRows": 55,
+        "dualRouteCsrRows": 21,
+        "ghostSourceRows": 18944,
+        "ghostRootSurfacePairs": 18926,
+        "multiPropertyLinks": 15331,
+        "staleRawKanaSurfaces": 55
+      }
+    }
+  }
 }

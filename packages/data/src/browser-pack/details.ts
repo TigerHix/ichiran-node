@@ -266,11 +266,6 @@ function encodeEntry(entry: DetailEntrySource): Uint8Array {
         if (
           tagOrder > 0
           || (tagOrder === 0 && previousProperty.ord > property.ord)
-          || (
-            tagOrder === 0
-            && previousProperty.ord === property.ord
-            && compareText(previousProperty.text, property.text) > 0
-          )
         ) {
           throw new DetailStoreEncodingError(`Entry ${entry.seq} properties are not ordered`);
         }
@@ -501,12 +496,15 @@ export async function loadDetailEntries(sql: postgres.Sql): Promise<DetailEntryS
       ORDER BY s.seq, s.ord, g.ord
     `),
     sql.unsafe<PropertyRow[]>(`
+      -- Core orders properties by sense/tag/ordinal. PostgreSQL returns equal-
+      -- ordinal rows in their physical insertion order on the pinned snapshot;
+      -- the stable id tie-break preserves that observable legacy order.
       SELECT sp.sense_id AS "senseId", sp.tag, sp.ord, sp.text
       FROM sense_prop sp
       JOIN sense s ON s.id = sp.sense_id
       JOIN entry e ON e.seq = s.seq
       WHERE e.root_p = TRUE
-      ORDER BY s.seq, s.ord, sp.tag COLLATE "C", sp.ord, sp.text COLLATE "C"
+      ORDER BY s.seq, s.ord, sp.tag COLLATE "C", sp.ord, sp.id
     `)
   ]);
 

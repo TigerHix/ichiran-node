@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "lib": ["ES2022", "WebWorker"],
+    "types": []
+  },
+  "include": [
+    "src/analyzer.worker.ts",
+    "src/protocol.ts",
+    "src/worker/**/*.ts"
+  ],
+  "exclude": ["tests", "dist"]
+}

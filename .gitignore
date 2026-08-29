@@ -4,9 +4,17 @@ dist/
 .env
 .DS_Store
 tmp/
+work/
 *.pgdump
 *.sql.gz
 tsconfig.tsbuildinfo
+target/
+*.bin
+*.bin.gz
+*.bin.br
+packages/browser-demo/public/analyzer/
+packages/browser-demo/test-results/
+packages/browser-demo/playwright-report/
 
 # Deployment and config files
 CLAUDE.md

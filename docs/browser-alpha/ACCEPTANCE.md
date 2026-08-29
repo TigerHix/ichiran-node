@@ -1,8 +1,9 @@
 # Browser Analyzer Alpha: parity and acceptance contract
 
-Status: proposed implementation contract, 2026-08-28
-Frozen implementation oracle: `work/ichiran-node` `main` at
-`ba1966a0699e4aec9b5cfe2f18b448c21adcc590`
+Status: strict dev-pack parity, size, offline, and calibrated browser qualification
+passed; clean final release pending, 2026-08-29
+Frozen implementation oracle: `ichiran-node` at
+`d583720572fbf26ee201166ac47034c50380a571`
 Scope: analyzer only. The experimental `@ichiran/grammar` package and a general
 Kanjidic character API are excluded.
 
@@ -56,7 +57,8 @@ Semantic candidate key:
 
 ```text
 route, surface, rootSeq, sourceForm, sourceReading,
-ordered (pos, conjType, negative, formal, ruleOrdinal) path
+ordered (pos, conjType, negative, formal, ruleOrdinal) path,
+ordered recursive component semantic keys
 ```
 
 ## 3. Existing fixture oracle
@@ -76,19 +78,20 @@ The copies under `packages/core/tests/data` and `packages/cli/tests/data` curren
 have identical hashes. The CLI copies are canonical for full-output fixtures; the
 core copy is canonical for segmentation.
 
-Additional current tests to port to the portable kernel:
+The complete differential corpus additionally includes:
 
 - 200 counter combinations in `packages/core/tests/counters.test.ts`;
 - 54 entity-hint cases in `packages/core/tests/entity-hints.test.ts`;
 - 17 presentation round trips in `packages/core/tests/json-consistency.test.ts`;
 - six number cases and one numeric `basicSplit` case;
-- the conjugation tombstone/special-form assertions replacing the current
-  database-row-only conjugation test.
+- conjugation tombstone/special-form assertions alongside the database-backed
+  conjugation checks.
 
 The 13 standalone `matchReadings` tests do not make the general Kanjidic API part of
 the browser product. Instead, the compiler records the resolved hinted-kana output
-for every root reading reached by the 420 `defEasyHint` registrations in
-`packages/core/src/dict/splitDefinitions.ts`; those outputs compare exactly.
+for every root reading reached by the 420 `defEasyHint` registrations (645
+registered definition sequences) in `packages/core/src/dict/splitDefinitions.ts`;
+the 36,388 resolved outputs compare exactly.
 
 Existing PostgreSQL baseline commands, run from the frozen repository with a valid
 `ICHIRAN_DB_URL`:
@@ -128,14 +131,16 @@ than perpetuating skips in the browser suite.
 
 ## 4. Source and database snapshot
 
-Every artifact manifest points to a committed `sources.lock.json`. The compiler
-refuses a dirty source checkout or a source/oracle hash mismatch. The lock contains:
+Every artifact manifest points to the digest of committed
+`browser-alpha/sources.lock.json`. The compiler refuses a dirty source checkout or a
+source/oracle mismatch. The lock contains:
 
-- repository commit and clean tree state;
+- frozen oracle repository commit;
 - Bun, Node, PostgreSQL server, compiler format, and binary format versions;
 - SHA-256 and byte size of every raw source file;
-- hashes/counts of canonical PostgreSQL projections;
-- hashes of the current semantic output golden and intentional-diff files.
+- hashes/counts of canonical PostgreSQL projections and generated physical-member
+  projection;
+- exact artifact counts/digests and the reviewed morphology relation attestation.
 
 Raw inputs currently available and frozen:
 
@@ -152,6 +157,14 @@ Raw inputs currently available and frozen:
 Code-defined errata, suffixes, counters, split rules, hints, scoring, penalties, and
 synergies are locked by the clean repository commit. They must not be treated as
 unversioned configuration.
+
+The checkpoint is the original `ba1966a` analyzer plus two reviewed changes: a
+build-only connection override that lets the compiler reuse its read-only transaction,
+and an easy-hint repair that passes the regex capture string (`match[0]`) to
+`translateHints` instead of the match tuple. The full core baseline at this checkpoint
+is 824 passes, the same two historical JMdict-version skips, and zero failures. Release
+and differential tools prove that the complete `packages/core` tree still equals this
+ancestor commit; `--allow-dirty` does not bypass that oracle check.
 
 The current oracle is PostgreSQL 16.15, database `ichiran_test`, UTF-8,
 `C.UTF-8` collation. It has no build-metadata table, so normalized projections—not
@@ -170,7 +183,21 @@ Required logical projections:
 5. all 8,270,527 installed lookup-row/path matches, canonicalized to root and
    ordered rule tuples;
 6. compiled logical suffix and counter caches;
-7. resolved output of all analyzer reading hints.
+7. resolved output of all analyzer reading hints; and
+8. exact generated target count exceptions and physical member/property/via
+   multiplicity keyed by canonical root plus semantic rule aliases;
+9. the semantic order of directly reachable root forms on ambiguous surfaces.
+   This last relation freezes the current core's unordered PostgreSQL lookup
+   followed by per-row `unshift`: the compiler observes heap-tuple-descending
+   order on the pinned snapshot, immediately converts it to dense per-surface
+   ranks, and never emits or hashes CTIDs or surrogate text-row IDs; and
+10. the equivalent physical order relation for mixed direct/generated analyzer
+    surfaces, normalized to `(route,surface,physicalRank,rootSeq,ruleAliases)`.
+    The compiler hashes that complete semantic source relation, unions locators
+    that share a physical target, condenses its global precedence graph, and
+    stores exact local ranks only for surfaces whose order cannot be represented
+    by the acyclic global levels. CTIDs and generated target sequences remain
+    transient build joins and are absent from both digests and artifacts.
 
 Useful current projection checks:
 
@@ -184,16 +211,13 @@ Useful current projection checks:
 | restricted readings | 6,732 | `700b35f550fb5e15bb9f8ba5401c61777343afae5e3e0b9092a5fe54cb43b093` |
 | non-name Kanjidic `(character,reading,type)` | 35,542 | `0bea1400b8c60ec3949a20f6d7c1e11264c96e1216a32ace3722a837e3f6e8d7` |
 
-The snapshot command to add to the repository is:
-
-```bash
-bun run alpha:oracle:snapshot -- \
-  --database "$ICHIRAN_DB_URL" \
-  --out browser-alpha/oracle/snapshot
-```
-
-It writes the lock, canonical projection hashes/counts, and canonical current-output
-goldens. It performs no database writes.
+There is no separate `alpha:oracle:snapshot` command. The supported release build opens
+one repeatable-read, read-only transaction, recomputes the locked projections, and
+refuses mismatches. This includes streaming all morphology relation differences from
+the exact compiled section into a measured count and SHA-256; `stats.json` records
+that measurement rather than copying it from the lock. A deliberate snapshot update is a reviewed edit to
+`browser-alpha/sources.lock.json` followed by the full release, exhaustive morphology,
+and end-to-end parity jobs.
 
 ## 5. Exhaustive parity gates
 
@@ -205,21 +229,26 @@ All gates operate on semantic keys, never generated IDs.
 - Every scoring-critical field and all 6,732 restriction rows equal the root
   projections.
 - All 246,494 senses, 423,974 glosses, and 396,408 sense properties decode exactly.
-- The route-aware scanner accepts exactly the same endpoints as current lookup.
-  Current reference counts are 448,323 direct keys, 7,850,940 morphology keys,
-  9,395 overlapping keys, and 8,289,868 keys in their union.
+- The route-aware scanner accepts exactly the same runtime-active endpoints as
+  current lookup: 432,664 direct keys, 7,849,804 morphology keys, 9,394
+  overlapping keys, and 8,273,074 keys in their union. The compiler also accounts
+  for all 8,289,868 physical text-table strings, including 16,794 inactive rows.
 - Suffix output has 5,531 keys and 3,543 sequence/class mappings; counters have 748
   keys and 787 variants, with exact logical equality, not only equal counts.
-- All 420 easy-hint definitions produce the recorded final hinted-kana output without
-  a runtime Kanjidic table.
+- All 420 easy-hint registrations (645 definition sequences and 36,388 applicable
+  root-reading outputs) produce the recorded final hinted-kana output without a
+  runtime Kanjidic table.
+- Every selected generated exception round-trips its count fact and every physical
+  member/property row in stable order. Two-stage members bind to the exact intermediate
+  `viaMemberOrd`; count-only exceptions decode with no fabricated member.
 
 ### 5.2 Morphology relation
 
 Run reverse morphology against every one of the 8,270,527 installed route/form/path
 matches. For each candidate compare route, surface, root, source form/reading,
 ordered one- or two-stage properties, inherited ord/common facts, and exact forward
-equality. Compare sorted semantic diff JSONL byte-for-byte with the intentional
-allowlist. An unexpected diff or a stale allowlist row fails.
+equality. Compare sorted semantic diff JSONL byte-for-byte with the frozen relation
+attestation. An unexpected diff or a stale attestation row fails.
 
 Known classes that must be enumerated, not matched by a broad predicate:
 
@@ -244,63 +273,61 @@ Run both APIs against the complete frozen corpus:
 - top-1, the checked top-3/top-5 cases, all entity fixtures, counters, numbers, and
   every recorded hinted reading.
 
-Canonical output must be byte-identical to the frozen current oracle except exact
-requests listed in the output-diff allowlist. A winning segmentation or any score
-change is forbidden unless that exact request has reviewed legacy and alpha result
-hashes and a dedicated regression fixture.
+Canonical output must be byte-identical to the frozen current oracle. The alpha has
+no output-difference allowlist: any segmentation, score, normalized identity, clean
+result, or detailed legacy result difference fails the release gate.
 
-Proposed commands:
+Supported release and end-to-end commands:
 
 ```bash
-bun run alpha:compile -- \
-  --snapshot browser-alpha/oracle/snapshot \
-  --out dist/browser-alpha
+bun run alpha:release:build -- \
+  --database "$ICHIRAN_DB_URL" \
+  --out dist/browser-alpha \
+  --pack-version alpha.1 \
+  --shell-bytes <measured-production-shell-bytes>
 
-bun run alpha:verify:data -- \
-  --snapshot browser-alpha/oracle/snapshot \
-  --manifest dist/browser-alpha/manifest.json
+bun packages/portable/tools/oracle-parity.ts \
+  --repository "$PWD" \
+  --release dist/browser-alpha \
+  --database "$ICHIRAN_DB_URL" \
+  --out work/oracle-full-final.json
 
-bun run alpha:verify:morphology -- \
-  --snapshot browser-alpha/oracle/snapshot \
-  --allow browser-alpha/oracle/intentional-morphology-diffs.jsonl
-
-bun run alpha:verify:outputs -- \
-  --snapshot browser-alpha/oracle/snapshot \
-  --allow browser-alpha/oracle/intentional-output-diffs.jsonl
+bun run alpha:release:verify -- \
+  --out dist/browser-alpha \
+  --shell-bytes <the-same-measured-byte-count>
 ```
 
-## 6. Intentional-difference format
+`oracle-parity.ts` runs the full corpus by default and exits non-zero on any current
+difference. `--smoke` is for development only; `--allow-failures` is diagnostic and is
+never an acceptance command. `alpha:release:build` itself performs the exhaustive
+morphology gate in the build's read-only snapshot. The equivalent standalone
+reproduction command is documented in `MORPHOLOGY.md`.
 
-Allowlisting is proof data, not runtime policy. Runtime patches/tombstones remain
-small explicit compiler inputs. The allowlist contains no regex, range, glob, SQL
-predicate, or “ignore field” switch.
+## 6. Morphology relation-attestation format
+
+The morphology relation diff is build proof, not runtime policy and not permission
+for an analyzer-output difference. Runtime patches/tombstones remain small explicit
+compiler inputs. The attestation contains no regex, range, glob, SQL predicate, or
+“ignore field” switch.
 
 Each morphology JSONL row is canonical JSON with this shape:
 
 ```json
-{"alpha":null,"change":"remove-candidate","key":{"path":[{"formal":false,"negative":false,"pos":"v1","ruleOrdinal":0,"type":5}],"rootSeq":123,"route":"kana","sourceForm":"...","sourceReading":"...","surface":"..."},"legacy":{"common":null,"ord":0},"reason":"ghost-secondary-reading"}
+{"route":"kana","surface":"...","side":"legacy-only","key":"[123,\"source\",\"form\",\"reading\",null,[[\"v1\",5,false,false]],0,null]"}
 ```
 
-`change` is one of `remove-candidate`, `add-candidate`, `remove-property`,
-`repair-lineage`, or `change-score-fact`. `legacy` and `alpha` contain the exact
-changed semantic fields. Repeated `reason` values are allowed, but every semantic
-key is a separate row.
-
-Each end-to-end output JSONL row is exact-request scoped:
-
-```json
-{"alphaResultSha256":"...","legacyResultSha256":"...","reason":"remove-ghost-secondary-reading","request":{"entities":[],"limit":1,"op":"analyze","text":"..."}}
-```
-
-The alpha result itself is a normal golden fixture. CI requires:
-
-- actual diff keys equal allowlisted keys exactly;
-- actual before/after values or hashes equal the row exactly;
-- no duplicate rows and no unused/stale rows;
-- each output diff has a dedicated named regression test.
+`key` is the canonical tuple of root sequence, source text/form/reading, optional
+intermediate, ordered semantic property path, inherited ordinal, and commonness.
+`side` is `legacy-only` or `alpha-only`. Every semantic key is a separate row; the
+release gate requires zero alpha-only rows and locks the complete emitted JSONL by
+count and SHA-256. The reviewed reason classes in `MORPHOLOGY.md` describe this exact
+set but are not executable predicates. The release compiler independently recomputes
+and checks the row count, digest, all relation totals, and database-artifact totals
+from the exact compiled morphology bytes. End-to-end output has a separate strict
+gate with zero allowed differences.
 
 Generated-`seq` replacement is performed by canonicalization and documented as a
-global API change; it is not repeated as millions of allowlist rows.
+global API change; it is not an analyzer result difference.
 
 ## 7. Artifact contract and hard size gates
 
@@ -357,39 +384,50 @@ Report-only diagnostic groups:
 ## 9. Performance procedure and gates
 
 Benchmark the production PWA through its public Worker RPC, not a Node reader or an
-internal function. Use pinned Playwright Chromium and CDP
-`Emulation.setCPUThrottlingRate` with rate 6. The run records browser revision, OS,
-CPU model, repository/artifact hashes, and raw sample timings.
+internal function. Page-target CDP throttling is not an acceptable proxy because it
+does not throttle the dedicated analyzer Worker. Pin the complete Playwright/Chromium
+process group and five CPU-contention peers to one Linux CPU instead. Calibrate the
+exact `ichiran-analyzer` Worker target immediately before the measured run and require
+its contended-to-baseline median ratio to be 5.0-7.5. The run records the calibration
+samples, browser revision, OS, CPU model, CPU affinity, repository/artifact hashes, and
+raw analyzer timings.
 
 Procedure:
 
 1. Install the complete pack, close the page, reopen it offline, and await Worker
    readiness.
-2. Call compact `analyze(text, {limit: 1})`; do not hydrate gloss details.
-3. Disable only the whole-result memo/cache in benchmark mode. Dictionary/index and
-   JIT state remain warm.
-4. Make two unmeasured shuffled passes over each corpus, then ten measured passes
-   using a fixed seed. Include `postMessage`, Worker computation, and response clone
-   in each duration; exclude UI result rendering.
+2. Call clean `analyze(text, {limit: 1})`; do not call `describe` or hydrate gloss
+   details.
+3. Do not add a whole-result memo/cache for the benchmark. Packed indexes and JIT state
+   remain warm after the two warmup passes.
+4. Start the five same-affinity contention peers only after the Worker calibration
+   baseline. Make two unmeasured shuffled passes over each corpus, then ten measured
+   passes using a fixed seed. Include `postMessage`, Worker computation, and response
+   clone in each duration; exclude UI result rendering.
 5. Compute p95 by nearest rank over all per-request samples and retain each raw
    sample in the report.
 
 Hard gates on the designated reference desktop:
 
-- ordinary top-1 p95 at 6x throttle: **at most 75 ms**;
-- pathological-morphology top-1 p95 at 6x throttle: **at most 250 ms**;
-- zero main-thread `longtask` entries over 50 ms during the RPC-only measured
-  windows, and no analyzer-kernel import in the window bundle.
+- ordinary top-1 p95 at the calibrated 6x proxy: **at most 75 ms**;
+- pathological-morphology top-1 p95 at the calibrated 6x proxy: **at most 250 ms**;
+- zero main-thread `longtask` entries over 50 ms during ordinary analyzer UI work,
+  and no analyzer-kernel import in the window bundle.
 
 Performance gates say nothing about whether the kernel is JS or WASM. Top-N,
 `describe`, initial install, Worker startup, and peak browser memory are reported but
 not assigned an unagreed alpha threshold.
 
-CPU throttling is a multiplier, not a hardware normalization. The first accepted
-benchmark must designate and record the reference workstation/runner; subsequent
-hard comparisons use that same runner class and pinned browser revision.
+The calibrated contention ratio is a multiplier, not a hardware normalization. The
+first accepted benchmark must designate and record the reference workstation/runner;
+subsequent hard comparisons use that same runner class and pinned browser revision.
 
 ## 10. Offline/PWA functional gates
+
+The supported browser floor is Safari 26+ or current Chromium. Required runtime
+capabilities are Worker, OPFS, Web Locks,
+`FileSystemFileHandle.createWritable()`, and `DecompressionStream`; the offline app
+shell uses a Service Worker.
 
 Automated browser tests must prove:
 
@@ -406,21 +444,52 @@ Automated browser tests must prove:
 No update scheduler, delta update, background migration, Komi/Nemu integration, or
 production hosting is required for this alpha.
 
-## 11. Remaining blockers before the contract can pass
+## 11. Qualification status and known provenance limit
 
-1. The exhaustive 8.27-million-path reverse differential does not exist yet. The
-   current reverse prototype is sampled; implementing this verifier is a correctness
-   prerequisite, not optional follow-up optimization.
-2. The clean checkout does not contain the Kanjidic2 source file used to build the
-   current database. The alpha can freeze the resolved 420 hint outputs and the
-   normalized non-name reading projection above, but a from-scratch source-only
-   rebuild later needs the original XML and its hash.
-3. The current database has no provenance metadata proving which raw files built it.
-   The normalized projection lock is therefore authoritative for alpha.
-4. The existing CLI fixture normalizer sorts alternatives by generated `seq`; it
-   cannot be reused. The semantic canonicalizer in this contract must be implemented.
-5. A fixed reference benchmark runner and pinned Playwright Chromium revision have
-   not yet been named. Until they are, latency results are informative but cannot be
-   a stable cross-machine CI gate.
-6. Actual iPhone 13 and iPhone 17 Pro Max measurements are deliberately deferred.
-   Passing this alpha is a conservative desktop proxy, not production mobile signoff.
+Implementation prerequisites that were previously missing now exist: the exhaustive
+morphology verifier, semantic parity canonicalizer, portable analyzer integration,
+physical-member overlay, OPFS PWA, and production Worker benchmark harness.
+
+The current `alpha.1-dev` qualification pack passes all three size gates with a 607,732
+byte production shell: 24,422,280 hot bytes, 38,249,770 persisted bytes, and 25,055,731
+wire bytes. Its full strict PostgreSQL run is 1,241 / 1,241 exact comparisons with zero
+path, analyzer, presentation, or error differences; `currentOracleAllowlist` is empty.
+The 392,336 morphology-relation rows are a separately hashed historical database
+artifact attestation, not allowed output differences.
+
+The production offline Playwright suite passes 5 / 5 tests against that dev pack.
+Chrome 151.0.7922.34 ran on an AMD Ryzen 9 9950X pinned to CPU 31 with five
+same-affinity contention peers. Exact-Worker calibration measured 58.8 ms baseline and
+360.7 ms contended medians, a 6.134353741858198x ratio. After two warmup passes and ten
+measured passes, the hard-gated results were:
+
+| Corpus | Samples | p50 | p95 | max | Gate |
+|---|---:|---:|---:|---:|---:|
+| ordinary | 990 | 25.5 ms | 50.8 ms | 128.3 ms | <= 75 ms |
+| pathological morphology | 500 | 51.4 ms | 118.9 ms | 185.6 ms | <= 250 ms |
+
+Worker ready time was 342.9 ms, first analysis was 65.3 ms, and the main-thread
+long-task list was empty. The suite also proved restart with networking blocked,
+complete offline analysis and details, no analyzer HTTP traffic, integrity and
+interrupted-install handling, Worker isolation, cross-tab mutation locking, and the
+required responsive layouts. `work/browser-benchmark.json` retains raw samples and
+environment metadata.
+
+The contract still requires final evidence tied to one clean accepted build:
+
+1. commit the implementation and build/verify the clean deterministic `alpha.1`
+   release under the same three size gates;
+2. rerun `oracle-parity.ts` against that exact final release and retain its complete
+   report;
+3. stage that exact release and reproduce the already-passing production offline
+   Playwright flow under the calibrated Worker-contention procedure; and
+4. record the final artifact identity and browser timings from those artifacts rather
+   than treating the development pack as the release of record.
+
+The current database still has no provenance metadata proving which raw files built it,
+and the clean checkout does not contain the original Kanjidic2 XML. The normalized
+projection lock is therefore authoritative for this alpha. A future source-only
+rebuild must add and hash that XML; this does not require shipping Kanjidic at runtime.
+
+Actual iPhone 13 and iPhone 17 Pro Max measurements remain deliberately deferred.
+Passing this alpha is a conservative desktop proxy, not production mobile signoff.

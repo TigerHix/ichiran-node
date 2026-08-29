@@ -37,6 +37,8 @@ export interface AnalyzerReleaseSizeReport {
   readonly persistedBytes: number;
   readonly wireBytes: number;
   readonly shellBytes: number;
+  readonly cachedManifestBytes: number;
+  readonly installedMarkerBytes: number;
 }
 
 function sha256(bytes: Uint8Array): string {
@@ -154,16 +156,31 @@ export function assertAnalyzerReleaseSize(
   if (!Number.isSafeInteger(shellBytes) || shellBytes < 0) {
     throw new Error('Shell size must be a non-negative integer');
   }
+  // measure-shell deliberately excludes analyzer/*. The Service Worker caches
+  // manifest.json alongside that shell, and OPFS stores one compact copy inside
+  // install.json. Count both so persistedBytes describes every installed payload.
+  const cachedManifestBytes = build.manifestBytes.byteLength;
+  const installedMarkerBytes = new TextEncoder().encode(JSON.stringify({
+    state: 'ready',
+    manifest: build.manifest,
+    installedAt: '1970-01-01T00:00:00.000Z'
+  })).byteLength;
   const report = {
     hotBytes: build.manifest.hot.installedBytes,
     persistedBytes:
-      build.manifest.hot.installedBytes + build.manifest.details.installedBytes + shellBytes,
+      build.manifest.hot.installedBytes
+      + build.manifest.details.installedBytes
+      + shellBytes
+      + cachedManifestBytes
+      + installedMarkerBytes,
     wireBytes:
       build.hotDownload.byteLength
       + build.detailsDownload.byteLength
       + build.manifestBytes.byteLength
       + shellBytes,
-    shellBytes
+    shellBytes,
+    cachedManifestBytes,
+    installedMarkerBytes
   };
   if (report.hotBytes > ANALYZER_HOT_MAX_BYTES) {
     throw new Error(`hot.bin is ${report.hotBytes} bytes; limit is ${ANALYZER_HOT_MAX_BYTES}`);

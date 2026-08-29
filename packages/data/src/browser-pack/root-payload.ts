@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import type postgres from 'postgres';
 
 // Keep these physical constants synchronized with
@@ -90,6 +91,12 @@ export interface RootPayloadFormSource {
   readonly surface: string;
   readonly route: RootPayloadRoute;
   readonly seq: number;
+  /**
+   * Dense semantic order reproducing legacy bulk lookup's unordered physical
+   * scan followed by `unshift`. The compiler derives it from the pinned
+   * database, but neither physical tuple IDs nor surrogate row IDs leave SQL.
+   */
+  readonly lookupOrder?: number;
   readonly ord: number;
   readonly common: number | null;
   readonly commonTags: string;
@@ -111,6 +118,13 @@ export interface RootPayloadSource {
 }
 
 export interface RootPayloadBuildStats {
+  readonly directOrderProjection: {
+    /** Every directly reachable root form, including singleton surfaces. */
+    readonly rows: number;
+    readonly surfaces: number;
+    /** SHA-256 of ordered semantic `(route,surface,rank,rootSeq)` tuples. */
+    readonly sha256: string;
+  };
   readonly counts: {
     readonly surfaces: number;
     readonly forms: number;
@@ -164,6 +178,12 @@ interface PosQueryRow {
 }
 
 interface FormQueryRow extends RootPayloadFormSource {}
+
+interface LegacyFormOrderRow {
+  surface: string;
+  route: RootPayloadRoute;
+  seq: number;
+}
 
 interface RestrictionQueryRow {
   seq: number;
@@ -337,6 +357,10 @@ export async function loadRootPayloadSource(sql: postgres.Sql): Promise<RootPayl
         SELECT kt.text AS surface,
                'kanji'::text AS route,
                kt.seq,
+               (ROW_NUMBER() OVER (
+                 PARTITION BY kt.text
+                 ORDER BY kt.ctid DESC
+               ) - 1)::integer AS "lookupOrder",
                kt.ord,
                kt.common,
                COALESCE(kt.common_tags, '') AS "commonTags",
@@ -353,6 +377,10 @@ export async function loadRootPayloadSource(sql: postgres.Sql): Promise<RootPayl
         SELECT rt.text AS surface,
                'kana'::text AS route,
                rt.seq,
+               (ROW_NUMBER() OVER (
+                 PARTITION BY rt.text
+                 ORDER BY rt.ctid DESC
+               ) - 1)::integer AS "lookupOrder",
                rt.ord,
                rt.common,
                COALESCE(rt.common_tags, '') AS "commonTags",
@@ -364,7 +392,7 @@ export async function loadRootPayloadSource(sql: postgres.Sql): Promise<RootPayl
         WHERE e.root_p = TRUE
           AND rt.text ~ '^[ァ-ヺヽヾーぁ-ゔゝゞ]+$'
       ) forms
-      ORDER BY surface COLLATE "C", route, seq, ord
+      ORDER BY surface COLLATE "C", route, "lookupOrder"
     `),
     sql.unsafe<RestrictionQueryRow[]>(`
       SELECT rr.seq, rr.reading, rr.text AS written
@@ -374,6 +402,79 @@ export async function loadRootPayloadSource(sql: postgres.Sql): Promise<RootPayl
       ORDER BY rr.seq, rr.reading COLLATE "C", rr.text COLLATE "C"
     `)
   ]);
+
+  const requestedKanjiSurfaces: string[] = [];
+  const requestedKanaSurfaces: string[] = [];
+  let requestedSurface: string | undefined;
+  for (const form of formRows) {
+    if (form.surface === requestedSurface) continue;
+    (form.route === 'kana' ? requestedKanaSurfaces : requestedKanjiSurfaces).push(form.surface);
+    requestedSurface = form.surface;
+  }
+
+  // Production proof for the otherwise-observable unordered-query behavior in
+  // core findSubstringWords(). OFFSET 0 keeps one parameterized text-index
+  // scan per requested surface, matching core's no-ORDER-BY lookup. PostgreSQL
+  // visits equal index keys by ascending heap tuple, and core's `unshift`
+  // reverses that stream. Only route/surface/root seq leave SQL; CTID is used
+  // solely by the canonical projection above and is never emitted or hashed.
+  const legacyFormRows = await sql.unsafe<LegacyFormOrderRow[]>(`
+    SELECT requested.surface, 'kanji'::text AS route, found.seq
+    FROM unnest($1::text[]) requested(surface)
+    CROSS JOIN LATERAL (
+      SELECT kt.seq
+      FROM kanji_text kt
+      JOIN entry e USING (seq)
+      WHERE kt.text = requested.surface AND e.root_p = TRUE
+      OFFSET 0
+    ) found
+
+    UNION ALL
+
+    SELECT requested.surface, 'kana'::text AS route, found.seq
+    FROM unnest($2::text[]) requested(surface)
+    CROSS JOIN LATERAL (
+      SELECT rt.seq
+      FROM kana_text rt
+      JOIN entry e USING (seq)
+      WHERE rt.text = requested.surface AND e.root_p = TRUE
+      OFFSET 0
+    ) found
+  `, [requestedKanjiSurfaces, requestedKanaSurfaces]);
+  const legacyOrder = new Map<string, number[]>();
+  for (const row of legacyFormRows) {
+    const key = `${row.route}\u0000${row.surface}`;
+    const values = legacyOrder.get(key) ?? [];
+    values.unshift(row.seq);
+    legacyOrder.set(key, values);
+  }
+  if (legacyFormRows.length !== formRows.length) {
+    throw new RootPayloadEncodingError(
+      `Legacy direct-order proof covered ${legacyFormRows.length} of ${formRows.length} forms`
+    );
+  }
+  let proofIndex = 0;
+  while (proofIndex < formRows.length) {
+    const first = formRows[proofIndex]!;
+    let proofEnd = proofIndex + 1;
+    while (proofEnd < formRows.length && formRows[proofEnd]!.surface === first.surface) proofEnd++;
+    const projected = formRows.slice(proofIndex, proofEnd).map(form => form.seq);
+    const observed = legacyOrder.get(`${first.route}\u0000${first.surface}`);
+    if (
+      observed === undefined
+      || observed.length !== projected.length
+      || observed.some((seq, index) => seq !== projected[index])
+    ) {
+      throw new RootPayloadEncodingError(
+        `Legacy direct-order proof differs for ${JSON.stringify(first.surface)}`
+      );
+    }
+    legacyOrder.delete(`${first.route}\u0000${first.surface}`);
+    proofIndex = proofEnd;
+  }
+  if (legacyOrder.size !== 0) {
+    throw new RootPayloadEncodingError('Legacy direct-order proof contains unprojected forms');
+  }
 
   const entries: RootPayloadEntrySource[] = [];
   let posIndex = 0;
@@ -428,12 +529,43 @@ export function buildRootPayload(source: RootPayloadSource): RootPayloadBuild {
 
   const formSurfaceValues = source.forms.map((form) => form.surface);
   const compareSurface = makeTextComparator(formSurfaceValues);
+  const hasLookupOrder = source.forms.some(form => form.lookupOrder !== undefined);
+  if (hasLookupOrder && source.forms.some(form => form.lookupOrder === undefined)) {
+    throw new RootPayloadEncodingError('Root forms mix physical and synthetic lookup order');
+  }
   const forms = [...source.forms].sort((left, right) =>
     compareSurface(left.surface, right.surface)
     || (left.route < right.route ? -1 : left.route > right.route ? 1 : 0)
-    || left.seq - right.seq
-    || left.ord - right.ord
+    || (hasLookupOrder
+      ? left.lookupOrder! - right.lookupOrder!
+      : left.seq - right.seq || left.ord - right.ord)
   );
+
+  const directOrderProjection = createHash('sha256');
+  let directOrderRows = 0;
+  let directOrderSurfaces = 0;
+  for (let start = 0; start < forms.length;) {
+    let end = start + 1;
+    while (end < forms.length && forms[end]!.surface === forms[start]!.surface) end++;
+    directOrderSurfaces++;
+    for (let index = start; index < end; index++) {
+      const form = forms[index]!;
+      const order = index - start;
+      if (hasLookupOrder && form.lookupOrder !== order) {
+        throw new RootPayloadEncodingError(
+          `Direct form order for ${JSON.stringify(form.surface)} is not dense at ${order}`
+        );
+      }
+      directOrderProjection.update(`${JSON.stringify([
+        form.route,
+        form.surface,
+        order,
+        form.seq
+      ])}\n`);
+      directOrderRows++;
+    }
+    start = end;
+  }
 
   const surfaceRanks = new Map<string, number>();
   let previousSurface: string | undefined;
@@ -452,6 +584,7 @@ export function buildRootPayload(source: RootPayloadSource): RootPayloadBuild {
     if (!entryIndex.has(form.seq)) {
       throw new RootPayloadEncodingError(`Form ${JSON.stringify(form.surface)} has no root entry ${form.seq}`);
     }
+    if (form.lookupOrder !== undefined) checkedUint32(form.lookupOrder, 'Form lookup order');
     if (!Number.isSafeInteger(form.ord) || form.ord < 0 || form.ord > 0x7f) {
       throw new RootPayloadEncodingError(`Form ordinal ${form.ord} must fit seven bits`);
     }
@@ -719,6 +852,11 @@ export function buildRootPayload(source: RootPayloadSource): RootPayloadBuild {
   return {
     bytes: output,
     stats: {
+      directOrderProjection: {
+        rows: directOrderRows,
+        surfaces: directOrderSurfaces,
+        sha256: directOrderProjection.digest('hex')
+      },
       counts: {
         surfaces: surfaceRanks.size,
         forms: forms.length,

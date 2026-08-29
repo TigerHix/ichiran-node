@@ -1,0 +1,34 @@
+{
+  "name": "@ichiran/browser-demo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun run --cwd ../portable build && vite build && bun scripts/finalize-sw.ts && bun scripts/audit-build.ts",
+    "stage:analyzer": "bun scripts/stage-analyzer.ts",
+    "measure:shell": "bun scripts/measure-shell.ts",
+    "audit:build": "bun scripts/audit-build.ts",
+    "audit:release": "bun scripts/audit-build.ts --require-analyzer",
+    "qualify": "bun scripts/qualify.ts",
+    "dev": "vite",
+    "preview": "vite preview",
+    "test:e2e": "bun scripts/run-e2e.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.worker.json && tsc --noEmit -p tsconfig.tools.json",
+    "test": "bun test tests/"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.8",
+    "@ichiran/portable": "workspace:*",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.1.1",
+    "playwright": "1.62.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.4"
+  },
+  "sideEffects": false
+}
