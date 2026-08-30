@@ -43,9 +43,9 @@ export interface AnalyzerParityCorpus {
   readonly counters: readonly AnalyzerFixtureRequest[];
   readonly entities: readonly AnalyzerEntityFixture[];
   readonly probes: readonly AnalyzerProbeFixture[];
-  readonly historicalCli: Readonly<Record<string, string>>;
-  readonly historicalHard: Readonly<Record<string, string>>;
-  readonly historicalRomanization: Readonly<Record<string, string>>;
+  readonly currentLispCli: Readonly<Record<string, string>>;
+  readonly currentLispHard: Readonly<Record<string, string>>;
+  readonly currentLispRomanization: Readonly<Record<string, string>>;
 }
 
 const FIXTURES = Object.freeze({
@@ -55,10 +55,14 @@ const FIXTURES = Object.freeze({
     'bc611dcf11e4b271ca2775a58f8c6615130fa2d42782cc1a679fb34eb8d73f5a',
   'packages/cli/tests/data/cli-lisp-outputs.json':
     'a092f07a2b7337c3a790b0d93808213adf2e89eef1750aeaed54160b90856bb8',
+  'packages/cli/tests/data/cli-canonical-outputs.json':
+    'd9ef666af3be61c8bf9987f84a7efa9728b21566a98b6cca63d1d83463868080',
   'packages/cli/tests/data/hard-cli.json':
     '5e8a910314843a25c4bf2dd4663db0211fecc31a031b38c88c9880780115be69',
   'packages/cli/tests/data/hard-cli-lisp-outputs.json':
-    'd82f5d5e9ef3b858209ea63a1ea5b448c6460e4ea0fddfc6b811ebb7c3756a85'
+    'd82f5d5e9ef3b858209ea63a1ea5b448c6460e4ea0fddfc6b811ebb7c3756a85',
+  'packages/cli/tests/data/hard-cli-canonical-outputs.json':
+    '235d873cae56cde282feccef577b7b6314b69a2bc4197016167f9e0fe609a7d1'
 });
 
 const COUNTERS = Object.freeze([
@@ -266,6 +270,79 @@ interface HistoricalOutputFile {
   readonly fullJson: Readonly<Record<string, string>>;
 }
 
+interface CanonicalOutputFile {
+  readonly formatVersion: number;
+  readonly identityPolicy: string;
+  readonly source: {
+    readonly path: string;
+    readonly sha256: string;
+  };
+  readonly oracle: {
+    readonly sourcesLockSha256: string;
+    readonly upstreamIchiranCommit: string;
+    readonly dataReleaseTag: string;
+    readonly postgresReferenceCommit: string;
+    readonly databaseDumpSha256: string;
+    readonly databaseSchemaSha256: string;
+  };
+  readonly stats: {
+    readonly requests: number;
+    readonly rewrittenSeqFields: number;
+    readonly multipleRootIdentityKeys: number;
+    readonly outputsSha256: string;
+  };
+  readonly fullJson: Readonly<Record<string, string>>;
+}
+
+async function canonicalOutputs(
+  root: string,
+  canonicalPath: keyof typeof FIXTURES,
+  rawPath: keyof typeof FIXTURES,
+  expectedRequests: number
+): Promise<CanonicalOutputFile> {
+  const [canonical, lockBytes] = await Promise.all([
+    lockedJson<CanonicalOutputFile>(root, canonicalPath),
+    readFile(join(root, 'browser-alpha/sources.lock.json'))
+  ]);
+  const lock = JSON.parse(lockBytes.toString()) as {
+    readonly upstreamIchiran: { readonly commit: string; readonly dataReleaseTag: string };
+    readonly postgresReference: { readonly repositoryCommit: string };
+    readonly databaseDump: { readonly sha256: string };
+    readonly database: { readonly schemaSha256: string };
+  };
+  const outputBytes = new TextEncoder().encode(JSON.stringify(canonical.fullJson));
+  const checks: readonly [label: string, actual: unknown, expected: unknown][] = [
+    ['format version', canonical.formatVersion, 1],
+    ['identity policy', canonical.identityPolicy, 'terminal-root-v1'],
+    ['raw source path', canonical.source.path, rawPath],
+    ['raw source SHA-256', canonical.source.sha256, FIXTURES[rawPath]],
+    ['sources lock SHA-256', canonical.oracle.sourcesLockSha256, digest(lockBytes)],
+    ['upstream Ichiran commit', canonical.oracle.upstreamIchiranCommit, lock.upstreamIchiran.commit],
+    ['data release tag', canonical.oracle.dataReleaseTag, lock.upstreamIchiran.dataReleaseTag],
+    [
+      'PostgreSQL reference commit',
+      canonical.oracle.postgresReferenceCommit,
+      lock.postgresReference.repositoryCommit
+    ],
+    ['database dump SHA-256', canonical.oracle.databaseDumpSha256, lock.databaseDump.sha256],
+    ['database schema SHA-256', canonical.oracle.databaseSchemaSha256, lock.database.schemaSha256],
+    ['request count', canonical.stats.requests, expectedRequests],
+    ['output count', Object.keys(canonical.fullJson).length, expectedRequests],
+    ['output SHA-256', canonical.stats.outputsSha256, digest(outputBytes)]
+  ];
+  for (const [label, actual, expected] of checks) {
+    if (actual !== expected) {
+      throw new Error(
+        `${canonicalPath} ${label} ${JSON.stringify(actual)}; expected ${JSON.stringify(expected)}`
+      );
+    }
+  }
+  if (canonical.stats.rewrittenSeqFields <= 0) {
+    throw new Error(`${canonicalPath} has no generated sequence identities to normalize`);
+  }
+  return canonical;
+}
+
 export function fixtureKey(request: AnalyzerFixtureRequest): string {
   const normalization = request.normalizePunctuation === undefined
     ? ''
@@ -274,12 +351,33 @@ export function fixtureKey(request: AnalyzerFixtureRequest): string {
 }
 
 export async function loadAnalyzerParityCorpus(root: string): Promise<AnalyzerParityCorpus> {
-  const [segmentation, cliFile, hardFile, cliExpected, hardExpected, entities] = await Promise.all([
+  const [
+    segmentation,
+    cliFile,
+    hardFile,
+    cliExpected,
+    hardExpected,
+    cliCanonical,
+    hardCanonical,
+    entities
+  ] = await Promise.all([
     lockedJson<SegmentationFixture[]>(root, 'packages/reference-postgres/tests/data/segmentation.json'),
     lockedJson<CliFixtureFile>(root, 'packages/cli/tests/data/cli.json'),
     lockedJson<CliFixtureFile>(root, 'packages/cli/tests/data/hard-cli.json'),
     lockedJson<HistoricalOutputFile>(root, 'packages/cli/tests/data/cli-lisp-outputs.json'),
     lockedJson<HistoricalOutputFile>(root, 'packages/cli/tests/data/hard-cli-lisp-outputs.json'),
+    canonicalOutputs(
+      root,
+      'packages/cli/tests/data/cli-canonical-outputs.json',
+      'packages/cli/tests/data/cli-lisp-outputs.json',
+      252
+    ),
+    canonicalOutputs(
+      root,
+      'packages/cli/tests/data/hard-cli-canonical-outputs.json',
+      'packages/cli/tests/data/hard-cli-lisp-outputs.json',
+      149
+    ),
     entityFixtures(root)
   ]);
   const counters = counterFixtures();
@@ -293,8 +391,9 @@ export async function loadAnalyzerParityCorpus(root: string): Promise<AnalyzerPa
     if (actual !== expected) throw new Error(`Expected ${expected} ${label} fixtures, found ${actual}`);
   }
   for (const request of cliFile.fullJson) {
-    if (!(fixtureKey(request) in cliExpected.fullJson)) {
-      throw new Error(`Historical CLI output is missing ${fixtureKey(request)}`);
+    const key = fixtureKey(request);
+    if (!(key in cliExpected.fullJson) || !(key in cliCanonical.fullJson)) {
+      throw new Error(`Current-Lisp CLI output is missing ${key}`);
     }
   }
   for (const input of cliFile.romanization) {
@@ -303,8 +402,9 @@ export async function loadAnalyzerParityCorpus(root: string): Promise<AnalyzerPa
     }
   }
   for (const request of hardFile.fullJson) {
-    if (!(fixtureKey(request) in hardExpected.fullJson)) {
-      throw new Error(`Historical hard output is missing ${fixtureKey(request)}`);
+    const key = fixtureKey(request);
+    if (!(key in hardExpected.fullJson) || !(key in hardCanonical.fullJson)) {
+      throw new Error(`Current-Lisp hard output is missing ${key}`);
     }
   }
   return {
@@ -315,8 +415,8 @@ export async function loadAnalyzerParityCorpus(root: string): Promise<AnalyzerPa
     counters,
     entities,
     probes,
-    historicalCli: cliExpected.fullJson,
-    historicalHard: hardExpected.fullJson,
-    historicalRomanization: cliExpected.romanization
+    currentLispCli: cliCanonical.fullJson,
+    currentLispHard: hardCanonical.fullJson,
+    currentLispRomanization: cliExpected.romanization
   };
 }

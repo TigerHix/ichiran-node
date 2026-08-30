@@ -37,6 +37,7 @@ import {
   type PortableAnalysisResult,
   type PortableAnalyzeOptions
 } from '../src/analyzer.js';
+import { normalize as normalizePortable } from '../src/characters.js';
 import { ANALYZER_SUPPORT_SECTION_ID, openAnalyzerSupport } from '../src/analyzer-support.js';
 import { memoryDetailSource, openDetailStore } from '../src/details.js';
 import { MORPHOLOGY_SECTION_ID, openMorphology } from '../src/morphology.js';
@@ -57,6 +58,11 @@ import {
   type IdentityResolver,
   type IdentitySource
 } from './parity-canonical.js';
+import {
+  compareDetailedAuthority,
+  normalizeSegmentationExpectation,
+  releaseGateFailureCount
+} from './oracle-authority.js';
 import {
   fixtureKey,
   loadAnalyzerParityCorpus,
@@ -173,10 +179,11 @@ interface HistoricalDifference {
 
 interface SuiteRun {
   readonly stats: SuiteStats;
+  readonly referenceStats: SuiteStats;
   readonly cleanStats: SuiteStats;
-  readonly historicalExact: number;
-  readonly historicalFailed: number;
-  readonly historicalDifferences: readonly HistoricalDifference[];
+  readonly referenceExact: number;
+  readonly referenceFailed: number;
+  readonly referenceDifferences: readonly HistoricalDifference[];
 }
 
 interface Runtime {
@@ -806,6 +813,28 @@ function emptyStats(): SuiteStats {
   };
 }
 
+function recordDetailedComparison(
+  stats: SuiteStats,
+  comparison: {
+    readonly pathDifference: CanonicalDifference | null;
+    readonly detailedDifference: CanonicalDifference | null;
+  }
+): void {
+  if (!comparison.pathDifference) stats.pathExact++;
+  if (!comparison.detailedDifference) stats.exact++;
+  else if (comparison.pathDifference) stats.analyzer++;
+  else stats.presentation++;
+}
+
+function recordCleanComparison(stats: SuiteStats, difference: CanonicalDifference | null): void {
+  if (!difference) {
+    stats.exact++;
+    stats.pathExact++;
+  } else {
+    stats.analyzer++;
+  }
+}
+
 function preview(value: unknown): string {
   const text = JSON.stringify(value);
   if (text === undefined) return 'undefined';
@@ -833,39 +862,64 @@ function progress(label: string, index: number, total: number): void {
 
 async function compareSuite(
   suite: string,
-  cases: readonly { readonly request: AnalyzerFixtureRequest; readonly entities?: AnalyzerEntityFixture['entities']; readonly historical?: string }[],
+  cases: readonly { readonly request: AnalyzerFixtureRequest; readonly entities?: AnalyzerEntityFixture['entities']; readonly currentLisp?: string }[],
   runtime: Runtime,
   reference: CoreReference,
   samples: FailureSample[],
   maxSamples: number
 ): Promise<SuiteRun> {
   const stats = emptyStats();
+  const referenceStats = emptyStats();
   const cleanStats = emptyStats();
-  let historicalExact = 0;
-  let historicalFailed = 0;
-  const historicalDifferences: HistoricalDifference[] = [];
+  let referenceExact = 0;
+  let referenceFailed = 0;
+  const referenceDifferences: HistoricalDifference[] = [];
   for (let index = 0; index < cases.length; index++) {
     const fixture = cases[index]!;
     stats.total++;
+    referenceStats.total++;
     cleanStats.total++;
+    let actual: Awaited<ReturnType<typeof portableAnalysis>>;
+    let currentLisp: unknown | null = null;
     try {
-      const expected = await referenceAnalysis(reference, fixture.request, fixture.entities);
-      if (fixture.historical !== undefined) {
-        const historical = JSON.parse(fixture.historical) as unknown;
-        const difference = firstCanonicalDifference(historical, expected.detailed);
-        if (difference) {
-          historicalFailed++;
-          historicalDifferences.push({
-            request: fixture.request.text,
-            difference: differencePreview(difference)!
-          });
-        } else historicalExact++;
-      }
-      const expectedIdentity = await normalizeLegacyIdentities(expected.detailed, reference.identity);
-      const actual = await portableAnalysis(runtime, fixture.request, {
+      currentLisp = fixture.currentLisp === undefined
+        ? null
+        : JSON.parse(fixture.currentLisp) as unknown;
+      actual = await portableAnalysis(runtime, fixture.request, {
         entities: fixture.entities ? [...fixture.entities] : undefined
       });
-      const actualIdentity = await normalizeLegacyIdentities(actual.detailed, reference.identity);
+      if (currentLisp !== null) {
+        const authority = compareDetailedAuthority(currentLisp, null, actual.detailed);
+        recordDetailedComparison(stats, authority);
+        if (authority.detailedDifference && samples.length < maxSamples) {
+          samples.push({
+            suite,
+            request: fixtureKey(fixture.request),
+            classification: authority.pathDifference ? 'analyzer' : 'presentation',
+            pathDifference: differencePreview(authority.pathDifference),
+            detailedDifference: differencePreview(authority.detailedDifference)
+          });
+        }
+      }
+    } catch (error) {
+      stats.errors++;
+      referenceStats.errors++;
+      cleanStats.errors++;
+      if (samples.length < maxSamples) {
+        samples.push({
+          suite,
+          request: fixtureKey(fixture.request),
+          classification: 'error',
+          error: error instanceof Error ? `${error.name}: ${error.message}` : String(error)
+        });
+      }
+      progress(suite, index, cases.length);
+      continue;
+    }
+
+    try {
+      const expected = await referenceAnalysis(reference, fixture.request, fixture.entities);
+      const expectedIdentity = await normalizeLegacyIdentities(expected.detailed, reference.identity);
       const expectedClean = await projectCoreCleanAnalysis({
         input: fixture.request.text,
         normalized: expected.normalized,
@@ -876,47 +930,55 @@ async function compareSuite(
       });
       const actualClean = projectPortableCleanAnalysis(actual.result);
       const cleanDifference = firstCanonicalDifference(expectedClean, actualClean);
-      const pathDifference = firstCanonicalDifference(
+      const referencePathDifference = firstCanonicalDifference(
         legacyPathSkeleton(expectedIdentity.value),
-        legacyPathSkeleton(actualIdentity.value)
+        legacyPathSkeleton(actual.detailed)
       );
-      const detailedDifference = firstCanonicalDifference(expectedIdentity.value, actualIdentity.value);
-      if (!cleanDifference) {
-        cleanStats.exact++;
-        cleanStats.pathExact++;
+      const referenceDetailedDifference = firstCanonicalDifference(
+        expectedIdentity.value,
+        actual.detailed
+      );
+      recordCleanComparison(cleanStats, cleanDifference);
+      recordDetailedComparison(referenceStats, {
+        pathDifference: referencePathDifference,
+        detailedDifference: referenceDetailedDifference
+      });
+      if (currentLisp !== null) {
+        const difference = firstCanonicalDifference(currentLisp, expectedIdentity.value);
+        if (difference) {
+          referenceFailed++;
+          referenceDifferences.push({
+            request: fixture.request.text,
+            difference: differencePreview(difference)!
+          });
+        } else referenceExact++;
       } else {
-        cleanStats.analyzer++;
-      }
-      if (!pathDifference) stats.pathExact++;
-      if (!detailedDifference) {
-        stats.exact++;
-      } else {
-        if (pathDifference) {
-          stats.analyzer++;
-        } else {
-          stats.presentation++;
+        const authority = compareDetailedAuthority(null, expectedIdentity.value, actual.detailed);
+        recordDetailedComparison(stats, authority);
+        if ((cleanDifference || authority.detailedDifference) && samples.length < maxSamples) {
+          const classification: FailureClass = cleanDifference || authority.pathDifference
+            ? 'analyzer'
+            : 'presentation';
+          samples.push({
+            suite,
+            request: fixtureKey(fixture.request),
+            classification,
+            pathDifference: differencePreview(authority.pathDifference),
+            cleanDifference: differencePreview(cleanDifference),
+            detailedDifference: differencePreview(authority.detailedDifference),
+            multipleRoots: Object.keys(expectedIdentity.multipleRoots).length > 0
+              ? expectedIdentity.multipleRoots
+              : undefined
+          });
         }
       }
-      if ((cleanDifference || detailedDifference) && samples.length < maxSamples) {
-        const classification: FailureClass = cleanDifference || pathDifference
-          ? 'analyzer'
-          : 'presentation';
-        samples.push({
-          suite,
-          request: fixtureKey(fixture.request),
-          classification,
-          pathDifference: differencePreview(pathDifference),
-          cleanDifference: differencePreview(cleanDifference),
-          detailedDifference: differencePreview(detailedDifference),
-          multipleRoots: Object.keys(expectedIdentity.multipleRoots).length > 0
-            ? expectedIdentity.multipleRoots
-            : undefined
-        });
-      }
     } catch (error) {
-      stats.errors++;
+      referenceStats.errors++;
       cleanStats.errors++;
-      if (samples.length < maxSamples) {
+      if (currentLisp === null) {
+        stats.errors++;
+      }
+      if (currentLisp === null && samples.length < maxSamples) {
         samples.push({
           suite,
           request: fixtureKey(fixture.request),
@@ -927,7 +989,14 @@ async function compareSuite(
     }
     progress(suite, index, cases.length);
   }
-  return { stats, cleanStats, historicalExact, historicalFailed, historicalDifferences };
+  return {
+    stats,
+    referenceStats,
+    cleanStats,
+    referenceExact,
+    referenceFailed,
+    referenceDifferences
+  };
 }
 
 async function segmentationSuite(
@@ -938,13 +1007,21 @@ async function segmentationSuite(
   maxSamples: number
 ): Promise<SuiteRun> {
   const stats = emptyStats();
+  const referenceStats = emptyStats();
   const cleanStats = emptyStats();
-  let historicalExact = 0;
-  let historicalFailed = 0;
-  const historicalDifferences: HistoricalDifference[] = [];
+  let referenceExact = 0;
+  let referenceFailed = 0;
+  const referenceDifferences: HistoricalDifference[] = [];
   for (let index = 0; index < fixtures.length; index++) {
     const fixture = fixtures[index]!;
     stats.total++;
+    referenceStats.total++;
+    const normalized = normalizePortable(fixture.input, undefined, true);
+    const expected = normalizeSegmentationExpectation(
+      fixture.expected,
+      value => normalizePortable(value, undefined, true)
+    );
+    let actual: string[] | null = null;
     try {
       let result;
       const loaded = new Set<string>();
@@ -960,24 +1037,9 @@ async function segmentationSuite(
           await runtime.annotations.preloadMissing(error);
         }
       }
-      resetCalcScoreCache();
-      // PortableAnalyzer applies the public romanize/romanizeStar normalization
-      // boundary before segmentation. Compare the same normalized text here so
-      // full-width digits and punctuation are not false analyzer divergences.
-      const normalized = reference.core.normalize(fixture.input, undefined, true);
-      const current = (await reference.core.simpleSegment(normalized))
-        .map(word => word.type.toLowerCase() === 'gap' ? ':gap' : word.text);
-      const historicalDifference = firstCanonicalDifference(fixture.expected, current);
-      if (historicalDifference) {
-        historicalFailed++;
-        historicalDifferences.push({
-          request: fixture.input,
-          difference: differencePreview(historicalDifference)!
-        });
-      } else historicalExact++;
-      const actual = result.paths[0]?.tokens
+      actual = result.paths[0]?.tokens
         .map(token => token.route === 'gap' ? ':gap' : token.text) ?? [];
-      const difference = firstCanonicalDifference(current, actual);
+      const difference = firstCanonicalDifference(expected, actual);
       if (!difference) {
         stats.exact++;
         stats.pathExact++;
@@ -995,6 +1057,7 @@ async function segmentationSuite(
       }
     } catch (error) {
       stats.errors++;
+      referenceStats.errors++;
       if (samples.length < maxSamples) {
         samples.push({
           suite: 'segmentation',
@@ -1006,42 +1069,63 @@ async function segmentationSuite(
     } finally {
       runtime.annotations.clear();
     }
+    if (actual !== null) {
+      try {
+        resetCalcScoreCache();
+        const current = (await reference.core.simpleSegment(normalized))
+          .map(word => word.type.toLowerCase() === 'gap' ? ':gap' : word.text);
+        const referenceDifference = firstCanonicalDifference(expected, current);
+        if (referenceDifference) {
+          referenceFailed++;
+          referenceDifferences.push({
+            request: fixture.input,
+            difference: differencePreview(referenceDifference)!
+          });
+        } else referenceExact++;
+        recordCleanComparison(
+          referenceStats,
+          firstCanonicalDifference(current, actual)
+        );
+      } catch {
+        referenceStats.errors++;
+      }
+    }
     progress('segmentation', index, fixtures.length);
   }
-  return { stats, cleanStats, historicalExact, historicalFailed, historicalDifferences };
+  return {
+    stats,
+    referenceStats,
+    cleanStats,
+    referenceExact,
+    referenceFailed,
+    referenceDifferences
+  };
 }
 
 async function romanizationSuite(
   inputs: readonly string[],
-  historical: Readonly<Record<string, string>>,
+  currentLispOutputs: Readonly<Record<string, string>>,
   runtime: Runtime,
   reference: CoreReference,
   samples: FailureSample[],
   maxSamples: number
 ): Promise<SuiteRun> {
   const stats = emptyStats();
+  const referenceStats = emptyStats();
   const cleanStats = emptyStats();
-  let historicalExact = 0;
-  let historicalFailed = 0;
-  const historicalDifferences: HistoricalDifference[] = [];
+  let referenceExact = 0;
+  let referenceFailed = 0;
+  const referenceDifferences: HistoricalDifference[] = [];
   for (let index = 0; index < inputs.length; index++) {
     const input = inputs[index]!;
     stats.total++;
+    referenceStats.total++;
+    const currentLisp = currentLispOutputs[input];
+    let actual: string | null = null;
     try {
-      resetCalcScoreCache();
-      const expected = (await reference.core.romanize(input, {
-        withInfo: true,
-        normalizePunctuation: true
-      })).romanized;
-      const historicalDifference = firstCanonicalDifference(historical[input], expected);
-      if (historicalDifference) {
-        historicalFailed++;
-        historicalDifferences.push({
-          request: input,
-          difference: differencePreview(historicalDifference)!
-        });
-      } else historicalExact++;
-      let actual: string;
+      if (currentLisp === undefined) {
+        throw new Error(`Current Lisp romanization output is missing ${JSON.stringify(input)}`);
+      }
       const loaded = new Set<string>();
       for (;;) {
         try {
@@ -1055,7 +1139,7 @@ async function romanizationSuite(
           await runtime.annotations.preloadMissing(error);
         }
       }
-      const difference = firstCanonicalDifference(expected, actual);
+      const difference = firstCanonicalDifference(currentLisp, actual);
       if (!difference) {
         stats.exact++;
         stats.pathExact++;
@@ -1073,6 +1157,7 @@ async function romanizationSuite(
       }
     } catch (error) {
       stats.errors++;
+      referenceStats.errors++;
       if (samples.length < maxSamples) {
         samples.push({
           suite: 'romanization',
@@ -1084,8 +1169,38 @@ async function romanizationSuite(
     } finally {
       runtime.annotations.clear();
     }
+    if (actual !== null && currentLisp !== undefined) {
+      try {
+        resetCalcScoreCache();
+        const expected = (await reference.core.romanize(input, {
+          withInfo: true,
+          normalizePunctuation: true
+        })).romanized;
+        const referenceDifference = firstCanonicalDifference(currentLisp, expected);
+        if (referenceDifference) {
+          referenceFailed++;
+          referenceDifferences.push({
+            request: input,
+            difference: differencePreview(referenceDifference)!
+          });
+        } else referenceExact++;
+        recordCleanComparison(
+          referenceStats,
+          firstCanonicalDifference(expected, actual)
+        );
+      } catch {
+        referenceStats.errors++;
+      }
+    }
   }
-  return { stats, cleanStats, historicalExact, historicalFailed, historicalDifferences };
+  return {
+    stats,
+    referenceStats,
+    cleanStats,
+    referenceExact,
+    referenceFailed,
+    referenceDifferences
+  };
 }
 
 function failed(stats: SuiteStats): number {
@@ -1175,7 +1290,7 @@ async function main(): Promise<void> {
   const source = await verifyBrowserAlphaSources(options.repository);
   await verifyBrowserAlphaOracleCore(
     options.repository,
-    source.lock.oracleRepositoryCommit
+    source.lock.postgresReference.repositoryCommit
   );
   const head = await repositoryHead(options.repository);
   const [corpus, runtime] = await Promise.all([
@@ -1194,7 +1309,7 @@ async function main(): Promise<void> {
     );
     const romanization = await romanizationSuite(
       corpus.romanization,
-      corpus.historicalRomanization,
+      corpus.currentLispRomanization,
       runtime,
       reference,
       samples,
@@ -1202,11 +1317,11 @@ async function main(): Promise<void> {
     );
     const cliCases = select(corpus.cli, options.smoke, 15).map(request => ({
       request,
-      historical: corpus.historicalCli[fixtureKey(request)]
+      currentLisp: corpus.currentLispCli[fixtureKey(request)]
     }));
     const hardCases = select(corpus.hard, options.smoke, 15).map(request => ({
       request,
-      historical: corpus.historicalHard[fixtureKey(request)]
+      currentLisp: corpus.currentLispHard[fixtureKey(request)]
     }));
     const counterCases = select(corpus.counters, options.smoke, 20).map(request => ({ request }));
     const entityCases = select(corpus.entities, options.smoke, 15).map(fixture => ({
@@ -1232,12 +1347,17 @@ async function main(): Promise<void> {
       cli.cleanStats, hard.cleanStats, counters.cleanStats,
       entities.cleanStats, probes.cleanStats
     ]);
-    const allStats = [
+    const authoritativeStats = [
       segmentation.stats, romanization.stats, cli.stats, hard.stats,
       counters.stats, entities.stats, probes.stats
     ];
+    const frozenReferenceStats = [
+      segmentation.referenceStats, romanization.referenceStats,
+      cli.referenceStats, hard.referenceStats, counters.referenceStats,
+      entities.referenceStats, probes.referenceStats
+    ];
     const report = {
-      formatVersion: 2,
+      formatVersion: 3,
       generatedAt: new Date().toISOString(),
       completeCorpus: !options.smoke,
       corpus: {
@@ -1250,12 +1370,16 @@ async function main(): Promise<void> {
         probes: corpus.probes.length
       },
       accounting: corpusAccounting(corpus),
-      freshPostgresOracleTotals: {
+      authoritativeOracleTotals: {
+        policy:
+          'Pinned current-Lisp snapshots are authoritative where present; the frozen PostgreSQL reference is the fallback for unsnapshotted suites.',
         segmentation: exactTotals(segmentation.stats),
         detailedLegacy: exactTotals(detailedStats),
-        cleanSemantic: exactTotals(cleanDetailedStats),
         standaloneRomanization: exactTotals(romanization.stats),
-        allComparisons: exactTotals(combineStats(allStats))
+        allComparisons: exactTotals(combineStats(authoritativeStats)),
+        frozenFallbackCleanSemantic: exactTotals(combineStats([
+          counters.cleanStats, entities.cleanStats, probes.cleanStats
+        ]))
       },
       results: {
         segmentation: segmentation.stats,
@@ -1265,48 +1389,65 @@ async function main(): Promise<void> {
         counters: counters.stats,
         entities: entities.stats,
         probes: probes.stats,
-        cleanSemantic: {
-          cli: cli.cleanStats,
-          hard: hard.cleanStats,
+        frozenFallbackCleanSemantic: {
           counters: counters.cleanStats,
           entities: entities.cleanStats,
           probes: probes.cleanStats
         }
       },
-      postgresHistoricalBaseline: {
-        diagnosticOnly: true,
-        segmentationExact: segmentation.historicalExact,
-        segmentationFailed: segmentation.historicalFailed,
-        segmentationExpectedFailed: 0,
-        romanizationExact: romanization.historicalExact,
-        romanizationFailed: romanization.historicalFailed,
-        cliExact: cli.historicalExact,
-        cliFailed: cli.historicalFailed,
-        hardExact: hard.historicalExact,
-        hardFailed: hard.historicalFailed,
-        differences: {
-          segmentation: segmentation.historicalDifferences,
-          romanization: romanization.historicalDifferences,
-          cli: cli.historicalDifferences,
-          hard: hard.historicalDifferences
+      frozenPostgresDiagnostics: {
+        role: {
+          snapshotCoveredSuites: 'diagnostic-only',
+          unsnapshottedSuites: 'authoritative fallback'
+        },
+        portableComparison: {
+          segmentation: segmentation.referenceStats,
+          romanization: romanization.referenceStats,
+          cli: cli.referenceStats,
+          hard: hard.referenceStats,
+          counters: counters.referenceStats,
+          entities: entities.referenceStats,
+          probes: probes.referenceStats,
+          allComparisons: exactTotals(combineStats(frozenReferenceStats)),
+          cleanSemantic: exactTotals(cleanDetailedStats)
+        },
+        currentLispDrift: {
+          segmentationExact: segmentation.referenceExact,
+          segmentationFailed: segmentation.referenceFailed,
+          romanizationExact: romanization.referenceExact,
+          romanizationFailed: romanization.referenceFailed,
+          cliExact: cli.referenceExact,
+          cliFailed: cli.referenceFailed,
+          hardExact: hard.referenceExact,
+          hardFailed: hard.referenceFailed,
+          differences: {
+            segmentation: segmentation.referenceDifferences,
+            romanization: romanization.referenceDifferences,
+            cli: cli.referenceDifferences,
+            hard: hard.referenceDifferences
+          }
         }
       },
       gate: {
         currentOracleAllowlist: [],
-        historicalSnapshotsAreDiagnosticOnly: true,
+        currentLispSnapshotsAreAuthoritative: true,
+        frozenPostgresIsFallbackAndDiagnostic: true,
         rule:
-          'Exit nonzero for every fresh PostgreSQL/core legacy or clean-semantic divergence unless --allow-failures is explicitly passed.'
+          'Exit nonzero for any current-Lisp divergence in snapshot-covered suites, or any frozen-reference legacy or clean-semantic divergence in unsnapshotted suites, unless --allow-failures is explicitly passed.'
       },
       samples
     };
     const reportText = `${JSON.stringify(report, null, 2)}\n`;
     if (options.out) await writeFile(options.out, reportText);
     process.stdout.write(reportText);
-    // Fresh PostgreSQL/core output is the product oracle. The checked-in Lisp
-    // snapshots remain visible diagnostics, but their known drift must not turn
-    // a byte-exact portable/current result into a failed portable gate.
-    const totalFailures = allStats.reduce((sum, value) => sum + failed(value), 0)
-      + failed(cleanDetailedStats);
+    const totalFailures = releaseGateFailureCount({
+      currentLisp: [segmentation.stats, romanization.stats, cli.stats, hard.stats],
+      frozenFallback: [
+        { detailed: counters.stats, clean: counters.cleanStats },
+        { detailed: entities.stats, clean: entities.cleanStats },
+        { detailed: probes.stats, clean: probes.cleanStats }
+      ]
+    });
     if (totalFailures > 0 && !options.allowFailures) process.exitCode = 1;
     });
   } finally {
