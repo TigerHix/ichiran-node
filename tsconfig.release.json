@@ -5,7 +5,8 @@
     "rootDir": "."
   },
   "include": [
-    "scripts/browser-alpha-release.ts"
+    "scripts/browser-alpha-release.ts",
+    "scripts/canonicalize-lisp-fixtures.ts"
   ],
   "exclude": [
     "node_modules",

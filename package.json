@@ -19,6 +19,7 @@
     "alpha:release:build": "bun run --cwd packages/reference-postgres build && bun scripts/browser-alpha-release.ts build",
     "alpha:release:refresh-lock": "bun run --cwd packages/reference-postgres build && bun scripts/browser-alpha-release.ts refresh-lock",
     "alpha:release:verify": "bun run --cwd packages/reference-postgres build && bun scripts/browser-alpha-release.ts verify",
+    "alpha:fixtures:canonicalize": "bun scripts/canonicalize-lisp-fixtures.ts",
     "alpha:demo:build": "bun run --cwd packages/browser-demo build",
     "alpha:demo:stage": "bun run --cwd packages/browser-demo stage:analyzer",
     "alpha:demo:test": "bun run --cwd packages/browser-demo test",

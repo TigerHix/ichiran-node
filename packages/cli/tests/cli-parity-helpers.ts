@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -8,6 +9,9 @@ import { runCli } from '../src/index.js';
 import { firstCanonicalDifference } from '../../core/tools/parity-canonical.js';
 
 const TEST_DIRECTORY = dirname(fileURLToPath(import.meta.url));
+const REPOSITORY = join(TEST_DIRECTORY, '..', '..', '..');
+const SOURCES_LOCK_PATH = join(REPOSITORY, 'browser-alpha', 'sources.lock.json');
+const CANONICAL_IDENTITY_POLICY = 'terminal-root-v1';
 
 export interface TestCases {
   readonly romanization: readonly string[];
@@ -24,6 +28,30 @@ export interface ExpectedOutputs {
 export interface ParityTestData {
   readonly testCases: TestCases;
   readonly expectedOutputs: ExpectedOutputs;
+}
+
+export interface CanonicalParityOutputs {
+  readonly formatVersion: number;
+  readonly identityPolicy: string;
+  readonly source: {
+    readonly path: string;
+    readonly sha256: string;
+  };
+  readonly oracle: {
+    readonly sourcesLockSha256: string;
+    readonly upstreamIchiranCommit: string;
+    readonly dataReleaseTag: string;
+    readonly postgresReferenceCommit: string;
+    readonly databaseDumpSha256: string;
+    readonly databaseSchemaSha256: string;
+  };
+  readonly stats: {
+    readonly requests: number;
+    readonly rewrittenSeqFields: number;
+    readonly multipleRootIdentityKeys: number;
+    readonly outputsSha256: string;
+  };
+  readonly fullJson: Readonly<Record<string, string>>;
 }
 
 export interface TextParityReport {
@@ -69,6 +97,76 @@ export function loadParityTestData(
   } catch (error) {
     throw new Error(errorMessage, { cause: error });
   }
+}
+
+function sha256(value: string | Uint8Array): string {
+  return createHash('sha256').update(value).digest('hex');
+}
+
+function exactKeys(left: object, right: object): boolean {
+  return JSON.stringify(Object.keys(left)) === JSON.stringify(Object.keys(right));
+}
+
+/**
+ * Load the compiler-generated identity-normalized expectation and prove that it
+ * was derived from the raw Lisp capture and the currently locked 260118 oracle.
+ */
+export function loadCanonicalParityOutputs(
+  canonicalFile: string,
+  rawFile: string,
+  expectedRequests: number
+): CanonicalParityOutputs {
+  const rawPath = join(TEST_DIRECTORY, 'data', rawFile);
+  const canonicalPath = join(TEST_DIRECTORY, 'data', canonicalFile);
+  const rawBytes = readFileSync(rawPath);
+  const lockBytes = readFileSync(SOURCES_LOCK_PATH);
+  const raw = JSON.parse(rawBytes.toString('utf8')) as ExpectedOutputs;
+  const lock = JSON.parse(lockBytes.toString('utf8')) as {
+    readonly upstreamIchiran: { readonly commit: string; readonly dataReleaseTag: string };
+    readonly postgresReference: { readonly repositoryCommit: string };
+    readonly databaseDump: { readonly sha256: string };
+    readonly database: { readonly schemaSha256: string };
+  };
+  const canonical = JSON.parse(
+    readFileSync(canonicalPath, 'utf8')
+  ) as CanonicalParityOutputs;
+  const expectedSourcePath = `packages/cli/tests/data/${rawFile}`;
+  const checks: readonly [label: string, actual: unknown, expected: unknown][] = [
+    ['format version', canonical.formatVersion, 1],
+    ['identity policy', canonical.identityPolicy, CANONICAL_IDENTITY_POLICY],
+    ['raw source path', canonical.source.path, expectedSourcePath],
+    ['raw source SHA-256', canonical.source.sha256, sha256(rawBytes)],
+    ['sources lock SHA-256', canonical.oracle.sourcesLockSha256, sha256(lockBytes)],
+    ['upstream Ichiran commit', canonical.oracle.upstreamIchiranCommit, lock.upstreamIchiran.commit],
+    ['data release tag', canonical.oracle.dataReleaseTag, lock.upstreamIchiran.dataReleaseTag],
+    [
+      'PostgreSQL reference commit',
+      canonical.oracle.postgresReferenceCommit,
+      lock.postgresReference.repositoryCommit
+    ],
+    ['database dump SHA-256', canonical.oracle.databaseDumpSha256, lock.databaseDump.sha256],
+    ['database schema SHA-256', canonical.oracle.databaseSchemaSha256, lock.database.schemaSha256],
+    ['request count', canonical.stats.requests, expectedRequests],
+    ['output count', Object.keys(canonical.fullJson).length, expectedRequests],
+    ['output SHA-256', canonical.stats.outputsSha256, sha256(JSON.stringify(canonical.fullJson))],
+    ['raw/canonical request keys', exactKeys(raw.fullJson, canonical.fullJson), true]
+  ];
+  for (const [label, actual, expected] of checks) {
+    if (actual !== expected) {
+      throw new Error(
+        `${canonicalFile} ${label} ${JSON.stringify(actual)}; expected ${JSON.stringify(expected)}`
+      );
+    }
+  }
+  if (!Number.isSafeInteger(canonical.stats.rewrittenSeqFields)
+    || canonical.stats.rewrittenSeqFields <= 0) {
+    throw new Error(`${canonicalFile} has no generated sequence identities to normalize`);
+  }
+  if (!Number.isSafeInteger(canonical.stats.multipleRootIdentityKeys)
+    || canonical.stats.multipleRootIdentityKeys < 0) {
+    throw new Error(`${canonicalFile} has invalid multiple-root identity statistics`);
+  }
+  return canonical;
 }
 
 /** CLI defaults to normalizePunctuation=true, matching the captured Lisp CLI. */

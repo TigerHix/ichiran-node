@@ -3,6 +3,7 @@ import { describe, test } from 'bun:test';
 import {
   assertJsonParity,
   assertTextParity,
+  loadCanonicalParityOutputs,
   loadParityTestData,
   runFullJsonParity,
   runTextParity
@@ -16,6 +17,20 @@ const { testCases, expectedOutputs } = loadParityTestData(
   'cli-lisp-outputs.json',
   'Failed to load captured current-Lisp CLI fixtures.'
 );
+const canonicalOutputs = loadCanonicalParityOutputs(
+  'cli-canonical-outputs.json',
+  'cli-lisp-outputs.json',
+  252
+);
+
+describe('ordinary canonical fixture provenance', () => {
+  test('is linked to the raw Lisp capture and pinned oracle', () => {
+    if (canonicalOutputs.stats.requests !== 252
+      || canonicalOutputs.stats.rewrittenSeqFields <= 0) {
+      throw new Error('Ordinary canonical identity fixture provenance is invalid');
+    }
+  });
+});
 
 describe.skipIf(!RUN_PARITY_TESTS)('packed runtime parity configuration', () => {
   test('locks the current-Lisp fixture counts', () => {
@@ -54,7 +69,7 @@ describe.skipIf(!RUN_PARITY_TESTS || !PACK_CONFIGURED)('packed runtime vs curren
   test('matches all 252 ordinary full-JSON fixtures', async () => {
     assertJsonParity(
       'ordinary full JSON',
-      await runFullJsonParity(testCases.fullJson, expectedOutputs.fullJson)
+      await runFullJsonParity(testCases.fullJson, canonicalOutputs.fullJson)
     );
   }, 600_000);
 });
