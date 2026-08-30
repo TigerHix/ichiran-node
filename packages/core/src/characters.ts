@@ -173,7 +173,9 @@ export function simplifyNgrams(
 ): string {
   let result = input;
   for (const [from, to] of replacements) {
-    result = result.replaceAll(from, to);
+    result = from.length === 0
+      ? result.replace(new RegExp(from, 'g'), to)
+      : result.replaceAll(from, to);
   }
   return result;
 }

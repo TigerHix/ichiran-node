@@ -16,6 +16,19 @@ const TEXT_CASES = [
 ] as const;
 
 describe('portable character behavior', () => {
+  test('matches literal ngram replacement edge cases', () => {
+    const cases: [string, [string, string][]][] = [
+      ['a.b.a', [['.', '$&$&']]],
+      ['aaaa', [['aa', 'b']]],
+      ['A😀B', [['', '-']]]
+    ];
+    for (const [input, replacements] of cases) {
+      expect(portable.simplifyNgrams(input, replacements)).toBe(
+        current.simplifyNgrams(input, replacements)
+      );
+    }
+  });
+
   test('matches normalization and basic splitting', () => {
     for (const input of TEXT_CASES) {
       expect(portable.normalize(input)).toBe(current.normalize(input));
