@@ -2,8 +2,8 @@
 
 import { createHash } from 'node:crypto';
 import { execFile as execFileCallback } from 'node:child_process';
-import { readFile, writeFile } from 'node:fs/promises';
-import { resolve } from 'node:path';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { dirname, resolve } from 'node:path';
 import { promisify } from 'node:util';
 import { gunzipSync } from 'node:zlib';
 import postgres, { type Sql } from 'postgres';
@@ -1438,7 +1438,10 @@ async function main(): Promise<void> {
       samples
     };
     const reportText = `${JSON.stringify(report, null, 2)}\n`;
-    if (options.out) await writeFile(options.out, reportText);
+    if (options.out) {
+      await mkdir(dirname(options.out), { recursive: true });
+      await writeFile(options.out, reportText);
+    }
     process.stdout.write(reportText);
     const totalFailures = releaseGateFailureCount({
       currentLisp: [segmentation.stats, romanization.stats, cli.stats, hard.stats],
