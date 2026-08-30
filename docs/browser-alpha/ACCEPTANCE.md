@@ -463,8 +463,8 @@ cross-tab mutation locking, and checks the required desktop and phone layouts. I
 calibrated contention run must satisfy the 75 ms ordinary and 250 ms pathological p95
 gates and report no main-thread analyzer work.
 
-Exact machine-dependent browser samples, Chromium/CPU metadata, calibration, console
-capture, and long-task evidence are written to `work/browser-benchmark.json` by
+Exact machine-dependent browser samples, Chromium/CPU metadata, calibration, and
+long-task evidence are written to `work/browser-benchmark.json` by
 `alpha:demo:qualify`; they are deliberately generated rather than committed. The
 immutable artifact identities and sizes are recorded by the release's `manifest.json`
 and `stats.json`.
