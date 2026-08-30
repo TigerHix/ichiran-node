@@ -1,18 +1,18 @@
 import { expect, test } from 'bun:test';
 import { createHash } from 'node:crypto';
 import { gunzipSync, gzipSync } from 'node:zlib';
-import { getConnection } from '../../core/src/conn.js';
+import { getConnection } from '../../reference-postgres/src/conn.js';
 import {
   buildAnalyzerSupportCore,
   loadAnalyzerSupportSource,
   type AnalyzerSupportSuffixSource
 } from '../src/browser-pack/analyzer-support.js';
 import { buildAnalyzerAnnotations } from '../src/browser-pack/analyzer-annotations.js';
-import { openAnalyzerSupport } from '../../portable/src/analyzer-support.js';
+import { openAnalyzerSupport } from '../../core/src/analyzer-support.js';
 import {
   AnalyzerAnnotationsReader,
   analyzerAnnotationsMemorySource
-} from '../../portable/src/analyzer-annotations.js';
+} from '../../core/src/analyzer-annotations.js';
 
 const RUN_POSTGRES_TEST = process.env.RUN_ANALYZER_SUPPORT_POSTGRES === 'true';
 

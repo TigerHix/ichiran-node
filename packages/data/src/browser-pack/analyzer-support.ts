@@ -2,8 +2,8 @@ import type postgres from 'postgres';
 import {
   resetAllCaches,
   withConnectionOverride
-} from '@ichiran/core/src/conn.js';
-import { testWord } from '@ichiran/core/src/characters.js';
+} from '@ichiran/reference-postgres/src/conn.js';
+import { testWord } from '@ichiran/reference-postgres/src/characters.js';
 import {
   COPULAE,
   FINAL_PRT,
@@ -11,22 +11,33 @@ import {
   NON_FINAL_PRT,
   SEMI_FINAL_PRT,
   SKIP_WORDS
-} from '@ichiran/core/src/dict/errata.js';
-import { ensureCounterCache } from '@ichiran/core/src/dict/counters.js';
-import { hintMap, segsplitMap, splitMap } from '@ichiran/core/src/dict/splitMaps.js';
-import '@ichiran/core/src/dict/splitDefinitions.js';
+} from '@ichiran/reference-postgres/src/dict/errata.js';
+import { ensureCounterCache } from '@ichiran/reference-postgres/src/dict/counters.js';
+import { hintMap, segsplitMap, splitMap } from '@ichiran/reference-postgres/src/dict/splitMaps.js';
+import type { AsyncSplitFunction, HintFunction } from '@ichiran/reference-postgres/src/dict/splitMaps.js';
+import '@ichiran/reference-postgres/src/dict/splitDefinitions.js';
 import {
   getSuffixCache,
   getSuffixClass,
   initSuffixes
-} from '@ichiran/core/src/grammar/suffixCache.js';
-import type { KanaText, Reading } from '@ichiran/core/src/types.js';
+} from '@ichiran/reference-postgres/src/grammar/suffixCache.js';
+import type { KanaText, Reading } from '@ichiran/reference-postgres/src/types.js';
 import { compileMorphology } from './morphology-compiler.js';
 import type {
   CompiledMorphologyArtifact,
   CompiledMorphologyRule
 } from './morphology-format.js';
 import { loadAnalyzerGeneratedSource } from './analyzer-generated.js';
+import {
+  loadUpstream260118GataiForms,
+  UPSTREAM_260118_GATAI_CLASS,
+  UPSTREAM_260118_GATAI_KEYWORD,
+  UPSTREAM_260118_NEBA_ABBREVIATION,
+  UPSTREAM_260118_SKIP_WORD_ADDED,
+  UPSTREAM_260118_SKIP_WORD_REMOVED,
+  upstream260118HintMap,
+  upstream260118SplitMap
+} from './analyzer-upstream-260118.js';
 
 const MAGIC = 'IANSUP01';
 const VERSION = 2;
@@ -1138,7 +1149,8 @@ async function loadCollisionSources(
         preferKana: entry.preferKana,
         preferKanaOnOrdinalZero: entry.preferKanaOnOrdinalZero,
         pos: entry.pos ?? [],
-        skipWord: SKIP_WORDS.includes(target),
+        skipWord: target === UPSTREAM_260118_SKIP_WORD_ADDED
+          || (target !== UPSTREAM_260118_SKIP_WORD_REMOVED && SKIP_WORDS.includes(target)),
         finalParticle: FINAL_PRT.includes(target),
         semiFinalParticle: SEMI_FINAL_PRT.includes(target),
         nonFinalParticle: NON_FINAL_PRT.includes(target),
@@ -1156,37 +1168,57 @@ async function loadCollisionSources(
   return [...output.values()].sort((left, right) => compareText(collisionKey(left), collisionKey(right)));
 }
 
-function suffixSources(): {
+function rawSuffixForm(form: KanaText): RawSuffixFormSource {
+  return {
+    seq: form.seq,
+    text: form.text,
+    bestKanji: form.bestKanji,
+    commonTags: form.commonTags,
+    ord: form.ord,
+    common: form.common,
+    conjugatable: form.conjugateP,
+    nokanji: form.nokanji,
+    conjugations: form.conjugations ?? null
+  };
+}
+
+async function suffixSources(): Promise<{
   suffixes: RawSuffixSource[];
   suffixClasses: Array<{ seq: number; keyword: string }>;
-} {
+}> {
   const cache = getSuffixCache();
   const classes = getSuffixClass();
   if (!cache || !classes) throw new AnalyzerSupportEncodingError('Suffix cache was not initialized');
-  const suffixes: RawSuffixSource[] = [];
+  const suffixes = new Map<string, RawSuffixSource>();
   for (const [text, entry] of cache) {
     const rawValues = Array.isArray(entry[0]) ? entry as Array<[string, KanaText | null]> : [entry as [string, KanaText | null]];
-    suffixes.push({
+    suffixes.set(text, {
       text,
       values: rawValues.map(([keyword, form]) => ({
         keyword,
-        form: form === null ? null : {
-          seq: form.seq,
-          text: form.text,
-          bestKanji: form.bestKanji,
-          commonTags: form.commonTags,
-          ord: form.ord,
-          common: form.common,
-          conjugatable: form.conjugateP,
-          nokanji: form.nokanji,
-          conjugations: form.conjugations ?? null
-        }
+        form: form === null ? null : rawSuffixForm(form)
       }))
     });
   }
+
+  // These are compiler-owned overlays, equivalent to upstream's load-conjs
+  // and load-abbr calls, without mutating the frozen reference suffix cache.
+  const suffixClasses = new Map<number, string>(classes);
+  for (const form of await loadUpstream260118GataiForms()) {
+    suffixes.set(form.text, {
+      text: form.text,
+      values: [{ keyword: UPSTREAM_260118_GATAI_KEYWORD, form: rawSuffixForm(form) }]
+    });
+    suffixClasses.set(form.seq, UPSTREAM_260118_GATAI_CLASS);
+  }
+  suffixes.set(UPSTREAM_260118_NEBA_ABBREVIATION.text, {
+    text: UPSTREAM_260118_NEBA_ABBREVIATION.text,
+    values: [{ keyword: UPSTREAM_260118_NEBA_ABBREVIATION.keyword, form: null }]
+  });
+
   return {
-    suffixes,
-    suffixClasses: [...classes].map(([seq, keyword]) => ({ seq, keyword }))
+    suffixes: [...suffixes.values()],
+    suffixClasses: [...suffixClasses].map(([seq, keyword]) => ({ seq, keyword }))
   };
 }
 
@@ -1425,7 +1457,10 @@ async function splitGeneratedLocators(
 async function annotationSources(
   sql: postgres.Sql,
   candidates: readonly AnnotationCandidate[],
-  collisions: readonly AnalyzerSupportCollisionSource[]
+  collisions: readonly AnalyzerSupportCollisionSource[],
+  activeSplitMap: ReadonlyMap<number, AsyncSplitFunction>,
+  activeSegsplitMap: ReadonlyMap<number, AsyncSplitFunction>,
+  activeHintMap: ReadonlyMap<number, HintFunction>
 ): Promise<{
   splits: AnalyzerSupportSplitSource[];
   hints: AnalyzerSupportHintSource[];
@@ -1444,7 +1479,10 @@ async function annotationSources(
 
   for (const candidate of candidates) {
     const collision = collisionFor(candidate);
-    for (const [kind, map] of [['split', splitMap], ['segsplit', segsplitMap]] as const) {
+    for (const [kind, map] of [
+      ['split', activeSplitMap],
+      ['segsplit', activeSegsplitMap]
+    ] as const) {
       const definitionSeq = collision && map.has(collision.collisionSeq)
         ? collision.collisionSeq
         : map.has(candidate.rootSeq) ? candidate.rootSeq : null;
@@ -1471,13 +1509,13 @@ async function annotationSources(
       splitOutput.set(key, value);
     }
 
-    const definitionSeq = collision && hintMap.has(collision.collisionSeq)
+    const definitionSeq = collision && activeHintMap.has(collision.collisionSeq)
       ? collision.collisionSeq
-      : hintMap.has(candidate.rootSeq) ? candidate.rootSeq : null;
+      : activeHintMap.has(candidate.rootSeq) ? candidate.rootSeq : null;
     if (definitionSeq !== null) {
       let hint: string | null;
       try {
-        hint = await hintMap.get(definitionSeq)!(readingFor(candidate, definitionSeq));
+        hint = await activeHintMap.get(definitionSeq)!(readingFor(candidate, definitionSeq));
       } catch (error) {
         const issue: AnalyzerSupportCompileIssue = {
           kind: 'hint-runtime-error',
@@ -1540,13 +1578,18 @@ export async function loadAnalyzerSupportSource(sql: postgres.Sql): Promise<Anal
     ]);
     const collisions = await loadCollisionSources(sql, morphology.artifact);
     const generated = await loadAnalyzerGeneratedSource(sql, morphology.artifact);
+    const activeSplitMap = new Map<number, AsyncSplitFunction>(splitMap);
+    for (const [seq, split] of upstream260118SplitMap) activeSplitMap.set(seq, split);
+    const activeSegsplitMap = new Map<number, AsyncSplitFunction>(segsplitMap);
+    const activeHintMap = new Map<number, HintFunction>(hintMap);
+    for (const [seq, hint] of upstream260118HintMap) activeHintMap.set(seq, hint);
     const roots = new Set<number>([
-      ...splitMap.keys(), ...segsplitMap.keys(), ...hintMap.keys(),
+      ...activeSplitMap.keys(), ...activeSegsplitMap.keys(), ...activeHintMap.keys(),
       ...collisions
         .filter(value =>
-          splitMap.has(value.collisionSeq)
-          || segsplitMap.has(value.collisionSeq)
-          || hintMap.has(value.collisionSeq))
+          activeSplitMap.has(value.collisionSeq)
+          || activeSegsplitMap.has(value.collisionSeq)
+          || activeHintMap.has(value.collisionSeq))
         .map(value => value.rootSeq)
     ]);
     const directForms = await loadDirectForms(sql, [...roots]);
@@ -1558,8 +1601,15 @@ export async function loadAnalyzerSupportSource(sql: postgres.Sql): Promise<Anal
     for (const value of enumerateMorphologyCandidates(morphology.artifact, roots)) {
       candidates.set(annotationCandidateKey(value), value);
     }
-    const annotations = await annotationSources(sql, [...candidates.values()], collisions);
-    const suffix = suffixSources();
+    const annotations = await annotationSources(
+      sql,
+      [...candidates.values()],
+      collisions,
+      activeSplitMap,
+      activeSegsplitMap,
+      activeHintMap
+    );
+    const suffix = await suffixSources();
     const suffixes = await hydrateSuffixConjugations(sql, suffix.suffixes);
     return {
       suffixes,

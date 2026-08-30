@@ -6,10 +6,10 @@
  * and add missing entries/readings that are commonly needed.
  */
 
-import { getConnection } from '@ichiran/core';
-import { testWord } from '@ichiran/core';
+import { getConnection } from '@ichiran/reference-postgres';
+import { testWord } from '@ichiran/reference-postgres';
 import { conjugateEntryOuter } from './conjugate.js';
-import type { SenseProp, Conjugation, Entry } from '@ichiran/core';
+import type { SenseProp, Conjugation, Entry } from '@ichiran/reference-postgres';
 
 /**
  * Adds a reading to an existing entry
@@ -1503,6 +1503,8 @@ export async function addErrata(): Promise<void> {
   await addErrataDec23();
   console.log('  Applying Jan 2025 errata...');
   await addErrataJan25();
+  console.log('  Applying Jan 2026 errata...');
+  await addErrataJan26();
   console.log('  Applying counter errata...');
   await addErrataCounters();
 
@@ -2042,6 +2044,62 @@ async function addErrataJan25(): Promise<void> {
 
   await replaceReading(2860664, 'こどもはおやのせなかをみてそだう', 'こどもはおやのせなかをみてそだつ');
   await replaceReadingConj(2863544, 'kana_text', 'みぎにでるのは', 'みぎにでるものは');
+}
+
+/**
+ * Errata updates from January 2026.
+ * Ported from upstream dict-errata.lisp at ea958336.
+ */
+async function addErrataJan26(): Promise<void> {
+  await deleteSenseProp(1236660, 'misc', 'uk'); // おそれ
+  await deleteSenseProp(2859279, 'misc', 'uk'); // はねる
+  await deleteSenseProp(1591420, 'misc', 'uk'); // 決まる
+
+  await setPrimaryNokanji(1502390, false); // もの
+  await setCommon('kana_text', 1502390, 'モノ', 0);
+
+  await setCommon('kana_text', 1392580, 'まえ', 5);
+  await setCommon('kanji_text', 1502920, '分かつ', null);
+  await setCommon('kanji_text', 1169130, '引分ける', 0);
+  await setCommon('kanji_text', 1326660, '取り計らう', 0);
+  await setCommon('kanji_text', 1340420, '出来', 0);
+  await setCommon('kanji_text', 1340430, '出来', 9);
+
+  // Nerf lexical nouns that collide with the continuative (~i) forms of
+  // common verbs (upstream issue #69).
+  await setCommon('kanji_text', 1589320, '思い', 0);
+  await setCommon('kanji_text', 1281000, '考え', 0);
+  await setCommon('kanji_text', 2862681, '閉まり', null);
+  await setCommon('kanji_text', 1989500, '開き', 0);
+  await setCommon('kanji_text', 1985020, '気づき', null);
+  await setCommon('kanji_text', 1180130, '押し', 0);
+  await setCommon('kanji_text', 1216850, '含み', 0);
+  await setCommon('kanji_text', 1231760, '居座り', null);
+  await setCommon('kanji_text', 1236660, '恐れ', 0);
+  await setCommon('kanji_text', 1238660, '驚き', 0);
+  await setCommon('kanji_text', 1259890, '見直し', 0);
+  await setCommon('kanji_text', 1297250, '作り', 0);
+  await setCommon('kanji_text', 1304480, '残り', 0);
+  await setCommon('kanji_text', 1327090, '守り', 0);
+  await setCommon('kanji_text', 1327100, '守り', 9);
+  await setCommon('kanji_text', 1396550, '狙い', 0);
+  await setCommon('kanji_text', 1403130, '増やし', null);
+  await setCommon('kanji_text', 1535930, '問い', 0);
+  await setCommon('kanji_text', 1548390, '頼り', 0);
+  await setCommon('kanji_text', 1609560, '勝ち', 0);
+  await setCommon('kanji_text', 1954660, '聞こえ', null);
+  await setCommon('kanji_text', 1497960, '負け', 0);
+  await setCommon('kanji_text', 1502940, '分かり', null);
+  await setCommon('kanji_text', 1917220, '分かれ', null);
+  await setCommon('kanji_text', 1221250, '帰り', 0);
+  await setCommon('kanji_text', 1351280, '笑い', 0);
+  await setCommon('kanji_text', 1352300, '上げ', 0);
+  await setCommon('kanji_text', 1354720, '乗り', 0);
+  await setCommon('kanji_text', 1502990, '分け', 0);
+  await setCommon('kanji_text', 1630270, '脅かし', null);
+  await setCommon('kanji_text', 1456130, '読み', 0);
+  await setCommon('kanji_text', 1403020, '騒ぎ', 0);
+  await setCommon('kanji_text', 1659120, '受け', 0);
 }
 
 /**

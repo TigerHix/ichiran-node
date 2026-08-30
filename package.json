@@ -1,21 +1,24 @@
 {
   "name": "ichiran-node",
   "version": "0.1.0",
-  "description": "Node.js/TypeScript port of Ichiran Japanese text segmentation library",
+  "description": "Self-contained Ichiran Japanese analyzer for browsers and Node.js",
   "type": "module",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "build": "cd packages/core && bun run build && cd ../grammar && bun run build && cd ../api && bun run build && cd ../cli && bun run build && cd ../data && bun run build",
-    "typecheck": "cd packages/core && bun run typecheck && cd ../grammar && bun run typecheck && cd ../api && bun run typecheck && cd ../cli && bun run typecheck && cd ../data && bun run typecheck && cd ../.. && bun run alpha:release:typecheck",
-    "test": "bun run build && bun test packages/*/tests/",
-    "test:watch": "bun test --watch packages/*/tests/",
-    "test:parity": "bun run build && RUN_PARITY_TESTS=true bun test packages/*/tests/",
+    "build": "bun run --cwd packages/core build && bun run --cwd packages/node build && bun run --cwd packages/cli build && bun run --cwd packages/api build",
+    "build:compiler": "bun run --cwd packages/reference-postgres build && bun run --cwd packages/data build",
+    "typecheck": "bun run --cwd packages/core typecheck && bun run --cwd packages/node typecheck && bun run --cwd packages/cli typecheck && bun run --cwd packages/api typecheck && bun run --cwd packages/browser-demo typecheck",
+    "typecheck:compiler": "bun run --cwd packages/reference-postgres typecheck && bun run --cwd packages/data typecheck && bun run alpha:release:typecheck",
+    "test": "bun run build && bun test packages/core/tests packages/node/tests packages/cli/tests packages/api/tests packages/browser-demo/tests",
+    "test:watch": "bun test --watch packages/core/tests packages/node/tests packages/cli/tests packages/api/tests packages/browser-demo/tests",
+    "test:parity": "RUN_PARITY_TESTS=true bun test packages/core/tests packages/node/tests packages/cli/tests",
     "alpha:release:typecheck": "tsc --noEmit -p tsconfig.release.json",
-    "alpha:release:build": "bun run --cwd packages/core build && bun scripts/browser-alpha-release.ts build",
-    "alpha:release:verify": "bun run --cwd packages/core build && bun scripts/browser-alpha-release.ts verify",
+    "alpha:release:build": "bun run --cwd packages/reference-postgres build && bun scripts/browser-alpha-release.ts build",
+    "alpha:release:refresh-lock": "bun run --cwd packages/reference-postgres build && bun scripts/browser-alpha-release.ts refresh-lock",
+    "alpha:release:verify": "bun run --cwd packages/reference-postgres build && bun scripts/browser-alpha-release.ts verify",
     "alpha:demo:build": "bun run --cwd packages/browser-demo build",
     "alpha:demo:stage": "bun run --cwd packages/browser-demo stage:analyzer",
     "alpha:demo:test": "bun run --cwd packages/browser-demo test",
@@ -23,7 +26,7 @@
     "alpha:demo:audit": "bun run --cwd packages/browser-demo audit:release",
     "alpha:demo:qualify": "bun run --cwd packages/browser-demo qualify",
     "cli": "node packages/cli/dist/index.js",
-    "dev": "concurrently -n core,grammar,api -c blue,magenta,green \"cd packages/core && bun run build:watch\" \"cd packages/grammar && bun run build:watch\" \"tsx --watch --env-file=.env packages/api/src/index.ts\"",
+    "dev": "bun run build && concurrently -n core,api -c blue,green \"bun run --cwd packages/core build:watch\" \"tsx --watch --env-file=.env packages/api/src/index.ts\"",
     "data": "node packages/data/dist/index.js"
   },
   "keywords": [

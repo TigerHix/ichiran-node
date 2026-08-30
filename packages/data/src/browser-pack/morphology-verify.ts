@@ -24,7 +24,7 @@ if (!artifactPath) {
   );
 }
 
-const moduleUrl = new URL('../../../portable/src/morphology.ts', import.meta.url).href;
+const moduleUrl = new URL('../../../core/src/morphology.ts', import.meta.url).href;
 const portable = await import(moduleUrl) as {
   openMorphology(input: ArrayBuffer | Uint8Array): MorphologyLookup;
 };

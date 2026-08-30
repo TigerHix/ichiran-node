@@ -3,7 +3,7 @@
  * Includes: best readings calculation, kanji statistics, etc.
  */
 
-import { getConnection } from '@ichiran/core';
+import { getConnection } from '@ichiran/reference-postgres';
 
 /**
  * Calculates and populates best_kana and best_kanji fields

@@ -13,8 +13,8 @@ import fs from 'fs';
 import path from 'path';
 import { XMLValidator } from 'fast-xml-parser';
 import { loadEntry } from './load-entry.js';
-import { getConnection } from '@ichiran/core';
-import { romanizeWordGeo } from '@ichiran/core';
+import { getConnection } from '@ichiran/reference-postgres';
+import { romanizeWordGeo } from '@ichiran/reference-postgres';
 import { addNewSense } from './errata.js';
 
 /**

@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { getConnection } from '@ichiran/core';
+import { getConnection } from '@ichiran/reference-postgres';
 
 type Sql = ReturnType<typeof getConnection>;
 type Route = 'kana' | 'kanji';

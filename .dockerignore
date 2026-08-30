@@ -1,0 +1,12 @@
+.git
+.env
+node_modules
+tmp
+work
+*.pgdump
+*.sql
+*.sql.gz
+packages/*/dist
+packages/browser-demo/dist
+packages/browser-demo/public/analyzer
+packages/data/JMdict_e.gz

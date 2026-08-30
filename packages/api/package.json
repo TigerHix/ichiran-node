@@ -14,16 +14,14 @@
     "build": "tsc -p tsconfig.json",
     "build:watch": "tsc -p tsconfig.json --watch",
     "typecheck": "tsc --noEmit",
-    "test": "echo 'No tests in @ichiran/api'"
+    "test": "bun test tests/"
   },
   "bin": {
     "ichiran-api": "./dist/index.js"
   },
   "dependencies": {
-    "@ichiran/core": "0.0.0",
-    "@ichiran/grammar": "0.0.0",
+    "@ichiran/node": "workspace:*",
     "dotenv": "^17.2.3"
   },
   "sideEffects": false
 }
-

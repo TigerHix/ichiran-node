@@ -11,7 +11,7 @@ import { loadCustomData } from './data/load-custom.js';
 import { addErrata } from './data/errata.js';
 import { loadKanjidic, getKanjiStats } from './data/load-kanjidic.js';
 import { calculateBestReadings, calculateKanjiStatistics, calculateReadingStatistics } from './data/maintenance.js';
-import { getConnection, setConnection, type ConnectionSpec } from '@ichiran/core';
+import { getConnection, setConnection, type ConnectionSpec } from '@ichiran/reference-postgres';
 import { config } from 'dotenv';
 
 // Helper to parse connection from env (moved from core)

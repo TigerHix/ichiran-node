@@ -1,7 +1,7 @@
 import { gunzipSync, gzipSync } from 'node:zlib';
 import { expect, test } from 'bun:test';
 import postgres from 'postgres';
-import { openDetailStore, memoryDetailSource } from '../../portable/src/details.js';
+import { openDetailStore, memoryDetailSource } from '../../core/src/details.js';
 import { buildDetailStore, loadDetailEntries } from '../src/browser-pack/details.js';
 
 const RUN_POSTGRES_TEST = process.env.RUN_DETAILS_POSTGRES === 'true';

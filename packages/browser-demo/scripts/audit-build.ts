@@ -25,10 +25,17 @@ const workerName = scripts.find(name => name.startsWith('analyzer.worker-'));
 if (!workerName) throw new Error('Production analyzer Worker chunk is missing');
 
 const worker = await readFile(join(assetDirectory, workerName), 'utf8');
+const mainNames = scripts.filter(name => name !== workerName);
 const main = (await Promise.all(
-  scripts.filter(name => name !== workerName).map(name => readFile(join(assetDirectory, name), 'utf8'))
+  mainNames.map(name => readFile(join(assetDirectory, name), 'utf8'))
 )).join('\n');
-const all = `${main}\n${worker}`;
+
+// The lazily loaded benchmark corpus is inert JSON provenance/data. Its source
+// paths may name reference-postgres tests without introducing runtime code.
+const runtimeNames = mainNames.filter(name => !name.startsWith('corpus-'));
+const runtime = `${(await Promise.all(
+  runtimeNames.map(name => readFile(join(assetDirectory, name), 'utf8'))
+)).join('\n')}\n${worker}`;
 
 if (!worker.includes('ICHIPACK') || !worker.includes('ichiran-browser-alpha')) {
   throw new Error('Analyzer pack/runtime is not linked into the Worker');
@@ -39,7 +46,9 @@ for (const forbidden of ['ICHIPACK', 'PortableAnalyzer', 'AnalyzerRuntime']) {
 for (const forbidden of [
   'postgres', 'node:fs', 'node:path', 'node:async_hooks', 'async_hooks', 'kernel-not-ready'
 ]) {
-  if (all.includes(forbidden)) throw new Error(`Browser bundle contains forbidden runtime text ${forbidden}`);
+  if (runtime.includes(forbidden)) {
+    throw new Error(`Browser bundle contains forbidden runtime text ${forbidden}`);
+  }
 }
 
 const serviceWorker = await readFile(join(output, 'sw.js'), 'utf8');

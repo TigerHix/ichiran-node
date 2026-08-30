@@ -1,53 +1,60 @@
-// CLI Parity Tests - Compare TypeScript CLI output with Lisp CLI output
-import { describe, test, expect } from 'bun:test';
-import { setupTests } from '@ichiran/testing';
+import { describe, test } from 'bun:test';
+
 import {
+  assertJsonParity,
+  assertTextParity,
   loadParityTestData,
-  runTsCli,
-  parseCliOutput,
-  normalizeJson,
+  runFullJsonParity,
+  runTextParity
 } from './cli-parity-helpers.js';
 
 const RUN_PARITY_TESTS = process.env.RUN_PARITY_TESTS === 'true';
+const PACK_CONFIGURED = Boolean(process.env.ICHIRAN_PACK_DIR);
 
 const { testCases, expectedOutputs } = loadParityTestData(
   'cli.json',
   'cli-lisp-outputs.json',
-  'Failed to load test data. Run "bun run preprocess-cli-tests" to generate expected outputs.'
+  'Failed to load captured current-Lisp CLI fixtures.'
 );
 
-setupTests();
+describe.skipIf(!RUN_PARITY_TESTS)('packed runtime parity configuration', () => {
+  test('locks the current-Lisp fixture counts', () => {
+    const counts = [
+      testCases.romanization.length,
+      testCases.info.length,
+      testCases.fullJson.length
+    ];
+    if (JSON.stringify(counts) !== JSON.stringify([5, 3, 252])) {
+      throw new Error(`Expected 5 romanization, 3 info, and 252 full-JSON fixtures; found ${counts.join(', ')}`);
+    }
+  });
 
-describe.skipIf(!RUN_PARITY_TESTS)('CLI Romanization Comparison', () => {
-  test.each(testCases.romanization)('romanization matches for: %s', async (text) => {
-    const tsOutput = await runTsCli(text);
-    const expectedOutput = expectedOutputs.romanization[text];
-    expect(tsOutput).toBe(expectedOutput);
+  test('uses an explicitly installed analyzer pack', () => {
+    if (!PACK_CONFIGURED) {
+      throw new Error('ICHIRAN_PACK_DIR must point to a complete analyzer release');
+    }
   });
 });
 
-describe.skipIf(!RUN_PARITY_TESTS)('CLI Info Output Comparison (-i flag)', () => {
-  test.each(testCases.info)('info output matches for: %s', async (text) => {
-    const tsOutput = await runTsCli(text, { withInfo: true });
-    const expectedOutput = expectedOutputs.info[text];
-    expect(tsOutput).toBe(expectedOutput);
-  });
-});
+describe.skipIf(!RUN_PARITY_TESTS || !PACK_CONFIGURED)('packed runtime vs current Lisp CLI', () => {
+  test('matches all 5 romanization fixtures', async () => {
+    assertTextParity(
+      'romanization',
+      await runTextParity(testCases.romanization, expectedOutputs.romanization)
+    );
+  }, 120_000);
 
-describe.skipIf(!RUN_PARITY_TESTS)('CLI Full JSON Comparison (-f flag)', () => {
-  test.each(testCases.fullJson)('full JSON matches for: $text (limit: $limit)', async (data) => {
-    const tsOutput = await runTsCli(data.text, { full: true, limit: data.limit });
-    const key = `${data.text}|${data.limit}`;
-    const expectedOutput = expectedOutputs.fullJson[key];
+  test('matches all 3 info fixtures', async () => {
+    assertTextParity(
+      'info',
+      await runTextParity(testCases.info, expectedOutputs.info, { withInfo: true })
+    );
+  }, 120_000);
 
-    const tsJson = parseCliOutput(tsOutput);
-    const expectedJson = parseCliOutput(expectedOutput);
-
-    // Normalize both outputs to sort alternatives deterministically before comparing
-    // This handles the case where alternatives have equal precedence and can appear in any order
-    const normalizedTs = normalizeJson(tsJson);
-    const normalizedExpected = normalizeJson(expectedJson);
-
-    expect(normalizedTs).toEqual(normalizedExpected);
-  });
+  test('matches all 252 ordinary full-JSON fixtures', async () => {
+    assertJsonParity(
+      'ordinary full JSON',
+      await runFullJsonParity(testCases.fullJson, expectedOutputs.fullJson)
+    );
+  }, 600_000);
 });

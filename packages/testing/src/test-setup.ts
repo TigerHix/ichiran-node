@@ -1,8 +1,8 @@
 // Shared test setup utilities
 import { beforeAll } from 'bun:test';
-import { setConnection, type ConnectionSpec } from '@ichiran/core/src/conn.js';
-import { initializeIchiran } from '@ichiran/core/src/init.js';
-import { initSuffixes } from '@ichiran/core/src/grammar/suffixCache.js';
+import { setConnection, type ConnectionSpec } from '@ichiran/reference-postgres/src/conn.js';
+import { initializeIchiran } from '@ichiran/reference-postgres/src/init.js';
+import { initSuffixes } from '@ichiran/reference-postgres/src/grammar/suffixCache.js';
 import './load-env.js'; // Load .env file
 
 // Helper to parse connection from env (for tests)

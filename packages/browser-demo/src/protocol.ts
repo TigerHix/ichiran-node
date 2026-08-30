@@ -2,7 +2,7 @@ import type {
   PortableAnalysisPath,
   PortableAnalysisResult,
   PortableAnalysisToken
-} from '@ichiran/portable';
+} from '@ichiran/core';
 
 export interface PackAssetManifest {
   readonly file: string;

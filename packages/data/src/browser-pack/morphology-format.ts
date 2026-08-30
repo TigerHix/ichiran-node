@@ -141,7 +141,7 @@ function writeMagic(bytes: Uint8Array): void {
 }
 
 /**
- * Encode the morphology section consumed by `@ichiran/portable`.
+ * Encode the morphology section consumed by `@ichiran/core`.
  *
  * The compiler supplies already-canonical arrays. Requiring that order here is
  * deliberate: unstable database iteration becomes a loud build error instead

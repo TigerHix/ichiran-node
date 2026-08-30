@@ -7,7 +7,7 @@ import {
   type KeyboardEvent,
   type ReactElement
 } from 'react';
-import type { DetailEntry } from '@ichiran/portable';
+import type { DetailEntry } from '@ichiran/core';
 import { AnalyzerClient, AnalyzerClientError, type InstallProgressValue } from './client.js';
 import type {
   AnalysisPath,

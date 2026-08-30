@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 import type postgres from 'postgres';
 
 // Keep these physical constants synchronized with
-// packages/portable/src/root-payload.ts. Cross-package round-trip tests lock the
+// packages/core/src/root-payload.ts. Cross-package round-trip tests lock the
 // writer and the zero-dependency reader together without making the compiler a
 // browser dependency.
 const FORMAT_VERSION = 2;

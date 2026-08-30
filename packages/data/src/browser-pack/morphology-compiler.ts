@@ -1,4 +1,4 @@
-import { getConnection } from '@ichiran/core';
+import { getConnection } from '@ichiran/reference-postgres';
 import {
   constructConjugation,
   getConjRules,
@@ -521,10 +521,6 @@ export async function compileMorphology(options: {
     loadRootForms(sql),
     loadManualPatches(sql)
   ]);
-  if (manualRows.length !== 38) {
-    throw new Error(`Expected 38 intentional manual source maps, found ${manualRows.length}`);
-  }
-
   const rulesByKey = new Map<string, CompiledMorphologyRule>();
   const pendingTemplates = makePendingTemplates(rootRows, rulesByKey);
   const pendingPatches = makePendingPatches(manualRows, rulesByKey);

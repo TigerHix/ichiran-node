@@ -7,20 +7,38 @@ import { promisify } from 'node:util';
 const execFile = promisify(execFileCallback);
 
 export const BROWSER_ALPHA_SOURCES_LOCK = 'browser-alpha/sources.lock.json';
+export const BROWSER_ALPHA_UPSTREAM_ORACLE = 'browser-alpha/upstream-oracle.json';
+export const FROZEN_POSTGRES_REFERENCE_COMMIT = 'd583720572fbf26ee201166ac47034c50380a571';
 
 export interface BrowserAlphaSourceLock {
-  readonly formatVersion: 1;
-  readonly oracleRepositoryCommit: string;
+  readonly formatVersion: 2;
+  readonly upstreamIchiran: {
+    readonly repository: string;
+    readonly commit: string;
+    readonly dataReleaseTag: string;
+  };
+  readonly postgresReference: {
+    readonly repositoryCommit: string;
+  };
+  readonly databaseDump: {
+    readonly url: string;
+    readonly bytes: number;
+    readonly sha256: string;
+  };
   readonly database: {
     readonly name: string;
     readonly postgresServerVersion: string;
     readonly encoding: string;
     readonly collation: string;
+    readonly ctype: string;
     readonly schemaSha256: string;
   };
   readonly toolchain: {
     readonly bun: string;
     readonly node: string;
+    readonly cargo: string;
+    readonly rustc: string;
+    readonly pgDump: string;
     readonly packFormat: number;
     readonly detailsFormat: number;
     readonly surfaceIndexFormat: number;
@@ -30,52 +48,13 @@ export interface BrowserAlphaSourceLock {
     readonly analyzerAnnotationsFormat: number;
   };
   readonly sources: readonly BrowserAlphaLockedSource[];
-  readonly projections: readonly BrowserAlphaLockedProjection[];
-  readonly directOrderProjection: {
-    readonly rows: number;
-    readonly surfaces: number;
-    readonly sha256: string;
-  };
-  readonly generatedProjection: {
-    readonly semanticPaths: number;
-    readonly matchedPaths: number;
-    readonly records: number;
-    readonly lookupOrderRecords: number;
-    readonly lookupOrderSourceRows: number;
-    readonly lookupOrderSourceSha256: string;
-    readonly lookupOrderSurfaces: number;
-    readonly lookupOrderClasses: number;
-    readonly lookupOrderEquivalenceClasses: number;
-    readonly lookupOrderComponents: number;
-    readonly lookupOrderCyclicComponents: number;
-    readonly lookupOrderEdges: number;
-    readonly lookupOrderMaxRank: number;
-    readonly lookupOrderSha256: string;
-    readonly lookupOrderExceptionSurfaces: number;
-    readonly lookupOrderExceptionClasses: number;
-    readonly lookupOrderExceptionLocators: number;
-    readonly countExceptions: number;
-    readonly physicalGroups: number;
-    readonly physicalMembers: number;
-    readonly propertyOverrides: number;
-    readonly maxMemberOrd: number;
-    readonly maxViaMemberOrd: number;
-    readonly maxPropOrd: number;
-    readonly sha256: string;
-  };
-  readonly artifacts?: BrowserAlphaArtifactCounts;
-  readonly artifactDigests?: BrowserAlphaArtifactDigests;
+  readonly artifacts: BrowserAlphaArtifactCounts;
+  readonly artifactDigests: BrowserAlphaArtifactDigests;
 }
 
 export interface BrowserAlphaLockedSource {
   readonly path: string;
   readonly bytes: number;
-  readonly sha256: string;
-}
-
-export interface BrowserAlphaLockedProjection {
-  readonly name: string;
-  readonly rows: number;
   readonly sha256: string;
 }
 
@@ -197,6 +176,9 @@ export interface BrowserAlphaArtifactDigests {
 export interface BrowserAlphaActualToolchain {
   readonly bun: string;
   readonly node: string;
+  readonly cargo: string;
+  readonly rustc: string;
+  readonly pgDump: string;
   readonly packFormat: number;
   readonly detailsFormat: number;
   readonly surfaceIndexFormat: number;
@@ -328,30 +310,71 @@ export function assertBrowserAlphaMorphologyAttestation(
   }
 }
 
+const ARTIFACT_COUNT_FIELDS = {
+  surfaceIndex: ['input', 'accepted', 'direct', 'morphology', 'overlap', 'omitted', 'states', 'edges'],
+  rootPayload: ['surfaces', 'forms', 'entries', 'restrictions'],
+  morphology: ['positions', 'rules', 'templates', 'suffixes', 'rootKeys', 'rootGroups', 'patches', 'tombstones'],
+  analyzerSupport: [
+    'suffixKeys', 'suffixValues', 'suffixClasses', 'counterKeys', 'counterVariants',
+    'collisions', 'generatedRules', 'generatedAliases'
+  ],
+  annotations: [
+    'blocks', 'splits', 'hints', 'generatedBlocks', 'generatedRoots', 'generatedRecords',
+    'lookupOrderRecords', 'lookupOrderRoots', 'lookupOrderBytes',
+    'lookupOrderExceptionSurfaces', 'lookupOrderExceptionClasses',
+    'lookupOrderExceptionLocators', 'lookupOrderExceptionBytes', 'generatedPhysicalGroups',
+    'generatedFactPairs', 'indexBytes', 'uncompressedBytes', 'compressedBytes',
+    'annotationUncompressedBytes', 'annotationCompressedBytes', 'generatedUncompressedBytes',
+    'generatedCompressedBytes', 'totalBytes', 'largestUncompressedBlock',
+    'largestGeneratedBlock', 'largestGeneratedCompressedBlock'
+  ],
+  details: ['entries', 'forms', 'senses', 'glosses', 'properties']
+} as const;
+
+function expectCommit(value: unknown, label: string): asserts value is string {
+  if (typeof value !== 'string' || !/^[0-9a-f]{40}$/.test(value)) {
+    throw new Error(`${label} must be a full lowercase Git object ID`);
+  }
+}
+
 /** Strict enough to reject a malformed lock before it can authorize a build. */
 export function parseBrowserAlphaSourceLock(text: string): BrowserAlphaSourceLock {
   const parsed: unknown = JSON.parse(text);
   if (typeof parsed !== 'object' || parsed === null) throw new Error('Sources lock must be an object');
   const lock = parsed as Partial<BrowserAlphaSourceLock>;
-  if (lock.formatVersion !== 1) throw new Error('Unsupported sources lock format');
-  expectString(lock.oracleRepositoryCommit, 'Oracle repository commit');
-  if (!/^[0-9a-f]{40}$/.test(lock.oracleRepositoryCommit)) {
-    throw new Error('Oracle repository commit must be a full lowercase Git object ID');
-  }
+  if (lock.formatVersion !== 2) throw new Error('Unsupported sources lock format');
   if (
-    !lock.database || !lock.toolchain || !Array.isArray(lock.sources)
-    || !Array.isArray(lock.projections) || !lock.directOrderProjection
-    || !lock.generatedProjection
+    !lock.upstreamIchiran || !lock.postgresReference || !lock.databaseDump
+    || !lock.database || !lock.toolchain || !Array.isArray(lock.sources)
+    || !lock.artifacts || !lock.artifactDigests
   ) {
-    throw new Error('Sources lock is missing database, toolchain, sources, or projections');
+    throw new Error('Sources lock is missing provenance, database, toolchain, sources, or artifacts');
   }
+  expectString(lock.upstreamIchiran.repository, 'Upstream Ichiran repository');
+  expectCommit(lock.upstreamIchiran.commit, 'Upstream Ichiran commit');
+  expectString(lock.upstreamIchiran.dataReleaseTag, 'Upstream Ichiran data release tag');
+  expectCommit(lock.postgresReference.repositoryCommit, 'PostgreSQL reference commit');
+  expectString(lock.databaseDump.url, 'Database dump URL');
+  let dumpUrl: URL;
+  try {
+    dumpUrl = new URL(lock.databaseDump.url);
+  } catch {
+    throw new Error('Database dump URL must be an absolute URL');
+  }
+  if (dumpUrl.protocol !== 'https:') throw new Error('Database dump URL must use HTTPS');
+  expectInteger(lock.databaseDump.bytes, 'Database dump bytes');
+  expectSha256(lock.databaseDump.sha256, 'Database dump digest');
   expectString(lock.database.name, 'Database name');
   expectString(lock.database.postgresServerVersion, 'PostgreSQL server version');
   expectString(lock.database.encoding, 'Database encoding');
   expectString(lock.database.collation, 'Database collation');
+  expectString(lock.database.ctype, 'Database character classification');
   expectSha256(lock.database.schemaSha256, 'Database schema digest');
   expectString(lock.toolchain.bun, 'Bun version');
   expectString(lock.toolchain.node, 'Node version');
+  expectString(lock.toolchain.cargo, 'Cargo version');
+  expectString(lock.toolchain.rustc, 'Rust version');
+  expectString(lock.toolchain.pgDump, 'pg_dump version');
   for (const field of [
     'packFormat', 'detailsFormat', 'surfaceIndexFormat', 'rootPayloadFormat',
     'morphologyFormat', 'analyzerSupportFormat'
@@ -369,96 +392,28 @@ export function parseBrowserAlphaSourceLock(text: string): BrowserAlphaSourceLoc
     expectInteger(source.bytes, `Source ${source.path} bytes`);
     expectSha256(source.sha256, `Source ${source.path} digest`);
   }
-  const projections = new Set<string>();
-  for (const [index, projection] of lock.projections.entries()) {
-    expectString(projection.name, `Projection ${index} name`);
-    if (projections.has(projection.name)) throw new Error(`Duplicate locked projection ${projection.name}`);
-    projections.add(projection.name);
-    expectInteger(projection.rows, `Projection ${projection.name} rows`);
-    expectSha256(projection.sha256, `Projection ${projection.name} digest`);
-  }
-  expectInteger(lock.directOrderProjection.rows, 'Direct-order projection rows');
-  expectInteger(lock.directOrderProjection.surfaces, 'Direct-order projection surfaces');
-  expectSha256(lock.directOrderProjection.sha256, 'Direct-order projection digest');
-  expectInteger(lock.generatedProjection.semanticPaths, 'Generated semantic paths');
-  expectInteger(lock.generatedProjection.matchedPaths, 'Generated matched paths');
-  expectInteger(lock.generatedProjection.records, 'Generated projection records');
-  expectInteger(lock.generatedProjection.lookupOrderRecords, 'Generated lookup-order records');
-  expectInteger(lock.generatedProjection.lookupOrderSourceRows, 'Generated lookup-order source rows');
-  expectSha256(
-    lock.generatedProjection.lookupOrderSourceSha256,
-    'Generated lookup-order source digest'
-  );
-  expectInteger(lock.generatedProjection.lookupOrderSurfaces, 'Generated lookup-order surfaces');
-  expectInteger(lock.generatedProjection.lookupOrderClasses, 'Generated lookup-order classes');
-  expectInteger(
-    lock.generatedProjection.lookupOrderEquivalenceClasses,
-    'Generated lookup-order equivalence classes'
-  );
-  expectInteger(lock.generatedProjection.lookupOrderComponents, 'Generated lookup-order components');
-  expectInteger(
-    lock.generatedProjection.lookupOrderCyclicComponents,
-    'Generated lookup-order cyclic components'
-  );
-  expectInteger(lock.generatedProjection.lookupOrderEdges, 'Generated lookup-order edges');
-  expectInteger(lock.generatedProjection.lookupOrderMaxRank, 'Generated lookup-order maximum rank');
-  expectSha256(lock.generatedProjection.lookupOrderSha256, 'Generated lookup-order digest');
-  expectInteger(
-    lock.generatedProjection.lookupOrderExceptionSurfaces,
-    'Generated lookup-order exception surfaces'
-  );
-  expectInteger(
-    lock.generatedProjection.lookupOrderExceptionClasses,
-    'Generated lookup-order exception classes'
-  );
-  expectInteger(
-    lock.generatedProjection.lookupOrderExceptionLocators,
-    'Generated lookup-order exception locators'
-  );
-  expectInteger(lock.generatedProjection.countExceptions, 'Generated count exceptions');
-  expectInteger(lock.generatedProjection.physicalGroups, 'Generated physical groups');
-  expectInteger(lock.generatedProjection.physicalMembers, 'Generated physical members');
-  expectInteger(lock.generatedProjection.propertyOverrides, 'Generated property overrides');
-  expectInteger(lock.generatedProjection.maxMemberOrd, 'Generated maximum member order');
-  expectInteger(lock.generatedProjection.maxViaMemberOrd, 'Generated maximum via-member order');
-  expectInteger(lock.generatedProjection.maxPropOrd, 'Generated maximum property order');
-  expectSha256(lock.generatedProjection.sha256, 'Generated projection digest');
-  if (lock.artifacts) {
-    if (!lock.artifacts.annotations) {
-      throw new Error('Sources lock is missing annotation artifact counts');
+
+  const artifactCounts = lock.artifacts as unknown as Record<string, Record<string, unknown>>;
+  for (const [artifactName, fields] of Object.entries(ARTIFACT_COUNT_FIELDS)) {
+    const counts = artifactCounts[artifactName];
+    if (!counts || typeof counts !== 'object') {
+      throw new Error(`Sources lock is missing ${artifactName} artifact counts`);
     }
-    expectInteger(
-      lock.artifacts.annotations.lookupOrderExceptionSurfaces,
-      'Annotation lookup-order exception surfaces'
-    );
-    expectInteger(
-      lock.artifacts.annotations.lookupOrderExceptionClasses,
-      'Annotation lookup-order exception classes'
-    );
-    expectInteger(
-      lock.artifacts.annotations.lookupOrderExceptionLocators,
-      'Annotation lookup-order exception locators'
-    );
-    expectInteger(
-      lock.artifacts.annotations.lookupOrderExceptionBytes,
-      'Annotation lookup-order exception bytes'
-    );
+    for (const field of fields) expectInteger(counts[field], `${artifactName}.${field}`);
   }
-  if (lock.artifactDigests) {
-    for (const name of [
-      'surfaceIndex', 'rootPayload', 'morphology', 'analyzerSupport',
-      'analyzerAnnotations', 'details'
-    ] as const) {
-      const artifact = lock.artifactDigests[name];
-      if (!artifact) throw new Error(`Sources lock is missing ${name} artifact digest`);
-      expectInteger(artifact.bytes, `${name} artifact bytes`);
-      expectSha256(artifact.sha256, `${name} artifact digest`);
-    }
-    validateMorphologyAttestation(
-      lock.artifactDigests.morphologyRelation,
-      'Morphology relation attestation'
-    );
+  for (const name of [
+    'surfaceIndex', 'rootPayload', 'morphology', 'analyzerSupport',
+    'analyzerAnnotations', 'details'
+  ] as const) {
+    const artifact = lock.artifactDigests[name];
+    if (!artifact) throw new Error(`Sources lock is missing ${name} artifact digest`);
+    expectInteger(artifact.bytes, `${name} artifact bytes`);
+    expectSha256(artifact.sha256, `${name} artifact digest`);
   }
+  validateMorphologyAttestation(
+    lock.artifactDigests.morphologyRelation,
+    'Morphology relation attestation'
+  );
   return lock as BrowserAlphaSourceLock;
 }
 
@@ -503,9 +458,9 @@ export async function verifyBrowserAlphaSources(
 }
 
 /**
- * Prove that the checked-out legacy analyzer is exactly the tree named by the
- * source lock. The oracle commit may predate browser-only work, but it must be
- * an ancestor and no tracked or untracked file below packages/core may differ.
+ * Prove that the frozen PostgreSQL implementation is byte-for-byte identical
+ * to packages/core/src at the named checkpoint. Package metadata and tests may
+ * change as the reference is made private; analyzer source may not.
  */
 export async function verifyBrowserAlphaOracleCore(
   repositoryRoot: string,
@@ -535,15 +490,30 @@ export async function verifyBrowserAlphaOracleCore(
     throw new Error(`Oracle repository commit is not an ancestor of HEAD: ${oracleRepositoryCommit}`);
   }
 
-  const changed = (await git([
-    'diff', '--name-only', oracleRepositoryCommit, '--', 'packages/core'
-  ])).trim();
-  if (changed.length !== 0) {
-    throw new Error(`Legacy oracle core differs from ${oracleRepositoryCommit}: ${changed}`);
+  const oldPrefix = 'packages/core/src/';
+  const referencePrefix = 'packages/reference-postgres/src/';
+  const expected = (await git([
+    'ls-tree', '-r', '--name-only', oracleRepositoryCommit, '--', 'packages/core/src'
+  ])).trim().split('\n').filter(Boolean);
+  const current = (await git([
+    'ls-files', '--', 'packages/reference-postgres/src'
+  ])).trim().split('\n').filter(Boolean);
+  const mapped = expected.map(path => `${referencePrefix}${path.slice(oldPrefix.length)}`);
+  if (mapped.join('\n') !== current.join('\n')) {
+    throw new Error(`Legacy oracle core file inventory differs from ${oracleRepositoryCommit}`);
+  }
+  for (let index = 0; index < expected.length; index++) {
+    const expectedBlob = (await git([
+      'rev-parse', `${oracleRepositoryCommit}:${expected[index]}`
+    ])).trim();
+    const actualBlob = (await git(['hash-object', mapped[index]!])).trim();
+    if (expectedBlob !== actualBlob) {
+      throw new Error(`Legacy oracle core differs from ${oracleRepositoryCommit}: ${mapped[index]}`);
+    }
   }
 
   const untracked = (await git([
-    'ls-files', '--others', '--exclude-standard', '--', 'packages/core'
+    'ls-files', '--others', '--exclude-standard', '--', 'packages/reference-postgres/src'
   ])).trim();
   if (untracked.length !== 0) {
     throw new Error(`Legacy oracle core contains untracked files: ${untracked}`);
@@ -557,6 +527,9 @@ export function verifyBrowserAlphaToolchain(
   const values: readonly [string, string | number, string | number][] = [
     ['Bun', expected.bun, actual.bun],
     ['Node', expected.node, actual.node],
+    ['Cargo', expected.cargo, actual.cargo],
+    ['Rust', expected.rustc, actual.rustc],
+    ['pg_dump', expected.pgDump, actual.pgDump],
     ['pack format', expected.packFormat, actual.packFormat],
     ['details format', expected.detailsFormat, actual.detailsFormat],
     ['surface-index format', expected.surfaceIndexFormat, actual.surfaceIndexFormat],
@@ -568,12 +541,6 @@ export function verifyBrowserAlphaToolchain(
   for (const [label, wanted, found] of values) {
     if (wanted !== found) throw new Error(`${label} ${found}; sources lock requires ${wanted}`);
   }
-}
-
-export function projectionRows(lock: BrowserAlphaSourceLock, name: string): number {
-  const projection = lock.projections.find((value) => value.name === name);
-  if (!projection) throw new Error(`Sources lock is missing projection ${name}`);
-  return projection.rows;
 }
 
 export function assertExactCount(actual: number, expected: number, label: string): void {

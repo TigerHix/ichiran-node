@@ -1,37 +1,34 @@
-// Hard CLI Parity Tests - Complex auxiliary verb chains
-import { describe, test, expect } from 'bun:test';
-import { setupTests } from '@ichiran/testing';
+import { describe, test } from 'bun:test';
+
 import {
+  assertJsonParity,
   loadParityTestData,
-  runTsCli,
-  parseCliOutput,
-  normalizeJson,
+  runFullJsonParity
 } from './cli-parity-helpers.js';
 
 const RUN_PARITY_TESTS = process.env.RUN_PARITY_TESTS === 'true';
+const RUN_PACKED_PARITY = RUN_PARITY_TESTS
+  && Boolean(process.env.ICHIRAN_PACK_DIR);
 
 const { testCases, expectedOutputs } = loadParityTestData(
   'hard-cli.json',
   'hard-cli-lisp-outputs.json',
-  'Failed to load test data. Run "bun run preprocess-hard-cli-tests" to generate expected outputs.'
+  'Failed to load captured current-Lisp hard CLI fixtures.'
 );
 
-setupTests();
-
-describe.skipIf(!RUN_PARITY_TESTS)('Hard CLI Full JSON Comparison (-f flag)', () => {
-  test.each(testCases.fullJson)('full JSON matches for: $text (limit: $limit)', async (data) => {
-    const tsOutput = await runTsCli(data.text, { full: true, limit: data.limit });
-    const key = `${data.text}|${data.limit}`;
-    const expectedOutput = expectedOutputs.fullJson[key];
-
-    const tsJson = parseCliOutput(tsOutput);
-    const expectedJson = parseCliOutput(expectedOutput);
-
-    // Normalize both outputs to sort alternatives deterministically before comparing
-    // This handles the case where alternatives have equal precedence and can appear in any order
-    const normalizedTs = normalizeJson(tsJson);
-    const normalizedExpected = normalizeJson(expectedJson);
-
-    expect(normalizedTs).toEqual(normalizedExpected);
+describe.skipIf(!RUN_PARITY_TESTS)('hard current-Lisp fixture configuration', () => {
+  test('locks all 149 fixtures', () => {
+    if (testCases.fullJson.length !== 149) {
+      throw new Error(`Expected 149 hard full-JSON fixtures; found ${testCases.fullJson.length}`);
+    }
   });
+});
+
+describe.skipIf(!RUN_PACKED_PARITY)('packed runtime vs current Lisp hard CLI', () => {
+  test('matches all 149 hard full-JSON fixtures', async () => {
+    assertJsonParity(
+      'hard full JSON',
+      await runFullJsonParity(testCases.fullJson, expectedOutputs.fullJson)
+    );
+  }, 600_000);
 });

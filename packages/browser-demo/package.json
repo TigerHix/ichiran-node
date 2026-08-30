@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "bun run --cwd ../portable build && vite build && bun scripts/finalize-sw.ts && bun scripts/audit-build.ts",
+    "build": "bun run --cwd ../core build && vite build && bun scripts/finalize-sw.ts && bun scripts/audit-build.ts",
     "stage:analyzer": "bun scripts/stage-analyzer.ts",
     "measure:shell": "bun scripts/measure-shell.ts",
     "audit:build": "bun scripts/audit-build.ts",
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",
-    "@ichiran/portable": "workspace:*",
+    "@ichiran/core": "workspace:*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },

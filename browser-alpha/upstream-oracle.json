@@ -1,0 +1,143 @@
+{
+  "formatVersion": 1,
+  "capturedAt": "2026-08-29T23:35:40Z",
+  "scope": "analyzer-only",
+  "grammarIncluded": false,
+  "ichiran": {
+    "repository": "https://github.com/tshatrov/ichiran.git",
+    "commit": "ea9583368e67cad22d94abae8dbcc8df96d99bcd",
+    "tree": "5352f7641feaeeb1c3db04ea80ced31ca117dbe3",
+    "describe": "ichiran-260118-3-gea95833",
+    "dataReleaseTag": "ichiran-260118",
+    "dataReleaseCommit": "0c37354003840076a32459d56e9e91c69d7df119"
+  },
+  "databaseDump": {
+    "assetId": 342093112,
+    "name": "ichiran-260118.pgdump",
+    "url": "https://github.com/tshatrov/ichiran/releases/download/ichiran-260118/ichiran-260118.pgdump",
+    "bytes": 200012956,
+    "sha256": "98a44e2cc88a65677da8b1f7124e7d6c904253eb1aae0ef16d2c7cc1dacdba82",
+    "archiveCreatedAt": "2026-01-18 03:55:59 PST",
+    "archiveDatabase": "jmdict0126",
+    "archiveFormat": "PostgreSQL custom dump 1.13-0, gzip",
+    "dumpedFromPostgres": "10.23 (Ubuntu 10.23-0ubuntu0.18.04.2+esm3)"
+  },
+  "jmdictdb": {
+    "repository": "https://gitlab.com/yamagoya/jmdictdb.git",
+    "commit": "02dc4aabd185a5b02c29fa6bc685bd78296741b3",
+    "dataTree": "529a73e7e4ae91842ac3b280f51a920f15e38105",
+    "selection": "last master commit before the GitHub release asset was published",
+    "sources": [
+      {
+        "path": "jmdictdb/data/conj.csv",
+        "bytes": 221,
+        "sha256": "46a915afc385e05dfc8174226a5ee7bb4231e30870068e77d52e10a3433b5852"
+      },
+      {
+        "path": "jmdictdb/data/conjo.csv",
+        "bytes": 34010,
+        "sha256": "b2919a24ecc7f3cdf9b9478eb13526b76cb086c53000316ecb1781ff947c14f3"
+      },
+      {
+        "path": "jmdictdb/data/kwpos.csv",
+        "bytes": 3999,
+        "sha256": "485b5ac5d8a23a8bcd18e69ca2fdf21d231fb740780a6c7d7ccf40d65ed831e4"
+      }
+    ]
+  },
+  "ichiranDataSources": [
+    {
+      "path": "data/romaji-map.csv",
+      "bytes": 2724,
+      "sha256": "621766c76d3b157072a8f2c83b7a94f4e6602c891c11d7097ed4d18a90e0ee46"
+    },
+    {
+      "path": "data/sources/extra.xml",
+      "bytes": 2134,
+      "sha256": "4a056ebe608cb7bb5284e412688ff634d3516f3249a54d37b33645d7a266093b"
+    },
+    {
+      "path": "data/sources/gyoseiku.csv",
+      "bytes": 10266,
+      "sha256": "23f706ff84b5c27da86be1d7a6066630d34617e1769edb0673c91d258851ce3f"
+    },
+    {
+      "path": "data/sources/jichitai.csv",
+      "bytes": 116379,
+      "sha256": "328bd0779b1bb69a4c1bc3773c5ff71cffb59c825377ca7f31eafda3860e3af8"
+    }
+  ],
+  "qualifiedOracle": {
+    "postgresServerVersion": "16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)",
+    "encoding": "UTF8",
+    "collation": "ja_JP.utf8",
+    "ctype": "ja_JP.utf8",
+    "bytesAfterErrata": 3897162775,
+    "normalizedPgDump16SchemaSha256": "481fe143a39d53ff6393ec83a77623f8824e1322c9ef7b8ded4503204bd0be98",
+    "postRestoreStep": "ichiran/maintenance:add-errata",
+    "rows": {
+      "entry": 2512557,
+      "rootEntry": 214700,
+      "kanjiText": 5435705,
+      "rootKanjiText": 227054,
+      "kanaText": 3289512,
+      "rootKanaText": 259364,
+      "sense": 251648,
+      "gloss": 434112,
+      "senseProp": 407620,
+      "restrictedReadings": 6332,
+      "conjugation": 2343276,
+      "conjProp": 2358731,
+      "conjSourceReading": 8386607,
+      "kanji": 13108,
+      "reading": 38977
+    }
+  },
+  "toolchain": {
+    "sbcl": "2.2.9.debian",
+    "quicklispDist": "2025-06-22",
+    "quicklispDistinfoSha256": "4131eb968a0efe00f7badd484a8a69441ce79b36b7d0b7c98a9abea8934aa409",
+    "pgRestore": "16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)"
+  },
+  "qualification": {
+    "upstreamAssertions": 782,
+    "passed": 782,
+    "failed": 0,
+    "executionErrors": 0,
+    "cliBytes": 23326384,
+    "cliSha256": "f48e5e7024e13020d46041be5223083107a851138f370c4b6610a4d69275adb3",
+    "topOneRegressions": [
+      { "input": "おそれたか", "segments": ["おそれた", "か"], "score": 192 },
+      { "input": "不確かなものに", "segments": ["不確か", "な", "もの", "に"], "score": 753 },
+      { "input": "まとめていかねばな", "segments": ["まとめていかねば", "な"], "score": 856 },
+      { "input": "来るからすき", "segments": ["来る", "から", "すき"], "score": 192 },
+      { "input": "けんかを引分ける", "segments": ["けんか", "を", "引分ける"], "score": 632 },
+      { "input": "取り計らいましょう", "segments": ["取り計らいましょう"], "score": 2323 },
+      { "input": "一日置いただけで", "segments": ["一日", "置いた", "だけ", "で"], "score": 608 }
+    ],
+    "jsonCrashRegressions": [
+      {
+        "input": "一本取られた",
+        "segments": ["一本取られた"],
+        "seq": 2268020,
+        "score": 1066,
+        "conjugation": "Past (~ta) via Passive"
+      },
+      {
+        "input": "一本とられた",
+        "segments": ["一本とられた"],
+        "seq": 2268020,
+        "score": 616,
+        "conjugation": null
+      }
+    ],
+    "gataiProbe": {
+      "input": "食べがたい",
+      "segments": ["食べがたい"],
+      "compound": ["食べ", "がたい"],
+      "suffixSeq": 2867504,
+      "suffixDescription": "difficult to...",
+      "score": 336
+    }
+  }
+}

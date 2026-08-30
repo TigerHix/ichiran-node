@@ -13,7 +13,7 @@
 import fs from 'fs';
 import { gunzipSync } from 'zlib';
 import { XMLParser } from 'fast-xml-parser';
-import { getConnection, asHiragana } from '@ichiran/core';
+import { getConnection, asHiragana } from '@ichiran/reference-postgres';
 
 interface KanjidicCharacter {
   literal: string;

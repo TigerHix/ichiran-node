@@ -1,0 +1,32 @@
+{
+  "name": "@ichiran/reference-postgres",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./src/*": {
+      "types": "./dist/*.d.ts",
+      "default": "./dist/*"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:watch": "tsc -p tsconfig.json --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test tests/"
+  },
+  "dependencies": {
+    "lru-cache": "^11.2.2",
+    "postgres": "^3.4.7"
+  },
+  "sideEffects": false
+}

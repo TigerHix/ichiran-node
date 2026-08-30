@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 import corpus from '../../../browser-alpha/bench/corpus.json';
 import cli from '../../cli/tests/data/cli.json';
 import hardCli from '../../cli/tests/data/hard-cli.json';
-import { loadAnalyzerParityCorpus } from '../../portable/tools/parity-corpus.js';
+import { loadAnalyzerParityCorpus } from '../../core/tools/parity-corpus.js';
 
 const repository = resolve(import.meta.dir, '..', '..', '..');
 const cliPath = 'packages/cli/tests/data/cli.json';
@@ -34,7 +34,7 @@ describe('browser benchmark corpus', () => {
     expect(corpus.groups['segmentation-short']).toEqual(
       parity.segmentation
         .map((fixture, index) => ({
-          source: 'packages/core/tests/data/segmentation.json',
+          source: 'packages/reference-postgres/tests/data/segmentation.json',
           index,
           text: fixture.input,
           limit: 1
@@ -47,7 +47,7 @@ describe('browser benchmark corpus', () => {
     expect(corpus.groups['modern-mixed-script']).toEqual(cliSlice(202, 252));
     expect(corpus.groups['top-n']).toEqual(cliSlice(1, 3));
     expect(corpus.groups.entities).toEqual(parity.entities.map((fixture, index) => ({
-      source: 'packages/core/tests/entity-hints.test.ts',
+      source: 'packages/reference-postgres/tests/entity-hints.test.ts',
       index,
       title: fixture.title,
       text: fixture.text,
@@ -55,18 +55,18 @@ describe('browser benchmark corpus', () => {
       entities: fixture.entities
     })));
     expect(corpus.groups.counters).toEqual(parity.counters.map((request, index) => ({
-      source: 'packages/core/tests/counters.test.ts',
+      source: 'packages/reference-postgres/tests/counters.test.ts',
       index,
       ...request
     })));
     expect(corpus.groups.numbers).toEqual([
-      { source: 'packages/core/tests/numbers.test.ts', index: 0, text: '100万', limit: 1 },
-      { source: 'packages/core/tests/numbers.test.ts', index: 1, text: '100万500', limit: 1 },
-      { source: 'packages/core/tests/numbers.test.ts', index: 2, text: '〇', limit: 1 },
-      { source: 'packages/core/tests/numbers.test.ts', index: 3, text: '一万一', limit: 1 },
-      { source: 'packages/core/tests/numbers.test.ts', index: 4, text: '二千二万一', limit: 1 },
-      { source: 'packages/core/tests/numbers.test.ts', index: 5, text: '百二十四億二千三百万四百三十', limit: 1 },
-      { source: 'packages/core/tests/number-split.test.ts', index: 0, text: '二〇二〇', limit: 1 }
+      { source: 'packages/reference-postgres/tests/numbers.test.ts', index: 0, text: '100万', limit: 1 },
+      { source: 'packages/reference-postgres/tests/numbers.test.ts', index: 1, text: '100万500', limit: 1 },
+      { source: 'packages/reference-postgres/tests/numbers.test.ts', index: 2, text: '〇', limit: 1 },
+      { source: 'packages/reference-postgres/tests/numbers.test.ts', index: 3, text: '一万一', limit: 1 },
+      { source: 'packages/reference-postgres/tests/numbers.test.ts', index: 4, text: '二千二万一', limit: 1 },
+      { source: 'packages/reference-postgres/tests/numbers.test.ts', index: 5, text: '百二十四億二千三百万四百三十', limit: 1 },
+      { source: 'packages/reference-postgres/tests/number-split.test.ts', index: 0, text: '二〇二〇', limit: 1 }
     ]);
     expect(corpus.groups['describe-random-access']).toEqual(cliSlice(3, 53));
   });

@@ -29,18 +29,34 @@ afterEach(async () => {
 
 function lock(source: { readonly bytes: number; readonly sha256: string }) {
   return {
-    formatVersion: 1,
-    oracleRepositoryCommit: '0123456789abcdef0123456789abcdef01234567',
+    formatVersion: 2,
+    upstreamIchiran: {
+      repository: 'https://github.com/tshatrov/ichiran.git',
+      commit: '0123456789abcdef0123456789abcdef01234567',
+      dataReleaseTag: 'ichiran-260118'
+    },
+    postgresReference: {
+      repositoryCommit: 'fedcba9876543210fedcba9876543210fedcba98'
+    },
+    databaseDump: {
+      url: 'https://example.test/ichiran-260118.pgdump',
+      bytes: 42,
+      sha256: '7'.repeat(64)
+    },
     database: {
       name: 'fixture',
       postgresServerVersion: '16.15',
       encoding: 'UTF8',
       collation: 'C.UTF-8',
+      ctype: 'C.UTF-8',
       schemaSha256: 'a'.repeat(64)
     },
     toolchain: {
       bun: '1.3.5',
       node: '22.18.0',
+      cargo: 'cargo 1.92.0',
+      rustc: 'rustc 1.92.0',
+      pgDump: 'pg_dump (PostgreSQL) 16.15',
       packFormat: 1,
       detailsFormat: 2,
       surfaceIndexFormat: 1,
@@ -50,40 +66,30 @@ function lock(source: { readonly bytes: number; readonly sha256: string }) {
       analyzerAnnotationsFormat: 4
     },
     sources: [{ path: 'data/source.txt', ...source }],
-    projections: [{ name: 'root-forms', rows: 3, sha256: 'b'.repeat(64) }],
-    directOrderProjection: {
-      rows: 2,
-      surfaces: 1,
-      sha256: 'd'.repeat(64)
-    },
-    generatedProjection: {
-      semanticPaths: 4,
-      matchedPaths: 5,
-      records: 3,
-      lookupOrderRecords: 4,
-      lookupOrderSourceRows: 7,
-      lookupOrderSourceSha256: '1'.repeat(64),
-      lookupOrderSurfaces: 2,
-      lookupOrderClasses: 3,
-      lookupOrderEquivalenceClasses: 3,
-      lookupOrderComponents: 3,
-      lookupOrderCyclicComponents: 1,
-      lookupOrderEdges: 2,
-      lookupOrderMaxRank: 1,
-      lookupOrderSha256: 'e'.repeat(64),
-      lookupOrderExceptionSurfaces: 1,
-      lookupOrderExceptionClasses: 2,
-      lookupOrderExceptionLocators: 2,
-      countExceptions: 2,
-      physicalGroups: 1,
-      physicalMembers: 1,
-      propertyOverrides: 1,
-      maxMemberOrd: 1,
-      maxViaMemberOrd: 0,
-      maxPropOrd: 0,
-      sha256: 'f'.repeat(64)
-    }
+    artifacts: artifactCounts(),
+    artifactDigests: artifactDigests(morphologyAttestation())
   } as const;
+}
+
+function artifactCounts() {
+  const counts = (...fields: string[]) => Object.fromEntries(fields.map(field => [field, 1]));
+  return {
+    surfaceIndex: counts('input', 'accepted', 'direct', 'morphology', 'overlap', 'omitted', 'states', 'edges'),
+    rootPayload: counts('surfaces', 'forms', 'entries', 'restrictions'),
+    morphology: counts('positions', 'rules', 'templates', 'suffixes', 'rootKeys', 'rootGroups', 'patches', 'tombstones'),
+    analyzerSupport: counts('suffixKeys', 'suffixValues', 'suffixClasses', 'counterKeys', 'counterVariants', 'collisions', 'generatedRules', 'generatedAliases'),
+    annotations: counts(
+      'blocks', 'splits', 'hints', 'generatedBlocks', 'generatedRoots', 'generatedRecords',
+      'lookupOrderRecords', 'lookupOrderRoots', 'lookupOrderBytes',
+      'lookupOrderExceptionSurfaces', 'lookupOrderExceptionClasses',
+      'lookupOrderExceptionLocators', 'lookupOrderExceptionBytes', 'generatedPhysicalGroups',
+      'generatedFactPairs', 'indexBytes', 'uncompressedBytes', 'compressedBytes',
+      'annotationUncompressedBytes', 'annotationCompressedBytes', 'generatedUncompressedBytes',
+      'generatedCompressedBytes', 'totalBytes', 'largestUncompressedBlock',
+      'largestGeneratedBlock', 'largestGeneratedCompressedBlock'
+    ),
+    details: counts('entries', 'forms', 'senses', 'glosses', 'properties')
+  };
 }
 
 function morphologyAttestation(): BrowserAlphaMorphologyAttestation {
@@ -152,75 +158,24 @@ describe('browser-alpha release orchestration', () => {
     await expect(verifyBrowserAlphaSources(root)).rejects.toThrow('bytes');
   });
 
-  test('rejects path escapes, duplicate projections, and toolchain drift', () => {
+  test('requires explicit provenance, complete artifacts, safe paths, and exact toolchain', () => {
     expect(() => parseBrowserAlphaSourceLock(JSON.stringify({
       ...lock({ bytes: 0, sha256: 'c'.repeat(64) }),
       sources: [{ path: '../outside', bytes: 0, sha256: 'c'.repeat(64) }]
     }))).toThrow('portable repository-relative');
-    expect(() => parseBrowserAlphaSourceLock(JSON.stringify({
-      ...lock({ bytes: 0, sha256: 'c'.repeat(64) }),
-      projections: [
-        { name: 'same', rows: 1, sha256: 'd'.repeat(64) },
-        { name: 'same', rows: 1, sha256: 'e'.repeat(64) }
-      ]
-    }))).toThrow('Duplicate locked projection');
 
     const complete = lock({ bytes: 0, sha256: 'c'.repeat(64) });
-    for (const [field, message] of [
-      ['lookupOrderSourceRows', 'Generated lookup-order source rows'],
-      ['lookupOrderSourceSha256', 'Generated lookup-order source digest'],
-      ['lookupOrderComponents', 'Generated lookup-order components'],
-      ['lookupOrderCyclicComponents', 'Generated lookup-order cyclic components'],
-      ['lookupOrderEdges', 'Generated lookup-order edges'],
-      ['lookupOrderMaxRank', 'Generated lookup-order maximum rank'],
-      ['lookupOrderExceptionSurfaces', 'Generated lookup-order exception surfaces'],
-      ['lookupOrderExceptionClasses', 'Generated lookup-order exception classes'],
-      ['lookupOrderExceptionLocators', 'Generated lookup-order exception locators']
-    ] as const) {
-      const incompleteGeneratedProjection: Record<string, unknown> = {
-        ...complete.generatedProjection
-      };
-      delete incompleteGeneratedProjection[field];
-      expect(() => parseBrowserAlphaSourceLock(JSON.stringify({
-        ...complete,
-        generatedProjection: incompleteGeneratedProjection
-      }))).toThrow(message);
-    }
-
-    const artifactFixture = {
-      annotations: {
-        lookupOrderExceptionSurfaces: 1,
-        lookupOrderExceptionClasses: 2,
-        lookupOrderExceptionLocators: 3,
-        lookupOrderExceptionBytes: 40
-      }
-    };
-    for (const [field, message] of [
-      ['lookupOrderExceptionSurfaces', 'Annotation lookup-order exception surfaces'],
-      ['lookupOrderExceptionClasses', 'Annotation lookup-order exception classes'],
-      ['lookupOrderExceptionLocators', 'Annotation lookup-order exception locators'],
-      ['lookupOrderExceptionBytes', 'Annotation lookup-order exception bytes']
-    ] as const) {
-      const annotations: Record<string, unknown> = { ...artifactFixture.annotations };
-      delete annotations[field];
-      expect(() => parseBrowserAlphaSourceLock(JSON.stringify({
-        ...complete,
-        artifacts: { annotations }
-      }))).toThrow(message);
-    }
-
-    const { directOrderProjection: _missingDirectOrderProjection, ...withoutDirectOrder } = complete;
-    expect(() => parseBrowserAlphaSourceLock(JSON.stringify(withoutDirectOrder)))
-      .toThrow('missing database, toolchain, sources, or projections');
-
-    const { sha256: _missingDirectOrderDigest, ...incompleteDirectOrderProjection } =
-      complete.directOrderProjection;
+    const { upstreamIchiran: _missingUpstream, ...withoutUpstream } = complete;
+    expect(() => parseBrowserAlphaSourceLock(JSON.stringify(withoutUpstream)))
+      .toThrow('missing provenance');
+    const incompleteAnnotations = { ...complete.artifacts.annotations } as Record<string, unknown>;
+    delete incompleteAnnotations.lookupOrderExceptionBytes;
     expect(() => parseBrowserAlphaSourceLock(JSON.stringify({
       ...complete,
-      directOrderProjection: incompleteDirectOrderProjection
-    }))).toThrow('Direct-order projection digest');
+      artifacts: { ...complete.artifacts, annotations: incompleteAnnotations }
+    }))).toThrow('annotations.lookupOrderExceptionBytes');
 
-    const expected = lock({ bytes: 0, sha256: 'c'.repeat(64) }).toolchain;
+    const expected = complete.toolchain;
     const actual: BrowserAlphaActualToolchain = { ...expected };
     expect(() => verifyBrowserAlphaToolchain(expected, actual)).not.toThrow();
     expect(() => verifyBrowserAlphaToolchain(expected, { ...actual, node: '23.0.0' }))
@@ -280,12 +235,12 @@ describe('browser-alpha release orchestration', () => {
   test('pins the complete legacy core tree to an ancestor commit', async () => {
     const root = await mkdtemp(join(tmpdir(), 'ichiran-oracle-test-'));
     temporaryDirectories.push(root);
-    await mkdir(join(root, 'packages/core'), { recursive: true });
+    await mkdir(join(root, 'packages/core/src'), { recursive: true });
     await execFile('git', ['-C', root, 'init', '-q']);
     await execFile('git', ['-C', root, 'config', 'user.email', 'fixture@example.test']);
     await execFile('git', ['-C', root, 'config', 'user.name', 'Fixture']);
-    await writeFile(join(root, 'packages/core/oracle.ts'), 'export const oracle = true;\n');
-    await execFile('git', ['-C', root, 'add', 'packages/core/oracle.ts']);
+    await writeFile(join(root, 'packages/core/src/oracle.ts'), 'export const oracle = true;\n');
+    await execFile('git', ['-C', root, 'add', 'packages/core/src/oracle.ts']);
     await execFile('git', ['-C', root, 'commit', '-qm', 'oracle']);
     const { stdout } = await execFile('git', ['-C', root, 'rev-parse', 'HEAD'], { encoding: 'utf8' });
     const oracleCommit = stdout.trim();
@@ -294,14 +249,24 @@ describe('browser-alpha release orchestration', () => {
     await writeFile(join(root, 'browser-alpha/readme.md'), 'browser work\n');
     await execFile('git', ['-C', root, 'add', 'browser-alpha/readme.md']);
     await execFile('git', ['-C', root, 'commit', '-qm', 'browser']);
+    await mkdir(join(root, 'packages/reference-postgres'), { recursive: true });
+    await execFile('git', [
+      '-C', root, 'mv', 'packages/core/src', 'packages/reference-postgres/src'
+    ]);
     await expect(verifyBrowserAlphaOracleCore(root, oracleCommit)).resolves.toBeUndefined();
 
-    await writeFile(join(root, 'packages/core/oracle.ts'), 'export const oracle = false;\n');
+    await writeFile(
+      join(root, 'packages/reference-postgres/src/oracle.ts'),
+      'export const oracle = false;\n'
+    );
     await expect(verifyBrowserAlphaOracleCore(root, oracleCommit)).rejects.toThrow(
       'Legacy oracle core differs'
     );
-    await writeFile(join(root, 'packages/core/oracle.ts'), 'export const oracle = true;\n');
-    await writeFile(join(root, 'packages/core/untracked.ts'), 'export {};\n');
+    await writeFile(
+      join(root, 'packages/reference-postgres/src/oracle.ts'),
+      'export const oracle = true;\n'
+    );
+    await writeFile(join(root, 'packages/reference-postgres/src/untracked.ts'), 'export {};\n');
     await expect(verifyBrowserAlphaOracleCore(root, oracleCommit)).rejects.toThrow(
       'untracked files'
     );

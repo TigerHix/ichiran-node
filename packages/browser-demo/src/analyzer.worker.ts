@@ -10,10 +10,11 @@ import {
   installedManifestSha256,
   markInstallCorrupt
 } from './worker/install.js';
-import { AnalyzerRuntime } from './worker/runtime.js';
+import type { IchiranRuntime } from '@ichiran/core';
+import { openAnalyzerRuntime } from './worker/runtime.js';
 import { createSerialExecutor } from './worker/serial-executor.js';
 
-let runtime: AnalyzerRuntime | null = null;
+let runtime: IchiranRuntime | null = null;
 let runtimeManifestSha256: string | null = null;
 const runSerially = createSerialExecutor();
 const INSTALL_LIFECYCLE_LOCK = 'ichiran-browser-alpha-install';
@@ -63,7 +64,7 @@ async function openInstalledUnlocked(): Promise<ReturnType<typeof inspectInstall
   const files = await installedFiles();
   if (!files) return inspectInstall(false);
   try {
-    runtime = await AnalyzerRuntime.open(files);
+    runtime = await openAnalyzerRuntime(files);
     runtimeManifestSha256 = files.manifest.manifestSha256;
     return inspectInstall(true);
   } catch (error) {
@@ -93,7 +94,7 @@ function isArtifactCorruption(error: unknown): boolean {
   ]).has(error.name);
 }
 
-async function withRuntime<T>(operation: (value: AnalyzerRuntime) => T | Promise<T>): Promise<T> {
+async function withRuntime<T>(operation: (value: IchiranRuntime) => T | Promise<T>): Promise<T> {
   while (true) {
     const outcome = await withLifecycleLock('shared', async () => {
       const installedIdentity = await installedManifestSha256();

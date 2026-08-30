@@ -13,7 +13,7 @@ import spacy
 nlp = spacy.load("ja_ginza")
 
 # Load test data
-test_data_path = Path(__file__).parent.parent / "packages/core/tests/data/segmentation.json"
+test_data_path = Path(__file__).parent.parent / "packages/reference-postgres/tests/data/segmentation.json"
 with open(test_data_path, "r", encoding="utf-8") as f:
     test_cases = json.load(f)
 

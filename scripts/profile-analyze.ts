@@ -4,8 +4,8 @@
  * Usage:
  *   GRAMMAR_PROFILE=1 tsx scripts/profile-analyze.ts
  */
-import { romanizeStar } from '../packages/core/src/romanize.js';
-import { transformRomanizeStarResult } from '../packages/core/src/presentation/transformers.js';
+import { romanizeStar } from '../packages/reference-postgres/src/romanize.js';
+import { transformRomanizeStarResult } from '../packages/reference-postgres/src/presentation/transformers.js';
 import { analyzeText } from '../packages/grammar/src/runtime.js';
 import { grammarCatalog } from '../packages/grammar/src/catalog.js';
 

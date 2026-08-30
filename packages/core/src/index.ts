@@ -1,72 +1,48 @@
-// @ichiran/core - Core segmentation, dict, romanization, and connection primitives
-
-// Connection primitives (no env parsing)
 export {
-  type ConnectionSpec,
-  setConnection,
-  getConnection,
-  withDb,
-  defineCache,
-  initAllCaches,
-  resetCache,
-  resetAllCaches,
-  resetQueryCount,
-  getQueryCount,
-  enableQueryLogging,
-  disableQueryLogging,
-  getQueryLog,
-  getQuerySummary,
-  setDebug,
-  dp,
-  DEBUG
-} from './conn.js';
-
-// Romanization
+  PACK_DIRECTORY_ENTRY_BYTES,
+  PACK_FORMAT_VERSION,
+  PACK_HEADER_BYTES,
+  PACK_MAGIC,
+  PACK_SECTION_ALIGNMENT
+} from './format.js';
+export { encodePack, openPack, PackFormatError, PackReader } from './pack.js';
+export * from './characters.js';
+export * from './analyzer.js';
+export * from './analyzer-annotations.js';
+export * from './analyzer-counters.js';
+export * from './analyzer-legacy.js';
+export * from './analyzer-paths.js';
+export * from './analyzer-rules.js';
+export * from './analyzer-scoring.js';
+export * from './analyzer-support.js';
+export * from './analyzer-types.js';
+export * from './details.js';
+export * from './morphology.js';
+export * from './numbers.js';
+export * from './romanization.js';
+export * from './root-payload.js';
+export * from './runtime.js';
 export {
-  romanize,
-  romanizeStar,
-  romanizeWordGeo,
-  type RomanizeStarResult,
-  type RomanizeStarResultTokenTuple,
-  type RomanizeStarResultSegment
-} from './romanize.js';
-
-// Presentation transforms
-export {
-  transformRomanizeStarResult,
-  type TransformedRomanizeStarResult,
-  type TransformedRomanizeStarResultTokenTuple
-} from './presentation/transformers.js';
-
-// Presentation types
-export type { EntityHint } from './presentation/types.js';
-
-// Dict types and functions
-export type { ConjInfoJson, WordInfoGlossJson } from './dict/presentation.js';
-export { WordInfo, dictSegment, simpleSegment, wordInfoGlossJson } from './dict/presentation.js';
-export { printPerfCountersAndReset } from './dict/profiling.js';
-export { findWordWithPos } from './dict/suffixHelpers.js';
-export { getConjDescription } from './dict/conj-description.js';
-
-// Shared types
-export type * from './types.js';
-
-// Character utilities
-export { 
-  CHAR_CLASS_HASH,
-  MODIFIER_CHARACTERS,
-  voiceChar,
-  basicSplit,
-  normalize,
-  simplifyNgrams,
-  testWord,
-  asHiragana
-} from './characters.js';
-
-// Kanji utilities
-export * from './kanji.js';
-
-// Init functions
-export { initializeIchiran, isInitialized, resetInitialization } from './init.js';
-export { initSuffixes } from './grammar/suffixCache.js';
-
+  openSurfaceIndex,
+  SurfaceIndex,
+  SurfaceIndexFormatError,
+  surfaceRoute,
+  SURFACE_INDEX_EDGE_BYTES,
+  SURFACE_INDEX_FORMAT_VERSION,
+  SURFACE_INDEX_HEADER_BYTES,
+  SURFACE_INDEX_MAGIC,
+  SURFACE_INDEX_SECTION_ID,
+  SURFACE_INDEX_STATE_BYTES
+} from './surface-index.js';
+export type {
+  PackFormatErrorCode,
+  PackManifest,
+  PackSection,
+  PackSectionInput
+} from './types.js';
+export type {
+  SurfaceIndexFormatErrorCode,
+  SurfaceIndexManifest,
+  SurfaceMatch,
+  SurfaceRoute
+} from './surface-index.js';

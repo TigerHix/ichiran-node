@@ -3,7 +3,7 @@
  * Ported from ~/ichiran/dict-load.lisp lines 316-480
  */
 
-import { getConnection } from '@ichiran/core';
+import { getConnection } from '@ichiran/reference-postgres';
 import {
   getPosIndex,
   getPosByIndex,

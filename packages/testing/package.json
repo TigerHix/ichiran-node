@@ -8,7 +8,7 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
-    "@ichiran/core": "workspace:*",
+    "@ichiran/reference-postgres": "workspace:*",
     "dotenv": "^17.2.3"
   },
   "devDependencies": {

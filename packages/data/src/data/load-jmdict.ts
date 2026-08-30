@@ -7,7 +7,7 @@ import fs from 'fs';
 import { createReadStream } from 'fs';
 import { createGunzip } from 'zlib';
 import type { Readable } from 'stream';
-import { getConnection } from '@ichiran/core';
+import { getConnection } from '@ichiran/reference-postgres';
 import { loadEntry, recalcEntryStatsAll } from './load-entry.js';
 import { loadConjugations, loadSecondaryConjugations } from './conjugate.js';
 import { loadCustomData } from './load-custom.js';

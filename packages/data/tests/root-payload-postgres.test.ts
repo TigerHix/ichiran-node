@@ -7,7 +7,7 @@ import {
   isRootPayloadKanaSurface,
   loadRootPayloadSource
 } from '../src/browser-pack/root-payload.js';
-import { openRootPayload } from '../../portable/src/root-payload.js';
+import { openRootPayload } from '../../core/src/root-payload.js';
 
 const RUN_POSTGRES_TEST = process.env.RUN_ROOT_PAYLOAD_POSTGRES === 'true';
 

@@ -8,25 +8,17 @@
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
-    },
-    "./src/*": {
-      "types": "./dist/*.d.ts",
-      "default": "./dist/*"
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "build:watch": "tsc -p tsconfig.json --watch",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
     "test": "bun test tests/"
-  },
-  "dependencies": {
-    "lru-cache": "^11.2.2",
-    "postgres": "^3.4.7"
   },
   "sideEffects": false
 }
-

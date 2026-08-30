@@ -41,8 +41,11 @@ import {
   assertBrowserAlphaMorphologyAttestation,
   assertBytesEqual,
   assertExactCount,
+  BROWSER_ALPHA_SOURCES_LOCK,
+  BROWSER_ALPHA_UPSTREAM_ORACLE,
   deterministicJson,
-  projectionRows,
+  FROZEN_POSTGRES_REFERENCE_COMMIT,
+  parseBrowserAlphaSourceLock,
   sha256Bytes,
   verifyBrowserAlphaOracleCore,
   verifyBrowserAlphaSources,
@@ -61,42 +64,71 @@ import {
   ANALYZER_LOOKUP_ORDER_RECORD_BYTES,
   AnalyzerAnnotationsReader,
   analyzerAnnotationsMemorySource
-} from '../packages/portable/src/analyzer-annotations.js';
+} from '../packages/core/src/analyzer-annotations.js';
 import {
   ANALYZER_SUPPORT_FORMAT_VERSION,
   ANALYZER_SUPPORT_SECTION_ID,
   openAnalyzerSupport
-} from '../packages/portable/src/analyzer-support.js';
+} from '../packages/core/src/analyzer-support.js';
 import {
   DETAILS_FORMAT_VERSION,
   memoryDetailSource,
   openDetailStore
-} from '../packages/portable/src/details.js';
-import { PACK_FORMAT_VERSION } from '../packages/portable/src/format.js';
-import { MORPHOLOGY_SECTION_ID, openMorphology } from '../packages/portable/src/morphology.js';
-import { encodePack, openPack } from '../packages/portable/src/pack.js';
+} from '../packages/core/src/details.js';
+import { PACK_FORMAT_VERSION } from '../packages/core/src/format.js';
+import { MORPHOLOGY_SECTION_ID, openMorphology } from '../packages/core/src/morphology.js';
+import { encodePack, openPack } from '../packages/core/src/pack.js';
 import {
   ROOT_PAYLOAD_FORMAT_VERSION,
   ROOT_PAYLOAD_SECTION_ID,
   openRootPayload
-} from '../packages/portable/src/root-payload.js';
+} from '../packages/core/src/root-payload.js';
 import {
   SURFACE_INDEX_FORMAT_VERSION,
   SURFACE_INDEX_SECTION_ID,
   openSurfaceIndex
-} from '../packages/portable/src/surface-index.js';
+} from '../packages/core/src/surface-index.js';
 
 const execFile = promisify(execFileCallback);
 const MORPHOLOGY_FORMAT_VERSION = 1;
 const RELEASE_STATS_FORMAT_VERSION = 1;
 const RELEASE_FILENAMES = ['hot.bin.gz', 'details.bin.gz', 'manifest.json', 'stats.json'] as const;
+const UPSTREAM_ICHIRAN_COMMIT = 'ea9583368e67cad22d94abae8dbcc8df96d99bcd';
+const UPSTREAM_DATA_RELEASE_TAG = 'ichiran-260118';
+const RELEASE_SOURCE_PATHS = [
+  'data/conj.csv',
+  'data/conjo.csv',
+  'data/kwpos.csv',
+  'data/sources/extra.xml',
+  'data/sources/gyoseiku.csv',
+  'data/sources/jichitai.csv',
+  'packages/data/JMdict_e.gz'
+] as const;
+
+interface UpstreamOracle {
+  readonly scope: string;
+  readonly grammarIncluded: boolean;
+  readonly ichiran: {
+    readonly repository: string;
+    readonly commit: string;
+    readonly dataReleaseTag: string;
+  };
+  readonly databaseDump: {
+    readonly url: string;
+    readonly bytes: number;
+    readonly sha256: string;
+  };
+  readonly qualifiedOracle: {
+    readonly normalizedPgDump16SchemaSha256: string;
+  };
+}
 
 interface CliOptions {
-  readonly command: 'build' | 'verify';
+  readonly command: 'build' | 'verify' | 'refresh-lock';
   readonly database?: string;
-  readonly out: string;
+  readonly out?: string;
   readonly packVersion?: string;
-  readonly shellBytes: number;
+  readonly shellBytes?: number;
   readonly allowDirty: boolean;
 }
 
@@ -117,6 +149,7 @@ interface DatabaseIdentity {
   readonly postgresServerVersion: string;
   readonly encoding: string;
   readonly collation: string;
+  readonly ctype: string;
   readonly readOnly: boolean;
 }
 
@@ -130,33 +163,6 @@ interface ComponentBuilds {
   readonly details: ReturnType<typeof buildDetailStore>;
   readonly supportIssueCount: number;
   readonly supportIssuesSha256: string;
-  readonly generatedProjection: {
-    readonly semanticPaths: number;
-    readonly matchedPaths: number;
-    readonly records: number;
-    readonly lookupOrderRecords: number;
-    readonly lookupOrderSourceRows: number;
-    readonly lookupOrderSourceSha256: string;
-    readonly lookupOrderSurfaces: number;
-    readonly lookupOrderClasses: number;
-    readonly lookupOrderEquivalenceClasses: number;
-    readonly lookupOrderComponents: number;
-    readonly lookupOrderCyclicComponents: number;
-    readonly lookupOrderEdges: number;
-    readonly lookupOrderMaxRank: number;
-    readonly lookupOrderSha256: string;
-    readonly lookupOrderExceptionSurfaces: number;
-    readonly lookupOrderExceptionClasses: number;
-    readonly lookupOrderExceptionLocators: number;
-    readonly countExceptions: number;
-    readonly physicalGroups: number;
-    readonly physicalMembers: number;
-    readonly propertyOverrides: number;
-    readonly maxMemberOrd: number;
-    readonly maxViaMemberOrd: number;
-    readonly maxPropOrd: number;
-    readonly sha256: string;
-  };
   readonly database: DatabaseIdentity;
 }
 
@@ -177,7 +183,8 @@ function usage(message?: string): never {
   console.error(`usage:
   bun run alpha:release:build -- --database <url> --out <directory> \\
     --pack-version <version> --shell-bytes <integer> [--allow-dirty]
-  bun run alpha:release:verify -- --out <directory> --shell-bytes <integer> [--allow-dirty]`);
+  bun run alpha:release:verify -- --out <directory> --shell-bytes <integer> [--allow-dirty]
+  bun run alpha:release:refresh-lock -- --database <url> [--allow-dirty]`);
   process.exit(2);
 }
 
@@ -190,7 +197,9 @@ function parseNonNegativeInteger(text: string, label: string): number {
 
 function parseArgs(argv: readonly string[]): CliOptions {
   const command = argv[0];
-  if (command !== 'build' && command !== 'verify') usage('first argument must be build or verify');
+  if (command !== 'build' && command !== 'verify' && command !== 'refresh-lock') {
+    usage('first argument must be build, verify, or refresh-lock');
+  }
   let database: string | undefined;
   let out: string | undefined;
   let packVersion: string | undefined;
@@ -211,12 +220,17 @@ function parseArgs(argv: readonly string[]): CliOptions {
     else if (argument === '--help' || argument === '-h') usage();
     else usage(`unknown argument ${argument}`);
   }
-  if (!out) usage('--out is required');
-  if (shellBytes === undefined) usage('--shell-bytes is required');
-  if (command === 'build' && !database) usage('--database is required for build');
+  if (command !== 'refresh-lock' && !out) usage('--out is required');
+  if (command !== 'refresh-lock' && shellBytes === undefined) usage('--shell-bytes is required');
+  if ((command === 'build' || command === 'refresh-lock') && !database) {
+    usage(`--database is required for ${command}`);
+  }
   if (command === 'build' && !packVersion) usage('--pack-version is required for build');
   if (command === 'verify' && (database || packVersion)) {
     usage('--database and --pack-version apply only to build');
+  }
+  if (command === 'refresh-lock' && (out || packVersion || shellBytes !== undefined)) {
+    usage('--out, --pack-version, and --shell-bytes do not apply to refresh-lock');
   }
   return { command, database, out, packVersion, shellBytes, allowDirty };
 }
@@ -231,6 +245,59 @@ async function sourceCommit(root: string): Promise<string> {
   const commit = stdout.trim();
   if (!/^[0-9a-f]{40}$/.test(commit)) throw new Error(`Git returned invalid source commit ${commit}`);
   return commit;
+}
+
+function fullCommit(value: unknown, label: string): asserts value is string {
+  if (typeof value !== 'string' || !/^[0-9a-f]{40}$/.test(value)) {
+    throw new Error(`${label} must be a full lowercase Git object ID`);
+  }
+}
+
+function sha256(value: unknown, label: string): asserts value is string {
+  if (typeof value !== 'string' || !/^[0-9a-f]{64}$/.test(value)) {
+    throw new Error(`${label} must be a lowercase SHA-256`);
+  }
+}
+
+async function upstreamOracle(root: string): Promise<UpstreamOracle> {
+  const bytes = await readFile(join(root, BROWSER_ALPHA_UPSTREAM_ORACLE));
+  const parsed: unknown = JSON.parse(bytes.toString('utf8'));
+  if (typeof parsed !== 'object' || parsed === null) throw new Error('Upstream oracle must be an object');
+  const oracle = parsed as Partial<UpstreamOracle>;
+  if (oracle.scope !== 'analyzer-only' || oracle.grammarIncluded !== false) {
+    throw new Error('Upstream oracle must be analyzer-only and exclude grammar');
+  }
+  if (!oracle.ichiran || !oracle.databaseDump || !oracle.qualifiedOracle) {
+    throw new Error('Upstream oracle is missing Ichiran, dump, or qualified database provenance');
+  }
+  if (oracle.ichiran.commit !== UPSTREAM_ICHIRAN_COMMIT) {
+    throw new Error(`Upstream oracle commit must be ${UPSTREAM_ICHIRAN_COMMIT}`);
+  }
+  if (oracle.ichiran.dataReleaseTag !== UPSTREAM_DATA_RELEASE_TAG) {
+    throw new Error(`Upstream oracle data release must be ${UPSTREAM_DATA_RELEASE_TAG}`);
+  }
+  if (typeof oracle.ichiran.repository !== 'string' || oracle.ichiran.repository.length === 0) {
+    throw new Error('Upstream oracle repository must be a string');
+  }
+  fullCommit(oracle.ichiran.commit, 'Upstream Ichiran commit');
+  if (typeof oracle.databaseDump.url !== 'string'
+    || !Number.isSafeInteger(oracle.databaseDump.bytes)
+    || oracle.databaseDump.bytes <= 0) {
+    throw new Error('Upstream database dump URL and byte length are invalid');
+  }
+  sha256(oracle.databaseDump.sha256, 'Upstream database dump digest');
+  sha256(
+    oracle.qualifiedOracle.normalizedPgDump16SchemaSha256,
+    'Qualified database schema digest'
+  );
+  return oracle as UpstreamOracle;
+}
+
+async function measureReleaseSources(root: string) {
+  return await Promise.all(RELEASE_SOURCE_PATHS.map(async (path) => {
+    const bytes = new Uint8Array(await readFile(join(root, path)));
+    return { path, bytes: bytes.byteLength, sha256: sha256Bytes(bytes) };
+  }));
 }
 
 async function assertCleanSource(root: string, allowDirty: boolean): Promise<void> {
@@ -256,12 +323,20 @@ function releaseOutputPath(root: string, value: string): string {
 }
 
 async function actualToolchain() {
-  const { stdout } = await execFile('node', ['--version'], { encoding: 'utf8' });
-  const node = stdout.trim().replace(/^v/, '');
+  const [nodeResult, cargoResult, rustcResult, pgDumpResult] = await Promise.all([
+    execFile('node', ['--version'], { encoding: 'utf8' }),
+    execFile('cargo', ['--version'], { encoding: 'utf8' }),
+    execFile('rustc', ['--version'], { encoding: 'utf8' }),
+    execFile('pg_dump', ['--version'], { encoding: 'utf8' })
+  ]);
+  const node = nodeResult.stdout.trim().replace(/^v/, '');
   if (!/^\d+\.\d+\.\d+$/.test(node)) throw new Error(`Node returned invalid version ${node}`);
   return {
     bun: Bun.version,
     node,
+    cargo: cargoResult.stdout.trim(),
+    rustc: rustcResult.stdout.trim(),
+    pgDump: pgDumpResult.stdout.trim(),
     packFormat: PACK_FORMAT_VERSION,
     detailsFormat: DETAILS_FORMAT_VERSION,
     surfaceIndexFormat: SURFACE_INDEX_FORMAT_VERSION,
@@ -352,12 +427,14 @@ async function databaseIdentity(sql: Sql): Promise<DatabaseIdentity> {
     postgresServerVersion: string;
     encoding: string;
     collation: string;
+    ctype: string;
     readOnly: boolean;
   }>>(`
     SELECT current_database() AS name,
            current_setting('server_version') AS "postgresServerVersion",
            pg_encoding_to_char(d.encoding) AS encoding,
            d.datcollate AS collation,
+           d.datctype AS ctype,
            current_setting('transaction_read_only') = 'on' AS "readOnly"
     FROM pg_database d
     WHERE d.datname = current_database()
@@ -374,7 +451,8 @@ function assertDatabaseIdentity(actual: DatabaseIdentity, lock: BrowserAlphaSour
     ['name', expected.name, actual.name],
     ['server version', expected.postgresServerVersion, actual.postgresServerVersion],
     ['encoding', expected.encoding, actual.encoding],
-    ['collation', expected.collation, actual.collation]
+    ['collation', expected.collation, actual.collation],
+    ['character classification', expected.ctype, actual.ctype]
   ] as const) {
     if (wanted !== found) throw new Error(`Database ${label} ${found}; sources lock requires ${wanted}`);
   }
@@ -437,7 +515,6 @@ async function deterministicSupport(sql: Sql): Promise<{
   readonly annotations: ReturnType<typeof buildAnalyzerAnnotations>;
   readonly supportIssueCount: number;
   readonly supportIssuesSha256: string;
-  readonly generatedProjection: ComponentBuilds['generatedProjection'];
 }> {
   // The pinned generated CTE is badly underestimated by PostgreSQL 16, which
   // otherwise chooses a quadratic nested loop for the physical-member join.
@@ -467,34 +544,7 @@ async function deterministicSupport(sql: Sql): Promise<{
     support,
     annotations,
     supportIssueCount: issues.length,
-    supportIssuesSha256: issueDigest(issues),
-    generatedProjection: {
-      semanticPaths: source.generated.semanticPaths,
-      matchedPaths: source.generated.matchedPaths,
-      records: source.generated.records.length,
-      lookupOrderRecords: source.generated.lookupOrders.length,
-      lookupOrderSourceRows: source.generated.lookupOrderSourceRows,
-      lookupOrderSourceSha256: source.generated.lookupOrderSourceSha256,
-      lookupOrderSurfaces: source.generated.lookupOrderSurfaces,
-      lookupOrderClasses: source.generated.lookupOrderClasses,
-      lookupOrderEquivalenceClasses: source.generated.lookupOrderEquivalenceClasses,
-      lookupOrderComponents: source.generated.lookupOrderComponents,
-      lookupOrderCyclicComponents: source.generated.lookupOrderCyclicComponents,
-      lookupOrderEdges: source.generated.lookupOrderEdges,
-      lookupOrderMaxRank: source.generated.lookupOrderMaxRank,
-      lookupOrderSha256: source.generated.lookupOrderProjectionSha256,
-      lookupOrderExceptionSurfaces: source.generated.lookupOrderExceptions.length,
-      lookupOrderExceptionClasses: source.generated.lookupOrderExceptionClasses,
-      lookupOrderExceptionLocators: source.generated.lookupOrderExceptionLocators,
-      countExceptions: source.generated.countExceptions,
-      physicalGroups: source.generated.physicalGroups,
-      physicalMembers: source.generated.physicalMembers,
-      propertyOverrides: source.generated.propertyOverrides,
-      maxMemberOrd: source.generated.maxMemberOrd,
-      maxViaMemberOrd: source.generated.maxViaMemberOrd,
-      maxPropOrd: source.generated.maxPropOrd,
-      sha256: source.generated.projectionSha256
-    }
+    supportIssuesSha256: issueDigest(issues)
   };
 }
 
@@ -502,10 +552,8 @@ async function loadComponents(
   root: string,
   database: string,
   temporary: string,
-  lock: BrowserAlphaSourceLock
+  lock?: BrowserAlphaSourceLock
 ): Promise<Omit<ComponentBuilds, 'surface'>> {
-  if (!lock.artifactDigests) throw new Error('Sources lock is missing exact artifact digests');
-  const lockedArtifacts = lock.artifactDigests;
   const connectionOptions = {
     max: 1,
     prepare: false,
@@ -552,7 +600,7 @@ async function loadComponents(
     return await sql.begin('isolation level repeatable read read only', async (transaction) => {
       const tx = transaction as unknown as Sql;
       const identity = await databaseIdentity(tx);
-      assertDatabaseIdentity(identity, lock);
+      if (lock) assertDatabaseIdentity(identity, lock);
       // The generated projection performs large deterministic DISTINCT/ORDER BY
       // passes. PostgreSQL's 4 MiB default spills them heavily on the pinned
       // snapshot; this remains transaction-local and does not change output.
@@ -561,10 +609,12 @@ async function loadComponents(
       const rootBuild = await deterministicRoot(tx);
       const detailBuild = await deterministicDetails(tx);
       const morphologyBuild = await deterministicMorphology(tx, join(root, 'data'));
-      const lockedMorphology = lockedArtifacts.morphology;
-      if (morphologyBuild.bytes.byteLength !== lockedMorphology.bytes
-        || sha256Bytes(morphologyBuild.bytes) !== lockedMorphology.sha256) {
-        throw new Error('Compiled morphology section does not match the sources lock');
+      if (lock) {
+        const lockedMorphology = lock.artifactDigests.morphology;
+        if (morphologyBuild.bytes.byteLength !== lockedMorphology.bytes
+          || sha256Bytes(morphologyBuild.bytes) !== lockedMorphology.sha256) {
+          throw new Error('Compiled morphology section does not match the sources lock');
+        }
       }
       // Keep the exhaustive gate on these exact bytes and in this transaction;
       // otherwise the relation digest would not attest the artifact we publish.
@@ -576,10 +626,12 @@ async function loadComponents(
           console.error(`verified morphology ${groups.toLocaleString()} surfaces / ${rows.toLocaleString()} rows`);
         }
       }));
-      assertBrowserAlphaMorphologyAttestation(
-        measuredMorphology,
-        lockedArtifacts.morphologyRelation
-      );
+      if (lock) {
+        assertBrowserAlphaMorphologyAttestation(
+          measuredMorphology,
+          lock.artifactDigests.morphologyRelation
+        );
+      }
       // This must remain sequential: the legacy cache connection override used
       // by the support freezer is process-global for the duration of this call.
       const supportBuild = await deterministicSupport(tx);
@@ -607,58 +659,10 @@ function exactObjectCounts(actual: object, expected: object, label: string): voi
 
 function assertArtifactCounts(builds: ComponentBuilds, lock: BrowserAlphaSourceLock): void {
   const expected = lock.artifacts;
-  if (!expected) throw new Error('Sources lock is missing exact artifact counts');
   const actual = artifactCounts(builds);
   for (const name of [
     'surfaceIndex', 'rootPayload', 'morphology', 'analyzerSupport', 'annotations', 'details'
   ] as const) exactObjectCounts(actual[name], expected[name], name);
-  const {
-    sha256: expectedGeneratedSha256,
-    lookupOrderSha256: expectedLookupOrderSha256,
-    lookupOrderSourceSha256: expectedLookupOrderSourceSha256,
-    ...expectedGeneratedCounts
-  } = lock.generatedProjection;
-  exactObjectCounts(builds.generatedProjection, expectedGeneratedCounts, 'generatedProjection');
-  if (builds.generatedProjection.sha256 !== expectedGeneratedSha256) {
-    throw new Error(
-      `generatedProjection digest ${builds.generatedProjection.sha256}; sources lock requires ${expectedGeneratedSha256}`
-    );
-  }
-  if (builds.generatedProjection.lookupOrderSha256 !== expectedLookupOrderSha256) {
-    throw new Error(
-      `lookupOrderProjection digest ${builds.generatedProjection.lookupOrderSha256}; sources lock requires ${expectedLookupOrderSha256}`
-    );
-  }
-  if (builds.generatedProjection.lookupOrderSourceSha256 !== expectedLookupOrderSourceSha256) {
-    throw new Error(
-      `lookupOrderSource digest ${builds.generatedProjection.lookupOrderSourceSha256}; sources lock requires ${expectedLookupOrderSourceSha256}`
-    );
-  }
-  exactObjectCounts(
-    builds.root.stats.directOrderProjection,
-    {
-      rows: lock.directOrderProjection.rows,
-      surfaces: lock.directOrderProjection.surfaces
-    },
-    'directOrderProjection'
-  );
-  if (builds.root.stats.directOrderProjection.sha256 !== lock.directOrderProjection.sha256) {
-    throw new Error(
-      `directOrderProjection digest ${builds.root.stats.directOrderProjection.sha256}; sources lock requires ${lock.directOrderProjection.sha256}`
-    );
-  }
-
-  assertExactCount(builds.root.stats.counts.entries, projectionRows(lock, 'root-entry-score-facts'), 'root entries');
-  assertExactCount(builds.root.stats.counts.restrictions, projectionRows(lock, 'restricted-readings'), 'restrictions');
-  assertExactCount(builds.details.stats.entryCount, projectionRows(lock, 'root-entry-score-facts'), 'detail entries');
-  assertExactCount(builds.details.stats.formCount, projectionRows(lock, 'root-forms'), 'detail forms');
-  assertExactCount(builds.details.stats.senseCount, projectionRows(lock, 'root-senses'), 'detail senses');
-  assertExactCount(builds.details.stats.glossCount, projectionRows(lock, 'root-glosses'), 'detail glosses');
-  assertExactCount(
-    builds.details.stats.propertyCount,
-    projectionRows(lock, 'root-sense-properties'),
-    'detail properties'
-  );
 }
 
 function componentDigests(builds: ComponentBuilds): Omit<BrowserAlphaArtifactDigests, 'morphologyRelation'> {
@@ -675,7 +679,6 @@ function componentDigests(builds: ComponentBuilds): Omit<BrowserAlphaArtifactDig
 
 function assertArtifactDigests(builds: ComponentBuilds, lock: BrowserAlphaSourceLock): void {
   const expected = lock.artifactDigests;
-  if (!expected) throw new Error('Sources lock is missing exact artifact digests');
   const actual = componentDigests(builds);
   for (const name of [
     'surfaceIndex', 'rootPayload', 'morphology', 'analyzerSupport',
@@ -800,8 +803,6 @@ function statsReport(
       schemaSha256: source.lock.database.schemaSha256
     },
     artifacts: artifactCounts(builds),
-    directOrderProjection: builds.root.stats.directOrderProjection,
-    generatedProjection: builds.generatedProjection,
     supportIssues: {
       count: builds.supportIssueCount,
       sha256: builds.supportIssuesSha256
@@ -1024,34 +1025,38 @@ async function publish(
   }
 }
 
+async function compileComponents(
+  root: string,
+  database: string,
+  temporary: string,
+  lock?: BrowserAlphaSourceLock
+): Promise<ComponentBuilds> {
+  const compiler = await buildSurfaceCompiler(root);
+  const partial = await loadComponents(root, database, temporary, lock);
+  const firstSurfacePath = join(temporary, 'surface-first.bin');
+  const secondSurfacePath = join(temporary, 'surface-second.bin');
+  const firstStats = await runSurfaceCompiler(
+    compiler, join(temporary, 'surface.tsv'), firstSurfacePath, root
+  );
+  const secondStats = await runSurfaceCompiler(
+    compiler, join(temporary, 'surface.tsv'), secondSurfacePath, root
+  );
+  if (JSON.stringify(firstStats) !== JSON.stringify(secondStats)) {
+    throw new Error('Surface-index rebuild changed compiler counts');
+  }
+  const surfaceBytes = new Uint8Array(await readFile(firstSurfacePath));
+  assertBytesEqual(surfaceBytes, new Uint8Array(await readFile(secondSurfacePath)), 'Surface index');
+  return { ...partial, surface: { bytes: surfaceBytes, stats: firstStats } };
+}
+
 async function build(options: CliOptions, root: string): Promise<void> {
   const source = await verifyBrowserAlphaSources(root);
-  await verifyBrowserAlphaOracleCore(root, source.lock.oracleRepositoryCommit);
+  await verifyBrowserAlphaOracleCore(root, source.lock.postgresReference.repositoryCommit);
   verifyBrowserAlphaToolchain(source.lock.toolchain, await actualToolchain());
-  if (!source.lock.artifacts) throw new Error('Sources lock is missing exact artifact counts');
-  if (!source.lock.artifactDigests) throw new Error('Sources lock is missing exact artifact digests');
   const commit = await sourceCommit(root);
   const temporary = await mkdtemp(join(tmpdir(), 'ichiran-browser-alpha-'));
   try {
-    const compiler = await buildSurfaceCompiler(root);
-    const partial = await loadComponents(root, options.database!, temporary, source.lock);
-    const firstSurfacePath = join(temporary, 'surface-first.bin');
-    const secondSurfacePath = join(temporary, 'surface-second.bin');
-    const firstStats = await runSurfaceCompiler(
-      compiler, join(temporary, 'surface.tsv'), firstSurfacePath, root
-    );
-    const secondStats = await runSurfaceCompiler(
-      compiler, join(temporary, 'surface.tsv'), secondSurfacePath, root
-    );
-    if (JSON.stringify(firstStats) !== JSON.stringify(secondStats)) {
-      throw new Error('Surface-index rebuild changed compiler counts');
-    }
-    const surfaceBytes = new Uint8Array(await readFile(firstSurfacePath));
-    assertBytesEqual(surfaceBytes, new Uint8Array(await readFile(secondSurfacePath)), 'Surface index');
-    const builds: ComponentBuilds = {
-      ...partial,
-      surface: { bytes: surfaceBytes, stats: firstStats }
-    };
+    const builds = await compileComponents(root, options.database!, temporary, source.lock);
     assertArtifactCounts(builds, source.lock);
     assertArtifactDigests(builds, source.lock);
 
@@ -1071,10 +1076,76 @@ async function build(options: CliOptions, root: string): Promise<void> {
     assertBytesEqual(release.hotDownload, rebuilt.hotDownload, 'Compressed hot asset');
     assertBytesEqual(release.detailsDownload, rebuilt.detailsDownload, 'Compressed details asset');
     assertBytesEqual(release.manifestBytes, rebuilt.manifestBytes, 'Release manifest');
-    assertAnalyzerReleaseSize(release, options.shellBytes);
-    const report = deterministicJson(statsReport(builds, release, source, commit, options.shellBytes));
-    await publish(releaseOutputPath(root, options.out), release, report);
+    assertAnalyzerReleaseSize(release, options.shellBytes!);
+    const report = deterministicJson(statsReport(builds, release, source, commit, options.shellBytes!));
+    await publish(releaseOutputPath(root, options.out!), release, report);
     console.log(new TextDecoder().decode(report).trimEnd());
+  } finally {
+    await rm(temporary, { recursive: true, force: true });
+  }
+}
+
+async function refreshLock(options: CliOptions, root: string): Promise<void> {
+  const oracle = await upstreamOracle(root);
+  await verifyBrowserAlphaOracleCore(root, FROZEN_POSTGRES_REFERENCE_COMMIT);
+  const toolchain = await actualToolchain();
+  const sources = await measureReleaseSources(root);
+  const temporary = await mkdtemp(join(tmpdir(), 'ichiran-browser-alpha-lock-'));
+  try {
+    // Deliberately omit a lock: this is the only command allowed to establish
+    // new expected artifact identities from a target database.
+    const builds = await compileComponents(root, options.database!, temporary);
+    const lock: BrowserAlphaSourceLock = {
+      formatVersion: 2,
+      upstreamIchiran: {
+        repository: oracle.ichiran.repository,
+        commit: oracle.ichiran.commit,
+        dataReleaseTag: oracle.ichiran.dataReleaseTag
+      },
+      postgresReference: {
+        repositoryCommit: FROZEN_POSTGRES_REFERENCE_COMMIT
+      },
+      databaseDump: {
+        url: oracle.databaseDump.url,
+        bytes: oracle.databaseDump.bytes,
+        sha256: oracle.databaseDump.sha256
+      },
+      database: {
+        name: builds.database.name,
+        postgresServerVersion: builds.database.postgresServerVersion,
+        encoding: builds.database.encoding,
+        collation: builds.database.collation,
+        ctype: builds.database.ctype,
+        schemaSha256: oracle.qualifiedOracle.normalizedPgDump16SchemaSha256
+      },
+      toolchain,
+      sources,
+      artifacts: artifactCounts(builds),
+      artifactDigests: {
+        ...componentDigests(builds),
+        morphologyRelation: builds.morphologyRelation
+      }
+    };
+    const lockBytes = deterministicJson(lock);
+    parseBrowserAlphaSourceLock(new TextDecoder().decode(lockBytes));
+    const destination = join(root, BROWSER_ALPHA_SOURCES_LOCK);
+    const stage = await mkdtemp(join(dirname(destination), '.sources-lock-'));
+    try {
+      const staged = join(stage, 'sources.lock.json');
+      await writeFile(staged, lockBytes, { flag: 'wx' });
+      await rename(staged, destination);
+    } finally {
+      await rm(stage, { recursive: true, force: true });
+    }
+    console.log(JSON.stringify({
+      refreshed: true,
+      lock: BROWSER_ALPHA_SOURCES_LOCK,
+      sha256: sha256Bytes(lockBytes),
+      upstreamIchiranCommit: lock.upstreamIchiran.commit,
+      postgresReferenceCommit: lock.postgresReference.repositoryCommit,
+      database: lock.database.name,
+      artifacts: lock.artifactDigests
+    }, null, 2));
   } finally {
     await rm(temporary, { recursive: true, force: true });
   }
@@ -1082,12 +1153,10 @@ async function build(options: CliOptions, root: string): Promise<void> {
 
 async function verify(options: CliOptions, root: string): Promise<void> {
   const source = await verifyBrowserAlphaSources(root);
-  await verifyBrowserAlphaOracleCore(root, source.lock.oracleRepositoryCommit);
+  await verifyBrowserAlphaOracleCore(root, source.lock.postgresReference.repositoryCommit);
   verifyBrowserAlphaToolchain(source.lock.toolchain, await actualToolchain());
-  if (!source.lock.artifacts) throw new Error('Sources lock is missing exact artifact counts');
-  if (!source.lock.artifactDigests) throw new Error('Sources lock is missing exact artifact digests');
-  const output = releaseOutputPath(root, options.out);
-  const release = await verifyRelease(output, options.shellBytes);
+  const output = releaseOutputPath(root, options.out!);
+  const release = await verifyRelease(output, options.shellBytes!);
   if (release.manifest.sourcesLockSha256 !== source.lockSha256) {
     throw new Error('Release manifest does not point to the current sources lock');
   }
@@ -1099,8 +1168,6 @@ async function verify(options: CliOptions, root: string): Promise<void> {
     sourceCommit?: string;
     sourcesLockSha256?: string;
     artifacts?: BrowserAlphaArtifactCounts;
-    directOrderProjection?: ComponentBuilds['root']['stats']['directOrderProjection'];
-    generatedProjection?: ComponentBuilds['generatedProjection'];
     supportIssues?: { count?: number; sha256?: string };
     morphologyRelation?: BrowserAlphaMorphologyAttestation;
     sections?: readonly { id?: number; name?: string; bytes?: number; sha256?: string }[];
@@ -1133,12 +1200,6 @@ async function verify(options: CliOptions, root: string): Promise<void> {
   if (report.sizes?.shellBytes !== options.shellBytes) throw new Error('Stats shell-byte input mismatch');
   if (!report.artifacts || !report.sections || !report.details) {
     throw new Error('Stats report is missing artifact measurements');
-  }
-  if (JSON.stringify(report.generatedProjection) !== JSON.stringify(source.lock.generatedProjection)) {
-    throw new Error('Stats generated projection mismatch');
-  }
-  if (JSON.stringify(report.directOrderProjection) !== JSON.stringify(source.lock.directOrderProjection)) {
-    throw new Error('Stats direct-order projection mismatch');
   }
   for (const name of [
     'surfaceIndex', 'rootPayload', 'morphology', 'analyzerSupport', 'annotations', 'details'
@@ -1198,7 +1259,7 @@ async function verify(options: CliOptions, root: string): Promise<void> {
   if (report.supportIssues?.count !== 0 || report.supportIssues.sha256 !== emptyDigest) {
     throw new Error('Stats report contains unresolved analyzer-support issues');
   }
-  const expectedSizes = assertAnalyzerReleaseSize(release, options.shellBytes);
+  const expectedSizes = assertAnalyzerReleaseSize(release, options.shellBytes!);
   if (JSON.stringify(report.sizes) !== JSON.stringify(expectedSizes)) {
     throw new Error('Stats release-size report mismatch');
   }
@@ -1222,10 +1283,11 @@ async function main(): Promise<void> {
   const root = await repositoryRoot();
   // Reject an unsafe/unsupported target before the multi-minute database
   // projection. build() resolves it again at publication as a final guard.
-  releaseOutputPath(root, options.out);
+  if (options.out) releaseOutputPath(root, options.out);
   await assertCleanSource(root, options.allowDirty);
   if (options.command === 'build') await build(options, root);
-  else await verify(options, root);
+  else if (options.command === 'verify') await verify(options, root);
+  else await refreshLock(options, root);
 }
 
 await main().catch((error: unknown) => {

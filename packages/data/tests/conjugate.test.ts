@@ -4,7 +4,7 @@
 
 import { describe, test, expect, beforeAll } from 'bun:test';
 import { setupTests } from '@ichiran/testing';
-import { getConnection } from '@ichiran/core';
+import { getConnection } from '@ichiran/reference-postgres';
 import {
   getAllReadings,
   conjugateEntryInner,

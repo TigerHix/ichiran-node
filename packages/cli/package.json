@@ -20,10 +20,9 @@
     "ichiran-cli": "./dist/index.js"
   },
   "dependencies": {
-    "@ichiran/core": "0.0.0",
+    "@ichiran/node": "workspace:*",
     "commander": "^12.1.0",
     "dotenv": "^17.2.3"
   },
   "sideEffects": false
 }
-

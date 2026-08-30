@@ -1,7 +1,7 @@
 // Load entry tests - verify core loading behavior
 import { describe, test, expect } from 'bun:test';
 import { setupTests } from '@ichiran/testing';
-import { getConnection } from '@ichiran/core';
+import { getConnection } from '@ichiran/reference-postgres';
 import { loadEntry } from '../src/data/load-entry.js';
 
 setupTests();

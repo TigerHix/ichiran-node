@@ -5,7 +5,7 @@
 
 import { XMLParser } from 'fast-xml-parser';
 import type postgres from 'postgres';
-import { getConnection } from '@ichiran/core';
+import { getConnection } from '@ichiran/reference-postgres';
 import { conjugateEntryOuter, loadSecondaryConjugations } from './conjugate.js';
 import { POS_WITH_CONJ_RULES } from './conj-rules.js';
 
