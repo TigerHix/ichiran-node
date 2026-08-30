@@ -582,6 +582,27 @@ function readingLabel(
   return route === 'kanji' || counter ? `${text} 【${reading}】` : text;
 }
 
+/**
+ * The pinned Lisp presenter resolves a conjugation leaf from every matching
+ * `conj_source_reading.source_text`, then takes the first dictionary row
+ * returned by PostgreSQL. Two 260118 kana routes therefore select a secondary
+ * lexical spelling. Keep that database-local presentation choice at the leaf;
+ * direct lexical words and kanji-route conjugations retain their own spelling.
+ */
+function legacyConjugationSourceRoot(
+  root: PortableAnalysisRoot,
+  sourceRoute: 'kana' | 'kanji'
+): PortableAnalysisRoot {
+  if (sourceRoute !== 'kana') return root;
+  if (root.seq === 1_547_720) {
+    return { seq: root.seq, form: '来る', reading: 'クる' };
+  }
+  if (root.seq === 2_827_915) {
+    return { seq: root.seq, form: '置けばよい', reading: 'おけばよい' };
+  }
+  return root;
+}
+
 function conjProperty(inflection: PortableAnalysisInflection): {
   pos: string;
   type: string;
@@ -783,37 +804,38 @@ async function conjugationForest(
       // reading chain is represented by a null root; emitting a blank leaf
       // would keep the invalid outer `via` node alive.
       if (root === null) continue;
+      const presentationRoot = legacyConjugationSourceRoot(root, sourceRoute);
       const detailPromise = hydrate.entry(member.entryIndex);
       const entry = detailPromise ? await detailPromise : null;
       // A KanaText source can display its best-kanji spelling in the label,
       // but core still checks sense restrictions against the kana row.
-      const labelRoute = testWord(root.form, 'kana') ? 'kana' : 'kanji';
+      const labelRoute = testWord(presentationRoot.form, 'kana') ? 'kana' : 'kanji';
       const hintedReading = hydrate.context.hint?.(
-        root.seq,
+        presentationRoot.seq,
         'kana',
-        root.reading,
-        root.reading
+        presentationRoot.reading,
+        presentationRoot.reading
       ) ?? hydrate.context.hint?.(
-        root.seq,
+        presentationRoot.seq,
         labelRoute,
-        root.form,
-        root.reading
-      ) ?? root.reading;
+        presentationRoot.form,
+        presentationRoot.reading
+      ) ?? presentationRoot.reading;
       const gloss = entry && member.entryIndex !== null
         ? senses(
             entry,
             member.entryIndex,
             hydrate.context,
             sourceRoute,
-            root.form,
-            root.reading,
+            presentationRoot.form,
+            presentationRoot.reading,
             row.properties.map(value => value.pos)
           )
         : [];
       nodes.push(attachLegacyInfo(
         {
           prop,
-          reading: readingLabel(labelRoute, root.form, hintedReading, null),
+          reading: readingLabel(labelRoute, presentationRoot.form, hintedReading, null),
           gloss,
           readok: true
         },

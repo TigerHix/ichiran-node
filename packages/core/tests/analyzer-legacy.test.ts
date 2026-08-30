@@ -521,6 +521,53 @@ describe('legacy detailed presentation', () => {
     expect(grouped.conj?.[0]?.reading).toBe('書く 【か‌く】');
   });
 
+  test('scopes pinned kana conjugation source spellings to conjugation leaves', async () => {
+    const inflection = [{
+      pos: 'vk', type: 2, negative: false, formal: false, ordinal: 0
+    }] as const;
+    const inflected = (
+      seq: number,
+      route: 'kana' | 'kanji',
+      text: string,
+      reading: string,
+      form: string,
+      rootReading: string,
+      pos: string
+    ) => token({
+      text,
+      route,
+      reading,
+      entryIndex: null,
+      root: { seq, form, reading: rootReading },
+      inflection: [{ ...inflection[0], pos }]
+    });
+
+    expect((await render(inflected(
+      1_547_720, 'kana', 'きた', 'きた', '来る', 'くる', 'vk'
+    ))).conj?.[0]?.reading).toBe('来る 【クる】');
+    expect((await render(inflected(
+      1_547_720, 'kanji', '来た', 'きた', '来る', 'くる', 'vk'
+    ))).conj?.[0]?.reading).toBe('来る 【くる】');
+
+    expect((await render(inflected(
+      2_827_915, 'kana', 'おけばよかった', 'おけばよかった',
+      '置けばいい', 'おけばいい', 'adj-ix'
+    ))).conj?.[0]?.reading).toBe('置けばよい 【おけばよい】');
+    expect((await render(inflected(
+      2_827_915, 'kanji', '置けばよかった', 'おけばよかった',
+      '置けばいい', 'おけばいい', 'adj-ix'
+    ))).conj?.[0]?.reading).toBe('置けばいい 【おけばいい】');
+
+    const directCome = await render(token({
+      text: '来る',
+      reading: 'くる',
+      entryIndex: null,
+      root: { seq: 1_547_720, form: '来る', reading: 'くる' }
+    }));
+    expect(directCome.reading).toBe('来る 【くる】');
+    expect(directCome.conj).toEqual([]);
+  });
+
   test('uses direct rows when a generated target also has via rows', async () => {
     const visible = token({
       text: '書けた',
