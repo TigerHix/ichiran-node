@@ -20,17 +20,17 @@ sorted indexes followed by independently checksummed gzip blocks. It is still pa
 
 For split and hint data, one definition sequence is one compressed block. For generated
 facts, consecutive root sequences are grouped into blocks targeting about 256 KiB
-decoded. The Worker uses native asynchronous gzip decompression. At startup it performs
-one complete prewarm of the pinned pack's generated blocks, then exposes synchronous
-`PreloadedAnalyzerAnnotations` views to analyzer requests.
+decoded. The Worker uses native asynchronous gzip decompression. At startup it inflates
+and verifies every generated block once. The reader's generated cache retains at most
+36 decoded blocks; a request that needs an evicted block reloads it before retrying the
+synchronous analyzer operation.
 
 A lookup for a known but unloaded split/hint block throws
 `AnalyzerAnnotationNotLoadedError`. The Worker loads that exact annotation block and
 restarts the analysis. It never treats an unloaded fact as absent and never keeps
 candidates from the incomplete attempt. Per-request preloaded state is cleared at the
-end. The Reader retains every prewarmed generated block and a 16-entry split/hint
-annotation LRU. The final block count and decoded/source-payload bounds are release
-measurements; previous values are recorded below.
+end. The Reader also retains a 16-entry split/hint annotation LRU. Block counts and
+cache bounds below are locked generated-release measurements.
 
 The same section stores physical lookup precedence without retaining PostgreSQL row or
 generated-target identifiers. Most semantic locators use a six-bit level from the
@@ -170,27 +170,33 @@ Focused round-trip, determinism, ordering, lazy-load, and corruption tests live 
 `packages/core/tests/analyzer-annotations.test.ts`. Analyzer integration tests also
 cover multiple physical `conj_prop` rows and exact two-stage via-member binding.
 
-## Previous alpha measurements
+## Locked `ichiran-260118` measurements
 
-The deterministic `d583` `alpha.1-dev` pack recorded the following values. They are a
-baseline for the architecture, not expected identities for the refreshed
-`ichiran-260118` data. The new release's own `stats.json` is the release of record.
+These values come from `dist/browser-alpha/stats.json`, checked against
+`browser-alpha/sources.lock.json`; those generated files are the source of truth for
+the release. They are artifact and cache-capacity measurements, not timing claims.
 
 | Measure | Result |
 |---|---:|
-| Section 4 bytes / SHA-256 | 946,872 / `3777d5a6f9c35c6165e0324adb6e9e53ec24b1df3af15036e198980f8fa51d92` |
-| Section 5 bytes / SHA-256 | 3,491,312 / `ddea80b011220a310515cfd3d6a8536857a4f60d78772b8f5d47b86d0504acda` |
-| Annotation blocks / splits / hints | 827 / 37,594 / 36,388 |
-| Generated blocks / roots / 10-byte records | 36 / 20,115 / 759,040 |
-| Count exceptions / physical groups / physical members | 646,450 / 169,714 / 383,470 |
-| Property overrides | 30,730 |
-| Maximum member / via-member / property ordinal | 5 / 2 / 3 |
-| Resident index bytes | 258,496 |
-| Section-5 internal compressed / decoded bytes | 3,232,807 / 23,012,698 |
-| Largest generated compressed / decoded block | 77,823 / 262,104 |
-| Generated startup prewarm / exact decoded bytes | 36 blocks / 9,336,624 |
-| Split/hint annotation LRU / source-payload upper bound | 16 blocks / 3,603,164 |
+| Section 4 bytes / SHA-256 | 949,424 / `24632918fa8b5116b983946281107e53ad6e8ac728b517121e6aa9c4955a14f0` |
+| Suffix keys / values / classes | 5,532 / 5,533 / 3,586 |
+| Counter keys / variants | 760 / 799 |
+| Lexical collisions | 5,442 |
+| Generated rules / semantic aliases | 1,161 / 1,030 |
+| Section 5 bytes / SHA-256 | 3,531,024 / `2ba1615e1a08dbfe458dd8a4ca89201e25aed58844531769dd7bbc0ac26de592` |
+| Annotation blocks / splits / hints | 842 / 38,032 / 36,885 |
+| Generated blocks / roots / 10-byte records | 37 / 20,347 / 764,828 |
+| Generated physical groups / fact-pair entries | 170,717 / 80 |
+| Lookup-order records / roots / bytes | 340,437 / 9,635 / 1,361,748 |
+| Exact exception surfaces / classes / locators | 1,623 / 3,895 / 4,212 |
+| Exact exception bytes | 79,908 |
+| Resident index bytes | 264,128 |
+| Internal compressed / decoded bytes | 3,266,889 / 23,255,989 |
+| Annotation compressed / decoded bytes | 816,578 / 13,838,577 |
+| Generated compressed / decoded bytes | 2,450,311 / 9,417,412 |
+| Largest generated compressed / decoded block | 78,022 / 262,144 |
+| Generated decoded-cache capacity / upper bound | 36 blocks / 9,437,184 bytes |
 
-The hybrid lookup-order proof adds 335,873 stored rank records plus 1,494 exact
-exception surfaces (3,725 classes and 4,123 locators). Its canonical projection SHA-256
-is `016dae9f069ad984e23cd495df7cb79e2e0685c54ffe011bf3b70c0ad283b122`.
+Release verification reopens both sections and checks their byte lengths, digests,
+counts, block bounds, and empty unresolved-support issue set before publication. No
+physical-phone performance measurement is implied by these artifact statistics.

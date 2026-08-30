@@ -1,7 +1,7 @@
 # Browser Analyzer Alpha: parity and acceptance contract
 
-Status: upstream analyzer qualified; refreshed packed release and final browser
-qualification pending, 2026-08-29
+Status: pinned analyzer implementation complete; release and browser evidence is
+generated locally and kept outside Git, 2026-08-29
 Authoritative analyzer target: upstream Ichiran at
 `ea9583368e67cad22d94abae8dbcc8df96d99bcd`, data release `ichiran-260118`
 Frozen transition reference: `ichiran-node` at
@@ -189,10 +189,20 @@ reading hints, physical-member exceptions, and direct/generated lookup order. It
 stores semantic identities rather than surrogate database IDs, CTIDs, timestamps, or
 machine paths.
 
-Final route, morphology, annotation, and artifact counts are intentionally pending
-until `alpha:release:refresh-lock` completes against this database. The refresh command
-compiles and verifies the target, then atomically writes the deterministic v2 lock;
-maintainers do not edit expected artifact values by hand.
+`alpha:release:refresh-lock` compiled and verified the qualified database, then wrote
+the deterministic v2 lock. Key packed counts are:
+
+| Component | Locked result |
+|---|---:|
+| accepted surface endpoints / states / edges | 8,393,704 / 589,125 / 971,845 |
+| root payload surfaces / forms / entries | 443,275 / 476,178 / 217,967 |
+| morphology rules / templates / root keys | 1,161 / 7,211 / 40,882 |
+| split / hint annotation facts | 38,032 / 36,885 |
+| generated blocks / roots / records | 37 / 20,347 / 764,828 |
+| detail entries / forms / senses / glosses / properties | 217,967 / 492,913 / 251,648 / 434,112 / 407,620 |
+
+The lock also records the exact byte length and SHA-256 of every component.
+Maintainers do not edit expected artifact values by hand.
 
 Code-defined errata, suffixes, counters, split rules, hints, scoring, penalties, and
 synergies are locked by the clean repository commit. The private
@@ -229,20 +239,14 @@ ordered one- or two-stage properties, inherited ord/common facts, and exact forw
 equality. Compare sorted semantic diff JSONL byte-for-byte with the frozen relation
 attestation. An unexpected diff or a stale attestation row fails.
 
-Known classes from the previous snapshot must be remeasured and enumerated, not
-matched by a broad predicate:
-
-- remove secondary ghost-reading contamination: 18,944 legacy rows / 18,926
-  `(root,finalSurface)` associations;
-- remove potential/passive property cross-products: the snapshot has 15,331
-  multi-property links; the exact false-property rows must be emitted by the
-  exhaustive tool rather than accepted by the approximate 43,543 estimate;
-- repair or remove the 55 stale non-root kana surfaces (54 rewritten
-  `右に出る者はいない` forms and `じゃないで`) according to clean forward lineage;
-- preserve the two explicit negative tombstones;
-- preserve intentional copula/`じゃ` and `ございます` forms;
-- preserve installed root/surface behavior for the 5,698 restriction-filter-divergent
-  pairs unless a separate exact correction is reviewed.
+The final relation measurement expands 9,173,122 legacy keys across 7,959,271
+surface groups and compares them with 8,774,911 packed keys. It records exactly
+398,211 legacy-only rows, zero alpha-only rows, and zero duplicate rows on either
+side. The canonical diff SHA-256 is
+`6eb1cbae46eb2df0c67570764d0cf408bf4d7b8873eb4b53ce694cd17549d421`.
+Those exact rows—not a broad predicate—capture removed ghost readings and invalid
+property cross-products. Fifty explicit compatibility patches and four exact
+tombstones preserve reviewed installed behavior.
 
 ### 5.3 End-to-end output
 
@@ -253,10 +257,18 @@ Run both APIs against the complete frozen corpus:
 - top-1, the checked top-3/top-5 cases, all entity fixtures, counters, numbers, and
   every recorded hinted reading.
 
-Canonical output must be byte-identical to the pinned upstream oracle after the
-documented canonical identity normalization. The alpha has
-no output-difference allowlist: any segmentation, score, normalized identity, clean
-result, or detailed legacy result difference fails the release gate.
+Canonical output must be byte-identical to the pinned upstream oracle. Ordinary and
+hard current-Lisp captures are normalized once by the compiler into independently
+hashed fixtures; the portable output is compared directly and is never rewritten by
+the PostgreSQL identity resolver. This makes a leaked generated sequence ID a release
+failure.
+
+Current-Lisp snapshots are authoritative for 534 segmentation, five standalone
+romanization, 252 ordinary detailed, and 149 hard detailed comparisons. The frozen
+PostgreSQL implementation remains the detailed-and-clean fallback authority for 200
+counter requests, 54 entity-hint requests, and 47 deterministic probes. Its output is
+diagnostic-only where a current-Lisp snapshot exists. The alpha has no result
+allowlist: any chosen-authority divergence fails the release gate.
 
 Supported release and end-to-end commands:
 
@@ -329,6 +341,12 @@ Binary-size pass/fail definitions use powers of two:
   bytes**;
 - fresh-install wire payload for manifest, app shell, and all analyzer data using
   the release content encoding: **at most 25 MiB = 26,214,400 bytes**.
+
+The qualified `ichiran-260118` release measures 24,857,288 resident hot bytes,
+39,033,585 total persisted bytes, and 25,599,776 first-install wire bytes with the
+618,607-byte production shell. The compressed hot/detail assets are 12,662,917 and
+12,317,325 bytes respectively. All three gates pass without excluding dictionary
+details.
 
 The size checker sums the manifest's actual persisted lengths and deterministic
 release-encoded lengths; it does not use filesystem allocation size or estimate from
@@ -427,53 +445,34 @@ production hosting is required for this alpha.
 
 ## 11. Qualification status
 
-Implementation prerequisites that were previously missing now exist: the exhaustive
-morphology verifier, semantic parity canonicalizer, portable analyzer integration,
-physical-member overlay, OPFS PWA, and production Worker benchmark harness.
+The required implementation now exists: exhaustive morphology verification, pinned
+canonical Lisp fixtures, one portable analyzer, an exact physical-member overlay, the
+OPFS PWA, and the production Worker benchmark harness.
 
-The previous `d583` `alpha.1-dev` qualification pack passed all three size gates with a
-607,732-byte production shell: 24,422,280 hot bytes, 38,249,770 persisted bytes, and
-25,055,731 wire bytes. Its full strict PostgreSQL run made 1,241 / 1,241 exact
-comparisons with zero path, analyzer, presentation, or error differences;
-`currentOracleAllowlist` is empty.
-The 392,336 morphology-relation rows are a separately hashed historical database
-artifact attestation, not allowed output differences.
+The clean `ichiran-260118` oracle report contains 1,241 chosen-authority comparisons:
+534 segmentation, five standalone romanization, and 702 detailed analyzer requests.
+It also checks 301 clean fallback projections for counters, entity hints, and probes.
+The acceptance result is exact throughout with an empty result allowlist. Frozen
+PostgreSQL differences on snapshot-covered requests remain named diagnostics and are
+not silently accepted as portable-output differences.
 
-The production offline Playwright suite passed 5 / 5 tests against that dev pack.
-Chrome 151.0.7922.34 ran on an AMD Ryzen 9 9950X pinned to CPU 31 with five
-same-affinity contention peers. Exact-Worker calibration measured 58.8 ms baseline and
-360.7 ms contended medians, a 6.134353741858198x ratio. After two warmup passes and ten
-measured passes, the hard-gated results were:
+The production Playwright qualification installs the complete release, analyzes and
+opens details through the public Worker API, restarts with networking blocked, proves
+zero post-install analyzer requests, exercises integrity/interruption recovery and
+cross-tab mutation locking, and checks the required desktop and phone layouts. Its
+calibrated contention run must satisfy the 75 ms ordinary and 250 ms pathological p95
+gates and report no main-thread analyzer work.
 
-| Corpus | Samples | p50 | p95 | max | Gate |
-|---|---:|---:|---:|---:|---:|
-| ordinary | 990 | 25.5 ms | 50.8 ms | 128.3 ms | <= 75 ms |
-| pathological morphology | 500 | 51.4 ms | 118.9 ms | 185.6 ms | <= 250 ms |
+Exact machine-dependent browser samples, Chromium/CPU metadata, calibration, console
+capture, and long-task evidence are written to `work/browser-benchmark.json` by
+`alpha:demo:qualify`; they are deliberately generated rather than committed. The
+immutable artifact identities and sizes are recorded by the release's `manifest.json`
+and `stats.json`.
 
-Worker ready time was 342.9 ms, first analysis was 65.3 ms, and the main-thread
-long-task list was empty. The suite also proved restart with networking blocked,
-complete offline analysis and details, no analyzer HTTP traffic, integrity and
-interrupted-install handling, Worker isolation, cross-tab mutation locking, and the
-required responsive layouts. `work/browser-benchmark.json` retains raw samples and
-environment metadata.
-
-Those numbers validate the architecture but are not `ichiran-260118` release results.
-The contract still requires final evidence tied to one clean accepted build:
-
-1. build and verify the clean deterministic `ichiran-260118`
-   release under the same three size gates;
-2. rerun `oracle-parity.ts` against that exact final release and retain its complete
-   report;
-3. stage that exact release and reproduce the already-passing production offline
-   Playwright flow under the calibrated Worker-contention procedure; and
-4. record the final artifact identity and browser timings from those artifacts rather
-   than treating the development pack as the release of record.
-
-The release provenance is the pinned upstream commit and
-`ichiran-260118.pgdump` identity recorded above. The deterministic v2 source lock must
-capture the qualified database, toolchain, raw inputs, compiler formats, and exact
-artifact identities. A future source-only rebuild may additionally pin the original
-Kanjidic2 XML; this does not require shipping Kanjidic at runtime.
+The release provenance is the pinned upstream commit, qualified database, source lock,
+and `ichiran-260118.pgdump` identity recorded above. A future source-only compiler may
+additionally pin the original Kanjidic2 XML; this does not require shipping Kanjidic at
+runtime.
 
 Actual iPhone 13 and iPhone 17 Pro Max measurements remain deliberately deferred.
 Passing this alpha is a conservative desktop proxy, not production mobile signoff.

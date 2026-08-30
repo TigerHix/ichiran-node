@@ -42,8 +42,8 @@ generated-row behavior is not represented by a scalar property or a copied SQL r
 section 5 retains every relevant physical conjugation member and every ordered
 `conj_prop` row in 10-byte records. Count-only exceptions use the same record format,
 and generated records are packed in independently compressed root blocks that are
-prewarmed once when the Worker opens the pack. The final block count is recorded in
-the refreshed release. Split/hint annotation blocks remain
+prewarmed once when the Worker opens the pack. The `ichiran-260118` release has 37
+generated blocks. Split/hint annotation blocks remain
 lazy behind a 16-entry LRU. See `ANALYZER-SUPPORT.md`.
 
 The initial browser capability floor is Safari 26+ or a current Chromium browser.
@@ -78,10 +78,11 @@ is recorded in `browser-alpha/upstream-oracle.json`.
 The former PostgreSQL-backed Node analyzer remains frozen at
 `d583720572fbf26ee201166ac47034c50380a571` as a private compiler and migration
 reference. Release and differential commands require the checked-out
-`packages/reference-postgres` source to match that reference. The final v2
-`browser-alpha/sources.lock.json` is produced from the qualified database with
-`alpha:release:refresh-lock`; final `ichiran-260118` artifact counts and digests are
-pending that clean compile.
+`packages/reference-postgres` source to match that reference. The v2
+`browser-alpha/sources.lock.json` was produced from the qualified database with
+`alpha:release:refresh-lock`. It locks every `ichiran-260118` component count and
+digest, including the 9,173,122-row exhaustive morphology relation and its zero
+alpha-only/duplicate result.
 
 Run database-backed baseline tests against the local oracle with:
 
@@ -111,8 +112,14 @@ bun run alpha:demo:test
 bun run alpha:demo:e2e
 ```
 
-The earlier `d583` `alpha.1-dev` pack passed the size, strict differential, offline,
-and calibrated browser gates. Those measurements validate the architecture and remain
-documented in the component notes, but they are not results for `ichiran-260118`.
-The refreshed release must publish its own `stats.json`, parity report, and browser
-benchmark report before it is accepted.
+The deterministic `ichiran-260118` data assets are 12,662,917 compressed hot bytes and
+12,317,325 compressed detail bytes. They install as a 24,857,288-byte resident hot
+image and 13,555,874-byte lazy detail store. With the 618,607-byte production shell,
+the complete transfer is 25,599,776 bytes and the persisted installation is
+39,033,585 bytes; all three size gates pass.
+
+`stats.json`, the exhaustive oracle report, and `work/browser-benchmark.json` are
+generated qualification evidence and remain outside Git with the release artifacts.
+The browser report records its exact Chromium version, CPU-affinity calibration, raw
+Worker samples, offline assertions, and responsive checks. Physical-iPhone timing is
+still deliberately deferred.

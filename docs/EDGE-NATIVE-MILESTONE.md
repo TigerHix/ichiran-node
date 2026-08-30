@@ -1,7 +1,8 @@
 # Edge-native analyzer milestone
 
-Status: implementation and upstream-data refresh in progress; final `ichiran-260118`
-release size, parity, and performance qualification pending.
+Status: implementation complete for the pinned `ichiran-260118` analyzer. Generated
+release and browser-benchmark evidence stays outside Git and is reproduced by the
+qualification commands; physical-iPhone measurement remains deferred.
 
 ## Product decision
 
@@ -137,9 +138,20 @@ The installer downloads all analyzer and dictionary content needed by the demo. 
 is no network fallback. The hot data is memory-oriented; details remain installed
 offline but are decoded lazily.
 
-The final `ichiran-260118` transfer, installed, resident, startup, and latency numbers
-are pending the clean release build. Do not substitute the earlier `alpha.1-dev`
-measurements for them.
+The deterministic `ichiran-260118` assets are:
+
+| Measure | Bytes | MiB |
+|---|---:|---:|
+| `hot.bin.gz` one-time download | 12,662,917 | 12.076 |
+| `details.bin.gz` one-time download | 12,317,325 | 11.747 |
+| resident `hot.bin` | 24,857,288 | 23.706 |
+| installed `details.bin` | 13,555,874 | 12.928 |
+| production shell | 618,607 | 0.590 |
+| complete first-install transfer | 25,599,776 | 24.414 |
+| complete persisted installation | 39,033,585 | 37.225 |
+
+The release's generated `manifest.json` and `stats.json` remain the source of truth;
+the data assets themselves are release artifacts, not repository contents.
 
 ## Parity policy
 
@@ -167,6 +179,14 @@ Qualification is three-way:
 3. browser and Node execute the same packed core, so exact host-to-host comparison is
    expected rather than sampled equivalence.
 
+Where a pinned current-Lisp snapshot exists, it is the release authority. The
+PostgreSQL reference is diagnostic for those cases and cannot veto a current-Lisp
+match. Counters, entity hints, and deterministic probes have no Lisp snapshot, so the
+frozen reference remains their temporary detailed-and-clean fallback authority. The
+portable result is never normalized through the database resolver: committed
+canonical Lisp fixtures are compared directly, so a leaked generated sequence ID is
+a release failure.
+
 Known upstream changes from the older Node baseline are named regression cases, not an
 allowlist. The upstream probes include seven corrected top-one segmentations, two former
 JSON crash cases, and the `食べがたい` suffix result. A release is blocked by any
@@ -188,9 +208,11 @@ contention.
 | Pathological morphology p95 at calibrated 6x contention | at most 250 ms |
 | Main-thread analyzer work | none |
 
-These are gates, not final measurements. A clean `ichiran-260118` release must publish
-its own raw samples and artifact report. Physical iPhone 13-class validation remains a
-production gate when the device is available.
+The production qualification command writes raw samples and environment metadata to
+`work/browser-benchmark.json`; timing samples are intentionally not committed because
+they describe the machine running the gate, not the immutable analyzer artifact.
+Physical iPhone 13-class validation remains a production gate when the device is
+available.
 
 ## Is this the final optimization ceiling?
 

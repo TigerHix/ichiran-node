@@ -91,7 +91,7 @@ The complete product boundary, parity contract, and optimization roadmap are in
 
 ```bash
 bun run typecheck
-bun test
+bun run test
 ```
 
 Compiler and PostgreSQL-reference checks are explicit and separate:

@@ -1,8 +1,12 @@
 # Portable analyzer scoring and path kernel
 
-Status: implemented and integrated; the previous `d583` dev pack passed full-corpus
-parity and calibrated browser performance; `ichiran-260118` requalification pending
+Status: implemented and integrated in the locked `ichiran-260118` analyzer
 Scope: scoring, analyzer-internal pair rules, culling, and top-N path selection
+
+The scoring kernel has no separately emitted dictionary section. Artifact sizes and
+release-level measurements come from the generated `dist/browser-alpha/stats.json`,
+checked against `browser-alpha/sources.lock.json`; this document does not attribute a
+speculative share of the JavaScript shell or packed data to the scorer.
 
 ## What this implementation is
 
@@ -137,11 +141,9 @@ double boost. Analyzer-rule tests compare every registered synergy, representati
 filter/penalty/non-adjacent cases, and 250 deterministic mixed-feature pairs against the
 frozen reference implementation.
 
-An opt-in PostgreSQL differential materializes real scoring facts for 48 deterministic
-root forms and 24 deterministic generated forms, then compares three modes per form
-(ordinary, final, and extended use-length) against the reference `calcScore`. The
-2026-08-28 run made 216 score comparisons and 1,297 field assertions with zero
-differences in 3.17 seconds:
+An opt-in PostgreSQL differential materializes real scoring facts for deterministic
+root and generated forms, then compares ordinary, final, and extended-use-length
+modes against the compiler-only reference `calcScore`:
 
 ```bash
 cd packages/core
@@ -151,13 +153,14 @@ RUN_ANALYZER_SCORING_POSTGRES=true \
 
 The core suite also covers end-to-end direct/morphology lookup, suffixes, counters,
 numbers, splits, generated multi-property expansion, two-stage via-member binding,
-legacy compact/detailed serialization, and corruption/lazy-load behavior. The previous
-`d583` strict PostgreSQL differential made 1,241 / 1,241 exact comparisons: 534
-segmentation,
-five standalone romanization, 702 detailed legacy, and 702 clean-semantic operations,
-with zero path, analyzer, presentation, or error differences and an empty result
-allowlist. The refreshed upstream release must run the same gate against its own pack.
+legacy compact/detailed serialization, and corruption/lazy-load behavior. Release
+qualification compares the portable analyzer with the locked current-Lisp fixtures
+where those exist and uses the frozen PostgreSQL implementation for the remaining
+fallback probes. The gate requires zero chosen-authority differences and an empty
+result allowlist; parity totals belong to that release run, not to a stale component
+snapshot.
 
 Production Chromium performance remains the browser release gate. Do not substitute Bun
-microbenchmarks for the public Worker RPC benchmark or claim phone performance from
-desktop measurements.
+microbenchmarks for the public Worker RPC benchmark. No physical-iPhone test has been
+performed for this release, so desktop browser results must not be presented as phone
+measurements.

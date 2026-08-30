@@ -1,8 +1,9 @@
 # Browser alpha reverse morphology
 
-The design remains current. Counts and digests below are measurements of the previous
-`d583` alpha pack; the refreshed `ichiran-260118` release must publish new values in
-its lock and `stats.json`.
+The design remains current. Counts and digests below are locked to upstream Ichiran
+`ea9583368e67cad22d94abae8dbcc8df96d99bcd` and data release `ichiran-260118`.
+The generated release's `dist/browser-alpha/stats.json`, checked against
+`browser-alpha/sources.lock.json`, is the source of truth for measurements.
 
 The alpha replaces PostgreSQL's generated conjugation closure with a small
 reverse matcher. Grammar is not part of this component.
@@ -17,9 +18,9 @@ CSV rules. It emits one deterministic `ICHIMOR1` section containing:
   canonical root/source facts;
 - route-independent root-form lists used by the materializer's suppression
   checks;
-- 38 intentional `じゃ` / `ございます` compatibility records;
-- three exact tombstones: the two installed negative exceptions and one
-  post-secondary-closure artifact.
+- 50 locked manual compatibility records; and
+- four exact tombstones for reverse-rule candidates excluded by the installed
+  closure.
 
 `MorphologyReader.lookup(surface, route)` reverses only suffixes that occur in
 the installed root/rule cross-product, confirms each match by applying the
@@ -44,70 +45,55 @@ check route-specific would admit generated candidates that the installed
 closure suppresses. The exhaustive relation comparison below has no alpha-only
 candidate.
 
-Snapshot route accounting is:
+Locked `ichiran-260118` route accounting is:
 
 | Measure | Rows |
 |---|---:|
-| `conj_source_reading` | 8,270,561 |
-| physical target-table route matches | 8,270,527 |
-| classifier-active route matches | 8,269,155 |
-| installed but classifier-inactive route matches | 1,372 |
-| missing from both physical target tables | 55 |
-| present in both target tables | 21 |
+| `conj_source_reading` | 8,386,607 |
+| installed physical target-route matches | 8,386,641 |
+| classifier-active route matches | 8,385,507 |
+| installed but classifier-inactive route matches | 1,134 |
+| not installed in either target route | 1 |
+| additional matches from dual-route rows | 35 |
 
-The 8,270,527 figure is a sum across physical kana/kanji routes. It is not the
-runtime-active count. The portable analyzer exposes only the classifier-active
-route; the normalized surface index supplies the reviewed 55 replacements for
-stale/missing generated forms.
+The 8,386,641 figure is a sum across physical kana/kanji routes, so dual-route
+rows contribute twice. It is not the runtime-active count. The portable analyzer
+exposes only the 8,385,507 classifier-active route matches.
 
-## Previous measured artifact
+## Locked `ichiran-260118` artifact
 
-Two complete database builds produced byte-identical files.
+These are generated-release values, not standalone timing or lookup benchmarks:
 
 | Measure | Result |
 |---|---:|
-| Raw bytes | 2,664,344 |
-| gzip-9 bytes | 1,132,372 |
+| Raw section bytes | 2,688,176 (2.56 MiB) |
 | POS / rules | 22 / 1,161 |
-| Direct / secondary templates | 2,211 / 5,568 |
+| Reverse templates | 7,211 |
 | Distinct suffixes | 2,568 |
-| Root rows / keys / groups | 41,383 / 40,321 / 14,491 |
-| Manual patches / tombstones | 38 / 3 |
-| Build wall / peak RSS | 18.8 s / 323,088 KiB |
-| SHA-256 | `186e24e74168d838bebbfab2d6c5061da79f2906ff66f98f65f120b845852757` |
-
-On desktop Bun, strict open/validation took about 13.5 ms. A 200,000-lookup
-ambiguous hit sample averaged 20.8 microseconds per lookup; a common two-stage
-hit averaged 11.1 microseconds over 100,000 lookups. These are engineering
-measurements, not mobile latency claims.
+| Root keys / groups | 40,882 / 14,608 |
+| Manual patches / tombstones | 50 / 4 |
+| SHA-256 | `1614d150f3609b9de4f93de5ad0e33e12aec41211dc9096870a8d019eab9c0f3` |
 
 ## Exhaustive relation result
 
 The verifier streams the lineage-valid, classifier-active PostgreSQL relation,
-expands every property path, and compares exact semantic keys. The final run
-covered 9,045,688 expanded relation rows in 7,849,201 surface/route groups:
+expands every property path, and compares exact semantic keys. The locked run
+covered 9,173,122 legacy relation keys in 7,959,271 surface/route groups;
+7,571,395 groups were exact:
 
 | Measure | Result |
 |---|---:|
-| Legacy semantic keys | 9,045,688 |
-| Alpha semantic keys | 8,653,352 |
-| Legacy-only | 392,336 |
+| Legacy semantic keys | 9,173,122 |
+| Alpha semantic keys | 8,774,911 |
+| Legacy-only | 398,211 |
 | Alpha-only | **0** |
 | Duplicate legacy / alpha keys | **0 / 0** |
 
-The exact 392,336-row JSONL is a frozen relation-difference attestation. It is
-deliberately not checked in: it is 91,164,882 bytes. Its SHA-256 is
-`e97c7eeea1e54145b8a8dc406c079d787049739a20aefb4d4229d2fe65b467e0`.
-The rows classify as:
-
-| Reviewed legacy artifact | Rows |
-|---|---:|
-| Potential/passive property cross-product, direct | 43,596 |
-| Potential/passive property cross-product, secondary | 348,736 |
-| Other merged-link property cross-products (`せんといて`, `せんとき`, `とあって`, `とあり`) | 4 |
-
+The exact 398,211-row legacy-only set is a frozen relation-difference attestation
+with SHA-256
+`6eb1cbae46eb2df0c67570764d0cf408bf4d7b8873eb4b53ce694cd17549d421`.
 No broad runtime predicate accepts these rows. The exhaustive tool emits their
-exact semantic keys. The release build hashes those canonical JSONL lines while
+canonical semantic keys. The release build hashes those canonical JSONL lines while
 streaming this complete relation inside the same repeatable-read transaction that
 compiled the morphology section. It refuses any changed count or digest, any
 alpha-only candidate, or any duplicate on either side before publishing. This is
@@ -135,7 +121,7 @@ The standalone verifier loads `browser-alpha/sources.lock.json` by default and e
 non-zero unless the artifact digest, measured relation totals, and streamed JSONL
 digest match it exactly. `--lock <path>` selects another reviewed lock. The release build performs
 the same measurement directly on the exact section it is about to package; writing
-the 91 MB JSONL is optional proof output and is not required during release.
+the JSONL is optional proof output and is not required during release.
 
 The morphology candidate intentionally carries canonical `rootSeq`, not a
 generated entry ID. Its semantic property path is sufficient for the ordinary
