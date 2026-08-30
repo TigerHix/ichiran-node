@@ -1,5 +1,9 @@
 # Route-aware surface index artifact
 
+The format and algorithm remain current. Counts and digests below are measurements of
+the previous `d583` alpha snapshot; the refreshed `ichiran-260118` release must publish
+new values in its lock and `stats.json`.
+
 The production surface index is a deterministic minimal acyclic byte automaton.
 It stores only accepted endpoints, direct/morphology terminal bits, and a direct
 subtree count per state. The browser reader derives a dense direct-root rank
@@ -46,7 +50,7 @@ surface_query=$(bun -e \
 /usr/bin/time -v bash -o pipefail -c \
   'psql "$1" -X -qAt -v ON_ERROR_STOP=1 -c "SET work_mem='"'"'512MB'"'"'" -c "$2" | "$3" --output "$4"' \
   bash \
-  'postgresql:///ichiran_test?host=/var/run/postgresql' \
+  'postgresql:///ichiran_oracle_ea958336?host=/var/run/postgresql' \
   "$surface_query" \
   packages/data/tools/surface-index/target/release/ichiran-surface-index \
   /tmp/ichiran-surface-index.bin
@@ -56,9 +60,9 @@ gzip -9 -c /tmp/ichiran-surface-index.bin \
 sha256sum /tmp/ichiran-surface-index.bin
 ```
 
-## Measured artifact
+## Previous measured artifact
 
-Measurements are from the frozen local `ichiran_test` oracle on 2026-08-28.
+Measurements are from the frozen local `ichiran_test` reference on 2026-08-28.
 
 | Measure | Result |
 |---|---:|
@@ -80,7 +84,7 @@ f880f8d9f6873cd495596084330ea408d3216b13fb4c6652bd7ec4625f91386a
 
 Two complete SQL exports and builds produced identical bytes. Combined with the
 measured root payload, the surface-plus-root subtotal is approximately 16.51 MiB. The
-current complete qualification hot image, after morphology, analyzer support, and
+previous complete qualification hot image, after morphology, analyzer support, and
 annotations are included, is 24,422,280 bytes (23.29 MiB), leaving 743,544 bytes
 (0.71 MiB) under the 24 MiB gate.
 

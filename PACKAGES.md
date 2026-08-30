@@ -1,55 +1,91 @@
 # Packages
 
-Monorepo split into 5 packages with clear boundaries.
+The product has one analyzer implementation and thin host adapters. Compiler and
+reference code are kept outside the runtime dependency graph.
 
-## Structure
+## Product packages
 
-```
-@ichiran/core     - segmentation, dict, romanize, presentation, connection
-@ichiran/grammar  - grammar runtime, predicates, defs
-@ichiran/api      - HTTP server
-@ichiran/cli      - user CLI
-@ichiran/data     - DB init/ETL
+| Package | Ownership |
+|---|---|
+| `@ichiran/core` | Browser-safe packed readers, analyzer, morphology, scoring, details, romanization, and legacy serialization |
+| `@ichiran/node` | Filesystem loading, manifest verification, gzip decoding, and legacy info formatting for Node |
+| `@ichiran/cli` | Historical `ichiran-cli` command surface over `@ichiran/node` |
+| `@ichiran/api` | Analyzer-only Node HTTP server over `@ichiran/node` |
+| `@ichiran/browser-demo` | Offline PWA, OPFS installer, Worker transport, and mobile-first demo UI |
+
+Runtime dependencies are intentionally direct:
+
+```text
+browser-demo ----------> core
+node ------------------> core
+cli -------------------> node
+api -------------------> node
 ```
 
-## Dependencies
+`@ichiran/core` has no Node, PostgreSQL, or third-party runtime dependency. Host
+packages own I/O; analyzer behavior stays in core.
 
+## Compiler and reference packages
+
+| Package | Ownership |
+|---|---|
+| `@ichiran/data` | Node-only deterministic release compiler and source-data maintenance |
+| `@ichiran/reference-postgres` | Private frozen PostgreSQL analyzer used by the compiler and transition oracle |
+| `@ichiran/testing` | PostgreSQL-reference test setup |
+
+```text
+data ----------> reference-postgres ----------> PostgreSQL
+testing -------> reference-postgres ----------> PostgreSQL
 ```
-cli → core (+ grammar optional)
-api → core + grammar
-grammar → core
-data → core
+
+These packages never enter a shipped runtime bundle. The reference package remains
+for one migration cycle because the compiler still reuses its data-authoring logic.
+It can be deleted after that logic has been moved into the compiler and the upstream
+Lisp plus packed-runtime parity gates independently cover the product.
+
+## Experimental package
+
+`@ichiran/grammar` is a separate experiment. It is not a dependency of core, Node,
+CLI, API, or the browser demo and is outside the edge-native milestone. Do not
+confuse it with analyzer-internal suffix handling, filters, penalties, or synergies.
+
+## Data release
+
+The compiler emits four files:
+
+```text
+manifest.json
+hot.bin.gz
+details.bin.gz
+stats.json
 ```
+
+The two compressed data files are release artifacts, not source-controlled package
+contents. Browser installation persists their verified decoded forms in OPFS. Node
+loads and verifies the same release through `ICHIRAN_PACK_DIR`.
 
 ## Commands
 
-### CLI
 ```bash
-ichiran-cli "こんにちは"
-ichiran-cli -i "text"           # with info
-ichiran-cli -f "text"           # full JSON
-ichiran-cli -l 5 -f "text"      # 5 alternatives
+# Product
+bun run build
+bun run typecheck
+bun test
+
+# Compiler/reference
+bun run build:compiler
+bun run typecheck:compiler
+
+# Release
+bun run alpha:release:build -- --database "$ICHIRAN_DB_URL" --out dist/browser-alpha --pack-version <version> --shell-bytes <bytes>
+bun run alpha:release:verify -- --out dist/browser-alpha --shell-bytes <bytes>
+
+# Browser demo
+bun run alpha:demo:stage
+bun run alpha:demo:build
+bun run alpha:demo:test
+bun run alpha:demo:e2e
 ```
 
-### Data
-```bash
-ichiran-data init-db
-ichiran-data download [--jmdict|--kanjidic] [--force]
-ichiran-data load-jmdict [--max N]
-ichiran-data load-kanjidic
-ichiran-data load-conjugations
-ichiran-data load-secondary-conjugations
-ichiran-data load-custom --extra|--municipality|--ward
-ichiran-data apply-errata
-ichiran-data stats
-ichiran-data best-readings
-ichiran-data kanji-stats
-ichiran-data reading-stats
-```
-
-## Env Parsing
-
-Core exports `setConnection(spec)` + connection primitives. NO env parsing in core.
-
-API, CLI, data each parse `ICHIRAN_DB_URL` locally and call `setConnection`.
-
+Normal product commands do not read `ICHIRAN_DB_URL`. Release compilation and
+reference-only tests do.

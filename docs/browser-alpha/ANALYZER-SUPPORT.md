@@ -21,15 +21,16 @@ sorted indexes followed by independently checksummed gzip blocks. It is still pa
 For split and hint data, one definition sequence is one compressed block. For generated
 facts, consecutive root sequences are grouped into blocks targeting about 256 KiB
 decoded. The Worker uses native asynchronous gzip decompression. At startup it performs
-one complete prewarm of the pinned pack's 36 generated blocks, then exposes synchronous
+one complete prewarm of the pinned pack's generated blocks, then exposes synchronous
 `PreloadedAnalyzerAnnotations` views to analyzer requests.
 
 A lookup for a known but unloaded split/hint block throws
 `AnalyzerAnnotationNotLoadedError`. The Worker loads that exact annotation block and
 restarts the analysis. It never treats an unloaded fact as absent and never keeps
 candidates from the incomplete attempt. Per-request preloaded state is cleared at the
-end. The Reader retains all 36 prewarmed generated blocks (9,336,624 decoded bytes) and
-a 16-entry split/hint annotation LRU with a 3,603,164-byte source-payload upper bound.
+end. The Reader retains every prewarmed generated block and a 16-entry split/hint
+annotation LRU. The final block count and decoded/source-payload bounds are release
+measurements; previous values are recorded below.
 
 The same section stores physical lookup precedence without retaining PostgreSQL row or
 generated-target identifiers. Most semantic locators use a six-bit level from the
@@ -165,15 +166,15 @@ experimental grammar package.
   runtime dependency.
 
 Focused round-trip, determinism, ordering, lazy-load, and corruption tests live in
-`packages/portable/tests/analyzer-support.test.ts` and
-`packages/portable/tests/analyzer-annotations.test.ts`. Analyzer integration tests also
+`packages/core/tests/analyzer-support.test.ts` and
+`packages/core/tests/analyzer-annotations.test.ts`. Analyzer integration tests also
 cover multiple physical `conj_prop` rows and exact two-stage via-member binding.
 
-## Current qualification measurements
+## Previous alpha measurements
 
-The deterministic `alpha.1-dev` qualification pack records the following values. The
-clean final release must reproduce these data sections; its own `stats.json` remains the
-release of record.
+The deterministic `d583` `alpha.1-dev` pack recorded the following values. They are a
+baseline for the architecture, not expected identities for the refreshed
+`ichiran-260118` data. The new release's own `stats.json` is the release of record.
 
 | Measure | Result |
 |---|---:|

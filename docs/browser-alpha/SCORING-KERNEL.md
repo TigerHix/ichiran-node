@@ -1,16 +1,16 @@
 # Portable analyzer scoring and path kernel
 
-Status: implemented and integrated; full-corpus parity and calibrated browser
-performance passed on the dev qualification pack
+Status: implemented and integrated; the previous `d583` dev pack passed full-corpus
+parity and calibrated browser performance; `ichiran-260118` requalification pending
 Scope: scoring, analyzer-internal pair rules, culling, and top-N path selection
 
 ## What this implementation is
 
-`packages/portable/src/analyzer-scoring.ts` is a synchronous, DB-free translation of
+`packages/core/src/analyzer-scoring.ts` is a synchronous, DB-free translation of
 the current analyzer's `calcScore`, identical-candidate cull, lookup score cutoff, and
-presentation alternative cutoff. `packages/portable/src/analyzer-rules.ts` contains the
+presentation alternative cutoff. `packages/core/src/analyzer-rules.ts` contains the
 analyzer's registered segmentation filters, penalties, and pair synergies.
-`packages/portable/src/analyzer-paths.ts` owns gap penalties, entity boosts, stable top-N
+`packages/core/src/analyzer-paths.ts` owns gap penalties, entity boosts, stable top-N
 insertion, and path accumulation. These modules do not import PostgreSQL, Node APIs, the
 separate experimental `@ichiran/grammar` package, surface lookup, morphology generation,
 suffix/counter generation, details, or presentation code.
@@ -77,11 +77,10 @@ long.
 
 ## Pairwise analyzer rules
 
-The portable default includes all 15 registered analyzer segmentation filters, both
-registered penalties in their current priority order, and all 17 registered pair
-synergies. These are the rules under `packages/core/src/grammar`; they are part of the
-analyzer parity contract and are distinct from the separate experimental
-`@ichiran/grammar` package.
+The core default includes all registered analyzer segmentation filters and penalties,
+plus the registered pair synergies. These originate in
+`packages/reference-postgres/src/grammar`; they are part of the analyzer parity
+contract and are distinct from the separate experimental `@ichiran/grammar` package.
 
 Lookup populates the compact `AnalyzerSegment.rules` facts: exact candidate text,
 simple/proxy/compound/counter kind, score info, and (for compounds) the final simple
@@ -99,7 +98,7 @@ reversal.
 
 The PostgreSQL scorer uses generated physical identity internally even though the clean
 browser API exposes canonical root identity. It cannot be replaced blindly with root
-facts. In `packages/core/src/dict/scoring.ts`, current/generated identity affects:
+facts. In `packages/reference-postgres/src/dict/scoring.ts`, current/generated identity affects:
 
 - entry lookup (`root_p`, `n_kanji`, and `primary_nokanji`);
 - the `[seq, ...from]` lineage and the root-only `[seq]` aggregate selection;
@@ -130,32 +129,34 @@ not additional public subsystems.
 
 ## Verification
 
-Normal portable tests include frozen arithmetic fixtures and differential tests against
-the current core for common ordering, culling, gap penalty, and neutral-transition path
-DP. They also lock top-N ties, filtered replacement transitions, adjustments, and entity
+Normal core tests include frozen arithmetic fixtures and differential tests against
+the frozen PostgreSQL reference for common ordering, culling, gap penalty, and
+neutral-transition path DP. They also lock top-N ties, filtered replacement
+transitions, adjustments, and entity
 double boost. Analyzer-rule tests compare every registered synergy, representative
 filter/penalty/non-adjacent cases, and 250 deterministic mixed-feature pairs against the
-current implementation.
+frozen reference implementation.
 
 An opt-in PostgreSQL differential materializes real scoring facts for 48 deterministic
 root forms and 24 deterministic generated forms, then compares three modes per form
-(ordinary, final, and extended use-length) against current `calcScore`. The 2026-08-28
-run made 216 score comparisons and 1,297 field assertions with zero differences in 3.17
-seconds:
+(ordinary, final, and extended use-length) against the reference `calcScore`. The
+2026-08-28 run made 216 score comparisons and 1,297 field assertions with zero
+differences in 3.17 seconds:
 
 ```bash
-cd packages/portable
+cd packages/core
 RUN_ANALYZER_SCORING_POSTGRES=true \
   bun test tests/analyzer-scoring-postgres.test.ts
 ```
 
-The portable suite also covers end-to-end direct/morphology lookup, suffixes, counters,
+The core suite also covers end-to-end direct/morphology lookup, suffixes, counters,
 numbers, splits, generated multi-property expansion, two-stage via-member binding,
-legacy compact/detailed serialization, and corruption/lazy-load behavior. The completed
-strict PostgreSQL differential is 1,241 / 1,241 exact comparisons: 534 segmentation,
+legacy compact/detailed serialization, and corruption/lazy-load behavior. The previous
+`d583` strict PostgreSQL differential made 1,241 / 1,241 exact comparisons: 534
+segmentation,
 five standalone romanization, 702 detailed legacy, and 702 clean-semantic operations,
 with zero path, analyzer, presentation, or error differences and an empty result
-allowlist.
+allowlist. The refreshed upstream release must run the same gate against its own pack.
 
 Production Chromium performance remains the browser release gate. Do not substitute Bun
 microbenchmarks for the public Worker RPC benchmark or claim phone performance from

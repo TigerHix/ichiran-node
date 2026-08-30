@@ -1,5 +1,9 @@
 # Browser alpha reverse morphology
 
+The design remains current. Counts and digests below are measurements of the previous
+`d583` alpha pack; the refreshed `ichiran-260118` release must publish new values in
+its lock and `stats.json`.
+
 The alpha replaces PostgreSQL's generated conjugation closure with a small
 reverse matcher. Grammar is not part of this component.
 
@@ -56,7 +60,7 @@ runtime-active count. The portable analyzer exposes only the classifier-active
 route; the normalized surface index supplies the reviewed 55 replacements for
 stale/missing generated forms.
 
-## Measured artifact
+## Previous measured artifact
 
 Two complete database builds produced byte-identical files.
 
@@ -115,7 +119,7 @@ normalized output differences.
 Run from `packages/data`:
 
 ```bash
-export ICHIRAN_DB_URL='postgresql:///ichiran_test?host=%2Fvar%2Frun%2Fpostgresql'
+export ICHIRAN_DB_URL='postgresql:///ichiran_oracle_ea958336?host=%2Fvar%2Frun%2Fpostgresql'
 
 bun src/browser-pack/morphology-build.ts \
   --data ../../data \

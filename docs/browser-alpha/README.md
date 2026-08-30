@@ -1,5 +1,8 @@
 # Browser Analyzer Alpha
 
+The product boundary and post-alpha optimization path are defined in
+[`../EDGE-NATIVE-MILESTONE.md`](../EDGE-NATIVE-MILESTONE.md).
+
 The alpha is an installable, analyzer-only PWA that uses no PostgreSQL, Node.js
 service, or network lookup after one data installation. PostgreSQL is a read-only
 build-time oracle for the first compiler; it is not shipped to the browser.
@@ -28,7 +31,7 @@ root payload, reverse morphology, resident analyzer support, and random-access
 annotations/generated facts. Complete forms, senses, glosses, and sense metadata
 live in `details.bin` and are opened lazily.
 
-`PortableAnalyzer.analyze` returns the clean lexical model: canonical root identity,
+`@ichiran/core` returns the clean lexical model: canonical root identity,
 semantic inflection paths, top-N sentence paths, token alternatives, compounds,
 counters, and entity hints. `serializeLegacyDetailed` is a thin presentation bridge
 over that result and lazy details. It preserves the legacy shape without making
@@ -38,8 +41,9 @@ Ordinary conjugations are reconstructed by reverse morphology. Exceptional
 generated-row behavior is not represented by a scalar property or a copied SQL row:
 section 5 retains every relevant physical conjugation member and every ordered
 `conj_prop` row in 10-byte records. Count-only exceptions use the same record format,
-and generated records are packed in 36 independently compressed root blocks that are
-prewarmed once when the Worker opens the pack. Split/hint annotation blocks remain
+and generated records are packed in independently compressed root blocks that are
+prewarmed once when the Worker opens the pack. The final block count is recorded in
+the refreshed release. Split/hint annotation blocks remain
 lazy behind a 16-entry LRU. See `ANALYZER-SUPPORT.md`.
 
 The initial browser capability floor is Safari 26+ or a current Chromium browser.
@@ -64,29 +68,38 @@ Worker as the agreed provisional proxy.
 
 ## Build and verification
 
-The PostgreSQL oracle is pinned to
-`d583720572fbf26ee201166ac47034c50380a571`. It contains the original analyzer plus a
-build-only shared-transaction seam and the reviewed easy-hint tuple fix documented in
-the acceptance contract. Snapshot and toolchain metadata are frozen in
-`browser-alpha/sources.lock.json`; `oracle.json` records the measured database identity.
-Release and differential commands also require the checked-out `packages/core` tree to
-match that exact ancestor commit.
+The product parity target is upstream Ichiran
+`ea9583368e67cad22d94abae8dbcc8df96d99bcd` with data release
+`ichiran-260118`. The release dump is 200,012,956 bytes with SHA-256
+`98a44e2cc88a65677da8b1f7124e7d6c904253eb1aae0ef16d2c7cc1dacdba82`;
+the pinned upstream suite passes 782 / 782 analyzer assertions. Exact source evidence
+is recorded in `browser-alpha/upstream-oracle.json`.
+
+The former PostgreSQL-backed Node analyzer remains frozen at
+`d583720572fbf26ee201166ac47034c50380a571` as a private compiler and migration
+reference. Release and differential commands require the checked-out
+`packages/reference-postgres` source to match that reference. The final v2
+`browser-alpha/sources.lock.json` is produced from the qualified database with
+`alpha:release:refresh-lock`; final `ichiran-260118` artifact counts and digests are
+pending that clean compile.
 
 Run database-backed baseline tests against the local oracle with:
 
 ```bash
-ICHIRAN_DB_URL='postgresql:///ichiran_test?host=%2Fvar%2Frun%2Fpostgresql' \
-  bun test --timeout 30000 --max-concurrency 1 packages/core/tests
+ICHIRAN_DB_URL='postgresql:///ichiran_oracle_ea958336?host=%2Fvar%2Frun%2Fpostgresql' \
+  bun test --timeout 30000 --max-concurrency 1 packages/reference-postgres/tests
 ```
 
 The supported alpha commands are:
 
 ```bash
 bun run alpha:release:typecheck
+bun run alpha:release:refresh-lock -- \
+  --database "$ICHIRAN_DB_URL"
 bun run alpha:release:build -- \
   --database "$ICHIRAN_DB_URL" \
   --out dist/browser-alpha \
-  --pack-version alpha.1 \
+  --pack-version ichiran-260118 \
   --shell-bytes <measured-production-shell-bytes>
 bun run alpha:release:verify -- \
   --out dist/browser-alpha \
@@ -98,17 +111,8 @@ bun run alpha:demo:test
 bun run alpha:demo:e2e
 ```
 
-The current `alpha.1-dev` qualification pack passes all three size gates: 25,055,731
-wire bytes, 38,249,770 persisted bytes, and a 24,422,280-byte hot image when paired with
-the measured 607,732-byte production shell. Its strict fresh-PostgreSQL differential is
-1,241 / 1,241 exact with an empty result-difference allowlist.
-
-The production offline Playwright suite passes 5 / 5 tests. On Chrome 151.0.7922.34,
-an AMD Ryzen 9 9950X pinned to CPU 31 with five contention peers produced an exact
-Worker calibration ratio of 6.134353741858198x (58.8 ms baseline, 360.7 ms contended).
-Ordinary analysis measured p50 25.5 ms, p95 50.8 ms, and max 128.3 ms over 990 samples;
-pathological morphology measured p50 51.4 ms, p95 118.9 ms, and max 185.6 ms over 500
-samples. Worker ready/first-analysis times were 342.9/65.3 ms, and the main-thread
-long-task list was empty. The clean final build must reproduce this dev qualification;
-its own `stats.json`, oracle report, and browser benchmark report remain the release of
-record.
+The earlier `d583` `alpha.1-dev` pack passed the size, strict differential, offline,
+and calibrated browser gates. Those measurements validate the architecture and remain
+documented in the component notes, but they are not results for `ichiran-260118`.
+The refreshed release must publish its own `stats.json`, parity report, and browser
+benchmark report before it is accepted.

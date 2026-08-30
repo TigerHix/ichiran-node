@@ -20,9 +20,9 @@ Pass that exact integer as `--shell-bytes`, then run from the repository root:
 
 ```bash
 bun run alpha:release:build -- \
-  --database 'postgresql:///ichiran_test?host=%2Fvar%2Frun%2Fpostgresql' \
+  --database 'postgresql:///ichiran_oracle_ea958336?host=%2Fvar%2Frun%2Fpostgresql' \
   --out dist/browser-alpha \
-  --pack-version alpha.1 \
+  --pack-version ichiran-260118 \
   --shell-bytes <measured-production-shell-bytes>
 ```
 
@@ -31,7 +31,7 @@ untracked files. `--allow-dirty` exists only for development builds and does not
 alter the recorded `sourceCommit`.
 
 Use the package commands above rather than invoking the TypeScript file directly.
-Both supported build and verify commands first compile `packages/core`; the
+Both supported build and verify commands first compile `packages/reference-postgres`; the
 support freezer deliberately imports that fresh `dist` tree and temporarily
 routes legacy cache reads through the supplied read-only snapshot transaction.
 
@@ -98,9 +98,9 @@ physical conjugations, ordered `conj_prop` rows, tri-state properties, and exact
 two-stage via-member binding. Its decoded rows are 10 bytes each; repeated semantic
 keys are intentional. Consecutive roots are packed into roughly 256 KiB decoded gzip
 blocks, and a resident root index supports preload. Worker startup inflates and verifies
-the pinned pack's 36 generated blocks in one pass, retaining exactly 9,336,624 decoded
-bytes. Split/hint annotations remain lazy behind a 16-entry LRU whose source-payload
-upper bound is 3,603,164 bytes. `stats.json` records the exact index,
+the pinned pack's generated blocks in one pass. Split/hint annotations remain lazy
+behind a 16-entry LRU. `stats.json` records the final block count, decoded bytes, LRU
+source-payload bound, exact index,
 raw/internal-compressed totals, block/member counts, and largest compressed and decoded
 blocks.
 
@@ -135,7 +135,19 @@ reuse measurements from an earlier generated-overlay format.
 
 ## Updating a pinned pack
 
-Do not edit expected counts until a new snapshot has passed the exhaustive parity
-jobs. A pack update is one reviewable change: raw-file hashes, projection hashes,
-artifact counts, toolchain versions, and `packVersion` move together. The alpha has
-no update channel, migration, delta, or fallback pack.
+Refresh the lock from the qualified read-only database instead of editing expected
+values by hand:
+
+```bash
+bun run alpha:release:refresh-lock -- \
+  --database 'postgresql:///ichiran_oracle_ea958336?host=%2Fvar%2Frun%2Fpostgresql'
+```
+
+This command does not consume artifact identities from the old lock. It compiles
+and verifies the target database, then atomically writes a deterministic v2 lock
+with the upstream Lisp revision, frozen PostgreSQL reference revision, release-dump
+identity, database/toolchain identity, raw inputs, artifact counts and exact artifact
+digests. Normal `build` and `verify` remain strict consumers of that lock.
+
+Review the lock diff and pass the exhaustive parity jobs before publishing. The
+alpha has no update channel, migration, delta, or fallback pack.

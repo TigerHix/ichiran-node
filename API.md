@@ -1,56 +1,44 @@
-# Ichiran API
+# Ichiran HTTP API
 
-Japanese text segmentation and romanization API.
+The HTTP server exposes the packed analyzer through Node.js. It loads one immutable
+release at startup and does not use PostgreSQL.
 
-## Base URL
-
-Local: `http://localhost:3000`
-Deployed: `https://ichiran-node.your-subdomain.workers.dev`
-
-## Endpoints
-
-### Health Check
-
-**GET** `/health`
-
-Returns server status.
+## Start
 
 ```bash
-curl http://localhost:3000/health
+bun run build
+export ICHIRAN_PACK_DIR=/absolute/path/to/analyzer-release
+export PORT=3000                     # optional; defaults to 3000
+bun run dev
 ```
 
-Response:
+The release directory must contain `manifest.json`, `hot.bin.gz`, and
+`details.bin.gz`. The API binds to `0.0.0.0` and allows cross-origin JSON requests.
+
+## Requests
+
+All analysis endpoints accept JSON. `text` must be a non-empty string. `limit` must
+be a positive integer and defaults to `1`. Optional entity hints have the form:
+
 ```json
 {
-  "status": "ok",
-  "timestamp": "2025-10-03T03:25:40.314Z"
+  "start": 0,
+  "end": 2,
+  "boost": 500
 }
 ```
 
----
+`start` and `end` are UTF-16 string offsets, with an exclusive end. `boost` is
+optional.
 
-### API Documentation
+### `POST /api/romanize`
 
-**GET** `/api`
-
-Returns available endpoints and examples.
-
----
-
-### Basic Romanization
-
-**POST** `/api/romanize`
-
-Converts Japanese text to romaji.
-
-Request:
-```json
-{
-  "text": "こんにちは"
-}
+```bash
+curl -X POST http://localhost:3000/api/romanize \
+  -H 'Content-Type: application/json' \
+  -d '{"text":"こんにちは"}'
 ```
 
-Response:
 ```json
 {
   "text": "こんにちは",
@@ -58,248 +46,79 @@ Response:
 }
 ```
 
-Example:
-```bash
-curl -X POST http://localhost:3000/api/romanize \
-  -H "Content-Type: application/json" \
-  -d '{"text":"こんにちは"}'
-```
+### `POST /api/romanize/info`
 
----
+Returns romanization plus reverse-ordered token definitions in the historical info
+format.
 
-### Romanization with Dictionary Info
-
-**POST** `/api/romanize/info`
-
-Returns romanization with word definitions and glosses.
-
-Request:
 ```json
 {
-  "text": "今日は良い天気です"
-}
-```
-
-Response:
-```json
-{
-  "text": "今日は良い天気です",
-  "romanized": "kyō wa yoitenki desu",
+  "text": "今日はいい天気です",
+  "romanized": "kyō wa ii tenki desu",
   "info": [
-    ["desu", "です\n1. [aux-v,cop] be; is\n[ Conjugation: [cop] Non-past Affirmative Formal\n  だ :  ]"],
-    ["yoitenki", "良い天気 【よいてんき】\n1. [n,exp] fine weather; fair weather"],
-    ["wa", "は\n1. [prt] 《pronounced わ in modern Japanese》 indicates sentence topic"],
-    ["kyō", "今日 【きょう】\n1. [n,adv] today; this day"]
+    ["desu", "です\n1. [aux-v,cop] be; is"]
   ]
 }
 ```
 
-Example:
-```bash
-curl -X POST http://localhost:3000/api/romanize/info \
-  -H "Content-Type: application/json" \
-  -d '{"text":"今日は良い天気です"}'
-```
+The example is abbreviated; actual definitions include the complete selected senses
+and conjugation information.
 
----
+### `POST /api/segment`
 
-### Full Segmentation
+Returns the legacy-compatible detailed segmentation shape.
 
-**POST** `/api/segment`
-
-Returns complete segmentation with alternatives, scores, and detailed word information.
-
-Request:
-```json
-{
-  "text": "ご注文はうさぎですか",
-  "limit": 2
-}
-```
-
-Parameters:
-- `text` (string, required): Japanese text to segment
-- `limit` (number, optional): Number of alternative segmentations to return (default: 1)
-
-Response:
-```json
-{
-  "text": "ご注文はうさぎですか",
-  "segments": [
-    [
-      [
-        [
-          ["gochūmon", {...}, []],
-          ["wa", {...}, []],
-          ["usagi", {...}, []],
-          ["desu", {...}, []],
-          ["ka", {...}, []]
-        ],
-        518
-      ]
-    ]
-  ],
-  "limit": 2
-}
-```
-
-Each word entry contains:
-- Romanization
-- Dictionary entry (reading, text, kana, score, seq, gloss, conjugation)
-- Additional properties
-
-Example:
 ```bash
 curl -X POST http://localhost:3000/api/segment \
-  -H "Content-Type: application/json" \
-  -d '{"text":"ご注文はうさぎですか","limit":2}'
+  -H 'Content-Type: application/json' \
+  -d '{"text":"ご注文はうさぎですか","limit":3}'
 ```
-
----
-
-### Grammar Analysis (Experimental)
-
-**POST** `/api/analyze`
-
-Performs both grammar pattern matching and text segmentation in a single efficient request. This endpoint combines the functionality of grammar analysis with tokenization, making only one database round-trip instead of two separate calls.
-
-Request:
-```json
-{
-  "text": "私は学生です",
-  "limit": 5,
-  "maxMatches": 10
-}
-```
-
-Parameters:
-- `text` (string, required): Japanese text to analyze
-- `limit` (number, optional): Number of alternative segmentations to consider internally for better accuracy (default: 5)
-- `maxMatches` (number, optional): Maximum number of grammar matches to return (default: unlimited)
-
-**Note**: The `limit` parameter is used internally to test multiple segmentation alternatives and select the one that produces the best grammar matches. Only the best segmentation is returned in the response.
-
-Response:
-```json
-{
-  "segments": [
-    [
-      [
-        [
-          ["watashi", {...}, []],
-          ["wa", {...}, []],
-          ["gakusei", {...}, []],
-          ["desu", {...}, []]
-        ],
-        480
-      ]
-    ]
-  ],
-  "grammars": {
-    "n5.noun-wa": {
-      "matchedSentences": [
-        {
-          "level": "n5",
-          "description": "Used to mark the topic of a sentence",
-          "captures": [
-            {
-              "label": "topic",
-              "start": 0,
-              "end": 1,
-              "tokens": [...]
-            },
-            {
-              "label": "predicate",
-              "start": 2,
-              "end": 4,
-              "tokens": [...]
-            }
-          ],
-          "segments": [
-            {
-              "type": "capture",
-              "text": "私",
-              "label": "topic"
-            },
-            {
-              "type": "raw",
-              "text": "は"
-            },
-            {
-              "type": "capture",
-              "text": "学生です",
-              "label": "predicate"
-            }
-          ]
-        }
-      ],
-      "grammarDetail": {
-        "label": "話題の「は」",
-        "formation": "Noun + は",
-        "description": "Used to mark the topic of a sentence; 'as for', 'speaking of'",
-        "explanation": "### Name\n- 話題の「は」\n\n### Meaning and function\n...",
-        "examples": [
-          {
-            "jp": "今日は暑いですね。",
-            "en": "As for today, it's hot, isn't it?"
-          },
-          {
-            "jp": "この店は安くておいしい。",
-            "en": "This shop is cheap and tasty."
-          }
-        ]
-      }
-    }
-  }
-}
-```
-
-The response includes:
-- `segments`: Best segmentation result (same format as `/api/segment`, but only the single best alternative for each segment)
-- `grammars`: Object keyed by grammarId, where each grammar contains:
-  - `matchedSentences`: Array of all instances where this grammar pattern was matched
-    - `level`: JLPT level (n1-n5)
-    - `description`: Human-readable description of the pattern
-    - `captures`: Named groups of tokens that match parts of the pattern (for internal use)
-    - `segments`: **Easy-to-render structure** alternating between `raw` and `capture` segments
-      - Each segment has `type` ('raw' or 'capture') and `text`
-      - Capture segments also include `label` field
-      - Segments can be directly mapped to UI elements (e.g., normal text vs highlighted text)
-  - `grammarDetail`: Detailed information about the grammar pattern
-    - `label`: Human-readable label of the pattern (e.g., "話題の「は」")
-    - `formation`: Structure/template of the pattern (e.g., "Noun + は")
-    - `description`: Brief description of the pattern's function
-    - `explanation`: Comprehensive explanation including usage notes, constraints, and common mistakes
-    - `examples`: Array of example sentences with Japanese text and English translations
-
-Example:
-```bash
-curl -X POST http://localhost:3000/api/analyze \
-  -H "Content-Type: application/json" \
-  -d '{"text":"私は学生です","limit":5}'
-```
-
----
-
-## Error Responses
-
-All endpoints return errors in this format:
 
 ```json
 {
-  "error": "Error message description"
+  "text": "ご注文はうさぎですか",
+  "segments": [],
+  "limit": 3
 }
 ```
 
-Common status codes:
-- `400` - Bad request (missing/invalid parameters)
-- `500` - Internal server error
+`segments` above is abbreviated. The real value contains paths, romanized tokens,
+dictionary entries, alternatives, conjugations, and integer path scores. Pass an
+`entities` array alongside `text` and `limit` to apply entity hints.
 
----
+### `POST /api/analyze`
 
-## CORS
+This route is retained as an analyzer-only compatibility surface. It returns packed
+segmentation and explicitly reports the grammar exclusion:
 
-All endpoints include CORS headers:
-- `Access-Control-Allow-Origin: *`
-- `Access-Control-Allow-Methods: GET, POST, OPTIONS`
-- `Access-Control-Allow-Headers: Content-Type`
+```json
+{
+  "segments": [],
+  "grammars": {},
+  "grammarExcluded": true
+}
+```
+
+The separate experimental grammar package is not loaded and `maxMatches` has no role
+in this milestone.
+
+## Utility endpoints
+
+| Method and path | Result |
+|---|---|
+| `GET /health` | Process health and timestamp |
+| `GET /health/db` | Compatibility health route; reports `database: "not-required"` |
+| `GET /api` | Endpoint index and examples |
+| `POST /api/test` | Echo, process memory, uptime, and timestamp |
+| `OPTIONS *` | CORS preflight |
+
+Malformed JSON, missing text, and invalid limits or entity hints return `400`.
+Bodies larger than 1 MiB return `413`; unknown routes return `404`; unexpected
+runtime failures return `500`.
+
+## Runtime boundary
+
+`@ichiran/api` contains transport code only. Manifest verification and filesystem
+loading live in `@ichiran/node`; analysis lives in `@ichiran/core`. The browser demo
+uses the same core runtime, so HTTP and browser output do not drift into separate
+implementations.

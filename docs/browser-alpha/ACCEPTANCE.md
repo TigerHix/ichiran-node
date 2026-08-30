@@ -1,8 +1,10 @@
 # Browser Analyzer Alpha: parity and acceptance contract
 
-Status: strict dev-pack parity, size, offline, and calibrated browser qualification
-passed; clean final release pending, 2026-08-29
-Frozen implementation oracle: `ichiran-node` at
+Status: upstream analyzer qualified; refreshed packed release and final browser
+qualification pending, 2026-08-29
+Authoritative analyzer target: upstream Ichiran at
+`ea9583368e67cad22d94abae8dbcc8df96d99bcd`, data release `ichiran-260118`
+Frozen transition reference: `ichiran-node` at
 `d583720572fbf26ee201166ac47034c50380a571`
 Scope: analyzer only. The experimental `@ichiran/grammar` package and a general
 Kanjidic character API are excluded.
@@ -68,48 +70,48 @@ only hand-picked examples.
 
 | Fixture | Coverage | SHA-256 |
 |---|---:|---|
-| `packages/core/tests/data/segmentation.json` | 534 segmentation cases; 2 historical JMdict-version skips | `a3df8f66132c50d3f78d68632ed8d3477717f8e95b0730e89f05e588252e4944` |
+| `packages/reference-postgres/tests/data/segmentation.json` | 534 segmentation cases; 2 historical JMdict-version skips | `a3df8f66132c50d3f78d68632ed8d3477717f8e95b0730e89f05e588252e4944` |
 | `packages/cli/tests/data/cli.json` | 5 romanization, 3 info, 252 full JSON requests (250 top-1, one top-3, one top-5) | `bc611dcf11e4b271ca2775a58f8c6615130fa2d42782cc1a679fb34eb8d73f5a` |
-| `packages/cli/tests/data/cli-lisp-outputs.json` | historical expected output for the preceding requests | `f9857e5f8294c79a74d4c7769ff5b5fc9dad7a1e3f879720ca3f7e77d3227c99` |
+| `packages/cli/tests/data/cli-lisp-outputs.json` | fresh upstream `ea958336` output for the preceding requests | `a092f07a2b7337c3a790b0d93808213adf2e89eef1750aeaed54160b90856bb8` |
 | `packages/cli/tests/data/hard-cli.json` | 149 top-1 full JSON requests; entries 0-49 are complex morphology chains | `5e8a910314843a25c4bf2dd4663db0211fecc31a031b38c88c9880780115be69` |
-| `packages/cli/tests/data/hard-cli-lisp-outputs.json` | historical expected output for the hard requests | `8e02980887f2c088349b50f41e43d33c51d6a7c741d66e40896cbfb2ba54f3d7` |
+| `packages/cli/tests/data/hard-cli-lisp-outputs.json` | fresh upstream `ea958336` output for the hard requests | `d82f5d5e9ef3b858209ea63a1ea5b448c6460e4ea0fddfc6b811ebb7c3756a85` |
 
-The copies under `packages/core/tests/data` and `packages/cli/tests/data` currently
-have identical hashes. The CLI copies are canonical for full-output fixtures; the
-core copy is canonical for segmentation.
+The request corpora under `packages/reference-postgres/tests/data` and
+`packages/cli/tests/data` have identical hashes. Fresh upstream Lisp output is captured
+under the CLI package; the reference copy remains the historical baseline.
 
 The complete differential corpus additionally includes:
 
-- 200 counter combinations in `packages/core/tests/counters.test.ts`;
-- 54 entity-hint cases in `packages/core/tests/entity-hints.test.ts`;
-- 17 presentation round trips in `packages/core/tests/json-consistency.test.ts`;
+- 200 counter combinations in `packages/reference-postgres/tests/counters.test.ts`;
+- 54 entity-hint cases in `packages/reference-postgres/tests/entity-hints.test.ts`;
+- 17 presentation round trips in `packages/reference-postgres/tests/json-consistency.test.ts`;
 - six number cases and one numeric `basicSplit` case;
 - conjugation tombstone/special-form assertions alongside the database-backed
   conjugation checks.
 
 The 13 standalone `matchReadings` tests do not make the general Kanjidic API part of
 the browser product. Instead, the compiler records the resolved hinted-kana output
-for every root reading reached by the 420 `defEasyHint` registrations (645
-registered definition sequences) in `packages/core/src/dict/splitDefinitions.ts`;
-the 36,388 resolved outputs compare exactly.
+for every root reading reached by the registered definitions in
+`packages/reference-postgres/src/dict/splitDefinitions.ts`; the refreshed lock records
+the exact registration and resolved-output counts.
 
 Existing PostgreSQL baseline commands, run from the frozen repository with a valid
 `ICHIRAN_DB_URL`:
 
 ```bash
-bun test --timeout 30000 --max-concurrency 1 packages/core/tests/
+bun test --timeout 30000 --max-concurrency 1 packages/reference-postgres/tests/
 
 bun test --timeout 60000 \
-  packages/core/tests/conjugation.test.ts \
-  packages/core/tests/counters.test.ts \
-  packages/core/tests/segmentation.test.ts
+  packages/reference-postgres/tests/conjugation.test.ts \
+  packages/reference-postgres/tests/counters.test.ts \
+  packages/reference-postgres/tests/segmentation.test.ts
 
 RUN_PARITY_TESTS=true bun test --timeout 60000 \
   packages/cli/tests/cli-parity.test.ts \
   packages/cli/tests/hard-cli-parity.test.ts
 ```
 
-The complete `packages/core/tests` baseline is 824 passes, two documented skips, and
+The complete `packages/reference-postgres/tests` baseline is 824 passes, two documented skips, and
 zero failures when run serially against the Unix-socket oracle. The narrower
 conjugation + counters + segmentation command is 733 passes, two skips, and zero
 failures; it is retained because it is the historical analyzer-boundary measurement
@@ -124,10 +126,10 @@ URL parser accepts:
 export ICHIRAN_DB_URL='postgresql:///ichiran_test?host=%2Fvar%2Frun%2Fpostgresql'
 ```
 
-The checked-in Lisp outputs remain a historical guard, but the authoritative alpha
-golden is a fresh canonical recording from the frozen current PostgreSQL analyzer.
-It includes the current outputs for the two historical JMdict-version skips rather
-than perpetuating skips in the browser suite.
+The checked-in CLI outputs are fresh recordings from the pinned upstream Lisp CLI.
+The copies under `packages/reference-postgres` retain the older Node/PostgreSQL
+baseline so intended upstream changes can be named rather than hidden. The packed
+release must match upstream; the frozen Node reference is a migration diagnostic.
 
 ## 4. Source and database snapshot
 
@@ -142,82 +144,51 @@ source/oracle mismatch. The lock contains:
   projection;
 - exact artifact counts/digests and the reviewed morphology relation attestation.
 
-Raw inputs currently available and frozen:
+The current upstream inputs are explicit:
 
-| Input | SHA-256 |
+| Input | Identity |
 |---|---|
-| `packages/data/JMdict_e.gz` | `391ec340c994cc82809ff667de74530d320bff9b3d062243b03d40b4826b1fe3` |
-| `data/conj.csv` | `46a915afc385e05dfc8174226a5ee7bb4231e30870068e77d52e10a3433b5852` |
-| `data/conjo.csv` | `b2919a24ecc7f3cdf9b9478eb13526b76cb086c53000316ecb1781ff947c14f3` |
-| `data/kwpos.csv` | `485b5ac5d8a23a8bcd18e69ca2fdf21d231fb740780a6c7d7ccf40d65ed831e4` |
+| Ichiran source | commit `ea9583368e67cad22d94abae8dbcc8df96d99bcd`, tree `5352f7641feaeeb1c3db04ea80ced31ca117dbe3` |
+| `ichiran-260118.pgdump` | 200,012,956 bytes; SHA-256 `98a44e2cc88a65677da8b1f7124e7d6c904253eb1aae0ef16d2c7cc1dacdba82` |
+| jmdictdb source | commit `02dc4aabd185a5b02c29fa6bc685bd78296741b3`, data tree `529a73e7e4ae91842ac3b280f51a920f15e38105` |
+| `conj.csv` | `46a915afc385e05dfc8174226a5ee7bb4231e30870068e77d52e10a3433b5852` |
+| `conjo.csv` | `b2919a24ecc7f3cdf9b9478eb13526b76cb086c53000316ecb1781ff947c14f3` |
+| `kwpos.csv` | `485b5ac5d8a23a8bcd18e69ca2fdf21d231fb740780a6c7d7ccf40d65ed831e4` |
 | `data/sources/extra.xml` | `4a056ebe608cb7bb5284e412688ff634d3516f3249a54d37b33645d7a266093b` |
 | `data/sources/gyoseiku.csv` | `23f706ff84b5c27da86be1d7a6066630d34617e1769edb0673c91d258851ce3f` |
 | `data/sources/jichitai.csv` | `328bd0779b1bb69a4c1bc3773c5ff71cffb59c825377ca7f31eafda3860e3af8` |
 
+The qualified database is PostgreSQL 16.15, UTF-8, `ja_JP.utf8`, with normalized
+schema SHA-256
+`481fe143a39d53ff6393ec83a77623f8824e1322c9ef7b8ded4503204bd0be98`.
+After upstream errata its known root-data counts are:
+
+| Projection | Rows |
+|---|---:|
+| root entries | 214,700 |
+| root kanji / kana forms | 227,054 / 259,364 |
+| senses | 251,648 |
+| glosses | 434,112 |
+| sense properties | 407,620 |
+| restricted readings | 6,332 |
+| Kanjidic characters / readings used by the build | 13,108 / 38,977 |
+
+The lock must cover every compiled artifact: route-specific direct and morphology
+surfaces, root/scoring facts, senses and glosses, suffix/counter caches, resolved
+reading hints, physical-member exceptions, and direct/generated lookup order. It
+stores semantic identities rather than surrogate database IDs, CTIDs, timestamps, or
+machine paths.
+
+Final route, morphology, annotation, and artifact counts are intentionally pending
+until `alpha:release:refresh-lock` completes against this database. The refresh command
+compiles and verifies the target, then atomically writes the deterministic v2 lock;
+maintainers do not edit expected artifact values by hand.
+
 Code-defined errata, suffixes, counters, split rules, hints, scoring, penalties, and
-synergies are locked by the clean repository commit. They must not be treated as
-unversioned configuration.
-
-The checkpoint is the original `ba1966a` analyzer plus two reviewed changes: a
-build-only connection override that lets the compiler reuse its read-only transaction,
-and an easy-hint repair that passes the regex capture string (`match[0]`) to
-`translateHints` instead of the match tuple. The full core baseline at this checkpoint
-is 824 passes, the same two historical JMdict-version skips, and zero failures. Release
-and differential tools prove that the complete `packages/core` tree still equals this
-ancestor commit; `--allow-dirty` does not bypass that oracle check.
-
-The current oracle is PostgreSQL 16.15, database `ichiran_test`, UTF-8,
-`C.UTF-8` collation. It has no build-metadata table, so normalized projections—not
-surrogate IDs or a database file checksum—are the authoritative snapshot. Each
-projection uses PostgreSQL text `COPY`, explicit `NULL '\N'`, explicit columns, and
-an explicit bytewise order (`COLLATE "C"` for text). Surrogate row IDs, generated
-target `seq`, timestamps, and absolute paths are excluded.
-
-Required logical projections:
-
-1. root entries and all root kana/kanji forms, including ord/common/tags,
-   conjugatable/nokanji flags and best counterpart;
-2. root score facts, POS sets, archived/prefer-kana flags, and restrictions;
-3. all senses, glosses, and sense properties keyed by `(root seq, sense ord)`;
-4. route-specific direct/morphology surface acceptance;
-5. all 8,270,527 installed lookup-row/path matches, canonicalized to root and
-   ordered rule tuples;
-6. compiled logical suffix and counter caches;
-7. resolved output of all analyzer reading hints; and
-8. exact generated target count exceptions and physical member/property/via
-   multiplicity keyed by canonical root plus semantic rule aliases;
-9. the semantic order of directly reachable root forms on ambiguous surfaces.
-   This last relation freezes the current core's unordered PostgreSQL lookup
-   followed by per-row `unshift`: the compiler observes heap-tuple-descending
-   order on the pinned snapshot, immediately converts it to dense per-surface
-   ranks, and never emits or hashes CTIDs or surrogate text-row IDs; and
-10. the equivalent physical order relation for mixed direct/generated analyzer
-    surfaces, normalized to `(route,surface,physicalRank,rootSeq,ruleAliases)`.
-    The compiler hashes that complete semantic source relation, unions locators
-    that share a physical target, condenses its global precedence graph, and
-    stores exact local ranks only for surfaces whose order cannot be represented
-    by the acyclic global levels. CTIDs and generated target sequences remain
-    transient build joins and are absent from both digests and artifacts.
-
-Useful current projection checks:
-
-| Projection | Rows | SHA-256 |
-|---|---:|---|
-| root entry `(seq,n_kanji,n_kana,primary_nokanji)` | 213,732 | `ff0e59236a2033efc2e8cef6bba6d9bec0f482b3cf5e6e01b1b3403d54dcb806` |
-| all root form fields | 480,480 | `123bfd9ad25292005bf713c0ab9efa1a1186622125adb628a8dace19ff7f3537` |
-| root senses | 246,494 | `55a15829c75f08dddbd1db4da851958ea7ed788ed46534d79d09cfed08144c70` |
-| root glosses | 423,974 | `6efd2c73878b2b0f7e704c6f633fd089272b51ea55642586469b5a6f5a3618a6` |
-| root sense properties | 396,408 | `67cdd9d4bb8a2203b00ac51766a8ffd3f0c04244751cfd7dbab1f34930dc56f1` |
-| restricted readings | 6,732 | `700b35f550fb5e15bb9f8ba5401c61777343afae5e3e0b9092a5fe54cb43b093` |
-| non-name Kanjidic `(character,reading,type)` | 35,542 | `0bea1400b8c60ec3949a20f6d7c1e11264c96e1216a32ace3722a837e3f6e8d7` |
-
-There is no separate `alpha:oracle:snapshot` command. The supported release build opens
-one repeatable-read, read-only transaction, recomputes the locked projections, and
-refuses mismatches. This includes streaming all morphology relation differences from
-the exact compiled section into a measured count and SHA-256; `stats.json` records
-that measurement rather than copying it from the lock. A deliberate snapshot update is a reviewed edit to
-`browser-alpha/sources.lock.json` followed by the full release, exhaustive morphology,
-and end-to-end parity jobs.
+synergies are locked by the clean repository commit. The private
+`packages/reference-postgres` source remains frozen at
+`d583720572fbf26ee201166ac47034c50380a571` except for its build-only package boundary.
+`--allow-dirty` does not relax source, database, artifact, or parity checks.
 
 ## 5. Exhaustive parity gates
 
@@ -225,32 +196,31 @@ All gates operate on semantic keys, never generated IDs.
 
 ### 5.1 Artifact/data equality
 
-- Exactly 213,732 root entries and 480,480 root form rows decode from the artifact.
-- Every scoring-critical field and all 6,732 restriction rows equal the root
-  projections.
-- All 246,494 senses, 423,974 glosses, and 396,408 sense properties decode exactly.
-- The route-aware scanner accepts exactly the same runtime-active endpoints as
-  current lookup: 432,664 direct keys, 7,849,804 morphology keys, 9,394
-  overlapping keys, and 8,273,074 keys in their union. The compiler also accounts
-  for all 8,289,868 physical text-table strings, including 16,794 inactive rows.
-- Suffix output has 5,531 keys and 3,543 sequence/class mappings; counters have 748
-  keys and 787 variants, with exact logical equality, not only equal counts.
-- All 420 easy-hint registrations (645 definition sequences and 36,388 applicable
-  root-reading outputs) produce the recorded final hinted-kana output without a
-  runtime Kanjidic table.
+- Exactly 214,700 root entries, 227,054 root kanji forms, and 259,364 root kana
+  forms are accounted for by the refreshed source projection.
+- Every scoring-critical field and all 6,332 restriction rows equal the refreshed
+  root projection.
+- All 251,648 senses, 434,112 glosses, and 407,620 sense properties decode exactly.
+- The route-aware scanner accepts exactly the runtime-active endpoints recorded by
+  the refreshed lock and accounts for every inactive physical source row.
+- Suffixes, counters, and their sequence/class mappings compare by exact logical
+  value, not only by count.
+- Every applicable easy-hint result is compiled exactly without a runtime Kanjidic
+  table; the refreshed lock records the final registration and output counts.
 - Every selected generated exception round-trips its count fact and every physical
   member/property row in stable order. Two-stage members bind to the exact intermediate
   `viaMemberOrd`; count-only exceptions decode with no fabricated member.
 
 ### 5.2 Morphology relation
 
-Run reverse morphology against every one of the 8,270,527 installed route/form/path
-matches. For each candidate compare route, surface, root, source form/reading,
+Run reverse morphology against every installed route/form/path match recorded by the
+refreshed lock. For each candidate compare route, surface, root, source form/reading,
 ordered one- or two-stage properties, inherited ord/common facts, and exact forward
 equality. Compare sorted semantic diff JSONL byte-for-byte with the frozen relation
 attestation. An unexpected diff or a stale attestation row fails.
 
-Known classes that must be enumerated, not matched by a broad predicate:
+Known classes from the previous snapshot must be remeasured and enumerated, not
+matched by a broad predicate:
 
 - remove secondary ghost-reading contamination: 18,944 legacy rows / 18,926
   `(root,finalSurface)` associations;
@@ -273,7 +243,8 @@ Run both APIs against the complete frozen corpus:
 - top-1, the checked top-3/top-5 cases, all entity fixtures, counters, numbers, and
   every recorded hinted reading.
 
-Canonical output must be byte-identical to the frozen current oracle. The alpha has
+Canonical output must be byte-identical to the pinned upstream oracle after the
+documented canonical identity normalization. The alpha has
 no output-difference allowlist: any segmentation, score, normalized identity, clean
 result, or detailed legacy result difference fails the release gate.
 
@@ -283,10 +254,10 @@ Supported release and end-to-end commands:
 bun run alpha:release:build -- \
   --database "$ICHIRAN_DB_URL" \
   --out dist/browser-alpha \
-  --pack-version alpha.1 \
+  --pack-version ichiran-260118 \
   --shell-bytes <measured-production-shell-bytes>
 
-bun packages/portable/tools/oracle-parity.ts \
+bun packages/core/tools/oracle-parity.ts \
   --repository "$PWD" \
   --release dist/browser-alpha \
   --database "$ICHIRAN_DB_URL" \
@@ -444,20 +415,21 @@ Automated browser tests must prove:
 No update scheduler, delta update, background migration, Komi/Nemu integration, or
 production hosting is required for this alpha.
 
-## 11. Qualification status and known provenance limit
+## 11. Qualification status
 
 Implementation prerequisites that were previously missing now exist: the exhaustive
 morphology verifier, semantic parity canonicalizer, portable analyzer integration,
 physical-member overlay, OPFS PWA, and production Worker benchmark harness.
 
-The current `alpha.1-dev` qualification pack passes all three size gates with a 607,732
-byte production shell: 24,422,280 hot bytes, 38,249,770 persisted bytes, and 25,055,731
-wire bytes. Its full strict PostgreSQL run is 1,241 / 1,241 exact comparisons with zero
-path, analyzer, presentation, or error differences; `currentOracleAllowlist` is empty.
+The previous `d583` `alpha.1-dev` qualification pack passed all three size gates with a
+607,732-byte production shell: 24,422,280 hot bytes, 38,249,770 persisted bytes, and
+25,055,731 wire bytes. Its full strict PostgreSQL run made 1,241 / 1,241 exact
+comparisons with zero path, analyzer, presentation, or error differences;
+`currentOracleAllowlist` is empty.
 The 392,336 morphology-relation rows are a separately hashed historical database
 artifact attestation, not allowed output differences.
 
-The production offline Playwright suite passes 5 / 5 tests against that dev pack.
+The production offline Playwright suite passed 5 / 5 tests against that dev pack.
 Chrome 151.0.7922.34 ran on an AMD Ryzen 9 9950X pinned to CPU 31 with five
 same-affinity contention peers. Exact-Worker calibration measured 58.8 ms baseline and
 360.7 ms contended medians, a 6.134353741858198x ratio. After two warmup passes and ten
@@ -475,9 +447,10 @@ interrupted-install handling, Worker isolation, cross-tab mutation locking, and 
 required responsive layouts. `work/browser-benchmark.json` retains raw samples and
 environment metadata.
 
+Those numbers validate the architecture but are not `ichiran-260118` release results.
 The contract still requires final evidence tied to one clean accepted build:
 
-1. commit the implementation and build/verify the clean deterministic `alpha.1`
+1. build and verify the clean deterministic `ichiran-260118`
    release under the same three size gates;
 2. rerun `oracle-parity.ts` against that exact final release and retain its complete
    report;
@@ -486,10 +459,11 @@ The contract still requires final evidence tied to one clean accepted build:
 4. record the final artifact identity and browser timings from those artifacts rather
    than treating the development pack as the release of record.
 
-The current database still has no provenance metadata proving which raw files built it,
-and the clean checkout does not contain the original Kanjidic2 XML. The normalized
-projection lock is therefore authoritative for this alpha. A future source-only
-rebuild must add and hash that XML; this does not require shipping Kanjidic at runtime.
+The release provenance is the pinned upstream commit and
+`ichiran-260118.pgdump` identity recorded above. The deterministic v2 source lock must
+capture the qualified database, toolchain, raw inputs, compiler formats, and exact
+artifact identities. A future source-only rebuild may additionally pin the original
+Kanjidic2 XML; this does not require shipping Kanjidic at runtime.
 
 Actual iPhone 13 and iPhone 17 Pro Max measurements remain deliberately deferred.
 Passing this alpha is a conservative desktop proxy, not production mobile signoff.
