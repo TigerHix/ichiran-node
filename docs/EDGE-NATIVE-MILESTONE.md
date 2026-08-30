@@ -146,9 +146,9 @@ The deterministic `ichiran-260118` assets are:
 | `details.bin.gz` one-time download | 12,317,325 | 11.747 |
 | resident `hot.bin` | 24,857,288 | 23.706 |
 | installed `details.bin` | 13,555,874 | 12.928 |
-| production shell | 618,607 | 0.590 |
-| complete first-install transfer | 25,599,776 | 24.414 |
-| complete persisted installation | 39,033,585 | 37.225 |
+| production shell | 618,844 | 0.590 |
+| complete first-install transfer | 25,600,013 | 24.414 |
+| complete persisted installation | 39,033,822 | 37.226 |
 
 The release's generated `manifest.json` and `stats.json` remain the source of truth;
 the data assets themselves are release artifacts, not repository contents.

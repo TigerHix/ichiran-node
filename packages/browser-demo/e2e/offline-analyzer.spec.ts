@@ -851,7 +851,9 @@ test('installs once, restarts offline, meets the 6x proxy, and detects runtime c
     expect(contentionRatio).toBeLessThanOrEqual(7.5);
 
     await page.getByRole('button', { name: 'Run benchmark' }).click();
-    await expect(page.getByText('Benchmark complete.')).toBeVisible({ timeout: 10 * 60 * 1000 });
+    // This watchdog includes the entire corpus under induced host contention.
+    // The assertions below enforce the actual analyzer latency requirements.
+    await expect(page.getByText('Benchmark complete.')).toBeVisible({ timeout: 20 * 60 * 1000 });
     const ordinaryP95 = Number.parseFloat(await runtimeValue(page, 'ordinary p95').innerText());
     const pathologicalP95 = Number.parseFloat(
       await runtimeValue(page, 'pathological-morphology p95').innerText()

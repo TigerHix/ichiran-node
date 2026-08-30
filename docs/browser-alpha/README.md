@@ -114,9 +114,9 @@ bun run alpha:demo:e2e
 
 The deterministic `ichiran-260118` data assets are 12,662,917 compressed hot bytes and
 12,317,325 compressed detail bytes. They install as a 24,857,288-byte resident hot
-image and 13,555,874-byte lazy detail store. With the 618,607-byte production shell,
-the complete transfer is 25,599,776 bytes and the persisted installation is
-39,033,585 bytes; all three size gates pass.
+image and 13,555,874-byte lazy detail store. With the 618,844-byte production shell,
+the complete transfer is 25,600,013 bytes and the persisted installation is
+39,033,822 bytes; all three size gates pass.
 
 `stats.json`, the exhaustive oracle report, and `work/browser-benchmark.json` are
 generated qualification evidence and remain outside Git with the release artifacts.

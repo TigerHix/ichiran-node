@@ -173,8 +173,7 @@ export function simplifyNgrams(
 ): string {
   let result = input;
   for (const [from, to] of replacements) {
-    const escaped = from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    result = result.replace(new RegExp(escaped, 'g'), to);
+    result = result.replaceAll(from, to);
   }
   return result;
 }

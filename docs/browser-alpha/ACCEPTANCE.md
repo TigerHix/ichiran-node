@@ -343,8 +343,8 @@ Binary-size pass/fail definitions use powers of two:
   the release content encoding: **at most 25 MiB = 26,214,400 bytes**.
 
 The qualified `ichiran-260118` release measures 24,857,288 resident hot bytes,
-39,033,585 total persisted bytes, and 25,599,776 first-install wire bytes with the
-618,607-byte production shell. The compressed hot/detail assets are 12,662,917 and
+39,033,822 total persisted bytes, and 25,600,013 first-install wire bytes with the
+618,844-byte production shell. The compressed hot/detail assets are 12,662,917 and
 12,317,325 bytes respectively. All three gates pass without excluding dictionary
 details.
 

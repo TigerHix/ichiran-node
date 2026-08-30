@@ -4,7 +4,9 @@ export default defineConfig({
   testDir: './e2e',
   fullyParallel: false,
   workers: 1,
-  timeout: 12 * 60 * 1000,
+  // The exhaustive corpus test deliberately adds host CPU contention; its own
+  // Worker-latency assertions remain the product performance gates.
+  timeout: 25 * 60 * 1000,
   expect: { timeout: 60_000 },
   use: {
     baseURL: 'http://127.0.0.1:4173',
