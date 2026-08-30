@@ -98,6 +98,10 @@ const TOMBSTONE_SPECS = [
   {
     route: 'kana' as const, rootSeq: 1593170, sourceText: 'コケる', surface: 'コケさせ',
     firstPos: 'v1', firstType: 7, secondPos: 'v1', secondType: 13
+  },
+  {
+    route: 'kana' as const, rootSeq: 1593170, sourceText: 'コケる', surface: 'コケさせ',
+    firstPos: 'v1', firstType: 53, secondPos: 'v5s', secondType: 10
   }
 ] as const;
 

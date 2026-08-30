@@ -618,14 +618,34 @@ async function loadComponents(
       }
       // Keep the exhaustive gate on these exact bytes and in this transaction;
       // otherwise the relation digest would not attest the artifact we publish.
-      const measuredMorphology = morphologyRelationAttestation(await verifyMorphologyRelation({
+      const alphaOnlyExamples: unknown[] = [];
+      const morphologyVerification = await verifyMorphologyRelation({
         lookup: openMorphology(morphologyBuild.bytes),
         sql: tx as unknown as Parameters<typeof verifyMorphologyRelation>[0]['sql'],
         exampleLimit: 0,
+        onDiff: (diff) => {
+          if (diff.side === 'alpha-only' && alphaOnlyExamples.length < 12) {
+            alphaOnlyExamples.push(diff);
+          }
+        },
         onProgress: (groups, rows) => {
           console.error(`verified morphology ${groups.toLocaleString()} surfaces / ${rows.toLocaleString()} rows`);
         }
-      }));
+      });
+      if (
+        morphologyVerification.alphaOnly !== 0
+        || morphologyVerification.duplicateLegacyRows !== 0
+        || morphologyVerification.duplicateAlphaCandidates !== 0
+      ) {
+        throw new Error(
+          'Morphology relation is not release-safe: '
+          + `${morphologyVerification.alphaOnly} alpha-only, `
+          + `${morphologyVerification.duplicateLegacyRows} duplicate legacy, `
+          + `${morphologyVerification.duplicateAlphaCandidates} duplicate packed; `
+          + `alphaOnlyExamples=${JSON.stringify(alphaOnlyExamples)}`
+        );
+      }
+      const measuredMorphology = morphologyRelationAttestation(morphologyVerification);
       if (lock) {
         assertBrowserAlphaMorphologyAttestation(
           measuredMorphology,
