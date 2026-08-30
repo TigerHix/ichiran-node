@@ -78,9 +78,9 @@ the downloaded bytes disagree with the signed manifest before the installer perf
 its own streaming decompression.
 
 The alpha browser baseline is Safari 26+ or a current Chromium browser. The installer
-requires a dedicated Worker, OPFS (`navigator.storage.getDirectory()`), Web Locks,
-`FileSystemFileHandle.createWritable()`, and `DecompressionStream`; the UI checks
-these capabilities before offering installation. The offline PWA shell additionally
+requires a dedicated Worker, OPFS (`navigator.storage.getDirectory()`), IndexedDB,
+Web Locks, `FileSystemFileHandle.createWritable()`, and `DecompressionStream`; the UI
+checks these capabilities before offering installation. The offline PWA shell additionally
 uses a Service Worker. Safari added the writable-file stream used by this deliberately
 simple streaming installer in
 [Safari 26](https://developer.apple.com/documentation/safari-release-notes/safari-26-release-notes).
@@ -122,7 +122,8 @@ and installed hashes and lengths, fixed section set, every section checksum and
 reader header, the details header, stats identity, and all three release gates:
 
 - always-resident uncompressed `hot.bin` at most 24 MiB;
-- installed shell + hot + details at most 64 MiB;
+- persisted hot + details + precached shell + cached manifest + compact
+  `install.json` + the 36-byte logical IndexedDB install ID at most 64 MiB;
 - first-install shell + manifest + compressed hot + compressed details at most
   25 MiB.
 

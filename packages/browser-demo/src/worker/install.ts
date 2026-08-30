@@ -11,16 +11,23 @@ const MARKER_FILE = 'install.json';
 const HOT_FILE = 'hot.bin';
 const DETAILS_FILE = 'details.bin';
 const DOWNLOAD_FILE = 'asset.download';
+const CONTROL_DATABASE = 'ichiran-browser-alpha-control';
+const CONTROL_STORE = 'state';
+const INSTALL_ID_KEY = 'install-id';
+const INSTALL_ID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
+let controlDatabasePromise: Promise<IDBDatabase> | null = null;
 
 interface InstalledMarker {
   readonly state: 'ready' | 'corrupt';
   readonly manifest: AnalyzerPackManifest;
+  readonly installId: string;
   readonly installedAt: string;
   readonly message?: string;
 }
 
 export interface InstalledFiles {
   readonly manifest: AnalyzerPackManifest;
+  readonly installId: string;
   readonly hot: FileSystemFileHandle;
   readonly details: FileSystemFileHandle;
 }
@@ -43,6 +50,12 @@ export type InstallProgress = (
 
 function isObject(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+function assertInstallId(value: unknown): asserts value is string {
+  if (typeof value !== 'string' || !INSTALL_ID_PATTERN.test(value)) {
+    throw new Error('Installed marker has an invalid install ID');
+  }
 }
 
 function assertAsset(value: unknown, label: string): asserts value is PackAssetManifest {
@@ -167,6 +180,7 @@ async function readMarker(directory: FileSystemDirectoryHandle): Promise<Install
     throw new Error('Installed marker is invalid');
   }
   const manifest = parseManifest(value.manifest);
+  assertInstallId(value.installId);
   if (typeof value.installedAt !== 'string') throw new Error('Installed marker has no timestamp');
   if (value.message !== undefined && typeof value.message !== 'string') {
     throw new Error('Installed marker has an invalid message');
@@ -174,6 +188,7 @@ async function readMarker(directory: FileSystemDirectoryHandle): Promise<Install
   return {
     state: value.state,
     manifest,
+    installId: value.installId,
     installedAt: value.installedAt,
     message: value.message
   };
@@ -187,6 +202,72 @@ async function writeMarker(
   const writable = await handle.createWritable();
   await writable.write(JSON.stringify(marker));
   await writable.close();
+}
+
+function controlDatabase(): Promise<IDBDatabase> {
+  if (controlDatabasePromise) return controlDatabasePromise;
+  const opening = new Promise<IDBDatabase>((resolve, reject) => {
+    const request = indexedDB.open(CONTROL_DATABASE, 1);
+    request.onupgradeneeded = () => {
+      request.result.createObjectStore(CONTROL_STORE);
+    };
+    request.onerror = () => {
+      if (controlDatabasePromise === opening) controlDatabasePromise = null;
+      reject(request.error ?? new Error('Could not open install control'));
+    };
+    request.onsuccess = () => {
+      const database = request.result;
+      const reset = () => {
+        if (controlDatabasePromise === opening) controlDatabasePromise = null;
+      };
+      database.addEventListener('close', reset);
+      database.addEventListener('versionchange', () => {
+        reset();
+        database.close();
+      });
+      resolve(database);
+    };
+  });
+  controlDatabasePromise = opening;
+  return opening;
+}
+
+async function readInstallId(): Promise<string | null> {
+  const database = await controlDatabase();
+  return new Promise((resolve, reject) => {
+    const request = database.transaction(CONTROL_STORE).objectStore(CONTROL_STORE).get(INSTALL_ID_KEY);
+    request.onerror = () => reject(request.error ?? new Error('Could not read install control'));
+    request.onsuccess = () => {
+      if (request.result === undefined) {
+        resolve(null);
+        return;
+      }
+      try {
+        assertInstallId(request.result);
+        resolve(request.result);
+      } catch (error) {
+        reject(error);
+      }
+    };
+  });
+}
+
+async function writeInstallId(installId: string | null): Promise<void> {
+  if (installId !== null) assertInstallId(installId);
+  const database = await controlDatabase();
+  await new Promise<void>((resolve, reject) => {
+    const transaction = database.transaction(
+      CONTROL_STORE,
+      'readwrite',
+      { durability: 'strict' }
+    );
+    const store = transaction.objectStore(CONTROL_STORE);
+    if (installId === null) store.delete(INSTALL_ID_KEY);
+    else store.put(installId, INSTALL_ID_KEY);
+    transaction.oncomplete = () => resolve();
+    transaction.onerror = () => reject(transaction.error ?? new Error('Could not write install control'));
+    transaction.onabort = () => reject(transaction.error ?? new Error('Install control write aborted'));
+  });
 }
 
 async function hashFile(file: File): Promise<string> {
@@ -299,8 +380,12 @@ async function installAsset(
 export async function inspectInstall(workerOpen = false): Promise<PackStatus> {
   const directory = await analyzerDirectory();
   let marker: InstalledMarker | null;
+  let installId: string | null;
   try {
-    marker = await readMarker(directory);
+    [marker, installId] = await Promise.all([
+      readMarker(directory),
+      readInstallId()
+    ]);
   } catch (error) {
     return {
       state: 'corrupt',
@@ -310,12 +395,18 @@ export async function inspectInstall(workerOpen = false): Promise<PackStatus> {
   const hot = await fileIfPresent(directory, HOT_FILE);
   const details = await fileIfPresent(directory, DETAILS_FILE);
   if (!marker) {
-    return hot || details
+    return hot || details || installId
       ? { state: 'incomplete', message: 'Analyzer data installation is incomplete.' }
       : { state: 'not-installed' };
   }
   if (marker.state === 'corrupt') {
     return { state: 'corrupt', message: marker.message ?? 'Analyzer data is corrupted.' };
+  }
+  if (!installId) {
+    return { state: 'incomplete', message: 'Analyzer data installation is incomplete.' };
+  }
+  if (installId !== marker.installId) {
+    return { state: 'corrupt', message: 'Analyzer install IDs do not match.' };
   }
   if (!hot || !details) {
     return { state: 'incomplete', message: 'Analyzer data files are missing.' };
@@ -376,8 +467,9 @@ export async function installAnalyzer(
     }
   }
 
-  // The marker is the commit record. Remove it before touching payload files so
-  // a terminated Worker can leave only an incomplete, never a false-ready, pack.
+  // Invalidate the control record before touching OPFS. It is committed again
+  // only after every payload and the mirrored marker are complete.
+  await writeInstallId(null);
   await removeIfPresent(directory, MARKER_FILE);
   await Promise.all([
     removeIfPresent(directory, DOWNLOAD_FILE),
@@ -385,6 +477,7 @@ export async function installAnalyzer(
     removeIfPresent(directory, DETAILS_FILE)
   ]);
   try {
+    const installId = crypto.randomUUID();
     await installAsset(
       manifestUrl,
       directory,
@@ -407,10 +500,13 @@ export async function installAnalyzer(
     await writeMarker(directory, {
       state: 'ready',
       manifest,
+      installId,
       installedAt: new Date().toISOString()
     });
+    await writeInstallId(installId);
     return inspectInstall(false);
   } catch (error) {
+    await writeInstallId(null);
     await removeIfPresent(directory, MARKER_FILE);
     await Promise.all([
       removeIfPresent(directory, HOT_FILE),
@@ -423,41 +519,60 @@ export async function installAnalyzer(
 
 export async function installedFiles(): Promise<InstalledFiles | null> {
   const directory = await analyzerDirectory();
-  const marker = await readMarker(directory);
-  if (!marker || marker.state !== 'ready') return null;
+  const [marker, installId] = await Promise.all([
+    readMarker(directory),
+    readInstallId()
+  ]);
+  if (
+    !marker
+    || marker.state !== 'ready'
+    || installId === null
+    || installId !== marker.installId
+  ) return null;
   const [hot, details] = await Promise.all([
     fileIfPresent(directory, HOT_FILE),
     fileIfPresent(directory, DETAILS_FILE)
   ]);
-  return hot && details ? { manifest: marker.manifest, hot, details } : null;
+  return hot && details
+    ? { manifest: marker.manifest, installId: marker.installId, hot, details }
+    : null;
 }
 
 /** Mark only the ready pack whose identity was observed by the failing runtime. */
 export async function markInstallCorrupt(
-  manifestSha256: string,
+  installId: string,
   message: string
 ): Promise<boolean> {
   const directory = await analyzerDirectory();
-  const marker = await readMarker(directory);
+  const [marker, committedInstallId] = await Promise.all([
+    readMarker(directory),
+    readInstallId()
+  ]);
   if (
     !marker
     || marker.state !== 'ready'
-    || marker.manifest.manifestSha256 !== manifestSha256
+    || marker.installId !== installId
+    || committedInstallId !== installId
   ) return false;
+  await writeInstallId(null);
   await writeMarker(directory, { ...marker, state: 'corrupt', message });
   return true;
 }
 
-/** Identity of the complete install committed by install.json, if one exists. */
-export async function installedManifestSha256(): Promise<string | null> {
-  const marker = await readMarker(await analyzerDirectory());
-  return marker?.state === 'ready' ? marker.manifest.manifestSha256 : null;
+/** Cheap identity of the complete install committed under the lifecycle lock. */
+export async function installedInstallId(): Promise<string | null> {
+  try {
+    return await readInstallId();
+  } catch {
+    return null;
+  }
 }
 
 export async function clearInstall(): Promise<void> {
   const directory = await analyzerDirectory();
-  await removeIfPresent(directory, MARKER_FILE);
+  await writeInstallId(null);
   await Promise.all([
+    removeIfPresent(directory, MARKER_FILE),
     removeIfPresent(directory, HOT_FILE),
     removeIfPresent(directory, DETAILS_FILE),
     removeIfPresent(directory, DOWNLOAD_FILE)

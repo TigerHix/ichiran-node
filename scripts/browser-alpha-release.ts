@@ -1210,6 +1210,7 @@ async function verify(options: CliOptions, root: string): Promise<void> {
       shellBytes?: number;
       cachedManifestBytes?: number;
       installedMarkerBytes?: number;
+      installedIdentityPayloadBytes?: number;
     };
   };
   assertBytesEqual(reportBytes, deterministicJson(report), 'Stats report');

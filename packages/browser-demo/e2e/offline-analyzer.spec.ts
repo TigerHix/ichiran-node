@@ -21,6 +21,7 @@ import type {
 
 const BASE_URL = 'http://127.0.0.1:4173';
 const DIRECTORY_NAME = 'ichiran-browser-alpha';
+const INSTALL_ID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
 
 interface RoutedAsset {
   readonly manifest: PackAssetManifest;
@@ -284,6 +285,73 @@ async function holdInstallLifecycleLock(
   };
 }
 
+async function pendingInstallLifecycleLocks(page: Page): Promise<readonly string[]> {
+  return page.evaluate(async lockName => {
+    const snapshot = await navigator.locks.query();
+    return (snapshot.pending ?? []).flatMap(lock =>
+      lock.name === lockName && lock.mode ? [lock.mode] : []
+    );
+  }, 'ichiran-browser-alpha-install');
+}
+
+async function queueStandaloneInstall(page: Page): Promise<void> {
+  await page.evaluate(async () => {
+    let workerUrl = performance.getEntriesByType('resource')
+      .find(entry => new URL(entry.name).pathname.includes('/assets/analyzer.worker-'))
+      ?.name;
+    if (!workerUrl) {
+      for (const cacheName of await caches.keys()) {
+        const requests = await (await caches.open(cacheName)).keys();
+        workerUrl = requests
+          .find(request => new URL(request.url).pathname.includes('/assets/analyzer.worker-'))
+          ?.url;
+        if (workerUrl) break;
+      }
+    }
+    if (!workerUrl) throw new Error('Could not locate the production analyzer Worker');
+
+    const worker = new Worker(workerUrl, { type: 'module', name: 'ichiran-aba-installer' });
+    const state = window as typeof window & {
+      __ichiranStandaloneInstall?: {
+        readonly worker: Worker;
+        done: boolean;
+        error: string | null;
+      };
+    };
+    state.__ichiranStandaloneInstall = { worker, done: false, error: null };
+    worker.addEventListener('message', (event: MessageEvent<{
+      readonly id: number;
+      readonly type: 'progress' | 'result' | 'error';
+      readonly message?: string;
+    }>) => {
+      if (event.data.id !== 1 || event.data.type === 'progress') return;
+      const current = state.__ichiranStandaloneInstall;
+      if (!current) return;
+      current.done = true;
+      current.error = event.data.type === 'error'
+        ? event.data.message ?? 'Standalone install failed'
+        : null;
+    });
+    worker.postMessage({ id: 1, op: 'install', manifestUrl: '/analyzer/manifest.json' });
+  });
+}
+
+async function waitForStandaloneInstall(page: Page): Promise<void> {
+  await expect.poll(() => page.evaluate(() => {
+    const current = (window as typeof window & {
+      __ichiranStandaloneInstall?: { readonly done: boolean; readonly error: string | null };
+    }).__ichiranStandaloneInstall;
+    return current ? { done: current.done, error: current.error } : null;
+  }), { timeout: 180_000 }).toEqual({ done: true, error: null });
+  await page.evaluate(() => {
+    const state = window as typeof window & {
+      __ichiranStandaloneInstall?: { readonly worker: Worker };
+    };
+    state.__ichiranStandaloneInstall?.worker.terminate();
+    state.__ichiranStandaloneInstall = undefined;
+  });
+}
+
 function runtimeValue(page: Page, label: string) {
   const exact = new RegExp(`^${label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`);
   return page.locator('.runtime-panel dl div')
@@ -451,6 +519,32 @@ async function opfsSnapshot(page: Page): Promise<OpfsSnapshot> {
   }, DIRECTORY_NAME);
 }
 
+async function committedInstallId(page: Page): Promise<string | null> {
+  return page.evaluate(async ({ databaseName, storeName, key }) => {
+    const database = await new Promise<IDBDatabase>((resolve, reject) => {
+      const request = indexedDB.open(databaseName, 1);
+      request.onupgradeneeded = () => request.result.createObjectStore(storeName);
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => resolve(request.result);
+    });
+    try {
+      return await new Promise<string | null>((resolve, reject) => {
+        const request = database.transaction(storeName).objectStore(storeName).get(key);
+        request.onerror = () => reject(request.error);
+        request.onsuccess = () => resolve(
+          typeof request.result === 'string' ? request.result : null
+        );
+      });
+    } finally {
+      database.close();
+    }
+  }, {
+    databaseName: 'ichiran-browser-alpha-control',
+    storeName: 'state',
+    key: 'install-id'
+  });
+}
+
 function expectNoInstalledFiles(snapshot: OpfsSnapshot): void {
   expect(snapshot).toEqual({
     markerBytes: null,
@@ -515,6 +609,7 @@ async function interruptInstall(
     );
     const duringInstall = await opfsSnapshot(installingPage);
     expect(duringInstall.markerBytes).toBeNull();
+    expect(await committedInstallId(installingPage)).toBeNull();
     if (artifact === 'details') {
       expect(duringInstall.hotBytes).toBe(manifest.hot.installedBytes);
     }
@@ -676,6 +771,9 @@ test('installs once, restarts offline, meets the 6x proxy, and detects runtime c
   await expect(page.getByRole('button', { name: 'Install analyzer data' })).toBeVisible();
   await page.getByRole('button', { name: 'Install analyzer data' }).click();
   await expect(page.getByText('Ready offline')).toBeVisible({ timeout: 180_000 });
+  const committedInstall = await opfsSnapshot(page);
+  expect(committedInstall.markerBytes).not.toBeNull();
+  expect(await committedInstallId(page)).toMatch(INSTALL_ID_PATTERN);
 
   await page.evaluate(() => navigator.serviceWorker.ready.then(() => undefined));
   if (!await page.evaluate(() => Boolean(navigator.serviceWorker.controller))) {
@@ -930,6 +1028,47 @@ test('installs once, restarts offline, meets the 6x proxy, and detects runtime c
   await coordinator.goto('/');
   await coordinator.getByText('Runtime & data', { exact: true }).click();
 
+  // Force detail block 91 into the one-block cache, then select a token in
+  // block 357 only after the backing file is truncated. A same-release install
+  // is already queued ahead of the stale corruption report, exercising the
+  // per-install-ID ABA guard rather than only a manifest identity check.
+  await page.getByLabel('Entity spans').fill('');
+  await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('猫');
+  await page.getByRole('button', { name: 'Analyze' }).click();
+  await expect(page.locator('.dictionary-forms')).toContainText('猫');
+  await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('鮟鱇を食べる');
+  await page.getByRole('button', { name: 'Analyze' }).click();
+  const anglerfish = page.getByRole('button', { name: /鮟鱇/ }).first();
+  await expect(anglerfish).toBeVisible();
+
+  const oldInstallId = await committedInstallId(page);
+  expect(oldInstallId).toMatch(INSTALL_ID_PATTERN);
+  await coordinator.evaluate(async directoryName => {
+    const root = await navigator.storage.getDirectory();
+    const directory = await root.getDirectoryHandle(directoryName);
+    const details = await directory.getFileHandle('details.bin');
+    const writable = await details.createWritable();
+    await writable.close();
+  }, DIRECTORY_NAME);
+
+  const releaseAbaLock = await holdInstallLifecycleLock(coordinator);
+  await anglerfish.click();
+  await expect.poll(() => pendingInstallLifecycleLocks(coordinator))
+    .toEqual(['shared']);
+  await queueStandaloneInstall(coordinator);
+  await expect.poll(() => pendingInstallLifecycleLocks(coordinator))
+    .toEqual(['shared', 'exclusive']);
+  await releaseAbaLock();
+  await waitForStandaloneInstall(coordinator);
+  await expect(page.locator('.dictionary-forms'))
+    .toContainText('鮟鱇', { timeout: 180_000 });
+  await expect(page.getByText('potbellied sumo wrestler', { exact: true })).toBeVisible();
+
+  const newInstallId = await committedInstallId(page);
+  expect(newInstallId).toMatch(INSTALL_ID_PATTERN);
+  expect(newInstallId).not.toBe(oldInstallId);
+  await expect(page.getByText('Ready offline')).toBeVisible();
+
   // A warm runtime request must wait behind an exclusive lifecycle mutation.
   await page.getByLabel('Entity spans').fill('');
   await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('猫');
@@ -941,8 +1080,8 @@ test('installs once, restarts offline, meets the 6x proxy, and detects runtime c
   await releaseRuntimeLock();
   await expect(page.getByRole('button', { name: /猫/ }).first()).toBeVisible();
 
-  // Runtime reads share the lock with other readers, while cross-tab clear is
-  // exclusive. Once clear commits, the stale Worker must discard its runtime.
+  // Queue a stale-tab read behind a cross-tab writer. Once clear commits, that
+  // already-waiting reader must observe the new install ID before using runtime.
   const releaseSharedLock = await holdInstallLifecycleLock(page, 'shared');
   await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('犬');
   await page.getByRole('button', { name: 'Analyze' }).click();
@@ -953,21 +1092,29 @@ test('installs once, restarts offline, meets the 6x proxy, and detects runtime c
   await expect(page.locator('.dictionary-forms')).toContainText('犬');
   coordinator.once('dialog', dialog => dialog.accept());
   await coordinator.getByRole('button', { name: 'Clear installed data' }).click();
-  await coordinator.waitForTimeout(250);
+  await expect.poll(() => pendingInstallLifecycleLocks(coordinator))
+    .toContain('exclusive');
   expect((await opfsSnapshot(page)).markerBytes).not.toBeNull();
-  await releaseSharedLock();
-  await expect(coordinator.getByRole('button', { name: 'Install analyzer data' })).toBeVisible();
 
   await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('鳥');
   await page.getByRole('button', { name: 'Analyze' }).click();
+  await expect(page.getByText('Analyzing…')).toBeVisible();
+  await page.waitForTimeout(250);
+  await expect(page.getByRole('button', { name: /鳥/ })).toHaveCount(0);
+
+  await releaseSharedLock();
+  await expect(coordinator.getByRole('button', { name: 'Install analyzer data' })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Install analyzer data' })).toBeVisible();
+  expect(await committedInstallId(page)).toBeNull();
 
   const releaseInstallLock = await holdInstallLifecycleLock(coordinator);
   await page.getByRole('button', { name: 'Install analyzer data' }).click();
   await page.waitForTimeout(250);
   expectNoInstalledFiles(await opfsSnapshot(page));
+  expect(await committedInstallId(page)).toBeNull();
   await releaseInstallLock();
   await expect(page.getByText('Ready offline')).toBeVisible({ timeout: 180_000 });
+  expect(await committedInstallId(page)).toMatch(INSTALL_ID_PATTERN);
   await coordinator.close();
   await page.evaluate(async () => {
     const root = await navigator.storage.getDirectory();

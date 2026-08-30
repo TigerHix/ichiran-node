@@ -77,7 +77,7 @@ upstream Lisp + release dump + PostgreSQL
          deterministic release
           /                   \
          v                     v
-browser OPFS + Worker      @ichiran/node
+browser OPFS + IDB + Worker  @ichiran/node
          \                     /
           v                   v
                  @ichiran/core
@@ -90,8 +90,9 @@ selection, details, romanization, and legacy serialization.
 
 Hosts own only I/O:
 
-- the browser adapter installs verified bytes in OPFS and serves random-access blocks
-  to a dedicated Worker;
+- the browser adapter installs verified bytes in OPFS, keeps one per-install commit
+  ID in IndexedDB to linearize cross-tab lifecycle changes, and serves random-access
+  blocks to a dedicated Worker;
 - `@ichiran/node` reads the same release from a directory, verifies it, decompresses
   it, and supplies the bytes to core;
 - CLI and API are presentation/transport adapters over the Node host.
@@ -146,9 +147,9 @@ The deterministic `ichiran-260118` assets are:
 | `details.bin.gz` one-time download | 12,317,325 | 11.747 |
 | resident `hot.bin` | 24,857,288 | 23.706 |
 | installed `details.bin` | 13,555,874 | 12.928 |
-| production shell | 618,844 | 0.590 |
-| complete first-install transfer | 25,600,013 | 24.414 |
-| complete persisted installation | 39,033,822 | 37.226 |
+| production shell | 620,423 | 0.592 |
+| complete first-install transfer | 25,601,592 | 24.416 |
+| complete persisted payload | 39,035,488 | 37.227 |
 
 The release's generated `manifest.json` and `stats.json` remain the source of truth;
 the data assets themselves are release artifacts, not repository contents.

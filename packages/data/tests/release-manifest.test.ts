@@ -40,16 +40,19 @@ describe('browser analyzer release manifest', () => {
     const markerBytes = new TextEncoder().encode(JSON.stringify({
       state: 'ready',
       manifest: first.manifest,
+      installId: '00000000-0000-4000-8000-000000000000',
       installedAt: '1970-01-01T00:00:00.000Z'
     })).byteLength;
     expect(sizes.cachedManifestBytes).toBe(first.manifestBytes.byteLength);
     expect(sizes.installedMarkerBytes).toBe(markerBytes);
+    expect(sizes.installedIdentityPayloadBytes).toBe(36);
     expect(sizes.persistedBytes).toBe(
       options.hot.byteLength
       + options.details.byteLength
       + shellBytes
       + first.manifestBytes.byteLength
       + markerBytes
+      + 36
     );
   });
 

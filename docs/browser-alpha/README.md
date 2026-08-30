@@ -25,7 +25,10 @@ analyzer already observes them.
 
 ## Runtime architecture
 
-The browser installs one pinned `hot.bin` and one pinned `details.bin` into OPFS.
+The browser installs one pinned `hot.bin` and one pinned `details.bin` into OPFS. A
+36-byte per-install ID in IndexedDB is the cross-tab commit record; `install.json`
+mirrors that ID so cold inspection can reject mismatched state and stale corruption
+cannot target a same-release reinstall.
 `hot.bin` contains five deterministic sections: a route-aware surface automaton,
 root payload, reverse morphology, resident analyzer support, and random-access
 annotations/generated facts. Complete forms, senses, glosses, and sense metadata
@@ -47,9 +50,10 @@ generated blocks. Split/hint annotation blocks remain
 lazy behind a 16-entry LRU. See `ANALYZER-SUPPORT.md`.
 
 The initial browser capability floor is Safari 26+ or a current Chromium browser.
-The installer needs a dedicated Worker, OPFS, writable file streams, Web Locks, and
-`DecompressionStream`; the PWA shell additionally uses a Service Worker. Older Safari
-does not implement the deliberately simple writable-stream install path used here.
+The installer needs a dedicated Worker, OPFS, IndexedDB, writable file streams, Web
+Locks, and `DecompressionStream`; the PWA shell additionally uses a Service Worker.
+Older Safari does not implement the deliberately simple writable-stream install path
+used here.
 
 ## Gates
 
@@ -114,9 +118,10 @@ bun run alpha:demo:e2e
 
 The deterministic `ichiran-260118` data assets are 12,662,917 compressed hot bytes and
 12,317,325 compressed detail bytes. They install as a 24,857,288-byte resident hot
-image and 13,555,874-byte lazy detail store. With the 618,844-byte production shell,
-the complete transfer is 25,600,013 bytes and the persisted installation is
-39,033,822 bytes; all three size gates pass.
+image and 13,555,874-byte lazy detail store. With the 620,423-byte production shell,
+the complete transfer is 25,601,592 bytes and the accounted persisted payload is
+39,035,488 bytes; all three size gates pass. IndexedDB allocation overhead is browser
+managed and not included in that logical payload total.
 
 `stats.json`, the exhaustive oracle report, and `work/browser-benchmark.json` are
 generated qualification evidence and remain outside Git with the release artifacts.

@@ -337,20 +337,22 @@ same snapshot must produce identical file hashes and bytes.
 Binary-size pass/fail definitions use powers of two:
 
 - `hot.bin` raw bytes: **at most 24 MiB = 25,165,824 bytes**;
-- all persisted OPFS data plus precached app shell: **at most 64 MiB = 67,108,864
+- all persisted browser payload bytes plus precached app shell: **at most 64 MiB = 67,108,864
   bytes**;
 - fresh-install wire payload for manifest, app shell, and all analyzer data using
   the release content encoding: **at most 25 MiB = 26,214,400 bytes**.
 
 The qualified `ichiran-260118` release measures 24,857,288 resident hot bytes,
-39,033,822 total persisted bytes, and 25,600,013 first-install wire bytes with the
-618,844-byte production shell. The compressed hot/detail assets are 12,662,917 and
-12,317,325 bytes respectively. All three gates pass without excluding dictionary
-details.
+39,035,488 total persisted payload bytes, and 25,601,592 first-install wire bytes
+with the 620,423-byte production shell. The compressed hot/detail assets are
+12,662,917 and 12,317,325 bytes respectively. All three gates pass without excluding
+dictionary details.
 
-The size checker sums the manifest's actual persisted lengths and deterministic
-release-encoded lengths; it does not use filesystem allocation size or estimate from
-source TSV. Full dictionary details are mandatory in these totals. Full Kanjidic
+The size checker sums the manifest's actual payload lengths and deterministic
+release-encoded lengths; it does not use filesystem or IndexedDB allocation size or
+estimate from source TSV. The IndexedDB contribution is the 36-byte logical UUID;
+browser-managed schema, key, structured-clone, and page overhead are implementation
+defined. Full dictionary details are mandatory in these totals. Full Kanjidic
 meanings/radicals/strokes are absent because no alpha analyzer operation consumes
 them.
 
@@ -424,7 +426,7 @@ subsequent hard comparisons use that same runner class and pinned browser revisi
 ## 10. Offline/PWA functional gates
 
 The supported browser floor is Safari 26+ or current Chromium. Required runtime
-capabilities are Worker, OPFS, Web Locks,
+capabilities are Worker, OPFS, IndexedDB, Web Locks,
 `FileSystemFileHandle.createWritable()`, and `DecompressionStream`; the offline app
 shell uses a Service Worker.
 
@@ -432,6 +434,8 @@ Automated browser tests must prove:
 
 - manifest/data hashes are checked before marking an install complete;
 - interruption midway through every artifact never exposes a partial active pack;
+- a queued cross-tab read observes the new per-install commit ID after clear or
+  reinstall, and stale corruption cannot mark a same-release reinstall corrupt;
 - restart after an incomplete or corrupted first install offers a clear reinstall;
 - after a successful install, browser restart plus network blocking still supports
   top-1/top-N analysis, romanization, entities, and full `describe` gloss details;

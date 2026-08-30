@@ -39,6 +39,7 @@ export interface AnalyzerReleaseSizeReport {
   readonly shellBytes: number;
   readonly cachedManifestBytes: number;
   readonly installedMarkerBytes: number;
+  readonly installedIdentityPayloadBytes: number;
 }
 
 function sha256(bytes: Uint8Array): string {
@@ -157,14 +158,18 @@ export function assertAnalyzerReleaseSize(
     throw new Error('Shell size must be a non-negative integer');
   }
   // measure-shell deliberately excludes analyzer/*. The Service Worker caches
-  // manifest.json alongside that shell, and OPFS stores one compact copy inside
-  // install.json. Count both so persistedBytes describes every installed payload.
+  // manifest.json alongside that shell, OPFS stores one compact copy inside
+  // install.json, and IndexedDB stores the install generation read on every
+  // request. Count their logical payload bytes; browser-managed IndexedDB allocation
+  // overhead is implementation-defined and is not part of this release gate.
   const cachedManifestBytes = build.manifestBytes.byteLength;
   const installedMarkerBytes = new TextEncoder().encode(JSON.stringify({
     state: 'ready',
     manifest: build.manifest,
+    installId: '00000000-0000-4000-8000-000000000000',
     installedAt: '1970-01-01T00:00:00.000Z'
   })).byteLength;
+  const installedIdentityPayloadBytes = 36;
   const report = {
     hotBytes: build.manifest.hot.installedBytes,
     persistedBytes:
@@ -172,7 +177,8 @@ export function assertAnalyzerReleaseSize(
       + build.manifest.details.installedBytes
       + shellBytes
       + cachedManifestBytes
-      + installedMarkerBytes,
+      + installedMarkerBytes
+      + installedIdentityPayloadBytes,
     wireBytes:
       build.hotDownload.byteLength
       + build.detailsDownload.byteLength
@@ -180,7 +186,8 @@ export function assertAnalyzerReleaseSize(
       + shellBytes,
     shellBytes,
     cachedManifestBytes,
-    installedMarkerBytes
+    installedMarkerBytes,
+    installedIdentityPayloadBytes
   };
   if (report.hotBytes > ANALYZER_HOT_MAX_BYTES) {
     throw new Error(`hot.bin is ${report.hotBytes} bytes; limit is ${ANALYZER_HOT_MAX_BYTES}`);

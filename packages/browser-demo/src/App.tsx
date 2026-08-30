@@ -679,6 +679,7 @@ function supportsRequiredFeatures(): boolean {
     && 'storage' in navigator
     && typeof navigator.storage.getDirectory === 'function'
     && 'locks' in navigator
+    && 'indexedDB' in window
     && 'DecompressionStream' in window
     && 'FileSystemFileHandle' in window
     && typeof FileSystemFileHandle.prototype.createWritable === 'function';

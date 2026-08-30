@@ -7,7 +7,7 @@ import {
   inspectInstall,
   installAnalyzer,
   installedFiles,
-  installedManifestSha256,
+  installedInstallId,
   markInstallCorrupt
 } from './worker/install.js';
 import type { IchiranRuntime } from '@ichiran/core';
@@ -16,12 +16,9 @@ import { createSerialExecutor } from './worker/serial-executor.js';
 
 let runtime: IchiranRuntime | null = null;
 let runtimeManifestSha256: string | null = null;
-let runtimeIdentityCheckedAt = 0;
+let runtimeInstallId: string | null = null;
 const runSerially = createSerialExecutor();
 const INSTALL_LIFECYCLE_LOCK = 'ichiran-browser-alpha-install';
-const INSTALL_CHANGE_CHANNEL = 'ichiran-browser-alpha-install-change';
-const RUNTIME_IDENTITY_REFRESH_MS = 5_000;
-const installChanges = new BroadcastChannel(INSTALL_CHANGE_CHANNEL);
 
 class WorkerOperationError extends Error {
   readonly code: string;
@@ -55,14 +52,8 @@ function withInstallLifecycleLock<T>(operation: () => Promise<T>): Promise<T> {
 function clearRuntime(): void {
   runtime = null;
   runtimeManifestSha256 = null;
-  runtimeIdentityCheckedAt = 0;
+  runtimeInstallId = null;
 }
-
-function announceInstallChange(): void {
-  installChanges.postMessage(null);
-}
-
-installChanges.addEventListener('message', clearRuntime);
 
 async function openInstalledUnlocked(): Promise<ReturnType<typeof inspectInstall>> {
   const status = await inspectInstall(runtime !== null);
@@ -70,8 +61,12 @@ async function openInstalledUnlocked(): Promise<ReturnType<typeof inspectInstall
     clearRuntime();
     return status;
   }
-  if (runtime && runtimeManifestSha256 === status.manifestSha256) {
-    runtimeIdentityCheckedAt = performance.now();
+  const installId = await installedInstallId();
+  if (
+    runtime
+    && runtimeManifestSha256 === status.manifestSha256
+    && runtimeInstallId === installId
+  ) {
     return status;
   }
   clearRuntime();
@@ -80,12 +75,11 @@ async function openInstalledUnlocked(): Promise<ReturnType<typeof inspectInstall
   try {
     runtime = await openAnalyzerRuntime(files);
     runtimeManifestSha256 = files.manifest.manifestSha256;
-    runtimeIdentityCheckedAt = performance.now();
+    runtimeInstallId = files.installId;
     return inspectInstall(true);
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
-    await markInstallCorrupt(files.manifest.manifestSha256, message);
-    announceInstallChange();
+    await markInstallCorrupt(files.installId, message);
     clearRuntime();
     return inspectInstall(false);
   }
@@ -97,6 +91,9 @@ function openInstalled(): Promise<ReturnType<typeof inspectInstall>> {
 
 function isArtifactCorruption(error: unknown): boolean {
   if (!(error instanceof Error)) return false;
+  // Chromium rejects reads from a File snapshot whose OPFS entry was replaced
+  // with NotReadableError. Treat that stale backing file like other pack damage.
+  if (error instanceof DOMException && error.name === 'NotReadableError') return true;
   if (error.name === 'DetailStoreError') {
     return (error as Error & { readonly code?: string }).code !== 'out-of-range';
   }
@@ -113,15 +110,14 @@ function isArtifactCorruption(error: unknown): boolean {
 async function withRuntime<T>(operation: (value: IchiranRuntime) => T | Promise<T>): Promise<T> {
   while (true) {
     const outcome = await withLifecycleLock('shared', async () => {
-      if (!runtime || runtimeManifestSha256 === null) {
+      const installId = await installedInstallId();
+      if (
+        !runtime
+        || runtimeManifestSha256 === null
+        || runtimeInstallId === null
+        || installId !== runtimeInstallId
+      ) {
         return { state: 'open' as const };
-      }
-      if (performance.now() - runtimeIdentityCheckedAt >= RUNTIME_IDENTITY_REFRESH_MS) {
-        const installedIdentity = await installedManifestSha256();
-        runtimeIdentityCheckedAt = performance.now();
-        if (installedIdentity !== runtimeManifestSha256) {
-          return { state: 'open' as const };
-        }
       }
       try {
         return { state: 'result' as const, value: await operation(runtime) };
@@ -129,18 +125,21 @@ async function withRuntime<T>(operation: (value: IchiranRuntime) => T | Promise<
         if (!isArtifactCorruption(error)) throw error;
         return {
           state: 'corrupt' as const,
-          manifestSha256: runtimeManifestSha256,
+          installId: runtimeInstallId,
           message: error instanceof Error ? error.message : String(error)
         };
       }
     });
     if (outcome.state === 'result') return outcome.value;
     if (outcome.state === 'corrupt') {
-      await withInstallLifecycleLock(async () => {
-        await markInstallCorrupt(outcome.manifestSha256, outcome.message);
-        announceInstallChange();
-        if (runtimeManifestSha256 === outcome.manifestSha256) clearRuntime();
+      const marked = await withInstallLifecycleLock(async () => {
+        try {
+          return await markInstallCorrupt(outcome.installId, outcome.message);
+        } finally {
+          clearRuntime();
+        }
       });
+      if (!marked) continue;
       throw new WorkerOperationError('corrupt-install', outcome.message);
     }
     const status = await openInstalled();
@@ -178,8 +177,6 @@ async function handle(request: WorkerRequest): Promise<unknown> {
             throw new WorkerOperationError('insufficient-storage', 'The browser reported that storage is full.');
           }
           throw error;
-        } finally {
-          announceInstallChange();
         }
         return openInstalledUnlocked();
       });
@@ -188,7 +185,6 @@ async function handle(request: WorkerRequest): Promise<unknown> {
       return withInstallLifecycleLock(async () => {
         clearRuntime();
         await clearInstall();
-        announceInstallChange();
         return inspectInstall(false);
       });
     }
