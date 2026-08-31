@@ -1,7 +1,12 @@
 # Packages
 
-The product has one analyzer implementation and thin host adapters. Compiler and
-reference code are kept outside the runtime dependency graph.
+The qualified alpha has one TypeScript analyzer implementation and thin host adapters.
+Compiler and reference code are kept outside the runtime dependency graph.
+
+The accepted post-alpha direction replaces the analyzer kernel with one Rust crate for
+browser WASM, Node, and native iOS. TypeScript continues to own the browser host and
+source-data compiler. See
+[docs/SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md](./docs/SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md).
 
 ## Product packages
 
@@ -77,8 +82,8 @@ bun run build:compiler
 bun run typecheck:compiler
 
 # Release
-bun run alpha:release:build -- --database "$ICHIRAN_DB_URL" --out dist/browser-alpha --pack-version <version> --shell-bytes <bytes>
-bun run alpha:release:verify -- --out dist/browser-alpha --shell-bytes <bytes>
+bun run alpha:release:build -- --database "$ICHIRAN_DB_URL" --out dist/browser-alpha --pack-version <version> --shell-dir packages/browser-demo/dist
+bun run alpha:release:verify -- --out dist/browser-alpha --shell-dir packages/browser-demo/dist
 
 # Browser demo
 bun run alpha:demo:stage

@@ -1,10 +1,18 @@
-# Data Loading
+# PostgreSQL data loading (transition reference)
 
-Guide to loading JMDict/Kanjidic data into PostgreSQL database.
+This guide documents the existing PostgreSQL-backed loader and compiler oracle. It is
+not the target release architecture. The planned `@ichiran/data` compiler will consume
+pinned JMdict, Kanjidic2, CSV/custom data, and ordered errata directly while reusing
+the qualified pack encoders. See
+[the source-compiler and Rust-kernel roadmap](../../docs/SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md).
 
 ## Status
 
-Fully aligned with Lisp implementation; all segmentation tests pass (except one that's skipped due to JMDict version difference).
+Transitional migration infrastructure. The PostgreSQL-backed producer/query path is
+frozen except for oracle maintenance; `@ichiran/data` and its qualified pack encoders
+remain active implementation code. The checked-in `JMdict_e.gz` predates the qualified
+`ichiran-260118` database and Kanjidic2 is not yet independently pinned. Do not treat a
+fresh run of the steps below as source provenance for that release.
 
 ## Loading Sequence
 

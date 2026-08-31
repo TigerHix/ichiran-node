@@ -1,8 +1,13 @@
 # @ichiran/core
 
-Canonical self-contained Ichiran analyzer for JavaScript. It is browser-safe, has no
-runtime dependencies, and never performs filesystem, network, Node.js, or PostgreSQL
-I/O.
+Current canonical self-contained Ichiran analyzer for JavaScript. It is browser-safe,
+has no runtime dependencies, and never performs filesystem, network, Node.js, or
+PostgreSQL I/O.
+
+This implementation is the qualified executable oracle for the planned Rust kernel.
+It remains supported during parity migration, then retires after browser, Node, and
+iOS use the same Rust source. The pack and clean analyzer model remain the contract; see
+[the forward roadmap](../../docs/SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md).
 
 Core owns:
 
@@ -54,5 +59,5 @@ readings used for analyzer hints are resolved by the compiler and stored as anal
 facts.
 
 See [../../docs/EDGE-NATIVE-MILESTONE.md](../../docs/EDGE-NATIVE-MILESTONE.md) for the
-product boundary and [../../docs/browser-alpha/README.md](../../docs/browser-alpha/README.md)
+as-built alpha boundary and [../../docs/browser-alpha/README.md](../../docs/browser-alpha/README.md)
 for artifact and performance gates.

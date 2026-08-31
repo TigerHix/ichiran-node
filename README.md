@@ -9,6 +9,12 @@ The current milestone is an analyzer-only offline demo. A user downloads one pin
 data release, installs it in browser storage, and can then analyze entirely on the
 device. The same runtime powers the browser demo, Node adapter, CLI, and HTTP API.
 
+This TypeScript runtime is the qualified migration baseline, not the final ownership
+model. The accepted post-alpha direction is one Rust analyzer crate compiled to
+browser WASM, Node, and native iOS, plus a PostgreSQL-free TypeScript source compiler.
+See
+[the source-compiler and Rust-kernel roadmap](./docs/SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md).
+
 ## Quick start
 
 ```bash
@@ -41,7 +47,7 @@ bun run --cwd packages/browser-demo dev
 Building a new pack is a maintainer workflow documented in
 [docs/browser-alpha/RELEASE.md](./docs/browser-alpha/RELEASE.md).
 
-## Architecture
+## Current qualified architecture
 
 ```text
 immutable analyzer release
@@ -55,9 +61,10 @@ immutable analyzer release
 PostgreSQL + @ichiran/reference-postgres ---> @ichiran/data compiler only
 ```
 
-- `@ichiran/core` is the canonical analyzer. It owns packed readers, lookup,
-  morphology, scoring, top-N paths, dictionary details, romanization, and the
-  legacy serializer. It is browser-safe and has no runtime dependencies.
+- `@ichiran/core` is the current canonical analyzer and executable oracle for the Rust
+  port. It owns packed readers, lookup, morphology, scoring, top-N paths, dictionary
+  details, romanization, and the legacy serializer. It is browser-safe and has no
+  runtime dependencies.
 - `@ichiran/node` verifies and decompresses release files, then opens the same core
   runtime used in the browser.
 - `@ichiran/reference-postgres` is the frozen former implementation. It is private
@@ -84,8 +91,10 @@ Kanjidic is not a runtime product feature. The compiler uses its readings only t
 resolve analyzer easy-hint data; those resolved facts are packed into the release.
 The browser and Node runtimes contain no general Kanjidic lookup API.
 
-The complete product boundary, parity contract, and optimization roadmap are in
-[docs/EDGE-NATIVE-MILESTONE.md](./docs/EDGE-NATIVE-MILESTONE.md).
+The as-built product boundary and parity contract are in
+[docs/EDGE-NATIVE-MILESTONE.md](./docs/EDGE-NATIVE-MILESTONE.md). The authoritative
+post-alpha architecture and retirement gates are in
+[docs/SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md](./docs/SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md).
 
 ## Development
 

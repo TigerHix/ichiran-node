@@ -96,5 +96,9 @@ requirements too.
 
 ## Remaining external release gates
 
-- Commit the reviewed source and repeat the two-build proof without `--allow-dirty`; development artifacts must not be presented as deployable clean-commit provenance.
+- After the roadmap documentation is committed, repeat both release builds from that
+  final clean HEAD without `--allow-dirty`; the one existing clean build at `fb7e0d9`
+  cannot be combined with a later documentation commit to claim the two-build gate.
 - Run the explicitly deferred physical-Safari smoke/performance check on the iPhone 13 baseline and current target device. Playwright already covers 320 px, 390 px, and desktop layouts, but it is not a physical-device substitute.
+- Push `portable-core-260118` (currently ahead of `origin/main` with no upstream)
+  before treating the migration baseline as remotely recoverable.

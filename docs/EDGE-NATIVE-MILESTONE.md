@@ -1,10 +1,17 @@
 # Edge-native analyzer milestone
 
-Status: implementation complete for the pinned `ichiran-260118` analyzer. Generated
-release and browser-benchmark evidence stays outside Git and is reproduced by the
-qualification commands; physical-iPhone measurement remains deferred.
+Status: TypeScript alpha implementation complete for the pinned `ichiran-260118`
+analyzer. Generated release and browser-benchmark evidence stays outside Git and is
+reproduced by the qualification commands; physical-iPhone measurement remains
+deferred.
 
-## Product decision
+This document is the as-built alpha contract. It does not define permanent
+implementation ownership. The accepted post-alpha direction—one Rust kernel for
+browser WASM, Node, and native iOS plus a PostgreSQL-free source compiler—is
+authoritative in
+[SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md](./SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md).
+
+## Alpha product decision
 
 Ship one analyzer implementation that runs locally in a browser Worker and in Node.js
 from the same immutable data release. A phone user installs the complete release once;
@@ -61,7 +68,7 @@ The authoritative source metadata is captured in
 `browser-alpha/upstream-oracle.json`. Final compiler counts and artifact digests belong
 in the deterministic release lock and the release's own `stats.json`.
 
-## Architecture
+## Alpha architecture
 
 ```text
               build and qualification only
@@ -84,9 +91,10 @@ browser OPFS + IDB + Worker  @ichiran/node
           lookup -> candidates -> score -> top-N
 ```
 
-`@ichiran/core` is the product. It owns packed readers, route-aware lookup, reverse
-morphology, suffix/counter/number construction, analyzer rules, scoring, stable top-N
-selection, details, romanization, and legacy serialization.
+`@ichiran/core` is the alpha product and executable migration oracle. It owns packed
+readers, route-aware lookup, reverse morphology, suffix/counter/number construction,
+analyzer rules, scoring, stable top-N selection, details, romanization, and legacy
+serialization.
 
 Hosts own only I/O:
 
@@ -215,12 +223,15 @@ they describe the machine running the gate, not the immutable analyzer artifact.
 Physical iPhone 13-class validation remains a production gate when the device is
 available.
 
-## Is this the final optimization ceiling?
+## Post-alpha optimization direction
 
-No. This architecture is the necessary foundation for deeper optimization because it
-removes database latency and gives the analyzer compact, deterministic structures with
-clear ownership. It intentionally leaves room for measured improvements without
-weakening parity.
+The packed architecture is the necessary foundation for deeper optimization because
+it removes database latency and gives the analyzer compact, deterministic structures
+with clear ownership. The earlier alpha plan treated focused WASM kernels as an
+optional optimization. The accepted product direction now goes further: port the
+complete analyzer kernel to Rust so browser WASM and native iOS share one semantic
+implementation. That decision does not remove the requirement to measure the boundary
+before browser cutover.
 
 Likely next steps, in order of evidence:
 
@@ -234,17 +245,18 @@ Likely next steps, in order of evidence:
    initial/transition hooks intentionally use the exhaustive fallback.
 4. Revisit block boundaries, integer widths, compression, and resident-versus-lazy
    placement using real phone memory and decode traces.
-5. Move only proven CPU kernels to WASM, and keep JavaScript when boundary copying,
-   startup, or code size erases the gain.
+5. Port differential slices to Rust, keeping browser installation and asynchronous I/O
+   in TypeScript; cut over only when boundary copying, startup, memory, and final code
+   size pass the release gates.
 
 Other viable work includes automaton-guided scanning that avoids temporary substrings,
 precomputed transitions for common adjacent analyzer-rule cases, compact arenas for
 candidates, and persistent Worker reuse. Every change must reproduce the same ordered
 results and scores before it can replace the current exact implementation.
 
-WASM is therefore an optimization option, not the architecture. A database compiled to
-WASM would still be the wrong data model; focused WASM kernels may be useful after
-profiling.
+WASM is the browser compilation target for the shared Rust kernel, not a database
+strategy and not an assumed speedup. A database compiled to WASM would still be the
+wrong data model.
 
 ## Grammar and Kanjidic boundary
 
@@ -276,9 +288,10 @@ import its internals and upstream Lisp plus packed-runtime tests cover the requi
 behavior independently. That cleanup removes code rather than wrapping it behind a
 permanent repository interface.
 
-A later compiler may ingest source XML/CSV or a normalized export directly and remove
-PostgreSQL from the build too. That is useful maintenance work, but it is not required
-to make the shipped product self-contained.
+The next compiler milestone will ingest pinned source XML/CSV and ordered compatibility
+data directly, then remove PostgreSQL from normal release builds. This is independent
+of the already-complete runtime removal and may proceed in parallel with the Rust
+kernel.
 
 ## Explicit non-goals
 
@@ -288,5 +301,5 @@ to make the shipped product self-contained.
 - server-side or edge-Worker analysis;
 - SQL emulation or an embedded general-purpose database;
 - automatic updates, delta packs, or multiple installed versions;
-- mandatory WASM before profiling;
+- an unmeasured browser WASM cutover;
 - claiming final phone performance from desktop microbenchmarks.

@@ -1,7 +1,12 @@
 # Browser Analyzer Alpha
 
-The product boundary and post-alpha optimization path are defined in
-[`../EDGE-NATIVE-MILESTONE.md`](../EDGE-NATIVE-MILESTONE.md).
+This directory is the as-built specification and qualification record for the
+TypeScript browser alpha. It is intentionally preserved as historical evidence.
+
+The alpha product boundary is defined in
+[`../EDGE-NATIVE-MILESTONE.md`](../EDGE-NATIVE-MILESTONE.md). The authoritative
+post-alpha architecture is the
+[`source-compiler and Rust-kernel roadmap`](../SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md).
 
 The alpha is an installable, analyzer-only PWA that uses no PostgreSQL, Node.js
 service, or network lookup after one data installation. PostgreSQL is a read-only
