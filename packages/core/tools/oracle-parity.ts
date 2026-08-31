@@ -15,16 +15,19 @@ import {
   getPosIndex
 } from '../../data/src/data/conj-rules.js';
 import {
+  verifyBrowserAlphaDatabase
+} from '../../data/src/browser-pack/database-identity.js';
+import {
   sha256Bytes,
   verifyBrowserAlphaOracleCore,
-  verifyBrowserAlphaSources
+  verifyBrowserAlphaSources,
+  type BrowserAlphaSourceLock
 } from '../../data/src/browser-pack/release-orchestration.js';
 import {
-  ANALYZER_RELEASE_FORMAT_VERSION,
-  analyzerManifestDigestInput,
+  parseAnalyzerReleaseManifest,
   type AnalyzerReleaseAsset,
   type AnalyzerReleaseManifest
-} from '../../data/src/browser-pack/release-manifest.js';
+} from '../src/release-manifest.js';
 
 import {
   ANALYZER_ANNOTATIONS_SECTION_ID,
@@ -281,28 +284,22 @@ async function openRuntime(
 ): Promise<Runtime> {
   const manifest = JSON.parse(
     await readFile(resolve(directory, 'manifest.json'), 'utf8')
-  ) as AnalyzerReleaseManifest;
-  if (manifest.formatVersion !== ANALYZER_RELEASE_FORMAT_VERSION) {
-    throw new Error(`Unsupported analyzer release format ${String(manifest.formatVersion)}`);
-  }
-  if (manifest.sourceCommit !== expected.sourceCommit) {
+  );
+  const verifiedManifest: AnalyzerReleaseManifest = parseAnalyzerReleaseManifest(
+    manifest,
+    text => createHash('sha256').update(text).digest('hex')
+  );
+  if (verifiedManifest.sourceCommit !== expected.sourceCommit) {
     throw new Error(
-      `Release source commit ${manifest.sourceCommit} does not match repository HEAD ${expected.sourceCommit}`
+      `Release source commit ${verifiedManifest.sourceCommit} does not match repository HEAD ${expected.sourceCommit}`
     );
   }
-  if (manifest.sourcesLockSha256 !== expected.sourcesLockSha256) {
+  if (verifiedManifest.sourcesLockSha256 !== expected.sourcesLockSha256) {
     throw new Error('Release sources-lock digest does not match the verified repository lock');
   }
-  const { manifestSha256: _manifestSha256, ...unsigned } = manifest;
-  const digest = sha256Bytes(
-    new TextEncoder().encode(analyzerManifestDigestInput(unsigned))
-  );
-  if (manifest.manifestSha256 !== digest) {
-    throw new Error('Release manifest digest does not match its canonical contents');
-  }
   const [hot, detailsBytes] = await Promise.all([
-    releaseAsset(directory, manifest.hot),
-    releaseAsset(directory, manifest.details)
+    releaseAsset(directory, verifiedManifest.hot),
+    releaseAsset(directory, verifiedManifest.details)
   ]);
   const pack = openPack(hot);
   pack.verifyAll();
@@ -682,7 +679,10 @@ class PostgresIdentityResolver implements IdentityResolver {
   }
 }
 
-async function openReference(database: string): Promise<CoreReference> {
+async function openReference(
+  database: string,
+  expected: BrowserAlphaSourceLock['database']
+): Promise<CoreReference> {
   const spec = parseDatabase(database);
   const core = await import('../../reference-postgres/src/index.ts') as unknown as CoreReference['core'];
   const pool = postgres({
@@ -700,6 +700,7 @@ async function openReference(database: string): Promise<CoreReference> {
   const sql = await pool.reserve();
   try {
     await sql.unsafe('BEGIN ISOLATION LEVEL REPEATABLE READ READ ONLY');
+    await verifyBrowserAlphaDatabase(sql, database, expected);
   } catch (error) {
     sql.release();
     await pool.end();
@@ -1300,7 +1301,7 @@ async function main(): Promise<void> {
       sourcesLockSha256: source.lockSha256
     })
   ]);
-  const reference = await openReference(options.database);
+  const reference = await openReference(options.database, source.lock.database);
   const samples: FailureSample[] = [];
   try {
     await reference.withOracle(async () => {

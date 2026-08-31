@@ -20,6 +20,7 @@ export * from './details.js';
 export * from './morphology.js';
 export * from './numbers.js';
 export * from './romanization.js';
+export * from './release-manifest.js';
 export * from './root-payload.js';
 export * from './runtime.js';
 export {

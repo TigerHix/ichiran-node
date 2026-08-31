@@ -21,7 +21,7 @@ function cliSlice(start: number, end: number) {
 describe('browser benchmark corpus', () => {
   test('materializes every exact acceptance slice with source metadata', async () => {
     const parity = await loadAnalyzerParityCorpus(repository);
-    expect(corpus.formatVersion).toBe(2);
+    expect(corpus.formatVersion).toBe(3);
     expect(corpus.groups.ordinary).toEqual(cliSlice(3, 102));
     expect(corpus.groups['pathological-morphology']).toEqual(
       hardCli.fullJson.slice(0, 50).map((request, index) => ({
@@ -46,6 +46,15 @@ describe('browser benchmark corpus', () => {
     expect(corpus.groups['hiragana-colloquial']).toEqual(cliSlice(152, 202));
     expect(corpus.groups['modern-mixed-script']).toEqual(cliSlice(202, 252));
     expect(corpus.groups['top-n']).toEqual(cliSlice(1, 3));
+    expect(corpus.groups['dense-contiguous-boundary']).toEqual(
+      [64, 128, 192, 256].flatMap((length, lengthIndex) =>
+        [1, 5, 10].map((limit, limitIndex) => ({
+          source: 'synthetic:dense-contiguous-boundary',
+          index: lengthIndex * 3 + limitIndex,
+          text: 'あ'.repeat(length),
+          limit
+        })))
+    );
     expect(corpus.groups.entities).toEqual(parity.entities.map((fixture, index) => ({
       source: 'packages/reference-postgres/tests/entity-hints.test.ts',
       index,
@@ -69,5 +78,13 @@ describe('browser benchmark corpus', () => {
       { source: 'packages/reference-postgres/tests/number-split.test.ts', index: 0, text: '二〇二〇', limit: 1 }
     ]);
     expect(corpus.groups['describe-random-access']).toEqual(cliSlice(3, 53));
+    expect(corpus.groups['paragraph-scaling']).toEqual(
+      [128, 512, 1024, 2048, 4096].map((length, index) => ({
+        source: 'synthetic:accepted-boundary',
+        index,
+        text: 'は。'.repeat(length / 2),
+        limit: 10
+      }))
+    );
   });
 });

@@ -4,9 +4,13 @@ import { createServer, type IncomingMessage, type ServerResponse } from 'node:ht
 import { config } from 'dotenv';
 import {
   openNodeRuntime,
-  romanizeWithInfo,
-  type AnalyzerEntityHint
+  romanizeWithInfo
 } from '@ichiran/node';
+import {
+  AnalyzerInputError,
+  validatePortableAnalyzeRequest,
+  type PortableAnalyzeOptions
+} from '@ichiran/core';
 
 config();
 
@@ -23,17 +27,21 @@ async function parseJsonBody(request: IncomingMessage): Promise<Record<string, u
   return new Promise((resolve, reject) => {
     const chunks: Buffer[] = [];
     let received = 0;
+    let rejected = false;
     request.on('data', (chunk: Buffer) => {
+      if (rejected) return;
       received += chunk.byteLength;
       if (received > MAX_JSON_BODY_SIZE) {
+        rejected = true;
+        chunks.length = 0;
         reject(new JsonBodyError('Payload too large', 413));
-        request.destroy();
       } else {
         chunks.push(chunk);
       }
     });
     request.once('error', reject);
     request.once('end', () => {
+      if (rejected) return;
       try {
         const value: unknown = JSON.parse(Buffer.concat(chunks).toString('utf8'));
         if (typeof value !== 'object' || value === null || Array.isArray(value)) {
@@ -52,39 +60,23 @@ function sendJson(response: ServerResponse, value: unknown, status = 200): void 
   response.end(JSON.stringify(value));
 }
 
-function text(body: Record<string, unknown>): string {
+function analyzerRequest(
+  body: Record<string, unknown>,
+  includeOptions: boolean
+): { readonly input: string; readonly options: PortableAnalyzeOptions } {
   if (typeof body.text !== 'string' || body.text.length === 0) {
     throw new JsonBodyError('Missing required field: text');
   }
-  return body.text;
-}
-
-function limit(body: Record<string, unknown>): number {
-  const value = body.limit ?? 1;
-  if (!Number.isSafeInteger(value) || (value as number) < 1) {
-    throw new JsonBodyError('limit must be a positive integer');
+  try {
+    const validated = validatePortableAnalyzeRequest(body.text, includeOptions ? {
+      limit: body.limit === undefined ? 1 : body.limit as number,
+      entities: body.entities as PortableAnalyzeOptions['entities']
+    } : { limit: 1 });
+    return validated;
+  } catch (error) {
+    if (error instanceof AnalyzerInputError) throw new JsonBodyError(error.message);
+    throw error;
   }
-  return value as number;
-}
-
-function entityHints(body: Record<string, unknown>): AnalyzerEntityHint[] {
-  if (!Array.isArray(body.entities)) return [];
-  return body.entities.map((value, index) => {
-    if (typeof value !== 'object' || value === null) {
-      throw new JsonBodyError(`entities[${index}] must be an object`);
-    }
-    const hint = value as Partial<AnalyzerEntityHint>;
-    if (
-      !Number.isSafeInteger(hint.start)
-      || !Number.isSafeInteger(hint.end)
-      || (hint.start as number) < 0
-      || (hint.end as number) <= (hint.start as number)
-      || (hint.boost !== undefined && typeof hint.boost !== 'number')
-    ) {
-      throw new JsonBodyError(`entities[${index}] is invalid`);
-    }
-    return hint as AnalyzerEntityHint;
-  });
 }
 
 /** Analyzer-only HTTP handler. Grammar intentionally remains a separate product. */
@@ -125,7 +117,7 @@ export function createApiHandler(runtime: Runtime) {
       }
       if (request.method === 'POST' && url.pathname === '/api/romanize') {
         const body = await parseJsonBody(request);
-        const input = text(body);
+        const { input } = analyzerRequest(body, false);
         sendJson(response, {
           text: input,
           romanized: await runtime.romanize(input, { normalizePunctuation: false })
@@ -134,36 +126,33 @@ export function createApiHandler(runtime: Runtime) {
       }
       if (request.method === 'POST' && url.pathname === '/api/romanize/info') {
         const body = await parseJsonBody(request);
-        const input = text(body);
+        const { input } = analyzerRequest(body, false);
         const result = await romanizeWithInfo(runtime, input, false);
         sendJson(response, { text: input, ...result });
         return;
       }
       if (request.method === 'POST' && url.pathname === '/api/segment') {
         const body = await parseJsonBody(request);
-        const input = text(body);
-        const pathLimit = limit(body);
-        const entities = entityHints(body);
+        const { input, options } = analyzerRequest(body, true);
         sendJson(response, {
           text: input,
           segments: await runtime.legacy(input, {
-            limit: pathLimit,
+            limit: options.limit,
             normalizePunctuation: false,
-            entities
+            entities: options.entities
           }),
-          limit: pathLimit
+          limit: options.limit
         });
         return;
       }
       if (request.method === 'POST' && url.pathname === '/api/analyze') {
         const body = await parseJsonBody(request);
-        const input = text(body);
-        const entities = entityHints(body);
+        const { input, options } = analyzerRequest(body, true);
         sendJson(response, {
           segments: await runtime.legacy(input, {
-            limit: limit(body),
+            limit: options.limit,
             normalizePunctuation: false,
-            entities
+            entities: options.entities
           }),
           grammars: {},
           grammarExcluded: true
@@ -192,7 +181,9 @@ export function createApiHandler(runtime: Runtime) {
       }
       sendJson(response, { error: 'Not found' }, 404);
     } catch (error) {
-      const status = error instanceof JsonBodyError ? error.status : 500;
+      let status = 500;
+      if (error instanceof JsonBodyError) status = error.status;
+      else if (error instanceof AnalyzerInputError) status = 400;
       sendJson(response, {
         error: error instanceof Error ? error.message : String(error)
       }, status);

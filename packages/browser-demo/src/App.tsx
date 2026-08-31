@@ -7,8 +7,20 @@ import {
   type KeyboardEvent,
   type ReactElement
 } from 'react';
-import type { DetailEntry } from '@ichiran/core';
-import { AnalyzerClient, AnalyzerClientError, type InstallProgressValue } from './client.js';
+import {
+  MAX_ANALYZER_TEXT_LENGTH,
+  MAX_ANALYZER_WORD_LENGTH,
+  validatePortableAnalyzeRequest,
+  type DetailEntry
+} from '@ichiran/core';
+import {
+  AnalyzerClient,
+  AnalyzerClientError,
+  parseDeployedRelease,
+  type InstallProgressValue
+} from './client.js';
+import { fetchBoundedJson } from './bounded-json-fetch.js';
+import { MAX_ENTITY_SPEC_LENGTH, parseEntityHints } from './entity-hints.js';
 import type {
   AnalysisPath,
   AnalysisResult,
@@ -26,11 +38,13 @@ const APP_VERSION = 'alpha.1';
 export interface OfflineShellResult {
   readonly ready: boolean;
   readonly message?: string;
+  readonly registration?: ServiceWorkerRegistration;
 }
 
 type OfflineShellState =
   | { readonly state: 'opening' }
   | { readonly state: 'ready' }
+  | { readonly state: 'update-ready' }
   | { readonly state: 'error'; readonly message: string };
 
 const POS_LABELS: Readonly<Record<string, string>> = {
@@ -55,25 +69,20 @@ function formatBytes(bytes: number): string {
 
 function isPackInvalidError(reason: unknown): reason is AnalyzerClientError {
   return reason instanceof AnalyzerClientError
-    && (reason.code === 'corrupt-install' || reason.code === 'not-installed');
+    && (
+      reason.code === 'corrupt-install'
+      || reason.code === 'not-installed'
+      || reason.code === 'stale-install'
+    );
 }
 
-function parseEntityHints(
-  value: string,
-  textLength: number
-): NonNullable<AnalyzeOptions['entities']> {
-  if (!value.trim()) return [];
-  return value.split(/[\s,]+/).filter(Boolean).map(part => {
-    const match = /^(\d+):(\d+)(?::(-?\d+))?$/.exec(part);
-    if (!match) throw new Error(`Entity span “${part}” must be start:end or start:end:boost.`);
-    const start = Number(match[1]);
-    const end = Number(match[2]);
-    const boost = match[3] === undefined ? undefined : Number(match[3]);
-    if (start >= end || end > textLength) {
-      throw new Error(`Entity span “${part}” is outside this ${textLength}-unit input.`);
-    }
-    return boost === undefined ? { start, end } : { start, end, boost };
-  });
+function isTerminalWorkerError(reason: unknown): reason is AnalyzerClientError {
+  return reason instanceof AnalyzerClientError
+    && (
+      reason.code === 'worker-crashed'
+      || reason.code === 'worker-unavailable'
+      || reason.code === 'worker-terminated'
+    );
 }
 
 function posLabel(pos: readonly string[]): string {
@@ -130,16 +139,20 @@ function AppHeader({
   offlineShell: OfflineShellState;
 }): ReactElement {
   const packReady = status?.state === 'ready';
-  const ready = packReady && offlineShell.state === 'ready';
+  const offlineReady = offlineShell.state === 'ready'
+    || offlineShell.state === 'update-ready';
+  const ready = packReady && offlineReady;
   const statusText = status === null
     ? 'Opening analyzer…'
+    : offlineShell.state === 'update-ready'
+      ? 'Update available'
     : ready
       ? 'Ready offline'
       : packReady && offlineShell.state === 'opening'
         ? 'Preparing offline…'
         : packReady && offlineShell.state === 'error'
           ? 'Offline shell unavailable'
-      : status.state === 'incomplete' || status.state === 'corrupt'
+      : status.state === 'incomplete' || status.state === 'corrupt' || status.state === 'stale'
         ? 'Needs reinstall'
         : 'Not installed';
   return (
@@ -150,6 +163,15 @@ function AppHeader({
         {statusText}
       </div>
     </header>
+  );
+}
+
+function UpdateNotice({ state }: { state: OfflineShellState }): ReactElement | null {
+  if (state.state !== 'update-ready') return null;
+  return (
+    <section className="update-notice" aria-live="polite">
+      <span><strong>App update downloaded</strong> You can keep using this version. Close every analyzer tab, then reopen one to switch safely.</span>
+    </section>
   );
 }
 
@@ -171,7 +193,11 @@ function InstallPanel(props: InstallPanelProps): ReactElement {
   const total = manifest ? manifest.hot.downloadBytes + manifest.details.downloadBytes : 0;
   const installed = manifest ? manifest.hot.installedBytes + manifest.details.installedBytes : 0;
   const busy = progress !== null;
-  const broken = status?.state === 'incomplete' || status?.state === 'corrupt';
+  const broken = status?.state === 'incomplete'
+    || status?.state === 'corrupt'
+    || status?.state === 'stale';
+  const offlineReady = offlineShell.state === 'ready'
+    || offlineShell.state === 'update-ready';
   const phaseCopy = progress?.phase === 'downloading'
     ? 'Downloading analyzer data'
     : progress?.phase === 'verifying'
@@ -197,9 +223,13 @@ function InstallPanel(props: InstallPanelProps): ReactElement {
           <div><DataIcon kind="document" /><span><strong>Complete senses &amp; glosses</strong><small>Available offline when you inspect a word</small></span></div>
         </div>
 
-        {broken && <p className="inline-error">Analyzer data is incomplete or corrupted.</p>}
+        {status?.state === 'stale'
+          ? <p className="inline-error">Analyzer data is from an earlier app release. <small>{status.message}</small></p>
+          : broken && <p className="inline-error">Analyzer data is incomplete or corrupted.</p>}
         {error?.code === 'insufficient-storage'
           ? <p className="inline-error">Not enough device storage to install analyzer data. <small>{error.message}</small></p>
+          : error?.code === 'clear-error'
+            ? <p className="inline-error">Analyzer data could not be cleared. <small>{error.message}</small></p>
           : error && <p className="inline-error">Analyzer data could not be installed. <small>{error.message}</small></p>}
         {manifestError && <p className="inline-error">{manifestError}</p>}
         {offlineShell.state === 'opening' && (
@@ -222,9 +252,9 @@ function InstallPanel(props: InstallPanelProps): ReactElement {
             className="primary install-action"
             type="button"
             onClick={onInstall}
-            disabled={!manifest || offlineShell.state !== 'ready'}
+            disabled={!manifest || !offlineReady}
           >
-            <DownloadIcon />{broken ? 'Reinstall' : error ? 'Retry' : 'Install analyzer data'}
+            <DownloadIcon />{broken ? 'Reinstall analyzer data' : error ? 'Retry' : 'Install analyzer data'}
           </button>
         )}
 
@@ -400,13 +430,15 @@ function Workspace({
   manifest,
   client,
   onClear,
-  onPackInvalid
+  onPackInvalid,
+  operationError
 }: {
   status: Extract<PackStatus, { state: 'ready' }>;
   manifest: AnalyzerPackManifest | null;
   client: AnalyzerClient;
   onClear(): void;
   onPackInvalid(): void;
+  operationError: { readonly code: string; readonly message: string } | null;
 }): ReactElement {
   const [text, setText] = useState(SAMPLE);
   const [limit, setLimit] = useState(1);
@@ -417,7 +449,7 @@ function Workspace({
   const [selected, setSelected] = useState<number | null>(null);
   const [details, setDetails] = useState<DetailEntry | null>(null);
   const [running, setRunning] = useState(false);
-  const [runningInput, setRunningInput] = useState<string | null>(null);
+  const [runningIntent, setRunningIntent] = useState<string | null>(null);
   const [showBusy, setShowBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [wallMs, setWallMs] = useState<number | null>(null);
@@ -427,8 +459,14 @@ function Workspace({
   const [runtimeMessage, setRuntimeMessage] = useState<string | null>(null);
   const [lastOptions, setLastOptions] = useState<AnalyzeOptions>({ limit: 1 });
   const request = useRef(0);
+  const benchmarkRequest = useRef(0);
+  const benchmarkActive = useRef(false);
+  const activeIntent = useRef<string | null>(null);
   const selectedToken = selected === null ? null : result?.paths[pathIndex]?.tokens[selected] ?? null;
   const path = result?.paths[pathIndex] ?? null;
+  const intentKey = JSON.stringify([text, limit, entitySpec, normalizePunctuation]);
+  const latestIntent = useRef(intentKey);
+  latestIntent.current = intentKey;
 
   useEffect(() => {
     if (!running) {
@@ -453,40 +491,55 @@ function Workspace({
   }, [client, onPackInvalid, selectedToken]);
 
   async function analyze(): Promise<void> {
-    if (!text.trim() || (running && runningInput === text)) return;
+    const intent = intentKey;
+    if (!text.trim() || activeIntent.current === intent) return;
+    const stoppedBenchmark = benchmarkActive.current;
+    if (activeIntent.current !== null || benchmarkActive.current) {
+      ++request.current;
+      ++benchmarkRequest.current;
+      activeIntent.current = null;
+      benchmarkActive.current = false;
+      client.restart();
+      setRunning(false);
+      setRunningIntent(null);
+      setBenchmarkRunning(false);
+      if (stoppedBenchmark) setRuntimeMessage('Benchmark stopped for the new analysis.');
+    }
     let options: AnalyzeOptions;
     try {
       const entities = parseEntityHints(entitySpec, text.length);
-      options = {
+      options = validatePortableAnalyzeRequest(text, {
         limit,
         ...(entities.length > 0 ? { entities } : {}),
         ...(normalizePunctuation ? { normalizePunctuation: true } : {})
-      };
+      }).options;
     } catch (reason) {
       setError(reason instanceof Error ? reason.message : String(reason));
       return;
     }
     const id = ++request.current;
+    activeIntent.current = intent;
     const started = performance.now();
     setRunning(true);
-    setRunningInput(text);
+    setRunningIntent(intent);
     setError(null);
     try {
       const next = await client.analyze(text, options);
-      if (id !== request.current) return;
+      if (id !== request.current || intent !== latestIntent.current) return;
       setResult(next);
       setPathIndex(0);
       setSelected(next.paths[0]?.tokens.length === 1 ? 0 : null);
       setWallMs(performance.now() - started);
       setLastOptions(options);
     } catch (reason) {
-      if (id !== request.current) return;
+      if (id !== request.current || intent !== latestIntent.current) return;
       if (isPackInvalidError(reason)) onPackInvalid();
       setError(reason instanceof Error ? reason.message : String(reason));
     } finally {
       if (id === request.current) {
+        activeIntent.current = null;
         setRunning(false);
-        setRunningInput(null);
+        setRunningIntent(null);
       }
     }
   }
@@ -530,22 +583,40 @@ function Workspace({
     }
   }
 
+  async function copyClean(): Promise<void> {
+    if (!result) return;
+    try {
+      await navigator.clipboard.writeText(JSON.stringify(result, null, 2));
+      setRuntimeMessage('Clean JSON copied.');
+    } catch (reason) {
+      setRuntimeMessage(`Copy failed: ${reason instanceof Error ? reason.message : String(reason)}`);
+    }
+  }
+
   async function runBenchmark(): Promise<void> {
-    if (benchmarkRunning) return;
+    if (benchmarkActive.current) return;
     if (!manifest || manifest.manifestSha256 !== status.manifestSha256) {
       setRuntimeMessage('Benchmark unavailable: the installed release manifest could not be verified.');
       return;
     }
+    const id = ++benchmarkRequest.current;
+    benchmarkActive.current = true;
     setBenchmarkRunning(true);
     setRuntimeMessage('Running the fixed corpus in the analyzer Worker…');
     try {
-      setBenchmark(await client.benchmark(manifest));
+      const nextBenchmark = await client.benchmark(manifest);
+      if (id !== benchmarkRequest.current) return;
+      setBenchmark(nextBenchmark);
       setRuntimeMessage('Benchmark complete.');
     } catch (reason) {
+      if (id !== benchmarkRequest.current) return;
       if (isPackInvalidError(reason)) onPackInvalid();
       setRuntimeMessage(`Benchmark failed: ${reason instanceof Error ? reason.message : String(reason)}`);
     } finally {
-      setBenchmarkRunning(false);
+      if (id === benchmarkRequest.current) {
+        benchmarkActive.current = false;
+        setBenchmarkRunning(false);
+      }
     }
   }
 
@@ -576,6 +647,14 @@ function Workspace({
 
   return (
     <main className="workspace">
+      {operationError && (
+        <p className="inline-error operation-error" role="alert">
+          {operationError.code === 'clear-error'
+            ? 'Device data could not be cleared. '
+            : 'Analyzer data could not be replaced; the previous pack is still available. '}
+          <small>{operationError.message}</small>
+        </p>
+      )}
       <section className="composer" aria-labelledby="composer-title">
         <div className="section-heading">
           <h1 id="composer-title"><label htmlFor="japanese-input">Japanese text</label></h1>
@@ -589,20 +668,26 @@ function Workspace({
             onKeyDown={keyDown}
             lang="ja"
             rows={4}
+            maxLength={MAX_ANALYZER_TEXT_LENGTH}
+            aria-describedby="input-guidance"
             placeholder="Paste or type Japanese text"
           />
           {text && <button className="clear-input" type="button" onClick={() => setText('')} aria-label="Clear Japanese text">×</button>}
         </div>
+        <p id="input-guidance" className="input-guidance">
+          {text.length.toLocaleString()} / {MAX_ANALYZER_TEXT_LENGTH.toLocaleString()} text units
+          {' · '}uninterrupted word runs up to {MAX_ANALYZER_WORD_LENGTH.toLocaleString()}
+        </p>
         <div className="composer-actions">
           <details className="advanced">
             <summary>Advanced</summary>
             <div>
               <label>Top results <select value={limit} onChange={event => setLimit(Number(event.target.value))}>{[1, 2, 3, 4, 5].map(value => <option key={value}>{value}</option>)}</select></label>
-              <label className="entity-field">Entity spans <input value={entitySpec} onChange={event => setEntitySpec(event.target.value)} placeholder="0:2:120" inputMode="text" /></label>
+              <label className="entity-field">Entity spans <input value={entitySpec} onChange={event => setEntitySpec(event.target.value)} placeholder="0:2:120" inputMode="text" maxLength={MAX_ENTITY_SPEC_LENGTH} /></label>
               <label className="check-field"><input type="checkbox" checked={normalizePunctuation} onChange={event => setNormalizePunctuation(event.target.checked)} /> Normalize punctuation</label>
             </div>
           </details>
-          <button className="primary" type="button" onClick={() => void analyze()} disabled={!text.trim() || (running && runningInput === text)}>Analyze</button>
+          <button className="primary" type="button" onClick={() => void analyze()} disabled={!text.trim() || runningIntent === intentKey}>Analyze</button>
         </div>
         <div className="analysis-status" aria-live="polite">
           {showBusy && 'Analyzing…'}
@@ -659,7 +744,7 @@ function Workspace({
         </dl>
         {runtimeMessage && <p className="runtime-message" aria-live="polite">{runtimeMessage}</p>}
         <div className="runtime-actions">
-          {result && <button type="button" className="secondary" onClick={() => void navigator.clipboard.writeText(JSON.stringify(result, null, 2))}>Copy clean JSON</button>}
+          {result && <button type="button" className="secondary" onClick={() => void copyClean()}>Copy clean JSON</button>}
           {result && <button type="button" className="secondary" onClick={() => void copyLegacy()}>Copy legacy JSON</button>}
           {result && <button type="button" className="secondary" onClick={() => void romanizeResult()}>Romanize input</button>}
           <button type="button" className="secondary" disabled={benchmarkRunning} onClick={() => void runBenchmark()}>
@@ -701,35 +786,76 @@ export function App({
 
   useEffect(() => {
     let current = true;
+    if (!('serviceWorker' in navigator)) {
+      void offlineShellReady.then(result => {
+        if (!current) return;
+        setOfflineShell(result.ready
+          ? { state: 'ready' }
+          : { state: 'error', message: result.message ?? 'Service Workers are unavailable.' });
+      });
+      return () => { current = false; };
+    }
+
+    let registration: ServiceWorkerRegistration | null = null;
+    let watchedWorker: ServiceWorker | null = null;
+    let previousController = navigator.serviceWorker.controller;
+
+    const showWaitingUpdate = (): void => {
+      if (!current || !registration?.waiting || !navigator.serviceWorker.controller) return;
+      setOfflineShell({ state: 'update-ready' });
+    };
+    const workerStateChanged = (): void => {
+      if (watchedWorker?.state === 'installed') showWaitingUpdate();
+    };
+    const watchInstallingWorker = (): void => {
+      watchedWorker?.removeEventListener('statechange', workerStateChanged);
+      watchedWorker = registration?.installing ?? null;
+      watchedWorker?.addEventListener('statechange', workerStateChanged);
+    };
+    const controllerChanged = (): void => {
+      const nextController = navigator.serviceWorker.controller;
+      if (previousController && nextController && previousController !== nextController) {
+        window.location.reload();
+        return;
+      }
+      previousController = nextController;
+    };
+
+    navigator.serviceWorker.addEventListener('controllerchange', controllerChanged);
     void offlineShellReady.then(result => {
       if (!current) return;
+      registration = result.registration ?? null;
       setOfflineShell(result.ready
         ? { state: 'ready' }
         : { state: 'error', message: result.message ?? 'Service Worker registration failed.' });
+      registration?.addEventListener('updatefound', watchInstallingWorker);
+      watchInstallingWorker();
+      showWaitingUpdate();
     });
-    return () => { current = false; };
+    return () => {
+      current = false;
+      watchedWorker?.removeEventListener('statechange', workerStateChanged);
+      registration?.removeEventListener('updatefound', watchInstallingWorker);
+      navigator.serviceWorker.removeEventListener('controllerchange', controllerChanged);
+    };
   }, [offlineShellReady]);
 
   useEffect(() => {
     if (!supported || !client) return;
     let current = true;
-    void Promise.all([
-      client.status(),
-      fetch(MANIFEST_URL, { cache: 'no-store' }).then(async response => {
-        if (!response.ok) throw new Error(`Analyzer manifest is unavailable (HTTP ${response.status}).`);
-        if (!response.headers.get('content-type')?.includes('application/json')) {
-          throw new Error('Analyzer manifest is unavailable in this build.');
-        }
-        return response.json() as Promise<AnalyzerPackManifest>;
-      })
-    ]).then(([nextStatus, nextManifest]) => {
+    void (async () => {
+      const nextManifest = parseDeployedRelease(await fetchBoundedJson(
+        MANIFEST_URL,
+        { cache: 'no-store' },
+        'Analyzer release manifest'
+      ));
+      const nextStatus = await client.expectRelease(nextManifest);
       if (!current) return;
-      setStatus(nextStatus);
       setManifest(nextManifest);
-    }, reason => {
-      if (!current) return;
-      void client.status().then(setStatus, () => setStatus({ state: 'not-installed' }));
-      setManifestError(reason instanceof Error ? reason.message : String(reason));
+      setStatus(nextStatus);
+      setManifestError(null);
+    })().catch(reason => {
+      if (current) setManifestError(reason instanceof Error ? reason.message : String(reason));
     });
     return () => {
       current = false;
@@ -751,7 +877,12 @@ export function App({
       setInstallError(reason instanceof AnalyzerClientError
         ? { code: reason.code, message: reason.message }
         : { code: 'install-error', message: String(reason) });
-      setStatus(await client.status());
+      if (isTerminalWorkerError(reason)) return;
+      try {
+        setStatus(await client.status());
+      } catch {
+        setStatus({ state: 'incomplete', message: 'Reload this page to restart the analyzer.' });
+      }
     } finally {
       setProgress(null);
     }
@@ -760,8 +891,27 @@ export function App({
   async function clear(): Promise<void> {
     if (!client) return;
     if (!window.confirm('Clear the installed analyzer data from this device?')) return;
-    setStatus(await client.clear());
     setInstallError(null);
+    try {
+      setStatus(await client.clear());
+    } catch (reason) {
+      setInstallError({
+        code: 'clear-error',
+        message: reason instanceof Error ? reason.message : String(reason)
+      });
+      if (isTerminalWorkerError(reason)) {
+        setStatus({
+          state: 'incomplete',
+          message: 'Reload this page to verify what remains before reinstalling.'
+        });
+        return;
+      }
+      try {
+        setStatus(await client.status());
+      } catch {
+        setStatus({ state: 'incomplete', message: 'Reload this page to restart the analyzer.' });
+      }
+    }
   }
 
   const refreshStatus = useCallback((): void => {
@@ -781,8 +931,9 @@ export function App({
   return (
     <div className="app-shell">
       <AppHeader status={status} offlineShell={offlineShell} />
+      <UpdateNotice state={offlineShell} />
       {status?.state === 'ready'
-        ? <Workspace status={status} manifest={manifest} client={client} onClear={() => void clear()} onPackInvalid={refreshStatus} />
+        ? <Workspace status={status} manifest={manifest} client={client} onClear={() => void clear()} onPackInvalid={refreshStatus} operationError={installError} />
         : <InstallPanel manifest={manifest} manifestError={manifestError} status={status} progress={progress} error={installError} offlineShell={offlineShell} onInstall={() => void install()} onClear={() => void clear()} />}
       <footer><span>Runs entirely on this device</span><a href="/licenses.html">About &amp; licenses</a></footer>
     </div>

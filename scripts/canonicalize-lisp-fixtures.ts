@@ -6,6 +6,7 @@ import { basename, dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import postgres, { type Sql } from 'postgres';
+import { verifyBrowserAlphaDatabase } from '../packages/data/src/browser-pack/database-identity.js';
 
 import {
   normalizeLegacyIdentities,
@@ -14,21 +15,11 @@ import {
 } from '../packages/core/tools/parity-canonical.js';
 import {
   deterministicJson,
-  verifyBrowserAlphaSources,
-  type BrowserAlphaSourceLock
+  verifyBrowserAlphaSources
 } from '../packages/data/src/browser-pack/release-orchestration.js';
 
 interface RawOutputFile {
   readonly fullJson: Readonly<Record<string, string>>;
-}
-
-interface DatabaseIdentity {
-  readonly name: string;
-  readonly postgresServerVersion: string;
-  readonly encoding: string;
-  readonly collation: string;
-  readonly ctype: string;
-  readonly readOnly: boolean;
 }
 
 interface FixtureSpec {
@@ -121,37 +112,6 @@ function connection(database: string): Sql {
       default_transaction_read_only: true
     }
   });
-}
-
-async function databaseIdentity(sql: Sql): Promise<DatabaseIdentity> {
-  const rows = await sql.unsafe<DatabaseIdentity[]>(`
-    SELECT current_database() AS name,
-           current_setting('server_version') AS "postgresServerVersion",
-           pg_encoding_to_char(d.encoding) AS encoding,
-           d.datcollate AS collation,
-           d.datctype AS ctype,
-           current_setting('transaction_read_only') = 'on' AS "readOnly"
-    FROM pg_database d
-    WHERE d.datname = current_database()
-  `);
-  const identity = rows[0];
-  if (!identity || rows.length !== 1) throw new Error('Could not read database identity');
-  return identity;
-}
-
-function assertDatabaseIdentity(actual: DatabaseIdentity, lock: BrowserAlphaSourceLock): void {
-  if (!actual.readOnly) throw new Error('Fixture generator database transaction is not read-only');
-  for (const [label, expected, found] of [
-    ['name', lock.database.name, actual.name],
-    ['server version', lock.database.postgresServerVersion, actual.postgresServerVersion],
-    ['encoding', lock.database.encoding, actual.encoding],
-    ['collation', lock.database.collation, actual.collation],
-    ['character classification', lock.database.ctype, actual.ctype]
-  ] as const) {
-    if (expected !== found) {
-      throw new Error(`Database ${label} ${found}; sources lock requires ${expected}`);
-    }
-  }
 }
 
 /** Compiler-only resolver for the legacy physical-target identity contract. */
@@ -359,7 +319,7 @@ async function main(): Promise<void> {
   const sql = await pool.reserve();
   try {
     await sql.unsafe('BEGIN ISOLATION LEVEL REPEATABLE READ READ ONLY');
-    assertDatabaseIdentity(await databaseIdentity(sql), source.lock);
+    await verifyBrowserAlphaDatabase(sql, database, source.lock.database);
     const resolver = new PostgresFixtureIdentityResolver(sql);
     const generated: GeneratedFixture[] = [];
     for (const spec of FIXTURES) {

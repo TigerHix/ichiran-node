@@ -7,11 +7,12 @@ self.addEventListener('install', event => {
     for (let index = 0; index < CORE.length; index += 12) {
       await cache.addAll(CORE.slice(index, index + 12));
     }
-    await self.skipWaiting();
   }));
 });
 
 self.addEventListener('activate', event => {
+  // Updates reach activate only after every client of the previous Worker has
+  // closed, so its shell cache is no longer observable by a live tab.
   event.waitUntil(
     caches.keys()
       .then(keys => Promise.all(keys

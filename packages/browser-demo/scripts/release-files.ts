@@ -1,28 +1,16 @@
 import { createHash } from 'node:crypto';
 import { execFile as execFileCallback } from 'node:child_process';
-import { readFile } from 'node:fs/promises';
-import { basename, join, resolve } from 'node:path';
+import { readFile, readdir } from 'node:fs/promises';
+import { join, resolve } from 'node:path';
 import { promisify } from 'node:util';
 import { gunzipSync } from 'node:zlib';
+import {
+  parseAnalyzerReleaseManifest,
+  type AnalyzerReleaseAsset,
+  type AnalyzerReleaseManifest
+} from '@ichiran/core';
 
-interface ReleaseAsset {
-  readonly file: string;
-  readonly encoding: 'identity' | 'gzip';
-  readonly downloadBytes: number;
-  readonly downloadSha256: string;
-  readonly installedBytes: number;
-  readonly installedSha256: string;
-}
-
-export interface ReleaseManifest {
-  readonly formatVersion: 1;
-  readonly packVersion: string;
-  readonly sourceCommit: string;
-  readonly sourcesLockSha256: string;
-  readonly manifestSha256: string;
-  readonly hot: ReleaseAsset;
-  readonly details: ReleaseAsset;
-}
+export type ReleaseManifest = AnalyzerReleaseManifest;
 
 export interface VerifiedRelease {
   readonly directory: string;
@@ -36,84 +24,6 @@ const execFile = promisify(execFileCallback);
 
 function sha256(bytes: Uint8Array): string {
   return createHash('sha256').update(bytes).digest('hex');
-}
-
-function isObject(value: unknown): value is Record<string, unknown> {
-  return typeof value === 'object' && value !== null && !Array.isArray(value);
-}
-
-function parseAsset(value: unknown, label: string): ReleaseAsset {
-  if (!isObject(value)) throw new Error(`${label} manifest field is not an object`);
-  if (
-    typeof value.file !== 'string'
-    || value.file !== basename(value.file)
-    || !value.file.endsWith('.bin.gz')
-  ) {
-    throw new Error(`${label} manifest field has an unsafe analyzer filename`);
-  }
-  if (value.encoding !== 'gzip') throw new Error(`${label} analyzer asset must use gzip`);
-  for (const key of ['downloadBytes', 'installedBytes'] as const) {
-    if (!Number.isSafeInteger(value[key]) || (value[key] as number) <= 0) {
-      throw new Error(`${label}.${key} must be a positive integer`);
-    }
-  }
-  for (const key of ['downloadSha256', 'installedSha256'] as const) {
-    if (typeof value[key] !== 'string' || !/^[0-9a-f]{64}$/.test(value[key] as string)) {
-      throw new Error(`${label}.${key} must be a lowercase SHA-256`);
-    }
-  }
-  return value as unknown as ReleaseAsset;
-}
-
-function parseManifest(value: unknown): ReleaseManifest {
-  if (!isObject(value) || value.formatVersion !== 1) {
-    throw new Error('Analyzer release manifest format is unsupported');
-  }
-  if (typeof value.packVersion !== 'string' || value.packVersion.length === 0) {
-    throw new Error('Analyzer release manifest packVersion is missing');
-  }
-  if (typeof value.sourceCommit !== 'string' || !/^[0-9a-f]{40}$/.test(value.sourceCommit)) {
-    throw new Error('Analyzer release manifest sourceCommit is invalid');
-  }
-  for (const key of ['sourcesLockSha256', 'manifestSha256'] as const) {
-    if (typeof value[key] !== 'string' || !/^[0-9a-f]{64}$/.test(value[key] as string)) {
-      throw new Error(`Analyzer release manifest ${key} is invalid`);
-    }
-  }
-  return {
-    formatVersion: 1,
-    packVersion: value.packVersion,
-    sourceCommit: value.sourceCommit,
-    sourcesLockSha256: value.sourcesLockSha256 as string,
-    manifestSha256: value.manifestSha256 as string,
-    hot: parseAsset(value.hot, 'hot'),
-    details: parseAsset(value.details, 'details')
-  };
-}
-
-function manifestDigestInput(manifest: ReleaseManifest): string {
-  return JSON.stringify({
-    formatVersion: manifest.formatVersion,
-    packVersion: manifest.packVersion,
-    sourceCommit: manifest.sourceCommit,
-    sourcesLockSha256: manifest.sourcesLockSha256,
-    hot: {
-      file: manifest.hot.file,
-      encoding: manifest.hot.encoding,
-      downloadBytes: manifest.hot.downloadBytes,
-      downloadSha256: manifest.hot.downloadSha256,
-      installedBytes: manifest.hot.installedBytes,
-      installedSha256: manifest.hot.installedSha256
-    },
-    details: {
-      file: manifest.details.file,
-      encoding: manifest.details.encoding,
-      downloadBytes: manifest.details.downloadBytes,
-      downloadSha256: manifest.details.downloadSha256,
-      installedBytes: manifest.details.installedBytes,
-      installedSha256: manifest.details.installedSha256
-    }
-  });
 }
 
 export async function currentSourceIdentity(repositoryRoot: string): Promise<{
@@ -135,11 +45,10 @@ export async function verifyAnalyzerRelease(
 ): Promise<VerifiedRelease> {
   const resolved = resolve(directory);
   const manifestBytes = await readFile(join(resolved, 'manifest.json'));
-  const manifest = parseManifest(JSON.parse(new TextDecoder().decode(manifestBytes)));
-  const expectedManifestSha256 = sha256(new TextEncoder().encode(manifestDigestInput(manifest)));
-  if (manifest.manifestSha256 !== expectedManifestSha256) {
-    throw new Error('Analyzer release manifest checksum does not match its contents');
-  }
+  const manifest = parseAnalyzerReleaseManifest(
+    JSON.parse(new TextDecoder().decode(manifestBytes)),
+    text => createHash('sha256').update(text).digest('hex')
+  );
 
   const identity = await currentSourceIdentity(repositoryRoot);
   if (manifest.sourceCommit !== identity.sourceCommit) {
@@ -153,7 +62,7 @@ export async function verifyAnalyzerRelease(
     );
   }
 
-  const verifyAsset = async (asset: ReleaseAsset, label: string): Promise<Uint8Array> => {
+  const verifyAsset = async (asset: AnalyzerReleaseAsset, label: string): Promise<Uint8Array> => {
     const bytes = await readFile(join(resolved, asset.file));
     if (bytes.byteLength !== asset.downloadBytes) {
       throw new Error(`${label} download size ${bytes.byteLength} != manifest ${asset.downloadBytes}`);
@@ -162,7 +71,9 @@ export async function verifyAnalyzerRelease(
     if (digest !== asset.downloadSha256) {
       throw new Error(`${label} download checksum ${digest} != manifest ${asset.downloadSha256}`);
     }
-    const installed = new Uint8Array(gunzipSync(bytes));
+    const installed = asset.encoding === 'gzip'
+      ? new Uint8Array(gunzipSync(bytes))
+      : bytes.slice();
     if (installed.byteLength !== asset.installedBytes) {
       throw new Error(
         `${label} installed size ${installed.byteLength} != manifest ${asset.installedBytes}`
@@ -176,6 +87,14 @@ export async function verifyAnalyzerRelease(
     }
     return bytes;
   };
+
+  const names = (await readdir(resolved)).sort();
+  const expectedNames = ['manifest.json', manifest.hot.file, manifest.details.file];
+  if (names.includes('stats.json')) expectedNames.push('stats.json');
+  expectedNames.sort();
+  if (names.join('\n') !== expectedNames.join('\n')) {
+    throw new Error(`Analyzer release has unexpected files: ${names.join(', ')}`);
+  }
 
   return {
     directory: resolved,

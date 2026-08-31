@@ -102,6 +102,25 @@ summary:focus-visible {
 .status-ready { color: #14704a; }
 .status-ready > span { background: #12b76a; box-shadow: 0 0 0 3px #ecfdf3; }
 
+.update-notice {
+  width: min(100%, 768px);
+  min-height: 58px;
+  margin: 12px auto 0;
+  padding: 8px 10px 8px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border: 1px solid #b8c7f3;
+  border-radius: 7px;
+  background: var(--accent-soft);
+  color: #344054;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.update-notice strong { display: block; color: var(--ink); }
+
 .install-layout {
   width: min(100%, 620px);
   margin: 0 auto;
@@ -273,6 +292,7 @@ summary:focus-visible {
   font-size: 1.45rem;
 }
 .clear-input { position: absolute; top: 7px; right: 7px; }
+.input-guidance { margin: 7px 1px 0; color: var(--muted); font-size: 0.7rem; text-align: right; }
 
 .composer-actions { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-top: 12px; }
 .composer-actions label { display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: 0.82rem; }
@@ -446,6 +466,7 @@ footer a { min-height: 44px; display: inline-flex; align-items: center; color: i
   .result-heading span { max-width: 48%; text-align: right; }
   .runtime-actions { display: grid; }
   .runtime-actions .danger { margin-left: 0; }
+  .update-notice { align-items: stretch; flex-direction: column; padding: 12px; }
   footer { align-items: flex-start; padding-top: 18px; }
 }
 

@@ -1,29 +1,29 @@
 import { createHash } from 'node:crypto';
 import { gzipSync } from 'node:zlib';
 
-export const ANALYZER_RELEASE_FORMAT_VERSION = 1;
+import {
+  ANALYZER_RELEASE_FORMAT_VERSION,
+  analyzerManifestDigestInput,
+  parseAnalyzerReleaseManifest,
+  type AnalyzerReleaseAsset,
+  type AnalyzerReleaseEncoding,
+  type AnalyzerReleaseManifest
+} from '@ichiran/core';
+
+export {
+  ANALYZER_RELEASE_FORMAT_VERSION,
+  analyzerManifestDigestInput,
+  parseAnalyzerReleaseManifest
+} from '@ichiran/core';
+export type {
+  AnalyzerReleaseAsset,
+  AnalyzerReleaseEncoding,
+  AnalyzerReleaseManifest
+} from '@ichiran/core';
+
 export const ANALYZER_HOT_MAX_BYTES = 24 * 1024 * 1024;
 export const ANALYZER_PERSISTED_MAX_BYTES = 64 * 1024 * 1024;
 export const ANALYZER_WIRE_MAX_BYTES = 25 * 1024 * 1024;
-
-export interface AnalyzerReleaseAsset {
-  readonly file: string;
-  readonly encoding: 'identity' | 'gzip';
-  readonly downloadBytes: number;
-  readonly downloadSha256: string;
-  readonly installedBytes: number;
-  readonly installedSha256: string;
-}
-
-export interface AnalyzerReleaseManifest {
-  readonly formatVersion: 1;
-  readonly packVersion: string;
-  readonly sourceCommit: string;
-  readonly sourcesLockSha256: string;
-  readonly manifestSha256: string;
-  readonly hot: AnalyzerReleaseAsset;
-  readonly details: AnalyzerReleaseAsset;
-}
 
 export interface AnalyzerReleaseBuild {
   readonly manifest: AnalyzerReleaseManifest;
@@ -57,7 +57,7 @@ function exactSha256(value: string, label: string): void {
 function releaseAsset(
   file: string,
   installed: Uint8Array,
-  encoding: 'identity' | 'gzip'
+  encoding: AnalyzerReleaseEncoding
 ): { readonly manifest: AnalyzerReleaseAsset; readonly download: Uint8Array } {
   nonEmpty(file, 'Release asset filename');
   if (installed.byteLength === 0) throw new Error(`${file} must not be empty`);
@@ -77,42 +77,14 @@ function releaseAsset(
   };
 }
 
-/** Exact compact JSON hashed by both the compiler and browser installer. */
-export function analyzerManifestDigestInput(
-  manifest: Omit<AnalyzerReleaseManifest, 'manifestSha256'>
-): string {
-  return JSON.stringify({
-    formatVersion: manifest.formatVersion,
-    packVersion: manifest.packVersion,
-    sourceCommit: manifest.sourceCommit,
-    sourcesLockSha256: manifest.sourcesLockSha256,
-    hot: {
-      file: manifest.hot.file,
-      encoding: manifest.hot.encoding,
-      downloadBytes: manifest.hot.downloadBytes,
-      downloadSha256: manifest.hot.downloadSha256,
-      installedBytes: manifest.hot.installedBytes,
-      installedSha256: manifest.hot.installedSha256
-    },
-    details: {
-      file: manifest.details.file,
-      encoding: manifest.details.encoding,
-      downloadBytes: manifest.details.downloadBytes,
-      downloadSha256: manifest.details.downloadSha256,
-      installedBytes: manifest.details.installedBytes,
-      installedSha256: manifest.details.installedSha256
-    }
-  });
-}
-
 export function buildAnalyzerRelease(options: {
   readonly packVersion: string;
   readonly sourceCommit: string;
   readonly sourcesLockSha256: string;
   readonly hot: Uint8Array;
   readonly details: Uint8Array;
-  readonly hotEncoding?: 'identity' | 'gzip';
-  readonly detailsEncoding?: 'identity' | 'gzip';
+  readonly hotEncoding?: AnalyzerReleaseEncoding;
+  readonly detailsEncoding?: AnalyzerReleaseEncoding;
 }): AnalyzerReleaseBuild {
   nonEmpty(options.packVersion, 'Pack version');
   if (!/^[0-9a-f]{40}$/.test(options.sourceCommit)) {
@@ -142,6 +114,10 @@ export function buildAnalyzerRelease(options: {
     ...unsigned,
     manifestSha256: sha256(new TextEncoder().encode(analyzerManifestDigestInput(unsigned)))
   };
+  parseAnalyzerReleaseManifest(
+    manifest,
+    text => createHash('sha256').update(text).digest('hex')
+  );
   return {
     manifest,
     manifestBytes: new TextEncoder().encode(`${JSON.stringify(manifest, null, 2)}\n`),
@@ -159,15 +135,17 @@ export function assertAnalyzerReleaseSize(
   }
   // measure-shell deliberately excludes analyzer/*. The Service Worker caches
   // manifest.json alongside that shell, OPFS stores one compact copy inside
-  // install.json, and IndexedDB stores the install generation read on every
-  // request. Count their logical payload bytes; browser-managed IndexedDB allocation
-  // overhead is implementation-defined and is not part of this release gate.
+  // the active slot's install-{a,b}.json, and IndexedDB stores the install ID read
+  // on every request. The inactive slot exists only while staging an upgrade, so it
+  // is not part of the ready-state persisted total. Browser-managed IndexedDB
+  // allocation overhead is implementation-defined and is not part of this gate.
   const cachedManifestBytes = build.manifestBytes.byteLength;
   const installedMarkerBytes = new TextEncoder().encode(JSON.stringify({
     state: 'ready',
     manifest: build.manifest,
     installId: '00000000-0000-4000-8000-000000000000',
-    installedAt: '1970-01-01T00:00:00.000Z'
+    installedAt: '1970-01-01T00:00:00.000Z',
+    slot: 'a'
   })).byteLength;
   const installedIdentityPayloadBytes = 36;
   const report = {

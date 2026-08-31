@@ -56,13 +56,13 @@ const FIXTURES = Object.freeze({
   'packages/cli/tests/data/cli-lisp-outputs.json':
     'a092f07a2b7337c3a790b0d93808213adf2e89eef1750aeaed54160b90856bb8',
   'packages/cli/tests/data/cli-canonical-outputs.json':
-    'd9ef666af3be61c8bf9987f84a7efa9728b21566a98b6cca63d1d83463868080',
+    '2558e17996d2f08f100a4b3448e2af5e1b63706606c13066367ea437f3b1697b',
   'packages/cli/tests/data/hard-cli.json':
     '5e8a910314843a25c4bf2dd4663db0211fecc31a031b38c88c9880780115be69',
   'packages/cli/tests/data/hard-cli-lisp-outputs.json':
     'd82f5d5e9ef3b858209ea63a1ea5b448c6460e4ea0fddfc6b811ebb7c3756a85',
   'packages/cli/tests/data/hard-cli-canonical-outputs.json':
-    '235d873cae56cde282feccef577b7b6314b69a2bc4197016167f9e0fe609a7d1'
+    '71b1417d13a2c546fa56d502c23bf9614e73d0a01cec731a378512a8b785c736'
 });
 
 const COUNTERS = Object.freeze([

@@ -5,11 +5,13 @@ import {
   addAnalyzerEntityGroups,
   findAnalyzerPaths
 } from '../src/analyzer-paths.js';
+import { resolveAnalyzerRuleTransitions } from '../src/analyzer-rules.js';
 import type {
   AnalyzerEntityHint,
   AnalyzerPathPart,
   AnalyzerSegmentGroup
 } from '../src/analyzer-types.js';
+import { ANALYZER_SCORE_FLAG_STRONG } from '../src/analyzer-types.js';
 
 function portableGroup(
   groupId: number,
@@ -159,5 +161,105 @@ describe('portable analyzer path DP', () => {
     const paths = findAnalyzerPaths(groups, 2, { entities: [entity] });
     expect(paths[0]!.score).toBe(150);
     expect((paths[0]!.parts[0] as AnalyzerSegmentGroup).segments[0]!.entity).toBe(true);
+  });
+
+  test('rejects an allocation-sized result limit before constructing top-N buffers', () => {
+    expect(() => findAnalyzerPaths([], 0, { limit: 100_000_000 })).toThrow(
+      'limit must be an integer from 1 to 10'
+    );
+  });
+
+  test('materializes a long best path only after the dense transition graph is scored', () => {
+    const groupCount = 2_000;
+    const groups = Array.from(
+      { length: groupCount },
+      (_, index) => portableGroup(index, index, index + 1, [1])
+    );
+    let transitions = 0;
+    const paths = findAnalyzerPaths(groups, groupCount, {
+      limit: 1,
+      initial: group => [group],
+      transition: (left, right) => {
+        transitions++;
+        return [{ left, right }];
+      }
+    });
+
+    expect(transitions).toBe(groupCount * (groupCount - 1) / 2);
+    expect(paths[0]?.parts).toHaveLength(groupCount);
+  });
+
+  test('matches the complete default-rule graph across dense gaps and stable ties', () => {
+    let state = 0x51ee_71e5;
+    const random = (): number => {
+      state = (Math.imul(state, 1664525) + 1013904223) >>> 0;
+      return state;
+    };
+    for (let iteration = 0; iteration < 80; iteration++) {
+      const textLength = 12 + random() % 9;
+      const groups: AnalyzerSegmentGroup[] = [];
+      let groupId = 1;
+      for (let start = 0; start < textLength; start++) {
+        for (let length = 1; length <= 4 && start + length <= textLength; length++) {
+          if (random() % 4 === 0) continue;
+          const group = portableGroup(groupId++, start, start + length, [
+            5 + random() % 8,
+            5 + random() % 8
+          ]);
+          const strong = random() % 3 === 0;
+          groups.push({
+            ...group,
+            segments: group.segments.map((segment, index) => ({
+              ...segment,
+              rules: {
+                text: index === 0 && random() % 5 === 0 ? 'と' : 'あ',
+                wordKind: 'simple',
+                scoreInfo: {
+                  positions: [],
+                  seqSet: random() % 7 === 0 ? [1342560] : [],
+                  conjugations: [], common: null,
+                  breakdown: {
+                    propertyScore: 1, kanjiBreak: null, useLengthBonus: 0, split: null
+                  },
+                  flags: strong ? ANALYZER_SCORE_FLAG_STRONG : 0
+                },
+                compoundEndSeq: null,
+                compoundEndText: null
+              }
+            }))
+          });
+        }
+      }
+      const entities: AnalyzerEntityHint[] = [{
+        start: random() % (textLength - 1),
+        end: textLength,
+        boost: (random() % 5) - 2
+      }];
+      const optimized = findAnalyzerPaths(groups, textLength, { limit: 10, entities });
+      const complete = findAnalyzerPaths(groups, textLength, {
+        limit: 10,
+        entities,
+        // Wrapping the resolver deliberately selects the exhaustive custom-rule path.
+        transition: (left, right) => resolveAnalyzerRuleTransitions(left, right)
+      });
+      expect(optimized).toEqual(complete);
+    }
+  });
+
+  test('keeps exhaustive gap semantics when a custom initial resolver changes spans', () => {
+    const groups = [
+      portableGroup(1, 0, 1, [10]),
+      portableGroup(2, 2, 3, [10])
+    ];
+    const initial = (group: AnalyzerSegmentGroup): readonly AnalyzerSegmentGroup[] => [
+      group.groupId === 1 ? { ...group, end: 2 } : group
+    ];
+    const actual = findAnalyzerPaths(groups, 3, { limit: 5, initial });
+    const exhaustive = findAnalyzerPaths(groups, 3, {
+      limit: 5,
+      initial,
+      transition: (left, right) => resolveAnalyzerRuleTransitions(left, right)
+    });
+    expect(actual).toEqual(exhaustive);
   });
 });

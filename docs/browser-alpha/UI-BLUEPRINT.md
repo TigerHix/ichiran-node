@@ -85,8 +85,11 @@ installed manifest, integrity record, and successful Worker open.
 - Preserve newlines and permit ordinary text selection.
 - `Analyze` is the only primary action.
 - Cmd/Ctrl+Enter analyzes. Enter alone inserts a newline.
-- Disable Analyze only for empty normalized input or while the same input is
-  already running.
+- Disable Analyze only for empty normalized input or while the same complete
+  intent (text, top-N, entities, and punctuation mode) is already running. A
+  newly submitted intent supersedes obsolete Worker computation.
+- Cap input at 4,096 UTF-16 code units and show the live count. Reject an
+  uninterrupted analyzable word run over 256 units with inline guidance.
 - Put `Top results` (1-5) and entity boosts in a collapsed `Advanced` disclosure.
 - Include `Use sample` as a quiet action. A useful morphology sample is
   `今日は公園で友達と話しました。`.
@@ -107,6 +110,7 @@ These are direct render conditions, not a request for a state-machine abstractio
 | Installing | `Installing for offline use…`; do not pretend this phase has byte progress. |
 | Pack ready, Worker opening | `Opening analyzer…` |
 | Pack and Worker ready | `Ready offline` |
+| New app shell downloaded | `App update downloaded`; tell the user to close every analyzer tab and reopen. The waiting Service Worker must not activate or remove the old shell while an old tab is live. |
 | Incomplete or corrupt pack | `Analyzer data is incomplete or corrupted.`; primary action `Reinstall`; secondary action `Clear installed data`. |
 | Insufficient storage | `Not enough device storage to install analyzer data.`; show required and available estimates when the browser provides them. |
 | Recoverable install failure | `Analyzer data could not be installed.`; primary action `Retry`. Preserve any verified complete artifact; remove only the incomplete staging install. |
@@ -116,6 +120,7 @@ These are direct render conditions, not a request for a state-machine abstractio
 | Success | Render tokens, total latency, and alternatives count. Do not announce success with a toast. |
 | No Japanese candidate | `No Japanese analysis was found.` Keep the original input editable. |
 | Analysis failure | `Analysis failed. Your installed data was not changed.`; action `Try again`. |
+| Worker crash | Reject the interrupted request, restart only after an explicit retry, and never leave later requests pending. |
 | Benchmark running | `Running benchmark…`; disable only the benchmark action, not ordinary analysis. |
 | Offline reopen proved | In Runtime, show `Opened from device storage with networking disabled.` only when the test harness has actually observed that condition. |
 

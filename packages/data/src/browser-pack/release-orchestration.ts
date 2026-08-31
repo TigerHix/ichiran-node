@@ -9,6 +9,7 @@ const execFile = promisify(execFileCallback);
 export const BROWSER_ALPHA_SOURCES_LOCK = 'browser-alpha/sources.lock.json';
 export const BROWSER_ALPHA_UPSTREAM_ORACLE = 'browser-alpha/upstream-oracle.json';
 export const FROZEN_POSTGRES_REFERENCE_COMMIT = 'd583720572fbf26ee201166ac47034c50380a571';
+export const BROWSER_ALPHA_SCHEMA_NORMALIZATION = 'pg-dump-16-schema-v1';
 
 export interface BrowserAlphaSourceLock {
   readonly formatVersion: 2;
@@ -31,6 +32,7 @@ export interface BrowserAlphaSourceLock {
     readonly encoding: string;
     readonly collation: string;
     readonly ctype: string;
+    readonly schemaNormalization: typeof BROWSER_ALPHA_SCHEMA_NORMALIZATION;
     readonly schemaSha256: string;
   };
   readonly toolchain: {
@@ -369,6 +371,9 @@ export function parseBrowserAlphaSourceLock(text: string): BrowserAlphaSourceLoc
   expectString(lock.database.encoding, 'Database encoding');
   expectString(lock.database.collation, 'Database collation');
   expectString(lock.database.ctype, 'Database character classification');
+  if (lock.database.schemaNormalization !== BROWSER_ALPHA_SCHEMA_NORMALIZATION) {
+    throw new Error(`Database schema normalization must be ${BROWSER_ALPHA_SCHEMA_NORMALIZATION}`);
+  }
   expectSha256(lock.database.schemaSha256, 'Database schema digest');
   expectString(lock.toolchain.bun, 'Bun version');
   expectString(lock.toolchain.node, 'Node version');

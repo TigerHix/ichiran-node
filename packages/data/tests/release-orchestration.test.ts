@@ -49,6 +49,7 @@ function lock(source: { readonly bytes: number; readonly sha256: string }) {
       encoding: 'UTF8',
       collation: 'C.UTF-8',
       ctype: 'C.UTF-8',
+      schemaNormalization: 'pg-dump-16-schema-v1',
       schemaSha256: 'a'.repeat(64)
     },
     toolchain: {

@@ -1,9 +1,9 @@
 import { afterEach, describe, expect, test } from 'bun:test';
+import { analyzerManifestDigestInput } from '@ichiran/core';
 
 import { AnalyzerClient } from '../src/client.js';
 import type { AnalyzerPackManifest, WorkerRequest, WorkerResponse } from '../src/protocol.js';
-
-const originalWorker = globalThis.Worker;
+import { Sha256 } from '../src/worker/sha256.js';
 
 class BenchmarkWorker {
   static requests: WorkerRequest[] = [];
@@ -20,7 +20,7 @@ class BenchmarkWorker {
   postMessage(request: WorkerRequest): void {
     BenchmarkWorker.requests.push(request);
     let result: unknown;
-    if (request.op === 'status') {
+    if (request.op === 'status' || request.op === 'expect-release') {
       result = {
         state: 'ready',
         packVersion: 'test',
@@ -52,12 +52,11 @@ class BenchmarkWorker {
   terminate(): void {}
 }
 
-const release: AnalyzerPackManifest = {
+const unsignedRelease = {
   formatVersion: 1,
   packVersion: 'test',
   sourceCommit: 'b'.repeat(40),
   sourcesLockSha256: 'c'.repeat(64),
-  manifestSha256: 'a'.repeat(64),
   hot: {
     file: 'hot.bin.gz', encoding: 'gzip', downloadBytes: 1,
     downloadSha256: 'd'.repeat(64), installedBytes: 1, installedSha256: 'e'.repeat(64)
@@ -66,25 +65,32 @@ const release: AnalyzerPackManifest = {
     file: 'details.bin.gz', encoding: 'gzip', downloadBytes: 1,
     downloadSha256: 'f'.repeat(64), installedBytes: 1, installedSha256: '0'.repeat(64)
   }
+} as const;
+const release: AnalyzerPackManifest = {
+  ...unsignedRelease,
+  manifestSha256: new Sha256()
+    .update(new TextEncoder().encode(analyzerManifestDigestInput(unsignedRelease)))
+    .digestHex()
 };
 
 afterEach(() => {
-  globalThis.Worker = originalWorker;
   BenchmarkWorker.requests = [];
 });
 
 describe('public Worker benchmark report', () => {
   test('keeps hard groups separate and reports every diagnostic without gating it', async () => {
-    globalThis.Worker = BenchmarkWorker as unknown as typeof Worker;
-    const client = new AnalyzerClient();
-    await client.status();
+    const client = new AnalyzerClient(
+      () => new BenchmarkWorker() as unknown as Worker
+    );
+    await client.expectRelease(release);
     const report = await client.benchmark(release);
     client.dispose();
 
-    expect(report.corpusVersion).toBe(2);
+    expect(report.corpusVersion).toBe(3);
     expect(report.groups.map(group => [group.corpus, group.samples])).toEqual([
       ['ordinary', 990],
-      ['pathological-morphology', 500]
+      ['pathological-morphology', 500],
+      ['dense-contiguous-boundary', 120]
     ]);
     expect(report.diagnostics.analyzeGroups.map(group => [group.corpus, group.samples])).toEqual([
       ['segmentation-short', 4590],
@@ -94,7 +100,8 @@ describe('public Worker benchmark report', () => {
       ['top-n', 20],
       ['entities', 540],
       ['counters', 2000],
-      ['numbers', 70]
+      ['numbers', 70],
+      ['paragraph-scaling', 50]
     ]);
     expect(report.diagnostics.describe.corpus).toBe('describe-random-access');
     expect(report.diagnostics.describe.samples).toBe(500);
@@ -105,7 +112,8 @@ describe('public Worker benchmark report', () => {
       (request): request is Extract<WorkerRequest, { op: 'analyze' }> => request.op === 'analyze'
     );
     expect(analyzes.filter(request => request.options.limit === 3)).toHaveLength(12);
-    expect(analyzes.filter(request => request.options.limit === 5)).toHaveLength(12);
+    expect(analyzes.filter(request => request.options.limit === 5)).toHaveLength(5 * 12);
+    expect(analyzes.filter(request => request.options.limit === 10)).toHaveLength(9 * 12);
     expect(analyzes.filter(request => request.options.entities !== undefined)).toHaveLength(54 * 12);
     expect(BenchmarkWorker.requests.filter(request => request.op === 'describe')).toHaveLength(50 * 12);
   });

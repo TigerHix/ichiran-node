@@ -7,24 +7,27 @@ dependency.
 
 ## Build
 
-Build the production PWA shell first and measure it with the package's checked-in
-measurement command. It excludes the staged `analyzer/` directory so the data files
-are not counted twice:
+Build the production PWA shell first. The release command measures that directory
+itself; `analyzer/` is excluded so the data files are not counted twice:
 
 ```bash
 bun run alpha:demo:build
-bun run --cwd packages/browser-demo measure:shell
 ```
 
-Pass that exact integer as `--shell-bytes`, then run from the repository root:
+Pass the production directory, not a caller-supplied byte count:
 
 ```bash
 bun run alpha:release:build -- \
   --database 'postgresql:///ichiran_oracle_ea958336?host=%2Fvar%2Frun%2Fpostgresql' \
   --out dist/browser-alpha \
   --pack-version ichiran-260118 \
-  --shell-bytes <measured-production-shell-bytes>
+  --shell-dir packages/browser-demo/dist
 ```
+
+The release command's own `--database` value is visible in its process argv. For
+authenticated connections, pass a password-free URL and provide the password via
+the inherited `PGPASSWORD` environment variable. The compiler also keeps that
+password out of the child `pg_dump` argv.
 
 The compiler normally requires a completely clean checkout, including no
 untracked files. `--allow-dirty` exists only for development builds and does not
@@ -36,7 +39,8 @@ support freezer deliberately imports that fresh `dist` tree and temporarily
 routes legacy cache reads through the supplied read-only snapshot transaction.
 
 The database connection is placed in a repeatable-read, read-only transaction.
-The compiler checks database name, PostgreSQL version, encoding, and collation;
+The compiler checks database name, PostgreSQL version, encoding, collation, and the
+actual `pg-dump-16-schema-v1` normalized schema SHA-256;
 checks every raw file byte count and SHA-256 from
 `browser-alpha/sources.lock.json`; and checks Bun, Node, and all binary format
 versions. It then checks exact locked logical counts for every section.
@@ -104,17 +108,23 @@ source-payload bound, exact index,
 raw/internal-compressed totals, block/member counts, and largest compressed and decoded
 blocks.
 
-Files are staged and verified before the four final names are atomically replaced.
-The output directory must be below the repository root.
+Each four-file inventory is written and verified in an immutable
+`dist/browser-alpha.generations/<sha256>/` directory. Publication atomically switches
+the single `dist/browser-alpha` symlink, so readers see one complete generation.
+The output must be absent or the publisher-created symlink. A historical flat output
+is rejected without moving or deleting it; move it aside explicitly before publishing.
+Every publication is atomic. Old immutable generations are retained intentionally for
+rollback and may be removed manually only when no build or deploy process is reading
+them. The output must be below the repository root.
 
 ## Verify
 
-Verification takes the same measured shell-byte input used by the build:
+Verification independently measures the final production shell:
 
 ```bash
 bun run alpha:release:verify -- \
   --out dist/browser-alpha \
-  --shell-bytes <the-same-measured-byte-count>
+  --shell-dir packages/browser-demo/dist
 ```
 
 It rechecks the checkout, source lock, toolchain, release manifest digest, download
@@ -123,13 +133,22 @@ reader header, the details header, stats identity, and all three release gates:
 
 - always-resident uncompressed `hot.bin` at most 24 MiB;
 - persisted hot + details + precached shell + cached manifest + compact
-  `install.json` + the 36-byte logical IndexedDB install ID at most 64 MiB;
+  active `install-{a,b}.json` + the 36-byte logical IndexedDB install ID at most 64 MiB;
 - first-install shell + manifest + compressed hot + compressed details at most
   25 MiB.
 
-The passed shell size is deliberately not inferred from a directory or a source
-map convention. The caller owns one exact production-shell measurement, and the
-same integer is recorded in `stats.json` and required during verification.
+`stats.json` binds the shell's derived byte count, exact file-inventory hash, file
+count, and release-specific Service Worker cache identity. Verification recomputes
+all of them and rejects a non-finalized or tampered shell.
+
+`deploy.sh` is the production trust path: it runs this full verification, requires
+the atomic generation layout, derives the exact Git HEAD, and passes that identity
+and the generation into Docker. Manual Docker builds must supply both
+`ICHIRAN_SOURCE_COMMIT` and `ICHIRAN_RELEASE_GENERATION`; the image recomputes the
+exact four-file generation digest, opens and verifies the pack, and rejects a
+manifest that differs from the supplied source commit. Because `.git` is excluded
+from the image context, a manual build cannot independently prove that caller-supplied
+commit. Use `deploy.sh` when that provenance guarantee is required.
 
 Record accepted component sizes and hashes from the release's own `stats.json`; do not
 reuse measurements from an earlier generated-overlay format.
@@ -150,5 +169,8 @@ with the upstream Lisp revision, frozen PostgreSQL reference revision, release-d
 identity, database/toolchain identity, raw inputs, artifact counts and exact artifact
 digests. Normal `build` and `verify` remain strict consumers of that lock.
 
-Review the lock diff and pass the exhaustive parity jobs before publishing. The
-alpha has no update channel, migration, delta, or fallback pack.
+Review the lock diff and pass the exhaustive parity jobs before publishing. The PWA
+has an explicit waiting-shell update handshake, and failed data replacement preserves
+the previous verified A/B generation. It has no automatic analyzer-data update
+scheduler, data migration or delta format, user-selectable rollback release, or
+alternate fallback pack.

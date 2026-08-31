@@ -147,12 +147,11 @@ The deterministic `ichiran-260118` assets are:
 | `details.bin.gz` one-time download | 12,317,325 | 11.747 |
 | resident `hot.bin` | 24,857,288 | 23.706 |
 | installed `details.bin` | 13,555,874 | 12.928 |
-| production shell | 620,423 | 0.592 |
-| complete first-install transfer | 25,601,592 | 24.416 |
-| complete persisted payload | 39,035,488 | 37.227 |
 
-The release's generated `manifest.json` and `stats.json` remain the source of truth;
-the data assets themselves are release artifacts, not repository contents.
+Production-shell, complete first-install, and complete persisted totals are derived
+from the final browser build and bound in the release's generated `stats.json`.
+`manifest.json` and `stats.json` remain the source of truth; the data assets
+themselves are release artifacts, not repository contents.
 
 ## Parity policy
 
@@ -207,6 +206,7 @@ contention.
 | Always-resident hot image | at most 24 MiB |
 | Ordinary top-one p95 at calibrated 6x contention | at most 75 ms |
 | Pathological morphology p95 at calibrated 6x contention | at most 250 ms |
+| Dense contiguous 64-256-unit top-1/5/10 p95 at calibrated 6x contention | at most 500 ms |
 | Main-thread analyzer work | none |
 
 The production qualification command writes raw samples and environment metadata to
@@ -228,17 +228,19 @@ Likely next steps, in order of evidence:
    morphology, scoring/path search, detail decode, and serialization.
 2. Reduce allocations and fuse candidate construction with scoring where profiles show
    object churn or repeated decoding.
-3. Specialize the path search from the current parity-first transition scan toward an
-   interval/sweep top-N algorithm where pair-dependent rules permit it.
+3. Profile the remaining adjacent pair-rule resolver and frontier bookkeeping. The
+   default kernel already uses an exact three-frontier sweep for non-adjacent
+   predecessors; adjacent pairs retain the complete rule resolver, while custom
+   initial/transition hooks intentionally use the exhaustive fallback.
 4. Revisit block boundaries, integer widths, compression, and resident-versus-lazy
    placement using real phone memory and decode traces.
 5. Move only proven CPU kernels to WASM, and keep JavaScript when boundary copying,
    startup, or code size erases the gain.
 
 Other viable work includes automaton-guided scanning that avoids temporary substrings,
-precomputed transitions for common analyzer-rule cases, compact arenas for candidates,
-and persistent Worker reuse. Every change must reproduce the same ordered results and
-scores before it can replace the parity-first implementation.
+precomputed transitions for common adjacent analyzer-rule cases, compact arenas for
+candidates, and persistent Worker reuse. Every change must reproduce the same ordered
+results and scores before it can replace the current exact implementation.
 
 WASM is therefore an optimization option, not the architecture. A database compiled to
 WASM would still be the wrong data model; focused WASM kernels may be useful after

@@ -4,12 +4,17 @@ import type {
   PackAssetManifest,
   PackStatus
 } from '../protocol.js';
+import { parseAnalyzerReleaseManifest } from '@ichiran/core';
+import { NETWORK_INACTIVITY_TIMEOUT_MS, fetchBoundedJson } from '../bounded-json-fetch.js';
 import { Sha256 } from './sha256.js';
 
 const DIRECTORY_NAME = 'ichiran-browser-alpha';
-const MARKER_FILE = 'install.json';
-const HOT_FILE = 'hot.bin';
-const DETAILS_FILE = 'details.bin';
+const MARKER_A_FILE = 'install-a.json';
+const MARKER_B_FILE = 'install-b.json';
+const HOT_A_FILE = 'hot-a.bin';
+const DETAILS_A_FILE = 'details-a.bin';
+const HOT_B_FILE = 'hot-b.bin';
+const DETAILS_B_FILE = 'details-b.bin';
 const DOWNLOAD_FILE = 'asset.download';
 const CONTROL_DATABASE = 'ichiran-browser-alpha-control';
 const CONTROL_STORE = 'state';
@@ -18,12 +23,33 @@ const INSTALL_ID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]
 let controlDatabasePromise: Promise<IDBDatabase> | null = null;
 
 interface InstalledMarker {
-  readonly state: 'ready' | 'corrupt';
+  readonly state: 'ready';
   readonly manifest: AnalyzerPackManifest;
   readonly installId: string;
   readonly installedAt: string;
-  readonly message?: string;
+  readonly slot: InstallSlot;
 }
+
+type InstallSlot = 'a' | 'b';
+
+interface SlotFiles {
+  readonly hot: string;
+  readonly details: string;
+}
+
+const SLOT_FILES: Record<InstallSlot, SlotFiles> = {
+  a: { hot: HOT_A_FILE, details: DETAILS_A_FILE },
+  b: { hot: HOT_B_FILE, details: DETAILS_B_FILE }
+};
+const ALL_DATA_FILES = [
+  HOT_A_FILE,
+  DETAILS_A_FILE,
+  HOT_B_FILE,
+  DETAILS_B_FILE
+] as const;
+const ALL_MARKER_FILES = [MARKER_A_FILE, MARKER_B_FILE] as const;
+// Cleanup-only names from the pre-A/B experiment. They are never parsed or opened.
+const STALE_INSTALL_FILES = ['install.json', 'hot.bin', 'details.bin'] as const;
 
 export interface InstalledFiles {
   readonly manifest: AnalyzerPackManifest;
@@ -33,12 +59,12 @@ export interface InstalledFiles {
 }
 
 export class AnalyzerInstallError extends Error {
-  readonly code: 'insufficient-storage';
+  readonly code: 'insufficient-storage' | 'release-changed';
 
-  constructor(message: string) {
+  constructor(code: AnalyzerInstallError['code'], message: string) {
     super(message);
     this.name = 'AnalyzerInstallError';
-    this.code = 'insufficient-storage';
+    this.code = code;
   }
 }
 
@@ -47,6 +73,15 @@ export type InstallProgress = (
   receivedBytes: number,
   totalBytes: number
 ) => void;
+
+export function temporaryInstallBytes(
+  assets: readonly PackAssetManifest[]
+): number {
+  return Math.max(
+    0,
+    ...assets.map(asset => asset.encoding === 'gzip' ? asset.downloadBytes : 0)
+  );
+}
 
 function isObject(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
@@ -58,80 +93,40 @@ function assertInstallId(value: unknown): asserts value is string {
   }
 }
 
-function assertAsset(value: unknown, label: string): asserts value is PackAssetManifest {
-  if (!isObject(value)) throw new Error(`${label} manifest is not an object`);
-  const integers = ['downloadBytes', 'installedBytes'] as const;
-  for (const key of integers) {
-    if (!Number.isSafeInteger(value[key]) || (value[key] as number) <= 0) {
-      throw new Error(`${label}.${key} must be a positive integer`);
-    }
-  }
-  for (const key of ['downloadSha256', 'installedSha256'] as const) {
-    if (typeof value[key] !== 'string' || !/^[0-9a-f]{64}$/.test(value[key] as string)) {
-      throw new Error(`${label}.${key} is not a lowercase SHA-256 digest`);
-    }
-  }
-  if (typeof value.file !== 'string' || value.file.length === 0) {
-    throw new Error(`${label}.file is missing`);
-  }
-  if (value.encoding !== 'identity' && value.encoding !== 'gzip') {
-    throw new Error(`${label}.encoding must be identity or gzip`);
-  }
-  if (
-    value.encoding === 'identity'
-    && (
-      value.downloadBytes !== value.installedBytes
-      || value.downloadSha256 !== value.installedSha256
-    )
-  ) {
-    throw new Error(`${label} identity sizes and digests must match`);
-  }
+function markerFiles(marker: InstalledMarker): SlotFiles {
+  return SLOT_FILES[marker.slot];
+}
+
+function markerName(slot: InstallSlot): string {
+  return slot === 'a' ? MARKER_A_FILE : MARKER_B_FILE;
+}
+
+async function cleanupInactiveGeneration(
+  directory: FileSystemDirectoryHandle,
+  marker: InstalledMarker
+): Promise<void> {
+  const activeFiles = markerFiles(marker);
+  const activeNames = new Set([activeFiles.hot, activeFiles.details]);
+  const activeMarker = markerName(marker.slot);
+  // An inability to remove an orphan must not quarantine the independently
+  // valid committed pack. Every later cold inspection retries this bounded set.
+  await Promise.allSettled([
+    ...ALL_DATA_FILES
+      .filter(name => !activeNames.has(name))
+      .map(name => removeIfPresent(directory, name)),
+    ...ALL_MARKER_FILES
+      .filter(name => name !== activeMarker)
+      .map(name => removeIfPresent(directory, name)),
+    ...STALE_INSTALL_FILES.map(name => removeIfPresent(directory, name)),
+    removeIfPresent(directory, DOWNLOAD_FILE)
+  ]);
 }
 
 function parseManifest(value: unknown): AnalyzerPackManifest {
-  if (!isObject(value)) throw new Error('Analyzer manifest is not an object');
-  if (value.formatVersion !== 1) throw new Error('Unsupported analyzer manifest format');
-  for (const key of ['packVersion', 'sourceCommit', 'sourcesLockSha256', 'manifestSha256'] as const) {
-    if (typeof value[key] !== 'string' || value[key].length === 0) {
-      throw new Error(`Analyzer manifest ${key} is missing`);
-    }
-  }
-  if (!/^[0-9a-f]{64}$/.test(value.manifestSha256 as string)) {
-    throw new Error('Analyzer manifest digest is invalid');
-  }
-  if (!/^[0-9a-f]{64}$/.test(value.sourcesLockSha256 as string)) {
-    throw new Error('Analyzer sources-lock digest is invalid');
-  }
-  assertAsset(value.hot, 'hot');
-  assertAsset(value.details, 'details');
-  const manifest = value as unknown as AnalyzerPackManifest;
-  const digestInput = JSON.stringify({
-    formatVersion: manifest.formatVersion,
-    packVersion: manifest.packVersion,
-    sourceCommit: manifest.sourceCommit,
-    sourcesLockSha256: manifest.sourcesLockSha256,
-    hot: {
-      file: manifest.hot.file,
-      encoding: manifest.hot.encoding,
-      downloadBytes: manifest.hot.downloadBytes,
-      downloadSha256: manifest.hot.downloadSha256,
-      installedBytes: manifest.hot.installedBytes,
-      installedSha256: manifest.hot.installedSha256
-    },
-    details: {
-      file: manifest.details.file,
-      encoding: manifest.details.encoding,
-      downloadBytes: manifest.details.downloadBytes,
-      downloadSha256: manifest.details.downloadSha256,
-      installedBytes: manifest.details.installedBytes,
-      installedSha256: manifest.details.installedSha256
-    }
-  });
-  const digest = new Sha256().update(new TextEncoder().encode(digestInput)).digestHex();
-  if (digest !== manifest.manifestSha256) {
-    throw new Error('Analyzer manifest checksum does not match');
-  }
-  return manifest;
+  return parseAnalyzerReleaseManifest(
+    value,
+    text => new Sha256().update(new TextEncoder().encode(text)).digestHex()
+  );
 }
 
 async function analyzerDirectory(): Promise<FileSystemDirectoryHandle> {
@@ -158,6 +153,17 @@ async function abortQuietly(
   }
 }
 
+async function cancelQuietly(
+  reader: ReadableStreamDefaultReader<Uint8Array<ArrayBuffer>>,
+  reason: unknown
+): Promise<void> {
+  try {
+    await reader.cancel(reason);
+  } catch {
+    // The response may already have transitioned to errored/closed.
+  }
+}
+
 async function fileIfPresent(
   directory: FileSystemDirectoryHandle,
   name: string
@@ -170,38 +176,102 @@ async function fileIfPresent(
   }
 }
 
-async function readMarker(directory: FileSystemDirectoryHandle): Promise<InstalledMarker | null> {
-  const handle = await fileIfPresent(directory, MARKER_FILE);
+async function cleanupStaleInstallFiles(
+  directory: FileSystemDirectoryHandle
+): Promise<void> {
+  await Promise.all(STALE_INSTALL_FILES.map(name => removeIfPresent(directory, name)));
+}
+
+async function removeAllInstallFiles(directory: FileSystemDirectoryHandle): Promise<void> {
+  await Promise.all([
+    ...ALL_MARKER_FILES.map(name => removeIfPresent(directory, name)),
+    ...ALL_DATA_FILES.map(name => removeIfPresent(directory, name)),
+    ...STALE_INSTALL_FILES.map(name => removeIfPresent(directory, name)),
+    removeIfPresent(directory, DOWNLOAD_FILE)
+  ]);
+}
+
+async function readMarker(
+  directory: FileSystemDirectoryHandle,
+  name: string
+): Promise<InstalledMarker | null> {
+  const handle = await fileIfPresent(directory, name);
   if (!handle) return null;
   const file = await handle.getFile();
   if (file.size > 64 * 1024) throw new Error('Installed marker is unexpectedly large');
   const value: unknown = JSON.parse(await file.text());
-  if (!isObject(value) || (value.state !== 'ready' && value.state !== 'corrupt')) {
+  if (!isObject(value) || value.state !== 'ready') {
     throw new Error('Installed marker is invalid');
   }
   const manifest = parseManifest(value.manifest);
   assertInstallId(value.installId);
   if (typeof value.installedAt !== 'string') throw new Error('Installed marker has no timestamp');
-  if (value.message !== undefined && typeof value.message !== 'string') {
-    throw new Error('Installed marker has an invalid message');
+  if (value.slot !== 'a' && value.slot !== 'b') {
+    throw new Error('Installed marker has an invalid data slot');
   }
   return {
     state: value.state,
     manifest,
     installId: value.installId,
     installedAt: value.installedAt,
-    message: value.message
+    slot: value.slot
   };
 }
 
 async function writeMarker(
   directory: FileSystemDirectoryHandle,
+  name: string,
   marker: InstalledMarker
 ): Promise<void> {
-  const handle = await directory.getFileHandle(MARKER_FILE, { create: true });
+  const handle = await directory.getFileHandle(name, { create: true });
   const writable = await handle.createWritable();
   await writable.write(JSON.stringify(marker));
   await writable.close();
+}
+
+async function readSlotMarker(
+  directory: FileSystemDirectoryHandle,
+  slot: InstallSlot
+): Promise<InstalledMarker | null> {
+  const marker = await readMarker(directory, markerName(slot));
+  if (!marker) return null;
+  if (marker.slot !== slot) {
+    throw new Error('Installed marker is stored in the wrong data slot');
+  }
+  return marker;
+}
+
+async function readCommittedMarker(
+  directory: FileSystemDirectoryHandle,
+  installId: string
+): Promise<InstalledMarker | null> {
+  let invalidMarker = false;
+  for (const slot of ['a', 'b'] as const) {
+    try {
+      const marker = await readSlotMarker(directory, slot);
+      if (marker?.installId === installId) return marker;
+    } catch {
+      // A killed write to the inactive slot must not hide the committed slot.
+      invalidMarker = true;
+    }
+  }
+  if (invalidMarker) throw new Error('The committed analyzer marker is missing or invalid');
+  return null;
+}
+
+async function hasCompleteGenerationFiles(
+  directory: FileSystemDirectoryHandle,
+  marker: InstalledMarker
+): Promise<boolean> {
+  const files = markerFiles(marker);
+  const [hot, details] = await Promise.all([
+    fileIfPresent(directory, files.hot),
+    fileIfPresent(directory, files.details)
+  ]);
+  if (!hot || !details) return false;
+  const [hotFile, detailsFile] = await Promise.all([hot.getFile(), details.getFile()]);
+  return hotFile.size === marker.manifest.hot.installedBytes
+    && detailsFile.size === marker.manifest.details.installedBytes;
 }
 
 function controlDatabase(): Promise<IDBDatabase> {
@@ -290,22 +360,51 @@ async function download(
   totalBytes: number,
   onProgress: InstallProgress
 ): Promise<FileSystemFileHandle> {
-  const response = await fetch(url, { cache: 'no-store', credentials: 'same-origin' });
-  if (!response.ok || !response.body) {
-    throw new Error(`Download failed with HTTP ${response.status}`);
-  }
-  if (response.headers.has('content-encoding')) {
-    throw new Error('Analyzer assets must be served as opaque gzip files without Content-Encoding');
-  }
-  const handle = await directory.getFileHandle(name, { create: true });
-  const writable = await handle.createWritable();
-  const reader = response.body.getReader();
+  const controller = new AbortController();
+  let timedOut = false;
+  let inactivityTimer: ReturnType<typeof setTimeout> | null = null;
+  const stopTimer = (): void => {
+    if (inactivityTimer !== null) clearTimeout(inactivityTimer);
+    inactivityTimer = null;
+  };
+  const armTimer = (): void => {
+    stopTimer();
+    inactivityTimer = setTimeout(() => {
+      timedOut = true;
+      controller.abort();
+    }, NETWORK_INACTIVITY_TIMEOUT_MS);
+  };
+  let reader: ReadableStreamDefaultReader<Uint8Array<ArrayBuffer>> | null = null;
+  let writable: FileSystemWritableFileStream | null = null;
   const hash = new Sha256();
   let received = 0;
   try {
+    armTimer();
+    const response = await fetch(url, {
+      cache: 'no-store',
+      credentials: 'same-origin',
+      signal: controller.signal
+    });
+    if (!response.ok || !response.body) {
+      await response.body?.cancel();
+      throw new Error(`Download failed with HTTP ${response.status}`);
+    }
+    if (response.headers.has('content-encoding')) {
+      await response.body.cancel();
+      throw new Error(
+        'Analyzer assets must be served as opaque gzip files without Content-Encoding'
+      );
+    }
+    const handle = await directory.getFileHandle(name, { create: true });
+    writable = await handle.createWritable();
+    reader = response.body.getReader();
     while (true) {
       const { done, value } = await reader.read();
-      if (done) break;
+      if (done) {
+        stopTimer();
+        break;
+      }
+      armTimer();
       received += value.byteLength;
       if (received > asset.downloadBytes) throw new Error('Download exceeds manifest byte length');
       hash.update(value);
@@ -314,8 +413,18 @@ async function download(
     }
     await writable.close();
   } catch (error) {
-    await abortQuietly(writable, error);
+    await Promise.all([
+      reader ? cancelQuietly(reader, error) : Promise.resolve(),
+      writable ? abortQuietly(writable, error) : Promise.resolve()
+    ]);
+    if (timedOut) {
+      throw new Error(
+        'Analyzer download received no data for 30 seconds. Check your connection and retry.'
+      );
+    }
     throw error;
+  } finally {
+    stopTimer();
   }
   if (received !== asset.downloadBytes) {
     throw new Error(`Downloaded ${received} bytes; expected ${asset.downloadBytes}`);
@@ -323,7 +432,7 @@ async function download(
   if (hash.digestHex() !== asset.downloadSha256) {
     throw new Error('Downloaded asset checksum does not match');
   }
-  return handle;
+  return (await directory.getFileHandle(name));
 }
 
 async function installAsset(
@@ -379,35 +488,60 @@ async function installAsset(
 
 export async function inspectInstall(workerOpen = false): Promise<PackStatus> {
   const directory = await analyzerDirectory();
-  let marker: InstalledMarker | null;
   let installId: string | null;
   try {
-    [marker, installId] = await Promise.all([
-      readMarker(directory),
-      readInstallId()
-    ]);
+    await cleanupStaleInstallFiles(directory);
+    installId = await readInstallId();
   } catch (error) {
     return {
       state: 'corrupt',
       message: error instanceof Error ? error.message : String(error)
     };
   }
-  const hot = await fileIfPresent(directory, HOT_FILE);
-  const details = await fileIfPresent(directory, DETAILS_FILE);
-  if (!marker) {
-    return hot || details || installId
+  if (!installId) {
+    const [presentDataFiles, presentMarkerFiles] = await Promise.all([
+      Promise.all(ALL_DATA_FILES.map(name => fileIfPresent(directory, name))),
+      Promise.all(ALL_MARKER_FILES.map(name => fileIfPresent(directory, name)))
+    ]);
+    return presentDataFiles.some(Boolean) || presentMarkerFiles.some(Boolean)
       ? { state: 'incomplete', message: 'Analyzer data installation is incomplete.' }
       : { state: 'not-installed' };
   }
-  if (marker.state === 'corrupt') {
-    return { state: 'corrupt', message: marker.message ?? 'Analyzer data is corrupted.' };
+  let marker: InstalledMarker | null;
+  try {
+    marker = await readCommittedMarker(directory, installId);
+  } catch (error) {
+    return {
+      state: 'corrupt',
+      message: error instanceof Error ? error.message : String(error)
+    };
   }
-  if (!installId) {
+  if (!marker) {
+    const [presentDataFiles, presentMarkerFiles] = await Promise.all([
+      Promise.all(ALL_DATA_FILES.map(name => fileIfPresent(directory, name))),
+      Promise.all(ALL_MARKER_FILES.map(name => fileIfPresent(directory, name)))
+    ]);
+    if (!presentDataFiles.some(Boolean) && !presentMarkerFiles.some(Boolean)) {
+      try {
+        await writeInstallId(null);
+        return { state: 'not-installed' };
+      } catch (error) {
+        return {
+          state: 'corrupt',
+          message: error instanceof Error ? error.message : String(error)
+        };
+      }
+    }
     return { state: 'incomplete', message: 'Analyzer data installation is incomplete.' };
   }
   if (installId !== marker.installId) {
     return { state: 'corrupt', message: 'Analyzer install IDs do not match.' };
   }
+  const files = markerFiles(marker);
+  const [hot, details] = await Promise.all([
+    fileIfPresent(directory, files.hot),
+    fileIfPresent(directory, files.details)
+  ]);
   if (!hot || !details) {
     return { state: 'incomplete', message: 'Analyzer data files are missing.' };
   }
@@ -422,6 +556,7 @@ export async function inspectInstall(workerOpen = false): Promise<PackStatus> {
   ) {
     return { state: 'corrupt', message: 'Analyzer data file sizes do not match the manifest.' };
   }
+  await cleanupInactiveGeneration(directory, marker);
   return {
     state: 'ready',
     packVersion: marker.manifest.packVersion,
@@ -435,24 +570,62 @@ export async function inspectInstall(workerOpen = false): Promise<PackStatus> {
 
 export async function installAnalyzer(
   manifestLocation: string,
-  onProgress: InstallProgress
+  onProgress: InstallProgress,
+  expectedRelease: AnalyzerPackManifest
 ): Promise<PackStatus> {
   const manifestUrl = new URL(manifestLocation, self.location.href);
   if (manifestUrl.origin !== self.location.origin) {
     throw new Error('Analyzer manifest must be same-origin');
   }
-  const response = await fetch(manifestUrl, { cache: 'no-store', credentials: 'same-origin' });
-  if (!response.ok) throw new Error(`Manifest download failed with HTTP ${response.status}`);
-  const manifest = parseManifest(await response.json());
+  const manifest = parseManifest(await fetchBoundedJson(
+    manifestUrl,
+    { cache: 'no-store', credentials: 'same-origin' },
+    'Analyzer manifest download'
+  ));
+  if (manifest.manifestSha256 !== expectedRelease.manifestSha256) {
+    throw new AnalyzerInstallError(
+      'release-changed',
+      'The deployed analyzer release changed. Close every analyzer tab, reopen, and retry.'
+    );
+  }
   const totalBytes = manifest.hot.downloadBytes + manifest.details.downloadBytes;
   const installedBytes = manifest.hot.installedBytes + manifest.details.installedBytes;
-  const temporaryBytes = Math.max(manifest.hot.downloadBytes, manifest.details.downloadBytes);
+  const temporaryBytes = temporaryInstallBytes([manifest.hot, manifest.details]);
   const directory = await analyzerDirectory();
+  await cleanupStaleInstallFiles(directory);
+  let previousInstallId: string | null = null;
+  try {
+    previousInstallId = await readInstallId();
+  } catch {
+    // An invalid control record cannot select a generation worth preserving.
+  }
+  let previousMarker: InstalledMarker | null = null;
+  if (previousInstallId) {
+    try {
+      previousMarker = await readCommittedMarker(directory, previousInstallId);
+    } catch {
+      // A damaged current generation is not eligible for preservation.
+    }
+  }
+  const previousReady = previousMarker?.installId === previousInstallId
+    && await hasCompleteGenerationFiles(directory, previousMarker)
+    ? previousMarker
+    : null;
+  if (!previousReady) {
+    // No generation can be rolled back to. Remove every app-owned byte before
+    // asking for the quota estimate so abandoned files cannot reject reinstall.
+    await writeInstallId(null);
+    await removeAllInstallFiles(directory);
+  }
+  const nextSlot: InstallSlot = previousReady?.slot === 'a' ? 'b' : 'a';
+  const nextFiles = SLOT_FILES[nextSlot];
   const estimate = await navigator.storage.estimate();
   if (estimate.quota !== undefined && estimate.usage !== undefined) {
+    // Only count files that are safe to remove before installing. The active
+    // verified pack stays intact until the replacement is fully committed.
     const [existingHot, existingDetails, existingDownload] = await Promise.all([
-      fileIfPresent(directory, HOT_FILE),
-      fileIfPresent(directory, DETAILS_FILE),
+      fileIfPresent(directory, nextFiles.hot),
+      fileIfPresent(directory, nextFiles.details),
       fileIfPresent(directory, DOWNLOAD_FILE)
     ]);
     const reclaimableBytes = (existingHot ? (await existingHot.getFile()).size : 0)
@@ -462,26 +635,31 @@ export async function installAnalyzer(
     const requiredBytes = installedBytes + temporaryBytes;
     if (availableBytes < requiredBytes) {
       throw new AnalyzerInstallError(
+        'insufficient-storage',
         `Requires about ${requiredBytes} bytes; storage estimate reports ${availableBytes} bytes available.`
       );
     }
   }
 
-  // Invalidate the control record before touching OPFS. It is committed again
-  // only after every payload and the mirrored marker are complete.
-  await writeInstallId(null);
-  await removeIfPresent(directory, MARKER_FILE);
   await Promise.all([
     removeIfPresent(directory, DOWNLOAD_FILE),
-    removeIfPresent(directory, HOT_FILE),
-    removeIfPresent(directory, DETAILS_FILE)
+    removeIfPresent(directory, nextFiles.hot),
+    removeIfPresent(directory, nextFiles.details),
+    removeIfPresent(directory, markerName(nextSlot))
   ]);
+  const installId = crypto.randomUUID();
+  const installedMarker: InstalledMarker = {
+    state: 'ready',
+    manifest,
+    installId,
+    installedAt: new Date().toISOString(),
+    slot: nextSlot
+  };
   try {
-    const installId = crypto.randomUUID();
     await installAsset(
       manifestUrl,
       directory,
-      HOT_FILE,
+      nextFiles.hot,
       manifest.hot,
       0,
       totalBytes,
@@ -490,48 +668,55 @@ export async function installAnalyzer(
     await installAsset(
       manifestUrl,
       directory,
-      DETAILS_FILE,
+      nextFiles.details,
       manifest.details,
       manifest.hot.downloadBytes,
       totalBytes,
       onProgress
     );
     onProgress('opening', totalBytes, totalBytes);
-    await writeMarker(directory, {
-      state: 'ready',
-      manifest,
-      installId,
-      installedAt: new Date().toISOString()
-    });
-    await writeInstallId(installId);
-    return inspectInstall(false);
+    await writeMarker(directory, markerName(nextSlot), installedMarker);
   } catch (error) {
-    await writeInstallId(null);
-    await removeIfPresent(directory, MARKER_FILE);
     await Promise.all([
-      removeIfPresent(directory, HOT_FILE),
-      removeIfPresent(directory, DETAILS_FILE),
+      removeIfPresent(directory, nextFiles.hot),
+      removeIfPresent(directory, nextFiles.details),
+      removeIfPresent(directory, markerName(nextSlot)),
       removeIfPresent(directory, DOWNLOAD_FILE)
     ]);
     throw error;
   }
+
+  try {
+    await writeInstallId(installId);
+  } catch (error) {
+    // The strict IndexedDB write is the sole generation switch. Until it
+    // commits, the previous ID continues selecting its immutable marker.
+    await Promise.all([
+      removeIfPresent(directory, nextFiles.hot),
+      removeIfPresent(directory, nextFiles.details),
+      removeIfPresent(directory, markerName(nextSlot)),
+      removeIfPresent(directory, DOWNLOAD_FILE)
+    ]);
+    throw error;
+  }
+
+  return inspectInstall(false);
 }
 
 export async function installedFiles(): Promise<InstalledFiles | null> {
   const directory = await analyzerDirectory();
-  const [marker, installId] = await Promise.all([
-    readMarker(directory),
-    readInstallId()
-  ]);
+  await cleanupStaleInstallFiles(directory);
+  const installId = await readInstallId();
+  const marker = installId ? await readCommittedMarker(directory, installId) : null;
   if (
     !marker
-    || marker.state !== 'ready'
     || installId === null
     || installId !== marker.installId
   ) return null;
+  const files = markerFiles(marker);
   const [hot, details] = await Promise.all([
-    fileIfPresent(directory, HOT_FILE),
-    fileIfPresent(directory, DETAILS_FILE)
+    fileIfPresent(directory, files.hot),
+    fileIfPresent(directory, files.details)
   ]);
   return hot && details
     ? { manifest: marker.manifest, installId: marker.installId, hot, details }
@@ -540,22 +725,21 @@ export async function installedFiles(): Promise<InstalledFiles | null> {
 
 /** Mark only the ready pack whose identity was observed by the failing runtime. */
 export async function markInstallCorrupt(
-  installId: string,
-  message: string
+  installId: string
 ): Promise<boolean> {
   const directory = await analyzerDirectory();
-  const [marker, committedInstallId] = await Promise.all([
-    readMarker(directory),
-    readInstallId()
-  ]);
+  const committedInstallId = await readInstallId();
+  const marker = committedInstallId
+    ? await readCommittedMarker(directory, committedInstallId)
+    : null;
   if (
     !marker
-    || marker.state !== 'ready'
     || marker.installId !== installId
     || committedInstallId !== installId
   ) return false;
+  // The strict control pointer is the sole authority. The immutable files are
+  // left in place for an explicit reinstall or clear to remove.
   await writeInstallId(null);
-  await writeMarker(directory, { ...marker, state: 'corrupt', message });
   return true;
 }
 
@@ -571,10 +755,5 @@ export async function installedInstallId(): Promise<string | null> {
 export async function clearInstall(): Promise<void> {
   const directory = await analyzerDirectory();
   await writeInstallId(null);
-  await Promise.all([
-    removeIfPresent(directory, MARKER_FILE),
-    removeIfPresent(directory, HOT_FILE),
-    removeIfPresent(directory, DETAILS_FILE),
-    removeIfPresent(directory, DOWNLOAD_FILE)
-  ]);
+  await removeAllInstallFiles(directory);
 }

@@ -13,10 +13,16 @@ import {
 
 type SegmentFilter = (segment: AnalyzerSegment) => boolean;
 type GroupPair = readonly [AnalyzerSegmentGroup | null, AnalyzerSegmentGroup];
-type Segfilter = (
-  left: AnalyzerSegmentGroup | null,
-  right: AnalyzerSegmentGroup
-) => readonly GroupPair[];
+interface Segfilter {
+  (
+    left: AnalyzerSegmentGroup | null,
+    right: AnalyzerSegmentGroup
+  ): readonly GroupPair[];
+  /** Pair filtering when the left group is known not to touch the right. */
+  readonly nonAdjacentRight: (
+    right: AnalyzerSegmentGroup
+  ) => AnalyzerSegmentGroup | null;
+}
 
 const NOUN_PARTICLES = [
   2028920, 2028930, 2028990, 2028980, 2029000, 1007340, 1579080,
@@ -81,7 +87,10 @@ function mustFollow(
   rightFilter: SegmentFilter,
   allowFirst = false
 ): Segfilter {
-  return (left, right) => {
+  const filter = (
+    left: AnalyzerSegmentGroup | null,
+    right: AnalyzerSegmentGroup
+  ): readonly GroupPair[] => {
     const [rightYes, rightNo] = classify(right.segments, rightFilter);
     if (rightYes.length === 0 || (allowFirst && left === null)) return [[left, right]];
 
@@ -102,6 +111,13 @@ function mustFollow(
     }
     return output;
   };
+  return Object.assign(filter, {
+    nonAdjacentRight: (right: AnalyzerSegmentGroup): AnalyzerSegmentGroup | null => {
+      const [rightYes, rightNo] = classify(right.segments, rightFilter);
+      if (rightYes.length === 0) return right;
+      return rightNo.length > 0 ? filteredGroup(right, rightNo) : null;
+    }
+  });
 }
 
 const SEGFILTERS: readonly Segfilter[] = [
@@ -181,6 +197,24 @@ const SEGFILTERS: readonly Segfilter[] = [
     true
   )
 ];
+
+const NON_ADJACENT_RIGHT_CACHE = new WeakMap<
+  AnalyzerSegmentGroup,
+  AnalyzerSegmentGroup | null
+>();
+
+function nonAdjacentRight(group: AnalyzerSegmentGroup): AnalyzerSegmentGroup | null {
+  if (NON_ADJACENT_RIGHT_CACHE.has(group)) {
+    return NON_ADJACENT_RIGHT_CACHE.get(group) ?? null;
+  }
+  let filtered: AnalyzerSegmentGroup | null = group;
+  for (const segfilter of SEGFILTERS) {
+    if (filtered === null) break;
+    filtered = segfilter.nonAdjacentRight(filtered);
+  }
+  NON_ADJACENT_RIGHT_CACHE.set(group, filtered);
+  return filtered;
+}
 
 /** Apply all analyzer-internal must-follow filters in current registration order. */
 export function applyAnalyzerSegfilters(
@@ -343,6 +377,19 @@ function adjustment(
   return { start: left.end, end: right.start, description, connector, score };
 }
 
+function shortPenaltyGroup(group: AnalyzerSegmentGroup, exceptTo: boolean): boolean {
+  const first = group.segments[0];
+  return first !== undefined
+    && group.end - group.start <= 1
+    && !flag(first, ANALYZER_SCORE_FLAG_STRONG)
+    && (!exceptTo || segmentText(first) !== 'と');
+}
+
+/** Left-side category used by the exact non-adjacent path frontier. */
+export function analyzerShortPenaltyLeft(group: AnalyzerSegmentGroup): boolean {
+  return shortPenaltyGroup(group, false);
+}
+
 function penalty(
   left: AnalyzerSegmentGroup,
   right: AnalyzerSegmentGroup
@@ -355,14 +402,7 @@ function penalty(
     return adjustment(left, right, 'semi-final not final', ' ', -15);
   }
 
-  const short = (group: AnalyzerSegmentGroup, exceptTo: boolean): boolean => {
-    const first = group.segments[0];
-    return first !== undefined
-      && group.end - group.start <= 1
-      && !flag(first, ANALYZER_SCORE_FLAG_STRONG)
-      && (!exceptTo || segmentText(first) !== 'と');
-  };
-  return short(left, false) && short(right, true)
+  return analyzerShortPenaltyLeft(left) && shortPenaltyGroup(right, true)
     ? adjustment(left, right, 'short', ' ', -9)
     : undefined;
 }
@@ -393,6 +433,14 @@ export const resolveAnalyzerInitialRules: AnalyzerInitialResolver = (group) =>
 
 /** Current ordered baseline penalty + synergy transitions for one group pair. */
 export const resolveAnalyzerRuleTransitions: AnalyzerTransitionResolver = (left, right) => {
+  if (left.end !== right.start) {
+    const filteredRight = nonAdjacentRight(right);
+    return filteredRight === null ? [] : [{
+      right: filteredRight,
+      adjustment: penalty(left, filteredRight),
+      left
+    }];
+  }
   const output: AnalyzerPathTransition[] = [];
   for (const split of applyAnalyzerSegfilters(left, right)) {
     const filteredLeft = split[0];

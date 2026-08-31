@@ -1,6 +1,15 @@
 /// <reference lib="webworker" />
 
-import type { WorkerRequest, WorkerResponse } from './protocol.js';
+import {
+  parseAnalyzerReleaseManifest,
+  type IchiranRuntime
+} from '@ichiran/core';
+import type {
+  AnalyzerPackManifest,
+  PackStatus,
+  WorkerRequest,
+  WorkerResponse
+} from './protocol.js';
 import {
   AnalyzerInstallError,
   clearInstall,
@@ -10,13 +19,14 @@ import {
   installedInstallId,
   markInstallCorrupt
 } from './worker/install.js';
-import type { IchiranRuntime } from '@ichiran/core';
 import { openAnalyzerRuntime } from './worker/runtime.js';
 import { createSerialExecutor } from './worker/serial-executor.js';
+import { Sha256 } from './worker/sha256.js';
 
 let runtime: IchiranRuntime | null = null;
 let runtimeManifestSha256: string | null = null;
 let runtimeInstallId: string | null = null;
+let expectedRelease: AnalyzerPackManifest | null = null;
 const runSerially = createSerialExecutor();
 const INSTALL_LIFECYCLE_LOCK = 'ichiran-browser-alpha-install';
 
@@ -55,11 +65,47 @@ function clearRuntime(): void {
   runtimeInstallId = null;
 }
 
+function parseExpectedRelease(value: unknown): AnalyzerPackManifest {
+  return parseAnalyzerReleaseManifest(
+    value,
+    text => new Sha256().update(new TextEncoder().encode(text)).digestHex()
+  );
+}
+
+function requiredExpectedRelease(): AnalyzerPackManifest {
+  if (!expectedRelease) {
+    throw new WorkerOperationError(
+      'release-not-set',
+      'The deployed analyzer release must be verified before opening device data.'
+    );
+  }
+  return expectedRelease;
+}
+
+function staleStatus(
+  installed: Extract<PackStatus, { state: 'ready' }>,
+  expected: AnalyzerPackManifest
+): PackStatus {
+  return {
+    state: 'stale',
+    message: 'Installed analyzer data belongs to an earlier app release. Reinstall to continue.',
+    installedPackVersion: installed.packVersion,
+    installedManifestSha256: installed.manifestSha256,
+    expectedPackVersion: expected.packVersion,
+    expectedManifestSha256: expected.manifestSha256
+  };
+}
+
 async function openInstalledUnlocked(): Promise<ReturnType<typeof inspectInstall>> {
+  const expected = requiredExpectedRelease();
   const status = await inspectInstall(runtime !== null);
   if (status.state !== 'ready') {
     clearRuntime();
     return status;
+  }
+  if (status.manifestSha256 !== expected.manifestSha256) {
+    clearRuntime();
+    return staleStatus(status, expected);
   }
   const installId = await installedInstallId();
   if (
@@ -78,8 +124,7 @@ async function openInstalledUnlocked(): Promise<ReturnType<typeof inspectInstall
     runtimeInstallId = files.installId;
     return inspectInstall(true);
   } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    await markInstallCorrupt(files.installId, message);
+    await markInstallCorrupt(files.installId);
     clearRuntime();
     return inspectInstall(false);
   }
@@ -108,6 +153,7 @@ function isArtifactCorruption(error: unknown): boolean {
 }
 
 async function withRuntime<T>(operation: (value: IchiranRuntime) => T | Promise<T>): Promise<T> {
+  let repairAttempted = false;
   while (true) {
     const outcome = await withLifecycleLock('shared', async () => {
       const installId = await installedInstallId();
@@ -134,17 +180,34 @@ async function withRuntime<T>(operation: (value: IchiranRuntime) => T | Promise<
     if (outcome.state === 'corrupt') {
       const marked = await withInstallLifecycleLock(async () => {
         try {
-          return await markInstallCorrupt(outcome.installId, outcome.message);
+          return await markInstallCorrupt(outcome.installId);
         } finally {
           clearRuntime();
         }
       });
       if (!marked) continue;
+      // A replacement may already be queued behind this quarantine. Give that
+      // generation one chance to commit and reopen before surfacing damage to
+      // the page; otherwise a successful cross-tab repair would strand the
+      // request that detected the old generation's corruption.
+      if (!repairAttempted) {
+        repairAttempted = true;
+        try {
+          const repaired = await openInstalled();
+          if (repaired.state === 'ready') continue;
+        } catch {
+          // Preserve the confirmed corruption error if storage inspection also
+          // fails while probing for a queued replacement.
+        }
+      }
       throw new WorkerOperationError('corrupt-install', outcome.message);
     }
     const status = await openInstalled();
     if (status.state === 'corrupt') {
       throw new WorkerOperationError('corrupt-install', status.message);
+    }
+    if (status.state === 'stale') {
+      throw new WorkerOperationError('stale-install', status.message);
     }
     if (status.state !== 'ready') {
       throw new WorkerOperationError('not-installed', 'Analyzer data is not ready');
@@ -154,21 +217,32 @@ async function withRuntime<T>(operation: (value: IchiranRuntime) => T | Promise<
 
 async function handle(request: WorkerRequest): Promise<unknown> {
   switch (request.op) {
+    case 'expect-release': {
+      const release = parseExpectedRelease(request.release);
+      expectedRelease = release;
+      if (runtimeManifestSha256 !== release.manifestSha256) clearRuntime();
+      return openInstalled();
+    }
     case 'status':
       return openInstalled();
     case 'install': {
+      const release = requiredExpectedRelease();
       return withInstallLifecycleLock(async () => {
         clearRuntime();
         try {
-          await installAnalyzer(request.manifestUrl, (phase, receivedBytes, totalBytes) => {
-            post({
-              id: request.id,
-              type: 'progress',
-              phase,
-              receivedBytes,
-              totalBytes
-            });
-          });
+          await installAnalyzer(
+            request.manifestUrl,
+            (phase, receivedBytes, totalBytes) => {
+              post({
+                id: request.id,
+                type: 'progress',
+                phase,
+                receivedBytes,
+                totalBytes
+              });
+            },
+            release
+          );
         } catch (error) {
           if (error instanceof AnalyzerInstallError) {
             throw new WorkerOperationError(error.code, error.message);

@@ -1,27 +1,14 @@
 import type {
+  AnalyzerReleaseAsset,
+  AnalyzerReleaseManifest,
   PortableAnalysisPath,
   PortableAnalysisResult,
-  PortableAnalysisToken
+  PortableAnalysisToken,
+  PortableAnalyzeOptions
 } from '@ichiran/core';
 
-export interface PackAssetManifest {
-  readonly file: string;
-  readonly encoding: 'identity' | 'gzip';
-  readonly downloadBytes: number;
-  readonly downloadSha256: string;
-  readonly installedBytes: number;
-  readonly installedSha256: string;
-}
-
-export interface AnalyzerPackManifest {
-  readonly formatVersion: 1;
-  readonly packVersion: string;
-  readonly sourceCommit: string;
-  readonly sourcesLockSha256: string;
-  readonly manifestSha256: string;
-  readonly hot: PackAssetManifest;
-  readonly details: PackAssetManifest;
-}
+export type PackAssetManifest = AnalyzerReleaseAsset;
+export type AnalyzerPackManifest = AnalyzerReleaseManifest;
 
 export type InstallPhase =
   | 'downloading'
@@ -36,6 +23,14 @@ export type PackStatus =
       readonly message: string;
     }
   | {
+      readonly state: 'stale';
+      readonly message: string;
+      readonly installedPackVersion: string;
+      readonly installedManifestSha256: string;
+      readonly expectedPackVersion: string;
+      readonly expectedManifestSha256: string;
+    }
+  | {
       readonly state: 'ready';
       readonly packVersion: string;
       readonly manifestSha256: string;
@@ -45,15 +40,7 @@ export type PackStatus =
       readonly workerOpen: boolean;
     };
 
-export interface AnalyzeOptions {
-  readonly limit?: number;
-  readonly entities?: readonly {
-    readonly start: number;
-    readonly end: number;
-    readonly boost?: number;
-  }[];
-  readonly normalizePunctuation?: boolean;
-}
+export type AnalyzeOptions = PortableAnalyzeOptions;
 
 export type AnalysisToken = PortableAnalysisToken;
 export type AnalysisPath = PortableAnalysisPath;
@@ -71,7 +58,7 @@ export interface BenchmarkGroupResult {
 export interface BenchmarkResult {
   /** Exact identity of the installed release measured by this report. */
   readonly release: AnalyzerPackManifest;
-  readonly corpusVersion: 2;
+  readonly corpusVersion: 3;
   readonly warmupPasses: 2;
   readonly measuredPasses: 10;
   /** The only groups with alpha pass/fail thresholds. */
@@ -86,6 +73,11 @@ export interface BenchmarkResult {
 }
 
 export type WorkerRequest =
+  | {
+      readonly id: number;
+      readonly op: 'expect-release';
+      readonly release: AnalyzerPackManifest;
+    }
   | { readonly id: number; readonly op: 'status' }
   | { readonly id: number; readonly op: 'install'; readonly manifestUrl: string }
   | { readonly id: number; readonly op: 'clear' }
@@ -95,6 +87,7 @@ export type WorkerRequest =
   | { readonly id: number; readonly op: 'romanize'; readonly text: string };
 
 export type WorkerResultByOperation = {
+  readonly 'expect-release': PackStatus;
   readonly status: PackStatus;
   readonly install: PackStatus;
   readonly clear: PackStatus;

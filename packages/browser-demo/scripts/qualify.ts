@@ -43,12 +43,10 @@ async function run(
 
 await run('bun', ['scripts/stage-analyzer.ts', release], packageRoot);
 await run('bun', ['run', 'build'], packageRoot);
-const shellBytes = await run('bun', ['scripts/measure-shell.ts'], packageRoot, true);
-if (!/^\d+$/.test(shellBytes)) throw new Error(`Invalid measured shell byte count: ${shellBytes}`);
 await run('bun', [
   'run', 'alpha:release:verify', '--',
   '--out', release,
-  '--shell-bytes', shellBytes
+  '--shell-dir', resolve(packageRoot, 'dist')
 ], repositoryRoot);
 await run('bun', [
   'scripts/audit-build.ts', '--require-analyzer', '--release', release
@@ -56,6 +54,6 @@ await run('bun', [
 if (!skipE2e) await run('bun', ['run', 'test:e2e'], packageRoot);
 
 console.log(
-  `Browser alpha qualification passed for ${release} with ${shellBytes} production shell bytes`
+  `Browser alpha qualification passed for ${release} with a verified production-shell fingerprint`
   + (skipE2e ? ' (E2E skipped)' : '')
 );

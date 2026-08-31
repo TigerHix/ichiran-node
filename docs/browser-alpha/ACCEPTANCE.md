@@ -277,7 +277,7 @@ bun run alpha:release:build -- \
   --database "$ICHIRAN_DB_URL" \
   --out dist/browser-alpha \
   --pack-version ichiran-260118 \
-  --shell-bytes <measured-production-shell-bytes>
+  --shell-dir packages/browser-demo/dist
 
 bun packages/core/tools/oracle-parity.ts \
   --repository "$PWD" \
@@ -287,7 +287,7 @@ bun packages/core/tools/oracle-parity.ts \
 
 bun run alpha:release:verify -- \
   --out dist/browser-alpha \
-  --shell-bytes <the-same-measured-byte-count>
+  --shell-dir packages/browser-demo/dist
 ```
 
 `oracle-parity.ts` runs the full corpus by default and exits non-zero on any current
@@ -342,15 +342,16 @@ Binary-size pass/fail definitions use powers of two:
 - fresh-install wire payload for manifest, app shell, and all analyzer data using
   the release content encoding: **at most 25 MiB = 26,214,400 bytes**.
 
-The qualified `ichiran-260118` release measures 24,857,288 resident hot bytes,
-39,035,488 total persisted payload bytes, and 25,601,592 first-install wire bytes
-with the 620,423-byte production shell. The compressed hot/detail assets are
-12,662,917 and 12,317,325 bytes respectively. All three gates pass without excluding
+The `ichiran-260118` analyzer data measures 24,857,288 resident hot bytes; its
+compressed hot/detail assets are 12,662,917 and 12,317,325 bytes respectively. The
+production release report supplies the shell-dependent persisted and first-install
+wire totals, and qualification requires all three gates to pass without excluding
 dictionary details.
 
 The size checker sums the manifest's actual payload lengths and deterministic
-release-encoded lengths; it does not use filesystem or IndexedDB allocation size or
-estimate from source TSV. The IndexedDB contribution is the 36-byte logical UUID;
+release-encoded lengths, including one committed `install-{a,b}.json` slot marker;
+it does not count the temporary inactive upgrade slot or use filesystem or IndexedDB
+allocation size. The IndexedDB contribution is the 36-byte logical UUID;
 browser-managed schema, key, structured-clone, and page overhead are implementation
 defined. Full dictionary details are mandatory in these totals. Full Kanjidic
 meanings/radicals/strokes are absent because no alpha analyzer operation consumes
@@ -371,7 +372,9 @@ Hard-gated groups:
 - `ordinary`: `packages/cli/tests/data/cli.json` `fullJson[3..101]`, 99 natural
   13-36-character sentences;
 - `pathological-morphology`: `packages/cli/tests/data/hard-cli.json`
-  `fullJson[0..49]`, 50 complex auxiliary/morphology chains.
+  `fullJson[0..49]`, 50 complex auxiliary/morphology chains;
+- `dense-contiguous-boundary`: repeated `あ` at 64, 128, 192, and the accepted
+  256-unit contiguous-word boundary, each measured at top-1, top-5, and top-10.
 
 Report-only diagnostic groups:
 
@@ -380,6 +383,8 @@ Report-only diagnostic groups:
 - 50 hiragana/colloquial cases, CLI indices 152-201;
 - 50 modern mixed-script/slang cases, CLI indices 202-251;
 - the top-3/top-5 fixture calls, all 54 entity-hint cases, counters/numbers;
+- five committed top-10 paragraph-scaling probes at 128, 512, 1,024, 2,048,
+  and the accepted 4,096 UTF-16-unit boundary;
 - `describe` random-access latency and Worker ready/first-call latency.
 
 ## 9. Performance procedure and gates
@@ -397,8 +402,9 @@ Procedure:
 
 1. Install the complete pack, close the page, reopen it offline, and await Worker
    readiness.
-2. Call clean `analyze(text, {limit: 1})`; do not call `describe` or hydrate gloss
-   details.
+2. Call clean `analyze` with the committed request limit: top-1 for ordinary and
+   pathological inputs, and top-1/5/10 for the dense boundary. Do not call `describe`
+   or hydrate gloss details.
 3. Do not add a whole-result memo/cache for the benchmark. Packed indexes and JIT state
    remain warm after the two warmup passes.
 4. Start the five same-affinity contention peers only after the Worker calibration
@@ -412,12 +418,14 @@ Hard gates on the designated reference desktop:
 
 - ordinary top-1 p95 at the calibrated 6x proxy: **at most 75 ms**;
 - pathological-morphology top-1 p95 at the calibrated 6x proxy: **at most 250 ms**;
+- dense contiguous 64-256-unit top-1/5/10 p95 at the calibrated 6x proxy:
+  **at most 500 ms**;
 - zero main-thread `longtask` entries over 50 ms during ordinary analyzer UI work,
   and no analyzer-kernel import in the window bundle.
 
-Performance gates say nothing about whether the kernel is JS or WASM. Top-N,
-`describe`, initial install, Worker startup, and peak browser memory are reported but
-not assigned an unagreed alpha threshold.
+Performance gates say nothing about whether the kernel is JS or WASM. Top-N outside
+the explicit dense-boundary gate, `describe`, initial install, Worker startup, and peak
+browser memory are reported but not assigned an unagreed alpha threshold.
 
 The calibrated contention ratio is a multiplier, not a hardware normalization. The
 first accepted benchmark must designate and record the reference workstation/runner;
@@ -434,6 +442,10 @@ Automated browser tests must prove:
 
 - manifest/data hashes are checked before marking an install complete;
 - interruption midway through every artifact never exposes a partial active pack;
+- a failed staged reinstall removes only its inactive slot and leaves the prior
+  verified generation selected and usable;
+- the shell-cached deployed manifest is authenticated before status/runtime open,
+  and an older installed manifest is reported as requiring reinstall;
 - a queued cross-tab read observes the new per-install commit ID after clear or
   reinstall, and stale corruption cannot mark a same-release reinstall corrupt;
 - restart after an incomplete or corrupted first install offers a clear reinstall;
@@ -443,6 +455,8 @@ Automated browser tests must prove:
 - all analyzer CPU work runs in the dedicated Worker;
 - persistence-request denial is handled and surfaced without corrupting data;
 - explicit clear/reinstall removes only this app's stored pack and can reinstall it.
+- a waiting shell update leaves old lazy chunks available offline, activates only
+  after every old tab closes, reopens offline, and then removes the unused cache.
 
 No update scheduler, delta update, background migration, Komi/Nemu integration, or
 production hosting is required for this alpha.
@@ -464,8 +478,8 @@ The production Playwright qualification installs the complete release, analyzes 
 opens details through the public Worker API, restarts with networking blocked, proves
 zero post-install analyzer requests, exercises integrity/interruption recovery and
 cross-tab mutation locking, and checks the required desktop and phone layouts. Its
-calibrated contention run must satisfy the 75 ms ordinary and 250 ms pathological p95
-gates and report no main-thread analyzer work.
+calibrated contention run must satisfy the 75 ms ordinary, 250 ms pathological, and
+500 ms dense-boundary p95 gates and report no main-thread analyzer work.
 
 Exact machine-dependent browser samples, Chromium/CPU metadata, calibration, and
 long-task evidence are written to `work/browser-benchmark.json` by

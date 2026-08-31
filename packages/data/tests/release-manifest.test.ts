@@ -41,7 +41,8 @@ describe('browser analyzer release manifest', () => {
       state: 'ready',
       manifest: first.manifest,
       installId: '00000000-0000-4000-8000-000000000000',
-      installedAt: '1970-01-01T00:00:00.000Z'
+      installedAt: '1970-01-01T00:00:00.000Z',
+      slot: 'a'
     })).byteLength;
     expect(sizes.cachedManifestBytes).toBe(first.manifestBytes.byteLength);
     expect(sizes.installedMarkerBytes).toBe(markerBytes);
@@ -65,5 +66,15 @@ describe('browser analyzer release manifest', () => {
       details: new Uint8Array([1])
     });
     expect(() => assertAnalyzerReleaseSize(release)).toThrow('hot.bin');
+  });
+
+  test('cannot build a release whose version would overflow marker metadata', () => {
+    expect(() => buildAnalyzerRelease({
+      packVersion: '界'.repeat(43),
+      sourceCommit: COMMIT,
+      sourcesLockSha256: LOCK,
+      hot: new Uint8Array([1]),
+      details: new Uint8Array([2])
+    })).toThrow('128 UTF-8 bytes');
   });
 });

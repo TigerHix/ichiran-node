@@ -18,17 +18,17 @@ The accepted scope is:
 - exact normalized oracle parity with an empty result-difference allowlist.
 
 The separate experimental `@ichiran/grammar` package, GiNZA/Bunpro, a general
-Kanjidic character API, Komi/Nemu integration, automatic updates, SQL emulation,
+Kanjidic character API, Komi/Nemu integration, automatic analyzer-data updates, SQL emulation,
 and mandatory WASM are outside this milestone. Analyzer-internal suffix handling,
 segmentation filters, penalties, and pair synergies remain in scope because the
 analyzer already observes them.
 
 ## Runtime architecture
 
-The browser installs one pinned `hot.bin` and one pinned `details.bin` into OPFS. A
-36-byte per-install ID in IndexedDB is the cross-tab commit record; `install.json`
-mirrors that ID so cold inspection can reject mismatched state and stale corruption
-cannot target a same-release reinstall.
+The browser installs one pinned hot image and one pinned detail store into an OPFS
+A/B slot. A 36-byte per-install ID in IndexedDB is the atomic cross-tab commit
+record; the active `install-{a,b}.json` marker mirrors that ID so cold inspection can
+reject mismatched state and stale corruption cannot target a same-release reinstall.
 `hot.bin` contains five deterministic sections: a route-aware surface automaton,
 root payload, reverse morphology, resident analyzer support, and random-access
 annotations/generated facts. Complete forms, senses, glosses, and sense metadata
@@ -64,6 +64,7 @@ used here.
 | Resident hot image | no more than 24 MiB |
 | Ordinary top-one p95 at calibrated 6x Worker contention | no more than 75 ms |
 | Pathological morphology p95 at calibrated 6x Worker contention | no more than 250 ms |
+| Dense contiguous 64-256-unit top-1/5/10 p95 at calibrated 6x Worker contention | no more than 500 ms |
 | Main-thread analyzer work | none |
 
 Actual iPhone 13-class validation is a production gate after this alpha. The alpha uses
@@ -105,10 +106,10 @@ bun run alpha:release:build -- \
   --database "$ICHIRAN_DB_URL" \
   --out dist/browser-alpha \
   --pack-version ichiran-260118 \
-  --shell-bytes <measured-production-shell-bytes>
+  --shell-dir packages/browser-demo/dist
 bun run alpha:release:verify -- \
   --out dist/browser-alpha \
-  --shell-bytes <the-same-measured-byte-count>
+  --shell-dir packages/browser-demo/dist
 
 bun run alpha:demo:stage
 bun run alpha:demo:build
@@ -118,9 +119,9 @@ bun run alpha:demo:e2e
 
 The deterministic `ichiran-260118` data assets are 12,662,917 compressed hot bytes and
 12,317,325 compressed detail bytes. They install as a 24,857,288-byte resident hot
-image and 13,555,874-byte lazy detail store. With the 620,423-byte production shell,
-the complete transfer is 25,601,592 bytes and the accounted persisted payload is
-39,035,488 bytes; all three size gates pass. IndexedDB allocation overhead is browser
+image and 13,555,874-byte lazy detail store. Final shell, transfer, and persisted
+totals are derived from the production build and bound in `stats.json`; qualification
+requires all three size gates to pass. IndexedDB allocation overhead is browser
 managed and not included in that logical payload total.
 
 `stats.json`, the exhaustive oracle report, and `work/browser-benchmark.json` are

@@ -1,9 +1,11 @@
 import { afterAll, describe, expect, test } from 'bun:test';
+import { createHash } from 'node:crypto';
 import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 
 import { openNodeRuntime } from '../src/index.js';
+import { analyzerManifestDigestInput } from '@ichiran/core';
 
 const releaseDirectory = process.env.ICHIRAN_PACK_DIR;
 
@@ -32,5 +34,44 @@ describe('Node release verification', () => {
     manifest.packVersion = `${manifest.packVersion}-tampered`;
     await writeFile(join(temporary, 'manifest.json'), JSON.stringify(manifest));
     await expect(openNodeRuntime(temporary)).rejects.toThrow('manifest checksum');
+  });
+
+  test('rejects a pack built for different runtime code before reading assets', async () => {
+    const identityDirectory = await mkdtemp(join(tmpdir(), 'ichiran-node-identity-'));
+    const unsigned = {
+      formatVersion: 1 as const,
+      packVersion: 'identity-fixture',
+      sourceCommit: '1'.repeat(40),
+      sourcesLockSha256: '2'.repeat(64),
+      hot: {
+        file: 'hot.bin',
+        encoding: 'identity' as const,
+        downloadBytes: 1,
+        downloadSha256: '3'.repeat(64),
+        installedBytes: 1,
+        installedSha256: '3'.repeat(64)
+      },
+      details: {
+        file: 'details.bin',
+        encoding: 'identity' as const,
+        downloadBytes: 1,
+        downloadSha256: '4'.repeat(64),
+        installedBytes: 1,
+        installedSha256: '4'.repeat(64)
+      }
+    };
+    const manifest = {
+      ...unsigned,
+      manifestSha256: createHash('sha256')
+        .update(analyzerManifestDigestInput(unsigned))
+        .digest('hex')
+    };
+    try {
+      await writeFile(join(identityDirectory, 'manifest.json'), JSON.stringify(manifest));
+      await expect(openNodeRuntime(identityDirectory, { expectedSourceCommit: '5'.repeat(40) }))
+        .rejects.toThrow('does not match runtime');
+    } finally {
+      await rm(identityDirectory, { recursive: true, force: true });
+    }
   });
 });

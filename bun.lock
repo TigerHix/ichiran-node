@@ -22,6 +22,7 @@
         "ichiran-api": "./dist/index.js",
       },
       "dependencies": {
+        "@ichiran/core": "workspace:*",
         "@ichiran/node": "workspace:*",
         "dotenv": "^17.2.3",
       },

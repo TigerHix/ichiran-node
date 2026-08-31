@@ -3,7 +3,6 @@
 import { execFile as execFileCallback, spawn } from 'node:child_process';
 import { closeSync, openSync, writeSync } from 'node:fs';
 import {
-  mkdir,
   mkdtemp,
   readFile,
   rename,
@@ -11,11 +10,12 @@ import {
   stat,
   writeFile
 } from 'node:fs/promises';
-import { dirname, join, relative, resolve, sep } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
 import { tmpdir } from 'node:os';
 import { promisify } from 'node:util';
-import { gunzipSync } from 'node:zlib';
 import postgres, { type Sql } from 'postgres';
+
+const RELEASE_TEMP_ROOT = process.platform === 'win32' ? tmpdir() : '/tmp';
 
 import { buildAnalyzerAnnotations } from '../packages/data/src/browser-pack/analyzer-annotations.js';
 import {
@@ -23,6 +23,10 @@ import {
   loadAnalyzerSupportSource
 } from '../packages/data/src/browser-pack/analyzer-support.js';
 import { buildDetailStore, loadDetailEntries } from '../packages/data/src/browser-pack/details.js';
+import {
+  verifyBrowserAlphaDatabase,
+  type BrowserAlphaDatabaseIdentity
+} from '../packages/data/src/browser-pack/database-identity.js';
 import { compileMorphology } from '../packages/data/src/browser-pack/morphology-compiler.js';
 import { encodeMorphologyArtifact } from '../packages/data/src/browser-pack/morphology-format.js';
 import {
@@ -30,19 +34,23 @@ import {
   verifyMorphologyRelation
 } from '../packages/data/src/browser-pack/morphology-verifier.js';
 import {
-  ANALYZER_RELEASE_FORMAT_VERSION,
-  analyzerManifestDigestInput,
+  assertActiveReleaseGeneration,
+  publishAnalyzerRelease
+} from '../packages/data/src/browser-pack/release-publication.js';
+import {
   assertAnalyzerReleaseSize,
   buildAnalyzerRelease,
-  type AnalyzerReleaseBuild,
-  type AnalyzerReleaseManifest
+  type AnalyzerReleaseBuild
 } from '../packages/data/src/browser-pack/release-manifest.js';
+import {
+  measureProductionShell,
+  type ProductionShellMeasurement
+} from '../packages/data/src/browser-pack/shell-measurement.js';
 import {
   assertBrowserAlphaMorphologyAttestation,
   assertBytesEqual,
   assertExactCount,
   BROWSER_ALPHA_SOURCES_LOCK,
-  BROWSER_ALPHA_UPSTREAM_ORACLE,
   deterministicJson,
   FROZEN_POSTGRES_REFERENCE_COMMIT,
   parseBrowserAlphaSourceLock,
@@ -55,83 +63,44 @@ import {
   type BrowserAlphaMorphologyAttestation,
   type BrowserAlphaSourceLock
 } from '../packages/data/src/browser-pack/release-orchestration.js';
+import {
+  assertCleanSource,
+  measureReleaseSources,
+  parseArgs,
+  releaseOutputPath,
+  repositoryRoot,
+  sourceCommit,
+  upstreamOracle,
+  type CliOptions
+} from './browser-alpha-release-environment.js';
+import { verifyRelease } from './browser-alpha-release-inspection.js';
 import { buildRootPayload, loadRootPayloadSource } from '../packages/data/src/browser-pack/root-payload.js';
 import { SURFACE_INDEX_COPY_QUERY } from '../packages/data/src/browser-pack/surface-index.js';
 import {
   ANALYZER_ANNOTATIONS_FORMAT_VERSION,
   ANALYZER_ANNOTATIONS_SECTION_ID,
-  ANALYZER_GENERATED_CACHE_BLOCKS,
-  ANALYZER_LOOKUP_ORDER_RECORD_BYTES,
-  AnalyzerAnnotationsReader,
-  analyzerAnnotationsMemorySource
+  ANALYZER_GENERATED_CACHE_BLOCKS
 } from '../packages/core/src/analyzer-annotations.js';
 import {
   ANALYZER_SUPPORT_FORMAT_VERSION,
-  ANALYZER_SUPPORT_SECTION_ID,
-  openAnalyzerSupport
+  ANALYZER_SUPPORT_SECTION_ID
 } from '../packages/core/src/analyzer-support.js';
-import {
-  DETAILS_FORMAT_VERSION,
-  memoryDetailSource,
-  openDetailStore
-} from '../packages/core/src/details.js';
+import { DETAILS_FORMAT_VERSION } from '../packages/core/src/details.js';
 import { PACK_FORMAT_VERSION } from '../packages/core/src/format.js';
 import { MORPHOLOGY_SECTION_ID, openMorphology } from '../packages/core/src/morphology.js';
-import { encodePack, openPack } from '../packages/core/src/pack.js';
+import { encodePack } from '../packages/core/src/pack.js';
 import {
   ROOT_PAYLOAD_FORMAT_VERSION,
-  ROOT_PAYLOAD_SECTION_ID,
-  openRootPayload
+  ROOT_PAYLOAD_SECTION_ID
 } from '../packages/core/src/root-payload.js';
 import {
   SURFACE_INDEX_FORMAT_VERSION,
-  SURFACE_INDEX_SECTION_ID,
-  openSurfaceIndex
+  SURFACE_INDEX_SECTION_ID
 } from '../packages/core/src/surface-index.js';
 
 const execFile = promisify(execFileCallback);
 const MORPHOLOGY_FORMAT_VERSION = 1;
-const RELEASE_STATS_FORMAT_VERSION = 1;
-const RELEASE_FILENAMES = ['hot.bin.gz', 'details.bin.gz', 'manifest.json', 'stats.json'] as const;
-const UPSTREAM_ICHIRAN_COMMIT = 'ea9583368e67cad22d94abae8dbcc8df96d99bcd';
-const UPSTREAM_DATA_RELEASE_TAG = 'ichiran-260118';
-const RELEASE_SOURCE_PATHS = [
-  'data/conj.csv',
-  'data/conjo.csv',
-  'data/kwpos.csv',
-  'data/sources/extra.xml',
-  'data/sources/gyoseiku.csv',
-  'data/sources/jichitai.csv',
-  'packages/data/JMdict_e.gz'
-] as const;
-
-interface UpstreamOracle {
-  readonly scope: string;
-  readonly grammarIncluded: boolean;
-  readonly ichiran: {
-    readonly repository: string;
-    readonly commit: string;
-    readonly dataReleaseTag: string;
-  };
-  readonly databaseDump: {
-    readonly url: string;
-    readonly bytes: number;
-    readonly sha256: string;
-  };
-  readonly qualifiedOracle: {
-    readonly normalizedPgDump16SchemaSha256: string;
-  };
-}
-
-interface CliOptions {
-  readonly command: 'build' | 'verify' | 'refresh-lock';
-  readonly database?: string;
-  readonly out?: string;
-  readonly packVersion?: string;
-  readonly shellBytes?: number;
-  readonly allowDirty: boolean;
-}
-
+const RELEASE_STATS_FORMAT_VERSION = 2;
 interface SurfaceCompilerStats {
   readonly input: number;
   readonly accepted: number;
@@ -144,15 +113,6 @@ interface SurfaceCompilerStats {
   readonly bytes: number;
 }
 
-interface DatabaseIdentity {
-  readonly name: string;
-  readonly postgresServerVersion: string;
-  readonly encoding: string;
-  readonly collation: string;
-  readonly ctype: string;
-  readonly readOnly: boolean;
-}
-
 interface ComponentBuilds {
   readonly surface: { readonly bytes: Uint8Array; readonly stats: SurfaceCompilerStats };
   readonly root: ReturnType<typeof buildRootPayload>;
@@ -163,163 +123,7 @@ interface ComponentBuilds {
   readonly details: ReturnType<typeof buildDetailStore>;
   readonly supportIssueCount: number;
   readonly supportIssuesSha256: string;
-  readonly database: DatabaseIdentity;
-}
-
-interface VerifiedAnalyzerRelease extends AnalyzerReleaseBuild {
-  readonly inspection: {
-    readonly artifacts: BrowserAlphaArtifactCounts;
-    readonly sections: readonly {
-      readonly id: number;
-      readonly bytes: number;
-      readonly sha256: string;
-    }[];
-    readonly details: { readonly bytes: number; readonly sha256: string };
-  };
-}
-
-function usage(message?: string): never {
-  if (message) console.error(`error: ${message}\n`);
-  console.error(`usage:
-  bun run alpha:release:build -- --database <url> --out <directory> \\
-    --pack-version <version> --shell-bytes <integer> [--allow-dirty]
-  bun run alpha:release:verify -- --out <directory> --shell-bytes <integer> [--allow-dirty]
-  bun run alpha:release:refresh-lock -- --database <url> [--allow-dirty]`);
-  process.exit(2);
-}
-
-function parseNonNegativeInteger(text: string, label: string): number {
-  if (!/^(0|[1-9][0-9]*)$/.test(text)) usage(`${label} must be a non-negative integer`);
-  const value = Number(text);
-  if (!Number.isSafeInteger(value)) usage(`${label} is too large`);
-  return value;
-}
-
-function parseArgs(argv: readonly string[]): CliOptions {
-  const command = argv[0];
-  if (command !== 'build' && command !== 'verify' && command !== 'refresh-lock') {
-    usage('first argument must be build, verify, or refresh-lock');
-  }
-  let database: string | undefined;
-  let out: string | undefined;
-  let packVersion: string | undefined;
-  let shellBytes: number | undefined;
-  let allowDirty = false;
-  for (let index = 1; index < argv.length; index++) {
-    const argument = argv[index]!;
-    const next = (): string => {
-      const value = argv[++index];
-      if (!value) usage(`${argument} requires a value`);
-      return value;
-    };
-    if (argument === '--database') database = next();
-    else if (argument === '--out') out = next();
-    else if (argument === '--pack-version') packVersion = next();
-    else if (argument === '--shell-bytes') shellBytes = parseNonNegativeInteger(next(), '--shell-bytes');
-    else if (argument === '--allow-dirty') allowDirty = true;
-    else if (argument === '--help' || argument === '-h') usage();
-    else usage(`unknown argument ${argument}`);
-  }
-  if (command !== 'refresh-lock' && !out) usage('--out is required');
-  if (command !== 'refresh-lock' && shellBytes === undefined) usage('--shell-bytes is required');
-  if ((command === 'build' || command === 'refresh-lock') && !database) {
-    usage(`--database is required for ${command}`);
-  }
-  if (command === 'build' && !packVersion) usage('--pack-version is required for build');
-  if (command === 'verify' && (database || packVersion)) {
-    usage('--database and --pack-version apply only to build');
-  }
-  if (command === 'refresh-lock' && (out || packVersion || shellBytes !== undefined)) {
-    usage('--out, --pack-version, and --shell-bytes do not apply to refresh-lock');
-  }
-  return { command, database, out, packVersion, shellBytes, allowDirty };
-}
-
-async function repositoryRoot(): Promise<string> {
-  const { stdout } = await execFile('git', ['rev-parse', '--show-toplevel'], { encoding: 'utf8' });
-  return stdout.trim();
-}
-
-async function sourceCommit(root: string): Promise<string> {
-  const { stdout } = await execFile('git', ['-C', root, 'rev-parse', 'HEAD'], { encoding: 'utf8' });
-  const commit = stdout.trim();
-  if (!/^[0-9a-f]{40}$/.test(commit)) throw new Error(`Git returned invalid source commit ${commit}`);
-  return commit;
-}
-
-function fullCommit(value: unknown, label: string): asserts value is string {
-  if (typeof value !== 'string' || !/^[0-9a-f]{40}$/.test(value)) {
-    throw new Error(`${label} must be a full lowercase Git object ID`);
-  }
-}
-
-function sha256(value: unknown, label: string): asserts value is string {
-  if (typeof value !== 'string' || !/^[0-9a-f]{64}$/.test(value)) {
-    throw new Error(`${label} must be a lowercase SHA-256`);
-  }
-}
-
-async function upstreamOracle(root: string): Promise<UpstreamOracle> {
-  const bytes = await readFile(join(root, BROWSER_ALPHA_UPSTREAM_ORACLE));
-  const parsed: unknown = JSON.parse(bytes.toString('utf8'));
-  if (typeof parsed !== 'object' || parsed === null) throw new Error('Upstream oracle must be an object');
-  const oracle = parsed as Partial<UpstreamOracle>;
-  if (oracle.scope !== 'analyzer-only' || oracle.grammarIncluded !== false) {
-    throw new Error('Upstream oracle must be analyzer-only and exclude grammar');
-  }
-  if (!oracle.ichiran || !oracle.databaseDump || !oracle.qualifiedOracle) {
-    throw new Error('Upstream oracle is missing Ichiran, dump, or qualified database provenance');
-  }
-  if (oracle.ichiran.commit !== UPSTREAM_ICHIRAN_COMMIT) {
-    throw new Error(`Upstream oracle commit must be ${UPSTREAM_ICHIRAN_COMMIT}`);
-  }
-  if (oracle.ichiran.dataReleaseTag !== UPSTREAM_DATA_RELEASE_TAG) {
-    throw new Error(`Upstream oracle data release must be ${UPSTREAM_DATA_RELEASE_TAG}`);
-  }
-  if (typeof oracle.ichiran.repository !== 'string' || oracle.ichiran.repository.length === 0) {
-    throw new Error('Upstream oracle repository must be a string');
-  }
-  fullCommit(oracle.ichiran.commit, 'Upstream Ichiran commit');
-  if (typeof oracle.databaseDump.url !== 'string'
-    || !Number.isSafeInteger(oracle.databaseDump.bytes)
-    || oracle.databaseDump.bytes <= 0) {
-    throw new Error('Upstream database dump URL and byte length are invalid');
-  }
-  sha256(oracle.databaseDump.sha256, 'Upstream database dump digest');
-  sha256(
-    oracle.qualifiedOracle.normalizedPgDump16SchemaSha256,
-    'Qualified database schema digest'
-  );
-  return oracle as UpstreamOracle;
-}
-
-async function measureReleaseSources(root: string) {
-  return await Promise.all(RELEASE_SOURCE_PATHS.map(async (path) => {
-    const bytes = new Uint8Array(await readFile(join(root, path)));
-    return { path, bytes: bytes.byteLength, sha256: sha256Bytes(bytes) };
-  }));
-}
-
-async function assertCleanSource(root: string, allowDirty: boolean): Promise<void> {
-  if (allowDirty) return;
-  const { stdout } = await execFile(
-    'git', ['-C', root, 'status', '--porcelain=v1', '--untracked-files=all'], { encoding: 'utf8' }
-  );
-  if (stdout.length !== 0) {
-    const count = stdout.trimEnd().split('\n').length;
-    throw new Error(
-      `Source checkout has ${count} tracked or untracked change(s); commit them or use --allow-dirty for development`
-    );
-  }
-}
-
-function releaseOutputPath(root: string, value: string): string {
-  const output = resolve(root, value);
-  const within = relative(root, output);
-  if (within === '' || within === '..' || within.startsWith(`..${sep}`)) {
-    throw new Error('Release output must be a directory below the repository root');
-  }
-  return output;
+  readonly database: BrowserAlphaDatabaseIdentity;
 }
 
 async function actualToolchain() {
@@ -419,43 +223,6 @@ async function runSurfaceCompiler(
     stdout: 'ignore'
   });
   return parseSurfaceStats(result.stderr);
-}
-
-async function databaseIdentity(sql: Sql): Promise<DatabaseIdentity> {
-  const rows = await sql.unsafe<Array<{
-    name: string;
-    postgresServerVersion: string;
-    encoding: string;
-    collation: string;
-    ctype: string;
-    readOnly: boolean;
-  }>>(`
-    SELECT current_database() AS name,
-           current_setting('server_version') AS "postgresServerVersion",
-           pg_encoding_to_char(d.encoding) AS encoding,
-           d.datcollate AS collation,
-           d.datctype AS ctype,
-           current_setting('transaction_read_only') = 'on' AS "readOnly"
-    FROM pg_database d
-    WHERE d.datname = current_database()
-  `);
-  const identity = rows[0];
-  if (!identity || rows.length !== 1) throw new Error('Could not read database identity');
-  if (!identity.readOnly) throw new Error('Release compiler database transaction is not read-only');
-  return identity;
-}
-
-function assertDatabaseIdentity(actual: DatabaseIdentity, lock: BrowserAlphaSourceLock): void {
-  const expected = lock.database;
-  for (const [label, wanted, found] of [
-    ['name', expected.name, actual.name],
-    ['server version', expected.postgresServerVersion, actual.postgresServerVersion],
-    ['encoding', expected.encoding, actual.encoding],
-    ['collation', expected.collation, actual.collation],
-    ['character classification', expected.ctype, actual.ctype]
-  ] as const) {
-    if (wanted !== found) throw new Error(`Database ${label} ${found}; sources lock requires ${wanted}`);
-  }
 }
 
 async function exportSurfaceTsv(sql: Sql, destination: string): Promise<void> {
@@ -599,8 +366,7 @@ async function loadComponents(
   try {
     return await sql.begin('isolation level repeatable read read only', async (transaction) => {
       const tx = transaction as unknown as Sql;
-      const identity = await databaseIdentity(tx);
-      if (lock) assertDatabaseIdentity(identity, lock);
+      const identity = await verifyBrowserAlphaDatabase(tx, database, lock?.database);
       // The generated projection performs large deterministic DISTINCT/ORDER BY
       // passes. PostgreSQL's 4 MiB default spills them heavily on the pinned
       // snapshot; this remains transaction-local and does not change output.
@@ -808,7 +574,7 @@ function statsReport(
   release: AnalyzerReleaseBuild,
   source: Awaited<ReturnType<typeof verifyBrowserAlphaSources>>,
   sourceCommitValue: string,
-  shellBytes: number
+  shell: ProductionShellMeasurement
 ): unknown {
   return {
     formatVersion: RELEASE_STATS_FORMAT_VERSION,
@@ -820,7 +586,9 @@ function statsReport(
       postgresServerVersion: builds.database.postgresServerVersion,
       encoding: builds.database.encoding,
       collation: builds.database.collation,
-      schemaSha256: source.lock.database.schemaSha256
+      ctype: builds.database.ctype,
+      schemaNormalization: builds.database.schemaNormalization,
+      schemaSha256: builds.database.schemaSha256
     },
     artifacts: artifactCounts(builds),
     supportIssues: {
@@ -851,198 +619,9 @@ function statsReport(
       decodedCacheUpperBound: builds.annotations.stats.largestGeneratedBlock
         * ANALYZER_GENERATED_CACHE_BLOCKS
     },
-    sizes: assertAnalyzerReleaseSize(release, shellBytes)
+    shell,
+    sizes: assertAnalyzerReleaseSize(release, shell.bytes)
   };
-}
-
-async function gzipDecode(bytes: Uint8Array): Promise<Uint8Array> {
-  return new Uint8Array(gunzipSync(bytes));
-}
-
-function parseManifest(bytes: Uint8Array): AnalyzerReleaseManifest {
-  const parsed: unknown = JSON.parse(new TextDecoder().decode(bytes));
-  if (typeof parsed !== 'object' || parsed === null) throw new Error('Release manifest must be an object');
-  return parsed as AnalyzerReleaseManifest;
-}
-
-async function verifyRelease(out: string, shellBytes: number): Promise<VerifiedAnalyzerRelease> {
-  const manifestBytes = new Uint8Array(await readFile(join(out, 'manifest.json')));
-  const manifest = parseManifest(manifestBytes);
-  if (manifest.formatVersion !== ANALYZER_RELEASE_FORMAT_VERSION) {
-    throw new Error(`Unsupported release manifest format ${String(manifest.formatVersion)}`);
-  }
-  if (manifest.hot.file !== 'hot.bin.gz' || manifest.hot.encoding !== 'gzip') {
-    throw new Error('Release hot asset must be hot.bin.gz with gzip encoding');
-  }
-  if (manifest.details.file !== 'details.bin.gz' || manifest.details.encoding !== 'gzip') {
-    throw new Error('Release details asset must be details.bin.gz with gzip encoding');
-  }
-  const hotDownload = new Uint8Array(await readFile(join(out, manifest.hot.file)));
-  const detailsDownload = new Uint8Array(await readFile(join(out, manifest.details.file)));
-  for (const [label, asset, download] of [
-    ['hot', manifest.hot, hotDownload],
-    ['details', manifest.details, detailsDownload]
-  ] as const) {
-    assertExactCount(download.byteLength, asset.downloadBytes, `${label} download bytes`);
-    const digest = sha256Bytes(download);
-    if (digest !== asset.downloadSha256) throw new Error(`${label} download digest mismatch`);
-  }
-  const hot = await gzipDecode(hotDownload);
-  const details = await gzipDecode(detailsDownload);
-  for (const [label, asset, installed] of [
-    ['hot', manifest.hot, hot], ['details', manifest.details, details]
-  ] as const) {
-    assertExactCount(installed.byteLength, asset.installedBytes, `${label} installed bytes`);
-    const digest = sha256Bytes(installed);
-    if (digest !== asset.installedSha256) throw new Error(`${label} installed digest mismatch`);
-  }
-  const { manifestSha256: _digest, ...unsigned } = manifest;
-  const expectedManifestDigest = sha256Bytes(
-    new TextEncoder().encode(analyzerManifestDigestInput(unsigned))
-  );
-  if (manifest.manifestSha256 !== expectedManifestDigest) throw new Error('Release manifest digest mismatch');
-
-  const pack = openPack(hot);
-  pack.verifyAll();
-  const ids = pack.manifest.sections.map((section) => section.id);
-  if (ids.join(',') !== '1,2,3,4,5') throw new Error(`Hot pack sections must be 1,2,3,4,5; found ${ids}`);
-  const surface = openSurfaceIndex(pack.getSection(SURFACE_INDEX_SECTION_ID));
-  const root = openRootPayload(pack.getSection(ROOT_PAYLOAD_SECTION_ID));
-  const morphology = openMorphology(pack.getSection(MORPHOLOGY_SECTION_ID));
-  const support = openAnalyzerSupport(pack.getSection(ANALYZER_SUPPORT_SECTION_ID));
-  const annotations = await AnalyzerAnnotationsReader.open(
-    analyzerAnnotationsMemorySource(pack.getSection(ANALYZER_ANNOTATIONS_SECTION_ID)),
-    gzipDecode
-  );
-  const detailReader = await openDetailStore(memoryDetailSource(details), gzipDecode);
-  let detailForms = 0;
-  let detailSenses = 0;
-  let detailGlosses = 0;
-  let detailProperties = 0;
-  for (let index = 0; index < detailReader.manifest.entryCount; index++) {
-    const entry = await detailReader.entry(index);
-    detailForms += entry.forms.length;
-    detailSenses += entry.senses.length;
-    for (const sense of entry.senses) {
-      detailGlosses += sense.glosses.length;
-      detailProperties += sense.properties.length;
-    }
-  }
-  const release: VerifiedAnalyzerRelease = {
-    manifest,
-    manifestBytes,
-    hotDownload,
-    detailsDownload,
-    inspection: {
-      artifacts: {
-        surfaceIndex: {
-          input: surface.manifest.inputCount,
-          accepted: surface.manifest.acceptedCount,
-          direct: surface.manifest.directCount,
-          morphology: surface.manifest.morphologyCount,
-          overlap: surface.manifest.overlapCount,
-          omitted: surface.manifest.inputCount - surface.manifest.acceptedCount,
-          states: surface.manifest.stateCount,
-          edges: surface.manifest.edgeCount
-        },
-        rootPayload: {
-          surfaces: root.surfaceCount,
-          forms: root.formCount,
-          entries: root.entryCount,
-          restrictions: root.restrictionCount
-        },
-        morphology: {
-          positions: morphology.stats.positions,
-          rules: morphology.stats.rules,
-          templates: morphology.stats.templates,
-          suffixes: morphology.stats.suffixes,
-          rootKeys: morphology.stats.rootKeys,
-          rootGroups: morphology.stats.rootGroups,
-          patches: morphology.stats.patches,
-          tombstones: morphology.stats.tombstones
-        },
-        analyzerSupport: {
-          suffixKeys: support.stats.suffixKeys,
-          suffixValues: support.stats.suffixValues,
-          suffixClasses: support.stats.suffixClasses,
-          counterKeys: support.stats.counterKeys,
-          counterVariants: support.stats.counterVariants,
-          collisions: support.stats.collisions,
-          generatedRules: support.stats.generatedRules,
-          generatedAliases: support.stats.generatedAliases
-        },
-        annotations: {
-          blocks: annotations.manifest.blocks,
-          splits: annotations.manifest.splits,
-          hints: annotations.manifest.hints,
-          generatedBlocks: annotations.manifest.generatedBlocks,
-          generatedRoots: annotations.manifest.generatedRoots,
-          generatedRecords: annotations.manifest.generatedRecords,
-          lookupOrderRecords: annotations.manifest.lookupOrderRecords,
-          lookupOrderRoots: annotations.manifest.lookupOrderRoots,
-          lookupOrderBytes: annotations.manifest.lookupOrderRecords
-            * ANALYZER_LOOKUP_ORDER_RECORD_BYTES,
-          lookupOrderExceptionSurfaces: annotations.manifest.lookupOrderExceptionSurfaces,
-          lookupOrderExceptionClasses: annotations.manifest.lookupOrderExceptionClasses,
-          lookupOrderExceptionLocators: annotations.manifest.lookupOrderExceptionLocators,
-          lookupOrderExceptionBytes: annotations.manifest.lookupOrderExceptionBytes,
-          generatedPhysicalGroups: annotations.manifest.generatedPhysicalGroups,
-          generatedFactPairs: annotations.manifest.generatedFactPairs,
-          indexBytes: annotations.manifest.residentIndexBytes,
-          uncompressedBytes: annotations.manifest.uncompressedBytes,
-          compressedBytes: annotations.manifest.compressedBytes,
-          annotationUncompressedBytes: annotations.manifest.uncompressedBytes
-            - annotations.manifest.generatedUncompressedBytes,
-          annotationCompressedBytes: annotations.manifest.compressedBytes
-            - annotations.manifest.generatedCompressedBytes,
-          generatedUncompressedBytes: annotations.manifest.generatedUncompressedBytes,
-          generatedCompressedBytes: annotations.manifest.generatedCompressedBytes,
-          totalBytes: annotations.manifest.byteLength,
-          largestUncompressedBlock: annotations.manifest.largestUncompressedBlock,
-          largestGeneratedBlock: annotations.manifest.largestGeneratedBlock,
-          largestGeneratedCompressedBlock: annotations.manifest.largestGeneratedCompressedBlock
-        },
-        details: {
-          entries: detailReader.manifest.entryCount,
-          forms: detailForms,
-          senses: detailSenses,
-          glosses: detailGlosses,
-          properties: detailProperties
-        }
-      },
-      sections: pack.manifest.sections.map((section) => {
-        const bytes = pack.getSection(section.id);
-        return { id: section.id, bytes: bytes.byteLength, sha256: sha256Bytes(bytes) };
-      }),
-      details: { bytes: details.byteLength, sha256: sha256Bytes(details) }
-    }
-  };
-  assertAnalyzerReleaseSize(release, shellBytes);
-  return release;
-}
-
-async function publish(
-  out: string,
-  release: AnalyzerReleaseBuild,
-  reportBytes: Uint8Array
-): Promise<void> {
-  const parent = dirname(out);
-  await mkdir(parent, { recursive: true });
-  const stage = await mkdtemp(join(parent, '.browser-alpha-release-'));
-  try {
-    const files = new Map<string, Uint8Array>([
-      ['hot.bin.gz', release.hotDownload],
-      ['details.bin.gz', release.detailsDownload],
-      ['manifest.json', release.manifestBytes],
-      ['stats.json', reportBytes]
-    ]);
-    for (const [name, bytes] of files) await writeFile(join(stage, name), bytes, { flag: 'wx' });
-    await verifyRelease(stage, (JSON.parse(new TextDecoder().decode(reportBytes)) as { sizes: { shellBytes: number } }).sizes.shellBytes);
-    await mkdir(out, { recursive: true });
-    for (const name of RELEASE_FILENAMES) await rename(join(stage, name), join(out, name));
-  } finally {
-    await rm(stage, { recursive: true, force: true });
-  }
 }
 
 async function compileComponents(
@@ -1074,7 +653,7 @@ async function build(options: CliOptions, root: string): Promise<void> {
   await verifyBrowserAlphaOracleCore(root, source.lock.postgresReference.repositoryCommit);
   verifyBrowserAlphaToolchain(source.lock.toolchain, await actualToolchain());
   const commit = await sourceCommit(root);
-  const temporary = await mkdtemp(join(tmpdir(), 'ichiran-browser-alpha-'));
+  const temporary = await mkdtemp(join(RELEASE_TEMP_ROOT, 'ichiran-browser-alpha-'));
   try {
     const builds = await compileComponents(root, options.database!, temporary, source.lock);
     assertArtifactCounts(builds, source.lock);
@@ -1096,9 +675,20 @@ async function build(options: CliOptions, root: string): Promise<void> {
     assertBytesEqual(release.hotDownload, rebuilt.hotDownload, 'Compressed hot asset');
     assertBytesEqual(release.detailsDownload, rebuilt.detailsDownload, 'Compressed details asset');
     assertBytesEqual(release.manifestBytes, rebuilt.manifestBytes, 'Release manifest');
-    assertAnalyzerReleaseSize(release, options.shellBytes!);
-    const report = deterministicJson(statsReport(builds, release, source, commit, options.shellBytes!));
-    await publish(releaseOutputPath(root, options.out!), release, report);
+    const shell = await measureProductionShell(resolve(root, options.shellDir!), release.manifestBytes);
+    assertAnalyzerReleaseSize(release, shell.bytes);
+    const report = deterministicJson(statsReport(builds, release, source, commit, shell));
+    const output = releaseOutputPath(root, options.out!);
+    await publishAnalyzerRelease(
+      output,
+      new Map<string, Uint8Array>([
+        [release.manifest.hot.file, release.hotDownload],
+        [release.manifest.details.file, release.detailsDownload],
+        ['manifest.json', release.manifestBytes],
+        ['stats.json', report]
+      ]),
+      { verify: async directory => { await verifyRelease(directory, shell.bytes); } }
+    );
     console.log(new TextDecoder().decode(report).trimEnd());
   } finally {
     await rm(temporary, { recursive: true, force: true });
@@ -1110,11 +700,20 @@ async function refreshLock(options: CliOptions, root: string): Promise<void> {
   await verifyBrowserAlphaOracleCore(root, FROZEN_POSTGRES_REFERENCE_COMMIT);
   const toolchain = await actualToolchain();
   const sources = await measureReleaseSources(root);
-  const temporary = await mkdtemp(join(tmpdir(), 'ichiran-browser-alpha-lock-'));
+  const temporary = await mkdtemp(join(RELEASE_TEMP_ROOT, 'ichiran-browser-alpha-lock-'));
   try {
     // Deliberately omit a lock: this is the only command allowed to establish
     // new expected artifact identities from a target database.
     const builds = await compileComponents(root, options.database!, temporary);
+    if (
+      builds.database.schemaSha256
+      !== oracle.qualifiedOracle.normalizedPgDump16SchemaSha256
+    ) {
+      throw new Error(
+        `Measured database schema digest ${builds.database.schemaSha256}; `
+        + `qualified oracle requires ${oracle.qualifiedOracle.normalizedPgDump16SchemaSha256}`
+      );
+    }
     const lock: BrowserAlphaSourceLock = {
       formatVersion: 2,
       upstreamIchiran: {
@@ -1136,7 +735,8 @@ async function refreshLock(options: CliOptions, root: string): Promise<void> {
         encoding: builds.database.encoding,
         collation: builds.database.collation,
         ctype: builds.database.ctype,
-        schemaSha256: oracle.qualifiedOracle.normalizedPgDump16SchemaSha256
+        schemaNormalization: builds.database.schemaNormalization,
+        schemaSha256: builds.database.schemaSha256
       },
       toolchain,
       sources,
@@ -1176,7 +776,19 @@ async function verify(options: CliOptions, root: string): Promise<void> {
   await verifyBrowserAlphaOracleCore(root, source.lock.postgresReference.repositoryCommit);
   verifyBrowserAlphaToolchain(source.lock.toolchain, await actualToolchain());
   const output = releaseOutputPath(root, options.out!);
-  const release = await verifyRelease(output, options.shellBytes!);
+  const manifestBytes = new Uint8Array(await readFile(join(output, 'manifest.json')));
+  const shell = await measureProductionShell(
+    resolve(root, options.shellDir!),
+    manifestBytes,
+    { requireFinalizedServiceWorker: true }
+  );
+  const release = await verifyRelease(output, shell.bytes);
+  await assertActiveReleaseGeneration(output, [
+    release.manifest.hot.file,
+    release.manifest.details.file,
+    'manifest.json',
+    'stats.json'
+  ]);
   if (release.manifest.sourcesLockSha256 !== source.lockSha256) {
     throw new Error('Release manifest does not point to the current sources lock');
   }
@@ -1203,6 +815,7 @@ async function verify(options: CliOptions, root: string): Promise<void> {
       decodedCacheBlocks?: number;
       decodedCacheUpperBound?: number;
     };
+    shell?: ProductionShellMeasurement;
     sizes?: {
       hotBytes?: number;
       persistedBytes?: number;
@@ -1218,7 +831,10 @@ async function verify(options: CliOptions, root: string): Promise<void> {
   if (report.packVersion !== release.manifest.packVersion) throw new Error('Stats pack version mismatch');
   if (report.sourceCommit !== release.manifest.sourceCommit) throw new Error('Stats source commit mismatch');
   if (report.sourcesLockSha256 !== source.lockSha256) throw new Error('Stats sources-lock digest mismatch');
-  if (report.sizes?.shellBytes !== options.shellBytes) throw new Error('Stats shell-byte input mismatch');
+  if (JSON.stringify(report.shell) !== JSON.stringify(shell)) {
+    throw new Error('Stats production-shell measurement mismatch');
+  }
+  if (report.sizes?.shellBytes !== shell.bytes) throw new Error('Stats shell-byte measurement mismatch');
   if (!report.artifacts || !report.sections || !report.details) {
     throw new Error('Stats report is missing artifact measurements');
   }
@@ -1280,7 +896,7 @@ async function verify(options: CliOptions, root: string): Promise<void> {
   if (report.supportIssues?.count !== 0 || report.supportIssues.sha256 !== emptyDigest) {
     throw new Error('Stats report contains unresolved analyzer-support issues');
   }
-  const expectedSizes = assertAnalyzerReleaseSize(release, options.shellBytes!);
+  const expectedSizes = assertAnalyzerReleaseSize(release, shell.bytes);
   if (JSON.stringify(report.sizes) !== JSON.stringify(expectedSizes)) {
     throw new Error('Stats release-size report mismatch');
   }

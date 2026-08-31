@@ -24,12 +24,21 @@ This is intentionally not a SQL-shaped compatibility layer. Lookup resolves a sm
 candidate IDs and scored span groups. Packed readers remain responsible for packed
 storage; the hot loop does not expand the whole dictionary into objects.
 
-The arithmetic is still the accepted parity algorithm, not a claim that the legacy
-formula or quadratic pair scan is the final possible algorithm. Once end-to-end parity
-is locked, direct transitions can be specialized to a sweep/top-N interval algorithm.
-Pair-dependent filtering or adjustments make the graph denser and need their own
-profile before that rewrite. The public candidate/result types keep that optimization
-possible without coupling scoring to a database model.
+The arithmetic remains the accepted parity algorithm, but the default path search is
+no longer the original quadratic scan over every non-adjacent predecessor. It uses an
+exact sweep whose non-adjacent result can only come from the union of three size-N
+affine frontiers: ordinary left score, short-word-penalized left score, and score with
+the left group removed. Adjacent predecessors still run the complete pair-rule
+resolver because filters, replacements, and synergy adjustments apply there. Passing
+a custom initial or transition resolver deliberately selects the exhaustive dynamic
+program so extension hooks cannot silently inherit assumptions proved only for the
+built-in rules. Persistent backpointers defer path materialization until the final
+top-N results.
+
+This is not the optimization ceiling. Remaining measured opportunities include the
+adjacent rule resolver, candidate/allocation churn, packed-reader locality, and focused
+WASM kernels where boundary costs justify them. The public candidate/result types keep
+those changes possible without coupling scoring to a database model.
 
 ## Concrete runtime boundary
 
