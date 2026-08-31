@@ -331,7 +331,9 @@ describe('seekable analyzer annotations', () => {
 
     const reader = await AnalyzerAnnotationsReader.open(source(build.bytes), decode);
     expect(await reader.split(123, 'kanji', '例')).toEqual(splits[1]);
-    expect(await reader.split(1008450, 'kana', 'では', 'segsplit')).toEqual(splits[0]);
+    const decodedSplit = await reader.split(1008450, 'kana', 'では', 'segsplit');
+    expect(decodedSplit).toEqual(splits[0]);
+    expect(JSON.stringify(decodedSplit)).toBe(JSON.stringify(splits[0]));
     expect(await reader.split(1008450, 'kana', 'では')).toBeNull();
     expect(await reader.hint(1008450, 'kana', 'では', 'では')).toBe('で\u200cは');
     expect(await reader.hint(999, 'kana', 'では', 'では')).toBeNull();

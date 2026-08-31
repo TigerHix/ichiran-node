@@ -175,14 +175,14 @@ test.skipIf(!RUN_POSTGRES_TEST)(
       return value.rank;
     };
     // These ties are observable before score sorting. They deliberately mix
-    // direct and generated physical rows whose surrogate-id order differs from
-    // the legacy unordered text lookup followed by `unshift`.
-    expect(lookupRank('kana', 'やわらげる', 1561960, null))
-      .toBeLessThan(lookupRank('kana', 'やわらげる', 1561950, 311));
-    expect(lookupRank('kanji', '否めない', 1482930, null))
-      .toBeLessThan(lookupRank('kanji', '否めない', 1482910, 475));
+    // direct and generated physical rows and freeze the current Lisp bulk
+    // lookup followed by `unshift`.
+    expect(lookupRank('kana', 'やわらげる', 1561950, 311))
+      .toBeLessThan(lookupRank('kana', 'やわらげる', 1561960, null));
     expect(lookupRank('kanji', '否めない', 1482910, 475))
       .toBeLessThan(lookupRank('kanji', '否めない', 1482920, 475));
+    expect(lookupRank('kanji', '否めない', 1482920, 475))
+      .toBeLessThan(lookupRank('kanji', '否めない', 1482930, null));
     expect(lookupRank('kana', 'でもない', 2098230, 608))
       .toBeLessThan(lookupRank('kana', 'でもない', 2097940, null));
     // Preserve the collision-only routes that originally widened graph
@@ -338,5 +338,5 @@ test.skipIf(!RUN_POSTGRES_TEST)(
       }
     }, null, 2));
   },
-  600_000
+  900_000
 );

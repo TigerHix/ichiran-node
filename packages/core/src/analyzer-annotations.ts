@@ -237,8 +237,8 @@ function part(value: unknown): AnalyzerSupportSplitPart {
     };
   });
   return {
-    route: route(value[1]),
     seq: uint(value[2], 'Split-part seq'),
+    route: route(value[1]),
     text: text(value[3], 'Split-part text'),
     best: nullableText(value[4], 'Split-part best'),
     ord: uint(value[5], 'Split-part ordinal', 0xffff),
