@@ -13,16 +13,16 @@ function sha256(text: string): string {
 }
 
 describe('source compiler lock', () => {
-  test('pins the explicit September transition JMdict identity', async () => {
-    const path = join(import.meta.dir, '../../../data/source-compiler-update-2026-09-01.lock.json');
+  test('pins the first post-baseline JMdict identity', async () => {
+    const path = join(import.meta.dir, '../../../data/source-compiler-update-2026-01-02.lock.json');
     const lock = parseSourceCompilerLock(JSON.parse(await readFile(path, 'utf8')));
     expect(lock.sources[0]).toEqual({
-      id: 'edrdg-jmdict-e-2026-09-01',
+      id: 'edrdg-jmdict-e-2026-01-02',
       kind: 'file',
       file: {
-        path: 'work/m6-transition/JMdict_e-2026-09-01.gz',
-        bytes: 10_564_910,
-        sha256: 'a2cce17805c392712a9569c515076ae84a0091281b54542753de1060add8c55e'
+        path: 'work/m6-transition/JMdict_e-2026-01-02.gz',
+        bytes: 10_261_624,
+        sha256: '34cc33abe2ae37a8572a9a45ce68c5e7fb6ccccd55c021366eb4fa6c49f6c90c'
       }
     });
   });

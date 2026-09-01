@@ -135,37 +135,38 @@ sh scripts/source-compiler-release-no-postgres.sh --probe-only
 The command still requires all non-PostgreSQL build dependencies to have been
 installed before entering the network namespace.
 
-## Genuine 2026-09-01 JMdict update
+## Genuine 2026-01-02 JMdict update
 
-The transition changes only JMdict. The lock keeps Kanjidic2, custom sources,
+The qualified transition is the first official daily JMdict snapshot after the
+January 1 baseline. It changes only JMdict. The lock keeps Kanjidic2, custom sources,
 chronological errata, and the reviewed compatibility ledger identical to the
-qualified baseline. It pins the official gzip and uncompressed XML identities,
-the `JMdict created: 2026-09-01` header, the EDRDG URL and license, and the
-Jitendex archive commit containing the final 2026-08-31 patch.
+qualified baseline. It pins the deterministic gzip and uncompressed XML identities,
+the `JMdict created: 2026-01-02` header, the EDRDG URL and license, and the
+Jitendex archive commit containing the exact January 2 daily patch.
 
 Acquire the official snapshot while the authoritative URL has the pinned bytes:
 
 ```sh
-bun scripts/acquire-source-compiler-update-2026-09-01.ts
+bun scripts/acquire-source-compiler-update-2026-01-02.ts
 ```
 
-The acquisition command verifies compressed and uncompressed SHA-256 digests
-and the creation header before exclusively creating the ignored file
-`work/m6-transition/JMdict_e-2026-09-01.gz`. If the URL has advanced, it fails
-instead of relabeling a newer dictionary. The uncompressed identity can also be
-reconstructed from Jitendex archive commit
-`8c5c132d1f587aa02786a401be8c58f0b0b4185f` through patch
-`JMdict_e/patches/2026/08/31.patch.br`.
+The acquisition command downloads and verifies the 3,086-byte historical patch,
+applies it to the pinned January 1 JMdict, and verifies the patch payload,
+uncompressed XML, deterministic gzip and creation header before exclusively
+creating the ignored file `work/m6-transition/JMdict_e-2026-01-02.gz`. The
+historical authority is Jitendex archive commit
+`fbc4afb4c786b7f4c304c173a475553279bbb528`, patch
+`JMdict_e/patches/2026/01/02.patch.br`.
 
 Build the updated release through the same compiler:
 
 ```sh
 bun scripts/source-compiler-release.ts update \
-  --source-lock data/source-compiler-update-2026-09-01.lock.json \
-  --jmdict work/m6-transition/JMdict_e-2026-09-01.gz \
-  --jmdict-source-id edrdg-jmdict-e-2026-09-01 \
+  --source-lock data/source-compiler-update-2026-01-02.lock.json \
+  --jmdict work/m6-transition/JMdict_e-2026-01-02.gz \
+  --jmdict-source-id edrdg-jmdict-e-2026-01-02 \
   --out work/m6-update-release \
-  --pack-version jmdict-2026-09-01-source
+  --pack-version jmdict-2026-01-02-source
 ```
 
 Update mode deliberately does not compare its changed dictionary bytes to the
@@ -176,6 +177,13 @@ The CLI requires an explicit update lock and rejects the baseline JMdict path or
 identity in this mode, so `update` cannot be used merely to turn off the January
 comparison.
 
+A later September 1 snapshot was also tested as a transition candidate. Its
+source semantics compiled, but its installed hot pack was 25,273,024 bytes,
+107,200 bytes above the unchanged 24 MiB product gate. Publication correctly
+stopped. The gate was not raised and pack format v1 was not changed; qualifying
+the first genuine post-baseline daily update keeps the transition focused while
+leaving that later capacity issue for a separately reviewed product decision.
+
 Before the full build, run the bounded semantic witness:
 
 ```sh
@@ -183,7 +191,7 @@ bun scripts/source-compiler-update-witness.ts
 ```
 
 It verifies the complete transition lock, proves that seq 2868547 is absent
-from the January JMdict and present in the September source as `パオーン`, and
+from the January 1 JMdict and present in the January 2 source as `パオーン`, and
 passes that canonical entry through the real surface, root-payload and detail
 encoders twice. The command is a low-memory source/encoder check; it is not a
 substitute for the complete release.
@@ -193,18 +201,18 @@ release roots:
 
 ```sh
 bun scripts/source-compiler-release.ts update \
-  --source-lock data/source-compiler-update-2026-09-01.lock.json \
-  --jmdict work/m6-transition/JMdict_e-2026-09-01.gz \
-  --jmdict-source-id edrdg-jmdict-e-2026-09-01 \
+  --source-lock data/source-compiler-update-2026-01-02.lock.json \
+  --jmdict work/m6-transition/JMdict_e-2026-01-02.gz \
+  --jmdict-source-id edrdg-jmdict-e-2026-01-02 \
   --out work/m6-update-release-a \
-  --pack-version jmdict-2026-09-01-source
+  --pack-version jmdict-2026-01-02-source
 
 bun scripts/source-compiler-release.ts update \
-  --source-lock data/source-compiler-update-2026-09-01.lock.json \
-  --jmdict work/m6-transition/JMdict_e-2026-09-01.gz \
-  --jmdict-source-id edrdg-jmdict-e-2026-09-01 \
+  --source-lock data/source-compiler-update-2026-01-02.lock.json \
+  --jmdict work/m6-transition/JMdict_e-2026-01-02.gz \
+  --jmdict-source-id edrdg-jmdict-e-2026-01-02 \
   --out work/m6-update-release-b \
-  --pack-version jmdict-2026-09-01-source
+  --pack-version jmdict-2026-01-02-source
 ```
 
 Compare the active generation inventories and every published payload byte.

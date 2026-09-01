@@ -18,9 +18,9 @@ import {
 import { verifySourceCompilerLock } from '../packages/data/src/source-compiler/source-lock.js';
 import type { CanonicalEntry } from '../packages/data/src/source-compiler/model.js';
 
-const LOCK_PATH = 'data/source-compiler-update-2026-09-01.lock.json';
+const LOCK_PATH = 'data/source-compiler-update-2026-01-02.lock.json';
 const BASELINE_PATH = 'packages/data/JMdict_e.gz';
-const UPDATE_SOURCE_ID = 'edrdg-jmdict-e-2026-09-01';
+const UPDATE_SOURCE_ID = 'edrdg-jmdict-e-2026-01-02';
 const WITNESS_SEQ = 2_868_547;
 
 function sha256(bytes: Uint8Array | string): string {
@@ -41,7 +41,7 @@ function assertWitness(entry: CanonicalEntry): void {
   const kana = entry.kana.map(form => form.text);
   const glosses = entry.senses.flatMap(sense => sense.glosses);
   if (JSON.stringify(kana) !== JSON.stringify(['パオーン'])
-    || !glosses.includes('toot (trumpeting sound of an elephant)')) {
+    || !glosses.includes('sound of elephants')) {
     throw new Error(`JMdict update witness ${WITNESS_SEQ} has unexpected semantics`);
   }
 }
@@ -56,7 +56,7 @@ const [baseline, update] = await Promise.all([
   findEntry(resolve(repository, updateSource.path), UPDATE_SOURCE_ID)
 ]);
 if (baseline !== null) throw new Error(`Baseline unexpectedly contains ${WITNESS_SEQ}`);
-if (update === null) throw new Error(`September update omits ${WITNESS_SEQ}`);
+if (update === null) throw new Error(`January 2 update omits ${WITNESS_SEQ}`);
 assertWitness(update);
 
 const firstRoot = buildRootPayload(canonicalRootPayloadSource([update]));

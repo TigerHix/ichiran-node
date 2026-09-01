@@ -8,24 +8,26 @@
     "upstreamDataReleaseTag": "ichiran-260118"
   },
   "transition": {
-    "date": "2026-09-01",
+    "date": "2026-01-02",
     "scope": "JMdict_e data update only",
-    "acquisitionScript": "scripts/acquire-source-compiler-update-2026-09-01.ts"
+    "acquisitionScript": "scripts/acquire-source-compiler-update-2026-01-02.ts"
   },
   "sources": [
     {
-      "id": "edrdg-jmdict-e-2026-09-01",
+      "id": "edrdg-jmdict-e-2026-01-02",
       "kind": "jmdict",
-      "authoritativeUrl": "https://www.edrdg.org/pub/Nihongo/JMdict_e.gz",
+      "authoritativeUrl": "https://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz",
       "archiveRepository": "https://github.com/Jitendex/edrdg-dictionary-archive.git",
-      "archiveCommit": "8c5c132d1f587aa02786a401be8c58f0b0b4185f",
-      "archivePatch": "JMdict_e/patches/2026/08/31.patch.br",
-      "upstreamIdentity": "JMdict created: 2026-09-01",
-      "uncompressedBytes": 63074995,
-      "uncompressedSha256": "0401f8ef8e5bd9888ca20a9c11a3eaf066ff16d143ac641591ae4c0f8e6a47ab",
-      "pinnedPath": "work/m6-transition/JMdict_e-2026-09-01.gz",
-      "pinnedBytes": 10564910,
-      "pinnedSha256": "a2cce17805c392712a9569c515076ae84a0091281b54542753de1060add8c55e",
+      "archiveCommit": "fbc4afb4c786b7f4c304c173a475553279bbb528",
+      "archivePatch": "JMdict_e/patches/2026/01/02.patch.br",
+      "archivePatchBytes": 3086,
+      "archivePatchSha256": "f0aae6a10273bc2ea569ea1aeead3a81b5268716c5e7347cf26fb5ca2666ca77",
+      "upstreamIdentity": "JMdict created: 2026-01-02",
+      "uncompressedBytes": 61500527,
+      "uncompressedSha256": "9f125b6f574102e37279660fa022de63fdff28f99c3f5d47ba69c80c3c999f34",
+      "pinnedPath": "work/m6-transition/JMdict_e-2026-01-02.gz",
+      "pinnedBytes": 10261624,
+      "pinnedSha256": "34cc33abe2ae37a8572a9a45ce68c5e7fb6ccccd55c021366eb4fa6c49f6c90c",
       "license": "CC-BY-SA-4.0",
       "licenseUrl": "https://www.edrdg.org/edrdg/licence.html",
       "attribution": "Electronic Dictionary Research and Development Group"
