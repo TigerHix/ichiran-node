@@ -20,6 +20,7 @@ import type {
   CanonicalRoute,
   ConjugationProperty
 } from './model.js';
+import { sameConjugationProperty } from './conjugation-identity.js';
 
 export interface ConjugationSuppression {
   readonly route: CanonicalRoute;
@@ -174,13 +175,6 @@ function routeForTable(value: unknown): CanonicalRoute {
   throw new Error(`Unknown conjugation reading table ${JSON.stringify(value)}`);
 }
 
-function sameProperty(left: ConjugationProperty, right: ConjugationProperty): boolean {
-  return left.pos === right.pos
-    && left.type === right.type
-    && left.negative === right.negative
-    && left.formal === right.formal;
-}
-
 function sourceForm(entry: CanonicalEntry, route: CanonicalRoute, sourceText: string): CanonicalForm {
   const form = routeForms(entry, route).find(value => value.text === sourceText);
   if (!form) throw new Error(`Root ${entry.seq} has no ${route} source ${sourceText}`);
@@ -326,7 +320,7 @@ function suppressionFor(
   if (!identity) throw new Error(`Unreviewed deleteConjugation ${oracleTargetSeq}/${entry.seq}`);
   const emission = emissions.find(value =>
     value.stage === 'primary'
-    && sameProperty(value.first, identity.property)
+    && sameConjugationProperty(value.first, identity.property)
     && value.forms.some(form =>
       form.route === identity.route
       && form.sourceText === identity.sourceText

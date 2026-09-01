@@ -8,7 +8,7 @@ import { promisify } from 'node:util';
 
 import { buildMorphology } from '../packages/data/src/browser-pack/morphology-compiler.js';
 import { compileBoundedSourceNativeAnalyzerSupport } from '../packages/data/src/source-compiler/analyzer-support-stream.js';
-import { compileCanonicalRoots, QUALIFIED_JMDICT_SOURCE_ID } from '../packages/data/src/source-compiler/canonical-roots.js';
+import { compileCanonicalRoots } from '../packages/data/src/source-compiler/canonical-roots.js';
 import {
   conjugationPositionCompatibility,
   conjugationReadingLineageCompatibility,
@@ -23,31 +23,29 @@ import { conjugationPositionsByRoot } from '../packages/data/src/source-compiler
 import { writeScheduledGeneratedProjection } from '../packages/data/src/source-compiler/generated-projection-stream.js';
 import { loadKanjidicHintReadings } from '../packages/data/src/source-compiler/kanjidic-hints.js';
 import { writeSourceCompilerRelease } from '../packages/data/src/source-compiler/release-output.js';
-import { verifySourceCompilerLock } from '../packages/data/src/source-compiler/source-lock.js';
+import {
+  assertSourceCompilerReleaseMode,
+  verifySourceCompilerLock
+} from '../packages/data/src/source-compiler/source-lock.js';
 
 const execFile = promisify(execFileCallback);
 const RELEASE_TEMP_ROOT = process.platform === 'win32' ? tmpdir() : '/tmp';
 const BASELINE_SOURCE_LOCK = 'data/source-compiler-sources.lock.json';
-const BASELINE_JMDICT = 'packages/data/JMdict_e.gz';
 
 interface Options {
   readonly mode: 'baseline' | 'update';
   readonly output: string;
   readonly packVersion: string;
   readonly sourceLock: string;
-  readonly jmdict?: string;
-  readonly jmdictSourceId?: string;
   readonly surfaceChunkRows?: number;
-  readonly allowDirty: boolean;
 }
 
 function usage(message?: string): never {
   const prefix = message ? `error: ${message}\n\n` : '';
   throw new Error(`${prefix}usage:
-  bun scripts/source-compiler-release.ts baseline --out <directory> --pack-version <version> [--allow-dirty]
+  bun scripts/source-compiler-release.ts baseline --out <directory> --pack-version <version>
   bun scripts/source-compiler-release.ts update --out <directory> --pack-version <version> \\
-    --jmdict <repo-relative-file> --jmdict-source-id <identity> \\
-    --source-lock <repo-relative-file> [--allow-dirty]`);
+    --source-lock <repo-relative-file>`);
 }
 
 function parseArguments(argv: readonly string[]): Options {
@@ -56,10 +54,7 @@ function parseArguments(argv: readonly string[]): Options {
   let output: string | undefined;
   let packVersion: string | undefined;
   let sourceLock: string | undefined;
-  let jmdict: string | undefined;
-  let jmdictSourceId: string | undefined;
   let surfaceChunkRows: number | undefined;
-  let allowDirty = false;
   for (let index = 1; index < argv.length; index++) {
     const argument = argv[index]!;
     const next = (): string => {
@@ -70,39 +65,23 @@ function parseArguments(argv: readonly string[]): Options {
     if (argument === '--out') output = next();
     else if (argument === '--pack-version') packVersion = next();
     else if (argument === '--source-lock') sourceLock = next();
-    else if (argument === '--jmdict') jmdict = next();
-    else if (argument === '--jmdict-source-id') jmdictSourceId = next();
     else if (argument === '--surface-chunk-rows') {
       surfaceChunkRows = Number(next());
       if (!Number.isSafeInteger(surfaceChunkRows) || surfaceChunkRows <= 0) {
         usage('--surface-chunk-rows must be a positive integer');
       }
-    } else if (argument === '--allow-dirty') allowDirty = true;
-    else if (argument === '--help' || argument === '-h') usage();
+    } else if (argument === '--help' || argument === '-h') usage();
     else usage(`unknown argument ${argument}`);
   }
   if (!output) usage('--out is required');
   if (!packVersion) usage('--pack-version is required');
-  if (mode === 'baseline' && (jmdict !== undefined || jmdictSourceId !== undefined)) {
-    usage('--jmdict and --jmdict-source-id apply only to update');
-  }
-  if (mode === 'update' && (!jmdict || !jmdictSourceId)) {
-    usage('update requires --jmdict and --jmdict-source-id');
-  }
   if (mode === 'update' && !sourceLock) usage('update requires --source-lock');
-  if (mode === 'update' && (jmdict === BASELINE_JMDICT
-    || jmdictSourceId === QUALIFIED_JMDICT_SOURCE_ID)) {
-    usage('update requires a non-baseline JMdict path and source identity');
-  }
   return {
     mode,
     output,
     packVersion,
     sourceLock: sourceLock ?? BASELINE_SOURCE_LOCK,
-    ...(jmdict === undefined ? {} : { jmdict }),
-    ...(jmdictSourceId === undefined ? {} : { jmdictSourceId }),
-    ...(surfaceChunkRows === undefined ? {} : { surfaceChunkRows }),
-    allowDirty
+    ...(surfaceChunkRows === undefined ? {} : { surfaceChunkRows })
   };
 }
 
@@ -121,27 +100,24 @@ async function gitOutput(repository: string, args: readonly string[]): Promise<s
   return result.stdout.trim();
 }
 
-async function assertClean(repository: string, allowDirty: boolean): Promise<void> {
-  if (allowDirty) return;
+async function assertClean(repository: string): Promise<void> {
   const status = await gitOutput(repository, ['status', '--porcelain=v1', '--untracked-files=all']);
   if (status.length !== 0) {
-    throw new Error('Source checkout is dirty; commit it or use --allow-dirty for development');
+    throw new Error('Source checkout is dirty; commit it before building a release');
   }
 }
 
 const options = parseArguments(process.argv.slice(2));
 const repository = await gitOutput(import.meta.dir, ['rev-parse', '--show-toplevel']);
-await assertClean(repository, options.allowDirty);
+await assertClean(repository);
 const sourceCommit = await gitOutput(repository, ['rev-parse', 'HEAD']);
 if (!/^[0-9a-f]{40}$/.test(sourceCommit)) throw new Error('Git returned an invalid source commit');
 
 const lock = await verifySourceCompilerLock(repository, options.sourceLock);
-const jmdictRelative = options.jmdict ?? BASELINE_JMDICT;
-const jmdictSourceId = options.jmdictSourceId ?? QUALIFIED_JMDICT_SOURCE_ID;
+assertSourceCompilerReleaseMode(options.mode, lock.jmdict);
+const jmdictRelative = lock.jmdict.path;
+const jmdictSourceId = lock.jmdict.id;
 const jmdict = repositoryPath(repository, jmdictRelative, 'JMdict path');
-if (!lock.files.some(file => file.id === jmdictSourceId && resolve(repository, file.path) === jmdict)) {
-  throw new Error(`Verified source lock does not pin ${jmdictSourceId} at ${jmdictRelative}`);
-}
 
 const data = join(repository, 'data');
 const roots = await compileCanonicalRoots({
@@ -212,7 +188,6 @@ try {
     output: repositoryPath(repository, options.output, 'Release output'),
     temporaryDirectory,
     sourceCommit,
-    requireCleanSource: !options.allowDirty,
     packVersion: options.packVersion,
     sourceLock: lock,
     ...(options.mode === 'baseline' ? {

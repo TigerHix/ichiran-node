@@ -3,10 +3,16 @@ import { mkdtemp, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildAnalyzerAnnotations } from '../src/browser-pack/analyzer-annotations.js';
 import { buildMorphology } from '../src/browser-pack/morphology-compiler.js';
 import { compileBoundedGeneratedProjection } from '../src/source-compiler/analyzer-generated-stream.js';
 import { conjugationPositionsByRoot } from '../src/source-compiler/conjugation-emission-order.js';
 import { writeScheduledGeneratedProjection } from '../src/source-compiler/generated-projection-stream.js';
+import {
+  CONJUGATION_PHASE,
+  conjugationPhasePrecedence,
+  iterateScheduledConjugations
+} from '../src/source-compiler/conjugation-scheduler.js';
 import {
   reduceGeneratedOccurrenceSurfaces,
   reduceGeneratedSemanticPaths
@@ -18,7 +24,7 @@ const dataPath = fileURLToPath(new URL('../../../data', import.meta.url));
 function entry(): CanonicalEntry {
   return {
     seq: 1_519_210,
-    source: { id: 'fixture', ordinal: 0 },
+    source: { sourceId: 'fixture', ordinal: 0 },
     kanji: [{
       text: '忘れる', ordinal: 0, sourceOrder: { event: 0, ordinal: 0 },
       common: null, priorityTags: [], conjugatable: true, best: 'わすれる'
@@ -27,7 +33,32 @@ function entry(): CanonicalEntry {
       text: 'わすれる', ordinal: 0, sourceOrder: { event: 0, ordinal: 0 },
       common: null, priorityTags: [], conjugatable: true, noKanji: false, best: '忘れる'
     }],
-    senses: [{ ordinal: 0, properties: [], glosses: [{ text: 'forget', ordinal: 0 }] }]
+    senses: [{ ordinal: 0, properties: [], glosses: ['forget'] }],
+    restrictions: [],
+    primaryNoKanji: false
+  };
+}
+
+function scheduledEntry(
+  seq: number,
+  kanji: string,
+  kana: string,
+  sourceOrdinal: number
+): CanonicalEntry {
+  return {
+    seq,
+    source: { sourceId: 'scheduler-fixture', ordinal: sourceOrdinal },
+    kanji: [{
+      text: kanji, ordinal: 0, sourceOrder: { event: 0, ordinal: 0 },
+      common: null, priorityTags: [], conjugatable: true, noKanji: false, best: kana
+    }],
+    kana: [{
+      text: kana, ordinal: 0, sourceOrder: { event: 0, ordinal: 0 },
+      common: null, priorityTags: [], conjugatable: true, noKanji: false, best: kanji
+    }],
+    senses: [],
+    restrictions: [],
+    primaryNoKanji: false
   };
 }
 
@@ -82,9 +113,98 @@ describe('bounded generated projection producer', () => {
       }, () => {});
       expect(surfaces.rows).toBe(result.spool.installedOccurrences);
       expect(surfaces.surfaces).toBeGreaterThan(0);
+      const compiled = compileBoundedGeneratedProjection({
+        projection: result,
+        entries: [root],
+        morphology,
+        temporaryDirectory: directory,
+        customRootSeqs: new Set(),
+        firstErrataEvent: 10,
+        maxOccurrenceChunkRows: 100
+      });
+      expect(compiled.generated.matchedPaths).toBe(compiled.generated.semanticPaths);
+      const encoded = buildAnalyzerAnnotations([], [], compiled.generated);
+      expect(encoded.bytes.byteLength).toBeGreaterThan(0);
+      expect(encoded.stats.generatedRecords).toBe(compiled.generated.records.reduce(
+        (sum, record) => sum + (record.members?.length ?? 1),
+        0
+      ));
     } finally {
       await rm(directory, { recursive: true, force: true });
     }
+  });
+
+  test('the replayable scheduler owns dense global phase order', () => {
+    const base = scheduledEntry(700_001, '決める', 'きめる', 0);
+    const custom = scheduledEntry(700_002, '止める', 'とめる', 1);
+    const daSeed = scheduledEntry(2_089_020, 'だ', 'だ', 2);
+    const da: CanonicalEntry = {
+      ...daSeed,
+      kanji: [],
+      kana: [{ ...daSeed.kana[0]!, best: null }],
+      primaryNoKanji: true
+    };
+    const roots = [
+      { entry: base, pos: 'v1' },
+      { entry: custom, pos: 'v1' },
+      { entry: da, pos: 'cop' }
+    ];
+    const source = {
+      roots: [
+        ...roots.flatMap(({ entry: value, pos }) => [
+          ...value.kanji.map(form => ({
+            seq: value.seq, pos, route: 'kanji' as const, text: form.text,
+            ord: form.ordinal, common: null, counterpart: form.best
+          })),
+          ...value.kana.map(form => ({
+            seq: value.seq, pos, route: 'kana' as const, text: form.text,
+            ord: form.ordinal, common: null, counterpart: form.best
+          }))
+        ]),
+        { seq: 2_257_550, pos: 'adj-i', route: 'kana' as const,
+          text: 'ない', ord: 0, common: null, counterpart: null },
+        { seq: 2_684_620, pos: 'adj-i', route: 'kana' as const,
+          text: 'しい', ord: 0, common: null, counterpart: null }
+      ],
+      rootForms: [
+        ...roots.flatMap(({ entry: value }) =>
+          [...value.kanji, ...value.kana].map(form => ({ seq: value.seq, text: form.text }))),
+        { seq: 2_257_550, text: 'ない' },
+        { seq: 2_684_620, text: 'しい' }
+      ],
+      manualPatches: []
+    };
+    const morphology = buildMorphology(source, { dataPath }).artifact;
+    const rows = [...iterateScheduledConjugations({
+      entries: [custom, da, base],
+      positionsByRoot: conjugationPositionsByRoot(source),
+      customRootSeqs: new Set([custom.seq]),
+      firstErrataEvent: 50,
+      chronologicalPositions: [{ rootSeq: da.seq, pos: 'cop', event: 50 }],
+      suppressions: [],
+      lineageCompatibility: [],
+      morphology
+    })];
+    const phases = new Map<number, Set<number>>();
+    for (const row of rows) {
+      const values = phases.get(row.emission.rootSeq) ?? new Set<number>();
+      values.add(row.phase);
+      phases.set(row.emission.rootSeq, values);
+    }
+    expect(phases.get(base.seq)).toEqual(new Set([
+      CONJUGATION_PHASE.basePrimary,
+      CONJUGATION_PHASE.baseSecondary
+    ]));
+    expect(phases.get(custom.seq)).toEqual(new Set([
+      CONJUGATION_PHASE.customPrimary,
+      CONJUGATION_PHASE.customSecondary
+    ]));
+    expect(phases.get(da.seq)).toEqual(new Set([CONJUGATION_PHASE.chronological]));
+    expect(rows.map(row => row.ordinal)).toEqual(rows.map((_, ordinal) => ordinal));
+    expect(conjugationPhasePrecedence(CONJUGATION_PHASE.customPrimary, 7))
+      .toBeGreaterThan(conjugationPhasePrecedence(CONJUGATION_PHASE.baseSecondary, 99_999_999));
+    expect(() => conjugationPhasePrecedence(CONJUGATION_PHASE.basePrimary, 100_000_000))
+      .toThrow('outside its phase');
   });
 
   test('allocates a semantic path for a manual-only morphology root', async () => {

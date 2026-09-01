@@ -15,15 +15,23 @@ import type {
   EmissionRule
 } from './conjugation-emissions.js';
 import {
+  CONJUGATION_CHRONOLOGICAL_ORDER,
+  CONJUGATION_PHASE,
+  conjugationPhasePrecedence,
+  directConjugationPhase,
   iterateScheduledConjugations,
+  type ConjugationPhase,
   type ConjugationSchedulerInput
 } from './conjugation-scheduler.js';
-import type { CanonicalEntry, ConjugationProperty } from './model.js';
+import type { ConjugationProperty } from './model.js';
 import type { RegeneratedConjugationLineage } from './conjugation-errata.js';
 import { replayConjugationReading } from './conjugation-reading-replay.js';
 import type { PhysicalTargetOrderCompatibilityRow } from './compatibility.js';
-
-const PHASE_STRIDE = 100_000_000;
+import {
+  compiledMorphologyRuleKey,
+  conjugationPropertyKey,
+  emissionRuleKey
+} from './conjugation-identity.js';
 
 export interface GeneratedProjectionStreamInput extends ConjugationSchedulerInput {
   /** Chronological addConjReading declarations, including source-only CSR terminals. */
@@ -55,32 +63,12 @@ interface DeferredReadingReplay {
 
 interface DirectCreation {
   readonly key: string;
-  readonly phase: number;
+  readonly phase: ConjugationPhase;
   readonly tuple: readonly [event: number, source: number, form: number, seq: number, route: number, text: string];
 }
 
 function compareText(left: string, right: string): number {
   return left < right ? -1 : left > right ? 1 : 0;
-}
-
-function semanticPropertyKey(value: ConjugationProperty): string {
-  return JSON.stringify([value.pos, value.type, value.negative, value.formal]);
-}
-
-function ruleKey(value: EmissionRule): string {
-  return JSON.stringify([
-    value.pos, value.type, value.negative, value.formal, value.order,
-    value.stem, value.okuri, value.euphr, value.euphk
-  ]);
-}
-
-function compiledRuleKey(
-  value: CompiledMorphologyArtifact['rules'][number]
-): string {
-  return JSON.stringify([
-    value.pos, value.type, value.negative, value.formal, value.ordinal,
-    value.stem, value.okuri, value.euphr, value.euphk
-  ]);
 }
 
 function emissionRule(
@@ -152,24 +140,6 @@ export function generatedLookupClassKey(
   return `${targetSeq}\u0000${route}\u0000${surface}`;
 }
 
-function phasePrecedence(phase: number, order: number): number {
-  const value = phase * PHASE_STRIDE + order;
-  if (!Number.isSafeInteger(value) || value < 0 || value > 0xffff_fffe) {
-    throw new Error(`Generated creation precedence is outside uint32: ${phase}/${order}`);
-  }
-  return value;
-}
-
-function directPhase(
-  entry: CanonicalEntry,
-  event: number,
-  customRootSeqs: ReadonlySet<number>,
-  firstErrataEvent: number
-): number {
-  if (event >= firstErrataEvent) return 6;
-  return customRootSeqs.has(entry.seq) ? 3 : 0;
-}
-
 function compareDirect(left: DirectCreation, right: DirectCreation): number {
   if (left.phase !== right.phase) return left.phase - right.phase;
   const difference = left.tuple[0] - right.tuple[0]
@@ -189,7 +159,7 @@ export function directGeneratedLookupClassPrecedence(
     for (const [route, forms] of [['kana', entry.kana], ['kanji', entry.kanji]] as const) {
       for (const form of forms) {
         if (isRootPayloadKanaSurface(form.text) !== (route === 'kana')) continue;
-        const phase = directPhase(
+        const phase = directConjugationPhase(
           entry,
           form.sourceOrder.event,
           input.customRootSeqs,
@@ -216,7 +186,7 @@ export function directGeneratedLookupClassPrecedence(
   for (const row of rows) {
     const order = next.get(row.phase) ?? 0;
     next.set(row.phase, order + 1);
-    result.set(row.key, phasePrecedence(row.phase, order));
+    result.set(row.key, conjugationPhasePrecedence(row.phase, order));
   }
   return result;
 }
@@ -226,10 +196,10 @@ function ruleProjection(morphology: CompiledMorphologyArtifact): {
   readonly aliases: readonly number[];
   readonly properties: readonly ConjugationProperty[];
 } {
-  const keys = [...new Set(morphology.rules.map(semanticPropertyKey))].sort(compareText);
+  const keys = [...new Set(morphology.rules.map(conjugationPropertyKey))].sort(compareText);
   const aliasByProperty = new Map(keys.map((key, alias) => [key, alias]));
   const aliases = morphology.rules.map(rule => {
-    const alias = aliasByProperty.get(semanticPropertyKey(rule));
+    const alias = aliasByProperty.get(conjugationPropertyKey(rule));
     if (alias === undefined) throw new Error('Compiled rule has no semantic alias');
     return alias;
   });
@@ -240,7 +210,7 @@ function ruleProjection(morphology: CompiledMorphologyArtifact): {
     return { pos, type, negative, formal };
   });
   return {
-    ruleIds: new Map(morphology.rules.map((rule, id) => [compiledRuleKey(rule), id])),
+    ruleIds: new Map(morphology.rules.map((rule, id) => [compiledMorphologyRuleKey(rule), id])),
     aliases,
     properties
   };
@@ -281,7 +251,7 @@ export function writeScheduledGeneratedProjection(
   let emissions = 0;
   try {
     for (const row of iterateScheduledConjugations(input)) {
-      const creationPrecedence = phasePrecedence(row.phase, row.phaseOrder);
+      const creationPrecedence = conjugationPhasePrecedence(row.phase, row.phaseOrder);
       const emission = allocator.expandSecondary(
         row.emission,
         row.emission.rootSeq,
@@ -308,8 +278,9 @@ export function writeScheduledGeneratedProjection(
       }
       const installedForms = new Set(emission.forms);
       for (const form of emission.physicalForms) {
-        const firstRule = rules.ruleIds.get(ruleKey(form.firstRule));
-        const secondRule = form.secondRule === null ? null : rules.ruleIds.get(ruleKey(form.secondRule));
+        const firstRule = rules.ruleIds.get(emissionRuleKey(form.firstRule));
+        const secondRule = form.secondRule === null
+          ? null : rules.ruleIds.get(emissionRuleKey(form.secondRule));
         if (firstRule === undefined || (form.secondRule !== null && secondRule === undefined)) {
           throw new Error(`Emission ${row.ordinal} references an uncompiled rule declaration`);
         }
@@ -354,8 +325,9 @@ export function writeScheduledGeneratedProjection(
         if (!source) continue;
         const surface = replayConjugationReading(rootBase.text, reading, targetBase);
         if (!allocator.appendChronologicalForm(replay.targetSeq, route, targetBase, surface)) continue;
-        const firstRule = rules.ruleIds.get(ruleKey(source.firstRule));
-        const secondRule = source.secondRule === null ? null : rules.ruleIds.get(ruleKey(source.secondRule));
+        const firstRule = rules.ruleIds.get(emissionRuleKey(source.firstRule));
+        const secondRule = source.secondRule === null
+          ? null : rules.ruleIds.get(emissionRuleKey(source.secondRule));
         if (firstRule === undefined || (source.secondRule !== null && secondRule === undefined)) {
           throw new Error(`addConjReading replay for root ${replay.rootSeq} has an uncompiled rule`);
         }
@@ -364,7 +336,10 @@ export function writeScheduledGeneratedProjection(
         replayConjugationReading(rootBase.text, reading, source.sourceText);
         writer.writeOccurrence({
           pathOrdinal: replay.pathOrdinal,
-          precedence: phasePrecedence(6, 60_000_000 + replayOrder),
+          precedence: conjugationPhasePrecedence(
+            CONJUGATION_PHASE.chronological,
+            CONJUGATION_CHRONOLOGICAL_ORDER.regeneratedReading + replayOrder
+          ),
           firstRule,
           secondRule: secondRule ?? null,
           route,
@@ -396,7 +371,10 @@ export function writeScheduledGeneratedProjection(
       const secondAlias = patches[0]!.secondRule === null
         ? null : rules.aliases[patches[0]!.secondRule]!;
       const emission = patchOnlyEmission(patches[0]!.rootSeq, patchOrder, patches, input.morphology);
-      const creationPrecedence = phasePrecedence(6, 40_000_000 + patchOrder);
+      const creationPrecedence = conjugationPhasePrecedence(
+        CONJUGATION_PHASE.chronological,
+        CONJUGATION_CHRONOLOGICAL_ORDER.patchTargetCreation + patchOrder
+      );
       const binding = allocator.add({
         ordinal: emissions,
         firstAlias,
@@ -414,7 +392,8 @@ export function writeScheduledGeneratedProjection(
       });
       patchPaths.set(key, emissions);
       emissions++;
-      phases[6] = (phases[6] ?? 0) + 1;
+      phases[CONJUGATION_PHASE.chronological] =
+        (phases[CONJUGATION_PHASE.chronological] ?? 0) + 1;
     }
     if (emissions === 0) throw new Error('Scheduled generated projection emitted no paths');
     for (const rootSeq of regeneratedReadings.keys()) {
@@ -440,7 +419,10 @@ export function writeScheduledGeneratedProjection(
       patchKeys.add(duplicateKey);
       writer.writeOccurrence({
         pathOrdinal: ordinal,
-        precedence: phasePrecedence(6, 50_000_000 + patchOrder),
+        precedence: conjugationPhasePrecedence(
+          CONJUGATION_PHASE.chronological,
+          CONJUGATION_CHRONOLOGICAL_ORDER.patchOccurrence + patchOrder
+        ),
         firstRule: patch.firstRule,
         secondRule: patch.secondRule,
         route: patch.route,

@@ -2,12 +2,13 @@ import { createHash } from 'node:crypto';
 import { writeFile } from 'node:fs/promises';
 import { userInfo } from 'node:os';
 import postgres from 'postgres';
-import { buildDetailStore, loadDetailEntries } from '../packages/data/src/browser-pack/details.js';
+import { buildDetailStore } from '../packages/data/src/browser-pack/details.js';
+import { loadDetailEntries } from '../packages/data/src/browser-pack/details-oracle.js';
 import {
   buildRootPayload,
-  loadRootPayloadSource,
   type RootPayloadFormSource
 } from '../packages/data/src/browser-pack/root-payload.js';
+import { loadRootPayloadSource } from '../packages/data/src/browser-pack/root-payload-oracle.js';
 import { compileCanonicalRoots } from '../packages/data/src/source-compiler/canonical-roots.js';
 import {
   canonicalDetailEntries,

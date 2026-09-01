@@ -1,5 +1,5 @@
 import { gzipSync } from 'node:zlib';
-import { compileMorphology } from './morphology-compiler.js';
+import { compileMorphology } from './morphology-compiler-oracle.js';
 
 function outputPath(argv: readonly string[]): string {
   const index = argv.indexOf('--out');

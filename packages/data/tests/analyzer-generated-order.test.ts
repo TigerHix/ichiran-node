@@ -3,7 +3,7 @@ import { buildAnalyzerAnnotations } from '../src/browser-pack/analyzer-annotatio
 import {
   compileLookupOrders,
   type LookupOrderRow
-} from '../src/browser-pack/analyzer-generated.js';
+} from '../src/browser-pack/lookup-order-compression.js';
 import type { AnalyzerSupportGeneratedSource } from '../src/browser-pack/analyzer-support.js';
 
 const TOTALS = {

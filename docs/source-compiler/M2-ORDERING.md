@@ -4,7 +4,7 @@
 
 The qualified direct-root order is physical, not semantic. `maintenance.ts`
 performs unordered whole-table best-reading updates, producing new heap tuples.
-`root-payload.ts` then freezes `ctid DESC` as lookup order.
+`root-payload-oracle.ts` then freezes `ctid DESC` as lookup order.
 
 | Comparison with qualified `ctid DESC` | Delta surfaces | Forms | First winners | Evidence SHA-256 |
 |---|---:|---:|---:|---|

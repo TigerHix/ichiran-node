@@ -18,16 +18,15 @@ import postgres, { type Sql } from 'postgres';
 const RELEASE_TEMP_ROOT = process.platform === 'win32' ? tmpdir() : '/tmp';
 
 import { buildAnalyzerAnnotations } from '../packages/data/src/browser-pack/analyzer-annotations.js';
-import {
-  buildAnalyzerSupportCore,
-  loadAnalyzerSupportSource
-} from '../packages/data/src/browser-pack/analyzer-support.js';
-import { buildDetailStore, loadDetailEntries } from '../packages/data/src/browser-pack/details.js';
+import { buildAnalyzerSupportCore } from '../packages/data/src/browser-pack/analyzer-support.js';
+import { loadAnalyzerSupportSource } from '../packages/data/src/browser-pack/analyzer-support-oracle.js';
+import { buildDetailStore } from '../packages/data/src/browser-pack/details.js';
+import { loadDetailEntries } from '../packages/data/src/browser-pack/details-oracle.js';
 import {
   verifyBrowserAlphaDatabase,
   type BrowserAlphaDatabaseIdentity
 } from '../packages/data/src/browser-pack/database-identity.js';
-import { compileMorphology } from '../packages/data/src/browser-pack/morphology-compiler.js';
+import { compileMorphology } from '../packages/data/src/browser-pack/morphology-compiler-oracle.js';
 import { encodeMorphologyArtifact } from '../packages/data/src/browser-pack/morphology-format.js';
 import {
   morphologyRelationAttestation,
@@ -74,7 +73,8 @@ import {
   type CliOptions
 } from './browser-alpha-release-environment.js';
 import { verifyRelease } from './browser-alpha-release-inspection.js';
-import { buildRootPayload, loadRootPayloadSource } from '../packages/data/src/browser-pack/root-payload.js';
+import { buildRootPayload } from '../packages/data/src/browser-pack/root-payload.js';
+import { loadRootPayloadSource } from '../packages/data/src/browser-pack/root-payload-oracle.js';
 import { SURFACE_INDEX_COPY_QUERY } from '../packages/data/src/browser-pack/surface-index.js';
 import {
   ANALYZER_ANNOTATIONS_FORMAT_VERSION,

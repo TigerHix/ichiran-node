@@ -11,9 +11,12 @@ import {
 import type { SplitPartResolver } from './analyzer-support-annotation-model.js';
 import {
   conjugationEmissionKey,
-  type ConjugationEmission,
-  type EmissionRule
+  type ConjugationEmission
 } from './conjugation-emissions.js';
+import {
+  compiledMorphologyRuleKey,
+  emissionRuleKey
+} from './conjugation-identity.js';
 import type {
   PhysicalConjugationResult,
   PhysicalTarget
@@ -82,20 +85,6 @@ function pathKey(
   secondRule: number | null
 ): string {
   return JSON.stringify([rootSeq, firstRule, secondRule]);
-}
-
-function ruleKey(rule: EmissionRule): string {
-  return JSON.stringify({
-    pos: rule.pos,
-    type: rule.type,
-    negative: rule.negative,
-    formal: rule.formal,
-    ordinal: rule.order,
-    stem: rule.stem,
-    okuri: rule.okuri,
-    euphr: rule.euphr,
-    euphk: rule.euphk
-  });
 }
 
 function commonTags(form: CanonicalForm): string {
@@ -312,15 +301,18 @@ function createPreparedSplitPartResolver(input: PreparedResolverInput): SplitPar
 export function createSourceNativeSplitPartResolver(input: ResolverInput): SplitPartResolver {
   const targets = new Map(input.physical.targets.map(target => [target.seq, target]));
   const locators = generatedLocators(input.physical);
-  const ruleIds = new Map(input.morphology.rules.map((rule, id) => [JSON.stringify(rule), id]));
+  const ruleIds = new Map(input.morphology.rules.map((rule, id) => [
+    compiledMorphologyRuleKey(rule), id
+  ]));
   const bindings = new Map(input.physical.bindings.map(binding => [binding.emissionKey, binding]));
   const targetsByPath = new Map<string, number>();
   for (const emission of input.emissions) {
     const binding = bindings.get(conjugationEmissionKey(emission));
     if (!binding) throw new Error(`Split resolver emission has no physical binding ${emission.rootSeq}`);
     for (const form of emission.forms) {
-      const first = ruleIds.get(ruleKey(form.firstRule));
-      const second = form.secondRule === null ? null : ruleIds.get(ruleKey(form.secondRule));
+      const first = ruleIds.get(emissionRuleKey(form.firstRule));
+      const second = form.secondRule === null
+        ? null : ruleIds.get(emissionRuleKey(form.secondRule));
       if (first === undefined || (form.secondRule !== null && second === undefined)) {
         throw new Error(`Split resolver emission has no morphology rule ${emission.rootSeq}`);
       }

@@ -1,15 +1,12 @@
 import type { MorphologySource } from '../browser-pack/morphology-compiler.js';
 import type { CompiledMorphologyArtifact } from '../browser-pack/morphology-format.js';
 import {
-  conjugationEmissionKey,
   conjugationSourceKey,
   emitPrimaryConjugations,
   emitSecondaryConjugations,
   type ConjugationEmission
 } from './conjugation-emissions.js';
 import type { CanonicalEntry } from './model.js';
-
-export type EmissionPrecedence = ReadonlyMap<string, number>;
 
 export interface ConfiguredConjugationSelection {
   readonly positions: readonly string[];
@@ -67,48 +64,4 @@ export function conjugationSelectionsFromMorphology(
     positions: [...sourcesByPosition.keys()],
     sourcesByPosition
   }]));
-}
-
-/**
- * Validate and apply the central scheduler's dense precedence. The scheduler,
- * not target allocation, owns phase order (base primary, base secondary,
- * custom primary, custom secondary, then chronological lineages).
- */
-export function orderConjugationEmissions(
-  emissions: readonly ConjugationEmission[],
-  precedence: EmissionPrecedence
-): ConjugationEmission[] {
-  if (precedence.size !== emissions.length) {
-    throw new Error(`Emission precedence covers ${precedence.size}/${emissions.length} emissions`);
-  }
-  const seen = new Set<string>();
-  const rows = emissions.map(emission => {
-    const key = conjugationEmissionKey(emission);
-    if (seen.has(key)) throw new Error(`Duplicate conjugation emission ${key}`);
-    seen.add(key);
-    const order = precedence.get(key);
-    if (!Number.isSafeInteger(order) || order! < 0 || order! >= emissions.length) {
-      throw new Error(`Emission has invalid dense precedence ${key}`);
-    }
-    return { emission, key, order: order! };
-  });
-  const orders = new Set(rows.map(row => row.order));
-  if (orders.size !== rows.length) throw new Error('Emission precedence contains duplicate ordinals');
-  for (let order = 0; order < rows.length; order++) {
-    if (!orders.has(order)) throw new Error(`Emission precedence is missing ordinal ${order}`);
-  }
-  return rows.sort((left, right) => left.order - right.order)
-    .map(row => row.emission);
-}
-
-export function denseEmissionPrecedence(
-  ordered: readonly ConjugationEmission[]
-): EmissionPrecedence {
-  const result = new Map<string, number>();
-  ordered.forEach((emission, order) => {
-    const key = conjugationEmissionKey(emission);
-    if (result.has(key)) throw new Error(`Duplicate conjugation emission ${key}`);
-    result.set(key, order);
-  });
-  return result;
 }

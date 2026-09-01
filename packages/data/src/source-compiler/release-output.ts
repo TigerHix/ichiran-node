@@ -32,19 +32,20 @@ import {
 } from '@ichiran/core';
 import { buildSourceCompilerBinarySections, buildSourceCompilerHotPack } from './release-input.js';
 import {
+  parseGeneratedOrderAttestation,
+  parseRootPayloadOrderAttestation
+} from './release-evidence.js';
+import {
   artifactIdentities,
   compareQualifiedArtifactBytes,
   compareQualifiedArtifactCounts,
-  generatedOrderReleaseGateCandidate,
-  parseGeneratedOrderAttestation,
   parseSurfaceCompilerStats,
-  parseRootPayloadOrderAttestation,
   sourceReleaseArtifactCounts,
   type ArtifactComparison,
   type CountDifference,
   type QualifiedArtifactBytes,
   type SurfaceCompilerStats
-} from './release-evidence.js';
+} from './release-comparison.js';
 import { writeBoundedSurfaceIndexTsv } from './surface-index-spool.js';
 import type { VerifiedSourceCompilerLock } from './source-lock.js';
 import type { MorphologySource } from '../browser-pack/morphology-compiler.js';
@@ -68,7 +69,6 @@ export interface SourceReleaseOutputInput {
   readonly output: string;
   readonly temporaryDirectory: string;
   readonly sourceCommit: string;
-  readonly requireCleanSource: boolean;
   readonly packVersion: string;
   readonly sourceLock: VerifiedSourceCompilerLock;
   readonly baseline?: {
@@ -141,14 +141,12 @@ async function surfaceCompiler(repository: string): Promise<string> {
 
 async function assertSourceCheckoutUnchanged(
   repository: string,
-  sourceCommit: string,
-  requireCleanSource: boolean
+  sourceCommit: string
 ): Promise<void> {
   const head = (await command('git', ['rev-parse', 'HEAD'], repository)).stdout.trim();
   if (head !== sourceCommit) {
     throw new Error(`Source checkout moved during release build (${sourceCommit} -> ${head})`);
   }
-  if (!requireCleanSource) return;
   const status = (await command(
     'git',
     ['status', '--porcelain=v1', '--untracked-files=all'],
@@ -267,18 +265,6 @@ async function compareQualifiedBaseline(
     || qualified.bytes.rootPayload.byteLength !== orderAttestation.qualifiedPayload.bytes) {
     throw new Error('Root payload byte counts differ from the reviewed order attestation');
   }
-  if (generatedOrderAttestation.releaseGate === null) {
-    const candidate = generatedOrderReleaseGateCandidate(
-      source,
-      qualified.bytes,
-      counts,
-      qualified.counts
-    );
-    throw new Error(
-      'Generated-order release gate is not pinned. Review and copy this complete candidate into '
-      + `the attestation releaseGate: ${JSON.stringify(candidate)}`
-    );
-  }
   const generatedReview = {
     attestationSha256: GENERATED_ORDER_ATTESTATION_SHA256,
     attestation: generatedOrderAttestation
@@ -391,7 +377,7 @@ export async function writeSourceCompilerRelease(
     packFormat: 1,
     packVersion: input.packVersion,
     sourceCommit: input.sourceCommit,
-    cleanSourceRequired: input.requireCleanSource,
+    cleanSourceRequired: true,
     postgresqlRequired: false,
     sources: {
       lockSha256: input.sourceLock.sha256,
@@ -431,11 +417,7 @@ export async function writeSourceCompilerRelease(
       assertBytesEqual(publishedDetails, sections.details.bytes, 'Published details');
     },
     beforeActivate: async () => {
-      await assertSourceCheckoutUnchanged(
-        input.repository,
-        input.sourceCommit,
-        input.requireCleanSource
-      );
+      await assertSourceCheckoutUnchanged(input.repository, input.sourceCommit);
     }
   });
   await assertActiveReleaseGeneration(input.output, [...files.keys()]);

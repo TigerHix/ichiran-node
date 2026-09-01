@@ -55,8 +55,9 @@ The two concrete generated-projection spools and their bounded reducers produce:
 Target sequence numbers are transient joins. They do not enter generated
 records or their semantic digest.
 
-`analyzer-generated-order.ts` combines direct lexical locators and generated
-locators on active ambiguous surfaces. Physical class precedence is derived
+`analyzer-generated-stream.ts` combines direct lexical locators and generated
+locators from the bounded occurrence spool on active ambiguous surfaces.
+Physical class precedence is derived
 from canonical lexical creation events, generated target allocation and manual
 patch addition. Higher creation precedence receives lower lookup rank. Those
 exact source rows feed the same SCC-condensed graph projection and runtime
@@ -66,11 +67,11 @@ non-global surfaces.
 
 ## Focused regression proof
 
-The focused 食べる fixture proves one generated superset target shared by
-Potential and Passive while retaining two semantic records. It produces one
-physical group, four encoded member rows, two property overrides and one exact
-direct/generated collision exception. The unchanged annotation writer encodes
-the compiler-owned result directly.
+The focused 食べる emission/allocator fixture proves one generated superset
+target shared by Potential and Passive while retaining separate semantic
+properties. The bounded 忘れる fixture then runs the production scheduler,
+physical allocator, spools and reducers and proves the unchanged annotation
+writer encodes that compiler-owned result directly.
 
 The PostgreSQL-unavailable test points both database URLs at an unreachable
 endpoint. Scheduling, allocation, generated projection, collision projection
@@ -95,7 +96,7 @@ it does not replay the whole target superset into every semantic path.
 Run:
 
 ```sh
-bun test packages/data/tests/source-compiler-analyzer-generated.test.ts \
+bun test packages/data/tests/source-compiler-generated-stream.test.ts \
   packages/data/tests/source-compiler-conjugation-emissions.test.ts \
   packages/data/tests/source-compiler-support-collisions.test.ts
 bun run typecheck:compiler
@@ -151,14 +152,12 @@ producer report, raw and normalized row files, binary spools, exhaustive lookup
 report, wall times and peak RSS by byte count and SHA-256. The large NDJSON
 evidence remains under `work/m6-evidence`; it is not committed.
 
-The attestation's release gate is a single null-or-complete value. A null gate
-cannot authorize a baseline. The final complete gate names the exact source and
+The attestation's release gate is mandatory. It names the exact source and
 qualified analyzer-support and analyzer-annotations section identities and
 their complete artifact count groups. The release comparison validates all
 four identities and both pairs of count groups directly; unrelated sections
-and count groups remain exact. The support counts are entirely exact; the
-reviewed annotation count pairs and section identities are recorded in
-`M6-RELEASE-WORKFLOW.md`.
+and count groups remain exact. The attestation itself is the sole numeric source
+of truth for the reviewed section identities and count pairs.
 
 Reproduce the lookup proof from the exact final spools without PostgreSQL:
 

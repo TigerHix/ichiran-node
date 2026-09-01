@@ -1,4 +1,7 @@
-import { constructConjugation } from '../data/conj-rules.js';
+import {
+  constructConjugation,
+  SECONDARY_CONJUGATION_TYPES_FROM
+} from '../data/conj-rules.js';
 import type { CanonicalEntry } from './model.js';
 import type { PhysicalTargetOrderCompatibilityRow } from './compatibility.js';
 import {
@@ -6,6 +9,12 @@ import {
   type ConjugationEmission,
   type EmissionRule
 } from './conjugation-emissions.js';
+import {
+  conjugationPropertyKey,
+  emissionRuleKey
+} from './conjugation-identity.js';
+
+const SECONDARY_SOURCE_TYPES = new Set(SECONDARY_CONJUGATION_TYPES_FROM);
 
 export interface PhysicalTarget {
   readonly seq: number;
@@ -84,28 +93,14 @@ function constructPhysicalConjugation(word: string, rule: EmissionRule): string 
   });
 }
 
-function ruleDeclarationKey(rule: EmissionRule): string {
-  return JSON.stringify([
-    rule.pos,
-    rule.type,
-    rule.negative,
-    rule.formal,
-    rule.order,
-    rule.stem,
-    rule.okuri,
-    rule.euphr,
-    rule.euphk
-  ]);
-}
-
 function physicalFormKey(form: ConjugationEmission['physicalForms'][number]): string {
   return JSON.stringify([
     form.route,
     form.surface,
     form.sourceText,
     form.intermediate,
-    ruleDeclarationKey(form.firstRule),
-    form.secondRule === null ? null : ruleDeclarationKey(form.secondRule)
+    emissionRuleKey(form.firstRule),
+    form.secondRule === null ? null : emissionRuleKey(form.secondRule)
   ]);
 }
 
@@ -166,11 +161,6 @@ function compatibleTarget(
   return forms.kanji.length > 0
     ? hasEvery(target.kanji, forms.kanji) && hasEvery(target.kana, forms.kana)
     : target.kanji.length === 0 && hasEvery(target.kana, forms.kana);
-}
-
-function propertyKey(emission: ConjugationEmission): string {
-  const property = emission.second ?? emission.first;
-  return JSON.stringify([property.pos, property.type, property.negative, property.formal]);
 }
 
 function memberKey(rootSeq: number, targetSeq: number, viaTargetSeq: number | null): string {
@@ -271,7 +261,7 @@ class PhysicalTargetPool {
       return { target: candidate, created: false };
     }
     const conjugatable = emission.stage === 'primary'
-      && [5, 6, 7, 8, 53].includes(emission.first.type);
+      && SECONDARY_SOURCE_TYPES.has(emission.first.type);
     const target: PhysicalTarget = {
       seq: this.#nextSeq++,
       kanji: forms.kanji,
@@ -347,7 +337,7 @@ function expandSecondaryPhysicalForms(
     if (form.secondRule === null) {
       throw new Error(`Secondary emission ${emission.rootSeq} has a primary physical form`);
     }
-    rules.set(ruleDeclarationKey(form.secondRule), form.secondRule);
+    rules.set(emissionRuleKey(form.secondRule), form.secondRule);
   }
   const intermediates = new Set(sources
     .map(form => form.text)
@@ -419,7 +409,7 @@ export class PhysicalTargetAllocator {
       parts: [emission.rootSeq, target.seq, viaTargetSeq ?? null] as const,
       properties: new Set<string>()
     };
-    member.properties.add(propertyKey(emission));
+    member.properties.add(conjugationPropertyKey(emission.second ?? emission.first));
     this.#members.set(physicalMemberKey, member);
     return binding;
   }

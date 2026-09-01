@@ -1,15 +1,15 @@
 import type { AnalyzerSupportCollisionSource } from '../browser-pack/analyzer-support.js';
-import type {
-  CompiledMorphologyArtifact,
-  CompiledMorphologyRule
-} from '../browser-pack/morphology-format.js';
+import type { CompiledMorphologyArtifact } from '../browser-pack/morphology-format.js';
 import {
   conjugationEmissionKey,
-  type ConjugationEmission,
-  type EmissionRule
+  type ConjugationEmission
 } from './conjugation-emissions.js';
 import type { PhysicalConjugationResult } from './conjugation-emissions-physical.js';
 import type { CanonicalEntry, CanonicalRoute, CanonicalSense } from './model.js';
+import {
+  compiledMorphologyRuleKey,
+  emissionRuleKey
+} from './conjugation-identity.js';
 
 const NONE = 0xffff_ffff;
 const OBSOLETE = new Set(['arch', 'obsc', 'rare']);
@@ -94,24 +94,6 @@ export function canonicalCollisionEntryFacts(entry: CanonicalEntry): CollisionEn
   };
 }
 
-function ruleKey(rule: CompiledMorphologyRule): string {
-  return JSON.stringify(rule);
-}
-
-function emissionRuleKey(rule: EmissionRule): string {
-  return JSON.stringify({
-    pos: rule.pos,
-    type: rule.type,
-    negative: rule.negative,
-    formal: rule.formal,
-    ordinal: rule.order,
-    stem: rule.stem,
-    okuri: rule.okuri,
-    euphr: rule.euphr,
-    euphk: rule.euphk
-  });
-}
-
 function routeCode(route: CanonicalRoute): number {
   return route === 'kana' ? 0 : 1;
 }
@@ -157,7 +139,9 @@ export function compileAnalyzerSupportCollisions(
     }
     bindings.set(binding.emissionKey, binding);
   }
-  const ruleIds = new Map(morphology.rules.map((rule, id) => [ruleKey(rule), id]));
+  const ruleIds = new Map(morphology.rules.map((rule, id) => [
+    compiledMorphologyRuleKey(rule), id
+  ]));
   const tombstones = new Set(morphology.tombstones.map(value => tombstoneKey(
     value.route,
     value.surface,

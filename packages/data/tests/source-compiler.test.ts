@@ -8,10 +8,6 @@ import { buildDetailStore } from '../src/browser-pack/details.js';
 import { buildRootPayload } from '../src/browser-pack/root-payload.js';
 import { deriveBestReadings } from '../src/source-compiler/best-readings.js';
 import {
-  SourceConjugations,
-  conjugateCanonicalEntry
-} from '../src/source-compiler/conjugation.js';
-import {
   parseJmdictEntry,
   streamJmdictXml
 } from '../src/source-compiler/jmdict.js';
@@ -20,11 +16,7 @@ import {
   loadKanjidicHintReadings
 } from '../src/source-compiler/kanjidic-hints.js';
 import { CanonicalLexicon } from '../src/source-compiler/lexicon.js';
-import type {
-  CanonicalEntry,
-  CanonicalForm,
-  CanonicalSense
-} from '../src/source-compiler/model.js';
+import type { CanonicalEntry } from '../src/source-compiler/model.js';
 import {
   canonicalDetailEntries,
   canonicalRootPayloadSource
@@ -48,36 +40,6 @@ const XML = `<entry>
 
 function parsed(): CanonicalEntry {
   return parseJmdictEntry(XML, 'test-jmdict', 7);
-}
-
-function form(text: string, ordinal: number): CanonicalForm {
-  return {
-    text,
-    ordinal,
-    sourceOrder: { event: 0, ordinal },
-    common: null,
-    priorityTags: [],
-    conjugatable: true,
-    noKanji: false,
-    best: null
-  };
-}
-
-function verbEntry(): CanonicalEntry {
-  const sense: CanonicalSense = {
-    ordinal: 0,
-    glosses: ['to write'],
-    properties: [{ tag: 'pos', text: 'v5k', ordinal: 0, sourceOrder: { event: 0, ordinal: 0 } }]
-  };
-  return {
-    seq: 1544960,
-    source: { sourceId: 'fixture', ordinal: 0 },
-    kanji: [form('書く', 0)],
-    kana: [form('かく', 0)],
-    senses: [sense],
-    restrictions: [],
-    primaryNoKanji: false
-  };
 }
 
 describe('source-native JMdict projection', () => {
@@ -144,57 +106,6 @@ describe('source-native JMdict projection', () => {
     lexicon.add(custom);
     expect(lexicon.demoteRoot(2611370).kanji[0]?.text).toBe('為り');
     expect(lexicon.entries().map(entry => entry.seq)).toEqual([900000]);
-  });
-});
-
-describe('source-native conjugation slice', () => {
-  test('reproduces a primary form and a secondary chain', () => {
-    const primary = conjugateCanonicalEntry(verbEntry(), { types: new Set([2, 5]) });
-    const past = primary.find(value =>
-      value.property.type === 2 && value.property.negative === false && value.property.formal === false);
-    expect(past?.forms.map(value => value.text)).toEqual(['書いた', 'かいた']);
-
-    const potential = primary.find(value =>
-      value.property.type === 5 && value.property.negative === false && value.property.formal === false);
-    expect(potential?.forms.map(value => value.text)).toEqual(['書ける', 'かける']);
-
-    const intermediate: CanonicalEntry = {
-      ...verbEntry(),
-      seq: 3_000_000,
-      kanji: [form('書ける', 0)],
-      kana: [form('かける', 0)]
-    };
-    const secondary = conjugateCanonicalEntry(intermediate, {
-      positions: ['v1'],
-      types: new Set([2])
-    });
-    const chainedPast = secondary.find(value =>
-      value.property.negative === false && value.property.formal === false);
-    expect(chainedPast?.forms.map(value => value.text)).toEqual(['書けた', 'かけた']);
-  });
-
-  test('reuses the lowest compatible physical target', () => {
-    const past = conjugateCanonicalEntry(verbEntry(), { types: new Set([2]) }).find(value =>
-      value.property.negative === false && value.property.formal === false)!;
-    const generated = new SourceConjugations([
-      {
-        seq: 2_900_000,
-        kanji: ['書いた', '書きました'],
-        kana: ['かいた'],
-        conjugatable: false,
-        allocationOrdinal: 0
-      },
-      {
-        seq: 2_900_001,
-        kanji: ['書いた'],
-        kana: ['かいた'],
-        conjugatable: false,
-        allocationOrdinal: 1
-      }
-    ], 3_000_000);
-
-    expect(generated.add(1544960, null, past).target).toBe(2_900_000);
-    expect(generated.targets).toHaveLength(2);
   });
 });
 

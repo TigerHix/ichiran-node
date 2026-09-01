@@ -11,6 +11,7 @@ import {
 } from './conjugation-emission-order.js';
 import type { ConjugationEmission, EmissionForm } from './conjugation-emissions.js';
 import type { CanonicalEntry, ConjugationProperty } from './model.js';
+import { sameConjugationProperty } from './conjugation-identity.js';
 import {
   omitsConjugationReadingLineage,
   type ConjugationReadingLineageCompatibilityRow
@@ -52,13 +53,6 @@ function property(value: CompiledMorphologyArtifact['rules'][number]): Conjugati
   };
 }
 
-function sameProperty(left: ConjugationProperty, right: ConjugationProperty): boolean {
-  return left.pos === right.pos
-    && left.type === right.type
-    && left.negative === right.negative
-    && left.formal === right.formal;
-}
-
 function matches(
   filter: RelationFilter,
   emission: ConjugationEmission,
@@ -67,10 +61,10 @@ function matches(
   return filter.rootSeq === emission.rootSeq
     && filter.route === form.route
     && filter.surface === form.surface
-    && sameProperty(filter.first, emission.first)
+    && sameConjugationProperty(filter.first, emission.first)
     && (filter.second === null
       ? emission.second === null
-      : emission.second !== null && sameProperty(filter.second, emission.second));
+      : emission.second !== null && sameConjugationProperty(filter.second, emission.second));
 }
 
 function tombstoneFilters(morphology: CompiledMorphologyArtifact): RelationFilter[] {

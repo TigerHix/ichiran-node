@@ -1,10 +1,8 @@
 import { fileURLToPath } from 'node:url';
 import { describe, expect, test } from 'bun:test';
 import { openMorphology } from '../../core/src/morphology.js';
-import {
-  buildMorphology,
-  compileMorphology
-} from '../src/browser-pack/morphology-compiler.js';
+import { buildMorphology } from '../src/browser-pack/morphology-compiler.js';
+import { compileMorphology } from '../src/browser-pack/morphology-compiler-oracle.js';
 
 const roots = [
   {

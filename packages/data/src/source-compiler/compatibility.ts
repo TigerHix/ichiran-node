@@ -7,6 +7,7 @@ import type {
   SensePropertyTag
 } from './model.js';
 import type { EmissionRule } from './conjugation-emissions.js';
+import { sameEmissionRule } from './conjugation-identity.js';
 
 export interface KanjidicCompatibilityRow extends KanjidicHintCompatibility {
   readonly id: string;
@@ -122,18 +123,6 @@ export function physicalTargetOrderCompatibility(
   );
 }
 
-function sameRule(left: EmissionRule, right: EmissionRule): boolean {
-  return left.pos === right.pos
-    && left.type === right.type
-    && left.negative === right.negative
-    && left.formal === right.formal
-    && left.order === right.order
-    && left.stem === right.stem
-    && left.okuri === right.okuri
-    && left.euphr === right.euphr
-    && left.euphk === right.euphk;
-}
-
 /** True when the historical reading omission removes this exact route/form path. */
 export function omitsConjugationReadingLineage(
   row: ConjugationReadingLineageCompatibilityRow,
@@ -148,10 +137,10 @@ export function omitsConjugationReadingLineage(
   return row.seq === value.rootSeq
     && row.route === value.route
     && row.sourceText === value.sourceText
-    && (sameRule(row.rule, value.firstRule)
+    && (sameEmissionRule(row.rule, value.firstRule)
       || (row.lineageStep === 'either'
         && value.secondRule !== null
-        && row.secondaryRules.some(rule => sameRule(rule, value.secondRule!))));
+        && row.secondaryRules.some(rule => sameEmissionRule(rule, value.secondRule!))));
 }
 
 export function applyCanonicalCompatibility(

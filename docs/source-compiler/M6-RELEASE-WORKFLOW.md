@@ -4,8 +4,8 @@ The release command has two concrete modes. Both compile the same TypeScript
 semantic model, stream generated conjugations through bounded binary spools,
 invoke the existing Rust surface-index compiler, and write pack format v1.
 Neither mode resolves or loads the PostgreSQL reference package or configures a
-database. The browser-pack modules retain separately callable migration-oracle
-loaders, but the release calls only their compiler-owned semantic-input builders.
+database. Separate browser-pack `*-oracle.ts` modules retain the migration
+loaders, while the release imports only compiler-owned semantic-input builders.
 
 ## Qualified January baseline
 
@@ -24,68 +24,12 @@ Baseline mode also reads and validates
 `data/source-compiler-generated-order-attestation.json`. That compact input
 requires the exhaustive generated candidate universe to close with zero
 source-only, qualified-only, reverse-only, rank or collision gaps, and records
-the reviewed source-native scheduling deltas. Its `releaseGate` is atomic: it is
-either `null`, which always fails, or it pins both analyzer sections on both
-sides together with every artifact count. A mismatch in one byte identity or
-one count hard-fails; there is no section-name allowlist or update-mode bypass.
-
-The completed development probe failed before publication as designed and
-printed the complete candidate. It took 7:28.92, peaked at 22,020,276 KiB RSS,
-and used no swaps. The stderr and timing evidence have SHA-256 identities
-`1e2c0db376f69c39093653ba2aac118b8fd0d53708c69c9cb0eb9224adad13b3`
-and `b1598a2970ca1b05fbc13499be30f4a9050a2195afb6ef0279876683b5a19bc9`.
-
-The final analyzer-support sections are both 949,424 bytes. The source SHA-256
-is `f600a57d489a4745184f6cc620a808d7d622e6078e778dbed50f145590a574bb`;
-the qualified SHA-256 is
-`24632918fa8b5116b983946281107e53ad6e8ac728b517121e6aa9c4955a14f0`.
-Every support count is exact:
-
-| Count | Source | Qualified | Delta |
-| --- | ---: | ---: | ---: |
-| suffixKeys | 5,532 | 5,532 | 0 |
-| suffixValues | 5,533 | 5,533 | 0 |
-| suffixClasses | 3,586 | 3,586 | 0 |
-| counterKeys | 760 | 760 | 0 |
-| counterVariants | 799 | 799 | 0 |
-| collisions | 5,442 | 5,442 | 0 |
-| generatedRules | 1,161 | 1,161 | 0 |
-| generatedAliases | 1,030 | 1,030 | 0 |
-
-The source analyzer-annotations section is 3,421,680 bytes with SHA-256
-`6b4078d0ae47c0081cfc8db6e9c7f0f10c7c933e8e9ec5158cabe85f5983444e`.
-The qualified section is 3,531,024 bytes with SHA-256
-`2ba1615e1a08dbfe458dd8a4ca89201e25aed58844531769dd7bbc0ac26de592`.
-The gate pins the complete count pair, not only the nonzero deltas:
-
-| Count | Source | Qualified | Delta |
-| --- | ---: | ---: | ---: |
-| blocks | 842 | 842 | 0 |
-| splits | 38,032 | 38,032 | 0 |
-| hints | 36,885 | 36,885 | 0 |
-| generatedBlocks | 36 | 37 | -1 |
-| generatedRoots | 20,347 | 20,347 | 0 |
-| generatedRecords | 764,243 | 764,828 | -585 |
-| lookupOrderRecords | 341,506 | 340,437 | 1,069 |
-| lookupOrderRoots | 9,630 | 9,635 | -5 |
-| lookupOrderBytes | 1,366,024 | 1,361,748 | 4,276 |
-| lookupOrderExceptionSurfaces | 0 | 1,623 | -1,623 |
-| lookupOrderExceptionClasses | 0 | 3,895 | -3,895 |
-| lookupOrderExceptionLocators | 0 | 4,212 | -4,212 |
-| lookupOrderExceptionBytes | 0 | 79,908 | -79,908 |
-| generatedPhysicalGroups | 169,649 | 170,717 | -1,068 |
-| generatedFactPairs | 81 | 80 | 1 |
-| indexBytes | 184,200 | 264,128 | -79,928 |
-| uncompressedBytes | 23,220,023 | 23,255,989 | -35,966 |
-| compressedBytes | 3,237,473 | 3,266,889 | -29,416 |
-| annotationUncompressedBytes | 13,804,197 | 13,838,577 | -34,380 |
-| annotationCompressedBytes | 811,988 | 816,578 | -4,590 |
-| generatedUncompressedBytes | 9,415,826 | 9,417,412 | -1,586 |
-| generatedCompressedBytes | 2,425,485 | 2,450,311 | -24,826 |
-| totalBytes | 3,421,680 | 3,531,024 | -109,344 |
-| largestUncompressedBlock | 326,926 | 326,926 | 0 |
-| largestGeneratedBlock | 262,130 | 262,144 | -14 |
-| largestGeneratedCompressedBlock | 77,596 | 78,022 | -426 |
+the reviewed source-native scheduling deltas. Its `releaseGate` is mandatory and
+pins both analyzer sections on both sides together with every artifact count. A
+mismatch in one byte identity or one count hard-fails; there is no section-name
+allowlist. The attestation is the sole numeric source of truth for these section
+identities and count groups. Tests validate its schema and closure invariants
+without copying those values into a second fixture or table.
 
 ```sh
 bun scripts/source-compiler-release.ts baseline \
@@ -93,11 +37,12 @@ bun scripts/source-compiler-release.ts baseline \
   --pack-version ichiran-260118-source
 ```
 
-The command normally requires a clean checkout. `--allow-dirty` exists only for
-development runs whose manifest commit cannot describe all local edits. The
-command records the full 40-character commit, checks the checkout before work,
-and checks the same commit and clean state again immediately before atomically
-activating the finished generation.
+The command requires a clean checkout. There is no release option that can
+bypass this rule: the manifest's full 40-character commit describes the code
+and tracked inputs, while the verified source-lock digest describes every
+pinned external input. The command checks the checkout before work, then checks
+the same commit and clean state again immediately before atomically activating
+the finished generation.
 
 ## PostgreSQL-unavailable proof
 
@@ -163,8 +108,6 @@ Build the updated release through the same compiler:
 ```sh
 bun scripts/source-compiler-release.ts update \
   --source-lock data/source-compiler-update-2026-01-02.lock.json \
-  --jmdict work/m6-transition/JMdict_e-2026-01-02.gz \
-  --jmdict-source-id edrdg-jmdict-e-2026-01-02 \
   --out work/m6-update-release \
   --pack-version jmdict-2026-01-02-source
 ```
@@ -173,9 +116,10 @@ Update mode deliberately does not compare its changed dictionary bytes to the
 January artifact. It still verifies all pinned inputs, rebuilds every output
 twice where representation is encoded, enforces release size limits, verifies
 the staged pack, and records every section digest and count in `stats.json`.
-The CLI requires an explicit update lock and rejects the baseline JMdict path or
-identity in this mode, so `update` cannot be used merely to turn off the January
-comparison.
+The CLI requires an explicit update lock. That verified lock names the one
+JMdict file and identity used by the compiler; the path and identity cannot be
+overridden separately. Update-versus-baseline is decided from the pinned file's
+SHA-256, so copying or renaming the January bytes cannot turn off comparison.
 
 A later September 1 snapshot was also tested as a transition candidate. Its
 source semantics compiled, but its installed hot pack was 25,273,024 bytes,
@@ -202,15 +146,11 @@ release roots:
 ```sh
 bun scripts/source-compiler-release.ts update \
   --source-lock data/source-compiler-update-2026-01-02.lock.json \
-  --jmdict work/m6-transition/JMdict_e-2026-01-02.gz \
-  --jmdict-source-id edrdg-jmdict-e-2026-01-02 \
   --out work/m6-update-release-a \
   --pack-version jmdict-2026-01-02-source
 
 bun scripts/source-compiler-release.ts update \
   --source-lock data/source-compiler-update-2026-01-02.lock.json \
-  --jmdict work/m6-transition/JMdict_e-2026-01-02.gz \
-  --jmdict-source-id edrdg-jmdict-e-2026-01-02 \
   --out work/m6-update-release-b \
   --pack-version jmdict-2026-01-02-source
 ```
@@ -230,6 +170,5 @@ release_b=$(readlink -f work/m6-update-release-b)
 diff -u /tmp/ichiran-update-a.sha256 /tmp/ichiran-update-b.sha256
 ```
 
-An empty diff is the two-release determinism proof. Do not use `--allow-dirty`
-for this gate: both runs must record the same clean 40-character source commit
-and the same verified update-lock digest.
+An empty diff is the two-release determinism proof. Both runs must record the
+same clean 40-character source commit and the same verified update-lock digest.

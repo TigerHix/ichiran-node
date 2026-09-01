@@ -3,16 +3,19 @@ import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import type { BrowserAlphaArtifactCounts } from '../src/browser-pack/release-orchestration.js';
 import {
+  parseGeneratedOrderAttestation,
+  parseRootPayloadOrderAttestation,
+  type GeneratedOrderReleaseGate
+} from '../src/source-compiler/release-evidence.js';
+import {
   artifactIdentities,
   compareArtifactCounts,
   compareQualifiedArtifactBytes,
   compareQualifiedArtifactCounts,
-  generatedOrderReleaseGateCandidate,
-  parseGeneratedOrderAttestation,
-  parseRootPayloadOrderAttestation,
   parseSurfaceCompilerStats,
   type QualifiedArtifactBytes
-} from '../src/source-compiler/release-evidence.js';
+} from '../src/source-compiler/release-comparison.js';
+import { assertSourceCompilerReleaseMode } from '../src/source-compiler/source-lock.js';
 
 const data = resolve(import.meta.dir, '../../../data');
 
@@ -33,13 +36,65 @@ function counts(
   positions = 1
 ): BrowserAlphaArtifactCounts {
   return {
-    surfaceIndex: { input: 1 },
-    rootPayload: { surfaces: 1 },
-    morphology: { positions },
-    analyzerSupport: { suffixKeys: support },
-    annotations: { blocks: annotations },
-    details: { entries: 3 }
-  } as unknown as BrowserAlphaArtifactCounts;
+    surfaceIndex: {
+      input: 1, accepted: 0, direct: 0, morphology: 0, overlap: 0, omitted: 0,
+      states: 0, edges: 0
+    },
+    rootPayload: { surfaces: 1, forms: 0, entries: 0, restrictions: 0 },
+    morphology: {
+      positions, rules: 0, templates: 0, suffixes: 0, rootKeys: 0, rootGroups: 0,
+      patches: 0, tombstones: 0
+    },
+    analyzerSupport: {
+      suffixKeys: support, suffixValues: 0, suffixClasses: 0, counterKeys: 0,
+      counterVariants: 0, collisions: 0, generatedRules: 0, generatedAliases: 0
+    },
+    annotations: {
+      blocks: annotations, splits: 0, hints: 0, generatedBlocks: 0, generatedRoots: 0,
+      generatedRecords: 0, lookupOrderRecords: 0, lookupOrderRoots: 0,
+      lookupOrderBytes: 0, lookupOrderExceptionSurfaces: 0,
+      lookupOrderExceptionClasses: 0, lookupOrderExceptionLocators: 0,
+      lookupOrderExceptionBytes: 0, generatedPhysicalGroups: 0, generatedFactPairs: 0,
+      indexBytes: 0, uncompressedBytes: 0, compressedBytes: 0,
+      annotationUncompressedBytes: 0, annotationCompressedBytes: 0,
+      generatedUncompressedBytes: 0, generatedCompressedBytes: 0, totalBytes: 0,
+      largestUncompressedBlock: 0, largestGeneratedBlock: 0,
+      largestGeneratedCompressedBlock: 0
+    },
+    details: { entries: 3, forms: 0, senses: 0, glosses: 0, properties: 0 }
+  };
+}
+
+function testReleaseGate(
+  source: QualifiedArtifactBytes,
+  qualified: QualifiedArtifactBytes,
+  sourceCounts: BrowserAlphaArtifactCounts,
+  qualifiedCounts: BrowserAlphaArtifactCounts
+): GeneratedOrderReleaseGate {
+  const sourceIdentities = artifactIdentities(source);
+  const qualifiedIdentities = artifactIdentities(qualified);
+  return {
+    source: {
+      analyzerSupport: {
+        ...sourceIdentities.analyzerSupport,
+        counts: { ...sourceCounts.analyzerSupport }
+      },
+      analyzerAnnotations: {
+        ...sourceIdentities.analyzerAnnotations,
+        counts: { ...sourceCounts.annotations }
+      }
+    },
+    qualified: {
+      analyzerSupport: {
+        ...qualifiedIdentities.analyzerSupport,
+        counts: { ...qualifiedCounts.analyzerSupport }
+      },
+      analyzerAnnotations: {
+        ...qualifiedIdentities.analyzerAnnotations,
+        counts: { ...qualifiedCounts.annotations }
+      }
+    }
+  };
 }
 
 function exactRootReview() {
@@ -85,41 +140,16 @@ describe('source release evidence', () => {
     ));
     const value = JSON.parse(bytes.toString('utf8'));
     const attestation = parseGeneratedOrderAttestation(value);
-    expect(attestation.sourceProjection).toMatchObject({
-      semanticPaths: 2_468_434,
-      matchedPaths: 2_468_441,
-      records: 733_451,
-      physicalGroups: 169_649
-    });
-    expect(attestation.lookupUniverse).toMatchObject({
-      comparedSurfaces: 212_198,
-      exactSurfaces: 173_111,
-      changedSurfaces: 39_087,
-      groupingChanges: 9_799,
-      orderingOnlyChanges: 29_288,
-      winnerChanges: 35_306,
-      sourceLocators: 548_607,
-      qualifiedLocators: 548_607
-    });
-    expect(attestation.lookupUniverse.fullEvidence.sha256)
-      .toBe('6160662ad10a4c4dade2fef1b11dbfb689cf4f55ab225862f6b77435be2c708e');
-    expect(attestation.qualifiedAccounting).toMatchObject({
-      declaredAmbiguousSurfaces: 208_352,
-      reachableAmbiguousSurfaces: 208_351,
-      unreachableSurface: 'コケさせ'
-    });
-    expect(attestation.releaseGate).toMatchObject({
-      source: {
-        analyzerSupport: {
-          bytes: 949_424,
-          sha256: 'f600a57d489a4745184f6cc620a808d7d622e6078e778dbed50f145590a574bb'
-        },
-        analyzerAnnotations: {
-          bytes: 3_421_680,
-          sha256: '6b4078d0ae47c0081cfc8db6e9c7f0f10c7c933e8e9ec5158cabe85f5983444e'
-        }
-      }
-    });
+    expect(attestation.releaseGate.source.analyzerSupport.counts).not.toEqual({});
+    expect(attestation.releaseGate.source.analyzerAnnotations.counts).not.toEqual({});
+    const missingGate = structuredClone(value);
+    delete missingGate.releaseGate;
+    expect(() => parseGeneratedOrderAttestation(missingGate))
+      .toThrow('Generated-order attestation omits its atomic release gate');
+    const nullGate = structuredClone(value);
+    nullGate.releaseGate = null;
+    expect(() => parseGeneratedOrderAttestation(nullGate))
+      .toThrow('Generated-order release gate must be an object');
     value.lookupUniverse.reversePackedOnlyLocators = 1;
     expect(() => parseGeneratedOrderAttestation(value))
       .toThrow('Generated lookup proof has unresolved reversePackedOnlyLocators');
@@ -142,15 +172,7 @@ describe('source release evidence', () => {
       `${data}/source-compiler-generated-order-attestation.json`,
       'utf8'
     ));
-    const nullValue = structuredClone(value);
-    nullValue.releaseGate = null;
-    const nullReview = {
-      attestationSha256: 'unpopulated-generated-order',
-      attestation: parseGeneratedOrderAttestation(nullValue)
-    };
-    expect(() => compareQualifiedArtifactCounts(sourceCounts, qualifiedCounts, nullReview))
-      .toThrow('Generated-order release gate has no pinned source section identities');
-    value.releaseGate = generatedOrderReleaseGateCandidate(
+    value.releaseGate = testReleaseGate(
       source,
       qualified,
       sourceCounts,
@@ -269,16 +291,9 @@ describe('source release evidence', () => {
   });
 
   test('reports count differences by exact field', () => {
-    const counts = (input: number): BrowserAlphaArtifactCounts => ({
-      surfaceIndex: { input },
-      rootPayload: {},
-      morphology: {},
-      analyzerSupport: {},
-      annotations: {},
-      details: { entries: 3 }
-    } as unknown as BrowserAlphaArtifactCounts);
-    const source = counts(2);
-    const qualified = counts(1);
+    const base = counts(0, 0);
+    const source = { ...base, surfaceIndex: { ...base.surfaceIndex, input: 2 } };
+    const qualified = { ...base, surfaceIndex: { ...base.surfaceIndex, input: 1 } };
     expect(compareArtifactCounts(source, qualified)).toEqual([
       { path: 'surfaceIndex.input', source: 2, qualified: 1 }
     ]);
@@ -312,31 +327,12 @@ describe('source release evidence', () => {
     expect(stdout.trim()).toBe('source-release-import-ok');
   });
 
-  test('does not let update mode disable comparison for the baseline source', async () => {
-    const child = Bun.spawn([
-      process.execPath,
-      'scripts/source-compiler-release.ts',
-      'update',
-      '--out',
-      'work/not-written',
-      '--pack-version',
-      'test',
-      '--source-lock',
-      'data/source-compiler-sources.lock.json',
-      '--jmdict',
-      'packages/data/JMdict_e.gz',
-      '--jmdict-source-id',
-      'edrdg-jmdict-e-2026-01-01'
-    ], {
-      cwd: resolve(import.meta.dir, '../../..'),
-      stdout: 'pipe',
-      stderr: 'pipe'
-    });
-    const [status, stderr] = await Promise.all([
-      child.exited,
-      new Response(child.stderr).text()
-    ]);
-    expect(status).not.toBe(0);
-    expect(stderr).toContain('update requires a non-baseline JMdict path and source identity');
+  test('does not let update mode disable comparison for renamed baseline bytes', () => {
+    expect(() => assertSourceCompilerReleaseMode('update', {
+      sha256: '92eb77d60e5b949585e41a777ff3857c412bc97ea75444d14497a5156b6264b7'
+    })).toThrow('Update mode cannot use the qualified baseline JMdict identity');
+    expect(() => assertSourceCompilerReleaseMode('baseline', {
+      sha256: '34cc33abe2ae37a8572a9a45ce68c5e7fb6ccccd55c021366eb4fa6c49f6c90c'
+    })).toThrow('Baseline mode requires the qualified baseline JMdict identity');
   });
 });

@@ -35,6 +35,7 @@ describe('source compiler lock', () => {
       await writeFile(join(repository, 'two.txt'), 'two');
       const lock = {
         formatVersion: 1,
+        jmdictSourceId: 'one',
         baseline: {
           qualifiedArtifactTag: 'baseline',
           upstreamIchiranCommit: 'upstream',
@@ -56,11 +57,32 @@ describe('source compiler lock', () => {
       );
       const result = await verifySourceCompilerLock(repository);
       expect(result.files.map(value => value.path)).toEqual(['one.txt', 'two.txt']);
+      expect(result.jmdict).toMatchObject({ id: 'one', path: 'one.txt', bytes: 3 });
       expect(result.lock.sources).toHaveLength(3);
       await writeFile(join(repository, 'two.txt'), 'changed');
       await expect(verifySourceCompilerLock(repository)).rejects.toThrow('Locked source two.txt');
     } finally {
       await rm(repository, { recursive: true, force: true });
     }
+  });
+
+  test('requires the JMdict identity to name exactly one pinned file source', () => {
+    const baseline = {
+      qualifiedArtifactTag: 'baseline',
+      upstreamIchiranCommit: 'upstream',
+      upstreamDataReleaseTag: 'data'
+    };
+    expect(() => parseSourceCompilerLock({
+      formatVersion: 1,
+      jmdictSourceId: 'missing',
+      baseline,
+      sources: [{ id: 'one', pinnedPath: 'one', pinnedBytes: 1, pinnedSha256: '0'.repeat(64) }]
+    })).toThrow('JMdict source id must name one pinned file');
+    expect(() => parseSourceCompilerLock({
+      formatVersion: 1,
+      jmdictSourceId: 'external',
+      baseline,
+      sources: [{ id: 'external' }]
+    })).toThrow('JMdict source id must name one pinned file');
   });
 });

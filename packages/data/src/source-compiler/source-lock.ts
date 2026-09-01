@@ -8,6 +8,9 @@ interface LockedFile {
   readonly sha256: string;
 }
 
+export const QUALIFIED_BASELINE_JMDICT_SHA256 =
+  '92eb77d60e5b949585e41a777ff3857c412bc97ea75444d14497a5156b6264b7';
+
 type LockedSource =
   | { readonly id: string; readonly kind: 'authority'; }
   | { readonly id: string; readonly kind: 'file'; readonly file: LockedFile; }
@@ -15,6 +18,7 @@ type LockedSource =
 
 export interface SourceCompilerLock {
   readonly formatVersion: 1;
+  readonly jmdictSourceId: string;
   readonly baseline: {
     readonly qualifiedArtifactTag: string;
     readonly upstreamIchiranCommit: string;
@@ -33,6 +37,25 @@ export interface VerifiedSourceCompilerLock {
     readonly bytes: number;
     readonly sha256: string;
   }[];
+  readonly jmdict: {
+    readonly id: string;
+    readonly path: string;
+    readonly bytes: number;
+    readonly sha256: string;
+  };
+}
+
+export function assertSourceCompilerReleaseMode(
+  mode: 'baseline' | 'update',
+  jmdict: { readonly sha256: string; }
+): void {
+  const isQualifiedBaseline = jmdict.sha256 === QUALIFIED_BASELINE_JMDICT_SHA256;
+  if (mode === 'baseline' && !isQualifiedBaseline) {
+    throw new Error('Baseline mode requires the qualified baseline JMdict identity');
+  }
+  if (mode === 'update' && isQualifiedBaseline) {
+    throw new Error('Update mode cannot use the qualified baseline JMdict identity');
+  }
 }
 
 function sha256(bytes: Uint8Array): string {
@@ -127,8 +150,14 @@ export function parseSourceCompilerLock(value: unknown): SourceCompilerLock {
   if (new Set(sources.map(item => item.id)).size !== sources.length) {
     throw new Error('Source compiler lock contains duplicate source ids');
   }
+  const jmdictSourceId = text(row.jmdictSourceId, 'JMdict source id');
+  const jmdictSource = sources.find(item => item.id === jmdictSourceId);
+  if (!jmdictSource || jmdictSource.kind !== 'file') {
+    throw new Error('JMdict source id must name one pinned file');
+  }
   return {
     formatVersion: 1,
+    jmdictSourceId,
     baseline: {
       qualifiedArtifactTag: text(baseline.qualifiedArtifactTag, 'Qualified artifact tag'),
       upstreamIchiranCommit: text(baseline.upstreamIchiranCommit, 'Upstream Ichiran commit'),
@@ -176,5 +205,7 @@ export async function verifySourceCompilerLock(
       files.push({ id: item.id, path: expected.path, bytes: actual.byteLength, sha256: actualSha256 });
     }
   }
-  return { lock, bytes, sha256: sha256(bytes), files };
+  const jmdict = files.find(file => file.id === lock.jmdictSourceId);
+  if (!jmdict) throw new Error('Verified source lock has no JMdict file');
+  return { lock, bytes, sha256: sha256(bytes), files, jmdict };
 }

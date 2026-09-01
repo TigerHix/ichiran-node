@@ -69,37 +69,6 @@ export interface ConjugationProperty {
   readonly formal: boolean | null;
 }
 
-export interface GeneratedForm {
-  readonly route: CanonicalRoute;
-  readonly text: string;
-  readonly sourceText: string;
-  readonly sourceOrdinal: number;
-  readonly ruleOrdinal: number;
-}
-
-export interface GeneratedTarget {
-  readonly seq: number;
-  readonly kanji: readonly string[];
-  readonly kana: readonly string[];
-  readonly conjugatable: boolean;
-  readonly allocationOrdinal: number;
-}
-
-export interface ConjugationCandidate {
-  readonly property: ConjugationProperty;
-  readonly forms: readonly GeneratedForm[];
-  readonly targetConjugatable: boolean;
-}
-
-export interface ConjugationLink {
-  readonly ordinal: number;
-  readonly from: number;
-  readonly target: number;
-  readonly via: number | null;
-  readonly property: ConjugationProperty;
-  readonly forms: readonly GeneratedForm[];
-}
-
 export function entryPartOfSpeech(entry: CanonicalEntry): string[] {
   const result: string[] = [];
   const seen = new Set<string>();

@@ -16,6 +16,7 @@ import {
   type CanonicalRoute,
   type ConjugationProperty
 } from './model.js';
+import { conjugationPropertyKey } from './conjugation-identity.js';
 
 const NON_CONJUGATING_POSITIONS = new Set(DO_NOT_CONJUGATE);
 const NON_CONJUGATING_ENTRIES = new Set(DO_NOT_CONJUGATE_SEQ);
@@ -92,15 +93,6 @@ function semanticPosition(position: string): string {
   return position === 'cop-da' ? 'cop' : position;
 }
 
-function propertyKey(property: ConjugationProperty): string {
-  return JSON.stringify([
-    property.pos,
-    property.type,
-    property.negative,
-    property.formal
-  ]);
-}
-
 function effectiveRule(position: string, rule: ConjugationRule, peers: readonly ConjugationRule[]): EmissionRule {
   const sameType = peers.filter(peer => peer.conj === rule.conj);
   return {
@@ -123,8 +115,8 @@ function formKey(form: EmissionForm): string {
     form.sourceText,
     form.physicalCounterpart,
     form.intermediate,
-    propertyKey(form.firstRule),
-    form.secondRule === null ? null : propertyKey(form.secondRule)
+    conjugationPropertyKey(form.firstRule),
+    form.secondRule === null ? null : conjugationPropertyKey(form.secondRule)
   ]);
 }
 
@@ -196,7 +188,7 @@ export function emitPrimaryConjugations(
         const surface = constructConjugation(source.text, rule);
         if (original.has(surface.normalize('NFKC').trim())) return;
         const applied = effectiveRule(position, rule, rules);
-        const key = propertyKey(applied);
+        const key = conjugationPropertyKey(applied);
         const group = groups.get(key) ?? {
           property: applied,
           physicalForms: [],
@@ -280,7 +272,7 @@ export function emitSecondaryConjugations(
       const surface = constructConjugation(source.surface, rule);
       if (intermediates.has(surface.normalize('NFKC').trim())) continue;
       const applied = effectiveRule(secondPosition, rule, rules);
-      const key = propertyKey(applied);
+      const key = conjugationPropertyKey(applied);
       const group = groups.get(key) ?? {
         property: applied,
         physicalForms: [],
@@ -334,8 +326,8 @@ export function emitCanonicalConjugations(entry: CanonicalEntry): ConjugationEmi
 export function conjugationEmissionKey(emission: ConjugationEmission): string {
   return JSON.stringify([
     emission.rootSeq,
-    propertyKey(emission.first),
-    emission.second === null ? null : propertyKey(emission.second),
+    conjugationPropertyKey(emission.first),
+    emission.second === null ? null : conjugationPropertyKey(emission.second),
     emission.physicalForms.map(form => semanticConjugationKey(emission, form)).sort()
   ]);
 }
@@ -350,8 +342,8 @@ export function semanticConjugationKey(
     form.route,
     form.surface,
     form.sourceText,
-    propertyKey(emission.first),
-    emission.second === null ? null : propertyKey(emission.second),
+    conjugationPropertyKey(emission.first),
+    emission.second === null ? null : conjugationPropertyKey(emission.second),
     form.intermediate
   ]);
 }
