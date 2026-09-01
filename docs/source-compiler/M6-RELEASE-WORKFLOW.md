@@ -3,7 +3,9 @@
 The release command has two concrete modes. Both compile the same TypeScript
 semantic model, stream generated conjugations through bounded binary spools,
 invoke the existing Rust surface-index compiler, and write pack format v1.
-Neither mode imports the PostgreSQL reference package or configures a database.
+Neither mode resolves or loads the PostgreSQL reference package or configures a
+database. The browser-pack modules retain separately callable migration-oracle
+loaders, but the release calls only their compiler-owned semantic-input builders.
 
 ## Qualified January baseline
 
@@ -107,25 +109,29 @@ bun test packages/data/tests/source-compiler-release-evidence.test.ts \
   --test-name-pattern 'reference modules are blocked'
 ```
 
-For the milestone gate, run the complete baseline in a Linux user, mount, and
-network namespace. The temporary mount hides the host's PostgreSQL Unix socket;
-the isolated network namespace makes TCP PostgreSQL unreachable. Both probes
-must fail before the compiler starts:
+For the milestone gate, run the complete baseline through the Linux-only
+isolation wrapper. It creates an unprivileged user, mount and network namespace.
+An empty bind mount hides the host's PostgreSQL Unix socket directory, while the
+new network namespace starts with loopback down. The wrapper proves both
+transports are unavailable on ports 5432 and 5433, clears database connection
+environment variables, and only then starts the compiler:
 
 ```sh
-unshare --user --map-root-user --mount --net sh -eu -c '
-  mount -t tmpfs -o mode=700 tmpfs /var/run/postgresql
-  ! pg_isready -q
-  ! pg_isready -q -h 127.0.0.1 -p 5432
-  exec env -u DATABASE_URL -u ICHIRAN_DB_URL \
-    bun scripts/source-compiler-release.ts baseline \
-      --out work/m6-source-release-no-postgres \
-      --pack-version ichiran-260118-source
-'
+sh scripts/source-compiler-release-no-postgres.sh baseline \
+  --out work/m6-source-release-no-postgres \
+  --pack-version ichiran-260118-source
 ```
 
 This is the final availability proof, not merely an invalid connection string:
 neither a local socket nor a network route exists inside the build namespace.
+The wrapper never stops or reconfigures the host PostgreSQL service. Its mount
+and network changes disappear when the child exits. A low-cost capability probe
+can be run without starting the compiler:
+
+```sh
+sh scripts/source-compiler-release-no-postgres.sh --probe-only
+```
+
 The command still requires all non-PostgreSQL build dependencies to have been
 installed before entering the network namespace.
 
@@ -169,3 +175,53 @@ the staged pack, and records every section digest and count in `stats.json`.
 The CLI requires an explicit update lock and rejects the baseline JMdict path or
 identity in this mode, so `update` cannot be used merely to turn off the January
 comparison.
+
+Before the full build, run the bounded semantic witness:
+
+```sh
+bun scripts/source-compiler-update-witness.ts
+```
+
+It verifies the complete transition lock, proves that seq 2868547 is absent
+from the January JMdict and present in the September source as `パオーン`, and
+passes that canonical entry through the real surface, root-payload and detail
+encoders twice. The command is a low-memory source/encoder check; it is not a
+substitute for the complete release.
+
+The final update gate builds the same clean commit twice into independent
+release roots:
+
+```sh
+bun scripts/source-compiler-release.ts update \
+  --source-lock data/source-compiler-update-2026-09-01.lock.json \
+  --jmdict work/m6-transition/JMdict_e-2026-09-01.gz \
+  --jmdict-source-id edrdg-jmdict-e-2026-09-01 \
+  --out work/m6-update-release-a \
+  --pack-version jmdict-2026-09-01-source
+
+bun scripts/source-compiler-release.ts update \
+  --source-lock data/source-compiler-update-2026-09-01.lock.json \
+  --jmdict work/m6-transition/JMdict_e-2026-09-01.gz \
+  --jmdict-source-id edrdg-jmdict-e-2026-09-01 \
+  --out work/m6-update-release-b \
+  --pack-version jmdict-2026-09-01-source
+```
+
+Compare the active generation inventories and every published payload byte.
+`manifest.json` and `stats.json` intentionally include the output pack version,
+so use the same `--pack-version` in both commands as shown above:
+
+```sh
+release_a=$(readlink -f work/m6-update-release-a)
+release_b=$(readlink -f work/m6-update-release-b)
+
+(cd "$release_a" && find . -maxdepth 1 -type f -printf '%f\0' \
+  | sort -z | xargs -0 sha256sum) > /tmp/ichiran-update-a.sha256
+(cd "$release_b" && find . -maxdepth 1 -type f -printf '%f\0' \
+  | sort -z | xargs -0 sha256sum) > /tmp/ichiran-update-b.sha256
+diff -u /tmp/ichiran-update-a.sha256 /tmp/ichiran-update-b.sha256
+```
+
+An empty diff is the two-release determinism proof. Do not use `--allow-dirty`
+for this gate: both runs must record the same clean 40-character source commit
+and the same verified update-lock digest.
