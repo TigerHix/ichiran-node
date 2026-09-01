@@ -1,0 +1,26 @@
+{
+  "formatVersion": 1,
+  "rows": [
+    {
+      "id": "kanjidic-kun-yang-kawa",
+      "kind": "kanjidic-reading",
+      "literal": "楊",
+      "reading": "かわ",
+      "type": "ja_kun",
+      "prefix": false,
+      "suffix": false,
+      "provenance": {
+        "qualifiedOracle": "ichiran-260118; dump sha256 98a44e2cc88a65677da8b1f7124e7d6c904253eb1aae0ef16d2c7cc1dacdba82",
+        "historicalEvidence": {
+          "repository": "https://github.com/Top-Ranger/harbour-kanji",
+          "commit": "cad2171c6907d3e72505b45c2c14b2b2f6648f73",
+          "path": "kanjidb.sqlite3",
+          "artifactSha256": "cf3fbbcc155687c04937d3218912a349e35260b436755c8a065f02894c43c930",
+          "kanjidicVersion": "2015-061",
+          "kanjidicDate": "2015-03-02"
+        }
+      },
+      "preservedBehavior": "Preserve legacy matchReadings/easy-hint recognition of かわ as a normal kun reading of 楊."
+    }
+  ]
+}

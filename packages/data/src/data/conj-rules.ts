@@ -6,7 +6,7 @@
 import fs from 'fs';
 import path from 'path';
 import { parse } from 'csv-parse/sync';
-import { testWord } from '@ichiran/reference-postgres';
+import { testWord } from '@ichiran/core';
 
 /**
  * Conjugation rule structure
