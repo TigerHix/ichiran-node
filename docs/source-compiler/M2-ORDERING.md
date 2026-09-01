@@ -16,8 +16,9 @@ JSONL bytes. It is a broad baseline export, not small reviewable compatibility
 data. Only 179 of 3,391 base deltas are confined to one ten-entry parallel load
 batch; unordered maintenance heap placement is the dominant cause.
 
-Therefore M2 does not pass without an explicit choice between source-native
-precedence (3,149 changed first candidates) and the broad compatibility ledger.
+The user explicitly chose source-native precedence and an intentional rebaseline
+on 2026-08-31. The broad compatibility ledger is rejected. The 3,149 changed first
+candidates are now the named M6 review domain, not an allowlist.
 
 ## Permanent deterministic rules
 

@@ -21,6 +21,138 @@
         }
       },
       "preservedBehavior": "Preserve legacy matchReadings/easy-hint recognition of かわ as a normal kun reading of 楊."
+    },
+    {
+      "id": "ichiran-260118-mono-prefer-kana",
+      "kind": "canonical-sense-property",
+      "seq": 1502390,
+      "senseOrdinal": 0,
+      "tag": "misc",
+      "text": "uk",
+      "provenance": {
+        "qualifiedOracle": "ichiran-260118; dump sha256 98a44e2cc88a65677da8b1f7124e7d6c904253eb1aae0ef16d2c7cc1dacdba82; sense_prop id 407767",
+        "relatedIntendedChange": {
+          "repository": "https://github.com/tshatrov/ichiran",
+          "commit": "94d3799be6ab3a6d8c9a953439eb72bfecd48eba",
+          "description": "jan26: fix もの and add ねば abbreviation"
+        }
+      },
+      "preservedBehavior": "Preserve the qualified preference for kana presentation of 物/もの after the January 2026 もの correction."
+    },
+    {
+      "id": "ichiran-260118-custom-pos-1154170-3",
+      "kind": "canonical-sense-property",
+      "seq": 1154170,
+      "senseOrdinal": 3,
+      "tag": "pos",
+      "text": "n",
+      "provenance": {
+        "source": "ichiran-jichitai-260118 ordinal 2482; jichitai.csv sha256 328bd0779b1bb69a4c1bc3773c5ff71cffb59c825377ca7f31eafda3860e3af8; Ando (town), Nara Prefecture",
+        "qualifiedOracle": "ichiran-260118; dump sha256 98a44e2cc88a65677da8b1f7124e7d6c904253eb1aae0ef16d2c7cc1dacdba82; sense_prop id 406780"
+      },
+      "preservedBehavior": "Preserve the qualified noun classification on the custom Ando municipality sense."
+    },
+    {
+      "id": "ichiran-260118-custom-pos-1155300-2",
+      "kind": "canonical-sense-property",
+      "seq": 1155300,
+      "senseOrdinal": 2,
+      "tag": "pos",
+      "text": "n",
+      "provenance": {
+        "source": "ichiran-jichitai-260118 ordinal 64; jichitai.csv sha256 328bd0779b1bb69a4c1bc3773c5ff71cffb59c825377ca7f31eafda3860e3af8; Date (city), Hokkaido",
+        "qualifiedOracle": "ichiran-260118; dump sha256 98a44e2cc88a65677da8b1f7124e7d6c904253eb1aae0ef16d2c7cc1dacdba82; sense_prop id 404456"
+      },
+      "preservedBehavior": "Preserve the qualified noun classification on the custom Date municipality sense."
+    },
+    {
+      "id": "ichiran-260118-custom-pos-1613660-2",
+      "kind": "canonical-sense-property",
+      "seq": 1613660,
+      "senseOrdinal": 2,
+      "tag": "pos",
+      "text": "n",
+      "provenance": {
+        "source": "ichiran-jichitai-260118 ordinal 588; jichitai.csv sha256 328bd0779b1bb69a4c1bc3773c5ff71cffb59c825377ca7f31eafda3860e3af8; Yokote (city), Akita Prefecture",
+        "qualifiedOracle": "ichiran-260118; dump sha256 98a44e2cc88a65677da8b1f7124e7d6c904253eb1aae0ef16d2c7cc1dacdba82; sense_prop id 404535"
+      },
+      "preservedBehavior": "Preserve the qualified noun classification on the custom Yokote municipality sense."
+    },
+    {
+      "id": "ichiran-260118-custom-pos-1630190-2",
+      "kind": "canonical-sense-property",
+      "seq": 1630190,
+      "senseOrdinal": 2,
+      "tag": "pos",
+      "text": "n",
+      "provenance": {
+        "source": "ichiran-jichitai-260118 ordinal 128; jichitai.csv sha256 328bd0779b1bb69a4c1bc3773c5ff71cffb59c825377ca7f31eafda3860e3af8; Kyowa (town), Hokkaido",
+        "qualifiedOracle": "ichiran-260118; dump sha256 98a44e2cc88a65677da8b1f7124e7d6c904253eb1aae0ef16d2c7cc1dacdba82; sense_prop id 405924"
+      },
+      "preservedBehavior": "Preserve the qualified noun classification on the custom Kyowa municipality sense."
+    },
+    {
+      "id": "ichiran-260118-custom-pos-1643480-3",
+      "kind": "canonical-sense-property",
+      "seq": 1643480,
+      "senseOrdinal": 3,
+      "tag": "pos",
+      "text": "n",
+      "provenance": {
+        "source": "ichiran-jichitai-260118 ordinal 2094; jichitai.csv sha256 328bd0779b1bb69a4c1bc3773c5ff71cffb59c825377ca7f31eafda3860e3af8; Oguchi (town), Aichi Prefecture",
+        "qualifiedOracle": "ichiran-260118; dump sha256 98a44e2cc88a65677da8b1f7124e7d6c904253eb1aae0ef16d2c7cc1dacdba82; sense_prop id 406663"
+      },
+      "preservedBehavior": "Preserve the qualified noun classification on the custom Oguchi municipality sense."
+    },
+    {
+      "id": "ichiran-260118-custom-pos-1755220-2",
+      "kind": "canonical-sense-property",
+      "seq": 1755220,
+      "senseOrdinal": 2,
+      "tag": "pos",
+      "text": "n",
+      "provenance": {
+        "source": "ichiran-jichitai-260118 ordinal 636; jichitai.csv sha256 328bd0779b1bb69a4c1bc3773c5ff71cffb59c825377ca7f31eafda3860e3af8; Yamagata (city), Yamagata Prefecture",
+        "qualifiedOracle": "ichiran-260118; dump sha256 98a44e2cc88a65677da8b1f7124e7d6c904253eb1aae0ef16d2c7cc1dacdba82; sense_prop id 404557"
+      },
+      "preservedBehavior": "Preserve the qualified noun classification on the custom Yamagata municipality sense."
+    },
+    {
+      "id": "ichiran-260118-custom-pos-2111910-1",
+      "kind": "canonical-sense-property",
+      "seq": 2111910,
+      "senseOrdinal": 1,
+      "tag": "pos",
+      "text": "n",
+      "provenance": {
+        "source": "ichiran-jichitai-260118 ordinal 680; jichitai.csv sha256 328bd0779b1bb69a4c1bc3773c5ff71cffb59c825377ca7f31eafda3860e3af8; Funagata (town), Yamagata Prefecture",
+        "qualifiedOracle": "ichiran-260118; dump sha256 98a44e2cc88a65677da8b1f7124e7d6c904253eb1aae0ef16d2c7cc1dacdba82; sense_prop id 406268"
+      },
+      "preservedBehavior": "Preserve the qualified noun classification on the custom Funagata municipality sense."
+    },
+    {
+      "id": "ichiran-260118-historical-cop-1008340",
+      "kind": "conjugation-position",
+      "seq": 1008340,
+      "pos": "cop",
+      "provenance": {
+        "source": "edrdg-jmdict-e-2026-01-01 seq 1008340 declares cop and v5r-i; JMdict gzip sha256 92eb77d60e5b949585e41a777ff3857c412bc97ea75444d14497a5156b6264b7",
+        "upstreamContext": "tshatrov/ichiran ea958336 dict-errata.lisp lines 281-284 records the JMdict cop-da to cop rename while conjo.csv still uses the historical copula position",
+        "qualifiedOracle": "ichiran-260118; dump sha256 98a44e2cc88a65677da8b1f7124e7d6c904253eb1aae0ef16d2c7cc1dacdba82; 72 direct conjugation members, ids 186694 through 186765, include pos cop"
+      },
+      "preservedBehavior": "Preserve qualified copula conjugation of である after the JMdict cop-da to cop rename."
+    },
+    {
+      "id": "ichiran-260118-historical-cop-2082460",
+      "kind": "conjugation-position",
+      "seq": 2082460,
+      "pos": "cop",
+      "provenance": {
+        "source": "edrdg-jmdict-e-2026-01-01 seq 2082460 declares exp, v5r and cop; JMdict gzip sha256 92eb77d60e5b949585e41a777ff3857c412bc97ea75444d14497a5156b6264b7",
+        "upstreamContext": "tshatrov/ichiran ea958336 dict-errata.lisp lines 281-284 records the JMdict cop-da to cop rename while conjo.csv still uses the historical copula position",
+        "qualifiedOracle": "ichiran-260118; dump sha256 98a44e2cc88a65677da8b1f7124e7d6c904253eb1aae0ef16d2c7cc1dacdba82; 73 direct conjugation members, ids 362567 through 362639, include pos cop"
+      },
+      "preservedBehavior": "Preserve qualified copula conjugation of the でござる forms after the JMdict cop-da to cop rename."
     }
   ]
 }

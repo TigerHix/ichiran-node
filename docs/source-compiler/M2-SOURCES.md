@@ -1,7 +1,8 @@
 # M2 source provenance
 
-The machine-readable lock is `data/source-compiler-sources.lock.json`; the only
-compatibility fact is `data/source-compiler-compatibility.json`.
+The machine-readable lock is `data/source-compiler-sources.lock.json`.
+`data/source-compiler-compatibility.json` contains the small, individually
+reviewed historical compatibility facts.
 
 ## Qualified producer
 
@@ -53,6 +54,20 @@ These are first-class semantic inputs/intended-behavior authorities, not ledger
 rows. Upstream Lisp establishes the baseline meaning of the chronological edits;
 it is not a normal compiler dependency.
 
+The source compiler mechanically extracts 601 chronological declarations to
+`data/source-compiler-errata.json`: 186,000 bytes, SHA-256
+`7f78b244955c14e23afc5474b03c66554cfba189bf0383856afd8a00bd279f24`.
+The generated ledger names its upstream authority, source line and preserved
+behavior for every row.
+
+The final compatibility ledger has 11 rows: one historical Kanjidic reading,
+one January `もの` presentation correction, seven qualified noun properties on
+named municipality senses, and two historical copula conjugation positions. It
+is 7,952 bytes with SHA-256
+`6e867889e87d43999163d3fd6fa4630a2c39253cc5d63b2484af3aad5e01c51e`.
+Every row names both provenance and the exact behavior retained; none is an
+export, query result set or broad allowlist.
+
 ## Kanjidic2
 
 January 2026 Kanjidic was tested and rejected: its 39,012 readings, 8,349
@@ -75,7 +90,7 @@ Top-Ranger/harbour-kanji commit
 Its `kanjidb.sqlite3` is 733,184 bytes with SHA-256
 `cf3fbbcc155687c04937d3218912a349e35260b436755c8a065f02894c43c930`.
 The original March 2 XML was not recovered, so the single provenance-backed row
-is the smallest compatibility ledger. Adding it makes the 38,977-row reading
+is the smallest Kanjidic compatibility fact. Adding it makes the 38,977-row reading
 projection byte-identical, SHA-256
 `f6e98da3f4679ba6076cd3ae761e5763ec24e0246778bc5188ee3858d68d4d8f`.
 

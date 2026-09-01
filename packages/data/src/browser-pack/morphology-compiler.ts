@@ -22,7 +22,7 @@ import {
 
 type Sql = ReturnType<typeof getConnection>;
 
-interface RootRow {
+export interface MorphologyRootSource {
   seq: number;
   pos: string;
   route: MorphologyRoute;
@@ -32,12 +32,12 @@ interface RootRow {
   counterpart: string | null;
 }
 
-interface RootFormRow {
+export interface MorphologyRootFormSource {
   seq: number;
   text: string;
 }
 
-interface ManualPatchRow {
+export interface MorphologyManualPatchSource {
   route: MorphologyRoute;
   surface: string;
   rootSeq: number;
@@ -50,6 +50,12 @@ interface ManualPatchRow {
   targetCounterpart: string | null;
   ord: number;
   common: number | null;
+}
+
+export interface MorphologySource {
+  readonly roots: readonly MorphologyRootSource[];
+  readonly rootForms: readonly MorphologyRootFormSource[];
+  readonly manualPatches: readonly MorphologyManualPatchSource[];
 }
 
 interface PendingTemplate {
@@ -141,7 +147,7 @@ function effectiveRule(pos: string, rule: ConjugationRule, peers: readonly Conju
   };
 }
 
-function manualRule(row: ManualPatchRow, ordinal: number): CompiledMorphologyRule {
+function manualRule(row: MorphologyManualPatchSource, ordinal: number): CompiledMorphologyRule {
   return {
     pos: row.pos,
     type: row.conjType,
@@ -155,8 +161,8 @@ function manualRule(row: ManualPatchRow, ordinal: number): CompiledMorphologyRul
   };
 }
 
-async function loadRootRows(sql: Sql): Promise<RootRow[]> {
-  return sql<RootRow[]>`
+async function loadRootRows(sql: Sql): Promise<MorphologyRootSource[]> {
+  return sql<MorphologyRootSource[]>`
     WITH root_pos AS (
       SELECT DISTINCT c."from" AS seq, cp.pos
       FROM conjugation c
@@ -182,8 +188,8 @@ async function loadRootRows(sql: Sql): Promise<RootRow[]> {
   `;
 }
 
-async function loadRootForms(sql: Sql): Promise<RootFormRow[]> {
-  return sql<RootFormRow[]>`
+async function loadRootForms(sql: Sql): Promise<MorphologyRootFormSource[]> {
+  return sql<MorphologyRootFormSource[]>`
     WITH roots AS (SELECT DISTINCT "from" AS seq FROM conjugation)
     SELECT * FROM (
       SELECT k.seq, k.text FROM roots JOIN kanji_text k USING (seq)
@@ -194,8 +200,8 @@ async function loadRootForms(sql: Sql): Promise<RootFormRow[]> {
   `;
 }
 
-async function loadManualPatches(sql: Sql): Promise<ManualPatchRow[]> {
-  return sql<ManualPatchRow[]>`
+async function loadManualPatches(sql: Sql): Promise<MorphologyManualPatchSource[]> {
+  return sql<MorphologyManualPatchSource[]>`
     WITH selected AS (
       SELECT c.seq, c."from" AS root_seq, cp.pos, cp.conj_type,
              cp.neg AS negative, cp.fml AS formal, csr.text AS surface,
@@ -234,7 +240,7 @@ async function loadManualPatches(sql: Sql): Promise<ManualPatchRow[]> {
 }
 
 function makePendingTemplates(
-  roots: readonly RootRow[],
+  roots: readonly MorphologyRootSource[],
   rulesByKey: Map<string, CompiledMorphologyRule>
 ): { templates: PendingTemplate[]; direct: number; secondary: number } {
   const sourcesByPos = new Map<string, Set<string>>();
@@ -328,7 +334,7 @@ function canonicalizeTemplates(pending: readonly PendingTemplate[], ruleIds: Map
   return templates;
 }
 
-function compileRootGroups(forms: readonly RootFormRow[]): {
+function compileRootGroups(forms: readonly MorphologyRootFormSource[]): {
   groups: CompiledMorphologyRootGroup[];
   groupBySeq: Map<number, number>;
 } {
@@ -346,7 +352,7 @@ function compileRootGroups(forms: readonly RootFormRow[]): {
   return { groups, groupBySeq: new Map(groups.map((group, index) => [group.seq, index])) };
 }
 
-function compileRootKeys(rows: readonly RootRow[], groupBySeq: Map<number, number>): CompiledMorphologyRootKey[] {
+function compileRootKeys(rows: readonly MorphologyRootSource[], groupBySeq: Map<number, number>): CompiledMorphologyRootKey[] {
   const keys = new Map<string, CompiledMorphologyRootKey>();
   for (const row of rows) {
     const keyText = `${row.route}\u0000${row.pos}\u0000${row.text}`;
@@ -382,7 +388,7 @@ function compileRootKeys(rows: readonly RootRow[], groupBySeq: Map<number, numbe
   return values;
 }
 
-function manualOrdinal(row: ManualPatchRow): number {
+function manualOrdinal(row: MorphologyManualPatchSource): number {
   const posId = getPosIndex(row.pos);
   if (posId === undefined) return 0;
   const ordinals = getConjRules(posId)
@@ -396,11 +402,11 @@ function manualOrdinal(row: ManualPatchRow): number {
 }
 
 function makePendingPatches(
-  rows: readonly ManualPatchRow[],
+  rows: readonly MorphologyManualPatchSource[],
   rulesByKey: Map<string, CompiledMorphologyRule>
 ): PendingPatch[] {
   const patches: PendingPatch[] = [];
-  const rowKey = (row: ManualPatchRow, sourceText: string): string => JSON.stringify([
+  const rowKey = (row: MorphologyManualPatchSource, sourceText: string): string => JSON.stringify([
     row.route,
     row.rootSeq,
     row.pos,
@@ -518,20 +524,30 @@ export async function compileMorphology(options: {
   dataPath?: string;
 } = {}): Promise<MorphologyCompileResult> {
   const sql = options.sql ?? getConnection();
-  loadAllConjugationRules(options.dataPath ?? 'data');
 
   const [rootRows, rootForms, manualRows] = await Promise.all([
     loadRootRows(sql),
     loadRootForms(sql),
     loadManualPatches(sql)
   ]);
+  return buildMorphology({ roots: rootRows, rootForms, manualPatches: manualRows }, {
+    dataPath: options.dataPath
+  });
+}
+
+/** Builds format-v1 morphology directly from compiler-owned semantic input. */
+export function buildMorphology(
+  source: MorphologySource,
+  options: { readonly dataPath?: string } = {}
+): MorphologyCompileResult {
+  loadAllConjugationRules(options.dataPath ?? 'data');
   const rulesByKey = new Map<string, CompiledMorphologyRule>();
-  const pendingTemplates = makePendingTemplates(rootRows, rulesByKey);
-  const pendingPatches = makePendingPatches(manualRows, rulesByKey);
+  const pendingTemplates = makePendingTemplates(source.roots, rulesByKey);
+  const pendingPatches = makePendingPatches(source.manualPatches, rulesByKey);
   const { rules, ids: ruleIds } = canonicalizeRules(rulesByKey);
   const templates = canonicalizeTemplates(pendingTemplates.templates, ruleIds);
-  const { groups: rootGroups, groupBySeq } = compileRootGroups(rootForms);
-  const rootKeys = compileRootKeys(rootRows, groupBySeq);
+  const { groups: rootGroups, groupBySeq } = compileRootGroups(source.rootForms);
+  const rootKeys = compileRootKeys(source.roots, groupBySeq);
   const patches = canonicalizePatches(pendingPatches, ruleIds);
   const tombstones = compileTombstones(templates, rules);
   const positions = [...new Set([
@@ -560,10 +576,10 @@ export async function compileMorphology(options: {
       secondaryTemplates: pendingTemplates.secondary,
       templates: templates.length,
       suffixes: new Set(templates.map(template => template.suffix)).size,
-      rootRows: rootRows.length,
+      rootRows: source.roots.length,
       rootKeys: rootKeys.length,
       rootGroups: rootGroups.length,
-      rootForms: rootForms.length,
+      rootForms: source.rootForms.length,
       patches: patches.length,
       tombstones: tombstones.length
     }

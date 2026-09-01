@@ -29,6 +29,10 @@ import {
   canonicalDetailEntries,
   canonicalRootPayloadSource
 } from '../src/source-compiler/pack-input.js';
+import {
+  canonicalSurfaceIndexRows,
+  encodeSurfaceIndexTsv
+} from '../src/source-compiler/surface-index-input.js';
 
 const XML = `<entry>
 <ent_seq>1234560</ent_seq>
@@ -206,6 +210,22 @@ test('qualified pack writers accept compiler-owned semantic input', () => {
   expect(details.stats.entryCount).toBe(1);
   expect(buildRootPayload(canonicalRootPayloadSource([entry])).bytes).toEqual(root.bytes);
   expect(buildDetailStore(canonicalDetailEntries([entry])).bytes).toEqual(details.bytes);
+});
+
+test('surface-index input is source-owned and UTF-8 ordered', () => {
+  const rows = canonicalSurfaceIndexRows([parsed()], [
+    { route: 'kanji', surface: '書いた' },
+    { route: 'kana', surface: 'かいた' }
+  ]);
+  expect(rows.find(value => value.surface === '書く')).toMatchObject({
+    kanjiDirect: true,
+    kanjiMorphology: false
+  });
+  expect(rows.find(value => value.surface === 'かいた')).toMatchObject({
+    kanaDirect: false,
+    kanaMorphology: true
+  });
+  expect(new TextDecoder().decode(encodeSurfaceIndexTsv(rows))).toEndWith('\n');
 });
 
 test('Kanjidic compiler input reproduces an analyzer easy hint', async () => {

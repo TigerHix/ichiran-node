@@ -70,6 +70,26 @@
       "upstreamBytes": [13483, 53989],
       "upstreamSha256": ["f54a68fee54e3f850043202f272590d102a8e152817b9319c95c96942a1d7035", "44b37171b95f7b0e40181ee5ea0edd77439871363c7dfdb0d71bf9187538cdb7"],
       "license": "GPL-3.0-or-later"
+    },
+    {
+      "id": "ichiran-chronological-errata-260118",
+      "kind": "semantic-ledger",
+      "pinnedPath": "data/source-compiler-errata.json",
+      "pinnedBytes": 186000,
+      "pinnedSha256": "7f78b244955c14e23afc5474b03c66554cfba189bf0383856afd8a00bd279f24",
+      "generatedBy": "scripts/extract-qualified-errata.ts",
+      "authority": "tshatrov/ichiran ea958336 dict-errata.lisp sha256 44b37171b95f7b0e40181ee5ea0edd77439871363c7dfdb0d71bf9187538cdb7",
+      "rows": 601,
+      "license": "GPL-3.0-or-later"
+    },
+    {
+      "id": "ichiran-source-compatibility-260118",
+      "kind": "compatibility-ledger",
+      "pinnedPath": "data/source-compiler-compatibility.json",
+      "pinnedBytes": 7952,
+      "pinnedSha256": "6e867889e87d43999163d3fd6fa4630a2c39253cc5d63b2484af3aad5e01c51e",
+      "rows": 11,
+      "authority": "Each row carries its own upstream/source and qualified-oracle provenance plus preserved behavior."
     }
   ]
 }

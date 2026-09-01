@@ -18,6 +18,7 @@ the qualified producer found:
 
 Seq 2611370 is not an opaque discrepancy: upstream `dict-errata.lisp` deletes all
 senses, clears `root-p`, and removes written form `為り`. It is the single JMdict
+source-only root and is handled by the chronological errata source, not a
 compatibility row.
 
 ## Representative behavior
@@ -60,8 +61,9 @@ runtime identity and fuller provenance evidence keys.
 Source identity, the canonical slice, representative conjugation, best readings,
 Kanjidic easy hints, encoder ownership and every SQL projection are established.
 The direct-root ordering conflict in `M2-ORDERING.md` leaves the required
-compatibility data broad and non-reviewable. M2 is **FAIL** pending the explicit
-behavior choice, so M6 has not started.
+compatibility data broad and non-reviewable. The user subsequently approved the
+source-native order and intentional rebaseline recorded in `M2-DECISION.md`.
+M2 is therefore **PASS with an approved ordering rebaseline**, and M6 may proceed.
 
 ## Verification run
 
