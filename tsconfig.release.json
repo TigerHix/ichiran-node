@@ -5,8 +5,10 @@
     "rootDir": "."
   },
   "include": [
+    "scripts/acquire-source-compiler-update-2026-09-01.ts",
     "scripts/browser-alpha-release.ts",
-    "scripts/canonicalize-lisp-fixtures.ts"
+    "scripts/canonicalize-lisp-fixtures.ts",
+    "scripts/source-compiler-release.ts"
   ],
   "exclude": [
     "node_modules",

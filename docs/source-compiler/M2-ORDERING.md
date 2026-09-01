@@ -6,18 +6,18 @@ The qualified direct-root order is physical, not semantic. `maintenance.ts`
 performs unordered whole-table best-reading updates, producing new heap tuples.
 `root-payload.ts` then freezes `ctid DESC` as lookup order.
 
-| Comparison with qualified `ctid DESC` | Delta surfaces | Forms | First winners | Canonical delta digest |
+| Comparison with qualified `ctid DESC` | Delta surfaces | Forms | First winners | Evidence SHA-256 |
 |---|---:|---:|---:|---|
 | January JMdict document events only | 3,391 | 14,214 | 3,115 | `9a75e5d6011cfdd6c4a1c882ca0d16a5f92f88266d01d36e2247b6813212cd19` |
-| Base, custom and chronological errata events | 3,436 | 14,389 | 3,149 | `6f97b9a5e3df86eb93ef71164a4a24eb8a84224e0a2cc06823aa8ea59c5ff947` |
+| Complete final canonical entries | 3,435 | 14,387 | 3,148 | `5f4660a0afbc1a21021f3c4db49014554a3b7991a48960c2238a050ae05a1854` |
 
-The smallest lossless direct-order ledger has 3,436 surface rows and 567,019
+The complete lossless direct-order evidence has 3,435 surface rows and 4,076,458
 JSONL bytes. It is a broad baseline export, not small reviewable compatibility
 data. Only 179 of 3,391 base deltas are confined to one ten-entry parallel load
 batch; unordered maintenance heap placement is the dominant cause.
 
 The user explicitly chose source-native precedence and an intentional rebaseline
-on 2026-08-31. The broad compatibility ledger is rejected. The 3,149 changed first
+on 2026-08-31. The broad compatibility ledger is rejected. The 3,148 changed first
 candidates are now the named M6 review domain, not an allowlist.
 
 ## Permanent deterministic rules
@@ -57,6 +57,6 @@ candidates are now the named M6 review domain, not an allowlist.
 - Details contain 75 equal `(tag,ord)` property groups (150 rows).
 - Qualified generated lookup has 208,352 surfaces and 492,547 physical classes.
   Its 1,623 encoded local-exception surfaces are graph compression facts, not a
-  substitute for the 3,436 direct-root compatibility rows.
+  substitute for the 3,435 direct-root ordering-evidence rows.
 - Qualified counter roots have no equal form ordinals. Kanjidic non-name readings
   have no duplicate `(literal,reading)` keys.

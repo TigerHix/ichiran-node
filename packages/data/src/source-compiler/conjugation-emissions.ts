@@ -9,6 +9,7 @@ import {
   SECONDARY_CONJUGATION_TYPES_FROM,
   type ConjugationRule
 } from '../data/conj-rules.js';
+import { isRootPayloadKanaSurface } from '../browser-pack/root-payload.js';
 import {
   entryPartOfSpeech,
   type CanonicalEntry,
@@ -33,7 +34,12 @@ export interface EmissionForm {
   readonly route: CanonicalRoute;
   readonly surface: string;
   readonly sourceText: string;
+  readonly sourceEvent: number;
   readonly sourceOrdinal: number;
+  /** Whether this form existed before secondary target expansion. */
+  readonly secondaryEligible: boolean;
+  /** Generated paired reading/form used only by physical target allocation. */
+  readonly physicalCounterpart: string | null;
   readonly intermediate: string | null;
   readonly firstRule: EmissionRule;
   readonly secondRule: EmissionRule | null;
@@ -48,6 +54,9 @@ export interface ConjugationEmission {
   readonly first: ConjugationProperty;
   readonly second: ConjugationProperty | null;
   readonly via: string | null;
+  /** Complete pre-installation reading matrix used for physical identity and CSR surfaces. */
+  readonly physicalForms: readonly EmissionForm[];
+  /** Route/source-selected reverse-relation forms installed for analyzer lookup. */
   readonly forms: readonly EmissionForm[];
 }
 
@@ -61,7 +70,9 @@ export interface ConjugationRelationSummary {
 
 interface PendingEmission {
   readonly property: ConjugationProperty;
+  readonly physicalForms: EmissionForm[];
   readonly forms: EmissionForm[];
+  hasKanaCandidate: boolean;
 }
 
 function compareText(left: string, right: string): number {
@@ -110,29 +121,46 @@ function formKey(form: EmissionForm): string {
     form.route,
     form.surface,
     form.sourceText,
+    form.physicalCounterpart,
     form.intermediate,
     propertyKey(form.firstRule),
     form.secondRule === null ? null : propertyKey(form.secondRule)
   ]);
 }
 
-function addForm(group: PendingEmission, form: EmissionForm): void {
+function addForm(forms: EmissionForm[], form: EmissionForm): void {
   const key = formKey(form);
-  if (!group.forms.some(existing => formKey(existing) === key)) group.forms.push(form);
+  if (!forms.some(existing => formKey(existing) === key)) forms.push(form);
 }
 
-function sourceForms(entry: CanonicalEntry): Array<{
+export function conjugationSourceKey(route: CanonicalRoute, text: string): string {
+  return `${route}\u0000${text}`;
+}
+
+function sourceForms(entry: CanonicalEntry, selected?: ReadonlySet<string>): Array<{
   route: CanonicalRoute;
   text: string;
+  event: number;
   ordinal: number;
+  counterpart: string | null;
 }> {
   return [
-    ...entry.kanji.filter(form => form.conjugatable)
+    ...entry.kanji.filter(form => form.conjugatable
+      && (selected === undefined || selected.has(conjugationSourceKey('kanji', form.text))))
       .sort((left, right) => left.ordinal - right.ordinal || compareText(left.text, right.text))
-      .map(form => ({ route: 'kanji' as const, text: form.text, ordinal: form.ordinal })),
-    ...entry.kana.filter(form => form.conjugatable)
+      .map(form => ({
+        route: 'kanji' as const, text: form.text,
+        event: form.sourceOrder.event, ordinal: form.ordinal,
+        counterpart: form.best ?? null
+      })),
+    ...entry.kana.filter(form => form.conjugatable
+      && (selected === undefined || selected.has(conjugationSourceKey('kana', form.text))))
       .sort((left, right) => left.ordinal - right.ordinal || compareText(left.text, right.text))
-      .map(form => ({ route: 'kana' as const, text: form.text, ordinal: form.ordinal }))
+      .map(form => ({
+        route: 'kana' as const, text: form.text,
+        event: form.sourceOrder.event, ordinal: form.ordinal,
+        counterpart: form.best ?? null
+      }))
   ];
 }
 
@@ -141,6 +169,9 @@ export function emitPrimaryConjugations(
   options: {
     readonly positions?: readonly string[];
     readonly types?: ReadonlySet<number>;
+    readonly sources?: ReadonlySet<string>;
+    /** Exact source forms for each configured POS; prevents a root-wide cross-product. */
+    readonly sourcesByPosition?: ReadonlyMap<string, ReadonlySet<string>>;
   } = {}
 ): ConjugationEmission[] {
   if (NON_CONJUGATING_ENTRIES.has(entry.seq)) return [];
@@ -154,6 +185,10 @@ export function emitPrimaryConjugations(
     if (positionId === undefined) continue;
     const rules = getConjRules(positionId);
 
+    const selectedSources = options.sourcesByPosition?.get(position) ?? options.sources;
+    if (options.sourcesByPosition && selectedSources === undefined) {
+      throw new Error(`Configured position ${position} has no source-form selection`);
+    }
     for (const source of sourceForms(entry)) {
       rules.forEach(rule => {
         if (options.types && !options.types.has(rule.conj)) return;
@@ -162,22 +197,44 @@ export function emitPrimaryConjugations(
         if (original.has(surface.normalize('NFKC').trim())) return;
         const applied = effectiveRule(position, rule, rules);
         const key = propertyKey(applied);
-        const group = groups.get(key) ?? { property: applied, forms: [] };
-        addForm(group, {
+        const group = groups.get(key) ?? {
+          property: applied,
+          physicalForms: [],
+          forms: [],
+          hasKanaCandidate: false
+        };
+        if (source.route === 'kana') group.hasKanaCandidate = true;
+        const form = {
           route: source.route,
           surface,
           sourceText: source.text,
+          sourceEvent: source.event,
           sourceOrdinal: source.ordinal,
+          secondaryEligible: true,
+          physicalCounterpart: source.counterpart === null
+            ? null : constructConjugation(source.counterpart, rule),
           intermediate: null,
           firstRule: applied,
           secondRule: null
-        });
+        } satisfies EmissionForm;
+        addForm(group.physicalForms, form);
+        if (selectedSources !== undefined
+          && !selectedSources.has(conjugationSourceKey(source.route, source.text))) {
+          groups.set(key, group);
+          return;
+        }
+        if (selectedSources !== undefined
+          && isRootPayloadKanaSurface(surface) !== (source.route === 'kana')) {
+          groups.set(key, group);
+          return;
+        }
+        addForm(group.forms, form);
         groups.set(key, group);
       });
     }
   }
 
-  return [...groups.values()].filter(group => group.forms.some(form => form.route === 'kana'))
+  return [...groups.values()].filter(group => group.hasKanaCandidate && group.physicalForms.length > 0)
     .map((group, ordinal) => ({
       rootSeq: entry.seq,
       rootEvent: sourceEvent(entry),
@@ -186,6 +243,7 @@ export function emitPrimaryConjugations(
       first: group.property,
       second: null,
       via: null,
+      physicalForms: group.physicalForms,
       forms: group.forms
     }));
 }
@@ -201,39 +259,59 @@ function isSecondarySource(emission: ConjugationEmission): boolean {
 
 export function emitSecondaryConjugations(
   primary: ConjugationEmission,
-  options: { readonly types?: ReadonlySet<number> } = {}
+  options: {
+    readonly types?: ReadonlySet<number>;
+    readonly enforceSurfaceRoute?: boolean;
+  } = {}
 ): ConjugationEmission[] {
   if (!isSecondarySource(primary)) return [];
   const secondPosition = primary.first.type === 53 ? 'v5s' : 'v1';
   const positionId = getPosIndex(secondPosition);
   if (positionId === undefined) throw new Error(`No conjugation rules for ${secondPosition}`);
   const rules = getConjRules(positionId);
-  const intermediates = new Set(primary.forms.map(form => form.surface.normalize('NFKC').trim()));
+  const intermediates = new Set(primary.physicalForms
+    .map(form => form.surface.normalize('NFKC').trim()));
+  const installedSources = new Set(primary.forms);
   const groups = new Map<string, PendingEmission>();
 
-  for (const source of primary.forms) {
+  for (const source of primary.physicalForms) {
     for (const rule of rules) {
       if (!SECONDARY_TYPES.has(rule.conj) || (options.types && !options.types.has(rule.conj))) continue;
       const surface = constructConjugation(source.surface, rule);
       if (intermediates.has(surface.normalize('NFKC').trim())) continue;
       const applied = effectiveRule(secondPosition, rule, rules);
       const key = propertyKey(applied);
-      const group = groups.get(key) ?? { property: applied, forms: [] };
-      addForm(group, {
+      const group = groups.get(key) ?? {
+        property: applied,
+        physicalForms: [],
+        forms: [],
+        hasKanaCandidate: true
+      };
+      const form = {
         route: source.route,
         surface,
         sourceText: source.sourceText,
+        sourceEvent: source.sourceEvent,
         sourceOrdinal: source.sourceOrdinal,
+        secondaryEligible: false,
+        physicalCounterpart: source.physicalCounterpart === null
+          ? null : constructConjugation(source.physicalCounterpart, rule),
         intermediate: source.surface,
         firstRule: source.firstRule,
         secondRule: applied
-      });
+      } satisfies EmissionForm;
+      addForm(group.physicalForms, form);
+      if (installedSources.has(source)
+        && (!options.enforceSurfaceRoute
+          || isRootPayloadKanaSurface(surface) === (source.route === 'kana'))) {
+        addForm(group.forms, form);
+      }
       groups.set(key, group);
     }
   }
 
   const via = conjugationEmissionKey(primary);
-  return [...groups.values()].filter(group => group.forms.some(form => form.route === 'kana'))
+  return [...groups.values()].filter(group => group.hasKanaCandidate && group.physicalForms.length > 0)
     .map((group, ordinal) => ({
       rootSeq: primary.rootSeq,
       rootEvent: primary.rootEvent,
@@ -242,6 +320,7 @@ export function emitSecondaryConjugations(
       first: primary.first,
       second: group.property,
       via,
+      physicalForms: group.physicalForms,
       forms: group.forms
     }));
 }
@@ -251,13 +330,13 @@ export function emitCanonicalConjugations(entry: CanonicalEntry): ConjugationEmi
   return [...primary, ...primary.flatMap(emission => emitSecondaryConjugations(emission))];
 }
 
-/** Identity of a semantic candidate; physical target ids are deliberately absent. */
+/** Stable lineage identity before route/source installation or chronological filtering. */
 export function conjugationEmissionKey(emission: ConjugationEmission): string {
   return JSON.stringify([
     emission.rootSeq,
     propertyKey(emission.first),
     emission.second === null ? null : propertyKey(emission.second),
-    emission.forms.map(form => semanticConjugationKey(emission, form)).sort()
+    emission.physicalForms.map(form => semanticConjugationKey(emission, form)).sort()
   ]);
 }
 

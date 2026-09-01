@@ -60,11 +60,24 @@ The source compiler mechanically extracts 601 chronological declarations to
 The generated ledger names its upstream authority, source line and preserved
 behavior for every row.
 
-The final compatibility ledger has 11 rows: one historical Kanjidic reading,
+The final compatibility ledger has 25 rows: one historical Kanjidic reading,
 one January `もの` presentation correction, seven qualified noun properties on
-named municipality senses, and two historical copula conjugation positions. It
-is 7,952 bytes with SHA-256
-`6e867889e87d43999163d3fd6fa4630a2c39253cc5d63b2484af3aad5e01c51e`.
+named municipality senses, two historical copula conjugation positions, and
+seven exact コケる physical-lineage omissions, plus seven exact generated-target
+ordering splits for roots 2410170 and 1577980. The lineage rows were discovered
+and qualified during the M6 exhaustive forward/reverse closure; together they
+preserve exactly 54 absent baseline candidates. The four target rows were then
+discovered during the M6 full physical/CSR closure: source declaration order
+encounters root 1587490's wider targets first, whereas the qualified PostgreSQL
+producer allocated root 2410170's narrower type 6, 7, 8 and 53 plain-positive
+targets first. Each row names both qualified and competing target provenance and
+preserves only that target split. Three additional rows preserve root 1577980's
+narrow type-6 formal-positive, plain-negative and formal-negative targets: the
+qualified producer had already created those forms from root 2809790, while
+source order encounters root 1577980's compatible wider type-5 targets first.
+The ledger is 24,215 bytes with
+SHA-256
+`c3a39f43432ad78c319e8ad3df808ba3617179b30e4e43ff5369fbe6435a1d34`.
 Every row names both provenance and the exact behavior retained; none is an
 export, query result set or broad allowlist.
 

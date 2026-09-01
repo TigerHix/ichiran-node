@@ -293,7 +293,7 @@ function translateHints(parts: readonly DiffPart[] | readonly ReadingMatch[], hi
   return result;
 }
 
-function insertHints(kana: string, hints: readonly Hint[]): string {
+export function insertHintMarkers(kana: string, hints: readonly Hint[]): string {
   const markers = new Map<number, string[]>();
   for (const [kind, position] of hints) {
     const at = markers.get(position) ?? [];
@@ -328,5 +328,8 @@ export function compileEasyHint(
   const difference = matchDiff(expectedKanji, actualKanji);
   const kanjiReadings = matchReadings(readings, actualKanji, actualKana);
   if (!difference || !kanjiReadings) return null;
-  return insertHints(actualKana, translateHints(kanjiReadings, translateHints(difference[0], hints)));
+  return insertHintMarkers(
+    actualKana,
+    translateHints(kanjiReadings, translateHints(difference[0], hints))
+  );
 }

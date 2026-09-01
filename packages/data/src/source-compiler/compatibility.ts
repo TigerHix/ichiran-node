@@ -3,8 +3,10 @@ import type { KanjidicHintCompatibility } from './kanjidic-hints.js';
 import type {
   CanonicalEntry,
   CanonicalSenseProperty,
+  ConjugationProperty,
   SensePropertyTag
 } from './model.js';
+import type { EmissionRule } from './conjugation-emissions.js';
 
 export interface KanjidicCompatibilityRow extends KanjidicHintCompatibility {
   readonly id: string;
@@ -33,12 +35,51 @@ export interface ConjugationPositionCompatibilityRow {
   readonly preservedBehavior: string;
 }
 
+/** One qualified generated-target split caused only by historical insertion order. */
+export interface PhysicalTargetOrderCompatibilityRow {
+  readonly id: string;
+  readonly kind: 'physical-target-order';
+  readonly seq: number;
+  readonly competingCreatorSeq: number;
+  readonly property: ConjugationProperty;
+  readonly qualifiedTargetSeq: number;
+  readonly competingTargetSeq: number;
+  readonly provenance: object;
+  readonly preservedBehavior: string;
+}
+
+/**
+ * One reviewed historical physical-target lineage that did not receive an
+ * added source reading. The complete rule declaration distinguishes physical
+ * targets that share a semantic property but use different suffix variants.
+ */
+interface ConjugationReadingLineageCompatibilityBase {
+  readonly id: string;
+  readonly kind: 'conjugation-reading-lineage';
+  readonly seq: number;
+  readonly route: 'kana' | 'kanji';
+  readonly sourceText: string;
+  readonly rule: EmissionRule;
+  readonly provenance: object;
+  readonly preservedBehavior: string;
+}
+
+export type ConjugationReadingLineageCompatibilityRow =
+  | (ConjugationReadingLineageCompatibilityBase & { readonly lineageStep: 'first' })
+  | (ConjugationReadingLineageCompatibilityBase & {
+    readonly lineageStep: 'either';
+    /** Exact secondary declarations that reused the omitted physical target. */
+    readonly secondaryRules: readonly EmissionRule[];
+  });
+
 export interface SourceCompatibilityLedger {
   readonly formatVersion: 1;
   readonly rows: readonly (
     KanjidicCompatibilityRow
     | CanonicalCompatibilityRow
     | ConjugationPositionCompatibilityRow
+    | ConjugationReadingLineageCompatibilityRow
+    | PhysicalTargetOrderCompatibilityRow
   )[];
 }
 
@@ -62,6 +103,55 @@ export function conjugationPositionCompatibility(
   return ledger.rows.filter(
     (row): row is ConjugationPositionCompatibilityRow => row.kind === 'conjugation-position'
   );
+}
+
+export function conjugationReadingLineageCompatibility(
+  ledger: SourceCompatibilityLedger
+): ConjugationReadingLineageCompatibilityRow[] {
+  return ledger.rows.filter(
+    (row): row is ConjugationReadingLineageCompatibilityRow =>
+      row.kind === 'conjugation-reading-lineage'
+  );
+}
+
+export function physicalTargetOrderCompatibility(
+  ledger: SourceCompatibilityLedger
+): PhysicalTargetOrderCompatibilityRow[] {
+  return ledger.rows.filter(
+    (row): row is PhysicalTargetOrderCompatibilityRow => row.kind === 'physical-target-order'
+  );
+}
+
+function sameRule(left: EmissionRule, right: EmissionRule): boolean {
+  return left.pos === right.pos
+    && left.type === right.type
+    && left.negative === right.negative
+    && left.formal === right.formal
+    && left.order === right.order
+    && left.stem === right.stem
+    && left.okuri === right.okuri
+    && left.euphr === right.euphr
+    && left.euphk === right.euphk;
+}
+
+/** True when the historical reading omission removes this exact route/form path. */
+export function omitsConjugationReadingLineage(
+  row: ConjugationReadingLineageCompatibilityRow,
+  value: {
+    readonly rootSeq: number;
+    readonly route: 'kana' | 'kanji';
+    readonly sourceText: string;
+    readonly firstRule: EmissionRule;
+    readonly secondRule: EmissionRule | null;
+  }
+): boolean {
+  return row.seq === value.rootSeq
+    && row.route === value.route
+    && row.sourceText === value.sourceText
+    && (sameRule(row.rule, value.firstRule)
+      || (row.lineageStep === 'either'
+        && value.secondRule !== null
+        && row.secondaryRules.some(rule => sameRule(rule, value.secondRule!))));
 }
 
 export function applyCanonicalCompatibility(

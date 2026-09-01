@@ -10,10 +10,10 @@ The permanent direct-root order is:
 3. form ordinal descending;
 4. entry seq descending.
 
-The 3,436 qualified `(route,surface)` classes whose PostgreSQL `ctid DESC`
+The 3,435 qualified `(route,surface)` classes whose PostgreSQL `ctid DESC`
 order differs remain migration evidence. They are not compiler inputs and will
 not become a compatibility ledger. M6 must compare both byte and analyzer
-behavior, enumerate the 3,149 changed first candidates, and review actual
+behavior, enumerate the 3,148 changed first candidates, and review actual
 user-visible analysis deltas before the new source-built pack is qualified.
 
 This decision resolves the M2 feasibility blocker. M2 is **PASS with an approved

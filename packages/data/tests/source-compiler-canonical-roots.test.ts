@@ -7,7 +7,13 @@ import { buildMorphology } from '../src/browser-pack/morphology-compiler.js';
 import { buildRootPayload } from '../src/browser-pack/root-payload.js';
 import { compileCanonicalRoots, type CanonicalRootCompilation } from '../src/source-compiler/canonical-roots.js';
 import { foldChronologicalConjugationErrata } from '../src/source-compiler/conjugation-errata.js';
-import { conjugationPositionCompatibility } from '../src/source-compiler/compatibility.js';
+import {
+  conjugationPositionCompatibility,
+  conjugationReadingLineageCompatibility,
+  omitsConjugationReadingLineage
+} from '../src/source-compiler/compatibility.js';
+import { emitConfiguredConjugations } from '../src/source-compiler/conjugation-emission-order.js';
+import { conjugationSourceKey } from '../src/source-compiler/conjugation-emissions.js';
 import { canonicalEntriesDigest } from '../src/source-compiler/digest.js';
 import { canonicalMorphologySource } from '../src/source-compiler/morphology-input.js';
 import { canonicalDetailEntries, canonicalRootPayloadSource } from '../src/source-compiler/pack-input.js';
@@ -40,8 +46,8 @@ describe('complete canonical roots', () => {
       '7f78b244955c14e23afc5474b03c66554cfba189bf0383856afd8a00bd279f24'
     ]);
     expect([compatibility.byteLength, sha256(compatibility)]).toEqual([
-      7_952,
-      '6e867889e87d43999163d3fd6fa4630a2c39253cc5d63b2484af3aad5e01c51e'
+      24_215,
+      'c3a39f43432ad78c319e8ad3df808ba3617179b30e4e43ff5369fbe6435a1d34'
     ]);
   });
 
@@ -57,11 +63,35 @@ describe('complete canonical roots', () => {
       noops: 93,
       demotedRoots: 1
     });
-    expect(compilation.compatibility.rows).toHaveLength(11);
+    expect(compilation.compatibility.rows).toHaveLength(25);
+    expect(conjugationReadingLineageCompatibility(compilation.compatibility)).toHaveLength(7);
     expect(await canonicalEntriesDigest(compilation.entries)).toEqual({
       entries: 217_967,
       sha256: '6057e732f38eb3c35ca703ea4a6145ead929d4d62b186559ddfa6f65ec871f39'
     });
+  });
+
+  test('names the seven qualified コケる physical-lineage omissions', () => {
+    const entry = compilation.entries.find(value => value.seq === 1_593_170);
+    if (!entry) throw new Error('Missing qualified コケる root');
+    const rows = conjugationReadingLineageCompatibility(compilation.compatibility);
+    const emissions = emitConfiguredConjugations(entry, {
+      positions: ['v1'],
+      sourcesByPosition: new Map([[
+        'v1',
+        new Set([conjugationSourceKey('kana', 'コケる')])
+      ]])
+    });
+    const omitted = emissions.flatMap(emission => emission.forms.filter(form => rows.some(row =>
+      omitsConjugationReadingLineage(row, {
+        rootSeq: emission.rootSeq,
+        route: form.route,
+        sourceText: form.sourceText,
+        firstRule: form.firstRule,
+        secondRule: form.secondRule
+      }))));
+    expect(rows.map(row => row.id)).toHaveLength(7);
+    expect(omitted).toHaveLength(54);
   });
 
   test('emits the qualified detail bytes exactly', () => {

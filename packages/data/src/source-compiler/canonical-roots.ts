@@ -19,6 +19,8 @@ import type { CanonicalEntry } from './model.js';
 
 export interface CanonicalRootPaths extends CustomSourcePaths {
   readonly jmdict: string;
+  /** Required for non-baseline snapshots so entry provenance never inherits the January label. */
+  readonly jmdictSourceId?: string;
   readonly errata: string;
   readonly compatibility: string;
 }
@@ -38,7 +40,10 @@ export async function compileCanonicalRoots(
   paths: CanonicalRootPaths
 ): Promise<CanonicalRootCompilation> {
   const jmdict: CanonicalEntry[] = [];
-  for await (const entry of loadJmdictEntries(paths.jmdict, QUALIFIED_JMDICT_SOURCE_ID)) {
+  for await (const entry of loadJmdictEntries(
+    paths.jmdict,
+    paths.jmdictSourceId ?? QUALIFIED_JMDICT_SOURCE_ID
+  )) {
     jmdict.push(entry);
   }
 

@@ -92,6 +92,15 @@ source fold instead enumerates the declared source reading through the rule
 relation. This is an explicit seven-versus-four semantic differential, not an
 allowlist or a permanent database input.
 
+The release projection replays those declarations at their actual lifecycle
+point: after base and custom secondary generation. It mutates the ordinal-zero
+target form and writes a non-installed CSR occurrence only when that target
+gains a new form. The mutation remains visible to surface compilation but never
+feeds secondary chaining. Combined with the four reviewed target-order splits,
+the full v14 CSR surface set is semantically exact: 7,959,940 morphology
+terminals, zero missing and zero extra. See
+`work/m6-evidence/surface-diff-v14.json`.
+
 `chronologicalMorphologySource(entries, rows)` is the pack boundary. It returns
 the existing compiler-owned `MorphologySource`, with these 50 manual patches
 attached, for direct use by the unchanged format-v1 writer.

@@ -1,4 +1,4 @@
-import { getConnection } from '@ichiran/reference-postgres';
+import type { getConnection as getReferenceConnection } from '@ichiran/reference-postgres';
 import {
   constructConjugation,
   getConjRules,
@@ -20,7 +20,7 @@ import {
   type MorphologyRoute
 } from './morphology-format.js';
 
-type Sql = ReturnType<typeof getConnection>;
+type Sql = ReturnType<typeof getReferenceConnection>;
 
 export interface MorphologyRootSource {
   seq: number;
@@ -523,7 +523,8 @@ export async function compileMorphology(options: {
   sql?: Sql;
   dataPath?: string;
 } = {}): Promise<MorphologyCompileResult> {
-  const sql = options.sql ?? getConnection();
+  const sql = options.sql
+    ?? (await import('@ichiran/reference-postgres')).getConnection();
 
   const [rootRows, rootForms, manualRows] = await Promise.all([
     loadRootRows(sql),

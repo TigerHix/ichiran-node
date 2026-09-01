@@ -1,26 +1,5 @@
 import type postgres from 'postgres';
-import {
-  resetAllCaches,
-  withConnectionOverride
-} from '@ichiran/reference-postgres/src/conn.js';
-import { testWord } from '@ichiran/reference-postgres/src/characters.js';
-import {
-  COPULAE,
-  FINAL_PRT,
-  NO_KANJI_BREAK_PENALTY,
-  NON_FINAL_PRT,
-  SEMI_FINAL_PRT,
-  SKIP_WORDS
-} from '@ichiran/reference-postgres/src/dict/errata.js';
-import { ensureCounterCache } from '@ichiran/reference-postgres/src/dict/counters.js';
-import { hintMap, segsplitMap, splitMap } from '@ichiran/reference-postgres/src/dict/splitMaps.js';
 import type { AsyncSplitFunction, HintFunction } from '@ichiran/reference-postgres/src/dict/splitMaps.js';
-import '@ichiran/reference-postgres/src/dict/splitDefinitions.js';
-import {
-  getSuffixCache,
-  getSuffixClass,
-  initSuffixes
-} from '@ichiran/reference-postgres/src/grammar/suffixCache.js';
 import type { KanaText, Reading } from '@ichiran/reference-postgres/src/types.js';
 import { compileMorphology } from './morphology-compiler.js';
 import type {
@@ -28,16 +7,6 @@ import type {
   CompiledMorphologyRule
 } from './morphology-format.js';
 import { loadAnalyzerGeneratedSource } from './analyzer-generated.js';
-import {
-  loadUpstream260118GataiForms,
-  UPSTREAM_260118_GATAI_CLASS,
-  UPSTREAM_260118_GATAI_KEYWORD,
-  UPSTREAM_260118_NEBA_ABBREVIATION,
-  UPSTREAM_260118_SKIP_WORD_ADDED,
-  UPSTREAM_260118_SKIP_WORD_REMOVED,
-  upstream260118HintMap,
-  upstream260118SplitMap
-} from './analyzer-upstream-260118.js';
 
 const MAGIC = 'IANSUP01';
 const VERSION = 2;
@@ -70,6 +39,38 @@ for (let value = 0; value < CRC32_TABLE.length; value++) {
 }
 
 const UTF8 = new TextEncoder();
+
+async function loadAnalyzerSupportOracleRuntime() {
+  await import('@ichiran/reference-postgres/src/dict/splitDefinitions.js');
+  const [
+    connection,
+    characters,
+    errata,
+    counters,
+    splitMaps,
+    suffixCache,
+    upstream
+  ] = await Promise.all([
+    import('@ichiran/reference-postgres/src/conn.js'),
+    import('@ichiran/reference-postgres/src/characters.js'),
+    import('@ichiran/reference-postgres/src/dict/errata.js'),
+    import('@ichiran/reference-postgres/src/dict/counters.js'),
+    import('@ichiran/reference-postgres/src/dict/splitMaps.js'),
+    import('@ichiran/reference-postgres/src/grammar/suffixCache.js'),
+    import('./analyzer-upstream-260118.js')
+  ]);
+  return {
+    connection,
+    characters,
+    errata,
+    counters,
+    splitMaps,
+    suffixCache,
+    upstream
+  };
+}
+
+type AnalyzerSupportOracleRuntime = Awaited<ReturnType<typeof loadAnalyzerSupportOracleRuntime>>;
 
 export type AnalyzerSupportRoute = 'kana' | 'kanji';
 export type AnalyzerSupportSplitKind = 'split' | 'segsplit';
@@ -985,7 +986,8 @@ function ruleMatches(
 
 async function loadCollisionSources(
   sql: postgres.Sql,
-  artifact: CompiledMorphologyArtifact
+  artifact: CompiledMorphologyArtifact,
+  runtime: AnalyzerSupportOracleRuntime
 ): Promise<AnalyzerSupportCollisionSource[]> {
   const pathRows = await sql<CollisionPathRow[]>`
     SELECT c.seq AS collision_seq, c."from" AS root_seq, c.via,
@@ -1149,13 +1151,14 @@ async function loadCollisionSources(
         preferKana: entry.preferKana,
         preferKanaOnOrdinalZero: entry.preferKanaOnOrdinalZero,
         pos: entry.pos ?? [],
-        skipWord: target === UPSTREAM_260118_SKIP_WORD_ADDED
-          || (target !== UPSTREAM_260118_SKIP_WORD_REMOVED && SKIP_WORDS.includes(target)),
-        finalParticle: FINAL_PRT.includes(target),
-        semiFinalParticle: SEMI_FINAL_PRT.includes(target),
-        nonFinalParticle: NON_FINAL_PRT.includes(target),
-        copula: COPULAE.includes(target),
-        noKanjiBreakPenalty: NO_KANJI_BREAK_PENALTY.includes(target)
+        skipWord: target === runtime.upstream.UPSTREAM_260118_SKIP_WORD_ADDED
+          || (target !== runtime.upstream.UPSTREAM_260118_SKIP_WORD_REMOVED
+            && runtime.errata.SKIP_WORDS.includes(target)),
+        finalParticle: runtime.errata.FINAL_PRT.includes(target),
+        semiFinalParticle: runtime.errata.SEMI_FINAL_PRT.includes(target),
+        nonFinalParticle: runtime.errata.NON_FINAL_PRT.includes(target),
+        copula: runtime.errata.COPULAE.includes(target),
+        noKanjiBreakPenalty: runtime.errata.NO_KANJI_BREAK_PENALTY.includes(target)
       };
       const key = collisionKey(value);
       const prior = output.get(key);
@@ -1182,12 +1185,12 @@ function rawSuffixForm(form: KanaText): RawSuffixFormSource {
   };
 }
 
-async function suffixSources(): Promise<{
+async function suffixSources(runtime: AnalyzerSupportOracleRuntime): Promise<{
   suffixes: RawSuffixSource[];
   suffixClasses: Array<{ seq: number; keyword: string }>;
 }> {
-  const cache = getSuffixCache();
-  const classes = getSuffixClass();
+  const cache = runtime.suffixCache.getSuffixCache();
+  const classes = runtime.suffixCache.getSuffixClass();
   if (!cache || !classes) throw new AnalyzerSupportEncodingError('Suffix cache was not initialized');
   const suffixes = new Map<string, RawSuffixSource>();
   for (const [text, entry] of cache) {
@@ -1204,16 +1207,16 @@ async function suffixSources(): Promise<{
   // These are compiler-owned overlays, equivalent to upstream's load-conjs
   // and load-abbr calls, without mutating the frozen reference suffix cache.
   const suffixClasses = new Map<number, string>(classes);
-  for (const form of await loadUpstream260118GataiForms()) {
+  for (const form of await runtime.upstream.loadUpstream260118GataiForms()) {
     suffixes.set(form.text, {
       text: form.text,
-      values: [{ keyword: UPSTREAM_260118_GATAI_KEYWORD, form: rawSuffixForm(form) }]
+      values: [{ keyword: runtime.upstream.UPSTREAM_260118_GATAI_KEYWORD, form: rawSuffixForm(form) }]
     });
-    suffixClasses.set(form.seq, UPSTREAM_260118_GATAI_CLASS);
+    suffixClasses.set(form.seq, runtime.upstream.UPSTREAM_260118_GATAI_CLASS);
   }
-  suffixes.set(UPSTREAM_260118_NEBA_ABBREVIATION.text, {
-    text: UPSTREAM_260118_NEBA_ABBREVIATION.text,
-    values: [{ keyword: UPSTREAM_260118_NEBA_ABBREVIATION.keyword, form: null }]
+  suffixes.set(runtime.upstream.UPSTREAM_260118_NEBA_ABBREVIATION.text, {
+    text: runtime.upstream.UPSTREAM_260118_NEBA_ABBREVIATION.text,
+    values: [{ keyword: runtime.upstream.UPSTREAM_260118_NEBA_ABBREVIATION.keyword, form: null }]
   });
 
   return {
@@ -1279,8 +1282,10 @@ async function hydrateSuffixConjugations(
   }));
 }
 
-async function counterSources(): Promise<AnalyzerSupportCounterSource[]> {
-  const cache = await ensureCounterCache();
+async function counterSources(
+  runtime: AnalyzerSupportOracleRuntime
+): Promise<AnalyzerSupportCounterSource[]> {
+  const cache = await runtime.counters.ensureCounterCache();
   const output: AnalyzerSupportCounterSource[] = [];
   for (const [key, variants] of cache) {
     for (let order = 0; order < variants.length; order++) {
@@ -1299,7 +1304,7 @@ async function counterSources(): Promise<AnalyzerSupportCounterSource[]> {
         suffix: options.suffix ?? null,
         source: source === null ? null : {
           seq: source.seq,
-          route: testWord(source.text, 'kana') ? 'kana' : 'kanji',
+          route: runtime.characters.testWord(source.text, 'kana') ? 'kana' : 'kanji',
           text: source.text,
           ord: source.ord
         },
@@ -1383,7 +1388,10 @@ function readingFor(candidate: AnnotationCandidate, definitionSeq: number): Read
   };
 }
 
-function splitPartSource(part: unknown): AnalyzerSupportSplitPartSource {
+function splitPartSource(
+  part: unknown,
+  runtime: AnalyzerSupportOracleRuntime
+): AnalyzerSupportSplitPartSource {
   if (part === ':score' || part === ':pscore') return part;
   if (!part || typeof part !== 'object' || !('text' in part) || !('seq' in part)) {
     throw new AnalyzerSupportEncodingError(`Unsupported split part ${JSON.stringify(part)}`);
@@ -1392,7 +1400,7 @@ function splitPartSource(part: unknown): AnalyzerSupportSplitPartSource {
     seq: number; text: string; ord: number; common: number | null; commonTags: string;
     conjugateP: boolean; nokanji: boolean; bestKana?: string | null; bestKanji?: string | null;
   };
-  const route: AnalyzerSupportRoute = testWord(word.text, 'kana') ? 'kana' : 'kanji';
+  const route: AnalyzerSupportRoute = runtime.characters.testWord(word.text, 'kana') ? 'kana' : 'kanji';
   return {
     seq: word.seq,
     route,
@@ -1460,7 +1468,8 @@ async function annotationSources(
   collisions: readonly AnalyzerSupportCollisionSource[],
   activeSplitMap: ReadonlyMap<number, AsyncSplitFunction>,
   activeSegsplitMap: ReadonlyMap<number, AsyncSplitFunction>,
-  activeHintMap: ReadonlyMap<number, HintFunction>
+  activeHintMap: ReadonlyMap<number, HintFunction>,
+  runtime: AnalyzerSupportOracleRuntime
 ): Promise<{
   splits: AnalyzerSupportSplitSource[];
   hints: AnalyzerSupportHintSource[];
@@ -1495,7 +1504,7 @@ async function annotationSources(
         route: candidate.route,
         surface: candidate.surface,
         kind,
-        parts: result[0].map(splitPartSource),
+        parts: result[0].map(part => splitPartSource(part, runtime)),
         score: typeof attrs === 'number' ? attrs : attrs.score,
         primary: typeof attrs === 'number' ? 0 : attrs.primary ?? 0,
         connector: typeof attrs === 'number' ? ' ' : attrs.connector ?? ' ',
@@ -1567,22 +1576,27 @@ async function annotationSources(
  * live core runtime.
  */
 export async function loadAnalyzerSupportSource(sql: postgres.Sql): Promise<AnalyzerSupportSource> {
-  return withConnectionOverride(sql, async () => {
+  const runtime = await loadAnalyzerSupportOracleRuntime();
+  return runtime.connection.withConnectionOverride(sql, async () => {
     // Counter/no-conjugation/archive caches are connection-owned in the legacy
     // runtime. A release build must never reuse values from an earlier DB.
-    resetAllCaches();
-    await initSuffixes({ blocking: true, reset: true });
+    runtime.connection.resetAllCaches();
+    await runtime.suffixCache.initSuffixes({ blocking: true, reset: true });
     const [morphology, counters] = await Promise.all([
       compileMorphology({ sql }),
-      counterSources()
+      counterSources(runtime)
     ]);
-    const collisions = await loadCollisionSources(sql, morphology.artifact);
+    const collisions = await loadCollisionSources(sql, morphology.artifact, runtime);
     const generated = await loadAnalyzerGeneratedSource(sql, morphology.artifact);
-    const activeSplitMap = new Map<number, AsyncSplitFunction>(splitMap);
-    for (const [seq, split] of upstream260118SplitMap) activeSplitMap.set(seq, split);
-    const activeSegsplitMap = new Map<number, AsyncSplitFunction>(segsplitMap);
-    const activeHintMap = new Map<number, HintFunction>(hintMap);
-    for (const [seq, hint] of upstream260118HintMap) activeHintMap.set(seq, hint);
+    const activeSplitMap = new Map<number, AsyncSplitFunction>(runtime.splitMaps.splitMap);
+    for (const [seq, split] of runtime.upstream.upstream260118SplitMap) {
+      activeSplitMap.set(seq, split);
+    }
+    const activeSegsplitMap = new Map<number, AsyncSplitFunction>(runtime.splitMaps.segsplitMap);
+    const activeHintMap = new Map<number, HintFunction>(runtime.splitMaps.hintMap);
+    for (const [seq, hint] of runtime.upstream.upstream260118HintMap) {
+      activeHintMap.set(seq, hint);
+    }
     const roots = new Set<number>([
       ...activeSplitMap.keys(), ...activeSegsplitMap.keys(), ...activeHintMap.keys(),
       ...collisions
@@ -1607,9 +1621,10 @@ export async function loadAnalyzerSupportSource(sql: postgres.Sql): Promise<Anal
       collisions,
       activeSplitMap,
       activeSegsplitMap,
-      activeHintMap
+      activeHintMap,
+      runtime
     );
-    const suffix = await suffixSources();
+    const suffix = await suffixSources(runtime);
     const suffixes = await hydrateSuffixConjugations(sql, suffix.suffixes);
     return {
       suffixes,
