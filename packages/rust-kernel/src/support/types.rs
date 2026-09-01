@@ -2,6 +2,7 @@ use serde::Serialize;
 
 use crate::morphology::Route;
 
+#[cfg(test)]
 #[derive(Clone, Debug, Eq, PartialEq, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct SupportStats {

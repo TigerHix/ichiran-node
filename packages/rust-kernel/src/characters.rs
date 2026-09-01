@@ -436,7 +436,7 @@ fn normal_unit(unit: u16, kana_only: bool) -> Option<u16> {
 
 pub fn dakuten_join() -> Vec<(Vec<u16>, Vec<u16>)> {
     let mut result = Vec::new();
-    for (table, mark) in [(DAKUTEN_HASH, "゛"), (HANDAKUTEN_HASH, "゜")] {
+    for (table, mark) in [(DAKUTEN_HASH, 0x309b), (HANDAKUTEN_HASH, 0x309c)] {
         for (plain_class, voiced_class) in table {
             let Some(plain) = characters_for_class(plain_class) else {
                 continue;
@@ -448,10 +448,7 @@ pub fn dakuten_join() -> Vec<(Vec<u16>, Vec<u16>)> {
             let voiced_units: Vec<u16> = voiced.encode_utf16().collect();
             let start = plain_units.len().saturating_sub(voiced_units.len());
             for (plain_unit, voiced_unit) in plain_units[start..].iter().zip(voiced_units) {
-                result.push((
-                    vec![*plain_unit, mark.encode_utf16().next().unwrap()],
-                    vec![voiced_unit],
-                ));
+                result.push((vec![*plain_unit, mark], vec![voiced_unit]));
             }
         }
     }

@@ -4,6 +4,7 @@ use crate::analyzer_model::{
     Conjugation, EntryScoreFacts, ScoreCandidate, ScoreSplit, SequenceFacts, WordScoreFacts,
 };
 use crate::annotations::{AnalyzerAnnotations, GeneratedFacts, GeneratedMember};
+use crate::characters::as_hiragana;
 use crate::error::{ErrorCode, KernelError, Result};
 use crate::morphology::{Morphology, MorphologyCandidate, MorphologyProperty, Route};
 use crate::roots::RootPayload;
@@ -55,7 +56,6 @@ pub enum PhysicalKey {
     Sequence(u32),
     Semantic(StageKey),
     Counter(Vec<u16>),
-    Unique(usize),
 }
 
 #[derive(Clone, Debug, Eq, Hash, PartialEq)]
@@ -122,7 +122,7 @@ impl MaterializedCandidate {
     pub fn as_component(&self, primary: bool) -> CandidateComponent {
         CandidateComponent {
             text: self.text.clone(),
-            true_text: Some(self.true_text.clone()),
+            true_text: (self.true_text != self.text).then(|| self.true_text.clone()),
             route: self.route,
             reading: self.reading.clone(),
             entry_index: self.entry_index,
@@ -167,15 +167,23 @@ fn analysis_conjugation(
     }
 }
 
-type ScoreSplitResolver<'a> = dyn Fn(u32, Route, &[u16]) -> Result<Option<ScoreSplit>> + 'a;
+#[derive(Clone, Debug, Eq, Hash, PartialEq)]
+struct SplitKey {
+    definition_seq: u32,
+    route: Route,
+    surface: Vec<u16>,
+}
+
 pub struct AnalyzerLexicon<'a> {
     surface: &'a SurfaceIndex,
     roots: &'a RootPayload,
     morphology: &'a Morphology,
     support: &'a AnalyzerSupport,
     annotations: &'a mut AnalyzerAnnotations,
-    score_split: &'a ScoreSplitResolver<'a>,
     lexical_cache: HashMap<Vec<u16>, Vec<MaterializedCandidate>>,
+    full_cache: HashMap<Vec<u16>, Vec<MaterializedCandidate>>,
+    score_split_cache: HashMap<SplitKey, Option<ScoreSplit>>,
+    score_split_in_progress: HashSet<SplitKey>,
     root_form_cache: HashMap<(Vec<u16>, u32, Route), Option<usize>>,
 }
 
@@ -186,7 +194,6 @@ impl<'a> AnalyzerLexicon<'a> {
         morphology: &'a Morphology,
         support: &'a AnalyzerSupport,
         annotations: &'a mut AnalyzerAnnotations,
-        score_split: &'a ScoreSplitResolver<'a>,
     ) -> Self {
         Self {
             surface,
@@ -194,14 +201,19 @@ impl<'a> AnalyzerLexicon<'a> {
             morphology,
             support,
             annotations,
-            score_split,
             lexical_cache: HashMap::new(),
+            full_cache: HashMap::new(),
+            score_split_cache: HashMap::new(),
+            score_split_in_progress: HashSet::new(),
             root_form_cache: HashMap::new(),
         }
     }
 
     pub fn reset(&mut self) {
         self.lexical_cache.clear();
+        self.full_cache.clear();
+        self.score_split_cache.clear();
+        self.score_split_in_progress.clear();
         self.root_form_cache.clear();
     }
 
@@ -239,6 +251,74 @@ impl<'a> AnalyzerLexicon<'a> {
         Ok(values)
     }
 
+    /// Stable de-duplication using the frozen TypeScript candidate-key fields.
+    pub(crate) fn dedupe_candidates(
+        &self,
+        values: Vec<MaterializedCandidate>,
+    ) -> Result<Vec<MaterializedCandidate>> {
+        dedupe(values)
+    }
+
+    /// Materialize hiragana lexical rows as katakana proxies.
+    pub(crate) fn katakana_proxy(
+        &mut self,
+        surface: &[u16],
+        existing_simple: &[MaterializedCandidate],
+    ) -> Result<Vec<MaterializedCandidate>> {
+        let hiragana = as_hiragana(surface);
+        if hiragana == surface {
+            return Ok(Vec::new());
+        }
+        let excluded = existing_simple
+            .iter()
+            .map(|value| value.public_seq)
+            .collect::<HashSet<_>>();
+        let mut result = Vec::new();
+        for mut candidate in self.lexical(&hiragana)? {
+            if candidate.kind != CandidateKind::Simple
+                || !candidate.inflection.is_empty()
+                || excluded.contains(&candidate.public_seq)
+            {
+                continue;
+            }
+            let ScoreCandidate::Word(mut facts) = candidate.score_facts else {
+                continue;
+            };
+            facts.text = surface.to_vec();
+            facts.true_text_follows_text = false;
+            candidate.kind = CandidateKind::Proxy;
+            candidate.text = surface.to_vec();
+            candidate.reading = surface.to_vec();
+            candidate.score_facts = ScoreCandidate::Word(facts);
+            candidate.components.clear();
+            result.push(candidate);
+        }
+        Ok(result)
+    }
+
+    /// Render and materialize counter variants through this request-local lexicon.
+    pub(crate) fn counter_candidates(
+        &mut self,
+        number_text: &[u16],
+        _counter_text: &[u16],
+        unique: bool,
+        variants: &[crate::support::SupportCounterVariant],
+    ) -> Result<Vec<MaterializedCandidate>> {
+        let roots = self.roots;
+        let mut result = Vec::new();
+        for variant in variants {
+            let Some(rendered) =
+                crate::analyzer_counters::materialize_counter(number_text, variant, unique)?
+            else {
+                continue;
+            };
+            result.push(crate::analyzer_counters::materialize_counter_candidate(
+                roots, self, rendered, variant,
+            )?);
+        }
+        dedupe(result)
+    }
+
     fn direct(&mut self, surface: &[u16], form: usize) -> Result<MaterializedCandidate> {
         let entry_index = self.roots.form_entry_index(form)?;
         let seq = self.roots.entry_seq(entry_index)?;
@@ -263,7 +343,7 @@ impl<'a> AnalyzerLexicon<'a> {
             },
         };
         let facts = sequence_facts(self.roots, Some(entry_index))?;
-        let split = (self.score_split)(seq, route, surface)?;
+        let split = self.score_split(seq, route, surface)?;
         let score_facts = ScoreCandidate::Word(WordScoreFacts {
             kind: crate::analyzer_model::ScoreWordKind::Word,
             text: surface.to_vec(),
@@ -503,5 +583,7 @@ fn dedupe(values: Vec<MaterializedCandidate>) -> Result<Vec<MaterializedCandidat
 
 mod materialize;
 mod merge;
+mod suffixes;
+pub(crate) use suffixes::SegmentSplit;
 #[cfg(test)]
 mod tests;

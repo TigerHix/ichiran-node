@@ -246,6 +246,7 @@ pub struct EntityHint {
     pub boost: Option<f64>,
 }
 
+#[cfg(test)]
 pub fn utf16(text: &str) -> Vec<u16> {
     text.encode_utf16().collect()
 }

@@ -598,6 +598,7 @@ pub fn join_romanized_parts(parts: &[Vec<u16>]) -> Vec<u16> {
     output
 }
 
+#[cfg(test)]
 pub(crate) fn romanize(input: &str) -> String {
     let input: Vec<u16> = input.encode_utf16().collect();
     String::from_utf16_lossy(&romanize_word(

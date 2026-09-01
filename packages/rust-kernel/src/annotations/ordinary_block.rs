@@ -309,7 +309,6 @@ fn corrupt<T>(message: impl Into<String>) -> Result<T> {
 }
 
 impl AnalyzerAnnotations {
-    #[allow(dead_code)]
     pub(crate) fn split(
         &mut self,
         definition_seq: u32,
@@ -327,7 +326,6 @@ impl AnalyzerAnnotations {
             .cloned())
     }
 
-    #[allow(dead_code)]
     pub(crate) fn hint(
         &mut self,
         definition_seq: u32,

@@ -14,7 +14,9 @@ use crate::analyzer_model::{
 use crate::characters::{CharClass, count_char_class, geminate, get_char_class, rendaku};
 use crate::error::{ErrorCode, KernelError, Result};
 use crate::morphology::Route;
-use crate::numbers::{NumberKana, number_to_kana_with_separator, number_to_kanji, parse_number};
+#[cfg(test)]
+use crate::numbers::number_to_kanji;
+use crate::numbers::{NumberKana, number_to_kana_with_separator, parse_number};
 use crate::roots::RootPayload;
 use crate::support::{
     SupportCounterClass, SupportCounterVariant, SupportDigit, SupportDigitOption,
@@ -375,6 +377,7 @@ pub fn materialize_counter(
     }))
 }
 
+#[cfg(test)]
 pub fn counter_kanji(value: f64, counter_text: &[u16]) -> Result<Vec<u16>> {
     let mut result = number_to_kanji(value)
         .map_err(|error| KernelError::new(ErrorCode::Internal, error.to_string()))?;

@@ -137,13 +137,10 @@ impl AnalyzerLexicon<'_> {
             .as_ref()
             .map_or(value.root_seq, |row| row.collision_seq);
         let split = if let Some(row) = &collision {
-            (self.score_split)(row.collision_seq, value.route, &surface)?.or((self.score_split)(
-                value.root_seq,
-                value.route,
-                &surface,
-            )?)
+            self.score_split(row.collision_seq, value.route, &surface)?
+                .or(self.score_split(value.root_seq, value.route, &surface)?)
         } else {
-            (self.score_split)(value.root_seq, value.route, &surface)?
+            self.score_split(value.root_seq, value.route, &surface)?
         };
         let positions = union_strings([
             root_positions,

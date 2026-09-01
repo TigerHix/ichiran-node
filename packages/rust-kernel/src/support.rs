@@ -256,6 +256,7 @@ impl AnalyzerSupport {
         Ok(support)
     }
 
+    #[cfg(test)]
     pub fn stats(&self) -> SupportStats {
         SupportStats {
             byte_length: self.bytes.len(),
@@ -492,6 +493,7 @@ impl AnalyzerSupport {
         u32_at(&self.bytes, at, ErrorCode::CorruptPayload, label)
     }
 
+    #[cfg(test)]
     pub(super) fn i32(&self, at: usize, label: &str) -> Result<i32> {
         Ok(self.u32(at, label)? as i32)
     }

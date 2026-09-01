@@ -1,4 +1,3 @@
-use std::cell::RefCell;
 use std::fs;
 use std::path::PathBuf;
 
@@ -28,7 +27,6 @@ fn key(value: &PhysicalKey) -> String {
                 .join(",")
         ),
         PhysicalKey::Counter(text) => format!("counter:{}", utf16_string(text, "counter").unwrap()),
-        PhysicalKey::Unique(index) => format!("unique:{index}"),
     }
 }
 
@@ -57,19 +55,8 @@ fn typescript_lexicon_materialization_fixture_is_exact() {
     let morphology = Morphology::open(pack.section_data(3).unwrap()).unwrap();
     let support = AnalyzerSupport::open(pack.section_data(4).unwrap()).unwrap();
     let mut annotations = AnalyzerAnnotations::open(pack.section_data(5).unwrap()).unwrap();
-    let split_calls = RefCell::new(Vec::new());
-    let score_split = |seq, route, text: &[u16]| {
-        split_calls.borrow_mut().push((seq, route, text.to_vec()));
-        Ok(None)
-    };
-    let mut lexicon = AnalyzerLexicon::new(
-        &surface,
-        &roots,
-        &morphology,
-        &support,
-        &mut annotations,
-        &score_split,
-    );
+    let mut lexicon =
+        AnalyzerLexicon::new(&surface, &roots, &morphology, &support, &mut annotations);
 
     let direct = lexicon.lexical(&utf16("猫")).unwrap();
     assert_eq!(direct.len(), 2);
@@ -203,8 +190,113 @@ fn typescript_lexicon_materialization_fixture_is_exact() {
             1_481_350,
         ]
     );
+}
 
-    let calls = split_calls.borrow();
-    assert!(calls.iter().any(|(seq, _, _)| *seq == 2_735_620));
-    assert!(calls.iter().any(|(seq, _, _)| *seq == 1_000_280));
+#[test]
+#[ignore = "requires the digest-locked portable-core-260118-baseline release"]
+fn typescript_suffix_recursion_and_segment_split_fixtures_are_exact() {
+    let pack = Pack::open(fs::read(release().join("hot.bin")).expect("read qualified hot.bin"))
+        .expect("open qualified pack");
+    let surface = SurfaceIndex::open(pack.section_data(1).unwrap()).unwrap();
+    let roots = RootPayload::open(pack.section_data(2).unwrap()).unwrap();
+    let morphology = Morphology::open(pack.section_data(3).unwrap()).unwrap();
+    let support = AnalyzerSupport::open(pack.section_data(4).unwrap()).unwrap();
+    let mut annotations = AnalyzerAnnotations::open(pack.section_data(5).unwrap()).unwrap();
+    let mut lexicon =
+        AnalyzerLexicon::new(&surface, &roots, &morphology, &support, &mut annotations);
+
+    let desire = lexicon.full(&utf16("食べたい")).unwrap();
+    assert_eq!(desire.len(), 1);
+    assert_eq!(desire[0].kind, CandidateKind::Compound);
+    assert_eq!(desire[0].public_seq, Some(1_358_280));
+    assert_eq!(desire[0].physical_seq, Some(-1_358_280));
+    assert_eq!(desire[0].suffix_class.as_deref(), Some(":tai"));
+    assert_eq!(
+        utf16_string(&desire[0].reading, "desire reading").unwrap(),
+        "たべたい"
+    );
+    assert_eq!(
+        desire[0]
+            .components
+            .iter()
+            .map(|value| (
+                utf16_string(&value.text, "desire component").unwrap(),
+                value.public_seq,
+                value.suffix_class.clone(),
+                value.conjugation_selection,
+            ))
+            .collect::<Vec<_>>(),
+        vec![
+            (
+                "食べ".into(),
+                Some(1_358_280),
+                None,
+                ConjugationSelection::Explicit,
+            ),
+            (
+                "たい".into(),
+                Some(2_017_560),
+                Some(":tai".into()),
+                ConjugationSelection::Root,
+            ),
+        ]
+    );
+
+    // `:nakereba` restores 食べなければ through `full_at`, then abbreviates it.
+    let recursive = lexicon.full(&utf16("食べなきゃ")).unwrap();
+    assert_eq!(recursive.len(), 1);
+    assert_eq!(recursive[0].kind, CandidateKind::Proxy);
+    assert_eq!(recursive[0].public_seq, Some(1_358_280));
+    assert_eq!(recursive[0].physical_seq, Some(-1_358_280));
+    assert_eq!(
+        utf16_string(&recursive[0].reading, "recursive reading").unwrap(),
+        "たべなきゃ"
+    );
+
+    // The seekable annotations merge both generated 忘れる identities in
+    // stable primary/secondary order, matching the TypeScript Worker path.
+    let generated = lexicon.full(&utf16("忘れたそう")).unwrap();
+    assert_eq!(generated.len(), 1);
+    assert_eq!(generated[0].public_seq, Some(1_519_210));
+    assert_eq!(generated[0].physical_seq, Some(-1_519_210));
+    assert_eq!(generated[0].physical_group, Some(52_620));
+    assert_eq!(generated[0].suffix_class.as_deref(), Some(":tasou"));
+    assert_eq!(
+        generated[0]
+            .semantic_members
+            .iter()
+            .map(|member| member.public_seq)
+            .collect::<Vec<_>>(),
+        vec![Some(1_519_210), Some(1_519_190)]
+    );
+
+    let dewa = lexicon
+        .lexical(&utf16("では"))
+        .unwrap()
+        .into_iter()
+        .find(|value| value.definition_seq == Some(1_008_450))
+        .expect("qualified では split source");
+    let split = lexicon
+        .segment_split(&dewa)
+        .unwrap()
+        .expect("qualified では segment split");
+    assert_eq!(split.added_score, -5);
+    assert_eq!(split.candidate.kind, CandidateKind::Compound);
+    assert_eq!(
+        split
+            .candidate
+            .components
+            .iter()
+            .map(|value| (value.public_seq, value.primary))
+            .collect::<Vec<_>>(),
+        vec![(Some(2_028_980), true), (Some(2_028_920), false)]
+    );
+    assert_eq!(
+        utf16_string(&split.candidate.text, "split text").unwrap(),
+        "では"
+    );
+    assert_eq!(
+        utf16_string(&split.candidate.reading, "split reading").unwrap(),
+        "で \u{200c}は"
+    );
 }

@@ -3,12 +3,12 @@ use std::cmp::Ordering;
 use crate::error::{ErrorCode, KernelError, Result};
 use crate::morphology::Route;
 
-use super::{
-    AnalyzerSupport, COLLISIONS, HINTS, NONE, SPLIT_PARTS, SPLITS, SupportCollision, SupportSplit,
-    SupportSplitKind, SupportSplitPart, SupportSplitWord,
-};
+use super::{AnalyzerSupport, COLLISIONS, HINTS, NONE, SPLITS, SupportCollision, SupportSplitKind};
+#[cfg(test)]
+use super::{SPLIT_PARTS, SupportSplit, SupportSplitPart, SupportSplitWord};
 
 impl AnalyzerSupport {
+    #[cfg(test)]
     pub fn split(
         &self,
         definition_seq: u32,
@@ -36,6 +36,7 @@ impl AnalyzerSupport {
         self.read_split(low).map(Some)
     }
 
+    #[cfg(test)]
     pub fn hint(
         &self,
         definition_seq: u32,
@@ -179,6 +180,7 @@ impl AnalyzerSupport {
         )
     }
 
+    #[cfg(test)]
     fn compare_split_to(
         &self,
         index: usize,
@@ -208,6 +210,7 @@ impl AnalyzerSupport {
         )
     }
 
+    #[cfg(test)]
     fn compare_hint_to(
         &self,
         index: usize,
@@ -260,6 +263,7 @@ impl AnalyzerSupport {
         )
     }
 
+    #[cfg(test)]
     fn read_split(&self, index: usize) -> Result<SupportSplit> {
         let at = self.record(SPLITS, index, "support split")?;
         let first = self.u32(at + 8, "support split-part start")? as usize;
@@ -289,6 +293,7 @@ impl AnalyzerSupport {
         })
     }
 
+    #[cfg(test)]
     fn read_split_part(&self, index: usize) -> Result<SupportSplitPart> {
         let at = self.record(SPLIT_PARTS, index, "support split part")?;
         match self.u8(at, "support split-part kind")? {

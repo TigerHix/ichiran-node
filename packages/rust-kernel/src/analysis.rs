@@ -1,24 +1,30 @@
-use crate::annotations::{AnalyzerAnnotations, GeneratedFacts};
-use crate::dto::{
-    AnalysisAlternative, AnalysisChunk, AnalysisPath, AnalysisResult, AnalysisRoot, AnalysisToken,
-    PublicRoute, Utf16Text,
+use crate::analyzer_engine::{AccumulatedPath, AnalyzerEngine, merge_paths};
+use crate::analyzer_legacy::{
+    LegacyContext, LegacyDetailedResult, LegacyDetailedSession, LegacyOptions, serialize_compact,
 };
+use crate::analyzer_lexicon::AnalyzerLexicon;
+use crate::analyzer_model::EntityHint;
+use crate::analyzer_options::{AnalyzeOptions, validate};
+use crate::analyzer_projection::{ProjectionScoredCandidate, gap, project_paths, shift_token};
+use crate::analyzer_romanize::romanize_analysis;
+use crate::annotations::{AnalyzerAnnotations, GeneratedFacts};
+use crate::characters::{BasicSplitType, basic_split, normalize};
+use crate::details::{DetailRange, DetailStore};
+use crate::dto::{AnalysisChunk, AnalysisPath, AnalysisResult, AnalysisToken, Utf16Text};
 use crate::error::{ErrorCode, KernelError, Result};
-use crate::morphology::{Morphology, MorphologyCandidate, MorphologyProperty, Route};
+use crate::morphology::{Morphology, MorphologyCandidate, Route};
 use crate::pack::{Pack, PackManifest};
-use crate::romanization::romanize;
+use crate::romanization::RomanizationName;
 use crate::roots::RootPayload;
-use crate::scoring::{WordFacts, score_word};
 use crate::support::AnalyzerSupport;
 use crate::surface::SurfaceIndex;
-use crate::text::{string as utf16_string, utf16};
+use crate::text::utf16;
 
 const SURFACE_SECTION: u32 = 1;
 const ROOT_SECTION: u32 = 2;
 const MORPHOLOGY_SECTION: u32 = 3;
 const SUPPORT_SECTION: u32 = 4;
 const ANNOTATION_SECTION: u32 = 5;
-const SCORE_CUTOFF: i32 = 5;
 
 #[derive(Clone, Debug, PartialEq, serde::Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -28,31 +34,36 @@ pub struct GeneratedLookup {
     pub facts: Option<GeneratedFacts>,
 }
 
-struct Candidate {
-    id: u32,
-    text: String,
-    route: Route,
-    reading: String,
-    pos: Vec<String>,
-    score: i32,
-    archived_score: i32,
-    archived: bool,
-    physical_group: Option<u32>,
-    member_ord: Option<u8>,
-    common: Option<u8>,
-    entry_index: Option<usize>,
-    root: AnalysisRoot,
-    inflection: Vec<MorphologyProperty>,
+#[derive(Default)]
+pub struct LegacyDetailSession {
+    inner: LegacyDetailedSession,
 }
 
-struct CandidateGroup {
-    start: usize,
-    end: usize,
-    matches: usize,
-    candidates: Vec<Candidate>,
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub enum LegacyDetailStep {
+    Ready(Vec<u8>),
+    Missing {
+        entry_index: u32,
+        range: DetailRange,
+    },
 }
 
-/// The host-neutral owner of all hot analyzer state.
+enum DocumentChunk {
+    Misc {
+        start: usize,
+        end: usize,
+        text: Vec<u16>,
+        token: Box<AnalysisToken>,
+    },
+    Word {
+        start: usize,
+        end: usize,
+        text: Vec<u16>,
+        paths: Vec<AnalysisPath>,
+    },
+}
+
+/// The host-neutral owner of all resident analyzer state.
 pub struct Kernel {
     pack: Pack,
     surface: SurfaceIndex,
@@ -134,47 +145,101 @@ impl Kernel {
         Ok(generated)
     }
 
-    /// One complete operation: UTF-16 input enters once and one serialized DTO exits.
+    /// One complete operation: UTF-16 input enters once and one result exits.
     pub fn analyze(&mut self, input: &[u16], limit: usize) -> Result<AnalysisResult> {
-        if limit == 0 {
-            return Err(KernelError::new(
-                ErrorCode::InvalidInput,
-                "analysis limit must be positive",
-            ));
+        self.analyze_with_options(
+            input,
+            &AnalyzeOptions {
+                limit,
+                ..AnalyzeOptions::default()
+            },
+        )
+    }
+
+    pub fn analyze_with_options(
+        &mut self,
+        input: &[u16],
+        options: &AnalyzeOptions,
+    ) -> Result<AnalysisResult> {
+        validate(input, options)?;
+        let normalized = normalize(input, false, !options.normalize_punctuation);
+        let mut document = Vec::new();
+        let mut accumulated = vec![AccumulatedPath::initial()];
+        let mut offset = 0_usize;
+
+        let mut lexicon = AnalyzerLexicon::new(
+            &self.surface,
+            &self.roots,
+            &self.morphology,
+            &self.support,
+            &mut self.annotations,
+        );
+        lexicon.reset();
+        let mut engine = AnalyzerEngine::new(&self.surface, &self.support, &mut lexicon);
+
+        for segment in basic_split(&normalized) {
+            let start = offset;
+            let end = start.checked_add(segment.text.len()).ok_or_else(|| {
+                KernelError::new(ErrorCode::Internal, "analysis chunk offset overflow")
+            })?;
+            match segment.kind {
+                BasicSplitType::Misc => {
+                    let token = gap(&normalized, start, end)?;
+                    document.push(DocumentChunk::Misc {
+                        start,
+                        end,
+                        text: segment.text,
+                        token: Box::new(token),
+                    });
+                }
+                BasicSplitType::Word => {
+                    let entities = local_entities(&options.entities, start, end);
+                    let analysis = engine.analyze_word(&segment.text, options.limit, &entities)?;
+                    let projected_candidates = analysis
+                        .candidates
+                        .into_iter()
+                        .map(|(id, value)| {
+                            (
+                                id,
+                                ProjectionScoredCandidate {
+                                    candidate: value.candidate,
+                                    info: value.info,
+                                },
+                            )
+                        })
+                        .collect();
+                    let mut paths = project_paths(
+                        &segment.text,
+                        &analysis.paths,
+                        &projected_candidates,
+                        &entities,
+                    )?;
+                    for path in &mut paths {
+                        for token in &mut path.tokens {
+                            *token = shift_token(token.clone(), start)?;
+                        }
+                    }
+                    let chunk_index = document.len();
+                    accumulated =
+                        merge_paths(&accumulated, &analysis.paths, chunk_index, options.limit);
+                    document.push(DocumentChunk::Word {
+                        start,
+                        end,
+                        text: segment.text,
+                        paths,
+                    });
+                }
+            }
+            offset = end;
         }
-        let text = Utf16Text::from_units(input);
-        let groups = self.groups(input)?;
-        let Some(group) = groups.into_iter().find(|group| {
-            group.start == 0 && group.end == input.len() && !group.candidates.is_empty()
-        }) else {
-            let token = gap_token(&text, 0, input.len());
-            let path = AnalysisPath {
-                score: 0.0,
-                tokens: vec![token],
-            };
-            return Ok(AnalysisResult {
-                input: text.clone(),
-                normalized: text.clone(),
-                compute_ms: 0.0,
-                chunks: vec![AnalysisChunk::Misc {
-                    start: 0,
-                    end: input.len(),
-                    text,
-                }],
-                paths: vec![path],
-            });
-        };
-        let paths = group_paths(group, limit);
+
+        let paths = materialize_document_paths(&document, &accumulated)?;
+        let chunks = document.into_iter().map(public_chunk).collect();
         Ok(AnalysisResult {
-            input: text.clone(),
-            normalized: text.clone(),
+            input: Utf16Text::from_units(input),
+            normalized: Utf16Text::from_units(&normalized),
             compute_ms: 0.0,
-            chunks: vec![AnalysisChunk::Word {
-                start: 0,
-                end: input.len(),
-                text,
-                paths: paths.clone(),
-            }],
+            chunks,
             paths,
         })
     }
@@ -188,367 +253,161 @@ impl Kernel {
             .map_err(|error| KernelError::new(ErrorCode::Internal, error.to_string()))
     }
 
-    fn groups(&mut self, input: &[u16]) -> Result<Vec<CandidateGroup>> {
-        let mut groups = Vec::new();
-        let mut next_id = 1_u32;
-        for start in 0..input.len() {
-            for matched in self.surface.scan(input, start, 50)? {
-                let surface = &input[start..matched.end];
-                let mut candidates = Vec::new();
-                if matched.direct {
-                    let rank = matched.direct_rank.ok_or_else(|| {
-                        KernelError::new(ErrorCode::CorruptPayload, "direct match has no rank")
-                    })?;
-                    let first = self.roots.surface_form_start(rank)?;
-                    let count = self.roots.surface_form_count(rank)?;
-                    for form in first..first + count {
-                        candidates.push(self.direct_candidate(surface, form)?);
-                    }
-                }
-                if matched.morphology {
-                    for value in self.morphology.lookup(surface, matched.route)? {
-                        candidates.push(self.morphology_candidate(value)?);
-                    }
-                }
-                if candidates.is_empty() {
-                    continue;
-                }
-                candidates = merge_physical(candidates);
-                for candidate in &mut candidates {
-                    candidate.id = next_id;
-                    next_id = next_id.checked_add(1).ok_or_else(|| {
-                        KernelError::new(ErrorCode::OutOfRange, "candidate ID overflow")
-                    })?;
-                }
-                let matches = candidates.len();
-                candidates.retain(|candidate| candidate.score >= SCORE_CUTOFF);
-                stable_score_sort(&mut candidates);
-                if let Some(best) = candidates.first().map(|value| value.score) {
-                    candidates.retain(|candidate| candidate.score * 2 >= best);
-                }
-                if !candidates.is_empty() {
-                    groups.push(CandidateGroup {
-                        start,
-                        end: matched.end,
-                        matches,
-                        candidates,
-                    });
-                }
-            }
-        }
-        Ok(groups)
+    pub fn analyze_json_with_options(
+        &mut self,
+        input: &[u16],
+        options: &AnalyzeOptions,
+    ) -> Result<Vec<u8>> {
+        serde_json::to_vec(&self.analyze_with_options(input, options)?)
+            .map_err(|error| KernelError::new(ErrorCode::Internal, error.to_string()))
     }
 
-    fn direct_candidate(&self, surface: &[u16], form: usize) -> Result<Candidate> {
-        let text = utf16_string(surface, "direct surface")?;
-        let entry = self.roots.form_entry_index(form)?;
-        let seq = self.roots.entry_seq(entry)?;
-        let route = self.roots.form_route(form)?;
-        let best = self
-            .roots
-            .resolve_surface_reference(self.roots.form_best_reference(form)?, |rank| {
-                self.surface.direct_surface(rank)
-            })?;
-        let root = match route {
-            Route::Kanji => AnalysisRoot {
-                seq,
-                form: text.clone(),
-                reading: best.unwrap_or_else(|| text.clone()),
+    pub fn romanize_with_options(
+        &mut self,
+        input: &[u16],
+        options: &AnalyzeOptions,
+        method: RomanizationName,
+    ) -> Result<Vec<u16>> {
+        let analysis = self.analyze_with_options(
+            input,
+            &AnalyzeOptions {
+                limit: 1,
+                entities: options.entities.clone(),
+                normalize_punctuation: options.normalize_punctuation,
             },
-            Route::Kana => AnalysisRoot {
-                seq,
-                form: best.unwrap_or_else(|| text.clone()),
-                reading: text.clone(),
-            },
-        };
-        let positions = self.roots.entry_positions(entry)?;
-        let common = self.roots.form_common(form)?;
-        let archived = self.roots.entry_archived(entry)?;
-        let facts = WordFacts {
-            text: surface,
-            route,
-            seq,
-            ord: self.roots.form_ordinal(form)?,
-            common,
-            nokanji: self.roots.form_nokanji(form)?,
-            root: true,
-            n_kanji: self.roots.entry_n_kanji(entry)?,
-            primary_nokanji: self.roots.entry_primary_nokanji(entry)?,
-            conjugations: &[],
-            positions: &positions,
-            archived,
-            prefer_kana: self.roots.entry_prefer_kana(entry)?,
-            prefer_kana_zero: self.roots.entry_prefer_kana_zero(entry)?,
-            inherited_common: None,
-        };
-        let score = score_word(facts);
-        Ok(Candidate {
-            id: 0,
-            text,
-            route,
-            reading: root.reading.clone(),
-            pos: positions,
-            score,
-            archived_score: score,
-            archived,
-            physical_group: None,
-            member_ord: None,
-            common,
-            entry_index: Some(entry),
-            root,
-            inflection: Vec::new(),
-        })
+        )?;
+        Ok(romanize_analysis(&analysis, method))
     }
 
-    fn morphology_candidate(&mut self, value: MorphologyCandidate) -> Result<Candidate> {
-        let entry = self.roots.find_entry_index(value.root_seq)?;
-        let aliases = self.support.generated_aliases(&value.rule_ids)?;
-        let generated = self.annotations.generated(value.root_seq, &aliases)?;
-        let mut inflection = value.path.clone();
-        if let (Some(last), Some(member)) = (
-            inflection.last_mut(),
-            generated
-                .as_ref()
-                .and_then(|facts| facts.members.as_ref())
-                .and_then(|members| members.first()),
-        ) {
-            last.pos = self
-                .morphology
-                .position(member.property.pos_id as usize)?
-                .to_owned();
-            last.kind = member.property.kind;
-            last.negative = member.property.negative;
-            last.formal = member.property.formal;
-        }
-        let mut positions =
-            entry.map_or(Ok(Vec::new()), |index| self.roots.entry_positions(index))?;
-        for property in &inflection {
-            if !positions.contains(&property.pos) {
-                positions.push(property.pos.clone());
-            }
-        }
-        let archived = entry.map_or(Ok(false), |index| self.roots.entry_archived(index))?;
-        let prefer_kana = entry.map_or(Ok(false), |index| self.roots.entry_prefer_kana(index))?;
-        let prefer_kana_zero =
-            entry.map_or(Ok(false), |index| self.roots.entry_prefer_kana_zero(index))?;
-        let n_kanji = generated
-            .as_ref()
-            .and_then(|facts| facts.n_kanji)
-            .map_or_else(
-                || entry.map_or(Ok(0), |index| self.roots.entry_n_kanji(index)),
-                Ok,
-            )?;
-        let text_units = utf16(&value.surface);
-        let facts = WordFacts {
-            text: &text_units,
-            route: value.route,
-            seq: value.root_seq,
-            ord: value.ord,
-            common: None,
-            nokanji: value.route == Route::Kana && value.source_form == value.source_reading,
-            root: false,
-            n_kanji,
-            primary_nokanji: false,
-            conjugations: &inflection,
-            positions: &positions,
-            archived,
-            prefer_kana,
-            prefer_kana_zero,
-            inherited_common: value.common,
-        };
-        let score = score_word(facts);
-        let archived_score = score_word(WordFacts {
-            text: &text_units,
-            route: value.route,
-            seq: value.root_seq,
-            ord: value.ord,
-            common: None,
-            nokanji: value.route == Route::Kana && value.source_form == value.source_reading,
-            root: false,
-            n_kanji,
-            primary_nokanji: false,
-            conjugations: &inflection,
-            positions: &positions,
-            archived: true,
-            prefer_kana,
-            prefer_kana_zero,
-            inherited_common: value.common,
-        });
-        let physical_group = generated.as_ref().and_then(|facts| facts.physical_group);
-        let member_ord = generated
-            .as_ref()
-            .and_then(|facts| facts.members.as_ref())
-            .and_then(|members| members.first())
-            .map(|member| member.member_ord);
-        Ok(Candidate {
-            id: 0,
-            text: value.surface,
-            route: value.route,
-            reading: value.reading,
-            pos: positions,
-            score,
-            archived_score,
-            archived,
-            physical_group,
-            member_ord,
-            common: value.common,
-            entry_index: entry,
-            root: AnalysisRoot {
-                seq: value.root_seq,
-                form: value.source_form,
-                reading: value.source_reading,
+    pub fn serialize_legacy_compact_json(
+        &self,
+        result: &AnalysisResult,
+        method: Option<RomanizationName>,
+    ) -> Result<Vec<u8>> {
+        let value = serialize_compact(
+            result,
+            &LegacyOptions {
+                method,
+                ..LegacyOptions::default()
             },
-            inflection,
-        })
+        );
+        serde_json::to_vec(&value)
+            .map_err(|error| KernelError::new(ErrorCode::Internal, error.to_string()))
+    }
+
+    pub fn serialize_legacy_detailed_json(
+        &mut self,
+        session: &mut LegacyDetailSession,
+        result: &AnalysisResult,
+        details: &DetailStore,
+        method: Option<RomanizationName>,
+    ) -> Result<LegacyDetailStep> {
+        let mut context = LegacyContext {
+            roots: &self.roots,
+            support: &self.support,
+            surface: &self.surface,
+            annotations: &mut self.annotations,
+        };
+        let options = LegacyOptions {
+            method,
+            ..LegacyOptions::default()
+        };
+        match session
+            .inner
+            .serialize(result, details, &mut context, &options)?
+        {
+            LegacyDetailedResult::Ready(value) => serde_json::to_vec(&value)
+                .map(LegacyDetailStep::Ready)
+                .map_err(|error| KernelError::new(ErrorCode::Internal, error.to_string())),
+            LegacyDetailedResult::MissingDetail(request) => Ok(LegacyDetailStep::Missing {
+                entry_index: request.entry_index,
+                range: request.range,
+            }),
+        }
     }
 }
 
-fn merge_physical(candidates: Vec<Candidate>) -> Vec<Candidate> {
-    let mut merged: Vec<Candidate> = Vec::new();
-    for mut candidate in candidates {
-        let Some(group) = candidate.physical_group else {
-            merged.push(candidate);
-            continue;
-        };
-        let Some(index) = merged
-            .iter()
-            .position(|value| value.physical_group == Some(group))
-        else {
-            merged.push(candidate);
-            continue;
-        };
-        let existing = &mut merged[index];
-        let archived = existing.archived || candidate.archived;
-        if candidate.member_ord.unwrap_or(u8::MAX) < existing.member_ord.unwrap_or(u8::MAX) {
-            candidate.archived = archived;
-            if archived {
-                candidate.score = candidate.archived_score;
-            }
-            *existing = candidate;
-        } else {
-            existing.archived = archived;
-            if archived {
-                existing.score = existing.archived_score;
-            }
-        }
-    }
-    merged
-}
-
-fn group_paths(group: CandidateGroup, limit: usize) -> Vec<AnalysisPath> {
-    group
-        .candidates
-        .into_iter()
-        .take(limit)
-        .map(|candidate| {
-            let alternatives = Vec::new();
-            let mut token = token_from_candidate(
-                candidate,
-                group.start,
-                group.end,
-                alternatives,
-                group.matches,
-            );
-            token.alternatives = alternative_from_token(&token).into_iter().collect();
-            AnalysisPath {
-                score: token.score,
-                tokens: vec![token],
-            }
+fn local_entities(entities: &[EntityHint], start: usize, end: usize) -> Vec<EntityHint> {
+    entities
+        .iter()
+        .filter(|entity| entity.start >= start && entity.end <= end)
+        .map(|entity| EntityHint {
+            start: entity.start - start,
+            end: entity.end - start,
+            boost: entity.boost,
         })
         .collect()
 }
 
-fn token_from_candidate(
-    candidate: Candidate,
-    start: usize,
-    end: usize,
-    alternatives: Vec<AnalysisAlternative>,
-    matches: usize,
-) -> AnalysisToken {
-    AnalysisToken {
-        candidate_id: Some(candidate.id),
-        start,
-        end,
-        text: candidate.text.into(),
-        true_text: None,
-        route: candidate.route.into(),
-        romanized: romanize(&candidate.reading).into(),
-        reading: candidate.reading.into(),
-        pos: candidate.pos,
-        score: f64::from(candidate.score),
-        entry_index: candidate.entry_index,
-        root: Some(candidate.root),
-        inflection: candidate.inflection,
-        components: Vec::new(),
-        skipped: matches.saturating_sub(alternatives.len() + 1),
-        alternatives,
-        entity: false,
-        counter: None,
-    }
+fn materialize_document_paths(
+    chunks: &[DocumentChunk],
+    accumulated: &[AccumulatedPath],
+) -> Result<Vec<AnalysisPath>> {
+    accumulated
+        .iter()
+        .map(|path| {
+            let mut tokens = Vec::new();
+            let mut word = 0;
+            for (chunk_index, chunk) in chunks.iter().enumerate() {
+                match chunk {
+                    DocumentChunk::Misc { token, .. } => tokens.push((**token).clone()),
+                    DocumentChunk::Word { paths, .. } => {
+                        let reference = path.word_paths.get(word).ok_or_else(|| {
+                            KernelError::new(
+                                ErrorCode::Internal,
+                                "accumulated path is missing a word chunk",
+                            )
+                        })?;
+                        if reference.chunk_index != chunk_index {
+                            return Err(KernelError::new(
+                                ErrorCode::Internal,
+                                "accumulated word path is out of document order",
+                            ));
+                        }
+                        let selected = paths.get(reference.path_index).ok_or_else(|| {
+                            KernelError::new(
+                                ErrorCode::Internal,
+                                "accumulated word path index is out of range",
+                            )
+                        })?;
+                        tokens.extend(selected.tokens.iter().cloned());
+                        word += 1;
+                    }
+                }
+            }
+            if word != path.word_paths.len() {
+                return Err(KernelError::new(
+                    ErrorCode::Internal,
+                    "accumulated path has extra word chunks",
+                ));
+            }
+            Ok(AnalysisPath {
+                score: path.score,
+                tokens,
+            })
+        })
+        .collect()
 }
 
-fn alternative_from_token(token: &AnalysisToken) -> Option<AnalysisAlternative> {
-    let route = match token.route {
-        PublicRoute::Kana => Route::Kana,
-        PublicRoute::Kanji => Route::Kanji,
-        PublicRoute::Gap => return None,
-    };
-    Some(AnalysisAlternative {
-        candidate_id: token.candidate_id.unwrap_or_default(),
-        text: token.text.clone(),
-        true_text: token.true_text.clone(),
-        route,
-        reading: token.reading.clone(),
-        romanized: token.romanized.clone(),
-        pos: token.pos.clone(),
-        score: token.score,
-        entry_index: token.entry_index,
-        root: token.root.clone(),
-        inflection: token.inflection.clone(),
-        components: Vec::new(),
-        counter: None,
-    })
-}
-
-fn gap_token(text: &Utf16Text, start: usize, end: usize) -> AnalysisToken {
-    AnalysisToken {
-        candidate_id: None,
-        start,
-        end,
-        text: text.clone(),
-        true_text: None,
-        route: PublicRoute::Gap,
-        reading: text.clone(),
-        romanized: text.clone(),
-        pos: Vec::new(),
-        score: 0.0,
-        entry_index: None,
-        root: None,
-        inflection: Vec::new(),
-        components: Vec::new(),
-        alternatives: Vec::new(),
-        skipped: 0,
-        entity: false,
-        counter: None,
-    }
-}
-
-fn stable_score_sort(candidates: &mut [Candidate]) {
-    candidates.sort_by(|left, right| {
-        right
-            .score
-            .cmp(&left.score)
-            .then_with(|| common_order(left.common, right.common))
-    });
-}
-
-fn common_order(left: Option<u8>, right: Option<u8>) -> std::cmp::Ordering {
-    match (left, right) {
-        (Some(0), Some(0)) | (None, None) => std::cmp::Ordering::Equal,
-        (Some(0), _) => std::cmp::Ordering::Less,
-        (_, Some(0)) => std::cmp::Ordering::Greater,
-        (Some(left), Some(right)) => left.cmp(&right),
-        (Some(_), None) => std::cmp::Ordering::Less,
-        (None, Some(_)) => std::cmp::Ordering::Greater,
+fn public_chunk(chunk: DocumentChunk) -> AnalysisChunk {
+    match chunk {
+        DocumentChunk::Misc {
+            start, end, text, ..
+        } => AnalysisChunk::Misc {
+            start,
+            end,
+            text: Utf16Text::from_units(&text),
+        },
+        DocumentChunk::Word {
+            start,
+            end,
+            text,
+            paths,
+        } => AnalysisChunk::Word {
+            start,
+            end,
+            text: Utf16Text::from_units(&text),
+            paths,
+        },
     }
 }

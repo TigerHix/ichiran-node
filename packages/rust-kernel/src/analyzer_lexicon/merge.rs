@@ -224,7 +224,7 @@ impl AnalyzerLexicon<'_> {
         Ok(base)
     }
 
-    fn member_sequence_facts(
+    pub(super) fn member_sequence_facts(
         &self,
         all_members: &[SemanticMember],
         selected_members: &[SemanticMember],

@@ -1,0 +1,99 @@
+{
+  "proxy": {
+    "spans": [[0, 1], [1, 2], [2, 3]],
+    "candidateIds": [null, 1, null],
+    "primary": {
+      "candidateId": 1,
+      "start": 1,
+      "end": 2,
+      "text": "猫",
+      "trueText": null,
+      "route": "kanji",
+      "reading": "ねこ",
+      "romanized": "neko",
+      "pos": ["pn"],
+      "score": 100,
+      "entryIndex": 10,
+      "root": { "seq": 10, "form": "猫", "reading": "ねこ" },
+      "inflection": [],
+      "components": [{
+        "text": "猫",
+        "trueText": null,
+        "route": "kanji",
+        "reading": "ねこ",
+        "entryIndex": 10,
+        "root": { "seq": 10, "form": "猫", "reading": "ねこ" },
+        "inflection": [],
+        "primary": true
+      }],
+      "alternatives": [
+        {
+          "candidateId": 2,
+          "text": "猫",
+          "trueText": null,
+          "route": "kanji",
+          "reading": "ねこ",
+          "romanized": "neko",
+          "pos": ["n"],
+          "score": 100,
+          "entryIndex": 20,
+          "root": { "seq": 20, "form": "猫", "reading": "ねこ" },
+          "inflection": [],
+          "components": [],
+          "counter": null
+        },
+        {
+          "candidateId": 1,
+          "text": "猫",
+          "trueText": null,
+          "route": "kanji",
+          "reading": "ねこ",
+          "romanized": "neko",
+          "pos": ["pn"],
+          "score": 100,
+          "entryIndex": 10,
+          "root": { "seq": 10, "form": "猫", "reading": "ねこ" },
+          "inflection": [],
+          "components": [{
+            "text": "猫",
+            "trueText": null,
+            "route": "kanji",
+            "reading": "ねこ",
+            "entryIndex": 10,
+            "root": { "seq": 10, "form": "猫", "reading": "ねこ" },
+            "inflection": [],
+            "primary": true
+          }],
+          "counter": ["Value: 1", false]
+        }
+      ],
+      "skipped": 2,
+      "entity": false,
+      "counter": ["Value: 1", false]
+    }
+  },
+  "naniHint": [
+    { "candidateId": 4, "reading": "なん", "romanized": "nan", "alternativeReading": "なに" },
+    { "candidateId": 5, "reading": "で‌は", "romanized": "dewa", "alternativeReading": "で‌は" }
+  ],
+  "entity": {
+    "candidateId": -1,
+    "start": 0,
+    "end": 2,
+    "text": "😀",
+    "trueText": null,
+    "route": "kanji",
+    "reading": "😀",
+    "romanized": "😀",
+    "pos": ["proper-noun"],
+    "score": 50,
+    "entryIndex": null,
+    "root": null,
+    "inflection": [],
+    "components": [],
+    "alternatives": [],
+    "skipped": 0,
+    "entity": true,
+    "counter": null
+  }
+}

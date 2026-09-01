@@ -136,7 +136,7 @@ pub struct AnalysisPath {
 #[derive(Clone, Debug, PartialEq, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct AnalysisToken {
-    pub candidate_id: Option<u32>,
+    pub candidate_id: Option<i64>,
     pub start: usize,
     pub end: usize,
     pub text: Utf16Text,
@@ -155,12 +155,14 @@ pub struct AnalysisToken {
     pub skipped: usize,
     pub entity: bool,
     pub counter: Option<(String, bool)>,
+    #[serde(skip)]
+    pub(crate) legacy: Option<LegacyPresentationFacts>,
 }
 
 #[derive(Clone, Debug, PartialEq, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct AnalysisAlternative {
-    pub candidate_id: u32,
+    pub candidate_id: i64,
     pub text: Utf16Text,
     pub true_text: Option<Utf16Text>,
     pub route: Route,
@@ -174,6 +176,8 @@ pub struct AnalysisAlternative {
     pub inflection: Vec<MorphologyProperty>,
     pub components: Vec<AnalysisComponent>,
     pub counter: Option<(String, bool)>,
+    #[serde(skip)]
+    pub(crate) legacy: Option<LegacyPresentationFacts>,
 }
 
 #[derive(Clone, Debug, PartialEq, Serialize)]
@@ -187,6 +191,8 @@ pub struct AnalysisComponent {
     pub root: Option<AnalysisRoot>,
     pub inflection: Vec<MorphologyProperty>,
     pub primary: bool,
+    #[serde(skip)]
+    pub(crate) legacy: Option<LegacyPresentationFacts>,
 }
 
 #[derive(Clone, Debug, PartialEq, Serialize)]
@@ -194,6 +200,36 @@ pub struct AnalysisRoot {
     pub seq: u32,
     pub form: String,
     pub reading: String,
+}
+
+#[derive(Clone, Copy, Debug, Eq, PartialEq)]
+pub(crate) enum LegacyConjugationSelection {
+    Default,
+    Explicit,
+    Root,
+}
+
+#[derive(Clone, Debug, PartialEq)]
+pub(crate) struct LegacySemanticMember {
+    pub entry_index: Option<usize>,
+    pub root: Option<AnalysisRoot>,
+    pub inflection: Vec<MorphologyProperty>,
+    pub stage_groups: Vec<Option<u32>>,
+    pub stage_keys: Vec<Option<String>>,
+    pub stage_member_ords: Vec<Option<u8>>,
+    pub stage_prop_ords: Vec<Option<u16>>,
+    pub member_ord: Option<u8>,
+}
+
+#[derive(Clone, Debug, PartialEq)]
+pub(crate) struct LegacyPresentationFacts {
+    pub physical_group: Option<u32>,
+    pub suffix_class: Option<String>,
+    pub definition_seq: Option<u32>,
+    pub semantic_members: Vec<LegacySemanticMember>,
+    pub identity_roots: Vec<u32>,
+    pub conjugation_selection: LegacyConjugationSelection,
+    pub contextual_reading: bool,
 }
 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Serialize)]
@@ -213,7 +249,7 @@ impl From<Route> for PublicRoute {
     }
 }
 
-fn serialize_js_number<S>(value: &f64, serializer: S) -> Result<S::Ok, S::Error>
+pub(crate) fn serialize_js_number<S>(value: &f64, serializer: S) -> Result<S::Ok, S::Error>
 where
     S: Serializer,
 {

@@ -33,20 +33,3 @@ pub fn string(value: &[u16], label: &str) -> Result<String> {
         )
     })
 }
-
-pub fn count_kanji(value: &[u16]) -> usize {
-    value
-        .iter()
-        .filter(|code| {
-            let code = **code as u32;
-            (0x3400..=0x4dbf).contains(&code)
-                || (0x4e00..=0x9fff).contains(&code)
-                || (0xf900..=0xfaff).contains(&code)
-                || code == 0x3005
-        })
-        .count()
-}
-
-pub fn mora_length(value: &[u16]) -> usize {
-    crate::characters::mora_length(value)
-}
