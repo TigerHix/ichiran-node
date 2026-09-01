@@ -45,6 +45,7 @@ pub struct RootPayload {
     pub surface_count: usize,
     pub form_count: usize,
     pub entry_count: usize,
+    pub restriction_count: usize,
     string_count: usize,
     pos_set_count: usize,
     pos_member_count: usize,
@@ -304,6 +305,7 @@ impl RootPayload {
             surface_count,
             form_count,
             entry_count,
+            restriction_count,
             string_count,
             pos_set_count,
             pos_member_count,
@@ -346,6 +348,15 @@ impl RootPayload {
         )
     }
 
+    pub fn form_common_tag_string_id(&self, form: usize) -> Result<u16> {
+        u16_at(
+            &self.bytes,
+            self.form_offset(form)? + 7,
+            ErrorCode::CorruptPayload,
+            "root common-tag string ID",
+        )
+    }
+
     pub fn form_common(&self, form: usize) -> Result<Option<u8>> {
         let value = self.bytes[self.form_offset(form)? + 9] & 0x3f;
         Ok((value != 63).then_some(value))
@@ -357,6 +368,10 @@ impl RootPayload {
         } else {
             Route::Kanji
         })
+    }
+
+    pub fn form_conjugatable(&self, form: usize) -> Result<bool> {
+        Ok(self.bytes[self.form_offset(form)? + 9] & 0x80 != 0)
     }
 
     pub fn form_ordinal(&self, form: usize) -> Result<u8> {
@@ -378,6 +393,10 @@ impl RootPayload {
 
     pub fn entry_n_kanji(&self, entry: usize) -> Result<u8> {
         Ok(self.bytes[self.entry_offset(entry)? + 6])
+    }
+
+    pub fn entry_n_kana(&self, entry: usize) -> Result<u8> {
+        Ok(self.bytes[self.entry_offset(entry)? + 7])
     }
 
     pub fn entry_primary_nokanji(&self, entry: usize) -> Result<bool> {
@@ -446,6 +465,98 @@ impl RootPayload {
         Ok(None)
     }
 
+    pub fn restriction_entry_index(&self, restriction: usize) -> Result<usize> {
+        Ok(u32_at(
+            &self.bytes,
+            self.restriction_offset(restriction)?,
+            ErrorCode::CorruptPayload,
+            "root restriction entry",
+        )? as usize)
+    }
+
+    pub fn restriction_reading_reference(&self, restriction: usize) -> Result<u32> {
+        u32_at(
+            &self.bytes,
+            self.restriction_offset(restriction)? + 4,
+            ErrorCode::CorruptPayload,
+            "root restriction reading",
+        )
+    }
+
+    pub fn restriction_written_reference(&self, restriction: usize) -> Result<u32> {
+        u32_at(
+            &self.bytes,
+            self.restriction_offset(restriction)? + 8,
+            ErrorCode::CorruptPayload,
+            "root restriction written form",
+        )
+    }
+
+    pub fn restriction_start(&self, entry: usize) -> Result<usize> {
+        self.index(entry, self.entry_count, "root entry")?;
+        let mut low = 0_usize;
+        let mut high = self.restriction_count;
+        while low < high {
+            let middle = (low + high) / 2;
+            if self.restriction_entry_index(middle)? < entry {
+                low = middle + 1;
+            } else {
+                high = middle;
+            }
+        }
+        Ok(low)
+    }
+
+    pub fn restriction_end(&self, entry: usize) -> Result<usize> {
+        self.index(entry, self.entry_count, "root entry")?;
+        let mut low = 0_usize;
+        let mut high = self.restriction_count;
+        while low < high {
+            let middle = (low + high) / 2;
+            if self.restriction_entry_index(middle)? <= entry {
+                low = middle + 1;
+            } else {
+                high = middle;
+            }
+        }
+        Ok(low)
+    }
+
+    pub fn surface_reference_is_none(&self, reference: u32) -> bool {
+        reference == STRING_REF_NONE
+    }
+
+    pub fn surface_reference_is_string(&self, reference: u32) -> bool {
+        reference != STRING_REF_NONE && reference & STRING_REF_BIT != 0
+    }
+
+    pub fn surface_reference_rank(&self, reference: u32) -> Result<u32> {
+        if self.surface_reference_is_none(reference) || self.surface_reference_is_string(reference)
+        {
+            return Err(KernelError::new(
+                ErrorCode::OutOfRange,
+                "surface reference is not a direct rank",
+            ));
+        }
+        self.index(
+            reference as usize,
+            self.surface_count,
+            "referenced surface rank",
+        )?;
+        Ok(reference)
+    }
+
+    pub fn surface_reference_string_id(&self, reference: u32) -> Result<usize> {
+        if !self.surface_reference_is_string(reference) {
+            return Err(KernelError::new(
+                ErrorCode::OutOfRange,
+                "surface reference is not a string ID",
+            ));
+        }
+        let id = (reference & !STRING_REF_BIT) as usize;
+        self.index(id, self.string_count, "referenced string ID")
+    }
+
     pub fn resolve_surface_reference<F>(
         &self,
         reference: u32,
@@ -500,6 +611,12 @@ impl RootPayload {
 
     fn entry_offset(&self, entry: usize) -> Result<usize> {
         Ok(self.layout.entries + self.index(entry, self.entry_count, "root entry")? * ENTRY_BYTES)
+    }
+
+    fn restriction_offset(&self, restriction: usize) -> Result<usize> {
+        Ok(self.layout.restrictions
+            + self.index(restriction, self.restriction_count, "root restriction")?
+                * RESTRICTION_BYTES)
     }
 
     fn entry_flags(&self, entry: usize) -> Result<u8> {

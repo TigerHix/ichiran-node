@@ -1,5 +1,3 @@
-use std::fmt::Write;
-
 use serde::{Serialize, Serializer};
 use serde_json::value::RawValue;
 
@@ -60,20 +58,31 @@ fn quote_utf16(value: &[u16]) -> String {
             0x0a => output.push_str("\\n"),
             0x0c => output.push_str("\\f"),
             0x0d => output.push_str("\\r"),
-            0x00..=0x1f => write!(output, "\\u{first:04x}").unwrap(),
+            0x00..=0x1f => push_json_escape(&mut output, first),
             0xd800..=0xdbff if offset + 1 < value.len() => {
                 let second = value[offset + 1];
                 if (0xdc00..=0xdfff).contains(&second) {
                     let scalar =
                         0x1_0000 + ((u32::from(first) - 0xd800) << 10) + u32::from(second) - 0xdc00;
-                    output.push(char::from_u32(scalar).expect("valid surrogate pair"));
+                    if let Some(character) = char::from_u32(scalar) {
+                        output.push(character);
+                    } else {
+                        push_json_escape(&mut output, first);
+                        push_json_escape(&mut output, second);
+                    }
                     offset += 1;
                 } else {
-                    write!(output, "\\u{first:04x}").unwrap();
+                    push_json_escape(&mut output, first);
                 }
             }
-            0xd800..=0xdfff => write!(output, "\\u{first:04x}").unwrap(),
-            _ => output.push(char::from_u32(u32::from(first)).expect("BMP scalar")),
+            0xd800..=0xdfff => push_json_escape(&mut output, first),
+            _ => {
+                if let Some(character) = char::from_u32(u32::from(first)) {
+                    output.push(character);
+                } else {
+                    push_json_escape(&mut output, first);
+                }
+            }
         }
         offset += 1;
     }
@@ -81,12 +90,22 @@ fn quote_utf16(value: &[u16]) -> String {
     output
 }
 
+fn push_json_escape(output: &mut String, unit: u16) {
+    const HEX: &[u8; 16] = b"0123456789abcdef";
+    output.push_str("\\u");
+    output.push(HEX[usize::from((unit >> 12) & 0xf)] as char);
+    output.push(HEX[usize::from((unit >> 8) & 0xf)] as char);
+    output.push(HEX[usize::from((unit >> 4) & 0xf)] as char);
+    output.push(HEX[usize::from(unit & 0xf)] as char);
+}
+
 #[derive(Clone, Debug, PartialEq, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct AnalysisResult {
     pub input: Utf16Text,
     pub normalized: Utf16Text,
-    pub compute_ms: u32,
+    #[serde(serialize_with = "serialize_js_number")]
+    pub compute_ms: f64,
     pub chunks: Vec<AnalysisChunk>,
     pub paths: Vec<AnalysisPath>,
 }
@@ -109,7 +128,8 @@ pub enum AnalysisChunk {
 
 #[derive(Clone, Debug, PartialEq, Serialize)]
 pub struct AnalysisPath {
-    pub score: i32,
+    #[serde(serialize_with = "serialize_js_number")]
+    pub score: f64,
     pub tokens: Vec<AnalysisToken>,
 }
 
@@ -125,7 +145,8 @@ pub struct AnalysisToken {
     pub reading: Utf16Text,
     pub romanized: Utf16Text,
     pub pos: Vec<String>,
-    pub score: i32,
+    #[serde(serialize_with = "serialize_js_number")]
+    pub score: f64,
     pub entry_index: Option<usize>,
     pub root: Option<AnalysisRoot>,
     pub inflection: Vec<MorphologyProperty>,
@@ -146,7 +167,8 @@ pub struct AnalysisAlternative {
     pub reading: Utf16Text,
     pub romanized: Utf16Text,
     pub pos: Vec<String>,
-    pub score: i32,
+    #[serde(serialize_with = "serialize_js_number")]
+    pub score: f64,
     pub entry_index: Option<usize>,
     pub root: Option<AnalysisRoot>,
     pub inflection: Vec<MorphologyProperty>,
@@ -155,8 +177,17 @@ pub struct AnalysisAlternative {
 }
 
 #[derive(Clone, Debug, PartialEq, Serialize)]
-#[serde(untagged)]
-pub enum AnalysisComponent {}
+#[serde(rename_all = "camelCase")]
+pub struct AnalysisComponent {
+    pub text: Utf16Text,
+    pub true_text: Option<Utf16Text>,
+    pub route: Route,
+    pub reading: Utf16Text,
+    pub entry_index: Option<usize>,
+    pub root: Option<AnalysisRoot>,
+    pub inflection: Vec<MorphologyProperty>,
+    pub primary: bool,
+}
 
 #[derive(Clone, Debug, PartialEq, Serialize)]
 pub struct AnalysisRoot {
@@ -182,9 +213,25 @@ impl From<Route> for PublicRoute {
     }
 }
 
+fn serialize_js_number<S>(value: &f64, serializer: S) -> Result<S::Ok, S::Error>
+where
+    S: Serializer,
+{
+    if !value.is_finite() {
+        return Err(serde::ser::Error::custom("analyzer numbers must be finite"));
+    }
+    if value.fract() == 0.0 && *value >= i64::MIN as f64 && *value <= i64::MAX as f64 {
+        serializer.serialize_i64(*value as i64)
+    } else {
+        serializer.serialize_f64(*value)
+    }
+}
+
 #[cfg(test)]
 mod tests {
-    use super::Utf16Text;
+    use serde::Serialize;
+
+    use super::{AnalysisPath, Utf16Text};
 
     #[test]
     fn serializes_javascript_utf16_losslessly() {
@@ -192,6 +239,34 @@ mod tests {
         assert_eq!(
             serde_json::to_string(&value).unwrap(),
             "\"猫\\ud83d犬\\ude00😀\""
+        );
+    }
+
+    #[test]
+    fn serializes_scores_like_javascript_json_numbers() {
+        #[derive(Serialize)]
+        struct Values {
+            integral: AnalysisPath,
+            fractional: AnalysisPath,
+            negative_zero: AnalysisPath,
+        }
+        let value = Values {
+            integral: AnalysisPath {
+                score: 19.0,
+                tokens: Vec::new(),
+            },
+            fractional: AnalysisPath {
+                score: 2.5,
+                tokens: Vec::new(),
+            },
+            negative_zero: AnalysisPath {
+                score: -0.0,
+                tokens: Vec::new(),
+            },
+        };
+        assert_eq!(
+            serde_json::to_string(&value).unwrap(),
+            r#"{"integral":{"score":19,"tokens":[]},"fractional":{"score":2.5,"tokens":[]},"negative_zero":{"score":0,"tokens":[]}}"#
         );
     }
 }

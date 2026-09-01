@@ -79,6 +79,7 @@ interface Options {
   readonly release: string;
   readonly database: string;
   readonly out: string | null;
+  readonly fallbackOut: string | null;
   readonly smoke: boolean;
   readonly allowFailures: boolean;
   readonly samples: number;
@@ -200,6 +201,7 @@ function usage(message?: string): never {
   console.error(`usage: bun packages/core/tools/oracle-parity.ts \\
   --release <directory> --database <url> [--repository <directory>] \\
   [--out <report.json>] [--smoke] [--allow-failures] [--samples <count>]
+  [--fallback-out <fixture.json>]
 
 Without --smoke this always runs all 534 segmentation, 252 CLI, 149 hard,
 200 counter, 54 entity, deterministic analyzer probes, and 5 standalone
@@ -219,6 +221,7 @@ function parseArgs(argv: readonly string[]): Options {
   let release: string | null = null;
   let database = process.env.ICHIRAN_DB_URL ?? '';
   let out: string | null = null;
+  let fallbackOut: string | null = null;
   let smoke = false;
   let allowFailures = false;
   let samples = 30;
@@ -233,6 +236,7 @@ function parseArgs(argv: readonly string[]): Options {
     else if (argument === '--release') release = next();
     else if (argument === '--database') database = next();
     else if (argument === '--out') out = next();
+    else if (argument === '--fallback-out') fallbackOut = next();
     else if (argument === '--smoke') smoke = true;
     else if (argument === '--allow-failures') allowFailures = true;
     else if (argument === '--samples') samples = positiveInteger(next(), '--samples');
@@ -246,6 +250,7 @@ function parseArgs(argv: readonly string[]): Options {
     release: resolve(release),
     database,
     out: out ? resolve(out) : null,
+    fallbackOut: fallbackOut ? resolve(fallbackOut) : null,
     smoke,
     allowFailures,
     samples
@@ -867,7 +872,13 @@ async function compareSuite(
   runtime: Runtime,
   reference: CoreReference,
   samples: FailureSample[],
-  maxSamples: number
+  maxSamples: number,
+  capture?: Array<{
+    readonly request: AnalyzerFixtureRequest;
+    readonly entities?: AnalyzerEntityFixture['entities'];
+    readonly clean: unknown;
+    readonly detailed: unknown;
+  }>
 ): Promise<SuiteRun> {
   const stats = emptyStats();
   const referenceStats = emptyStats();
@@ -930,6 +941,12 @@ async function compareSuite(
         resolveWord: word => reference.identity.resolveWord(word)
       });
       const actualClean = projectPortableCleanAnalysis(actual.result);
+      capture?.push({
+        request: fixture.request,
+        ...(fixture.entities ? { entities: fixture.entities } : {}),
+        clean: expectedClean,
+        detailed: expectedIdentity.value
+      });
       const cleanDifference = firstCanonicalDifference(expectedClean, actualClean);
       const referencePathDifference = firstCanonicalDifference(
         legacyPathSkeleton(expectedIdentity.value),
@@ -1303,6 +1320,24 @@ async function main(): Promise<void> {
   ]);
   const reference = await openReference(options.database, source.lock.database);
   const samples: FailureSample[] = [];
+  const fallback = {
+    counters: [] as Array<{
+      readonly request: AnalyzerFixtureRequest;
+      readonly clean: unknown;
+      readonly detailed: unknown;
+    }>,
+    entities: [] as Array<{
+      readonly request: AnalyzerFixtureRequest;
+      readonly entities?: AnalyzerEntityFixture['entities'];
+      readonly clean: unknown;
+      readonly detailed: unknown;
+    }>,
+    probes: [] as Array<{
+      readonly request: AnalyzerFixtureRequest;
+      readonly clean: unknown;
+      readonly detailed: unknown;
+    }>
+  };
   try {
     await reference.withOracle(async () => {
     const segmentation = await segmentationSuite(
@@ -1331,15 +1366,20 @@ async function main(): Promise<void> {
     }));
     const cli = await compareSuite('cli', cliCases, runtime, reference, samples, options.samples);
     const hard = await compareSuite('hard', hardCases, runtime, reference, samples, options.samples);
-    const counters = await compareSuite('counters', counterCases, runtime, reference, samples, options.samples);
-    const entities = await compareSuite('entities', entityCases, runtime, reference, samples, options.samples);
+    const counters = await compareSuite(
+      'counters', counterCases, runtime, reference, samples, options.samples, fallback.counters
+    );
+    const entities = await compareSuite(
+      'entities', entityCases, runtime, reference, samples, options.samples, fallback.entities
+    );
     const probes = await compareSuite(
       'probes',
       corpus.probes.map(probe => ({ request: probe.request })),
       runtime,
       reference,
       samples,
-      options.samples
+      options.samples,
+      fallback.probes
     );
     const detailedStats = combineStats([
       cli.stats, hard.stats, counters.stats, entities.stats, probes.stats
@@ -1442,6 +1482,32 @@ async function main(): Promise<void> {
     if (options.out) {
       await mkdir(dirname(options.out), { recursive: true });
       await writeFile(options.out, reportText);
+    }
+    if (options.fallbackOut) {
+      if (options.smoke) {
+        throw new Error('--fallback-out requires the complete corpus, not --smoke');
+      }
+      const fixture = {
+        formatVersion: 1,
+        identityPolicy: 'terminal-root-v1',
+        source: {
+          sourcesLockSha256: source.lockSha256,
+          upstreamIchiranCommit: source.lock.upstreamIchiran.commit,
+          dataReleaseTag: source.lock.upstreamIchiran.dataReleaseTag,
+          postgresReferenceCommit: source.lock.postgresReference.repositoryCommit,
+          databaseDumpSha256: source.lock.databaseDump.sha256,
+          databaseSchemaSha256: source.lock.database.schemaSha256
+        },
+        counts: {
+          counters: fallback.counters.length,
+          entities: fallback.entities.length,
+          probes: fallback.probes.length,
+          total: fallback.counters.length + fallback.entities.length + fallback.probes.length
+        },
+        suites: fallback
+      };
+      await mkdir(dirname(options.fallbackOut), { recursive: true });
+      await writeFile(options.fallbackOut, `${JSON.stringify(fixture)}\n`);
     }
     process.stdout.write(reportText);
     const totalFailures = releaseGateFailureCount({

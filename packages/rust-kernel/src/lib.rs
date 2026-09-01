@@ -1,12 +1,28 @@
 mod analysis;
+#[allow(dead_code)]
+mod analyzer_counters;
+#[allow(dead_code)]
+mod analyzer_lexicon;
+#[allow(dead_code)]
+mod analyzer_model;
+#[allow(dead_code)]
+mod analyzer_paths;
+#[allow(dead_code)]
+mod analyzer_rules;
+#[allow(dead_code)]
+mod analyzer_scoring;
+#[allow(dead_code)]
+mod analyzer_suffixes;
 mod annotations;
 mod binary;
+pub mod characters;
 mod details;
 mod dto;
 mod error;
 mod morphology;
+pub mod numbers;
 mod pack;
-mod romanization;
+pub mod romanization;
 mod roots;
 mod scoring;
 mod support;

@@ -666,7 +666,7 @@ fn decode_entry(bytes: &[u8]) -> Result<DetailEntry> {
             },
             text,
             ord,
-            common: (common != 0).then_some(common - 1),
+            common: common.checked_sub(1),
             common_tags,
             conjugatable: flags & (1 << 1) != 0,
             nokanji: flags & (1 << 2) != 0,

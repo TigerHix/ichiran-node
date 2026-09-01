@@ -149,13 +149,13 @@ impl Kernel {
         }) else {
             let token = gap_token(&text, 0, input.len());
             let path = AnalysisPath {
-                score: 0,
+                score: 0.0,
                 tokens: vec![token],
             };
             return Ok(AnalysisResult {
                 input: text.clone(),
                 normalized: text.clone(),
-                compute_ms: 0,
+                compute_ms: 0.0,
                 chunks: vec![AnalysisChunk::Misc {
                     start: 0,
                     end: input.len(),
@@ -168,7 +168,7 @@ impl Kernel {
         Ok(AnalysisResult {
             input: text.clone(),
             normalized: text.clone(),
-            compute_ms: 0,
+            compute_ms: 0.0,
             chunks: vec![AnalysisChunk::Word {
                 start: 0,
                 end: input.len(),
@@ -449,7 +449,7 @@ fn group_paths(group: CandidateGroup, limit: usize) -> Vec<AnalysisPath> {
                 alternatives,
                 group.matches,
             );
-            token.alternatives = vec![alternative_from_token(&token)];
+            token.alternatives = alternative_from_token(&token).into_iter().collect();
             AnalysisPath {
                 score: token.score,
                 tokens: vec![token],
@@ -475,7 +475,7 @@ fn token_from_candidate(
         romanized: romanize(&candidate.reading).into(),
         reading: candidate.reading.into(),
         pos: candidate.pos,
-        score: candidate.score,
+        score: f64::from(candidate.score),
         entry_index: candidate.entry_index,
         root: Some(candidate.root),
         inflection: candidate.inflection,
@@ -487,16 +487,17 @@ fn token_from_candidate(
     }
 }
 
-fn alternative_from_token(token: &AnalysisToken) -> AnalysisAlternative {
-    AnalysisAlternative {
+fn alternative_from_token(token: &AnalysisToken) -> Option<AnalysisAlternative> {
+    let route = match token.route {
+        PublicRoute::Kana => Route::Kana,
+        PublicRoute::Kanji => Route::Kanji,
+        PublicRoute::Gap => return None,
+    };
+    Some(AnalysisAlternative {
         candidate_id: token.candidate_id.unwrap_or_default(),
         text: token.text.clone(),
         true_text: token.true_text.clone(),
-        route: match token.route {
-            PublicRoute::Kana => Route::Kana,
-            PublicRoute::Kanji => Route::Kanji,
-            PublicRoute::Gap => unreachable!("gap tokens do not have alternatives"),
-        },
+        route,
         reading: token.reading.clone(),
         romanized: token.romanized.clone(),
         pos: token.pos.clone(),
@@ -506,7 +507,7 @@ fn alternative_from_token(token: &AnalysisToken) -> AnalysisAlternative {
         inflection: token.inflection.clone(),
         components: Vec::new(),
         counter: None,
-    }
+    })
 }
 
 fn gap_token(text: &Utf16Text, start: usize, end: usize) -> AnalysisToken {
@@ -520,7 +521,7 @@ fn gap_token(text: &Utf16Text, start: usize, end: usize) -> AnalysisToken {
         reading: text.clone(),
         romanized: text.clone(),
         pos: Vec::new(),
-        score: 0,
+        score: 0.0,
         entry_index: None,
         root: None,
         inflection: Vec::new(),

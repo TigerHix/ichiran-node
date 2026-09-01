@@ -1,16 +1,32 @@
+use std::collections::{HashMap, VecDeque};
+
 use serde::Serialize;
 
+mod exceptions;
 mod generated_block;
+mod index;
+mod ordinary_block;
+#[cfg(test)]
+mod parity_tests;
 #[cfg(test)]
 mod strict_tests;
 
-use generated_block::{DecodedBlock, decode_generated_block, root_location};
+use exceptions::{ExceptionLookup, ExceptionSpan, lookup as lookup_exception, validate_exceptions};
+use generated_block::{
+    DecodedBlock, decode_fact, decode_generated_block, generated_key, generated_order,
+    root_location,
+};
+use index::{
+    AnnotationBlockTotals, GeneratedIndex, field, validate_annotation_blocks,
+    validate_generated_roots,
+};
+use ordinary_block::{AnnotationIndex, DecodedAnnotationBlock};
 
 use crate::binary::{
-    ByteSlice, align, assert_zero, checked_range, checked_table_end, crc32, magic, u16_at, u24_at,
-    u32_at,
+    ByteSlice, align, assert_zero, checked_range, checked_table_end, crc32, magic, u16_at, u32_at,
 };
 use crate::error::{ErrorCode, KernelError, Result};
+use crate::morphology::Route;
 
 const MAGIC: &[u8; 8] = b"IANAN001";
 const VERSION: u16 = 4;
@@ -27,6 +43,7 @@ const KEY_MASK: u32 = (1 << KEY_BITS) - 1;
 const GROUP_MASK: u32 = (1 << 18) - 1;
 const VIA_NONE: u32 = 7;
 const PROPERTY_NONE: u16 = 0xffff;
+const ANNOTATION_CACHE_BLOCKS: usize = 16;
 
 #[derive(Clone, Debug, Eq, PartialEq, Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -56,26 +73,14 @@ pub struct GeneratedProperty {
     pub formal: Option<bool>,
 }
 
-#[derive(Clone, Copy)]
-struct GeneratedIndex {
-    offset: usize,
-    compressed: usize,
-    uncompressed: usize,
-    checksum: u32,
-    roots: usize,
-    orders: usize,
-}
-
-struct AnnotationBlockTotals {
-    compressed: usize,
-    splits: usize,
-    hints: usize,
-    uncompressed: usize,
-    largest: usize,
-}
-
 pub struct AnalyzerAnnotations {
     bytes: ByteSlice,
+    annotation_data_offset: usize,
+    annotation_indexes: Vec<AnnotationIndex>,
+    annotation_cache: HashMap<u32, DecodedAnnotationBlock>,
+    annotation_lru: VecDeque<u32>,
+    exception_locators_offset: usize,
+    exceptions: Vec<ExceptionSpan>,
     generated_data_offset: usize,
     generated_roots_offset: usize,
     generated_facts_offset: usize,
@@ -83,11 +88,15 @@ pub struct AnalyzerAnnotations {
     generated_records: usize,
     generated_fact_pairs: usize,
     generated_physical_groups: u32,
+    lookup_order_roots: usize,
+    lookup_order_max_rank: u8,
     generated_indexes: Vec<GeneratedIndex>,
     decoded: Vec<Option<DecodedBlock>>,
     decoded_blocks: usize,
     decoded_bytes: usize,
     decoded_records: usize,
+    decoded_order_roots: usize,
+    decoded_order_max_rank: u8,
 }
 
 impl AnalyzerAnnotations {
@@ -152,6 +161,8 @@ impl AnalyzerAnnotations {
         let lookup_order_max_rank = field(&bytes, 136, "generated lookup-order rank")?;
         let exception_surfaces = field(&bytes, 144, "lookup exception surface count")?;
         let exception_locators = field(&bytes, 148, "lookup exception locator count")?;
+        let exception_classes = field(&bytes, 152, "lookup exception class count")?;
+        let exception_max_rank = field(&bytes, 156, "lookup exception rank")?;
         if u32_at(
             &bytes,
             36,
@@ -201,7 +212,12 @@ impl AnalyzerAnnotations {
                 "lookup locator stride",
             )? != 8
             || lookup_order_max_rank > 0x3f
+            || exception_max_rank > 0x3f
             || lookup_order_roots > generated_roots
+            || (lookup_order_records == 0
+                && (lookup_order_roots != 0 || lookup_order_max_rank != 0))
+            || (exception_surfaces == 0
+                && (exception_locators != 0 || exception_classes != 0 || exception_max_rank != 0))
         {
             return Err(KernelError::new(
                 ErrorCode::InvalidHeader,
@@ -346,7 +362,7 @@ impl AnalyzerAnnotations {
                 "annotation index checksum does not match",
             ));
         }
-        validate_annotation_blocks(
+        let annotation_indexes = validate_annotation_blocks(
             &bytes,
             blocks_offset,
             blocks,
@@ -457,12 +473,30 @@ impl AnalyzerAnnotations {
             &generated_indexes,
             generated_blocks_offset,
         )?;
+        let exceptions = validate_exceptions(
+            &bytes,
+            exception_entries_offset,
+            exception_locators_offset,
+            exception_strings_offset,
+            exception_surfaces,
+            exception_locators,
+            exception_classes,
+            exception_max_rank,
+            exception_string_bytes,
+        )?;
         assert_zero(
             &bytes,
             generated_facts_end,
             exception_entries_offset,
             ErrorCode::CorruptIndex,
             "generated fact padding",
+        )?;
+        assert_zero(
+            &bytes,
+            exception_strings_end,
+            annotation_data_offset,
+            ErrorCode::CorruptIndex,
+            "lookup exception padding",
         )?;
         assert_zero(
             &bytes,
@@ -489,6 +523,12 @@ impl AnalyzerAnnotations {
 
         Ok(Self {
             bytes,
+            annotation_data_offset,
+            annotation_indexes,
+            annotation_cache: HashMap::new(),
+            annotation_lru: VecDeque::new(),
+            exception_locators_offset,
+            exceptions,
             generated_data_offset,
             generated_roots_offset,
             generated_facts_offset,
@@ -496,12 +536,49 @@ impl AnalyzerAnnotations {
             generated_records,
             generated_fact_pairs,
             generated_physical_groups,
+            lookup_order_roots,
+            lookup_order_max_rank: lookup_order_max_rank as u8,
             decoded: (0..generated_blocks).map(|_| None).collect(),
             generated_indexes,
             decoded_blocks: 0,
             decoded_bytes: 0,
             decoded_records: 0,
+            decoded_order_roots: 0,
+            decoded_order_max_rank: 0,
         })
+    }
+
+    pub(crate) fn lookup_order(
+        &mut self,
+        route: Route,
+        surface: &str,
+        root_seq: u32,
+        aliases: Option<&[u16]>,
+    ) -> Result<Option<u8>> {
+        let key = aliases.map_or(Ok(KEY_MASK), generated_key)?;
+        match lookup_exception(
+            &self.exceptions,
+            &self.bytes,
+            self.exception_locators_offset,
+            route,
+            surface,
+            root_seq,
+            key,
+        )? {
+            ExceptionLookup::Exceptional(rank) => return Ok(rank),
+            ExceptionLookup::NotExceptional => {}
+        }
+        let Some(block) = self.block_for_root(root_seq)? else {
+            return Ok(None);
+        };
+        self.decode_block(block)?;
+        let decoded = self.decoded[block].as_ref().ok_or_else(|| {
+            KernelError::new(
+                ErrorCode::Internal,
+                "generated block was not retained after decoding",
+            )
+        })?;
+        generated_order(decoded, root_seq, key)
     }
 
     pub fn generated(&mut self, root_seq: u32, aliases: &[u16]) -> Result<Option<GeneratedFacts>> {
@@ -567,10 +644,13 @@ impl AnalyzerAnnotations {
         for block in 0..self.generated_indexes.len() {
             self.decode_block(block)?;
         }
-        if self.decoded_records != self.generated_records {
+        if self.decoded_records != self.generated_records
+            || self.decoded_order_roots != self.lookup_order_roots
+            || self.decoded_order_max_rank != self.lookup_order_max_rank
+        {
             return Err(KernelError::new(
                 ErrorCode::CorruptBlock,
-                "generated record totals disagree with the header",
+                "generated decoded totals disagree with the header",
             ));
         }
         Ok(())
@@ -639,64 +719,31 @@ impl AnalyzerAnnotations {
                 "generated decoded block count overflows",
             )
         })?;
+        let decoded_order_roots = self
+            .decoded_order_roots
+            .checked_add(decoded.order_roots)
+            .ok_or_else(|| {
+                KernelError::new(
+                    ErrorCode::CorruptBlock,
+                    "generated lookup-order root total overflows",
+                )
+            })?;
+        if decoded_order_roots > self.lookup_order_roots
+            || decoded.maximum_order_rank > self.lookup_order_max_rank
+        {
+            return Err(KernelError::new(
+                ErrorCode::CorruptBlock,
+                "generated decoded lookup-order totals exceed the header",
+            ));
+        }
+        let decoded_order_max_rank = self.decoded_order_max_rank.max(decoded.maximum_order_rank);
         self.decoded[block] = Some(decoded);
         self.decoded_bytes = decoded_bytes;
         self.decoded_records = decoded_records;
         self.decoded_blocks = decoded_blocks;
+        self.decoded_order_roots = decoded_order_roots;
+        self.decoded_order_max_rank = decoded_order_max_rank;
         Ok(())
-    }
-
-    fn block_for_root(&self, root_seq: u32) -> Result<Option<usize>> {
-        let mut low = 0;
-        let mut high = self.generated_roots;
-        while low < high {
-            let middle = low + (high - low) / 2;
-            let at = checked_table_end(
-                self.generated_roots_offset,
-                middle,
-                GENERATED_ROOT_BYTES,
-                self.bytes.len(),
-                ErrorCode::CorruptIndex,
-                "generated root index",
-            )?;
-            if u32_at(
-                &self.bytes,
-                at,
-                ErrorCode::CorruptIndex,
-                "generated root index",
-            )? < root_seq
-            {
-                low = middle + 1;
-            } else {
-                high = middle;
-            }
-        }
-        if low >= self.generated_roots {
-            return Ok(None);
-        }
-        let at = checked_table_end(
-            self.generated_roots_offset,
-            low,
-            GENERATED_ROOT_BYTES,
-            self.bytes.len(),
-            ErrorCode::CorruptIndex,
-            "generated root index",
-        )?;
-        if u32_at(
-            &self.bytes,
-            at,
-            ErrorCode::CorruptIndex,
-            "generated root index",
-        )? != root_seq
-        {
-            return Ok(None);
-        }
-        Ok(Some(u16_at(
-            &self.bytes,
-            at + 4,
-            ErrorCode::CorruptIndex,
-            "generated block index",
-        )? as usize))
     }
 }
 
@@ -714,278 +761,4 @@ fn checked_decoded_records(current: usize, added: usize, declared: usize) -> Res
         ));
     }
     Ok(total)
-}
-
-fn decode_fact(
-    bytes: &[u8],
-    generated_facts_offset: usize,
-    block: &DecodedBlock,
-    first: usize,
-    count: usize,
-    wanted: u32,
-) -> Result<GeneratedFacts> {
-    let mut members = Vec::new();
-    let mut fact_code = None;
-    let mut physical_group = None;
-    let mut count_only = false;
-    for index in 0..count {
-        let at = block.records_offset + (first + index) * GENERATED_RECORD_BYTES;
-        let stored_key = u32_at(
-            &block.bytes,
-            at,
-            ErrorCode::CorruptBlock,
-            "generated record key",
-        )?;
-        if stored_key & KEY_MASK != wanted {
-            break;
-        }
-        let fact = block.bytes[at + 4];
-        let physical = u24_at(
-            &block.bytes,
-            at + 5,
-            ErrorCode::CorruptBlock,
-            "generated physical identity",
-        )?;
-        let property = u16_at(
-            &block.bytes,
-            at + 8,
-            ErrorCode::CorruptBlock,
-            "generated property",
-        )?;
-        if fact_code.is_none() {
-            fact_code = Some(fact);
-            let group = physical & GROUP_MASK;
-            physical_group = (group != 0).then_some(group);
-        }
-        if property == PROPERTY_NONE {
-            count_only = true;
-            continue;
-        }
-        let negative = ((property >> 11) & 3) as u8;
-        let formal = ((property >> 13) & 3) as u8;
-        let via = ((physical >> 21) & 7) as u8;
-        members.push(GeneratedMember {
-            property: GeneratedProperty {
-                pos_id: (property & 31) as u8,
-                kind: ((property >> 5) & 63) as u8,
-                negative: tri(negative)?,
-                formal: tri(formal)?,
-            },
-            member_ord: ((physical >> 18) & 7) as u8,
-            prop_ord: (stored_key >> KEY_BITS) as u16,
-            via_member_ord: (u32::from(via) != VIA_NONE).then_some(via),
-        });
-    }
-    let fact = fact_code.unwrap_or(0) as usize;
-    let (n_kanji, n_kana) = if fact == 0 {
-        (None, None)
-    } else {
-        let at = generated_facts_offset + (fact - 1) * 2;
-        (Some(bytes[at]), Some(bytes[at + 1]))
-    };
-    Ok(GeneratedFacts {
-        n_kanji,
-        n_kana,
-        physical_group,
-        members: (!count_only).then_some(members),
-    })
-}
-
-fn field(bytes: &[u8], offset: usize, label: &str) -> Result<usize> {
-    Ok(u32_at(bytes, offset, ErrorCode::InvalidHeader, label)? as usize)
-}
-
-fn validate_annotation_blocks(
-    bytes: &[u8],
-    offset: usize,
-    blocks: usize,
-    expected: AnnotationBlockTotals,
-) -> Result<()> {
-    let mut previous_seq = 0;
-    let mut next_data = 0;
-    let mut splits = 0_usize;
-    let mut hints = 0_usize;
-    let mut uncompressed = 0_usize;
-    let mut largest = 0;
-    for block in 0..blocks {
-        let at = checked_table_end(
-            offset,
-            block,
-            BLOCK_BYTES,
-            bytes.len(),
-            ErrorCode::CorruptIndex,
-            "annotation block index",
-        )?;
-        let seq = u32_at(bytes, at, ErrorCode::CorruptIndex, "annotation sequence")?;
-        let data = field(bytes, at + 4, "annotation data offset")?;
-        let compressed = field(bytes, at + 8, "annotation compressed length")?;
-        let decoded = field(bytes, at + 12, "annotation decoded length")?;
-        let data_end = data.checked_add(compressed).ok_or_else(|| {
-            KernelError::new(
-                ErrorCode::CorruptIndex,
-                "annotation block data range overflows",
-            )
-        })?;
-        if (block > 0 && seq <= previous_seq) || data != next_data || data_end > expected.compressed
-        {
-            return Err(KernelError::new(
-                ErrorCode::CorruptIndex,
-                "annotation block index is not canonical",
-            ));
-        }
-        previous_seq = seq;
-        next_data = data_end;
-        splits = splits
-            .checked_add(u16_at(
-                bytes,
-                at + 20,
-                ErrorCode::CorruptIndex,
-                "annotation split count",
-            )? as usize)
-            .ok_or_else(|| {
-                KernelError::new(ErrorCode::CorruptIndex, "annotation split total overflows")
-            })?;
-        hints = hints
-            .checked_add(u16_at(
-                bytes,
-                at + 22,
-                ErrorCode::CorruptIndex,
-                "annotation hint count",
-            )? as usize)
-            .ok_or_else(|| {
-                KernelError::new(ErrorCode::CorruptIndex, "annotation hint total overflows")
-            })?;
-        uncompressed = uncompressed.checked_add(decoded).ok_or_else(|| {
-            KernelError::new(
-                ErrorCode::CorruptIndex,
-                "annotation decoded byte total overflows",
-            )
-        })?;
-        largest = largest.max(decoded);
-    }
-    if next_data != expected.compressed
-        || splits != expected.splits
-        || hints != expected.hints
-        || uncompressed != expected.uncompressed
-        || largest != expected.largest
-    {
-        return Err(KernelError::new(
-            ErrorCode::CorruptIndex,
-            "annotation block totals disagree with the header",
-        ));
-    }
-    Ok(())
-}
-
-fn validate_generated_roots(
-    bytes: &[u8],
-    offset: usize,
-    roots: usize,
-    indexes: &[GeneratedIndex],
-    blocks_offset: usize,
-) -> Result<()> {
-    let mut seen = vec![0_usize; indexes.len()];
-    let mut previous_seq = 0;
-    let mut previous_block = 0;
-    for root in 0..roots {
-        let at = checked_table_end(
-            offset,
-            root,
-            GENERATED_ROOT_BYTES,
-            bytes.len(),
-            ErrorCode::CorruptIndex,
-            "generated root index",
-        )?;
-        let seq = u32_at(bytes, at, ErrorCode::CorruptIndex, "generated root")?;
-        let block = u16_at(bytes, at + 4, ErrorCode::CorruptIndex, "generated block")? as usize;
-        let reserved = u16_at(
-            bytes,
-            at + 6,
-            ErrorCode::CorruptIndex,
-            "generated root reserved field",
-        )?;
-        if block >= indexes.len()
-            || reserved != 0
-            || (root > 0 && seq <= previous_seq)
-            || (root > 0 && block < previous_block)
-        {
-            return Err(KernelError::new(
-                ErrorCode::CorruptIndex,
-                "generated root index is not canonical",
-            ));
-        }
-        if seen[block] == 0 {
-            let block_at = checked_table_end(
-                blocks_offset,
-                block,
-                BLOCK_BYTES,
-                bytes.len(),
-                ErrorCode::CorruptIndex,
-                "generated block index",
-            )?;
-            let first = u32_at(
-                bytes,
-                block_at,
-                ErrorCode::CorruptIndex,
-                "generated first root",
-            )?;
-            if first != seq {
-                return Err(KernelError::new(
-                    ErrorCode::CorruptIndex,
-                    "generated root and block indexes disagree",
-                ));
-            }
-        }
-        seen[block] += 1;
-        previous_seq = seq;
-        previous_block = block;
-    }
-    if seen
-        .iter()
-        .zip(indexes)
-        .any(|(actual, expected)| *actual != expected.roots)
-    {
-        return Err(KernelError::new(
-            ErrorCode::CorruptIndex,
-            "generated roots do not cover blocks",
-        ));
-    }
-    Ok(())
-}
-
-fn generated_key(aliases: &[u16]) -> Result<u32> {
-    if aliases.len() != 1 && aliases.len() != 2 {
-        return Err(KernelError::new(
-            ErrorCode::OutOfRange,
-            "generated aliases require one or two values",
-        ));
-    }
-    let first = u32::from(aliases[0]);
-    let second = aliases.get(1).map(|value| u32::from(*value));
-    if first > ALIAS_MAX || second.is_some_and(|value| value > ALIAS_MAX) {
-        return Err(KernelError::new(
-            ErrorCode::OutOfRange,
-            "generated alias is out of range",
-        ));
-    }
-    let key = (first << ALIAS_BITS) | second.map_or(0, |value| value + 1);
-    if key == KEY_MASK {
-        return Err(KernelError::new(
-            ErrorCode::OutOfRange,
-            "generated aliases collide with the direct sentinel",
-        ));
-    }
-    Ok(key)
-}
-
-fn tri(code: u8) -> Result<Option<bool>> {
-    match code {
-        0 => Ok(Some(false)),
-        1 => Ok(Some(true)),
-        2 => Ok(None),
-        _ => Err(KernelError::new(
-            ErrorCode::CorruptBlock,
-            format!("invalid generated tri-state {code}"),
-        )),
-    }
 }

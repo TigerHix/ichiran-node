@@ -48,34 +48,5 @@ pub fn count_kanji(value: &[u16]) -> usize {
 }
 
 pub fn mora_length(value: &[u16]) -> usize {
-    value
-        .iter()
-        .filter(|code| {
-            !matches!(
-                **code,
-                0x3041
-                    | 0x3043
-                    | 0x3045
-                    | 0x3047
-                    | 0x3049
-                    | 0x3083
-                    | 0x3085
-                    | 0x3087
-                    | 0x308e
-                    | 0x3095
-                    | 0x3096
-                    | 0x30a1
-                    | 0x30a3
-                    | 0x30a5
-                    | 0x30a7
-                    | 0x30a9
-                    | 0x30e3
-                    | 0x30e5
-                    | 0x30e7
-                    | 0x30ee
-                    | 0x30f5
-                    | 0x30f6
-            )
-        })
-        .count()
+    crate::characters::mora_length(value)
 }
