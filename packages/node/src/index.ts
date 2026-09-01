@@ -6,6 +6,7 @@ import { gunzipSync } from 'node:zlib';
 import {
   parseAnalyzerReleaseManifest,
   IchiranRuntime,
+  RUST_KERNEL_WASM_URL,
   memoryDetailSource,
   type AnalyzerReleaseAsset,
   type AnalyzerReleaseManifest
@@ -73,9 +74,10 @@ export async function openNodeRuntime(
       `Analyzer release sourceCommit ${manifest.sourceCommit} does not match runtime ${expectedSourceCommit}`
     );
   }
-  const [hot, details] = await Promise.all([
+  const [hot, details, wasm] = await Promise.all([
     loadAsset(directory, manifest.hot),
-    loadAsset(directory, manifest.details)
+    loadAsset(directory, manifest.details),
+    readFile(RUST_KERNEL_WASM_URL).then(bytes => new Uint8Array(bytes))
   ]);
   const decodeGzip = async (compressed: Uint8Array, expectedByteLength: number) => {
     const decoded = new Uint8Array(gunzipSync(compressed));
@@ -87,6 +89,7 @@ export async function openNodeRuntime(
   return IchiranRuntime.open({
     hot,
     details: memoryDetailSource(details),
-    decodeGzip
+    decodeGzip,
+    wasm
   });
 }

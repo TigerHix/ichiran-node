@@ -2,6 +2,7 @@ use std::cell::Cell;
 
 use super::*;
 use crate::analyzer_model::{ScoreBreakdown, ScoreInfo, utf16};
+use std::sync::Arc;
 
 fn portable_group(group_id: i64, start: usize, end: usize, scores: &[f64]) -> SegmentGroup {
     SegmentGroup {
@@ -225,7 +226,7 @@ fn dense_graph_materializes_only_the_final_long_path() {
 fn add_random_rule_facts(group: &mut SegmentGroup, random: &mut impl FnMut() -> u32) {
     let strong = random().is_multiple_of(3);
     for (index, segment) in group.segments.iter_mut().enumerate() {
-        segment.rules = Some(SegmentRuleFacts {
+        segment.rules = Some(Arc::new(SegmentRuleFacts {
             text: utf16(if index == 0 && random().is_multiple_of(5) {
                 "と"
             } else {
@@ -255,7 +256,7 @@ fn add_random_rule_facts(group: &mut SegmentGroup, random: &mut impl FnMut() -> 
             }),
             compound_end_seq: None,
             compound_end_text: None,
-        });
+        }));
     }
 }
 

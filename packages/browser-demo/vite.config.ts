@@ -1,6 +1,7 @@
 import react from '@vitejs/plugin-react';
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
+import { gzipSync } from 'node:zlib';
 import { defineConfig, type Plugin } from 'vite';
 
 const OPAQUE_ANALYZER_ASSETS = new Map([
@@ -48,11 +49,42 @@ function serveOpaqueAnalyzerAssets(): Plugin {
   };
 }
 
+function gzipRustKernelWasm(): Plugin {
+  return {
+    name: 'gzip-rust-kernel-wasm',
+    enforce: 'post',
+    generateBundle(_options, bundle) {
+      const matches = Object.entries(bundle).filter(([, output]) =>
+        output.type === 'asset'
+        && output.fileName.startsWith('assets/ichiran_kernel_bg-')
+        && output.fileName.endsWith('.wasm')
+      );
+      if (matches.length === 0 && process.env.ICHIRAN_TYPESCRIPT_ORACLE === '1') return;
+      if (matches.length !== 1) {
+        throw new Error(`Expected one Rust kernel WASM asset, found ${matches.length}`);
+      }
+      const [key, asset] = matches[0]!;
+      if (asset.type !== 'asset') throw new Error('Rust kernel WASM output is not an asset');
+      // Keep `.bin` last so static hosts do not advertise Content-Encoding and
+      // transparently expand bytes that the Worker owns decompressing.
+      const fileName = `${asset.fileName}.gz.bin`;
+      delete bundle[key];
+      bundle[fileName] = {
+        ...asset,
+        fileName,
+        source: gzipSync(asset.source, { level: 9 })
+      };
+    }
+  };
+}
+
 export default defineConfig({
   define: {
-    __ICHIRAN_RUST_M1__: JSON.stringify(process.env.ICHIRAN_RUST_M1 === '1')
+    __ICHIRAN_TYPESCRIPT_ORACLE__: JSON.stringify(
+      process.env.ICHIRAN_TYPESCRIPT_ORACLE === '1'
+    )
   },
-  plugins: [react(), serveOpaqueAnalyzerAssets()],
+  plugins: [react(), serveOpaqueAnalyzerAssets(), gzipRustKernelWasm()],
   worker: {
     format: 'es'
   }

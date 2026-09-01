@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "build": "bun run --cwd packages/core build && bun run --cwd packages/node build && bun run --cwd packages/cli build && bun run --cwd packages/api build",
+    "build:rust-wasm": "bash packages/rust-kernel/scripts/build-wasm.sh",
     "build:compiler": "bun run --cwd packages/core build && bun run --cwd packages/reference-postgres build && bun run --cwd packages/data build",
     "typecheck": "bun run --cwd packages/core typecheck && bun run --cwd packages/node typecheck && bun run --cwd packages/cli typecheck && bun run --cwd packages/api typecheck && bun run --cwd packages/browser-demo typecheck",
     "typecheck:compiler": "bun run --cwd packages/core typecheck && bun run --cwd packages/reference-postgres typecheck && bun run --cwd packages/data typecheck && bun run alpha:release:typecheck",
@@ -41,6 +42,7 @@
   "devDependencies": {
     "@types/bun": "latest",
     "@types/node": "^20.19.19",
+    "binaryen": "132.0.0",
     "chokidar-cli": "^3.0.0",
     "concurrently": "^9.2.1",
     "dotenv": "^17.2.3",

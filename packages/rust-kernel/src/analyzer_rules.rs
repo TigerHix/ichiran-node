@@ -28,22 +28,22 @@ impl Segfilter {
         left: Option<SegmentGroup>,
         right: SegmentGroup,
     ) -> Vec<(Option<SegmentGroup>, SegmentGroup)> {
-        let (right_yes, right_no) = classify(&right.segments, self.right);
-        if right_yes.is_empty() || (self.allow_first && left.is_none()) {
+        if !right.segments.iter().any(self.right) || (self.allow_first && left.is_none()) {
             return vec![(left, right)];
         }
         let Some(left) = left else {
-            return group_with(right, right_no)
+            return group_without(right, self.right)
                 .map(|right| (None, right))
                 .into_iter()
                 .collect();
         };
         if left.end != right.start {
-            return group_with(right, right_no)
+            return group_without(right, self.right)
                 .map(|right| (Some(left), right))
                 .into_iter()
                 .collect();
         }
+        let (right_yes, right_no) = classify(&right.segments, self.right);
         let (left_yes, left_no) = classify(&left.segments, self.left);
         if left_no.is_empty() {
             return vec![(Some(left), right)];
@@ -61,12 +61,10 @@ impl Segfilter {
     }
 
     fn non_adjacent_right(self, right: SegmentGroup) -> Option<SegmentGroup> {
-        let (right_yes, right_no) = classify(&right.segments, self.right);
-        if right_yes.is_empty() {
-            Some(right)
-        } else {
-            group_with(right, right_no)
+        if !right.segments.iter().any(self.right) {
+            return Some(right);
         }
+        group_without(right, self.right)
     }
 }
 
@@ -175,6 +173,11 @@ fn group_with(mut group: SegmentGroup, segments: Vec<Segment>) -> Option<Segment
         group.segments = segments;
         Some(group)
     }
+}
+
+fn group_without(mut group: SegmentGroup, filter: SegmentFilter) -> Option<SegmentGroup> {
+    group.segments.retain(|segment| !filter(segment));
+    (!group.segments.is_empty()).then_some(group)
 }
 
 fn has_sequence(segment: &Segment, values: &[i64]) -> bool {

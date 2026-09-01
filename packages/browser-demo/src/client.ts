@@ -40,6 +40,12 @@ interface PendingRequest {
   readonly progress?: (value: InstallProgressValue) => void;
 }
 
+type BenchmarkCorpusRequest = readonly [
+  text: string,
+  limit?: number,
+  entities?: AnalyzeOptions['entities']
+];
+
 interface BenchmarkRequest {
   readonly text: string;
   readonly limit: number;
@@ -164,13 +170,23 @@ export class AnalyzerClient {
 
   /** Measures the complete UI-to-Worker RPC, including result cloning. */
   async benchmark(release: AnalyzerPackManifest): Promise<BenchmarkResult> {
-    const { default: benchmarkCorpus } = await import('../../../browser-alpha/bench/corpus.json');
+    const { default: benchmarkCorpus } = await import('./generated/benchmark-corpus.json');
+    const requests = (values: readonly (readonly unknown[])[]): readonly BenchmarkRequest[] => (
+      values.map(value => {
+        const [text, limit = 1, entities] = value as BenchmarkCorpusRequest;
+        return { text, limit, entities };
+      })
+    );
     const hardGroups = [
-      ['ordinary', benchmarkCorpus.groups.ordinary, true],
-      ['pathological-morphology', benchmarkCorpus.groups['pathological-morphology'], true],
+      ['ordinary', requests(benchmarkCorpus.groups.ordinary), true],
+      [
+        'pathological-morphology',
+        requests(benchmarkCorpus.groups['pathological-morphology']),
+        true
+      ],
       [
         'dense-contiguous-boundary',
-        benchmarkCorpus.groups['dense-contiguous-boundary'],
+        requests(benchmarkCorpus.groups['dense-contiguous-boundary']),
         false
       ]
     ] as const;
@@ -187,15 +203,15 @@ export class AnalyzerClient {
     }
 
     const diagnosticGroups: readonly (readonly [string, readonly BenchmarkRequest[]])[] = [
-      ['segmentation-short', benchmarkCorpus.groups['segmentation-short']],
-      ['long-noun-compound', benchmarkCorpus.groups['long-noun-compound']],
-      ['hiragana-colloquial', benchmarkCorpus.groups['hiragana-colloquial']],
-      ['modern-mixed-script', benchmarkCorpus.groups['modern-mixed-script']],
-      ['top-n', benchmarkCorpus.groups['top-n']],
-      ['entities', benchmarkCorpus.groups.entities],
-      ['counters', benchmarkCorpus.groups.counters],
-      ['numbers', benchmarkCorpus.groups.numbers],
-      ['paragraph-scaling', benchmarkCorpus.groups['paragraph-scaling']]
+      ['segmentation-short', requests(benchmarkCorpus.groups['segmentation-short'])],
+      ['long-noun-compound', requests(benchmarkCorpus.groups['long-noun-compound'])],
+      ['hiragana-colloquial', requests(benchmarkCorpus.groups['hiragana-colloquial'])],
+      ['modern-mixed-script', requests(benchmarkCorpus.groups['modern-mixed-script'])],
+      ['top-n', requests(benchmarkCorpus.groups['top-n'])],
+      ['entities', requests(benchmarkCorpus.groups.entities)],
+      ['counters', requests(benchmarkCorpus.groups.counters)],
+      ['numbers', requests(benchmarkCorpus.groups.numbers)],
+      ['paragraph-scaling', requests(benchmarkCorpus.groups['paragraph-scaling'])]
     ];
     const diagnosticResults: BenchmarkResult['diagnostics']['analyzeGroups'][number][] = [];
     for (let groupIndex = 0; groupIndex < diagnosticGroups.length; groupIndex++) {
@@ -210,7 +226,7 @@ export class AnalyzerClient {
     }
 
     const detailEntries: number[] = [];
-    for (const request of benchmarkCorpus.groups['describe-random-access']) {
+    for (const request of requests(benchmarkCorpus.groups['describe-random-access'])) {
       const result = await this.analyze(request.text, { limit: 1 });
       const entryIndex = result.paths[0]?.tokens.find(token => token.entryIndex !== null)?.entryIndex;
       if (entryIndex === null || entryIndex === undefined) {

@@ -202,7 +202,8 @@ pub struct AnalysisRoot {
     pub reading: String,
 }
 
-#[derive(Clone, Copy, Debug, Eq, PartialEq)]
+#[derive(Clone, Copy, Debug, Eq, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
 pub(crate) enum LegacyConjugationSelection {
     Default,
     Explicit,

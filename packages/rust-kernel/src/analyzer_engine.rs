@@ -5,6 +5,7 @@
 //! token projection stays with the result layer.
 
 use std::collections::HashMap;
+use std::sync::Arc;
 
 use crate::analyzer_lexicon::{AnalyzerLexicon, MaterializedCandidate};
 use crate::analyzer_model::{EntityHint, PathResult, ScoreInfo, SegmentGroup};
@@ -40,19 +41,49 @@ pub struct ChunkPathRef {
     pub path_index: usize,
 }
 
+#[derive(Clone, Debug, Eq, PartialEq)]
+struct ChunkPathNode {
+    reference: ChunkPathRef,
+    previous: Option<Arc<ChunkPathNode>>,
+}
+
 /// Stable cross-chunk top-N state. Misc chunks do not add a word-path ref.
 #[derive(Clone, Debug, PartialEq)]
 pub struct AccumulatedPath {
     pub score: f64,
-    pub word_paths: Vec<ChunkPathRef>,
+    tail: Option<Arc<ChunkPathNode>>,
+    word_count: usize,
 }
 
 impl AccumulatedPath {
     pub fn initial() -> Self {
         Self {
             score: 0.0,
-            word_paths: Vec::new(),
+            tail: None,
+            word_count: 0,
         }
+    }
+
+    fn appended(&self, score: f64, reference: ChunkPathRef) -> Self {
+        Self {
+            score,
+            tail: Some(Arc::new(ChunkPathNode {
+                reference,
+                previous: self.tail.clone(),
+            })),
+            word_count: self.word_count + 1,
+        }
+    }
+
+    pub(crate) fn word_paths(&self) -> Vec<ChunkPathRef> {
+        let mut paths = Vec::with_capacity(self.word_count);
+        let mut current = self.tail.as_deref();
+        while let Some(node) = current {
+            paths.push(node.reference);
+            current = node.previous.as_deref();
+        }
+        paths.reverse();
+        paths
     }
 }
 
@@ -112,12 +143,16 @@ pub fn merge_paths(
             if insertion >= limit {
                 continue;
             }
-            let mut word_paths = prefix.word_paths.clone();
-            word_paths.push(ChunkPathRef {
-                chunk_index,
-                path_index,
-            });
-            merged.insert(insertion, AccumulatedPath { score, word_paths });
+            merged.insert(
+                insertion,
+                prefix.appended(
+                    score,
+                    ChunkPathRef {
+                        chunk_index,
+                        path_index,
+                    },
+                ),
+            );
             merged.truncate(limit);
         }
     }

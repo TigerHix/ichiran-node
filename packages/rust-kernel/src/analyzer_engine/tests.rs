@@ -29,20 +29,20 @@ fn path(score: f64) -> PathResult {
 #[test]
 fn stable_cross_chunk_top_n_matches_typescript_generation_order() {
     let left = [
-        AccumulatedPath {
-            score: 10.0,
-            word_paths: vec![ChunkPathRef {
+        AccumulatedPath::initial().appended(
+            10.0,
+            ChunkPathRef {
                 chunk_index: 0,
                 path_index: 0,
-            }],
-        },
-        AccumulatedPath {
-            score: 10.0,
-            word_paths: vec![ChunkPathRef {
+            },
+        ),
+        AccumulatedPath::initial().appended(
+            10.0,
+            ChunkPathRef {
                 chunk_index: 0,
                 path_index: 1,
-            }],
-        },
+            },
+        ),
     ];
     let merged = merge_paths(&left, &[path(7.0), path(7.0), path(2.5)], 2, 4);
     assert_eq!(
@@ -52,7 +52,7 @@ fn stable_cross_chunk_top_n_matches_typescript_generation_order() {
     assert_eq!(
         merged
             .iter()
-            .map(|value| value.word_paths.clone())
+            .map(AccumulatedPath::word_paths)
             .collect::<Vec<_>>(),
         vec![
             vec![
@@ -99,6 +99,39 @@ fn stable_cross_chunk_top_n_matches_typescript_generation_order() {
     );
     assert!(merge_paths(&left, &[path(1.0)], 1, 0).is_empty());
     assert!(merge_paths(&left, &[], 1, 5).is_empty());
+}
+
+#[test]
+fn cross_chunk_paths_share_prefixes_and_materialize_once_in_document_order() {
+    let mut paths = vec![AccumulatedPath::initial()];
+    for chunk_index in 0..4_096 {
+        paths = merge_paths(&paths, &[path(1.0)], chunk_index, 10);
+    }
+    let materialized = paths[0].word_paths();
+    assert_eq!(materialized.len(), 4_096);
+    assert!(materialized.iter().enumerate().all(|(index, reference)| {
+        *reference
+            == ChunkPathRef {
+                chunk_index: index,
+                path_index: 0,
+            }
+    }));
+
+    let prefix = AccumulatedPath::initial().appended(
+        3.0,
+        ChunkPathRef {
+            chunk_index: 0,
+            path_index: 0,
+        },
+    );
+    let branches = merge_paths(std::slice::from_ref(&prefix), &[path(2.0), path(1.0)], 1, 2);
+    let shared = prefix.tail.as_ref().unwrap();
+    assert!(branches.iter().all(|branch| {
+        Arc::ptr_eq(
+            branch.tail.as_ref().unwrap().previous.as_ref().unwrap(),
+            shared,
+        )
+    }));
 }
 
 #[test]

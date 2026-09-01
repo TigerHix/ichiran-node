@@ -14,12 +14,20 @@ export class WasmKernel {
     free(): void;
     [Symbol.dispose](): void;
     /**
-     * The only analysis crossing: one UTF-16 input and one UTF-8 JSON result.
+     * The only analysis crossing: one UTF-16 input, one options document, and
+     * one UTF-8 JSON result.
      */
-    analyze_utf16(input: Uint16Array, limit: number): Uint8Array;
-    inspect_generated_utf16(input: Uint16Array, kanji_route: boolean): Uint8Array;
+    analyze_utf16_options(input: Uint16Array, options_json: Uint8Array): Uint8Array;
+    entry_index_for_sequence(sequence: number): number;
+    legacy_begin_utf16(input: Uint16Array, options_json: Uint8Array, method: string): void;
+    /**
+     * Returns a JSON envelope. `missing-detail` names the exact compressed
+     * range the host must feed to `WasmDetailStore.entry_json` before retrying.
+     */
+    legacy_step(details: WasmDetailStore): Uint8Array;
     constructor(hot: Uint8Array);
     resident_payload_bytes(): number;
+    romanize_utf16_options(input: Uint16Array, options_json: Uint8Array, method: string): Uint16Array;
 }
 
 export function detail_prefix_length(header: Uint8Array, total_bytes: number): number;
@@ -35,14 +43,18 @@ export interface InitOutput {
     readonly wasmdetailstore_open: (a: number, b: number, c: number, d: number) => void;
     readonly wasmdetailstore_range_json: (a: number, b: number, c: number) => void;
     readonly wasmdetailstore_resident_bytes: (a: number) => number;
-    readonly wasmkernel_analyze_utf16: (a: number, b: number, c: number, d: number, e: number) => void;
-    readonly wasmkernel_inspect_generated_utf16: (a: number, b: number, c: number, d: number, e: number) => void;
+    readonly wasmkernel_analyze_utf16_options: (a: number, b: number, c: number, d: number, e: number, f: number) => void;
+    readonly wasmkernel_entry_index_for_sequence: (a: number, b: number, c: number) => void;
+    readonly wasmkernel_legacy_begin_utf16: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number) => void;
+    readonly wasmkernel_legacy_step: (a: number, b: number, c: number) => void;
     readonly wasmkernel_open: (a: number, b: number, c: number) => void;
     readonly wasmkernel_resident_payload_bytes: (a: number) => number;
+    readonly wasmkernel_romanize_utf16_options: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number) => void;
     readonly __wbindgen_export: (a: number) => void;
     readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
     readonly __wbindgen_export2: (a: number, b: number) => number;
     readonly __wbindgen_export3: (a: number, b: number, c: number) => void;
+    readonly __wbindgen_export4: (a: number, b: number, c: number, d: number) => number;
 }
 
 export type SyncInitInput = BufferSource | WebAssembly.Module;

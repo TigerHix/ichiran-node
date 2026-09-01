@@ -21,7 +21,7 @@ test('records actual steady analyzer Worker heap and backing storage', async ({ 
       await worker.collectGarbage();
       const usage = await worker.heapUsage();
       console.log(`RUNTIME_MEMORY=${JSON.stringify({
-        mode: process.env.ICHIRAN_RUST_M1 === '1' ? 'rust-m1' : 'typescript',
+        mode: process.env.ICHIRAN_TYPESCRIPT_ORACLE === '1' ? 'typescript-oracle' : 'rust-kernel',
         ...usage
       })}`);
       expect(usage.usedSize).toBeGreaterThan(0);

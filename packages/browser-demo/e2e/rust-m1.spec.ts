@@ -9,7 +9,7 @@ import {
   startCpuHogs,
   stopCpuHogs
 } from './offline-analyzer-helpers.js';
-import type { AnalyzerPackManifest, RustM1Metrics } from '../src/protocol.js';
+import type { AnalyzerPackManifest, RustKernelMetrics } from '../src/protocol.js';
 
 interface M1OracleWitness {
   readonly name: string;
@@ -22,7 +22,7 @@ const m1Witnesses = JSON.parse(readFileSync(
   'utf8'
 )) as readonly M1OracleWitness[];
 
-interface RustM1Measurement {
+interface RustKernelMeasurement {
   readonly workerReadyMs: number;
   readonly openMs: number;
   readonly firstAnalyzeMs: number;
@@ -44,9 +44,9 @@ interface RustM1Measurement {
   readonly calibrationRatio: number;
 }
 
-test.skip(process.env.ICHIRAN_RUST_M1 !== '1', 'requires the experimental Rust M1 build');
+test.skip(process.env.ICHIRAN_TYPESCRIPT_ORACLE === '1', 'requires the Rust kernel build');
 
-test('experimental Rust Worker owns the M1 vertical slice', async ({ browser }) => {
+test('Rust Worker owns the complete analyzer boundary', async ({ browser }) => {
   const context = await browser.newContext({
     baseURL: 'http://127.0.0.1:4173',
     serviceWorkers: 'allow'
@@ -82,7 +82,7 @@ test('experimental Rust Worker owns the M1 vertical slice', async ({ browser }) 
     const affinityCpu = await singleCpuAffinity();
     const calibration = await attachAnalyzerWorker(browser);
     let hogs: readonly ChildProcess[] = [];
-    let measurement: RustM1Measurement;
+    let measurement: RustKernelMeasurement;
     try {
       await calibration.samples(2);
       const baseline = await calibration.samples(7);
@@ -104,7 +104,7 @@ test('experimental Rust Worker owns the M1 vertical slice', async ({ browser }) 
       }) => {
         const worker = new Worker(workerPath, {
           type: 'module',
-          name: 'ichiran-rust-m1-measurement'
+          name: 'ichiran-rust-kernel-measurement'
         });
         let nextId = 0;
         const request = <T>(value: Record<string, unknown>): Promise<T> => new Promise((resolve, reject) => {
@@ -151,11 +151,11 @@ test('experimental Rust Worker owns the M1 vertical slice', async ({ browser }) 
             lexical.push(await timed('猫'));
             morphology.push(await timed('食べた'));
           }
-          const before = await request<RustM1Metrics>({ op: 'rust-m1-metrics' });
+          const before = await request<RustKernelMetrics>({ op: 'rust-kernel-metrics' });
           const detailStarted = performance.now();
           await request({ op: 'describe', entryIndex: 43_720 });
           const detailMs = performance.now() - detailStarted;
-          const after = await request<RustM1Metrics>({ op: 'rust-m1-metrics' });
+          const after = await request<RustKernelMetrics>({ op: 'rust-kernel-metrics' });
           const differential = [];
           for (const witness of witnesses) {
             // Construct from numeric UTF-16 units in the browser realm so lone
@@ -221,7 +221,7 @@ test('experimental Rust Worker owns the M1 vertical slice', async ({ browser }) 
       await stopCpuHogs(hogs);
       await calibration.close();
     }
-    console.log(`RUST_M1_MEASUREMENT=${JSON.stringify(measurement)}`);
+    console.log(`RUST_KERNEL_MEASUREMENT=${JSON.stringify(measurement)}`);
     expect(measurement.workerReadyMs).toBeLessThan(1_050);
     expect(measurement.openMs).toBeLessThan(1_050);
     expect(measurement.firstAnalyzeMs).toBeLessThan(53.1);

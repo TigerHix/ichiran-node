@@ -1,4 +1,6 @@
 use crate::analyzer_engine::{AccumulatedPath, AnalyzerEngine, merge_paths};
+#[cfg(target_arch = "wasm32")]
+use crate::analyzer_legacy::legacy_wire_metadata;
 use crate::analyzer_legacy::{
     LegacyContext, LegacyDetailedResult, LegacyDetailedSession, LegacyOptions, serialize_compact,
 };
@@ -42,6 +44,18 @@ pub struct LegacyDetailSession {
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub enum LegacyDetailStep {
     Ready(Vec<u8>),
+    Missing {
+        entry_index: u32,
+        range: DetailRange,
+    },
+}
+
+#[cfg(target_arch = "wasm32")]
+pub(crate) enum LegacyWireDetailStep {
+    Ready {
+        value: Vec<u8>,
+        metadata: Vec<u8>,
+    },
     Missing {
         entry_index: u32,
         range: DetailRange,
@@ -100,6 +114,10 @@ impl Kernel {
 
     pub fn manifest(&self) -> &PackManifest {
         self.pack.manifest()
+    }
+
+    pub fn entry_index_for_sequence(&self, sequence: u32) -> Result<Option<usize>> {
+        self.roots.find_entry_index(sequence)
     }
 
     pub fn surface(&self) -> &SurfaceIndex {
@@ -302,6 +320,47 @@ impl Kernel {
         details: &DetailStore,
         method: Option<RomanizationName>,
     ) -> Result<LegacyDetailStep> {
+        match self.serialize_legacy_detailed(session, result, details, method)? {
+            LegacyDetailedResult::Ready(value) => serde_json::to_vec(&value)
+                .map(LegacyDetailStep::Ready)
+                .map_err(|error| KernelError::new(ErrorCode::Internal, error.to_string())),
+            LegacyDetailedResult::MissingDetail(request) => Ok(LegacyDetailStep::Missing {
+                entry_index: request.entry_index,
+                range: request.range,
+            }),
+        }
+    }
+
+    #[cfg(target_arch = "wasm32")]
+    pub(crate) fn serialize_legacy_detailed_wire_json(
+        &mut self,
+        session: &mut LegacyDetailSession,
+        result: &AnalysisResult,
+        details: &DetailStore,
+        method: Option<RomanizationName>,
+    ) -> Result<LegacyWireDetailStep> {
+        match self.serialize_legacy_detailed(session, result, details, method)? {
+            LegacyDetailedResult::Ready(value) => {
+                let metadata = serde_json::to_vec(&legacy_wire_metadata(&value))
+                    .map_err(|error| KernelError::new(ErrorCode::Internal, error.to_string()))?;
+                let value = serde_json::to_vec(&value)
+                    .map_err(|error| KernelError::new(ErrorCode::Internal, error.to_string()))?;
+                Ok(LegacyWireDetailStep::Ready { value, metadata })
+            }
+            LegacyDetailedResult::MissingDetail(request) => Ok(LegacyWireDetailStep::Missing {
+                entry_index: request.entry_index,
+                range: request.range,
+            }),
+        }
+    }
+
+    fn serialize_legacy_detailed(
+        &mut self,
+        session: &mut LegacyDetailSession,
+        result: &AnalysisResult,
+        details: &DetailStore,
+        method: Option<RomanizationName>,
+    ) -> Result<LegacyDetailedResult> {
         let mut context = LegacyContext {
             roots: &self.roots,
             support: &self.support,
@@ -312,18 +371,9 @@ impl Kernel {
             method,
             ..LegacyOptions::default()
         };
-        match session
+        session
             .inner
-            .serialize(result, details, &mut context, &options)?
-        {
-            LegacyDetailedResult::Ready(value) => serde_json::to_vec(&value)
-                .map(LegacyDetailStep::Ready)
-                .map_err(|error| KernelError::new(ErrorCode::Internal, error.to_string())),
-            LegacyDetailedResult::MissingDetail(request) => Ok(LegacyDetailStep::Missing {
-                entry_index: request.entry_index,
-                range: request.range,
-            }),
-        }
+            .serialize(result, details, &mut context, &options)
     }
 }
 
@@ -348,11 +398,12 @@ fn materialize_document_paths(
         .map(|path| {
             let mut tokens = Vec::new();
             let mut word = 0;
+            let word_paths = path.word_paths();
             for (chunk_index, chunk) in chunks.iter().enumerate() {
                 match chunk {
                     DocumentChunk::Misc { token, .. } => tokens.push((**token).clone()),
                     DocumentChunk::Word { paths, .. } => {
-                        let reference = path.word_paths.get(word).ok_or_else(|| {
+                        let reference = word_paths.get(word).ok_or_else(|| {
                             KernelError::new(
                                 ErrorCode::Internal,
                                 "accumulated path is missing a word chunk",
@@ -375,7 +426,7 @@ fn materialize_document_paths(
                     }
                 }
             }
-            if word != path.word_paths.len() {
+            if word != word_paths.len() {
                 return Err(KernelError::new(
                     ErrorCode::Internal,
                     "accumulated path has extra word chunks",

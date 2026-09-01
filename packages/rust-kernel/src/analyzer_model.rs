@@ -1,3 +1,5 @@
+use std::sync::Arc;
+
 use crate::morphology::Route;
 
 pub const SCORE_FLAG_STRONG: u8 = 1 << 0;
@@ -199,7 +201,7 @@ pub struct Segment {
     pub score: f64,
     pub common: Option<i32>,
     pub entity: bool,
-    pub rules: Option<SegmentRuleFacts>,
+    pub rules: Option<Arc<SegmentRuleFacts>>,
 }
 
 #[derive(Clone, Debug, PartialEq)]

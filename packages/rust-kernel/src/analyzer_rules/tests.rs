@@ -3,6 +3,7 @@ use crate::analyzer_model::{
     Conjugation, ConjugationProperty, ScoreBreakdown, ScoreInfo, SegmentRuleFacts, SplitScoreInfo,
     utf16,
 };
+use std::sync::Arc;
 
 #[derive(Clone)]
 struct RuleSpec {
@@ -89,7 +90,7 @@ fn segment(spec: &RuleSpec, start: usize, end: usize) -> Segment {
         score: 20.0,
         common: None,
         entity: false,
-        rules: Some(SegmentRuleFacts {
+        rules: Some(Arc::new(SegmentRuleFacts {
             text: utf16(spec.text),
             word_kind: spec.word_kind,
             score_info: Some(ScoreInfo {
@@ -107,7 +108,7 @@ fn segment(spec: &RuleSpec, start: usize, end: usize) -> Segment {
             }),
             compound_end_seq: spec.compound_end_seq,
             compound_end_text: spec.compound_end_text.map(utf16),
-        }),
+        })),
     }
 }
 

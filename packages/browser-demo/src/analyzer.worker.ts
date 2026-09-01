@@ -8,7 +8,7 @@ import {
 import type {
   AnalyzerPackManifest,
   PackStatus,
-  RustM1Metrics,
+  RustKernelMetrics,
   WorkerRequest,
   WorkerResponse
 } from './protocol.js';
@@ -16,8 +16,8 @@ import {
   AnalyzerInstallError,
   clearInstall,
   inspectInstall,
+  inspectInstalled,
   installAnalyzer,
-  installedFiles,
   installedInstallId,
   markInstallCorrupt
 } from './worker/install.js';
@@ -26,12 +26,11 @@ import { isArtifactCorruption } from './worker/artifact-corruption.js';
 import { createSerialExecutor } from './worker/serial-executor.js';
 import { Sha256 } from './worker/sha256.js';
 
-declare const __ICHIRAN_RUST_M1__: boolean;
+declare const __ICHIRAN_TYPESCRIPT_ORACLE__: boolean;
 
-// Start fetching/compiling the experimental runtime as the Worker boots so its
-// module load overlaps install inspection instead of extending ready latency.
-const rustRuntimeModule = __ICHIRAN_RUST_M1__
-  ? import('./worker/runtime-rust.js')
+// The frozen TypeScript runtime is emitted only for explicit oracle builds.
+const typescriptRuntimeModule = __ICHIRAN_TYPESCRIPT_ORACLE__
+  ? import('./worker/runtime-typescript.js')
   : null;
 
 interface WorkerRuntime {
@@ -40,7 +39,7 @@ interface WorkerRuntime {
   legacy(text: string, options?: PortableAnalyzeOptions): Promise<unknown>;
   romanize(text: string, options?: PortableAnalyzeOptions): Promise<string>;
   dispose?(): void;
-  metrics?(): RustM1Metrics;
+  metrics?(): RustKernelMetrics;
 }
 
 let runtime: WorkerRuntime | null = null;
@@ -119,34 +118,34 @@ function staleStatus(
 
 async function openInstalledUnlocked(): Promise<ReturnType<typeof inspectInstall>> {
   const expected = requiredExpectedRelease();
-  const status = await inspectInstall(runtime !== null);
-  if (status.state !== 'ready') {
+  const inspected = await inspectInstalled(runtime !== null);
+  if (inspected.state !== 'ready') {
     clearRuntime();
-    return status;
+    return inspected;
   }
-  if (status.manifestSha256 !== expected.manifestSha256) {
+  if (inspected.manifestSha256 !== expected.manifestSha256) {
     clearRuntime();
-    return staleStatus(status, expected);
+    return staleStatus(inspected, expected);
   }
-  const installId = await installedInstallId();
+  const files = inspected.files;
   if (
     runtime
-    && runtimeManifestSha256 === status.manifestSha256
-    && runtimeInstallId === installId
+    && runtimeManifestSha256 === inspected.manifestSha256
+    && runtimeInstallId === files.installId
   ) {
+    const { files: _, ...status } = inspected;
     return status;
   }
   clearRuntime();
-  const files = await installedFiles();
-  if (!files) return inspectInstall(false);
-  const openRuntime = __ICHIRAN_RUST_M1__
-    ? (await rustRuntimeModule!).openRustM1Runtime
+  const openRuntime = __ICHIRAN_TYPESCRIPT_ORACLE__
+    ? (await typescriptRuntimeModule!).openTypeScriptAnalyzerRuntime
     : openAnalyzerRuntime;
   try {
     runtime = await openRuntime(files);
     runtimeManifestSha256 = files.manifest.manifestSha256;
     runtimeInstallId = files.installId;
-    return inspectInstall(true);
+    const { files: _, ...status } = inspected;
+    return { ...status, workerOpen: true };
   } catch (error) {
     if (!isArtifactCorruption(error)) throw error;
     await markInstallCorrupt(files.installId);
@@ -281,12 +280,12 @@ async function handle(request: WorkerRequest): Promise<unknown> {
     case 'romanize': {
       return withRuntime(value => value.romanize(request.text));
     }
-    case 'rust-m1-metrics': {
-      if (!__ICHIRAN_RUST_M1__) {
-        throw new WorkerOperationError('unsupported-operation', 'Rust M1 metrics are unavailable');
+    case 'rust-kernel-metrics': {
+      if (__ICHIRAN_TYPESCRIPT_ORACLE__) {
+        throw new WorkerOperationError('unsupported-operation', 'Rust kernel metrics are unavailable');
       }
       return withRuntime(value => {
-        if (!value.metrics) throw new Error('Rust M1 runtime metrics are unavailable');
+        if (!value.metrics) throw new Error('Rust kernel metrics are unavailable');
         return value.metrics();
       });
     }

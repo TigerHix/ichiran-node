@@ -103,17 +103,20 @@ export class WasmKernel {
         wasm.__wbg_wasmkernel_free(ptr, 0);
     }
     /**
-     * The only analysis crossing: one UTF-16 input and one UTF-8 JSON result.
+     * The only analysis crossing: one UTF-16 input, one options document, and
+     * one UTF-8 JSON result.
      * @param {Uint16Array} input
-     * @param {number} limit
+     * @param {Uint8Array} options_json
      * @returns {Uint8Array}
      */
-    analyze_utf16(input, limit) {
+    analyze_utf16_options(input, options_json) {
         try {
             const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
             const ptr0 = passArray16ToWasm0(input, wasm.__wbindgen_export2);
             const len0 = WASM_VECTOR_LEN;
-            wasm.wasmkernel_analyze_utf16(retptr, this.__wbg_ptr, ptr0, len0, limit);
+            const ptr1 = passArray8ToWasm0(options_json, wasm.__wbindgen_export2);
+            const len1 = WASM_VECTOR_LEN;
+            wasm.wasmkernel_analyze_utf16_options(retptr, this.__wbg_ptr, ptr0, len0, ptr1, len1);
             var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
             var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
             var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
@@ -121,24 +124,67 @@ export class WasmKernel {
             if (r3) {
                 throw takeObject(r2);
             }
-            var v2 = getArrayU8FromWasm0(r0, r1).slice();
+            var v3 = getArrayU8FromWasm0(r0, r1).slice();
             wasm.__wbindgen_export3(r0, r1 * 1, 1);
-            return v2;
+            return v3;
+        } finally {
+            wasm.__wbindgen_add_to_stack_pointer(16);
+        }
+    }
+    /**
+     * @param {number} sequence
+     * @returns {number}
+     */
+    entry_index_for_sequence(sequence) {
+        try {
+            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+            wasm.wasmkernel_entry_index_for_sequence(retptr, this.__wbg_ptr, sequence);
+            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
+            if (r2) {
+                throw takeObject(r1);
+            }
+            return r0;
         } finally {
             wasm.__wbindgen_add_to_stack_pointer(16);
         }
     }
     /**
      * @param {Uint16Array} input
-     * @param {boolean} kanji_route
-     * @returns {Uint8Array}
+     * @param {Uint8Array} options_json
+     * @param {string} method
      */
-    inspect_generated_utf16(input, kanji_route) {
+    legacy_begin_utf16(input, options_json, method) {
         try {
             const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
             const ptr0 = passArray16ToWasm0(input, wasm.__wbindgen_export2);
             const len0 = WASM_VECTOR_LEN;
-            wasm.wasmkernel_inspect_generated_utf16(retptr, this.__wbg_ptr, ptr0, len0, kanji_route);
+            const ptr1 = passArray8ToWasm0(options_json, wasm.__wbindgen_export2);
+            const len1 = WASM_VECTOR_LEN;
+            const ptr2 = passStringToWasm0(method, wasm.__wbindgen_export2, wasm.__wbindgen_export4);
+            const len2 = WASM_VECTOR_LEN;
+            wasm.wasmkernel_legacy_begin_utf16(retptr, this.__wbg_ptr, ptr0, len0, ptr1, len1, ptr2, len2);
+            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+            if (r1) {
+                throw takeObject(r0);
+            }
+        } finally {
+            wasm.__wbindgen_add_to_stack_pointer(16);
+        }
+    }
+    /**
+     * Returns a JSON envelope. `missing-detail` names the exact compressed
+     * range the host must feed to `WasmDetailStore.entry_json` before retrying.
+     * @param {WasmDetailStore} details
+     * @returns {Uint8Array}
+     */
+    legacy_step(details) {
+        try {
+            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+            _assertClass(details, WasmDetailStore);
+            wasm.wasmkernel_legacy_step(retptr, this.__wbg_ptr, details.__wbg_ptr);
             var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
             var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
             var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
@@ -146,9 +192,9 @@ export class WasmKernel {
             if (r3) {
                 throw takeObject(r2);
             }
-            var v2 = getArrayU8FromWasm0(r0, r1).slice();
+            var v1 = getArrayU8FromWasm0(r0, r1).slice();
             wasm.__wbindgen_export3(r0, r1 * 1, 1);
-            return v2;
+            return v1;
         } finally {
             wasm.__wbindgen_add_to_stack_pointer(16);
         }
@@ -181,6 +227,36 @@ export class WasmKernel {
     resident_payload_bytes() {
         const ret = wasm.wasmkernel_resident_payload_bytes(this.__wbg_ptr);
         return ret >>> 0;
+    }
+    /**
+     * @param {Uint16Array} input
+     * @param {Uint8Array} options_json
+     * @param {string} method
+     * @returns {Uint16Array}
+     */
+    romanize_utf16_options(input, options_json, method) {
+        try {
+            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+            const ptr0 = passArray16ToWasm0(input, wasm.__wbindgen_export2);
+            const len0 = WASM_VECTOR_LEN;
+            const ptr1 = passArray8ToWasm0(options_json, wasm.__wbindgen_export2);
+            const len1 = WASM_VECTOR_LEN;
+            const ptr2 = passStringToWasm0(method, wasm.__wbindgen_export2, wasm.__wbindgen_export4);
+            const len2 = WASM_VECTOR_LEN;
+            wasm.wasmkernel_romanize_utf16_options(retptr, this.__wbg_ptr, ptr0, len0, ptr1, len1, ptr2, len2);
+            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
+            var r3 = getDataViewMemory0().getInt32(retptr + 4 * 3, true);
+            if (r3) {
+                throw takeObject(r2);
+            }
+            var v4 = getArrayU16FromWasm0(r0, r1).slice();
+            wasm.__wbindgen_export3(r0, r1 * 2, 2);
+            return v4;
+        } finally {
+            wasm.__wbindgen_add_to_stack_pointer(16);
+        }
     }
 }
 if (Symbol.dispose) WasmKernel.prototype[Symbol.dispose] = WasmKernel.prototype.free;
@@ -255,10 +331,21 @@ function addHeapObject(obj) {
     return idx;
 }
 
+function _assertClass(instance, klass) {
+    if (!(instance instanceof klass)) {
+        throw new Error(`expected instance of ${klass.name}`);
+    }
+}
+
 function dropObject(idx) {
     if (idx < 1028) return;
     heap[idx] = heap_next;
     heap_next = idx;
+}
+
+function getArrayU16FromWasm0(ptr, len) {
+    ptr = ptr >>> 0;
+    return getUint16ArrayMemory0().subarray(ptr / 2, ptr / 2 + len);
 }
 
 function getArrayU8FromWasm0(ptr, len) {
@@ -323,6 +410,43 @@ function passArray8ToWasm0(arg, malloc) {
     return ptr;
 }
 
+function passStringToWasm0(arg, malloc, realloc) {
+    if (realloc === undefined) {
+        const buf = cachedTextEncoder.encode(arg);
+        const ptr = malloc(buf.length, 1) >>> 0;
+        getUint8ArrayMemory0().subarray(ptr, ptr + buf.length).set(buf);
+        WASM_VECTOR_LEN = buf.length;
+        return ptr;
+    }
+
+    let len = arg.length;
+    let ptr = malloc(len, 1) >>> 0;
+
+    const mem = getUint8ArrayMemory0();
+
+    let offset = 0;
+
+    for (; offset < len; offset++) {
+        const code = arg.charCodeAt(offset);
+        if (code > 0x7F) break;
+        mem[ptr + offset] = code;
+    }
+    if (offset !== len) {
+        if (offset !== 0) {
+            arg = arg.slice(offset);
+        }
+        ptr = realloc(ptr, len, len = offset + arg.length * 3, 1) >>> 0;
+        const view = getUint8ArrayMemory0().subarray(ptr + offset, ptr + len);
+        const ret = cachedTextEncoder.encodeInto(arg, view);
+
+        offset += ret.written;
+        ptr = realloc(ptr, len, offset, 1) >>> 0;
+    }
+
+    WASM_VECTOR_LEN = offset;
+    return ptr;
+}
+
 function takeObject(idx) {
     const ret = getObject(idx);
     dropObject(idx);
@@ -341,6 +465,19 @@ function decodeText(ptr, len) {
         numBytesDecoded = len;
     }
     return cachedTextDecoder.decode(getUint8ArrayMemory0().subarray(ptr, ptr + len));
+}
+
+const cachedTextEncoder = new TextEncoder();
+
+if (!('encodeInto' in cachedTextEncoder)) {
+    cachedTextEncoder.encodeInto = function (arg, view) {
+        const buf = cachedTextEncoder.encode(arg);
+        view.set(buf);
+        return {
+            read: arg.length,
+            written: buf.length
+        };
+    };
 }
 
 let WASM_VECTOR_LEN = 0;

@@ -15,7 +15,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json && bun scripts/copy-rust-kernel.ts",
     "build:watch": "tsc -p tsconfig.json --watch",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "test": "bun test tests/"

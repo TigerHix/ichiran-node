@@ -175,7 +175,7 @@ pub fn add_entity_groups(
                 score: boost,
                 common: None,
                 entity: true,
-                rules: Some(SegmentRuleFacts {
+                rules: Some(Arc::new(SegmentRuleFacts {
                     text: input_text
                         .get(entity.start..entity.end)
                         .unwrap_or_default()
@@ -184,7 +184,7 @@ pub fn add_entity_groups(
                     score_info: None,
                     compound_end_seq: None,
                     compound_end_text: None,
-                }),
+                })),
             }],
             matches: 1,
         });
@@ -300,8 +300,19 @@ fn find_default_paths(
         let second_score = group_score(second);
         let second_entity_boost = entity_boost(second, entities);
         let second_top = &mut group_tops[right_index];
+        let mut resolved_by_head: Vec<(&SegmentGroup, Vec<PathTransition>)> = Vec::new();
         for candidate in incoming.values() {
-            let resolved = resolve_rule_transitions(&candidate.head, second);
+            let resolved_index = resolved_by_head
+                .iter()
+                .position(|(head, _)| *head == &candidate.head)
+                .unwrap_or_else(|| {
+                    resolved_by_head.push((
+                        &candidate.head,
+                        resolve_rule_transitions(&candidate.head, second),
+                    ));
+                    resolved_by_head.len() - 1
+                });
+            let resolved = &resolved_by_head[resolved_index].1;
             let pair_gap = gap_penalty(candidate.head.end, second.start);
             let score_tail = candidate.prior.score - candidate.left_score;
             for (split_rank, split) in resolved.iter().enumerate() {

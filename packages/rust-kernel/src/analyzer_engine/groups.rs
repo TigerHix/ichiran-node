@@ -1,4 +1,5 @@
 use std::collections::{HashMap, HashSet};
+use std::sync::Arc;
 
 use super::*;
 use crate::analyzer_lexicon::{CandidateKind, MaterializedCandidate, SegmentSplit};
@@ -438,13 +439,13 @@ fn segment(
         score,
         common,
         entity: false,
-        rules: Some(SegmentRuleFacts {
+        rules: Some(Arc::new(SegmentRuleFacts {
             text: candidate.text.clone(),
             word_kind: rule_kind,
             score_info: Some(score_info),
             compound_end_seq,
             compound_end_text,
-        }),
+        })),
     }
 }
 

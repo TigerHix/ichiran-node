@@ -35,12 +35,12 @@ analyzer's lazy caches have one owner.
 Browser artifact:
 
 ```sh
-cargo build --release --target wasm32-unknown-unknown \
-  --no-default-features --features wasm
-wasm-bindgen --target web \
-  --out-dir ../browser-demo/src/rust-kernel/generated \
-  --out-name ichiran_kernel \
-  target/wasm32-unknown-unknown/release/ichiran_kernel.wasm
+bun install
+bun run build:rust-wasm
 ```
+
+The build uses the crate's `wasm-release` profile, wasm-bindgen, and the pinned
+Binaryen 132 optimizer. It writes the one shared artifact consumed by browser and
+Node into `packages/core/src/rust-kernel/generated`.
 
 See `MAC-HANDOFF.md` for buffer ownership and the native handoff contract.

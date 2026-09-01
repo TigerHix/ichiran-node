@@ -29,3 +29,8 @@ codegen-units = 1
 lto = true
 opt-level = "s"
 strip = "symbols"
+
+[profile.wasm-release]
+inherits = "release"
+opt-level = 3
+panic = "abort"

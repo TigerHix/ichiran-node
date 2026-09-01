@@ -31,6 +31,11 @@ import {
   stopCpuHogs
 } from './offline-analyzer-helpers.js';
 
+// The exhaustive corpus runs under a calibrated 6x single-core contention
+// proxy. Keep the outer watchdog above the measured sweep so final report
+// download and process cleanup have deterministic headroom.
+test.setTimeout(40 * 60 * 1000);
+
 test('installs once, restarts offline, and meets the 6x proxy', async ({
   browser
 }) => {

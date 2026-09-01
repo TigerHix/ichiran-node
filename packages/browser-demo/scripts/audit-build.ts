@@ -1,5 +1,6 @@
 import { readdir, readFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
+import { gunzipSync } from 'node:zlib';
 import { assertSameRelease, verifyAnalyzerRelease } from './release-files.js';
 
 let requireAnalyzer = false;
@@ -32,17 +33,33 @@ const main = (await Promise.all(
 
 // The lazily loaded benchmark corpus is inert JSON provenance/data. Its source
 // paths may name reference-postgres tests without introducing runtime code.
-const runtimeNames = mainNames.filter(name => !name.startsWith('corpus-'));
+const runtimeNames = mainNames.filter(name => !name.startsWith('benchmark-corpus-'));
 const runtime = `${(await Promise.all(
   runtimeNames.map(name => readFile(join(assetDirectory, name), 'utf8'))
 )).join('\n')}\n${worker}`;
 
-const rustM1 = process.env.ICHIRAN_RUST_M1 === '1';
-if (rustM1) {
-  const wasm = (await readdir(assetDirectory))
-    .filter(name => name.startsWith('ichiran_kernel_bg-') && name.endsWith('.wasm'));
-  if (wasm.length !== 1 || !runtime.includes('Rust M1') || !worker.includes('ichiran-browser-alpha')) {
-    throw new Error('Experimental Rust kernel, adapter, or Worker install lifecycle is missing');
+const typescriptOracle = process.env.ICHIRAN_TYPESCRIPT_ORACLE === '1';
+if (!typescriptOracle) {
+  const assets = await readdir(assetDirectory);
+  const wasm = assets.filter(name =>
+    name.startsWith('ichiran_kernel_bg-') && name.endsWith('.wasm.gz.bin')
+  );
+  const rawWasm = assets.filter(name =>
+    name.startsWith('ichiran_kernel_bg-') && name.endsWith('.wasm')
+  );
+  if (wasm.length !== 1 || rawWasm.length !== 0 || !worker.includes('ichiran-browser-alpha')) {
+    throw new Error('Rust kernel, adapter, or Worker install lifecycle is missing');
+  }
+  const compressed = await readFile(join(assetDirectory, wasm[0]!));
+  const decoded = gunzipSync(compressed);
+  if (
+    decoded.byteLength - compressed.byteLength < 200 * 1024
+    || decoded[0] !== 0
+    || decoded[1] !== 0x61
+    || decoded[2] !== 0x73
+    || decoded[3] !== 0x6d
+  ) {
+    throw new Error('Rust kernel shell asset is invalid or saves less than 200 KiB');
   }
 } else if (!worker.includes('ICHIPACK') || !worker.includes('ichiran-browser-alpha')) {
   throw new Error('Analyzer pack/runtime is not linked into the Worker');

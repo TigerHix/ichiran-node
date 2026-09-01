@@ -240,7 +240,13 @@ export async function stopCpuHogs(children: readonly ChildProcess[]): Promise<vo
   for (const child of children) {
     if (child.exitCode === null) child.kill('SIGKILL');
   }
-  await Promise.all(exits);
+  // WSL can delay child exit notifications after SIGKILL indefinitely. The
+  // E2E wrapper owns the whole process group and performs the final reap, so
+  // cleanup here must remain bounded rather than consuming the test watchdog.
+  await Promise.race([
+    Promise.all(exits),
+    new Promise(resolve => setTimeout(resolve, 1_000))
+  ]);
 }
 
 export async function expectInstallablePwa(page: Page): Promise<void> {

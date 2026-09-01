@@ -121,13 +121,15 @@ pub(crate) struct LegacyConjugationProperty {
     pub neg: Option<bool>,
 }
 
-#[derive(Clone, Debug, Eq, PartialEq)]
+#[derive(Clone, Debug, Eq, PartialEq, Serialize)]
+#[serde(rename_all = "camelCase")]
 pub(crate) struct LegacyConjugationFlags {
     pub negative: Option<bool>,
     pub formal: Option<bool>,
 }
 
-#[derive(Clone, Debug, Eq, PartialEq)]
+#[derive(Clone, Debug, Eq, PartialEq, Serialize)]
+#[serde(rename_all = "camelCase")]
 pub(crate) struct LegacyConjugationInfo {
     pub flags: Vec<LegacyConjugationFlags>,
     pub short_gloss: Option<String>,
@@ -161,7 +163,8 @@ pub(crate) enum LegacyOrdinal {
     No(Vec<()>),
 }
 
-#[derive(Clone, Debug, Eq, PartialEq)]
+#[derive(Clone, Debug, Eq, PartialEq, Serialize)]
+#[serde(rename_all = "camelCase")]
 pub(crate) struct LegacyWordFacts {
     pub definition_seq: Option<u32>,
     pub conjugation_selection: LegacyConjugationSelection,
@@ -199,6 +202,60 @@ pub(crate) struct LegacyGloss {
     pub alternative: Option<Vec<LegacyGloss>>,
     #[serde(skip)]
     pub info: Option<LegacyWordFacts>,
+}
+
+#[derive(Serialize)]
+#[serde(rename_all = "camelCase")]
+#[cfg(target_arch = "wasm32")]
+pub(crate) struct LegacyWireMetadata<'a> {
+    words: Vec<Option<&'a LegacyWordFacts>>,
+    conjugations: Vec<Option<&'a LegacyConjugationInfo>>,
+}
+
+#[cfg(target_arch = "wasm32")]
+pub(crate) fn legacy_wire_metadata(value: &LegacyDetailedOutput) -> LegacyWireMetadata<'_> {
+    fn collect_conjugation<'a>(value: &'a LegacyConjugation, output: &mut LegacyWireMetadata<'a>) {
+        output.conjugations.push(value.info.as_ref());
+        if let Some(via) = &value.via {
+            for conjugation in via {
+                collect_conjugation(conjugation, output);
+            }
+        }
+    }
+
+    fn collect_word<'a>(value: &'a LegacyGloss, output: &mut LegacyWireMetadata<'a>) {
+        output.words.push(value.info.as_ref());
+        if let Some(components) = &value.components {
+            for component in components {
+                collect_word(component, output);
+            }
+        }
+        if let Some(alternatives) = &value.alternative {
+            for alternative in alternatives {
+                collect_word(alternative, output);
+            }
+        }
+        if let Some(conjugations) = &value.conj {
+            for conjugation in conjugations {
+                collect_conjugation(conjugation, output);
+            }
+        }
+    }
+
+    let mut output = LegacyWireMetadata {
+        words: Vec::new(),
+        conjugations: Vec::new(),
+    };
+    for chunk in value {
+        if let LegacyChunk::Paths(paths) = chunk {
+            for path in paths {
+                for token in &path.0 {
+                    collect_word(&token.1, &mut output);
+                }
+            }
+        }
+    }
+    output
 }
 
 impl LegacyGloss {
