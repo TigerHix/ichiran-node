@@ -71,6 +71,8 @@ export interface DetailEntry {
 export interface DetailRandomAccessSource {
   readonly byteLength: number;
   read(offset: number, byteLength: number): Promise<Uint8Array>;
+  /** Release host-owned resources after the runtime has finished using this source. */
+  dispose?(): void;
 }
 
 export type DetailGzipDecoder = (

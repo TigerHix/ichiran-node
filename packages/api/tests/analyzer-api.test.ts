@@ -5,13 +5,15 @@ import { openNodeRuntime } from '@ichiran/node';
 import { createApiHandler } from '../src/index.js';
 
 const releaseDirectory = process.env.ICHIRAN_PACK_DIR;
+type Runtime = Awaited<ReturnType<typeof openNodeRuntime>>;
 
 describe.skipIf(!releaseDirectory)('packed analyzer API', () => {
   let server: Server;
+  let runtime: Runtime;
   let base: string;
 
   beforeAll(async () => {
-    const runtime = await openNodeRuntime(releaseDirectory!);
+    runtime = await openNodeRuntime(releaseDirectory!);
     server = createServer(createApiHandler(runtime));
     await new Promise<void>((resolve, reject) => {
       server.once('error', reject);
@@ -24,6 +26,7 @@ describe.skipIf(!releaseDirectory)('packed analyzer API', () => {
 
   afterAll(async () => {
     await new Promise<void>((resolve, reject) => server.close(error => error ? reject(error) : resolve()));
+    runtime.dispose();
   });
 
   async function post(path: string, body: unknown) {

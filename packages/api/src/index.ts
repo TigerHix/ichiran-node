@@ -194,10 +194,27 @@ export function createApiHandler(runtime: Runtime) {
 export async function startApi(port = Number.parseInt(process.env.PORT ?? '3000', 10)) {
   const runtime = await openNodeRuntime();
   const server = createServer(createApiHandler(runtime));
-  await new Promise<void>((resolve, reject) => {
-    server.once('error', reject);
-    server.listen(port, '0.0.0.0', resolve);
+  let disposed = false;
+  const dispose = () => {
+    if (disposed) return;
+    disposed = true;
+    runtime.dispose();
+  };
+  process.once('exit', dispose);
+  server.once('close', () => {
+    process.off('exit', dispose);
+    dispose();
   });
+  try {
+    await new Promise<void>((resolve, reject) => {
+      server.once('error', reject);
+      server.listen(port, '0.0.0.0', resolve);
+    });
+  } catch (error) {
+    process.off('exit', dispose);
+    dispose();
+    throw error;
+  }
   return server;
 }
 

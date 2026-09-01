@@ -7,10 +7,10 @@ import {
   parseAnalyzerReleaseManifest,
   IchiranRuntime,
   RUST_KERNEL_WASM_URL,
-  memoryDetailSource,
   type AnalyzerReleaseAsset,
   type AnalyzerReleaseManifest
 } from '@ichiran/core';
+import { openVerifiedDetailSource, type FileDetailSource } from './file-details.js';
 
 export { romanizeWithInfo } from './compat.js';
 export type { AnalyzerEntityHint } from '@ichiran/core';
@@ -74,11 +74,6 @@ export async function openNodeRuntime(
       `Analyzer release sourceCommit ${manifest.sourceCommit} does not match runtime ${expectedSourceCommit}`
     );
   }
-  const [hot, details, wasm] = await Promise.all([
-    loadAsset(directory, manifest.hot),
-    loadAsset(directory, manifest.details),
-    readFile(RUST_KERNEL_WASM_URL).then(bytes => new Uint8Array(bytes))
-  ]);
   const decodeGzip = async (compressed: Uint8Array, expectedByteLength: number) => {
     const decoded = new Uint8Array(gunzipSync(compressed));
     if (decoded.byteLength !== expectedByteLength) {
@@ -86,10 +81,32 @@ export async function openNodeRuntime(
     }
     return decoded;
   };
-  return IchiranRuntime.open({
-    hot,
-    details: memoryDetailSource(details),
-    decodeGzip,
-    wasm
+  let details: FileDetailSource | null = null;
+  const detailsPromise = openVerifiedDetailSource(directory, manifest.details).then(source => {
+    details = source;
+    return source;
   });
+  try {
+    const [hot, detailSource, wasm] = await Promise.all([
+      loadAsset(directory, manifest.hot),
+      detailsPromise,
+      readFile(RUST_KERNEL_WASM_URL).then(bytes => new Uint8Array(bytes))
+    ]);
+    return await IchiranRuntime.open({
+      hot,
+      details: detailSource,
+      decodeGzip,
+      wasm
+    });
+  } catch (error) {
+    if (details === null) {
+      try {
+        details = await detailsPromise;
+      } catch {
+        // The detail loader owns cleanup for failures before it returns a source.
+      }
+    }
+    details?.dispose();
+    throw error;
+  }
 }

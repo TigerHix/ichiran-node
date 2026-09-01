@@ -1,24 +1,80 @@
 import { afterAll, describe, expect, test } from 'bun:test';
 import { createHash } from 'node:crypto';
-import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
+import { access, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
+import { gunzipSync } from 'node:zlib';
 
 import { openNodeRuntime } from '../src/index.js';
-import { analyzerManifestDigestInput } from '@ichiran/core';
+import { openVerifiedDetailSource } from '../src/file-details.js';
+import {
+  analyzerManifestDigestInput,
+  IchiranRuntime,
+  RUST_KERNEL_WASM_URL,
+  type AnalyzerReleaseManifest
+} from '@ichiran/core';
 
 const releaseDirectory = process.env.ICHIRAN_PACK_DIR;
 
 describe.skipIf(!releaseDirectory)('Node packed runtime release', () => {
   test('analyzes, presents, and describes without PostgreSQL', async () => {
     const runtime = await openNodeRuntime(releaseDirectory!);
-    expect(await runtime.romanize('今日')).toBe('kyō');
-    const analysis = await runtime.analyze('今日は良い天気です', { limit: 2 });
-    expect(analysis.paths.length).toBeGreaterThan(0);
-    expect(Array.isArray(await runtime.legacy('今日', { limit: 1 }))).toBe(true);
-    const entryIndex = analysis.paths[0]!.tokens.find(token => token.entryIndex !== null)?.entryIndex;
-    expect(entryIndex).not.toBeNull();
-    expect((await runtime.describe(entryIndex!)).seq).toBeGreaterThan(0);
+    try {
+      expect(await runtime.romanize('今日')).toBe('kyō');
+      const analysis = await runtime.analyze('今日は良い天気です', { limit: 2 });
+      expect(analysis.paths.length).toBeGreaterThan(0);
+      expect(Array.isArray(await runtime.legacy('今日', { limit: 1 }))).toBe(true);
+      const entryIndex = analysis.paths[0]!.tokens.find(token => token.entryIndex !== null)?.entryIndex;
+      expect(entryIndex).not.toBeNull();
+      expect((await runtime.describe(entryIndex!)).seq).toBeGreaterThan(0);
+    } finally {
+      runtime.dispose();
+    }
+  });
+
+  test('keeps analysis detail-cold and disposes the verified file source', async () => {
+    const manifest = JSON.parse(
+      await readFile(join(releaseDirectory!, 'manifest.json'), 'utf8')
+    ) as AnalyzerReleaseManifest;
+    const source = await openVerifiedDetailSource(releaseDirectory!, manifest.details);
+    const path = source.path;
+    const reads: Array<readonly [number, number]> = [];
+    const downloadedHot = new Uint8Array(
+      await readFile(join(releaseDirectory!, manifest.hot.file))
+    );
+    const hot = manifest.hot.encoding === 'gzip'
+      ? new Uint8Array(gunzipSync(downloadedHot))
+      : downloadedHot;
+    let runtime: IchiranRuntime | null = null;
+    try {
+      runtime = await IchiranRuntime.open({
+        hot,
+        wasm: new Uint8Array(await readFile(RUST_KERNEL_WASM_URL)),
+        details: {
+          byteLength: source.byteLength,
+          async read(offset, byteLength) {
+            reads.push([offset, byteLength]);
+            return source.read(offset, byteLength);
+          },
+          dispose: () => source.dispose()
+        },
+        decodeGzip: () => {
+          throw new Error('Rust runtime must own compressed detail inflation');
+        }
+      });
+      expect(reads).toHaveLength(2);
+      const openedReads = [...reads];
+      const analysis = await runtime.analyze('今日', { limit: 1 });
+      expect(reads).toEqual(openedReads);
+      const entryIndex = analysis.paths[0]!.tokens.find(token => token.entryIndex !== null)?.entryIndex;
+      expect(entryIndex).not.toBeNull();
+      expect((await runtime.describe(entryIndex!)).seq).toBeGreaterThan(0);
+      expect(reads).toHaveLength(3);
+    } finally {
+      if (runtime) runtime.dispose();
+      else source.dispose();
+    }
+    await expect(access(path)).rejects.toThrow();
   });
 });
 

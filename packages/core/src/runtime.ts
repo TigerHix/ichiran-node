@@ -310,7 +310,14 @@ export class IchiranRuntime {
   }
 
   dispose(): void {
-    this.#details.free();
-    this.#kernel.free();
+    try {
+      this.#details.free();
+    } finally {
+      try {
+        this.#kernel.free();
+      } finally {
+        this.#detailSource.dispose?.();
+      }
+    }
   }
 }
