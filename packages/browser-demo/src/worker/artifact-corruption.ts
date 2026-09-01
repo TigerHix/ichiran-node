@@ -1,0 +1,28 @@
+const ARTIFACT_ERROR_NAMES = new Set([
+  'RustKernelError',
+  'PackFormatError',
+  'SurfaceIndexFormatError',
+  'RootPayloadFormatError',
+  'AnalyzerSupportFormatError',
+  'AnalyzerAnnotationsError',
+  'DetailStoreError'
+]);
+
+const ARTIFACT_CORRUPTION_CODES = new Set([
+  'invalid-header',
+  'invalid-directory',
+  'invalid-states',
+  'invalid-edges',
+  'corrupt-section',
+  'corrupt-payload',
+  'corrupt-index',
+  'corrupt-block',
+  'missing-section'
+]);
+
+/** True only for an explicit integrity failure in immutable analyzer bytes. */
+export function isArtifactCorruption(error: unknown): boolean {
+  if (!(error instanceof Error) || !ARTIFACT_ERROR_NAMES.has(error.name)) return false;
+  const code = (error as Error & { readonly code?: unknown }).code;
+  return typeof code === 'string' && ARTIFACT_CORRUPTION_CODES.has(code);
+}

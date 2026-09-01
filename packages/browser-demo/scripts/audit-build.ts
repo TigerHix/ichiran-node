@@ -37,7 +37,14 @@ const runtime = `${(await Promise.all(
   runtimeNames.map(name => readFile(join(assetDirectory, name), 'utf8'))
 )).join('\n')}\n${worker}`;
 
-if (!worker.includes('ICHIPACK') || !worker.includes('ichiran-browser-alpha')) {
+const rustM1 = process.env.ICHIRAN_RUST_M1 === '1';
+if (rustM1) {
+  const wasm = (await readdir(assetDirectory))
+    .filter(name => name.startsWith('ichiran_kernel_bg-') && name.endsWith('.wasm'));
+  if (wasm.length !== 1 || !runtime.includes('Rust M1') || !worker.includes('ichiran-browser-alpha')) {
+    throw new Error('Experimental Rust kernel, adapter, or Worker install lifecycle is missing');
+  }
+} else if (!worker.includes('ICHIPACK') || !worker.includes('ichiran-browser-alpha')) {
   throw new Error('Analyzer pack/runtime is not linked into the Worker');
 }
 for (const forbidden of ['ICHIPACK', 'PortableAnalyzer', 'AnalyzerRuntime']) {
@@ -71,7 +78,11 @@ if (/__CACHE_VERSION__|\/\*__PRECACHE__\*\//.test(serviceWorker)) {
 const stagedDirectory = join(output, 'analyzer');
 let staged = null;
 try {
-  staged = await verifyAnalyzerRelease(stagedDirectory, repositoryRoot);
+  staged = await verifyAnalyzerRelease(
+    stagedDirectory,
+    repositoryRoot,
+    process.env.ICHIRAN_QUALIFIED_ARTIFACT
+  );
 } catch (error) {
   const missing = error instanceof Error
     && 'code' in error
@@ -79,7 +90,11 @@ try {
   if (!missing || requireAnalyzer || releaseDirectory !== null) throw error;
 }
 if (staged && releaseDirectory !== null) {
-  const source = await verifyAnalyzerRelease(resolve(repositoryRoot, releaseDirectory), repositoryRoot);
+  const source = await verifyAnalyzerRelease(
+    resolve(repositoryRoot, releaseDirectory),
+    repositoryRoot,
+    process.env.ICHIRAN_QUALIFIED_ARTIFACT
+  );
   assertSameRelease(staged, source);
 }
 

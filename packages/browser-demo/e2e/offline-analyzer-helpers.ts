@@ -38,6 +38,13 @@ export interface WorkerCalibrationSample {
   readonly state: number;
 }
 
+export interface WorkerHeapUsage {
+  readonly usedSize: number;
+  readonly totalSize: number;
+  readonly embedderHeapUsedSize: number;
+  readonly backingStorageSize: number;
+}
+
 export interface LegacyDetailedWord {
   readonly text: string;
   readonly reading: string;
@@ -77,6 +84,8 @@ export async function singleCpuAffinity(): Promise<number> {
 export async function attachAnalyzerWorker(browser: Browser): Promise<{
   readonly target: { readonly type: string; readonly title: string; readonly url: string };
   readonly samples: (count: number) => Promise<readonly WorkerCalibrationSample[]>;
+  readonly heapUsage: () => Promise<WorkerHeapUsage>;
+  readonly collectGarbage: () => Promise<void>;
   readonly close: () => Promise<void>;
 }> {
   const cdp = await browser.newBrowserCDPSession();
@@ -159,6 +168,25 @@ export async function attachAnalyzerWorker(browser: Browser): Promise<{
         result.push(sample);
       }
       return result;
+    },
+    async heapUsage() {
+      const value = await send('Runtime.getHeapUsage');
+      const number = (key: keyof WorkerHeapUsage): number => {
+        const result = value[key];
+        if (typeof result !== 'number' || !Number.isFinite(result)) {
+          throw new Error(`Analyzer Worker heap metric ${key} is unavailable`);
+        }
+        return result;
+      };
+      return {
+        usedSize: number('usedSize'),
+        totalSize: number('totalSize'),
+        embedderHeapUsedSize: number('embedderHeapUsedSize'),
+        backingStorageSize: number('backingStorageSize')
+      };
+    },
+    async collectGarbage() {
+      await send('HeapProfiler.collectGarbage');
     },
     async close() {
       cdp.off('Target.receivedMessageFromTarget', receive);

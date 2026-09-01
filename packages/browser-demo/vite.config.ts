@@ -49,5 +49,11 @@ function serveOpaqueAnalyzerAssets(): Plugin {
 }
 
 export default defineConfig({
-  plugins: [react(), serveOpaqueAnalyzerAssets()]
+  define: {
+    __ICHIRAN_RUST_M1__: JSON.stringify(process.env.ICHIRAN_RUST_M1 === '1')
+  },
+  plugins: [react(), serveOpaqueAnalyzerAssets()],
+  worker: {
+    format: 'es'
+  }
 });

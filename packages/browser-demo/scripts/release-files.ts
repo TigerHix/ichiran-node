@@ -21,6 +21,7 @@ export interface VerifiedRelease {
 }
 
 const execFile = promisify(execFileCallback);
+export const QUALIFIED_BASELINE_ARTIFACT = 'portable-core-260118-baseline';
 
 function sha256(bytes: Uint8Array): string {
   return createHash('sha256').update(bytes).digest('hex');
@@ -41,7 +42,8 @@ export async function currentSourceIdentity(repositoryRoot: string): Promise<{
 
 export async function verifyAnalyzerRelease(
   directory: string,
-  repositoryRoot: string
+  repositoryRoot: string,
+  qualifiedArtifact?: string
 ): Promise<VerifiedRelease> {
   const resolved = resolve(directory);
   const manifestBytes = await readFile(join(resolved, 'manifest.json'));
@@ -50,16 +52,34 @@ export async function verifyAnalyzerRelease(
     text => createHash('sha256').update(text).digest('hex')
   );
 
-  const identity = await currentSourceIdentity(repositoryRoot);
-  if (manifest.sourceCommit !== identity.sourceCommit) {
-    throw new Error(
-      `Analyzer release is stale: sourceCommit ${manifest.sourceCommit} != current ${identity.sourceCommit}`
-    );
-  }
-  if (manifest.sourcesLockSha256 !== identity.sourcesLockSha256) {
-    throw new Error(
-      `Analyzer release is stale: sourcesLockSha256 ${manifest.sourcesLockSha256} != current ${identity.sourcesLockSha256}`
-    );
+  if (qualifiedArtifact !== undefined) {
+    if (qualifiedArtifact !== QUALIFIED_BASELINE_ARTIFACT) {
+      throw new Error(`Unknown qualified analyzer artifact ${qualifiedArtifact}`);
+    }
+    if (
+      manifest.packVersion !== 'ichiran-260118'
+      || manifest.sourceCommit !== '29ec534ede2b4c90dcddb18f87a84089c24df9de'
+      || manifest.sourcesLockSha256 !== '80dc7c907d688a5ecb0bbd8b23b889f47cb3a28f8484f80e8dc4737bb090c070'
+      || manifest.manifestSha256 !== 'e245cde362ade8b7e6f30f063ea93f42e551168f8c28a7d9fd0b13c48085b258'
+      || manifest.hot.downloadSha256 !== '35d02c84d4cc531d299d7d5530994351b75bdba429d5276c20bc2f67cdc8d6d7'
+      || manifest.hot.installedSha256 !== '61f2882e086be7e0e1b6ba9000e76e0e735b22ea443146f628f04cf877ff6ae0'
+      || manifest.details.downloadSha256 !== 'ad10bc4876d9a05224f62f5b438080ea1ff4e6a88ab3090be0f871035e95918a'
+      || manifest.details.installedSha256 !== '0fc45731d84fbb7c2ccf3ef5692d2f1ab01e538325f0ed50135da38e621aa151'
+    ) {
+      throw new Error(`Analyzer release does not match qualified artifact ${qualifiedArtifact}`);
+    }
+  } else {
+    const identity = await currentSourceIdentity(repositoryRoot);
+    if (manifest.sourceCommit !== identity.sourceCommit) {
+      throw new Error(
+        `Analyzer release is stale: sourceCommit ${manifest.sourceCommit} != current ${identity.sourceCommit}`
+      );
+    }
+    if (manifest.sourcesLockSha256 !== identity.sourcesLockSha256) {
+      throw new Error(
+        `Analyzer release is stale: sourcesLockSha256 ${manifest.sourcesLockSha256} != current ${identity.sourcesLockSha256}`
+      );
+    }
   }
 
   const verifyAsset = async (asset: AnalyzerReleaseAsset, label: string): Promise<Uint8Array> => {

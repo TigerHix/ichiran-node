@@ -1,0 +1,197 @@
+use std::fmt::Write;
+
+use serde::{Serialize, Serializer};
+use serde_json::value::RawValue;
+
+use crate::morphology::{MorphologyProperty, Route};
+
+/// Lossless JavaScript text. Rust `String` cannot represent an unpaired UTF-16
+/// surrogate, while JavaScript strings and the analyzer boundary can.
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub struct Utf16Text(Vec<u16>);
+
+impl Utf16Text {
+    pub fn from_units(value: &[u16]) -> Self {
+        Self(value.to_vec())
+    }
+
+    pub fn from_string(value: String) -> Self {
+        Self(value.encode_utf16().collect())
+    }
+
+    pub fn units(&self) -> &[u16] {
+        &self.0
+    }
+}
+
+impl From<String> for Utf16Text {
+    fn from(value: String) -> Self {
+        Self::from_string(value)
+    }
+}
+
+impl From<&str> for Utf16Text {
+    fn from(value: &str) -> Self {
+        Self(value.encode_utf16().collect())
+    }
+}
+
+impl Serialize for Utf16Text {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: Serializer,
+    {
+        let raw = RawValue::from_string(quote_utf16(&self.0)).map_err(serde::ser::Error::custom)?;
+        raw.serialize(serializer)
+    }
+}
+
+fn quote_utf16(value: &[u16]) -> String {
+    let mut output = String::with_capacity(value.len() + 2);
+    output.push('"');
+    let mut offset = 0;
+    while offset < value.len() {
+        let first = value[offset];
+        match first {
+            0x22 => output.push_str("\\\""),
+            0x5c => output.push_str("\\\\"),
+            0x08 => output.push_str("\\b"),
+            0x09 => output.push_str("\\t"),
+            0x0a => output.push_str("\\n"),
+            0x0c => output.push_str("\\f"),
+            0x0d => output.push_str("\\r"),
+            0x00..=0x1f => write!(output, "\\u{first:04x}").unwrap(),
+            0xd800..=0xdbff if offset + 1 < value.len() => {
+                let second = value[offset + 1];
+                if (0xdc00..=0xdfff).contains(&second) {
+                    let scalar =
+                        0x1_0000 + ((u32::from(first) - 0xd800) << 10) + u32::from(second) - 0xdc00;
+                    output.push(char::from_u32(scalar).expect("valid surrogate pair"));
+                    offset += 1;
+                } else {
+                    write!(output, "\\u{first:04x}").unwrap();
+                }
+            }
+            0xd800..=0xdfff => write!(output, "\\u{first:04x}").unwrap(),
+            _ => output.push(char::from_u32(u32::from(first)).expect("BMP scalar")),
+        }
+        offset += 1;
+    }
+    output.push('"');
+    output
+}
+
+#[derive(Clone, Debug, PartialEq, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct AnalysisResult {
+    pub input: Utf16Text,
+    pub normalized: Utf16Text,
+    pub compute_ms: u32,
+    pub chunks: Vec<AnalysisChunk>,
+    pub paths: Vec<AnalysisPath>,
+}
+
+#[derive(Clone, Debug, PartialEq, Serialize)]
+#[serde(tag = "type", rename_all = "lowercase")]
+pub enum AnalysisChunk {
+    Misc {
+        start: usize,
+        end: usize,
+        text: Utf16Text,
+    },
+    Word {
+        start: usize,
+        end: usize,
+        text: Utf16Text,
+        paths: Vec<AnalysisPath>,
+    },
+}
+
+#[derive(Clone, Debug, PartialEq, Serialize)]
+pub struct AnalysisPath {
+    pub score: i32,
+    pub tokens: Vec<AnalysisToken>,
+}
+
+#[derive(Clone, Debug, PartialEq, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct AnalysisToken {
+    pub candidate_id: Option<u32>,
+    pub start: usize,
+    pub end: usize,
+    pub text: Utf16Text,
+    pub true_text: Option<Utf16Text>,
+    pub route: PublicRoute,
+    pub reading: Utf16Text,
+    pub romanized: Utf16Text,
+    pub pos: Vec<String>,
+    pub score: i32,
+    pub entry_index: Option<usize>,
+    pub root: Option<AnalysisRoot>,
+    pub inflection: Vec<MorphologyProperty>,
+    pub components: Vec<AnalysisComponent>,
+    pub alternatives: Vec<AnalysisAlternative>,
+    pub skipped: usize,
+    pub entity: bool,
+    pub counter: Option<(String, bool)>,
+}
+
+#[derive(Clone, Debug, PartialEq, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct AnalysisAlternative {
+    pub candidate_id: u32,
+    pub text: Utf16Text,
+    pub true_text: Option<Utf16Text>,
+    pub route: Route,
+    pub reading: Utf16Text,
+    pub romanized: Utf16Text,
+    pub pos: Vec<String>,
+    pub score: i32,
+    pub entry_index: Option<usize>,
+    pub root: Option<AnalysisRoot>,
+    pub inflection: Vec<MorphologyProperty>,
+    pub components: Vec<AnalysisComponent>,
+    pub counter: Option<(String, bool)>,
+}
+
+#[derive(Clone, Debug, PartialEq, Serialize)]
+#[serde(untagged)]
+pub enum AnalysisComponent {}
+
+#[derive(Clone, Debug, PartialEq, Serialize)]
+pub struct AnalysisRoot {
+    pub seq: u32,
+    pub form: String,
+    pub reading: String,
+}
+
+#[derive(Clone, Copy, Debug, Eq, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum PublicRoute {
+    Kana,
+    Kanji,
+    Gap,
+}
+
+impl From<Route> for PublicRoute {
+    fn from(value: Route) -> Self {
+        match value {
+            Route::Kana => Self::Kana,
+            Route::Kanji => Self::Kanji,
+        }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::Utf16Text;
+
+    #[test]
+    fn serializes_javascript_utf16_losslessly() {
+        let value = Utf16Text::from_units(&[0x732b, 0xd83d, 0x72ac, 0xde00, 0xd83d, 0xde00]);
+        assert_eq!(
+            serde_json::to_string(&value).unwrap(),
+            "\"猫\\ud83d犬\\ude00😀\""
+        );
+    }
+}

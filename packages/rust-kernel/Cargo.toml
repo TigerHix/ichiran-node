@@ -1,0 +1,31 @@
+[package]
+name = "ichiran-kernel"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Host-neutral Ichiran analyzer kernel"
+
+[lib]
+crate-type = ["rlib", "cdylib", "staticlib"]
+
+[features]
+default = ["native"]
+native = []
+wasm = ["dep:js-sys", "dep:wasm-bindgen"]
+
+[dependencies]
+crc32fast = "1.5"
+flate2 = { version = "1.1", default-features = false, features = ["rust_backend"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0", features = ["raw_value"] }
+js-sys = { version = "0.3", optional = true }
+wasm-bindgen = { version = "0.2.105", optional = true }
+
+[dev-dependencies]
+sha2 = "0.10"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = "symbols"

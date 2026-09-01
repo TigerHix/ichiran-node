@@ -2,11 +2,13 @@
 
 import {
   parseAnalyzerReleaseManifest,
-  type IchiranRuntime
+  type PortableAnalysisResult,
+  type PortableAnalyzeOptions
 } from '@ichiran/core';
 import type {
   AnalyzerPackManifest,
   PackStatus,
+  RustM1Metrics,
   WorkerRequest,
   WorkerResponse
 } from './protocol.js';
@@ -20,10 +22,28 @@ import {
   markInstallCorrupt
 } from './worker/install.js';
 import { openAnalyzerRuntime } from './worker/runtime.js';
+import { isArtifactCorruption } from './worker/artifact-corruption.js';
 import { createSerialExecutor } from './worker/serial-executor.js';
 import { Sha256 } from './worker/sha256.js';
 
-let runtime: IchiranRuntime | null = null;
+declare const __ICHIRAN_RUST_M1__: boolean;
+
+// Start fetching/compiling the experimental runtime as the Worker boots so its
+// module load overlaps install inspection instead of extending ready latency.
+const rustRuntimeModule = __ICHIRAN_RUST_M1__
+  ? import('./worker/runtime-rust.js')
+  : null;
+
+interface WorkerRuntime {
+  analyze(text: string, options?: PortableAnalyzeOptions): Promise<PortableAnalysisResult>;
+  describe(entryIndex: number): Promise<unknown>;
+  legacy(text: string, options?: PortableAnalyzeOptions): Promise<unknown>;
+  romanize(text: string, options?: PortableAnalyzeOptions): Promise<string>;
+  dispose?(): void;
+  metrics?(): RustM1Metrics;
+}
+
+let runtime: WorkerRuntime | null = null;
 let runtimeManifestSha256: string | null = null;
 let runtimeInstallId: string | null = null;
 let expectedRelease: AnalyzerPackManifest | null = null;
@@ -60,6 +80,7 @@ function withInstallLifecycleLock<T>(operation: () => Promise<T>): Promise<T> {
 }
 
 function clearRuntime(): void {
+  runtime?.dispose?.();
   runtime = null;
   runtimeManifestSha256 = null;
   runtimeInstallId = null;
@@ -118,12 +139,16 @@ async function openInstalledUnlocked(): Promise<ReturnType<typeof inspectInstall
   clearRuntime();
   const files = await installedFiles();
   if (!files) return inspectInstall(false);
+  const openRuntime = __ICHIRAN_RUST_M1__
+    ? (await rustRuntimeModule!).openRustM1Runtime
+    : openAnalyzerRuntime;
   try {
-    runtime = await openAnalyzerRuntime(files);
+    runtime = await openRuntime(files);
     runtimeManifestSha256 = files.manifest.manifestSha256;
     runtimeInstallId = files.installId;
     return inspectInstall(true);
   } catch (error) {
+    if (!isArtifactCorruption(error)) throw error;
     await markInstallCorrupt(files.installId);
     clearRuntime();
     return inspectInstall(false);
@@ -134,25 +159,7 @@ function openInstalled(): Promise<ReturnType<typeof inspectInstall>> {
   return withInstallLifecycleLock(openInstalledUnlocked);
 }
 
-function isArtifactCorruption(error: unknown): boolean {
-  if (!(error instanceof Error)) return false;
-  // Chromium rejects reads from a File snapshot whose OPFS entry was replaced
-  // with NotReadableError. Treat that stale backing file like other pack damage.
-  if (error instanceof DOMException && error.name === 'NotReadableError') return true;
-  if (error.name === 'DetailStoreError') {
-    return (error as Error & { readonly code?: string }).code !== 'out-of-range';
-  }
-  return new Set([
-    'PackFormatError',
-    'SurfaceIndexFormatError',
-    'RootPayloadFormatError',
-    'MorphologyFormatError',
-    'AnalyzerSupportFormatError',
-    'AnalyzerAnnotationsError'
-  ]).has(error.name);
-}
-
-async function withRuntime<T>(operation: (value: IchiranRuntime) => T | Promise<T>): Promise<T> {
+async function withRuntime<T>(operation: (value: WorkerRuntime) => T | Promise<T>): Promise<T> {
   let repairAttempted = false;
   while (true) {
     const outcome = await withLifecycleLock('shared', async () => {
@@ -273,6 +280,15 @@ async function handle(request: WorkerRequest): Promise<unknown> {
     }
     case 'romanize': {
       return withRuntime(value => value.romanize(request.text));
+    }
+    case 'rust-m1-metrics': {
+      if (!__ICHIRAN_RUST_M1__) {
+        throw new WorkerOperationError('unsupported-operation', 'Rust M1 metrics are unavailable');
+      }
+      return withRuntime(value => {
+        if (!value.metrics) throw new Error('Rust M1 runtime metrics are unavailable');
+        return value.metrics();
+      });
     }
   }
 }

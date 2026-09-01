@@ -6,6 +6,7 @@ import { gzipSync } from 'node:zlib';
 import { afterEach, describe, expect, test } from 'bun:test';
 
 import {
+  QUALIFIED_BASELINE_ARTIFACT,
   currentSourceIdentity,
   verifyAnalyzerRelease,
   type ReleaseManifest
@@ -96,5 +97,19 @@ describe('browser analyzer release file gate', () => {
     await expect(verifyAnalyzerRelease(value.directory, repositoryRoot)).rejects.toThrow(
       'hot download checksum'
     );
+  });
+
+  test('rejects an unknown qualified artifact name', async () => {
+    const value = await fixture();
+    await expect(
+      verifyAnalyzerRelease(value.directory, repositoryRoot, 'not-a-qualified-artifact')
+    ).rejects.toThrow('Unknown qualified analyzer artifact');
+  });
+
+  test('does not relabel an arbitrary release as the qualified baseline', async () => {
+    const value = await fixture();
+    await expect(
+      verifyAnalyzerRelease(value.directory, repositoryRoot, QUALIFIED_BASELINE_ARTIFACT)
+    ).rejects.toThrow(`does not match qualified artifact ${QUALIFIED_BASELINE_ARTIFACT}`);
   });
 });

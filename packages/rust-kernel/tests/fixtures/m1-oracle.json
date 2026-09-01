@@ -1,0 +1,49 @@
+[
+  {
+    "name": "direct",
+    "codeUnits": [
+      29483
+    ],
+    "serialized": "{\"input\":\"猫\",\"normalized\":\"猫\",\"computeMs\":0,\"chunks\":[{\"type\":\"word\",\"start\":0,\"end\":1,\"text\":\"猫\",\"paths\":[{\"score\":19,\"tokens\":[{\"candidateId\":1,\"start\":0,\"end\":1,\"text\":\"猫\",\"trueText\":null,\"route\":\"kanji\",\"reading\":\"ねこ\",\"romanized\":\"neko\",\"pos\":[\"n\"],\"score\":19,\"entryIndex\":43720,\"root\":{\"seq\":1467640,\"form\":\"猫\",\"reading\":\"ねこ\"},\"inflection\":[],\"components\":[],\"alternatives\":[{\"candidateId\":1,\"text\":\"猫\",\"trueText\":null,\"route\":\"kanji\",\"reading\":\"ねこ\",\"romanized\":\"neko\",\"pos\":[\"n\"],\"score\":19,\"entryIndex\":43720,\"root\":{\"seq\":1467640,\"form\":\"猫\",\"reading\":\"ねこ\"},\"inflection\":[],\"components\":[],\"counter\":null}],\"skipped\":1,\"entity\":false,\"counter\":null}]}]}],\"paths\":[{\"score\":19,\"tokens\":[{\"candidateId\":1,\"start\":0,\"end\":1,\"text\":\"猫\",\"trueText\":null,\"route\":\"kanji\",\"reading\":\"ねこ\",\"romanized\":\"neko\",\"pos\":[\"n\"],\"score\":19,\"entryIndex\":43720,\"root\":{\"seq\":1467640,\"form\":\"猫\",\"reading\":\"ねこ\"},\"inflection\":[],\"components\":[],\"alternatives\":[{\"candidateId\":1,\"text\":\"猫\",\"trueText\":null,\"route\":\"kanji\",\"reading\":\"ねこ\",\"romanized\":\"neko\",\"pos\":[\"n\"],\"score\":19,\"entryIndex\":43720,\"root\":{\"seq\":1467640,\"form\":\"猫\",\"reading\":\"ねこ\"},\"inflection\":[],\"components\":[],\"counter\":null}],\"skipped\":1,\"entity\":false,\"counter\":null}]}]}"
+  },
+  {
+    "name": "morphology",
+    "codeUnits": [
+      39135,
+      12409,
+      12383
+    ],
+    "serialized": "{\"input\":\"食べた\",\"normalized\":\"食べた\",\"computeMs\":0,\"chunks\":[{\"type\":\"word\",\"start\":0,\"end\":3,\"text\":\"食べた\",\"paths\":[{\"score\":336,\"tokens\":[{\"candidateId\":4,\"start\":0,\"end\":3,\"text\":\"食べた\",\"trueText\":null,\"route\":\"kanji\",\"reading\":\"たべた\",\"romanized\":\"tabeta\",\"pos\":[\"v1\",\"vt\"],\"score\":336,\"entryIndex\":33240,\"root\":{\"seq\":1358280,\"form\":\"食べる\",\"reading\":\"たべる\"},\"inflection\":[{\"pos\":\"v1\",\"type\":2,\"negative\":false,\"formal\":false,\"ordinal\":1}],\"components\":[],\"alternatives\":[{\"candidateId\":4,\"text\":\"食べた\",\"trueText\":null,\"route\":\"kanji\",\"reading\":\"たべた\",\"romanized\":\"tabeta\",\"pos\":[\"v1\",\"vt\"],\"score\":336,\"entryIndex\":33240,\"root\":{\"seq\":1358280,\"form\":\"食べる\",\"reading\":\"たべる\"},\"inflection\":[{\"pos\":\"v1\",\"type\":2,\"negative\":false,\"formal\":false,\"ordinal\":1}],\"components\":[],\"counter\":null}],\"skipped\":0,\"entity\":false,\"counter\":null}]}]}],\"paths\":[{\"score\":336,\"tokens\":[{\"candidateId\":4,\"start\":0,\"end\":3,\"text\":\"食べた\",\"trueText\":null,\"route\":\"kanji\",\"reading\":\"たべた\",\"romanized\":\"tabeta\",\"pos\":[\"v1\",\"vt\"],\"score\":336,\"entryIndex\":33240,\"root\":{\"seq\":1358280,\"form\":\"食べる\",\"reading\":\"たべる\"},\"inflection\":[{\"pos\":\"v1\",\"type\":2,\"negative\":false,\"formal\":false,\"ordinal\":1}],\"components\":[],\"alternatives\":[{\"candidateId\":4,\"text\":\"食べた\",\"trueText\":null,\"route\":\"kanji\",\"reading\":\"たべた\",\"romanized\":\"tabeta\",\"pos\":[\"v1\",\"vt\"],\"score\":336,\"entryIndex\":33240,\"root\":{\"seq\":1358280,\"form\":\"食べる\",\"reading\":\"たべる\"},\"inflection\":[{\"pos\":\"v1\",\"type\":2,\"negative\":false,\"formal\":false,\"ordinal\":1}],\"components\":[],\"counter\":null}],\"skipped\":0,\"entity\":false,\"counter\":null}]}]}"
+  },
+  {
+    "name": "generated",
+    "codeUnits": [
+      24536,
+      12428,
+      12383
+    ],
+    "serialized": "{\"input\":\"忘れた\",\"normalized\":\"忘れた\",\"computeMs\":0,\"chunks\":[{\"type\":\"word\",\"start\":0,\"end\":3,\"text\":\"忘れた\",\"paths\":[{\"score\":216,\"tokens\":[{\"candidateId\":2,\"start\":0,\"end\":3,\"text\":\"忘れた\",\"trueText\":null,\"route\":\"kanji\",\"reading\":\"わすれた\",\"romanized\":\"wasureta\",\"pos\":[\"v1\",\"vt\"],\"score\":216,\"entryIndex\":48688,\"root\":{\"seq\":1519210,\"form\":\"忘れる\",\"reading\":\"わすれる\"},\"inflection\":[{\"pos\":\"v1\",\"type\":2,\"negative\":false,\"formal\":false,\"ordinal\":1}],\"components\":[],\"alternatives\":[{\"candidateId\":2,\"text\":\"忘れた\",\"trueText\":null,\"route\":\"kanji\",\"reading\":\"わすれた\",\"romanized\":\"wasureta\",\"pos\":[\"v1\",\"vt\"],\"score\":216,\"entryIndex\":48688,\"root\":{\"seq\":1519210,\"form\":\"忘れる\",\"reading\":\"わすれる\"},\"inflection\":[{\"pos\":\"v1\",\"type\":2,\"negative\":false,\"formal\":false,\"ordinal\":1}],\"components\":[],\"counter\":null}],\"skipped\":0,\"entity\":false,\"counter\":null}]}]}],\"paths\":[{\"score\":216,\"tokens\":[{\"candidateId\":2,\"start\":0,\"end\":3,\"text\":\"忘れた\",\"trueText\":null,\"route\":\"kanji\",\"reading\":\"わすれた\",\"romanized\":\"wasureta\",\"pos\":[\"v1\",\"vt\"],\"score\":216,\"entryIndex\":48688,\"root\":{\"seq\":1519210,\"form\":\"忘れる\",\"reading\":\"わすれる\"},\"inflection\":[{\"pos\":\"v1\",\"type\":2,\"negative\":false,\"formal\":false,\"ordinal\":1}],\"components\":[],\"alternatives\":[{\"candidateId\":2,\"text\":\"忘れた\",\"trueText\":null,\"route\":\"kanji\",\"reading\":\"わすれた\",\"romanized\":\"wasureta\",\"pos\":[\"v1\",\"vt\"],\"score\":216,\"entryIndex\":48688,\"root\":{\"seq\":1519210,\"form\":\"忘れる\",\"reading\":\"わすれる\"},\"inflection\":[{\"pos\":\"v1\",\"type\":2,\"negative\":false,\"formal\":false,\"ordinal\":1}],\"components\":[],\"counter\":null}],\"skipped\":0,\"entity\":false,\"counter\":null}]}]}"
+  },
+  {
+    "name": "astral",
+    "codeUnits": [
+      55357,
+      56832
+    ],
+    "serialized": "{\"input\":\"😀\",\"normalized\":\"😀\",\"computeMs\":0,\"chunks\":[{\"type\":\"misc\",\"start\":0,\"end\":2,\"text\":\"😀\"}],\"paths\":[{\"score\":0,\"tokens\":[{\"candidateId\":null,\"start\":0,\"end\":2,\"text\":\"😀\",\"trueText\":null,\"route\":\"gap\",\"reading\":\"😀\",\"romanized\":\"😀\",\"pos\":[],\"score\":0,\"entryIndex\":null,\"root\":null,\"inflection\":[],\"components\":[],\"alternatives\":[],\"skipped\":0,\"entity\":false,\"counter\":null}]}]}"
+  },
+  {
+    "name": "high-surrogate",
+    "codeUnits": [
+      55357
+    ],
+    "serialized": "{\"input\":\"\\ud83d\",\"normalized\":\"\\ud83d\",\"computeMs\":0,\"chunks\":[{\"type\":\"misc\",\"start\":0,\"end\":1,\"text\":\"\\ud83d\"}],\"paths\":[{\"score\":0,\"tokens\":[{\"candidateId\":null,\"start\":0,\"end\":1,\"text\":\"\\ud83d\",\"trueText\":null,\"route\":\"gap\",\"reading\":\"\\ud83d\",\"romanized\":\"\\ud83d\",\"pos\":[],\"score\":0,\"entryIndex\":null,\"root\":null,\"inflection\":[],\"components\":[],\"alternatives\":[],\"skipped\":0,\"entity\":false,\"counter\":null}]}]}"
+  },
+  {
+    "name": "low-surrogate",
+    "codeUnits": [
+      56832
+    ],
+    "serialized": "{\"input\":\"\\ude00\",\"normalized\":\"\\ude00\",\"computeMs\":0,\"chunks\":[{\"type\":\"misc\",\"start\":0,\"end\":1,\"text\":\"\\ude00\"}],\"paths\":[{\"score\":0,\"tokens\":[{\"candidateId\":null,\"start\":0,\"end\":1,\"text\":\"\\ude00\",\"trueText\":null,\"route\":\"gap\",\"reading\":\"\\ude00\",\"romanized\":\"\\ude00\",\"pos\":[],\"score\":0,\"entryIndex\":null,\"root\":null,\"inflection\":[],\"components\":[],\"alternatives\":[],\"skipped\":0,\"entity\":false,\"counter\":null}]}]}"
+  }
+]
