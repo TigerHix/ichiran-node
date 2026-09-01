@@ -78,7 +78,7 @@ requirements too.
 - [x] Unit and integration suites pass with no resource-safety or lifecycle tests skipped.
 - [x] Current-Lisp oracle comparisons and frozen-PostgreSQL fallback comparisons pass against verified sources.
 - [x] Packed release is deterministic and byte-identical across two independent development builds from the same frozen tree.
-- [ ] Repeat the two-build release proof from a committed clean tree without `--allow-dirty` before deployment.
+- [x] Repeat the two-build release proof from a committed clean tree without `--allow-dirty` before deployment.
 - [x] Release verification, browser build audit, and exact-inventory checks pass.
 - [x] Browser E2E passes install, interruption, corruption, cross-tab mutation, upgrade, restart, and zero-network analysis.
 - [x] Short-input latency remains within the existing gates and long-input scaling improves materially.
@@ -87,18 +87,20 @@ requirements too.
 
 ## Qualification evidence — 2026-08-31
 
-- Default unit/integration matrix: 152 passed, 3,781 assertions, zero failures. The data release-integrity suite added 10 passing checks with 28 assertions. Optional real-pack/oracle suites were run separately; no resource-safety or lifecycle test was skipped.
+- Default unit/integration matrix: 159 passed, 10 opt-in skips, 3,800 assertions, zero failures. Compiler unit tests added 36 passes and 464 assertions. Optional real-pack/oracle suites were run separately; no resource-safety or lifecycle test was skipped.
 - Authoritative parity: 1,241/1,241 current-Lisp comparisons exact, plus 301/301 frozen-PostgreSQL fallback clean-semantic comparisons exact. The separate PostgreSQL scorer differential passed 1,297 assertions.
 - Browser: 11/11 Playwright E2Es passed in one uninterrupted run, including fresh-profile offline restart, interrupted installation, strict A/B generation recovery, both cross-tab ABA lock orders, corruption, shell upgrade, and zero-network analysis. Every page context fails on unexpected `console.error` or uncaught page errors.
-- Performance under a measured 6.05x single-CPU slowdown: ordinary p95 38.9 ms (75 ms gate), pathological-morphology p95 98.6 ms (250 ms gate), and dense-contiguous-boundary p95 130.3 ms (500 ms gate). The 4,096-unit paragraph-scaling diagnostic was 408.1 ms p95. No main-thread task exceeded 50 ms.
-- Release generation `0723050e2d9d95c4387db485d296f386e8caae57dcd138fef84eb670bf3640ef` reproduced across two independent output roots. Exact four-file inventory and all bytes matched: manifest `21ec02a1…123`, stats `a66f8592…025`, hot pack `35d02c84…6d7`, and details pack `ad10bc48…18a`.
-- Both release roots passed standalone verification. The finalized shell measured 681,649 bytes across 18 files with cache identity `b07692702eef25a8`; the analyzer pack is 25,662,818 wire bytes and 39,096,725 persisted bytes.
+- Performance under a measured 6.01x single-CPU slowdown: ordinary p95 33.8 ms (75 ms gate), pathological-morphology p95 96.5 ms (250 ms gate), and dense-contiguous-boundary p95 112.5 ms (500 ms gate). The paragraph-scaling diagnostic was 430.6 ms p95, random-access details were 65.7 ms p95, and no main-thread task exceeded 50 ms.
+- Release generation `b4d958a390b77e458d14a6ecdbdb42921a22ba1815f5cb67708a88586a0ce38f` reproduced across two independent clean output roots at artifact commit `29ec534ede2b4c90dcddb18f87a84089c24df9de`. Exact four-file inventory and all bytes matched: manifest `1885e36e…ebd`, stats `118d6d59…775`, hot pack `35d02c84…6d7`, and details pack `ad10bc48…18a`.
+- Both release roots passed standalone verification against the same production shell. The finalized shell measured 681,649 bytes with SHA-256 `f5a29558…c63` and cache identity `3758c12696902092`; the analyzer pack is 25,662,818 wire bytes and 39,096,725 persisted bytes.
+- Exhaustive PostgreSQL/cache behavior passed 390,582 assertions, the branch and annotated baseline tag were pushed, and qualification evidence archive SHA-256 is `0c2542a6…5fa`.
 
-## Remaining external release gates
+## Remaining external work
 
-- After the roadmap documentation is committed, repeat both release builds from that
-  final clean HEAD without `--allow-dirty`; the one existing clean build at `fb7e0d9`
-  cannot be combined with a later documentation commit to claim the two-build gate.
-- Run the explicitly deferred physical-Safari smoke/performance check on the iPhone 13 baseline and current target device. Playwright already covers 320 px, 390 px, and desktop layouts, but it is not a physical-device substitute.
-- Push `portable-core-260118` (currently ahead of `origin/main` with no upstream)
-  before treating the migration baseline as remotely recoverable.
+- Publish the prepared four-file release and qualification evidence under
+  `portable-core-260118-baseline` after repository-wide immutable-release enforcement
+  is explicitly approved and enabled.
+- At M4/M5B, run the explicitly deferred physical-Safari smoke/performance check on
+  the iPhone 13 baseline and current target device. This is not an M0 publication
+  blocker. Playwright already covers 320 px, 390 px, and desktop layouts, but it is
+  not a physical-device substitute.

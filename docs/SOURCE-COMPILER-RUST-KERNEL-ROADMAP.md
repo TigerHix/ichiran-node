@@ -71,41 +71,47 @@ Mac agent with Xcode; Komi and Nemu integration remain later product work.
 
 The migration begins from a working product rather than an inferred specification.
 
-The reviewed TypeScript baseline is committed at
-`fb7e0d9632ac1e652acd5c45759abf74738f57b7`. A clean-tree release build at that commit
-successfully reproduced every locked component digest and the complete 9,173,122-key
-morphology relation. Its immutable release generation is
-`098453ef4918c3b9b0e3ac20cba86a941eab6fea6b1aae64765ee0cd03f3a1f2`.
+The qualified TypeScript artifact commit is
+`29ec534ede2b4c90dcddb18f87a84089c24df9de`. It is published on branch
+`portable-core-260118` and annotated tag `portable-core-260118-baseline`. Two independent
+clean-tree release builds reproduced every locked component digest and the complete
+9,173,122-key morphology relation. Both builds produced generation
+`b4d958a390b77e458d14a6ecdbdb42921a22ba1815f5cb67708a88586a0ce38f` and all four
+release files were byte-identical.
 
 | Evidence | Accepted result |
 |---|---:|
-| Default product tests | 152 passed; 3,781 assertions; zero failures |
+| Default product tests | 159 passed; 10 opt-in skips; 3,800 assertions; zero failures |
+| Compiler unit tests | 36 passed; 464 assertions; zero failures |
+| Package parity | 139 passed; one deliberate scorer skip; 3,703 assertions; zero failures |
+| Frozen PostgreSQL reference suite | 824 passed; two documented JMdict-version skips; 881 assertions; zero failures |
 | Current-Lisp comparisons | 1,241 / 1,241 exact |
 | Frozen PostgreSQL fallback comparisons | 301 / 301 exact |
 | PostgreSQL scorer differential | 1,297 assertions passed |
+| Exhaustive PostgreSQL/cache witness | 390,582 assertions passed |
 | Browser E2E | 11 / 11 passed |
 | Morphology relation | 9,173,122 legacy keys; zero packed-only or duplicate keys |
-| Latest recorded ordinary browser p95 at calibrated 6.05x contention | 38.9 ms |
-| Latest recorded pathological morphology browser p95 | 98.6 ms |
-| Latest recorded dense-boundary browser p95 | 130.3 ms |
+| Ordinary browser p95 at calibrated 6.01x contention | 33.8 ms |
+| Pathological morphology browser p95 | 96.5 ms |
+| Dense-boundary browser p95 | 112.5 ms |
+| Random-access details p95 | 65.7 ms |
+| Worker ready / first analysis | 696.8 ms / 53.1 ms |
 | Resident hot image | 24,857,288 bytes |
 | Lazy detail store | 13,555,874 bytes |
 | One-time shell and data total | 25,662,818 bytes |
 | Persisted logical total | 39,096,725 bytes |
 
-The test, E2E, and performance rows are accepted session evidence, not yet a complete
-final-HEAD attestation. The full raw logs were not retained for every run, and the
-performance report identifies source commit `820779c`, not the reviewed code commit
-above. M0 therefore reruns and records the whole matrix after this documentation is
-committed. Locked component hashes and counts remain owned by
-[`browser-alpha/sources.lock.json`](../browser-alpha/sources.lock.json), not duplicated
-here.
+The complete commit-bound matrix, raw logs, oracle report, and browser benchmark are
+sealed in qualification evidence archive SHA-256
+`0c2542a6ecd3f61c917211b8aae8f6e0c83c0177bdbe73d5b32dfe3a436045fa`. Locked
+component hashes and counts remain owned by
+[`browser-alpha/sources.lock.json`](../browser-alpha/sources.lock.json). The benchmark
+used single-core calibrated contention in headless Chromium under WSL; it is a stable
+regression gate, not a claim of physical iPhone measurement. Safari testing on the
+iPhone 13 baseline and current target device remains open for M4/M5B.
 
-Only one clean build exists at the reviewed code commit. After this roadmap is
-committed, two independent builds must be run from that final clean HEAD and compared
-in full; the existing build cannot be combined with a later documentation commit to
-claim the two-build gate. Physical Safari testing on the iPhone 13 baseline and current
-target device also remains open.
+This roadmap-status update is intentionally a docs-only descendant of the tagged
+artifact commit. It does not change the pack or move the baseline tag.
 
 No Rust analyzer crate, browser WASM analyzer, C ABI, Swift package, or source-native
 compiler exists yet. The repository's only Rust today is a build-time surface-index
@@ -254,16 +260,19 @@ allowlist.
 
 ### M0 — Qualified TypeScript baseline
 
-Status: implementation complete; final handoff attestation still needs the clean-HEAD
-matrix below. Physical-device checks belong to M4 and M5B, not this entry gate.
+Status: qualification, push, and annotated tag complete. Physical-device checks belong
+to M4 and M5B, not this entry gate. The immutable GitHub Release remains the only
+publication step still open.
 
 - reviewed source committed;
 - current browser/Node runtime qualified;
 - first committed clean-tree release reproduced all locked sections;
 - publish the exact `manifest.json`, `hot.bin.gz`, `details.bin.gz`, and `stats.json` at
   a durable immutable location before either port depends on the local ignored build;
-- roadmap commit, push, two clean builds, and the commit-bound verification matrix
-  remain before the baseline is considered remotely recoverable release evidence.
+- roadmap committed, branch/tag pushed, two clean builds compared byte for byte, and
+  the commit-bound verification matrix and evidence archive completed;
+- publish the prepared release assets under the baseline tag after repository-wide
+  immutable-release enforcement is explicitly approved and enabled.
 
 ### M1 — Rust feasibility spike
 
@@ -411,16 +420,20 @@ contract. This is qualification and publication work, not another architecture p
 
 ### Phase 0 — Close and publish the baseline
 
-1. Commit this accepted roadmap locally.
-2. From that final clean HEAD, run two independent release builds, verify each, and
-   compare the complete four-file inventories byte for byte.
-3. Rerun typechecks, unit/integration tests, chosen-authority parity, PostgreSQL scorer
-   differential, browser E2E, and browser performance.
-4. If every gate passes, push the commit and create annotated tag
+Steps 1–4 are complete at the tagged artifact commit; step 5 is the remaining launch
+prerequisite.
+
+1. **Complete:** commit the accepted roadmap locally.
+2. **Complete:** from that final clean HEAD, run two independent release builds, verify
+   each, and compare the complete four-file inventories byte for byte.
+3. **Complete:** rerun typechecks, unit/integration tests, chosen-authority parity,
+   PostgreSQL scorer differential, browser E2E, and browser performance.
+4. **Complete:** push the commit and create annotated tag
    `portable-core-260118-baseline` on that unchanged commit.
-5. Create the matching immutable GitHub Release in `TigerHix/ichiran-node`, attaching
-   the exact four release files plus commit-bound qualification logs/attestations.
-   Evidence is external to Git so recording it cannot change the qualified commit.
+5. **Open:** create the matching immutable GitHub Release in `TigerHix/ichiran-node`,
+   attaching the exact four release files plus commit-bound qualification
+   logs/attestations. Evidence is external to Git so recording it cannot change the
+   qualified commit.
 
 Read-only recovery of January source files may overlap Phase 0, but neither port should
 silently adopt a different pack or fixture corpus while the baseline is moving.
