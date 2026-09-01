@@ -77,7 +77,8 @@ The qualified TypeScript artifact commit is
 clean-tree release builds reproduced every locked component digest and the complete
 9,173,122-key morphology relation. Both builds produced generation
 `b4d958a390b77e458d14a6ecdbdb42921a22ba1815f5cb67708a88586a0ce38f` and all four
-release files were byte-identical.
+release files were byte-identical. The files and qualification evidence are published
+in the [immutable baseline release](https://github.com/TigerHix/ichiran-node/releases/tag/portable-core-260118-baseline).
 
 | Evidence | Accepted result |
 |---|---:|
@@ -260,9 +261,9 @@ allowlist.
 
 ### M0 — Qualified TypeScript baseline
 
-Status: qualification, push, and annotated tag complete. Physical-device checks belong
-to M4 and M5B, not this entry gate. The immutable GitHub Release remains the only
-publication step still open.
+Status: complete. Qualification, push, annotated tag, independently verified asset
+upload, and immutable GitHub Release all passed. Physical-device checks belong to M4
+and M5B, not this entry gate. M1 and M2 may start.
 
 - reviewed source committed;
 - current browser/Node runtime qualified;
@@ -271,8 +272,8 @@ publication step still open.
   a durable immutable location before either port depends on the local ignored build;
 - roadmap committed, branch/tag pushed, two clean builds compared byte for byte, and
   the commit-bound verification matrix and evidence archive completed;
-- publish the prepared release assets under the baseline tag after repository-wide
-  immutable-release enforcement is explicitly approved and enabled.
+- exact release assets and qualification evidence published under the baseline tag
+  with GitHub reporting `immutable: true`.
 
 ### M1 — Rust feasibility spike
 
@@ -420,8 +421,8 @@ contract. This is qualification and publication work, not another architecture p
 
 ### Phase 0 — Close and publish the baseline
 
-Steps 1–4 are complete at the tagged artifact commit; step 5 is the remaining launch
-prerequisite.
+All five steps are complete. The tag remains on the qualified artifact commit; later
+status documentation is a docs-only descendant.
 
 1. **Complete:** commit the accepted roadmap locally.
 2. **Complete:** from that final clean HEAD, run two independent release builds, verify
@@ -430,7 +431,7 @@ prerequisite.
    PostgreSQL scorer differential, browser E2E, and browser performance.
 4. **Complete:** push the commit and create annotated tag
    `portable-core-260118-baseline` on that unchanged commit.
-5. **Open:** create the matching immutable GitHub Release in `TigerHix/ichiran-node`,
+5. **Complete:** create the matching immutable GitHub Release in `TigerHix/ichiran-node`,
    attaching the exact four release files plus commit-bound qualification
    logs/attestations. Evidence is external to Git so recording it cannot change the
    qualified commit.
@@ -518,8 +519,9 @@ These are engineering-effort ranges, not calendar promises:
 | Mac-owned XCFramework, Swift wrapper, and Apple validation | roughly 1–3 additional weeks |
 | Complete source-native compiler | roughly 8–12+ engineer-weeks |
 
-The kernel and compiler should run as independent parallel workstreams after M1/M2.
-The critical path is the slower stream plus integration, not the sum of both ranges.
+The kernel and compiler should run as independent parallel workstreams after their
+respective M1/M2 entry gates. The critical path is the slower stream plus integration,
+not the sum of both ranges.
 
 ## Non-goals
 

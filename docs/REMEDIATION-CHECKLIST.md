@@ -93,13 +93,12 @@ requirements too.
 - Performance under a measured 6.01x single-CPU slowdown: ordinary p95 33.8 ms (75 ms gate), pathological-morphology p95 96.5 ms (250 ms gate), and dense-contiguous-boundary p95 112.5 ms (500 ms gate). The paragraph-scaling diagnostic was 430.6 ms p95, random-access details were 65.7 ms p95, and no main-thread task exceeded 50 ms.
 - Release generation `b4d958a390b77e458d14a6ecdbdb42921a22ba1815f5cb67708a88586a0ce38f` reproduced across two independent clean output roots at artifact commit `29ec534ede2b4c90dcddb18f87a84089c24df9de`. Exact four-file inventory and all bytes matched: manifest `1885e36e…ebd`, stats `118d6d59…775`, hot pack `35d02c84…6d7`, and details pack `ad10bc48…18a`.
 - Both release roots passed standalone verification against the same production shell. The finalized shell measured 681,649 bytes with SHA-256 `f5a29558…c63` and cache identity `3758c12696902092`; the analyzer pack is 25,662,818 wire bytes and 39,096,725 persisted bytes.
-- Exhaustive PostgreSQL/cache behavior passed 390,582 assertions, the branch and annotated baseline tag were pushed, and qualification evidence archive SHA-256 is `0c2542a6…5fa`.
+- Exhaustive PostgreSQL/cache behavior passed 390,582 assertions, the branch and
+  annotated baseline tag were pushed, GitHub reports the published release immutable,
+  and qualification evidence archive SHA-256 is `0c2542a6…5fa`.
 
 ## Remaining external work
 
-- Publish the prepared four-file release and qualification evidence under
-  `portable-core-260118-baseline` after repository-wide immutable-release enforcement
-  is explicitly approved and enabled.
 - At M4/M5B, run the explicitly deferred physical-Safari smoke/performance check on
   the iPhone 13 baseline and current target device. This is not an M0 publication
   blocker. Playwright already covers 320 px, 390 px, and desktop layouts, but it is
