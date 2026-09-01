@@ -101,6 +101,93 @@ export default bunproLinguisticRule('かねる', (r) => {
       }, 'kaneru');
       b.inOrder(stem, kaneru, 3);
       b.captureSpan('かねる', stem, kaneru);
+    },
+
+    // Branch 6: かね (PART, 未然形) + ます (AUX) - polite form split by GiNZA
+    // e.g., 承諾しかねます (shounin-shi-kanemasu)
+    (b) => {
+      const stem = b.tok({
+        posOneOf: ['VERB', 'AUX'],
+        inflectionForm: '連用形-一般',
+      }, 'stem');
+      const kane = b.tok({
+        lemmaOneOf: ['かねる', '兼ねる'],
+        pos: 'PART',
+        inflectionForm: '未然形-一般',
+      }, 'kane');
+      const masu = b.aux({
+        lemma: 'ます',
+      }, 'masu');
+      b.inOrder(stem, kane, 3);
+      b.inOrder(kane, masu, 2);
+      b.captureSpan('かねる', stem, masu);
+    },
+
+    // Branch 7: かねる (VERB, dep=root) - when GiNZA parses it as main verb
+    // Must be preceded by a verb stem (連用形)
+    (b) => {
+      const stem = b.tok({
+        posOneOf: ['VERB', 'AUX', 'ADJ'],
+        inflectionForm: '連用形-一般',
+      }, 'stem');
+      const kaneru = b.tok({
+        lemmaOneOf: ['かねる', '兼ねる'],
+        pos: 'VERB',
+      }, 'kaneru');
+      b.inOrder(stem, kaneru, 3);
+      b.captureSpan('かねる', stem, kaneru);
+    },
+
+    // Branch 8: Noun/PROPN + かね + ます (noun + kaneru polite form)
+    // e.g., おうじかねます (ouji-kanemasu - cannot answer)
+    // Distance 1 ensures no particle between noun and かね
+    (b) => {
+      const noun = b.tok({
+        posOneOf: ['NOUN', 'PROPN', 'VERB', 'ADJ'],
+      }, 'noun');
+      const kane = b.tok({
+        lemmaOneOf: ['かねる', '兼ねる'],
+        pos: 'PART',
+        inflectionForm: '未然形-一般',
+      }, 'kane');
+      const masu = b.aux({
+        lemma: 'ます',
+      }, 'masu');
+      b.inOrder(noun, kane, 1);
+      b.inOrder(kane, masu, 2);
+      b.captureSpan('かねる', noun, masu);
+    },
+
+    // Branch 9: Noun/PROPN + かねる (noun + kaneru plain form)
+    // e.g., おうじかねる (ouji-kaneru - cannot answer)
+    // Distance 1 ensures no particle (を, が, etc.) between noun and かねる
+    (b) => {
+      const noun = b.tok({
+        posOneOf: ['NOUN', 'PROPN', 'VERB', 'ADJ'],
+      }, 'noun');
+      const kaneru = b.tok({
+        lemmaOneOf: ['かねる', '兼ねる'],
+        pos: 'VERB',
+        inflectionForm: '終止形-一般',
+      }, 'kaneru');
+      b.inOrder(noun, kaneru, 1);
+      b.captureSpan('かねる', noun, kaneru);
+    },
+
+    // Branch 10: Any token + かねる (NOUN) - GiNZA sometimes tags かねる as NOUN
+    // e.g., しんじかねる (shinji-kaneru - cannot believe)
+    // Distance 1 ensures no particle between noun and かねる
+    (b) => {
+      const noun = b.tok({
+        posOneOf: ['NOUN', 'PROPN', 'VERB', 'ADJ', 'AUX'],
+      }, 'noun');
+      const kaneru = b.tok({
+        lemmaOneOf: ['かねる', '兼ねる'],
+        pos: 'NOUN',
+        inflectionForm: '終止形-一般',
+      }, 'kaneru');
+      b.inOrder(noun, kaneru, 1);
+      b.captureSpan('かねる', noun, kaneru);
     }
   );
 });

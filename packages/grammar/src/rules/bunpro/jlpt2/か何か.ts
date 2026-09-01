@@ -124,17 +124,36 @@ export default bunproLinguisticRule('か何か', (r) => {
       b5.captureSpan('か何か', noun, nanika);
     },
 
-    // Pattern 6: Noun + か + 何か/なにか (catch-all with loose constraints)
-    // For unexpected GiNZA parsings - just require order and proximity
+    // Pattern 6: Noun + か + なに + か (decomposed かなにか)
+    // GiNZA sometimes splits かなにか into か + なに + か
+    // Also handles cases where the sentence is split by quotes/brackets
     (b6) => {
-      const noun = b6.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON'] }, 'noun');
-      const ka = b6.particle('か', 'ka');
-      const nanika = b6.tok({ textOneOf: ['何か', 'なにか'] }, 'nanika');
+      const noun = b6.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON', 'VERB', 'ADJ'] }, 'noun');
+      const ka1 = b6.tok({ text: 'か' }, 'ka1');
+      const nani = b6.tok({ textOneOf: ['なに', '何'], posOneOf: ['PRON', 'NOUN'] }, 'nani');
+      // ka2 should NOT be a question particle (pos=PART, dep=mark)
+      // In "かなにか", ka2 is a case marker (pos=ADP, dep=case)
+      const ka2 = b6.tok({ text: 'か', pos: 'ADP' }, 'ka2');
 
-      b6.inOrder(noun, ka, 3);
-      b6.inOrder(ka, nanika, 3);
+      // Use larger distance to handle quotes/brackets splitting the sentence
+      b6.inOrder(noun, ka1, 10);
+      b6.inOrder(ka1, nani, 10);
+      b6.inOrder(nani, ka2, 10);
 
-      b6.captureSpan('か何か', noun, nanika);
+      b6.captureSpan('か何か', noun, ka2);
+    },
+
+    // Pattern 7: Noun + か + 何か/なにか (catch-all with loose constraints)
+    // For unexpected GiNZA parsings - just require order and proximity
+    (b7) => {
+      const noun = b7.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON'] }, 'noun');
+      const ka = b7.particle('か', 'ka');
+      const nanika = b7.tok({ textOneOf: ['何か', 'なにか'] }, 'nanika');
+
+      b7.inOrder(noun, ka, 3);
+      b7.inOrder(ka, nanika, 3);
+
+      b7.captureSpan('か何か', noun, nanika);
     }
   );
 });

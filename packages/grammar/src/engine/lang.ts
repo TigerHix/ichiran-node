@@ -161,6 +161,21 @@ export class LinguisticRuleBuilder {
   }
 
   /**
+   * Negative lookahead: ensure no token matching preds appears immediately before the given token.
+   * This is different from `not` which only works on already-bound variables.
+   * This searches for any matching token before the target and fails the match if found.
+   *
+   * @param token The token variable to check before
+   * @param preds Predicates to match against tokens before
+   * @param maxDistance Maximum distance to look back (default: 1 for immediately before)
+   */
+  notBefore(token: LangVar, cond: Omit<TokenCond, 'pos'>, maxDistance = 1): this {
+    const preds = condToPreds(cond);
+    this.clauses.push({ kind: 'notBefore', token: token.ref, preds, maxDistance });
+    return this;
+  }
+
+  /**
    * Define alternative patterns. Each branch is expanded at compile time into
    * separate rules with the same id. Each branch defines its own clauses and captures.
    * 

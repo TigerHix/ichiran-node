@@ -22,6 +22,11 @@ const negatives = [
   '日本語が話せます。',
   'これは食べられない。',
 
+  // たびに pattern (every time/whenever) - should NOT match
+  '買い物へ行く度に、いらないものを買っちゃう。',
+  '会うたびに彼が太ってきている。',
+  '旅行のたびに新しい場所を訪れる。',
+
   // Note: We cannot enforce that verb1 and verb2 are the same verb at the DSL level.
   // This is a known limitation of the grammar matcher (cross-variable lemma constraints).
   // However, in practice, this pattern strongly correlates with same-verb usage.
@@ -53,6 +58,9 @@ const skipPositives = [
   '親友から土下座をしながら頼まれては、ことわるにことわれません。',
   '嫌われている上司が見事に転んでしまった。従業員がわらうにわらえない、という顔をしてた。',
   'にげるににげられない状況から救ってくれたのは、いつもは厳しい先輩だった。',
+  // "なくになけない" - contains "なくに" (even without) not the 〜に〜ない pattern
+  // The tightening of verb1-ni distance excludes this false positive
+  '中学生の頃、好きな子に告白して断られた。周りに人がいたからなくになけない状況だった。',
 ];
 
 describe('bunpro.jlpt1', () => {

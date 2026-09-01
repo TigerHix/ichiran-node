@@ -171,6 +171,58 @@ export default bunproLinguisticRule('ことになっている', (r) => {
       b.auxOf(pred, ru);
 
       b.captureSpan('ことになっている', pred, ru);
+    },
+
+    // Branch 6: Polite decomposed (〜ことになっています split as て+い+ます)
+    (b) => {
+      const pred = b.tok({}, 'pred');
+      const koto = b.noun({ lemma: 'こと', dep: 'compound' }, 'koto');
+      b.headChild(pred, koto, 'compound');
+
+      const ni = b.tok({ lemma: 'に', dep: 'fixed' }, 'ni');
+      b.inOrder(koto, ni, 1);
+
+      const nat = b.verb({ lemma: 'なる', dep: 'fixed', inflectionForm: '連用形-促音便' }, 'nat');
+      b.inOrder(ni, nat, 1);
+
+      const te = b.tok({ lemma: 'て', depOneOf: ['mark', 'fixed'] }, 'te');
+      b.inOrder(nat, te, 1);
+
+      // い (ren'youkei of いる)
+      const i = b.tok({ lemma: 'いる', inflectionForm: '連用形-一般' }, 'i');
+      b.inOrder(te, i, 1);
+
+      // ます (polite auxiliary)
+      const masu = b.aux({ lemma: 'ます' }, 'masu');
+      b.inOrder(i, masu, 1);
+
+      b.captureSpan('ことになっている', pred, masu);
+    },
+
+    // Branch 7: Past decomposed (〜ことになっていた split as て+い+た)
+    (b) => {
+      const pred = b.tok({}, 'pred');
+      const koto = b.noun({ lemma: 'こと', dep: 'compound' }, 'koto');
+      b.headChild(pred, koto, 'compound');
+
+      const ni = b.tok({ lemma: 'に', dep: 'fixed' }, 'ni');
+      b.inOrder(koto, ni, 1);
+
+      const nat = b.verb({ lemma: 'なる', dep: 'fixed', inflectionForm: '連用形-促音便' }, 'nat');
+      b.inOrder(ni, nat, 1);
+
+      const te = b.tok({ lemma: 'て', depOneOf: ['mark', 'fixed'] }, 'te');
+      b.inOrder(nat, te, 1);
+
+      // い (ren'youkei of いる)
+      const i = b.tok({ lemma: 'いる', inflectionForm: '連用形-一般' }, 'i');
+      b.inOrder(te, i, 1);
+
+      // た (past auxiliary)
+      const ta = b.aux({ lemma: 'た' }, 'ta');
+      b.inOrder(i, ta, 1);
+
+      b.captureSpan('ことになっている', pred, ta);
     }
   );
 });

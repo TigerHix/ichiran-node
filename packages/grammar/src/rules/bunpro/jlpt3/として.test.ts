@@ -19,6 +19,12 @@ const negatives = [
   // して as te-form conjunction (without と)
   '宿題をして、遊びに行った。',
 
+  // Volitional + として (verb-volitionalとする construction)
+  // This is "try to/about to do", not "as"
+  'フランスへ行こうとしています。',
+  '何か言おうとしたが、言葉が出てこなかった。',
+  '彼は立とうとして立ち上がれなかった。',
+
   // Locative として (at a time/place - rare but exists)
   // Note: These would need different structural analysis
 ];

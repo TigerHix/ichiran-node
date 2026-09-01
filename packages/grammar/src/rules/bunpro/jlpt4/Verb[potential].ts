@@ -72,14 +72,13 @@ export default bunproLinguisticRule('Verb[potential]', (r) => {
       const masu = b.aux({ lemma: 'ます' }, 'masu');
 
       // The stem (見られ, 書け) attaches to ます
+      // Potential verb stems:
+      // - Godan potential: 書け, 読め, 行け, 待て, 持て, 死ね, etc. (end in 'e' column kana)
+      // - Ichidan potential: 見られ, 食べられ, etc. (end in 'られ' with at least 1 char before)
+      // Exclude standard polite forms: 行き, 読み, 話し, etc. (end in 'i' column kana), and simple ichidan stems (食べ, 見)
       const stem = b.tok({
-        // Exclude standard polite forms:
-        // - Godan verb polite stems end in "i" (行き, 読み, 話し, etc.)
-        // - Ichidan verb polite stems end in "ri" or similar (食べ, 見, etc.)
-        // Potential forms:
-        // - Ichidan potential: 見られ, 食べられ (end in rare)
-        // - Godan potential: 読め, 書け (end in e, not i)
-        textNotEndingIn: ['i', 'ri', 'chi', 'shi', 'ki', 'gi', 'bi', 'mi'],
+        // Match ending in 'e' column kana (えけげせぜてでねへべめれ) or ending in 'られ'/'れ' with 1+ chars before
+        textRe: /[えけげせぜてでねへべめれ]$|^.{2,}れ$/,
       }, 'stem');
 
       b.auxOf(stem, masu);
@@ -90,7 +89,9 @@ export default bunproLinguisticRule('Verb[potential]', (r) => {
     (b) => {
       const nai = b.aux({ lemma: 'ない' }, 'nai');
 
-      const stem = b.tok({}, 'stem');
+      const stem = b.tok({
+        textRe: /[えけげせぜてでねへべめれ]$|^.{2,}れ$/,
+      }, 'stem');
 
       b.auxOf(stem, nai);
       b.captureSpan('Verb[potential]', stem, nai);
@@ -100,7 +101,9 @@ export default bunproLinguisticRule('Verb[potential]', (r) => {
     (b) => {
       const masen = b.aux({ lemma: 'ません' }, 'masen');
 
-      const stem = b.tok({}, 'stem');
+      const stem = b.tok({
+        textRe: /[えけげせぜてでねへべめれ]$|^.{2,}れ$/,
+      }, 'stem');
 
       b.auxOf(stem, masen);
       b.captureSpan('Verb[potential]', stem, masen);

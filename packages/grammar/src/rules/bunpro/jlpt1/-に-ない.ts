@@ -39,9 +39,12 @@ export default bunproLinguisticRule('-に-ない', (r) => {
       const nai = b1.tok({ lemma: 'ない' }, 'nai');
       const verb1 = b1.tok({ posOneOf: ['VERB', 'AUX'] }, 'verb1');
 
-      b1.inOrder(verb1, ni, 3);
+      // In the true 〜に〜ない pattern, verb1 and ni are adjacent (e.g., いくにいけない)
+      // This excludes false positives like "行く度に" where a temporal noun comes between verb and に
+      b1.inOrder(verb1, ni, 1);
       b1.inOrder(ni, verb2, 10);
       b1.inOrder(verb2, nai, 10);
+
       b1.captureSpan('-に-ない', verb1, nai);
     },
 
@@ -52,9 +55,10 @@ export default bunproLinguisticRule('-に-ない', (r) => {
       const masen = b2.tok({ text: 'ません' }, 'masen');
       const verb1 = b2.tok({ posOneOf: ['VERB', 'AUX'] }, 'verb1');
 
-      b2.inOrder(verb1, ni, 3);
+      b2.inOrder(verb1, ni, 1);
       b2.inOrder(ni, verb2, 10);
       b2.inOrder(verb2, masen, 10);
+
       b2.captureSpan('-に-ない', verb1, masen);
     },
 
@@ -65,9 +69,10 @@ export default bunproLinguisticRule('-に-ない', (r) => {
       const zu = b3.tok({ text: 'ず' }, 'zu');
       const verb1 = b3.tok({ posOneOf: ['VERB', 'AUX'] }, 'verb1');
 
-      b3.inOrder(verb1, ni, 3);
+      b3.inOrder(verb1, ni, 1);
       b3.inOrder(ni, verb2, 10);
       b3.inOrder(verb2, zu, 10);
+
       b3.captureSpan('-に-ない', verb1, zu);
     }
   );

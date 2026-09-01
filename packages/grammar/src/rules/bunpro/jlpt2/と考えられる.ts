@@ -37,35 +37,50 @@ import { bunproLinguisticRule } from '../../../engine/lang.js';
  */
 export default bunproLinguisticRule('と考えられる', (r) => {
   r.either(
-    // Pattern 1: と + 考えられる as single verb token (full form)
-    // Match specific surface forms to avoid partial matches
+    // Pattern 1: と + 考えられる as single verb token (full potential form)
     (b1) => {
       const to = b1.particle('と', 'to');
-      // Must be the full potential form, not just the stem
       const verb = b1.tok({
         posOneOf: ['VERB', 'AUX'],
         lemmaOneOf: ['考える', 'かんがえる'],
-        // Require text to end with られる (potential suffix)
-        textRe: /.*?られる$/,
+        // Match forms containing potential suffix (may have particles after)
+        textRe: /.*?られ/,
       }, 'verb');
       b1.inOrder(to, verb, 3);
       b1.captureSpan('と考えられる', to, verb);
     },
     // Pattern 2: と + 考え(VERB) + られる(AUX) - split parsing
-    // Require auxiliary relationship between 考え and られる
     (b2) => {
       const to = b2.particle('と', 'to');
-      // 考える stem in potential form
       const kangaee = b2.tok({
         pos: 'VERB',
         lemmaOneOf: ['考える', 'かんがえる'],
       }, 'kangaee');
-      // られる as auxiliary (potential/passive marker)
-      const reru = b2.aux({ lemma: 'られる' }, 'reru');
-      // Require aux relationship (れる attaches to 考え)
+      const reru = b2.aux({
+        textOneOf: ['られる', 'れます'],
+        lemmaOneOf: ['れる', 'られる'],
+      }, 'reru');
       b2.auxOf(kangaee, reru);
       b2.inOrder(to, kangaee, 5);
       b2.captureSpan('と考えられる', to, reru);
+    },
+    // Pattern 3: と + 考え(VERB) + potential auxiliary + polite auxiliary
+    (b3) => {
+      const to = b3.particle('と', 'to');
+      const kangaee = b3.tok({
+        pos: 'VERB',
+        lemmaOneOf: ['考える', 'かんがえる'],
+      }, 'kangaee');
+      const rare = b3.aux({
+        lemmaOneOf: ['れる', 'られる'],
+      }, 'rare');
+      const masu = b3.aux({
+        lemma: 'ます',
+      }, 'masu');
+      b3.auxOf(kangaee, rare);
+      b3.auxOf(rare, masu);
+      b3.inOrder(to, kangaee, 5);
+      b3.captureSpan('と考えられる', to, rare);
     }
   );
 });

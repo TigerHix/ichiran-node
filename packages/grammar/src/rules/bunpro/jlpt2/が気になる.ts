@@ -222,6 +222,296 @@ export default bunproLinguisticRule('が気になる', (r) => {
       b7.inOrder(ni, naru, 2);
 
       b7.captureSpan('気になる', topic, naru);
+    },
+
+    // Branch 8: Topic + き + に + なる (hiragana version)
+    // Matches "きになる" instead of "気になる"
+    (b8) => {
+      const topic = b8.tok({
+        posOneOf: ['NOUN', 'PROPN', 'PRON', 'VERB', 'ADJ'],
+      }, 'topic');
+      const ki = b8.tok({
+        text: 'き',
+      }, 'ki');
+      const ni = b8.tok({ text: 'に' }, 'ni');
+      const naru = b8.verb({ lemma: 'なる' }, 'naru');
+
+      b8.inOrder(topic, ki, 10);
+      b8.inOrder(ki, ni, 1);
+      b8.inOrder(ni, naru, 2);
+
+      b8.captureSpan('が気になる', topic, naru);
+    },
+
+    // Branch 9: Topic + き + に + なっている (hiragana progressive)
+    (b9) => {
+      const topic = b9.tok({
+        posOneOf: ['NOUN', 'PROPN', 'PRON', 'VERB', 'ADJ'],
+      }, 'topic');
+      const ki = b9.tok({
+        text: 'き',
+      }, 'ki');
+      const ni = b9.tok({ text: 'に' }, 'ni');
+      const naru = b9.verb({ lemma: 'なる' }, 'naru');
+      const te = b9.aux({ lemma: 'て' }, 'te');
+      const iru = b9.aux({
+        lemmaOneOf: ['いる', 'おる'],
+      }, 'iru');
+
+      b9.inOrder(topic, ki, 10);
+      b9.inOrder(ki, ni, 1);
+      b9.inOrder(ni, naru, 2);
+      b9.auxOf(naru, te);
+      b9.auxOf(te, iru);
+
+      b9.captureSpan('が気になっている', topic, iru);
+    },
+
+    // Branch 10: Topic + き + に + なります (hiragana polite)
+    (b10) => {
+      const topic = b10.tok({
+        posOneOf: ['NOUN', 'PROPN', 'PRON', 'VERB', 'ADJ'],
+      }, 'topic');
+      const ki = b10.tok({
+        text: 'き',
+      }, 'ki');
+      const ni = b10.tok({ text: 'に' }, 'ni');
+      const naru = b10.verb({ lemma: 'なる' }, 'naru');
+      const masu = b10.aux({ lemma: 'ます' }, 'masu');
+
+      b10.inOrder(topic, ki, 10);
+      b10.inOrder(ki, ni, 1);
+      b10.inOrder(ni, naru, 2);
+      b10.auxOf(naru, masu);
+
+      b10.captureSpan('が気になります', topic, masu);
+    },
+
+    // Branch 11: Topic + き + に + なっています (hiragana polite progressive)
+    (b11) => {
+      const topic = b11.tok({
+        posOneOf: ['NOUN', 'PROPN', 'PRON', 'VERB', 'ADJ'],
+      }, 'topic');
+      const ki = b11.tok({
+        text: 'き',
+      }, 'ki');
+      const ni = b11.tok({ text: 'に' }, 'ni');
+      const naru = b11.verb({ lemma: 'なる' }, 'naru');
+      const te = b11.aux({ lemma: 'て' }, 'te');
+      const imasu = b11.aux({ lemma: 'います' }, 'imasu');
+
+      b11.inOrder(topic, ki, 10);
+      b11.inOrder(ki, ni, 1);
+      b11.inOrder(ni, naru, 2);
+      b11.auxOf(naru, te);
+      b11.auxOf(te, imasu);
+
+      b11.captureSpan('が気になっています', topic, imasu);
+    },
+
+    // Branch 12: Noun + が + き + に + なる (hiragana with が - casual non-past)
+    // Example: アクセントがきになる。
+    (b12) => {
+      const topic = b12.tok({
+        posOneOf: ['NOUN', 'PROPN', 'PRON'],
+      }, 'topic');
+      const ga = b12.particle('が', 'ga');
+      const ki = b12.tok({
+        text: 'き',
+      }, 'ki');
+      const ni = b12.tok({ text: 'に' }, 'ni');
+      const naru = b12.verb({ lemma: 'なる' }, 'naru');
+
+      b12.inOrder(topic, ga, 1);
+      b12.inOrder(ga, ki, 1);
+      b12.inOrder(ki, ni, 1);
+      b12.inOrder(ni, naru, 2);
+
+      b12.captureSpan('が気になる', topic, naru);
+    },
+
+    // Branch 13: Noun + が + き + に + なっている (hiragana with が - casual progressive)
+    // Example: あの映画がきになっている。
+    (b13) => {
+      const topic = b13.tok({
+        posOneOf: ['NOUN', 'PROPN', 'PRON'],
+      }, 'topic');
+      const ga = b13.particle('が', 'ga');
+      const ki = b13.tok({
+        text: 'き',
+      }, 'ki');
+      const ni = b13.tok({ text: 'に' }, 'ni');
+      const naru = b13.verb({ lemma: 'なる' }, 'naru');
+      const te = b13.aux({ lemma: 'て' }, 'te');
+      const iru = b13.aux({
+        lemmaOneOf: ['いる', 'おる'],
+      }, 'iru');
+
+      b13.inOrder(topic, ga, 1);
+      b13.inOrder(ga, ki, 1);
+      b13.inOrder(ki, ni, 1);
+      b13.inOrder(ni, naru, 2);
+      b13.auxOf(naru, te);
+      b13.auxOf(te, iru);
+
+      b13.captureSpan('が気になっている', topic, iru);
+    },
+
+    // Branch 14: Noun + が + き + に + なります (hiragana with が - polite)
+    (b14) => {
+      const topic = b14.tok({
+        posOneOf: ['NOUN', 'PROPN', 'PRON'],
+      }, 'topic');
+      const ga = b14.particle('が', 'ga');
+      const ki = b14.tok({
+        text: 'き',
+      }, 'ki');
+      const ni = b14.tok({ text: 'に' }, 'ni');
+      const naru = b14.verb({ lemma: 'なる' }, 'naru');
+      const masu = b14.aux({ lemma: 'ます' }, 'masu');
+
+      b14.inOrder(topic, ga, 1);
+      b14.inOrder(ga, ki, 1);
+      b14.inOrder(ki, ni, 1);
+      b14.inOrder(ni, naru, 2);
+      b14.auxOf(naru, masu);
+
+      b14.captureSpan('が気になります', topic, masu);
+    },
+
+    // Branch 15: Noun + が + き + に + なっています (hiragana with が - polite progressive)
+    // Example: 最近発売された珍しい魚の缶詰がきになっているんです。
+    (b15) => {
+      const topic = b15.tok({
+        posOneOf: ['NOUN', 'PROPN', 'PRON'],
+      }, 'topic');
+      const ga = b15.particle('が', 'ga');
+      const ki = b15.tok({
+        text: 'き',
+      }, 'ki');
+      const ni = b15.tok({ text: 'に' }, 'ni');
+      const naru = b15.verb({ lemma: 'なる' }, 'naru');
+      const te = b15.aux({ lemma: 'て' }, 'te');
+      const iru = b15.aux({
+        lemmaOneOf: ['いる', 'おる'],
+      }, 'iru');
+
+      b15.inOrder(topic, ga, 1);
+      b15.inOrder(ga, ki, 1);
+      b15.inOrder(ki, ni, 1);
+      b15.inOrder(ni, naru, 2);
+      b15.auxOf(naru, te);
+      b15.auxOf(te, iru);
+
+      b15.captureSpan('が気になっている', topic, iru);
+    },
+
+    // Branch 16: Noun + がき (as single NOUN token) + に + なる
+    // GiNZA sometimes tokenizes "がき" as a single NOUN token
+    // Example: アクセントがきになる。 → "アクセント" + "がき" + "に" + "なる"
+    (b16) => {
+      const topic = b16.tok({
+        posOneOf: ['NOUN', 'PROPN', 'PRON'],
+      }, 'topic');
+      const gaki = b16.tok({
+        pos: 'NOUN',
+        text: 'がき',
+      }, 'gaki');
+      const ni = b16.tok({ text: 'に' }, 'ni');
+      const naru = b16.verb({ lemma: 'なる' }, 'naru');
+
+      b16.inOrder(topic, gaki, 1);
+      b16.inOrder(gaki, ni, 1);
+      b16.inOrder(ni, naru, 2);
+
+      b16.captureSpan('が気になる', topic, naru);
+    },
+
+    // Branch 17: Noun + がき (as single NOUN) + に + なっている
+    // Example: あの映画がきになっている。
+    (b17) => {
+      const topic = b17.tok({
+        posOneOf: ['NOUN', 'PROPN', 'PRON'],
+      }, 'topic');
+      const gaki = b17.tok({
+        pos: 'NOUN',
+        text: 'がき',
+      }, 'gaki');
+      const ni = b17.tok({ text: 'に' }, 'ni');
+      const naru = b17.verb({ lemma: 'なる' }, 'naru');
+      const te = b17.aux({ lemma: 'て' }, 'te');
+      const iru = b17.aux({
+        lemmaOneOf: ['いる', 'おる'],
+      }, 'iru');
+
+      b17.inOrder(topic, gaki, 1);
+      b17.inOrder(gaki, ni, 1);
+      b17.inOrder(ni, naru, 2);
+      b17.auxOf(naru, te);
+      b17.auxOf(te, iru);
+
+      b17.captureSpan('が気になっている', topic, iru);
+    },
+
+    // Branch 18: Noun + がき + に + なります (polite)
+    (b18) => {
+      const topic = b18.tok({
+        posOneOf: ['NOUN', 'PROPN', 'PRON'],
+      }, 'topic');
+      const gaki = b18.tok({
+        pos: 'NOUN',
+        text: 'がき',
+      }, 'gaki');
+      const ni = b18.tok({ text: 'に' }, 'ni');
+      const naru = b18.verb({ lemma: 'なる' }, 'naru');
+      const masu = b18.aux({ lemma: 'ます' }, 'masu');
+
+      b18.inOrder(topic, gaki, 1);
+      b18.inOrder(gaki, ni, 1);
+      b18.inOrder(ni, naru, 2);
+      b18.auxOf(naru, masu);
+
+      b18.captureSpan('が気になります', topic, masu);
+    },
+
+    // Branch 19: Noun + がき + に + なっています (polite progressive)
+    // Example: 最近発売された珍しい魚の缶詰がきになっているんです。
+    (b19) => {
+      const topic = b19.tok({
+        posOneOf: ['NOUN', 'PROPN', 'PRON'],
+      }, 'topic');
+      const gaki = b19.tok({
+        pos: 'NOUN',
+        text: 'がき',
+      }, 'gaki');
+      const ni = b19.tok({ text: 'に' }, 'ni');
+      const naru = b19.verb({ lemma: 'なる' }, 'naru');
+      const te = b19.aux({ lemma: 'て' }, 'te');
+      const imasu = b19.aux({ lemma: 'います' }, 'imasu');
+
+      b19.inOrder(topic, gaki, 1);
+      b19.inOrder(gaki, ni, 1);
+      b19.inOrder(ni, naru, 2);
+      b19.auxOf(naru, te);
+      b19.auxOf(te, imasu);
+
+      b19.captureSpan('が気になっています', topic, imasu);
+    },
+
+    // Branch 20: Topic ending in人がき (compound "人がき" token)
+    // Example: この香水を付けている人がきになる。
+    (b20) => {
+      const hitoki = b20.tok({
+        pos: 'NOUN',
+        text: '人がき',
+      }, 'hitoki');
+      const ni = b20.tok({ text: 'に' }, 'ni');
+      const naru = b20.verb({ lemma: 'なる' }, 'naru');
+
+      b20.inOrder(hitoki, ni, 1);
+      b20.inOrder(ni, naru, 2);
+
+      b20.captureSpan('が気になる', hitoki, naru);
     }
   );
 });

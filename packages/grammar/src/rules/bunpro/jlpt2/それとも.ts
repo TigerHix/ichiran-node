@@ -44,9 +44,10 @@ export default bunproLinguisticRule('それとも', (r) => {
   //
   // GiNZA may parse それとも in different ways:
   // 1. Single token: それとも (CCONJ/ADV/SCONJ)
-  // 2. Multi-token: それ (PRON/CCONJ) + とも (PART/SCONJ/ADP)
+  // 2. Two tokens: それ (PRON/CCONJ) + とも (PART/SCONJ/ADP)
+  // 3. Three tokens: それ (CCONJ) + と (ADP) + も (ADP) - most common in GiNZA!
   //
-  // The rule matches both patterns to handle GiNZA parsing variations.
+  // The rule matches all patterns to handle GiNZA parsing variations.
 
   r.either(
     // Pattern 1: Single token それとも (most likely)
@@ -67,6 +68,42 @@ export default bunproLinguisticRule('それとも', (r) => {
       }, 'tomo');
       b2.inOrder(sore, tomo, 5);
       b2.captureSpan('それとも', sore, tomo);
+    },
+
+    // Pattern 3: Three-token - それ + と + も (GiNZA's most common split)
+    // Example: "クレジットカードで払う？それとも現金で？"
+    // Tokenizes as: それ(CCONJ) + と(ADP,fixed) + も(ADP,fixed)
+    (b3) => {
+      const sore = b3.tok({
+        lemma: 'それ',
+      }, 'sore');
+      const to = b3.tok({
+        text: 'と',
+        pos: 'ADP',
+      }, 'to');
+      const mo = b3.tok({
+        text: 'も',
+        pos: 'ADP',
+      }, 'mo');
+      b3.inOrder(sore, to, 1);
+      b3.inOrder(to, mo, 1);
+      b3.captureSpan('それとも', sore, mo);
+    },
+
+    // Pattern 4: Three-token with any POS (more permissive)
+    (b4) => {
+      const sore = b4.tok({
+        text: 'それ',
+      }, 'sore');
+      const to = b4.tok({
+        text: 'と',
+      }, 'to');
+      const mo = b4.tok({
+        text: 'も',
+      }, 'mo');
+      b4.inOrder(sore, to, 1);
+      b4.inOrder(to, mo, 1);
+      b4.captureSpan('それとも', sore, mo);
     }
   );
 });

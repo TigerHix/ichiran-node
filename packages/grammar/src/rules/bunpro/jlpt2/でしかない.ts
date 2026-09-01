@@ -40,42 +40,70 @@ import { linguisticRule } from '../../../engine/lang.js';
  *
  * GiNZA parse structure:
  * - Noun/Verb as base
- * - で as ADP (copula form) or AUX
- * - しか as ADP or PART
- * - ない/なかった as ADJ
+ * - で as AUX (助動詞, lemma=だ)
+ * - しか as ADP (助詞-副助詞, lemma=しか)
+ * - ない as AUX (形容詞-非自立可能, lemma=ない)
+ * - なかった is split into なかっ (AUX) + た (AUX)
  */
 export default linguisticRule('でしかない', (r) => {
   r.either(
-    // Pattern 1: Ultra-flexible - matches noun/verb followed by any form of でしかない
-    // Handles various GiNZA tokenizations:
-    // - 理想 + で + しか + ない (4 tokens)
-    // - 理想 + で + しかない (3 tokens)
-    // - 理想 + でしかない (2 tokens)
-    // - 理想でしかない (1 token - less likely but possible)
+    // Pattern 1: Noun + で (AUX) + しか (ADP) + ない (AUX)
+    // Standard pattern: e.g., 理想でしかない, 甘えでしかない
     (b1) => {
-      const base = b1.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON', 'VERB'] }, 'base');
+      const noun = b1.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON'] }, 'noun');
+      const de = b1.tok({ pos: 'AUX', text: 'で' }, 'de');
+      const shika = b1.tok({ pos: 'ADP', text: 'しか' }, 'shika');
+      const nai = b1.tok({ pos: 'AUX', text: 'ない' }, 'nai');
 
-      // Match the rest of the pattern in various forms
-      // MUST include both で and しか to distinguish from:
-      // - ではない (simple negation)
-      // - しかない (only X, without copula)
-      // - でしかできない (can only do with, potential verb)
-      const rest = b1.tok({
-        textOneOf: [
-          // Full patterns (most reliable)
-          'でしかない', 'でしかなかった',
-          // Split patterns (でしか combined)
-          'でしか',
-          // Combined しかない after で
-          'しかない', 'しかなかった'
-        ]
-      }, 'rest');
+      b1.inOrder(noun, de, 2);
+      b1.inOrder(de, shika, 1);
+      b1.inOrder(shika, nai, 1);
 
-      // Base and rest must be within 5 tokens of each other
-      b1.inOrder(base, rest, 5);
+      b1.captureSpan('でしかない', noun, nai);
+    },
 
-      // Capture from base to rest
-      b1.captureSpan('でしかない', base, rest);
+    // Pattern 2: Noun + で (AUX) + しか (ADP) + なかった
+    // Past tense: e.g., ウソでしかなかった
+    (b2) => {
+      const noun = b2.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON'] }, 'noun');
+      const de = b2.tok({ pos: 'AUX', text: 'で' }, 'de');
+      const shika = b2.tok({ pos: 'ADP', text: 'しか' }, 'shika');
+      const nakat = b2.tok({ pos: 'AUX', text: 'なかっ' }, 'nakat');
+      const ta = b2.tok({ pos: 'AUX', text: 'た' }, 'ta');
+
+      b2.inOrder(noun, de, 2);
+      b2.inOrder(de, shika, 1);
+      b2.inOrder(shika, nakat, 1);
+      b2.inOrder(nakat, ta, 1);
+
+      b2.captureSpan('でしかない', noun, ta);
+    },
+
+    // Pattern 3: Permissive - noun followed by で + しか + nai (any form)
+    // Handles POS variations in GiNZA tokenization
+    (b3) => {
+      const noun = b3.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON'] }, 'noun');
+      const de = b3.tok({ text: 'で' }, 'de');
+      const shika = b3.tok({ text: 'しか' }, 'shika');
+      const nai = b3.tok({ textOneOf: ['ない', 'なかっ'] }, 'nai');
+
+      b3.inOrder(noun, de, 3);
+      b3.inOrder(de, shika, 2);
+      b3.inOrder(shika, nai, 1);
+
+      b3.captureSpan('でしかない', noun, nai);
+    },
+
+    // Pattern 4: Combined tokens (when GiNZA doesn't split)
+    // e.g., でしかない as a single token or で + しかない
+    (b4) => {
+      const noun = b4.tok({ posOneOf: ['NOUN', 'PROPN', 'PRON'] }, 'noun');
+      const deshikanai = b4.tok({
+        textOneOf: ['でしかない', 'でしかなかった', 'でしか', 'しかない', 'しかなかった']
+      }, 'deshikanai');
+
+      b4.inOrder(noun, deshikanai, 3);
+      b4.captureSpan('でしかない', noun, deshikanai);
     }
   );
 });

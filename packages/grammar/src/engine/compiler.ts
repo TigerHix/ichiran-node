@@ -134,6 +134,7 @@ function getClauseVars(c: Clause): string[] {
   if (c.kind === 'edge') return [c.child.v, c.head.v];
   if (c.kind === 'next' || c.kind === 'before') return [c.a.v, c.b.v];
   if (c.kind === 'not') return getClauseVars(c.clause);
+  if (c.kind === 'notBefore') return [c.token.v];
   if (c.kind === 'optional') return c.clauses.flatMap(getClauseVars);
   if (c.kind === 'either') return c.branches.flatMap((b) => b.clauses.flatMap(getClauseVars));
   return [];
@@ -183,6 +184,23 @@ function clauseHolds(clause: Clause, sent: GinzaSentence, bind: Binding): boolea
     const innerVars = getClauseVars(clause.clause);
     if (innerVars.some((v) => !bind.has(v))) return true; // defer until bound
     return !clauseHolds(clause.clause, sent, bind);
+  }
+  if (clause.kind === 'notBefore') {
+    // Check if the target token is bound
+    const tokenIdx = bind.get(clause.token.v);
+    if (tokenIdx === undefined) return true; // defer until target token is bound
+
+    // Look for any matching token before the target
+    const maxDist = clause.maxDistance ?? 1;
+    for (let i = Math.max(0, tokenIdx - maxDist); i < tokenIdx; i++) {
+      const tok = sent.tokens[i];
+      if (tok && tokenMatchesPreds(tok, clause.preds)) {
+        // Found a matching token before - fail the match
+        return false;
+      }
+    }
+    // No matching token found before - pass
+    return true;
   }
   if (clause.kind === 'optional') {
     // Optional clauses never cause failure; they're "nice to have"

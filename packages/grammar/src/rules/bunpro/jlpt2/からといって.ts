@@ -283,10 +283,12 @@ export default bunproLinguisticRule('からといって', (r) => {
 
     // Pattern 9: Very loose catch-all - match any predicate + kara + to + any ending
     // This handles unexpected GiNZA tokenizations
+    // FIX: Require "と" to be ADP/PART (not SCONJ conditional) and followed by non-punctuation
     (b9) => {
       const predicate = b9.tok({ posOneOf: ['VERB', 'ADJ', 'NOUN', 'PROPN', 'PRON'] }, 'predicate');
       const kara = b9.particle('から', 'kara');
-      const to = b9.tok({ text: 'と' }, 'to');
+      // Require "と" to be ADP or PART, not SCONJ (conditional "if" in からすると)
+      const to = b9.tok({ text: 'と', posOneOf: ['ADP', 'PART'] }, 'to');
       const ending = b9.tok({ textOneOf: ['って', 'いって', 'いう'] }, 'ending');
 
       b9.inOrder(predicate, kara, 5);
@@ -298,10 +300,11 @@ export default bunproLinguisticRule('からといって', (r) => {
 
     // Pattern 10: Match predicate + kara + to + itte/itte (very flexible)
     // Handles various tokenizations of 〜からといって
+    // FIX: Require "と" to be ADP/PART (not SCONJ conditional)
     (b10) => {
       const predicate = b10.tok({ posOneOf: ['VERB', 'ADJ', 'NOUN', 'PROPN', 'PRON', 'AUX', 'ADV'] }, 'predicate');
       const kara = b10.particle('から', 'kara');
-      const to = b10.tok({ textOneOf: ['と', 'って', 'いって'] }, 'to');
+      const to = b10.tok({ textOneOf: ['と', 'って', 'いって'], posOneOf: ['ADP', 'PART'] }, 'to');
       const itte = b10.tok({ textOneOf: ['いって', 'って', 'いう'] }, 'itte');
 
       b10.inOrder(predicate, kara, 5);
@@ -313,11 +316,14 @@ export default bunproLinguisticRule('からといって', (r) => {
 
     // Pattern 11: Ultra-loose catch-all - match predicate + kara + ending token
     // This catches all remaining edge cases
-    // NOTE: This may cause false positives on からする (karasuru) patterns
+    // FIX: Require ending token to be ADP/PART (not SCONJ conditional)
     (b11) => {
       const predicate = b11.tok({ posOneOf: ['VERB', 'ADJ', 'NOUN', 'PROPN', 'PRON', 'AUX', 'ADV', 'PART'] }, 'predicate');
       const kara = b11.particle('から', 'kara');
-      const ending = b11.tok({ textOneOf: ['と', 'って', 'いって', 'といって', 'からといって', 'からって', 'からとて'] }, 'ending');
+      const ending = b11.tok({
+        textOneOf: ['と', 'って', 'いって', 'といって', 'からといって', 'からって', 'からとて'],
+        posOneOf: ['ADP', 'PART'],
+      }, 'ending');
 
       b11.inOrder(predicate, kara, 5);
       b11.inOrder(kara, ending, 3);

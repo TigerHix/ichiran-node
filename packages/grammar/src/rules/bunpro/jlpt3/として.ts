@@ -19,19 +19,23 @@ export default bunproLinguisticRule('として', (r) => {
   // - 友達としては最高だ (as a friend, [she's] the best)
   // - 会社としての目標 (goals as a company)
   // - DVDプレイヤーとしても使えます (can also use as a DVD player)
-
-  const to = r.particle('と', 'to');
+  //
+  // Negative: Should NOT match volitional + として (e.g., 行こうとしています)
+  // because that's the "try to/about to" construction, not "as"
 
   r.either(
     // Pattern 1: して as single token (VERB or AUX)
     // 最も難しいところとして (parsed as single token)
     (b) => {
+      const to = b.particle('と', 'to');
       const shite = b.tok({
         text: 'して',
         lemma: 'する',
         posOneOf: ['VERB', 'AUX'],
       }, 'shite');
       b.inOrder(to, shite, 1);
+      // Exclude: volitional form immediately before と
+      b.notBefore(to, { inflectionForm: '意志推量形' });
       b.captureSpan('として', to, shite);
     },
 
@@ -39,6 +43,7 @@ export default bunproLinguisticRule('として', (r) => {
     // 友達として, 先生として, 会社として
     // GiNZA inconsistency: し can be VERB or AUX
     (b) => {
+      const to = b.particle('と', 'to');
       const shi = b.tok({
         text: 'し',
         lemma: 'する',
@@ -51,6 +56,8 @@ export default bunproLinguisticRule('として', (r) => {
       }, 'te');
       b.inOrder(to, shi, 1);
       b.inOrder(shi, te, 1);
+      // Exclude: volitional form immediately before と
+      b.notBefore(to, { inflectionForm: '意志推量形' });
       b.captureSpan('として', to, te);
     }
   );

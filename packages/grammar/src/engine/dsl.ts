@@ -30,7 +30,8 @@ export type Clause =
   | { kind: 'before'; a: NodeRef; b: NodeRef; maxDistance?: number }
   | { kind: 'not'; clause: Clause }
   | { kind: 'optional'; clauses: Clause[] }
-  | { kind: 'either'; branches: EitherBranch[] };
+  | { kind: 'either'; branches: EitherBranch[] }
+  | { kind: 'notBefore'; token: NodeRef; preds: TokPred[]; maxDistance?: number };
 
 /** A branch in an either clause - contains its own clauses and captures */
 export type EitherBranch = {
