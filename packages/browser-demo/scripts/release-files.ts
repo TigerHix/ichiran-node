@@ -36,7 +36,7 @@ export async function currentSourceIdentity(repositoryRoot: string): Promise<{
   });
   const sourceCommit = stdout.trim();
   if (!/^[0-9a-f]{40}$/.test(sourceCommit)) throw new Error('Current Git HEAD is invalid');
-  const lock = await readFile(join(repositoryRoot, 'browser-alpha', 'sources.lock.json'));
+  const lock = await readFile(join(repositoryRoot, 'data', 'source-compiler-sources.lock.json'));
   return { sourceCommit, sourcesLockSha256: sha256(lock) };
 }
 

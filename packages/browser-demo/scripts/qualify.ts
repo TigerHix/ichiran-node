@@ -1,5 +1,6 @@
 import { spawn } from 'node:child_process';
 import { resolve } from 'node:path';
+import { verifyAnalyzerRelease } from './release-files.js';
 
 const packageRoot = resolve(import.meta.dir, '..');
 const repositoryRoot = resolve(packageRoot, '..', '..');
@@ -41,19 +42,34 @@ async function run(
   return stdout.trim();
 }
 
+const verifiedRelease = await verifyAnalyzerRelease(
+  release,
+  repositoryRoot,
+  process.env.ICHIRAN_QUALIFIED_ARTIFACT
+);
 await run('bun', ['scripts/stage-analyzer.ts', release], packageRoot);
 await run('bun', ['run', 'build'], packageRoot);
 await run('bun', [
-  'run', 'alpha:release:verify', '--',
-  '--out', release,
-  '--shell-dir', resolve(packageRoot, 'dist')
-], repositoryRoot);
-await run('bun', [
   'scripts/audit-build.ts', '--require-analyzer', '--release', release
 ], packageRoot);
+const shellBytes = Number(await run('bun', ['scripts/measure-shell.ts'], packageRoot, true));
+if (!Number.isSafeInteger(shellBytes) || shellBytes < 1) {
+  throw new Error(`Invalid production shell byte count: ${shellBytes}`);
+}
+const releaseDownloadBytes = verifiedRelease.manifestBytes.byteLength
+  + verifiedRelease.hotBytes.byteLength
+  + verifiedRelease.detailsBytes.byteLength;
+const firstInstallBytes = releaseDownloadBytes + shellBytes;
+const firstInstallLimit = 25 * 1024 * 1024;
+if (firstInstallBytes > firstInstallLimit) {
+  throw new Error(
+    `First-install bytes ${firstInstallBytes} exceed the ${firstInstallLimit}-byte limit`
+  );
+}
 if (!skipE2e) await run('bun', ['run', 'test:e2e'], packageRoot);
 
 console.log(
-  `Browser alpha qualification passed for ${release} with a verified production-shell fingerprint`
+  `Browser qualification passed for ${release}: ${releaseDownloadBytes} release bytes + `
+  + `${shellBytes} shell bytes = ${firstInstallBytes} first-install bytes`
   + (skipE2e ? ' (E2E skipped)' : '')
 );

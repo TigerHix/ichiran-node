@@ -13,7 +13,7 @@
     "verify:rust-kernel": "bash packages/rust-kernel/scripts/verify.sh",
     "source:release": "sh scripts/source-compiler-release-no-postgres.sh",
     "source:attestation": "bun scripts/source-compiler-parity-attestation.ts",
-    "qualify:rust-same-pack": "bun packages/core/tools/rust-kernel-wasm-differential.ts --same-pack",
+    "qualify:rust-same-pack": "sh scripts/rust-kernel-source-release-differential.sh",
     "build:compiler": "bun run --cwd packages/core build && bun run --cwd packages/reference-postgres build && bun run --cwd packages/data build",
     "typecheck": "bun run --cwd packages/core typecheck && bun run --cwd packages/node typecheck && bun run --cwd packages/cli typecheck && bun run --cwd packages/api typecheck && bun run --cwd packages/browser-demo typecheck",
     "typecheck:compiler": "bun run --cwd packages/core typecheck && bun run --cwd packages/reference-postgres typecheck && bun run --cwd packages/data typecheck && bun run alpha:release:typecheck",
