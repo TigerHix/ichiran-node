@@ -1,0 +1,917 @@
+{
+  "formatVersion": 4,
+  "generatedAt": "2026-09-02T05:10:59.453Z",
+  "completeCorpus": true,
+  "testedRelease": {
+    "sourceCommit": "c639427075ddf26b6b4e3b4ace1d5397ec0ac9d8",
+    "manifestFileSha256": "676ba06f305ca6ac29bc6948e2c5577e25bee5233dbd72ccf57e137eeb3a5b66",
+    "manifestSha256": "1116263225e7bd4cccec333ed0039f02564e57af19b7cb76a8673270ad6f669a",
+    "hot": {
+      "file": "hot.bin.gz",
+      "encoding": "gzip",
+      "downloadBytes": 12607002,
+      "downloadSha256": "8648acfde1b3bc685bcd786a7718d2d980103c87fade3c3fdbdf416960859b9f",
+      "installedBytes": 24747944,
+      "installedSha256": "eb9c58204c624b1220bc257b910fc5df7e092133af09760ce6800b672b4bcd96"
+    },
+    "details": {
+      "file": "details.bin.gz",
+      "encoding": "gzip",
+      "downloadBytes": 12317325,
+      "downloadSha256": "ad10bc4876d9a05224f62f5b438080ea1ff4e6a88ab3090be0f871035e95918a",
+      "installedBytes": 13555874,
+      "installedSha256": "0fc45731d84fbb7c2ccf3ef5692d2f1ab01e538325f0ed50135da38e621aa151"
+    }
+  },
+  "releaseInputLock": {
+    "kind": "source-compiler",
+    "sha256": "16f11739978e91922cf43337c6b801765214dbb0945509dec94b85321952b9cd"
+  },
+  "frozenOracleLock": {
+    "sha256": "80dc7c907d688a5ecb0bbd8b23b889f47cb3a28f8484f80e8dc4737bb090c070",
+    "database": "ichiran_oracle_ea958336",
+    "upstreamIchiranCommit": "ea9583368e67cad22d94abae8dbcc8df96d99bcd"
+  },
+  "corpus": {
+    "segmentation": 534,
+    "romanization": 5,
+    "cli": 252,
+    "hard": 149,
+    "counters": 200,
+    "entities": 54,
+    "probes": 47
+  },
+  "accounting": {
+    "categoriesAreIndependent": true,
+    "categories": {
+      "segmentation": {
+        "operations": 534,
+        "uniqueTexts": 534
+      },
+      "standaloneRomanization": {
+        "operations": 5,
+        "uniqueTexts": 5
+      },
+      "cliDetailed": {
+        "operations": 252,
+        "uniqueTexts": 252
+      },
+      "hardDetailed": {
+        "operations": 149,
+        "uniqueTexts": 149
+      },
+      "countersDetailed": {
+        "operations": 200,
+        "uniqueTexts": 200
+      },
+      "entitiesDetailed": {
+        "operations": 54,
+        "uniqueTexts": 47
+      },
+      "probesDetailed": {
+        "operations": 47,
+        "uniqueTexts": 41
+      },
+      "probesByCategory": {
+        "top-n": {
+          "operations": 5,
+          "uniqueTexts": 1
+        },
+        "counter-number": {
+          "operations": 20,
+          "uniqueTexts": 20
+        },
+        "normalization": {
+          "operations": 3,
+          "uniqueTexts": 3
+        },
+        "punctuation-chunks": {
+          "operations": 2,
+          "uniqueTexts": 1
+        },
+        "generated-exception": {
+          "operations": 17,
+          "uniqueTexts": 16
+        }
+      },
+      "detailedLegacyTotal": {
+        "operations": 702,
+        "uniqueTexts": 587
+      },
+      "allComparisons": {
+        "operations": 1241,
+        "uniqueTexts": 1121
+      }
+    },
+    "overlap": {
+      "cliAndHardUniqueTexts": 99,
+      "segmentationAndCliUniqueTexts": 2,
+      "duplicateEntityRequestsByText": 7,
+      "romanizationTextsAlreadyCoveredElsewhere": 3
+    },
+    "notSummedIntoThisDifferential": {
+      "legacyCliInfoStrings": 3,
+      "coreJsonConsistencyRoundTrips": 17,
+      "reason": "CLI info formatting is not a browser API; core round trips assert its own object/JSON consistency rather than a second analyzer oracle."
+    }
+  },
+  "authoritativeOracleTotals": {
+    "policy": "Pinned current-Lisp snapshots are authoritative where present; the frozen PostgreSQL reference is the fallback for unsnapshotted suites.",
+    "segmentation": {
+      "operations": 534,
+      "exact": 534,
+      "divergent": 0,
+      "pathExact": 534,
+      "analyzerDivergent": 0,
+      "presentationDivergent": 0,
+      "errors": 0
+    },
+    "detailedLegacy": {
+      "operations": 702,
+      "exact": 686,
+      "divergent": 16,
+      "pathExact": 690,
+      "analyzerDivergent": 12,
+      "presentationDivergent": 4,
+      "errors": 0
+    },
+    "standaloneRomanization": {
+      "operations": 5,
+      "exact": 5,
+      "divergent": 0,
+      "pathExact": 5,
+      "analyzerDivergent": 0,
+      "presentationDivergent": 0,
+      "errors": 0
+    },
+    "allComparisons": {
+      "operations": 1241,
+      "exact": 1225,
+      "divergent": 16,
+      "pathExact": 1229,
+      "analyzerDivergent": 12,
+      "presentationDivergent": 4,
+      "errors": 0
+    },
+    "frozenFallbackCleanSemantic": {
+      "operations": 301,
+      "exact": 296,
+      "divergent": 5,
+      "pathExact": 296,
+      "analyzerDivergent": 5,
+      "presentationDivergent": 0,
+      "errors": 0
+    }
+  },
+  "results": {
+    "segmentation": {
+      "total": 534,
+      "exact": 534,
+      "pathExact": 534,
+      "analyzer": 0,
+      "presentation": 0,
+      "errors": 0
+    },
+    "romanization": {
+      "total": 5,
+      "exact": 5,
+      "pathExact": 5,
+      "analyzer": 0,
+      "presentation": 0,
+      "errors": 0
+    },
+    "cli": {
+      "total": 252,
+      "exact": 240,
+      "pathExact": 243,
+      "analyzer": 9,
+      "presentation": 3,
+      "errors": 0
+    },
+    "hard": {
+      "total": 149,
+      "exact": 145,
+      "pathExact": 146,
+      "analyzer": 3,
+      "presentation": 1,
+      "errors": 0
+    },
+    "counters": {
+      "total": 200,
+      "exact": 200,
+      "pathExact": 200,
+      "analyzer": 0,
+      "presentation": 0,
+      "errors": 0
+    },
+    "entities": {
+      "total": 54,
+      "exact": 54,
+      "pathExact": 54,
+      "analyzer": 0,
+      "presentation": 0,
+      "errors": 0
+    },
+    "probes": {
+      "total": 47,
+      "exact": 47,
+      "pathExact": 47,
+      "analyzer": 0,
+      "presentation": 0,
+      "errors": 0
+    },
+    "frozenFallbackCleanSemantic": {
+      "counters": {
+        "total": 200,
+        "exact": 200,
+        "pathExact": 200,
+        "analyzer": 0,
+        "presentation": 0,
+        "errors": 0
+      },
+      "entities": {
+        "total": 54,
+        "exact": 54,
+        "pathExact": 54,
+        "analyzer": 0,
+        "presentation": 0,
+        "errors": 0
+      },
+      "probes": {
+        "total": 47,
+        "exact": 42,
+        "pathExact": 42,
+        "analyzer": 5,
+        "presentation": 0,
+        "errors": 0
+      }
+    }
+  },
+  "frozenPostgresDiagnostics": {
+    "role": {
+      "snapshotCoveredSuites": "diagnostic-only",
+      "unsnapshottedSuites": "authoritative fallback"
+    },
+    "portableComparison": {
+      "segmentation": {
+        "total": 534,
+        "exact": 532,
+        "pathExact": 532,
+        "analyzer": 2,
+        "presentation": 0,
+        "errors": 0
+      },
+      "romanization": {
+        "total": 5,
+        "exact": 5,
+        "pathExact": 5,
+        "analyzer": 0,
+        "presentation": 0,
+        "errors": 0
+      },
+      "cli": {
+        "total": 252,
+        "exact": 230,
+        "pathExact": 238,
+        "analyzer": 14,
+        "presentation": 8,
+        "errors": 0
+      },
+      "hard": {
+        "total": 149,
+        "exact": 138,
+        "pathExact": 146,
+        "analyzer": 3,
+        "presentation": 8,
+        "errors": 0
+      },
+      "counters": {
+        "total": 200,
+        "exact": 200,
+        "pathExact": 200,
+        "analyzer": 0,
+        "presentation": 0,
+        "errors": 0
+      },
+      "entities": {
+        "total": 54,
+        "exact": 54,
+        "pathExact": 54,
+        "analyzer": 0,
+        "presentation": 0,
+        "errors": 0
+      },
+      "probes": {
+        "total": 47,
+        "exact": 47,
+        "pathExact": 47,
+        "analyzer": 0,
+        "presentation": 0,
+        "errors": 0
+      },
+      "allComparisons": {
+        "operations": 1241,
+        "exact": 1206,
+        "divergent": 35,
+        "pathExact": 1222,
+        "analyzerDivergent": 19,
+        "presentationDivergent": 16,
+        "errors": 0
+      },
+      "cleanSemantic": {
+        "operations": 702,
+        "exact": 661,
+        "divergent": 41,
+        "pathExact": 661,
+        "analyzerDivergent": 41,
+        "presentationDivergent": 0,
+        "errors": 0
+      }
+    },
+    "currentLispDrift": {
+      "segmentationExact": 532,
+      "segmentationFailed": 2,
+      "romanizationExact": 5,
+      "romanizationFailed": 0,
+      "cliExact": 242,
+      "cliFailed": 10,
+      "hardExact": 142,
+      "hardFailed": 7,
+      "differences": {
+        "segmentation": [
+          {
+            "request": "エロそうだヤバそうだ",
+            "difference": {
+              "path": "$",
+              "kind": "length",
+              "expected": "4",
+              "actual": "5"
+            }
+          },
+          {
+            "request": "綺麗だけど近よりがたいよね",
+            "difference": {
+              "path": "$",
+              "kind": "length",
+              "expected": "4",
+              "actual": "5"
+            }
+          }
+        ],
+        "romanization": [],
+        "cli": [
+          {
+            "request": "駅前再開発計画案再々修正版が回ってきた。",
+            "difference": {
+              "path": "$[0][0][0][6][1].components[1].conj[0].reading",
+              "kind": "value",
+              "expected": "\"来る 【クる】\"",
+              "actual": "\"来る 【くる】\""
+            }
+          },
+          {
+            "request": "そのはなしはあとでまとめてきいておくっていってたよね。",
+            "difference": {
+              "path": "$[0][0][0][5][1].components[1].conj[0].reading",
+              "kind": "value",
+              "expected": "\"来る 【クる】\"",
+              "actual": "\"来る 【くる】\""
+            }
+          },
+          {
+            "request": "まにあいそうだったのにバスがこなくてのがしてしまった。",
+            "difference": {
+              "path": "$[0][0][0][0][1].score",
+              "kind": "value",
+              "expected": "345",
+              "actual": "335"
+            }
+          },
+          {
+            "request": "ねむくないふりをしてたけどまぶたがおもくなってきてる。",
+            "difference": {
+              "path": "$[0][0][0][8][1].components[1].conj[0].reading",
+              "kind": "value",
+              "expected": "\"来る 【クる】\"",
+              "actual": "\"来る 【くる】\""
+            }
+          },
+          {
+            "request": "ここだけはまけられないってじぶんにいいきかせてきた。",
+            "difference": {
+              "path": "$[0][0][0][7][1].components[1].conj[0].reading",
+              "kind": "value",
+              "expected": "\"来る 【クる】\"",
+              "actual": "\"来る 【くる】\""
+            }
+          },
+          {
+            "request": "こぼれるまえにふいておけばよかったのにぼうっとしてた。",
+            "difference": {
+              "path": "$[0][0][0][1][1].alternative",
+              "kind": "length",
+              "expected": "2",
+              "actual": "3"
+            }
+          },
+          {
+            "request": "たのみかたをまちがえたせいでちがうのがおくられてきた。",
+            "difference": {
+              "path": "$[0][0][0][8][1].alternative[0].components[1].conj[0].reading",
+              "kind": "value",
+              "expected": "\"来る 【クる】\"",
+              "actual": "\"来る 【くる】\""
+            }
+          },
+          {
+            "request": "まってばかりいてもなにもはじまらないきがしている。",
+            "difference": {
+              "path": "$[0][0][0][0][1].alternative",
+              "kind": "length",
+              "expected": "2",
+              "actual": "3"
+            }
+          },
+          {
+            "request": "すぐにはむりだろうけどすこしずつならできそう。",
+            "difference": {
+              "path": "$[0][0][0][7][1].score",
+              "kind": "value",
+              "expected": "200",
+              "actual": "190"
+            }
+          },
+          {
+            "request": "もうすこしでかいけつしそうなのにさいごでつまづく。",
+            "difference": {
+              "path": "$[0][0][0][3][1].score",
+              "kind": "value",
+              "expected": "775",
+              "actual": "765"
+            }
+          }
+        ],
+        "hard": [
+          {
+            "request": "いかざるをえなくなってきちゃってる",
+            "difference": {
+              "path": "$[0][0][0][3][1].alternative[0].components[2].conj[0].reading",
+              "kind": "value",
+              "expected": "\"来る 【クる】\"",
+              "actual": "\"来る 【くる】\""
+            }
+          },
+          {
+            "request": "やらないわけにはいかなくなってきた",
+            "difference": {
+              "path": "$[0][0][0][4][1].components[2].conj[0].reading",
+              "kind": "value",
+              "expected": "\"来る 【クる】\"",
+              "actual": "\"来る 【くる】\""
+            }
+          },
+          {
+            "request": "しておけばよかったとおもわずにはいられない",
+            "difference": {
+              "path": "$[0][0][0][1][1].conj[0].reading",
+              "kind": "value",
+              "expected": "\"置けばよい 【おけばよい】\"",
+              "actual": "\"置けばいい 【おけばいい】\""
+            }
+          },
+          {
+            "request": "せずにいられなくなってきちゃってる",
+            "difference": {
+              "path": "$[0][0][0][1][1].components[3].conj[0].reading",
+              "kind": "value",
+              "expected": "\"来る 【クる】\"",
+              "actual": "\"来る 【くる】\""
+            }
+          },
+          {
+            "request": "していられなくなってきちゃっている",
+            "difference": {
+              "path": "$[0][0][0][0][1].components[4].conj[0].reading",
+              "kind": "value",
+              "expected": "\"来る 【クる】\"",
+              "actual": "\"来る 【くる】\""
+            }
+          },
+          {
+            "request": "してこなかったことをしておかなくてはならない",
+            "difference": {
+              "path": "$[0][0][0][0][1].components[1].conj[0].reading",
+              "kind": "value",
+              "expected": "\"来る 【クる】\"",
+              "actual": "\"来る 【くる】\""
+            }
+          },
+          {
+            "request": "しつづけられなくなってきつつある",
+            "difference": {
+              "path": "$[0][0][0][0][1].components[3].conj[0].reading",
+              "kind": "value",
+              "expected": "\"来る 【クる】\"",
+              "actual": "\"来る 【くる】\""
+            }
+          }
+        ]
+      }
+    }
+  },
+  "gate": {
+    "currentOracleAllowlist": [],
+    "currentLispSnapshotsAreAuthoritative": true,
+    "frozenPostgresIsFallbackAndDiagnostic": true,
+    "rule": "Exit nonzero for any current-Lisp divergence in snapshot-covered suites, or any frozen-reference legacy or clean-semantic divergence in unsnapshotted suites, unless --allow-failures is explicitly passed."
+  },
+  "samples": [
+    {
+      "suite": "cli",
+      "request": "机の角に足の小指をぶつける確率は宇宙の悪意だ。|1",
+      "classification": "analyzer",
+      "qualifiedOutputSha256": "33a19e104c6f5636c911b12da81045d4f8ecb15f15ca27dfcb9b3fbbb0b81539",
+      "sourceOutputSha256": "b83c05b401de4ebe74c284f2a08d24bac62dcd37e7bcacbdb14e43d796460c67",
+      "pathDifference": {
+        "path": "$[0][0][0][2][0]",
+        "kind": "value",
+        "expected": "\"kado/kaku/tsuno\"",
+        "actual": "\"kado/tsuno/kaku\""
+      },
+      "detailedDifference": {
+        "path": "$[0][0][0][2][0]",
+        "kind": "value",
+        "expected": "\"kado/kaku/tsuno\"",
+        "actual": "\"kado/tsuno/kaku\""
+      }
+    },
+    {
+      "suite": "cli",
+      "request": "午前二時のポエムは午前九時の現実に勝てない。|1",
+      "classification": "analyzer",
+      "qualifiedOutputSha256": "3b7b3e3b01b0191ac212cf44370f92271aa68e3a055a019ea2011d21725fed1e",
+      "sourceOutputSha256": "be616f826b904b3017add7f5ac94131a3bb8ccef50ebcecaa11693a8d6721edd",
+      "pathDifference": {
+        "path": "$[0][0][0][1][0]",
+        "kind": "value",
+        "expected": "\"futatoki/niji\"",
+        "actual": "\"niji/futatoki\""
+      },
+      "detailedDifference": {
+        "path": "$[0][0][0][1][0]",
+        "kind": "value",
+        "expected": "\"futatoki/niji\"",
+        "actual": "\"niji/futatoki\""
+      }
+    },
+    {
+      "suite": "cli",
+      "request": "窓際の席だけが世界に開いている。|1",
+      "classification": "analyzer",
+      "qualifiedOutputSha256": "6686f4bda01a94e5bb45d9cc5422c3be84efe662f43f3c02c3164b84824d69f1",
+      "sourceOutputSha256": "6bf73577128b66bd50cd7cb7e14f2e53c173a4255a9d3e534a1f8dc4fbaa2e75",
+      "pathDifference": {
+        "path": "$[0][0][0][5][0]",
+        "kind": "value",
+        "expected": "\"hiraiteiru/aiteiru\"",
+        "actual": "\"aiteiru/hiraiteiru\""
+      },
+      "detailedDifference": {
+        "path": "$[0][0][0][5][0]",
+        "kind": "value",
+        "expected": "\"hiraiteiru/aiteiru\"",
+        "actual": "\"aiteiru/hiraiteiru\""
+      }
+    },
+    {
+      "suite": "cli",
+      "request": "朝活仲間募集掲示板荒らし対策会議を開いた。|1",
+      "classification": "analyzer",
+      "qualifiedOutputSha256": "11d7e3fc63324f056ad427650c29fa2603c3f667fffcb2604e2c578ffe4908dc",
+      "sourceOutputSha256": "168c6f27d413c4e4372b5bfae6c84900e5c349f25b5c4b9511563fc165c3c93b",
+      "pathDifference": {
+        "path": "$[0][0][0][8][0]",
+        "kind": "value",
+        "expected": "\"hiraita/aita\"",
+        "actual": "\"aita/hiraita\""
+      },
+      "detailedDifference": {
+        "path": "$[0][0][0][8][0]",
+        "kind": "value",
+        "expected": "\"hiraita/aita\"",
+        "actual": "\"aita/hiraita\""
+      }
+    },
+    {
+      "suite": "cli",
+      "request": "湿度高め設定推奨理由説明不足感が否めない。|1",
+      "classification": "analyzer",
+      "qualifiedOutputSha256": "f054a6db900dcb246be3805f1d074ea6f140938a6e9ff48e84f1fa230223fe32",
+      "sourceOutputSha256": "2e0bf3d795d143fc3d42840bb723cba658e542fc895bb0280537bcff31f3af06",
+      "pathDifference": {
+        "path": "$[0][0][0][9][0]",
+        "kind": "value",
+        "expected": "\"inamenai/iyamenai\"",
+        "actual": "\"iyamenai/inamenai\""
+      },
+      "detailedDifference": {
+        "path": "$[0][0][0][9][0]",
+        "kind": "value",
+        "expected": "\"inamenai/iyamenai\"",
+        "actual": "\"iyamenai/inamenai\""
+      }
+    },
+    {
+      "suite": "cli",
+      "request": "バロック音楽即興演奏基礎練習会を開いた。|1",
+      "classification": "analyzer",
+      "qualifiedOutputSha256": "4685726f5444713c0fcfbddc80aec800b4b7e06f4f18aad6167211d4f67462b7",
+      "sourceOutputSha256": "e09b5f5f2a7e9f9503b3a1f74c6bd151f2816a90a57308e3acda8fe5a347e23d",
+      "pathDifference": {
+        "path": "$[0][0][0][5][0]",
+        "kind": "value",
+        "expected": "\"hiraita/aita\"",
+        "actual": "\"aita/hiraita\""
+      },
+      "detailedDifference": {
+        "path": "$[0][0][0][5][0]",
+        "kind": "value",
+        "expected": "\"hiraita/aita\"",
+        "actual": "\"aita/hiraita\""
+      }
+    },
+    {
+      "suite": "cli",
+      "request": "囲碁定石外し実戦的研究会資料を配布した。|1",
+      "classification": "analyzer",
+      "qualifiedOutputSha256": "2f3e8814e398bdacacdcea7c07fae198245532f97b41f7be772667d5743cc41d",
+      "sourceOutputSha256": "6bbdb296afd5a9a8fe3fe1dfb910153377469833f63f437ebef9ee751cc7a821",
+      "pathDifference": {
+        "path": "$[0][0][0][4][0]",
+        "kind": "value",
+        "expected": "\"teki/mato\"",
+        "actual": "\"mato/teki\""
+      },
+      "detailedDifference": {
+        "path": "$[0][0][0][4][0]",
+        "kind": "value",
+        "expected": "\"teki/mato\"",
+        "actual": "\"mato/teki\""
+      }
+    },
+    {
+      "suite": "cli",
+      "request": "おちついてはなせばわかるはずなのにかおをみるといえなくなる。|1",
+      "classification": "presentation",
+      "qualifiedOutputSha256": "a1561a2610d8110595a7af29d6d43b8f5ba1f3011719a7d65ecc146a5a2de5a0",
+      "sourceOutputSha256": "792fe709c4be1420a895ccd92a810862512cdb0556d4646cdb6532832ed5c6b6",
+      "detailedDifference": {
+        "path": "$[0][0][0][10][1].alternative[1].conj",
+        "kind": "length",
+        "expected": "2",
+        "actual": "1"
+      }
+    },
+    {
+      "suite": "cli",
+      "request": "ぬれたままかばんにいれっぱなしにするのはよくない。|1",
+      "classification": "analyzer",
+      "qualifiedOutputSha256": "76e2d63182b98ddb58260e7ad233ad83d168f605ba1a32d689b4e695264cdaef",
+      "sourceOutputSha256": "9caac9c1be594cd009bc3e8ba2f34ce3c8986a31373875780ac5484d090fdd2c",
+      "pathDifference": {
+        "path": "$[0][0][0][10][1].alternative",
+        "kind": "missing",
+        "expected": "undefined",
+        "actual": "[{\"kana\":\"よくない\",\"reading\":\"よくない\",\"score\":336,\"text\":\"よくない\"},{\"kana\":\"よくない\",\"reading\":\"よくない\",\"score\":336,\"text\":\"よくない\"}]"
+      },
+      "detailedDifference": {
+        "path": "$[0][0][0][10][1].alternative",
+        "kind": "missing",
+        "expected": "undefined",
+        "actual": "[{\"conj\":[{\"gloss\":[{\"gloss\":\"good; excellent; fine; nice; pleasant; agreeable\",\"info\":\"also written 良い, 好い and 善い\",\"pos\":\"[adj-ix]\"},{\"gloss\":\"sufficient; enough; ready; prepared\",\"pos\":\"[adj-ix]\"},{\"gloss\":\"profitable (deal, business offer, etc.); beneficial\",\"pos\":\"[adj-ix]\"},{\"gloss\":\"OK; all right; fine; no problem\",\"info\":\"as て(も)いい, と(も)いい, etc.; indicates permission or compromise\",\"pos\":\"[adj-ix]\"}],\"prop\":[{\"neg\":true,\"pos\":\"adj-ix\",\"type\":\"Non-past\"}],\"reading\":\"いい\",\"readok\":true}],\"kana\":\"よくない\",\"reading\":\"よくない\",\"score\":336,\"seq\":2820690,\"text\":\"よくない\"},{\"conj\":[{\"gloss\":[{\"gloss\":\"good; excellent; fine; nice; pleasant; agreeable\",\"info\":\"also いい (all senses)\",\"pos\":\"[adj-i]\"},{\"gloss\":\"sufficient; enough; ready; prepared\",\"pos\":\"[adj-i]\"},{\"gloss\":\"profitable (deal, business offer, etc.); beneficial\",\"pos\":\"[adj-i]\"},{\"gloss\":\"OK; all right; fine; no problem\",\"info\":\"as て(も)良い, と(も)良い, etc.; indicates permission or compromise\",\"pos\":\"[adj-i]\"},{\"gloss\":\"easy to ...\",\"info\":\"after the -masu stem of a verb\",\"pos\":\"[suf,adj-i]\"}],\"prop\":[{\"neg\":true,\"pos\":\"adj-i\",\"type\":\"Non-past\"}],\"reading\":\"良い 【よい】\",\"readok\":true},{\"gloss\":[{\"gloss\":\"to often be the case; to occur frequently; to be common; to be popular\",\"pos\":\"[v5r-i,exp]\"}],\"prop\":[{\"neg\":true,\"pos\":\"v5r-i\",\"type\":\"Non-past\"}],\"reading\":\"良くある 【よくある】\",\"readok\":true}],\"kana\":\"よくない\",\"reading\":\"よくない\",\"score\":336,\"seq\":[1605820,2257640],\"text\":\"よくない\"}]"
+      }
+    },
+    {
+      "suite": "cli",
+      "request": "きくにきけないことをメッセでそっとおくってみた。|1",
+      "classification": "presentation",
+      "qualifiedOutputSha256": "245faf22cfc64400a024217a1a2e0b0b2afc8e85ffb34d474307f210bd761125",
+      "sourceOutputSha256": "e763f18c6b99afdd3313430f9b718d688d758a02a8e56dd4bd9973b21ca40262",
+      "detailedDifference": {
+        "path": "$[0][0][0][2][1].alternative[1].conj[0].gloss",
+        "kind": "length",
+        "expected": "8",
+        "actual": "1"
+      }
+    },
+    {
+      "suite": "cli",
+      "request": "すこしおちつけばみえてくるはずだとじぶんにいいきかせた。|1",
+      "classification": "presentation",
+      "qualifiedOutputSha256": "4ac6214dcbc031da3fbe4d01f00d7b30c1cccd51ab8fe6955842f76c9e782cf7",
+      "sourceOutputSha256": "d89c224406a8af6ff7622ad8024b726e292f7d451e28b830de5e26dc169e6ac6",
+      "detailedDifference": {
+        "path": "$[0][0][0][2][1].components[0].conj",
+        "kind": "length",
+        "expected": "1",
+        "actual": "2"
+      }
+    },
+    {
+      "suite": "cli",
+      "request": "既読つけない術を覚えたら返信タイミング迷子。|1",
+      "classification": "analyzer",
+      "qualifiedOutputSha256": "4ce23a8df889fd3047dae9e92c3a3d66205bb998e8a82dea9295b27bbfe0cdcc",
+      "sourceOutputSha256": "8dd45eb911c7da2f8ca7a0cec675ee7054b96c20abafa65c65697871749888d9",
+      "pathDifference": {
+        "path": "$[0][0][0][1][1].alternative",
+        "kind": "length",
+        "expected": "6",
+        "actual": "8"
+      },
+      "detailedDifference": {
+        "path": "$[0][0][0][1][1].alternative",
+        "kind": "length",
+        "expected": "6",
+        "actual": "8"
+      }
+    },
+    {
+      "suite": "hard",
+      "request": "しないでおこうとしてもしないでいられない|1",
+      "classification": "presentation",
+      "qualifiedOutputSha256": "f5aa9e1798dc958a9f9440e9e083aa8e93441ccefc0e4db5dc059a052b539b40",
+      "sourceOutputSha256": "d3a7c5fb3683e74c9a1dc26e32dfc7f6f9d93ff629f444f8878b0e05813ee2bb",
+      "detailedDifference": {
+        "path": "$[0][0][0][1][1].components[1].conj[0].prop[0].type",
+        "kind": "value",
+        "expected": "\"Potential\"",
+        "actual": "\"Passive\""
+      }
+    },
+    {
+      "suite": "hard",
+      "request": "机の角に足の小指をぶつける確率は宇宙の悪意だ。|1",
+      "classification": "analyzer",
+      "qualifiedOutputSha256": "33a19e104c6f5636c911b12da81045d4f8ecb15f15ca27dfcb9b3fbbb0b81539",
+      "sourceOutputSha256": "b83c05b401de4ebe74c284f2a08d24bac62dcd37e7bcacbdb14e43d796460c67",
+      "pathDifference": {
+        "path": "$[0][0][0][2][0]",
+        "kind": "value",
+        "expected": "\"kado/kaku/tsuno\"",
+        "actual": "\"kado/tsuno/kaku\""
+      },
+      "detailedDifference": {
+        "path": "$[0][0][0][2][0]",
+        "kind": "value",
+        "expected": "\"kado/kaku/tsuno\"",
+        "actual": "\"kado/tsuno/kaku\""
+      }
+    },
+    {
+      "suite": "hard",
+      "request": "午前二時のポエムは午前九時の現実に勝てない。|1",
+      "classification": "analyzer",
+      "qualifiedOutputSha256": "3b7b3e3b01b0191ac212cf44370f92271aa68e3a055a019ea2011d21725fed1e",
+      "sourceOutputSha256": "be616f826b904b3017add7f5ac94131a3bb8ccef50ebcecaa11693a8d6721edd",
+      "pathDifference": {
+        "path": "$[0][0][0][1][0]",
+        "kind": "value",
+        "expected": "\"futatoki/niji\"",
+        "actual": "\"niji/futatoki\""
+      },
+      "detailedDifference": {
+        "path": "$[0][0][0][1][0]",
+        "kind": "value",
+        "expected": "\"futatoki/niji\"",
+        "actual": "\"niji/futatoki\""
+      }
+    },
+    {
+      "suite": "hard",
+      "request": "窓際の席だけが世界に開いている。|1",
+      "classification": "analyzer",
+      "qualifiedOutputSha256": "6686f4bda01a94e5bb45d9cc5422c3be84efe662f43f3c02c3164b84824d69f1",
+      "sourceOutputSha256": "6bf73577128b66bd50cd7cb7e14f2e53c173a4255a9d3e534a1f8dc4fbaa2e75",
+      "pathDifference": {
+        "path": "$[0][0][0][5][0]",
+        "kind": "value",
+        "expected": "\"hiraiteiru/aiteiru\"",
+        "actual": "\"aiteiru/hiraiteiru\""
+      },
+      "detailedDifference": {
+        "path": "$[0][0][0][5][0]",
+        "kind": "value",
+        "expected": "\"hiraiteiru/aiteiru\"",
+        "actual": "\"aiteiru/hiraiteiru\""
+      }
+    },
+    {
+      "suite": "probes",
+      "request": "忘れる|5",
+      "classification": "analyzer",
+      "qualifiedOutputSha256": "dfb5c227696e855c42a9de74176bcad0d1d0638f990f7e9da2344b03e82859e6",
+      "sourceOutputSha256": "1a396f726f3ce3b8fc6e1487098226a7aa5be348bcebf6f10c7f5d416657ff1d",
+      "cleanDifference": {
+        "path": "$.chunks[0].paths[1].tokens[0].alternatives[0].inflection[0].formal",
+        "kind": "type",
+        "expected": "null",
+        "actual": "false"
+      },
+      "multipleRoots": {
+        "10528672:忘れ": [
+          1519190,
+          1519210
+        ]
+      }
+    },
+    {
+      "suite": "probes",
+      "request": "忘れ|5",
+      "classification": "analyzer",
+      "qualifiedOutputSha256": "9960bc595f49e9852d632e813159e34fab022ebef58c680897b4fe5d3fa2d556",
+      "sourceOutputSha256": "f217060559859214512bc820a7d0c7e594ce2393228207ad0e62433488d97118",
+      "cleanDifference": {
+        "path": "$.chunks[0].paths[0].tokens[0].alternatives[0].inflection[0].formal",
+        "kind": "type",
+        "expected": "null",
+        "actual": "false"
+      },
+      "multipleRoots": {
+        "10528672:忘れ": [
+          1519190,
+          1519210
+        ]
+      }
+    },
+    {
+      "suite": "probes",
+      "request": "忘れた|5",
+      "classification": "analyzer",
+      "qualifiedOutputSha256": "ed964571f4b5cf91f8d9e40b045e9c91675454c64b0551e08c50688e08933c67",
+      "sourceOutputSha256": "22935fe671d8c88d85a5c5dedbfbbbeecbdd79c811fd563bcc4f18d9081211fa",
+      "cleanDifference": {
+        "path": "$.chunks[0].paths[1].tokens[0].alternatives[0].inflection[0].formal",
+        "kind": "type",
+        "expected": "null",
+        "actual": "false"
+      },
+      "multipleRoots": {
+        "10528628:忘れた": [
+          1519190,
+          1519210
+        ],
+        "10528672:忘れ": [
+          1519190,
+          1519210
+        ]
+      }
+    },
+    {
+      "suite": "probes",
+      "request": "忘れて|5",
+      "classification": "analyzer",
+      "qualifiedOutputSha256": "9f210c99a67aad29cc86450719f7ceac2e1643b033e0c01f7da2abef2642f1be",
+      "sourceOutputSha256": "a9ce8f9a159e45817c7328c4a367b2bc59f768191a0ae4f23246f45684df13c2",
+      "cleanDifference": {
+        "path": "$.chunks[0].paths[1].tokens[0].alternatives[0].inflection[0].formal",
+        "kind": "type",
+        "expected": "null",
+        "actual": "false"
+      },
+      "multipleRoots": {
+        "10528632:忘れて": [
+          1519190,
+          1519210
+        ],
+        "10528672:忘れ": [
+          1519190,
+          1519210
+        ]
+      }
+    },
+    {
+      "suite": "probes",
+      "request": "盛れてて|5",
+      "classification": "analyzer",
+      "qualifiedOutputSha256": "33da3146c1ee9222035e2be40c7aa1d9703a28aca5d9ee65666c0375812cbed4",
+      "sourceOutputSha256": "eac625525c7dae91141b6a89906654691604106d76b99d22db1d8157b8aaa209",
+      "cleanDifference": {
+        "path": "$.chunks[0].paths[1].tokens[0].alternatives[0].inflection[0].formal",
+        "kind": "type",
+        "expected": "null",
+        "actual": "false"
+      },
+      "multipleRoots": {
+        "10270980:盛れて": [
+          1379740,
+          2842314
+        ],
+        "10271020:盛れ": [
+          1379740,
+          2842314
+        ]
+      }
+    }
+  ]
+}

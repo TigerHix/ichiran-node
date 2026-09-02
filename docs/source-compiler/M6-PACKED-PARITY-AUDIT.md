@@ -3,7 +3,7 @@
 ## Scope and decision
 
 This audit compares the completed source-native pack at
-`work/m6-source-release-final` with the qualified
+`work/m6-source-release-c639427` with the qualified
 `portable-core-260118-baseline` pack at `work/m2-baseline`. It covers every
 non-raw-equal result in the 401 ordinary and hard full-JSON fixtures. It does
 not authorize a case list in the runtime or release gate.
@@ -33,6 +33,7 @@ add an allowlist.
 | Qualified `hot.bin.gz` | 12,662,917 | `35d02c84d4cc531d299d7d5530994351b75bdba429d5276c20bc2f67cdc8d6d7` |
 | Source `details.bin.gz` | 12,317,325 | `ad10bc4876d9a05224f62f5b438080ea1ff4e6a88ab3090be0f871035e95918a` |
 | Qualified `details.bin.gz` | 12,317,325 | `ad10bc4876d9a05224f62f5b438080ea1ff4e6a88ab3090be0f871035e95918a` |
+| Tracked v4 oracle report | 31,236 | `b57cb3497b598368a054e16b824709110d393fbc6a5190f7ec17f278464932b7` |
 | Direct-order attestation | 1,295 | `12ca177bf7765e4337f3c1cc4d836a7bcfc84b3f60b08e07d6eb238ad72dc4cf` |
 | Direct-order full rows | 4,076,458 | `5f4660a0afbc1a21021f3c4db49014554a3b7991a48960c2238a050ae05a1854` |
 | Generated-order attestation | 8,858 | `4f2a767eb48b09194af7e20070e2b5e79765a70b5d6ebf4eaa9a3048ef5776cf` |
@@ -43,6 +44,8 @@ The source and qualified detail sections are byte equal. Surface index and
 morphology are also byte equal. The release gate separately pins the complete
 source and qualified analyzer-support and analyzer-annotations identities and
 count groups in `data/source-compiler-generated-order-attestation.json`.
+The v4 report's canonical SHA-256 after excluding only `generatedAt` is
+`fcc40493c90f09081fcb42968d44ae6c3ecd7f44733420e45316b250964d5e4b`.
 
 The generated proof compares 212,198 surfaces: 173,111 exact, 9,799 with a
 physical grouping change, and 29,288 with ordering only. Across 548,607
@@ -86,18 +89,32 @@ source-order results. There are no errors or unreviewed differences. The 21
 reviewed rows are diagnostic evidence only: the analyzer and release contain no
 request list, exception table, or runtime allowlist.
 
-The full report binds the tested release to its source-compiler lock while the
+The tracked full report at `data/source-compiler-parity-report.json` binds the
+tested release to its source-compiler lock and exact pack assets, while the
 reference side remains bound independently to the frozen browser-alpha oracle
-lock. Reproduce it with:
+lock. It was produced from clean commit
+`c639427075ddf26b6b4e3b4ace1d5397ec0ac9d8`. In a dedicated clean worktree at
+that commit, first acquire the immutable qualified comparison pack and build the
+source release with PostgreSQL physically unavailable:
+
+```sh
+bun scripts/acquire-qualified-source-compiler-baseline.ts work/m2-baseline
+sh scripts/source-compiler-release-no-postgres.sh baseline \
+  --out work/m6-source-release-c639427 \
+  --pack-version ichiran-260118-source
+```
+
+Then reproduce the retained oracle report against the separately restored and
+verified frozen database named by `browser-alpha/sources.lock.json`:
 
 ```sh
 bun packages/core/tools/oracle-parity.ts \
   --repository "$PWD" \
-  --release work/m6-source-release-final \
+  --release work/m6-source-release-c639427 \
   --database "$ICHIRAN_DB_URL" \
   --source-compiler-pack \
   --allow-failures \
-  --out work/m6-evidence/source-pack-oracle-parity-full.json \
+  --out data/source-compiler-parity-report.json \
   --samples 1241
 ```
 
@@ -107,6 +124,34 @@ requires the retained review to account for every non-exact row and to report an
 empty runtime allowlist. Running the same command without that flag is expected
 to exit nonzero because the approved source-order rows remain intentionally
 observable.
+
+The compact, tracked qualification record is
+`data/source-compiler-parity-attestation.json`. It names and explains all 16
+chosen-authority rows and all five PostgreSQL-fallback rows. Each row is bound to
+one complete retained report sample by oracle side, suite, request, classification
+and a canonical SHA-256. Each sample also carries independent SHA-256 identities
+for the complete qualified and source analyzer outputs, and the row's field and
+untruncated values must match the retained first difference. The validator
+requires an exact bijection, so missing, unreviewed, duplicate, extra and changed
+rows fail. This is review evidence, not a build or runtime allowlist; the recorded
+runtime allowlist must remain empty.
+
+Validate a retained diagnostic report and source-built release with:
+
+```sh
+bun scripts/source-compiler-parity-attestation.ts \
+  --report data/source-compiler-parity-report.json \
+  --release work/m6-source-release-c639427
+```
+
+The report gate uses a canonical whole-report digest that excludes only the
+volatile top-level `generatedAt` timestamp. It also independently requires the
+exact source lock, frozen oracle lock, and compressed and installed identities
+of both pack assets. The report's tested source commit and manifest identities
+are pinned as historical provenance. They are not compared with a later rebuilt
+manifest: a compiler-only qualification repair may produce a later commit and
+manifest, but validation still requires its four pack byte identities to match
+the historically tested release exactly.
 
 ## Canonical equal-score ordering rows
 
@@ -182,7 +227,7 @@ Run the existing packed gate against each immutable directory:
 
 ```sh
 ICHIRAN_PACK_DIR=work/m2-baseline bun scripts/packed-parity.ts
-ICHIRAN_PACK_DIR=work/m6-source-release-final bun scripts/packed-parity.ts
+ICHIRAN_PACK_DIR=work/m6-source-release-c639427 bun scripts/packed-parity.ts
 ```
 
 Reproduce the complete direct and generated proof evidence with the commands in

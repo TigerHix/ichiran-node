@@ -1010,10 +1010,8 @@ async function compareSuite(
       } else {
         const authority = compareDetailedAuthority(null, expectedIdentity.value, actual.detailed);
         recordDetailedComparison(stats, authority);
-        if ((cleanDifference || authority.detailedDifference) && samples.length < maxSamples) {
-          const classification: FailureClass = cleanDifference || authority.pathDifference
-            ? 'analyzer'
-            : 'presentation';
+        if (cleanDifference && samples.length < maxSamples) {
+          const classification: FailureClass = 'analyzer';
           samples.push({
             suite,
             request: fixtureKey(fixture.request),

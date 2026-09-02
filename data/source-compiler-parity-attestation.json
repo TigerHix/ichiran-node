@@ -1,0 +1,314 @@
+{
+  "formatVersion": 1,
+  "scope": "Complete source-built ichiran-260118 analyzer corpus: 16 chosen-authority and 5 PostgreSQL-fallback deterministic-order observations",
+  "report": {
+    "historicalReportSha256": "b57cb3497b598368a054e16b824709110d393fbc6a5190f7ec17f278464932b7",
+    "normalizedSha256": "fcc40493c90f09081fcb42968d44ae6c3ecd7f44733420e45316b250964d5e4b",
+    "formatVersion": 4,
+    "chosenAuthority": {
+      "operations": 1241,
+      "exact": 1225,
+      "analyzerDeltas": 12,
+      "presentationDeltas": 4,
+      "errors": 0
+    },
+    "postgresqlFallback": {
+      "operations": 301,
+      "exact": 296,
+      "analyzerDeltas": 5,
+      "presentationDeltas": 0,
+      "errors": 0
+    }
+  },
+  "pack": {
+    "historicalSourceCommit": "c639427075ddf26b6b4e3b4ace1d5397ec0ac9d8",
+    "historicalManifestFileSha256": "676ba06f305ca6ac29bc6948e2c5577e25bee5233dbd72ccf57e137eeb3a5b66",
+    "historicalManifestSha256": "1116263225e7bd4cccec333ed0039f02564e57af19b7cb76a8673270ad6f669a",
+    "sourceLockSha256": "16f11739978e91922cf43337c6b801765214dbb0945509dec94b85321952b9cd",
+    "hot": {
+      "encoding": "gzip",
+      "download": {
+        "bytes": 12607002,
+        "sha256": "8648acfde1b3bc685bcd786a7718d2d980103c87fade3c3fdbdf416960859b9f"
+      },
+      "installed": {
+        "bytes": 24747944,
+        "sha256": "eb9c58204c624b1220bc257b910fc5df7e092133af09760ce6800b672b4bcd96"
+      }
+    },
+    "details": {
+      "encoding": "gzip",
+      "download": {
+        "bytes": 12317325,
+        "sha256": "ad10bc4876d9a05224f62f5b438080ea1ff4e6a88ab3090be0f871035e95918a"
+      },
+      "installed": {
+        "bytes": 13555874,
+        "sha256": "0fc45731d84fbb7c2ccf3ef5692d2f1ab01e538325f0ed50135da38e621aa151"
+      }
+    }
+  },
+  "oracle": {
+    "lockSha256": "80dc7c907d688a5ecb0bbd8b23b889f47cb3a28f8484f80e8dc4737bb090c070",
+    "database": "ichiran_oracle_ea958336",
+    "upstreamIchiranCommit": "ea9583368e67cad22d94abae8dbcc8df96d99bcd"
+  },
+  "policy": {
+    "runtimeAllowlist": [],
+    "decision": "Source-native deterministic order replaces accidental PostgreSQL insertion order. These rows attest exact diagnostic observations; they do not suppress, rewrite, or accept runtime output."
+  },
+  "rows": [
+    {
+      "id": "current-cli-kado-reading-order",
+      "authority": "current-lisp",
+      "suite": "cli",
+      "request": "机の角に足の小指をぶつける確率は宇宙の悪意だ。|1",
+      "classification": "analyzer",
+      "observationSha256": "87445925f9616067e1a4fd6cdfed42c126b83ca93ec39e61818a269c4f753417",
+      "field": "$[0][0][0][2][0]",
+      "qualified": "\"kado/kaku/tsuno\"",
+      "source": "\"kado/tsuno/kaku\"",
+      "cause": "Direct equal-score readings use canonical source order instead of PostgreSQL text-row insertion order."
+    },
+    {
+      "id": "current-cli-niji-root-order",
+      "authority": "current-lisp",
+      "suite": "cli",
+      "request": "午前二時のポエムは午前九時の現実に勝てない。|1",
+      "classification": "analyzer",
+      "observationSha256": "30fcbd0f4a5631b51d017586cb4be1a3ab4c6e72f1ceef85dbd3a24ef03fe7c8",
+      "field": "$[0][0][0][1][0]",
+      "qualified": "\"futatoki/niji\"",
+      "source": "\"niji/futatoki\"",
+      "cause": "Equal-score direct roots use canonical source order instead of PostgreSQL insertion order."
+    },
+    {
+      "id": "current-cli-hiraiteiru-generated-order",
+      "authority": "current-lisp",
+      "suite": "cli",
+      "request": "窓際の席だけが世界に開いている。|1",
+      "classification": "analyzer",
+      "observationSha256": "ba8f5546bb22ef71396043f1cacf674a22df1033ed2c733c0421f79fdf7dea0e",
+      "field": "$[0][0][0][5][0]",
+      "qualified": "\"hiraiteiru/aiteiru\"",
+      "source": "\"aiteiru/hiraiteiru\"",
+      "cause": "Generated equal-score lookup classes use the explicit source schedule instead of physical target insertion order."
+    },
+    {
+      "id": "current-cli-hiraita-generated-order-a",
+      "authority": "current-lisp",
+      "suite": "cli",
+      "request": "朝活仲間募集掲示板荒らし対策会議を開いた。|1",
+      "classification": "analyzer",
+      "observationSha256": "bb9292658154997caa6d1bb78568600f9d2ae41ab7595ca27bd89302cf9aa881",
+      "field": "$[0][0][0][8][0]",
+      "qualified": "\"hiraita/aita\"",
+      "source": "\"aita/hiraita\"",
+      "cause": "Generated equal-score lookup classes use the explicit source schedule."
+    },
+    {
+      "id": "current-cli-inamenai-generated-order",
+      "authority": "current-lisp",
+      "suite": "cli",
+      "request": "湿度高め設定推奨理由説明不足感が否めない。|1",
+      "classification": "analyzer",
+      "observationSha256": "26351f2fba113af403c71cab9ac0fd7a95ef76fb37995d50a5eb15d0d6df48de",
+      "field": "$[0][0][0][9][0]",
+      "qualified": "\"inamenai/iyamenai\"",
+      "source": "\"iyamenai/inamenai\"",
+      "cause": "Generated equal-score lookup classes use the explicit source schedule."
+    },
+    {
+      "id": "current-cli-hiraita-generated-order-b",
+      "authority": "current-lisp",
+      "suite": "cli",
+      "request": "バロック音楽即興演奏基礎練習会を開いた。|1",
+      "classification": "analyzer",
+      "observationSha256": "821756e8a2b1c2312f31083779ceca6c2a90626c0bfb4ca7c105e691603cc590",
+      "field": "$[0][0][0][5][0]",
+      "qualified": "\"hiraita/aita\"",
+      "source": "\"aita/hiraita\"",
+      "cause": "The same generated 開いた lookup order is observed by a second request."
+    },
+    {
+      "id": "current-cli-teki-reading-order",
+      "authority": "current-lisp",
+      "suite": "cli",
+      "request": "囲碁定石外し実戦的研究会資料を配布した。|1",
+      "classification": "analyzer",
+      "observationSha256": "e524355f3dcb7a43eb0a4ba18a2ca2937ad8dae32a38f4c00d22051fee10a716",
+      "field": "$[0][0][0][4][0]",
+      "qualified": "\"teki/mato\"",
+      "source": "\"mato/teki\"",
+      "cause": "Equal-score direct readings use canonical source order."
+    },
+    {
+      "id": "current-cli-ie-traversal",
+      "authority": "current-lisp",
+      "suite": "cli",
+      "request": "おちついてはなせばわかるはずなのにかおをみるといえなくなる。|1",
+      "classification": "presentation",
+      "observationSha256": "98c3680f6823fc0de01b35d179b3ec3a6f193e12db8b9eac4074fc31b113d34f",
+      "field": "$[0][0][0][10][1].alternative[1].conj",
+      "qualified": "2",
+      "source": "1",
+      "cause": "Source-native physical grouping separates the qualified いえ class containing locator 1008860/84 and locators 1587040/771 and 1587040/796, so this alternative presents one conjugation record instead of two; the complete locator relation is unchanged."
+    },
+    {
+      "id": "current-cli-yokunai-physical-group",
+      "authority": "current-lisp",
+      "suite": "cli",
+      "request": "ぬれたままかばんにいれっぱなしにするのはよくない。|1",
+      "classification": "analyzer",
+      "observationSha256": "3f269e118119795a34b8c34289c9c5e1e29c8b605770c16bffd477fa7d1167d8",
+      "field": "$[0][0][0][10][1].alternative",
+      "qualified": "undefined",
+      "source": "[{\"kana\":\"よくない\",\"reading\":\"よくない\",\"score\":336,\"text\":\"よくない\"},{\"kana\":\"よくない\",\"reading\":\"よくない\",\"score\":336,\"text\":\"よくない\"}]",
+      "cause": "Source-scheduled physical-target reuse changes which equal-score generated members share the よくない class; the complete locator relation is unchanged."
+    },
+    {
+      "id": "current-cli-kikenai-winner",
+      "authority": "current-lisp",
+      "suite": "cli",
+      "request": "きくにきけないことをメッセでそっとおくってみた。|1",
+      "classification": "presentation",
+      "observationSha256": "64b97343739a4a11929fc5005c0b451b190fde1b78a7c146898f16a47f7c1246",
+      "field": "$[0][0][0][2][1].alternative[1].conj[0].gloss",
+      "qualified": "8",
+      "source": "1",
+      "cause": "The same three equal-score きけない members are present; explicit generated lookup order reverses their winner order."
+    },
+    {
+      "id": "current-cli-mietekuru-traversal",
+      "authority": "current-lisp",
+      "suite": "cli",
+      "request": "すこしおちつけばみえてくるはずだとじぶんにいいきかせた。|1",
+      "classification": "presentation",
+      "observationSha256": "048dd87a7fd582acd7a030309fabfeb952b6d45158fa9cc3043c6dd130cc943b",
+      "field": "$[0][0][0][2][1].components[0].conj",
+      "qualified": "1",
+      "source": "2",
+      "cause": "Source-native physical grouping combines the 見える and 視える conjunctive locators for みえて, so the presented component gains the 視える root and a second conjugation record; the complete locator relation is unchanged."
+    },
+    {
+      "id": "current-cli-tsukenai-physical-group",
+      "authority": "current-lisp",
+      "suite": "cli",
+      "request": "既読つけない術を覚えたら返信タイミング迷子。|1",
+      "classification": "analyzer",
+      "observationSha256": "93f85158602c2b378cc6d9b0d29706c7e630145959c638d6bc145c5090d272b6",
+      "field": "$[0][0][0][1][1].alternative",
+      "qualified": "6",
+      "source": "8",
+      "cause": "Source-scheduled physical-target reuse changes class grouping for つけない without adding or removing relation locators."
+    },
+    {
+      "id": "current-hard-iranai-property-order",
+      "authority": "current-lisp",
+      "suite": "hard",
+      "request": "しないでおこうとしてもしないでいられない|1",
+      "classification": "presentation",
+      "observationSha256": "01d685a3ec1c3bf6415915210330c27375846ed47fa428a34eef2011ac4c6292",
+      "field": "$[0][0][0][1][1].components[1].conj[0].prop[0].type",
+      "qualified": "\"Potential\"",
+      "source": "\"Passive\"",
+      "cause": "Potential and passive generate the same いられない surface and score; explicit source property order selects passive instead of PostgreSQL conj_prop insertion order."
+    },
+    {
+      "id": "current-hard-kado-reading-order",
+      "authority": "current-lisp",
+      "suite": "hard",
+      "request": "机の角に足の小指をぶつける確率は宇宙の悪意だ。|1",
+      "classification": "analyzer",
+      "observationSha256": "190f0b6093c394a16ac97bfecf1694eb23550243c4db8fcce31d9b6901930169",
+      "field": "$[0][0][0][2][0]",
+      "qualified": "\"kado/kaku/tsuno\"",
+      "source": "\"kado/tsuno/kaku\"",
+      "cause": "The hard fixture observes the same direct equal-score reading order."
+    },
+    {
+      "id": "current-hard-niji-root-order",
+      "authority": "current-lisp",
+      "suite": "hard",
+      "request": "午前二時のポエムは午前九時の現実に勝てない。|1",
+      "classification": "analyzer",
+      "observationSha256": "eef9ef339b877cee7451b95d005eeecb16e41d23a00e075b6f4636f795e0f6d5",
+      "field": "$[0][0][0][1][0]",
+      "qualified": "\"futatoki/niji\"",
+      "source": "\"niji/futatoki\"",
+      "cause": "The hard fixture observes the same equal-score direct-root order."
+    },
+    {
+      "id": "current-hard-hiraiteiru-generated-order",
+      "authority": "current-lisp",
+      "suite": "hard",
+      "request": "窓際の席だけが世界に開いている。|1",
+      "classification": "analyzer",
+      "observationSha256": "8b92f64d27e923f76b41d75d804dfd61ba09535bf309af13be4c34829e1fb401",
+      "field": "$[0][0][0][5][0]",
+      "qualified": "\"hiraiteiru/aiteiru\"",
+      "source": "\"aiteiru/hiraiteiru\"",
+      "cause": "The hard fixture observes the same generated lookup order."
+    },
+    {
+      "id": "fallback-probe-wasureru-member-order",
+      "authority": "postgresql-fallback",
+      "suite": "probes",
+      "request": "忘れる|5",
+      "classification": "analyzer",
+      "observationSha256": "bc281c8005bd4f23091ce0c51c811bca53c28e3b1cc74738d60c87462fabd397",
+      "field": "$.chunks[0].paths[1].tokens[0].alternatives[0].inflection[0].formal",
+      "qualified": "null",
+      "source": "false",
+      "cause": "An equal-score secondary-path alternative selects the v5r source member before the v1 member under source-native generated-member order."
+    },
+    {
+      "id": "fallback-probe-wasure-member-order",
+      "authority": "postgresql-fallback",
+      "suite": "probes",
+      "request": "忘れ|5",
+      "classification": "analyzer",
+      "observationSha256": "3b1377ecd1230918c9c4882bb09178576aad0d55ae9782b6e6f0b22362c074cb",
+      "field": "$.chunks[0].paths[0].tokens[0].alternatives[0].inflection[0].formal",
+      "qualified": "null",
+      "source": "false",
+      "cause": "The same equal-score 忘れ generated-member order is visible on the direct path."
+    },
+    {
+      "id": "fallback-probe-wasureta-member-order",
+      "authority": "postgresql-fallback",
+      "suite": "probes",
+      "request": "忘れた|5",
+      "classification": "analyzer",
+      "observationSha256": "17580da4f2b1b6be57a1e3b6c2adb19c6777a16a78f33c79a60fbc8d4db1894e",
+      "field": "$.chunks[0].paths[1].tokens[0].alternatives[0].inflection[0].formal",
+      "qualified": "null",
+      "source": "false",
+      "cause": "The same equal-score 忘れ secondary-path generated-member order is visible in the past form."
+    },
+    {
+      "id": "fallback-probe-wasurete-member-order",
+      "authority": "postgresql-fallback",
+      "suite": "probes",
+      "request": "忘れて|5",
+      "classification": "analyzer",
+      "observationSha256": "8620585f6034707c15e27f0c4c5524ffa98d094d26b91f6c637fef25a7e91b2a",
+      "field": "$.chunks[0].paths[1].tokens[0].alternatives[0].inflection[0].formal",
+      "qualified": "null",
+      "source": "false",
+      "cause": "The same equal-score 忘れ secondary-path generated-member order is visible in the conjunctive form."
+    },
+    {
+      "id": "fallback-probe-moretete-member-order",
+      "authority": "postgresql-fallback",
+      "suite": "probes",
+      "request": "盛れてて|5",
+      "classification": "analyzer",
+      "observationSha256": "4451d6bc23c97ea112a280270718da7aec4446f0321c422e1b2adc5e31dca942",
+      "field": "$.chunks[0].paths[1].tokens[0].alternatives[0].inflection[0].formal",
+      "qualified": "null",
+      "source": "false",
+      "cause": "An equal-score 盛れ secondary-path alternative selects the v5r source member before the v1 member under source-native generated-member order."
+    }
+  ]
+}

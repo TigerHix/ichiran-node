@@ -85,8 +85,8 @@ env -u ICHIRAN_DB_URL -u DATABASE_URL ICHIRAN_RUN_DATABASE_TESTS=false \
 ```
 
 At the qualification checkpoint this runs 138 tests and skips 12 explicit
-database cases. Nine are legacy load/conjugation tests that run when
-`ICHIRAN_DB_URL` is provided; three are separately invoked exhaustive
+database cases. Nine are legacy load/conjugation tests that run only when
+`ICHIRAN_RUN_DATABASE_TESTS=true`; three are separately invoked exhaustive
 PostgreSQL-oracle comparisons. To prove the legacy coverage remains available,
 run the same suite against the test database:
 
