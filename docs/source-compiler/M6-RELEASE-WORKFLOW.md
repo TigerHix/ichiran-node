@@ -63,7 +63,9 @@ pinned external input. The command checks the checkout before work, then checks
 the same commit and clean state again immediately before atomically activating
 the finished generation. Full releases use Bun's `--smol` mode so garbage
 collection bounds the compiler's large transient object graph. The
-PostgreSQL-isolation wrapper applies the same mode automatically.
+PostgreSQL-isolation wrapper applies the same mode automatically. The two
+determinism-check surface-index builds run sequentially so their multi-million-
+row Rust working sets do not overlap.
 
 ## PostgreSQL-unavailable proof
 

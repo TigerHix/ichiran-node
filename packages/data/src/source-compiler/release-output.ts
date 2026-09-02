@@ -334,10 +334,10 @@ export async function writeSourceCompilerRelease(
   const compiler = await surfaceCompiler(input.repository);
   const firstPath = join(input.temporaryDirectory, 'surface-first.bin');
   const secondPath = join(input.temporaryDirectory, 'surface-second.bin');
-  const [firstStats, secondStats] = await Promise.all([
-    compileSurface(compiler, surfaceTsv, firstPath, input.repository),
-    compileSurface(compiler, surfaceTsv, secondPath, input.repository)
-  ]);
+  // Each compiler indexes millions of rows. Run the deterministic rebuilds
+  // sequentially so their large Rust working sets never overlap.
+  const firstStats = await compileSurface(compiler, surfaceTsv, firstPath, input.repository);
+  const secondStats = await compileSurface(compiler, surfaceTsv, secondPath, input.repository);
   if (JSON.stringify(firstStats) !== JSON.stringify(secondStats)) {
     throw new Error('Surface-index rebuild changed deterministic counts');
   }
