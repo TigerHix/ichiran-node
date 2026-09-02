@@ -38,6 +38,13 @@ export interface WorkerCalibrationSample {
   readonly state: number;
 }
 
+export interface WorkerHeapUsage {
+  readonly usedSize: number;
+  readonly totalSize: number;
+  readonly embedderHeapUsedSize: number;
+  readonly backingStorageSize: number;
+}
+
 export interface LegacyDetailedWord {
   readonly text: string;
   readonly reading: string;
@@ -77,6 +84,8 @@ export async function singleCpuAffinity(): Promise<number> {
 export async function attachAnalyzerWorker(browser: Browser): Promise<{
   readonly target: { readonly type: string; readonly title: string; readonly url: string };
   readonly samples: (count: number) => Promise<readonly WorkerCalibrationSample[]>;
+  readonly heapUsage: () => Promise<WorkerHeapUsage>;
+  readonly collectGarbage: () => Promise<void>;
   readonly close: () => Promise<void>;
 }> {
   const cdp = await browser.newBrowserCDPSession();
@@ -160,6 +169,25 @@ export async function attachAnalyzerWorker(browser: Browser): Promise<{
       }
       return result;
     },
+    async heapUsage() {
+      const value = await send('Runtime.getHeapUsage');
+      const number = (key: keyof WorkerHeapUsage): number => {
+        const result = value[key];
+        if (typeof result !== 'number' || !Number.isFinite(result)) {
+          throw new Error(`Analyzer Worker heap metric ${key} is unavailable`);
+        }
+        return result;
+      };
+      return {
+        usedSize: number('usedSize'),
+        totalSize: number('totalSize'),
+        embedderHeapUsedSize: number('embedderHeapUsedSize'),
+        backingStorageSize: number('backingStorageSize')
+      };
+    },
+    async collectGarbage() {
+      await send('HeapProfiler.collectGarbage');
+    },
     async close() {
       cdp.off('Target.receivedMessageFromTarget', receive);
       await cdp.send('Target.detachFromTarget', { sessionId });
@@ -212,7 +240,19 @@ export async function stopCpuHogs(children: readonly ChildProcess[]): Promise<vo
   for (const child of children) {
     if (child.exitCode === null) child.kill('SIGKILL');
   }
-  await Promise.all(exits);
+  // WSL can delay child exit notifications after SIGKILL indefinitely. The
+  // E2E wrapper owns the whole process group and performs the final reap, so
+  // cleanup here must remain bounded rather than consuming the test watchdog.
+  await Promise.race([
+    Promise.all(exits),
+    new Promise(resolve => setTimeout(resolve, 1_000))
+  ]);
+  for (const child of children) {
+    // A SIGKILLed Bun child can remain a zombie under WSL without delivering
+    // its exit event. Do not let that stale process handle keep the Playwright
+    // worker alive; the outer E2E process group owns the final reap.
+    if (child.exitCode === null) child.unref();
+  }
 }
 
 export async function expectInstallablePwa(page: Page): Promise<void> {

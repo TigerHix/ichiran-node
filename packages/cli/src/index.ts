@@ -51,6 +51,21 @@ export async function initCliCaches(): Promise<void> {
   await defaultRuntime();
 }
 
+/** Release the process-wide runtime used by the executable. */
+async function disposeCliCaches(): Promise<void> {
+  const current = runtimePromise;
+  runtimePromise = null;
+  if (!current) return;
+  let runtime: Runtime;
+  try {
+    runtime = await current;
+  } catch {
+    // A failed open has no runtime or temporary detail store to release.
+    return;
+  }
+  runtime.dispose();
+}
+
 async function main(): Promise<void> {
   const program = new Command();
   program
@@ -84,7 +99,9 @@ async function main(): Promise<void> {
     process.stdout.write(`${output}\n`);
   } catch (error) {
     console.error(`ERROR: ${error instanceof Error ? error.message : String(error)}`);
-    process.exit(2);
+    process.exitCode = 2;
+  } finally {
+    await disposeCliCaches();
   }
 }
 

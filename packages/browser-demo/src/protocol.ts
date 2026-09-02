@@ -72,6 +72,15 @@ export interface BenchmarkResult {
   };
 }
 
+export interface RustKernelMetrics {
+  readonly openMs: number;
+  readonly transientBytes: number;
+  readonly wasmLinearMemoryBytes: number;
+  readonly kernelPayloadBytes: number;
+  readonly detailResidentBytes: number;
+  readonly workerHeapBytes: number | null;
+}
+
 export type WorkerRequest =
   | {
       readonly id: number;
@@ -84,7 +93,8 @@ export type WorkerRequest =
   | { readonly id: number; readonly op: 'analyze'; readonly text: string; readonly options: AnalyzeOptions }
   | { readonly id: number; readonly op: 'legacy'; readonly text: string; readonly options: AnalyzeOptions }
   | { readonly id: number; readonly op: 'describe'; readonly entryIndex: number }
-  | { readonly id: number; readonly op: 'romanize'; readonly text: string };
+  | { readonly id: number; readonly op: 'romanize'; readonly text: string }
+  | { readonly id: number; readonly op: 'rust-kernel-metrics' };
 
 export type WorkerResultByOperation = {
   readonly 'expect-release': PackStatus;
@@ -95,6 +105,7 @@ export type WorkerResultByOperation = {
   readonly legacy: unknown;
   readonly describe: unknown;
   readonly romanize: string;
+  readonly 'rust-kernel-metrics': RustKernelMetrics;
 };
 
 export type WorkerEvent = {

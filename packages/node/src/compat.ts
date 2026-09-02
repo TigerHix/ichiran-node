@@ -265,7 +265,7 @@ async function physicalSenseContext(
   for (const [, word] of tokens) collectDefinitionSeqs(word, definitionSeqs);
   const senses = new Map<number, readonly PortableLegacySenseJson[]>();
   await Promise.all([...definitionSeqs].map(async definitionSeq => {
-    const entryIndex = runtime.roots.findEntryIndex(definitionSeq);
+    const entryIndex = runtime.entryIndexForSequence(definitionSeq);
     senses.set(
       definitionSeq,
       entryIndex < 0 ? [] : detailSenses(await runtime.describe(entryIndex))

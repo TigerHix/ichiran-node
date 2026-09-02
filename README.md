@@ -5,15 +5,16 @@ JavaScript. The production analyzer runs from immutable binary data in a browser
 Worker or Node.js. It does not connect to PostgreSQL, call a server, or fetch text
 for analysis.
 
-The current milestone is an analyzer-only offline demo. A user downloads one pinned
-data release, installs it in browser storage, and can then analyze entirely on the
-device. The same runtime powers the browser demo, Node adapter, CLI, and HTTP API.
+The default analyzer is one host-neutral Rust kernel compiled to WASM. The same emitted
+module powers the browser Worker, Node adapter, CLI, and HTTP API. TypeScript owns host
+installation and I/O; `TypeScriptOracleRuntime` remains available only through an
+explicit qualification entry point for frozen differential checks.
 
-The TypeScript runtime remains the qualified migration baseline for the pending Rust
-kernel. Release data is now owned by a PostgreSQL-free TypeScript source compiler.
-The accepted post-alpha direction is one Rust analyzer crate compiled to browser
-WASM, Node, and native iOS while retaining that source-native compiler.
-See
+Native Apple packaging is the next host integration of the same Rust source. Physical
+Safari/iPhone qualification and the Mac-owned XCFramework, Swift, simulator, and
+device gates remain pending. Release data is owned by the PostgreSQL-free TypeScript
+source compiler; the frozen PostgreSQL and TypeScript analyzers remain temporary
+qualification oracles only. See
 [the source-compiler and Rust-kernel roadmap](./docs/SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md).
 
 ## Quick start
@@ -54,7 +55,7 @@ Building a new pack is a maintainer workflow documented in
 immutable analyzer release
         |
         v
-@ichiran/core  <--- browser Worker
+Rust WASM kernel + @ichiran/core host facade <--- browser Worker
         ^
         |
 @ichiran/node  <--- CLI / HTTP API
@@ -65,12 +66,12 @@ pinned semantic sources ---> @ichiran/data source compiler ---> immutable releas
                     PostgreSQL migration oracle only
 ```
 
-- `@ichiran/core` is the current canonical analyzer and executable oracle for the Rust
-  port. It owns packed readers, lookup, morphology, scoring, top-N paths, dictionary
-  details, romanization, and the legacy serializer. It is browser-safe and has no
-  runtime dependencies.
+- The Rust crate is the canonical analyzer. It owns packed readers, lookup, morphology,
+  scoring, top-N paths, dictionary details, romanization, and retained serialization.
+- `@ichiran/core` is the browser-safe WASM host facade and shared public model. Its
+  `TypeScriptOracleRuntime` is exposed only from `@ichiran/core/qualification`.
 - `@ichiran/node` verifies and decompresses release files, then opens the same core
-  runtime used in the browser.
+  WASM runtime used in the browser.
 - `@ichiran/reference-postgres` is the frozen former implementation. It is private
   and retained temporarily as a compiler/oracle dependency, not a product runtime.
 - `@ichiran/data` owns the TypeScript source compiler and pack-v1 encoders. Its
@@ -116,6 +117,13 @@ post-alpha architecture and retirement gates are in
 bun run typecheck
 bun run test
 ```
+
+The default test command runs rustfmt, Clippy, ordinary Cargo tests, and a fresh
+temporary Rust/WASM build before the TypeScript suites. It fails if the checked-in
+WASM, JavaScript glue, or declarations differ. The build requires
+`wasm-bindgen-cli 0.2.127`; install that exact tool when needed with
+`cargo install wasm-bindgen-cli --version 0.2.127 --locked`.
+The root parity and browser-qualification commands run the same check first.
 
 Compiler and PostgreSQL-reference checks are explicit and separate:
 

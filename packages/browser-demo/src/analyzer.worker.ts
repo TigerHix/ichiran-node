@@ -2,11 +2,13 @@
 
 import {
   parseAnalyzerReleaseManifest,
-  type IchiranRuntime
+  type PortableAnalysisResult,
+  type PortableAnalyzeOptions
 } from '@ichiran/core';
 import type {
   AnalyzerPackManifest,
   PackStatus,
+  RustKernelMetrics,
   WorkerRequest,
   WorkerResponse
 } from './protocol.js';
@@ -14,16 +16,33 @@ import {
   AnalyzerInstallError,
   clearInstall,
   inspectInstall,
+  inspectInstalled,
   installAnalyzer,
-  installedFiles,
   installedInstallId,
   markInstallCorrupt
 } from './worker/install.js';
 import { openAnalyzerRuntime } from './worker/runtime.js';
+import { isArtifactCorruption } from './worker/artifact-corruption.js';
 import { createSerialExecutor } from './worker/serial-executor.js';
 import { Sha256 } from './worker/sha256.js';
 
-let runtime: IchiranRuntime | null = null;
+declare const __ICHIRAN_TYPESCRIPT_ORACLE__: boolean;
+
+// The frozen TypeScript runtime is emitted only for explicit oracle builds.
+const typescriptRuntimeModule = __ICHIRAN_TYPESCRIPT_ORACLE__
+  ? import('./worker/runtime-typescript.js')
+  : null;
+
+interface WorkerRuntime {
+  analyze(text: string, options?: PortableAnalyzeOptions): Promise<PortableAnalysisResult>;
+  describe(entryIndex: number): Promise<unknown>;
+  legacy(text: string, options?: PortableAnalyzeOptions): Promise<unknown>;
+  romanize(text: string, options?: PortableAnalyzeOptions): Promise<string>;
+  dispose?(): void;
+  metrics?(): RustKernelMetrics;
+}
+
+let runtime: WorkerRuntime | null = null;
 let runtimeManifestSha256: string | null = null;
 let runtimeInstallId: string | null = null;
 let expectedRelease: AnalyzerPackManifest | null = null;
@@ -60,6 +79,7 @@ function withInstallLifecycleLock<T>(operation: () => Promise<T>): Promise<T> {
 }
 
 function clearRuntime(): void {
+  runtime?.dispose?.();
   runtime = null;
   runtimeManifestSha256 = null;
   runtimeInstallId = null;
@@ -98,32 +118,36 @@ function staleStatus(
 
 async function openInstalledUnlocked(): Promise<ReturnType<typeof inspectInstall>> {
   const expected = requiredExpectedRelease();
-  const status = await inspectInstall(runtime !== null);
-  if (status.state !== 'ready') {
+  const inspected = await inspectInstalled(runtime !== null);
+  if (inspected.state !== 'ready') {
     clearRuntime();
-    return status;
+    return inspected;
   }
-  if (status.manifestSha256 !== expected.manifestSha256) {
+  if (inspected.manifestSha256 !== expected.manifestSha256) {
     clearRuntime();
-    return staleStatus(status, expected);
+    return staleStatus(inspected, expected);
   }
-  const installId = await installedInstallId();
+  const files = inspected.files;
   if (
     runtime
-    && runtimeManifestSha256 === status.manifestSha256
-    && runtimeInstallId === installId
+    && runtimeManifestSha256 === inspected.manifestSha256
+    && runtimeInstallId === files.installId
   ) {
+    const { files: _, ...status } = inspected;
     return status;
   }
   clearRuntime();
-  const files = await installedFiles();
-  if (!files) return inspectInstall(false);
+  const openRuntime = __ICHIRAN_TYPESCRIPT_ORACLE__
+    ? (await typescriptRuntimeModule!).openTypeScriptAnalyzerRuntime
+    : openAnalyzerRuntime;
   try {
-    runtime = await openAnalyzerRuntime(files);
+    runtime = await openRuntime(files);
     runtimeManifestSha256 = files.manifest.manifestSha256;
     runtimeInstallId = files.installId;
-    return inspectInstall(true);
+    const { files: _, ...status } = inspected;
+    return { ...status, workerOpen: true };
   } catch (error) {
+    if (!isArtifactCorruption(error)) throw error;
     await markInstallCorrupt(files.installId);
     clearRuntime();
     return inspectInstall(false);
@@ -134,25 +158,7 @@ function openInstalled(): Promise<ReturnType<typeof inspectInstall>> {
   return withInstallLifecycleLock(openInstalledUnlocked);
 }
 
-function isArtifactCorruption(error: unknown): boolean {
-  if (!(error instanceof Error)) return false;
-  // Chromium rejects reads from a File snapshot whose OPFS entry was replaced
-  // with NotReadableError. Treat that stale backing file like other pack damage.
-  if (error instanceof DOMException && error.name === 'NotReadableError') return true;
-  if (error.name === 'DetailStoreError') {
-    return (error as Error & { readonly code?: string }).code !== 'out-of-range';
-  }
-  return new Set([
-    'PackFormatError',
-    'SurfaceIndexFormatError',
-    'RootPayloadFormatError',
-    'MorphologyFormatError',
-    'AnalyzerSupportFormatError',
-    'AnalyzerAnnotationsError'
-  ]).has(error.name);
-}
-
-async function withRuntime<T>(operation: (value: IchiranRuntime) => T | Promise<T>): Promise<T> {
+async function withRuntime<T>(operation: (value: WorkerRuntime) => T | Promise<T>): Promise<T> {
   let repairAttempted = false;
   while (true) {
     const outcome = await withLifecycleLock('shared', async () => {
@@ -273,6 +279,15 @@ async function handle(request: WorkerRequest): Promise<unknown> {
     }
     case 'romanize': {
       return withRuntime(value => value.romanize(request.text));
+    }
+    case 'rust-kernel-metrics': {
+      if (__ICHIRAN_TYPESCRIPT_ORACLE__) {
+        throw new WorkerOperationError('unsupported-operation', 'Rust kernel metrics are unavailable');
+      }
+      return withRuntime(value => {
+        if (!value.metrics) throw new Error('Rust kernel metrics are unavailable');
+        return value.metrics();
+      });
     }
   }
 }

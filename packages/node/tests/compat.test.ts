@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'bun:test';
+import { afterAll, beforeAll, describe, expect, test } from 'bun:test';
 import {
   PORTABLE_LEGACY_INFO,
   type IchiranRuntime,
@@ -214,9 +214,16 @@ test('romanizeWithInfo uses top paths and preserves historical reverse definitio
 const releaseDirectory = process.env.ICHIRAN_PACK_DIR;
 
 describe.skipIf(!releaseDirectory)('real packed legacy -i parity regressions', () => {
+  let runtime: IchiranRuntime | null = null;
+
+  beforeAll(async () => {
+    runtime = await openNodeRuntime(releaseDirectory!);
+  });
+
+  afterAll(() => runtime?.dispose());
+
   test('preserves unfiltered counter senses', async () => {
-    const runtime = await openNodeRuntime(releaseDirectory!);
-    expect(await romanizeWithInfo(runtime, '三個')).toEqual({
+    expect(await romanizeWithInfo(runtime!, '三個')).toEqual({
       romanized: 'sanko',
       info: [[
         'sanko',
@@ -232,8 +239,7 @@ describe.skipIf(!releaseDirectory)('real packed legacy -i parity regressions', (
   });
 
   test('preserves affirmative/plain flags and nested via layout', async () => {
-    const runtime = await openNodeRuntime(releaseDirectory!);
-    expect(await romanizeWithInfo(runtime, '食べさせられました')).toEqual({
+    expect(await romanizeWithInfo(runtime!, '食べさせられました')).toEqual({
       romanized: 'tabesaseraremashita',
       info: [[
         'tabesaseraremashita',
@@ -250,8 +256,7 @@ describe.skipIf(!releaseDirectory)('real packed legacy -i parity regressions', (
   });
 
   test('uses the combined alternative romanization and formats every alternative', async () => {
-    const runtime = await openNodeRuntime(releaseDirectory!);
-    expect(await romanizeWithInfo(runtime, '行った')).toEqual({
+    expect(await romanizeWithInfo(runtime!, '行った')).toEqual({
       romanized: 'okonatta/itta',
       info: [[
         'okonatta/itta',

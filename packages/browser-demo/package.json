@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "bun run --cwd ../core build && vite build && bun scripts/finalize-sw.ts && bun scripts/audit-build.ts",
+    "build": "bun run build:benchmark-corpus && bun run --cwd ../core build && vite build && bun scripts/finalize-sw.ts && bun scripts/audit-build.ts",
+    "build:benchmark-corpus": "bun scripts/build-benchmark-corpus.ts",
     "stage:analyzer": "bun scripts/stage-analyzer.ts",
     "measure:shell": "bun scripts/measure-shell.ts",
     "audit:build": "bun scripts/audit-build.ts",

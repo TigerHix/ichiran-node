@@ -58,6 +58,12 @@ export interface InstalledFiles {
   readonly details: FileSystemFileHandle;
 }
 
+export type InspectedInstall =
+  | (Extract<PackStatus, { readonly state: 'ready' }> & {
+      readonly files: InstalledFiles;
+    })
+  | Exclude<PackStatus, { readonly state: 'ready' }>;
+
 export class AnalyzerInstallError extends Error {
   readonly code: 'insufficient-storage' | 'release-changed';
 
@@ -486,7 +492,7 @@ async function installAsset(
   }
 }
 
-export async function inspectInstall(workerOpen = false): Promise<PackStatus> {
+export async function inspectInstalled(workerOpen = false): Promise<InspectedInstall> {
   const directory = await analyzerDirectory();
   let installId: string | null;
   try {
@@ -564,8 +570,16 @@ export async function inspectInstall(workerOpen = false): Promise<PackStatus> {
     downloadBytes: marker.manifest.hot.downloadBytes + marker.manifest.details.downloadBytes,
     installedBytes: hotFile.size + detailsFile.size,
     persistent,
-    workerOpen
+    workerOpen,
+    files: { manifest: marker.manifest, installId: marker.installId, hot, details }
   };
+}
+
+export async function inspectInstall(workerOpen = false): Promise<PackStatus> {
+  const inspected = await inspectInstalled(workerOpen);
+  if (inspected.state !== 'ready') return inspected;
+  const { files: _, ...status } = inspected;
+  return status;
 }
 
 export async function installAnalyzer(
@@ -701,26 +715,6 @@ export async function installAnalyzer(
   }
 
   return inspectInstall(false);
-}
-
-export async function installedFiles(): Promise<InstalledFiles | null> {
-  const directory = await analyzerDirectory();
-  await cleanupStaleInstallFiles(directory);
-  const installId = await readInstallId();
-  const marker = installId ? await readCommittedMarker(directory, installId) : null;
-  if (
-    !marker
-    || installId === null
-    || installId !== marker.installId
-  ) return null;
-  const files = markerFiles(marker);
-  const [hot, details] = await Promise.all([
-    fileIfPresent(directory, files.hot),
-    fileIfPresent(directory, files.details)
-  ]);
-  return hot && details
-    ? { manifest: marker.manifest, installId: marker.installId, hot, details }
-    : null;
 }
 
 /** Mark only the ready pack whose identity was observed by the failing runtime. */

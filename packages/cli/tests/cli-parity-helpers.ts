@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { afterAll } from 'bun:test';
 import { openNodeRuntime } from '@ichiran/node';
 
 import { runCli } from '../src/index.js';
@@ -80,6 +81,12 @@ export function openPackedParityRuntime(): Promise<PackedRuntime> {
   runtimePromise ??= openNodeRuntime();
   return runtimePromise;
 }
+
+afterAll(async () => {
+  const current = runtimePromise;
+  runtimePromise = null;
+  if (current) (await current).dispose();
+});
 
 export function loadParityTestData(
   testCasesFile: string,

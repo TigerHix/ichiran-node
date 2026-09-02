@@ -6,7 +6,11 @@ const packageRoot = resolve(import.meta.dir, '..');
 const repositoryRoot = resolve(packageRoot, '..', '..');
 const source = resolve(process.argv[2] ?? join(repositoryRoot, 'dist', 'browser-alpha'));
 const target = join(packageRoot, 'public', 'analyzer');
-const { manifest } = await verifyAnalyzerRelease(source, repositoryRoot);
+const { manifest } = await verifyAnalyzerRelease(
+  source,
+  repositoryRoot,
+  process.env.ICHIRAN_QUALIFIED_ARTIFACT
+);
 
 await rm(target, { recursive: true, force: true });
 await mkdir(target, { recursive: true });
