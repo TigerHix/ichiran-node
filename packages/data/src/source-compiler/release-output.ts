@@ -57,7 +57,7 @@ import type { ConjugationRulePaths } from '../data/conj-rules.js';
 
 const ROOT_ORDER_ATTESTATION_SHA256 = '12ca177bf7765e4337f3c1cc4d836a7bcfc84b3f60b08e07d6eb238ad72dc4cf';
 const GENERATED_ORDER_ATTESTATION_SHA256 =
-  '3ecb9af387502836b45a98a6570bbaadeaf0ba2a0dc530928bcdeae1d7ae36c1';
+  '4f2a767eb48b09194af7e20070e2b5e79765a70b5d6ebf4eaa9a3048ef5776cf';
 const QUALIFIED_ARTIFACT_INDEX_SHA256 = 'a032bbd11c257259877b438a79c674544985a58acdaff86327ae57ae8cbeb3ac';
 
 interface CommandResult {

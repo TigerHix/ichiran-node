@@ -1,7 +1,9 @@
 #!/usr/bin/env bun
 
+import { createHash } from 'node:crypto';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
+import { buildAnalyzerAnnotations } from '../packages/data/src/browser-pack/analyzer-annotations.js';
 import { buildMorphology } from '../packages/data/src/browser-pack/morphology-compiler.js';
 import {
   compileBoundedSourceNativeAnalyzerSupport
@@ -107,6 +109,11 @@ const surface = await writeBoundedSurfaceIndexTsv({
 });
 const compatibilityUsage = assertSourceCompatibilityConsumed(roots.compatibility);
 const generated = compiled.support.generated!;
+const annotations = buildAnalyzerAnnotations(
+  compiled.support.splits,
+  compiled.support.hints,
+  generated
+);
 const report = {
   formatVersion: 1,
   postgresUnavailable: true,
@@ -126,6 +133,11 @@ const report = {
   phases: projection.phases,
   patches: projection.patches,
   support: compiled.summary,
+  annotations: {
+    bytes: annotations.bytes.byteLength,
+    sha256: createHash('sha256').update(annotations.bytes).digest('hex'),
+    counts: annotations.stats
+  },
   surface,
   generated: {
     semanticPaths: generated.semanticPaths,

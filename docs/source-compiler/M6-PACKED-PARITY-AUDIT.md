@@ -35,7 +35,7 @@ add an allowlist.
 | Qualified `details.bin.gz` | 12,317,325 | `ad10bc4876d9a05224f62f5b438080ea1ff4e6a88ab3090be0f871035e95918a` |
 | Direct-order attestation | 1,295 | `12ca177bf7765e4337f3c1cc4d836a7bcfc84b3f60b08e07d6eb238ad72dc4cf` |
 | Direct-order full rows | 4,076,458 | `5f4660a0afbc1a21021f3c4db49014554a3b7991a48960c2238a050ae05a1854` |
-| Generated-order attestation | 8,858 | `3ecb9af387502836b45a98a6570bbaadeaf0ba2a0dc530928bcdeae1d7ae36c1` |
+| Generated-order attestation | 8,858 | `4f2a767eb48b09194af7e20070e2b5e79765a70b5d6ebf4eaa9a3048ef5776cf` |
 | Generated-order report | 44,166 | `239e02ed657f739adb9808816198e96bf81031b66872e9f36c881140ac354454` |
 | Generated-order full rows | 39,744,311 | `6160662ad10a4c4dade2fef1b11dbfb689cf4f55ab225862f6b77435be2c708e` |
 
