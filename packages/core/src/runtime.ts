@@ -1,7 +1,5 @@
-import {
-  type PortableAnalyzeOptions,
-  type PortableAnalysisResult
-} from './analyzer.js';
+import type { PortableAnalyzeOptions } from './analyzer-options.js';
+import type { PortableAnalysisResult } from './analyzer-result.js';
 import {
   DetailStoreError,
   type DetailEntry,

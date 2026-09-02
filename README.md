@@ -10,6 +10,12 @@ module powers the browser Worker, Node adapter, CLI, and HTTP API. TypeScript ow
 installation and I/O; `TypeScriptOracleRuntime` remains available only through an
 explicit qualification entry point for frozen differential checks.
 
+`candidateId` values in analysis DTOs are references within one response only. They
+may change between calls, pack builds, or runtime implementations; consumers must not
+persist them or use them as cross-response identities. Same-pack Rust qualification
+still compares them exactly, while the PostgreSQL/Lisp clean projection explicitly
+omits them because those oracles have no corresponding field.
+
 Native Apple packaging is the next host integration of the same Rust source. Physical
 Safari/iPhone qualification and the Mac-owned XCFramework, Swift, simulator, and
 device gates remain pending. Release data is owned by the PostgreSQL-free TypeScript
@@ -46,7 +52,8 @@ bun run alpha:demo:stage
 bun run --cwd packages/browser-demo dev
 ```
 
-Building a new pack is the PostgreSQL-isolated maintainer workflow documented in
+Building a new pack and proving PostgreSQL isolation are separate maintainer commands
+documented in
 [the source-compiler release guide](./docs/source-compiler/M6-RELEASE-WORKFLOW.md).
 
 ## Current qualified architecture
@@ -73,7 +80,8 @@ pinned semantic sources ---> @ichiran/data source compiler ---> immutable releas
 - `@ichiran/node` verifies and decompresses release files, then opens the same core
   WASM runtime used in the browser.
 - `@ichiran/reference-postgres` is the frozen former implementation. It is private
-  and retained temporarily as a compiler/oracle dependency, not a product runtime.
+  and retained temporarily for explicitly invoked migration-oracle work, not as a
+  product runtime or normal compiler dependency.
 - `@ichiran/data` owns the TypeScript source compiler and pack-v1 encoders. Its
   verified source lock selects JMdict, Kanjidic2, custom XML/CSV, conjugation CSVs,
   chronological errata, and the narrow compatibility ledger.
@@ -125,11 +133,15 @@ WASM, JavaScript glue, or declarations differ. The build requires
 `cargo install wasm-bindgen-cli --version 0.2.127 --locked`.
 The root parity and browser-qualification commands run the same check first.
 
-Compiler and PostgreSQL-reference checks are explicit and separate:
+Direct compilation, Linux isolation proof, and migration-oracle checks are explicit
+and separate:
 
 ```bash
 bun run source:release -- baseline --out /absolute/path/to/release --pack-version <version>
+bun run source:release:isolated -- baseline --out /absolute/path/to/isolated-release --pack-version <version>
 bun run qualify:rust-same-pack -- /absolute/path/to/release
+bun run qualify:native-same-pack -- /absolute/path/to/release
+bun run qualify:source-hosts -- /absolute/path/to/release
 
 # Frozen migration-oracle maintenance only
 bun run typecheck:compiler

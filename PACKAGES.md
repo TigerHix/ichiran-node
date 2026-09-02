@@ -78,10 +78,13 @@ bun run build
 bun run typecheck
 bun test
 
-# PostgreSQL-isolated source release and cross-kernel qualification
+# Direct source release, isolation proof, and cross-kernel qualification
 bun run source:release -- baseline --out /absolute/path/to/release --pack-version <version>
+bun run source:release:isolated -- baseline --out /absolute/path/to/isolated-release --pack-version <version>
 bun run source:attestation -- --report data/source-compiler-parity-report.json --release /absolute/path/to/release
 bun run qualify:rust-same-pack -- /absolute/path/to/release
+bun run qualify:native-same-pack -- /absolute/path/to/release
+bun run qualify:source-hosts -- /absolute/path/to/release
 
 # Frozen compiler/reference maintenance
 bun run build:compiler

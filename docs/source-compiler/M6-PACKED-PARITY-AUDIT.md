@@ -99,7 +99,7 @@ source release with PostgreSQL physically unavailable:
 
 ```sh
 bun scripts/acquire-qualified-source-compiler-baseline.ts work/m2-baseline
-sh scripts/source-compiler-release-no-postgres.sh baseline \
+bun run source:release:isolated -- baseline \
   --out work/m6-source-release-c639427 \
   --pack-version ichiran-260118-source
 ```

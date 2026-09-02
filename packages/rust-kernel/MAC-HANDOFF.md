@@ -2,20 +2,34 @@
 
 ## Integrated candidate
 
-Use the final pushed head of `codex/integrated-edge-cutover`. Its code-qualified parent
-is `e7565078c8c7e0a29890328b491cb4ad701df73b`; later commits on the branch are
-documentation-only. The integrated Linux/WSL report is
+Use the final pushed head of `codex/integrated-edge-cutover`. The qualified revision is
+the commit containing this handoff; there are no documentation-only descendants. Pin
+the remote head before building and keep the checkout detached at that exact commit:
+
+```sh
+git fetch origin codex/integrated-edge-cutover
+candidate=$(git rev-parse origin/codex/integrated-edge-cutover)
+git switch --detach "$candidate"
+test "$(git rev-parse HEAD)" = "$candidate"
+git status --short
+```
+
+The integrated Linux/WSL report is
 [`docs/INTEGRATED-EDGE-CUTOVER-REPORT.md`](../../docs/INTEGRATED-EDGE-CUTOVER-REPORT.md).
 
 The source-built pack qualified with this code has installed hot SHA-256
 `eb9c58204c624b1220bc257b910fc5df7e092133af09760ce6800b672b4bcd96`
 and details SHA-256
 `0fc45731d84fbb7c2ccf3ef5692d2f1ab01e538325f0ed50135da38e621aa151`.
-Obtain those exact release files from the integration handoff; do not substitute an
-unverified local pack. Run the immutable C corpus first, then exercise the final
-source pack through the Swift wrapper for install/open, analysis, romanization,
-describe, retained legacy, restart, corruption/recovery, and concurrent background
-calls. Do not port analyzer or presentation logic into Swift.
+The source release lives under an ignored `work/` directory and is not contained in or
+transferred by Git. Obtain the exact attached or published `manifest.json`,
+`hot.bin.gz`, `details.bin.gz`, and `stats.json` from the integration handoff. Verify
+that `manifest.sourceCommit` equals `candidate` and that the decoded identities above
+match before using it. Do not substitute an unverified local pack. Run the immutable C
+corpus first, then the source same-pack C corpus, then exercise that source pack through
+the Swift wrapper for install/open, analysis, romanization, describe, retained legacy,
+restart, corruption/recovery, and concurrent background calls. Do not port analyzer or
+presentation logic into Swift.
 
 M5B remains open: build the device and simulator archives, create the XCFramework,
 write the thin Swift ownership/file adapter, and run simulator plus physical-device
@@ -137,6 +151,7 @@ Before writing the Swift adapter, run the same C caller on macOS:
 
 ```sh
 bash tests/run_c_harness.sh /path/to/portable-core-260118-baseline
+(cd ../.. && bun run qualify:native-same-pack -- /path/to/attached-source-release)
 ```
 
 The required output covers 1,236 clean analyses, three explicit astral/lone-surrogate

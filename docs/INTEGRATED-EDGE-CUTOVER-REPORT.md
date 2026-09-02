@@ -1,33 +1,28 @@
 # Integrated source-compiler and Rust-kernel cutover report
 
-Date: 2026-09-02  
-Branch: `codex/integrated-edge-cutover`  
-Qualified code commit: `e7565078c8c7e0a29890328b491cb4ad701df73b`  
+Date: 2026-09-02
+Branch: `codex/integrated-edge-cutover`
+Qualification revision: the commit containing this report, which must equal the
+branch head and every generated manifest's `sourceCommit`
 Baseline: `effd10f1cd4cfd6780760c8130030d287df35ca9`
 
 ## Decision
 
-The combined Linux/WSL release candidate passes. The PostgreSQL-free source compiler
-and the canonical Rust analyzer kernel now meet on one fresh format-v1 source release.
-Browser, Node, CLI, and API use the same checked-in Rust WASM module through thin host
-adapters. Native clients use the same Rust crate through ABI v3.
+This branch joins the reviewed PostgreSQL-free source compiler and the canonical Rust
+analyzer kernel without replacing either implementation. Rust owns analyzer semantics.
+TypeScript owns the source compiler, pack and release verification, browser lifecycle,
+host adapters, and qualification orchestration. The frozen TypeScript and PostgreSQL
+analyzers are available only to explicitly named transition qualification tools.
+Upstream Lisp is fixture authority only. Grammar is unchanged.
 
-TypeScript owns the source compiler, pack/release verification, host I/O, browser
-installation, and qualification orchestration. Its former analyzer is available only
-from the explicit qualification entry point. PostgreSQL and upstream Lisp are frozen
-migration authorities for this transition release and are not runtime or normal
-source-build dependencies. No runtime allowlist or second production analyzer was
-added. Grammar was not changed.
+The release candidate is qualified only when all commands in this report run from a
+clean checkout of the report-bearing branch head. Documentation-only descendants are
+not qualified revisions: the manifest, code, report, and pushed branch must all name
+the same commit.
 
-This report is a documentation-only descendant of the qualified code commit. The
-release manifest and all executed code-bearing gates bind
-`e7565078c8c7e0a29890328b491cb4ad701df73b`.
+## Preserved merge ancestry
 
-## Integrated history
-
-All refs were fetched and matched the recorded heads. Five registered live worktrees
-were clean. Stale prunable temporary worktree registrations were not treated as live
-checkouts and were not deleted.
+All input refs matched their recorded heads before integration:
 
 | Ref | Verified commit |
 | --- | --- |
@@ -35,283 +30,150 @@ checkouts and were not deleted.
 | `origin/source-compiler-m2` | `4def0dba30c82c186b765048d42cdf4a5e7231d1` |
 | `origin/codex/rust-kernel-m1` | `957d25862d3caee53b152775eb9079778afb172a` |
 
-The source branch was merged first in
-`437b8b254ea983fed8fa1da5c27de693e3d59d01`; its parents are the exact baseline and
-source head. The Rust branch was merged second in
-`cb16d102df53c3f4e6662eb740a84b2fb03921bd`; its second parent is the exact Rust head.
-Both heads remain ancestors of the candidate.
+The source branch was merged first by
+`437b8b254ea983fed8fa1da5c27de693e3d59d01`. The Rust branch was merged second by
+`cb16d102df53c3f4e6662eb740a84b2fb03921bd`. Both reviewed heads are ancestors of
+the candidate.
 
 The expected `README.md` and `packages/core/tools/oracle-parity.ts` conflicts were
-resolved semantically. The combined oracle retains source-compiler pack verification,
-v4 tested-release/report/attestation provenance, clean-release requirements, Rust
-same-pack qualification, and `--fallback-out`. The fallback fixture continues to bind
-the frozen oracle lock rather than the source compiler input lock.
+resolved semantically. The oracle retains source-pack verification, v4 retained
+report/attestation and clean-release validation, Rust same-pack qualification, and
+`--fallback-out` generation.
 
-## Qualified source release
+## Release ownership and entry points
 
-Two output directories that did not exist before the final code commit were built
-through `scripts/source-compiler-release-no-postgres.sh`:
+- `@ichiran/core` exports the Rust/WASM facade, public DTO/options, release/pack
+  readers, and shared host/compiler utilities. TypeScript analyzer execution helpers
+  are excluded from the main entry point and live under `@ichiran/core/qualification`.
+- The canonical browser qualifier rejects `ICHIRAN_TYPESCRIPT_ORACLE=1`, removes the
+  variable from production build/audit/E2E child environments, and requires a Rust
+  build audit. The separately named `build:qualification-typescript-oracle` command
+  exists only for frozen-oracle diagnostics.
+- `@ichiran/data` exports and executes the source compiler. Its legacy PostgreSQL
+  loader is private `migration:data` tooling. PostgreSQL and the reference package are
+  development dependencies, not normal data-package dependencies.
+- `source:release` runs the compiler directly. Linux namespace isolation is the
+  separate `source:release:isolated` proof and has no `pg_isready` dependency.
 
-- `work/integrated-source-e756507-a`
-- `work/integrated-source-e756507-b`
+`candidateId` is a request-local reference. It may change across calls, packs, or
+runtimes and must not be persisted. Full Rust same-pack comparison includes it exactly;
+the PostgreSQL/Lisp clean projection deliberately omits it because those authorities
+have no corresponding field. A regression test locks both halves of that contract.
 
-The isolation probe reported Unix sockets hidden, loopback down, and ports 5432/5433
-unavailable. Both builds activated generation
-`7447e2d507decf4143b3e7f9e092504e878810f67f5676779597b7119a102796`.
-`manifest.json`, `hot.bin.gz`, `details.bin.gz`, and `stats.json` were byte-identical
-between the two directories.
+## Source compiler qualification
 
-| Artifact | Bytes | SHA-256 |
+Two previously nonexistent output directories must be compiled independently from the
+same clean report-bearing commit with `source:release:isolated`. All four release files
+must compare byte-for-byte. Both manifests must contain the current 40-character HEAD.
+The qualified January source semantics produce these stable installed identities:
+
+| Installed asset | Bytes | SHA-256 |
 | --- | ---: | --- |
-| `manifest.json` | 938 | `19338081fcaf47f44392ec21e657acf93f412f3eddfd26efac01b8c2c01065c8` |
-| manifest authenticated body | — | `66e5987d73565204b1ea952d355d8a4eac42bef727e593dc01fc1337a04a33f4` |
-| `hot.bin.gz` | 12,607,002 | `8648acfde1b3bc685bcd786a7718d2d980103c87fade3c3fdbdf416960859b9f` |
-| installed `hot.bin` | 24,747,944 | `eb9c58204c624b1220bc257b910fc5df7e092133af09760ce6800b672b4bcd96` |
-| `details.bin.gz` | 12,317,325 | `ad10bc4876d9a05224f62f5b438080ea1ff4e6a88ab3090be0f871035e95918a` |
-| installed `details.bin` | 13,555,874 | `0fc45731d84fbb7c2ccf3ef5692d2f1ab01e538325f0ed50135da38e621aa151` |
-| `stats.json` | 37,343 | `13443b5e5d50a34ce216d3ba440261cc3784de168ea9205e0c5df15b32bc39f2` |
+| `hot.bin` | 24,747,944 | `eb9c58204c624b1220bc257b910fc5df7e092133af09760ce6800b672b4bcd96` |
+| `details.bin` | 13,555,874 | `0fc45731d84fbb7c2ccf3ef5692d2f1ab01e538325f0ed50135da38e621aa151` |
 
-The manifest records source lock SHA-256
-`16f11739978e91922cf43337c6b801765214dbb0945509dec94b85321952b9cd`.
-The release contains 8,393,704 accepted surfaces and 217,967 roots. All runtime
-lookup-order exception surface, class, locator, and byte counts are zero.
+The direct compiler and isolation wrapper invoke the same source entry point. Isolation
+uses an empty bind mount over the PostgreSQL socket directory and a new network
+namespace with loopback down. The source-release module-graph test rejects imports of
+the PostgreSQL client, the frozen reference package, and browser-pack oracle loaders.
 
-The database-free data suite passed 138 tests with 12 explicit database-only skips,
-861 assertions, and zero failures. It validated the source lock, manifest, direct
-order attestation, generated-order release gate, complete semantic locator/candidate
-closure, and blocked migration-oracle module boundary. The retained full ordering
-spools were not regenerated; their compact, digest-bound direct/generated
-attestations were validated by the clean release and test gates.
+Required source results are:
 
-## Source compiler parity
-
-The final v4 oracle report was generated against the fresh source release. PostgreSQL
-was used only by this separately invoked migration-oracle process. After removing
-`generatedAt` and the three expected candidate-specific tested-release provenance
-fields, its sorted bytes are identical to the retained v4 report; both normalized
-files have SHA-256
-`05cceb0b78d4437038a8c12917e1d69badcf65699b667ec1af5f018df79e1111`.
-
-| Comparison | Result |
+| Comparison | Accepted result |
 | --- | ---: |
-| Chosen authority | 1,225/1,241 byte exact; 16 individually attested order changes |
+| Chosen authority | 1,225/1,241 byte exact; 16 attested ordering changes |
 | Chosen path | 1,229/1,241 exact; 12 analyzer-order and 4 presentation-order changes |
-| Fallback clean semantics | 296/301 exact; 5 individually attested order changes |
+| Fallback clean semantics | 296/301 exact; 5 attested ordering changes |
 | Standalone romanization | 5/5 exact |
 | Missing semantic locators or candidates | 0 |
-| Errors | 0 |
-| Retained reviewed samples | 21 |
 | Runtime allowlist entries | 0 |
 
-The newly emitted `--fallback-out` file is byte-identical to
-`packages/rust-kernel/tests/fixtures/m3-fallback.json`, SHA-256
-`dbc13ead615b8d70d2f3ecf38aeb7042361459856700a86844c5fe0db6706843`.
-The retained-report validator passed against the new release: all 16 chosen rows and
-five fallback rows form an exact bijection with the attestation. The regenerated
-report intentionally cannot replace the retained report because the attestation also
-pins the historical report's clean source commit; this provenance check was preserved.
+The generated fallback file must remain byte-identical to
+`packages/rust-kernel/tests/fixtures/m3-fallback.json`. Direct/generated ordering
+attestations must validate with no additional or unreviewed difference.
 
-All 21 intentional order changes, including exact inputs and old/new values, remain
-the durable record in
-[`source-compiler/M6-PACKED-PARITY-AUDIT.md`](source-compiler/M6-PACKED-PARITY-AUDIT.md).
-Integration introduced no additional analyzer difference.
+## Rust, native, host, and browser qualification
 
-One additional browser witness exposed an opaque request-local ID consequence of the
-new pack: for `analyze("猫", { limit: 1 })`, `candidateId` is `1` in the immutable pack
-and `2` in the source-built pack in the chosen token and its repeated alternative;
-every semantic field is unchanged. Both TypeScript and Rust produce `2` on the new
-pack. Browser qualification now derives six exact DTO witnesses from the frozen
-TypeScript oracle reading the verified active pack, then compares the Worker bytes
-exactly. This is test-only same-pack evidence, not a runtime normalization or exception.
+The Rust/WASM same-pack differential runs on the fresh source release and requires:
 
-## Rust same-pack and native qualification
+- 1,236/1,236 raw analyzer operations exact against the frozen TypeScript same-pack
+  oracle;
+- 5/5 standalone romanizations exact;
+- 702/702 retained detailed operations exact;
+- zero allowlist entries and no eager whole-details-store read.
 
-The source-release adapter verifies the manifest and compressed files first, streams
-the two installed images into an exact temporary directory, and invokes the existing
-same-pack differential. It does not create another release representation or analyzer.
+The native same-pack command materializes that same verified source release and drives
+the real C ABI. It requires 1,236 clean operations, three UTF-16 edge cases, 702
+detailed operations, five romanizations, four lazy describes, two corruption/recovery
+cases, owned success/error buffers, 128 concurrent clean calls, and 32 concurrent
+detailed operations. The immutable baseline C corpus remains a separate regression
+gate; source-pack qualification no longer relies on it as a substitute.
 
-| Gate | Result |
-| --- | ---: |
-| Raw analyzer operations | 1,236/1,236 exact |
-| Standalone romanization | 5/5 exact |
-| Retained detailed operations | 702/702 exact |
-| Detail reads | 4,434; 116,459,085 total bytes |
-| Largest detail read | 1,755,112 bytes |
-| Eager whole-details-store read | false |
-| Allowlist entries | 0 |
+`qualify:source-hosts` verifies the source release, rebuilds product packages, and runs
+durable Node runtime, CLI executable, and HTTP API tests without the raw historical
+ordering fixtures. Intentional M6 ordering changes remain governed by the v4 source
+attestation, not by an exception in a production host test.
 
-The checked-in WASM is 1,119,555 bytes, SHA-256
-`f4d17d3a406c1c8269acfc54cd4b08fcaaee795f1d273f8af93be6b25331fe5d`.
-The immutable-baseline differential also remained 1,236/1,236 raw, 5/5 romanization,
-and 702/702 detailed exact, with 4,430 bounded detail reads and no allowlist.
+The canonical browser command builds only the Rust Worker, audits the production
+bundle, installs through OPFS, restarts offline, exercises corruption/recovery and
+updates, runs exact active-pack Rust witnesses, and executes the calibrated exhaustive
+performance gate. Browser artifact bytes and measured timings are emitted by that
+exact-revision run and belong in the final handoff report; they are not copied forward
+from an earlier commit.
 
-Rustfmt, warning-denied Clippy over all targets/features, ordinary Cargo tests, and a
-fresh temporary WASM/glue/declaration reproduction passed. Ordinary Rust totals are
-104 passed, zero failed, and 19 explicit real-pack tests ignored; all 19/19 real-pack
-tests passed when invoked against the digest-locked installed baseline.
+## Canonical qualification commands
 
-The strict C11 ABI v3 callers passed:
-
-- 1,236/1,236 clean operations plus 3/3 astral/lone-surrogate UTF-16 cases;
-- 702/702 detailed operations (401 current-Lisp and 301 fallback authority);
-- four canonical-tie witnesses, five romanizations, four lazy describes, and two
-  corrupt-block recovery cases;
-- owned success/error buffers and 14-symbol ownership contract;
-- 128/128 concurrent clean calls and 32/32 concurrent detailed operations.
-
-## Host and browser qualification
-
-The immutable compatibility matrix passed 35/35 Node/CLI/API tests: Node release
-verification and lazy lifecycle, legacy CLI text/JSON behavior, API response shapes,
-concurrency, input bounds, and upstream regressions. The source pack is not run through
-the old raw-Lisp CLI exact gate because that gate is designed to fail on the 16 M6
-order changes; the full v4 source attestation above is its non-weakened replacement for
-this pack. Rust/TypeScript agreement on that same source pack remains exact.
-
-The default root command passed 164 tests, skipped 24 explicit opt-in real-pack or
-PostgreSQL cases, and failed zero after the production package build and Rust artifact
-reproduction. Root and compiler typechecks passed.
-
-Browser unit tests passed 30/30. The production Vite build and Worker-only audit
-passed. Playwright installed Chromium and passed all 13 serial scenarios, covering:
-
-- first install, OPFS persistence, offline restart, and shell activation;
-- corrupt manifest/transfer/installed bytes and interrupted installs;
-- cross-tab ABA repair, runtime corruption recovery, update/downgrade behavior, and
-  old-shell cleanup;
-- unsupported environments and responsive behavior;
-- exact Rust Worker same-pack DTO/UTF-16 witnesses;
-- the calibrated exhaustive performance corpus.
-
-| Browser measurement | Result |
-| --- | ---: |
-| Calibration ratio | 6.0519x |
-| Worker ready / Rust open | 512.8 / 328.5 ms |
-| First analysis | 29.1 ms |
-| Lexical p50 / p95 | 0.7 / 24.9 ms |
-| Morphology p50 / p95 | 1.0 / 24.1 ms |
-| First detail | 3.1 ms |
-| Transient bytes | 59,598,736 |
-| WASM linear memory | 34,078,720 |
-| Resident Rust kernel payload | 29,194,814 |
-| Detail resident before / after | 1,755,112 / 1,820,470 bytes |
-| Release download | 24,925,265 bytes |
-| Production shell | 882,045 bytes |
-| First install | 25,807,310 bytes (407,090 below 25 MiB) |
-
-## Dependency and maintainability audit
-
-- Product runtime packages contain no PostgreSQL client, database URL, Lisp process,
-  or reference-package import. PostgreSQL remains a dev dependency because the frozen
-  reference and migration tools still exist for one transition release.
-- The source release module graph rejects both `@ichiran/reference-postgres` and the
-  PostgreSQL client. The isolation wrapper independently makes sockets and networking
-  unavailable.
-- `TypeScriptOracleRuntime` is exported only by `@ichiran/core/qualification` and is
-  used by qualification code. Production browser audit confirms it is not bundled.
-- Rust owns analyzer semantics; TypeScript changes are host, release, compiler, and
-  qualification boundaries only.
-- No runtime allowlist, policy framework, database-shaped compiler adapter, queue,
-  state-machine layer, or second production analyzer was introduced.
-- Integration glue is small: a 25-line same-pack release adapter and a 16-line release
-  verifier. The merged 1,621-line oracle tool predates integration; conflict resolution
-  retained both workstreams rather than wrapping it in another tool.
-- No new source file crosses 1,000 lines. Generated/binary source inputs are not
-  abstraction findings. No `work`, `target`, `dist`, release pack, or test-result blob
-  is tracked.
-- `packages/grammar` has no diff from the baseline.
-
-## Failures diagnosed and repaired
-
-No failing gate was skipped or relabeled.
-
-1. The merged root same-pack command initially expected installed files while the
-   source compiler emits compressed release files. A thin verifier/streaming adapter
-   now joins those existing contracts and cleans its exact temporary directory.
-2. The first oracle invocation inherited a stale `.env` TCP port. The retained frozen
-   database identity was verified and subsequent oracle runs used its explicit Unix
-   socket URL. No build command used it.
-3. One native detailed fixture serialized `counter` before `seq`/`gloss`; frozen
-   TypeScript constructs `seq`, `gloss`, then `counter`, and the C product corpus
-   already required that order. Only the stale fixture changed; a trial production
-   Rust reorder was reverted, the checked-in WASM stayed byte-identical, and the full
-   Rust/C gates passed.
-4. A browser M1 witness assumed the immutable pack's request-local `candidateId`.
-   Qualification now generates exact same-pack witnesses from the frozen TypeScript
-   oracle; the complete 13-test browser run then passed.
-5. Diagnostic commands aimed once at an unpacked differential directory and once at a
-   relative C-harness path. Both failed with explicit missing-file errors and were
-   rerun against the correct compressed release and absolute installed-pack path.
-6. A regenerated v4 report was deliberately rejected as a replacement for the
-   historical attestation because its source commit differs. The historical
-   attestation was kept intact, validated against the new release, and the new report
-   was independently proven content-identical after only candidate provenance fields
-   were removed.
-
-## Command ledger
-
-The release qualification used these commands (output paths abbreviated only here):
+These are the successful release gates. Diagnostic attempts are not represented as a
+complete shell history.
 
 ```sh
-git fetch --all --prune
-git switch -c codex/integrated-edge-cutover origin/main
-git merge --no-ff origin/source-compiler-m2
-git merge --no-ff origin/codex/rust-kernel-m1
+git status --short
+test "$(git rev-parse HEAD)" = "$(git rev-parse origin/codex/integrated-edge-cutover)"
 
 bun install --frozen-lockfile
-bun run build:compiler
 bun run typecheck:compiler
 bun run typecheck
+bun run test
 
-bun scripts/acquire-qualified-source-compiler-baseline.ts work/m2-baseline
-sh scripts/source-compiler-release-no-postgres.sh --probe-only
-bun run source:release -- baseline --out work/integrated-source-e756507-a \
-  --pack-version ichiran-260118-integrated
-bun run source:release -- baseline --out work/integrated-source-e756507-b \
-  --pack-version ichiran-260118-integrated
-cmp <release-a-file> <release-b-file> # all four files
+bun run source:release:isolated -- baseline --out <release-a> --pack-version <version>
+bun run source:release:isolated -- baseline --out <release-b> --pack-version <version>
+cmp <release-a>/manifest.json <release-b>/manifest.json
+cmp <release-a>/hot.bin.gz <release-b>/hot.bin.gz
+cmp <release-a>/details.bin.gz <release-b>/details.bin.gz
+cmp <release-a>/stats.json <release-b>/stats.json
 
 env -u ICHIRAN_DB_URL -u DATABASE_URL ICHIRAN_RUN_DATABASE_TESTS=false \
   bun test packages/data/tests
 bun run source:attestation -- --report data/source-compiler-parity-report.json \
-  --release work/integrated-source-e756507-a
+  --release <release-a>
 bun packages/core/tools/oracle-parity.ts --repository "$PWD" \
-  --release work/integrated-source-e756507-a --source-compiler-pack \
-  --allow-failures --out /tmp/integrated-source-e756507-parity.json \
-  --fallback-out /tmp/integrated-source-e756507-fallback.json --samples 1241
+  --release <release-a> --source-compiler-pack --allow-failures \
+  --out <temporary-report> --fallback-out <temporary-fallback> --samples 1241
 
-bun run qualify:rust-same-pack -- work/integrated-source-e756507-a
-bun packages/core/tools/rust-kernel-wasm-differential.ts \
-  work/integrated-qualified-installed
+bun run qualify:rust-same-pack -- <release-a>
+bun run qualify:native-same-pack -- <release-a>
+bun run qualify:source-hosts -- <release-a>
 bun run verify:rust-kernel
-cargo test --release --locked --all-targets --all-features \
-  --manifest-path packages/rust-kernel/Cargo.toml -- --ignored --test-threads=1
-bash packages/rust-kernel/tests/run_c_harness.sh \
-  /home/tiger/ichiran-node/work/integrated-qualified-installed
+bash packages/rust-kernel/tests/run_c_harness.sh <installed-immutable-baseline>
 
-ICHIRAN_PACK_DIR=/home/tiger/ichiran-node/work/m2-baseline \
-  RUN_PARITY_TESTS=true \
-  bun test packages/node/tests packages/cli/tests packages/api/tests
-bun run test
+bun test packages/browser-demo/tests
 bunx playwright install chromium
-ICHIRAN_E2E_NODE="$(command -v node)" \
-  bun run --cwd packages/browser-demo qualify -- \
-  --release /home/tiger/ichiran-node/work/integrated-source-e756507-a
+bun run --cwd packages/browser-demo qualify -- --release <release-a>
 
-bun test packages/data/tests/source-compiler-oracle-boundary.test.ts \
-  packages/data/tests/source-compiler-release-evidence.test.ts \
-  packages/core/tests/public-api.test.ts
-git diff --check
+git diff --check origin/main...HEAD
+git diff --exit-code effd10f1cd4cfd6780760c8130030d287df35ca9 -- packages/grammar
+git status --short --branch
 ```
 
-## Remaining risks and handoff
+## Remaining gates and handoff
 
-The Linux/WSL candidate does not claim physical Safari/iPhone qualification. M4's
-physical Safari checks and M5B's Mac-owned Apple targets, XCFramework, Swift wrapper,
-simulator, device, leak, background-thread, and packaging validation remain pending.
-The PostgreSQL and TypeScript analyzers must remain frozen and qualification-only for
-the transition release; removing them is a later retirement change, not part of this
-candidate.
+This Linux/WSL qualification does not claim physical Safari/iPhone, XCFramework,
+Swift, simulator, Apple-device, leak, or Apple lifecycle results. M4 physical Safari
+and M5B Apple packaging remain pending. The checked-in PostgreSQL and TypeScript
+references must remain frozen and qualification-only for this transition release.
 
-The concise M5B procedure and exact ABI contract are in
+Source release directories are ignored generated artifacts and are not transferred by
+Git. The Mac owner must obtain an attached/published copy of the exact four-file
+release, verify its manifest against the checked-out candidate commit, and run both the
+immutable and source same-pack native commands before Swift work. See
 [`packages/rust-kernel/MAC-HANDOFF.md`](../packages/rust-kernel/MAC-HANDOFF.md).

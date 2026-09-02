@@ -252,6 +252,17 @@ describe('oracle parity canonicalization', () => {
     };
     const projected = projectPortableCleanAnalysis(portable);
     expect(firstCanonicalDifference(core, projected)).toBeNull();
+    const renumbered = structuredClone(portable);
+    for (const path of renumbered.paths) {
+      for (const value of path.tokens) {
+        if (value.candidateId !== null) (value as { candidateId: number }).candidateId += 100;
+        for (const alternative of value.alternatives) {
+          (alternative as { candidateId: number }).candidateId += 100;
+        }
+      }
+    }
+    expect(projectPortableCleanAnalysis(renumbered)).toEqual(projected);
+    expect(firstCanonicalDifference(portable, renumbered)?.path).toContain('candidateId');
     expect(core.paths.map(path => path.score)).toEqual([17, 17]);
     expect(core.paths[0]!.tokens.map(value => [value.start, value.end])).toEqual([
       [0, 1], [1, 2], [2, 3]

@@ -3,7 +3,16 @@ set -euo pipefail
 
 crate_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 repository="$(cd "$crate_dir/../.." && pwd)"
+mode=immutable
+if [ "${1:-}" = --same-pack ]; then
+  mode=same-pack
+  shift
+fi
 release_dir="${1:-$repository/browser-alpha/release}"
+generator_args=("$release_dir")
+if [ "$mode" = same-pack ]; then
+  generator_args=(--same-pack "$release_dir")
+fi
 
 cd "$crate_dir"
 cargo build --release --locked
@@ -21,7 +30,7 @@ cc -std=c11 -Wall -Wextra -Werror -Iinclude tests/c_harness.c \
 cc -std=c11 -Wall -Wextra -Werror -Iinclude tests/c_product_harness.c \
   target/release/libichiran_kernel.a "${link_args[@]}" \
   -o target/c_product_harness
-bun tests/c_parity_corpus.ts "$release_dir" \
+bun tests/c_parity_corpus.ts "${generator_args[@]}" \
   | target/c_harness "$release_dir/hot.bin"
-bun tests/c_product_corpus.ts "$release_dir" \
+bun tests/c_product_corpus.ts "${generator_args[@]}" \
   | target/c_product_harness "$release_dir/hot.bin" "$release_dir/details.bin"

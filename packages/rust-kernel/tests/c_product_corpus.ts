@@ -22,9 +22,12 @@ interface Request {
   readonly normalizePunctuation: boolean;
 }
 
-interface DetailedCase {
+interface DetailedRequest {
   readonly name: string;
   readonly request: Request;
+}
+
+interface AuthorityDetailedCase extends DetailedRequest {
   readonly expected: unknown;
 }
 
@@ -87,55 +90,72 @@ function canonicalObjectOrder(value: unknown): unknown {
 
 async function main(): Promise<void> {
   const repository = resolve(import.meta.dir, '../../..');
-  const release = resolve(process.argv[2] ?? join(repository, 'browser-alpha/release'));
-  const [corpus, fallbackBytes, hot, details] = await Promise.all([
+  const samePack = process.argv[2] === '--same-pack';
+  const release = resolve(process.argv[samePack ? 3 : 2] ?? join(repository, 'browser-alpha/release'));
+  const [corpus, hot, details] = await Promise.all([
     loadAnalyzerParityCorpus(repository),
-    readFile(join(repository, 'packages/rust-kernel/tests/fixtures/m3-fallback.json')),
     readFile(join(release, 'hot.bin')),
     readFile(join(release, 'details.bin'))
   ]);
-  if (digest(hot) !== HOT_SHA256 || digest(details) !== DETAILS_SHA256) {
+  const hotSha256 = digest(hot);
+  const detailsSha256 = digest(details);
+  if (!samePack && (hotSha256 !== HOT_SHA256 || detailsSha256 !== DETAILS_SHA256)) {
     throw new Error('C product corpus requires the immutable qualified pack');
   }
 
-  const fallback = JSON.parse(fallbackBytes.toString('utf8')) as {
+  const fallback = samePack ? null : JSON.parse(await readFile(join(
+    repository,
+    'packages/rust-kernel/tests/fixtures/m3-fallback.json'
+  ), 'utf8')) as {
     readonly formatVersion: number;
     readonly counts: { readonly total: number };
     readonly suites: Record<'counters' | 'entities' | 'probes', FallbackCase[]>;
   };
-  if (fallback.formatVersion !== 1 || fallback.counts.total !== 301) {
+  if (fallback && (fallback.formatVersion !== 1 || fallback.counts.total !== 301)) {
     throw new Error('fallback fixture identity is invalid');
   }
 
-  const detailed: DetailedCase[] = [];
-  for (const [suite, values, outputs] of [
-    ['cli', corpus.cli, corpus.currentLispCli],
-    ['hard', corpus.hard, corpus.currentLispHard]
-  ] as const) {
-    values.forEach((value, index) => {
-      const serialized = outputs[fixtureKey(value)];
-      if (serialized === undefined) throw new Error(`${suite}[${index}] lacks detailed authority`);
-      detailed.push({
-        name: `${suite}:${index}`,
-        request: request(value),
-        expected: JSON.parse(serialized)
-      });
-    });
-  }
+  const detailed: (DetailedRequest | AuthorityDetailedCase)[] = [];
   const packed = {
     counters: corpus.counters.map(value => request(value)),
     entities: corpus.entities.map(value => request({ text: value.text, limit: 1 }, value.entities)),
     probes: corpus.probes.map(value => request(value.request))
   };
-  for (const suite of ['counters', 'entities', 'probes'] as const) {
-    fallback.suites[suite].forEach((value, index) => {
-      const actual = packed[suite][index];
-      const expected = request(value.request, value.entities);
-      if (!actual || !sameRequest(actual, expected)) {
-        throw new Error(`${suite}[${index}] request disagrees with its fallback fixture`);
-      }
-      detailed.push({ name: `${suite}:${index}`, request: actual, expected: value.detailed });
-    });
+  if (samePack) {
+    for (const [suite, values] of [
+      ['cli', corpus.cli.map(value => request(value))],
+      ['hard', corpus.hard.map(value => request(value))],
+      ['counters', packed.counters],
+      ['entities', packed.entities],
+      ['probes', packed.probes]
+    ] as const) {
+      values.forEach((value, index) => detailed.push({ name: `${suite}:${index}`, request: value }));
+    }
+  } else {
+    for (const [suite, values, outputs] of [
+      ['cli', corpus.cli, corpus.currentLispCli],
+      ['hard', corpus.hard, corpus.currentLispHard]
+    ] as const) {
+      values.forEach((value, index) => {
+        const serialized = outputs[fixtureKey(value)];
+        if (serialized === undefined) throw new Error(`${suite}[${index}] lacks detailed authority`);
+        detailed.push({
+          name: `${suite}:${index}`,
+          request: request(value),
+          expected: JSON.parse(serialized)
+        });
+      });
+    }
+    for (const suite of ['counters', 'entities', 'probes'] as const) {
+      fallback!.suites[suite].forEach((value, index) => {
+        const actual = packed[suite][index];
+        const expected = request(value.request, value.entities);
+        if (!actual || !sameRequest(actual, expected)) {
+          throw new Error(`${suite}[${index}] request disagrees with its fallback fixture`);
+        }
+        detailed.push({ name: `${suite}:${index}`, request: actual, expected: value.detailed });
+      });
+    }
   }
   if (detailed.length !== 702) throw new Error(`expected 702 detailed cases, got ${detailed.length}`);
 
@@ -161,20 +181,22 @@ async function main(): Promise<void> {
       entities: value.request.entities,
       normalizePunctuation: value.request.normalizePunctuation
     });
-    const difference = firstCanonicalDifference(value.expected, actual);
-    if (difference) {
-      throw new Error(`${value.name} portable oracle differs at ${difference.path}`);
-    }
-    if (
-      JSON.stringify(canonicalObjectOrder(value.expected))
-      !== JSON.stringify(canonicalObjectOrder(actual))
-    ) {
-      canonicalTies++;
-      canonicalTieNames.push(value.name);
+    if ('expected' in value) {
+      const difference = firstCanonicalDifference(value.expected, actual);
+      if (difference) {
+        throw new Error(`${value.name} portable oracle differs at ${difference.path}`);
+      }
+      if (
+        JSON.stringify(canonicalObjectOrder(value.expected))
+        !== JSON.stringify(canonicalObjectOrder(actual))
+      ) {
+        canonicalTies++;
+        canonicalTieNames.push(value.name);
+      }
     }
     portable.push(actual);
   }
-  if (JSON.stringify(canonicalTieNames) !== JSON.stringify(CANONICAL_TIE_NAMES)) {
+  if (!samePack && JSON.stringify(canonicalTieNames) !== JSON.stringify(CANONICAL_TIE_NAMES)) {
     throw new Error(
       `portable detailed oracle tie identities ${canonicalTieNames.join(', ')}; expected ${CANONICAL_TIE_NAMES.join(', ')}`
     );
@@ -182,16 +204,24 @@ async function main(): Promise<void> {
 
   const metadata = {
     format: 'ichiran-c-product-v1',
-    detailed: {
-      operations: 702,
-      currentLisp: 401,
-      fallback: 301,
-      canonicalTies: { currentLisp: 3, fallback: 1, total: canonicalTies, names: canonicalTieNames }
-    },
+    mode: samePack ? 'same-pack' : 'immutable-baseline',
+    detailed: samePack
+      ? { operations: 702, samePack: 702, canonicalTies: 0 }
+      : {
+          operations: 702,
+          currentLisp: 401,
+          fallback: 301,
+          canonicalTies: {
+            currentLisp: 3,
+            fallback: 1,
+            total: canonicalTies,
+            names: canonicalTieNames
+          }
+        },
     romanization: 5,
     describe: DESCRIBE_ENTRIES.length,
-    hotSha256: HOT_SHA256,
-    detailsSha256: DETAILS_SHA256
+    hotSha256,
+    detailsSha256
   };
   process.stdout.write(`#${JSON.stringify(metadata)}\n`);
   for (let index = 0; index < detailed.length; index++) {
@@ -206,14 +236,16 @@ async function main(): Promise<void> {
       + `\t${JSON.stringify(portable[index])}\n`
     );
   }
-  corpus.romanization.forEach((input, index) => {
-    const expected = corpus.currentLispRomanization[input];
+  for (const [index, input] of corpus.romanization.entries()) {
+    const expected = samePack
+      ? await oracle.romanize(input, { limit: 1, normalizePunctuation: true })
+      : corpus.currentLispRomanization[input];
     if (expected === undefined) throw new Error(`romanization[${index}] lacks authority`);
     const options = JSON.stringify({ limit: 1, entities: [], normalizePunctuation: true });
     process.stdout.write(
       `R\tromanization:${index}\t${utf16Hex(input)}\t${options}\t\t${JSON.stringify(expected)}\n`
     );
-  });
+  }
 
   const store = await openDetailStore(memoryDetailSource(Uint8Array.from(details)), decodeGzip);
   for (const entryIndex of DESCRIBE_ENTRIES) {

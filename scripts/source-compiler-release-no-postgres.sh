@@ -15,10 +15,6 @@ if [ "${SOURCE_COMPILER_POSTGRES_ISOLATED:-}" = 1 ]; then
     if [ -d "$sc_socket_directory" ]; then
       test ! -S "$sc_socket_directory/.s.PGSQL.$sc_port"
     fi
-    ! pg_isready -q -h 127.0.0.1 -p "$sc_port"
-    if [ -d "$sc_socket_directory" ]; then
-      ! pg_isready -q -h "$sc_socket_directory" -p "$sc_port"
-    fi
   done
   ip -o link show lo | grep -q 'state DOWN'
 
@@ -38,7 +34,7 @@ if [ "$(uname -s)" != Linux ]; then
   echo 'PostgreSQL-unavailable release proof requires Linux namespaces' >&2
   exit 1
 fi
-for sc_command in git unshare mount pg_isready ip bun; do
+for sc_command in git unshare mount ip bun; do
   command -v "$sc_command" >/dev/null 2>&1 || {
     echo "PostgreSQL-unavailable release proof requires $sc_command" >&2
     exit 1

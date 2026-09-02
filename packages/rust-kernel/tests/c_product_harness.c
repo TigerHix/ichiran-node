@@ -409,16 +409,23 @@ static int parse_legacy(char *line, LegacyCase *output) {
 }
 
 static int metadata_valid(const char *line) {
-  return strstr(line, "\"format\":\"ichiran-c-product-v1\"") != NULL
-    && strstr(line, "\"operations\":702") != NULL
+  const int immutable_pack = strstr(line, "\"mode\":\"immutable-baseline\"") != NULL
     && strstr(line, "\"currentLisp\":401") != NULL
     && strstr(line, "\"fallback\":301") != NULL
     && strstr(line, "\"canonicalTies\":{\"currentLisp\":3,\"fallback\":1,\"total\":4") != NULL
     && strstr(line, "\"names\":[\"cli:169\",\"cli:214\",\"hard:10\",\"probes:26\"]") != NULL
-    && strstr(line, "\"romanization\":5") != NULL
-    && strstr(line, "\"describe\":4") != NULL
     && strstr(line, "61f2882e086be7e0e1b6ba9000e76e0e735b22ea443146f628f04cf877ff6ae0") != NULL
     && strstr(line, "0fc45731d84fbb7c2ccf3ef5692d2f1ab01e538325f0ed50135da38e621aa151") != NULL;
+  const int same_pack = strstr(line, "\"mode\":\"same-pack\"") != NULL
+    && strstr(line, "\"samePack\":702") != NULL
+    && strstr(line, "\"canonicalTies\":0") != NULL
+    && strstr(line, "\"hotSha256\":\"") != NULL
+    && strstr(line, "\"detailsSha256\":\"") != NULL;
+  return (immutable_pack || same_pack)
+    && strstr(line, "\"format\":\"ichiran-c-product-v1\"") != NULL
+    && strstr(line, "\"operations\":702") != NULL
+    && strstr(line, "\"romanization\":5") != NULL
+    && strstr(line, "\"describe\":4") != NULL;
 }
 
 static int verify_owned_product_errors(
@@ -472,6 +479,7 @@ int main(int argc, char **argv) {
   size_t romanization = 0;
   size_t described = 0;
   int metadata = 0;
+  int same_pack = 0;
   int passed = verify_owned_product_errors(kernel, details);
   LegacyCase concurrent[2] = {0};
   while (passed && (length = getline(&line, &capacity, stdin)) >= 0) {
@@ -480,6 +488,7 @@ int main(int argc, char **argv) {
     }
     if (line[0] == '#') {
       passed = !metadata && metadata_valid(line);
+      same_pack = strstr(line, "\"mode\":\"same-pack\"") != NULL;
       metadata = 1;
       continue;
     }
@@ -573,11 +582,17 @@ int main(int argc, char **argv) {
   ichiran_detail_store_free(details);
   ichiran_kernel_free(kernel);
   if (!passed) return 5;
-  printf(
-    "C ABI v3 product harness passed: detailed=702 current_lisp=401 fallback=301 "
-    "authority_canonical_ties=4(current_lisp=3 fallback=1) romanization=5 describe=4 "
-    "corrupt_recovery=2 owned_errors=3 "
-    "concurrent_detailed=32\n"
-  );
+  if (same_pack) {
+    printf(
+      "C ABI v3 same-pack product harness passed: detailed=702 romanization=5 describe=4 "
+      "corrupt_recovery=2 owned_errors=3 concurrent_detailed=32\n"
+    );
+  } else {
+    printf(
+      "C ABI v3 product harness passed: detailed=702 current_lisp=401 fallback=301 "
+      "authority_canonical_ties=4(current_lisp=3 fallback=1) romanization=5 describe=4 "
+      "corrupt_recovery=2 owned_errors=3 concurrent_detailed=32\n"
+    );
+  }
   return 0;
 }

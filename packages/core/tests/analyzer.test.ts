@@ -10,15 +10,17 @@ import {
   openAnalyzerSupport,
   openDetailStore,
   openMorphology,
-  openPortableAnalyzer,
   openRootPayload,
-  serializePortableLegacyDetailed,
   type PortableLegacyCompactResult,
   type PortableLegacyGlossJson,
   type PortableLegacyTransformedResult,
-  type PortableAnalyzerAnnotations,
   SurfaceIndex
 } from '../src/index.js';
+import {
+  openPortableAnalyzer,
+  serializePortableLegacyDetailed,
+  type PortableAnalyzerAnnotations
+} from '../src/qualification.js';
 
 const encoder = new TextEncoder();
 const decoder = new TextDecoder();

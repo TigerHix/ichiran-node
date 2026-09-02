@@ -147,17 +147,22 @@ static int load_cases(FILE *input, ParityCase **output, size_t *output_count) {
     }
     if (line_length == 0) continue;
     if (line[0] == '#') {
-      if (saw_metadata || strstr(line, "\"format\":\"ichiran-c-parity-v1\"") == NULL
+      const int immutable_pack = strstr(line, "\"mode\":\"immutable-baseline\"") != NULL
+        && strstr(line, "\"hotSha256\":"
+          "\"61f2882e086be7e0e1b6ba9000e76e0e735b22ea443146f628f04cf877ff6ae0\"")
+          != NULL;
+      const int same_pack = strstr(line, "\"mode\":\"same-pack\"") != NULL
+        && strstr(line, "\"tag\":\"source-compiler-release\"") != NULL
+        && strstr(line, "\"hotSha256\":\"") != NULL;
+      if (saw_metadata || (!immutable_pack && !same_pack)
+          || strstr(line, "\"format\":\"ichiran-c-parity-v1\"") == NULL
           || strstr(line, "\"operations\":1239") == NULL
           || strstr(line, "\"cleanOperations\":1236") == NULL
           || strstr(line, "\"utf16\":3") == NULL
           || strstr(line, "\"suites\":{\"segmentation\":534,\"cli\":252,"
             "\"hard\":149,\"counters\":200,\"entities\":54,\"probes\":47}") == NULL
           || strstr(line, "\"oracle\":\"frozen TypeScript") == NULL
-          || strstr(line, "\"sourceRevision\":") == NULL
-          || strstr(line, "\"hotSha256\":"
-            "\"61f2882e086be7e0e1b6ba9000e76e0e735b22ea443146f628f04cf877ff6ae0\"")
-            == NULL) {
+          || strstr(line, "\"sourceRevision\":") == NULL) {
         free(line);
         free_cases(cases, count);
         return 0;

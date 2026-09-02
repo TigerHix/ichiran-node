@@ -1,5 +1,5 @@
 import { readFile } from 'node:fs/promises';
-import { romanizeWord } from '@ichiran/core';
+import { romanizeWord } from '@ichiran/core/compiler';
 import { parseJmdictEntry, streamJmdictXml } from './jmdict.js';
 import type { CanonicalEntry } from './model.js';
 

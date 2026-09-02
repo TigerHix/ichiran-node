@@ -151,10 +151,11 @@ function utf16Hex(value: string): string {
 
 async function main(): Promise<void> {
   const repository = resolve(import.meta.dir, '../../..');
-  const release = resolve(process.argv[2] ?? join(repository, 'browser-alpha/release'));
+  const samePack = process.argv[2] === '--same-pack';
+  const release = resolve(process.argv[samePack ? 3 : 2] ?? join(repository, 'browser-alpha/release'));
   const hot = new Uint8Array(await readFile(join(release, 'hot.bin')));
   const hotSha256 = createHash('sha256').update(hot).digest('hex');
-  if (hotSha256 !== QUALIFIED_HOT_SHA256) {
+  if (!samePack && hotSha256 !== QUALIFIED_HOT_SHA256) {
     throw new Error(`hot.bin digest ${hotSha256}; expected ${QUALIFIED_HOT_SHA256}`);
   }
   const cases = await corpusCases(repository);
@@ -173,6 +174,7 @@ async function main(): Promise<void> {
   const analyzer = await frozenAnalyzer(hot);
   const metadata = {
     format: 'ichiran-c-parity-v1',
+    mode: samePack ? 'same-pack' : 'immutable-baseline',
     operations: cases.length,
     cleanOperations: 1_236,
     utf16: 3,
@@ -180,7 +182,7 @@ async function main(): Promise<void> {
     oracle: 'frozen TypeScript packages/core/src/analyzer.ts',
     sourceRevision: sourceRevision(repository),
     pack: {
-      tag: 'portable-core-260118-baseline',
+      tag: samePack ? 'source-compiler-release' : 'portable-core-260118-baseline',
       hotSha256
     }
   };

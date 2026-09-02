@@ -46,6 +46,7 @@ export interface PortableAnalysisComponent {
 }
 
 export interface PortableAnalysisAlternative {
+  /** Request-local identity only; never persist or compare across calls, packs, or runtimes. */
   readonly candidateId: number;
   readonly text: string;
   readonly trueText: string | null;
@@ -62,6 +63,7 @@ export interface PortableAnalysisAlternative {
 }
 
 export interface PortableAnalysisToken {
+  /** Request-local identity only; `null` for gaps and unstable across calls, packs, or runtimes. */
   readonly candidateId: number | null;
   readonly start: number;
   readonly end: number;

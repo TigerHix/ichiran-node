@@ -5,6 +5,11 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "types": ["node", "bun"]
   },
-  "include": ["e2e/**/*.ts", "scripts/**/*.ts", "tests/release-files.test.ts"],
+  "include": [
+    "e2e/**/*.ts",
+    "scripts/**/*.ts",
+    "tests/release-files.test.ts",
+    "tests/qualify-mode.test.ts"
+  ],
   "exclude": ["dist"]
 }

@@ -9,9 +9,10 @@ for that baseline.
 ## Integrated checkpoint
 
 The two reviewed workstreams are integrated on `codex/integrated-edge-cutover`.
-Qualified code commit `e7565078c8c7e0a29890328b491cb4ad701df73b` builds one
-PostgreSQL-isolated source release and runs the canonical Rust kernel on that exact
-pack. The complete evidence and artifact identities are in
+The qualified revision is the branch-head commit containing this status document; its
+fresh manifest must name that same commit. It builds one PostgreSQL-isolated source
+release and runs the canonical Rust kernel and native C ABI on that exact pack. The
+complete evidence and stable installed-asset identities are in
 [`INTEGRATED-EDGE-CUTOVER-REPORT.md`](./INTEGRATED-EDGE-CUTOVER-REPORT.md).
 
 | Milestone | Status |
@@ -30,6 +31,14 @@ installation/lifecycle, release verification, and the source compiler. The froze
 TypeScript and PostgreSQL analyzers remain qualification-only for the transition
 release. They are not two production analyzers and must not acquire new runtime
 callers.
+
+The canonical `@ichiran/core` entry point exposes the Rust facade and public/shared
+data contracts, while TypeScript analyzer execution is confined to the explicit
+qualification subpath. The canonical `@ichiran/data` entry point and executable are
+the source compiler; the old PostgreSQL loader is private migration tooling. Direct
+compilation and the Linux namespace isolation proof are separate commands. Fresh-pack
+qualification now covers Rust/WASM, the C ABI, Node, CLI, API, and the production
+browser Worker.
 
 ## Decision
 

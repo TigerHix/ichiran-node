@@ -12,6 +12,10 @@
     "./qualification": {
       "types": "./dist/qualification.d.ts",
       "default": "./dist/qualification.js"
+    },
+    "./compiler": {
+      "types": "./dist/compiler.d.ts",
+      "default": "./dist/compiler.js"
     }
   },
   "files": [

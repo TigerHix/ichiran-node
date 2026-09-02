@@ -14,20 +14,23 @@
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc --noEmit",
     "test": "bun test tests/",
+    "migration:data": "bun src/migration-cli.ts",
     "alpha:release:build": "bun run --cwd ../core build && bun run --cwd ../reference-postgres build && bun ../../scripts/browser-alpha-release.ts build",
     "alpha:release:refresh-lock": "bun run --cwd ../core build && bun run --cwd ../reference-postgres build && bun ../../scripts/browser-alpha-release.ts refresh-lock",
     "alpha:release:verify": "bun run --cwd ../core build && bun run --cwd ../reference-postgres build && bun ../../scripts/browser-alpha-release.ts verify"
   },
   "bin": {
-    "ichiran-data": "./dist/index.js"
+    "ichiran-data": "./dist/source-compiler/cli.js"
   },
   "dependencies": {
     "@ichiran/core": "workspace:*",
+    "csv-parse": "^6.1.0",
+    "fast-xml-parser": "^5.3.0"
+  },
+  "devDependencies": {
     "@ichiran/reference-postgres": "0.0.0",
     "commander": "^12.1.0",
-    "csv-parse": "^6.1.0",
     "dotenv": "^17.2.3",
-    "fast-xml-parser": "^5.3.0",
     "postgres": "^3.4.7"
   },
   "sideEffects": false

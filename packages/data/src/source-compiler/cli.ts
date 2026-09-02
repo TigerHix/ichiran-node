@@ -1,5 +1,5 @@
 #!/usr/bin/env bun
 
-import { runSourceCompilerRelease } from '../packages/data/src/index.js';
+import { runSourceCompilerRelease } from './release.js';
 
 await runSourceCompilerRelease(process.argv.slice(2));

@@ -560,6 +560,9 @@ function uniqueCandidateReadings(
 }
 
 function portableToken(value: PortableAnalysisToken): CleanAnalysisToken {
+  // candidateId is deliberately absent from the PostgreSQL/Lisp clean projection:
+  // it is a request-local reference with no oracle counterpart. Rust same-pack
+  // qualification compares the full public DTO, including these IDs, byte-for-byte.
   const alternatives = value.alternatives.map(portableCandidate);
   return {
     start: value.start,

@@ -7,6 +7,14 @@ import { verifyAnalyzerRelease } from './release-files.js';
 
 const packageRoot = resolve(import.meta.dir, '..');
 const repositoryRoot = resolve(packageRoot, '..', '..');
+if (process.env.ICHIRAN_TYPESCRIPT_ORACLE === '1') {
+  throw new Error(
+    'Production browser qualification requires the Rust kernel; '
+    + 'use build:qualification-typescript-oracle only for the frozen transition oracle'
+  );
+}
+const productionEnvironment = { ...process.env };
+delete productionEnvironment.ICHIRAN_TYPESCRIPT_ORACLE;
 let release = resolve(repositoryRoot, 'dist', 'browser-alpha');
 let skipE2e = false;
 for (let index = 2; index < process.argv.length; index++) {
@@ -89,12 +97,14 @@ for (const witness of witnessInputs) {
   samePackWitnesses.push({ ...witness, serialized: JSON.stringify(result) });
 }
 
-await run('bun', ['scripts/stage-analyzer.ts', release], packageRoot);
-await run('bun', ['run', 'build'], packageRoot);
+await run('bun', ['scripts/stage-analyzer.ts', release], packageRoot, false, productionEnvironment);
+await run('bun', ['run', 'build'], packageRoot, false, productionEnvironment);
 await run('bun', [
-  'scripts/audit-build.ts', '--require-analyzer', '--release', release
-], packageRoot);
-const shellBytes = Number(await run('bun', ['scripts/measure-shell.ts'], packageRoot, true));
+  'scripts/audit-build.ts', '--require-rust', '--require-analyzer', '--release', release
+], packageRoot, false, productionEnvironment);
+const shellBytes = Number(await run(
+  'bun', ['scripts/measure-shell.ts'], packageRoot, true, productionEnvironment
+));
 if (!Number.isSafeInteger(shellBytes) || shellBytes < 1) {
   throw new Error(`Invalid production shell byte count: ${shellBytes}`);
 }
@@ -110,7 +120,7 @@ if (firstInstallBytes > firstInstallLimit) {
 }
 if (!skipE2e) {
   await run('bun', ['run', 'test:e2e'], packageRoot, false, {
-    ...process.env,
+    ...productionEnvironment,
     ICHIRAN_E2E_M1_WITNESSES: JSON.stringify(samePackWitnesses)
   });
 }

@@ -56,7 +56,7 @@ identities and count groups. Tests validate its schema and closure invariants
 without copying those values into a second fixture or table.
 
 ```sh
-bun --smol scripts/source-compiler-release.ts baseline \
+bun run source:release -- baseline \
   --out work/m6-source-release \
   --pack-version ichiran-260118-source
 ```
@@ -68,7 +68,8 @@ pinned external input. The command checks the checkout before work, then checks
 the same commit and clean state again immediately before atomically activating
 the finished generation. Full releases use Bun's `--smol` mode so garbage
 collection bounds the compiler's large transient object graph. The
-PostgreSQL-isolation wrapper applies the same mode automatically. The two
+separate `source:release:isolated` command applies the same mode automatically.
+The two
 determinism-check surface-index builds run sequentially so their multi-million-
 row Rust working sets do not overlap. The compiler also finishes the surface
 TSV and releases the physical-target graph before binary pack assembly; the
@@ -115,7 +116,7 @@ transports are unavailable on ports 5432 and 5433, clears database connection
 environment variables, and only then starts the compiler:
 
 ```sh
-sh scripts/source-compiler-release-no-postgres.sh baseline \
+bun run source:release:isolated -- baseline \
   --out work/m6-source-release-no-postgres \
   --pack-version ichiran-260118-source
 ```
@@ -127,7 +128,7 @@ and network changes disappear when the child exits. A low-cost capability probe
 can be run without starting the compiler:
 
 ```sh
-sh scripts/source-compiler-release-no-postgres.sh --probe-only
+bun run source:release:isolated -- --probe-only
 ```
 
 The command still requires all non-PostgreSQL build dependencies to have been
@@ -166,7 +167,7 @@ historical authority is Jitendex archive commit
 Build the updated release through the same compiler:
 
 ```sh
-bun --smol scripts/source-compiler-release.ts update \
+bun run source:release -- update \
   --source-lock data/source-compiler-update-2026-01-02.lock.json \
   --out work/m6-update-release \
   --pack-version jmdict-2026-01-02-source
@@ -204,12 +205,12 @@ The final update gate builds the same clean commit twice into independent
 release roots:
 
 ```sh
-bun --smol scripts/source-compiler-release.ts update \
+bun run source:release -- update \
   --source-lock data/source-compiler-update-2026-01-02.lock.json \
   --out work/m6-update-release-a \
   --pack-version jmdict-2026-01-02-source
 
-bun --smol scripts/source-compiler-release.ts update \
+bun run source:release -- update \
   --source-lock data/source-compiler-update-2026-01-02.lock.json \
   --out work/m6-update-release-b \
   --pack-version jmdict-2026-01-02-source
