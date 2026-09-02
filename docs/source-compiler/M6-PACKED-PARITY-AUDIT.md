@@ -29,7 +29,7 @@ add an allowlist.
 
 | Artifact | Bytes | SHA-256 |
 | --- | ---: | --- |
-| Source `hot.bin.gz` | 12,606,987 | `0e1028bb7b32f9b23a2bc43b2e1d8469e826cb8304bd5e3a8aaa10462892fdd6` |
+| Source `hot.bin.gz` | 12,607,002 | `8648acfde1b3bc685bcd786a7718d2d980103c87fade3c3fdbdf416960859b9f` |
 | Qualified `hot.bin.gz` | 12,662,917 | `35d02c84d4cc531d299d7d5530994351b75bdba429d5276c20bc2f67cdc8d6d7` |
 | Source `details.bin.gz` | 12,317,325 | `ad10bc4876d9a05224f62f5b438080ea1ff4e6a88ab3090be0f871035e95918a` |
 | Qualified `details.bin.gz` | 12,317,325 | `ad10bc4876d9a05224f62f5b438080ea1ff4e6a88ab3090be0f871035e95918a` |
