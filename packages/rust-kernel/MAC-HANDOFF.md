@@ -1,5 +1,27 @@
 # Mac native handoff
 
+## Integrated candidate
+
+Use the final pushed head of `codex/integrated-edge-cutover`. Its code-qualified parent
+is `e7565078c8c7e0a29890328b491cb4ad701df73b`; later commits on the branch are
+documentation-only. The integrated Linux/WSL report is
+[`docs/INTEGRATED-EDGE-CUTOVER-REPORT.md`](../../docs/INTEGRATED-EDGE-CUTOVER-REPORT.md).
+
+The source-built pack qualified with this code has installed hot SHA-256
+`eb9c58204c624b1220bc257b910fc5df7e092133af09760ce6800b672b4bcd96`
+and details SHA-256
+`0fc45731d84fbb7c2ccf3ef5692d2f1ab01e538325f0ed50135da38e621aa151`.
+Obtain those exact release files from the integration handoff; do not substitute an
+unverified local pack. Run the immutable C corpus first, then exercise the final
+source pack through the Swift wrapper for install/open, analysis, romanization,
+describe, retained legacy, restart, corruption/recovery, and concurrent background
+calls. Do not port analyzer or presentation logic into Swift.
+
+M5B remains open: build the device and simulator archives, create the XCFramework,
+write the thin Swift ownership/file adapter, and run simulator plus physical-device
+memory, leak, lifecycle, and UTF-16 tests. Physical Safari qualification is a separate
+remaining M4 gate.
+
 This crate is the sole analyzer implementation for native and browser builds. ABI v3
 exposes clean analysis, analyzer-backed romanization, lazy detail lookup, and retained
 detailed/legacy presentation. Swift owns pack installation and file reads; it must not

@@ -1,10 +1,35 @@
 # Source compiler and Rust kernel roadmap
 
-Status: product direction and launch order accepted. Last updated 2026-08-31.
+Status: Linux/WSL integrated cutover candidate qualified. Last updated 2026-09-02.
 
 This document is authoritative for work after the completed TypeScript browser alpha.
 The browser-alpha documents remain the as-built specification and qualification record
 for that baseline.
+
+## Integrated checkpoint
+
+The two reviewed workstreams are integrated on `codex/integrated-edge-cutover`.
+Qualified code commit `e7565078c8c7e0a29890328b491cb4ad701df73b` builds one
+PostgreSQL-isolated source release and runs the canonical Rust kernel on that exact
+pack. The complete evidence and artifact identities are in
+[`INTEGRATED-EDGE-CUTOVER-REPORT.md`](./INTEGRATED-EDGE-CUTOVER-REPORT.md).
+
+| Milestone | Status |
+| --- | --- |
+| M0 immutable baseline | PASS |
+| M1/M3 Rust feasibility and full semantics | PASS |
+| M4 Linux/Chromium browser cutover | PASS |
+| M4 physical Safari/iPhone | PENDING |
+| M4N Node/CLI/API cutover | PASS |
+| M5A Linux/WSL C ABI and Mac handoff | PASS |
+| M5B Apple packaging, Swift, simulator, and device | PENDING |
+| M6 PostgreSQL-free source compiler and same-pack Rust gate | PASS |
+
+Rust now owns production analyzer semantics. TypeScript owns host adapters, browser
+installation/lifecycle, release verification, and the source compiler. The frozen
+TypeScript and PostgreSQL analyzers remain qualification-only for the transition
+release. They are not two production analyzers and must not acquire new runtime
+callers.
 
 ## Decision
 
@@ -114,20 +139,19 @@ iPhone 13 baseline and current target device remains open for M4/M5B.
 This roadmap-status update is intentionally a docs-only descendant of the tagged
 artifact commit. It does not change the pack or move the baseline tag.
 
-No Rust analyzer crate, browser WASM analyzer, C ABI, Swift package, or source-native
-compiler exists yet. The repository's only Rust today is a build-time surface-index
-utility. This roadmap starts those product workstreams; it does not relabel the
-qualified TypeScript implementation as already ported.
+The Rust analyzer crate, browser/Node WASM host, C ABI, and source-native compiler now
+exist and are qualified together on Linux/WSL. Swift/XCFramework packaging and
+physical Apple validation do not yet exist and remain M5B work.
 
 ## Dependency boundary
 
-| Stage | Current dependency | Target dependency |
+| Stage | Transition baseline | Integrated candidate |
 |---|---|---|
-| Browser analysis | TypeScript core + pack | Rust WASM kernel + same pack |
-| Native iOS analysis | Not implemented | Native Rust kernel + same pack |
-| Node/CLI/API analysis | TypeScript core + pack | Rust via the same WASM artifact unless measurement justifies native packaging |
-| Normal pack build | PostgreSQL + frozen reference TypeScript | Pinned sources + TypeScript-owned compiler and deterministic builder tools |
-| Migration qualification | PostgreSQL reference + recorded/current Lisp evidence | Frozen fixtures plus both kernels during one transition cycle |
+| Browser analysis | TypeScript core + pack | Rust WASM kernel + source-built pack |
+| Native iOS analysis | Not implemented | Native Rust kernel + same pack; M5B pending |
+| Node/CLI/API analysis | TypeScript core + pack | Rust through the same WASM artifact |
+| Normal pack build | PostgreSQL + frozen reference TypeScript | Pinned sources + TypeScript-owned compiler and deterministic tools |
+| Migration qualification | PostgreSQL reference + recorded/current Lisp evidence | Frozen fixtures plus both kernels for this transition release only |
 | Upstream behavior update | Lisp and its database used as an external authority | Same external authority when needed; no normal build dependency |
 
 PostgreSQL and Lisp are already absent from browser, Node, CLI, and API runtime paths.
@@ -137,7 +161,7 @@ The remaining PostgreSQL work is a compiler/release-maintenance concern only.
 
 ### Rust kernel
 
-Rust will own all analyzer behavior that must agree across hosts:
+Rust owns all analyzer behavior that must agree across hosts:
 
 - strict pack, section, index, checksum, and compressed-block readers;
 - surface scanning and root lookup;
