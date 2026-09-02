@@ -51,7 +51,7 @@ identities and count groups. Tests validate its schema and closure invariants
 without copying those values into a second fixture or table.
 
 ```sh
-bun scripts/source-compiler-release.ts baseline \
+bun --smol scripts/source-compiler-release.ts baseline \
   --out work/m6-source-release \
   --pack-version ichiran-260118-source
 ```
@@ -61,7 +61,9 @@ bypass this rule: the manifest's full 40-character commit describes the code
 and tracked inputs, while the verified source-lock digest describes every
 pinned external input. The command checks the checkout before work, then checks
 the same commit and clean state again immediately before atomically activating
-the finished generation.
+the finished generation. Full releases use Bun's `--smol` mode so garbage
+collection bounds the compiler's large transient object graph. The
+PostgreSQL-isolation wrapper applies the same mode automatically.
 
 ## PostgreSQL-unavailable proof
 
@@ -132,7 +134,7 @@ historical authority is Jitendex archive commit
 Build the updated release through the same compiler:
 
 ```sh
-bun scripts/source-compiler-release.ts update \
+bun --smol scripts/source-compiler-release.ts update \
   --source-lock data/source-compiler-update-2026-01-02.lock.json \
   --out work/m6-update-release \
   --pack-version jmdict-2026-01-02-source
@@ -170,12 +172,12 @@ The final update gate builds the same clean commit twice into independent
 release roots:
 
 ```sh
-bun scripts/source-compiler-release.ts update \
+bun --smol scripts/source-compiler-release.ts update \
   --source-lock data/source-compiler-update-2026-01-02.lock.json \
   --out work/m6-update-release-a \
   --pack-version jmdict-2026-01-02-source
 
-bun scripts/source-compiler-release.ts update \
+bun --smol scripts/source-compiler-release.ts update \
   --source-lock data/source-compiler-update-2026-01-02.lock.json \
   --out work/m6-update-release-b \
   --pack-version jmdict-2026-01-02-source

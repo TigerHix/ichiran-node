@@ -44,8 +44,8 @@ interface Options {
 function usage(message?: string): never {
   const prefix = message ? `error: ${message}\n\n` : '';
   throw new Error(`${prefix}usage:
-  bun scripts/source-compiler-release.ts baseline --out <directory> --pack-version <version>
-  bun scripts/source-compiler-release.ts update --out <directory> --pack-version <version> \\
+  bun --smol scripts/source-compiler-release.ts baseline --out <directory> --pack-version <version>
+  bun --smol scripts/source-compiler-release.ts update --out <directory> --pack-version <version> \\
     --source-lock <repo-relative-file>`);
 }
 
