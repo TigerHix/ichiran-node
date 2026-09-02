@@ -1,9 +1,25 @@
 import { describe, expect, test } from 'bun:test';
-import { mkdtemp, rm, writeFile } from 'node:fs/promises';
+import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { downloadDataFile, getDataPath } from '../src/data/download.js';
-import { SOURCE_COMPILER_INPUT_ROLES } from '../src/source-compiler/source-lock.js';
+
+async function sourceLockWithPaths(
+  pathForRole: (role: string) => string
+): Promise<Record<string, unknown>> {
+  const lock = JSON.parse(await readFile(
+    join(import.meta.dir, '../../../data/source-compiler-sources.lock.json'),
+    'utf8'
+  )) as { sources: Array<Record<string, unknown>> };
+  for (const source of lock.sources) {
+    if (typeof source.role === 'string') {
+      source.pinnedPath = pathForRole(source.role);
+    } else if (Array.isArray(source.roles)) {
+      source.pinnedPaths = source.roles.map(role => pathForRole(String(role)));
+    }
+  }
+  return lock;
+}
 
 describe('legacy data downloader safety', () => {
   test('uses the ignored live-data area instead of compiler pins', () => {
@@ -15,24 +31,10 @@ describe('legacy data downloader safety', () => {
     const directory = await mkdtemp(join(tmpdir(), 'ichiran-download-lock-'));
     try {
       const lockPath = join(directory, 'alternate.lock.json');
-      const sources = SOURCE_COMPILER_INPUT_ROLES.map(role => ({
-        id: role,
-        role,
-        pinnedPath: role === 'jmdict' ? 'work/live-data/JMdict_e.gz' : `test-inputs/${role}`,
-        pinnedBytes: 0,
-        pinnedSha256: '0'.repeat(64)
-      }));
-      await writeFile(lockPath, JSON.stringify({
-        formatVersion: 1,
-        baseline: {
-          repository: 'https://example.test/repository.git',
-          startingCommit: '0123456789abcdef0123456789abcdef01234567',
-          qualifiedArtifactTag: 'baseline',
-          upstreamIchiranCommit: '89abcdef0123456789abcdef0123456789abcdef',
-          upstreamDataReleaseTag: 'data'
-        },
-        sources
-      }));
+      const lock = await sourceLockWithPaths(role => role === 'jmdict'
+        ? 'work/live-data/JMdict_e.gz'
+        : `test-inputs/${role}`);
+      await writeFile(lockPath, JSON.stringify(lock));
       await expect(downloadDataFile('jmdict', {
         force: true,
         silent: true,
@@ -47,24 +49,8 @@ describe('legacy data downloader safety', () => {
     const directory = await mkdtemp(join(tmpdir(), 'ichiran-download-lock-'));
     try {
       const unrelatedLock = join(directory, 'unrelated.lock.json');
-      const sources = SOURCE_COMPILER_INPUT_ROLES.map(role => ({
-        id: role,
-        role,
-        pinnedPath: `unrelated/${role}`,
-        pinnedBytes: 0,
-        pinnedSha256: '0'.repeat(64)
-      }));
-      await writeFile(unrelatedLock, JSON.stringify({
-        formatVersion: 1,
-        baseline: {
-          repository: 'https://example.test/repository.git',
-          startingCommit: '0123456789abcdef0123456789abcdef01234567',
-          qualifiedArtifactTag: 'baseline',
-          upstreamIchiranCommit: '89abcdef0123456789abcdef0123456789abcdef',
-          upstreamDataReleaseTag: 'data'
-        },
-        sources
-      }));
+      const lock = await sourceLockWithPaths(role => `unrelated/${role}`);
+      await writeFile(unrelatedLock, JSON.stringify(lock));
       await expect(downloadDataFile('jmdict', {
         force: true,
         silent: true,

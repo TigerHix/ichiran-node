@@ -165,14 +165,16 @@ interface FailureSample {
   readonly suite: string;
   readonly request: string;
   readonly classification: FailureClass;
-  readonly pathDifference?: DifferencePreview;
-  readonly cleanDifference?: DifferencePreview;
-  readonly detailedDifference?: DifferencePreview;
+  readonly qualifiedOutputSha256?: string;
+  readonly sourceOutputSha256?: string;
+  readonly pathDifference?: DifferenceEvidence;
+  readonly cleanDifference?: DifferenceEvidence;
+  readonly detailedDifference?: DifferenceEvidence;
   readonly multipleRoots?: Readonly<Record<string, readonly number[]>>;
   readonly error?: string;
 }
 
-interface DifferencePreview {
+interface DifferenceEvidence {
   readonly path: string;
   readonly kind: CanonicalDifference['kind'];
   readonly expected: string;
@@ -181,7 +183,7 @@ interface DifferencePreview {
 
 interface HistoricalDifference {
   readonly request: string;
-  readonly difference: DifferencePreview;
+  readonly difference: DifferenceEvidence;
 }
 
 interface SuiteRun {
@@ -197,6 +199,13 @@ interface Runtime {
   readonly analyzer: PortableAnalyzer;
   readonly annotations: ReturnType<AnalyzerAnnotationsReader['createPreloaded']>;
   readonly details: Awaited<ReturnType<typeof openDetailStore>>;
+  readonly release: {
+    readonly sourceCommit: string;
+    readonly manifestFileSha256: string;
+    readonly manifestSha256: string;
+    readonly hot: AnalyzerReleaseAsset;
+    readonly details: AnalyzerReleaseAsset;
+  };
 }
 
 function usage(message?: string): never {
@@ -264,7 +273,7 @@ function parseArgs(argv: readonly string[]): Options {
   };
 }
 
-function sha256(bytes: Uint8Array): string {
+function sha256(bytes: Uint8Array | string): string {
   return createHash('sha256').update(bytes).digest('hex');
 }
 
@@ -294,9 +303,8 @@ async function openRuntime(
   directory: string,
   expected: { readonly sourceCommit: string; readonly sourcesLockSha256: string }
 ): Promise<Runtime> {
-  const manifest = JSON.parse(
-    await readFile(resolve(directory, 'manifest.json'), 'utf8')
-  );
+  const manifestBytes = new Uint8Array(await readFile(resolve(directory, 'manifest.json')));
+  const manifest = JSON.parse(new TextDecoder().decode(manifestBytes));
   const verifiedManifest: AnalyzerReleaseManifest = parseAnalyzerReleaseManifest(
     manifest,
     text => createHash('sha256').update(text).digest('hex')
@@ -330,7 +338,18 @@ async function openRuntime(
     annotations
   });
   const details = await openDetailStore(memoryDetailSource(detailsBytes), decodeGzip);
-  return { analyzer, annotations, details };
+  return {
+    analyzer,
+    annotations,
+    details,
+    release: {
+      sourceCommit: verifiedManifest.sourceCommit,
+      manifestFileSha256: sha256(manifestBytes),
+      manifestSha256: verifiedManifest.manifestSha256,
+      hot: verifiedManifest.hot,
+      details: verifiedManifest.details
+    }
+  };
 }
 
 function parseDatabase(value: string): DatabaseSpec {
@@ -743,6 +762,17 @@ async function repositoryHead(repository: string): Promise<string> {
   return commit;
 }
 
+async function assertRepositoryClean(repository: string): Promise<void> {
+  const { stdout } = await execFile(
+    'git',
+    ['-C', repository, 'status', '--porcelain', '--untracked-files=all'],
+    { encoding: 'utf8' }
+  );
+  if (stdout.trim().length > 0) {
+    throw new Error('Complete source-compiler parity evidence requires a clean Git checkout');
+  }
+}
+
 interface ReferenceAnalysis {
   readonly raw: unknown;
   readonly detailed: unknown;
@@ -848,19 +878,29 @@ function recordCleanComparison(stats: SuiteStats, difference: CanonicalDifferenc
   }
 }
 
-function preview(value: unknown): string {
+function serialized(value: unknown): string {
   const text = JSON.stringify(value);
-  if (text === undefined) return 'undefined';
-  return text.length <= 600 ? text : `${text.slice(0, 600)}…`;
+  return text === undefined ? 'undefined' : text;
 }
 
-function differencePreview(value: CanonicalDifference | null): DifferencePreview | undefined {
+function differenceEvidence(value: CanonicalDifference | null): DifferenceEvidence | undefined {
   return value ? {
     path: value.path,
     kind: value.kind,
-    expected: preview(value.expected),
-    actual: preview(value.actual)
+    expected: serialized(value.expected),
+    actual: serialized(value.actual)
   } : undefined;
+}
+
+function canonicalValue(value: unknown): unknown {
+  if (Array.isArray(value)) return value.map(canonicalValue);
+  if (!value || typeof value !== 'object') return value;
+  const input = value as Record<string, unknown>;
+  return Object.fromEntries(Object.keys(input).sort().map(key => [key, canonicalValue(input[key])]));
+}
+
+function completeOutputSha256(value: unknown): string {
+  return sha256(serialized(canonicalValue(value)));
 }
 
 function select<T>(values: readonly T[], smoke: boolean, count: number): readonly T[] {
@@ -909,8 +949,10 @@ async function compareSuite(
             suite,
             request: fixtureKey(fixture.request),
             classification: authority.pathDifference ? 'analyzer' : 'presentation',
-            pathDifference: differencePreview(authority.pathDifference),
-            detailedDifference: differencePreview(authority.detailedDifference)
+            qualifiedOutputSha256: completeOutputSha256(currentLisp),
+            sourceOutputSha256: completeOutputSha256(actual.detailed),
+            pathDifference: differenceEvidence(authority.pathDifference),
+            detailedDifference: differenceEvidence(authority.detailedDifference)
           });
         }
       }
@@ -962,7 +1004,7 @@ async function compareSuite(
           referenceFailed++;
           referenceDifferences.push({
             request: fixture.request.text,
-            difference: differencePreview(difference)!
+            difference: differenceEvidence(difference)!
           });
         } else referenceExact++;
       } else {
@@ -976,9 +1018,11 @@ async function compareSuite(
             suite,
             request: fixtureKey(fixture.request),
             classification,
-            pathDifference: differencePreview(authority.pathDifference),
-            cleanDifference: differencePreview(cleanDifference),
-            detailedDifference: differencePreview(authority.detailedDifference),
+            qualifiedOutputSha256: completeOutputSha256(expectedClean),
+            sourceOutputSha256: completeOutputSha256(actualClean),
+            pathDifference: differenceEvidence(authority.pathDifference),
+            cleanDifference: differenceEvidence(cleanDifference),
+            detailedDifference: differenceEvidence(authority.detailedDifference),
             multipleRoots: Object.keys(expectedIdentity.multipleRoots).length > 0
               ? expectedIdentity.multipleRoots
               : undefined
@@ -1063,8 +1107,10 @@ async function segmentationSuite(
             suite: 'segmentation',
             request: fixture.input,
             classification: 'analyzer',
-            pathDifference: differencePreview(difference),
-            detailedDifference: differencePreview(difference)
+            qualifiedOutputSha256: completeOutputSha256(expected),
+            sourceOutputSha256: completeOutputSha256(actual),
+            pathDifference: differenceEvidence(difference),
+            detailedDifference: differenceEvidence(difference)
           });
         }
       }
@@ -1092,7 +1138,7 @@ async function segmentationSuite(
           referenceFailed++;
           referenceDifferences.push({
             request: fixture.input,
-            difference: differencePreview(referenceDifference)!
+            difference: differenceEvidence(referenceDifference)!
           });
         } else referenceExact++;
         recordCleanComparison(
@@ -1163,8 +1209,10 @@ async function romanizationSuite(
             suite: 'romanization',
             request: input,
             classification: 'analyzer',
-            pathDifference: differencePreview(difference),
-            detailedDifference: differencePreview(difference)
+            qualifiedOutputSha256: completeOutputSha256(currentLisp),
+            sourceOutputSha256: completeOutputSha256(actual),
+            pathDifference: differenceEvidence(difference),
+            detailedDifference: differenceEvidence(difference)
           });
         }
       }
@@ -1194,7 +1242,7 @@ async function romanizationSuite(
           referenceFailed++;
           referenceDifferences.push({
             request: input,
-            difference: differencePreview(referenceDifference)!
+            difference: differenceEvidence(referenceDifference)!
           });
         } else referenceExact++;
         recordCleanComparison(
@@ -1300,6 +1348,9 @@ function corpusAccounting(corpus: AnalyzerParityCorpus): Record<string, unknown>
 
 async function main(): Promise<void> {
   const options = parseArgs(process.argv.slice(2));
+  if (options.sourceCompilerPack && !options.smoke) {
+    await assertRepositoryClean(options.repository);
+  }
   const source = options.sourceCompilerPack
     ? await (async () => {
       const oracleLockBytes = new Uint8Array(await readFile(
@@ -1392,9 +1443,10 @@ async function main(): Promise<void> {
       entities.referenceStats, probes.referenceStats
     ];
     const report = {
-      formatVersion: 3,
+      formatVersion: 4,
       generatedAt: new Date().toISOString(),
       completeCorpus: !options.smoke,
+      testedRelease: runtime.release,
       releaseInputLock: {
         kind: source.releaseLockKind,
         sha256: source.releaseLockSha256

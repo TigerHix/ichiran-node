@@ -1,12 +1,17 @@
 // Load entry tests - verify core loading behavior
 import { describe, test, expect } from 'bun:test';
-import { setupTests } from '@ichiran/testing';
 import { getConnection } from '@ichiran/reference-postgres';
 import { loadEntry } from '../src/data/load-entry.js';
 
-setupTests();
+const databaseConfigured = process.env.ICHIRAN_RUN_DATABASE_TESTS === 'true';
+const describeWithDatabase = databaseConfigured ? describe : describe.skip;
 
-describe('loadEntry primary_nokanji behavior', () => {
+if (databaseConfigured) {
+  const { setupTests } = await import('@ichiran/testing');
+  setupTests();
+}
+
+describeWithDatabase('loadEntry primary_nokanji behavior', () => {
   test('sets primary_nokanji=true when any kana reading has re_nokanji', async () => {
     const sql = getConnection();
     
@@ -107,7 +112,7 @@ describe('loadEntry primary_nokanji behavior', () => {
   });
 });
 
-describe('loadEntry transaction atomicity', () => {
+describeWithDatabase('loadEntry transaction atomicity', () => {
   test('returns undefined for ON CONFLICT (skip existing)', async () => {
     const sql = getConnection();
     
@@ -137,4 +142,3 @@ describe('loadEntry transaction atomicity', () => {
     await sql`DELETE FROM entry WHERE seq = 9999004`;
   });
 });
-

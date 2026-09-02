@@ -38,6 +38,11 @@ JMdict, Kanjidic2, extra entries, municipalities, wards, chronological errata,
 compatibility, `kwpos.csv`, and `conjo.csv`. Release code receives those verified
 paths directly. Missing, duplicate, ambiguous and unknown role assignments fail,
 and `stats.json` records the exact byte count and SHA-256 of every consumed file.
+Lock verification also checks the expanded JMdict and Kanjidic2 byte identities
+and embedded upstream version markers, and loads both semantic ledgers through
+their canonical parsers to verify the declared row counts. Archive-patch hashes
+are acquisition provenance: the named acquisition command verifies them before
+creating the pinned compiler input, while releases consume only that pinned file.
 
 Baseline mode also reads and validates
 `data/source-compiler-generated-order-attestation.json`. That compact input
@@ -70,6 +75,29 @@ TSV and releases the physical-target graph before binary pack assembly; the
 phase boundary changes object lifetime, not the surface bytes or pack format.
 
 ## PostgreSQL-unavailable proof
+
+The package's default test command also succeeds on a machine with no database
+configuration:
+
+```sh
+env -u ICHIRAN_DB_URL -u DATABASE_URL ICHIRAN_RUN_DATABASE_TESTS=false \
+  bun test packages/data/tests
+```
+
+At the qualification checkpoint this runs 138 tests and skips 12 explicit
+database cases. Nine are legacy load/conjugation tests that run when
+`ICHIRAN_DB_URL` is provided; three are separately invoked exhaustive
+PostgreSQL-oracle comparisons. To prove the legacy coverage remains available,
+run the same suite against the test database:
+
+```sh
+ICHIRAN_RUN_DATABASE_TESTS=true \
+  ICHIRAN_DB_URL='postgresql:///ichiran_test?host=%2Fvar%2Frun%2Fpostgresql' \
+  bun test packages/data/tests
+```
+
+That run passes 147 tests and skips only the three exhaustive oracle cases.
+These test modes do not replace the isolated full release proof below.
 
 The focused import test rejects any attempt to resolve the PostgreSQL oracle
 package or the PostgreSQL client from the source release module graph:
