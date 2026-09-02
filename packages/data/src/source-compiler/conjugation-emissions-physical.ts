@@ -204,11 +204,13 @@ export function lexicalPhysicalTarget(entry: CanonicalEntry): PhysicalTarget {
 /** The single owner of compatible-target search and generated target identity. */
 class PhysicalTargetPool {
   readonly #targets: PhysicalTarget[];
-  readonly #targetsBySeq = new Map<number, PhysicalTarget>();
+  readonly #lexicalTargetsBySeq = new Map<number, PhysicalTarget>();
   readonly #targetIndex = new Map<string, number[]>();
-  readonly #creatorBySeq = new Map<number, number>();
+  readonly #creatorByGeneratedIndex: number[] = [];
   readonly #targetOrderCompatibility: readonly PhysicalTargetOrderCompatibilityRow[];
   readonly #targetOrderCompatibilityHits = new Set<string>();
+  readonly #firstGeneratedSeq: number;
+  readonly #firstGeneratedIndex: number;
   #nextSeq: number;
 
   constructor(
@@ -217,10 +219,14 @@ class PhysicalTargetPool {
     targetOrderCompatibility: readonly PhysicalTargetOrderCompatibilityRow[]
   ) {
     this.#targets = [...lexicalTargets].sort((left, right) => left.seq - right.seq);
+    this.#firstGeneratedIndex = this.#targets.length;
+    this.#firstGeneratedSeq = firstGeneratedSeq;
     this.#nextSeq = firstGeneratedSeq;
     this.#targetOrderCompatibility = targetOrderCompatibility;
     for (const target of this.#targets) {
-      if (this.#targetsBySeq.has(target.seq)) throw new Error(`Duplicate physical target ${target.seq}`);
+      if (this.#lexicalTargetsBySeq.has(target.seq)) {
+        throw new Error(`Duplicate physical target ${target.seq}`);
+      }
       if (target.seq >= firstGeneratedSeq) {
         throw new Error(`Generated sequence ${firstGeneratedSeq} overlaps lexical target ${target.seq}`);
       }
@@ -229,8 +235,12 @@ class PhysicalTargetPool {
   }
 
   #add(target: PhysicalTarget, creatorSeq?: number, beforeSeq?: number): void {
-    this.#targetsBySeq.set(target.seq, target);
-    if (creatorSeq !== undefined) this.#creatorBySeq.set(target.seq, creatorSeq);
+    if (target.origin === 'lexical') this.#lexicalTargetsBySeq.set(target.seq, target);
+    if (creatorSeq !== undefined) {
+      const index = target.seq - this.#firstGeneratedSeq;
+      if (index < 0) throw new Error(`Lexical physical target ${target.seq} has a generated creator`);
+      this.#creatorByGeneratedIndex[index] = creatorSeq;
+    }
     for (const key of targetIndexKeys(target)) {
       const values = this.#targetIndex.get(key) ?? [];
       const before = beforeSeq === undefined ? -1 : values.indexOf(beforeSeq);
@@ -248,9 +258,10 @@ class PhysicalTargetPool {
     let reviewedPredecessor: number | undefined;
     for (const seq of this.#targetIndex.get(emissionIndexKey(forms)) ?? []) {
       if (seq === emission.rootSeq || seq === viaTargetSeq) continue;
-      const candidate = this.#targetsBySeq.get(seq)!;
+      const candidate = this.target(seq);
       if (!compatibleTarget(candidate, forms)) continue;
-      const creatorSeq = this.#creatorBySeq.get(seq);
+      const creatorSeq = seq < this.#firstGeneratedSeq
+        ? undefined : this.#creatorByGeneratedIndex[seq - this.#firstGeneratedSeq];
       const reviewedOrder = emission.stage === 'primary' && creatorSeq !== undefined
         ? this.#targetOrderCompatibility.find(row =>
           row.seq === emission.rootSeq
@@ -294,16 +305,19 @@ class PhysicalTargetPool {
     }
     // Allocation is complete. Keep the semantic target array, but release the
     // search indexes whose millions of keys are not compiler output.
-    this.#targetsBySeq.clear();
+    this.#lexicalTargetsBySeq.clear();
     this.#targetIndex.clear();
-    this.#creatorBySeq.clear();
+    this.#creatorByGeneratedIndex.length = 0;
     this.#targetOrderCompatibilityHits.clear();
     return this.#targets;
   }
 
   target(seq: number): PhysicalTarget {
-    const target = this.#targetsBySeq.get(seq);
-    if (!target) throw new Error(`Unknown physical target ${seq}`);
+    const index = seq - this.#firstGeneratedSeq;
+    const target = index < 0
+      ? this.#lexicalTargetsBySeq.get(seq)
+      : this.#targets[this.#firstGeneratedIndex + index];
+    if (target?.seq !== seq) throw new Error(`Unknown physical target ${seq}`);
     return target;
   }
 
