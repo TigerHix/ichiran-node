@@ -17,10 +17,13 @@ interface M1OracleWitness {
   readonly serialized: string;
 }
 
-const m1Witnesses = JSON.parse(readFileSync(
+const retainedM1Witnesses = JSON.parse(readFileSync(
   resolve(import.meta.dirname, '../../rust-kernel/tests/fixtures/m1-oracle.json'),
   'utf8'
 )) as readonly M1OracleWitness[];
+const m1Witnesses = process.env.ICHIRAN_E2E_M1_WITNESSES
+  ? JSON.parse(process.env.ICHIRAN_E2E_M1_WITNESSES) as readonly M1OracleWitness[]
+  : retainedM1Witnesses;
 
 interface RustKernelMeasurement {
   readonly workerReadyMs: number;

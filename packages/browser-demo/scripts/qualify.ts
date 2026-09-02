@@ -1,5 +1,8 @@
 import { spawn } from 'node:child_process';
+import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
+import { gunzipSync } from 'node:zlib';
+import { TypeScriptOracleRuntime } from '@ichiran/core/qualification';
 import { verifyAnalyzerRelease } from './release-files.js';
 
 const packageRoot = resolve(import.meta.dir, '..');
@@ -23,10 +26,12 @@ async function run(
   command: string,
   args: readonly string[],
   cwd: string,
-  capture = false
+  capture = false,
+  environment = process.env
 ): Promise<string> {
   const child = spawn(command, args, {
     cwd,
+    env: environment,
     stdio: capture ? ['ignore', 'pipe', 'inherit'] : 'inherit'
   });
   let stdout = '';
@@ -47,6 +52,43 @@ const verifiedRelease = await verifyAnalyzerRelease(
   repositoryRoot,
   process.env.ICHIRAN_QUALIFIED_ARTIFACT
 );
+
+const installed = (bytes: Uint8Array, encoding: 'identity' | 'gzip'): Uint8Array =>
+  encoding === 'gzip' ? new Uint8Array(gunzipSync(bytes)) : bytes.slice();
+
+const hot = installed(verifiedRelease.hotBytes, verifiedRelease.manifest.hot.encoding);
+const details = installed(
+  verifiedRelease.detailsBytes,
+  verifiedRelease.manifest.details.encoding
+);
+const oracle = await TypeScriptOracleRuntime.open({
+  hot,
+  details: {
+    byteLength: details.byteLength,
+    read: async (offset, byteLength) => details.slice(offset, offset + byteLength)
+  },
+  decodeGzip: async (compressed, expectedByteLength) => {
+    const decoded = new Uint8Array(gunzipSync(compressed));
+    if (decoded.byteLength !== expectedByteLength) {
+      throw new Error(`gzip decoded ${decoded.byteLength}; expected ${expectedByteLength}`);
+    }
+    return decoded;
+  }
+});
+const witnessInputs = JSON.parse(await readFile(resolve(
+  repositoryRoot,
+  'packages/rust-kernel/tests/fixtures/m1-oracle.json'
+), 'utf8')) as readonly {
+  readonly name: string;
+  readonly codeUnits: readonly number[];
+}[];
+const samePackWitnesses = [];
+for (const witness of witnessInputs) {
+  const text = String.fromCharCode(...witness.codeUnits);
+  const result = { ...await oracle.analyze(text, { limit: 1 }), computeMs: 0 };
+  samePackWitnesses.push({ ...witness, serialized: JSON.stringify(result) });
+}
+
 await run('bun', ['scripts/stage-analyzer.ts', release], packageRoot);
 await run('bun', ['run', 'build'], packageRoot);
 await run('bun', [
@@ -66,7 +108,12 @@ if (firstInstallBytes > firstInstallLimit) {
     `First-install bytes ${firstInstallBytes} exceed the ${firstInstallLimit}-byte limit`
   );
 }
-if (!skipE2e) await run('bun', ['run', 'test:e2e'], packageRoot);
+if (!skipE2e) {
+  await run('bun', ['run', 'test:e2e'], packageRoot, false, {
+    ...process.env,
+    ICHIRAN_E2E_M1_WITNESSES: JSON.stringify(samePackWitnesses)
+  });
+}
 
 console.log(
   `Browser qualification passed for ${release}: ${releaseDownloadBytes} release bytes + `
