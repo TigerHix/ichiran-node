@@ -228,7 +228,9 @@ try {
     projectionSummary: {
       spool: projection.spool,
       targets: projection.targets.length,
-      generatedTargets: projection.targets.filter(value => value.origin === 'generated').length,
+      generatedTargets: projection.targets.reduce(
+        (count, value) => count + Number(value.origin === 'generated'), 0
+      ),
       ruleAliases: projection.ruleAliases.length,
       aliasProperties: projection.aliasProperties.length,
       phases: projection.phases,

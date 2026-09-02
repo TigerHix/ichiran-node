@@ -128,7 +128,9 @@ const report = {
   spool: projection.spool,
   targets: {
     total: projection.targets.length,
-    generated: projection.targets.filter(value => value.origin === 'generated').length
+    generated: projection.targets.reduce(
+      (count, value) => count + Number(value.origin === 'generated'), 0
+    )
   },
   phases: projection.phases,
   patches: projection.patches,

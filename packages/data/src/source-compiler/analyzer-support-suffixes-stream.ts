@@ -89,7 +89,6 @@ function generatedSuffixForms(input: {
   readonly entries: readonly CanonicalEntry[];
   readonly projection: GeneratedProjectionStreamResult;
 }): ReadonlyMap<number, readonly AnalyzerSupportSuffixFormSource[]> {
-  const targetBySeq = new Map(input.projection.targets.map(target => [target.seq, target]));
   const entryBySeq = new Map(input.entries.map(entry => [entry.seq, entry]));
   const pathByOrdinal = new Map<number, SuffixPath>();
   const targets = new Map<string, TargetConjugations>();
@@ -124,6 +123,12 @@ function generatedSuffixForms(input: {
         addSurfaceConjugation(target, surface, conjugation(groupedPath));
       }
     }
+  }
+
+  const selectedTargetSeqs = new Set([...targets.values()].map(value => value.targetSeq));
+  const targetBySeq = new Map<number, GeneratedProjectionStreamResult['targets'][number]>();
+  for (const target of input.projection.targets) {
+    if (selectedTargetSeqs.has(target.seq)) targetBySeq.set(target.seq, target);
   }
 
   const output = new Map<number, AnalyzerSupportSuffixFormSource[]>();

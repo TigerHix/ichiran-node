@@ -85,7 +85,9 @@ const report = {
   postgresUnavailable: true,
   spool: projection.spool,
   targets: projection.targets.length,
-  generatedTargets: projection.targets.filter(value => value.origin === 'generated').length,
+  generatedTargets: projection.targets.reduce(
+    (count, value) => count + Number(value.origin === 'generated'), 0
+  ),
   phases: projection.phases,
   patches: projection.patches,
   surface

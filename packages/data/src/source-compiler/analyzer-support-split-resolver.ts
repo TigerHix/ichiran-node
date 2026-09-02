@@ -350,7 +350,6 @@ export function createBoundedSourceNativeSplitPartResolver(input: {
   readonly morphology: CompiledMorphologyArtifact;
   readonly projection: GeneratedProjectionStreamResult;
 }): SplitPartResolver {
-  const targets = new Map(input.projection.targets.map(target => [target.seq, target]));
   const roots = referencedRoots();
   const paths = collectGeneratedRulePathTargets(
     input.projection.pathsPath,
@@ -366,6 +365,10 @@ export function createBoundedSourceNativeSplitPartResolver(input: {
     ...roots,
     ...paths.map(value => value.targetSeq)
   ]);
+  const targets = new Map<number, PhysicalTarget>();
+  for (const target of input.projection.targets) {
+    if (selectedTargets.has(target.seq)) targets.set(target.seq, target);
+  }
   const locators = collectGeneratedLocatorsForTargets(
     input.projection.pathsPath,
     selectedTargets,
