@@ -6,6 +6,7 @@ Starting ref: `origin/main`
 Branch: `codex/rust-kernel-m1`
 Qualified artifact: `portable-core-260118-baseline`
 Initial cutover code revision: `384bfa27277f0d832ae444b24f8d52c520d71ee2`
+Review-remediation code revision: `a276cb5157bba1c25201a1b1909e89743b212638`
 
 ## Decision
 
@@ -33,6 +34,7 @@ parity work remains.
 | `a2e75a8e87b53ed932c66b93848a646ce78171aa` | Node lazy random-access detail source |
 | `aa0d2d21375d7c7713d210026dc24da3ef5a5379` | M5A versioned C ABI and Mac handoff |
 | `384bfa27277f0d832ae444b24f8d52c520d71ee2` | Bounded WSL exhaustive-browser teardown |
+| `a276cb5157bba1c25201a1b1909e89743b212638` | Concurrent WASM sessions, ABI v3 product parity, and deterministic artifact gates |
 
 All checkpoints were pushed only to `origin/codex/rust-kernel-m1`. Nothing was merged
 to `main`.
