@@ -74,13 +74,6 @@ export async function openNodeRuntime(
       `Analyzer release sourceCommit ${manifest.sourceCommit} does not match runtime ${expectedSourceCommit}`
     );
   }
-  const decodeGzip = async (compressed: Uint8Array, expectedByteLength: number) => {
-    const decoded = new Uint8Array(gunzipSync(compressed));
-    if (decoded.byteLength !== expectedByteLength) {
-      throw new Error(`Decoded block has ${decoded.byteLength} bytes; expected ${expectedByteLength}`);
-    }
-    return decoded;
-  };
   let details: FileDetailSource | null = null;
   const detailsPromise = openVerifiedDetailSource(directory, manifest.details).then(source => {
     details = source;
@@ -95,7 +88,6 @@ export async function openNodeRuntime(
     return await IchiranRuntime.open({
       hot,
       details: detailSource,
-      decodeGzip,
       wasm
     });
   } catch (error) {

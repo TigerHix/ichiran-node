@@ -6,10 +6,8 @@ import {
   DetailStoreError,
   type DetailEntry,
   type DetailRandomAccessSource,
-  type DetailGzipDecoder,
   type DetailStoreErrorCode
 } from './details.js';
-import type { AnalyzerAnnotationsGzipDecoder } from './analyzer-annotations.js';
 import type { RomanizationName } from './romanization.js';
 import { PORTABLE_LEGACY_INFO } from './analyzer-legacy.js';
 import init, {
@@ -56,8 +54,6 @@ export interface IchiranRuntimeSource {
   readonly hot: Uint8Array;
   /** Installed, uncompressed random-access detail store. */
   readonly details: DetailRandomAccessSource;
-  /** Retained for the qualification-only TypeScript oracle source contract. */
-  readonly decodeGzip: AnalyzerAnnotationsGzipDecoder & DetailGzipDecoder;
   /** Node supplies the same emitted WASM bytes because file-URL fetch is unavailable. */
   readonly wasm?: Uint8Array;
 }
@@ -183,7 +179,6 @@ function now(): number {
  * operation crosses into WASM once; retained details retry by exact block range.
  */
 export class IchiranRuntime {
-  readonly roots: { readonly findEntryIndex: (sequence: number) => number };
   readonly #kernel: WasmKernel;
   readonly #details: WasmDetailStore;
   readonly #detailSource: DetailRandomAccessSource;
@@ -205,9 +200,6 @@ export class IchiranRuntime {
     this.#memory = memory;
     this.#openMs = openMs;
     this.#transientBytes = transientBytes;
-    this.roots = {
-      findEntryIndex: sequence => this.#kernel.entry_index_for_sequence(sequence)
-    };
   }
 
   static async open(source: IchiranRuntimeSource): Promise<IchiranRuntime> {
@@ -235,6 +227,10 @@ export class IchiranRuntime {
     }
   }
 
+  entryIndexForSequence(sequence: number): number {
+    return this.#kernel.entry_index_for_sequence(sequence);
+  }
+
   analyze(text: string, options: PortableAnalyzeOptions = {}): Promise<PortableAnalysisResult> {
     const validated = validatePortableAnalyzeRequest(text, options);
     return Promise.resolve(json<PortableAnalysisResult>(this.#kernel.analyze_utf16_options(
@@ -260,27 +256,31 @@ export class IchiranRuntime {
     options: PortableAnalyzeOptions & { readonly method?: RomanizationName } = {}
   ): Promise<unknown> {
     const validated = validatePortableAnalyzeRequest(text, options);
-    this.#kernel.legacy_begin_utf16(
+    const operation = this.#kernel.legacy_begin_utf16(
       utf16(validated.input),
       optionsJson(validated.options),
       options.method ?? ''
     );
-    const loaded = new Set<string>();
-    for (;;) {
-      const step = json<LegacyStep>(this.#kernel.legacy_step(this.#details));
-      if (step.state === 'ready') return reviveLegacyInfo(step.value, step.metadata);
-      const key = `${step.entryIndex}:${step.range.offset}:${step.range.byteLength}`;
-      if (loaded.has(key)) {
-        throw new Error(`Detail range ${key} remained unavailable after preload`);
+    try {
+      const loaded = new Set<string>();
+      for (;;) {
+        const step = json<LegacyStep>(operation.legacy_step(this.#kernel, this.#details));
+        if (step.state === 'ready') return reviveLegacyInfo(step.value, step.metadata);
+        const key = `${step.entryIndex}:${step.range.offset}:${step.range.byteLength}`;
+        if (loaded.has(key)) {
+          throw new Error(`Detail range ${key} remained unavailable after preload`);
+        }
+        loaded.add(key);
+        const compressed = await readExact(
+          this.#detailSource,
+          step.range.offset,
+          step.range.byteLength,
+          'corrupt-block'
+        );
+        this.#details.entry_json(step.entryIndex, compressed);
       }
-      loaded.add(key);
-      const compressed = await readExact(
-        this.#detailSource,
-        step.range.offset,
-        step.range.byteLength,
-        'corrupt-block'
-      );
-      this.#details.entry_json(step.entryIndex, compressed);
+    } finally {
+      operation.free();
     }
   }
 

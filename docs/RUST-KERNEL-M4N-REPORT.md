@@ -4,11 +4,11 @@ Date: 2026-09-01
 Starting commit: `effd10f1cd4cfd6780760c8130030d287df35ca9`
 Branch: `codex/rust-kernel-m1`
 Qualified artifact: `portable-core-260118-baseline`
-WASM SHA-256: `d8b35fbd8f3d62ef63724f4df833deb8c40a76053d1b3ce84459a81ff04d55eb`
+WASM SHA-256: `f4d17d3a406c1c8269acfc54cd4b08fcaaee795f1d273f8af93be6b25331fe5d`
 
 ## Decision
 
-M4N passes. Node, CLI, and API load the same 1,119,198-byte WASM kernel as the
+M4N passes. Node, CLI, and API load the same 1,119,555-byte WASM kernel as the
 browser build. Their public analysis, romanization, retained legacy, CLI text/JSON,
 and HTTP response shapes are unchanged. No native-library distribution matrix was
 introduced.
@@ -23,7 +23,7 @@ reads without retaining a file descriptor. `dispose()` removes the owned file.
 
 | Gate | Result |
 | --- | ---: |
-| Qualified Node/CLI/API tests | **33/33 passed** |
+| Qualified Node/CLI/API tests | **35/35 passed** |
 | Hard CLI full JSON | 148/149 raw exact, 1 canonical tie, 0 mismatches |
 | Ordinary CLI full JSON | 250/252 raw exact, 2 canonical ties, 0 mismatches |
 | Standalone romanization | 5/5 exact |
@@ -31,6 +31,7 @@ reads without retaining a file descriptor. `dispose()` removes the owned file.
 | Upstream 260118 regressions | 27/27 exact |
 | Real API response-shape tests | 2/2 passed |
 | File verification/lifecycle tests | 5/5 passed |
+| Concurrent Node legacy / HTTP detail sessions | 1/1, 1/1 passed |
 | Core + Node focused matrix | 134 passed, 1 PostgreSQL-only skip, 0 failed |
 
 The three canonical-only CLI witnesses use the repository's existing documented
@@ -104,4 +105,3 @@ pass.
 | Explicit CLI/API/embedder lifetime | PASS |
 | Size, latency, and memory measured | PASS |
 | **Overall M4N gate** | **PASS** |
-

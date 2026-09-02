@@ -2,116 +2,139 @@
 
 Date: 2026-09-01
 Starting commit: `effd10f1cd4cfd6780760c8130030d287df35ca9`
-M3 semantic checkpoint: `41ae665`
 Branch: `codex/rust-kernel-m1`
 Qualified artifact: `portable-core-260118-baseline`
 
 ## Decision
 
-M5A passes. The native Rust crate exports one versioned C ABI for opening the
-qualified pack and executing a complete analysis. The Linux C caller runs the same
-six-suite analyzer corpus used for M3 qualification and compares every serialized
-result byte-for-byte with the frozen TypeScript oracle.
+M5A passes on Linux/WSL. ABI v3 exposes the complete agreed native analyzer surface:
+clean analysis, analyzer-backed romanization, lazy random-access details/describe, and
+retained detailed legacy output. Swift can remain a pack/file/lifecycle host and does
+not need to reconstruct analyzer or presentation semantics.
 
-The draft limit-only ABI could not represent the 54 entity cases or the corpus's
-punctuation-normalization choices. ABI v2 replaces that argument with one borrowed
-UTF-8 options JSON object. The operation remains coarse: one borrowed UTF-16 input
-and one borrowed options document enter Rust, and one Rust-owned UTF-8 JSON buffer
-returns. There is no candidate-level C traffic or second native analyzer.
+The ABI keeps three obvious opaque owners: one kernel, one detail index/cache, and one
+independent legacy operation. It does not introduce callbacks, queues, per-candidate
+traffic, or a second analyzer implementation.
 
-## C parity gate
+## Native C qualification
 
-| Suite | Exact results |
+| Gate | Exact result |
 | --- | ---: |
-| Segmentation | 534/534 |
-| CLI | 252/252 |
-| Hard | 149/149 |
-| Counters | 200/200 |
-| Entities | 54/54 |
-| Probes | 47/47 |
-| **Total** | **1,236/1,236** |
-| Concurrent exact calls | 128/128 |
-| Owned error buffers | 1/1 |
+| Clean segmentation | 534/534 |
+| Clean CLI | 252/252 |
+| Clean hard | 149/149 |
+| Clean counters | 200/200 |
+| Clean entities | 54/54 |
+| Clean probes | 47/47 |
+| **Clean total** | **1,236/1,236** |
+| Explicit astral/lone-surrogate UTF-16 | 3/3 |
+| Detailed current-Lisp authority | 401/401 |
+| Detailed provenance fallback | 301/301 |
+| **Detailed total** | **702/702** |
+| Current-Lisp canonical ties | 3/3 |
+| Fallback canonical ties | 1/1 |
+| Standalone romanization | 5/5 |
+| Lazy describe | 4/4 |
+| Corrupt-block rejection and retry | 2/2 |
+| Owned error buffers | 4/4 |
+| Concurrent clean calls | 128/128 |
+| Concurrent detailed operations | 32/32 |
 
-The corpus generator reads the repository's canonical fixture definitions and obtains
-expected bytes from the unchanged TypeScript analyzer. It normalizes only the
-nondeterministic timing field to the kernel contract's `computeMs: 0`. The transport
-preserves original UTF-16 code units, including astral and malformed-surrogate
-fixtures, complete options, field order, scores, paths, alternatives, and ties.
+The clean C caller compares Rust bytes directly with the frozen TypeScript oracle and
+adds explicit astral-pair, lone-high-surrogate, and lone-low-surrogate witnesses
+without changing the 1,236 corpus accounting. For
+detailed output, the generator first requires every portable TypeScript result to be
+canonical-exact against its current-Lisp or provenance-bound fallback authority and
+requires the exact identities of the three known current-Lisp equal-score tie-order
+cases and the one known fallback tie (`probes:26`). The generator then preserves the
+TypeScript oracle's raw object-field and array order, and the C caller compares Rust
+bytes exactly. There is no broad allowlist;
+any new, removed, or renamed tie divergence fails corpus generation.
 
-The generator and C caller both lock the qualified `hot.bin` SHA-256:
-`61f2882e086be7e0e1b6ba9000e76e0e735b22ea443146f628f04cf877ff6ae0`.
-The TypeScript oracle source files are byte-unchanged from the exact starting commit.
+The pack inputs are locked to:
 
-## ABI and ownership
+- `hot.bin` SHA-256:
+  `61f2882e086be7e0e1b6ba9000e76e0e735b22ea443146f628f04cf877ff6ae0`
+- `details.bin` SHA-256:
+  `0fc45731d84fbb7c2ccf3ef5692d2f1ab01e538325f0ed50135da38e621aa151`
 
-ABI v2 exports exactly these five symbols:
+## ABI v3 and ownership
+
+ABI v3 exports 14 symbols:
 
 - `ichiran_kernel_abi_version`
 - `ichiran_kernel_open`
 - `ichiran_kernel_analyze_utf16`
+- `ichiran_kernel_romanize_utf16`
+- `ichiran_detail_prefix_length`
+- `ichiran_detail_store_open`
+- `ichiran_detail_store_range`
+- `ichiran_detail_store_decode`
+- `ichiran_kernel_legacy_begin_utf16`
+- `ichiran_kernel_legacy_step`
 - `ichiran_kernel_free`
+- `ichiran_detail_store_free`
+- `ichiran_legacy_operation_free`
 - `ichiran_buffer_free`
 
-The caller owns the hot-pack, UTF-16, and options buffers and may release them after
-each call returns. Rust copies the pack into an opaque kernel owner. Every success or
-error buffer is allocated by Rust and must be returned exactly once to
-`ichiran_buffer_free`; every non-null kernel must be returned exactly once to
-`ichiran_kernel_free` after outstanding calls finish.
+The host owns installation and all file reads. Rust copies the hot image and the
+verified detail prefix, retains at most one decoded detail block in the shared store,
+and never eagerly loads `details.bin`. Describe is range/read/decode. Detailed legacy
+is begin/step: a missing step returns one typed `IchiranDetailRange`, and the next step
+accepts exactly that compressed range.
 
-One kernel may be shared across threads. Analysis calls serialize at its mutex so the
-lazy caches retain one mutation owner. The fallible open and analyze entry points use
-`catch_unwind`; a regression test proves a panic becomes an owned
-`ICHIRAN_INTERNAL` JSON result rather than unwinding through C.
+Each legacy handle owns its analysis, serializer session, romanization method, and
+pending request. Supplied-block decode and serializer retry are atomic under the fixed
+operation → kernel → detail-store lock order. This prevents concurrent operations from
+overwriting another operation's state while retaining one mutation owner for kernel
+and detail caches.
+
+All input buffers are borrowed only for their call. Every result and step buffer,
+including empty successes and errors, is Rust-owned and returned once through
+`ichiran_buffer_free`. Handles have matching free functions and cannot be freed while
+in flight. UTF-16 input, entity offsets, result spans, astral pairs, and lone
+surrogates remain lossless. All fallible entries use panic containment; focused unit
+tests prove both ordinary and typed-step panics become owned `ICHIRAN_INTERNAL`
+results rather than unwinding through C.
 
 ## Native artifacts
 
-The qualified Linux release build produced:
-
 | Artifact | Bytes |
 | --- | ---: |
-| `libichiran_kernel.a` | 32,140,340 |
-| `libichiran_kernel.so` | 1,473,016 |
-| Public C header | 2,945 |
+| `libichiran_kernel.a` | 32,315,664 |
+| `libichiran_kernel.so` | 1,648,112 |
+| `include/ichiran_kernel.h` | 5,056 |
 
-These are host-link artifacts, not browser download bytes. Pack format v1 and the
-shared analyzer semantics are unchanged.
+These are native link artifacts, not browser installation bytes. Pack format v1 and
+the analyzer semantics are unchanged.
 
-## Mac handoff
+## Quality and handoff
 
-`packages/rust-kernel/MAC-HANDOFF.md` documents the Linux, macOS, iOS device, and iOS
-simulator target triples; locked cargo commands; symbol audit; simulator-only `lipo`;
-XCFramework construction; Swift UTF-16 requirements; threading; pack ownership; and
-result lifetime. The parity runner selects Linux or Darwin link flags and gives the
-Mac agent one exact validation command.
+The thermo-nuclear maintainability review passes. `ffi.rs` is 779 lines, the focused
+product C caller is 583 lines, and no changed file crosses 1,000 lines. Detail retry
+state lives in its opaque operation instead of scattered flags or a runtime-wide
+queue. The C boundary reuses `Kernel`, `DetailStore`, and `LegacyDetailSession`; it
+does not duplicate analyzer rules.
 
-No Mac, Swift, XCFramework, simulator, or physical-device execution is claimed from
-WSL. Those validations remain M5B work.
-
-## Quality gate
-
-The requested thermo-nuclear review passes. The v1 limit-only signature was deleted
-rather than retained as a compatibility layer. Format parsing and state mutation stay
-inside the Rust kernel; C sees only a small opaque owner and one bulk operation. The
-new test files are focused, no file crosses 1,000 lines, and no policy objects,
-queues, state machines, or speculative host abstractions were added.
-
-Strict rustfmt, all-target/all-feature clippy with warnings denied, pedantic C11
-compilation, Bun bundling, Bash syntax, exported-symbol inspection, and
-`git diff --check` pass. The Rust library reports 91 passed, 0 failed, with 9
-real-pack tests ignored in the ordinary run.
+Rustfmt, all-target/all-feature Clippy with warnings denied, Rust tests, strict C11
+compilation, the complete Linux C qualification, exported-symbol inspection, and
+`git diff --check` pass. The ordinary Rust run has 104 passed and 19 ignored
+real-pack tests; the qualified release run passes all 19/19 ignored tests.
+`packages/rust-kernel/MAC-HANDOFF.md` now gives the Mac agent
+the exact 14-symbol contract, target commands, Swift call flow, ownership rules, and
+the complete corpus gate without requiring an ABI redesign.
 
 ## Gate status
 
 | Requirement | Decision |
 | --- | --- |
-| Small versioned C ABI | PASS |
-| Explicit allocation and free ownership | PASS |
-| No Rust unwind through C | PASS |
-| Full analyzer corpus through Linux C | PASS |
-| Exact serialized output and UTF-16 behavior | PASS |
-| Thread-sharing contract exercised | PASS |
-| M3 parity lineage recorded | PASS |
-| Standalone Mac handoff documentation | PASS |
-| Mac/XCFramework/device execution | PENDING (M5B, Mac-owned) |
+| Complete small versioned C ABI | PASS |
+| Clean and detailed C corpus | PASS |
+| Romanization and lazy describe | PASS |
+| Explicit allocation/free ownership | PASS |
+| Panic and corrupt-block containment | PASS |
+| Independent concurrent legacy sessions | PASS |
+| Host-owned pack installation and file reads | PASS |
+| Standalone Mac handoff | PASS |
+| Mac/XCFramework/Swift/simulator/device execution | PENDING (M5B, Mac-owned) |
 | **Overall M5A gate** | **PASS** |

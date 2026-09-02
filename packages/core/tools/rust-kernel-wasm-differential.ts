@@ -7,6 +7,8 @@ import { join, resolve } from 'node:path';
 
 import {
   IchiranRuntime,
+  parseAnalyzerReleaseManifest,
+  type AnalyzerReleaseAsset,
   type PortableAnalyzeOptions
 } from '../src/index.js';
 
@@ -35,8 +37,8 @@ const QUALIFIED = {
     sha256: '0fc45731d84fbb7c2ccf3ef5692d2f1ab01e538325f0ed50135da38e621aa151'
   },
   wasm: {
-    bytes: 1_119_198,
-    sha256: 'd8b35fbd8f3d62ef63724f4df833deb8c40a76053d1b3ce84459a81ff04d55eb'
+    bytes: 1_119_555,
+    sha256: 'f4d17d3a406c1c8269acfc54cd4b08fcaaee795f1d273f8af93be6b25331fe5d'
   }
 } as const;
 const FALLBACK_SHA256 = 'dbc13ead615b8d70d2f3ecf38aeb7042361459856700a86844c5fe0db6706843';
@@ -44,6 +46,7 @@ const FALLBACK_SHA256 = 'dbc13ead615b8d70d2f3ecf38aeb7042361459856700a86844c5fe0
 type SuiteName = 'segmentation' | 'cli' | 'hard' | 'counters' | 'entities' | 'probes';
 type DetailedSuiteName = Exclude<SuiteName, 'segmentation'>;
 type Authority = 'current-lisp' | 'frozen-postgres-reference';
+type DifferentialMode = 'immutable-baseline' | 'same-pack';
 
 interface BatchEntity {
   readonly start: number;
@@ -64,11 +67,14 @@ interface RawCase {
   readonly request: BatchRequest;
 }
 
-interface DetailedCase {
+interface DetailedRequestCase {
   readonly suite: DetailedSuiteName;
   readonly index: number;
   readonly rawOffset: number;
   readonly request: BatchRequest;
+}
+
+interface DetailedCase extends DetailedRequestCase {
   readonly authority: Authority;
   readonly expected: unknown;
   readonly fallbackClean?: unknown;
@@ -79,6 +85,11 @@ interface FallbackCase {
   readonly entities?: readonly BatchEntity[];
   readonly clean: unknown;
   readonly detailed: unknown;
+}
+
+interface RequestFile {
+  readonly romanization: readonly string[];
+  readonly fullJson: readonly AnalyzerFixtureRequest[];
 }
 
 interface ExactStats {
@@ -106,6 +117,20 @@ function verifyArtifact(
   if (bytes !== expected.bytes || sha256 !== expected.sha256) {
     throw new Error(
       `${label} is ${bytes} bytes with SHA-256 ${sha256}; expected ${expected.bytes} and ${expected.sha256}`
+    );
+  }
+}
+
+function verifyInstalledAsset(
+  label: 'hot' | 'details',
+  asset: AnalyzerReleaseAsset,
+  bytes: number,
+  sha256: string
+): void {
+  if (bytes !== asset.installedBytes || sha256 !== asset.installedSha256) {
+    throw new Error(
+      `${label} is ${bytes} bytes with SHA-256 ${sha256}; manifest identifies `
+      + `${asset.installedBytes} and ${asset.installedSha256}`
     );
   }
 }
@@ -237,6 +262,41 @@ function fallbackSuites(value: unknown): Record<'counters' | 'entities' | 'probe
   return result;
 }
 
+async function loadSamePackCorpus(
+  repository: string,
+  fixtureBytes: Uint8Array
+): Promise<AnalyzerParityCorpus> {
+  const [segmentation, cli, hard] = await Promise.all([
+    readFile(join(repository, 'packages/reference-postgres/tests/data/segmentation.json'))
+      .then(bytes => JSON.parse(bytes.toString('utf8')) as AnalyzerParityCorpus['segmentation']),
+    readFile(join(repository, 'packages/cli/tests/data/cli.json'))
+      .then(bytes => JSON.parse(bytes.toString('utf8')) as RequestFile),
+    readFile(join(repository, 'packages/cli/tests/data/hard-cli.json'))
+      .then(bytes => JSON.parse(bytes.toString('utf8')) as RequestFile)
+  ]);
+  const fallback = fallbackSuites(JSON.parse(new TextDecoder().decode(fixtureBytes)) as unknown);
+  return {
+    segmentation,
+    romanization: cli.romanization,
+    cli: cli.fullJson,
+    hard: hard.fullJson,
+    counters: fallback.counters.map(value => value.request),
+    entities: fallback.entities.map((value, index) => ({
+      title: `same-pack-${index}`,
+      text: value.request.text,
+      entities: value.entities ?? []
+    })),
+    probes: fallback.probes.map((value, index) => ({
+      category: 'top-n',
+      name: `same-pack-${index}`,
+      request: value.request
+    })),
+    currentLispCli: {},
+    currentLispHard: {},
+    currentLispRomanization: {}
+  };
+}
+
 function detailedCases(
   corpus: AnalyzerParityCorpus,
   raw: readonly RawCase[],
@@ -289,6 +349,21 @@ function detailedCases(
   return result;
 }
 
+function samePackDetailedCases(raw: readonly RawCase[]): DetailedRequestCase[] {
+  const result = raw.flatMap((value, rawOffset) => value.suite === 'segmentation'
+    ? []
+    : [{
+        suite: value.suite,
+        index: value.index,
+        rawOffset,
+        request: value.request
+      }]);
+  if (result.length !== 702) {
+    throw new Error(`same-pack detailed corpus has ${result.length} requests; expected 702`);
+  }
+  return result;
+}
+
 function source(file: ReturnType<typeof Bun.file>): {
   readonly byteLength: number;
   readonly reads: Array<{ readonly offset: number; readonly byteLength: number }>;
@@ -321,37 +396,77 @@ function rootSequences(result: CleanAnalysisResult): Array<number | null> {
 
 async function main(): Promise<void> {
   const repository = resolve(import.meta.dir, '../../..');
-  const release = resolve(process.argv[2] ?? join(repository, 'browser-alpha/release'));
+  const arguments_ = process.argv.slice(2);
+  let mode: DifferentialMode = 'immutable-baseline';
+  if (arguments_[0] === '--same-pack') {
+    arguments_.shift();
+    mode = 'same-pack';
+  }
+  if (arguments_.length > 2) {
+    throw new Error(
+      'Usage: rust-kernel-wasm-differential.ts [--same-pack] [release-directory] [wasm-file]'
+    );
+  }
+  const release = resolve(arguments_[0] ?? join(repository, 'browser-alpha/release'));
   const wasmPath = resolve(
-    process.argv[3] ?? join(repository, 'packages/core/src/rust-kernel/generated/ichiran_kernel_bg.wasm')
+    arguments_[1] ?? join(repository, 'packages/core/src/rust-kernel/generated/ichiran_kernel_bg.wasm')
   );
   const hotPath = join(release, 'hot.bin');
   const detailsPath = join(release, 'details.bin');
+  const manifestPath = join(release, 'manifest.json');
   const fallbackPath = join(repository, 'packages/rust-kernel/tests/fixtures/m3-fallback.json');
-  const [hotBytes, wasmBytes, detailsStat, detailsSha256, fixtureBytes, corpus] = await Promise.all([
+  const [
+    hotBytes,
+    wasmBytes,
+    detailsStat,
+    detailsSha256,
+    fixtureBytes,
+    manifestBytes
+  ] = await Promise.all([
     readFile(hotPath),
     readFile(wasmPath),
     stat(detailsPath),
     fileDigest(detailsPath),
     readFile(fallbackPath),
-    loadAnalyzerParityCorpus(repository)
+    mode === 'same-pack' ? readFile(manifestPath) : Promise.resolve(null)
   ]);
-  verifyArtifact('hot', hotBytes.byteLength, digest(hotBytes));
-  verifyArtifact('details', detailsStat.size, detailsSha256);
-  verifyArtifact('wasm', wasmBytes.byteLength, digest(wasmBytes));
+  const corpus = mode === 'immutable-baseline'
+    ? await loadAnalyzerParityCorpus(repository)
+    : await loadSamePackCorpus(repository, fixtureBytes);
+  const hotSha256 = digest(hotBytes);
+  const wasmSha256 = digest(wasmBytes);
+  if (mode === 'immutable-baseline') {
+    verifyArtifact('hot', hotBytes.byteLength, hotSha256);
+    verifyArtifact('details', detailsStat.size, detailsSha256);
+    verifyArtifact('wasm', wasmBytes.byteLength, wasmSha256);
+  } else {
+    if (manifestBytes === null) throw new Error('same-pack mode requires manifest.json');
+    const manifest = parseAnalyzerReleaseManifest(
+      JSON.parse(manifestBytes.toString('utf8')) as unknown,
+      value => createHash('sha256').update(value).digest('hex')
+    );
+    if (manifest.formatVersion !== 1) {
+      throw new Error(`same-pack mode requires pack format v1; found ${manifest.formatVersion}`);
+    }
+    verifyInstalledAsset('hot', manifest.hot, hotBytes.byteLength, hotSha256);
+    verifyInstalledAsset('details', manifest.details, detailsStat.size, detailsSha256);
+  }
   const fallbackSha256 = digest(fixtureBytes);
-  if (fallbackSha256 !== FALLBACK_SHA256) {
+  if (mode === 'immutable-baseline' && fallbackSha256 !== FALLBACK_SHA256) {
     throw new Error(`fallback fixture SHA-256 ${fallbackSha256}; expected ${FALLBACK_SHA256}`);
   }
 
   const raw = rawCases(corpus);
-  const fallback = fallbackSuites(JSON.parse(fixtureBytes.toString('utf8')) as unknown);
-  const detailed = detailedCases(corpus, raw, fallback);
+  const fallback = mode === 'immutable-baseline'
+    ? fallbackSuites(JSON.parse(fixtureBytes.toString('utf8')) as unknown)
+    : null;
+  const detailed = fallback === null ? null : detailedCases(corpus, raw, fallback);
+  const samePackDetailed = mode === 'same-pack' ? samePackDetailedCases(raw) : [];
   const detailFile = Bun.file(detailsPath);
   const wasmDetails = source(detailFile);
   const oracleDetails = source(detailFile);
   const decodeGzip = async (compressed: Uint8Array, expectedByteLength: number): Promise<Uint8Array> => {
-    const decoded = new Uint8Array(Bun.gunzipSync(compressed));
+    const decoded = new Uint8Array(Bun.gunzipSync(Uint8Array.from(compressed)));
     if (decoded.byteLength !== expectedByteLength) {
       throw new Error(`gzip decoded ${decoded.byteLength} bytes; expected ${expectedByteLength}`);
     }
@@ -365,7 +480,6 @@ async function main(): Promise<void> {
   const wasm = await IchiranRuntime.open({
     hot: new Uint8Array(hotBytes),
     details: wasmDetails,
-    decodeGzip,
     wasm: new Uint8Array(wasmBytes)
   });
 
@@ -378,6 +492,8 @@ async function main(): Promise<void> {
   const detailedStats = stats(['cli', 'hard', 'counters', 'entities', 'probes']);
   const authorityStats = stats(['current-lisp', 'frozen-postgres-reference']);
   const detailedDifferences: unknown[] = [];
+  const romanizationStats: ExactStats = { operations: 0, exact: 0, divergent: 0 };
+  const romanizationDifferences: unknown[] = [];
 
   try {
     for (let index = 0; index < raw.length; index++) {
@@ -406,52 +522,101 @@ async function main(): Promise<void> {
       progress('WASM raw differential', index + 1, raw.length);
     }
 
-    for (const fixture of detailed) {
-      if (fixture.fallbackClean === undefined) continue;
-      const difference = firstCanonicalDifference(
-        fixture.fallbackClean,
-        wasmClean[fixture.rawOffset]
-      );
-      const suite = fallbackStats[fixture.suite]!;
-      suite.operations++;
-      if (difference) {
-        suite.divergent++;
-        fallbackDifferences.push({
-          suite: fixture.suite,
-          index: fixture.index,
-          request: fixture.request,
-          difference
+    for (let index = 0; index < corpus.romanization.length; index++) {
+      const input = corpus.romanization[index]!;
+      const [actual, oracleValue] = await Promise.all([
+        wasm.romanize(input),
+        oracle.romanize(input)
+      ]);
+      const authority = mode === 'immutable-baseline'
+        ? corpus.currentLispRomanization[input]
+        : oracleValue;
+      if (authority === undefined) {
+        throw new Error(`romanization[${index}] has no current-Lisp authority`);
+      }
+      const oracleDifference = rawDifference(authority, oracleValue);
+      const wasmDifference = rawDifference(oracleValue, actual);
+      romanizationStats.operations++;
+      if (oracleDifference || wasmDifference) {
+        romanizationStats.divergent++;
+        romanizationDifferences.push({
+          index,
+          input,
+          oracleDifference,
+          wasmDifference
         });
-      } else suite.exact++;
+      } else romanizationStats.exact++;
     }
 
-    for (let index = 0; index < detailed.length; index++) {
-      const fixture = detailed[index]!;
-      const actual = await wasm.legacy(fixture.request.text, options(fixture.request));
-      const comparison = compareDetailedAuthority(
-        fixture.authority === 'current-lisp' ? fixture.expected : null,
-        fixture.authority === 'frozen-postgres-reference' ? fixture.expected : null,
-        actual
-      );
-      if (comparison.source !== fixture.authority) {
-        throw new Error(`${fixture.suite}[${fixture.index}] selected the wrong authority`);
-      }
-      for (const suite of [detailedStats[fixture.suite]!, authorityStats[fixture.authority]!]) {
+    if (detailed !== null) {
+      for (const fixture of detailed) {
+        if (fixture.fallbackClean === undefined) continue;
+        const difference = firstCanonicalDifference(
+          fixture.fallbackClean,
+          wasmClean[fixture.rawOffset]
+        );
+        const suite = fallbackStats[fixture.suite]!;
         suite.operations++;
-        if (comparison.detailedDifference) suite.divergent++;
-        else suite.exact++;
+        if (difference) {
+          suite.divergent++;
+          fallbackDifferences.push({
+            suite: fixture.suite,
+            index: fixture.index,
+            request: fixture.request,
+            difference
+          });
+        } else suite.exact++;
       }
-      if (comparison.detailedDifference) {
-        detailedDifferences.push({
-          suite: fixture.suite,
-          index: fixture.index,
-          request: fixture.request,
-          authority: fixture.authority,
-          pathDifference: comparison.pathDifference,
-          detailedDifference: comparison.detailedDifference
-        });
+
+      for (let index = 0; index < detailed.length; index++) {
+        const fixture = detailed[index]!;
+        const actual = await wasm.legacy(fixture.request.text, options(fixture.request));
+        const comparison = compareDetailedAuthority(
+          fixture.authority === 'current-lisp' ? fixture.expected : null,
+          fixture.authority === 'frozen-postgres-reference' ? fixture.expected : null,
+          actual
+        );
+        if (comparison.source !== fixture.authority) {
+          throw new Error(`${fixture.suite}[${fixture.index}] selected the wrong authority`);
+        }
+        for (const suite of [detailedStats[fixture.suite]!, authorityStats[fixture.authority]!]) {
+          suite.operations++;
+          if (comparison.detailedDifference) suite.divergent++;
+          else suite.exact++;
+        }
+        if (comparison.detailedDifference) {
+          detailedDifferences.push({
+            suite: fixture.suite,
+            index: fixture.index,
+            request: fixture.request,
+            authority: fixture.authority,
+            pathDifference: comparison.pathDifference,
+            detailedDifference: comparison.detailedDifference
+          });
+        }
+        progress('WASM detailed differential', index + 1, detailed.length);
       }
-      progress('WASM detailed differential', index + 1, detailed.length);
+    } else {
+      for (let index = 0; index < samePackDetailed.length; index++) {
+        const fixture = samePackDetailed[index]!;
+        const [actual, expected] = await Promise.all([
+          wasm.legacy(fixture.request.text, options(fixture.request)),
+          oracle.legacy(fixture.request.text, options(fixture.request))
+        ]);
+        const difference = rawDifference(expected, actual);
+        const suite = detailedStats[fixture.suite]!;
+        suite.operations++;
+        if (difference) {
+          suite.divergent++;
+          detailedDifferences.push({
+            suite: fixture.suite,
+            index: fixture.index,
+            request: fixture.request,
+            difference
+          });
+        } else suite.exact++;
+        progress('WASM same-pack detailed differential', index + 1, samePackDetailed.length);
+      }
     }
   } finally {
     wasm.dispose();
@@ -466,11 +631,17 @@ async function main(): Promise<void> {
   const oracleTie = rootSequences(oracleClean[tieOffset]!);
   const report = {
     formatVersion: 1,
-    artifacts: {
+    mode,
+    artifacts: mode === 'immutable-baseline' ? {
       hot: { path: hotPath, ...QUALIFIED.hot },
       details: { path: detailsPath, ...QUALIFIED.details },
       wasm: { path: wasmPath, ...QUALIFIED.wasm },
       fallback: { path: fallbackPath, sha256: fallbackSha256 }
+    } : {
+      manifest: { path: manifestPath, sha256: digest(manifestBytes!) },
+      hot: { path: hotPath, bytes: hotBytes.byteLength, sha256: hotSha256 },
+      details: { path: detailsPath, bytes: detailsStat.size, sha256: detailsSha256 },
+      wasm: { path: wasmPath, bytes: wasmBytes.byteLength, sha256: wasmSha256 }
     },
     rawPresentationFree: {
       policy: 'Exact object values and exact array order against the frozen TypeScript oracle; no tie canonicalization.',
@@ -486,21 +657,32 @@ async function main(): Promise<void> {
         wasmRootSequences: wasmTie
       }
     },
-    fallbackClean: {
-      policy: 'Provenance-bound frozen fallback with repository canonical equal-score ordering only.',
-      operations: 301,
-      exact: fallbackExact,
-      divergent: 301 - fallbackExact,
-      suites: fallbackStats,
-      differences: fallbackDifferences
+    standaloneRomanization: {
+      policy: mode === 'immutable-baseline'
+        ? 'Rust and the frozen TypeScript oracle must both exactly match the pinned current-Lisp string.'
+        : 'Exact string equality between Rust and the frozen TypeScript oracle reading the same format-v1 pack.',
+      ...romanizationStats,
+      differences: romanizationDifferences
     },
+    ...(mode === 'immutable-baseline' ? {
+      fallbackClean: {
+        policy: 'Provenance-bound frozen fallback with repository canonical equal-score ordering only.',
+        operations: 301,
+        exact: fallbackExact,
+        divergent: 301 - fallbackExact,
+        suites: fallbackStats,
+        differences: fallbackDifferences
+      }
+    } : {}),
     detailedRetainedLegacy: {
-      policy: 'Current-Lisp snapshots are authoritative where present; provenance-bound frozen PostgreSQL output is the fallback.',
-      operations: detailed.length,
+      policy: mode === 'immutable-baseline'
+        ? 'Current-Lisp snapshots are authoritative where present; provenance-bound frozen PostgreSQL output is the fallback.'
+        : 'Exact serialized values and array order between Rust and the frozen TypeScript oracle reading the same format-v1 pack.',
+      operations: detailed?.length ?? samePackDetailed.length,
       exact: detailedExact,
-      divergent: detailed.length - detailedExact,
+      divergent: (detailed?.length ?? samePackDetailed.length) - detailedExact,
       suites: detailedStats,
-      authority: authorityStats,
+      ...(mode === 'immutable-baseline' ? { authority: authorityStats } : {}),
       differences: detailedDifferences
     },
     detailRandomAccess: {
@@ -512,7 +694,12 @@ async function main(): Promise<void> {
     allowlist: { entries: 0 }
   };
   console.log(JSON.stringify(report, null, 2));
-  if (rawExact !== 1_236 || fallbackExact !== 301 || detailedExact !== 702) {
+  if (
+    rawExact !== 1_236
+    || romanizationStats.exact !== 5
+    || detailedExact !== 702
+    || (mode === 'immutable-baseline' && fallbackExact !== 301)
+  ) {
     process.exitCode = 1;
   }
 }

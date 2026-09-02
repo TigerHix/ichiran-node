@@ -158,10 +158,24 @@ async function main(): Promise<void> {
     throw new Error(`hot.bin digest ${hotSha256}; expected ${QUALIFIED_HOT_SHA256}`);
   }
   const cases = await corpusCases(repository);
+  cases.push(
+    { name: 'utf16:astral', request: { text: '😀', limit: 1, normalizePunctuation: false } },
+    {
+      name: 'utf16:lone-high',
+      request: { text: String.fromCharCode(0xd83d), limit: 1, normalizePunctuation: false }
+    },
+    {
+      name: 'utf16:lone-low',
+      request: { text: String.fromCharCode(0xde00), limit: 1, normalizePunctuation: false }
+    }
+  );
+  if (cases.length !== 1_239) throw new Error(`C corpus has ${cases.length} total requests`);
   const analyzer = await frozenAnalyzer(hot);
   const metadata = {
     format: 'ichiran-c-parity-v1',
     operations: cases.length,
+    cleanOperations: 1_236,
+    utf16: 3,
     suites: { segmentation: 534, cli: 252, hard: 149, counters: 200, entities: 54, probes: 47 },
     oracle: 'frozen TypeScript packages/core/src/analyzer.ts',
     sourceRevision: sourceRevision(repository),

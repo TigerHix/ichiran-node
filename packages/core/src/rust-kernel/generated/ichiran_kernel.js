@@ -154,6 +154,7 @@ export class WasmKernel {
      * @param {Uint16Array} input
      * @param {Uint8Array} options_json
      * @param {string} method
+     * @returns {WasmLegacyOperation}
      */
     legacy_begin_utf16(input, options_json, method) {
         try {
@@ -167,34 +168,11 @@ export class WasmKernel {
             wasm.wasmkernel_legacy_begin_utf16(retptr, this.__wbg_ptr, ptr0, len0, ptr1, len1, ptr2, len2);
             var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
             var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
-            if (r1) {
-                throw takeObject(r0);
-            }
-        } finally {
-            wasm.__wbindgen_add_to_stack_pointer(16);
-        }
-    }
-    /**
-     * Returns a JSON envelope. `missing-detail` names the exact compressed
-     * range the host must feed to `WasmDetailStore.entry_json` before retrying.
-     * @param {WasmDetailStore} details
-     * @returns {Uint8Array}
-     */
-    legacy_step(details) {
-        try {
-            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-            _assertClass(details, WasmDetailStore);
-            wasm.wasmkernel_legacy_step(retptr, this.__wbg_ptr, details.__wbg_ptr);
-            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
-            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
             var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
-            var r3 = getDataViewMemory0().getInt32(retptr + 4 * 3, true);
-            if (r3) {
-                throw takeObject(r2);
+            if (r2) {
+                throw takeObject(r1);
             }
-            var v1 = getArrayU8FromWasm0(r0, r1).slice();
-            wasm.__wbindgen_export3(r0, r1 * 1, 1);
-            return v1;
+            return WasmLegacyOperation.__wrap(r0);
         } finally {
             wasm.__wbindgen_add_to_stack_pointer(16);
         }
@@ -261,6 +239,53 @@ export class WasmKernel {
 }
 if (Symbol.dispose) WasmKernel.prototype[Symbol.dispose] = WasmKernel.prototype.free;
 
+export class WasmLegacyOperation {
+    static __wrap(ptr) {
+        const obj = Object.create(WasmLegacyOperation.prototype);
+        obj.__wbg_ptr = ptr;
+        WasmLegacyOperationFinalization.register(obj, obj.__wbg_ptr, obj);
+        return obj;
+    }
+    __destroy_into_raw() {
+        const ptr = this.__wbg_ptr;
+        this.__wbg_ptr = 0;
+        WasmLegacyOperationFinalization.unregister(this);
+        return ptr;
+    }
+    free() {
+        const ptr = this.__destroy_into_raw();
+        wasm.__wbg_wasmlegacyoperation_free(ptr, 0);
+    }
+    /**
+     * Returns a JSON envelope. `missing-detail` names the exact compressed
+     * range the host must feed to `WasmDetailStore.entry_json` before retrying.
+     * @param {WasmKernel} kernel
+     * @param {WasmDetailStore} details
+     * @returns {Uint8Array}
+     */
+    legacy_step(kernel, details) {
+        try {
+            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+            _assertClass(kernel, WasmKernel);
+            _assertClass(details, WasmDetailStore);
+            wasm.wasmlegacyoperation_legacy_step(retptr, this.__wbg_ptr, kernel.__wbg_ptr, details.__wbg_ptr);
+            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
+            var r3 = getDataViewMemory0().getInt32(retptr + 4 * 3, true);
+            if (r3) {
+                throw takeObject(r2);
+            }
+            var v1 = getArrayU8FromWasm0(r0, r1).slice();
+            wasm.__wbindgen_export3(r0, r1 * 1, 1);
+            return v1;
+        } finally {
+            wasm.__wbindgen_add_to_stack_pointer(16);
+        }
+    }
+}
+if (Symbol.dispose) WasmLegacyOperation.prototype[Symbol.dispose] = WasmLegacyOperation.prototype.free;
+
 /**
  * @param {Uint8Array} header
  * @param {number} total_bytes
@@ -321,6 +346,9 @@ const WasmDetailStoreFinalization = (typeof FinalizationRegistry === 'undefined'
 const WasmKernelFinalization = (typeof FinalizationRegistry === 'undefined')
     ? { register: () => {}, unregister: () => {} }
     : new FinalizationRegistry(ptr => wasm.__wbg_wasmkernel_free(ptr, 1));
+const WasmLegacyOperationFinalization = (typeof FinalizationRegistry === 'undefined')
+    ? { register: () => {}, unregister: () => {} }
+    : new FinalizationRegistry(ptr => wasm.__wbg_wasmlegacyoperation_free(ptr, 1));
 
 function addHeapObject(obj) {
     if (heap_next === heap.length) heap.push(heap.length + 1);

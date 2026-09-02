@@ -8,7 +8,8 @@ use crate::{
     LegacyDetailSession, RomanizationName,
 };
 
-struct WasmLegacyOperation {
+#[wasm_bindgen]
+pub struct WasmLegacyOperation {
     analysis: crate::AnalysisResult,
     session: LegacyDetailSession,
     method: Option<RomanizationName>,
@@ -17,7 +18,6 @@ struct WasmLegacyOperation {
 #[wasm_bindgen]
 pub struct WasmKernel {
     inner: Kernel,
-    legacy: Option<WasmLegacyOperation>,
 }
 
 #[wasm_bindgen]
@@ -25,10 +25,7 @@ impl WasmKernel {
     #[wasm_bindgen(constructor)]
     pub fn open(hot: Vec<u8>) -> std::result::Result<WasmKernel, JsValue> {
         Kernel::open(hot)
-            .map(|inner| Self {
-                inner,
-                legacy: None,
-            })
+            .map(|inner| Self { inner })
             .map_err(js_error)
     }
 
@@ -65,62 +62,18 @@ impl WasmKernel {
         input: &[u16],
         options_json: &[u8],
         method: &str,
-    ) -> std::result::Result<(), JsValue> {
+    ) -> std::result::Result<WasmLegacyOperation, JsValue> {
         let options = parse_options(options_json).map_err(js_error)?;
         let method = parse_method(method).map_err(js_error)?;
         let analysis = self
             .inner
             .analyze_with_options(input, &options)
             .map_err(js_error)?;
-        self.legacy = Some(WasmLegacyOperation {
+        Ok(WasmLegacyOperation {
             analysis,
             session: LegacyDetailSession::default(),
             method,
-        });
-        Ok(())
-    }
-
-    /// Returns a JSON envelope. `missing-detail` names the exact compressed
-    /// range the host must feed to `WasmDetailStore.entry_json` before retrying.
-    pub fn legacy_step(
-        &mut self,
-        details: &WasmDetailStore,
-    ) -> std::result::Result<Vec<u8>, JsValue> {
-        let operation = self.legacy.as_mut().ok_or_else(|| {
-            js_error(KernelError::new(
-                ErrorCode::InvalidInput,
-                "legacy_begin_utf16 must precede legacy_step",
-            ))
-        })?;
-        match self
-            .inner
-            .serialize_legacy_detailed_wire_json(
-                &mut operation.session,
-                &operation.analysis,
-                &details.inner,
-                operation.method,
-            )
-            .map_err(js_error)?
-        {
-            LegacyWireDetailStep::Ready { value, metadata } => {
-                self.legacy = None;
-                let mut envelope = Vec::with_capacity(value.len() + metadata.len() + 39);
-                envelope.extend_from_slice(b"{\"state\":\"ready\",\"value\":");
-                envelope.extend_from_slice(&value);
-                envelope.extend_from_slice(b",\"metadata\":");
-                envelope.extend_from_slice(&metadata);
-                envelope.push(b'}');
-                Ok(envelope)
-            }
-            LegacyWireDetailStep::Missing { entry_index, range } => {
-                serde_json::to_vec(&WasmMissingDetail {
-                    state: "missing-detail",
-                    entry_index,
-                    range,
-                })
-                .map_err(|error| JsValue::from_str(&error.to_string()))
-            }
-        }
+        })
     }
 
     pub fn resident_payload_bytes(&self) -> u32 {
@@ -138,6 +91,46 @@ impl WasmKernel {
                 })
             })
             .map_err(js_error)
+    }
+}
+
+#[wasm_bindgen]
+impl WasmLegacyOperation {
+    /// Returns a JSON envelope. `missing-detail` names the exact compressed
+    /// range the host must feed to `WasmDetailStore.entry_json` before retrying.
+    pub fn legacy_step(
+        &mut self,
+        kernel: &mut WasmKernel,
+        details: &WasmDetailStore,
+    ) -> std::result::Result<Vec<u8>, JsValue> {
+        match kernel
+            .inner
+            .serialize_legacy_detailed_wire_json(
+                &mut self.session,
+                &self.analysis,
+                &details.inner,
+                self.method,
+            )
+            .map_err(js_error)?
+        {
+            LegacyWireDetailStep::Ready { value, metadata } => {
+                let mut envelope = Vec::with_capacity(value.len() + metadata.len() + 39);
+                envelope.extend_from_slice(b"{\"state\":\"ready\",\"value\":");
+                envelope.extend_from_slice(&value);
+                envelope.extend_from_slice(b",\"metadata\":");
+                envelope.extend_from_slice(&metadata);
+                envelope.push(b'}');
+                Ok(envelope)
+            }
+            LegacyWireDetailStep::Missing { entry_index, range } => {
+                serde_json::to_vec(&WasmMissingDetail {
+                    state: "missing-detail",
+                    entry_index,
+                    range,
+                })
+                .map_err(|error| JsValue::from_str(&error.to_string()))
+            }
+        }
     }
 }
 
@@ -188,22 +181,15 @@ fn parse_options(json: &[u8]) -> crate::Result<AnalyzeOptions> {
 }
 
 fn parse_method(value: &str) -> crate::Result<Option<RomanizationName>> {
-    let method = match value {
-        "" => return Ok(None),
-        "hepburn-basic" => RomanizationName::HepburnBasic,
-        "hepburn-simple" => RomanizationName::HepburnSimple,
-        "hepburn-passport" => RomanizationName::HepburnPassport,
-        "hepburn-traditional" => RomanizationName::HepburnTraditional,
-        "hepburn-modified" => RomanizationName::HepburnModified,
-        "kunrei-siki" => RomanizationName::KunreiSiki,
-        _ => {
-            return Err(KernelError::new(
-                ErrorCode::InvalidInput,
-                "romanization method is not supported",
-            ));
-        }
-    };
-    Ok(Some(method))
+    if value.is_empty() {
+        return Ok(None);
+    }
+    RomanizationName::from_name(value).map(Some).ok_or_else(|| {
+        KernelError::new(
+            ErrorCode::InvalidInput,
+            "romanization method is not supported",
+        )
+    })
 }
 
 fn js_error(error: KernelError) -> JsValue {

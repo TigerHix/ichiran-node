@@ -26,7 +26,12 @@ describe.skipIf(!releaseDirectory)('Node packed runtime release', () => {
       expect(Array.isArray(await runtime.legacy('今日', { limit: 1 }))).toBe(true);
       const entryIndex = analysis.paths[0]!.tokens.find(token => token.entryIndex !== null)?.entryIndex;
       expect(entryIndex).not.toBeNull();
-      expect((await runtime.describe(entryIndex!)).seq).toBeGreaterThan(0);
+      const detail = await runtime.describe(entryIndex!);
+      expect(detail.seq).toBeGreaterThan(0);
+      expect(runtime.entryIndexForSequence(detail.seq)).toBe(entryIndex!);
+      expect(
+        ['surface', 'roots', 'morphology', 'support', 'annotations'].filter(field => field in runtime)
+      ).toEqual([]);
     } finally {
       runtime.dispose();
     }
@@ -57,9 +62,6 @@ describe.skipIf(!releaseDirectory)('Node packed runtime release', () => {
             return source.read(offset, byteLength);
           },
           dispose: () => source.dispose()
-        },
-        decodeGzip: () => {
-          throw new Error('Rust runtime must own compressed detail inflation');
         }
       });
       expect(reads).toHaveLength(2);
@@ -75,6 +77,63 @@ describe.skipIf(!releaseDirectory)('Node packed runtime release', () => {
       else source.dispose();
     }
     await expect(access(path)).rejects.toThrow();
+  });
+
+  test('keeps concurrent legacy detail sessions independent', async () => {
+    const inputs = ['食べさせられました', '三個'] as const;
+    const reference = await openNodeRuntime(releaseDirectory!);
+    const expected: unknown[] = [];
+    try {
+      for (const input of inputs) {
+        expected.push(await reference.legacy(input, { limit: 1 }));
+      }
+    } finally {
+      reference.dispose();
+    }
+
+    const manifest = JSON.parse(
+      await readFile(join(releaseDirectory!, 'manifest.json'), 'utf8')
+    ) as AnalyzerReleaseManifest;
+    const source = await openVerifiedDetailSource(releaseDirectory!, manifest.details);
+    const downloadedHot = new Uint8Array(
+      await readFile(join(releaseDirectory!, manifest.hot.file))
+    );
+    const hot = manifest.hot.encoding === 'gzip'
+      ? new Uint8Array(gunzipSync(downloadedHot))
+      : downloadedHot;
+    const reads: Array<readonly [number, number]> = [];
+    let armed = false;
+    let releaseFirstReads: () => void = () => undefined;
+    const firstReads = new Promise<void>(resolve => {
+      releaseFirstReads = resolve;
+    });
+    let runtime: IchiranRuntime | null = null;
+    try {
+      runtime = await IchiranRuntime.open({
+        hot,
+        wasm: new Uint8Array(await readFile(RUST_KERNEL_WASM_URL)),
+        details: {
+          byteLength: source.byteLength,
+          async read(offset, byteLength) {
+            if (armed) {
+              reads.push([offset, byteLength]);
+              if (reads.length === inputs.length) releaseFirstReads();
+              if (reads.length <= inputs.length) await firstReads;
+            }
+            return source.read(offset, byteLength);
+          },
+          dispose: () => source.dispose()
+        }
+      });
+      armed = true;
+      const actual = await Promise.all(inputs.map(input => runtime!.legacy(input, { limit: 1 })));
+      expect(actual).toEqual(expected);
+      expect(reads).toHaveLength(inputs.length);
+      expect(reads[0]).not.toEqual(reads[1]);
+    } finally {
+      if (runtime) runtime.dispose();
+      else source.dispose();
+    }
   });
 });
 

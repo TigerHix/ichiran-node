@@ -39,9 +39,6 @@ const runtime = await IchiranRuntime.open({
     read: async (offset, byteLength) => new Uint8Array(
       await detailFile.slice(offset, offset + byteLength).arrayBuffer()
     )
-  },
-  decodeGzip: () => {
-    throw new Error('Rust runtime must own compressed-block inflation');
   }
 });
 

@@ -18,5 +18,10 @@ esac
 cc -std=c11 -Wall -Wextra -Werror -Iinclude tests/c_harness.c \
   target/release/libichiran_kernel.a "${link_args[@]}" \
   -o target/c_harness
+cc -std=c11 -Wall -Wextra -Werror -Iinclude tests/c_product_harness.c \
+  target/release/libichiran_kernel.a "${link_args[@]}" \
+  -o target/c_product_harness
 bun tests/c_parity_corpus.ts "$release_dir" \
   | target/c_harness "$release_dir/hot.bin"
+bun tests/c_product_corpus.ts "$release_dir" \
+  | target/c_product_harness "$release_dir/hot.bin" "$release_dir/details.bin"

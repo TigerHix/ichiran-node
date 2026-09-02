@@ -19,15 +19,21 @@ export class WasmKernel {
      */
     analyze_utf16_options(input: Uint16Array, options_json: Uint8Array): Uint8Array;
     entry_index_for_sequence(sequence: number): number;
-    legacy_begin_utf16(input: Uint16Array, options_json: Uint8Array, method: string): void;
+    legacy_begin_utf16(input: Uint16Array, options_json: Uint8Array, method: string): WasmLegacyOperation;
+    constructor(hot: Uint8Array);
+    resident_payload_bytes(): number;
+    romanize_utf16_options(input: Uint16Array, options_json: Uint8Array, method: string): Uint16Array;
+}
+
+export class WasmLegacyOperation {
+    private constructor();
+    free(): void;
+    [Symbol.dispose](): void;
     /**
      * Returns a JSON envelope. `missing-detail` names the exact compressed
      * range the host must feed to `WasmDetailStore.entry_json` before retrying.
      */
-    legacy_step(details: WasmDetailStore): Uint8Array;
-    constructor(hot: Uint8Array);
-    resident_payload_bytes(): number;
-    romanize_utf16_options(input: Uint16Array, options_json: Uint8Array, method: string): Uint16Array;
+    legacy_step(kernel: WasmKernel, details: WasmDetailStore): Uint8Array;
 }
 
 export function detail_prefix_length(header: Uint8Array, total_bytes: number): number;
@@ -38,6 +44,7 @@ export interface InitOutput {
     readonly memory: WebAssembly.Memory;
     readonly __wbg_wasmdetailstore_free: (a: number, b: number) => void;
     readonly __wbg_wasmkernel_free: (a: number, b: number) => void;
+    readonly __wbg_wasmlegacyoperation_free: (a: number, b: number) => void;
     readonly detail_prefix_length: (a: number, b: number, c: number, d: number) => void;
     readonly wasmdetailstore_entry_json: (a: number, b: number, c: number, d: number, e: number) => void;
     readonly wasmdetailstore_open: (a: number, b: number, c: number, d: number) => void;
@@ -46,10 +53,10 @@ export interface InitOutput {
     readonly wasmkernel_analyze_utf16_options: (a: number, b: number, c: number, d: number, e: number, f: number) => void;
     readonly wasmkernel_entry_index_for_sequence: (a: number, b: number, c: number) => void;
     readonly wasmkernel_legacy_begin_utf16: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number) => void;
-    readonly wasmkernel_legacy_step: (a: number, b: number, c: number) => void;
     readonly wasmkernel_open: (a: number, b: number, c: number) => void;
     readonly wasmkernel_resident_payload_bytes: (a: number) => number;
     readonly wasmkernel_romanize_utf16_options: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number) => void;
+    readonly wasmlegacyoperation_legacy_step: (a: number, b: number, c: number, d: number) => void;
     readonly __wbindgen_export: (a: number) => void;
     readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
     readonly __wbindgen_export2: (a: number, b: number) => number;

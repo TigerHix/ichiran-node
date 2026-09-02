@@ -1,12 +1,13 @@
 # Mac native handoff
 
-This crate is the sole analyzer source for native and browser builds. The C surface is
-versioned by `ICHIRAN_KERNEL_ABI_VERSION` in `include/ichiran_kernel.h`; Swift should
-import that header through a module map and treat `IchiranKernel` as an opaque owner.
-ABI v2 accepts one UTF-16 input plus a borrowed UTF-8 options JSON document and
-returns one Rust-owned UTF-8 JSON buffer. Do not mirror analyzer semantics in Swift.
+This crate is the sole analyzer implementation for native and browser builds. ABI v3
+exposes clean analysis, analyzer-backed romanization, lazy detail lookup, and retained
+detailed/legacy presentation. Swift owns pack installation and file reads; it must not
+recreate analyzer, detail, or presentation semantics.
 
-Build a universal static library on a Mac with the same locked Rust toolchain:
+## Build targets
+
+Use the checked-in Rust toolchain and locked dependencies:
 
 ```sh
 rustup target add aarch64-apple-darwin x86_64-apple-darwin
@@ -18,20 +19,7 @@ lipo -create \
   -output libichiran_kernel.a
 ```
 
-The Linux qualification triple is `x86_64-unknown-linux-gnu`. The commands above
-produce `aarch64-apple-darwin` and `x86_64-apple-darwin`. Confirm that the universal
-archive exports exactly the five documented C entry points before integrating it:
-
-```sh
-nm -gU libichiran_kernel.a | awk '/_ichiran_(kernel|buffer)_/ { print $3 }' | sort -u
-```
-
-The expected names are `_ichiran_kernel_abi_version`, `_ichiran_kernel_open`,
-`_ichiran_kernel_analyze_utf16`, `_ichiran_kernel_free`, and
-`_ichiran_buffer_free`.
-
-The later iOS handoff uses the same crate and header, not a separate kernel. Install
-the device and simulator targets and build each architecture on the Mac agent:
+For the later M5B iOS package:
 
 ```sh
 rustup target add aarch64-apple-ios aarch64-apple-ios-sim x86_64-apple-ios
@@ -43,46 +31,99 @@ lipo -create \
   target/x86_64-apple-ios/release/libichiran_kernel.a \
   -output target/libichiran_kernel-simulator.a
 xcodebuild -create-xcframework \
-  -library target/aarch64-apple-ios/release/libichiran_kernel.a \
-  -headers include \
-  -library target/libichiran_kernel-simulator.a \
-  -headers include \
+  -library target/aarch64-apple-ios/release/libichiran_kernel.a -headers include \
+  -library target/libichiran_kernel-simulator.a -headers include \
   -output target/IchiranKernel.xcframework
 ```
 
-Use `aarch64-apple-ios` for devices. The `lipo` command combines only the two
-simulator architectures; `xcodebuild` keeps device and simulator libraries in
-separate XCFramework slices. Never `lipo` a device library and a simulator library
-into one archive.
+Never combine device and simulator archives with `lipo`. The XCFramework owns those
+separate platform slices.
 
-The host owns pack installation, file access, and concurrency. It passes the complete
-verified `hot.bin` once to `ichiran_kernel_open`, then submits one UTF-16 buffer per
-analysis with the JSON fields `limit`, `entities`, and `normalizePunctuation`.
-Entity offsets and all public spans are UTF-16 code units. Never convert the input
-through Swift `String.UTF8View`: unpaired surrogate fixtures must survive unchanged.
+## ABI v3 audit
 
-One opaque kernel may be shared across native threads. The Rust handle serializes
-analysis calls so its lazy caches retain a single owner. Do not call
-`ichiran_kernel_free` until every in-flight analysis has returned; the host still owns
-that lifetime boundary.
+Import `include/ichiran_kernel.h` through a module map. Confirm the universal archive
+exports these 14 symbols:
 
-Every `IchiranResult.buffer`, including an error buffer and a zero-length success
-buffer, is Rust-owned and must be passed exactly once to `ichiran_buffer_free`.
-Release the opaque kernel exactly once with `ichiran_kernel_free`. Calls do not borrow
-the caller's hot, input, or options buffers after returning. The fallible open and
-analyze entries catch Rust panics and return `ICHIRAN_INTERNAL`; no unwind is permitted
-to cross the ABI.
+```sh
+nm -gU libichiran_kernel.a | awk '/_ichiran_/ { print $3 }' | sort -u
+```
 
-Before building a Swift adapter, run the Linux harness documented in the crate README,
-then reproduce its exact 1,236-operation, six-suite corpus on the Mac agent with the
-same qualified pack and source revision recorded by the fixture stream. Do not
-introduce a second native semantic implementation or change pack v1. WSL qualification
-does not claim that the XCFramework, Swift wrapper, simulator, or physical-device
-integration has passed; those remain Mac-agent work.
+```text
+_ichiran_buffer_free
+_ichiran_detail_prefix_length
+_ichiran_detail_store_decode
+_ichiran_detail_store_free
+_ichiran_detail_store_open
+_ichiran_detail_store_range
+_ichiran_kernel_abi_version
+_ichiran_kernel_analyze_utf16
+_ichiran_kernel_free
+_ichiran_kernel_legacy_begin_utf16
+_ichiran_kernel_legacy_step
+_ichiran_kernel_open
+_ichiran_kernel_romanize_utf16
+_ichiran_legacy_operation_free
+```
 
-On the Mac agent, the native C-boundary qualification command is identical; the
-runner selects the Darwin link flags explicitly:
+Reject the library at integration time unless `ichiran_kernel_abi_version()` equals
+`ICHIRAN_KERNEL_ABI_VERSION`.
+
+## Swift wrapper flow
+
+The host verifies and installs format-v1 `hot.bin` and `details.bin`. Pass the complete
+hot image once to `ichiran_kernel_open`; Rust copies it. For details, read the first 96
+bytes, call `ichiran_detail_prefix_length`, read exactly that prefix, then call
+`ichiran_detail_store_open`. Rust copies only the prefix and one decoded block; it
+never owns the file or eagerly loads `details.bin`.
+
+- Clean analysis calls `ichiran_kernel_analyze_utf16` with one UTF-16 buffer and one
+  `{limit, entities, normalizePunctuation}` JSON document.
+- Romanization calls `ichiran_kernel_romanize_utf16`; its JSON string preserves lone
+  surrogates as escapes.
+- Describe calls `ichiran_detail_store_range`, reads that exact file range, and passes
+  it to `ichiran_detail_store_decode`. Rust returns UTF-8 `DetailEntry` JSON in the
+  established TypeScript field order.
+- Retained legacy calls `ichiran_kernel_legacy_begin_utf16` for an independent opaque
+  operation, then calls `ichiran_kernel_legacy_step`. On `MISSING_DETAIL`, read the
+  returned range and supply it on the next step. `READY` returns the established
+  detailed legacy JSON bytes and is terminal. Always release the operation.
+
+Input lengths, entity offsets, and analyzer spans are UTF-16 code units. Construct the
+input from `String.UTF16View`; do not pass UTF-8 offsets. Keep explicit `[UInt16]` tests
+for astral pairs and unpaired high and low surrogates.
+
+Every `IchiranResult.buffer` and `IchiranStepResult.buffer`, including empty success
+and error buffers, is Rust-owned. Return the unchanged value exactly once with
+`ichiran_buffer_free`. Release every non-null kernel, detail store, and legacy
+operation exactly once with its matching free function. Rust borrows input, options,
+method, and compressed-range buffers only until the call returns.
+
+One kernel and detail store may be shared across native threads. Calls serialize at
+their owner; each legacy operation has independent analysis, retry, and detail-session
+state. The only multi-owner path locks operation, kernel, then detail store, and
+atomically decodes a supplied block before retrying serialization. Do not free a
+handle while any call using it is in flight. Run analyzer work off the main actor.
+
+All fallible entries catch Rust panics and return an owned `ICHIRAN_INTERNAL` error;
+no unwind crosses C. Swift should map nonzero status codes to one error type and decode
+only successful JSON. Pack download, hashing, atomic installation, release identity,
+and file lifetime remain host responsibilities.
+
+## Required Mac validation
+
+Before writing the Swift adapter, run the same C caller on macOS:
 
 ```sh
 bash tests/run_c_harness.sh /path/to/portable-core-260118-baseline
 ```
+
+The required output covers 1,236 clean analyses, three explicit astral/lone-surrogate
+UTF-16 witnesses, 702 retained detailed results (401 current-Lisp authority and 301
+provenance-bound fallback), five romanizations, four lazy describes, corrupt-block
+recovery, owned errors, 128 concurrent clean calls, and 32 concurrent detailed
+operations. Re-run the same corpus through the final
+C/Swift wrapper, then validate background execution, restart, leaks, and memory on
+simulator and physical devices.
+
+WSL qualification does not claim XCFramework, Swift, simulator, Safari, or physical
+device validation. Those remain M5B Mac-owned gates.

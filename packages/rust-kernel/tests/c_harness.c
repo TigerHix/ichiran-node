@@ -8,7 +8,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define EXPECTED_CASES 1236u
+#define EXPECTED_CLEAN_CASES 1236u
+#define EXPECTED_UTF16_CASES 3u
+#define EXPECTED_CASES (EXPECTED_CLEAN_CASES + EXPECTED_UTF16_CASES)
 #define THREAD_COUNT 4u
 #define ANALYSES_PER_THREAD 16u
 
@@ -146,7 +148,9 @@ static int load_cases(FILE *input, ParityCase **output, size_t *output_count) {
     if (line_length == 0) continue;
     if (line[0] == '#') {
       if (saw_metadata || strstr(line, "\"format\":\"ichiran-c-parity-v1\"") == NULL
-          || strstr(line, "\"operations\":1236") == NULL
+          || strstr(line, "\"operations\":1239") == NULL
+          || strstr(line, "\"cleanOperations\":1236") == NULL
+          || strstr(line, "\"utf16\":3") == NULL
           || strstr(line, "\"suites\":{\"segmentation\":534,\"cli\":252,"
             "\"hard\":149,\"counters\":200,\"entities\":54,\"probes\":47}") == NULL
           || strstr(line, "\"oracle\":\"frozen TypeScript") == NULL
@@ -315,10 +319,10 @@ int main(int argc, char **argv) {
   free_cases(cases, case_count);
   if (!passed) return 7;
   printf(
-    "C ABI v2 parity harness passed: exact=%zu "
+    "C ABI v3 clean harness passed: exact=%u utf16=%u total=%zu "
     "segmentation=534 cli=252 hard=149 counters=200 entities=54 probes=47 "
     "owned_errors=1 concurrent_exact=128\n",
-    exact
+    EXPECTED_CLEAN_CASES, EXPECTED_UTF16_CASES, exact
   );
   return 0;
 }

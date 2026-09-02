@@ -66,7 +66,6 @@ export async function openAnalyzerRuntime(files: InstalledFiles): Promise<Ichira
   return IchiranRuntime.open({
     hot,
     details,
-    decodeGzip,
     wasm
   });
 }

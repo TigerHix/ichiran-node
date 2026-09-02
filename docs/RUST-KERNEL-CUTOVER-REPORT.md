@@ -5,7 +5,7 @@ Starting commit: `effd10f1cd4cfd6780760c8130030d287df35ca9`
 Starting ref: `origin/main`
 Branch: `codex/rust-kernel-m1`
 Qualified artifact: `portable-core-260118-baseline`
-Cutover code revision: `384bfa27277f0d832ae444b24f8d52c520d71ee2`
+Initial cutover code revision: `384bfa27277f0d832ae444b24f8d52c520d71ee2`
 
 ## Decision
 
@@ -48,7 +48,7 @@ to `main`.
 | M4 browser WASM cutover, Linux/WSL portion | **PASS** | Default Rust Worker, complete Chromium matrix, size/memory/performance gates |
 | M4 complete roadmap gate | **PENDING** | Physical Safari on iPhone 13 baseline and current target device |
 | M4N Node/CLI/API cutover | **PASS** | Same WASM, preserved public behavior, lazy file-backed details |
-| M5A Windows/WSL native handoff | **PASS** | ABI v2, Linux C corpus, ownership/panic/thread checks, Mac README |
+| M5A Windows/WSL native handoff | **PASS** | ABI v3, complete Linux C product corpus, ownership/panic/thread checks, Mac README |
 | M5B Mac-owned iOS packaging | **PENDING** | Requires Mac, XCFramework, Swift, simulator, and physical-device execution |
 | M6 PostgreSQL-free source compiler | OUT OF SCOPE | Source compiler and producer were explicitly frozen |
 | M7 full retirement | OUT OF SCOPE | Requires M2/M5B/M6 and an accepted transition release |
@@ -68,8 +68,12 @@ to `main`.
 | Raw segmentation / CLI / hard | 534/534, 252/252, 149/149 |
 | Raw counters / entities / probes | 200/200, 54/54, 47/47 |
 | Provenance-bound fallback clean output | **301/301 exact** |
-| Linux C serialized operations | **1,236/1,236 exact** |
-| C concurrent calls / owned errors | 128/128, 1/1 |
+| Linux C clean serialized operations | **1,236/1,236 exact** |
+| C explicit astral/lone-surrogate witnesses | 3/3 exact |
+| C retained detailed operations | **702/702 exact** |
+| C romanization / describe / corrupt recovery | 5/5, 4/4, 2/2 |
+| C concurrent clean / detailed operations | 128/128, 32/32 |
+| C owned error buffers | 4/4 |
 | Equal-score differential allowlist | **0** |
 
 The `ﾊｼ` equal-score witness retains exact root order
@@ -85,40 +89,76 @@ The installed `details.bin` is 13,555,874 bytes.
 
 | Gate | Result |
 | --- | ---: |
-| Ordinary Rust tests | 102 passed, 0 failed, 19 real-pack tests ignored |
+| Ordinary Rust tests | 104 passed, 0 failed, 19 real-pack tests ignored |
 | Qualified real-pack Rust tests | 19/19 passed |
-| Node/CLI/API qualified tests | 33/33 passed |
+| Node/CLI/API qualified tests | 35/35 passed |
 | Core + Node focused matrix | 134 passed, 1 PostgreSQL-only skip, 0 failed |
 | Browser unit tests | 30/30 passed |
 | Browser non-benchmark Playwright | 12/12 passed |
 | Browser exhaustive benchmark Playwright | 1/1 passed |
+| Default root test (without opt-in real-pack/PostgreSQL suites) | 163 passed, 24 skipped, 0 failed |
 | Root typecheck and production build | PASS |
 | Strict rustfmt and all-target/all-feature Clippy | PASS |
 | Pedantic Linux C11 build and symbol audit | PASS |
+| Fresh temporary WASM/glue/declaration reproduction | PASS |
 | Source/compiler/grammar scope audit | PASS |
 
 The exhaustive Playwright qualification completed all assertions and exited cleanly
-with Node v22.18.0 hosting Playwright. It used a calibrated 6.2013x single-core
-contention proxy on CPU 15. The browser integration has no main-thread long task over
+with Node v22.18.0 hosting Playwright. It used a calibrated 6.1632x single-core
+contention proxy on CPU 31. The browser integration has no main-thread long task over
 50 ms in the uncontended check.
+
+The root `bun run test` gate now starts with `bun run verify:rust-kernel`. That gate
+runs rustfmt, warning-denied Clippy, and ordinary Cargo tests, then builds the WASM,
+JavaScript glue, and declarations in a fresh temporary target directory and compares
+all four files byte-for-byte with the checked-in artifact. Rust 1.92.0,
+`wasm-bindgen-cli` 0.2.127, and Binaryen 132.0.0 are pinned or strictly checked. A Rust
+edit with stale generated output therefore fails the default verification path.
+The root parity and browser-qualification commands use the same prerequisite.
+
+The immutable-baseline differential remains the default and retains its hard-coded
+hot, detail, WASM, and fallback-fixture identities. A separate explicit `--same-pack`
+mode verifies an arbitrary format-v1 release against its own manifest and compares
+both Rust clean output and retained detailed output with the frozen TypeScript oracle
+reading those same bytes. This prepares cross-kernel validation of a later
+source-compiler release without weakening the immutable baseline gate.
+
+Both modes passed at the repaired revision. The immutable mode remained
+1,236/1,236 raw exact, 5/5 standalone romanization exact, 301/301 fallback-clean
+exact, and 702/702 retained-detail exact. The same-pack mode was independently
+1,236/1,236 raw exact, 5/5 standalone romanization exact, and 702/702
+retained-detail exact, with zero allowlist entries. Both identified hot SHA-256
+`61f2882e086be7e0e1b6ba9000e76e0e735b22ea443146f628f04cf877ff6ae0`, detail
+SHA-256 `0fc45731d84fbb7c2ccf3ef5692d2f1ab01e538325f0ed50135da38e621aa151`,
+and WASM SHA-256
+`f4d17d3a406c1c8269acfc54cd4b08fcaaee795f1d273f8af93be6b25331fe5d`.
+
+The same-pack mode also passed against the source compiler's clean `6fbad4a740a7a616b5ae3c808961478a5179775c`
+format-v1 pack: 1,236/1,236 raw, 5/5 standalone romanization, and 702/702
+retained-detail operations were exact, with zero allowlist entries and no
+whole-detail-store read. That pack's hot image is
+24,747,944 bytes with SHA-256
+`eb9c58204c624b1220bc257b910fc5df7e092133af09760ce6800b672b4bcd96`.
+This is cross-kernel reader validation only; it does not claim or modify the separate
+M2/M6 source-compiler gate.
 
 ## Artifact and first-install bytes
 
 | Artifact | Bytes |
 | --- | ---: |
-| Final optimized WASM | **1,119,198** |
-| Browser-distributed gzip WASM | **436,666** |
-| Final application shell, including gzip WASM | **881,041** |
+| Final optimized WASM | **1,119,555** |
+| Browser-distributed gzip WASM | **437,459** |
+| Final application shell, including gzip WASM | **882,045** |
 | Qualified release download | **24,981,169** |
-| First-install total | **25,862,210** |
+| First-install total | **25,863,214** |
 | 25 MiB target | 26,214,400 |
-| Remaining margin | **352,190** |
-| Linux static library | 32,140,340 |
-| Linux shared library | 1,473,016 |
-| Public C header | 2,945 |
+| Remaining margin | **351,186** |
+| Linux static library | 32,315,664 |
+| Linux shared library | 1,648,112 |
+| Public C header | 5,056 |
 
 The raw WASM SHA-256 is
-`d8b35fbd8f3d62ef63724f4df833deb8c40a76053d1b3ce84459a81ff04d55eb`.
+`f4d17d3a406c1c8269acfc54cd4b08fcaaee795f1d273f8af93be6b25331fe5d`.
 The immutable hot/detail SHA-256 values remain
 `61f2882e086be7e0e1b6ba9000e76e0e735b22ea443146f628f04cf877ff6ae0` and
 `0fc45731d84fbb7c2ccf3ef5692d2f1ab01e538325f0ed50135da38e621aa151`.
@@ -127,23 +167,24 @@ The immutable hot/detail SHA-256 values remain
 
 | Measurement | Result |
 | --- | ---: |
-| Worker ready / pack open / first analysis | 621.2 / 358.1 / 5.5 ms |
-| Lexical p50 / p95 | 3.4 / 27.7 ms |
-| Morphology p50 / p95 | 1.7 / 24.4 ms |
-| First lazy detail request | 2.3 ms |
-| Exhaustive ordinary p50 / p95, 990 samples | 27.5 / 52.3 ms |
-| Exhaustive morphology p50 / p95, 500 samples | 54.9 / 91.2 ms |
-| Exhaustive dense-boundary p50 / p95, 120 samples | 94.8 / 236.9 ms |
+| Worker ready / pack open / first analysis | 708.3 / 421.8 / 24.6 ms |
+| Lexical p50 / p95 | 3.5 / 27.3 ms |
+| Morphology p50 / p95 | 1.5 / 22.7 ms |
+| First lazy detail request | 5.6 ms |
+| Exhaustive ordinary p50 / p95, 990 samples | 27.3 / 53.0 ms |
+| Exhaustive morphology p50 / p95, 500 samples | 51.8 / 91.6 ms |
+| Exhaustive dense-boundary p50 / p95, 120 samples | 103.5 / 264.6 ms |
 | Conservative transient bytes | 59,839,152 |
 | WASM linear memory | 34,537,472 |
 | Rust kernel payload | 29,301,346 |
 | Resident detail before / after one read | 1,755,112 / 1,820,470 |
-| Worker JS heap used | 754,792 |
-| Steady JS heap used / total | 734,004 / 1,572,864 |
+| Worker JS heap used | 756,940 |
+| Steady JS heap used / total | 737,180 / 1,572,864 |
 
 The calibrated interaction gates were 75 ms ordinary p95, 250 ms morphology p95,
 and 500 ms dense-boundary p95; all pass without hiding WASM linear or transient
-memory.
+memory. The final exhaustive run used a 6.1632x single-core contention proxy on CPU
+31 and measured 53.0, 91.6, and 264.6 ms p95 respectively.
 
 ## Node measurements
 
@@ -171,6 +212,20 @@ release verification, file I/O, gzip spooling, and temporary-file lifetime. Rust
 the single owner of pack parsing, caches, candidates, scoring, search, projection,
 serialization, and C-visible mutation. All host calls are coarse serialized
 operations; there is no per-candidate JS/WASM or C traffic.
+
+`TypeScriptOracleRuntime` is not exported from the normal `@ichiran/core` entry point;
+it is available only from `@ichiran/core/qualification`. The Rust cutover also makes
+the earlier experimental `IchiranRuntime.surface`, `.roots`, `.morphology`, `.support`,
+and `.annotations` reader objects an explicit breaking change. The supported runtime
+surface is `analyze`, `romanize`, `legacy`, `describe`, metrics/lifecycle operations,
+and the narrow `entryIndexForSequence` compatibility lookup. No partial TypeScript
+reader shim remains on the Rust runtime.
+
+The ordinary `@ichiran/core` build runs the pinned Rust-to-WASM build before copying
+generated output, and its `prepack` lifecycle runs that same build. A package dry run
+confirmed the packed WASM has the qualified SHA-256 above. The stricter root
+verification independently compiles all four generated files in a fresh temporary
+Cargo target and rejects any byte drift.
 
 The requested thermo-nuclear quality review was applied at every bulky milestone.
 Superseded slice code, the duplicate browser runtime/generated WASM tree, eager Node

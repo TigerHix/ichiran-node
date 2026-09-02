@@ -1,8 +1,8 @@
 # Ichiran Rust kernel
 
 One host-neutral crate reads pack format v1 and exposes coarse native, browser-WASM,
-and versioned C operations. The TypeScript analyzer remains the frozen differential
-oracle during the transition.
+and versioned C operations. Rust is the product analyzer; the frozen TypeScript
+implementation is retained only in qualification tools.
 
 Qualified real-pack checks:
 
@@ -24,12 +24,19 @@ Linux C boundary check:
 bash tests/run_c_harness.sh /path/to/portable-core-260118-baseline
 ```
 
-The generator locks the six-suite, 1,236-operation corpus and obtains expected bytes
-from the frozen TypeScript analyzer in this checkout. The C caller sends every input
-and options document through ABI v2 and compares the complete serialized result
-byte-for-byte. It also checks a Rust-owned error buffer and shares one kernel across
-four pthreads for 128 more exact calls. Native calls serialize at the opaque handle
-because the analyzer's lazy caches have one owner.
+ABI v3 runs two native callers. The clean caller locks all 1,236 six-suite analyses,
+three explicit astral/lone-surrogate witnesses, one owned error, and 128 concurrent
+calls. The product caller additionally locks 702
+detailed legacy results, five romanizations, four lazy describes, two corrupt-block
+recovery paths, three more owned errors, and 32 concurrent detailed operations. The
+702 expected byte streams come from the frozen portable TypeScript oracle only after
+each is independently canonical-exact against its 401 current-Lisp or 301
+provenance-bound fallback authority.
+
+The host keeps `details.bin` and installation ownership. Rust holds only the verified
+detail prefix, a one-block cache, and independent opaque legacy-operation sessions.
+See `include/ichiran_kernel.h` and `MAC-HANDOFF.md` for ABI v3, UTF-16, threading,
+panic containment, and allocation ownership.
 
 Browser artifact:
 
@@ -42,4 +49,5 @@ The build uses the crate's `wasm-release` profile, wasm-bindgen, and the pinned
 Binaryen 132 optimizer. It writes the one shared artifact consumed by browser and
 Node into `packages/core/src/rust-kernel/generated`.
 
-See `MAC-HANDOFF.md` for buffer ownership and the native handoff contract.
+The checked-in WASM/glue/declarations are generated artifacts; the repository verifier
+rebuilds them in a temporary directory and requires byte-for-byte identity.

@@ -1,4 +1,4 @@
-import { TypeScriptOracleRuntime } from '@ichiran/core';
+import { TypeScriptOracleRuntime } from '@ichiran/core/qualification';
 import type { InstalledFiles } from './install.js';
 import { decodeGzip, detailSource } from './runtime.js';
 

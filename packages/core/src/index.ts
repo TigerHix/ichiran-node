@@ -24,10 +24,6 @@ export * from './release-manifest.js';
 export * from './root-payload.js';
 export * from './runtime.js';
 export {
-  TypeScriptOracleRuntime,
-  type TypeScriptRuntimeSource
-} from './runtime-typescript.js';
-export {
   openSurfaceIndex,
   SurfaceIndex,
   SurfaceIndexFormatError,

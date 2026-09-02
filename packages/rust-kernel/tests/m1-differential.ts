@@ -1,7 +1,8 @@
 import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
 
-import { IchiranRuntime, type PortableAnalysisResult } from '../../core/dist/index.js';
+import type { PortableAnalysisResult } from '../../core/dist/index.js';
+import { TypeScriptOracleRuntime } from '../../core/dist/qualification.js';
 
 const PACK_SHA256 = '61f2882e086be7e0e1b6ba9000e76e0e735b22ea443146f628f04cf877ff6ae0';
 const directory = process.env.ICHIRAN_M1_PACK_DIR;
@@ -12,7 +13,7 @@ const digest = createHash('sha256').update(hot).digest('hex');
 if (digest !== PACK_SHA256) throw new Error(`qualified hot.bin digest mismatch: ${digest}`);
 
 const details = Bun.file(resolve(directory, 'details.bin'));
-const oracle = await IchiranRuntime.open({
+const oracle = await TypeScriptOracleRuntime.open({
   hot,
   details: {
     byteLength: details.size,

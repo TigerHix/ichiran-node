@@ -8,6 +8,10 @@
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
+    },
+    "./qualification": {
+      "types": "./dist/qualification.d.ts",
+      "default": "./dist/qualification.js"
     }
   },
   "files": [
@@ -15,8 +19,9 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.json && bun scripts/copy-rust-kernel.ts",
+    "build": "bash ../rust-kernel/scripts/build-wasm.sh && tsc -p tsconfig.json && bun scripts/copy-rust-kernel.ts",
     "build:watch": "tsc -p tsconfig.json --watch",
+    "prepack": "bun run build",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "test": "bun test tests/"
   },

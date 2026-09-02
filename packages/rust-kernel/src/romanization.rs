@@ -38,6 +38,10 @@ impl RomanizationName {
             Self::KunreiSiki => "kunrei-siki",
         }
     }
+
+    pub fn from_name(value: &str) -> Option<Self> {
+        Self::ALL.into_iter().find(|name| name.as_str() == value)
+    }
 }
 
 #[derive(Clone, Debug, Eq, PartialEq)]
@@ -612,6 +616,15 @@ pub(crate) fn romanize(input: &str) -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn resolves_every_public_method_name() {
+        for method in RomanizationName::ALL {
+            assert_eq!(RomanizationName::from_name(method.as_str()), Some(method));
+        }
+        assert_eq!(RomanizationName::from_name(""), None);
+        assert_eq!(RomanizationName::from_name("unsupported"), None);
+    }
 
     #[test]
     fn preserves_literal_astral_and_malformed_utf16() {

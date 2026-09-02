@@ -51,9 +51,9 @@ pub struct DetailSense {
 #[serde(rename_all = "camelCase")]
 pub struct DetailForm {
     pub route: Route,
-    pub text: String,
     pub ord: u32,
     pub common: Option<u32>,
+    pub text: String,
     pub common_tags: String,
     pub conjugatable: bool,
     pub nokanji: bool,

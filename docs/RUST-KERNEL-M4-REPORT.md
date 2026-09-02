@@ -22,15 +22,15 @@ runs on the iPhone 13 baseline and current target device cannot be performed fro
 
 | Artifact | Bytes |
 | --- | ---: |
-| Final optimized WASM | 1,119,198 |
-| Browser-distributed gzip WASM | 436,666 |
-| Final application shell, including gzip WASM | 881,041 |
+| Final optimized WASM | 1,119,555 |
+| Browser-distributed gzip WASM | 437,459 |
+| Final application shell, including gzip WASM | 882,045 |
 | Qualified release download | 24,981,169 |
-| First-install total | **25,862,210** |
-| Margin below 25 MiB | **352,190** |
+| First-install total | **25,863,214** |
+| Margin below 25 MiB | **351,186** |
 
 The raw WASM SHA-256 is
-`d8b35fbd8f3d62ef63724f4df833deb8c40a76053d1b3ce84459a81ff04d55eb`.
+`f4d17d3a406c1c8269acfc54cd4b08fcaaee795f1d273f8af93be6b25331fe5d`.
 The production shell contains exactly one opaque `.wasm.gz.bin` asset and no raw WASM
 asset. The benchmark corpus remains a separate 74,082-byte lazy chunk.
 
@@ -39,6 +39,7 @@ asset. The benchmark corpus remains a separate 74,082-byte lazy chunk.
 | Gate | Result |
 | --- | ---: |
 | Raw presentation-free operations | **1,236/1,236 exact** |
+| Standalone romanization | **5/5 exact** |
 | Segmentation | 534/534 exact |
 | CLI corpus | 252/252 exact |
 | Hard corpus | 149/149 exact |
@@ -62,34 +63,35 @@ The final Rust Worker measurement reported:
 
 | Measurement | Result |
 | --- | ---: |
-| Worker ready | 621.2 ms |
-| Pack open | 358.1 ms |
-| First analysis | 5.5 ms |
-| Lexical p50 / p95 | 3.4 / 27.7 ms |
-| Morphology p50 / p95 | 1.7 / 24.4 ms |
-| Lazy detail request | 2.3 ms |
+| Worker ready | 708.3 ms |
+| Pack open | 421.8 ms |
+| First analysis | 24.6 ms |
+| Lexical p50 / p95 | 3.5 / 27.3 ms |
+| Morphology p50 / p95 | 1.5 / 22.7 ms |
+| Lazy detail request | 5.6 ms |
 | Transient bytes | 59,839,152 |
 | WASM linear memory | 34,537,472 |
 | Kernel payload | 29,301,346 |
 | Detail resident before / after | 1,755,112 / 1,820,470 |
-| Worker JS heap used | 754,792 |
+| Worker JS heap used | 756,940 |
 | Worker embedder heap | 31,904 |
-| Worker backing storage | 38,694 |
+| Worker backing storage | 38,901 |
 
-The independent steady-memory test reported 734,004 used JS-heap bytes, 1,572,864
-total JS-heap bytes, 31,824 embedder bytes, and 38,694 backing-store bytes.
+The independent steady-memory test reported 737,180 used JS-heap bytes, 1,572,864
+total JS-heap bytes, 31,824 embedder bytes, and 38,901 backing-store bytes.
 
-The final completed exhaustive browser report used a calibrated 6.2013x single-core
+The final completed exhaustive browser report used a calibrated 6.1632x single-core
 contention proxy and passed all interaction thresholds:
 
 | Corpus | Samples | p50 | p95 | Gate |
 | --- | ---: | ---: | ---: | ---: |
-| Ordinary | 990 | 27.5 ms | **52.3 ms** | <= 75 ms |
-| Pathological morphology | 500 | 54.9 ms | **91.2 ms** | <= 250 ms |
-| Dense contiguous boundary | 120 | 94.8 ms | **236.9 ms** | <= 500 ms |
+| Ordinary | 990 | 27.3 ms | **53.0 ms** | <= 75 ms |
+| Pathological morphology | 500 | 51.8 ms | **91.6 ms** | <= 250 ms |
+| Dense contiguous boundary | 120 | 103.5 ms | **264.6 ms** | <= 500 ms |
 
-The uncontended main-thread long-task list was empty. The final run completed the
-benchmark and all assertions in roughly seven minutes on CPU 15, wrote the complete
+The uncontended main-thread long-task list was empty. The final run used a calibrated
+6.1632x single-core contention proxy on CPU 31 and completed the
+benchmark in 5.5 minutes and the complete 13-test suite in 9.2 minutes, wrote the complete
 report, and exited cleanly. Earlier diagnostics proved that WSL could delay an offline
 persistent-context close or a killed Bun child indefinitely after every assertion had
 already passed. Teardown is now bounded, stale child handles are unreferenced after
