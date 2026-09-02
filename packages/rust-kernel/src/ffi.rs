@@ -4,11 +4,11 @@ use std::ptr;
 use std::slice;
 use std::sync::Mutex;
 
-use serde::Serialize;
+use serde::{Deserialize, Serialize};
 
-use crate::{ErrorCode, Kernel, KernelError, Result};
+use crate::{AnalyzeOptions, EntityHint, ErrorCode, Kernel, KernelError, Result};
 
-const ABI_VERSION: u32 = 1;
+const ABI_VERSION: u32 = 2;
 
 #[repr(C)]
 pub struct IchiranBuffer {
@@ -43,6 +43,22 @@ pub struct IchiranKernel {
 struct ErrorBody<'a> {
     code: ErrorCode,
     message: &'a str,
+}
+
+#[derive(Deserialize)]
+#[serde(rename_all = "camelCase", deny_unknown_fields)]
+struct CAnalyzeOptions {
+    limit: usize,
+    entities: Vec<CEntityHint>,
+    normalize_punctuation: bool,
+}
+
+#[derive(Deserialize)]
+#[serde(deny_unknown_fields)]
+struct CEntityHint {
+    start: usize,
+    end: usize,
+    boost: Option<f64>,
 }
 
 #[unsafe(no_mangle)]
@@ -87,25 +103,32 @@ pub unsafe extern "C" fn ichiran_kernel_open(
 /// `kernel` must be a live handle returned by `ichiran_kernel_open` and must
 /// remain live until this call returns. When `input_units` is nonzero, `input`
 /// must point to that many aligned, readable `u16` values for the duration of
-/// this call.
+/// this call. When `options_bytes` is nonzero, `options_json` must point to that
+/// many readable UTF-8 JSON bytes for the duration of this call.
 pub unsafe extern "C" fn ichiran_kernel_analyze_utf16(
     kernel: *const IchiranKernel,
     input: *const u16,
     input_units: usize,
-    limit: usize,
+    options_json: *const u8,
+    options_bytes: usize,
 ) -> IchiranResult {
     boundary(|| {
         validate_pointer(kernel, 1, "kernel")?;
         let kernel = unsafe { kernel.as_ref() }
             .ok_or_else(|| KernelError::new(ErrorCode::InvalidInput, "kernel pointer is null"))?;
         let input = input_units_slice(input, input_units)?;
+        let options = parse_options(input_bytes(
+            options_json,
+            options_bytes,
+            "analysis options",
+        )?)?;
         let mut analyzer = kernel.inner.lock().map_err(|_| {
             KernelError::new(
                 ErrorCode::Internal,
                 "kernel is unavailable after an earlier analysis panic",
             )
         })?;
-        analyzer.analyze_json(input, limit)
+        analyzer.analyze_json_with_options(input, &options)
     })
 }
 
@@ -169,6 +192,28 @@ fn error_result(error: KernelError) -> IchiranResult {
         status: status(error.code),
         buffer: IchiranBuffer::from_vec(bytes),
     }
+}
+
+fn parse_options(json: &[u8]) -> Result<AnalyzeOptions> {
+    let options: CAnalyzeOptions = serde_json::from_slice(json).map_err(|error| {
+        KernelError::new(
+            ErrorCode::InvalidInput,
+            format!("analysis options are invalid JSON: {error}"),
+        )
+    })?;
+    Ok(AnalyzeOptions {
+        limit: options.limit,
+        entities: options
+            .entities
+            .into_iter()
+            .map(|entity| EntityHint {
+                start: entity.start,
+                end: entity.end,
+                boost: entity.boost,
+            })
+            .collect(),
+        normalize_punctuation: options.normalize_punctuation,
+    })
 }
 
 fn status(code: ErrorCode) -> u32 {
@@ -261,5 +306,35 @@ mod tests {
 
         assert_eq!(error.code, ErrorCode::InvalidInput);
         assert_eq!(error.message, "UTF-16 input pointer is not aligned");
+    }
+
+    #[test]
+    fn converts_panics_to_owned_internal_error_results() {
+        let result = boundary(|| -> Result<Vec<u8>> { panic!("C boundary fixture") });
+
+        assert_eq!(result.status, status(ErrorCode::Internal));
+        let bytes = unsafe {
+            slice::from_raw_parts(result.buffer.data, result.buffer.byte_length).to_vec()
+        };
+        assert_eq!(
+            bytes,
+            br#"{"code":"internal","message":"Rust kernel panicked at the C boundary"}"#
+        );
+        unsafe { ichiran_buffer_free(result.buffer) };
+    }
+
+    #[test]
+    fn parses_the_versioned_c_options_document() {
+        let options = parse_options(
+            br#"{"limit":3,"entities":[{"start":1,"end":2,"boost":4.5}],"normalizePunctuation":true}"#,
+        )
+        .unwrap();
+
+        assert_eq!(options.limit, 3);
+        assert_eq!(options.entities.len(), 1);
+        assert_eq!(options.entities[0].start, 1);
+        assert_eq!(options.entities[0].end, 2);
+        assert_eq!(options.entities[0].boost, Some(4.5));
+        assert!(options.normalize_punctuation);
     }
 }

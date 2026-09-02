@@ -21,16 +21,15 @@ ICHIRAN_M1_PACK_DIR=/path/to/portable-core-260118-baseline \
 Linux C boundary check:
 
 ```sh
-cargo build --release
-cc -std=c11 -Wall -Wextra -Werror -Iinclude tests/c_harness.c \
-  target/release/libichiran_kernel.a -ldl -lpthread -lm \
-  -o target/c_harness
-target/c_harness /path/to/portable-core-260118-baseline/hot.bin
+bash tests/run_c_harness.sh /path/to/portable-core-260118-baseline
 ```
 
-The harness also shares one kernel across four pthreads. Native analysis calls are
-safe from concurrent threads and serialize at the opaque kernel handle because the
-analyzer's lazy caches have one owner.
+The generator locks the six-suite, 1,236-operation corpus and obtains expected bytes
+from the frozen TypeScript analyzer in this checkout. The C caller sends every input
+and options document through ABI v2 and compares the complete serialized result
+byte-for-byte. It also checks a Rust-owned error buffer and shares one kernel across
+four pthreads for 128 more exact calls. Native calls serialize at the opaque handle
+because the analyzer's lazy caches have one owner.
 
 Browser artifact:
 

@@ -8,7 +8,7 @@
 extern "C" {
 #endif
 
-#define ICHIRAN_KERNEL_ABI_VERSION 1u
+#define ICHIRAN_KERNEL_ABI_VERSION 2u
 
 typedef struct IchiranKernel IchiranKernel;
 
@@ -64,13 +64,20 @@ IchiranResult ichiran_kernel_open(
  * not release the kernel until every analysis call has returned. kernel must be
  * a live handle returned by ichiran_kernel_open. input may be NULL only when
  * input_units is zero; otherwise it must be aligned and remain readable until
- * this call returns.
+ * this call returns. options_json is one UTF-8 JSON object with exactly
+ * `limit`, `entities`, and `normalizePunctuation`; it is borrowed only for this
+ * call and may be NULL only when options_bytes is zero. Each entity has integer
+ * `start` and `end` fields and an optional finite numeric `boost` (omitted or
+ * null means no explicit boost). Entity offsets and all result spans are
+ * UTF-16 code units. Invalid JSON returns
+ * ICHIRAN_INVALID_INPUT with an owned JSON error buffer.
  */
 IchiranResult ichiran_kernel_analyze_utf16(
   const IchiranKernel *kernel,
   const uint16_t *input,
   size_t input_units,
-  size_t limit
+  const uint8_t *options_json,
+  size_t options_bytes
 );
 
 /* Accepts NULL; every non-NULL kernel handle must be released exactly once. */
