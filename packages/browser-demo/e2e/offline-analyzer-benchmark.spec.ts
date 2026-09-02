@@ -344,7 +344,15 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
       await workerRuntime.close();
     }
   } finally {
-    await context?.close().catch(() => undefined);
+    if (context) {
+      // WSL Chromium can finish every assertion and still leave an offline
+      // persistent-context close unresolved. The outer E2E process group owns
+      // the final browser reap, so teardown must not consume the test watchdog.
+      await Promise.race([
+        context.close().catch(() => undefined),
+        new Promise(resolve => setTimeout(resolve, 5_000))
+      ]);
+    }
     await rm(profileDirectory, { recursive: true, force: true });
   }
 });

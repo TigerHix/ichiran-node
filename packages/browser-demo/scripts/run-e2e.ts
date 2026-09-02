@@ -44,7 +44,12 @@ if (pinned) {
   if (!expected || actual !== expected) {
     throw new Error(`Pinned E2E affinity ${actual} does not match requested CPU ${expected ?? '(missing)'}`);
   }
-  const child = spawn('playwright', ['test', ...forwarded], { stdio: 'inherit' });
+  const node = process.env.ICHIRAN_E2E_NODE;
+  const command = node ?? 'playwright';
+  const arguments_ = node
+    ? [fileURLToPath(new URL('../../../node_modules/playwright/cli.js', import.meta.url)), 'test', ...forwarded]
+    : ['test', ...forwarded];
+  const child = spawn(command, arguments_, { stdio: 'inherit' });
   process.exitCode = await exitCode(child);
 } else {
   const available = allowedCpus(affinityList(await readFile('/proc/self/status', 'utf8')));

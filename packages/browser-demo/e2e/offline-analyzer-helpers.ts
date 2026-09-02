@@ -247,6 +247,12 @@ export async function stopCpuHogs(children: readonly ChildProcess[]): Promise<vo
     Promise.all(exits),
     new Promise(resolve => setTimeout(resolve, 1_000))
   ]);
+  for (const child of children) {
+    // A SIGKILLed Bun child can remain a zombie under WSL without delivering
+    // its exit event. Do not let that stale process handle keep the Playwright
+    // worker alive; the outer E2E process group owns the final reap.
+    if (child.exitCode === null) child.unref();
+  }
 }
 
 export async function expectInstallablePwa(page: Page): Promise<void> {
