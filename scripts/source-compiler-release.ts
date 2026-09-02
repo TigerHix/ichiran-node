@@ -159,53 +159,67 @@ const kanjidicReadings = await loadKanjidicHintReadings(
 );
 const temporaryDirectory = await mkdtemp(join(RELEASE_TEMP_ROOT, 'ichiran-source-release-'));
 try {
-  const projection = writeScheduledGeneratedProjection({
-    entries: roots.entries,
-    positionsByRoot: conjugationPositionsByRoot(morphologySource),
-    customRootSeqs,
-    firstErrataEvent: roots.custom.nextEvent,
-    chronologicalPositions: [{
-      rootSeq: 2_089_020,
-      pos: 'cop',
-      event: roots.custom.nextEvent + da.event
-    }],
-    suppressions: fold.suppressions,
-    regeneratedLineages: fold.regeneratedLineages,
-    physicalTargetOrderCompatibility: physicalTargetOrderCompatibility(roots.compatibility),
-    lineageCompatibility: conjugationReadingLineageCompatibility(roots.compatibility),
-    morphology,
-    firstGeneratedSeq,
-    pathsPath: join(temporaryDirectory, 'generated-paths.bin'),
-    occurrencesPath: join(temporaryDirectory, 'generated-occurrences.bin')
-  });
-  // The returned targets remain live; the allocator's search indexes do not.
-  Bun.gc(true);
-  const bounded = await compileBoundedSourceNativeAnalyzerSupport({
-    projection,
-    entries: roots.entries,
-    morphology,
-    temporaryDirectory,
-    kanjidicReadings,
-    customRootSeqs,
-    firstErrataEvent: roots.custom.nextEvent
-  });
+  const targetPhase = await (async function compileTargetPhase() {
+    const projection = writeScheduledGeneratedProjection({
+      entries: roots.entries,
+      positionsByRoot: conjugationPositionsByRoot(morphologySource),
+      customRootSeqs,
+      firstErrataEvent: roots.custom.nextEvent,
+      chronologicalPositions: [{
+        rootSeq: 2_089_020,
+        pos: 'cop',
+        event: roots.custom.nextEvent + da.event
+      }],
+      suppressions: fold.suppressions,
+      regeneratedLineages: fold.regeneratedLineages,
+      physicalTargetOrderCompatibility: physicalTargetOrderCompatibility(roots.compatibility),
+      lineageCompatibility: conjugationReadingLineageCompatibility(roots.compatibility),
+      morphology,
+      firstGeneratedSeq,
+      pathsPath: join(temporaryDirectory, 'generated-paths.bin'),
+      occurrencesPath: join(temporaryDirectory, 'generated-occurrences.bin')
+    });
+    Bun.gc(true);
+    const bounded = await compileBoundedSourceNativeAnalyzerSupport({
+      projection,
+      entries: roots.entries,
+      morphology,
+      temporaryDirectory,
+      kanjidicReadings,
+      customRootSeqs,
+      firstErrataEvent: roots.custom.nextEvent
+    });
+    const surfaceTsv = join(temporaryDirectory, 'surface.tsv');
+    const surfaceSpool = await writeBoundedSurfaceIndexTsv({
+      entries: roots.entries,
+      physicalTargets: projection.targets,
+      occurrencesPath: projection.occurrencesPath,
+      temporaryDirectory,
+      destination: surfaceTsv,
+      ...(options.surfaceChunkRows === undefined ? {} : {
+        maxChunkRows: options.surfaceChunkRows
+      })
+    });
+    return {
+      support: bounded.support,
+      surfaceTsv,
+      surfaceSpool,
+      projectionSummary: {
+        spool: projection.spool,
+        targets: projection.targets.length,
+        generatedTargets: projection.targets.reduce(
+          (count, value) => count + Number(value.origin === 'generated'), 0
+        ),
+        ruleAliases: projection.ruleAliases.length,
+        aliasProperties: projection.aliasProperties.length,
+        phases: projection.phases,
+        patches: projection.patches,
+        analyzerSupport: bounded.summary
+      }
+    };
+  })();
   const compatibilityUsage = assertSourceCompatibilityConsumed(roots.compatibility);
-  const targetCount = projection.targets.length;
-  const generatedTargetCount = projection.targets.reduce(
-    (count, value) => count + Number(value.origin === 'generated'), 0
-  );
-  const surfaceTsv = join(temporaryDirectory, 'surface.tsv');
-  const surfaceSpool = await writeBoundedSurfaceIndexTsv({
-    entries: roots.entries,
-    physicalTargets: projection.targets,
-    occurrencesPath: projection.occurrencesPath,
-    temporaryDirectory,
-    destination: surfaceTsv,
-    ...(options.surfaceChunkRows === undefined ? {} : {
-      maxChunkRows: options.surfaceChunkRows
-    })
-  });
-  projection.targets.length = 0;
+  // The target graph is owned only by compileTargetPhase and is now unreachable.
   Bun.gc(true);
   const release = await writeSourceCompilerRelease({
     repository,
@@ -226,9 +240,9 @@ try {
     } : {}),
     entries: roots.entries,
     morphology: morphologySource,
-    support: bounded.support,
-    surfaceTsv,
-    surfaceSpool,
+    support: targetPhase.support,
+    surfaceTsv: targetPhase.surfaceTsv,
+    surfaceSpool: targetPhase.surfaceSpool,
     conjugationRules,
     sourceSummary: {
       mode: options.mode,
@@ -242,16 +256,7 @@ try {
       compatibilityRows: roots.compatibility.rows.length,
       compatibilityUsage
     },
-    projectionSummary: {
-      spool: projection.spool,
-      targets: targetCount,
-      generatedTargets: generatedTargetCount,
-      ruleAliases: projection.ruleAliases.length,
-      aliasProperties: projection.aliasProperties.length,
-      phases: projection.phases,
-      patches: projection.patches,
-      analyzerSupport: bounded.summary
-    }
+    projectionSummary: targetPhase.projectionSummary
   });
   process.stdout.write(`${JSON.stringify({
     generation: release.generation,

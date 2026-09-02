@@ -308,18 +308,12 @@ class PhysicalTargetPool {
     return { target, created: true };
   }
 
-  finish(): PhysicalTarget[] {
+  finish(): readonly PhysicalTarget[] {
     for (const row of this.#targetOrderCompatibility) {
       if (!this.#targetOrderCompatibilityHits.has(row.id)) {
         throw new Error(`Physical-target ordering compatibility ${row.id} is stale`);
       }
     }
-    // Allocation is complete. Keep the semantic target array, but release the
-    // search indexes whose millions of keys are not compiler output.
-    this.#lexicalTargetsBySeq.clear();
-    this.#targetIndex.clear();
-    this.#creatorByGeneratedIndex.length = 0;
-    this.#targetOrderCompatibilityHits.clear();
     return this.#targets;
   }
 
@@ -555,7 +549,7 @@ export class StreamingPhysicalTargetAllocator {
     };
   }
 
-  finish(): PhysicalTarget[] {
+  finish(): readonly PhysicalTarget[] {
     return this.#pool.finish();
   }
 

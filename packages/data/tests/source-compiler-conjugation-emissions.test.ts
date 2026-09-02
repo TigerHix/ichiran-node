@@ -389,11 +389,11 @@ describe('source-native forward conjugation emissions', () => {
       emission: qualified
     });
     expect(narrow.targetSeq).not.toBe(wide.targetSeq);
+    expect(allocator.finish()).toHaveLength(2);
     expect(allocator.target(narrow.targetSeq)).toEqual(expect.objectContaining({
       kanji: ['逸さす'],
       kana: ['いっさす']
     }));
-    expect(allocator.finish()).toHaveLength(2);
   });
 
   test('rejects stale physical-target ordering compatibility', () => {
