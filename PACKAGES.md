@@ -1,18 +1,16 @@
 # Packages
 
-The qualified alpha has one TypeScript analyzer implementation and thin host adapters.
-Compiler and reference code are kept outside the runtime dependency graph.
-
-The accepted post-alpha direction replaces the analyzer kernel with one Rust crate for
-browser WASM, Node, and native iOS. TypeScript continues to own the browser host and
-source-data compiler. See
+The default product has one host-neutral Rust analyzer kernel and thin TypeScript host
+adapters. The frozen TypeScript and PostgreSQL analyzers are qualification-only and
+remain outside the runtime and normal source-compiler dependency graphs. See
 [docs/SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md](./docs/SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md).
 
 ## Product packages
 
 | Package | Ownership |
 |---|---|
-| `@ichiran/core` | Browser-safe packed readers, analyzer, morphology, scoring, details, romanization, and legacy serialization |
+| `ichiran-kernel` | Canonical packed readers and analyzer semantics for WASM and the native C ABI |
+| `@ichiran/core` | Browser-safe WASM host facade, public model, pack encoders, and qualification-only TypeScript-oracle subpath |
 | `@ichiran/node` | Filesystem loading, manifest verification, gzip decoding, and legacy info formatting for Node |
 | `@ichiran/cli` | Historical `ichiran-cli` command surface over `@ichiran/node` |
 | `@ichiran/api` | Analyzer-only Node HTTP server over `@ichiran/node` |
@@ -21,32 +19,35 @@ source-data compiler. See
 Runtime dependencies are intentionally direct:
 
 ```text
-browser-demo ----------> core
-node ------------------> core
+browser-demo ----------> core facade ----------> Rust WASM
+node ------------------> core facade ----------> Rust WASM
 cli -------------------> node
 api -------------------> node
 ```
 
-`@ichiran/core` has no Node, PostgreSQL, or third-party runtime dependency. Host
-packages own I/O; analyzer behavior stays in core.
+`@ichiran/core` has no Node or PostgreSQL runtime dependency. Host packages own I/O;
+analyzer behavior stays in Rust. The frozen TypeScript runtime is not exported from
+the normal entry point and is available only as `@ichiran/core/qualification`.
 
 ## Compiler and reference packages
 
 | Package | Ownership |
 |---|---|
-| `@ichiran/data` | Node-only deterministic release compiler and source-data maintenance |
-| `@ichiran/reference-postgres` | Private frozen PostgreSQL analyzer used by the compiler and transition oracle |
+| `@ichiran/data` | Node-only deterministic source compiler, pack-v1 encoders, and frozen migration-authoring utilities |
+| `@ichiran/reference-postgres` | Private frozen PostgreSQL analyzer used only by transition qualification and migration maintenance |
 | `@ichiran/testing` | PostgreSQL-reference test setup |
 
 ```text
-data ----------> reference-postgres ----------> PostgreSQL
-testing -------> reference-postgres ----------> PostgreSQL
+pinned sources ----------> source compiler ----------> immutable pack
+
+qualification tools -----> reference-postgres -------> PostgreSQL
+testing -----------------> reference-postgres -------> PostgreSQL
 ```
 
-These packages never enter a shipped runtime bundle. The reference package remains
-for one migration cycle because the compiler still reuses its data-authoring logic.
-It can be deleted after that logic has been moved into the compiler and the upstream
-Lisp plus packed-runtime parity gates independently cover the product.
+These packages never enter a shipped runtime bundle. The normal release entry point
+imports source-compiler modules directly and neither imports nor connects to
+PostgreSQL. The legacy database loader and frozen reference remain for the transition
+release only; they are not alternate production compilers or analyzers.
 
 ## Experimental package
 
@@ -77,7 +78,12 @@ bun run build
 bun run typecheck
 bun test
 
-# Compiler/reference
+# PostgreSQL-isolated source release and cross-kernel qualification
+bun run source:release -- baseline --out /absolute/path/to/release --pack-version <version>
+bun run source:attestation -- --report data/source-compiler-parity-report.json --release /absolute/path/to/release
+bun run qualify:rust-same-pack -- /absolute/path/to/release
+
+# Frozen compiler/reference maintenance
 bun run build:compiler
 bun run typecheck:compiler
 
@@ -92,5 +98,5 @@ bun run alpha:demo:test
 bun run alpha:demo:e2e
 ```
 
-Normal product commands do not read `ICHIRAN_DB_URL`. Release compilation and
-reference-only tests do.
+Normal product commands and `source:release` do not read `ICHIRAN_DB_URL`. Only
+explicit migration-oracle and reference tests do.

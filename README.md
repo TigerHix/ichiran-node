@@ -46,8 +46,8 @@ bun run alpha:demo:stage
 bun run --cwd packages/browser-demo dev
 ```
 
-Building a new pack is a maintainer workflow documented in
-[docs/browser-alpha/RELEASE.md](./docs/browser-alpha/RELEASE.md).
+Building a new pack is the PostgreSQL-isolated maintainer workflow documented in
+[the source-compiler release guide](./docs/source-compiler/M6-RELEASE-WORKFLOW.md).
 
 ## Current qualified architecture
 
@@ -128,6 +128,10 @@ The root parity and browser-qualification commands run the same check first.
 Compiler and PostgreSQL-reference checks are explicit and separate:
 
 ```bash
+bun run source:release -- baseline --out /absolute/path/to/release --pack-version <version>
+bun run qualify:rust-same-pack -- /absolute/path/to/release
+
+# Frozen migration-oracle maintenance only
 bun run typecheck:compiler
 bun run build:compiler
 ```
