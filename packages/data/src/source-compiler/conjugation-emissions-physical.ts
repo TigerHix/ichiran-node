@@ -205,7 +205,7 @@ export function lexicalPhysicalTarget(entry: CanonicalEntry): PhysicalTarget {
 class PhysicalTargetPool {
   readonly #targets: PhysicalTarget[];
   readonly #lexicalTargetsBySeq = new Map<number, PhysicalTarget>();
-  readonly #targetIndex = new Map<string, number[]>();
+  readonly #targetIndex = new Map<string, number | number[]>();
   readonly #creatorByGeneratedIndex: number[] = [];
   readonly #targetOrderCompatibility: readonly PhysicalTargetOrderCompatibilityRow[];
   readonly #targetOrderCompatibilityHits = new Set<string>();
@@ -242,11 +242,19 @@ class PhysicalTargetPool {
       this.#creatorByGeneratedIndex[index] = creatorSeq;
     }
     for (const key of targetIndexKeys(target)) {
-      const values = this.#targetIndex.get(key) ?? [];
-      const before = beforeSeq === undefined ? -1 : values.indexOf(beforeSeq);
-      if (before === -1) values.push(target.seq);
-      else values.splice(before, 0, target.seq);
-      this.#targetIndex.set(key, values);
+      const prior = this.#targetIndex.get(key);
+      if (prior === undefined) {
+        this.#targetIndex.set(key, target.seq);
+      } else if (typeof prior === 'number') {
+        this.#targetIndex.set(
+          key,
+          beforeSeq === prior ? [target.seq, prior] : [prior, target.seq]
+        );
+      } else {
+        const before = beforeSeq === undefined ? -1 : prior.indexOf(beforeSeq);
+        if (before === -1) prior.push(target.seq);
+        else prior.splice(before, 0, target.seq);
+      }
     }
   }
 
@@ -256,7 +264,10 @@ class PhysicalTargetPool {
   ): { readonly target: PhysicalTarget; readonly created: boolean } {
     const forms = targetForms(emission);
     let reviewedPredecessor: number | undefined;
-    for (const seq of this.#targetIndex.get(emissionIndexKey(forms)) ?? []) {
+    const indexed = this.#targetIndex.get(emissionIndexKey(forms));
+    const indexedLength = typeof indexed === 'number' ? 1 : indexed?.length ?? 0;
+    for (let index = 0; index < indexedLength; index++) {
+      const seq = typeof indexed === 'number' ? indexed : indexed![index]!;
       if (seq === emission.rootSeq || seq === viaTargetSeq) continue;
       const candidate = this.target(seq);
       if (!compatibleTarget(candidate, forms)) continue;
