@@ -177,28 +177,18 @@ the split/hint, bounded suffix, counter/direct-suffix and collision suites. The
 release TypeScript build and `git diff --check` also pass. No source-native
 module imports `reference-postgres` or attempts a connection.
 
-## Exact remaining gaps
+## Integrated gate
 
-This slice is a **conditional PASS**, not the whole M6 analyzer-support gate.
+This slice is now an unconditional **PASS** as part of the complete M6 release.
+The final source-native pack contains all 36,885 hints, 38,032 splits, 760
+counter keys/799 variants, 5,532 suffix keys/5,533 values, and 5,442 normalized
+collision facts. The central generated-order attestation accounts exhaustively
+for every physical grouping, form-order, property-order, and winner delta:
+548,607 semantic locators exist on each side with zero missing, extra,
+reverse-only, rank-conflict, or collision-status rows.
 
-- The complete 36,885 hints, 760 counter keys/799 variants, and normalized 5,442
-  collision facts are exact. Split and suffix cardinalities are exact.
-- The bounded lexical-target locator omission is fixed and focused-green. Its
-  exact 888-row effect is derived from the exhaustive v6 join, but a high-memory
-  full rerun is intentionally deferred until the central projection stabilizes.
-- Every remaining support residual is joined to central physical grouping,
-  creator, form-order or property-order behavior. Final unconditional passage
-  requires the central attestation and release build to prove or individually
-  review those observable ord/flag/order rows; support output must not patch
-  them locally.
-- Generated annotation records and lookup-order facts are owned by the separate
-  generated-support work. They are not claimed here.
-- Chronological dictionary errata are owned by `chronological-errata.ts`; the
-  earlier custom-root slice itself implements only custom-data chronology.
-
-Accordingly, the support-owned gate passes conditionally: source ownership,
-bounded semantic rules, focused regressions and exact cardinalities are in
-place, with no database-shaped permanent layer. It becomes an unconditional
-PASS only when the final central attestation and PostgreSQL-unavailable release
-run confirm the predicted locator reduction and account for the central
-ordering/metadata rows without a broad allowlist.
+The release gate pins both analyzer sections and their complete count groups;
+the attestation is mandatory and cannot be generated or relaxed at release
+time. The full pack also builds successfully with PostgreSQL sockets hidden and
+networking disabled. No support-local patch, broad allowlist, database export,
+or database-shaped permanent layer remains.

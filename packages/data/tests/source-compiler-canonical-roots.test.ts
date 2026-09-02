@@ -46,8 +46,8 @@ describe('complete canonical roots', () => {
       '7f78b244955c14e23afc5474b03c66554cfba189bf0383856afd8a00bd279f24'
     ]);
     expect([compatibility.byteLength, sha256(compatibility)]).toEqual([
-      24_215,
-      'c3a39f43432ad78c319e8ad3df808ba3617179b30e4e43ff5369fbe6435a1d34'
+      23_683,
+      '387982639a9a03ea7fb11feeef754b5aea59c673cec2757153f200ea071ee9bb'
     ]);
   });
 
@@ -63,6 +63,11 @@ describe('complete canonical roots', () => {
       noops: 93,
       demotedRoots: 1
     });
+    expect(compilation.errata.noopRowIds).toHaveLength(93);
+    expect(new Set(compilation.errata.noopRowIds).size).toBe(93);
+    expect(sha256(Buffer.from(compilation.errata.noopRowIds.join('\n')))).toBe(
+      'ade55c5ea7902a6370849a5e380fa23a93b98f404b690e0cd8b21276eb5029c2'
+    );
     expect(compilation.compatibility.rows).toHaveLength(25);
     expect(conjugationReadingLineageCompatibility(compilation.compatibility)).toHaveLength(7);
     expect(await canonicalEntriesDigest(compilation.entries)).toEqual({

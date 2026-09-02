@@ -5,7 +5,8 @@ import {
   loadAllConjugationRules,
   SECONDARY_CONJUGATION_TYPES,
   SECONDARY_CONJUGATION_TYPES_FROM,
-  type ConjugationRule
+  type ConjugationRule,
+  type ConjugationRulePaths
 } from '../data/conj-rules.js';
 import {
   encodeMorphologyArtifact,
@@ -441,9 +442,12 @@ function constructFromCompiled(word: string, rule: CompiledMorphologyRule): stri
 /** Builds format-v1 morphology directly from compiler-owned semantic input. */
 export function buildMorphology(
   source: MorphologySource,
-  options: { readonly dataPath?: string } = {}
+  options: {
+    readonly dataPath?: string;
+    readonly conjugationRules?: ConjugationRulePaths;
+  } = {}
 ): MorphologyCompileResult {
-  loadAllConjugationRules(options.dataPath ?? 'data');
+  loadAllConjugationRules(options.conjugationRules ?? options.dataPath ?? 'data');
   const rulesByKey = new Map<string, CompiledMorphologyRule>();
   const pendingTemplates = makePendingTemplates(source.roots, rulesByKey);
   const pendingPatches = makePendingPatches(source.manualPatches, rulesByKey);

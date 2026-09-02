@@ -13,6 +13,7 @@ import {
 } from '../packages/data/src/source-compiler/conjugation-errata.js';
 import { conjugationPositionsByRoot } from '../packages/data/src/source-compiler/conjugation-emission-order.js';
 import { writeConfiguredConjugationRelation } from '../packages/data/src/source-compiler/configured-conjugation-relation.js';
+import { verifySourceCompilerLock } from '../packages/data/src/source-compiler/source-lock.js';
 
 function destination(argv: readonly string[]): string {
   if (argv.length !== 2 || argv[0] !== '--out') {
@@ -22,30 +23,34 @@ function destination(argv: readonly string[]): string {
 }
 
 const repository = resolve(import.meta.dir, '..');
-const data = resolve(repository, 'data');
+const sourceLock = await verifySourceCompilerLock(repository);
+const conjugationRules = {
+  kwpos: sourceLock.inputs.kwpos.absolutePath,
+  conjo: sourceLock.inputs.conjo.absolutePath
+};
 const roots = await compileCanonicalRoots({
-  jmdict: resolve(repository, 'packages/data/JMdict_e.gz'),
-  extra: resolve(data, 'sources/extra.xml'),
-  municipality: resolve(data, 'sources/jichitai.csv'),
-  ward: resolve(data, 'sources/gyoseiku.csv'),
-  errata: resolve(data, 'source-compiler-errata.json'),
-  compatibility: resolve(data, 'source-compiler-compatibility.json')
+  jmdict: sourceLock.inputs.jmdict.absolutePath,
+  jmdictSourceId: sourceLock.inputs.jmdict.id,
+  extra: sourceLock.inputs.extra.absolutePath,
+  municipality: sourceLock.inputs.municipality.absolutePath,
+  ward: sourceLock.inputs.ward.absolutePath,
+  errata: sourceLock.inputs.chronologicalErrata.absolutePath,
+  compatibility: sourceLock.inputs.compatibility.absolutePath
 });
 const fold = foldChronologicalConjugationErrata(
   roots.entries,
   roots.errata.conjugationRows,
-  { dataPath: data }
+  { conjugationRules }
 );
 const morphologySource = chronologicalMorphologySource(
   roots.entries,
   roots.errata.conjugationRows,
   {
-    dataPath: data,
+    conjugationRules,
     extraPositions: conjugationPositionCompatibility(roots.compatibility)
-      .map(row => ({ seq: row.seq, pos: row.pos }))
   }
 );
-const morphology = buildMorphology(morphologySource, { dataPath: data }).artifact;
+const morphology = buildMorphology(morphologySource, { conjugationRules }).artifact;
 const result = await writeConfiguredConjugationRelation({
   entries: roots.entries,
   positionsByRoot: conjugationPositionsByRoot(morphologySource),

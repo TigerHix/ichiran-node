@@ -4,7 +4,7 @@
 
 `compileCanonicalRoots()` builds the complete dictionary model from the pinned
 January JMdict, the three custom source files, the chronological errata ledger,
-and the eighteen-row compatibility ledger. It then derives best readings. None of
+and the 25-row compatibility ledger. It then derives best readings. None of
 those steps opens a database or reads a PostgreSQL export.
 
 The chronological order is fixed: 214,698 JMdict declarations, 3,703 custom

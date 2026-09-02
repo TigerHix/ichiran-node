@@ -304,6 +304,72 @@ describe('source-native split and hint declarations', () => {
     expect(typeof resolved === 'string' ? 0 : resolved?.seq).toBeGreaterThanOrEqual(3_000_000);
   });
 
+  test('uses the source ordinal for a compatibility-only generated split surface', () => {
+    const root = entry(2_089_020, [], [form('だ', 7)], 'cop');
+    const negative = emitCanonicalConjugations(root).find(emission =>
+      emission.stage === 'primary'
+      && emission.first.type === 1
+      && emission.first.negative === true
+      && emission.first.formal === false)!;
+    const rule = negative.forms[0]!.firstRule;
+    const morphology: CompiledMorphologyArtifact = {
+      positions: ['cop'],
+      rules: [{
+        pos: rule.pos,
+        type: rule.type,
+        negative: rule.negative,
+        formal: rule.formal,
+        ordinal: rule.order,
+        stem: rule.stem,
+        okuri: rule.okuri,
+        euphr: rule.euphr,
+        euphk: rule.euphk
+      }],
+      templates: [],
+      rootKeys: [{
+        route: 'kana',
+        pos: 'cop',
+        sourceText: 'だ',
+        records: [{
+          rootGroup: 0,
+          sourceForm: 'だ',
+          sourceReading: 'だ',
+          ord: 7,
+          common: null
+        }]
+      }],
+      rootGroups: [{ seq: 2_089_020, forms: ['だ'] }],
+      patches: [{
+        route: 'kana',
+        surface: 'じゃない',
+        rootSeq: 2_089_020,
+        sourceText: 'だ',
+        form: 'じゃない',
+        reading: 'じゃない',
+        intermediate: null,
+        firstRule: 0,
+        secondRule: null,
+        ord: 7,
+        common: null
+      }],
+      tombstones: []
+    };
+    const assigned = assignPhysicalTargets(
+      [negative],
+      [lexicalPhysicalTarget(root)],
+      3_000_000
+    );
+    const resolver = createSourceNativeSplitPartResolver({
+      entries: [root],
+      morphology,
+      emissions: [negative],
+      physical: assigned
+    });
+
+    expect(resolver.find('じゃない', [2_089_020], true))
+      .toEqual(expect.objectContaining({ text: 'じゃない', ord: 7 }));
+  });
+
   test('resolves competing direct parts in canonical source order', () => {
     const later = entry(1_590_770, [], [form('かわり', 0, '代わり', 20)]);
     const earlier = entry(1_510_720, [], [form('かわり', 0, '変わり', 10)]);

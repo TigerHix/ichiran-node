@@ -20,6 +20,25 @@ assets, and `stats.json` must
 also match the pinned SHA-256 checksum index from the immutable qualified
 release; a self-consistent local replacement cannot become a new baseline.
 
+A fresh clone acquires that comparison pack directly from the immutable GitHub
+release. The acquisition command pins the checksum-index identity, then verifies
+the manifest, hot pack, details pack and producer statistics named by that index:
+
+```sh
+bun scripts/acquire-qualified-source-compiler-baseline.ts work/m2-baseline
+```
+
+An existing directory is verified in place; it is never silently refreshed. A
+missing directory is staged, verified and renamed into place only after all five
+published files pass. This makes `work/m2-baseline` a reproducible cache rather
+than an undeclared prerequisite.
+
+The source lock assigns exactly one verified file to each of nine compiler roles:
+JMdict, Kanjidic2, extra entries, municipalities, wards, chronological errata,
+compatibility, `kwpos.csv`, and `conjo.csv`. Release code receives those verified
+paths directly. Missing, duplicate, ambiguous and unknown role assignments fail,
+and `stats.json` records the exact byte count and SHA-256 of every consumed file.
+
 Baseline mode also reads and validates
 `data/source-compiler-generated-order-attestation.json`. That compact input
 requires the exhaustive generated candidate universe to close with zero
@@ -79,6 +98,13 @@ sh scripts/source-compiler-release-no-postgres.sh --probe-only
 
 The command still requires all non-PostgreSQL build dependencies to have been
 installed before entering the network namespace.
+
+After building the isolated baseline, run the complete 1,241-operation
+chosen-authority corpus and the independent 301-operation fallback comparison as
+documented in `M6-PACKED-PARITY-AUDIT.md`. Every non-exact observation must have
+one concrete review row; the diagnostic report must retain an empty runtime
+allowlist. This corpus audit is separate from release generation, so PostgreSQL
+remains an oracle and never becomes a pack input.
 
 ## Genuine 2026-01-02 JMdict update
 

@@ -13,7 +13,7 @@ the query.
 | 2 | `surface-index.ts` | Union of direct root forms and generated morphology surfaces, PostgreSQL C order. | Canonical direct forms plus forward conjugation emissions, sorted by UTF-8 bytes. |
 | 3 | `root-payload-oracle.ts:42` | Root seq, form counts, primary-no-kanji, archived and prefer-kana flags. | `CanonicalEntry` plus final chronological mutations. |
 | 4 | `root-payload-oracle.ts:42` | Active root POS values. | Ordered sense properties after archived-sense filtering. |
-| 5 | `root-payload-oracle.ts:42` | Direct kanji/kana forms; `row_number` by `ctid DESC` becomes lookup precedence. | Canonical forms with explicit creation-event order; baseline CTID conflict is the M2 blocker. |
+| 5 | `root-payload-oracle.ts:42` | Direct kanji/kana forms; `row_number` by `ctid DESC` becomes lookup precedence. | Canonical forms with explicit creation-event order; the reviewed source-native ordering decision replaces CTID. |
 | 6 | `root-payload-oracle.ts:42` | Restricted reading/written pairs. | JMdict `re_restr` facts. |
 | 7 | `root-payload-oracle.ts:42` | Unordered legacy lookup followed by `unshift`, used to prove the direct order. | Oracle-only parity check. |
 | 8 | `details-oracle.ts:37` | Root entry sequence list. | Canonical roots ordered by seq. |
@@ -33,7 +33,7 @@ the query.
 | 22 | `analyzer-support-oracle.ts:571` | Direct forms required by split/hint annotations. | Canonical forms. |
 | 23 | `analyzer-support-oracle.ts:664` | Generated split locators. | Forward emission locators. |
 | 24 | `analyzer-generated-oracle.ts:64` | Primary/secondary paths, rule aliases, manual patches, physical target reuse, member/property/via ordinals and overlay facts. | One forward `ConjugationEmission` stream folded into a separate physical-target model. |
-| 25 | `analyzer-generated-oracle.ts:255` | Generated lookup classes ranked through `max(form.ctid)`. | Complete semantic class key and explicit creation-event precedence; remaining CTID baseline conflicts require a reviewed choice. |
+| 25 | `analyzer-generated-oracle.ts:255` | Generated lookup classes ranked through `max(form.ctid)`. | Complete semantic class key and explicit creation-event precedence, covered by the exhaustive generated-order attestation. |
 
 ## Indirect helper projections
 

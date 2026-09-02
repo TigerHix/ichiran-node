@@ -1,4 +1,3 @@
-import { readFile } from 'node:fs/promises';
 import type {
   CanonicalEntry,
   CanonicalForm,
@@ -7,33 +6,19 @@ import type {
   CanonicalSenseProperty,
   SensePropertyTag
 } from './model.js';
+import {
+  type QualifiedErrataLedger,
+  type QualifiedErrataRow
+} from './chronological-errata-ledger.js';
+export {
+  loadQualifiedErrata,
+  type QualifiedErrataLedger,
+  type QualifiedErrataRow
+} from './chronological-errata-ledger.js';
 
 const PROPERTY_TAGS = new Set<SensePropertyTag>([
   'pos', 'misc', 'dial', 'field', 's_inf', 'stagk', 'stagr'
 ]);
-
-type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue };
-
-export interface QualifiedErrataRow {
-  readonly event: number;
-  readonly phase: string;
-  readonly operation: string;
-  readonly arguments: readonly JsonValue[];
-  readonly sourceLine: number;
-  readonly preservedBehavior: string;
-}
-
-export interface QualifiedErrataLedger {
-  readonly formatVersion: 1;
-  readonly authority: {
-    readonly upstreamRepository: string;
-    readonly upstreamCommit: string;
-    readonly upstreamPath: string;
-    readonly upstreamSha256: string;
-    readonly migrationPortPath: string;
-  };
-  readonly rows: readonly QualifiedErrataRow[];
-}
 
 export interface AppliedErrata {
   readonly entries: readonly CanonicalEntry[];
@@ -45,6 +30,8 @@ export interface AppliedErrata {
     readonly preservedBehavior: string;
   }[];
   readonly conjugationRows: readonly QualifiedErrataRow[];
+  /** Stable identities for the 93 rows that were already satisfied or deferred. */
+  readonly noopRowIds: readonly string[];
   readonly counts: {
     readonly declared: number;
     readonly applied: number;
@@ -54,26 +41,27 @@ export interface AppliedErrata {
   readonly nextEvent: number;
 }
 
-function object(value: JsonValue | undefined): Record<string, JsonValue> {
-  return value !== null && typeof value === 'object' && !Array.isArray(value) ? value : {};
+function object(value: unknown): Record<string, unknown> {
+  return value !== null && typeof value === 'object' && !Array.isArray(value)
+    ? value as Record<string, unknown> : {};
 }
 
-function number(value: JsonValue | undefined, label: string): number {
+function number(value: unknown, label: string): number {
   if (typeof value !== 'number' || !Number.isSafeInteger(value)) throw new Error(`${label} must be an integer`);
   return value;
 }
 
-function string(value: JsonValue | undefined, label: string): string {
+function string(value: unknown, label: string): string {
   if (typeof value !== 'string') throw new Error(`${label} must be a string`);
   return value;
 }
 
-function boolean(value: JsonValue | undefined, label: string): boolean {
+function boolean(value: unknown, label: string): boolean {
   if (typeof value !== 'boolean') throw new Error(`${label} must be boolean`);
   return value;
 }
 
-function routeForTable(value: JsonValue | undefined): CanonicalRoute {
+function routeForTable(value: unknown): CanonicalRoute {
   if (value === 'kanji_text') return 'kanji';
   if (value === 'kana_text') return 'kana';
   throw new Error(`Unknown form table ${JSON.stringify(value)}`);
@@ -335,31 +323,26 @@ function applyDirectRow(entry: CanonicalEntry, row: QualifiedErrataRow, event: n
         ? { ...entry, primaryNoKanji: false }
         : null;
     }
-    default:
+    case 'addDehaJaReadings':
+    case 'addGozaimasuConjs':
+    case 'deleteConjugation':
+    case 'addConjReading':
       return null;
   }
 }
 
 const CONJUGATION_OPERATIONS = new Set([
   'conjugateDa', 'addDehaJaReadings', 'addGozaimasuConjs', 'deleteConjugation',
-  'addConjReading', 'addConj', 'rearrangeReadingsConj', 'replaceReadingConj'
+  'addConjReading', 'rearrangeReadingsConj', 'replaceReadingConj'
 ]);
 
 const NON_DIRECT_OPERATIONS = new Set([
-  'addDehaJaReadings', 'addGozaimasuConjs', 'deleteConjugation', 'addConjReading', 'addConj'
+  'addDehaJaReadings', 'addGozaimasuConjs', 'deleteConjugation', 'addConjReading'
 ]);
 
 function rowEntrySeq(row: QualifiedErrataRow): number {
   if (row.operation === 'conjugateDa') return 2_089_020;
   return number(row.arguments[row.operation === 'setCommon' ? 1 : 0], `${row.operation} entry`);
-}
-
-export async function loadQualifiedErrata(path: string): Promise<QualifiedErrataLedger> {
-  const parsed = JSON.parse(await readFile(path, 'utf8')) as QualifiedErrataLedger;
-  if (parsed.formatVersion !== 1 || !Array.isArray(parsed.rows)) {
-    throw new Error('Unsupported qualified errata ledger');
-  }
-  return parsed;
 }
 
 /** Apply the pinned chronological edit declarations directly to canonical entries. */
@@ -372,6 +355,7 @@ export function applyQualifiedErrata(
   for (const entry of input) entries.set(entry.seq, entry);
   const edits: AppliedErrata['edits'][number][] = [];
   const conjugationRows: QualifiedErrataRow[] = [];
+  const noopRowIds: string[] = [];
 
   for (const row of ledger.rows) {
     if (CONJUGATION_OPERATIONS.has(row.operation)) conjugationRows.push(row);
@@ -401,6 +385,7 @@ export function applyQualifiedErrata(
       sourceLine: row.sourceLine,
       preservedBehavior: row.preservedBehavior
     });
+    else noopRowIds.push(row.id);
   }
 
   let demotedRoots = 0;
@@ -413,6 +398,7 @@ export function applyQualifiedErrata(
     entries: [...entries.values()].sort((left, right) => left.seq - right.seq),
     edits,
     conjugationRows,
+    noopRowIds,
     counts: {
       declared: ledger.rows.length,
       applied: edits.length,

@@ -3,7 +3,10 @@ import {
   SECONDARY_CONJUGATION_TYPES_FROM
 } from '../data/conj-rules.js';
 import type { CanonicalEntry } from './model.js';
-import type { PhysicalTargetOrderCompatibilityRow } from './compatibility.js';
+import {
+  consumeCompatibilityRow,
+  type PhysicalTargetOrderCompatibilityRow
+} from './compatibility.js';
 import {
   conjugationEmissionKey,
   type ConjugationEmission,
@@ -205,6 +208,7 @@ class PhysicalTargetPool {
   readonly #targetIndex = new Map<string, number[]>();
   readonly #creatorBySeq = new Map<number, number>();
   readonly #targetOrderCompatibility: readonly PhysicalTargetOrderCompatibilityRow[];
+  readonly #targetOrderCompatibilityHits = new Set<string>();
   #nextSeq: number;
 
   constructor(
@@ -247,14 +251,18 @@ class PhysicalTargetPool {
       const candidate = this.#targetsBySeq.get(seq)!;
       if (!compatibleTarget(candidate, forms)) continue;
       const creatorSeq = this.#creatorBySeq.get(seq);
-      if (emission.stage === 'primary' && creatorSeq !== undefined
-        && this.#targetOrderCompatibility.some(row =>
+      const reviewedOrder = emission.stage === 'primary' && creatorSeq !== undefined
+        ? this.#targetOrderCompatibility.find(row =>
           row.seq === emission.rootSeq
           && row.competingCreatorSeq === creatorSeq
           && row.property.pos === emission.first.pos
           && row.property.type === emission.first.type
           && row.property.negative === emission.first.negative
-          && row.property.formal === emission.first.formal)) {
+          && row.property.formal === emission.first.formal)
+        : undefined;
+      if (reviewedOrder) {
+        this.#targetOrderCompatibilityHits.add(reviewedOrder.id);
+        consumeCompatibilityRow(reviewedOrder, 'physical-target-order');
         reviewedPredecessor ??= seq;
         continue;
       }
@@ -279,6 +287,11 @@ class PhysicalTargetPool {
   }
 
   finish(): readonly PhysicalTarget[] {
+    for (const row of this.#targetOrderCompatibility) {
+      if (!this.#targetOrderCompatibilityHits.has(row.id)) {
+        throw new Error(`Physical-target ordering compatibility ${row.id} is stale`);
+      }
+    }
     return this.#targets;
   }
 

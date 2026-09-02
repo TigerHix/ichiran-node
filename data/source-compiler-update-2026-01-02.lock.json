@@ -1,6 +1,5 @@
 {
   "formatVersion": 1,
-  "jmdictSourceId": "edrdg-jmdict-e-2026-01-02",
   "baseline": {
     "repository": "https://github.com/TigerHix/ichiran-node.git",
     "startingCommit": "effd10f1cd4cfd6780760c8130030d287df35ca9",
@@ -17,6 +16,7 @@
     {
       "id": "edrdg-jmdict-e-2026-01-02",
       "kind": "jmdict",
+      "role": "jmdict",
       "authoritativeUrl": "https://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz",
       "archiveRepository": "https://github.com/Jitendex/edrdg-dictionary-archive.git",
       "archiveCommit": "fbc4afb4c786b7f4c304c173a475553279bbb528",
@@ -36,6 +36,7 @@
     {
       "id": "edrdg-kanjidic2-2015-03-17",
       "kind": "kanjidic2",
+      "role": "kanjidic",
       "authoritativeUrl": "http://edrdg.org/kanjidic/kanjidic2.xml.gz",
       "historicalCaptureUrl": "https://web.archive.org/web/20150317225430id_/http://edrdg.org/kanjidic/kanjidic2.xml.gz",
       "upstreamIdentity": "file_version 4; database_version 2015-076; date_of_creation 2015-03-17",
@@ -51,6 +52,7 @@
     {
       "id": "ichiran-custom-extra-260118",
       "kind": "custom-entries",
+      "role": "extra",
       "authoritativeUrl": "https://github.com/tshatrov/ichiran/blob/ea9583368e67cad22d94abae8dbcc8df96d99bcd/data/sources/extra.xml",
       "pinnedPath": "data/sources/extra.xml",
       "pinnedBytes": 2134,
@@ -60,6 +62,7 @@
     {
       "id": "ichiran-custom-municipalities-260118",
       "kind": "custom-entries",
+      "roles": ["municipality", "ward"],
       "authoritativeUrl": "https://github.com/tshatrov/ichiran/tree/ea9583368e67cad22d94abae8dbcc8df96d99bcd/data/sources",
       "pinnedPaths": ["data/sources/jichitai.csv", "data/sources/gyoseiku.csv"],
       "pinnedBytes": [116379, 10266],
@@ -78,6 +81,7 @@
     {
       "id": "ichiran-chronological-errata-260118",
       "kind": "semantic-ledger",
+      "role": "chronologicalErrata",
       "pinnedPath": "data/source-compiler-errata.json",
       "pinnedBytes": 186000,
       "pinnedSha256": "7f78b244955c14e23afc5474b03c66554cfba189bf0383856afd8a00bd279f24",
@@ -89,11 +93,22 @@
     {
       "id": "ichiran-source-compatibility-260118",
       "kind": "compatibility-ledger",
+      "role": "compatibility",
       "pinnedPath": "data/source-compiler-compatibility.json",
-      "pinnedBytes": 24215,
-      "pinnedSha256": "c3a39f43432ad78c319e8ad3df808ba3617179b30e4e43ff5369fbe6435a1d34",
+      "pinnedBytes": 23683,
+      "pinnedSha256": "387982639a9a03ea7fb11feeef754b5aea59c673cec2757153f200ea071ee9bb",
       "rows": 25,
       "authority": "Each row carries its own upstream/source and qualified-oracle provenance plus preserved behavior."
+    },
+    {
+      "id": "ichiran-conjugation-rules-260118",
+      "kind": "conjugation-rules",
+      "roles": ["kwpos", "conjo"],
+      "authoritativeUrl": "https://github.com/tshatrov/ichiran/tree/ea9583368e67cad22d94abae8dbcc8df96d99bcd/data",
+      "pinnedPaths": ["data/kwpos.csv", "data/conjo.csv"],
+      "pinnedBytes": [3999, 34010],
+      "pinnedSha256": ["485b5ac5d8a23a8bcd18e69ca2fdf21d231fb740780a6c7d7ccf40d65ed831e4", "b2919a24ecc7f3cdf9b9478eb13526b76cb086c53000316ecb1781ff947c14f3"],
+      "license": "GPL-3.0-or-later"
     }
   ]
 }

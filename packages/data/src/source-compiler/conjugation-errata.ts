@@ -1,5 +1,8 @@
 import { createHash } from 'node:crypto';
-import { loadAllConjugationRules } from '../data/conj-rules.js';
+import {
+  loadAllConjugationRules,
+  type ConjugationRulePaths
+} from '../data/conj-rules.js';
 import type {
   MorphologyManualPatchSource,
   MorphologySource
@@ -65,6 +68,7 @@ export interface ChronologicalConjugationFold {
 
 export interface ChronologicalConjugationFoldOptions {
   readonly dataPath?: string;
+  readonly conjugationRules?: ConjugationRulePaths;
 }
 
 export interface ChronologicalMorphologySourceOptions extends ChronologicalConjugationFoldOptions {
@@ -345,7 +349,7 @@ export function foldChronologicalConjugationErrata(
   rows: readonly QualifiedErrataRow[],
   options: ChronologicalConjugationFoldOptions = {}
 ): ChronologicalConjugationFold {
-  loadAllConjugationRules(options.dataPath ?? 'data');
+  loadAllConjugationRules(options.conjugationRules ?? options.dataPath ?? 'data');
   const entries = new Map<number, CanonicalEntry>();
   for (const entry of input) {
     if (entries.has(entry.seq)) throw new RangeError(`Duplicate canonical root ${entry.seq}`);
@@ -474,7 +478,12 @@ export function chronologicalMorphologySource(
   rows: readonly QualifiedErrataRow[],
   options: ChronologicalMorphologySourceOptions = {}
 ): MorphologySource {
-  const fold = foldChronologicalConjugationErrata(entries, rows, { dataPath: options.dataPath });
+  const fold = foldChronologicalConjugationErrata(entries, rows, {
+    ...(options.dataPath === undefined ? {} : { dataPath: options.dataPath }),
+    ...(options.conjugationRules === undefined
+      ? {}
+      : { conjugationRules: options.conjugationRules })
+  });
   return canonicalMorphologySource(entries, options.extraPositions ?? [], fold.manualPatches);
 }
 

@@ -71,6 +71,43 @@ for the apparent 34 source non-raw fixture results versus 32 actual pack deltas.
 Romanization is 5/5 exact, info is 3/3 exact, and the pinned upstream regression
 set is 27/27 exact under both packs.
 
+## Complete oracle corpus
+
+The final gate also runs the complete oracle harness against the source-built
+pack. Its 1,241 chosen-authority operations comprise 940 current-Lisp snapshots
+and 301 operations whose frozen PostgreSQL result is the qualified authority.
+Those 301 operations are then compared a second time through the independent
+clean-semantic representation, for 1,542 total comparisons.
+
+After the compatibility-only `じゃない` split-ordinal repair, the chosen-authority
+result is 1,225 byte exact plus 16 individually reviewed source-order results;
+the clean-semantic fallback result is 296 exact plus five individually reviewed
+source-order results. There are no errors or unreviewed differences. The 21
+reviewed rows are diagnostic evidence only: the analyzer and release contain no
+request list, exception table, or runtime allowlist.
+
+The full report binds the tested release to its source-compiler lock while the
+reference side remains bound independently to the frozen browser-alpha oracle
+lock. Reproduce it with:
+
+```sh
+bun packages/core/tools/oracle-parity.ts \
+  --repository "$PWD" \
+  --release work/m6-source-release-final \
+  --database "$ICHIRAN_DB_URL" \
+  --source-compiler-pack \
+  --allow-failures \
+  --out work/m6-evidence/source-pack-oracle-parity-full.json \
+  --samples 1241
+```
+
+`--allow-failures` makes this one diagnostic run finish and retain every concrete
+difference; it does not accept those differences anywhere else. Qualification
+requires the retained review to account for every non-exact row and to report an
+empty runtime allowlist. Running the same command without that flag is expected
+to exit nonzero because the approved source-order rows remain intentionally
+observable.
+
 ## Canonical equal-score ordering rows
 
 For every row below the raw packed outputs differ, but

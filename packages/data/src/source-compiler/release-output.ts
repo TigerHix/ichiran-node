@@ -53,6 +53,7 @@ import type { CanonicalEntry } from './model.js';
 import type { BoundedAnalyzerSupportSummary } from './analyzer-support-stream.js';
 import type { GeneratedProjectionSpoolSummary } from './generated-projection-spool.js';
 import type { PhysicalTarget } from './conjugation-emissions-physical.js';
+import type { ConjugationRulePaths } from '../data/conj-rules.js';
 
 const ROOT_ORDER_ATTESTATION_SHA256 = '12ca177bf7765e4337f3c1cc4d836a7bcfc84b3f60b08e07d6eb238ad72dc4cf';
 const GENERATED_ORDER_ATTESTATION_SHA256 =
@@ -81,7 +82,7 @@ export interface SourceReleaseOutputInput {
   readonly support: AnalyzerSupportSource;
   readonly occurrencesPath: string;
   readonly physicalTargets: readonly PhysicalTarget[];
-  readonly dataPath: string;
+  readonly conjugationRules: ConjugationRulePaths;
   readonly surfaceChunkRows?: number;
   readonly projectionSummary: SourceReleaseProjectionSummary;
   readonly sourceSummary: SourceReleaseSemanticSummary;
@@ -93,8 +94,15 @@ export interface SourceReleaseSemanticSummary {
   readonly canonicalEntries: number;
   readonly jmdictEntries: number;
   readonly customCreatedRoots: number;
-  readonly errataRows: number;
+  readonly chronologicalErrataRows: number;
+  readonly conjugationErrataRows: number;
+  readonly errataNoopRowIds: readonly string[];
   readonly compatibilityRows: number;
+  readonly compatibilityUsage: readonly {
+    readonly id: string;
+    readonly kind: string;
+    readonly phase: string;
+  }[];
 }
 
 export interface SourceReleaseProjectionSummary {
@@ -301,13 +309,13 @@ export async function writeSourceCompilerRelease(
     entries: input.entries,
     morphology: input.morphology,
     support: input.support,
-    dataPath: input.dataPath
+    conjugationRules: input.conjugationRules
   });
   const rebuiltSections = buildSourceCompilerBinarySections({
     entries: input.entries,
     morphology: input.morphology,
     support: input.support,
-    dataPath: input.dataPath
+    conjugationRules: input.conjugationRules
   });
   assertBytesEqual(sections.root.bytes, rebuiltSections.root.bytes, 'Root payload');
   assertBytesEqual(sections.details.bytes, rebuiltSections.details.bytes, 'Details');

@@ -10,6 +10,7 @@ import { buildMorphology } from '../packages/data/src/browser-pack/morphology-co
 import { compileBoundedSourceNativeAnalyzerSupport } from '../packages/data/src/source-compiler/analyzer-support-stream.js';
 import { compileCanonicalRoots } from '../packages/data/src/source-compiler/canonical-roots.js';
 import {
+  assertSourceCompatibilityConsumed,
   conjugationPositionCompatibility,
   conjugationReadingLineageCompatibility,
   kanjidicCompatibility,
@@ -114,34 +115,36 @@ const sourceCommit = await gitOutput(repository, ['rev-parse', 'HEAD']);
 if (!/^[0-9a-f]{40}$/.test(sourceCommit)) throw new Error('Git returned an invalid source commit');
 
 const lock = await verifySourceCompilerLock(repository, options.sourceLock);
-assertSourceCompilerReleaseMode(options.mode, lock.jmdict);
-const jmdictRelative = lock.jmdict.path;
-const jmdictSourceId = lock.jmdict.id;
-const jmdict = repositoryPath(repository, jmdictRelative, 'JMdict path');
+assertSourceCompilerReleaseMode(options.mode, lock.inputs.jmdict);
+const jmdictRelative = lock.inputs.jmdict.path;
+const jmdictSourceId = lock.inputs.jmdict.id;
+const conjugationRules = {
+  kwpos: lock.inputs.kwpos.absolutePath,
+  conjo: lock.inputs.conjo.absolutePath
+};
 
 const data = join(repository, 'data');
 const roots = await compileCanonicalRoots({
-  jmdict,
+  jmdict: lock.inputs.jmdict.absolutePath,
   jmdictSourceId,
-  extra: join(data, 'sources/extra.xml'),
-  municipality: join(data, 'sources/jichitai.csv'),
-  ward: join(data, 'sources/gyoseiku.csv'),
-  errata: join(data, 'source-compiler-errata.json'),
-  compatibility: join(data, 'source-compiler-compatibility.json')
+  extra: lock.inputs.extra.absolutePath,
+  municipality: lock.inputs.municipality.absolutePath,
+  ward: lock.inputs.ward.absolutePath,
+  errata: lock.inputs.chronologicalErrata.absolutePath,
+  compatibility: lock.inputs.compatibility.absolutePath
 });
 const fold = foldChronologicalConjugationErrata(
   roots.entries,
   roots.errata.conjugationRows,
-  { dataPath: data }
+  { conjugationRules }
 );
-const extraPositions = conjugationPositionCompatibility(roots.compatibility)
-  .map(value => ({ seq: value.seq, pos: value.pos }));
+const extraPositions = conjugationPositionCompatibility(roots.compatibility);
 const morphologySource = chronologicalMorphologySource(
   roots.entries,
   roots.errata.conjugationRows,
-  { dataPath: data, extraPositions }
+  { conjugationRules, extraPositions }
 );
-const morphology = buildMorphology(morphologySource, { dataPath: data }).artifact;
+const morphology = buildMorphology(morphologySource, { conjugationRules }).artifact;
 const da = roots.errata.conjugationRows.find(value => value.operation === 'conjugateDa');
 if (!da) throw new Error('Chronological errata has no conjugateDa declaration');
 const firstGeneratedSeq = roots.entries.reduce(
@@ -150,7 +153,7 @@ const firstGeneratedSeq = roots.entries.reduce(
 ) + 1;
 const customRootSeqs = new Set(roots.custom.createdRoots.map(entry => entry.seq));
 const kanjidicReadings = await loadKanjidicHintReadings(
-  join(repository, 'packages/data/kanjidic2.xml.gz'),
+  lock.inputs.kanjidic.absolutePath,
   kanjidicCompatibility(roots.compatibility)
 );
 const temporaryDirectory = await mkdtemp(join(RELEASE_TEMP_ROOT, 'ichiran-source-release-'));
@@ -183,6 +186,7 @@ try {
     customRootSeqs,
     firstErrataEvent: roots.custom.nextEvent
   });
+  const compatibilityUsage = assertSourceCompatibilityConsumed(roots.compatibility);
   const release = await writeSourceCompilerRelease({
     repository,
     output: repositoryPath(repository, options.output, 'Release output'),
@@ -205,7 +209,7 @@ try {
     support: bounded.support,
     occurrencesPath: projection.occurrencesPath,
     physicalTargets: projection.targets,
-    dataPath: data,
+    conjugationRules,
     ...(options.surfaceChunkRows === undefined ? {} : {
       surfaceChunkRows: options.surfaceChunkRows
     }),
@@ -215,8 +219,11 @@ try {
       canonicalEntries: roots.entries.length,
       jmdictEntries: roots.jmdictEntries,
       customCreatedRoots: roots.custom.createdRoots.length,
-      errataRows: roots.errata.conjugationRows.length,
-      compatibilityRows: roots.compatibility.rows.length
+      chronologicalErrataRows: roots.errata.counts.declared,
+      conjugationErrataRows: roots.errata.conjugationRows.length,
+      errataNoopRowIds: roots.errata.noopRowIds,
+      compatibilityRows: roots.compatibility.rows.length,
+      compatibilityUsage
     },
     projectionSummary: {
       spool: projection.spool,

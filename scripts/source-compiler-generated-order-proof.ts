@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { mkdir, writeFile } from 'node:fs/promises';
-import { join, resolve } from 'node:path';
+import { resolve } from 'node:path';
 import { gunzipSync } from 'node:zlib';
 import { openMorphology, MORPHOLOGY_SECTION_ID } from '../packages/core/src/morphology.js';
 import { openPack } from '../packages/core/src/pack.js';
@@ -16,6 +16,7 @@ import {
   directGeneratedLookupClassPrecedence,
   generatedLookupClassKey
 } from '../packages/data/src/source-compiler/generated-projection-stream.js';
+import { verifySourceCompilerLock } from '../packages/data/src/source-compiler/source-lock.js';
 import { decodeQualifiedGenerated } from './source-compiler-generated-order-baseline.js';
 
 type Route = 'kana' | 'kanji';
@@ -109,25 +110,29 @@ const differencesPath = resolve(differencesArg);
 await mkdir(temporaryDirectory, { recursive: true });
 
 const repository = resolve(import.meta.dir, '..');
-const data = join(repository, 'data');
+const sourceLock = await verifySourceCompilerLock(repository);
+const conjugationRules = {
+  kwpos: sourceLock.inputs.kwpos.absolutePath,
+  conjo: sourceLock.inputs.conjo.absolutePath
+};
 const roots = await compileCanonicalRoots({
-  jmdict: join(repository, 'packages/data/JMdict_e.gz'),
-  extra: join(data, 'sources/extra.xml'),
-  municipality: join(data, 'sources/jichitai.csv'),
-  ward: join(data, 'sources/gyoseiku.csv'),
-  errata: join(data, 'source-compiler-errata.json'),
-  compatibility: join(data, 'source-compiler-compatibility.json')
+  jmdict: sourceLock.inputs.jmdict.absolutePath,
+  jmdictSourceId: sourceLock.inputs.jmdict.id,
+  extra: sourceLock.inputs.extra.absolutePath,
+  municipality: sourceLock.inputs.municipality.absolutePath,
+  ward: sourceLock.inputs.ward.absolutePath,
+  errata: sourceLock.inputs.chronologicalErrata.absolutePath,
+  compatibility: sourceLock.inputs.compatibility.absolutePath
 });
 const morphologySource = chronologicalMorphologySource(
   roots.entries,
   roots.errata.conjugationRows,
   {
-    dataPath: data,
+    conjugationRules,
     extraPositions: conjugationPositionCompatibility(roots.compatibility)
-      .map(value => ({ seq: value.seq, pos: value.pos }))
   }
 );
-const morphology = buildMorphology(morphologySource, { dataPath: data }).artifact;
+const morphology = buildMorphology(morphologySource, { conjugationRules }).artifact;
 const packed = openPack(gunzipSync(readFileSync(hotPath)));
 const packedMorphology = openMorphology(packed.getSection(MORPHOLOGY_SECTION_ID));
 const customRootSeqs = new Set(roots.custom.createdRoots.map(entry => entry.seq));

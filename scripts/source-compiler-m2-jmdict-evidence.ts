@@ -8,7 +8,10 @@ import {
   parseJmdictEntry
 } from '../packages/data/src/source-compiler/jmdict.js';
 
-const [sourcePath = 'packages/data/JMdict_e.gz'] = process.argv.slice(2);
+const [sourcePath] = process.argv.slice(2);
+if (!sourcePath) {
+  throw new Error('Usage: bun scripts/source-compiler-m2-jmdict-evidence.ts <verified-jmdict-file>');
+}
 const sourceId = 'edrdg-jmdict-e-2026-01-01';
 const sourceDigests = new Map<number, string>();
 

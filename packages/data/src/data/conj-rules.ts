@@ -28,6 +28,11 @@ export interface ConjugationRule {
   euphk: string;      // Euphonic change for kanji
 }
 
+export interface ConjugationRulePaths {
+  readonly kwpos: string;
+  readonly conjo: string;
+}
+
 /**
  * Part of speech data (id -> pos code)
  */
@@ -66,8 +71,13 @@ export const SECONDARY_CONJUGATION_TYPES = [2, 3, 4, 9, 10, 11, 12, 13];
  * Loads kwpos.csv (part of speech definitions)
  * Ported from dict-load.lisp:241-243 load-pos-index
  */
-function loadPosIndex(dataPath: string): void {
-  const csvPath = path.join(dataPath, 'kwpos.csv');
+function rulePaths(input: string | ConjugationRulePaths): ConjugationRulePaths {
+  return typeof input === 'string'
+    ? { kwpos: path.join(input, 'kwpos.csv'), conjo: path.join(input, 'conjo.csv') }
+    : input;
+}
+
+function loadPosIndex(csvPath: string): void {
   const content = fs.readFileSync(csvPath, 'utf-8');
 
   const records = parse(content, {
@@ -91,8 +101,7 @@ function loadPosIndex(dataPath: string): void {
  * Loads conjo.csv (conjugation transformation rules)
  * Ported from dict-load.lisp:270-283 load-conj-rules
  */
-function loadConjRules(dataPath: string): void {
-  const csvPath = path.join(dataPath, 'conjo.csv');
+function loadConjRules(csvPath: string): void {
   const content = fs.readFileSync(csvPath, 'utf-8');
 
   const records = parse(content, {
@@ -236,9 +245,12 @@ let rulesLoaded = false;
 /**
  * Loads all conjugation CSV files
  */
-export function loadAllConjugationRules(dataPath: string = './data'): void {
-  loadPosIndex(dataPath);
-  loadConjRules(dataPath);
+export function loadAllConjugationRules(
+  input: string | ConjugationRulePaths = './data'
+): void {
+  const paths = rulePaths(input);
+  loadPosIndex(paths.kwpos);
+  loadConjRules(paths.conjo);
   rulesLoaded = true;
 }
 

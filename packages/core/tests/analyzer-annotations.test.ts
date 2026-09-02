@@ -239,6 +239,15 @@ describe('seekable analyzer annotations', () => {
     })).toThrow('locator count');
   });
 
+  test('rejects an invalid split-part ordinal while building the pack', () => {
+    const firstPart = splits[0]!.parts[0]!;
+    if (typeof firstPart === 'string') throw new Error('Fixture part must be structured');
+    expect(() => buildAnalyzerAnnotations([{
+      ...splits[0]!,
+      parts: [{ ...firstPart, ord: -1 }]
+    }], [], generated)).toThrow('Split-part ordinal');
+  });
+
   test('batch-preloads dependencies recorded by a discarded analyzer pass', async () => {
     const dependencies = new AnalyzerAnnotationDependencyCollector();
     expect(dependencies.split(123, 'kanji', '例')).toBeNull();

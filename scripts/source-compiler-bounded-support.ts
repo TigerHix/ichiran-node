@@ -8,6 +8,7 @@ import {
 } from '../packages/data/src/source-compiler/analyzer-support-stream.js';
 import { compileCanonicalRoots } from '../packages/data/src/source-compiler/canonical-roots.js';
 import {
+  assertSourceCompatibilityConsumed,
   conjugationPositionCompatibility,
   conjugationReadingLineageCompatibility,
   kanjidicCompatibility,
@@ -25,6 +26,7 @@ import {
 } from '../packages/data/src/source-compiler/generated-projection-stream.js';
 import { loadKanjidicHintReadings } from '../packages/data/src/source-compiler/kanjidic-hints.js';
 import { writeBoundedSurfaceIndexTsv } from '../packages/data/src/source-compiler/surface-index-spool.js';
+import { verifySourceCompilerLock } from '../packages/data/src/source-compiler/source-lock.js';
 
 function argumentsOf(argv: readonly string[]): { readonly out: string; readonly work: string } {
   if (argv.length !== 4 || argv[0] !== '--out' || argv[2] !== '--work') {
@@ -35,29 +37,33 @@ function argumentsOf(argv: readonly string[]): { readonly out: string; readonly 
 
 const options = argumentsOf(process.argv.slice(2));
 const repository = resolve(import.meta.dir, '..');
-const data = join(repository, 'data');
+const sourceLock = await verifySourceCompilerLock(repository);
+const conjugationRules = {
+  kwpos: sourceLock.inputs.kwpos.absolutePath,
+  conjo: sourceLock.inputs.conjo.absolutePath
+};
 await mkdir(options.work);
 const roots = await compileCanonicalRoots({
-  jmdict: join(repository, 'packages/data/JMdict_e.gz'),
-  extra: join(data, 'sources/extra.xml'),
-  municipality: join(data, 'sources/jichitai.csv'),
-  ward: join(data, 'sources/gyoseiku.csv'),
-  errata: join(data, 'source-compiler-errata.json'),
-  compatibility: join(data, 'source-compiler-compatibility.json')
+  jmdict: sourceLock.inputs.jmdict.absolutePath,
+  jmdictSourceId: sourceLock.inputs.jmdict.id,
+  extra: sourceLock.inputs.extra.absolutePath,
+  municipality: sourceLock.inputs.municipality.absolutePath,
+  ward: sourceLock.inputs.ward.absolutePath,
+  errata: sourceLock.inputs.chronologicalErrata.absolutePath,
+  compatibility: sourceLock.inputs.compatibility.absolutePath
 });
 const fold = foldChronologicalConjugationErrata(
-  roots.entries, roots.errata.conjugationRows, { dataPath: data }
+  roots.entries, roots.errata.conjugationRows, { conjugationRules }
 );
 const morphologySource = chronologicalMorphologySource(
   roots.entries,
   roots.errata.conjugationRows,
   {
-    dataPath: data,
+    conjugationRules,
     extraPositions: conjugationPositionCompatibility(roots.compatibility)
-      .map(value => ({ seq: value.seq, pos: value.pos }))
   }
 );
-const morphology = buildMorphology(morphologySource, { dataPath: data }).artifact;
+const morphology = buildMorphology(morphologySource, { conjugationRules }).artifact;
 const da = roots.errata.conjugationRows.find(value => value.operation === 'conjugateDa');
 if (!da) throw new Error('Chronological errata has no conjugateDa declaration');
 const customRootSeqs = new Set(roots.custom.createdRoots.map(entry => entry.seq));
@@ -86,7 +92,7 @@ const compiled = compileBoundedSourceNativeAnalyzerSupport({
   morphology,
   temporaryDirectory: options.work,
   kanjidicReadings: await loadKanjidicHintReadings(
-    join(repository, 'packages/data/kanjidic2.xml.gz'),
+    sourceLock.inputs.kanjidic.absolutePath,
     kanjidicCompatibility(roots.compatibility)
   ),
   customRootSeqs,
@@ -99,11 +105,13 @@ const surface = await writeBoundedSurfaceIndexTsv({
   temporaryDirectory: options.work,
   destination: join(options.work, 'surface.tsv')
 });
+const compatibilityUsage = assertSourceCompatibilityConsumed(roots.compatibility);
 const generated = compiled.support.generated!;
 const report = {
   formatVersion: 1,
   postgresUnavailable: true,
   canonicalEntries: roots.entries.length,
+  compatibilityUsage,
   morphology: {
     positions: morphology.positions.length,
     rules: morphology.rules.length,

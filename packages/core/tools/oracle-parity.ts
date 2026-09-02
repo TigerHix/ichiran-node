@@ -18,11 +18,14 @@ import {
   verifyBrowserAlphaDatabase
 } from '../../data/src/browser-pack/database-identity.js';
 import {
+  BROWSER_ALPHA_SOURCES_LOCK,
+  parseBrowserAlphaSourceLock,
   sha256Bytes,
   verifyBrowserAlphaOracleCore,
   verifyBrowserAlphaSources,
   type BrowserAlphaSourceLock
 } from '../../data/src/browser-pack/release-orchestration.js';
+import { verifySourceCompilerLock } from '../../data/src/source-compiler/source-lock.js';
 import {
   parseAnalyzerReleaseManifest,
   type AnalyzerReleaseAsset,
@@ -81,6 +84,7 @@ interface Options {
   readonly out: string | null;
   readonly smoke: boolean;
   readonly allowFailures: boolean;
+  readonly sourceCompilerPack: boolean;
   readonly samples: number;
 }
 
@@ -199,13 +203,18 @@ function usage(message?: string): never {
   if (message) console.error(`error: ${message}\n`);
   console.error(`usage: bun packages/core/tools/oracle-parity.ts \\
   --release <directory> --database <url> [--repository <directory>] \\
-  [--out <report.json>] [--smoke] [--allow-failures] [--samples <count>]
+  [--out <report.json>] [--source-compiler-pack] [--smoke] \\
+  [--allow-failures] [--samples <count>]
 
 Without --smoke this always runs all 534 segmentation, 252 CLI, 149 hard,
 200 counter, 54 entity, deterministic analyzer probes, and 5 standalone
 romanization fixtures. Without
 --allow-failures, any divergence
-exits non-zero so the command is suitable as the exact release gate.`);
+exits non-zero so the command is suitable as the exact release gate.
+
+--source-compiler-pack verifies the release against the source-compiler lock,
+while the immutable browser-alpha lock continues to identify the frozen
+PostgreSQL and reference-core oracle.`);
   process.exit(2);
 }
 
@@ -221,6 +230,7 @@ function parseArgs(argv: readonly string[]): Options {
   let out: string | null = null;
   let smoke = false;
   let allowFailures = false;
+  let sourceCompilerPack = false;
   let samples = 30;
   for (let index = 0; index < argv.length; index++) {
     const argument = argv[index]!;
@@ -235,6 +245,7 @@ function parseArgs(argv: readonly string[]): Options {
     else if (argument === '--out') out = next();
     else if (argument === '--smoke') smoke = true;
     else if (argument === '--allow-failures') allowFailures = true;
+    else if (argument === '--source-compiler-pack') sourceCompilerPack = true;
     else if (argument === '--samples') samples = positiveInteger(next(), '--samples');
     else if (argument === '--help' || argument === '-h') usage();
     else usage(`unknown argument ${argument}`);
@@ -248,6 +259,7 @@ function parseArgs(argv: readonly string[]): Options {
     out: out ? resolve(out) : null,
     smoke,
     allowFailures,
+    sourceCompilerPack,
     samples
   };
 }
@@ -1288,20 +1300,42 @@ function corpusAccounting(corpus: AnalyzerParityCorpus): Record<string, unknown>
 
 async function main(): Promise<void> {
   const options = parseArgs(process.argv.slice(2));
-  const source = await verifyBrowserAlphaSources(options.repository);
+  const source = options.sourceCompilerPack
+    ? await (async () => {
+      const oracleLockBytes = new Uint8Array(await readFile(
+        resolve(options.repository, BROWSER_ALPHA_SOURCES_LOCK)
+      ));
+      const oracleLock = parseBrowserAlphaSourceLock(new TextDecoder().decode(oracleLockBytes));
+      const compilerLock = await verifySourceCompilerLock(options.repository);
+      return {
+        oracleLock,
+        oracleLockSha256: sha256Bytes(oracleLockBytes),
+        releaseLockSha256: compilerLock.sha256,
+        releaseLockKind: 'source-compiler' as const
+      };
+    })()
+    : await (async () => {
+      const verified = await verifyBrowserAlphaSources(options.repository);
+      return {
+        oracleLock: verified.lock,
+        oracleLockSha256: verified.lockSha256,
+        releaseLockSha256: verified.lockSha256,
+        releaseLockKind: 'browser-alpha' as const
+      };
+    })();
   await verifyBrowserAlphaOracleCore(
     options.repository,
-    source.lock.postgresReference.repositoryCommit
+    source.oracleLock.postgresReference.repositoryCommit
   );
   const head = await repositoryHead(options.repository);
   const [corpus, runtime] = await Promise.all([
     loadAnalyzerParityCorpus(options.repository),
     openRuntime(options.release, {
       sourceCommit: head,
-      sourcesLockSha256: source.lockSha256
+      sourcesLockSha256: source.releaseLockSha256
     })
   ]);
-  const reference = await openReference(options.database, source.lock.database);
+  const reference = await openReference(options.database, source.oracleLock.database);
   const samples: FailureSample[] = [];
   try {
     await reference.withOracle(async () => {
@@ -1361,6 +1395,15 @@ async function main(): Promise<void> {
       formatVersion: 3,
       generatedAt: new Date().toISOString(),
       completeCorpus: !options.smoke,
+      releaseInputLock: {
+        kind: source.releaseLockKind,
+        sha256: source.releaseLockSha256
+      },
+      frozenOracleLock: {
+        sha256: source.oracleLockSha256,
+        database: source.oracleLock.database.name,
+        upstreamIchiranCommit: source.oracleLock.upstreamIchiran.commit
+      },
       corpus: {
         segmentation: corpus.segmentation.length,
         romanization: corpus.romanization.length,

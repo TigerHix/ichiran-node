@@ -9,6 +9,11 @@ import { createWriteStream } from 'fs';
 import { pipeline } from 'stream/promises';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { parseSourceCompilerLock, sourceCompilerInputPaths } from '../source-compiler/source-lock.js';
+
+const MODULE_DIRECTORY = dirname(fileURLToPath(import.meta.url));
+const REPOSITORY = path.resolve(MODULE_DIRECTORY, '../../../..');
+const LIVE_DATA_DIRECTORY = path.join(REPOSITORY, 'work/live-data');
 
 const DATA_SOURCES = {
   jmdict: {
@@ -32,22 +37,56 @@ export type DataSource = keyof typeof DATA_SOURCES;
 export function getDataDir(customPath?: string): string {
   if (customPath) return customPath;
   if (process.env.ICHIRAN_DATA_DIR) return process.env.ICHIRAN_DATA_DIR;
-  
-  // Get the directory of this source file
-  const __filename = fileURLToPath(import.meta.url);
-  const __dirname = dirname(__filename);
-  
-  // Navigate from dist/data/ or src/data/ to package root, then to data/
-  // Assumes structure: packages/data/[src|dist]/data/download.js
-  return path.join(__dirname, '../../../data');
+  return LIVE_DATA_DIRECTORY;
 }
 
 /**
  * Get the full path for a data file
  */
-export function getDataPath(source: DataSource): string {
-  const dataDir = getDataDir();
+export function getDataPath(source: DataSource, customPath?: string): string {
+  const dataDir = getDataDir(customPath);
   return path.join(dataDir, DATA_SOURCES[source].filename);
+}
+
+function sourceLockPaths(explicit: readonly string[] | undefined): string[] {
+  const data = path.join(REPOSITORY, 'data');
+  const discovered = fs.existsSync(data)
+    ? fs.readdirSync(data)
+      .filter(name => /^source-compiler.*\.lock\.json$/.test(name))
+      .map(name => path.join(data, name))
+    : [];
+  for (const value of explicit ?? []) discovered.push(path.resolve(REPOSITORY, value));
+  const configured = process.env.ICHIRAN_SOURCE_COMPILER_LOCK;
+  if (configured) discovered.push(path.resolve(REPOSITORY, configured));
+  return [...new Set(discovered)];
+}
+
+function assertNotPinnedCompilerInput(
+  destination: string,
+  explicitSourceLocks: readonly string[] | undefined
+): void {
+  const resolvedDestination = path.resolve(destination);
+  const destinationStat = fs.existsSync(resolvedDestination)
+    ? fs.statSync(resolvedDestination)
+    : null;
+  for (const lockPath of sourceLockPaths(explicitSourceLocks)) {
+    const lock = parseSourceCompilerLock(JSON.parse(fs.readFileSync(lockPath, 'utf8')));
+    for (const input of sourceCompilerInputPaths(lock)) {
+      const pinnedPath = path.resolve(REPOSITORY, input);
+      const pinnedStat = fs.existsSync(pinnedPath) ? fs.statSync(pinnedPath) : null;
+      if (resolvedDestination === pinnedPath
+        || (destinationStat !== null && pinnedStat !== null
+          && fs.realpathSync(resolvedDestination) === fs.realpathSync(pinnedPath))
+        || (destinationStat !== null && pinnedStat !== null
+          && destinationStat.dev === pinnedStat.dev
+          && destinationStat.ino === pinnedStat.ino)) {
+        throw new Error(
+          `Refusing to overwrite pinned source-compiler input ${input}; `
+          + 'legacy downloads belong in work/live-data or another unpinned destination'
+        );
+      }
+    }
+  }
 }
 
 /**
@@ -66,11 +105,15 @@ export async function downloadDataFile(
   options: {
     force?: boolean;
     silent?: boolean;
+    destinationDirectory?: string;
+    sourceLockPaths?: readonly string[];
   } = {}
 ): Promise<string> {
   const { force = false, silent = false } = options;
   const sourceInfo = DATA_SOURCES[source];
-  const filePath = getDataPath(source);
+  const dataDir = getDataDir(options.destinationDirectory);
+  const filePath = getDataPath(source, dataDir);
+  assertNotPinnedCompilerInput(filePath, options.sourceLockPaths);
 
   // Check if file already exists
   if (!force && fs.existsSync(filePath)) {
@@ -81,7 +124,6 @@ export async function downloadDataFile(
   }
 
   // Ensure data directory exists
-  const dataDir = getDataDir();
   if (!fs.existsSync(dataDir)) {
     fs.mkdirSync(dataDir, { recursive: true });
   }

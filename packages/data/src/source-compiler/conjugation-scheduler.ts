@@ -12,6 +12,7 @@ import {
   type EmissionForm
 } from './conjugation-emissions.js';
 import {
+  consumeCompatibilityRow,
   omitsConjugationReadingLineage,
   type ConjugationReadingLineageCompatibilityRow
 } from './compatibility.js';
@@ -200,16 +201,22 @@ function markLateSecondarySources(
 function filterEmission(
   emission: ConjugationEmission,
   values: readonly Filter[],
-  lineageCompatibility: readonly ConjugationReadingLineageCompatibilityRow[]
+  lineageCompatibility: readonly ConjugationReadingLineageCompatibilityRow[],
+  lineageCompatibilityHits: Set<string>
 ): ConjugationEmission | null {
-  const omittedLineage = (form: EmissionForm): boolean => lineageCompatibility.some(row =>
-    omitsConjugationReadingLineage(row, {
+  const omittedLineage = (form: EmissionForm): boolean => {
+    const row = lineageCompatibility.find(value => omitsConjugationReadingLineage(value, {
       rootSeq: emission.rootSeq,
       route: form.route,
       sourceText: form.sourceText,
       firstRule: form.firstRule,
       secondRule: form.secondRule
     }));
+    if (!row) return false;
+    lineageCompatibilityHits.add(row.id);
+    consumeCompatibilityRow(row, 'conjugation-reading-lineage');
+    return true;
+  };
   const physicalForms = emission.physicalForms.filter(form => !omittedLineage(form));
   if (physicalForms.length === 0) return null;
   const forms = emission.forms.filter(form =>
@@ -273,7 +280,8 @@ export function iterateScheduledConjugations(
     entries: readonly CanonicalEntry[],
     selections: ReadonlyMap<number, ConfiguredConjugationSelection>,
     phase: ConjugationPhase,
-    secondary: boolean
+    secondary: boolean,
+    lineageCompatibilityHits: Set<string>
   ): Generator<Omit<StreamedScheduledEmission, 'ordinal'>> {
     let phaseOrder = 0;
     for (const entry of entries) {
@@ -283,13 +291,23 @@ export function iterateScheduledConjugations(
         positions: selection.positions,
         sourcesByPosition: selection.sourcesByPosition
       }).map(emission => markLateSecondarySources(emission, input.firstErrataEvent))
-        .map(emission => filterEmission(emission, selectedFilters, input.lineageCompatibility))
+        .map(emission => filterEmission(
+          emission,
+          selectedFilters,
+          input.lineageCompatibility,
+          lineageCompatibilityHits
+        ))
         .filter((emission): emission is ConjugationEmission => emission !== null);
       const values = secondary
         ? primary.flatMap(emission => emitSecondaryConjugations(emission, {
           enforceSurfaceRoute: true
         }))
-          .map(emission => filterEmission(emission, selectedFilters, input.lineageCompatibility))
+          .map(emission => filterEmission(
+            emission,
+            selectedFilters,
+            input.lineageCompatibility,
+            lineageCompatibilityHits
+          ))
           .filter((emission): emission is ConjugationEmission => emission !== null)
         : primary;
       for (const emission of values) {
@@ -307,11 +325,20 @@ export function iterateScheduledConjugations(
   return {
     *[Symbol.iterator](): Iterator<StreamedScheduledEmission> {
       let ordinal = 0;
+      const lineageCompatibilityHits = new Set<string>();
       const groups = [
-        phaseRows(baseEntries, baseSelections, CONJUGATION_PHASE.basePrimary, false),
-        phaseRows(baseEntries, baseSelections, CONJUGATION_PHASE.baseSecondary, true),
-        phaseRows(customEntries, customSelections, CONJUGATION_PHASE.customPrimary, false),
-        phaseRows(customEntries, customSelections, CONJUGATION_PHASE.customSecondary, true)
+        phaseRows(
+          baseEntries, baseSelections, CONJUGATION_PHASE.basePrimary, false, lineageCompatibilityHits
+        ),
+        phaseRows(
+          baseEntries, baseSelections, CONJUGATION_PHASE.baseSecondary, true, lineageCompatibilityHits
+        ),
+        phaseRows(
+          customEntries, customSelections, CONJUGATION_PHASE.customPrimary, false, lineageCompatibilityHits
+        ),
+        phaseRows(
+          customEntries, customSelections, CONJUGATION_PHASE.customSecondary, true, lineageCompatibilityHits
+        )
       ];
       for (const group of groups) {
         for (const row of group) yield { ordinal: ordinal++, ...row };
@@ -331,7 +358,12 @@ export function iterateScheduledConjugations(
             positionSources(source, position.rootSeq, position.pos)
           ]])
         })) {
-          const emission = filterEmission(raw, selectedFilters, input.lineageCompatibility);
+          const emission = filterEmission(
+            raw,
+            selectedFilters,
+            input.lineageCompatibility,
+            lineageCompatibilityHits
+          );
           if (!emission) continue;
           yield {
             ordinal: ordinal++,
@@ -341,6 +373,11 @@ export function iterateScheduledConjugations(
             secondAlias: emission.second === null ? null : alias(emission.second),
             emission
           };
+        }
+      }
+      for (const row of input.lineageCompatibility) {
+        if (!lineageCompatibilityHits.has(row.id)) {
+          throw new Error(`Conjugation-reading lineage compatibility ${row.id} is stale`);
         }
       }
     }

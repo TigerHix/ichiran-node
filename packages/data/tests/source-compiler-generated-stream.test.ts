@@ -207,6 +207,47 @@ describe('bounded generated projection producer', () => {
       .toThrow('outside its phase');
   });
 
+  test('rejects stale conjugation-reading lineage compatibility', () => {
+    const root = scheduledEntry(700_001, '決める', 'きめる', 0);
+    const source = {
+      roots: [
+        { seq: root.seq, pos: 'v1', route: 'kanji' as const, text: '決める', ord: 0, common: null, counterpart: 'きめる' },
+        { seq: root.seq, pos: 'v1', route: 'kana' as const, text: 'きめる', ord: 0, common: null, counterpart: '決める' },
+        { seq: 2_257_550, pos: 'adj-i', route: 'kana' as const, text: 'ない', ord: 0, common: null, counterpart: null },
+        { seq: 2_684_620, pos: 'adj-i', route: 'kana' as const, text: 'しい', ord: 0, common: null, counterpart: null }
+      ],
+      rootForms: [
+        { seq: root.seq, text: '決める' }, { seq: root.seq, text: 'きめる' },
+        { seq: 2_257_550, text: 'ない' }, { seq: 2_684_620, text: 'しい' }
+      ],
+      manualPatches: []
+    };
+    const morphology = buildMorphology(source, { dataPath }).artifact;
+    expect(() => [...iterateScheduledConjugations({
+      entries: [root],
+      positionsByRoot: conjugationPositionsByRoot(source),
+      customRootSeqs: new Set(),
+      firstErrataEvent: 10,
+      chronologicalPositions: [],
+      suppressions: [],
+      lineageCompatibility: [{
+        id: 'stale-lineage-witness',
+        kind: 'conjugation-reading-lineage',
+        seq: root.seq,
+        route: 'kana',
+        sourceText: 'きめる',
+        rule: {
+          pos: 'v1', type: 999, negative: false, formal: false,
+          order: 0, stem: 1, okuri: '', euphr: '', euphk: ''
+        },
+        lineageStep: 'first',
+        provenance: { source: 'test' },
+        preservedBehavior: 'This deliberately stale row must be rejected.'
+      }],
+      morphology
+    })]).toThrow('stale-lineage-witness is stale');
+  });
+
   test('allocates a semantic path for a manual-only morphology root', async () => {
     const root = entry();
     const source = {

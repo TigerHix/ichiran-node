@@ -7,11 +7,13 @@ import type {
   MorphologySource
 } from '../browser-pack/morphology-compiler.js';
 import { isRootPayloadKanaSurface } from '../browser-pack/root-payload.js';
+import { consumeCompatibilityRow } from './compatibility.js';
 import { entryPartOfSpeech, type CanonicalEntry } from './model.js';
 
 export interface ExtraConjugationPosition {
   readonly seq: number;
   readonly pos: string;
+  readonly id?: string;
 }
 
 function compareText(left: string, right: string): number {
@@ -30,12 +32,25 @@ export function canonicalMorphologySource(
   const allowed = new Set(POS_WITH_CONJ_RULES);
   const excluded = new Set(DO_NOT_CONJUGATE_SEQ);
   const manualRoots = new Set(manualPatches.map(patch => patch.rootSeq));
+  const entriesBySeq = new Map(entries.map(entry => [entry.seq, entry]));
   const extraBySeq = new Map<number, string[]>();
   for (const value of extraPositions) {
+    const entry = entriesBySeq.get(value.seq);
+    if (!entry) throw new Error(`Conjugation-position compatibility ${value.id ?? value.seq} has no root`);
     const positions = extraBySeq.get(value.seq) ?? [];
     const pos = semanticPosition(value.pos);
-    if (!positions.includes(pos)) positions.push(pos);
+    if (entryPartOfSpeech(entry).filter(value => allowed.has(value)).map(semanticPosition).includes(pos)) {
+      throw new Error(`Conjugation-position compatibility ${value.id ?? `${value.seq}/${pos}`} is stale`);
+    }
+    if (positions.includes(pos)) {
+      throw new Error(`Duplicate conjugation-position compatibility ${value.seq}/${pos}`);
+    }
+    if (excluded.has(value.seq)) {
+      throw new Error(`Conjugation-position compatibility ${value.id ?? value.seq} names an excluded root`);
+    }
+    positions.push(pos);
     extraBySeq.set(value.seq, positions);
+    consumeCompatibilityRow(value, 'conjugation-position');
   }
 
   const roots: MorphologySource['roots'][number][] = [];

@@ -198,15 +198,20 @@ function generatedPart(
   target: PhysicalTarget,
   route: AnalyzerSupportRoute,
   text: string,
+  sourceOrdinal: number,
   locators: readonly AnalyzerSupportSplitConjugationSource[] | undefined
 ): StructuredSplitPart {
   const forms = target[route];
+  const targetOrdinal = forms.indexOf(text);
   return {
     seq: target.seq,
     route,
     text,
     best: null,
-    ord: forms.indexOf(text),
+    // Manual morphology compatibility can name a surface that resolves to an
+    // existing physical target without installing another target text row.
+    // PostgreSQL exposed the originating text ordinal in that case.
+    ord: targetOrdinal === -1 ? sourceOrdinal : targetOrdinal,
     common: null,
     commonTags: '',
     conjugatable: target.conjugatable,
@@ -259,7 +264,13 @@ function createPreparedSplitPartResolver(input: PreparedResolverInput): SplitPar
     const lexicalForm = lexical?.[candidate.route].find(form => form.text === candidate.surface);
     const part = lexical && lexicalForm
       ? directPart(lexical, candidate.route, lexicalForm, input.locators.get(targetSeq))
-      : generatedPart(target, candidate.route, candidate.surface, input.locators.get(targetSeq));
+      : generatedPart(
+        target,
+        candidate.route,
+        candidate.surface,
+        candidate.ord,
+        input.locators.get(targetSeq)
+      );
     const key = ancestorKey(candidate.rootSeq, candidate.route, candidate.surface);
     const values = conjugated.get(key) ?? [];
     if (!values.some(value => typeof value !== 'string' && value.seq === targetSeq)) {

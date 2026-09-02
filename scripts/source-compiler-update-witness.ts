@@ -19,7 +19,6 @@ import { verifySourceCompilerLock } from '../packages/data/src/source-compiler/s
 import type { CanonicalEntry } from '../packages/data/src/source-compiler/model.js';
 
 const LOCK_PATH = 'data/source-compiler-update-2026-01-02.lock.json';
-const BASELINE_PATH = 'packages/data/JMdict_e.gz';
 const UPDATE_SOURCE_ID = 'edrdg-jmdict-e-2026-01-02';
 const WITNESS_SEQ = 2_868_547;
 
@@ -47,13 +46,19 @@ function assertWitness(entry: CanonicalEntry): void {
 }
 
 const repository = resolve(import.meta.dir, '..');
-const lock = await verifySourceCompilerLock(repository, LOCK_PATH);
-const updateSource = lock.files.find(file => file.id === UPDATE_SOURCE_ID);
-if (!updateSource) throw new Error(`Update lock does not pin ${UPDATE_SOURCE_ID}`);
+const [baselineLock, lock] = await Promise.all([
+  verifySourceCompilerLock(repository),
+  verifySourceCompilerLock(repository, LOCK_PATH)
+]);
+const baselineSource = baselineLock.inputs.jmdict;
+const updateSource = lock.inputs.jmdict;
+if (updateSource.id !== UPDATE_SOURCE_ID) {
+  throw new Error(`Update lock pins ${updateSource.id}, not ${UPDATE_SOURCE_ID}`);
+}
 
 const [baseline, update] = await Promise.all([
-  findEntry(resolve(repository, BASELINE_PATH), 'edrdg-jmdict-e-2026-01-01'),
-  findEntry(resolve(repository, updateSource.path), UPDATE_SOURCE_ID)
+  findEntry(baselineSource.absolutePath, baselineSource.id),
+  findEntry(updateSource.absolutePath, updateSource.id)
 ]);
 if (baseline !== null) throw new Error(`Baseline unexpectedly contains ${WITNESS_SEQ}`);
 if (update === null) throw new Error(`January 2 update omits ${WITNESS_SEQ}`);

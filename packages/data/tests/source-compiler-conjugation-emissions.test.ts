@@ -371,9 +371,7 @@ describe('source-native forward conjugation emissions', () => {
       seq: qualified.rootSeq,
       competingCreatorSeq: competing.rootSeq,
       property: qualified.first,
-      qualifiedTargetSeq: 10201789,
-      competingTargetSeq: 10652263,
-      provenance: {},
+      provenance: { source: 'test' },
       preservedBehavior: 'Keep the qualified narrow target.'
     }]);
     const wide = allocator.add({
@@ -395,6 +393,28 @@ describe('source-native forward conjugation emissions', () => {
       kanji: ['逸さす'],
       kana: ['いっさす']
     }));
+    expect(allocator.finish()).toHaveLength(2);
+  });
+
+  test('rejects stale physical-target ordering compatibility', () => {
+    const emission = physicalPrimary(2_410_170, 'kana', 'いっさす');
+    const allocator = new StreamingPhysicalTargetAllocator([], 10_000_000, [{
+      id: 'stale-order-witness',
+      kind: 'physical-target-order',
+      seq: emission.rootSeq,
+      competingCreatorSeq: 1_587_490,
+      property: emission.first,
+      provenance: { source: 'test' },
+      preservedBehavior: 'This deliberately stale row must be rejected.'
+    }]);
+    allocator.add({
+      ordinal: 0,
+      firstAlias: 1,
+      secondAlias: null,
+      creationPrecedence: 0,
+      emission
+    });
+    expect(() => allocator.finish()).toThrow('stale-order-witness is stale');
   });
 
   test('reviewed same-root order preserves the qualified narrow 居られます target', () => {
@@ -431,9 +451,7 @@ describe('source-native forward conjugation emissions', () => {
       seq: narrow.rootSeq,
       competingCreatorSeq: broad.rootSeq,
       property: narrow.first,
-      qualifiedTargetSeq: 10235826,
-      competingTargetSeq: 10551850,
-      provenance: {},
+      provenance: { source: 'test' },
       preservedBehavior: 'Keep the qualified narrow type-6 target.'
     }];
     const allocate = (rows: typeof compatibility) => {

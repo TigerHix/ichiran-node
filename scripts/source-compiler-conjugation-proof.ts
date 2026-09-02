@@ -15,6 +15,7 @@ import {
 } from '../packages/data/src/source-compiler/conjugation-relation-proof.js';
 import { writeForwardRelation } from '../packages/data/src/source-compiler/conjugation-relation-proof.js';
 import { writePackedMorphologyRelation } from '../packages/data/src/source-compiler/packed-morphology-relation.js';
+import { verifySourceCompilerLock } from '../packages/data/src/source-compiler/source-lock.js';
 
 interface Options {
   readonly roots: string | null;
@@ -26,6 +27,7 @@ interface Options {
   readonly keepWork: boolean;
   readonly rootLimit: number | undefined;
   readonly surfaceLimit: number | undefined;
+  readonly sourceLock: string;
 }
 
 function usage(): never {
@@ -33,6 +35,7 @@ function usage(): never {
     'Usage: bun scripts/source-compiler-conjugation-proof.ts '
     + '(--forward complete-relation.ndjson | --roots canonical-roots.ndjson) '
     + '--pack hot.bin[.gz] --out report.json '
+    + '[--source-lock repo-relative-lock.json] '
     + '[--reviewed exact-deltas.json] [--work directory] [--keep-work] '
     + '[--root-limit n] [--surface-limit n]'
   );
@@ -75,7 +78,8 @@ function parseArgs(argv: readonly string[]): Options {
     rootLimit: values.has('--root-limit')
       ? positiveInteger(values.get('--root-limit'), '--root-limit') : undefined,
     surfaceLimit: values.has('--surface-limit')
-      ? positiveInteger(values.get('--surface-limit'), '--surface-limit') : undefined
+      ? positiveInteger(values.get('--surface-limit'), '--surface-limit') : undefined,
+    sourceLock: values.get('--source-lock') ?? 'data/source-compiler-sources.lock.json'
   };
 }
 
@@ -135,7 +139,11 @@ async function main(): Promise<void> {
   const forwardSorted = join(work, 'forward.sorted.ndjson');
   const packedSorted = join(work, 'packed.sorted.ndjson');
   const repository = fileURLToPath(new URL('..', import.meta.url));
-  loadAllConjugationRules(join(repository, 'data'));
+  const sourceLock = await verifySourceCompilerLock(repository, options.sourceLock);
+  loadAllConjugationRules({
+    kwpos: sourceLock.inputs.kwpos.absolutePath,
+    conjo: sourceLock.inputs.conjo.absolutePath
+  });
 
   try {
     const downloadedPack = new Uint8Array(await readFile(options.pack));
@@ -182,7 +190,13 @@ async function main(): Promise<void> {
         pack: options.pack,
         downloadedPackSha256: sha256(downloadedPack),
         installedPackSha256: sha256(hotPack),
-        reviewed: options.reviewed
+        reviewed: options.reviewed,
+        sourceLock: {
+          path: options.sourceLock,
+          sha256: sourceLock.sha256,
+          kwpos: sourceLock.inputs.kwpos.path,
+          conjo: sourceLock.inputs.conjo.path
+        }
       },
       enumeration: {
         forward: forward ?? { roots: null, rows: relation.forward.rows },

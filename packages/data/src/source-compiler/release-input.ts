@@ -30,13 +30,14 @@ import {
   type MorphologySurface
 } from './surface-index-input.js';
 import type { CanonicalEntry } from './model.js';
+import type { ConjugationRulePaths } from '../data/conj-rules.js';
 
 export interface SourceCompilerSemanticInput {
   readonly entries: readonly CanonicalEntry[];
   readonly morphology: MorphologySource;
   readonly morphologySurfaces: Iterable<MorphologySurface>;
   readonly support: AnalyzerSupportSource;
-  readonly dataPath: string;
+  readonly conjugationRules: ConjugationRulePaths;
 }
 
 export type SourceCompilerBinaryInput = Omit<SourceCompilerSemanticInput, 'morphologySurfaces'>;
@@ -70,7 +71,9 @@ export function buildSourceCompilerBinarySections(
 ): SourceCompilerBinarySections {
   const root = buildRootPayload(canonicalRootPayloadSource(input.entries));
   const details = buildDetailStore(canonicalDetailEntries(input.entries));
-  const morphology = buildMorphology(input.morphology, { dataPath: input.dataPath });
+  const morphology = buildMorphology(input.morphology, {
+    conjugationRules: input.conjugationRules
+  });
   const support = buildAnalyzerSupportCore(input.support);
   const generated = input.support.generated ?? EMPTY_GENERATED;
   const annotations = buildAnalyzerAnnotations(input.support.splits, input.support.hints, generated);

@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto';
 import { writeFile } from 'node:fs/promises';
 import { userInfo } from 'node:os';
+import { resolve } from 'node:path';
 import postgres from 'postgres';
 import { buildDetailStore } from '../packages/data/src/browser-pack/details.js';
 import { loadDetailEntries } from '../packages/data/src/browser-pack/details-oracle.js';
@@ -14,20 +15,12 @@ import {
   canonicalDetailEntries,
   canonicalRootPayloadSource
 } from '../packages/data/src/source-compiler/pack-input.js';
+import { verifySourceCompilerLock } from '../packages/data/src/source-compiler/source-lock.js';
 
 const database = process.argv[2];
 if (!database) {
   throw new Error('Usage: bun scripts/source-compiler-root-proof.ts DATABASE [ORDER_EVIDENCE_JSON]');
 }
-
-const paths = {
-  jmdict: 'packages/data/JMdict_e.gz',
-  extra: 'data/sources/extra.xml',
-  municipality: 'data/sources/jichitai.csv',
-  ward: 'data/sources/gyoseiku.csv',
-  errata: 'data/source-compiler-errata.json',
-  compatibility: 'data/source-compiler-compatibility.json'
-};
 
 function sha256(bytes: Uint8Array | string): string {
   return createHash('sha256').update(bytes).digest('hex');
@@ -56,7 +49,17 @@ function groups(forms: readonly RootPayloadFormSource[]): Map<string, RootPayloa
   return result;
 }
 
-const compilation = await compileCanonicalRoots(paths);
+const repository = resolve(import.meta.dir, '..');
+const sourceLock = await verifySourceCompilerLock(repository);
+const compilation = await compileCanonicalRoots({
+  jmdict: sourceLock.inputs.jmdict.absolutePath,
+  jmdictSourceId: sourceLock.inputs.jmdict.id,
+  extra: sourceLock.inputs.extra.absolutePath,
+  municipality: sourceLock.inputs.municipality.absolutePath,
+  ward: sourceLock.inputs.ward.absolutePath,
+  errata: sourceLock.inputs.chronologicalErrata.absolutePath,
+  compatibility: sourceLock.inputs.compatibility.absolutePath
+});
 const sourceDetails = canonicalDetailEntries(compilation.entries);
 const sourceRoot = canonicalRootPayloadSource(compilation.entries);
 
@@ -108,6 +111,7 @@ if (process.argv[3]) await writeFile(process.argv[3], orderEvidence);
 
 console.log(JSON.stringify({
   canonical: {
+    sourceLockSha256: sourceLock.sha256,
     entries: compilation.entries.length,
     compatibilityRows: compilation.compatibility.rows.length,
     customEdits: compilation.custom.edits.length,

@@ -4,6 +4,12 @@ The machine-readable lock is `data/source-compiler-sources.lock.json`.
 `data/source-compiler-compatibility.json` contains the small, individually
 reviewed historical compatibility facts.
 
+The lock also gives every concrete compiler input one strict semantic role:
+`jmdict`, `kanjidic`, `extra`, `municipality`, `ward`, `chronologicalErrata`,
+`compatibility`, `kwpos`, or `conjo`. The compiler obtains paths only from the
+verified role map. It rejects missing or duplicate roles, one path assigned to
+multiple roles, and unknown role or lock fields.
+
 ## Qualified producer
 
 - Portable baseline tag: `portable-core-260118-baseline`.
@@ -75,9 +81,9 @@ preserves only that target split. Three additional rows preserve root 1577980's
 narrow type-6 formal-positive, plain-negative and formal-negative targets: the
 qualified producer had already created those forms from root 2809790, while
 source order encounters root 1577980's compatible wider type-5 targets first.
-The ledger is 24,215 bytes with
+The ledger is 23,683 bytes with
 SHA-256
-`c3a39f43432ad78c319e8ad3df808ba3617179b30e4e43ff5369fbe6435a1d34`.
+`387982639a9a03ea7fb11feeef754b5aea59c673cec2757153f200ea071ee9bb`.
 Every row names both provenance and the exact behavior retained; none is an
 export, query result set or broad allowlist.
 
@@ -124,3 +130,15 @@ The script clones the EDRDG archive at the exact January commit, applies patches
 through 2026-01-01, validates both uncompressed and deterministic-gzip JMdict
 identities, downloads the fixed Wayback Kanjidic capture, and validates its gzip
 and XML identities before writing outputs.
+
+The qualified comparison pack is a separate immutable release artifact. Acquire
+and verify it in a fresh clone with:
+
+```sh
+bun scripts/acquire-qualified-source-compiler-baseline.ts work/m2-baseline
+```
+
+That command pins the published checksum index and verifies `manifest.json`,
+`hot.bin.gz`, `details.bin.gz`, and `stats.json` before making the directory
+visible. The source release compiler will verify the same identities again when
+it compares the January baseline.

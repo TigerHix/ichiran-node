@@ -2,6 +2,7 @@ import { readFile } from 'node:fs/promises';
 import { gunzipSync } from 'node:zlib';
 import { asHiragana, geminate, rendaku } from '@ichiran/core';
 import { XMLParser } from 'fast-xml-parser';
+import { consumeCompatibilityRow } from './compatibility.js';
 
 export interface KanjidicHintCompatibility {
   readonly literal: string;
@@ -83,7 +84,7 @@ function reading(value: unknown): HintReading | null {
 /** Loads only the Kanjidic fields used while compiling analyzer easy hints. */
 export async function loadKanjidicHintReadings(
   path: string,
-  compatibility: readonly KanjidicHintCompatibility[] = []
+  compatibility: readonly (KanjidicHintCompatibility & { readonly id?: string })[] = []
 ): Promise<KanjidicHintReadings> {
   const file = await readFile(path);
   const xml = (path.endsWith('.gz') ? gunzipSync(file) : file).toString('utf8');
@@ -102,7 +103,11 @@ export async function loadKanjidicHintReadings(
 
   for (const item of compatibility) {
     const readings = result.get(item.literal) ?? [];
-    if (readings.some(value => value.text === item.reading && value.type === item.type)) continue;
+    if (readings.some(value => value.text === item.reading && value.type === item.type)) {
+      throw new Error(
+        `Kanjidic compatibility is stale: ${item.literal}/${item.reading}/${item.type} already exists`
+      );
+    }
     readings.push({
       text: item.reading,
       type: item.type,
@@ -110,6 +115,7 @@ export async function loadKanjidicHintReadings(
       suffix: item.suffix
     });
     result.set(item.literal, readings);
+    consumeCompatibilityRow(item, 'kanjidic-reading');
   }
   return result;
 }
