@@ -177,6 +177,8 @@ try {
     pathsPath: join(temporaryDirectory, 'generated-paths.bin'),
     occurrencesPath: join(temporaryDirectory, 'generated-occurrences.bin')
   });
+  // The returned targets remain live; the allocator's search indexes do not.
+  Bun.gc(true);
   const bounded = await compileBoundedSourceNativeAnalyzerSupport({
     projection,
     entries: roots.entries,

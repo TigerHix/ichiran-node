@@ -88,6 +88,8 @@ const projection = writeScheduledGeneratedProjection({
   pathsPath: join(options.work, 'generated-paths.bin'),
   occurrencesPath: join(options.work, 'generated-occurrences.bin')
 });
+// The returned targets remain live; the allocator's search indexes do not.
+Bun.gc(true);
 const compiled = compileBoundedSourceNativeAnalyzerSupport({
   projection,
   entries: roots.entries,

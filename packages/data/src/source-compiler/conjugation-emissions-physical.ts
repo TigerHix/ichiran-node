@@ -292,6 +292,12 @@ class PhysicalTargetPool {
         throw new Error(`Physical-target ordering compatibility ${row.id} is stale`);
       }
     }
+    // Allocation is complete. Keep the semantic target array, but release the
+    // search indexes whose millions of keys are not compiler output.
+    this.#targetsBySeq.clear();
+    this.#targetIndex.clear();
+    this.#creatorBySeq.clear();
+    this.#targetOrderCompatibilityHits.clear();
     return this.#targets;
   }
 
