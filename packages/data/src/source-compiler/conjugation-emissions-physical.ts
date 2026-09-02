@@ -308,7 +308,7 @@ class PhysicalTargetPool {
     return { target, created: true };
   }
 
-  finish(): readonly PhysicalTarget[] {
+  finish(): PhysicalTarget[] {
     for (const row of this.#targetOrderCompatibility) {
       if (!this.#targetOrderCompatibilityHits.has(row.id)) {
         throw new Error(`Physical-target ordering compatibility ${row.id} is stale`);
@@ -555,7 +555,7 @@ export class StreamingPhysicalTargetAllocator {
     };
   }
 
-  finish(): readonly PhysicalTarget[] {
+  finish(): PhysicalTarget[] {
     return this.#pool.finish();
   }
 

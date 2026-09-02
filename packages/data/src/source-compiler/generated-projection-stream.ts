@@ -46,7 +46,7 @@ export interface GeneratedProjectionStreamResult {
   readonly pathsPath: string;
   readonly occurrencesPath: string;
   readonly spool: GeneratedProjectionSpoolSummary;
-  readonly targets: readonly PhysicalTarget[];
+  readonly targets: PhysicalTarget[];
   readonly ruleAliases: readonly number[];
   readonly aliasProperties: readonly ConjugationProperty[];
   readonly phases: Readonly<Record<number, number>>;

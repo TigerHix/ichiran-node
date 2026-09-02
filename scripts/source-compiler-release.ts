@@ -24,6 +24,7 @@ import { conjugationPositionsByRoot } from '../packages/data/src/source-compiler
 import { writeScheduledGeneratedProjection } from '../packages/data/src/source-compiler/generated-projection-stream.js';
 import { loadKanjidicHintReadings } from '../packages/data/src/source-compiler/kanjidic-hints.js';
 import { writeSourceCompilerRelease } from '../packages/data/src/source-compiler/release-output.js';
+import { writeBoundedSurfaceIndexTsv } from '../packages/data/src/source-compiler/surface-index-spool.js';
 import {
   assertSourceCompilerReleaseMode,
   verifySourceCompilerLock
@@ -189,6 +190,23 @@ try {
     firstErrataEvent: roots.custom.nextEvent
   });
   const compatibilityUsage = assertSourceCompatibilityConsumed(roots.compatibility);
+  const targetCount = projection.targets.length;
+  const generatedTargetCount = projection.targets.reduce(
+    (count, value) => count + Number(value.origin === 'generated'), 0
+  );
+  const surfaceTsv = join(temporaryDirectory, 'surface.tsv');
+  const surfaceSpool = await writeBoundedSurfaceIndexTsv({
+    entries: roots.entries,
+    physicalTargets: projection.targets,
+    occurrencesPath: projection.occurrencesPath,
+    temporaryDirectory,
+    destination: surfaceTsv,
+    ...(options.surfaceChunkRows === undefined ? {} : {
+      maxChunkRows: options.surfaceChunkRows
+    })
+  });
+  projection.targets.length = 0;
+  Bun.gc(true);
   const release = await writeSourceCompilerRelease({
     repository,
     output: repositoryPath(repository, options.output, 'Release output'),
@@ -209,12 +227,9 @@ try {
     entries: roots.entries,
     morphology: morphologySource,
     support: bounded.support,
-    occurrencesPath: projection.occurrencesPath,
-    physicalTargets: projection.targets,
+    surfaceTsv,
+    surfaceSpool,
     conjugationRules,
-    ...(options.surfaceChunkRows === undefined ? {} : {
-      surfaceChunkRows: options.surfaceChunkRows
-    }),
     sourceSummary: {
       mode: options.mode,
       jmdict: { id: jmdictSourceId, path: jmdictRelative },
@@ -229,10 +244,8 @@ try {
     },
     projectionSummary: {
       spool: projection.spool,
-      targets: projection.targets.length,
-      generatedTargets: projection.targets.reduce(
-        (count, value) => count + Number(value.origin === 'generated'), 0
-      ),
+      targets: targetCount,
+      generatedTargets: generatedTargetCount,
       ruleAliases: projection.ruleAliases.length,
       aliasProperties: projection.aliasProperties.length,
       phases: projection.phases,

@@ -46,13 +46,12 @@ import {
   type QualifiedArtifactBytes,
   type SurfaceCompilerStats
 } from './release-comparison.js';
-import { writeBoundedSurfaceIndexTsv } from './surface-index-spool.js';
+import type { SurfaceIndexTsvSpoolSummary } from './surface-index-spool.js';
 import type { VerifiedSourceCompilerLock } from './source-lock.js';
 import type { MorphologySource } from '../browser-pack/morphology-compiler.js';
 import type { CanonicalEntry } from './model.js';
 import type { BoundedAnalyzerSupportSummary } from './analyzer-support-stream.js';
 import type { GeneratedProjectionSpoolSummary } from './generated-projection-spool.js';
-import type { PhysicalTarget } from './conjugation-emissions-physical.js';
 import type { ConjugationRulePaths } from '../data/conj-rules.js';
 
 const ROOT_ORDER_ATTESTATION_SHA256 = '12ca177bf7765e4337f3c1cc4d836a7bcfc84b3f60b08e07d6eb238ad72dc4cf';
@@ -80,10 +79,9 @@ export interface SourceReleaseOutputInput {
   readonly entries: readonly CanonicalEntry[];
   readonly morphology: MorphologySource;
   readonly support: AnalyzerSupportSource;
-  readonly occurrencesPath: string;
-  readonly physicalTargets: readonly PhysicalTarget[];
+  readonly surfaceTsv: string;
+  readonly surfaceSpool: SurfaceIndexTsvSpoolSummary;
   readonly conjugationRules: ConjugationRulePaths;
-  readonly surfaceChunkRows?: number;
   readonly projectionSummary: SourceReleaseProjectionSummary;
   readonly sourceSummary: SourceReleaseSemanticSummary;
 }
@@ -322,27 +320,20 @@ export async function writeSourceCompilerRelease(
   assertBytesEqual(sections.morphology.bytes, rebuiltSections.morphology.bytes, 'Morphology');
   assertBytesEqual(sections.support.bytes, rebuiltSections.support.bytes, 'Analyzer support');
   assertBytesEqual(sections.annotations.bytes, rebuiltSections.annotations.bytes, 'Annotations');
-  const surfaceTsv = join(input.temporaryDirectory, 'surface.tsv');
-  const surfaceSpool = await writeBoundedSurfaceIndexTsv({
-    entries: input.entries,
-    occurrencesPath: input.occurrencesPath,
-    physicalTargets: input.physicalTargets,
-    temporaryDirectory: input.temporaryDirectory,
-    destination: surfaceTsv,
-    ...(input.surfaceChunkRows === undefined ? {} : { maxChunkRows: input.surfaceChunkRows })
-  });
   const compiler = await surfaceCompiler(input.repository);
   const firstPath = join(input.temporaryDirectory, 'surface-first.bin');
   const secondPath = join(input.temporaryDirectory, 'surface-second.bin');
   // Each compiler indexes millions of rows. Run the deterministic rebuilds
   // sequentially so their large Rust working sets never overlap.
-  const firstStats = await compileSurface(compiler, surfaceTsv, firstPath, input.repository);
-  const secondStats = await compileSurface(compiler, surfaceTsv, secondPath, input.repository);
+  const firstStats = await compileSurface(compiler, input.surfaceTsv, firstPath, input.repository);
+  const secondStats = await compileSurface(compiler, input.surfaceTsv, secondPath, input.repository);
   if (JSON.stringify(firstStats) !== JSON.stringify(secondStats)) {
     throw new Error('Surface-index rebuild changed deterministic counts');
   }
-  if (surfaceSpool.surfaces !== firstStats.input) {
-    throw new Error(`Rust surface compiler read ${firstStats.input}/${surfaceSpool.surfaces} surfaces`);
+  if (input.surfaceSpool.surfaces !== firstStats.input) {
+    throw new Error(
+      `Rust surface compiler read ${firstStats.input}/${input.surfaceSpool.surfaces} surfaces`
+    );
   }
   const surfaceBytes = new Uint8Array(await readFile(firstPath));
   if (surfaceBytes.byteLength !== firstStats.bytes) {
@@ -395,7 +386,7 @@ export async function writeSourceCompilerRelease(
       files: input.sourceLock.files,
       semantic: input.sourceSummary
     },
-    surfaceSpool,
+    surfaceSpool: input.surfaceSpool,
     projection: input.projectionSummary,
     artifacts: counts,
     artifactIdentities: artifactIdentities(sourceArtifacts),

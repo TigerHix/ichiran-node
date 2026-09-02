@@ -65,7 +65,9 @@ the finished generation. Full releases use Bun's `--smol` mode so garbage
 collection bounds the compiler's large transient object graph. The
 PostgreSQL-isolation wrapper applies the same mode automatically. The two
 determinism-check surface-index builds run sequentially so their multi-million-
-row Rust working sets do not overlap.
+row Rust working sets do not overlap. The compiler also finishes the surface
+TSV and releases the physical-target graph before binary pack assembly; the
+phase boundary changes object lifetime, not the surface bytes or pack format.
 
 ## PostgreSQL-unavailable proof
 
