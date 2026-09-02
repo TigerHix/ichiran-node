@@ -4,9 +4,9 @@ import postgres from 'postgres';
 import {
   buildRootPayload,
   compareRootPayloadText,
-  isRootPayloadKanaSurface,
-  loadRootPayloadSource
+  isRootPayloadKanaSurface
 } from '../src/browser-pack/root-payload.js';
+import { loadRootPayloadSource } from '../src/browser-pack/root-payload-oracle.js';
 import { openRootPayload } from '../../core/src/root-payload.js';
 
 const RUN_POSTGRES_TEST = process.env.RUN_ROOT_PAYLOAD_POSTGRES === 'true';

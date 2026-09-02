@@ -1,7 +1,8 @@
 import { fileURLToPath } from 'node:url';
 import { describe, expect, test } from 'bun:test';
 import { openMorphology } from '../../core/src/morphology.js';
-import { compileMorphology } from '../src/browser-pack/morphology-compiler.js';
+import { buildMorphology } from '../src/browser-pack/morphology-compiler.js';
+import { compileMorphology } from '../src/browser-pack/morphology-compiler-oracle.js';
 
 const roots = [
   {
@@ -52,5 +53,14 @@ describe('morphology compiler tombstones', () => {
       ['v1', 7, 'v1', 13]
     ]);
     expect(openMorphology(build.bytes).lookup('コケさせ', 'kana')).toEqual([]);
+  });
+
+  test('accepts compiler-owned semantic input without PostgreSQL', async () => {
+    const dataPath = fileURLToPath(new URL('../../../data/', import.meta.url));
+    const oracleShaped = await compileMorphology({ sql: fakeSql as never, dataPath });
+    const sourceNative = buildMorphology({ roots, rootForms, manualPatches: [] }, { dataPath });
+
+    expect(sourceNative.bytes).toEqual(oracleShaped.bytes);
+    expect(sourceNative.stats).toEqual(oracleShaped.stats);
   });
 });

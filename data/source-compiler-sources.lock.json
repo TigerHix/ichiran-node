@@ -1,0 +1,111 @@
+{
+  "formatVersion": 1,
+  "baseline": {
+    "repository": "https://github.com/TigerHix/ichiran-node.git",
+    "startingCommit": "effd10f1cd4cfd6780760c8130030d287df35ca9",
+    "qualifiedArtifactTag": "portable-core-260118-baseline",
+    "upstreamIchiranCommit": "ea9583368e67cad22d94abae8dbcc8df96d99bcd",
+    "upstreamDataReleaseTag": "ichiran-260118"
+  },
+  "archive": {
+    "repository": "https://github.com/Jitendex/edrdg-dictionary-archive.git",
+    "commit": "2bdfbdcadaf38a7da3000f68f93ce711c7d5a878",
+    "date": "2026-01-01",
+    "acquisitionScript": "scripts/acquire-source-compiler-inputs.ts"
+  },
+  "sources": [
+    {
+      "id": "edrdg-jmdict-e-2026-01-01",
+      "kind": "jmdict",
+      "role": "jmdict",
+      "authoritativeUrl": "https://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz",
+      "archivePath": "JMdict_e/patches/2026/01/01.patch.br",
+      "upstreamIdentity": "JMdict created: 2026-01-01",
+      "uncompressedBytes": 61494891,
+      "uncompressedSha256": "a21b13e465060d1bedd497b5b5d4b603e8ab8130663afb3a5a5c60b4250ef2ca",
+      "pinnedPath": "packages/data/JMdict_e.gz",
+      "pinnedBytes": 10260701,
+      "pinnedSha256": "92eb77d60e5b949585e41a777ff3857c412bc97ea75444d14497a5156b6264b7",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://www.edrdg.org/edrdg/licence.html",
+      "attribution": "Electronic Dictionary Research and Development Group"
+    },
+    {
+      "id": "edrdg-kanjidic2-2015-03-17",
+      "kind": "kanjidic2",
+      "role": "kanjidic",
+      "authoritativeUrl": "http://edrdg.org/kanjidic/kanjidic2.xml.gz",
+      "historicalCaptureUrl": "https://web.archive.org/web/20150317225430id_/http://edrdg.org/kanjidic/kanjidic2.xml.gz",
+      "upstreamIdentity": "file_version 4; database_version 2015-076; date_of_creation 2015-03-17",
+      "uncompressedBytes": 14652660,
+      "uncompressedSha256": "d16ceffeddd0089ae2b4833d937fa34a1216805422165701e0236b7da5afa68f",
+      "pinnedPath": "packages/data/kanjidic2.xml.gz",
+      "pinnedBytes": 1372016,
+      "pinnedSha256": "1861f294b187d491dd127a972d59dfe92117df536466562a0f2a44abf98a7d03",
+      "license": "CC-BY-SA-3.0",
+      "licenseUrl": "https://web.archive.org/web/20150202024106id_/http://www.edrdg.org:80/edrdg/licence.html",
+      "attribution": "Electronic Dictionary Research and Development Group"
+    },
+    {
+      "id": "ichiran-custom-extra-260118",
+      "kind": "custom-entries",
+      "role": "extra",
+      "authoritativeUrl": "https://github.com/tshatrov/ichiran/blob/ea9583368e67cad22d94abae8dbcc8df96d99bcd/data/sources/extra.xml",
+      "pinnedPath": "data/sources/extra.xml",
+      "pinnedBytes": 2134,
+      "pinnedSha256": "4a056ebe608cb7bb5284e412688ff634d3516f3249a54d37b33645d7a266093b",
+      "license": "GPL-3.0-or-later"
+    },
+    {
+      "id": "ichiran-custom-municipalities-260118",
+      "kind": "custom-entries",
+      "roles": ["municipality", "ward"],
+      "authoritativeUrl": "https://github.com/tshatrov/ichiran/tree/ea9583368e67cad22d94abae8dbcc8df96d99bcd/data/sources",
+      "pinnedPaths": ["data/sources/jichitai.csv", "data/sources/gyoseiku.csv"],
+      "pinnedBytes": [116379, 10266],
+      "pinnedSha256": ["328bd0779b1bb69a4c1bc3773c5ff71cffb59c825377ca7f31eafda3860e3af8", "23f706ff84b5c27da86be1d7a6066630d34617e1769edb0673c91d258851ce3f"],
+      "license": "GPL-3.0-or-later"
+    },
+    {
+      "id": "ichiran-custom-and-errata-260118",
+      "kind": "intended-behavior",
+      "authoritativeUrl": "https://github.com/tshatrov/ichiran/tree/ea9583368e67cad22d94abae8dbcc8df96d99bcd",
+      "upstreamPaths": ["dict-custom.lisp", "dict-errata.lisp"],
+      "upstreamBytes": [13483, 53989],
+      "upstreamSha256": ["f54a68fee54e3f850043202f272590d102a8e152817b9319c95c96942a1d7035", "44b37171b95f7b0e40181ee5ea0edd77439871363c7dfdb0d71bf9187538cdb7"],
+      "license": "GPL-3.0-or-later"
+    },
+    {
+      "id": "ichiran-chronological-errata-260118",
+      "kind": "semantic-ledger",
+      "role": "chronologicalErrata",
+      "pinnedPath": "data/source-compiler-errata.json",
+      "pinnedBytes": 186000,
+      "pinnedSha256": "7f78b244955c14e23afc5474b03c66554cfba189bf0383856afd8a00bd279f24",
+      "generatedBy": "scripts/extract-qualified-errata.ts",
+      "authority": "tshatrov/ichiran ea958336 dict-errata.lisp sha256 44b37171b95f7b0e40181ee5ea0edd77439871363c7dfdb0d71bf9187538cdb7",
+      "rows": 601,
+      "license": "GPL-3.0-or-later"
+    },
+    {
+      "id": "ichiran-source-compatibility-260118",
+      "kind": "compatibility-ledger",
+      "role": "compatibility",
+      "pinnedPath": "data/source-compiler-compatibility.json",
+      "pinnedBytes": 23683,
+      "pinnedSha256": "387982639a9a03ea7fb11feeef754b5aea59c673cec2757153f200ea071ee9bb",
+      "rows": 25,
+      "authority": "Each row carries its own upstream/source and qualified-oracle provenance plus preserved behavior."
+    },
+    {
+      "id": "ichiran-conjugation-rules-260118",
+      "kind": "conjugation-rules",
+      "roles": ["kwpos", "conjo"],
+      "authoritativeUrl": "https://github.com/tshatrov/ichiran/tree/ea9583368e67cad22d94abae8dbcc8df96d99bcd/data",
+      "pinnedPaths": ["data/kwpos.csv", "data/conjo.csv"],
+      "pinnedBytes": [3999, 34010],
+      "pinnedSha256": ["485b5ac5d8a23a8bcd18e69ca2fdf21d231fb740780a6c7d7ccf40d65ed831e4", "b2919a24ecc7f3cdf9b9478eb13526b76cb086c53000316ecb1781ff947c14f3"],
+      "license": "GPL-3.0-or-later"
+    }
+  ]
+}

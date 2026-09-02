@@ -171,7 +171,7 @@ function part(part: AnalyzerSupportSplitPartSource): EncodedPart {
     part.seq,
     part.text,
     part.best,
-    part.ord,
+    checkedInteger(part.ord, 0, 0xffff, 'Split-part ordinal'),
     part.common,
     part.commonTags,
     (part.conjugatable ? 1 : 0) | (part.nokanji ? 2 : 0),

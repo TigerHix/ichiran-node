@@ -9,9 +9,10 @@ The current milestone is an analyzer-only offline demo. A user downloads one pin
 data release, installs it in browser storage, and can then analyze entirely on the
 device. The same runtime powers the browser demo, Node adapter, CLI, and HTTP API.
 
-This TypeScript runtime is the qualified migration baseline, not the final ownership
-model. The accepted post-alpha direction is one Rust analyzer crate compiled to
-browser WASM, Node, and native iOS, plus a PostgreSQL-free TypeScript source compiler.
+The TypeScript runtime remains the qualified migration baseline for the pending Rust
+kernel. Release data is now owned by a PostgreSQL-free TypeScript source compiler.
+The accepted post-alpha direction is one Rust analyzer crate compiled to browser
+WASM, Node, and native iOS while retaining that source-native compiler.
 See
 [the source-compiler and Rust-kernel roadmap](./docs/SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md).
 
@@ -58,7 +59,10 @@ immutable analyzer release
         |
 @ichiran/node  <--- CLI / HTTP API
 
-PostgreSQL + @ichiran/reference-postgres ---> @ichiran/data compiler only
+pinned semantic sources ---> @ichiran/data source compiler ---> immutable release
+                                  ^
+                                  |
+                    PostgreSQL migration oracle only
 ```
 
 - `@ichiran/core` is the current canonical analyzer and executable oracle for the Rust
@@ -69,19 +73,29 @@ PostgreSQL + @ichiran/reference-postgres ---> @ichiran/data compiler only
   runtime used in the browser.
 - `@ichiran/reference-postgres` is the frozen former implementation. It is private
   and retained temporarily as a compiler/oracle dependency, not a product runtime.
-- `@ichiran/data` is the Node/PostgreSQL release compiler.
+- `@ichiran/data` owns the TypeScript source compiler and pack-v1 encoders. Its
+  verified source lock selects JMdict, Kanjidic2, custom XML/CSV, conjugation CSVs,
+  chronological errata, and the narrow compatibility ledger.
 
 The data files are generated release artifacts rather than Git contents. PostgreSQL
-is allowed only while compiling or qualifying a release; it is never part of the
-browser, CLI, API, or normal core test path.
+is not a release input. The frozen database and `@ichiran/reference-postgres` remain
+read-only migration oracles for qualification and can be physically unavailable
+during a complete source release build.
 
 ## Scope and source pins
 
 The parity target is upstream Ichiran
 `ea9583368e67cad22d94abae8dbcc8df96d99bcd` with data release
-`ichiran-260118`. The pinned dump is 200,012,956 bytes with SHA-256
-`98a44e2cc88a65677da8b1f7124e7d6c904253eb1aae0ef16d2c7cc1dacdba82`.
-The captured upstream suite passes 782 / 782 analyzer assertions.
+`ichiran-260118`. The pinned January 1 JMdict gzip has SHA-256
+`92eb77d60e5b949585e41a777ff3857c412bc97ea75444d14497a5156b6264b7`;
+the matching qualified Kanjidic2 gzip has SHA-256
+`1861f294b187d491dd127a972d59dfe92117df536466562a0f2a44abf98a7d03`.
+The 200,012,956-byte PostgreSQL dump, SHA-256
+`98a44e2cc88a65677da8b1f7124e7d6c904253eb1aae0ef16d2c7cc1dacdba82`,
+is retained only as an oracle. The complete release corpus contains 1,241
+chosen-authority comparisons (940 current-Lisp snapshots plus 301 frozen
+PostgreSQL fallbacks), and independently checks clean semantics for all 301
+fallback operations.
 
 The separate experimental `@ichiran/grammar` package is outside this product
 milestone. Analyzer-internal suffix rules, segmentation filters, penalties, and

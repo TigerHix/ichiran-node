@@ -1,0 +1,32 @@
+{
+  "formatVersion": 1,
+  "scope": "ichiran-260118-direct-root-order-delta",
+  "provenance": {
+    "qualifiedArtifactTag": "portable-core-260118-baseline",
+    "upstreamIchiranCommit": "ea9583368e67cad22d94abae8dbcc8df96d99bcd",
+    "generatedBy": "scripts/source-compiler-root-proof.ts",
+    "qualifiedOrder": "ichiran-260118 PostgreSQL root-payload ctid DESC migration oracle"
+  },
+  "fullEvidence": {
+    "path": "work/m6-evidence/direct-order.jsonl",
+    "rows": 3435,
+    "bytes": 4076458,
+    "sha256": "5f4660a0afbc1a21021f3c4db49014554a3b7991a48960c2238a050ae05a1854"
+  },
+  "sourcePayload": {
+    "bytes": 9088056,
+    "sha256": "19204bdae9ec44f7a5240aa7b74e83cf302a8f8da09b4a1748445ef0dd5dc8d2"
+  },
+  "qualifiedPayload": {
+    "bytes": 9088056,
+    "sha256": "2bd83550fc67ae90dcaed1db37dc0b596091ea49081c00f34f2325f846b9aafa"
+  },
+  "deterministicPolicy": "UTF-8 surface, route, reverse source event, reverse source ordinal, reverse form ordinal, reverse sequence",
+  "preservedBehavior": {
+    "verdict": "Direct form semantic sets, restrictions, metadata, and detail records are exact; only the reviewed accidental physical tie order changes.",
+    "directSurfaceClasses": 443275,
+    "deltaClasses": 3435,
+    "formsInDeltaClasses": 14387,
+    "changedFirstCandidates": 3148
+  }
+}

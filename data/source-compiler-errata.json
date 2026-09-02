@@ -1,0 +1,7625 @@
+{
+  "formatVersion": 1,
+  "authority": {
+    "upstreamRepository": "https://github.com/tshatrov/ichiran.git",
+    "upstreamCommit": "ea9583368e67cad22d94abae8dbcc8df96d99bcd",
+    "upstreamPath": "dict-errata.lisp",
+    "upstreamSha256": "44b37171b95f7b0e40181ee5ea0edd77439871363c7dfdb0d71bf9187538cdb7",
+    "migrationPortPath": "packages/data/src/data/errata.ts"
+  },
+  "rows": [
+    {
+      "event": 0,
+      "phase": "addErrata",
+      "operation": "conjugateDa",
+      "arguments": [],
+      "sourceLine": 1228,
+      "preservedBehavior": "Give だ the synthetic cop-da conjugation position."
+    },
+    {
+      "event": 1,
+      "phase": "addErrata",
+      "operation": "addDehaJaReadings",
+      "arguments": [],
+      "sourceLine": 1232,
+      "preservedBehavior": "Add the chronological では-to-じゃ generated readings."
+    },
+    {
+      "event": 2,
+      "phase": "addErrata",
+      "operation": "removeHiraganaNokanji",
+      "arguments": [],
+      "sourceLine": 1235,
+      "preservedBehavior": "Clear entry-level primary-no-kanji when a no-kanji reading is hiragana; preserve per-form flags."
+    },
+    {
+      "event": 3,
+      "phase": "addErrata",
+      "operation": "addGozaimasuConjs",
+      "arguments": [],
+      "sourceLine": 1239,
+      "preservedBehavior": "Add the declared ございます manual conjugations."
+    },
+    {
+      "event": 4,
+      "phase": "addErrata",
+      "operation": "addPrimaryNokanji",
+      "arguments": [
+        1415510,
+        "タカ"
+      ],
+      "sourceLine": 1242,
+      "preservedBehavior": "Add タカ to entry 1415510 and make it the primary no-kanji reading."
+    },
+    {
+      "event": 5,
+      "phase": "addErrata",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        1538900,
+        false
+      ],
+      "sourceLine": 1245,
+      "preservedBehavior": "Set entry 1538900 primary-no-kanji to false."
+    },
+    {
+      "event": 6,
+      "phase": "addErrata",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        1580640,
+        false
+      ],
+      "sourceLine": 1246,
+      "preservedBehavior": "Set entry 1580640 primary-no-kanji to false."
+    },
+    {
+      "event": 7,
+      "phase": "addErrata",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        1289030,
+        false
+      ],
+      "sourceLine": 1247,
+      "preservedBehavior": "Set entry 1289030 primary-no-kanji to false."
+    },
+    {
+      "event": 8,
+      "phase": "addErrata",
+      "operation": "deleteReading",
+      "arguments": [
+        1247250,
+        "キミ"
+      ],
+      "sourceLine": 1250,
+      "preservedBehavior": "Remove the declared キミ form from entry 1247250."
+    },
+    {
+      "event": 9,
+      "phase": "addErrata",
+      "operation": "deleteReading",
+      "arguments": [
+        1521960,
+        "ボツ"
+      ],
+      "sourceLine": 1251,
+      "preservedBehavior": "Remove the declared ボツ form from entry 1521960."
+    },
+    {
+      "event": 10,
+      "phase": "addErrata",
+      "operation": "deleteReading",
+      "arguments": [
+        2145800,
+        "いら"
+      ],
+      "sourceLine": 1252,
+      "preservedBehavior": "Remove the declared いら form from entry 2145800."
+    },
+    {
+      "event": 11,
+      "phase": "addErrata",
+      "operation": "deleteReading",
+      "arguments": [
+        2067160,
+        "たも"
+      ],
+      "sourceLine": 1253,
+      "preservedBehavior": "Remove the declared たも form from entry 2067160."
+    },
+    {
+      "event": 12,
+      "phase": "addErrata",
+      "operation": "deleteReading",
+      "arguments": [
+        2423450,
+        "サシ"
+      ],
+      "sourceLine": 1254,
+      "preservedBehavior": "Remove the declared サシ form from entry 2423450."
+    },
+    {
+      "event": 13,
+      "phase": "addErrata",
+      "operation": "deleteReading",
+      "arguments": [
+        2574600,
+        "どうなん"
+      ],
+      "sourceLine": 1255,
+      "preservedBehavior": "Remove the declared どうなん form from entry 2574600."
+    },
+    {
+      "event": 14,
+      "phase": "addErrata",
+      "operation": "addReading",
+      "arguments": [
+        2015370,
+        "ワシ"
+      ],
+      "sourceLine": 1258,
+      "preservedBehavior": "Add the declared ワシ form to entry 2015370."
+    },
+    {
+      "event": 15,
+      "phase": "addErrata",
+      "operation": "addReading",
+      "arguments": [
+        1202410,
+        "カニ"
+      ],
+      "sourceLine": 1259,
+      "preservedBehavior": "Add the declared カニ form to entry 1202410."
+    },
+    {
+      "event": 16,
+      "phase": "addErrata",
+      "operation": "addReading",
+      "arguments": [
+        2145800,
+        "イラ"
+      ],
+      "sourceLine": 1260,
+      "preservedBehavior": "Add the declared イラ form to entry 2145800."
+    },
+    {
+      "event": 17,
+      "phase": "addErrata",
+      "operation": "addReading",
+      "arguments": [
+        1517840,
+        "ハチ"
+      ],
+      "sourceLine": 1261,
+      "preservedBehavior": "Add the declared ハチ form to entry 1517840."
+    },
+    {
+      "event": 18,
+      "phase": "addErrata",
+      "operation": "addReading",
+      "arguments": [
+        2029080,
+        "ねぇ"
+      ],
+      "sourceLine": 1262,
+      "preservedBehavior": "Add the declared ねぇ form to entry 2029080."
+    },
+    {
+      "event": 19,
+      "phase": "addErrata",
+      "operation": "addReading",
+      "arguments": [
+        2089020,
+        "じゃ",
+        {
+          "common": 0,
+          "conjugateP": false
+        }
+      ],
+      "sourceLine": 1263,
+      "preservedBehavior": "Add the declared じゃ form to entry 2089020."
+    },
+    {
+      "event": 20,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1517840,
+        "ハチ",
+        34
+      ],
+      "sourceLine": 1266,
+      "preservedBehavior": "Set kana_text form ハチ on entry 1517840 to the declared common rank."
+    },
+    {
+      "event": 21,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1310920,
+        "したい",
+        null
+      ],
+      "sourceLine": 1269,
+      "preservedBehavior": "Set kana_text form したい on entry 1310920 to the declared common rank."
+    },
+    {
+      "event": 22,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1159430,
+        "いたい",
+        null
+      ],
+      "sourceLine": 1270,
+      "preservedBehavior": "Set kana_text form いたい on entry 1159430 to the declared common rank."
+    },
+    {
+      "event": 23,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1523060,
+        "ほんと",
+        2
+      ],
+      "sourceLine": 1271,
+      "preservedBehavior": "Set kana_text form ほんと on entry 1523060 to the declared common rank."
+    },
+    {
+      "event": 24,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1577100,
+        "なん",
+        2
+      ],
+      "sourceLine": 1272,
+      "preservedBehavior": "Set kana_text form なん on entry 1577100 to the declared common rank."
+    },
+    {
+      "event": 25,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1012440,
+        "めく",
+        null
+      ],
+      "sourceLine": 1273,
+      "preservedBehavior": "Set kana_text form めく on entry 1012440 to the declared common rank."
+    },
+    {
+      "event": 26,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1005600,
+        "しまった",
+        null
+      ],
+      "sourceLine": 1274,
+      "preservedBehavior": "Set kana_text form しまった on entry 1005600 to the declared common rank."
+    },
+    {
+      "event": 27,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2139720,
+        "ん",
+        0
+      ],
+      "sourceLine": 1275,
+      "preservedBehavior": "Set kana_text form ん on entry 2139720 to the declared common rank."
+    },
+    {
+      "event": 28,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1309910,
+        "してい",
+        0
+      ],
+      "sourceLine": 1276,
+      "preservedBehavior": "Set kana_text form してい on entry 1309910 to the declared common rank."
+    },
+    {
+      "event": 29,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1311320,
+        "してい",
+        0
+      ],
+      "sourceLine": 1277,
+      "preservedBehavior": "Set kana_text form してい on entry 1311320 to the declared common rank."
+    },
+    {
+      "event": 30,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1423310,
+        "なか",
+        1
+      ],
+      "sourceLine": 1278,
+      "preservedBehavior": "Set kana_text form なか on entry 1423310 to the declared common rank."
+    },
+    {
+      "event": 31,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1245280,
+        "空",
+        0
+      ],
+      "sourceLine": 1279,
+      "preservedBehavior": "Set kanji_text form 空 on entry 1245280 to the declared common rank."
+    },
+    {
+      "event": 32,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1308640,
+        "しない",
+        0
+      ],
+      "sourceLine": 1280,
+      "preservedBehavior": "Set kana_text form しない on entry 1308640 to the declared common rank."
+    },
+    {
+      "event": 33,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1579130,
+        "ことし",
+        0
+      ],
+      "sourceLine": 1281,
+      "preservedBehavior": "Set kana_text form ことし on entry 1579130 to the declared common rank."
+    },
+    {
+      "event": 34,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2084660,
+        "いなくなった",
+        0
+      ],
+      "sourceLine": 1282,
+      "preservedBehavior": "Set kana_text form いなくなった on entry 2084660 to the declared common rank."
+    },
+    {
+      "event": 35,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1570850,
+        "すね",
+        null
+      ],
+      "sourceLine": 1283,
+      "preservedBehavior": "Set kana_text form すね on entry 1570850 to the declared common rank."
+    },
+    {
+      "event": 36,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1470740,
+        "のうち",
+        0
+      ],
+      "sourceLine": 1284,
+      "preservedBehavior": "Set kana_text form のうち on entry 1470740 to the declared common rank."
+    },
+    {
+      "event": 37,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1156100,
+        "いいん",
+        0
+      ],
+      "sourceLine": 1285,
+      "preservedBehavior": "Set kana_text form いいん on entry 1156100 to the declared common rank."
+    },
+    {
+      "event": 38,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1472520,
+        "はいいん",
+        null
+      ],
+      "sourceLine": 1286,
+      "preservedBehavior": "Set kana_text form はいいん on entry 1472520 to the declared common rank."
+    },
+    {
+      "event": 39,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1445000,
+        "としん",
+        0
+      ],
+      "sourceLine": 1287,
+      "preservedBehavior": "Set kana_text form としん on entry 1445000 to the declared common rank."
+    },
+    {
+      "event": 40,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1408100,
+        "たよう",
+        0
+      ],
+      "sourceLine": 1288,
+      "preservedBehavior": "Set kana_text form たよう on entry 1408100 to the declared common rank."
+    },
+    {
+      "event": 41,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2409180,
+        "ような",
+        0
+      ],
+      "sourceLine": 1289,
+      "preservedBehavior": "Set kana_text form ような on entry 2409180 to the declared common rank."
+    },
+    {
+      "event": 42,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1524550,
+        "まいそう",
+        null
+      ],
+      "sourceLine": 1290,
+      "preservedBehavior": "Set kana_text form まいそう on entry 1524550 to the declared common rank."
+    },
+    {
+      "event": 43,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1925750,
+        "そうする",
+        null
+      ],
+      "sourceLine": 1291,
+      "preservedBehavior": "Set kana_text form そうする on entry 1925750 to the declared common rank."
+    },
+    {
+      "event": 44,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1587780,
+        "いる",
+        null
+      ],
+      "sourceLine": 1292,
+      "preservedBehavior": "Set kana_text form いる on entry 1587780 to the declared common rank."
+    },
+    {
+      "event": 45,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1322180,
+        "いる",
+        null
+      ],
+      "sourceLine": 1293,
+      "preservedBehavior": "Set kana_text form いる on entry 1322180 to the declared common rank."
+    },
+    {
+      "event": 46,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1391500,
+        "いる",
+        null
+      ],
+      "sourceLine": 1294,
+      "preservedBehavior": "Set kana_text form いる on entry 1391500 to the declared common rank."
+    },
+    {
+      "event": 47,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1606560,
+        "分かる",
+        11
+      ],
+      "sourceLine": 1295,
+      "preservedBehavior": "Set kanji_text form 分かる on entry 1606560 to the declared common rank."
+    },
+    {
+      "event": 48,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1606560,
+        "わかる",
+        11
+      ],
+      "sourceLine": 1296,
+      "preservedBehavior": "Set kana_text form わかる on entry 1606560 to the declared common rank."
+    },
+    {
+      "event": 49,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1547720,
+        "来る",
+        11
+      ],
+      "sourceLine": 1297,
+      "preservedBehavior": "Set kanji_text form 来る on entry 1547720 to the declared common rank."
+    },
+    {
+      "event": 50,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1547720,
+        "くる",
+        11
+      ],
+      "sourceLine": 1298,
+      "preservedBehavior": "Set kana_text form くる on entry 1547720 to the declared common rank."
+    },
+    {
+      "event": 51,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2134680,
+        "それは",
+        0
+      ],
+      "sourceLine": 1299,
+      "preservedBehavior": "Set kana_text form それは on entry 2134680 to the declared common rank."
+    },
+    {
+      "event": 52,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2134680,
+        "そりゃ",
+        0
+      ],
+      "sourceLine": 1300,
+      "preservedBehavior": "Set kana_text form そりゃ on entry 2134680 to the declared common rank."
+    },
+    {
+      "event": 53,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1409140,
+        "からだ",
+        0
+      ],
+      "sourceLine": 1301,
+      "preservedBehavior": "Set kana_text form からだ on entry 1409140 to the declared common rank."
+    },
+    {
+      "event": 54,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1552120,
+        "ながす",
+        null
+      ],
+      "sourceLine": 1302,
+      "preservedBehavior": "Set kana_text form ながす on entry 1552120 to the declared common rank."
+    },
+    {
+      "event": 55,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1516930,
+        "ほう",
+        1
+      ],
+      "sourceLine": 1303,
+      "preservedBehavior": "Set kana_text form ほう on entry 1516930 to the declared common rank."
+    },
+    {
+      "event": 56,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1518220,
+        "ほうが",
+        null
+      ],
+      "sourceLine": 1304,
+      "preservedBehavior": "Set kana_text form ほうが on entry 1518220 to the declared common rank."
+    },
+    {
+      "event": 57,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1603340,
+        "ほうが",
+        null
+      ],
+      "sourceLine": 1305,
+      "preservedBehavior": "Set kana_text form ほうが on entry 1603340 to the declared common rank."
+    },
+    {
+      "event": 58,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1158400,
+        "いどう",
+        null
+      ],
+      "sourceLine": 1306,
+      "preservedBehavior": "Set kana_text form いどう on entry 1158400 to the declared common rank."
+    },
+    {
+      "event": 59,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1157970,
+        "いどう",
+        null
+      ],
+      "sourceLine": 1307,
+      "preservedBehavior": "Set kana_text form いどう on entry 1157970 to the declared common rank."
+    },
+    {
+      "event": 60,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1599900,
+        "になう",
+        null
+      ],
+      "sourceLine": 1308,
+      "preservedBehavior": "Set kana_text form になう on entry 1599900 to the declared common rank."
+    },
+    {
+      "event": 61,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1465590,
+        "はいる",
+        null
+      ],
+      "sourceLine": 1309,
+      "preservedBehavior": "Set kana_text form はいる on entry 1465590 to the declared common rank."
+    },
+    {
+      "event": 62,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1535930,
+        "とい",
+        0
+      ],
+      "sourceLine": 1310,
+      "preservedBehavior": "Set kana_text form とい on entry 1535930 to the declared common rank."
+    },
+    {
+      "event": 63,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1472480,
+        "はいらん",
+        null
+      ],
+      "sourceLine": 1311,
+      "preservedBehavior": "Set kana_text form はいらん on entry 1472480 to the declared common rank."
+    },
+    {
+      "event": 64,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        2019640,
+        "杯",
+        20
+      ],
+      "sourceLine": 1312,
+      "preservedBehavior": "Set kanji_text form 杯 on entry 2019640 to the declared common rank."
+    },
+    {
+      "event": 65,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1416220,
+        "たち",
+        10
+      ],
+      "sourceLine": 1313,
+      "preservedBehavior": "Set kana_text form たち on entry 1416220 to the declared common rank."
+    },
+    {
+      "event": 66,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1402900,
+        "そうなん",
+        null
+      ],
+      "sourceLine": 1314,
+      "preservedBehavior": "Set kana_text form そうなん on entry 1402900 to the declared common rank."
+    },
+    {
+      "event": 67,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1446980,
+        "いたむ",
+        null
+      ],
+      "sourceLine": 1315,
+      "preservedBehavior": "Set kana_text form いたむ on entry 1446980 to the declared common rank."
+    },
+    {
+      "event": 68,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1432710,
+        "いたむ",
+        null
+      ],
+      "sourceLine": 1316,
+      "preservedBehavior": "Set kana_text form いたむ on entry 1432710 to the declared common rank."
+    },
+    {
+      "event": 69,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1632670,
+        "かむ",
+        null
+      ],
+      "sourceLine": 1317,
+      "preservedBehavior": "Set kana_text form かむ on entry 1632670 to the declared common rank."
+    },
+    {
+      "event": 70,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1224090,
+        "きが",
+        40
+      ],
+      "sourceLine": 1318,
+      "preservedBehavior": "Set kana_text form きが on entry 1224090 to the declared common rank."
+    },
+    {
+      "event": 71,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1534470,
+        "もうこ",
+        null
+      ],
+      "sourceLine": 1319,
+      "preservedBehavior": "Set kana_text form もうこ on entry 1534470 to the declared common rank."
+    },
+    {
+      "event": 72,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1739410,
+        "わけない",
+        0
+      ],
+      "sourceLine": 1320,
+      "preservedBehavior": "Set kana_text form わけない on entry 1739410 to the declared common rank."
+    },
+    {
+      "event": 73,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1416860,
+        "誰も",
+        0
+      ],
+      "sourceLine": 1321,
+      "preservedBehavior": "Set kanji_text form 誰も on entry 1416860 to the declared common rank."
+    },
+    {
+      "event": 74,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2093030,
+        "そっか",
+        0
+      ],
+      "sourceLine": 1322,
+      "preservedBehavior": "Set kana_text form そっか on entry 2093030 to the declared common rank."
+    },
+    {
+      "event": 75,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1001840,
+        "お兄ちゃん",
+        0
+      ],
+      "sourceLine": 1323,
+      "preservedBehavior": "Set kanji_text form お兄ちゃん on entry 1001840 to the declared common rank."
+    },
+    {
+      "event": 76,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1341350,
+        "旬",
+        0
+      ],
+      "sourceLine": 1324,
+      "preservedBehavior": "Set kanji_text form 旬 on entry 1341350 to the declared common rank."
+    },
+    {
+      "event": 77,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1188790,
+        "いつか",
+        0
+      ],
+      "sourceLine": 1325,
+      "preservedBehavior": "Set kana_text form いつか on entry 1188790 to the declared common rank."
+    },
+    {
+      "event": 78,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1582900,
+        "もす",
+        null
+      ],
+      "sourceLine": 1326,
+      "preservedBehavior": "Set kana_text form もす on entry 1582900 to the declared common rank."
+    },
+    {
+      "event": 79,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1577270,
+        "セリフ",
+        0
+      ],
+      "sourceLine": 1327,
+      "preservedBehavior": "Set kana_text form セリフ on entry 1577270 to the declared common rank."
+    },
+    {
+      "event": 80,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1375650,
+        "せいか",
+        0
+      ],
+      "sourceLine": 1328,
+      "preservedBehavior": "Set kana_text form せいか on entry 1375650 to the declared common rank."
+    },
+    {
+      "event": 81,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1363540,
+        "真逆",
+        null
+      ],
+      "sourceLine": 1329,
+      "preservedBehavior": "Set kanji_text form 真逆 on entry 1363540 to the declared common rank."
+    },
+    {
+      "event": 82,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1632200,
+        "どうか",
+        0
+      ],
+      "sourceLine": 1330,
+      "preservedBehavior": "Set kana_text form どうか on entry 1632200 to the declared common rank."
+    },
+    {
+      "event": 83,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1920245,
+        "何の",
+        0
+      ],
+      "sourceLine": 1331,
+      "preservedBehavior": "Set kanji_text form 何の on entry 1920245 to the declared common rank."
+    },
+    {
+      "event": 84,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2733410,
+        "だよね",
+        0
+      ],
+      "sourceLine": 1332,
+      "preservedBehavior": "Set kana_text form だよね on entry 2733410 to the declared common rank."
+    },
+    {
+      "event": 85,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1234260,
+        "ともに",
+        0
+      ],
+      "sourceLine": 1333,
+      "preservedBehavior": "Set kana_text form ともに on entry 1234260 to the declared common rank."
+    },
+    {
+      "event": 86,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        2242840,
+        "未",
+        0
+      ],
+      "sourceLine": 1334,
+      "preservedBehavior": "Set kanji_text form 未 on entry 2242840 to the declared common rank."
+    },
+    {
+      "event": 87,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1246890,
+        "リス",
+        0
+      ],
+      "sourceLine": 1335,
+      "preservedBehavior": "Set kana_text form リス on entry 1246890 to the declared common rank."
+    },
+    {
+      "event": 88,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1257270,
+        "やらしい",
+        0
+      ],
+      "sourceLine": 1336,
+      "preservedBehavior": "Set kana_text form やらしい on entry 1257270 to the declared common rank."
+    },
+    {
+      "event": 89,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1343100,
+        "とこ",
+        0
+      ],
+      "sourceLine": 1337,
+      "preservedBehavior": "Set kana_text form とこ on entry 1343100 to the declared common rank."
+    },
+    {
+      "event": 90,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1529930,
+        "むこう",
+        14
+      ],
+      "sourceLine": 1338,
+      "preservedBehavior": "Set kana_text form むこう on entry 1529930 to the declared common rank."
+    },
+    {
+      "event": 91,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1317910,
+        "自重",
+        30
+      ],
+      "sourceLine": 1339,
+      "preservedBehavior": "Set kanji_text form 自重 on entry 1317910 to the declared common rank."
+    },
+    {
+      "event": 92,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1586420,
+        "あったかい",
+        0
+      ],
+      "sourceLine": 1340,
+      "preservedBehavior": "Set kana_text form あったかい on entry 1586420 to the declared common rank."
+    },
+    {
+      "event": 93,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1214190,
+        "かんない",
+        null
+      ],
+      "sourceLine": 1341,
+      "preservedBehavior": "Set kana_text form かんない on entry 1214190 to the declared common rank."
+    },
+    {
+      "event": 94,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1614320,
+        "かんない",
+        null
+      ],
+      "sourceLine": 1342,
+      "preservedBehavior": "Set kana_text form かんない on entry 1614320 to the declared common rank."
+    },
+    {
+      "event": 95,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1517220,
+        "ほうがい",
+        null
+      ],
+      "sourceLine": 1343,
+      "preservedBehavior": "Set kana_text form ほうがい on entry 1517220 to the declared common rank."
+    },
+    {
+      "event": 96,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1380990,
+        "せいなん",
+        null
+      ],
+      "sourceLine": 1344,
+      "preservedBehavior": "Set kana_text form せいなん on entry 1380990 to the declared common rank."
+    },
+    {
+      "event": 97,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1280630,
+        "こうなん",
+        null
+      ],
+      "sourceLine": 1345,
+      "preservedBehavior": "Set kana_text form こうなん on entry 1280630 to the declared common rank."
+    },
+    {
+      "event": 98,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1289620,
+        "こんなん",
+        null
+      ],
+      "sourceLine": 1346,
+      "preservedBehavior": "Set kana_text form こんなん on entry 1289620 to the declared common rank."
+    },
+    {
+      "event": 99,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1204090,
+        "がいまい",
+        null
+      ],
+      "sourceLine": 1347,
+      "preservedBehavior": "Set kana_text form がいまい on entry 1204090 to the declared common rank."
+    },
+    {
+      "event": 100,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1459170,
+        "ないほう",
+        null
+      ],
+      "sourceLine": 1348,
+      "preservedBehavior": "Set kana_text form ないほう on entry 1459170 to the declared common rank."
+    },
+    {
+      "event": 101,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2457920,
+        "ですか",
+        null
+      ],
+      "sourceLine": 1349,
+      "preservedBehavior": "Set kana_text form ですか on entry 2457920 to the declared common rank."
+    },
+    {
+      "event": 102,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1228390,
+        "すいもの",
+        null
+      ],
+      "sourceLine": 1350,
+      "preservedBehavior": "Set kana_text form すいもの on entry 1228390 to the declared common rank."
+    },
+    {
+      "event": 103,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1423240,
+        "きもの",
+        0
+      ],
+      "sourceLine": 1351,
+      "preservedBehavior": "Set kana_text form きもの on entry 1423240 to the declared common rank."
+    },
+    {
+      "event": 104,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1212110,
+        "かんじ",
+        0
+      ],
+      "sourceLine": 1352,
+      "preservedBehavior": "Set kana_text form かんじ on entry 1212110 to the declared common rank."
+    },
+    {
+      "event": 105,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1516160,
+        "たから",
+        0
+      ],
+      "sourceLine": 1353,
+      "preservedBehavior": "Set kana_text form たから on entry 1516160 to the declared common rank."
+    },
+    {
+      "event": 106,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1575510,
+        "コマ",
+        0
+      ],
+      "sourceLine": 1354,
+      "preservedBehavior": "Set kana_text form コマ on entry 1575510 to the declared common rank."
+    },
+    {
+      "event": 107,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1603990,
+        "街",
+        0
+      ],
+      "sourceLine": 1355,
+      "preservedBehavior": "Set kanji_text form 街 on entry 1603990 to the declared common rank."
+    },
+    {
+      "event": 108,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1548520,
+        "からむ",
+        null
+      ],
+      "sourceLine": 1356,
+      "preservedBehavior": "Set kana_text form からむ on entry 1548520 to the declared common rank."
+    },
+    {
+      "event": 109,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2174250,
+        "もしや",
+        0
+      ],
+      "sourceLine": 1357,
+      "preservedBehavior": "Set kana_text form もしや on entry 2174250 to the declared common rank."
+    },
+    {
+      "event": 110,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1595080,
+        "のく",
+        null
+      ],
+      "sourceLine": 1358,
+      "preservedBehavior": "Set kana_text form のく on entry 1595080 to the declared common rank."
+    },
+    {
+      "event": 111,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1309950,
+        "しどう",
+        0
+      ],
+      "sourceLine": 1359,
+      "preservedBehavior": "Set kana_text form しどう on entry 1309950 to the declared common rank."
+    },
+    {
+      "event": 112,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1524860,
+        "まくら",
+        9
+      ],
+      "sourceLine": 1360,
+      "preservedBehavior": "Set kana_text form まくら on entry 1524860 to the declared common rank."
+    },
+    {
+      "event": 113,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1451770,
+        "同じよう",
+        30
+      ],
+      "sourceLine": 1361,
+      "preservedBehavior": "Set kanji_text form 同じよう on entry 1451770 to the declared common rank."
+    },
+    {
+      "event": 114,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1244210,
+        "くない",
+        0
+      ],
+      "sourceLine": 1362,
+      "preservedBehavior": "Set kana_text form くない on entry 1244210 to the declared common rank."
+    },
+    {
+      "event": 115,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1898260,
+        "どうし",
+        11
+      ],
+      "sourceLine": 1363,
+      "preservedBehavior": "Set kana_text form どうし on entry 1898260 to the declared common rank."
+    },
+    {
+      "event": 116,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1407980,
+        "多分",
+        1
+      ],
+      "sourceLine": 1364,
+      "preservedBehavior": "Set kanji_text form 多分 on entry 1407980 to the declared common rank."
+    },
+    {
+      "event": 117,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1579630,
+        "なのか",
+        null
+      ],
+      "sourceLine": 1365,
+      "preservedBehavior": "Set kana_text form なのか on entry 1579630 to the declared common rank."
+    },
+    {
+      "event": 118,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1371880,
+        "すいてき",
+        null
+      ],
+      "sourceLine": 1366,
+      "preservedBehavior": "Set kana_text form すいてき on entry 1371880 to the declared common rank."
+    },
+    {
+      "event": 119,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1008420,
+        "でしょ",
+        0
+      ],
+      "sourceLine": 1367,
+      "preservedBehavior": "Set kana_text form でしょ on entry 1008420 to the declared common rank."
+    },
+    {
+      "event": 120,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1928670,
+        "だろ",
+        0
+      ],
+      "sourceLine": 1368,
+      "preservedBehavior": "Set kana_text form だろ on entry 1928670 to the declared common rank."
+    },
+    {
+      "event": 121,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1000580,
+        "彼",
+        null
+      ],
+      "sourceLine": 1369,
+      "preservedBehavior": "Set kanji_text form 彼 on entry 1000580 to the declared common rank."
+    },
+    {
+      "event": 122,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1546380,
+        "ようと",
+        0
+      ],
+      "sourceLine": 1370,
+      "preservedBehavior": "Set kana_text form ようと on entry 1546380 to the declared common rank."
+    },
+    {
+      "event": 123,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2246510,
+        "なさそう",
+        0
+      ],
+      "sourceLine": 1371,
+      "preservedBehavior": "Set kana_text form なさそう on entry 2246510 to the declared common rank."
+    },
+    {
+      "event": 124,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        2246510,
+        "無さそう",
+        0
+      ],
+      "sourceLine": 1372,
+      "preservedBehavior": "Set kanji_text form 無さそう on entry 2246510 to the declared common rank."
+    },
+    {
+      "event": 125,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1579110,
+        "きょう",
+        2
+      ],
+      "sourceLine": 1373,
+      "preservedBehavior": "Set kana_text form きょう on entry 1579110 to the declared common rank."
+    },
+    {
+      "event": 126,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1235870,
+        "きょう",
+        null
+      ],
+      "sourceLine": 1374,
+      "preservedBehavior": "Set kana_text form きょう on entry 1235870 to the declared common rank."
+    },
+    {
+      "event": 127,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1587200,
+        "いこう",
+        11
+      ],
+      "sourceLine": 1375,
+      "preservedBehavior": "Set kana_text form いこう on entry 1587200 to the declared common rank."
+    },
+    {
+      "event": 128,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1158240,
+        "いこう",
+        0
+      ],
+      "sourceLine": 1376,
+      "preservedBehavior": "Set kana_text form いこう on entry 1158240 to the declared common rank."
+    },
+    {
+      "event": 129,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1534440,
+        "もうまく",
+        null
+      ],
+      "sourceLine": 1377,
+      "preservedBehavior": "Set kana_text form もうまく on entry 1534440 to the declared common rank."
+    },
+    {
+      "event": 130,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1459400,
+        "ないよう",
+        0
+      ],
+      "sourceLine": 1378,
+      "preservedBehavior": "Set kana_text form ないよう on entry 1459400 to the declared common rank."
+    },
+    {
+      "event": 131,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1590480,
+        "カッコ",
+        0
+      ],
+      "sourceLine": 1379,
+      "preservedBehavior": "Set kana_text form カッコ on entry 1590480 to the declared common rank."
+    },
+    {
+      "event": 132,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1208240,
+        "カッコ",
+        0
+      ],
+      "sourceLine": 1380,
+      "preservedBehavior": "Set kana_text form カッコ on entry 1208240 to the declared common rank."
+    },
+    {
+      "event": 133,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1495770,
+        "つける",
+        11
+      ],
+      "sourceLine": 1381,
+      "preservedBehavior": "Set kana_text form つける on entry 1495770 to the declared common rank."
+    },
+    {
+      "event": 134,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1610400,
+        "つける",
+        12
+      ],
+      "sourceLine": 1382,
+      "preservedBehavior": "Set kana_text form つける on entry 1610400 to the declared common rank."
+    },
+    {
+      "event": 135,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1495740,
+        "つく",
+        11
+      ],
+      "sourceLine": 1383,
+      "preservedBehavior": "Set kana_text form つく on entry 1495740 to the declared common rank."
+    },
+    {
+      "event": 136,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1495740,
+        "付く",
+        11
+      ],
+      "sourceLine": 1384,
+      "preservedBehavior": "Set kanji_text form 付く on entry 1495740 to the declared common rank."
+    },
+    {
+      "event": 137,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1611000,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1611000."
+    },
+    {
+      "event": 138,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1305070,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1305070."
+    },
+    {
+      "event": 139,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1583470,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1583470."
+    },
+    {
+      "event": 140,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1446760,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1446760."
+    },
+    {
+      "event": 141,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1302910,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1302910."
+    },
+    {
+      "event": 142,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2802220,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 2802220."
+    },
+    {
+      "event": 143,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1535790,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1535790."
+    },
+    {
+      "event": 144,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2119750,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 2119750."
+    },
+    {
+      "event": 145,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2220330,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 2220330."
+    },
+    {
+      "event": 146,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1207600,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1207600."
+    },
+    {
+      "event": 147,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1399970,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1399970."
+    },
+    {
+      "event": 148,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2094480,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 2094480."
+    },
+    {
+      "event": 149,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2729170,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 2729170."
+    },
+    {
+      "event": 150,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1580640,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1580640."
+    },
+    {
+      "event": 151,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1569440,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1569440."
+    },
+    {
+      "event": 152,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2423450,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 2423450."
+    },
+    {
+      "event": 153,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1578850,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1578850."
+    },
+    {
+      "event": 154,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1609500,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1609500."
+    },
+    {
+      "event": 155,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1444150,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1444150."
+    },
+    {
+      "event": 156,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1546640,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1546640."
+    },
+    {
+      "event": 157,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1314490,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1314490."
+    },
+    {
+      "event": 158,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2643710,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 2643710."
+    },
+    {
+      "event": 159,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1611260,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1611260."
+    },
+    {
+      "event": 160,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2208960,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 2208960."
+    },
+    {
+      "event": 161,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1155020,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1155020."
+    },
+    {
+      "event": 162,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1208240,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1208240."
+    },
+    {
+      "event": 163,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1207590,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1207590."
+    },
+    {
+      "event": 164,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1279680,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1279680."
+    },
+    {
+      "event": 165,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1469810,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1469810."
+    },
+    {
+      "event": 166,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1474370,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1474370."
+    },
+    {
+      "event": 167,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1609300,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1609300."
+    },
+    {
+      "event": 168,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1612920,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1612920."
+    },
+    {
+      "event": 169,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2827450,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 2827450."
+    },
+    {
+      "event": 170,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1333570,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1333570."
+    },
+    {
+      "event": 171,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1610400,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 1610400."
+    },
+    {
+      "event": 172,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2097190,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1427,
+      "preservedBehavior": "Remove misc:uk from entry 2097190."
+    },
+    {
+      "event": 173,
+      "phase": "addErrata",
+      "operation": "addSenseProp",
+      "arguments": [
+        1394680,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1431,
+      "preservedBehavior": "Add the declared sense property to entry 1394680 sense 0."
+    },
+    {
+      "event": 174,
+      "phase": "addErrata",
+      "operation": "addSenseProp",
+      "arguments": [
+        2272830,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1432,
+      "preservedBehavior": "Add the declared sense property to entry 2272830 sense 0."
+    },
+    {
+      "event": 175,
+      "phase": "addErrata",
+      "operation": "addSenseProp",
+      "arguments": [
+        1270680,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1433,
+      "preservedBehavior": "Add the declared sense property to entry 1270680 sense 0."
+    },
+    {
+      "event": 176,
+      "phase": "addErrata",
+      "operation": "addSenseProp",
+      "arguments": [
+        1541560,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1434,
+      "preservedBehavior": "Add the declared sense property to entry 1541560 sense 0."
+    },
+    {
+      "event": 177,
+      "phase": "addErrata",
+      "operation": "addSenseProp",
+      "arguments": [
+        1739410,
+        1,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1435,
+      "preservedBehavior": "Add the declared sense property to entry 1739410 sense 1."
+    },
+    {
+      "event": 178,
+      "phase": "addErrata",
+      "operation": "addSenseProp",
+      "arguments": [
+        1207610,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1436,
+      "preservedBehavior": "Add the declared sense property to entry 1207610 sense 0."
+    },
+    {
+      "event": 179,
+      "phase": "addErrata",
+      "operation": "addSenseProp",
+      "arguments": [
+        2424410,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1437,
+      "preservedBehavior": "Add the declared sense property to entry 2424410 sense 0."
+    },
+    {
+      "event": 180,
+      "phase": "addErrata",
+      "operation": "addSenseProp",
+      "arguments": [
+        1387080,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1438,
+      "preservedBehavior": "Add the declared sense property to entry 1387080 sense 0."
+    },
+    {
+      "event": 181,
+      "phase": "addErrata",
+      "operation": "addSenseProp",
+      "arguments": [
+        1509350,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1439,
+      "preservedBehavior": "Add the declared sense property to entry 1509350 sense 0."
+    },
+    {
+      "event": 182,
+      "phase": "addErrata",
+      "operation": "addSenseProp",
+      "arguments": [
+        1637460,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1440,
+      "preservedBehavior": "Add the declared sense property to entry 1637460 sense 0."
+    },
+    {
+      "event": 183,
+      "phase": "addErrata",
+      "operation": "addSenseProp",
+      "arguments": [
+        2425930,
+        0,
+        "pos",
+        "prt"
+      ],
+      "sourceLine": 1443,
+      "preservedBehavior": "Add the declared sense property to entry 2425930 sense 0."
+    },
+    {
+      "event": 184,
+      "phase": "addErrata",
+      "operation": "addSenseProp",
+      "arguments": [
+        2457930,
+        0,
+        "pos",
+        "prt"
+      ],
+      "sourceLine": 1444,
+      "preservedBehavior": "Add the declared sense property to entry 2457930 sense 0."
+    },
+    {
+      "event": 185,
+      "phase": "addErrata",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2629920,
+        "pos",
+        "adv-to"
+      ],
+      "sourceLine": 1447,
+      "preservedBehavior": "Remove pos:adv-to from entry 2629920."
+    },
+    {
+      "event": 186,
+      "phase": "addErrata",
+      "operation": "deleteSenses",
+      "arguments": [
+        2611370,
+        {
+          "predicate": "() => true"
+        }
+      ],
+      "sourceLine": 1450,
+      "preservedBehavior": "Remove the declared sense subset from entry 2611370."
+    },
+    {
+      "event": 187,
+      "phase": "addErrata",
+      "operation": "deleteReading",
+      "arguments": [
+        2611370,
+        "為り"
+      ],
+      "sourceLine": 1458,
+      "preservedBehavior": "Remove the declared 為り form from entry 2611370."
+    },
+    {
+      "event": 188,
+      "phase": "addErrata",
+      "operation": "rearrangeReadingsConj",
+      "arguments": [
+        1584060,
+        "kana_text",
+        "つつ"
+      ],
+      "sourceLine": 1461,
+      "preservedBehavior": "Give entry 1584060 forms with the declared prefix stable precedence."
+    },
+    {
+      "event": 189,
+      "phase": "addErrata",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1584060,
+        "つつむ",
+        6
+      ],
+      "sourceLine": 1462,
+      "preservedBehavior": "Set kana_text form つつむ on entry 1584060 to the declared common rank."
+    },
+    {
+      "event": 190,
+      "phase": "addErrata",
+      "operation": "rearrangeReadingsConj",
+      "arguments": [
+        1602880,
+        "kanji_text",
+        "増や"
+      ],
+      "sourceLine": 1465,
+      "preservedBehavior": "Give entry 1602880 forms with the declared prefix stable precedence."
+    },
+    {
+      "event": 191,
+      "phase": "addErrata",
+      "operation": "deleteSenses",
+      "arguments": [
+        1008490,
+        {
+          "predicate": "(prop) => prop.tag === 'pos' && prop.text === 'n'"
+        }
+      ],
+      "sourceLine": 1468,
+      "preservedBehavior": "Remove the declared sense subset from entry 1008490."
+    },
+    {
+      "event": 192,
+      "phase": "addErrata",
+      "operation": "deleteSenses",
+      "arguments": [
+        2017560,
+        {
+          "predicate": "(prop) => prop.tag === 'pos' && prop.text === 'prt'"
+        }
+      ],
+      "sourceLine": 1471,
+      "preservedBehavior": "Remove the declared sense subset from entry 2017560."
+    },
+    {
+      "event": 193,
+      "phase": "addErrata",
+      "operation": "deleteConjugation",
+      "arguments": [
+        2029110,
+        2257550
+      ],
+      "sourceLine": 1474,
+      "preservedBehavior": "Remove the declared generated lineage 2029110 from root 2257550."
+    },
+    {
+      "event": 194,
+      "phase": "addErrata",
+      "operation": "deleteConjugation",
+      "arguments": [
+        2086640,
+        2684620
+      ],
+      "sourceLine": 1475,
+      "preservedBehavior": "Remove the declared generated lineage 2086640 from root 2684620."
+    },
+    {
+      "event": 195,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2136890,
+        "とする",
+        null
+      ],
+      "sourceLine": 1581,
+      "preservedBehavior": "Set kana_text form とする on entry 2136890 to the declared common rank."
+    },
+    {
+      "event": 196,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2100900,
+        "となる",
+        null
+      ],
+      "sourceLine": 1582,
+      "preservedBehavior": "Set kana_text form となる on entry 2100900 to the declared common rank."
+    },
+    {
+      "event": 197,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1006200,
+        "すべき",
+        null
+      ],
+      "sourceLine": 1583,
+      "preservedBehavior": "Set kana_text form すべき on entry 1006200 to the declared common rank."
+    },
+    {
+      "event": 198,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2683060,
+        "なのです",
+        null
+      ],
+      "sourceLine": 1584,
+      "preservedBehavior": "Set kana_text form なのです on entry 2683060 to the declared common rank."
+    },
+    {
+      "event": 199,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2683060,
+        "なんです",
+        null
+      ],
+      "sourceLine": 1585,
+      "preservedBehavior": "Set kana_text form なんです on entry 2683060 to the declared common rank."
+    },
+    {
+      "event": 200,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1001200,
+        "おい",
+        null
+      ],
+      "sourceLine": 1586,
+      "preservedBehavior": "Set kana_text form おい on entry 1001200 to the declared common rank."
+    },
+    {
+      "event": 201,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1001200,
+        "おおい",
+        null
+      ],
+      "sourceLine": 1587,
+      "preservedBehavior": "Set kana_text form おおい on entry 1001200 to the declared common rank."
+    },
+    {
+      "event": 202,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1441840,
+        "伝い",
+        0
+      ],
+      "sourceLine": 1588,
+      "preservedBehavior": "Set kanji_text form 伝い on entry 1441840 to the declared common rank."
+    },
+    {
+      "event": 203,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1409140,
+        "身体",
+        0
+      ],
+      "sourceLine": 1589,
+      "preservedBehavior": "Set kanji_text form 身体 on entry 1409140 to the declared common rank."
+    },
+    {
+      "event": 204,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        2830705,
+        "身体",
+        null
+      ],
+      "sourceLine": 1590,
+      "preservedBehavior": "Set kanji_text form 身体 on entry 2830705 to the declared common rank."
+    },
+    {
+      "event": 205,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1009040,
+        "どきっと",
+        0
+      ],
+      "sourceLine": 1591,
+      "preservedBehavior": "Set kana_text form どきっと on entry 1009040 to the declared common rank."
+    },
+    {
+      "event": 206,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2261300,
+        "するべき",
+        null
+      ],
+      "sourceLine": 1592,
+      "preservedBehavior": "Set kana_text form するべき on entry 2261300 to the declared common rank."
+    },
+    {
+      "event": 207,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2215430,
+        "には",
+        null
+      ],
+      "sourceLine": 1593,
+      "preservedBehavior": "Set kana_text form には on entry 2215430 to the declared common rank."
+    },
+    {
+      "event": 208,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2210140,
+        "まい",
+        null
+      ],
+      "sourceLine": 1594,
+      "preservedBehavior": "Set kana_text form まい on entry 2210140 to the declared common rank."
+    },
+    {
+      "event": 209,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2192950,
+        "なさい",
+        null
+      ],
+      "sourceLine": 1595,
+      "preservedBehavior": "Set kana_text form なさい on entry 2192950 to the declared common rank."
+    },
+    {
+      "event": 210,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2143350,
+        "かも",
+        null
+      ],
+      "sourceLine": 1596,
+      "preservedBehavior": "Set kana_text form かも on entry 2143350 to the declared common rank."
+    },
+    {
+      "event": 211,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2106890,
+        "そのよう",
+        null
+      ],
+      "sourceLine": 1597,
+      "preservedBehavior": "Set kana_text form そのよう on entry 2106890 to the declared common rank."
+    },
+    {
+      "event": 212,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2084040,
+        "すれば",
+        null
+      ],
+      "sourceLine": 1598,
+      "preservedBehavior": "Set kana_text form すれば on entry 2084040 to the declared common rank."
+    },
+    {
+      "event": 213,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2036080,
+        "うつ",
+        null
+      ],
+      "sourceLine": 1599,
+      "preservedBehavior": "Set kana_text form うつ on entry 2036080 to the declared common rank."
+    },
+    {
+      "event": 214,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1922760,
+        "という",
+        null
+      ],
+      "sourceLine": 1600,
+      "preservedBehavior": "Set kana_text form という on entry 1922760 to the declared common rank."
+    },
+    {
+      "event": 215,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1632520,
+        "ふん",
+        null
+      ],
+      "sourceLine": 1601,
+      "preservedBehavior": "Set kana_text form ふん on entry 1632520 to the declared common rank."
+    },
+    {
+      "event": 216,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1631750,
+        "がる",
+        null
+      ],
+      "sourceLine": 1602,
+      "preservedBehavior": "Set kana_text form がる on entry 1631750 to the declared common rank."
+    },
+    {
+      "event": 217,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1394680,
+        "そういう",
+        null
+      ],
+      "sourceLine": 1603,
+      "preservedBehavior": "Set kana_text form そういう on entry 1394680 to the declared common rank."
+    },
+    {
+      "event": 218,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1208840,
+        "かつ",
+        null
+      ],
+      "sourceLine": 1604,
+      "preservedBehavior": "Set kana_text form かつ on entry 1208840 to the declared common rank."
+    },
+    {
+      "event": 219,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1011430,
+        "べき",
+        null
+      ],
+      "sourceLine": 1605,
+      "preservedBehavior": "Set kana_text form べき on entry 1011430 to the declared common rank."
+    },
+    {
+      "event": 220,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1008340,
+        "である",
+        null
+      ],
+      "sourceLine": 1606,
+      "preservedBehavior": "Set kana_text form である on entry 1008340 to the declared common rank."
+    },
+    {
+      "event": 221,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1007960,
+        "ちんちん",
+        null
+      ],
+      "sourceLine": 1607,
+      "preservedBehavior": "Set kana_text form ちんちん on entry 1007960 to the declared common rank."
+    },
+    {
+      "event": 222,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1301230,
+        "さんなん",
+        null
+      ],
+      "sourceLine": 1608,
+      "preservedBehavior": "Set kana_text form さんなん on entry 1301230 to the declared common rank."
+    },
+    {
+      "event": 223,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1311010,
+        "氏",
+        20
+      ],
+      "sourceLine": 1609,
+      "preservedBehavior": "Set kanji_text form 氏 on entry 1311010 to the declared common rank."
+    },
+    {
+      "event": 224,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1311010,
+        "うじ",
+        20
+      ],
+      "sourceLine": 1610,
+      "preservedBehavior": "Set kana_text form うじ on entry 1311010 to the declared common rank."
+    },
+    {
+      "event": 225,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        2101130,
+        "氏",
+        21
+      ],
+      "sourceLine": 1611,
+      "preservedBehavior": "Set kanji_text form 氏 on entry 2101130 to the declared common rank."
+    },
+    {
+      "event": 226,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1155180,
+        "いない",
+        10
+      ],
+      "sourceLine": 1612,
+      "preservedBehavior": "Set kana_text form いない on entry 1155180 to the declared common rank."
+    },
+    {
+      "event": 227,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1609450,
+        "思いきって",
+        0
+      ],
+      "sourceLine": 1613,
+      "preservedBehavior": "Set kanji_text form 思いきって on entry 1609450 to the declared common rank."
+    },
+    {
+      "event": 228,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1309320,
+        "思いきる",
+        0
+      ],
+      "sourceLine": 1614,
+      "preservedBehavior": "Set kanji_text form 思いきる on entry 1309320 to the declared common rank."
+    },
+    {
+      "event": 229,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1312880,
+        "メス",
+        15
+      ],
+      "sourceLine": 1615,
+      "preservedBehavior": "Set kana_text form メス on entry 1312880 to the declared common rank."
+    },
+    {
+      "event": 230,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1312880,
+        "めす",
+        null
+      ],
+      "sourceLine": 1616,
+      "preservedBehavior": "Set kana_text form めす on entry 1312880 to the declared common rank."
+    },
+    {
+      "event": 231,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2061540,
+        "ぶっちゃける",
+        0
+      ],
+      "sourceLine": 1617,
+      "preservedBehavior": "Set kana_text form ぶっちゃける on entry 2061540 to the declared common rank."
+    },
+    {
+      "event": 232,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2034520,
+        "ですら",
+        0
+      ],
+      "sourceLine": 1618,
+      "preservedBehavior": "Set kana_text form ですら on entry 2034520 to the declared common rank."
+    },
+    {
+      "event": 233,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1566210,
+        "いずれ",
+        9
+      ],
+      "sourceLine": 1619,
+      "preservedBehavior": "Set kana_text form いずれ on entry 1566210 to the declared common rank."
+    },
+    {
+      "event": 234,
+      "phase": "addErrataFeb17",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2021030,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1621,
+      "preservedBehavior": "Remove misc:uk from entry 2021030."
+    },
+    {
+      "event": 235,
+      "phase": "addErrataFeb17",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1586730,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1622,
+      "preservedBehavior": "Remove misc:uk from entry 1586730."
+    },
+    {
+      "event": 236,
+      "phase": "addErrataFeb17",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1441400,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1623,
+      "preservedBehavior": "Remove misc:uk from entry 1441400."
+    },
+    {
+      "event": 237,
+      "phase": "addErrataFeb17",
+      "operation": "addSenseProp",
+      "arguments": [
+        1569590,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1625,
+      "preservedBehavior": "Add the declared sense property to entry 1569590 sense 0."
+    },
+    {
+      "event": 238,
+      "phase": "addErrataFeb17",
+      "operation": "addSenseProp",
+      "arguments": [
+        1590540,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1626,
+      "preservedBehavior": "Add the declared sense property to entry 1590540 sense 0."
+    },
+    {
+      "event": 239,
+      "phase": "addErrataFeb17",
+      "operation": "addSenseProp",
+      "arguments": [
+        1430200,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1627,
+      "preservedBehavior": "Add the declared sense property to entry 1430200 sense 0."
+    },
+    {
+      "event": 240,
+      "phase": "addErrataFeb17",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        1374550,
+        false
+      ],
+      "sourceLine": 1629,
+      "preservedBehavior": "Set entry 1374550 primary-no-kanji to false."
+    },
+    {
+      "event": 241,
+      "phase": "addErrataFeb17",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        1591900,
+        false
+      ],
+      "sourceLine": 1630,
+      "preservedBehavior": "Set entry 1591900 primary-no-kanji to false."
+    },
+    {
+      "event": 242,
+      "phase": "addErrataFeb17",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        1000230,
+        false
+      ],
+      "sourceLine": 1631,
+      "preservedBehavior": "Set entry 1000230 primary-no-kanji to false."
+    },
+    {
+      "event": 243,
+      "phase": "addErrataFeb17",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        1517810,
+        false
+      ],
+      "sourceLine": 1632,
+      "preservedBehavior": "Set entry 1517810 primary-no-kanji to false."
+    },
+    {
+      "event": 244,
+      "phase": "addErrataFeb17",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        1585410,
+        false
+      ],
+      "sourceLine": 1633,
+      "preservedBehavior": "Set entry 1585410 primary-no-kanji to false."
+    },
+    {
+      "event": 245,
+      "phase": "addErrataFeb17",
+      "operation": "addReading",
+      "arguments": [
+        1029150,
+        "えっち"
+      ],
+      "sourceLine": 1635,
+      "preservedBehavior": "Add the declared えっち form to entry 1029150."
+    },
+    {
+      "event": 246,
+      "phase": "addErrataFeb17",
+      "operation": "addReading",
+      "arguments": [
+        1363740,
+        "マネ"
+      ],
+      "sourceLine": 1636,
+      "preservedBehavior": "Add the declared マネ form to entry 1363740."
+    },
+    {
+      "event": 247,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1363740,
+        "マネ",
+        9
+      ],
+      "sourceLine": 1637,
+      "preservedBehavior": "Set kana_text form マネ on entry 1363740 to the declared common rank."
+    },
+    {
+      "event": 248,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1000420,
+        "彼の",
+        null
+      ],
+      "sourceLine": 1639,
+      "preservedBehavior": "Set kanji_text form 彼の on entry 1000420 to the declared common rank."
+    },
+    {
+      "event": 249,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        2219590,
+        "元",
+        10
+      ],
+      "sourceLine": 1640,
+      "preservedBehavior": "Set kanji_text form 元 on entry 2219590 to the declared common rank."
+    },
+    {
+      "event": 250,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2219590,
+        "もと",
+        10
+      ],
+      "sourceLine": 1641,
+      "preservedBehavior": "Set kana_text form もと on entry 2219590 to the declared common rank."
+    },
+    {
+      "event": 251,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1394760,
+        "さほど",
+        0
+      ],
+      "sourceLine": 1642,
+      "preservedBehavior": "Set kana_text form さほど on entry 1394760 to the declared common rank."
+    },
+    {
+      "event": 252,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1529560,
+        "なし",
+        10
+      ],
+      "sourceLine": 1643,
+      "preservedBehavior": "Set kana_text form なし on entry 1529560 to the declared common rank."
+    },
+    {
+      "event": 253,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1436830,
+        "ていない",
+        null
+      ],
+      "sourceLine": 1644,
+      "preservedBehavior": "Set kana_text form ていない on entry 1436830 to the declared common rank."
+    },
+    {
+      "event": 254,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1057580,
+        "さぼる",
+        0
+      ],
+      "sourceLine": 1645,
+      "preservedBehavior": "Set kana_text form さぼる on entry 1057580 to the declared common rank."
+    },
+    {
+      "event": 255,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1402420,
+        "走り",
+        null
+      ],
+      "sourceLine": 1646,
+      "preservedBehavior": "Set kanji_text form 走り on entry 1402420 to the declared common rank."
+    },
+    {
+      "event": 256,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1402420,
+        "はしり",
+        null
+      ],
+      "sourceLine": 1647,
+      "preservedBehavior": "Set kana_text form はしり on entry 1402420 to the declared common rank."
+    },
+    {
+      "event": 257,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1209540,
+        "かる",
+        null
+      ],
+      "sourceLine": 1648,
+      "preservedBehavior": "Set kana_text form かる on entry 1209540 to the declared common rank."
+    },
+    {
+      "event": 258,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1244840,
+        "かる",
+        null
+      ],
+      "sourceLine": 1649,
+      "preservedBehavior": "Set kana_text form かる on entry 1244840 to the declared common rank."
+    },
+    {
+      "event": 259,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1280640,
+        "こうは",
+        0
+      ],
+      "sourceLine": 1650,
+      "preservedBehavior": "Set kana_text form こうは on entry 1280640 to the declared common rank."
+    },
+    {
+      "event": 260,
+      "phase": "addErrataFeb17",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1158960,
+        "いほう",
+        0
+      ],
+      "sourceLine": 1651,
+      "preservedBehavior": "Set kana_text form いほう on entry 1158960 to the declared common rank."
+    },
+    {
+      "event": 261,
+      "phase": "addErrataFeb17",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2122310,
+        "pos",
+        "prt"
+      ],
+      "sourceLine": 1653,
+      "preservedBehavior": "Remove pos:prt from entry 2122310."
+    },
+    {
+      "event": 262,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        2067770,
+        "等",
+        null
+      ],
+      "sourceLine": 1661,
+      "preservedBehavior": "Set kanji_text form 等 on entry 2067770 to the declared common rank."
+    },
+    {
+      "event": 263,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2067770,
+        "ら",
+        null
+      ],
+      "sourceLine": 1662,
+      "preservedBehavior": "Set kana_text form ら on entry 2067770 to the declared common rank."
+    },
+    {
+      "event": 264,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1242230,
+        "近よる",
+        38
+      ],
+      "sourceLine": 1663,
+      "preservedBehavior": "Set kanji_text form 近よる on entry 1242230 to the declared common rank."
+    },
+    {
+      "event": 265,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1315120,
+        "字",
+        0
+      ],
+      "sourceLine": 1664,
+      "preservedBehavior": "Set kanji_text form 字 on entry 1315120 to the declared common rank."
+    },
+    {
+      "event": 266,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1315120,
+        "あざ",
+        0
+      ],
+      "sourceLine": 1665,
+      "preservedBehavior": "Set kana_text form あざ on entry 1315120 to the declared common rank."
+    },
+    {
+      "event": 267,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1315130,
+        "字",
+        5
+      ],
+      "sourceLine": 1666,
+      "preservedBehavior": "Set kanji_text form 字 on entry 1315130 to the declared common rank."
+    },
+    {
+      "event": 268,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1315130,
+        "じ",
+        0
+      ],
+      "sourceLine": 1667,
+      "preservedBehavior": "Set kana_text form じ on entry 1315130 to the declared common rank."
+    },
+    {
+      "event": 269,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1005530,
+        "しっくり",
+        0
+      ],
+      "sourceLine": 1668,
+      "preservedBehavior": "Set kana_text form しっくり on entry 1005530 to the declared common rank."
+    },
+    {
+      "event": 270,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1554850,
+        "りきむ",
+        null
+      ],
+      "sourceLine": 1669,
+      "preservedBehavior": "Set kana_text form りきむ on entry 1554850 to the declared common rank."
+    },
+    {
+      "event": 271,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2812650,
+        "ゲー",
+        0
+      ],
+      "sourceLine": 1670,
+      "preservedBehavior": "Set kana_text form ゲー on entry 2812650 to the declared common rank."
+    },
+    {
+      "event": 272,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2083340,
+        "やろう",
+        0
+      ],
+      "sourceLine": 1671,
+      "preservedBehavior": "Set kana_text form やろう on entry 2083340 to the declared common rank."
+    },
+    {
+      "event": 273,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2083340,
+        "やろ",
+        0
+      ],
+      "sourceLine": 1672,
+      "preservedBehavior": "Set kana_text form やろ on entry 2083340 to the declared common rank."
+    },
+    {
+      "event": 274,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1008730,
+        "とろ",
+        null
+      ],
+      "sourceLine": 1673,
+      "preservedBehavior": "Set kana_text form とろ on entry 1008730 to the declared common rank."
+    },
+    {
+      "event": 275,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1457840,
+        "ないかい",
+        null
+      ],
+      "sourceLine": 1674,
+      "preservedBehavior": "Set kana_text form ないかい on entry 1457840 to the declared common rank."
+    },
+    {
+      "event": 276,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2829697,
+        "いかん",
+        0
+      ],
+      "sourceLine": 1675,
+      "preservedBehavior": "Set kana_text form いかん on entry 2829697 to the declared common rank."
+    },
+    {
+      "event": 277,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2157330,
+        "おじゃま",
+        9
+      ],
+      "sourceLine": 1676,
+      "preservedBehavior": "Set kana_text form おじゃま on entry 2157330 to the declared common rank."
+    },
+    {
+      "event": 278,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1199800,
+        "かいらん",
+        null
+      ],
+      "sourceLine": 1677,
+      "preservedBehavior": "Set kana_text form かいらん on entry 1199800 to the declared common rank."
+    },
+    {
+      "event": 279,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2719580,
+        "いらん",
+        0
+      ],
+      "sourceLine": 1678,
+      "preservedBehavior": "Set kana_text form いらん on entry 2719580 to the declared common rank."
+    },
+    {
+      "event": 280,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1808040,
+        "めちゃ",
+        0
+      ],
+      "sourceLine": 1679,
+      "preservedBehavior": "Set kana_text form めちゃ on entry 1808040 to the declared common rank."
+    },
+    {
+      "event": 281,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1277450,
+        "すき",
+        9
+      ],
+      "sourceLine": 1680,
+      "preservedBehavior": "Set kana_text form すき on entry 1277450 to the declared common rank."
+    },
+    {
+      "event": 282,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1006460,
+        "ズレる",
+        0
+      ],
+      "sourceLine": 1681,
+      "preservedBehavior": "Set kana_text form ズレる on entry 1006460 to the declared common rank."
+    },
+    {
+      "event": 283,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1522290,
+        "本会議",
+        0
+      ],
+      "sourceLine": 1682,
+      "preservedBehavior": "Set kanji_text form 本会議 on entry 1522290 to the declared common rank."
+    },
+    {
+      "event": 284,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1522290,
+        "ほんかいぎ",
+        0
+      ],
+      "sourceLine": 1683,
+      "preservedBehavior": "Set kana_text form ほんかいぎ on entry 1522290 to the declared common rank."
+    },
+    {
+      "event": 285,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1220570,
+        "きたい",
+        10
+      ],
+      "sourceLine": 1684,
+      "preservedBehavior": "Set kana_text form きたい on entry 1220570 to the declared common rank."
+    },
+    {
+      "event": 286,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1221020,
+        "きたい",
+        11
+      ],
+      "sourceLine": 1685,
+      "preservedBehavior": "Set kana_text form きたい on entry 1221020 to the declared common rank."
+    },
+    {
+      "event": 287,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2083990,
+        "ならん",
+        0
+      ],
+      "sourceLine": 1686,
+      "preservedBehavior": "Set kana_text form ならん on entry 2083990 to the declared common rank."
+    },
+    {
+      "event": 288,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        2518850,
+        "切れ",
+        0
+      ],
+      "sourceLine": 1687,
+      "preservedBehavior": "Set kanji_text form 切れ on entry 2518850 to the declared common rank."
+    },
+    {
+      "event": 289,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1221900,
+        "基地外",
+        0
+      ],
+      "sourceLine": 1688,
+      "preservedBehavior": "Set kanji_text form 基地外 on entry 1221900 to the declared common rank."
+    },
+    {
+      "event": 290,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1379380,
+        "せいと",
+        10
+      ],
+      "sourceLine": 1689,
+      "preservedBehavior": "Set kana_text form せいと on entry 1379380 to the declared common rank."
+    },
+    {
+      "event": 291,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1203280,
+        "外に",
+        null
+      ],
+      "sourceLine": 1690,
+      "preservedBehavior": "Set kanji_text form 外に on entry 1203280 to the declared common rank."
+    },
+    {
+      "event": 292,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1383690,
+        "後継ぎ",
+        0
+      ],
+      "sourceLine": 1691,
+      "preservedBehavior": "Set kanji_text form 後継ぎ on entry 1383690 to the declared common rank."
+    },
+    {
+      "event": 293,
+      "phase": "addErrataJan18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2083600,
+        "すまん",
+        0
+      ],
+      "sourceLine": 1692,
+      "preservedBehavior": "Set kana_text form すまん on entry 2083600 to the declared common rank."
+    },
+    {
+      "event": 294,
+      "phase": "addErrataJan18",
+      "operation": "addReading",
+      "arguments": [
+        1384840,
+        "キレ",
+        {
+          "common": 0
+        }
+      ],
+      "sourceLine": 1694,
+      "preservedBehavior": "Add the declared キレ form to entry 1384840."
+    },
+    {
+      "event": 295,
+      "phase": "addErrataJan18",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1303400,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1696,
+      "preservedBehavior": "Remove misc:uk from entry 1303400."
+    },
+    {
+      "event": 296,
+      "phase": "addErrataJan18",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1434020,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1697,
+      "preservedBehavior": "Remove misc:uk from entry 1434020."
+    },
+    {
+      "event": 297,
+      "phase": "addErrataJan18",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1196520,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1698,
+      "preservedBehavior": "Remove misc:uk from entry 1196520."
+    },
+    {
+      "event": 298,
+      "phase": "addErrataJan18",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1414190,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1699,
+      "preservedBehavior": "Remove misc:uk from entry 1414190."
+    },
+    {
+      "event": 299,
+      "phase": "addErrataJan18",
+      "operation": "addSenseProp",
+      "arguments": [
+        1188380,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1701,
+      "preservedBehavior": "Add the declared sense property to entry 1188380 sense 0."
+    },
+    {
+      "event": 300,
+      "phase": "addErrataJan18",
+      "operation": "addSenseProp",
+      "arguments": [
+        1258330,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1702,
+      "preservedBehavior": "Add the declared sense property to entry 1258330 sense 0."
+    },
+    {
+      "event": 301,
+      "phase": "addErrataJan18",
+      "operation": "addSenseProp",
+      "arguments": [
+        2217330,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1703,
+      "preservedBehavior": "Add the declared sense property to entry 2217330 sense 0."
+    },
+    {
+      "event": 302,
+      "phase": "addErrataJan18",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        1258330,
+        false
+      ],
+      "sourceLine": 1705,
+      "preservedBehavior": "Set entry 1258330 primary-no-kanji to false."
+    },
+    {
+      "event": 303,
+      "phase": "addErrataJan18",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        1588930,
+        false
+      ],
+      "sourceLine": 1706,
+      "preservedBehavior": "Set entry 1588930 primary-no-kanji to false."
+    },
+    {
+      "event": 304,
+      "phase": "addErrataJan18",
+      "operation": "addSenseProp",
+      "arguments": [
+        1445160,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1708,
+      "preservedBehavior": "Add the declared sense property to entry 1445160 sense 0."
+    },
+    {
+      "event": 305,
+      "phase": "addErrataMar18",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        1565440,
+        false
+      ],
+      "sourceLine": 1716,
+      "preservedBehavior": "Set entry 1565440 primary-no-kanji to false."
+    },
+    {
+      "event": 306,
+      "phase": "addErrataMar18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1207610,
+        "かける",
+        0
+      ],
+      "sourceLine": 1718,
+      "preservedBehavior": "Set kana_text form かける on entry 1207610 to the declared common rank."
+    },
+    {
+      "event": 307,
+      "phase": "addErrataMar18",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1236100,
+        "強いる",
+        null
+      ],
+      "sourceLine": 1719,
+      "preservedBehavior": "Set kanji_text form 強いる on entry 1236100 to the declared common rank."
+    },
+    {
+      "event": 308,
+      "phase": "addErrataMar18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1236100,
+        "しいる",
+        null
+      ],
+      "sourceLine": 1720,
+      "preservedBehavior": "Set kana_text form しいる on entry 1236100 to the declared common rank."
+    },
+    {
+      "event": 309,
+      "phase": "addErrataMar18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1451750,
+        "おんなじ",
+        0
+      ],
+      "sourceLine": 1721,
+      "preservedBehavior": "Set kana_text form おんなじ on entry 1451750 to the declared common rank."
+    },
+    {
+      "event": 310,
+      "phase": "addErrataMar18",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        2068330,
+        "事故る",
+        0
+      ],
+      "sourceLine": 1722,
+      "preservedBehavior": "Set kanji_text form 事故る on entry 2068330 to the declared common rank."
+    },
+    {
+      "event": 311,
+      "phase": "addErrataMar18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1579260,
+        "きのう",
+        2
+      ],
+      "sourceLine": 1723,
+      "preservedBehavior": "Set kana_text form きのう on entry 1579260 to the declared common rank."
+    },
+    {
+      "event": 312,
+      "phase": "addErrataMar18",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        2644980,
+        "柔らかさ",
+        0
+      ],
+      "sourceLine": 1724,
+      "preservedBehavior": "Set kanji_text form 柔らかさ on entry 2644980 to the declared common rank."
+    },
+    {
+      "event": 313,
+      "phase": "addErrataMar18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2644980,
+        "やわらかさ",
+        0
+      ],
+      "sourceLine": 1725,
+      "preservedBehavior": "Set kana_text form やわらかさ on entry 2644980 to the declared common rank."
+    },
+    {
+      "event": 314,
+      "phase": "addErrataMar18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2083610,
+        "ベタ",
+        0
+      ],
+      "sourceLine": 1726,
+      "preservedBehavior": "Set kana_text form ベタ on entry 2083610 to the declared common rank."
+    },
+    {
+      "event": 315,
+      "phase": "addErrataMar18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2083610,
+        "べた",
+        0
+      ],
+      "sourceLine": 1727,
+      "preservedBehavior": "Set kana_text form べた on entry 2083610 to the declared common rank."
+    },
+    {
+      "event": 316,
+      "phase": "addErrataMar18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1119610,
+        "ベタ",
+        null
+      ],
+      "sourceLine": 1728,
+      "preservedBehavior": "Set kana_text form ベタ on entry 1119610 to the declared common rank."
+    },
+    {
+      "event": 317,
+      "phase": "addErrataMar18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1004840,
+        "コロコロ",
+        0
+      ],
+      "sourceLine": 1729,
+      "preservedBehavior": "Set kana_text form コロコロ on entry 1004840 to the declared common rank."
+    },
+    {
+      "event": 318,
+      "phase": "addErrataMar18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1257040,
+        "ケンカ",
+        0
+      ],
+      "sourceLine": 1730,
+      "preservedBehavior": "Set kana_text form ケンカ on entry 1257040 to the declared common rank."
+    },
+    {
+      "event": 319,
+      "phase": "addErrataMar18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1633840,
+        "ごとき",
+        0
+      ],
+      "sourceLine": 1731,
+      "preservedBehavior": "Set kana_text form ごとき on entry 1633840 to the declared common rank."
+    },
+    {
+      "event": 320,
+      "phase": "addErrataMar18",
+      "operation": "addSenseProp",
+      "arguments": [
+        1238460,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1733,
+      "preservedBehavior": "Add the declared sense property to entry 1238460 sense 0."
+    },
+    {
+      "event": 321,
+      "phase": "addErrataMar18",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1896380,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1735,
+      "preservedBehavior": "Remove misc:uk from entry 1896380."
+    },
+    {
+      "event": 322,
+      "phase": "addErrataMar18",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1157000,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1736,
+      "preservedBehavior": "Remove misc:uk from entry 1157000."
+    },
+    {
+      "event": 323,
+      "phase": "addErrataMar18",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1576360,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1737,
+      "preservedBehavior": "Remove misc:uk from entry 1576360."
+    },
+    {
+      "event": 324,
+      "phase": "addErrataMar18",
+      "operation": "addSenseProp",
+      "arguments": [
+        1468900,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1739,
+      "preservedBehavior": "Add the declared sense property to entry 1468900 sense 0."
+    },
+    {
+      "event": 325,
+      "phase": "addErrataMar18",
+      "operation": "addSenseProp",
+      "arguments": [
+        1241380,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1740,
+      "preservedBehavior": "Add the declared sense property to entry 1241380 sense 0."
+    },
+    {
+      "event": 326,
+      "phase": "addErrataMar18",
+      "operation": "addSenseProp",
+      "arguments": [
+        1241380,
+        1,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1741,
+      "preservedBehavior": "Add the declared sense property to entry 1241380 sense 1."
+    },
+    {
+      "event": 327,
+      "phase": "addErrataMar18",
+      "operation": "addNewSense",
+      "arguments": [
+        2029110,
+        [
+          "prt"
+        ],
+        [
+          "indicates な-adjective"
+        ]
+      ],
+      "sourceLine": 1744,
+      "preservedBehavior": "Add the declared sense content to entry 2029110."
+    },
+    {
+      "event": 328,
+      "phase": "addErrataAug18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1593870,
+        "さらう",
+        0
+      ],
+      "sourceLine": 1752,
+      "preservedBehavior": "Set kana_text form さらう on entry 1593870 to the declared common rank."
+    },
+    {
+      "event": 329,
+      "phase": "addErrataAug18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2141690,
+        "ふざけんな",
+        0
+      ],
+      "sourceLine": 1753,
+      "preservedBehavior": "Set kana_text form ふざけんな on entry 2141690 to the declared common rank."
+    },
+    {
+      "event": 330,
+      "phase": "addErrataAug18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1214770,
+        "かん",
+        null
+      ],
+      "sourceLine": 1754,
+      "preservedBehavior": "Set kana_text form かん on entry 1214770 to the declared common rank."
+    },
+    {
+      "event": 331,
+      "phase": "addErrataAug18",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1214770,
+        "観",
+        null
+      ],
+      "sourceLine": 1755,
+      "preservedBehavior": "Set kanji_text form 観 on entry 1214770 to the declared common rank."
+    },
+    {
+      "event": 332,
+      "phase": "addErrataAug18",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        2082780,
+        "意味深",
+        0
+      ],
+      "sourceLine": 1756,
+      "preservedBehavior": "Set kanji_text form 意味深 on entry 2082780 to the declared common rank."
+    },
+    {
+      "event": 333,
+      "phase": "addErrataAug18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2209180,
+        "とて",
+        0
+      ],
+      "sourceLine": 1757,
+      "preservedBehavior": "Set kana_text form とて on entry 2209180 to the declared common rank."
+    },
+    {
+      "event": 334,
+      "phase": "addErrataAug18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1574640,
+        "ロバ",
+        0
+      ],
+      "sourceLine": 1758,
+      "preservedBehavior": "Set kana_text form ロバ on entry 1574640 to the declared common rank."
+    },
+    {
+      "event": 335,
+      "phase": "addErrataAug18",
+      "operation": "addReading",
+      "arguments": [
+        2722640,
+        "オケ"
+      ],
+      "sourceLine": 1760,
+      "preservedBehavior": "Add the declared オケ form to entry 2722640."
+    },
+    {
+      "event": 336,
+      "phase": "addErrataAug18",
+      "operation": "addPrimaryNokanji",
+      "arguments": [
+        2722640,
+        "オケ"
+      ],
+      "sourceLine": 1761,
+      "preservedBehavior": "Add オケ to entry 2722640 and make it the primary no-kanji reading."
+    },
+    {
+      "event": 337,
+      "phase": "addErrataAug18",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2722640,
+        "オケ",
+        0
+      ],
+      "sourceLine": 1762,
+      "preservedBehavior": "Set kana_text form オケ on entry 2722640 to the declared common rank."
+    },
+    {
+      "event": 338,
+      "phase": "addErrataAug18",
+      "operation": "addSenseProp",
+      "arguments": [
+        2722640,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1763,
+      "preservedBehavior": "Add the declared sense property to entry 2722640 sense 0."
+    },
+    {
+      "event": 339,
+      "phase": "addErrataAug18",
+      "operation": "addSenseProp",
+      "arguments": [
+        1527140,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1764,
+      "preservedBehavior": "Add the declared sense property to entry 1527140 sense 0."
+    },
+    {
+      "event": 340,
+      "phase": "addErrataAug18",
+      "operation": "addSenseProp",
+      "arguments": [
+        1208870,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1766,
+      "preservedBehavior": "Add the declared sense property to entry 1208870 sense 0."
+    },
+    {
+      "event": 341,
+      "phase": "addErrataAug18",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1598660,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1768,
+      "preservedBehavior": "Remove misc:uk from entry 1598660."
+    },
+    {
+      "event": 342,
+      "phase": "addErrataJan19",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        2017470,
+        "塗れ",
+        0
+      ],
+      "sourceLine": 1776,
+      "preservedBehavior": "Set kanji_text form 塗れ on entry 2017470 to the declared common rank."
+    },
+    {
+      "event": 343,
+      "phase": "addErrataJan19",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2722660,
+        "すげぇ",
+        0
+      ],
+      "sourceLine": 1777,
+      "preservedBehavior": "Set kana_text form すげぇ on entry 2722660 to the declared common rank."
+    },
+    {
+      "event": 344,
+      "phase": "addErrataJan19",
+      "operation": "addSenseProp",
+      "arguments": [
+        2756830,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1779,
+      "preservedBehavior": "Add the declared sense property to entry 2756830 sense 0."
+    },
+    {
+      "event": 345,
+      "phase": "addErrataJan19",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1604890,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1781,
+      "preservedBehavior": "Remove misc:uk from entry 1604890."
+    },
+    {
+      "event": 346,
+      "phase": "addErrataJan19",
+      "operation": "addReading",
+      "arguments": [
+        1008370,
+        "デカい",
+        {
+          "common": 0
+        }
+      ],
+      "sourceLine": 1783,
+      "preservedBehavior": "Add the declared デカい form to entry 1008370."
+    },
+    {
+      "event": 347,
+      "phase": "addErrataJan19",
+      "operation": "addConjReading",
+      "arguments": [
+        1008370,
+        "デカい"
+      ],
+      "sourceLine": 1784,
+      "preservedBehavior": "Add the declared manual generated lineage for root 1008370."
+    },
+    {
+      "event": 348,
+      "phase": "addErrataJan19",
+      "operation": "addReading",
+      "arguments": [
+        1572760,
+        "クドい"
+      ],
+      "sourceLine": 1785,
+      "preservedBehavior": "Add the declared クドい form to entry 1572760."
+    },
+    {
+      "event": 349,
+      "phase": "addErrataJan19",
+      "operation": "addConjReading",
+      "arguments": [
+        1572760,
+        "クドい"
+      ],
+      "sourceLine": 1786,
+      "preservedBehavior": "Add the declared manual generated lineage for root 1572760."
+    },
+    {
+      "event": 350,
+      "phase": "addErrataJan19",
+      "operation": "addReading",
+      "arguments": [
+        1003620,
+        "ギュっと"
+      ],
+      "sourceLine": 1787,
+      "preservedBehavior": "Add the declared ギュっと form to entry 1003620."
+    },
+    {
+      "event": 351,
+      "phase": "addErrataJan19",
+      "operation": "deleteReading",
+      "arguments": [
+        2424520,
+        "去る者は追わず、来たる者は拒まず"
+      ],
+      "sourceLine": 1789,
+      "preservedBehavior": "Remove the declared 去る者は追わず、来たる者は拒まず form from entry 2424520."
+    },
+    {
+      "event": 352,
+      "phase": "addErrataJan19",
+      "operation": "deleteReading",
+      "arguments": [
+        2570040,
+        "朝焼けは雨、夕焼けは晴れ"
+      ],
+      "sourceLine": 1790,
+      "preservedBehavior": "Remove the declared 朝焼けは雨、夕焼けは晴れ form from entry 2570040."
+    },
+    {
+      "event": 353,
+      "phase": "addErrataJan19",
+      "operation": "deleteReading",
+      "arguments": [
+        2833961,
+        "梅は食うとも核食うな、中に天神寝てござる"
+      ],
+      "sourceLine": 1791,
+      "preservedBehavior": "Remove the declared 梅は食うとも核食うな、中に天神寝てござる form from entry 2833961."
+    },
+    {
+      "event": 354,
+      "phase": "addErrataJan19",
+      "operation": "deleteReading",
+      "arguments": [
+        2834318,
+        "二人は伴侶、三人は仲間割れ"
+      ],
+      "sourceLine": 1792,
+      "preservedBehavior": "Remove the declared 二人は伴侶、三人は仲間割れ form from entry 2834318."
+    },
+    {
+      "event": 355,
+      "phase": "addErrataJan19",
+      "operation": "deleteReading",
+      "arguments": [
+        2834363,
+        "墨は餓鬼に磨らせ、筆は鬼に持たせよ"
+      ],
+      "sourceLine": 1793,
+      "preservedBehavior": "Remove the declared 墨は餓鬼に磨らせ、筆は鬼に持たせよ form from entry 2834363."
+    },
+    {
+      "event": 356,
+      "phase": "addErrataJan19",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        1631830,
+        false
+      ],
+      "sourceLine": 1795,
+      "preservedBehavior": "Set entry 1631830 primary-no-kanji to false."
+    },
+    {
+      "event": 357,
+      "phase": "addErrataJan19",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1270350,
+        "misc",
+        "arch"
+      ],
+      "sourceLine": 1797,
+      "preservedBehavior": "Remove misc:arch from entry 1270350."
+    },
+    {
+      "event": 358,
+      "phase": "addErrataApr19",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1538750,
+        "癒やす",
+        0
+      ],
+      "sourceLine": 1805,
+      "preservedBehavior": "Set kanji_text form 癒やす on entry 1538750 to the declared common rank."
+    },
+    {
+      "event": 359,
+      "phase": "addErrataApr19",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1538750,
+        "癒す",
+        0
+      ],
+      "sourceLine": 1806,
+      "preservedBehavior": "Set kanji_text form 癒す on entry 1538750 to the declared common rank."
+    },
+    {
+      "event": 360,
+      "phase": "addErrataApr19",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1538750,
+        "いやす",
+        0
+      ],
+      "sourceLine": 1807,
+      "preservedBehavior": "Set kana_text form いやす on entry 1538750 to the declared common rank."
+    },
+    {
+      "event": 361,
+      "phase": "addErrataApr19",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2147610,
+        "いなくなる",
+        0
+      ],
+      "sourceLine": 1808,
+      "preservedBehavior": "Set kana_text form いなくなる on entry 2147610 to the declared common rank."
+    },
+    {
+      "event": 362,
+      "phase": "addErrataApr19",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1346290,
+        "マス",
+        37
+      ],
+      "sourceLine": 1810,
+      "preservedBehavior": "Set kana_text form マス on entry 1346290 to the declared common rank."
+    },
+    {
+      "event": 363,
+      "phase": "addErrataApr19",
+      "operation": "addSenseProp",
+      "arguments": [
+        1346290,
+        3,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1811,
+      "preservedBehavior": "Add the declared sense property to entry 1346290 sense 3."
+    },
+    {
+      "event": 364,
+      "phase": "addErrataApr19",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        1346290,
+        true
+      ],
+      "sourceLine": 1812,
+      "preservedBehavior": "Set entry 1346290 primary-no-kanji to true."
+    },
+    {
+      "event": 365,
+      "phase": "addErrataApr19",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        1409110,
+        false
+      ],
+      "sourceLine": 1814,
+      "preservedBehavior": "Set entry 1409110 primary-no-kanji to false."
+    },
+    {
+      "event": 366,
+      "phase": "addErrataApr19",
+      "operation": "deleteReading",
+      "arguments": [
+        2081610,
+        "スレ違"
+      ],
+      "sourceLine": 1816,
+      "preservedBehavior": "Remove the declared スレ違 form from entry 2081610."
+    },
+    {
+      "event": 367,
+      "phase": "addErrataApr19",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        2081610,
+        false
+      ],
+      "sourceLine": 1817,
+      "preservedBehavior": "Set entry 2081610 primary-no-kanji to false."
+    },
+    {
+      "event": 368,
+      "phase": "addErrataApr19",
+      "operation": "addSenseProp",
+      "arguments": [
+        1615340,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1819,
+      "preservedBehavior": "Add the declared sense property to entry 1615340 sense 0."
+    },
+    {
+      "event": 369,
+      "phase": "addErrataApr19",
+      "operation": "addSenseProp",
+      "arguments": [
+        1658480,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1820,
+      "preservedBehavior": "Add the declared sense property to entry 1658480 sense 0."
+    },
+    {
+      "event": 370,
+      "phase": "addErrataJan20",
+      "operation": "addReading",
+      "arguments": [
+        2839843,
+        "うえをしたへ"
+      ],
+      "sourceLine": 1828,
+      "preservedBehavior": "Add the declared うえをしたへ form to entry 2839843."
+    },
+    {
+      "event": 371,
+      "phase": "addErrataJan20",
+      "operation": "deleteReading",
+      "arguments": [
+        2839843,
+        "うえをしたえ"
+      ],
+      "sourceLine": 1829,
+      "preservedBehavior": "Remove the declared うえをしたえ form from entry 2839843."
+    },
+    {
+      "event": 372,
+      "phase": "addErrataJan20",
+      "operation": "addReading",
+      "arguments": [
+        1593170,
+        "コケる"
+      ],
+      "sourceLine": 1830,
+      "preservedBehavior": "Add the declared コケる form to entry 1593170."
+    },
+    {
+      "event": 373,
+      "phase": "addErrataJan20",
+      "operation": "addConjReading",
+      "arguments": [
+        1593170,
+        "コケる"
+      ],
+      "sourceLine": 1831,
+      "preservedBehavior": "Add the declared manual generated lineage for root 1593170."
+    },
+    {
+      "event": 374,
+      "phase": "addErrataJan20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1565100,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1833,
+      "preservedBehavior": "Add the declared sense property to entry 1565100 sense 0."
+    },
+    {
+      "event": 375,
+      "phase": "addErrataJan20",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1632980,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1834,
+      "preservedBehavior": "Remove misc:uk from entry 1632980."
+    },
+    {
+      "event": 376,
+      "phase": "addErrataJan20",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1715710,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1835,
+      "preservedBehavior": "Remove misc:uk from entry 1715710."
+    },
+    {
+      "event": 377,
+      "phase": "addErrataJan20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1715710,
+        "みたところ",
+        null
+      ],
+      "sourceLine": 1836,
+      "preservedBehavior": "Set kana_text form みたところ on entry 1715710 to the declared common rank."
+    },
+    {
+      "event": 378,
+      "phase": "addErrataJan20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2841254,
+        "からって",
+        null
+      ],
+      "sourceLine": 1837,
+      "preservedBehavior": "Set kana_text form からって on entry 2841254 to the declared common rank."
+    },
+    {
+      "event": 379,
+      "phase": "addErrataJan20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2028950,
+        "とは",
+        null
+      ],
+      "sourceLine": 1838,
+      "preservedBehavior": "Set kana_text form とは on entry 2028950 to the declared common rank."
+    },
+    {
+      "event": 380,
+      "phase": "addErrataJan20",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1292400,
+        "再開",
+        13
+      ],
+      "sourceLine": 1839,
+      "preservedBehavior": "Set kanji_text form 再開 on entry 1292400 to the declared common rank."
+    },
+    {
+      "event": 381,
+      "phase": "addErrataJan20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1292400,
+        "さいかい",
+        13
+      ],
+      "sourceLine": 1840,
+      "preservedBehavior": "Set kana_text form さいかい on entry 1292400 to the declared common rank."
+    },
+    {
+      "event": 382,
+      "phase": "addErrataJan20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1306200,
+        "しよう",
+        10
+      ],
+      "sourceLine": 1841,
+      "preservedBehavior": "Set kana_text form しよう on entry 1306200 to the declared common rank."
+    },
+    {
+      "event": 383,
+      "phase": "addErrataJan20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2056930,
+        "つまらなさそう",
+        0
+      ],
+      "sourceLine": 1842,
+      "preservedBehavior": "Set kana_text form つまらなさそう on entry 2056930 to the declared common rank."
+    },
+    {
+      "event": 384,
+      "phase": "addErrataJan20",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1164710,
+        "一段落",
+        null
+      ],
+      "sourceLine": 1843,
+      "preservedBehavior": "Set kanji_text form 一段落 on entry 1164710 to the declared common rank."
+    },
+    {
+      "event": 385,
+      "phase": "addErrataJan20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1570220,
+        "すくむ",
+        0
+      ],
+      "sourceLine": 1844,
+      "preservedBehavior": "Set kana_text form すくむ on entry 1570220 to the declared common rank."
+    },
+    {
+      "event": 386,
+      "phase": "addErrataJan20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1352130,
+        "うえ",
+        1
+      ],
+      "sourceLine": 1845,
+      "preservedBehavior": "Set kana_text form うえ on entry 1352130 to the declared common rank."
+    },
+    {
+      "event": 387,
+      "phase": "addErrataJan20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1502390,
+        "もん",
+        0
+      ],
+      "sourceLine": 1846,
+      "preservedBehavior": "Set kana_text form もん on entry 1502390 to the declared common rank."
+    },
+    {
+      "event": 388,
+      "phase": "addErrataJan20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2780660,
+        "もん",
+        0
+      ],
+      "sourceLine": 1847,
+      "preservedBehavior": "Set kana_text form もん on entry 2780660 to the declared common rank."
+    },
+    {
+      "event": 389,
+      "phase": "addErrataJan20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2653620,
+        "がち",
+        0
+      ],
+      "sourceLine": 1848,
+      "preservedBehavior": "Set kana_text form がち on entry 2653620 to the declared common rank."
+    },
+    {
+      "event": 390,
+      "phase": "addErrataJan20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2653620,
+        "ガチ",
+        0
+      ],
+      "sourceLine": 1849,
+      "preservedBehavior": "Set kana_text form ガチ on entry 2653620 to the declared common rank."
+    },
+    {
+      "event": 391,
+      "phase": "addErrataJan20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1135480,
+        "モノ",
+        null
+      ],
+      "sourceLine": 1850,
+      "preservedBehavior": "Set kana_text form モノ on entry 1135480 to the declared common rank."
+    },
+    {
+      "event": 392,
+      "phase": "addErrataJan20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1003000,
+        "カラカラ",
+        0
+      ],
+      "sourceLine": 1851,
+      "preservedBehavior": "Set kana_text form カラカラ on entry 1003000 to the declared common rank."
+    },
+    {
+      "event": 393,
+      "phase": "addErrataJan20",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        1495000,
+        false
+      ],
+      "sourceLine": 1853,
+      "preservedBehavior": "Set entry 1495000 primary-no-kanji to false."
+    },
+    {
+      "event": 394,
+      "phase": "addErrataJan20",
+      "operation": "addSenseProp",
+      "arguments": [
+        2510160,
+        0,
+        "misc",
+        "obsc"
+      ],
+      "sourceLine": 1856,
+      "preservedBehavior": "Add the declared sense property to entry 2510160 sense 0."
+    },
+    {
+      "event": 395,
+      "phase": "addErrataJan20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1468900,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1858,
+      "preservedBehavior": "Add the declared sense property to entry 1468900 sense 0."
+    },
+    {
+      "event": 396,
+      "phase": "addErrataJan20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1469050,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1859,
+      "preservedBehavior": "Add the declared sense property to entry 1469050 sense 0."
+    },
+    {
+      "event": 397,
+      "phase": "addErrataJan20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1469050,
+        1,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1860,
+      "preservedBehavior": "Add the declared sense property to entry 1469050 sense 1."
+    },
+    {
+      "event": 398,
+      "phase": "addErrataJan20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1469050,
+        2,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1861,
+      "preservedBehavior": "Add the declared sense property to entry 1469050 sense 2."
+    },
+    {
+      "event": 399,
+      "phase": "addErrataJan20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1284270,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1862,
+      "preservedBehavior": "Add the declared sense property to entry 1284270 sense 0."
+    },
+    {
+      "event": 400,
+      "phase": "addErrataJan20",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1245280,
+        "pos",
+        "adj-no"
+      ],
+      "sourceLine": 1864,
+      "preservedBehavior": "Remove pos:adj-no from entry 1245280."
+    },
+    {
+      "event": 401,
+      "phase": "addErrataJan20",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1392570,
+        "pos",
+        "adj-no"
+      ],
+      "sourceLine": 1865,
+      "preservedBehavior": "Remove pos:adj-no from entry 1392570."
+    },
+    {
+      "event": 402,
+      "phase": "addErrataJan20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1429740,
+        0,
+        "pos",
+        "suf"
+      ],
+      "sourceLine": 1867,
+      "preservedBehavior": "Add the declared sense property to entry 1429740 sense 0."
+    },
+    {
+      "event": 403,
+      "phase": "addErrataJan20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1429740,
+        1,
+        "pos",
+        "n"
+      ],
+      "sourceLine": 1868,
+      "preservedBehavior": "Add the declared sense property to entry 1429740 sense 1."
+    },
+    {
+      "event": 404,
+      "phase": "addErrataJan20",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2647210,
+        "pos",
+        "suf"
+      ],
+      "sourceLine": 1869,
+      "preservedBehavior": "Remove pos:suf from entry 2647210."
+    },
+    {
+      "event": 405,
+      "phase": "addErrataApr20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1225940,
+        "アリ",
+        0
+      ],
+      "sourceLine": 1877,
+      "preservedBehavior": "Set kana_text form アリ on entry 1225940 to the declared common rank."
+    },
+    {
+      "event": 406,
+      "phase": "addErrataApr20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1568080,
+        "ふくろう",
+        0
+      ],
+      "sourceLine": 1878,
+      "preservedBehavior": "Set kana_text form ふくろう on entry 1568080 to the declared common rank."
+    },
+    {
+      "event": 407,
+      "phase": "addErrataApr20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1025450,
+        "ウイルス",
+        null
+      ],
+      "sourceLine": 1879,
+      "preservedBehavior": "Set kana_text form ウイルス on entry 1025450 to the declared common rank."
+    },
+    {
+      "event": 408,
+      "phase": "addErrataApr20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1025450,
+        "ウィルス",
+        null
+      ],
+      "sourceLine": 1880,
+      "preservedBehavior": "Set kana_text form ウィルス on entry 1025450 to the declared common rank."
+    },
+    {
+      "event": 409,
+      "phase": "addErrataApr20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1004320,
+        "こうゆう",
+        0
+      ],
+      "sourceLine": 1881,
+      "preservedBehavior": "Set kana_text form こうゆう on entry 1004320 to the declared common rank."
+    },
+    {
+      "event": 410,
+      "phase": "addErrataApr20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1580290,
+        "おとめ",
+        0
+      ],
+      "sourceLine": 1882,
+      "preservedBehavior": "Set kana_text form おとめ on entry 1580290 to the declared common rank."
+    },
+    {
+      "event": 411,
+      "phase": "addErrataApr20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1219510,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1884,
+      "preservedBehavior": "Add the declared sense property to entry 1219510 sense 0."
+    },
+    {
+      "event": 412,
+      "phase": "addErrataApr20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1616370,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1885,
+      "preservedBehavior": "Add the declared sense property to entry 1616370 sense 0."
+    },
+    {
+      "event": 413,
+      "phase": "addErrataApr20",
+      "operation": "addNewSense",
+      "arguments": [
+        1315920,
+        [
+          "ctr"
+        ],
+        [
+          "hours (period of)"
+        ]
+      ],
+      "sourceLine": 1887,
+      "preservedBehavior": "Add the declared sense content to entry 1315920."
+    },
+    {
+      "event": 414,
+      "phase": "addErrataApr20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1220540,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1889,
+      "preservedBehavior": "Add the declared sense property to entry 1220540 sense 0."
+    },
+    {
+      "event": 415,
+      "phase": "addErrataApr20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1220540,
+        3,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1890,
+      "preservedBehavior": "Add the declared sense property to entry 1220540 sense 3."
+    },
+    {
+      "event": 416,
+      "phase": "addErrataApr20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1220540,
+        4,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1891,
+      "preservedBehavior": "Add the declared sense property to entry 1220540 sense 4."
+    },
+    {
+      "event": 417,
+      "phase": "addErrataApr20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1220540,
+        5,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1892,
+      "preservedBehavior": "Add the declared sense property to entry 1220540 sense 5."
+    },
+    {
+      "event": 418,
+      "phase": "addErrataApr20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1220540,
+        6,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1893,
+      "preservedBehavior": "Add the declared sense property to entry 1220540 sense 6."
+    },
+    {
+      "event": 419,
+      "phase": "addErrataApr20",
+      "operation": "addSenseProp",
+      "arguments": [
+        2842087,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1895,
+      "preservedBehavior": "Add the declared sense property to entry 2842087 sense 0."
+    },
+    {
+      "event": 420,
+      "phase": "addErrataApr20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2842087,
+        "パー",
+        0
+      ],
+      "sourceLine": 1896,
+      "preservedBehavior": "Set kana_text form パー on entry 2842087 to the declared common rank."
+    },
+    {
+      "event": 421,
+      "phase": "addErrataApr20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1956530,
+        1,
+        "pos",
+        "n"
+      ],
+      "sourceLine": 1898,
+      "preservedBehavior": "Add the declared sense property to entry 1956530 sense 1."
+    },
+    {
+      "event": 422,
+      "phase": "addErrataJul20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2101130,
+        "し",
+        null
+      ],
+      "sourceLine": 1906,
+      "preservedBehavior": "Set kana_text form し on entry 2101130 to the declared common rank."
+    },
+    {
+      "event": 423,
+      "phase": "addErrataJul20",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1982860,
+        "代",
+        0
+      ],
+      "sourceLine": 1907,
+      "preservedBehavior": "Set kanji_text form 代 on entry 1982860 to the declared common rank."
+    },
+    {
+      "event": 424,
+      "phase": "addErrataJul20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1367020,
+        "ひとけ",
+        0
+      ],
+      "sourceLine": 1908,
+      "preservedBehavior": "Set kana_text form ひとけ on entry 1367020 to the declared common rank."
+    },
+    {
+      "event": 425,
+      "phase": "addErrataJul20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1002190,
+        "おしり",
+        0
+      ],
+      "sourceLine": 1909,
+      "preservedBehavior": "Set kana_text form おしり on entry 1002190 to the declared common rank."
+    },
+    {
+      "event": 426,
+      "phase": "addErrataJul20",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2085020,
+        "もどき",
+        0
+      ],
+      "sourceLine": 1910,
+      "preservedBehavior": "Set kana_text form もどき on entry 2085020 to the declared common rank."
+    },
+    {
+      "event": 427,
+      "phase": "addErrataJul20",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        1756600,
+        false
+      ],
+      "sourceLine": 1912,
+      "preservedBehavior": "Set entry 1756600 primary-no-kanji to false."
+    },
+    {
+      "event": 428,
+      "phase": "addErrataJul20",
+      "operation": "addReading",
+      "arguments": [
+        2217330,
+        "ワイ"
+      ],
+      "sourceLine": 1914,
+      "preservedBehavior": "Add the declared ワイ form to entry 2217330."
+    },
+    {
+      "event": 429,
+      "phase": "addErrataJul20",
+      "operation": "addPrimaryNokanji",
+      "arguments": [
+        2217330,
+        "ワイ"
+      ],
+      "sourceLine": 1915,
+      "preservedBehavior": "Add ワイ to entry 2217330 and make it the primary no-kanji reading."
+    },
+    {
+      "event": 430,
+      "phase": "addErrataJul20",
+      "operation": "addSenseProp",
+      "arguments": [
+        2217330,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1916,
+      "preservedBehavior": "Add the declared sense property to entry 2217330 sense 0."
+    },
+    {
+      "event": 431,
+      "phase": "addErrataJul20",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2217330,
+        "misc",
+        "arch"
+      ],
+      "sourceLine": 1917,
+      "preservedBehavior": "Remove misc:arch from entry 2217330."
+    },
+    {
+      "event": 432,
+      "phase": "addErrataJul20",
+      "operation": "addReading",
+      "arguments": [
+        1103270,
+        "ぱんつ"
+      ],
+      "sourceLine": 1919,
+      "preservedBehavior": "Add the declared ぱんつ form to entry 1103270."
+    },
+    {
+      "event": 433,
+      "phase": "addErrataJul20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1586290,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1921,
+      "preservedBehavior": "Add the declared sense property to entry 1586290 sense 0."
+    },
+    {
+      "event": 434,
+      "phase": "addErrataJul20",
+      "operation": "addSenseProp",
+      "arguments": [
+        1257260,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1923,
+      "preservedBehavior": "Add the declared sense property to entry 1257260 sense 0."
+    },
+    {
+      "event": 435,
+      "phase": "addErrataJul20",
+      "operation": "rearrangeReadingsConj",
+      "arguments": [
+        1980880,
+        "kanji_text",
+        "かけ直"
+      ],
+      "sourceLine": 1925,
+      "preservedBehavior": "Give entry 1980880 forms with the declared prefix stable precedence."
+    },
+    {
+      "event": 436,
+      "phase": "addErrataJan21",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2124820,
+        "コロナウイルス",
+        null
+      ],
+      "sourceLine": 1933,
+      "preservedBehavior": "Set kana_text form コロナウイルス on entry 2124820 to the declared common rank."
+    },
+    {
+      "event": 437,
+      "phase": "addErrataJan21",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2846738,
+        "なん",
+        null
+      ],
+      "sourceLine": 1934,
+      "preservedBehavior": "Set kana_text form なん on entry 2846738 to the declared common rank."
+    },
+    {
+      "event": 438,
+      "phase": "addErrataJan21",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2083720,
+        "っぽい",
+        null
+      ],
+      "sourceLine": 1935,
+      "preservedBehavior": "Set kana_text form っぽい on entry 2083720 to the declared common rank."
+    },
+    {
+      "event": 439,
+      "phase": "addErrataJan21",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1012980,
+        "遣る",
+        null
+      ],
+      "sourceLine": 1936,
+      "preservedBehavior": "Set kanji_text form 遣る on entry 1012980 to the declared common rank."
+    },
+    {
+      "event": 440,
+      "phase": "addErrataJan21",
+      "operation": "addSenseProp",
+      "arguments": [
+        1411570,
+        0,
+        "pos",
+        "vs"
+      ],
+      "sourceLine": 1938,
+      "preservedBehavior": "Add the declared sense property to entry 1411570 sense 0."
+    },
+    {
+      "event": 441,
+      "phase": "addErrataJan21",
+      "operation": "addSenseProp",
+      "arguments": [
+        1613860,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1939,
+      "preservedBehavior": "Add the declared sense property to entry 1613860 sense 0."
+    },
+    {
+      "event": 442,
+      "phase": "addErrataJan21",
+      "operation": "addSenseProp",
+      "arguments": [
+        1613860,
+        1,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1940,
+      "preservedBehavior": "Add the declared sense property to entry 1613860 sense 1."
+    },
+    {
+      "event": 443,
+      "phase": "addErrataJan21",
+      "operation": "addSenseProp",
+      "arguments": [
+        2679820,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1942,
+      "preservedBehavior": "Add the declared sense property to entry 2679820 sense 0."
+    },
+    {
+      "event": 444,
+      "phase": "addErrataJan21",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1426680,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1943,
+      "preservedBehavior": "Remove misc:uk from entry 1426680."
+    },
+    {
+      "event": 445,
+      "phase": "addErrataJan21",
+      "operation": "addSenseProp",
+      "arguments": [
+        1590390,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1944,
+      "preservedBehavior": "Add the declared sense property to entry 1590390 sense 0."
+    },
+    {
+      "event": 446,
+      "phase": "addErrataJan21",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1215240,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1946,
+      "preservedBehavior": "Remove pos:ctr from entry 1215240."
+    },
+    {
+      "event": 447,
+      "phase": "addErrataJan21",
+      "operation": "addSenseProp",
+      "arguments": [
+        2145410,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1947,
+      "preservedBehavior": "Add the declared sense property to entry 2145410 sense 0."
+    },
+    {
+      "event": 448,
+      "phase": "addErrataJan21",
+      "operation": "replaceReading",
+      "arguments": [
+        2847494,
+        "いきはよいといかえりはこわい",
+        "いきはよいよいかえりはこわい"
+      ],
+      "sourceLine": 1949,
+      "preservedBehavior": "Apply the declared reading correction to entry 2847494."
+    },
+    {
+      "event": 449,
+      "phase": "addErrataMay21",
+      "operation": "addReading",
+      "arguments": [
+        1089590,
+        "どんまい"
+      ],
+      "sourceLine": 1957,
+      "preservedBehavior": "Add the declared どんまい form to entry 1089590."
+    },
+    {
+      "event": 450,
+      "phase": "addErrataMay21",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2848303,
+        "てか",
+        0
+      ],
+      "sourceLine": 1959,
+      "preservedBehavior": "Set kana_text form てか on entry 2848303 to the declared common rank."
+    },
+    {
+      "event": 451,
+      "phase": "addErrataMay21",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1979920,
+        "貴方",
+        null
+      ],
+      "sourceLine": 1960,
+      "preservedBehavior": "Set kanji_text form 貴方 on entry 1979920 to the declared common rank."
+    },
+    {
+      "event": 452,
+      "phase": "addErrataMay21",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1547720,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1962,
+      "preservedBehavior": "Remove misc:uk from entry 1547720."
+    },
+    {
+      "event": 453,
+      "phase": "addErrataMay21",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1495770,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1963,
+      "preservedBehavior": "Remove misc:uk from entry 1495770."
+    },
+    {
+      "event": 454,
+      "phase": "addErrataMay21",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2611890,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 1964,
+      "preservedBehavior": "Remove misc:uk from entry 2611890."
+    },
+    {
+      "event": 455,
+      "phase": "addErrataJan22",
+      "operation": "addReading",
+      "arguments": [
+        1566420,
+        "ハメる"
+      ],
+      "sourceLine": 1972,
+      "preservedBehavior": "Add the declared ハメる form to entry 1566420."
+    },
+    {
+      "event": 456,
+      "phase": "addErrataJan22",
+      "operation": "addConjReading",
+      "arguments": [
+        1566420,
+        "ハメる"
+      ],
+      "sourceLine": 1973,
+      "preservedBehavior": "Add the declared manual generated lineage for root 1566420."
+    },
+    {
+      "event": 457,
+      "phase": "addErrataJan22",
+      "operation": "addReading",
+      "arguments": [
+        1161240,
+        "いっかねん"
+      ],
+      "sourceLine": 1976,
+      "preservedBehavior": "Add the declared いっかねん form to entry 1161240."
+    },
+    {
+      "event": 458,
+      "phase": "addErrataJan22",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2008650,
+        "そうした",
+        null
+      ],
+      "sourceLine": 1978,
+      "preservedBehavior": "Set kana_text form そうした on entry 2008650 to the declared common rank."
+    },
+    {
+      "event": 459,
+      "phase": "addErrataJan22",
+      "operation": "addSenseProp",
+      "arguments": [
+        1188270,
+        0,
+        "pos",
+        "n"
+      ],
+      "sourceLine": 1979,
+      "preservedBehavior": "Add the declared sense property to entry 1188270 sense 0."
+    },
+    {
+      "event": 460,
+      "phase": "addErrataJan22",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1188270,
+        "pos",
+        "pn"
+      ],
+      "sourceLine": 1980,
+      "preservedBehavior": "Remove pos:pn from entry 1188270."
+    },
+    {
+      "event": 461,
+      "phase": "addErrataJan22",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1240530,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 1982,
+      "preservedBehavior": "Remove pos:ctr from entry 1240530."
+    },
+    {
+      "event": 462,
+      "phase": "addErrataJan22",
+      "operation": "addSenseProp",
+      "arguments": [
+        1247260,
+        0,
+        "pos",
+        "n-suf"
+      ],
+      "sourceLine": 1984,
+      "preservedBehavior": "Add the declared sense property to entry 1247260 sense 0."
+    },
+    {
+      "event": 463,
+      "phase": "addErrataJan22",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1001840,
+        "おにいちゃん",
+        0
+      ],
+      "sourceLine": 1986,
+      "preservedBehavior": "Set kana_text form おにいちゃん on entry 1001840 to the declared common rank."
+    },
+    {
+      "event": 464,
+      "phase": "addErrataJan22",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1806840,
+        "がいそう",
+        null
+      ],
+      "sourceLine": 1987,
+      "preservedBehavior": "Set kana_text form がいそう on entry 1806840 to the declared common rank."
+    },
+    {
+      "event": 465,
+      "phase": "addErrataJan22",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1639750,
+        "こだから",
+        null
+      ],
+      "sourceLine": 1988,
+      "preservedBehavior": "Set kana_text form こだから on entry 1639750 to the declared common rank."
+    },
+    {
+      "event": 466,
+      "phase": "addErrataDec23",
+      "operation": "addSenseProp",
+      "arguments": [
+        1180540,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 2002,
+      "preservedBehavior": "Add the declared sense property to entry 1180540 sense 0."
+    },
+    {
+      "event": 467,
+      "phase": "addErrataDec23",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2854117,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 2003,
+      "preservedBehavior": "Remove misc:uk from entry 2854117."
+    },
+    {
+      "event": 468,
+      "phase": "addErrataDec23",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2859257,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 2004,
+      "preservedBehavior": "Remove misc:uk from entry 2859257."
+    },
+    {
+      "event": 469,
+      "phase": "addErrataDec23",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1198890,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 2005,
+      "preservedBehavior": "Remove misc:uk from entry 1198890."
+    },
+    {
+      "event": 470,
+      "phase": "addErrataDec23",
+      "operation": "addSenseProp",
+      "arguments": [
+        2826371,
+        0,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 2007,
+      "preservedBehavior": "Add the declared sense property to entry 2826371 sense 0."
+    },
+    {
+      "event": 471,
+      "phase": "addErrataDec23",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2826371,
+        "misc",
+        "rare"
+      ],
+      "sourceLine": 2008,
+      "preservedBehavior": "Remove misc:rare from entry 2826371."
+    },
+    {
+      "event": 472,
+      "phase": "addErrataDec23",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1625620,
+        "はいかん",
+        null
+      ],
+      "sourceLine": 2011,
+      "preservedBehavior": "Set kana_text form はいかん on entry 1625620 to the declared common rank."
+    },
+    {
+      "event": 473,
+      "phase": "addErrataDec23",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1625610,
+        "はいかん",
+        null
+      ],
+      "sourceLine": 2012,
+      "preservedBehavior": "Set kana_text form はいかん on entry 1625610 to the declared common rank."
+    },
+    {
+      "event": 474,
+      "phase": "addErrataDec23",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1681460,
+        "はいかん",
+        null
+      ],
+      "sourceLine": 2013,
+      "preservedBehavior": "Set kana_text form はいかん on entry 1681460 to the declared common rank."
+    },
+    {
+      "event": 475,
+      "phase": "addErrataDec23",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        2855480,
+        "乙女",
+        0
+      ],
+      "sourceLine": 2015,
+      "preservedBehavior": "Set kanji_text form 乙女 on entry 2855480 to the declared common rank."
+    },
+    {
+      "event": 476,
+      "phase": "addErrataDec23",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        2855480,
+        "おとめ",
+        0
+      ],
+      "sourceLine": 2016,
+      "preservedBehavior": "Set kana_text form おとめ on entry 2855480 to the declared common rank."
+    },
+    {
+      "event": 477,
+      "phase": "addErrataDec23",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1930050,
+        "バラす",
+        0
+      ],
+      "sourceLine": 2018,
+      "preservedBehavior": "Set kana_text form バラす on entry 1930050 to the declared common rank."
+    },
+    {
+      "event": 478,
+      "phase": "addErrataDec23",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1582460,
+        "ないかい",
+        null
+      ],
+      "sourceLine": 2019,
+      "preservedBehavior": "Set kana_text form ないかい on entry 1582460 to the declared common rank."
+    },
+    {
+      "event": 479,
+      "phase": "addErrataDec23",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1202300,
+        "かいが",
+        0
+      ],
+      "sourceLine": 2020,
+      "preservedBehavior": "Set kana_text form かいが on entry 1202300 to the declared common rank."
+    },
+    {
+      "event": 480,
+      "phase": "addErrataDec23",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1328740,
+        "狩る",
+        0
+      ],
+      "sourceLine": 2022,
+      "preservedBehavior": "Set kanji_text form 狩る on entry 1328740 to the declared common rank."
+    },
+    {
+      "event": 481,
+      "phase": "addErrataDec23",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1009610,
+        "にも",
+        0
+      ],
+      "sourceLine": 2024,
+      "preservedBehavior": "Set kana_text form にも on entry 1009610 to the declared common rank."
+    },
+    {
+      "event": 482,
+      "phase": "addErrataJan25",
+      "operation": "deleteReading",
+      "arguments": [
+        2028930,
+        "ヶ",
+        {
+          "table": "kana_text"
+        }
+      ],
+      "sourceLine": 2032,
+      "preservedBehavior": "Remove the declared ヶ form from entry 2028930."
+    },
+    {
+      "event": 483,
+      "phase": "addErrataJan25",
+      "operation": "deleteReading",
+      "arguments": [
+        2028930,
+        "ケ",
+        {
+          "table": "kana_text"
+        }
+      ],
+      "sourceLine": 2033,
+      "preservedBehavior": "Remove the declared ケ form from entry 2028930."
+    },
+    {
+      "event": 484,
+      "phase": "addErrataJan25",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1138570,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2035,
+      "preservedBehavior": "Remove pos:ctr from entry 1138570."
+    },
+    {
+      "event": 485,
+      "phase": "addErrataJan25",
+      "operation": "addSenseProp",
+      "arguments": [
+        1138570,
+        1,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2036,
+      "preservedBehavior": "Add the declared sense property to entry 1138570 sense 1."
+    },
+    {
+      "event": 486,
+      "phase": "addErrataJan25",
+      "operation": "addSenseProp",
+      "arguments": [
+        1138570,
+        2,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2037,
+      "preservedBehavior": "Add the declared sense property to entry 1138570 sense 2."
+    },
+    {
+      "event": 487,
+      "phase": "addErrataJan25",
+      "operation": "addSenseProp",
+      "arguments": [
+        1138570,
+        3,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2038,
+      "preservedBehavior": "Add the declared sense property to entry 1138570 sense 3."
+    },
+    {
+      "event": 488,
+      "phase": "addErrataJan25",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1001120,
+        "うんち",
+        0
+      ],
+      "sourceLine": 2040,
+      "preservedBehavior": "Set kana_text form うんち on entry 1001120 to the declared common rank."
+    },
+    {
+      "event": 489,
+      "phase": "addErrataJan25",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1511600,
+        "かたかな",
+        0
+      ],
+      "sourceLine": 2041,
+      "preservedBehavior": "Set kana_text form かたかな on entry 1511600 to the declared common rank."
+    },
+    {
+      "event": 490,
+      "phase": "addErrataJan25",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1056400,
+        "サウンドトラック",
+        0
+      ],
+      "sourceLine": 2042,
+      "preservedBehavior": "Set kana_text form サウンドトラック on entry 1056400 to the declared common rank."
+    },
+    {
+      "event": 491,
+      "phase": "addErrataJan25",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1510640,
+        "へん",
+        5
+      ],
+      "sourceLine": 2043,
+      "preservedBehavior": "Set kana_text form へん on entry 1510640 to the declared common rank."
+    },
+    {
+      "event": 492,
+      "phase": "addErrataJan25",
+      "operation": "replaceReading",
+      "arguments": [
+        2860664,
+        "こどもはおやのせなかをみてそだう",
+        "こどもはおやのせなかをみてそだつ"
+      ],
+      "sourceLine": 2045,
+      "preservedBehavior": "Apply the declared reading correction to entry 2860664."
+    },
+    {
+      "event": 493,
+      "phase": "addErrataJan25",
+      "operation": "replaceReadingConj",
+      "arguments": [
+        2863544,
+        "kana_text",
+        "みぎにでるのは",
+        "みぎにでるものは"
+      ],
+      "sourceLine": 2046,
+      "preservedBehavior": "Apply the declared reading correction to entry 2863544."
+    },
+    {
+      "event": 494,
+      "phase": "addErrataJan26",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1236660,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 2054,
+      "preservedBehavior": "Remove misc:uk from entry 1236660."
+    },
+    {
+      "event": 495,
+      "phase": "addErrataJan26",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        2859279,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 2055,
+      "preservedBehavior": "Remove misc:uk from entry 2859279."
+    },
+    {
+      "event": 496,
+      "phase": "addErrataJan26",
+      "operation": "deleteSenseProp",
+      "arguments": [
+        1591420,
+        "misc",
+        "uk"
+      ],
+      "sourceLine": 2056,
+      "preservedBehavior": "Remove misc:uk from entry 1591420."
+    },
+    {
+      "event": 497,
+      "phase": "addErrataJan26",
+      "operation": "setPrimaryNokanji",
+      "arguments": [
+        1502390,
+        false
+      ],
+      "sourceLine": 2058,
+      "preservedBehavior": "Set entry 1502390 primary-no-kanji to false."
+    },
+    {
+      "event": 498,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1502390,
+        "モノ",
+        0
+      ],
+      "sourceLine": 2059,
+      "preservedBehavior": "Set kana_text form モノ on entry 1502390 to the declared common rank."
+    },
+    {
+      "event": 499,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kana_text",
+        1392580,
+        "まえ",
+        5
+      ],
+      "sourceLine": 2061,
+      "preservedBehavior": "Set kana_text form まえ on entry 1392580 to the declared common rank."
+    },
+    {
+      "event": 500,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1502920,
+        "分かつ",
+        null
+      ],
+      "sourceLine": 2062,
+      "preservedBehavior": "Set kanji_text form 分かつ on entry 1502920 to the declared common rank."
+    },
+    {
+      "event": 501,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1169130,
+        "引分ける",
+        0
+      ],
+      "sourceLine": 2063,
+      "preservedBehavior": "Set kanji_text form 引分ける on entry 1169130 to the declared common rank."
+    },
+    {
+      "event": 502,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1326660,
+        "取り計らう",
+        0
+      ],
+      "sourceLine": 2064,
+      "preservedBehavior": "Set kanji_text form 取り計らう on entry 1326660 to the declared common rank."
+    },
+    {
+      "event": 503,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1340420,
+        "出来",
+        0
+      ],
+      "sourceLine": 2065,
+      "preservedBehavior": "Set kanji_text form 出来 on entry 1340420 to the declared common rank."
+    },
+    {
+      "event": 504,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1340430,
+        "出来",
+        9
+      ],
+      "sourceLine": 2066,
+      "preservedBehavior": "Set kanji_text form 出来 on entry 1340430 to the declared common rank."
+    },
+    {
+      "event": 505,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1589320,
+        "思い",
+        0
+      ],
+      "sourceLine": 2070,
+      "preservedBehavior": "Set kanji_text form 思い on entry 1589320 to the declared common rank."
+    },
+    {
+      "event": 506,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1281000,
+        "考え",
+        0
+      ],
+      "sourceLine": 2071,
+      "preservedBehavior": "Set kanji_text form 考え on entry 1281000 to the declared common rank."
+    },
+    {
+      "event": 507,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        2862681,
+        "閉まり",
+        null
+      ],
+      "sourceLine": 2072,
+      "preservedBehavior": "Set kanji_text form 閉まり on entry 2862681 to the declared common rank."
+    },
+    {
+      "event": 508,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1989500,
+        "開き",
+        0
+      ],
+      "sourceLine": 2073,
+      "preservedBehavior": "Set kanji_text form 開き on entry 1989500 to the declared common rank."
+    },
+    {
+      "event": 509,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1985020,
+        "気づき",
+        null
+      ],
+      "sourceLine": 2074,
+      "preservedBehavior": "Set kanji_text form 気づき on entry 1985020 to the declared common rank."
+    },
+    {
+      "event": 510,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1180130,
+        "押し",
+        0
+      ],
+      "sourceLine": 2075,
+      "preservedBehavior": "Set kanji_text form 押し on entry 1180130 to the declared common rank."
+    },
+    {
+      "event": 511,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1216850,
+        "含み",
+        0
+      ],
+      "sourceLine": 2076,
+      "preservedBehavior": "Set kanji_text form 含み on entry 1216850 to the declared common rank."
+    },
+    {
+      "event": 512,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1231760,
+        "居座り",
+        null
+      ],
+      "sourceLine": 2077,
+      "preservedBehavior": "Set kanji_text form 居座り on entry 1231760 to the declared common rank."
+    },
+    {
+      "event": 513,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1236660,
+        "恐れ",
+        0
+      ],
+      "sourceLine": 2078,
+      "preservedBehavior": "Set kanji_text form 恐れ on entry 1236660 to the declared common rank."
+    },
+    {
+      "event": 514,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1238660,
+        "驚き",
+        0
+      ],
+      "sourceLine": 2079,
+      "preservedBehavior": "Set kanji_text form 驚き on entry 1238660 to the declared common rank."
+    },
+    {
+      "event": 515,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1259890,
+        "見直し",
+        0
+      ],
+      "sourceLine": 2080,
+      "preservedBehavior": "Set kanji_text form 見直し on entry 1259890 to the declared common rank."
+    },
+    {
+      "event": 516,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1297250,
+        "作り",
+        0
+      ],
+      "sourceLine": 2081,
+      "preservedBehavior": "Set kanji_text form 作り on entry 1297250 to the declared common rank."
+    },
+    {
+      "event": 517,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1304480,
+        "残り",
+        0
+      ],
+      "sourceLine": 2082,
+      "preservedBehavior": "Set kanji_text form 残り on entry 1304480 to the declared common rank."
+    },
+    {
+      "event": 518,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1327090,
+        "守り",
+        0
+      ],
+      "sourceLine": 2083,
+      "preservedBehavior": "Set kanji_text form 守り on entry 1327090 to the declared common rank."
+    },
+    {
+      "event": 519,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1327100,
+        "守り",
+        9
+      ],
+      "sourceLine": 2084,
+      "preservedBehavior": "Set kanji_text form 守り on entry 1327100 to the declared common rank."
+    },
+    {
+      "event": 520,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1396550,
+        "狙い",
+        0
+      ],
+      "sourceLine": 2085,
+      "preservedBehavior": "Set kanji_text form 狙い on entry 1396550 to the declared common rank."
+    },
+    {
+      "event": 521,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1403130,
+        "増やし",
+        null
+      ],
+      "sourceLine": 2086,
+      "preservedBehavior": "Set kanji_text form 増やし on entry 1403130 to the declared common rank."
+    },
+    {
+      "event": 522,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1535930,
+        "問い",
+        0
+      ],
+      "sourceLine": 2087,
+      "preservedBehavior": "Set kanji_text form 問い on entry 1535930 to the declared common rank."
+    },
+    {
+      "event": 523,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1548390,
+        "頼り",
+        0
+      ],
+      "sourceLine": 2088,
+      "preservedBehavior": "Set kanji_text form 頼り on entry 1548390 to the declared common rank."
+    },
+    {
+      "event": 524,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1609560,
+        "勝ち",
+        0
+      ],
+      "sourceLine": 2089,
+      "preservedBehavior": "Set kanji_text form 勝ち on entry 1609560 to the declared common rank."
+    },
+    {
+      "event": 525,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1954660,
+        "聞こえ",
+        null
+      ],
+      "sourceLine": 2090,
+      "preservedBehavior": "Set kanji_text form 聞こえ on entry 1954660 to the declared common rank."
+    },
+    {
+      "event": 526,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1497960,
+        "負け",
+        0
+      ],
+      "sourceLine": 2091,
+      "preservedBehavior": "Set kanji_text form 負け on entry 1497960 to the declared common rank."
+    },
+    {
+      "event": 527,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1502940,
+        "分かり",
+        null
+      ],
+      "sourceLine": 2092,
+      "preservedBehavior": "Set kanji_text form 分かり on entry 1502940 to the declared common rank."
+    },
+    {
+      "event": 528,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1917220,
+        "分かれ",
+        null
+      ],
+      "sourceLine": 2093,
+      "preservedBehavior": "Set kanji_text form 分かれ on entry 1917220 to the declared common rank."
+    },
+    {
+      "event": 529,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1221250,
+        "帰り",
+        0
+      ],
+      "sourceLine": 2094,
+      "preservedBehavior": "Set kanji_text form 帰り on entry 1221250 to the declared common rank."
+    },
+    {
+      "event": 530,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1351280,
+        "笑い",
+        0
+      ],
+      "sourceLine": 2095,
+      "preservedBehavior": "Set kanji_text form 笑い on entry 1351280 to the declared common rank."
+    },
+    {
+      "event": 531,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1352300,
+        "上げ",
+        0
+      ],
+      "sourceLine": 2096,
+      "preservedBehavior": "Set kanji_text form 上げ on entry 1352300 to the declared common rank."
+    },
+    {
+      "event": 532,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1354720,
+        "乗り",
+        0
+      ],
+      "sourceLine": 2097,
+      "preservedBehavior": "Set kanji_text form 乗り on entry 1354720 to the declared common rank."
+    },
+    {
+      "event": 533,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1502990,
+        "分け",
+        0
+      ],
+      "sourceLine": 2098,
+      "preservedBehavior": "Set kanji_text form 分け on entry 1502990 to the declared common rank."
+    },
+    {
+      "event": 534,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1630270,
+        "脅かし",
+        null
+      ],
+      "sourceLine": 2099,
+      "preservedBehavior": "Set kanji_text form 脅かし on entry 1630270 to the declared common rank."
+    },
+    {
+      "event": 535,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1456130,
+        "読み",
+        0
+      ],
+      "sourceLine": 2100,
+      "preservedBehavior": "Set kanji_text form 読み on entry 1456130 to the declared common rank."
+    },
+    {
+      "event": 536,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1403020,
+        "騒ぎ",
+        0
+      ],
+      "sourceLine": 2101,
+      "preservedBehavior": "Set kanji_text form 騒ぎ on entry 1403020 to the declared common rank."
+    },
+    {
+      "event": 537,
+      "phase": "addErrataJan26",
+      "operation": "setCommon",
+      "arguments": [
+        "kanji_text",
+        1659120,
+        "受け",
+        0
+      ],
+      "sourceLine": 2102,
+      "preservedBehavior": "Set kanji_text form 受け on entry 1659120 to the declared common rank."
+    },
+    {
+      "event": 538,
+      "phase": "addErrataCounters",
+      "operation": "deleteReading",
+      "arguments": [
+        1299960,
+        "さんかい"
+      ],
+      "sourceLine": 2110,
+      "preservedBehavior": "Remove the declared さんかい form from entry 1299960."
+    },
+    {
+      "event": 539,
+      "phase": "addErrataCounters",
+      "operation": "addReading",
+      "arguments": [
+        2081610,
+        "タテ"
+      ],
+      "sourceLine": 2115,
+      "preservedBehavior": "Add the declared タテ form to entry 2081610."
+    },
+    {
+      "event": 540,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1427420,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2117,
+      "preservedBehavior": "Add the declared sense property to entry 1427420 sense 0."
+    },
+    {
+      "event": 541,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1397450,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2118,
+      "preservedBehavior": "Add the declared sense property to entry 1397450 sense 0."
+    },
+    {
+      "event": 542,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1397450,
+        1,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2119,
+      "preservedBehavior": "Add the declared sense property to entry 1397450 sense 1."
+    },
+    {
+      "event": 543,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1351270,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2120,
+      "preservedBehavior": "Add the declared sense property to entry 1351270 sense 0."
+    },
+    {
+      "event": 544,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1351270,
+        1,
+        "pos",
+        "n"
+      ],
+      "sourceLine": 2121,
+      "preservedBehavior": "Add the declared sense property to entry 1351270 sense 1."
+    },
+    {
+      "event": 545,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1490430,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2122,
+      "preservedBehavior": "Add the declared sense property to entry 1490430 sense 0."
+    },
+    {
+      "event": 546,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1490430,
+        1,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2123,
+      "preservedBehavior": "Add the declared sense property to entry 1490430 sense 1."
+    },
+    {
+      "event": 547,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        2020680,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2124,
+      "preservedBehavior": "Add the declared sense property to entry 2020680 sense 0."
+    },
+    {
+      "event": 548,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1502840,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2125,
+      "preservedBehavior": "Add the declared sense property to entry 1502840 sense 0."
+    },
+    {
+      "event": 549,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1502840,
+        1,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2126,
+      "preservedBehavior": "Add the declared sense property to entry 1502840 sense 1."
+    },
+    {
+      "event": 550,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1373990,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2127,
+      "preservedBehavior": "Add the declared sense property to entry 1373990 sense 0."
+    },
+    {
+      "event": 551,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1281690,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2128,
+      "preservedBehavior": "Add the declared sense property to entry 1281690 sense 0."
+    },
+    {
+      "event": 552,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1281690,
+        1,
+        "pos",
+        "n"
+      ],
+      "sourceLine": 2129,
+      "preservedBehavior": "Add the declared sense property to entry 1281690 sense 1."
+    },
+    {
+      "event": 553,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1042610,
+        1,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2130,
+      "preservedBehavior": "Add the declared sense property to entry 1042610 sense 1."
+    },
+    {
+      "event": 554,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1042610,
+        2,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2131,
+      "preservedBehavior": "Add the declared sense property to entry 1042610 sense 2."
+    },
+    {
+      "event": 555,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1100610,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2132,
+      "preservedBehavior": "Add the declared sense property to entry 1100610 sense 0."
+    },
+    {
+      "event": 556,
+      "phase": "addErrataCounters",
+      "operation": "addNewSense",
+      "arguments": [
+        1583470,
+        [
+          "ctr"
+        ],
+        [
+          "counter for dishes"
+        ]
+      ],
+      "sourceLine": 2134,
+      "preservedBehavior": "Add the declared sense content to entry 1583470."
+    },
+    {
+      "event": 557,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1411070,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2136,
+      "preservedBehavior": "Add the declared sense property to entry 1411070 sense 0."
+    },
+    {
+      "event": 558,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1411070,
+        1,
+        "pos",
+        "n"
+      ],
+      "sourceLine": 2137,
+      "preservedBehavior": "Add the declared sense property to entry 1411070 sense 1."
+    },
+    {
+      "event": 559,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1328810,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2139,
+      "preservedBehavior": "Add the declared sense property to entry 1328810 sense 0."
+    },
+    {
+      "event": 560,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1284220,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2141,
+      "preservedBehavior": "Add the declared sense property to entry 1284220 sense 0."
+    },
+    {
+      "event": 561,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1284220,
+        1,
+        "pos",
+        "n"
+      ],
+      "sourceLine": 2142,
+      "preservedBehavior": "Add the declared sense property to entry 1284220 sense 1."
+    },
+    {
+      "event": 562,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1284220,
+        1,
+        "pos",
+        "n-suf"
+      ],
+      "sourceLine": 2143,
+      "preservedBehavior": "Add the declared sense property to entry 1284220 sense 1."
+    },
+    {
+      "event": 563,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1482360,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2144,
+      "preservedBehavior": "Add the declared sense property to entry 1482360 sense 0."
+    },
+    {
+      "event": 564,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        2022640,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2145,
+      "preservedBehavior": "Add the declared sense property to entry 2022640 sense 0."
+    },
+    {
+      "event": 565,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1175570,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2146,
+      "preservedBehavior": "Add the declared sense property to entry 1175570 sense 0."
+    },
+    {
+      "event": 566,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1175570,
+        1,
+        "pos",
+        "n"
+      ],
+      "sourceLine": 2147,
+      "preservedBehavior": "Add the declared sense property to entry 1175570 sense 1."
+    },
+    {
+      "event": 567,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1315130,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2148,
+      "preservedBehavior": "Add the declared sense property to entry 1315130 sense 0."
+    },
+    {
+      "event": 568,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1315130,
+        1,
+        "pos",
+        "n"
+      ],
+      "sourceLine": 2149,
+      "preservedBehavior": "Add the declared sense property to entry 1315130 sense 1."
+    },
+    {
+      "event": 569,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1199640,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2150,
+      "preservedBehavior": "Add the declared sense property to entry 1199640 sense 0."
+    },
+    {
+      "event": 570,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1047880,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2152,
+      "preservedBehavior": "Add the declared sense property to entry 1047880 sense 0."
+    },
+    {
+      "event": 571,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1047880,
+        1,
+        "pos",
+        "n"
+      ],
+      "sourceLine": 2153,
+      "preservedBehavior": "Add the declared sense property to entry 1047880 sense 1."
+    },
+    {
+      "event": 572,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1244080,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2155,
+      "preservedBehavior": "Add the declared sense property to entry 1244080 sense 0."
+    },
+    {
+      "event": 573,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1244080,
+        1,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2156,
+      "preservedBehavior": "Add the declared sense property to entry 1244080 sense 1."
+    },
+    {
+      "event": 574,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1239700,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2157,
+      "preservedBehavior": "Add the declared sense property to entry 1239700 sense 0."
+    },
+    {
+      "event": 575,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1294940,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2159,
+      "preservedBehavior": "Add the declared sense property to entry 1294940 sense 0."
+    },
+    {
+      "event": 576,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1294940,
+        1,
+        "pos",
+        "suf"
+      ],
+      "sourceLine": 2160,
+      "preservedBehavior": "Add the declared sense property to entry 1294940 sense 1."
+    },
+    {
+      "event": 577,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1575510,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2162,
+      "preservedBehavior": "Add the declared sense property to entry 1575510 sense 0."
+    },
+    {
+      "event": 578,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1575510,
+        1,
+        "pos",
+        "n"
+      ],
+      "sourceLine": 2163,
+      "preservedBehavior": "Add the declared sense property to entry 1575510 sense 1."
+    },
+    {
+      "event": 579,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1505390,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2165,
+      "preservedBehavior": "Add the declared sense property to entry 1505390 sense 0."
+    },
+    {
+      "event": 580,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1101700,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2167,
+      "preservedBehavior": "Add the declared sense property to entry 1101700 sense 0."
+    },
+    {
+      "event": 581,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1120410,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2168,
+      "preservedBehavior": "Add the declared sense property to entry 1120410 sense 0."
+    },
+    {
+      "event": 582,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1956400,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2169,
+      "preservedBehavior": "Add the declared sense property to entry 1956400 sense 0."
+    },
+    {
+      "event": 583,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1333450,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2170,
+      "preservedBehavior": "Add the declared sense property to entry 1333450 sense 0."
+    },
+    {
+      "event": 584,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1480050,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2171,
+      "preservedBehavior": "Add the declared sense property to entry 1480050 sense 0."
+    },
+    {
+      "event": 585,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1480050,
+        1,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2172,
+      "preservedBehavior": "Add the declared sense property to entry 1480050 sense 1."
+    },
+    {
+      "event": 586,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1480050,
+        2,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2173,
+      "preservedBehavior": "Add the declared sense property to entry 1480050 sense 2."
+    },
+    {
+      "event": 587,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1956530,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2175,
+      "preservedBehavior": "Add the declared sense property to entry 1956530 sense 0."
+    },
+    {
+      "event": 588,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1324110,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2176,
+      "preservedBehavior": "Add the declared sense property to entry 1324110 sense 0."
+    },
+    {
+      "event": 589,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1324110,
+        1,
+        "pos",
+        "n"
+      ],
+      "sourceLine": 2177,
+      "preservedBehavior": "Add the declared sense property to entry 1324110 sense 1."
+    },
+    {
+      "event": 590,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1382450,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2178,
+      "preservedBehavior": "Add the declared sense property to entry 1382450 sense 0."
+    },
+    {
+      "event": 591,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1382450,
+        1,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2179,
+      "preservedBehavior": "Add the declared sense property to entry 1382450 sense 1."
+    },
+    {
+      "event": 592,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1253800,
+        1,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2181,
+      "preservedBehavior": "Add the declared sense property to entry 1253800 sense 1."
+    },
+    {
+      "event": 593,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1297240,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2183,
+      "preservedBehavior": "Add the declared sense property to entry 1297240 sense 0."
+    },
+    {
+      "event": 594,
+      "phase": "addErrataCounters",
+      "operation": "addNewSense",
+      "arguments": [
+        2262420,
+        [
+          "ctr"
+        ],
+        [
+          "counter for strings"
+        ]
+      ],
+      "sourceLine": 2185,
+      "preservedBehavior": "Add the declared sense content to entry 2262420."
+    },
+    {
+      "event": 595,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1368480,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2187,
+      "preservedBehavior": "Add the declared sense property to entry 1368480 sense 0."
+    },
+    {
+      "event": 596,
+      "phase": "addErrataCounters",
+      "operation": "addGloss",
+      "arguments": [
+        1368480,
+        0,
+        "for N people"
+      ],
+      "sourceLine": 2188,
+      "preservedBehavior": "Add the declared sense content to entry 1368480."
+    },
+    {
+      "event": 597,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1732510,
+        1,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2190,
+      "preservedBehavior": "Add the declared sense property to entry 1732510 sense 1."
+    },
+    {
+      "event": 598,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1732510,
+        2,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2191,
+      "preservedBehavior": "Add the declared sense property to entry 1732510 sense 2."
+    },
+    {
+      "event": 599,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        2086480,
+        1,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2192,
+      "preservedBehavior": "Add the declared sense property to entry 2086480 sense 1."
+    },
+    {
+      "event": 600,
+      "phase": "addErrataCounters",
+      "operation": "addSenseProp",
+      "arguments": [
+        1331080,
+        0,
+        "pos",
+        "ctr"
+      ],
+      "sourceLine": 2194,
+      "preservedBehavior": "Add the declared sense property to entry 1331080 sense 0."
+    }
+  ]
+}

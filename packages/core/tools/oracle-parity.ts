@@ -18,11 +18,14 @@ import {
   verifyBrowserAlphaDatabase
 } from '../../data/src/browser-pack/database-identity.js';
 import {
+  BROWSER_ALPHA_SOURCES_LOCK,
+  parseBrowserAlphaSourceLock,
   sha256Bytes,
   verifyBrowserAlphaOracleCore,
   verifyBrowserAlphaSources,
   type BrowserAlphaSourceLock
 } from '../../data/src/browser-pack/release-orchestration.js';
+import { verifySourceCompilerLock } from '../../data/src/source-compiler/source-lock.js';
 import {
   parseAnalyzerReleaseManifest,
   type AnalyzerReleaseAsset,
@@ -81,6 +84,7 @@ interface Options {
   readonly out: string | null;
   readonly smoke: boolean;
   readonly allowFailures: boolean;
+  readonly sourceCompilerPack: boolean;
   readonly samples: number;
 }
 
@@ -161,14 +165,16 @@ interface FailureSample {
   readonly suite: string;
   readonly request: string;
   readonly classification: FailureClass;
-  readonly pathDifference?: DifferencePreview;
-  readonly cleanDifference?: DifferencePreview;
-  readonly detailedDifference?: DifferencePreview;
+  readonly qualifiedOutputSha256?: string;
+  readonly sourceOutputSha256?: string;
+  readonly pathDifference?: DifferenceEvidence;
+  readonly cleanDifference?: DifferenceEvidence;
+  readonly detailedDifference?: DifferenceEvidence;
   readonly multipleRoots?: Readonly<Record<string, readonly number[]>>;
   readonly error?: string;
 }
 
-interface DifferencePreview {
+interface DifferenceEvidence {
   readonly path: string;
   readonly kind: CanonicalDifference['kind'];
   readonly expected: string;
@@ -177,7 +183,7 @@ interface DifferencePreview {
 
 interface HistoricalDifference {
   readonly request: string;
-  readonly difference: DifferencePreview;
+  readonly difference: DifferenceEvidence;
 }
 
 interface SuiteRun {
@@ -193,19 +199,31 @@ interface Runtime {
   readonly analyzer: PortableAnalyzer;
   readonly annotations: ReturnType<AnalyzerAnnotationsReader['createPreloaded']>;
   readonly details: Awaited<ReturnType<typeof openDetailStore>>;
+  readonly release: {
+    readonly sourceCommit: string;
+    readonly manifestFileSha256: string;
+    readonly manifestSha256: string;
+    readonly hot: AnalyzerReleaseAsset;
+    readonly details: AnalyzerReleaseAsset;
+  };
 }
 
 function usage(message?: string): never {
   if (message) console.error(`error: ${message}\n`);
   console.error(`usage: bun packages/core/tools/oracle-parity.ts \\
   --release <directory> --database <url> [--repository <directory>] \\
-  [--out <report.json>] [--smoke] [--allow-failures] [--samples <count>]
+  [--out <report.json>] [--source-compiler-pack] [--smoke] \\
+  [--allow-failures] [--samples <count>]
 
 Without --smoke this always runs all 534 segmentation, 252 CLI, 149 hard,
 200 counter, 54 entity, deterministic analyzer probes, and 5 standalone
 romanization fixtures. Without
 --allow-failures, any divergence
-exits non-zero so the command is suitable as the exact release gate.`);
+exits non-zero so the command is suitable as the exact release gate.
+
+--source-compiler-pack verifies the release against the source-compiler lock,
+while the immutable browser-alpha lock continues to identify the frozen
+PostgreSQL and reference-core oracle.`);
   process.exit(2);
 }
 
@@ -221,6 +239,7 @@ function parseArgs(argv: readonly string[]): Options {
   let out: string | null = null;
   let smoke = false;
   let allowFailures = false;
+  let sourceCompilerPack = false;
   let samples = 30;
   for (let index = 0; index < argv.length; index++) {
     const argument = argv[index]!;
@@ -235,6 +254,7 @@ function parseArgs(argv: readonly string[]): Options {
     else if (argument === '--out') out = next();
     else if (argument === '--smoke') smoke = true;
     else if (argument === '--allow-failures') allowFailures = true;
+    else if (argument === '--source-compiler-pack') sourceCompilerPack = true;
     else if (argument === '--samples') samples = positiveInteger(next(), '--samples');
     else if (argument === '--help' || argument === '-h') usage();
     else usage(`unknown argument ${argument}`);
@@ -248,11 +268,12 @@ function parseArgs(argv: readonly string[]): Options {
     out: out ? resolve(out) : null,
     smoke,
     allowFailures,
+    sourceCompilerPack,
     samples
   };
 }
 
-function sha256(bytes: Uint8Array): string {
+function sha256(bytes: Uint8Array | string): string {
   return createHash('sha256').update(bytes).digest('hex');
 }
 
@@ -282,9 +303,8 @@ async function openRuntime(
   directory: string,
   expected: { readonly sourceCommit: string; readonly sourcesLockSha256: string }
 ): Promise<Runtime> {
-  const manifest = JSON.parse(
-    await readFile(resolve(directory, 'manifest.json'), 'utf8')
-  );
+  const manifestBytes = new Uint8Array(await readFile(resolve(directory, 'manifest.json')));
+  const manifest = JSON.parse(new TextDecoder().decode(manifestBytes));
   const verifiedManifest: AnalyzerReleaseManifest = parseAnalyzerReleaseManifest(
     manifest,
     text => createHash('sha256').update(text).digest('hex')
@@ -318,7 +338,18 @@ async function openRuntime(
     annotations
   });
   const details = await openDetailStore(memoryDetailSource(detailsBytes), decodeGzip);
-  return { analyzer, annotations, details };
+  return {
+    analyzer,
+    annotations,
+    details,
+    release: {
+      sourceCommit: verifiedManifest.sourceCommit,
+      manifestFileSha256: sha256(manifestBytes),
+      manifestSha256: verifiedManifest.manifestSha256,
+      hot: verifiedManifest.hot,
+      details: verifiedManifest.details
+    }
+  };
 }
 
 function parseDatabase(value: string): DatabaseSpec {
@@ -731,6 +762,17 @@ async function repositoryHead(repository: string): Promise<string> {
   return commit;
 }
 
+async function assertRepositoryClean(repository: string): Promise<void> {
+  const { stdout } = await execFile(
+    'git',
+    ['-C', repository, 'status', '--porcelain', '--untracked-files=all'],
+    { encoding: 'utf8' }
+  );
+  if (stdout.trim().length > 0) {
+    throw new Error('Complete source-compiler parity evidence requires a clean Git checkout');
+  }
+}
+
 interface ReferenceAnalysis {
   readonly raw: unknown;
   readonly detailed: unknown;
@@ -836,19 +878,29 @@ function recordCleanComparison(stats: SuiteStats, difference: CanonicalDifferenc
   }
 }
 
-function preview(value: unknown): string {
+function serialized(value: unknown): string {
   const text = JSON.stringify(value);
-  if (text === undefined) return 'undefined';
-  return text.length <= 600 ? text : `${text.slice(0, 600)}…`;
+  return text === undefined ? 'undefined' : text;
 }
 
-function differencePreview(value: CanonicalDifference | null): DifferencePreview | undefined {
+function differenceEvidence(value: CanonicalDifference | null): DifferenceEvidence | undefined {
   return value ? {
     path: value.path,
     kind: value.kind,
-    expected: preview(value.expected),
-    actual: preview(value.actual)
+    expected: serialized(value.expected),
+    actual: serialized(value.actual)
   } : undefined;
+}
+
+function canonicalValue(value: unknown): unknown {
+  if (Array.isArray(value)) return value.map(canonicalValue);
+  if (!value || typeof value !== 'object') return value;
+  const input = value as Record<string, unknown>;
+  return Object.fromEntries(Object.keys(input).sort().map(key => [key, canonicalValue(input[key])]));
+}
+
+function completeOutputSha256(value: unknown): string {
+  return sha256(serialized(canonicalValue(value)));
 }
 
 function select<T>(values: readonly T[], smoke: boolean, count: number): readonly T[] {
@@ -897,8 +949,10 @@ async function compareSuite(
             suite,
             request: fixtureKey(fixture.request),
             classification: authority.pathDifference ? 'analyzer' : 'presentation',
-            pathDifference: differencePreview(authority.pathDifference),
-            detailedDifference: differencePreview(authority.detailedDifference)
+            qualifiedOutputSha256: completeOutputSha256(currentLisp),
+            sourceOutputSha256: completeOutputSha256(actual.detailed),
+            pathDifference: differenceEvidence(authority.pathDifference),
+            detailedDifference: differenceEvidence(authority.detailedDifference)
           });
         }
       }
@@ -950,23 +1004,23 @@ async function compareSuite(
           referenceFailed++;
           referenceDifferences.push({
             request: fixture.request.text,
-            difference: differencePreview(difference)!
+            difference: differenceEvidence(difference)!
           });
         } else referenceExact++;
       } else {
         const authority = compareDetailedAuthority(null, expectedIdentity.value, actual.detailed);
         recordDetailedComparison(stats, authority);
-        if ((cleanDifference || authority.detailedDifference) && samples.length < maxSamples) {
-          const classification: FailureClass = cleanDifference || authority.pathDifference
-            ? 'analyzer'
-            : 'presentation';
+        if (cleanDifference && samples.length < maxSamples) {
+          const classification: FailureClass = 'analyzer';
           samples.push({
             suite,
             request: fixtureKey(fixture.request),
             classification,
-            pathDifference: differencePreview(authority.pathDifference),
-            cleanDifference: differencePreview(cleanDifference),
-            detailedDifference: differencePreview(authority.detailedDifference),
+            qualifiedOutputSha256: completeOutputSha256(expectedClean),
+            sourceOutputSha256: completeOutputSha256(actualClean),
+            pathDifference: differenceEvidence(authority.pathDifference),
+            cleanDifference: differenceEvidence(cleanDifference),
+            detailedDifference: differenceEvidence(authority.detailedDifference),
             multipleRoots: Object.keys(expectedIdentity.multipleRoots).length > 0
               ? expectedIdentity.multipleRoots
               : undefined
@@ -1051,8 +1105,10 @@ async function segmentationSuite(
             suite: 'segmentation',
             request: fixture.input,
             classification: 'analyzer',
-            pathDifference: differencePreview(difference),
-            detailedDifference: differencePreview(difference)
+            qualifiedOutputSha256: completeOutputSha256(expected),
+            sourceOutputSha256: completeOutputSha256(actual),
+            pathDifference: differenceEvidence(difference),
+            detailedDifference: differenceEvidence(difference)
           });
         }
       }
@@ -1080,7 +1136,7 @@ async function segmentationSuite(
           referenceFailed++;
           referenceDifferences.push({
             request: fixture.input,
-            difference: differencePreview(referenceDifference)!
+            difference: differenceEvidence(referenceDifference)!
           });
         } else referenceExact++;
         recordCleanComparison(
@@ -1151,8 +1207,10 @@ async function romanizationSuite(
             suite: 'romanization',
             request: input,
             classification: 'analyzer',
-            pathDifference: differencePreview(difference),
-            detailedDifference: differencePreview(difference)
+            qualifiedOutputSha256: completeOutputSha256(currentLisp),
+            sourceOutputSha256: completeOutputSha256(actual),
+            pathDifference: differenceEvidence(difference),
+            detailedDifference: differenceEvidence(difference)
           });
         }
       }
@@ -1182,7 +1240,7 @@ async function romanizationSuite(
           referenceFailed++;
           referenceDifferences.push({
             request: input,
-            difference: differencePreview(referenceDifference)!
+            difference: differenceEvidence(referenceDifference)!
           });
         } else referenceExact++;
         recordCleanComparison(
@@ -1288,20 +1346,45 @@ function corpusAccounting(corpus: AnalyzerParityCorpus): Record<string, unknown>
 
 async function main(): Promise<void> {
   const options = parseArgs(process.argv.slice(2));
-  const source = await verifyBrowserAlphaSources(options.repository);
+  if (options.sourceCompilerPack && !options.smoke) {
+    await assertRepositoryClean(options.repository);
+  }
+  const source = options.sourceCompilerPack
+    ? await (async () => {
+      const oracleLockBytes = new Uint8Array(await readFile(
+        resolve(options.repository, BROWSER_ALPHA_SOURCES_LOCK)
+      ));
+      const oracleLock = parseBrowserAlphaSourceLock(new TextDecoder().decode(oracleLockBytes));
+      const compilerLock = await verifySourceCompilerLock(options.repository);
+      return {
+        oracleLock,
+        oracleLockSha256: sha256Bytes(oracleLockBytes),
+        releaseLockSha256: compilerLock.sha256,
+        releaseLockKind: 'source-compiler' as const
+      };
+    })()
+    : await (async () => {
+      const verified = await verifyBrowserAlphaSources(options.repository);
+      return {
+        oracleLock: verified.lock,
+        oracleLockSha256: verified.lockSha256,
+        releaseLockSha256: verified.lockSha256,
+        releaseLockKind: 'browser-alpha' as const
+      };
+    })();
   await verifyBrowserAlphaOracleCore(
     options.repository,
-    source.lock.postgresReference.repositoryCommit
+    source.oracleLock.postgresReference.repositoryCommit
   );
   const head = await repositoryHead(options.repository);
   const [corpus, runtime] = await Promise.all([
     loadAnalyzerParityCorpus(options.repository),
     openRuntime(options.release, {
       sourceCommit: head,
-      sourcesLockSha256: source.lockSha256
+      sourcesLockSha256: source.releaseLockSha256
     })
   ]);
-  const reference = await openReference(options.database, source.lock.database);
+  const reference = await openReference(options.database, source.oracleLock.database);
   const samples: FailureSample[] = [];
   try {
     await reference.withOracle(async () => {
@@ -1358,9 +1441,19 @@ async function main(): Promise<void> {
       entities.referenceStats, probes.referenceStats
     ];
     const report = {
-      formatVersion: 3,
+      formatVersion: 4,
       generatedAt: new Date().toISOString(),
       completeCorpus: !options.smoke,
+      testedRelease: runtime.release,
+      releaseInputLock: {
+        kind: source.releaseLockKind,
+        sha256: source.releaseLockSha256
+      },
+      frozenOracleLock: {
+        sha256: source.oracleLockSha256,
+        database: source.oracleLock.database.name,
+        upstreamIchiranCommit: source.oracleLock.upstreamIchiran.commit
+      },
       corpus: {
         segmentation: corpus.segmentation.length,
         romanization: corpus.romanization.length,

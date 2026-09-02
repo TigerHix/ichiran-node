@@ -3,7 +3,6 @@
  */
 
 import { describe, test, expect, beforeAll } from 'bun:test';
-import { setupTests } from '@ichiran/testing';
 import { getConnection } from '@ichiran/reference-postgres';
 import {
   getAllReadings,
@@ -17,13 +16,21 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const DATA_PATH = join(__dirname, '../../../data');
 
-setupTests();
+const databaseConfigured = process.env.ICHIRAN_RUN_DATABASE_TESTS === 'true';
+const describeWithDatabase = databaseConfigured ? describe : describe.skip;
 
-describe('Conjugation Generation', () => {
-  beforeAll(() => {
-    // Ensure conjugation rules are loaded
-    loadAllConjugationRules(DATA_PATH);
-  });
+if (databaseConfigured) {
+  const { setupTests } = await import('@ichiran/testing');
+  setupTests();
+}
+
+describeWithDatabase('Conjugation Generation', () => {
+  if (databaseConfigured) {
+    beforeAll(() => {
+      // Ensure conjugation rules are loaded
+      loadAllConjugationRules(DATA_PATH);
+    });
+  }
 
   test('getAllReadings fetches readings for an entry', async () => {
     const sql = getConnection();

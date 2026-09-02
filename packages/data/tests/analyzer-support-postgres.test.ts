@@ -4,9 +4,9 @@ import { gunzipSync, gzipSync } from 'node:zlib';
 import { getConnection } from '../../reference-postgres/src/conn.js';
 import {
   buildAnalyzerSupportCore,
-  loadAnalyzerSupportSource,
   type AnalyzerSupportSuffixSource
 } from '../src/browser-pack/analyzer-support.js';
+import { loadAnalyzerSupportSource } from '../src/browser-pack/analyzer-support-oracle.js';
 import { buildAnalyzerAnnotations } from '../src/browser-pack/analyzer-annotations.js';
 import { openAnalyzerSupport } from '../../core/src/analyzer-support.js';
 import {

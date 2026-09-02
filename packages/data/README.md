@@ -1,24 +1,25 @@
-# PostgreSQL data loading (transition reference)
+# Source compiler and PostgreSQL migration oracle
 
-This guide documents the existing PostgreSQL-backed loader and compiler oracle. It is
-not the target release architecture. The planned `@ichiran/data` compiler will consume
-pinned JMdict, Kanjidic2, CSV/custom data, and ordered errata directly while reusing
-the qualified pack encoders. See
+`@ichiran/data` builds pack-format-v1 releases directly from pinned JMdict,
+Kanjidic2, custom XML/CSV, conjugation CSVs, chronological errata, and a small
+compatibility ledger. The normal compiler does not connect to PostgreSQL. See
 [the source-compiler and Rust-kernel roadmap](../../docs/SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md).
 
 ## Status
 
-Transitional migration infrastructure. The PostgreSQL-backed producer/query path is
-frozen except for oracle maintenance; `@ichiran/data` and its qualified pack encoders
-remain active implementation code. The checked-in `JMdict_e.gz` predates the qualified
-`ichiran-260118` database and Kanjidic2 is not yet independently pinned. Do not treat a
-fresh run of the steps below as source provenance for that release.
+The source compiler is the active release producer. Exact inputs and hashes live in
+`data/source-compiler-sources.lock.json`; acquisition and release instructions are in
+`docs/source-compiler/M2-SOURCES.md` and `M6-RELEASE-WORKFLOW.md`. Kanjidic is used
+only to resolve analyzer-required easy hints and is not exposed as a runtime API.
+
+The commands below describe the frozen PostgreSQL migration oracle. They do not
+produce or replace pinned source-compiler inputs.
 
 ## Loading Sequence
 
 Matches Lisp `load-extras` from dict-load.lisp:185-194. Total time: ~26 minutes.
 
-1. `ichiran-data download` - Download JMDict XML + Kanjidic2 XML
+1. `ichiran-data download` - Download current live JMDict/Kanjidic2 into the ignored `work/live-data` destination
 2. `ichiran-data init-db` - Create schema (**drops all tables!**)
 3. `ichiran-data load-jmdict` - Load main dictionary (~214k entries, ~3 min)
 4. `ichiran-data load-conjugations` - Generate verb/adjective conjugations (~686k forms, ~2 min)
@@ -35,7 +36,7 @@ Matches Lisp `load-extras` from dict-load.lisp:185-194. Total time: ~26 minutes.
 ## Flags
 
 - `--max N` - limit entries (testing)
-- `--force` - re-download files
+- `--force` - re-download only in the live/legacy destination; it cannot overwrite compiler pins
 - `--path <file>` - custom XML path
 - `--no-download` - skip auto-download
 - `--extra|--municipality|--ward` - custom data type

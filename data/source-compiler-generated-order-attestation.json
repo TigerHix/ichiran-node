@@ -1,0 +1,235 @@
+{
+  "formatVersion": 1,
+  "scope": "ichiran-260118-source-native-generated-order",
+  "provenance": {
+    "qualifiedArtifactTag": "portable-core-260118-baseline",
+    "upstreamIchiranCommit": "ea9583368e67cad22d94abae8dbcc8df96d99bcd",
+    "generatedBy": "scripts/source-compiler-generated-order-proof.ts",
+    "qualifiedHotPack": {
+      "bytes": 12662917,
+      "sha256": "35d02c84d4cc531d299d7d5530994351b75bdba429d5276c20bc2f67cdc8d6d7"
+    }
+  },
+  "sourceProjection": {
+    "semanticPaths": 2468434,
+    "matchedPaths": 2468441,
+    "records": 733451,
+    "countExceptions": 651013,
+    "physicalGroups": 169649,
+    "physicalMembers": 384226,
+    "propertyOverrides": 30792,
+    "projectionSha256": "218e3cb001d8b4efde96e1ded7a3bd9bd56cbf34d3cc0855a28318bdbc670004",
+    "normalizedRecordSha256": "13fdc54f969fe4568c3e12e9391189ed56739d27d6c279885cc0d98211a4969b",
+    "paths": {
+      "path": "work/m6-evidence/generated-diff-final-v4-run/generated-paths.bin",
+      "bytes": 49412876,
+      "sha256": "7ce4590aa5ad93d2b5787899d2e88612df47b4c55d21c1a3cb0f2a079643549d"
+    },
+    "occurrences": {
+      "path": "work/m6-evidence/generated-diff-final-v4-run/generated-occurrences.bin",
+      "rows": 8774912,
+      "bytes": 674229002,
+      "sha256": "343e0e146a41b493c39c74221d2ba0d3503446dcbb46ba63e448c1cefb8cd499"
+    }
+  },
+  "producerEvidence": {
+    "report": {
+      "path": "work/m6-evidence/generated-diff-final-v4-run.json",
+      "bytes": 24343,
+      "sha256": "7ee322f3dda821176c8710831e7b09fd3630674a33117d14664beeb177b57dbe"
+    },
+    "rawDifferences": {
+      "path": "work/m6-evidence/generated-diff-final-v4-run.ndjson",
+      "rows": 420348,
+      "bytes": 196692161,
+      "sha256": "38ea5b924862fb3bbf8fcb060840cd37a2755798285da6a9569a092d5df5c8b8"
+    },
+    "normalizedDifferences": {
+      "path": "work/m6-evidence/generated-diff-final-v4-run.normalized.ndjson",
+      "rows": 13006,
+      "bytes": 3212683,
+      "sha256": "b9b1555956c40d6c11c8265662b40c320b3702ad8f15e1b12b86def642646c93"
+    },
+    "time": {
+      "path": "work/m6-evidence/generated-diff-final-v4-run.time.txt",
+      "elapsedSeconds": 322.87,
+      "peakRssKiB": 17305324,
+      "sha256": "8eeb4fc3c1d08d323eb592cee1421d39069cd2f720b34ae30f1a64a4e7340a5f"
+    }
+  },
+  "qualifiedProjection": {
+    "semanticPaths": 2468434,
+    "matchedPaths": 2468441,
+    "records": 733880,
+    "countExceptions": 651728,
+    "physicalGroups": 170717,
+    "physicalMembers": 385967,
+    "propertyOverrides": 30948,
+    "normalizedRecordSha256": "7375949d312be184e89bd0543c11896144c4c319d47138b5d4ef3acf61244ad1"
+  },
+  "normalizedRecordDelta": {
+    "qualifiedOnly": 2478,
+    "sourceOnly": 2049,
+    "changed": 8479,
+    "sha256": "a6b2fc5fb06c9120335e5880d127b5873f14a0c18004d280204788c0117963f2",
+    "physicalGroupBijection": {
+      "common": 167265,
+      "sourceOnly": 2384,
+      "qualifiedOnly": 3452,
+      "renumbered": 166805,
+      "sha256": "71cab95ba79f2eebaa1783ee77f9b5a0b3501ff191a027eb5404c9c47030822d"
+    },
+    "ambiguousMemberSignatures": 0
+  },
+  "lookupUniverse": {
+    "comparedSurfaces": 212198,
+    "exactSurfaces": 173111,
+    "changedSurfaces": 39087,
+    "sourceAmbiguousSurfaces": 210313,
+    "qualifiedReachableAmbiguousSurfaces": 208351,
+    "sourcePhysicalClasses": 498606,
+    "qualifiedReachablePhysicalClasses": 496392,
+    "sourceLocators": 548607,
+    "qualifiedLocators": 548607,
+    "groupingChanges": 9799,
+    "groupingKana": 4315,
+    "groupingKanji": 5484,
+    "orderingOnlyChanges": 29288,
+    "winnerChanges": 35306,
+    "sourceOnlyLocators": 0,
+    "qualifiedOnlyLocators": 0,
+    "collisionStatusChanges": 0,
+    "qualifiedMissingRanks": 0,
+    "qualifiedRankConflicts": 0,
+    "qualifiedRankPartitionChanges": 0,
+    "reverseSourceOnlyLocators": 0,
+    "reversePackedOnlyLocators": 0,
+    "normalizedSha256": "2f555aa017df20aee760a6e19b94fd3c63d778adc2314f19fd39b56d5ccadc4b",
+    "fullEvidence": {
+      "path": "work/m6-evidence/full-locator-universe-final-v2.ndjson",
+      "rows": 39087,
+      "bytes": 39744311,
+      "sha256": "6160662ad10a4c4dade2fef1b11dbfb689cf4f55ab225862f6b77435be2c708e"
+    },
+    "reportEvidence": {
+      "path": "work/m6-evidence/full-locator-universe-final-v2.json",
+      "bytes": 44166,
+      "sha256": "239e02ed657f739adb9808816198e96bf81031b66872e9f36c881140ac354454"
+    },
+    "time": {
+      "path": "work/m6-evidence/full-locator-universe-final-v2.time.txt",
+      "elapsedSeconds": 102.44,
+      "peakRssKiB": 5474320,
+      "sha256": "5406eb11c4a45103eb14528ada7abab04d92b05f0f976f9469a480667e47eead"
+    }
+  },
+  "qualifiedAccounting": {
+    "declaredAmbiguousSurfaces": 208352,
+    "reachableAmbiguousSurfaces": 208351,
+    "unreachableSurface": "コケさせ",
+    "reason": "The qualified PostgreSQL query counted two physical classes whose only reverse candidates are the two explicit section-3 tombstones. Runtime lookup removes both candidates, so this surface is not observable."
+  },
+  "releaseGate": {
+    "source": {
+      "analyzerSupport": {
+        "bytes": 949424,
+        "sha256": "f600a57d489a4745184f6cc620a808d7d622e6078e778dbed50f145590a574bb",
+        "counts": {
+          "suffixKeys": 5532,
+          "suffixValues": 5533,
+          "suffixClasses": 3586,
+          "counterKeys": 760,
+          "counterVariants": 799,
+          "collisions": 5442,
+          "generatedRules": 1161,
+          "generatedAliases": 1030
+        }
+      },
+      "analyzerAnnotations": {
+        "bytes": 3421680,
+        "sha256": "a1be5d1dc017bd1ea5436956d8a0f1a627a532712b8e9667f7fabd8b761723b9",
+        "counts": {
+          "blocks": 842,
+          "splits": 38032,
+          "hints": 36885,
+          "generatedBlocks": 36,
+          "generatedRoots": 20347,
+          "generatedRecords": 764243,
+          "lookupOrderRecords": 341506,
+          "lookupOrderRoots": 9630,
+          "lookupOrderBytes": 1366024,
+          "lookupOrderExceptionSurfaces": 0,
+          "lookupOrderExceptionClasses": 0,
+          "lookupOrderExceptionLocators": 0,
+          "lookupOrderExceptionBytes": 0,
+          "generatedPhysicalGroups": 169649,
+          "generatedFactPairs": 81,
+          "indexBytes": 184200,
+          "uncompressedBytes": 23220022,
+          "compressedBytes": 3237473,
+          "annotationUncompressedBytes": 13804196,
+          "annotationCompressedBytes": 811988,
+          "generatedUncompressedBytes": 9415826,
+          "generatedCompressedBytes": 2425485,
+          "totalBytes": 3421680,
+          "largestUncompressedBlock": 326926,
+          "largestGeneratedBlock": 262130,
+          "largestGeneratedCompressedBlock": 77596
+        }
+      }
+    },
+    "qualified": {
+      "analyzerSupport": {
+        "bytes": 949424,
+        "sha256": "24632918fa8b5116b983946281107e53ad6e8ac728b517121e6aa9c4955a14f0",
+        "counts": {
+          "suffixKeys": 5532,
+          "suffixValues": 5533,
+          "suffixClasses": 3586,
+          "counterKeys": 760,
+          "counterVariants": 799,
+          "collisions": 5442,
+          "generatedRules": 1161,
+          "generatedAliases": 1030
+        }
+      },
+      "analyzerAnnotations": {
+        "bytes": 3531024,
+        "sha256": "2ba1615e1a08dbfe458dd8a4ca89201e25aed58844531769dd7bbc0ac26de592",
+        "counts": {
+          "blocks": 842,
+          "splits": 38032,
+          "hints": 36885,
+          "generatedBlocks": 37,
+          "generatedRoots": 20347,
+          "generatedRecords": 764828,
+          "lookupOrderRecords": 340437,
+          "lookupOrderRoots": 9635,
+          "lookupOrderBytes": 1361748,
+          "lookupOrderExceptionSurfaces": 1623,
+          "lookupOrderExceptionClasses": 3895,
+          "lookupOrderExceptionLocators": 4212,
+          "lookupOrderExceptionBytes": 79908,
+          "generatedPhysicalGroups": 170717,
+          "generatedFactPairs": 80,
+          "indexBytes": 264128,
+          "uncompressedBytes": 23255989,
+          "compressedBytes": 3266889,
+          "annotationUncompressedBytes": 13838577,
+          "annotationCompressedBytes": 816578,
+          "generatedUncompressedBytes": 9417412,
+          "generatedCompressedBytes": 2450311,
+          "totalBytes": 3531024,
+          "largestUncompressedBlock": 326926,
+          "largestGeneratedBlock": 262144,
+          "largestGeneratedCompressedBlock": 78022
+        }
+      }
+    }
+  },
+  "decision": {
+    "candidateUniverse": "PASS: every reachable source and qualified locator is present on both sides, including all 9799 physical-partition delta surfaces.",
+    "ordering": "REVIEWED: qualified unordered concurrent root scheduling is replaced by the explicit source-native scheduler; all partition and winner rows are exhaustively recorded.",
+    "representation": "REVIEWED: transient target/group ids are excluded from semantic comparison; no broad allowlist is used."
+  }
+}
