@@ -118,6 +118,55 @@ function projectionDigest(records: readonly AnalyzerSupportGeneratedRecordSource
   return hash.digest('hex');
 }
 
+type ProjectionTarget = GeneratedProjectionStreamResult['targets'][number];
+
+/**
+ * Generated targets are allocated densely after the sorted lexical prefix.
+ * Validate that allocator invariant once, then use array offsets instead of a
+ * second multi-million-entry target map and generated-id set.
+ */
+function generatedTargetTail(targets: readonly ProjectionTarget[]): {
+  readonly includes: (targetSeq: number) => boolean;
+  readonly get: (targetSeq: number) => ProjectionTarget | undefined;
+} {
+  let firstIndex = targets.length;
+  let firstSeq: number | null = null;
+  let previousLexicalSeq = -1;
+  for (const [index, target] of targets.entries()) {
+    if (target.origin === 'lexical') {
+      if (firstSeq !== null) {
+        throw new Error(`Lexical physical target ${target.seq} follows the generated target tail`);
+      }
+      if (target.seq <= previousLexicalSeq) {
+        throw new Error('Lexical physical target prefix is not strictly ordered');
+      }
+      previousLexicalSeq = target.seq;
+      continue;
+    }
+    if (firstSeq === null) {
+      firstIndex = index;
+      firstSeq = target.seq;
+      if (firstSeq <= previousLexicalSeq) {
+        throw new Error(`Generated physical target ${firstSeq} overlaps the lexical target prefix`);
+      }
+    }
+    const expected = firstSeq + index - firstIndex;
+    if (target.seq !== expected) {
+      throw new Error(
+        `Generated physical target tail is not contiguous: expected ${expected}, got ${target.seq}`
+      );
+    }
+  }
+  const includes = (targetSeq: number): boolean => firstSeq !== null
+    && targetSeq >= firstSeq
+    && targetSeq < firstSeq + targets.length - firstIndex;
+  return {
+    includes,
+    get: targetSeq => includes(targetSeq)
+      ? targets[firstIndex + targetSeq - firstSeq!] : undefined
+  };
+}
+
 function buildGeneratedRecords(input: BoundedGeneratedInput): {
   readonly values: Omit<AnalyzerSupportGeneratedSource,
     'lookupOrders' | 'lookupOrderSourceRows' | 'lookupOrderSourceSha256'
@@ -127,16 +176,29 @@ function buildGeneratedRecords(input: BoundedGeneratedInput): {
     | 'lookupOrderExceptionClasses' | 'lookupOrderExceptionLocators'>;
   readonly semanticPathSha256: string;
 } {
+  const generatedTargets = generatedTargetTail(input.projection.targets);
   const membersByTarget = new Map<number, GeneratedPhysicalTargetMembers>();
-  const generatedTargets = new Set(input.projection.targets
-    .filter(target => target.origin === 'generated').map(target => target.seq));
-  const sharedTargets = new Set<number>();
+  const requiredViaTargets = new Set<number>();
+  for (const path of readGeneratedPathSpool(input.projection.pathsPath)) {
+    if (path.viaTargetSeq !== null) requiredViaTargets.add(path.viaTargetSeq);
+  }
+  const singletonViaRoots = new Map<number, number>();
   reduceGeneratedPhysicalMembers(input.projection.pathsPath, target => {
-    membersByTarget.set(target.targetSeq, target);
-    if (generatedTargets.has(target.targetSeq) && target.paths > 1) {
-      sharedTargets.add(target.targetSeq);
+    const requiredAsVia = requiredViaTargets.delete(target.targetSeq);
+    if (target.paths > 1) {
+      membersByTarget.set(target.targetSeq, target);
+    } else if (requiredAsVia) {
+      const member = target.members[0];
+      if (!member || member.viaTargetSeq !== null) {
+        throw new Error(`Generated singleton prefix target ${target.targetSeq} has invalid lineage`);
+      }
+      singletonViaRoots.set(target.targetSeq, member.rootSeq);
     }
   });
+  const missingViaTarget = requiredViaTargets.values().next().value;
+  if (missingViaTarget !== undefined) {
+    throw new Error(`Generated semantic path has no prefix member on target ${missingViaTarget}`);
+  }
 
   const patchForms = new Map<number, { readonly kana: Set<string>; readonly kanji: Set<string> }>();
   // Patch target ids live in the path table; the occurrence reducer below is
@@ -166,7 +228,6 @@ function buildGeneratedRecords(input: BoundedGeneratedInput): {
   }
 
   const entries = new Map(input.entries.map(entry => [entry.seq, entry]));
-  const targets = new Map(input.projection.targets.map(target => [target.seq, target]));
   const positions = new Map(input.morphology.positions.map((pos, id) => [pos, id]));
   const groupIds = new Map<number, number>();
   const records: AnalyzerSupportGeneratedRecordSource[] = [];
@@ -182,9 +243,9 @@ function buildGeneratedRecords(input: BoundedGeneratedInput): {
   let maxPropOrd = 0;
   const semantic = reduceGeneratedSemanticPaths(input.projection.pathsPath, path => {
     const root = entries.get(path.rootSeq);
-    const target = targets.get(path.targetSeq);
+    const target = generatedTargets.get(path.targetSeq);
     const targetMembers = membersByTarget.get(path.targetSeq);
-    if (!root || !target || !targetMembers) {
+    if (!root || !target) {
       throw new Error(`Generated semantic path ${path.ordinal} has incomplete target data`);
     }
     const finalAlias = path.secondAlias ?? path.firstAlias;
@@ -194,16 +255,36 @@ function buildGeneratedRecords(input: BoundedGeneratedInput): {
     if (posId === undefined) throw new Error(`Unknown morphology position ${finalProperty.pos}`);
     const defaultProperty = { posId, type: finalProperty.type,
       negative: finalProperty.negative, formal: finalProperty.formal };
-    const member = targetMembers.members.find(value =>
+    const member = targetMembers?.members.find(value =>
       value.rootSeq === path.rootSeq && value.viaTargetSeq === path.viaTargetSeq);
-    if (!member) throw new Error(`Generated semantic path ${path.ordinal} has no physical member`);
-    const viaMember = path.viaTargetSeq === null ? null
-      : membersByTarget.get(path.viaTargetSeq)?.members.find(value =>
-        value.rootSeq === path.rootSeq && value.viaTargetSeq === null) ?? null;
-    if (path.viaTargetSeq !== null && !viaMember) {
-      throw new Error(`Generated semantic path ${path.ordinal} has no prefix member`);
+    if (targetMembers !== undefined && !member) {
+      throw new Error(`Generated semantic path ${path.ordinal} has no physical member`);
     }
-    const memberRows = member.properties.map(value => {
+    const viaTargetMembers = path.viaTargetSeq === null
+      ? undefined : membersByTarget.get(path.viaTargetSeq);
+    const viaMember = path.viaTargetSeq === null ? null
+      : viaTargetMembers?.members.find(value =>
+        value.rootSeq === path.rootSeq && value.viaTargetSeq === null) ?? null;
+    let viaMemberOrd: number | null = null;
+    let viaMembers = 0;
+    if (path.viaTargetSeq !== null) {
+      if (viaTargetMembers !== undefined) {
+        if (!viaMember) throw new Error(`Generated semantic path ${path.ordinal} has no prefix member`);
+        viaMemberOrd = viaMember.memberOrd;
+        viaMembers = viaTargetMembers.members.length;
+      } else if (singletonViaRoots.get(path.viaTargetSeq) === path.rootSeq) {
+        viaMemberOrd = 0;
+        viaMembers = 1;
+      } else {
+        throw new Error(`Generated semantic path ${path.ordinal} has no prefix member`);
+      }
+    }
+    const memberRows: AnalyzerSupportGeneratedMemberSource[] = member === undefined ? [{
+      property: defaultProperty,
+      memberOrd: 0,
+      propOrd: 0,
+      viaMemberOrd
+    }] : member.properties.map(value => {
       const property = input.projection.aliasProperties[value.alias];
       if (!property) throw new Error(`Physical member has unknown alias ${value.alias}`);
       const propertyPosId = positions.get(property.pos);
@@ -214,17 +295,16 @@ function buildGeneratedRecords(input: BoundedGeneratedInput): {
           negative: property.negative, formal: property.formal },
         memberOrd: member.memberOrd,
         propOrd: value.propOrd,
-        viaMemberOrd: viaMember?.memberOrd ?? null
+        viaMemberOrd
       };
     }).sort((left, right) => left.memberOrd - right.memberOrd
       || left.propOrd - right.propOrd || (left.viaMemberOrd ?? -1) - (right.viaMemberOrd ?? -1));
+    if (member === undefined) matchedPaths++;
     if (memberRows.length === 0) throw new Error(`Generated semantic path ${path.ordinal} has no properties`);
-    if (sharedTargets.has(path.targetSeq) && !groupIds.has(path.targetSeq)) {
+    if (targetMembers !== undefined && !groupIds.has(path.targetSeq)) {
       groupIds.set(path.targetSeq, groupIds.size + 1);
     }
     const physicalGroup = groupIds.get(path.targetSeq) ?? null;
-    const viaMembers = path.viaTargetSeq === null
-      ? 0 : membersByTarget.get(path.viaTargetSeq)?.members.length ?? 0;
     const needsMembers = physicalGroup !== null || memberRows.length !== 1
       || memberRows[0]!.memberOrd !== 0
       || (memberRows[0]!.viaMemberOrd !== null && viaMembers > 1)
@@ -252,7 +332,7 @@ function buildGeneratedRecords(input: BoundedGeneratedInput): {
       physicalGroup,
       members: needsMembers ? memberRows : null
     });
-  }, targetSeq => generatedTargets.has(targetSeq));
+  }, generatedTargets.includes);
   return {
     values: {
       ruleAliases: input.projection.ruleAliases,

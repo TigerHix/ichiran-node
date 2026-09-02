@@ -5,9 +5,15 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildAnalyzerAnnotations } from '../src/browser-pack/analyzer-annotations.js';
 import { buildMorphology } from '../src/browser-pack/morphology-compiler.js';
+import type { CompiledMorphologyArtifact } from '../src/browser-pack/morphology-format.js';
 import { compileBoundedGeneratedProjection } from '../src/source-compiler/analyzer-generated-stream.js';
+import type { PhysicalTarget } from '../src/source-compiler/conjugation-emissions-physical.js';
 import { conjugationPositionsByRoot } from '../src/source-compiler/conjugation-emission-order.js';
-import { writeScheduledGeneratedProjection } from '../src/source-compiler/generated-projection-stream.js';
+import {
+  writeScheduledGeneratedProjection,
+  type GeneratedProjectionStreamResult
+} from '../src/source-compiler/generated-projection-stream.js';
+import { GeneratedProjectionSpoolWriter } from '../src/source-compiler/generated-projection-spool.js';
 import {
   CONJUGATION_PHASE,
   conjugationPhasePrecedence,
@@ -62,7 +68,172 @@ function scheduledEntry(
   };
 }
 
+function physicalTarget(
+  seq: number,
+  kanji: string,
+  kana: string,
+  origin: PhysicalTarget['origin']
+): PhysicalTarget {
+  return {
+    seq,
+    kanji: [kanji],
+    kana: [kana],
+    secondaryForms: [],
+    conjugatable: origin === 'lexical',
+    origin
+  };
+}
+
+function generatedMemberFixture(directory: string): {
+  readonly entries: readonly CanonicalEntry[];
+  readonly morphology: CompiledMorphologyArtifact;
+  readonly projection: GeneratedProjectionStreamResult;
+} {
+  const entries = [
+    scheduledEntry(10, '甲', 'こう', 0),
+    scheduledEntry(20, '乙', 'おつ', 1),
+    scheduledEntry(30, '丙', 'へい', 2)
+  ];
+  const pathsPath = join(directory, 'paths.bin');
+  const occurrencesPath = join(directory, 'occurrences.bin');
+  const writer = new GeneratedProjectionSpoolWriter(pathsPath, occurrencesPath);
+  writer.writePath({
+    ordinal: 0, rootSeq: 10, firstAlias: 0, secondAlias: null,
+    targetSeq: 100, viaTargetSeq: null
+  });
+  writer.writePath({
+    ordinal: 1, rootSeq: 20, firstAlias: 0, secondAlias: null,
+    targetSeq: 100, viaTargetSeq: null
+  });
+  writer.writePath({
+    ordinal: 2, rootSeq: 20, firstAlias: 0, secondAlias: 1,
+    targetSeq: 101, viaTargetSeq: 100
+  });
+  writer.writePath({
+    ordinal: 3, rootSeq: 30, firstAlias: 0, secondAlias: null,
+    targetSeq: 102, viaTargetSeq: null
+  });
+  const spool = writer.close();
+  return {
+    entries,
+    morphology: {
+      positions: ['v1'],
+      rules: [],
+      templates: [],
+      rootKeys: [],
+      rootGroups: [],
+      patches: [],
+      tombstones: []
+    },
+    projection: {
+      pathsPath,
+      occurrencesPath,
+      spool,
+      targets: [
+        physicalTarget(10, '甲', 'こう', 'lexical'),
+        physicalTarget(20, '乙', 'おつ', 'lexical'),
+        physicalTarget(30, '丙', 'へい', 'lexical'),
+        physicalTarget(100, '共有', 'きょうゆう', 'generated'),
+        physicalTarget(101, '連鎖', 'れんさ', 'generated'),
+        physicalTarget(102, '単独', 'たんどく', 'generated')
+      ],
+      ruleAliases: [0, 1],
+      aliasProperties: [
+        { pos: 'v1', type: 1, negative: false, formal: false },
+        { pos: 'v1', type: 2, negative: false, formal: false }
+      ],
+      phases: {},
+      patches: 0,
+      regeneratedTargetForms: 0
+    }
+  };
+}
+
 describe('bounded generated projection producer', () => {
+  test('synthesizes singleton members while retaining shared and via ordinals', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'ichiran-generated-members-'));
+    try {
+      const fixture = generatedMemberFixture(directory);
+      const compiled = compileBoundedGeneratedProjection({
+        ...fixture,
+        temporaryDirectory: directory,
+        customRootSeqs: new Set(),
+        firstErrataEvent: 10,
+        maxOccurrenceChunkRows: 100
+      });
+      expect(compiled.generated.semanticPaths).toBe(4);
+      expect(compiled.generated.matchedPaths).toBe(4);
+      expect(compiled.generated.countExceptions).toBe(0);
+      expect(compiled.generated.physicalGroups).toBe(1);
+      expect(compiled.generated.physicalMembers).toBe(3);
+      expect(compiled.generated.maxMemberOrd).toBe(1);
+      expect(compiled.generated.maxViaMemberOrd).toBe(1);
+      expect(compiled.generated.records).toEqual([
+        {
+          rootSeq: 10,
+          firstAlias: 0,
+          secondAlias: null,
+          counts: null,
+          physicalGroup: 1,
+          members: [{
+            property: { posId: 0, type: 1, negative: false, formal: false },
+            memberOrd: 0,
+            propOrd: 0,
+            viaMemberOrd: null
+          }]
+        },
+        {
+          rootSeq: 20,
+          firstAlias: 0,
+          secondAlias: null,
+          counts: null,
+          physicalGroup: 1,
+          members: [{
+            property: { posId: 0, type: 1, negative: false, formal: false },
+            memberOrd: 1,
+            propOrd: 0,
+            viaMemberOrd: null
+          }]
+        },
+        {
+          rootSeq: 20,
+          firstAlias: 0,
+          secondAlias: 1,
+          counts: null,
+          physicalGroup: null,
+          members: [{
+            property: { posId: 0, type: 2, negative: false, formal: false },
+            memberOrd: 0,
+            propOrd: 0,
+            viaMemberOrd: 1
+          }]
+        }
+      ]);
+      expect(compiled.generated.records.some(record => record.rootSeq === 30)).toBe(false);
+    } finally {
+      await rm(directory, { recursive: true, force: true });
+    }
+  });
+
+  test('rejects a non-contiguous generated physical target tail', async () => {
+    const directory = await mkdtemp(join(tmpdir(), 'ichiran-generated-target-tail-'));
+    try {
+      const fixture = generatedMemberFixture(directory);
+      const targets = fixture.projection.targets.map(target =>
+        target.seq === 101 ? { ...target, seq: 103 } : target);
+      expect(() => compileBoundedGeneratedProjection({
+        ...fixture,
+        projection: { ...fixture.projection, targets },
+        temporaryDirectory: directory,
+        customRootSeqs: new Set(),
+        firstErrataEvent: 10,
+        maxOccurrenceChunkRows: 100
+      })).toThrow('Generated physical target tail is not contiguous: expected 101, got 103');
+    } finally {
+      await rm(directory, { recursive: true, force: true });
+    }
+  });
+
   test('streams scheduled paths and occurrences into the concrete spools', async () => {
     const root = entry();
     const source = {
