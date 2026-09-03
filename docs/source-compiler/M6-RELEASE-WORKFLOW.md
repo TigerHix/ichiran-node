@@ -248,20 +248,19 @@ bun run source:release -- update \
   --pack-version jmdict-2026-01-02-source
 ```
 
-Compare the active generation inventories and every published payload byte.
-`manifest.json` and `stats.json` intentionally include the output pack version,
-so use the same `--pack-version` in both commands as shown above:
+The publisher already verifies the exact active generation inventory. Compare every
+named published payload byte. `manifest.json` and `stats.json` intentionally include
+the output pack version, so use the same `--pack-version` in both commands as shown:
 
 ```sh
-release_a=$(readlink -f work/m6-update-release-a)
-release_b=$(readlink -f work/m6-update-release-b)
-
-(cd "$release_a" && find . -maxdepth 1 -type f -printf '%f\0' \
-  | sort -z | xargs -0 sha256sum) > /tmp/ichiran-update-a.sha256
-(cd "$release_b" && find . -maxdepth 1 -type f -printf '%f\0' \
-  | sort -z | xargs -0 sha256sum) > /tmp/ichiran-update-b.sha256
-diff -u /tmp/ichiran-update-a.sha256 /tmp/ichiran-update-b.sha256
+set -eu
+release_a=work/m6-update-release-a
+release_b=work/m6-update-release-b
+for artifact in manifest.json hot.bin.gz details.bin.gz stats.json; do
+  cmp "$release_a/$artifact" "$release_b/$artifact"
+done
 ```
 
-An empty diff is the two-release determinism proof. Both runs must record the
-same clean 40-character source commit and the same verified update-lock digest.
+The successful byte-comparison loop is the two-release determinism proof. Both runs
+must record the same clean 40-character source commit and the same verified update-lock
+digest.

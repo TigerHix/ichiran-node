@@ -64,7 +64,8 @@ sc_expect_output=0
 for sc_argument in "$@"; do
   if [ "$sc_expect_output" = 1 ]; then
     sc_output=$sc_argument
-    break
+    sc_expect_output=0
+    continue
   fi
   if [ "$sc_argument" = --out ]; then
     sc_expect_output=1
@@ -85,6 +86,10 @@ if [ -n "$sc_output" ]; then
 fi
 
 sc_private_tmp_directory=$(mktemp -d /var/tmp/ichiran-source-private-tmp.XXXXXX)
+cleanup_source_private_tmp() {
+  rm -rf -- "$sc_private_tmp_directory"
+}
+trap cleanup_source_private_tmp EXIT HUP INT TERM
 case "$(realpath "$sc_private_tmp_directory")" in
   /tmp|/tmp/*)
     echo 'PostgreSQL-unavailable release proof requires private temp storage outside /tmp' >&2
@@ -93,10 +98,6 @@ case "$(realpath "$sc_private_tmp_directory")" in
 esac
 sc_empty_socket_directory=$sc_private_tmp_directory/empty-postgresql
 mkdir "$sc_empty_socket_directory"
-cleanup_source_private_tmp() {
-  rm -rf -- "$sc_private_tmp_directory"
-}
-trap cleanup_source_private_tmp EXIT HUP INT TERM
 
 unshare --user --map-root-user --mount --net --fork --propagation private \
   env SOURCE_COMPILER_POSTGRES_ISOLATED=1 \

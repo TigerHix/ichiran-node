@@ -153,13 +153,15 @@ test.skipIf(process.platform !== 'linux')(
 );
 
 test.skipIf(process.platform !== 'linux')(
-  'PostgreSQL isolation rejects an output removed with its private temp directory',
+  'PostgreSQL isolation rejects the last repeated output when it is private temp',
   () => {
     const repository = resolve(import.meta.dir, '../../..');
     const result = Bun.spawnSync([
       '/bin/sh',
       resolve(repository, 'scripts/source-compiler-release-no-postgres.sh'),
       '--probe-only',
+      '--out',
+      'work/apparently-safe-source-release',
       '--out',
       '/tmp/ephemeral-source-release'
     ], { cwd: repository, stdout: 'pipe', stderr: 'pipe' });
