@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
 
-import type { PortableAnalysisResult } from '../../core/dist/index.js';
+import type { AnalysisResult } from '../../core/dist/index.js';
 import { TypeScriptOracleRuntime } from '../../core/dist/qualification.js';
 
 const PACK_SHA256 = '61f2882e086be7e0e1b6ba9000e76e0e735b22ea443146f628f04cf877ff6ae0';
@@ -46,7 +46,7 @@ const probe = Bun.spawnSync({
 if (probe.exitCode !== 0) throw new Error(`Rust fixture probe exited ${probe.exitCode}`);
 const actual = JSON.parse(probe.stdout.toString()) as readonly {
   readonly name: string;
-  readonly result: PortableAnalysisResult;
+  readonly result: AnalysisResult;
 }[];
 
 const fixtures = [

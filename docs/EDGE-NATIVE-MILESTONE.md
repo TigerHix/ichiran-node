@@ -262,8 +262,8 @@ wrong data model.
 
 The separate `@ichiran/grammar` package is experimental and excluded. The analyzer's
 own suffix DSL, segmentation filters, penalties, and synergies remain in core because
-removing them changes segmentation and scores. `/api/analyze` returns analyzer output
-with `grammars: {}` and `grammarExcluded: true` instead of pretending grammar parity.
+removing them changes segmentation and scores. `POST /v1/analyze` returns the analyzer
+result directly; it has no grammar placeholder or implied grammar parity.
 
 Kanjidic is used only during compilation by the legacy `matchReadings`/easy-hint path.
 The compiler resolves the needed reading facts and stores those results in the analyzer

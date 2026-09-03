@@ -10,9 +10,9 @@ remain outside the runtime and normal source-compiler dependency graphs. See
 | Package | Ownership |
 |---|---|
 | `ichiran-kernel` | Canonical packed readers and analyzer semantics for WASM and the native C ABI |
-| `@ichiran/core` | Browser-safe WASM host facade, public model, pack encoders, and qualification-only TypeScript-oracle subpath |
-| `@ichiran/node` | Filesystem loading, manifest verification, gzip decoding, and legacy info formatting for Node |
-| `@ichiran/cli` | Historical `ichiran-cli` command surface over `@ichiran/node` |
+| `@ichiran/core` | Browser-safe `Analyzer` facade, public result model, and explicit release/compiler/qualification subpaths |
+| `@ichiran/node` | The single `openAnalyzer` filesystem loader with manifest verification and gzip decoding |
+| `@ichiran/cli` | Explicit `ichiran analyze`, `romanize`, and `entry` commands |
 | `@ichiran/api` | Analyzer-only Node HTTP server over `@ichiran/node` |
 | `@ichiran/browser-demo` | Offline PWA, OPFS installer, Worker transport, and mobile-first demo UI |
 

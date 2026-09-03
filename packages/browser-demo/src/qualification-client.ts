@@ -1,19 +1,37 @@
-import type { BrowserAnalyzer, AnalyzerRelease } from './analyzer-service.js';
+import type { AnalyzerDiagnostics } from '@ichiran/core/qualification/runtime';
 import type {
-  AnalysisResult,
   AnalyzeOptions,
-  BenchmarkGroupResult,
-  BenchmarkResult
+  AnalysisResult,
+  AnalyzerPackManifest,
+  DictionaryEntry,
+  PackStatus
 } from './protocol.js';
+import {
+  requestClientInternal,
+  type AnalyzerClient
+} from './client.js';
 
-declare global {
-  interface Window {
-    __ichiranQualification?: {
-      analyze(text: string, options: AnalyzeOptions): Promise<AnalysisResult>;
-      benchmark(): Promise<BenchmarkResult>;
-      romanize(text: string): Promise<string>;
-    };
-  }
+export interface BenchmarkGroupResult {
+  readonly corpus: string;
+  readonly samples: number;
+  readonly p50Ms: number;
+  readonly p95Ms: number;
+  readonly maxMs: number;
+  readonly rawMs: readonly number[];
+}
+
+export interface BenchmarkResult {
+  readonly release: AnalyzerPackManifest;
+  readonly corpusVersion: 3;
+  readonly warmupPasses: 2;
+  readonly measuredPasses: 10;
+  readonly groups: readonly BenchmarkGroupResult[];
+  readonly diagnostics: {
+    readonly analyzeGroups: readonly BenchmarkGroupResult[];
+    readonly entry: BenchmarkGroupResult;
+    readonly workerReadyMs: number;
+    readonly firstAnalyzeMs: number;
+  };
 }
 
 type CorpusRequest = readonly [
@@ -28,26 +46,37 @@ interface Request {
   readonly entities?: AnalyzeOptions['entities'];
 }
 
-/** Attaches qualification checks to the product's one analyzer instance. */
-export function attachQualificationBridge(
-  analyzer: BrowserAnalyzer,
-  release: AnalyzerRelease
-): () => void {
-  window.__ichiranQualification = {
-    analyze: (text, options) => analyzer.analyze(text, options),
-    benchmark: () => benchmarkAnalyzer(analyzer, release),
-    romanize: text => analyzer.romanize(text)
-  };
-  return () => { delete window.__ichiranQualification; };
+/** Qualification-only facade over the App's existing client and Worker. */
+export interface AnalyzerQualification {
+  benchmark(): Promise<BenchmarkResult>;
+  status(): Promise<PackStatus>;
+  analyze(text: string, options?: AnalyzeOptions): Promise<AnalysisResult>;
+  entry(entryIndex: number): Promise<DictionaryEntry>;
+  diagnostics(): Promise<AnalyzerDiagnostics>;
 }
 
-/** Complete UI-to-Worker benchmark, compiled only into qualification builds. */
-async function benchmarkAnalyzer(
-  analyzer: BrowserAnalyzer,
-  release: AnalyzerRelease
+export function createAnalyzerQualification(
+  client: AnalyzerClient,
+  release: AnalyzerPackManifest
+): AnalyzerQualification {
+  return {
+    benchmark: () => benchmarkAnalyzer(client, release),
+    status: () => client.status(),
+    analyze: (text, options) => client.analyze(text, options),
+    entry: entryIndex => client.entry(entryIndex),
+    diagnostics: () => requestClientInternal<AnalyzerDiagnostics>(client, {
+      op: 'rust-kernel-metrics'
+    })
+  };
+}
+
+/** Complete client-to-Worker benchmark used only by release qualification. */
+export async function benchmarkAnalyzer(
+  client: AnalyzerClient,
+  release: AnalyzerPackManifest
 ): Promise<BenchmarkResult> {
   const readyStarted = performance.now();
-  await analyzer.status();
+  await client.status();
   const workerReadyMs = performance.now() - readyStarted;
   const { default: corpus } = await import('./generated/benchmark-corpus.json');
   const requests = (values: readonly (readonly unknown[])[]): readonly Request[] => values.map(value => {
@@ -57,7 +86,7 @@ async function benchmarkAnalyzer(
   const first = requests(corpus.groups.ordinary)[0];
   if (!first) throw new Error('Benchmark corpus has no ordinary request');
   const firstStarted = performance.now();
-  await analyzer.analyze(first.text, { limit: 1 });
+  await client.analyze(first.text, { limit: 1 });
   const firstAnalyzeMs = performance.now() - firstStarted;
 
   const hardGroups = [
@@ -69,7 +98,7 @@ async function benchmarkAnalyzer(
   for (let index = 0; index < hardGroups.length; index++) {
     const [name, values, forceTopOne] = hardGroups[index]!;
     groups.push(await measureAnalyzeGroup(
-      analyzer,
+      client,
       name,
       values,
       0x1c41_0000 + index * 100,
@@ -93,7 +122,7 @@ async function benchmarkAnalyzer(
   for (let index = 0; index < diagnosticGroups.length; index++) {
     const [name, values] = diagnosticGroups[index]!;
     analyzeGroups.push(await measureAnalyzeGroup(
-      analyzer,
+      client,
       name,
       values,
       0x1c42_0000 + index * 100,
@@ -104,14 +133,14 @@ async function benchmarkAnalyzer(
 
   const entryIndices: number[] = [];
   for (const request of requests(corpus.groups['describe-random-access'])) {
-    const result = await analyzer.analyze(request.text, { limit: 1 });
+    const result = await client.analyze(request.text, { limit: 1 });
     const entryIndex = result.paths[0]?.tokens.find(token => token.entryIndex !== null)?.entryIndex;
     if (entryIndex === null || entryIndex === undefined) {
       throw new Error(`Entry benchmark probe has no dictionary entry: ${request.text}`);
     }
     entryIndices.push(entryIndex);
   }
-  const describe = await measureEntryGroup(analyzer, entryIndices);
+  const entry = await measureEntryGroup(client, entryIndices);
 
   return {
     release,
@@ -119,12 +148,12 @@ async function benchmarkAnalyzer(
     warmupPasses: 2,
     measuredPasses: 10,
     groups,
-    diagnostics: { analyzeGroups, describe, workerReadyMs, firstAnalyzeMs }
+    diagnostics: { analyzeGroups, entry, workerReadyMs, firstAnalyzeMs }
   };
 }
 
 async function measureAnalyzeGroup(
-  analyzer: BrowserAnalyzer,
+  client: AnalyzerClient,
   name: string,
   requests: readonly Request[],
   warmupSeed: number,
@@ -139,14 +168,14 @@ async function measureAnalyzeGroup(
       };
   for (let pass = 0; pass < 2; pass++) {
     for (const request of shuffled(requests, warmupSeed + pass)) {
-      await analyzer.analyze(request.text, options(request));
+      await client.analyze(request.text, options(request));
     }
   }
   const rawMs: number[] = [];
   for (let pass = 0; pass < 10; pass++) {
     for (const request of shuffled(requests, measuredSeed + pass)) {
       const started = performance.now();
-      await analyzer.analyze(request.text, options(request));
+      await client.analyze(request.text, options(request));
       rawMs.push(performance.now() - started);
     }
   }
@@ -154,19 +183,19 @@ async function measureAnalyzeGroup(
 }
 
 async function measureEntryGroup(
-  analyzer: BrowserAnalyzer,
+  client: AnalyzerClient,
   entryIndices: readonly number[]
 ): Promise<BenchmarkGroupResult> {
   for (let pass = 0; pass < 2; pass++) {
     for (const entryIndex of shuffled(entryIndices, 0x1c43_0000 + pass)) {
-      await analyzer.entry(entryIndex);
+      await client.entry(entryIndex);
     }
   }
   const rawMs: number[] = [];
   for (let pass = 0; pass < 10; pass++) {
     for (const entryIndex of shuffled(entryIndices, 0x1c43_1000 + pass)) {
       const started = performance.now();
-      await analyzer.entry(entryIndex);
+      await client.entry(entryIndex);
       rawMs.push(performance.now() - started);
     }
   }

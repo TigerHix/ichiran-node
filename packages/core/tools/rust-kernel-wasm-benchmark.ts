@@ -3,12 +3,12 @@
 import { readFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 
-import { IchiranRuntime, type PortableAnalyzeOptions } from '../src/index.js';
+import { Analyzer, type AnalyzeOptions } from '../src/index.js';
 
 interface BenchmarkRequest {
   readonly text: string;
   readonly limit: number;
-  readonly entities?: PortableAnalyzeOptions['entities'];
+  readonly entities?: AnalyzeOptions['entities'];
 }
 
 interface BenchmarkCorpus {
@@ -31,7 +31,7 @@ const corpus = JSON.parse(
   await readFile(join(repository, 'browser-alpha/bench/corpus.json'), 'utf8')
 ) as BenchmarkCorpus;
 const detailFile = Bun.file(join(release, 'details.bin'));
-const runtime = await IchiranRuntime.open({
+const runtime = await Analyzer.open({
   hot: new Uint8Array(await Bun.file(join(release, 'hot.bin')).arrayBuffer()),
   wasm: new Uint8Array(await Bun.file(wasmPath).arrayBuffer()),
   details: {

@@ -5,9 +5,12 @@ import { join, resolve } from 'node:path';
 import type { BrowserContext, Page } from 'playwright/test';
 import type {
   AnalysisResult,
-  AnalyzerPackManifest,
-  BenchmarkResult
+  AnalyzerPackManifest
 } from '../src/protocol.js';
+import type {
+  AnalyzerQualification,
+  BenchmarkResult
+} from '../src/qualification-client.js';
 import {
   expect,
   isExpectedOfflineFetchFailure,
@@ -34,17 +37,15 @@ import {
 // proxy. Keep the outer watchdog above the measured sweep so final report
 // download and process cleanup have deterministic headroom.
 test.setTimeout(40 * 60 * 1000);
+test.skip(
+  process.env.ICHIRAN_BROWSER_QUALIFICATION !== '1',
+  'requires the explicit browser qualification build'
+);
 
 async function qualificationAnalyze(page: Page): Promise<AnalysisResult> {
   return page.evaluate(async () => {
     const bridge = (window as typeof window & {
-      __ichiranQualification?: {
-        analyze(text: string, options: {
-          limit: number;
-          entities: readonly { start: number; end: number; boost: number }[];
-          normalizePunctuation: boolean;
-        }): Promise<AnalysisResult>;
-      };
+      __ichiranQualification?: AnalyzerQualification;
     }).__ichiranQualification;
     if (!bridge) throw new Error('Qualification bridge is unavailable');
     return bridge.analyze('日本語を勉強しています。', {
@@ -58,11 +59,18 @@ async function qualificationAnalyze(page: Page): Promise<AnalysisResult> {
 async function qualificationBenchmark(page: Page): Promise<BenchmarkResult> {
   return page.evaluate(async () => {
     const bridge = (window as typeof window & {
-      __ichiranQualification?: { benchmark(): Promise<BenchmarkResult> };
+      __ichiranQualification?: AnalyzerQualification;
     }).__ichiranQualification;
     if (!bridge) throw new Error('Qualification bridge is unavailable');
     return bridge.benchmark();
   });
+}
+
+async function expectQualificationReady(page: Page): Promise<void> {
+  await expect.poll(() => page.evaluate(() => Boolean(
+    (window as typeof window & { __ichiranQualification?: unknown })
+      .__ichiranQualification
+  ))).toBe(true);
 }
 
 test('installs once, restarts offline, and meets the 6x proxy', async ({
@@ -191,6 +199,7 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
     await expect(page.locator('details.parse-alternatives summary span')).toHaveText('2');
     await page.getByRole('button', { name: /日本語/ }).first().click();
     await expect(page.locator('.word-details:visible').getByText('Dictionary forms')).toBeVisible();
+    await expectQualificationReady(page);
     const clean = await qualificationAnalyze(page);
     expect(clean).toMatchObject({
       input: '日本語を勉強しています。',
@@ -244,6 +253,7 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
       expect(contentionRatio).toBeGreaterThanOrEqual(5);
       expect(contentionRatio).toBeLessThanOrEqual(7.5);
 
+      await expectQualificationReady(page);
       // This watchdog includes the entire corpus under induced host contention.
       // The assertions below enforce the actual analyzer latency requirements.
       const benchmark = await qualificationBenchmark(page);
@@ -266,7 +276,7 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
         ['numbers', 70],
         ['paragraph-scaling', 50]
       ]);
-      expect(benchmark.diagnostics.describe.samples).toBe(500);
+      expect(benchmark.diagnostics.entry.samples).toBe(500);
       expect(benchmark.diagnostics.workerReadyMs).toBeGreaterThanOrEqual(0);
       expect(benchmark.diagnostics.firstAnalyzeMs).toBeGreaterThanOrEqual(0);
       const environment = await page.evaluate(() => ({

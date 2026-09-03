@@ -11,12 +11,14 @@ import {
 let requireAnalyzer = false;
 let requireRust = false;
 let typescriptOracle = false;
+let qualificationBuild = false;
 let releaseDirectory: string | null = null;
 for (let index = 2; index < process.argv.length; index++) {
   const argument = process.argv[index];
   if (argument === '--require-analyzer') requireAnalyzer = true;
   else if (argument === '--require-rust') requireRust = true;
   else if (argument === '--typescript-oracle') typescriptOracle = true;
+  else if (argument === '--qualification') qualificationBuild = true;
   else if (argument === '--release') {
     const value = process.argv[++index];
     if (!value) throw new Error('--release requires a directory');
@@ -36,6 +38,15 @@ if (scripts.some(name => name.startsWith('qualification-bridge-'))) {
 }
 const workerName = scripts.find(name => name.startsWith('analyzer.worker-'));
 if (!workerName) throw new Error('Production analyzer Worker chunk is missing');
+const qualificationChunks = scripts.filter(name =>
+  name.startsWith('qualification-client-') || name.startsWith('benchmark-corpus-')
+);
+if (qualificationBuild && qualificationChunks.length !== 2) {
+  throw new Error('Qualification build must contain its client and benchmark corpus chunks');
+}
+if (!qualificationBuild && qualificationChunks.length !== 0) {
+  throw new Error('Product browser build contains qualification-only chunks');
+}
 
 const worker = await readFile(join(assetDirectory, workerName), 'utf8');
 const oracleWorkerNames = findTypeScriptOracleWorkerChunks(worker, scripts);
@@ -55,6 +66,13 @@ const main = (await Promise.all(
 const workerGraph = `${worker}\n${(await Promise.all(
   oracleWorkerNames.map(name => readFile(join(assetDirectory, name), 'utf8'))
 )).join('\n')}`;
+
+if (!qualificationBuild) {
+  const product = `${main}\n${worker}`;
+  if (product.includes('rust-kernel-metrics') || product.includes('__ichiranQualification')) {
+    throw new Error('Product browser build contains qualification-only runtime code');
+  }
+}
 
 // The lazily loaded benchmark corpus is inert JSON provenance/data. Its source
 // paths may name reference-postgres tests without introducing runtime code.
@@ -97,7 +115,6 @@ assertAnalyzerWorkerOnly(main);
 if (!typescriptOracle) assertRustRuntimeGraph(runtime);
 for (const forbidden of [
   'postgres', 'node:fs', 'node:path', 'node:async_hooks', 'async_hooks', 'kernel-not-ready',
-  '__ichiranQualification'
 ]) {
   if (runtime.includes(forbidden)) {
     throw new Error(`Browser bundle contains forbidden runtime text ${forbidden}`);

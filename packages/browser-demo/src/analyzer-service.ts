@@ -1,8 +1,4 @@
-import {
-  MAX_ANALYZER_TEXT_LENGTH,
-  validatePortableAnalyzeRequest,
-  type DetailEntry
-} from '@ichiran/core';
+import type { DictionaryEntry, RomanizeOptions } from '@ichiran/core';
 import {
   AnalyzerClient,
   AnalyzerClientError,
@@ -11,21 +7,20 @@ import {
 } from './client.js';
 import { fetchBoundedJson } from './bounded-json-fetch.js';
 import type {
+  AnalysisPath,
   AnalysisResult,
+  AnalysisToken,
   AnalyzeOptions,
   AnalyzerPackManifest,
   PackStatus
 } from './protocol.js';
 
 export const ANALYZER_MANIFEST_URL = '/analyzer/manifest.json';
-export { MAX_ANALYZER_TEXT_LENGTH };
-export type DictionaryEntry = DetailEntry;
+export const MAX_ANALYZER_TEXT_LENGTH = 4096;
 export type AnalyzerProgress = InstallProgressValue;
 export type AnalyzerStatus = PackStatus;
 export type AnalyzerRelease = AnalyzerPackManifest;
-export type AnalyzerOutput = AnalysisResult;
-export type AnalyzerPath = AnalyzerOutput['paths'][number];
-export type AnalyzerToken = AnalyzerPath['tokens'][number];
+export type { AnalysisPath, AnalysisResult, AnalysisToken, DictionaryEntry };
 
 export interface InitializedAnalyzer {
   readonly release: AnalyzerRelease;
@@ -54,7 +49,7 @@ export function isTerminalAnalyzerError(reason: unknown): reason is AnalyzerClie
 export class BrowserAnalyzer {
   readonly #client: AnalyzerClient;
 
-  constructor(client = new AnalyzerClient()) {
+  constructor(client: AnalyzerClient) {
     this.#client = client;
   }
 
@@ -82,18 +77,16 @@ export class BrowserAnalyzer {
     return this.#client.clear();
   }
 
-  analyze(text: string, options: AnalyzeOptions = { limit: 3 }): Promise<AnalyzerOutput> {
-    const validated = validatePortableAnalyzeRequest(text, options);
-    return this.#client.analyze(validated.input, validated.options);
+  analyze(text: string, options: AnalyzeOptions = { limit: 3 }): Promise<AnalysisResult> {
+    return this.#client.analyze(text, options);
   }
 
-  /** Named for the public API; maps to the transition client's describe operation. */
   entry(entryIndex: number): Promise<DictionaryEntry> {
-    return this.#client.describe(entryIndex) as Promise<DictionaryEntry>;
+    return this.#client.entry(entryIndex);
   }
 
-  romanize(text: string): Promise<string> {
-    return this.#client.romanize(text);
+  romanize(text: string, options?: RomanizeOptions): Promise<string> {
+    return this.#client.romanize(text, options);
   }
 
   supersede(): void {

@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+import { AnalyzerError } from '@ichiran/core';
 
 import { isArtifactCorruption } from '../src/worker/artifact-corruption.js';
 
@@ -11,6 +12,7 @@ function codedError(name: string, code: string): Error {
 
 describe('Worker artifact corruption classification', () => {
   test('quarantines only explicit immutable header, checksum, and payload failures', () => {
+    expect(isArtifactCorruption(new AnalyzerError('invalid-pack', 'bad bytes'))).toBe(true);
     for (const [name, code] of [
       ['RustKernelError', 'invalid-header'],
       ['RustKernelError', 'unsupported-version'],
@@ -26,6 +28,8 @@ describe('Worker artifact corruption classification', () => {
   });
 
   test('does not quarantine Rust internal or caller failures', () => {
+    expect(isArtifactCorruption(new AnalyzerError('internal', 'OPFS read failed'))).toBe(false);
+    expect(isArtifactCorruption(new AnalyzerError('invalid-input', 'bad request'))).toBe(false);
     expect(isArtifactCorruption(codedError('RustKernelError', 'internal'))).toBe(false);
     expect(isArtifactCorruption(codedError('RustKernelError', 'out-of-range'))).toBe(false);
     expect(isArtifactCorruption(codedError('RustKernelError', 'invalid-input'))).toBe(false);

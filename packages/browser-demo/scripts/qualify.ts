@@ -140,6 +140,7 @@ if (firstInstallBytes > firstInstallLimit) {
 await run('bun', ['run', 'build:qualification-browser'], packageRoot, false, productionEnvironment);
 await run('bun', ['run', 'test:e2e'], packageRoot, false, {
   ...productionEnvironment,
+  ICHIRAN_BROWSER_QUALIFICATION: '1',
   ICHIRAN_E2E_M1_WITNESSES: JSON.stringify(samePackWitnesses)
 });
 assertCleanCheckout(qualificationCommit);

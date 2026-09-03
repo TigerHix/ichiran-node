@@ -7,7 +7,8 @@ import { Transform, type TransformCallback } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
 import { createGunzip } from 'node:zlib';
 
-import type { AnalyzerReleaseAsset, DetailRandomAccessSource } from '@ichiran/core';
+import type { RandomAccessSource } from '@ichiran/core';
+import type { AnalyzerReleaseAsset } from '@ichiran/core/release';
 
 class DigestMeter extends Transform {
   readonly #hash = createHash('sha256');
@@ -45,7 +46,7 @@ class DigestMeter extends Transform {
 }
 
 /** Node file source with no descriptor held between exact positional reads. */
-export class FileDetailSource implements DetailRandomAccessSource {
+export class FileDetailSource implements RandomAccessSource {
   readonly byteLength: number;
   readonly path: string;
   readonly #ownedDirectory: string | null;

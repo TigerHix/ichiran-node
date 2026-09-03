@@ -35,7 +35,9 @@ release. They are not two production analyzers and must not acquire new runtime
 callers.
 
 The canonical `@ichiran/core` entry point exposes the Rust facade and public/shared
-data contracts, while TypeScript analyzer execution is confined to the explicit
+data contracts. The post-cutover product API is the small `Analyzer` contract in
+[`MIGRATION.md`](../MIGRATION.md); historical compatibility surfaces described by
+the browser-alpha record are not product exports. TypeScript analyzer execution is confined to the explicit
 qualification subpath. The canonical `@ichiran/data` entry point and executable are
 the source compiler; the old PostgreSQL loader is private migration tooling. Direct
 compilation and the Linux namespace isolation proof are separate commands. The
@@ -372,8 +374,8 @@ M1 and M2 can proceed in parallel.
 
 - load the same WASM kernel from Node unless profiling proves that a native library is
   worth an additional binary-distribution matrix;
-- preserve the existing Node API, CLI behavior, HTTP behavior, clean model, and legacy
-  serializer;
+- cut Node, CLI, HTTP, and browser clients to the same clean analyze, romanize, and
+  dictionary-entry model; keep legacy serialization only in differential qualification;
 - keep filesystem verification and release loading in the thin Node adapter;
 - do not carry a second TypeScript analyzer after the Rust transition cycle.
 

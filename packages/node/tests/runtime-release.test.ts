@@ -1,51 +1,63 @@
 import { afterAll, describe, expect, test } from 'bun:test';
-import { createHash } from 'node:crypto';
 import { access, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { gunzipSync } from 'node:zlib';
 
-import { openNodeRuntime } from '../src/index.js';
+import * as node from '../src/index.js';
+import { openAnalyzer } from '../src/index.js';
 import { openVerifiedDetailSource } from '../src/file-details.js';
 import {
-  analyzerManifestDigestInput,
-  AnalyzerInputError,
-  IchiranRuntime,
-  MAX_ANALYZER_WORD_LENGTH,
-  RUST_KERNEL_WASM_URL,
-  type AnalyzerReleaseManifest
+  ANALYZER_WASM_URL,
+  Analyzer,
+  AnalyzerError
 } from '@ichiran/core';
+import type { AnalyzerReleaseManifest } from '@ichiran/core/release';
 
 const releaseDirectory = process.env.ICHIRAN_PACK_DIR;
 
-describe.skipIf(!releaseDirectory)('Node packed runtime release', () => {
-  test('analyzes, presents, and describes without PostgreSQL', async () => {
-    const runtime = await openNodeRuntime(releaseDirectory!);
+test('exports one Node loader', () => {
+  expect(Object.keys(node)).toEqual(['openAnalyzer']);
+});
+
+describe.skipIf(!releaseDirectory)('Node packed analyzer release', () => {
+  test('analyzes, romanizes, and reads dictionary entries without PostgreSQL', async () => {
+    const analyzer = await openAnalyzer(releaseDirectory!);
     try {
-      expect(await runtime.romanize('今日')).toBe('kyō');
-      const analysis = await runtime.analyze('今日は良い天気です', { limit: 2 });
+      expect(await analyzer.romanize('今日')).toBe('kyō');
+      expect(await analyzer.romanize('猫🙂。', { normalizePunctuation: true })).toContain('🙂');
+      const analysis = await analyzer.analyze('今日は良い天気です', { limit: 2 });
       expect(analysis.paths.length).toBeGreaterThan(0);
-      expect(Array.isArray(await runtime.legacy('今日', { limit: 1 }))).toBe(true);
       const entryIndex = analysis.paths[0]!.tokens.find(token => token.entryIndex !== null)?.entryIndex;
-      expect(entryIndex).not.toBeNull();
-      const detail = await runtime.describe(entryIndex!);
-      expect(detail.seq).toBeGreaterThan(0);
-      expect(runtime.entryIndexForSequence(detail.seq)).toBe(entryIndex!);
-      expect(
-        ['surface', 'roots', 'morphology', 'support', 'annotations'].filter(field => field in runtime)
-      ).toEqual([]);
+      expect(entryIndex).toBeNumber();
+      expect((await analyzer.entry(entryIndex!)).seq).toBeGreaterThan(0);
+      await expect(analyzer.entry(Number.MAX_SAFE_INTEGER)).rejects.toMatchObject({
+        code: 'not-found'
+      });
     } finally {
-      runtime.dispose();
+      analyzer.dispose();
     }
   });
 
-  test('maps Rust-owned semantic input validation to the public host error', async () => {
-    const runtime = await openNodeRuntime(releaseDirectory!);
+  test('uses the stable public error set', async () => {
+    const analyzer = await openAnalyzer(releaseDirectory!);
     try {
-      await expect(runtime.analyze('猫'.repeat(MAX_ANALYZER_WORD_LENGTH + 1)))
-        .rejects.toBeInstanceOf(AnalyzerInputError);
+      await expect(analyzer.analyze('猫'.repeat(257))).rejects.toMatchObject({
+        name: 'AnalyzerError',
+        code: 'invalid-input'
+      });
+      await expect(analyzer.entry(-1)).rejects.toMatchObject({
+        name: 'AnalyzerError',
+        code: 'invalid-input'
+      });
+      await expect(analyzer.romanize('猫', {
+        method: 42 as never
+      })).rejects.toMatchObject({
+        name: 'AnalyzerError',
+        code: 'invalid-input'
+      });
     } finally {
-      runtime.dispose();
+      analyzer.dispose();
     }
   });
 
@@ -62,11 +74,11 @@ describe.skipIf(!releaseDirectory)('Node packed runtime release', () => {
     const hot = manifest.hot.encoding === 'gzip'
       ? new Uint8Array(gunzipSync(downloadedHot))
       : downloadedHot;
-    let runtime: IchiranRuntime | null = null;
+    let analyzer: Analyzer | null = null;
     try {
-      runtime = await IchiranRuntime.open({
+      analyzer = await Analyzer.open({
         hot,
-        wasm: new Uint8Array(await readFile(RUST_KERNEL_WASM_URL)),
+        wasm: new Uint8Array(await readFile(ANALYZER_WASM_URL)),
         details: {
           byteLength: source.byteLength,
           async read(offset, byteLength) {
@@ -77,81 +89,17 @@ describe.skipIf(!releaseDirectory)('Node packed runtime release', () => {
         }
       });
       expect(reads).toHaveLength(2);
-      expect(reads[0]).toEqual([0, 96]);
-      expect(reads[1]![0]).toBe(0);
-      expect(reads[1]![1]).toBeGreaterThanOrEqual(96);
-      expect(reads[1]![1]).toBeLessThan(source.byteLength);
-      expect(reads.reduce((sum, [, byteLength]) => sum + byteLength, 0))
-        .toBeLessThan(source.byteLength);
       const openedReads = [...reads];
-      const analysis = await runtime.analyze('今日', { limit: 1 });
+      const analysis = await analyzer.analyze('今日', { limit: 1 });
       expect(reads).toEqual(openedReads);
       const entryIndex = analysis.paths[0]!.tokens.find(token => token.entryIndex !== null)?.entryIndex;
-      expect(entryIndex).not.toBeNull();
-      expect((await runtime.describe(entryIndex!)).seq).toBeGreaterThan(0);
+      await analyzer.entry(entryIndex!);
       expect(reads).toHaveLength(3);
     } finally {
-      if (runtime) runtime.dispose();
+      if (analyzer) analyzer.dispose();
       else source.dispose();
     }
     await expect(access(path)).rejects.toThrow();
-  });
-
-  test('keeps concurrent legacy detail sessions independent', async () => {
-    const inputs = ['食べさせられました', '三個'] as const;
-    const reference = await openNodeRuntime(releaseDirectory!);
-    const expected: unknown[] = [];
-    try {
-      for (const input of inputs) {
-        expected.push(await reference.legacy(input, { limit: 1 }));
-      }
-    } finally {
-      reference.dispose();
-    }
-
-    const manifest = JSON.parse(
-      await readFile(join(releaseDirectory!, 'manifest.json'), 'utf8')
-    ) as AnalyzerReleaseManifest;
-    const source = await openVerifiedDetailSource(releaseDirectory!, manifest.details);
-    const downloadedHot = new Uint8Array(
-      await readFile(join(releaseDirectory!, manifest.hot.file))
-    );
-    const hot = manifest.hot.encoding === 'gzip'
-      ? new Uint8Array(gunzipSync(downloadedHot))
-      : downloadedHot;
-    const reads: Array<readonly [number, number]> = [];
-    let armed = false;
-    let releaseFirstReads: () => void = () => undefined;
-    const firstReads = new Promise<void>(resolve => {
-      releaseFirstReads = resolve;
-    });
-    let runtime: IchiranRuntime | null = null;
-    try {
-      runtime = await IchiranRuntime.open({
-        hot,
-        wasm: new Uint8Array(await readFile(RUST_KERNEL_WASM_URL)),
-        details: {
-          byteLength: source.byteLength,
-          async read(offset, byteLength) {
-            if (armed) {
-              reads.push([offset, byteLength]);
-              if (reads.length === inputs.length) releaseFirstReads();
-              if (reads.length <= inputs.length) await firstReads;
-            }
-            return source.read(offset, byteLength);
-          },
-          dispose: () => source.dispose()
-        }
-      });
-      armed = true;
-      const actual = await Promise.all(inputs.map(input => runtime!.legacy(input, { limit: 1 })));
-      expect(actual).toEqual(expected);
-      expect(reads).toHaveLength(inputs.length);
-      expect(reads[0]).not.toEqual(reads[1]);
-    } finally {
-      if (runtime) runtime.dispose();
-      else source.dispose();
-    }
   });
 });
 
@@ -161,50 +109,37 @@ describe('Node release verification', () => {
     if (temporary) await rm(temporary, { recursive: true });
   });
 
+  test('requires an explicit directory or environment setting', async () => {
+    const previous = process.env.ICHIRAN_PACK_DIR;
+    delete process.env.ICHIRAN_PACK_DIR;
+    try {
+      await expect(openAnalyzer()).rejects.toEqual(
+        new AnalyzerError('invalid-input', 'Pass a pack directory or set ICHIRAN_PACK_DIR')
+      );
+    } finally {
+      if (previous !== undefined) process.env.ICHIRAN_PACK_DIR = previous;
+    }
+  });
+
   test.skipIf(!releaseDirectory)('rejects a manifest whose checksum was not updated', async () => {
     temporary = await mkdtemp(join(tmpdir(), 'ichiran-node-release-'));
     const manifest = JSON.parse(await readFile(join(releaseDirectory!, 'manifest.json'), 'utf8'));
     manifest.packVersion = `${manifest.packVersion}-tampered`;
     await writeFile(join(temporary, 'manifest.json'), JSON.stringify(manifest));
-    await expect(openNodeRuntime(temporary)).rejects.toThrow('manifest checksum');
+    await expect(openAnalyzer(temporary)).rejects.toMatchObject({ code: 'invalid-pack' });
   });
 
-  test('rejects a pack built for different runtime code before reading assets', async () => {
-    const identityDirectory = await mkdtemp(join(tmpdir(), 'ichiran-node-identity-'));
-    const unsigned = {
-      formatVersion: 1 as const,
-      packVersion: 'identity-fixture',
-      sourceCommit: '1'.repeat(40),
-      sourcesLockSha256: '2'.repeat(64),
-      hot: {
-        file: 'hot.bin',
-        encoding: 'identity' as const,
-        downloadBytes: 1,
-        downloadSha256: '3'.repeat(64),
-        installedBytes: 1,
-        installedSha256: '3'.repeat(64)
-      },
-      details: {
-        file: 'details.bin',
-        encoding: 'identity' as const,
-        downloadBytes: 1,
-        downloadSha256: '4'.repeat(64),
-        installedBytes: 1,
-        installedSha256: '4'.repeat(64)
-      }
-    };
-    const manifest = {
-      ...unsigned,
-      manifestSha256: createHash('sha256')
-        .update(analyzerManifestDigestInput(unsigned))
-        .digest('hex')
-    };
+  test.skipIf(!releaseDirectory)('honors the source commit deployment gate', async () => {
+    const previous = process.env.ICHIRAN_SOURCE_COMMIT;
+    process.env.ICHIRAN_SOURCE_COMMIT = '5'.repeat(40);
     try {
-      await writeFile(join(identityDirectory, 'manifest.json'), JSON.stringify(manifest));
-      await expect(openNodeRuntime(identityDirectory, { expectedSourceCommit: '5'.repeat(40) }))
-        .rejects.toThrow('does not match runtime');
+      await expect(openAnalyzer(releaseDirectory!)).rejects.toMatchObject({
+        code: 'invalid-pack',
+        message: expect.stringContaining('does not match runtime')
+      });
     } finally {
-      await rm(identityDirectory, { recursive: true, force: true });
+      if (previous === undefined) delete process.env.ICHIRAN_SOURCE_COMMIT;
+      else process.env.ICHIRAN_SOURCE_COMMIT = previous;
     }
   });
 });

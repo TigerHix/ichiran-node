@@ -44,14 +44,15 @@ import {
   MAX_ANALYZER_TEXT_LENGTH,
   isInvalidInstallError,
   isTerminalAnalyzerError,
-  type AnalyzerOutput,
-  type AnalyzerPath,
+  type AnalysisPath,
+  type AnalysisResult,
+  type AnalysisToken,
   type AnalyzerProgress,
   type AnalyzerRelease,
   type AnalyzerStatus,
-  type AnalyzerToken,
   type DictionaryEntry
 } from './analyzer-service.js';
+import { AnalyzerClient } from './client.js';
 import { ANALYZER_SAMPLES } from './samples.js';
 import { useTokenSelection, type TokenSelection } from './use-token-selection.js';
 
@@ -297,7 +298,7 @@ function ExamplesMenu({ onChoose }: { onChoose(text: string): void }): ReactElem
 }
 
 function TokenButton({ token, index, selected, onPointerDown, onPointerEnter, onKeyboardSelect }: {
-  token: AnalyzerToken;
+  token: AnalysisToken;
   index: number;
   selected: boolean;
   onPointerDown(): void;
@@ -327,7 +328,7 @@ function TokenButton({ token, index, selected, onPointerDown, onPointerEnter, on
 }
 
 function Sentence({ path, selection, onPointerDown, onPointerEnter, onPointerUp, onKeyboardSelect }: {
-  path: AnalyzerPath;
+  path: AnalysisPath;
   selection: TokenSelection | null;
   onPointerDown(index: number): void;
   onPointerEnter(index: number): void;
@@ -377,7 +378,7 @@ function DetailSection({ title, children }: { title: string; children: React.Rea
 function WordDetails({
   token, selectionText, entry, loading, error, copied, onCopy, onClose, compact = false
 }: {
-  token: AnalyzerToken | null;
+  token: AnalysisToken | null;
   selectionText: string;
   entry: DictionaryEntry | null;
   loading: boolean;
@@ -503,7 +504,7 @@ function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
   onPackInvalid(): void;
 }): ReactElement {
   const [text, setText] = useState(DEFAULT_SAMPLE);
-  const [result, setResult] = useState<AnalyzerOutput | null>(null);
+  const [result, setResult] = useState<AnalysisResult | null>(null);
   const [pathIndex, setPathIndex] = useState(0);
   const [running, setRunning] = useState(false);
   const [showBusy, setShowBusy] = useState(false);
@@ -709,7 +710,8 @@ function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
 
 export function App({ offlineShellReady }: { offlineShellReady: Promise<OfflineShellResult> }): ReactElement {
   const supported = supportsRequiredFeatures();
-  const analyzer = useMemo(() => supported ? new BrowserAnalyzer() : null, [supported]);
+  const client = useMemo(() => supported ? new AnalyzerClient() : null, [supported]);
+  const analyzer = useMemo(() => client ? new BrowserAnalyzer(client) : null, [client]);
   const [status, setStatus] = useState<AnalyzerStatus | null>(null);
   const [release, setRelease] = useState<AnalyzerRelease | null>(null);
   const [releaseError, setReleaseError] = useState<string | null>(null);
@@ -777,17 +779,22 @@ export function App({ offlineShellReady }: { offlineShellReady: Promise<OfflineS
     if (
       !__ICHIRAN_BROWSER_QUALIFICATION__
       || !new URLSearchParams(window.location.search).has('qualification')
-      || !analyzer
+      || !client
       || !release
       || status?.state !== 'ready'
     ) return;
     let current = true;
-    let detach: (() => void) | undefined;
-    void import('./qualification-bridge.js').then(({ attachQualificationBridge }) => {
-      if (current) detach = attachQualificationBridge(analyzer, release);
+    const target = window as typeof window & {
+      __ichiranQualification?: import('./qualification-client.js').AnalyzerQualification;
+    };
+    void import('./qualification-client.js').then(({ createAnalyzerQualification }) => {
+      if (current) target.__ichiranQualification = createAnalyzerQualification(client, release);
     });
-    return () => { current = false; detach?.(); };
-  }, [analyzer, release, status]);
+    return () => {
+      current = false;
+      delete target.__ichiranQualification;
+    };
+  }, [client, release, status]);
 
   async function install(): Promise<void> {
     if (!analyzer) return;

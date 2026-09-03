@@ -4,7 +4,7 @@ import type {
   PackAssetManifest,
   PackStatus
 } from '../protocol.js';
-import { parseAnalyzerReleaseManifest } from '@ichiran/core';
+import { parseAnalyzerReleaseManifest } from '@ichiran/core/release';
 import { NETWORK_INACTIVITY_TIMEOUT_MS, fetchBoundedJson } from '../bounded-json-fetch.js';
 import { Sha256 } from './sha256.js';
 

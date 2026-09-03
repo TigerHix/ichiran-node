@@ -1,8 +1,13 @@
 import { afterEach, describe, expect, test } from 'bun:test';
-import { analyzerManifestDigestInput } from '@ichiran/core';
+import { analyzerManifestDigestInput } from '@ichiran/core/release';
 
 import { AnalyzerClient, AnalyzerClientError } from '../src/client.js';
-import type { AnalyzerPackManifest, WorkerRequest, WorkerResponse } from '../src/protocol.js';
+import type {
+  AnalyzerClientErrorCode,
+  AnalyzerPackManifest,
+  WorkerRequest,
+  WorkerResponse
+} from '../src/protocol.js';
 import { Sha256 } from '../src/worker/sha256.js';
 
 function sha256(text: string): string {
@@ -61,6 +66,13 @@ class LifecycleWorker extends EventTarget {
     this.dispatchEvent(new MessageEvent('message', { data: response }));
   }
 
+  fail(code: AnalyzerClientErrorCode, message: string): void {
+    const request = this.requests.at(-1);
+    if (!request) throw new Error('Worker has no request to answer');
+    const response: WorkerResponse = { id: request.id, type: 'error', code, message };
+    this.dispatchEvent(new MessageEvent('message', { data: response }));
+  }
+
   crash(): Event {
     const event = new Event('error', { cancelable: true });
     this.dispatchEvent(event);
@@ -75,6 +87,19 @@ afterEach(() => {
 const lifecycleWorker = (): Worker => new LifecycleWorker() as unknown as Worker;
 
 describe('AnalyzerClient Worker lifecycle', () => {
+  test('rejects an invalid deployed release before constructing a Worker', async () => {
+    const client = new AnalyzerClient(lifecycleWorker);
+    await expect(client.expectRelease({
+      ...RELEASE,
+      manifestSha256: '0'.repeat(64)
+    })).rejects.toMatchObject({
+      name: 'AnalyzerClientError',
+      code: 'invalid-pack'
+    });
+    expect(LifecycleWorker.instances).toHaveLength(0);
+    client.dispose();
+  });
+
   test('surfaces synchronous boot failure and retries only on an explicit request', async () => {
     let attempts = 0;
     const client = new AnalyzerClient(() => {
@@ -201,6 +226,36 @@ describe('AnalyzerClient Worker lifecycle', () => {
     const replacement = LifecycleWorker.instances[1]!;
     replacement.respond({ state: 'not-installed' });
     expect(await status).toEqual({ state: 'not-installed' });
+    client.dispose();
+  });
+
+  test('uses the clean romanize and dictionary-entry protocol with structured errors', async () => {
+    const client = new AnalyzerClient(lifecycleWorker);
+    const pin = client.expectRelease(RELEASE);
+    const worker = LifecycleWorker.instances[0]!;
+    worker.respond({ state: 'ready' });
+    await pin;
+
+    const romanized = client.romanize('猫。', {
+      method: 'kunrei-siki',
+      normalizePunctuation: true
+    });
+    expect(worker.requests.at(-1)).toMatchObject({
+      op: 'romanize',
+      text: '猫。',
+      options: { method: 'kunrei-siki', normalizePunctuation: true }
+    });
+    worker.respond('neko.');
+    expect(await romanized).toBe('neko.');
+
+    const entry = client.entry(42);
+    expect(worker.requests.at(-1)).toEqual({ id: 3, op: 'entry', entryIndex: 42 });
+    worker.fail('not-found', 'No dictionary entry at index 42');
+    await expect(entry).rejects.toMatchObject({
+      name: 'AnalyzerClientError',
+      code: 'not-found',
+      message: 'No dictionary entry at index 42'
+    });
     client.dispose();
   });
 });

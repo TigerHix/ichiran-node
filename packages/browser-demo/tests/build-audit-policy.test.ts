@@ -13,7 +13,7 @@ describe('browser build analyzer ownership audit', () => {
   });
 
   test('accepts the Rust adapter graph and keeps analyzer code off the main thread', () => {
-    expect(() => assertRustRuntimeGraph('IchiranRuntime WebAssembly')).not.toThrow();
+    expect(() => assertRustRuntimeGraph('Analyzer WebAssembly')).not.toThrow();
     expect(() => assertAnalyzerWorkerOnly('render application shell')).not.toThrow();
     expect(() => assertAnalyzerWorkerOnly('new AnalyzerRuntime()')).toThrow('main-thread');
   });
