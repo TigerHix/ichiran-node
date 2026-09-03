@@ -37,6 +37,20 @@ interface UpstreamOracle {
   };
 }
 
+interface JmdictUpdateBehavior {
+  readonly formatVersion: 1;
+  readonly sourceLockSha256: string;
+  readonly changes: readonly [{
+    readonly input: string;
+    readonly selectedEntrySeq: number;
+    readonly conjugationSourceSeq: number;
+    readonly addedSourceForm: string;
+    readonly baselineConjugation: null;
+    readonly updatedConjugation: string;
+    readonly reason: string;
+  }];
+}
+
 type LegacyWord = Record<string, unknown>;
 
 const RUN_PACKED_PARITY = process.env.RUN_PARITY_TESTS === 'true'
@@ -44,6 +58,17 @@ const RUN_PACKED_PARITY = process.env.RUN_PARITY_TESTS === 'true'
 const TEST_DIRECTORY = dirname(fileURLToPath(import.meta.url));
 const ORACLE_PATH = join(TEST_DIRECTORY, '..', '..', '..', 'browser-alpha', 'upstream-oracle.json');
 const oracle = JSON.parse(readFileSync(ORACLE_PATH, 'utf8')) as UpstreamOracle;
+const updateBehavior = JSON.parse(readFileSync(join(
+  TEST_DIRECTORY,
+  '..', '..', '..',
+  'data/source-compiler-update-2026-09-02-behavior.json'
+), 'utf8')) as JmdictUpdateBehavior;
+const activeSourceLock = RUN_PACKED_PARITY
+  ? (JSON.parse(readFileSync(join(process.env.ICHIRAN_PACK_DIR!, 'manifest.json'), 'utf8')) as {
+      readonly sourcesLockSha256: string;
+    }).sourcesLockSha256
+  : null;
+const activeUpdate = activeSourceLock === updateBehavior.sourceLockSha256;
 
 function topLegacyWords(value: unknown): LegacyWord[] {
   if (!Array.isArray(value)) return [];
@@ -128,6 +153,20 @@ describe.skipIf(!RUN_PACKED_PARITY)('packed runtime upstream 260118 regressions'
     ) {
       throw new Error('browser-alpha/upstream-oracle.json is not the pinned analyzer-only 260118 oracle');
     }
+    const change = updateBehavior.changes[0];
+    if (
+      updateBehavior.formatVersion !== 1
+      || updateBehavior.changes.length !== 1
+      || change.input !== '一本とられた'
+      || change.selectedEntrySeq !== 2268020
+      || change.conjugationSourceSeq !== 1859020
+      || change.addedSourceForm !== '一本とる'
+      || change.baselineConjugation !== null
+      || change.updatedConjugation !== 'Past (~ta) via Passive'
+      || change.reason.length === 0
+    ) {
+      throw new Error('JMdict 2026-09-02 behavior attestation is invalid');
+    }
   });
 
   test('matches top-one, JSON crash, and gatai probes', async () => {
@@ -172,7 +211,9 @@ describe.skipIf(!RUN_PACKED_PARITY)('packed runtime upstream 260118 regressions'
           failures,
           probe.input,
           'conjugation',
-          probe.conjugation,
+          activeUpdate && probe.input === updateBehavior.changes[0].input
+            ? updateBehavior.changes[0].updatedConjugation
+            : probe.conjugation,
           conjugationDescription(words[0]?.conj)
         ));
       } catch (error) {

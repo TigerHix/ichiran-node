@@ -331,3 +331,10 @@ versus frozen-TypeScript same-pack parity, native C same-pack coverage, and the 
 CLI, HTTP, and browser gates. Any retained January behavioral fixture remains a
 regression assertion for unaffected inputs; it is not an allowlist for dictionary data
 changes.
+
+One retained probe changes for a concrete source-data reason, recorded in
+`data/source-compiler-update-2026-09-02-behavior.json`. JMdict entry 1859020 now
+includes the kana form `一本とる`, so its passive-past surface `一本とられた` collides
+with the unchanged expression entry 2268020. The selected entry, segmentation, and
+score stay unchanged; the result now carries `Past (~ta) via Passive`. The regression
+test accepts that value only for the exact September 2 source-lock digest.
