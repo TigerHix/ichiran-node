@@ -59,7 +59,7 @@ pinned JMdict + Kanjidic2 + CSV/custom data + ordered errata
                                                                     |
  Rust analyzer crate                                                |
        |                                                            |
-       +--> WASM + thin TypeScript host --> browser Worker/PWA <----+
+       +--> WASM + thin TypeScript host --> browser Worker <--------+
        |                                                            |
        +--> WASM Node adapter -----------> Node / CLI / API <--------+
        |                                                            |
@@ -91,7 +91,8 @@ required gates.
 The end state is:
 
 - full analyzer behavior on the user's device with no server lookup;
-- one complete, integrity-verified installation that remains usable offline;
+- one complete, integrity-verified analyzer-pack installation that remains usable
+  after the loaded consumer application loses network access;
 - the same immutable pack in browser, native iOS, and Node;
 - one canonical Rust implementation of lookup, morphology, scoring, top-N selection,
   romanization, details, and analyzer-owned suffix/counter/split behavior;
@@ -137,8 +138,8 @@ in the [immutable baseline release](https://github.com/TigerHix/ichiran-node/rel
 | Worker ready / first analysis | 696.8 ms / 53.1 ms |
 | Resident hot image | 24,857,288 bytes |
 | Lazy detail store | 13,555,874 bytes |
-| One-time shell and data total | 25,662,818 bytes |
-| Persisted logical total | 39,096,725 bytes |
+| Historical alpha shell + data total | 25,662,818 bytes |
+| Historical alpha persisted logical total | 39,096,725 bytes |
 
 The complete commit-bound matrix, raw logs, oracle report, and browser benchmark are
 sealed in qualification evidence archive SHA-256
@@ -195,8 +196,12 @@ TypeScript remains responsible for:
 - the React UI and Worker RPC/lifecycle;
 - manifest download, hashing, and release compatibility;
 - A/B OPFS installation and IndexedDB commit identity;
-- Web Locks, Service Worker behavior, update recovery, and offline UX;
+- Web Locks, OPFS pack-update recovery, and analyzer-data UX;
 - streaming decompression of the outer release files.
+
+The browser host does not own the containing application's shell. It must not
+register a Service Worker, publish a PWA manifest, cache application assets, or
+define navigation/update policy for a consumer such as Komi.
 
 The Worker will call Rust in coarse operations. It must not marshal individual
 candidates or dictionary objects across the JavaScript/WASM boundary.
@@ -264,11 +269,10 @@ the initial architecture.
 Rust is not presumed faster in the browser. The existing TypeScript Worker already
 passes its calibrated performance gates. Rust must earn cutover through measurement.
 
-The current one-time total is 25,662,818 bytes against a 26,214,400-byte gate, leaving
-551,582 bytes. The present JavaScript Worker is about 178 KiB and would be replaced,
-but a WASM module plus glue may still exceed the remaining allowance. The first spike
-must measure raw finalized-shell bytes, startup, transient memory, steady memory, and
-latency; CDN compression is not a substitute for the release's measured contract.
+The 26 MiB transfer gate applies to the signed analyzer manifest and packed data,
+independently of any consuming application's shell. The first spike must measure the
+Rust browser artifact, startup, transient memory, steady memory, and latency; CDN
+compression is not a substitute for the release's measured contract.
 
 ## Source-data prerequisite
 
@@ -364,8 +368,8 @@ M1 and M2 can proceed in parallel.
 ### M4 — Browser WASM cutover candidate
 
 - replace the TypeScript analyzer inside the existing Worker;
-- retain the PWA installer and lifecycle implementation;
-- pass the complete unit, E2E, offline, corruption, update, responsive, size, and
+- retain the OPFS analyzer-pack installer and lifecycle implementation;
+- pass the complete unit, E2E, pack-offline, corruption, update, responsive, size, and
   calibrated performance suites;
 - perform physical Safari testing on the iPhone 13 baseline and current target device;
 - retain a build-time switch to the TypeScript oracle during qualification only.
@@ -482,8 +486,8 @@ silently adopt a different pack or fixture corpus while the baseline is moving.
 
 **Track A: Rust feasibility.** Read format v1 unchanged; open the published real pack
 in native Rust and browser WASM; prove representative lexical, morphology, generated,
-details, UTF-16, ordering, and bulk-boundary behavior; measure final-shell bytes,
-startup, latency, and peak/steady memory.
+details, UTF-16, ordering, and bulk-boundary behavior; measure Rust browser artifact
+bytes, startup, latency, and peak/steady memory.
 
 **Track B: source provenance.** Recover and pin the coherent January JMdict/Kanjidic2
 inputs or propose explicit compatibility ledgers; implement pure parsing/projection
@@ -587,8 +591,9 @@ not the sum of both ranges.
   app, Xcode/simulator/device work, and later Komi integration.
 - Rust need not beat TypeScript in raw browser latency. It must preserve exact parity,
   meet the latency/memory gates, and avoid a material interaction regression. The
-  26 MiB first-install limit is the current target after the approved September 2026
-  JMdict refresh; later exceptions require explicit approval from final-shell measurements.
+  26 MiB analyzer-download limit is the current target after the approved September
+  2026 JMdict refresh; later exceptions require explicit approval from pack and Rust
+  browser-artifact measurements.
 - The accepted baseline is pushed, clean-build-qualified, published as immutable
   artifacts, and tagged before full implementation begins.
 - Pack format v1, parallel Rust/compiler work, one-cycle reference retention, one-time

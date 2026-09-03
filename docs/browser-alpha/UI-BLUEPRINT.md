@@ -2,13 +2,13 @@
 
 Status: implemented product contract, 2026-09-02
 
-Scope: the installable, analyzer-only browser demo. OCR, chat, TTS, experimental
-grammar, and a general Kanjidic UI are excluded.
+Scope: the analyzer-only browser integration demo. OCR, chat, TTS, experimental
+grammar, a general Kanjidic UI, and consumer application-shell policy are excluded.
 
-The browser floor is Safari 26+ or current Chromium. Installation requires a
-Worker, OPFS, Web Locks, writable file streams, `DecompressionStream`, and
-IndexedDB. Unsupported browsers show one actionable compatibility message and no
-install action.
+The browser floor is Safari 26+ or current Chromium. Analyzer-data installation
+requires a Worker, OPFS, Web Locks, writable file streams, `DecompressionStream`,
+and IndexedDB. It does not require or register a Service Worker. Unsupported
+browsers show one actionable compatibility message and no install action.
 
 ## Product rule
 
@@ -20,8 +20,19 @@ The application must communicate these facts without celebratory status copy:
 
 1. Japanese data is downloaded once and stored on this device.
 2. Text and analysis stay on this device.
-3. The same installed data works after a network-free restart.
-4. A failed offline shell, damaged install, or available update is never hidden.
+3. Once the consumer has loaded its page, the installed analyzer works with the
+   network unavailable.
+4. A damaged analyzer-data install or available pack update is never hidden.
+
+Whether the containing application can itself launch offline is a consumer concern.
+The consumer may use a Service Worker, a native bundle, ordinary HTTP caching, or no
+offline shell at all. This package must not register a Service Worker, ship a PWA
+manifest, cache application assets, or own shell-update UX.
+
+The analyzer adapter does not rely on a consumer cache for its own manifest. If the
+published manifest is unreachable, it opens a previously verified pack from the
+signed OPFS install marker. When online, the published manifest remains the authority
+for detecting that an installed pack needs replacement.
 
 Pack version, hashes, timings, benchmarks, raw JSON, and compatibility evidence are
 qualification concerns. They do not belong in the product UI or public browser
@@ -38,7 +49,7 @@ and information hierarchy come directly from these files:
 |---|---|---|
 | Furigana sits over an inline, selectable Japanese surface. | `/home/tiger/komi/src/components/SentenceDisplay.tsx` | Keep the two-line token anatomy and linguistic wrapping. |
 | Tap selects one token; dragging extends a contiguous selection. | `/home/tiger/komi/src/hooks/useWordSelection.ts` | Keep both. A range exposes a copy action; one token opens lexical details. |
-| Details lead with reading, surface, POS, and meanings, followed by structure and conjugation. | `/home/tiger/komi/src/components/TokenDetails.tsx` | Keep this order and omit empty sections. |
+| Details use a word-and-reading header, then meanings with POS attached to each sense, followed by structure, conjugations, and alternative meanings. | `/home/tiger/komi/src/components/TokenDetails.tsx` | Keep this hierarchy and omit empty sections. |
 | Sentence editing and analysis are one focused task. | `/home/tiger/komi/src/components/InlineEditor.tsx` | Use one labeled textarea and one primary Analyze action. |
 | Semantic token colors support scanning without becoming the interface theme. | `/home/tiger/komi/src/index.css` | Use restrained POS-colored underlines; selection also has a fill and inset outline. |
 
@@ -65,8 +76,8 @@ sheet is a presentation change, not a second workflow.
 
 ## Installation and lifecycle states
 
-State is rendered directly from the release, installed-pack status, current
-operation, and service-worker result. Do not add a general workflow state machine.
+State is rendered directly from the analyzer release, installed-pack status, and
+current operation. Do not add a general workflow state machine.
 
 | Condition | Product presentation |
 |---|---|
@@ -78,8 +89,6 @@ operation, and service-worker result. Do not add a general workflow state machin
 | Pack incomplete or corrupt | Explain that saved data is incomplete and offer reinstall and removal. |
 | Insufficient storage | State that there is not enough free storage. |
 | Recoverable install failure | State that the download did not finish and offer Retry. |
-| App-shell update waiting | Tell the user to close other Ichiran tabs and reopen. Do not activate under an old tab. |
-| Offline shell failure | Show a global inline alert, including when analyzer data is already installed. |
 | Worker or pack invalidation | Reject the current request, surface the error, and refresh installed status. |
 
 Do not show `Alpha`, `Ready offline`, version strings, success banners, or a toast
@@ -129,14 +138,19 @@ returns focus to the selected token where appropriate.
 
 Render the following order, omitting empty sections:
 
-1. reading and surface with Copy;
-2. POS and inflection tags;
-3. numbered meanings and sense metadata;
-4. dictionary written and reading forms;
-5. base form;
-6. component structure;
-7. conjugation path; and
-8. alternative readings for this token.
+1. surface and reading in a fixed header with Copy;
+2. numbered meanings, with readable POS labels attached to each individual sense;
+3. component structure as an equation followed by nested component cards;
+4. conjugations as nested base-form cards with readable form and politeness labels; and
+5. alternative meanings as nested token cards.
+
+Use Komi's exact learner-facing POS vocabulary, including `Transitive Verb`,
+`Intransitive Verb`, and specific classes such as `Godan Verb (-ku Special)`.
+Never expose JMdict abbreviations such as `vt`, `vi`, or `v5k-s` in visible copy.
+Sense restrictions and POS carry-forward follow the dictionary data; miscellaneous
+internal tags do not become an undifferentiated metadata dump. Dictionary form lists
+and a separate base-form row are deliberately omitted because the nested structure
+and conjugation cards carry that information in context.
 
 Meanings are the primary content. Scores, physical pack identity, raw analyzer JSON,
 and migration shapes are not product information.
@@ -180,14 +194,15 @@ Required automated viewports are 390 x 844 and 1280 x 900; also inspect 320 CSS 
   visually hidden.
 - Loading and update states use polite announcements; failures use alerts.
 - Text zoom and long meanings may grow vertically rather than truncate.
-- Safe-area insets protect the app shell and mobile detail sheet.
+- Safe-area insets protect the demo layout and mobile detail sheet.
 
 ## Acceptance checks
 
 The UI is complete when automated Chromium qualification proves:
 
 - first install, progress, interrupted install, reinstall, and removal;
-- verified network-free restart and no analysis-time network access;
+- verified pack persistence across browser restart and no analyzer-data requests
+  after the already-loaded page is put offline;
 - corruption quarantine and update behavior;
 - default and representative example analysis;
 - furigana, token selection, meanings, morphology, romanization, and other parses;
@@ -200,3 +215,6 @@ The UI is complete when automated Chromium qualification proves:
 Calibrated performance and raw parity stay in the test harness. Physical Safari and
 iPhone qualification remain release gates; desktop Chromium emulation is not a
 substitute for them.
+
+Consumer shell caching, installability, navigation fallback, and shell-update tests
+belong in the consuming application and are not Ichiran acceptance gates.

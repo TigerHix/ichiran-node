@@ -45,12 +45,16 @@ bun run dev
 See [CLI.md](./CLI.md), [API.md](./API.md), and the breaking
 [migration guide](./MIGRATION.md) for the product surfaces.
 
-To run the offline browser demo with a built release:
+To run the browser analyzer demo with a built release:
 
 ```bash
 bun run alpha:demo:stage
 bun run --cwd packages/browser-demo dev
 ```
+
+The browser adapter persists only the signed analyzer pack in OPFS and runs the
+kernel in a Web Worker. It does not register a Service Worker or own PWA/application-
+shell caching; a consuming application such as Komi decides that policy.
 
 Building a new pack and proving PostgreSQL isolation are separate maintainer commands
 documented in
@@ -149,7 +153,8 @@ bun run build:compiler
 ```
 
 See [PACKAGES.md](./PACKAGES.md) for package ownership and
-[docs/browser-alpha/README.md](./docs/browser-alpha/README.md) for browser gates.
+[the browser UI blueprint](./docs/browser-alpha/UI-BLUEPRINT.md) for the current
+browser-host boundary and UX gates.
 
 ## License
 

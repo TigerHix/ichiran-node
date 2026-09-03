@@ -8,6 +8,7 @@ import {
   watchConsoleHealth
 } from './console-health.js';
 import {
+  BASE_URL,
   DIRECTORY_NAME,
   INSTALL_ID_PATTERN,
   activeOpfsFiles,
@@ -31,29 +32,20 @@ import {
   writeCommittedInstallId
 } from './offline-analyzer-helpers.js';
 
-test('does not claim offline readiness when the app shell cannot activate', async ({ browser }) => {
-  const context = await openIsolatedContext(browser, 'registration-error');
+test('does not register a Service Worker', async ({ browser }) => {
+  const context = await browser.newContext({
+    baseURL: BASE_URL,
+    serviceWorkers: 'allow'
+  });
+  watchConsoleHealth(context);
   try {
     const page = await context.newPage();
     await page.goto('/');
-    await expect(page.getByText('Offline use is unavailable.', { exact: false }))
-      .toBeVisible();
-    await expect(page.getByRole('button', { name: 'Install analyzer data' })).toBeDisabled();
-    await expect(analyzerReady(page)).toHaveCount(0);
-  } finally {
-    await context.close();
-  }
-});
-
-test('surfaces failed shell precaching instead of waiting forever', async ({ browser }) => {
-  const context = await openIsolatedContext(browser, 'install-error');
-  try {
-    const page = await context.newPage();
-    await page.goto('/');
-    await expect(page.getByText('Offline app shell installation failed.', { exact: false }))
-      .toBeVisible();
-    await expect(page.getByRole('button', { name: 'Install analyzer data' })).toBeDisabled();
-    await expect(analyzerReady(page)).toHaveCount(0);
+    await page.waitForTimeout(250);
+    expect(await page.evaluate(async () => ({
+      controller: navigator.serviceWorker.controller,
+      registrations: (await navigator.serviceWorker.getRegistrations()).length
+    }))).toEqual({ controller: null, registrations: 0 });
   } finally {
     await context.close();
   }
@@ -132,6 +124,27 @@ test('rejects bad manifest, transfer, and installed digests without committing r
 test('interrupted hot and details installs never commit a ready marker', async ({ browser }) => {
   await interruptInstall(browser, 'hot');
   await interruptInstall(browser, 'details');
+});
+
+test('opens the installed OPFS pack when no usable published manifest is available', async ({ browser }) => {
+  const context = await openIsolatedContext(browser);
+  try {
+    const page = await context.newPage();
+    await page.goto('/');
+    await page.getByRole('button', { name: 'Install analyzer data' }).click();
+    await expect(analyzerReady(page)).toBeVisible({ timeout: 180_000 });
+
+    await page.route('**/analyzer/manifest.json', route => route.fulfill({
+      contentType: 'application/json',
+      body: '{"formatVersion":1}'
+    }));
+    await page.reload();
+    await expect(analyzerReady(page)).toBeVisible();
+    await page.getByRole('button', { name: 'Analyze', exact: true }).click();
+    await expect(page.getByRole('button', { name: /今日/ }).first()).toBeVisible();
+  } finally {
+    await context.close();
+  }
 });
 
 test('removes slot-less legacy files without opening their marker', async ({ browser }) => {

@@ -36,6 +36,10 @@ const packageRoot = resolve(import.meta.dir, '..');
 const repositoryRoot = resolve(packageRoot, '..', '..');
 const output = join(packageRoot, 'dist');
 const assetDirectory = join(output, 'assets');
+const outputNames = await readdir(output);
+if (outputNames.includes('sw.js')) {
+  throw new Error('Browser adapter/demo must not ship a Service Worker');
+}
 const scripts = (await readdir(assetDirectory)).filter(name => name.endsWith('.js'));
 if (scripts.some(name => name.startsWith('qualification-bridge-'))) {
   throw new Error('Production browser build contains the qualification bridge');
@@ -123,23 +127,6 @@ for (const forbidden of [
   if (runtime.includes(forbidden)) {
     throw new Error(`Browser bundle contains forbidden runtime text ${forbidden}`);
   }
-}
-
-const serviceWorker = await readFile(join(output, 'sw.js'), 'utf8');
-if (serviceWorker.includes('/analyzer/hot.bin') || serviceWorker.includes('/analyzer/details.bin')) {
-  throw new Error('Service Worker must not duplicate analyzer data in Cache Storage');
-}
-if (!serviceWorker.includes('/analyzer/manifest.json')) {
-  throw new Error('Service Worker does not preserve the pinned manifest for offline reopen');
-}
-if (serviceWorker.includes('cache.put(') || !serviceWorker.includes('CORE_PATHS.has')) {
-  throw new Error('Service Worker must cache only the finalized shell allowlist');
-}
-if (!serviceWorker.includes("key.startsWith('ichiran-shell-')")) {
-  throw new Error('Service Worker cache cleanup is not scoped to this app');
-}
-if (/__CACHE_VERSION__|\/\*__PRECACHE__\*\//.test(serviceWorker)) {
-  throw new Error('Service Worker contains an unfinalized cache marker');
 }
 
 const stagedDirectory = join(output, 'analyzer');

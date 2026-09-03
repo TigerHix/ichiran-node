@@ -58,11 +58,9 @@ export interface ReleaseVerificationOptions {
 }
 
 export function assertAnalyzerReadyStateSize(
-  manifest: ReleaseManifest,
-  manifestBytes: number,
-  shellBytes: number
+  manifest: ReleaseManifest
 ): AnalyzerReadyStateSize {
-  const size = analyzerReadyStateSize(manifest, manifestBytes, shellBytes);
+  const size = analyzerReadyStateSize(manifest);
   if (size.persistedBytes > ANALYZER_PERSISTED_MAX_BYTES) {
     throw new Error(
       `Persisted release is ${size.persistedBytes} bytes; limit is ${ANALYZER_PERSISTED_MAX_BYTES}`

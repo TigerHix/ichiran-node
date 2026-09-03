@@ -91,12 +91,12 @@ export class AnalyzerClient {
     ));
   }
 
-  /** Pins every Worker incarnation to the authenticated release deployed with this shell. */
+  /** Pins every Worker incarnation to the authenticated currently published release. */
   async expectRelease(release: AnalyzerPackManifest): Promise<PackStatus> {
     const verifiedRelease = parseDeployedRelease(release);
     if (
-      this.#expectedRelease
-      && this.#expectedRelease.manifestSha256 !== verifiedRelease.manifestSha256
+      this.#worker
+      && this.#expectedRelease?.manifestSha256 !== verifiedRelease.manifestSha256
     ) {
       this.#replaceWorker(new AnalyzerClientError(
         'release-changed',
@@ -227,16 +227,10 @@ export class AnalyzerClient {
     if (this.#initializedWorker === worker) return null;
     if (this.#initialization?.worker === worker) return this.#initialization.promise;
     const release = this.#expectedRelease;
-    if (!release) {
-      throw new AnalyzerClientError(
-        'release-not-set',
-        'The deployed analyzer release is not available. Reload this page and try again.'
-      );
-    }
-    const promise = this.#requestOnWorker<PackStatus>(worker, {
-      op: 'expect-release',
-      release
-    }).then(status => {
+    const request: WorkerRequestBody = release
+      ? { op: 'expect-release', release }
+      : { op: 'status' };
+    const promise = this.#requestOnWorker<PackStatus>(worker, request).then(status => {
       if (worker === this.#worker && release === this.#expectedRelease) {
         this.#initializedWorker = worker;
       }

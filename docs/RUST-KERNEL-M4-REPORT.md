@@ -1,5 +1,8 @@
 # Rust analyzer kernel M4 browser report
 
+> Historical qualification record. Its Service Worker/PWA ownership was superseded:
+> the current browser adapter owns only OPFS analyzer data and Worker execution.
+
 Date: 2026-09-01
 Starting commit: `effd10f1cd4cfd6780760c8130030d287df35ca9`
 Branch: `codex/rust-kernel-m1`

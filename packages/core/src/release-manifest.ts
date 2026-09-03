@@ -26,7 +26,6 @@ export interface AnalyzerReleaseManifest {
 
 export interface AnalyzerReadyStateSize {
   readonly persistedBytes: number;
-  readonly cachedManifestBytes: number;
   readonly installedMarkerBytes: number;
   readonly installedIdentityPayloadBytes: number;
 }
@@ -71,18 +70,8 @@ function utf8ByteLength(value: string): number {
 
 /** Exact ready-state payload accounted against the browser persistence budget. */
 export function analyzerReadyStateSize(
-  manifest: AnalyzerReleaseManifest,
-  manifestBytes: number,
-  shellBytes: number
+  manifest: AnalyzerReleaseManifest
 ): AnalyzerReadyStateSize {
-  for (const [label, bytes] of [
-    ['Manifest', manifestBytes],
-    ['Shell', shellBytes]
-  ] as const) {
-    if (!Number.isSafeInteger(bytes) || bytes < 0) {
-      throw new Error(`${label} size must be a non-negative safe integer`);
-    }
-  }
   const installedMarkerBytes = utf8ByteLength(JSON.stringify({
     state: 'ready',
     manifest,
@@ -92,8 +81,6 @@ export function analyzerReadyStateSize(
   }));
   const persistedBytes = manifest.hot.installedBytes
     + manifest.details.installedBytes
-    + shellBytes
-    + manifestBytes
     + installedMarkerBytes
     + ANALYZER_INSTALL_ID_BYTES;
   if (!Number.isSafeInteger(persistedBytes)) {
@@ -101,7 +88,6 @@ export function analyzerReadyStateSize(
   }
   return {
     persistedBytes,
-    cachedManifestBytes: manifestBytes,
     installedMarkerBytes,
     installedIdentityPayloadBytes: ANALYZER_INSTALL_ID_BYTES
   };

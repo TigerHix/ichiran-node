@@ -24,7 +24,6 @@ import {
   attachAnalyzerWorker,
   committedInstallId,
   denyPersistentStorage,
-  expectInstallablePwa,
   expectNoHorizontalOverflow,
   median,
   opfsSnapshot,
@@ -73,7 +72,7 @@ async function expectQualificationReady(page: Page): Promise<void> {
   ))).toBe(true);
 }
 
-test('installs once, restarts offline, and meets the 6x proxy', async ({
+test('installs once, reopens, analyzes after network cutoff, and meets the 6x proxy', async ({
   browser
 }) => {
   const browserType = browser.browserType();
@@ -85,7 +84,7 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
       baseURL: BASE_URL,
       headless: true,
       permissions: ['clipboard-read', 'clipboard-write'],
-      serviceWorkers: 'allow',
+      serviceWorkers: 'block',
       viewport: { width: 390, height: 844 }
     });
     watchConsoleHealth(context);
@@ -99,7 +98,6 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
     await page.setViewportSize({ width: 1280, height: 900 });
     await expectNoHorizontalOverflow(page, 1280);
     await page.setViewportSize({ width: 390, height: 844 });
-    await expectInstallablePwa(page);
     const manifest = await page.request
       .get('/analyzer/manifest.json')
       .then(response => response.json() as Promise<AnalyzerPackManifest>);
@@ -116,7 +114,6 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
     expect(committedInstall.markerBytes).not.toBeNull();
     expect(await committedInstallId(page)).toMatch(INSTALL_ID_PATTERN);
 
-    expect(await page.evaluate(() => navigator.serviceWorker.controller !== null)).toBe(true);
     await expect(analyzerReady(page)).toBeVisible();
 
     await page.getByRole('button', { name: 'Analyze', exact: true }).click();
@@ -132,23 +129,24 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
     await expect(talking).toBeVisible();
     await talking.click();
     await expect(page.getByRole('heading', { name: '話しました' })).toBeVisible();
-    await expect(page.locator('.word-details:visible').getByText('Dictionary forms')).toBeVisible();
-    await expect(page.locator('.word-details:visible').getByText('Conjugation', { exact: true })).toBeVisible();
+    await expect(page.locator('.word-details:visible').getByText('Conjugations', { exact: true })).toBeVisible();
+    await expect(page.locator('.word-details:visible').getByText('Past (~ta)', { exact: true })).toBeVisible();
+    await expect(page.locator('.word-details:visible').getByText('Transitive Verb', { exact: true }).first()).toBeVisible();
     await page.getByRole('button', { name: 'Close', exact: true }).click();
     await page.getByRole('button', { name: 'Analyzer settings' }).click();
     await expect(page.getByRole('menuitem').filter({ hasText: 'on this device' })).toBeVisible();
     await page.keyboard.press('Escape');
     expect(await page.evaluate(() => navigator.storage.persisted())).toBe(false);
 
-    // Close Chromium completely, then launch the same on-disk profile with networking disabled.
+    // Close Chromium completely, then reopen the ordinary network shell. The
+    // installed analyzer pack must survive independently in OPFS.
     await context.close();
     context = null;
     context = await browserType.launchPersistentContext(profileDirectory, {
       baseURL: BASE_URL,
       headless: true,
-      offline: true,
       permissions: ['clipboard-read', 'clipboard-write'],
-      serviceWorkers: 'allow',
+      serviceWorkers: 'block',
       viewport: { width: 390, height: 844 }
     });
     watchConsoleHealth(
@@ -156,11 +154,19 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
       failure => isExpectedOfflineFetchFailure(failure, deliberatelyOfflineProbe)
     );
     await denyPersistentStorage(context);
-    await context.setOffline(true);
     page = context.pages()[0] ?? await context.newPage();
     await page.goto('/?qualification=1');
-    // Chromium flips navigator.onLine back to true after a cached Service Worker
-    // navigation, so prove the transport is offline with a URL the worker ignores.
+    await expect(analyzerReady(page)).toBeVisible();
+    await expectNoHorizontalOverflow(page, 390);
+    const analyzerRequests: string[] = [];
+    const recordRequest = (request: { url(): string }) => {
+      const url = new URL(request.url());
+      if (url.pathname.startsWith('/analyzer/')) analyzerRequests.push(request.url());
+    };
+    page.on('request', recordRequest);
+    await context.setOffline(true);
+    // From this point onward, only the consumer page already in memory and the
+    // analyzer's installed OPFS pack are available.
     deliberatelyOfflineProbe = `/__ichiran-offline-probe-${Date.now()}`;
     expect(await page.evaluate(async probe => {
       try {
@@ -170,15 +176,6 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
         return true;
       }
     }, deliberatelyOfflineProbe)).toBe(true);
-    await expect(analyzerReady(page)).toBeVisible();
-    await expectNoHorizontalOverflow(page, 390);
-    await expectInstallablePwa(page);
-    const analyzerRequests: string[] = [];
-    const recordRequest = (request: { url(): string }) => {
-      const url = new URL(request.url());
-      if (url.pathname.startsWith('/analyzer/')) analyzerRequests.push(request.url());
-    };
-    page.on('request', recordRequest);
     await page.evaluate(() => {
       const durations: number[] = [];
       const observer = new PerformanceObserver(list => {
@@ -198,7 +195,7 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
     await expect(page.getByRole('button', { name: /日本語/ }).first()).toBeVisible();
     await expect(page.locator('details.parse-alternatives summary span')).toHaveText('2');
     await page.getByRole('button', { name: /日本語/ }).first().click();
-    await expect(page.locator('.word-details:visible').getByText('Dictionary forms')).toBeVisible();
+    await expect(page.locator('.word-details:visible').getByText('Noun', { exact: true }).first()).toBeVisible();
     await expectQualificationReady(page);
     const clean = await qualificationAnalyze(page);
     expect(clean).toMatchObject({

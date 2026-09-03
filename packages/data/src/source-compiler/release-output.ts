@@ -448,7 +448,7 @@ export async function writeSourceCompilerRelease(
   assertBytesEqual(release.detailsDownload, rebuilt.detailsDownload, 'Compressed details asset');
   assertBytesEqual(release.manifestBytes, rebuilt.manifestBytes, 'Release manifest');
   const reportValue = {
-    formatVersion: 1,
+    formatVersion: 2,
     packFormat: 1,
     packVersion: input.packVersion,
     sourceCommit: input.sourceCommit,

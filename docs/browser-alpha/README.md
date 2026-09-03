@@ -3,21 +3,27 @@
 This directory is the as-built specification and qualification record for the
 TypeScript browser alpha. It is intentionally preserved as historical evidence.
 
+> The alpha originally included a PWA shell. That ownership was superseded after
+> cutover: the current browser package persists only analyzer data in OPFS and runs
+> the kernel in a Web Worker. It does not ship or register a Service Worker. Shell
+> caching, installability, and shell updates belong to the consuming application.
+
 The alpha product boundary is defined in
 [`../EDGE-NATIVE-MILESTONE.md`](../EDGE-NATIVE-MILESTONE.md). The authoritative
 post-alpha architecture is the
 [`source-compiler and Rust-kernel roadmap`](../SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md).
 
-The alpha is an installable, analyzer-only PWA that uses no PostgreSQL, Node.js
-service, or network lookup after one data installation. PostgreSQL is a read-only
-build-time oracle for the first compiler; it is not shipped to the browser.
+The current demo is an analyzer-only browser host that uses no PostgreSQL, Node.js
+service, or analysis-time network lookup after one data installation. PostgreSQL was
+a read-only build-time oracle for the first compiler; it is not shipped to the
+browser and is not used by the current source compiler.
 
 The accepted scope is:
 
 - a zero-runtime-dependency portable analyzer over immutable binary data;
 - a Node-only compiler owned by `@ichiran/data`;
 - a dedicated browser Worker and OPFS installer;
-- a mobile-first PWA derived from Nemu's token and detail interaction model;
+- a mobile-first browser demo derived from Komi's token and detail interaction model;
 - top-N, entity hints, romanization, full offline dictionary details, and a legacy
   serializer;
 - exact normalized oracle parity with an empty result-difference allowlist.
@@ -56,16 +62,15 @@ lazy behind a 16-entry LRU. See `ANALYZER-SUPPORT.md`.
 
 The initial browser capability floor is Safari 26+ or a current Chromium browser.
 The installer needs a dedicated Worker, OPFS, IndexedDB, writable file streams, Web
-Locks, and `DecompressionStream`; the PWA shell additionally uses a Service Worker.
-Older Safari does not implement the deliberately simple writable-stream install path
-used here.
+Locks, and `DecompressionStream`. Older Safari does not implement the deliberately
+simple writable-stream install path used here.
 
 ## Gates
 
 | Metric | Required |
 |---|---:|
-| Compressed one-time transfer | no more than 26 MiB |
-| Installed shell + analyzer data | no more than 64 MiB |
+| Compressed analyzer manifest + data transfer | no more than 26 MiB |
+| Installed analyzer data + commit metadata | no more than 64 MiB |
 | Resident hot image | no more than 25 MiB |
 | Ordinary top-one p95 at calibrated 6x Worker contention | no more than 75 ms |
 | Pathological morphology p95 at calibrated 6x Worker contention | no more than 250 ms |
@@ -110,11 +115,9 @@ bun run alpha:release:refresh-lock -- \
 bun run alpha:release:build -- \
   --database "$ICHIRAN_DB_URL" \
   --out dist/browser-alpha \
-  --pack-version ichiran-260118 \
-  --shell-dir packages/browser-demo/dist
+  --pack-version ichiran-260118
 bun run alpha:release:verify -- \
-  --out dist/browser-alpha \
-  --shell-dir packages/browser-demo/dist
+  --out dist/browser-alpha
 
 bun run alpha:demo:stage
 bun run alpha:demo:build
@@ -124,9 +127,9 @@ bun run alpha:demo:e2e
 
 The deterministic `ichiran-260118` data assets are 12,662,917 compressed hot bytes and
 12,317,325 compressed detail bytes. They install as a 24,857,288-byte resident hot
-image and 13,555,874-byte lazy detail store. Final shell, transfer, and persisted
-totals are derived from the production build and bound in `stats.json`; qualification
-requires all three size gates to pass. IndexedDB allocation overhead is browser
+image and 13,555,874-byte lazy detail store. Analyzer transfer and persisted totals
+are derived from the signed release and bound in `stats.json`; qualification requires
+all three analyzer size gates to pass. IndexedDB allocation overhead is browser
 managed and not included in that logical payload total.
 
 `stats.json`, the exhaustive oracle report, and `work/browser-benchmark.json` are

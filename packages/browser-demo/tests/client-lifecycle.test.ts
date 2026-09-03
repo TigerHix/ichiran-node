@@ -100,6 +100,28 @@ describe('AnalyzerClient Worker lifecycle', () => {
     client.dispose();
   });
 
+  test('opens an installed pack without a network-provided release', async () => {
+    const client = new AnalyzerClient(lifecycleWorker);
+    const status = client.status();
+    const worker = LifecycleWorker.instances[0]!;
+    expect(worker.requests.at(-1)?.op).toBe('status');
+    worker.respond({ state: 'ready' });
+    expect(await status).toEqual({ state: 'ready' });
+
+    const analysis = client.analyze('猫', { limit: 1 });
+    expect(worker.requests.at(-1)).toMatchObject({ op: 'analyze', text: '猫' });
+    worker.respond({ input: '猫', normalized: '猫', computeMs: 1, paths: [] });
+    expect((await analysis).input).toBe('猫');
+
+    const pin = client.expectRelease(RELEASE);
+    const replacement = LifecycleWorker.instances[1]!;
+    expect(worker.terminated).toBe(true);
+    expect(replacement.requests.at(-1)?.op).toBe('expect-release');
+    replacement.respond({ state: 'ready' });
+    await pin;
+    client.dispose();
+  });
+
   test('surfaces synchronous boot failure and retries only on an explicit request', async () => {
     let attempts = 0;
     const client = new AnalyzerClient(() => {

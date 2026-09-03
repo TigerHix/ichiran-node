@@ -23,7 +23,7 @@ export type AnalyzerRelease = AnalyzerPackManifest;
 export type { AnalysisPath, AnalysisResult, AnalysisToken, DictionaryEntry };
 
 export interface InitializedAnalyzer {
-  readonly release: AnalyzerRelease;
+  readonly release: AnalyzerRelease | null;
   readonly status: AnalyzerStatus;
 }
 
@@ -54,15 +54,21 @@ export class BrowserAnalyzer {
   }
 
   async initialize(): Promise<InitializedAnalyzer> {
-    const release = parseDeployedRelease(await fetchBoundedJson(
-      ANALYZER_MANIFEST_URL,
-      { cache: 'no-store' },
-      'Analyzer release manifest'
-    ));
-    return {
-      release,
-      status: await this.#client.expectRelease(release)
-    };
+    try {
+      const release = parseDeployedRelease(await fetchBoundedJson(
+        ANALYZER_MANIFEST_URL,
+        { cache: 'no-store' },
+        'Analyzer release manifest'
+      ));
+      return {
+        release,
+        status: await this.#client.expectRelease(release)
+      };
+    } catch (releaseError) {
+      const status = await this.#client.status();
+      if (status.state === 'ready') return { release: null, status };
+      throw releaseError;
+    }
   }
 
   status(): Promise<AnalyzerStatus> {

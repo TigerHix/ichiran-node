@@ -11,6 +11,10 @@ browser WASM, Node, and native iOS plus a PostgreSQL-free source compiler—is
 authoritative in
 [SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md](./SOURCE-COMPILER-RUST-KERNEL-ROADMAP.md).
 
+> The alpha's PWA shell was later removed from Ichiran's ownership. The current
+> browser adapter owns OPFS analyzer-pack persistence and Web Worker execution only;
+> consuming applications own Service Workers, offline launch, and shell updates.
+
 ## Alpha product decision
 
 Ship one analyzer implementation that runs locally in a browser Worker and in Node.js

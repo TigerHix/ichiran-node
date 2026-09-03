@@ -4,7 +4,7 @@ import { analyzerReady, attachAnalyzerWorker } from './offline-analyzer-helpers.
 test('records actual steady analyzer Worker heap and backing storage', async ({ browser }) => {
   const context = await browser.newContext({
     baseURL: 'http://127.0.0.1:4173',
-    serviceWorkers: 'allow'
+    serviceWorkers: 'block'
   });
   watchConsoleHealth(context);
   try {

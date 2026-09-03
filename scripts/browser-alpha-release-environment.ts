@@ -44,7 +44,6 @@ export interface CliOptions {
   readonly database?: string;
   readonly out?: string;
   readonly packVersion?: string;
-  readonly shellDir?: string;
   readonly allowDirty: boolean;
 }
 
@@ -52,8 +51,8 @@ function usage(message?: string): never {
   if (message) console.error(`error: ${message}\n`);
   console.error(`usage:
   bun run alpha:release:build -- --database <url> --out <directory> \\
-    --pack-version <version> --shell-dir <production-dist> [--allow-dirty]
-  bun run alpha:release:verify -- --out <directory> --shell-dir <production-dist> [--allow-dirty]
+    --pack-version <version> [--allow-dirty]
+  bun run alpha:release:verify -- --out <directory> [--allow-dirty]
   bun run alpha:release:refresh-lock -- --database <url> [--allow-dirty]`);
   process.exit(2);
 }
@@ -66,7 +65,6 @@ export function parseArgs(argv: readonly string[]): CliOptions {
   let database: string | undefined;
   let out: string | undefined;
   let packVersion: string | undefined;
-  let shellDir: string | undefined;
   let allowDirty = false;
   for (let index = 1; index < argv.length; index++) {
     const argument = argv[index]!;
@@ -78,13 +76,11 @@ export function parseArgs(argv: readonly string[]): CliOptions {
     if (argument === '--database') database = next();
     else if (argument === '--out') out = next();
     else if (argument === '--pack-version') packVersion = next();
-    else if (argument === '--shell-dir') shellDir = next();
     else if (argument === '--allow-dirty') allowDirty = true;
     else if (argument === '--help' || argument === '-h') usage();
     else usage(`unknown argument ${argument}`);
   }
   if (command !== 'refresh-lock' && !out) usage('--out is required');
-  if (command !== 'refresh-lock' && shellDir === undefined) usage('--shell-dir is required');
   if ((command === 'build' || command === 'refresh-lock') && !database) {
     usage(`--database is required for ${command}`);
   }
@@ -92,10 +88,10 @@ export function parseArgs(argv: readonly string[]): CliOptions {
   if (command === 'verify' && (database || packVersion)) {
     usage('--database and --pack-version apply only to build');
   }
-  if (command === 'refresh-lock' && (out || packVersion || shellDir !== undefined)) {
-    usage('--out, --pack-version, and --shell-dir do not apply to refresh-lock');
+  if (command === 'refresh-lock' && (out || packVersion)) {
+    usage('--out and --pack-version do not apply to refresh-lock');
   }
-  return { command, database, out, packVersion, shellDir, allowDirty };
+  return { command, database, out, packVersion, allowDirty };
 }
 
 export async function repositoryRoot(): Promise<string> {

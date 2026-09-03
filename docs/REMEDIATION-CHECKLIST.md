@@ -6,12 +6,17 @@ the named proof passes. Passing parity alone is not enough; resource safety,
 failure recovery, release provenance, and browser lifecycle behavior are product
 requirements too.
 
+> Shell/Service Worker items below record the historical alpha remediation. They are
+> not current library responsibilities. The shipped browser adapter owns only the
+> analyzer pack and Worker; consumers own their application shell.
+
 ## Non-negotiable invariants
 
 - Analyzer output remains exactly compatible with the pinned Ichiran oracle.
 - PostgreSQL and compiler-only packages never enter browser or production runtime artifacts.
 - Grammar remains out of scope and excluded from the analyzer product.
-- The browser keeps all analyzer work off the main thread and remains fully usable offline.
+- The browser keeps all analyzer work off the main thread, and its installed pack
+  remains usable after the loaded consumer application loses network access.
 - The installed data pack and the code reading it have one verifiable, compatible identity.
 - Common phone-sized requests stay instant-feeling; longer input degrades predictably rather than catastrophically.
 - Important state has one owner: analyzer options, release manifests, install generations, and database provenance are not redefined by each adapter.

@@ -9,8 +9,6 @@ import {
 } from 'react';
 import {
   CaretDown as CaretDownIcon,
-  Check as CheckIcon,
-  Copy as CopyIcon,
   Database as DatabaseIcon,
   DownloadSimple as DownloadSimpleIcon,
   GearSix as GearSixIcon,
@@ -18,7 +16,6 @@ import {
   Trash as TrashIcon,
   X as XIcon
 } from '@phosphor-icons/react';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -53,38 +50,22 @@ import {
   type DictionaryEntry
 } from './analyzer-service.js';
 import { AnalyzerClient } from './client.js';
+import {
+  partOfSpeechCategory,
+  partOfSpeechLabel
+} from './dictionary-labels.js';
 import { ANALYZER_SAMPLES } from './samples.js';
 import { useTokenSelection, type TokenSelection } from './use-token-selection.js';
+import { WordDetails } from './WordDetails.js';
 
 declare const __ICHIRAN_BROWSER_QUALIFICATION__: boolean;
 
 const DEFAULT_SAMPLE = ANALYZER_SAMPLES[0]!.text;
 
-export interface OfflineShellResult {
-  readonly ready: boolean;
-  readonly message?: string;
-  readonly registration?: ServiceWorkerRegistration;
-}
-
-type OfflineShellState =
-  | { readonly state: 'opening' }
-  | { readonly state: 'ready' }
-  | { readonly state: 'update-ready' }
-  | { readonly state: 'error'; readonly message: string };
-
 interface AppError {
   readonly code: string;
   readonly message: string;
 }
-
-const POS_LABELS: Readonly<Record<string, string>> = {
-  n: 'noun', 'n-adv': 'adverbial noun', 'n-pr': 'proper noun', 'n-t': 'temporal noun',
-  v1: 'ichidan verb', v5: 'godan verb', v5r: 'godan verb', vs: 'suru verb',
-  'vs-i': 'suru verb', vk: 'kuru verb', adj: 'adjective', 'adj-i': 'i-adjective',
-  'adj-na': 'na-adjective', adv: 'adverb', prt: 'particle', pn: 'pronoun',
-  conj: 'conjunction', cop: 'copula', int: 'interjection', aux: 'auxiliary',
-  ctr: 'counter', exp: 'expression', num: 'number', suf: 'suffix', pref: 'prefix'
-};
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -98,25 +79,17 @@ function formatBytes(bytes: number): string {
   return `${value >= 10 ? value.toFixed(1) : value.toFixed(2)} ${units[unit]}`;
 }
 
-function posLabel(value: string): string {
-  const direct = POS_LABELS[value];
-  if (direct) return direct;
-  const match = Object.entries(POS_LABELS).find(([key]) => value.startsWith(key));
-  return match?.[1] ?? value;
-}
-
 function posTone(pos: readonly string[]): string {
-  const joined = pos.join(' ');
-  if (/\bv|verb/.test(joined)) return 'verb';
-  if (/adj/.test(joined)) return 'adjective';
-  if (/prt|particle/.test(joined)) return 'particle';
-  if (/adv/.test(joined)) return 'adverb';
+  const categories = pos.map(partOfSpeechCategory);
+  if (categories.includes('verb')) return 'verb';
+  if (categories.includes('adjective')) return 'adjective';
+  if (categories.includes('particle')) return 'particle';
+  if (categories.includes('adverb')) return 'adverb';
   return 'noun';
 }
 
 function supportsRequiredFeatures(): boolean {
   return typeof Worker === 'function'
-    && 'serviceWorker' in navigator
     && 'storage' in navigator
     && typeof navigator.storage.getDirectory === 'function'
     && 'locks' in navigator
@@ -176,40 +149,20 @@ function Header({ status, onClear }: {
   );
 }
 
-function ShellNotice({ state }: { state: OfflineShellState }): ReactElement | null {
-  if (state.state === 'update-ready') {
-    return (
-      <div className="shell-notice" role="status">
-        <span><strong>Update available.</strong> Close other Ichiran tabs, then reopen this one.</span>
-      </div>
-    );
-  }
-  if (state.state === 'error') {
-    return (
-      <div className="shell-notice shell-notice-error" role="alert">
-        <span><strong>Offline use is unavailable.</strong> {state.message}</span>
-      </div>
-    );
-  }
-  return null;
-}
-
 function InstallView({
-  release, releaseError, status, progress, error, offlineShell, onInstall, onClear
+  release, releaseError, status, progress, error, onInstall, onClear
 }: {
   release: AnalyzerRelease | null;
   releaseError: string | null;
   status: AnalyzerStatus | null;
   progress: AnalyzerProgress | null;
   error: AppError | null;
-  offlineShell: OfflineShellState;
   onInstall(): void;
   onClear(): void;
 }): ReactElement {
   const downloadBytes = release ? release.hot.downloadBytes + release.details.downloadBytes : 0;
   const installedBytes = release ? release.hot.installedBytes + release.details.installedBytes : 0;
   const broken = status?.state === 'incomplete' || status?.state === 'corrupt' || status?.state === 'stale';
-  const shellReady = offlineShell.state === 'ready' || offlineShell.state === 'update-ready';
   const busy = progress !== null;
   const percent = progress && progress.totalBytes > 0
     ? Math.min(100, Math.round(progress.receivedBytes / progress.totalBytes * 100))
@@ -227,7 +180,7 @@ function InstallView({
       <section className="install-panel" aria-labelledby="install-title">
         <div className="install-icon" aria-hidden="true"><DatabaseIcon weight="duotone" /></div>
         <h1 id="install-title">Install Japanese data</h1>
-        <p className="install-intro">Download once to analyze Japanese privately, even without a connection.</p>
+        <p className="install-intro">Download once. Analysis reads this data directly from your device.</p>
 
         {status === null && !releaseError && (
           <div className="install-loading" aria-label="Preparing analyzer">
@@ -257,7 +210,7 @@ function InstallView({
             <small>{formatBytes(progress.receivedBytes)} of {formatBytes(progress.totalBytes)}</small>
           </div>
         ) : release && (
-          <Button className="install-action" size="lg" type="button" onClick={onInstall} disabled={!shellReady}>
+          <Button className="install-action" size="lg" type="button" onClick={onInstall}>
             <DownloadSimpleIcon data-icon="inline-start" />
             {broken ? 'Reinstall analyzer data' : error ? 'Retry' : 'Install analyzer data'}
           </Button>
@@ -308,8 +261,8 @@ function TokenButton({ token, index, selected, onPointerDown, onPointerEnter, on
   if (token.entryIndex === null && token.pos.length === 0) return <span className="punctuation">{token.text}</span>;
   const reading = token.reading && token.reading !== token.text ? token.reading : null;
   const accessible = reading
-    ? `${token.text}, reading ${reading}, ${token.pos.map(posLabel).join(', ') || 'word'}`
-    : `${token.text}, ${token.pos.map(posLabel).join(', ') || 'word'}`;
+    ? `${token.text}, reading ${reading}, ${token.pos.map(partOfSpeechLabel).join(', ') || 'word'}`
+    : `${token.text}, ${token.pos.map(partOfSpeechLabel).join(', ') || 'word'}`;
   return (
     <button
       className={`token token-${posTone(token.pos)}`}
@@ -371,133 +324,6 @@ function Sentence({ path, selection, onPointerDown, onPointerEnter, onPointerUp,
   );
 }
 
-function DetailSection({ title, children }: { title: string; children: React.ReactNode }): ReactElement {
-  return <section className="detail-section"><h3>{title}</h3>{children}</section>;
-}
-
-function WordDetails({
-  token, selectionText, entry, loading, error, copied, onCopy, onClose, compact = false
-}: {
-  token: AnalysisToken | null;
-  selectionText: string;
-  entry: DictionaryEntry | null;
-  loading: boolean;
-  error: string | null;
-  copied: boolean;
-  onCopy(): void;
-  onClose(): void;
-  compact?: boolean;
-}): ReactElement {
-  if (!selectionText) {
-    return <div className="detail-empty"><TextAaIcon weight="light" /><p>Select a word</p></div>;
-  }
-  if (!token) {
-    return (
-      <div className="selection-details">
-        <p>Selected text</p><h2 lang="ja">{selectionText}</h2>
-        <Button variant="outline" onClick={onCopy}>{copied ? <CheckIcon /> : <CopyIcon />}{copied ? 'Copied' : 'Copy'}</Button>
-      </div>
-    );
-  }
-  return (
-    <div className={`word-details ${compact ? 'word-details-compact' : ''}`}>
-      <div className="detail-heading">
-        <div>
-          {token.reading && token.reading !== token.text && <p lang="ja">{token.reading}</p>}
-          <h2 lang="ja">{token.text}</h2>
-        </div>
-        <div className="detail-actions">
-          <Button variant="ghost" size="icon-sm" onClick={onCopy} aria-label="Copy selected word">
-            {copied ? <CheckIcon /> : <CopyIcon />}
-          </Button>
-          {!compact && (
-            <Button variant="ghost" size="icon-sm" onClick={onClose} aria-label="Close word details"><XIcon /></Button>
-          )}
-        </div>
-      </div>
-      <div className="pos-tags">
-        {token.pos.map((value, index) => <Badge key={`${value}:${index}`} variant="secondary">{posLabel(value)}</Badge>)}
-        {token.inflection.map((value, index) => (
-          <Badge key={`${value.pos}:${value.type}:${index}`} variant="outline">
-            {value.negative ? 'negative ' : ''}{value.formal ? 'formal ' : ''}{posLabel(value.pos)}
-          </Badge>
-        ))}
-      </div>
-
-      {loading && (
-        <div className="detail-loading" aria-label="Loading word details">
-          <Skeleton className="h-4 w-4/5" /><Skeleton className="h-4 w-3/5" /><Skeleton className="h-4 w-2/3" />
-        </div>
-      )}
-      {error && <p className="message error" role="alert">{error}</p>}
-
-      {entry && entry.senses.length > 0 && (
-        <div className="meanings">
-          {entry.senses.map((sense, index) => (
-            <div className="meaning" key={`${sense.ord}:${index}`}>
-              <span>{index + 1}</span>
-              <div>
-                {sense.glosses.map(gloss => <p key={`${gloss.ord}:${gloss.text}`}>{gloss.text}</p>)}
-                {sense.properties.length > 0 && <small>{sense.properties.map(property => property.text).join(', ')}</small>}
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {entry && entry.forms.length > 0 && (
-        <DetailSection title="Dictionary forms">
-          <div className="forms dictionary-forms">
-            {entry.forms.map(form => (
-              <span key={`${form.route}:${form.ord}:${form.text}`}>
-                <strong lang="ja">{form.text}</strong>
-                <small>{form.route === 'kanji' ? 'written form' : 'reading'}{form.common !== null ? ', common' : ''}</small>
-              </span>
-            ))}
-          </div>
-        </DetailSection>
-      )}
-      {token.root && (
-        <DetailSection title="Base form"><div className="base-form"><strong lang="ja">{token.root.form}</strong><span lang="ja">{token.root.reading}</span></div></DetailSection>
-      )}
-      {token.components.length > 0 && (
-        <DetailSection title="Structure">
-          <div className="structure-equation">
-            {token.components.map((component, index) => (
-              <span key={`${component.text}:${component.entryIndex}:${index}`}>
-                {index > 0 && <i aria-hidden="true">+</i>}
-                <strong lang="ja">{component.text}</strong>
-                {component.reading !== component.text && <small lang="ja">{component.reading}</small>}
-              </span>
-            ))}
-          </div>
-        </DetailSection>
-      )}
-      {token.inflection.length > 0 && (
-        <DetailSection title="Conjugation">
-          <ol className="inflections">
-            {token.inflection.map((step, index) => (
-              <li key={`${step.pos}:${step.type}:${index}`}>
-                <span>{index + 1}</span><strong>{posLabel(step.pos)}</strong>
-                <small>{step.negative ? 'negative' : step.formal ? 'formal' : `form ${step.type}`}</small>
-              </li>
-            ))}
-          </ol>
-        </DetailSection>
-      )}
-      {token.alternatives.length > 0 && (
-        <DetailSection title="Other readings">
-          <div className="reading-alternatives">
-            {token.alternatives.map(alternative => (
-              <div key={alternative.candidateId}><strong lang="ja">{alternative.text}</strong><span lang="ja">{alternative.reading}</span></div>
-            ))}
-          </div>
-        </DetailSection>
-      )}
-    </div>
-  );
-}
-
 function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
   analyzer: BrowserAnalyzer;
   operationError: AppError | null;
@@ -510,6 +336,7 @@ function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
   const [showBusy, setShowBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [entry, setEntry] = useState<DictionaryEntry | null>(null);
+  const [relatedEntries, setRelatedEntries] = useState<ReadonlyMap<number, DictionaryEntry>>(new Map());
   const [entryLoading, setEntryLoading] = useState(false);
   const [entryError, setEntryError] = useState<string | null>(null);
   const [romanization, setRomanization] = useState<string | null>(null);
@@ -533,6 +360,7 @@ function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
 
   useEffect(() => {
     setEntry(null);
+    setRelatedEntries(new Map());
     setEntryError(null);
     if (!selectedToken || selectedToken.entryIndex === null) { setEntryLoading(false); return; }
     let current = true;
@@ -546,6 +374,18 @@ function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
       setEntryLoading(false);
       setEntryError('Word details could not be opened.');
       if (isInvalidInstallError(reason)) onPackInvalid();
+    });
+    const relatedIndexes = [...new Set([
+      ...selectedToken.components.map(component => component.entryIndex),
+      ...selectedToken.alternatives.map(alternative => alternative.entryIndex)
+    ].filter((value): value is number => value !== null && value !== selectedToken.entryIndex))];
+    void Promise.all(relatedIndexes.map(async entryIndex => [
+      entryIndex,
+      await analyzer.entry(entryIndex)
+    ] as const)).then(values => {
+      if (current) setRelatedEntries(new Map(values));
+    }, reason => {
+      if (current && isInvalidInstallError(reason)) onPackInvalid();
     });
     return () => { current = false; };
   }, [analyzer, onPackInvalid, selectedToken]);
@@ -619,7 +459,7 @@ function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
   }
 
   const detailProps = {
-    token: selectedToken, selectionText, entry, loading: entryLoading, error: entryError,
+    token: selectedToken, selectionText, entry, relatedEntries, loading: entryLoading, error: entryError,
     copied: copyState === 'copied', onCopy: () => void copySelection(), onClose: closeDetails
   };
 
@@ -708,7 +548,7 @@ function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
   );
 }
 
-export function App({ offlineShellReady }: { offlineShellReady: Promise<OfflineShellResult> }): ReactElement {
+export function App(): ReactElement {
   const supported = supportsRequiredFeatures();
   const client = useMemo(() => supported ? new AnalyzerClient() : null, [supported]);
   const analyzer = useMemo(() => client ? new BrowserAnalyzer(client) : null, [client]);
@@ -717,52 +557,6 @@ export function App({ offlineShellReady }: { offlineShellReady: Promise<OfflineS
   const [releaseError, setReleaseError] = useState<string | null>(null);
   const [progress, setProgress] = useState<AnalyzerProgress | null>(null);
   const [operationError, setOperationError] = useState<AppError | null>(null);
-  const [offlineShell, setOfflineShell] = useState<OfflineShellState>({ state: 'opening' });
-
-  useEffect(() => {
-    let current = true;
-    if (!('serviceWorker' in navigator)) {
-      void offlineShellReady.then(result => {
-        if (!current) return;
-        setOfflineShell(result.ready ? { state: 'ready' } : { state: 'error', message: result.message ?? 'Service Workers are unavailable.' });
-      });
-      return () => { current = false; };
-    }
-    let registration: ServiceWorkerRegistration | null = null;
-    let watchedWorker: ServiceWorker | null = null;
-    let previousController = navigator.serviceWorker.controller;
-    const showWaitingUpdate = (): void => {
-      if (!current || !registration?.waiting || !navigator.serviceWorker.controller) return;
-      setOfflineShell({ state: 'update-ready' });
-    };
-    const workerStateChanged = (): void => { if (watchedWorker?.state === 'installed') showWaitingUpdate(); };
-    const watchInstallingWorker = (): void => {
-      watchedWorker?.removeEventListener('statechange', workerStateChanged);
-      watchedWorker = registration?.installing ?? null;
-      watchedWorker?.addEventListener('statechange', workerStateChanged);
-    };
-    const controllerChanged = (): void => {
-      const nextController = navigator.serviceWorker.controller;
-      if (previousController && nextController && previousController !== nextController) { window.location.reload(); return; }
-      previousController = nextController;
-    };
-    navigator.serviceWorker.addEventListener('controllerchange', controllerChanged);
-    void offlineShellReady.then(result => {
-      if (!current) return;
-      registration = result.registration ?? null;
-      setOfflineShell(result.ready ? { state: 'ready' } : { state: 'error', message: result.message ?? 'Service Worker registration failed.' });
-      registration?.addEventListener('updatefound', watchInstallingWorker);
-      watchInstallingWorker();
-      showWaitingUpdate();
-    });
-    return () => {
-      current = false;
-      watchedWorker?.removeEventListener('statechange', workerStateChanged);
-      registration?.removeEventListener('updatefound', watchInstallingWorker);
-      navigator.serviceWorker.removeEventListener('controllerchange', controllerChanged);
-    };
-  }, [offlineShellReady]);
-
   useEffect(() => {
     if (!analyzer) return;
     let current = true;
@@ -845,10 +639,9 @@ export function App({ offlineShellReady }: { offlineShellReady: Promise<OfflineS
   return (
     <div className="app-shell">
       <Header status={status} onClear={() => void clear()} />
-      <ShellNotice state={offlineShell} />
       {status?.state === 'ready'
         ? <AnalysisWorkspace analyzer={analyzer} operationError={operationError} onPackInvalid={refreshStatus} />
-        : <InstallView release={release} releaseError={releaseError} status={status} progress={progress} error={operationError} offlineShell={offlineShell} onInstall={() => void install()} onClear={() => void clear()} />}
+        : <InstallView release={release} releaseError={releaseError} status={status} progress={progress} error={operationError} onInstall={() => void install()} onClear={() => void clear()} />}
       <footer><span>Runs on this device</span><a href="/licenses.html">Licenses</a></footer>
     </div>
   );

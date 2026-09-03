@@ -4,6 +4,7 @@ import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { gzipSync } from 'node:zlib';
 import { afterEach, describe, expect, test } from 'bun:test';
+import { analyzerReadyStateSize } from '@ichiran/core/release';
 
 import {
   QUALIFIED_BASELINE_ARTIFACT,
@@ -76,24 +77,30 @@ afterEach(async () => {
 });
 
 describe('browser analyzer release file gate', () => {
-  test('enforces the final-shell ready-state budget at the exact boundary', async () => {
+  test('enforces the analyzer ready-state budget at the exact boundary', async () => {
     const value = await fixture();
-    const withoutShell = assertAnalyzerReadyStateSize(
-      value.manifest,
-      0,
-      0
-    ).persistedBytes;
+    const base = assertAnalyzerReadyStateSize(value.manifest).persistedBytes;
     const limit = 64 * 1024 * 1024;
-    expect(assertAnalyzerReadyStateSize(
-      value.manifest,
-      0,
-      limit - withoutShell
-    ).persistedBytes).toBe(limit);
-    expect(() => assertAnalyzerReadyStateSize(
-      value.manifest,
-      0,
-      limit - withoutShell + 1
-    )).toThrow(`limit is ${limit}`);
+    let atLimit = {
+      ...value.manifest,
+      details: {
+        ...value.manifest.details,
+        installedBytes: value.manifest.details.installedBytes + limit - base
+      }
+    };
+    for (;;) {
+      const difference = analyzerReadyStateSize(atLimit).persistedBytes - limit;
+      if (difference === 0) break;
+      atLimit = {
+        ...atLimit,
+        details: { ...atLimit.details, installedBytes: atLimit.details.installedBytes - difference }
+      };
+    }
+    expect(assertAnalyzerReadyStateSize(atLimit).persistedBytes).toBe(limit);
+    expect(() => assertAnalyzerReadyStateSize({
+      ...atLimit,
+      details: { ...atLimit.details, installedBytes: atLimit.details.installedBytes + 1 }
+    })).toThrow(`limit is ${limit}`);
   });
 
   test('accepts only a current, internally hashed release', async () => {

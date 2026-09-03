@@ -10,7 +10,7 @@ import {
   stat,
   writeFile
 } from 'node:fs/promises';
-import { dirname, join, resolve } from 'node:path';
+import { dirname, join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { promisify } from 'node:util';
 import postgres, { type Sql } from 'postgres';
@@ -41,10 +41,6 @@ import {
   buildAnalyzerRelease,
   type AnalyzerReleaseBuild
 } from '../packages/data/src/browser-pack/release-manifest.js';
-import {
-  measureProductionShell,
-  type ProductionShellMeasurement
-} from '../packages/data/src/browser-pack/shell-measurement.js';
 import {
   assertBrowserAlphaMorphologyAttestation,
   assertBytesEqual,
@@ -100,7 +96,7 @@ import {
 
 const execFile = promisify(execFileCallback);
 const MORPHOLOGY_FORMAT_VERSION = 1;
-const RELEASE_STATS_FORMAT_VERSION = 2;
+const RELEASE_STATS_FORMAT_VERSION = 3;
 interface SurfaceCompilerStats {
   readonly input: number;
   readonly accepted: number;
@@ -573,8 +569,7 @@ function statsReport(
   builds: ComponentBuilds,
   release: AnalyzerReleaseBuild,
   source: Awaited<ReturnType<typeof verifyBrowserAlphaSources>>,
-  sourceCommitValue: string,
-  shell: ProductionShellMeasurement
+  sourceCommitValue: string
 ): unknown {
   return {
     formatVersion: RELEASE_STATS_FORMAT_VERSION,
@@ -619,8 +614,7 @@ function statsReport(
       decodedCacheUpperBound: builds.annotations.stats.largestGeneratedBlock
         * ANALYZER_GENERATED_CACHE_BLOCKS
     },
-    shell,
-    sizes: assertAnalyzerReleaseSize(release, shell.bytes)
+    sizes: assertAnalyzerReleaseSize(release)
   };
 }
 
@@ -675,9 +669,8 @@ async function build(options: CliOptions, root: string): Promise<void> {
     assertBytesEqual(release.hotDownload, rebuilt.hotDownload, 'Compressed hot asset');
     assertBytesEqual(release.detailsDownload, rebuilt.detailsDownload, 'Compressed details asset');
     assertBytesEqual(release.manifestBytes, rebuilt.manifestBytes, 'Release manifest');
-    const shell = await measureProductionShell(resolve(root, options.shellDir!), release.manifestBytes);
-    assertAnalyzerReleaseSize(release, shell.bytes);
-    const report = deterministicJson(statsReport(builds, release, source, commit, shell));
+    assertAnalyzerReleaseSize(release);
+    const report = deterministicJson(statsReport(builds, release, source, commit));
     const output = releaseOutputPath(root, options.out!);
     await publishAnalyzerRelease(
       output,
@@ -687,7 +680,7 @@ async function build(options: CliOptions, root: string): Promise<void> {
         ['manifest.json', release.manifestBytes],
         ['stats.json', report]
       ]),
-      { verify: async directory => { await verifyRelease(directory, shell.bytes); } }
+      { verify: async directory => { await verifyRelease(directory); } }
     );
     console.log(new TextDecoder().decode(report).trimEnd());
   } finally {
@@ -776,13 +769,7 @@ async function verify(options: CliOptions, root: string): Promise<void> {
   await verifyBrowserAlphaOracleCore(root, source.lock.postgresReference.repositoryCommit);
   verifyBrowserAlphaToolchain(source.lock.toolchain, await actualToolchain());
   const output = releaseOutputPath(root, options.out!);
-  const manifestBytes = new Uint8Array(await readFile(join(output, 'manifest.json')));
-  const shell = await measureProductionShell(
-    resolve(root, options.shellDir!),
-    manifestBytes,
-    { requireFinalizedServiceWorker: true }
-  );
-  const release = await verifyRelease(output, shell.bytes);
+  const release = await verifyRelease(output);
   await assertActiveReleaseGeneration(output, [
     release.manifest.hot.file,
     release.manifest.details.file,
@@ -815,13 +802,10 @@ async function verify(options: CliOptions, root: string): Promise<void> {
       decodedCacheBlocks?: number;
       decodedCacheUpperBound?: number;
     };
-    shell?: ProductionShellMeasurement;
     sizes?: {
       hotBytes?: number;
       persistedBytes?: number;
       wireBytes?: number;
-      shellBytes?: number;
-      cachedManifestBytes?: number;
       installedMarkerBytes?: number;
       installedIdentityPayloadBytes?: number;
     };
@@ -831,10 +815,6 @@ async function verify(options: CliOptions, root: string): Promise<void> {
   if (report.packVersion !== release.manifest.packVersion) throw new Error('Stats pack version mismatch');
   if (report.sourceCommit !== release.manifest.sourceCommit) throw new Error('Stats source commit mismatch');
   if (report.sourcesLockSha256 !== source.lockSha256) throw new Error('Stats sources-lock digest mismatch');
-  if (JSON.stringify(report.shell) !== JSON.stringify(shell)) {
-    throw new Error('Stats production-shell measurement mismatch');
-  }
-  if (report.sizes?.shellBytes !== shell.bytes) throw new Error('Stats shell-byte measurement mismatch');
   if (!report.artifacts || !report.sections || !report.details) {
     throw new Error('Stats report is missing artifact measurements');
   }
@@ -896,7 +876,7 @@ async function verify(options: CliOptions, root: string): Promise<void> {
   if (report.supportIssues?.count !== 0 || report.supportIssues.sha256 !== emptyDigest) {
     throw new Error('Stats report contains unresolved analyzer-support issues');
   }
-  const expectedSizes = assertAnalyzerReleaseSize(release, shell.bytes);
+  const expectedSizes = assertAnalyzerReleaseSize(release);
   if (JSON.stringify(report.sizes) !== JSON.stringify(expectedSizes)) {
     throw new Error('Stats release-size report mismatch');
   }

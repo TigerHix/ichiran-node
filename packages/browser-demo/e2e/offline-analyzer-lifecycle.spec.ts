@@ -33,7 +33,7 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
     context = await browserType.launchPersistentContext(profileDirectory, {
       baseURL: BASE_URL,
       headless: true,
-      serviceWorkers: 'allow',
+      serviceWorkers: 'block',
       viewport: { width: 390, height: 844 }
     });
     watchConsoleHealth(context);
@@ -52,7 +52,8 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
     // per-install-ID ABA guard rather than only a manifest identity check.
     await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('猫');
     await page.getByRole('button', { name: 'Analyze', exact: true }).click();
-    await expect(page.locator('.dictionary-forms:visible')).toContainText('猫');
+    await expect(page.locator('.word-details:visible > .detail-content > .token-meanings'))
+      .toContainText('cat');
     await page.getByRole('button', { name: 'Close', exact: true }).click();
     await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('鮟鱇を食べる');
     await page.getByRole('button', { name: 'Analyze', exact: true }).click();
@@ -80,9 +81,8 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
       .toEqual(['shared', 'exclusive']);
     await releaseAbaLock();
     expect(await waitForStandaloneInstall(coordinator)).toBeNull();
-    await expect(page.locator('.dictionary-forms:visible'))
-      .toContainText('鮟鱇', { timeout: 180_000 });
-    await expect(page.locator('.word-details:visible').getByText('potbellied sumo wrestler', { exact: true })).toBeVisible();
+    await expect(page.locator('.word-details:visible > .detail-content > .token-meanings'))
+      .toContainText('potbellied sumo wrestler', { timeout: 180_000 });
     await page.getByRole('button', { name: 'Close', exact: true }).click();
 
     const newInstallId = await committedInstallId(page);
@@ -95,7 +95,8 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
     // Worker reopens that generation before retrying the interrupted detail read.
     await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('猫');
     await page.getByRole('button', { name: 'Analyze', exact: true }).click();
-    await expect(page.locator('.dictionary-forms:visible')).toContainText('猫');
+    await expect(page.locator('.word-details:visible > .detail-content > .token-meanings'))
+      .toContainText('cat');
     await page.getByRole('button', { name: 'Close', exact: true }).click();
     await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('鮟鱇を食べる');
     await page.getByRole('button', { name: 'Analyze', exact: true }).click();
@@ -135,9 +136,8 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
     await releaseBarrier();
 
     expect(await waitForStandaloneInstall(coordinator)).toBeNull();
-    await expect(page.locator('.dictionary-forms:visible'))
-      .toContainText('鮟鱇', { timeout: 180_000 });
-    await expect(page.locator('.word-details:visible').getByText('potbellied sumo wrestler', { exact: true })).toBeVisible();
+    await expect(page.locator('.word-details:visible > .detail-content > .token-meanings'))
+      .toContainText('potbellied sumo wrestler', { timeout: 180_000 });
     await page.getByRole('button', { name: 'Close', exact: true }).click();
     const repairedInstallId = await committedInstallId(page);
     expect(repairedInstallId).toMatch(INSTALL_ID_PATTERN);
@@ -154,7 +154,8 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
     await releaseRuntimeLock();
     // The one-token result opens a modal detail sheet, making the sentence
     // intentionally inert to the accessibility tree until the sheet closes.
-    await expect(page.locator('.dictionary-forms:visible')).toContainText('猫');
+    await expect(page.locator('.word-details:visible > .detail-content > .token-meanings'))
+      .toContainText('cat');
     await page.getByRole('button', { name: 'Close', exact: true }).click();
 
     // Queue a stale-tab read behind a cross-tab writer. Once clear commits, that
@@ -165,7 +166,8 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
     // A one-token result automatically opens its entry. Finish that shared
     // runtime read before queueing clear, otherwise clear can win the lock queue
     // and invalidate this tab before the explicit stale read below.
-    await expect(page.locator('.dictionary-forms:visible')).toContainText('犬');
+    await expect(page.locator('.word-details:visible > .detail-content > .token-meanings'))
+      .toContainText('dog');
     await page.getByRole('button', { name: 'Close', exact: true }).click();
     coordinator.once('dialog', dialog => dialog.accept());
     await removeAnalyzerData(coordinator);

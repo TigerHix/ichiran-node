@@ -38,8 +38,6 @@ export interface AnalyzerReleaseSizeReport {
   readonly hotBytes: number;
   readonly persistedBytes: number;
   readonly wireBytes: number;
-  readonly shellBytes: number;
-  readonly cachedManifestBytes: number;
   readonly installedMarkerBytes: number;
   readonly installedIdentityPayloadBytes: number;
 }
@@ -129,33 +127,19 @@ export function buildAnalyzerRelease(options: {
 }
 
 export function assertAnalyzerReleaseSize(
-  build: AnalyzerReleaseBuild,
-  shellBytes = 0
+  build: AnalyzerReleaseBuild
 ): AnalyzerReleaseSizeReport {
-  if (!Number.isSafeInteger(shellBytes) || shellBytes < 0) {
-    throw new Error('Shell size must be a non-negative integer');
-  }
-  // measure-shell deliberately excludes analyzer/*. The Service Worker caches
-  // manifest.json alongside that shell, OPFS stores one compact copy inside
-  // the active slot's install-{a,b}.json, and IndexedDB stores the install ID read
-  // on every request. The inactive slot exists only while staging an upgrade, so it
-  // is not part of the ready-state persisted total. Browser-managed IndexedDB
-  // allocation overhead is implementation-defined and is not part of this gate.
-  const readyState = analyzerReadyStateSize(
-    build.manifest,
-    build.manifestBytes.byteLength,
-    shellBytes
-  );
+  // OPFS stores the two pack assets and one compact install marker. IndexedDB
+  // stores the install ID read on every request. HTTP/application-shell caches
+  // belong to the consumer and are deliberately outside this release contract.
+  const readyState = analyzerReadyStateSize(build.manifest);
   const report = {
     hotBytes: build.manifest.hot.installedBytes,
     persistedBytes: readyState.persistedBytes,
     wireBytes:
       build.hotDownload.byteLength
       + build.detailsDownload.byteLength
-      + build.manifestBytes.byteLength
-      + shellBytes,
-    shellBytes,
-    cachedManifestBytes: readyState.cachedManifestBytes,
+      + build.manifestBytes.byteLength,
     installedMarkerBytes: readyState.installedMarkerBytes,
     installedIdentityPayloadBytes: readyState.installedIdentityPayloadBytes
   };

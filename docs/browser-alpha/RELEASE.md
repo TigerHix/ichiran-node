@@ -1,5 +1,9 @@
 # Browser alpha release compiler
 
+> Historical PostgreSQL-era release procedure. Its production-shell measurement and
+> Service Worker requirements are superseded. Current releases budget and verify the
+> analyzer manifest and pack only; consumer application shells are independent.
+
 The release compiler is the single production path from the frozen PostgreSQL
 snapshot and pinned raw inputs to the two browser data assets. PostgreSQL is a
 build-time input only. The emitted release has no database client, SQL, or server
@@ -7,21 +11,14 @@ dependency.
 
 ## Build
 
-Build the production PWA shell first. The release command measures that directory
-itself; `analyzer/` is excluded so the data files are not counted twice:
-
-```bash
-bun run alpha:demo:build
-```
-
-Pass the production directory, not a caller-supplied byte count:
+The analyzer release is built and verified independently of any consuming
+application bundle:
 
 ```bash
 bun run alpha:release:build -- \
   --database 'postgresql:///ichiran_oracle_ea958336?host=%2Fvar%2Frun%2Fpostgresql' \
   --out dist/browser-alpha \
-  --pack-version ichiran-260118 \
-  --shell-dir packages/browser-demo/dist
+  --pack-version ichiran-260118
 ```
 
 The release command's own `--database` value is visible in its process argv. For
@@ -84,9 +81,9 @@ its own streaming decompression.
 The alpha browser baseline is Safari 26+ or a current Chromium browser. The installer
 requires a dedicated Worker, OPFS (`navigator.storage.getDirectory()`), IndexedDB,
 Web Locks, `FileSystemFileHandle.createWritable()`, and `DecompressionStream`; the UI
-checks these capabilities before offering installation. The offline PWA shell additionally
-uses a Service Worker. Safari added the writable-file stream used by this deliberately
-simple streaming installer in
+checks these capabilities before offering installation. Offline application launch
+does not belong to this package. Safari added the writable-file stream used by this
+deliberately simple streaming installer in
 [Safari 26](https://developer.apple.com/documentation/safari-release-notes/safari-26-release-notes).
 Supporting older Safari would require a separate sync-access write path and is not part
 of this milestone. The Chromium gate pins the whole browser to one Linux CPU, adds five
@@ -119,27 +116,24 @@ them. The output must be below the repository root.
 
 ## Verify
 
-Verification independently measures the final production shell:
+Verification checks the analyzer release independently:
 
 ```bash
 bun run alpha:release:verify -- \
-  --out dist/browser-alpha \
-  --shell-dir packages/browser-demo/dist
+  --out dist/browser-alpha
 ```
 
 It rechecks the checkout, source lock, toolchain, release manifest digest, download
 and installed hashes and lengths, fixed section set, every section checksum and
-reader header, the details header, stats identity, and all three release gates:
+reader header, the details header, stats identity, and all three analyzer gates:
 
 - always-resident uncompressed `hot.bin` at most 25 MiB;
-- persisted hot + details + precached shell + cached manifest + compact
-  active `install-{a,b}.json` + the 36-byte logical IndexedDB install ID at most 64 MiB;
-- first-install shell + manifest + compressed hot + compressed details at most
-  26 MiB.
+- persisted hot + details + compact active `install-{a,b}.json` + the 36-byte
+  logical IndexedDB install ID at most 64 MiB;
+- manifest + compressed hot + compressed details at most 26 MiB.
 
-`stats.json` binds the shell's derived byte count, exact file-inventory hash, file
-count, and release-specific Service Worker cache identity. Verification recomputes
-all of them and rejects a non-finalized or tampered shell.
+Application-shell bytes and cache identity are deliberately absent from `stats.json`.
+They are deployment concerns of the consuming application.
 
 `deploy.sh` is the production trust path: it runs this full verification, requires
 the atomic generation layout, derives the exact Git HEAD, and passes that identity
@@ -169,8 +163,8 @@ with the upstream Lisp revision, frozen PostgreSQL reference revision, release-d
 identity, database/toolchain identity, raw inputs, artifact counts and exact artifact
 digests. Normal `build` and `verify` remain strict consumers of that lock.
 
-Review the lock diff and pass the exhaustive parity jobs before publishing. The PWA
-has an explicit waiting-shell update handshake, and failed data replacement preserves
-the previous verified A/B generation. It has no automatic analyzer-data update
+Review the lock diff and pass the exhaustive parity jobs before publishing. Failed
+data replacement preserves the previous verified A/B generation. The adapter has no
+automatic analyzer-data update
 scheduler, data migration or delta format, user-selectable rollback release, or
 alternate fallback pack.

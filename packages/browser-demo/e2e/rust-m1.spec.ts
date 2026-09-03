@@ -59,7 +59,7 @@ test.skip(
 test('Rust Worker owns the complete analyzer boundary', async ({ browser }) => {
   const context = await browser.newContext({
     baseURL: 'http://127.0.0.1:4173',
-    serviceWorkers: 'allow'
+    serviceWorkers: 'block'
   });
   await context.addInitScript(() => {
     const scope = window as typeof window & {
@@ -230,7 +230,7 @@ test('Rust Worker owns the complete analyzer boundary', async ({ browser }) => {
     const cat = page.getByRole('button', { name: /猫/ }).first();
     await expect(cat).toBeVisible();
     // A one-token result is selected automatically.
-    await expect(page.locator('.word-details:visible').getByText('Dictionary forms')).toBeVisible();
+    await expect(page.locator('.word-details:visible').getByText('Noun', { exact: true }).first()).toBeVisible();
     await page.getByRole('button', { name: 'Close word details', exact: true }).click();
 
     await input.fill('食べた');

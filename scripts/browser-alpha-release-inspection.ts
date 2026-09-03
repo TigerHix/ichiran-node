@@ -42,10 +42,7 @@ async function gzipDecode(bytes: Uint8Array): Promise<Uint8Array> {
   return new Uint8Array(gunzipSync(bytes));
 }
 
-export async function verifyRelease(
-  out: string,
-  shellBytes: number
-): Promise<VerifiedAnalyzerRelease> {
+export async function verifyRelease(out: string): Promise<VerifiedAnalyzerRelease> {
   const manifestBytes = new Uint8Array(await readFile(join(out, 'manifest.json')));
   const manifest = parseAnalyzerReleaseManifest(
     JSON.parse(new TextDecoder().decode(manifestBytes)),
@@ -173,6 +170,6 @@ export async function verifyRelease(
       details: { bytes: details.byteLength, sha256: sha256Bytes(details) }
     }
   };
-  assertAnalyzerReleaseSize(release, shellBytes);
+  assertAnalyzerReleaseSize(release);
   return release;
 }

@@ -43,8 +43,7 @@ describe('browser analyzer release manifest', () => {
     expect(first.manifest.hot.installedBytes).toBe(options.hot.byteLength);
     expect(first.manifest.hot.downloadBytes).toBe(first.hotDownload.byteLength);
 
-    const shellBytes = 123;
-    const sizes = assertAnalyzerReleaseSize(first, shellBytes);
+    const sizes = assertAnalyzerReleaseSize(first);
     const markerBytes = new TextEncoder().encode(JSON.stringify({
       state: 'ready',
       manifest: first.manifest,
@@ -52,14 +51,11 @@ describe('browser analyzer release manifest', () => {
       installedAt: '1970-01-01T00:00:00.000Z',
       slot: 'a'
     })).byteLength;
-    expect(sizes.cachedManifestBytes).toBe(first.manifestBytes.byteLength);
     expect(sizes.installedMarkerBytes).toBe(markerBytes);
     expect(sizes.installedIdentityPayloadBytes).toBe(36);
     expect(sizes.persistedBytes).toBe(
       options.hot.byteLength
       + options.details.byteLength
-      + shellBytes
-      + first.manifestBytes.byteLength
       + markerBytes
       + 36
     );

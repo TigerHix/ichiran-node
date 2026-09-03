@@ -242,31 +242,6 @@ export async function stopCpuHogs(children: readonly ChildProcess[]): Promise<vo
   }
 }
 
-export async function expectInstallablePwa(page: Page): Promise<void> {
-  const cdp = await page.context().newCDPSession(page);
-  try {
-    const report = await cdp.send('Page.getAppManifest');
-    expect(report.errors).toEqual([]);
-    expect(report.url).toMatch(/\/manifest\.webmanifest$/);
-    const manifest = JSON.parse(report.data ?? '{}') as {
-      readonly name?: string;
-      readonly start_url?: string;
-      readonly scope?: string;
-      readonly display?: string;
-      readonly icons?: readonly { readonly sizes?: string }[];
-    };
-    expect(manifest).toMatchObject({
-      name: 'Ichiran',
-      start_url: '/',
-      scope: '/',
-      display: 'standalone'
-    });
-    expect(manifest.icons?.map(icon => icon.sizes)).toEqual(['192x192', '512x512', 'any']);
-  } finally {
-    await cdp.detach();
-  }
-}
-
 export async function expectNoHorizontalOverflow(page: Page, width: number): Promise<void> {
   await expect.poll(() => page.evaluate(() => ({
     width: window.innerWidth,
@@ -607,8 +582,7 @@ Object.defineProperty(navigator.storage, 'estimate', {
 }
 
 export async function openIsolatedContext(
-  browser: Browser,
-  offlineShell: 'ready' | 'registration-error' | 'install-error' = 'ready'
+  browser: Browser
 ): Promise<BrowserContext> {
   const context = await browser.newContext({
     baseURL: BASE_URL,
@@ -616,46 +590,6 @@ export async function openIsolatedContext(
     viewport: { width: 390, height: 844 }
   });
   watchConsoleHealth(context);
-  await context.addInitScript(mode => {
-    if (!('serviceWorker' in navigator) || !navigator.serviceWorker) return;
-    let controller: object | null = null;
-    let workerState: ServiceWorkerState = 'installing';
-    const worker = new EventTarget();
-    Object.defineProperty(worker, 'state', {
-      configurable: true,
-      get: () => workerState
-    });
-    const registration = new EventTarget();
-    Object.defineProperties(registration, {
-      installing: {
-        configurable: true,
-        get: () => mode === 'install-error' ? worker : null
-      },
-      waiting: { configurable: true, get: () => null }
-    });
-    Object.defineProperty(navigator.serviceWorker, 'controller', {
-      configurable: true,
-      get: () => controller
-    });
-    Object.defineProperty(navigator.serviceWorker, 'register', {
-      configurable: true,
-      value: () => {
-        if (mode === 'registration-error') {
-          return Promise.reject(new Error('Registration denied by the acceptance harness.'));
-        }
-        setTimeout(() => {
-          if (mode === 'install-error') {
-            workerState = 'redundant';
-            worker.dispatchEvent(new Event('statechange'));
-            return;
-          }
-          controller = {};
-          navigator.serviceWorker.dispatchEvent(new Event('controllerchange'));
-        }, 0);
-        return Promise.resolve(registration);
-      }
-    });
-  }, offlineShell);
   await denyPersistentStorage(context);
   return context;
 }

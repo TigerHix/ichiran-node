@@ -25,7 +25,6 @@ import {
   analyzerReleaseGenerationIdentity,
   publishAnalyzerRelease
 } from '../src/browser-pack/release-publication.js';
-import { measureProductionShell } from '../src/browser-pack/shell-measurement.js';
 import {
   assertSourceReleaseDestination,
   resolveSourceReleaseDestination
@@ -251,38 +250,6 @@ describe('atomic release publication', () => {
     await expect(assertActiveReleaseGeneration(output, ['manifest.json']))
       .resolves.toBeUndefined();
     expect(await readFile(join(output, 'manifest.json'), 'utf8')).toBe('same bytes');
-  });
-});
-
-describe('production shell measurement', () => {
-  test('derives bytes and a hash, and requires the release-finalized cache version', async () => {
-    const root = await temporary();
-    await mkdir(join(root, 'assets'));
-    await writeFile(join(root, 'index.html'), '<main>demo</main>');
-    await writeFile(join(root, 'assets/app.js'), 'console.log("demo")');
-    const precache = ['/assets/app.js', '/index.html', '/analyzer/manifest.json'];
-    const worker = (version: string) => [
-      `const CACHE = 'ichiran-shell-${version}';`,
-      `const CORE = ${JSON.stringify(precache)};`
-    ].join('\n');
-    await writeFile(join(root, 'sw.js'), worker('0'.repeat(16)));
-    const manifest = new TextEncoder().encode('{"release":1}\n');
-    const projected = await measureProductionShell(root, manifest);
-    expect(projected.bytes).toBeGreaterThan(0);
-    expect(projected.sha256).toMatch(/^[0-9a-f]{64}$/);
-    await expect(measureProductionShell(root, manifest, {
-      requireFinalizedServiceWorker: true
-    })).rejects.toThrow('cache version');
-
-    await writeFile(join(root, 'sw.js'), worker(projected.cacheVersion));
-    expect(await measureProductionShell(root, manifest, {
-      requireFinalizedServiceWorker: true
-    })).toEqual(projected);
-
-    await writeFile(join(root, 'assets/app.js'), 'console.log("tampered")');
-    await expect(measureProductionShell(root, manifest, {
-      requireFinalizedServiceWorker: true
-    })).rejects.toThrow('cache version');
   });
 });
 

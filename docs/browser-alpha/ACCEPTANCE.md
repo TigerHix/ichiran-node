@@ -1,5 +1,9 @@
 # Browser Analyzer Alpha: parity and acceptance contract
 
+> Historical alpha contract. Its PWA/application-shell requirements are superseded.
+> The current browser package owns only analyzer-pack installation and Worker
+> execution; consumers own Service Workers and offline application launch.
+
 Status: pinned analyzer implementation complete; release and browser evidence is
 generated locally and kept outside Git, 2026-08-29
 Authoritative analyzer target: upstream Ichiran at

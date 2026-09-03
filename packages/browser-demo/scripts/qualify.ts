@@ -134,27 +134,16 @@ await run('bun', [
   'scripts/audit-build.ts', '--require-rust', '--require-analyzer', '--release', release,
   ...(sourceLock ? ['--source-lock', sourceLock] : [])
 ], packageRoot, false, productionEnvironment);
-const shellBytes = Number(await run(
-  'bun', ['scripts/measure-shell.ts'], packageRoot, true, productionEnvironment
-));
-if (!Number.isSafeInteger(shellBytes) || shellBytes < 1) {
-  throw new Error(`Invalid production shell byte count: ${shellBytes}`);
-}
 const releaseDownloadBytes = verifiedRelease.manifestBytes.byteLength
   + verifiedRelease.hotBytes.byteLength
   + verifiedRelease.detailsBytes.byteLength;
-const firstInstallBytes = releaseDownloadBytes + shellBytes;
 const firstInstallLimit = 26 * 1024 * 1024;
-if (firstInstallBytes > firstInstallLimit) {
+if (releaseDownloadBytes > firstInstallLimit) {
   throw new Error(
-    `First-install bytes ${firstInstallBytes} exceed the ${firstInstallLimit}-byte limit`
+    `Analyzer download bytes ${releaseDownloadBytes} exceed the ${firstInstallLimit}-byte limit`
   );
 }
-const readyState = assertAnalyzerReadyStateSize(
-  verifiedRelease.manifest,
-  verifiedRelease.manifestBytes.byteLength,
-  shellBytes
-);
+const readyState = assertAnalyzerReadyStateSize(verifiedRelease.manifest);
 await run('bun', ['run', 'build:qualification-browser'], packageRoot, false, productionEnvironment);
 await run('bun', ['run', 'test:e2e'], packageRoot, false, {
   ...productionEnvironment,
@@ -164,7 +153,6 @@ await run('bun', ['run', 'test:e2e'], packageRoot, false, {
 assertCleanCheckout(qualificationCommit);
 
 console.log(
-  `Browser qualification passed for ${release}: ${releaseDownloadBytes} release bytes + `
-  + `${shellBytes} shell bytes = ${firstInstallBytes} first-install bytes; `
+  `Browser qualification passed for ${release}: ${releaseDownloadBytes} analyzer download bytes; `
   + `${readyState.persistedBytes} ready-state persisted bytes`
 );

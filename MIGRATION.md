@@ -145,6 +145,12 @@ runtime that ships.
 Browser lifecycle errors remain host-local (`not-installed`, `stale-install`, storage,
 Worker, and release errors). Analyzer failures use the same four core product codes.
 
+The browser adapter owns analyzer-pack download, verification, OPFS persistence, and
+Worker execution only. It does not register a Service Worker, provide a PWA manifest,
+cache the application shell, or manage shell updates. Consumers own those choices.
+A verified installed pack can open without fetching the published manifest; when the
+manifest is reachable, it is still used to detect a newer pack.
+
 ## Qualification-only compatibility
 
 The frozen TypeScript/PostgreSQL behavior and detailed legacy projection remain only

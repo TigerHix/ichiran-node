@@ -127,13 +127,13 @@ function staleStatus(
 }
 
 async function openInstalledUnlocked(): Promise<ReturnType<typeof inspectInstall>> {
-  const expected = requiredExpectedRelease();
+  const expected = expectedRelease;
   const inspected = await inspectInstalled(runtime !== null);
   if (inspected.state !== 'ready') {
     clearRuntime();
     return inspected;
   }
-  if (inspected.manifestSha256 !== expected.manifestSha256) {
+  if (expected && inspected.manifestSha256 !== expected.manifestSha256) {
     clearRuntime();
     return staleStatus(inspected, expected);
   }
