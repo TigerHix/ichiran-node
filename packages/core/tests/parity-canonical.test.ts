@@ -9,6 +9,7 @@ import {
   projectPortableCleanAnalysis,
   semanticCandidateKey
 } from '../tools/parity-canonical.js';
+import { samePackAnalysisDifference } from '../tools/rust-kernel-wasm-differential.js';
 import type {
   PortableAnalysisPath,
   PortableAnalysisResult,
@@ -263,6 +264,11 @@ describe('oracle parity canonicalization', () => {
     }
     expect(projectPortableCleanAnalysis(renumbered)).toEqual(projected);
     expect(firstCanonicalDifference(portable, renumbered)?.path).toContain('candidateId');
+    expect(samePackAnalysisDifference(
+      portable,
+      { ...portable, computeMs: portable.computeMs + 1 }
+    )).toBeNull();
+    expect(samePackAnalysisDifference(portable, renumbered)?.path).toContain('candidateId');
     expect(core.paths.map(path => path.score)).toEqual([17, 17]);
     expect(core.paths[0]!.tokens.map(value => [value.start, value.end])).toEqual([
       [0, 1], [1, 2], [2, 3]

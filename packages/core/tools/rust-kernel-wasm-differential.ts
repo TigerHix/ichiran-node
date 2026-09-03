@@ -9,6 +9,7 @@ import {
   IchiranRuntime,
   parseAnalyzerReleaseManifest,
   type AnalyzerReleaseAsset,
+  type PortableAnalysisResult,
   type PortableAnalyzeOptions
 } from '../src/index.js';
 
@@ -202,6 +203,17 @@ function rawDifference(expected: unknown, actual: unknown, path = '$'): Canonica
     return null;
   }
   return { path, kind: typeof expected === typeof actual ? 'value' : 'type', expected, actual };
+}
+
+/** Same-pack qualification ignores elapsed time and compares every other public DTO field. */
+export function samePackAnalysisDifference(
+  expected: PortableAnalysisResult,
+  actual: PortableAnalysisResult
+): CanonicalDifference | null {
+  return rawDifference(
+    { ...expected, computeMs: 0 },
+    { ...actual, computeMs: 0 }
+  );
 }
 
 function rawCases(corpus: AnalyzerParityCorpus): RawCase[] {
@@ -507,7 +519,9 @@ async function main(): Promise<void> {
       const expectedClean = projectPortableCleanAnalysis(expected);
       wasmClean.push(actualClean);
       oracleClean.push(expectedClean);
-      const difference = rawDifference(expectedClean, actualClean);
+      const difference = mode === 'same-pack'
+        ? samePackAnalysisDifference(expected, actual)
+        : rawDifference(expectedClean, actualClean);
       const suite = rawStats[fixture.suite]!;
       suite.operations++;
       if (difference) {
@@ -644,7 +658,9 @@ async function main(): Promise<void> {
       wasm: { path: wasmPath, bytes: wasmBytes.byteLength, sha256: wasmSha256 }
     },
     rawPresentationFree: {
-      policy: 'Exact object values and exact array order against the frozen TypeScript oracle; no tie canonicalization.',
+      policy: mode === 'same-pack'
+        ? 'Complete public DTO equality against the TypeScript same-pack oracle after normalizing only computeMs; exact array order and candidateId values.'
+        : 'Exact presentation-free object values and exact array order against the frozen TypeScript oracle; no tie canonicalization.',
       operations: raw.length,
       exact: rawExact,
       divergent: raw.length - rawExact,
@@ -699,9 +715,10 @@ async function main(): Promise<void> {
     || romanizationStats.exact !== 5
     || detailedExact !== 702
     || (mode === 'immutable-baseline' && fallbackExact !== 301)
+    || (mode === 'same-pack' && report.detailRandomAccess.wholeFileRead)
   ) {
     process.exitCode = 1;
   }
 }
 
-await main();
+if (import.meta.main) await main();

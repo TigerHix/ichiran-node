@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'bun:test';
+import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
 const packageRoot = resolve(import.meta.dir, '..');
@@ -61,5 +62,23 @@ describe('browser qualification mode', () => {
       'Source release verification does not accept ICHIRAN_QUALIFIED_ARTIFACT'
     );
     expect(result.stderr.toString()).not.toContain('ENOENT');
+  });
+
+  test('long source-pack qualifiers pin HEAD and cleanliness for the complete run', async () => {
+    const repository = resolve(packageRoot, '..', '..');
+    const files = [
+      'scripts/rust-kernel-source-release-differential.sh',
+      'scripts/rust-kernel-source-release-c-qualification.sh',
+      'scripts/source-release-host-qualification.sh'
+    ];
+    for (const file of files) {
+      const source = await readFile(resolve(repository, file), 'utf8');
+      expect(source).toContain('qualification_commit=$(git rev-parse HEAD)');
+      expect(source).toContain('test "$(git rev-parse HEAD)" = "$qualification_commit"');
+      expect(source.match(/git status --porcelain=v1/g)).toHaveLength(2);
+    }
+    const browser = await readFile(resolve(packageRoot, 'scripts/qualify.ts'), 'utf8');
+    expect(browser).toContain("const qualificationCommit = gitOutput(['rev-parse', 'HEAD']);");
+    expect(browser.match(/assertCleanCheckout\(qualificationCommit\)/g)).toHaveLength(2);
   });
 });

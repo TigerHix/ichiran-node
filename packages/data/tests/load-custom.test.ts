@@ -5,16 +5,13 @@
 import { describe, test, expect } from 'bun:test';
 import { XmlLoader, loadCustomData } from '../src/data/load-custom.js';
 import fs from 'fs';
-import path from 'path';
+import { fileURLToPath } from 'node:url';
+
+const extraPath = fileURLToPath(new URL('../../../data/sources/extra.xml', import.meta.url));
 
 describe('Custom Data Loading', () => {
   test('XmlLoader can parse extra.xml', async () => {
-    const extraPath = path.join(process.cwd(), 'data/sources/extra.xml');
-
-    if (!fs.existsSync(extraPath)) {
-      console.log('Skipping test: extra.xml not found');
-      return;
-    }
+    expect(fs.existsSync(extraPath)).toBe(true);
 
     const loader = new XmlLoader(extraPath);
     const count = await loader.slurp();
@@ -25,12 +22,7 @@ describe('Custom Data Loading', () => {
   });
 
   test('XmlLoader extracts entries with sequence numbers', async () => {
-    const extraPath = path.join(process.cwd(), 'data/sources/extra.xml');
-
-    if (!fs.existsSync(extraPath)) {
-      console.log('Skipping test: extra.xml not found');
-      return;
-    }
+    expect(fs.existsSync(extraPath)).toBe(true);
 
     const loader = new XmlLoader(extraPath);
     await loader.slurp();

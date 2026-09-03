@@ -16,13 +16,10 @@
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "typecheck:migration": "tsc --noEmit -p tsconfig.migration.json",
     "test": "bun test tests/",
-    "test:source": "find tests -maxdepth 1 -name '*.test.ts' ! -name 'analyzer-support-postgres.test.ts' ! -name 'conjugate.test.ts' ! -name 'details-postgres.test.ts' ! -name 'load-entry.test.ts' ! -name 'root-payload-postgres.test.ts' -print | sort | xargs bun test",
+    "test:source": "bun scripts/test-source.ts",
     "alpha:release:build": "bun run --cwd ../core build && bun run --cwd ../reference-postgres build && bun ../../scripts/browser-alpha-release.ts build",
     "alpha:release:refresh-lock": "bun run --cwd ../core build && bun run --cwd ../reference-postgres build && bun ../../scripts/browser-alpha-release.ts refresh-lock",
     "alpha:release:verify": "bun run --cwd ../core build && bun run --cwd ../reference-postgres build && bun ../../scripts/browser-alpha-release.ts verify"
-  },
-  "bin": {
-    "ichiran-data": "./dist/source-compiler/cli.js"
   },
   "dependencies": {
     "@ichiran/core": "workspace:*",

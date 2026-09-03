@@ -12,6 +12,7 @@ installed=$(mktemp -d)
 trap 'rm -rf -- "$installed"' EXIT HUP INT TERM
 
 cd "$repository"
+qualification_commit=$(git rev-parse HEAD)
 test -z "$(git status --porcelain=v1 --untracked-files=all)" || {
   echo 'Native same-pack qualification requires a clean checkout' >&2
   exit 1
@@ -21,6 +22,10 @@ cp "$release/manifest.json" "$installed/manifest.json"
 gzip -dc "$release/hot.bin.gz" > "$installed/hot.bin"
 gzip -dc "$release/details.bin.gz" > "$installed/details.bin"
 bash packages/rust-kernel/tests/run_c_harness.sh --same-pack "$installed"
+test "$(git rev-parse HEAD)" = "$qualification_commit" || {
+  echo 'Native same-pack qualification source commit changed during the run' >&2
+  exit 1
+}
 test -z "$(git status --porcelain=v1 --untracked-files=all)" || {
   echo 'Native same-pack qualification changed the checkout' >&2
   exit 1

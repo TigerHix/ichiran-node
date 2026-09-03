@@ -57,11 +57,6 @@ git -C "$repository" archive HEAD | tar -x -C "$archive"
     echo 'source compiler build contains a legacy data-loader module' >&2
     exit 1
   fi
-  if grep -R -E "@ichiran/reference-postgres|from ['\"]postgres['\"]" \
-      packages/core/dist packages/data/dist; then
-    echo 'source compiler build imports a PostgreSQL oracle dependency' >&2
-    exit 1
-  fi
   bun packages/data/dist/source-compiler/cli.js --help | grep -q 'ichiran-data baseline'
   bun -e "import('@ichiran/core').then(value => { if (typeof value.IchiranRuntime !== 'function') process.exit(1) })"
   bun -e "import('./packages/data/dist/index.js').then(value => { if (typeof value.runSourceCompilerRelease !== 'function') process.exit(1) })"
@@ -88,6 +83,12 @@ git -C "$repository" archive HEAD | tar -x -C "$archive"
           }
         done
   done
+  if grep -R -E \
+      "['\"](@ichiran/reference-postgres([^'\"]*)?|postgres([^'\"]*)?)['\"]" \
+      packages/core/dist packages/data/dist packages/node/dist packages/cli/dist packages/api/dist; then
+    echo 'product package output imports a PostgreSQL oracle dependency' >&2
+    exit 1
+  fi
 )
 
 printf '%s\n' 'Package audit passed: clean archive source compiler and runtime inventories'

@@ -7,12 +7,20 @@ import { verifyAnalyzerRelease } from './release-files.js';
 
 const packageRoot = resolve(import.meta.dir, '..');
 const repositoryRoot = resolve(packageRoot, '..', '..');
-function assertCleanCheckout(): void {
+function gitOutput(args: readonly string[]): string {
+  const result = Bun.spawnSync(['git', '-C', repositoryRoot, ...args]);
+  if (result.exitCode !== 0) throw new Error(`git ${args.join(' ')} failed`);
+  return result.stdout.toString().trim();
+}
+function assertCleanCheckout(expectedCommit: string): void {
   const result = Bun.spawnSync([
     'git', '-C', repositoryRoot, 'status', '--porcelain=v1', '--untracked-files=all'
   ]);
   if (result.exitCode !== 0 || result.stdout.byteLength !== 0) {
     throw new Error('Browser qualification requires a clean source checkout');
+  }
+  if (gitOutput(['rev-parse', 'HEAD']) !== expectedCommit) {
+    throw new Error('Browser qualification source commit changed during the run');
   }
 }
 if (process.env.ICHIRAN_TYPESCRIPT_ORACLE === '1') {
@@ -24,7 +32,8 @@ if (process.env.ICHIRAN_TYPESCRIPT_ORACLE === '1') {
 if (process.env.ICHIRAN_QUALIFIED_ARTIFACT !== undefined) {
   throw new Error('Source browser qualification does not accept ICHIRAN_QUALIFIED_ARTIFACT');
 }
-assertCleanCheckout();
+const qualificationCommit = gitOutput(['rev-parse', 'HEAD']);
+assertCleanCheckout(qualificationCommit);
 const productionEnvironment = { ...process.env };
 delete productionEnvironment.ICHIRAN_TYPESCRIPT_ORACLE;
 delete productionEnvironment.ICHIRAN_QUALIFIED_ARTIFACT;
@@ -137,7 +146,7 @@ if (!skipE2e) {
     ICHIRAN_E2E_M1_WITNESSES: JSON.stringify(samePackWitnesses)
   });
 }
-assertCleanCheckout();
+assertCleanCheckout(qualificationCommit);
 
 console.log(
   `Browser qualification passed for ${release}: ${releaseDownloadBytes} release bytes + `

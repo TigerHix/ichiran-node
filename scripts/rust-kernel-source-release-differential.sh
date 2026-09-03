@@ -13,6 +13,7 @@ installed=$(mktemp -d)
 trap 'rm -rf -- "$installed"' EXIT HUP INT TERM
 
 cd "$repository"
+qualification_commit=$(git rev-parse HEAD)
 test -z "$(git status --porcelain=v1 --untracked-files=all)" || {
   echo 'Rust same-pack qualification requires a clean checkout' >&2
   exit 1
@@ -27,6 +28,10 @@ if [ -n "$wasm" ]; then
 else
   bun packages/core/tools/rust-kernel-wasm-differential.ts --same-pack "$installed"
 fi
+test "$(git rev-parse HEAD)" = "$qualification_commit" || {
+  echo 'Rust same-pack qualification source commit changed during the run' >&2
+  exit 1
+}
 test -z "$(git status --porcelain=v1 --untracked-files=all)" || {
   echo 'Rust same-pack qualification changed the checkout' >&2
   exit 1

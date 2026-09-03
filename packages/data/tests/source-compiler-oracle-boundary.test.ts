@@ -28,12 +28,12 @@ test('source release graph excludes migration-oracle modules', async () => {
 test('canonical data package dependencies exclude migration oracles', async () => {
   const packageJson = await Bun.file(resolve(import.meta.dir, '../package.json')).json() as {
     readonly private: boolean;
-    readonly bin: Record<string, string>;
+    readonly bin?: Record<string, string>;
     readonly dependencies: Record<string, string>;
     readonly devDependencies: Record<string, string>;
   };
   expect(packageJson.private).toBe(true);
-  expect(packageJson.bin['ichiran-data']).toBe('./dist/source-compiler/cli.js');
+  expect(packageJson.bin).toBeUndefined();
   expect(packageJson.dependencies['@ichiran/core']).toBe('workspace:*');
   expect(Object.keys(packageJson.dependencies).sort()).toEqual([
     '@ichiran/core',
@@ -80,6 +80,10 @@ test('keeps direct compilation separate from the Linux isolation proof', async (
   expect(rootPackage.scripts['source:release:isolated']).toBe(
     'sh scripts/source-compiler-release-no-postgres.sh'
   );
+  const dataPackage = await Bun.file(resolve(repository, 'packages/data/package.json')).json() as {
+    readonly scripts: Record<string, string>;
+  };
+  expect(dataPackage.scripts['test:source']).toBe('bun scripts/test-source.ts');
   const isolation = await Bun.file(resolve(
     repository,
     'scripts/source-compiler-release-no-postgres.sh'

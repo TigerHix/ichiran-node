@@ -1,6 +1,7 @@
 import { describe, expect, test } from 'bun:test';
-import { readFile } from 'node:fs/promises';
-import { resolve } from 'node:path';
+import { lstat, mkdir, mkdtemp, readFile, rm, symlink, writeFile } from 'node:fs/promises';
+import { join, resolve } from 'node:path';
+import { tmpdir } from 'node:os';
 import type { BrowserAlphaArtifactCounts } from '../src/source-compiler/artifact-contract.js';
 import {
   parseGeneratedOrderAttestation,
@@ -117,15 +118,42 @@ function exactRootReview() {
 
 describe('source release evidence', () => {
   test('confines in-repository output to work and permits fresh external output', async () => {
-    const repository = resolve(import.meta.dir, '../../..');
-    await expect(resolveSourceReleaseOutput(repository, '.git/source-release'))
-      .rejects.toThrow('below work/');
-    await expect(resolveSourceReleaseOutput(repository, 'packages/data/release'))
-      .rejects.toThrow('below work/');
-    expect(await resolveSourceReleaseOutput(repository, 'work/fresh-release'))
-      .toBe(resolve(repository, 'work/fresh-release'));
-    expect(await resolveSourceReleaseOutput(repository, '/tmp/ichiran-fresh-release'))
-      .toBe('/tmp/ichiran-fresh-release');
+    const root = await mkdtemp(join(tmpdir(), 'ichiran-release-output-'));
+    const repository = join(root, 'repository');
+    const external = join(root, 'external');
+    try {
+      await Promise.all([
+        mkdir(join(repository, '.git'), { recursive: true }),
+        mkdir(join(repository, 'work'), { recursive: true }),
+        mkdir(external, { recursive: true })
+      ]);
+      await symlink(external, join(repository, '.git/source-release'));
+      await symlink(external, join(repository, 'work/escape'));
+      await symlink(join(repository, '.git'), join(external, 'into-git'));
+      await writeFile(join(repository, 'work/not-a-directory'), 'not a directory');
+      await mkdir(join(repository, 'work/existing-directory'));
+
+      await expect(resolveSourceReleaseOutput(repository, '.git/source-release'))
+        .rejects.toThrow('below work/');
+      await expect(resolveSourceReleaseOutput(repository, 'packages/data/release'))
+        .rejects.toThrow('below work/');
+      await expect(resolveSourceReleaseOutput(repository, 'work/escape'))
+        .rejects.toThrow('physical work directory');
+      await expect(resolveSourceReleaseOutput(repository, join(external, 'into-git/release')))
+        .rejects.toThrow('below work/');
+      await expect(resolveSourceReleaseOutput(repository, 'work/not-a-directory'))
+        .rejects.toThrow('absent or an atomic release symlink');
+      await expect(resolveSourceReleaseOutput(repository, 'work/existing-directory'))
+        .rejects.toThrow('absent or an atomic release symlink');
+      await expect(lstat(join(repository, 'work/existing-directory.generations')))
+        .rejects.toMatchObject({ code: 'ENOENT' });
+      expect(await resolveSourceReleaseOutput(repository, 'work/fresh-release'))
+        .toBe(join(repository, 'work/fresh-release'));
+      expect(await resolveSourceReleaseOutput(repository, join(external, 'fresh-release')))
+        .toBe(join(external, 'fresh-release'));
+    } finally {
+      await rm(root, { recursive: true, force: true });
+    }
   });
 
   test('parses the one reviewed baseline root-order attestation', async () => {

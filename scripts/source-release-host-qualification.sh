@@ -10,6 +10,7 @@ repository=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
 release=$(CDPATH= cd -- "$1" && pwd -P)
 
 cd "$repository"
+qualification_commit=$(git rev-parse HEAD)
 test -z "$(git status --porcelain=v1 --untracked-files=all)" || {
   echo 'Source host qualification requires a clean checkout' >&2
   exit 1
@@ -21,6 +22,10 @@ ICHIRAN_PACK_DIR="$release" bun test \
   packages/cli/tests/source-release.test.ts \
   packages/api/tests/analyzer-api.test.ts \
   packages/api/tests/input-validation.test.ts
+test "$(git rev-parse HEAD)" = "$qualification_commit" || {
+  echo 'Source host qualification source commit changed during the run' >&2
+  exit 1
+}
 test -z "$(git status --porcelain=v1 --untracked-files=all)" || {
   echo 'Source host qualification changed the checkout' >&2
   exit 1

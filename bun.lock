@@ -65,9 +65,6 @@
     "packages/data": {
       "name": "@ichiran/data",
       "version": "0.0.0",
-      "bin": {
-        "ichiran-data": "./dist/source-compiler/cli.js",
-      },
       "dependencies": {
         "@ichiran/core": "workspace:*",
         "csv-parse": "^6.1.0",
