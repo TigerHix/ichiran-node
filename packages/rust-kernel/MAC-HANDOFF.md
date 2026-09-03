@@ -1,35 +1,44 @@
 # Mac native handoff
 
-## Integrated candidate
+## Current candidate
 
-Use the final pushed head named in the integration task handoff. This tracked guide is
-a recipe, not post-commit evidence. Pin the remote head before building and keep the
-checkout detached at that exact commit:
+Start from the current pushed `main`. Record that base before creating the Mac-owned
+Swift branch; final qualification must be rerun from its own clean committed head:
 
 ```sh
-git fetch origin codex/integrated-edge-cutover
-candidate=$(git rev-parse origin/codex/integrated-edge-cutover)
-git switch --detach "$candidate"
-test "$(git rev-parse HEAD)" = "$candidate"
+git fetch origin main
+base=$(git rev-parse origin/main)
+git switch -c codex/swift-native-host "$base"
+test "$(git merge-base HEAD "$base")" = "$base"
 test -z "$(git status --porcelain=v1 --untracked-files=all)"
 ```
 
 The integrated Linux/WSL report is
 [`docs/INTEGRATED-EDGE-CUTOVER-REPORT.md`](../../docs/INTEGRATED-EDGE-CUTOVER-REPORT.md).
 
-The source-built pack qualified with this code has installed hot SHA-256
-`eb9c58204c624b1220bc257b910fc5df7e092133af09760ce6800b672b4bcd96`
+The current September source-built pack has installed hot SHA-256
+`0641cad9cd6b3719e95f6d731c60350806e79f4c534a10d59852eb17b22c6e23`
 and details SHA-256
-`0fc45731d84fbb7c2ccf3ef5692d2f1ab01e538325f0ed50135da38e621aa151`.
-The source release lives under an ignored `work/` directory and is not contained in or
-transferred by Git. Obtain the exact attached or published `manifest.json`,
-`hot.bin.gz`, `details.bin.gz`, and `stats.json` from the integration handoff. Verify
-that `manifest.sourceCommit` equals `candidate` and that the decoded identities above
-match before using it. Do not substitute an unverified local pack. Run the immutable C
-corpus first, then the source same-pack C corpus, then exercise that source pack through
-the Swift wrapper for install/open, analysis, romanization, describe, retained legacy,
-restart, corruption/recovery, and concurrent background calls. Do not port analyzer or
-presentation logic into Swift.
+`29abbd909261a04c3d76b3844339d276a5c6dbd02d4493629b88d15f39b57560`.
+It is selected by `data/source-compiler-update-2026-09-02.lock.json` and uses pack
+version `jmdict-2026-09-02-source`. Release files live under ignored `work/` output and
+are not transferred by Git. Build the release from the final clean Swift-branch commit
+so `manifest.sourceCommit` equals that exact head:
+
+```sh
+bun install --frozen-lockfile
+bun scripts/acquire-source-compiler-jmdict.ts \
+  data/source-compiler-update-2026-09-02.lock.json
+bun run source:release -- update \
+  --source-lock data/source-compiler-update-2026-09-02.lock.json \
+  --out work/swift-source-release \
+  --pack-version jmdict-2026-09-02-source
+```
+
+Verify the manifest identity and decoded hashes above before using it. Run the native
+C same-pack corpus, then exercise that source pack through the Swift wrapper for
+install/open, analysis, romanization, entry lookup, restart, corruption/recovery, and
+concurrent background calls. Do not port analyzer or presentation logic into Swift.
 
 M5B remains open: build the device and simulator archives, create the XCFramework,
 write the thin Swift ownership/file adapter, and run simulator plus physical-device
@@ -37,9 +46,10 @@ memory, leak, lifecycle, and UTF-16 tests. Physical Safari qualification is a se
 remaining M4 gate.
 
 This crate is the sole analyzer implementation for native and browser builds. ABI v3
-exposes clean analysis, analyzer-backed romanization, lazy detail lookup, and retained
-detailed/legacy presentation. Swift owns pack installation and file reads; it must not
-recreate analyzer, detail, or presentation semantics.
+exposes clean analysis, analyzer-backed romanization, and lazy detail lookup. Its
+legacy session symbols remain for qualification only and must not become public Swift
+API. Swift owns pack installation and file reads; it must not recreate analyzer,
+detail, or presentation semantics.
 
 ## Build targets
 
@@ -148,11 +158,14 @@ and file lifetime remain host responsibilities.
 
 ## Required Mac validation
 
-Before writing the Swift adapter, run the same C caller on macOS:
+Before writing the Swift adapter, run the immutable C caller on macOS. After the final
+Swift implementation is committed, build the September source pack as described above
+and run the source same-pack caller from that same clean head:
 
 ```sh
 bash tests/run_c_harness.sh /path/to/portable-core-260118-baseline
-(cd ../.. && bun run qualify:native-same-pack -- /path/to/attached-source-release)
+(cd ../.. && bun run qualify:native-same-pack -- work/swift-source-release \
+  --source-lock data/source-compiler-update-2026-09-02.lock.json)
 ```
 
 The required output covers 1,236 clean analyses plus three raw astral/lone-surrogate
@@ -167,9 +180,12 @@ simulator and physical devices.
 WSL qualification does not claim XCFramework, Swift, simulator, Safari, or physical
 device validation. Those remain M5B Mac-owned gates.
 
-Before signing off the XCFramework/Swift package and its test evidence, repeat:
+Before signing off the XCFramework/Swift package and its test evidence, repeat with
+the final committed head recorded in the generated manifest:
 
 ```sh
-test "$(git rev-parse HEAD)" = "$candidate"
+manifest_commit=$(bun -e "console.log(JSON.parse(await Bun.file(\
+  'work/swift-source-release/manifest.json').text()).sourceCommit)")
+test "$(git rev-parse HEAD)" = "$manifest_commit"
 test -z "$(git status --porcelain=v1 --untracked-files=all)"
 ```

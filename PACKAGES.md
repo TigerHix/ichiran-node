@@ -14,7 +14,7 @@ remain outside the runtime and normal source-compiler dependency graphs. See
 | `@ichiran/node` | The single `openAnalyzer` filesystem loader with manifest verification and gzip decoding |
 | `@ichiran/cli` | Explicit `ichiran analyze`, `romanize`, and `entry` commands |
 | `@ichiran/api` | Analyzer-only Node HTTP server over `@ichiran/node` |
-| `@ichiran/browser-demo` | Offline PWA, OPFS installer, Worker transport, and mobile-first demo UI |
+| `@ichiran/browser-demo` | OPFS analyzer-pack installer, Worker transport, and mobile-first integration demo; consumer applications own their shell and Service Worker policy |
 
 Runtime dependencies are intentionally direct:
 
@@ -91,8 +91,8 @@ bun run build:compiler
 bun run typecheck:compiler
 
 # Release
-bun run alpha:release:build -- --database "$ICHIRAN_DB_URL" --out dist/browser-alpha --pack-version <version> --shell-dir packages/browser-demo/dist
-bun run alpha:release:verify -- --out dist/browser-alpha --shell-dir packages/browser-demo/dist
+bun run alpha:release:build -- --database "$ICHIRAN_DB_URL" --out dist/browser-alpha --pack-version <version>
+bun run alpha:release:verify -- --out dist/browser-alpha
 
 # Browser demo
 bun run alpha:demo:stage
