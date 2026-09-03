@@ -131,11 +131,11 @@ It rechecks the checkout, source lock, toolchain, release manifest digest, downl
 and installed hashes and lengths, fixed section set, every section checksum and
 reader header, the details header, stats identity, and all three release gates:
 
-- always-resident uncompressed `hot.bin` at most 24 MiB;
+- always-resident uncompressed `hot.bin` at most 25 MiB;
 - persisted hot + details + precached shell + cached manifest + compact
   active `install-{a,b}.json` + the 36-byte logical IndexedDB install ID at most 64 MiB;
 - first-install shell + manifest + compressed hot + compressed details at most
-  25 MiB.
+  26 MiB.
 
 `stats.json` binds the shell's derived byte count, exact file-inventory hash, file
 count, and release-specific Service Worker cache identity. Verification recomputes

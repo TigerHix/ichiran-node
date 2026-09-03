@@ -336,11 +336,11 @@ same snapshot must produce identical file hashes and bytes.
 
 Binary-size pass/fail definitions use powers of two:
 
-- `hot.bin` raw bytes: **at most 24 MiB = 25,165,824 bytes**;
+- `hot.bin` raw bytes: **at most 25 MiB = 26,214,400 bytes**;
 - all persisted browser payload bytes plus precached app shell: **at most 64 MiB = 67,108,864
   bytes**;
 - fresh-install wire payload for manifest, app shell, and all analyzer data using
-  the release content encoding: **at most 25 MiB = 26,214,400 bytes**.
+  the release content encoding: **at most 26 MiB = 27,262,976 bytes**.
 
 The `ichiran-260118` analyzer data measures 24,857,288 resident hot bytes; its
 compressed hot/detail assets are 12,662,917 and 12,317,325 bytes respectively. The

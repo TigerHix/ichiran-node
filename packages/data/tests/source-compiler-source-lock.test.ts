@@ -153,6 +153,41 @@ describe('source compiler lock', () => {
     ).toEqual([...SOURCE_COMPILER_INPUT_ROLES].sort());
   });
 
+  test('pins the September 2 JMdict update to the reusable archive acquisition path', async () => {
+    const path = join(
+      import.meta.dir,
+      '../../../data/source-compiler-update-2026-09-02.lock.json'
+    );
+    const lock = parseSourceCompilerLock(JSON.parse(await readFile(path, 'utf8')));
+    expect(lock.transition).toEqual({
+      date: '2026-09-02',
+      scope: 'JMdict_e data update only',
+      acquisitionScript: 'scripts/acquire-source-compiler-jmdict.ts'
+    });
+    expect(lock.sources[0]).toMatchObject({
+      id: 'edrdg-jmdict-e-2026-09-02',
+      kind: 'jmdict',
+      file: {
+        role: 'jmdict',
+        path: 'work/m6-transition/JMdict_e-2026-09-02.gz',
+        bytes: 10_565_341,
+        sha256: '7cd74020d4669eed9276fb34ba767c670be509db1d8fede59c92ddf1debb3c0a'
+      },
+      authoritativeUrl: 'https://www.edrdg.org/pub/Nihongo/JMdict_e.gz',
+      archiveCommit: '3ad579211fc38f01048b2704d93974eff13372dd',
+      archivePatch: 'JMdict_e/patches/2026/09/02.patch.br',
+      upstreamIdentity: 'JMdict created: 2026-09-02',
+      uncompressedBytes: 63_077_282,
+      uncompressedSha256: '3ffd03dd326e2d2a35d307fcac3307a6dab3abd0818dde6cb2657962d3025196',
+      license: 'CC-BY-SA-4.0',
+      attribution: 'Electronic Dictionary Research and Development Group'
+    });
+    expect(lock.sources.flatMap(item => 'file' in item
+      ? [item.file.role]
+      : 'files' in item ? item.files.map(file => file.role) : []).sort()
+    ).toEqual([...SOURCE_COMPILER_INPUT_ROLES].sort());
+  });
+
   test('verifies exactly the role-selected files and the compiler consumes an alternate path', async () => {
     const repository = await mkdtemp(join(tmpdir(), 'ichiran-source-lock-'));
     try {

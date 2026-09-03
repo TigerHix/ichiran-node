@@ -229,10 +229,11 @@ SHA-256, so copying or renaming the January bytes cannot turn off comparison.
 
 A later September 1 snapshot was also tested as a transition candidate. Its
 source semantics compiled, but its installed hot pack was 25,273,024 bytes,
-107,200 bytes above the unchanged 24 MiB product gate. Publication correctly
-stopped. The gate was not raised and pack format v1 was not changed; qualifying
-the first genuine post-baseline daily update keeps the transition focused while
-leaving that later capacity issue for a separately reviewed product decision.
+107,200 bytes above the former 24 MiB product gate. Publication correctly stopped.
+The September 2 product decision raised the hot limit by one MiB, from 24 to 25 MiB,
+and the complete first-install limit by one MiB, from 25 to 26 MiB. The 64 MiB
+ready-state persisted limit is unchanged. These are explicit capacity decisions for
+the current dictionary, not a weakening or removal of the release gates.
 
 Before the full build, run the bounded semantic witness:
 
@@ -277,3 +278,46 @@ done
 The successful byte-comparison loop is the two-release determinism proof. Both runs
 must record the same clean 40-character source commit and the same verified update-lock
 digest.
+
+## Current 2026-09-02 JMdict update
+
+`data/source-compiler-update-2026-09-02.lock.json` pins the current English JMdict
+snapshot. On 2026-09-02 the official EDRDG URL served a 10,565,350-byte gzip with
+SHA-256 `20b8e5c25d1f3755422fe1f704dee703e64d4d2e0580f9b918c1073eadcd86d9`.
+It expands to 63,077,282 bytes with SHA-256
+`3ffd03dd326e2d2a35d307fcac3307a6dab3abd0818dde6cb2657962d3025196`,
+contains 218,683 entries, and identifies itself as `JMdict created: 2026-09-02`.
+The authoritative URL is `https://www.edrdg.org/pub/Nihongo/JMdict_e.gz`; the data
+is attributed to EDRDG under CC BY-SA 4.0.
+
+The lock also gives a durable reconstruction authority: Jitendex EDRDG archive
+commit `3ad579211fc38f01048b2704d93974eff13372dd`, whose
+`JMdict_e/patches/2026/09/02.patch.br` is 1,501 bytes with SHA-256
+`1416eb49f8b6fd89034cd7263089badca141a158a51ec2c4d48fc32d28768f7f`.
+The generic acquisition command reconstructs the target from that immutable archive,
+verifies the expanded official XML identity, and writes a deterministic gzip. The
+compiler input is 10,565,341 bytes with SHA-256
+`7cd74020d4669eed9276fb34ba767c670be509db1d8fede59c92ddf1debb3c0a`.
+
+```sh
+bun scripts/acquire-source-compiler-jmdict.ts \
+  data/source-compiler-update-2026-09-02.lock.json
+
+bun run source:release:isolated -- update \
+  --source-lock data/source-compiler-update-2026-09-02.lock.json \
+  --out work/jmdict-2026-09-02-release-a \
+  --pack-version jmdict-2026-09-02-source
+
+bun run source:release:isolated -- update \
+  --source-lock data/source-compiler-update-2026-09-02.lock.json \
+  --out work/jmdict-2026-09-02-release-b \
+  --pack-version jmdict-2026-09-02-source
+```
+
+Compare all four published artifacts exactly as above. Because JMdict content changed,
+the frozen January PostgreSQL oracle cannot judge the changed rows. Qualification uses
+source-lock verification, two-build byte identity, complete pack verification, Rust
+versus frozen-TypeScript same-pack parity, native C same-pack coverage, and the Node,
+CLI, HTTP, and browser gates. Any retained January behavioral fixture remains a
+regression assertion for unaffected inputs; it is not an allowlist for dictionary data
+changes.

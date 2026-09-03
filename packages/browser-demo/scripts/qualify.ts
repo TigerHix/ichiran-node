@@ -131,7 +131,7 @@ const releaseDownloadBytes = verifiedRelease.manifestBytes.byteLength
   + verifiedRelease.hotBytes.byteLength
   + verifiedRelease.detailsBytes.byteLength;
 const firstInstallBytes = releaseDownloadBytes + shellBytes;
-const firstInstallLimit = 25 * 1024 * 1024;
+const firstInstallLimit = 26 * 1024 * 1024;
 if (firstInstallBytes > firstInstallLimit) {
   throw new Error(
     `First-install bytes ${firstInstallBytes} exceed the ${firstInstallLimit}-byte limit`

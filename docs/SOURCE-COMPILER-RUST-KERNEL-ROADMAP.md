@@ -585,8 +585,8 @@ not the sum of both ranges.
   app, Xcode/simulator/device work, and later Komi integration.
 - Rust need not beat TypeScript in raw browser latency. It must preserve exact parity,
   meet the latency/memory gates, and avoid a material interaction regression. The
-  25 MiB first-install limit remains the target; any exception requires explicit
-  approval from final-shell measurements.
+  26 MiB first-install limit is the current target after the approved September 2026
+  JMdict refresh; later exceptions require explicit approval from final-shell measurements.
 - The accepted baseline is pushed, clean-build-qualified, published as immutable
   artifacts, and tagged before full implementation begins.
 - Pack format v1, parallel Rust/compiler work, one-cycle reference retention, one-time

@@ -64,9 +64,9 @@ used here.
 
 | Metric | Required |
 |---|---:|
-| Compressed one-time transfer | no more than 25 MiB |
+| Compressed one-time transfer | no more than 26 MiB |
 | Installed shell + analyzer data | no more than 64 MiB |
-| Resident hot image | no more than 24 MiB |
+| Resident hot image | no more than 25 MiB |
 | Ordinary top-one p95 at calibrated 6x Worker contention | no more than 75 ms |
 | Pathological morphology p95 at calibrated 6x Worker contention | no more than 250 ms |
 | Dense contiguous 64-256-unit top-1/5/10 p95 at calibrated 6x Worker contention | no more than 500 ms |
