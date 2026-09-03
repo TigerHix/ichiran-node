@@ -231,7 +231,7 @@ test('Rust Worker owns the complete analyzer boundary', async ({ browser }) => {
     await expect(cat).toBeVisible();
     // A one-token result is selected automatically.
     await expect(page.locator('.word-details:visible').getByText('Dictionary forms')).toBeVisible();
-    await page.getByRole('button', { name: 'Close', exact: true }).click();
+    await page.getByRole('button', { name: 'Close word details', exact: true }).click();
 
     await input.fill('食べた');
     await page.getByRole('button', { name: 'Analyze', exact: true }).click();
