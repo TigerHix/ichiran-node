@@ -195,7 +195,7 @@ pub struct AnalysisComponent {
     pub(crate) legacy: Option<LegacyPresentationFacts>,
 }
 
-#[derive(Clone, Debug, PartialEq, Serialize)]
+#[derive(Clone, Debug, Eq, PartialEq, Serialize)]
 pub struct AnalysisRoot {
     pub seq: u32,
     pub form: String,

@@ -45,11 +45,11 @@ write the thin Swift ownership/file adapter, and run simulator plus physical-dev
 memory, leak, lifecycle, and UTF-16 tests. Physical Safari qualification is a separate
 remaining M4 gate.
 
-This crate is the sole analyzer implementation for native and browser builds. ABI v3
-exposes clean analysis, analyzer-backed romanization, and lazy detail lookup. Its
-legacy session symbols remain for qualification only and must not become public Swift
-API. Swift owns pack installation and file reads; it must not recreate analyzer,
-detail, or presentation semantics.
+This crate is the sole analyzer implementation for native and browser builds. ABI v4
+exposes clean analysis, canonical lazy token details, analyzer-backed romanization,
+and raw dictionary lookup. Its legacy session symbols remain for qualification only
+and must not become public Swift API. Swift owns pack installation and file reads; it
+must not recreate analyzer, detail, or presentation semantics.
 
 ## Build targets
 
@@ -86,10 +86,10 @@ xcodebuild -create-xcframework \
 Never combine device and simulator archives with `lipo`. The XCFramework owns those
 separate platform slices.
 
-## ABI v3 audit
+## ABI v4 audit
 
 Import `include/ichiran_kernel.h` through a module map. Confirm the universal archive
-exports these 14 symbols:
+exports these 17 symbols:
 
 ```sh
 nm -gU libichiran_kernel.a | awk '/_ichiran_/ { print $3 }' | sort -u
@@ -109,7 +109,10 @@ _ichiran_kernel_legacy_begin_utf16
 _ichiran_kernel_legacy_step
 _ichiran_kernel_open
 _ichiran_kernel_romanize_utf16
+_ichiran_kernel_token_details_begin_utf16
+_ichiran_kernel_token_details_step
 _ichiran_legacy_operation_free
+_ichiran_token_details_operation_free
 ```
 
 Reject the library at integration time unless `ichiran_kernel_abi_version()` equals
@@ -127,6 +130,12 @@ never owns the file or eagerly loads `details.bin`.
   `{limit, entities, normalizePunctuation}` JSON document.
 - Romanization calls `ichiran_kernel_romanize_utf16`; its JSON string preserves lone
   surrogates as escapes.
+- Token presentation calls `ichiran_kernel_token_details_begin_utf16` with the same
+  text/options plus the selected global path and token indexes. Advance the returned
+  operation with `ichiran_kernel_token_details_step`, satisfying each requested file
+  range until `READY` returns canonical `TokenDetails` JSON. This is the normal Swift
+  UI boundary; do not recreate restrictions, counters, suffixes, compounds,
+  conjugations, entities, or alternative selection in Swift.
 - Describe calls `ichiran_detail_store_range`, reads that exact file range, and passes
   it to `ichiran_detail_store_decode`. Rust returns UTF-8 `DetailEntry` JSON in the
   established TypeScript field order.
@@ -153,8 +162,9 @@ handle while any call using it is in flight. Run analyzer work off the main acto
 
 All fallible entries catch Rust panics and return an owned `ICHIRAN_INTERNAL` error;
 no unwind crosses C. Swift should map nonzero status codes to one error type and decode
-only successful JSON. Pack download, hashing, atomic installation, release identity,
-and file lifetime remain host responsibilities.
+only successful JSON. Release token-details operations with
+`ichiran_token_details_operation_free`. Pack download, hashing, atomic installation,
+release identity, and file lifetime remain host responsibilities.
 
 ## Required Mac validation
 

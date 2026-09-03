@@ -39,6 +39,50 @@ describe.skipIf(!releaseDirectory)('Node packed analyzer release', () => {
     }
   });
 
+  test('projects canonical token details without consumer-side dictionary reconstruction', async () => {
+    const analyzer = await openAnalyzer(releaseDirectory!);
+    try {
+      const cat = await analyzer.details('猫', { limit: 3, pathIndex: 0, tokenIndex: 0 });
+      expect(cat.meanings.length).toBeGreaterThan(0);
+      expect(cat.alternatives).toEqual([]);
+
+      const inflected = await analyzer.details('食べました', {
+        limit: 3,
+        pathIndex: 0,
+        tokenIndex: 0
+      });
+      expect(inflected.meanings).toEqual([]);
+      expect(inflected.conjugations.length).toBeGreaterThan(0);
+
+      const compound = await analyzer.details('読んでいました', {
+        limit: 3,
+        pathIndex: 0,
+        tokenIndex: 0
+      });
+      expect(compound.components.length).toBeGreaterThan(0);
+      expect(compound.conjugations).toEqual([]);
+
+      const counter = await analyzer.details('三個', {
+        limit: 3,
+        pathIndex: 0,
+        tokenIndex: 0
+      });
+      expect(counter.counter).not.toBeNull();
+      expect(counter.meanings.length).toBeGreaterThan(0);
+      expect(counter.meanings.every(meaning => meaning.pos.includes('ctr'))).toBeTrue();
+
+      try {
+        await analyzer.details('猫', { limit: 1, pathIndex: 99, tokenIndex: 0 });
+        throw new Error('missing token lookup unexpectedly succeeded');
+      } catch (error) {
+        expect(error).toBeInstanceOf(AnalyzerError);
+        expect((error as AnalyzerError).code).toBe('not-found');
+      }
+    } finally {
+      analyzer.dispose();
+    }
+  });
+
   test('uses the stable public error set', async () => {
     const analyzer = await openAnalyzer(releaseDirectory!);
     try {
@@ -92,9 +136,12 @@ describe.skipIf(!releaseDirectory)('Node packed analyzer release', () => {
       const openedReads = [...reads];
       const analysis = await analyzer.analyze('今日', { limit: 1 });
       expect(reads).toEqual(openedReads);
+      await analyzer.details('今日', { limit: 1, pathIndex: 0, tokenIndex: 0 });
+      expect(reads.length).toBeGreaterThan(openedReads.length);
+      const detailedReads = reads.length;
       const entryIndex = analysis.paths[0]!.tokens.find(token => token.entryIndex !== null)?.entryIndex;
       await analyzer.entry(entryIndex!);
-      expect(reads).toHaveLength(3);
+      expect(reads).toHaveLength(detailedReads + 1);
     } finally {
       if (analyzer) analyzer.dispose();
       else source.dispose();

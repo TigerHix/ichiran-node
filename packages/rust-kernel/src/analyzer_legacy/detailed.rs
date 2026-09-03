@@ -22,6 +22,7 @@ use crate::morphology::{MorphologyProperty, Route};
 use crate::roots::RootPayload;
 use crate::support::AnalyzerSupport;
 use crate::surface::SurfaceIndex;
+use crate::token_details::{TokenDetails, token_details};
 
 pub(crate) struct LegacyContext<'a> {
     pub roots: &'a RootPayload,
@@ -40,6 +41,12 @@ pub(crate) struct LegacyDetailRequest {
 #[derive(Clone, Debug, PartialEq)]
 pub(crate) enum LegacyDetailedResult {
     Ready(LegacyDetailedOutput),
+    MissingDetail(LegacyDetailRequest),
+}
+
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub(crate) enum TokenDetailsResult {
+    Ready(TokenDetails),
     MissingDetail(LegacyDetailRequest),
 }
 
@@ -112,6 +119,51 @@ impl LegacyDetailedSession {
         Ok(output)
     }
 
+    pub fn token_details(
+        &mut self,
+        result: &AnalysisResult,
+        path_index: usize,
+        token_index: usize,
+        details: &DetailStore,
+        context: &mut LegacyContext<'_>,
+    ) -> Result<TokenDetailsResult> {
+        match self.try_token_details(result, path_index, token_index, details, context) {
+            Ok(value) => Ok(TokenDetailsResult::Ready(value)),
+            Err(AttemptError::Missing(request)) => Ok(TokenDetailsResult::MissingDetail(request)),
+            Err(AttemptError::Kernel(error)) => Err(error),
+        }
+    }
+
+    fn try_token_details(
+        &mut self,
+        result: &AnalysisResult,
+        path_index: usize,
+        token_index: usize,
+        details: &DetailStore,
+        context: &mut LegacyContext<'_>,
+    ) -> Attempt<TokenDetails> {
+        let token = result
+            .paths
+            .get(path_index)
+            .and_then(|path| path.tokens.get(token_index))
+            .ok_or_else(|| {
+                AttemptError::Kernel(KernelError::new(
+                    ErrorCode::OutOfRange,
+                    "analysis token was not found",
+                ))
+            })?;
+        let primary = self.detailed_primary_token(token, details, context)?;
+        let mut output = token_details(primary, token.entity)?;
+        for alternative in &token.alternatives {
+            if token.candidate_id == Some(alternative.candidate_id) {
+                continue;
+            }
+            let value = self.detailed_alternative(alternative, details, context)?;
+            output.alternatives.push(token_details(value, false)?);
+        }
+        Ok(output)
+    }
+
     pub(super) fn entry<'a>(
         &'a mut self,
         entry_index: Option<usize>,
@@ -153,6 +205,15 @@ impl LegacyDetailedSession {
             }
             return Ok(LegacyGloss::alternative(alternatives));
         }
+        self.detailed_primary_token(token, details, context)
+    }
+
+    fn detailed_primary_token(
+        &mut self,
+        token: &AnalysisToken,
+        details: &DetailStore,
+        context: &mut LegacyContext<'_>,
+    ) -> Attempt<LegacyGloss> {
         let route = if token.entity && token.root.is_none() {
             Route::Kana
         } else {

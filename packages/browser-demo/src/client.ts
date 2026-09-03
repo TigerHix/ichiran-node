@@ -7,6 +7,8 @@ import type {
   InstallPhase,
   PackStatus,
   RomanizeOptions,
+  TokenDetails,
+  TokenDetailsOptions,
   WorkerRequest,
   WorkerResponse
 } from './protocol.js';
@@ -132,6 +134,10 @@ export class AnalyzerClient {
 
   analyze(text: string, options?: AnalyzeOptions): Promise<AnalysisResult> {
     return this.#request({ op: 'analyze', text, options });
+  }
+
+  details(text: string, options: TokenDetailsOptions): Promise<TokenDetails> {
+    return this.#request({ op: 'details', text, options });
   }
 
   entry(entryIndex: number): Promise<DictionaryEntry> {

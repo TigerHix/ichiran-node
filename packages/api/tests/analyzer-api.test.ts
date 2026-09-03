@@ -61,6 +61,17 @@ describe.skipIf(!releaseDirectory)('packed analyzer HTTP API', () => {
     const entry = await fetch(`${base}/v1/entries/${entryIndex}`);
     expect(entry.status).toBe(200);
     expect(await entry.json()).toMatchObject({ seq: expect.any(Number) });
+
+    const details = await post('/v1/details', {
+      text: '今日',
+      options: { limit: 1, pathIndex: 0, tokenIndex: 0 }
+    });
+    expect(details.response.status).toBe(200);
+    expect(details.body).toMatchObject({
+      text: '今日',
+      meanings: expect.any(Array),
+      alternatives: expect.any(Array)
+    });
   });
 
   test('preserves UTF-16 input and entity offsets', async () => {

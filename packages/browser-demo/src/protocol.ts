@@ -5,7 +5,9 @@ import type {
   AnalysisToken,
   AnalyzerErrorCode,
   DictionaryEntry,
-  RomanizeOptions
+  RomanizeOptions,
+  TokenDetails,
+  TokenDetailsOptions
 } from '@ichiran/core';
 import type {
   AnalyzerReleaseAsset,
@@ -20,7 +22,9 @@ export type {
   AnalysisResult,
   AnalysisToken,
   DictionaryEntry,
-  RomanizeOptions
+  RomanizeOptions,
+  TokenDetails,
+  TokenDetailsOptions
 };
 
 export type InstallPhase =
@@ -87,6 +91,12 @@ export type WorkerRequest =
       readonly text: string;
       readonly options?: RomanizeOptions;
     }
+  | {
+      readonly id: number;
+      readonly op: 'details';
+      readonly text: string;
+      readonly options: TokenDetailsOptions;
+    }
   | { readonly id: number; readonly op: 'entry'; readonly entryIndex: number };
 
 export type WorkerResultByOperation = {
@@ -96,6 +106,7 @@ export type WorkerResultByOperation = {
   readonly clear: PackStatus;
   readonly analyze: AnalysisResult;
   readonly romanize: string;
+  readonly details: TokenDetails;
   readonly entry: DictionaryEntry;
 };
 

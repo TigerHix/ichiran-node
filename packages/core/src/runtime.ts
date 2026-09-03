@@ -7,6 +7,7 @@ import {
   type DetailStoreErrorCode
 } from './details-contract.js';
 import type { RomanizationName as RomanizationScheme } from './romanization-contract.js';
+import type { TokenDetails } from './token-details-contract.js';
 import init, {
   detail_prefix_length,
   WasmDetailStore,
@@ -48,6 +49,11 @@ export interface RomanizeOptions {
   readonly normalizePunctuation?: boolean;
 }
 
+export interface TokenDetailsOptions extends AnalyzeOptions {
+  readonly pathIndex: number;
+  readonly tokenIndex: number;
+}
+
 export interface RandomAccessSource {
   readonly byteLength: number;
   read(offset: number, byteLength: number): Promise<Uint8Array>;
@@ -80,6 +86,14 @@ interface RuntimeState {
   readonly openMs: number;
   readonly transientBytes: number;
 }
+
+type TokenDetailsStep =
+  | { readonly state: 'ready'; readonly value: TokenDetails }
+  | {
+      readonly state: 'missing-detail';
+      readonly entryIndex: number;
+      readonly range: DetailRange;
+    };
 
 const encoder = new TextEncoder();
 const decoder = new TextDecoder('utf-8', { fatal: true });
@@ -163,8 +177,8 @@ function now(): number {
 }
 
 function errorCode(error: unknown): unknown {
-  return error instanceof Error
-    ? (error as Error & { readonly code?: unknown }).code
+  return typeof error === 'object' && error !== null && 'code' in error
+    ? (error as { readonly code?: unknown }).code
     : undefined;
 }
 
@@ -275,6 +289,58 @@ export class Analyzer {
       )));
     } catch (error) {
       throw analyzerError(error);
+    }
+  }
+
+  async details(text: string, options: TokenDetailsOptions): Promise<TokenDetails> {
+    this.#assertOpen();
+    if (typeof options !== 'object' || options === null || Array.isArray(options)) {
+      throw new AnalyzerError('invalid-input', 'token detail options must be an object');
+    }
+    const { pathIndex, tokenIndex, ...analyzeOptions } = options;
+    if (
+      !Number.isSafeInteger(pathIndex)
+      || pathIndex < 0
+      || pathIndex > 0xffff_ffff
+      || !Number.isSafeInteger(tokenIndex)
+      || tokenIndex < 0
+      || tokenIndex > 0xffff_ffff
+    ) {
+      throw new AnalyzerError(
+        'invalid-input',
+        'pathIndex and tokenIndex must be non-negative uint32 integers'
+      );
+    }
+    try {
+      const validated = validatePortableAnalyzeRequest(text, analyzeOptions);
+      const operation = call(() => this.#kernel.token_details_begin_utf16(
+        utf16(validated.input),
+        optionsJson(validated.options),
+        pathIndex,
+        tokenIndex
+      ), 'not-found');
+      try {
+        for (;;) {
+          const step = call(() => json<TokenDetailsStep>(
+            operation.token_details_step(this.#kernel, this.#details)
+          ));
+          if (step.state === 'ready') return step.value;
+          const compressed = await readExact(
+            this.#detailSource,
+            step.range.offset,
+            step.range.byteLength,
+            'corrupt-block'
+          );
+          call(
+            () => this.#details.entry_json(step.entryIndex, compressed),
+            'invalid-pack'
+          );
+        }
+      } finally {
+        operation.free();
+      }
+    } catch (error) {
+      throw analyzerError(error, errorCode(error) === 'out-of-range' ? 'not-found' : 'internal');
     }
   }
 

@@ -27,6 +27,7 @@ import { Analyzer } from '@ichiran/core';
 
 const analyzer = await Analyzer.open(source);
 await analyzer.analyze(text, options);
+await analyzer.details(text, { ...options, pathIndex: 0, tokenIndex: 0 });
 await analyzer.romanize(text, options);
 await analyzer.entry(entryIndex);
 analyzer.dispose();
@@ -44,6 +45,7 @@ analyzer.dispose();
 | `RomanizationName` | `RomanizationScheme` |
 | `RUST_KERNEL_WASM_URL` | `ANALYZER_WASM_URL` |
 | `describe(entryIndex)` | `entry(entryIndex)` |
+| consumer-side sense/restriction/conjugation reconstruction | `details(text, { pathIndex, tokenIndex, ...options })` |
 | `AnalyzerInputError`, `DetailStoreError`, Rust format errors | `AnalyzerError` |
 | root manifest exports | import from `@ichiran/core/release` |
 | `legacy()` | no product equivalent |
@@ -86,8 +88,12 @@ corruption codes were implementation details and are no longer a caller contract
 need this gate set `ICHIRAN_SOURCE_COMMIT`.
 
 `romanizeWithInfo` and the legacy word-info formatter have no equivalent. A product
-that needs dictionary presentation should call `analyze`, collect token
-`entryIndex` values, call `entry`, and own its own UI formatting.
+that needs dictionary presentation should call `analyze`, retain the selected path
+and token indexes, then call `details` with the same input and analysis options.
+The kernel owns sense restrictions, counters, suffix descriptions, compound
+components, conjugation lineage, entities, and alternative selection. UI code owns
+only labels and layout. `entry()` remains available for raw dictionary tooling; it
+must not be used to reconstruct analyzer presentation semantics.
 
 ## CLI
 
@@ -95,13 +101,14 @@ that needs dictionary presentation should call `analyze`, collect token
 |---|---|
 | `ichiran-cli TEXT` | `ichiran romanize TEXT` |
 | `ichiran-cli -f -l 3 TEXT` | `ichiran analyze --limit 3 TEXT` |
-| `ichiran-cli -i TEXT` | no equivalent; use `analyze` plus `entry` |
+| `ichiran-cli -i TEXT` | `ichiran details TEXT` |
 | `ichiran-cli --eval ...` | no equivalent |
 
-`analyze` prints `AnalysisResult` JSON, not legacy nested JSON. `entry` accepts an
-`entryIndex` from that result. `romanize` prints a string and supports `--method` and
-`--normalize-punctuation`. There is no implicit default command. Unlike the old CLI,
-punctuation is not normalized unless requested.
+`analyze` prints `AnalysisResult` JSON, not legacy nested JSON. `details` accepts text
+plus `--path` and `--token` indexes and prints the canonical presentation tree.
+`entry` accepts an `entryIndex` and prints the raw dictionary row. `romanize` prints a
+string and supports `--method` and `--normalize-punctuation`. There is no implicit
+default command. Unlike the old CLI, punctuation is not normalized unless requested.
 
 The package is executable-only; the former programmatic cache and `runCli` helpers
 were removed. Applications should depend on `@ichiran/node`.
@@ -126,7 +133,8 @@ Analyze options moved under `options`:
 
 `/v1/analyze` returns `AnalysisResult` directly. `/v1/romanize` returns only
 `{ "romanized": "..." }`; it does not echo input. Dictionary details are available
-at `GET /v1/entries/:entryIndex`. Errors changed from a string to
+through `POST /v1/details` with `{ text, options: { pathIndex, tokenIndex, ... } }`.
+Raw dictionary rows are available at `GET /v1/entries/:entryIndex`. Errors changed from a string to
 `{ "error": { "code": string, "message": string } }`.
 
 Grammar placeholders were removed. Grammar remains a separate experimental package.
@@ -134,8 +142,8 @@ Grammar placeholders were removed. Grammar remains a separate experimental packa
 ## Browser client and Worker
 
 The product operations are `expect-release`, `status`, `install`, `clear`, `analyze`,
-`romanize`, and `entry`. `describe` became `entry`; its result is a typed
-`DictionaryEntry`. Analyze and romanize both accept their core option objects.
+`details`, `romanize`, and `entry`. `details` returns the same canonical tree as Node
+and native hosts. `describe` became `entry`; its result is a typed `DictionaryEntry`.
 
 The `legacy`, public benchmark, and public kernel-metrics operations were removed.
 Performance measurement remains available only in qualification builds and reuses the

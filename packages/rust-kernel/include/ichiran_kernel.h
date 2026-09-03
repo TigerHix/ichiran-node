@@ -8,12 +8,13 @@
 extern "C" {
 #endif
 
-#define ICHIRAN_KERNEL_ABI_VERSION 3u
+#define ICHIRAN_KERNEL_ABI_VERSION 4u
 #define ICHIRAN_NO_DETAIL UINT32_MAX
 
 typedef struct IchiranKernel IchiranKernel;
 typedef struct IchiranDetailStore IchiranDetailStore;
 typedef struct IchiranLegacyOperation IchiranLegacyOperation;
+typedef struct IchiranTokenDetailsOperation IchiranTokenDetailsOperation;
 
 typedef enum IchiranStatus {
   ICHIRAN_OK = 0,
@@ -161,15 +162,38 @@ IchiranStepResult ichiran_kernel_legacy_step(
   size_t compressed_bytes
 );
 
+/* Analyzes once and selects one token from one ranked global path. */
+IchiranResult ichiran_kernel_token_details_begin_utf16(
+  const IchiranKernel *kernel,
+  const uint16_t *input,
+  size_t input_units,
+  const uint8_t *options_json,
+  size_t options_bytes,
+  size_t path_index,
+  size_t token_index,
+  IchiranTokenDetailsOperation **output
+);
+
+/* Same lazy range handshake as ichiran_kernel_legacy_step. */
+IchiranStepResult ichiran_kernel_token_details_step(
+  const IchiranKernel *kernel,
+  const IchiranTokenDetailsOperation *operation,
+  const IchiranDetailStore *details,
+  uint32_t supplied_entry_index,
+  const uint8_t *compressed,
+  size_t compressed_bytes
+);
+
 /*
  * A kernel and detail store may be shared by native threads. Independent
- * legacy operation handles retain independent sessions. Do not free a handle
- * while a call uses it. All input pointers are borrowed only for the call. All
- * fallible entries contain Rust panics and report ICHIRAN_INTERNAL.
+ * operation handles retain independent sessions. Do not free a handle while a
+ * call uses it. All input pointers are borrowed only for the call. All fallible
+ * entries contain Rust panics and report ICHIRAN_INTERNAL.
  */
 void ichiran_kernel_free(IchiranKernel *kernel);
 void ichiran_detail_store_free(IchiranDetailStore *details);
 void ichiran_legacy_operation_free(IchiranLegacyOperation *operation);
+void ichiran_token_details_operation_free(IchiranTokenDetailsOperation *operation);
 
 /* Return every unchanged result or step buffer exactly once, including errors. */
 void ichiran_buffer_free(IchiranBuffer buffer);

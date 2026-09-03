@@ -121,6 +121,7 @@ fn render(
                         flags,
                         short_gloss: None,
                     }),
+                    root: None,
                 });
             }
             continue;
@@ -183,6 +184,11 @@ fn render(
             info: Some(LegacyConjugationInfo {
                 flags,
                 short_gloss: Some(String::new()),
+            }),
+            root: Some(AnalysisRoot {
+                seq: presentation.seq,
+                form: presentation.form,
+                reading: hinted,
             }),
         });
     }
@@ -347,6 +353,7 @@ fn conj_property(value: &MorphologyProperty) -> LegacyConjugationProperty {
         kind: descriptions::conjugation(value.kind),
         fml: (value.formal == Some(true)).then_some(true),
         neg: (value.negative == Some(true)).then_some(true),
+        kind_id: value.kind,
     }
 }
 

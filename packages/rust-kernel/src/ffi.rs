@@ -8,10 +8,11 @@ use serde::{Deserialize, Serialize};
 
 use crate::{
     AnalyzeOptions, DetailRange, DetailStore, EntityHint, ErrorCode, Kernel, KernelError,
-    LegacyDetailSession, LegacyDetailStep, Result, RomanizationName, Utf16Text,
+    LegacyDetailSession, LegacyDetailStep, Result, RomanizationName, TokenDetailsSession,
+    TokenDetailsStep, Utf16Text,
 };
 
-const ABI_VERSION: u32 = 3;
+const ABI_VERSION: u32 = 4;
 const NO_DETAIL: u32 = u32::MAX;
 
 #[repr(C)]
@@ -88,6 +89,19 @@ struct LegacyOperationState {
 
 pub struct IchiranLegacyOperation {
     inner: Mutex<LegacyOperationState>,
+}
+
+struct TokenDetailsOperationState {
+    analysis: crate::AnalysisResult,
+    session: TokenDetailsSession,
+    path_index: usize,
+    token_index: usize,
+    pending: Option<(u32, DetailRange)>,
+    completed: bool,
+}
+
+pub struct IchiranTokenDetailsOperation {
+    inner: Mutex<TokenDetailsOperationState>,
 }
 
 #[derive(Serialize)]
@@ -446,6 +460,147 @@ pub unsafe extern "C" fn ichiran_kernel_legacy_step(
 }
 
 #[unsafe(no_mangle)]
+/// Begins one independently owned canonical token-details operation.
+///
+/// # Safety
+///
+/// Inputs are borrowed only for this call. `output` must be writable for one
+/// operation pointer and the returned operation must be freed exactly once.
+pub unsafe extern "C" fn ichiran_kernel_token_details_begin_utf16(
+    kernel: *const IchiranKernel,
+    input: *const u16,
+    input_units: usize,
+    options_json: *const u8,
+    options_bytes: usize,
+    path_index: usize,
+    token_index: usize,
+    output: *mut *mut IchiranTokenDetailsOperation,
+) -> IchiranResult {
+    boundary(|| {
+        validate_pointer(output, 1, "token-details operation output")?;
+        unsafe { *output = ptr::null_mut() };
+        let kernel = unsafe { handle(kernel, "kernel")? };
+        let input = input_units_slice(input, input_units)?;
+        let options = parse_options(input_bytes(
+            options_json,
+            options_bytes,
+            "analysis options",
+        )?)?;
+        let analysis = lock(&kernel.inner, "kernel")?.analyze_with_options(input, &options)?;
+        if analysis
+            .paths
+            .get(path_index)
+            .and_then(|path| path.tokens.get(token_index))
+            .is_none()
+        {
+            return Err(KernelError::new(
+                ErrorCode::OutOfRange,
+                "analysis token was not found",
+            ));
+        }
+        let operation = Box::new(IchiranTokenDetailsOperation {
+            inner: Mutex::new(TokenDetailsOperationState {
+                analysis,
+                session: TokenDetailsSession::default(),
+                path_index,
+                token_index,
+                pending: None,
+                completed: false,
+            }),
+        });
+        unsafe { *output = Box::into_raw(operation) };
+        Ok(Vec::new())
+    })
+}
+
+#[unsafe(no_mangle)]
+/// Advances one canonical token-details operation by at most one detail read.
+///
+/// # Safety
+///
+/// All handles must be live and must not be freed during this call. A supplied
+/// compressed block is borrowed only for this call.
+pub unsafe extern "C" fn ichiran_kernel_token_details_step(
+    kernel: *const IchiranKernel,
+    operation: *const IchiranTokenDetailsOperation,
+    details: *const IchiranDetailStore,
+    supplied_entry_index: u32,
+    compressed: *const u8,
+    compressed_bytes: usize,
+) -> IchiranStepResult {
+    step_boundary(|| {
+        let kernel = unsafe { handle(kernel, "kernel")? };
+        let operation = unsafe { handle(operation, "token-details operation")? };
+        let details = unsafe { handle(details, "detail store")? };
+        let mut operation = lock(&operation.inner, "token-details operation")?;
+        if operation.completed {
+            return Err(KernelError::new(
+                ErrorCode::InvalidInput,
+                "token-details operation is already complete",
+            ));
+        }
+        if compressed_bytes == 0 {
+            if supplied_entry_index != NO_DETAIL || !compressed.is_null() {
+                return Err(KernelError::new(
+                    ErrorCode::InvalidInput,
+                    "an empty token-details step must not supply a detail entry",
+                ));
+            }
+            if let Some((entry_index, range)) = operation.pending {
+                return Ok(Step::Missing { entry_index, range });
+            }
+        } else {
+            let (entry_index, _) = operation.pending.ok_or_else(|| {
+                KernelError::new(
+                    ErrorCode::InvalidInput,
+                    "token-details step supplied an entry before one was requested",
+                )
+            })?;
+            if supplied_entry_index != entry_index || supplied_entry_index == NO_DETAIL {
+                return Err(KernelError::new(
+                    ErrorCode::InvalidInput,
+                    "token-details step supplied the wrong detail entry",
+                ));
+            }
+        }
+
+        let mut analyzer = lock(&kernel.inner, "kernel")?;
+        let detail_store = lock(&details.inner, "detail store")?;
+        if compressed_bytes != 0 {
+            detail_store.entry_from_compressed(
+                supplied_entry_index,
+                input_bytes(compressed, compressed_bytes, "compressed detail block")?,
+            )?;
+            operation.pending = None;
+        }
+        let TokenDetailsOperationState {
+            analysis,
+            session,
+            path_index,
+            token_index,
+            pending,
+            completed,
+        } = &mut *operation;
+        match analyzer.token_details_json(
+            session,
+            analysis,
+            *path_index,
+            *token_index,
+            &detail_store,
+        )? {
+            TokenDetailsStep::Ready(value) => {
+                *completed = true;
+                Ok(Step::Ready(value))
+            }
+            TokenDetailsStep::Missing { entry_index, range } => {
+                *pending = Some((entry_index, range));
+                Ok(Step::Missing { entry_index, range })
+            }
+        }
+    })
+}
+
+#[unsafe(no_mangle)]
 /// Releases one kernel handle.
 ///
 /// # Safety
@@ -483,6 +638,22 @@ pub unsafe extern "C" fn ichiran_detail_store_free(details: *mut IchiranDetailSt
 /// `ichiran_kernel_legacy_begin_utf16`. A non-null handle must be passed
 /// exactly once and not used concurrently.
 pub unsafe extern "C" fn ichiran_legacy_operation_free(operation: *mut IchiranLegacyOperation) {
+    if !operation.is_null() {
+        unsafe { drop(Box::from_raw(operation)) };
+    }
+}
+
+#[unsafe(no_mangle)]
+/// Releases one canonical token-details operation handle.
+///
+/// # Safety
+///
+/// `operation` must be null or a live handle returned by
+/// `ichiran_kernel_token_details_begin_utf16`. A non-null handle must be passed
+/// exactly once and not used concurrently.
+pub unsafe extern "C" fn ichiran_token_details_operation_free(
+    operation: *mut IchiranTokenDetailsOperation,
+) {
     if !operation.is_null() {
         unsafe { drop(Box::from_raw(operation)) };
     }

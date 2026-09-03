@@ -15,6 +15,7 @@ import {
 } from '../../core/tools/parity-corpus.js';
 import { firstCanonicalDifference } from '../../core/tools/parity-canonical.js';
 import { assertSamePackRelease } from './same_pack_release.js';
+import { ANALYZER_WASM_URL, Analyzer } from '../../core/src/index.js';
 
 interface Request {
   readonly text: string;
@@ -42,6 +43,7 @@ const HOT_SHA256 = '61f2882e086be7e0e1b6ba9000e76e0e735b22ea443146f628f04cf877ff
 const DETAILS_SHA256 = '0fc45731d84fbb7c2ccf3ef5692d2f1ab01e538325f0ed50135da38e621aa151';
 const DESCRIBE_ENTRIES = [0, 33_240, 43_720, 48_688] as const;
 const CANONICAL_TIE_NAMES = ['cli:169', 'cli:214', 'hard:10', 'probes:26'] as const;
+const TOKEN_DETAILS_INPUTS = ['猫', '食べました', '読んでいました', '三個'] as const;
 
 function digest(bytes: Uint8Array): string {
   return createHash('sha256').update(bytes).digest('hex');
@@ -243,6 +245,7 @@ async function main(): Promise<void> {
         },
     romanization: { operations: 8, retained: 5, utf16: 3 },
     describe: DESCRIBE_ENTRIES.length,
+    tokenDetails: TOKEN_DETAILS_INPUTS.length,
     hotSha256,
     detailsSha256,
     pack: samePackManifest ? {
@@ -252,6 +255,36 @@ async function main(): Promise<void> {
     } : { tag: 'portable-core-260118-baseline' }
   };
   process.stdout.write(`#${JSON.stringify(metadata)}\n`);
+  const analyzer = await Analyzer.open({
+    hot: Uint8Array.from(hot),
+    details: {
+      byteLength: details.byteLength,
+      read: async (offset, byteLength) => Uint8Array.from(
+        details.subarray(offset, offset + byteLength)
+      )
+    },
+    wasm: new Uint8Array(await readFile(ANALYZER_WASM_URL))
+  });
+  try {
+    for (const [index, input] of TOKEN_DETAILS_INPUTS.entries()) {
+      const options = {
+        limit: 3,
+        entities: [],
+        normalizePunctuation: true
+      } as const;
+      const expected = await analyzer.details(input, {
+        ...options,
+        pathIndex: 0,
+        tokenIndex: 0
+      });
+      process.stdout.write(
+        `T\ttoken-details:${index}\t${utf16Hex(input)}\t${JSON.stringify(options)}`
+        + `\t0\t0\t${JSON.stringify(expected)}\n`
+      );
+    }
+  } finally {
+    analyzer.dispose();
+  }
   for (let index = 0; index < detailed.length; index++) {
     const value = detailed[index]!;
     const options = JSON.stringify({

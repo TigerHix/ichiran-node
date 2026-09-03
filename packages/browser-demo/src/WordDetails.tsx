@@ -7,7 +7,12 @@ import {
 } from '@phosphor-icons/react';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
-import type { AnalysisToken, DictionaryEntry } from './analyzer-service.js';
+import type {
+  AnalysisToken,
+  TokenConjugation,
+  TokenDetails,
+  TokenMeaning
+} from './analyzer-service.js';
 import {
   conjugationLabel,
   partOfSpeechCategory,
@@ -26,84 +31,12 @@ function PartOfSpeechTag({ value }: { value: string }): ReactElement {
   );
 }
 
-function InflectionTags({ inflection }: {
-  inflection: AnalysisToken['inflection'];
-}): ReactElement | null {
-  if (inflection.length === 0) return null;
-  return (
-    <div className="conjugation-tags">
-      {inflection.map((step, index) => (
-        <Fragment key={`${step.pos}:${step.type}:${step.ordinal}:${index}`}>
-          <span className="pos-tag pos-tag-subtle">{conjugationLabel(step.type)}</span>
-          {step.negative && <span className="pos-tag pos-tag-subtle">Negative</span>}
-          {step.formal && <span className="pos-tag pos-tag-subtle">Formal</span>}
-        </Fragment>
-      ))}
-    </div>
-  );
-}
-
-interface PresentedSense {
-  readonly key: string;
-  readonly gloss: string;
-  readonly pos: readonly string[];
-  readonly info: string;
-}
-
-export function presentedSenses(
-  entry: DictionaryEntry,
-  route: AnalysisToken['route'],
-  form: string,
-  reading: string,
-  fallbackPos: readonly string[]
-): readonly PresentedSense[] {
-  let carriedPos = [...fallbackPos];
-  const result: PresentedSense[] = [];
-  for (const sense of [...entry.senses].sort((left, right) => left.ord - right.ord)) {
-    const pos = sense.properties.filter(property => property.tag === 'pos').map(property => property.text);
-    if (pos.length > 0) carriedPos = pos;
-
-    const writtenRestrictions = sense.properties
-      .filter(property => property.tag === 'stagk')
-      .map(property => property.text);
-    const readingRestrictions = sense.properties
-      .filter(property => property.tag === 'stagr')
-      .map(property => property.text);
-    if (route === 'kanji' && writtenRestrictions.length > 0 && !writtenRestrictions.includes(form)) continue;
-    if (readingRestrictions.length > 0 && !readingRestrictions.includes(reading)) continue;
-
-    const gloss = [...sense.glosses]
-      .sort((left, right) => left.ord - right.ord)
-      .map(value => value.text)
-      .join('; ');
-    if (!gloss) continue;
-    result.push({
-      key: `${sense.ord}:${gloss}`,
-      gloss,
-      pos: carriedPos,
-      info: sense.properties
-        .filter(property => property.tag === 's_inf')
-        .map(property => property.text)
-        .join('; ')
-    });
-  }
-  return result;
-}
-
-function TokenMeanings({ entry, route, form, reading, fallbackPos }: {
-  entry: DictionaryEntry | null;
-  route: AnalysisToken['route'];
-  form: string;
-  reading: string;
-  fallbackPos: readonly string[];
-}): ReactElement | null {
-  if (!entry) return null;
-  const meanings = presentedSenses(entry, route, form, reading, fallbackPos);
+function MeaningList({ meanings }: { meanings: readonly TokenMeaning[] }): ReactElement | null {
   if (meanings.length === 0) return null;
   return (
     <div className="token-meanings">
       {meanings.map((meaning, index) => (
-        <div className="token-meaning" key={meaning.key}>
+        <div className="token-meaning" key={`${meaning.gloss}:${meaning.pos.join(',')}:${index}`}>
           <span className="token-meaning-number">{index + 1}</span>
           <div>
             {meaning.pos.length > 0 && (
@@ -114,6 +47,7 @@ function TokenMeanings({ entry, route, form, reading, fallbackPos }: {
               </div>
             )}
             <p>{meaning.gloss}</p>
+            {meaning.fields.length > 0 && <small>{meaning.fields.join(' · ')}</small>}
             {meaning.info && <small>{meaning.info}</small>}
           </div>
         </div>
@@ -122,39 +56,76 @@ function TokenMeanings({ entry, route, form, reading, fallbackPos }: {
   );
 }
 
-function NestedTokenCard({
-  text, reading, route, pos, inflection = [], entry, definitionForm = text,
-  definitionReading = reading
-}: {
-  text: string;
-  reading: string;
-  route: AnalysisToken['route'];
-  pos: readonly string[];
-  inflection?: AnalysisToken['inflection'];
-  entry: DictionaryEntry | null;
-  definitionForm?: string;
-  definitionReading?: string;
-}): ReactElement {
-  const hasMeanings = entry !== null && entry.senses.length > 0;
+function ConjugationTags({ value }: { value: TokenConjugation }): ReactElement | null {
+  if (value.properties.length === 0) return null;
+  return (
+    <div className="conjugation-tags">
+      {value.properties.map((property, index) => (
+        <Fragment key={`${property.pos}:${property.type}:${index}`}>
+          {value.meanings.length === 0 && <PartOfSpeechTag value={property.pos} />}
+          <span className="pos-tag pos-tag-subtle">{conjugationLabel(property.type)}</span>
+          {property.negative && <span className="pos-tag pos-tag-subtle">Negative</span>}
+          {property.formal && <span className="pos-tag pos-tag-subtle">Formal</span>}
+        </Fragment>
+      ))}
+    </div>
+  );
+}
+
+function ConjugationCard({ value }: { value: TokenConjugation }): ReactElement {
+  return (
+    <div className="token-nested-card">
+      {value.root && (
+        <div className="nested-token-heading">
+          <strong lang="ja">{value.root.text}</strong>
+          {value.root.reading !== value.root.text && <span lang="ja">{value.root.reading}</span>}
+        </div>
+      )}
+      <ConjugationTags value={value} />
+      <MeaningList meanings={value.meanings} />
+      {value.via.length > 0 && (
+        <div className="nested-token-list">
+          {value.via.map((child, index) => (
+            <ConjugationCard key={`${child.root?.text ?? 'via'}:${index}`} value={child} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function TokenCard({ value }: { value: TokenDetails }): ReactElement {
   return (
     <div className="token-nested-card">
       <div className="nested-token-heading">
-        <strong lang="ja">{text}</strong>
-        {reading && reading !== text && <span lang="ja">{reading}</span>}
+        <strong lang="ja">{value.text}</strong>
+        {value.reading && value.reading !== value.text && <span lang="ja">{value.reading}</span>}
       </div>
-      <InflectionTags inflection={inflection} />
-      {!hasMeanings && pos.length > 0 && (
+      {(value.suffix || value.counter) && (
         <div className="meaning-pos-tags">
-          {pos.map((value, index) => <PartOfSpeechTag key={`${value}:${index}`} value={value} />)}
+          {value.suffix && <span className="pos-tag pos-tag-prefix-suffix">{value.suffix}</span>}
+          {value.counter && (
+            <span className="pos-tag pos-tag-counter">
+              {value.counter.ordinal ? 'Ordinal counter' : 'Counter'} · {value.counter.value}
+            </span>
+          )}
         </div>
       )}
-      <TokenMeanings
-        entry={entry}
-        route={route}
-        form={definitionForm}
-        reading={definitionReading}
-        fallbackPos={pos}
-      />
+      <MeaningList meanings={value.meanings} />
+      {value.components.length > 0 && (
+        <div className="nested-token-list">
+          {value.components.map((component, index) => (
+            <TokenCard key={`${component.text}:${index}`} value={component} />
+          ))}
+        </div>
+      )}
+      {value.conjugations.length > 0 && (
+        <div className="nested-token-list">
+          {value.conjugations.map((conjugation, index) => (
+            <ConjugationCard key={`${conjugation.root?.text ?? 'via'}:${index}`} value={conjugation} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -162,8 +133,7 @@ function NestedTokenCard({
 export interface WordDetailsProps {
   readonly token: AnalysisToken | null;
   readonly selectionText: string;
-  readonly entry: DictionaryEntry | null;
-  readonly relatedEntries: ReadonlyMap<number, DictionaryEntry>;
+  readonly details: TokenDetails | null;
   readonly loading: boolean;
   readonly error: string | null;
   readonly copied: boolean;
@@ -173,7 +143,7 @@ export interface WordDetailsProps {
 }
 
 export function WordDetails({
-  token, selectionText, entry, relatedEntries, loading, error, copied, onCopy, onClose, compact = false
+  token, selectionText, details, loading, error, copied, onCopy, onClose, compact = false
 }: WordDetailsProps): ReactElement {
   if (!selectionText) {
     return <div className="detail-empty"><TextAaIcon weight="light" /><p>Select a word</p></div>;
@@ -186,16 +156,14 @@ export function WordDetails({
       </div>
     );
   }
-  const relatedEntry = (entryIndex: number | null): DictionaryEntry | null => {
-    if (entryIndex === null) return null;
-    return entryIndex === token.entryIndex ? entry : relatedEntries.get(entryIndex) ?? null;
-  };
+  const title = details?.text ?? token.text;
+  const reading = details?.reading ?? token.reading;
   return (
     <div className={`word-details ${compact ? 'word-details-compact' : ''}`}>
       <div className="detail-heading">
         <div className="detail-title">
-          <h2 lang="ja">{token.text}</h2>
-          {token.reading && token.reading !== token.text && <p lang="ja">{token.reading}</p>}
+          <h2 lang="ja">{title}</h2>
+          {reading && reading !== title && <p lang="ja">{reading}</p>}
         </div>
         <div className="detail-actions">
           <Button variant="ghost" size="icon-sm" onClick={onCopy} aria-label="Copy selected word">
@@ -213,76 +181,55 @@ export function WordDetails({
           </div>
         )}
         {error && <p className="message error" role="alert">{error}</p>}
-
-        {token.components.length === 0 && (
-          <TokenMeanings
-            entry={entry}
-            route={token.route}
-            form={token.root?.form ?? token.text}
-            reading={token.root?.reading ?? token.reading}
-            fallbackPos={token.pos}
-          />
-        )}
-
-        {token.components.length > 0 && (
-          <DetailSection title="Structure">
-            <div className="structure-equation">
-              {token.components.map((component, index) => (
-                <Fragment key={`${component.text}:${component.entryIndex}:${index}`}>
-                  <strong lang="ja">{component.text}</strong>
-                  {index < token.components.length - 1 && <i aria-hidden="true">+</i>}
-                </Fragment>
-              ))}
-            </div>
-            <div className="nested-token-list">
-              {token.components.map((component, index) => (
-                <NestedTokenCard
-                  key={`${component.text}:${component.entryIndex}:${index}`}
-                  text={component.text}
-                  reading={component.reading}
-                  route={component.route}
-                  pos={component.inflection.map(step => step.pos)}
-                  inflection={component.inflection}
-                  entry={relatedEntry(component.entryIndex)}
-                  definitionForm={component.root?.form}
-                  definitionReading={component.root?.reading}
-                />
-              ))}
-            </div>
-          </DetailSection>
-        )}
-        {token.inflection.length > 0 && token.root && (
-          <DetailSection title="Conjugations">
-            <div className="nested-token-list">
-              <NestedTokenCard
-                text={token.root.form}
-                reading={token.root.reading}
-                route={token.route}
-                pos={token.pos}
-                inflection={token.inflection}
-                entry={entry}
-              />
-            </div>
-          </DetailSection>
-        )}
-        {token.alternatives.length > 0 && (
-          <DetailSection title="Alternative Meanings">
-            <div className="nested-token-list">
-              {token.alternatives.map(alternative => (
-                <NestedTokenCard
-                  key={alternative.candidateId}
-                  text={alternative.text}
-                  reading={alternative.reading}
-                  route={alternative.route}
-                  pos={alternative.pos}
-                  inflection={alternative.inflection}
-                  entry={relatedEntry(alternative.entryIndex)}
-                  definitionForm={alternative.root?.form}
-                  definitionReading={alternative.root?.reading}
-                />
-              ))}
-            </div>
-          </DetailSection>
+        {details && (
+          <>
+            {(details.suffix || details.counter) && (
+              <div className="meaning-pos-tags">
+                {details.suffix && <span className="pos-tag pos-tag-prefix-suffix">{details.suffix}</span>}
+                {details.counter && (
+                  <span className="pos-tag pos-tag-counter">
+                    {details.counter.ordinal ? 'Ordinal counter' : 'Counter'} · {details.counter.value}
+                  </span>
+                )}
+              </div>
+            )}
+            <MeaningList meanings={details.meanings} />
+            {details.components.length > 0 && (
+              <DetailSection title="Structure">
+                <div className="structure-equation">
+                  {details.components.map((component, index) => (
+                    <Fragment key={`${component.text}:${index}`}>
+                      <strong lang="ja">{component.text}</strong>
+                      {index < details.components.length - 1 && <i aria-hidden="true">+</i>}
+                    </Fragment>
+                  ))}
+                </div>
+                <div className="nested-token-list">
+                  {details.components.map((component, index) => (
+                    <TokenCard key={`${component.text}:${index}`} value={component} />
+                  ))}
+                </div>
+              </DetailSection>
+            )}
+            {details.conjugations.length > 0 && (
+              <DetailSection title="Conjugations">
+                <div className="nested-token-list">
+                  {details.conjugations.map((conjugation, index) => (
+                    <ConjugationCard key={`${conjugation.root?.text ?? 'via'}:${index}`} value={conjugation} />
+                  ))}
+                </div>
+              </DetailSection>
+            )}
+            {details.alternatives.length > 0 && (
+              <DetailSection title="Alternatives">
+                <div className="nested-token-list">
+                  {details.alternatives.map((alternative, index) => (
+                    <TokenCard key={`${alternative.text}:${index}`} value={alternative} />
+                  ))}
+                </div>
+              </DetailSection>
+            )}
+          </>
         )}
       </div>
     </div>

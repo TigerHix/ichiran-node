@@ -16,7 +16,9 @@ mod senses;
 #[cfg(test)]
 mod tests;
 
-pub(crate) use detailed::{LegacyContext, LegacyDetailedResult, LegacyDetailedSession};
+pub(crate) use detailed::{
+    LegacyContext, LegacyDetailedResult, LegacyDetailedSession, TokenDetailsResult,
+};
 
 pub(crate) type LegacyWordProperty<'a> = dyn Fn(&[u16], &AnalysisToken) -> Value + 'a;
 
@@ -119,6 +121,8 @@ pub(crate) struct LegacyConjugationProperty {
     pub fml: Option<bool>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub neg: Option<bool>,
+    #[serde(skip)]
+    pub kind_id: u8,
 }
 
 #[derive(Clone, Debug, Eq, PartialEq, Serialize)]
@@ -148,6 +152,8 @@ pub(crate) struct LegacyConjugation {
     pub readok: Option<bool>,
     #[serde(skip)]
     pub info: Option<LegacyConjugationInfo>,
+    #[serde(skip)]
+    pub root: Option<crate::dto::AnalysisRoot>,
 }
 
 #[derive(Clone, Debug, Eq, PartialEq, Serialize)]

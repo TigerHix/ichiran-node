@@ -5,7 +5,7 @@ use serde::{Deserialize, Serialize};
 use crate::analysis::LegacyWireDetailStep;
 use crate::{
     AnalyzeOptions, DetailRange, DetailStore, EntityHint, ErrorCode, Kernel, KernelError,
-    LegacyDetailSession, RomanizationName,
+    LegacyDetailSession, RomanizationName, TokenDetailsSession, TokenDetailsStep,
 };
 
 #[wasm_bindgen]
@@ -13,6 +13,14 @@ pub struct WasmLegacyOperation {
     analysis: crate::AnalysisResult,
     session: LegacyDetailSession,
     method: Option<RomanizationName>,
+}
+
+#[wasm_bindgen]
+pub struct WasmTokenDetailsOperation {
+    analysis: crate::AnalysisResult,
+    session: TokenDetailsSession,
+    path_index: usize,
+    token_index: usize,
 }
 
 #[wasm_bindgen]
@@ -76,6 +84,37 @@ impl WasmKernel {
         })
     }
 
+    pub fn token_details_begin_utf16(
+        &mut self,
+        input: &[u16],
+        options_json: &[u8],
+        path_index: u32,
+        token_index: u32,
+    ) -> std::result::Result<WasmTokenDetailsOperation, JsValue> {
+        let options = parse_options(options_json).map_err(js_error)?;
+        let analysis = self
+            .inner
+            .analyze_with_options(input, &options)
+            .map_err(js_error)?;
+        if analysis
+            .paths
+            .get(path_index as usize)
+            .and_then(|path| path.tokens.get(token_index as usize))
+            .is_none()
+        {
+            return Err(js_error(KernelError::new(
+                ErrorCode::OutOfRange,
+                "analysis token was not found",
+            )));
+        }
+        Ok(WasmTokenDetailsOperation {
+            analysis,
+            session: TokenDetailsSession::default(),
+            path_index: path_index as usize,
+            token_index: token_index as usize,
+        })
+    }
+
     pub fn resident_payload_bytes(&self) -> u32 {
         self.inner.resident_payload_bytes() as u32
     }
@@ -91,6 +130,44 @@ impl WasmKernel {
                 })
             })
             .map_err(js_error)
+    }
+}
+
+#[wasm_bindgen]
+impl WasmTokenDetailsOperation {
+    /// Resolves one presentation tree, requesting only the dictionary blocks it uses.
+    pub fn token_details_step(
+        &mut self,
+        kernel: &mut WasmKernel,
+        details: &WasmDetailStore,
+    ) -> std::result::Result<Vec<u8>, JsValue> {
+        match kernel
+            .inner
+            .token_details_json(
+                &mut self.session,
+                &self.analysis,
+                self.path_index,
+                self.token_index,
+                &details.inner,
+            )
+            .map_err(js_error)?
+        {
+            TokenDetailsStep::Ready(value) => {
+                let mut envelope = Vec::with_capacity(value.len() + 27);
+                envelope.extend_from_slice(b"{\"state\":\"ready\",\"value\":");
+                envelope.extend_from_slice(&value);
+                envelope.push(b'}');
+                Ok(envelope)
+            }
+            TokenDetailsStep::Missing { entry_index, range } => {
+                serde_json::to_vec(&WasmMissingDetail {
+                    state: "missing-detail",
+                    entry_index,
+                    range,
+                })
+                .map_err(|error| JsValue::from_str(&error.to_string()))
+            }
+        }
     }
 }
 

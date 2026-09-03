@@ -1,4 +1,11 @@
-import type { DictionaryEntry, RomanizeOptions } from '@ichiran/core';
+import type {
+  DictionaryEntry,
+  RomanizeOptions,
+  TokenConjugation,
+  TokenDetails,
+  TokenDetailsOptions,
+  TokenMeaning
+} from '@ichiran/core';
 import {
   AnalyzerClient,
   AnalyzerClientError,
@@ -21,6 +28,7 @@ export type AnalyzerProgress = InstallProgressValue;
 export type AnalyzerStatus = PackStatus;
 export type AnalyzerRelease = AnalyzerPackManifest;
 export type { AnalysisPath, AnalysisResult, AnalysisToken, DictionaryEntry };
+export type { TokenConjugation, TokenDetails, TokenMeaning };
 
 export interface InitializedAnalyzer {
   readonly release: AnalyzerRelease | null;
@@ -89,6 +97,10 @@ export class BrowserAnalyzer {
 
   entry(entryIndex: number): Promise<DictionaryEntry> {
     return this.#client.entry(entryIndex);
+  }
+
+  details(text: string, options: TokenDetailsOptions): Promise<TokenDetails> {
+    return this.#client.details(text, options);
   }
 
   romanize(text: string, options?: RomanizeOptions): Promise<string> {

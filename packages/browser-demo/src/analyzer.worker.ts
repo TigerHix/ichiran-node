@@ -6,7 +6,9 @@ import {
   type AnalysisResult,
   type Analyzer,
   type DictionaryEntry,
-  type RomanizeOptions
+  type RomanizeOptions,
+  type TokenDetails,
+  type TokenDetailsOptions
 } from '@ichiran/core';
 import { parseAnalyzerReleaseManifest } from '@ichiran/core/release';
 import type {
@@ -42,6 +44,7 @@ interface WorkerRuntime {
   analyze(text: string, options?: AnalyzeOptions): Promise<AnalysisResult>;
   entry(entryIndex: number): Promise<DictionaryEntry>;
   romanize(text: string, options?: RomanizeOptions): Promise<string>;
+  details(text: string, options: TokenDetailsOptions): Promise<TokenDetails>;
   dispose?(): void;
 }
 
@@ -295,6 +298,9 @@ async function handle(request: IncomingRequest): Promise<unknown> {
     }
     case 'analyze': {
       return withRuntime(value => value.analyze(request.text, request.options));
+    }
+    case 'details': {
+      return withRuntime(value => value.details(request.text, request.options));
     }
     case 'romanize': {
       return withRuntime(value => value.romanize(request.text, request.options));

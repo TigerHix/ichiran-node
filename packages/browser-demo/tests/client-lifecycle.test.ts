@@ -251,7 +251,7 @@ describe('AnalyzerClient Worker lifecycle', () => {
     client.dispose();
   });
 
-  test('uses the clean romanize and dictionary-entry protocol with structured errors', async () => {
+  test('uses the clean romanize, token-details, and dictionary-entry protocol', async () => {
     const client = new AnalyzerClient(lifecycleWorker);
     const pin = client.expectRelease(RELEASE);
     const worker = LifecycleWorker.instances[0]!;
@@ -270,8 +270,20 @@ describe('AnalyzerClient Worker lifecycle', () => {
     worker.respond('neko.');
     expect(await romanized).toBe('neko.');
 
+    const details = client.details('猫', { limit: 3, pathIndex: 0, tokenIndex: 0 });
+    expect(worker.requests.at(-1)).toMatchObject({
+      op: 'details',
+      text: '猫',
+      options: { limit: 3, pathIndex: 0, tokenIndex: 0 }
+    });
+    worker.respond({
+      text: '猫', reading: 'ねこ', meanings: [], components: [], conjugations: [],
+      alternatives: [], suffix: null, counter: null, entity: false
+    });
+    expect((await details).reading).toBe('ねこ');
+
     const entry = client.entry(42);
-    expect(worker.requests.at(-1)).toEqual({ id: 3, op: 'entry', entryIndex: 42 });
+    expect(worker.requests.at(-1)).toEqual({ id: 4, op: 'entry', entryIndex: 42 });
     worker.fail('not-found', 'No dictionary entry at index 42');
     await expect(entry).rejects.toMatchObject({
       name: 'AnalyzerClientError',

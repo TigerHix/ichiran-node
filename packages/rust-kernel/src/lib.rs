@@ -25,13 +25,16 @@ mod roots;
 mod support;
 mod surface;
 mod text;
+mod token_details;
 
 #[cfg(all(feature = "native", not(target_arch = "wasm32")))]
 mod ffi;
 #[cfg(all(feature = "wasm", target_arch = "wasm32"))]
 mod wasm;
 
-pub use analysis::{Kernel, LegacyDetailSession, LegacyDetailStep};
+pub use analysis::{
+    Kernel, LegacyDetailSession, LegacyDetailStep, TokenDetailsSession, TokenDetailsStep,
+};
 pub use analyzer_model::EntityHint;
 pub use analyzer_options::AnalyzeOptions;
 pub use annotations::{GeneratedFacts, GeneratedMember};
@@ -42,3 +45,7 @@ pub use morphology::{MorphologyCandidate, MorphologyProperty, Route};
 pub use pack::{Pack, PackManifest, PackSection};
 pub use romanization::RomanizationName;
 pub use surface::{SurfaceIndex, SurfaceMatch};
+pub use token_details::{
+    TokenConjugation, TokenConjugationProperty, TokenCounter, TokenDetailForm, TokenDetails,
+    TokenMeaning,
+};

@@ -8,7 +8,8 @@ import {
   type AnalyzeOptions,
   type Analyzer,
   type AnalyzerErrorCode,
-  type RomanizeOptions
+  type RomanizeOptions,
+  type TokenDetailsOptions
 } from '@ichiran/core';
 
 const MAX_JSON_BODY_SIZE = 1024 * 1024;
@@ -133,6 +134,15 @@ export function createApiHandler(analyzer: Analyzer) {
           bodyOptions<RomanizeOptions>(body)
         );
         sendJson(response, { romanized });
+        return;
+      }
+      if (request.method === 'POST' && url.pathname === '/v1/details') {
+        const body = await parseJsonBody(request);
+        const options = bodyOptions<TokenDetailsOptions>(body);
+        if (!options) {
+          throw new HttpError('invalid-input', 'options are required', 400);
+        }
+        sendJson(response, await analyzer.details(bodyText(body), options));
         return;
       }
       const entry = request.method === 'GET'

@@ -12,6 +12,7 @@
 #define DETAILED_CASES 705u
 #define ROMANIZATION_CASES 8u
 #define DESCRIBE_CASES 4u
+#define TOKEN_DETAILS_CASES 4u
 #define THREAD_COUNT 4u
 #define CONCURRENT_REPEATS 4u
 
@@ -33,6 +34,12 @@ typedef struct LegacyThread {
   const LegacyCase *second;
   int passed;
 } LegacyThread;
+
+typedef struct TokenDetailsCase {
+  LegacyCase value;
+  size_t path_index;
+  size_t token_index;
+} TokenDetailsCase;
 
 static void *copy_bytes(const void *value, size_t byte_length) {
   if (byte_length == 0) return NULL;
@@ -314,6 +321,64 @@ static int legacy_exact(
   return passed && ready;
 }
 
+static int token_details_exact(
+  const IchiranKernel *kernel,
+  const IchiranDetailStore *details,
+  FILE *details_file,
+  const TokenDetailsCase *test
+) {
+  IchiranTokenDetailsOperation *operation = NULL;
+  IchiranResult begun = ichiran_kernel_token_details_begin_utf16(
+    kernel, test->value.input, test->value.input_units,
+    test->value.options, test->value.options_bytes,
+    test->path_index, test->token_index, &operation
+  );
+  int passed = begun.status == ICHIRAN_OK && operation != NULL;
+  ichiran_buffer_free(begun.buffer);
+  uint32_t supplied_entry = ICHIRAN_NO_DETAIL;
+  uint8_t *supplied = NULL;
+  size_t supplied_bytes = 0;
+  int ready = 0;
+  for (size_t step_index = 0; passed && step_index < 4096; step_index++) {
+    IchiranStepResult step = ichiran_kernel_token_details_step(
+      kernel, operation, details, supplied_entry, supplied, supplied_bytes
+    );
+    free(supplied);
+    supplied = NULL;
+    supplied_bytes = 0;
+    supplied_entry = ICHIRAN_NO_DETAIL;
+    if (step.status != ICHIRAN_OK) {
+      fputs("token-details C step failed: ", stderr);
+      print_buffer(&step.buffer);
+      fputc('\n', stderr);
+      ichiran_buffer_free(step.buffer);
+      passed = 0;
+      break;
+    }
+    if (step.state == ICHIRAN_STEP_READY) {
+      passed = exact_buffer(
+        &step.buffer, test->value.expected, test->value.expected_bytes
+      );
+      if (!passed) fprintf(stderr, "token-details C parity mismatch %s\n", test->value.name);
+      ichiran_buffer_free(step.buffer);
+      ready = passed;
+      break;
+    }
+    if (step.state != ICHIRAN_STEP_MISSING_DETAIL
+        || !read_range(details_file, step.range.offset, step.range.byte_length, &supplied)) {
+      ichiran_buffer_free(step.buffer);
+      passed = 0;
+      break;
+    }
+    ichiran_buffer_free(step.buffer);
+    supplied_bytes = step.range.byte_length;
+    supplied_entry = step.entry_index;
+  }
+  free(supplied);
+  ichiran_token_details_operation_free(operation);
+  return passed && ready;
+}
+
 static int romanization_exact(
   const IchiranKernel *kernel,
   const char *name,
@@ -418,6 +483,43 @@ static int parse_legacy(char *line, LegacyCase *output) {
   return 1;
 }
 
+static int parse_token_details(char *line, TokenDetailsCase *output) {
+  char *name = line + 2;
+  char *hex = strchr(name, '\t');
+  char *options = hex == NULL ? NULL : strchr(hex + 1, '\t');
+  char *path = options == NULL ? NULL : strchr(options + 1, '\t');
+  char *token = path == NULL ? NULL : strchr(path + 1, '\t');
+  char *expected = token == NULL ? NULL : strchr(token + 1, '\t');
+  if (hex == NULL || options == NULL || path == NULL || token == NULL || expected == NULL) {
+    return 0;
+  }
+  *hex++ = *options++ = *path++ = *token++ = *expected++ = '\0';
+  memset(output, 0, sizeof(*output));
+  output->value.name = copy_bytes(name, strlen(name) + 1);
+  output->value.options_bytes = strlen(options);
+  output->value.options = copy_bytes(options, output->value.options_bytes);
+  output->value.expected_bytes = strlen(expected);
+  output->value.expected = copy_bytes(expected, output->value.expected_bytes);
+  errno = 0;
+  char *path_end = NULL;
+  const unsigned long long path_index = strtoull(path, &path_end, 10);
+  char *token_end = NULL;
+  const unsigned long long token_index = strtoull(token, &token_end, 10);
+  const int parsed = errno == 0 && *path != '\0' && *path_end == '\0'
+    && *token != '\0' && *token_end == '\0'
+    && (unsigned long long)(size_t)path_index == path_index
+    && (unsigned long long)(size_t)token_index == token_index;
+  output->path_index = (size_t)path_index;
+  output->token_index = (size_t)token_index;
+  if (!parsed || output->value.name == NULL || output->value.options == NULL
+      || output->value.expected == NULL
+      || !parse_utf16(hex, &output->value.input, &output->value.input_units)) {
+    free_legacy_case(&output->value);
+    return 0;
+  }
+  return 1;
+}
+
 static int metadata_valid(const char *line) {
   const int immutable_pack = strstr(line, "\"mode\":\"immutable-baseline\"") != NULL
     && strstr(line, "\"currentLisp\":401") != NULL
@@ -439,7 +541,8 @@ static int metadata_valid(const char *line) {
     && strstr(line, "\"operations\":705") != NULL
     && strstr(line, "\"utf16\":3") != NULL
     && strstr(line, "\"romanization\":{\"operations\":8,\"retained\":5,\"utf16\":3}") != NULL
-    && strstr(line, "\"describe\":4") != NULL;
+    && strstr(line, "\"describe\":4") != NULL
+    && strstr(line, "\"tokenDetails\":4") != NULL;
 }
 
 static int verify_owned_product_errors(
@@ -495,6 +598,7 @@ int main(int argc, char **argv) {
   size_t corrupt_recoveries = 0;
   int metadata = 0;
   int same_pack = 0;
+  size_t token_details = 0;
   int passed = verify_owned_product_errors(kernel, details);
   LegacyCase concurrent[2] = {0};
   while (passed && (length = getline(&line, &capacity, stdin)) >= 0) {
@@ -525,6 +629,14 @@ int main(int argc, char **argv) {
       }
       free_legacy_case(&test);
       detailed++;
+      continue;
+    }
+    if (line[0] == 'T' && line[1] == '\t') {
+      TokenDetailsCase test;
+      passed = parse_token_details(line, &test);
+      if (passed) passed = token_details_exact(kernel, details, details_file, &test);
+      free_legacy_case(&test.value);
+      token_details++;
       continue;
     }
     if (line[0] == 'R' && line[1] == '\t') {
@@ -569,7 +681,8 @@ int main(int argc, char **argv) {
     passed = 0;
   }
   free(line);
-  passed = passed && metadata && detailed == DETAILED_CASES
+  passed = passed && metadata && token_details == TOKEN_DETAILS_CASES
+    && detailed == DETAILED_CASES
     && romanization == ROMANIZATION_CASES && described == DESCRIBE_CASES
     && corrupt_recoveries == 2
     && concurrent[0].name != NULL && concurrent[1].name != NULL;
@@ -603,15 +716,15 @@ int main(int argc, char **argv) {
   if (!passed) return 5;
   if (same_pack) {
     printf(
-      "C ABI v3 same-pack product harness passed: detailed=702 utf16_detailed=3 "
-      "romanization=5 utf16_romanization=3 describe=4 "
+      "C ABI v4 same-pack product harness passed: detailed=702 utf16_detailed=3 "
+      "token_details=4 romanization=5 utf16_romanization=3 describe=4 "
       "corrupt_recovery=%zu owned_errors=3 concurrent_detailed=32\n",
       corrupt_recoveries
     );
   } else {
     printf(
-      "C ABI v3 product harness passed: detailed=702 utf16_detailed=3 current_lisp=401 fallback=301 "
-      "authority_canonical_ties=4(current_lisp=3 fallback=1) romanization=5 "
+      "C ABI v4 product harness passed: detailed=702 utf16_detailed=3 current_lisp=401 fallback=301 "
+      "authority_canonical_ties=4(current_lisp=3 fallback=1) token_details=4 romanization=5 "
       "utf16_romanization=3 describe=4 "
       "corrupt_recovery=%zu owned_errors=3 concurrent_detailed=32\n",
       corrupt_recoveries

@@ -14,7 +14,7 @@ function run(...arguments_: string[]) {
 }
 
 describe.skipIf(!releaseDirectory)('CLI source release', () => {
-  test('exposes explicit analyze, romanize, and entry commands', () => {
+  test('exposes explicit analyze, romanize, details, and entry commands', () => {
     const romanize = run('romanize', '今日');
     expect(romanize.exitCode).toBe(0);
     expect(romanize.stderr.toString()).toBe('');
@@ -33,6 +33,14 @@ describe.skipIf(!releaseDirectory)('CLI source release', () => {
     const entry = run('entry', String(entryIndex));
     expect(entry.exitCode).toBe(0);
     expect(JSON.parse(entry.stdout.toString())).toMatchObject({ seq: expect.any(Number) });
+
+    const details = run('details', '--limit', '1', '--path', '0', '--token', '0', '食べた');
+    expect(details.exitCode).toBe(0);
+    expect(JSON.parse(details.stdout.toString())).toMatchObject({
+      text: '食べた',
+      meanings: [],
+      conjugations: expect.any(Array)
+    });
   });
 
   test('reports stable analyzer errors and has no implicit compatibility mode', () => {

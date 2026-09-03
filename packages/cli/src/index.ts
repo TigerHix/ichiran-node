@@ -62,6 +62,25 @@ async function main(): Promise<void> {
     });
 
   program
+    .command('details')
+    .description('show canonical details for one analyzed token')
+    .argument('<text...>', 'text to analyze')
+    .option('-l, --limit <number>', 'maximum analysis paths', integer, 3)
+    .option('-p, --path <number>', 'analysis path index', integer, 0)
+    .option('-t, --token <number>', 'token index within the path', integer, 0)
+    .action(async (
+      parts: string[],
+      options: { readonly limit: number; readonly path: number; readonly token: number }
+    ) => {
+      const value = await (await getAnalyzer()).details(text(parts), {
+        limit: options.limit,
+        pathIndex: options.path,
+        tokenIndex: options.token
+      });
+      process.stdout.write(`${JSON.stringify(value)}\n`);
+    });
+
+  program
     .command('entry')
     .description('read one dictionary entry')
     .argument('<entry-index>', 'entry index returned by analyze', integer)

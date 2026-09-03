@@ -47,7 +47,7 @@ import {
   type AnalyzerProgress,
   type AnalyzerRelease,
   type AnalyzerStatus,
-  type DictionaryEntry
+  type TokenDetails
 } from './analyzer-service.js';
 import { AnalyzerClient } from './client.js';
 import {
@@ -335,10 +335,9 @@ function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
   const [running, setRunning] = useState(false);
   const [showBusy, setShowBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [entry, setEntry] = useState<DictionaryEntry | null>(null);
-  const [relatedEntries, setRelatedEntries] = useState<ReadonlyMap<number, DictionaryEntry>>(new Map());
-  const [entryLoading, setEntryLoading] = useState(false);
-  const [entryError, setEntryError] = useState<string | null>(null);
+  const [details, setDetails] = useState<TokenDetails | null>(null);
+  const [detailsLoading, setDetailsLoading] = useState(false);
+  const [detailsError, setDetailsError] = useState<string | null>(null);
   const [romanization, setRomanization] = useState<string | null>(null);
   const [copyState, setCopyState] = useState<'idle' | 'copied' | 'error'>('idle');
   const mobileLayout = useMobileLayout();
@@ -359,36 +358,27 @@ function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
   }, [running]);
 
   useEffect(() => {
-    setEntry(null);
-    setRelatedEntries(new Map());
-    setEntryError(null);
-    if (!selectedToken || selectedToken.entryIndex === null) { setEntryLoading(false); return; }
+    setDetails(null);
+    setDetailsError(null);
+    if (!selectedToken || !result || !selection) { setDetailsLoading(false); return; }
     let current = true;
-    setEntryLoading(true);
-    void analyzer.entry(selectedToken.entryIndex).then(value => {
+    setDetailsLoading(true);
+    void analyzer.details(result.input, {
+      limit: 3,
+      pathIndex,
+      tokenIndex: selection.start
+    }).then(value => {
       if (!current) return;
-      setEntry(value);
-      setEntryLoading(false);
+      setDetails(value);
+      setDetailsLoading(false);
     }, reason => {
       if (!current) return;
-      setEntryLoading(false);
-      setEntryError('Word details could not be opened.');
+      setDetailsLoading(false);
+      setDetailsError('Word details could not be opened.');
       if (isInvalidInstallError(reason)) onPackInvalid();
     });
-    const relatedIndexes = [...new Set([
-      ...selectedToken.components.map(component => component.entryIndex),
-      ...selectedToken.alternatives.map(alternative => alternative.entryIndex)
-    ].filter((value): value is number => value !== null && value !== selectedToken.entryIndex))];
-    void Promise.all(relatedIndexes.map(async entryIndex => [
-      entryIndex,
-      await analyzer.entry(entryIndex)
-    ] as const)).then(values => {
-      if (current) setRelatedEntries(new Map(values));
-    }, reason => {
-      if (current && isInvalidInstallError(reason)) onPackInvalid();
-    });
     return () => { current = false; };
-  }, [analyzer, onPackInvalid, selectedToken]);
+  }, [analyzer, onPackInvalid, pathIndex, result, selectedToken, selection]);
 
   const changeText = useCallback((value: string): void => {
     latestText.current = value;
@@ -459,7 +449,7 @@ function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
   }
 
   const detailProps = {
-    token: selectedToken, selectionText, entry, relatedEntries, loading: entryLoading, error: entryError,
+    token: selectedToken, selectionText, details, loading: detailsLoading, error: detailsError,
     copied: copyState === 'copied', onCopy: () => void copySelection(), onClose: closeDetails
   };
 

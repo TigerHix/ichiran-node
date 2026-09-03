@@ -236,6 +236,32 @@ export class WasmKernel {
             wasm.__wbindgen_add_to_stack_pointer(16);
         }
     }
+    /**
+     * @param {Uint16Array} input
+     * @param {Uint8Array} options_json
+     * @param {number} path_index
+     * @param {number} token_index
+     * @returns {WasmTokenDetailsOperation}
+     */
+    token_details_begin_utf16(input, options_json, path_index, token_index) {
+        try {
+            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+            const ptr0 = passArray16ToWasm0(input, wasm.__wbindgen_export2);
+            const len0 = WASM_VECTOR_LEN;
+            const ptr1 = passArray8ToWasm0(options_json, wasm.__wbindgen_export2);
+            const len1 = WASM_VECTOR_LEN;
+            wasm.wasmkernel_token_details_begin_utf16(retptr, this.__wbg_ptr, ptr0, len0, ptr1, len1, path_index, token_index);
+            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
+            if (r2) {
+                throw takeObject(r1);
+            }
+            return WasmTokenDetailsOperation.__wrap(r0);
+        } finally {
+            wasm.__wbindgen_add_to_stack_pointer(16);
+        }
+    }
 }
 if (Symbol.dispose) WasmKernel.prototype[Symbol.dispose] = WasmKernel.prototype.free;
 
@@ -285,6 +311,52 @@ export class WasmLegacyOperation {
     }
 }
 if (Symbol.dispose) WasmLegacyOperation.prototype[Symbol.dispose] = WasmLegacyOperation.prototype.free;
+
+export class WasmTokenDetailsOperation {
+    static __wrap(ptr) {
+        const obj = Object.create(WasmTokenDetailsOperation.prototype);
+        obj.__wbg_ptr = ptr;
+        WasmTokenDetailsOperationFinalization.register(obj, obj.__wbg_ptr, obj);
+        return obj;
+    }
+    __destroy_into_raw() {
+        const ptr = this.__wbg_ptr;
+        this.__wbg_ptr = 0;
+        WasmTokenDetailsOperationFinalization.unregister(this);
+        return ptr;
+    }
+    free() {
+        const ptr = this.__destroy_into_raw();
+        wasm.__wbg_wasmtokendetailsoperation_free(ptr, 0);
+    }
+    /**
+     * Resolves one presentation tree, requesting only the dictionary blocks it uses.
+     * @param {WasmKernel} kernel
+     * @param {WasmDetailStore} details
+     * @returns {Uint8Array}
+     */
+    token_details_step(kernel, details) {
+        try {
+            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+            _assertClass(kernel, WasmKernel);
+            _assertClass(details, WasmDetailStore);
+            wasm.wasmtokendetailsoperation_token_details_step(retptr, this.__wbg_ptr, kernel.__wbg_ptr, details.__wbg_ptr);
+            var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+            var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+            var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
+            var r3 = getDataViewMemory0().getInt32(retptr + 4 * 3, true);
+            if (r3) {
+                throw takeObject(r2);
+            }
+            var v1 = getArrayU8FromWasm0(r0, r1).slice();
+            wasm.__wbindgen_export3(r0, r1 * 1, 1);
+            return v1;
+        } finally {
+            wasm.__wbindgen_add_to_stack_pointer(16);
+        }
+    }
+}
+if (Symbol.dispose) WasmTokenDetailsOperation.prototype[Symbol.dispose] = WasmTokenDetailsOperation.prototype.free;
 
 /**
  * @param {Uint8Array} header
@@ -349,6 +421,9 @@ const WasmKernelFinalization = (typeof FinalizationRegistry === 'undefined')
 const WasmLegacyOperationFinalization = (typeof FinalizationRegistry === 'undefined')
     ? { register: () => {}, unregister: () => {} }
     : new FinalizationRegistry(ptr => wasm.__wbg_wasmlegacyoperation_free(ptr, 1));
+const WasmTokenDetailsOperationFinalization = (typeof FinalizationRegistry === 'undefined')
+    ? { register: () => {}, unregister: () => {} }
+    : new FinalizationRegistry(ptr => wasm.__wbg_wasmtokendetailsoperation_free(ptr, 1));
 
 function addHeapObject(obj) {
     if (heap_next === heap.length) heap.push(heap.length + 1);

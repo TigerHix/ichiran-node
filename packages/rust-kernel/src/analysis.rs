@@ -2,7 +2,8 @@ use crate::analyzer_engine::{AccumulatedPath, AnalyzerEngine, merge_paths};
 #[cfg(target_arch = "wasm32")]
 use crate::analyzer_legacy::legacy_wire_metadata;
 use crate::analyzer_legacy::{
-    LegacyContext, LegacyDetailedResult, LegacyDetailedSession, LegacyOptions, serialize_compact,
+    LegacyContext, LegacyDetailedResult, LegacyDetailedSession, LegacyOptions, TokenDetailsResult,
+    serialize_compact,
 };
 use crate::analyzer_lexicon::AnalyzerLexicon;
 use crate::analyzer_model::EntityHint;
@@ -41,8 +42,22 @@ pub struct LegacyDetailSession {
     inner: LegacyDetailedSession,
 }
 
+#[derive(Default)]
+pub struct TokenDetailsSession {
+    inner: LegacyDetailedSession,
+}
+
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub enum LegacyDetailStep {
+    Ready(Vec<u8>),
+    Missing {
+        entry_index: u32,
+        range: DetailRange,
+    },
+}
+
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub enum TokenDetailsStep {
     Ready(Vec<u8>),
     Missing {
         entry_index: u32,
@@ -325,6 +340,34 @@ impl Kernel {
                 .map(LegacyDetailStep::Ready)
                 .map_err(|error| KernelError::new(ErrorCode::Internal, error.to_string())),
             LegacyDetailedResult::MissingDetail(request) => Ok(LegacyDetailStep::Missing {
+                entry_index: request.entry_index,
+                range: request.range,
+            }),
+        }
+    }
+
+    pub fn token_details_json(
+        &mut self,
+        session: &mut TokenDetailsSession,
+        result: &AnalysisResult,
+        path_index: usize,
+        token_index: usize,
+        details: &DetailStore,
+    ) -> Result<TokenDetailsStep> {
+        let mut context = LegacyContext {
+            roots: &self.roots,
+            support: &self.support,
+            surface: &self.surface,
+            annotations: &mut self.annotations,
+        };
+        match session
+            .inner
+            .token_details(result, path_index, token_index, details, &mut context)?
+        {
+            TokenDetailsResult::Ready(value) => serde_json::to_vec(&value)
+                .map(TokenDetailsStep::Ready)
+                .map_err(|error| KernelError::new(ErrorCode::Internal, error.to_string())),
+            TokenDetailsResult::MissingDetail(request) => Ok(TokenDetailsStep::Missing {
                 entry_index: request.entry_index,
                 range: request.range,
             }),

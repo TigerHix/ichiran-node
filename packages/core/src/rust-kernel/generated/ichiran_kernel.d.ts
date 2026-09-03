@@ -23,6 +23,7 @@ export class WasmKernel {
     constructor(hot: Uint8Array);
     resident_payload_bytes(): number;
     romanize_utf16_options(input: Uint16Array, options_json: Uint8Array, method: string): Uint16Array;
+    token_details_begin_utf16(input: Uint16Array, options_json: Uint8Array, path_index: number, token_index: number): WasmTokenDetailsOperation;
 }
 
 export class WasmLegacyOperation {
@@ -34,6 +35,16 @@ export class WasmLegacyOperation {
      * range the host must feed to `WasmDetailStore.entry_json` before retrying.
      */
     legacy_step(kernel: WasmKernel, details: WasmDetailStore): Uint8Array;
+}
+
+export class WasmTokenDetailsOperation {
+    private constructor();
+    free(): void;
+    [Symbol.dispose](): void;
+    /**
+     * Resolves one presentation tree, requesting only the dictionary blocks it uses.
+     */
+    token_details_step(kernel: WasmKernel, details: WasmDetailStore): Uint8Array;
 }
 
 export function detail_prefix_length(header: Uint8Array, total_bytes: number): number;
@@ -56,7 +67,10 @@ export interface InitOutput {
     readonly wasmkernel_open: (a: number, b: number, c: number) => void;
     readonly wasmkernel_resident_payload_bytes: (a: number) => number;
     readonly wasmkernel_romanize_utf16_options: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number) => void;
+    readonly wasmkernel_token_details_begin_utf16: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number) => void;
     readonly wasmlegacyoperation_legacy_step: (a: number, b: number, c: number, d: number) => void;
+    readonly wasmtokendetailsoperation_token_details_step: (a: number, b: number, c: number, d: number) => void;
+    readonly __wbg_wasmtokendetailsoperation_free: (a: number, b: number) => void;
     readonly __wbindgen_export: (a: number) => void;
     readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
     readonly __wbindgen_export2: (a: number, b: number) => number;

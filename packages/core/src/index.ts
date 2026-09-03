@@ -7,7 +7,8 @@ export {
   type AnalyzerErrorCode,
   type AnalyzerSource,
   type RandomAccessSource,
-  type RomanizeOptions
+  type RomanizeOptions,
+  type TokenDetailsOptions
 } from './runtime.js';
 export type {
   PortableAnalysisAlternative as AnalysisAlternative,
@@ -30,3 +31,11 @@ export type {
   DetailSense as DictionarySense
 } from './details-contract.js';
 export type { RomanizationName as RomanizationScheme } from './romanization-contract.js';
+export type {
+  TokenConjugation,
+  TokenConjugationProperty,
+  TokenCounter,
+  TokenDetailForm,
+  TokenDetails,
+  TokenMeaning
+} from './token-details-contract.js';

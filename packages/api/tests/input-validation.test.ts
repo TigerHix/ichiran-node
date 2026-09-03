@@ -12,6 +12,7 @@ describe('HTTP request validation', () => {
     const analyzer = {
       analyze: async () => { throw new AnalyzerError('invalid-input', 'bad analyzer options'); },
       romanize: async () => '',
+      details: async () => { throw new AnalyzerError('invalid-input', 'bad detail options'); },
       entry: async () => { throw new AnalyzerError('not-found', 'entry does not exist'); },
       dispose: () => undefined
     } as unknown as Analyzer;
