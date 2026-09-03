@@ -15,7 +15,8 @@ import {
 import {
   assertActiveReleaseGeneration,
   assertExactReleaseInventory,
-  publishAnalyzerRelease
+  publishAnalyzerRelease,
+  readRegularArtifact
 } from '../browser-pack/release-publication.js';
 import {
   assertBytesEqual,
@@ -31,6 +32,7 @@ import {
   openPack
 } from '@ichiran/core/compiler';
 import { buildSourceCompilerBinarySections, buildSourceCompilerHotPack } from './release-input.js';
+import { assertSourceReleaseDestination } from './release-path.js';
 import {
   parseGeneratedOrderAttestation,
   parseRootPayloadOrderAttestation
@@ -59,6 +61,23 @@ const GENERATED_ORDER_ATTESTATION_SHA256 =
   '4f2a767eb48b09194af7e20070e2b5e79765a70b5d6ebf4eaa9a3048ef5776cf';
 const QUALIFIED_ARTIFACT_INDEX_SHA256 = 'a032bbd11c257259877b438a79c674544985a58acdaff86327ae57ae8cbeb3ac';
 const SOURCE_COMPILER_RUST_TOOLCHAIN = '1.92.0';
+const QUALIFIED_ARTIFACT_NAMES = [
+  'manifest.json',
+  'hot.bin.gz',
+  'details.bin.gz',
+  'stats.json'
+] as const;
+
+export interface VerifiedQualifiedArtifactBytes {
+  readonly manifest: Uint8Array;
+  readonly hotDownload: Uint8Array;
+  readonly detailsDownload: Uint8Array;
+  readonly stats: Uint8Array;
+}
+
+export interface CapturedQualifiedArtifactBytes extends VerifiedQualifiedArtifactBytes {
+  readonly artifactIndex: Uint8Array;
+}
 
 interface CommandResult {
   readonly stdout: string;
@@ -68,6 +87,7 @@ interface CommandResult {
 export interface SourceReleaseOutputInput {
   readonly repository: string;
   readonly output: string;
+  readonly outputPhysical: string;
   readonly temporaryDirectory: string;
   readonly sourceCommit: string;
   readonly packVersion: string;
@@ -182,39 +202,83 @@ async function compileSurface(
   return parseSurfaceCompilerStats(result.stderr);
 }
 
-async function verifyQualifiedArtifactIndex(directory: string): Promise<void> {
-  const indexBytes = new Uint8Array(await readFile(join(directory, 'artifact-sha256.txt')));
+export async function captureQualifiedArtifactBytes(
+  directory: string
+): Promise<CapturedQualifiedArtifactBytes> {
+  const [artifactIndex, manifest, hotDownload, detailsDownload, stats] = await Promise.all([
+    readRegularArtifact(directory, 'artifact-sha256.txt'),
+    readRegularArtifact(directory, 'manifest.json'),
+    readRegularArtifact(directory, 'hot.bin.gz'),
+    readRegularArtifact(directory, 'details.bin.gz'),
+    readRegularArtifact(directory, 'stats.json')
+  ]);
+  return {
+    artifactIndex: new Uint8Array(artifactIndex),
+    manifest: new Uint8Array(manifest),
+    hotDownload: new Uint8Array(hotDownload),
+    detailsDownload: new Uint8Array(detailsDownload),
+    stats: new Uint8Array(stats)
+  };
+}
+
+export async function verifyQualifiedArtifactIndex(
+  directory: string
+): Promise<VerifiedQualifiedArtifactBytes> {
+  const captured = await captureQualifiedArtifactBytes(directory);
+  const indexBytes = captured.artifactIndex;
   if (sha256Bytes(indexBytes) !== QUALIFIED_ARTIFACT_INDEX_SHA256) {
     throw new Error('Qualified artifact checksum index is not the immutable reviewed release index');
   }
   const identities = new Map<string, string>();
-  for (const line of new TextDecoder().decode(indexBytes).trim().split('\n')) {
+  const rows = new TextDecoder().decode(indexBytes).trim().split('\n');
+  for (const line of rows) {
     const match = /^([0-9a-f]{64})  ([^/]+)$/.exec(line);
     if (!match) throw new Error(`Invalid qualified artifact checksum row: ${line}`);
+    if (identities.has(match[2]!)) {
+      throw new Error(`Qualified artifact checksum index duplicates ${match[2]}`);
+    }
     identities.set(match[2]!, match[1]!);
   }
-  for (const name of ['manifest.json', 'hot.bin.gz', 'details.bin.gz', 'stats.json']) {
+  if (rows.length !== QUALIFIED_ARTIFACT_NAMES.length
+    || identities.size !== QUALIFIED_ARTIFACT_NAMES.length
+    || QUALIFIED_ARTIFACT_NAMES.some(name => !identities.has(name))) {
+    throw new Error('Qualified artifact checksum index does not name exactly four release artifacts');
+  }
+  const artifacts = new Map<string, Uint8Array>([
+    ['manifest.json', captured.manifest],
+    ['hot.bin.gz', captured.hotDownload],
+    ['details.bin.gz', captured.detailsDownload],
+    ['stats.json', captured.stats]
+  ]);
+  for (const name of QUALIFIED_ARTIFACT_NAMES) {
     const expected = identities.get(name);
     if (!expected) throw new Error(`Qualified artifact checksum index omits ${name}`);
-    const actual = sha256Bytes(new Uint8Array(await readFile(join(directory, name))));
+    const actual = sha256Bytes(artifacts.get(name)!);
     if (actual !== expected) throw new Error(`Qualified artifact ${name} is not the reviewed release byte stream`);
   }
+  return {
+    manifest: captured.manifest,
+    hotDownload: captured.hotDownload,
+    detailsDownload: captured.detailsDownload,
+    stats: captured.stats
+  };
 }
 
-async function qualifiedArtifacts(directory: string): Promise<{
+export function qualifiedArtifacts(captured: VerifiedQualifiedArtifactBytes): {
   readonly bytes: QualifiedArtifactBytes;
   readonly counts: BrowserAlphaArtifactCounts;
-}> {
-  await verifyQualifiedArtifactIndex(directory);
+} {
   const manifest = parseAnalyzerReleaseManifest(
-    JSON.parse(await readFile(join(directory, 'manifest.json'), 'utf8')),
+    JSON.parse(new TextDecoder().decode(captured.manifest)),
     value => sha256Bytes(new TextEncoder().encode(value))
   );
+  if (manifest.hot.file !== 'hot.bin.gz' || manifest.details.file !== 'details.bin.gz') {
+    throw new Error('Qualified baseline manifest must select the captured release inventory');
+  }
   if (manifest.hot.encoding !== 'gzip' || manifest.details.encoding !== 'gzip') {
     throw new Error('Qualified baseline assets must use the reviewed gzip representation');
   }
-  const hotDownload = new Uint8Array(await readFile(join(directory, manifest.hot.file)));
-  const detailsDownload = new Uint8Array(await readFile(join(directory, manifest.details.file)));
+  const { hotDownload, detailsDownload } = captured;
   for (const [label, asset, bytes] of [
     ['hot', manifest.hot, hotDownload],
     ['details', manifest.details, detailsDownload]
@@ -235,7 +299,7 @@ async function qualifiedArtifacts(directory: string): Promise<{
   }
   const pack = openPack(hot);
   pack.verifyAll();
-  const stats = JSON.parse(await readFile(join(directory, 'stats.json'), 'utf8')) as {
+  const stats = JSON.parse(new TextDecoder().decode(captured.stats)) as {
     artifacts: BrowserAlphaArtifactCounts;
   };
   return {
@@ -262,8 +326,11 @@ async function compareQualifiedBaseline(
   readonly generatedOrderAttestation: ReturnType<typeof parseGeneratedOrderAttestation>;
   readonly generatedOrderAttestationSha256: string;
 }> {
-  const qualified = await qualifiedArtifacts(baseline.directory);
+  const qualified = qualifiedArtifacts(await verifyQualifiedArtifactIndex(baseline.directory));
   const attestationBytes = new Uint8Array(await readFile(baseline.directOrderAttestationPath));
+  if (sha256Bytes(attestationBytes) !== ROOT_ORDER_ATTESTATION_SHA256) {
+    throw new Error('Direct-root ordering attestation is not the reviewed baseline proof');
+  }
   const orderAttestation = parseRootPayloadOrderAttestation(
     JSON.parse(new TextDecoder().decode(attestationBytes))
   );
@@ -412,6 +479,12 @@ export async function writeSourceCompilerRelease(
     ['stats.json', report]
   ]);
   const generation = await publishAnalyzerRelease(input.output, files, {
+    beforeWrite: async () => {
+      await assertSourceReleaseDestination(input.repository, {
+        lexical: input.output,
+        physical: input.outputPhysical
+      });
+    },
     verify: async directory => {
       await assertExactReleaseInventory(directory, [...files.keys()]);
       const publishedHot = new Uint8Array(

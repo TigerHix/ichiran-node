@@ -98,6 +98,10 @@ test('keeps direct compilation separate from the Linux isolation proof', async (
   expect(isolation).toContain('mount --bind "$SOURCE_COMPILER_PRIVATE_TMP_DIRECTORY" /tmp');
   expect(isolation).toContain('/var/tmp/ichiran-source-private-tmp.XXXXXX');
   expect(isolation).not.toContain('mount -t tmpfs');
+  expect(isolation).toContain('requires executable private /tmp backing storage');
+  expect(isolation.indexOf('sc_exec_probe=/tmp/')).toBeLessThan(
+    isolation.indexOf('if [ "${1:-}" = --probe-only ]')
+  );
   expect(isolation).toContain('/run/postgresql /var/run/postgresql /tmp');
   expect(isolation).toContain("sc_output_physical=$(realpath -m \"$sc_output_candidate\")");
   expect(isolation.indexOf('if [ "${1:-}" = --probe-only ]')).toBeLessThan(
@@ -143,7 +147,8 @@ test.skipIf(process.platform !== 'linux')(
           runPostgresql: 'masked',
           varRunPostgresql: 'masked',
           tmp: 'private-disk-bind'
-        }
+        },
+        temporaryStorage: 'writable-executable'
       });
     } finally {
       await new Promise<void>(resolveClose => server.close(() => resolveClose()));
@@ -245,6 +250,26 @@ test('source compiler rejects a mismatched wrapper commit handshake', () => {
   });
   expect(result.exitCode).not.toBe(0);
   expect(result.stderr.toString()).toContain('does not match HEAD');
+});
+
+test('source compiler reserves lock selection for explicit update mode', () => {
+  const repository = resolve(import.meta.dir, '../../..');
+  const run = (args: readonly string[]) => Bun.spawnSync([
+    process.execPath,
+    'packages/data/src/source-compiler/cli.ts',
+    ...args
+  ], { cwd: repository, stdout: 'pipe', stderr: 'pipe' });
+  const baseline = run([
+    'baseline', '--out', 'work/release', '--pack-version', 'test',
+    '--source-lock', 'work/operator-selected.lock.json'
+  ]);
+  expect(baseline.exitCode).not.toBe(0);
+  expect(baseline.stderr.toString()).toContain(
+    'baseline uses data/source-compiler-sources.lock.json and does not accept --source-lock'
+  );
+  const update = run(['update', '--out', 'work/release', '--pack-version', 'test']);
+  expect(update.exitCode).not.toBe(0);
+  expect(update.stderr.toString()).toContain('update requires --source-lock');
 });
 
 test('private migration command preserves repository-root data paths', async () => {

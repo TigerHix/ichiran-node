@@ -17,6 +17,10 @@ import {
   type QualifiedArtifactBytes
 } from '../src/source-compiler/release-comparison.js';
 import { resolveSourceReleaseOutput } from '../src/source-compiler/release.js';
+import {
+  captureQualifiedArtifactBytes,
+  verifyQualifiedArtifactIndex
+} from '../src/source-compiler/release-output.js';
 import { assertSourceCompilerReleaseMode } from '../src/source-compiler/source-lock.js';
 
 const data = resolve(import.meta.dir, '../../../data');
@@ -117,6 +121,91 @@ function exactRootReview() {
 }
 
 describe('source release evidence', () => {
+  test('captures qualified baseline inputs once before their source files change', async () => {
+    const fixture = await mkdtemp(join(tmpdir(), 'ichiran-qualified-capture-'));
+    const originals = {
+      artifactIndex: 'index-before',
+      manifest: 'manifest-before',
+      hotDownload: 'hot-before',
+      detailsDownload: 'details-before',
+      stats: 'stats-before'
+    } as const;
+    try {
+      await Promise.all([
+        writeFile(join(fixture, 'artifact-sha256.txt'), originals.artifactIndex),
+        writeFile(join(fixture, 'manifest.json'), originals.manifest),
+        writeFile(join(fixture, 'hot.bin.gz'), originals.hotDownload),
+        writeFile(join(fixture, 'details.bin.gz'), originals.detailsDownload),
+        writeFile(join(fixture, 'stats.json'), originals.stats)
+      ]);
+      const captured = await captureQualifiedArtifactBytes(fixture);
+      await Promise.all([
+        writeFile(join(fixture, 'artifact-sha256.txt'), 'replaced'),
+        writeFile(join(fixture, 'manifest.json'), 'replaced'),
+        writeFile(join(fixture, 'hot.bin.gz'), 'replaced'),
+        writeFile(join(fixture, 'details.bin.gz'), 'replaced'),
+        writeFile(join(fixture, 'stats.json'), 'replaced')
+      ]);
+      const decode = (bytes: Uint8Array): string => new TextDecoder().decode(bytes);
+      expect({
+        artifactIndex: decode(captured.artifactIndex),
+        manifest: decode(captured.manifest),
+        hotDownload: decode(captured.hotDownload),
+        detailsDownload: decode(captured.detailsDownload),
+        stats: decode(captured.stats)
+      }).toEqual(originals);
+    } finally {
+      await rm(fixture, { recursive: true, force: true });
+    }
+  });
+
+  test.skipIf(process.platform === 'win32')(
+    'rejects a FIFO qualified checksum index without blocking',
+    async () => {
+      const fixture = await mkdtemp('/tmp/ichiran-qualified-fifo-');
+      try {
+        await Promise.all([
+          writeFile(join(fixture, 'manifest.json'), 'fixture'),
+          writeFile(join(fixture, 'hot.bin.gz'), 'fixture'),
+          writeFile(join(fixture, 'details.bin.gz'), 'fixture'),
+          writeFile(join(fixture, 'stats.json'), 'fixture')
+        ]);
+        const fifo = Bun.spawnSync(['mkfifo', join(fixture, 'artifact-sha256.txt')], {
+          stdout: 'pipe',
+          stderr: 'pipe'
+        });
+        expect(fifo.exitCode).toBe(0);
+        const started = performance.now();
+        await expect(verifyQualifiedArtifactIndex(fixture)).rejects.toThrow('not a regular file');
+        expect(performance.now() - started).toBeLessThan(1_000);
+      } finally {
+        await rm(fixture, { recursive: true, force: true });
+      }
+    }
+  );
+
+  test.skipIf(process.platform === 'win32')(
+    'rejects a symlinked qualified checksum index',
+    async () => {
+      const fixture = await mkdtemp('/tmp/ichiran-qualified-symlink-');
+      try {
+        await Promise.all([
+          writeFile(join(fixture, 'outside-index.txt'), 'not the reviewed index'),
+          writeFile(join(fixture, 'manifest.json'), 'fixture'),
+          writeFile(join(fixture, 'hot.bin.gz'), 'fixture'),
+          writeFile(join(fixture, 'details.bin.gz'), 'fixture'),
+          writeFile(join(fixture, 'stats.json'), 'fixture')
+        ]);
+        await symlink('outside-index.txt', join(fixture, 'artifact-sha256.txt'));
+        await expect(verifyQualifiedArtifactIndex(fixture)).rejects.toThrow(
+          'not a regular file'
+        );
+      } finally {
+        await rm(fixture, { recursive: true, force: true });
+      }
+    }
+  );
+
   test('builds the surface compiler with a pinned toolchain in the private release temp', async () => {
     const source = await readFile(resolve(
       import.meta.dir,

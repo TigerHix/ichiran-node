@@ -19,6 +19,8 @@ Every other difference is a hard failure. The baseline manifest, compressed
 assets, and `stats.json` must
 also match the pinned SHA-256 checksum index from the immutable qualified
 release; a self-consistent local replacement cannot become a new baseline.
+Baseline mode always uses that tracked lock and rejects `--source-lock`; only update
+mode accepts—and requires—an explicit transition lock.
 
 A fresh clone acquires that comparison pack directly from the immutable GitHub
 release. The acquisition command pins the checksum-index identity, then verifies
@@ -31,7 +33,9 @@ bun scripts/acquire-qualified-source-compiler-baseline.ts work/m2-baseline
 An existing directory is verified in place; it is never silently refreshed. A
 missing directory is staged, verified and renamed into place only after all five
 published files pass. This makes `work/m2-baseline` a reproducible cache rather
-than an undeclared prerequisite.
+than an undeclared prerequisite. Release comparison reads each of the four named
+artifacts once, verifies those captured buffers, and parses only those same buffers;
+replacing the ignored cache after capture cannot change the comparison authority.
 
 The source lock assigns exactly one verified file to each of nine compiler roles:
 JMdict, Kanjidic2, extra entries, municipalities, wards, chronological errata,
@@ -97,7 +101,13 @@ root. It supports Linux/macOS and WSL; native Windows is not supported because t
 surface compiler and atomic release activation use POSIX facilities.
 The output must be absent or an atomic symlink. Its sibling `.generations` root must
 be a real directory, never a symlink, and published artifacts must be regular
-non-symlink files.
+non-symlink files. Cooperating identical first publications remain idempotent, but
+the caller exclusively owns the output path, its `.generations` root, and all ancestors
+throughout publication. First activation never overwrites an existing path, and state
+changes observed immediately before replacement are rejected. The source compiler also
+compares the initial lexical and physical output identity immediately before the
+publisher creates its generation root or writes bytes, so even a swapped `work/`
+ancestor that still resolves elsewhere under `work/` is rejected.
 
 ## PostgreSQL-unavailable proof
 
@@ -108,7 +118,7 @@ files and runs every other data test on a machine with no database configuration
 bun run --cwd packages/data test:source
 ```
 
-At the integration checkpoint this runs 152 tests with no skip. The excluded files
+At the integration checkpoint this runs 160 tests with no skip. The excluded files
 contain nine legacy load/conjugation cases and three exhaustive PostgreSQL-oracle
 comparisons. To prove that migration coverage remains available, run the complete
 suite against the test database:
@@ -152,6 +162,9 @@ removed after the namespace exits, the isolation wrapper rejects a
 repository physically located under `/tmp` and any normalized or symlink-resolved
 `--out` destination under `/tmp`. Use the checkout's ignored `work/` directory or a
 persistent external path instead.
+The `/var/tmp` backing filesystem must permit executable files; the namespace wrapper
+creates and runs a tiny private probe before reporting capability or starting a build,
+so a `noexec` host fails immediately rather than at the later Rust compiler launch.
 The wrapper never stops or reconfigures the host PostgreSQL service. Its mount
 and network changes disappear when the child exits, and it removes only the exact
 private `/var/tmp/ichiran-source-private-tmp.*` directory that it created. A low-cost capability probe

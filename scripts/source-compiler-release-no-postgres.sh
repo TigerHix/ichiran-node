@@ -17,7 +17,15 @@ if [ "${SOURCE_COMPILER_POSTGRES_ISOLATED:-}" = 1 ]; then
   mount --bind "$SOURCE_COMPILER_PRIVATE_TMP_DIRECTORY" /tmp
   chmod 1777 /tmp
   test -w /tmp
-  test -x /tmp
+  sc_exec_probe=/tmp/.ichiran-exec-probe.$$
+  printf '%s\n' '#!/bin/sh' 'exit 0' > "$sc_exec_probe"
+  chmod 700 "$sc_exec_probe"
+  if ! "$sc_exec_probe" >/dev/null 2>&1; then
+    rm -f "$sc_exec_probe"
+    echo 'PostgreSQL-unavailable release proof requires executable private /tmp backing storage' >&2
+    exit 1
+  fi
+  rm -f "$sc_exec_probe"
 
   for sc_socket_directory in /run/postgresql /var/run/postgresql /tmp; do
     for sc_port in 5432 5433; do
@@ -32,7 +40,7 @@ if [ "${SOURCE_COMPILER_POSTGRES_ISOLATED:-}" = 1 ]; then
   unset DATABASE_URL ICHIRAN_DB_URL PGHOST PGPORT PGSERVICE PGSERVICEFILE
   if [ "${1:-}" = --probe-only ]; then
     printf '%s\n' \
-      '{"postgresqlUnavailable":true,"loopback":"down","unixSockets":{"runPostgresql":"masked","varRunPostgresql":"masked","tmp":"private-disk-bind"},"ports":[5432,5433]}'
+      '{"postgresqlUnavailable":true,"loopback":"down","unixSockets":{"runPostgresql":"masked","varRunPostgresql":"masked","tmp":"private-disk-bind"},"temporaryStorage":"writable-executable","ports":[5432,5433]}'
     exit 0
   fi
   exec sh scripts/source-compiler-release.sh "$@"

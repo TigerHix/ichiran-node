@@ -6,6 +6,7 @@ import {
   mkdtemp,
   readFile,
   readdir,
+  rename,
   rm,
   symlink,
   writeFile
@@ -25,6 +26,10 @@ import {
   publishAnalyzerRelease
 } from '../src/browser-pack/release-publication.js';
 import { measureProductionShell } from '../src/browser-pack/shell-measurement.js';
+import {
+  assertSourceReleaseDestination,
+  resolveSourceReleaseDestination
+} from '../src/source-compiler/release.js';
 
 const temporaryDirectories: string[] = [];
 
@@ -84,6 +89,37 @@ describe('atomic release publication', () => {
       .resolves.toBeUndefined();
   });
 
+  test('does not overwrite a regular file that appears before first activation', async () => {
+    const root = await temporary();
+    const output = join(root, 'browser-alpha');
+    const files = new Map([['manifest.json', new TextEncoder().encode('release')]]);
+
+    await expect(publishAnalyzerRelease(output, files, {
+      verify: async () => undefined,
+      beforeActivate: async () => { await writeFile(output, 'foreign'); }
+    })).rejects.toThrow('appeared before exclusive first activation');
+    expect((await lstat(output)).isFile()).toBeTrue();
+    expect(await readFile(output, 'utf8')).toBe('foreign');
+  });
+
+  test('replaces an active release only while its exact symlink is still owned', async () => {
+    const root = await temporary();
+    const output = join(root, 'browser-alpha');
+    const first = new Map([['manifest.json', new TextEncoder().encode('first')]]);
+    const second = new Map([['manifest.json', new TextEncoder().encode('second')]]);
+    await publishAnalyzerRelease(output, first, { verify: async () => undefined });
+
+    await expect(publishAnalyzerRelease(output, second, {
+      verify: async () => undefined,
+      beforeActivate: async () => {
+        await rm(output);
+        await writeFile(output, 'foreign');
+      }
+    })).rejects.toThrow('changed before release activation');
+    expect((await lstat(output)).isFile()).toBeTrue();
+    expect(await readFile(output, 'utf8')).toBe('foreign');
+  });
+
   test('publishes to a fresh nested destination', async () => {
     const root = await temporary();
     const output = join(root, 'new', 'nested', 'browser-alpha');
@@ -139,6 +175,57 @@ describe('atomic release publication', () => {
     await symlink(external, join(generation, 'manifest.json'));
     await expect(assertActiveReleaseGeneration(output, ['manifest.json']))
       .rejects.toThrow('not a regular file');
+  });
+
+  test.skipIf(process.platform === 'win32')(
+    'rejects a FIFO artifact without blocking on open',
+    async () => {
+      const root = await mkdtemp('/tmp/ichiran-release-fifo-');
+      temporaryDirectories.push(root);
+      const output = join(root, 'browser-alpha');
+      const files = new Map([['manifest.json', new TextEncoder().encode('expected bytes')]]);
+      const generation = join(
+        `${output}.generations`,
+        analyzerReleaseGenerationIdentity(files)
+      );
+      await mkdir(generation, { recursive: true });
+      const fifo = Bun.spawnSync(['mkfifo', join(generation, 'manifest.json')], {
+        stdout: 'pipe',
+        stderr: 'pipe'
+      });
+      expect(fifo.exitCode).toBe(0);
+
+      const started = performance.now();
+      await expect(publishAnalyzerRelease(output, files, { verify: async () => undefined }))
+        .rejects.toThrow('not a regular file');
+      expect(performance.now() - started).toBeLessThan(1_000);
+    }
+  );
+
+  test('rejects physical destination drift through a swapped work ancestor', async () => {
+    const root = await temporary();
+    const repository = join(root, 'repository');
+    const work = join(repository, 'work');
+    const selectedParent = join(work, 'selected');
+    const movedParent = join(work, 'selected-before-swap');
+    const otherParent = join(work, 'other');
+    await Promise.all([
+      mkdir(selectedParent, { recursive: true }),
+      mkdir(otherParent, { recursive: true })
+    ]);
+    const selected = await resolveSourceReleaseDestination(
+      repository,
+      'work/selected/release'
+    );
+    await rename(selectedParent, movedParent);
+    await symlink('other', selectedParent, 'dir');
+    const files = new Map([['manifest.json', new TextEncoder().encode('release')]]);
+
+    await expect(publishAnalyzerRelease(selected.lexical, files, {
+      beforeWrite: async () => { await assertSourceReleaseDestination(repository, selected); },
+      verify: async () => undefined
+    })).rejects.toThrow('physical output changed before publication');
+    expect(await readdir(otherParent)).toEqual([]);
   });
 
   test('rejects extra files in a release generation', async () => {
