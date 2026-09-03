@@ -48,6 +48,9 @@ apple/scripts/run-tests.sh work/swift-source-release \
   --same-pack --source-lock data/source-compiler-update-2026-09-02.lock.json
 ```
 
+The same-pack source lock must be a tracked path inside this repository because the
+qualification corpus binds it to the current Git checkout.
+
 Override the default simulator with `ICHIRAN_IOS_DESTINATION`, for example
 `platform=iOS Simulator,name=iPhone 17 Pro,OS=26.5`. Xcode's Address Sanitizer and
 Thread Sanitizer can be enabled on the same generated project with

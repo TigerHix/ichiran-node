@@ -14,7 +14,11 @@ if [ "${1:-}" = --same-pack ]; then
     echo "--same-pack requires --source-lock LOCK_FILE" >&2
     exit 2
   }
-  source_lock="$(cd "$(dirname "$3")" && pwd)/$(basename "$3")"
+  source_lock_absolute="$(cd "$(dirname "$3")" && pwd)/$(basename "$3")"
+  case "$source_lock_absolute" in
+    "$repository"/*) source_lock="${source_lock_absolute#"$repository"/}" ;;
+    *) echo "source lock must be inside the repository: $source_lock_absolute" >&2; exit 2 ;;
+  esac
   mode_args=(--same-pack)
   shift 3
 fi

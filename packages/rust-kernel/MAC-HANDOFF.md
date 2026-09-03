@@ -164,7 +164,7 @@ bash packages/rust-kernel/tests/run_c_harness.sh \
   "$(pwd)/work/portable-core-260118-baseline"
 bun run qualify:native-same-pack -- /absolute/path/to/source-release
 apple/scripts/run-tests.sh /absolute/path/to/source-release \
-  --same-pack --source-lock /absolute/path/to/source-lock.json
+  --same-pack --source-lock data/source-compiler-update-2026-09-02.lock.json
 ```
 
 The required output covers 1,236 clean analyses plus three raw astral/lone-surrogate
