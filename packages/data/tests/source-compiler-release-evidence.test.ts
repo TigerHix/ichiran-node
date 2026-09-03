@@ -117,6 +117,17 @@ function exactRootReview() {
 }
 
 describe('source release evidence', () => {
+  test('builds the surface compiler with a pinned toolchain in the private release temp', async () => {
+    const source = await readFile(resolve(
+      import.meta.dir,
+      '../src/source-compiler/release-output.ts'
+    ), 'utf8');
+    expect(source).toContain("SOURCE_COMPILER_RUST_TOOLCHAIN = '1.92.0'");
+    expect(source).toContain("join(temporaryDirectory, 'surface-compiler-target')");
+    expect(source).toContain("'--target-dir', target");
+    expect(source).not.toContain('packages/data/tools/surface-index/target/release');
+  });
+
   test('confines in-repository output to work and permits fresh external output', async () => {
     const root = await mkdtemp(join(tmpdir(), 'ichiran-release-output-'));
     const repository = join(root, 'repository');
@@ -129,6 +140,7 @@ describe('source release evidence', () => {
       ]);
       await symlink(external, join(repository, '.git/source-release'));
       await symlink(external, join(repository, 'work/escape'));
+      await symlink(external, join(repository, 'work/escaped-generations.generations'));
       await symlink(join(repository, '.git'), join(external, 'into-git'));
       await writeFile(join(repository, 'work/not-a-directory'), 'not a directory');
       await mkdir(join(repository, 'work/existing-directory'));
@@ -139,6 +151,8 @@ describe('source release evidence', () => {
         .rejects.toThrow('below work/');
       await expect(resolveSourceReleaseOutput(repository, 'work/escape'))
         .rejects.toThrow('physical work directory');
+      await expect(resolveSourceReleaseOutput(repository, 'work/escaped-generations'))
+        .rejects.toThrow('generations root must be a real directory');
       await expect(resolveSourceReleaseOutput(repository, join(external, 'into-git/release')))
         .rejects.toThrow('below work/');
       await expect(resolveSourceReleaseOutput(repository, 'work/not-a-directory'))

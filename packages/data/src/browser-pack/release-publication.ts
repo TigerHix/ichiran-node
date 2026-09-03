@@ -1,8 +1,9 @@
 import { createHash, randomUUID } from 'node:crypto';
+import { constants } from 'node:fs';
 import {
   lstat,
   mkdir,
-  readFile,
+  open,
   readdir,
   realpath,
   rename,
@@ -37,7 +38,9 @@ export async function assertActiveReleaseGeneration(
   const generation = await realpath(output);
   await assertExactReleaseInventory(generation, expectedNames);
   const files = new Map<string, Uint8Array>();
-  for (const name of expectedNames) files.set(name, new Uint8Array(await readFile(join(generation, name))));
+  for (const name of expectedNames) {
+    files.set(name, new Uint8Array(await readRegularArtifact(generation, name)));
+  }
   const expected = analyzerReleaseGenerationIdentity(files);
   if (basename(generation) !== expected) {
     throw new Error(`Active release generation ${basename(generation)} does not match bytes ${expected}`);
@@ -63,10 +66,31 @@ async function assertGenerationBytes(
 ): Promise<void> {
   await assertExactReleaseInventory(directory, [...files.keys()]);
   for (const [name, expected] of files) {
-    const actual = await readFile(join(directory, name));
+    const actual = await readRegularArtifact(directory, name);
     if (!Buffer.from(actual).equals(Buffer.from(expected))) {
       throw new Error(`Existing release generation differs at ${name}`);
     }
+  }
+}
+
+async function readRegularArtifact(directory: string, name: string): Promise<Buffer> {
+  const path = join(directory, name);
+  let handle;
+  try {
+    handle = await open(path, constants.O_RDONLY | constants.O_NOFOLLOW);
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === 'ELOOP') {
+      throw new Error(`Release artifact is not a regular file: ${path}`);
+    }
+    throw error;
+  }
+  try {
+    if (!(await handle.stat()).isFile()) {
+      throw new Error(`Release artifact is not a regular file: ${path}`);
+    }
+    return await handle.readFile();
+  } finally {
+    await handle.close();
   }
 }
 
@@ -79,6 +103,23 @@ async function assertPublishableOutput(output: string): Promise<void> {
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
   }
+}
+
+async function prepareGenerationsRoot(output: string): Promise<string> {
+  const generations = `${output}.generations`;
+  await mkdir(generations, { recursive: true });
+  const info = await lstat(generations);
+  if (info.isSymbolicLink() || !info.isDirectory()) {
+    throw new Error(`${generations} must be a real directory, never a symlink`);
+  }
+  const [physicalParent, physicalGenerations] = await Promise.all([
+    realpath(dirname(output)),
+    realpath(generations)
+  ]);
+  if (physicalGenerations !== join(physicalParent, basename(generations))) {
+    throw new Error(`${generations} escapes its physical destination directory`);
+  }
+  return generations;
 }
 
 /**
@@ -100,8 +141,7 @@ export async function publishAnalyzerRelease(
   // writing any bytes. Moving old data aside is an explicit operator action.
   await assertPublishableOutput(output);
   const parent = dirname(output);
-  const generations = `${output}.generations`;
-  await mkdir(generations, { recursive: true });
+  const generations = await prepareGenerationsRoot(output);
   const identity = analyzerReleaseGenerationIdentity(files);
   const generation = join(generations, identity);
   const stage = join(generations, `.stage-${randomUUID()}`);

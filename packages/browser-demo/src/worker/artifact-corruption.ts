@@ -10,6 +10,7 @@ const ARTIFACT_ERROR_NAMES = new Set([
 
 const ARTIFACT_CORRUPTION_CODES = new Set([
   'invalid-header',
+  'unsupported-version',
   'invalid-directory',
   'invalid-states',
   'invalid-edges',
@@ -20,7 +21,7 @@ const ARTIFACT_CORRUPTION_CODES = new Set([
   'missing-section'
 ]);
 
-/** True only for an explicit integrity failure in immutable analyzer bytes. */
+/** True only for explicit invalidity in immutable installed analyzer bytes. */
 export function isArtifactCorruption(error: unknown): boolean {
   if (!(error instanceof Error) || !ARTIFACT_ERROR_NAMES.has(error.name)) return false;
   const code = (error as Error & { readonly code?: unknown }).code;

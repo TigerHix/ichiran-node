@@ -494,6 +494,7 @@ async function main(): Promise<void> {
     details: wasmDetails,
     wasm: new Uint8Array(wasmBytes)
   });
+  const wasmOpenDetailReads = [...wasmDetails.reads];
 
   const rawStats = stats(['segmentation', 'cli', 'hard', 'counters', 'entities', 'probes']);
   const rawDifferences: unknown[] = [];
@@ -657,7 +658,7 @@ async function main(): Promise<void> {
       details: { path: detailsPath, bytes: detailsStat.size, sha256: detailsSha256 },
       wasm: { path: wasmPath, bytes: wasmBytes.byteLength, sha256: wasmSha256 }
     },
-    rawPresentationFree: {
+    rawAnalyzer: {
       policy: mode === 'same-pack'
         ? 'Complete public DTO equality against the TypeScript same-pack oracle after normalizing only computeMs; exact array order and candidateId values.'
         : 'Exact presentation-free object values and exact array order against the frozen TypeScript oracle; no tie canonicalization.',
@@ -702,10 +703,14 @@ async function main(): Promise<void> {
       differences: detailedDifferences
     },
     detailRandomAccess: {
+      openReads: wasmOpenDetailReads.length,
+      openBytes: wasmOpenDetailReads.reduce((sum, value) => sum + value.byteLength, 0),
+      openMaximumReadBytes: Math.max(...wasmOpenDetailReads.map(value => value.byteLength)),
       reads: wasmDetails.reads.length,
       bytes: wasmDetails.reads.reduce((sum, value) => sum + value.byteLength, 0),
       maximumReadBytes: Math.max(...wasmDetails.reads.map(value => value.byteLength)),
-      wholeFileRead: wasmDetails.reads.some(value => value.byteLength === detailFile.size)
+      wholeFileRead: wasmOpenDetailReads.reduce((sum, value) => sum + value.byteLength, 0)
+        >= detailFile.size
     },
     allowlist: { entries: 0 }
   };
@@ -715,7 +720,10 @@ async function main(): Promise<void> {
     || romanizationStats.exact !== 5
     || detailedExact !== 702
     || (mode === 'immutable-baseline' && fallbackExact !== 301)
-    || (mode === 'same-pack' && report.detailRandomAccess.wholeFileRead)
+    || (mode === 'same-pack' && (
+      report.detailRandomAccess.openReads !== 2
+      || report.detailRandomAccess.wholeFileRead
+    ))
   ) {
     process.exitCode = 1;
   }

@@ -11,7 +11,7 @@ git fetch origin codex/integrated-edge-cutover
 candidate=$(git rev-parse origin/codex/integrated-edge-cutover)
 git switch --detach "$candidate"
 test "$(git rev-parse HEAD)" = "$candidate"
-git status --short
+test -z "$(git status --porcelain=v1 --untracked-files=all)"
 ```
 
 The integrated Linux/WSL report is
@@ -43,7 +43,8 @@ recreate analyzer, detail, or presentation semantics.
 
 ## Build targets
 
-Use the checked-in Rust toolchain and locked dependencies:
+Install Bun 1.3.5 for source-release and host-qualification commands. Use rustup
+with the checked-in Rust 1.92.0 toolchain and locked dependencies for native builds:
 
 ```sh
 rustup target add aarch64-apple-darwin x86_64-apple-darwin
@@ -165,3 +166,10 @@ simulator and physical devices.
 
 WSL qualification does not claim XCFramework, Swift, simulator, Safari, or physical
 device validation. Those remain M5B Mac-owned gates.
+
+Before signing off the XCFramework/Swift package and its test evidence, repeat:
+
+```sh
+test "$(git rev-parse HEAD)" = "$candidate"
+test -z "$(git status --porcelain=v1 --untracked-files=all)"
+```

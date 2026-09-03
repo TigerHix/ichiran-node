@@ -61,12 +61,26 @@ bun run source:release -- baseline \
   --pack-version ichiran-260118-source
 ```
 
-The command requires a clean checkout. There is no release option that can
+Release compilation requires Bun 1.3.5 and a rustup installation that provides
+Rust 1.92.0. These are the pinned prerequisites on Linux, macOS, and WSL; native
+Windows is not supported. The root wrapper rejects any other Bun version before
+building, and the private surface-compiler build fails if `cargo +1.92.0` is absent.
+
+The command requires a clean checkout. The root wrapper captures HEAD before building,
+checks the same clean HEAD after building, and passes that commit to the built CLI; the
+CLI requires that matching internal launch value. Direct CLI/dist invocation is
+unsupported; compiler provenance comes from the wrapper's mandatory fresh build and
+same-clean-HEAD checks, not from a self-identifying compiled binary.
+There is no release option that can
 bypass this rule: the manifest's full 40-character commit describes the code
 and tracked inputs, while the verified source-lock digest describes every
 pinned external input. The command checks the checkout before work, then checks
 the same commit and clean state again immediately before atomically activating
-the finished generation. Full releases use Bun's `--smol` mode so garbage
+the finished generation and after the CLI returns. Each locked source is copied from
+the bytes verified against the lock into the private release temporary directory, and
+every parser consumes that immutable snapshot. The Rust surface compiler is built with
+toolchain 1.92.0 into a fresh target directory under the same private temporary root.
+Full releases use Bun's `--smol` mode so garbage
 collection bounds the compiler's large transient object graph. The
 separate `source:release:isolated` command applies the same mode automatically.
 The two
@@ -81,6 +95,9 @@ toolchain or import `@ichiran/reference-postgres`, and it leaves the core produc
 entry point usable. The built compiler runs from and stamps that same clean repository
 root. It supports Linux/macOS and WSL; native Windows is not supported because the
 surface compiler and atomic release activation use POSIX facilities.
+The output must be absent or an atomic symlink. Its sibling `.generations` root must
+be a real directory, never a symlink, and published artifacts must be regular
+non-symlink files.
 
 ## PostgreSQL-unavailable proof
 
@@ -91,7 +108,7 @@ files and runs every other data test on a machine with no database configuration
 bun run --cwd packages/data test:source
 ```
 
-At the integration checkpoint this runs 143 tests with no skip. The excluded files
+At the integration checkpoint this runs 152 tests with no skip. The excluded files
 contain nine legacy load/conjugation cases and three exhaustive PostgreSQL-oracle
 comparisons. To prove that migration coverage remains available, run the complete
 suite against the test database:
@@ -115,10 +132,11 @@ bun test packages/data/tests/source-compiler-release-evidence.test.ts \
 
 For the milestone gate, run the complete baseline through the Linux-only
 isolation wrapper. It creates an unprivileged user, mount and network namespace.
-An empty bind mount hides the host's PostgreSQL Unix socket directory, while the
-new network namespace starts with loopback down. The wrapper proves both
-transports are unavailable on ports 5432 and 5433, clears database connection
-environment variables, and only then starts the compiler:
+An empty bind mount hides `/run/postgresql` (and its `/var/run` alias), an owned
+disk-backed directory under `/var/tmp` is bind-mounted as the private mode-1777
+`/tmp`, and the new network namespace starts with loopback down. The wrapper verifies
+that ports 5432 and 5433 have no sockets in any of those locations, clears database
+connection environment variables, and only then starts the compiler:
 
 ```sh
 bun run source:release:isolated -- baseline \
@@ -127,9 +145,16 @@ bun run source:release:isolated -- baseline \
 ```
 
 This is the final availability proof, not merely an invalid connection string:
-neither a local socket nor a network route exists inside the build namespace.
+neither a host local socket nor a network route exists inside the build namespace,
+while large compiler spools and the fresh Cargo target remain on the private
+disk-backed `/tmp` bind rather than consuming RAM. Because that owned directory is
+removed after the namespace exits, the isolation wrapper rejects a
+repository physically located under `/tmp` and any normalized or symlink-resolved
+`--out` destination under `/tmp`. Use the checkout's ignored `work/` directory or a
+persistent external path instead.
 The wrapper never stops or reconfigures the host PostgreSQL service. Its mount
-and network changes disappear when the child exits. A low-cost capability probe
+and network changes disappear when the child exits, and it removes only the exact
+private `/var/tmp/ichiran-source-private-tmp.*` directory that it created. A low-cost capability probe
 can be run without starting the compiler:
 
 ```sh

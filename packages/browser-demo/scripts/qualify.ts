@@ -38,15 +38,12 @@ const productionEnvironment = { ...process.env };
 delete productionEnvironment.ICHIRAN_TYPESCRIPT_ORACLE;
 delete productionEnvironment.ICHIRAN_QUALIFIED_ARTIFACT;
 let release = resolve(repositoryRoot, 'dist', 'browser-alpha');
-let skipE2e = false;
 for (let index = 2; index < process.argv.length; index++) {
   const argument = process.argv[index];
   if (argument === '--release') {
     const value = process.argv[++index];
     if (!value) throw new Error('--release requires a directory');
     release = resolve(repositoryRoot, value);
-  } else if (argument === '--skip-e2e') {
-    skipE2e = true;
   } else {
     throw new Error(`Unknown qualification argument: ${argument}`);
   }
@@ -140,16 +137,13 @@ if (firstInstallBytes > firstInstallLimit) {
     `First-install bytes ${firstInstallBytes} exceed the ${firstInstallLimit}-byte limit`
   );
 }
-if (!skipE2e) {
-  await run('bun', ['run', 'test:e2e'], packageRoot, false, {
-    ...productionEnvironment,
-    ICHIRAN_E2E_M1_WITNESSES: JSON.stringify(samePackWitnesses)
-  });
-}
+await run('bun', ['run', 'test:e2e'], packageRoot, false, {
+  ...productionEnvironment,
+  ICHIRAN_E2E_M1_WITNESSES: JSON.stringify(samePackWitnesses)
+});
 assertCleanCheckout(qualificationCommit);
 
 console.log(
   `Browser qualification passed for ${release}: ${releaseDownloadBytes} release bytes + `
   + `${shellBytes} shell bytes = ${firstInstallBytes} first-install bytes`
-  + (skipE2e ? ' (E2E skipped)' : '')
 );

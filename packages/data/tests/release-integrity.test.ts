@@ -1,6 +1,15 @@
 import { afterEach, describe, expect, test } from 'bun:test';
 import { createHash } from 'node:crypto';
-import { lstat, mkdtemp, readFile, rm, writeFile, mkdir } from 'node:fs/promises';
+import {
+  lstat,
+  mkdir,
+  mkdtemp,
+  readFile,
+  readdir,
+  rm,
+  symlink,
+  writeFile
+} from 'node:fs/promises';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 
@@ -12,6 +21,7 @@ import {
 import {
   assertActiveReleaseGeneration,
   assertExactReleaseInventory,
+  analyzerReleaseGenerationIdentity,
   publishAnalyzerRelease
 } from '../src/browser-pack/release-publication.js';
 import { measureProductionShell } from '../src/browser-pack/shell-measurement.js';
@@ -74,6 +84,14 @@ describe('atomic release publication', () => {
       .resolves.toBeUndefined();
   });
 
+  test('publishes to a fresh nested destination', async () => {
+    const root = await temporary();
+    const output = join(root, 'new', 'nested', 'browser-alpha');
+    const files = new Map([['manifest.json', new TextEncoder().encode('first')]]);
+    await publishAnalyzerRelease(output, files, { verify: async () => undefined });
+    expect(await readFile(join(output, 'manifest.json'), 'utf8')).toBe('first');
+  });
+
   test('rejects a historical flat output without moving or writing anything', async () => {
     const root = await temporary();
     const output = join(root, 'browser-alpha');
@@ -86,6 +104,41 @@ describe('atomic release publication', () => {
     expect((await lstat(output)).isDirectory()).toBeTrue();
     expect(await readFile(join(output, 'manifest.json'), 'utf8')).toBe('historical bytes');
     await expect(lstat(`${output}.generations`)).rejects.toMatchObject({ code: 'ENOENT' });
+  });
+
+  test('rejects a symlinked generations root before writing outside the destination', async () => {
+    const root = await temporary();
+    const outside = await temporary();
+    const output = join(root, 'browser-alpha');
+    await symlink(outside, `${output}.generations`, 'dir');
+    const files = new Map([['manifest.json', new TextEncoder().encode('new bytes')]]);
+
+    await expect(publishAnalyzerRelease(output, files, { verify: async () => undefined }))
+      .rejects.toThrow('real directory, never a symlink');
+    expect(await readdir(outside)).toEqual([]);
+    await expect(lstat(output)).rejects.toMatchObject({ code: 'ENOENT' });
+  });
+
+  test('rejects symlinked artifacts in existing and active generations', async () => {
+    const root = await temporary();
+    const output = join(root, 'browser-alpha');
+    const bytes = new TextEncoder().encode('expected bytes');
+    const files = new Map([['manifest.json', bytes]]);
+    const generations = `${output}.generations`;
+    const generation = join(generations, analyzerReleaseGenerationIdentity(files));
+    const external = join(root, 'external-manifest.json');
+    await mkdir(generation, { recursive: true });
+    await writeFile(external, bytes);
+    await symlink(external, join(generation, 'manifest.json'));
+
+    await expect(publishAnalyzerRelease(output, files, { verify: async () => undefined }))
+      .rejects.toThrow('not a regular file');
+    await rm(generation, { recursive: true });
+    await publishAnalyzerRelease(output, files, { verify: async () => undefined });
+    await rm(join(generation, 'manifest.json'));
+    await symlink(external, join(generation, 'manifest.json'));
+    await expect(assertActiveReleaseGeneration(output, ['manifest.json']))
+      .rejects.toThrow('not a regular file');
   });
 
   test('rejects extra files in a release generation', async () => {

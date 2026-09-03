@@ -40,5 +40,7 @@ describe('core public entry points', () => {
     expect(runtime).not.toContain("from './details.js'");
     expect(root).not.toContain("from './analyzer-result.js'");
     expect(runtime).not.toContain("from './analyzer-result.js'");
+    expect(root).not.toContain("export * from './runtime.js'");
+    expect(root).not.toContain("export * from './release-manifest.js'");
   });
 });

@@ -48,7 +48,9 @@ report/attestation and clean-release validation, Rust same-pack qualification, a
   execution lives only under `@ichiran/core/qualification`.
 - The canonical browser qualifier rejects `ICHIRAN_TYPESCRIPT_ORACLE=1`, removes the
   variable from production build/audit/E2E child environments, and requires a Rust
-  build audit. The separately named `build:qualification-typescript-oracle` command
+  build audit across the complete main/Worker runtime graph. It always runs the
+  offline, corruption/recovery, witness, and performance E2E suite before reporting
+  success. The separately named `build:qualification-typescript-oracle` command
   exists only for frozen-oracle diagnostics.
 - `@ichiran/data` is private repository tooling and exports/executes only the source
   compiler. Clean-archive qualification builds its exact module graph without database
@@ -56,9 +58,14 @@ report/attestation and clean-release validation, Rust same-pack qualification, a
   command, which preserves repository-root path semantics.
 - `source:release` first performs a TypeScript-only complete core build using the
   checked-in generated WASM, then builds data without the reference package and runs
-  the compiler. The Linux-only `source:release:isolated` command
+  the compiler. The canonical wrapper requires Bun 1.3.5, while its private Rust
+  surface compiler requires rustup toolchain 1.92.0. The Linux-only
+  `source:release:isolated` command
   performs that preparation and compilation inside its PostgreSQL-free namespace and
-  has no `pg_isready` dependency. The compiler CLI supports Linux/macOS and WSL, not
+  masks `/run/postgresql`, replaces host `/tmp` with a private writable disk-backed
+  bind from an owned `/var/tmp` directory, and has
+  no `pg_isready` dependency. It rejects checkouts and outputs under ephemeral `/tmp`.
+  The compiler CLI supports Linux/macOS and WSL, not
   native Windows, and its built executable must run from the checkout it stamps.
 
 `candidateId` is a request-local reference. It may change across calls, packs, or
@@ -71,6 +78,11 @@ have no corresponding field. A regression test locks both halves of that contrac
 Two previously nonexistent output directories must be compiled independently from the
 same clean report-bearing commit with `source:release:isolated`. All four release files
 must compare byte-for-byte. Both manifests must contain the current 40-character HEAD.
+The build/run handshake pins that HEAD across compilation and CLI execution. All nine
+locked inputs are copied from their verified bytes into a private temporary snapshot;
+the compiler never rereads live locked paths. The pinned Rust toolchain builds the
+surface compiler in a fresh target under that temporary directory. Atomic publication
+rejects symlinked generation roots and symlinked artifacts.
 The qualified January source semantics produce these stable installed identities:
 
 | Installed asset | Bytes | SHA-256 |
@@ -110,7 +122,8 @@ The Rust/WASM same-pack differential runs on the fresh source release and requir
   oracle;
 - 5/5 standalone romanizations exact;
 - 702/702 retained detailed operations exact;
-- zero allowlist entries and no eager whole-details-store read.
+- zero allowlist entries; exactly two open-time detail reads; and cumulative open-time
+  detail bytes strictly smaller than the whole details store.
 
 The native same-pack command resolves the activated release to one physical generation,
 materializes it after verification, and drives the real C ABI. It requires 1,236 clean
@@ -139,21 +152,30 @@ These are the successful release gates. Diagnostic attempts are not represented 
 complete shell history.
 
 ```sh
-git status --short
-test "$(git rev-parse HEAD)" = "$(git rev-parse origin/codex/integrated-edge-cutover)"
+set -eu
+qualified_head=$(git rev-parse HEAD)
+assert_qualified_checkout() {
+  test "$(git rev-parse HEAD)" = "$qualified_head"
+  test -z "$(git status --porcelain=v1 --untracked-files=all)"
+}
+assert_qualified_checkout
 
 bun install --frozen-lockfile
 bun run audit:data-package
 bun run typecheck:compiler
 bun run typecheck
 bun run test
+assert_qualified_checkout
 
 bun run source:release:isolated -- baseline --out <release-a> --pack-version <version>
+assert_qualified_checkout
 bun run source:release:isolated -- baseline --out <release-b> --pack-version <version>
+assert_qualified_checkout
 cmp <release-a>/manifest.json <release-b>/manifest.json
 cmp <release-a>/hot.bin.gz <release-b>/hot.bin.gz
 cmp <release-a>/details.bin.gz <release-b>/details.bin.gz
 cmp <release-a>/stats.json <release-b>/stats.json
+assert_qualified_checkout
 
 bun run --cwd packages/data test:source
 bun run source:attestation -- --report data/source-compiler-parity-report.json \
@@ -164,20 +186,29 @@ ICHIRAN_DB_URL='<frozen migration-oracle URL>' \
   --out <temporary-report> --fallback-out <temporary-fallback> --samples 1241
 bun run source:attestation -- --report <temporary-report> --release <release-a>
 cmp <temporary-fallback> packages/rust-kernel/tests/fixtures/m3-fallback.json
+assert_qualified_checkout
 
 bun run qualify:rust-same-pack -- <release-a>
+assert_qualified_checkout
 bun run qualify:native-same-pack -- <release-a>
+assert_qualified_checkout
 bun run qualify:source-hosts -- <release-a>
+assert_qualified_checkout
 bun run verify:rust-kernel
 bash packages/rust-kernel/tests/run_c_harness.sh <installed-immutable-baseline>
+assert_qualified_checkout
 
 bun test packages/browser-demo/tests
 bunx playwright install chromium
 bun run --cwd packages/browser-demo qualify -- --release <release-a>
+assert_qualified_checkout
 
 git diff --check origin/main...HEAD
 git diff --exit-code effd10f1cd4cfd6780760c8130030d287df35ca9 -- packages/grammar
-git status --short --branch
+assert_qualified_checkout
+git push origin "$qualified_head:refs/heads/codex/integrated-edge-cutover"
+test "$(git ls-remote --exit-code origin refs/heads/codex/integrated-edge-cutover | cut -f1)" = "$qualified_head"
+assert_qualified_checkout
 ```
 
 ## Remaining gates and handoff

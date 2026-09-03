@@ -13,6 +13,7 @@ describe('Worker artifact corruption classification', () => {
   test('quarantines only explicit immutable header, checksum, and payload failures', () => {
     for (const [name, code] of [
       ['RustKernelError', 'invalid-header'],
+      ['RustKernelError', 'unsupported-version'],
       ['RustKernelError', 'corrupt-section'],
       ['RustKernelError', 'corrupt-payload'],
       ['RustKernelError', 'corrupt-index'],
@@ -24,11 +25,10 @@ describe('Worker artifact corruption classification', () => {
     }
   });
 
-  test('does not quarantine Rust internal, caller, or unsupported-version failures', () => {
+  test('does not quarantine Rust internal or caller failures', () => {
     expect(isArtifactCorruption(codedError('RustKernelError', 'internal'))).toBe(false);
     expect(isArtifactCorruption(codedError('RustKernelError', 'out-of-range'))).toBe(false);
     expect(isArtifactCorruption(codedError('RustKernelError', 'invalid-input'))).toBe(false);
-    expect(isArtifactCorruption(codedError('RustKernelError', 'unsupported-version'))).toBe(false);
   });
 
   test('does not quarantine module, WASM shell, or storage read failures', () => {

@@ -219,7 +219,8 @@ static int legacy_exact(
   FILE *details_file,
   const LegacyCase *test,
   int corrupt_once,
-  size_t *misses_output
+  size_t *misses_output,
+  size_t *corruption_rejections_output
 ) {
   IchiranLegacyOperation *operation = NULL;
   IchiranResult begun = ichiran_kernel_legacy_begin_utf16(
@@ -234,6 +235,7 @@ static int legacy_exact(
   uint8_t *supplied = NULL;
   size_t supplied_bytes = 0;
   size_t misses = 0;
+  size_t corruption_rejections = 0;
   int ready = 0;
   for (size_t step_index = 0; passed && step_index < 4096; step_index++) {
     IchiranStepResult step = ichiran_kernel_legacy_step(
@@ -299,12 +301,16 @@ static int legacy_exact(
       free(corrupt);
       passed = rejected.status == ICHIRAN_CORRUPT_BLOCK
         && rejected.state == ICHIRAN_STEP_ERROR;
+      if (passed) corruption_rejections++;
       ichiran_buffer_free(rejected.buffer);
     }
   }
   free(supplied);
   ichiran_legacy_operation_free(operation);
   if (misses_output != NULL) *misses_output = misses;
+  if (corruption_rejections_output != NULL) {
+    *corruption_rejections_output = corruption_rejections;
+  }
   return passed && ready;
 }
 
@@ -339,7 +345,8 @@ static int describe_exact(
   uint32_t entry_index,
   const uint8_t *expected,
   size_t expected_bytes,
-  int corrupt_once
+  int corrupt_once,
+  size_t *corruption_rejections_output
 ) {
   IchiranDetailRange range;
   IchiranResult ranged = ichiran_detail_store_range(details, entry_index, &range);
@@ -353,6 +360,9 @@ static int describe_exact(
       details, entry_index, compressed, range.byte_length
     );
     passed = rejected.status == ICHIRAN_CORRUPT_BLOCK;
+    if (passed && corruption_rejections_output != NULL) {
+      (*corruption_rejections_output)++;
+    }
     ichiran_buffer_free(rejected.buffer);
     compressed[0] ^= 0xffu;
   }
@@ -372,9 +382,9 @@ static void *legacy_concurrently(void *context) {
   thread->passed = details_file != NULL;
   for (size_t index = 0; thread->passed && index < CONCURRENT_REPEATS; index++) {
     thread->passed = legacy_exact(
-      thread->kernel, thread->details, details_file, thread->first, 0, NULL
+      thread->kernel, thread->details, details_file, thread->first, 0, NULL, NULL
     ) && legacy_exact(
-      thread->kernel, thread->details, details_file, thread->second, 0, NULL
+      thread->kernel, thread->details, details_file, thread->second, 0, NULL, NULL
     );
   }
   if (details_file != NULL) fclose(details_file);
@@ -482,6 +492,7 @@ int main(int argc, char **argv) {
   size_t detailed = 0;
   size_t romanization = 0;
   size_t described = 0;
+  size_t corrupt_recoveries = 0;
   int metadata = 0;
   int same_pack = 0;
   int passed = verify_owned_product_errors(kernel, details);
@@ -500,9 +511,12 @@ int main(int argc, char **argv) {
       LegacyCase test;
       passed = parse_legacy(line, &test);
       size_t misses = 0;
+      size_t corruption_rejections = 0;
       if (passed) passed = legacy_exact(
-        kernel, details, details_file, &test, detailed == 0, &misses
+        kernel, details, details_file, &test, corrupt_recoveries == 0, &misses,
+        &corruption_rejections
       );
+      corrupt_recoveries += corruption_rejections;
       if (passed && misses > 0 && concurrent[0].name == NULL) {
         passed = copy_legacy_case(&test, &concurrent[0]);
       } else if (passed && misses > 0 && concurrent[1].name == NULL
@@ -546,7 +560,7 @@ int main(int argc, char **argv) {
       passed = errno == 0 && *index_text != '\0' && *end == '\0' && entry_index <= UINT32_MAX
         && describe_exact(
           details, details_file, (uint32_t)entry_index,
-          (uint8_t *)expected, strlen(expected), described == 0
+          (uint8_t *)expected, strlen(expected), described == 0, &corrupt_recoveries
         );
       if (!passed) fprintf(stderr, "describe C parity mismatch %s\n", name);
       described++;
@@ -557,6 +571,7 @@ int main(int argc, char **argv) {
   free(line);
   passed = passed && metadata && detailed == DETAILED_CASES
     && romanization == ROMANIZATION_CASES && described == DESCRIBE_CASES
+    && corrupt_recoveries == 2
     && concurrent[0].name != NULL && concurrent[1].name != NULL;
 
   pthread_t threads[THREAD_COUNT];
@@ -590,14 +605,16 @@ int main(int argc, char **argv) {
     printf(
       "C ABI v3 same-pack product harness passed: detailed=702 utf16_detailed=3 "
       "romanization=5 utf16_romanization=3 describe=4 "
-      "corrupt_recovery=2 owned_errors=3 concurrent_detailed=32\n"
+      "corrupt_recovery=%zu owned_errors=3 concurrent_detailed=32\n",
+      corrupt_recoveries
     );
   } else {
     printf(
       "C ABI v3 product harness passed: detailed=702 utf16_detailed=3 current_lisp=401 fallback=301 "
       "authority_canonical_ties=4(current_lisp=3 fallback=1) romanization=5 "
       "utf16_romanization=3 describe=4 "
-      "corrupt_recovery=2 owned_errors=3 concurrent_detailed=32\n"
+      "corrupt_recovery=%zu owned_errors=3 concurrent_detailed=32\n",
+      corrupt_recoveries
     );
   }
   return 0;

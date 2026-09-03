@@ -84,9 +84,9 @@ git -C "$repository" archive HEAD | tar -x -C "$archive"
         done
   done
   if grep -R -E \
-      "['\"](@ichiran/reference-postgres([^'\"]*)?|postgres([^'\"]*)?)['\"]" \
+      "['\"](@ichiran/reference-postgres|@ichiran/grammar|postgres)([^'\"]*)?['\"]" \
       packages/core/dist packages/data/dist packages/node/dist packages/cli/dist packages/api/dist; then
-    echo 'product package output imports a PostgreSQL oracle dependency' >&2
+    echo 'product package output imports a PostgreSQL oracle or grammar dependency' >&2
     exit 1
   fi
 )

@@ -4,6 +4,7 @@
   "description": "Self-contained Ichiran Japanese analyzer for browsers and Node.js",
   "type": "module",
   "private": true,
+  "packageManager": "bun@1.3.5",
   "workspaces": [
     "packages/*"
   ],
@@ -12,7 +13,7 @@
     "build:source-compiler": "bun run --cwd packages/core build:compiler && bun run --cwd packages/data build",
     "build:rust-wasm": "bash packages/rust-kernel/scripts/build-wasm.sh",
     "verify:rust-kernel": "bash packages/rust-kernel/scripts/verify.sh",
-    "source:release": "bun run build:source-compiler && bun --smol packages/data/dist/source-compiler/cli.js",
+    "source:release": "sh scripts/source-compiler-release.sh",
     "source:release:isolated": "sh scripts/source-compiler-release-no-postgres.sh",
     "source:attestation": "bun scripts/source-compiler-parity-attestation.ts",
     "qualify:rust-same-pack": "sh scripts/rust-kernel-source-release-differential.sh",
@@ -38,8 +39,7 @@
     "alpha:demo:audit": "bun run --cwd packages/browser-demo audit:release",
     "alpha:demo:qualify": "bun run verify:rust-kernel && bun run --cwd packages/browser-demo qualify",
     "cli": "node packages/cli/dist/index.js",
-    "dev": "bun run build && concurrently -n core,api -c blue,green \"bun run --cwd packages/core build:watch\" \"tsx --watch --env-file=.env packages/api/src/index.ts\"",
-    "data": "bun packages/data/src/source-compiler/cli.ts"
+    "dev": "bun run build && concurrently -n core,api -c blue,green \"bun run --cwd packages/core build:watch\" \"tsx --watch --env-file=.env packages/api/src/index.ts\""
   },
   "keywords": [
     "japanese",

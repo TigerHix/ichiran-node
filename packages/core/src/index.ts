@@ -1,5 +1,10 @@
 /** Production analyzer facade. Compiler and qualification internals use subpaths. */
-export * from './runtime.js';
+export {
+  IchiranRuntime,
+  RUST_KERNEL_WASM_URL,
+  type IchiranRuntimeSource,
+  type RustKernelMetrics
+} from './runtime.js';
 export {
   AnalyzerInputError,
   MAX_ANALYZER_ENTITIES,
@@ -30,7 +35,17 @@ export {
   type DetailRandomAccessSource,
   type DetailStoreErrorCode
 } from './details-contract.js';
-export * from './release-manifest.js';
+export {
+  ANALYZER_PACK_VERSION_MAX_UTF8_BYTES,
+  ANALYZER_RELEASE_FORMAT_VERSION,
+  analyzerManifestDigestInput,
+  parseAnalyzerReleaseManifest,
+  type AnalyzerReleaseAsset,
+  type AnalyzerReleaseEncoding,
+  type AnalyzerReleaseManifest,
+  type AnalyzerReleaseManifestWithoutDigest,
+  type AnalyzerReleaseSha256
+} from './release-manifest.js';
 export {
   PORTABLE_LEGACY_INFO,
   type PortableLegacyConjugationInfoFacts,

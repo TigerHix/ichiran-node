@@ -194,12 +194,11 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
       const root = await navigator.storage.getDirectory();
       const directory = await root.getDirectoryHandle(directoryName);
       const handle = await directory.getFileHandle(hotName);
-      const file = await handle.getFile();
-      const offset = 128;
-      const original = new Uint8Array(await file.slice(offset, offset + 1).arrayBuffer())[0]!;
+      // Preserve the ICHIPACK magic but make the installed header version unsupported.
+      const offset = 8;
       const writable = await handle.createWritable({ keepExistingData: true });
       await writable.seek(offset);
-      await writable.write(Uint8Array.of(original ^ 0xff));
+      await writable.write(Uint8Array.of(2, 0));
       await writable.close();
     }, { directoryName: DIRECTORY_NAME, hotName: corruptFiles.hot });
     await page.reload();

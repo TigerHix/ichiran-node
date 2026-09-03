@@ -78,6 +78,8 @@ describe('browser qualification mode', () => {
       expect(source.match(/git status --porcelain=v1/g)).toHaveLength(2);
     }
     const browser = await readFile(resolve(packageRoot, 'scripts/qualify.ts'), 'utf8');
+    expect(browser).not.toContain('--skip-e2e');
+    expect(browser).toContain("await run('bun', ['run', 'test:e2e']");
     expect(browser).toContain("const qualificationCommit = gitOutput(['rev-parse', 'HEAD']);");
     expect(browser.match(/assertCleanCheckout\(qualificationCommit\)/g)).toHaveLength(2);
   });

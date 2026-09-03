@@ -342,7 +342,7 @@ async function main(): Promise<void> {
     formatVersion: 1,
     pack: { path: hotPath, sha256: sha256(hot) },
     corpus: { operations: cases.length, suites: rawSuites },
-    rawPresentationFree: {
+    rawAnalyzer: {
       policy: 'Exact object values and exact array order; no equal-score canonicalization.',
       operations: cases.length,
       exact: rawExact,

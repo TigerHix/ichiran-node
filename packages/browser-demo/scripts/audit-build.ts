@@ -2,6 +2,11 @@ import { readdir, readFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import { gunzipSync } from 'node:zlib';
 import { assertSameRelease, verifyAnalyzerRelease } from './release-files.js';
+import {
+  assertAnalyzerWorkerOnly,
+  assertRustRuntimeGraph,
+  findTypeScriptOracleWorkerChunks
+} from './build-audit-policy.js';
 
 let requireAnalyzer = false;
 let requireRust = false;
@@ -30,14 +35,29 @@ const workerName = scripts.find(name => name.startsWith('analyzer.worker-'));
 if (!workerName) throw new Error('Production analyzer Worker chunk is missing');
 
 const worker = await readFile(join(assetDirectory, workerName), 'utf8');
-const mainNames = scripts.filter(name => name !== workerName);
+const oracleWorkerNames = findTypeScriptOracleWorkerChunks(worker, scripts);
+if (typescriptOracle && oracleWorkerNames.length !== 1) {
+  throw new Error('Explicit TypeScript-oracle build must contain one Worker-only runtime chunk');
+}
+if (!typescriptOracle && oracleWorkerNames.length !== 0) {
+  throw new Error('Production Rust build contains a TypeScript-oracle runtime chunk');
+}
+const oracleWorkerNameSet = new Set(oracleWorkerNames);
+const mainNames = scripts.filter(
+  name => name !== workerName && !oracleWorkerNameSet.has(name)
+);
 const main = (await Promise.all(
   mainNames.map(name => readFile(join(assetDirectory, name), 'utf8'))
 )).join('\n');
+const workerGraph = `${worker}\n${(await Promise.all(
+  oracleWorkerNames.map(name => readFile(join(assetDirectory, name), 'utf8'))
+)).join('\n')}`;
 
 // The lazily loaded benchmark corpus is inert JSON provenance/data. Its source
 // paths may name reference-postgres tests without introducing runtime code.
-const runtimeNames = mainNames.filter(name => !name.startsWith('benchmark-corpus-'));
+const runtimeNames = scripts.filter(
+  name => name !== workerName && !name.startsWith('benchmark-corpus-')
+);
 const runtime = `${(await Promise.all(
   runtimeNames.map(name => readFile(join(assetDirectory, name), 'utf8'))
 )).join('\n')}\n${worker}`;
@@ -67,12 +87,11 @@ if (!typescriptOracle) {
   ) {
     throw new Error('Rust kernel shell asset is invalid or saves less than 200 KiB');
   }
-} else if (!worker.includes('ICHIPACK') || !worker.includes('ichiran-browser-alpha')) {
+} else if (!workerGraph.includes('ICHIPACK') || !worker.includes('ichiran-browser-alpha')) {
   throw new Error('Analyzer pack/runtime is not linked into the Worker');
 }
-for (const forbidden of ['ICHIPACK', 'PortableAnalyzer', 'AnalyzerRuntime']) {
-  if (main.includes(forbidden)) throw new Error(`${forbidden} leaked into the main-thread bundle`);
-}
+assertAnalyzerWorkerOnly(main);
+if (!typescriptOracle) assertRustRuntimeGraph(runtime);
 for (const forbidden of [
   'postgres', 'node:fs', 'node:path', 'node:async_hooks', 'async_hooks', 'kernel-not-ready'
 ]) {

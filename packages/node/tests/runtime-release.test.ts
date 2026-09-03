@@ -77,6 +77,12 @@ describe.skipIf(!releaseDirectory)('Node packed runtime release', () => {
         }
       });
       expect(reads).toHaveLength(2);
+      expect(reads[0]).toEqual([0, 96]);
+      expect(reads[1]![0]).toBe(0);
+      expect(reads[1]![1]).toBeGreaterThanOrEqual(96);
+      expect(reads[1]![1]).toBeLessThan(source.byteLength);
+      expect(reads.reduce((sum, [, byteLength]) => sum + byteLength, 0))
+        .toBeLessThan(source.byteLength);
       const openedReads = [...reads];
       const analysis = await runtime.analyze('今日', { limit: 1 });
       expect(reads).toEqual(openedReads);

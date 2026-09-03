@@ -58,6 +58,7 @@ const ROOT_ORDER_ATTESTATION_SHA256 = '12ca177bf7765e4337f3c1cc4d836a7bcfc84b3f6
 const GENERATED_ORDER_ATTESTATION_SHA256 =
   '4f2a767eb48b09194af7e20070e2b5e79765a70b5d6ebf4eaa9a3048ef5776cf';
 const QUALIFIED_ARTIFACT_INDEX_SHA256 = 'a032bbd11c257259877b438a79c674544985a58acdaff86327ae57ae8cbeb3ac';
+const SOURCE_COMPILER_RUST_TOOLCHAIN = '1.92.0';
 
 interface CommandResult {
   readonly stdout: string;
@@ -139,10 +140,18 @@ function command(executable: string, args: readonly string[], cwd: string): Prom
   });
 }
 
-async function surfaceCompiler(repository: string): Promise<string> {
+async function surfaceCompiler(repository: string, temporaryDirectory: string): Promise<string> {
   const manifest = join(repository, 'packages/data/tools/surface-index/Cargo.toml');
-  await command('cargo', ['build', '--locked', '--release', '--manifest-path', manifest], repository);
-  return join(repository, 'packages/data/tools/surface-index/target/release/ichiran-surface-index');
+  const target = join(temporaryDirectory, 'surface-compiler-target');
+  await command('cargo', [
+    `+${SOURCE_COMPILER_RUST_TOOLCHAIN}`,
+    'build',
+    '--locked',
+    '--release',
+    '--manifest-path', manifest,
+    '--target-dir', target
+  ], repository);
+  return join(target, 'release/ichiran-surface-index');
 }
 
 async function assertSourceCheckoutUnchanged(
@@ -320,7 +329,7 @@ export async function writeSourceCompilerRelease(
   assertBytesEqual(sections.morphology.bytes, rebuiltSections.morphology.bytes, 'Morphology');
   assertBytesEqual(sections.support.bytes, rebuiltSections.support.bytes, 'Analyzer support');
   assertBytesEqual(sections.annotations.bytes, rebuiltSections.annotations.bytes, 'Annotations');
-  const compiler = await surfaceCompiler(input.repository);
+  const compiler = await surfaceCompiler(input.repository, input.temporaryDirectory);
   const firstPath = join(input.temporaryDirectory, 'surface-first.bin');
   const secondPath = join(input.temporaryDirectory, 'surface-second.bin');
   // Each compiler indexes millions of rows. Run the deterministic rebuilds

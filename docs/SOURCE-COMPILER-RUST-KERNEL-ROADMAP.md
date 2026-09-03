@@ -1,6 +1,7 @@
 # Source compiler and Rust kernel roadmap
 
-Status: Linux/WSL integrated cutover candidate qualified. Last updated 2026-09-02.
+Status: integrated implementation and qualification recipe complete; exact-head
+Linux/WSL qualification pending. Last updated 2026-09-02.
 
 This document is authoritative for work after the completed TypeScript browser alpha.
 The browser-alpha documents remain the as-built specification and qualification record
@@ -9,22 +10,23 @@ for that baseline.
 ## Integrated checkpoint
 
 The two reviewed workstreams are integrated on `codex/integrated-edge-cutover`.
-The qualified revision is the branch-head commit containing this status document; its
-fresh manifest must name that same commit. It builds one PostgreSQL-isolated source
-release and runs the canonical Rust kernel and native C ABI on that exact pack. The
-complete evidence and stable installed-asset identities are in
+The qualified revision will be the immutable commit named by the external final
+handoff after all gates pass and that exact commit is pushed. No tracked document or
+floating branch head identifies itself as qualified. The candidate builds a
+PostgreSQL-isolated source release and runs the canonical Rust kernel and native C ABI
+on that exact pack. The qualification recipe and accepted identities are in
 [`INTEGRATED-EDGE-CUTOVER-REPORT.md`](./INTEGRATED-EDGE-CUTOVER-REPORT.md).
 
 | Milestone | Status |
 | --- | --- |
 | M0 immutable baseline | PASS |
 | M1/M3 Rust feasibility and full semantics | PASS |
-| M4 Linux/Chromium browser cutover | PASS |
+| M4 Linux/Chromium browser cutover | IMPLEMENTED; FINAL QUALIFICATION PENDING |
 | M4 physical Safari/iPhone | PENDING |
-| M4N Node/CLI/API cutover | PASS |
-| M5A Linux/WSL C ABI and Mac handoff | PASS |
+| M4N Node/CLI/API cutover | IMPLEMENTED; FINAL QUALIFICATION PENDING |
+| M5A Linux/WSL C ABI and Mac handoff | IMPLEMENTED; FINAL QUALIFICATION PENDING |
 | M5B Apple packaging, Swift, simulator, and device | PENDING |
-| M6 PostgreSQL-free source compiler and same-pack Rust gate | PASS |
+| M6 PostgreSQL-free source compiler and same-pack Rust gate | IMPLEMENTED; FINAL QUALIFICATION PENDING |
 
 Rust now owns production analyzer semantics. TypeScript owns host adapters, browser
 installation/lifecycle, release verification, and the source compiler. The frozen
@@ -36,9 +38,9 @@ The canonical `@ichiran/core` entry point exposes the Rust facade and public/sha
 data contracts, while TypeScript analyzer execution is confined to the explicit
 qualification subpath. The canonical `@ichiran/data` entry point and executable are
 the source compiler; the old PostgreSQL loader is private migration tooling. Direct
-compilation and the Linux namespace isolation proof are separate commands. Fresh-pack
-qualification now covers Rust/WASM, the C ABI, Node, CLI, API, and the production
-browser Worker.
+compilation and the Linux namespace isolation proof are separate commands. The
+fresh-pack qualification recipe covers Rust/WASM, the C ABI, Node, CLI, API, and the
+production browser Worker; its exact-head final run remains pending.
 
 ## Decision
 
@@ -149,8 +151,9 @@ This roadmap-status update is intentionally a docs-only descendant of the tagged
 artifact commit. It does not change the pack or move the baseline tag.
 
 The Rust analyzer crate, browser/Node WASM host, C ABI, and source-native compiler now
-exist and are qualified together on Linux/WSL. Swift/XCFramework packaging and
-physical Apple validation do not yet exist and remain M5B work.
+exist in the integrated implementation. Their final exact-head Linux/WSL qualification
+is pending. Swift/XCFramework packaging and physical Apple validation do not yet exist
+and remain M5B work.
 
 ## Dependency boundary
 
@@ -164,7 +167,8 @@ physical Apple validation do not yet exist and remain M5B work.
 | Upstream behavior update | Lisp and its database used as an external authority | Same external authority when needed; no normal build dependency |
 
 PostgreSQL and Lisp are already absent from browser, Node, CLI, and API runtime paths.
-The remaining PostgreSQL work is a compiler/release-maintenance concern only.
+Remaining PostgreSQL work is limited to maintaining and then retiring the frozen
+transition oracle; it is not part of normal compilation or release production.
 
 ## Ownership
 

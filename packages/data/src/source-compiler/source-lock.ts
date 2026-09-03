@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto';
-import { readFile, stat } from 'node:fs/promises';
-import { relative, resolve, sep } from 'node:path';
+import { mkdir, readFile, stat, writeFile } from 'node:fs/promises';
+import { basename, join, relative, resolve, sep } from 'node:path';
 import { gunzipSync } from 'node:zlib';
 
 import { loadQualifiedErrata } from './chronological-errata-ledger.js';
@@ -749,10 +749,12 @@ async function verifyLedgerRows(
 
 export async function verifySourceCompilerLock(
   repository: string,
-  lockPath = 'data/source-compiler-sources.lock.json'
+  lockPath = 'data/source-compiler-sources.lock.json',
+  snapshotDirectory?: string
 ): Promise<VerifiedSourceCompilerLock> {
   const bytes = new Uint8Array(await readFile(lockedPath(repository, lockPath)));
   const lock = parseSourceCompilerLock(JSON.parse(new TextDecoder().decode(bytes)));
+  if (snapshotDirectory) await mkdir(snapshotDirectory);
   const files: VerifiedSourceCompilerLock['files'][number][] = [];
   const inputs = {} as Record<SourceCompilerInputRole, VerifiedSourceCompilerLock['inputs'][SourceCompilerInputRole]>;
   for (const item of lock.sources) {
@@ -767,16 +769,20 @@ export async function verifySourceCompilerLock(
           + `expected ${expected.bytes} bytes ${expected.sha256}`
         );
       }
+      const verifiedPath = snapshotDirectory
+        ? join(snapshotDirectory, `${expected.role}-${basename(expected.path)}`)
+        : path;
+      if (snapshotDirectory) await writeFile(verifiedPath, actual, { flag: 'wx' });
       if (item.kind === 'jmdict' || item.kind === 'kanjidic2') {
         verifyDictionaryProvenance(item, actual);
       } else if (item.kind === 'semantic-ledger' || item.kind === 'compatibility-ledger') {
-        await verifyLedgerRows(item, path);
+        await verifyLedgerRows(item, verifiedPath);
       }
       const file = {
         id: item.id,
         role: expected.role,
         path: expected.path,
-        absolutePath: path,
+        absolutePath: verifiedPath,
         bytes: actual.byteLength,
         sha256: actualSha256
       };

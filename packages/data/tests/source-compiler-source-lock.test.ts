@@ -184,8 +184,9 @@ describe('source compiler lock', () => {
         ['kwpos', 'kwpos'],
         ['conjo', 'conjo']
       ]);
-      const inputPath = (role: SourceCompilerInputRole): string =>
-        role === 'extra' ? 'alternate/extra.xml' : `inputs/${role}`;
+      const inputPath = (role: SourceCompilerInputRole): string => role === 'extra'
+        ? 'alternate/extra.xml'
+        : role === 'jmdict' ? 'work/m6-transition/JMdict.gz' : `inputs/${role}`;
       const sources = sourceRecords(inputPath, role => contents.get(role)!);
       Object.assign(sources.find(source => source.kind === 'jmdict')!, {
         uncompressedBytes: Buffer.byteLength(jmdictXml),
@@ -209,7 +210,11 @@ describe('source compiler lock', () => {
       };
       await writeLock();
 
-      const result = await verifySourceCompilerLock(repository);
+      const result = await verifySourceCompilerLock(
+        repository,
+        'data/source-compiler-sources.lock.json',
+        join(repository, 'verified-inputs')
+      );
       expect(result.files).toHaveLength(SOURCE_COMPILER_INPUT_ROLES.length);
       expect(result.inputs.extra).toMatchObject({
         id: 'source-extra',
@@ -219,6 +224,17 @@ describe('source compiler lock', () => {
       });
       expect((await loadExtraRootDrafts(result.inputs.extra.absolutePath, 0)).map(row => row.entry.seq))
         .toEqual([12_294_525, 12_294_526, 12_294_576, 900_000, 900_001]);
+      const verifiedJmdict = new Uint8Array(await readFile(result.inputs.jmdict.absolutePath));
+      await writeFile(join(repository, inputPath('jmdict')), gzipSync(
+        '<!-- JMdict created: 2026-01-01 --><changed-after-verification/>'
+      ));
+      expect(new Uint8Array(await readFile(result.inputs.jmdict.absolutePath)))
+        .toEqual(verifiedJmdict);
+      await writeFile(join(repository, inputPath('jmdict')), contents.get('jmdict')!);
+      await writeFile(join(repository, inputPath('extra')), '<changed-after-verification/>');
+      expect((await loadExtraRootDrafts(result.inputs.extra.absolutePath, 0)).map(row => row.entry.seq))
+        .toEqual([12_294_525, 12_294_526, 12_294_576, 900_000, 900_001]);
+      await writeFile(join(repository, inputPath('extra')), extra);
 
       const jmdict = sources.find(source => source.kind === 'jmdict')!;
       const originalUncompressedSha256 = jmdict.uncompressedSha256;
@@ -380,7 +396,7 @@ describe('source compiler lock', () => {
     ]))).toThrow('Patched JMdict transition requires transition provenance and no archive');
   });
 
-  test('qualification workflows do not reopen semantic inputs by conventional path', async () => {
+  test('historical qualification workflows select inputs through the verified lock', async () => {
     const repository = resolve(import.meta.dir, '../../..');
     const workflows = [
       'scripts/source-compiler-bounded-support.ts',
@@ -394,6 +410,8 @@ describe('source compiler lock', () => {
     const conventionalPath = /JMdict_e\.gz|kanjidic2\.xml\.gz|extra\.xml|jichitai\.csv|gyoseiku\.csv|kwpos\.csv|conjo\.csv|source-compiler-(?:errata|compatibility)\.json/;
     for (const workflow of workflows) {
       const source = await readFile(join(repository, workflow), 'utf8');
+      // These diagnostics consume verified live paths. Only the canonical
+      // release path promises a private immutable input snapshot.
       expect(source).toContain('verifySourceCompilerLock');
       expect(source).not.toMatch(conventionalPath);
     }

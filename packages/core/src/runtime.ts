@@ -66,10 +66,15 @@ export const RUST_KERNEL_WASM_URL = new URL(
 );
 
 function initialize(wasm?: Uint8Array): Promise<InitOutput> {
-  initialized ??= wasm === undefined
+  if (initialized) return initialized;
+  const attempt = wasm === undefined
     ? init()
     : init({ module_or_path: wasm });
-  return initialized;
+  initialized = attempt;
+  void attempt.catch(() => {
+    if (initialized === attempt) initialized = null;
+  });
+  return attempt;
 }
 
 function utf16(text: string): Uint16Array {

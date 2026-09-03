@@ -22,7 +22,8 @@ The Rust kernel owns:
 Core owns the shared public model and `IchiranRuntime`, the asynchronous WASM facade
 used by every host.
 
-Hosts provide installed hot bytes and a random-access detail source:
+Hosts provide installed hot bytes and a random-access detail source. In a browser the
+generated WASM URL is fetched by default:
 
 ```ts
 const runtime = await IchiranRuntime.open({ hot, details });
@@ -32,6 +33,9 @@ const romanized = await runtime.romanize('食べました');
 const legacy = await runtime.legacy('食べました', { limit: 3 });
 const entryIndex = runtime.entryIndexForSequence(1358280);
 ```
+
+Node callers must also pass the emitted WASM bytes as `wasm`; the `@ichiran/node`
+adapter reads those bytes and the verified release assets from disk automatically.
 
 The browser Worker provides OPFS-backed sources. `@ichiran/node` provides filesystem
 loading and manifest verification. Neither adapter implements analyzer behavior.

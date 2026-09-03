@@ -131,6 +131,27 @@ async function assertOutputDirectory(path: string): Promise<void> {
   throw new Error('Existing release output symlink must resolve to a directory');
 }
 
+async function assertGenerationsDirectory(path: string): Promise<void> {
+  const generations = `${path}.generations`;
+  let info;
+  try {
+    info = await lstat(generations);
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === 'ENOENT') return;
+    throw error;
+  }
+  if (info.isSymbolicLink() || !info.isDirectory()) {
+    throw new Error('Release generations root must be a real directory, never a symlink');
+  }
+  const [physicalParent, physicalGenerations] = await Promise.all([
+    realpath(dirname(path)),
+    realpath(generations)
+  ]);
+  if (physicalGenerations !== join(physicalParent, basename(generations))) {
+    throw new Error('Release generations root escapes its physical destination directory');
+  }
+}
+
 export async function resolveSourceReleaseOutput(repository: string, value: string): Promise<string> {
   if (value.includes('\\')) throw new Error('Release output must use portable forward slashes');
   const lexicalRepository = resolve(repository);
@@ -142,7 +163,7 @@ export async function resolveSourceReleaseOutput(repository: string, value: stri
   if (isBelow(lexicalRepository, path) && !isBelow(lexicalWork, path)) {
     throw new Error('In-repository release output must be below work/');
   }
-  await assertOutputDirectory(path);
+  await Promise.all([assertOutputDirectory(path), assertGenerationsDirectory(path)]);
   const [physicalRepository, physicalOutput] = await Promise.all([
     realpath(lexicalRepository),
     physicalPath(path)
@@ -182,55 +203,66 @@ export async function runSourceCompilerRelease(argv: readonly string[]): Promise
   }
   const options = parseArguments(argv);
   const repository = await gitOutput(import.meta.dir, ['rev-parse', '--show-toplevel']);
-  const output = await resolveSourceReleaseOutput(repository, options.output);
-  await assertClean(repository);
   const sourceCommit = await gitOutput(repository, ['rev-parse', 'HEAD']);
   if (!/^[0-9a-f]{40}$/.test(sourceCommit)) throw new Error('Git returned an invalid source commit');
+  const expectedCommit = process.env.ICHIRAN_SOURCE_COMPILER_COMMIT;
+  if (!expectedCommit || !/^[0-9a-f]{40}$/.test(expectedCommit)) {
+    throw new Error('Source compiler must be launched with its clean build commit');
+  }
+  if (sourceCommit !== expectedCommit) {
+    throw new Error(`Source compiler launch commit ${expectedCommit} does not match HEAD ${sourceCommit}`);
+  }
+  const output = await resolveSourceReleaseOutput(repository, options.output);
+  await assertClean(repository);
 
-  const lock = await verifySourceCompilerLock(repository, options.sourceLock);
-  assertSourceCompilerReleaseMode(options.mode, lock.inputs.jmdict);
-  const jmdictRelative = lock.inputs.jmdict.path;
-  const jmdictSourceId = lock.inputs.jmdict.id;
-  const conjugationRules = {
-    kwpos: lock.inputs.kwpos.absolutePath,
-    conjo: lock.inputs.conjo.absolutePath
-  };
-
-  const data = join(repository, 'data');
-  const roots = await compileCanonicalRoots({
-    jmdict: lock.inputs.jmdict.absolutePath,
-    jmdictSourceId,
-    extra: lock.inputs.extra.absolutePath,
-    municipality: lock.inputs.municipality.absolutePath,
-    ward: lock.inputs.ward.absolutePath,
-    errata: lock.inputs.chronologicalErrata.absolutePath,
-    compatibility: lock.inputs.compatibility.absolutePath
-  });
-  const fold = foldChronologicalConjugationErrata(
-    roots.entries,
-    roots.errata.conjugationRows,
-    { conjugationRules }
-  );
-  const extraPositions = conjugationPositionCompatibility(roots.compatibility);
-  const morphologySource = chronologicalMorphologySource(
-    roots.entries,
-    roots.errata.conjugationRows,
-    { conjugationRules, extraPositions }
-  );
-  const morphology = buildMorphology(morphologySource, { conjugationRules }).artifact;
-  const da = roots.errata.conjugationRows.find(value => value.operation === 'conjugateDa');
-  if (!da) throw new Error('Chronological errata has no conjugateDa declaration');
-  const firstGeneratedSeq = roots.entries.reduce(
-    (maximum, entry) => Math.max(maximum, entry.seq),
-    0
-  ) + 1;
-  const customRootSeqs = new Set(roots.custom.createdRoots.map(entry => entry.seq));
-  const kanjidicReadings = await loadKanjidicHintReadings(
-    lock.inputs.kanjidic.absolutePath,
-    kanjidicCompatibility(roots.compatibility)
-  );
   const temporaryDirectory = await mkdtemp(join(RELEASE_TEMP_ROOT, 'ichiran-source-release-'));
   try {
+    const lock = await verifySourceCompilerLock(
+      repository,
+      options.sourceLock,
+      join(temporaryDirectory, 'locked-inputs')
+    );
+    assertSourceCompilerReleaseMode(options.mode, lock.inputs.jmdict);
+    const jmdictRelative = lock.inputs.jmdict.path;
+    const jmdictSourceId = lock.inputs.jmdict.id;
+    const conjugationRules = {
+      kwpos: lock.inputs.kwpos.absolutePath,
+      conjo: lock.inputs.conjo.absolutePath
+    };
+
+    const data = join(repository, 'data');
+    const roots = await compileCanonicalRoots({
+      jmdict: lock.inputs.jmdict.absolutePath,
+      jmdictSourceId,
+      extra: lock.inputs.extra.absolutePath,
+      municipality: lock.inputs.municipality.absolutePath,
+      ward: lock.inputs.ward.absolutePath,
+      errata: lock.inputs.chronologicalErrata.absolutePath,
+      compatibility: lock.inputs.compatibility.absolutePath
+    });
+    const fold = foldChronologicalConjugationErrata(
+      roots.entries,
+      roots.errata.conjugationRows,
+      { conjugationRules }
+    );
+    const extraPositions = conjugationPositionCompatibility(roots.compatibility);
+    const morphologySource = chronologicalMorphologySource(
+      roots.entries,
+      roots.errata.conjugationRows,
+      { conjugationRules, extraPositions }
+    );
+    const morphology = buildMorphology(morphologySource, { conjugationRules }).artifact;
+    const da = roots.errata.conjugationRows.find(value => value.operation === 'conjugateDa');
+    if (!da) throw new Error('Chronological errata has no conjugateDa declaration');
+    const firstGeneratedSeq = roots.entries.reduce(
+      (maximum, entry) => Math.max(maximum, entry.seq),
+      0
+    ) + 1;
+    const customRootSeqs = new Set(roots.custom.createdRoots.map(entry => entry.seq));
+    const kanjidicReadings = await loadKanjidicHintReadings(
+      lock.inputs.kanjidic.absolutePath,
+      kanjidicCompatibility(roots.compatibility)
+    );
     const targetPhase = await (async function compileTargetPhase() {
       const projection = writeScheduledGeneratedProjection({
         entries: roots.entries,
