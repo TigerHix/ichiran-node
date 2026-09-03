@@ -1,4 +1,4 @@
-import { asHiragana } from '@ichiran/core';
+import { asHiragana } from '@ichiran/core/compiler';
 import type {
   AnalyzerSupportConjugationSource,
   AnalyzerSupportSuffixFormSource

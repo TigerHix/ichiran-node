@@ -13,7 +13,7 @@ import {
   POS_WITH_CONJ_RULES,
   SYNTHETIC_POS_CODES
 } from '../src/data/conj-rules.js';
-import { getConjDescription } from '@ichiran/reference-postgres';
+import { getConjDescription } from '../../reference-postgres/src/dict/conj-description.js';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 

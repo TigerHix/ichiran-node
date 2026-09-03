@@ -10,7 +10,7 @@ import {
   openPack,
   openSurfaceIndex,
   SURFACE_INDEX_SECTION_ID
-} from '@ichiran/core';
+} from '@ichiran/core/compiler';
 import { packedMorphologySurfaces } from '../packages/data/src/source-compiler/packed-morphology-relation.js';
 
 interface CandidateSurface {

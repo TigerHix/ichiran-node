@@ -6,6 +6,7 @@ import { gunzipSync } from 'node:zlib';
 
 import {
   IchiranRuntime,
+  MAX_ANALYZER_WORD_LENGTH,
   RUST_KERNEL_WASM_URL,
   type AnalyzerReleaseManifest
 } from '@ichiran/core';
@@ -72,6 +73,18 @@ describe.skipIf(!releaseDirectory)('packed analyzer API', () => {
       segments: expect.any(Array),
       grammars: {},
       grammarExcluded: true
+    });
+  });
+
+  test('returns 400 for Rust-owned analyzable-word validation', async () => {
+    const response = await fetch(`${base}/api/segment`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ text: '猫'.repeat(MAX_ANALYZER_WORD_LENGTH + 1), limit: 1 })
+    });
+    expect(response.status).toBe(400);
+    expect(await response.json()).toEqual({
+      error: `each analyzable word must contain at most ${MAX_ANALYZER_WORD_LENGTH} UTF-16 code units`
     });
   });
 

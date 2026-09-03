@@ -157,7 +157,7 @@ program
         if (options.download === false) {
           filePath = getDataPath('jmdict');
           if (!dataFileExists('jmdict')) {
-            throw new Error('JMDict file not found. Run "bun run data download" or specify --path');
+            throw new Error('JMDict file not found. Run "bun run migration:data -- download" or specify --path');
           }
         } else {
           console.log('No path specified, checking for data file...');
@@ -295,7 +295,7 @@ program
         if (options.download === false) {
           filePath = getDataPath('kanjidic');
           if (!dataFileExists('kanjidic')) {
-            throw new Error('Kanjidic2 file not found. Run "bun run data download" or specify --path');
+            throw new Error('Kanjidic2 file not found. Run "bun run migration:data -- download" or specify --path');
           }
         } else {
           console.log('No path specified, checking for data file...');

@@ -26,8 +26,8 @@ describe('portable analyzer request bounds', () => {
     expect(() => validatePortableAnalyzeRequest('猫', { limit: 11 })).toThrow('1 to 10');
     expect(() => validatePortableAnalyzeRequest('猫'.repeat(MAX_ANALYZER_TEXT_LENGTH + 1)))
       .toThrow(`at most ${MAX_ANALYZER_TEXT_LENGTH}`);
-    expect(() => validatePortableAnalyzeRequest('猫'.repeat(MAX_ANALYZER_WORD_LENGTH + 1)))
-      .toThrow(`word must contain at most ${MAX_ANALYZER_WORD_LENGTH}`);
+    expect(validatePortableAnalyzeRequest('猫'.repeat(MAX_ANALYZER_WORD_LENGTH + 1)).input)
+      .toHaveLength(MAX_ANALYZER_WORD_LENGTH + 1);
     expect(() => validatePortableAnalyzeRequest('猫', {
       entities: Array.from(
         { length: MAX_ANALYZER_ENTITIES + 1 },

@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'bun:test';
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
-import type { BrowserAlphaArtifactCounts } from '../src/browser-pack/release-orchestration.js';
+import type { BrowserAlphaArtifactCounts } from '../src/source-compiler/artifact-contract.js';
 import {
   parseGeneratedOrderAttestation,
   parseRootPayloadOrderAttestation,
@@ -15,6 +15,7 @@ import {
   parseSurfaceCompilerStats,
   type QualifiedArtifactBytes
 } from '../src/source-compiler/release-comparison.js';
+import { resolveSourceReleaseOutput } from '../src/source-compiler/release.js';
 import { assertSourceCompilerReleaseMode } from '../src/source-compiler/source-lock.js';
 
 const data = resolve(import.meta.dir, '../../../data');
@@ -115,6 +116,18 @@ function exactRootReview() {
 }
 
 describe('source release evidence', () => {
+  test('confines in-repository output to work and permits fresh external output', async () => {
+    const repository = resolve(import.meta.dir, '../../..');
+    await expect(resolveSourceReleaseOutput(repository, '.git/source-release'))
+      .rejects.toThrow('below work/');
+    await expect(resolveSourceReleaseOutput(repository, 'packages/data/release'))
+      .rejects.toThrow('below work/');
+    expect(await resolveSourceReleaseOutput(repository, 'work/fresh-release'))
+      .toBe(resolve(repository, 'work/fresh-release'));
+    expect(await resolveSourceReleaseOutput(repository, '/tmp/ichiran-fresh-release'))
+      .toBe('/tmp/ichiran-fresh-release');
+  });
+
   test('parses the one reviewed baseline root-order attestation', async () => {
     const bytes = await readFile(resolve(
       import.meta.dir,

@@ -1,6 +1,7 @@
 /// <reference lib="webworker" />
 
 import {
+  AnalyzerInputError,
   parseAnalyzerReleaseManifest,
   type PortableAnalysisResult,
   type PortableAnalyzeOptions
@@ -299,7 +300,11 @@ self.addEventListener('message', (event: MessageEvent<WorkerRequest>) => {
     (error: unknown) => post({
       id: request.id,
       type: 'error',
-      code: error instanceof WorkerOperationError ? error.code : 'worker-error',
+      code: error instanceof WorkerOperationError
+        ? error.code
+        : error instanceof AnalyzerInputError
+          ? 'invalid-input'
+          : 'worker-error',
       message: error instanceof Error ? error.message : String(error)
     })
   );

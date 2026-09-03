@@ -26,6 +26,10 @@ const paths = {
   errata: fileURLToPath(new URL('../../../data/source-compiler-errata.json', import.meta.url)),
   compatibility: fileURLToPath(new URL('../../../data/source-compiler-compatibility.json', import.meta.url))
 };
+const conjugationRules = {
+  kwpos: fileURLToPath(new URL('../../../data/kwpos.csv', import.meta.url)),
+  conjo: fileURLToPath(new URL('../../../data/conjo.csv', import.meta.url))
+};
 
 function sha256(bytes: Uint8Array): string {
   return createHash('sha256').update(bytes).digest('hex');
@@ -134,14 +138,15 @@ describe('complete canonical roots', () => {
   test('emits the qualified morphology bytes exactly', () => {
     const fold = foldChronologicalConjugationErrata(
       compilation.entries,
-      compilation.errata.conjugationRows
+      compilation.errata.conjugationRows,
+      { conjugationRules }
     );
     const source = canonicalMorphologySource(
       compilation.entries,
       conjugationPositionCompatibility(compilation.compatibility),
       fold.manualPatches
     );
-    const morphology = buildMorphology(source);
+    const morphology = buildMorphology(source, { conjugationRules });
     expect(morphology.stats).toMatchObject({
       bytes: 2_688_176,
       positions: 22,

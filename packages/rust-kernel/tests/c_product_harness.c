@@ -9,8 +9,8 @@
 #include <string.h>
 
 #define DETAIL_HEADER_BYTES 96u
-#define DETAILED_CASES 702u
-#define ROMANIZATION_CASES 5u
+#define DETAILED_CASES 705u
+#define ROMANIZATION_CASES 8u
 #define DESCRIBE_CASES 4u
 #define THREAD_COUNT 4u
 #define CONCURRENT_REPEATS 4u
@@ -420,11 +420,15 @@ static int metadata_valid(const char *line) {
     && strstr(line, "\"samePack\":702") != NULL
     && strstr(line, "\"canonicalTies\":0") != NULL
     && strstr(line, "\"hotSha256\":\"") != NULL
-    && strstr(line, "\"detailsSha256\":\"") != NULL;
+    && strstr(line, "\"detailsSha256\":\"") != NULL
+    && strstr(line, "\"packVersion\":\"") != NULL
+    && strstr(line, "\"sourceCommit\":\"") != NULL
+    && strstr(line, "\"sourcesLockSha256\":\"") != NULL;
   return (immutable_pack || same_pack)
     && strstr(line, "\"format\":\"ichiran-c-product-v1\"") != NULL
-    && strstr(line, "\"operations\":702") != NULL
-    && strstr(line, "\"romanization\":5") != NULL
+    && strstr(line, "\"operations\":705") != NULL
+    && strstr(line, "\"utf16\":3") != NULL
+    && strstr(line, "\"romanization\":{\"operations\":8,\"retained\":5,\"utf16\":3}") != NULL
     && strstr(line, "\"describe\":4") != NULL;
 }
 
@@ -584,13 +588,15 @@ int main(int argc, char **argv) {
   if (!passed) return 5;
   if (same_pack) {
     printf(
-      "C ABI v3 same-pack product harness passed: detailed=702 romanization=5 describe=4 "
+      "C ABI v3 same-pack product harness passed: detailed=702 utf16_detailed=3 "
+      "romanization=5 utf16_romanization=3 describe=4 "
       "corrupt_recovery=2 owned_errors=3 concurrent_detailed=32\n"
     );
   } else {
     printf(
-      "C ABI v3 product harness passed: detailed=702 current_lisp=401 fallback=301 "
-      "authority_canonical_ties=4(current_lisp=3 fallback=1) romanization=5 describe=4 "
+      "C ABI v3 product harness passed: detailed=702 utf16_detailed=3 current_lisp=401 fallback=301 "
+      "authority_canonical_ties=4(current_lisp=3 fallback=1) romanization=5 "
+      "utf16_romanization=3 describe=4 "
       "corrupt_recovery=2 owned_errors=3 concurrent_detailed=32\n"
     );
   }

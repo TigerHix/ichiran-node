@@ -5,11 +5,13 @@ import { assertSameRelease, verifyAnalyzerRelease } from './release-files.js';
 
 let requireAnalyzer = false;
 let requireRust = false;
+let typescriptOracle = false;
 let releaseDirectory: string | null = null;
 for (let index = 2; index < process.argv.length; index++) {
   const argument = process.argv[index];
   if (argument === '--require-analyzer') requireAnalyzer = true;
   else if (argument === '--require-rust') requireRust = true;
+  else if (argument === '--typescript-oracle') typescriptOracle = true;
   else if (argument === '--release') {
     const value = process.argv[++index];
     if (!value) throw new Error('--release requires a directory');
@@ -40,9 +42,8 @@ const runtime = `${(await Promise.all(
   runtimeNames.map(name => readFile(join(assetDirectory, name), 'utf8'))
 )).join('\n')}\n${worker}`;
 
-const typescriptOracle = process.env.ICHIRAN_TYPESCRIPT_ORACLE === '1';
 if (requireRust && typescriptOracle) {
-  throw new Error('Rust browser audit cannot run with ICHIRAN_TYPESCRIPT_ORACLE=1');
+  throw new Error('Rust browser audit cannot run in explicit TypeScript-oracle mode');
 }
 if (!typescriptOracle) {
   const assets = await readdir(assetDirectory);

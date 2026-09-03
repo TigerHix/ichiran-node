@@ -22,14 +22,14 @@ import {
   deterministicJson,
   sha256Bytes,
   type BrowserAlphaArtifactCounts
-} from '../browser-pack/release-orchestration.js';
+} from './artifact-contract.js';
 import {
   ANALYZER_SUPPORT_SECTION_ID,
   MORPHOLOGY_SECTION_ID,
   ROOT_PAYLOAD_SECTION_ID,
   SURFACE_INDEX_SECTION_ID,
   openPack
-} from '@ichiran/core';
+} from '@ichiran/core/compiler';
 import { buildSourceCompilerBinarySections, buildSourceCompilerHotPack } from './release-input.js';
 import {
   parseGeneratedOrderAttestation,

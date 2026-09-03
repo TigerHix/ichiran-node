@@ -66,15 +66,17 @@
       "name": "@ichiran/data",
       "version": "0.0.0",
       "bin": {
-        "ichiran-data": "./dist/index.js",
+        "ichiran-data": "./dist/source-compiler/cli.js",
       },
       "dependencies": {
         "@ichiran/core": "workspace:*",
+        "csv-parse": "^6.1.0",
+        "fast-xml-parser": "^5.3.0",
+      },
+      "devDependencies": {
         "@ichiran/reference-postgres": "0.0.0",
         "commander": "^12.1.0",
-        "csv-parse": "^6.1.0",
         "dotenv": "^17.2.3",
-        "fast-xml-parser": "^5.3.0",
         "postgres": "^3.4.7",
       },
     },

@@ -9,7 +9,7 @@ import {
 } from '../src/source-compiler/conjugation-relation-proof.js';
 import { packedMorphologySurfaces } from '../src/source-compiler/packed-morphology-relation.js';
 import { parseCanonicalEntryJson } from '../src/source-compiler/canonical-entry-ndjson.js';
-import type { MorphologyCandidate } from '@ichiran/core';
+import type { MorphologyCandidate } from '@ichiran/core/compiler';
 
 function key(overrides: Partial<ConjugationRelationKey> = {}): ConjugationRelationKey {
   return {

@@ -6,7 +6,7 @@ import {
   surfaceRoute,
   SURFACE_INDEX_HEADER_BYTES,
   SURFACE_INDEX_STATE_BYTES
-} from '../src/index.js';
+} from '../src/compiler.js';
 
 interface FixtureRow {
   surface: string;

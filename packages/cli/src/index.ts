@@ -4,7 +4,7 @@ import { Command } from 'commander';
 import { config } from 'dotenv';
 import { openNodeRuntime, romanizeWithInfo } from '@ichiran/node';
 
-config();
+config({ quiet: true });
 
 type Runtime = Awaited<ReturnType<typeof openNodeRuntime>>;
 let runtimePromise: Promise<Runtime> | null = null;

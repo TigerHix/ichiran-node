@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 import { createReadStream, createWriteStream } from 'node:fs';
 import { once } from 'node:events';
 import { createInterface } from 'node:readline';
-import { surfaceRoute, type MorphologyCandidate } from '@ichiran/core';
+import { surfaceRoute, type MorphologyCandidate } from '@ichiran/core/compiler';
 import type { CanonicalEntry, ConjugationProperty } from './model.js';
 import {
   emitCanonicalConjugations,

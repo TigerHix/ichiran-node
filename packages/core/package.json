@@ -23,7 +23,9 @@
     "README.md"
   ],
   "scripts": {
-    "build": "bash ../rust-kernel/scripts/build-wasm.sh && tsc -p tsconfig.json && bun scripts/copy-rust-kernel.ts",
+    "build": "bash ../rust-kernel/scripts/build-wasm.sh && bun run build:typescript",
+    "build:typescript": "rm -rf dist && tsc -p tsconfig.json && bun scripts/copy-rust-kernel.ts",
+    "build:compiler": "bun run build:typescript",
     "build:watch": "tsc -p tsconfig.json --watch",
     "prepack": "bun run build",
     "typecheck": "tsc --noEmit -p tsconfig.json",

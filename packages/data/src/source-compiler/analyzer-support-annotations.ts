@@ -1,4 +1,4 @@
-import { unrendaku } from '@ichiran/core';
+import { unrendaku } from '@ichiran/core/compiler';
 import type {
   AnalyzerSupportCollisionSource,
   AnalyzerSupportHintSource,

@@ -24,10 +24,11 @@ if [ "${SOURCE_COMPILER_POSTGRES_ISOLATED:-}" = 1 ]; then
       '{"postgresqlUnavailable":true,"loopback":"down","unixSockets":"hidden","ports":[5432,5433]}'
     exit 0
   fi
+  bun run build:source-compiler
   # Full-corpus release compilation has a large transient object graph. Bun's
   # low-memory mode collects it more often instead of growing until WSL is
   # under host memory pressure; it does not change encoded bytes.
-  exec bun --smol scripts/source-compiler-release.ts "$@"
+  exec bun --smol packages/data/dist/source-compiler/cli.js "$@"
 fi
 
 if [ "$(uname -s)" != Linux ]; then

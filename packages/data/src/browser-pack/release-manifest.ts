@@ -8,18 +8,18 @@ import {
   type AnalyzerReleaseAsset,
   type AnalyzerReleaseEncoding,
   type AnalyzerReleaseManifest
-} from '@ichiran/core';
+} from '@ichiran/core/compiler';
 
 export {
   ANALYZER_RELEASE_FORMAT_VERSION,
   analyzerManifestDigestInput,
   parseAnalyzerReleaseManifest
-} from '@ichiran/core';
+} from '@ichiran/core/compiler';
 export type {
   AnalyzerReleaseAsset,
   AnalyzerReleaseEncoding,
   AnalyzerReleaseManifest
-} from '@ichiran/core';
+} from '@ichiran/core/compiler';
 
 export const ANALYZER_HOT_MAX_BYTES = 24 * 1024 * 1024;
 export const ANALYZER_PERSISTED_MAX_BYTES = 64 * 1024 * 1024;

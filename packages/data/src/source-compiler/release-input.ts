@@ -4,7 +4,7 @@ import {
   MORPHOLOGY_SECTION_ID,
   ROOT_PAYLOAD_SECTION_ID,
   SURFACE_INDEX_SECTION_ID
-} from '@ichiran/core';
+} from '@ichiran/core/compiler';
 import {
   ANALYZER_ANNOTATIONS_SECTION_ID,
   buildAnalyzerAnnotations

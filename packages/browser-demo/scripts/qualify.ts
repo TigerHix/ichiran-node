@@ -1,5 +1,5 @@
 import { spawn } from 'node:child_process';
-import { readFile } from 'node:fs/promises';
+import { readFile, realpath } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { gunzipSync } from 'node:zlib';
 import { TypeScriptOracleRuntime } from '@ichiran/core/qualification';
@@ -7,14 +7,27 @@ import { verifyAnalyzerRelease } from './release-files.js';
 
 const packageRoot = resolve(import.meta.dir, '..');
 const repositoryRoot = resolve(packageRoot, '..', '..');
+function assertCleanCheckout(): void {
+  const result = Bun.spawnSync([
+    'git', '-C', repositoryRoot, 'status', '--porcelain=v1', '--untracked-files=all'
+  ]);
+  if (result.exitCode !== 0 || result.stdout.byteLength !== 0) {
+    throw new Error('Browser qualification requires a clean source checkout');
+  }
+}
 if (process.env.ICHIRAN_TYPESCRIPT_ORACLE === '1') {
   throw new Error(
     'Production browser qualification requires the Rust kernel; '
     + 'use build:qualification-typescript-oracle only for the frozen transition oracle'
   );
 }
+if (process.env.ICHIRAN_QUALIFIED_ARTIFACT !== undefined) {
+  throw new Error('Source browser qualification does not accept ICHIRAN_QUALIFIED_ARTIFACT');
+}
+assertCleanCheckout();
 const productionEnvironment = { ...process.env };
 delete productionEnvironment.ICHIRAN_TYPESCRIPT_ORACLE;
+delete productionEnvironment.ICHIRAN_QUALIFIED_ARTIFACT;
 let release = resolve(repositoryRoot, 'dist', 'browser-alpha');
 let skipE2e = false;
 for (let index = 2; index < process.argv.length; index++) {
@@ -29,6 +42,7 @@ for (let index = 2; index < process.argv.length; index++) {
     throw new Error(`Unknown qualification argument: ${argument}`);
   }
 }
+release = await realpath(release);
 
 async function run(
   command: string,
@@ -57,8 +71,7 @@ async function run(
 
 const verifiedRelease = await verifyAnalyzerRelease(
   release,
-  repositoryRoot,
-  process.env.ICHIRAN_QUALIFIED_ARTIFACT
+  repositoryRoot
 );
 
 const installed = (bytes: Uint8Array, encoding: 'identity' | 'gzip'): Uint8Array =>
@@ -124,6 +137,7 @@ if (!skipE2e) {
     ICHIRAN_E2E_M1_WITNESSES: JSON.stringify(samePackWitnesses)
   });
 }
+assertCleanCheckout();
 
 console.log(
   `Browser qualification passed for ${release}: ${releaseDownloadBytes} release bytes + `

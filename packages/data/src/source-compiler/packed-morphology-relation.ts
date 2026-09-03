@@ -7,7 +7,7 @@ import {
   SURFACE_INDEX_SECTION_ID,
   openSurfaceIndex,
   surfaceRoute
-} from '@ichiran/core';
+} from '@ichiran/core/compiler';
 import {
   canonicalConjugationRelationKey,
   packedRelationKey

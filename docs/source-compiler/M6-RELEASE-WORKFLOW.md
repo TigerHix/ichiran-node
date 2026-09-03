@@ -74,22 +74,27 @@ determinism-check surface-index builds run sequentially so their multi-million-
 row Rust working sets do not overlap. The compiler also finishes the surface
 TSV and releases the physical-target graph before binary pack assembly; the
 phase boundary changes object lifetime, not the surface bytes or pack format.
+The root command first performs a TypeScript-only full package build of
+`@ichiran/core`, copying the already generated and separately reproducibility-checked
+WASM, then builds the private `@ichiran/data` compiler. It does not run the Rust/WASM
+toolchain or import `@ichiran/reference-postgres`, and it leaves the core production
+entry point usable. The built compiler runs from and stamps that same clean repository
+root. It supports Linux/macOS and WSL; native Windows is not supported because the
+surface compiler and atomic release activation use POSIX facilities.
 
 ## PostgreSQL-unavailable proof
 
-The package's default test command also succeeds on a machine with no database
-configuration:
+The package's source test command explicitly excludes the five database/reference
+files and runs every other data test on a machine with no database configuration:
 
 ```sh
-env -u ICHIRAN_DB_URL -u DATABASE_URL ICHIRAN_RUN_DATABASE_TESTS=false \
-  bun test packages/data/tests
+bun run --cwd packages/data test:source
 ```
 
-At the qualification checkpoint this runs 138 tests and skips 12 explicit
-database cases. Nine are legacy load/conjugation tests that run only when
-`ICHIRAN_RUN_DATABASE_TESTS=true`; three are separately invoked exhaustive
-PostgreSQL-oracle comparisons. To prove the legacy coverage remains available,
-run the same suite against the test database:
+At the integration checkpoint this runs 143 tests with no skip. The excluded files
+contain nine legacy load/conjugation cases and three exhaustive PostgreSQL-oracle
+comparisons. To prove that migration coverage remains available, run the complete
+suite against the test database:
 
 ```sh
 ICHIRAN_RUN_DATABASE_TESTS=true \
@@ -97,7 +102,7 @@ ICHIRAN_RUN_DATABASE_TESTS=true \
   bun test packages/data/tests
 ```
 
-That run passes 147 tests and skips only the three exhaustive oracle cases.
+The three exhaustive oracle cases retain their separately named opt-in variables.
 These test modes do not replace the isolated full release proof below.
 
 The focused import test rejects any attempt to resolve the PostgreSQL oracle
@@ -131,8 +136,10 @@ can be run without starting the compiler:
 bun run source:release:isolated -- --probe-only
 ```
 
-The command still requires all non-PostgreSQL build dependencies to have been
-installed before entering the network namespace.
+The capability probe performs no build. A full release requires dependencies to have
+been installed before entering the network namespace; its core/data build preparation
+then runs inside that namespace, so future build hooks cannot silently escape the
+PostgreSQL-unavailable proof.
 
 After building the isolated baseline, run the complete 1,241-operation
 chosen-authority corpus and the independent 301-operation fallback comparison as

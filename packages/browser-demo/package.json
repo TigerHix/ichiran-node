@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "bun run build:benchmark-corpus && bun run --cwd ../core build && vite build && bun scripts/finalize-sw.ts && bun scripts/audit-build.ts",
-    "build:qualification-typescript-oracle": "ICHIRAN_TYPESCRIPT_ORACLE=1 bun run build",
+    "build:qualification-typescript-oracle": "bun run build:benchmark-corpus && bun run --cwd ../core build && vite build --mode typescript-oracle && bun scripts/finalize-sw.ts && bun scripts/audit-build.ts --typescript-oracle",
     "build:benchmark-corpus": "bun scripts/build-benchmark-corpus.ts",
     "stage:analyzer": "bun scripts/stage-analyzer.ts",
     "measure:shell": "bun scripts/measure-shell.ts",

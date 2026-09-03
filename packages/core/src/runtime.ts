@@ -1,20 +1,20 @@
 import type { PortableAnalyzeOptions } from './analyzer-options.js';
-import type { PortableAnalysisResult } from './analyzer-result.js';
+import type { PortableAnalysisResult } from './analyzer-result-contract.js';
 import {
   DetailStoreError,
   type DetailEntry,
   type DetailRandomAccessSource,
   type DetailStoreErrorCode
-} from './details.js';
-import type { RomanizationName } from './romanization.js';
-import { PORTABLE_LEGACY_INFO } from './analyzer-legacy.js';
+} from './details-contract.js';
+import type { RomanizationName } from './romanization-contract.js';
+import { PORTABLE_LEGACY_INFO } from './legacy-contract.js';
 import init, {
   detail_prefix_length,
   WasmDetailStore,
   WasmKernel,
   type InitOutput
 } from './rust-kernel/generated/ichiran_kernel.js';
-import { validatePortableAnalyzeRequest } from './analyzer-options.js';
+import { AnalyzerInputError, validatePortableAnalyzeRequest } from './analyzer-options.js';
 
 interface DetailRange {
   readonly offset: number;
@@ -170,6 +170,20 @@ function now(): number {
   return globalThis.performance?.now() ?? Date.now();
 }
 
+function rustCall<T>(operation: () => T): T {
+  try {
+    return operation();
+  } catch (error) {
+    if (
+      error instanceof Error
+      && (error as Error & { readonly code?: unknown }).code === 'invalid-input'
+    ) {
+      throw new AnalyzerInputError(error.message);
+    }
+    throw error;
+  }
+}
+
 /**
  * Shared Rust/WASM analyzer runtime over one immutable installed pack.
  *
@@ -229,23 +243,20 @@ export class IchiranRuntime {
     return this.#kernel.entry_index_for_sequence(sequence);
   }
 
-  analyze(text: string, options: PortableAnalyzeOptions = {}): Promise<PortableAnalysisResult> {
+  async analyze(text: string, options: PortableAnalyzeOptions = {}): Promise<PortableAnalysisResult> {
     const validated = validatePortableAnalyzeRequest(text, options);
-    return Promise.resolve(json<PortableAnalysisResult>(this.#kernel.analyze_utf16_options(
-      utf16(validated.input),
-      optionsJson(validated.options)
-    )));
+    return rustCall(() => json<PortableAnalysisResult>(
+      this.#kernel.analyze_utf16_options(utf16(validated.input), optionsJson(validated.options))
+    ));
   }
 
-  romanize(
+  async romanize(
     text: string,
     options: PortableAnalyzeOptions & { readonly method?: RomanizationName } = {}
   ): Promise<string> {
     const validated = validatePortableAnalyzeRequest(text, options);
-    return Promise.resolve(fromUtf16(this.#kernel.romanize_utf16_options(
-      utf16(validated.input),
-      optionsJson(validated.options),
-      options.method ?? ''
+    return rustCall(() => fromUtf16(this.#kernel.romanize_utf16_options(
+      utf16(validated.input), optionsJson(validated.options), options.method ?? ''
     )));
   }
 
@@ -254,11 +265,9 @@ export class IchiranRuntime {
     options: PortableAnalyzeOptions & { readonly method?: RomanizationName } = {}
   ): Promise<unknown> {
     const validated = validatePortableAnalyzeRequest(text, options);
-    const operation = this.#kernel.legacy_begin_utf16(
-      utf16(validated.input),
-      optionsJson(validated.options),
-      options.method ?? ''
-    );
+    const operation = rustCall(() => this.#kernel.legacy_begin_utf16(
+      utf16(validated.input), optionsJson(validated.options), options.method ?? ''
+    ));
     try {
       const loaded = new Set<string>();
       for (;;) {

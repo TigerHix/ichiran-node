@@ -1,6 +1,28 @@
 import { asHiragana, testWord } from './characters.js';
 import type { DetailEntry, DetailSense, DetailStoreReader } from './details.js';
 import { romanizeWord, type RomanizationName } from './romanization.js';
+import {
+  PORTABLE_LEGACY_INFO,
+  type PortableLegacyConjugationInfoFacts,
+  type PortableLegacyConjugationJson,
+  type PortableLegacyGlossJson,
+  type PortableLegacySenseJson,
+  type PortableLegacyTransformedPath,
+  type PortableLegacyTransformedResult,
+  type PortableLegacyTransformedToken,
+  type PortableLegacyWordInfoFacts
+} from './legacy-contract.js';
+export {
+  PORTABLE_LEGACY_INFO,
+  type PortableLegacyConjugationInfoFacts,
+  type PortableLegacyConjugationJson,
+  type PortableLegacyGlossJson,
+  type PortableLegacySenseJson,
+  type PortableLegacyTransformedPath,
+  type PortableLegacyTransformedResult,
+  type PortableLegacyTransformedToken,
+  type PortableLegacyWordInfoFacts
+} from './legacy-contract.js';
 import type { AnalyzerSupportReader } from './analyzer-support.js';
 import type { RootPayloadReader } from './root-payload.js';
 import type {
@@ -107,68 +129,6 @@ export type PortableLegacyCompactResult = readonly (
   | readonly PortableLegacyCompactPath[]
 )[];
 
-export interface PortableLegacySenseJson {
-  readonly pos: string;
-  readonly gloss: string;
-  readonly field?: string;
-  readonly info?: string;
-}
-
-export interface PortableLegacyConjugationJson {
-  readonly prop: readonly {
-    readonly pos: string;
-    readonly type: string;
-    readonly fml?: true;
-    readonly neg?: true;
-  }[];
-  readonly reading?: string;
-  readonly gloss?: readonly PortableLegacySenseJson[];
-  readonly readok?: boolean;
-  readonly via?: readonly PortableLegacyConjugationJson[];
-  /** Non-JSON facts retained only for the historical text-info renderer. */
-  readonly [PORTABLE_LEGACY_INFO]?: PortableLegacyConjugationInfoFacts;
-}
-
-export interface PortableLegacyGlossJson {
-  readonly reading?: string;
-  readonly text?: string;
-  readonly kana?: string | readonly string[];
-  readonly score?: number;
-  readonly compound?: readonly string[];
-  readonly components?: readonly PortableLegacyGlossJson[];
-  readonly counter?: { readonly value: string; readonly ordinal: true | readonly [] };
-  readonly seq?: number | readonly number[];
-  readonly gloss?: readonly PortableLegacySenseJson[];
-  readonly suffix?: string;
-  readonly conj?: readonly PortableLegacyConjugationJson[];
-  readonly alternative?: readonly PortableLegacyGlossJson[];
-  /** Non-JSON facts retained only for the historical text-info renderer. */
-  readonly [PORTABLE_LEGACY_INFO]?: PortableLegacyWordInfoFacts;
-}
-
-export interface PortableLegacyWordInfoFacts {
-  /** Dictionary definition used to hydrate unfiltered word-info senses. */
-  readonly definitionSeq: number | null;
-  readonly conjugationSelection: 'default' | 'explicit' | 'root';
-  /** Generated inflected WordInfo rows have no senses of their own. */
-  readonly inflected: boolean;
-}
-
-export interface PortableLegacyConjugationInfoFacts {
-  readonly flags: readonly {
-    readonly negative: boolean | null;
-    readonly formal: boolean | null;
-  }[];
-  /** Current PostgreSQL Node renderer's entry-info-short result. */
-  readonly shortGloss?: string;
-}
-
-/**
- * In-memory compatibility metadata. Symbol keys never alter the public
- * detailed JSON shape and add no bytes to analyzer packs.
- */
-export const PORTABLE_LEGACY_INFO: unique symbol = Symbol('ichiran.legacy-info');
-
 function attachLegacyInfo<T extends object>(
   value: T,
   facts: PortableLegacyWordInfoFacts | PortableLegacyConjugationInfoFacts
@@ -176,20 +136,6 @@ function attachLegacyInfo<T extends object>(
   Object.defineProperty(value, PORTABLE_LEGACY_INFO, { value: facts });
   return value;
 }
-
-export type PortableLegacyTransformedToken = readonly [
-  romanized: string,
-  word: PortableLegacyGlossJson,
-  property: unknown
-];
-export type PortableLegacyTransformedPath = readonly [
-  words: readonly PortableLegacyTransformedToken[],
-  score: number
-];
-export type PortableLegacyTransformedResult = readonly (
-  | string
-  | readonly PortableLegacyTransformedPath[]
-)[];
 
 const CONJUGATION_DESCRIPTIONS: Readonly<Record<number, string>> = Object.freeze({
   1: 'Non-past',

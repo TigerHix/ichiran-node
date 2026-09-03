@@ -1,9 +1,9 @@
 #!/usr/bin/env bun
 
 import { execFile as execFileCallback } from 'node:child_process';
-import { mkdtemp, rm } from 'node:fs/promises';
+import { mkdtemp, realpath, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
-import { join, relative, resolve, sep } from 'node:path';
+import { basename, dirname, isAbsolute, join, parse, relative, resolve, sep } from 'node:path';
 import { promisify } from 'node:util';
 
 import { buildMorphology } from '../browser-pack/morphology-compiler.js';
@@ -42,12 +42,14 @@ interface Options {
   readonly surfaceChunkRows?: number;
 }
 
+const USAGE = `usage:
+  ichiran-data baseline --out <directory> --pack-version <version>
+  ichiran-data update --out <directory> --pack-version <version> \\
+    --source-lock <repo-relative-file>`;
+
 function usage(message?: string): never {
   const prefix = message ? `error: ${message}\n\n` : '';
-  throw new Error(`${prefix}usage:
-  bun --smol scripts/source-compiler-release.ts baseline --out <directory> --pack-version <version>
-  bun --smol scripts/source-compiler-release.ts update --out <directory> --pack-version <version> \\
-    --source-lock <repo-relative-file>`);
+  throw new Error(`${prefix}${USAGE}`);
 }
 
 function parseArguments(argv: readonly string[]): Options {
@@ -87,12 +89,45 @@ function parseArguments(argv: readonly string[]): Options {
   };
 }
 
-function repositoryPath(repository: string, value: string, label: string): string {
-  if (value.includes('\\')) throw new Error(`${label} must use portable forward slashes`);
+function isBelow(parent: string, child: string): boolean {
+  const path = relative(parent, child);
+  return path !== '' && path !== '..' && !path.startsWith(`..${sep}`) && !isAbsolute(path);
+}
+
+async function physicalPath(path: string): Promise<string> {
+  const missing: string[] = [];
+  let ancestor = path;
+  for (;;) {
+    try {
+      return join(await realpath(ancestor), ...missing.reverse());
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+      const parent = dirname(ancestor);
+      if (parent === ancestor) throw error;
+      missing.push(basename(ancestor));
+      ancestor = parent;
+    }
+  }
+}
+
+export async function resolveSourceReleaseOutput(repository: string, value: string): Promise<string> {
+  if (value.includes('\\')) throw new Error('Release output must use portable forward slashes');
   const path = resolve(repository, value);
-  const within = relative(repository, path);
-  if (within === '' || within === '..' || within.startsWith(`..${sep}`)) {
-    throw new Error(`${label} must be below the repository root`);
+  if (path === repository || path === parse(path).root) {
+    throw new Error('Release output must not be the source or filesystem root');
+  }
+  const [physicalRepository, physicalOutput] = await Promise.all([
+    realpath(repository),
+    physicalPath(path)
+  ]);
+  if (physicalOutput === physicalRepository || physicalOutput === parse(physicalOutput).root) {
+    throw new Error('Release output must not resolve to the source or filesystem root');
+  }
+  if (
+    isBelow(physicalRepository, physicalOutput)
+    && !isBelow(join(physicalRepository, 'work'), physicalOutput)
+  ) {
+    throw new Error('In-repository release output must be below work/');
   }
   return path;
 }
@@ -110,8 +145,13 @@ async function assertClean(repository: string): Promise<void> {
 }
 
 export async function runSourceCompilerRelease(argv: readonly string[]): Promise<void> {
+  if (argv.length === 1 && (argv[0] === '--help' || argv[0] === '-h')) {
+    process.stdout.write(`${USAGE}\n`);
+    return;
+  }
   const options = parseArguments(argv);
   const repository = await gitOutput(import.meta.dir, ['rev-parse', '--show-toplevel']);
+  const output = await resolveSourceReleaseOutput(repository, options.output);
   await assertClean(repository);
   const sourceCommit = await gitOutput(repository, ['rev-parse', 'HEAD']);
   if (!/^[0-9a-f]{40}$/.test(sourceCommit)) throw new Error('Git returned an invalid source commit');
@@ -224,7 +264,7 @@ export async function runSourceCompilerRelease(argv: readonly string[]): Promise
     Bun.gc(true);
     const release = await writeSourceCompilerRelease({
       repository,
-      output: repositoryPath(repository, options.output, 'Release output'),
+      output,
       temporaryDirectory,
       sourceCommit,
       packVersion: options.packVersion,

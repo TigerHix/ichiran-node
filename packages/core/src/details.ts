@@ -1,4 +1,16 @@
 import { crc32 } from './crc32.js';
+import {
+  DetailStoreError,
+  type DetailEntry,
+  type DetailForm,
+  type DetailGloss,
+  type DetailProperty,
+  type DetailPropertyTag,
+  type DetailRandomAccessSource,
+  type DetailSense,
+  type DetailStoreErrorCode
+} from './details-contract.js';
+export * from './details-contract.js';
 
 export const DETAILS_MAGIC = 'ICHIDETL';
 export const DETAILS_FORMAT_VERSION = 2;
@@ -28,74 +40,14 @@ const BLOCK_CHECKSUM_OFFSET = 12;
 const BLOCK_FIRST_ENTRY_OFFSET = 16;
 const BLOCK_ENTRY_COUNT_OFFSET = 20;
 
-const PROPERTY_TAGS = [
+const PROPERTY_TAGS: readonly DetailPropertyTag[] = [
   'dial', 'field', 'misc', 'pos', 's_inf', 'stagk', 'stagr'
 ] as const;
-
-export type DetailPropertyTag = typeof PROPERTY_TAGS[number];
-
-export interface DetailGloss {
-  readonly ord: number;
-  readonly text: string;
-}
-
-export interface DetailProperty {
-  readonly tag: DetailPropertyTag;
-  readonly ord: number;
-  readonly text: string;
-}
-
-export interface DetailSense {
-  readonly ord: number;
-  readonly glosses: readonly DetailGloss[];
-  readonly properties: readonly DetailProperty[];
-}
-
-export interface DetailForm {
-  readonly route: 'kanji' | 'kana';
-  readonly text: string;
-  readonly ord: number;
-  readonly common: number | null;
-  readonly commonTags: string;
-  readonly conjugatable: boolean;
-  readonly nokanji: boolean;
-  readonly best: string | null;
-}
-
-export interface DetailEntry {
-  readonly seq: number;
-  readonly forms: readonly DetailForm[];
-  readonly senses: readonly DetailSense[];
-}
-
-export interface DetailRandomAccessSource {
-  readonly byteLength: number;
-  read(offset: number, byteLength: number): Promise<Uint8Array>;
-  /** Release host-owned resources after the runtime has finished using this source. */
-  dispose?(): void;
-}
 
 export type DetailGzipDecoder = (
   compressed: Uint8Array,
   expectedByteLength: number
 ) => Promise<Uint8Array>;
-
-export type DetailStoreErrorCode =
-  | 'invalid-header'
-  | 'unsupported-version'
-  | 'corrupt-index'
-  | 'corrupt-block'
-  | 'out-of-range';
-
-export class DetailStoreError extends Error {
-  readonly code: DetailStoreErrorCode;
-
-  constructor(code: DetailStoreErrorCode, message: string) {
-    super(message);
-    this.name = 'DetailStoreError';
-    this.code = code;
-  }
-}
 
 export interface DetailStoreManifest {
   readonly byteLength: number;

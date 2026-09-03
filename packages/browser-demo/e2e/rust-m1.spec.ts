@@ -44,6 +44,7 @@ interface RustKernelMeasurement {
   readonly workerEmbedderHeapUsedBytes: number;
   readonly workerBackingStorageBytes: number;
   readonly generatedScore: number;
+  readonly invalidInputCode: string;
   readonly calibrationRatio: number;
 }
 
@@ -117,11 +118,16 @@ test('Rust Worker owns the complete analyzer boundary', async ({ browser }) => {
               readonly id: number;
               readonly type: 'progress' | 'result' | 'error';
               readonly result?: unknown;
+              readonly code?: string;
               readonly message?: string;
             };
             if (response.id !== id || response.type === 'progress') return;
             worker.removeEventListener('message', receive);
-            if (response.type === 'error') reject(new Error(response.message));
+            if (response.type === 'error') {
+              const error = new Error(response.message);
+              Object.assign(error, { code: response.code });
+              reject(error);
+            }
             else resolve(response.result as T);
           };
           worker.addEventListener('message', receive);
@@ -144,6 +150,12 @@ test('Rust Worker owns the complete analyzer boundary', async ({ browser }) => {
           const generated = await request<{ readonly paths: readonly { readonly score: number }[] }>({
             op: 'analyze', text: '忘れた', options: { limit: 1 }
           });
+          let invalidInputCode = '';
+          try {
+            await request({ op: 'analyze', text: '猫'.repeat(257), options: { limit: 1 } });
+          } catch (error) {
+            invalidInputCode = String((error as Error & { readonly code?: unknown }).code ?? '');
+          }
           for (let pass = 0; pass < 10; pass++) {
             await request({ op: 'analyze', text: '猫', options: { limit: 1 } });
             await request({ op: 'analyze', text: '食べた', options: { limit: 1 } });
@@ -198,6 +210,7 @@ test('Rust Worker owns the complete analyzer boundary', async ({ browser }) => {
             detailResidentBytesAfter: after.detailResidentBytes,
             workerHeapBytes: after.workerHeapBytes,
             generatedScore: generated.paths[0]!.score,
+            invalidInputCode,
             calibrationRatio,
             differential
           };
@@ -213,6 +226,7 @@ test('Rust Worker owns the complete analyzer boundary', async ({ browser }) => {
         expect(observed!.serialized, `${witness.name} full DTO mismatch`)
           .toBe(witness.serialized);
       }
+      expect(rpc.invalidInputCode).toBe('invalid-input');
       const { differential: _, ...runtimeMeasurement } = rpc;
       measurement = {
         ...runtimeMeasurement,

@@ -9,7 +9,9 @@ import { openNodeRuntime } from '../src/index.js';
 import { openVerifiedDetailSource } from '../src/file-details.js';
 import {
   analyzerManifestDigestInput,
+  AnalyzerInputError,
   IchiranRuntime,
+  MAX_ANALYZER_WORD_LENGTH,
   RUST_KERNEL_WASM_URL,
   type AnalyzerReleaseManifest
 } from '@ichiran/core';
@@ -32,6 +34,16 @@ describe.skipIf(!releaseDirectory)('Node packed runtime release', () => {
       expect(
         ['surface', 'roots', 'morphology', 'support', 'annotations'].filter(field => field in runtime)
       ).toEqual([]);
+    } finally {
+      runtime.dispose();
+    }
+  });
+
+  test('maps Rust-owned semantic input validation to the public host error', async () => {
+    const runtime = await openNodeRuntime(releaseDirectory!);
+    try {
+      await expect(runtime.analyze('猫'.repeat(MAX_ANALYZER_WORD_LENGTH + 1)))
+        .rejects.toBeInstanceOf(AnalyzerInputError);
     } finally {
       runtime.dispose();
     }

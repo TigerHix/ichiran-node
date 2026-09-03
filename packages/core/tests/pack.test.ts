@@ -7,7 +7,7 @@ import {
   PACK_FORMAT_VERSION,
   PACK_HEADER_BYTES,
   PACK_SECTION_ALIGNMENT
-} from '../src/index.js';
+} from '../src/compiler.js';
 
 function expectPackError(action: () => unknown, code: PackFormatError['code']): void {
   try {

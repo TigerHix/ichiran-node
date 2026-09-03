@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import { gunzipSync } from 'node:zlib';
-import { asHiragana, geminate, rendaku } from '@ichiran/core';
+import { asHiragana, geminate, rendaku } from '@ichiran/core/compiler';
 import { XMLParser } from 'fast-xml-parser';
 import { consumeCompatibilityRow } from './compatibility.js';
 

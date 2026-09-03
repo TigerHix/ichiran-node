@@ -14,6 +14,7 @@ import {
   type AnalyzerFixtureRequest
 } from '../../core/tools/parity-corpus.js';
 import { firstCanonicalDifference } from '../../core/tools/parity-canonical.js';
+import { assertSamePackRelease } from './same_pack_release.js';
 
 interface Request {
   readonly text: string;
@@ -99,6 +100,9 @@ async function main(): Promise<void> {
   ]);
   const hotSha256 = digest(hot);
   const detailsSha256 = digest(details);
+  const samePackManifest = samePack
+    ? await assertSamePackRelease(repository, release, hot, details)
+    : null;
   if (!samePack && (hotSha256 !== HOT_SHA256 || detailsSha256 !== DETAILS_SHA256)) {
     throw new Error('C product corpus requires the immutable qualified pack');
   }
@@ -158,6 +162,18 @@ async function main(): Promise<void> {
     }
   }
   if (detailed.length !== 702) throw new Error(`expected 702 detailed cases, got ${detailed.length}`);
+  const utf16Requests = [
+    { name: 'utf16:astral', request: request({ text: '😀', limit: 1 }) },
+    {
+      name: 'utf16:lone-high',
+      request: request({ text: String.fromCharCode(0xd83d), limit: 1 })
+    },
+    {
+      name: 'utf16:lone-low',
+      request: request({ text: String.fromCharCode(0xde00), limit: 1 })
+    }
+  ] as const;
+  detailed.push(...utf16Requests);
 
   const decodeGzip = async (compressed: Uint8Array, expectedBytes: number): Promise<Uint8Array> => {
     const decoded = new Uint8Array(gunzipSync(compressed));
@@ -206,11 +222,12 @@ async function main(): Promise<void> {
     format: 'ichiran-c-product-v1',
     mode: samePack ? 'same-pack' : 'immutable-baseline',
     detailed: samePack
-      ? { operations: 702, samePack: 702, canonicalTies: 0 }
+      ? { operations: 705, samePack: 702, utf16: 3, canonicalTies: 0 }
       : {
-          operations: 702,
+          operations: 705,
           currentLisp: 401,
           fallback: 301,
+          utf16: 3,
           canonicalTies: {
             currentLisp: 3,
             fallback: 1,
@@ -218,10 +235,15 @@ async function main(): Promise<void> {
             names: canonicalTieNames
           }
         },
-    romanization: 5,
+    romanization: { operations: 8, retained: 5, utf16: 3 },
     describe: DESCRIBE_ENTRIES.length,
     hotSha256,
-    detailsSha256
+    detailsSha256,
+    pack: samePackManifest ? {
+      packVersion: samePackManifest.packVersion,
+      sourceCommit: samePackManifest.sourceCommit,
+      sourcesLockSha256: samePackManifest.sourcesLockSha256
+    } : { tag: 'portable-core-260118-baseline' }
   };
   process.stdout.write(`#${JSON.stringify(metadata)}\n`);
   for (let index = 0; index < detailed.length; index++) {
@@ -244,6 +266,20 @@ async function main(): Promise<void> {
     const options = JSON.stringify({ limit: 1, entities: [], normalizePunctuation: true });
     process.stdout.write(
       `R\tromanization:${index}\t${utf16Hex(input)}\t${options}\t\t${JSON.stringify(expected)}\n`
+    );
+  }
+  for (const [index, value] of ([
+    { input: '😀', method: 'kunrei-siki' },
+    { input: String.fromCharCode(0xd83d), method: 'hepburn-basic' },
+    { input: String.fromCharCode(0xde00), method: 'hepburn-modified' }
+  ] as const).entries()) {
+    const options = { limit: 1, normalizePunctuation: true } as const;
+    const expected = await oracle.romanize(value.input, { ...options, method: value.method });
+    process.stdout.write(
+      `R\tutf16:${index}\t${utf16Hex(value.input)}\t${JSON.stringify({
+        ...options,
+        entities: []
+      })}\t${value.method}\t${JSON.stringify(expected)}\n`
     );
   }
 

@@ -2,8 +2,8 @@
 
 Date: 2026-09-02
 Branch: `codex/integrated-edge-cutover`
-Qualification revision: the commit containing this report, which must equal the
-branch head and every generated manifest's `sourceCommit`
+Qualification revision: the final pushed branch head selected after this report is
+committed; every generated manifest must name that exact head
 Baseline: `effd10f1cd4cfd6780760c8130030d287df35ca9`
 
 ## Decision
@@ -15,10 +15,10 @@ host adapters, and qualification orchestration. The frozen TypeScript and Postgr
 analyzers are available only to explicitly named transition qualification tools.
 Upstream Lisp is fixture authority only. Grammar is unchanged.
 
-The release candidate is qualified only when all commands in this report run from a
-clean checkout of the report-bearing branch head. Documentation-only descendants are
-not qualified revisions: the manifest, code, report, and pushed branch must all name
-the same commit.
+This tracked document is the durable architecture and qualification recipe. It does
+not preclaim post-commit results. The task handoff records exact output identities and
+results after all commands run from the clean final commit; documentation-only
+descendants would invalidate that evidence.
 
 ## Preserved merge ancestry
 
@@ -42,18 +42,24 @@ report/attestation and clean-release validation, Rust same-pack qualification, a
 
 ## Release ownership and entry points
 
-- `@ichiran/core` exports the Rust/WASM facade, public DTO/options, release/pack
-  readers, and shared host/compiler utilities. TypeScript analyzer execution helpers
-  are excluded from the main entry point and live under `@ichiran/core/qualification`.
+- `@ichiran/core` is an exact allowlist containing the Rust/WASM facade, public
+  DTO/options, neutral legacy metadata contract, and release-manifest contract.
+  Pack/compiler utilities live under `@ichiran/core/compiler`; TypeScript analyzer
+  execution lives only under `@ichiran/core/qualification`.
 - The canonical browser qualifier rejects `ICHIRAN_TYPESCRIPT_ORACLE=1`, removes the
   variable from production build/audit/E2E child environments, and requires a Rust
   build audit. The separately named `build:qualification-typescript-oracle` command
   exists only for frozen-oracle diagnostics.
-- `@ichiran/data` exports and executes the source compiler. Its legacy PostgreSQL
-  loader is private `migration:data` tooling. PostgreSQL and the reference package are
-  development dependencies, not normal data-package dependencies.
-- `source:release` runs the compiler directly. Linux namespace isolation is the
-  separate `source:release:isolated` proof and has no `pg_isready` dependency.
+- `@ichiran/data` is private repository tooling and exports/executes only the source
+  compiler. Clean-archive qualification builds its exact module graph without database
+  or migration modules. Its legacy PostgreSQL loader is the root-only `migration:data`
+  command, which preserves repository-root path semantics.
+- `source:release` first performs a TypeScript-only complete core build using the
+  checked-in generated WASM, then builds data without the reference package and runs
+  the compiler. The Linux-only `source:release:isolated` command
+  performs that preparation and compilation inside its PostgreSQL-free namespace and
+  has no `pg_isready` dependency. The compiler CLI supports Linux/macOS and WSL, not
+  native Windows, and its built executable must run from the checkout it stamps.
 
 `candidateId` is a request-local reference. It may change across calls, packs, or
 runtimes and must not be persisted. Full Rust same-pack comparison includes it exactly;
@@ -102,11 +108,13 @@ The Rust/WASM same-pack differential runs on the fresh source release and requir
 - 702/702 retained detailed operations exact;
 - zero allowlist entries and no eager whole-details-store read.
 
-The native same-pack command materializes that same verified source release and drives
-the real C ABI. It requires 1,236 clean operations, three UTF-16 edge cases, 702
-detailed operations, five romanizations, four lazy describes, two corruption/recovery
-cases, owned success/error buffers, 128 concurrent clean calls, and 32 concurrent
-detailed operations. The immutable baseline C corpus remains a separate regression
+The native same-pack command resolves the activated release to one physical generation,
+materializes it after verification, and drives the real C ABI. It requires 1,236 clean
+operations, three raw UTF-16 edge cases, 702 retained detailed operations plus three
+UTF-16 detailed cases, five retained romanizations plus three UTF-16 romanizations
+(including non-default methods), four lazy describes, two corruption/recovery cases,
+owned success/error buffers, 128 concurrent clean calls, and 32 concurrent detailed
+operations. The immutable baseline C corpus remains a separate regression
 gate; source-pack qualification no longer relies on it as a substitute.
 
 `qualify:source-hosts` verifies the source release, rebuilds product packages, and runs
@@ -131,6 +139,7 @@ git status --short
 test "$(git rev-parse HEAD)" = "$(git rev-parse origin/codex/integrated-edge-cutover)"
 
 bun install --frozen-lockfile
+bun run audit:data-package
 bun run typecheck:compiler
 bun run typecheck
 bun run test
@@ -142,13 +151,15 @@ cmp <release-a>/hot.bin.gz <release-b>/hot.bin.gz
 cmp <release-a>/details.bin.gz <release-b>/details.bin.gz
 cmp <release-a>/stats.json <release-b>/stats.json
 
-env -u ICHIRAN_DB_URL -u DATABASE_URL ICHIRAN_RUN_DATABASE_TESTS=false \
-  bun test packages/data/tests
+bun run --cwd packages/data test:source
 bun run source:attestation -- --report data/source-compiler-parity-report.json \
   --release <release-a>
-bun packages/core/tools/oracle-parity.ts --repository "$PWD" \
+ICHIRAN_DB_URL='<frozen migration-oracle URL>' \
+  bun packages/core/tools/oracle-parity.ts --repository "$PWD" \
   --release <release-a> --source-compiler-pack --allow-failures \
   --out <temporary-report> --fallback-out <temporary-fallback> --samples 1241
+bun run source:attestation -- --report <temporary-report> --release <release-a>
+cmp <temporary-fallback> packages/rust-kernel/tests/fixtures/m3-fallback.json
 
 bun run qualify:rust-same-pack -- <release-a>
 bun run qualify:native-same-pack -- <release-a>

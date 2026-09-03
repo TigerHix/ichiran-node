@@ -2,9 +2,9 @@
 
 ## Integrated candidate
 
-Use the final pushed head of `codex/integrated-edge-cutover`. The qualified revision is
-the commit containing this handoff; there are no documentation-only descendants. Pin
-the remote head before building and keep the checkout detached at that exact commit:
+Use the final pushed head named in the integration task handoff. This tracked guide is
+a recipe, not post-commit evidence. Pin the remote head before building and keep the
+checkout detached at that exact commit:
 
 ```sh
 git fetch origin codex/integrated-edge-cutover
@@ -154,11 +154,12 @@ bash tests/run_c_harness.sh /path/to/portable-core-260118-baseline
 (cd ../.. && bun run qualify:native-same-pack -- /path/to/attached-source-release)
 ```
 
-The required output covers 1,236 clean analyses, three explicit astral/lone-surrogate
+The required output covers 1,236 clean analyses plus three raw astral/lone-surrogate
 UTF-16 witnesses, 702 retained detailed results (401 current-Lisp authority and 301
-provenance-bound fallback), five romanizations, four lazy describes, corrupt-block
-recovery, owned errors, 128 concurrent clean calls, and 32 concurrent detailed
-operations. Re-run the same corpus through the final
+provenance-bound fallback) plus the same three UTF-16 cases, five retained
+romanizations plus three UTF-16 cases using explicit non-default methods, four lazy
+describes, corrupt-block recovery, owned errors, 128 concurrent clean calls, and 32
+concurrent detailed operations. Re-run the same corpus through the final
 C/Swift wrapper, then validate background execution, restart, leaks, and memory on
 simulator and physical devices.
 

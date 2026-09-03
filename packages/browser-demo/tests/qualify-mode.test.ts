@@ -23,4 +23,43 @@ describe('browser qualification mode', () => {
     );
     expect(result.stderr.toString()).not.toContain('ENOENT');
   });
+
+  test('rejects the immutable-artifact override before touching release inputs', () => {
+    const result = Bun.spawnSync([
+      'bun',
+      'scripts/qualify.ts',
+      '--release',
+      'definitely-missing-release'
+    ], {
+      cwd: packageRoot,
+      env: { ...process.env, ICHIRAN_QUALIFIED_ARTIFACT: 'portable-core-260118-baseline' },
+      stderr: 'pipe',
+      stdout: 'pipe'
+    });
+
+    expect(result.exitCode).not.toBe(0);
+    expect(result.stderr.toString()).toContain(
+      'Source browser qualification does not accept ICHIRAN_QUALIFIED_ARTIFACT'
+    );
+    expect(result.stderr.toString()).not.toContain('ENOENT');
+  });
+
+  test('standalone source verification rejects the immutable-artifact override', () => {
+    const result = Bun.spawnSync([
+      'bun',
+      'scripts/verify-release.ts',
+      'definitely-missing-release'
+    ], {
+      cwd: packageRoot,
+      env: { ...process.env, ICHIRAN_QUALIFIED_ARTIFACT: 'portable-core-260118-baseline' },
+      stderr: 'pipe',
+      stdout: 'pipe'
+    });
+
+    expect(result.exitCode).not.toBe(0);
+    expect(result.stderr.toString()).toContain(
+      'Source release verification does not accept ICHIRAN_QUALIFIED_ARTIFACT'
+    );
+    expect(result.stderr.toString()).not.toContain('ENOENT');
+  });
 });

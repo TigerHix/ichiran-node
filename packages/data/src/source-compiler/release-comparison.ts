@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto';
 
-import type { BrowserAlphaArtifactCounts } from '../browser-pack/release-orchestration.js';
+import type { BrowserAlphaArtifactCounts } from './artifact-contract.js';
 import type { GeneratedOrderAttestation } from './release-evidence.js';
 import type { SourceCompilerBinarySections } from './release-input.js';
 

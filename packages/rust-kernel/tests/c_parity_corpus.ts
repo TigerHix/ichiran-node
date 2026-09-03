@@ -24,6 +24,7 @@ import {
   loadAnalyzerParityCorpus,
   type AnalyzerFixtureRequest
 } from '../../core/tools/parity-corpus.js';
+import { assertSamePackRelease } from './same_pack_release.js';
 
 interface CorpusEntity {
   readonly start: number;
@@ -155,6 +156,9 @@ async function main(): Promise<void> {
   const release = resolve(process.argv[samePack ? 3 : 2] ?? join(repository, 'browser-alpha/release'));
   const hot = new Uint8Array(await readFile(join(release, 'hot.bin')));
   const hotSha256 = createHash('sha256').update(hot).digest('hex');
+  const samePackManifest = samePack
+    ? await assertSamePackRelease(repository, release, hot)
+    : null;
   if (!samePack && hotSha256 !== QUALIFIED_HOT_SHA256) {
     throw new Error(`hot.bin digest ${hotSha256}; expected ${QUALIFIED_HOT_SHA256}`);
   }
@@ -182,7 +186,11 @@ async function main(): Promise<void> {
     oracle: 'frozen TypeScript packages/core/src/analyzer.ts',
     sourceRevision: sourceRevision(repository),
     pack: {
-      tag: samePack ? 'source-compiler-release' : 'portable-core-260118-baseline',
+      ...(samePackManifest ? {
+        packVersion: samePackManifest.packVersion,
+        sourceCommit: samePackManifest.sourceCommit,
+        sourcesLockSha256: samePackManifest.sourcesLockSha256
+      } : { tag: 'portable-core-260118-baseline' }),
       hotSha256
     }
   };

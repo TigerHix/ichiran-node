@@ -1,4 +1,4 @@
-import { testWord } from '@ichiran/core';
+import { testWord } from '@ichiran/core/compiler';
 import type {
   CanonicalEntry,
   CanonicalSense,

@@ -49,7 +49,7 @@ function serveOpaqueAnalyzerAssets(): Plugin {
   };
 }
 
-function gzipRustKernelWasm(): Plugin {
+function gzipRustKernelWasm(typescriptOracle: boolean): Plugin {
   return {
     name: 'gzip-rust-kernel-wasm',
     enforce: 'post',
@@ -59,7 +59,7 @@ function gzipRustKernelWasm(): Plugin {
         && output.fileName.startsWith('assets/ichiran_kernel_bg-')
         && output.fileName.endsWith('.wasm')
       );
-      if (matches.length === 0 && process.env.ICHIRAN_TYPESCRIPT_ORACLE === '1') return;
+      if (matches.length === 0 && typescriptOracle) return;
       if (matches.length !== 1) {
         throw new Error(`Expected one Rust kernel WASM asset, found ${matches.length}`);
       }
@@ -78,14 +78,15 @@ function gzipRustKernelWasm(): Plugin {
   };
 }
 
-export default defineConfig({
-  define: {
-    __ICHIRAN_TYPESCRIPT_ORACLE__: JSON.stringify(
-      process.env.ICHIRAN_TYPESCRIPT_ORACLE === '1'
-    )
-  },
-  plugins: [react(), serveOpaqueAnalyzerAssets(), gzipRustKernelWasm()],
-  worker: {
-    format: 'es'
-  }
+export default defineConfig(({ mode }) => {
+  const typescriptOracle = mode === 'typescript-oracle';
+  return {
+    define: {
+      __ICHIRAN_TYPESCRIPT_ORACLE__: JSON.stringify(typescriptOracle)
+    },
+    plugins: [react(), serveOpaqueAnalyzerAssets(), gzipRustKernelWasm(typescriptOracle)],
+    worker: {
+      format: 'es'
+    }
+  };
 });

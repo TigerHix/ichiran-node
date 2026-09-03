@@ -12,7 +12,7 @@ import {
   type PortableAnalyzeOptions
 } from '@ichiran/core';
 
-config();
+config({ quiet: true });
 
 const MAX_JSON_BODY_SIZE = 1024 * 1024;
 type Runtime = Awaited<ReturnType<typeof openNodeRuntime>>;

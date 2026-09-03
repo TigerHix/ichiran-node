@@ -5,6 +5,9 @@ import {
   simplifyNgrams,
   voiceChar
 } from './characters.js';
+import type { RomanizationName } from './romanization-contract.js';
+
+export { joinRomanizedParts, type RomanizationName } from './romanization-contract.js';
 
 type KanaClass = string;
 type KanaTree = (KanaClass | KanaTree | undefined)[];
@@ -12,14 +15,6 @@ type KanaTree = (KanaClass | KanaTree | undefined)[];
 const KANA_CLASS_NAMES = new Set(CHAR_CLASS_HASH.values());
 const HINT_MODIFIER = '\u200c';
 const HINT_SPACE = '\u200b';
-
-export type RomanizationName =
-  | 'hepburn-basic'
-  | 'hepburn-simple'
-  | 'hepburn-passport'
-  | 'hepburn-traditional'
-  | 'hepburn-modified'
-  | 'kunrei-siki';
 
 export interface RomanizationMethod {
   base(item: KanaClass): string;
@@ -272,16 +267,4 @@ export function romanizeWord(
   const special = method.special(options.originalSpelling ?? word);
   if (special !== null) return special;
   return romanizeList(getCharacterClasses(processHints(word)), method);
-}
-
-export function joinRomanizedParts(parts: readonly string[]): string {
-  let output = '';
-  let lastWasSpace = true;
-  for (const part of parts) {
-    if (part.length === 0) continue;
-    if (!lastWasSpace && /[a-zA-Z0-9]/.test(part[0]!)) output += ' ';
-    output += part;
-    lastWasSpace = /\s/.test(part[part.length - 1]!);
-  }
-  return output;
 }

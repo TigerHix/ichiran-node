@@ -1,5 +1,4 @@
 import type { AnalyzerEntityHint } from './analyzer-types.js';
-import { basicSplit } from './characters.js';
 
 /** Public bounds keep one malformed request from monopolizing an edge device. */
 export const MAX_ANALYZER_LIMIT = 10;
@@ -88,13 +87,6 @@ export function validatePortableAnalyzeRequest(
     throw new AnalyzerInputError(
       `text must contain at most ${MAX_ANALYZER_TEXT_LENGTH} UTF-16 code units`
     );
-  }
-  for (const segment of basicSplit(input)) {
-    if (segment.type === 'word' && segment.text.length > MAX_ANALYZER_WORD_LENGTH) {
-      throw new AnalyzerInputError(
-        `each analyzable word must contain at most ${MAX_ANALYZER_WORD_LENGTH} UTF-16 code units`
-      );
-    }
   }
   if (
     options.normalizePunctuation !== undefined

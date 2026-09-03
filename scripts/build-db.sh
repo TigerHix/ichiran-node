@@ -30,47 +30,47 @@ export ICHIRAN_DB_URL="${DB_URL}"
 # Initialize schema
 echo ""
 echo "Step 1: Initialize schema..."
-bun run data init-db 2>&1 | tail -3
+bun run migration:data -- init-db 2>&1 | tail -3
 
 # Load JMdict
 echo ""
 echo "Step 2: Load JMdict (~3 min)..."
-bun run data load-jmdict 2>&1 | tail -3
+bun run migration:data -- load-jmdict 2>&1 | tail -3
 
 # Load conjugations
 echo ""
 echo "Step 3: Load conjugations (~2 min)..."
-timeout 600 bun run data load-conjugations 2>&1 | tail -3
+timeout 600 bun run migration:data -- load-conjugations 2>&1 | tail -3
 
 # Load secondary conjugations
 echo ""
 echo "Step 4: Load secondary conjugations (~20 min)..."
-timeout 3600 bun run data load-secondary-conjugations 2>&1 | tail -3
+timeout 3600 bun run migration:data -- load-secondary-conjugations 2>&1 | tail -3
 
 # Load custom data
 echo ""
 echo "Step 5: Load custom data (~1 min)..."
-bun run data load-custom --extra --municipality --ward 2>&1 | tail -3
+bun run migration:data -- load-custom --extra --municipality --ward 2>&1 | tail -3
 
 # Apply errata
 echo ""
 echo "Step 6: Apply errata (~1 min)..."
-bun run data apply-errata 2>&1 | tail -3
+bun run migration:data -- apply-errata 2>&1 | tail -3
 
 # Calculate best readings
 echo ""
 echo "Step 7: Calculate best readings (~10 sec)..."
-bun run data best-readings 2>&1 | tail -3
+bun run migration:data -- best-readings 2>&1 | tail -3
 
 # Load kanjidic (optional)
 echo ""
 echo "Step 8: Load kanjidic (~2 sec)..."
-bun run data load-kanjidic --path ./data/kanjidic2.xml.gz 2>&1 | tail -3
+bun run migration:data -- load-kanjidic --path ./data/kanjidic2.xml.gz 2>&1 | tail -3
 
 # Show statistics
 echo ""
 echo "Step 9: Database statistics..."
-bun run data stats 2>&1
+bun run migration:data -- stats 2>&1
 
 echo ""
 echo "========================================"
@@ -80,4 +80,3 @@ echo ""
 echo "To run tests:"
 echo "  ICHIRAN_DB_URL=\"${DB_URL}\" bun test"
 echo ""
-

@@ -3,7 +3,7 @@ import { mkdtemp, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { encodePack, openPack } from '@ichiran/core';
+import { encodePack, openPack } from '@ichiran/core/compiler';
 import { buildDetailStore } from '../src/browser-pack/details.js';
 import { buildRootPayload } from '../src/browser-pack/root-payload.js';
 import { deriveBestReadings } from '../src/source-compiler/best-readings.js';

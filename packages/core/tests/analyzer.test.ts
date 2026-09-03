@@ -6,16 +6,18 @@ import { buildDetailStore } from '../../data/src/browser-pack/details.js';
 import { encodeMorphologyArtifact, type CompiledMorphologyArtifact } from '../../data/src/browser-pack/morphology-format.js';
 import { buildRootPayload, type RootPayloadSource } from '../../data/src/browser-pack/root-payload.js';
 import {
+  type PortableLegacyCompactResult,
+  type PortableLegacyGlossJson,
+  type PortableLegacyTransformedResult
+} from '../src/index.js';
+import {
   memoryDetailSource,
   openAnalyzerSupport,
   openDetailStore,
   openMorphology,
   openRootPayload,
-  type PortableLegacyCompactResult,
-  type PortableLegacyGlossJson,
-  type PortableLegacyTransformedResult,
   SurfaceIndex
-} from '../src/index.js';
+} from '../src/compiler.js';
 import {
   openPortableAnalyzer,
   serializePortableLegacyDetailed,

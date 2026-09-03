@@ -152,7 +152,9 @@ static int load_cases(FILE *input, ParityCase **output, size_t *output_count) {
           "\"61f2882e086be7e0e1b6ba9000e76e0e735b22ea443146f628f04cf877ff6ae0\"")
           != NULL;
       const int same_pack = strstr(line, "\"mode\":\"same-pack\"") != NULL
-        && strstr(line, "\"tag\":\"source-compiler-release\"") != NULL
+        && strstr(line, "\"packVersion\":\"") != NULL
+        && strstr(line, "\"sourceCommit\":\"") != NULL
+        && strstr(line, "\"sourcesLockSha256\":\"") != NULL
         && strstr(line, "\"hotSha256\":\"") != NULL;
       if (saw_metadata || (!immutable_pack && !same_pack)
           || strstr(line, "\"format\":\"ichiran-c-parity-v1\"") == NULL

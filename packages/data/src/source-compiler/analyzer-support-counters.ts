@@ -1,4 +1,4 @@
-import { testWord } from '@ichiran/core';
+import { testWord } from '@ichiran/core/compiler';
 import type { AnalyzerSupportCounterSource, AnalyzerSupportRoute } from '../browser-pack/analyzer-support.js';
 import { COUNTER_SPECIALS, type CounterSpecialDeclaration } from './analyzer-support-counter-specials.js';
 import type { CanonicalEntry, CanonicalForm } from './model.js';
