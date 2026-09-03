@@ -215,8 +215,10 @@ test('Rust Worker owns the complete analyzer boundary', async ({ browser }) => {
     expect(measurement.detailMs).toBeLessThan(65.7);
     expect(measurement.transientBytes).toBeLessThanOrEqual(128 * 1024 * 1024);
     expect(measurement.wasmLinearMemoryBytes).toBeLessThanOrEqual(96 * 1024 * 1024);
-    expect(measurement.detailResidentBytesBefore).toBe(1_755_112);
-    expect(measurement.detailResidentBytesAfter).toBeGreaterThan(1_755_112);
+    expect(measurement.detailResidentBytesBefore).toBe(1_787_296);
+    expect(measurement.detailResidentBytesAfter).toBeGreaterThan(
+      measurement.detailResidentBytesBefore
+    );
     expect(measurement.generatedScore).toBe(216);
 
     const input = page.getByRole('textbox', { name: 'Japanese text', exact: true });

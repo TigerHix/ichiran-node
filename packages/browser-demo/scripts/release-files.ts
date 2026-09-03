@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto';
 import { execFile as execFileCallback } from 'node:child_process';
 import { readFile, readdir } from 'node:fs/promises';
-import { join, resolve } from 'node:path';
+import { join, relative, resolve, sep } from 'node:path';
 import { promisify } from 'node:util';
 import { gunzipSync } from 'node:zlib';
 import {
@@ -27,7 +27,10 @@ function sha256(bytes: Uint8Array): string {
   return createHash('sha256').update(bytes).digest('hex');
 }
 
-export async function currentSourceIdentity(repositoryRoot: string): Promise<{
+export async function currentSourceIdentity(
+  repositoryRoot: string,
+  sourceLock = 'data/source-compiler-sources.lock.json'
+): Promise<{
   readonly sourceCommit: string;
   readonly sourcesLockSha256: string;
 }> {
@@ -36,14 +39,25 @@ export async function currentSourceIdentity(repositoryRoot: string): Promise<{
   });
   const sourceCommit = stdout.trim();
   if (!/^[0-9a-f]{40}$/.test(sourceCommit)) throw new Error('Current Git HEAD is invalid');
-  const lock = await readFile(join(repositoryRoot, 'data', 'source-compiler-sources.lock.json'));
+  const resolvedRepository = resolve(repositoryRoot);
+  const lockPath = resolve(resolvedRepository, sourceLock);
+  const within = relative(resolvedRepository, lockPath);
+  if (within === '..' || within.startsWith(`..${sep}`) || within.length === 0) {
+    throw new Error('Source lock must be a repository-relative file');
+  }
+  const lock = await readFile(lockPath);
   return { sourceCommit, sourcesLockSha256: sha256(lock) };
+}
+
+export interface ReleaseVerificationOptions {
+  readonly qualifiedArtifact?: string | undefined;
+  readonly sourceLock?: string | undefined;
 }
 
 export async function verifyAnalyzerRelease(
   directory: string,
   repositoryRoot: string,
-  qualifiedArtifact?: string
+  options: ReleaseVerificationOptions = {}
 ): Promise<VerifiedRelease> {
   const resolved = resolve(directory);
   const manifestBytes = await readFile(join(resolved, 'manifest.json'));
@@ -52,7 +66,8 @@ export async function verifyAnalyzerRelease(
     text => createHash('sha256').update(text).digest('hex')
   );
 
-  if (qualifiedArtifact !== undefined) {
+  if (options.qualifiedArtifact !== undefined) {
+    const qualifiedArtifact = options.qualifiedArtifact;
     if (qualifiedArtifact !== QUALIFIED_BASELINE_ARTIFACT) {
       throw new Error(`Unknown qualified analyzer artifact ${qualifiedArtifact}`);
     }
@@ -69,7 +84,7 @@ export async function verifyAnalyzerRelease(
       throw new Error(`Analyzer release does not match qualified artifact ${qualifiedArtifact}`);
     }
   } else {
-    const identity = await currentSourceIdentity(repositoryRoot);
+    const identity = await currentSourceIdentity(repositoryRoot, options.sourceLock);
     if (manifest.sourceCommit !== identity.sourceCommit) {
       throw new Error(
         `Analyzer release is stale: sourceCommit ${manifest.sourceCommit} != current ${identity.sourceCommit}`

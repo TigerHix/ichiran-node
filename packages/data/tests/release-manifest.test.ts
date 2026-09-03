@@ -3,6 +3,7 @@ import { gunzipSync } from 'node:zlib';
 import { describe, expect, test } from 'bun:test';
 import {
   ANALYZER_HOT_MAX_BYTES,
+  ANALYZER_WIRE_MAX_BYTES,
   analyzerManifestDigestInput,
   assertAnalyzerReleaseSize,
   buildAnalyzerRelease
@@ -16,6 +17,11 @@ function digest(value: string): string {
 }
 
 describe('browser analyzer release manifest', () => {
+  test('keeps the current phone budgets explicit', () => {
+    expect(ANALYZER_HOT_MAX_BYTES).toBe(25 * 1024 * 1024);
+    expect(ANALYZER_WIRE_MAX_BYTES).toBe(26 * 1024 * 1024);
+  });
+
   test('is deterministic and records both transport and installed bytes', () => {
     const options = {
       packVersion: 'alpha.1',

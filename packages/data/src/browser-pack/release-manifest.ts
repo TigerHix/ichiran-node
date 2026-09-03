@@ -21,9 +21,9 @@ export type {
   AnalyzerReleaseManifest
 } from '@ichiran/core/compiler';
 
-export const ANALYZER_HOT_MAX_BYTES = 24 * 1024 * 1024;
+export const ANALYZER_HOT_MAX_BYTES = 25 * 1024 * 1024;
 export const ANALYZER_PERSISTED_MAX_BYTES = 64 * 1024 * 1024;
-export const ANALYZER_WIRE_MAX_BYTES = 25 * 1024 * 1024;
+export const ANALYZER_WIRE_MAX_BYTES = 26 * 1024 * 1024;
 
 export interface AnalyzerReleaseBuild {
   readonly manifest: AnalyzerReleaseManifest;

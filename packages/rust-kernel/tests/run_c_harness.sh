@@ -9,10 +9,16 @@ if [ "${1:-}" = --same-pack ]; then
   shift
 fi
 release_dir="${1:-$repository/browser-alpha/release}"
+shift || true
 generator_args=("$release_dir")
 if [ "$mode" = same-pack ]; then
   generator_args=(--same-pack "$release_dir")
+  if [ "${1:-}" = --source-lock ] && [ -n "${2:-}" ]; then
+    generator_args+=(--source-lock "$2")
+    shift 2
+  fi
 fi
+[ "$#" -eq 0 ] || { echo "unknown C harness argument: $1" >&2; exit 2; }
 
 cd "$crate_dir"
 cargo build --release --locked

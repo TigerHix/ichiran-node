@@ -93,6 +93,12 @@ async function main(): Promise<void> {
   const repository = resolve(import.meta.dir, '../../..');
   const samePack = process.argv[2] === '--same-pack';
   const release = resolve(process.argv[samePack ? 3 : 2] ?? join(repository, 'browser-alpha/release'));
+  const sourceLock = samePack && process.argv[4] === '--source-lock'
+    ? process.argv[5]
+    : undefined;
+  if (samePack && process.argv.length > 4 && !sourceLock) {
+    throw new Error('Expected --source-lock <file> after the same-pack release');
+  }
   const [corpus, hot, details] = await Promise.all([
     loadAnalyzerParityCorpus(repository),
     readFile(join(release, 'hot.bin')),
@@ -101,7 +107,7 @@ async function main(): Promise<void> {
   const hotSha256 = digest(hot);
   const detailsSha256 = digest(details);
   const samePackManifest = samePack
-    ? await assertSamePackRelease(repository, release, hot, details)
+    ? await assertSamePackRelease(repository, release, hot, details, sourceLock)
     : null;
   if (!samePack && (hotSha256 !== HOT_SHA256 || detailsSha256 !== DETAILS_SHA256)) {
     throw new Error('C product corpus requires the immutable qualified pack');

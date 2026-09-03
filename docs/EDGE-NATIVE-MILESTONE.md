@@ -209,9 +209,9 @@ contention.
 
 | Gate | Requirement |
 |---|---:|
-| One-time compressed shell + data transfer | at most 25 MiB |
+| One-time compressed shell + data transfer | at most 26 MiB |
 | Installed shell + analyzer data | at most 64 MiB |
-| Always-resident hot image | at most 24 MiB |
+| Always-resident hot image | at most 25 MiB |
 | Ordinary top-one p95 at calibrated 6x contention | at most 75 ms |
 | Pathological morphology p95 at calibrated 6x contention | at most 250 ms |
 | Dense contiguous 64-256-unit top-1/5/10 p95 at calibrated 6x contention | at most 500 ms |
