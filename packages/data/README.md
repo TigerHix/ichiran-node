@@ -44,7 +44,7 @@ the frozen loader contract. These commands are not part of the compiler executab
 6. `load-custom --extra --municipality --ward` - Load custom entries (geographic names, ~3.4k entries, ~1 min)
 7. `apply-errata` - Apply corrections + reload :extra (~1 min)
 8. `best-readings` - Calculate best_kana/best_kanji (~10 sec)
-9. `load-kanjidic --path ./data/kanjidic2.xml.gz` - Load kanji data (auto-decompresses .gz, ~2 sec)
+9. `load-kanjidic` - Load kanji data from the ignored live-data cache, downloading it when absent (~2 sec)
 10. `stats` - Show database statistics
 
 **Important Notes:**

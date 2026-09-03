@@ -65,7 +65,7 @@ bun run migration:data -- best-readings 2>&1 | tail -3
 # Load kanjidic (optional)
 echo ""
 echo "Step 8: Load kanjidic (~2 sec)..."
-bun run migration:data -- load-kanjidic --path ./data/kanjidic2.xml.gz 2>&1 | tail -3
+bun run migration:data -- load-kanjidic 2>&1 | tail -3
 
 # Show statistics
 echo ""

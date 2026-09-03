@@ -243,7 +243,7 @@ describe('source-compiler complete-corpus parity attestation', () => {
       .toThrow('Unreviewed parity diagnostic row');
   });
 
-  test('ignores only generatedAt and rejects changed samples, locks, and pack bytes', async () => {
+  test('accepts an exact-head report and rejects changed identity, samples, locks, and pack bytes', async () => {
     const directory = await mkdtemp(resolve(tmpdir(), 'ichiran-parity-attestation-'));
     try {
       const sourceLockBytes = await readFile(resolve(data, 'source-compiler-sources.lock.json'));
@@ -354,7 +354,7 @@ describe('source-compiler complete-corpus parity attestation', () => {
       changedTestedRelease.testedRelease.sourceCommit = 'f'.repeat(40);
       await writeFile(paths.report, JSON.stringify(changedTestedRelease));
       await expect(verifySourceCompilerParityAttestation(input)).rejects
-        .toThrow('tested-release identity is stale');
+        .toThrow('does not match the historical attestation or supplied release');
       await writeFile(paths.report, JSON.stringify(timestampOnly));
 
       await writeFile(paths.sourceLock, '{}');
@@ -385,6 +385,38 @@ describe('source-compiler complete-corpus parity attestation', () => {
         )
       ]);
       expect((await verifySourceCompilerParityAttestation(input)).reviewedRows).toBe(2);
+
+      const freshReport = clone(timestampOnly);
+      freshReport.testedRelease = {
+        sourceCommit: laterManifest.manifest.sourceCommit,
+        manifestFileSha256: sha256(laterManifest.manifestBytes),
+        manifestSha256: laterManifest.manifest.manifestSha256,
+        hot: {
+          file: laterManifest.manifest.hot.file,
+          encoding: laterManifest.manifest.hot.encoding,
+          downloadBytes: laterManifest.manifest.hot.downloadBytes,
+          downloadSha256: laterManifest.manifest.hot.downloadSha256,
+          installedBytes: laterManifest.manifest.hot.installedBytes,
+          installedSha256: laterManifest.manifest.hot.installedSha256
+        },
+        details: {
+          file: laterManifest.manifest.details.file,
+          encoding: laterManifest.manifest.details.encoding,
+          downloadBytes: laterManifest.manifest.details.downloadBytes,
+          downloadSha256: laterManifest.manifest.details.downloadSha256,
+          installedBytes: laterManifest.manifest.details.installedBytes,
+          installedSha256: laterManifest.manifest.details.installedSha256
+        }
+      };
+      await writeFile(paths.report, JSON.stringify(freshReport));
+      expect((await verifySourceCompilerParityAttestation(input)).reviewedRows).toBe(2);
+
+      const mismatchedFreshReport = clone(freshReport);
+      mismatchedFreshReport.testedRelease.manifestFileSha256 = 'f'.repeat(64);
+      await writeFile(paths.report, JSON.stringify(mismatchedFreshReport));
+      await expect(verifySourceCompilerParityAttestation(input)).rejects
+        .toThrow('does not match the historical attestation or supplied release');
+      await writeFile(paths.report, JSON.stringify(timestampOnly));
 
       const changedRelease = buildAnalyzerRelease({
         packVersion: 'test',

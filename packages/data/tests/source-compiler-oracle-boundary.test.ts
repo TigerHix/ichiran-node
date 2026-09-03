@@ -99,6 +99,8 @@ test('private migration command preserves repository-root data paths', async () 
   expect(rootPackage.scripts['migration:data']).toBe('bun packages/data/src/migration-cli.ts');
   const buildDb = await Bun.file(resolve(repository, 'scripts/build-db.sh')).text();
   expect(buildDb).not.toContain('--cwd packages/data');
+  expect(buildDb).not.toContain('./data/kanjidic2.xml.gz');
+  expect(buildDb).toContain('bun run migration:data -- load-kanjidic 2>&1');
   const migrationCli = await Bun.file(resolve(repository, 'packages/data/src/migration-cli.ts')).text();
   expect(migrationCli).not.toContain('bun run data download');
 

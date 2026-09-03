@@ -97,6 +97,10 @@ Required source results are:
 The generated fallback file must remain byte-identical to
 `packages/rust-kernel/tests/fixtures/m3-fallback.json`. Direct/generated ordering
 attestations must validate with no additional or unreviewed difference.
+For a fresh report, the attestation gate first requires the complete tested-release
+identity to match the supplied exact-head manifest, including both assets. It then
+historicalizes only the source commit and the manifest file/body digests before applying
+the unchanged retained report digest, sample bijection, totals, lock, and review checks.
 
 ## Rust, native, host, and browser qualification
 

@@ -413,6 +413,24 @@ function sameTestedAsset(
     && tested.installedSha256 === attested.installed.sha256;
 }
 
+function sameTestedRelease(
+  left: TestedReleaseIdentity,
+  right: TestedReleaseIdentity
+): boolean {
+  const sameAsset = (a: TestedReleaseAsset, b: TestedReleaseAsset): boolean =>
+    a.file === b.file
+    && a.encoding === b.encoding
+    && a.downloadBytes === b.downloadBytes
+    && a.downloadSha256 === b.downloadSha256
+    && a.installedBytes === b.installedBytes
+    && a.installedSha256 === b.installedSha256;
+  return left.sourceCommit === right.sourceCommit
+    && left.manifestFileSha256 === right.manifestFileSha256
+    && left.manifestSha256 === right.manifestSha256
+    && sameAsset(left.hot, right.hot)
+    && sameAsset(left.details, right.details);
+}
+
 function rowKey(authority: ParityAuthority, suite: string, request: string): string {
   return `${authority}\u0000${suite}\u0000${request}`;
 }
@@ -588,10 +606,6 @@ export async function verifySourceCompilerParityAttestation(
     JSON.parse(attestationBytes.toString('utf8'))
   );
   const reportValue: unknown = JSON.parse(reportBytes.toString('utf8'));
-  const result = validateSourceCompilerParityReport(
-    attestation,
-    reportValue
-  );
   const manifest = parseAnalyzerReleaseManifest(
     JSON.parse(manifestBytes.toString('utf8')),
     value => sha256(value)
@@ -640,5 +654,46 @@ export async function verifySourceCompilerParityAttestation(
     throw new Error('Parity oracle-lock identity is stale');
   }
 
-  return result;
+  const manifestAsset = (side: 'hot' | 'details'): TestedReleaseAsset => {
+    const value = manifest[side];
+    return {
+      file: value.file,
+      encoding: value.encoding,
+      downloadBytes: value.downloadBytes,
+      downloadSha256: value.downloadSha256,
+      installedBytes: value.installedBytes,
+      installedSha256: value.installedSha256
+    };
+  };
+  const currentRelease: TestedReleaseIdentity = {
+    sourceCommit: manifest.sourceCommit,
+    manifestFileSha256: sha256(manifestBytes),
+    manifestSha256: manifest.manifestSha256,
+    hot: manifestAsset('hot'),
+    details: manifestAsset('details')
+  };
+  const report = record(reportValue, 'Source-compiler parity report');
+  const testedRelease = testedReleaseIdentity(report.testedRelease);
+  const historical = testedRelease.sourceCommit === attestation.pack.historicalSourceCommit
+    && testedRelease.manifestFileSha256 === attestation.pack.historicalManifestFileSha256
+    && testedRelease.manifestSha256 === attestation.pack.historicalManifestSha256;
+  let validatedReport: unknown = report;
+  if (!historical) {
+    if (!sameTestedRelease(testedRelease, currentRelease)) {
+      throw new Error(
+        'Parity report tested release does not match the historical attestation or supplied release'
+      );
+    }
+    validatedReport = {
+      ...report,
+      testedRelease: {
+        ...record(report.testedRelease, 'Parity report tested release'),
+        sourceCommit: attestation.pack.historicalSourceCommit,
+        manifestFileSha256: attestation.pack.historicalManifestFileSha256,
+        manifestSha256: attestation.pack.historicalManifestSha256
+      }
+    };
+  }
+
+  return validateSourceCompilerParityReport(attestation, validatedReport);
 }
