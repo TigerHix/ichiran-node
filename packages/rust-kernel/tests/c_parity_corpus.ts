@@ -154,10 +154,16 @@ async function main(): Promise<void> {
   const repository = resolve(import.meta.dir, '../../..');
   const samePack = process.argv[2] === '--same-pack';
   const release = resolve(process.argv[samePack ? 3 : 2] ?? join(repository, 'browser-alpha/release'));
+  const sourceLock = samePack && process.argv[4] === '--source-lock'
+    ? process.argv[5]
+    : undefined;
+  if (samePack && process.argv.length > 4 && !sourceLock) {
+    throw new Error('Expected --source-lock <file> after the same-pack release');
+  }
   const hot = new Uint8Array(await readFile(join(release, 'hot.bin')));
   const hotSha256 = createHash('sha256').update(hot).digest('hex');
   const samePackManifest = samePack
-    ? await assertSamePackRelease(repository, release, hot)
+    ? await assertSamePackRelease(repository, release, hot, undefined, sourceLock)
     : null;
   if (!samePack && hotSha256 !== QUALIFIED_HOT_SHA256) {
     throw new Error(`hot.bin digest ${hotSha256}; expected ${QUALIFIED_HOT_SHA256}`);

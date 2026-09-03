@@ -30,7 +30,12 @@ fi
 cp "$release/manifest.json" "$installed/manifest.json"
 gzip -dc "$release/hot.bin.gz" > "$installed/hot.bin"
 gzip -dc "$release/details.bin.gz" > "$installed/details.bin"
-bash packages/rust-kernel/tests/run_c_harness.sh --same-pack "$installed"
+if [ -n "$source_lock" ]; then
+  bash packages/rust-kernel/tests/run_c_harness.sh --same-pack "$installed" \
+    --source-lock "$source_lock"
+else
+  bash packages/rust-kernel/tests/run_c_harness.sh --same-pack "$installed"
+fi
 test "$(git rev-parse HEAD)" = "$qualification_commit" || {
   echo 'Native same-pack qualification source commit changed during the run' >&2
   exit 1

@@ -11,7 +11,7 @@ function digest(bytes: Uint8Array): string {
   return createHash('sha256').update(bytes).digest('hex');
 }
 
-async function currentSourceIdentity(repository: string): Promise<{
+async function currentSourceIdentity(repository: string, sourceLock?: string): Promise<{
   readonly sourceCommit: string;
   readonly sourcesLockSha256: string;
 }> {
@@ -21,7 +21,7 @@ async function currentSourceIdentity(repository: string): Promise<{
     sourceCommit: new TextDecoder().decode(git.stdout).trim(),
     sourcesLockSha256: digest(await readFile(join(
       repository,
-      'data/source-compiler-sources.lock.json'
+      sourceLock ?? 'data/source-compiler-sources.lock.json'
     )))
   };
 }
@@ -31,13 +31,14 @@ export async function assertSamePackRelease(
   repository: string,
   release: string,
   hot: Uint8Array,
-  details?: Uint8Array
+  details?: Uint8Array,
+  sourceLock?: string
 ): Promise<AnalyzerReleaseManifest> {
   const manifest = parseAnalyzerReleaseManifest(
     JSON.parse(await readFile(join(release, 'manifest.json'), 'utf8')),
     text => digest(new TextEncoder().encode(text))
   );
-  const identity = await currentSourceIdentity(repository);
+  const identity = await currentSourceIdentity(repository, sourceLock);
   if (
     manifest.sourceCommit !== identity.sourceCommit
     || manifest.sourcesLockSha256 !== identity.sourcesLockSha256
