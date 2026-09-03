@@ -35,8 +35,8 @@ test('keeps the old offline shell alive until its tabs close, then cleans it up'
     const cacheName = /const CACHE = '([^']+)';/.exec(original)?.[1];
     if (!coreSource || !cacheName) throw new Error('Finalized Service Worker has no shell identity');
     const core = JSON.parse(coreSource) as string[];
-    const lazyAsset = core.find(path => path.startsWith('/assets/benchmark-corpus-'));
-    if (!lazyAsset) throw new Error('Production shell has no lazy benchmark corpus');
+    const lazyAsset = '/licenses.html';
+    if (!core.includes(lazyAsset)) throw new Error('Production shell does not cache licenses.html');
     deliberatelyMissingAsset = lazyAsset;
     expect(await page.evaluate(async path => (await fetch(path)).ok, lazyAsset)).toBe(true);
 

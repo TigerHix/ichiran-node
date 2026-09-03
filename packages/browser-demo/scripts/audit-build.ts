@@ -33,6 +33,16 @@ const assetDirectory = join(output, 'assets');
 const scripts = (await readdir(assetDirectory)).filter(name => name.endsWith('.js'));
 const workerName = scripts.find(name => name.startsWith('analyzer.worker-'));
 if (!workerName) throw new Error('Production analyzer Worker chunk is missing');
+const qualificationBuild = process.env.ICHIRAN_BROWSER_QUALIFICATION === '1';
+const qualificationChunks = scripts.filter(name =>
+  name.startsWith('qualification-client-') || name.startsWith('benchmark-corpus-')
+);
+if (qualificationBuild && qualificationChunks.length !== 2) {
+  throw new Error('Qualification build must contain its client and benchmark corpus chunks');
+}
+if (!qualificationBuild && qualificationChunks.length !== 0) {
+  throw new Error('Product browser build contains qualification-only chunks');
+}
 
 const worker = await readFile(join(assetDirectory, workerName), 'utf8');
 const oracleWorkerNames = findTypeScriptOracleWorkerChunks(worker, scripts);
@@ -52,6 +62,10 @@ const main = (await Promise.all(
 const workerGraph = `${worker}\n${(await Promise.all(
   oracleWorkerNames.map(name => readFile(join(assetDirectory, name), 'utf8'))
 )).join('\n')}`;
+
+if (!qualificationBuild && `${main}\n${worker}`.includes('rust-kernel-metrics')) {
+  throw new Error('Product browser build contains a qualification-only Worker operation');
+}
 
 // The lazily loaded benchmark corpus is inert JSON provenance/data. Its source
 // paths may name reference-postgres tests without introducing runtime code.

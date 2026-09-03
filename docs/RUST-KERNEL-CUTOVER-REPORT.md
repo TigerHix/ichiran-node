@@ -1,5 +1,9 @@
 # Rust analyzer kernel cutover qualification
 
+> Historical qualification record. The later product API cutover removes the legacy,
+> describe, metrics, and sequence-lookup compatibility surface documented below; see
+> [MIGRATION.md](../MIGRATION.md) for the current contract.
+
 Date: 2026-09-01
 Starting commit: `effd10f1cd4cfd6780760c8130030d287df35ca9`
 Starting ref: `origin/main`

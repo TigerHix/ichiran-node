@@ -1,18 +1,19 @@
-import { MAX_ANALYZER_ENTITIES, type PortableAnalyzeOptions } from '@ichiran/core';
+import type { AnalyzeOptions } from '@ichiran/core';
 
 export const MAX_ENTITY_SPEC_LENGTH = 2048;
+export const MAX_ENTITY_HINTS = 64;
 
 export function parseEntityHints(
   value: string,
   textLength: number
-): NonNullable<PortableAnalyzeOptions['entities']> {
+): NonNullable<AnalyzeOptions['entities']> {
   if (value.length > MAX_ENTITY_SPEC_LENGTH) {
     throw new Error(`Entity spans must contain at most ${MAX_ENTITY_SPEC_LENGTH} text units.`);
   }
   if (!value.trim()) return [];
   const parts = value.split(/[\s,]+/).filter(Boolean);
-  if (parts.length > MAX_ANALYZER_ENTITIES) {
-    throw new Error(`Entity spans must contain at most ${MAX_ANALYZER_ENTITIES} hints.`);
+  if (parts.length > MAX_ENTITY_HINTS) {
+    throw new Error(`Entity spans must contain at most ${MAX_ENTITY_HINTS} hints.`);
   }
   return parts.map(part => {
     const match = /^(\d+):(\d+)(?::(-?\d+))?$/.exec(part);

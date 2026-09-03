@@ -1,19 +1,21 @@
 import { afterAll, beforeAll, describe, expect, test } from 'bun:test';
 import { createServer, type Server } from 'node:http';
 
-import {
-  MAX_ANALYZER_ENTITIES,
-  MAX_ANALYZER_TEXT_LENGTH
-} from '@ichiran/core';
+import { AnalyzerError, type Analyzer } from '@ichiran/core';
 import { createApiHandler } from '../src/index.js';
 
-describe('analyzer API request bounds', () => {
+describe('HTTP request validation', () => {
   let server: Server;
   let base: string;
 
   beforeAll(async () => {
-    // Invalid requests must be rejected before the packed runtime is touched.
-    server = createServer(createApiHandler({} as never));
+    const analyzer = {
+      analyze: async () => { throw new AnalyzerError('invalid-input', 'bad analyzer options'); },
+      romanize: async () => '',
+      entry: async () => { throw new AnalyzerError('not-found', 'entry does not exist'); },
+      dispose: () => undefined
+    } as unknown as Analyzer;
+    server = createServer(createApiHandler(analyzer));
     await new Promise<void>((resolve, reject) => {
       server.once('error', reject);
       server.listen(0, '127.0.0.1', resolve);
@@ -24,46 +26,49 @@ describe('analyzer API request bounds', () => {
   });
 
   afterAll(async () => {
-    await new Promise<void>((resolve, reject) =>
+    await new Promise<void>((resolve, reject) => (
       server.close(error => error ? reject(error) : resolve())
-    );
+    ));
   });
 
-  async function invalid(body: unknown): Promise<{ status: number; error: string }> {
-    const response = await fetch(`${base}/api/segment`, {
+  async function post(body: string): Promise<{ status: number; value: unknown }> {
+    const response = await fetch(`${base}/v1/analyze`, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(body)
+      body
     });
-    const value = await response.json() as { error: string };
-    return { status: response.status, error: value.error };
+    return { status: response.status, value: await response.json() };
   }
 
-  test('returns 400 for pathological path limits, text, entities, and boosts', async () => {
-    expect(await invalid({ text: '猫', limit: 100_000_000 })).toMatchObject({
+  test('uses one structured error envelope', async () => {
+    expect(await post('{')).toEqual({
       status: 400,
-      error: expect.stringContaining('1 to 10')
+      value: { error: { code: 'invalid-input', message: 'Invalid JSON' } }
     });
-    expect(await invalid({ text: '猫'.repeat(MAX_ANALYZER_TEXT_LENGTH + 1) }))
-      .toMatchObject({ status: 400, error: expect.stringContaining('text must contain at most') });
-    expect(await invalid({
-      text: '猫',
-      entities: Array.from(
-        { length: MAX_ANALYZER_ENTITIES + 1 },
-        () => ({ start: 0, end: 1 })
-      )
-    })).toMatchObject({ status: 400, error: expect.stringContaining('entities must contain') });
-    expect(await invalid({ text: '猫', entities: [{ start: 0, end: 1, boost: 1_000_001 }] }))
-      .toMatchObject({ status: 400, error: expect.stringContaining('boost must be finite') });
+    expect(await post('{}')).toEqual({
+      status: 400,
+      value: { error: { code: 'invalid-input', message: 'text must be a string' } }
+    });
+    expect(await post(JSON.stringify({ text: '猫', options: [] }))).toEqual({
+      status: 400,
+      value: { error: { code: 'invalid-input', message: 'options must be an object' } }
+    });
+    expect(await post(JSON.stringify({ text: '猫' }))).toEqual({
+      status: 400,
+      value: { error: { code: 'invalid-input', message: 'bad analyzer options' } }
+    });
   });
 
-  test('returns a JSON 413 response instead of resetting an oversized upload', async () => {
-    const response = await fetch(`${base}/api/segment`, {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ text: '猫'.repeat(1024 * 1024) })
+  test('returns JSON for oversized bodies and missing entries', async () => {
+    const oversized = await post(JSON.stringify({ text: 'a'.repeat(1024 * 1024) }));
+    expect(oversized).toEqual({
+      status: 413,
+      value: { error: { code: 'invalid-input', message: 'Payload too large' } }
     });
-    expect(response.status).toBe(413);
-    expect(await response.json()).toEqual({ error: 'Payload too large' });
+    const missing = await fetch(`${base}/v1/entries/123`);
+    expect(missing.status).toBe(404);
+    expect(await missing.json()).toEqual({
+      error: { code: 'not-found', message: 'entry does not exist' }
+    });
   });
 });

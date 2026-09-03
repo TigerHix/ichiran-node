@@ -1,37 +1,26 @@
 # @ichiran/node
 
-Node.js host adapter for `@ichiran/core`. It reads one immutable analyzer release,
-checks the manifest and compressed/installed SHA-256 identities, and opens the shared
-core runtime. Hot data is decompressed into memory. Details are verified into a
-temporary file and read by exact range so the complete detail store is never resident.
+The Node filesystem adapter for `@ichiran/core`. Its only export is `openAnalyzer`.
+It verifies the release manifest and both compressed and installed SHA-256 identities,
+then opens the same Rust/WASM analyzer used in the browser.
 
 ```ts
-import { openNodeRuntime } from '@ichiran/node';
+import { openAnalyzer } from '@ichiran/node';
 
-const runtime = await openNodeRuntime('/absolute/path/to/analyzer-release');
+const analyzer = await openAnalyzer('/absolute/path/to/analyzer-release');
 try {
-  console.log(await runtime.romanize('今日はいい天気です'));
+  console.log(await analyzer.romanize('今日はいい天気です'));
+  console.log(await analyzer.analyze('今日はいい天気です', { limit: 3 }));
 } finally {
-  runtime.dispose();
+  analyzer.dispose();
 }
 ```
 
-Without an explicit path, `openNodeRuntime()` reads `ICHIRAN_PACK_DIR`. The directory
-must contain:
+Without an argument, `openAnalyzer()` reads `ICHIRAN_PACK_DIR`. A deployment may set
+`ICHIRAN_SOURCE_COMMIT` to reject a release built for different analyzer code. The
+directory contains `manifest.json` plus the hot and detail assets named by it.
 
-```text
-manifest.json
-hot.bin.gz
-details.bin.gz
-```
-
-This package also exports `romanizeWithInfo`, the Node-facing formatter for the
-historical info output, and analyzer entity-hint types.
-
-`dispose()` releases WASM resources and removes the runtime's verified temporary
-detail file. Call it only after outstanding analyzer operations have completed.
-
-Analyzer lookup, morphology, scoring, top-N selection, details, romanization, and
-legacy serialization all remain in `@ichiran/core`. This package owns only Node I/O,
-gzip decoding, release verification, and the compatibility info presentation. It has
-no PostgreSQL dependency.
+Hot data is decoded in memory. Details are verified into a temporary file and served
+by exact ranges; `dispose()` removes that file. Analyzer behavior, result types, and
+errors are owned by `@ichiran/core`. This package contains no formatter, legacy
+serializer, grammar behavior, or PostgreSQL dependency.

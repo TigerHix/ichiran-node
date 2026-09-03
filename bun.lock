@@ -50,9 +50,10 @@
       "name": "@ichiran/cli",
       "version": "0.0.0",
       "bin": {
-        "ichiran-cli": "./dist/index.js",
+        "ichiran": "./dist/index.js",
       },
       "dependencies": {
+        "@ichiran/core": "workspace:*",
         "@ichiran/node": "workspace:*",
         "commander": "^12.1.0",
         "dotenv": "^17.2.3",

@@ -6,12 +6,15 @@ import { readFile, stat } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 
 import {
-  IchiranRuntime,
-  parseAnalyzerReleaseManifest,
-  type AnalyzerReleaseAsset,
-  type PortableAnalysisResult,
-  type PortableAnalyzeOptions
+  Analyzer,
+  type AnalysisResult,
+  type AnalyzeOptions
 } from '../src/index.js';
+import {
+  parseAnalyzerReleaseManifest,
+  type AnalyzerReleaseAsset
+} from '../src/release.js';
+import { legacyAnalysis } from '../src/runtime-qualification.js';
 
 import { TypeScriptOracleRuntime } from '../src/runtime-typescript.js';
 import { compareDetailedAuthority } from './oracle-authority.js';
@@ -148,7 +151,7 @@ function batchRequest(
   };
 }
 
-function options(request: BatchRequest): PortableAnalyzeOptions {
+function options(request: BatchRequest): AnalyzeOptions {
   return {
     limit: request.limit,
     ...(request.entities ? { entities: request.entities } : {}),
@@ -207,8 +210,8 @@ function rawDifference(expected: unknown, actual: unknown, path = '$'): Canonica
 
 /** Same-pack qualification ignores elapsed time and compares every other public DTO field. */
 export function samePackAnalysisDifference(
-  expected: PortableAnalysisResult,
-  actual: PortableAnalysisResult
+  expected: AnalysisResult,
+  actual: AnalysisResult
 ): CanonicalDifference | null {
   return rawDifference(
     { ...expected, computeMs: 0 },
@@ -489,7 +492,7 @@ async function main(): Promise<void> {
     details: oracleDetails,
     decodeGzip
   });
-  const wasm = await IchiranRuntime.open({
+  const wasm = await Analyzer.open({
     hot: new Uint8Array(hotBytes),
     details: wasmDetails,
     wasm: new Uint8Array(wasmBytes)
@@ -585,7 +588,7 @@ async function main(): Promise<void> {
 
       for (let index = 0; index < detailed.length; index++) {
         const fixture = detailed[index]!;
-        const actual = await wasm.legacy(fixture.request.text, options(fixture.request));
+        const actual = await legacyAnalysis(wasm, fixture.request.text, options(fixture.request));
         const comparison = compareDetailedAuthority(
           fixture.authority === 'current-lisp' ? fixture.expected : null,
           fixture.authority === 'frozen-postgres-reference' ? fixture.expected : null,
@@ -615,7 +618,7 @@ async function main(): Promise<void> {
       for (let index = 0; index < samePackDetailed.length; index++) {
         const fixture = samePackDetailed[index]!;
         const [actual, expected] = await Promise.all([
-          wasm.legacy(fixture.request.text, options(fixture.request)),
+          legacyAnalysis(wasm, fixture.request.text, options(fixture.request)),
           oracle.legacy(fixture.request.text, options(fixture.request))
         ]);
         const difference = rawDifference(expected, actual);

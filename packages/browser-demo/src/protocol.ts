@@ -1,14 +1,27 @@
 import type {
-  AnalyzerReleaseAsset,
-  AnalyzerReleaseManifest,
-  PortableAnalysisPath,
-  PortableAnalysisResult,
-  PortableAnalysisToken,
-  PortableAnalyzeOptions
+  AnalyzeOptions,
+  AnalysisPath,
+  AnalysisResult,
+  AnalysisToken,
+  AnalyzerErrorCode,
+  DictionaryEntry,
+  RomanizeOptions
 } from '@ichiran/core';
+import type {
+  AnalyzerReleaseAsset,
+  AnalyzerReleaseManifest
+} from '@ichiran/core/release';
 
 export type PackAssetManifest = AnalyzerReleaseAsset;
 export type AnalyzerPackManifest = AnalyzerReleaseManifest;
+export type {
+  AnalyzeOptions,
+  AnalysisPath,
+  AnalysisResult,
+  AnalysisToken,
+  DictionaryEntry,
+  RomanizeOptions
+};
 
 export type InstallPhase =
   | 'downloading'
@@ -40,46 +53,18 @@ export type PackStatus =
       readonly workerOpen: boolean;
     };
 
-export type AnalyzeOptions = PortableAnalyzeOptions;
-
-export type AnalysisToken = PortableAnalysisToken;
-export type AnalysisPath = PortableAnalysisPath;
-export type AnalysisResult = PortableAnalysisResult;
-
-export interface BenchmarkGroupResult {
-  readonly corpus: string;
-  readonly samples: number;
-  readonly p50Ms: number;
-  readonly p95Ms: number;
-  readonly maxMs: number;
-  readonly rawMs: readonly number[];
-}
-
-export interface BenchmarkResult {
-  /** Exact identity of the installed release measured by this report. */
-  readonly release: AnalyzerPackManifest;
-  readonly corpusVersion: 3;
-  readonly warmupPasses: 2;
-  readonly measuredPasses: 10;
-  /** The only groups with alpha pass/fail thresholds. */
-  readonly groups: readonly BenchmarkGroupResult[];
-  /** Additional measurements retained for optimization, never release gates. */
-  readonly diagnostics: {
-    readonly analyzeGroups: readonly BenchmarkGroupResult[];
-    readonly describe: BenchmarkGroupResult;
-    readonly workerReadyMs: number | null;
-    readonly firstAnalyzeMs: number | null;
-  };
-}
-
-export interface RustKernelMetrics {
-  readonly openMs: number;
-  readonly transientBytes: number;
-  readonly wasmLinearMemoryBytes: number;
-  readonly kernelPayloadBytes: number;
-  readonly detailResidentBytes: number;
-  readonly workerHeapBytes: number | null;
-}
+export type AnalyzerClientErrorCode = AnalyzerErrorCode
+  | 'corrupt-install'
+  | 'insufficient-storage'
+  | 'not-installed'
+  | 'release-changed'
+  | 'release-not-set'
+  | 'request-superseded'
+  | 'stale-install'
+  | 'worker-crashed'
+  | 'worker-error'
+  | 'worker-terminated'
+  | 'worker-unavailable';
 
 export type WorkerRequest =
   | {
@@ -90,11 +75,19 @@ export type WorkerRequest =
   | { readonly id: number; readonly op: 'status' }
   | { readonly id: number; readonly op: 'install'; readonly manifestUrl: string }
   | { readonly id: number; readonly op: 'clear' }
-  | { readonly id: number; readonly op: 'analyze'; readonly text: string; readonly options: AnalyzeOptions }
-  | { readonly id: number; readonly op: 'legacy'; readonly text: string; readonly options: AnalyzeOptions }
-  | { readonly id: number; readonly op: 'describe'; readonly entryIndex: number }
-  | { readonly id: number; readonly op: 'romanize'; readonly text: string }
-  | { readonly id: number; readonly op: 'rust-kernel-metrics' };
+  | {
+      readonly id: number;
+      readonly op: 'analyze';
+      readonly text: string;
+      readonly options?: AnalyzeOptions;
+    }
+  | {
+      readonly id: number;
+      readonly op: 'romanize';
+      readonly text: string;
+      readonly options?: RomanizeOptions;
+    }
+  | { readonly id: number; readonly op: 'entry'; readonly entryIndex: number };
 
 export type WorkerResultByOperation = {
   readonly 'expect-release': PackStatus;
@@ -102,10 +95,8 @@ export type WorkerResultByOperation = {
   readonly install: PackStatus;
   readonly clear: PackStatus;
   readonly analyze: AnalysisResult;
-  readonly legacy: unknown;
-  readonly describe: unknown;
   readonly romanize: string;
-  readonly 'rust-kernel-metrics': RustKernelMetrics;
+  readonly entry: DictionaryEntry;
 };
 
 export type WorkerEvent = {
@@ -122,6 +113,6 @@ export type WorkerResponse =
   | {
       readonly id: number;
       readonly type: 'error';
-      readonly code: string;
+      readonly code: AnalyzerClientErrorCode;
       readonly message: string;
     };

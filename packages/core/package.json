@@ -16,6 +16,14 @@
     "./compiler": {
       "types": "./dist/compiler.d.ts",
       "default": "./dist/compiler.js"
+    },
+    "./release": {
+      "types": "./dist/release.d.ts",
+      "default": "./dist/release.js"
+    },
+    "./qualification/runtime": {
+      "types": "./dist/runtime-qualification.d.ts",
+      "default": "./dist/runtime-qualification.js"
     }
   },
   "files": [

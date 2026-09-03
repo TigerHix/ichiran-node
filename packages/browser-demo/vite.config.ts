@@ -80,9 +80,11 @@ function gzipRustKernelWasm(typescriptOracle: boolean): Plugin {
 
 export default defineConfig(({ mode }) => {
   const typescriptOracle = mode === 'typescript-oracle';
+  const qualification = process.env.ICHIRAN_BROWSER_QUALIFICATION === '1';
   return {
     define: {
-      __ICHIRAN_TYPESCRIPT_ORACLE__: JSON.stringify(typescriptOracle)
+      __ICHIRAN_TYPESCRIPT_ORACLE__: JSON.stringify(typescriptOracle),
+      __ICHIRAN_BROWSER_QUALIFICATION__: JSON.stringify(qualification)
     },
     plugins: [react(), serveOpaqueAnalyzerAssets(), gzipRustKernelWasm(typescriptOracle)],
     worker: {

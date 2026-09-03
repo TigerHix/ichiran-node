@@ -1,29 +1,19 @@
 import { afterAll, beforeAll, describe, expect, test } from 'bun:test';
-import { readFile } from 'node:fs/promises';
 import { createServer, type Server } from 'node:http';
-import { join } from 'node:path';
-import { gunzipSync } from 'node:zlib';
 
-import {
-  IchiranRuntime,
-  MAX_ANALYZER_WORD_LENGTH,
-  RUST_KERNEL_WASM_URL,
-  type AnalyzerReleaseManifest
-} from '@ichiran/core';
-import { openNodeRuntime } from '@ichiran/node';
+import { openAnalyzer } from '@ichiran/node';
 import { createApiHandler } from '../src/index.js';
 
 const releaseDirectory = process.env.ICHIRAN_PACK_DIR;
-type Runtime = Awaited<ReturnType<typeof openNodeRuntime>>;
 
-describe.skipIf(!releaseDirectory)('packed analyzer API', () => {
+describe.skipIf(!releaseDirectory)('packed analyzer HTTP API', () => {
   let server: Server;
-  let runtime: Runtime;
+  let analyzer: Awaited<ReturnType<typeof openAnalyzer>>;
   let base: string;
 
   beforeAll(async () => {
-    runtime = await openNodeRuntime(releaseDirectory!);
-    server = createServer(createApiHandler(runtime));
+    analyzer = await openAnalyzer(releaseDirectory!);
+    server = createServer(createApiHandler(analyzer));
     await new Promise<void>((resolve, reject) => {
       server.once('error', reject);
       server.listen(0, '127.0.0.1', resolve);
@@ -34,8 +24,10 @@ describe.skipIf(!releaseDirectory)('packed analyzer API', () => {
   });
 
   afterAll(async () => {
-    await new Promise<void>((resolve, reject) => server.close(error => error ? reject(error) : resolve()));
-    runtime.dispose();
+    await new Promise<void>((resolve, reject) => (
+      server.close(error => error ? reject(error) : resolve())
+    ));
+    analyzer.dispose();
   });
 
   async function post(path: string, body: unknown) {
@@ -44,119 +36,82 @@ describe.skipIf(!releaseDirectory)('packed analyzer API', () => {
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(body)
     });
-    expect(response.status).toBe(200);
-    return response.json() as Promise<Record<string, unknown>>;
+    return { response, body: await response.json() as Record<string, unknown> };
   }
 
-  test('keeps analyzer endpoint response shapes without a database', async () => {
-    const health = await fetch(`${base}/health/db`).then(response => response.json());
-    expect(health).toMatchObject({ status: 'ok', database: 'not-required' });
+  test('serves the small versioned transport contract', async () => {
+    const health = await fetch(`${base}/health`);
+    expect(health.status).toBe(200);
+    expect(await health.json()).toEqual({ status: 'ok' });
 
-    expect(await post('/api/romanize', { text: '今日' })).toEqual({
+    const romanized = await post('/v1/romanize', { text: '今日' });
+    expect(romanized.response.status).toBe(200);
+    expect(romanized.body).toEqual({ romanized: 'kyō' });
+
+    const analyzed = await post('/v1/analyze', {
       text: '今日',
-      romanized: 'kyō'
+      options: { limit: 1 }
     });
-    expect(await post('/api/romanize/info', { text: '今日' })).toMatchObject({
-      text: '今日',
-      romanized: 'kyō',
-      info: [['kyō', expect.stringContaining('today; this day')]]
-    });
-    expect(await post('/api/segment', { text: '今日', limit: 1 })).toMatchObject({
-      text: '今日',
-      limit: 1,
-      segments: expect.any(Array)
-    });
+    expect(analyzed.response.status).toBe(200);
+    expect(analyzed.body.input).toBe('今日');
+    expect(Array.isArray(analyzed.body.paths)).toBe(true);
+    const paths = analyzed.body.paths as { tokens: { entryIndex: number | null }[] }[];
+    const entryIndex = paths[0]?.tokens.find(token => token.entryIndex !== null)?.entryIndex;
+    expect(entryIndex).toBeNumber();
+    const entry = await fetch(`${base}/v1/entries/${entryIndex}`);
+    expect(entry.status).toBe(200);
+    expect(await entry.json()).toMatchObject({ seq: expect.any(Number) });
   });
 
-  test('marks grammar as deliberately excluded while retaining analyze shape', async () => {
-    expect(await post('/api/analyze', { text: '今日', limit: 1 })).toMatchObject({
-      segments: expect.any(Array),
-      grammars: {},
-      grammarExcluded: true
+  test('preserves UTF-16 input and entity offsets', async () => {
+    const analyzed = await post('/v1/analyze', {
+      text: '🙂猫',
+      options: { limit: 1, entities: [{ start: 2, end: 3, boost: 100 }] }
     });
+    expect(analyzed.response.status).toBe(200);
+    expect(analyzed.body).toMatchObject({ input: '🙂猫' });
+    const paths = analyzed.body.paths as {
+      readonly tokens: readonly {
+        readonly start: number;
+        readonly end: number;
+        readonly text: string;
+        readonly entity: boolean;
+      }[];
+    }[];
+    expect(paths[0]?.tokens.find(token => token.text === '猫')).toMatchObject({
+      start: 2,
+      end: 3,
+      entity: true
+    });
+
+    const loneSurrogate = String.fromCharCode(0xd83d);
+    const preserved = await post('/v1/analyze', { text: loneSurrogate });
+    expect(preserved.response.status).toBe(200);
+    const echoed = preserved.body.input as string;
+    expect(echoed.length).toBe(1);
+    expect(echoed.charCodeAt(0)).toBe(0xd83d);
   });
 
-  test('returns 400 for Rust-owned analyzable-word validation', async () => {
-    const response = await fetch(`${base}/api/segment`, {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ text: '猫'.repeat(MAX_ANALYZER_WORD_LENGTH + 1), limit: 1 })
+  test('returns structured product errors and removes historical routes', async () => {
+    const invalid = await post('/v1/analyze', { text: '猫', options: { limit: 99 } });
+    expect(invalid.response.status).toBe(400);
+    expect(invalid.body).toMatchObject({
+      error: { code: 'invalid-input', message: expect.stringContaining('1 to 10') }
     });
-    expect(response.status).toBe(400);
-    expect(await response.json()).toEqual({
-      error: `each analyzable word must contain at most ${MAX_ANALYZER_WORD_LENGTH} UTF-16 code units`
-    });
-  });
 
-  test('serves overlapping detail-backed analyses independently', async () => {
-    const inputs = ['食べさせられました', '三個'] as const;
-    const sequential = [];
-    for (const text of inputs) sequential.push(await post('/api/segment', { text, limit: 1 }));
-
-    const manifest = JSON.parse(
-      await readFile(join(releaseDirectory!, 'manifest.json'), 'utf8')
-    ) as AnalyzerReleaseManifest;
-    const [downloadedHot, downloadedDetails, wasm] = await Promise.all([
-      readFile(join(releaseDirectory!, manifest.hot.file)),
-      readFile(join(releaseDirectory!, manifest.details.file)),
-      readFile(RUST_KERNEL_WASM_URL)
-    ]);
-    const hot = manifest.hot.encoding === 'gzip'
-      ? new Uint8Array(gunzipSync(downloadedHot))
-      : new Uint8Array(downloadedHot);
-    const details = manifest.details.encoding === 'gzip'
-      ? new Uint8Array(gunzipSync(downloadedDetails))
-      : new Uint8Array(downloadedDetails);
-    const reads: Array<readonly [number, number]> = [];
-    let armed = false;
-    let releaseFirstReads: () => void = () => undefined;
-    const firstReads = new Promise<void>(resolve => {
-      releaseFirstReads = resolve;
+    const invalidMethod = await post('/v1/romanize', {
+      text: '猫',
+      options: { method: 42 }
     });
-    const concurrentRuntime = await IchiranRuntime.open({
-      hot,
-      wasm: new Uint8Array(wasm),
-      details: {
-        byteLength: details.byteLength,
-        async read(offset, byteLength) {
-          if (armed) {
-            reads.push([offset, byteLength]);
-            if (reads.length === inputs.length) releaseFirstReads();
-            if (reads.length <= inputs.length) await firstReads;
-          }
-          return details.slice(offset, offset + byteLength);
-        }
-      }
+    expect(invalidMethod.response.status).toBe(400);
+    expect(invalidMethod.body).toMatchObject({
+      error: { code: 'invalid-input', message: expect.stringContaining('romanization scheme') }
     });
-    const concurrentServer = createServer(createApiHandler(concurrentRuntime));
-    try {
-      await new Promise<void>((resolve, reject) => {
-        concurrentServer.once('error', reject);
-        concurrentServer.listen(0, '127.0.0.1', resolve);
-      });
-      const address = concurrentServer.address();
-      if (!address || typeof address === 'string') throw new Error('API did not bind a TCP port');
-      const concurrentBase = `http://127.0.0.1:${address.port}`;
-      armed = true;
-      const concurrent = await Promise.all(inputs.map(async text => {
-        const response = await fetch(`${concurrentBase}/api/segment`, {
-          method: 'POST',
-          headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ text, limit: 1 })
-        });
-        expect(response.status).toBe(200);
-        return response.json() as Promise<Record<string, unknown>>;
-      }));
 
-      expect(concurrent).toEqual(sequential);
-      expect(concurrent.map(result => result.text)).toEqual(inputs);
-      expect(reads).toHaveLength(inputs.length);
-      expect(reads[0]).not.toEqual(reads[1]);
-    } finally {
-      await new Promise<void>((resolve, reject) => (
-        concurrentServer.close(error => error ? reject(error) : resolve())
-      ));
-      concurrentRuntime.dispose();
-    }
+    const removed = await post('/api/segment', { text: '今日' });
+    expect(removed.response.status).toBe(404);
+    expect(removed.body).toEqual({
+      error: { code: 'not-found', message: 'Route not found' }
+    });
   });
 });

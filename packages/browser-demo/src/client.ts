@@ -2,20 +2,29 @@ import type {
   AnalyzeOptions,
   AnalysisResult,
   AnalyzerPackManifest,
-  BenchmarkResult,
+  AnalyzerClientErrorCode,
+  DictionaryEntry,
   InstallPhase,
   PackStatus,
+  RomanizeOptions,
   WorkerRequest,
   WorkerResponse
 } from './protocol.js';
-import { parseAnalyzerReleaseManifest } from '@ichiran/core';
+import { parseAnalyzerReleaseManifest } from '@ichiran/core/release';
 import { Sha256 } from './worker/sha256.js';
 
 export function parseDeployedRelease(value: unknown): AnalyzerPackManifest {
-  return parseAnalyzerReleaseManifest(
-    value,
-    text => new Sha256().update(new TextEncoder().encode(text)).digestHex()
-  );
+  try {
+    return parseAnalyzerReleaseManifest(
+      value,
+      text => new Sha256().update(new TextEncoder().encode(text)).digestHex()
+    );
+  } catch (error) {
+    throw new AnalyzerClientError(
+      'invalid-pack',
+      error instanceof Error ? error.message : String(error)
+    );
+  }
 }
 
 export interface InstallProgressValue {
@@ -25,9 +34,9 @@ export interface InstallProgressValue {
 }
 
 export class AnalyzerClientError extends Error {
-  readonly code: string;
+  readonly code: AnalyzerClientErrorCode;
 
-  constructor(code: string, message: string) {
+  constructor(code: AnalyzerClientErrorCode, message: string) {
     super(message);
     this.name = 'AnalyzerClientError';
     this.code = code;
@@ -40,18 +49,6 @@ interface PendingRequest {
   readonly progress?: (value: InstallProgressValue) => void;
 }
 
-type BenchmarkCorpusRequest = readonly [
-  text: string,
-  limit?: number,
-  entities?: AnalyzeOptions['entities']
-];
-
-interface BenchmarkRequest {
-  readonly text: string;
-  readonly limit: number;
-  readonly entities?: AnalyzeOptions['entities'];
-}
-
 type WorkerRequestBody = WorkerRequest extends infer Request
   ? Request extends { readonly id: number }
     ? Omit<Request, 'id'>
@@ -59,6 +56,9 @@ type WorkerRequestBody = WorkerRequest extends infer Request
   : never;
 
 type AnalyzerWorkerFactory = () => Worker;
+
+type InternalWorkerRequest = Readonly<Record<string, unknown>> & { readonly op: string };
+const internalRequest = Symbol();
 
 function createAnalyzerWorker(): Worker {
   return new Worker(new URL('./analyzer.worker.ts', import.meta.url), {
@@ -75,9 +75,6 @@ export class AnalyzerClient {
   #initialization: { readonly worker: Worker; readonly promise: Promise<PackStatus> } | null = null;
   #disposed = false;
   #nextId = 1;
-  #workerReadyMs: number | null = null;
-  #firstAnalyzeMs: number | null = null;
-  #firstAnalyzePending = false;
   readonly #workerFactory: AnalyzerWorkerFactory;
   readonly #pending = new Map<number, PendingRequest>();
 
@@ -96,7 +93,6 @@ export class AnalyzerClient {
 
   /** Pins every Worker incarnation to the authenticated release deployed with this shell. */
   async expectRelease(release: AnalyzerPackManifest): Promise<PackStatus> {
-    const started = performance.now();
     const verifiedRelease = parseDeployedRelease(release);
     if (
       this.#expectedRelease
@@ -116,25 +112,16 @@ export class AnalyzerClient {
         'Analyzer Worker stopped unexpectedly. Try again to restart it.'
       );
     }
-    const status = initialized ?? await this.#requestOnWorker<PackStatus>(worker, { op: 'status' });
-    if (status.state === 'ready' && this.#workerReadyMs === null) {
-      this.#workerReadyMs = performance.now() - started;
-    }
-    return status;
+    return initialized ?? await this.#requestOnWorker<PackStatus>(worker, { op: 'status' });
   }
 
-  async status(): Promise<PackStatus> {
-    const started = performance.now();
-    const status = await this.#request<PackStatus>({ op: 'status' });
-    if (status.state === 'ready' && this.#workerReadyMs === null) {
-      this.#workerReadyMs = performance.now() - started;
-    }
-    return status;
+  status(): Promise<PackStatus> {
+    return this.#request({ op: 'status' });
   }
 
   install(
     manifestUrl: string,
-    progress: (value: InstallProgressValue) => void
+    progress?: (value: InstallProgressValue) => void
   ): Promise<PackStatus> {
     return this.#request({ op: 'install', manifestUrl }, progress);
   }
@@ -143,160 +130,21 @@ export class AnalyzerClient {
     return this.#request({ op: 'clear' });
   }
 
-  async analyze(text: string, options: AnalyzeOptions): Promise<AnalysisResult> {
-    const measureFirst = this.#firstAnalyzeMs === null && !this.#firstAnalyzePending;
-    const started = measureFirst ? performance.now() : 0;
-    if (measureFirst) this.#firstAnalyzePending = true;
-    try {
-      const result = await this.#request<AnalysisResult>({ op: 'analyze', text, options });
-      if (measureFirst) this.#firstAnalyzeMs = performance.now() - started;
-      return result;
-    } finally {
-      if (measureFirst) this.#firstAnalyzePending = false;
-    }
+  analyze(text: string, options?: AnalyzeOptions): Promise<AnalysisResult> {
+    return this.#request({ op: 'analyze', text, options });
   }
 
-  legacy(text: string, options: AnalyzeOptions): Promise<unknown> {
-    return this.#request({ op: 'legacy', text, options });
+  entry(entryIndex: number): Promise<DictionaryEntry> {
+    return this.#request({ op: 'entry', entryIndex });
   }
 
-  describe(entryIndex: number): Promise<unknown> {
-    return this.#request({ op: 'describe', entryIndex });
+  romanize(text: string, options?: RomanizeOptions): Promise<string> {
+    return this.#request({ op: 'romanize', text, options });
   }
 
-  romanize(text: string): Promise<string> {
-    return this.#request({ op: 'romanize', text });
-  }
-
-  /** Measures the complete UI-to-Worker RPC, including result cloning. */
-  async benchmark(release: AnalyzerPackManifest): Promise<BenchmarkResult> {
-    const { default: benchmarkCorpus } = await import('./generated/benchmark-corpus.json');
-    const requests = (values: readonly (readonly unknown[])[]): readonly BenchmarkRequest[] => (
-      values.map(value => {
-        const [text, limit = 1, entities] = value as BenchmarkCorpusRequest;
-        return { text, limit, entities };
-      })
-    );
-    const hardGroups = [
-      ['ordinary', requests(benchmarkCorpus.groups.ordinary), true],
-      [
-        'pathological-morphology',
-        requests(benchmarkCorpus.groups['pathological-morphology']),
-        true
-      ],
-      [
-        'dense-contiguous-boundary',
-        requests(benchmarkCorpus.groups['dense-contiguous-boundary']),
-        false
-      ]
-    ] as const;
-    const results: BenchmarkResult['groups'][number][] = [];
-    for (let groupIndex = 0; groupIndex < hardGroups.length; groupIndex++) {
-      const [name, requests, forceTopOne] = hardGroups[groupIndex]!;
-      results.push(await this.#measureAnalyzeGroup(
-        name,
-        requests,
-        0x1c41_0000 + groupIndex * 100,
-        0x1c41_1000 + groupIndex * 100,
-        forceTopOne
-      ));
-    }
-
-    const diagnosticGroups: readonly (readonly [string, readonly BenchmarkRequest[]])[] = [
-      ['segmentation-short', requests(benchmarkCorpus.groups['segmentation-short'])],
-      ['long-noun-compound', requests(benchmarkCorpus.groups['long-noun-compound'])],
-      ['hiragana-colloquial', requests(benchmarkCorpus.groups['hiragana-colloquial'])],
-      ['modern-mixed-script', requests(benchmarkCorpus.groups['modern-mixed-script'])],
-      ['top-n', requests(benchmarkCorpus.groups['top-n'])],
-      ['entities', requests(benchmarkCorpus.groups.entities)],
-      ['counters', requests(benchmarkCorpus.groups.counters)],
-      ['numbers', requests(benchmarkCorpus.groups.numbers)],
-      ['paragraph-scaling', requests(benchmarkCorpus.groups['paragraph-scaling'])]
-    ];
-    const diagnosticResults: BenchmarkResult['diagnostics']['analyzeGroups'][number][] = [];
-    for (let groupIndex = 0; groupIndex < diagnosticGroups.length; groupIndex++) {
-      const [name, requests] = diagnosticGroups[groupIndex]!;
-      diagnosticResults.push(await this.#measureAnalyzeGroup(
-        name,
-        requests,
-        0x1c42_0000 + groupIndex * 100,
-        0x1c42_1000 + groupIndex * 100,
-        false
-      ));
-    }
-
-    const detailEntries: number[] = [];
-    for (const request of requests(benchmarkCorpus.groups['describe-random-access'])) {
-      const result = await this.analyze(request.text, { limit: 1 });
-      const entryIndex = result.paths[0]?.tokens.find(token => token.entryIndex !== null)?.entryIndex;
-      if (entryIndex === null || entryIndex === undefined) {
-        throw new Error(`Describe benchmark probe has no dictionary entry: ${request.text}`);
-      }
-      detailEntries.push(entryIndex);
-    }
-    const describe = await this.#measureDescribeGroup(detailEntries);
-
-    return {
-      release,
-      corpusVersion: 3,
-      warmupPasses: 2,
-      measuredPasses: 10,
-      groups: results,
-      diagnostics: {
-        analyzeGroups: diagnosticResults,
-        describe,
-        workerReadyMs: this.#workerReadyMs,
-        firstAnalyzeMs: this.#firstAnalyzeMs
-      }
-    };
-  }
-
-  async #measureAnalyzeGroup(
-    name: string,
-    requests: readonly BenchmarkRequest[],
-    warmupSeed: number,
-    measuredSeed: number,
-    forceTopOne: boolean
-  ): Promise<BenchmarkResult['groups'][number]> {
-    const options = (request: BenchmarkRequest): AnalyzeOptions => forceTopOne
-      ? { limit: 1 }
-      : {
-          limit: request.limit,
-          ...(request.entities === undefined ? {} : { entities: request.entities })
-        };
-    for (let pass = 0; pass < 2; pass++) {
-      for (const request of shuffled(requests, warmupSeed + pass)) {
-        await this.analyze(request.text, options(request));
-      }
-    }
-    const rawMs: number[] = [];
-    for (let pass = 0; pass < 10; pass++) {
-      for (const request of shuffled(requests, measuredSeed + pass)) {
-        const started = performance.now();
-        await this.analyze(request.text, options(request));
-        rawMs.push(performance.now() - started);
-      }
-    }
-    return summarize(name, rawMs);
-  }
-
-  async #measureDescribeGroup(
-    entryIndices: readonly number[]
-  ): Promise<BenchmarkResult['diagnostics']['describe']> {
-    for (let pass = 0; pass < 2; pass++) {
-      for (const entryIndex of shuffled(entryIndices, 0x1c43_0000 + pass)) {
-        await this.describe(entryIndex);
-      }
-    }
-    const rawMs: number[] = [];
-    for (let pass = 0; pass < 10; pass++) {
-      for (const entryIndex of shuffled(entryIndices, 0x1c43_1000 + pass)) {
-        const started = performance.now();
-        await this.describe(entryIndex);
-        rawMs.push(performance.now() - started);
-      }
-    }
-    return summarize('describe-random-access', rawMs);
+  /** @internal Keeps non-product probes on this client's exact Worker. */
+  [internalRequest]<T>(body: InternalWorkerRequest): Promise<T> {
+    return this.#request(body);
   }
 
   dispose(): void {
@@ -355,9 +203,6 @@ export class AnalyzerClient {
     previous?.terminate();
     for (const pending of this.#pending.values()) pending.reject(reason);
     this.#pending.clear();
-    this.#workerReadyMs = null;
-    this.#firstAnalyzeMs = null;
-    this.#firstAnalyzePending = false;
     this.#initializedWorker = null;
     this.#initialization = null;
   }
@@ -404,7 +249,7 @@ export class AnalyzerClient {
   }
 
   async #request<T>(
-    body: WorkerRequestBody,
+    body: WorkerRequestBody | InternalWorkerRequest,
     progress?: (value: InstallProgressValue) => void
   ): Promise<T> {
     const worker = this.#openWorker();
@@ -424,7 +269,7 @@ export class AnalyzerClient {
 
   #requestOnWorker<T>(
     worker: Worker,
-    body: WorkerRequestBody,
+    body: WorkerRequestBody | InternalWorkerRequest,
     progress?: (value: InstallProgressValue) => void
   ): Promise<T> {
     const id = this.#nextId++;
@@ -435,45 +280,22 @@ export class AnalyzerClient {
         progress
       });
       try {
-        worker.postMessage({ id, ...body } as WorkerRequest);
+        worker.postMessage({ ...body, id });
       } catch (reason) {
         this.#pending.delete(id);
-        reject(reason instanceof Error ? reason : new Error(String(reason)));
+        reject(new AnalyzerClientError(
+          'worker-error',
+          reason instanceof Error ? reason.message : String(reason)
+        ));
       }
     });
   }
 }
 
-function shuffled<T>(values: readonly T[], seed: number): T[] {
-  const output = [...values];
-  let state = seed >>> 0;
-  const random = (): number => {
-    state += 0x6d2b79f5;
-    let value = state;
-    value = Math.imul(value ^ value >>> 15, value | 1);
-    value ^= value + Math.imul(value ^ value >>> 7, value | 61);
-    return ((value ^ value >>> 14) >>> 0) / 0x1_0000_0000;
-  };
-  for (let index = output.length - 1; index > 0; index--) {
-    const target = Math.floor(random() * (index + 1));
-    [output[index], output[target]] = [output[target]!, output[index]!];
-  }
-  return output;
-}
-
-function nearestRank(ordered: readonly number[], quantile: number): number {
-  if (ordered.length === 0) return 0;
-  return ordered[Math.max(0, Math.ceil(quantile * ordered.length) - 1)]!;
-}
-
-function summarize(corpus: string, rawMs: readonly number[]): BenchmarkResult['groups'][number] {
-  const ordered = [...rawMs].sort((left, right) => left - right);
-  return {
-    corpus,
-    samples: rawMs.length,
-    p50Ms: nearestRank(ordered, 0.5),
-    p95Ms: nearestRank(ordered, 0.95),
-    maxMs: ordered[ordered.length - 1] ?? 0,
-    rawMs
-  };
+/** @internal Used only from modules excluded from product builds. */
+export function requestClientInternal<T>(
+  client: AnalyzerClient,
+  body: InternalWorkerRequest
+): Promise<T> {
+  return client[internalRequest]<T>(body);
 }

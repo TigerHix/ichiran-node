@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { gzipSync } from 'node:zlib';
 
-import type { AnalyzerReleaseAsset } from '@ichiran/core';
+import type { AnalyzerReleaseAsset } from '@ichiran/core/release';
 import { openVerifiedDetailSource } from '../src/file-details.js';
 
 const roots: string[] = [];

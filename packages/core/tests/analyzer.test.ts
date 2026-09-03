@@ -9,7 +9,7 @@ import {
   type PortableLegacyCompactResult,
   type PortableLegacyGlossJson,
   type PortableLegacyTransformedResult
-} from '../src/index.js';
+} from '../src/legacy-contract.js';
 import {
   memoryDetailSource,
   openAnalyzerSupport,

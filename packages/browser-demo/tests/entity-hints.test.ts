@@ -1,7 +1,6 @@
 import { describe, expect, test } from 'bun:test';
-import { MAX_ANALYZER_ENTITIES } from '@ichiran/core';
-
 import {
+  MAX_ENTITY_HINTS,
   MAX_ENTITY_SPEC_LENGTH,
   parseEntityHints
 } from '../src/entity-hints.js';
@@ -14,11 +13,11 @@ describe('entity hint UI parser', () => {
 
   test('rejects more than the canonical hint count before mapping tokens', () => {
     const value = Array.from(
-      { length: MAX_ANALYZER_ENTITIES + 1 },
+      { length: MAX_ENTITY_HINTS + 1 },
       () => '0:1'
     ).join(' ');
     expect(() => parseEntityHints(value, 10))
-      .toThrow(`at most ${MAX_ANALYZER_ENTITIES} hints`);
+      .toThrow(`at most ${MAX_ENTITY_HINTS} hints`);
   });
 
   test('parses bounded spans and boosts', () => {

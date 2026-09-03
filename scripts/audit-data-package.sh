@@ -58,7 +58,7 @@ git -C "$repository" archive HEAD | tar -x -C "$archive"
     exit 1
   fi
   bun packages/data/dist/source-compiler/cli.js --help | grep -q 'ichiran-data baseline'
-  bun -e "import('@ichiran/core').then(value => { if (typeof value.IchiranRuntime !== 'function') process.exit(1) })"
+  bun -e "import('@ichiran/core').then(value => { if (typeof value.Analyzer !== 'function') process.exit(1) })"
   bun -e "import('./packages/data/dist/index.js').then(value => { if (typeof value.runSourceCompilerRelease !== 'function') process.exit(1) })"
 
   for runtime_package in node cli api; do

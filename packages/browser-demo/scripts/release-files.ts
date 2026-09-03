@@ -8,7 +8,7 @@ import {
   parseAnalyzerReleaseManifest,
   type AnalyzerReleaseAsset,
   type AnalyzerReleaseManifest
-} from '@ichiran/core';
+} from '@ichiran/core/release';
 
 export type ReleaseManifest = AnalyzerReleaseManifest;
 

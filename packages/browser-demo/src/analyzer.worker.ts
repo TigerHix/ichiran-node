@@ -1,15 +1,18 @@
 /// <reference lib="webworker" />
 
 import {
-  AnalyzerInputError,
-  parseAnalyzerReleaseManifest,
-  type PortableAnalysisResult,
-  type PortableAnalyzeOptions
+  AnalyzerError,
+  type AnalyzeOptions,
+  type AnalysisResult,
+  type Analyzer,
+  type DictionaryEntry,
+  type RomanizeOptions
 } from '@ichiran/core';
+import { parseAnalyzerReleaseManifest } from '@ichiran/core/release';
 import type {
+  AnalyzerClientErrorCode,
   AnalyzerPackManifest,
   PackStatus,
-  RustKernelMetrics,
   WorkerRequest,
   WorkerResponse
 } from './protocol.js';
@@ -28,6 +31,7 @@ import { createSerialExecutor } from './worker/serial-executor.js';
 import { Sha256 } from './worker/sha256.js';
 
 declare const __ICHIRAN_TYPESCRIPT_ORACLE__: boolean;
+declare const __ICHIRAN_BROWSER_QUALIFICATION__: boolean;
 
 // The frozen TypeScript runtime is emitted only for explicit oracle builds.
 const typescriptRuntimeModule = __ICHIRAN_TYPESCRIPT_ORACLE__
@@ -35,13 +39,18 @@ const typescriptRuntimeModule = __ICHIRAN_TYPESCRIPT_ORACLE__
   : null;
 
 interface WorkerRuntime {
-  analyze(text: string, options?: PortableAnalyzeOptions): Promise<PortableAnalysisResult>;
-  describe(entryIndex: number): Promise<unknown>;
-  legacy(text: string, options?: PortableAnalyzeOptions): Promise<unknown>;
-  romanize(text: string, options?: PortableAnalyzeOptions): Promise<string>;
+  analyze(text: string, options?: AnalyzeOptions): Promise<AnalysisResult>;
+  entry(entryIndex: number): Promise<DictionaryEntry>;
+  romanize(text: string, options?: RomanizeOptions): Promise<string>;
   dispose?(): void;
-  metrics?(): RustKernelMetrics;
 }
+
+interface QualificationMetricsRequest {
+  readonly id: number;
+  readonly op: 'rust-kernel-metrics';
+}
+
+type IncomingRequest = WorkerRequest | QualificationMetricsRequest;
 
 let runtime: WorkerRuntime | null = null;
 let runtimeManifestSha256: string | null = null;
@@ -51,9 +60,9 @@ const runSerially = createSerialExecutor();
 const INSTALL_LIFECYCLE_LOCK = 'ichiran-browser-alpha-install';
 
 class WorkerOperationError extends Error {
-  readonly code: string;
+  readonly code: AnalyzerClientErrorCode;
 
-  constructor(code: string, message: string) {
+  constructor(code: AnalyzerClientErrorCode, message: string) {
     super(message);
     this.name = 'WorkerOperationError';
     this.code = code;
@@ -222,7 +231,19 @@ async function withRuntime<T>(operation: (value: WorkerRuntime) => T | Promise<T
   }
 }
 
-async function handle(request: WorkerRequest): Promise<unknown> {
+async function handle(request: IncomingRequest): Promise<unknown> {
+  if (__ICHIRAN_BROWSER_QUALIFICATION__ && request.op === 'rust-kernel-metrics') {
+    if (__ICHIRAN_TYPESCRIPT_ORACLE__) {
+      throw new WorkerOperationError(
+        'worker-error',
+        'Rust kernel metrics are available only during Rust qualification'
+      );
+    }
+    return withRuntime(async value => {
+      const { readAnalyzerDiagnostics } = await import('@ichiran/core/qualification/runtime');
+      return readAnalyzerDiagnostics(value as Analyzer);
+    });
+  }
   switch (request.op) {
     case 'expect-release': {
       const release = parseExpectedRelease(request.release);
@@ -269,31 +290,21 @@ async function handle(request: WorkerRequest): Promise<unknown> {
         return inspectInstall(false);
       });
     }
-    case 'describe': {
-      return withRuntime(value => value.describe(request.entryIndex));
+    case 'entry': {
+      return withRuntime(value => value.entry(request.entryIndex));
     }
     case 'analyze': {
       return withRuntime(value => value.analyze(request.text, request.options));
     }
-    case 'legacy': {
-      return withRuntime(value => value.legacy(request.text, request.options));
-    }
     case 'romanize': {
-      return withRuntime(value => value.romanize(request.text));
+      return withRuntime(value => value.romanize(request.text, request.options));
     }
-    case 'rust-kernel-metrics': {
-      if (__ICHIRAN_TYPESCRIPT_ORACLE__) {
-        throw new WorkerOperationError('unsupported-operation', 'Rust kernel metrics are unavailable');
-      }
-      return withRuntime(value => {
-        if (!value.metrics) throw new Error('Rust kernel metrics are unavailable');
-        return value.metrics();
-      });
-    }
+    default:
+      throw new WorkerOperationError('worker-error', 'Unsupported analyzer operation');
   }
 }
 
-self.addEventListener('message', (event: MessageEvent<WorkerRequest>) => {
+self.addEventListener('message', (event: MessageEvent<IncomingRequest>) => {
   const request = event.data;
   void runSerially(() => handle(request)).then(
     (result) => post({ id: request.id, type: 'result', result }),
@@ -302,8 +313,8 @@ self.addEventListener('message', (event: MessageEvent<WorkerRequest>) => {
       type: 'error',
       code: error instanceof WorkerOperationError
         ? error.code
-        : error instanceof AnalyzerInputError
-          ? 'invalid-input'
+        : error instanceof AnalyzerError
+          ? error.code
           : 'worker-error',
       message: error instanceof Error ? error.message : String(error)
     })

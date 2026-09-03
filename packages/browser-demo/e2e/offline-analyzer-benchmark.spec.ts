@@ -1,13 +1,13 @@
 import type { ChildProcess } from 'node:child_process';
-import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
 import { cpus, platform, release, tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import type { BrowserContext } from 'playwright/test';
 import type {
   AnalysisResult,
-  AnalyzerPackManifest,
-  BenchmarkResult
+  AnalyzerPackManifest
 } from '../src/protocol.js';
+import type { BenchmarkResult } from '../src/qualification-client.js';
 import {
   expect,
   isExpectedOfflineFetchFailure,
@@ -22,7 +22,6 @@ import {
   denyPersistentStorage,
   expectInstallablePwa,
   expectNoHorizontalOverflow,
-  type LegacyDetailedAlternative,
   median,
   opfsSnapshot,
   runtimeValue,
@@ -35,6 +34,10 @@ import {
 // proxy. Keep the outer watchdog above the measured sweep so final report
 // download and process cleanup have deterministic headroom.
 test.setTimeout(40 * 60 * 1000);
+test.skip(
+  process.env.ICHIRAN_BROWSER_QUALIFICATION !== '1',
+  'requires the explicit browser qualification build'
+);
 
 test('installs once, restarts offline, and meets the 6x proxy', async ({
   browser
@@ -55,7 +58,7 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
     await denyPersistentStorage(context);
     let page = context.pages()[0] ?? await context.newPage();
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto('/');
+    await page.goto('/?qualification=1');
     await expectNoHorizontalOverflow(page, 390);
     await page.setViewportSize({ width: 320, height: 844 });
     await expectNoHorizontalOverflow(page, 320);
@@ -119,7 +122,7 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
     await denyPersistentStorage(context);
     await context.setOffline(true);
     page = context.pages()[0] ?? await context.newPage();
-    await page.goto('/');
+    await page.goto('/?qualification=1');
     // Chromium flips navigator.onLine back to true after a cached Service Worker
     // navigation, so prove the transport is offline with a URL the worker ignores.
     deliberatelyOfflineProbe = `/__ichiran-offline-probe-${Date.now()}`;
@@ -191,35 +194,6 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
       root: { seq: 1464530, form: '日本語', reading: 'にほんご' }
     });
 
-    await page.getByRole('button', { name: 'Copy legacy JSON' }).click();
-    await expect(page.locator('.runtime-message')).toHaveText('Legacy JSON copied.');
-    const legacy = JSON.parse(
-      await page.evaluate(() => navigator.clipboard.readText())
-    ) as unknown as readonly [readonly LegacyDetailedAlternative[], string];
-    expect(legacy[1]).toBe('. ');
-    expect(legacy[0].map(alternative => alternative[1])).toEqual([3453, 3439, 2928]);
-    const topLegacy = legacy[0][0]?.[0];
-    expect(topLegacy?.map(token => token[1].text)).toEqual(['日本語', 'を', '勉強しています']);
-    expect(topLegacy?.[0]?.[0]).toBe('nihongo');
-    expect(topLegacy?.[0]?.[1]).toMatchObject({
-      reading: '日本語 【にほんご】',
-      text: '日本語',
-      score: 1054,
-      seq: 1464530,
-      gloss: [
-        { pos: '[n-pr]', gloss: 'proper noun (named entity)' },
-        { pos: '[n]', gloss: 'Japanese (language)' }
-      ]
-    });
-    expect(topLegacy?.[2]?.[1]).toMatchObject({
-      reading: '勉強しています 【べんきょう しています】',
-      score: 2254,
-      compound: ['勉強', 'して', 'います']
-    });
-    expect(topLegacy?.[2]?.[1].components?.map(component => component.text)).toEqual([
-      '勉強', 'して', 'います'
-    ]);
-
     await page.getByRole('button', { name: 'Romanize input' }).click();
     await expect(runtimeValue(page, 'Romanization')).toHaveText('nihongo wo benkyō shiteimasu。');
     await expectNoHorizontalOverflow(page, 390);
@@ -254,23 +228,16 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
       expect(contentionRatio).toBeGreaterThanOrEqual(5);
       expect(contentionRatio).toBeLessThanOrEqual(7.5);
 
-      await page.getByRole('button', { name: 'Run benchmark' }).click();
+      await expect.poll(() => page.evaluate(() => Boolean(
+        (window as typeof window & { __ichiranQualification?: unknown })
+          .__ichiranQualification
+      ))).toBe(true);
       // This watchdog includes the entire corpus under induced host contention.
-      // The assertions below enforce the actual analyzer latency requirements.
-      await expect(page.getByText('Benchmark complete.')).toBeVisible({ timeout: 20 * 60 * 1000 });
-      const ordinaryP95 = Number.parseFloat(await runtimeValue(page, 'ordinary p95').innerText());
-      const pathologicalP95 = Number.parseFloat(
-        await runtimeValue(page, 'pathological-morphology p95').innerText()
-      );
-      const denseBoundaryP95 = Number.parseFloat(
-        await runtimeValue(page, 'dense-contiguous-boundary p95').innerText()
-      );
-      const downloadPromise = page.waitForEvent('download');
-      await page.getByRole('button', { name: 'Download benchmark JSON' }).click();
-      const download = await downloadPromise;
-      const downloadPath = await download.path();
-      if (!downloadPath) throw new Error('Benchmark download did not produce a local file');
-      const benchmark = JSON.parse(await readFile(downloadPath, 'utf8')) as BenchmarkResult;
+      const benchmark = await page.evaluate(() => (
+        window as typeof window & {
+          __ichiranQualification: { benchmark(): Promise<BenchmarkResult> };
+        }
+      ).__ichiranQualification.benchmark());
       expect(benchmark.release).toEqual(manifest);
       expect(benchmark.corpusVersion).toBe(3);
       expect(benchmark.groups.map(group => group.corpus)).toEqual([
@@ -279,13 +246,6 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
       const exactP95 = Object.fromEntries(
         benchmark.groups.map(group => [group.corpus, group.p95Ms])
       );
-      expect(ordinaryP95).toBe(Number(exactP95.ordinary!.toFixed(1)));
-      expect(pathologicalP95).toBe(Number(
-        exactP95['pathological-morphology']!.toFixed(1)
-      ));
-      expect(denseBoundaryP95).toBe(Number(
-        exactP95['dense-contiguous-boundary']!.toFixed(1)
-      ));
       expect(benchmark.diagnostics.analyzeGroups.map(group => [group.corpus, group.samples])).toEqual([
         ['segmentation-short', 4590],
         ['long-noun-compound', 500],
@@ -297,7 +257,7 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
         ['numbers', 70],
         ['paragraph-scaling', 50]
       ]);
-      expect(benchmark.diagnostics.describe.samples).toBe(500);
+      expect(benchmark.diagnostics.entry.samples).toBe(500);
       expect(benchmark.diagnostics.workerReadyMs).toBeGreaterThanOrEqual(0);
       expect(benchmark.diagnostics.firstAnalyzeMs).toBeGreaterThanOrEqual(0);
       const environment = await page.evaluate(() => ({

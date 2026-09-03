@@ -2,11 +2,6 @@
   "name": "@ichiran/cli",
   "version": "0.0.0",
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": "./dist/index.js"
-  },
   "files": [
     "dist"
   ],
@@ -17,9 +12,10 @@
     "test:parity": "RUN_PARITY_TESTS=true bun test tests/"
   },
   "bin": {
-    "ichiran-cli": "./dist/index.js"
+    "ichiran": "./dist/index.js"
   },
   "dependencies": {
+    "@ichiran/core": "workspace:*",
     "@ichiran/node": "workspace:*",
     "commander": "^12.1.0",
     "dotenv": "^17.2.3"

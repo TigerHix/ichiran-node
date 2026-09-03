@@ -1,7 +1,8 @@
 import { afterEach, describe, expect, test } from 'bun:test';
-import { analyzerManifestDigestInput } from '@ichiran/core';
+import { analyzerManifestDigestInput } from '@ichiran/core/release';
 
 import { AnalyzerClient } from '../src/client.js';
+import { benchmarkAnalyzer } from '../src/qualification-client.js';
 import type { AnalyzerPackManifest, WorkerRequest, WorkerResponse } from '../src/protocol.js';
 import { Sha256 } from '../src/worker/sha256.js';
 
@@ -77,13 +78,13 @@ afterEach(() => {
   BenchmarkWorker.requests = [];
 });
 
-describe('public Worker benchmark report', () => {
+describe('qualification-only Worker benchmark report', () => {
   test('keeps hard groups separate and reports every diagnostic without gating it', async () => {
     const client = new AnalyzerClient(
       () => new BenchmarkWorker() as unknown as Worker
     );
     await client.expectRelease(release);
-    const report = await client.benchmark(release);
+    const report = await benchmarkAnalyzer(client, release);
     client.dispose();
 
     expect(report.corpusVersion).toBe(3);
@@ -103,8 +104,8 @@ describe('public Worker benchmark report', () => {
       ['numbers', 70],
       ['paragraph-scaling', 50]
     ]);
-    expect(report.diagnostics.describe.corpus).toBe('describe-random-access');
-    expect(report.diagnostics.describe.samples).toBe(500);
+    expect(report.diagnostics.entry.corpus).toBe('entry-random-access');
+    expect(report.diagnostics.entry.samples).toBe(500);
     expect(report.diagnostics.workerReadyMs).toBeNumber();
     expect(report.diagnostics.firstAnalyzeMs).toBeNumber();
 
@@ -115,6 +116,6 @@ describe('public Worker benchmark report', () => {
     expect(analyzes.filter(request => request.options.limit === 5)).toHaveLength(5 * 12);
     expect(analyzes.filter(request => request.options.limit === 10)).toHaveLength(9 * 12);
     expect(analyzes.filter(request => request.options.entities !== undefined)).toHaveLength(54 * 12);
-    expect(BenchmarkWorker.requests.filter(request => request.op === 'describe')).toHaveLength(50 * 12);
+    expect(BenchmarkWorker.requests.filter(request => request.op === 'entry')).toHaveLength(50 * 12);
   });
 });

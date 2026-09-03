@@ -1,13 +1,12 @@
 import type { PortableAnalyzeOptions } from './analyzer-options.js';
-import type { PortableAnalysisResult } from './analyzer-result-contract.js';
+import type { PortableAnalysisResult as AnalysisResult } from './analyzer-result-contract.js';
+import type { AnalyzerEntityHint as EntityHint } from './analyzer-types.js';
 import {
   DetailStoreError,
-  type DetailEntry,
-  type DetailRandomAccessSource,
+  type DetailEntry as DictionaryEntry,
   type DetailStoreErrorCode
 } from './details-contract.js';
-import type { RomanizationName } from './romanization-contract.js';
-import { PORTABLE_LEGACY_INFO } from './legacy-contract.js';
+import type { RomanizationName as RomanizationScheme } from './romanization-contract.js';
 import init, {
   detail_prefix_length,
   WasmDetailStore,
@@ -21,24 +20,50 @@ interface DetailRange {
   readonly byteLength: number;
 }
 
-type LegacyStep =
-  | {
-      readonly state: 'ready';
-      readonly value: unknown;
-      readonly metadata: LegacyWireMetadata;
-    }
-  | {
-      readonly state: 'missing-detail';
-      readonly entryIndex: number;
-      readonly range: DetailRange;
-    };
+export type AnalyzerErrorCode =
+  | 'invalid-input'
+  | 'invalid-pack'
+  | 'not-found'
+  | 'internal';
 
-interface LegacyWireMetadata {
-  readonly words: readonly (Record<string, unknown> | null)[];
-  readonly conjugations: readonly (Record<string, unknown> | null)[];
+export class AnalyzerError extends Error {
+  readonly code: AnalyzerErrorCode;
+
+  constructor(code: AnalyzerErrorCode, message: string) {
+    super(message);
+    this.name = 'AnalyzerError';
+    this.code = code;
+  }
 }
 
-export interface RustKernelMetrics {
+export interface AnalyzeOptions {
+  readonly limit?: number;
+  readonly entities?: readonly EntityHint[];
+  readonly normalizePunctuation?: boolean;
+}
+
+export interface RomanizeOptions {
+  readonly method?: RomanizationScheme;
+  readonly entities?: readonly EntityHint[];
+  readonly normalizePunctuation?: boolean;
+}
+
+export interface RandomAccessSource {
+  readonly byteLength: number;
+  read(offset: number, byteLength: number): Promise<Uint8Array>;
+  dispose?(): void;
+}
+
+export interface AnalyzerSource {
+  /** Installed, uncompressed hot pack bytes. */
+  readonly hot: Uint8Array;
+  /** Installed, uncompressed random-access detail store. */
+  readonly details: RandomAccessSource;
+  /** Hosts may supply the emitted WASM bytes when URL loading is unavailable. */
+  readonly wasm?: Uint8Array;
+}
+
+export interface AnalyzerDiagnostics {
   readonly openMs: number;
   readonly transientBytes: number;
   readonly wasmLinearMemoryBytes: number;
@@ -47,20 +72,21 @@ export interface RustKernelMetrics {
   readonly workerHeapBytes: number | null;
 }
 
-export interface IchiranRuntimeSource {
-  /** Installed, uncompressed hot pack bytes. */
-  readonly hot: Uint8Array;
-  /** Installed, uncompressed random-access detail store. */
-  readonly details: DetailRandomAccessSource;
-  /** Node supplies the same emitted WASM bytes because file-URL fetch is unavailable. */
-  readonly wasm?: Uint8Array;
+interface RuntimeState {
+  readonly kernel: WasmKernel;
+  readonly details: WasmDetailStore;
+  readonly detailSource: RandomAccessSource;
+  readonly memory: WebAssembly.Memory;
+  readonly openMs: number;
+  readonly transientBytes: number;
 }
 
 const encoder = new TextEncoder();
 const decoder = new TextDecoder('utf-8', { fatal: true });
+const runtimeStates = new WeakMap<Analyzer, RuntimeState>();
 let initialized: Promise<InitOutput> | null = null;
 
-export const RUST_KERNEL_WASM_URL = new URL(
+export const ANALYZER_WASM_URL = new URL(
   './rust-kernel/generated/ichiran_kernel_bg.wasm',
   import.meta.url
 );
@@ -95,68 +121,29 @@ function json<T>(bytes: Uint8Array): T {
   return JSON.parse(decoder.decode(bytes)) as T;
 }
 
-function reviveLegacyInfo(value: unknown, metadata: LegacyWireMetadata): unknown {
-  let wordIndex = 0;
-  let conjugationIndex = 0;
-
-  const attach = (target: Record<string | symbol, unknown>, facts: unknown): void => {
-    if (typeof facts === 'object' && facts !== null) {
-      Object.defineProperty(target, PORTABLE_LEGACY_INFO, { value: facts });
-    }
-  };
-  const object = (target: unknown, label: string): Record<string | symbol, unknown> => {
-    if (typeof target !== 'object' || target === null || Array.isArray(target)) {
-      throw new Error(`Invalid Rust legacy ${label} value`);
-    }
-    return target as Record<string | symbol, unknown>;
-  };
-  const visitConjugation = (target: unknown): void => {
-    const conjugation = object(target, 'conjugation');
-    attach(conjugation, metadata.conjugations[conjugationIndex++]);
-    if (Array.isArray(conjugation.via)) {
-      for (const child of conjugation.via) visitConjugation(child);
-    }
-  };
-  const visitWord = (target: unknown): void => {
-    const word = object(target, 'word');
-    attach(word, metadata.words[wordIndex++]);
-    if (Array.isArray(word.components)) {
-      for (const component of word.components) visitWord(component);
-    }
-    if (Array.isArray(word.alternative)) {
-      for (const alternative of word.alternative) visitWord(alternative);
-    }
-    if (Array.isArray(word.conj)) {
-      for (const conjugation of word.conj) visitConjugation(conjugation);
-    }
-  };
-
-  if (!Array.isArray(value)) throw new Error('Invalid Rust legacy output');
-  for (const chunk of value) {
-    if (typeof chunk === 'string') continue;
-    if (!Array.isArray(chunk)) throw new Error('Invalid Rust legacy chunk');
-    for (const path of chunk) {
-      if (!Array.isArray(path) || !Array.isArray(path[0])) {
-        throw new Error('Invalid Rust legacy path');
-      }
-      for (const token of path[0]) {
-        if (!Array.isArray(token)) throw new Error('Invalid Rust legacy token');
-        visitWord(token[1]);
-      }
-    }
-  }
-  if (wordIndex !== metadata.words.length || conjugationIndex !== metadata.conjugations.length) {
-    throw new Error('Rust legacy metadata shape does not match the serialized result');
-  }
-  return value;
-}
-
 function optionsJson(options: ReturnType<typeof validatePortableAnalyzeRequest>['options']): Uint8Array {
   return encoder.encode(JSON.stringify(options));
 }
 
+const romanizationSchemes = new Set<RomanizationScheme>([
+  'hepburn-basic',
+  'hepburn-simple',
+  'hepburn-passport',
+  'hepburn-traditional',
+  'hepburn-modified',
+  'kunrei-siki'
+]);
+
+function romanizationScheme(value: unknown): RomanizationScheme | '' {
+  if (value === undefined) return '';
+  if (typeof value === 'string' && romanizationSchemes.has(value as RomanizationScheme)) {
+    return value as RomanizationScheme;
+  }
+  throw new AnalyzerInputError('method must be a supported romanization scheme');
+}
+
 async function readExact(
-  source: DetailRandomAccessSource,
+  source: RandomAccessSource,
   offset: number,
   byteLength: number,
   code: DetailStoreErrorCode
@@ -175,153 +162,149 @@ function now(): number {
   return globalThis.performance?.now() ?? Date.now();
 }
 
-function rustCall<T>(operation: () => T): T {
+function errorCode(error: unknown): unknown {
+  return error instanceof Error
+    ? (error as Error & { readonly code?: unknown }).code
+    : undefined;
+}
+
+/** Collapse implementation-specific failures into the stable product contract. */
+export function analyzerError(
+  error: unknown,
+  fallback: AnalyzerErrorCode = 'internal'
+): AnalyzerError {
+  if (error instanceof AnalyzerError) return error;
+  const code = errorCode(error);
+  let publicCode = fallback;
+  if (error instanceof AnalyzerInputError || code === 'invalid-input') {
+    publicCode = 'invalid-input';
+  } else if (code === 'out-of-range' && fallback === 'not-found') {
+    publicCode = 'not-found';
+  } else if (
+    error instanceof DetailStoreError
+    || code === 'invalid-header'
+    || code === 'unsupported-version'
+    || code === 'invalid-directory'
+    || code === 'corrupt-section'
+    || code === 'corrupt-payload'
+    || code === 'corrupt-index'
+    || code === 'corrupt-block'
+    || code === 'missing-section'
+    || code === 'out-of-range'
+  ) {
+    publicCode = 'invalid-pack';
+  }
+  const message = error instanceof Error ? error.message : String(error);
+  return new AnalyzerError(publicCode, message);
+}
+
+function call<T>(operation: () => T, fallback?: AnalyzerErrorCode): T {
   try {
     return operation();
   } catch (error) {
-    if (
-      error instanceof Error
-      && (error as Error & { readonly code?: unknown }).code === 'invalid-input'
-    ) {
-      throw new AnalyzerInputError(error.message);
-    }
-    throw error;
+    throw analyzerError(error, fallback);
   }
 }
 
 /**
- * Shared Rust/WASM analyzer runtime over one immutable installed pack.
- *
- * Hosts own verification, persistence, and random-access reads. Each analyzer
- * operation crosses into WASM once; retained details retry by exact block range.
+ * The production analyzer. It owns its random-access source after a successful
+ * open and releases both WASM state and the source when disposed.
  */
-export class IchiranRuntime {
+export class Analyzer {
   readonly #kernel: WasmKernel;
   readonly #details: WasmDetailStore;
-  readonly #detailSource: DetailRandomAccessSource;
-  readonly #memory: WebAssembly.Memory;
-  readonly #openMs: number;
-  readonly #transientBytes: number;
+  readonly #detailSource: RandomAccessSource;
+  #disposed = false;
 
   private constructor(
     kernel: WasmKernel,
     details: WasmDetailStore,
-    detailSource: DetailRandomAccessSource,
-    memory: WebAssembly.Memory,
-    openMs: number,
-    transientBytes: number
+    detailSource: RandomAccessSource,
+    state: Omit<RuntimeState, 'kernel' | 'details' | 'detailSource'>
   ) {
     this.#kernel = kernel;
     this.#details = details;
     this.#detailSource = detailSource;
-    this.#memory = memory;
-    this.#openMs = openMs;
-    this.#transientBytes = transientBytes;
+    runtimeStates.set(this, { kernel, details, detailSource, ...state });
   }
 
-  static async open(source: IchiranRuntimeSource): Promise<IchiranRuntime> {
+  static async open(source: AnalyzerSource): Promise<Analyzer> {
     const started = now();
-    const [wasm, header] = await Promise.all([
-      initialize(source.wasm),
-      readExact(source.details, 0, 96, 'invalid-header')
-    ]);
-    const prefixLength = detail_prefix_length(header, source.details.byteLength);
-    const prefix = await readExact(source.details, 0, prefixLength, 'corrupt-index');
-    const kernel = new WasmKernel(source.hot);
+    let kernel: WasmKernel | null = null;
     try {
+      const [wasm, header] = await Promise.all([
+        initialize(source.wasm),
+        readExact(source.details, 0, 96, 'invalid-header')
+      ]);
+      const prefixLength = detail_prefix_length(header, source.details.byteLength);
+      const prefix = await readExact(source.details, 0, prefixLength, 'corrupt-index');
+      kernel = new WasmKernel(source.hot);
       const details = new WasmDetailStore(prefix, source.details.byteLength);
-      return new IchiranRuntime(
-        kernel,
-        details,
-        source.details,
-        wasm.memory,
-        now() - started,
-        wasm.memory.buffer.byteLength + source.hot.byteLength + prefix.byteLength
+      return new Analyzer(kernel, details, source.details, {
+        memory: wasm.memory,
+        openMs: now() - started,
+        transientBytes: wasm.memory.buffer.byteLength + source.hot.byteLength + prefix.byteLength
+      });
+    } catch (error) {
+      kernel?.free();
+      throw analyzerError(error);
+    }
+  }
+
+  async analyze(text: string, options: AnalyzeOptions = {}): Promise<AnalysisResult> {
+    this.#assertOpen();
+    try {
+      const validated = validatePortableAnalyzeRequest(text, options);
+      return call(() => json<AnalysisResult>(
+        this.#kernel.analyze_utf16_options(utf16(validated.input), optionsJson(validated.options))
+      ));
+    } catch (error) {
+      throw analyzerError(error);
+    }
+  }
+
+  async romanize(text: string, options: RomanizeOptions = {}): Promise<string> {
+    this.#assertOpen();
+    try {
+      const validated = validatePortableAnalyzeRequest(text, options as PortableAnalyzeOptions);
+      const topPathOptions = { ...validated.options, limit: 1 };
+      return call(() => fromUtf16(this.#kernel.romanize_utf16_options(
+        utf16(validated.input),
+        optionsJson(topPathOptions),
+        romanizationScheme(options.method)
+      )));
+    } catch (error) {
+      throw analyzerError(error);
+    }
+  }
+
+  async entry(entryIndex: number): Promise<DictionaryEntry> {
+    this.#assertOpen();
+    if (!Number.isSafeInteger(entryIndex) || entryIndex < 0) {
+      throw new AnalyzerError('invalid-input', 'entryIndex must be a non-negative integer');
+    }
+    try {
+      const rangeBytes = call(() => this.#details.range_json(entryIndex), 'not-found');
+      const range = call(() => json<DetailRange>(rangeBytes));
+      const compressed = await readExact(
+        this.#detailSource,
+        range.offset,
+        range.byteLength,
+        'corrupt-block'
+      );
+      return call(
+        () => json<DictionaryEntry>(this.#details.entry_json(entryIndex, compressed)),
+        'invalid-pack'
       );
     } catch (error) {
-      kernel.free();
-      throw error;
+      throw analyzerError(error);
     }
-  }
-
-  entryIndexForSequence(sequence: number): number {
-    return this.#kernel.entry_index_for_sequence(sequence);
-  }
-
-  async analyze(text: string, options: PortableAnalyzeOptions = {}): Promise<PortableAnalysisResult> {
-    const validated = validatePortableAnalyzeRequest(text, options);
-    return rustCall(() => json<PortableAnalysisResult>(
-      this.#kernel.analyze_utf16_options(utf16(validated.input), optionsJson(validated.options))
-    ));
-  }
-
-  async romanize(
-    text: string,
-    options: PortableAnalyzeOptions & { readonly method?: RomanizationName } = {}
-  ): Promise<string> {
-    const validated = validatePortableAnalyzeRequest(text, options);
-    return rustCall(() => fromUtf16(this.#kernel.romanize_utf16_options(
-      utf16(validated.input), optionsJson(validated.options), options.method ?? ''
-    )));
-  }
-
-  async legacy(
-    text: string,
-    options: PortableAnalyzeOptions & { readonly method?: RomanizationName } = {}
-  ): Promise<unknown> {
-    const validated = validatePortableAnalyzeRequest(text, options);
-    const operation = rustCall(() => this.#kernel.legacy_begin_utf16(
-      utf16(validated.input), optionsJson(validated.options), options.method ?? ''
-    ));
-    try {
-      const loaded = new Set<string>();
-      for (;;) {
-        const step = json<LegacyStep>(operation.legacy_step(this.#kernel, this.#details));
-        if (step.state === 'ready') return reviveLegacyInfo(step.value, step.metadata);
-        const key = `${step.entryIndex}:${step.range.offset}:${step.range.byteLength}`;
-        if (loaded.has(key)) {
-          throw new Error(`Detail range ${key} remained unavailable after preload`);
-        }
-        loaded.add(key);
-        const compressed = await readExact(
-          this.#detailSource,
-          step.range.offset,
-          step.range.byteLength,
-          'corrupt-block'
-        );
-        this.#details.entry_json(step.entryIndex, compressed);
-      }
-    } finally {
-      operation.free();
-    }
-  }
-
-  async describe(entryIndex: number): Promise<DetailEntry> {
-    const range = json<DetailRange>(this.#details.range_json(entryIndex));
-    const compressed = await readExact(
-      this.#detailSource,
-      range.offset,
-      range.byteLength,
-      'corrupt-block'
-    );
-    return json<DetailEntry>(this.#details.entry_json(entryIndex, compressed));
-  }
-
-  metrics(): RustKernelMetrics {
-    const memory = performance as Performance & {
-      readonly memory?: { readonly usedJSHeapSize: number };
-    };
-    return {
-      openMs: this.#openMs,
-      transientBytes: this.#transientBytes,
-      wasmLinearMemoryBytes: this.#memory.buffer.byteLength,
-      kernelPayloadBytes: this.#kernel.resident_payload_bytes(),
-      detailResidentBytes: this.#details.resident_bytes(),
-      workerHeapBytes: memory.memory?.usedJSHeapSize ?? null
-    };
   }
 
   dispose(): void {
+    if (this.#disposed) return;
+    this.#disposed = true;
+    runtimeStates.delete(this);
     try {
       this.#details.free();
     } finally {
@@ -332,4 +315,32 @@ export class IchiranRuntime {
       }
     }
   }
+
+  #assertOpen(): void {
+    if (this.#disposed) throw new AnalyzerError('internal', 'Analyzer has been disposed');
+  }
+}
+
+/** Qualification-only diagnostics; exported only by the qualification/runtime subpath. */
+export function readAnalyzerDiagnostics(analyzer: Analyzer): AnalyzerDiagnostics {
+  const state = runtimeStates.get(analyzer);
+  if (!state) throw new AnalyzerError('internal', 'Analyzer has been disposed');
+  const memory = performance as Performance & {
+    readonly memory?: { readonly usedJSHeapSize: number };
+  };
+  return {
+    openMs: state.openMs,
+    transientBytes: state.transientBytes,
+    wasmLinearMemoryBytes: state.memory.buffer.byteLength,
+    kernelPayloadBytes: state.kernel.resident_payload_bytes(),
+    detailResidentBytes: state.details.resident_bytes(),
+    workerHeapBytes: memory.memory?.usedJSHeapSize ?? null
+  };
+}
+
+/** Internal state bridge used only by explicit qualification modules. */
+export function analyzerQualificationState(analyzer: Analyzer): RuntimeState {
+  const state = runtimeStates.get(analyzer);
+  if (!state) throw new AnalyzerError('internal', 'Analyzer has been disposed');
+  return state;
 }

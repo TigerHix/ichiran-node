@@ -45,19 +45,6 @@ export interface WorkerHeapUsage {
   readonly backingStorageSize: number;
 }
 
-export interface LegacyDetailedWord {
-  readonly text: string;
-  readonly reading: string;
-  readonly score: number;
-  readonly seq?: number;
-  readonly gloss?: readonly { readonly pos: string; readonly gloss: string }[];
-  readonly compound?: readonly string[];
-  readonly components?: readonly LegacyDetailedWord[];
-}
-
-export type LegacyDetailedToken = readonly [string, LegacyDetailedWord, unknown];
-export type LegacyDetailedAlternative = readonly [readonly LegacyDetailedToken[], number];
-
 export function median(values: readonly number[]): number {
   const sorted = [...values].sort((left, right) => left - right);
   return sorted[Math.floor(sorted.length / 2)]!;

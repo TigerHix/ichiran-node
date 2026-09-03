@@ -53,7 +53,7 @@ RUN bun run --cwd packages/core build \
   && bun run --cwd packages/node build \
   && bun run --cwd packages/api build \
   && ICHIRAN_PACK_DIR=/tmp/analyzer ICHIRAN_SOURCE_COMMIT="$ICHIRAN_SOURCE_COMMIT" \
-    bun -e 'import { openNodeRuntime } from "./packages/node/dist/index.js"; await openNodeRuntime();' \
+    bun -e 'import { openAnalyzer } from "./packages/node/dist/index.js"; const analyzer = await openAnalyzer(); analyzer.dispose();' \
   && bun build packages/api/dist/index.js --target=bun --outfile=/tmp/ichiran-api.js
 
 FROM oven/bun:1.3.5-alpine

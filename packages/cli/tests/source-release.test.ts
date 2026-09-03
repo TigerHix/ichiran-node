@@ -4,30 +4,44 @@ import { resolve } from 'node:path';
 const releaseDirectory = process.env.ICHIRAN_PACK_DIR;
 const packageRoot = resolve(import.meta.dir, '..');
 
-describe.skipIf(!releaseDirectory)('CLI source release', () => {
-  test('uses the installed source pack through the executable Rust adapter', () => {
-    const result = Bun.spawnSync(['node', 'dist/index.js', '今日'], {
-      cwd: packageRoot,
-      env: { ...process.env, ICHIRAN_PACK_DIR: releaseDirectory! },
-      stderr: 'pipe',
-      stdout: 'pipe'
-    });
+function run(...arguments_: string[]) {
+  return Bun.spawnSync(['node', 'dist/index.js', ...arguments_], {
+    cwd: packageRoot,
+    env: { ...process.env, ICHIRAN_PACK_DIR: releaseDirectory! },
+    stderr: 'pipe',
+    stdout: 'pipe'
+  });
+}
 
-    expect(result.exitCode).toBe(0);
-    expect(result.stderr.toString()).toBe('');
-    expect(result.stdout.toString()).toBe('kyō\n');
+describe.skipIf(!releaseDirectory)('CLI source release', () => {
+  test('exposes explicit analyze, romanize, and entry commands', () => {
+    const romanize = run('romanize', '今日');
+    expect(romanize.exitCode).toBe(0);
+    expect(romanize.stderr.toString()).toBe('');
+    expect(romanize.stdout.toString()).toBe('kyō\n');
+
+    const analyze = run('analyze', '--limit', '1', '食べた');
+    expect(analyze.exitCode).toBe(0);
+    const result = JSON.parse(analyze.stdout.toString()) as {
+      readonly input: string;
+      readonly paths: readonly { readonly tokens: readonly { readonly entryIndex: number | null }[] }[];
+    };
+    expect(result.input).toBe('食べた');
+    const entryIndex = result.paths[0]?.tokens.find(token => token.entryIndex !== null)?.entryIndex;
+    expect(entryIndex).toBeNumber();
+
+    const entry = run('entry', String(entryIndex));
+    expect(entry.exitCode).toBe(0);
+    expect(JSON.parse(entry.stdout.toString())).toMatchObject({ seq: expect.any(Number) });
   });
 
-  test('returns the retained full JSON shape without a database', () => {
-    const result = Bun.spawnSync(['node', 'dist/index.js', '--full', '食べた'], {
-      cwd: packageRoot,
-      env: { ...process.env, ICHIRAN_PACK_DIR: releaseDirectory! },
-      stderr: 'pipe',
-      stdout: 'pipe'
-    });
+  test('reports stable analyzer errors and has no implicit compatibility mode', () => {
+    const invalid = run('analyze', '--limit', '99', '猫');
+    expect(invalid.exitCode).toBe(2);
+    expect(invalid.stderr.toString()).toContain('ERROR [invalid-input]');
 
-    expect(result.exitCode).toBe(0);
-    expect(result.stderr.toString()).toBe('');
-    expect(JSON.parse(result.stdout.toString())).toBeArray();
+    const implicit = run('今日');
+    expect(implicit.exitCode).not.toBe(0);
+    expect(implicit.stderr.toString()).toContain("unknown command '今日'");
   });
 });

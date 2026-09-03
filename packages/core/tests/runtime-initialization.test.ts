@@ -5,24 +5,24 @@ describe('Rust WASM initialization', () => {
     const runtimeUrl = new URL('../src/runtime.ts', import.meta.url).href;
     const script = `
       import { readFile } from 'node:fs/promises';
-      import { IchiranRuntime, RUST_KERNEL_WASM_URL } from ${JSON.stringify(runtimeUrl)};
+      import { ANALYZER_WASM_URL, Analyzer } from ${JSON.stringify(runtimeUrl)};
       const details = {
         byteLength: 96,
         async read(_offset, byteLength) { return new Uint8Array(byteLength); }
       };
       let firstRejected = false;
       try {
-        await IchiranRuntime.open({ hot: new Uint8Array(), details, wasm: Uint8Array.of(0) });
+        await Analyzer.open({ hot: new Uint8Array(), details, wasm: Uint8Array.of(0) });
       } catch {
         firstRejected = true;
       }
       if (!firstRejected) throw new Error('bad WASM unexpectedly initialized');
       try {
-        const wasm = new Uint8Array(await readFile(RUST_KERNEL_WASM_URL));
-        await IchiranRuntime.open({ hot: new Uint8Array(), details, wasm });
+        const wasm = new Uint8Array(await readFile(ANALYZER_WASM_URL));
+        await Analyzer.open({ hot: new Uint8Array(), details, wasm });
         throw new Error('invalid pack unexpectedly opened');
       } catch (error) {
-        if (!(error instanceof Error) || error.code !== 'invalid-header') throw error;
+        if (!(error instanceof Error) || error.code !== 'invalid-pack') throw error;
       }
     `;
     const result = Bun.spawnSync([process.execPath, '--eval', script], {

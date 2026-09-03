@@ -7,12 +7,7 @@ import {
   type KeyboardEvent,
   type ReactElement
 } from 'react';
-import {
-  MAX_ANALYZER_TEXT_LENGTH,
-  MAX_ANALYZER_WORD_LENGTH,
-  validatePortableAnalyzeRequest,
-  type DetailEntry
-} from '@ichiran/core';
+import type { DictionaryEntry } from '@ichiran/core';
 import {
   AnalyzerClient,
   AnalyzerClientError,
@@ -27,9 +22,10 @@ import type {
   AnalysisToken,
   AnalyzeOptions,
   AnalyzerPackManifest,
-  BenchmarkResult,
   PackStatus
 } from './protocol.js';
+
+declare const __ICHIRAN_BROWSER_QUALIFICATION__: boolean;
 
 const MANIFEST_URL = '/analyzer/manifest.json';
 const SAMPLE = '今日は公園で友達と話しました。';
@@ -335,7 +331,7 @@ function Sentence({
 
 function Inspector({ token, details, onClose }: {
   token: AnalysisToken | null;
-  details: DetailEntry | null;
+  details: DictionaryEntry | null;
   onClose(): void;
 }): ReactElement {
   useEffect(() => {
@@ -427,14 +423,12 @@ function Inspector({ token, details, onClose }: {
 
 function Workspace({
   status,
-  manifest,
   client,
   onClear,
   onPackInvalid,
   operationError
 }: {
   status: Extract<PackStatus, { state: 'ready' }>;
-  manifest: AnalyzerPackManifest | null;
   client: AnalyzerClient;
   onClear(): void;
   onPackInvalid(): void;
@@ -447,20 +441,16 @@ function Workspace({
   const [result, setResult] = useState<AnalysisResult | null>(null);
   const [pathIndex, setPathIndex] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
-  const [details, setDetails] = useState<DetailEntry | null>(null);
+  const [details, setDetails] = useState<DictionaryEntry | null>(null);
   const [running, setRunning] = useState(false);
   const [runningIntent, setRunningIntent] = useState<string | null>(null);
   const [showBusy, setShowBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [wallMs, setWallMs] = useState<number | null>(null);
-  const [benchmark, setBenchmark] = useState<BenchmarkResult | null>(null);
-  const [benchmarkRunning, setBenchmarkRunning] = useState(false);
   const [romanization, setRomanization] = useState<string | null>(null);
   const [runtimeMessage, setRuntimeMessage] = useState<string | null>(null);
   const [lastOptions, setLastOptions] = useState<AnalyzeOptions>({ limit: 1 });
   const request = useRef(0);
-  const benchmarkRequest = useRef(0);
-  const benchmarkActive = useRef(false);
   const activeIntent = useRef<string | null>(null);
   const selectedToken = selected === null ? null : result?.paths[pathIndex]?.tokens[selected] ?? null;
   const path = result?.paths[pathIndex] ?? null;
@@ -481,8 +471,8 @@ function Workspace({
     setDetails(null);
     if (!selectedToken || selectedToken.entryIndex === null) return;
     let current = true;
-    void client.describe(selectedToken.entryIndex).then(value => {
-      if (current) setDetails(value as DetailEntry);
+    void client.entry(selectedToken.entryIndex).then(value => {
+      if (current) setDetails(value);
     }, reason => {
       if (current) setDetails(null);
       if (isPackInvalidError(reason)) onPackInvalid();
@@ -493,26 +483,21 @@ function Workspace({
   async function analyze(): Promise<void> {
     const intent = intentKey;
     if (!text.trim() || activeIntent.current === intent) return;
-    const stoppedBenchmark = benchmarkActive.current;
-    if (activeIntent.current !== null || benchmarkActive.current) {
+    if (activeIntent.current !== null) {
       ++request.current;
-      ++benchmarkRequest.current;
       activeIntent.current = null;
-      benchmarkActive.current = false;
       client.restart();
       setRunning(false);
       setRunningIntent(null);
-      setBenchmarkRunning(false);
-      if (stoppedBenchmark) setRuntimeMessage('Benchmark stopped for the new analysis.');
     }
     let options: AnalyzeOptions;
     try {
       const entities = parseEntityHints(entitySpec, text.length);
-      options = validatePortableAnalyzeRequest(text, {
+      options = {
         limit,
         ...(entities.length > 0 ? { entities } : {}),
         ...(normalizePunctuation ? { normalizePunctuation: true } : {})
-      }).options;
+      };
     } catch (reason) {
       setError(reason instanceof Error ? reason.message : String(reason));
       return;
@@ -567,22 +552,6 @@ function Workspace({
     }
   }
 
-  async function copyLegacy(): Promise<void> {
-    if (!result) return;
-    setRuntimeMessage('Preparing legacy JSON…');
-    try {
-      const legacy = await client.legacy(result.input, {
-        ...lastOptions,
-        limit: Math.max(1, result.paths.length)
-      });
-      await navigator.clipboard.writeText(JSON.stringify(legacy, null, 2));
-      setRuntimeMessage('Legacy JSON copied.');
-    } catch (reason) {
-      if (isPackInvalidError(reason)) onPackInvalid();
-      setRuntimeMessage(`Legacy serialization failed: ${reason instanceof Error ? reason.message : String(reason)}`);
-    }
-  }
-
   async function copyClean(): Promise<void> {
     if (!result) return;
     try {
@@ -590,33 +559,6 @@ function Workspace({
       setRuntimeMessage('Clean JSON copied.');
     } catch (reason) {
       setRuntimeMessage(`Copy failed: ${reason instanceof Error ? reason.message : String(reason)}`);
-    }
-  }
-
-  async function runBenchmark(): Promise<void> {
-    if (benchmarkActive.current) return;
-    if (!manifest || manifest.manifestSha256 !== status.manifestSha256) {
-      setRuntimeMessage('Benchmark unavailable: the installed release manifest could not be verified.');
-      return;
-    }
-    const id = ++benchmarkRequest.current;
-    benchmarkActive.current = true;
-    setBenchmarkRunning(true);
-    setRuntimeMessage('Running the fixed corpus in the analyzer Worker…');
-    try {
-      const nextBenchmark = await client.benchmark(manifest);
-      if (id !== benchmarkRequest.current) return;
-      setBenchmark(nextBenchmark);
-      setRuntimeMessage('Benchmark complete.');
-    } catch (reason) {
-      if (id !== benchmarkRequest.current) return;
-      if (isPackInvalidError(reason)) onPackInvalid();
-      setRuntimeMessage(`Benchmark failed: ${reason instanceof Error ? reason.message : String(reason)}`);
-    } finally {
-      if (id === benchmarkRequest.current) {
-        benchmarkActive.current = false;
-        setBenchmarkRunning(false);
-      }
     }
   }
 
@@ -630,19 +572,6 @@ function Workspace({
       if (isPackInvalidError(reason)) onPackInvalid();
       setRuntimeMessage(`Romanization failed: ${reason instanceof Error ? reason.message : String(reason)}`);
     }
-  }
-
-  function downloadBenchmark(): void {
-    if (!benchmark) return;
-    const url = URL.createObjectURL(new Blob(
-      [`${JSON.stringify(benchmark, null, 2)}\n`],
-      { type: 'application/json' }
-    ));
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'ichiran-browser-alpha-benchmark.json';
-    link.click();
-    URL.revokeObjectURL(url);
   }
 
   return (
@@ -668,15 +597,13 @@ function Workspace({
             onKeyDown={keyDown}
             lang="ja"
             rows={4}
-            maxLength={MAX_ANALYZER_TEXT_LENGTH}
             aria-describedby="input-guidance"
             placeholder="Paste or type Japanese text"
           />
           {text && <button className="clear-input" type="button" onClick={() => setText('')} aria-label="Clear Japanese text">×</button>}
         </div>
         <p id="input-guidance" className="input-guidance">
-          {text.length.toLocaleString()} / {MAX_ANALYZER_TEXT_LENGTH.toLocaleString()} text units
-          {' · '}uninterrupted word runs up to {MAX_ANALYZER_WORD_LENGTH.toLocaleString()}
+          {text.length.toLocaleString()} text units
         </p>
         <div className="composer-actions">
           <details className="advanced">
@@ -738,19 +665,11 @@ function Workspace({
           {result && <div><dt>Request</dt><dd>{result.input.length} units · top {lastOptions.limit ?? 1} · {lastOptions.entities?.length ?? 0} boosts</dd></div>}
           {romanization !== null && <div><dt>Romanization</dt><dd>{romanization}</dd></div>}
           <div><dt>Performance gate</dt><dd>Measured externally</dd></div>
-          {benchmark?.groups.map(group => (
-            <div key={group.corpus}><dt>{group.corpus} p95</dt><dd>{group.p95Ms.toFixed(1)} ms</dd></div>
-          ))}
         </dl>
         {runtimeMessage && <p className="runtime-message" aria-live="polite">{runtimeMessage}</p>}
         <div className="runtime-actions">
           {result && <button type="button" className="secondary" onClick={() => void copyClean()}>Copy clean JSON</button>}
-          {result && <button type="button" className="secondary" onClick={() => void copyLegacy()}>Copy legacy JSON</button>}
           {result && <button type="button" className="secondary" onClick={() => void romanizeResult()}>Romanize input</button>}
-          <button type="button" className="secondary" disabled={benchmarkRunning} onClick={() => void runBenchmark()}>
-            {benchmarkRunning ? 'Running benchmark…' : 'Run benchmark'}
-          </button>
-          {benchmark && <button type="button" className="secondary" onClick={downloadBenchmark}>Download benchmark JSON</button>}
           <button type="button" className="text-button danger" onClick={onClear}>Clear installed data</button>
         </div>
       </details>
@@ -863,6 +782,28 @@ export function App({
     };
   }, [client, supported]);
 
+  useEffect(() => {
+    if (
+      !__ICHIRAN_BROWSER_QUALIFICATION__
+      || !client
+      || !manifest
+      || status?.state !== 'ready'
+    ) return;
+    let current = true;
+    const target = window as typeof window & {
+      __ichiranQualification?: import('./qualification-client.js').AnalyzerQualification;
+    };
+    void import('./qualification-client.js').then(({ createAnalyzerQualification }) => {
+      if (current) {
+        target.__ichiranQualification = createAnalyzerQualification(client, manifest);
+      }
+    });
+    return () => {
+      current = false;
+      delete target.__ichiranQualification;
+    };
+  }, [client, manifest, status]);
+
   async function install(): Promise<void> {
     if (!client) return;
     setInstallError(null);
@@ -933,7 +874,7 @@ export function App({
       <AppHeader status={status} offlineShell={offlineShell} />
       <UpdateNotice state={offlineShell} />
       {status?.state === 'ready'
-        ? <Workspace status={status} manifest={manifest} client={client} onClear={() => void clear()} onPackInvalid={refreshStatus} operationError={installError} />
+        ? <Workspace status={status} client={client} onClear={() => void clear()} onPackInvalid={refreshStatus} operationError={installError} />
         : <InstallPanel manifest={manifest} manifestError={manifestError} status={status} progress={progress} error={installError} offlineShell={offlineShell} onInstall={() => void install()} onClear={() => void clear()} />}
       <footer><span>Runs entirely on this device</span><a href="/licenses.html">About &amp; licenses</a></footer>
     </div>

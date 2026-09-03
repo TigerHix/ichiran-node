@@ -36,14 +36,14 @@ The CLI and API need an installed analyzer release containing `manifest.json`,
 ```bash
 export ICHIRAN_PACK_DIR=/absolute/path/to/analyzer-release
 
-bun run cli "今日はいい天気です"
-bun run cli -- -i "食べました"
-bun run cli -- -f -l 3 "みんな土足でおいで"
+bun run cli -- romanize "今日はいい天気です"
+bun run cli -- analyze --limit 3 "みんな土足でおいで"
 
 bun run dev
 ```
 
-See [CLI.md](./CLI.md) and [API.md](./API.md) for the compatibility surfaces.
+See [CLI.md](./CLI.md), [API.md](./API.md), and the breaking
+[migration guide](./MIGRATION.md) for the product surfaces.
 
 To run the offline browser demo with a built release:
 
@@ -74,8 +74,8 @@ pinned semantic sources ---> @ichiran/data source compiler ---> immutable releas
 ```
 
 - The Rust crate is the canonical analyzer. It owns packed readers, lookup, morphology,
-  scoring, top-N paths, dictionary details, romanization, and retained serialization.
-- `@ichiran/core` is the browser-safe WASM host facade and shared public model. Its
+  scoring, top-N paths, dictionary details, and romanization.
+- `@ichiran/core` is the browser-safe `Analyzer` facade and shared public model. Its
   `TypeScriptOracleRuntime` is exposed only from `@ichiran/core/qualification`.
 - `@ichiran/node` verifies and decompresses release files, then opens the same core
   WASM runtime used in the browser.

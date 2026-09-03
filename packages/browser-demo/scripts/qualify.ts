@@ -37,6 +37,7 @@ assertCleanCheckout(qualificationCommit);
 const productionEnvironment = { ...process.env };
 delete productionEnvironment.ICHIRAN_TYPESCRIPT_ORACLE;
 delete productionEnvironment.ICHIRAN_QUALIFIED_ARTIFACT;
+productionEnvironment.ICHIRAN_BROWSER_QUALIFICATION = '1';
 let release = resolve(repositoryRoot, 'dist', 'browser-alpha');
 for (let index = 2; index < process.argv.length; index++) {
   const argument = process.argv[index];

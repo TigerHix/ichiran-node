@@ -159,9 +159,9 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
     await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('犬');
     await page.getByRole('button', { name: 'Analyze' }).click();
     await expect(page.getByRole('button', { name: /犬/ }).first()).toBeVisible();
-    // A one-token result automatically starts describe(). Finish that shared
+    // A one-token result automatically starts entry(). Finish that shared
     // runtime read before queueing clear, otherwise clear can win the lock queue
-    // and make describe invalidate this tab before the explicit stale read below.
+    // and make entry invalidate this tab before the explicit stale read below.
     await expect(page.locator('.dictionary-forms')).toContainText('犬');
     coordinator.once('dialog', dialog => dialog.accept());
     await coordinator.getByRole('button', { name: 'Clear installed data' }).click();

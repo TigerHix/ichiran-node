@@ -1,60 +1,32 @@
-/** Production analyzer facade. Compiler and qualification internals use subpaths. */
+/** The complete production surface. Compiler, release, and qualification APIs use subpaths. */
 export {
-  IchiranRuntime,
-  RUST_KERNEL_WASM_URL,
-  type IchiranRuntimeSource,
-  type RustKernelMetrics
+  ANALYZER_WASM_URL,
+  Analyzer,
+  AnalyzerError,
+  type AnalyzeOptions,
+  type AnalyzerErrorCode,
+  type AnalyzerSource,
+  type RandomAccessSource,
+  type RomanizeOptions
 } from './runtime.js';
-export {
-  AnalyzerInputError,
-  MAX_ANALYZER_ENTITIES,
-  MAX_ANALYZER_ENTITY_ABS_BOOST,
-  MAX_ANALYZER_LIMIT,
-  MAX_ANALYZER_TEXT_LENGTH,
-  MAX_ANALYZER_WORD_LENGTH,
-  validateAnalyzerEntities,
-  validateAnalyzerLimit,
-  validatePortableAnalyzeRequest,
-  type PortableAnalyzeOptions,
-  type ValidatedPortableAnalyzeOptions
-} from './analyzer-options.js';
 export type {
-  PortableAnalysisAlternative,
-  PortableAnalysisChunk,
-  PortableAnalysisComponent,
-  PortableAnalysisInflection,
-  PortableAnalysisPath,
-  PortableAnalysisResult,
-  PortableAnalysisRoot,
-  PortableAnalysisToken
+  PortableAnalysisAlternative as AnalysisAlternative,
+  PortableAnalysisChunk as AnalysisChunk,
+  PortableAnalysisComponent as AnalysisComponent,
+  PortableAnalysisInflection as AnalysisInflection,
+  PortableAnalysisPath as AnalysisPath,
+  PortableAnalysisResult as AnalysisResult,
+  PortableAnalysisRoot as AnalysisRoot,
+  PortableAnalysisRoute as AnalysisRoute,
+  PortableAnalysisToken as AnalysisToken
 } from './analyzer-result-contract.js';
-export type { AnalyzerEntityHint } from './analyzer-types.js';
-export {
-  DetailStoreError,
-  type DetailEntry,
-  type DetailRandomAccessSource,
-  type DetailStoreErrorCode
+export type { AnalyzerEntityHint as EntityHint } from './analyzer-types.js';
+export type {
+  DetailEntry as DictionaryEntry,
+  DetailForm as DictionaryForm,
+  DetailGloss as DictionaryGloss,
+  DetailProperty as DictionaryProperty,
+  DetailPropertyTag as DictionaryPropertyTag,
+  DetailSense as DictionarySense
 } from './details-contract.js';
-export {
-  ANALYZER_PACK_VERSION_MAX_UTF8_BYTES,
-  ANALYZER_RELEASE_FORMAT_VERSION,
-  analyzerManifestDigestInput,
-  parseAnalyzerReleaseManifest,
-  type AnalyzerReleaseAsset,
-  type AnalyzerReleaseEncoding,
-  type AnalyzerReleaseManifest,
-  type AnalyzerReleaseManifestWithoutDigest,
-  type AnalyzerReleaseSha256
-} from './release-manifest.js';
-export {
-  PORTABLE_LEGACY_INFO,
-  type PortableLegacyConjugationInfoFacts,
-  type PortableLegacyConjugationJson,
-  type PortableLegacyGlossJson,
-  type PortableLegacySenseJson,
-  type PortableLegacyTransformedPath,
-  type PortableLegacyTransformedResult,
-  type PortableLegacyTransformedToken,
-  type PortableLegacyWordInfoFacts
-} from './legacy-contract.js';
-export { joinRomanizedParts, type RomanizationName } from './romanization-contract.js';
+export type { RomanizationName as RomanizationScheme } from './romanization-contract.js';

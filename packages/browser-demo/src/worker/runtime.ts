@@ -1,7 +1,7 @@
 import {
-  IchiranRuntime,
-  RUST_KERNEL_WASM_URL,
-  type DetailRandomAccessSource
+  ANALYZER_WASM_URL,
+  Analyzer,
+  type RandomAccessSource
 } from '@ichiran/core';
 import type { InstalledFiles } from './install.js';
 
@@ -30,7 +30,7 @@ export async function decodeGzip(
 async function rustKernelWasm(): Promise<Uint8Array> {
   // The final `.bin` keeps the gzip body opaque across static hosts; the
   // Worker, not HTTP Content-Encoding, owns its one decompression boundary.
-  const compressed = await fetch(`${RUST_KERNEL_WASM_URL.href}.gz.bin`);
+  const compressed = await fetch(`${ANALYZER_WASM_URL.href}.gz.bin`);
   if (compressed.ok) {
     if (!compressed.body) throw new Error('Rust kernel shell asset has no response body');
     const stream = compressed.body.pipeThrough(new DecompressionStream('gzip'));
@@ -38,14 +38,14 @@ async function rustKernelWasm(): Promise<Uint8Array> {
   }
   // Vite's development server exposes the uncompressed generated asset. The
   // finalized production shell removes it after emitting the gzip sibling.
-  const raw = await fetch(RUST_KERNEL_WASM_URL);
+  const raw = await fetch(ANALYZER_WASM_URL);
   if (raw.ok) return new Uint8Array(await raw.arrayBuffer());
   throw new Error(`Rust kernel shell asset returned HTTP ${compressed.status}`);
 }
 
 export async function detailSource(
   handle: FileSystemFileHandle
-): Promise<DetailRandomAccessSource> {
+): Promise<RandomAccessSource> {
   const byteLength = (await handle.getFile()).size;
   return {
     byteLength,
@@ -57,13 +57,13 @@ export async function detailSource(
 }
 
 /** Open the shared analyzer runtime over the browser's verified OPFS files. */
-export async function openAnalyzerRuntime(files: InstalledFiles): Promise<IchiranRuntime> {
+export async function openAnalyzerRuntime(files: InstalledFiles): Promise<Analyzer> {
   const [hot, details, wasm] = await Promise.all([
     files.hot.getFile().then(file => file.arrayBuffer()).then(bytes => new Uint8Array(bytes)),
     detailSource(files.details),
     rustKernelWasm()
   ]);
-  return IchiranRuntime.open({
+  return Analyzer.open({
     hot,
     details,
     wasm
