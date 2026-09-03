@@ -138,7 +138,7 @@ gate; source-pack qualification no longer relies on it as a substitute.
 durable Node runtime, CLI executable, and HTTP API tests without the raw historical
 ordering fixtures. It also sets `RUN_PARITY_TESTS=true` and `ICHIRAN_PACK_DIR` to that
 verified release while running `packages/cli/tests/upstream-260118-parity.test.ts`, so
-the pinned upstream top-one, indirect-conjugation JSON-crash, and 合体 regressions
+the pinned upstream top-one, indirect-conjugation JSON-crash, and がたい / 難い regressions
 cannot be skipped. Intentional M6 ordering changes remain governed by the v4 source
 attestation, not by an exception in a production host test.
 
