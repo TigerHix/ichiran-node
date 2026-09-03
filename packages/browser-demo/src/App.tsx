@@ -1,6 +1,6 @@
 import {
-  useEffect,
   useCallback,
+  useEffect,
   useMemo,
   useRef,
   useState,
@@ -8,32 +8,56 @@ import {
   type ReactElement
 } from 'react';
 import {
-  MAX_ANALYZER_TEXT_LENGTH,
-  MAX_ANALYZER_WORD_LENGTH,
-  validatePortableAnalyzeRequest,
-  type DetailEntry
-} from '@ichiran/core';
+  CaretDown as CaretDownIcon,
+  Check as CheckIcon,
+  Copy as CopyIcon,
+  Database as DatabaseIcon,
+  DownloadSimple as DownloadSimpleIcon,
+  GearSix as GearSixIcon,
+  TextAa as TextAaIcon,
+  Trash as TrashIcon,
+  X as XIcon
+} from '@phosphor-icons/react';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import {
-  AnalyzerClient,
-  AnalyzerClientError,
-  parseDeployedRelease,
-  type InstallProgressValue
-} from './client.js';
-import { fetchBoundedJson } from './bounded-json-fetch.js';
-import { MAX_ENTITY_SPEC_LENGTH, parseEntityHints } from './entity-hints.js';
-import type {
-  AnalysisPath,
-  AnalysisResult,
-  AnalysisToken,
-  AnalyzeOptions,
-  AnalyzerPackManifest,
-  BenchmarkResult,
-  PackStatus
-} from './protocol.js';
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger
+} from '@/components/ui/dropdown-menu';
+import { Separator } from '@/components/ui/separator';
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle
+} from '@/components/ui/sheet';
+import { Skeleton } from '@/components/ui/skeleton';
+import { Textarea } from '@/components/ui/textarea';
+import {
+  BrowserAnalyzer,
+  MAX_ANALYZER_TEXT_LENGTH,
+  isInvalidInstallError,
+  isTerminalAnalyzerError,
+  type AnalyzerOutput,
+  type AnalyzerPath,
+  type AnalyzerProgress,
+  type AnalyzerRelease,
+  type AnalyzerStatus,
+  type AnalyzerToken,
+  type DictionaryEntry
+} from './analyzer-service.js';
+import { ANALYZER_SAMPLES } from './samples.js';
+import { useTokenSelection, type TokenSelection } from './use-token-selection.js';
 
-const MANIFEST_URL = '/analyzer/manifest.json';
-const SAMPLE = '今日は公園で友達と話しました。';
-const APP_VERSION = 'alpha.1';
+declare const __ICHIRAN_BROWSER_QUALIFICATION__: boolean;
+
+const DEFAULT_SAMPLE = ANALYZER_SAMPLES[0]!.text;
 
 export interface OfflineShellResult {
   readonly ready: boolean;
@@ -47,12 +71,18 @@ type OfflineShellState =
   | { readonly state: 'update-ready' }
   | { readonly state: 'error'; readonly message: string };
 
+interface AppError {
+  readonly code: string;
+  readonly message: string;
+}
+
 const POS_LABELS: Readonly<Record<string, string>> = {
-  n: '名', 'n-adv': '名', 'n-pr': '名', 'n-t': '名',
-  v1: '動', v5: '動', 'v5r': '動', 'vs': '動', 'vs-i': '動', 'vk': '動',
-  adj: '形', 'adj-i': '形', 'adj-na': '形', adv: '副',
-  prt: '助', pn: '代', conj: '接', cop: '繋', int: '感', aux: '助動',
-  ctr: '助数', exp: '表現', num: '数', suf: '接辞', pref: '接辞'
+  n: 'noun', 'n-adv': 'adverbial noun', 'n-pr': 'proper noun', 'n-t': 'temporal noun',
+  v1: 'ichidan verb', v5: 'godan verb', v5r: 'godan verb', vs: 'suru verb',
+  'vs-i': 'suru verb', vk: 'kuru verb', adj: 'adjective', 'adj-i': 'i-adjective',
+  'adj-na': 'na-adjective', adv: 'adverb', prt: 'particle', pn: 'pronoun',
+  conj: 'conjunction', cop: 'copula', int: 'interjection', aux: 'auxiliary',
+  ctr: 'counter', exp: 'expression', num: 'number', suf: 'suffix', pref: 'prefix'
 };
 
 function formatBytes(bytes: number): string {
@@ -67,32 +97,11 @@ function formatBytes(bytes: number): string {
   return `${value >= 10 ? value.toFixed(1) : value.toFixed(2)} ${units[unit]}`;
 }
 
-function isPackInvalidError(reason: unknown): reason is AnalyzerClientError {
-  return reason instanceof AnalyzerClientError
-    && (
-      reason.code === 'corrupt-install'
-      || reason.code === 'not-installed'
-      || reason.code === 'stale-install'
-    );
-}
-
-function isTerminalWorkerError(reason: unknown): reason is AnalyzerClientError {
-  return reason instanceof AnalyzerClientError
-    && (
-      reason.code === 'worker-crashed'
-      || reason.code === 'worker-unavailable'
-      || reason.code === 'worker-terminated'
-    );
-}
-
-function posLabel(pos: readonly string[]): string {
-  for (const value of pos) {
-    const direct = POS_LABELS[value];
-    if (direct) return direct;
-    const prefix = Object.entries(POS_LABELS).find(([key]) => value.startsWith(key));
-    if (prefix) return prefix[1];
-  }
-  return '語';
+function posLabel(value: string): string {
+  const direct = POS_LABELS[value];
+  if (direct) return direct;
+  const match = Object.entries(POS_LABELS).find(([key]) => value.startsWith(key));
+  return match?.[1] ?? value;
 }
 
 function posTone(pos: readonly string[]): string {
@@ -100,662 +109,8 @@ function posTone(pos: readonly string[]): string {
   if (/\bv|verb/.test(joined)) return 'verb';
   if (/adj/.test(joined)) return 'adjective';
   if (/prt|particle/.test(joined)) return 'particle';
+  if (/adv/.test(joined)) return 'adverb';
   return 'noun';
-}
-
-function DownloadIcon(): ReactElement {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 18.5h14" />
-    </svg>
-  );
-}
-
-function StorageDownloadIcon(): ReactElement {
-  return (
-    <svg viewBox="0 0 32 32" aria-hidden="true">
-      <path d="M5 7.5c0-2.2 4.5-4 10-4s10 1.8 10 4-4.5 4-10 4-10-1.8-10-4Zm0 0v7c0 2.2 4.5 4 10 4 2.1 0 4-.3 5.6-.8M5 14.5v7c0 2.2 4.5 4 10 4 1.4 0 2.7-.1 3.9-.4" />
-      <circle cx="24.5" cy="23.5" r="6" />
-      <path d="M24.5 20v7m0 0 2.5-2.5M24.5 27 22 24.5" />
-    </svg>
-  );
-}
-
-function DataIcon({ kind }: { kind: 'book' | 'grid' | 'document' }): ReactElement {
-  if (kind === 'grid') {
-    return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 0h6v6h-6z" /></svg>;
-  }
-  if (kind === 'document') {
-    return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7zM14 3v5h4M10 12h5m-5 4h5" /></svg>;
-  }
-  return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A3.5 3.5 0 0 1 7.5 2H11v17H7.5A3.5 3.5 0 0 0 4 22zm16 0A3.5 3.5 0 0 0 16.5 2H13v17h3.5A3.5 3.5 0 0 1 20 22z" /></svg>;
-}
-
-function AppHeader({
-  status,
-  offlineShell
-}: {
-  status: PackStatus | null;
-  offlineShell: OfflineShellState;
-}): ReactElement {
-  const packReady = status?.state === 'ready';
-  const offlineReady = offlineShell.state === 'ready'
-    || offlineShell.state === 'update-ready';
-  const ready = packReady && offlineReady;
-  const statusText = status === null
-    ? 'Opening analyzer…'
-    : offlineShell.state === 'update-ready'
-      ? 'Update available'
-    : ready
-      ? 'Ready offline'
-      : packReady && offlineShell.state === 'opening'
-        ? 'Preparing offline…'
-        : packReady && offlineShell.state === 'error'
-          ? 'Offline shell unavailable'
-      : status.state === 'incomplete' || status.state === 'corrupt' || status.state === 'stale'
-        ? 'Needs reinstall'
-        : 'Not installed';
-  return (
-    <header className="app-header">
-      <a className="wordmark" href="/" aria-label="Browser Analyzer Alpha home">Browser Analyzer <span>Alpha</span></a>
-      <div className={`status ${ready ? 'status-ready' : ''}`}>
-        <span aria-hidden="true" />
-        {statusText}
-      </div>
-    </header>
-  );
-}
-
-function UpdateNotice({ state }: { state: OfflineShellState }): ReactElement | null {
-  if (state.state !== 'update-ready') return null;
-  return (
-    <section className="update-notice" aria-live="polite">
-      <span><strong>App update downloaded</strong> You can keep using this version. Close every analyzer tab, then reopen one to switch safely.</span>
-    </section>
-  );
-}
-
-interface InstallPanelProps {
-  manifest: AnalyzerPackManifest | null;
-  manifestError: string | null;
-  status: PackStatus | null;
-  progress: InstallProgressValue | null;
-  error: { readonly code: string; readonly message: string } | null;
-  offlineShell: OfflineShellState;
-  onInstall(): void;
-  onClear(): void;
-}
-
-function InstallPanel(props: InstallPanelProps): ReactElement {
-  const {
-    manifest, manifestError, status, progress, error, offlineShell, onInstall, onClear
-  } = props;
-  const total = manifest ? manifest.hot.downloadBytes + manifest.details.downloadBytes : 0;
-  const installed = manifest ? manifest.hot.installedBytes + manifest.details.installedBytes : 0;
-  const busy = progress !== null;
-  const broken = status?.state === 'incomplete'
-    || status?.state === 'corrupt'
-    || status?.state === 'stale';
-  const offlineReady = offlineShell.state === 'ready'
-    || offlineShell.state === 'update-ready';
-  const phaseCopy = progress?.phase === 'downloading'
-    ? 'Downloading analyzer data'
-    : progress?.phase === 'verifying'
-      ? 'Verifying download'
-      : progress?.phase === 'installing'
-        ? 'Installing for offline use'
-        : progress?.phase === 'opening'
-          ? 'Opening analyzer'
-          : null;
-  const percent = progress && progress.totalBytes > 0
-    ? Math.min(100, Math.round(progress.receivedBytes / progress.totalBytes * 100))
-    : 0;
-
-  return (
-    <main className="install-layout">
-      <section className="install-panel" aria-labelledby="install-title">
-        <div className="install-symbol"><StorageDownloadIcon /></div>
-        <h1 id="install-title">Japanese analyzer data</h1>
-        <p className="install-subtitle">Download once, then analyze Japanese entirely on this device.</p>
-        <div className="included-data">
-          <div><DataIcon kind="book" /><span><strong>Dictionary &amp; readings</strong><small>Forms, readings, and lexical identity</small></span></div>
-          <div><DataIcon kind="grid" /><span><strong>Conjugation &amp; scoring</strong><small>Complete analyzer behavior, no server</small></span></div>
-          <div><DataIcon kind="document" /><span><strong>Complete senses &amp; glosses</strong><small>Available offline when you inspect a word</small></span></div>
-        </div>
-
-        {status?.state === 'stale'
-          ? <p className="inline-error">Analyzer data is from an earlier app release. <small>{status.message}</small></p>
-          : broken && <p className="inline-error">Analyzer data is incomplete or corrupted.</p>}
-        {error?.code === 'insufficient-storage'
-          ? <p className="inline-error">Not enough device storage to install analyzer data. <small>{error.message}</small></p>
-          : error?.code === 'clear-error'
-            ? <p className="inline-error">Analyzer data could not be cleared. <small>{error.message}</small></p>
-          : error && <p className="inline-error">Analyzer data could not be installed. <small>{error.message}</small></p>}
-        {manifestError && <p className="inline-error">{manifestError}</p>}
-        {offlineShell.state === 'opening' && (
-          <p className="runtime-message" aria-live="polite">Preparing the offline app shell…</p>
-        )}
-        {offlineShell.state === 'error' && (
-          <p className="inline-error">Offline app shell could not be prepared. <small>{offlineShell.message}</small></p>
-        )}
-
-        {busy && progress && (
-          <div className="install-progress" aria-live="polite">
-            <div><strong>{phaseCopy}…</strong><span>{percent}%</span></div>
-            <progress max={progress.totalBytes} value={progress.receivedBytes} />
-            <small>{formatBytes(progress.receivedBytes)} of {formatBytes(progress.totalBytes)}</small>
-          </div>
-        )}
-
-        {!busy && (
-          <button
-            className="primary install-action"
-            type="button"
-            onClick={onInstall}
-            disabled={!manifest || !offlineReady}
-          >
-            <DownloadIcon />{broken ? 'Reinstall analyzer data' : error ? 'Retry' : 'Install analyzer data'}
-          </button>
-        )}
-
-        <div className="install-meta">
-          <div><span>Download size</span><strong>{manifest ? formatBytes(total) : '—'}</strong></div>
-          <div><span>On-device size</span><strong>{manifest ? formatBytes(installed) : '—'}</strong></div>
-        </div>
-        <p className="privacy">No account. No text leaves this device.</p>
-        {manifest && (
-          <details className="data-details">
-            <summary>Data details</summary>
-            <p>Pack {manifest.packVersion} · manifest {manifest.manifestSha256.slice(0, 12)}</p>
-          </details>
-        )}
-        {broken && !busy && <button className="text-button danger" type="button" onClick={onClear}>Clear installed data</button>}
-      </section>
-    </main>
-  );
-}
-
-function TokenButton({
-  token,
-  index,
-  selected,
-  onSelect
-}: {
-  token: AnalysisToken;
-  index: number;
-  selected: boolean;
-  onSelect(): void;
-}): ReactElement {
-  if (token.entryIndex === null && token.pos.length === 0) {
-    return <span className="punctuation">{token.text}</span>;
-  }
-  const label = posLabel(token.pos);
-  const accessible = token.reading && token.reading !== token.text
-    ? `${token.text}, reading ${token.reading}, ${token.pos.join(', ') || 'word'}`
-    : `${token.text}, ${token.pos.join(', ') || 'word'}`;
-  return (
-    <button
-      className={`token token-${posTone(token.pos)}`}
-      type="button"
-      aria-label={accessible}
-      aria-pressed={selected}
-      data-token-index={index}
-      onClick={onSelect}
-    >
-      <span className="furigana">{token.reading === token.text ? '\u00a0' : token.reading}</span>
-      <span className="token-surface">{token.text}</span>
-      <span className="token-pos">{label}</span>
-    </button>
-  );
-}
-
-function Sentence({
-  path,
-  selected,
-  onSelect
-}: {
-  path: AnalysisPath;
-  selected: number | null;
-  onSelect(index: number): void;
-}): ReactElement {
-  return (
-    <div className="sentence" lang="ja">
-      {path.tokens.map((token, index) => (
-        <TokenButton
-          key={`${token.start}:${token.end}:${index}`}
-          token={token}
-          index={index}
-          selected={selected === index}
-          onSelect={() => onSelect(index)}
-        />
-      ))}
-    </div>
-  );
-}
-
-function Inspector({ token, details, onClose }: {
-  token: AnalysisToken | null;
-  details: DetailEntry | null;
-  onClose(): void;
-}): ReactElement {
-  useEffect(() => {
-    if (!token) return;
-    const keyDown = (event: globalThis.KeyboardEvent) => {
-      if (event.key === 'Escape') onClose();
-    };
-    window.addEventListener('keydown', keyDown);
-    return () => window.removeEventListener('keydown', keyDown);
-  }, [onClose, token]);
-
-  if (!token) {
-    return <aside className="inspector inspector-empty"><p>Tap a word for details</p></aside>;
-  }
-  return (
-    <aside className="inspector" aria-label="Word details" aria-live="polite">
-      <button className="sheet-close" type="button" aria-label="Close word details" onClick={onClose}>×</button>
-      <p className="inspector-reading" lang="ja">{token.reading}</p>
-      <h2 lang="ja">{token.text}</h2>
-      <div className="tags">
-        {token.pos.map(value => <span key={value}>{value}</span>)}
-        {token.inflection.map((value, index) => <span key={`${value.pos}:${value.type}:${index}`}>type {value.type}</span>)}
-      </div>
-      {details && details.forms.length > 0 && (
-        <section className="dictionary-forms">
-          <p>Dictionary forms</p>
-          <div>
-            {details.forms.map(form => (
-              <span key={`${form.route}:${form.ord}:${form.text}`}>
-                <strong lang="ja">{form.text}</strong>
-                <small>{form.route === 'kanji' ? 'written' : 'reading'}{form.common !== null ? ' · common' : ''}</small>
-              </span>
-            ))}
-          </div>
-        </section>
-      )}
-      {details?.senses.map((sense, index) => (
-        <section className="sense" key={`${sense.ord}:${index}`}>
-          <h3>{index + 1}</h3>
-          <div>
-            {sense.glosses.map(gloss => <p key={`${gloss.ord}:${gloss.text}`}>{gloss.text}</p>)}
-            {sense.properties.length > 0 && (
-              <small>{sense.properties.map(property => `${property.tag}: ${property.text}`).join(' · ')}</small>
-            )}
-          </div>
-        </section>
-      ))}
-      {token.root && (
-        <section className="base-form">
-          <p>Base form</p>
-          <strong lang="ja">{token.root.form}</strong>
-          <span lang="ja">{token.root.reading}</span>
-        </section>
-      )}
-      {token.components.length > 0 && (
-        <section className="token-structure">
-          <p>Structure</p>
-          {token.components.map((component, index) => (
-            <div key={`${component.text}:${component.entryIndex}:${index}`}>
-              <strong lang="ja">{component.text}</strong>
-              <span lang="ja">{component.reading}</span>
-              {component.root && <small>base {component.root.form}</small>}
-            </div>
-          ))}
-        </section>
-      )}
-      {token.inflection.length > 0 && (
-        <section className="conjugation-path">
-          <p>Conjugation path</p>
-          {token.inflection.map((step, index) => (
-            <div key={`${step.pos}:${step.type}:${index}`}><span>{index + 1}</span><strong>{step.pos}</strong><small>type {step.type}</small></div>
-          ))}
-        </section>
-      )}
-      {token.alternatives.length > 0 && (
-        <section className="token-alternatives">
-          <p>Alternative readings</p>
-          {token.alternatives.map(alternative => (
-            <div key={alternative.candidateId}>
-              <span><strong lang="ja">{alternative.text}</strong><small lang="ja">{alternative.reading}</small></span>
-              <em>{alternative.score}</em>
-            </div>
-          ))}
-        </section>
-      )}
-    </aside>
-  );
-}
-
-function Workspace({
-  status,
-  manifest,
-  client,
-  onClear,
-  onPackInvalid,
-  operationError
-}: {
-  status: Extract<PackStatus, { state: 'ready' }>;
-  manifest: AnalyzerPackManifest | null;
-  client: AnalyzerClient;
-  onClear(): void;
-  onPackInvalid(): void;
-  operationError: { readonly code: string; readonly message: string } | null;
-}): ReactElement {
-  const [text, setText] = useState(SAMPLE);
-  const [limit, setLimit] = useState(1);
-  const [entitySpec, setEntitySpec] = useState('');
-  const [normalizePunctuation, setNormalizePunctuation] = useState(false);
-  const [result, setResult] = useState<AnalysisResult | null>(null);
-  const [pathIndex, setPathIndex] = useState(0);
-  const [selected, setSelected] = useState<number | null>(null);
-  const [details, setDetails] = useState<DetailEntry | null>(null);
-  const [running, setRunning] = useState(false);
-  const [runningIntent, setRunningIntent] = useState<string | null>(null);
-  const [showBusy, setShowBusy] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [wallMs, setWallMs] = useState<number | null>(null);
-  const [benchmark, setBenchmark] = useState<BenchmarkResult | null>(null);
-  const [benchmarkRunning, setBenchmarkRunning] = useState(false);
-  const [romanization, setRomanization] = useState<string | null>(null);
-  const [runtimeMessage, setRuntimeMessage] = useState<string | null>(null);
-  const [lastOptions, setLastOptions] = useState<AnalyzeOptions>({ limit: 1 });
-  const request = useRef(0);
-  const benchmarkRequest = useRef(0);
-  const benchmarkActive = useRef(false);
-  const activeIntent = useRef<string | null>(null);
-  const selectedToken = selected === null ? null : result?.paths[pathIndex]?.tokens[selected] ?? null;
-  const path = result?.paths[pathIndex] ?? null;
-  const intentKey = JSON.stringify([text, limit, entitySpec, normalizePunctuation]);
-  const latestIntent = useRef(intentKey);
-  latestIntent.current = intentKey;
-
-  useEffect(() => {
-    if (!running) {
-      setShowBusy(false);
-      return;
-    }
-    const timer = window.setTimeout(() => setShowBusy(true), 120);
-    return () => window.clearTimeout(timer);
-  }, [running]);
-
-  useEffect(() => {
-    setDetails(null);
-    if (!selectedToken || selectedToken.entryIndex === null) return;
-    let current = true;
-    void client.describe(selectedToken.entryIndex).then(value => {
-      if (current) setDetails(value as DetailEntry);
-    }, reason => {
-      if (current) setDetails(null);
-      if (isPackInvalidError(reason)) onPackInvalid();
-    });
-    return () => { current = false; };
-  }, [client, onPackInvalid, selectedToken]);
-
-  async function analyze(): Promise<void> {
-    const intent = intentKey;
-    if (!text.trim() || activeIntent.current === intent) return;
-    const stoppedBenchmark = benchmarkActive.current;
-    if (activeIntent.current !== null || benchmarkActive.current) {
-      ++request.current;
-      ++benchmarkRequest.current;
-      activeIntent.current = null;
-      benchmarkActive.current = false;
-      client.restart();
-      setRunning(false);
-      setRunningIntent(null);
-      setBenchmarkRunning(false);
-      if (stoppedBenchmark) setRuntimeMessage('Benchmark stopped for the new analysis.');
-    }
-    let options: AnalyzeOptions;
-    try {
-      const entities = parseEntityHints(entitySpec, text.length);
-      options = validatePortableAnalyzeRequest(text, {
-        limit,
-        ...(entities.length > 0 ? { entities } : {}),
-        ...(normalizePunctuation ? { normalizePunctuation: true } : {})
-      }).options;
-    } catch (reason) {
-      setError(reason instanceof Error ? reason.message : String(reason));
-      return;
-    }
-    const id = ++request.current;
-    activeIntent.current = intent;
-    const started = performance.now();
-    setRunning(true);
-    setRunningIntent(intent);
-    setError(null);
-    try {
-      const next = await client.analyze(text, options);
-      if (id !== request.current || intent !== latestIntent.current) return;
-      setResult(next);
-      setPathIndex(0);
-      setSelected(next.paths[0]?.tokens.length === 1 ? 0 : null);
-      setWallMs(performance.now() - started);
-      setLastOptions(options);
-    } catch (reason) {
-      if (id !== request.current || intent !== latestIntent.current) return;
-      if (isPackInvalidError(reason)) onPackInvalid();
-      setError(reason instanceof Error ? reason.message : String(reason));
-    } finally {
-      if (id === request.current) {
-        activeIntent.current = null;
-        setRunning(false);
-        setRunningIntent(null);
-      }
-    }
-  }
-
-  function keyDown(event: KeyboardEvent<HTMLTextAreaElement>): void {
-    if (event.key === 'Enter' && (event.metaKey || event.ctrlKey)) {
-      event.preventDefault();
-      void analyze();
-    }
-  }
-
-  function choosePath(index: number): void {
-    setPathIndex(index);
-    setSelected(null);
-    setDetails(null);
-  }
-
-  function closeInspector(): void {
-    const tokenIndex = selected;
-    setSelected(null);
-    if (tokenIndex !== null) {
-      window.requestAnimationFrame(() => {
-        document.querySelector<HTMLButtonElement>(`[data-token-index="${tokenIndex}"]`)?.focus();
-      });
-    }
-  }
-
-  async function copyLegacy(): Promise<void> {
-    if (!result) return;
-    setRuntimeMessage('Preparing legacy JSON…');
-    try {
-      const legacy = await client.legacy(result.input, {
-        ...lastOptions,
-        limit: Math.max(1, result.paths.length)
-      });
-      await navigator.clipboard.writeText(JSON.stringify(legacy, null, 2));
-      setRuntimeMessage('Legacy JSON copied.');
-    } catch (reason) {
-      if (isPackInvalidError(reason)) onPackInvalid();
-      setRuntimeMessage(`Legacy serialization failed: ${reason instanceof Error ? reason.message : String(reason)}`);
-    }
-  }
-
-  async function copyClean(): Promise<void> {
-    if (!result) return;
-    try {
-      await navigator.clipboard.writeText(JSON.stringify(result, null, 2));
-      setRuntimeMessage('Clean JSON copied.');
-    } catch (reason) {
-      setRuntimeMessage(`Copy failed: ${reason instanceof Error ? reason.message : String(reason)}`);
-    }
-  }
-
-  async function runBenchmark(): Promise<void> {
-    if (benchmarkActive.current) return;
-    if (!manifest || manifest.manifestSha256 !== status.manifestSha256) {
-      setRuntimeMessage('Benchmark unavailable: the installed release manifest could not be verified.');
-      return;
-    }
-    const id = ++benchmarkRequest.current;
-    benchmarkActive.current = true;
-    setBenchmarkRunning(true);
-    setRuntimeMessage('Running the fixed corpus in the analyzer Worker…');
-    try {
-      const nextBenchmark = await client.benchmark(manifest);
-      if (id !== benchmarkRequest.current) return;
-      setBenchmark(nextBenchmark);
-      setRuntimeMessage('Benchmark complete.');
-    } catch (reason) {
-      if (id !== benchmarkRequest.current) return;
-      if (isPackInvalidError(reason)) onPackInvalid();
-      setRuntimeMessage(`Benchmark failed: ${reason instanceof Error ? reason.message : String(reason)}`);
-    } finally {
-      if (id === benchmarkRequest.current) {
-        benchmarkActive.current = false;
-        setBenchmarkRunning(false);
-      }
-    }
-  }
-
-  async function romanizeResult(): Promise<void> {
-    if (!result) return;
-    setRuntimeMessage('Romanizing the analyzed input…');
-    try {
-      setRomanization(await client.romanize(result.input));
-      setRuntimeMessage('Romanization complete.');
-    } catch (reason) {
-      if (isPackInvalidError(reason)) onPackInvalid();
-      setRuntimeMessage(`Romanization failed: ${reason instanceof Error ? reason.message : String(reason)}`);
-    }
-  }
-
-  function downloadBenchmark(): void {
-    if (!benchmark) return;
-    const url = URL.createObjectURL(new Blob(
-      [`${JSON.stringify(benchmark, null, 2)}\n`],
-      { type: 'application/json' }
-    ));
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'ichiran-browser-alpha-benchmark.json';
-    link.click();
-    URL.revokeObjectURL(url);
-  }
-
-  return (
-    <main className="workspace">
-      {operationError && (
-        <p className="inline-error operation-error" role="alert">
-          {operationError.code === 'clear-error'
-            ? 'Device data could not be cleared. '
-            : 'Analyzer data could not be replaced; the previous pack is still available. '}
-          <small>{operationError.message}</small>
-        </p>
-      )}
-      <section className="composer" aria-labelledby="composer-title">
-        <div className="section-heading">
-          <h1 id="composer-title"><label htmlFor="japanese-input">Japanese text</label></h1>
-          <button type="button" className="text-button" onClick={() => setText(SAMPLE)}>Use sample</button>
-        </div>
-        <div className="textarea-wrap">
-          <textarea
-            id="japanese-input"
-            value={text}
-            onChange={event => setText(event.target.value)}
-            onKeyDown={keyDown}
-            lang="ja"
-            rows={4}
-            maxLength={MAX_ANALYZER_TEXT_LENGTH}
-            aria-describedby="input-guidance"
-            placeholder="Paste or type Japanese text"
-          />
-          {text && <button className="clear-input" type="button" onClick={() => setText('')} aria-label="Clear Japanese text">×</button>}
-        </div>
-        <p id="input-guidance" className="input-guidance">
-          {text.length.toLocaleString()} / {MAX_ANALYZER_TEXT_LENGTH.toLocaleString()} text units
-          {' · '}uninterrupted word runs up to {MAX_ANALYZER_WORD_LENGTH.toLocaleString()}
-        </p>
-        <div className="composer-actions">
-          <details className="advanced">
-            <summary>Advanced</summary>
-            <div>
-              <label>Top results <select value={limit} onChange={event => setLimit(Number(event.target.value))}>{[1, 2, 3, 4, 5].map(value => <option key={value}>{value}</option>)}</select></label>
-              <label className="entity-field">Entity spans <input value={entitySpec} onChange={event => setEntitySpec(event.target.value)} placeholder="0:2:120" inputMode="text" maxLength={MAX_ENTITY_SPEC_LENGTH} /></label>
-              <label className="check-field"><input type="checkbox" checked={normalizePunctuation} onChange={event => setNormalizePunctuation(event.target.checked)} /> Normalize punctuation</label>
-            </div>
-          </details>
-          <button className="primary" type="button" onClick={() => void analyze()} disabled={!text.trim() || runningIntent === intentKey}>Analyze</button>
-        </div>
-        <div className="analysis-status" aria-live="polite">
-          {showBusy && 'Analyzing…'}
-          {error && (
-            <span className="inline-error">
-              Analysis failed. Your installed data was not changed. <small>{error}</small>
-              <button type="button" className="text-button" onClick={() => void analyze()}>Try again</button>
-            </span>
-          )}
-        </div>
-      </section>
-
-      <section className="result-workspace" aria-label="Analysis result">
-        <div className="result-column">
-          <div className="result-heading">
-            <h2>Analysis</h2>
-            {path && <span>{wallMs?.toFixed(1)} ms · score {path.score}</span>}
-          </div>
-          {path
-            ? <Sentence path={path} selected={selected} onSelect={setSelected} />
-            : <p className="empty-result">{result ? 'No Japanese analysis was found.' : 'Enter Japanese text to begin.'}</p>}
-          {result && result.paths.length > 1 && (
-            <details className="alternatives">
-              <summary>Alternatives <span>{result.paths.length - 1}</span></summary>
-              {result.paths.map((alternative, index) => (
-                <button type="button" key={index} className={index === pathIndex ? 'active' : ''} onClick={() => choosePath(index)}>
-                  <span lang="ja">{alternative.tokens.map(token => token.text).join(' · ')}</span>
-                  <strong>{alternative.score}</strong>
-                </button>
-              ))}
-            </details>
-          )}
-        </div>
-        <Inspector token={selectedToken} details={details} onClose={closeInspector} />
-      </section>
-
-      <details className="runtime-panel">
-        <summary>Runtime &amp; data</summary>
-        <dl>
-          <div><dt>Pack</dt><dd>{status.packVersion}</dd></div>
-          <div><dt>App</dt><dd>{APP_VERSION}</dd></div>
-          <div><dt>Manifest</dt><dd>{status.manifestSha256.slice(0, 12)}</dd></div>
-          <div><dt>One-time download</dt><dd>{formatBytes(status.downloadBytes)}</dd></div>
-          <div><dt>Installed</dt><dd>{formatBytes(status.installedBytes)}</dd></div>
-          <div><dt>Worker</dt><dd>{status.workerOpen ? 'Open' : 'Closed'}</dd></div>
-          <div><dt>Persistent storage</dt><dd>{status.persistent ? 'Granted' : 'Best effort'}</dd></div>
-          {result && <div><dt>Worker compute</dt><dd>{result.computeMs.toFixed(1)} ms</dd></div>}
-          {result && <div><dt>Request</dt><dd>{result.input.length} units · top {lastOptions.limit ?? 1} · {lastOptions.entities?.length ?? 0} boosts</dd></div>}
-          {romanization !== null && <div><dt>Romanization</dt><dd>{romanization}</dd></div>}
-          <div><dt>Performance gate</dt><dd>Measured externally</dd></div>
-          {benchmark?.groups.map(group => (
-            <div key={group.corpus}><dt>{group.corpus} p95</dt><dd>{group.p95Ms.toFixed(1)} ms</dd></div>
-          ))}
-        </dl>
-        {runtimeMessage && <p className="runtime-message" aria-live="polite">{runtimeMessage}</p>}
-        <div className="runtime-actions">
-          {result && <button type="button" className="secondary" onClick={() => void copyClean()}>Copy clean JSON</button>}
-          {result && <button type="button" className="secondary" onClick={() => void copyLegacy()}>Copy legacy JSON</button>}
-          {result && <button type="button" className="secondary" onClick={() => void romanizeResult()}>Romanize input</button>}
-          <button type="button" className="secondary" disabled={benchmarkRunning} onClick={() => void runBenchmark()}>
-            {benchmarkRunning ? 'Running benchmark…' : 'Run benchmark'}
-          </button>
-          {benchmark && <button type="button" className="secondary" onClick={downloadBenchmark}>Download benchmark JSON</button>}
-          <button type="button" className="text-button danger" onClick={onClear}>Clear installed data</button>
-        </div>
-      </details>
-    </main>
-  );
 }
 
 function supportsRequiredFeatures(): boolean {
@@ -770,18 +125,596 @@ function supportsRequiredFeatures(): boolean {
     && typeof FileSystemFileHandle.prototype.createWritable === 'function';
 }
 
-export function App({
-  offlineShellReady
-}: {
-  offlineShellReady: Promise<OfflineShellResult>;
+function useMobileLayout(): boolean {
+  const [mobile, setMobile] = useState(() => window.matchMedia('(max-width: 767px)').matches);
+  useEffect(() => {
+    const query = window.matchMedia('(max-width: 767px)');
+    const update = (): void => setMobile(query.matches);
+    query.addEventListener('change', update);
+    return () => query.removeEventListener('change', update);
+  }, []);
+  return mobile;
+}
+
+function Header({ status, onClear }: {
+  status: AnalyzerStatus | null;
+  onClear(): void;
 }): ReactElement {
+  const ready = status?.state === 'ready';
+  return (
+    <header className="app-header">
+      <a className="wordmark" href="/" aria-label="Ichiran home">
+        <span lang="ja">一覧</span>
+        <strong>Ichiran</strong>
+      </a>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="ghost" size="icon" aria-label="Analyzer settings">
+            <GearSixIcon weight="regular" />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent className="settings-menu" align="end" sideOffset={8}>
+          <DropdownMenuLabel>Analyzer data</DropdownMenuLabel>
+          {ready && (
+            <DropdownMenuItem disabled>
+              <DatabaseIcon />
+              {formatBytes(status.installedBytes)} on this device
+            </DropdownMenuItem>
+          )}
+          <DropdownMenuSeparator />
+          {ready && (
+            <DropdownMenuItem variant="destructive" onSelect={onClear}>
+              <TrashIcon />
+              Remove data
+            </DropdownMenuItem>
+          )}
+          <DropdownMenuItem asChild><a href="/licenses.html">Licenses</a></DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </header>
+  );
+}
+
+function ShellNotice({ state }: { state: OfflineShellState }): ReactElement | null {
+  if (state.state === 'update-ready') {
+    return (
+      <div className="shell-notice" role="status">
+        <span><strong>Update available.</strong> Close other Ichiran tabs, then reopen this one.</span>
+      </div>
+    );
+  }
+  if (state.state === 'error') {
+    return (
+      <div className="shell-notice shell-notice-error" role="alert">
+        <span><strong>Offline use is unavailable.</strong> {state.message}</span>
+      </div>
+    );
+  }
+  return null;
+}
+
+function InstallView({
+  release, releaseError, status, progress, error, offlineShell, onInstall, onClear
+}: {
+  release: AnalyzerRelease | null;
+  releaseError: string | null;
+  status: AnalyzerStatus | null;
+  progress: AnalyzerProgress | null;
+  error: AppError | null;
+  offlineShell: OfflineShellState;
+  onInstall(): void;
+  onClear(): void;
+}): ReactElement {
+  const downloadBytes = release ? release.hot.downloadBytes + release.details.downloadBytes : 0;
+  const installedBytes = release ? release.hot.installedBytes + release.details.installedBytes : 0;
+  const broken = status?.state === 'incomplete' || status?.state === 'corrupt' || status?.state === 'stale';
+  const shellReady = offlineShell.state === 'ready' || offlineShell.state === 'update-ready';
+  const busy = progress !== null;
+  const percent = progress && progress.totalBytes > 0
+    ? Math.min(100, Math.round(progress.receivedBytes / progress.totalBytes * 100))
+    : 0;
+  const phase = progress?.phase === 'downloading'
+    ? 'Downloading'
+    : progress?.phase === 'verifying'
+      ? 'Checking files'
+      : progress?.phase === 'installing'
+        ? 'Saving to this device'
+        : 'Opening analyzer';
+
+  return (
+    <main className="install-layout">
+      <section className="install-panel" aria-labelledby="install-title">
+        <div className="install-icon" aria-hidden="true"><DatabaseIcon weight="duotone" /></div>
+        <h1 id="install-title">Install Japanese data</h1>
+        <p className="install-intro">Download once to analyze Japanese privately, even without a connection.</p>
+
+        {status === null && !releaseError && (
+          <div className="install-loading" aria-label="Preparing analyzer">
+            <Skeleton className="h-10 w-full" />
+            <Skeleton className="h-4 w-48" />
+          </div>
+        )}
+        {status?.state === 'stale' && <p className="message error" role="alert">Your local data needs an update.</p>}
+        {(status?.state === 'incomplete' || status?.state === 'corrupt') && (
+          <p className="message error" role="alert">The saved data is incomplete. Install it again.</p>
+        )}
+        {error && (
+          <p className="message error" role="alert">
+            {error.code === 'insufficient-storage'
+              ? 'There is not enough free storage for the analyzer.'
+              : error.code === 'clear-error'
+                ? 'The saved data could not be removed.'
+                : 'The download did not finish.'}
+            <small>{error.message}</small>
+          </p>
+        )}
+        {releaseError && <p className="message error" role="alert">{releaseError}</p>}
+        {busy && progress ? (
+          <div className="install-progress" aria-live="polite">
+            <div><span>{phase}</span><strong>{percent}%</strong></div>
+            <progress max={progress.totalBytes} value={progress.receivedBytes} />
+            <small>{formatBytes(progress.receivedBytes)} of {formatBytes(progress.totalBytes)}</small>
+          </div>
+        ) : release && (
+          <Button className="install-action" size="lg" type="button" onClick={onInstall} disabled={!shellReady}>
+            <DownloadSimpleIcon data-icon="inline-start" />
+            {broken ? 'Reinstall analyzer data' : error ? 'Retry' : 'Install analyzer data'}
+          </Button>
+        )}
+
+        {release && (
+          <dl className="install-size">
+            <div><dt>Download</dt><dd>{formatBytes(downloadBytes)}</dd></div>
+            <div><dt>Stored</dt><dd>{formatBytes(installedBytes)}</dd></div>
+          </dl>
+        )}
+        <p className="privacy">Your text stays on this device.</p>
+        {broken && !busy && <Button variant="ghost" className="remove-data" onClick={onClear}>Remove saved data</Button>}
+      </section>
+    </main>
+  );
+}
+
+function ExamplesMenu({ onChoose }: { onChoose(text: string): void }): ReactElement {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="ghost" size="sm">Examples <CaretDownIcon data-icon="inline-end" /></Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="examples-menu" align="end" sideOffset={6}>
+        <DropdownMenuLabel>Try a sentence</DropdownMenuLabel>
+        <DropdownMenuGroup>
+          {ANALYZER_SAMPLES.map(sample => (
+            <DropdownMenuItem className="example-item" key={sample.text} onSelect={() => onChoose(sample.text)}>
+              <span>{sample.label}</span>
+              <strong lang="ja">{sample.text}</strong>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuGroup>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
+function TokenButton({ token, index, selected, onPointerDown, onPointerEnter, onKeyboardSelect }: {
+  token: AnalyzerToken;
+  index: number;
+  selected: boolean;
+  onPointerDown(): void;
+  onPointerEnter(): void;
+  onKeyboardSelect(): void;
+}): ReactElement {
+  if (token.entryIndex === null && token.pos.length === 0) return <span className="punctuation">{token.text}</span>;
+  const reading = token.reading && token.reading !== token.text ? token.reading : null;
+  const accessible = reading
+    ? `${token.text}, reading ${reading}, ${token.pos.map(posLabel).join(', ') || 'word'}`
+    : `${token.text}, ${token.pos.map(posLabel).join(', ') || 'word'}`;
+  return (
+    <button
+      className={`token token-${posTone(token.pos)}`}
+      type="button"
+      aria-label={accessible}
+      aria-pressed={selected}
+      data-token-index={index}
+      onPointerDown={event => { if (event.button === 0) onPointerDown(); }}
+      onPointerEnter={onPointerEnter}
+      onClick={event => { if (event.detail === 0) onKeyboardSelect(); }}
+    >
+      <span className="token-reading" lang="ja">{reading ?? '\u00a0'}</span>
+      <span className="token-surface" lang="ja">{token.text}</span>
+    </button>
+  );
+}
+
+function Sentence({ path, selection, onPointerDown, onPointerEnter, onPointerUp, onKeyboardSelect }: {
+  path: AnalyzerPath;
+  selection: TokenSelection | null;
+  onPointerDown(index: number): void;
+  onPointerEnter(index: number): void;
+  onPointerUp(index: number): void;
+  onKeyboardSelect(index: number): void;
+}): ReactElement {
+  const tokenAt = (clientX: number, clientY: number): number | null => {
+    const value = document.elementFromPoint(clientX, clientY)
+      ?.closest<HTMLElement>('[data-token-index]')?.dataset.tokenIndex;
+    if (value === undefined) return null;
+    const index = Number(value);
+    return Number.isSafeInteger(index) ? index : null;
+  };
+  return (
+    <div
+      className="sentence"
+      lang="ja"
+      onPointerMove={event => {
+        if (event.buttons !== 1) return;
+        const index = tokenAt(event.clientX, event.clientY);
+        if (index !== null) onPointerEnter(index);
+      }}
+      onPointerUp={event => {
+        const index = tokenAt(event.clientX, event.clientY);
+        if (index !== null) onPointerUp(index);
+      }}
+    >
+      {path.tokens.map((token, index) => (
+        <TokenButton
+          key={`${token.start}:${token.end}:${index}`}
+          token={token}
+          index={index}
+          selected={selection !== null && index >= selection.start && index <= selection.end}
+          onPointerDown={() => onPointerDown(index)}
+          onPointerEnter={() => onPointerEnter(index)}
+          onKeyboardSelect={() => onKeyboardSelect(index)}
+        />
+      ))}
+    </div>
+  );
+}
+
+function DetailSection({ title, children }: { title: string; children: React.ReactNode }): ReactElement {
+  return <section className="detail-section"><h3>{title}</h3>{children}</section>;
+}
+
+function WordDetails({
+  token, selectionText, entry, loading, error, copied, onCopy, onClose, compact = false
+}: {
+  token: AnalyzerToken | null;
+  selectionText: string;
+  entry: DictionaryEntry | null;
+  loading: boolean;
+  error: string | null;
+  copied: boolean;
+  onCopy(): void;
+  onClose(): void;
+  compact?: boolean;
+}): ReactElement {
+  if (!selectionText) {
+    return <div className="detail-empty"><TextAaIcon weight="light" /><p>Select a word</p></div>;
+  }
+  if (!token) {
+    return (
+      <div className="selection-details">
+        <p>Selected text</p><h2 lang="ja">{selectionText}</h2>
+        <Button variant="outline" onClick={onCopy}>{copied ? <CheckIcon /> : <CopyIcon />}{copied ? 'Copied' : 'Copy'}</Button>
+      </div>
+    );
+  }
+  return (
+    <div className={`word-details ${compact ? 'word-details-compact' : ''}`}>
+      <div className="detail-heading">
+        <div>
+          {token.reading && token.reading !== token.text && <p lang="ja">{token.reading}</p>}
+          <h2 lang="ja">{token.text}</h2>
+        </div>
+        <div className="detail-actions">
+          <Button variant="ghost" size="icon-sm" onClick={onCopy} aria-label="Copy selected word">
+            {copied ? <CheckIcon /> : <CopyIcon />}
+          </Button>
+          {!compact && (
+            <Button variant="ghost" size="icon-sm" onClick={onClose} aria-label="Close word details"><XIcon /></Button>
+          )}
+        </div>
+      </div>
+      <div className="pos-tags">
+        {token.pos.map((value, index) => <Badge key={`${value}:${index}`} variant="secondary">{posLabel(value)}</Badge>)}
+        {token.inflection.map((value, index) => (
+          <Badge key={`${value.pos}:${value.type}:${index}`} variant="outline">
+            {value.negative ? 'negative ' : ''}{value.formal ? 'formal ' : ''}{posLabel(value.pos)}
+          </Badge>
+        ))}
+      </div>
+
+      {loading && (
+        <div className="detail-loading" aria-label="Loading word details">
+          <Skeleton className="h-4 w-4/5" /><Skeleton className="h-4 w-3/5" /><Skeleton className="h-4 w-2/3" />
+        </div>
+      )}
+      {error && <p className="message error" role="alert">{error}</p>}
+
+      {entry && entry.senses.length > 0 && (
+        <div className="meanings">
+          {entry.senses.map((sense, index) => (
+            <div className="meaning" key={`${sense.ord}:${index}`}>
+              <span>{index + 1}</span>
+              <div>
+                {sense.glosses.map(gloss => <p key={`${gloss.ord}:${gloss.text}`}>{gloss.text}</p>)}
+                {sense.properties.length > 0 && <small>{sense.properties.map(property => property.text).join(', ')}</small>}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {entry && entry.forms.length > 0 && (
+        <DetailSection title="Dictionary forms">
+          <div className="forms dictionary-forms">
+            {entry.forms.map(form => (
+              <span key={`${form.route}:${form.ord}:${form.text}`}>
+                <strong lang="ja">{form.text}</strong>
+                <small>{form.route === 'kanji' ? 'written form' : 'reading'}{form.common !== null ? ', common' : ''}</small>
+              </span>
+            ))}
+          </div>
+        </DetailSection>
+      )}
+      {token.root && (
+        <DetailSection title="Base form"><div className="base-form"><strong lang="ja">{token.root.form}</strong><span lang="ja">{token.root.reading}</span></div></DetailSection>
+      )}
+      {token.components.length > 0 && (
+        <DetailSection title="Structure">
+          <div className="structure-equation">
+            {token.components.map((component, index) => (
+              <span key={`${component.text}:${component.entryIndex}:${index}`}>
+                {index > 0 && <i aria-hidden="true">+</i>}
+                <strong lang="ja">{component.text}</strong>
+                {component.reading !== component.text && <small lang="ja">{component.reading}</small>}
+              </span>
+            ))}
+          </div>
+        </DetailSection>
+      )}
+      {token.inflection.length > 0 && (
+        <DetailSection title="Conjugation">
+          <ol className="inflections">
+            {token.inflection.map((step, index) => (
+              <li key={`${step.pos}:${step.type}:${index}`}>
+                <span>{index + 1}</span><strong>{posLabel(step.pos)}</strong>
+                <small>{step.negative ? 'negative' : step.formal ? 'formal' : `form ${step.type}`}</small>
+              </li>
+            ))}
+          </ol>
+        </DetailSection>
+      )}
+      {token.alternatives.length > 0 && (
+        <DetailSection title="Other readings">
+          <div className="reading-alternatives">
+            {token.alternatives.map(alternative => (
+              <div key={alternative.candidateId}><strong lang="ja">{alternative.text}</strong><span lang="ja">{alternative.reading}</span></div>
+            ))}
+          </div>
+        </DetailSection>
+      )}
+    </div>
+  );
+}
+
+function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
+  analyzer: BrowserAnalyzer;
+  operationError: AppError | null;
+  onPackInvalid(): void;
+}): ReactElement {
+  const [text, setText] = useState(DEFAULT_SAMPLE);
+  const [result, setResult] = useState<AnalyzerOutput | null>(null);
+  const [pathIndex, setPathIndex] = useState(0);
+  const [running, setRunning] = useState(false);
+  const [showBusy, setShowBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [entry, setEntry] = useState<DictionaryEntry | null>(null);
+  const [entryLoading, setEntryLoading] = useState(false);
+  const [entryError, setEntryError] = useState<string | null>(null);
+  const [romanization, setRomanization] = useState<string | null>(null);
+  const [copyState, setCopyState] = useState<'idle' | 'copied' | 'error'>('idle');
+  const mobileLayout = useMobileLayout();
+  const activeIntent = useRef<string | null>(null);
+  const request = useRef(0);
+  const latestText = useRef(text);
+  const selectionState = useTokenSelection();
+  const path = result?.paths[pathIndex] ?? null;
+  const selection = selectionState.selection;
+  const selectedTokens = selection && path ? path.tokens.slice(selection.start, selection.end + 1) : [];
+  const selectionText = selectedTokens.map(token => token.text).join('');
+  const selectedToken = selectedTokens.length === 1 ? selectedTokens[0] ?? null : null;
+
+  useEffect(() => {
+    if (!running) { setShowBusy(false); return; }
+    const timer = window.setTimeout(() => setShowBusy(true), 120);
+    return () => window.clearTimeout(timer);
+  }, [running]);
+
+  useEffect(() => {
+    setEntry(null);
+    setEntryError(null);
+    if (!selectedToken || selectedToken.entryIndex === null) { setEntryLoading(false); return; }
+    let current = true;
+    setEntryLoading(true);
+    void analyzer.entry(selectedToken.entryIndex).then(value => {
+      if (!current) return;
+      setEntry(value);
+      setEntryLoading(false);
+    }, reason => {
+      if (!current) return;
+      setEntryLoading(false);
+      setEntryError('Word details could not be opened.');
+      if (isInvalidInstallError(reason)) onPackInvalid();
+    });
+    return () => { current = false; };
+  }, [analyzer, onPackInvalid, selectedToken]);
+
+  const changeText = useCallback((value: string): void => {
+    latestText.current = value;
+    setText(value);
+    setResult(current => current?.input === value ? current : null);
+    setPathIndex(0);
+    setRomanization(null);
+    selectionState.clear();
+  }, [selectionState]);
+
+  async function analyze(value = text): Promise<void> {
+    const intent = value;
+    if (!value.trim() || activeIntent.current === intent) return;
+    if (activeIntent.current !== null) {
+      ++request.current;
+      activeIntent.current = null;
+      analyzer.supersede();
+    }
+    const id = ++request.current;
+    activeIntent.current = intent;
+    setRunning(true);
+    setError(null);
+    try {
+      const next = await analyzer.analyze(value, { limit: 3 });
+      if (id !== request.current || value !== latestText.current) return;
+      setResult(next);
+      setPathIndex(0);
+      setRomanization(null);
+      selectionState.clear();
+      if (next.paths[0]?.tokens.length === 1) selectionState.select(0);
+    } catch (reason) {
+      if (id !== request.current || value !== latestText.current) return;
+      if (isInvalidInstallError(reason)) onPackInvalid();
+      setError(reason instanceof Error ? reason.message : String(reason));
+    } finally {
+      if (id === request.current) { activeIntent.current = null; setRunning(false); }
+    }
+  }
+
+  function chooseSample(value: string): void { changeText(value); void analyze(value); }
+  function inputKeyDown(event: KeyboardEvent<HTMLTextAreaElement>): void {
+    if (event.key === 'Enter' && (event.metaKey || event.ctrlKey)) { event.preventDefault(); void analyze(); }
+  }
+  function choosePath(index: number): void { setPathIndex(index); selectionState.clear(); setRomanization(null); }
+  function closeDetails(): void {
+    const tokenIndex = selection?.start ?? null;
+    selectionState.clear();
+    if (tokenIndex !== null) window.requestAnimationFrame(() => {
+      document.querySelector<HTMLButtonElement>(`[data-token-index="${tokenIndex}"]`)?.focus();
+    });
+  }
+  async function copySelection(): Promise<void> {
+    if (!selectionText) return;
+    try {
+      await navigator.clipboard.writeText(selectionText);
+      setCopyState('copied');
+      window.setTimeout(() => setCopyState('idle'), 1_400);
+    } catch { setCopyState('error'); }
+  }
+  async function toggleRomanization(): Promise<void> {
+    if (!result) return;
+    if (romanization !== null) { setRomanization(null); return; }
+    try { setRomanization(await analyzer.romanize(result.input)); }
+    catch (reason) {
+      if (isInvalidInstallError(reason)) onPackInvalid();
+      setError('Romanization could not be generated.');
+    }
+  }
+
+  const detailProps = {
+    token: selectedToken, selectionText, entry, loading: entryLoading, error: entryError,
+    copied: copyState === 'copied', onCopy: () => void copySelection(), onClose: closeDetails
+  };
+
+  return (
+    <main className="workspace">
+      {operationError && (
+        <p className="message error operation-error" role="alert">
+          {operationError.code === 'clear-error' ? 'The saved data could not be removed.' : 'The new data could not replace the current copy.'}
+          <small>{operationError.message}</small>
+        </p>
+      )}
+      <section className="composer" aria-labelledby="composer-title">
+        <div className="composer-heading">
+          <div><h1 id="composer-title"><label htmlFor="japanese-input">Japanese text</label></h1><p>Paste a sentence or choose an example.</p></div>
+          <ExamplesMenu onChoose={chooseSample} />
+        </div>
+        <div className="textarea-wrap">
+          <Textarea
+            id="japanese-input" className="japanese-input" value={text}
+            onChange={event => changeText(event.target.value)} onKeyDown={inputKeyDown}
+            lang="ja" rows={3} maxLength={MAX_ANALYZER_TEXT_LENGTH}
+            aria-label="Japanese text" placeholder="日本語を入力してください"
+          />
+          {text && (
+            <Button className="clear-input" variant="ghost" size="icon-sm" type="button" onClick={() => changeText('')} aria-label="Clear Japanese text"><XIcon /></Button>
+          )}
+        </div>
+        <div className="composer-footer">
+          <span>{text.length.toLocaleString()} / {MAX_ANALYZER_TEXT_LENGTH.toLocaleString()}</span>
+          <Button type="button" size="lg" onClick={() => void analyze()} disabled={!text.trim() || running}>{running ? 'Analyzing' : 'Analyze'}</Button>
+        </div>
+        {error && (
+          <p className="message error analysis-error" role="alert">
+            Analysis failed.<small>{error}</small><Button variant="link" size="sm" onClick={() => void analyze()}>Try again</Button>
+          </p>
+        )}
+      </section>
+      <Separator />
+      <section className="analysis" aria-label="Analysis result" aria-busy={running}>
+        <div className="analysis-main">
+          <div className="analysis-toolbar">
+            <h2>Analysis</h2>
+            {result && (
+              <Button variant="ghost" size="sm" onClick={() => void toggleRomanization()}>
+                <TextAaIcon />{romanization === null ? 'Romanize' : 'Hide romaji'}
+              </Button>
+            )}
+          </div>
+          {showBusy && !path ? (
+            <div className="analysis-skeleton" aria-label="Analyzing Japanese text">
+              <Skeleton className="h-8 w-28" /><Skeleton className="h-8 w-20" /><Skeleton className="h-8 w-32" />
+            </div>
+          ) : path ? (
+            <>
+              <Sentence path={path} selection={selection} onPointerDown={selectionState.pointerDown} onPointerEnter={selectionState.pointerEnter} onPointerUp={selectionState.pointerUp} onKeyboardSelect={selectionState.toggle} />
+              {romanization && <p className="romanization">{romanization}</p>}
+              {result && result.paths.length > 1 && (
+                <details className="parse-alternatives">
+                  <summary>Other parses <span>{result.paths.length - 1}</span></summary>
+                  <div>
+                    {result.paths.map((alternative, index) => ({ alternative, index }))
+                      .filter(({ index }) => index !== pathIndex)
+                      .map(({ alternative, index }) => (
+                        <button type="button" key={index} onClick={() => choosePath(index)}>
+                          <span lang="ja">{alternative.tokens.map(token => token.text).join(' / ')}</span>
+                        </button>
+                      ))}
+                  </div>
+                </details>
+              )}
+            </>
+          ) : (
+            <div className="analysis-empty"><p>{text.trim() ? 'Analyze the text to see each word.' : 'Enter Japanese text to begin.'}</p></div>
+          )}
+        </div>
+        <aside className="detail-desktop" aria-label="Word details" aria-live="polite"><WordDetails {...detailProps} /></aside>
+      </section>
+      <Sheet open={mobileLayout && !selectionState.selecting && selectionText.length > 0} onOpenChange={open => { if (!open) closeDetails(); }}>
+        <SheetContent className="detail-mobile" side="bottom">
+          <SheetHeader className="sr-only"><SheetTitle>Word details</SheetTitle><SheetDescription>Dictionary and morphology details for the selected text.</SheetDescription></SheetHeader>
+          <WordDetails {...detailProps} compact />
+        </SheetContent>
+      </Sheet>
+      {copyState === 'error' && <p className="message error" role="alert">The selection could not be copied.</p>}
+    </main>
+  );
+}
+
+export function App({ offlineShellReady }: { offlineShellReady: Promise<OfflineShellResult> }): ReactElement {
   const supported = supportsRequiredFeatures();
-  const client = useMemo(() => supported ? new AnalyzerClient() : null, [supported]);
-  const [status, setStatus] = useState<PackStatus | null>(null);
-  const [manifest, setManifest] = useState<AnalyzerPackManifest | null>(null);
-  const [manifestError, setManifestError] = useState<string | null>(null);
-  const [progress, setProgress] = useState<InstallProgressValue | null>(null);
-  const [installError, setInstallError] = useState<{ code: string; message: string } | null>(null);
+  const analyzer = useMemo(() => supported ? new BrowserAnalyzer() : null, [supported]);
+  const [status, setStatus] = useState<AnalyzerStatus | null>(null);
+  const [release, setRelease] = useState<AnalyzerRelease | null>(null);
+  const [releaseError, setReleaseError] = useState<string | null>(null);
+  const [progress, setProgress] = useState<AnalyzerProgress | null>(null);
+  const [operationError, setOperationError] = useState<AppError | null>(null);
   const [offlineShell, setOfflineShell] = useState<OfflineShellState>({ state: 'opening' });
 
   useEffect(() => {
@@ -789,24 +722,18 @@ export function App({
     if (!('serviceWorker' in navigator)) {
       void offlineShellReady.then(result => {
         if (!current) return;
-        setOfflineShell(result.ready
-          ? { state: 'ready' }
-          : { state: 'error', message: result.message ?? 'Service Workers are unavailable.' });
+        setOfflineShell(result.ready ? { state: 'ready' } : { state: 'error', message: result.message ?? 'Service Workers are unavailable.' });
       });
       return () => { current = false; };
     }
-
     let registration: ServiceWorkerRegistration | null = null;
     let watchedWorker: ServiceWorker | null = null;
     let previousController = navigator.serviceWorker.controller;
-
     const showWaitingUpdate = (): void => {
       if (!current || !registration?.waiting || !navigator.serviceWorker.controller) return;
       setOfflineShell({ state: 'update-ready' });
     };
-    const workerStateChanged = (): void => {
-      if (watchedWorker?.state === 'installed') showWaitingUpdate();
-    };
+    const workerStateChanged = (): void => { if (watchedWorker?.state === 'installed') showWaitingUpdate(); };
     const watchInstallingWorker = (): void => {
       watchedWorker?.removeEventListener('statechange', workerStateChanged);
       watchedWorker = registration?.installing ?? null;
@@ -814,20 +741,14 @@ export function App({
     };
     const controllerChanged = (): void => {
       const nextController = navigator.serviceWorker.controller;
-      if (previousController && nextController && previousController !== nextController) {
-        window.location.reload();
-        return;
-      }
+      if (previousController && nextController && previousController !== nextController) { window.location.reload(); return; }
       previousController = nextController;
     };
-
     navigator.serviceWorker.addEventListener('controllerchange', controllerChanged);
     void offlineShellReady.then(result => {
       if (!current) return;
       registration = result.registration ?? null;
-      setOfflineShell(result.ready
-        ? { state: 'ready' }
-        : { state: 'error', message: result.message ?? 'Service Worker registration failed.' });
+      setOfflineShell(result.ready ? { state: 'ready' } : { state: 'error', message: result.message ?? 'Service Worker registration failed.' });
       registration?.addEventListener('updatefound', watchInstallingWorker);
       watchInstallingWorker();
       showWaitingUpdate();
@@ -841,101 +762,87 @@ export function App({
   }, [offlineShellReady]);
 
   useEffect(() => {
-    if (!supported || !client) return;
+    if (!analyzer) return;
     let current = true;
-    void (async () => {
-      const nextManifest = parseDeployedRelease(await fetchBoundedJson(
-        MANIFEST_URL,
-        { cache: 'no-store' },
-        'Analyzer release manifest'
-      ));
-      const nextStatus = await client.expectRelease(nextManifest);
+    void analyzer.initialize().then(initialized => {
       if (!current) return;
-      setManifest(nextManifest);
-      setStatus(nextStatus);
-      setManifestError(null);
-    })().catch(reason => {
-      if (current) setManifestError(reason instanceof Error ? reason.message : String(reason));
+      setRelease(initialized.release);
+      setStatus(initialized.status);
+      setReleaseError(null);
+    }, reason => { if (current) setReleaseError(reason instanceof Error ? reason.message : String(reason)); });
+    return () => { current = false; analyzer.dispose(); };
+  }, [analyzer]);
+
+  useEffect(() => {
+    if (
+      !__ICHIRAN_BROWSER_QUALIFICATION__
+      || !new URLSearchParams(window.location.search).has('qualification')
+      || !analyzer
+      || !release
+      || status?.state !== 'ready'
+    ) return;
+    let current = true;
+    let detach: (() => void) | undefined;
+    void import('./qualification-bridge.js').then(({ attachQualificationBridge }) => {
+      if (current) detach = attachQualificationBridge(analyzer, release);
     });
-    return () => {
-      current = false;
-      client.dispose();
-    };
-  }, [client, supported]);
+    return () => { current = false; detach?.(); };
+  }, [analyzer, release, status]);
 
   async function install(): Promise<void> {
-    if (!client) return;
-    setInstallError(null);
-    setProgress({ phase: 'downloading', receivedBytes: 0, totalBytes: manifest ? manifest.hot.downloadBytes + manifest.details.downloadBytes : 1 });
+    if (!analyzer) return;
+    setOperationError(null);
+    setProgress({ phase: 'downloading', receivedBytes: 0, totalBytes: release ? release.hot.downloadBytes + release.details.downloadBytes : 1 });
     try {
-      if (typeof navigator.storage.persist === 'function') {
-        try { await navigator.storage.persist(); } catch { /* Best-effort storage remains supported. */ }
-      }
-      const next = await client.install(MANIFEST_URL, setProgress);
-      setStatus(next);
+      if (typeof navigator.storage.persist === 'function') try { await navigator.storage.persist(); } catch { /* Best effort. */ }
+      setStatus(await analyzer.install(setProgress));
     } catch (reason) {
-      setInstallError(reason instanceof AnalyzerClientError
-        ? { code: reason.code, message: reason.message }
+      setOperationError(reason instanceof Error && 'code' in reason
+        ? { code: String(reason.code), message: reason.message }
         : { code: 'install-error', message: String(reason) });
-      if (isTerminalWorkerError(reason)) return;
-      try {
-        setStatus(await client.status());
-      } catch {
-        setStatus({ state: 'incomplete', message: 'Reload this page to restart the analyzer.' });
+      if (!isTerminalAnalyzerError(reason)) {
+        try { setStatus(await analyzer.status()); }
+        catch { setStatus({ state: 'incomplete', message: 'Reload to check the saved data.' }); }
       }
-    } finally {
-      setProgress(null);
-    }
+    } finally { setProgress(null); }
   }
 
   async function clear(): Promise<void> {
-    if (!client) return;
-    if (!window.confirm('Clear the installed analyzer data from this device?')) return;
-    setInstallError(null);
-    try {
-      setStatus(await client.clear());
-    } catch (reason) {
-      setInstallError({
-        code: 'clear-error',
-        message: reason instanceof Error ? reason.message : String(reason)
-      });
-      if (isTerminalWorkerError(reason)) {
-        setStatus({
-          state: 'incomplete',
-          message: 'Reload this page to verify what remains before reinstalling.'
-        });
-        return;
-      }
-      try {
-        setStatus(await client.status());
-      } catch {
-        setStatus({ state: 'incomplete', message: 'Reload this page to restart the analyzer.' });
+    if (!analyzer || !window.confirm('Remove the downloaded Japanese data from this device?')) return;
+    setOperationError(null);
+    try { setStatus(await analyzer.clear()); }
+    catch (reason) {
+      setOperationError({ code: 'clear-error', message: reason instanceof Error ? reason.message : String(reason) });
+      if (isTerminalAnalyzerError(reason)) setStatus({ state: 'incomplete', message: 'Reload to check the saved data.' });
+      else {
+        try { setStatus(await analyzer.status()); }
+        catch { setStatus({ state: 'incomplete', message: 'Reload to check the saved data.' }); }
       }
     }
   }
 
   const refreshStatus = useCallback((): void => {
-    if (!client) return;
-    void client.status().then(setStatus, () => setStatus({ state: 'corrupt', message: 'Analyzer data is corrupted.' }));
-  }, [client]);
+    if (!analyzer) return;
+    void analyzer.status().then(setStatus, () => setStatus({ state: 'corrupt', message: 'The saved data is corrupted.' }));
+  }, [analyzer]);
 
-  if (!supported || !client) {
+  if (!supported || !analyzer) {
     return (
       <div className="app-shell">
-        <AppHeader status={null} offlineShell={offlineShell} />
-        <main className="unsupported"><h1>This browser does not support the storage features required by this alpha.</h1></main>
+        <Header status={null} onClear={() => undefined} />
+        <main className="unsupported"><DatabaseIcon weight="light" /><h1>This browser cannot store the analyzer locally.</h1><p>Open Ichiran in a current browser with private browsing turned off.</p></main>
       </div>
     );
   }
 
   return (
     <div className="app-shell">
-      <AppHeader status={status} offlineShell={offlineShell} />
-      <UpdateNotice state={offlineShell} />
+      <Header status={status} onClear={() => void clear()} />
+      <ShellNotice state={offlineShell} />
       {status?.state === 'ready'
-        ? <Workspace status={status} manifest={manifest} client={client} onClear={() => void clear()} onPackInvalid={refreshStatus} operationError={installError} />
-        : <InstallPanel manifest={manifest} manifestError={manifestError} status={status} progress={progress} error={installError} offlineShell={offlineShell} onInstall={() => void install()} onClear={() => void clear()} />}
-      <footer><span>Runs entirely on this device</span><a href="/licenses.html">About &amp; licenses</a></footer>
+        ? <AnalysisWorkspace analyzer={analyzer} operationError={operationError} onPackInvalid={refreshStatus} />
+        : <InstallView release={release} releaseError={releaseError} status={status} progress={progress} error={operationError} offlineShell={offlineShell} onInstall={() => void install()} onClear={() => void clear()} />}
+      <footer><span>Runs on this device</span><a href="/licenses.html">Licenses</a></footer>
     </div>
   );
 }

@@ -11,6 +11,7 @@ import {
   DIRECTORY_NAME,
   INSTALL_ID_PATTERN,
   activeOpfsFiles,
+  analyzerReady,
   committedInstallId,
   expectNoInstalledFiles,
   gzipAsset,
@@ -35,10 +36,10 @@ test('does not claim offline readiness when the app shell cannot activate', asyn
   try {
     const page = await context.newPage();
     await page.goto('/');
-    await expect(page.getByText('Offline app shell could not be prepared.', { exact: false }))
+    await expect(page.getByText('Offline use is unavailable.', { exact: false }))
       .toBeVisible();
     await expect(page.getByRole('button', { name: 'Install analyzer data' })).toBeDisabled();
-    await expect(page.getByText('Ready offline')).toHaveCount(0);
+    await expect(analyzerReady(page)).toHaveCount(0);
   } finally {
     await context.close();
   }
@@ -52,7 +53,7 @@ test('surfaces failed shell precaching instead of waiting forever', async ({ bro
     await expect(page.getByText('Offline app shell installation failed.', { exact: false }))
       .toBeVisible();
     await expect(page.getByRole('button', { name: 'Install analyzer data' })).toBeDisabled();
-    await expect(page.getByText('Ready offline')).toHaveCount(0);
+    await expect(analyzerReady(page)).toHaveCount(0);
   } finally {
     await context.close();
   }
@@ -68,7 +69,7 @@ test('shows the unsupported screen instead of constructing a missing Worker', as
     const page = await context.newPage();
     await page.goto('/');
     await expect(page.getByRole('heading', {
-      name: 'This browser does not support the storage features required by this alpha.'
+      name: 'This browser cannot store the analyzer locally.'
     })).toBeVisible();
   } finally {
     await context.close();
@@ -211,9 +212,9 @@ test('clears an unverified generation before estimating reinstall capacity', asy
     await writeCommittedInstallId(page, corruptInstallId);
 
     await page.reload();
-    await expect(page.getByText('Analyzer data is incomplete or corrupted.')).toBeVisible();
+    await expect(page.getByText('The saved data is incomplete. Install it again.')).toBeVisible();
     await page.getByRole('button', { name: 'Reinstall analyzer data' }).click();
-    await expect(page.getByText('Ready offline')).toBeVisible();
+    await expect(analyzerReady(page)).toBeVisible();
     expect(await committedInstallId(page)).not.toBe(corruptInstallId);
     expect(await staleInstallFiles(page)).toEqual([]);
     const installed = await opfsSnapshot(page);
@@ -236,7 +237,7 @@ test('preserves a compatible pack after failed reinstall and gates an older rele
       .get('/analyzer/manifest.json')
       .then(response => response.json() as Promise<AnalyzerPackManifest>);
     await page.getByRole('button', { name: 'Install analyzer data' }).click();
-    await expect(page.getByText('Ready offline')).toBeVisible({ timeout: 180_000 });
+    await expect(analyzerReady(page)).toBeVisible({ timeout: 180_000 });
     const firstInstallId = await committedInstallId(page);
     expect(firstInstallId).toMatch(INSTALL_ID_PATTERN);
 
@@ -270,7 +271,7 @@ test('preserves a compatible pack after failed reinstall and gates an older rele
     expect(doubled.hotBytes).toBe(manifest.hot.installedBytes * 2);
     expect(doubled.detailsBytes).toBe(manifest.details.installedBytes * 2);
     await page.reload();
-    await expect(page.getByText('Ready offline')).toBeVisible();
+    await expect(analyzerReady(page)).toBeVisible();
     const recovered = await opfsSnapshot(page);
     expect(recovered.hotBytes).toBe(manifest.hot.installedBytes);
     expect(recovered.detailsBytes).toBe(manifest.details.installedBytes);
@@ -293,8 +294,8 @@ test('preserves a compatible pack after failed reinstall and gates an older rele
     await context.unroute(detailsPattern, rejectDetails);
     expect(await committedInstallId(page)).toBe(firstInstallId);
     await page.reload();
-    await expect(page.getByText('Ready offline')).toBeVisible();
-    await page.getByRole('button', { name: 'Analyze' }).click();
+    await expect(analyzerReady(page)).toBeVisible();
+    await page.getByRole('button', { name: 'Analyze', exact: true }).click();
     await expect(page.getByRole('button', { name: /話しました/ }).first()).toBeVisible();
 
     // Simulate the generation left by the previous deployed manifest. The
@@ -319,15 +320,15 @@ test('preserves a compatible pack after failed reinstall and gates an older rele
       previousRelease
     });
     await page.reload();
-    await expect(page.getByText('Analyzer data is from an earlier app release.', { exact: false }))
+    await expect(page.getByText('Your local data needs an update.', { exact: false }))
       .toBeVisible();
     await expect(page.getByRole('button', { name: 'Reinstall analyzer data' })).toBeEnabled();
     expect(await committedInstallId(page)).toBe(firstInstallId);
 
     await page.getByRole('button', { name: 'Reinstall analyzer data' }).click();
-    await expect(page.getByText('Ready offline')).toBeVisible({ timeout: 180_000 });
+    await expect(analyzerReady(page)).toBeVisible({ timeout: 180_000 });
     expect(await committedInstallId(page)).not.toBe(firstInstallId);
-    await page.getByRole('button', { name: 'Analyze' }).click();
+    await page.getByRole('button', { name: 'Analyze', exact: true }).click();
     await expect(page.getByRole('button', { name: /話しました/ }).first()).toBeVisible();
   } finally {
     await context.close();

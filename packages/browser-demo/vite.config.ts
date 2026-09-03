@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { gzipSync } from 'node:zlib';
 import { defineConfig, type Plugin } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
 
 const OPAQUE_ANALYZER_ASSETS = new Map([
   ['/analyzer/hot.bin.gz', 'hot.bin.gz'],
@@ -80,11 +81,18 @@ function gzipRustKernelWasm(typescriptOracle: boolean): Plugin {
 
 export default defineConfig(({ mode }) => {
   const typescriptOracle = mode === 'typescript-oracle';
+  const browserQualification = mode === 'qualification';
   return {
     define: {
-      __ICHIRAN_TYPESCRIPT_ORACLE__: JSON.stringify(typescriptOracle)
+      __ICHIRAN_TYPESCRIPT_ORACLE__: JSON.stringify(typescriptOracle),
+      __ICHIRAN_BROWSER_QUALIFICATION__: JSON.stringify(browserQualification)
     },
-    plugins: [react(), serveOpaqueAnalyzerAssets(), gzipRustKernelWasm(typescriptOracle)],
+    plugins: [react(), tailwindcss(), serveOpaqueAnalyzerAssets(), gzipRustKernelWasm(typescriptOracle)],
+    resolve: {
+      alias: {
+        '@': resolve(import.meta.dirname, 'src')
+      }
+    },
     worker: {
       format: 'es'
     }

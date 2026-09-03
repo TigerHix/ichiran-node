@@ -27,7 +27,7 @@ test('keeps the old offline shell alive until its tabs close, then cleans it up'
   try {
     const page = await context.newPage();
     await page.goto('/');
-    await expect(page.getByRole('heading', { name: 'Japanese analyzer data' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Install Japanese data' })).toBeVisible();
     await expect.poll(() => page.evaluate(() => navigator.serviceWorker.controller !== null))
       .toBe(true);
 
@@ -51,8 +51,8 @@ test('keeps the old offline shell alive until its tabs close, then cleans it up'
       if (!registration) throw new Error('Page has no Service Worker registration');
       await registration.update();
     });
-    await expect(page.getByText('App update downloaded', { exact: true })).toBeVisible();
-    await expect(page.getByText('Close every analyzer tab', { exact: false })).toBeVisible();
+    await expect(page.getByText('Update available.', { exact: true })).toBeVisible();
+    await expect(page.getByText('Close other Ichiran tabs', { exact: false })).toBeVisible();
     // The currently controlling shell and its cached manifest still match, so
     // a merely waiting update must not block first-time device data install.
     await expect(page.getByRole('button', { name: 'Install analyzer data' })).toBeEnabled();
@@ -65,7 +65,7 @@ test('keeps the old offline shell alive until its tabs close, then cleans it up'
 
     // A fresh page can begin with registration.waiting already populated.
     await page.reload();
-    await expect(page.getByText('App update downloaded', { exact: true })).toBeVisible();
+    await expect(page.getByText('Update available.', { exact: true })).toBeVisible();
 
     await context.setOffline(true);
     // The old tab remains on its matching generation and can still fetch a
@@ -99,7 +99,7 @@ test('keeps the old offline shell alive until its tabs close, then cleans it up'
     }).toBe(true);
     const reopened = await context.newPage();
     await reopened.goto('/');
-    await expect(reopened.getByRole('heading', { name: 'Japanese analyzer data' })).toBeVisible();
+    await expect(reopened.getByRole('heading', { name: 'Install Japanese data' })).toBeVisible();
     await expect(reopened.getByRole('button', { name: 'Install analyzer data' })).toBeEnabled();
     await expect.poll(() => reopened.evaluate(() => caches.keys())).toEqual([nextCache]);
     expect(await reopened.evaluate(async path => {

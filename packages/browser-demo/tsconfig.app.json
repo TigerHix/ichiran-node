@@ -3,6 +3,12 @@
   "compilerOptions": {
     "noEmit": true,
     "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "types": ["vite/client", "react", "react-dom"]
   },

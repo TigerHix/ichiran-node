@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { expect, test, watchConsoleHealth } from './console-health.js';
 import {
+  analyzerReady,
   attachAnalyzerWorker,
   median,
   singleCpuAffinity,
@@ -60,21 +61,20 @@ test('Rust Worker owns the complete analyzer boundary', async ({ browser }) => {
     const page = await context.newPage();
     await page.goto('/');
     await page.getByRole('button', { name: 'Install analyzer data' }).click();
-    await expect(page.getByText('Ready offline')).toBeVisible({ timeout: 180_000 });
+    await expect(analyzerReady(page)).toBeVisible({ timeout: 180_000 });
 
     const input = page.getByRole('textbox', { name: 'Japanese text', exact: true });
     await input.fill('猫');
-    await page.getByRole('button', { name: 'Analyze' }).click();
+    await page.getByRole('button', { name: 'Analyze', exact: true }).click();
     const cat = page.getByRole('button', { name: /猫/ }).first();
     await expect(cat).toBeVisible();
-    await expect(page.locator('.result-heading span')).toContainText('19');
-    await cat.click();
-    await expect(page.getByText('Dictionary forms')).toBeVisible();
+    // A one-token result is selected automatically.
+    await expect(page.locator('.word-details:visible').getByText('Dictionary forms')).toBeVisible();
+    await page.getByRole('button', { name: 'Close', exact: true }).click();
 
     await input.fill('食べた');
-    await page.getByRole('button', { name: 'Analyze' }).click();
+    await page.getByRole('button', { name: 'Analyze', exact: true }).click();
     await expect(page.getByRole('button', { name: /食べた/ }).first()).toBeVisible();
-    await expect(page.locator('.result-heading span')).toContainText('336');
 
     const manifest = await page.request
       .get('/analyzer/manifest.json')

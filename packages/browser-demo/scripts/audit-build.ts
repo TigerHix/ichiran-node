@@ -31,6 +31,9 @@ const repositoryRoot = resolve(packageRoot, '..', '..');
 const output = join(packageRoot, 'dist');
 const assetDirectory = join(output, 'assets');
 const scripts = (await readdir(assetDirectory)).filter(name => name.endsWith('.js'));
+if (scripts.some(name => name.startsWith('qualification-bridge-'))) {
+  throw new Error('Production browser build contains the qualification bridge');
+}
 const workerName = scripts.find(name => name.startsWith('analyzer.worker-'));
 if (!workerName) throw new Error('Production analyzer Worker chunk is missing');
 
@@ -93,7 +96,8 @@ if (!typescriptOracle) {
 assertAnalyzerWorkerOnly(main);
 if (!typescriptOracle) assertRustRuntimeGraph(runtime);
 for (const forbidden of [
-  'postgres', 'node:fs', 'node:path', 'node:async_hooks', 'async_hooks', 'kernel-not-ready'
+  'postgres', 'node:fs', 'node:path', 'node:async_hooks', 'async_hooks', 'kernel-not-ready',
+  '__ichiranQualification'
 ]) {
   if (runtime.includes(forbidden)) {
     throw new Error(`Browser bundle contains forbidden runtime text ${forbidden}`);

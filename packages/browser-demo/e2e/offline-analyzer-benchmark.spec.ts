@@ -1,8 +1,8 @@
 import type { ChildProcess } from 'node:child_process';
-import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
 import { cpus, platform, release, tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
-import type { BrowserContext } from 'playwright/test';
+import type { BrowserContext, Page } from 'playwright/test';
 import type {
   AnalysisResult,
   AnalyzerPackManifest,
@@ -17,15 +17,14 @@ import {
 import {
   BASE_URL,
   INSTALL_ID_PATTERN,
+  analyzerReady,
   attachAnalyzerWorker,
   committedInstallId,
   denyPersistentStorage,
   expectInstallablePwa,
   expectNoHorizontalOverflow,
-  type LegacyDetailedAlternative,
   median,
   opfsSnapshot,
-  runtimeValue,
   singleCpuAffinity,
   startCpuHogs,
   stopCpuHogs
@@ -35,6 +34,36 @@ import {
 // proxy. Keep the outer watchdog above the measured sweep so final report
 // download and process cleanup have deterministic headroom.
 test.setTimeout(40 * 60 * 1000);
+
+async function qualificationAnalyze(page: Page): Promise<AnalysisResult> {
+  return page.evaluate(async () => {
+    const bridge = (window as typeof window & {
+      __ichiranQualification?: {
+        analyze(text: string, options: {
+          limit: number;
+          entities: readonly { start: number; end: number; boost: number }[];
+          normalizePunctuation: boolean;
+        }): Promise<AnalysisResult>;
+      };
+    }).__ichiranQualification;
+    if (!bridge) throw new Error('Qualification bridge is unavailable');
+    return bridge.analyze('日本語を勉強しています。', {
+      limit: 3,
+      entities: [{ start: 0, end: 3, boost: 120 }],
+      normalizePunctuation: true
+    });
+  });
+}
+
+async function qualificationBenchmark(page: Page): Promise<BenchmarkResult> {
+  return page.evaluate(async () => {
+    const bridge = (window as typeof window & {
+      __ichiranQualification?: { benchmark(): Promise<BenchmarkResult> };
+    }).__ichiranQualification;
+    if (!bridge) throw new Error('Qualification bridge is unavailable');
+    return bridge.benchmark();
+  });
+}
 
 test('installs once, restarts offline, and meets the 6x proxy', async ({
   browser
@@ -55,7 +84,7 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
     await denyPersistentStorage(context);
     let page = context.pages()[0] ?? await context.newPage();
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto('/');
+    await page.goto('/?qualification=1');
     await expectNoHorizontalOverflow(page, 390);
     await page.setViewportSize({ width: 320, height: 844 });
     await expectNoHorizontalOverflow(page, 320);
@@ -74,32 +103,34 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
     }
     await expect(page.getByRole('button', { name: 'Install analyzer data' })).toBeVisible();
     await page.getByRole('button', { name: 'Install analyzer data' }).click();
-    await expect(page.getByText('Ready offline')).toBeVisible({ timeout: 180_000 });
+    await expect(analyzerReady(page)).toBeVisible({ timeout: 180_000 });
     const committedInstall = await opfsSnapshot(page);
     expect(committedInstall.markerBytes).not.toBeNull();
     expect(await committedInstallId(page)).toMatch(INSTALL_ID_PATTERN);
 
     expect(await page.evaluate(() => navigator.serviceWorker.controller !== null)).toBe(true);
-    await expect(page.getByText('Ready offline')).toBeVisible();
+    await expect(analyzerReady(page)).toBeVisible();
 
-    await page.getByRole('button', { name: 'Analyze' }).click();
+    await page.getByRole('button', { name: 'Analyze', exact: true }).click();
+    const today = page.getByRole('button', { name: /今日/ }).first();
+    const park = page.getByRole('button', { name: /公園/ }).first();
+    await today.hover();
+    await page.mouse.down();
+    await park.hover();
+    await page.mouse.up();
+    await expect(page.getByRole('heading', { name: '今日は公園' })).toBeVisible();
+    await page.getByRole('button', { name: 'Close', exact: true }).click();
     const talking = page.getByRole('button', { name: /話しました/ }).first();
     await expect(talking).toBeVisible();
     await talking.click();
     await expect(page.getByRole('heading', { name: '話しました' })).toBeVisible();
-    await expect(page.getByText('Dictionary forms')).toBeVisible();
-    await expect(page.getByText('Conjugation path')).toBeVisible();
-
-    await page.getByText('Advanced', { exact: true }).click();
-    await page.getByLabel('Top results').selectOption('3');
-    await page.getByLabel('Entity spans').fill('0:2:120');
-    await page.getByRole('button', { name: 'Analyze' }).click();
-    await expect(page.locator('.result-heading span')).toContainText('score');
-
-    await page.getByText('Runtime & data', { exact: true }).click();
-    await expect(runtimeValue(page, 'Worker')).toHaveText('Open');
-    await expect(runtimeValue(page, 'One-time download')).not.toHaveText('0 B');
-    await expect(runtimeValue(page, 'Persistent storage')).toHaveText('Best effort');
+    await expect(page.locator('.word-details:visible').getByText('Dictionary forms')).toBeVisible();
+    await expect(page.locator('.word-details:visible').getByText('Conjugation', { exact: true })).toBeVisible();
+    await page.getByRole('button', { name: 'Close', exact: true }).click();
+    await page.getByRole('button', { name: 'Analyzer settings' }).click();
+    await expect(page.getByRole('menuitem').filter({ hasText: 'on this device' })).toBeVisible();
+    await page.keyboard.press('Escape');
+    expect(await page.evaluate(() => navigator.storage.persisted())).toBe(false);
 
     // Close Chromium completely, then launch the same on-disk profile with networking disabled.
     await context.close();
@@ -119,7 +150,7 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
     await denyPersistentStorage(context);
     await context.setOffline(true);
     page = context.pages()[0] ?? await context.newPage();
-    await page.goto('/');
+    await page.goto('/?qualification=1');
     // Chromium flips navigator.onLine back to true after a cached Service Worker
     // navigation, so prove the transport is offline with a URL the worker ignores.
     deliberatelyOfflineProbe = `/__ichiran-offline-probe-${Date.now()}`;
@@ -131,7 +162,7 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
         return true;
       }
     }, deliberatelyOfflineProbe)).toBe(true);
-    await expect(page.getByText('Ready offline')).toBeVisible();
+    await expect(analyzerReady(page)).toBeVisible();
     await expectNoHorizontalOverflow(page, 390);
     await expectInstallablePwa(page);
     const analyzerRequests: string[] = [];
@@ -155,25 +186,12 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
     });
     await page.getByRole('textbox', { name: 'Japanese text', exact: true })
       .fill('日本語を勉強しています。');
-    await page.getByText('Advanced', { exact: true }).click();
-    await page.getByLabel('Top results').selectOption('3');
-    await page.getByLabel('Entity spans').fill('0:3:120');
-    await page.getByLabel('Normalize punctuation').check();
-    await page.getByRole('button', { name: 'Analyze' }).click();
+    await page.getByRole('button', { name: 'Analyze', exact: true }).click();
     await expect(page.getByRole('button', { name: /日本語/ }).first()).toBeVisible();
-    await expect(page.locator('details.alternatives summary span')).toHaveText('2');
+    await expect(page.locator('details.parse-alternatives summary span')).toHaveText('2');
     await page.getByRole('button', { name: /日本語/ }).first().click();
-    await expect(page.getByText('Dictionary forms')).toBeVisible();
-    await page.getByText('Runtime & data', { exact: true }).click();
-    await expect(runtimeValue(page, 'Request')).toHaveText('12 units · top 3 · 1 boosts');
-
-    await page.evaluate(() => navigator.clipboard.writeText(''));
-    await page.getByRole('button', { name: 'Copy clean JSON' }).click();
-    await expect.poll(() => page.evaluate(() => navigator.clipboard.readText()))
-      .toContain('"input": "日本語を勉強しています。"');
-    const clean = JSON.parse(
-      await page.evaluate(() => navigator.clipboard.readText())
-    ) as AnalysisResult;
+    await expect(page.locator('.word-details:visible').getByText('Dictionary forms')).toBeVisible();
+    const clean = await qualificationAnalyze(page);
     expect(clean).toMatchObject({
       input: '日本語を勉強しています。',
       normalized: '日本語を勉強しています. '
@@ -191,37 +209,9 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
       root: { seq: 1464530, form: '日本語', reading: 'にほんご' }
     });
 
-    await page.getByRole('button', { name: 'Copy legacy JSON' }).click();
-    await expect(page.locator('.runtime-message')).toHaveText('Legacy JSON copied.');
-    const legacy = JSON.parse(
-      await page.evaluate(() => navigator.clipboard.readText())
-    ) as unknown as readonly [readonly LegacyDetailedAlternative[], string];
-    expect(legacy[1]).toBe('. ');
-    expect(legacy[0].map(alternative => alternative[1])).toEqual([3453, 3439, 2928]);
-    const topLegacy = legacy[0][0]?.[0];
-    expect(topLegacy?.map(token => token[1].text)).toEqual(['日本語', 'を', '勉強しています']);
-    expect(topLegacy?.[0]?.[0]).toBe('nihongo');
-    expect(topLegacy?.[0]?.[1]).toMatchObject({
-      reading: '日本語 【にほんご】',
-      text: '日本語',
-      score: 1054,
-      seq: 1464530,
-      gloss: [
-        { pos: '[n-pr]', gloss: 'proper noun (named entity)' },
-        { pos: '[n]', gloss: 'Japanese (language)' }
-      ]
-    });
-    expect(topLegacy?.[2]?.[1]).toMatchObject({
-      reading: '勉強しています 【べんきょう しています】',
-      score: 2254,
-      compound: ['勉強', 'して', 'います']
-    });
-    expect(topLegacy?.[2]?.[1].components?.map(component => component.text)).toEqual([
-      '勉強', 'して', 'います'
-    ]);
-
-    await page.getByRole('button', { name: 'Romanize input' }).click();
-    await expect(runtimeValue(page, 'Romanization')).toHaveText('nihongo wo benkyō shiteimasu。');
+    await page.getByRole('button', { name: 'Close', exact: true }).click();
+    await page.getByRole('button', { name: 'Romanize' }).click();
+    await expect(page.locator('.romanization')).toHaveText('nihongo wo benkyō shiteimasu。');
     await expectNoHorizontalOverflow(page, 390);
     const longTasks = await page.evaluate(
       () => {
@@ -254,23 +244,9 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
       expect(contentionRatio).toBeGreaterThanOrEqual(5);
       expect(contentionRatio).toBeLessThanOrEqual(7.5);
 
-      await page.getByRole('button', { name: 'Run benchmark' }).click();
       // This watchdog includes the entire corpus under induced host contention.
       // The assertions below enforce the actual analyzer latency requirements.
-      await expect(page.getByText('Benchmark complete.')).toBeVisible({ timeout: 20 * 60 * 1000 });
-      const ordinaryP95 = Number.parseFloat(await runtimeValue(page, 'ordinary p95').innerText());
-      const pathologicalP95 = Number.parseFloat(
-        await runtimeValue(page, 'pathological-morphology p95').innerText()
-      );
-      const denseBoundaryP95 = Number.parseFloat(
-        await runtimeValue(page, 'dense-contiguous-boundary p95').innerText()
-      );
-      const downloadPromise = page.waitForEvent('download');
-      await page.getByRole('button', { name: 'Download benchmark JSON' }).click();
-      const download = await downloadPromise;
-      const downloadPath = await download.path();
-      if (!downloadPath) throw new Error('Benchmark download did not produce a local file');
-      const benchmark = JSON.parse(await readFile(downloadPath, 'utf8')) as BenchmarkResult;
+      const benchmark = await qualificationBenchmark(page);
       expect(benchmark.release).toEqual(manifest);
       expect(benchmark.corpusVersion).toBe(3);
       expect(benchmark.groups.map(group => group.corpus)).toEqual([
@@ -279,13 +255,6 @@ test('installs once, restarts offline, and meets the 6x proxy', async ({
       const exactP95 = Object.fromEntries(
         benchmark.groups.map(group => [group.corpus, group.p95Ms])
       );
-      expect(ordinaryP95).toBe(Number(exactP95.ordinary!.toFixed(1)));
-      expect(pathologicalP95).toBe(Number(
-        exactP95['pathological-morphology']!.toFixed(1)
-      ));
-      expect(denseBoundaryP95).toBe(Number(
-        exactP95['dense-contiguous-boundary']!.toFixed(1)
-      ));
       expect(benchmark.diagnostics.analyzeGroups.map(group => [group.corpus, group.samples])).toEqual([
         ['segmentation-short', 4590],
         ['long-noun-compound', 500],

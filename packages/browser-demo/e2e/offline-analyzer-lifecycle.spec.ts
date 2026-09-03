@@ -12,6 +12,7 @@ import {
   DIRECTORY_NAME,
   INSTALL_ID_PATTERN,
   activeOpfsFiles,
+  analyzerReady,
   committedInstallId,
   denyPersistentStorage,
   expectNoInstalledFiles,
@@ -19,6 +20,7 @@ import {
   opfsSnapshot,
   pendingInstallLifecycleLocks,
   prepareStandaloneInstall,
+  removeAnalyzerData,
   startStandaloneInstall,
   waitForStandaloneInstall
 } from './offline-analyzer-helpers.js';
@@ -39,24 +41,21 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
     const page = context.pages()[0] ?? await context.newPage();
     await page.goto('/');
     await page.getByRole('button', { name: 'Install analyzer data' }).click();
-    await expect(page.getByText('Ready offline')).toBeVisible({ timeout: 180_000 });
+    await expect(analyzerReady(page)).toBeVisible({ timeout: 180_000 });
 
     const coordinator = await context.newPage();
     await coordinator.goto('/');
-    await coordinator.getByText('Runtime & data', { exact: true }).click();
-
-    await page.getByText('Advanced', { exact: true }).click();
 
     // Force detail block 91 into the one-block cache, then select a token in
     // block 357 only after the backing file is truncated. A same-release install
     // is already queued ahead of the stale corruption report, exercising the
     // per-install-ID ABA guard rather than only a manifest identity check.
-    await page.getByLabel('Entity spans').fill('');
     await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('猫');
-    await page.getByRole('button', { name: 'Analyze' }).click();
-    await expect(page.locator('.dictionary-forms')).toContainText('猫');
+    await page.getByRole('button', { name: 'Analyze', exact: true }).click();
+    await expect(page.locator('.dictionary-forms:visible')).toContainText('猫');
+    await page.getByRole('button', { name: 'Close', exact: true }).click();
     await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('鮟鱇を食べる');
-    await page.getByRole('button', { name: 'Analyze' }).click();
+    await page.getByRole('button', { name: 'Analyze', exact: true }).click();
     const anglerfish = page.getByRole('button', { name: /鮟鱇/ }).first();
     await expect(anglerfish).toBeVisible();
 
@@ -81,23 +80,25 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
       .toEqual(['shared', 'exclusive']);
     await releaseAbaLock();
     expect(await waitForStandaloneInstall(coordinator)).toBeNull();
-    await expect(page.locator('.dictionary-forms'))
+    await expect(page.locator('.dictionary-forms:visible'))
       .toContainText('鮟鱇', { timeout: 180_000 });
-    await expect(page.getByText('potbellied sumo wrestler', { exact: true })).toBeVisible();
+    await expect(page.locator('.word-details:visible').getByText('potbellied sumo wrestler', { exact: true })).toBeVisible();
+    await page.getByRole('button', { name: 'Close', exact: true }).click();
 
     const newInstallId = await committedInstallId(page);
     expect(newInstallId).toMatch(INSTALL_ID_PATTERN);
     expect(newInstallId).not.toBe(oldInstallId);
-    await expect(page.getByText('Ready offline')).toBeVisible();
+    await expect(analyzerReady(page)).toBeVisible();
 
     // Exercise the opposite lock order: the stale runtime quarantines its old
     // generation first, a repair already queued behind it commits next, and the
     // Worker reopens that generation before retrying the interrupted detail read.
     await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('猫');
-    await page.getByRole('button', { name: 'Analyze' }).click();
-    await expect(page.locator('.dictionary-forms')).toContainText('猫');
+    await page.getByRole('button', { name: 'Analyze', exact: true }).click();
+    await expect(page.locator('.dictionary-forms:visible')).toContainText('猫');
+    await page.getByRole('button', { name: 'Close', exact: true }).click();
     await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('鮟鱇を食べる');
-    await page.getByRole('button', { name: 'Analyze' }).click();
+    await page.getByRole('button', { name: 'Analyze', exact: true }).click();
     const repairedAnglerfish = page.getByRole('button', { name: /鮟鱇/ }).first();
     await expect(repairedAnglerfish).toBeVisible();
 
@@ -134,44 +135,47 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
     await releaseBarrier();
 
     expect(await waitForStandaloneInstall(coordinator)).toBeNull();
-    await expect(page.locator('.dictionary-forms'))
+    await expect(page.locator('.dictionary-forms:visible'))
       .toContainText('鮟鱇', { timeout: 180_000 });
-    await expect(page.getByText('potbellied sumo wrestler', { exact: true })).toBeVisible();
+    await expect(page.locator('.word-details:visible').getByText('potbellied sumo wrestler', { exact: true })).toBeVisible();
+    await page.getByRole('button', { name: 'Close', exact: true }).click();
     const repairedInstallId = await committedInstallId(page);
     expect(repairedInstallId).toMatch(INSTALL_ID_PATTERN);
     expect(repairedInstallId).not.toBe(quarantineFirstInstallId);
-    await expect(page.getByText('Ready offline')).toBeVisible();
+    await expect(analyzerReady(page)).toBeVisible();
 
     // A warm runtime request must wait behind an exclusive lifecycle mutation.
-    await page.getByLabel('Entity spans').fill('');
     await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('猫');
     const releaseRuntimeLock = await holdInstallLifecycleLock(coordinator);
-    await page.getByRole('button', { name: 'Analyze' }).click();
-    await expect(page.getByText('Analyzing…')).toBeVisible();
+    await page.getByRole('button', { name: 'Analyze', exact: true }).click();
+    await expect(page.getByText('Analyzing', { exact: true })).toBeVisible();
     await page.waitForTimeout(250);
     await expect(page.getByRole('button', { name: /猫/ })).toHaveCount(0);
     await releaseRuntimeLock();
-    await expect(page.getByRole('button', { name: /猫/ }).first()).toBeVisible();
+    // The one-token result opens a modal detail sheet, making the sentence
+    // intentionally inert to the accessibility tree until the sheet closes.
+    await expect(page.locator('.dictionary-forms:visible')).toContainText('猫');
+    await page.getByRole('button', { name: 'Close', exact: true }).click();
 
     // Queue a stale-tab read behind a cross-tab writer. Once clear commits, that
     // already-waiting reader must observe the new install ID before using runtime.
     const releaseSharedLock = await holdInstallLifecycleLock(page, 'shared');
     await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('犬');
-    await page.getByRole('button', { name: 'Analyze' }).click();
-    await expect(page.getByRole('button', { name: /犬/ }).first()).toBeVisible();
-    // A one-token result automatically starts describe(). Finish that shared
+    await page.getByRole('button', { name: 'Analyze', exact: true }).click();
+    // A one-token result automatically opens its entry. Finish that shared
     // runtime read before queueing clear, otherwise clear can win the lock queue
-    // and make describe invalidate this tab before the explicit stale read below.
-    await expect(page.locator('.dictionary-forms')).toContainText('犬');
+    // and invalidate this tab before the explicit stale read below.
+    await expect(page.locator('.dictionary-forms:visible')).toContainText('犬');
+    await page.getByRole('button', { name: 'Close', exact: true }).click();
     coordinator.once('dialog', dialog => dialog.accept());
-    await coordinator.getByRole('button', { name: 'Clear installed data' }).click();
+    await removeAnalyzerData(coordinator);
     await expect.poll(() => pendingInstallLifecycleLocks(coordinator))
       .toContain('exclusive');
     expect((await opfsSnapshot(page)).markerBytes).not.toBeNull();
 
     await page.getByRole('textbox', { name: 'Japanese text', exact: true }).fill('鳥');
-    await page.getByRole('button', { name: 'Analyze' }).click();
-    await expect(page.getByText('Analyzing…')).toBeVisible();
+    await page.getByRole('button', { name: 'Analyze', exact: true }).click();
+    await expect(page.getByText('Analyzing', { exact: true })).toBeVisible();
     await page.waitForTimeout(250);
     await expect(page.getByRole('button', { name: /鳥/ })).toHaveCount(0);
 
@@ -186,7 +190,7 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
     expectNoInstalledFiles(await opfsSnapshot(page));
     expect(await committedInstallId(page)).toBeNull();
     await releaseInstallLock();
-    await expect(page.getByText('Ready offline')).toBeVisible({ timeout: 180_000 });
+    await expect(analyzerReady(page)).toBeVisible({ timeout: 180_000 });
     expect(await committedInstallId(page)).toMatch(INSTALL_ID_PATTERN);
     await coordinator.close();
     const corruptFiles = await activeOpfsFiles(page);
@@ -202,7 +206,7 @@ test('repairs cross-tab ABA races and detects runtime corruption', async ({ brow
       await writable.close();
     }, { directoryName: DIRECTORY_NAME, hotName: corruptFiles.hot });
     await page.reload();
-    await expect(page.getByText('Analyzer data is incomplete or corrupted.')).toBeVisible();
+    await expect(page.getByText('The saved data is incomplete. Install it again.')).toBeVisible();
     await expect(page.getByRole('button', { name: 'Reinstall analyzer data' })).toBeVisible();
   } finally {
     await context?.close().catch(() => undefined);

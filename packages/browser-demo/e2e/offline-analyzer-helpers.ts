@@ -45,19 +45,6 @@ export interface WorkerHeapUsage {
   readonly backingStorageSize: number;
 }
 
-export interface LegacyDetailedWord {
-  readonly text: string;
-  readonly reading: string;
-  readonly score: number;
-  readonly seq?: number;
-  readonly gloss?: readonly { readonly pos: string; readonly gloss: string }[];
-  readonly compound?: readonly string[];
-  readonly components?: readonly LegacyDetailedWord[];
-}
-
-export type LegacyDetailedToken = readonly [string, LegacyDetailedWord, unknown];
-export type LegacyDetailedAlternative = readonly [readonly LegacyDetailedToken[], number];
-
 export function median(values: readonly number[]): number {
   const sorted = [...values].sort((left, right) => left - right);
   return sorted[Math.floor(sorted.length / 2)]!;
@@ -269,7 +256,7 @@ export async function expectInstallablePwa(page: Page): Promise<void> {
       readonly icons?: readonly { readonly sizes?: string }[];
     };
     expect(manifest).toMatchObject({
-      name: 'Ichiran Browser Analyzer',
+      name: 'Ichiran',
       start_url: '/',
       scope: '/',
       display: 'standalone'
@@ -443,11 +430,13 @@ export async function waitForStandaloneInstall(page: Page): Promise<string | nul
   return error;
 }
 
-export function runtimeValue(page: Page, label: string) {
-  const exact = new RegExp(`^${label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`);
-  return page.locator('.runtime-panel dl div')
-    .filter({ has: page.locator('dt').filter({ hasText: exact }) })
-    .locator('dd');
+export function analyzerReady(page: Page) {
+  return page.getByRole('textbox', { name: 'Japanese text', exact: true });
+}
+
+export async function removeAnalyzerData(page: Page): Promise<void> {
+  await page.getByRole('button', { name: 'Analyzer settings' }).click();
+  await page.getByRole('menuitem', { name: 'Remove data' }).click();
 }
 
 export function sha256(value: string | Uint8Array): string {
@@ -829,7 +818,7 @@ export async function rejectedInstall(
     if (!manifestRejected) {
       await page.getByRole('button', { name: 'Install analyzer data' }).click();
     }
-    await expect(page.locator('.inline-error')).toContainText(expectedMessage);
+    await expect(page.getByRole('alert').filter({ hasText: expectedMessage })).toBeVisible();
     if (!manifestRejected) await expect(page.getByRole('button', { name: 'Retry' })).toBeEnabled();
     expectNoInstalledFiles(await opfsSnapshot(page));
   } finally {
@@ -858,7 +847,7 @@ export async function interruptInstall(
     };
     await context.route(targetPattern, streamPartial);
     await installingPage.getByRole('button', { name: 'Install analyzer data' }).click();
-    await expect(installingPage.getByText('Downloading analyzer data', { exact: false })).toBeVisible();
+    await expect(installingPage.getByText('Downloading', { exact: true })).toBeVisible();
     await installingPage.waitForFunction(
       ([lower, upper]) => {
         const progress = document.querySelector('progress');
@@ -881,12 +870,12 @@ export async function interruptInstall(
     // Reopen in the same storage context: a killed Worker must never have committed ready.
     const reopened = await context.newPage();
     await reopened.goto('/');
-    await expect(reopened.getByText('Ready offline')).toHaveCount(0);
+    await expect(analyzerReady(reopened)).toHaveCount(0);
     expect((await opfsSnapshot(reopened)).markerBytes).toBeNull();
     if (artifact === 'details') {
-      await expect(reopened.getByText('Analyzer data is incomplete or corrupted.')).toBeVisible();
+      await expect(reopened.getByText('The saved data is incomplete. Install it again.')).toBeVisible();
       reopened.once('dialog', dialog => dialog.accept());
-      await reopened.getByRole('button', { name: 'Clear installed data' }).click();
+      await reopened.getByRole('button', { name: 'Remove saved data' }).click();
     }
     await expect(reopened.getByRole('button', { name: 'Install analyzer data' })).toBeEnabled();
     const afterRecovery = await opfsSnapshot(reopened);

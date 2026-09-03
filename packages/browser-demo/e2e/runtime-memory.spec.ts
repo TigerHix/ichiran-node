@@ -1,5 +1,5 @@
 import { expect, test, watchConsoleHealth } from './console-health.js';
-import { attachAnalyzerWorker } from './offline-analyzer-helpers.js';
+import { analyzerReady, attachAnalyzerWorker } from './offline-analyzer-helpers.js';
 
 test('records actual steady analyzer Worker heap and backing storage', async ({ browser }) => {
   const context = await browser.newContext({
@@ -11,10 +11,10 @@ test('records actual steady analyzer Worker heap and backing storage', async ({ 
     const page = await context.newPage();
     await page.goto('/');
     await page.getByRole('button', { name: 'Install analyzer data' }).click();
-    await expect(page.getByText('Ready offline')).toBeVisible({ timeout: 180_000 });
+    await expect(analyzerReady(page)).toBeVisible({ timeout: 180_000 });
     const input = page.getByRole('textbox', { name: 'Japanese text', exact: true });
     await input.fill('猫');
-    await page.getByRole('button', { name: 'Analyze' }).click();
+    await page.getByRole('button', { name: 'Analyze', exact: true }).click();
     await expect(page.getByRole('button', { name: /猫/ }).first()).toBeVisible();
     const worker = await attachAnalyzerWorker(browser);
     try {

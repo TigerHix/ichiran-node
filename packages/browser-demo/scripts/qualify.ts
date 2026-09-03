@@ -137,6 +137,7 @@ if (firstInstallBytes > firstInstallLimit) {
     `First-install bytes ${firstInstallBytes} exceed the ${firstInstallLimit}-byte limit`
   );
 }
+await run('bun', ['run', 'build:qualification-browser'], packageRoot, false, productionEnvironment);
 await run('bun', ['run', 'test:e2e'], packageRoot, false, {
   ...productionEnvironment,
   ICHIRAN_E2E_M1_WITNESSES: JSON.stringify(samePackWitnesses)
