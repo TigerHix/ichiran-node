@@ -2,7 +2,9 @@ import { createHash } from 'node:crypto';
 import { gzipSync } from 'node:zlib';
 
 import {
+  ANALYZER_PERSISTED_MAX_BYTES,
   ANALYZER_RELEASE_FORMAT_VERSION,
+  analyzerReadyStateSize,
   analyzerManifestDigestInput,
   parseAnalyzerReleaseManifest,
   type AnalyzerReleaseAsset,
@@ -11,6 +13,7 @@ import {
 } from '@ichiran/core/compiler';
 
 export {
+  ANALYZER_PERSISTED_MAX_BYTES,
   ANALYZER_RELEASE_FORMAT_VERSION,
   analyzerManifestDigestInput,
   parseAnalyzerReleaseManifest
@@ -22,7 +25,6 @@ export type {
 } from '@ichiran/core/compiler';
 
 export const ANALYZER_HOT_MAX_BYTES = 25 * 1024 * 1024;
-export const ANALYZER_PERSISTED_MAX_BYTES = 64 * 1024 * 1024;
 export const ANALYZER_WIRE_MAX_BYTES = 26 * 1024 * 1024;
 
 export interface AnalyzerReleaseBuild {
@@ -139,33 +141,23 @@ export function assertAnalyzerReleaseSize(
   // on every request. The inactive slot exists only while staging an upgrade, so it
   // is not part of the ready-state persisted total. Browser-managed IndexedDB
   // allocation overhead is implementation-defined and is not part of this gate.
-  const cachedManifestBytes = build.manifestBytes.byteLength;
-  const installedMarkerBytes = new TextEncoder().encode(JSON.stringify({
-    state: 'ready',
-    manifest: build.manifest,
-    installId: '00000000-0000-4000-8000-000000000000',
-    installedAt: '1970-01-01T00:00:00.000Z',
-    slot: 'a'
-  })).byteLength;
-  const installedIdentityPayloadBytes = 36;
+  const readyState = analyzerReadyStateSize(
+    build.manifest,
+    build.manifestBytes.byteLength,
+    shellBytes
+  );
   const report = {
     hotBytes: build.manifest.hot.installedBytes,
-    persistedBytes:
-      build.manifest.hot.installedBytes
-      + build.manifest.details.installedBytes
-      + shellBytes
-      + cachedManifestBytes
-      + installedMarkerBytes
-      + installedIdentityPayloadBytes,
+    persistedBytes: readyState.persistedBytes,
     wireBytes:
       build.hotDownload.byteLength
       + build.detailsDownload.byteLength
       + build.manifestBytes.byteLength
       + shellBytes,
     shellBytes,
-    cachedManifestBytes,
-    installedMarkerBytes,
-    installedIdentityPayloadBytes
+    cachedManifestBytes: readyState.cachedManifestBytes,
+    installedMarkerBytes: readyState.installedMarkerBytes,
+    installedIdentityPayloadBytes: readyState.installedIdentityPayloadBytes
   };
   if (report.hotBytes > ANALYZER_HOT_MAX_BYTES) {
     throw new Error(`hot.bin is ${report.hotBytes} bytes; limit is ${ANALYZER_HOT_MAX_BYTES}`);

@@ -3,7 +3,10 @@ import { readFile, realpath } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { gunzipSync } from 'node:zlib';
 import { TypeScriptOracleRuntime } from '@ichiran/core/qualification';
-import { verifyAnalyzerRelease } from './release-files.js';
+import {
+  assertAnalyzerReadyStateSize,
+  verifyAnalyzerRelease
+} from './release-files.js';
 
 const packageRoot = resolve(import.meta.dir, '..');
 const repositoryRoot = resolve(packageRoot, '..', '..');
@@ -147,6 +150,11 @@ if (firstInstallBytes > firstInstallLimit) {
     `First-install bytes ${firstInstallBytes} exceed the ${firstInstallLimit}-byte limit`
   );
 }
+const readyState = assertAnalyzerReadyStateSize(
+  verifiedRelease.manifest,
+  verifiedRelease.manifestBytes.byteLength,
+  shellBytes
+);
 await run('bun', ['run', 'build:qualification-browser'], packageRoot, false, productionEnvironment);
 await run('bun', ['run', 'test:e2e'], packageRoot, false, {
   ...productionEnvironment,
@@ -157,5 +165,6 @@ assertCleanCheckout(qualificationCommit);
 
 console.log(
   `Browser qualification passed for ${release}: ${releaseDownloadBytes} release bytes + `
-  + `${shellBytes} shell bytes = ${firstInstallBytes} first-install bytes`
+  + `${shellBytes} shell bytes = ${firstInstallBytes} first-install bytes; `
+  + `${readyState.persistedBytes} ready-state persisted bytes`
 );

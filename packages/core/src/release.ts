@@ -1,9 +1,12 @@
 /** Release-manifest contract shared by trusted browser and Node pack loaders. */
 export {
   ANALYZER_PACK_VERSION_MAX_UTF8_BYTES,
+  ANALYZER_PERSISTED_MAX_BYTES,
   ANALYZER_RELEASE_FORMAT_VERSION,
+  analyzerReadyStateSize,
   analyzerManifestDigestInput,
   parseAnalyzerReleaseManifest,
+  type AnalyzerReadyStateSize,
   type AnalyzerReleaseAsset,
   type AnalyzerReleaseEncoding,
   type AnalyzerReleaseManifest,

@@ -5,7 +5,10 @@ import { join, relative, resolve, sep } from 'node:path';
 import { promisify } from 'node:util';
 import { gunzipSync } from 'node:zlib';
 import {
+  ANALYZER_PERSISTED_MAX_BYTES,
+  analyzerReadyStateSize,
   parseAnalyzerReleaseManifest,
+  type AnalyzerReadyStateSize,
   type AnalyzerReleaseAsset,
   type AnalyzerReleaseManifest
 } from '@ichiran/core/release';
@@ -52,6 +55,20 @@ export async function currentSourceIdentity(
 export interface ReleaseVerificationOptions {
   readonly qualifiedArtifact?: string | undefined;
   readonly sourceLock?: string | undefined;
+}
+
+export function assertAnalyzerReadyStateSize(
+  manifest: ReleaseManifest,
+  manifestBytes: number,
+  shellBytes: number
+): AnalyzerReadyStateSize {
+  const size = analyzerReadyStateSize(manifest, manifestBytes, shellBytes);
+  if (size.persistedBytes > ANALYZER_PERSISTED_MAX_BYTES) {
+    throw new Error(
+      `Persisted release is ${size.persistedBytes} bytes; limit is ${ANALYZER_PERSISTED_MAX_BYTES}`
+    );
+  }
+  return size;
 }
 
 export async function verifyAnalyzerRelease(

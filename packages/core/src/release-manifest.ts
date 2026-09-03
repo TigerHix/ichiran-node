@@ -1,5 +1,7 @@
 export const ANALYZER_RELEASE_FORMAT_VERSION = 1;
 export const ANALYZER_PACK_VERSION_MAX_UTF8_BYTES = 128;
+export const ANALYZER_PERSISTED_MAX_BYTES = 64 * 1024 * 1024;
+const ANALYZER_INSTALL_ID_BYTES = 36;
 
 export type AnalyzerReleaseEncoding = 'identity' | 'gzip';
 
@@ -20,6 +22,13 @@ export interface AnalyzerReleaseManifest {
   readonly manifestSha256: string;
   readonly hot: AnalyzerReleaseAsset;
   readonly details: AnalyzerReleaseAsset;
+}
+
+export interface AnalyzerReadyStateSize {
+  readonly persistedBytes: number;
+  readonly cachedManifestBytes: number;
+  readonly installedMarkerBytes: number;
+  readonly installedIdentityPayloadBytes: number;
 }
 
 export type AnalyzerReleaseManifestWithoutDigest = Omit<
@@ -58,6 +67,44 @@ function utf8ByteLength(value: string): number {
     } else bytes += 3;
   }
   return bytes;
+}
+
+/** Exact ready-state payload accounted against the browser persistence budget. */
+export function analyzerReadyStateSize(
+  manifest: AnalyzerReleaseManifest,
+  manifestBytes: number,
+  shellBytes: number
+): AnalyzerReadyStateSize {
+  for (const [label, bytes] of [
+    ['Manifest', manifestBytes],
+    ['Shell', shellBytes]
+  ] as const) {
+    if (!Number.isSafeInteger(bytes) || bytes < 0) {
+      throw new Error(`${label} size must be a non-negative safe integer`);
+    }
+  }
+  const installedMarkerBytes = utf8ByteLength(JSON.stringify({
+    state: 'ready',
+    manifest,
+    installId: '00000000-0000-4000-8000-000000000000',
+    installedAt: '1970-01-01T00:00:00.000Z',
+    slot: 'a'
+  }));
+  const persistedBytes = manifest.hot.installedBytes
+    + manifest.details.installedBytes
+    + shellBytes
+    + manifestBytes
+    + installedMarkerBytes
+    + ANALYZER_INSTALL_ID_BYTES;
+  if (!Number.isSafeInteger(persistedBytes)) {
+    throw new Error('Ready-state size exceeds the safe integer range');
+  }
+  return {
+    persistedBytes,
+    cachedManifestBytes: manifestBytes,
+    installedMarkerBytes,
+    installedIdentityPayloadBytes: ANALYZER_INSTALL_ID_BYTES
+  };
 }
 
 function expectExactKeys(

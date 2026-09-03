@@ -7,6 +7,7 @@ import { afterEach, describe, expect, test } from 'bun:test';
 
 import {
   QUALIFIED_BASELINE_ARTIFACT,
+  assertAnalyzerReadyStateSize,
   currentSourceIdentity,
   verifyAnalyzerRelease,
   type ReleaseManifest
@@ -75,6 +76,26 @@ afterEach(async () => {
 });
 
 describe('browser analyzer release file gate', () => {
+  test('enforces the final-shell ready-state budget at the exact boundary', async () => {
+    const value = await fixture();
+    const withoutShell = assertAnalyzerReadyStateSize(
+      value.manifest,
+      0,
+      0
+    ).persistedBytes;
+    const limit = 64 * 1024 * 1024;
+    expect(assertAnalyzerReadyStateSize(
+      value.manifest,
+      0,
+      limit - withoutShell
+    ).persistedBytes).toBe(limit);
+    expect(() => assertAnalyzerReadyStateSize(
+      value.manifest,
+      0,
+      limit - withoutShell + 1
+    )).toThrow(`limit is ${limit}`);
+  });
+
   test('accepts only a current, internally hashed release', async () => {
     const value = await fixture();
     const verified = await verifyAnalyzerRelease(value.directory, repositoryRoot);
