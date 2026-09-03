@@ -312,6 +312,16 @@ bun run source:release:isolated -- update \
   --source-lock data/source-compiler-update-2026-09-02.lock.json \
   --out work/jmdict-2026-09-02-release-b \
   --pack-version jmdict-2026-09-02-source
+
+bun run qualify:rust-same-pack -- work/jmdict-2026-09-02-release-a \
+  --source-lock data/source-compiler-update-2026-09-02.lock.json
+bun run qualify:native-same-pack -- work/jmdict-2026-09-02-release-a \
+  --source-lock data/source-compiler-update-2026-09-02.lock.json
+bun run qualify:source-hosts -- work/jmdict-2026-09-02-release-a \
+  --source-lock data/source-compiler-update-2026-09-02.lock.json
+bun run --cwd packages/browser-demo qualify -- \
+  --release work/jmdict-2026-09-02-release-a \
+  --source-lock data/source-compiler-update-2026-09-02.lock.json
 ```
 
 Compare all four published artifacts exactly as above. Because JMdict content changed,

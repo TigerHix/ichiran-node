@@ -38,17 +38,22 @@ const productionEnvironment = { ...process.env };
 delete productionEnvironment.ICHIRAN_TYPESCRIPT_ORACLE;
 delete productionEnvironment.ICHIRAN_QUALIFIED_ARTIFACT;
 let release = resolve(repositoryRoot, 'dist', 'browser-alpha');
+let sourceLock: string | undefined;
 for (let index = 2; index < process.argv.length; index++) {
   const argument = process.argv[index];
   if (argument === '--release') {
     const value = process.argv[++index];
     if (!value) throw new Error('--release requires a directory');
     release = resolve(repositoryRoot, value);
+  } else if (argument === '--source-lock') {
+    sourceLock = process.argv[++index];
+    if (!sourceLock) throw new Error('--source-lock requires a file');
   } else {
     throw new Error(`Unknown qualification argument: ${argument}`);
   }
 }
 release = await realpath(release);
+if (sourceLock) productionEnvironment.ICHIRAN_SOURCE_LOCK = sourceLock;
 
 async function run(
   command: string,
@@ -77,7 +82,8 @@ async function run(
 
 const verifiedRelease = await verifyAnalyzerRelease(
   release,
-  repositoryRoot
+  repositoryRoot,
+  { sourceLock }
 );
 
 const installed = (bytes: Uint8Array, encoding: 'identity' | 'gzip'): Uint8Array =>
@@ -116,10 +122,14 @@ for (const witness of witnessInputs) {
   samePackWitnesses.push({ ...witness, serialized: JSON.stringify(result) });
 }
 
-await run('bun', ['scripts/stage-analyzer.ts', release], packageRoot, false, productionEnvironment);
+await run('bun', [
+  'scripts/stage-analyzer.ts', release,
+  ...(sourceLock ? ['--source-lock', sourceLock] : [])
+], packageRoot, false, productionEnvironment);
 await run('bun', ['run', 'build'], packageRoot, false, productionEnvironment);
 await run('bun', [
-  'scripts/audit-build.ts', '--require-rust', '--require-analyzer', '--release', release
+  'scripts/audit-build.ts', '--require-rust', '--require-analyzer', '--release', release,
+  ...(sourceLock ? ['--source-lock', sourceLock] : [])
 ], packageRoot, false, productionEnvironment);
 const shellBytes = Number(await run(
   'bun', ['scripts/measure-shell.ts'], packageRoot, true, productionEnvironment

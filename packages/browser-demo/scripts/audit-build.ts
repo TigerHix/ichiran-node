@@ -12,6 +12,7 @@ let requireAnalyzer = false;
 let requireRust = false;
 let typescriptOracle = false;
 let releaseDirectory: string | null = null;
+let sourceLock = process.env.ICHIRAN_SOURCE_LOCK;
 for (let index = 2; index < process.argv.length; index++) {
   const argument = process.argv[index];
   if (argument === '--require-analyzer') requireAnalyzer = true;
@@ -21,6 +22,9 @@ for (let index = 2; index < process.argv.length; index++) {
     const value = process.argv[++index];
     if (!value) throw new Error('--release requires a directory');
     releaseDirectory = value;
+  } else if (argument === '--source-lock') {
+    sourceLock = process.argv[++index];
+    if (!sourceLock) throw new Error('--source-lock requires a file');
   } else {
     throw new Error(`Unknown build-audit argument: ${argument}`);
   }
@@ -123,7 +127,10 @@ try {
   staged = await verifyAnalyzerRelease(
     stagedDirectory,
     repositoryRoot,
-    process.env.ICHIRAN_QUALIFIED_ARTIFACT
+    {
+      qualifiedArtifact: process.env.ICHIRAN_QUALIFIED_ARTIFACT,
+      sourceLock
+    }
   );
 } catch (error) {
   const missing = error instanceof Error
@@ -135,7 +142,10 @@ if (staged && releaseDirectory !== null) {
   const source = await verifyAnalyzerRelease(
     resolve(repositoryRoot, releaseDirectory),
     repositoryRoot,
-    process.env.ICHIRAN_QUALIFIED_ARTIFACT
+    {
+      qualifiedArtifact: process.env.ICHIRAN_QUALIFIED_ARTIFACT,
+      sourceLock
+    }
   );
   assertSameRelease(staged, source);
 }

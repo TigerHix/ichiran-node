@@ -20,7 +20,8 @@ function sha256(value: string | Uint8Array): string {
 }
 
 async function fixture(
-  sourceCommit?: string
+  sourceCommit?: string,
+  sourceLock?: string
 ): Promise<{
   readonly directory: string;
   readonly manifest: ReleaseManifest;
@@ -29,7 +30,7 @@ async function fixture(
 }> {
   const directory = await mkdtemp(join(tmpdir(), 'ichiran-browser-release-audit-'));
   temporaryDirectories.push(directory);
-  const identity = await currentSourceIdentity(repositoryRoot);
+  const identity = await currentSourceIdentity(repositoryRoot, sourceLock);
   const installedHot = Uint8Array.of(1, 2, 3, 4);
   const installedDetails = Uint8Array.of(5, 6, 7);
   const hot = new Uint8Array(gzipSync(installedHot));
@@ -89,6 +90,13 @@ describe('browser analyzer release file gate', () => {
     );
   });
 
+  test('verifies a release against an explicit tracked update lock', async () => {
+    const sourceLock = 'data/source-compiler-update-2026-09-02.lock.json';
+    const value = await fixture(undefined, sourceLock);
+    const verified = await verifyAnalyzerRelease(value.directory, repositoryRoot, { sourceLock });
+    expect(verified.manifest.sourcesLockSha256).toBe(value.manifest.sourcesLockSha256);
+  });
+
   test('rejects asset bytes that do not match the manifest', async () => {
     const value = await fixture();
     const corrupt = Uint8Array.from(value.hot);
@@ -102,14 +110,18 @@ describe('browser analyzer release file gate', () => {
   test('rejects an unknown qualified artifact name', async () => {
     const value = await fixture();
     await expect(
-      verifyAnalyzerRelease(value.directory, repositoryRoot, 'not-a-qualified-artifact')
+      verifyAnalyzerRelease(value.directory, repositoryRoot, {
+        qualifiedArtifact: 'not-a-qualified-artifact'
+      })
     ).rejects.toThrow('Unknown qualified analyzer artifact');
   });
 
   test('does not relabel an arbitrary release as the qualified baseline', async () => {
     const value = await fixture();
     await expect(
-      verifyAnalyzerRelease(value.directory, repositoryRoot, QUALIFIED_BASELINE_ARTIFACT)
+      verifyAnalyzerRelease(value.directory, repositoryRoot, {
+        qualifiedArtifact: QUALIFIED_BASELINE_ARTIFACT
+      })
     ).rejects.toThrow(`does not match qualified artifact ${QUALIFIED_BASELINE_ARTIFACT}`);
   });
 });
