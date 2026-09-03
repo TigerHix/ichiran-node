@@ -31,10 +31,11 @@ the Swift wrapper for install/open, analysis, romanization, describe, retained l
 restart, corruption/recovery, and concurrent background calls. Do not port analyzer or
 presentation logic into Swift.
 
-M5B remains open: build the device and simulator archives, create the XCFramework,
-write the thin Swift ownership/file adapter, and run simulator plus physical-device
-memory, leak, lifecycle, and UTF-16 tests. Physical Safari qualification is a separate
-remaining M4 gate.
+The M5B implementation is under `apple/`: one audited XCFramework build script, the
+thin `IchiranSwift` package, an iOS validation app, and simulator qualification tests.
+See [`apple/README.md`](../../apple/README.md). A physical iPhone run remains an
+external release gate when no device is connected. Physical Safari qualification is a
+separate remaining M4 gate.
 
 This crate is the sole analyzer implementation for native and browser builds. ABI v3
 exposes clean analysis, analyzer-backed romanization, lazy detail lookup, and retained
@@ -56,25 +57,21 @@ lipo -create \
   -output libichiran_kernel.a
 ```
 
-For the later M5B iOS package:
+For the iOS package, use the repository script. It also builds both macOS archives for
+the C harness, audits every archive, compiles a host ABI probe, and creates the module
+map and separate XCFramework slices:
 
 ```sh
-rustup target add aarch64-apple-ios aarch64-apple-ios-sim x86_64-apple-ios
-cargo build --release --locked --target aarch64-apple-ios
-cargo build --release --locked --target aarch64-apple-ios-sim
-cargo build --release --locked --target x86_64-apple-ios
-lipo -create \
-  target/aarch64-apple-ios-sim/release/libichiran_kernel.a \
-  target/x86_64-apple-ios/release/libichiran_kernel.a \
-  -output target/libichiran_kernel-simulator.a
-xcodebuild -create-xcframework \
-  -library target/aarch64-apple-ios/release/libichiran_kernel.a -headers include \
-  -library target/libichiran_kernel-simulator.a -headers include \
-  -output target/IchiranKernel.xcframework
+rustup target add --toolchain 1.92.0 \
+  aarch64-apple-ios aarch64-apple-ios-sim x86_64-apple-ios \
+  aarch64-apple-darwin x86_64-apple-darwin
+apple/scripts/build-xcframework.sh
 ```
 
 Never combine device and simulator archives with `lipo`. The XCFramework owns those
-separate platform slices.
+separate platform slices. Only the two simulator architectures are combined. The
+generated XCFramework, zip, archives, and audit evidence live under ignored artifact
+or `work/` paths and are not committed.
 
 ## ABI v3 audit
 
@@ -148,11 +145,26 @@ and file lifetime remain host responsibilities.
 
 ## Required Mac validation
 
-Before writing the Swift adapter, run the same C caller on macOS:
+The immutable baseline GitHub release contains compressed assets. Download it, decode
+the two installed files, then pass an absolute directory to the harness (the harness
+changes its working directory internally):
 
 ```sh
-bash tests/run_c_harness.sh /path/to/portable-core-260118-baseline
-(cd ../.. && bun run qualify:native-same-pack -- /path/to/attached-source-release)
+mkdir -p work/portable-core-260118-baseline
+gh release download portable-core-260118-baseline \
+  --repo TigerHix/ichiran-node \
+  --dir work/portable-core-260118-baseline \
+  --pattern manifest.json --pattern hot.bin.gz \
+  --pattern details.bin.gz --pattern stats.json
+gzip -dc work/portable-core-260118-baseline/hot.bin.gz \
+  > work/portable-core-260118-baseline/hot.bin
+gzip -dc work/portable-core-260118-baseline/details.bin.gz \
+  > work/portable-core-260118-baseline/details.bin
+bash packages/rust-kernel/tests/run_c_harness.sh \
+  "$(pwd)/work/portable-core-260118-baseline"
+bun run qualify:native-same-pack -- /absolute/path/to/source-release
+apple/scripts/run-tests.sh /absolute/path/to/source-release \
+  --same-pack --source-lock /absolute/path/to/source-lock.json
 ```
 
 The required output covers 1,236 clean analyses plus three raw astral/lone-surrogate
@@ -165,7 +177,7 @@ C/Swift wrapper, then validate background execution, restart, leaks, and memory 
 simulator and physical devices.
 
 WSL qualification does not claim XCFramework, Swift, simulator, Safari, or physical
-device validation. Those remain M5B Mac-owned gates.
+device validation. Those remain Apple-owned gates.
 
 Before signing off the XCFramework/Swift package and its test evidence, repeat:
 

@@ -1,7 +1,8 @@
 # Source compiler and Rust kernel roadmap
 
-Status: integrated implementation and qualification recipe complete; exact-head
-Linux/WSL qualification pending. Last updated 2026-09-02.
+Status: integrated implementation and qualification recipe complete; Apple simulator
+qualification complete and physical-device qualification pending. Last updated
+2026-09-03.
 
 This document is authoritative for work after the completed TypeScript browser alpha.
 The browser-alpha documents remain the as-built specification and qualification record
@@ -25,7 +26,7 @@ on that exact pack. The qualification recipe and accepted identities are in
 | M4 physical Safari/iPhone | PENDING |
 | M4N Node/CLI/API cutover | IMPLEMENTED; FINAL QUALIFICATION PENDING |
 | M5A Linux/WSL C ABI and Mac handoff | IMPLEMENTED; FINAL QUALIFICATION PENDING |
-| M5B Apple packaging, Swift, simulator, and device | PENDING |
+| M5B Apple packaging, Swift, simulator, and device | IMPLEMENTED; SIMULATOR PASS; PHYSICAL DEVICE PENDING |
 | M6 PostgreSQL-free source compiler and same-pack Rust gate | IMPLEMENTED; FINAL QUALIFICATION PENDING |
 
 Rust now owns production analyzer semantics. TypeScript owns host adapters, browser
@@ -101,10 +102,11 @@ The end state is:
   accidental database ordering;
 - no experimental grammar port and no general Kanjidic runtime API.
 
-The standalone browser is the first reference host. This Windows/WSL workstream will
-deliver the qualified Rust kernel, versioned C ABI contract, C-boundary tests, and an
-iOS integration handoff. XCFramework/Swift packaging and a validation app belong to a
-Mac agent with Xcode; Komi and Nemu integration remain later product work.
+The standalone browser is the first reference host. The Windows/WSL workstream
+delivered the Rust kernel, versioned C ABI contract, C-boundary tests, and iOS
+integration handoff. The Mac workstream now supplies the XCFramework, thin Swift
+package, validation app, and simulator qualification under `apple/`; Komi and Nemu
+integration remain later product work.
 
 ## Qualified baseline
 
@@ -153,17 +155,17 @@ iPhone 13 baseline and current target device remains open for M4/M5B.
 This roadmap-status update is intentionally a docs-only descendant of the tagged
 artifact commit. It does not change the pack or move the baseline tag.
 
-The Rust analyzer crate, browser/Node WASM host, C ABI, and source-native compiler now
-exist in the integrated implementation. Their final exact-head Linux/WSL qualification
-is pending. Swift/XCFramework packaging and physical Apple validation do not yet exist
-and remain M5B work.
+The Rust analyzer crate, browser/Node WASM host, C ABI, source-native compiler,
+Swift/XCFramework package, and iOS validation app now exist in the integrated
+implementation. The Apple simulator boundary is qualified; physical iPhone validation
+remains the M5B external gate.
 
 ## Dependency boundary
 
 | Stage | Transition baseline | Integrated candidate |
 |---|---|---|
 | Browser analysis | TypeScript core + pack | Rust WASM kernel + source-built pack |
-| Native iOS analysis | Not implemented | Native Rust kernel + same pack; M5B pending |
+| Native iOS analysis | Not implemented | Native Rust kernel + same pack through `IchiranSwift`; physical-device gate pending |
 | Node/CLI/API analysis | TypeScript core + pack | Rust through the same WASM artifact |
 | Normal pack build | PostgreSQL + frozen reference TypeScript | Pinned sources + TypeScript-owned compiler and deterministic tools |
 | Migration qualification | PostgreSQL reference + recorded/current Lisp evidence | Frozen fixtures plus both kernels for this transition release only |
@@ -400,11 +402,13 @@ revalidated together at the chosen cutover revision.
 
 ### M5B — Mac-owned iOS packaging
 
-The Mac agent will build the Apple device/simulator static libraries, XCFramework,
-Swift package/wrapper, and minimal validation app. It will run the corpus through the
-actual C/Swift boundary and verify background execution, pack installation, offline
-restart, leak-free ownership, and memory/performance on physical devices. Komi
-integration begins only after that reusable boundary is qualified.
+The Apple implementation builds audited device/simulator static libraries and an
+XCFramework, exposes a thin actor-owned Swift package, and includes a minimal iOS
+validation app. Simulator tests drive the repository parity corpora through the actual
+Swift boundary and cover background execution, pack installation, offline restart,
+ownership, leaks, and memory/performance. Physical-device performance and lifecycle
+qualification remains the only Apple packaging gate when no iPhone is connected.
+Komi integration begins from this reusable boundary without adding analyzer logic.
 
 M4, M5A, and M5B share the Rust kernel but none may weaken another host's semantics.
 
@@ -546,9 +550,9 @@ reviewed change.
 Make Rust and the source compiler the defaults. The M6 genuine update is the
 PostgreSQL transition cycle, and the first accepted Rust-default release is the
 TypeScript transition cycle; no extra shadow cycle is implied. Delete each reference
-after its transition evidence and durable replacements pass. The Mac agent can perform
-M5B in parallel once M5A is ready. Physical iPhone qualification remains an iOS release
-gate, not a blocker for the WSL workstreams.
+after its transition evidence and durable replacements pass. M5B implementation and
+simulator qualification followed M5A. Physical iPhone qualification remains an iOS
+release gate, not a blocker for the WSL workstreams.
 
 ## Effort model
 
