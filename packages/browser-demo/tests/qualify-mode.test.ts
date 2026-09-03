@@ -83,4 +83,16 @@ describe('browser qualification mode', () => {
     expect(browser).toContain("const qualificationCommit = gitOutput(['rev-parse', 'HEAD']);");
     expect(browser.match(/assertCleanCheckout\(qualificationCommit\)/g)).toHaveLength(2);
   });
+
+  test('source host qualification runs the pinned upstream regression on its release', async () => {
+    const repository = resolve(packageRoot, '..', '..');
+    const source = await readFile(resolve(
+      repository,
+      'scripts/source-release-host-qualification.sh'
+    ), 'utf8');
+    expect(source).toContain(
+      'RUN_PARITY_TESTS=true ICHIRAN_PACK_DIR="$release" bun test'
+    );
+    expect(source).toContain('packages/cli/tests/upstream-260118-parity.test.ts');
+  });
 });

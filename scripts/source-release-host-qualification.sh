@@ -17,9 +17,10 @@ test -z "$(git status --porcelain=v1 --untracked-files=all)" || {
 }
 bun packages/browser-demo/scripts/verify-release.ts "$release"
 bun run build
-ICHIRAN_PACK_DIR="$release" bun test \
+RUN_PARITY_TESTS=true ICHIRAN_PACK_DIR="$release" bun test \
   packages/node/tests/runtime-release.test.ts \
   packages/cli/tests/source-release.test.ts \
+  packages/cli/tests/upstream-260118-parity.test.ts \
   packages/api/tests/analyzer-api.test.ts \
   packages/api/tests/input-validation.test.ts
 test "$(git rev-parse HEAD)" = "$qualification_commit" || {

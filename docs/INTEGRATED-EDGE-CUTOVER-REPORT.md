@@ -136,7 +136,10 @@ gate; source-pack qualification no longer relies on it as a substitute.
 
 `qualify:source-hosts` verifies the source release, rebuilds product packages, and runs
 durable Node runtime, CLI executable, and HTTP API tests without the raw historical
-ordering fixtures. Intentional M6 ordering changes remain governed by the v4 source
+ordering fixtures. It also sets `RUN_PARITY_TESTS=true` and `ICHIRAN_PACK_DIR` to that
+verified release while running `packages/cli/tests/upstream-260118-parity.test.ts`, so
+the pinned upstream top-one, indirect-conjugation JSON-crash, and 合体 regressions
+cannot be skipped. Intentional M6 ordering changes remain governed by the v4 source
 attestation, not by an exception in a production host test.
 
 The canonical browser command builds only the Rust Worker, audits the production
@@ -192,6 +195,8 @@ bun run qualify:rust-same-pack -- <release-a>
 assert_qualified_checkout
 bun run qualify:native-same-pack -- <release-a>
 assert_qualified_checkout
+# This wrapper binds the verified release to ICHIRAN_PACK_DIR, enables packed parity,
+# and runs packages/cli/tests/upstream-260118-parity.test.ts.
 bun run qualify:source-hosts -- <release-a>
 assert_qualified_checkout
 bun run verify:rust-kernel
