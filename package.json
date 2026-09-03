@@ -22,7 +22,7 @@
     "build:compiler": "bun run --cwd packages/core build && bun run --cwd packages/reference-postgres build && bun run --cwd packages/data build",
     "typecheck": "bun run --cwd packages/core build && bun run --cwd packages/core typecheck && bun run --cwd packages/data typecheck && bun run --cwd packages/node typecheck && bun run --cwd packages/cli typecheck && bun run --cwd packages/api typecheck && bun run --cwd packages/browser-demo typecheck",
     "typecheck:compiler": "bun run build:source-compiler && bun run --cwd packages/core typecheck && bun run --cwd packages/reference-postgres typecheck && bun run --cwd packages/data typecheck && bun run --cwd packages/data typecheck:migration && bun run alpha:release:typecheck",
-    "test": "bun run verify:rust-kernel && bun run build && bun test packages/core/tests packages/node/tests packages/cli/tests packages/api/tests packages/browser-demo/tests && bun run --cwd packages/data test:source",
+    "test": "bun run verify:rust-kernel && bun run build && bun test packages/core/tests packages/node/tests packages/cli/tests packages/api/tests packages/browser-demo/tests && bun run --cwd packages/reference-postgres build && bun run --cwd packages/data test:source",
     "audit:data-package": "sh scripts/audit-data-package.sh",
     "migration:data": "bun packages/data/src/migration-cli.ts",
     "test:watch": "bun test --watch packages/core/tests packages/node/tests packages/cli/tests packages/api/tests packages/browser-demo/tests",
