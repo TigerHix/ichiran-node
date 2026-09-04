@@ -26,6 +26,9 @@ destination="${ICHIRAN_IOS_DESTINATION:-platform=iOS Simulator,name=iPhone 17,OS
 derived="$repository/work/apple/ValidationDerivedData"
 log="$repository/work/apple/swift-tests.log"
 mkdir -p "$(dirname "$log")"
+# The XCFramework is rebuilt in place. Discard this script-owned cache so Clang
+# cannot reuse a PCM compiled from an older ABI header at the same artifact path.
+rm -rf "$derived"
 xcodebuild \
   -project "$repository/apple/ValidationApp/IchiranValidation.xcodeproj" \
   -scheme IchiranValidation \
