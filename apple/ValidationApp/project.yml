@@ -1,0 +1,61 @@
+name: IchiranValidation
+
+options:
+  bundleIdPrefix: dev.ichiran
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "26.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: ""
+
+packages:
+  IchiranSwift:
+    path: ../IchiranSwift
+
+targets:
+  IchiranValidation:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+      - path: Resources/Pack
+        type: folder
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.ichiran.validation
+        PRODUCT_NAME: IchiranValidation
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Ichiran Validation
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        TARGETED_DEVICE_FAMILY: "1"
+    dependencies:
+      - package: IchiranSwift
+        product: IchiranSwift
+    scheme:
+      testTargets:
+        - IchiranValidationTests
+
+  IchiranValidationTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: ../ValidationAppTests
+        excludes:
+          - Resources
+      - path: ../ValidationAppTests/Resources/Generated
+        type: folder
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.ichiran.validation.tests
+        GENERATE_INFOPLIST_FILE: YES
+    dependencies:
+      - target: IchiranValidation
+      - package: IchiranSwift
+        product: IchiranSwift

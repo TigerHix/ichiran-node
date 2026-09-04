@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83F401A28845B4A31325EB30 /* Pack in Resources */ = {isa = PBXBuildFile; fileRef = 58965FA4EC98B7A095B37F97 /* Pack */; };
+		8E67E0E10AE26E12F7193943 /* IchiranSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3EEA8D73589FA85B375FEBE7 /* IchiranSwift */; };
+		8EB55509E131888C26D09970 /* IchiranSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 22CE959E426814C2B1A685BE /* IchiranSwift */; };
+		99F5F53127D3A88D4A80BBE2 /* Generated in Resources */ = {isa = PBXBuildFile; fileRef = 8D8EAA31DE53AF70B590621D /* Generated */; };
+		B2377AF581B0DC97A4628395 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFC8E3E95C72380F5FF2A48 /* ContentView.swift */; };
+		B47C075BB18B1ED52AEF39C5 /* IchiranValidationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71A0A823796F45480A0F33 /* IchiranValidationApp.swift */; };
+		F0AD70F34EE6B53699B441E7 /* ValidationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EB03172E3C4CC2E0838E02 /* ValidationModel.swift */; };
+		FC5F1C4415D84C7337784995 /* IchiranSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87C52889F72E7689A601AF /* IchiranSwiftTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		71F2F16D57519787F03DE8BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E784E527698EE78334AF219 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 316E7D5AF6DF83D69D54D44F;
+			remoteInfo = IchiranValidation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1AFFC4FC167091F4A4D6C3A1 /* IchiranValidationTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = IchiranValidationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F71CDC0CD1C65C40176C2DB /* IchiranSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; name = IchiranSwift; path = ../IchiranSwift; sourceTree = SOURCE_ROOT; };
+		58965FA4EC98B7A095B37F97 /* Pack */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Pack; path = Resources/Pack; sourceTree = SOURCE_ROOT; };
+		5F87C52889F72E7689A601AF /* IchiranSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IchiranSwiftTests.swift; sourceTree = "<group>"; };
+		7A71A0A823796F45480A0F33 /* IchiranValidationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IchiranValidationApp.swift; sourceTree = "<group>"; };
+		8D8EAA31DE53AF70B590621D /* Generated */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Generated; path = ../ValidationAppTests/Resources/Generated; sourceTree = SOURCE_ROOT; };
+		92EB03172E3C4CC2E0838E02 /* ValidationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationModel.swift; sourceTree = "<group>"; };
+		9EFC8E3E95C72380F5FF2A48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AAC2D645A6777E6431DAA073 /* IchiranValidation.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = IchiranValidation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5A48A0AF6288A469C6D8134 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E67E0E10AE26E12F7193943 /* IchiranSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3EE44D9F983DA62A84E609C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EB55509E131888C26D09970 /* IchiranSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2AA71C7196B8C6F40B1111D9 = {
+			isa = PBXGroup;
+			children = (
+				8D8EAA31DE53AF70B590621D /* Generated */,
+				58965FA4EC98B7A095B37F97 /* Pack */,
+				A3BEC2F7266B0EBB440857E4 /* Packages */,
+				F6B9608B6C87696FEABEF4D8 /* Sources */,
+				DB868CB433301649F4A43AC9 /* ValidationAppTests */,
+				CEDC8B139BD92730929C0E13 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3BEC2F7266B0EBB440857E4 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				2F71CDC0CD1C65C40176C2DB /* IchiranSwift */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		CEDC8B139BD92730929C0E13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAC2D645A6777E6431DAA073 /* IchiranValidation.app */,
+				1AFFC4FC167091F4A4D6C3A1 /* IchiranValidationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB868CB433301649F4A43AC9 /* ValidationAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F87C52889F72E7689A601AF /* IchiranSwiftTests.swift */,
+			);
+			name = ValidationAppTests;
+			path = ../ValidationAppTests;
+			sourceTree = "<group>";
+		};
+		F6B9608B6C87696FEABEF4D8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9EFC8E3E95C72380F5FF2A48 /* ContentView.swift */,
+				7A71A0A823796F45480A0F33 /* IchiranValidationApp.swift */,
+				92EB03172E3C4CC2E0838E02 /* ValidationModel.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C7008B9BD629AEF222026E8 /* IchiranValidationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B5327D1CAEE436A386AC130 /* Build configuration list for PBXNativeTarget "IchiranValidationTests" */;
+			buildPhases = (
+				9A6CAD7205D7819FC9E3ECC5 /* Sources */,
+				FA4D8E3498D1E320F77FC168 /* Resources */,
+				B3EE44D9F983DA62A84E609C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5CC1D6A357430025B5A18E4 /* PBXTargetDependency */,
+			);
+			name = IchiranValidationTests;
+			packageProductDependencies = (
+				22CE959E426814C2B1A685BE /* IchiranSwift */,
+			);
+			productName = IchiranValidationTests;
+			productReference = 1AFFC4FC167091F4A4D6C3A1 /* IchiranValidationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		316E7D5AF6DF83D69D54D44F /* IchiranValidation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B63E9B868BD6FF3A832693A5 /* Build configuration list for PBXNativeTarget "IchiranValidation" */;
+			buildPhases = (
+				DCD3A1570845F34EDBD6E930 /* Sources */,
+				7B82CB9D623543FAE5466015 /* Resources */,
+				A5A48A0AF6288A469C6D8134 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IchiranValidation;
+			packageProductDependencies = (
+				3EEA8D73589FA85B375FEBE7 /* IchiranSwift */,
+			);
+			productName = IchiranValidation;
+			productReference = AAC2D645A6777E6431DAA073 /* IchiranValidation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E784E527698EE78334AF219 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					1C7008B9BD629AEF222026E8 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					316E7D5AF6DF83D69D54D44F = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7F45ACEED4ED875F17D1F25F /* Build configuration list for PBXProject "IchiranValidation" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 2AA71C7196B8C6F40B1111D9;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6ADC79B25B724DC74E9D0D61 /* XCLocalSwiftPackageReference "../IchiranSwift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CEDC8B139BD92730929C0E13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				316E7D5AF6DF83D69D54D44F /* IchiranValidation */,
+				1C7008B9BD629AEF222026E8 /* IchiranValidationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B82CB9D623543FAE5466015 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83F401A28845B4A31325EB30 /* Pack in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA4D8E3498D1E320F77FC168 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99F5F53127D3A88D4A80BBE2 /* Generated in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A6CAD7205D7819FC9E3ECC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC5F1C4415D84C7337784995 /* IchiranSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCD3A1570845F34EDBD6E930 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2377AF581B0DC97A4628395 /* ContentView.swift in Sources */,
+				B47C075BB18B1ED52AEF39C5 /* IchiranValidationApp.swift in Sources */,
+				F0AD70F34EE6B53699B441E7 /* ValidationModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5CC1D6A357430025B5A18E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 316E7D5AF6DF83D69D54D44F /* IchiranValidation */;
+			targetProxy = 71F2F16D57519787F03DE8BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		004C4C04EB2D66BA7E427DA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		14E0FFC73FEE734B32F6B645 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		5B8B5A619C0E45CCBF3674AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.ichiran.validation.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IchiranValidation.app/IchiranValidation";
+			};
+			name = Release;
+		};
+		8FA288893DC102900BC0F7B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.ichiran.validation.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IchiranValidation.app/IchiranValidation";
+			};
+			name = Debug;
+		};
+		A9F122C3B6F4864906D4B162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ichiran Validation";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.ichiran.validation;
+				PRODUCT_NAME = IchiranValidation;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C534F7A5B941D1257B3C080C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ichiran Validation";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.ichiran.validation;
+				PRODUCT_NAME = IchiranValidation;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B5327D1CAEE436A386AC130 /* Build configuration list for PBXNativeTarget "IchiranValidationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FA288893DC102900BC0F7B6 /* Debug */,
+				5B8B5A619C0E45CCBF3674AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7F45ACEED4ED875F17D1F25F /* Build configuration list for PBXProject "IchiranValidation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				004C4C04EB2D66BA7E427DA0 /* Debug */,
+				14E0FFC73FEE734B32F6B645 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B63E9B868BD6FF3A832693A5 /* Build configuration list for PBXNativeTarget "IchiranValidation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9F122C3B6F4864906D4B162 /* Debug */,
+				C534F7A5B941D1257B3C080C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		6ADC79B25B724DC74E9D0D61 /* XCLocalSwiftPackageReference "../IchiranSwift" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../IchiranSwift;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		22CE959E426814C2B1A685BE /* IchiranSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = IchiranSwift;
+		};
+		3EEA8D73589FA85B375FEBE7 /* IchiranSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = IchiranSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 6E784E527698EE78334AF219 /* Project object */;
+}

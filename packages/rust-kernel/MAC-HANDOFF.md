@@ -8,7 +8,7 @@ Swift branch; final qualification must be rerun from its own clean committed hea
 ```sh
 git fetch origin main
 base=$(git rev-parse origin/main)
-git switch -c codex/swift-native-host "$base"
+git switch -c codex/swift-native-host-v5 "$base"
 test "$(git merge-base HEAD "$base")" = "$base"
 test -z "$(git status --porcelain=v1 --untracked-files=all)"
 ```
@@ -40,10 +40,11 @@ C same-pack corpus, then exercise that source pack through the Swift wrapper for
 install/open, analysis, romanization, entry lookup, restart, corruption/recovery, and
 concurrent background calls. Do not port analyzer or presentation logic into Swift.
 
-M5B remains open: build the device and simulator archives, create the XCFramework,
-write the thin Swift ownership/file adapter, and run simulator plus physical-device
-memory, leak, lifecycle, and UTF-16 tests. Physical Safari qualification is a separate
-remaining M4 gate.
+The M5B implementation lives under `apple/`: `apple/scripts/build-xcframework.sh`
+builds and audits the device, simulator, and macOS archives, while
+`apple/scripts/run-tests.sh` prepares the repository corpora and runs the Swift package
+and validation app tests. See `apple/README.md` for package integration and ownership
+rules. Physical Safari qualification is a separate remaining M4 gate.
 
 This crate is the sole analyzer implementation for native and browser builds. ABI v5
 exposes clean analysis, canonical lazy token details, analyzer-backed romanization,
@@ -70,7 +71,7 @@ lipo -create \
   -output libichiran_kernel.a
 ```
 
-For the later M5B iOS package:
+For the M5B iOS package:
 
 ```sh
 rustup target add aarch64-apple-ios aarch64-apple-ios-sim x86_64-apple-ios
@@ -192,7 +193,8 @@ C/Swift wrapper, then validate background execution, restart, leaks, and memory 
 simulator and physical devices.
 
 WSL qualification does not claim XCFramework, Swift, simulator, Safari, or physical
-device validation. Those remain M5B Mac-owned gates.
+device validation. Run the `apple/` build and test commands on macOS, and record
+physical-device availability separately from simulator results.
 
 Before signing off the XCFramework/Swift package and its test evidence, repeat with
 the final committed head recorded in the generated manifest:
