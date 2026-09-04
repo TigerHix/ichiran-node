@@ -27,13 +27,6 @@ import {
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
 import { Separator } from '@/components/ui/separator';
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle
-} from '@/components/ui/sheet';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Textarea } from '@/components/ui/textarea';
 import {
@@ -285,7 +278,7 @@ function Sentence({ path, selection, onPointerDown, onPointerEnter, onPointerUp,
   selection: TokenSelection | null;
   onPointerDown(index: number): void;
   onPointerEnter(index: number): void;
-  onPointerUp(index: number): void;
+  onPointerUp(): void;
   onKeyboardSelect(index: number): void;
 }): ReactElement {
   const tokenAt = (clientX: number, clientY: number): number | null => {
@@ -304,10 +297,7 @@ function Sentence({ path, selection, onPointerDown, onPointerEnter, onPointerUp,
         const index = tokenAt(event.clientX, event.clientY);
         if (index !== null) onPointerEnter(index);
       }}
-      onPointerUp={event => {
-        const index = tokenAt(event.clientX, event.clientY);
-        if (index !== null) onPointerUp(index);
-      }}
+      onPointerUp={onPointerUp}
     >
       {path.tokens.map((token, index) => (
         <TokenButton
@@ -525,14 +515,20 @@ function AnalysisWorkspace({ analyzer, operationError, onPackInvalid }: {
             <div className="analysis-empty"><p>{text.trim() ? 'Analyze the text to see each word.' : 'Enter Japanese text to begin.'}</p></div>
           )}
         </div>
-        <aside className="detail-desktop" aria-label="Word details" aria-live="polite"><WordDetails {...detailProps} /></aside>
+        {!mobileLayout && (
+          <aside className="detail-desktop" aria-label="Word details" aria-live="polite">
+            <WordDetails {...detailProps} />
+          </aside>
+        )}
       </section>
-      <Sheet open={mobileLayout && !selectionState.selecting && selectionText.length > 0} onOpenChange={open => { if (!open) closeDetails(); }}>
-        <SheetContent className="detail-mobile" side="bottom">
-          <SheetHeader className="sr-only"><SheetTitle>Word details</SheetTitle><SheetDescription>Dictionary and morphology details for the selected text.</SheetDescription></SheetHeader>
+      {mobileLayout && !selectionState.selecting && selectionText.length > 0 && (
+        <aside className="detail-mobile" aria-label="Word details" aria-live="polite">
+          <Button className="detail-mobile-close" variant="ghost" size="icon-sm" type="button" onClick={closeDetails} aria-label="Close">
+            <XIcon />
+          </Button>
           <WordDetails {...detailProps} compact />
-        </SheetContent>
-      </Sheet>
+        </aside>
+      )}
       {copyState === 'error' && <p className="message error" role="alert">The selection could not be copied.</p>}
     </main>
   );

@@ -46,13 +46,12 @@ if (scripts.some(name => name.startsWith('qualification-bridge-'))) {
 }
 const workerName = scripts.find(name => name.startsWith('analyzer.worker-'));
 if (!workerName) throw new Error('Production analyzer Worker chunk is missing');
-const qualificationChunks = scripts.filter(name =>
-  name.startsWith('qualification-client-') || name.startsWith('benchmark-corpus-')
-);
-if (qualificationBuild && qualificationChunks.length !== 2) {
-  throw new Error('Qualification build must contain its client and benchmark corpus chunks');
+const qualificationClients = scripts.filter(name => name.startsWith('qualification-client-'));
+const lazyBenchmarkCorpora = scripts.filter(name => name.startsWith('benchmark-corpus-'));
+if (qualificationBuild && (qualificationClients.length !== 1 || lazyBenchmarkCorpora.length !== 0)) {
+  throw new Error('Qualification build must contain one offline-complete client chunk');
 }
-if (!qualificationBuild && qualificationChunks.length !== 0) {
+if (!qualificationBuild && (qualificationClients.length !== 0 || lazyBenchmarkCorpora.length !== 0)) {
   throw new Error('Product browser build contains qualification-only chunks');
 }
 
@@ -82,10 +81,11 @@ if (!qualificationBuild) {
   }
 }
 
-// The lazily loaded benchmark corpus is inert JSON provenance/data. Its source
-// paths may name reference-postgres tests without introducing runtime code.
+// The qualification client embeds its inert corpus so it is complete before
+// the offline benchmark. Its provenance may name reference-postgres tests
+// without introducing that code into the product runtime.
 const runtimeNames = scripts.filter(
-  name => name !== workerName && !name.startsWith('benchmark-corpus-')
+  name => name !== workerName && !name.startsWith('qualification-client-')
 );
 const runtime = `${(await Promise.all(
   runtimeNames.map(name => readFile(join(assetDirectory, name), 'utf8'))

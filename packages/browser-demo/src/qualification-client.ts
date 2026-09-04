@@ -10,6 +10,7 @@ import {
   requestClientInternal,
   type AnalyzerClient
 } from './client.js';
+import corpus from './generated/benchmark-corpus.json';
 
 export interface BenchmarkGroupResult {
   readonly corpus: string;
@@ -78,7 +79,6 @@ export async function benchmarkAnalyzer(
   const readyStarted = performance.now();
   await client.status();
   const workerReadyMs = performance.now() - readyStarted;
-  const { default: corpus } = await import('./generated/benchmark-corpus.json');
   const requests = (values: readonly (readonly unknown[])[]): readonly Request[] => values.map(value => {
     const [text, limit = 1, entities] = value as CorpusRequest;
     return { text, limit, entities };

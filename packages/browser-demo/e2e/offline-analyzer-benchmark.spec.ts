@@ -72,6 +72,22 @@ async function expectQualificationReady(page: Page): Promise<void> {
   ))).toBe(true);
 }
 
+async function closePersistentContext(context: BrowserContext): Promise<void> {
+  const browser = context.browser();
+  let timeout: ReturnType<typeof setTimeout> | undefined;
+  try {
+    await Promise.race([
+      context.close(),
+      new Promise(resolve => { timeout = setTimeout(resolve, 5_000); })
+    ]);
+  } finally {
+    clearTimeout(timeout);
+  }
+  if (browser?.isConnected()) {
+    throw new Error('Persistent Chromium did not close before profile reuse');
+  }
+}
+
 test('installs once, reopens, analyzes after network cutoff, and meets the 6x proxy', async ({
   browser
 }) => {
@@ -140,7 +156,7 @@ test('installs once, reopens, analyzes after network cutoff, and meets the 6x pr
 
     // Close Chromium completely, then reopen the ordinary network shell. The
     // installed analyzer pack must survive independently in OPFS.
-    await context.close();
+    await closePersistentContext(context);
     context = null;
     context = await browserType.launchPersistentContext(profileDirectory, {
       baseURL: BASE_URL,
@@ -176,6 +192,10 @@ test('installs once, reopens, analyzes after network cutoff, and meets the 6x pr
         return true;
       }
     }, deliberatelyOfflineProbe)).toBe(true);
+    // The qualification bridge and its exhaustive benchmark corpus do not ship
+    // in the product build. Finish loading that test-only module before measuring
+    // the ordinary analyzer UI so its module parsing cannot count as app work.
+    await expectQualificationReady(page);
     await page.evaluate(() => {
       const durations: number[] = [];
       const observer = new PerformanceObserver(list => {
@@ -196,7 +216,6 @@ test('installs once, reopens, analyzes after network cutoff, and meets the 6x pr
     await expect(page.locator('details.parse-alternatives summary span')).toHaveText('2');
     await page.getByRole('button', { name: /日本語/ }).first().click();
     await expect(page.locator('.word-details:visible').getByText('Noun', { exact: true }).first()).toBeVisible();
-    await expectQualificationReady(page);
     const clean = await qualificationAnalyze(page);
     expect(clean).toMatchObject({
       input: '日本語を勉強しています。',
