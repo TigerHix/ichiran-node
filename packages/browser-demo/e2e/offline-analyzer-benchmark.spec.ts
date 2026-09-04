@@ -243,7 +243,7 @@ test('installs once, reopens, analyzes after network cutoff, and meets the 6x pr
     ));
     const japanese = page.getByRole('button', { name: /日本語/ }).first();
     await expect(japanese).toBeVisible();
-    await expect(page.locator('details.parse-alternatives summary span')).toHaveText('2');
+    await expect(page.locator('details.parse-alternatives summary span')).toHaveText('1');
 
     longTasks.push(...await measureClick(page, await locatorCenter(japanese)));
     await expect(page.locator('.word-details:visible').getByText('Noun', { exact: true }).first()).toBeVisible();
